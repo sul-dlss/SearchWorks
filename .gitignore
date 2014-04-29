@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# ignore jetty directory
+/jetty
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
