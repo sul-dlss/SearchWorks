@@ -10,4 +10,4 @@ env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-script: rake ci
+script: bundle exec rake ci
