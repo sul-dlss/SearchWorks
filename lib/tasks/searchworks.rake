@@ -4,12 +4,7 @@ namespace :searchworks do
   desc "Run SearchWorks local installation steps"
   task :install => [:environment] do
     Rake::Task["db:migrate"].invoke
-    unless File.exists?("#{Rails.root}/jetty")
-      puts "Downloading jetty\n"
-      Rake::Task["jetty:download"].invoke
-      puts "Unzipping jetty\n"
-      Rake::Task["jetty:unzip"].invoke
-    end
+    Rake::Task["searchworks:download_and_unzip_jetty"].invoke
     puts "Indexing fixtures\n"
     Jettywrapper.wrap(Jettywrapper.load_config) do
       Rake::Task["searchworks:fixtures"].invoke
@@ -18,6 +13,15 @@ namespace :searchworks do
   desc "Index test fixtures"
   task :fixtures do
     FixturesIndexer.run
+  end
+  desc "Download and unzip jetty"
+  task :download_and_unzip_jetty do
+    unless File.exists?("#{Rails.root}/jetty")
+      puts "Downloading jetty"
+      Rake::Task["jetty:download"].invoke
+      puts "Unzipping jetty"
+      Rake::Task["jetty:unzip"].invoke
+    end
   end
   namespace :spec do
     begin
