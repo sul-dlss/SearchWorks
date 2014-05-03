@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sul-dlss/SearchWorks.svg?branch=master)](https://travis-ci.org/sul-dlss/SearchWorks) | [![Coverage Status](https://coveralls.io/repos/sul-dlss/SearchWorks/badge.png)](https://coveralls.io/r/sul-dlss/SearchWorks)
+
 # SearchWorks
 
 This is the codebase for the SearchWorks redesign.
