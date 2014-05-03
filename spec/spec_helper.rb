@@ -4,6 +4,17 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
+if ENV["COVERAGE"] or ENV["CI"]
+  require 'simplecov'
+  require 'coveralls' if ENV["CI"]
+
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter if ENV["CI"]
+  SimpleCov.start do
+    add_filter "/spec/"
+  end
+end
+
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }

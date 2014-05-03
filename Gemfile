@@ -43,6 +43,11 @@ group :development, :test do
   gem 'capybara'
 end
 
+group :test do
+  gem 'simplecov', '~> 0.7.1', require: false
+  gem 'coveralls', require: false
+end
+
 gem 'blacklight'
 
 gem "jettywrapper", "~> 1.7"
