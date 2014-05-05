@@ -1,0 +1,8 @@
+en:
+  blacklight:
+    application_name: 'SearchWorks'
+
+    search:
+      bookmarks:
+        present: "Selected"
+        absent: "Select"
