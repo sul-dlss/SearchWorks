@@ -1,0 +1,18 @@
+<% if show_sort_and_per_page? and !blacklight_config.sort_fields.blank? %>
+<div id="sort-dropdown" class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <span class="visible-md visible-lg">
+      <%= link_to(t('blacklight.search.sort.label', :field =>current_sort_field.label).html_safe, "#") %> <span class="caret"></span>
+    </span>
+    <span class="visible-sm">
+      <%= link_to(t('blacklight.search.sort.label_small').html_safe, "#") %> <span class="caret"></span>
+    </span>
+  </button>
+
+  <ul class="dropdown-menu" role="menu">
+    <%- blacklight_config.sort_fields.each do |sort_key, field| %>
+      <li><%= link_to(field.label, url_for(params_for_search(:sort => sort_key))) %></li>
+    <%- end -%>
+  </ul>
+</div>
+<% end %>

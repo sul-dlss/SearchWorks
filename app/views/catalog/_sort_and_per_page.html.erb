@@ -1,0 +1,27 @@
+<div id="sortAndPerPage" class="clearfix">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle facets-toggle" data-toggle="collapse" data-target="#search-results-toolbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= render partial: "paginate_compact", object: @response %>
+    </div>
+    <div id="search-results-toolbar" class="collapse hidden-md hidden-lg text-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= render partial: 'sort_navbar_dropdown_widget' %><li>
+        <li><%= render partial: 'per_page_navbar_dropdown_widget' %><li>
+        <li><%= render partial: 'select_navbar_dropdown_widget' %><li>
+      </ul>
+    </div>
+    <div id="" class="search-widgets collapse navbar-collapse pull-right">
+      <%= content_tag(:button, (content_tag(:span, '', class: 'glyphicon glyphicon-th-list') + ' View'), id: 'view-stub', class: 'btn btn-default disabled') %>
+      <%= render partial: 'view_type_group' %>
+      <%= render partial: 'sort_widget' %>
+      <%= render partial: 'per_page_widget' %>
+      <%= render partial: 'select_all_widget' %>
+    </div>
+  </div>
+</div>
