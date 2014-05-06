@@ -1,0 +1,20 @@
+<div class="row record-toolbar">
+
+  <div class="col-md-4">
+    <%= link_back_to_catalog :class => 'btn btn-default' %>
+  </div>
+
+  <div class="col-md-4">
+    <%= link_to_previous_doc @previous_document %>
+    <%= item_page_entry_info %>
+    <%= link_to_next_doc @next_document %>
+  </div>
+
+  <div class="col-md-4 pull-right">
+    <%= render_show_doc_actions @document %>
+  </div>
+
+</div>
+
+
+
