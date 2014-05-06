@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Mobile viewport optimization h5bp.com/ad -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!--[if IEMobile]>
+      <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+
+    <title><%= render_page_title %></title>
+    <%= opensearch_description_tag application_name, opensearch_catalog_path(:format => 'xml', :only_path => false) %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= content_for(:head) %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="<%= render_body_class %>">
+    <div id="outer-container" class="container">
+      <%= render 'shared/top_navbar' %>
+      <%= render 'shared/search_bar' %>
+
+      <%= render partial: 'shared/ajax_modal' %>
+
+      <div id="main-container">
+        <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
+
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+
+      <%= render :partial => 'shared/footer' %>
+    </div>
+  </body>
+</html>
