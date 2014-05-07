@@ -1,0 +1,7 @@
+a {
+  &.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+}
