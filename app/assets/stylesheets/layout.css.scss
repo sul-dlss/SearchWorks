@@ -1,6 +1,6 @@
 #outer-container {
   margin-top: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid $panel-inner-border;
 }
 
 #topnav {
@@ -9,8 +9,8 @@
   margin-bottom: 0;
 }
 #search-navbar {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid $panel-inner-border;
+  border-bottom: 1px solid $panel-inner-border;
   margin: 0 -15px;
   background: none;
 }
