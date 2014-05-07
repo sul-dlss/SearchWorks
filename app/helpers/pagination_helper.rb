@@ -1,6 +1,6 @@
-module Searchworks::PaginationHelper
+module PaginationHelper
 
-  def is_current_per_page?(count, label)
+  def label_current_per_page(count, label)
     if count == current_per_page
       content_tag(:span, '', class: 'glyphicon glyphicon-ok') + " " + label
     else
@@ -8,17 +8,13 @@ module Searchworks::PaginationHelper
     end
   end
 
-  def is_current_sort?(field)
+  def label_current_sort(field)
     label = field.label
-    if field.field == current_sort
+    if field.field == current_sort_field.field
       content_tag(:span, '', class: 'glyphicon glyphicon-ok') + " " + label.to_s.titleize
     else
       label.to_s.titleize
     end
-  end
-
-  def current_sort
-    params.fetch(:sort, default_sort_field)
   end
 
 end

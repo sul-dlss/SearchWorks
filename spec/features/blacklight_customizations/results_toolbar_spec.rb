@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'spec_helper'
 
 feature "Results Toolbar" do
@@ -21,6 +23,6 @@ feature "Results Toolbar" do
     end
   end
   scenario "should have tablet and mobile tools hidden" do
-    # TODO write tests here for hidden toolbar
+    pending("check for hidden tablet and mobile results toolbar tool")
   end
 end
