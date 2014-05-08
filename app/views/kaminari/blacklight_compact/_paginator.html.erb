@@ -1,0 +1,38 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    num_pages:     total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+
+   Paginator now using the Bootstrap paginator class
+
+   page_entries_info is passed into the paginate call, e.g. :
+
+   > paginate collection, :page_entries_info => page_entries_info(collection), :theme => :blacklight_compact
+
+   As of Kaminari 0.15, this paginator doesn't have access to the original collection/scope, so it can't render the page entries info directly.
+-%>
+<% if total_pages > 1 -%>
+  <%# #render checks if total_pages > 1, so we can't put our fallback
+  in here .. -%>
+  <%= paginator.render do -%>
+    <div class="page_links">
+      <%= prev_page_tag %>
+      <span class="page_entries hidden-xs">
+        <%= page_entries_info %>
+      </span>
+      <span class="page_entries visible-xs-inline">
+        <%= page_entries_info %>
+      </span>
+      <%= next_page_tag %>
+    </div>
+  <% end -%>
+<% else -%>
+    <div class="page_links">
+      <span class="page_entries">
+        <%= page_entries_info %>
+      </span>
+    </div>
+<% end -%>

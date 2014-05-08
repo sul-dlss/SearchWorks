@@ -1,3 +1,20 @@
 en:
   blacklight:
     application_name: 'Blacklight'
+    search:
+      sort:
+        label_small: 'Sort'
+      per_page:
+        button_label_small: '%{count}'
+      pagination_info:
+        pages:
+          one: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
+          other: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
+    bookmarks:
+      add:
+        all: 'Select all'
+        all_small: '&#10004; all'
+  views:
+    pagination_compact:
+      next: '&#9658;'
+      previous: '&#9668;'
