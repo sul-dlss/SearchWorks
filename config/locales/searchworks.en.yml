@@ -1,6 +1,5 @@
 en:
   blacklight:
-    application_name: 'SearchWorks'
 
     search:
       bookmarks:
