@@ -21,5 +21,4 @@ module BlacklightUrlHelper
     end
   end
 
-
 end

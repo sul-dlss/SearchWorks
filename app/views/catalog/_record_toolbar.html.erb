@@ -32,7 +32,7 @@
 
 <div class="record-toolbar container-fluid hidden-sm hidden-md hidden-lg" role="navigation">
   <div class="col-xs-8">
-    <%= link_back_to_catalog :class => 'btn btn-default' %>
+    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search_xs') %>
     <span class="pull-right">
       <%= link_to_previous_document @previous_document %>
       <%= item_page_entry_info %>
@@ -45,14 +45,16 @@
       <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         Tools <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu xs">
+      <ul class="dropdown-menu">
+        <li><%= render_show_doc_actions @document %></li>
+        <li role="presentation" class="divider"></li>
         <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
           <li>
             <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}} %>
           </li>
         <% end %>
+        <li role="presentation" class="dropdown-header">SEND TO</li>
         <%= render 'record_toolbar_tools_subset' %>
-        <li><%= render_show_doc_actions @document %></li>
       </ul>
     </div>
   </div>

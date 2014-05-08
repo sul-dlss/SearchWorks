@@ -5,3 +5,13 @@ en:
       bookmarks:
         present: "Selected"
         absent: "Select"
+
+    tools:
+      endnote: 'EndNote'
+      refworks: 'RefWorks'
+      email: 'email'
+      sms: 'text'
+      printer: 'printer'
+
+    back_to_search: 'Back to results'
+    back_to_search_xs: 'Back'

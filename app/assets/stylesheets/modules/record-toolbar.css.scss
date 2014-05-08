@@ -1,6 +1,7 @@
 .record-toolbar {
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-top: 10px;
   padding: 5px;
 
   .record-toolbar-tools ul {
@@ -21,7 +22,7 @@
     }
   }
 
-  .record-toolbar-tools ul.xs li {
+  ul.dropdown-menu li {
     display: block;
   }
 
