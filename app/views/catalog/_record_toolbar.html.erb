@@ -1,20 +1,59 @@
-<div class="row record-toolbar">
-
-  <div class="col-md-4">
+<div class="record-toolbar container-fluid hidden-xs" role="navigation">
+  <div class="col-md-7 col-sm-7">
     <%= link_back_to_catalog :class => 'btn btn-default' %>
+    <span class="pull-right">
+      <%= link_to_previous_document @previous_document %>
+      <%= item_page_entry_info %>
+      <%= link_to_next_document @next_document %>
+    </span>
   </div>
-
-  <div class="col-md-4">
-    <%= link_to_previous_doc @previous_document %>
-    <%= item_page_entry_info %>
-    <%= link_to_next_doc @next_document %>
+  <div class="col-md-5 col-sm-5 record-toolbar-tools">
+    <ul class="pull-right">
+      <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
+        <li>
+          <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-default'} %>
+        </li>
+      <% end %>
+      <li class="dropdown">
+        <button class="btn btn-default" data-toggle="dropdown">
+          Send to <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <%= render 'record_toolbar_tools_subset' %>
+        </ul>
+      </li>
+      <li>
+        <%= render_show_doc_actions @document %>
+      </li>
+    </ul>
   </div>
-
-  <div class="col-md-4 pull-right">
-    <%= render_show_doc_actions @document %>
-  </div>
-
 </div>
 
 
+<div class="record-toolbar container-fluid hidden-sm hidden-md hidden-lg" role="navigation">
+  <div class="col-xs-8">
+    <%= link_back_to_catalog :class => 'btn btn-default' %>
+    <span class="pull-right">
+      <%= link_to_previous_document @previous_document %>
+      <%= item_page_entry_info %>
+      <%= link_to_next_document @next_document %>
+    </span>
+  </div>
 
+  <div class="col-xs-4 record-toolbar-tools">
+    <div class="dropdown pull-right">
+      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Tools <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu xs">
+        <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
+          <li>
+            <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}} %>
+          </li>
+        <% end %>
+        <%= render 'record_toolbar_tools_subset' %>
+        <li><%= render_show_doc_actions @document %></li>
+      </ul>
+    </div>
+  </div>
+</div>

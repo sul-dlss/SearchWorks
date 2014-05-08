@@ -1,0 +1,28 @@
+.record-toolbar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+
+  .record-toolbar-tools ul {
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .documentFunctions {
+      margin-left: 20px;
+    }
+
+    .toggle_bookmark {
+      min-width: 0;
+    }
+  }
+
+  .record-toolbar-tools ul.xs li {
+    display: block;
+  }
+
+}
