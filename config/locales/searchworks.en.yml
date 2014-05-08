@@ -1,0 +1,7 @@
+en:
+  blacklight:
+
+    search:
+      bookmarks:
+        present: "Selected"
+        absent: "Select"
