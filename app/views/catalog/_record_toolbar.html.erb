@@ -8,7 +8,7 @@
     </span>
   </div>
   <div class="col-md-5 col-sm-5 record-toolbar-tools">
-    <ul class="pull-right">
+    <ul class="pull-right list-inline">
       <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
         <li>
           <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-default'} %>

@@ -9,7 +9,6 @@
     margin: 0;
 
     li {
-      display: inline-block;
       margin: 0;
     }
 
@@ -20,10 +19,6 @@
     .toggle_bookmark {
       min-width: 0;
     }
-  }
-
-  ul.dropdown-menu li {
-    display: block;
   }
 
 }
