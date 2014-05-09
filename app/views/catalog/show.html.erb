@@ -1,12 +1,12 @@
 <div id="content" class="col-md-12 show-document">
 
-  <%= render 'record_toolbar' %>
+  <%= render "catalog/record/record_toolbar" %>
 
   <% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name).html_safe -%>
   <% content_for(:head) { render_link_rel_alternates } -%>
   <%# this should be in a partial -%>
 
-  <div id="document" class="document <%= render_document_class %>" itemscope  itemtype="<%= @document.itemtype %>">
+  <div id="document" class="document <%= render_document_class %>" itemscope itemtype="<%= @document.itemtype %>">
     <div id="doc_<%= @document.id.to_s.parameterize %>">
       <% # bookmark/folder functions -%>
       <%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
@@ -21,5 +21,7 @@
     -->
     <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(document_partial_name(@document)) %>"></span>
   <% end %>
+
+  <%= render "catalog/record/record_metadata" %>
 
 </div>
