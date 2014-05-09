@@ -15,6 +15,7 @@ puts capture("ls #{releases_path}").split("\n").inspect
     set :public_release_path, "#{fetch(:last_release_path)}/public"
     # Write .htaccess file with RailsBaseURI directive
     execute("echo 'RailsBaseURI /#{fetch(:sub_dir)}' > #{fetch(:public_release_path)}/.htaccess")
+    execute("echo 'PassengerRuby /usr/local/rvm/wrappers/ruby-2.1.0-preview2/ruby' >> #{fetch(:public_release_path)}/.htaccess")
     # Remove symlink if it already exists
     execute("rm #{fetch(:symlink_deploy_path)}") if sub_uri_exists? fetch(:symlink_deploy_path)
     # Symlink release's public directory
