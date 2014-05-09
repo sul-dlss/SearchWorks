@@ -8,8 +8,6 @@ set :symlink_deploy_path, "#{fetch(:symlinks_directory)}/#{fetch(:sub_dir)}"
 
 task :symlink_sub_directory_deploy do
   on roles(:app), wait: 1 do
-puts capture("ls #{releases_path}").inspect
-puts capture("ls #{releases_path}").split("\n").inspect
     set :last_release, capture("ls #{releases_path}").split("\n").last
     set :last_release_path, "#{releases_path}/#{fetch(:last_release)}"
     set :public_release_path, "#{fetch(:last_release_path)}/public"
