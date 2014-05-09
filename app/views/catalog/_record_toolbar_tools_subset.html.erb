@@ -1,0 +1,21 @@
+<% if @document.respond_to?( :to_sms_text ) %>
+  <li class="sms" role="presentation">
+    <%= link_to t('blacklight.tools.sms'), sms_catalog_path(:id => @document), {:id => 'smsLink', :data => {:ajax_modal => "trigger"}} %>
+  </li>
+<% end %>
+<% if @document.respond_to?( :to_email_text ) %>
+  <li class="email" role="presentation">
+    <%= link_to t('blacklight.tools.email'), email_catalog_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
+  </li>
+<% end %>
+<% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
+  <li class="refworks" role="presentation">
+    <%= link_to t('blacklight.tools.refworks'), refworks_export_url(:id => @document)  %>
+  </li>
+<% end %>
+<% if @document.export_formats.keys.include?( :endnote ) %>
+  <li class="endnote" role="presentation">
+    <%= link_to t('blacklight.tools.endnote'), catalog_path(@document, :format => 'endnote') %>
+  </li>
+<% end %>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= t('blacklight.tools.printer') %></a></li>
