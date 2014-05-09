@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-feature "Bookmarks Select/UnSelect Text" do
+feature "Bookmarks Select/UnSelect Text", js: true do
   before do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'
   end
 
-  scenario "should have bookmarks text as select", js: true do
+  scenario "should have bookmarks text as select" do
     within first("div.documentHeader") do
       within "label.toggle_bookmark" do
         expect(page).to have_css("span", text: "Select")
@@ -15,12 +15,12 @@ feature "Bookmarks Select/UnSelect Text" do
     end
   end
 
-  scenario "should have bookmarks text as selected", js: true do
+  scenario "should have bookmarks text as selected" do
     within first("div.documentHeader") do
-      within "label.toggle_bookmark" do
-        find(:css, '#toggle_bookmark_1').set(true)
-        expect(page).to have_css("span", text: "Selected")
-      end
+      check("Select")
+    end
+    within first("div.documentHeader") do
+      expect(page).to have_css("span", text: "Selected", visible: true)
     end
   end
 
