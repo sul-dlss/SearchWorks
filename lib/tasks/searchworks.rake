@@ -5,6 +5,7 @@ namespace :searchworks do
   task :install => [:environment] do
     Rake::Task["db:migrate"].invoke
     Rake::Task["searchworks:download_and_unzip_jetty"].invoke
+    Rake::Task["searchworks:copy_solr_configs"]
     puts "Indexing fixtures\n"
     Jettywrapper.wrap(Jettywrapper.load_config) do
       Rake::Task["searchworks:fixtures"].invoke
@@ -21,6 +22,12 @@ namespace :searchworks do
       Rake::Task["jetty:download"].invoke
       puts "Unzipping jetty"
       Rake::Task["jetty:unzip"].invoke
+    end
+  end
+  desc "Copy solr configs"
+  task :copy_solr_configs do
+    %w{schema solrconfig}.each do |file|
+      cp "#{Rails.root}/config/solr_configs/#{file}.xml", "#{Rails.root}/jetty/solr/blacklight-core/conf/"
     end
   end
   namespace :spec do

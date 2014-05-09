@@ -59,13 +59,31 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
-    config.add_facet_field 'format', :label => 'Format'
-    config.add_facet_field 'pub_date', :label => 'Publication Year', :single => true
-    config.add_facet_field 'subject_topic_facet', :label => 'Topic', :limit => 20
-    config.add_facet_field 'language_facet', :label => 'Language', :limit => true
-    config.add_facet_field 'lc_1letter_facet', :label => 'Call Number'
-    config.add_facet_field 'subject_geo_facet', :label => 'Region'
-    config.add_facet_field 'subject_era_facet', :label => 'Era'
+    #config.add_facet_field "db_az_subject", :label => "Database Subject", :limit => 100
+    config.add_facet_field "access_facet", :label => "Access"
+    #config.add_facet_field "collection", :label => "Collection", :show => false
+    #config.add_facet_field "collection_type", :label => "Collection Type", :show => false
+    config.add_facet_field "format_main_ssim", :label => "Material Type"
+    config.add_facet_field "format_physical_ssim", :label => "Physical Format"
+    config.add_facet_field "genre_ssim", :label => "Genre"
+    config.add_facet_field "format", :label => "Format"
+    config.add_facet_field "pub_year_tisim", :label => "Date", :range => true # uncomment to add date slider
+    config.add_facet_field "author_person_facet", :label => "Author", :limit => true
+    config.add_facet_field "topic_facet", :label => "Topic", :limit => true
+    config.add_facet_field "building_facet", :label => "Library", :limit => true
+    config.add_facet_field "callnum_top_facet", :label => "Call Number", :limit => true
+    config.add_facet_field "lc_alpha_facet", :label => "Refine Call Number", :show => false
+    config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call Number", :show => false
+    config.add_facet_field "dewey_1digit_facet", :label => "Refine Call Number", :show => false
+    #config.add_facet_field "dewey_2digit_facet", :label => "Refine Call Number", :show => false
+    #config.add_facet_field "dewey_b4cutter_facet", :label => "Refine Call Number", :show => false
+    #config.add_facet_field "gov_doc_type_facet", :label => "Refine Call Number", :show => false
+    #config.add_facet_field "course", :label => "Course", :show => false
+    #config.add_facet_field "instructor", :label => "Instructor", :show => false
+    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", :limit => true
+    config.add_facet_field "geographic_facet", :label => "Region", :limit => true
+    config.add_facet_field "era_facet", :label => "Era", :limit => true
+    config.add_facet_field "language", :label => "Language", :limit => true
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
@@ -84,32 +102,37 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_display', :label => 'Title'
-    config.add_index_field 'title_vern_display', :label => 'Title'
-    config.add_index_field 'author_display', :label => 'Author'
-    config.add_index_field 'author_vern_display', :label => 'Author'
-    config.add_index_field 'format', :label => 'Format'
-    config.add_index_field 'language_facet', :label => 'Language'
-    config.add_index_field 'published_display', :label => 'Published'
-    config.add_index_field 'published_vern_display', :label => 'Published'
-    config.add_index_field 'lc_callnum_display', :label => 'Call number'
+    config.add_index_field "title_uniform_display", :label => "Title"
+    config.add_index_field "vern_title_uniform_display", :label => "Title"
+    config.add_index_field "author_person_display", :label => "Author/Creator"
+    config.add_index_field "vern_author_person_display", :label => "Author/Creator"
+    config.add_index_field "author_corp_display", :label => "Corporate Author"
+    config.add_index_field "vern_author_corp_display", :label => "Corporate Author"
+    config.add_index_field "author_meeting_display", :label => "Meeting"
+    config.add_index_field "vern_author_meeting_display", :label => "Meeting"
+    config.add_index_field "pub_date", :label => "Date"
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'title_display', :label => 'Title'
-    config.add_show_field 'title_vern_display', :label => 'Title'
-    config.add_show_field 'subtitle_display', :label => 'Subtitle'
-    config.add_show_field 'subtitle_vern_display', :label => 'Subtitle'
-    config.add_show_field 'author_display', :label => 'Author'
-    config.add_show_field 'author_vern_display', :label => 'Author'
-    config.add_show_field 'format', :label => 'Format'
-    config.add_show_field 'url_fulltext_display', :label => 'URL'
-    config.add_show_field 'url_suppl_display', :label => 'More Information'
-    config.add_show_field 'language_facet', :label => 'Language'
-    config.add_show_field 'published_display', :label => 'Published'
-    config.add_show_field 'published_vern_display', :label => 'Published'
-    config.add_show_field 'lc_callnum_display', :label => 'Call number'
-    config.add_show_field 'isbn_t', :label => 'ISBN'
+    config.add_show_field "title_full_display", :label => "Title"
+    config.add_show_field "vern_title_full_display", :label => "Title"
+    config.add_show_field "vern_title_uniform_display", :label => "Uniform Title"
+    config.add_show_field "title_variant_display", :label => "Alternate Title"
+    config.add_show_field "author_person_display", :label => "Author/Creator"
+    config.add_show_field "author_person_full_display", :label => "Author/Creator"
+    config.add_show_field "vern_author_person_full_display", :label => "Author/Creator"
+    config.add_show_field "author_corp_display", :label => "Corporate Author"
+    config.add_show_field "vern_author_corp_display", :label => "Corporate Author"
+    config.add_show_field "author_meeting_display", :label => "Meeting Author"
+    config.add_show_field "vern_author_meeting_display", :label => "Meeting Author"
+    config.add_show_field "medium", :label => "Medium"
+    config.add_show_field "summary_display", :label => "Description"
+    config.add_show_field "topic_display", :label => "Subject"
+    config.add_show_field "subject_other_display", :label => "Subject"
+    config.add_show_field "language", :label => "Language"
+    config.add_show_field "physical", :label => "Physical Description"
+    config.add_show_field "pub_display", :label => "Publication Info"
+    config.add_show_field "pub_date", :label => "Date"
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

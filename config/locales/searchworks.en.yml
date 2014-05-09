@@ -5,6 +5,11 @@ en:
       bookmarks:
         present: "Selected"
         absent: "Select"
+    bookmarks:
+      add:
+        button: "Select"
+      remove:
+        button: "Selected"
 
     tools:
       endnote: 'EndNote'
