@@ -1,0 +1,13 @@
+<ul class="facet-values list-unstyled">
+  <% paginator = facet_paginator(facet_field, display_facet) %>
+  <% paginator.items.each do |item| -%>
+    <li>
+      <%= image_tag("http://placehold.it/25x25", class: "facet-icon") %>
+      <% if facet_in_params?( solr_field, item.value ) %>
+          <%= render_selected_facet_value(solr_field, item) %>
+        <% else %>
+          <%= render_facet_value(solr_field, item) %>
+      <% end -%>
+    </li>
+  <% end %>
+</ul>

@@ -2,5 +2,8 @@
 :title_display: An object
 :author_person_display: "Doe, Jane"
 :format: Book
+:format_main_ssim: Book
 :language: English
 :pub_date: 2014
+:access_facet: Online
+:building_facet: Green

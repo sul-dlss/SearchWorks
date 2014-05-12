@@ -3,6 +3,10 @@ require "spec_helper"
 describe "Databases Access Point", feature: true, :"data-integration" => true do
   it "should be present when selecting the databases facet" do
     visit root_url
+
+    fill_in "q", with: ''
+    click_button "Search"
+
     within("#facet-format") do
       click_link "Database"
     end
