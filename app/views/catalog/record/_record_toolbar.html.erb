@@ -1,6 +1,6 @@
 <div class="record-toolbar container-fluid hidden-xs" role="navigation">
   <div class="col-md-7 col-sm-7">
-    <%= link_back_to_catalog :class => 'btn btn-default' %>
+    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search').html_safe %>
     <span class="pull-right">
       <%= link_to_previous_document @previous_document %>
       <%= item_page_entry_info %>
@@ -32,7 +32,7 @@
 
 <div class="record-toolbar container-fluid hidden-sm hidden-md hidden-lg" role="navigation">
   <div class="col-xs-8">
-    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search_xs') %>
+    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search_xs').html_safe %>
     <span class="pull-right">
       <%= link_to_previous_document @previous_document %>
       <%= item_page_entry_info %>

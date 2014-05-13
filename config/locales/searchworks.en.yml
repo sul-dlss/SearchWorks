@@ -18,5 +18,5 @@ en:
       sms: 'text'
       printer: 'printer'
 
-    back_to_search: 'Back to results'
-    back_to_search_xs: 'Back'
+    back_to_search: '<span class="glyphicon glyphicon-backward"></span>&nbsp; Back to results'
+    back_to_search_xs: '<span class="glyphicon glyphicon-backward"></span>'
