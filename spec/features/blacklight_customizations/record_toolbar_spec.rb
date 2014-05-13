@@ -16,7 +16,6 @@ feature "Record Toolbar" do
         expect(page).to have_css("a.previous", visible: true)
 
         expect(page).to have_css("div.record-toolbar-tools", visible: true)
-
         within "div.record-toolbar-tools" do
           expect(page).to have_css("button.btn.btn-default", text:"Send to", visible: true)
         end

@@ -8,21 +8,25 @@
       <span class="icon-bar"></span>
     </button>
     <div>
+      <button class="btn btn-default dropdown-toggle navbar-brand" type="button" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-align-justify icon-menu"></span>
+      </button>
+      <%= render :partial => 'shared/search_navbar_top_menu' %>
       <%= link_to application_name, root_path, class: "navbar-brand" %>
       <%= render_search_targets_widget %>
     </div>
   </div>
 
-    <div class="collapsed-search-navs visible-xs">
-      <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
-        <%= render "catalog/search_bar_nav_list" %>
-      </div>
-    </div>
-    <div class="search-field">
-      <%= render_search_bar %>
-    </div>
-    <div class="collapse navbar-collapse hidden-xs">
+  <div class="collapsed-search-navs visible-xs">
+    <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
       <%= render "catalog/search_bar_nav_list" %>
     </div>
+  </div>
+  <div class="search-field">
+    <%= render_search_bar %>
+  </div>
+  <div class="collapse navbar-collapse hidden-xs">
+    <%= render "catalog/search_bar_nav_list" %>
+  </div>
 
 </div>
