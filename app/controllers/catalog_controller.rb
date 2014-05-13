@@ -63,7 +63,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "access_facet", :label => "Access"
     #config.add_facet_field "collection", :label => "Collection", :show => false
     #config.add_facet_field "collection_type", :label => "Collection Type", :show => false
-    config.add_facet_field "format_main_ssim", :label => "Material Type"
+    config.add_facet_field "format_main_ssim", :label => "Resource type"
     config.add_facet_field "format_physical_ssim", :label => "Physical Format"
     config.add_facet_field "genre_ssim", :label => "Genre"
     config.add_facet_field "format", :label => "Format"
