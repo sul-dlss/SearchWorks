@@ -1,7 +1,6 @@
-<% # TODO replace with BL active_sort_fields after BL 5.4.0 upgrade %>
-<% if show_sort_and_per_page? and !blacklight_config.sort_fields.blank? %>
+<% if show_sort_and_per_page? and !active_sort_fields.blank? %>
   <li class="dropdown-header">Sort by</li>
-  <% blacklight_config.sort_fields.each do |sort_key, field| %>
+  <% active_sort_fields.each do |sort_key, field| %>
     <li><%= link_to(label_current_sort(field), url_for(params_for_search(:sort => sort_key))) %></li>
   <% end %>
 <% end %>
