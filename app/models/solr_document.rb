@@ -1,7 +1,9 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument 
 
-  include Blacklight::Solr::Document    
+  include MarcLinks
+
+  include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marcxml
   extension_parameters[:marc_format_type] = :marcxml
@@ -31,6 +33,6 @@ class SolrDocument
   # single valued. See Blacklight::Solr::Document::ExtendableClassMethods#field_semantics
   # and Blacklight::Solr::Document#to_semantic_values
   # Recommendation: Use field names from Dublin Core
-  use_extension( Blacklight::Solr::Document::DublinCore)    
+  use_extension( Blacklight::Solr::Document::DublinCore)
 
 end
