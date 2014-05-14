@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-feature "Results Toolbar" do
+feature "Results Toolbar", js: true do
   before do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'
   end
-  scenario "should have desktop tools visible", js: true do
+  scenario "should have desktop tools visible" do
     within "#sortAndPerPage" do
       within "div.page_links" do
         expect(page).to have_css("a.btn.btn-default.btn-sm.disabled", text: "◄", visible: false)
