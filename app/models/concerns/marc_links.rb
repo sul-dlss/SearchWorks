@@ -12,7 +12,12 @@ module MarcLinks
     end
     def all
       link_fields.map do |link_field|
-        OpenStruct.new(url_label(link_field).merge(:fulltext? => link_is_fulltext?(link_field)))
+        link = process_link(link_field)
+        OpenStruct.new(
+          text: [link[:before], "<a title='#{link[:after]}' href='#{link[:href]}'>#{link[:text]}</a>"].join(' '),
+          fulltext?: link_is_fulltext?(link_field),
+          stanford_only?: stanford_only?(link)
+        )
       end
     end
     def fulltext
@@ -31,7 +36,7 @@ module MarcLinks
         ('856') === field.tag
       end
     end
-    def url_label(field)
+    def process_link(field)
       unless field['u'].nil?
         # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
         fixed_url = field['u'].gsub("^","").strip
@@ -95,6 +100,14 @@ module MarcLinks
         # this should catch bad indicators
         return nil
       end
+    end
+
+    def stanford_only?(link)
+      [link[:before], link[:after]].join.downcase =~ stanford_affiliated_regex
+    end
+
+    def stanford_affiliated_regex
+      Regexp.new(/available[ -]?to[ -]?stanford[ -]?affiliated[ -]?users[ -]?a?t?[:;.]?/i)
     end
   end
 end

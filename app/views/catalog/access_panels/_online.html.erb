@@ -1,0 +1,17 @@
+<% document ||= @document %>
+<% if document.access_panels.online? %>
+  <div class="panel panel-default panel-online">
+    <div class="panel-heading">Available online</div>
+    <div class="panel-body">
+      <ul class="links">
+        <% document.access_panels.online.links.each do |link| %>
+          <li>
+            <span class="<%= 'stanford-only' if link.stanford_only? %>">
+              <%= link.text.html_safe %>
+            </span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
