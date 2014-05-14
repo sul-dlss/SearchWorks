@@ -2,6 +2,7 @@
 class SolrDocument 
 
   include MarcLinks
+  include AccessPanelsConcern
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
