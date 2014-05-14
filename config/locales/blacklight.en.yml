@@ -2,6 +2,10 @@ en:
   blacklight:
     application_name: 'Blacklight'
     search:
+      facets:
+        access_point:
+          databases:
+            title: 'Within %{access_point}'
       sort:
         label_small: 'Sort'
       per_page:
