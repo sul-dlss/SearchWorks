@@ -1,8 +1,9 @@
 # -*- encoding : utf-8 -*-
-class SolrDocument 
+class SolrDocument
 
   include MarcLinks
   include AccessPanelsConcern
+
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
@@ -11,8 +12,8 @@ class SolrDocument
   use_extension( Blacklight::Solr::Document::Marc) do |document|
     document.key?( :marcxml  )
   end
-  
-  field_semantics.merge!(    
+
+  field_semantics.merge!(
                          :title => "title_display",
                          :author => "author_display",
                          :language => "language_facet",
@@ -22,10 +23,10 @@ class SolrDocument
 
 
   # self.unique_key = 'id'
-  
+
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Email )
-  
+
   # SMS uses the semantic field mappings below to generate the body of an SMS email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Sms )
 
