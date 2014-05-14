@@ -22,3 +22,7 @@ en:
 
     back_to_search: '<span class="glyphicon glyphicon-backward"></span>&nbsp; Back to results'
     back_to_search_xs: '<span class="glyphicon glyphicon-backward"></span>'
+    access_panels:
+      course_reserve:
+        course: '<span class="course-reserve-title">COURSE:</span> %{link}'
+        instructor: '<span class="course-reserve-title">INSTRUCTOR(S):</span> <span class="text-muted">%{instructor}</span>'

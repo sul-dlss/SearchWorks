@@ -2,6 +2,7 @@
 class SolrDocument
 
   include MarcLinks
+  include CourseReserves
   include AccessPanelsConcern
 
 
