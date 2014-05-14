@@ -55,7 +55,7 @@ group :test do
   gem 'coveralls', require: false
 end
 
-gem 'blacklight'
+gem 'blacklight', '~> 5.4.0'
 
 gem "jettywrapper", "~> 1.7"
 gem "devise"
