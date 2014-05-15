@@ -23,4 +23,16 @@
       </div>
     </div>
   <% end %>
+
+  <% subjects = render "catalog/record/marc_subjects" %>
+  <% if subjects.present? %>
+    <div class="section">
+      <div class="section-heading">
+        <h2>Subjects</h2>
+      </div>
+      <div class="section-body">
+        <%= subjects %>
+      </div>
+    </div>
+  <% end %>
 </div>
