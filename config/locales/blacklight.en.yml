@@ -24,5 +24,3 @@ en:
     pagination_compact:
       next: '&#9658;'
       previous: '&#9668;'
-      form:
-        submit: ''
