@@ -1,0 +1,15 @@
+.search-bar {
+  .navbar-nav.navbar-right.searchbar-right:last-child {
+    margin-right: 0px;
+  }
+  @media screen and (max-width: $screen-sm) {
+    .navbar-nav.navbar-right.searchbar-right{
+      text-align: right;
+    }
+  }
+  @media screen and (max-width: $screen-md) {
+    .search-field {
+      clear: left;
+    }
+  }
+}

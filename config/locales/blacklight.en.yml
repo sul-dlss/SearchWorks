@@ -6,6 +6,8 @@ en:
         access_point:
           databases:
             title: 'Within %{access_point}'
+      form:
+        submit: ''
       sort:
         label_small: 'Sort'
       per_page:
@@ -22,3 +24,5 @@ en:
     pagination_compact:
       next: '&#9658;'
       previous: '&#9668;'
+      form:
+        submit: ''

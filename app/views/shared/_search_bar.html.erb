@@ -1,6 +1,28 @@
-<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+<div id="search-navbar" class="navbar search-bar navbar-default navbar-static-top" role="navigation">
+
   <div class="navbar-header">
-    <%= link_to application_name, root_path, class: "navbar-brand" %>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div>
+      <%= link_to application_name, root_path, class: "navbar-brand" %>
+      <%= render_search_targets_widget %>
+    </div>
   </div>
-  <%= render_search_bar  %>
+
+    <div class="collapsed-search-navs visible-xs">
+      <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
+        <%= render "catalog/search_bar_nav_list" %>
+      </div>
+    </div>
+    <div class="search-field">
+      <%= render_search_bar %>
+    </div>
+    <div class="collapse navbar-collapse hidden-xs">
+      <%= render "catalog/search_bar_nav_list" %>
+    </div>
+
 </div>

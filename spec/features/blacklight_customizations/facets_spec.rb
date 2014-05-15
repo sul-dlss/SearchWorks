@@ -11,7 +11,7 @@ feature "Facets Customizations" do
       end
     end
   end
-  scenario "while not in an access point facet title should not change" do
+  scenario "while not in an access point facet title should not change", js: true do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'
