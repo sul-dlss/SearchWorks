@@ -5,7 +5,7 @@ require 'spec_helper'
 feature "Results Toolbar", js: true do
   before do
     visit root_path
-    fill_in "q", with: ''
+    first("#q").set ''
     click_button 'search'
   end
   scenario "should have desktop tools visible" do
