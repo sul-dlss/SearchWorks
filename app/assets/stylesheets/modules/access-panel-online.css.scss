@@ -1,0 +1,12 @@
+.panel-online {
+  ul.links {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      .stanford-only {
+        padding-right: 20px;
+        background: image-url('sprite-links.png') no-repeat right top;
+      }
+    }
+  }
+}
