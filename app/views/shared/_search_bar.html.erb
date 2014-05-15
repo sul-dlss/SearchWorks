@@ -1,6 +1,5 @@
-<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+<div id="search-navbar" class="navbar search-bar navbar-default navbar-static-top" role="navigation">
 
-<!--   Search bar header -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#searchbar-navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -8,44 +7,22 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <div class="">
+    <div>
       <%= link_to application_name, root_path, class: "navbar-brand" %>
       <%= render_search_targets_widget %>
     </div>
   </div>
-  <div class="hidden-sm hidden-xs">
-    <%= render_search_bar %>
-  </div>
 
-<!--   Search Bar shown for small screen -->
-  <div class="col-sm-12 visible-sm">
-    <div class="row">
-      <div class=" col-sm-6">
-        <%= render_search_bar %>
-      </div>
-
-      <div class="col-sm-6 hidden-xs">
-        <ul class="nav navbar-nav navbar-right ">
-          <li class="disabled"><%= render_search_bar_advanced_widget %></li>
-          <li class="disabled"><%= render_search_bar_browse_widget %></li>
-          <li class="disabled"><%= render_search_bar_selections_widget %></li>
-        </ul>
+    <div class="collapsed-search-navs visible-xs">
+      <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
+        <%= render "catalog/search_bar_nav_list" %>
       </div>
     </div>
-  </div>
-
-<!--   Search bar collapsed in extra small screen -->
-  <div class="hidden-sm">
-    <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
-      <ul class="nav navbar-nav navbar-right searchbar-right">
-        <li class="disabled"><%= render_search_bar_advanced_widget %></li>
-        <li class="disabled"><%= render_search_bar_browse_widget %></li>
-        <li class="disabled"><%= render_search_bar_selections_widget %></li>
-      </ul>
+    <div class="search-field">
+      <%= render_search_bar %>
     </div>
-  </div>
+    <div class="collapse navbar-collapse hidden-xs">
+      <%= render "catalog/search_bar_nav_list" %>
+    </div>
 
-  <div class="visible-xs">
-    <%= render_search_bar %>
-  </div>
 </div>
