@@ -1,12 +1,14 @@
 module CourseReserves
   def course_reserves
-    @course_reserves ||= CourseReserves::Processor.new(self)
+    if self.respond_to?(:[])
+      @course_reserves ||= CourseReserves::Processor.new(self)
+    end
   end
 
   private
   class Processor
     def initialize(document)
-      @courses = document[:crez_course_info].map { |course| Reservation.new(course) } unless document[:crez_course_info].nil?
+      @courses = document[:crez_course_info].map { |course| CourseInfo.new(course) } unless document[:crez_course_info].nil?
     end
 
     def present?
@@ -17,9 +19,9 @@ module CourseReserves
 
   end
 
-  class Reservation
+  class CourseInfo
     def initialize(course)
-      @course = course.split('-|-').map {|c| c.strip }
+      @course = course.split('-|-').map { |c| c.strip }
     end
 
     def id
