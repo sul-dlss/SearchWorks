@@ -8,6 +8,9 @@ class CatalogController < ApplicationController
 
   include DatabaseAccessPoint
 
+
+  before_filter :add_show_partials
+
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
@@ -206,5 +209,10 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
+  private
 
+
+  def add_show_partials
+    blacklight_config.show.partials += ["catalog/record/record_metadata"]
+  end
 end
