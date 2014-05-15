@@ -10,4 +10,17 @@
     <div class="section-body"></div>
   </div>
   %>
+  <% contents_summary = render "catalog/record/marc_contents_summary" %>
+  <% unless contents_summary.strip.blank? %>
+    <div class="section">
+      <div class="section-heading">
+        <h2>Contents/Summary</h2>
+      </div>
+      <div class="section-body">
+        <dl>
+          <%= contents_summary%>
+        </dl>
+      </div>
+    </div>
+  <% end %>
 </div>
