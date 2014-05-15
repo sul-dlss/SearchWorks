@@ -4,6 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/poltergeist'
+require 'fixtures/marc_records/marc_856_fixtures'
+
 Capybara.javascript_driver = :poltergeist
 Capybara.default_wait_time = 5
 

@@ -14,7 +14,7 @@ module MarcLinks
       link_fields.map do |link_field|
         link = process_link(link_field)
         OpenStruct.new(
-          text: [link[:before], "<a title='#{link[:after]}' href='#{link[:href]}'>#{link[:text]}</a>"].join(' '),
+          text: [link[:before], "<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
           fulltext?: link_is_fulltext?(link_field),
           stanford_only?: stanford_only?(link)
         )
@@ -41,7 +41,7 @@ module MarcLinks
         # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
         fixed_url = field['u'].gsub("^","").strip
         url = URI.parse(fixed_url)
-        sub3 = ""
+        sub3 = nil
         subz = []
         suby = ""
         field.each{|subfield|
@@ -64,16 +64,16 @@ module MarcLinks
           url_host = url.host
         end
         if field["x"] and field["x"] == "CasaliniTOC"
-          {:before=>"",
+          {:before=>nil,
            :text=>field["3"],
-           :after=>"(source: Casalini)",
+           :title=>"",
            :href=>field["u"],
            :casalini_toc => true
           }
         else
           {:before=>sub3,
            :text=>(suby.blank? ? url_host : suby),
-           :after=>subz.join(" "),
+           :title=>subz.join(" "),
            :href=>field["u"],
            :casalini_toc => false
           }
@@ -103,7 +103,7 @@ module MarcLinks
     end
 
     def stanford_only?(link)
-      [link[:before], link[:after]].join.downcase =~ stanford_affiliated_regex
+      [link[:before], link[:title]].join.downcase =~ stanford_affiliated_regex
     end
 
     def stanford_affiliated_regex
