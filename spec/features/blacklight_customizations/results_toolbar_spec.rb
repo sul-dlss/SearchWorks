@@ -23,6 +23,8 @@ feature "Results Toolbar", js: true do
     end
   end
   scenario "should have tablet and mobile tools hidden" do
-    pending("check for hidden tablet and mobile results toolbar tool")
+    within "#sortAndPerPage" do
+      expect(page).to_not have_css("#search-results-toolbar", visible: true)
+    end
   end
 end
