@@ -5,6 +5,8 @@ en:
       bookmarks:
         present: "Selected"
         absent: "Select"
+      form:
+        q: ''
     bookmarks:
       add:
         button: "Select"
