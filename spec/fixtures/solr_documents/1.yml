@@ -1,11 +1,14 @@
 :id: 1
 :title_display: An object
-:author_person_display: "Doe, Jane"
+:author_person_display: Doe, Jane
+:vern_title_uniform_display: An object, aliquet sed mauris molestie, suscipit tempus
 :format: Book
 :format_main_ssim: Book
 :language: English
 :marcxml: <%= simple_856 %>
 :pub_date: 2014
+:beginning_year_isi: 2000
+:imprint_display: 1990
 :access_facet: Online
 :building_facet: Green
 :crez_course_info:
