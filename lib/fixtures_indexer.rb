@@ -11,7 +11,9 @@ class FixturesIndexer
   end
   def fixtures
     @fixtures ||= file_list.map do |file|
-      YAML::load File.open(file)
+      fixture_template = ERB.new(File.read(file))
+      rendered_template = fixture_template.result(binding)
+      YAML::load rendered_template
     end
   end
   def file_list
