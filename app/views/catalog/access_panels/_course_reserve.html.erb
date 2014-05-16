@@ -1,0 +1,21 @@
+<% document ||= @document %>
+
+<% if document.access_panels.course_reserve.present? %>
+  <div class="panel panel-default panel-course-reserve">
+    <div class="panel-heading">Course reserve</div>
+    <div class="panel-body">
+      <ul class="links">
+        <% document.access_panels.course_reserve.courses.each do |course| %>
+          <li>
+            <div class="course-reserve-course">
+              <%= t('blacklight.access_panels.course_reserve.course', link: link_to_course_reserve_course(course)).html_safe %>
+            </div>
+            <div class="course-reserve-instructor">
+              <%= t('blacklight.access_panels.course_reserve.instructor', instructor: course.instructor).html_safe %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

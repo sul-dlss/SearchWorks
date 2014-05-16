@@ -1,0 +1,18 @@
+.panel-course-reserve {
+  ul.links {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      padding-right: 20px;
+      padding-bottom: 15px;
+    }
+    li:last-child {
+      padding-bottom: 0px;
+    }
+  }
+}
+
+.course-reserve-title {
+  text-transform: capitalize !important;
+  font-size: $font-size-small;
+}

@@ -78,8 +78,8 @@ class CatalogController < ApplicationController
     #config.add_facet_field "dewey_2digit_facet", :label => "Refine Call Number", :show => false
     #config.add_facet_field "dewey_b4cutter_facet", :label => "Refine Call Number", :show => false
     #config.add_facet_field "gov_doc_type_facet", :label => "Refine Call Number", :show => false
-    #config.add_facet_field "course", :label => "Course", :show => false
-    #config.add_facet_field "instructor", :label => "Instructor", :show => false
+    config.add_facet_field "course", :label => "Course", :show => false
+    config.add_facet_field "instructor", :label => "Instructor", :show => false
     config.add_facet_field "author_other_facet", :label => "Organization (as Author)", :limit => true
     config.add_facet_field "geographic_facet", :label => "Region", :limit => true
     config.add_facet_field "era_facet", :label => "Era", :limit => true

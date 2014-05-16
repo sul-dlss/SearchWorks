@@ -16,4 +16,18 @@ describe "Access Panels", feature: true, :"data-integration" => true do
       end
     end
   end
+
+  describe "Course Reserve" do
+    it "should not be displayed for non course reserve objects" do
+      visit catalog_path('10473427')
+      expect(page).not_to have_css(".panel-course-reserve")
+    end
+    it "should be displayed for course reserve objects" do
+      visit catalog_path('10020587')
+
+      within(".panel-course-reserve") do
+        expect(page).to have_css("li a", text: "ACCT-212-01-02 -- Managerial Accounting: Base")
+      end
+    end
+  end
 end
