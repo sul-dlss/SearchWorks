@@ -4,6 +4,7 @@
 :format: Book
 :format_main_ssim: Book
 :language: English
+:marcxml: <%= simple_856 %>
 :pub_date: 2014
 :access_facet: Online
 :building_facet: Green

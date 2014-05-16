@@ -1,4 +1,8 @@
+require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
+require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
 class FixturesIndexer
+  include Marc856Fixtures
+  include MarcMetadataFixtures
   def self.run
     FixturesIndexer.new.run
   end
