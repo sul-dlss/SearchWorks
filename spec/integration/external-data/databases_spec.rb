@@ -5,7 +5,7 @@ describe "Databases Access Point", feature: true, :"data-integration" => true do
     visit root_url
 
     fill_in "q", with: ''
-    click_button "Search"
+    click_button "search"
 
     within("#facet-format") do
       click_link "Database"
