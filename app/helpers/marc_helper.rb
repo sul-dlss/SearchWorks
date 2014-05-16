@@ -41,6 +41,146 @@ module MarcHelper
     return {:label=>label,:fields=>fields,:unmatched_vernacular=>unmatched_vern} unless (fields.empty? and unmatched_vern.nil?)
   end
 
+  # Generate dt/dd pair with a link with a label given a marc field
+  def link_to_data_with_label_from_marc(marc,label,tag,url,opts={})
+    new_fields = []
+    new_unmatched_vernacular = []
+    fields = get_data_with_label_from_marc(marc,label,tag,opts)
+    unless fields.nil? or fields[:fields].nil?
+      fields[:fields].each do |field|
+        vernacular = link_to(field[:vernacular],url.merge!(:q => "\"#{field[:vernacular]}\"")) unless field[:vernacular].nil?
+        new_field = link_to(field[:field].strip, url.merge!(:q => "\"#{field[:field].strip}\"")) unless field[:field].nil?
+        new_fields << {:field=>new_field,:vernacular=>vernacular}
+      end
+      unless fields.nil? or fields[:unmatched_vernacular].nil?
+        fields[:unmatched_vernacular].each do |field|
+          new_unmatched_vernacular << link_to(field,url.merge!(:q => "\"#{field}\""))
+        end
+      end
+    end
+    return {:label=>label,:fields=>new_fields,:unmatched_vernacular=>new_unmatched_vernacular} unless (new_fields.empty? and new_unmatched_vernacular.empty?)
+  end
+
+  # Generate dt/dd pair of contributors with translations
+  def link_to_contributor_from_marc(marc)
+    text = ""
+    related_works = []
+    included_works = []
+    contributors = []
+    ['700', '710', '711', '720', '730'].each do |tag|
+      if marc[tag]
+        marc.find_all{|f| (tag) === f.tag}.each do |field|
+          if tag == "730"
+            uniform_title = get_uniform_title(marc,[tag], field)
+            uniform_title[:fields].each do |field|
+              related_works << field[:field] unless field[:field].nil?
+              related_works << field[:vernacular] unless field[:vernacular].nil?
+            end
+            related_works << uniform_title[:unmatched_vernacular] unless uniform_title[:unmatched_vernacular].nil?
+          elsif !field["t"].blank?
+            subt = :none
+            link_text = []
+            extra_text = []
+            before_text = []
+            href_text = []
+            extra_href = []
+            field.each do |subfield|
+              unless ["?","="].include?(subfield.code)
+                # $e $i $4
+                if subfield.code == "t"
+                  subt = :now
+                end
+                if subfield.code == "i" and subt == :none
+                  before_text << subfield.value
+                elsif subt == :none
+                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                  link_text << subfield.value
+                elsif subt == :now or (subt == :passed and subfield.value.strip =~ /[\.|;]$/)
+                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                  link_text << subfield.value
+                  subt = :passed
+                  subt = :done if subfield.value.strip =~ /[\.|;]$/
+                elsif subt == :done
+                  extra_href << subfield.value unless ["e","i","4"].include?(subfield.code)
+                  extra_text << subfield.value
+                else
+                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                  link_text << subfield.value
+                end
+              end
+            end
+            href = "\"#{href_text.join(" ")}\""
+            link = ""
+            link << "#{before_text.join(" ")} " unless before_text.blank?
+            link << link_to(link_text.join(" "), :controller => 'catalog', :action => 'index', :q => href, :search_field => 'author_title')
+            link << " #{extra_text.join(" ")}" unless extra_text.blank?
+            if field.indicator2 == "2"
+              included_works << link
+            else
+              related_works << link
+            end
+          else
+            link_text = ""
+            temp_text = ""
+            relator_text = []
+            field.each do |subfield| 
+              unless ["?","="].include?(subfield.code)
+                if subfield.code == "e"
+                  relator_text << subfield.value
+                elsif subfield.code == "4" and relator_text.blank?
+                  relator_text << Constants::RELATOR_TERMS[subfield.value]
+                elsif subfield.code == "6"
+                  nil
+                elsif subfield.code != "e" and subfield.code != "4"
+                  link_text << "#{subfield.value} "
+                end
+              end
+            end
+            temp_text << link_to(link_text.strip, :q => "\"#{link_text}\"", :controller => 'catalog', :action => 'index', :search_field => 'search_author' )
+            temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
+            vernacular = get_marc_vernacular(marc,field)
+            temp_vern = "\"#{vernacular}\""
+            temp_text << "<br/>#{link_to h(vernacular), :q => temp_vern, :controller => 'catalog', :action => 'index', :search_field => 'search_author'}" unless vernacular.nil?
+            temp_text << "<br/>"
+            contributors << temp_text
+          end
+        end
+      else
+        if marc['880']
+          marc.find_all{|f| ('880') === f.tag}.each do |field|
+            if !field['6'].nil? and field['6'].include?("-")
+              if field['6'].split("-")[1].gsub("//r","") == "00" and field['6'].split("-")[0] == tag
+                text = "<dt>Contributor</dt><dd>"
+                  link_text = ''
+                  relator_text = ""
+                  field.each do |subfield| 
+                    if subfield.code == "e"
+                      relator_text = Constants::RELATOR_TERMS[subfield.value]
+                    elsif subfield.code == "4" and relator_text.blank?
+                      relator_text = Constants::RELATOR_TERMS[subfield.value]
+                    elsif subfield.code == "6"
+                      nil
+                    elsif subfield.code != "e" and subfield.code != "4"
+                      link_text << "#{subfield.value} "
+                    end
+                  end
+                  text << link_to(h(link_text.strip),:q => "\"#{link_text}\"", :action => 'index', :search_field => 'author_search')
+                  text << relator_text.join(", ") unless relator_text.blank?
+                  text << "</dd>"
+              end
+            end
+          end
+        end
+      end
+    end
+    return_text = ""
+    return_text << "<dt>Contributor</dt><dd>#{contributors.join}</dd>" unless contributors.blank?
+    return_text << text unless text.blank?
+    return_text << "<dt>Related Work</dt><dd>#{related_works.join('<br/>')}</dd>" unless related_works.blank?
+    return_text << "<dt>Included Work</dt><dd>#{included_works.join('<br/>')}</dd>" unless included_works.blank?
+    return_text.html_safe unless return_text.blank?
+  end
+
   def get_marc_vernacular(marc,field)
     return_text = []
     if field['6']
@@ -209,6 +349,235 @@ module MarcHelper
     end
     return data
   end
+
+  def get_related_works_from_marc(marc,label,field)
+    if marc[field]
+      marc.find_all{|f| (field) === f.tag}.each do |f|
+        if f.indicator2 == "2"
+          return get_data_with_label_from_marc(marc,"Included Work",field)
+        else
+          return get_data_with_label_from_marc(marc,label,field)
+        end
+      end
+    end
+  end
+
+  def marc_264(marc)
+    combined_fields = {}
+    normal_fields = marc.find_all{|f| ("264") === f.tag }
+    unmatched_vernacular = get_unmatched_vernacular_fields(marc,"264")
+    unless normal_fields.blank? and unmatched_vernacular.blank?
+      allowed_subfields = ["a","b","c"]
+      new_fields = []
+      normal_fields.map{|f| new_fields << f} unless normal_fields.blank?
+      unmatched_vernacular.map{|f| new_fields << f} unless unmatched_vernacular.blank?
+      new_fields.each do |field|
+        key = marc_264_labels[:"#{field.indicator1}#{field.indicator2}"]
+        combined_fields[key] ||= []
+        field_text = []
+        field.each do |subfield|
+          field_text << subfield.value if allowed_subfields.include?(subfield.code)
+        end
+        combined_fields[key] << field_text.join(" ")
+        vernacular = get_marc_vernacular(marc,field)
+        combined_fields[key] << vernacular unless vernacular.blank?
+      end
+      return combined_fields
+    end
+    return combined_fields unless combined_fields.blank?
+  end
+
+  def marc_264_labels
+    {
+      :" 0" => "Production",
+      :"20" => "Former production",
+      :"30" => "Current production",
+      :" 1" => "Publication",
+      :"21" => "Former publication",
+      :"31" => "Current publication",
+      :" 2" => "Distribution",
+      :"22" => "Former distribution",
+      :"32" => "Current distribution",
+      :" 3" => "Manufacture",
+      :"23" => "Former manufacture",
+      :"33" => "Current manufacture",
+      :" 4" => "Copyright notice",
+      :"24" => "Former copyright",
+      :"34" => "Current copyright"
+    }
+  end
+
+  def title_change_data_from_marc(marc)
+    fields = []
+    if marc['780'] or marc['785']
+      if marc['780']
+        marc.find_all{|f| ('780') === f.tag}.each do |field|
+          label = "#{name_change_780_translations[field.indicator2]}"
+          temp_text = ""
+          field.each{|subfield|
+            if subfield.code == "w"
+              nil
+            elsif subfield.code == "t"
+              query = "\"#{subfield.value}\""
+              temp_text << "#{link_to(subfield.value, :controller => "catalog", :action=>'index', :search_field=>'search_title', :q=>query)} "
+            elsif subfield.code == "x"
+              temp_text << "(#{link_to(subfield.value, :controller => "catalog", :action=>'index', :search_field=>'search', :q=>subfield.value)}) "
+            else
+              temp_text << "#{subfield.value} "
+            end
+          }
+          fields << {:label=>label,:field=>temp_text.strip} unless temp_text.strip.blank?
+        end
+      end
+
+      if marc['785']
+        special_handler = []
+        marc.find_all{|f| ('785') === f.tag}.each do |field|
+          if field.indicator2 == "7"
+            special_handler << field
+          end
+        end
+
+        marc.find_all{|f| ('785') === f.tag}.each do |field|
+          if field.indicator2 == "7" and field == special_handler.first
+            label = "Merged with"
+          elsif field.indicator2 == "7" and field == special_handler.last
+            label = "to form"
+          elsif field.indicator2 == "7" and field != special_handler.first and field != special_handler.last
+            label = "and with"
+          else
+            label = "#{name_change_785_translations[field.indicator2]}"
+          end
+          temp_text = ""
+          field.each{|subfield|
+            if subfield.code == "w"
+              nil
+            elsif subfield.code == "t"
+              query = "\"#{subfield.value}\""
+              temp_text << "#{link_to(subfield.value, :controller => "catalog", :action=>'index', :search_field=>'search_title', :q=>query)} "
+            elsif subfield.code == "x"
+              temp_text << "(#{link_to(subfield.value, :controller => "catalog", :action=>'index', :search_field=>'search', :q=>subfield.value)}) "
+            else
+              temp_text << "#{subfield.value} "
+            end
+          }
+          fields << {:label=>label,:field=>temp_text.strip} unless temp_text.strip.blank?
+        end
+      end
+    end
+    return fields unless fields.empty?
+  end
+
+  def name_change_780_translations
+   {"0" => "Continues",
+    "1" => "Continues in part",
+    "2" => "Supersedes",
+    "3" => "Supersedes in part",
+    "4" => "Merged from",
+    "5" => "Absorbed",
+    "6" => "Absorbed in part",
+    "7" => "Separated from"}
+  end
+
+  def name_change_785_translations
+   {"0" => "Continued by",
+    "1" => "Continued in part by",
+    "2" => "Superseded by",
+    "3" => "Superseded in part by",
+    "4" => "Absorbed by",
+    "5" => "Absorbed in part by",
+    "6" => "Split into",
+    "7" => "Merged with ... to form ...",
+    "8" => "Changed back to"}
+  end
+
+  def link_to_series_from_marc(marc)
+    fields = []
+    tags = ["440","490","800","810","811","830"]
+    tags.each do |tag|
+      if marc[tag]
+        marc.find_all{|f| (tag) === f.tag}.each do |field|
+          text = ""
+          link = []
+          extra = []
+          sub_a = []
+          prep_string = []
+          field.each do |subfield|
+            if ("a".."z").to_a.delete_if{|tg| ["x","v"].include?(tg) }.include?(subfield.code)
+              link << subfield.value
+              prep_string << subfield.value
+            elsif !Constants::EXCLUDE_FIELDS.include?(subfield.code)
+              extra << subfield.value
+              prep_string << subfield.value
+            end
+            sub_a << subfield.value if subfield.code == "a"
+          end
+          # don't want to have the extra text join 3 times, however we can only dedup for 490 ind1 == 1
+          # if we do one join at the end then we need a really complicated unless statement
+          if tag == "490" and field.indicator1 != "0"
+            unless series_is_duplicated?(marc,prep_string.join(" "))
+              text << link.join(" ")
+              text << " #{extra.join(" ")}" unless extra.blank?
+            end
+          elsif sub_a.length > 1
+            text << link.join(" ")
+            text << " #{extra.join(" ")}" unless extra.blank?
+          else
+            text << link_to(link.join(" "), :q => "\"#{link.join(" ")}\"", :controller => "catalog", :action => "index", :search_field => "search_series")
+            text << " #{extra.join(" ")}" unless extra.blank?
+          end
+          fields << text unless text.blank?
+          if field["6"]
+            field_original = field.tag
+            match_original = field['6'].split("-")[1]
+            marc.find_all{|f| ('880') === f.tag}.each do |vern_field|
+              if !vern_field['6'].nil? and vern_field['6'].include?("-")
+                field_880 = vern_field['6'].split("-")[0]
+                match_880 = vern_field['6'].split("-")[1].gsub("//r","")
+                if match_original == match_880 and field_original == field_880
+                  vern_text = ""
+                  vern_field.each{ |sub_field|
+                    if sub_field.code == "a"
+                      vern_text << link_to(sub_field.value,{:controller=>"catalog",:action=>"index",:q=>"\"#{sub_field.value}\"",:search_field=>"title"})
+                    elsif ["v","x"].include?(sub_field.code)
+                      vern_text << " #{sub_field.value} "
+                    end
+                  }
+                  fields << vern_text unless vern_text.blank?
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    return fields unless fields.empty?
+  end
+
+  def prep_for_compare(string)
+    str = string.dup
+    str.gsub!(/\W+/,"")
+    str.downcase
+  end
+
+  def series_is_duplicated?(marc,series)
+    prepped_series = prep_for_compare(series)
+    ["800","810","811","830"].each do |tag|
+      if marc[tag]
+        marc.find_all{|f| (tag) === f.tag}.each do |field|
+          tmp = []
+          field.each do |subfield|
+            if ("a".."z").include?(subfield.code)
+              tmp << subfield.value
+            end
+          end
+          return true if prepped_series == prep_for_compare(tmp.join(" "))
+        end
+      end
+    end
+    false
+  end
+
   def get_uniform_title(doc,fields,fld=nil)
     # little hack to return nil if the document doesn't have any of the fields
     return nil if fields.map{|f| doc[f] ? true : false }.uniq == [false]
