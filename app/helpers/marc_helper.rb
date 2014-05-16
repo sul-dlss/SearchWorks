@@ -42,21 +42,25 @@ module MarcHelper
   end
 
   def get_marc_vernacular(marc,field)
-    return_text = ""
+    return_text = []
     if field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
       marc.find_all{|f| ('880') === f.tag}.each do |field|
-        if field['6'] and field['6'].include?("-")
+        if !field['6'].nil? and field['6'].include?("-")
           field_880 = field['6'].split("-")[0]
           match_880 = field['6'].split("-")[1].gsub("//r","")
           if match_original == match_880 and field_original == field_880
-            field.each{ |sub_field| Constants::EXCLUDE_FIELDS.include?(sub_field.code) ? nil : return_text << "#{sub_field.value} "}
+            field.each do |sub| 
+              if !Constants::EXCLUDE_FIELDS.include?(sub.code)
+                return_text << sub.value
+              end
+            end
           end
         end
       end
     end
-    return return_text.strip unless return_text.blank?
+    return return_text.join(" ") unless return_text.blank?
   end
 
   def get_unmatched_vernacular(marc,tag)
@@ -205,7 +209,78 @@ module MarcHelper
     end
     return data
   end
-
+  def get_uniform_title(doc,fields,fld=nil)
+    # little hack to return nil if the document doesn't have any of the fields
+    return nil if fields.map{|f| doc[f] ? true : false }.uniq == [false]
+    uniform_title = Object.new
+    # take the last of the passed fields
+    if fld.nil?
+      fields.each do |f|
+        uniform_title = doc[f] if doc[f]
+      end
+    else
+      uniform_title = fld
+    end
+    link_text = []
+    extra_text = []
+    end_link = false
+    uniform_title.each do |sub_field|
+      unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
+        if !end_link and sub_field.value.strip =~ /[\.|;]$/
+          link_text << sub_field.value
+          end_link = true
+        elsif end_link
+          extra_text << sub_field.value
+        else
+          link_text << sub_field.value
+        end
+      end
+    end
+    author = []
+    unless fields.include?("730")
+      auth_field = doc["100"] || doc["110"] || doc["111"]
+      if auth_field
+        auth_field.each do |sub_field|
+          exclude = Constants::EXCLUDE_FIELDS.dup
+          exclude << "e"
+          exclude << "4"
+          unless exclude.include?(sub_field.code)
+            author << sub_field.value
+          end
+        end
+      end
+    end
+    search_field = ["130", "730"].include?(uniform_title.tag) ? "search_title" : "author_title"
+    vern = get_marc_vernacular(doc, uniform_title)
+    href = "\"#{[author.join(" "),link_text.join(" ")].join(" ")}\""
+    {:label => "Uniform Title:", :fields => [{:field=>"#{link_to(link_text.join(" "),{:action => "index", :controller => "catalog", :q => href, :search_field=>search_field})} #{extra_text.join(" ")}".html_safe, :vernacular => vern ? link_to(vern,{:q => "\"#{vern}\"",:controller=>"catalog",:action=>"index",:search_field=>search_field}) : nil}], :unmatched_vernacular => nil}
+  end
+  def link_to_author_from_marc(marc, opts={})
+    if marc["100"]
+      opts[:label] ||= "Author/Creator:"
+      opts[:search_options] ||= {:controller => "catalog", :action => 'index', :search_field => 'search_author'}
+      link, extra, subs = [],[], []
+      marc["100"].each do |sub_field|
+        unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
+          subs << sub_field.code
+          if subs.include?("e") or subs.include?("4")
+            extra << sub_field.value
+          else
+            link << sub_field.value
+          end
+        end
+      end
+      vernacular = get_marc_vernacular(marc, marc["100"])
+      unless vernacular.blank?
+        vernacular = link_to(vernacular, opts[:search_options].merge(:q => "\"#{vernacular}\"")).html_safe
+      end
+      {:label  => opts[:label],
+       :fields => [{:field      => [link_to(link.join(' '), opts[:search_options].merge(:q => "\"#{link.join(' ')}\"")), extra].flatten.compact.join(" ").html_safe,
+                    :vernacular => vernacular
+                   }]
+      }
+    end
+  end
   def render_field_from_marc(fields,opts={})
     render "catalog/field_from_marc", :fields => fields, :options => opts
   end

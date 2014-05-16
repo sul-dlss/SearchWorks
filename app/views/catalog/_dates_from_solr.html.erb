@@ -1,0 +1,26 @@
+<% document ||= @document %>
+<% dates = {
+"publication_year_isi"   => "Publication date",
+"beginning_year_isi"     => "Beginning date",
+"creation_year_isi"      => "Creation date",
+"earliest_year_isi"      => "Earliest date",
+"earliest_poss_year_isi" => "Earliest possible date",
+"release_year_isi"       => "Release date",
+"reprint_year_isi"       => "Reprint/reissue date",
+"other_year_isi"         => "Date",
+"ending_year_isi"        => "Ending date",
+"latest_year_isi"        => "Latest date",
+"latest_poss_year_isi"   => "Latest possible date",
+"production_year_isi"    => "Production date",
+"original_year_isi"      => "Original date",
+"copyright_year_isi"     => "Copyright date",
+"imprint_display"        => "Imprint"} %>
+<% doc_dates = dates.keys.map{|key| true if document[key] } %>
+<% unless doc_dates.blank? %>
+  <% dates.each do |field, label| %>
+    <% if document.has_key?(field)  %>
+      <dt title="<%= label %>"><%= label %>:</dt>
+      <dd><%= [document[field]].flatten.join("<br/>").html_safe %></dd>
+    <% end %>
+  <% end %>
+<% end %>
