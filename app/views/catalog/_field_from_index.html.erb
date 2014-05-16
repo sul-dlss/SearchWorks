@@ -1,0 +1,8 @@
+<dt title="<%= fields[:label] %>"><%= fields[:label] %></dt>
+<dd>
+  <%= fields[:fields].join("<br/>").html_safe %>
+  <%- unless fields[:vernacular].nil? -%>
+    <br/>
+    <%= fields[:vernacular].join("<br/>").html_safe -%>
+  <%- end -%>
+</dd>

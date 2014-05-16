@@ -1,4 +1,8 @@
+require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
+require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
 class FixturesIndexer
+  include Marc856Fixtures
+  include MarcMetadataFixtures
   def self.run
     FixturesIndexer.new.run
   end
@@ -11,7 +15,9 @@ class FixturesIndexer
   end
   def fixtures
     @fixtures ||= file_list.map do |file|
-      YAML::load File.open(file)
+      fixture_template = ERB.new(File.read(file))
+      rendered_template = fixture_template.result(binding)
+      YAML::load rendered_template
     end
   end
   def file_list
