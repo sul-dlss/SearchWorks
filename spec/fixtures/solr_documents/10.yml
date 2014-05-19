@@ -7,4 +7,10 @@
 :format_main_ssim: Book
 :access_facet: At the Library
 :building_facet: Green
-
+:item_display:
+  - "123 -|- CHEMCHMENG"
+  - "456 -|- CHEMCHMENG"
+  - "123 -|- CHEMCHMENG"
+  - "678 -|- EARTH-SCI"
+  - "123 -|- CHEMCHMENG"
+  - "543 -|- BIOLOGY"

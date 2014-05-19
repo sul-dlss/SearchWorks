@@ -1,0 +1,16 @@
+.library-location-heading{
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: $border-radius-small;
+  padding-bottom: 6px;
+  background: #919191;
+  color: #fff;
+}
+.library-location-heading a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.library-location-heading-text{
+  padding-top: 6px;
+  padding-left: 60px;
+}
