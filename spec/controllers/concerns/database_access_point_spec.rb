@@ -31,6 +31,29 @@ describe DatabaseAccessPoint do
       expect(params[:sort]).to eq "some-sort-param"
     end
   end
+  describe "#add_database_topic_facet" do
+    before do
+      blacklight_config.stub(:facet_fields).and_return({
+        "db_az_subject" => OpenStruct.new(show: false, if: false)
+      })
+    end
+    it "should set show and if to true when under the databases page location" do
+      page_location.stub(:access_point).and_return(OpenStruct.new(:"databases?" => true))
+      expect(blacklight_config.facet_fields["db_az_subject"].show).to be_false
+      expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_false
+      expect(controller.send(:add_database_topic_facet))
+      expect(blacklight_config.facet_fields["db_az_subject"].show).to be_true
+      expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_true
+    end
+    it "should set the show and if to true when under the facet action" do
+      params[:action] = "facet"
+      expect(blacklight_config.facet_fields["db_az_subject"].show).to be_false
+      expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_false
+      expect(controller.send(:add_database_topic_facet))
+      expect(blacklight_config.facet_fields["db_az_subject"].show).to be_true
+      expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_true
+    end
+  end
   describe "#database_prefix_search" do
     let(:solr_params) { {} }
     let(:user_params) { {} }
