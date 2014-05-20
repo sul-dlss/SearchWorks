@@ -17,6 +17,9 @@ The installation script will
 2. Download jetty to the rails root if does not already exist.
 3. Unzip the downloaded jetty
 4. Index the local development/test fixtures
+5. Create a local development development config file `config/settings.local.yml`
+
+You will need to update the configuration in `config/settings.yml` to the correct URL for the `HOURS_API`
 
 Start jetty
 
@@ -46,4 +49,3 @@ This is intended for running tests against the fixtures in the local index.
 This is intended for running production data integration tests agains the remote index.
 
     $ TEST_SOLR_URL=http://example-solr.stanford.edu:8983/solr rake jenkins
-

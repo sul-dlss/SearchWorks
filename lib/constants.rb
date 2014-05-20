@@ -981,6 +981,54 @@ module Constants
      #No Physics or Meyer (ACOMP) in doc provided, the show up on web
    }
 
+   HOURS_LOCATIONS = {
+    "GREEN" => "green/location/green_library",
+    "SAL" => "sal12/location/sal12_library",
+    "MEYER" => "meyer/location/meyer_24_hour",
+    "ARS" => "ars/location/ars_archive",
+    "ART" => "art/location/art_library",
+    "BIOLOGY" => "biology/location/biology_library",
+    "CHEMCHMENG" => "chemistry/location/chemistry_library",
+    "EARTH-SCI" => "earth_sciences/location/earth_sciences_library",
+    "EAST-ASIA" => "east_asia/location/east_asia_library",
+    "EDUCATION" => "education/location/education_library",
+    "ENGINEERING" => "engineering/location/engineering_library",
+    "HOPKINS" => "marine_biology/location/marine_biology_library",
+    "MATH-CS" => "math_stats/location/math_stats_library",
+    "MUSIC" => "music/location/music_library",
+    "SPEC-COLL" => "special_collections/location/spec_coll_reading",
+    "BUSINESS" => "business/location/business_library",
+    "HOOVER-AV" => "hoover_archives/location/hv_archives",
+    "HOOVER" => "hoover_library/location/hv_library",
+    "LAW" => "law/location/law_library",
+    "LANE-MED" => "medical/location/medical_library",
+    "SLAC" => "slac/location/slac"
+   }
+
+   LIBRARY_ABOUT = {
+    "GREEN" => "http://library.stanford.edu/libraries/green/about",
+    "SAL" => "http://library.stanford.edu/libraries/sal/about",
+    "MEYER" => "http://library.stanford.edu/libraries/meyer/about",
+    "ARS" => "http://library.stanford.edu/libraries/ars/about",
+    "ART" => "http://library.stanford.edu/libraries/art/about",
+    "BIOLOGY" => "http://library.stanford.edu/libraries/falconer/about",
+    "CHEMCHMENG" => "http://library.stanford.edu/libraries/swain/about",
+    "EARTH-SCI" => "http://library.stanford.edu/libraries/branner/about",
+    "EAST-ASIA" => "http://library.stanford.edu/libraries/eal/about",
+    "EDUCATION" => "http://library.stanford.edu/libraries/cubberley/about",
+    "ENGINEERING" => "http://library.stanford.edu/libraries/englib/about",
+    "HOPKINS" => "http://library.stanford.edu/libraries/hopkins/about",
+    "MATH-CS" => "http://library.stanford.edu/libraries/mathstat/about",
+    "MUSIC" => "http://library.stanford.edu/libraries/music/about",
+    "SPEC-COLL" => "http://library.stanford.edu/libraries/spc/about",
+    "BUSINESS" => "http://library.stanford.edu/libraries/business/about",
+    "HOOVER-AV" => "http://library.stanford.edu/libraries/hila/about",
+    "HOOVER" => "http://library.stanford.edu/libraries/hoover/about",
+    "LAW" => "http://library.stanford.edu/libraries/law/about",
+    "LANE-MED" => "http://library.stanford.edu/libraries/lane/about",
+    "SLAC" => "http://library.stanford.edu/libraries/slac/about"
+   }
+
    EXCLUDE_FIELDS = ["w", "0", "5", "6", "8", "?", "="]
 
    NIELSEN_TAGS = {"505"=>"905","520"=>"920","586"=>"986"}
