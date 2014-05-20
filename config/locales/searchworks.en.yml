@@ -26,3 +26,5 @@ en:
       course_reserve:
         course: '<span class="course-reserve-title">COURSE:</span> %{link}'
         instructor: '<span class="course-reserve-title">INSTRUCTOR(S):</span> <span class="text-muted">%{instructor}</span>'
+    feedback_form:
+      success: '<strong>Thank you!</strong> Your feedback has been sent.'

@@ -17,9 +17,11 @@ The installation script will
 2. Download jetty to the rails root if does not already exist.
 3. Unzip the downloaded jetty
 4. Index the local development/test fixtures
-5. Create a local development development config file `config/settings.local.yml`
+5. Create a local development development config file `config/settings.yml`
 
-You will need to update the configuration in `config/settings.yml` to the correct URL for the `HOURS_API`
+You will need to update the configuration in `config/settings.yml` to the correct URL for the following:
+ - `HOURS_API`
+ - `EMAIL_TO`
 
 Start jetty
 

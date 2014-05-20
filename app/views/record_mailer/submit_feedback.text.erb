@@ -1,0 +1,8 @@
+Name: <%= @name %>
+Email: <%= @email %>
+Comment:
+<%= @message.html_safe unless @message.nil? %>
+
+Message sent from: <%= @url %>
+Host: <%= Settings.HOSTNAME %>
+IP: <%= @ip %>
