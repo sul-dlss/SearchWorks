@@ -1,0 +1,25 @@
+<% if @selected_databases.present? %>
+  <div class="breadcrumb col-md-12">
+    <h2 class="pull-right"><%= pluralize(@selected_databases.length, 'result') %></h2>
+  </div>
+  <% column1, column2 = @selected_databases.in_groups(2) %>
+  <div class="row selected-databases">
+    <% [column1, column2].each do |column| %>
+      <div class="col-md-6">
+        <% column.compact.each do |database| %>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3><%= link_to(database['title_245a_display'], catalog_path(database[:id])) %></h3>
+              <span class="subjects">(<%= database.selected_database_subjects.join(', ') %>)</span>
+              <p>
+                <span class="label label-success">Search database</span>
+                <%= link_to(database['url_fulltext'].first, database['url_fulltext'].first) %>
+              </p>
+              <p><%= database.selected_database_description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get "databases" => "catalog#index", :defaults => {:f => {:format=>["Database"]}}
 
+  resources :selected_databases, only: :index
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

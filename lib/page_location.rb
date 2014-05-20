@@ -31,6 +31,10 @@ module SearchWorks
         end
       end
 
+      def selected_databases_index_access_points
+        :selected_databases
+      end
+
       def method_missing(method_name, *args, &block)
         case method_name
         when /(\w*)\?$/
