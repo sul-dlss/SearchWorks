@@ -5,29 +5,18 @@ module MarcLinks
     end
   end
   private
-  class Processor
-    delegate :present?, to: :all
+  class Processor < SearchWorks::Links
     def initialize(document)
       @document = document
     end
     def all
       link_fields.map do |link_field|
         link = process_link(link_field)
-        OpenStruct.new(
+        SearchWorks::Links::Link.new(
           text: [link[:before], "<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
-          fulltext?: link_is_fulltext?(link_field),
-          stanford_only?: stanford_only?(link)
+          fulltext: link_is_fulltext?(link_field),
+          stanford_only: stanford_only?(link)
         )
-      end
-    end
-    def fulltext
-      all.select do |link|
-        link.fulltext?
-      end
-    end
-    def supplemental
-      all.select do |link|
-        !link.fulltext?
       end
     end
     private
