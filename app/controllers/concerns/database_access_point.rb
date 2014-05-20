@@ -4,6 +4,7 @@ module DatabaseAccessPoint
   included do
     if self.respond_to?(:before_filter)
       before_filter :default_databases_sort, only: :index
+      before_filter :add_database_topic_facet, only: [:index, :facet]
     end
     if self.respond_to?(:solr_search_params_logic)
       self.solr_search_params_logic << :database_prefix_search
@@ -17,6 +18,14 @@ module DatabaseAccessPoint
         sort if config.label == "title"
       end.compact.first
       params[:sort] = title_sort
+    end
+  end
+
+  def add_database_topic_facet
+    if params[:action] == "facet" || page_location.access_point.databases?
+      database_facet = blacklight_config.facet_fields["db_az_subject"]
+      database_facet.show = true
+      database_facet.if = true
     end
   end
 
