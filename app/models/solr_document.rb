@@ -4,7 +4,7 @@ class SolrDocument
   include MarcLinks
   include CourseReserves
   include AccessPanelsConcern
-
+  include DatabaseDocument
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
@@ -37,5 +37,11 @@ class SolrDocument
   # and Blacklight::Solr::Document#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension( Blacklight::Solr::Document::DublinCore)
+
+  # This abstraction method may become useful while
+  # we're between using the new and old format facet
+  def format_key
+    :format
+  end
 
 end

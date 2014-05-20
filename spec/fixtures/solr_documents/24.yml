@@ -4,6 +4,7 @@
 :title_display: Ullamco do minim laboris sit velit.
 :language: Spanish
 :format: Database
+:marcxml: <%= stanford_only_856 %>
 :format_main_ssim: Database
 :access_facet: Online
 :building_facet: Hoover Library

@@ -25,5 +25,19 @@ describe "catalog/access_panels/_online.html.erb" do
       expect(rendered).to have_css(".panel-online")
       expect(rendered).to have_css("ul.links li span.stanford-only")
     end
+    describe "database" do
+      before do
+        assign(:document, SolrDocument.new(marcxml: simple_856, format: ["Database"]))
+      end
+      it "should render a special panel heading" do
+        render
+        expect(rendered).to have_css(".panel-heading", text: "Search this database")
+      end
+      it "should render a special panel footer" do
+        render
+        expect(rendered).to have_css(".panel-footer a", text: "Connect from off campus")
+        expect(rendered).to have_css(".panel-footer a", text: "Report a connection problem")
+      end
+    end
   end
 end

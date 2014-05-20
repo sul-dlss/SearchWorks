@@ -6,4 +6,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of MarcLinks
     end
   end
+  describe "DatabaseDocument" do
+    it "should include database document" do
+      expect(subject).to be_kind_of DatabaseDocument
+    end
+  end
 end
