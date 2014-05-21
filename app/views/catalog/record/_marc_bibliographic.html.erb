@@ -293,16 +293,9 @@
   <%= render_field_from_marc(note_590) %>
 <% end %>
 
-<% if document.to_marc["592"] %>
-  <dt>Note</dt>
-  <dd>
-    <% document.to_marc.find_all{|f| ("592") === f.tag}.each do |field|  %>
-      <% field.each do |sub_field| %>
-        <%= sub_field.value %>
-      <% end %>
-      <br/>
-    <% end %>
-  </dd>
+<% note_592 = get_data_with_label_from_marc(document.to_marc,"Note", '592') %>
+<% if note_592.present? && document.is_a_database? %>
+  <%= render_field_from_marc(note_592) %>
 <% end %>
 
 <%- if document.to_marc['690'] and document.to_marc['690']['a'] and document.to_marc['690']['a'].downcase.include?("collection") -%>
