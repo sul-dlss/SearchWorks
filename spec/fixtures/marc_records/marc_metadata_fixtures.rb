@@ -29,6 +29,10 @@ module MarcMetadataFixtures
           <subfield code="d">2014.</subfield>
           <subfield code="e">Accession 2014-1.</subfield>
         </datafield>
+        <datafield tag="592" ind1=" " ind2=" ">
+          <subfield code="a">A local note</subfield>
+          <subfield code="b">added to subjects only</subfield>
+        </datafield>
         <datafield tag="600" ind1="1" ind2="0">
           <subfield code="a">Arbitrary, Gregory</subfield>
           <subfield code="d">1904-1980.</subfield>
@@ -655,6 +659,16 @@ module MarcMetadataFixtures
           <subfield code="a">Unmatched vernacular SubfieldA</subfield>
           <subfield code="b">Unmatched vernacular SubfieldB</subfield>
           <subfield code="6">264-00</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def marc_592_fixture
+    <<-xml
+      <record>
+        <datafield tag="592" ind1=" " ind2=" ">
+          <subfield code="a">A local note</subfield>
+          <subfield code="b">added to subjects only</subfield>
         </datafield>
       </record>
     xml
