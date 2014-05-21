@@ -1,0 +1,24 @@
+.panel-online-books {
+  margin-top: 10px;
+  display: none;
+
+  .google-books {
+    ul {
+      list-style-type: none;
+      padding-left: 10px;
+
+      li a {
+        display: none;
+      }
+    }
+
+    .preview {
+      margin-top: 10px;
+
+      .preview-link {
+        display: none;
+      }
+    }
+
+  }
+}

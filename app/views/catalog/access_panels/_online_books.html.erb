@@ -1,0 +1,22 @@
+<% book_ids = get_book_ids(@document) %>
+<% css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>
+
+<div class="panel panel-default panel-online-books">
+  <div class="panel-heading">Available online</div>
+  <div class="panel-body">
+
+    <div class="row google-books <%= css_class %>">
+      <div class="col-md-7">
+        Google Books
+        <ul>
+          <li><a href="" class="about">About this book</a></li>
+          <li><a href="" class="full-view">Full view</a></li>
+          <li><a href="" class="limited-preview">Limited preview</a></li>
+        </ul>
+      </div>
+      <div class="col-md-5 preview">
+      <%= link_to(image_tag('gbs_preview_button.gif'), '', class: 'preview-link') %>
+      </div>
+    </div>
+  </div>
+</div>

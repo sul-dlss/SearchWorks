@@ -1,12 +1,7 @@
-<% fields = ["vern_title_uniform_display", "author_person_display", "imprint_display"] %>
-
 <ul class="document-metadata dl-horizontal dl-invert">
-
-  <% fields.each do |solr_fname| %>
-    <% if should_render_index_field? document, index_fields(document)[solr_fname] %>
+  <% index_fields(document).each do |solr_fname, field| -%>
+    <% if should_render_index_field? document, field %>
       <li><%= render_index_field_value document, :field => solr_fname %></li>
     <% end %>
   <% end %>
-
 </ul>
-

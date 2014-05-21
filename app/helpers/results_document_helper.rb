@@ -1,14 +1,17 @@
-module Searchworks::IndexViewDocumentHelper
+module ResultsDocumentHelper
 
-  def get_main_title(document)
-    title = h(document[document_show_link_field.to_s])
+  def get_main_title document
+    title = document['title_display'].html_safe
 
-    if document['vern_' + document_show_link_field.to_s]
-      title = h(document[document_show_link_field]) + " " + h(document['vern_' + document_show_link_field.to_s])
+    if !document['vern_title_display'].nil?
+      title = title + " " + document['vern_title_display'].html_safe
     end
+
+    title
   end
 
-  def get_main_title_date(document)
+
+  def get_main_title_date document
     publication_year    = document["publication_year_isi"].to_s
     beginning_year      = document["beginning_year_isi"].to_s
     earliest_year       = document["earliest_year_isi"].to_s
@@ -46,6 +49,36 @@ module Searchworks::IndexViewDocumentHelper
     end
 
     date = "[#{date}]" unless date.empty?
+  end
+
+
+  def get_book_ids document
+    isbn = add_prefix_to_elements( convert_to_array(document['isbn_display']), 'ISBN' )
+    oclc = add_prefix_to_elements( convert_to_array(document['oclc']), 'OCLC' )
+    lccn = add_prefix_to_elements( convert_to_array(document['lccn']), 'LCCN' )
+
+    return { 'isbn' => isbn, 'oclc' => oclc, 'lccn' => lccn }
+  end
+
+
+  def add_prefix_to_elements arr, prefix
+    new_array = []
+
+    arr.each do |i|
+      new_array.push("#{prefix}#{i}")
+    end
+
+    new_array
+  end
+
+
+  def convert_to_array value = []
+    arr = []
+
+    arr = value if value.kind_of?(Array)
+    arr.push(value) if value.kind_of?(String)
+
+    arr
   end
 
 end
