@@ -13,7 +13,7 @@
               <span class="subjects">(<%= database.selected_database_subjects.join(', ') %>)</span>
               <p>
                 <span class="label label-success">Search database</span>
-                <%= link_to(database['url_fulltext'].first, database['url_fulltext'].first) %>
+                <%= database.index_links.first.text.html_safe %>
               </p>
               <p><%= database.selected_database_description %></p>
             </div>
