@@ -16,6 +16,7 @@ module SearchWorks
     require 'page_location'
     require 'access_panels'
     require 'access_panel'
+    require 'links'
     # load all access panels
     config.autoload_paths += %W(#{config.root}/lib/access_panels)
 

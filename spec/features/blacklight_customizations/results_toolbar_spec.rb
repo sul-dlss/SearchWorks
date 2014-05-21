@@ -12,7 +12,7 @@ feature "Results Toolbar", js: true do
     within "#sortAndPerPage" do
       within "div.page_links" do
         expect(page).to have_css("a.btn.btn-default.btn-sm.disabled", text: "◄", visible: false)
-        expect(page).to have_css("span.page_entries.hidden-xs", text: "1 - 10 of 28", visible: true)
+        expect(page).to have_css("span.page_entries.hidden-xs", text: /1 - 10 of \d+/, visible: true)
         expect(page).to have_css("a.btn.btn-default.btn-sm", text: "►", visible: true)
       end
       expect(page).to have_css("button#view-stub", text: "View")

@@ -50,5 +50,11 @@ describe SearchWorks::PageLocation do
         end
       end
     end
+    describe "for SelectedDatabasesController#index" do
+      let(:base_params) { {controller: 'selected_databases', action: 'index' } }
+      it "should be defined" do
+        expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :selected_databases
+      end
+    end
   end
 end
