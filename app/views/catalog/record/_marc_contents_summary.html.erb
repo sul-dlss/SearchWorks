@@ -1,3 +1,8 @@
+<% if @document.marc_links.finding_aid.present? %>
+  <dt title="Finding aid">Finding aid</dt>
+  <dd><%= @document.marc_links.finding_aid.map(&:text).join("<br/>").html_safe %></dd>
+<% end %>
+
 <% biblio = get_data_with_label_from_marc(@document.to_marc, "Bibliography", '504') %>
 <% unless biblio.nil? %>
   <%= render_field_from_marc(biblio) %>
