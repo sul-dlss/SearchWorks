@@ -69,6 +69,15 @@ describe MarcLinks do
       expect(links.any?(&:fulltext?)).to be_false
     end
   end
+  describe "#finding_aid" do
+    let(:document) { SolrDocument.new(marcxml: finding_aid_856) }
+    let(:links) { document.marc_links.all }
+    it "should return all finding aid links" do
+      expect(links).to be_present
+      expect(links.all?(&:finding_aid?)).to be_true
+      expect(links).to eq document.marc_links.finding_aid
+    end
+  end
   describe "ez-proxy" do
     let(:document) { SolrDocument.new(marcxml: ez_proxy_856 ) }
     let(:links) { document.marc_links.all }

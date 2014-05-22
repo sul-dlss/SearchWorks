@@ -15,7 +15,8 @@ module MarcLinks
         SearchWorks::Links::Link.new(
           text: [link[:before], "<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
           fulltext: link_is_fulltext?(link_field),
-          stanford_only: stanford_only?(link)
+          stanford_only: stanford_only?(link),
+          finding_aid: link_is_finding_aid?(link_field)
         )
       end
     end
@@ -74,21 +75,20 @@ module MarcLinks
     def link_is_fulltext?(field)
       resource_labels = ["table of contents", "abstract", "description", "sample text"]
       if field.indicator2 == "2"
-        [field["3"],field["z"]].each do |subfield|
-          return true if !subfield.nil? and subfield.downcase.include?("finding aid")
-        end
         return false
       elsif field.indicator2 == "0" or field.indicator2 == "1" or field.indicator2.blank?
         resource_labels.each do |resource_label|
-          [field["3"],field["z"]].each do |subfield|
-            return false if !subfield.nil? and subfield.downcase.include?(resource_label)
-          end
+          return false if "#{field['3']} #{field['z']}".downcase.include?(resource_label)
         end
         return true
       else
         # this should catch bad indicators
         return nil
       end
+    end
+
+    def link_is_finding_aid?(field)
+      "#{field['3']} #{field['z']}".downcase.include?('finding aid')
     end
 
     def stanford_only?(link)

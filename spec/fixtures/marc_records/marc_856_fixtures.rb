@@ -64,17 +64,6 @@ module Marc856Fixtures
   def fulltext_856
     <<-xml
       <record>
-        <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='3'>finding aid</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
-          <subfield code='y'>Link text</subfield>
-          <subfield code='z'>Title text1</subfield>
-        </datafield>
-        <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
-          <subfield code='y'>Link text</subfield>
-          <subfield code='z'>This is the Finding Aid</subfield>
-        </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
@@ -123,6 +112,23 @@ module Marc856Fixtures
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>this is the description</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def finding_aid_856
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='2'>
+          <subfield code='3'>FINDING AID:</subfield>
+          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='y'>Link text</subfield>
+          <subfield code='z'>Title text1</subfield>
+        </datafield>
+        <datafield tag='856' ind1='0' ind2='2'>
+          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='y'>Link text</subfield>
+          <subfield code='z'>This is a finding aid</subfield>
         </datafield>
       </record>
     xml
