@@ -1,4 +1,12 @@
-<%- subject_display = get_subjects(@document.to_marc) -%>
-<%- if subject_display -%>
+<% subject_display = get_subjects(@document.to_marc) %>
+<% if subject_display %>
   <%= subject_display %>
-<%- end -%>
+<% end %>
+
+<% if @document.is_a_database? && @document[:db_az_subject] %>
+  <ul>
+    <% @document[:db_az_subject].each do |subject| %>
+      <li><%= link_to(subject, catalog_index_path(f: { :db_az_subject => [subject], @document.format_key => ["Database"]})) %></li>
+    <% end %>
+  </ul>
+<% end %>
