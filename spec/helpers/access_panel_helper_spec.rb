@@ -13,10 +13,4 @@ describe AccessPanelHelper do
       expect(helper.thumb_for_library("GREEN")).to eq "<img alt=\"Green Library\" class=\"pull-left\" src=\"/assets/GREEN.jpg\" />"
     end
   end
-
-  describe "hours_route" do
-    it "should return correct hours api route for the library" do
-      expect(helper.hours_route("GREEN")).to eq "/hours/GREEN"
-    end
-  end
 end
