@@ -31,21 +31,41 @@ describe SearchWorks::PageLocation do
       describe "#index action" do
         before { base_params[:action] = 'index' }
         describe "databases" do
-          before { base_params[:f] = {format: ["Database"]} }
-          it "should be defined when a facet is selected" do
-            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+          describe "old format facet" do
+            before { base_params[:f] = {format: ["Database"]} }
+            it "should be defined when a facet is selected" do
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should be defined when an additional format facet is selected" do
+              base_params[:f][:format] << "Book"
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should be defined when searching within selected" do
+              base_params[:q] = "My Query"
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should not be defined when a non-database format facet is selected" do
+              base_params[:f] = {access: "Online"}
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+            end
           end
-          it "should be defined when an additional format facet is selected" do
-            base_params[:f][:format] << "Book"
-            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
-          end
-          it "should be defined when searching within selected" do
-            base_params[:q] = "My Query"
-            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
-          end
-          it "should not be defined when a non-database format facet is selected" do
-            base_params[:f] = {access: "Online"}
-            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          describe "new resource type facet" do
+            before { base_params[:f] = {format_main_ssim: ["Database"]} }
+            it "should be defined when a facet is selected" do
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should be defined when an additional format facet is selected" do
+              base_params[:f][:format_main_ssim] << "Book"
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should be defined when searching within selected" do
+              base_params[:q] = "My Query"
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :databases
+            end
+            it "should not be defined when a non-database format facet is selected" do
+              base_params[:f] = {access: "Online"}
+              expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+            end
           end
         end
       end
