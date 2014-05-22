@@ -22,9 +22,10 @@ module SearchWorks
       end
       def catalog_index_access_points
         if @params[:f]
-          if @params[:f][:format]
+          format_param = @params[:f][:format] || @params[:f][:format_main_ssim]
+          if format_param
             case
-            when @params[:f][:format].include?("Database")
+            when format_param.include?("Database")
               :databases
             end
           end
