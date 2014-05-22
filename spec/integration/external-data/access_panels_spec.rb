@@ -43,4 +43,15 @@ describe "Access Panels", feature: true, :"data-integration" => true do
       end
     end
   end
+
+  describe "Library Locations" do
+    it "should not be displayed for objects that are not held at a location" do
+      visit catalog_path('10473427')
+      expect(page).not_to have_css(".panel-library-location")
+    end
+    it "should be displayed for objects held at libraries" do
+      visit catalog_path('3195844')
+      expect(page).to have_css(".panel-library-location", count:6)
+    end
+  end
 end

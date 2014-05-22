@@ -4,6 +4,7 @@ class SolrDocument
   include MarcLinks
   include IndexLinks
   include CourseReserves
+  include LibraryLocations
   include AccessPanelsConcern
   include DatabaseDocument
 

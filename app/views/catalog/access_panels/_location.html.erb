@@ -1,0 +1,23 @@
+<% document ||= @document %>
+<% if document.access_panels.library_locations? %>
+  <% document.access_panels.library_locations.locations.each do |location| %>
+    <% if location.is_viewable? %>
+      <div class="panel panel-default panel-library-location" data-hours-route=<%= hours_route(location.library) %>>
+        <div class="library-location-heading">
+          <%= thumb_for_library(location.library) %>
+          <div class="library-location-heading-text">
+            <%= link_to_library(location.library) %>
+            <div class="small location-hours-today">
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <strong>Location in Library Placeholder</strong>
+          <ul class="list-unstyled">
+            <li>Call Number Placeholder</li>
+          </ul>
+        </div>
+      </div>
+      <% end %>
+  <% end %>
+<% end %>

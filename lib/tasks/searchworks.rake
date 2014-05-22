@@ -6,6 +6,7 @@ namespace :searchworks do
     Rake::Task["db:migrate"].invoke
     Rake::Task["searchworks:download_and_unzip_jetty"].invoke
     Rake::Task["searchworks:copy_solr_configs"]
+    Rake::Task["searchworks:create_config"]
     puts "Indexing fixtures\n"
     Jettywrapper.wrap(Jettywrapper.load_config) do
       Rake::Task["searchworks:fixtures"].invoke
@@ -28,6 +29,12 @@ namespace :searchworks do
   task :copy_solr_configs do
     %w{schema solrconfig}.each do |file|
       cp "#{Rails.root}/config/solr_configs/#{file}.xml", "#{Rails.root}/jetty/solr/blacklight-core/conf/"
+    end
+  end
+  desc "Create local config file"
+  task :create_config do
+    unless File.exists?("#{Rails.root}/config/settings.yml")
+      File.open("#{Rails.root}/config/settings.yml", "w+") {|f| f.write('HOURS_API: "INSERT_HOURS_API_URL_HERE"')}
     end
   end
   namespace :spec do
