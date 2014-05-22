@@ -11,7 +11,6 @@
 
   <% @page_title = t('blacklight.search.title', :application_name => application_name) %>
 
-
   <% content_for(:head) do -%>
     <%= render_opensearch_response_metadata %>
     <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
