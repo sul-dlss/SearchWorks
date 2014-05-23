@@ -12,8 +12,4 @@ module AccessPanelHelper
     image_tag("#{library_abbr}.jpg", class: "pull-left", alt: Constants::LIB_TRANSLATIONS[library_abbr])
   end
 
-  def hours_route(library)
-    "/hours/#{library}"
-  end
-
 end

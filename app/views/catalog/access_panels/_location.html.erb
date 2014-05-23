@@ -2,7 +2,7 @@
 <% if document.access_panels.library_locations? %>
   <% document.access_panels.library_locations.locations.each do |location| %>
     <% if location.is_viewable? %>
-      <div class="panel panel-default panel-library-location" data-hours-route=<%= hours_route(location.library) %>>
+      <div class="panel panel-default panel-library-location" data-hours-route=<%= hour_path(location.library) %>>
         <div class="library-location-heading">
           <%= thumb_for_library(location.library) %>
           <div class="library-location-heading-text">
