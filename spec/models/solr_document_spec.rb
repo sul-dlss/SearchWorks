@@ -11,6 +11,12 @@ describe SolrDocument do
       expect(subject).to be_kind_of DatabaseDocument
     end
   end
+  describe "DisplayType" do
+    it "should include display type" do
+      expect(subject).to be_kind_of DisplayType
+      expect(subject).to respond_to(:display_type)
+    end
+  end
   describe "DigitalCollection" do
     it "should include digital collection" do
       expect(subject).to be_kind_of DigitalCollection
