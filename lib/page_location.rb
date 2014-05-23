@@ -23,10 +23,16 @@ module SearchWorks
       def catalog_index_access_points
         if @params[:f]
           format_param = @params[:f][:format] || @params[:f][:format_main_ssim]
+          course_reserve_params = {course: @params[:f][:course], instructor: @params[:f][:instructor]}
           if format_param
             case
             when format_param.include?("Database")
               :databases
+            end
+          end
+          if course_reserve_params
+            unless course_reserve_params[:course].nil? || course_reserve_params[:instructor].nil?
+              :course_reserve
             end
           end
         end
