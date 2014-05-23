@@ -6,9 +6,9 @@ describe "catalog/access_panels/_online.html.erb" do
     before do
       assign(:document, SolrDocument.new)
     end
-    it "should not render any panel" do
+    it "should render the panel hidden" do
       render
-      expect(rendered).to be_blank
+      expect(rendered).to have_css("div.panel-online", visible:false)
     end
   end
   describe "marc record" do

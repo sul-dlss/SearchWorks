@@ -8,9 +8,9 @@ feature "Record view" do
   scenario "should have online books panel with Google links", js: true do
 
     within "div.document" do
-      expect(page).to have_css("div.panel-online-books", visible: true)
+      expect(page).to have_css("div.panel-online", visible: true)
 
-      within "div.panel-online-books" do
+      within "div.panel-online" do
         expect(page).to have_css("div.panel-heading", visible: true)
         expect(page).to have_css("a.about[href='http://books.google.com/books?id=3xmDzzNiwiUC&source=gbs_ViewAPI']", text: "About this book", visible: true)
         expect(page).to have_css("a.limited-preview[href='http://books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&source=gbs_ViewAPI']", text: "Limited preview", visible: true)

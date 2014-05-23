@@ -1,5 +1,4 @@
 (function($) {
-
   /*
     jQuery plugin to render Google book covers for image elements
 
@@ -77,22 +76,28 @@
       thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
       thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
 
-      $parent.find(selectorCoverImg).attr('src', thumbUrl).show();
+      $parent.find(selectorCoverImg)
+        .attr('src', thumbUrl)
+        .removeClass('hide')
+        .addClass('show');
     }
 
 
     function renderAccessPanel(bibkey, data) {
-      var $panelOnlineBooks = $parent.find('.panel-online-books'),
+      var $panelOnlineBooks = $parent.find('.panel-online'),
           $googleBooks      = $panelOnlineBooks.find('.google-books.' + bibkey),
           $about            = $googleBooks.find('.about'),
           $fullView         = $googleBooks.find('.full-view'),
           $limitedView      = $googleBooks.find('.limited-preview'),
           $previewLink      = $googleBooks.find('.preview .preview-link');
 
+
       $panelOnlineBooks.show();
+      $googleBooks.show();
+
       $about.attr('href', data.info_url).show();
 
-      if (data.preview_url !== 'undefined') {
+      if (typeof data.preview_url !== 'undefined') {
 
         if (data.preview === 'full') {
           $fullView.attr('href', data.preview_url).show();
