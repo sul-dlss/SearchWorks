@@ -68,10 +68,36 @@ describe SearchWorks::PageLocation do
             end
           end
         end
+        describe "course reserve" do
+          before { base_params[:f] = {course: ["SOULSTEEP-101"], instructor: ["Winfrey, Oprah"] }}
+          it "should be defined when course and instructor facets are selected" do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :course_reserve
+          end
+          it "should be defined when an another facet is selected" do
+            base_params[:f][:format] = "Book"
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :course_reserve
+          end
+          it "should be defined when searching with course reserve" do
+            base_params[:q] = "My Query"
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :course_reserve
+          end
+          it "should not be defined when only one of course or instructor are selected" do
+            base_params[:f] = { course: ["CATZ-101"] }
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+          it "should not be defined when only one of course or instructor are selected" do
+            base_params[:f] = { instructor: ["Winfrey, Oprah"] }
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+          it "should not be defined when neither course nor instructor are selected" do
+            base_params[:f] = { access: "Online" }
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe "for SelectedDatabasesController#index" do
-      let(:base_params) { {controller: 'selected_databases', action: 'index' } }
+      let(:base_params) { { controller: 'selected_databases', action: 'index' } }
       it "should be defined" do
         expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :selected_databases
       end
