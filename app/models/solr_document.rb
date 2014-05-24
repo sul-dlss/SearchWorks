@@ -7,6 +7,7 @@ class SolrDocument
   include LibraryLocations
   include AccessPanelsConcern
   include DatabaseDocument
+  include DigitalCollection
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
