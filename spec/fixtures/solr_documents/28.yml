@@ -8,5 +8,7 @@
 :marcxml: <%= metadata1 %>
 :format: Book
 :format_main_ssim: Book
+:display_type:
+  - sirsi
 :access_facet: Online
 :building_facet: Green
