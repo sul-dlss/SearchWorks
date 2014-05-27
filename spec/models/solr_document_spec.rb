@@ -16,4 +16,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of DigitalCollection
     end
   end
+  describe "CollectionMember" do
+    it "should include collection member" do
+      expect(subject).to be_kind_of CollectionMember
+    end
+  end
 end
