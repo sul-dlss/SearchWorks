@@ -15,24 +15,24 @@
 
   $.fn.rotateHelper = function(rotate) {
     return this.each(function() {
-      var $elButton = $(this),
-          $elToRotate,
+      var $button = $(this),
+          $toRotate,
           $parent,
           cssRotate90cw = 'search-navbar-dropdown-btn-rotate-90',
           cssRotate;
 
       cssRotate   = getRotateCssClass();
       $parent     = getParent();
-      $elToRotate = getRotatableElement();
+      $toRotate = getRotatableElement();
 
-      $parent.on('show.bs.collapse', function() { $elToRotate.addClass(cssRotate); });
-      $parent.on('show.bs.dropdown', function() { $elToRotate.addClass(cssRotate); });
-      $parent.on('hide.bs.collapse', function() { $elToRotate.removeClass(cssRotate); });
-      $parent.on('hide.bs.dropdown', function() { $elToRotate.removeClass(cssRotate); });
+      $parent.on('show.bs.collapse', function() { $toRotate.addClass(cssRotate); });
+      $parent.on('show.bs.dropdown', function() { $toRotate.addClass(cssRotate); });
+      $parent.on('hide.bs.collapse', function() { $toRotate.removeClass(cssRotate); });
+      $parent.on('hide.bs.dropdown', function() { $toRotate.removeClass(cssRotate); });
 
       function getParent() {
-        var $parent = $elButton.parent(),
-            $target = $($elButton.data('target'));
+        var $parent = $button.parent(),
+            $target = $($button.data('target'));
 
         if ($target.length !== 0) $parent = $target;
 
@@ -40,12 +40,12 @@
       }
 
       function getRotatableElement() {
-        var $elToRotate = $elButton,
-            $elIcon = $elButton.find('.icon-to-rotate');
+        var $toRotate = $button,
+            $Icon = $button.find('.icon-to-rotate');
 
-        if ($elIcon.length !== 0) $elToRotate = $elIcon;
+        if ($Icon.length !== 0) $toRotate = $Icon;
 
-        return $elToRotate;
+        return $toRotate;
       }
 
       function getRotateCssClass() {
