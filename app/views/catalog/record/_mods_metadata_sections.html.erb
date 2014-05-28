@@ -14,6 +14,18 @@
     </div>
   <% end %>
 
+  <% contributors = render "catalog/record/mods_contributors" %>
+  <% if contributors.present? %>
+    <div class="section">
+      <div class="section-heading">
+        <h2>Contributors</h2>
+      </div>
+      <div class="section-body">
+        <%= contributors %>
+      </div>
+    </div>
+  <% end %>
+
   <% subjects = render "catalog/record/mods_subjects" %>
   <% if subjects.present? %>
     <div class="section">
