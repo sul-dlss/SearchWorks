@@ -49,4 +49,9 @@ class SolrDocument
     :format
   end
 
+  # Check for digital image object
+  def is_a_digital_image?
+    self.has_key?("img_info")
+  end
+
 end

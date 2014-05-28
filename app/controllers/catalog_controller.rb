@@ -38,6 +38,7 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'title_display'
     config.index.display_type_field = 'format'
+    config.index.thumbnail_method = :thumbnail
 
     # solr field configuration for document/show views
     #config.show.title_field = 'title_display'
@@ -216,4 +217,12 @@ class CatalogController < ApplicationController
   def add_show_partials
     blacklight_config.show.partials += ["catalog/record/record_metadata"]
   end
+
+
+  def thumbnail(document, options = {})
+    view_context.render_cover_image(document, options)
+  end
+
+  helper_method :thumbnail
+
 end

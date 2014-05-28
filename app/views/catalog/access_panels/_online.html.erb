@@ -1,15 +1,20 @@
 <% document ||= @document %>
-<% if document.access_panels.online? %>
-  <div class="panel panel-default panel-online">
-    <div class="panel-heading">
-      <% if document.is_a_database? %>
-        Search this database
-      <% else %>
-        Available online
-      <% end %>
-    </div>
-    <div class="panel-body">
-      <ul class="links">
+<% visible = document.access_panels.online ?  'show' : 'hide' %>
+
+<% book_ids = get_book_ids(@document) %>
+<% css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>
+
+<div class="panel panel-default panel-online <%= visible %>">
+  <div class="panel-heading">
+    <% if document.is_a_database? %>
+      Search this database
+    <% else %>
+      Available online
+    <% end %>
+  </div>
+  <div class="panel-body">
+    <ul class="links">
+      <% if document.access_panels.online? %>
         <% document.access_panels.online.links.each do |link| %>
           <li>
             <span class="<%= 'stanford-only' if link.stanford_only? %>">
@@ -17,13 +22,29 @@
             </span>
           </li>
         <% end %>
-      </ul>
-    </div>
-    <% if document.is_a_database? %>
-      <div class="panel-footer">
-        <%= link_to("Connect from off campus", "http://library.stanford.edu/using/connecting-campus") %> <br/>
-        <%= link_to("Report a connection problem", "http://library.stanford.edu/ask/email/connection-problems") %>
-      </div>
-    <% end %>
+      <% end %>
+      <li>
+        <div class="row google-books <%= css_class %>">
+          <div class="col-lg-7 col-md-12">
+            Google Books
+            <ul>
+              <li><a href="" class="about">About this book</a></li>
+              <li><a href="" class="full-view">Full view</a></li>
+              <li><a href="" class="limited-preview">Limited preview</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-md-12 preview">
+          <%= link_to(image_tag('gbs_preview_button.gif'), '', class: 'preview-link') %>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
-<% end %>
+  <% if document.access_panels.online? and document.is_a_database? %>
+    <div class="panel-footer">
+      <%= link_to("Connect from off campus", "http://library.stanford.edu/using/connecting-campus") %> <br/>
+      <%= link_to("Report a connection problem", "http://library.stanford.edu/ask/email/connection-problems") %>
+    </div>
+  <% end %>
+</div>
+

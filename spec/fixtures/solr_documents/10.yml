@@ -1,7 +1,7 @@
 :id: 10
 :pub_date: 1801
 :author_person_display: Aguirre, Trudy
-:title_display: Laboris consequat sit sunt aliqua.
+:title_display: "Car : a drama of the American workplace"
 :language: Spanish
 :format: Book
 :format_main_ssim: Book
@@ -14,3 +14,8 @@
   - "678 -|- EARTH-SCI"
   - "123 -|- CHEMCHMENG"
   - "543 -|- BIOLOGY"
+:isbn_display:
+  - "0393040801"
+  - "9780393040807"
+:lccn: "96049953"
+:oclc: "36024029"
