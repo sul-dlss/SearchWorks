@@ -1,0 +1,12 @@
+:id: 30
+:title_display: Image Item1
+:display_type:
+  - image
+:format: Image
+:format_main_ssim: Image
+:collection:
+  - 29
+:modsxml: <%= mods_everything %>
+:pub_date: 2014
+:beginning_year_isi: 2000
+:imprint_display: 1990

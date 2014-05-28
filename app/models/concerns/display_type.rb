@@ -6,7 +6,7 @@ module DisplayType
 
   def display_type
     return nil unless self[:display_type].present?
-    Processor.new(self).to_s
+    @display_type ||= Processor.new(self).to_s
   end
   private
   class Processor
