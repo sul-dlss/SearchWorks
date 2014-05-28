@@ -10,6 +10,7 @@ class SolrDocument
   include DatabaseDocument
   include DigitalCollection
   include CollectionMember
+  include ModsData
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
