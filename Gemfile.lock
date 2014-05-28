@@ -104,6 +104,7 @@ GEM
       json (~> 1.8)
       rainbow (~> 2.0)
     i18n (0.6.9)
+    iso-639 (0.2.4)
     jbuilder (2.0.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -137,6 +138,13 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (5.3.3)
+    mods (0.0.23)
+      iso-639
+      nokogiri
+      nom-xml
+    mods_display (0.3.2)
+      i18n
+      stanford-mods
     multi_json (1.10.0)
     multipart-post (2.0.0)
     net-scp (1.2.1)
@@ -144,6 +152,10 @@ GEM
     net-ssh (2.9.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    nom-xml (0.5.1)
+      activesupport
+      i18n
+      nokogiri
     orm_adapter (0.5.0)
     poltergeist (1.5.0)
       capybara (~> 2.1)
@@ -220,6 +232,8 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
       term-ansicolor
+    stanford-mods (0.0.27)
+      mods
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     therubyracer (0.12.1)
@@ -266,6 +280,7 @@ DEPENDENCIES
   jettywrapper (~> 1.7)
   jquery-rails
   lyberteam-capistrano-devel (= 3.0.0.pre1)
+  mods_display
   poltergeist
   rails (= 4.1.1)
   rails_config
