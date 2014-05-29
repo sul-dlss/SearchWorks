@@ -1,19 +1,19 @@
 <% @document.mods.audience.each do |audience| %>
-  <%= mods_record_field(audience, "bibliographic") %>
+  <%= mods_record_field(audience) %>
 <% end %>
 
 <% @document.mods.note.each do |notes| %>
-  <%= mods_record_field(notes, "bibliographic") %>
+  <%= mods_record_field(notes) %>
 <% end %>
 
 <% @document.mods.relatedItem.each do |related_item| %>
-  <%= mods_record_field(related_item, "bibliographic") %>
+  <%= mods_record_field(related_item) %>
 <% end %>
 
 <% @document.mods.identifier.each do |identifier| %>
-  <%= mods_record_field(identifier, "bibliographic") %>
+  <%= mods_record_field(identifier) %>
 <% end %>
 
 <% @document.mods.location.each do |location| %>
-  <%= mods_record_field(location, "bibliographic") %>
+  <%= mods_record_field(location) %>
 <% end %>
