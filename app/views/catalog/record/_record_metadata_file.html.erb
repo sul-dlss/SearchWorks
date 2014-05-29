@@ -1,0 +1,22 @@
+<div class="record-browse-nearby col-md-12 row">
+  <%# browse nearby placeholder --
+  <div class="panel panel-default">
+    <div class="panel-body">Browse nearby</div>
+  </div>
+  %>
+</div>
+
+<div class="record-metadata col-md-12 row">
+  <div class="record-panels col-md-4 col-xs-12 row">
+    <%= render "catalog/record/metadata_panels" %>
+  </div>
+  <div class="record-sections col-md-8 col-xs-12">
+    <% if @document[:modsxml] %>
+      <%= render 'catalog/record/mods_metadata_sections' %>
+    <% end %>
+  </div>
+</div>
+
+<%# technical details placeholder - librarian view, catkey etc %>
+<div class="record-technical-details col-md-12 row">
+</div>
