@@ -10,7 +10,8 @@ describe "catalog/record/_mods_upper_metadata_section.html.erb" do
     end
     it "should display correct sections" do
       render
-      expect(rendered).to have_css("div.section-uppermetadata", count: 4)
+      expect(rendered).to have_css("dt", count: 4)
+      expect(rendered).to have_css("dd", count: 4)
     end
   end
 
@@ -21,8 +22,8 @@ describe "catalog/record/_mods_upper_metadata_section.html.erb" do
     end
     it "should display correct sections" do
       render
-      expect(rendered).to_not have_css("div.section-uppermetadata")
-
+      expect(rendered).to_not have_css("dt")
+      expect(rendered).to_not have_css("dd")
     end
   end
 end

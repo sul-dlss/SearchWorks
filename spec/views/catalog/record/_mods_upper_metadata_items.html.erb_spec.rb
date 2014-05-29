@@ -10,18 +10,18 @@ describe "catalog/record/_mods_upper_metadata_items.html.erb" do
     end
     it "should display name" do
       render
-      expect(rendered).to have_css("div.section-uppermetadata dt", text: "Author/Creator")
-      expect(rendered).to have_css("div.section-uppermetadata dd", text: "J. Smith")
+      expect(rendered).to have_css("dt", text: "Author/Creator")
+      expect(rendered).to have_css("dd", text: "J. Smith")
     end
     it "should display type" do
       render
-      expect(rendered).to have_css("div.section-uppermetadata dt", text: "Type of resource")
-      expect(rendered).to have_css("div.section-uppermetadata dd", text: "Still image")
+      expect(rendered).to have_css("dt", text: "Type of resource")
+      expect(rendered).to have_css("dd", text: "Still image")
     end
     it "should display imprint" do
       render
-      expect(rendered).to have_css("div.section-uppermetadata dt", text: "Imprint")
-      expect(rendered).to have_css("div.section-uppermetadata dd", text: "copyright 2014")
+      expect(rendered).to have_css("dt", text: "Imprint")
+      expect(rendered).to have_css("dd", text: "copyright 2014")
     end
     pending "should display language" do
       # render
@@ -30,8 +30,8 @@ describe "catalog/record/_mods_upper_metadata_items.html.erb" do
     end
     it "should display description" do
       render
-      expect(rendered).to have_css("div.section-uppermetadata dt", text: "Condition")
-      expect(rendered).to have_css("div.section-uppermetadata dd", text: "amazing")
+      expect(rendered).to have_css("dt", text: "Condition")
+      expect(rendered).to have_css("dd", text: "amazing")
     end
   end
 end

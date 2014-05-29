@@ -11,8 +11,8 @@ describe "catalog/record/_mods_access.html.erb" do
     end
     it "should display access" do
       render
-      expect(rendered).to have_css("div.section-access dt", text: "Use and reproduction")
-      expect(rendered).to have_css("div.section-access dd", text: "Copyright © Stanford University.")
+      expect(rendered).to have_css("dt", text: "Use and reproduction")
+      expect(rendered).to have_css("dd", text: "Copyright © Stanford University.")
     end
   end
 end

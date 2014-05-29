@@ -17,9 +17,8 @@ describe RecordHelper do
   describe "mods_record_field" do
     let(:mods_field) { OpenStruct.new({label: "test", values: ["hello, there"]}) }
     it "should return correct content" do
-      expect(helper.mods_record_field(mods_field, "test")).to have_css("div.section-test")
-      expect(helper.mods_record_field(mods_field, "test")).to have_css("dt", text: "test")
-      expect(helper.mods_record_field(mods_field, "test")).to have_css("dd", text: "hello, there")
+      expect(helper.mods_record_field(mods_field)).to have_css("dt", text: "test")
+      expect(helper.mods_record_field(mods_field)).to have_css("dd", text: "hello, there")
     end
   end
 
