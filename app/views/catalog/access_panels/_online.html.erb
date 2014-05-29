@@ -1,5 +1,5 @@
 <% document ||= @document %>
-<% visible = document.access_panels.online ?  'show' : 'hide' %>
+<% visible = document.access_panels.online.links.nil? ?  'hide' : 'show' %>
 
 <% book_ids = get_book_ids(@document) %>
 <% css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>

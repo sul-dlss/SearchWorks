@@ -92,7 +92,7 @@
           $previewLink      = $googleBooks.find('.preview .preview-link');
 
 
-      $panelOnlineBooks.show();
+      $panelOnlineBooks.removeClass('hide').addClass('show');
       $googleBooks.show();
 
       $about.attr('href', data.info_url).show();
