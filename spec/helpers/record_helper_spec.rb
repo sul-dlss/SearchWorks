@@ -15,10 +15,14 @@ describe RecordHelper do
   end
 
   describe "mods_record_field" do
-    let(:mods_field) { OpenStruct.new({label: "test", values: ["hello, there"]}) }
+    let(:mods_field)  { OpenStruct.new({label: "test", values: ["hello, there"]}) }
+    let(:empty_field) { OpenStruct.new({label: "test", values: [""] }) }
     it "should return correct content" do
       expect(helper.mods_record_field(mods_field)).to have_css("dt", text: "test")
       expect(helper.mods_record_field(mods_field)).to have_css("dd", text: "hello, there")
+    end
+    it "should not print empty labels" do
+      expect(helper.mods_record_field(empty_field)).to_not be_present
     end
   end
 

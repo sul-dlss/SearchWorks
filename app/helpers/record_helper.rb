@@ -8,7 +8,8 @@ module RecordHelper
   end
 
   def mods_record_field field
-    if field.respond_to?(:label, :values)
+    if field.respond_to?(:label, :values) &&
+       field.values.any?(&:present?)
       mods_display_label(field.label) +
       mods_display_content(field.values.join)
     end
