@@ -142,7 +142,7 @@ GEM
       iso-639
       nokogiri
       nom-xml
-    mods_display (0.3.2)
+    mods_display (0.3.3)
       i18n
       stanford-mods
     multi_json (1.10.0)
@@ -280,7 +280,7 @@ DEPENDENCIES
   jettywrapper (~> 1.7)
   jquery-rails
   lyberteam-capistrano-devel (= 3.0.0.pre1)
-  mods_display
+  mods_display (= 0.3.3)
   poltergeist
   rails (= 4.1.1)
   rails_config

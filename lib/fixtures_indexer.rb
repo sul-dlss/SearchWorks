@@ -1,8 +1,11 @@
 require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
 require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
+require "#{Rails.root}/spec/fixtures/mods_records/mods_fixtures"
+
 class FixturesIndexer
   include Marc856Fixtures
   include MarcMetadataFixtures
+  include ModsFixtures
   def self.run
     FixturesIndexer.new.run
   end

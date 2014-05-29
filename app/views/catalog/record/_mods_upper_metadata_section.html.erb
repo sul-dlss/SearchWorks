@@ -1,0 +1,10 @@
+<% items = render "catalog/record/mods_upper_metadata_items" %>
+<% if items.present? %>
+  <div class="section">
+    <div class="section-body">
+      <dl class="dl-horizontal">
+        <%= items %>
+      </dl>
+    </div>
+  </div>
+<% end %>

@@ -6,6 +6,7 @@ require 'rspec/autorun'
 require 'capybara/poltergeist'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
+require 'fixtures/mods_records/mods_fixtures'
 
 Capybara.javascript_driver = :poltergeist
 Capybara.default_wait_time = 5

@@ -1,14 +1,14 @@
 <div class="col-xs-12 row">
 
-  <% contents_summary = render "catalog/record/mods_contents_summary" %>
-  <% unless contents_summary.strip.blank? %>
+  <% abstract_contents = render "catalog/record/mods_abstract_contents" %>
+  <% unless abstract_contents.strip.blank? %>
     <div class="section">
       <div class="section-heading">
-        <h2>Contents/Summary</h2>
+        <h2>Abstract/Contents</h2>
       </div>
       <div class="section-body">
         <dl>
-          <%= contents_summary%>
+          <%= abstract_contents%>
         </dl>
       </div>
     </div>
@@ -33,7 +33,9 @@
         <h2>Subjects</h2>
       </div>
       <div class="section-body">
-        <%= subjects %>
+        <dl>
+          <%= subjects %>
+        </dl>
       </div>
     </div>
   <% end %>
@@ -47,6 +49,20 @@
       <div class="section-body">
         <dl>
           <%= bibliography %>
+        </dl>
+      </div>
+    </div>
+  <% end %>
+
+  <% access = render "catalog/record/mods_access" %>
+  <% if access.present? %>
+    <div class="section">
+      <div class="section-heading">
+        <h2>Access conditions</h2>
+      </div>
+      <div class="section-body">
+        <dl>
+          <%= access %>
         </dl>
       </div>
     </div>

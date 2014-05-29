@@ -1,0 +1,28 @@
+require "spec_helper"
+
+describe "catalog/record/_mods_upper_metadata_section.html.erb" do
+  include ModsFixtures
+
+  describe "Upper metadata available" do
+    let(:document) { SolrDocument.new(modsxml: mods_everything) }
+    before do
+      assign(:document, document)
+    end
+    it "should display correct sections" do
+      render
+      expect(rendered).to have_css("div.section-uppermetadata", count: 4)
+    end
+  end
+
+  describe "Metadata sections none available" do
+    let(:document) { SolrDocument.new(modsxml: mods_only_title) }
+    before do
+      assign(:document, document)
+    end
+    it "should display correct sections" do
+      render
+      expect(rendered).to_not have_css("div.section-uppermetadata")
+
+    end
+  end
+end
