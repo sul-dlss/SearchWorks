@@ -1,0 +1,32 @@
+<% get_collection %>
+<% if !@parent.nil? %>
+  <div id="masthead" class="collection-masthead">
+    <h1><%= @parent[:title_display] %></h1>
+    <div class="row">
+      <div class="col-xs-8">
+        <dl>
+          <dd data-behavior='truncate'>
+            <%= @parent[:summary_display].join(', ') %>
+          <dd>
+        </dl>
+      </div>
+      <div class="col-xs-4">
+        <dl class="dl-horizontal dl-invert">
+          <% if @parent.collection_members.present? %>
+            <dt>DIGITAL CONTENT:</dt>
+            <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+          <% end %>
+          <% # this stuff is temporary until we have item level merge (mods + marc) %>
+          <% if @parent[:physical].present? %>
+            <dt>PHYSICAL:</dt>
+            <dd><%= @parent[:physical].join(', ')%></dd>
+          <% end %>
+          <% if @parent[:finding_aid].present? %>
+            <dt>FINDING AID:</dt>
+            <dd><%= @parent[:finding_AID].join(', ')%></dd>
+          <% end %>
+        </dl>
+      </div>
+    </div>
+  </div>
+<% end %>

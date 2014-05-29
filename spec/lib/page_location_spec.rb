@@ -94,6 +94,20 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+        describe "collection" do
+          before { base_params[:f] = {collection: ["29"] }}
+          it "should be defined when collection is present" do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :collection
+          end
+          it "should not be defined when collection is not present" do
+            base_params[:f] = {}
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+          it "should not be defined when collection is present and is sirsi" do
+            base_params[:f] = {collection: ["sirsi"]}
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe "for SelectedDatabasesController#index" do
