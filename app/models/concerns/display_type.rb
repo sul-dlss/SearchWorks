@@ -60,7 +60,8 @@ module DisplayType
     def display_type_translations
       {"sirsi"             => "marc",
        "hydrus_object"     => "file",
-       "hydrus_collection" => "file"
+       "hydrus_collection" => "file",
+       "collection"        => "image"
      }
     end
     def supported_display_types

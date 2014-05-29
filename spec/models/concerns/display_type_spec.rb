@@ -5,6 +5,7 @@ describe DisplayType do
   let(:image_document) { SolrDocument.new( display_type: ['image']) }
   let(:collection_document) { SolrDocument.new( display_type: ['image']) }
   let(:old_file_document) { SolrDocument.new( display_type: ['hydrus_item']) }
+  let(:old_image_collection_document) { SolrDocument.new( display_type: ['collection']) }
   let(:old_collection_document) { SolrDocument.new( display_type: ['hydrus_collection']) }
   let(:merged_document) { SolrDocument.new( display_type: ['sirsi', 'file']) }
   let(:merged_collection_document) { SolrDocument.new( display_type: ['sirsi', 'file']) }
@@ -17,6 +18,7 @@ describe DisplayType do
   before do
     collection_document.stub(:is_a_collection?).and_return(true)
     old_collection_document.stub(:is_a_collection?).and_return(true)
+    old_image_collection_document.stub(:is_a_collection?).and_return(true)
     merged_collection_document.stub(:is_a_collection?).and_return(true)
     complex_collection_document.stub(:is_a_collection?).and_return(true)
     complex_merged_collection_document.stub(:is_a_collection?).and_return(true)
@@ -30,6 +32,9 @@ describe DisplayType do
     end
     it "should translate old file collection types properly" do
       expect(old_collection_document.display_type).to eq "file_collection"
+    end
+    it "should translate old image collection types properly" do
+      expect(old_image_collection_document.display_type).to eq "image_collection"
     end
     it "should identify standard types properly" do
       expect(image_document.display_type).to eq "image"
