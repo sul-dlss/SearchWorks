@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require responsiveTrucator
 //
 // Required by Blacklight
 //= require blacklight/blacklight
