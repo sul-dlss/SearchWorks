@@ -32,4 +32,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of IndexAuthors
     end
   end
+  describe "Druid" do
+    it "should include druid" do
+      expect(subject).to be_kind_of Druid
+    end
+  end
 end

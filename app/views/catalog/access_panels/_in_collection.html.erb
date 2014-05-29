@@ -1,0 +1,25 @@
+<% if @document.is_a_collection_member? && @document.parent_collections.present? %>
+  <% @document.parent_collections.each do |parent_collection| %>
+    <div class="panel panel-default panel-in-collection">
+      <div class="panel-heading">
+        In collection
+      </div>
+      <div class="panel-body">
+        <%= link_to(presenter(parent_collection).document_heading, catalog_path(parent_collection[:id])) %>
+        <% if parent_collection[:summary_display] %>
+          <div data-behavior='truncate'>
+            <%= parent_collection[:summary_display].join(', ') %>
+          </div>
+        <% end %>
+      </div>
+      <div class="panel-footer">
+        <dl class="dl-invert">
+          <dt>DIGITAL CONTENT</dt>
+          <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
+          <dt>COLLECTION PURL<dt>
+          <dd><%= link_to("http://purl.stanford.edu/#{parent_collection.druid}", "http://purl.stanford.edu/#{parent_collection.druid}") %></dd>
+        </dl>
+      </div>
+    </div>
+  <% end %>
+<% end %>
