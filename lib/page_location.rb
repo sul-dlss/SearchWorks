@@ -28,6 +28,9 @@ module SearchWorks
           if course_reserve_parameters?
             return :course_reserve
           end
+          if collection_parameters?
+            return :collection
+          end
         end
       end
 
@@ -40,6 +43,10 @@ module SearchWorks
 
       def course_reserve_parameters?
         @params[:f][:course].present? && @params[:f][:instructor].present?
+      end
+
+      def collection_parameters?
+        @params[:f][:collection].present? && !@params[:f][:collection].include?("sirsi")
       end
 
       def selected_databases_index_access_points
