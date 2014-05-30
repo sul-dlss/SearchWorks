@@ -1,3 +1,4 @@
 HOURS_API: "http://test"
 EMAIL_TO: "fake-email@kittenz.com"
 HOSTNAME: "TEST-HOST"
+STACKS_URL: https://stacks-test.stanford.edu/image

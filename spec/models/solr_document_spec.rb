@@ -27,6 +27,7 @@ describe SolrDocument do
       expect(subject).to be_kind_of CollectionMember
     end
   end
+
   describe "IndexAuthors" do
     it "should include index authors" do
       expect(subject).to be_kind_of IndexAuthors
@@ -37,4 +38,22 @@ describe SolrDocument do
       expect(subject).to be_kind_of Druid
     end
   end
+
+  describe "Image object" do
+    let(:image_document) { SolrDocument.new(id: 4488, display_type: ['image'], img_info: ['abc123defg']) }
+
+    it "should return default size" do
+      expect(SolrDocument.image_dimensions[:large]).to eq "_thumb"
+    end
+
+    it "should validate digital image object" do
+      expect(image_document.is_a_digital_image?).to be_true
+    end
+
+    it "should return stacks image urls" do
+      expect(image_document.image_urls.length).to eq 1
+      expect(image_document.image_urls.first).to include("/4488/abc123defg")
+    end
+  end
+
 end

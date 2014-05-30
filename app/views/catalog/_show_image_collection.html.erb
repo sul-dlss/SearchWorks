@@ -1,1 +1,6 @@
 <%= render 'catalog/record/mods_upper_metadata_section' %>
+
+<% if document.collection_members.present? %>
+  <%= render :partial => "image_collection_filmstrip", :locals => { :collection_document => document } %>
+<% end %>
+
