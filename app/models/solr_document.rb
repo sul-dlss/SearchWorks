@@ -53,8 +53,36 @@ class SolrDocument
   end
 
   # Check for digital image object
+  # TODO: Once index fields are finalized, remove additional check
   def is_a_digital_image?
-    self.has_key?("img_info")
+    self[:display_type].first == 'image' and (self.has_key?("img_info") or self.has_key?("file_id"))
   end
+
+
+  # Get stacks urls for a document using file ids
+  def image_urls(size=:default)
+    return nil unless is_a_digital_image?
+
+    stacks_url = Settings.STACKS_URL
+
+    image_ids = self["img_info"] || self["file_id"]
+
+    image_ids.map do |image_id|
+      image_id = image_id.gsub(/\.jp2$/, '')
+
+      "#{stacks_url}/#{self["id"]}/#{image_id}#{SolrDocument.image_dimensions[size]}"
+    end
+  end
+
+  # Size definitions for stacks urls
+  def self.image_dimensions(size=:default)
+    {
+      :thumbnail => "_square",
+      :default   => "?w=80&h=80",
+      :medium    => "?w=125&h=125",
+      :large     => "_thumb"
+    }
+  end
+
 
 end

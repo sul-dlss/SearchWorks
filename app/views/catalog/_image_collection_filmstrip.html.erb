@@ -1,0 +1,24 @@
+<div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
+
+  <button class="btn btn-default btn-sm prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </button>
+
+  <div class="viewport">
+    <ul class="listing">
+      <% collection_document.collection_members.documents.each do |document| %>
+        <% unless document.image_urls.blank? %>
+          <li>
+            <a href="<%= catalog_path(document[:id]) %>"><img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>"></a>
+            <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <button class="btn btn-default btn-sm next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </button>
+
+</div>

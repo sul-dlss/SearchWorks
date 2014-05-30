@@ -20,5 +20,38 @@ feature "Image Collection" do
     expect(page).to have_css("h2", text: "Subjects")
     expect(page).to have_css("h2", text: "Bibliographic information")
     expect(page).to have_css("h2", text: "Access conditions")
+
+    expect(page).to have_css(".image-filmstrip")
+
+    within "div.image-filmstrip" do
+      expect(page).to have_css("button.prev")
+      expect(page).to have_css("button.next")
+      expect(page).to have_css(".viewport .listing")
+
+      within ".viewport .listing" do
+        expect(page).to have_css("a[href='/catalog/mf774fs2413']")
+      end
+    end
+
   end
+
+  scenario "Search results image filmstrip" do
+    visit root_path
+
+    fill_in "q", with: "29"
+    click_button 'search'
+
+    expect(page).to have_css(".image-filmstrip")
+
+    within "div.image-filmstrip" do
+      expect(page).to have_css("button.prev")
+      expect(page).to have_css("button.next")
+      expect(page).to have_css(".viewport .listing")
+
+      within ".viewport .listing" do
+        expect(page).to have_css("a[href='/catalog/mf774fs2413']")
+      end
+    end
+  end
+
 end

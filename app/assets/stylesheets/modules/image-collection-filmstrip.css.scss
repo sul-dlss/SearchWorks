@@ -1,0 +1,67 @@
+.image-filmstrip {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  bottom: 0;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 0 20px;
+  width: 100%;
+  -moz-border-sizing: border-box;
+
+  .prev, .next {
+    background-color: #fff;
+    border-radius: 25px;
+    opacity: 0.9;
+    outline: none;
+    position: absolute;
+    padding: 4px 7px;
+    top: 30%;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+
+  .viewport {
+    clear: both;
+    overflow-x: scroll;
+    padding: 10px 0;
+
+
+    ul.listing {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        line-height: 0;
+        margin: 5px;
+
+        img {
+          border-width: 0;
+          background-color: #ddd;
+          min-height: 100px;
+          cursor: pointer;
+        }
+
+        .img-label {
+          color: #666;
+          font-size: x-small;
+          line-height: 1em;
+          margin: 0 auto;
+          overflow: hidden;
+          padding: 4px 5px;
+          text-align: center;
+          width: 80%;
+        }
+      }
+    }
+  }
+}

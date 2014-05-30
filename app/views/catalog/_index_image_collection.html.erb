@@ -4,9 +4,11 @@
   </div>
 <% end %>
 
-<dl class="dl-horizontal dl-invert">
-  <% if document.collection_members.present? %>
+<% if document.collection_members.present? %>
+  <dl class="dl-horizontal dl-invert">
     <dt>DIGITAL CONTENT:</dt>
     <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
-  <% end %>
-</dl>
+  </dl>
+
+  <%= render :partial => "image_collection_filmstrip", :locals => { :collection_document => document } %>
+<% end %>
