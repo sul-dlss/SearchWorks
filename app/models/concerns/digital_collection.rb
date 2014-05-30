@@ -5,12 +5,13 @@ module DigitalCollection
 
   def collection_members(options={})
     return nil unless is_a_collection?
-    @collection_members ||= CollectionMembers.new(self)
+    @collection_members ||= CollectionMembers.new(self, options)
   end
 
   private
 
   class CollectionMembers
+    delegate :present?, :each, :map, :length, to: :documents
     def initialize(document, options={})
       @options = options
       @document = document

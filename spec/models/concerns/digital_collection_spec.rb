@@ -17,6 +17,7 @@ describe DigitalCollection do
     let(:stub_solr) { double('solr') }
     let(:stub_params) { { params: {fq: "collection:\"1234\"", rows: 20}} }
     let(:rows_params) { { params: {fq: "collection:\"1234\"", rows: 17}} }
+    let(:small_rows_params) { { params: {fq: "collection:\"1234\"", rows: 3}} }
     let(:stub_response) {{
       'response' => {
         'numFound' => 2,
@@ -29,6 +30,10 @@ describe DigitalCollection do
     it "should take a rows option" do
       expect(Blacklight.solr).to receive(:select).with(rows_params).and_return(stub_response)
       expect(collection_members_with_rows.documents).to be_present
+    end
+    it "should pass the rows option through collection_members" do
+      expect(Blacklight.solr).to receive(:select).with(small_rows_params).and_return(stub_response)
+      expect(collection.collection_members(rows: 3)).to be_present
     end
     describe "#documents" do
       it "solr documents should return collection members" do

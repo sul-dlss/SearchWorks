@@ -1,0 +1,13 @@
+:id: 31
+:title_display: File Collection1
+:collection_type: Digital Collection
+:summary_display:
+  - "A collection of fixture files from the SearchWorks development index."
+:display_type:
+  - file
+:format: File
+:format_main_ssim: File
+:modsxml: <%= mods_everything %>
+:pub_date: 2010
+:beginning_year_isi: 2010
+:imprint_display: 2010
