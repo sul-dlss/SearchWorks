@@ -27,4 +27,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of CollectionMember
     end
   end
+  describe "IndexAuthors" do
+    it "should include index authors" do
+      expect(subject).to be_kind_of IndexAuthors
+    end
+  end
 end
