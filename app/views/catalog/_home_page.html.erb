@@ -15,9 +15,9 @@
   <h2>Featured sets</h2>
   <ul class="media-list">
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), "#", class: "pull-left disabled" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), catalog_index_path(collections_search_params), class: "pull-left" %>
       <div class="media-body">
-        <%= link_to "Digital collections", "#", class: "media-heading disabled" %>
+        <%= link_to "Digital collections", catalog_index_path(collections_search_params), class: "media-heading" %>
         <p>Manuscripts, images, data, etc. from the Stanford Digital Repository</p>
       </div>
     </li>

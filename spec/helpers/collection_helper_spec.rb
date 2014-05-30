@@ -10,4 +10,11 @@ describe CollectionHelper do
       expect(link_to_collection_members("LinkText", document)).to match /<a href=\".*collection.*=1234\".*/
     end
   end
+  describe "#collections_search_params" do
+    it "should be the collection_type facet value of 'Digital Collection" do
+      expect(collections_search_params).to have_key(:f)
+      expect(collections_search_params[:f]).to have_key(:collection_type)
+      expect(collections_search_params[:f][:collection_type]).to eq ["Digital Collection"]
+    end
+  end
 end
