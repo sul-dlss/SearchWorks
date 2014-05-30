@@ -66,7 +66,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 21
     config.add_facet_field "access_facet", :label => "Access"
     config.add_facet_field "collection", :label => "Collection", :show => false
-    #config.add_facet_field "collection_type", :label => "Collection Type", :show => false
+    config.add_facet_field "collection_type", :label => "Collection Type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type"
     config.add_facet_field "format_physical_ssim", :label => "Physical Format"
     config.add_facet_field "genre_ssim", :label => "Genre"
