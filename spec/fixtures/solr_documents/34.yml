@@ -1,0 +1,15 @@
+:id: 34
+:title_display: Merged Image Collection1
+:author_person_full_display: Bob, Uncle
+:collection_type: Digital Collection
+:display_type:
+  - image
+  - sirsi
+:format: Image
+:format_main_ssim: Image
+:marcxml: <%= metadata1 %>
+:pub_date: 2008
+:beginning_year_isi: 2007
+:imprint_display: 2008
+:druid: mf774fs2413
+

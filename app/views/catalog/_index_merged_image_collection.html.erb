@@ -1,0 +1,10 @@
+<%= render :partial => "search_results_document_fields", :locals => { :document => document } %>
+
+<% if document.collection_members.documents.present? %>
+  <dl class="dl-horizontal dl-invert">
+    <dt>DIGITAL CONTENT:</dt>
+    <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
+  </dl>
+
+  <%= render :partial => "image_collection_filmstrip", :locals => { :collection_document => document } %>
+<% end %>
