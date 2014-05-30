@@ -1,7 +1,7 @@
 module Druid
   def druid
-    return nil unless purls_from_urls.present?
-    purls_from_urls.first[/\w+$/]
+    return nil if self[:druid].blank? && purls_from_urls.blank?
+    self[:druid] || purls_from_urls.first[/\w+$/]
   end
   private
   def purls_from_urls
