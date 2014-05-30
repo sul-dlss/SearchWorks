@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Modify your search</h3>
+    <ul class="list-unstyled zero-results-list">
+      <li>
+        Author : cat limited to Resource type : Equipment … found 0 results
+      </li>
+      <li>
+        Author : cat … found 155 results
+      </li>
+      <li>
+        All fields : cat … found 20,670 results
+      </li>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Check other sources</h3>
+    <ul class="list-unstyled zero-results-list">
+      <li>
+        <%= link_to "Check WorldCat", "http://www.worldcat.org/search?q=#{params[:q]}" %>
+      </li>
+      <li>
+        <%= link_to "Check articles", "#", class:"disabled" %>
+      </li>
+      <li>
+        <%= link_to "Check library website", "#", class:"disabled" %>
+      </li>
+  </div>
+</div>
