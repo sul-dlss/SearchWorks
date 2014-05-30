@@ -1,0 +1,13 @@
+:id: 33
+:title_display: File Item2
+:author_person_full_display: Mr. Stedman
+:display_type:
+  - file
+:format: File
+:format_main_ssim: File
+:collection:
+  - 31
+:modsxml: <%= mods_everything %>
+:pub_date: 2012
+:beginning_year_isi: 2012
+:imprint_display: 2012

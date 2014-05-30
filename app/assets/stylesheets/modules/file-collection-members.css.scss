@@ -1,0 +1,20 @@
+.file-collection-members {
+  position: relative;
+  border: 1px solid $panel-inner-border;
+  padding: 5px;
+  .members-number {
+    position: absolute;
+    padding: 3px 5px;
+    top: -10px;
+    left: 45%;
+    a {
+      color: white;
+    }
+  }
+  .file-item {
+    margin-bottom: 5px;
+    .file-icon {
+      text-align: right;
+    }
+  }
+}

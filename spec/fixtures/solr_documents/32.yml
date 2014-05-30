@@ -1,0 +1,13 @@
+:id: 32
+:title_display: File Item1
+:author_person_full_display: Dr. Katz
+:display_type:
+  - file
+:format: File
+:format_main_ssim: File
+:collection:
+  - 31
+:modsxml: <%= mods_everything %>
+:pub_date: 2011
+:beginning_year_isi: 2011
+:imprint_display: 2011
