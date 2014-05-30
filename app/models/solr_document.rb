@@ -12,6 +12,7 @@ class SolrDocument
   include CollectionMember
   include ModsData
   include IndexAuthors
+  include Druid
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
