@@ -878,6 +878,7 @@
         db_az_subject,
         display_type,
         druid,
+        file_id,
         format,
         format_main_ssim,
         format_physical_ssim,
