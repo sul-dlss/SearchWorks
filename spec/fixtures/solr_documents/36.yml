@@ -1,0 +1,16 @@
+:id: 36
+:title_display: Image Item4
+:author_person_full_display: Tony Balogna
+:display_type:
+  - image
+:format: Image
+:format_main_ssim: Image
+:collection:
+  - 34
+:modsxml: <%= mods_everything %>
+:pub_date: 2012
+:beginning_year_isi: 2012
+:imprint_display: 2012
+:druid: mf774fs2413
+:img_info:
+  - "W784_000002_300.jp2"

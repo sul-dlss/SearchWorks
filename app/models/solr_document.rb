@@ -70,7 +70,7 @@ class SolrDocument
     image_ids.map do |image_id|
       image_id = image_id.gsub(/\.jp2$/, '')
 
-      "#{stacks_url}/#{self["id"]}/#{image_id}#{SolrDocument.image_dimensions[size]}"
+      "#{stacks_url}/#{self.druid}/#{image_id}#{SolrDocument.image_dimensions[size]}"
     end
   end
 

@@ -877,6 +877,7 @@
         crez_course_info,
         db_az_subject,
         display_type,
+        druid,
         format,
         format_main_ssim,
         format_physical_ssim,

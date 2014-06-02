@@ -40,7 +40,7 @@ describe SolrDocument do
   end
 
   describe "Image object" do
-    let(:image_document) { SolrDocument.new(id: 4488, display_type: ['image'], img_info: ['abc123defg']) }
+    let(:image_document) { SolrDocument.new(id: 4488, druid: 4488, display_type: ['image'], img_info: ['abc123defg']) }
 
     it "should return default size" do
       expect(SolrDocument.image_dimensions[:large]).to eq "_thumb"
