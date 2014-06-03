@@ -1,10 +1,11 @@
+# encoding: UTF-8
 module RecordHelper
   def mods_display_label label
     content_tag(:dt, label.gsub(":",""))
   end
 
   def mods_display_content content
-    content_tag(:dd, content.html_safe)
+    content_tag(:dd, link_urls_and_email(content).html_safe)
   end
 
   def mods_record_field field

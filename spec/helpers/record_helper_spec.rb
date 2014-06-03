@@ -17,9 +17,13 @@ describe RecordHelper do
 
   describe "mods_record_field" do
     let(:mods_field)  { OpenStruct.new({label: "test", values: ["hello, there"]}) }
+    let(:url_field)  { OpenStruct.new({label: "test", values: ["http://library.stanford.edu"]}) }
     it "should return correct content" do
       expect(helper.mods_record_field(mods_field)).to have_css("dt", text: "test")
       expect(helper.mods_record_field(mods_field)).to have_css("dd", text: "hello, there")
+    end
+    it "should link fields with URLs" do
+      expect(mods_record_field(url_field)).to have_css("a[href='http://library.stanford.edu']", text: "http://library.stanford.edu")
     end
     it "should not print empty labels" do
       expect(helper.mods_record_field(empty_field)).to_not be_present
@@ -97,6 +101,16 @@ describe RecordHelper do
         name_subject = link_to_mods_subject(name_subjects.first.values.first, [])
         expect(name_subject).to match /<a href=.*%22Person\+Name%22.*>Person Name<\/a> \(Role1, Role2\)/
       end
+    end
+  end
+  describe "#link_urls_and_email" do
+    let(:url) { "This is a field that contains an http://library.stanford.edu URL" }
+    let(:email) { "This is a field that contains an email@email.com address" }
+    it "should link URLs" do
+      expect(link_urls_and_email(url)).to eq "This is a field that contains an <a href='http://library.stanford.edu'>http://library.stanford.edu</a> URL"
+    end
+    it "should link email addresses" do
+      expect(link_urls_and_email(email)).to eq "This is a field that contains an <a href='mailto:email@email.com'>email@email.com</a> address"
     end
   end
 end
