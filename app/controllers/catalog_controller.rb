@@ -199,6 +199,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('call_number') do |field|
       field.label = "Call number"
+      field.include_in_advanced_search = false
       field.solr_parameters = { :defType => "lucene"}
       field.solr_local_parameters = {
         :df => 'callnum_search'
@@ -207,6 +208,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('search_series') do |field|
       field.label = "Series"
+      field.include_in_advanced_search = false
       field.solr_local_parameters = {
         :qf  => '$qf_series',
         :pf  => '$pf_series',
@@ -226,6 +228,44 @@ class CatalogController < ApplicationController
       field.include_in_simple_select = false
     end
 
+    # Adds search fields for use only in BL Advanced Search
+    config.add_search_field("series_search") do |field|
+      field.label = "Series title"
+      field.include_in_simple_select = false
+      field.solr_local_parameters = {
+        :qf  => '$qf_series',
+        :pf  => '$pf_series',
+        :pf3 => "$pf3_series",
+        :pf2 => "$pf2_series"
+      }
+    end
+
+    config.add_search_field("pub_search") do |field|
+      field.label = "Publisher"
+      field.include_in_simple_select = false
+      field.solr_local_parameters = {
+        qf: '$pub_search_qf',
+        pf: '$pub_search_pf'
+      }
+    end
+
+    config.add_search_field("isbn_search") do |field|
+      field.label = "ISBN/ISSN"
+      field.include_in_simple_select = false
+      field.solr_local_parameters = {
+        qf: '$isbn_search_qf',
+        pf: '$isbn_search_pf'
+      }
+    end
+
+    # Configure facet fields for BL advanced search
+    config.advanced_search = {
+      :form_solr_parameters => {
+        "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
+        "facet.limit" => -1, # return all facet values
+        "facet.sort" => "index" # sort by byte order of values
+      }
+    }
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc

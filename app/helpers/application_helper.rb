@@ -63,7 +63,7 @@ module ApplicationHelper
     end
     return fields unless fields.empty?
   end
-  def is_current_page_active(page)
+  def active_page(page)
     if current_page?(page)
       "active"
     end

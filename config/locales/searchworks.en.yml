@@ -32,3 +32,11 @@ en:
         instructor: '<span class="course-reserve-title">INSTRUCTOR(S):</span> <span class="text-muted">%{instructor}</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
+  blacklight_advanced_search:
+    form:
+      title: "Advanced search"
+      query_criteria_heading_html: "Match %{select_menu} of the fields below"
+      sort_label: "Sort by"
+      search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
+      start_over: "Clear form"
+      limit_criteria_heading_html: "Limit results by"

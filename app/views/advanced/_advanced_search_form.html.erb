@@ -1,0 +1,43 @@
+<% unless (search_context_str = render_search_to_s( advanced_search_context)).blank? %>
+  <div class="constraints well search_history">
+    <h4><%= t 'blacklight_advanced_search.form.search_context' %></h4>
+    <%= search_context_str %>
+  </div>
+<% end %>
+
+<%= form_tag catalog_index_path, :class => 'advanced form-horizontal', :method => :get do  %>
+
+  <%= render_hash_as_hidden_fields(params_for_search(advanced_search_context, {})) %>
+
+  <div class="input-criteria">
+
+      <div class="query-criteria">
+        <h3 class="query-criteria-heading">
+          <%= t('blacklight_advanced_search.form.query_criteria_heading_html', :select_menu =>  select_menu_for_field_operator ) %>
+        </h3>
+
+        <div id="advanced_search">
+          <%= render 'advanced/advanced_search_fields' %>
+        </div>
+      </div>
+
+      <div class="limit-criteria">
+        <h3 class="limit-criteria-heading"><%= t('blacklight_advanced_search.form.limit_criteria_heading_html')%></h3>
+
+        <div id="advanced_search_facets" class="limit_input">
+          <% if blacklight_config.try(:advanced_search).try {|h| h[:form_facet_partial] } %>
+            <%= render blacklight_config.advanced_search[:form_facet_partial] %>
+          <% else %>
+            <%= render 'advanced_search_facets' %>
+          <% end %>
+        </div>
+      </div>
+  </div>
+
+  <hr>
+
+  <div class="sort-submit-buttons clearfix">
+    <%= render 'advanced_search_submit_btns' %>
+  </div>
+
+<% end %>
