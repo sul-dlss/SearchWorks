@@ -157,45 +157,71 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field 'all_fields', :label => 'All Fields'
-
-
-    # Now we see how to over-ride Solr request handler defaults, in this
-    # case for a BL "search field", which is really a dismax aggregate
-    # of Solr search fields.
-
-    config.add_search_field('title') do |field|
-      # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
-
-      # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
-      # See: http://wiki.apache.org/solr/LocalParams
+    config.add_search_field("search") do |field|
+      field.label = "All fields"
       field.solr_local_parameters = {
-        :qf => '$title_qf',
-        :pf => '$title_pf'
+        :pf2 => "$p2",
+        :pf3 => "$pf3"
       }
     end
 
-    config.add_search_field('author') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'author' }
+    config.add_search_field('search_title') do |field|
+      field.label = "Title"
       field.solr_local_parameters = {
-        :qf => '$author_qf',
-        :pf => '$author_pf'
+        :qf  => '$qf_title',
+        :pf  => '$pf_title',
+        :pf3 => "$pf3_title",
+        :pf2 => "$pf2_title"
       }
     end
 
-    # Specifying a :qt only to show it's possible, and so our internal automated
-    # tests can test it. In this case it's the same as
-    # config[:default_solr_parameters][:qt], so isn't actually neccesary.
-    config.add_search_field('subject') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'subject' }
-      field.qt = 'search'
+    config.add_search_field('search_author') do |field|
+      field.label = "Author"
       field.solr_local_parameters = {
-        :qf => '$subject_qf',
-        :pf => '$subject_pf'
+        :qf  => '$qf_author',
+        :pf  => '$pf_author',
+        :pf3 => "$pf3_author",
+        :pf2 => "$pf2_author"
       }
+    end
+
+    config.add_search_field('subject_terms') do |field|
+      field.label = "Subject terms"
+      field.solr_local_parameters = {
+        :qf  => '$qf_subject',
+        :pf  => '$pf_subject',
+        :pf3 => "$pf3_subject",
+        :pf2 => "$pf2_subject"
+      }
+    end
+
+    config.add_search_field('call_number') do |field|
+      field.label = "Call number"
+      field.solr_parameters = { :defType => "lucene"}
+      field.solr_local_parameters = {
+        :df => 'callnum_search'
+      }
+    end
+
+    config.add_search_field('search_series') do |field|
+      field.label = "Series"
+      field.solr_local_parameters = {
+        :qf  => '$qf_series',
+        :pf  => '$pf_series',
+        :pf3 => "$pf3_series",
+        :pf2 => "$pf2_series"
+      }
+    end
+
+    config.add_search_field('author_title') do |field|
+      field.label = "Author + Title"
+      field.solr_local_parameters = {
+        :qf  => 'author_title_search',
+        :pf  => 'author_title_search^10',
+        :pf3 => 'author_title_search^5',
+        :pf2 => 'author_title_search^2'
+      }
+      field.include_in_simple_select = false
     end
 
     # "sort results by" select (pulldown)
@@ -203,7 +229,8 @@ class CatalogController < ApplicationController
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
     config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', :label => 'relevance'
-    config.add_sort_field 'pub_date_sort desc, title_sort asc', :label => 'year'
+    config.add_sort_field 'pub_date_sort desc, title_sort asc', :label => 'year (new to old)'
+    config.add_sort_field 'pub_date_sort asc, title_sort asc', :label => 'year (old to new)'
     config.add_sort_field 'author_sort asc, title_sort asc', :label => 'author'
     config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title'
 
