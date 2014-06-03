@@ -62,4 +62,41 @@ describe RecordHelper do
       end
     end
   end
+  describe "subjects" do
+    let(:subjects) { [OpenStruct.new(label: 'Subjects', values: [["Subject1a", "Subject1b"], ["Subject2a", "Subject2b", "Subject2c"]])] }
+    let(:name_subjects) { [OpenStruct.new(label: 'Subjects', values: [OpenStruct.new(name: "Person Name", roles: ["Role1", "Role2"])])] }
+    describe "#mods_subject_field" do
+      it "should join the subject fields with line breaks" do
+        expect(mods_subject_field(subjects)).to match /Subject1b<\/a><br\/><a href/
+      end
+      it "should join the individual subjects with a '>'" do
+        expect(mods_subject_field(subjects)).to match /Subject2b<\/a> &gt; <a href/
+      end
+      it "should not print empty labels" do
+        expect(mods_subject_field(empty_field)).to_not be_present
+      end
+    end
+    describe "#link_mods_subjects" do
+      let(:linked_subjects) { link_mods_subjects(subjects.first.values.last) }
+      it "should return all subjects" do
+        expect(linked_subjects.length).to eq 3
+      end
+      it "should link to the subject hierarchically" do
+        expect(linked_subjects[0]).to match /^<a href=.*q=%22Subject2a%22.*>Subject2a<\/a>$/
+        expect(linked_subjects[1]).to match /^<a href=.*q=%22Subject2a\+Subject2b%22.*>Subject2b<\/a>$/
+        expect(linked_subjects[2]).to match /^<a href=.*q=%22Subject2a\+Subject2b\+Subject2c%22.*>Subject2c<\/a>$/
+      end
+      it "should link to subject terms search field" do
+        linked_subjects.each do |subject|
+          expect(subject).to match /search_field=subject_terms/
+        end
+      end
+    end
+    describe "#link_to_mods_subject" do
+      it "should handle subjects that behave like names" do
+        name_subject = link_to_mods_subject(name_subjects.first.values.first, [])
+        expect(name_subject).to match /<a href=.*%22Person\+Name%22.*>Person Name<\/a> \(Role1, Role2\)/
+      end
+    end
+  end
 end
