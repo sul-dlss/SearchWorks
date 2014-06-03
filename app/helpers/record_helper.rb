@@ -15,4 +15,19 @@ module RecordHelper
     end
   end
 
+  def mods_name_field(field)
+    if field.respond_to?(:label, :values) &&
+       field.values.any?(&:present?)
+      mods_display_label(field.label) +
+      mods_display_name(field.values)
+    end
+  end
+
+  def mods_display_name(names)
+    content_tag(:dd) do
+      names.map do |name|
+        "#{link_to(name.name, catalog_index_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}"
+      end.join('<br/>').html_safe
+    end
+  end
 end
