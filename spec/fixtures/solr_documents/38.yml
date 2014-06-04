@@ -1,0 +1,14 @@
+:id: 38
+:title_display: Merged File Collection1
+:collection_type: Digital Collection
+:summary_display:
+  - "A collection of fixture files from the SearchWorks development index."
+:display_type:
+  - file
+  - sirsi
+:format: File
+:format_main_ssim: File
+:marcxml: <%= metadata1 %>
+:pub_date: 2010
+:beginning_year_isi: 2010
+:imprint_display: 2010
