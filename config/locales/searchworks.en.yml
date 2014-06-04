@@ -7,6 +7,9 @@ en:
         absent: "Select"
       form:
         q: ''
+      zero_results:
+        limit_fields: "you limited your search by %{limit_fields}"
+        remove_limits: "try removing limits"
     bookmarks:
       add:
         button: "Select"

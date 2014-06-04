@@ -16,6 +16,7 @@ en:
         pages:
           one: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
           other: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
+        no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
         all: 'Select all'

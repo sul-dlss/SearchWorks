@@ -3,7 +3,12 @@
 </div>
 
 <div id="sidebar" class="col-md-4">
- <%= render 'search_sidebar' %>
+  <% if @response.empty? %>
+    <%= render "catalog/chat_librarian_sidebar" %>
+    <%= render "catalog/library_website_sidebar" %>
+  <% elsif %>
+    <%= render 'search_sidebar' %>
+  <% end %>
 </div>
 
 <div id="content" class="col-md-8">
@@ -16,8 +21,9 @@
     <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
     <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
   <% end -%>
-
-  <%= render 'search_header' %>
+  <% if !@response.empty? %>
+    <%= render 'search_header' %>
+  <% end %>
 
   <h2 class="sr-only"><%= t('blacklight.search.search_results') %></h2>
 

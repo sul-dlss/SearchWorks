@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Modify your search</h3>
+    <ul class="list-unstyled zero-results-list">
+      <% if params[:q] and params[:search_field] and params[:search_field] != blacklight_config.default_search_field.field %>
+        <li><%= t 'blacklight.search.zero_results.search_fields', :search_fields => search_field_label(params) %> -
+        <%= link_to t('blacklight.search.zero_results.search_everything'), url_for(params_for_search(search_field: blacklight_config.default_search_field.key)) %>
+        </li>
+      <% end %>
+      <% if params[:f] %>
+        <li><%= t 'blacklight.search.zero_results.limit_fields', limit_fields: facet_field_labels(params) %> -
+        <%= link_to t('blacklight.search.zero_results.remove_limits'), url_for(params_for_search().except(:f)) %>
+        </li>
+      <% end %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Check other sources</h3>
+    <ul class="list-unstyled zero-results-list">
+      <li>
+        <%= link_to "Check WorldCat", "http://www.worldcat.org/search?q=#{params[:q]}" %>
+      </li>
+      <li>
+        <%= link_to "Check articles", "#", class:"disabled" %>
+      </li>
+      <li>
+        <%= link_to "Check library website", "http://library.stanford.edu/search/website?search=#{params[:q]}" %>
+      </li>
+  </div>
+</div>
