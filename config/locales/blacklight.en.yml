@@ -24,3 +24,6 @@ en:
     pagination_compact:
       next: '&#9658;'
       previous: '&#9668;'
+    pagination:
+      previous: '&#9668; Previous'
+      next: 'Next &#9658;'
