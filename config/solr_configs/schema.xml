@@ -236,7 +236,7 @@
     <!--  easy way to indicate collection's parent in UI (may be deprecated in future) -->
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="img_info" type="string" indexed="false" stored="true" multiValued="true"/>
-
+    <field name="file_id" type="string" indexed="false" stored="true" multiValued="true"/>
     <!-- *************** dynamic field types  ****************** -->
 <!--
     <dynamicField name="*_unstem_search" type="textNoStem" stored="false" indexed="true" multiValued="true" />

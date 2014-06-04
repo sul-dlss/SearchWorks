@@ -4,11 +4,11 @@
     <h1><%= @parent[:title_display] %></h1>
     <div class="row">
       <div class="col-xs-8">
-        <dl>
-          <dd data-behavior='truncate'>
+        <% if @parent[:summary_display] %>
+          <div data-behavior='truncat'>
             <%= @parent[:summary_display].join(', ') %>
-          <dd>
-        </dl>
+          </div>
+        <% end %>
       </div>
       <div class="col-xs-4">
         <dl class="dl-horizontal dl-invert">
