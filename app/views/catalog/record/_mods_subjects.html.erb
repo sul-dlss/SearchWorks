@@ -1,9 +1,3 @@
-<% if @document.mods.subject.first.respond_to?(:values) %>
-  <% @document.mods.subject.first.values.each do |subjects| %>
-    <% subjects.each do |subject| %>
-      <% unless subject.nil? %>
-        <%= subject %>
-      <% end %>
-    <% end %>
-  <% end %>
+<% if @document.mods.subject.any?(&:values) %>
+  <%= mods_subject_field(@document.mods.subject)%>
 <% end %>
