@@ -1,0 +1,13 @@
+:id: 39
+:title_display: File Item3
+:author_person_full_display: Dr. Who
+:display_type:
+  - file
+:format: File
+:format_main_ssim: File
+:collection:
+  - 38
+:modsxml: <%= mods_everything %>
+:pub_date: 1905
+:beginning_year_isi: 1905
+:imprint_display: 1905

@@ -1,0 +1,14 @@
+<% if document[:summary_display] %>
+  <div data-behavior='truncate'>
+    <%= document[:summary_display].join(', ') %>
+  </div>
+<% end %>
+
+<dl class="dl-horizontal dl-invert">
+  <% if document.collection_members(rows: 3).present? %>
+    <dt>DIGITAL CONTENT:</dt>
+    <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
+  <% end %>
+</dl>
+
+<%= render partial: 'catalog/file_collection_members', locals: { document: document } %>
