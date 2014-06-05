@@ -10,10 +10,7 @@ feature "Merged File Collections" do
     expect(page).to have_css('dd', text: /\d+ items?/)
 
     within('.file-collection-members') do
-      expect(page).to have_css("a", text:"File Item3")
-      expect(page).to have_css("a", text:"File Item4 - Deathstar Bluprints")
-      expect(page).to have_css("a", text:"File Item5 - Blaster User Manual - The Good Parts")
-      expect(page).to_not have_content("selfie.vine")
+      expect(page).to have_css("a", text: /File Item/, count: 3)
     end
   end
   scenario "record view should display metadata and file list" do
@@ -22,10 +19,7 @@ feature "Merged File Collections" do
     expect(page).to have_css('h1', text: 'Merged File Collection1')
 
     within('.file-collection-members') do
-      expect(page).to have_css("a", text:"File Item3")
-      expect(page).to have_css("a", text:"File Item4 - Deathstar Bluprints")
-      expect(page).to have_css("a", text:"File Item5 - Blaster User Manual - The Good Parts")
-      expect(page).to_not have_content("selfie.vine")
+      expect(page).to have_css("a", text: /File Item/, count: 3)
     end
 
     expect(page).to have_css('h2', text: 'Contents/Summary')
