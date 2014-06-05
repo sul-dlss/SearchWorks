@@ -1,6 +1,6 @@
 Blacklight.onLoad(function(){
 
-  //Finds all of the location panels and instantiates jQuery plugin for each one
+  //Instantiates plugin for feedback form
 
   $("#feedback-form").feedbackForm();
 })
@@ -15,9 +15,8 @@ Blacklight.onLoad(function(){
     No available options
 
     This plugin :
-      - removes the link from
-      - parses the response and adds hours information to the appropriate library
-      location access panel
+      - submits an ajax request for the feedback form
+      - displays alert on response from feedback form
   */
 
     var pluginName = "feedbackForm";
