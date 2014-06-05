@@ -10,6 +10,7 @@ class CatalogController < ApplicationController
 
 
   before_filter :add_show_partials
+  before_filter :set_search_query_modifier, only: :index
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -240,6 +241,9 @@ class CatalogController < ApplicationController
   end
   private
 
+  def set_search_query_modifier
+    @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
+  end
 
   def add_show_partials
     blacklight_config.show.partials += ["catalog/record/record_metadata"]
