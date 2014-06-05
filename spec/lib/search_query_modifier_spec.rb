@@ -21,7 +21,7 @@ describe SearchQueryModifier do
   end
   describe "fielded search" do
     let(:config) { OpenStruct.new(default_search_field: OpenStruct.new(field: 'search') ) }
-    let(:fielded_search) { SearchQueryModifier.new({search_field: "search_title", q: 'something'}, config) }
+    let(:fielded_search) { SearchQueryModifier.new({search_field: "search_title", q: 'something', f: 'else'}, config) }
     let(:no_query_search) { SearchQueryModifier.new({search_field: 'search_title'}, config) }
     let(:no_fielded_search) { SearchQueryModifier.new({q: 'something'}, config) }
     let(:default_fielded_search) { SearchQueryModifier.new({search_field: "search", q: 'something'}, config) }
@@ -39,10 +39,24 @@ describe SearchQueryModifier do
         expect(default_fielded_search.fielded_search?).to be_false
       end
     end
+    describe "#query_search?" do
+      it "should return true when a search has a query" do
+        expect(fielded_search.query_search?).to be_true
+      end
+      it "should return false when a search does not have a query" do
+        expect(no_query_search.query_search?).to be_false
+      end
+    end
     describe "#params_without_fielded_search" do
       it "should return the parameters w/o the search_field param" do
         expect(fielded_search.params_without_fielded_search[:q]).to eq 'something'
         expect(fielded_search.params_without_fielded_search[:search_field]).to_not be_present
+      end
+    end
+    describe "#params_without_fielded_search_and_filters" do
+      it "should return the parameters w/o the search_field param or filters" do
+        expect(fielded_search.params_without_fielded_search_and_filters[:search_field]).to_not be_present
+        # expect(fielded_search.params_without_fielded_search[:f]).to_not be present
       end
     end
   end
@@ -53,7 +67,7 @@ describe SearchQueryModifier do
         config.add_facet_field 'fieldB', label: 'Another field'
       end
     }
-    let(:filtered_search) { SearchQueryModifier.new({f: {'fieldA' => 'Something', 'fieldB' => 'Something Else'}, q: 'something'}, facet_config) }
+    let(:filtered_search) { SearchQueryModifier.new({f: {'fieldA' => ['Something'], 'fieldB' => ['Something Else']}, q: 'something'}, facet_config) }
     let(:no_filter_search) { SearchQueryModifier.new({q: 'something'}, default_config) }
     describe "#has_filters?" do
       it "should return true when a search has filters" do
@@ -71,7 +85,7 @@ describe SearchQueryModifier do
     end
     describe "#selected_filter_labels" do
       it "should return labels as a string" do
-        expect(filtered_search.selected_filter_labels).to eq "A field, Another field"
+        expect(filtered_search.selected_filter_labels).to eq "A field: Something, Another field: Something Else"
       end
     end
   end

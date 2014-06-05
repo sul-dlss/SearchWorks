@@ -14,8 +14,16 @@ class SearchQueryModifier
     end
   end
 
+  def params_without_fielded_search_and_filters
+    @params.merge(search_field: nil, f: nil)
+  end
+
   def params_without_fielded_search
     @params.merge(search_field: nil)
+  end
+
+  def query_search?
+    @params[:q].present?
   end
 
   def fielded_search?
@@ -31,7 +39,7 @@ class SearchQueryModifier
   def selected_filter_labels
     if has_filters?
       @config.facet_fields.values.map do |facet|
-        facet.label if @params[:f][facet.field].present?
+        "#{facet.label}: #{@params[:f][facet.field].join(', ')}" if @params[:f][facet.field].present?
       end.compact.join(', ')
     end
   end
