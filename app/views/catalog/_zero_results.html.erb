@@ -2,14 +2,14 @@
   <div class="panel-body">
     <h3>Modify your search</h3>
     <ul class="list-unstyled zero-results-list">
-      <% if params[:q] and params[:search_field] and params[:search_field] != blacklight_config.default_search_field.field %>
+      <% if @search_modifier.fielded_search? %>
         <li><%= t 'blacklight.search.zero_results.search_fields', :search_fields => search_field_label(params) %> -
-        <%= link_to t('blacklight.search.zero_results.search_everything'), url_for(params_for_search(search_field: blacklight_config.default_search_field.key)) %>
+        <%= link_to t('blacklight.search.zero_results.search_everything'), catalog_index_path(@search_modifier.params_without_fielded_search) %>
         </li>
       <% end %>
-      <% if params[:f] %>
-        <li><%= t 'blacklight.search.zero_results.limit_fields', limit_fields: facet_field_labels(params) %> -
-        <%= link_to t('blacklight.search.zero_results.remove_limits'), url_for(params_for_search().except(:f)) %>
+      <% if @search_modifier.has_filters? %>
+        <li><%= t 'blacklight.search.zero_results.limit_fields', limit_fields: @search_modifier.selected_filter_labels %> -
+        <%= link_to t('blacklight.search.zero_results.remove_limits'), catalog_index_path(@search_modifier.params_without_filters) %>
         </li>
       <% end %>
   </div>
