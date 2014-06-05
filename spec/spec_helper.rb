@@ -61,3 +61,19 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+def greater_than_integer value, integer
+  if value.gsub(',', '').to_i > integer
+    true
+  else
+    value
+  end
+end
+
+def less_than_integer value, integer
+  if value.gsub(',', '').to_i < integer
+    true
+  else
+    value
+  end
+end

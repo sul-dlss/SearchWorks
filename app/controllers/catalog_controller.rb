@@ -188,7 +188,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('subject_terms') do |field|
-      field.label = "Subject terms"
+      field.label = "Subject"
       field.solr_local_parameters = {
         :qf  => '$qf_subject',
         :pf  => '$pf_subject',
@@ -215,17 +215,6 @@ class CatalogController < ApplicationController
         :pf3 => "$pf3_series",
         :pf2 => "$pf2_series"
       }
-    end
-
-    config.add_search_field('author_title') do |field|
-      field.label = "Author + Title"
-      field.solr_local_parameters = {
-        :qf  => 'author_title_search',
-        :pf  => 'author_title_search^10',
-        :pf3 => 'author_title_search^5',
-        :pf2 => 'author_title_search^2'
-      }
-      field.include_in_simple_select = false
     end
 
     # Adds search fields for use only in BL Advanced Search

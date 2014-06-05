@@ -58,26 +58,15 @@ describe ApplicationHelper do
       end
     end
   end
-  describe "#facet_field_labels" do
-    it "should return correct array of labels" do
-      @config = Blacklight::Configuration.new do |config|
-        config.add_facet_field 'collection', label: "Collection"
-        config.add_facet_field 'format', label: 'Format'
-      end
-      params = HashWithIndifferentAccess.new({f: { collection: ["Good one"], format: ["Book"]}})
-      helper.stub(:blacklight_config).and_return(@config)
-      expect(helper.facet_field_labels(params)).to eq "Collection, Format"
-    end
-  end
-  describe "#active_page" do
+  describe "#active_class_for_current_page" do
     let(:advanced_page) {"advanced"}
     it "should be active" do
       helper.request.path = "advanced"
-      expect(helper.active_page(advanced_page)).to eq "active"
+      expect(helper.active_class_for_current_page(advanced_page)).to eq "active"
     end
     it "should not be active" do
-      helper.request.active_page = "feedback"
-      expect(helper.active_page(advanced_page)).to be_nil
+      helper.request.path = "feedback"
+      expect(helper.active_class_for_current_page(advanced_page)).to be_nil
     end
   end
 end
