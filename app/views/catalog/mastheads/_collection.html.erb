@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-xs-8">
         <% if @parent[:summary_display] %>
-          <div data-behavior='truncat'>
+          <div data-behavior='truncate'>
             <%= @parent[:summary_display].join(', ') %>
           </div>
         <% end %>
@@ -18,7 +18,7 @@
           <% end %>
           <% # this stuff is temporary until we have item level merge (mods + marc) %>
           <% if @parent[:physical].present? %>
-            <dt>PHYSICAL:</dt>
+            <dt>PHYSICAL EXTENT:</dt>
             <dd><%= @parent[:physical].join(', ')%></dd>
           <% end %>
           <% if @parent[:finding_aid].present? %>
