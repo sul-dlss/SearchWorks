@@ -1,0 +1,22 @@
+<div class='panel panel-default additional-results'>
+  <div class="panel-body">
+    <h3>Looking for different results?</h3>
+    <p>
+      <span>Modify your search:</span>
+      <% if @search_modifier.has_filters? %>
+        <%= link_to("Remove limit(s)", catalog_index_path(@search_modifier.params_without_filters)) %>
+      <% end %>
+      <% if @search_modifier.fielded_search? %>
+        <%= link_to("Search all fields", catalog_index_path(@search_modifier.params_without_fielded_search)) %>
+      <% end %>
+      <% if @search_modifier.query_has_stopwords? %>
+        <%= link_to("Search without #{SearchQueryModifier.stopwords.map{|w| "\"#{w}\""}.join(' ')}", catalog_index_path(@search_modifier.params_without_stopwords)) %>
+      <% end %>
+    </p>
+    <% if @search_modifier.has_query? %>
+      <p>
+        <span>Search elsewhere:</span> <%= link_to("Search articles", '#', class: 'disabled')%> <%= link_to("Search library website", "http://library.stanford.edu/search/website?search=#{params[:q]}") %>
+      </p>
+    <% end %>
+  </div>
+</div>
