@@ -11,7 +11,7 @@ describe "catalog/_zero_results.html.erb" do
   before do
     assign(:search_modifier, SearchQueryModifier.new({
       q: "A query",
-      f: {'fieldA' => "ValueA", 'fieldB' => 'ValueB'},
+      f: {'fieldA' => ["ValueA"], 'fieldB' => ['ValueB']},
       search_field: 'search_title'
     }, config))
     view.stub(:label_for_search_field).and_return('Title')
@@ -24,10 +24,8 @@ describe "catalog/_zero_results.html.erb" do
 
   it "should render text indicating tips to modify the search along with links to the relevant search" do
     render
-    expect(rendered).to have_css("li", text: /you searched by Title/)
-    expect(rendered).to have_css("a", text: 'try searching everything')
-    expect(rendered).to have_css("li", text: /you limited your search by A field, Another field/)
-    expect(rendered).to have_css("a", text: 'try removing limits')
+    expect(rendered).to have_css("li", text: /Your search:/)
+    expect(rendered).to have_css("a", text: /Title:/)
   end
 
   it "should display check other sources" do

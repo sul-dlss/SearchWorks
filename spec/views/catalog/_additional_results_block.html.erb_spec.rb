@@ -10,7 +10,7 @@ describe "catalog/_additional_results_block.html.erb" do
   }
   let(:no_modifier) { SearchQueryModifier.new({}, simple_config) }
   let(:query) { SearchQueryModifier.new({q: "Query of the stopwords"}, simple_config) }
-  let(:filter) { SearchQueryModifier.new({f: {fieldA: "ValueA", fieldB: 'ValueB'}, q: 'a query'}, facet_config) }
+  let(:filter) { SearchQueryModifier.new({f: {fieldA: ["ValueA"], fieldB: ['ValueB']}, q: 'a query'}, facet_config) }
   let(:fielded) { SearchQueryModifier.new({search_field: 'search_title', q: 'a query'}, simple_config) }
   describe "stopwords search" do
     before do

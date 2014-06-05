@@ -8,8 +8,9 @@ en:
       form:
         q: ''
       zero_results:
-        limit_fields: "you limited your search by %{limit_fields}"
-        remove_limits: "try removing limits"
+        limit_fields: "Remove limit(s): "
+        search_fields: "Search all fields: "
+        your_search: "Your search: "
     bookmarks:
       add:
         button: "Select"
