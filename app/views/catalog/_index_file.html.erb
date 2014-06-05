@@ -1,0 +1,8 @@
+<%= render :partial => "search_results_document_fields", :locals => { :document => document } %>
+
+<dl class="dl-horizontal dl-invert">
+  <% if document[:physical].present? %>
+    <dt>PHYSICAL EXTENT:</dt>
+    <dd><%= document[:physical].join(', ') %></dd>
+  <% end %>
+</dl>

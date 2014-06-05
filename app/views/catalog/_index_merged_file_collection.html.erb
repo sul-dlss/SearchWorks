@@ -9,6 +9,13 @@
     <dt>DIGITAL CONTENT:</dt>
     <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
   <% end %>
+
+  <% if document[:physical].present? %>
+    <dt>PHYSICAL EXTENT:</dt>
+    <dd><%= document[:physical].join(', ') %></dd>
+  <% end %>
 </dl>
 
-<%= render partial: 'catalog/file_collection_members', locals: { document: document } %>
+<% if document.collection_members(rows: 3).present? %>
+  <%= render partial: 'catalog/file_collection_members', locals: { document: document } %>
+<% end %>

@@ -4,11 +4,18 @@
   </div>
 <% end %>
 
-<% if document.collection_members.present? %>
-  <dl class="dl-horizontal dl-invert">
+<dl class="dl-horizontal dl-invert">
+  <% if document.collection_members.present? %>
     <dt>DIGITAL CONTENT:</dt>
     <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
-  </dl>
+  <% end %>
 
+  <% if document[:physical].present? %>
+    <dt>PHYSICAL EXTENT:</dt>
+    <dd><%= document[:physical].join(', ') %></dd>
+  <% end %>
+</dl>
+
+<% if document.collection_members.present? %>
   <%= render :partial => "image_collection_filmstrip", :locals => { :collection_document => document } %>
 <% end %>
