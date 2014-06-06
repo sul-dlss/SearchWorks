@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resource :feedback_form, path: "feedback", only: [:new, :create]
 
   get "feedback" => "feedback_forms#new"
+  get "backend_lookup" => "catalog#backend_lookup", defaults: {format: :json}, as: :catalog_backend_lookup
 
 
   # The priority is based upon order of creation: first created -> highest priority.

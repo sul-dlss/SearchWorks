@@ -16,5 +16,10 @@ describe CatalogController do
         expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format" => ["Database"] })
       end
     end
+    describe "/backend_lookup" do
+      it "should route to the backend lookup path as json" do
+        expect({get: "/backend_lookup"}).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
+      end
+    end
   end
 end
