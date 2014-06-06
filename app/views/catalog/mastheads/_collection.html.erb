@@ -21,9 +21,9 @@
             <dt>PHYSICAL EXTENT:</dt>
             <dd><%= @parent[:physical].join(', ')%></dd>
           <% end %>
-          <% if @parent[:finding_aid].present? %>
+          <% if @parent.index_links.finding_aid.present? %>
             <dt>FINDING AID:</dt>
-            <dd><%= @parent[:finding_AID].join(', ')%></dd>
+            <dd><%= @parent.index_links.finding_aid.first.text.html_safe %></dd>
           <% end %>
         </dl>
       </div>
