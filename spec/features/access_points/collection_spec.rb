@@ -10,6 +10,8 @@ feature "Collection Access Point" do
       expect(page).to have_css("div", text: "A collection of fixture images from the SearchWorks development index.")
       expect(page).to have_css("dt", text: "DIGITAL CONTENT:")
       expect(page).to have_css("dd", text: "1 item")
+      expect(page).to have_css("dt", text: "FINDING AID:")
+      expect(page).to have_css("dd a", text: "Online Archive of California")
     end
     within("#content") do
       expect(page).to have_css("div.document", count:1)

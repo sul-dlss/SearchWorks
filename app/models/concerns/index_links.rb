@@ -11,13 +11,26 @@ module IndexLinks
     def all
       link_fields.map do |link_field|
         SearchWorks::Links::Link.new(
-         text: "<a href='#{link_field}'>#{link_host(link_field)}</a>",
+         text: link_text(link_field),
          fulltext: link_is_fulltext?(link_field),
-         stanford_only: link_is_stanford_only?(link_field)
+         stanford_only: link_is_stanford_only?(link_field),
+         finding_aid: link_is_finding_aid?(link_field)
         )
       end
     end
     private
+
+    def link_text(link_field)
+      if link_is_finding_aid?(link_field)
+        "<a href='#{link_field}'>Online Archive of California</a>"
+      else
+        "<a href='#{link_field}'>#{link_host(link_field)}</a>"
+      end
+    end
+
+    def link_is_finding_aid?(link_field)
+      link_field =~ /oac\.cdlib\.org\/findaid/
+    end
     def link_fields
       [@document[:url_fulltext], @document[:url_suppl]].flatten.compact.uniq
     end

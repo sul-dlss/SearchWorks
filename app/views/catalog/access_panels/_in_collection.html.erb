@@ -20,6 +20,10 @@
             <dt>PHYSICAL EXTENT:</dt>
             <dd><%= parent_collection[:physical].join(', ') %></dd>
           <% end %>
+          <% if parent_collection.index_links.finding_aid.present? %>
+            <dt>FINDING AID</dt>
+            <dd><%= parent_collection.index_links.finding_aid.first.text.html_safe %></dd>
+          <% end %>
           <dt>COLLECTION PURL<dt>
           <dd><%= link_to("http://purl.stanford.edu/#{parent_collection.druid}", "http://purl.stanford.edu/#{parent_collection.druid}") %></dd>
         </dl>
