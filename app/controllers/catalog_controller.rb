@@ -239,6 +239,14 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
+
+  def backend_lookup
+    (@response, @document_list) = get_search_results
+    respond_to do |format|
+      format.json { render json: render_search_results_as_json }
+    end
+  end
+
   private
 
   def set_search_query_modifier
