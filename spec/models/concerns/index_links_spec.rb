@@ -12,6 +12,11 @@ describe IndexLinks do
       url_restricted: ["http://library.stanford.edu"]
     )
   }
+  let(:finding_aid_document) {
+    SolrDocument.new(
+      url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
+    )
+  }
   describe "mixin" do
     it "should add the #index_links method" do
       expect(solr_document).to respond_to(:index_links)
@@ -25,6 +30,7 @@ describe IndexLinks do
   end
   describe "SearchWorks::Links" do
     let(:index_links) {solr_document.index_links}
+    let(:finding_aid_links) {finding_aid_document.index_links}
     it "should return both fulltext and supplemental links" do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.text).to match /^<a.*>library\.stanford\.edu<\/a>$/
@@ -37,6 +43,11 @@ describe IndexLinks do
     it "should identify urls that are in the url_fulltext field as fulltext" do
       expect(index_links.all.first).to    be_fulltext
       expect(index_links.all.last).to_not be_fulltext
+    end
+    it "should identify finding aid links" do
+      expect(finding_aid_links.all.first).to be_finding_aid
+      expect(finding_aid_links.finding_aid.length).to eq 1
+      expect(finding_aid_links.finding_aid.first.text).to match /<a href='.*oac\.cdlib\.org\/findaid\/something-else'>Online Archive of California<\/a>/
     end
   end
 end
