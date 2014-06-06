@@ -63,11 +63,4 @@ module ApplicationHelper
     end
     return fields unless fields.empty?
   end
-  def facet_field_labels(params)
-    if params[:f]
-      blacklight_config.facet_fields.values.map do |facet|
-        facet.label if params[:f][facet.field].present?
-      end.compact.join(', ')
-    end
-  end
 end
