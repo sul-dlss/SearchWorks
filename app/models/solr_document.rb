@@ -14,6 +14,7 @@ class SolrDocument
   include IndexAuthors
   include Druid
   include DigitalImage
+  include OpenSeadragon
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
@@ -53,5 +54,8 @@ class SolrDocument
     :format
   end
 
+  def file_ids
+    self[:img_info] || self[:file_id]
+  end
 
 end

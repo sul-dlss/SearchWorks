@@ -38,5 +38,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of Druid
     end
   end
-
+  describe "OpenSeadragon" do
+    it "should include OpenSeadragon" do
+      expect(subject).to be_kind_of OpenSeadragon
+    end
+  end
 end

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/sul-dlss/openseadragon-rails.git
+  revision: afe09fa081b0a4f854cbeb0c4f9cba7edda17ea9
+  specs:
+    openseadragon (0.0.5)
+      rails (> 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -281,6 +288,7 @@ DEPENDENCIES
   jquery-rails
   lyberteam-capistrano-devel (= 3.0.0.pre1)
   mods_display (= 0.3.3)
+  openseadragon!
   poltergeist
   rails (= 4.1.1)
   rails_config

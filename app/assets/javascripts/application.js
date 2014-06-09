@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require responsiveTrucator
+//= require openseadragon/rails
 //
 // Required by Blacklight
 //= require blacklight/blacklight
