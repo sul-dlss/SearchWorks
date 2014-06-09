@@ -4,6 +4,13 @@ GIT
   specs:
     openseadragon (0.0.5)
       rails (> 3.2.0)
+  remote: git://github.com/projectblacklight/blacklight-gallery.git
+  revision: 2f9f342518585a6e48d93a8e4ed5621afcf918a7
+  specs:
+    blacklight-gallery (0.0.1)
+      blacklight (>= 5.0.0.pre4, < 6.0)
+      bootstrap-sass (~> 3.0)
+      rails
 
 GEM
   remote: https://rubygems.org/
@@ -274,6 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight (~> 5.4.0)
+  blacklight-gallery!
   blacklight-marc (~> 5.0)
   capistrano (~> 3.0)
   capistrano-bundler
