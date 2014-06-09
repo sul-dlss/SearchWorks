@@ -493,7 +493,7 @@ module MarcHelper
 
   def link_to_series_from_marc(marc)
     fields = []
-    tags = ["440","490","800","810","811","830"]
+    tags = ["440","800","810","811","830"]
     tags.each do |tag|
       if marc[tag]
         marc.find_all{|f| (tag) === f.tag}.each do |field|
@@ -512,18 +512,11 @@ module MarcHelper
             end
             sub_a << subfield.value if subfield.code == "a"
           end
-          # don't want to have the extra text join 3 times, however we can only dedup for 490 ind1 == 1
-          # if we do one join at the end then we need a really complicated unless statement
-          if tag == "490" and field.indicator1 != "0"
-            unless series_is_duplicated?(marc,prep_string.join(" "))
-              text << link.join(" ")
-              text << " #{extra.join(" ")}" unless extra.blank?
-            end
-          elsif sub_a.length > 1
+          if sub_a.length > 1
             text << link.join(" ")
             text << " #{extra.join(" ")}" unless extra.blank?
           else
-            text << link_to(link.join(" "), :q => "\"#{link.join(" ")}\"", :controller => "catalog", :action => "index", :search_field => "search_series")
+            text << link_to(link.join(" "), catalog_index_path(q: "\"#{link.join(" ")}\"", search_field: "search_series"))
             text << " #{extra.join(" ")}" unless extra.blank?
           end
           fields << text unless text.blank?
@@ -538,7 +531,7 @@ module MarcHelper
                   vern_text = ""
                   vern_field.each{ |sub_field|
                     if sub_field.code == "a"
-                      vern_text << link_to(sub_field.value,{:controller=>"catalog",:action=>"index",:q=>"\"#{sub_field.value}\"",:search_field=>"title"})
+                      vern_text << link_to(sub_field.value, catalog_index_path(q: "\"#{sub_field.value}\"", search_field: "title"))
                     elsif ["v","x"].include?(sub_field.code)
                       vern_text << " #{sub_field.value} "
                     end
@@ -552,30 +545,6 @@ module MarcHelper
       end
     end
     return fields unless fields.empty?
-  end
-
-  def prep_for_compare(string)
-    str = string.dup
-    str.gsub!(/\W+/,"")
-    str.downcase
-  end
-
-  def series_is_duplicated?(marc,series)
-    prepped_series = prep_for_compare(series)
-    ["800","810","811","830"].each do |tag|
-      if marc[tag]
-        marc.find_all{|f| (tag) === f.tag}.each do |field|
-          tmp = []
-          field.each do |subfield|
-            if ("a".."z").include?(subfield.code)
-              tmp << subfield.value
-            end
-          end
-          return true if prepped_series == prep_for_compare(tmp.join(" "))
-        end
-      end
-    end
-    false
   end
 
   def get_uniform_title(doc,fields,fld=nil)

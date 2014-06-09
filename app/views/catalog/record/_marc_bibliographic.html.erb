@@ -63,6 +63,11 @@
   <%= render_field_from_marc(date_range) %>
 <% end %>
 
+<% series_490 = get_data_with_label_from_marc(document.to_marc, 'Series', '490') %>
+<% unless series_490.nil? %>
+  <%= render_field_from_marc(series_490) %>
+<% end %>
+
 <% note_500 = get_data_with_label_from_marc(document.to_marc, "Note", '500') %>
 <% unless note_500.nil? %>
   <%= render_field_from_marc(note_500) %>
@@ -426,14 +431,6 @@
 <%- related_work_799 = get_data_with_label_from_marc(document.to_marc, "Related Work", '799') -%>
 <%- unless related_work_799.nil? -%>
   <%= render_field_from_marc(related_work_799) %>
-<%- end -%>
-
-<%- series = link_to_series_from_marc(document.to_marc) -%>
-<%- unless series.nil? -%>
-  <dt>Series</dt>
-  <dd>
-    <%= series.join("<br/>").html_safe -%>
-  </dd>
 <%- end -%>
 
 <%- isbn = get_data_with_label(document, "ISBN", 'isbn_display') -%>

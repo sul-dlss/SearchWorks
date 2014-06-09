@@ -53,5 +53,13 @@
     <%- unless physical_desc.nil? -%>
       <%= render "field_from_index", :fields => physical_desc %>
     <%- end -%>
+
+    <% series = link_to_series_from_marc(document.to_marc) %>
+    <% if series.present? %>
+      <dt>Series:</dt>
+      <dd>
+        <%= series.join("<br/>").html_safe %>
+      </dd>
+    <% end %>
   </dl>
 <% end %>

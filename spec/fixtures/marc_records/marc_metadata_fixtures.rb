@@ -673,6 +673,33 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def marc_single_series_fixture
+    <<-xml
+      <record>
+        <datafield tag="440" ind1=" " ind2=" ">
+          <subfield code="a">Name</subfield>
+          <subfield code="v">SubV</subfield>
+          <subfield code="z">SubZ</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def marc_multi_series_fixture
+    <<-xml
+      <record>
+        <datafield tag="440" ind1=" " ind2=" ">
+          <subfield code="a">440 $a</subfield>
+          <subfield code="v">440 $v</subfield>
+          <subfield code="x">440 $x</subfield>
+        </datafield>
+        <datafield tag="800" ind1=" " ind2=" ">
+          <subfield code="a">Name</subfield>
+          <subfield code="v">SubV800</subfield>
+          <subfield code="z">SubZ</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def no_fields_fixture
     "<record></record>"
   end
