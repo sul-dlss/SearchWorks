@@ -15,6 +15,7 @@
   }
 
   .document {
+    position: relative;
     margin: 0px 5px 15px 5px;
     float: left;
     display: inline;
@@ -25,6 +26,24 @@
 
   .document-counter {
     display: none;
+  }
+
+  .index-document-functions {
+    margin-left: 28px;
+  }
+
+  div.gallery-buttons {
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    display: inline-block;
+
+    .preview-button {
+      position: absolute;
+      bottom: 0px;
+      right: 8px;
+    }
   }
 }
 

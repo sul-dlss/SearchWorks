@@ -13,4 +13,10 @@
   <div class="caption">
     <%= render_document_partials document, blacklight_config.view_config(:gallery).partials, document_counter: document_counter %>
   </div>
+  <% # bookmark functions for items/docs and preview button %>
+  <div class="gallery-buttons">
+    <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+    <button class="btn btn-sm btn-primary preview-button" disabled="disabled">Preview</button>
+  </div>
+
 </div>
