@@ -8,6 +8,7 @@ class CatalogController < ApplicationController
 
   include DatabaseAccessPoint
 
+  helper Openseadragon::OpenseadragonHelper
 
   before_filter :add_show_partials
   before_filter :set_search_query_modifier, only: :index

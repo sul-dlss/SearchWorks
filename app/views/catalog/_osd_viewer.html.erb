@@ -1,0 +1,23 @@
+<% tiles = @document.open_seadragon_tile_source %>
+<% if tiles.present? %>
+  <% count = Array(tiles).length %>
+  <div class="col-md-6 open-seadragon">
+    <div class="osd-toolbar row">
+      <% if count > 1 %>
+        <div class="col-md-6 paging pull-left">
+          <!-- <a id="osd-previous"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <span id="osd-page">1</span> of <%= count %>
+          <a id="osd-next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+        </div>
+      <% end %>
+        <div class="col-md-6 controls pull-right">
+          <a id="osd-zoom-in"><span class="glyphicon glyphicon-plus-sign"></span></a>
+          <a id="osd-zoom-out"><span class="glyphicon glyphicon-minus-sign"></span></a>
+          <a id="osd-home"><span class="glyphicon glyphicon-resize-small"></span></a>
+          <a id="osd-full-page"><span class="glyphicon glyphicon-fullscreen"></span></a>
+        </div>
+    </div>
+    <%= openseadragon_picture_tag tiles, class: 'osd-image row', data: { openseadragon: @document.osd_config.merge(prefixUrl: image_url('openseadragon') + "/") } %>
+  </div>
+
+<% end %>
