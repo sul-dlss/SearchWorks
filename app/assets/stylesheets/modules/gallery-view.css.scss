@@ -1,0 +1,60 @@
+/* Note Blacklight-Gallery plugin is being used but styles and partials are
+   being overridden.
+*/
+
+#documents.gallery {
+
+  .caption {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .caption h5 {
+    overflow:hidden;
+    max-height: 4.4em;
+  }
+
+  .document {
+    margin: 0px 5px 15px 5px;
+    float: left;
+    display: inline;
+    width: 184px;
+    height: 400px;
+    border: 1px solid $panel-inner-border;
+  }
+
+  .document-counter {
+    display: none;
+  }
+}
+
+span.fake-cover {
+  width: 130px;
+  height: 195px;
+  text-align: center;
+  position: relative;
+  left: 27px;
+  display: block;
+  background: $well-bg;
+  border: 1px solid $well-border;
+}
+
+div.fake-cover-text-wrapper {
+  width: 130px;
+  height: 195px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.fake-cover-text {
+  padding: 4px;
+  max-height: 7.3em;
+  overflow: hidden;
+}
+
+.view-icon-gallery {
+  &:before { content: "\e011"; }
+}
+.view-icon-slideshow {
+  &:before { content: "\e158"; }
+}
