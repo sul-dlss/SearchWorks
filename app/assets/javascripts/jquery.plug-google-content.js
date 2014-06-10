@@ -143,6 +143,5 @@
 
 Blacklight.onLoad(function() {
   $('#documents').plugGoogleBookContent();
-  $('.document').plugGoogleBookContent();
+  $('div#content.show-document .document').plugGoogleBookContent();
 });
-
