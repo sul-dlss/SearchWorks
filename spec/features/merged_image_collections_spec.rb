@@ -10,21 +10,32 @@ feature "Merged Image Collections" do
     expect(page).to have_css('dd', text: /\d+ items?/)
 
     within('.image-filmstrip') do
-      within('ul.listing') do
+      within('ul.container-images') do
         expect(page).to have_css("a img.thumb-35")
         expect(page).to have_css("a img.thumb-36")
       end
+
+      within('ul.container-previews') do
+        expect(page).to have_css("li.preview-target-35")
+        expect(page).to have_css("li.preview-target-36")
+      end
     end
   end
+
   scenario "record view should display metadata and filmstrip" do
     visit catalog_path('34')
 
     expect(page).to have_css('h1', text: 'Merged Image Collection1')
 
     within('.image-filmstrip') do
-      within('ul.listing') do
+      within('ul.container-images') do
         expect(page).to have_css("a img.thumb-35")
         expect(page).to have_css("a img.thumb-36")
+      end
+
+      within('ul.container-previews') do
+        expect(page).to have_css("li.preview-target-35")
+        expect(page).to have_css("li.preview-target-36")
       end
     end
 

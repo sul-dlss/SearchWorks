@@ -1,3 +1,5 @@
+<% showPreviews ||= true %>
+
 <div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
 
   <button class="btn btn-default btn-sm prev">
@@ -5,17 +7,42 @@
   </button>
 
   <div class="viewport">
-    <ul class="listing">
+    <ul class="container-images">
       <% collection_document.collection_members.documents.each do |document| %>
         <% unless document.image_urls.blank? %>
-          <li>
+          <li class="preview-source-<%= document[:id] %>">
             <a href="<%= catalog_path(document[:id]) %>"><img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>"></a>
-            <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+
+            <% if document.image_urls.length > 1 %>
+              <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+            <% end %>
           </li>
         <% end %>
       <% end %>
     </ul>
   </div>
+
+  <% if showPreviews %>
+    <ul class="container-previews" data-type="filmstrip">
+      <% collection_document.collection_members.documents.each do |document| %>
+        <% unless document.image_urls.blank? %>
+          <li class="preview preview-target-<%= document[:id] %>" data-preview-id="<%= document[:id] %>">
+            <div class="preview-arrow"></div>
+            <div class="container-fluid">
+              <div class="col-sm-5 col-xs-12">
+                <h5 class="index_title"><a href="<%= catalog_path(document[:id]) %>"><%= document[:title_display] %></a></h5>
+                <%= render :partial => "search_results_document_fields", :locals => { :document => document } %>
+              </div>
+              <div class="col-sm-7 col-xs-12 text-right">
+                <a href="<%= catalog_path(document[:id]) %>"><img src="" class="preview-img" data-url="<%= document.image_urls(:large).first %>"></a>
+              </div>
+            </div>
+            <a class="preview-close"><span class="glyphicon glyphicon-remove"></span></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
 
   <button class="btn btn-default btn-sm next">
     <span class="glyphicon glyphicon-chevron-right"></span>
