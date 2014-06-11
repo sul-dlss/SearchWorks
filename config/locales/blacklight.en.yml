@@ -21,6 +21,15 @@ en:
       add:
         all: 'Select all'
         all_small: '&#10004; all'
+      selection_title: 'selection'
+    tools:
+      sms_html: '<span class="glyphicon glyphicon-phone"> </span>  text'
+      email_html: '<span class="glyphicon glyphicon-envelope"> </span>  email'
+      refworks_html: '<span class="glyphicon glyphicon-asterisk"> </span>  RefWorks'
+      endnote_html: '<span class="glyphicon glyphicon-asterisk"> </span>  EndNote'
+      printer_html: '<span class="glyphicon glyphicon-print"> </span>  printer'
+      cite_entries: 'Cite %{current_range}'
+      send_to_html: 'Send %{current_range} to <span class="caret"></span>'
   views:
     pagination_compact:
       next: '&#9658;'

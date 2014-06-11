@@ -17,10 +17,17 @@
       </ul>
     </div>
     <div id="" class="search-widgets collapse navbar-collapse pull-right">
+      <% if bookmarks? %>
+        <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(@response)), citation_catalog_path(:sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-default', :data => {:ajax_modal => "trigger"}} %>
+        <%= render "bookmarks/tool_dropdown" %>
+      <% end %>
       <%= render partial: 'view_type_group' %>
       <%= render partial: 'sort_widget' %>
       <%= render partial: 'per_page_widget' %>
-      <%= render partial: 'select_all_widget' %>
+      <% unless bookmarks? %>
+        <%= render partial: 'select_all_widget' %>
+      <% end %>
     </div>
   </div>
 </div>
+<%=  %>

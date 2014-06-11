@@ -1,0 +1,20 @@
+<div id="content" class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="pull-right"><%= "#{@response.total_count} #{t('blacklight.bookmarks.selection_title').pluralize(@response.documents.length)}" %></h1>
+    </div>
+  </div>
+
+<%- if current_or_guest_user.blank? -%>
+
+  <h2><%= t('blacklight.bookmarks.need_login') %></h2>
+
+<%- elsif @document_list.blank? -%>
+
+  <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
+<% else %>
+  <%= render 'sort_and_per_page' %>
+  <%= render_document_index %>
+  <%= render 'results_pagination' %>
+<% end %>
+</div>
