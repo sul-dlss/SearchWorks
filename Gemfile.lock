@@ -56,6 +56,10 @@ GEM
       blacklight (~> 5.0)
       marc (>= 0.4.3, < 1.1)
       rails
+    blacklight_advanced_search (5.0.1)
+      blacklight (>= 5.1, < 6.0)
+      parslet
+    blankslate (2.1.2.4)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.2.2)
@@ -173,6 +177,8 @@ GEM
       i18n
       nokogiri
     orm_adapter (0.5.0)
+    parslet (1.6.1)
+      blankslate (~> 2.0)
     poltergeist (1.5.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -285,6 +291,7 @@ DEPENDENCIES
   blacklight (~> 5.4.0)
   blacklight-gallery!
   blacklight-marc (~> 5.0)
+  blacklight_advanced_search
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-rails

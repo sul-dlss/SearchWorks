@@ -58,4 +58,15 @@ describe ApplicationHelper do
       end
     end
   end
+  describe "#active_class_for_current_page" do
+    let(:advanced_page) {"advanced"}
+    it "should be active" do
+      helper.request.path = "advanced"
+      expect(helper.active_class_for_current_page(advanced_page)).to eq "active"
+    end
+    it "should not be active" do
+      helper.request.path = "feedback"
+      expect(helper.active_class_for_current_page(advanced_page)).to be_nil
+    end
+  end
 end
