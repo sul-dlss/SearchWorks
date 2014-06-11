@@ -297,6 +297,7 @@ DEPENDENCIES
   capistrano-rails
   capybara
   coveralls
+  deprecation
   devise
   devise-guests (~> 0.3)
   faraday

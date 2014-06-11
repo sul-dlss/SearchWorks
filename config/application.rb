@@ -17,6 +17,7 @@ module SearchWorks
     require 'access_panels'
     require 'access_panel'
     require 'links'
+    require 'nearby_on_shelf'
     require 'hours_request'
     require 'holdings'
     require 'search_query_modifier'

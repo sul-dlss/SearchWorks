@@ -1,0 +1,13 @@
+<div id="content" class="col-md-12 callnumber-browse">
+  <% if @document_list.present? %>
+    <div class="panel panel-default browse-toolbar">
+      <%= link_to('◄', browse_index_path(params.merge(page: (params[:page] || 0).to_i-1)), class: 'btn btn-default btn-sm') %>
+      <%= @document_list.first.holdings.callnumbers.first.callnumber %> - <%= @document_list.last.holdings.callnumbers.first.callnumber %>
+      <%= link_to('►', browse_index_path(params.merge(page: (params[:page] || 0).to_i+1)), class: 'btn btn-default btn-sm') %>
+      <div class='pull-right'>
+        <%= render 'catalog/view_type_group' %>
+      </div>
+    </div>
+    <%= render_document_index %>
+  <% end %>
+</div>

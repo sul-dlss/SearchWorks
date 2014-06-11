@@ -57,6 +57,8 @@ end
 
 gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
 
+gem 'deprecation'
+
 gem 'blacklight', '~> 5.4.0'
 
 gem "jettywrapper", "~> 1.7"
