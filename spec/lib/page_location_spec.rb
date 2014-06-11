@@ -116,5 +116,15 @@ describe SearchWorks::PageLocation do
         expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :selected_databases
       end
     end
+    describe "for BrowseController#index" do
+      let(:base_params) { { controller: 'browse', action: 'index', start: '123' } }
+      let(:no_start_params) { base_params.merge(start: nil) }
+      it "should be defined when there is a start parameter" do
+        expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :callnumber_browse
+      end
+      it "should not be defined when there isn't a start parameter" do
+        expect(SearchWorks::PageLocation::AccessPoints.new(no_start_params).point).to be_nil
+      end
+    end
   end
 end

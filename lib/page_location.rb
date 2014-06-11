@@ -53,6 +53,12 @@ module SearchWorks
         :selected_databases
       end
 
+      def browse_index_access_points
+        if @params[:start]
+          return :callnumber_browse
+        end
+      end
+
       def method_missing(method_name, *args, &block)
         case method_name
         when /(\w*)\?$/
