@@ -1,0 +1,10 @@
+<% # header bar for doc items in index view gallery %>
+<div class="documentHeader">
+
+  <h5 class="index_title">
+    <% counter = document_counter_with_offset(document_counter) %>
+    <span class="glyphicon glyphicon-star-empty"></span>
+    <%= link_to_document document, label: get_main_title(document), counter: (counter + @response.params[:start].to_i) %>
+    <span class="main-title-date"><%= get_main_title_date(document) %></span>
+  </h5>
+</div>

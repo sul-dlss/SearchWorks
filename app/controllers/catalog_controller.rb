@@ -239,6 +239,11 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+
+    # Deletes slideshow view
+    config.view.delete_field("slideshow")
+
+    config.view.gallery.partials = [:index]
   end
 
   def backend_lookup

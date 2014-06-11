@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/projectblacklight/blacklight-gallery.git
+  revision: 2f9f342518585a6e48d93a8e4ed5621afcf918a7
+  specs:
+    blacklight-gallery (0.0.1)
+      blacklight (>= 5.0.0.pre4, < 6.0)
+      bootstrap-sass (~> 3.0)
+      rails
+
+GIT
   remote: git://github.com/sul-dlss/openseadragon-rails.git
   revision: afe09fa081b0a4f854cbeb0c4f9cba7edda17ea9
   specs:
@@ -274,6 +283,7 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight (~> 5.4.0)
+  blacklight-gallery!
   blacklight-marc (~> 5.0)
   capistrano (~> 3.0)
   capistrano-bundler

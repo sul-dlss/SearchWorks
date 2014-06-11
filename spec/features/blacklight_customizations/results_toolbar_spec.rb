@@ -15,7 +15,7 @@ feature "Results Toolbar", js: true do
         expect(page).to have_css("span.page_entries.hidden-xs", text: /1 - 10 of \d+/, visible: true)
         expect(page).to have_css("a.btn.btn-default.btn-sm", text: "►", visible: true)
       end
-      expect(page).to have_css("button#view-stub", text: "View")
+      expect(page).to have_css("div.view-type-group a")
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
       within "#select_all-dropdown" do
         expect(page).to have_css("span.visible-md.visible-lg", text: "Select all")

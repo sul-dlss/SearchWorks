@@ -76,10 +76,15 @@
       thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
       thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
 
-      $parent.find(selectorCoverImg)
+      var imageEl = $parent.find(selectorCoverImg);
+
+      imageEl
         .attr('src', thumbUrl)
         .removeClass('hide')
         .addClass('show');
+
+      imageEl.parent().parent().find('span.fake-cover')
+        .addClass('hide');
     }
 
 
