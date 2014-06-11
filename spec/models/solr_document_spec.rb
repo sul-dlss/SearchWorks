@@ -43,4 +43,9 @@ describe SolrDocument do
       expect(subject).to be_kind_of OpenSeadragon
     end
   end
+  describe "SolrHoldings" do
+    it "should include SolrHoldings" do
+      expect(subject).to be_kind_of SolrHoldings
+    end
+  end
 end

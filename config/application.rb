@@ -18,6 +18,7 @@ module SearchWorks
     require 'access_panel'
     require 'links'
     require 'hours_request'
+    require 'holdings'
     require 'search_query_modifier'
 
     # load all access panels
