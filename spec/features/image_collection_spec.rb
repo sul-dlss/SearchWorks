@@ -49,7 +49,8 @@ feature "Image Collection" do
       expect(page).to have_css(".viewport .container-images")
 
       within ".viewport .container-images" do
-        expect(page).to have_css("li.preview-source-mf774fs2413")
+        expect(page).to have_css("li[data-behavior='preview']")
+        expect(page).to have_css("li[data-preview-in-filmstrip='true']")
         expect(page).to have_css("a[href='/catalog/mf774fs2413']")
       end
     end
@@ -64,18 +65,9 @@ feature "Image Collection" do
     expect(page).to have_css(".image-filmstrip")
 
     within "div.image-filmstrip" do
-      expect(page).to have_css("ul.container-previews")
-
-      within "ul.container-previews" do
-        expect(page).to have_css("li.preview-target-mf774fs2413")
-
-        within "li.preview-target-mf774fs2413" do
-          expect(page).to have_css(".preview-arrow")
-          expect(page).to have_css("a.preview-close")
-          expect(page).to have_css("a[href='/catalog/mf774fs2413']")
-        end
-      end
+      expect(page).to have_css("div.preview-container-29")
     end
+
   end
 
 end

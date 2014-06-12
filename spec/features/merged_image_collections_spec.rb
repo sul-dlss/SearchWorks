@@ -15,9 +15,9 @@ feature "Merged Image Collections" do
         expect(page).to have_css("a img.thumb-36")
       end
 
-      within('ul.container-previews') do
-        expect(page).to have_css("li.preview-target-35")
-        expect(page).to have_css("li.preview-target-36")
+      within('ul.container-images') do
+        expect(page).to have_css("li[data-preview-url$='/preview/35']")
+        expect(page).to have_css("li[data-preview-url$='/preview/36']")
       end
     end
   end
@@ -33,9 +33,9 @@ feature "Merged Image Collections" do
         expect(page).to have_css("a img.thumb-36")
       end
 
-      within('ul.container-previews') do
-        expect(page).to have_css("li.preview-target-35")
-        expect(page).to have_css("li.preview-target-36")
+      within('ul.container-images') do
+        expect(page).to have_css("li[data-preview-url$='/preview/35']")
+        expect(page).to have_css("li[data-preview-url$='/preview/36']")
       end
     end
 

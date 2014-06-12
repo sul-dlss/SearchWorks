@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col-md-6">
+    <img class="preview-img" src="<%= document.image_urls(:large).first %>">
+  </div>
+  <div class="col-md-6">
     <%= render 'catalog/record/marc_upper_metadata_items' %>
   </div>
 </div>
