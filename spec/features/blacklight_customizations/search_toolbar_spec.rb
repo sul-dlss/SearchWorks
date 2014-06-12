@@ -12,4 +12,24 @@ describe "Search toolbar", js: true, feature: true do
       end
     end
   end
+  describe "Selections dropdown" do
+    describe "show list" do
+      it "should navigate to selections page" do
+        visit selections_path
+        expect(page).to have_css("h1", text: "0 selections")
+        expect(page).to have_css("h3", text: "You have no bookmarks")
+      end
+    end
+    describe "clear list", js:true do
+      it "should clear selections" do
+        visit catalog_index_path f: {format: ["Book"]}, view: "default"
+        page.all('label.toggle_bookmark')[0].click
+        page.all('label.toggle_bookmark')[1].click
+        expect(page).to have_css("label.toggle_bookmark", text: "Selected", count: 2)
+        click_link "Selections"
+        click_link "Clear list"
+        expect(page).to have_css("h1", text: "0 selections")
+      end
+    end
+  end
 end

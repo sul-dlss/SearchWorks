@@ -1,3 +1,13 @@
-<%= link_to selections_path, class:"search-bar-widget #{active_class_for_current_page(selections_path)}" do %>
-  <span class="glyphicon glyphicon-ok-circle hidden-xs"></span> Selections
-<% end %>
+<li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <span class="glyphicon glyphicon-check"></span> Selections <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <%= link_to "Show list", selections_path %>
+    </li>
+    <li>
+      <%= link_to "Clear list", clear_bookmarks_path, method: :delete, data: { confirm: t('blacklight.bookmarks.clear.action_confirm') } %>
+    </li>
+  </ul>
+</li>
