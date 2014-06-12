@@ -71,12 +71,12 @@ class CatalogController < ApplicationController
     config.add_facet_field "collection_type", :label => "Collection Type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type"
     config.add_facet_field "format_physical_ssim", :label => "Physical Format"
-    config.add_facet_field "genre_ssim", :label => "Genre"
-    config.add_facet_field "format", :label => "Format"
     config.add_facet_field "pub_year_tisim", :label => "Date", :range => true # uncomment to add date slider
+    config.add_facet_field "building_facet", :label => "Library", :limit => true
+    config.add_facet_field "language", :label => "Language", :limit => true
     config.add_facet_field "author_person_facet", :label => "Author", :limit => true
     config.add_facet_field "topic_facet", :label => "Topic", :limit => true
-    config.add_facet_field "building_facet", :label => "Library", :limit => true
+    config.add_facet_field "genre_ssim", :label => "Genre"
     config.add_facet_field "callnum_top_facet", :label => "Call Number", :limit => true
     config.add_facet_field "lc_alpha_facet", :label => "Refine Call Number", :show => false
     config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call Number", :show => false
@@ -86,10 +86,12 @@ class CatalogController < ApplicationController
     #config.add_facet_field "gov_doc_type_facet", :label => "Refine Call Number", :show => false
     config.add_facet_field "course", :label => "Course", :show => false
     config.add_facet_field "instructor", :label => "Instructor", :show => false
-    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", :limit => true
+
+    # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
     config.add_facet_field "geographic_facet", :label => "Region", :limit => true
     config.add_facet_field "era_facet", :label => "Era", :limit => true
-    config.add_facet_field "language", :label => "Language", :limit => true
+    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", :limit => true
+    config.add_facet_field "format", :label => "Format", show: false
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
