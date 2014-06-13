@@ -2,9 +2,9 @@ require "spec_helper"
 
 describe "Access Panels", feature: true, :"data-integration" => true do
   describe "Online" do
-    it "should not be displayed for objects without fulltext links" do
+    it "should be hidden for objects without fulltext links" do
       visit catalog_path('10365287')
-      expect(page).not_to have_css(".panel-online")
+      expect(page).to have_css(".panel-online", visible: false)
     end
     it "should be displayed for objects with fulltext links" do
       visit catalog_path('8436430')
