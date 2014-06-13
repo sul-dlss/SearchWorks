@@ -20,6 +20,8 @@ feature "Results Toolbar", js: true do
       within "#select_all-dropdown" do
         expect(page).to have_css("span.visible-md.visible-lg", text: "Select all")
       end
+      expect(page).to_not have_css("a", text: /Cite/)
+      expect(page).to_not have_css("button", text: /Send/)
     end
   end
   scenario "should have tablet and mobile tools hidden" do
