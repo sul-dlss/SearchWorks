@@ -11,6 +11,20 @@ describe CatalogController do
     end
   end
   describe "routes" do
+    describe "customized from Blacklight" do
+      it "should route /view/:id properly" do
+        expect({get: '/view/1234'}).to route_to(controller: 'catalog', action: 'show', id: '1234')
+      end
+      it "should route catalog_path to /view" do
+        expect(catalog_path('1234')).to eq '/view/1234'
+      end
+      it "should route solr_document_path to /view" do
+        expect(solr_document_path('1234')).to eq '/view/1234'
+      end
+      it "should route the librarian view properly" do
+        expect({get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
+      end
+    end
     describe "/databases" do
       it "should route to the database format" do
         expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format" => ["Database"] })

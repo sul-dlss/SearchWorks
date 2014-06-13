@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "Library Location Access Panel" do
 
   scenario "should have 1 library location" do
-    visit '/catalog/1'
+    visit '/view/1'
     expect(page).to have_css('div.panel-library-location', count:1)
     within "div.panel-library-location" do
       within "div.library-location-heading" do
@@ -14,7 +14,7 @@ feature "Library Location Access Panel" do
   end
 
   scenario "should have 3 library locations" do
-    visit '/catalog/10'
+    visit '/view/10'
     expect(page).to have_css('div.panel-library-location', count:3)
   end
 end

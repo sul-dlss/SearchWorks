@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Record Toolbar" do
   before do
-    visit('/catalog/1')
+    visit('/view/1')
   end
 
   scenario "should have record toolbar visible", js: true do
