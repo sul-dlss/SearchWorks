@@ -1,0 +1,13 @@
+<% document ||= @document %>
+<div class="record-browse-nearby col-md-12 row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>Browse nearby</h2>
+      <% document.holdings.unique_callnumbers.each do |callnumber| %>
+        <span class='callnumber'>
+          <%= link_to_callnumber_browse(document, callnumber) %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,7 @@ class SolrDocument
   include Druid
   include DigitalImage
   include OpenSeadragon
+  include SolrHoldings
 
   include Blacklight::Solr::Document
       # The following shows how to setup this blacklight document to display marc documents
