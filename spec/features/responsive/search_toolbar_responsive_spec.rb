@@ -29,7 +29,7 @@ describe "Responsive search bar", js: true, feature: true do
         within "#searchbar-navbar-collapse" do
           expect(page).to have_css("li a", text: "Advanced", visible: true)
           expect(page).to have_css("li.disabled a", text: "Browse", visible: true)
-          expect(page).to have_css("li.disabled a", text: "Selections", visible: true)
+          expect(page).to have_css("li a", text: /Selections/, visible: true)
         end
       end
     end
