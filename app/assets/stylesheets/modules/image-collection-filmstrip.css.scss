@@ -4,9 +4,8 @@
   background-color: #fafafa;
   bottom: 0;
   box-sizing: border-box;
-  margin-bottom: 10px;
   overflow: auto;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   width: 100%;
   -moz-border-sizing: border-box;
 
@@ -17,7 +16,8 @@
     outline: none;
     position: absolute;
     padding: 4px 7px;
-    top: 30%;
+    top: 50px;
+    z-index: 10000;
   }
 
   .prev {
@@ -28,13 +28,13 @@
     right: 5px;
   }
 
+
   .viewport {
     clear: both;
     overflow-x: scroll;
-    padding: 10px 0;
+    padding: 10px 0 5px 0;
 
-
-    ul.listing {
+    ul.container-images {
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -43,6 +43,8 @@
         float: left;
         line-height: 0;
         margin: 5px;
+        padding: 0;
+        position: relative;
 
         img {
           border-width: 0;
@@ -61,7 +63,18 @@
           text-align: center;
           width: 80%;
         }
+
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+
+      li:last-child {
+        margin-right: 0;
       }
     }
+
+
   }
 }

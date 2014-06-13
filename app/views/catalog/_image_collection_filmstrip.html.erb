@@ -1,3 +1,6 @@
+<% show_preview ||= true %>
+<% preview_container = 'preview-container-' + collection_document[:id] %>
+
 <div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
 
   <button class="btn btn-default btn-sm prev">
@@ -5,17 +8,25 @@
   </button>
 
   <div class="viewport">
-    <ul class="listing">
+    <ul class="container-images">
       <% collection_document.collection_members.documents.each do |document| %>
+
         <% unless document.image_urls.blank? %>
-          <li>
-            <a href="<%= catalog_path(document[:id]) %>"><img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>"></a>
-            <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+          <li <%= preview_data_attrs(show_preview, document[:id], '.' + preview_container) %> data-preview-in-filmstrip="true">
+            <a href="<%= catalog_path(document[:id]) %>">
+              <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
+            </a>
+            <% if document.image_urls.length > 1 %>
+              <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+            <% end %>
           </li>
         <% end %>
+
       <% end %>
     </ul>
   </div>
+
+  <div class="<%= preview_container %>"></div>
 
   <button class="btn btn-default btn-sm next">
     <span class="glyphicon glyphicon-chevron-right"></span>

@@ -24,7 +24,7 @@ module DisplayType
       @document
     end
     def generate_display_type_string
-      types = process_display_types_by_count
+      types = process_display_types_by_count.dup
       types.prepend('merged_') if has_merge_behavior?
       types.concat('_collection') if is_a_collection?
       types

@@ -1,6 +1,6 @@
 (function($) {
   /*
-    jQuery plugin to render Google book covers for image elements
+    jQuery plugin to render images in a collection as a filmstrip
 
       Usage: $(selector).imgFilmStrip();
 
@@ -12,26 +12,25 @@
   $.fn.imgFilmStrip = function() {
 
     return this.each(function() {
-      var $parent = $(this),
+      var $filmstrip = $(this),
           $viewport,
-          $listing;
+          $containerImgs,
+          imgs = [];
 
       init();
 
       function init() {
-        var listingTotalWidth = 0,
-            listImgs = [];
+        var listingTotalWidth = 0;
 
-        $viewport = $parent.find('.viewport');
-        $listing  = $parent.find('.listing');
+        $viewport = $filmstrip.find('.viewport');
+        $containerImgs = $viewport.find('.container-images');
+        imgs = $containerImgs.find('li a img');
 
-        listImgs  = $listing.find('li a img');
+        imgs.width($filmstrip.data('thumb-width')).height($filmstrip.data('thumb-height'));
 
-        listImgs.width($parent.data('thumb-width')).height($parent.data('thumb-height'));
+        listingTotalWidth = imgs.length * ($filmstrip.data('thumb-width') + 10); /* 10 => margin in px */
 
-        listingTotalWidth = listImgs.length * ($parent.data('thumb-width') + 10);
-
-        $listing.width(listingTotalWidth).height($parent.data('thumb-height'));
+        $containerImgs.width(listingTotalWidth).height($filmstrip.data('thumb-height'));
 
         attachEvents();
         loadThumbsInViewport();
@@ -39,18 +38,20 @@
 
 
       function loadThumbsInViewport() {
-        $.each($listing.find('li a img'), function(index, img) {
-          var $img = $(img),
-              position = $img.position().left + $img.width();
+        $containerImgs.find('li').each(function() {
 
-          if (position > 0 && $img.position().left < $viewport.width()) {
+          var $item = $(this),
+              $img = $item.find('a img').first(),
+              position = $item.position().left + $img.width();
+
+          if (position > 0 && $item.position().left < $viewport.width()) {
             $img.attr('src', $img.data('url'));
           }
         });
       }
 
 
-      function scrollBy(direction) {
+      function scroll(direction) {
         var scrollLeft = $viewport.scrollLeft(),
             viewportWidth = $viewport.width();
 
@@ -73,12 +74,12 @@
           loadThumbsInViewport();
         });
 
-        $parent.find('.prev').on('click', $.proxy(function() {
-          scrollBy('left');
+        $filmstrip.find('.prev').on('click', $.proxy(function() {
+          scroll('left');
         }, this));
 
-        $parent.find('.next').on('click', $.proxy(function() {
-          scrollBy('right');
+        $filmstrip.find('.next').on('click', $.proxy(function() {
+          scroll('right');
         }, this));
       }
 

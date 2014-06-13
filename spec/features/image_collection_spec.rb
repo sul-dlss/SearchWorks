@@ -26,9 +26,9 @@ feature "Image Collection" do
     within "div.image-filmstrip" do
       expect(page).to have_css("button.prev")
       expect(page).to have_css("button.next")
-      expect(page).to have_css(".viewport .listing")
+      expect(page).to have_css(".viewport .container-images")
 
-      within ".viewport .listing" do
+      within ".viewport .container-images" do
         expect(page).to have_css("a[href='/catalog/mf774fs2413']")
       end
     end
@@ -46,12 +46,28 @@ feature "Image Collection" do
     within "div.image-filmstrip" do
       expect(page).to have_css("button.prev")
       expect(page).to have_css("button.next")
-      expect(page).to have_css(".viewport .listing")
+      expect(page).to have_css(".viewport .container-images")
 
-      within ".viewport .listing" do
+      within ".viewport .container-images" do
+        expect(page).to have_css("li[data-behavior='preview']")
+        expect(page).to have_css("li[data-preview-in-filmstrip='true']")
         expect(page).to have_css("a[href='/catalog/mf774fs2413']")
       end
     end
+  end
+
+  scenario "Search results image filmstrip preview" do
+    visit root_path
+
+    fill_in "q", with: "29"
+    click_button 'search'
+
+    expect(page).to have_css(".image-filmstrip")
+
+    within "div.image-filmstrip" do
+      expect(page).to have_css("div.preview-container-29")
+    end
+
   end
 
 end
