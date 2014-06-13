@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe "Databases Access Point", feature: true, :"data-integration" => true do
   it "should display the database specific facet" do
+    pending("Needs format/resource-type facet to settle down")
     visit root_path
     fill_in 'q', with: ''
     click_button 'search'
@@ -18,6 +19,7 @@ describe "Databases Access Point", feature: true, :"data-integration" => true do
     end
   end
   it "should be present when selecting the databases facet" do
+    pending("Needs format/resource-type facet to settle down")
     visit root_url
 
     fill_in "q", with: ''

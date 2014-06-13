@@ -4,6 +4,7 @@ require "spec_helper"
 
 feature "Pagination customization", :"data-integration" => true do
   before do
+    pending("Needs format/resource-type facet to settle down")
     visit root_path
     within(first('.home-facet')) do
       click_link 'Book'

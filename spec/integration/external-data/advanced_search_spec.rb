@@ -49,7 +49,6 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
       fill_in "search_title", with: "something"
       click_on "advanced-search-submit"
       within ".page_entries" do
-        puts page.find("strong", text: /^.*,+.*$/).text
         expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 500)).to be_true
       end
     end
