@@ -1,0 +1,12 @@
+<% if @recent_selections.present? %>
+  <span data-attribute="added-list">
+    <li class="divider"></li>
+    <li class="dropdown-header">Recently Added</li>
+    <% @recent_selections.each do |selection| %>
+      <li class="dropdown-list-title text-muted">
+        <%= get_main_title selection %>
+      <li>
+    <% end %>
+    <li class="divider"></li>
+  </span>
+<% end %>

@@ -21,19 +21,30 @@ describe "Search toolbar", js: true, feature: true do
       end
     end
     describe "clear list", js:true do
-      it "should clear selections and update selections count" do
+      it "should clear selections and update selections count and recently added list" do
         visit catalog_index_path f: {format: ["Book"]}, view: "default"
         expect(page).to have_css("li a", text: /Selections \(0\)/)
+        click_link "Selections"
+        expect(page).to have_css("li#show-list.disabled")
+        expect(page).to have_css("li#clear-list.disabled")
         page.all('label.toggle_bookmark')[0].click
         expect(page).to have_css("li a", text: /Selections \(1\)/)
+        click_link "Selections"
+        expect(page).to have_css("li.dropdown-list-title", count: 1)
         page.all('label.toggle_bookmark')[1].click
         expect(page).to have_css("li a", text: /Selections \(2\)/)
+        click_link "Selections"
+        expect(page).to have_css("li.dropdown-list-title", count: 2)
         page.all('label.toggle_bookmark')[1].click
         expect(page).to have_css("li a", text: /Selections \(1\)/)
+        click_link "Selections"
+        expect(page).to have_css("li.dropdown-list-title", count: 1)
+        click_link "Selections"
         expect(page).to have_css("label.toggle_bookmark", text: "Selected", count: 1)
         click_link "Selections"
         click_link "Clear list"
-        expect(page).to have_css("h1", text: "0 selections")
+        expect(page).to have_css("div.alert.alert-success", text: "Your selections have been deleted.")
+        expect(page).to have_css("h4", text: "Limit your search")
       end
     end
   end

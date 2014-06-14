@@ -1,4 +1,4 @@
-$(function(){
+Blacklight.onLoad(function(){
 
   //Instantiates select all
   $('#select_all-dropdown').selectAll();

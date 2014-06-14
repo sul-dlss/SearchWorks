@@ -1,4 +1,4 @@
-$(function(){
+Blacklight.onLoad(function(){
 
   //Instantiates select all
   $('input.toggle_bookmark').updateSelectedCount();
@@ -35,6 +35,8 @@ $(function(){
           $(element).on('change', function(){
             var currentCountEl = $('span#current-selections-count');
             var currentCount = parseInt(currentCountEl[0].innerText);
+            var showList = $("li#show-list");
+            var clearList = $("li#clear-list");
             var status = $(this).prop('checked');
             if (status){
               currentCount ++;
@@ -42,9 +44,31 @@ $(function(){
               currentCount --;
             }
             $(currentCountEl).html(currentCount);
+
+            // Adds/removes disabled class based off of selections
+            if (currentCount === 0){
+              if (!selectionsPage()) {
+                showList.addClass("disabled");
+              }
+              clearList.addClass("disabled");
+            }else{
+              if (!selectionsPage()){
+                showList.removeClass("disabled");
+              }
+              clearList.removeClass("disabled");
+            }
+
           });
         }
     };
+
+    function selectionsPage() {
+      if (window.location.pathname == "/selections") {
+        return true;
+      }else{
+        return false;
+      }
+    }
 
 
     // A really lightweight plugin wrapper around the constructor,
