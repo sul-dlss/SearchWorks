@@ -4,8 +4,8 @@
   background-color: #fafafa;
   bottom: 0;
   box-sizing: border-box;
-  overflow: auto;
   padding: 0 20px 20px 20px;
+  position: relative;
   width: 100%;
   -moz-border-sizing: border-box;
 
@@ -28,6 +28,15 @@
     right: 5px;
   }
 
+  .members-number {
+    position: absolute;
+    padding: 3px 5px;
+    top: -10px;
+    left: 45%;
+    a {
+      color: white;
+    }
+  }
 
   .viewport {
     clear: both;

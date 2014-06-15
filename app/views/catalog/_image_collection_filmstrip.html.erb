@@ -7,6 +7,10 @@
     <span class="glyphicon glyphicon-chevron-left"></span>
   </button>
 
+  <span class="members-number label label-success">
+    <%= link_to_collection_members(collection_members_enumeration(collection_document), collection_document) %>
+  </span>
+
   <div class="viewport">
     <ul class="container-images">
       <% collection_document.collection_members.documents.each do |document| %>
