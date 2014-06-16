@@ -4,6 +4,9 @@ describe CatalogController do
   it "should include the DatabaseAccessPoint concern" do
     expect(subject).to be_kind_of(DatabaseAccessPoint)
   end
+  it "should include the CallnumberSearch concern" do
+    expect(subject).to be_kind_of(CallnumberSearch)
+  end
   describe "#index" do
     it "should set the search modifier" do
       get :index

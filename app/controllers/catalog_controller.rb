@@ -8,6 +8,8 @@ class CatalogController < ApplicationController
 
   include DatabaseAccessPoint
 
+  include CallnumberSearch
+
   helper Openseadragon::OpenseadragonHelper
 
   before_filter :add_show_partials
