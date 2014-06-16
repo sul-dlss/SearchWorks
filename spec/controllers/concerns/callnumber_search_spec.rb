@@ -39,5 +39,15 @@ describe CallnumberSearch do
         expect(params[:q]).to eq 'ABC 123'
       end
     end
+    describe "when a search term is not given" do
+      let(:params) { {search_field: 'call_number'} }
+      before do
+        subject.stub(:params).and_return( params)
+      end
+      it "should not change any parameters" do
+        subject.send(:quote_and_downcase_callnumber_search)
+        expect(params).to eq params
+      end
+    end
   end
 end
