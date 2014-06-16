@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root :to => "catalog#index"
-  blacklight_for :catalog
+
+  get "view/:id" => "catalog#show", :as => :catalog
+  get "view/:id" => "catalog#show", :as => :solr_document
+  get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
+
+  blacklight_for(:catalog)
   Blacklight::Marc.add_routes(self)
   devise_for :users
 

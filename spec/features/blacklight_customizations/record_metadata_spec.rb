@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Record view" do
   before do
-    visit('/catalog/10')
+    visit('/view/10')
   end
 
   scenario "should have correct cover image attributes", js: true do

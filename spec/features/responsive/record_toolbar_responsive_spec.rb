@@ -3,7 +3,7 @@ require "spec_helper"
 # TODO revisit on individual viewports, visible: true/false functionality not working correctly
 describe "Record toolbar", js: true, feature: true do
   before do
-    visit('/catalog/1')
+    visit('/view/1')
   end
 
   describe " - tablet view (768px - 980px) - " do

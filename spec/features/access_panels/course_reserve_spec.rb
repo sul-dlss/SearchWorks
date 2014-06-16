@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "Course Reserve Access Panel" do
 
   scenario "should have 3 course reservations" do
-    visit '/catalog/1'
+    visit '/view/1'
     within "div.panel-course-reserve" do
       expect(page).to have_css('div.course-reserve-course', count: 3, text: "COURSE:")
       expect(page).to have_css('span.course-reserve-title', text: "COURSE:")
@@ -13,7 +13,7 @@ feature "Course Reserve Access Panel" do
   end
 
   scenario "should have 1 course reservations" do
-    visit '/catalog/2'
+    visit '/view/2'
     within "div.panel-course-reserve" do
       expect(page).to have_css('div.course-reserve-course', count: 1, text: "CAT-401-01-01 -- Emergency Kittenz")
       expect(page).to have_css('span.course-reserve-title', text: "COURSE:")
@@ -23,7 +23,7 @@ feature "Course Reserve Access Panel" do
   end
 
   scenario "should have 0 course reservations" do
-    visit '/catalog/3'
+    visit '/view/3'
     expect(page.has_no_css?('div.panel-course-reserve')).to eql true
 
   end
