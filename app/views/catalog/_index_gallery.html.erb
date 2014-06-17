@@ -1,5 +1,5 @@
 <% preview_container = 'preview-container-' + document.id %>
-<div class="gallery-document" <%= preview_data_attrs(true, "gallery", document[:id], '.' + preview_container) %> data-preview-in-gallery="true", data-doc-id=<%= document.id %> >
+<div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], '.' + preview_container) %> data-preview-in-gallery="true", data-doc-id=<%= document.id %> >
   <div class="item-thumb">
     <%= render_thumbnail_tag(document, {}, counter: document_counter_with_offset(document_counter)) %>
     <%= link_to document do %>

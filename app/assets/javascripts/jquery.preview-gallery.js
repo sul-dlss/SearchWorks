@@ -4,7 +4,7 @@
     jQuery plugin to attach gallery preview triggers and render previews in
     gallery view
 
-      Usage: $(selector).galleryPreview();
+      Usage: $(selector).previewGallery();
 
     This plugin :
       - adds preview triggers to the gallery preview button
@@ -13,7 +13,7 @@
   */
 
 
-  $.fn.galleryPreview = function() {
+  $.fn.previewGallery = function() {
 
     return this.each(function() {
       var $item = $(this),
@@ -32,7 +32,7 @@
 
         $previewTarget.addClass('preview').empty();
 
-        appendPreviewContent(previewUrl, $previewTarget);
+        PreviewContent.append(previewUrl, $previewTarget);
 
         appendPointer($previewTarget);
 
@@ -46,24 +46,6 @@
 
         $triggerBtn.addClass('preview-open');
       }
-
-
-      function appendPreviewContent(url, $target) {
-        var request = $.ajax({
-          url: url,
-          type: 'GET',
-          dataType: 'html'
-        });
-
-        request.done(function(html) {
-          $target.append($('<div class="preview-content"></div>').append(html));
-        });
-
-        request.fail(function(jqXhr, textStatus) {
-          console.log('GET request for ' + url + ' failed: ' + textStatus);
-        });
-      }
-
 
       function appendPointer($target) {
         $target.append($arrow);
@@ -165,5 +147,5 @@
 
 
 Blacklight.onLoad(function() {
-  $('*[data-behavior="gallery-preview"]').galleryPreview();
+  $('*[data-behavior="preview-gallery"]').previewGallery();
 });
