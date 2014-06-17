@@ -2,14 +2,14 @@
   /*
     jQuery plugin to render images in a collection as a filmstrip
 
-      Usage: $(selector).imgFilmStrip();
+      Usage: $(selector).renderFilmstrip();
 
     This plugin :
       - renders filmstrip view for elements with 'image-filmstrip' class
         and attaches navigation events
   */
 
-  $.fn.imgFilmStrip = function() {
+  $.fn.renderFilmstrip = function() {
 
     return this.each(function() {
       var $filmstrip = $(this),
@@ -106,6 +106,6 @@ jQuery.fn.scrollStop = function(callback) {
 
 
 Blacklight.onLoad(function() {
-  $('.image-filmstrip').imgFilmStrip();
+  $('.image-filmstrip').renderFilmstrip();
 });
 
