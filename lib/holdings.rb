@@ -1,4 +1,6 @@
 require 'holdings/callnumber'
+require 'holdings/library'
+require 'holdings/location'
 
 class Holdings
   def initialize(document)
@@ -9,8 +11,20 @@ class Holdings
       callnumber.barcode == barcode
     end
   end
+  def present?
+    libraries.select(&:is_viewable?).any? do |library|
+      library.items.any? do |callnumber|
+        callnumber.callnumber.present?
+      end
+    end
+  end
   def unique_callnumbers
     callnumbers.sort_by(&:full_shelfkey).uniq(&:truncated_callnumber)
+  end
+  def libraries
+    @libraries ||= callnumbers.group_by(&:library).map do |library, items|
+      Holdings::Library.new(library, items)
+    end
   end
   def callnumbers
     return [] unless @item_display.present?

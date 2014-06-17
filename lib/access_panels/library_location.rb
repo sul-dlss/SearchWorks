@@ -1,8 +1,8 @@
 class LibraryLocation < AccessPanel
-  delegate :present?, to: :locations
-  def locations
-    if @document.library_locations.present?
-      @document.library_locations.locations
+  delegate :present?, to: :libraries
+  def libraries
+    if @document.holdings.present?
+      @document.holdings.libraries
     end
   end
 end

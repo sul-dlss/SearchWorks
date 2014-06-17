@@ -8,12 +8,12 @@
 :access_facet: At the Library
 :building_facet: Green
 :item_display:
-  - "123 -|- CHEMCHMENG"
-  - "456 -|- CHEMCHMENG"
-  - "123 -|- CHEMCHMENG"
-  - "678 -|- EARTH-SCI"
-  - "123 -|- CHEMCHMENG"
-  - "543 -|- BIOLOGY"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-"
+  - "456 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- DEF -|-"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- GHI -|-"
+  - "678 -|- EARTH-SCI -|- STACKS -|- -|- -|- -|- -|- -|- JKL -|-"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- MNO -|-"
+  - "543 -|- BIOLOGY -|- STACKS -|- -|- -|- -|- -|- -|- PQR -|-"
 :isbn_display:
   - "0393040801"
   - "9780393040807"

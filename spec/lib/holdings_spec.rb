@@ -17,6 +17,38 @@ describe Holdings do
     )
   }
   let(:no_holdings) { Holdings.new(SolrDocument.new) }
+  describe "#present?" do
+    let(:non_viewable) {
+      Holdings.new(
+        SolrDocument.new(
+          item_display: [
+            'barcode -|- SUL -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey'
+          ]
+        )
+      )
+    }
+    let(:blank_callnumber) {
+      Holdings.new(
+        SolrDocument.new(
+          item_display: [
+            'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- -|- full-shelfkey'
+          ]
+        )
+      )
+    }
+    it "should return false if a non-viewable library has items" do
+      expect(non_viewable).to_not be_present
+    end
+    it "should return false if there are no holdings" do
+      expect(no_holdings).to_not be_present
+    end
+    it "should return false if an item's call number is blank" do
+      expect(blank_callnumber).to_not be_present
+    end
+    it "should return true if there are items in a viewable library" do
+      expect(complex_holdings).to be_present
+    end
+  end
   describe "#callnumbers" do
     it "should return an array of Holdings::Callnumbers" do
       holdings.callnumbers.each do |callnumber|
@@ -25,6 +57,23 @@ describe Holdings do
     end
     it "should return an empty array if there are no holdings" do
       expect(no_holdings.callnumbers).to eq []
+    end
+  end
+  describe "#libraries" do
+    let(:libraries) {
+      Holdings.new(
+        SolrDocument.new(
+          item_display: [
+            'barcode -|- library -|- home-location',
+            'barcode -|- library2 -|- home-location',
+            'barcode -|- library -|- home-location'
+          ]
+        )
+      )
+    }
+    it "should group by library" do
+      expect(libraries.libraries.length).to eq 2
+      expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
     end
   end
   describe "#unique_callnumbers" do

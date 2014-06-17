@@ -13,7 +13,7 @@ class Holdings
       item_display[2]
     end
     def current_location
-      item_display[3]
+      Holdings::Location.new(item_display[3])
     end
     def type
       item_display[4]
