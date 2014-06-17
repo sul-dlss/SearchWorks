@@ -3,7 +3,7 @@
   /*
     jQuery plugin to attach preview triggers and render previews
 
-      Usage: $(selector).itemPreview();
+      Usage: $(selector).previewFilmstrip();
 
     This plugin :
       - adds preview triggers to the matched elements
@@ -14,13 +14,12 @@
   */
 
 
-  $.fn.itemPreview = function() {
+  $.fn.previewFilmstrip = function() {
 
     return this.each(function() {
       var $item = $(this),
           $previewTarget = $($item.data('preview-target')),
-          isPartOfFilmstrip = $item.data('preview-in-filmstrip') || false,
-          showPointer = $item.data('preview-show-pointer') || true,
+          showPointer = true,
           $triggerBtn, $triggerFocus, $closeBtn, $arrow, $content, $filmstrip, $viewport;
 
       init();
@@ -36,40 +35,25 @@
         var previewUrl = $item.data('preview-url'),
             $previewArrow,
             maxLeft,
-            arrowLeft;
+            arrowLeft,
+            $divContent = $('<div class="preview-content"></div>');
 
         $previewTarget.addClass('preview').empty();
-
-        appendPreviewContent(previewUrl, $previewTarget);
 
         if (showPointer) {
           appendPointer($previewTarget);
         }
 
-        if (isPartOfFilmstrip) {
-          $viewport.css('overflow-x', 'hidden');
-        }
+        PreviewContent.append(previewUrl, $divContent);
 
-        $previewTarget.append($closeBtn).show();
+        $previewTarget
+          .append($divContent)
+          .append($closeBtn)
+          .show();
+
+        $viewport.css('overflow-x', 'hidden');
 
         attachPreviewEvents();
-      }
-
-
-      function appendPreviewContent(url, $target) {
-        var request = $.ajax({
-          url: url,
-          type: 'GET',
-          dataType: 'html'
-        });
-
-        request.done(function(html) {
-          $target.append($('<div class="preview-content"></div>').append(html));
-        });
-
-        request.fail(function(jqXhr, textStatus) {
-          console.log('GET request for ' + url + ' failed: ' + textStatus);
-        });
       }
 
 
@@ -105,11 +89,9 @@
           showPreview();
         }, this));
 
-        if (isPartOfFilmstrip) {
-          $filmstrip.find('.prev, .next').on('click', $.proxy(function() {
-            closePreview();
-          }, this));
-        }
+        $filmstrip.find('.prev, .next').on('click', $.proxy(function() {
+          closePreview();
+        }, this));
       }
 
 
@@ -120,10 +102,7 @@
       }
 
       function closePreview() {
-        if (isPartOfFilmstrip) {
-          $viewport.css('overflow-x', 'scroll');
-        }
-
+        $viewport.css('overflow-x', 'scroll');
         $previewTarget.empty().hide();
       }
 
@@ -133,11 +112,8 @@
         $triggerFocus = $('<div/>').addClass('preview-trigger-focus preview-opacity').html('Preview <span class="glyphicon glyphicon-chevron-down small">');
         $closeBtn = $('<a class="preview-close"><span class="glyphicon glyphicon-remove"></span></a>');
         $arrow = $('<div class="preview-arrow"></div>');
-
-        if (isPartOfFilmstrip) {
-          $filmstrip = $item.closest('.image-filmstrip');
-          $viewport = $filmstrip.find('.viewport');
-        }
+        $filmstrip = $item.closest('.image-filmstrip');
+        $viewport = $filmstrip.find('.viewport');
       }
 
     });
@@ -148,6 +124,6 @@
 
 
 Blacklight.onLoad(function() {
-  $('*[data-behavior="preview"]').itemPreview();
+  $('*[data-behavior="preview-filmstrip"]').previewFilmstrip();
 });
 

@@ -49,8 +49,7 @@ feature "Image Collection" do
       expect(page).to have_css(".viewport .container-images")
 
       within ".viewport .container-images" do
-        expect(page).to have_css("li[data-behavior='preview']")
-        expect(page).to have_css("li[data-preview-in-filmstrip='true']")
+        expect(page).to have_css("li[data-behavior='preview-filmstrip']")
         expect(page).to have_css("a[href='/view/mf774fs2413']")
       end
     end
