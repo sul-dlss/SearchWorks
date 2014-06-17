@@ -5,22 +5,23 @@
 
 var PreviewContent = (function() {
 
-  var useCache = true;
+  var useCache = true,
+    insertType;
 
   window.previewCache = window.previewCache || {};
 
-  function append(url, target) {
+  function checkCache(url, target, defered) {
     var content = window.previewCache[url];
 
     if (useCache && typeof content !== 'undefined') {
       plugContentAndPlugins(target, content);
     } else {
-      fetchContentViaAjaxAndAppend(url, target);
+      fetchContentViaAjaxAndInsert(url, target, defered);
     }
   }
 
 
-  function fetchContentViaAjaxAndAppend(url, target) {
+  function fetchContentViaAjaxAndInsert(url, target, defered) {
     var request = $.ajax({
       url: url,
       type: 'GET',
@@ -30,6 +31,7 @@ var PreviewContent = (function() {
     request.done(function(data) {
       plugContentAndPlugins(target, data);
       if (useCache) window.previewCache[url] = data;
+      defered.resolve(data);
     });
 
     request.fail(function(jqXhr, textStatus) {
@@ -39,16 +41,47 @@ var PreviewContent = (function() {
 
 
   function plugContentAndPlugins(target, content) {
-    target
-      .append(content)
-      .plugGoogleBookContent()
-      .find('.image-filmstrip').renderFilmstrip();
+    switch (insertType){
+    case 'append':
+      target
+        .append(content)
+        .plugGoogleBookContent()
+        .find('.image-filmstrip').renderFilmstrip();
+      Blacklight.do_bookmark_toggle_behavior();
+      break;
+    case 'prepend':
+      target
+        .prepend(content)
+        .plugGoogleBookContent()
+        .find('.image-filmstrip').renderFilmstrip();
+      Blacklight.do_bookmark_toggle_behavior();
+      break;
+    case 'returnOnly':
+      break;
+
+    }
+
   }
 
   return {
     append: function(url, target) {
-      append(url, target);
+      insertType = 'append';
+      var defered = new $.Deferred();
+      checkCache(url, target, defered);
+      return defered.promise();
+    },
+    prepend: function(url, target) {
+      insertType = 'prepend';
+      var defered = new $.Deferred();
+      checkCache(url, target, defered);
+      return defered.promise();
+    },
+    returnOnly: function(url, target) {
+      insertType = 'returnOnly';
+      var defered = new $.Deferred();
+      checkCache(url, target, defered);
+      return defered.promise();
     }
-  }
+  };
 
 }());
