@@ -22,6 +22,8 @@ en:
         all: 'Select all'
         all_small: '&#10004; all'
       selection_title: 'selection'
+      clear:
+        success: 'Your selections have been deleted.'
     tools:
       sms_html: '<span class="glyphicon glyphicon-phone"> </span>  text'
       email_html: '<span class="glyphicon glyphicon-envelope"> </span>  email'

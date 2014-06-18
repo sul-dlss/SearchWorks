@@ -68,4 +68,14 @@ module ApplicationHelper
       "active"
     end
   end
+  def disabled_class_for_current_page(page)
+    if current_page?(page)
+      "disabled"
+    end
+  end
+  def disabled_class_for_no_selections(count)
+    if count == 0
+      "disabled"
+    end
+  end
 end
