@@ -11,4 +11,12 @@ describe Holdings::Callnumber do
       expect(callnumber).to respond_to(method)
     end
   end
+  describe "#on_reserve?" do
+    it "should return true when an item is populated with reserve desks and loan period" do
+      expect(callnumber).to be_on_reserve
+    end
+    it "should return false when an item is not populated with reserve desk and loan period" do
+      expect(Holdings::Callnumber.new('123 -|- abc')).to_not be_on_reserve
+    end
+  end
 end
