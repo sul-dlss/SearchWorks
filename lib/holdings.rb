@@ -1,6 +1,7 @@
 require 'holdings/callnumber'
 require 'holdings/library'
 require 'holdings/location'
+require 'holdings/status'
 
 class Holdings
   def initialize(document)

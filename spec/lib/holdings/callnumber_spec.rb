@@ -11,6 +11,15 @@ describe Holdings::Callnumber do
       expect(callnumber).to respond_to(method)
     end
   end
+  describe "#status" do
+    let(:status) { callnumber.status }
+    it "should return a Holdings::Status object" do
+      expect(status).to be_a Holdings::Status
+    end
+    it "should return an availability_class string" do
+      expect(status.availability_class).to eq 'unknown'
+    end
+  end
   describe "#on_reserve?" do
     it "should return true when an item is populated with reserve desks and loan period" do
       expect(callnumber).to be_on_reserve
