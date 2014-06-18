@@ -1,0 +1,27 @@
+$available-color: green;
+
+.availability {
+  .availability-icon {
+    @extend .fa;
+  }
+  .available {
+    @extend .fa-check;
+    color: $available-color;
+  }
+  .noncirc {
+    @extend .fa-check-circle-o;
+    color: $available-color;
+  }
+  .page {
+    @extend .fa-truck;
+    color: $available-color;
+  }
+  .unavailable {
+    @extend .fa-times;
+    color: #990000;
+  }
+  .unknown {
+    @extend .fa-question;
+    color: #ccc;
+  }
+}
