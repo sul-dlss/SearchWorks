@@ -1,4 +1,5 @@
-<div class="document">
+<% preview_container = 'preview-container-' + document.id %>
+<div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], '.' + preview_container) %> data-preview-in-gallery="true", data-doc-id=<%= document.id %> >
   <div class="item-thumb">
     <%= render_thumbnail_tag(document, {}, counter: document_counter_with_offset(document_counter)) %>
     <%= link_to document do %>
@@ -16,7 +17,7 @@
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons">
     <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
-    <button class="btn btn-sm btn-primary preview-button" disabled="disabled">Preview</button>
+    <button class="btn btn-sm btn-primary preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger"><span class="glyphicon glyphicon-chevron-right"></span> Preview</button>
   </div>
-
 </div>
+<div class="<%= preview_container %> preview-container"></div>

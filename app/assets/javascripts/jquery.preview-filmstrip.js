@@ -126,4 +126,3 @@
 Blacklight.onLoad(function() {
   $('*[data-behavior="preview-filmstrip"]').previewFilmstrip();
 });
-
