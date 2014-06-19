@@ -20,7 +20,7 @@ class Holdings
     end
   end
   def unique_callnumbers
-    callnumbers.sort_by(&:full_shelfkey).uniq(&:truncated_callnumber)
+    callnumbers.uniq(&:truncated_callnumber)
   end
   def libraries
     @libraries ||= callnumbers.group_by(&:library).map do |library, items|
@@ -31,6 +31,6 @@ class Holdings
     return [] unless @item_display.present?
     @callnumbers ||= @item_display.map do |item_display|
       Holdings::Callnumber.new(item_display)
-    end
+    end.sort_by(&:full_shelfkey)
   end
 end
