@@ -1,0 +1,23 @@
+<% if has_alternative_views? %>
+<div class="view-type">
+  <span class="sr-only"><%= t('blacklight.search.view_title') %></span>
+  <div id="view-type-dropdown" class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <%= link_to t('blacklight.search.view.label', :field =>current_sort_field.label).html_safe, '#' %>
+      <%= render_view_type_group_icon document_index_view_type %>
+      <span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu" role="menu">
+      <%  document_index_views.each do |view, config| %>
+      <li>
+        <%= link_to url_for(params.merge(:view => view)), :title => t("blacklight.search.view_title.#{view}", default: t("blacklight.search.view.#{view}", default: blacklight_config.view[view].title)), :class => "view-type-#{ view.to_s.parameterize }" do %>
+          <%= render_view_type_group_icon view %>
+          <span class="view-type-label"><%= t("blacklight.search.view.#{view}") %></span>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>

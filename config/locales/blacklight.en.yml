@@ -10,6 +10,9 @@ en:
         submit: ''
       sort:
         label_small: 'Sort'
+      view:
+        label: 'View'
+        brief: 'Brief'
       per_page:
         button_label_small: '%{count}'
       pagination_info:

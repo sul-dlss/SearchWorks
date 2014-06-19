@@ -2,15 +2,20 @@
 @import 'base';
 @import 'layout';
 
-@import 'modules/alert';
-@import 'modules/feedback-form';
-@import 'modules/access-panel-library-locations';
 @import 'modules/access-panel-course-reserve';
+@import 'modules/access-panel-library-locations';
 @import 'modules/access-panel-online';
 @import 'modules/additional-results';
 @import 'modules/availability-icons';
+@import 'modules/advanced-search';
+@import 'modules/alert';
 @import 'modules/breadcrumb';
 @import 'modules/browse-toolbar';
+@import 'modules/feedback-form';
+@import 'modules/file-collection-members';
+@import 'modules/file-list-table';
+@import 'modules/gallery-view';
+@import 'modules/brief-view';
 @import 'modules/image-collection-filmstrip';
 @import 'modules/item-preview';
 @import 'modules/open-seadragon';
@@ -19,9 +24,6 @@
 @import 'modules/results-documents';
 @import 'modules/search-bar';
 @import 'modules/selected-databases';
-@import 'modules/file-list-table';
-@import 'modules/file-collection-members';
-@import 'modules/zero-results';
-@import 'modules/gallery-view';
-@import 'modules/advanced-search';
 @import 'modules/sort-and-per-page-toolbar';
+@import 'modules/view-type-group';
+@import 'modules/zero-results';
