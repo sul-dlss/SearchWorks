@@ -20,6 +20,24 @@ describe Holdings::Callnumber do
       expect(status.availability_class).to eq 'unknown'
     end
   end
+  describe "treat_current_location_as_home_location?" do
+    it "should return true if an item's current location is in the list of locations" do
+      Constants::CURRENT_HOME_LOCS.each do |location|
+        expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- #{location} -|-").treat_current_location_as_home_location?).to be_true
+      end
+    end
+    it "should replace the home location with the current location" do
+      expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- IC-DISPLAY -|-").home_location).to eq "IC-DISPLAY"
+    end
+  end
+  describe "reserves" do
+    it "should use the pseudo home location if an item is has a reserve desk current location" do
+      expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- ART-RESV -|-").home_location).to eq "SW-RESERVE-DESK"
+    end
+    it "should change the library for an item that is at a reserve desk" do
+      expect(Holdings::Callnumber.new("barcode -|- GREEN -|- home_location -|- ART-RESV -|-").library).to eq "ART"
+    end
+  end
   describe "#on_reserve?" do
     it "should return true when an item is populated with reserve desks and loan period" do
       expect(callnumber).to be_on_reserve
