@@ -2,7 +2,7 @@
 <% if document.access_panels.library_locations? %>
   <% document.access_panels.library_locations.libraries.each do |library| %>
     <% if library.is_viewable? %>
-      <div class="panel panel-default panel-library-location" data-hours-route=<%= hour_path(library.code) %>>
+      <div class="panel panel-default panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
         <div class="library-location-heading">
           <%= thumb_for_library(library) %>
           <div class="library-location-heading-text">
@@ -12,9 +12,23 @@
           </div>
         </div>
         <div class="panel-body">
-          <strong>Location in Library Placeholder</strong>
-          <ul class="list-unstyled">
-            <li>Call Number Placeholder</li>
+          <ul class="list-unstyled location">
+            <% library.locations.each do |location| %>
+              <li>
+                <strong class="library-name"><%= location.name %></strong>
+                <ul class="list-unstyled items">
+                  <% location.items.each do |item| %>
+                    <li data-barcode="<%= item.barcode %>">
+                      <i class="availability-icon <%= item.status.availability_class %>"></i>
+                      <%= item.callnumber %>
+                      <% if item.on_reserve? %>
+                        <div class="reserve-note">On Reserve <%= item.loan_period %></div>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>

@@ -42,6 +42,15 @@ class Holdings
     def loan_period
       item_display[12]
     end
+
+    def status
+      @status ||= Holdings::Status.new(self)
+    end
+
+    def on_reserve?
+      reserve_desk.present? && loan_period.present?
+    end
+
     private
     def item_display
       @holding_info.split('-|-').map(&:strip)
