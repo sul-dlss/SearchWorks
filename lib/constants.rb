@@ -858,6 +858,7 @@ module Constants
      "BUS-RESV",
      "BRAN-RESV",
      "CHEM-RESV",
+     #"E-RESV", We need to figure out what to do w/ the pseudo eReserve library before enabling this
      "EARTH-RESV",
      "EAS-RESV",
      "EDU-RESV",
