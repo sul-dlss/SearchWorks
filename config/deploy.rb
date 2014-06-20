@@ -27,7 +27,7 @@ set :log_level, :info
 set :linked_files, %w{.hostname config/database.yml config/solr.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log settings tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
