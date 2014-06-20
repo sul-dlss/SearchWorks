@@ -30,6 +30,10 @@ class Holdings
       end
     end
 
+    def status_text
+      Constants::TRANSLATE_STATUS[availability_class]
+    end
+
     # we can probably do something clever w/ method missing here
     def available?
       Holdings::Status::Available.new(@callnumber).available?

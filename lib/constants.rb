@@ -939,12 +939,12 @@ module Constants
    #"SUL" => "Ignore"
    }
    TRANSLATE_STATUS = {
-     "page" => "must be paged/requested",
+     "available" => "available",
+     "page" => "request",
      "unavailable" => "unavailable",
-     "noncirc" => "in-library use only",
+     "noncirc" => "in-library use",
      "unknown" => "status unknown",
-     "no_req unavailable" => "unavailable",
-     "noncirc_page" => "must be paged/requested for in-library use only"
+     "noncirc_page" => "request for in-library use"
    }
    HIDE_1ST_IND = %W(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
    HIDE_1ST_IND0 = %W(541 542 561 583 590)

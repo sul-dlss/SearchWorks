@@ -8,5 +8,11 @@ class Holdings
     def name
       Constants::LOCS[@code]
     end
+    def one_item?
+      @has_one_item ||= items.one?(&:present?)
+    end
+    def more_than_one_item?
+      @more_than_one_item ||= items.present? && !one_item?
+    end
   end
 end
