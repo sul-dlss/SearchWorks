@@ -6,14 +6,14 @@
 var PreviewContent = (function() {
 
   var useCache = true;
-  window.previewCache = window.previewCache || {};
 
+  window.previewCache = window.previewCache || {};
 
   function append(url, target) {
     var content = window.previewCache[url];
 
     if (useCache && typeof content !== 'undefined') {
-      target.append(content);
+      plugContentAndPlugins(target, content);
     } else {
       fetchContentViaAjaxAndAppend(url, target);
     }
@@ -28,7 +28,7 @@ var PreviewContent = (function() {
     });
 
     request.done(function(data) {
-      target.append(data);
+      plugContentAndPlugins(target, data);
       if (useCache) window.previewCache[url] = data;
     });
 
@@ -37,6 +37,13 @@ var PreviewContent = (function() {
     });
   }
 
+
+  function plugContentAndPlugins(target, content) {
+    target
+      .append(content)
+      .plugGoogleBookContent()
+      .find('.image-filmstrip').renderFilmstrip();
+  }
 
   return {
     append: function(url, target) {

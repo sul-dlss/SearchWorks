@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+ # -*- encoding : utf-8 -*-
 #
 class CatalogController < ApplicationController
 
@@ -277,6 +277,8 @@ class CatalogController < ApplicationController
     config.view.delete_field("slideshow")
 
     config.view.gallery.partials = [:index]
+    config.view.brief.partials = [:index]
+    config.view.brief.icon_class = "glyphicon-align-justify"
   end
 
   def backend_lookup

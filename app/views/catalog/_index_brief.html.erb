@@ -1,0 +1,37 @@
+<%
+  preview_container = 'preview-container-' + document.id
+  preview_attrs = preview_data_attrs(true, "preview-brief", document[:id], '.' + preview_container)
+%>
+
+<div class=" brief-document" <%= preview_attrs %>>
+
+  <div class="row container-fluid brief-container">
+    <h5 class="index_title">
+      <% counter = document_counter_with_offset(document_counter) %>
+      <span class="glyphicon glyphicon-star-empty"></span>
+      <span class="document-counter">
+        <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+      </span>
+      <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
+      <span class="main-title-date"><%= get_main_title_date(document) %></span>
+    </h5>
+  </div>
+
+  <div class="container-fluid <%= preview_container %>">
+  </div>
+
+  <div class="row container-fluid">
+    <div class="col-lg-8 col-md-6 col-sm-6">
+      <% # column for availability info %>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+      <button class="btn btn-sm btn-primary preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">
+        <span class="glyphicon glyphicon-chevron-down"></span> Preview
+      </button>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+      <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+    </div>
+  </div>
+
+</div>
