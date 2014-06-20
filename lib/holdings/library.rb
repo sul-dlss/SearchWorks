@@ -16,5 +16,8 @@ class Holdings
     def is_viewable?
       @code.present? && !["SUL", "PHYSICS"].include?(@code)
     end
+    def location_level_request?
+      Constants::REQUEST_LIBS.include?(@code)
+    end
   end
 end
