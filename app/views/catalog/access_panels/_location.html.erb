@@ -15,12 +15,15 @@
           <ul class="list-unstyled location">
             <% library.locations.each do |location| %>
               <li>
-                <strong class="library-name"><%= location.name %></strong>
+                <strong class="location-name"><%= location.name %></strong>
                 <ul class="list-unstyled items">
                   <% location.items.each do |item| %>
                     <li data-barcode="<%= item.barcode %>">
                       <i class="availability-icon <%= item.status.availability_class %>"></i>
                       <%= item.callnumber %>
+                      <% unless item.treat_current_location_as_home_location? %>
+                        <div class="current-location"><%= item.current_location.name %></div>
+                      <% end %>
                       <% if item.on_reserve? %>
                         <div class="reserve-note">On Reserve <%= item.loan_period %></div>
                       <% end %>

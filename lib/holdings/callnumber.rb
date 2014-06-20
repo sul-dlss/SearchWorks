@@ -7,10 +7,18 @@ class Holdings
       item_display[0]
     end
     def library
-      item_display[1]
+      if current_location_is_reserve_desk?
+        Constants::RESERVE_DESKS[current_location.code]
+      else
+        item_display[1]
+      end
     end
     def home_location
-      item_display[2]
+      if treat_current_location_as_home_location?
+        reserve_desk_or_current_location
+      else
+        item_display[2]
+      end
     end
     def current_location
       Holdings::Location.new(item_display[3])
@@ -51,9 +59,34 @@ class Holdings
       reserve_desk.present? && loan_period.present?
     end
 
+    def treat_current_location_as_home_location?
+      Constants::CURRENT_HOME_LOCS.include?(current_location.code)
+    end
+
     private
+
+    def reserve_desk_or_current_location
+      if current_location_is_reserve_desk?
+        reserve_desk_home_location
+      else
+        current_location.code
+      end
+    end
+
+    def reserve_desk_home_location
+      if current_location.code == "E-RESV"
+        "SW-E-RESERVE-DESK"
+      else
+        "SW-RESERVE-DESK"
+      end
+    end
+
+    def current_location_is_reserve_desk?
+      Constants::RESERVE_DESKS.keys.include?(current_location.code)
+    end
+
     def item_display
-      @holding_info.split('-|-').map(&:strip)
+      @item_display ||= @holding_info.split('-|-').map(&:strip)
     end
   end
 end
