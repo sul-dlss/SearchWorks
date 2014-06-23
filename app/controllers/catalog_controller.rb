@@ -73,7 +73,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "collection_type", :label => "Collection Type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type"
     config.add_facet_field "format_physical_ssim", :label => "Physical Format"
-    config.add_facet_field "pub_year_tisim", :label => "Date", :range => true # uncomment to add date slider
+    config.add_facet_field "pub_year_tisim", :label => "Date", :range => true
     config.add_facet_field "building_facet", :label => "Library", :limit => true
     config.add_facet_field "language", :label => "Language", :limit => true
     config.add_facet_field "author_person_facet", :label => "Author", :limit => true
