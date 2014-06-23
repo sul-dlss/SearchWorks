@@ -9,7 +9,7 @@ require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
 
 Capybara.javascript_driver = :poltergeist
-Capybara.default_wait_time = 5
+Capybara.default_wait_time = 10
 
 if ENV["COVERAGE"] or ENV["CI"]
   require 'simplecov'
