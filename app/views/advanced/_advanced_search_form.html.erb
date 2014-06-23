@@ -30,6 +30,25 @@
           <% else %>
             <%= render 'advanced_search_facets' %>
           <% end %>
+          <div class="form-group advanced-search-facet">
+            <%= label_tag "pub_year_tisim", :class => "col-sm-3 control-label" do %>
+                Publication Year
+            <% end %>
+
+            <div class="col-sm-8">
+              <div class="form-group row">
+                <div class="col-sm-3">
+                  <%= render_range_input("pub_year_tisim", :begin) %>
+                </div>
+                <div class="col-sm-1 control-label">
+                -
+              </div>
+                <div class="col-sm-3">
+                   <%= render_range_input("pub_year_tisim", :end) %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   </div>
