@@ -4,10 +4,10 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
   before do
     visit advanced_search_path
   end
-  it "Single author title" do
-    pending "search matches Socrates results" do
-      fill_in "author", with: "McRae"
-      fill_in "title", with: "Jazz"
+  describe "Single author title" do
+    it "search matches Socrates results" do
+      fill_in "search_author", with: "McRae"
+      fill_in "search_title", with: "Jazz"
       click_on "advanced-search-submit"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("7637875")).to_not be_nil
@@ -16,14 +16,14 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
       expect(docs.index("2130330")).to_not be_nil
     end
     it "Advanced search for author Zukofsky and title 'A' (SW-501)" do
-      fill_in "author", with: "Zukofsky"
-      fill_in "title", with: "A"
+      fill_in "search_author", with: "Zukofsky"
+      fill_in "search_title", with: "A"
       click_on "advanced-search-submit"
+      click_link "10 per page"
+      click_link "20"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("9082824")).to_not be_nil
       expect(docs.index("1398728")).to_not be_nil
-      click_link "10 per page"
-      click_link "20"
       expect(docs.index("290602")).to_not be_nil
       expect(docs.index("4515607")).to_not be_nil
       expect(docs.index("743649")).to_not be_nil
@@ -34,10 +34,11 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
     end
   end
   describe "Facet searching" do
-    # TODO Add book facet click when prod index has format facet
     it "should return more than 4,000,000 results for only facets" do
       click_on "Access"
       check "f_inclusive_access_facet_at-the-library"
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
       within ".page_entries" do
         expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 4000000)).to be_true
@@ -58,11 +59,11 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
       fill_in "search_author", with: "Rowling"
       fill_in "search_title", with: "Potter"
       fill_in "subject_terms", with: "Wizards"
-      # No description field
-      #fill_in "description", with: "Hogwarts"
+      fill_in "search", with: "Hogwarts"
       fill_in "pub_search", with: "London"
       fill_in "isbn_search", with: "0747591059"
-      # TODO add book facet when prod index has format facet
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
       expect(page).to have_css("div.document", count: 1)
       # NOTE: currently only matches 1 doc same as old sw in prod, but old integration
@@ -74,12 +75,12 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
       fill_in "search_author", with: "Rowling"
       fill_in "search_title", with: "Potter"
       fill_in "subject_terms", with: "Wizards"
-      # No description field
-      #fill_in "description", with: "Hogwarts"
+      fill_in "search", with: "Hogwarts"
       fill_in "pub_search", with: "London"
       fill_in "isbn_search", with: "0747591059"
       select "any", from: "op"
-      # TODO add book facet when prod index has format facet
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
       within ".page_entries" do
         expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 100000)).to be_true
@@ -122,12 +123,11 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
     end
   end
   describe "Standalone NOT as first word query" do
-    pending "should get at most 1,520,000" do
-      # Does not have a description field
-      fill_in "description", with: "NOT p"
+    it "should get at most 2,000,000" do
+      fill_in "search", with: "NOT p"
       click_on "advanced-search-submit"
       within ".page_entries" do
-        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 1520000)).to be_true
+        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 2000000)).to be_true
       end
     end
   end
@@ -155,16 +155,18 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
     end
   end
   describe "Hyphen as NOT queries (SW-623)" do
-    pending "should get at most 1500 total results" do
-      # Does not have a description field
-      # fill_in "description", with: "IEEE Xplore"
+    it "should get at most 1500 total results" do
+      fill_in "search", with: "IEEE Xplore"
       fill_in "subject_terms", with: "-Congresses"
       click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 1500)).to be_true
+      end
     end
   end
   describe "OR query" do
     # Test fails because of timeout, can't return 100 records quick enough
-    pending "should get at least 225 results and ckeys 6746743, 6747313 in first 100 results" do
+    it "should get at least 225 results and ckeys 6746743, 6747313 in first 100 results" do
       fill_in "search_author", with: "John Steinbeck"
       fill_in "search_title", with: "Pearl OR Grapes"
       click_on "advanced-search-submit"
@@ -229,6 +231,141 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       # TODO: Fails and actually is returned as first result
       expect(docs.index("4076380")).to be_nil
+    end
+  end
+  describe "AND and OR  (nabokov OR hofstadter) AND pushkin" do
+    it "should get between 5 and 7 results" do
+      fill_in "search_author", with: "(nabokov OR hofstadter) AND pushkin"
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 5)).to be_true
+        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 7)).to be_true
+      end
+      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      expect(docs.index("4076380")).to_not be_nil
+    end
+  end
+  describe "parenthesis  (Dutch OR Netherlands) AND painting  (VUF-1879)" do
+    it "should get between 8 and 12 results" do
+      fill_in "subject_terms", with: "(Dutch OR Netherlands) AND painting"
+      fill_in "search", with: "trade OR commerce"
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 8)).to be_true
+        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 12)).to be_true
+      end
+    end
+  end
+  describe "(trade OR commerce) AND painting  (VUF-1879)" do
+    it "should return at least 15 results" do
+      fill_in "subject_terms", with: "Dutch OR Netherlands"
+      fill_in "search", with: "(trade OR commerce) AND painting"
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 15)).to be_true
+      end
+    end
+  end
+  describe "Description Plus Building Facet Value" do
+    it "should return at most 1 result" do
+      fill_in "search", with: "Sally Ride"
+      click_on "Library"
+      check "f_inclusive_building_facet_art-architecture"
+      click_on "advanced-search-submit"
+      expect(page).to have_css(".page_entries", text: "1 entry found")
+    end
+  end
+  describe "Title Plus Format Facet Value (SW-326)" do
+    it "should get ckey 365647 in the results" do
+      fill_in "search_title", with: "Jewish book annual"
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_journal-periodical"
+      click_on "advanced-search-submit"
+      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      expect(docs.index("365647")).to_not be_nil
+    end
+  end
+  describe "Subject China History Women and language English" do
+    it "should return at least 100 results" do
+      fill_in "subject_terms", with: "china women history"
+      click_on "Language"
+      check "f_inclusive_language_english"
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 100)).to be_true
+      end
+    end
+  end
+  describe "Multi-Facet Query" do
+    it "should return zero results" do
+      fill_in "search", with: "African Maps"
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_map"
+      click_on "Library"
+      check "f_inclusive_building_facet_music"
+      click_on "advanced-search-submit"
+      expect(page).to have_css("h2", text: "No results found in catalog")
+    end
+  end
+  describe "Author Title Plus Format Book" do
+    it "should get ckey 5680298 and not 8303176 in the results" do
+      fill_in "search_author", with: "Rowling"
+      fill_in "search_title", with: "Potter"
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_book"
+      click_on "advanced-search-submit"
+      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      expect(docs.index("5680298")).to_not be_nil
+      expect(docs.index("8303176")).to be_nil
+    end
+  end
+  describe "Author Title Plus Format Video" do
+    it "should get ckey 8303176 and not 5680298 in the results" do
+      fill_in "search_author", with: "Rowling"
+      fill_in "search_title", with: "Potter"
+      click_on "Resource type"
+      check "f_inclusive_format_main_ssim_video"
+      click_on "advanced-search-submit"
+      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      expect(docs.index("8303176")).to_not be_nil
+      expect(docs.index("5680298")).to be_nil
+    end
+  end
+  describe "Phrase search: subject 'Home Schooling' and Keyword Socialization VUF-1352" do
+    it "should get at most 150 results" do
+      fill_in "subject_terms", with: '"Home Schooling"'
+      fill_in "search", with: "Socialization"
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 150)).to be_true
+      end
+    end
+  end
+  describe "Searches with date ranges" do
+    pending "should see Date: 1900 - 2000" do
+      fill_in "search_author", with: "Rowling"
+      # Date range stuff
+      click_on "advanced-search-submit"
+      expect(page).to have_css("selector", text: "Date: 1900 - 2000")
+    end
+  end
+  describe "Searches without date ranges" do
+    pending "should see Date:  - " do
+      fill_in "search_author", with: "Rowling"
+      # Date range stuff
+      click_on "advanced-search-submit"
+      expect(page).to have_css("selector", text: "Date:  - ")
+    end
+  end
+  describe "Faceting on advanced searches with date ranges" do
+    pending "should get between 5000 and 6000 results" do
+      fill_in "search", with: "France"
+      # Date range stuff 1789 - 1800
+      click_on "advanced-search-submit"
+      within ".page_entries" do
+        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 5000)).to be_true
+        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 6000)).to be_true
+      end
     end
   end
 end
