@@ -90,12 +90,11 @@
 
     function renderAccessPanel(bibkey, data) {
       var $panelOnlineBooks = $parent.find('.panel-online'),
-          $googleBooks      = $panelOnlineBooks.find('.google-books.' + bibkey),
+          $googleBooks      = $(document).find('.google-books.' + bibkey),
           $about            = $googleBooks.find('.about'),
           $fullView         = $googleBooks.find('.full-view'),
           $limitedView      = $googleBooks.find('.limited-preview'),
           $previewLink      = $googleBooks.find('.btn-preview .preview-link');
-
 
       $panelOnlineBooks.removeClass('hide').addClass('show');
       $googleBooks.show();
@@ -149,4 +148,5 @@
 Blacklight.onLoad(function() {
   $('#documents').plugGoogleBookContent();
   $('div#content.show-document .document').plugGoogleBookContent();
+  $('.accordion-section').plugGoogleBookContent();
 });

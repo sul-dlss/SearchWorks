@@ -1,0 +1,27 @@
+<%
+  document ||= @document
+  id = document[:id]
+%>
+
+<% if document.access_panels.course_reserve.courses.present? %>
+  <%
+    count = document.access_panels.course_reserve.courses.length
+    snippet = document.access_panels.course_reserve.courses.map{|c| c.id }.join(', ')
+  %>
+  <div class="accordion-section course-reserves col-md-9">
+    <a class="header" data-accordion-section-target=".<%= id %>-course-reserves">
+      Course Reserves (<%= count %>) <i class="fa fa-caret-right"></i>
+    </a>
+    <span class="snippet <%= id %>-course-reserves-snippet" data-behavior="trunk8">
+      <%= snippet %>
+    </span>
+    <div class="details <%= id %>-course-reserves">
+      <dl>
+        <% document.access_panels.course_reserve.courses.each do |course| %>
+          <dt><%= link_to_course_reserve_course(course).html_safe %></dt>
+          <dd><%= t('blacklight.access_panels.course_reserve.instructor', instructor: course.instructor).html_safe %></dd>
+        <% end %>
+      </dl>
+    </div>
+  </div>
+<% end %>

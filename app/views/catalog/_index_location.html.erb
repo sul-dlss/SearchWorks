@@ -1,5 +1,4 @@
 <% if document.holdings.present? %>
-  <span class="label label-default">At the library</span> <%= document.holdings.libraries.map(&:name).join(', ') %>
     <% document.holdings.libraries.each do |library| %>
       <table class="table table-condensed availability">
         <thead>
@@ -20,7 +19,7 @@
               <tr>
                 <td class="<%= 'indent-callnumber' if location.more_than_one_item? %>">
                   <% if location.one_item? %>
-                    <strong><%= location.name %></strong> : 
+                    <strong><%= location.name %></strong> :
                   <% end %>
                   <%= item.callnumber %>
                 </td>
