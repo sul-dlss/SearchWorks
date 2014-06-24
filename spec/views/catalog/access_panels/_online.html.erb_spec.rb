@@ -25,6 +25,13 @@ describe "catalog/access_panels/_online.html.erb" do
       expect(rendered).to have_css(".panel-online")
       expect(rendered).to have_css("ul.links li span.stanford-only")
     end
+    it "should only render SFX links when present" do
+      assign(:document, SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856))
+      render
+      expect(rendered).to     have_css(".panel-online")
+      expect(rendered).to_not have_css("ul.links li a", text: "Link text")
+      expect(rendered).to     have_css("ul.links li a.sfx", text: "Find full text")
+    end
     describe "database" do
       before do
         assign(:document, SolrDocument.new(marcxml: simple_856, format: ["Database"]))

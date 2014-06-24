@@ -24,7 +24,7 @@ describe SearchWorks::Links do
     expect(links.finding_aid.last.text).to eq "2nd finding aid link"
   end
   describe "Link" do
-    let(:link) { SearchWorks::Links::Link.new(text: "text", fulltext: true, stanford_only: true, finding_aid: true) }
+    let(:link) { SearchWorks::Links::Link.new(text: "text", fulltext: true, stanford_only: true, finding_aid: true, sfx: true) }
     it "should parse the text option" do
       expect(link.text).to eq "text"
     end
@@ -36,6 +36,9 @@ describe SearchWorks::Links do
     end
     it "should parse the finding_aid option" do
       expect(link).to be_finding_aid
+    end
+    it "should parse the sfx option" do
+      expect(link).to be_sfx
     end
   end
 end
