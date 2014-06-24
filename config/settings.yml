@@ -2,3 +2,5 @@ HOURS_API: <%= ENV['HOURS_API'] || 'http://example.com' %>
 EMAIL_TO: "fake-email@kittenz.com"
 HOSTNAME: "HOST"
 STACKS_URL: "https://stacks.stanford.edu/image"
+REQUESTS_URL: "https://host.example.com/requests/new"
+SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"

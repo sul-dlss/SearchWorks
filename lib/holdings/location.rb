@@ -8,5 +8,8 @@ class Holdings
     def name
       Constants::LOCS[@code]
     end
+    def location_level_request?
+      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code)
+    end
   end
 end
