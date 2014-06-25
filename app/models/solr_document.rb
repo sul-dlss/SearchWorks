@@ -8,6 +8,7 @@ class SolrDocument
   include AccessPanelsConcern
   include DatabaseDocument
   include DigitalCollection
+  include Extent
   include CollectionMember
   include ModsData
   include IndexAuthors
@@ -51,7 +52,7 @@ class SolrDocument
   # This abstraction method may become useful while
   # we're between using the new and old format facet
   def format_key
-    :format
+    :format_main_ssim
   end
 
   def file_ids

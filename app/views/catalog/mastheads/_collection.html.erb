@@ -17,9 +17,9 @@
             <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
           <% end %>
           <% # this stuff is temporary until we have item level merge (mods + marc) %>
-          <% if @parent[:physical].present? %>
-            <dt>PHYSICAL EXTENT:</dt>
-            <dd><%= @parent[:physical].join(', ')%></dd>
+          <% if @parent.extent.present? %>
+            <dt><%= @parent.extent_label %>:</dt>
+            <dd><%= @parent.extent %></dd>
           <% end %>
           <% if @parent.index_links.finding_aid.present? %>
             <dt>FINDING AID:</dt>

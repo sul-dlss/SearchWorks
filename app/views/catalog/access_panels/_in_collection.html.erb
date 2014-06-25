@@ -16,9 +16,9 @@
         <dl class="dl-invert">
           <dt>DIGITAL CONTENT</dt>
           <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
-          <% if parent_collection[:physical].present? %>
-            <dt>PHYSICAL EXTENT</dt>
-            <dd><%= parent_collection[:physical].join(', ') %></dd>
+          <% if parent_collection.extent.present? %>
+            <dt><%= parent_collection.extent_label %></dt>
+            <dd><%= parent_collection.extent %></dd>
           <% end %>
           <% if parent_collection.index_links.finding_aid.present? %>
             <dt>FINDING AID</dt>
