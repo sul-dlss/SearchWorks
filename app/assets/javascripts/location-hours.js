@@ -42,6 +42,10 @@ $(function(){
           var hoursElement = getHoursElement(this.element);
           var libLocation = $(this.element).data('hours-route');
           $.getJSON(libLocation, function(data){
+            if (data.error) {
+              $(hoursElement).html(data.error);
+              return;
+            }
             if (data === null){
               return;
             }
