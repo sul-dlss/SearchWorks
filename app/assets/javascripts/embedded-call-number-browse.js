@@ -79,11 +79,39 @@
       init();
 
       function init() {
-        $galleryDoc.embedViewport.on('shown.bs.collapse', function () {
-          $galleryDoc.calculateDocsPerView();
-          showPreview();
+        $galleryDoc.item.on('click', function(e){
+          e.preventDefault();
+          closeOtherBrowsers();
+          openThisBrowser();
         });
         addListeners();
+      }
+
+      function closeOtherBrowsers() {
+        $('[data-behavior="embed-browse"]').each(function(i,val){
+          var button = $(val);
+          if (button[0] !== $galleryDoc.item[0]){
+            if (button.hasClass('collapsed')){
+              return;
+            }else{
+              button.trigger('click');
+            }
+          }
+        });
+      }
+
+      function openThisBrowser() {
+        if ($galleryDoc.item.hasClass('collapsed')){
+          $galleryDoc.item.removeClass('collapsed');
+          $galleryDoc.embedViewport.slideDown(function(){
+            $galleryDoc.calculateDocsPerView();
+            showPreview();
+          });
+        }else{
+          $galleryDoc.item.addClass('collapsed');
+          $galleryDoc.embedViewport.slideUp(function(){
+          });
+        }
       }
 
       function showPreview() {

@@ -4,6 +4,7 @@ describe BrowseController, :"data-integration" => true do
   describe "routes" do
     it "should be accessible via /browse" do
       expect({get: "/browse"}).to route_to(controller: 'browse', action: 'index')
+      expect({get: "/browse/nearby"}).to route_to(controller: 'browse', action: 'nearby')
     end
   end
   describe "#index" do
@@ -49,6 +50,24 @@ describe BrowseController, :"data-integration" => true do
         expect(assigns(:document_list).any? do |doc|
           doc[:id] == assigns(:original_doc)[:id]
         end).to be_false
+      end
+    end
+  end
+  describe "nearby" do
+    before do
+      get :nearby, start: '9696118'
+    end
+    it "should set the @document_list instance variable" do
+      expect(assigns(:document_list)).to be_present
+    end
+    it "should include the originating document" do
+      expect(assigns(:document_list).any? do |doc|
+        doc[:id] == assigns(:original_doc)[:id]
+      end).to be_true
+    end
+    it "should return a SolrDocuments object" do
+      assigns(:document_list).each do |doc|
+        expect(doc).to be_a(SolrDocument)
       end
     end
   end

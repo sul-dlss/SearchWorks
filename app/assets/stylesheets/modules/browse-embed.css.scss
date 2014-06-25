@@ -48,6 +48,10 @@
       @extend .text-center;
     }
     .gallery-document .browse-link a:after{
+      content: " \f0a5";
+      font-family: FontAwesome;
+    }
+    .gallery-document:last-child .browse-link a:after{
       content: " \f0a4";
       font-family: FontAwesome;
     }

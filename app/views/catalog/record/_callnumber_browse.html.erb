@@ -5,22 +5,10 @@
       <h2>Browse nearby</h2>
       <% document.holdings.unique_callnumbers.each_with_index do |callnumber, index| %>
         <span class="callnumber">
-          <%# link_to_callnumber_browse(document, callnumber, {class: "collapsed", data: {toggle: "collapse"}}) %>
           <%= link_to_callnumber_browse(
                 document,
                 callnumber,
-                {class: "collapsed",
-                 data: { toggle: "collapse",
-                         behavior: "embed-browse",
-                         start: document[:id],
-                         embed_viewport: "#callnumber-#{index}",
-                         url: browse_nearby_path(
-                           start: document[:id],
-                           barcode: (callnumber.barcode unless callnumber.barcode == document[:preferred_barcode]),
-                           view: :gallery
-                         )
-                       }
-                 }
+                index
                ) %>
         </span>
       <% end %>
