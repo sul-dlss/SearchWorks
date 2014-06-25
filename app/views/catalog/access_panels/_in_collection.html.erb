@@ -17,7 +17,7 @@
           <dt>DIGITAL CONTENT</dt>
           <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
           <% if parent_collection[:physical].present? %>
-            <dt>PHYSICAL EXTENT:</dt>
+            <dt>PHYSICAL EXTENT</dt>
             <dd><%= parent_collection[:physical].join(', ') %></dd>
           <% end %>
           <% if parent_collection.index_links.finding_aid.present? %>
