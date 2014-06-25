@@ -1011,26 +1011,28 @@ module Constants
    }
 
    LIBRARY_ABOUT = {
-    "GREEN" => "http://library.stanford.edu/libraries/green/about",
-    "SAL" => "http://library.stanford.edu/libraries/sal/about",
-    "MEYER" => "http://library.stanford.edu/libraries/meyer/about",
     "ARS" => "http://library.stanford.edu/libraries/ars/about",
     "ART" => "http://library.stanford.edu/libraries/art/about",
     "BIOLOGY" => "http://library.stanford.edu/libraries/falconer/about",
+    "BUSINESS" => "http://library.stanford.edu/libraries/business/about",
     "CHEMCHMENG" => "http://library.stanford.edu/libraries/swain/about",
     "EARTH-SCI" => "http://library.stanford.edu/libraries/branner/about",
     "EAST-ASIA" => "http://library.stanford.edu/libraries/eal/about",
     "EDUCATION" => "http://library.stanford.edu/libraries/cubberley/about",
     "ENGINEERING" => "http://library.stanford.edu/libraries/englib/about",
-    "HOPKINS" => "http://library.stanford.edu/libraries/hopkins/about",
-    "MATH-CS" => "http://library.stanford.edu/libraries/mathstat/about",
-    "MUSIC" => "http://library.stanford.edu/libraries/music/about",
-    "SPEC-COLL" => "http://library.stanford.edu/libraries/spc/about",
-    "BUSINESS" => "http://library.stanford.edu/libraries/business/about",
-    "HV-ARCHIVE" => "http://library.stanford.edu/libraries/hila/about",
+    "GREEN" => "http://library.stanford.edu/libraries/green/about",
     "HOOVER" => "http://library.stanford.edu/libraries/hoover/about",
+    "HOPKINS" => "http://library.stanford.edu/libraries/hopkins/about",
+    "HV-ARCHIVE" => "http://library.stanford.edu/libraries/hila/about",
     "LAW" => "http://library.stanford.edu/libraries/law/about",
     "LANE-MED" => "http://library.stanford.edu/libraries/lane/about",
+    "MATH-CS" => "http://library.stanford.edu/libraries/mathstat/about",
+    "MUSIC" => "http://library.stanford.edu/libraries/music/about",
+    "MEYER" => "http://library.stanford.edu/libraries/meyer/about",
+    "SPEC-COLL" => "http://library.stanford.edu/libraries/spc/about",
+    "SAL" => "http://library.stanford.edu/libraries/sal/about",
+    "SAL-NEWARK" => "http://library.stanford.edu/libraries/newark/about",
+    "SAL3" => "http://library.stanford.edu/libraries/sal3/about",
     "SLAC" => "http://library.stanford.edu/libraries/slac/about"
    }
 
