@@ -30,19 +30,6 @@ class BrowseController < ApplicationController
     if params[:start].present?
       @response, @original_doc = get_solr_response_for_doc_id(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
-      if params[:next].present?
-        case params[:next]
-        when "left"
-          before = 6
-          after = 0
-        when "right"
-          before = 0
-          after = 6
-        end
-      else
-        before = 14
-        after = 6
-      end
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
@@ -50,18 +37,10 @@ class BrowseController < ApplicationController
             blacklight_config,
             {:item_display => @original_doc[:item_display],
              :preferred_barcode=>barcode,
-             :before => before,
-             :after => after}
+             :before => 12,
+             :after => 12}
           ).items.map do |document|
             SolrDocument.new(document[:doc])
-          end
-          if params[:next].present?
-            case params[:next]
-            when "left"
-              @document_list.delete_at(6)
-            when "right"
-              @document_list.delete_at(0)
-            end
           end
           render browse: @document_list, layout:false
         end

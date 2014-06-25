@@ -10,10 +10,10 @@ describe "Callnumber browse", feature: true, :"data-integration" => true do
       click_link('Z239 .G75 B477 2012')
     end
     expect(page).to have_css("h1", text: "Browse nearby Z239 .G75 B477 2012" )
-    expect(page).to have_css('.document', count: 20)
+    expect(page).to have_css('.gallery-document', count: 20)
 
     # current document should be in results
-    expect(page).to have_css('.document .index_title', text: "Bean spasms : collaborations")
+    expect(page).to have_css('.gallery-document .index_title', text: "Bean spasms : collaborations")
 
     # page forward
     within('.browse-toolbar') do

@@ -1,10 +1,18 @@
-.callnumber a{
-  @extend .label;
-  @extend .label-primary;
-}
 .callnumber a.collapsed{
-  @extend .label;
-  @extend .label-default;
+  @extend .btn;
+  @extend .btn-default;
+}
+.callnumber a{
+  @extend .btn;
+  @extend .btn-primary;
+}
+.callnumber a:after{
+  content: " \f0d7";
+	font-family: FontAwesome;
+}
+.callnumber a.collapsed:after{
+  content: " \f0da";
+  font-family: FontAwesome;
 }
 
 .embed-callnumber-browse-container{
@@ -17,7 +25,7 @@
   margin-right: 30px;
   border: 2px solid $panel-default-border;
   .embedded-items{
-    width: 20000px;//($gallery-document-width + 10) * 9;
+    width: 20000px;
     height: 430px;
   }
   .gallery {
@@ -31,10 +39,18 @@
       bottom: 150px;
       left: 500px;
     }
-    // .gallery-document:last::after{
-    //   font-family: FontAwesome;
-    //   content: "\f021";
-    // }
+    .gallery-document .browse-link a{
+      font-size: $font-size-h3;
+      display: inline-block;
+      position: relative;
+      top: 150px;
+      @extend .lead;
+      @extend .text-center;
+    }
+    .gallery-document .browse-link a:after{
+      content: " \f0a4";
+      font-family: FontAwesome;
+    }
   }
 }
 
@@ -42,7 +58,7 @@
   @extend .carousel-control;
   top: 0px;
   bottom: 0px;
-  width: 8%;
+  width: 5%;
 
 
 }

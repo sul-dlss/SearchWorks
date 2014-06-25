@@ -1,5 +1,5 @@
 <% # container for all documents in index view -%>
-<% if params[:controller] == "browse" %>
+<% if params[:controller] == "browse" && params[:action] == "nearby" %>
   <%= render :collection => documents, :as => :document, :partial => 'index_gallery' %>
 <% elsif %>
   <div id="documents" class="row gallery">
