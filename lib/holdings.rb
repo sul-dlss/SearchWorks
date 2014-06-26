@@ -1,6 +1,7 @@
 require 'holdings/callnumber'
 require 'holdings/library'
 require 'holdings/location'
+require 'holdings/requestable'
 require 'holdings/status'
 
 class Holdings

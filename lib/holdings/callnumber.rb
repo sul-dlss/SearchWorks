@@ -63,6 +63,14 @@ class Holdings
       Constants::CURRENT_HOME_LOCS.include?(current_location.code)
     end
 
+    def requestable?
+      request_status.requestable?
+    end
+
+    def must_request?
+      request_status.must_request?
+    end
+
     private
 
     def reserve_desk_or_current_location
@@ -85,6 +93,9 @@ class Holdings
       Constants::RESERVE_DESKS.keys.include?(current_location.code)
     end
 
+    def request_status
+      @request_status ||= Holdings::Requestable.new(self)
+    end
     def item_display
       @item_display ||= @holding_info.split('-|-').map(&:strip)
     end

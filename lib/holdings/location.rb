@@ -8,6 +8,9 @@ class Holdings
     def name
       Constants::LOCS[@code]
     end
+    def location_level_request?
+      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code)
+    end
     def one_item?
       @has_one_item ||= items.one?(&:present?)
     end

@@ -34,4 +34,11 @@ describe Holdings::Library do
       expect(Holdings::Library.new("").is_viewable?).to be_false
     end
   end
+  describe "#location_level_request?" do
+    it "should return true for all libraries that should be requestable at the location level" do
+      Constants::REQUEST_LIBS.each do |library|
+        expect(Holdings::Library.new(library)).to be_location_level_request
+      end
+    end
+  end
 end

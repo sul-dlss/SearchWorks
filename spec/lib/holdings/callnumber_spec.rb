@@ -46,4 +46,12 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('123 -|- abc')).to_not be_on_reserve
     end
   end
+  describe "request status" do
+    it "should respond to #requestable? from the Holdings::Requestable class" do
+      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to be_requestable
+    end
+    it "should respond to #must_request? from the Holdings::Requestable class" do
+      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to_not be_must_request
+    end
+  end
 end

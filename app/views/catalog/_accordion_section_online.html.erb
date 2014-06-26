@@ -3,17 +3,17 @@
   id = document[:id]
   book_ids  = get_book_ids(document)
   css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
-  visible   = document.access_panels.online.links.blank? ?  'hide' : 'show'
+  visible   = document.index_links.present? ?  'show' : 'hide'
 %>
 
-<div class="accordion-section online col-md-9">
+<div class="accordion-section online col-md-9 <%= visible %>">
   <a class="header" data-accordion-section-target=".<%= id %>-online">
     Online <i class="fa fa-caret-right"></i>
   </a>
   <div class="details <%= id %>-online">
     <ul class="links">
-      <% if document.access_panels.online? %>
-        <% document.access_panels.online.links.each do |link| %>
+      <% if document.index_links.present? %>
+        <% document.index_links.each do |link| %>
           <li>
             <span class="<%= 'stanford-only' if link.stanford_only? %>">
               <%= link.text.html_safe %>
@@ -23,8 +23,7 @@
       <% end %>
       <li class="google-books <%= css_class %>">
         <ul>
-          <li><a href="" class="about">Google Books: About this book</a></li>
-          <li><a href="" class="full-view">Google Books: Full view</a></li>
+          <li><a href="" class="full-view">Google Books Full view</a></li>
         </ul>
       </li>
     </ul>

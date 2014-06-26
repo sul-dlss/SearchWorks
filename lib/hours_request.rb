@@ -13,10 +13,14 @@ class HoursRequest
   end
 
   def get
-    begin
-      Faraday.new(url: full_url).get.body
-    rescue Faraday::Error::ConnectionFailed => e
-      nil
+    if find_library.present?
+      begin
+        Faraday.new(url: full_url).get.body
+      rescue Faraday::Error::ConnectionFailed => e
+        nil
+      end
+    else
+      {error: 'No public access'}.to_json
     end
   end
 end

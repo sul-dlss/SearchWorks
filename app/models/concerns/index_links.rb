@@ -14,15 +14,19 @@ module IndexLinks
          text: link_text(link_field),
          fulltext: link_is_fulltext?(link_field),
          stanford_only: link_is_stanford_only?(link_field),
-         finding_aid: link_is_finding_aid?(link_field)
+         finding_aid: link_is_finding_aid?(link_field),
+         sfx: link_is_sfx?(link_field)
         )
       end
     end
+
     private
 
     def link_text(link_field)
       if link_is_finding_aid?(link_field)
         "<a href='#{link_field}'>Online Archive of California</a>"
+      elsif link_is_sfx?(link_field)
+        "<a href='#{link_field}' class='sfx'>Find full text</a>"
       else
         "<a href='#{link_field}'>#{link_host(link_field)}</a>"
       end
@@ -32,7 +36,7 @@ module IndexLinks
       link_field =~ /oac\.cdlib\.org\/findaid/
     end
     def link_fields
-      [@document[:url_fulltext], @document[:url_suppl]].flatten.compact.uniq
+      [@document[:url_fulltext], @document[:url_suppl], @document[:url_sfx]].flatten.compact.uniq
     end
     def link_is_fulltext?(link)
       @document[:url_fulltext] &&
@@ -41,6 +45,11 @@ module IndexLinks
     def link_is_stanford_only?(link)
       @document[:url_restricted] &&
       @document[:url_restricted].include?(link)
+    end
+
+    def link_is_sfx?(link)
+      @document[:url_sfx] &&
+      @document[:url_sfx].include?(link)
     end
     def link_host(link_field)
       uri = URI.parse(link_field)

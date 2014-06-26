@@ -24,6 +24,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
   describe "current locations" do
     it "should be displayed" do
       assign(:document, SolrDocument.new(
+        id: '123',
         item_display: ['123 -|- GREEN -|- STACKS -|- INPROCESS -|- -|- -|- -|- -|- ABC 123']
       ))
       render
@@ -32,6 +33,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     describe "as home location" do
       before do
         assign(:document, SolrDocument.new(
+          id: '123',
           item_display: ['123 -|- ART -|- STACKS -|- IC-DISPLAY -|- -|- -|- -|- -|- ABC 123']
         ))
         render
@@ -47,10 +49,61 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     describe "is reserve desk" do
       it "should use the library of the owning reserve desk" do
         assign(:document, SolrDocument.new(
+          id: '123',
           item_display: ['123 -|- ART -|- STACKS -|- GREEN-RESV -|- -|- -|- -|- -|- ABC 123']
         ))
         render
         expect(rendered).to have_css('.library-location-heading-text a', text: 'Green Library')
+      end
+    end
+  end
+  describe "request links" do
+    describe "location level request links" do
+      before do
+        assign(:document, SolrDocument.new(
+          id: '123',
+          item_display: ['123 -|- SAL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123']
+        ))
+        render
+      end
+      it "should be present" do
+        expect(rendered).to have_css('ul.location li a', text: 'Request')
+      end
+      it "should not have any requestable items" do
+        expect(rendered).to_not have_css('ul.items li[data-request-url]')
+      end
+    end
+    describe "item level request links" do
+      before do
+        assign(:document, SolrDocument.new(
+          id: '123',
+          item_display: ['123 -|- GREEN -|- STACKS -|- MISSING -|- -|- -|- -|- -|- ABC 123']
+        ))
+        render
+      end
+      it "should not have a request url stored in the data attribute" do
+        expect(rendered).to_not have_css('ul.items li[data-request-url]')
+      end
+      it "should not have a request link in the item" do
+        expect(rendered).to have_css('ul.items li a', text: 'Request')
+      end
+    end
+    describe "requestable vs. non-requestable items" do
+      before do
+        assign(:document, SolrDocument.new(
+          id: '123',
+          item_display: [
+            '123 -|- GREEN -|- STACKS -|- -|- NH-SOMETHING -|- -|- -|- -|- ABC 123',
+            '456 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
+          ]
+        ))
+        render
+      end
+      it "should have an item that has a request url" do
+        expect(rendered).to have_css('ul.items li[data-request-url]', text: 'ABC 456')
+      end
+      it "should have an item that does not have a request url" do
+        expect(rendered).to_not have_css('ul.items li[data-request-url]', text: 'ABC 123')
       end
     end
   end

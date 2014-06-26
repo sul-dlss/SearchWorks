@@ -90,7 +90,7 @@
 
     function renderAccessPanel(bibkey, data) {
       var $panelOnlineBooks = $parent.find('.panel-online'),
-          $googleBooks      = $(document).find('.google-books.' + bibkey),
+          $googleBooks      = $parent.find('.google-books.' + bibkey),
           $about            = $googleBooks.find('.about'),
           $fullView         = $googleBooks.find('.full-view'),
           $limitedView      = $googleBooks.find('.limited-preview'),
@@ -105,6 +105,7 @@
 
         if (data.preview === 'full') {
           $fullView.attr('href', data.preview_url).show();
+          checkAndEnableOnlineAccordionSection($googleBooks);
         }
 
         if (data.preview === 'partial') {
@@ -136,6 +137,16 @@
 
       return bibkeys;
     }
+
+
+    function checkAndEnableOnlineAccordionSection($googleBooks) {
+      $accordionSection = $googleBooks.parents('.accordion-section');
+
+      if ($accordionSection.length > 0) {
+        $accordionSection.removeClass('hide').addClass('show');
+      }
+    }
+
 
     return this.each(function() {
       $parent = $(this);

@@ -6,7 +6,7 @@
 <% if document.access_panels.course_reserve.courses.present? %>
   <%
     count = document.access_panels.course_reserve.courses.length
-    snippet = document.access_panels.course_reserve.courses.map{|c| c.id }.join(', ')
+    snippet = document.access_panels.course_reserve.courses.map(&:id).join(', ')
   %>
   <div class="accordion-section course-reserves col-md-9">
     <a class="header" data-accordion-section-target=".<%= id %>-course-reserves">
