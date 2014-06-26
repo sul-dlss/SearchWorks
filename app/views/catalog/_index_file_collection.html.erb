@@ -16,6 +16,8 @@
   <% end %>
 </dl>
 
+<%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
+
 <% if document.collection_members(rows: 3).present? %>
   <%= render partial: 'catalog/file_collection_members', locals: { document: document } %>
 <% end %>

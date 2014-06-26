@@ -90,12 +90,11 @@
 
     function renderAccessPanel(bibkey, data) {
       var $panelOnlineBooks = $parent.find('.panel-online'),
-          $googleBooks      = $panelOnlineBooks.find('.google-books.' + bibkey),
+          $googleBooks      = $parent.find('.google-books.' + bibkey),
           $about            = $googleBooks.find('.about'),
           $fullView         = $googleBooks.find('.full-view'),
           $limitedView      = $googleBooks.find('.limited-preview'),
           $previewLink      = $googleBooks.find('.btn-preview .preview-link');
-
 
       $panelOnlineBooks.removeClass('hide').addClass('show');
       $googleBooks.show();
@@ -106,6 +105,7 @@
 
         if (data.preview === 'full') {
           $fullView.attr('href', data.preview_url).show();
+          checkAndEnableOnlineAccordionSection($googleBooks);
         }
 
         if (data.preview === 'partial') {
@@ -138,6 +138,16 @@
       return bibkeys;
     }
 
+
+    function checkAndEnableOnlineAccordionSection($googleBooks) {
+      $accordionSection = $googleBooks.parents('.accordion-section');
+
+      if ($accordionSection.length > 0) {
+        $accordionSection.removeClass('hide').addClass('show');
+      }
+    }
+
+
     return this.each(function() {
       $parent = $(this);
       init();
@@ -149,4 +159,5 @@
 Blacklight.onLoad(function() {
   $('#documents').plugGoogleBookContent();
   $('div#content.show-document .document').plugGoogleBookContent();
+  $('.accordion-section').plugGoogleBookContent();
 });
