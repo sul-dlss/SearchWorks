@@ -52,7 +52,11 @@ feature "Results Document Metadata" do
     click_button 'search'
 
     within 'div.document' do
-      expect(page).to have_css('img.stacks-image')
+      within('.document-thumbnail') do
+        expect(page).to have_css('a[tabindex="-1"]')
+        expect(page).to have_css('img.stacks-image')
+        expect(page).to have_css('img.stacks-image[alt=""]')
+      end
     end
   end
 
