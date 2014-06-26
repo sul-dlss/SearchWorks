@@ -5,13 +5,19 @@ module ThumbnailHelper
     book_ids = get_book_ids(document)
 
     locals = {
+      document: document,
       css_class: (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' '),
       isbn: book_ids['isbn'].join(','),
       oclc: book_ids['oclc'].join(','),
       lccn: book_ids['lccn'].join(',')
     }
 
-    render partial:'catalog/book_cover', locals: locals
+    begin
+      render partial: "catalog/thumbnails/#{document.display_type}_thumbnail", locals: locals
+    rescue ActionView::MissingTemplate
+      nil
+    end
+
   end
 
 end
