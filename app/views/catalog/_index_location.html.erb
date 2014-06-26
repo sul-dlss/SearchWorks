@@ -1,41 +1,40 @@
 <% if document.holdings.present? %>
-  <span class="label label-default">At the library</span> <%= document.holdings.libraries.map(&:name).join(', ') %>
-    <% document.holdings.libraries.each do |library| %>
-      <table class="table table-condensed availability">
-        <thead>
-          <tr class='active'>
-            <th><%= library.name %></th>
-            <th class='col-xs-4'>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% library.locations.each do |location| %>
-            <% if location.more_than_one_item? %>
-              <tr>
-                <td><strong><%= location.name%></strong></td>
-                <td>&nbsp;</td>
-              </tr>
-            <% end %>
-            <% location.items.each do |item| %>
-              <tr>
-                <td class="<%= 'indent-callnumber' if location.more_than_one_item? %>">
-                  <% if location.one_item? %>
-                    <strong><%= location.name %></strong> : 
-                  <% end %>
-                  <%= item.callnumber %>
-                </td>
-                <td data-barcode="<%= item.barcode %>">
-                  <i class="availability-icon <%= item.status.availability_class %>"></i>
-                  <% if item.on_reserve? %>
-                    On Reserve <%= item.loan_period %>
-                  <% else %>
-                    <%= item.status.status_text%>
-                  <% end %>
-                </td>
-              </tr>
-            <% end %>
+  <% document.holdings.libraries.each do |library| %>
+    <table class="table table-condensed availability">
+      <thead>
+        <tr class='active'>
+          <th><%= library.name %></th>
+          <th class='col-xs-4'>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% library.locations.each do |location| %>
+          <% if location.more_than_one_item? %>
+            <tr>
+              <td><strong><%= location.name%></strong></td>
+              <td>&nbsp;</td>
+            </tr>
           <% end %>
-        </tbody>
-      </table>
-    <% end %>
+          <% location.items.each do |item| %>
+            <tr>
+              <td class="<%= 'indent-callnumber' if location.more_than_one_item? %>">
+                <% if location.one_item? %>
+                  <strong><%= location.name %></strong> :
+                <% end %>
+                <%= item.callnumber %>
+              </td>
+              <td data-barcode="<%= item.barcode %>">
+                <i class="availability-icon <%= item.status.availability_class %>"></i>
+                <% if item.on_reserve? %>
+                  On Reserve <%= item.loan_period %>
+                <% else %>
+                  <%= item.status.status_text%>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
 <% end %>

@@ -16,6 +16,8 @@
   <% end %>
 </dl>
 
+<%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
+
 <% if document.collection_members.present? %>
   <%= render :partial => "image_collection_filmstrip", :locals => { :collection_document => document } %>
 <% end %>

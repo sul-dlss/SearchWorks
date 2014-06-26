@@ -24,3 +24,5 @@
     <dd><%= document.extent %></dd>
   <% end %>
 </dl>
+
+<%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
