@@ -7,9 +7,9 @@
         <dl class="dl-invert">
           <dt>DIGITAL CONTENT</dt>
           <dd><%= link_to_collection_members(pluralize(@document.collection_members.total, 'item'), @document) %></dd>
-          <% if @document[:physical].present? %>
-            <dt>PHYSICAL EXTENT</dt>
-            <dd><%= @document[:physical].join(', ') %></dd>
+          <% if @document.extent.present? %>
+            <dt><%= @document.extent_label %></dt>
+            <dd><%= @document.extent %></dd>
           <% end %>
           <% if @document.index_links.finding_aid.present? %>
             <dt>FINDING AID</dt>

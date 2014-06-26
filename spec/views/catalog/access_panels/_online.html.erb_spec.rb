@@ -34,7 +34,7 @@ describe "catalog/access_panels/_online.html.erb" do
     end
     describe "database" do
       before do
-        assign(:document, SolrDocument.new(marcxml: simple_856, format: ["Database"]))
+        assign(:document, SolrDocument.new(marcxml: simple_856, format_main_ssim: ["Database"]))
       end
       it "should render a special panel heading" do
         render
