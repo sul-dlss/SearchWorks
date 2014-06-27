@@ -114,8 +114,6 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field "title_uniform_display", :label => "Title"
-    config.add_index_field "vern_title_uniform_display", :label => "Title"
     config.add_index_field "author_person_display", :label => "Author/Creator"
     config.add_index_field "vern_author_person_display", :label => "Author/Creator"
     config.add_index_field "author_corp_display", :label => "Corporate Author"

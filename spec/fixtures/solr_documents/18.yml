@@ -6,6 +6,9 @@
 :language: German
 :format: Image
 :format_main_ssim: Image
+:display_type:
+  - sirsi
+:marcbib_xml: <%= uniform_title_fixture %>
 :imprint_display: 1933
 :access_facet: Online
 :building_facet: "Math & Statistics"
