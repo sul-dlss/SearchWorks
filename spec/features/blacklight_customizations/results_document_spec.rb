@@ -12,7 +12,6 @@ feature "Results Document Metadata" do
       expect(page).to have_css("span.main-title-date", text: "[2000 - ]", visible: false)
 
       within "ul.document-metadata" do
-        expect(page).to have_css("li", text: "An object, aliquet sed mauris molestie, suscipit tempus", visible: true)
         expect(page).to have_css("li", text: "Doe, Jane", visible: true)
         expect(page).to have_css("li", text: "1990", visible: true)
       end
