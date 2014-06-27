@@ -62,7 +62,7 @@
         }, this));
 
         $("#content").on('click', $.proxy(function(e) {
-          if (!currentPreview(e)){
+          if (!currentPreview(e) && (typeof $(e.target).data('accordion-section-target') === 'undefined')){
               closePreview();
           }
 
