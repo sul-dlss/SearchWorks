@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Advanced Search", js: true, feature: true, :"data-integration" => true do
+describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integration" => true do
   before do
     visit advanced_search_path
   end
@@ -342,25 +342,26 @@ describe "Advanced Search", js: true, feature: true, :"data-integration" => true
     end
   end
   describe "Searches with date ranges" do
-    pending "should see Date: 1900 - 2000" do
+    it "should see Date: 1900 - 2000" do
       fill_in "search_author", with: "Rowling"
-      # Date range stuff
+      fill_in "range_pub_year_tisim_begin", with: "1900"
+      fill_in "range_pub_year_tisim_end", with: "2000"
       click_on "advanced-search-submit"
-      expect(page).to have_css("selector", text: "Date: 1900 - 2000")
+      expect(page).to have_css("span", text: "1900 to 2000")
     end
   end
   describe "Searches without date ranges" do
-    pending "should see Date:  - " do
+    it "should not see date facet open" do
       fill_in "search_author", with: "Rowling"
-      # Date range stuff
       click_on "advanced-search-submit"
-      expect(page).to have_css("selector", text: "Date:  - ")
+      expect(page).to have_css("div.collapsed.collapse-toggle.panel-heading", text: "Date")
     end
   end
   describe "Faceting on advanced searches with date ranges" do
-    pending "should get between 5000 and 6000 results" do
+    it "should get between 5000 and 6000 results" do
       fill_in "search", with: "France"
-      # Date range stuff 1789 - 1800
+      fill_in "range_pub_year_tisim_begin", with: "1789"
+      fill_in "range_pub_year_tisim_end", with: "1800"
       click_on "advanced-search-submit"
       within ".page_entries" do
         expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 5000)).to be_true
