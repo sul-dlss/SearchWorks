@@ -47,6 +47,13 @@
       <dd><%= [languages.join(", "), marc_languages.join(", ")].compact.join(". ") %></dd>
     <%- end -%>
 
+    <% if (characteristics = document.marc_characteristics).present? %>
+      <% characteristics.each do |characteristic| %>
+        <dt><%= characteristic.label %>:</dt>
+        <dd><%= characteristic.values.join(' ') %></dd>
+      <% end %>
+    <% end %>
+
     <%= render 'catalog/dates_from_solr' %>
 
     <%- physical_desc = get_data_with_label(document, "Physical description:", 'physical')%>

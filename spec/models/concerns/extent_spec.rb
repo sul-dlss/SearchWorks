@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe Extent do
+  include MarcMetadataFixtures
   let(:no_format) { SolrDocument.new() }
   let(:single_format) {
     SolrDocument.new(
@@ -43,6 +44,12 @@ describe Extent do
         physical: ['Extent1', 'Extent2']
       )
     }
+    let(:marc_extent) {
+      SolrDocument.new(
+        physical: ['Extent'],
+        marcbib_xml: marc_characteristics_fixture
+      )
+    }
     it "should not be present if the appropriate metadata is not available" do
       expect(no_extent.extent).to_not be_present
     end
@@ -51,6 +58,9 @@ describe Extent do
     end
     it "should join multiple extent statements" do
       expect(multi_extent.extent).to eq 'Extent1, Extent2'
+    end
+    it "should join physical and characteristics statements" do
+      expect(marc_extent.extent).to eq 'Extent Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.'
     end
   end
 end

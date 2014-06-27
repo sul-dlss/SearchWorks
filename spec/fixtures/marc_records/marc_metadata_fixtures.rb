@@ -710,6 +710,30 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def marc_characteristics_fixture
+    <<-xml
+      <record>
+        <datafield tag="344" ind1=" " ind2=" ">
+          <subfield code="a">digital</subfield>
+          <subfield code="b">optical</subfield>
+          <subfield code="g">surround</subfield>
+          <subfield code="g">stereo</subfield>
+          <subfield code="h">Dolby</subfield>
+          <subfield code="2">rda</subfield>
+        </datafield>
+        <datafield tag="346" ind1=" " ind2=" ">
+          <subfield code="b">NTSC</subfield>
+          <subfield code="2">rda</subfield>
+        </datafield>
+        <datafield tag="347" ind1=" " ind2=" ">
+          <subfield code="a">video file</subfield>
+          <subfield code="b">DVD video</subfield>
+          <subfield code="e">Region 1</subfield>
+          <subfield code="2">rda</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def no_fields_fixture
     "<record></record>"
   end

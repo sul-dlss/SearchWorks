@@ -4,10 +4,22 @@ module Extent
   end
 
   def extent
-    Array[self[:physical]].flatten.join(', ')
+    [physical_string, characteristics_string].compact.join(' ')
   end
 
   private
+
+  def physical_string
+    return nil unless self[:physical].present?
+    Array[self[:physical]].flatten.join(', ')
+  end
+
+  def characteristics_string
+    return nil unless self.marc_characteristics.present?
+    self.marc_characteristics.map do |characteristic|
+      "#{characteristic.label}: #{characteristic.values.join(' ')}"
+    end.join(' ')
+  end
 
   def sanitized_format
     if self[format_key].present?
