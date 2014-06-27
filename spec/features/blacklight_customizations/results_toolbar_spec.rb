@@ -17,9 +17,7 @@ feature "Results Toolbar", js: true do
       end
       expect(page).to have_css("div#view-type-dropdown a")
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
-      within "#select_all-dropdown" do
-        expect(page).to have_css("span.visible-md.visible-lg", text: "Select all")
-      end
+      expect(page).to have_css("#select_all-dropdown", text: "Select all")
       expect(page).to_not have_css("a", text: /Cite/)
       expect(page).to_not have_css("button", text: /Send/)
     end

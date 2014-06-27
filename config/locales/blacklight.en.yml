@@ -9,12 +9,12 @@ en:
       form:
         submit: ''
       sort:
-        label_small: 'Sort'
+        label_html: 'Sort<span class="hidden-sm"> by relevance</span>'
       view:
         label: 'View'
         brief: 'Brief'
       per_page:
-        button_label_small: '%{count}'
+        button_label_html: '%{count}<span class="hidden-sm"> per page</span>'
       pagination_info:
         pages:
           one: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
@@ -22,8 +22,7 @@ en:
         no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
-        all: 'Select all'
-        all_small: '&#10004; all'
+        all_html: '<span class="fa fa-check-square-o"></span> <span class="hidden-sm hidden-xs">Select </span>all'
       selection_title: 'selection'
       clear:
         success: 'Your selections have been deleted.'
