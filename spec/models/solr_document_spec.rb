@@ -1,6 +1,21 @@
 require "spec_helper"
 
 describe SolrDocument do
+  include MarcMetadataFixtures
+  describe "marc field" do
+    let(:marcxml) { SolrDocument.new( marcxml: metadata1 ) }
+    let(:marcbib_xml) { SolrDocument.new( marcbib_xml: metadata1 ) }
+    it "should respond to #to_marc for for marcxml" do
+      expect(marcxml).to respond_to(:to_marc)
+      expect(marcxml.to_marc).to be_a MARC::Record
+      expect(marcxml.to_marc).to eq marcbib_xml.to_marc
+    end
+    it "should respond to #to_marc for for marcbib_xml" do
+      expect(marcbib_xml).to respond_to(:to_marc)
+      expect(marcbib_xml.to_marc).to be_a MARC::Record
+      expect(marcbib_xml.to_marc).to eq marcxml.to_marc
+    end
+  end
   describe "MarcLinks" do
     it "should include marc links" do
       expect(subject).to be_kind_of MarcLinks

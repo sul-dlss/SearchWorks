@@ -18,11 +18,17 @@ class SolrDocument
   include SolrHoldings
 
   include Blacklight::Solr::Document
+
+  def initialize(*args)
+    super
+    self[:marcfield] = (self[:marcxml] || self[:marcbib_xml])
+  end
+
       # The following shows how to setup this blacklight document to display marc documents
-  extension_parameters[:marc_source_field] = :marcxml
+  extension_parameters[:marc_source_field] = :marcfield
   extension_parameters[:marc_format_type] = :marcxml
   use_extension( Blacklight::Solr::Document::Marc) do |document|
-    document.key?( :marcxml  )
+    document.key?( :marcxml  ) || document.key?( :marcbib_xml  )
   end
 
   field_semantics.merge!(

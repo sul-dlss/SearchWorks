@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'selected_databases'
 
 describe SelectedDatabases do
-  let(:documents) { [OpenStruct.new(id: "5749286"), OpenStruct.new(id: "7630484")] }
+  let(:documents) { [SolrDocument.new(id: "5749286"), SolrDocument.new(id: "7630484")] }
   let(:selected_databases) { SelectedDatabases.new(documents) }
   describe "#databases" do
     it "should return the same number of databases that are in the original document list" do

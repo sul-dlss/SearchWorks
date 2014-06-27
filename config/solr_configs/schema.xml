@@ -11,6 +11,7 @@
     <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" />
     <!-- entire marc bib record -->
     <field name="marcxml" type="string" indexed="false" stored="true" />
+    <field name="marcbib_xml" type="string" indexed="false" stored="true" />
     <!-- the catch-all field for all text -->
     <field name="all_search" type="text" indexed="true" stored="false" />
     <field name="all_unstem_search" type="textNoStem" indexed="true" stored="false" />
