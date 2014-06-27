@@ -5,6 +5,7 @@ describe "catalog/_index_location.html.erb" do
     before do
       view.stub(:document).and_return(
         SolrDocument.new(
+          id: '123',
           item_display: [
             '123 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
           ]
@@ -21,6 +22,7 @@ describe "catalog/_index_location.html.erb" do
     before do
       view.stub(:document).and_return(
         SolrDocument.new(
+          id: '123',
           item_display: [
             '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
           ]
@@ -40,6 +42,7 @@ describe "catalog/_index_location.html.erb" do
     before do
       view.stub(:document).and_return(
         SolrDocument.new(
+          id: '123',
           item_display: [
             '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
             '456 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
@@ -56,6 +59,44 @@ describe "catalog/_index_location.html.erb" do
     end
     it "should add an class for indentation" do
       expect(rendered).to have_css('tbody tr td.indent-callnumber', count: 2)
+    end
+  end
+  describe "request links" do
+    describe "location level request links" do
+      describe "for a single item" do
+        before do
+          view.stub(:document).and_return(
+            SolrDocument.new(
+              id: '123',
+              item_display: [
+                '123 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
+              ]
+            )
+          )
+          render
+        end
+        it "should put the request link with the status icon (since the line is collapsed)" do
+          expect(rendered).to have_css('tbody td[data-barcode] a', text: 'Request')
+        end
+      end
+      describe "for multiple items" do
+        before do
+          view.stub(:document).and_return(
+            SolrDocument.new(
+              id: '123',
+              item_display: [
+                '123 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
+                '456 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
+              ]
+            )
+          )
+          render
+        end
+        it "should put the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
+          expect(rendered).to have_css('tbody td a', text: 'Request')
+          expect(rendered).to_not have_css('tbody td[data-barcode] a', text: 'Request')
+        end
+      end
     end
   end
 end
