@@ -9,7 +9,8 @@ describe "catalog/_accordion_section_online.html.erb" do
       assign(:document,
         SolrDocument.new(
           id: "12345",
-          isbn_display: [ 123 ]
+          isbn_display: [ 123 ],
+          marcbib_xml: stanford_only_856
         )
       )
       render
@@ -20,6 +21,9 @@ describe "catalog/_accordion_section_online.html.erb" do
       expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
       expect(rendered).to have_css('.details .google-books')
       expect(rendered).to have_css('.details a', text: "Google Books Full view")
+    end
+    it "should include the links" do
+      expect(rendered).to have_css('span.stanford-only a', text: 'Link text', count: 4)
     end
   end
 
