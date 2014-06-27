@@ -17,7 +17,7 @@
       attachEvents();
 
       function attachEvents() {
-        $header.on('click', function() {
+        $header.on('click', $.proxy(function() {
           var $arrow = $header.find('i.fa');
 
           if ($arrow.hasClass('fa-caret-right')) {
@@ -29,7 +29,7 @@
             $target.hide();
             $snippet.show();
           }
-        });
+        }, this));
       }
 
     });

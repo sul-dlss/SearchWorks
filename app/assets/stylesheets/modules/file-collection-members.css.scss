@@ -1,7 +1,9 @@
 .file-collection-members {
+  clear: both;
   position: relative;
   border: 1px solid $panel-inner-border;
   padding: 5px;
+
   .members-number {
     position: absolute;
     padding: 3px 5px;
