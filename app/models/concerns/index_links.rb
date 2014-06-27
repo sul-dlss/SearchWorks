@@ -52,7 +52,7 @@ module IndexLinks
       @document[:url_sfx].include?(link)
     end
     def link_host(link_field)
-      uri = URI.parse(link_field)
+      uri = URI.parse(link_field.gsub('^',''))
       host = uri.host
       if host =~ /ezproxy\.stanford\.edu/
         query = CGI.parse(uri.query)
