@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resources :browse, only: :index
 
+  get "browse/nearby" => "browse#nearby"
+
   get "feedback" => "feedback_forms#new"
   get "backend_lookup" => "catalog#backend_lookup", defaults: {format: :json}, as: :catalog_backend_lookup
 

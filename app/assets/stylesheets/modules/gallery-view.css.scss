@@ -2,7 +2,23 @@
    being overridden.
 */
 
-#documents.gallery {
+$gallery-document-width: 184px;
+
+.gallery {
+  .item-thumb {
+    height: 220px;
+  }
+
+  .callnumber-bar {
+    background-color: $gray-light;
+    color: $body-bg;
+    width: $gallery-document-width;
+    @extend .text-center;
+    margin-left: -5px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: $line-height-base;
+  }
 
   .caption {
     padding-left: 4px;
@@ -19,7 +35,7 @@
     margin: 0px 5px 15px 5px;
     float: left;
     display: inline;
-    width: 184px;
+    width: $gallery-document-width;
     height: 400px;
     border: 1px solid $panel-inner-border;
   }

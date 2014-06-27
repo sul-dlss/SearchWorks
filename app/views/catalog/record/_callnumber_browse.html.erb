@@ -3,10 +3,25 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h2>Browse nearby</h2>
-      <% document.holdings.unique_callnumbers.each do |callnumber| %>
-        <span class='callnumber'>
-          <%= link_to_callnumber_browse(document, callnumber) %>
+      <% document.holdings.unique_callnumbers.each_with_index do |callnumber, index| %>
+        <span class="callnumber">
+          <%= link_to_callnumber_browse(
+                document,
+                callnumber,
+                index
+               ) %>
         </span>
+      <% end %>
+      <% document.holdings.unique_callnumbers.each_with_index do |callnumber, index| %>
+        <div id="callnumber-<%=index%>" class="collapse embed-callnumber-browse-container">
+          <div class="embedded-items"><div class="gallery"></div></div>
+          <a class="left embed-browse-control" href="#" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right embed-browse-control" href="#" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
       <% end %>
     </div>
   </div>

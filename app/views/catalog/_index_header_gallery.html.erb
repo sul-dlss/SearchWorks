@@ -1,6 +1,10 @@
 <% # header bar for doc items in index view gallery %>
 <div class="documentHeader">
-
+  <div class="callnumber-bar">
+    <% if document.holdings.callnumbers.present? %>
+      <%= document.holdings.unique_callnumbers.first.callnumber %>
+    <% end %>
+  </div>
   <h5 class="index_title">
     <% counter = document_counter_with_offset(document_counter) %>
     <span class="glyphicon glyphicon-star-empty"></span>
