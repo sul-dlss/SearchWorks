@@ -22,6 +22,11 @@ describe IndexLinks do
       url_sfx: ['http://example.com/sfx-link']
     )
   }
+  let(:bad_url_document) {
+    SolrDocument.new(
+      url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good"]
+    )
+  }
   describe "mixin" do
     it "should add the #index_links method" do
       expect(solr_document).to respond_to(:index_links)
@@ -37,6 +42,7 @@ describe IndexLinks do
     let(:index_links) {solr_document.index_links}
     let(:finding_aid_links) {finding_aid_document.index_links}
     let(:sfx_links) { sfx_document.index_links }
+    let(:bad_links) { bad_url_document.index_links }
     it "should return both fulltext and supplemental links" do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.text).to match /^<a.*>library\.stanford\.edu<\/a>$/
@@ -54,6 +60,10 @@ describe IndexLinks do
       expect(finding_aid_links.all.first).to be_finding_aid
       expect(finding_aid_links.finding_aid.length).to eq 1
       expect(finding_aid_links.finding_aid.first.text).to match /<a href='.*oac\.cdlib\.org\/findaid\/something-else'>Online Archive of California<\/a>/
+    end
+    it "should parse bad links properly" do
+      expect(bad_links.all.length).to eq 1
+      expect(bad_links.all.first.text).to match /<a href=.*example\.com\/lookup\?\^The\+Query.*>www\.example\.com<\/a>/
     end
     it "should identify sfx URLs and link them appropriately" do
       expect(sfx_links.all.length).to eq 1

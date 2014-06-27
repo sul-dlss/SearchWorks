@@ -3,7 +3,7 @@
   id = document[:id]
   book_ids  = get_book_ids(document)
   css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
-  visible   = document.index_links.present? ?  'show' : 'hide'
+  visible   = document.access_panels.online? ?  'show' : 'hide'
 %>
 
 <div class="accordion-section online col-md-9 <%= visible %>">
@@ -12,8 +12,8 @@
   </a>
   <div class="details <%= id %>-online">
     <ul class="links">
-      <% if document.index_links.present? %>
-        <% document.index_links.each do |link| %>
+      <% if document.access_panels.online? %>
+        <% document.access_panels.online.links.each do |link| %>
           <li>
             <span class="<%= 'stanford-only' if link.stanford_only? %>">
               <%= link.text.html_safe %>
