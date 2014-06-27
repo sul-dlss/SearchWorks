@@ -7,5 +7,9 @@
 :language: French
 :format: Video
 :format_main_ssim: Video
+:display_type:
+  - sirsi
+:physical: The physical statement
+:marcbib_xml: <%= marc_characteristics_fixture %>
 :access_facet: At the Library
 :building_facet: Hoover Library
