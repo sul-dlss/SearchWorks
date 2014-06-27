@@ -12,4 +12,12 @@ feature "Databases Access Point" do
       end
     end
   end
+  scenario "database topics should be present" do
+    expect(page).to have_css('dt', text: "DATABASE TOPICS:")
+    expect(page).to have_css('dd a', text: "Biology")
+  end
+  scenario "database summaries should be present" do
+    expect(page).to have_css('dt', text: "DATABASE SUMMARY:")
+    expect(page).to have_css('dd', text: "A summary of the database")
+  end
 end

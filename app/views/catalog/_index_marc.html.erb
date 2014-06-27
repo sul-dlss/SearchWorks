@@ -1,6 +1,24 @@
 <%= render :partial => "search_results_document_fields", :locals => { :document => document } %>
 
 <dl class="dl-horizontal dl-invert">
+  <% if document.is_a_database? %>
+    <% if document[:summary_display].present? %>
+      <dt>DATABASE SUMMARY:</dt>
+      <dd>
+        <div data-behavior='truncate'>
+          <%= document[:summary_display].join(' ') %>
+        </div>
+      </dd>
+    <% end %>
+    <% if document[:db_az_subject].present? %>
+      <dt>DATABASE TOPICS:</dt>
+      <dd>
+        <%= document[:db_az_subject].map do |subject| %>
+          <% link_to(subject, catalog_index_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
+        <% end.join('; ').html_safe %>
+      </dd>
+    <% end %>
+  <% end %>
   <% if document.extent.present? %>
     <dt><%= document.extent_label %>:</dt>
     <dd><%= document.extent %></dd>
