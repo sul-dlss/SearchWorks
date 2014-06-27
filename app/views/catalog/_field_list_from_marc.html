@@ -1,0 +1,10 @@
+<% unless fields[:fields].nil? %>
+  <% fields[:fields].each do |field| %>
+    <%= field[:field] %>
+    <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
+    <%= options[:delimiter].html_safe if field != fields[:fields].last and options.has_key?(:delimiter) %>
+  <% end %>
+<% end %>
+<% unless fields[:unmatched_vernacular].nil? %>
+  <%= fields[:unmatched_vernacular].join("<br/>").html_safe -%>
+<% end %>

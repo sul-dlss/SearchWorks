@@ -9,7 +9,7 @@ module MarcHelper
         field_text = ""
         unless (Constants::HIDE_1ST_IND.include?(tag) and field.indicator1 == "1") or (Constants::HIDE_1ST_IND0.include?(tag) and field.indicator1 == "0")
           if opts[:sub_fields] and opts[:sub_fields].length > 0
-            field.each do |sub_field| 
+            field.each do |sub_field|
               field_text << "#{sub_field.value} " if opts[:sub_fields].include?(sub_field.code)
             end
           else
@@ -123,7 +123,7 @@ module MarcHelper
             link_text = ""
             temp_text = ""
             relator_text = []
-            field.each do |subfield| 
+            field.each do |subfield|
               unless ["?","="].include?(subfield.code)
                 if subfield.code == "e"
                   relator_text << subfield.value
@@ -153,7 +153,7 @@ module MarcHelper
                 text = "<dt>Contributor</dt><dd>"
                   link_text = ''
                   relator_text = ""
-                  field.each do |subfield| 
+                  field.each do |subfield|
                     if subfield.code == "e"
                       relator_text = Constants::RELATOR_TERMS[subfield.value]
                     elsif subfield.code == "4" and relator_text.blank?
@@ -191,7 +191,7 @@ module MarcHelper
           field_880 = field['6'].split("-")[0]
           match_880 = field['6'].split("-")[1].gsub("//r","")
           if match_original == match_880 and field_original == field_880
-            field.each do |sub| 
+            field.each do |sub|
               if !Constants::EXCLUDE_FIELDS.include?(sub.code)
                 return_text << sub.value
               end
@@ -247,7 +247,7 @@ module MarcHelper
       end
       marc.find_all{|f| (tag) === f.tag}.each do |field|
         text = ""
-        field.each do |sub_field| 
+        field.each do |sub_field|
           unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
             if sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
               text << "#{link_to(sub_field.value,sub_field.value)} "
@@ -268,14 +268,14 @@ module MarcHelper
         vern << vernacular.split(/[^\S]--[^\S]/).map{|w| w.strip unless w.strip.blank? }.compact unless vernacular.nil?
       end
     end
-    
-    unmatched_vern_fields = get_unmatched_vernacular(marc,"505")  
+
+    unmatched_vern_fields = get_unmatched_vernacular(marc,"505")
     unless unmatched_vern_fields.nil?
       unmatched_vern_fields.each do |vern_field|
         unmatched_vern << vern_field.split(/[^\S]--[^\S]/).map{|w| w.strip unless w.strip.blank? }.compact
       end
     end
-    
+
     new_vern = vern unless vern.empty?
     new_fields = fields unless fields.empty?
     new_unmatched_vern = unmatched_vern unless unmatched_vern.empty?
@@ -307,7 +307,7 @@ module MarcHelper
     text << "</ul>".html_safe
     return text unless text == "<ul></ul>"
   end
-  
+
   def get_subjects_array(marc)
     subs = ['600','610','611','630','650','651','653','654','655','656','657','658','690','691','693','696', '697','698','699']
     data = []
@@ -318,10 +318,10 @@ module MarcHelper
         temp_subs_text = ""
         temp_xyv_array = []
         unless (l.tag == "690" and l['a'] and l['a'].downcase.include?("collection"))
-          l.each{|sf| 
+          l.each{|sf|
             exclude = Constants::EXCLUDE_FIELDS.dup
             ["1","2","3","4","7","9"].each{|i| exclude << i}
-            unless exclude.include?(sf.code) 
+            unless exclude.include?(sf.code)
               if sf.code == "a"
                 multi_a << sf.value unless sf.code == "a" and sf.value[0,1] == "%"
               end
@@ -621,5 +621,8 @@ module MarcHelper
   end
   def render_field_from_marc(fields,opts={})
     render "catalog/field_from_marc", :fields => fields, :options => opts
+  end
+  def render_field_list_from_marc(fields,opts={})
+    render "catalog/field_list_from_marc", :fields => fields, :options => opts
   end
 end
