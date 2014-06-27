@@ -4,6 +4,7 @@ describe "preview/_show_image.html.erb" do
   include ModsFixtures
 
   let(:document) { SolrDocument.new(
+    id: '123',
     modsxml: mods_everything,
     file_id: ["123"],
     display_type: ["image"],

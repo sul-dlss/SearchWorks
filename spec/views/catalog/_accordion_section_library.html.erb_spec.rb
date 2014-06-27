@@ -6,6 +6,7 @@ describe "catalog/_accordion_section_library.html.erb" do
     before do
       assign(:document,
         SolrDocument.new(
+          id: '123',
           item_display: [
             '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
           ]

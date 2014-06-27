@@ -4,6 +4,7 @@ describe "preview/_show_file.html.erb" do
   include ModsFixtures
 
   let(:document) { SolrDocument.new(
+    id: '123',
     modsxml: mods_file,
     summary_display: [ "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet" ],
     item_display: [ "123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123" ],
