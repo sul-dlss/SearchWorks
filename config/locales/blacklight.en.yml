@@ -7,7 +7,7 @@ en:
           databases:
             title: 'Within %{access_point}'
       form:
-        submit: ''
+        submit_html: '<span class="sr-only">Search</span><span class="glyphicon glyphicon-search"></span>'
       sort:
         label_small: 'Sort'
       view:

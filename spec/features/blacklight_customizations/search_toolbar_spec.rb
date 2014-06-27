@@ -5,7 +5,7 @@ describe "Search toolbar", js: true, feature: true do
   describe "has SearchWorks customizations" do
     it "should display correct elements" do
       within "#search-navbar" do
-        expect(page.find('button.btn.btn-primary.search-btn')).to have_no_content 'Search'
+        expect(page).to have_css("button.btn.btn-primary.search-btn", text: "")
         expect(page).to have_css("li a", text: "Advanced", visible: true)
         expect(page).to have_css("li.disabled a", text: "Browse", visible: true)
         expect(page).to have_css("li a", text: /Selections/, visible: true)
