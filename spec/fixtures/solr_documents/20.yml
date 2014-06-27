@@ -7,5 +7,9 @@
 :format: Database
 :format_main_ssim: Database
 :db_az_subject: Biology
+:summary_display:
+  - A summary of the database
+:display_type:
+  - sirsi
 :access_facet: Online
 :building_facet: Law (Crown)
