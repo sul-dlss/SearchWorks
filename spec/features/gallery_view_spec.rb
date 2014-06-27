@@ -9,7 +9,7 @@ feature "Gallery View" do
     expect(page).to have_css("span.glyphicon.glyphicon-gallery.view-icon-gallery")
     expect(page).to have_css("div.callnumber-bar", text: "ABC")
     expect(page).to have_css("div.callnumber-bar", count: 2, text: /./)
-    expect(page).to have_css(".gallery-document a span.fake-cover", text: "An object", visible: true)
+    expect(page).to have_css(".gallery-document a[tabindex='-1'] span.fake-cover", text: "An object", visible: true)
     expect(page).to_not have_css(".gallery-document a div.fake-cover-text", text: "Car : a drama of the American workplace", visible: true)
     expect(page).to have_css(".gallery-document h5.index_title", text: "An object")
     expect(page).to have_css(".gallery-document button.btn-primary", text: "Preview")

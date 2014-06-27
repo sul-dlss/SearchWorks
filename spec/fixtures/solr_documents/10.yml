@@ -7,6 +7,8 @@
 :format_main_ssim: Book
 :access_facet: At the Library
 :building_facet: Green
+:display_type:
+  - sirsi
 :item_display:
   - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-"
   - "456 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- DEF -|-"

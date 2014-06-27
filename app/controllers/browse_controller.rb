@@ -2,6 +2,7 @@ class BrowseController < ApplicationController
   include Blacklight::Catalog::SearchContext
   include Blacklight::Configurable
   include Blacklight::SolrHelper
+  include Thumbnail
   copy_blacklight_config_from(CatalogController)
 
   def index
@@ -52,9 +53,4 @@ class BrowseController < ApplicationController
   def _prefixes
     @_prefixes ||= super + ['catalog']
   end
-
-  def thumbnail(document, options = {})
-    view_context.render_cover_image(document, options)
-  end
-  helper_method :thumbnail
 end

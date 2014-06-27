@@ -10,6 +10,8 @@ class CatalogController < ApplicationController
 
   include CallnumberSearch
 
+  include Thumbnail
+
   helper Openseadragon::OpenseadragonHelper
 
   before_filter :add_show_partials
@@ -297,12 +299,5 @@ class CatalogController < ApplicationController
   def add_show_partials
     blacklight_config.show.partials += ["catalog/record/record_metadata"]
   end
-
-
-  def thumbnail(document, options = {})
-    view_context.render_cover_image(document, options)
-  end
-
-  helper_method :thumbnail
 
 end

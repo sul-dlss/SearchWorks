@@ -46,4 +46,18 @@ feature "Results Document Metadata" do
     end
   end
 
+  scenario "should have the stacks image for objects with image behavior" do
+    visit root_path
+    first("#q").set '35'
+    click_button 'search'
+
+    within 'div.document' do
+      within('.document-thumbnail') do
+        expect(page).to have_css('a[tabindex="-1"]')
+        expect(page).to have_css('img.stacks-image')
+        expect(page).to have_css('img.stacks-image[alt=""]')
+      end
+    end
+  end
+
 end
