@@ -1,8 +1,8 @@
-<% 
-  document ||= @document 
-  visible = document.access_panels.online.links.blank? ?  'hide' : 'show' 
-  book_ids = get_book_ids(@document) 
-  css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') 
+<%
+  document ||= @document
+  visible = document.access_panels.online.links.blank? ?  'hide' : 'show'
+  book_ids = get_book_ids(@document)
+  css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
 %>
 
 <div class="panel panel-default panel-online <%= visible %>">
@@ -35,7 +35,7 @@
             </ul>
           </div>
           <div class="col-lg-5 col-md-12 btn-preview">
-          <%= link_to(image_tag('gbs_preview_button.gif'), '', class: 'preview-link') %>
+          <%= image_tag "gbs_preview_button.gif", alt:"" %>
           </div>
         </div>
       </li>
@@ -48,4 +48,3 @@
     </div>
   <% end %>
 </div>
-

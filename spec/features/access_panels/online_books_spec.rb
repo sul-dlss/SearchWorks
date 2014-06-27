@@ -14,7 +14,7 @@ feature "Record view" do
         expect(page).to have_css("div.panel-heading", visible: true)
         expect(page).to have_css("a.about[href='http://books.google.com/books?id=3xmDzzNiwiUC&source=gbs_ViewAPI']", text: "About this book", visible: true)
         expect(page).to have_css("a.limited-preview[href='http://books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&source=gbs_ViewAPI']", text: "Limited preview", visible: true)
-        expect(page).to have_css("a.preview-link[href='http://books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&source=gbs_ViewAPI']")
+        expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
       end
     end
 
