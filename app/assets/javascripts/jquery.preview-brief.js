@@ -34,6 +34,7 @@
           .html('<span class="glyphicon glyphicon-chevron-up"></span> Close');
 
         $briefTarget.hide();
+
         $previewTarget.show();
       }
 

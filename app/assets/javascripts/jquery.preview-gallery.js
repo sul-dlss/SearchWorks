@@ -73,12 +73,11 @@
           if (!currentPreview(e)){
               closePreview();
           }
-
         }, this));
       }
 
       function currentPreview(e){
-        if (e.target === $triggerBtn[0]){
+        if (e.target === $triggerBtn[0] || typeof $(e.target).data('data-accordion-section-target') === 'undefined'){
           return true;
         }else{
           return false;

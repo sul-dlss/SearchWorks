@@ -47,6 +47,10 @@ var PreviewContent = (function() {
         .append(content)
         .plugGoogleBookContent()
         .find('.image-filmstrip').renderFilmstrip();
+
+      target.find('*[data-accordion-section-target]').accordionSection();
+      target.find("[data-behavior='trunk8']").trunk8();
+
       Blacklight.do_bookmark_toggle_behavior();
       break;
     case 'prepend':
@@ -54,6 +58,10 @@ var PreviewContent = (function() {
         .prepend(content)
         .plugGoogleBookContent()
         .find('.image-filmstrip').renderFilmstrip();
+
+      target.find('*[data-accordion-section-target]').accordionSection();
+      target.find("[data-behavior='trunk8']").trunk8();
+
       Blacklight.do_bookmark_toggle_behavior();
       break;
     case 'returnOnly':

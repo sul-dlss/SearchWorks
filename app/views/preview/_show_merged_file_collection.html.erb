@@ -1,4 +1,8 @@
+<% document ||= @document %>
+
 <%= render 'catalog/record/marc_upper_metadata_items' %>
+
+<%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>
 
 <% if document.collection_members(rows: 3).present? %>
   <%= render 'catalog/file_collection_members' %>

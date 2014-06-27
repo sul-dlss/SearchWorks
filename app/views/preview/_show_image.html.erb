@@ -1,3 +1,5 @@
+<% document ||= @document %>
+
 <div class="row">
   <div class="col-md-6">
     <img class="preview-img" src="<%= @document.image_urls(:large).first %>">
@@ -6,3 +8,5 @@
     <%= render 'catalog/record/mods_upper_metadata_section' %>
   </div>
 </div>
+
+<%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>

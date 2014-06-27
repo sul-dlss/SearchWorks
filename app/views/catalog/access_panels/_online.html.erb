@@ -1,8 +1,9 @@
-<% document ||= @document %>
-<% visible = document.access_panels.online.links.blank? ?  'hide' : 'show' %>
-
-<% book_ids = get_book_ids(@document) %>
-<% css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>
+<% 
+  document ||= @document 
+  visible = document.access_panels.online.links.blank? ?  'hide' : 'show' 
+  book_ids = get_book_ids(@document) 
+  css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') 
+%>
 
 <div class="panel panel-default panel-online <%= visible %>">
   <div class="panel-heading">

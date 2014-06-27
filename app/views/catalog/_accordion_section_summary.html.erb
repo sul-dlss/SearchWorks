@@ -1,0 +1,17 @@
+<% id = document[:id] %>
+
+<% unless document[:summary_display].blank? %>
+
+  <div class="accordion-section summary col-md-9">
+    <a class="header" data-accordion-section-target=".<%= id %>-summary">
+      Summary <i class="fa fa-caret-right"></i>
+    </a>
+    <span class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
+      <%= document[:summary_display].first %>
+    </span>
+    <div class="details <%= id %>-summary">
+      <%= document[:summary_display].first %>
+    </div>
+  </div>
+
+<% end %>

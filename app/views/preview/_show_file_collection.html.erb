@@ -1,2 +1,5 @@
+<% document ||= @document %>
+
 <%= render 'catalog/record/mods_upper_metadata_section' %>
+<%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>
 <%= render 'catalog/file_collection_members' %>
