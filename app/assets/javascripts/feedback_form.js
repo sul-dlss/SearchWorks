@@ -90,6 +90,11 @@ Blacklight.onLoad(function(){
           //Updates reporting from fields for current location
           $('span.reporting-from-field').html(location.href);
           $('input.reporting-from-field').val(location.href);
+
+          // Listen for form open and then add focus to message
+          $('#feedback-form').on('shown.bs.collapse', function () {
+            $("textarea#message").focus();
+          });
         }
     };
 
