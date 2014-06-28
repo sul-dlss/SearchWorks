@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   resources :preview, only: :show
 
+  resources :availability, only: :index
+
   get "selections" => "bookmarks#index"
 
   resources :recent_selections, only: :index

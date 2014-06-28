@@ -13,9 +13,8 @@ describe "catalog/_index_location.html.erb" do
       )
       render
     end
-    it "should include the status icon and text" do
+    it "should include the status icon" do
       expect(rendered).to have_css('tbody td i.page')
-      expect(rendered).to have_css('tbody td', text: "request")
     end
   end
   describe "single item in a location" do

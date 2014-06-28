@@ -1,46 +1,52 @@
 <% document ||= @document %>
 <% if document.access_panels.library_locations? %>
-  <% document.access_panels.library_locations.libraries.each do |library| %>
-    <% if library.is_viewable? %>
-      <div class="panel panel-default panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
-        <div class="library-location-heading access-panel-heading">
-          <%= thumb_for_library(library) %>
-          <div class="library-location-heading-text">
-            <h3><%= link_to_library(library) %></h3>
-            <div class="small location-hours-today">
+  <div data-live-lookup-id="<%= document[:id] %>" data-live-lookup-url="<%= availability_index_path %>">
+    <% document.access_panels.library_locations.libraries.each do |library| %>
+      <% if library.is_viewable? %>
+        <div class="panel panel-default panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
+          <div class="library-location-heading access-panel-heading">
+            <%= thumb_for_library(library) %>
+            <div class="library-location-heading-text">
+              <h3><%= link_to_library(library) %></h3>
+              <div class="small location-hours-today"></div>
             </div>
           </div>
-        </div>
-        <div class="panel-body">
-          <ul class="list-unstyled location">
-            <% library.locations.each do |location| %>
-              <li>
-                <strong class="location-name"><%= location.name %></strong>
-                <% if library.location_level_request? || location.location_level_request? %>
-                  <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
-                <% end %>
-                <ul class="list-unstyled items">
-                  <% location.items.each do |item| %>
-                    <li data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
-                      <i class="availability-icon <%= item.status.availability_class %>"></i>
-                      <%= item.callnumber %>
-                      <% if item.must_request? %>
-                        <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs pull-right') %>
-                      <% end %>
-                      <% unless item.treat_current_location_as_home_location? %>
-                        <div class="current-location"><%= item.current_location.name %></div>
-                      <% end %>
-                      <% if item.on_reserve? %>
-                        <div class="reserve-note">On Reserve <%= item.loan_period %></div>
-                      <% end %>
-                    </li>
+        
+          <div class="panel-body">
+            <ul class="list-unstyled location">
+              <% library.locations.each do |location| %>
+                <li>
+                  <strong class="location-name"><%= location.name %></strong>
+                  <% if library.location_level_request? || location.location_level_request? %>
+                    <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
                   <% end %>
-                </ul>
-              </li>
-            <% end %>
-          </ul>
+                  <ul class="list-unstyled items">
+                    <% location.items.each do |item| %>
+                      <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
+                        <i class="availability-icon <%= item.status.availability_class %>"></i>
+                        <%= item.callnumber %>
+                        <div class="request-link pull-right">
+                          <% if item.must_request? %>
+                            <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs') %>
+                          <% end %>
+                        </div>
+                        <div class="current-location">
+                          <% unless item.treat_current_location_as_home_location? %>
+                            <%= item.current_location.name %>
+                          <% end %>
+                        </div>
+                        <% if item.on_reserve? %>
+                          <div class="reserve-note">On Reserve <%= item.loan_period %></div>
+                        <% end %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </div>
-      </div>
       <% end %>
-  <% end %>
+    <% end %>
+  </div>
 <% end %>
