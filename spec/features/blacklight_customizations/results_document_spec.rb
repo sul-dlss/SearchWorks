@@ -10,11 +10,6 @@ feature "Results Document Metadata" do
     within "#documents" do
       expect(page).to have_css("a", text: "An object", visible: true)
       expect(page).to have_css("span.main-title-date", text: "[2000 - ]", visible: false)
-
-      within "ul.document-metadata" do
-        expect(page).to have_css("li", text: "Doe, Jane", visible: true)
-        expect(page).to have_css("li", text: "1990", visible: true)
-      end
     end
   end
 

@@ -4,7 +4,11 @@
 :title_display: Sint aute consequat sint esse duis amet dolore fugiat Lorem.
 :language: Italian
 :format: Newspaper
+:display_type:
+  - sirsi
+:author_meeting_display:
+  - Most Excellent Meeting
+:marcbib_xml: <%= metadata1 %>
 :format_main_ssim: Newspaper
 :access_facet: At the Library
 :building_facet: Special Collections
-

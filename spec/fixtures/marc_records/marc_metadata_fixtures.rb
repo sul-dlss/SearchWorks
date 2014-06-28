@@ -605,7 +605,7 @@ module MarcMetadataFixtures
     xml
   end
   def multiple_marc_264_fixture
-    <<-xml 
+    <<-xml
       <record>
         <datafield tag="264" ind1=" " ind2="0">
           <subfield code="a">SubfieldA</subfield>
