@@ -6,9 +6,9 @@ describe "Search toolbar", js: true, feature: true do
     it "should display correct elements" do
       within "#search-navbar" do
         expect(page).to have_css("button.btn.btn-primary.search-btn", text: "")
-        expect(page).to have_css("li a", text: "Advanced", visible: true)
-        expect(page).to have_css("li.disabled a", text: "Browse", visible: true)
-        expect(page).to have_css("li a", text: /Selections/, visible: true)
+        expect(page).to have_css("li a", text: "ADVANCED", visible: true)
+        expect(page).to have_css("li.disabled a", text: "BROWSE", visible: true)
+        expect(page).to have_css("li a", text: /SELECTIONS/, visible: true)
       end
     end
   end
@@ -23,20 +23,20 @@ describe "Search toolbar", js: true, feature: true do
     describe "clear list", js:true do
       it "should clear selections and update selections count and recently added list" do
         visit catalog_index_path f: {format: ["Book"]}, view: "default"
-        expect(page).to have_css("li a", text: /Selections \(0\)/)
+        expect(page).to have_css("li a", text: /SELECTIONS \(0\)/)
         click_link "Selections"
         expect(page).to have_css("li#show-list.disabled")
         expect(page).to have_css("li#clear-list.disabled")
         page.all('label.toggle_bookmark')[0].click
-        expect(page).to have_css("li a", text: /Selections \(1\)/)
+        expect(page).to have_css("li a", text: /SELECTIONS \(1\)/)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 1)
         page.all('label.toggle_bookmark')[1].click
-        expect(page).to have_css("li a", text: /Selections \(2\)/)
+        expect(page).to have_css("li a", text: /SELECTIONS \(2\)/)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 2)
         page.all('label.toggle_bookmark')[1].click
-        expect(page).to have_css("li a", text: /Selections \(1\)/)
+        expect(page).to have_css("li a", text: /SELECTIONS \(1\)/)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 1)
         click_link "Selections"

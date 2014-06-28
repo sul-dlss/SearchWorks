@@ -1,8 +1,3 @@
-#outer-container {
-  margin-top: 10px;
-  border: 1px solid $panel-inner-border;
-}
-
 #topnav {
   border: none;
   background: none;
@@ -11,10 +6,9 @@
   width: 100%;
 }
 #search-navbar {
-  border-top: 1px solid $panel-inner-border;
-  border-bottom: 1px solid $panel-inner-border;
-  margin: 0 -15px;
+  border: none !important;
   background: none;
+  padding: 0 0;
 }
 
 #masthead {
@@ -27,4 +21,81 @@
 
 #main-flashes{
   padding-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+  #topnav, #search-navbar, #main-container, #sul-footer, #masthead-container {
+    width: 750px;
+  }
+}
+@media (min-width: 980px) {
+  #topnav, #search-navbar, #main-container, #sul-footer, #masthead-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  #topnav, #search-navbar, #main-container, #sul-footer, #masthead-container {
+    width: 1170px;
+  }
+}
+
+
+#outer-container, #topnav-container, #search-navbar-container, #sul-footer-container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-align: center;
+}
+#topnav-container {
+	background-color: #8c1515;
+	padding: 2px 0;
+	position: relative;
+}
+
+#search-navbar-container {
+	background-color: #f2f1eb;
+	padding: 10px 0;
+	border-bottom: 3px solid $sul-search-navbar-bg-color;
+}
+
+.header-logo > a, h3.panel-title a {
+	border-bottom: none;
+}
+.header-links {
+	float: right;
+}
+.header-links a {
+	font-weight: 200;
+	margin-left: 15px;
+	padding-bottom: 3px;
+	color: #FBFBF9;
+	border-bottom: none;
+}
+.header-links a:hover {
+	border-bottom: 3px solid #FBFBF9;
+}
+#search-navbar a {
+	border-bottom: none;
+}
+#topnav, #search-navbar, #main-container, #sul-footer, #masthead-container {
+	margin: 0 auto;
+	text-align: left;
+	padding: 0 15px;
+}
+#search-navbar {
+	padding: 0 0;
+}
+#topnav {
+	padding: 5px 10px;
+}
+ul.searchbar-right {
+	text-transform: uppercase;
+}
+
+
+a#sul-logo {
+	float: left;
+	border-bottom: none;
 }

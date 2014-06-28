@@ -1,12 +1,14 @@
-<header id="topnav" class="" role="banner">
-  <%= link_to(image_tag('sul-logo.png', class: 'navbar-brand'), 'http://library.stanford.edu') %>
-  <div class="navbar-right">
-    <ul class="nav navbar-nav">
-      <li><%= link_to "My Account", "http://library.stanford.edu/myaccount" %></li>
-      <li class=""><%= link_to "Feedback", feedback_path, data: {toggle:"collapse", target:"#feedback-form"} %></li>
-    </ul>
+<div id="topnav-container">
+  <header id="topnav" class="" role="banner">
+    <%= link_to(image_tag('sul-logo.png', class: 'navbar-brand'), 'http://library.stanford.edu') %>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "My Account", "http://library.stanford.edu/myaccount" %></li>
+        <li class=""><%= link_to "Feedback", feedback_path, data: {toggle:"collapse", target:"#feedback-form"} %></li>
+      </ul>
+    </div>
+  </header>
+  <div id="feedback-form" class="feedback-form-container collapse">
+    <%= render "shared/feedback_forms/form" if show_feedback_form? %>
   </div>
-</header>
-<div id="feedback-form" class="feedback-form-container collapse">
-  <%= render "shared/feedback_forms/form" if show_feedback_form? %>
 </div>
