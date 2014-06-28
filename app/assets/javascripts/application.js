@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require 'blacklight_advanced_search'
-
+//= require retina_tag
 
 //= require jquery_ujs
 //= require turbolinks
@@ -28,4 +28,3 @@
 // For blacklight_range_limit built-in JS, if you don't want it you don't need
 // this:
 //= require 'blacklight_range_limit'
-

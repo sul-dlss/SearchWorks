@@ -72,3 +72,4 @@ gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search"
 gem "font-awesome-sass"
 gem "blacklight_range_limit"
+gem "retina_tag"
