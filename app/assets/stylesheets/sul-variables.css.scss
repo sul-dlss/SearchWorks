@@ -1,3 +1,9 @@
-$sul-footer-bg-color: #f2f1eb;
-$sul-topnav-bg-color: #8c1515;
-$sul-search-navbar-bg-color: #d5d0c0;
+// Colors
+$cardinal-red: #8c1515;
+$beige-20-percent: #f2f1eb;
+$beige-40-percent: #d5d0c0;
+
+$sul-footer-bg-color: $beige-20-percent;
+$sul-topnav-bg-color: $cardinal-red;
+$sul-search-navbar-bg-color: $beige-40-percent;
+$sul-navbar-brand-color: $cardinal-red;
