@@ -9,7 +9,7 @@ module AccessPanelHelper
   end
 
   def thumb_for_library(library)
-    image_tag("#{library.code}.jpg", class: "pull-left", alt: library.name)
+    image_tag("#{library.code}.jpg", class: "pull-left", alt: "")
   end
 
 end

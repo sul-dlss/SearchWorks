@@ -10,7 +10,7 @@ describe AccessPanelHelper do
 
   describe "thumb_for_library" do
     it "should return the image tag for the thumbnail for the specified library" do
-      expect(helper.thumb_for_library(library)).to eq "<img alt=\"Green Library\" class=\"pull-left\" src=\"/assets/GREEN.jpg\" />"
+      expect(helper.thumb_for_library(library)).to eq "<img alt=\"\" class=\"pull-left\" src=\"/assets/GREEN.jpg\" />"
     end
   end
 end
