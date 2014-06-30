@@ -17,34 +17,45 @@
     <%= opensearch_description_tag application_name, opensearch_catalog_path(:format => 'xml', :only_path => false) %>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag    "application" %>
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application" %>
     <!--[if lte IE 8]><%= javascript_include_tag 'flot/excanvas.min' %><![endif]-->
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
     <![endif]-->
 
   </head>
   <body class="<%= render_body_class %>">
-    <div id="outer-container" class="container">
-      <%= render 'shared/top_navbar' %>
-      <%= render 'shared/search_bar' %>
-      <%= render_masthead_partial %>
+    <div id="su-wrap"> <!-- #su-wrap start -->
+      <div id="su-content"> <!-- #su-content start -->
+        <div id="outer-container" class="container">
+          <%= render 'shared/top_navbar' %>
+          <%= render 'shared/search_bar' %>
+          <%= render_masthead_partial %>
 
-      <%= render partial: 'shared/ajax_modal' %>
+          <%= render partial: 'shared/ajax_modal' %>
 
-      <section id="main-container" role="main">
-        <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
+          <section id="main-container" role="main">
+            <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
-        <div class="row">
-          <%= yield %>
+            <div class="row">
+              <%= yield %>
+            </div>
+          </section>
+
+          <%= render :partial => 'shared/footer' %>
         </div>
-      </section>
-
-      <%= render :partial => 'shared/footer' %>
-    </div>
+      </div> <!-- #su-content end -->
+    </div> <!-- #su-wrap end -->
+    <%= render 'shared/su_footer' %>
   </body>
 </html>
