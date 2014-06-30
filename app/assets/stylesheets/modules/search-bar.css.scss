@@ -1,5 +1,13 @@
 .search-bar {
 
+  .navbar-brand {
+    font-family: 'Raleway';
+    color: $sul-navbar-brand-color;
+    font-weight: 200;
+    font-size: 2.2em;
+    padding: 15px 0 0 10px;
+  }
+
   .navbar-nav.navbar-right.searchbar-right:last-child {
     margin-right: 0px;
   }
