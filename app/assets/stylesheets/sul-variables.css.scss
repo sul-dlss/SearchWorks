@@ -1,9 +1,18 @@
 // Colors
 $cardinal-red: #8c1515;
+$beige-5-percent: #fbfbf9;
 $beige-20-percent: #f2f1eb;
 $beige-40-percent: #d5d0c0;
+$beige-color: #B6B1A9;
+$gray: #3f3c30;
+
 
 $sul-footer-bg-color: $beige-20-percent;
 $sul-topnav-bg-color: $cardinal-red;
 $sul-search-navbar-bg-color: $beige-40-percent;
 $sul-navbar-brand-color: $cardinal-red;
+$sul-topnavbar-link-color: $beige-5-percent;
+$sul-link-color: $gray;
+$sul-link-color-border: $beige-color;
+$sul-btn-primary-bg: $cardinal-red;
+$sul-btn-primary-border: lighten($sul-btn-primary-bg, 12%);

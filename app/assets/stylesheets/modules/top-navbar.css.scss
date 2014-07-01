@@ -1,0 +1,33 @@
+#topnav-container {
+  background-color: #8c1515;
+  padding: 2px 0;
+  position: relative;
+}
+
+#topnav {
+  border: none;
+  background: none;
+  margin-bottom: 0;
+  display: table;
+  width: 100%;
+  padding: 5px 10px;
+
+  a img {
+    float: left;
+  }
+
+  .header-links {
+    float: right;
+
+    a {
+      font-weight: 200;
+      margin-left: 15px;
+      padding-bottom: 3px;
+      color: $sul-topnavbar-link-color;
+      border-bottom: none;
+    }
+    a:hover {
+      border-bottom: 3px solid $sul-topnavbar-link-color;
+    }
+  }
+}

@@ -1,14 +1,18 @@
 <div id="topnav-container">
-  <header id="topnav" class="" role="banner">
-    <%= link_to(image_tag('sul-logo.png', class: 'navbar-brand'), 'http://library.stanford.edu') %>
-    <div class="navbar-right">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "My Account", "http://library.stanford.edu/myaccount" %></li>
-        <li class=""><%= link_to "Feedback", feedback_path, data: {toggle:"collapse", target:"#feedback-form"} %></li>
-      </ul>
+  <header id="topnav" class="header-logo" role="banner">
+    <%= link_to 'http://library.stanford.edu' do %>
+      <%= content_tag :span, "Stanford University Libraries", class: "sr-only" %>
+      <%= image_tag "sul-logo.png", class: "hidden-xs", alt: "", height: 25 %>
+      <%= image_tag "SUL-Logo-White-Text-Small-h25.png", class: "visible-xs", alt: "", height: 25 %>
+    <% end %>
+    <div class="header-links">
+      <%= link_to "My Account", "http://library.stanford.edu/myaccount" %>
+      <%= link_to feedback_path, data: {toggle:"collapse", target:"#feedback-form"} do %>
+        Feedback <span class='glyphicon glyphicon-envelope'></span>
+      <% end %>
     </div>
   </header>
-  <div id="feedback-form" class="feedback-form-container collapse">
-    <%= render "shared/feedback_forms/form" if show_feedback_form? %>
-  </div>
+</div>
+<div id="feedback-form" class="feedback-form-container collapse">
+  <%= render "shared/feedback_forms/form" if show_feedback_form? %>
 </div>
