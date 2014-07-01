@@ -17,7 +17,7 @@ feature "Search NavBar Top Menu" do
         expect(page).to have_css("ul.dropdown-menu li a", text:"Research support", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Academic technology", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Ask us", visible:true)
-        expect(page).to have_css("ul.dropdown-menu li a", text:"Quick links", visible:true)
+        expect(page).to have_css("ul.dropdown-menu li", text:"Quick links", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Connect from off campus", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Hours & locations", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Interlibrary borrowing", visible:true)
