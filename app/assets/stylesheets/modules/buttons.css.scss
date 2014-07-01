@@ -1,0 +1,14 @@
+.btn-primary {
+  background-color: $sul-btn-primary-bg;
+  border-color: $sul-btn-primary-border;
+}
+.btn-primary {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle{
+    background: darken($sul-btn-primary-bg, 5%);
+    border-color: darken($sul-btn-primary-border, 10%);
+  }
+}

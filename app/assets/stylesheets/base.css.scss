@@ -9,3 +9,9 @@ a {
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+a, a:hover, a:focus, .btn-link, .btn-link:hover, .btn-link:focus {
+	color: $sul-link-color;
+	text-decoration: none;
+  border-bottom: 1px dotted $sul-link-color-border;
+}
