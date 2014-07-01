@@ -8,6 +8,8 @@ en:
             title: 'Within %{access_point}'
       form:
         submit_html: '<span class="sr-only">Search</span><span class="glyphicon glyphicon-search"></span>'
+        submit: ''
+      form_label: 'search for'
       sort:
         label_html: 'Sort<span class="hidden-sm"> by relevance</span>'
       view:
