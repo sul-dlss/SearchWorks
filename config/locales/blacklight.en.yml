@@ -39,8 +39,8 @@ en:
       send_to_html: 'Send %{current_range} to <span class="caret"></span>'
   views:
     pagination_compact:
-      next: '&#9658;'
-      previous: '&#9668;'
+      next: '<span class="sr-only">Next </span>&#9658;'
+      previous: '<span class="sr-only"> Previous</span>&#9668;'
     pagination:
       previous: '&#9668; Previous'
       next: 'Next &#9658;'
