@@ -1,6 +1,8 @@
 en:
   blacklight:
     application_name: 'Blacklight'
+    home:
+      title: 'SearchWorks : Stanford University Libraries catalog'
     search:
       facets:
         access_point:
@@ -10,8 +12,12 @@ en:
         submit_html: '<span class="sr-only">Search</span><span class="glyphicon glyphicon-search"></span>'
         submit: ''
       form_label: 'search for'
+      masthead_title: '%{title} in %{application_name}'
+      show:
+        title: '%{document_title} in %{application_name}'
       sort:
         label_html: 'Sort<span class="hidden-sm"> by relevance</span>'
+      title: '%{num_results} in %{application_name}'
       view:
         label: 'View'
         brief: 'Brief'

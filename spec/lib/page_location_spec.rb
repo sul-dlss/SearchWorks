@@ -26,6 +26,14 @@ describe SearchWorks::PageLocation do
         expect(database_access_point.to_s).to eq "databases"
       end
     end
+    describe "#name" do
+      it "should return a formatted name as a string" do
+        expect(SearchWorks::PageLocation::AccessPoints.new(base_database_params).name).to eq "Databases"
+        course_reserve_params = base_database_params
+        course_reserve_params[:f] = {course: ["SOULSTEEP-101"], instructor: ["Winfrey, Oprah"] }
+        expect(SearchWorks::PageLocation::AccessPoints.new(course_reserve_params).name).to eq "Course reserves"
+      end
+    end
     describe "for CatalogController" do
       let(:base_params) { {controller: 'catalog'} }
       describe "#index action" do

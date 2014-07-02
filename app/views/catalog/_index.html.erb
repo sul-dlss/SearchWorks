@@ -14,7 +14,16 @@
 <div id="content" class="col-md-8">
   <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
 
-  <% @page_title = t('blacklight.search.title', :application_name => application_name) %>
+  <% if page_location.access_point? %>
+    <% if page_location.access_point.collection? %>
+      <% get_collection %>
+      <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
+    <% else %>
+      <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: application_name %>
+    <% end %>
+  <% else %>
+    <% @page_title = t('blacklight.search.title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: application_name) %>
+  <% end %>
 
   <% content_for(:head) do -%>
     <%= render_opensearch_response_metadata %>

@@ -5,6 +5,7 @@ feature "Advanced Search" do
     visit advanced_search_path
   end
   scenario "should have correct fields and headings" do
+    expect(page).to have_title("SearchWorks advanced search")
     within ".advanced-search-form" do
       expect(page).to have_css("h1", text: "Advanced search")
       within ".query-criteria" do

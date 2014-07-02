@@ -40,3 +40,4 @@ en:
       search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
+    page_title: '%{application_name} advanced search'
