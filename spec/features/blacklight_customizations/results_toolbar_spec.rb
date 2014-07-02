@@ -11,9 +11,9 @@ feature "Results Toolbar", js: true do
   scenario "should have desktop tools visible" do
     within "#sortAndPerPage" do
       within "div.page_links" do
-        expect(page).to have_css("a.btn.btn-default.btn-sm.disabled", text: "◄", visible: false)
+        expect(page).to have_css("a.btn.btn-default.btn-sm.disabled", text: /Previous/, visible: false)
         expect(page).to have_css("span.page_entries.hidden-xs", text: /1 - 10 of \d+/, visible: true)
-        expect(page).to have_css("a.btn.btn-default.btn-sm", text: "►", visible: true)
+        expect(page).to have_css("a.btn.btn-default.btn-sm", text: /Next/, visible: true)
       end
       expect(page).to have_css("div#view-type-dropdown a")
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)

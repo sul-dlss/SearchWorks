@@ -19,10 +19,23 @@
       border: 1px solid #ddd;
       display: none;
     }
+
     .stacks-image {
       max-height: 200px;
       max-width: 200px;
     }
   }
+}
 
+#content {
+  .pagination {
+      i.fa-chevron-left, i.fa-chevron-right {
+      margin: 0 4px;
+    }
+  }
+
+  .active a {
+    background-color: $sul-pagination-active-bg;
+    border-color: $sul-pagination-active-bg;
+  }
 }
