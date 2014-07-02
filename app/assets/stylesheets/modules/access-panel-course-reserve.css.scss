@@ -1,4 +1,9 @@
 .panel-course-reserve {
+  .access-panel-heading {
+    color: $sul-access-font;
+    background: $sul-access-course-reserve-bg;
+    border-bottom: 1px solid $sul-access-course-reserve-bg;
+  }
   ul.links {
     padding-left: 0;
     list-style-type: none;

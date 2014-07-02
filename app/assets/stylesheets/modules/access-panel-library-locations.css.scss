@@ -1,10 +1,9 @@
 .panel-library-location {
   .library-location-heading {
-    border-bottom: 1px solid transparent;
-    border-top-right-radius: $border-radius-small;
+    border-bottom: 1px solid $sul-access-location-bg;
     padding-bottom: 6px;
-    background: #919191;
-    color: #fff;
+    background: $sul-access-location-bg;
+    color: $sul-access-font;
     height: 50px;
     a {
       color: #fff;

@@ -1,6 +1,10 @@
 .panel-online {
   margin-top: 10px;
-
+  .access-panel-heading.panel-heading {
+    color: $sul-access-font;
+    background: $sul-access-online-bg;
+    border-bottom: 1px solid $sul-access-online-bg;
+  }
   .google-books {
     display: none;
     margin-top: 10px;
