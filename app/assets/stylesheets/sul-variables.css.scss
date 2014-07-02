@@ -1,15 +1,20 @@
 // Colors
 $cardinal-red: #8c1515;
 $beige-5-percent: #fbfbf9;
+$beige-10-percent: #f2f1eb;
 $beige-20-percent: #f2f1eb;
+$beige-30-percent: #e3dfd5;
 $beige-40-percent: #d5d0c0;
+$black: #000000;
 $cool-gray: #4D4F53;
 $gray: #3f3c30;
 $gray-41-percent: #696969;
+$off-green: #E1E6DF;
 $pantone-401: #B6B1A9;
 $pantone-405: #5F574F;
 $pantone-334: #009B76;
-$black: #000000;
+$pantone-5665: #C7D1C5;
+$white: #ffffff;
 
 $sul-footer-bg-color: $beige-20-percent;
 $sul-topnav-bg-color: $cardinal-red;
@@ -26,3 +31,10 @@ $sul-access-online-bg: $pantone-334;
 $sul-access-course-reserve-bg: $cardinal-red;
 $sul-summary-bg: $cool-gray;
 $sul-pagination-active-bg: $gray-41-percent;
+$sul-body-bg: $beige-5-percent;
+$sul-text-color: $gray;
+$sul-panel-bg: $white;
+$sul-facet-closed-bg: $beige-10-percent;
+$sul-facet-closed-border: $beige-30-percent;
+$sul-facet-open-bg: $off-green;
+$sul-facet-open-border: $pantone-5665;
