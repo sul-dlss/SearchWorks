@@ -16,28 +16,28 @@
   <h2>Featured sets</h2>
   <ul class="media-list">
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), catalog_index_path(collections_search_params), class: "pull-left" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), catalog_index_path(collections_search_params), class: "pull-left", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "Digital collections", catalog_index_path(collections_search_params), class: "media-heading" %>
         <p>Manuscripts, images, data, etc. from the Stanford Digital Repository</p>
       </div>
     </li>
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), "#", class: "pull-left disabled" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "#", class: "pull-left disabled", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "Dissertations, theses, student work", "#", class: "media-heading disabled" %>
         <p>&hellip;</p>
       </div>
     </li>
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), selected_databases_path, class: "pull-left" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), selected_databases_path, class: "pull-left", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "Selected databases", selected_databases_path, class: "media-heading" %>
         <p>If you're not sure where to start your research, try one of these databases.</p>
       </div>
     </li>
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), "#", class: "pull-left disabled" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "#", class: "pull-left disabled", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "Music search", "#", class: "media-heading disabled" %>
         <p>&hellip;</p>
@@ -47,14 +47,14 @@
   <h2>Searching for articles?</h2>
   <ul class="media-list">
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), "http://xsearch.stanford.edu", class: "pull-left" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "http://xsearch.stanford.edu", class: "pull-left", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "xSearch", "http://xsearch.stanford.edu", class: "media-heading" %>
         <p>Search for articles in multiple databases simultaneously.</p>
       </div>
     </li>
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object"), "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "pull-left" %>
+      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "pull-left", tabindex: "-1" %>
       <div class="media-body">
         <%= link_to "eJournals", "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "media-heading" %>
         <p>Search or browse Stanford's electronic journal holdings by title, subject, and vendor or use the citation linker to retrieve full text with an article.</p>
