@@ -7,7 +7,7 @@ feature "Facets Customizations" do
     within(".blacklight-format_main_ssim") do
       expect(page).to have_css(".panel-title", text: "Resource type")
       within("ul.facet-values") do
-        expect(page).to have_css("li img.facet-icon")
+        expect(page).to have_css("li span.sul-icon")
       end
     end
   end

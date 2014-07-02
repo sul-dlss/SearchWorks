@@ -24,4 +24,10 @@ module FacetsHelper
     end
     return my_params
   end
+
+  def render_resource_icon(value)
+    if Constants::SUL_ICONS.has_key?(value)
+      content_tag(:span, "", class:"sul-icon sul-icon-#{Constants::SUL_ICONS[value]}")
+    end
+  end
 end
