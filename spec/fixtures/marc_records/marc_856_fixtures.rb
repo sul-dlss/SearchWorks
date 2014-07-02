@@ -3,9 +3,9 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='3'>Before text</subfield>
+          <subfield code='3'>Link text 1</subfield>
           <subfield code='u'>http://library.stanford.edu</subfield>
-          <subfield code='y'>Link text</subfield>
+          <subfield code='y'>Link text 2</subfield>
           <subfield code='z'>Title text1</subfield>
           <subfield code='z'>Title text2</subfield>
         </datafield>

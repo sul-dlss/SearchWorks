@@ -13,11 +13,8 @@ describe MarcLinks do
     let(:document) { SolrDocument.new(marcxml: simple_856) }
     let(:no_label_document) { SolrDocument.new(marcxml: labelless_856) }
     let(:link_text) { document.marc_links.all.first.text }
-    it "should place the $3 before the link" do
-      expect(link_text).to match /^Before text/
-    end
-    it "should place the $y as the link text" do
-      expect(link_text).to match /<a.*>Link text<\/a>/
+    it "should place the $3 and $y as the link text" do
+      expect(link_text).to match /<a.*>Link text 1 Link text 2<\/a>/
     end
     it "should place the $z as the link title attribute" do
       expect(link_text).to match /<a.*title='Title text1 Title text2'.*>/
