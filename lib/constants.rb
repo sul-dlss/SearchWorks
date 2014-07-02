@@ -1040,4 +1040,32 @@ module Constants
 
    NIELSEN_TAGS = {"505"=>"905","520"=>"920","586"=>"986"}
    SOURCES = {"Nielsen" => "(source: Nielsen Book Data)"}
+   SUL_ICONS = {
+    "3D object" => "cube",
+    "Archive/Manuscript" => "document-box-1",
+    "Article" => "text-wrapping-1",
+    "Book" => "book-1",
+    "Dataset" => "business-chart-1",
+    "Database" => "window-search",
+    "Equipment" => "plug-2",
+    "Image" => "photos-1",
+    "Journal/Periodical" => "book-2",
+    "Map" => "map-location",
+    "Music recording" => "gramophone",
+    "Music score" => "file-music",
+    "Newspaper" => "newspaper-2",
+    "Software/Multimedia" => "mouse-2",
+    "Sound recording" => "microphone-2",
+    "Video" => "film-2",
+    "Web Archive" => "window-selection",
+    "Credits" => "contacts-1",
+    "Subjects" => "tags-1",
+    "Contents" => "list-4",
+    "Browse" => "books-3",
+    "Chat" => "bubble-2",
+    "Feedback" => "mail-1",
+    "Cite" => "quote",
+    "Send To" => "link",
+    "Selections" => "check-3"
+   }
 end

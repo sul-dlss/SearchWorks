@@ -24,11 +24,12 @@ en:
         no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
-        all_html: '<span class="fa fa-check-square-o"></span> <span class="hidden-sm hidden-xs">Select </span>all'
+        all_html: '<span class="sul-icon sul-icon-check-3"></span> <span class="hidden-sm hidden-xs">Select </span>all'
       selection_title: 'selection'
       clear:
         success: 'Your selections have been deleted.'
     tools:
+      cite_html: '<span class="sul-icon sul-icon-quote"></span> Cite'
       sms_html: '<span class="glyphicon glyphicon-phone"> </span>  text'
       email_html: '<span class="glyphicon glyphicon-envelope"> </span>  email'
       refworks_html: '<span class="glyphicon glyphicon-asterisk"> </span>  RefWorks'

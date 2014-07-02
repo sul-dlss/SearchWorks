@@ -42,4 +42,12 @@ describe FacetsHelper do
       expect(helper.remove_range_param("fake_field", params)).to eq ({"stuff" => "stuff"})
     end
   end
+  describe "#render_resource_icon" do
+    it "should render an icon that is in Constants::SUL_ICON" do
+      expect(helper.render_resource_icon('Book')).to eq '<span class="sul-icon sul-icon-book-1"></span>'
+    end
+    it "should not render anything for something not in Constants::SUL_ICON" do
+      expect(helper.render_resource_icon('iPad')).to be_nil
+    end
+  end
 end

@@ -1,0 +1,29 @@
+$sul-icon-prefix: 'sul-icon';
+//Sizing
+.#{$sul-icon-prefix}-1-5x { font-size: 1.5em; }
+.#{$sul-icon-prefix}-2x { font-size: 2em; }
+.#{$sul-icon-prefix}-3x { font-size: 3em; }
+.#{$sul-icon-prefix}-4x { font-size: 4em; }
+.#{$sul-icon-prefix}-5x { font-size: 5em; }
+
+//Alignment
+.#{$sul-icon-prefix}-va-middle {
+  vertical-align: middle;
+}
+
+//Color - not coloring globally
+.#{$sul-icon-prefix} {
+
+}
+
+
+// Style icons in facets
+.facet-values .#{$sul-icon-prefix} {
+  @extend .#{$sul-icon-prefix}-1-5x;
+  @extend .#{$sul-icon-prefix}-va-middle;
+  color: $black;
+}
+
+.facet-values .#{$sul-icon-prefix} + .facet-label {
+  padding-left: 0px;
+}
