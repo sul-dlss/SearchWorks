@@ -2,9 +2,7 @@ notifications:
   email: false
 
 rvm:
-  - 2.1
-  - 2.0.0
-  - 1.9.3
+  - 2.1.0
 
 env:
   global:
