@@ -10,11 +10,25 @@
 -%>
 <%= paginator.render do -%>
   <ul class="pagination">
-    <%= prev_page_tag %>
-    <%= next_page_tag  %>
+    <% if current_page.first? %>
+      <li class="disabled"><span><%= I18n.t('views.pagination.previous').html_safe %></span></li>
+    <% else %>
+      <%= prev_page_tag %>
+    <% end %>
+
+    <% if current_page.last? %>
+      <li class="disabled"><span><%= I18n.t('views.pagination.next').html_safe %></span></li>
+    <% else %>
+      <%= next_page_tag %>
+    <% end %>
+
     <% each_relevant_page do |page| -%>
       <% if page.left_outer? ||  page.inside_window? -%>
-        <%= page_tag page %>
+        <% if page == current_page %>
+          <li class="active"><span><%= page %></span></li>
+        <% else %>
+          <%= page_tag page %>
+        <% end %>
       <% elsif !page.was_truncated? -%>
         <%= gap_tag %>
       <% end -%>

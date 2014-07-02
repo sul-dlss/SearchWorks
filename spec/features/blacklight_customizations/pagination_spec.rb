@@ -19,8 +19,14 @@ feature "Pagination customization", :"data-integration" => true do
   end
   scenario "should have an overridden character" do
     within('ul.pagination') do
-      expect(page).to have_css('li a', text: "◄ Previous")
-      expect(page).to have_css('li a', text: "Next ►")
+      expect(page).to have_css('li span', text: /Previous/)
+      expect(page).not_to have_css('li a', text: /Previous/)
+      expect(page).to have_css('li a', text: /Next/)
     end
+  end
+  scenario "should have previous link enabled" do
+    page.find('li a[rel="next"]').click
+    expect(page).to have_css('li a', text: /Previous/)
+    expect(page).not_to have_css('li span', text: /Previous/)
   end
 end
