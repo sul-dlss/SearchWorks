@@ -6,7 +6,7 @@ class FeedbackFormsController < ApplicationController
   def create
     if request.post?
       if validate
-        RecordMailer.submit_feedback(params, request.remote_ip)
+        RecordMailer.submit_feedback(params, request.remote_ip).deliver
         flash[:success] = t("blacklight.feedback_form.success")
       end
       respond_to do |format|
