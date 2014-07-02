@@ -5,6 +5,7 @@ feature "Selected Databases Access Point" do
     visit selected_databases_path
   end
   scenario "should have a custom masthead" do
+    expect(page).to have_title("Selected databases in SearchWorks")
     within("#masthead") do
       expect(page).to have_css("h1", text: "Selected Databases")
       expect(page).to have_css("a", text: "All databases")

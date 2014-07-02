@@ -5,6 +5,7 @@ feature "Databases Access Point" do
     visit databases_path
   end
   scenario "Database Topic facet should be present and uncollapsed" do
+    expect(page).to have_title("Databases in SearchWorks")
     within("#facets") do
       within(".blacklight-db_az_subject") do
         expect(page).to_not have_css(".collapsed")

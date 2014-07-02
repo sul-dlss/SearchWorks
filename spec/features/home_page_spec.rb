@@ -5,6 +5,7 @@ feature "Home Page" do
     visit root_path
   end
   scenario "facets should display" do
+    expect(page).to have_title("SearchWorks : Stanford University Libraries catalog")
     expect(page).to have_css(".panel-heading", text: "Resource type")
     expect(page).to have_css(".panel-heading", text: "Access")
     expect(page).to have_css(".panel-heading", text: "Library")

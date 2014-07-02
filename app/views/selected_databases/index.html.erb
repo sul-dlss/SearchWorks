@@ -1,4 +1,5 @@
 <% if @selected_databases.present? %>
+  <% @page_title = t 'blacklight.search.masthead_title', title: 'Selected databases', application_name: application_name %>
   <div class="breadcrumb col-md-12">
     <h2 class="pull-right"><%= pluralize(@selected_databases.length, 'result') %></h2>
   </div>

@@ -17,6 +17,9 @@ module SearchWorks
       def point
         self.send(:"#{@params[:controller]}_#{@params[:action]}_access_points")
       end
+      def name
+        to_s.gsub(/_/, ' ').capitalize.pluralize
+      end
       def to_s
         point.to_s
       end
