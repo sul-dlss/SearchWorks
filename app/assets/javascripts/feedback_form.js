@@ -15,6 +15,7 @@ Blacklight.onLoad(function(){
     No available options
 
     This plugin :
+      - changes feedback form link to button
       - submits an ajax request for the feedback form
       - displays alert on response from feedback form
   */
@@ -74,12 +75,34 @@ Blacklight.onLoad(function(){
       });
     }
 
+    function replaceLink(form, link) {
+      var attrs = {};
+      $.each(link[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+      });
+      attrs.class = 'cancel-link btn btn-link';
+
+      // Replace the cancel link with a button
+      link.replaceWith(function() {
+        return $('<button />', attrs).append($(this).contents());
+      });
+
+      // Cancel link should not submit form
+      form.find('button.cancel-link').on('click', function(e){
+        e.preventDefault();
+      });
+    }
+
     Plugin.prototype = {
 
         init: function() {
           $el = $(this.element);
           $form = $($el).find('form');
           $action = $($form).attr('action');
+          $cancelLink = $($el).find(".cancel-link");
+
+          // Replace "Cancel" link with link styled button
+          replaceLink($el, $cancelLink);
 
           //Add listener for form submit
           submitListener($el,$form);
