@@ -13,7 +13,7 @@ module MarcLinks
       link_fields.map do |link_field|
         link = process_link(link_field)
         SearchWorks::Links::Link.new(
-          text: [link[:before], "<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
+          text: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
           fulltext: link_is_fulltext?(link_field),
           stanford_only: stanford_only?(link),
           finding_aid: link_is_finding_aid?(link_field)
@@ -54,15 +54,14 @@ module MarcLinks
           url_host = url.host
         end
         if field["x"] and field["x"] == "CasaliniTOC"
-          {:before=>nil,
-           :text=>field["3"],
+          {:text=>field["3"],
            :title=>"",
            :href=>field["u"],
            :casalini_toc => true
           }
         else
-          {:before=>sub3,
-           :text=>(suby.blank? ? url_host : suby),
+          link_text = (!suby.present? && !sub3.present?) ? url_host : [sub3, suby].compact.join(' ')
+          {:text=>link_text,
            :title=>subz.join(" "),
            :href=>field["u"],
            :casalini_toc => false
@@ -92,7 +91,7 @@ module MarcLinks
     end
 
     def stanford_only?(link)
-      [link[:before], link[:title]].join.downcase =~ stanford_affiliated_regex
+      [link[:text], link[:title]].join.downcase =~ stanford_affiliated_regex
     end
 
     def stanford_affiliated_regex
