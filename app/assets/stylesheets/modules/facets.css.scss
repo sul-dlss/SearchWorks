@@ -1,0 +1,8 @@
+.facet_limit .panel-heading.collapsed {
+  background: $sul-facet-closed-bg;
+  border-bottom: 1px solid $sul-facet-closed-border;
+}
+.facet_limit .panel-heading {
+  background: $sul-facet-open-bg;
+  border-bottom: 1px solid $sul-facet-open-border;
+}
