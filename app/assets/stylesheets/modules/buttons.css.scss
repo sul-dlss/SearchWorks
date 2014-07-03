@@ -1,16 +1,9 @@
-.btn-primary {
-  background-color: $sul-btn-primary-bg;
-  border-color: $sul-btn-primary-border;
-}
-.btn-primary {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle{
-    background: darken($sul-btn-primary-bg, 5%);
-    border-color: darken($sul-btn-primary-border, 10%);
-  }
+$btn-preview-color: $white;
+$btn-preview-bg: $sul-btn-preview-bg;
+$btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
+
+.btn-preview {
+  @include button-variant($btn-preview-color, $btn-preview-bg, $btn-preview-border);
 }
 
 .btn-link, .btn-link:hover, .btn-link:focus {

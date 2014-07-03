@@ -17,7 +17,7 @@
               <li>
                 <strong class="location-name"><%= location.name %></strong>
                 <% if library.location_level_request? || location.location_level_request? %>
-                  <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-primary btn-xs pull-right') %>
+                  <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
                 <% end %>
                 <ul class="list-unstyled items">
                   <% location.items.each do |item| %>
@@ -25,7 +25,7 @@
                       <i class="availability-icon <%= item.status.availability_class %>"></i>
                       <%= item.callnumber %>
                       <% if item.must_request? %>
-                        <%= link_to('Request', request_link(document, item), class: 'btn btn-primary btn-xs pull-right') %>
+                        <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs pull-right') %>
                       <% end %>
                       <% unless item.treat_current_location_as_home_location? %>
                         <div class="current-location"><%= item.current_location.name %></div>

@@ -11,3 +11,28 @@ $link-hover-color: $sul-text-color;
 // Panels
 $panel-border-radius: 0px;
 $panel-bg: $sul-panel-bg;
+
+// Buttons
+$btn-default-color: $gray;
+$btn-default-bg: $beige-10-percent;
+$btn-default-border: $beige-30-percent;
+
+$btn-primary-color: $white;
+$btn-primary-bg: $cardinal-red;
+$btn-primary-border: darken($btn-primary-bg, 9.8%);
+
+$btn-success-color: $white;
+$btn-success-bg: $pantone-334;
+$btn-success-border: darken($btn-success-bg, 9.8%);
+
+$btn-info-color: $white;
+$btn-info-bg: $pantone-3145;
+$btn-info-border: darken($btn-info-bg, 9.8%);
+
+$btn-warning-color: $white;
+$btn-warning-bg: $pantone-144;
+$btn-warning-border: darken($btn-warning-bg, 9.8%);
+
+$btn-danger-color: $white;
+$btn-danger-bg: $boston-university-red;
+$btn-danger-border: darken($btn-danger-bg, 9.8%);
