@@ -6,7 +6,7 @@
 <div class=" brief-document" <%= preview_attrs %>>
 
   <div class="row container-fluid brief-container">
-    <h5 class="index_title">
+    <h3 class="index_title">
       <% counter = document_counter_with_offset(document_counter) %>
       <span class="glyphicon glyphicon-star-empty"></span>
       <span class="document-counter">
@@ -14,7 +14,7 @@
       </span>
       <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
       <span class="main-title-date"><%= get_main_title_date(document) %></span>
-    </h5>
+    </h3>
   </div>
 
   <div class="container-fluid <%= preview_container %>">
