@@ -12,3 +12,8 @@
     border-color: darken($sul-btn-primary-border, 10%);
   }
 }
+
+.btn-link, .btn-link:hover, .btn-link:focus {
+  color: $sul-link-color;
+  text-decoration: none;
+}

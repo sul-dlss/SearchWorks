@@ -12,8 +12,9 @@
   font-size: $font-size-small;
 }
 
-.cancel-link{
+.cancel-link .btn .btn-link {
   margin-left:12px;
+  border-bottom: none;
 }
 
 #feedback-form{
