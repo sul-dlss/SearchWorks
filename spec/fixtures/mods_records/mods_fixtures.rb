@@ -80,6 +80,7 @@ module ModsFixtures
           <topic authority="lcsh">Rules</topic>
           <topic authority="lcsh">Everything</topic>
         </subject>
+        <abstract>Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet</abstract>
         <targetAudience displayLabel="Who?">Cat loverz</targetAudience>
         <note>Pick up milk</note>
         <note displayLabel="Notez">Pick up milkz</note>
@@ -109,6 +110,7 @@ module ModsFixtures
       <titleInfo type="alternative">
         <title>A file</title>
       </titleInfo>
+      <abstract>Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet</abstract>
       <typeOfResource>stuff</typeOfResource>
       <name>
         <namePart>J. Smith</namePart>

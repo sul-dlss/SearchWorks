@@ -1,0 +1,56 @@
+<% if document.respond_to?(:to_marc) %>
+  <% toc = get_toc(document.to_marc) %>
+  <% if toc.present? %>
+    <% if toc[:fields].present? %>
+      <% toc[:fields].each do |toc_field| %>  
+        <ul class="toc">
+          <% toc_field.each do |field| %>
+            <li><%= field %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+    <% if toc[:vernacular].present? %>
+      <% toc[:vernacular].each do |toc_field| %>
+        <ul class="toc">
+          <% toc_field.each do |field| %>  
+            <li><%= field %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+    <% if toc[:unmatched_vernacular].present? %>
+      <% toc[:unmatched_vernacular].each do |toc_field| %>
+        <ul class="toc">
+          <% toc_field.each do |field| %>  
+            <li><%= field %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% summary = get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
+  <% if summary.present? %>
+    <% if summary[:fields].present? %>
+      <% summary[:fields].each do |field| %>
+        <%= field[:field] %>
+        <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
+        <%= "<br/>".html_safe if field != summary[:fields].last %>
+      <% end %>
+    <% end %>
+    <% if summary[:unmatched_vernacular].present? %>
+      <%= summary[:unmatched_vernacular].join("<br/>").html_safe %>
+    <% end %>
+  <% end %>
+
+<% elsif document.respond_to?(:mods) && document.mods.present? %>
+  <% if document.mods.abstract.present? %>
+    <%= document.mods.abstract.map(&:values).join('<br/>').html_safe %>
+  <% end %>
+
+<% elsif document[:summary_display].present? %>
+  <div>
+    <%= document[:summary_display].join('<br/>').html_safe %>
+  </div>
+<% end %>

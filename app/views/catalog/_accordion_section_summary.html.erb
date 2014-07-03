@@ -1,16 +1,16 @@
-<% id = document[:id] %>
+<% summary_data = render partial: 'catalog/accordion_section_summary_data', locals: { document: document } %>
 
-<% unless document[:summary_display].blank? %>
-
+<% if summary_data.present? %>
+  <% id = document[:id] %>
   <div class="accordion-section summary col-md-9">
     <a class="header" data-accordion-section-target=".<%= id %>-summary">
       Summary <i class="fa fa-caret-right"></i>
     </a>
-    <span class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
-      <%= document[:summary_display].first %>
-    </span>
+    <div class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
+      <%= summary_data %>
+    </div>
     <div class="details <%= id %>-summary">
-      <%= document[:summary_display].first %>
+      <%= summary_data %>
     </div>
   </div>
 

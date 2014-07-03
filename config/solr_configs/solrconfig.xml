@@ -890,6 +890,7 @@
         lccn,
         marcbib_xml,
         mhld_display,
+        modsxml,
         oclc,
         physical,                     vern_physical,
         pub_date,
