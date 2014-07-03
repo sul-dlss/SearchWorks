@@ -10,12 +10,12 @@
       <span class="icon-bar"></span>
     </button>
 
-  <h4>
-    <%= t("blacklight.search.facets.access_point.#{page_location.access_point}.title",
-          access_point: page_location.access_point,
-          default: 'Limit your search') %>
-  </h4>
-    </div>
+    <h2>
+      <%= t("blacklight.search.facets.access_point.#{page_location.access_point}.title",
+            access_point: page_location.access_point,
+            default: 'Limit your search') %>
+    </h2>
+  </div>
 
   <div id="facet-panel-collapse" class="collapse panel-group">
   <%= render_facet_partials %>

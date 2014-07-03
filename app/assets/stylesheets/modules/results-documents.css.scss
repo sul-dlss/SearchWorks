@@ -2,10 +2,6 @@
 
   .document {
 
-    h5.index_title {
-      font-size: 1.2em;
-    }
-
     .document-metadata {
       list-style-type: none;
       padding-left: 0;
@@ -38,4 +34,28 @@
     background-color: $sul-pagination-active-bg;
     border-color: $sul-pagination-active-bg;
   }
+}
+
+#sidebar {
+  padding-left: 0;
+}
+
+.facets.sidenav {
+  .top-panel-heading {
+    padding: 0;
+
+    h2 {
+      color: #8c1515;
+    }
+  }
+}
+
+.search_num_of_results {
+  text-align: right;
+
+  h2 {
+    border-bottom: 1px solid #e3dfd5;    
+    color: #8c1515;
+  }
+
 }

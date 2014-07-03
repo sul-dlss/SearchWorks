@@ -2,7 +2,7 @@
 <% # header bar for doc items in index view %>
 <div class="documentHeader row">
 
-  <h5 class="index_title col-sm-9 col-lg-10">
+  <h3 class="index_title col-sm-9 col-lg-10">
     <% counter = document_counter_with_offset(document_counter) %>
     <% if document.has_key?(:format_main_ssim) %>
       <%= render_resource_icon document[:format_main_ssim].first %>
@@ -12,7 +12,7 @@
     </span>
     <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
-  </h5>
+  </h3>
 
   <% # bookmark functions for items/docs -%>
   <%= render_index_doc_actions document, :wrapping_class => "index-document-functions col-sm-3 col-lg-2" %>

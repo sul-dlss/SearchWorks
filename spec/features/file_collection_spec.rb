@@ -7,7 +7,7 @@ feature "File Collection" do
     fill_in "q", with: "31"
     click_button 'search'
 
-    expect(page).to have_css("h5 a", text: "File Collection1") #title
+    expect(page).to have_css("h3 a", text: "File Collection1") #title
     expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture files/) # truncated summary
     expect(page).to have_css("dt", text: "DIGITAL CONTENT")
     expect(page).to have_css("dd", text: /\d+ items?/) # collection members

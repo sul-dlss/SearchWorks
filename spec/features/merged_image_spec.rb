@@ -6,7 +6,7 @@ feature "Merged Images" do
     fill_in 'q', with: '37'
     click_button 'search'
 
-    expect(page).to have_css("h5 a", text: "Merged Image1") # Title
+    expect(page).to have_css("h3 a", text: "Merged Image1") # Title
     expect(page).to have_css(".main-title-date", text: "[2004 - ]") # Main title date
     expect(page).to have_css("ul.document-metadata") # metadata items
   end

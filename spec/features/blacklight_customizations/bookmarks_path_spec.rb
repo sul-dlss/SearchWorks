@@ -16,7 +16,7 @@ feature "Selections Path" do
     visit selections_path
     expect(page).to have_css("h1", text: "2 selections")
     within "#documents" do
-      expect(page).to have_css("h5.index_title a", count: 2)
+      expect(page).to have_css("h3.index_title a", count: 2)
     end
     within ".search-widgets" do
       expect(page).to have_css("a", text: "Cite 1 - 2")
