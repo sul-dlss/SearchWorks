@@ -45,7 +45,7 @@
     padding: 0;
 
     h2 {
-      color: #8c1515;
+      color: $sul-h2-font-color;
     }
   }
 }
@@ -54,8 +54,8 @@
   text-align: right;
 
   h2 {
-    border-bottom: 1px solid #e3dfd5;    
-    color: #8c1515;
+    border-bottom: 1px solid $sul-h2-border-color;
+    color: $sul-h2-font-color;
   }
 
 }
