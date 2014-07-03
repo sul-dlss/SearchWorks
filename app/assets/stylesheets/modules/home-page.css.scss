@@ -1,6 +1,6 @@
 .home-page-facets h2, .home-page-featured h2 {
-  border-bottom: 1px solid #e3dfd5;
-  color: #8c1515;
+  border-bottom: 1px solid $sul-h2-border-color;
+  color: $sul-h2-font-color;
 }
 
 @media only screen and (min-width : 768px) {
@@ -20,7 +20,7 @@
 @media only screen and (max-width : 768px) {
   .home-page-facets {
     .col-facets {
-      padding: 0;            
+      padding: 0;
     }
   }
 }

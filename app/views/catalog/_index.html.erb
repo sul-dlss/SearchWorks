@@ -33,7 +33,7 @@
 
   <% if !@response.empty? %>
     <div class="search_num_of_results">
-      <h2><%= number_with_delimiter(@response.total, :delimiter => ',') %> results</h2>
+      <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
     </div>
     <%= render 'search_header' %>
   <% end %>
