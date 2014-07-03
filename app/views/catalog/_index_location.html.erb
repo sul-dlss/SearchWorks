@@ -14,7 +14,7 @@
               <td><strong><%= location.name%></strong></td>
               <td>
                 <% if library.location_level_request? || location.location_level_request? %>
-                  <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-primary btn-xs') %>
+                  <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs') %>
                 <% end %>
               </td>
             </tr>
@@ -35,7 +35,7 @@
                   <%= item.status.status_text%>
                 <% end %>
                 <% if item.must_request? || (location.one_item? && (library.location_level_request? || location.location_level_request?)) %>
-                  <%= link_to('Request', request_link(document, item), class: 'btn btn-primary btn-xs') %>
+                  <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs') %>
                 <% end %>
               </td>
             </tr>

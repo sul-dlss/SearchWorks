@@ -8,7 +8,7 @@ feature "Brief View" do
 
     expect(page).to have_css("span.glyphicon.glyphicon-align-justify")
     expect(page).to have_css(".brief-document h5.index_title", text: "An object")
-    expect(page).to have_css(".brief-document button.btn-primary", text: "Preview")
+    expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
     expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
 
     page.find("button.btn.docid-1").click

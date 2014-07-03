@@ -9,7 +9,7 @@
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons">
     <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
-    <button class="btn btn-sm btn-primary preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger"><span class="glyphicon glyphicon-chevron-right"></span> Preview</button>
+    <button class="btn btn-sm btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger"><span class="glyphicon glyphicon-chevron-right"></span> Preview</button>
   </div>
 </div>
 <div class="<%= preview_container %> preview-container"></div>
