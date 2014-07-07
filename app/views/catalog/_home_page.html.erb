@@ -1,19 +1,19 @@
 <% @page_title= t 'blacklight.home.title' %>
 <h1 class="sr-only">SearchWorks</h1>
-<div class="col-md-8 col-sm-6" data-home-page-facet-collapse='true'>
+<div class="col-md-8 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
   <h2>Limit your search</h2>
-  <div class="col-md-6">
+  <div class="col-md-6 col-facets">
     <%=
       render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
       render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
     %>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 col-facets">
     <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
     <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
   </div>
 </div>
-<div class="col-md-4 col-sm-6">
+<div class="col-md-4 col-sm-6 home-page-featured">
   <h2>Featured sets</h2>
   <ul class="media-list">
     <li class="media">

@@ -5,12 +5,12 @@
       <%= document.holdings.unique_callnumbers.first.callnumber %>
     <% end %>
   </div>
-  <h5 class="index_title">
+  <h3 class="index_title">
     <% counter = document_counter_with_offset(document_counter) %>
     <% if document.has_key?(:format_main_ssim) %>
       <%= render_resource_icon document[:format_main_ssim].first %>
     <% end %>
     <%= link_to_document document, label: get_main_title(document), counter: (counter + @response.params[:start].to_i) %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
-  </h5>
+  </h3>
 </div>
