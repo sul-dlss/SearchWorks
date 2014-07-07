@@ -3,6 +3,7 @@
   margin: 5px 0;
 
   .header {
+    float: left;
     background-color: #000;
     border-radius: 4px;
     color: #fff;
@@ -15,7 +16,11 @@
       padding-left: 4px;
     }
   }
-
+  &.summary {
+    .snippet {
+      margin-left: 86px;
+    }
+  }
   .snippet {
     color: #999;
   }
@@ -24,6 +29,7 @@
     border: 1px solid #ccc;
     display: none;
     padding: 10px;
+    clear: left;
   }
 
   .details:target {

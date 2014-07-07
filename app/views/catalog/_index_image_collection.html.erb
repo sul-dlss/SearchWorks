@@ -1,9 +1,3 @@
-<% if document[:summary_display] %>
-  <div data-behavior='truncate'>
-    <%= document[:summary_display].join(', ') %>
-  </div>
-<% end %>
-
 <dl class="dl-horizontal dl-invert">
   <% if document.collection_members.present? %>
     <dt>DIGITAL CONTENT:</dt>

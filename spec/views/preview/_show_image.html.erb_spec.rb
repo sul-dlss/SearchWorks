@@ -8,7 +8,6 @@ describe "preview/_show_image.html.erb" do
     modsxml: mods_everything,
     file_id: ["123"],
     display_type: ["image"],
-    summary_display: [ "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet" ],
     item_display: [ "123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123" ],
     isbn_display: [ 123 ]
   ) }
@@ -31,8 +30,8 @@ describe "preview/_show_image.html.erb" do
 
   it "should display summary accordion section" do
     expect(rendered).to have_css('.accordion-section.summary a.header', text: "Summary")
-    expect(rendered).to have_css('.accordion-section.summary span.snippet', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
-    expect(rendered).to have_css('.accordion-section.summary div.details', text: "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet")
+    expect(rendered).to have_css('.accordion-section.summary .snippet', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
+    expect(rendered).to have_css('.accordion-section.summary .details', text: "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet")
   end
 
   it "should display library accordion section" do
