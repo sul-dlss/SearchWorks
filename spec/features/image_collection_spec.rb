@@ -8,7 +8,7 @@ feature "Image Collection" do
     click_button 'search'
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
-    expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/) # truncated summary
+    expect(page).to have_css("[data-behavior='trunk8']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
     expect(page).to have_css("dt", text: "DIGITAL CONTENT")
     expect(page).to have_css("dd", text: /\d+ items?/) # collection members
   end

@@ -38,6 +38,15 @@ $gallery-document-width: 184px;
     width: $gallery-document-width;
     height: 400px;
     border: 1px solid $panel-inner-border;
+
+    h3.index_title {
+      font-size: 1.1em;
+      line-height: 1.5em;
+
+      a {
+        word-break: break-all;
+      }
+    }
   }
 
   .document-counter {
