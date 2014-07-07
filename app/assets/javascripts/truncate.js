@@ -1,7 +1,7 @@
 Blacklight.onLoad(function(){
   $("[data-behavior='truncate']").responsiveTruncate({height: 60});
   $("[data-behavior='trunk8']").trunk8();
-  $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
+  $(".gallery-document .caption h3").trunk8({ lines: 4 });
 });
 
 $(window).resize(function() {
