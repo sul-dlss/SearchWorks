@@ -94,7 +94,7 @@
           $about            = $googleBooks.find('.about'),
           $fullView         = $googleBooks.find('.full-view'),
           $limitedView      = $googleBooks.find('.limited-preview'),
-          $previewLink      = $googleBooks.find('.btn-preview .preview-link');
+          $previewLink      = $googleBooks.find('.google-preview .preview-link');
 
       $panelOnlineBooks.removeClass('hide').addClass('show');
       $googleBooks.show();
