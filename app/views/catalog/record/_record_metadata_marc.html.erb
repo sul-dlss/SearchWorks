@@ -2,11 +2,11 @@
   <%= render 'catalog/record/callnumber_browse' %>
 <% end %>
 
-<div class="record-metadata col-md-12 row">
-  <div class="record-panels col-md-4 col-xs-12 row">
+<div class="record-metadata row">
+  <div class="record-panels col-md-4">
     <%= render "catalog/record/metadata_panels" %>
   </div>
-  <div class="record-sections col-md-8 col-xs-12">
+  <div class="record-sections col-md-8">
     <% if @document.respond_to?(:to_marc) %>
       <%= render "catalog/record/marc_metadata_sections" %>
     <% end %>
@@ -14,5 +14,5 @@
 </div>
 
 <%# technical details placeholder - librarian view, catkey etc %>
-<div class="record-technical-details col-md-12 row">
+<div class="record-technical-details row">
 </div>
