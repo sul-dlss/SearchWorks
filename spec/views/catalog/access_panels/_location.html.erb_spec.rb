@@ -43,7 +43,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('.location-name', text: "InfoCenter: display")
       end
       it "should not be displayed if the current location is a special location that gets treated like a home location" do
-        expect(rendered).to_not have_css('.current-location')
+        expect(rendered).to have_css('.current-location', text: '')
       end
     end
     describe "is reserve desk" do
