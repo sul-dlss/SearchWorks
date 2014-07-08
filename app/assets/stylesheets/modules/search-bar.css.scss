@@ -5,7 +5,7 @@
     color: $sul-navbar-brand-color;
     font-weight: 200;
     font-size: 2.2em;
-    padding: 15px 0 0 10px;
+    padding: 15px 12px 0 10px;
   }
 
   .navbar-nav.navbar-right.searchbar-right:last-child {
@@ -18,12 +18,6 @@
     }
   }
 
-  @media screen and (max-width: $screen-md) {
-    .search-field {
-      clear: left;
-    }
-  }
-
   .navbar-form {
     float: left;
     margin-bottom: 0;
@@ -31,5 +25,47 @@
 
   button.navbar-toggle.search-navbar-dropdown-btn-rotate-90 span.fa {
     @extend .fa-rotate-90;
+  }
+
+  .search-target{
+    color: $cardinal-red;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin: 10px 0 6px 0px;
+  }
+
+  span.input-group-addon {
+  	padding: 0;
+  	background: white;
+	}
+  span.input-group-addon select {
+  	border: none;
+  	background: transparent;
+	}
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .search-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+@media screen and (min-width: $screen-md-min) {
+  .search-form {
+    position: absolute;
+    top: 8px;
+    left: 286px;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .search-form {
+    position: absolute;
+    top: 8px;
+    left: 286px;
+    width: 500px;
   }
 }
