@@ -53,6 +53,7 @@
   margin-left: 2px;
   margin-top: -1px;
   border-radius: 0px;
+  left: inherit;
 
   li a {
     color: $white;
@@ -91,8 +92,8 @@
 
 @media screen and (max-width: $screen-xs-max) {
   #topnav {
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
   }
 }
