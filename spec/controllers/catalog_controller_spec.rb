@@ -39,20 +39,35 @@ describe CatalogController do
       end
     end
   end
-  it "should have the correct facet order" do
-    keys = controller.blacklight_config.facet_fields.keys
-    expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
-    expect(keys.index("format_main_ssim")).to be < keys.index("format_physical_ssim")
-    expect(keys.index("format_physical_ssim")).to be < keys.index("pub_year_tisim")
-    expect(keys.index("pub_year_tisim")).to be < keys.index("building_facet")
-    expect(keys.index("building_facet")).to be < keys.index("language")
-    expect(keys.index("language")).to be < keys.index("author_person_facet")
-    expect(keys.index("author_person_facet")).to be < keys.index("topic_facet")
-    expect(keys.index("topic_facet")).to be < keys.index("genre_ssim")
-    expect(keys.index("genre_ssim")).to be < keys.index("callnum_top_facet")
-    expect(keys.index("callnum_top_facet")).to be < keys.index("geographic_facet")
-    expect(keys.index("geographic_facet")).to be < keys.index("era_facet")
-    expect(keys.index("era_facet")).to be < keys.index("author_other_facet")
-    expect(keys.index("author_other_facet")).to be < keys.index("format")
+  describe "blacklight config" do
+    let(:config) { controller.blacklight_config }
+    it "should have the correct facet order" do
+      keys = config.facet_fields.keys
+      expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
+      expect(keys.index("format_main_ssim")).to be < keys.index("format_physical_ssim")
+      expect(keys.index("format_physical_ssim")).to be < keys.index("pub_year_tisim")
+      expect(keys.index("pub_year_tisim")).to be < keys.index("building_facet")
+      expect(keys.index("building_facet")).to be < keys.index("language")
+      expect(keys.index("language")).to be < keys.index("author_person_facet")
+      expect(keys.index("author_person_facet")).to be < keys.index("topic_facet")
+      expect(keys.index("topic_facet")).to be < keys.index("genre_ssim")
+      expect(keys.index("genre_ssim")).to be < keys.index("callnum_top_facet")
+      expect(keys.index("callnum_top_facet")).to be < keys.index("geographic_facet")
+      expect(keys.index("geographic_facet")).to be < keys.index("era_facet")
+      expect(keys.index("era_facet")).to be < keys.index("author_other_facet")
+      expect(keys.index("author_other_facet")).to be < keys.index("format")
+    end
+    describe "facet limits" do
+      it "should set a very high facet limit on building and format" do
+        ['building_facet', 'format_main_ssim'].each do |facet|
+          expect(config.facet_fields[facet].limit).to eq 100
+        end
+      end
+      it "should set the correct facet limits on standard facets" do
+        ['author_person_facet', 'topic_facet', 'genre_ssim'].each do |facet|
+          expect(config.facet_fields[facet].limit).to eq 20
+        end
+      end
+    end
   end
 end

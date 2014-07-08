@@ -73,15 +73,15 @@ class CatalogController < ApplicationController
     config.add_facet_field "access_facet", :label => "Access"
     config.add_facet_field "collection", :label => "Collection", :show => false
     config.add_facet_field "collection_type", :label => "Collection Type", :show => false
-    config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet"
-    config.add_facet_field "format_physical_ssim", :label => "Physical Format"
+    config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100
+    config.add_facet_field "format_physical_ssim", :label => "Physical Format", limit: 20
     config.add_facet_field "pub_year_tisim", :label => "Date", :range => true
-    config.add_facet_field "building_facet", :label => "Library", :limit => true
-    config.add_facet_field "language", :label => "Language", :limit => true
-    config.add_facet_field "author_person_facet", :label => "Author", :limit => true
-    config.add_facet_field "topic_facet", :label => "Topic", :limit => true
-    config.add_facet_field "genre_ssim", :label => "Genre"
-    config.add_facet_field "callnum_top_facet", :label => "Call Number", :limit => true
+    config.add_facet_field "building_facet", :label => "Library", limit: 100
+    config.add_facet_field "language", :label => "Language", limit: 20
+    config.add_facet_field "author_person_facet", :label => "Author", limit: 20
+    config.add_facet_field "topic_facet", :label => "Topic", limit: 20
+    config.add_facet_field "genre_ssim", :label => "Genre", limit: 20
+    config.add_facet_field "callnum_top_facet", :label => "Call Number", limit: 20
     config.add_facet_field "lc_alpha_facet", :label => "Refine Call Number", :show => false
     config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call Number", :show => false
     config.add_facet_field "dewey_1digit_facet", :label => "Refine Call Number", :show => false
@@ -92,19 +92,13 @@ class CatalogController < ApplicationController
     config.add_facet_field "instructor", :label => "Instructor", :show => false
 
     # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
-    config.add_facet_field "geographic_facet", :label => "Region", :limit => true
-    config.add_facet_field "era_facet", :label => "Era", :limit => true
-    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", :limit => true
+    config.add_facet_field "geographic_facet", :label => "Region", limit: 20
+    config.add_facet_field "era_facet", :label => "Era", limit: 20
+    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", limit: 20
     config.add_facet_field "format", :label => "Format", show: false
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
-
-    config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
-       :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
-       :years_10 => { :label => 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
-       :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
-    }
 
 
     # Have BL send all facet field names to Solr, which has been the default
