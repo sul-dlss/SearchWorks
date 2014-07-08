@@ -37,6 +37,7 @@
 
   </head>
   <body class="<%= render_body_class %>">
+    <%= render 'shared/skip_to_nav' %>
 
     <div id="su-wrap"> <!-- #su-wrap start -->
       <div id="su-content"> <!-- #su-content start -->
@@ -48,7 +49,6 @@
           <%= render partial: 'shared/ajax_modal' %>
 
           <section id="main-container" role="main">
-            <%= render 'shared/skip_to_nav' %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
             <div class="row">
