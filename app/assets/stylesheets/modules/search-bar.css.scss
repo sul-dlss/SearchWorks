@@ -28,4 +28,8 @@
     float: left;
     margin-bottom: 0;
   }
+
+  button.navbar-toggle.search-navbar-dropdown-btn-rotate-90 span.fa {
+    @extend .fa-rotate-90;
+  }
 }
