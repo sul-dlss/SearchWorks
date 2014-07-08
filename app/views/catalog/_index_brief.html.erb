@@ -8,7 +8,7 @@
   <div class="row container-fluid brief-container">
     <h3 class="index_title">
       <% counter = document_counter_with_offset(document_counter) %>
-      <span class="glyphicon glyphicon-star-empty"></span>
+      <%= render_resource_icon document[document.format_key] %>
       <span class="document-counter">
         <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
       </span>

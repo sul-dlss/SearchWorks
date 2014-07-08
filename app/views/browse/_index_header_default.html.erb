@@ -3,7 +3,7 @@
 <div class="documentHeader row">
 
   <h3 class="index_title col-sm-9 col-lg-10">
-    <span class="glyphicon glyphicon-star-empty"></span>
+    <%= render_resource_icon document[document.format_key] %>
     <%= link_to_document document, :label => get_main_title(document) %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
   </h3>

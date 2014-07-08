@@ -1,1 +1,4 @@
-<h4><%= link_to_document document, :label => get_main_title(document) %></h4>
+<h4>
+  <%= render_resource_icon document[document.format_key] %>
+  <%= link_to_document document, :label => get_main_title(document) %>
+</h4>
