@@ -1,21 +1,21 @@
 <% if @document.is_a_collection? %>
-  <div class="panel panel-default panel-collection-details">
+  <div class="panel panel-default access-panel panel-collection-details">
     <div class="access-panel-heading panel-heading">
       <h3>Collection details</h3>
     </div>
     <div class="panel-body">
         <dl class="dl-invert">
-          <dt>DIGITAL CONTENT</dt>
+          <dt>Digital content</dt>
           <dd><%= link_to_collection_members(pluralize(@document.collection_members.total, 'item'), @document) %></dd>
           <% if @document.extent.present? %>
             <dt><%= @document.extent_label %></dt>
             <dd><%= @document.extent %></dd>
           <% end %>
           <% if @document.index_links.finding_aid.present? %>
-            <dt>FINDING AID</dt>
+            <dt>Finding aid</dt>
             <dd><%= @document.index_links.finding_aid.first.text.html_safe %></dd>
           <% end %>
-          <dt>COLLECTION PURL<dt>
+          <dt>Collection PURL<dt>
           <dd><%= link_to("http://purl.stanford.edu/#{@document.druid}", "http://purl.stanford.edu/#{@document.druid}") %></dd>
         </dl>
     </div>

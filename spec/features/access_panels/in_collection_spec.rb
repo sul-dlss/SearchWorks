@@ -13,11 +13,11 @@ feature "In collection Access Panel" do
         expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
       end
       within(".panel-footer") do
-        expect(page).to have_css("dt", text: "DIGITAL CONTENT")
+        expect(page).to have_css("dt", text: "Digital content")
         expect(page).to have_css("dd a", text: /\d+ items?/)
-        expect(page).to have_css("dt", text: "FINDING AID")
+        expect(page).to have_css("dt", text: "Finding aid")
         expect(page).to have_css("dd a", text: "Online Archive of California")
-        expect(page).to have_css("dt", text: "COLLECTION PURL")
+        expect(page).to have_css("dt", text: "Collection PURL")
         expect(page).to have_css("dd a", text: "http://purl.stanford.edu/29")
       end
     end

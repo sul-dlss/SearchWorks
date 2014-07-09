@@ -7,7 +7,7 @@ feature "Digital Collections Search" do
   end
   scenario "should have the filter applied" do
     within(".breadcrumb") do
-      expect(page).to have_css('.filterName', text: "Collection Type")
+      expect(page).to have_css('.filterName', text: "Collection type")
       expect(page).to have_css('.filterValue', text: "Digital Collection")
     end
   end

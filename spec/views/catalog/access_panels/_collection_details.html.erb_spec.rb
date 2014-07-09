@@ -29,11 +29,11 @@ describe "catalog/access_panels/_collection_details.html.erb" do
     it "should render an access panel" do
       expect(rendered).to have_css('.panel-collection-details')
       expect(rendered).to have_css('.panel-heading', text: 'Collection details')
-      expect(rendered).to have_css('dt', text: 'DIGITAL CONTENT')
+      expect(rendered).to have_css('dt', text: 'Digital content')
       expect(rendered).to have_css('dd a', text: '2 items')
-      expect(rendered).to have_css('dt', text: 'PHYSICAL EXTENT')
+      expect(rendered).to have_css('dt', text: 'Physical extent')
       expect(rendered).to have_css('dd', text: '2 things')
-      expect(rendered).to have_css('dt', text: 'COLLECTION PURL')
+      expect(rendered).to have_css('dt', text: 'Collection PURL')
       expect(rendered).to have_css('dd a', text: 'http://purl.stanford.edu/1234')
     end
   end

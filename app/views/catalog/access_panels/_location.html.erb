@@ -3,7 +3,7 @@
   <div data-live-lookup-id="<%= document[:id] %>" data-live-lookup-url="<%= availability_index_path %>">
     <% document.access_panels.library_locations.libraries.each do |library| %>
       <% if library.is_viewable? %>
-        <div class="panel panel-default panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
+        <div class="panel panel-default access-panel panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
           <div class="library-location-heading access-panel-heading">
             <%= thumb_for_library(library) %>
             <div class="library-location-heading-text">

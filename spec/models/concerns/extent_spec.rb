@@ -20,16 +20,16 @@ describe Extent do
   }
   describe "label" do
     it "should use a fallback label of physical extent if the document does not have a format" do
-      expect(no_format.extent_label).to eq 'PHYSICAL EXTENT'
+      expect(no_format.extent_label).to eq 'Physical extent'
     end
     it "should upcase the given format" do
-      expect(single_format.extent_label).to eq 'BOOK'
+      expect(single_format.extent_label).to eq 'Book'
     end
     it "should select the non-database format (even if it's the first one)" do
-      expect(multi_format.extent_label).to eq 'BOOK'
+      expect(multi_format.extent_label).to eq 'Book'
     end
     it "should select the first format when multiple non-Database formats are present" do
-      expect(bad_format.extent_label).to eq 'BOOK'
+      expect(bad_format.extent_label).to eq 'Book'
     end
   end
   describe "value" do

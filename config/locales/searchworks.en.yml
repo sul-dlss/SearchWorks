@@ -28,8 +28,8 @@ en:
     back_to_search_xs: '<span class="glyphicon glyphicon-backward"></span>'
     access_panels:
       course_reserve:
-        course: '<span class="course-reserve-title">COURSE:</span> %{link}'
-        instructor: '<span class="course-reserve-title">INSTRUCTOR(S):</span> <span class="text-muted">%{instructor}</span>'
+        course: '<span class="course-reserve-title">Course:</span> %{link}'
+        instructor: '<span class="course-reserve-title">Instructor(s):</span> <span class="text-muted">%{instructor}</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
   blacklight_advanced_search:

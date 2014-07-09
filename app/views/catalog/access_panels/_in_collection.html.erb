@@ -1,6 +1,6 @@
 <% if @document.is_a_collection_member? && @document.parent_collections.present? %>
   <% @document.parent_collections.each do |parent_collection| %>
-    <div class="panel panel-default panel-in-collection">
+    <div class="panel panel-default access-panel panel-in-collection">
       <div class="access-panel-heading panel-heading">
         <h3>In collection</h3>
       </div>
@@ -14,17 +14,17 @@
       </div>
       <div class="panel-footer">
         <dl class="dl-invert">
-          <dt>DIGITAL CONTENT</dt>
+          <dt>Digital content</dt>
           <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
           <% if parent_collection.extent.present? %>
             <dt><%= parent_collection.extent_label %></dt>
             <dd><%= parent_collection.extent %></dd>
           <% end %>
           <% if parent_collection.index_links.finding_aid.present? %>
-            <dt>FINDING AID</dt>
+            <dt>Finding aid</dt>
             <dd><%= parent_collection.index_links.finding_aid.first.text.html_safe %></dd>
           <% end %>
-          <dt>COLLECTION PURL<dt>
+          <dt>Collection PURL<dt>
           <dd><%= link_to("http://purl.stanford.edu/#{parent_collection.druid}", "http://purl.stanford.edu/#{parent_collection.druid}") %></dd>
         </dl>
       </div>

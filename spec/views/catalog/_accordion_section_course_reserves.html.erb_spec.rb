@@ -25,7 +25,7 @@ describe "catalog/_accordion_section_course_reserves.html.erb" do
       expect(rendered).to have_css('.accordion-section.course-reserves .details dt a', text: "Managerial Accounting: Base")
       expect(rendered).to have_css('.accordion-section.course-reserves .details dt a', text: "Managerial Accounting: Accelerated")
 
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dd .course-reserve-title', text: "INSTRUCTOR(S):")
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dd .course-reserve-title', text: "Instructor(s):")
 
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd .text-muted', text: "Reichelstein, Stefan J")
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd .text-muted', text: "Marinovic Vial, Ivan")
