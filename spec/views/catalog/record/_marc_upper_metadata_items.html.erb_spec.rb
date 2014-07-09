@@ -8,11 +8,11 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
       render
     end
     it "should display the characteristics with labels" do
-      expect(rendered).to have_css('dt', text: 'Sound:')
+      expect(rendered).to have_css('dt', text: 'Sound')
       expect(rendered).to have_css('dd', text: 'digital; optical; surround; stereo; Dolby.')
-      expect(rendered).to have_css('dt', text: 'Video:')
+      expect(rendered).to have_css('dt', text: 'Video')
       expect(rendered).to have_css('dd', text: 'NTSC.')
-      expect(rendered).to have_css('dt', text: 'Digital:')
+      expect(rendered).to have_css('dt', text: 'Digital')
       expect(rendered).to have_css('dd', text: 'video file; DVD video; Region 1.')
     end
   end
@@ -22,7 +22,7 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
       render
     end
     it "link to series" do
-      expect(rendered).to have_css('dt', text: "Series:")
+      expect(rendered).to have_css('dt', text: "Series")
       expect(rendered).to have_css('dd a', text: "440 $a")
       expect(rendered).to have_css('dd a', text: "Name SubZ")
     end

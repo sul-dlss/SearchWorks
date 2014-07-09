@@ -24,7 +24,7 @@ describe "MARC Metadata in search results" do
     end
     it "should join the characteristics with the physical statement" do
       within(first('.document')) do
-        expect(page).to have_css('dt', text: 'Video:')
+        expect(page).to have_css('dt', text: 'Video')
         expect(page).to have_css('dd', text: 'The physical statement Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.')
       end
     end

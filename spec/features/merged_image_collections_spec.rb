@@ -6,7 +6,7 @@ feature "Merged Image Collections" do
     fill_in 'q', with: '34'
     click_button 'search'
 
-    expect(page).to have_css('dt', text: "Digital content:")
+    expect(page).to have_css('dt', text: "Digital content")
     expect(page).to have_css('dd', text: /\d+ items?/)
 
     within('.image-filmstrip') do

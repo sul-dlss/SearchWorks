@@ -18,12 +18,12 @@
       <li><%= render_field_list_from_marc(author_creator) %></li>
     <% end %>
 
-    <% author_corp = link_to_data_with_label(document, "Corporate Author:", 'author_corp_display', {:action => 'index', :search_field => 'search_author'}) %>
+    <% author_corp = link_to_data_with_label(document, "Corporate Author", 'author_corp_display', {:action => 'index', :search_field => 'search_author'}) %>
     <% unless author_corp.blank? %>
       <%= render "field_list_from_index", :fields => author_corp %>
     <% end %>
 
-    <% author_meeting = link_to_data_with_label(document, "Meeting:", 'author_meeting_display', {:action => 'index', :search_field => 'search_author'}) %>
+    <% author_meeting = link_to_data_with_label(document, "Meeting", 'author_meeting_display', {:action => 'index', :search_field => 'search_author'}) %>
     <% unless author_meeting.nil? %>
       <%= render "field_list_from_index", :fields => author_meeting %>
     <% end %>

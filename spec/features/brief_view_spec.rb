@@ -12,7 +12,7 @@ feature "Brief View" do
     expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
 
     page.find("button.btn.docid-1").click
-    expect(page).to have_css("dt", text: "LANGUAGE:")
+    expect(page).to have_css("dt", text: "LANGUAGE")
     expect(page).to have_css("dd", text: "English.")
   end
 end

@@ -13,16 +13,16 @@
       <div class="col-xs-4">
         <dl class="dl-horizontal dl-invert">
           <% if @parent.collection_members.present? %>
-            <dt>Digital content:</dt>
+            <dt>Digital content</dt>
             <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
           <% end %>
           <% # this stuff is temporary until we have item level merge (mods + marc) %>
           <% if @parent.extent.present? %>
-            <dt><%= @parent.extent_label %>:</dt>
+            <dt><%= @parent.extent_label %></dt>
             <dd><%= @parent.extent %></dd>
           <% end %>
           <% if @parent.index_links.finding_aid.present? %>
-            <dt>Finding aid:</dt>
+            <dt>Finding aid</dt>
             <dd><%= @parent.index_links.finding_aid.first.text.html_safe %></dd>
           <% end %>
         </dl>

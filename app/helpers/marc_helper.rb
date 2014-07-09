@@ -591,11 +591,11 @@ module MarcHelper
     search_field = ["130", "730"].include?(uniform_title.tag) ? "search_title" : "author_title"
     vern = get_marc_vernacular(doc, uniform_title)
     href = "\"#{[author.join(" "),link_text.join(" ")].join(" ")}\""
-    {:label => "Uniform Title:", :fields => [{:field=>"#{link_to(link_text.join(" "),{:action => "index", :controller => "catalog", :q => href, :search_field=>search_field})} #{extra_text.join(" ")}".html_safe, :vernacular => vern ? link_to(vern,{:q => "\"#{vern}\"",:controller=>"catalog",:action=>"index",:search_field=>search_field}) : nil}], :unmatched_vernacular => nil}
+    {:label => "Uniform Title", :fields => [{:field=>"#{link_to(link_text.join(" "),{:action => "index", :controller => "catalog", :q => href, :search_field=>search_field})} #{extra_text.join(" ")}".html_safe, :vernacular => vern ? link_to(vern,{:q => "\"#{vern}\"",:controller=>"catalog",:action=>"index",:search_field=>search_field}) : nil}], :unmatched_vernacular => nil}
   end
   def link_to_author_from_marc(marc, opts={})
     if marc["100"]
-      opts[:label] ||= "Author/Creator:"
+      opts[:label] ||= "Author/Creator"
       opts[:search_options] ||= {:controller => "catalog", :action => 'index', :search_field => 'search_author'}
       link, extra, subs = [],[], []
       marc["100"].each do |sub_field|

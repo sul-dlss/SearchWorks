@@ -9,9 +9,9 @@ feature "Collection Access Point" do
     within("#masthead") do
       expect(page).to have_css("h1", text: "Image Collection1")
       expect(page).to have_css("div", text: "A collection of fixture images from the SearchWorks development index.")
-      expect(page).to have_css("dt", text: "Digital content:")
+      expect(page).to have_css("dt", text: "Digital content")
       expect(page).to have_css("dd", text: "1 item")
-      expect(page).to have_css("dt", text: "Finding aid:")
+      expect(page).to have_css("dt", text: "Finding aid")
       expect(page).to have_css("dd a", text: "Online Archive of California")
     end
     within("#content") do

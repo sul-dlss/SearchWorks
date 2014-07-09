@@ -15,7 +15,7 @@
             <dt>Finding aid</dt>
             <dd><%= @document.index_links.finding_aid.first.text.html_safe %></dd>
           <% end %>
-          <dt>Collection PURL<dt>
+          <dt>Collection PURL</dt>
           <dd><%= link_to("http://purl.stanford.edu/#{@document.druid}", "http://purl.stanford.edu/#{@document.druid}") %></dd>
         </dl>
     </div>
