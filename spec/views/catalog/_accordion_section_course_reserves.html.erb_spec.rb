@@ -22,13 +22,14 @@ describe "catalog/_accordion_section_course_reserves.html.erb" do
       expect(rendered).to have_css('.accordion-section.course-reserves a.header', text: "Course Reserves (2)")
       expect(rendered).to have_css('.accordion-section.course-reserves span.snippet', text: "ACCT-212-01-02, ACCT-215-01-02")
 
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dt a', text: "Managerial Accounting: Base")
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dt a', text: "Managerial Accounting: Accelerated")
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: "Managerial Accounting: Base")
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: "Managerial Accounting: Accelerated")
 
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dd .course-reserve-title', text: "Instructor(s):")
 
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dd .text-muted', text: "Reichelstein, Stefan J")
-      expect(rendered).to have_css('.accordion-section.course-reserves .details dd .text-muted', text: "Marinovic Vial, Ivan")
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dt', text: "Instructor(s)")
+
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dd', text: "Reichelstein, Stefan J")
+      expect(rendered).to have_css('.accordion-section.course-reserves .details dd', text: "Marinovic Vial, Ivan")
     end
   end
 

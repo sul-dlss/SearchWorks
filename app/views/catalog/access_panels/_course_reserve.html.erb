@@ -6,18 +6,18 @@
       <h3>Course reserve</h3>
     </div>
     <div class="panel-body">
-      <ul class="links">
+      <dl>
         <% document.access_panels.course_reserve.courses.each do |course| %>
-          <li>
-            <div class="course-reserve-course">
-              <%= t('blacklight.access_panels.course_reserve.course', link: link_to_course_reserve_course(course)).html_safe %>
-            </div>
-            <div class="course-reserve-instructor">
-              <%= t('blacklight.access_panels.course_reserve.instructor', instructor: course.instructor).html_safe %>
-            </div>
-          </li>
+          <dt>Course</dt>
+          <dd>
+            <%= link_to_course_reserve_course(course) %>
+          </dd>
+          <dt>Instructor(s)</dt>
+          <dd>
+            <%= course.instructor %>
+          </dd>
         <% end %>
-      </ul>
+      </dl>
     </div>
   </div>
 <% end %>

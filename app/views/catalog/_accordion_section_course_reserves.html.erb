@@ -18,8 +18,14 @@
     <div class="details <%= id %>-course-reserves">
       <dl>
         <% document.access_panels.course_reserve.courses.each do |course| %>
-          <dt><%= link_to_course_reserve_course(course).html_safe %></dt>
-          <dd><%= t('blacklight.access_panels.course_reserve.instructor', instructor: course.instructor).html_safe %></dd>
+          <dt>Course</dt>
+          <dd>
+            <%= link_to_course_reserve_course(course) %>
+          </dd>
+          <dt>Instructor(s)</dt>
+          <dd>
+            <%= course.instructor %>
+          </dd>
         <% end %>
       </dl>
     </div>
