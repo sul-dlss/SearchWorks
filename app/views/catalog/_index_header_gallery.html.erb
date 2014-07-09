@@ -7,9 +7,7 @@
   </div>
   <h3 class="index_title">
     <% counter = document_counter_with_offset(document_counter) %>
-    <% if document.has_key?(:format_main_ssim) %>
-      <%= render_resource_icon document[:format_main_ssim].first %>
-    <% end %>
+    <%= render_resource_icon document[document.format_key] %>
     <%= link_to_document document, label: get_main_title(document), counter: (counter + @response.params[:start].to_i) %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
   </h3>
