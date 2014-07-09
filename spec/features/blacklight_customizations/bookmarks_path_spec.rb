@@ -19,8 +19,8 @@ feature "Selections Path" do
       expect(page).to have_css("h3.index_title a", count: 2)
     end
     within ".search-widgets" do
-      expect(page).to have_css("a", text: "Cite 1 - 2")
-      expect(page).to have_css("button", text: "Send 1 - 2")
+      expect(page).to have_css("a", text: "CITE 1 - 2")
+      expect(page).to have_css("button", text: "SEND 1 - 2")
       expect(page).to_not have_css("button#select_all-dropdown")
     end
   end

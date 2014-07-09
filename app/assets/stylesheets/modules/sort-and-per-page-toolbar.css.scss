@@ -1,3 +1,36 @@
-#select_all-dropdown {
-  color: $link-color;
+#sortAndPerPage {
+  background-color: $sul-sort-per-page-bar-bg;
+  border-left: 1px solid $sul-sort-per-page-bar-border;
+  border-right: 1px solid $sul-sort-per-page-bar-border;
+  border-bottom: 1px solid $sul-sort-per-page-bar-border;
+  text-transform: uppercase;
+  padding: 5px 0px;
+  margin: 0 0 15px 0px;
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .dropdown-menu li > a {
+    border-bottom: none;
+    text-transform: none;
+
+    &:hover, &:focus, &:active {
+      border-bottom: none;
+    }
+  }
+
+  .page_links {
+    padding: 0 0 0 0;
+  }
+
+  .page_entries {
+    text-transform: none;
+  }
+
+  .navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
