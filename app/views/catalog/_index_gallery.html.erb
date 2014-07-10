@@ -1,7 +1,18 @@
-<% preview_container = 'preview-container-' + document.id %>
+<%
+  preview_container = 'preview-container-' + document.id
+  counter = document_counter_with_offset(document_counter)
+  options = {
+    :counter => counter,
+    :suppress_link => true
+  }
+  context_href = (document_link_params(document, {:counter => counter}))[:data][:"context-href"]
+%>
+
 <div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], ".#{preview_container}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
   <div class="item-thumb">
-    <%= render_thumbnail_tag(document, {}, {tabindex: '-1', counter: document_counter_with_offset(document_counter)}) %>
+    <div class="cover-image-wrapper" data-target="<%= catalog_path document %>" data-context-href="<%= context_href %>">
+      <%= render_thumbnail_tag(document, {}, options) %>
+    </div>
   </div>
   <div class="caption">
     <%= render_document_partials document, blacklight_config.view_config(:gallery).partials, document_counter: document_counter %>
