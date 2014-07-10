@@ -1,6 +1,11 @@
 #documents {
 
   .document {
+    @include document;
+
+    h3.index_title {
+      @include h3-index-title;
+    }
 
     .document-metadata {
       list-style-type: none;
