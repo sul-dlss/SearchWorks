@@ -11,6 +11,12 @@
       color: #999;
     }
 
+    .cover-image-wrapper {
+      margin: 0;
+      overflow: auto;
+      padding: 0;
+    }
+
     .cover-image {
       border: 1px solid #ddd;
       display: none;
@@ -20,6 +26,10 @@
       max-height: 200px;
       max-width: 200px;
     }
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
   }
 }
 
