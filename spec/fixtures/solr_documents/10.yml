@@ -16,6 +16,10 @@
   - "678 -|- EARTH-SCI -|- STACKS -|- -|- -|- -|- -|- -|- JKL -|-"
   - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- MNO -|-"
   - "543 -|- BIOLOGY -|- STACKS -|- -|- -|- -|- -|- -|- PQR -|-"
+:mhld_display:
+  - "CHEMCHMENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
+  - "CHEMCHMENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
+  - "GREEN -|- STACKS -|- public note3 -|- library has3 -|- latest received3"
 :isbn_display:
   - "0393040801"
   - "9780393040807"

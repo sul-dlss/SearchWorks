@@ -57,6 +57,42 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       end
     end
   end
+  describe "mhld" do
+    describe "with matching library/location" do
+      before do
+        assign(:document, SolrDocument.new(
+          id: '123',
+          item_display: ['321 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
+          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+        ))
+        render
+      end
+      it "should include the matched MHLD" do
+        expect(rendered).to have_css('h3 a', text: "Green Library", count: 1)
+        expect(rendered).to have_css('li .location-name', text: "Stacks", count: 1)
+        expect(rendered).to have_css('ul.items li.mhld.public-note', text: "public note")
+        expect(rendered).to have_css('ul.items li.mhld', text: "Latest: latest received")
+        expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
+        expect(rendered).to have_css('ul.items li', text: "ABC 123")
+      end
+    end
+    describe "that has no matching library/location" do
+      before do
+        assign(:document, SolrDocument.new(
+          id: '123',
+          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+        ))
+        render
+      end
+      it "should invoke a library block w/ the appropriate mhld data" do
+        expect(rendered).to have_css('h3 a', text: "Green Library")
+        expect(rendered).to have_css('li .location-name', text: "Stacks")
+        expect(rendered).to have_css('ul.items li.mhld.public-note', text: "public note")
+        expect(rendered).to have_css('ul.items li.mhld', text: "Latest: latest received")
+        expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
+      end
+    end
+  end
   describe "request links" do
     describe "location level request links" do
       before do

@@ -5,7 +5,7 @@
 
 <% if document.access_panels.library_locations? %>
   <%
-    snippet = document.access_panels.library_locations.libraries.map(&:name).join(', ')
+    snippet = document.access_panels.library_locations.libraries.select(&:is_viewable?).map(&:name).join(', ')
   %>
   <div class="accordion-section location col-md-9">
     <a class="header" data-accordion-section-target=".<%= id %>-location">

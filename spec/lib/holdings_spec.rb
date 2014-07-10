@@ -107,4 +107,40 @@ describe Holdings do
       expect(complex_holdings.find_by_barcode('not-a-barcode')).to be_nil
     end
   end
+  describe "mhld" do
+    let(:holdings_doc) {
+      SolrDocument.new(
+        item_display: ['barcode -|- GREEN -|- STACKS -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber'],
+        mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+      )
+    }
+    let(:mhld_only_doc) {
+      SolrDocument.new(
+        mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+      )
+    }
+    it "should match up mhlds in locations with existing call numbers" do
+      holdings = holdings_doc.holdings
+      expect(holdings.libraries.length).to eq 1
+      expect(holdings.libraries.first.code).to eq 'GREEN'
+      expect(holdings.libraries.first.locations.length).to eq 1
+      location = holdings.libraries.first.locations.first
+      expect(location.code).to eq 'STACKS'
+      expect(location.items.length).to eq 1
+      expect(location.items.first).to be_a Holdings::Callnumber
+      expect(location.mhld.length).to eq 1
+      expect(location.mhld.first).to be_a Holdings::MHLD
+    end
+    it "should include mhlds that don't belong to an existing library or location" do
+      holdings = mhld_only_doc.holdings
+      expect(holdings.libraries.length).to eq 1
+      expect(holdings.libraries.first.code).to eq 'GREEN'
+      expect(holdings.libraries.first.locations.length).to eq 1
+      location = holdings.libraries.first.locations.first
+      expect(location.code).to eq 'STACKS'
+      expect(location.items).to_not be_present
+      expect(location.mhld.length).to eq 1
+      expect(location.mhld.first).to be_a Holdings::MHLD
+    end
+  end
 end

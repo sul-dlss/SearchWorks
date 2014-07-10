@@ -15,6 +15,6 @@ feature "Library Location Access Panel" do
 
   scenario "should have 3 library locations" do
     visit '/view/10'
-    expect(page).to have_css('div.panel-library-location', count:3)
+    expect(page).to have_css('div.panel-library-location', count:4)
   end
 end
