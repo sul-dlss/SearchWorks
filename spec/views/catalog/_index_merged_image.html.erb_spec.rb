@@ -7,7 +7,7 @@ describe "catalog/_index_merged_image.html.erb" do
     render
   end
   it "should include the physical extent" do
-    expect(rendered).to have_css("dt", text: "PHYSICAL EXTENT:")
+    expect(rendered).to have_css("dt", text: "Physical extent")
     expect(rendered).to have_css("dd", text: "The Physical Extent")
   end
 end

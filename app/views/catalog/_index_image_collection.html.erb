@@ -1,11 +1,11 @@
 <dl class="dl-horizontal dl-invert">
   <% if document.collection_members.present? %>
-    <dt>DIGITAL CONTENT:</dt>
+    <dt>Digital content</dt>
     <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
   <% end %>
 
   <% if document.extent.present? %>
-    <dt><%= document.extent_label %>:</dt>
+    <dt><%= document.extent_label %></dt>
     <dd><%= document.extent %></dd>
   <% end %>
 </dl>

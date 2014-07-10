@@ -10,7 +10,7 @@ describe "catalog/_index_marc.html.erb" do
       render
     end
     it "should include the physical extent" do
-      expect(rendered).to have_css("dt", text: "BOOK:")
+      expect(rendered).to have_css("dt", text: "Book")
       expect(rendered).to have_css("dd", text: "The Physical Extent")
     end
   end
@@ -26,11 +26,11 @@ describe "catalog/_index_marc.html.erb" do
       render
     end
     it "should display their summary" do
-      expect(rendered).to have_css('dt', text: "DATABASE SUMMARY:")
+      expect(rendered).to have_css('dt', text: "Database summary")
       expect(rendered).to have_css('dd', text: "The summary of the object")
     end
     it "should display the database topics" do
-      expect(rendered).to have_css('dt', text: "DATABASE TOPICS:")
+      expect(rendered).to have_css('dt', text: "Database topics")
       expect(rendered).to have_css('dd a', text: "Subject1")
       expect(rendered).to have_css('dd a', text: "Subject2")
     end

@@ -11,7 +11,7 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
     it "should render metadata and a filmstrip" do
       pending("Needs item-level-merge in external data integration index")
       expect(page).to have_css('h5 a', text: "Reid W. Dennis collection of California lithographs, 1850-1906")
-      expect(page).to have_css('dt', text: "DIGITAL CONTENT:")
+      expect(page).to have_css('dt', text: "Digital content")
       expect(page).to have_css('dd', text: "48 items")
 
       within('.image-filmstrip') do

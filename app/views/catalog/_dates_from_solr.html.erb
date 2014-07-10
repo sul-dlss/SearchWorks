@@ -19,7 +19,7 @@
 <% unless doc_dates.blank? %>
   <% dates.each do |field, label| %>
     <% if document.has_key?(field)  %>
-      <dt title="<%= label %>"><%= label %>:</dt>
+      <dt title="<%= label %>"><%= label %></dt>
       <dd><%= [document[field]].flatten.join("<br/>").html_safe %></dd>
     <% end %>
   <% end %>

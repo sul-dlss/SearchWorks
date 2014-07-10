@@ -1,6 +1,6 @@
 module Extent
   def extent_label
-    sanitized_format || "PHYSICAL EXTENT"
+    sanitized_format || "Physical extent"
   end
 
   def extent
@@ -25,7 +25,7 @@ module Extent
     if self[format_key].present?
       self[format_key].reject do |format|
         format == 'Database'
-      end.first.try(:upcase)
+      end.first
     end
   end
 end

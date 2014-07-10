@@ -72,19 +72,19 @@ class CatalogController < ApplicationController
     config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 21
     config.add_facet_field "access_facet", :label => "Access"
     config.add_facet_field "collection", :label => "Collection", :show => false
-    config.add_facet_field "collection_type", :label => "Collection Type", :show => false
+    config.add_facet_field "collection_type", :label => "Collection type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100
-    config.add_facet_field "format_physical_ssim", :label => "Physical Format", limit: 20
+    config.add_facet_field "format_physical_ssim", :label => "Physical format", limit: 20
     config.add_facet_field "pub_year_tisim", :label => "Date", :range => true
     config.add_facet_field "building_facet", :label => "Library", limit: 100
     config.add_facet_field "language", :label => "Language", limit: 20
     config.add_facet_field "author_person_facet", :label => "Author", limit: 20
     config.add_facet_field "topic_facet", :label => "Topic", limit: 20
     config.add_facet_field "genre_ssim", :label => "Genre", limit: 20
-    config.add_facet_field "callnum_top_facet", :label => "Call Number", limit: 20
-    config.add_facet_field "lc_alpha_facet", :label => "Refine Call Number", :show => false
-    config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call Number", :show => false
-    config.add_facet_field "dewey_1digit_facet", :label => "Refine Call Number", :show => false
+    config.add_facet_field "callnum_top_facet", :label => "Call number", limit: 20
+    config.add_facet_field "lc_alpha_facet", :label => "Refine call number", :show => false
+    config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call number", :show => false
+    config.add_facet_field "dewey_1digit_facet", :label => "Refine Call number", :show => false
     #config.add_facet_field "dewey_2digit_facet", :label => "Refine Call Number", :show => false
     #config.add_facet_field "dewey_b4cutter_facet", :label => "Refine Call Number", :show => false
     #config.add_facet_field "gov_doc_type_facet", :label => "Refine Call Number", :show => false
@@ -94,7 +94,7 @@ class CatalogController < ApplicationController
     # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
     config.add_facet_field "geographic_facet", :label => "Region", limit: 20
     config.add_facet_field "era_facet", :label => "Era", limit: 20
-    config.add_facet_field "author_other_facet", :label => "Organization (as Author)", limit: 20
+    config.add_facet_field "author_other_facet", :label => "Organization (as author)", limit: 20
     config.add_facet_field "format", :label => "Format", show: false
 
     # Pivot facet example

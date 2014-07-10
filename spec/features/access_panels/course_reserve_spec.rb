@@ -5,10 +5,10 @@ feature "Course Reserve Access Panel" do
   scenario "should have 3 course reservations" do
     visit '/view/1'
     within "div.panel-course-reserve" do
-      expect(page).to have_css('div.course-reserve-course', count: 3, text: "COURSE:")
-      expect(page).to have_css('span.course-reserve-title', text: "COURSE:")
+      expect(page).to have_css('div.course-reserve-course', count: 3, text: "Course:")
+      expect(page).to have_css('span.course-reserve-title', text: "Course:")
       expect(page).to have_css('a', text: "ACCT-212-01-02 -- Managerial Accounting: Base")
-      expect(page).to have_css('div.course-reserve-instructor', text: "INSTRUCTOR(S):")
+      expect(page).to have_css('div.course-reserve-instructor', text: "Instructor(s):")
     end
   end
 
@@ -16,9 +16,9 @@ feature "Course Reserve Access Panel" do
     visit '/view/2'
     within "div.panel-course-reserve" do
       expect(page).to have_css('div.course-reserve-course', count: 1, text: "CAT-401-01-01 -- Emergency Kittenz")
-      expect(page).to have_css('span.course-reserve-title', text: "COURSE:")
+      expect(page).to have_css('span.course-reserve-title', text: "Course:")
       expect(page).to have_css('a', text: "CAT-401-01-01 -- Emergency Kittenz")
-      expect(page).to have_css('div.course-reserve-instructor', text: "INSTRUCTOR(S): McDonald, Ronald")
+      expect(page).to have_css('div.course-reserve-instructor', text: "Instructor(s): McDonald, Ronald")
     end
   end
 
