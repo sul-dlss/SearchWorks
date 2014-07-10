@@ -16,3 +16,25 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
   background: $cardinal-red;
   border: none;
 }
+
+.btn-sul-toolbar {
+  color: $btn-sul-toolbar-bar-color;
+  background-color: transparent;
+  margin: 0 5px;
+  padding: 3px 5px;
+  text-transform: uppercase;
+  & a {
+    text-transform: uppercase;
+    color: $btn-sul-toolbar-bar-color;
+    border-bottom: none;
+  }
+
+  &.disabled {
+    border: none;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $btn-sul-toolbar-bar-color;
+    background-color: $btn-sul-toolbar-bar-hover-bg
+  }
+}

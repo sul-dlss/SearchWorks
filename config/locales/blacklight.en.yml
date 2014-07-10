@@ -17,17 +17,17 @@ en:
       show:
         title: '%{document_title} in %{application_name}'
       sort:
-        label_html: 'Sort<span class="hidden-sm"> by relevance</span>'
+        label_html: 'Sort<span class="hidden-xs hidden-sm"> by %{field}</span>'
       title: '%{num_results} in %{application_name}'
       view:
         label: 'View'
         brief: 'Brief'
       per_page:
-        button_label_html: '%{count}<span class="hidden-sm"> per page</span>'
+        button_label_html: '%{count}<span class="hidden-xs hidden-sm"> per page</span>'
       pagination_info:
         pages:
-          one: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
-          other: '<strong>%{start_num}</strong> - <strong>%{end_num}</strong><span class="hidden-xs"> of <strong>%{total_num}</strong></span>'
+          one: '%{start_num} - %{end_num}'
+          other: '%{start_num} - %{end_num}'
         no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
@@ -46,8 +46,8 @@ en:
       send_to_html: 'Send %{current_range} to <span class="caret"></span>'
   views:
     pagination_compact:
-      next: '<span class="sr-only">Next </span> <i class="fa fa-chevron-right"></i>'
-      previous: '<span class="sr-only"> Previous</span> <i class="fa fa-chevron-left"></i>'
+      next: '<span class="hidden-xs">Next </span><i class="fa fa-chevron-right"></i>'
+      previous: '<i class="fa fa-chevron-left"></i><span class="hidden-xs"> Previous</span>'
     pagination:
       previous: '<i class="fa fa-chevron-left"></i> Previous'
       next: 'Next <i class="fa fa-chevron-right"></i>'
