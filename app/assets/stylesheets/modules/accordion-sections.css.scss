@@ -1,35 +1,53 @@
 .accordion-section {
   font-size: small;
-  margin: 5px 0;
+  margin: 0 0 7px 0;
 
   .header {
     float: left;
-    background-color: #000;
-    border-radius: 4px;
-    color: #fff;
+    border-radius: 2px;
+    color: $white;
     display: inline-block;
-    margin-right: 5px;
-    padding: 2px 10px;
+    margin-right: 1em;
     cursor: pointer;
+    padding: 2px 10px;
     border-bottom: none;
+    font-weight: 300;
+    font-size: 0.9em;
+    padding: 0 8px 1px 10px;
+    width: 9em;
+    text-align: right;
+
     i.fa {
       padding-left: 4px;
     }
   }
+
+  .remove-list-styles {
+    ul, ol {
+      margin-bottom: 0;
+    }
+  }
+
   &.summary {
     .snippet {
       margin-left: 86px;
     }
   }
+
   .snippet {
-    color: #999;
+    color: $sul-mini-accordion-text-color;
+    @extend .remove-list-styles;
   }
 
   .details {
-    border: 1px solid #ccc;
+    border-top: 1px solid $sul-document-border-color;
+    border-right: 1px solid $sul-document-border-color;
+    border-bottom: 1px solid $sul-document-border-bottom-color;
+    border-left: 1px solid $sul-document-border-color;
     display: none;
     padding: 10px;
     clear: left;
+    @extend .remove-list-styles;
   }
 
   .details:target {
