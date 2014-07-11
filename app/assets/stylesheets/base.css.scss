@@ -33,5 +33,17 @@ h3 {
 }
 
 dt {
-  text-transform: uppercase;
+  color: $gray-41-percent;
+  font-weight: normal;
+  font-size: .9em;
+  text-transform: uppercase !important;
+  padding-right: 1em;
+  padding-top: .15em;
+  width: 12em;
+}
+
+dd {
+  margin-left: 2em;
+  margin-bottom: .5em;
+  max-width: 45em;
 }
