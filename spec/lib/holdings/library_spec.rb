@@ -41,4 +41,12 @@ describe Holdings::Library do
       end
     end
   end
+  describe "#mhld" do
+    let(:library) {Holdings::Library.new("GREEN")}
+    it "should be an accessible attribute" do
+      expect(library.mhld).to_not be_present
+      library.mhld = "something"
+      expect(library.mhld).to be_present
+    end
+  end
 end

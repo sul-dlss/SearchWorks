@@ -17,10 +17,25 @@
               <% library.locations.each do |location| %>
                 <li>
                   <strong class="location-name"><%= location.name %></strong>
-                  <% if library.location_level_request? || location.location_level_request? %>
-                    <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                  <% if location.items.present? %>
+                    <% if library.location_level_request? || location.location_level_request? %>
+                      <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                    <% end %>
                   <% end %>
                   <ul class="list-unstyled items">
+                    <% if location.mhld.present? %>
+                      <% location.mhld.each do |mhld| %>
+                        <% if mhld.public_note.present? %>
+                          <li class='mhld public-note'><%= mhld.public_note.html_safe %></li>
+                        <% end %>
+                        <% if mhld.latest_received.present? %>
+                          <li class='mhld'>Latest: <%= mhld.latest_received.html_safe %></li>
+                        <% end %>
+                        <% if mhld.library_has.present? %>
+                          <li class='mhld'>Library has: <%= mhld.library_has.html_safe %></li>
+                        <% end %>
+                      <% end %>
+                    <% end %>
                     <% location.items.each do |item| %>
                       <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
                         <i class="availability-icon <%= item.status.availability_class %>"></i>

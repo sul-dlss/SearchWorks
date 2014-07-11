@@ -1,5 +1,5 @@
 <% if document.holdings.present? %>
-  <% document.holdings.libraries.each do |library| %>
+  <% document.holdings.libraries.select(&:is_viewable?).each do |library| %>
     <table class="table table-condensed availability" data-live-lookup-url="<%= availability_index_path %>">
       <thead>
         <tr class='active'>
@@ -9,22 +9,35 @@
       </thead>
       <tbody>
         <% library.locations.each do |location| %>
-          <% if location.more_than_one_item? %>
-            <tr>
-              <td><strong><%= location.name%></strong></td>
-              <td>
+          <tr>
+            <td>
+              <strong><%= location.name%></strong>
+              <% if location.mhld.present? %>
+                <% location.mhld.each do |mhld| %>
+                  <% if mhld.public_note.present? %>
+                    <span class='public-note'><%= mhld.public_note %></span>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </td>
+            <td>
+              <% if location.mhld.present? %>
+                <% location.mhld.each do |mhld| %>
+                  <% if mhld.latest_received.present? %>
+                    Latest: <%= mhld.latest_received%>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% if location.items.present? %>
                 <% if library.location_level_request? || location.location_level_request? %>
                   <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs') %>
                 <% end %>
-              </td>
-            </tr>
-          <% end %>
+              <% end %>
+            </td>
+          </tr>
           <% location.items.each do |item| %>
             <tr>
-              <td class="<%= 'indent-callnumber' if location.more_than_one_item? %>">
-                <% if location.one_item? %>
-                  <strong><%= location.name %></strong> :
-                <% end %>
+              <td class='indent-callnumber'>
                 <%= item.callnumber %>
               </td>
               <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
@@ -38,7 +51,7 @@
                   On Reserve <%= item.loan_period %>
                 <% end %>
                 <span class="request-link">
-                  <% if item.must_request? || (location.one_item? && (library.location_level_request? || location.location_level_request?)) %>
+                  <% if item.must_request? %>
                     <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs') %>
                   <% end %>
                 </span>
