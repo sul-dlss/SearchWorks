@@ -120,6 +120,8 @@
             .done(function(data){
               $galleryDoc.updateDocs();
               scrollOver();
+              Blacklight.do_bookmark_toggle_behavior();
+              $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();
