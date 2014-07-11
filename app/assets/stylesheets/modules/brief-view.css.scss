@@ -11,4 +11,15 @@
     margin-top: 0;
     padding: 0;
   }
+
+  .btn-preview {
+    &:after {
+      font-family: FontAwesome;
+      content: " \f0da";
+    }
+    &.preview-open:after {
+      font-family: FontAwesome;
+      content: " \f0d7";
+    }
+  }
 }

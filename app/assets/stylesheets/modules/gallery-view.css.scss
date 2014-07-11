@@ -2,27 +2,31 @@
    being overridden.
 */
 
-$gallery-document-width: 184px;
-
 .gallery {
   .item-thumb {
-    height: 220px;
+    height: 210px;
+    width: $gallery-document-width - 2;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
   }
 
   .callnumber-bar {
-    background-color: $gray-light;
-    color: $body-bg;
-    width: $gallery-document-width;
-    @extend .text-center;
-    margin-left: -5px;
+    background-color: $sul-gallery-callnumber-bar-bg;
+    color: $sul-gallery-callnumber-bar-color;
+    font-weight: 300;
+    font-size: .9em;
+    text-align: center;
+    padding: 1px;
     overflow: hidden;
     white-space: nowrap;
-    height: $line-height-base;
+    height: 1.5em;
+    width: $gallery-document-width - 2;
   }
 
   .caption {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .caption h5 {
@@ -31,32 +35,39 @@ $gallery-document-width: 184px;
   }
 
   .gallery-document {
-    @include document;
-
-    display: inline;
-    float: left;
-    height: 400px;
-    margin: 0px 5px 15px 5px;
-    padding: 5px;
+    @include document-borders;
     position: relative;
+    margin: 0px 0px 30px 15px;
+    float: left;
+    display: inline;
+    background-color: $white;
     width: $gallery-document-width;
+    height: $gallery-document-height;
 
     h3.index_title {
       font-size: 1.1em;
       line-height: 1.5em;
+      margin: .5em;
 
       a {
         word-break: break-all;
+      }
+    }
+
+    .btn-preview {
+      &:after {
+        font-family: FontAwesome;
+        content: " \f0da";
+      }
+      &.preview-open:after {
+        font-family: FontAwesome;
+        content: " \f0d7";
       }
     }
   }
 
   .document-counter {
     display: none;
-  }
-
-  .index-document-functions {
-    margin-left: 28px;
   }
 
   div.gallery-buttons {
@@ -69,7 +80,14 @@ $gallery-document-width: 184px;
     .preview-button {
       position: absolute;
       bottom: 0px;
-      right: 12px;
+      margin-left: 8px;
+      margin-bottom: 3px;
+    }
+
+    form {
+      position: absolute;
+      left: 120px;
+      font-size: .9em;
     }
   }
   .stacks-image {
@@ -83,10 +101,10 @@ span.fake-cover {
   height: 195px;
   text-align: center;
   position: relative;
-  left: 27px;
+  margin: 0 auto;
   display: block;
-  background: $well-bg;
-  border: 1px solid $well-border;
+  background: $sul-gallery-fakecover-bg;
+  border: 1px solid $sul-gallery-fakecover-border;
 }
 
 div.fake-cover-text-wrapper {
