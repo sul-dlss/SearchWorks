@@ -35,7 +35,7 @@
         appendPointer($previewTarget);
         $previewTarget.css('display', 'inline-block');
         $previewTarget.append($closeBtn).show();
-        $triggerBtn.html('<span class="glyphicon glyphicon-chevron-down"></span> Close');
+        $triggerBtn.html('Close');
         attachPreviewEvents();
         $triggerBtn.addClass('preview-open');
       }
@@ -95,7 +95,7 @@
         $previewTarget.removeClass('preview');
         $triggerBtn.removeClass('preview-open');
         $previewTarget.hide();
-        $triggerBtn.html('<span class="glyphicon glyphicon-chevron-right"></span> Preview');
+        $triggerBtn.html('Preview');
       }
 
       function init() {

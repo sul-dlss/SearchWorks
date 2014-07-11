@@ -31,7 +31,7 @@
 
         $triggerBtn
           .addClass('preview-open')
-          .html('<span class="glyphicon glyphicon-chevron-up"></span> Close');
+          .html('Close');
 
         $briefTarget.hide();
 
@@ -51,7 +51,7 @@
 
         $triggerBtn
           .removeClass('preview-open')
-          .html('<span class="glyphicon glyphicon-chevron-right"></span> Preview');
+          .html('Preview');
       }
 
       function init() {
