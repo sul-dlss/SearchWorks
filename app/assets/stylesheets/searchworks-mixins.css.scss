@@ -1,0 +1,13 @@
+@mixin document {
+  background-color: $white;
+  border-top: 1px solid $sul-document-border-color;
+  border-right: 1px solid $sul-document-border-color;
+  border-bottom: 1px solid $sul-document-border-bottom-color;
+  border-left: 1px solid $sul-document-border-color;
+  margin-bottom: 15px;
+  padding: 15px 15px 15px 40px;
+}
+
+@mixin h3-index-title {
+  text-indent: -13px;
+}
