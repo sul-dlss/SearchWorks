@@ -45,7 +45,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
-    blacklight (5.4.0)
+    blacklight (5.5.1)
       bootstrap-sass (~> 3.0)
       deprecation
       kaminari (~> 0.13)
@@ -64,7 +64,7 @@ GEM
       jquery-rails
       rails (>= 3.0, < 5.0)
     blankslate (2.1.2.4)
-    bootstrap-sass (3.1.1.1)
+    bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.2.2)
     capistrano (3.2.1)
@@ -144,7 +144,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    kaminari (0.15.1)
+    kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     libv8 (3.16.14.3)
@@ -162,8 +162,8 @@ GEM
       unf
     mediashelf-loggable (0.4.9)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
-    minitest (5.3.5)
+    mini_portile (0.6.0)
+    minitest (5.4.0)
     mods (0.0.23)
       iso-639
       nokogiri
@@ -176,8 +176,8 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.0)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     nom-xml (0.5.1)
       activesupport
       i18n
@@ -297,7 +297,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blacklight (~> 5.4.0)
+  blacklight (~> 5.5.1)
   blacklight-gallery!
   blacklight-marc (~> 5.0)
   blacklight_advanced_search
