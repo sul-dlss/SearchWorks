@@ -2,7 +2,7 @@ class LibraryLocation < AccessPanel
   delegate :present?, to: :libraries
   def libraries
     if @document.holdings.present?
-      @document.holdings.libraries
+      @document.holdings.libraries.select(&:present?)
     end
   end
 end

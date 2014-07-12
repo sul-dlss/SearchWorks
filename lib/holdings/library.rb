@@ -19,7 +19,7 @@ class Holdings
       end
       @locations
     end
-    def is_viewable?
+    def present?
       @code.present? && !["SUL", "PHYSICS"].include?(@code)
     end
     def location_level_request?

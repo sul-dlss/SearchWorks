@@ -1,7 +1,11 @@
 class Holdings
   class Callnumber
+    delegate :present?, to: :barcode
     def initialize(holding_info)
       @holding_info = holding_info
+    end
+    def browsable?
+      item_display[8].present?
     end
     def barcode
       item_display[0]
@@ -36,7 +40,11 @@ class Holdings
       item_display[7]
     end
     def callnumber
-      item_display[8]
+      if item_display[8].present?
+        item_display[8]
+      else
+        '(no callnumber)'
+      end
     end
     def full_shelfkey
       item_display[9]

@@ -11,6 +11,29 @@ describe Holdings::Callnumber do
       expect(callnumber).to respond_to(method)
     end
   end
+  describe "#present?" do
+    let(:no_barcode) { Holdings::Callnumber.new('-|- -|- -|-') }
+    it "should be false when there is no barcode" do
+      expect(no_barcode).to_not be_present
+    end
+    it "should return true when there is a barcode" do
+      expect(callnumber).to be_present
+    end
+  end
+  describe "browsable?" do
+    it "should return true if there is a real callnumber" do
+      expect(Holdings::Callnumber.new(complex_item_display)).to be_browsable
+    end
+    it "should return true if there false if there is no real callnumber" do
+      expect(Holdings::Callnumber.new('-|- -|- -|-')).to_not be_browsable
+    end
+  end
+  describe "#callnumber" do
+    let(:no_callnumber) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
+    it "should return '(no callnumber) if the callnumber is blank" do
+      expect(no_callnumber.callnumber).to eq '(no callnumber)'
+    end
+  end
   describe "#status" do
     let(:status) { callnumber.status }
     it "should return a Holdings::Status object" do

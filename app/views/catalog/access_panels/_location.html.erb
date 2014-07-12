@@ -2,66 +2,63 @@
 <% if document.access_panels.library_locations? %>
   <div data-live-lookup-id="<%= document[:id] %>" data-live-lookup-url="<%= availability_index_path %>">
     <% document.access_panels.library_locations.libraries.each do |library| %>
-      <% if library.is_viewable? %>
-        <div class="panel panel-default access-panel panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
-          <div class="library-location-heading access-panel-heading">
-            <%= thumb_for_library(library) %>
-            <div class="library-location-heading-text">
-              <h3><%= link_to_library(library) %></h3>
-              <div class="small location-hours-today"></div>
-            </div>
-          </div>
-        
-          <div class="panel-body">
-            <ul class="list-unstyled location">
-              <% library.locations.each do |location| %>
-                <li>
-                  <strong class="location-name"><%= location.name %></strong>
-                  <% if location.items.present? %>
-                    <% if library.location_level_request? || location.location_level_request? %>
-                      <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
-                    <% end %>
-                  <% end %>
-                  <ul class="list-unstyled items">
-                    <% if location.mhld.present? %>
-                      <% location.mhld.each do |mhld| %>
-                        <% if mhld.public_note.present? %>
-                          <li class='mhld public-note'><%= mhld.public_note.html_safe %></li>
-                        <% end %>
-                        <% if mhld.latest_received.present? %>
-                          <li class='mhld'>Latest: <%= mhld.latest_received.html_safe %></li>
-                        <% end %>
-                        <% if mhld.library_has.present? %>
-                          <li class='mhld'>Library has: <%= mhld.library_has.html_safe %></li>
-                        <% end %>
-                      <% end %>
-                    <% end %>
-                    <% location.items.each do |item| %>
-                      <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
-                        <i class="availability-icon <%= item.status.availability_class %>"></i>
-                        <%= item.callnumber %>
-                        <div class="request-link pull-right">
-                          <% if item.must_request? %>
-                            <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs') %>
-                          <% end %>
-                        </div>
-                        <div class="current-location">
-                          <% unless item.treat_current_location_as_home_location? %>
-                            <%= item.current_location.name %>
-                          <% end %>
-                        </div>
-                        <% if item.on_reserve? %>
-                          <div class="reserve-note">On Reserve <%= item.loan_period %></div>
-                        <% end %>
-                      </li>
-                    <% end %>
-                  </ul>
-                </li>
-              <% end %>
-            </ul>
+      <div class="panel panel-default access-panel panel-library-location availability" data-hours-route=<%= hour_path(library.code) %>>
+        <div class="library-location-heading access-panel-heading">
+          <%= thumb_for_library(library) %>
+          <div class="library-location-heading-text">
+            <h3><%= link_to_library(library) %></h3>
+            <div class="small location-hours-today"></div>
           </div>
         </div>
-      <% end %>
+        <div class="panel-body">
+          <ul class="list-unstyled location">
+            <% library.locations.select(&:present?).each do |location| %>
+              <li>
+                <strong class="location-name"><%= location.name %></strong>
+                <% if location.items.present? %>
+                  <% if library.location_level_request? || location.location_level_request? %>
+                    <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                  <% end %>
+                <% end %>
+                <ul class="list-unstyled items">
+                  <% if location.mhld.present? %>
+                    <% location.mhld.each do |mhld| %>
+                      <% if mhld.public_note.present? %>
+                        <li class='mhld public-note'><%= mhld.public_note.html_safe %></li>
+                      <% end %>
+                      <% if mhld.latest_received.present? %>
+                        <li class='mhld'>Latest: <%= mhld.latest_received.html_safe %></li>
+                      <% end %>
+                      <% if mhld.library_has.present? %>
+                        <li class='mhld'>Library has: <%= mhld.library_has.html_safe %></li>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                  <% location.items.each do |item| %>
+                    <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
+                      <i class="availability-icon <%= item.status.availability_class %>"></i>
+                      <%= item.callnumber %>
+                      <div class="request-link pull-right">
+                        <% if item.must_request? %>
+                          <%= link_to('Request', request_link(document, item), class: 'btn btn-info btn-xs') %>
+                        <% end %>
+                      </div>
+                      <div class="current-location">
+                        <% unless item.treat_current_location_as_home_location? %>
+                          <%= item.current_location.name %>
+                        <% end %>
+                      </div>
+                      <% if item.on_reserve? %>
+                        <div class="reserve-note">On Reserve <%= item.loan_period %></div>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     <% end %>
   </div>
 <% end %>

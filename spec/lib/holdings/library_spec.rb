@@ -23,15 +23,15 @@ describe Holdings::Library do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
   end
-  describe "#is_viewable?" do
+  describe "#present?" do
     it "should be false for PHYSICS" do
-      expect(Holdings::Library.new("PHYSICS").is_viewable?).to be_false
+      expect(Holdings::Library.new("PHYSICS")).to_not be_present
     end
     it "should not be false for SUL" do
-      expect(Holdings::Library.new("SUL").is_viewable?).to be_false
+      expect(Holdings::Library.new("SUL")).to_not be_present
     end
     it "should not be false for a blank library" do
-      expect(Holdings::Library.new("").is_viewable?).to be_false
+      expect(Holdings::Library.new("")).to_not be_present
     end
   end
   describe "#location_level_request?" do

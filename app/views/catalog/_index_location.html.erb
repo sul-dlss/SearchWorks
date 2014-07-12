@@ -1,5 +1,5 @@
 <% if document.holdings.present? %>
-  <% document.holdings.libraries.select(&:is_viewable?).each do |library| %>
+  <% document.holdings.libraries.select(&:present?).each do |library| %>
     <table class="table table-condensed availability" data-live-lookup-url="<%= availability_index_path %>">
       <thead>
         <tr class='active'>
@@ -8,7 +8,7 @@
         </tr>
       </thead>
       <tbody>
-        <% library.locations.each do |location| %>
+        <% library.locations.select(&:present_on_index?).each do |location| %>
           <tr>
             <td>
               <strong><%= location.name%></strong>

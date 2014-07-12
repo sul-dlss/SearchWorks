@@ -3,7 +3,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h2>Browse nearby</h2>
-      <% document.holdings.unique_callnumbers.each_with_index do |callnumber, index| %>
+      <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
         <span class="callnumber">
           <%= link_to_callnumber_browse(
                 document,
@@ -12,7 +12,7 @@
                ) %>
         </span>
       <% end %>
-      <% document.holdings.unique_callnumbers.each_with_index do |callnumber, index| %>
+      <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
         <div id="callnumber-<%=index%>" class="collapse embed-callnumber-browse-container">
           <div class="embedded-items"><div class="gallery"></div></div>
           <a class="left embed-browse-control" href="#" data-slide="prev">
