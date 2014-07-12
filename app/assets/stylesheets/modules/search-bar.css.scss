@@ -42,10 +42,12 @@
   }
 
   .search-target{
+    font-family: 'Raleway';
     color: $cardinal-red;
     font-size: 1.5em;
     font-weight: 100;
-    margin: 10px 0 6px 0px;
+    margin-left: -3px;
+    vertical-align: bottom
   }
 
   span.input-group-addon {
