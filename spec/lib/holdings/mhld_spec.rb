@@ -17,4 +17,14 @@ describe Holdings::MHLD do
   it "should append <wbr/> to hyphens" do
     expect(Holdings::MHLD.new(special_mhld).library_has).to include('-<wbr/>')
   end
+  describe "#present?" do
+    let(:no_mhld) { 'GREEN -|- STACKS -|- -|- -|-'}
+    let(:mhld) { 'GREEN -|- STACKS -|- -|- -|- something' }
+    it "should be false unless a piece of the mhld statement is available" do
+      expect(Holdings::MHLD.new(no_mhld)).to_not be_present
+    end
+    it "should be true of any piece of the mhld is available" do
+      expect(Holdings::MHLD.new(mhld)).to be_present
+    end
+  end
 end

@@ -38,13 +38,7 @@ describe Holdings do
       )
     }
     let(:blank_callnumber) {
-      Holdings.new(
-        SolrDocument.new(
-          item_display: [
-            'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- -|- full-shelfkey'
-          ]
-        )
-      )
+      Holdings.new( SolrDocument.new() )
     }
     it "should return false if a non-viewable library has items" do
       expect(non_viewable).to_not be_present
@@ -89,10 +83,10 @@ describe Holdings do
       expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
     end
   end
-  describe "#unique_callnumbers" do
+  describe "#browsable_callnumbers" do
     it "should collapse callnumbers on the truncated callnumber" do
       expect(complex_holdings.callnumbers.length).to eq 2
-      expect(complex_holdings.unique_callnumbers.length).to eq 1
+      expect(complex_holdings.browsable_callnumbers.length).to eq 1
     end
   end
   describe "#find_by_barcode" do

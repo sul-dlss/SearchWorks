@@ -71,6 +71,21 @@ describe "catalog/_index_location.html.erb" do
         expect(rendered).to have_css('tbody tr td', text: "Latest: latest received")
       end
     end
+    describe "with mhld that only has 'Library has' statement" do
+      before do
+        view.stub(:document).and_return(SolrDocument.new(
+          id: '123',
+          item_display: ['123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
+          mhld_display: ['GREEN -|- CURRENTPER -|- -|- library has -|-']
+        ))
+        render
+      end
+      it "should not display the location" do
+        expect(rendered).to have_css('tbody tr', count: 2)
+        expect(rendered).to_not have_content('library has')
+        expect(rendered).to_not have_content('Current Periodicals')
+      end
+    end
   end
   describe "request links" do
     describe "location level request links" do
@@ -92,6 +107,20 @@ describe "catalog/_index_location.html.erb" do
           expect(rendered).to_not have_css('tbody td[data-barcode] a', text: 'Request')
         end
       end
+    end
+  end
+  describe "non present libraries" do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          id: '123',
+          item_display: ["36105217238315 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"]
+        )
+      )
+      render
+    end
+    it "should not display any library table " do
+      expect(rendered).to be_blank
     end
   end
 end

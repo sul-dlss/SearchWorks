@@ -18,14 +18,12 @@ class Holdings
     end
   end
   def present?
-    libraries.select(&:is_viewable?).any? do |library|
-      library.items.any? do |callnumber|
-        callnumber.callnumber.present?
-      end || library.mhld.present?
+    libraries.select(&:present?).any? do |library|
+      library.locations.any?(&:present?)
     end
   end
-  def unique_callnumbers
-    callnumbers.uniq(&:truncated_callnumber)
+  def browsable_callnumbers
+    callnumbers.select(&:browsable?).uniq(&:truncated_callnumber)
   end
   def libraries
     unless @libraries

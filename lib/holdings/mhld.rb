@@ -12,6 +12,12 @@ class Holdings
       @mhld_display[1]
     end
 
+    def present?
+      public_note.present? ||
+      library_has.present? ||
+      latest_received.present?
+    end
+
     def public_note
       sanitize_mhld_data @mhld_display[2]
     end
@@ -27,7 +33,7 @@ class Holdings
     private
 
     def sanitize_mhld_data(data)
-      data.gsub("),","), ").gsub("-","-<wbr/>")
+      data.gsub("),","), ").gsub("-","-<wbr/>") if data.present?
     end
   end
 end
