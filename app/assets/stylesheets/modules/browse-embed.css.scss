@@ -63,6 +63,26 @@
   top: 0px;
   bottom: 0px;
   width: 5%;
+}
 
+.record-browse-nearby {
+  h2 {
+    display: inline;
+    vertical-align: middle;
+    border-bottom: none;
+  }
 
+  .panel {
+    border: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background: transparent;
+    margin: 15px 0;
+    border-top: 1px solid #e3dfd5;
+    border-bottom: 1px solid #e3dfd5;
+  }
+
+  .panel-body {
+    padding-left: 0;
+  }
 }
