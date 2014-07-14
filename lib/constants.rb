@@ -309,7 +309,7 @@ module Constants
    "EDI" => "In process",
    "EDU-LOAN" => "Education Library (Cubberley) circulation desk",
    "EDU-RESV" => "On reserve at Education Library (Cubberley)",
-   "ENDPROCESS" => "Not available right now", 
+   "ENDPROCESS" => "Not available right now",
    "ENGDISPLAY" => "Engineering Library (Terman) display (latest 3 issues only)",
    "ENG-LOAN" => "Engineering Library (Terman) circulation desk",
    "ENG-RESV" => "On reserve at Engineering Library (Terman)",
@@ -373,7 +373,7 @@ module Constants
    "INDEXES" => "Indexes",
    "INPROCESS" => "In process",
    "INSHIPPING" => "In process",
-   "INSTRUCTOR" => "Instructor's copy", 
+   "INSTRUCTOR" => "Instructor's copy",
    "INTCOLLCAT" => "International college catalogs",
    "INTERNET"   => "Online resource",
    "INTL-DOCS" => "International Government Documents",
@@ -907,7 +907,7 @@ module Constants
    "MUSIC-RESV" => "MUSIC"
  }
 
- LIB_TRANSLATIONS = {#"APPLIEDPHY" => "Applied Physics Dept", 
+ LIB_TRANSLATIONS = {#"APPLIEDPHY" => "Applied Physics Dept",
    "ARS" => "Archive of Recorded Sound",
    "ART" => "Art & Architecture Library",
    "BIOLOGY" => "Biology Library (Falconer)",
@@ -981,7 +981,7 @@ module Constants
        ["Philosophy Library (Tanner)","650 723 1539"],
        ["Special Collections","650 725 1022"],
        ["Stanford Auxiliary Library (SAL1&2)","650 723 9201"],
-       ["SLAC National Accelerator Laboratory Library","650 926 2411"]  
+       ["SLAC National Accelerator Laboratory Library","650 926 2411"]
      ]
      #No Physics or Meyer (ACOMP) in doc provided, the show up on web
    }
@@ -1041,7 +1041,7 @@ module Constants
    NIELSEN_TAGS = {"505"=>"905","520"=>"920","586"=>"986"}
    SOURCES = {"Nielsen" => "(source: Nielsen Book Data)"}
    SUL_ICONS = {
-    "3D object" => "cube",
+    "Object" => "cube",
     "Archive/Manuscript" => "document-box-1",
     "Article" => "text-wrapping-1",
     "Book" => "book-1",
