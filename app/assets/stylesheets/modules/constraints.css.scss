@@ -1,0 +1,23 @@
+span.constraints-label {
+  font-size: 1.2em;
+}
+
+span.constraint.btn-group {
+  margin: 0.5em;
+
+  span.constraint-value.btn {
+    border-top-left-radius: $sul-constraint-btn-radius;
+    border-bottom-left-radius: $sul-constraint-btn-radius;
+    font-size: $font-size-base;
+  }
+
+  a.btn.remove {
+    border-top-right-radius: $sul-constraint-btn-radius;
+    border-bottom-right-radius: $sul-constraint-btn-radius;
+    font-size: 12px;
+    padding-left: 4px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+  }
+
+}
