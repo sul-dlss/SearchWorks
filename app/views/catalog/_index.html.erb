@@ -2,7 +2,7 @@
   <%= render 'constraints' %>
 </div>
 
-<div id="sidebar" class="col-md-4">
+<div id="sidebar" class="col-md-4 col-sm-5">
   <% if @response.empty? %>
     <%= render "catalog/chat_librarian_sidebar" %>
     <%= render "catalog/library_website_sidebar" %>
@@ -11,7 +11,7 @@
   <% end %>
 </div>
 
-<div id="content" class="col-md-8">
+<div id="content" class="col-md-8 col-sm-7">
   <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
 
   <% if page_location.access_point? %>
