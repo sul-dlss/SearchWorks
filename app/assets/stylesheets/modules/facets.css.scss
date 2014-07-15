@@ -1,8 +1,19 @@
-.facet_limit .panel-heading {
-  background: $sul-facet-bg;
-  border-bottom: 1px solid $sul-facet-border;
+.panel-group .facet_limit {
+  margin-bottom: 7px;
 }
-.facet_limit.facet_limit-active .panel-heading {
-  background: $sul-facet-active-bg;
-  border-bottom: 1px solid $sul-facet-active-border;
+.facet_limit {
+  ul {
+    margin-bottom: 0;
+  }
+  .panel-heading {
+    background: $sul-facet-bg;
+    border-bottom: 1px solid $sul-facet-border;
+    h3 {
+      font-weight: 400;
+    }
+  }
+  &.facet_limit-active .panel-heading {
+    background: $sul-facet-active-bg;
+    border-bottom: 1px solid $sul-facet-active-border;
+  }
 }
