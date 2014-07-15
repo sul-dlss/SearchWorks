@@ -30,12 +30,14 @@
     <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
   <% end -%>
 
-  <% if !@response.empty? %>
-    <div class="search_num_of_results">
+  <div class="search_num_of_results">
+    <% if @response.empty? %>
+      <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
+    <% else %>
       <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
-    </div>
-    <%= render 'search_header' %>
-  <% end %>
+      <%= render 'search_header' %>
+    <% end %>
+  </div>
 
   <%- if @response.empty? %>
     <%= render "zero_results" %>

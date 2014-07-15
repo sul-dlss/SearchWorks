@@ -1,10 +1,5 @@
 <% if query_has_constraints? %>
   <div id="appliedParams" class="clearfix constraints-container">
-    <% if @response.empty? %>
-      <div class="pull-right">
-        <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
-      </div>
-    <% end %>
     <span class="constraints-label"><%= t('blacklight.search.filters.title') %></span>
     <%= render_constraints(params) %>
   </div>
