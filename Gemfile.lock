@@ -173,6 +173,7 @@ GEM
       stanford-mods
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    mysql (2.9.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.0)
@@ -318,6 +319,7 @@ DEPENDENCIES
   jquery-rails
   lyberteam-capistrano-devel (= 3.0.0.pre1)
   mods_display (= 0.3.3)
+  mysql
   openseadragon!
   poltergeist
   rails (= 4.1.3)

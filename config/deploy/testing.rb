@@ -5,6 +5,7 @@ set :deploy_host, ask("Server", 'e.g. server.stanford.edu')
 set :sub_dir, "redesign"
 set :symlinks_directory, "#{fetch(:home_directory)}/SearchWorksSubURIs"
 set :symlink_deploy_path, "#{fetch(:symlinks_directory)}/#{fetch(:sub_dir)}"
+set :bundle_without, %w{test}.join(' ')
 
 task :symlink_sub_directory_deploy do
   on roles(:app), wait: 1 do
@@ -24,7 +25,7 @@ end
 server fetch(:deploy_host), user: fetch(:user), roles: %w{web db app}
 
 Capistrano::OneTimeKey.generate_one_time_key!
-# we should try to deploy under production env 
+# we should try to deploy under production env
 # for proper sub-directory asset compilation
 set :rails_env, "development"
 
