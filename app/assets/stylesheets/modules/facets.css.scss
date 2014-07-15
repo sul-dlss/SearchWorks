@@ -4,6 +4,12 @@
 .facet_limit {
   ul {
     margin-bottom: 0;
+    li {
+      .remove {
+        color: $gray;
+        border-bottom: none;
+      }
+    }
   }
   .panel-heading {
     background: $sul-facet-bg;
