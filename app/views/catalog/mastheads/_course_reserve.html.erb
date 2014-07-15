@@ -1,12 +1,12 @@
 <div id="masthead" class="course-reserve-masthead">
   <% create_course %>
   <h1>Course reserve list: <%= @course_info.id %></h1>
-  <p>
-    <small class="text-muted">COURSE:</small> <%= "#{@course_info.id} -- #{@course_info.name}" %>
-  </p>
-  <p>
-    <small class="text-muted">INSTRUCTOR:</small> <%= @course_info.instructor %>
-  </p>
+  <dl class='dl-horizontal dl-invert'>
+    <dt>Course</dt>
+    <dd><%= "#{@course_info.id} -- #{@course_info.name}" %></dd>
+    <dt>Instructor</dt>
+    <dd><%= @course_info.instructor %></dd>
+  </dl>
   <p>
     <a href="#" class="disabled">Find reserve list for another course</a>
   </p>
