@@ -1,0 +1,13 @@
+.clear-input-text {
+  color: $sul-clear-input-icon-color;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 12px 0 5px;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10000;
+
+  :hover {
+    color: $sul-clear-input-icon-hover-color;
+  }
+}
