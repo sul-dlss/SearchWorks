@@ -17,10 +17,9 @@
     font-weight: 300;
     font-size: .9em;
     text-align: center;
-    padding: 1px;
+    padding: 3px 0;
     overflow: hidden;
     white-space: nowrap;
-    height: 1.5em;
     width: $gallery-document-width - 2;
   }
 
@@ -37,7 +36,7 @@
   .gallery-document {
     @include document-borders;
     position: relative;
-    margin: 0px 0px 30px 15px;
+    margin: 0px 0px 15px 15px;
     float: left;
     display: inline;
     background-color: $white;
@@ -48,10 +47,7 @@
       font-size: 1.1em;
       line-height: 1.5em;
       margin: .5em;
-
-      a {
-        word-break: break-all;
-      }
+      text-align: center;
     }
 
     .btn-preview {
