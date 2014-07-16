@@ -1,7 +1,9 @@
 <div id="content" class="col-md-12">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="pull-right"><%= "#{@response.total_count} #{t('blacklight.bookmarks.selection_title').pluralize(@response.documents.length)}" %></h1>
+      <div class="search_num_of_results">
+        <h2><%= "#{@response.total_count} #{t('blacklight.bookmarks.selection_title').pluralize(@response.documents.length)}" %></h1>
+        </div>
     </div>
   </div>
 

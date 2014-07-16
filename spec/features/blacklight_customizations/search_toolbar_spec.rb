@@ -16,7 +16,7 @@ describe "Search toolbar", js: true, feature: true do
     describe "show list" do
       it "should navigate to selections page" do
         visit selections_path
-        expect(page).to have_css("h1", text: "0 selections")
+        expect(page).to have_css("h2", text: "0 selections")
         expect(page).to have_css("h3", text: "You have no bookmarks")
       end
     end
