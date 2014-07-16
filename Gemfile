@@ -45,10 +45,13 @@ group :deployment do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'poltergeist'
+end
+
+group :sqlite do
+  gem 'sqlite3'
 end
 
 group :production do
