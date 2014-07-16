@@ -1,53 +1,57 @@
-<div class="breadcrumb col-md-12">
-  <%= render 'constraints' %>
+<div class="breadcrumb row">
+  <div class="col-md-12">
+    <%= render 'constraints' %>
+  </div>
 </div>
 
-<div id="sidebar" class="col-md-4 col-sm-5">
-  <% if @response.empty? %>
-    <%= render "catalog/chat_librarian_sidebar" %>
-    <%= render "catalog/library_website_sidebar" %>
-  <% elsif %>
-    <%= render 'search_sidebar' %>
-  <% end %>
-</div>
-
-<div id="content" class="col-md-8 col-sm-7">
-  <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
-
-  <% if page_location.access_point? %>
-    <% if page_location.access_point.collection? && get_collection.present? %>
-      <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
-    <% else %>
-      <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: application_name %>
-    <% end %>
-  <% else %>
-    <% @page_title = t('blacklight.search.title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: application_name) %>
-  <% end %>
-
-  <% content_for(:head) do -%>
-    <%= render_opensearch_response_metadata %>
-    <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
-    <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
-  <% end -%>
-
-  <div class="search_num_of_results">
+<div class="row">
+  <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
-      <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
-    <% else %>
-      <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
-      <%= render 'search_header' %>
+      <%= render "catalog/chat_librarian_sidebar" %>
+      <%= render "catalog/library_website_sidebar" %>
+    <% elsif %>
+      <%= render 'search_sidebar' %>
     <% end %>
   </div>
 
-  <%- if @response.empty? %>
-    <%= render "zero_results" %>
-  <%- elsif render_grouped_response? %>
-    <%= render_grouped_document_index %>
-  <%- else %>
-    <%= render_document_index %>
-    <%= render 'additional_results_block' %>
-  <%- end %>
+  <div id="content" class="col-md-8 col-sm-7">
+    <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
 
-  <%= render 'results_pagination' %>
+    <% if page_location.access_point? %>
+      <% if page_location.access_point.collection? && get_collection.present? %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
+      <% else %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: application_name %>
+      <% end %>
+    <% else %>
+      <% @page_title = t('blacklight.search.title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: application_name) %>
+    <% end %>
 
+    <% content_for(:head) do -%>
+      <%= render_opensearch_response_metadata %>
+      <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
+      <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
+    <% end -%>
+
+    <div class="search_num_of_results">
+      <% if @response.empty? %>
+        <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
+      <% else %>
+        <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
+        <%= render 'search_header' %>
+      <% end %>
+    </div>
+
+    <%- if @response.empty? %>
+      <%= render "zero_results" %>
+    <%- elsif render_grouped_response? %>
+      <%= render_grouped_document_index %>
+    <%- else %>
+      <%= render_document_index %>
+      <%= render 'additional_results_block' %>
+    <%- end %>
+
+    <%= render 'results_pagination' %>
+
+  </div>
 </div>
