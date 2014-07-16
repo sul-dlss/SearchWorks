@@ -24,8 +24,7 @@ en:
       sms: 'text'
       printer: 'printer'
 
-    back_to_search: '<span class="glyphicon glyphicon-backward"></span>&nbsp; Back to results'
-    back_to_search_xs: '<span class="glyphicon glyphicon-backward"></span>'
+    back_to_search: '<span class="glyphicon glyphicon-backward"></span><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
   blacklight_advanced_search:
