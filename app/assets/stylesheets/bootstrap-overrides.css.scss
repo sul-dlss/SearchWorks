@@ -4,11 +4,10 @@
   box-shadow: none;
 }
 .panel-default {
-  border-color: transparent;
+  border: none;
 }
 .panel-body {
-  border-top: none; 
-  border-left: 1px solid $sul-panel-border;
-  border-right: 1px solid $sul-panel-border;
+  border: 1px solid $sul-panel-border;
   border-bottom: 1px solid $sul-panel-border-bottom;
+  background-color: white;
 }

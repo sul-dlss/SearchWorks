@@ -6,7 +6,12 @@
     h3.index_title {
       @include h3-index-title;
     }
-
+    dt {
+      width: auto;
+    }
+    dd {
+      margin: 0;
+    }
     .document-metadata {
       list-style-type: none;
       padding-left: 0;
