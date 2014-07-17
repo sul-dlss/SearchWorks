@@ -6,7 +6,7 @@
 
     <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
     <% if imprint.present? %>
-      <li><%= render "field_list_from_index", :fields => imprint %></li>
+      <li><%= render "catalog/field_list_from_index", :fields => imprint %></li>
     <% end %>
   </ul>
 <% end %>

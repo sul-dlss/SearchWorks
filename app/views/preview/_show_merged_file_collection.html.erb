@@ -1,6 +1,23 @@
 <% document ||= @document %>
 
-<%= render 'catalog/record/marc_upper_metadata_items' %>
+<%= render :partial => "catalog/marc_search_results_document_fields", :locals => { :document => document } %>
+
+<dl class="dl-horizontal dl-invert">
+  <% if document.collection_members(rows: 3).present? %>
+    <dt>Digital content</dt>
+    <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
+  <% end %>
+
+  <% if document.extent.present? %>
+    <dt><%= document.extent_label %></dt>
+    <dd><%= document.extent %></dd>
+  <% end %>
+
+  <% if document.index_links.finding_aid.present? %>
+    <dt>Finding aid</dt>
+    <dd><%= document.index_links.finding_aid.first.text.html_safe %></dd>
+  <% end %>
+</dl>
 
 <%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>
 

@@ -2,22 +2,35 @@ require "spec_helper"
 
 describe "preview/_show_file.html.erb" do
   include ModsFixtures
-
+  let(:presenter) { OpenStruct.new(document_heading: "Collection Title") }
   let(:document) { SolrDocument.new(
     id: '123',
+    collection: ['12345'],
+    collection_with_title: ['12345 -|- Collection Title'],
     modsxml: mods_file,
     item_display: [ "123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123" ],
-    isbn_display: [ 123 ]
+    isbn_display: [ 123 ],
+    imprint_display: ["Imprint Statement"]
+    
   ) }
 
   before do
+    expect(view).to receive(:presenter).and_return(presenter)
     assign(:document, document)
     render
   end
 
-  it "should display uppermetadata section" do
-    expect(rendered).to have_css("dl dt", text: "Author/Creator")
-    expect(rendered).to have_css("dl dd", text: "J. Smith")
+  it "should link the author" do
+    expect(rendered).to have_css("li a", text: "J. Smith")
+  end
+
+  it "should display the imprint" do
+    expect(rendered).to have_css('li', text: "Imprint Statement")
+  end
+
+  it "should display the collection" do
+    expect(rendered).to have_css('dt', "Collection")
+    expect(rendered).to have_css('dd', "Collection Title")
   end
 
   it "should display summary accordion section" do
