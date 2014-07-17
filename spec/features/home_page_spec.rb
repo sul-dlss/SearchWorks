@@ -10,14 +10,18 @@ feature "Home Page" do
     expect(page).to have_css(".panel-heading", text: "Access")
     expect(page).to have_css(".panel-heading", text: "Library")
   end
-  scenario "featured sets" do
+  scenario "'Featured sets' section should display" do
     expect(page).to have_css("li .media-heading", text: "Digital collections")
     expect(page).to have_css("li .media-heading", text: "Dissertations, theses, student work")
     expect(page).to have_css("li .media-heading", text: "Selected databases")
     expect(page).to have_css("li .media-heading", text: "Music search")
   end
-  scenario "searching for articles" do
+  scenario "'Searching for articles' section should display" do
     expect(page).to have_css("li .media-heading", text: "xSearch")
     expect(page).to have_css("li .media-heading", text: "eJournals")
+  end
+  scenario "Logo and catalog images should display" do
+    expect(page).to have_css("a.navbar-brand img[alt=SearchWorks]")
+    expect(page).to have_css("p.navbar-text.search-target img[alt=catalog]")
   end
 end
