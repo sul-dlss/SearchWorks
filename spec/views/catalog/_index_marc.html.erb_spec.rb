@@ -1,13 +1,27 @@
 require "spec_helper"
 
 describe "catalog/_index_marc.html.erb" do
+  include MarcMetadataFixtures
   before do
     view.stub(:blacklight_config).and_return( Blacklight::Configuration.new )
   end
   describe "physical extent" do
     before do
-      view.stub(:document).and_return(SolrDocument.new(physical: ["The Physical Extent"], format_main_ssim: ['Book']))
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          marcbib_xml: metadata1,
+          physical: ["The Physical Extent"],
+          format_main_ssim: ['Book'],
+          imprint_display: ['Imprint Statement']
+        )
+      )
       render
+    end
+    it "should link to the author" do
+      expect(rendered).to have_css('li a', text: 'Arbitrary, Stewart.')
+    end
+    it "should render the imprint" do
+      expect(rendered).to have_css('li', text: 'Imprint Statement')
     end
     it "should include the physical extent" do
       expect(rendered).to have_css("dt", text: "Book")

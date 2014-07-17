@@ -1,5 +1,5 @@
-<ul class="document-metadata dl-horizontal dl-invert">
-  <% if document.respond_to?(:to_marc) %>
+<% if document.respond_to?(:to_marc) %>
+  <ul class="document-metadata dl-horizontal dl-invert">
     <% uniform_title = get_uniform_title(document.to_marc, ["240","130"]) %>
     <% unless uniform_title.nil? %>
       <% uniform_title[:fields].each do |field| %>
@@ -27,5 +27,10 @@
     <% unless author_meeting.nil? %>
       <%= render "field_list_from_index", :fields => author_meeting %>
     <% end %>
-  <% end %>
-</ul>
+
+    <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
+    <% if imprint.present? %>
+      <li><%= render "field_list_from_index", :fields => imprint %></li>
+    <% end %>
+  </ul>
+<% end %>

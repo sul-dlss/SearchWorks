@@ -1,0 +1,12 @@
+<% if document.mods.present? %>
+  <ul class="document-metadata dl-horizontal dl-invert">
+    <% if document.mods.name.present? && document.mods.name.first.values.present? %>
+      <li><%= mods_display_name([document.mods.name.first.values.first]) %></li>
+    <% end %>
+
+    <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
+    <% if imprint.present? %>
+      <li><%= render "field_list_from_index", :fields => imprint %></li>
+    <% end %>
+  </ul>
+<% end %>

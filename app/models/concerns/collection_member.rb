@@ -12,6 +12,17 @@ module CollectionMember
     end
   end
 
+  def index_parent_collections
+    return nil if !is_a_collection_member? || self[:collection_with_title].blank?
+    unless @index_parent_collections
+      @index_parent_collections = self[:collection_with_title].map do |collection_with_title|
+        id, title = collection_with_title.split('-|-').map(&:strip)
+        SolrDocument.new(id: id, title_display: title)
+      end
+    end
+    @index_parent_collections
+  end
+
   private
   def parent_collection_params
     self["collection"].map do |collection_id|

@@ -48,4 +48,30 @@ describe CollectionMember do
       expect(non_member.parent_collections).to be_nil
     end
   end
+  describe "index_parent_collections" do
+    let(:document_with_parent) {
+      SolrDocument.new(
+        collection: ['12345', '54321'],
+        collection_with_title: [
+          '12345 -|- Collection1 Title',
+          '54321 -|- Collection2 Title'
+        ]
+      )
+    }
+    let(:document_without_parent) { SolrDocument.new() }
+    it "should return the parent collections from the index" do
+      collections = document_with_parent.index_parent_collections
+      expect(collections.length).to eq 2
+      expect(collections.first).to be_a SolrDocument
+      expect(collections.first[:id]).to eq '12345'
+      expect(collections.first[:title_display]).to eq 'Collection1 Title'
+
+      expect(collections.last).to be_a SolrDocument
+      expect(collections.last[:id]).to eq '54321'
+      expect(collections.last[:title_display]).to eq 'Collection2 Title'
+    end
+    it "should return nil if the document is not a collection member" do
+      expect(document_without_parent.index_parent_collections).to be_nil
+    end
+  end
 end

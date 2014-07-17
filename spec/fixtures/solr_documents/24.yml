@@ -5,6 +5,7 @@
 :language: Spanish
 :format: Database
 :marcxml: <%= stanford_only_856 %>
+:marcbib_xml: <%= stanford_only_856 %>
 :format_main_ssim: Database
 :display_type:
   - sirsi

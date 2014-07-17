@@ -1,15 +1,24 @@
 require "spec_helper"
 
 describe "catalog/_index_merged_image_collection.html.erb" do
+  include MarcMetadataFixtures
   before do
     view.stub(:document).and_return(
       SolrDocument.new(
+        marcbib_xml: metadata1,
         physical: ["The Physical Extent"],
-        url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
+        url_suppl: ["http://oac.cdlib.org/findaid/something-else"],
+        imprint_display: ['Imprint Statement']
       )
     )
     view.stub(:blacklight_config).and_return( Blacklight::Configuration.new )
     render
+  end
+  it "should link to the author" do
+    expect(rendered).to have_css('li a', text: 'Arbitrary, Stewart.')
+  end
+  it "should render the imprint" do
+    expect(rendered).to have_css('li', text: 'Imprint Statement')
   end
   it "should include the physical extent" do
     expect(rendered).to have_css("dt", text: "Physical extent")
