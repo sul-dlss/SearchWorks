@@ -1,10 +1,12 @@
-<div id="masthead" class="browse-masthead">
-  <h1>Browse nearby
-    <% if params[:barcode] %>
-      <%= @original_doc.holdings.find_by_barcode(params[:barcode]).callnumber %>
-    <% else %>
-      <%= @original_doc.holdings.callnumbers.first.callnumber %>
-    <% end %>
-  </h1>
-  <%= link_to(presenter(@original_doc).document_heading, catalog_path(@original_doc)) %>
+<div id="masthead-container">
+  <div id="masthead" class="browse-masthead">
+    <h1>Browse nearby
+      <% if params[:barcode] %>
+        <%= @original_doc.holdings.find_by_barcode(params[:barcode]).callnumber %>
+      <% else %>
+        <%= @original_doc.holdings.callnumbers.first.callnumber %>
+      <% end %>
+    </h1>
+    <%= link_to(presenter(@original_doc).document_heading, catalog_path(@original_doc)) %>
+  </div>
 </div>

@@ -1,0 +1,17 @@
+#masthead {
+  background-color: $sul-masthead-bg;
+  border: 1px solid $sul-masthead-border;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 0 15px;
+
+  h1 {
+    margin: 0;
+  }
+
+  .pagination > .active > a {
+    color: $white;
+    background-color: $sul-pagination-active-bg-border;
+    border-color: $sul-pagination-active-bg-border;
+  }
+}

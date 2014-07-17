@@ -1,31 +1,33 @@
 <% get_collection %>
 <% if !@parent.nil? %>
-  <div id="masthead" class="collection-masthead">
-    <h1><%= @parent[:title_display] %></h1>
-    <div class="row">
-      <div class="col-xs-8">
-        <% if @parent[:summary_display] %>
-          <div data-behavior='truncate'>
-            <%= @parent[:summary_display].join(', ') %>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-xs-4">
-        <dl class="dl-horizontal dl-invert">
-          <% if @parent.collection_members.present? %>
-            <dt>Digital content</dt>
-            <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+  <div id="masthead-container">
+    <div id="masthead" class="collection-masthead">
+      <h1><%= @parent[:title_display] %></h1>
+      <div class="row">
+        <div class="col-xs-8">
+          <% if @parent[:summary_display] %>
+            <div data-behavior='truncate'>
+              <%= @parent[:summary_display].join(', ') %>
+            </div>
           <% end %>
-          <% # this stuff is temporary until we have item level merge (mods + marc) %>
-          <% if @parent.extent.present? %>
-            <dt><%= @parent.extent_label %></dt>
-            <dd><%= @parent.extent %></dd>
-          <% end %>
-          <% if @parent.index_links.finding_aid.present? %>
-            <dt>Finding aid</dt>
-            <dd><%= @parent.index_links.finding_aid.first.text.html_safe %></dd>
-          <% end %>
-        </dl>
+        </div>
+        <div class="col-xs-4">
+          <dl class="dl-horizontal dl-invert">
+            <% if @parent.collection_members.present? %>
+              <dt>Digital content</dt>
+              <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+            <% end %>
+            <% # this stuff is temporary until we have item level merge (mods + marc) %>
+            <% if @parent.extent.present? %>
+              <dt><%= @parent.extent_label %></dt>
+              <dd><%= @parent.extent %></dd>
+            <% end %>
+            <% if @parent.index_links.finding_aid.present? %>
+              <dt>Finding aid</dt>
+              <dd><%= @parent.index_links.finding_aid.first.text.html_safe %></dd>
+            <% end %>
+          </dl>
+        </div>
       </div>
     </div>
   </div>
