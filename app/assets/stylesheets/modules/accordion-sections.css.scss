@@ -66,6 +66,9 @@
 .accordion-section.online {
   .header {
     background-color: $sul-access-online-bg;
+    &.selected-database {
+      width: 10.7em;
+    }
   }
 
   .details {
