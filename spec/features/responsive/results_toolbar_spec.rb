@@ -14,7 +14,7 @@ describe "Responsive results toolbar", js: true, feature: true do
         expect(page).to have_css("button.btn.btn-sul-toolbar span.glyphicon.glyphicon-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Sort by relevance", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "10 per page", visible: true)
+        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20 per page", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Select all", visible: true)
       end
     end
@@ -27,7 +27,7 @@ describe "Responsive results toolbar", js: true, feature: true do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
         expect(page).to_not have_css("button.btn.btn-sul-toolbar span.glyphicon.glyphicon-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "10", visible: true)
+        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
       end
     end
@@ -40,7 +40,7 @@ describe "Responsive results toolbar", js: true, feature: true do
         expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
         expect(page).to_not have_css("button.btn.btn-sul-toolbar span.glyphicon.glyphicon-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "10", visible: true)
+        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
       end
     end
