@@ -1,6 +1,39 @@
 <% @page_title= t 'blacklight.home.title' %>
 
 <h1 class="sr-only">SearchWorks</h1>
+
+<div class="row features">
+  <div class="col-xs-4 col-md-3">
+    <div class="thumbnail">
+      <%= image_tag('digital-collections.jpg', alt: "", title: '"Cesar Chavez, Friday night meeting at Filipino Hall, Delano CA organizing briefing, 1970." Fitch, Bob (Photographer)') %>
+      <div class="caption">
+        <h3><%= link_to "Digital collections", catalog_index_path(collections_search_params) %></h3>
+        <p class="hidden-xs">Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-4 col-md-3">
+    <div class="thumbnail">
+      <%= image_tag('dissertations.png', alt: "", title: 'From "Rock physics and seismic signatures of sub-resolution sand-shale systems." Piyapa Dejtrakulwong, 2012') %>
+      <div class="caption">
+        <h3><%= link_to "Dissertations & theses", catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h3>
+        <p class="hidden-xs">Dissertations and theses in Stanford's collections.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-4 col-md-3">
+    <div class="thumbnail">
+      <%= image_tag('selected-databases.jpg', alt: "", title: 'Stock photo') %>
+      <div class="caption">
+        <h3><%= link_to "Selected databases",  selected_databases_path %></h3>
+        <p class="hidden-xs">Not sure where to start? Find articles and reference information by discipline.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="col-md-8 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
   <h2>Limit your search</h2>
   <div class="col-md-6 col-facets">
@@ -15,37 +48,6 @@
   </div>
 </div>
 <div class="col-md-4 col-sm-6 home-page-featured">
-  <h2>Featured sets</h2>
-  <ul class="media-list">
-    <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), catalog_index_path(collections_search_params), class: "pull-left", tabindex: "-1" %>
-      <div class="media-body">
-        <%= link_to "Digital collections", catalog_index_path(collections_search_params), class: "media-heading" %>
-        <p>Manuscripts, images, data, etc. from the Stanford Digital Repository</p>
-      </div>
-    </li>
-    <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "#", class: "pull-left disabled", tabindex: "-1" %>
-      <div class="media-body">
-        <%= link_to "Dissertations, theses, student work", "#", class: "media-heading disabled" %>
-        <p>&hellip;</p>
-      </div>
-    </li>
-    <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), selected_databases_path, class: "pull-left", tabindex: "-1" %>
-      <div class="media-body">
-        <%= link_to "Selected databases", selected_databases_path, class: "media-heading" %>
-        <p>If you're not sure where to start your research, try one of these databases.</p>
-      </div>
-    </li>
-    <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "#", class: "pull-left disabled", tabindex: "-1" %>
-      <div class="media-body">
-        <%= link_to "Music search", "#", class: "media-heading disabled" %>
-        <p>&hellip;</p>
-      </div>
-    </li>
-  </ul>
   <h2>Searching for articles?</h2>
   <ul class="media-list">
     <li class="media">
