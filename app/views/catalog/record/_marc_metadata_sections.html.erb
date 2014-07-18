@@ -1,53 +1,57 @@
-<div class="">
-  <%# dummy sections (to be replaced) --
-  <div class="section">
-    <div class="section-heading">Subjects</div>
-    <div class="section-body"></div>
+<%
+  contents_summary = render "catalog/record/marc_contents_summary"
+  subjects = render "catalog/record/marc_subjects"
+  bibliography = render "catalog/record/marc_bibliographic"
+
+  has_contents_summary = !contents_summary.strip.blank?
+  has_subjects = subjects.present?
+  has_bibliography_info = bibliography.present?
+
+  locals = {
+    type: "marc",
+    has_data: {
+      contents_summary: has_contents_summary,
+      subjects: has_subjects,
+      bibliography_info: has_bibliography_info
+    }
+  }
+%>
+
+<% if has_contents_summary %>
+  <div class="section" id="<%= t('record_side_nav.contents_summary.id') %>" data-side-nav-class="<%= t('record_side_nav.contents_summary.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h2>
+    </div>
+    <div class="section-body">
+      <dl>
+        <%= contents_summary %>
+      </dl>
+    </div>
   </div>
+<% end %>
 
-  <div class="section">
-    <div class="section-heading">Bibliographic information</div>
-    <div class="section-body"></div>
+<% if has_subjects %>
+  <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h2>
+    </div>
+    <div class="section-body">
+      <%= subjects %>
+    </div>
   </div>
-  %>
-  <% contents_summary = render "catalog/record/marc_contents_summary" %>
-  <% unless contents_summary.strip.blank? %>
-    <div class="section">
-      <div class="section-heading">
-        <h2>Contents/Summary</h2>
-      </div>
-      <div class="section-body">
-        <dl>
-          <%= contents_summary%>
-        </dl>
-      </div>
-    </div>
-  <% end %>
+<% end %>
 
-  <% subjects = render "catalog/record/marc_subjects" %>
-  <% if subjects.present? %>
-    <div class="section">
-      <div class="section-heading">
-        <h2>Subjects</h2>
-      </div>
-      <div class="section-body">
-        <%= subjects %>
-      </div>
+<% if has_bibliography_info %>
+  <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h2>
     </div>
-  <% end %>
-
-  <% bibliography = render "catalog/record/marc_bibliographic" %>
-  <% if bibliography.present? %>
-    <div class="section">
-      <div class="section-heading">
-        <h2>Bibliographic information</h2>
-      </div>
-      <div class="section-body">
-        <dl>
-          <%= bibliography %>
-        </dl>
-      </div>
+    <div class="section-body">
+      <dl>
+        <%= bibliography %>
+      </dl>
     </div>
-  <% end %>
+  </div>
+<% end %>
 
-</div>
+<%= render partial: "catalog/record/record_side_nav", locals: locals %>

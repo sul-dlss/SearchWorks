@@ -42,3 +42,23 @@ en:
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
     page_title: '%{application_name} advanced search'
+
+  record_side_nav:
+    abstract_contents:
+      id: "abstract-contents"
+      icon: '<i class="fa fa-align-justify"></i>'
+    contributors:
+      id: "contributors"
+      icon: '<i class="fa fa-user"></i>'
+    access_conditions:
+      id: "access-conditions"
+      icon: '<i class="fa fa-key"></i>'
+    contents_summary:
+      id: "contents-summary"
+      icon: '<i class="fa fa-align-justify"></i>'
+    subjects:
+      id: "subjects"
+      icon: '<i class="fa fa-tags"></i>'
+    bibliography_info:
+      id: "bibliography-info"
+      icon: '<i class="fa fa-info"></i>'

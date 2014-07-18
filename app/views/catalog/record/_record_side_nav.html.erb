@@ -1,0 +1,15 @@
+<ul class="record-side-nav">
+  <li><button data-target-id="topnav-container"><i class="fa fa-arrow-up"></i></button></li>
+
+  <% has_data.each do |section, section_present| %>
+    <% if section_present %>
+      <% id = t("record_side_nav.#{section}.id").html_safe %>
+      <% icon = t("record_side_nav.#{section}.icon").html_safe %>
+      <li>
+        <button data-target-id="<%= id %>" class="<%= id %>"><%= icon %></buttton>
+      </li>
+    <% end %>
+  <% end %>
+
+  <li><button data-target-id="sul-footer-container"><i class="fa fa-arrow-down"></i></button></li>
+</ul>
