@@ -6,6 +6,8 @@
 :format_main_ssim: Image
 :collection:
   - 29
+:collection_with_title:
+  - "29 -|- Image Collection1"
 :modsxml: <%= mods_everything %>
 :pub_date: 2014
 :beginning_year_isi: 2000

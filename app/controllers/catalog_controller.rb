@@ -71,7 +71,7 @@ class CatalogController < ApplicationController
     # facet bar
     config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 21
     config.add_facet_field "access_facet", :label => "Access"
-    config.add_facet_field "collection", :label => "Collection", :show => false
+    config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", :label => "Collection type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100
     config.add_facet_field "format_physical_ssim", :label => "Physical format", limit: 20
