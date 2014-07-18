@@ -12,7 +12,7 @@ feature "Results Toolbar", js: true do
     within "#sortAndPerPage" do
       within "div.page_links" do
         expect(page).to have_css("a.btn.btn-sul-toolbar.disabled", text: /Previous/, visible: true)
-        expect(page).to have_css("span.page_entries", text: /1 - 10/, visible: true)
+        expect(page).to have_css("span.page_entries", text: /1 - 20/, visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: /Next/, visible: true)
       end
       expect(page).to have_css("div#view-type-dropdown a")
