@@ -5,7 +5,7 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars"></span>
       </button>
-        <%= link_to application_name, root_path, class: "navbar-brand" %>
+        <%= link_to image_tag('logo-searchworks.png', alt: "SearchWorks"), root_path, alt: "SearchWorks", class: "navbar-brand" %>
         <%= render_search_targets_widget %>
     </div>
     <div class="collapsed-search-navs">

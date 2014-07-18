@@ -4,11 +4,11 @@
   }
 
   .navbar-brand {
-    font-family: 'Raleway';
-    color: $sul-navbar-brand-color;
-    font-weight: 200;
-    font-size: 2.2em;
-    padding: 15px 12px 0 0px;
+    padding: 8px 12px 0 0px;
+
+    img {
+      height: 29px;
+    }
   }
 
   .navbar-nav.navbar-right.searchbar-right:last-child {
@@ -42,12 +42,12 @@
   }
 
   .search-target{
-    font-family: 'Raleway';
-    color: $cardinal-red;
     font-size: 1.5em;
-    font-weight: 100;
     margin-left: -3px;
-    vertical-align: bottom
+
+    img {
+      height: 23px;
+    }
   }
 
   span.input-group-addon {
