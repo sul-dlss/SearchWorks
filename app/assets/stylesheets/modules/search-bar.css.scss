@@ -22,8 +22,10 @@
     padding: 15px 0 5px 0;
     margin-left: 15px;
   }
-  #searchbar-navbar-collapse .nav > li > a:hover {
-    border-bottom: 3px solid $cardinal-red;
+  #searchbar-navbar-collapse .nav > li > a {
+    &:hover, &:focus, &:active {
+      border-bottom: 3px solid $cardinal-red;
+    }
   }
 
   @media screen and (max-width: $screen-sm) {
@@ -58,6 +60,16 @@
   	border: none;
   	background: transparent;
 	}
+
+  ul.navbar-nav > li > ul > li {
+    a {
+      text-transform: none;
+    }
+  }
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
 }
 
 @media screen and (max-width: $screen-sm-min) {
