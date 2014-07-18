@@ -82,4 +82,10 @@ describe MarcLinks do
       expect(links.first.text).to match /<a.*>library.stanford.edu<\/a/
     end
   end
+  describe "bad URLs" do
+    it "should not return anything when an 856 has no $u" do
+      document = SolrDocument.new(marcxml: no_url_856)
+      expect(document.marc_links.all).to_not be_present
+    end
+  end
 end
