@@ -11,10 +11,9 @@ feature "Home Page" do
     expect(page).to have_css(".panel-heading", text: "Library")
   end
   scenario "'Featured sets' section should display" do
-    expect(page).to have_css("li .media-heading", text: "Digital collections")
-    expect(page).to have_css("li .media-heading", text: "Dissertations, theses, student work")
-    expect(page).to have_css("li .media-heading", text: "Selected databases")
-    expect(page).to have_css("li .media-heading", text: "Music search")
+    expect(page).to have_css(".thumbnail h3", text: "Digital collections")
+    expect(page).to have_css(".thumbnail h3", text: "Dissertations & theses")
+    expect(page).to have_css(".thumbnail h3", text: "Selected databases")
   end
   scenario "'Searching for articles' section should display" do
     expect(page).to have_css("li .media-heading", text: "xSearch")

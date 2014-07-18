@@ -19,4 +19,17 @@ describe "Responsive Home Page", feature: true, js: true do
       expect(page).not_to have_css("li a", text: "Newspaper", visible: true)
     end
   end
+  it "should hide the feature descriptions on small screens" do
+    visit root_path
+
+    expect(page).to have_content("Images, maps, data, & more from the Stanford Digital Repository.", visible: true)
+    expect(page).to have_content("Dissertations and theses in Stanford's collections.", visible: true)
+    expect(page).to have_content("Not sure where to start? Find articles and reference information by discipline.", visible: true)
+
+    page.driver.resize("700", "700")
+
+    expect(page).not_to have_content("Images, maps, data, & more from the Stanford Digital Repository.", visible: true)
+    expect(page).not_to have_content("Dissertations and theses in Stanford's collections.", visible: true)
+    expect(page).not_to have_content("Not sure where to start? Find articles and reference information by discipline.", visible: true)
+  end
 end
