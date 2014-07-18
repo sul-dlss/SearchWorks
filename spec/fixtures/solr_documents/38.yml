@@ -9,6 +9,7 @@
 :format: File
 :format_main_ssim: File
 :marcxml: <%= metadata1 %>
+:marcbib_xml: <%= metadata1 %>
 :pub_date: 2010
 :beginning_year_isi: 2010
 :imprint_display: 2010

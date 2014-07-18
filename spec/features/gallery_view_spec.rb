@@ -19,7 +19,6 @@ feature "Gallery View" do
     page.first("button.btn.docid-1").click
     expect(page).to have_css("h4", text: "An object")
     expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
-    expect(page).to have_css("dt", text: "LANGUAGE")
-    expect(page).to have_css("dd", text: "English.")
+    expect(page).to have_css("li", text: "1990")
   end
 end

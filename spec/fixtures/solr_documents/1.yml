@@ -6,6 +6,7 @@
 :format_main_ssim: Book
 :language: English
 :marcxml: <%= simple_856 %>
+:marcbib_xml: <%= simple_856 %>
 :display_type:
   - sirsi
 :pub_date: 2014

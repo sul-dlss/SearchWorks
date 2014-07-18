@@ -1,5 +1,5 @@
-<ul class="document-metadata dl-horizontal dl-invert">
-  <% if document.respond_to?(:to_marc) %>
+<% if document.respond_to?(:to_marc) %>
+  <ul class="document-metadata dl-horizontal dl-invert">
     <% uniform_title = get_uniform_title(document.to_marc, ["240","130"]) %>
     <% unless uniform_title.nil? %>
       <% uniform_title[:fields].each do |field| %>
@@ -18,14 +18,19 @@
       <li><%= render_field_list_from_marc(author_creator) %></li>
     <% end %>
 
-    <% author_corp = link_to_data_with_label(document, "Corporate Author", 'author_corp_display', {:action => 'index', :search_field => 'search_author'}) %>
+    <% author_corp = link_to_data_with_label(document, "Corporate Author", 'author_corp_display', {controller: 'catalog', action: 'index', search_field: 'search_author'}) %>
     <% unless author_corp.blank? %>
       <%= render "field_list_from_index", :fields => author_corp %>
     <% end %>
 
-    <% author_meeting = link_to_data_with_label(document, "Meeting", 'author_meeting_display', {:action => 'index', :search_field => 'search_author'}) %>
+    <% author_meeting = link_to_data_with_label(document, "Meeting", 'author_meeting_display', {contorller: 'catalog', action: 'index', search_field: 'search_author'}) %>
     <% unless author_meeting.nil? %>
       <%= render "field_list_from_index", :fields => author_meeting %>
     <% end %>
-  <% end %>
-</ul>
+
+    <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
+    <% if imprint.present? %>
+      <li><%= render "field_list_from_index", :fields => imprint %></li>
+    <% end %>
+  </ul>
+<% end %>

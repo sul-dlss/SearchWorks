@@ -5,7 +5,32 @@
     <%= render_cover_image(@document) %>
   </div>
   <div class="col-sm-10">
-    <%= render 'catalog/record/marc_upper_metadata_items' %>
+    <%= render :partial => "catalog/marc_search_results_document_fields", :locals => { :document => document } %>
+
+    <dl class="dl-horizontal dl-invert">
+      <% if document.is_a_database? %>
+        <% if document[:summary_display].present? %>
+          <dt>Database summary</dt>
+          <dd>
+            <div data-behavior='truncate'>
+              <%= document[:summary_display].join(' ') %>
+            </div>
+          </dd>
+        <% end %>
+        <% if document[:db_az_subject].present? %>
+          <dt>Database topics</dt>
+          <dd>
+            <%= document[:db_az_subject].map do |subject| %>
+              <% link_to(subject, catalog_index_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
+            <% end.join('; ').html_safe %>
+          </dd>
+        <% end %>
+      <% end %>
+      <% if document.extent.present? %>
+        <dt><%= document.extent_label %></dt>
+        <dd><%= document.extent %></dd>
+      <% end %>
+    </dl>
   </div>
 </div>
 
