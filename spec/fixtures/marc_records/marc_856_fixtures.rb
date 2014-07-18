@@ -142,4 +142,13 @@ module Marc856Fixtures
       </record>
     xml
   end
+  def no_url_856
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='y'>Some text</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

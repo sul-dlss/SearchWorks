@@ -12,13 +12,15 @@ module MarcLinks
     def all
       link_fields.map do |link_field|
         link = process_link(link_field)
-        SearchWorks::Links::Link.new(
-          text: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
-          fulltext: link_is_fulltext?(link_field),
-          stanford_only: stanford_only?(link),
-          finding_aid: link_is_finding_aid?(link_field)
-        )
-      end
+        if link.present?
+          SearchWorks::Links::Link.new(
+            text: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
+            fulltext: link_is_fulltext?(link_field),
+            stanford_only: stanford_only?(link),
+            finding_aid: link_is_finding_aid?(link_field)
+          )
+        end
+      end.compact
     end
     private
     def link_fields
