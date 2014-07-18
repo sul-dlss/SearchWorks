@@ -1,60 +1,41 @@
-<div class="record-toolbar container-fluid hidden-xs" role="navigation">
-  <div class="col-md-7 col-sm-7">
-    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search').html_safe %>
-    <span class="pull-right">
-      <%= link_to_previous_document @previous_document %>
-      <%= item_page_entry_info %>
-      <%= link_to_next_document @next_document %>
-    </span>
-  </div>
-  <div class="col-md-5 col-sm-5 record-toolbar-tools">
-    <ul class="pull-right list-inline">
-      <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
-        <li>
-          <%= link_to t('blacklight.tools.cite_html'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-default'} %>
-        </li>
-      <% end %>
-      <li class="dropdown">
-        <button class="btn btn-default" data-toggle="dropdown">
-          <span class="sul-icon sul-icon-link"></span> Send to <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <%= render "catalog/record/record_toolbar_tools_subset" %>
-        </ul>
-      </li>
-      <li>
-        <%= render_show_doc_actions @document %>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="record-toolbar container-fluid hidden-sm hidden-md hidden-lg" role="navigation">
-  <div class="col-xs-8">
-    <%= link_back_to_catalog :class => 'btn btn-default', :label => t('blacklight.back_to_search_xs').html_safe %>
-    <span class="pull-right">
-      <%= link_to_previous_document @previous_document %>
-      <%= item_page_entry_info %>
-      <%= link_to_next_document @next_document %>
-    </span>
-  </div>
-
-  <div class="col-xs-4 record-toolbar-tools">
-    <div class="dropdown pull-right">
-      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Tools <span class="caret"></span>
+<div class="record-toolbar container-fluid sul-toolbar navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".toolbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-bars"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li><%= render_show_doc_actions @document %></li>
-        <li role="presentation" class="divider"></li>
+      <% if @previous_document || @next_document %>
+        <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe %>
+        <div class="sul-record-page-info">
+          <div class="sul-record-page-info-inner">
+            <%= link_to_previous_document @previous_document %>
+            <%= item_page_entry_info %>
+            <%= link_to_next_document @next_document %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="navbar-collapse collapse toolbar-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
         <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
           <li>
-            <%= link_to t('blacklight.tools.cite'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}} %>
+            <%= link_to t('blacklight.tools.cite_html'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
           </li>
         <% end %>
-        <li role="presentation" class="dropdown-header">SEND TO</li>
-        <%= render "catalog/record/record_toolbar_tools_subset" %>
+        <li class="dropdown">
+          <button class="btn btn-sul-toolbar" data-toggle="dropdown">
+            <span class="sul-icon sul-icon-link"></span> Send to <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <%= render "catalog/record/record_toolbar_tools_subset" %>
+          </ul>
+        </li>
+        <li>
+          <%= render_show_doc_actions @document %>
+        </li>
+
       </ul>
     </div>
   </div>
