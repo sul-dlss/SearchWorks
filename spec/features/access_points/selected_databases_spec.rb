@@ -23,7 +23,7 @@ feature "Selected Databases Access Point" do
       within(first(".panel")) do
         expect(page).to have_css("h3 a", text: /Selected Database \d/)
         expect(page).to have_css("span.subjects", text: /\(.*\)/)
-        expect(page).to have_css("span.label.label-success", text: "Search database")
+        expect(page).to have_css("a.header", text: "Search database (1)")
         expect(page).to have_css("a", text: /\.stanford\.edu/)
       end
     end
