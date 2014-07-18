@@ -1,0 +1,31 @@
+<% @page_title = t 'blacklight.course_reserves.page_title', application_name: application_name %>
+<h1>Browse course reserves</h1>
+<table id="course-reserves-browse" class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Course ID
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Instructor
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @course_reserves.each do |course| %>
+    <tr>
+      <td>
+        <%= link_to course.id, catalog_index_path({f: {course: [course.id], instructor: [course.instructor]}}) %>
+      </td>
+      <td>
+        <%= course.name %>
+      </td>
+      <td>
+        <%= course.instructor %>
+      </td>
+    </tr>
+  <% end %>
+</table>
