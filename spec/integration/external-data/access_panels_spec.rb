@@ -28,6 +28,18 @@ describe "Access Panels", feature: true, :"data-integration" => true do
         end
       end
     end
+    it "should be displayed from the index for MODS records" do
+      visit catalog_path('gz624pt5394')
+
+      within(".panel-online") do
+        within(".panel-heading") do
+          expect(page).to have_content("Available online")
+        end
+        within(".panel-body") do
+          expect(page).to have_css("a", text: "purl.stanford.edu")
+        end
+      end
+    end
   end
 
   describe "Course Reserve" do
