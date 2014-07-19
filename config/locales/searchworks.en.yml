@@ -1,6 +1,7 @@
 en:
   blacklight:
-
+    course_reserves:
+      page_title: "Browse course reserves in %{application_name}"
     search:
       bookmarks:
         present: "Selected"

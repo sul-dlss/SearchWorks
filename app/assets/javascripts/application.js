@@ -19,6 +19,8 @@
 //= require responsiveTruncator
 //= require trunk8
 //= require openseadragon/rails
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //
 // Required by Blacklight
 //= require blacklight/blacklight

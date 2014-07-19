@@ -7,7 +7,7 @@ describe "Search toolbar", js: true, feature: true do
       within "#search-navbar" do
         expect(page).to have_css("button.btn.btn-primary.search-btn", text: "")
         expect(page).to have_css("li a", text: "ADVANCED", visible: true)
-        expect(page).to have_css("li.disabled a", text: "BROWSE", visible: true)
+        expect(page).to have_css("li a", text: "BROWSE", visible: true)
         expect(page).to have_css("li a", text: /SELECTIONS/, visible: true)
       end
     end
