@@ -3,6 +3,15 @@
   color: $sul-h2-font-color;
 }
 
+.row.features {
+  margin-top: 15px;
+
+  .thumbnail {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
 @media only screen and (min-width : 768px) {
   .home-page-facets {
     padding-left: 0;
