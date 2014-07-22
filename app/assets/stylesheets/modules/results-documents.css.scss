@@ -18,7 +18,7 @@
     }
 
     .main-title-date {
-      color: #999;
+      color: $sul-main-title-date-color;
     }
 
     .cover-image-wrapper {
@@ -45,8 +45,12 @@
 
 #content {
   .pagination {
-      i.fa-arrow-left, i.fa-arrow-right {
-      margin: 0 4px;
+    i.fa-chevron-left, i.fa-chevron-right {
+      margin: 0 3px;
+    }
+
+    li.disabled {
+      color: rgba($sul-btn-disabled-color, $sul-btn-disabled-opacity);
     }
   }
 

@@ -29,6 +29,7 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
 
   &.disabled {
     border: none;
+    color: rgba($sul-btn-disabled-color, $sul-btn-disabled-opacity);
   }
 
   &:hover, &:focus, &:active {
