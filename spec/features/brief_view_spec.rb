@@ -6,7 +6,7 @@ feature "Brief View" do
     page.find('#view-type-dropdown button.dropdown-toggle a').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
 
-    expect(page).to have_css("span.glyphicon.glyphicon-align-justify")
+    expect(page).to have_css("i.fa.fa-align-justify")
     expect(page).to have_css(".brief-document h3.index_title", text: "An object")
     expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
     expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")

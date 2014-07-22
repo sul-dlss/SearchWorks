@@ -7,7 +7,7 @@ module BlacklightUrlHelper
     link_opts = session_tracking_params(previous_document, search_session['counter'].to_i - 1).merge(:class => css_class, :rel => 'prev')
 
     link_to url_for_document(previous_document), link_opts do
-      content_tag :span, '', :class => 'previous glyphicon glyphicon-chevron-left'
+      content_tag :i, '', :class => 'previous fa fa-arrow-left'
     end
   end
 
@@ -17,7 +17,7 @@ module BlacklightUrlHelper
     link_opts = session_tracking_params(next_document, search_session['counter'].to_i + 1).merge(:class => css_class, :rel => 'next')
 
     link_to url_for_document(next_document), link_opts do
-      content_tag :span, '', :class => 'next glyphicon glyphicon-chevron-right'
+      content_tag :i, '', :class => 'next fa fa-arrow-right'
     end
   end
 

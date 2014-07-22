@@ -31,12 +31,12 @@ en:
         no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
-        all_html: '<span class="sul-icon sul-icon-check-3"></span> <span class="hidden-sm hidden-xs">Select </span>all'
+        all_html: '<i class="fa fa-check-square-o"></i> <span class="hidden-sm hidden-xs">Select </span>all'
       selection_title: 'selection'
       clear:
         success: 'Your selections have been deleted.'
     tools:
-      cite_html: '<span class="sul-icon sul-icon-quote"></span> Cite'
+      cite_html: '<i class="fa fa-quote-left"></i> Cite'
       sms_html: '<span class="glyphicon glyphicon-phone"> </span>  text'
       email_html: '<span class="glyphicon glyphicon-envelope"> </span>  email'
       refworks_html: '<span class="glyphicon glyphicon-asterisk"> </span>  RefWorks'
@@ -46,8 +46,8 @@ en:
       send_to_html: 'Send %{current_range} to <span class="caret"></span>'
   views:
     pagination_compact:
-      next: '<span class="hidden-xs">Next </span><i class="fa fa-chevron-right"></i>'
-      previous: '<i class="fa fa-chevron-left"></i><span class="hidden-xs"> Previous</span>'
+      next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'
+      previous: '<i class="fa fa-arrow-left"></i><span class="hidden-xs"> Previous</span>'
     pagination:
-      previous: '<i class="fa fa-chevron-left"></i> Previous'
-      next: 'Next <i class="fa fa-chevron-right"></i>'
+      previous: '<i class="fa fa-arrow-left"></i> Previous'
+      next: 'Next <i class="fa fa-arrow-right"></i>'
