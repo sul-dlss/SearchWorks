@@ -42,10 +42,10 @@ feature "Advanced Search" do
         expect(page).to have_css("input#f_inclusive_language_chinese")
       end
       within ".sort-submit-buttons" do
-        expect(page).to have_css("h3", text: "Sort by")
+        expect(page).to have_css("h2", text: "Sort results by")
         expect(page).to have_css("select#sort")
         expect(page).to have_css("button", text: "Search")
-        expect(page).to have_css("a", text: "Clear form")
+        expect(page).to have_css("button", text: "Clear form")
       end
     end
   end

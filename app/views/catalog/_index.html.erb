@@ -7,6 +7,7 @@
 <div class="row">
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
+      <h2 class="sr-only">Assistance</h2>
       <%= render "catalog/chat_librarian_sidebar" %>
       <%= render "catalog/library_website_sidebar" %>
     <% elsif %>
@@ -15,8 +16,7 @@
   </div>
 
   <div id="content" class="col-md-8 col-sm-7">
-    <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
-
+    
     <% if page_location.access_point? %>
       <% if page_location.access_point.collection? && get_collection.present? %>
         <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
@@ -35,8 +35,10 @@
 
     <div class="search_num_of_results">
       <% if @response.empty? %>
+        <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
         <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
       <% else %>
+        <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
         <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
         <%= render 'search_header' %>
       <% end %>

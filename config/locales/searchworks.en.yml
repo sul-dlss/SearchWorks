@@ -3,16 +3,20 @@ en:
     course_reserves:
       page_title: "Browse course reserves in %{application_name}"
     search:
+      page_heading: "Search results"
       bookmarks:
         present: "Selected"
         absent: "Select"
       form:
         q: ''
       zero_results:
+        page_heading: "No results"
         limit_fields: "Remove limit(s): "
         search_fields: "Search all fields: "
         your_search: "Your search: "
+
     bookmarks:
+      page_heading: "Selections list"
       add:
         button: "Select"
       remove:
@@ -28,11 +32,12 @@ en:
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
+
   blacklight_advanced_search:
     form:
       title: "Advanced search"
       query_criteria_heading_html: "Match %{select_menu} of the fields below"
-      sort_label: "Sort by"
+      sort_label: "Sort results by"
       search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
