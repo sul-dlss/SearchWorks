@@ -67,7 +67,7 @@
     GalleryDocs.prototype.addBrowseLinkDivs = function() {
       var html = '<div class="gallery-document"><div class="browse-link"><a href="';
       html += this.browseUrl;
-      html +=  '">Browse more selections</a></div></div>';
+      html +=  '">Continue to full page</a></div></div>';
       this.embedContainer.append(html);
       this.embedContainer.prepend(html);
     };

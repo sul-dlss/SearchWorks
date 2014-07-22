@@ -14,7 +14,7 @@ describe "catalog/record/_callnumber_browse.html.erb" do
     render
   end
   it "should render a panel" do
-    expect(rendered).to have_css('.panel.panel-default')
+    expect(rendered).to have_css('div.record-browse-nearby')
   end
   it "should render a heading" do
     expect(rendered).to have_css('h2', text: /^Browse nearby/)
