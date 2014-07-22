@@ -15,7 +15,7 @@ describe "Search toolbar", js: true, feature: true do
   describe "Browse dropdown" do
     it "should have browse links" do
       click_link "Browse"
-      expect(page).to have_css("ul.dropdown-menu li a", text: "Course Reserves")
+      expect(page).to have_css("ul.dropdown-menu li a", text: "Course reserves")
     end
   end
   describe "Selections dropdown" do
