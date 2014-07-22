@@ -270,9 +270,14 @@ class CatalogController < ApplicationController
     # Deletes slideshow view
     config.view.delete_field("slideshow")
 
+    # View type group config 
+    config.view.list.icon_class = "fa-th-list"
+
     config.view.gallery.partials = [:index]
+    config.view.gallery.icon_class = "fa-th"
+
     config.view.brief.partials = [:index]
-    config.view.brief.icon_class = "glyphicon-align-justify"
+    config.view.brief.icon_class = "fa-align-justify"
   end
 
   def backend_lookup

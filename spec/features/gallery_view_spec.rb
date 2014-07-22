@@ -7,7 +7,7 @@ feature "Gallery View" do
     page.find('#view-type-dropdown button.dropdown-toggle a').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-gallery').click
 
-    expect(page).to have_css("span.glyphicon.glyphicon-gallery.view-icon-gallery")
+    expect(page).to have_css("i.fa.fa-th")
     expect(page).to have_css("div.callnumber-bar", text: "ABC")
     expect(page).to have_css("div.callnumber-bar", count: 2, text: /./)
     expect(page).to have_css(".gallery-document a[tabindex='-1'] span.fake-cover", text: "An object", visible: true)

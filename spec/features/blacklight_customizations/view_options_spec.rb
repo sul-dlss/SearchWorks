@@ -8,13 +8,13 @@ feature "View options" do
 
     within('#view-type-dropdown') do
       expect(page).to have_css("li a.view-type-list span.view-type-label", text: 'List')
-      expect(page).to have_css("li a.view-type-list span.glyphicon.glyphicon-list.view-icon-list")
+      expect(page).to have_css("li a.view-type-list i.fa.fa-th-list")
 
       expect(page).to have_css("li a.view-type-gallery span.view-type-label", text: 'Gallery')
-      expect(page).to have_css("li a.view-type-gallery span.glyphicon.glyphicon-gallery.view-icon-gallery")
+      expect(page).to have_css("li a.view-type-gallery i.fa.fa-th")
 
       expect(page).to have_css("li a.view-type-brief span.view-type-label", text: 'Brief')
-      expect(page).to have_css("li a.view-type-brief span.glyphicon.glyphicon-align-justify")
+      expect(page).to have_css("li a.view-type-brief i.fa.fa-align-justify")
     end
   end
 end

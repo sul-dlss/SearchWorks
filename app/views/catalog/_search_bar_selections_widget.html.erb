@@ -1,6 +1,6 @@
 <li class="dropdown" data-behavior="recent-selections" data-url=<%= recent_selections_path %>>
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <span class="sul-icon sul-icon-check-3"></span> Selections (<span id="current-selections-count"><%= current_or_guest_user.bookmarks.length %></span>)<span class="caret"></span>
+    <i class="fa fa-check-square-o"></i> Selections (<span id="current-selections-count"><%= current_or_guest_user.bookmarks.length %></span>)<span class="caret"></span>
   </a>
   <ul class="dropdown-menu dropdown-fixed-width recent-selections">
     <li id="show-list" class= <%= disabled_class_for_current_page(selections_path)%> <%= disabled_class_for_no_selections(current_or_guest_user.bookmarks.length) %>>
