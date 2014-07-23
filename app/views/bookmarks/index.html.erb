@@ -1,3 +1,6 @@
+<% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: application_name %>
+<h1 class="sr-only"><%= t('blacklight.bookmarks.page_heading') %></h1>
+
 <div id="content" class="col-md-12">
   <div class="row">
     <div class="col-md-12">
@@ -7,16 +10,13 @@
     </div>
   </div>
 
-<%- if current_or_guest_user.blank? -%>
-
-  <h2><%= t('blacklight.bookmarks.need_login') %></h2>
-
-<%- elsif @document_list.blank? -%>
-
-  <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
-<% else %>
-  <%= render 'sort_and_per_page' %>
-  <%= render_document_index %>
-  <%= render 'results_pagination' %>
-<% end %>
+  <% if current_or_guest_user.blank? %>
+    <h2><%= t('blacklight.bookmarks.need_login') %></h2>
+  <% elsif @document_list.blank? %>
+    <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
+  <% else %>
+    <%= render 'sort_and_per_page' %>
+    <%= render_document_index %>
+    <%= render 'results_pagination' %>
+  <% end %>
 </div>

@@ -1,6 +1,28 @@
-.advanced-search-start-over{
-  padding-left: 20px;
+#advanced-search-form {
+
+  .advanced-search-start-over {
+    margin-left: 20px;
+  }
+
+  .advanced-submit-group {
+    padding-top: 30px;
+  }
+
+  h2.query-criteria-heading {
+    padding-bottom: 4px;
+
+    select.input-small {
+      vertical-align: middle;
+    }
+  }
+
+  #advanced_search_facets .facets-list {
+    padding: 0;
+  }
 }
-.advanced-submit-group{
-  padding-top: 30px;
+
+@media only screen and (min-width : 768px) {
+  #advanced-search-form #advanced_search_facets .facets-list {
+    padding-left: 5px;
+  }
 }
