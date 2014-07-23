@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "Search toolbar", js: true, feature: true do
-    before { visit root_path }
+  before { visit root_path }
   describe "has SearchWorks customizations" do
     it "should display correct elements" do
       within "#search-navbar" do
@@ -10,6 +10,12 @@ describe "Search toolbar", js: true, feature: true do
         expect(page).to have_css("li a", text: "BROWSE", visible: true)
         expect(page).to have_css("li a", text: /SELECTIONS/, visible: true)
       end
+    end
+  end
+  describe "Browse dropdown" do
+    it "should have browse links" do
+      click_link "Browse"
+      expect(page).to have_css("ul.dropdown-menu li a", text: "Course reserves")
     end
   end
   describe "Selections dropdown" do

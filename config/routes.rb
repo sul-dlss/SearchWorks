@@ -32,9 +32,7 @@ Rails.application.routes.draw do
 
   resources :recent_selections, only: :index
 
-  resources :course_reserves, only: :index
-
-  get "reserves" => "course_reserves#index"
+  resources :course_reserves, only: :index, path: "reserves"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
