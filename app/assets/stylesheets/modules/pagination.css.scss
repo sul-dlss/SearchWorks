@@ -1,5 +1,11 @@
-.pagination > .active > a {
-  color: $white;
-  background-color: $sul-pagination-active-bg-border;
-  border-color: $sul-pagination-active-bg-border;
+.pagination {
+  .active > a, .pagination > .active > span {
+    color: $white;
+    background-color: $sul-pagination-active-bg;
+    border-color: $sul-pagination-active-bg-border;
+  }
+
+  .disabled > span {
+    color: rgba($sul-btn-disabled-color, $sul-btn-disabled-opacity);
+  }
 }

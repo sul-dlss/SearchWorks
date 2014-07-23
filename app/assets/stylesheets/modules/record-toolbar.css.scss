@@ -31,12 +31,18 @@
     padding: 8px 5px;
   }
 
-  .navbar-nav > li > a.btn-sul-toolbar {
-    margin: 0 5px;
-    border: none;
-    &:hover, &:focus, &:active {
+  .navbar-nav > li {
+    a.btn-sul-toolbar {
+      margin: 0 5px;
+      border: none;
+      &:hover, &:focus, &:active {
+        color: $btn-sul-toolbar-bar-color;
+        background-color: $btn-sul-toolbar-bar-hover-bg
+      }
+    }
+
+    .toggle_bookmark {
       color: $btn-sul-toolbar-bar-color;
-      background-color: $btn-sul-toolbar-bar-hover-bg
     }
   }
 
