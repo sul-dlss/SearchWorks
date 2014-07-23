@@ -3,7 +3,7 @@ require "spec_helper"
 feature "Brief View" do
   scenario "Search results", js: true do
     visit catalog_index_path f: {format: ["Book"]}
-    page.find('#view-type-dropdown button.dropdown-toggle a').click
+    page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
 
     expect(page).to have_css("i.fa.fa-align-justify")

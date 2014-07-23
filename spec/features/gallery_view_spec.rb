@@ -4,7 +4,7 @@ feature "Gallery View" do
   scenario "Search results", js: true do
     pending("Passes locally, not on Travis.") if ENV['CI']
     visit catalog_index_path f: {format: ["Book"]}
-    page.find('#view-type-dropdown button.dropdown-toggle a').click
+    page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-gallery').click
 
     expect(page).to have_css("i.fa.fa-th")
