@@ -1,28 +1,24 @@
 <% document ||= @document %>
-<div class="record-browse-nearby col-md-12 row">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <h2>Browse nearby</h2>
-      <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
-        <span class="callnumber">
-          <%= link_to_callnumber_browse(
-                document,
-                callnumber,
-                index
-               ) %>
-        </span>
-      <% end %>
-      <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
-        <div id="callnumber-<%=index%>" class="collapse embed-callnumber-browse-container">
-          <div class="embedded-items"><div class="gallery"></div></div>
-          <a class="left embed-browse-control" href="#" data-slide="prev">
-            <i class="fa fa-arrow-left"></i>
-          </a>
-          <a class="right embed-browse-control" href="#" data-slide="next">
-            <i class="fa fa-arrow-right"></i>
-          </a>
-        </div>
-      <% end %>
+<div class="record-browse-nearby">
+  <h2>Browse nearby</h2>
+  <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
+    <span class="callnumber">
+      <%= link_to_callnumber_browse(
+            document,
+            callnumber,
+            index
+           ) %>
+    </span>
+  <% end %>
+  <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
+    <div id="callnumber-<%=index%>" class="collapse embed-callnumber-browse-container">
+      <div class="embedded-items"><div class="gallery"></div></div>
+      <a class="left embed-browse-control" href="#" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right embed-browse-control" href="#" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
-  </div>
+  <% end %>
 </div>
