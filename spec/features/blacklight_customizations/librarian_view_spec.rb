@@ -1,0 +1,36 @@
+require "spec_helper"
+
+describe "Librarian View Customization", type: :feature, js: true do
+  it "MARC records should display" do
+    visit catalog_path('28')
+
+    within(".tech-details") do
+      expect(page).to have_content('Catkey: 28')
+
+      click_link('Librarian view')
+    end
+
+    expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
+
+    within("#marc_view") do
+      expect(page).to have_css(".field", text: /Some intersting papers/)
+    end
+  end
+
+  it "MODS records should display" do
+    visit catalog_path('35')
+
+    within(".tech-details") do
+      expect(page).to have_content('DRUID: 35')
+
+      click_link('Librarian view')
+    end
+
+    expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
+
+    within(".mods-view") do
+      expect(page).to have_content("A record with everything")
+      expect(page).to have_css("span", text: "<title>")
+    end
+  end
+end
