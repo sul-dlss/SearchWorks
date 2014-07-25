@@ -3,12 +3,11 @@
 require 'spec_helper'
 
 feature "Results Toolbar", js: true do
-  before do
+  scenario "should have desktop tools visible" do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'
-  end
-  scenario "should have desktop tools visible" do
+
     within "#sortAndPerPage" do
       within "div.page_links" do
         expect(page).to have_css("a.btn.btn-sul-toolbar.disabled", text: /Previous/, visible: true)
@@ -20,6 +19,28 @@ feature "Results Toolbar", js: true do
       expect(page).to have_css("#select_all-dropdown", text: "Select all")
       expect(page).to_not have_css("a", text: /Cite/)
       expect(page).to_not have_css("button", text: /Send/)
+    end
+  end
+  scenario "pagination links for single items should not have any number of results info" do
+    visit root_path
+    fill_in "q", with: '24'
+    click_button 'search'
+
+    within('.sul-toolbar') do
+      expect(page).to_not have_css('.page_links')
+      expect(page).to_not have_content('1 entry')
+    end
+  end
+  scenario "pagination links for multiple items but no pages should not have any number of results info" do
+    visit root_path
+    fill_in "q", with: '34'
+    click_button 'search'
+
+    expect(page).to have_css('h2', text: '4 results')
+
+    within('.sul-toolbar') do
+      expect(page).to_not have_css('.page_links')
+      expect(page).to_not have_content('1 - 4')
     end
   end
 end
