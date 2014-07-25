@@ -294,7 +294,7 @@ class CatalogController < ApplicationController
   end
 
   def add_show_partials
-    blacklight_config.show.partials += ["catalog/record/record_metadata"]
+    blacklight_config.show.partials += ["record/record_metadata"]
   end
 
 end
