@@ -1,6 +1,8 @@
 en:
   blacklight:
     application_name: 'Blacklight'
+    entry_name:
+      default: 'result'
     home:
       title: 'SearchWorks : Stanford University Libraries catalog'
     search:
@@ -28,6 +30,7 @@ en:
         pages:
           one: '%{start_num} - %{end_num}'
           other: '%{start_num} - %{end_num}'
+        single_item_found: ''
         no_items_found: "<h2>No results found in catalog</h2>"
     bookmarks:
       add:
