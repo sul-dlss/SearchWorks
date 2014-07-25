@@ -39,10 +39,6 @@ describe "catalog/_index_marc.html.erb" do
       )
       render
     end
-    it "should display their summary" do
-      expect(rendered).to have_css('dt', text: "Database summary")
-      expect(rendered).to have_css('dd', text: "The summary of the object")
-    end
     it "should display the database topics" do
       expect(rendered).to have_css('dt', text: "Database topics")
       expect(rendered).to have_css('dd a', text: "Subject1")

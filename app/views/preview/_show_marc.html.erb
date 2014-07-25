@@ -9,14 +9,6 @@
 
     <dl class="dl-horizontal dl-invert">
       <% if document.is_a_database? %>
-        <% if document[:summary_display].present? %>
-          <dt>Database summary</dt>
-          <dd>
-            <div data-behavior='truncate'>
-              <%= document[:summary_display].join(' ') %>
-            </div>
-          </dd>
-        <% end %>
         <% if document[:db_az_subject].present? %>
           <dt>Database topics</dt>
           <dd>
