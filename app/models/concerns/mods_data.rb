@@ -13,4 +13,8 @@ module ModsData
     return nil unless self[:modsxml]
     @mods ||= render_mods_display(self)
   end
+  def prettified_mods
+    return nil unless self["modsxml"]
+    @prettified_mods ||= CodeRay::Duo[:xml, :div].highlight(self["modsxml"]).html_safe
+  end
 end
