@@ -45,7 +45,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
-    blacklight (5.5.1)
+    blacklight (5.5.2)
       bootstrap-sass (~> 3.0)
       deprecation
       kaminari (~> 0.13)
@@ -302,7 +302,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blacklight (~> 5.5.1)
+  blacklight (~> 5.5.2)
   blacklight-gallery!
   blacklight-marc (~> 5.0)
   blacklight_advanced_search
