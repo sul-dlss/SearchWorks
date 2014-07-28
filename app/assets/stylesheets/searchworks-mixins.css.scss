@@ -15,3 +15,11 @@
 @mixin h3-index-title {
   text-indent: -13px;
 }
+
+@mixin panel-borders {
+  border: 1px solid $sul-panel-border;
+}
+
+@mixin panel-border-bottom {
+  border-bottom: 1px solid $sul-panel-border-bottom;
+}
