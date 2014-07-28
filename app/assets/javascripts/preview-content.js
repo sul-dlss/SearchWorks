@@ -50,6 +50,7 @@ var PreviewContent = (function() {
 
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8();
+      target.find('[data-live-lookup-url]').liveLookup();
 
       break;
     case 'prepend':
@@ -60,6 +61,7 @@ var PreviewContent = (function() {
 
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8();
+      target.find('[data-live-lookup-url]').liveLookup();
 
       break;
     case 'returnOnly':
