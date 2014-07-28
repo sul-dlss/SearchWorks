@@ -70,20 +70,23 @@
     height: 30px;
     width: 100%;
     position: absolute;
-    bottom: 6px;
+    bottom: 2px;
     display: inline-block;
 
     .preview-button {
       position: absolute;
-      bottom: 0px;
       margin-left: 8px;
       margin-bottom: 3px;
     }
 
     form {
       position: absolute;
-      left: 120px;
+      left: 106px;
       font-size: .9em;
+
+      .toggle_bookmark {
+        bottom: 4px;
+      }
     }
   }
   .stacks-image {
