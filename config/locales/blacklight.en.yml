@@ -15,6 +15,8 @@ en:
         submit_html: '<span class="sr-only">Search</span><span class="glyphicon glyphicon-search"></span>'
         submit: ''
       form_label: 'search for'
+      librarian_view:
+        empty: 'No librarian view available'
       masthead_title: '%{title} in %{application_name}'
       show:
         title: '%{document_title} in %{application_name}'
@@ -47,6 +49,7 @@ en:
       printer_html: '<span class="glyphicon glyphicon-print"> </span>  printer'
       cite_entries: 'Cite %{current_range}'
       send_to_html: 'Send %{current_range} to <span class="caret"></span>'
+      librarian_view: 'Librarian view'
   views:
     pagination_compact:
       next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'

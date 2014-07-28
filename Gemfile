@@ -63,6 +63,8 @@ group :test do
   gem 'coveralls', require: false
 end
 
+gem "coderay"
+
 gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
