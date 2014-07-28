@@ -10,6 +10,8 @@ class CatalogController < ApplicationController
 
   include CallnumberSearch
 
+  include AllCapsParams
+
   include Thumbnail
 
   helper Openseadragon::OpenseadragonHelper

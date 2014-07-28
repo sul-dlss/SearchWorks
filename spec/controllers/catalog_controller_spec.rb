@@ -7,6 +7,9 @@ describe CatalogController do
   it "should include the CallnumberSearch concern" do
     expect(subject).to be_kind_of(CallnumberSearch)
   end
+  it "should include the AllCapsParams concern" do
+    expect(subject).to be_kind_of(AllCapsParams)
+  end
   describe "#index" do
     it "should set the search modifier" do
       get :index
