@@ -7,11 +7,24 @@
   border: none;
 }
 .panel-body {
-  border: 1px solid $sul-panel-border;
-  border-bottom: 1px solid $sul-panel-border-bottom;
+  @include panel-borders;
+  @include panel-border-bottom;
   background-color: white;
 }
 
+.panel-footer {
+  @include panel-borders;
+  @include panel-border-bottom;
+  border-top: none;
+}
+
+.panel-group .panel-heading {
+  @include panel-border-bottom;
+}
+
+.panel-heading {
+  @include panel-border-bottom;
+}
 .alert {
   padding: 10px 15px;
   margin: 10px 0;
