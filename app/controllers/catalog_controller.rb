@@ -12,6 +12,8 @@ class CatalogController < ApplicationController
 
   include AllCapsParams
 
+  include ReplaceSpecialQuotes
+
   include Thumbnail
 
   helper Openseadragon::OpenseadragonHelper
@@ -290,6 +292,10 @@ class CatalogController < ApplicationController
   end
 
   private
+
+  def modifiable_params_keys
+    %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
+  end
 
   def set_search_query_modifier
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)

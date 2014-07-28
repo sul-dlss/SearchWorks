@@ -9,10 +9,6 @@ module AllCapsParams
 
   private
 
-  def modifiable_params_keys
-    %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
-  end
-
   def downcase_all_caps_params
     modifiable_params_keys.each do |param|
       if params.has_key?(param)

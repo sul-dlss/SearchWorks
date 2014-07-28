@@ -4,6 +4,7 @@ describe AllCapsParams do
   let(:controller) { double('CatalogContrller') }
   before do
     controller.extend(AllCapsParams)
+    controller.stub(:modifiable_params_keys).and_return( ['q', 'search_title'] )
     controller.stub(:params).and_return(HashWithIndifferentAccess.new(params))
   end
 
