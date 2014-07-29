@@ -1,6 +1,33 @@
 require "spec_helper"
 
 describe "catalog/_index_location.html.erb" do
+  describe "accessibility" do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          id: '123',
+          item_display: [
+            '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
+          ]
+        )
+      )
+      render
+    end
+    it "should have a caption" do
+      expect(rendered).to have_css('caption.sr-only', text: 'Status of items at Green Library')
+    end
+    describe "column scope" do
+      it "should be on the library name" do
+        expect(rendered).to have_css('th[scope="col"]', text: 'Green Library')
+      end
+      it "should be on the status column" do
+        expect(rendered).to have_css('th[scope="col"]', text: 'Status')
+      end
+      it "should be on the location name" do
+        expect(rendered).to have_css('th[scope="col"]', text: 'Stacks')
+      end
+    end
+  end
   describe "status icon" do
     before do
       view.stub(:document).and_return(
@@ -32,7 +59,7 @@ describe "catalog/_index_location.html.erb" do
     end
     it "should display the location and items in separate table rows" do
       expect(rendered).to have_css('tbody tr', count: 3)
-      expect(rendered).to have_css('tbody tr td', text: "Stacks")
+      expect(rendered).to have_css('tbody tr th', text: "Stacks")
       expect(rendered).to have_css('tbody tr td', text: "ABC 123")
       expect(rendered).to have_css('tbody tr td', text: "ABC 456")
     end
@@ -52,7 +79,7 @@ describe "catalog/_index_location.html.erb" do
       end
       it "should include the matched MHLD" do
         expect(rendered).to have_css('tbody tr', count: 2)
-        expect(rendered).to have_css('tbody tr td', text: /Stacks.*public note/m)
+        expect(rendered).to have_css('tbody tr th', text: /Stacks.*public note/m)
         expect(rendered).to have_css('tbody tr td', text: "ABC 123")
         expect(rendered).to have_css('tbody tr td', text: "Latest: latest received")
       end
@@ -67,7 +94,7 @@ describe "catalog/_index_location.html.erb" do
       end
       it "should invoke a library block w/ the appropriate mhld data" do
         expect(rendered).to have_css('tbody tr', count: 1)
-        expect(rendered).to have_css('tbody tr td', text: /Stacks.*public note/m)
+        expect(rendered).to have_css('tbody tr th', text: /Stacks.*public note/m)
         expect(rendered).to have_css('tbody tr td', text: "Latest: latest received")
       end
     end

@@ -1,16 +1,17 @@
 <% if document.holdings.present? %>
   <% document.holdings.libraries.select(&:present?).each do |library| %>
     <table class="table table-condensed availability" data-live-lookup-url="<%= availability_index_path %>">
+      <caption class='sr-only'>Status of items at <%= library.name %></caption>
       <thead>
         <tr class='active'>
-          <th><%= library.name %></th>
-          <th class='col-xs-4'>Status</th>
+          <th scope='col'><%= library.name %></th>
+          <th scope='col' class='col-xs-4'>Status</th>
         </tr>
       </thead>
       <tbody>
         <% library.locations.select(&:present_on_index?).each do |location| %>
           <tr>
-            <td>
+            <th scope='col'>
               <strong><%= location.name%></strong>
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
@@ -19,7 +20,7 @@
                   <% end %>
                 <% end %>
               <% end %>
-            </td>
+            </th>
             <td>
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
