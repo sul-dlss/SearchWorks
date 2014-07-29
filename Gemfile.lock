@@ -8,6 +8,15 @@ GIT
       rails
 
 GIT
+  remote: git://github.com/projectblacklight/blacklight_range_limit.git
+  revision: d51b7f382a6cb4694c9b15deb3f442f609bf3e54
+  specs:
+    blacklight_range_limit (5.0.1)
+      blacklight (>= 5.0.0.pre4, < 6)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
+
+GIT
   remote: git://github.com/sul-dlss/openseadragon-rails.git
   revision: afe09fa081b0a4f854cbeb0c4f9cba7edda17ea9
   specs:
@@ -59,10 +68,6 @@ GEM
     blacklight_advanced_search (5.0.1)
       blacklight (>= 5.1, < 6.0)
       parslet
-    blacklight_range_limit (5.0.1)
-      blacklight (>= 5.0.0.pre4, < 6)
-      jquery-rails
-      rails (>= 3.0, < 5.0)
     blankslate (2.1.2.4)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
@@ -307,7 +312,7 @@ DEPENDENCIES
   blacklight-gallery!
   blacklight-marc (~> 5.0)
   blacklight_advanced_search
-  blacklight_range_limit
+  blacklight_range_limit!
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-rails

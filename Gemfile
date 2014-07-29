@@ -81,6 +81,6 @@ gem "mods_display", "0.3.3"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search"
 gem "font-awesome-sass"
-gem "blacklight_range_limit"
+gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.1.10.0.3'
