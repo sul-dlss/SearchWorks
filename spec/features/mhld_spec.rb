@@ -27,10 +27,10 @@ describe "MHLD", feature: true do
         expect(page).to have_content('At the library')
         within('.accordion-section.location') do
           find('a.header').click
-          expect(page).to have_css('tr td strong', text: 'Current Periodicals')
-          expect(page).to have_css('tr td .public-note', text: 'public note1')
-          expect(page).to have_css('tr td .public-note', text: 'public note2')
-          expect(page).to have_css('tr td .public-note', text: 'public note3')
+          expect(page).to have_css('tr th strong', text: 'Current Periodicals')
+          expect(page).to have_css('tr th .public-note', text: 'public note1')
+          expect(page).to have_css('tr th .public-note', text: 'public note2')
+          expect(page).to have_css('tr th .public-note', text: 'public note3')
           expect(page).to have_css('tr td', text: 'Latest: latest received1')
           expect(page).to have_css('tr td', text: 'Latest: latest received2')
           expect(page).to have_css('tr td', text: 'Latest: latest received3')
