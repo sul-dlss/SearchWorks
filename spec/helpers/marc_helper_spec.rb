@@ -161,6 +161,9 @@ describe MarcHelper do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
     let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
     let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
+    it "should return multiple dd elements when there are multiple values" do
+      expect(link_to_contributor_from_marc(contributor.to_marc)).to have_css('dd', count: 3)
+    end
     it "should display a fields with translated relator codes and raw RDA correctly" do
       data = link_to_contributor_from_marc(contributor.to_marc)
       data.should match(/>Contributor1<\/a> Performer</)
@@ -186,7 +189,7 @@ describe MarcHelper do
       works.should_not match(/act/)
     end
     it "should handle repeating subfield e" do
-       link_to_contributor_from_marc(multi_role_contributor.to_marc).should match(/\/a> actor\. director\.<br\/>/)
+       link_to_contributor_from_marc(multi_role_contributor.to_marc).should match(/\/a> actor\. director\.<\/dd>/)
     end
     it "should not display anything when no contributors are available" do
       link_to_contributor_from_marc(nil_document.to_marc).should be_nil

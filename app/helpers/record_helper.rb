@@ -4,15 +4,17 @@ module RecordHelper
     content_tag(:dt, label.gsub(":",""))
   end
 
-  def mods_display_content content
-    content_tag(:dd, link_urls_and_email(content).html_safe)
+  def mods_display_content values
+    Array[values].flatten.map do |value|
+      content_tag(:dd, link_urls_and_email(value).html_safe)
+    end.join.html_safe
   end
 
   def mods_record_field field
     if field.respond_to?(:label, :values) &&
        field.values.any?(&:present?)
       mods_display_label(field.label) +
-      mods_display_content(field.values.join)
+      mods_display_content(field.values)
     end
   end
 
@@ -25,11 +27,11 @@ module RecordHelper
   end
 
   def mods_display_name(names)
-    content_tag(:dd) do
-      names.map do |name|
-        "#{link_to(name.name, catalog_index_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}"
-      end.join('<br/>').html_safe
-    end
+    names.map do |name|
+      content_tag(:dd) do
+        "#{link_to(name.name, catalog_index_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}".html_safe
+      end
+    end.join.html_safe
   end
 
   def mods_subject_field(subjects)

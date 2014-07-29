@@ -140,8 +140,7 @@ module MarcHelper
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
             vernacular = get_marc_vernacular(marc,field)
             temp_vern = "\"#{vernacular}\""
-            temp_text << "<br/>#{link_to h(vernacular), :q => temp_vern, :controller => 'catalog', :action => 'index', :search_field => 'search_author'}" unless vernacular.nil?
-            temp_text << "<br/>"
+            temp_text << "#{link_to h(vernacular), :q => temp_vern, :controller => 'catalog', :action => 'index', :search_field => 'search_author'}" unless vernacular.nil?
             contributors << temp_text
           end
         end
@@ -174,10 +173,10 @@ module MarcHelper
       end
     end
     return_text = ""
-    return_text << "<dt>Contributor</dt><dd>#{contributors.join}</dd>" unless contributors.blank?
+    return_text << "<dt>Contributor</dt><dd>#{contributors.join('</dd><dd>')}</dd>" unless contributors.blank?
     return_text << text unless text.blank?
-    return_text << "<dt>Related Work</dt><dd>#{related_works.join('<br/>')}</dd>" unless related_works.blank?
-    return_text << "<dt>Included Work</dt><dd>#{included_works.join('<br/>')}</dd>" unless included_works.blank?
+    return_text << "<dt>Related Work</dt><dd>#{related_works.join('</dd><dd>')}</dd>" unless related_works.blank?
+    return_text << "<dt>Included Work</dt><dd>#{included_works.join('</dd><dd>')}</dd>" unless included_works.blank?
     return_text.html_safe unless return_text.blank?
   end
 
