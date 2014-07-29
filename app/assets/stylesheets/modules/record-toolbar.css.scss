@@ -2,6 +2,7 @@
   border-radius: 0px;
   margin-top: 10px;
   padding: 5px;
+  min-height: 0;
 
   &.sul-toolbar {
     border-left: none;
@@ -28,7 +29,7 @@
   }
 
   .btn-sul-toolbar {
-    padding: 8px 5px;
+    padding: 3px 5px;
   }
 
   .navbar-nav > li {
@@ -41,8 +42,9 @@
       }
     }
 
-    .toggle_bookmark {
+    div.toggle_bookmark {
       color: $btn-sul-toolbar-bar-color;
+      padding-top: 4px;
     }
   }
 
@@ -62,6 +64,10 @@
 
 .sul-record-page-info-inner {
   text-align: center;
+
+  .page-entries {
+    vertical-align: middle;
+  }
 }
 
 .back-to-results {
