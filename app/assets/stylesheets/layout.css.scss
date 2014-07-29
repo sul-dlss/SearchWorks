@@ -40,6 +40,13 @@
 	margin: 0 auto;
 	text-align: left;
 }
+
+#main-container {
+  #main-flashes {    
+    min-height: 0;
+  }
+}
+
 #search-navbar {
 	padding: 0;
 }

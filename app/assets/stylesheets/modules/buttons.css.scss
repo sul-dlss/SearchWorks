@@ -22,6 +22,7 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
   background-color: transparent;
   margin: 0 5px;
   padding: 3px 5px;
+
   & a {
     color: $btn-sul-toolbar-bar-color;
     border-bottom: none;
@@ -36,4 +37,8 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
     color: $btn-sul-toolbar-bar-color;
     background-color: $btn-sul-toolbar-bar-hover-bg
   }
+}
+
+a.btn-sul-toolbar {
+  border-bottom: none;
 }

@@ -34,6 +34,8 @@ en:
           other: '%{start_num} - %{end_num}'
         single_item_found: ''
         no_items_found: "<h2>No results found in catalog</h2>"
+      entry_pagination_info:
+        other: '%{current} of %{total}'        
     bookmarks:
       add:
         all_html: '<i class="fa fa-check-square-o"></i> <span class="hidden-sm hidden-xs">Select </span>all'
