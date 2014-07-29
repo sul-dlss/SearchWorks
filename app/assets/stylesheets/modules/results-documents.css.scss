@@ -6,16 +6,6 @@
     h3.index_title {
       @include h3-index-title;
     }
-    dt {
-      width: auto;
-    }
-    dd {
-      margin: 0;
-    }
-    .document-metadata {
-      list-style-type: none;
-      padding-left: 0;
-    }
 
     .main-title-date {
       color: $sul-main-title-date-color;
@@ -31,16 +21,28 @@
       border: 1px solid #ddd;
       display: none;
     }
+  }
 
-    .stacks-image {
-      max-height: 200px;
-      max-width: 200px;
-    }
+  dt {
+    width: auto;
+  }
+  dd {
+    margin: 0;
   }
 
   .cursor-pointer {
     cursor: pointer;
   }
+}
+
+.document-metadata {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.stacks-image {
+  max-height: 200px;
+  max-width: 200px;
 }
 
 #content {

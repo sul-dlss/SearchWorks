@@ -62,6 +62,13 @@
 
   .preview-content {
     overflow: auto;
+
+    dt {
+      width: auto;
+    }
+    dd {
+      margin: 0;
+    }
   }
 
   .preview-img {

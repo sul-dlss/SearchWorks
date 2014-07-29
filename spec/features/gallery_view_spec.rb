@@ -17,8 +17,10 @@ feature "Gallery View" do
     expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
     expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
     page.first("button.btn.docid-1").click
-    expect(page).to have_css("h4", text: "An object")
     expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
-    expect(page).to have_css("li", text: "1990")
+    within ".preview-container" do
+      expect(page).to have_css("h3", text: "An object")
+      expect(page).to have_css("li", text: "1990")
+    end
   end
 end
