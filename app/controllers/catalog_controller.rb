@@ -81,7 +81,10 @@ class CatalogController < ApplicationController
     config.add_facet_field "collection_type", :label => "Collection type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100
     config.add_facet_field "format_physical_ssim", :label => "Physical format", limit: 20
-    config.add_facet_field "pub_year_tisim", :label => "Date", :range => true
+    config.add_facet_field "pub_year_tisim", :label => "Date", :range => {
+      :input_label_range_begin => "from year",
+      :input_label_range_end => "to year"
+    }
     config.add_facet_field "building_facet", :label => "Library", limit: 100
     config.add_facet_field "language", :label => "Language", limit: 20
     config.add_facet_field "author_person_facet", :label => "Author", limit: 20
@@ -276,7 +279,7 @@ class CatalogController < ApplicationController
     # Deletes slideshow view
     config.view.delete_field("slideshow")
 
-    # View type group config 
+    # View type group config
     config.view.list.icon_class = "fa-th-list"
 
     config.view.gallery.partials = [:index]
