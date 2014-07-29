@@ -1,29 +1,7 @@
 <% document ||= @document %>
 
-<div class="row">
-  <div class="col-sm-2">
-    <%= render_cover_image(@document) %>
-  </div>
-  <div class="col-sm-10">
-    <%= render :partial => "catalog/marc_search_results_document_fields", :locals => { :document => document } %>
-
-    <dl class="dl-horizontal dl-invert">
-      <% if document.is_a_database? %>
-        <% if document[:db_az_subject].present? %>
-          <dt>Database topics</dt>
-          <dd>
-            <%= document[:db_az_subject].map do |subject| %>
-              <% link_to(subject, catalog_index_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
-            <% end.join('; ').html_safe %>
-          </dd>
-        <% end %>
-      <% end %>
-      <% if document.extent.present? %>
-        <dt><%= document.extent_label %></dt>
-        <dd><%= document.extent %></dd>
-      <% end %>
-    </dl>
-  </div>
+<div class="document-thumbnail">
+  <%= render_cover_image(@document) %>
 </div>
 
-<%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>
+<%= render partial: "catalog/index_marc", locals: { document: document } %>

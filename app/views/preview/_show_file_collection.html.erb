@@ -1,18 +1,3 @@
 <% document ||= @document %>
 
-<%= render :partial => "catalog/mods_search_results_document_fields", :locals => { :document => document } %>
-
-<dl class="dl-horizontal dl-invert">
-  <% if document.collection_members(rows: 3).present? %>
-    <dt>Digital content</dt>
-    <dd><%= link_to_collection_members(pluralize(document.collection_members.total, 'item'), document) %></dd>
-  <% end %>
-
-  <% if document.extent.present? %>
-    <dt><%= document.extent_label %></dt>
-    <dd><%= document.extent %></dd>
-  <% end %>
-</dl>
-
-<%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>
-<%= render 'catalog/file_collection_members' %>
+<%= render partial: "catalog/index_file_collection", locals: { document: document } %>
