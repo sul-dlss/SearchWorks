@@ -13,6 +13,9 @@ describe RecordHelper do
     it "should return correct content" do
       expect(helper.mods_display_content("hello, there")).to have_css("dd", text: "hello, there")
     end
+    it "should return multiple dd elements when a multi-element array is passed" do
+      expect(helper.mods_display_content(["hello", "there"])).to have_css("dd", count: 2)
+    end
   end
 
   describe "mods_record_field" do

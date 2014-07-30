@@ -1,13 +1,10 @@
 <dt title="<%= fields[:label] %>"><%= fields[:label] %></dt>
-<dd>
-  <%- unless fields[:fields].nil? -%>
-    <%- fields[:fields].each do |field| %>
-      <%= field[:field] %>
-      <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
-      <%= options[:delimiter].html_safe if field != fields[:fields].last and options.has_key?(:delimiter) %>
-    <%- end -%>
-  <%- end -%>
-  <%- unless fields[:unmatched_vernacular].nil? -%>
-    <%= fields[:unmatched_vernacular].join("<br/>").html_safe -%>
-  <%- end -%>
-</dd>
+<% fields[:fields].each do |field| %>
+  <dd><%= field[:field] %></dd>
+  <% if field[:vernacular].present? %>
+    <dd><%= field[:vernacular] %></dd>
+  <% end %>
+<% end if fields[:fields].present? %>
+<% fields[:unmatched_vernacular].each do |field| %>
+  <dd><%= field %></dd>
+<% end if fields[:unmatched_vernacular].present? %>
