@@ -37,6 +37,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'squash_ruby', require: 'squash/ruby'
+gem 'squash_rails', require: 'squash/rails'
+
 group :deployment do
   gem 'capistrano', '~> 3.0'
   gem 'capistrano-bundler'
