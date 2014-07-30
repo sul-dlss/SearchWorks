@@ -1,8 +1,9 @@
 .record-side-nav {
   background-color: transparent;
   list-style-type: none;
+  padding: 0;
   position: fixed;
-  right: 0;
+  right: 10px;
   top: 40%;
   z-index: 30000;
 
@@ -24,10 +25,12 @@
     }
 
     &:first-child button {
+      border-top-right-radius: 5px;
       border-top-left-radius: 5px;
     }
 
     &:last-child button {
+      border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
     }
   }
