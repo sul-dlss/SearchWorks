@@ -12,3 +12,15 @@
     float: right;
   }
 }
+
+.table-top-bar {
+  padding-top: 6px;
+  margin-left: 0px;
+  margin-right: 0px;
+  @include sul-toolbar-bg-border;
+}
+
+#course-reserves-browse_paginate {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}

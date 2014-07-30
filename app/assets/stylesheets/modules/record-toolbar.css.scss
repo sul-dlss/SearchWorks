@@ -7,7 +7,7 @@
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 3px solid $sul-toolbar-border;
+    @include sul-toolbar-bg-border;
   }
 
   .record-toolbar-tools ul {

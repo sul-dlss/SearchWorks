@@ -3,6 +3,7 @@ class CourseReservesController < ApplicationController
   include Blacklight::Configurable
   include Blacklight::SolrHelper
   include CourseReserves
+  copy_blacklight_config_from(CatalogController)
 
   def index
     facet = "crez_course_info"
