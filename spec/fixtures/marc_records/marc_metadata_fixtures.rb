@@ -9,6 +9,7 @@ module MarcMetadataFixtures
         </datafield>
         <datafield tag="245" ind1="1" ind2="0">
           <subfield code="a">Some intersting papers,</subfield>
+          <subfield code="c">Most responsible person ever</subfield>
           <subfield code="f">1979-2010.</subfield>
         </datafield>
         <datafield tag="300" ind1=" " ind2=" ">
