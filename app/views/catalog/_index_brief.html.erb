@@ -3,35 +3,37 @@
   preview_attrs = preview_data_attrs(true, "preview-brief", document[:id], '.' + preview_container)
 %>
 
-<div class=" brief-document" <%= preview_attrs %>>
-
-  <div class="row container-fluid brief-container">
-    <h3 class="index_title">
-      <% counter = document_counter_with_offset(document_counter) %>
-      <%= render_resource_icon document[document.format_key] %>
-      <span class="document-counter">
-        <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
-      </span>
-      <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
-      <span class="main-title-date"><%= get_main_title_date(document) %></span>
-    </h3>
-  </div>
-
-  <div class="container-fluid <%= preview_container %>">
-  </div>
-
-  <div class="row container-fluid">
-    <div class="col-lg-8 col-md-6 col-sm-6">
-      <% # column for availability info %>
+<div class=" brief-document container-fluid" <%= preview_attrs %>>
+  <div class="row brief-container">
+    <div class="col-md-8">
+      <h3 class="index_title">
+        <% counter = document_counter_with_offset(document_counter) %>
+        <%= render_resource_icon document[document.format_key] %>
+        <span class="document-counter">
+          <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+        </span>
+        <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
+        <span class="main-title-date"><%= get_main_title_date(document) %></span>
+      </h3>
     </div>
-    <div class="col-lg-2 col-md-3 col-sm-3">
-      <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">
-        Preview
-      </button>
+    <div class="container-fluid <%= preview_container %> hidden preview-container">
     </div>
-    <div class="col-lg-2 col-md-3 col-sm-3">
-      <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+    <div class="col-md-4 pull-right">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 preview-button-container">
+          <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">
+            Preview
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+        </div>
+      </div>
     </div>
   </div>
+
+
+
+
 
 </div>
