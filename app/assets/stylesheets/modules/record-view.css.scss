@@ -1,6 +1,12 @@
+$show-title-left-margin: 40px;
 .blacklight-catalog-show {
   h1 {
     text-indent: -22px;
-    margin-left: 40px;
+    margin-left: $show-title-left-margin;
+    margin-bottom: 0;
+  }
+  .vernacular-title {
+    font-size: 1.6em;
+    margin-left: $show-title-left-margin;
   }
 }

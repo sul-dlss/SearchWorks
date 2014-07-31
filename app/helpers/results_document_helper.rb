@@ -1,13 +1,7 @@
 module ResultsDocumentHelper
 
   def get_main_title document
-    title = document['title_display'].html_safe
-
-    if !document['vern_title_display'].nil?
-      title = title + " " + document['vern_title_display'].html_safe
-    end
-
-    title
+    document['title_display'].html_safe
   end
 
 
