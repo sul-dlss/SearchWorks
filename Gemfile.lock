@@ -147,7 +147,7 @@ GEM
       i18n
       logger
       mediashelf-loggable
-    jquery-datatables-rails (2.1.10.0.3)
+    jquery-datatables-rails (2.1.10.0.4)
       jquery-rails
       sass-rails
     jquery-rails (3.1.0)
@@ -331,7 +331,7 @@ DEPENDENCIES
   i18n (= 0.6.9)
   jbuilder (~> 2.0)
   jettywrapper (~> 1.7)
-  jquery-datatables-rails (~> 2.1.10.0.3)
+  jquery-datatables-rails (~> 2.1.10.0.4)
   jquery-rails
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)

@@ -23,3 +23,8 @@
 @mixin panel-border-bottom {
   border-bottom: 1px solid $sul-panel-border-bottom;
 }
+
+@mixin sul-toolbar-bg-border {
+  background-color: $sul-toolbar-bg;
+  border-bottom: 3px solid $sul-toolbar-border !important;
+}
