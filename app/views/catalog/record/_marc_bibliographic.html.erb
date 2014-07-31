@@ -1,12 +1,6 @@
 <% document ||= @document %>
 
-<%- new_publish = marc_264(document.to_marc) -%>
-<%- unless new_publish.blank? -%>
-  <%- new_publish.each do |label,values| -%>
-    <dt><%= label %></dt>
-    <dd><%= values.join("<br/>").html_safe %></dd>
-  <%- end -%>
-<%- end -%>
+<%= render 'catalog/dates_from_solr' %>
 
 <% title_translation = get_data_with_label_from_marc(document.to_marc, "Title Translation", '242') %>
 <% unless title_translation.nil? %>
