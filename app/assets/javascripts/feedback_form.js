@@ -78,7 +78,7 @@ Blacklight.onLoad(function(){
     function replaceLink(form, link) {
       var attrs = {};
       $.each(link[0].attributes, function(idx, attr) {
-          attrs[attr.nodeName] = attr.nodeValue;
+          attrs[attr.nodeName] = attr.value;
       });
       attrs.class = 'cancel-link btn btn-link';
 
