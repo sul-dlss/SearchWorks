@@ -18,6 +18,11 @@
   <%= render_field_from_marc(collective_title) %>
 <% end %>
 
+<% responsibility = get_data_with_label_from_marc(document.to_marc, "Responsibility", '245', {:sub_fields => ['c'] }) %>
+<% unless responsibility.nil? %>
+  <%= render_field_from_marc(responsibility) %>
+<% end %>
+
 <% title_variation = get_data_with_label_from_marc(document.to_marc, "Title Variation", '246') %>
 <% unless title_variation.nil? %>
   <%= render_field_from_marc(title_variation, :delimiter => "<br/>") %>
@@ -82,7 +87,7 @@
 <% unless note_502.nil? %>
   <%= render_field_from_marc(note_502, {:delimiter => "<br/>"}) %>
 <% end %>
-  
+
 <% access = get_data_with_label_from_marc(document.to_marc, "Access", '506') %>
 <% unless access.nil? %>
   <%= render_field_from_marc(access) %>
