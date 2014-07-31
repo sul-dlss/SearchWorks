@@ -1,8 +1,8 @@
 $(function(){
 
   //Finds all of the location panels and instantiates jQuery plugin for each one
-  $('div.panel-library-location').each(function(i,val){
-    $(val).locationHours();
+  $('[data-hours-route]').each(function(i,val){
+    $(val).locationHours(); 
   });
 })
 
@@ -40,7 +40,7 @@ $(function(){
         init: function() {
           var element = this.element;
           var hoursElement = getHoursElement(this.element);
-          var libLocation = $(this.element).data('hours-route');
+          var libLocation = $(this.element).data('hours-route');          
           $.getJSON(libLocation, function(data){
             if (data.error) {
               $(hoursElement).html(data.error);

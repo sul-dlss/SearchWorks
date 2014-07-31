@@ -1,11 +1,18 @@
 class Holdings
   class Callnumber
-    delegate :present?, to: :barcode
     def initialize(holding_info)
       @holding_info = holding_info
     end
+    def present?
+      @holding_info.present?
+    end
     def browsable?
       item_display[8].present?
+    end
+    def on_order?
+      barcode.blank? &&
+      home_location == "ON-ORDER" &&
+      current_location.code == "ON-ORDER"
     end
     def barcode
       item_display[0]
@@ -14,7 +21,7 @@ class Holdings
       if current_location_is_reserve_desk?
         Constants::RESERVE_DESKS[current_location.code]
       else
-        item_display[1]
+        standard_or_zombie_library
       end
     end
     def home_location
@@ -80,6 +87,14 @@ class Holdings
     end
 
     private
+
+    def standard_or_zombie_library
+      if item_display[1].blank? || ['SUL', 'PHYSICS'].include?(item_display[1])
+        "ZOMBIE"
+      else
+        item_display[1]
+      end
+    end
 
     def reserve_desk_or_current_location
       if current_location_is_reserve_desk?

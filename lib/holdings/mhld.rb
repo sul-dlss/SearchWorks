@@ -5,7 +5,7 @@ class Holdings
     end
 
     def library
-      @mhld_display[0]
+      standard_or_zombie_library
     end
 
     def location
@@ -31,6 +31,14 @@ class Holdings
     end
 
     private
+
+    def standard_or_zombie_library
+      if @mhld_display[0].blank? || ['SUL', 'PHYSICS'].include?(@mhld_display[0])
+        "ZOMBIE"
+      else
+        @mhld_display[0]
+      end
+    end
 
     def sanitize_mhld_data(data)
       data.gsub("),","), ").gsub("-","-<wbr/>") if data.present?

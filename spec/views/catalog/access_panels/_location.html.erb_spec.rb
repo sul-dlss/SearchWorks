@@ -10,18 +10,6 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to be_blank
     end
   end
-  describe "non-present library" do
-    before do
-      assign(:document, SolrDocument.new(
-        id: '123',
-        item_display: ["36105217238315 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"]
-      ))
-      render
-    end
-    it "should not render any panel" do
-      expect(rendered).to be_blank
-    end
-  end
   describe "object with a location" do
     it "should render the panel" do
       assign(:document, SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]))
@@ -153,6 +141,31 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       it "should have an item that does not have a request url" do
         expect(rendered).to_not have_css('ul.items li[data-request-url]', text: 'ABC 123')
       end
+    end
+  end
+  describe "zombie libraries" do
+    before do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: [
+          "123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-",
+          "456 -|- PHYSICS -|- PHYSTEMP -|- -|- -|- -|- -|- -|- DEF -|-",
+          "789 -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- -|- -|- GHI -|-"
+        ]
+      ))
+      render
+    end
+    it "should render a zombie library" do
+      expect(rendered).to have_css('.panel-library-location', count: 1)
+    end
+    it "should render SUL items in the zombie library" do
+      expect(rendered).to have_css('.panel-library-location li', text: 'ABC')
+    end
+    it "should render PHYSICS items in the zombie library" do
+      expect(rendered).to have_css('.panel-library-location li', text: 'DEF')
+    end
+    it "should render blank (i.e. on order) items in the zombie library" do
+      expect(rendered).to have_css('.panel-library-location li', text: 'GHI')
     end
   end
 end

@@ -3,6 +3,7 @@ require "spec_helper"
 describe Holdings::MHLD do
   let(:mhld_display) { 'GREEN -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
   let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note) -|- library-has-with-hyphens -|- ' }
+  let(:zombie_mhld) { 'PHYSICS -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
   it "should return the correct elements from the MHLD combined field" do
     mhld = Holdings::MHLD.new(mhld_display)
     expect(mhld.library).to eq "GREEN"
@@ -16,6 +17,12 @@ describe Holdings::MHLD do
   end
   it "should append <wbr/> to hyphens" do
     expect(Holdings::MHLD.new(special_mhld).library_has).to include('-<wbr/>')
+  end
+  it "should include mhlds from zombie libraries" do
+    zombie = Holdings::MHLD.new(zombie_mhld)
+    expect(zombie).to be_present
+    expect(zombie.library).to eq 'ZOMBIE'
+    expect(Holdings::MHLD.new(mhld_display).library).to eq "GREEN"
   end
   describe "#present?" do
     let(:no_mhld) { 'GREEN -|- STACKS -|- -|- -|-'}

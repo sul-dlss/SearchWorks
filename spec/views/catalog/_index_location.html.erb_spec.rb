@@ -136,18 +136,4 @@ describe "catalog/_index_location.html.erb" do
       end
     end
   end
-  describe "non present libraries" do
-    before do
-      view.stub(:document).and_return(
-        SolrDocument.new(
-          id: '123',
-          item_display: ["36105217238315 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"]
-        )
-      )
-      render
-    end
-    it "should not display any library table " do
-      expect(rendered).to be_blank
-    end
-  end
 end

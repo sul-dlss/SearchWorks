@@ -19,8 +19,15 @@ class Holdings
       end
       @locations
     end
+    def holding_library?
+      !zombie?
+    end
+    def zombie?
+      @code == "ZOMBIE"
+    end
     def present?
-      @code.present? && !["SUL", "PHYSICS"].include?(@code)
+      @items.any?(&:present?) ||
+      (mhld.present? && mhld.any?(&:present?))
     end
     def location_level_request?
       Constants::REQUEST_LIBS.include?(@code)

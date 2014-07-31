@@ -4,7 +4,7 @@ describe Holdings::Status::Unavailable do
   describe "unavailable libraries" do
     let(:status) {
       Holdings::Status::Unavailable.new(
-        OpenStruct.new(library: "PHYSICS")
+        OpenStruct.new(library: "ZOMBIE")
       )
     }
     it "should be unavailable" do
