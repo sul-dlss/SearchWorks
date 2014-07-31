@@ -59,31 +59,20 @@ $(function(){
 
     function getOpen(data){
       var open = new Date(data.opens_at);
-      open = formatHour(open.getHours());
+      open = formatTime(open.toLocaleTimeString());
       return open;
     }
 
     function getClose(data){
       var close = new Date(data.closes_at);
-      close = formatHour(close.getHours());
+      close = formatTime(close.toLocaleTimeString());
       return close;
     }
 
-    function formatHour(hour){
-      if (hour >= 12) {
-        if (hour === 12) {
-          hour = hour + 'p';
-        }else{
-          hour = hour - 12 + 'p';
-        }
-      }else{
-        if (hour === 0){
-          hour = '12a';
-        }else{
-          hour = hour + 'a';
-        }
-      }
-      return hour;
+    function formatTime(time){
+      var re = /:00|m|\s/gi;
+      time = time.replace(re, '').toLowerCase();
+      return time;
     }
 
     // A really lightweight plugin wrapper around the constructor,
