@@ -80,7 +80,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", :label => "Collection type", :show => false
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100
-    config.add_facet_field "format_physical_ssim", :label => "Physical format", limit: 20
+    config.add_facet_field "format_physical_ssim", :label => "Media type", limit: 20
     config.add_facet_field "pub_year_tisim", :label => "Date", :range => {
       :input_label_range_begin => "from year",
       :input_label_range_end => "to year"
