@@ -9,7 +9,7 @@ feature "In collection Access Panel" do
         expect(page).to have_content("In collection")
       end
       within('.panel-body') do
-        expect(page).to have_css("a", text: "Image Collection1")
+        expect(page).to have_css("h4 a", text: "Image Collection1")
         expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
       end
       within(".panel-footer") do
