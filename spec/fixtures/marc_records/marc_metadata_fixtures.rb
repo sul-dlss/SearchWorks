@@ -734,6 +734,23 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def marc_sections_fixture
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='2'>
+          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='y'>A different finding aid</subfield>
+          <subfield code='z'>This is the Finding Aid</subfield>
+        </datafield>
+        <datafield tag="506" ind1=" " ind2=" ">
+          <subfield code="a">Open for research; material must be requested at least 36 hours in advance of intended use. </subfield>
+        </datafield>
+        <datafield tag="555" ind1=" " ind2=" ">
+          <subfield code="a">Unpublished listing available in the department.</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def no_fields_fixture
     "<record></record>"
   end

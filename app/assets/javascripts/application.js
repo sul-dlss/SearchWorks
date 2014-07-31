@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require responsiveTruncator
 //= require trunk8
+//= require jquery-scrollspy
 //= require openseadragon/rails
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
