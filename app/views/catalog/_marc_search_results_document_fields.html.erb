@@ -1,5 +1,9 @@
 <% if document.respond_to?(:to_marc) %>
   <ul class="document-metadata dl-horizontal dl-invert">
+    <% if document[:vern_title_display].present? %>
+      <li><%= document[:vern_title_display].html_safe %></li>
+    <% end %>
+
     <% uniform_title = get_uniform_title(document.to_marc, ["240","130"]) %>
     <% unless uniform_title.nil? %>
       <% uniform_title[:fields].each do |field| %>

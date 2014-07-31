@@ -5,10 +5,13 @@
 :latest_poss_year_isi: 1837
 :author_person_display: Flores, Esperanza
 :title_display: Amet ad adipisicing ex mollit pariatur minim dolore.
+:vern_title_display: "Currently, to obtain more information from the weakness of the resultant pain."
 :language: Spanish
 :format: Newspaper
 :display_type:
   - sirsi
+:marcxml: <%= simple_856 %>
+:marcbib_xml: <%= simple_856 %>
 :format_main_ssim: Newspaper
 :access_facet: Online
 :building_facet: SAL3 (off-campus storage)
