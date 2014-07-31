@@ -12,12 +12,20 @@ describe Holdings::Callnumber do
     end
   end
   describe "#present?" do
-    let(:no_barcode) { Holdings::Callnumber.new('-|- -|- -|-') }
-    it "should be false when there is no barcode" do
-      expect(no_barcode).to_not be_present
+    let(:no_item_display) { Holdings::Callnumber.new('') }
+    it "should be false when the item_display doesn't exist" do
+      expect(no_item_display).to_not be_present
     end
-    it "should return true when there is a barcode" do
+    it "should return true when the item_display exists" do
       expect(callnumber).to be_present
+    end
+  end
+  describe "#on_order?" do
+    it "should return true for on-order items" do
+      expect(Holdings::Callnumber.new(' -|- -|- ON-ORDER -|- ON-ORDER -|-')).to be_on_order
+    end
+    it "should return false for non on-order items" do
+      expect(callnumber).to_not be_on_order
     end
   end
   describe "browsable?" do
@@ -75,6 +83,20 @@ describe Holdings::Callnumber do
     end
     it "should respond to #must_request? from the Holdings::Requestable class" do
       expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to_not be_must_request
+    end
+  end
+  describe "zombie libraries" do
+    let(:blank) { Holdings::Callnumber.new('123 -|- -|- LOCATION -|- ') }
+    let(:sul) { Holdings::Callnumber.new('123 -|- SUL -|- LOCATION -|- ') }
+    let(:physics) { Holdings::Callnumber.new('123 -|- PHYSICS -|- LOCATION -|- ') }
+    it "should view blank libraries as a zombie library" do
+      expect(blank.library).to eq "ZOMBIE"
+    end
+    it "should view blank libraries as a zombie library" do
+      expect(sul.library).to eq "ZOMBIE"
+    end
+    it "should view blank libraries as a zombie library" do
+      expect(physics.library).to eq "ZOMBIE"
     end
   end
 end

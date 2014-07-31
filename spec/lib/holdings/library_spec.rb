@@ -24,14 +24,14 @@ describe Holdings::Library do
     end
   end
   describe "#present?" do
-    it "should be false for PHYSICS" do
-      expect(Holdings::Library.new("PHYSICS")).to_not be_present
-    end
-    it "should not be false for SUL" do
-      expect(Holdings::Library.new("SUL")).to_not be_present
-    end
-    it "should not be false for a blank library" do
-      expect(Holdings::Library.new("")).to_not be_present
+    let(:callnumbers) { [
+      Holdings::Callnumber.new(""),
+      Holdings::Callnumber.new(""),
+      Holdings::Callnumber.new("")
+    ] }
+    let(:library) { Holdings::Library.new("GREEN", callnumbers) }
+    it "should be false when libraries have no item display fields" do
+      expect(library).to_not be_present
     end
   end
   describe "#location_level_request?" do
@@ -39,6 +39,15 @@ describe Holdings::Library do
       Constants::REQUEST_LIBS.each do |library|
         expect(Holdings::Library.new(library)).to be_location_level_request
       end
+    end
+  end
+  describe "zombie" do
+    let(:zombie) { Holdings::Library.new("ZOMBIE") }
+    it "should be #zombie?" do
+      expect(zombie).to be_zombie
+    end
+    it "should not be a holding library" do
+      expect(zombie).to_not be_holding_library
     end
   end
   describe "#mhld" do

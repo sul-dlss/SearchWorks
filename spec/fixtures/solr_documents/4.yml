@@ -13,3 +13,7 @@
 :marcbib_xml: <%= marc_characteristics_fixture %>
 :access_facet: At the Library
 :building_facet: Hoover Library
+:item_display:
+  - "123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-"
+  - "456 -|- PHYSICS -|- PHYSTEMP -|- -|- -|- -|- -|- -|- DEF -|-"
+  - "789 -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- -|- -|- GHI -|-"

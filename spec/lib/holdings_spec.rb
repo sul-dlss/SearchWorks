@@ -28,21 +28,9 @@ describe Holdings do
   }
   let(:no_holdings) { Holdings.new(SolrDocument.new) }
   describe "#present?" do
-    let(:non_viewable) {
-      Holdings.new(
-        SolrDocument.new(
-          item_display: [
-            'barcode -|- SUL -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey'
-          ]
-        )
-      )
-    }
     let(:blank_callnumber) {
       Holdings.new( SolrDocument.new() )
     }
-    it "should return false if a non-viewable library has items" do
-      expect(non_viewable).to_not be_present
-    end
     it "should return false if there are no holdings" do
       expect(no_holdings).to_not be_present
     end

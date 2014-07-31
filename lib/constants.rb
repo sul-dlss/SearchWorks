@@ -934,14 +934,15 @@ module Constants
    "SW-MEDIA-RESV" => "Media & Microtext Center", # Library does not exist, this is an internal code used for reserves.
    "MEYER" => "Meyer Library",
    "MUSIC" => "Music Library",
-   "PHYSICS" => "Physics Library",
+   #"PHYSICS" => "Stanford University Libraries",
    "SAL" => "SAL1&2 (on-campus shelving)",
    "SAL3" => "SAL3 (off-campus storage)",
    "SAL-NEWARK" => "SAL Newark (off-campus storage)",
    "SPEC-COLL" => "Special Collections",
    #"SPEC-DESK" => "(In-transit location for SAL paged items)",
-   "TANNER" => "Philosophy Library (Tanner)"
-   #"SUL" => "Ignore"
+   "TANNER" => "Philosophy Library (Tanner)",
+   "ZOMBIE" => "Stanford University Libraries"
+   #"SUL" => "Stanford University Libraries"
    }
    TRANSLATE_STATUS = {
      "available" => "available",

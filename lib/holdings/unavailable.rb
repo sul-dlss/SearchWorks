@@ -12,7 +12,7 @@ class Holdings
       private
 
       def unavailable_library?
-        ["PHYSICS"].include?(@callnumber.library)
+        ["ZOMBIE"].include?(@callnumber.library)
       end
 
       def unavailable_location?

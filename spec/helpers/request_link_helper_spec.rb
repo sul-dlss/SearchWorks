@@ -43,6 +43,26 @@ describe RequestLinkHelper do
         expect(request_link(current_location_document, current_location_document.holdings.callnumbers.first)).to match /&current_loc=current_location/
       end
     end
+    describe "on order items" do
+      let(:on_order_document) {
+        SolrDocument.new(
+          id: '123',
+          item_display: [' -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- ']
+        )
+      }
+      let(:link) { request_link(on_order_document, on_order_document.holdings.callnumbers.first) }
+      it "should not include an item_id" do
+        expect(link).to_not match /item_id=/
+      end
+      it "should not include an home_lib" do
+        expect(link).to_not match /home_lib=/
+      end
+      it "should include the ckey, current, and home locations" do
+        expect(link).to match /ckey=123/
+        expect(link).to match /current_loc=ON-ORDER/
+        expect(link).to match /home_loc=ON-ORDER/
+      end
+    end
     describe "SSRC-DATA" do
       let(:ssrc_document) {
         SolrDocument.new(
