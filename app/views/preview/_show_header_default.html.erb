@@ -1,4 +1,5 @@
-<h3>
+<h3 class="preview-title">
   <%= render_resource_icon document[document.format_key] %>
   <%= link_to_document document, :label => get_main_title(document) %>
+  <span class="main-title-date"><%= get_main_title_date(document) %></span>
 </h3>

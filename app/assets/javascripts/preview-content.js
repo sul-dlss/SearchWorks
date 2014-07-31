@@ -10,18 +10,18 @@ var PreviewContent = (function() {
 
   window.previewCache = window.previewCache || {};
 
-  function checkCache(url, target, defered) {
+  function checkCache(url, target, deferred) {
     var content = window.previewCache[url];
 
     if (useCache && typeof content !== 'undefined') {
-      plugContentAndPlugins(target, content);
+      plugContentAndPlugins(target, content, deferred);
     } else {
-      fetchContentViaAjaxAndInsert(url, target, defered);
+      fetchContentViaAjaxAndInsert(url, target, deferred);
     }
   }
 
 
-  function fetchContentViaAjaxAndInsert(url, target, defered) {
+  function fetchContentViaAjaxAndInsert(url, target, deferred) {
     var request = $.ajax({
       url: url,
       type: 'GET',
@@ -29,9 +29,8 @@ var PreviewContent = (function() {
     });
 
     request.done(function(data) {
-      plugContentAndPlugins(target, data);
+      plugContentAndPlugins(target, data, deferred);
       if (useCache) window.previewCache[url] = data;
-      defered.resolve(data);
     });
 
     request.fail(function(jqXhr, textStatus) {
@@ -40,7 +39,7 @@ var PreviewContent = (function() {
   }
 
 
-  function plugContentAndPlugins(target, content) {
+  function plugContentAndPlugins(target, content, deferred) {
     switch (insertType){
     case 'append':
       target
@@ -51,7 +50,7 @@ var PreviewContent = (function() {
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8();
       target.find('[data-live-lookup-url]').liveLookup();
-
+      deferred.resolve(content);
       break;
     case 'prepend':
       target
@@ -62,9 +61,10 @@ var PreviewContent = (function() {
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8();
       target.find('[data-live-lookup-url]').liveLookup();
-
+      deferred.resolve(content);
       break;
     case 'returnOnly':
+      deferred.resolve(content);
       break;
 
     }
@@ -74,21 +74,21 @@ var PreviewContent = (function() {
   return {
     append: function(url, target) {
       insertType = 'append';
-      var defered = new $.Deferred();
-      checkCache(url, target, defered);
-      return defered.promise();
+      var deferred = new $.Deferred();
+      checkCache(url, target, deferred);
+      return deferred.promise();
     },
     prepend: function(url, target) {
       insertType = 'prepend';
-      var defered = new $.Deferred();
-      checkCache(url, target, defered);
-      return defered.promise();
+      var deferred = new $.Deferred();
+      checkCache(url, target, deferred);
+      return deferred.promise();
     },
     returnOnly: function(url, target) {
       insertType = 'returnOnly';
-      var defered = new $.Deferred();
-      checkCache(url, target, defered);
-      return defered.promise();
+      var deferred = new $.Deferred();
+      checkCache(url, target, deferred);
+      return deferred.promise();
     }
   };
 

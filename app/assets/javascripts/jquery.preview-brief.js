@@ -17,9 +17,10 @@
 
     return this.each(function() {
       var $item = $(this),
-          $previewTarget = $($item.data('preview-target')),
+          previewClass = $item.data('preview-target'),
+          $previewTarget = $(previewClass),
           previewUrl = $item.data('preview-url'),
-          $triggerBtn, $briefTarget;
+          $triggerBtn, $briefTarget, briefCounter;
 
       init();
       attachTriggerEvents();
@@ -27,15 +28,19 @@
       function showPreview() {
         $previewTarget.addClass('preview').empty();
 
-        PreviewContent.append(previewUrl, $previewTarget);
+        // After preview content is appended, add the counter to the title
+        $.when(PreviewContent.append(previewUrl, $previewTarget)).done(function(){
+          $previewTarget.find('h3 a').before(briefCounter);
+        });
 
         $triggerBtn
           .addClass('preview-open')
           .html('Close');
 
         $briefTarget.hide();
-
+        $previewTarget.removeClass('hidden');
         $previewTarget.show();
+
       }
 
 
@@ -55,8 +60,9 @@
       }
 
       function init() {
+        briefCounter = $item.find('.document-counter').text();
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-        $briefTarget = $item.find('.brief-container');
+        $briefTarget = $item.find('.brief-container .col-md-8');
       }
 
     });

@@ -4,11 +4,7 @@
     @include document;
 
     h3.index_title {
-      @include h3-index-title;
-    }
-
-    .main-title-date {
-      color: $sul-main-title-date-color;
+      @include h3-index-title-indent;
     }
 
     .cover-image-wrapper {
@@ -21,6 +17,10 @@
       border: 1px solid #ddd;
       display: none;
     }
+  }
+
+  .main-title-date {
+    color: $sul-main-title-date-color;
   }
 
   dt {

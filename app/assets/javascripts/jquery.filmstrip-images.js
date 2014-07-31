@@ -108,4 +108,3 @@ jQuery.fn.scrollStop = function(callback) {
 Blacklight.onLoad(function() {
   $('.image-filmstrip').renderFilmstrip();
 });
-

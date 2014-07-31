@@ -2,7 +2,8 @@
   @include document;
 
   h3.index_title {
-    @include h3-index-title;
+    @include h3-index-title-small-font;
+    text-indent: -20px;
   }
 
   .preview {
@@ -21,9 +22,19 @@
       font-family: FontAwesome;
       content: " \f0d7";
     }
+    margin-top: 4px;
   }
-  
+
   .dl-horizontal dt {
     width: auto;
   }
+
+  h3.preview-title {
+    margin-left: -26px;
+  }
+}
+
+.brief-container{
+  margin-left: 0px;
+  margin-right: 0px;
 }
