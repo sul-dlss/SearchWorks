@@ -1,29 +1,4 @@
-<%
-  abstract_contents = render "catalog/record/mods_abstract_contents"
-  contributors = render "catalog/record/mods_contributors"
-  subjects = render "catalog/record/mods_subjects"
-  bibliography = render "catalog/record/mods_bibliographic"
-  access = render "catalog/record/mods_access"
-
-  has_abstract_contents = !abstract_contents.strip.blank?
-  has_contributors = contributors.present?
-  has_subjects = subjects.present?
-  has_bibliography_info = bibliography.present?
-  has_access_conditions = access.present?
-
-  locals = {
-    type: "mods",
-    has_data: {
-      abstract_contents: has_abstract_contents,
-      contributors: has_contributors,
-      subjects: has_subjects,
-      bibliography_info: has_bibliography_info,
-      access_conditions: has_access_conditions
-    }
-  }
-%>
-
-<% if has_abstract_contents %>
+<% if (abstract_contents = render "catalog/record/mods_abstract_contents").present? %>
   <div class="section" id="<%= t('record_side_nav.abstract_contents.id') %>" data-side-nav-class="<%= t('record_side_nav.abstract_contents.id') %>">
     <div class="section-heading">
       <h2><%= t('record_side_nav.abstract_contents.icon').html_safe %> Abstract/Contents</h2>
@@ -36,7 +11,7 @@
   </div>
 <% end %>
 
-<% if has_contributors %>
+<% if (contributors = render "catalog/record/mods_contributors").present? %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
     <div class="section-heading">
       <h2><%= t('record_side_nav.contributors.icon').html_safe %> Contributors</h2>
@@ -47,7 +22,7 @@
   </div>
 <% end %>
 
-<% if has_subjects %>
+<% if (subjects = render "catalog/record/mods_subjects").present? %>
   <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
     <div class="section-heading">
       <h2><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h2>
@@ -58,7 +33,7 @@
   </div>
 <% end %>
 
-<% if has_bibliography_info %>
+<% if (bibliography = render "catalog/record/mods_bibliographic").present? %>
   <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
     <div class="section-heading">
       <h2><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h2>
@@ -71,17 +46,30 @@
   </div>
 <% end %>
 
-<% if has_access_conditions %>
+<% if (access_conditions = render "catalog/record/mods_access").present? %>
   <div class="section" id="<%= t('record_side_nav.access_conditions.id') %>" data-side-nav-class="<%= t('record_side_nav.access_conditions.id') %>">
     <div class="section-heading">
       <h2><%= t('record_side_nav.access_conditions.icon').html_safe %> Access conditions </h2>
     </div>
     <div class="section-body">
       <dl>
-        <%= access %>
+        <%= access_conditions %>
       </dl>
     </div>
   </div>
 <% end %>
+
+<%
+  locals = {
+    type: "mods",
+    has_data: {
+      abstract_contents: abstract_contents.present?,
+      contributors: contributors.present?,
+      subjects: subjects.present?,
+      bibliography_info: bibliography.present?,
+      access_conditions: access_conditions.present?
+    }
+  }
+%>
 
 <%= render partial: "catalog/record/record_side_nav", locals: locals %>
