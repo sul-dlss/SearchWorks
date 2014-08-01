@@ -13,8 +13,7 @@
 "latest_poss_year_isi"   => "Latest possible date",
 "production_year_isi"    => "Production date",
 "original_year_isi"      => "Original date",
-"copyright_year_isi"     => "Copyright date",
-"imprint_display"        => "Imprint"} %>
+"copyright_year_isi"     => "Copyright date"} %>
 <% doc_dates = dates.keys.map{|key| true if document[key] } %>
 <% unless doc_dates.blank? %>
   <% dates.each do |field, label| %>

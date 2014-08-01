@@ -54,7 +54,18 @@
       <% end %>
     <% end %>
 
-    <%= render 'catalog/dates_from_solr' %>
+    <% if (new_publish = marc_264(document.to_marc)).present? %>
+      <% new_publish.each do |label,values| %>
+        <dt><%= label %></dt>
+        <% values.each do |value| %>
+          <dd><%= value %></dd>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% if (imprint = get_data_with_label(document, "Imprint", 'imprint_display')).present? %>
+      <%= render "catalog/field_from_index", :fields => imprint %>
+    <% end %>
 
     <%- physical_desc = get_data_with_label(document, "Physical description", 'physical')%>
     <%- unless physical_desc.nil? -%>

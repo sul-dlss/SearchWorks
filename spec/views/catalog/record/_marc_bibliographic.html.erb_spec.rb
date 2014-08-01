@@ -33,4 +33,20 @@ describe "catalog/record/_marc_bibliographic.html.erb" do
       expect(rendered).to have_css("dd", text: "Most responsible person ever")
     end
   end
+  describe "dates from solr" do
+    before do
+      assign(:document, SolrDocument.new(marcxml: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678'))
+      render
+    end
+    it "should include dates from solr" do
+      expect(rendered).to have_css('dt', text: 'Publication date')
+      expect(rendered).to have_css('dd', text: '1234')
+
+      expect(rendered).to have_css('dt', text: 'Date')
+      expect(rendered).to have_css('dd', text: '4321')
+
+      expect(rendered).to have_css('dt', text: 'Copyright date')
+      expect(rendered).to have_css('dd', text: '5678')
+    end
+  end
 end
