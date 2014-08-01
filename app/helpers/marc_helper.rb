@@ -140,7 +140,7 @@ module MarcHelper
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
             vernacular = get_marc_vernacular(marc,field)
             temp_vern = "\"#{vernacular}\""
-            temp_text << "#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?            
+            temp_text << "#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?
             contributors << temp_text
           end
         end
@@ -283,11 +283,11 @@ module MarcHelper
 
   # Generate hierarchical structure of subject headings from marc
   def get_subjects(marc)
-    text = "<ul>".html_safe
+    text = "<dt>Subject</dt>".html_safe
     data = get_subjects_array(marc)
     unless data.blank?
       data.each_with_index do |fields,i|
-        text << "<li>".html_safe
+        text << "<dd>".html_safe
         link_text = ""
         title_text = "Search: "
         fields.each do |field|
@@ -300,11 +300,10 @@ module MarcHelper
           #text << link_to(field.strip, {:controller => 'catalog', :action => 'index', :q => link_text, :search_field => 'subject_terms'}, :title => title_text)
           text << " &gt; ".html_safe unless field == data[i].last
         end
-        text << "</li>".html_safe
+        text << "</dd>".html_safe
       end
     end
-    text << "</ul>".html_safe
-    return text unless text == "<ul></ul>"
+    return text unless text == "<dt>Subject</dt>"
   end
 
   def get_subjects_array(marc)

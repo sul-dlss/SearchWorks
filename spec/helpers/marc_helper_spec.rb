@@ -40,7 +40,7 @@ describe MarcHelper do
       it "should return the appropriate unmatched vernacular field" do
         expect(get_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245")[:unmatched_vernacular]).to eq ["This is Vernacular"]
       end
-      it "should remove the '//r' if it is present from the matching field" do        
+      it "should remove the '//r' if it is present from the matching field" do
         data = get_data_with_label_from_marc(matched_vern_doc_rtl.to_marc, "Label:", "245")
         expect(data[:fields].length).to eq 1 and
         expect(data[:fields].first[:field]).to match(/This is NOT Right-to-Left Vernacular/) and
@@ -59,10 +59,10 @@ describe MarcHelper do
       it "should handle bad vernacular records correctly" do
         bad_600 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","600")
         bad_245 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","245")
-      
+
         expect(bad_600[:fields].first[:field]).to_not match /This is Vernacular/
         expect(bad_600[:fields].first[:field]).to match /This is not Vernacular/
-      
+
         expect(bad_245[:fields].first[:field]).to_not match /This is Vernacular/
         expect(bad_245[:fields].first[:field]).to match /This is not Vernacular/
       end
@@ -70,13 +70,13 @@ describe MarcHelper do
         linking = get_data_with_label_from_marc(standard_linking_doc.to_marc, "Label:", "520")
         non_linking = get_data_with_label_from_marc(standard_linking_doc.to_marc, "Label:", "519")
         bad_url = get_data_with_label_from_marc(standard_linking_doc.to_marc, "Label:", "530")
-      
+
         expect(linking[:fields].length).to eq 1
         expect(linking[:fields].first[:field]).to match(/<a href=.*>.*<\/a>/)
-      
+
         expect(non_linking[:fields].length).to eq 1
         expect(non_linking[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
-      
+
         expect(bad_url[:fields].length).to eq 1
         expect(bad_url[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
       end
@@ -106,7 +106,7 @@ describe MarcHelper do
         expect(data[:fields].first[:field]).to match(/Artists' Books/)
         expect(data[:fields].last[:field]).to  match(/Stanford > Berkeley/)
       end
-    end    
+    end
     describe "link_to" do
       it "should display a valid and linked definition list row" do
         data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
@@ -141,12 +141,12 @@ describe MarcHelper do
       it "should handle bad vernacular records correctly" do
         bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
         bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
-        
+
         expect(bad_600[:fields].length).to eq 1
         expect(bad_600[:fields].first[:field]).to_not match(/This is Vernacular/)
         expect(bad_600[:fields].first[:field]).to match(/This is not Vernacular/)
         expect(bad_600[:fields].first[:vernacular]).to be_nil
-        
+
         expect(bad_245[:fields].length).to eq 1
         expect(bad_245[:fields].first[:field]).to_not match(/This is Vernacular/)
         expect(bad_245[:fields].first[:field]).to match(/This is not Vernacular/)
@@ -202,11 +202,11 @@ describe MarcHelper do
       data = get_toc(document.to_marc)
       data[:label].should == "Contents"
       data[:fields].length.should == 1 and
-      data[:fields].first.length.should == 2 
+      data[:fields].first.length.should == 2
       data[:fields].first.include?("1.First Chapter").should be_true and
       data[:fields].first.include?("2.Second Chapter").should be_true
-      data[:vernacular].should be_nil 
-      data[:unmatched_vernacular].should be_nil 
+      data[:vernacular].should be_nil
+      data[:unmatched_vernacular].should be_nil
     end
     it "should return the vernacular table of contents if available" do
       data = get_toc(matched_vern_doc.to_marc)
@@ -214,7 +214,7 @@ describe MarcHelper do
       data[:fields].first.length.should == 2
       data[:fields].first.include?("1.This is not Vernacular").should be_true and
       data[:fields].first.include?("2.This is also not Vernacular").should be_true
-      
+
       data[:vernacular].length.should == 1 and
       data[:vernacular].first.length.should == 2
       data[:vernacular].first.include?("1.This is Vernacular").should be_true and
@@ -224,7 +224,7 @@ describe MarcHelper do
       data = get_toc(unmatched_vern_doc.to_marc)
       data[:fields].should be_nil and
       data[:vernacular].should be_nil
-      
+
       data[:unmatched_vernacular].length.should == 1 and
       data[:unmatched_vernacular].first.length.should == 2
       data[:unmatched_vernacular].first.include?("1.This is Vernacular").should be_true and
@@ -234,9 +234,9 @@ describe MarcHelper do
       data = get_toc(bad_toc.to_marc)
       data[:fields].length.should == 1 and
       data[:fields].first.length.should == 2
-      
+
       data[:vernacular].should be_nil
-      
+
       data[:unmatched_vernacular].length.should == 1 and
       data[:unmatched_vernacular].first.length.should == 2
       data[:unmatched_vernacular].first.include?("1.Vernacular1").should be_true and
@@ -284,11 +284,11 @@ describe MarcHelper do
     it "should not include subjects where subfield 'a' begins with a % sign" do
       get_subjects(percent_record.to_marc).should_not match(/.*%Subject1.*/)
     end
-    it "should handle items with several A subfields as separate subjects (separate li elements)" do
-      get_subjects(multi_a_subject.to_marc).should match(/.*<li>.*Subject A1.*<\/li>.*<li>.*Subject A2.*<\/li>.*<li>.*Subject A3.*<\/li>.*<li>.*Subject A4.*<\/li>.*/)
+    it "should handle items with several A subfields as separate subjects (separate dd elements)" do
+      get_subjects(multi_a_subject.to_marc).should match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
     end
     it "should concat all subfields except for v x y z" do
-      get_subjects(multi_vxyz_subject.to_marc).should match(/.*<li><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
+      get_subjects(multi_vxyz_subject.to_marc).should match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
     end
     it "should wrap all of the subject terms in quotes" do
       data = get_subjects(multi_vxyz_subject.to_marc)
@@ -301,9 +301,9 @@ describe MarcHelper do
       get_subjects(collection_690.to_marc).should_not match(/.*Subject Collection 1.*/)
     end
     it "should order the subjects as they are in the original MARC record" do
-      get_subjects(ordered_subjects.to_marc).should match(/.*<li>.*Subject 651.*<\/li>.*<li>.*Subject 650.*<\/li>.*/) and
-      get_subjects(ordered_subjects.to_marc).should_not match(/.*<li>.*Subject 650.*<\/li>.*<li>.*Subject 651.*<\/li>.*/)
-    end  
+      get_subjects(ordered_subjects.to_marc).should match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
+      get_subjects(ordered_subjects.to_marc).should_not match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
+    end
     it "should return nothing if no subjects are available" do
       get_subjects(nil_document.to_marc).should be_nil
     end
@@ -335,7 +335,7 @@ describe MarcHelper do
     end
     it "should link the t subfield" do
       data = title_change_data_from_marc(title_change.to_marc)
-      expect(data.length).to eq 2 
+      expect(data.length).to eq 2
       expect(data.first[:field]).to match(/<a href=.*search_title.*>This is the t subfield for 780<\/a>/)
       expect(data.last[:field]).to match(/<a href=.*search_title.*>This is the t subfield for 785<\/a>/)
     end
@@ -344,7 +344,7 @@ describe MarcHelper do
       expect(data.length).to eq 2
       expect(data.first[:field]).to match(/780 subfield Z/)
       expect(data.first[:field]).to_not match(/<a.*>.*780 subfield Z.*<\/a>/)
-      
+
       expect(data.last[:field]).to match(/785 subfield S/)
       expect(data.last[:field]).to_not match(/<a.*>.*785 subfield S.*<\/a>/)
     end
@@ -374,7 +374,7 @@ describe MarcHelper do
 
       expect(data[1][:label]).to eq "and with"
       expect(data[1][:field]).to match(/This is the 2nd t subfield for 785/)
-      
+
       expect(data.last[:label]).to eq "to form"
       expect(data.last[:field]).to match(/This is the 3rd t subfield for 785/)
     end
