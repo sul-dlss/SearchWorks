@@ -749,6 +749,10 @@ module MarcMetadataFixtures
         <datafield tag="555" ind1=" " ind2=" ">
           <subfield code="a">Unpublished listing available in the department.</subfield>
         </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+          <subfield code="a">Contributor</subfield>
+          <subfield code="4">prf</subfield>
+        </datafield>
       </record>
     xml
   end

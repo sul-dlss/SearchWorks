@@ -11,6 +11,7 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
 
     it "should display correct sections" do
+      expect(rendered).to have_css("h2", text: "Contributors")
       expect(rendered).to have_css("h2", text: "Abstract/Contents")
       expect(rendered).to have_css("h2", text: "Subjects")
       expect(rendered).to have_css("h2", text: "Bibliographic information")
@@ -18,6 +19,7 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
 
     it "should have side nav content handles" do
+      expect(rendered).to have_css(".section#contributors")
       expect(rendered).to have_css(".section#abstract-contents")
       expect(rendered).to have_css(".section#subjects")
       expect(rendered).to have_css(".section#bibliography-info")
@@ -30,6 +32,7 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
       expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-up")
       expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-down")
 
+      expect(rendered).to have_css(".record-side-nav button.contributors")
       expect(rendered).to have_css(".record-side-nav button.abstract-contents")
       expect(rendered).to have_css(".record-side-nav button.subjects")
       expect(rendered).to have_css(".record-side-nav button.bibliography-info")

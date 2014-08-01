@@ -309,8 +309,6 @@
   <%- end -%>
 <%- end -%>
 
-<%= link_to_contributor_from_marc(document.to_marc) %>
-
 <%- new_related_work_740 = get_related_works_from_marc(document.to_marc, "Related Work", '740') -%>
 <%- unless new_related_work_740.nil? -%>
   <%= render_field_from_marc(new_related_work_740) %>

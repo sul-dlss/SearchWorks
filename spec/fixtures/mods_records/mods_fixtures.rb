@@ -10,6 +10,12 @@ module ModsFixtures
         <titleInfo type="alternative">
           <title>San Francisco District Swept by Fire, 1906 (reproduction)</title>
         </titleInfo>
+        <name>
+          <namePart>B. Smith</namePart>
+          <role>
+            <roleTerm authority="marcrelator" type="text">Producer</roleTerm>
+          </role>
+        </name>
         <typeOfResource>still image</typeOfResource>
         <originInfo>
           <dateIssued>copyright 1906</dateIssued>
@@ -64,6 +70,15 @@ module ModsFixtures
         </titleInfo>
         <name>
           <namePart>J. Smith</namePart>
+          <role>
+            <roleTerm authority="marcrelator" type="text">Author</roleTerm>
+          </role>
+        </name>
+        <name>
+          <namePart>B. Smith</namePart>
+          <role>
+            <roleTerm authority="marcrelator" type="text">Producer</roleTerm>
+          </role>
         </name>
         <typeOfResource>still image</typeOfResource>
         <originInfo>
@@ -114,6 +129,9 @@ module ModsFixtures
       <typeOfResource>stuff</typeOfResource>
       <name>
         <namePart>J. Smith</namePart>
+        <role>
+          <roleTerm authority="marcrelator" type="text">Author</roleTerm>
+        </role>
       </name>
       </mods>
     xml

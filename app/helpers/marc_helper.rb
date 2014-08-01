@@ -112,7 +112,7 @@ module MarcHelper
             href = "\"#{href_text.join(" ")}\""
             link = ""
             link << "#{before_text.join(" ")} " unless before_text.blank?
-            link << link_to(link_text.join(" "), :controller => 'catalog', :action => 'index', :q => href, :search_field => 'author_title')
+            link << link_to(link_text.join(" "), catalog_index_path(q: href, search_field: 'author_title'))
             link << " #{extra_text.join(" ")}" unless extra_text.blank?
             if field.indicator2 == "2"
               included_works << link
@@ -136,11 +136,11 @@ module MarcHelper
                 end
               end
             end
-            temp_text << link_to(link_text.strip, :q => "\"#{link_text}\"", :controller => 'catalog', :action => 'index', :search_field => 'search_author' )
+            temp_text << link_to(link_text.strip, catalog_index_path(:q => "\"#{link_text}\"", :search_field => 'search_author'))
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
             vernacular = get_marc_vernacular(marc,field)
             temp_vern = "\"#{vernacular}\""
-            temp_text << "#{link_to h(vernacular), :q => temp_vern, :controller => 'catalog', :action => 'index', :search_field => 'search_author'}" unless vernacular.nil?
+            temp_text << "#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?            
             contributors << temp_text
           end
         end

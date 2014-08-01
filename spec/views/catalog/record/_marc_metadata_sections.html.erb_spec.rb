@@ -12,11 +12,13 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
     end
 
     it "should display correct sections" do
+      expect(rendered).to have_css("h2", text: "Contributors")
       expect(rendered).to have_css("h2", text: "Contents/Summary")
       expect(rendered).to have_css("h2", text: "Bibliographic information")
     end
 
     it "should have side nav content handles" do
+      expect(rendered).to have_css(".section#contributors")
       expect(rendered).to have_css(".section#contents-summary")
       expect(rendered).to have_css(".section#bibliography-info")
     end
@@ -27,6 +29,7 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
       expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-up")
       expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-down")
 
+      expect(rendered).to have_css(".record-side-nav button.contributors")
       expect(rendered).to have_css(".record-side-nav button.contents-summary")
       expect(rendered).to have_css(".record-side-nav button.bibliography-info")
     end
