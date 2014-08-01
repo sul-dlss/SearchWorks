@@ -4,7 +4,8 @@ class Holdings
       @holding_info = holding_info
     end
     def present?
-      @holding_info.present?
+      @holding_info.present? &&
+      !(item_display[1] == "SUL" && item_display[2] == "INTERNET")
     end
     def browsable?
       item_display[8].present?

@@ -13,11 +13,15 @@ describe Holdings::Callnumber do
   end
   describe "#present?" do
     let(:no_item_display) { Holdings::Callnumber.new('') }
+    let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|-') }
     it "should be false when the item_display doesn't exist" do
       expect(no_item_display).to_not be_present
     end
     it "should return true when the item_display exists" do
       expect(callnumber).to be_present
+    end
+    it "should return false for INTERNET callnumbers" do
+      expect(internet_callnumber).to_not be_present
     end
   end
   describe "#on_order?" do
