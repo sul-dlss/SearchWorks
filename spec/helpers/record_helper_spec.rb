@@ -118,15 +118,24 @@ describe RecordHelper do
   describe "subjects" do
     let(:subjects) { [OpenStruct.new(label: 'Subjects', values: [["Subject1a", "Subject1b"], ["Subject2a", "Subject2b", "Subject2c"]])] }
     let(:name_subjects) { [OpenStruct.new(label: 'Subjects', values: [OpenStruct.new(name: "Person Name", roles: ["Role1", "Role2"])])] }
+    let(:genres) { [OpenStruct.new(label: 'Genres', values: ["Genre1", "Genre2", "Genre3"])] }
     describe "#mods_subject_field" do
-      it "should join the subject fields with line breaks" do
-        expect(mods_subject_field(subjects)).to match /Subject1b<\/a><br\/><a href/
+      it "should join the subject fields in a dd" do
+        expect(mods_subject_field(subjects)).to match /<dd><a href=*.*\">Subject1a*.*Subject1b<\/a><\/dd><dd><a/
       end
       it "should join the individual subjects with a '>'" do
         expect(mods_subject_field(subjects)).to match /Subject2b<\/a> &gt; <a href/
       end
       it "should not print empty labels" do
         expect(mods_subject_field(empty_field)).to_not be_present
+      end
+    end
+    describe "#mods_genre_field" do
+      it "should join the genre fields with a dd" do
+        expect(mods_genre_field(genres)).to match /<dd><a href=*.*>Genre1*.*<\/a><\/dd><dd><a*.*Genre2<\/a><\/dd>/
+      end
+      it "should not print empty labels" do
+        expect(mods_genre_field(empty_field)).to_not be_present
       end
     end
     describe "#link_mods_subjects" do
@@ -143,6 +152,15 @@ describe RecordHelper do
         linked_subjects.each do |subject|
           expect(subject).to match /search_field=subject_terms/
         end
+      end
+    end
+    describe "#link_mods_genres" do
+      let(:linked_genres) { link_mods_genres(genres.first.values.last) }
+      it "should return correct link" do
+        expect(linked_genres).to match /<a href=*.*Genre3*.*<\/a>/
+      end
+      it "should link to subject terms search field" do
+        expect(linked_genres).to match /search_field=subject_terms/
       end
     end
     describe "#link_to_mods_subject" do

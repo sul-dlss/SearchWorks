@@ -1,3 +1,8 @@
 <% if @document.mods.subject.any?(&:values) %>
+  <dt>Subject</dt>
   <%= mods_subject_field(@document.mods.subject)%>
+<% end %>
+<% if @document.mods.genre.any?(&:values) %>
+  <dt>Genre</dt>
+  <%= mods_genre_field(@document.mods.genre)%>
 <% end %>
