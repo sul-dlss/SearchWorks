@@ -40,7 +40,10 @@
                   <% end %>
                   <% location.items.each do |item| %>
                     <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
-                      <i class="availability-icon <%= item.status.availability_class %>"></i>
+                      <i title="<%= item.status.status_text %>" class="availability-icon <%= item.status.availability_class %>"></i>
+                      <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text sr-only'>
+                        <%= item.status.status_text %>
+                      </span>
                       <%= item.callnumber %>
                       <div class="request-link pull-right">
                         <% if item.must_request? %>

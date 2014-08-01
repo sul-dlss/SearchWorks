@@ -10,7 +10,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'available'
     end
     it "should have the available status text" do
-      expect(status.status_text).to eq 'available'
+      expect(status.status_text).to eq 'Available'
     end
     it "should be available" do
       expect(status).to be_available
@@ -24,7 +24,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'noncirc'
     end
     it "should have the noncirc status text" do
-      expect(status.status_text).to eq 'in-library use'
+      expect(status.status_text).to eq 'In-library use'
     end
     it "should be noncirc" do
       expect(status).to be_noncirc
@@ -38,7 +38,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'noncirc_page'
     end
     it "should have the noncirc_page status text" do
-      expect(status.status_text).to eq 'request for in-library use'
+      expect(status.status_text).to eq 'In-library use'
     end
     it "should be noncirc_page" do
       expect(status).to be_noncirc_page
@@ -52,7 +52,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'page'
     end
     it "should have the page status text" do
-      expect(status.status_text).to eq 'request'
+      expect(status.status_text).to eq 'Available'
     end
     it "should be pageable" do
       expect(status).to be_pageable
@@ -66,7 +66,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'unavailable'
     end
     it "should have the unavailable status text" do
-      expect(status.status_text).to eq 'unavailable'
+      expect(status.status_text).to eq 'Unavailable'
     end
     it "should be unavailable" do
       expect(status).to be_unavailable
@@ -80,7 +80,7 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'unknown'
     end
     it "should have the unknown status text" do
-      expect(status.status_text).to eq 'status unknown'
+      expect(status.status_text).to eq 'Unknown'
     end
     it "should be unavailable" do
       expect(status).to be_unknown

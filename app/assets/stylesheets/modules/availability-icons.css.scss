@@ -16,6 +16,10 @@ $available-color: green;
     @extend .fa-truck;
     color: $available-color;
   }
+  .noncirc_page {
+    @extend .fa-truck;
+    color: darkorange;
+  }
   .unavailable {
     @extend .fa-times;
     color: #990000;
