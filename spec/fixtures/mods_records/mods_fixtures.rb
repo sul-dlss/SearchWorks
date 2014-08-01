@@ -23,6 +23,7 @@ module ModsFixtures
         <subject>
           <topic authority="lcsh">1906 Earthquake</topic>
         </subject>
+        <genre authority="lcsh">Photographs</genre>
         <physicalDescription>
           <form>offset lithograph on paper</form>
           <note displayLabel="Dimensions">13-1/4 x 10 inches</note>
