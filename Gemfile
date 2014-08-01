@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.3'
-gem 'i18n', '0.6.9' # 0.6.10 yanked
+gem 'rails', '4.1.4'
+gem 'i18n'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -18,7 +18,7 @@ gem 'turbolinks'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
@@ -48,7 +48,7 @@ group :deployment do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '< 2.99'
   gem 'capybara'
   gem 'poltergeist'
 end
@@ -76,7 +76,7 @@ gem 'blacklight', '~> 5.5.2'
 
 gem "jettywrapper", "~> 1.7"
 gem "devise"
-gem "devise-guests", "~> 0.3"
+gem "devise-guests"
 gem "blacklight-marc", "~> 5.0"
 gem "faraday"
 gem "rails_config"
