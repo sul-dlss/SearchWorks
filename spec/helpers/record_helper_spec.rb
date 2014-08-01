@@ -52,6 +52,52 @@ describe RecordHelper do
         expect(mods_name_field(empty_field)).to_not be_present
       end
     end
+    describe "#mods_primary_names" do
+      let(:author_creator) {
+        OpenStruct.new(
+          label: "Author/Creator",
+          values: [
+            OpenStruct.new(name: "Jane Lathrop")
+          ]
+        )
+      }
+      let(:primary_contributor) {
+        OpenStruct.new(
+          label: "Contributor",
+          values: [
+            OpenStruct.new(name: "Jane Lathrop", roles: ["Author"])
+          ]
+        )
+      }
+      it "should identify primary authors by label" do
+        expect(mods_primary_names([author_creator])).to be_present
+      end
+      it "should identify primary authors by role" do
+        expect(mods_primary_names([primary_contributor])).to be_present
+      end
+      it "should not include secondary authors" do
+        expect(mods_primary_names([name_field])).to_not be_present
+      end
+    end
+    describe "#mods_secondary_names" do
+      let(:primary_authors) {
+        OpenStruct.new(
+          label: "Contributor",
+          values: [
+            OpenStruct.new(name: "Primary1", roles: ['Author']),
+            OpenStruct.new(name: "Primary2", roles: ['Creator'])
+          ]
+        )
+      }
+      it "should identify secondary authors" do
+        expect(mods_secondary_names([name_field])).to be_present
+        expect(mods_secondary_names([name_field]).length).to eq 1
+        expect(mods_secondary_names([name_field]).first.values.length).to eq 2
+      end
+      it "should not include primary authors" do
+        expect(mods_secondary_names([primary_authors])).to_not be_present
+      end
+    end
     describe "#mods_display_name" do
       let(:name) { mods_display_name(name_field.values) }
       it "should link to the name" do
