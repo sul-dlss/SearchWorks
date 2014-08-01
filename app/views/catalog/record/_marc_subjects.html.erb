@@ -1,12 +1,15 @@
 <% subject_display = get_subjects(@document.to_marc) %>
 <% if subject_display %>
-  <%= subject_display %>
+  <dl>
+    <%= subject_display %>
+  </dl>
 <% end %>
 
 <% if @document.is_a_database? && @document[:db_az_subject] %>
-  <ul>
+  <dl>
+    <dt>Database topics</dt>
     <% @document[:db_az_subject].each do |subject| %>
-      <li><%= link_to(subject, catalog_index_path(f: { :db_az_subject => [subject], @document.format_key => ["Database"]})) %></li>
+      <dd><%= link_to(subject, catalog_index_path(f: { :db_az_subject => [subject], @document.format_key => ["Database"]})) %></dd>
     <% end %>
-  </ul>
+  </dl>
 <% end %>

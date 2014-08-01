@@ -16,14 +16,14 @@ describe "catalog/record/_marc_subjects.html.erb" do
     it "should display for databases" do
       document.stub(:is_a_database?).and_return(true)
       render
-      expect(rendered).to have_css("li a", text: "DB Subject1")
-      expect(rendered).to have_css("li a", text: "DB Subject2")
+      expect(rendered).to have_css("dd a", text: "DB Subject1")
+      expect(rendered).to have_css("dd a", text: "DB Subject2")
     end
     it "should not display for non-databases" do
       document.stub(:is_a_database?).and_return(false)
       render
-      expect(rendered).to_not have_css("li a", text: "DB Subject1")
-      expect(rendered).to_not have_css("li a", text: "DB Subject2")
+      expect(rendered).to_not have_css("dd a", text: "DB Subject1")
+      expect(rendered).to_not have_css("dd a", text: "DB Subject2")
     end
   end
 end
