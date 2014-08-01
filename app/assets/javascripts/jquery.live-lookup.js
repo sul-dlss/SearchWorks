@@ -20,6 +20,7 @@
             var dom_item = $("[data-barcode='" + live_data.barcode + "']");
             var target = $(dom_item.data('status-target'), dom_item);
             var current_location = $('.current-location', dom_item)
+            var status_text = target.next('.status-text');
             if ( live_data.current_location ) {
               current_location.html(live_data.current_location);
             }
@@ -29,6 +30,10 @@
             if ( live_data.due_date && target.hasClass('unknown') ) {
               target.removeClass('unknown');
               target.addClass('unavailable');
+              status_text.text(''); // The due date/current location acts as the status text at this point
+              if (target.attr('title')) {
+                target.attr('title', status_text.data('unavailable-text'));
+              }
               if ( dom_item.data('request-url') ) {
                 $('.request-link', dom_item).html("<a class='btn btn-info btn-xs' href='" + dom_item.data('request-url') + "'>Request</a>")
               }
@@ -36,6 +41,10 @@
             if ( !live_data.due_date && dom_item.length > 0  && target.hasClass('unknown')) {
               target.removeClass('unknown');
               target.addClass('available');
+              status_text.text(status_text.data('available-text'));
+              if (target.attr('title')) {
+                target.attr('title', status_text.data('available-text'));
+              }
             }
           }
       });

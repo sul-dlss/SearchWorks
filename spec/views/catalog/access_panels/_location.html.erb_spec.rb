@@ -21,6 +21,24 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css(".panel-body")
     end
   end
+  describe "status text" do
+    before do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: [
+          '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
+          '321 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321'
+        ]
+      ))
+      render
+    end
+    it "should have screen-reader-only unknown status text for items we'll be looking up" do
+      expect(rendered).to have_css('.status-text.sr-only', text: 'Unknown')
+    end
+    it "should have explicit screen-reader-only status text for items that we know the status" do
+      expect(rendered).to have_css('.status-text.sr-only', text: 'In-library use')
+    end
+  end
   describe "current locations" do
     it "should be displayed" do
       assign(:document, SolrDocument.new(

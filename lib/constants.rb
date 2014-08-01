@@ -945,12 +945,12 @@ module Constants
    #"SUL" => "Stanford University Libraries"
    }
    TRANSLATE_STATUS = {
-     "available" => "available",
-     "page" => "request",
-     "unavailable" => "unavailable",
-     "noncirc" => "in-library use",
-     "unknown" => "status unknown",
-     "noncirc_page" => "request for in-library use"
+     "available" => "Available",
+     "page" => "Available",
+     "unavailable" => "Unavailable",
+     "noncirc" => "In-library use",
+     "unknown" => "Unknown",
+     "noncirc_page" => "In-library use"
    }
    HIDE_1ST_IND = %W(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
    HIDE_1ST_IND0 = %W(541 542 561 583 590)

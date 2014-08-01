@@ -44,6 +44,26 @@ describe "catalog/_index_location.html.erb" do
       expect(rendered).to have_css('tbody td i.page')
     end
   end
+  describe "status text" do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          id: '123',
+          item_display: [
+            '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
+            '321 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321'
+          ]
+        )
+      )
+      render
+    end
+    it "should have unknown status text for items we'll be looking up" do
+      expect(rendered).to have_css('.status-text', text: 'Unknown')
+    end
+    it "should have explicit status text for items that we know the status" do
+      expect(rendered).to have_css('.status-text', text: 'In-library use')
+    end
+  end
   describe "multiple items in a location" do
     before do
       view.stub(:document).and_return(
