@@ -31,14 +31,10 @@
   }
 
   .btn-topbar-menu {
+    height: 25px;
     margin-left: 20px;
     font-size: 1.3em;
-    margin-top: -5px;
-    span {
-      position: absolute;
-      top: 10px;
-    }
-
+    margin-top: -2px;
   }
 
   &.open {
