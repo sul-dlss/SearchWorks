@@ -23,4 +23,7 @@ feature "Home Page" do
     expect(page).to have_css("a.navbar-brand img[alt=SearchWorks]")
     expect(page).to have_css("p.navbar-text.search-target img[alt=catalog]")
   end
+  scenario "there should be no more link on any facets" do
+    expect(page).to_not have_css('a', text: /more/)
+  end
 end
