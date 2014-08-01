@@ -32,9 +32,9 @@
             arrowLeft;
         $previewTarget.addClass('preview').empty();
         PreviewContent.append(previewUrl, $previewTarget);
-        appendPointer($previewTarget);
         $previewTarget.css('display', 'inline-block');
         $previewTarget.append($closeBtn).show();
+        appendPointer($previewTarget);
         $triggerBtn.html('Close');
         attachPreviewEvents();
         $triggerBtn.addClass('preview-open');
@@ -44,7 +44,7 @@
         $target.append($arrow);
 
         var maxLeft = $target.width() - $arrow.width() - 1,
-        arrowLeft = parseInt($item.offset().left + ($item.width()/2) - 120);
+        arrowLeft = parseInt($item.offset().left + ($item.width()/2) - $target.offset().left);
 
         if (arrowLeft < 0) arrowLeft = 0;
         if (arrowLeft > maxLeft) arrowLeft = maxLeft;

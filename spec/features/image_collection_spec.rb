@@ -64,7 +64,7 @@ feature "Image Collection" do
     expect(page).to have_css(".image-filmstrip")
 
     within "div.image-filmstrip" do
-      expect(page).to have_css("div.preview-container-29")
+      expect(page).to have_css("div.preview-filmstrip-container-29")
     end
 
   end
