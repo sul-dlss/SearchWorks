@@ -24,6 +24,8 @@ describe "catalog/access_panels/_online.html.erb" do
       render
       expect(rendered).to have_css(".panel-online")
       expect(rendered).to have_css("ul.links li span.stanford-only")
+      expect(rendered).to have_css("span.additional-link-text", text: "4 at one time")
+      expect(rendered).to have_css("a[title='Available to Stanford-affiliated users only']", text: "Link text", count: 3)
     end
     it "should only render SFX links when present" do
       assign(:document, SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856))
