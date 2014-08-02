@@ -33,6 +33,9 @@
   &.summary {
     .snippet {
       margin-left: 86px;
+      ul {
+        list-style-type: none;
+      }
     }
   }
 
