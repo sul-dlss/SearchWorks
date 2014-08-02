@@ -41,7 +41,7 @@ module Marc856Fixtures
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
-          <subfield code='z'>Available to stanford affiliated users at: 4 at one time</subfield>
+          <subfield code='z'>Available to stanford affiliated users at:</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>http://library.stanford.edu</subfield>

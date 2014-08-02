@@ -14,7 +14,7 @@ module MarcLinks
         link = process_link(link_field)
         if link.present?
           SearchWorks::Links::Link.new(
-            text: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}", " #{link[:additional_text] if link[:additional_text]}"].compact.join(' '),
+            text: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}"].compact.join(' '),
             fulltext: link_is_fulltext?(link_field),
             stanford_only: stanford_only?(link),
             finding_aid: link_is_finding_aid?(link_field)
@@ -63,17 +63,10 @@ module MarcLinks
           }
         else
           link_text = (!suby.present? && !sub3.present?) ? url_host : [sub3, suby].compact.join(' ')
-          title = subz.join(" ")
-          additional_text = nil
-          if title =~ stanford_affiliated_regex
-            additional_text = "<span class='additional-link-text'>#{title.gsub(stanford_affiliated_regex, '')}</span>"
-            title = "Available to Stanford-affiliated users only"
-          end
           {:text=>link_text,
-           :title=> title,
+           :title=>subz.join(" "),
            :href=>field["u"],
-           :casalini_toc => false,
-           :additional_text => additional_text
+           :casalini_toc => false
           }
         end
       end
