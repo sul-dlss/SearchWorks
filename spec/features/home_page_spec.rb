@@ -15,6 +15,12 @@ feature "Home Page" do
     expect(page).to have_css(".thumbnail h3", text: "Dissertations & theses")
     expect(page).to have_css(".thumbnail h3", text: "Selected databases")
   end
+  scenario "'Featured sets' images should be clickable", js: true do
+    within('.features') do
+      all('[data-no-link-href]').last.click
+      expect(current_url).to match /#{selected_databases_path}$/
+    end
+  end
   scenario "'Searching for articles' section should display" do
     expect(page).to have_css("li .media-heading", text: "xSearch")
     expect(page).to have_css("li .media-heading", text: "eJournals")
