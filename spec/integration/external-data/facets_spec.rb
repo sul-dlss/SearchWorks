@@ -13,7 +13,7 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
           within('.facet_limit.blacklight-language') do
             expect(page).to have_css('li .facet-label', count: 20)
           end
-        end        
+        end
       end
       it "should include pluralized and downcased facet labels" do
         within('#facets') do
@@ -26,8 +26,8 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
     describe "for special facets" do
       it "should include more than 20 values" do
         within('#facets') do
-          within('.facet_limit.blacklight-building_facet') do
-            expect(page).to have_css('li .facet-label', count: 21)
+          within('.facet_limit.blacklight-language') do
+            expect(page).to have_css('li', count: 21)
           end
         end
       end

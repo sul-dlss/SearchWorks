@@ -17,7 +17,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit catalog_path('10160087')
 
       within('.panel-library-location') do
-        within('ul.items') do
+        within(page.all('ul.items').first) do
           expect(page).to have_css('i.noncirc', count: 3)
         end
       end
@@ -26,7 +26,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit catalog_path('10458422')
 
       within('.panel-library-location') do
-        within('ul.items') do
+        within(page.all('ul.items').first) do
           expect(page).to_not have_css('i.noncirc')
         end
       end
@@ -37,7 +37,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit catalog_path('10424524')
 
       within('.panel-library-location') do
-        within('ul.items') do
+        within(page.all('ul.items').first) do
           expect(page).to have_css('i.unknown')
         end
       end
