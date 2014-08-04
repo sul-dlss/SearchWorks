@@ -447,6 +447,29 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def marc_655_subject_fixture
+    <<-xml
+      <record>
+        <datafield tag="655" ind1="1" ind2=" ">
+          <subfield code="a">Subject A1</subfield>
+          <subfield code="v">Subject V1</subfield>
+          <subfield code="x">Subject X1</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def marc_mixed_subject_fixture
+    <<-xml
+      <record>
+      <datafield tag="650" ind1="1" ind2=" ">
+        <subfield code="a">Subject A1</subfield>
+      </datafield>
+        <datafield tag="655" ind1="1" ind2=" ">
+          <subfield code="a">Subject A1</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def multi_vxyz_subject_fixture
     <<-xml
       <record>

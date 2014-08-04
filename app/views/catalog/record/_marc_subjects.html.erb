@@ -5,6 +5,13 @@
   </dl>
 <% end %>
 
+<% genre_display = get_genre_subjects(@document.to_marc) %>
+<% if genre_display %>
+  <dl>
+    <%= genre_display %>
+  </dl>
+<% end %>
+
 <% if @document.is_a_database? && @document[:db_az_subject] %>
   <dl>
     <dt>Database topics</dt>
