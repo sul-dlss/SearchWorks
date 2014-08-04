@@ -48,7 +48,9 @@ var PreviewContent = (function() {
         .find('.image-filmstrip').renderFilmstrip();
 
       target.find('*[data-accordion-section-target]').accordionSection();
-      target.find("[data-behavior='trunk8']").trunk8();
+      target.find("[data-behavior='trunk8']").trunk8({
+        tooltip: false
+      });
       target.find('[data-live-lookup-url]').liveLookup();
       deferred.resolve(content);
       break;
@@ -59,7 +61,9 @@ var PreviewContent = (function() {
         .find('.image-filmstrip').renderFilmstrip();
 
       target.find('*[data-accordion-section-target]').accordionSection();
-      target.find("[data-behavior='trunk8']").trunk8();
+      target.find("[data-behavior='trunk8']").trunk8({
+        tooltip: false
+      });
       target.find('[data-live-lookup-url]').liveLookup();
       deferred.resolve(content);
       break;
