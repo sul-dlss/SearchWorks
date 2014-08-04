@@ -34,7 +34,7 @@ feature "Selected Databases Access Point", :"data-integration" => true do
   scenario "online link" do
     within(".selected-databases") do
       within(first(".panel")) do
-        expect(page).to have_css("span.label.label-success", text: "Search database")
+        expect(page).to have_css("a.selected-database", text: "Search database")
         expect(page).to have_css("a", text: "search.ebscohost.com")
       end
     end

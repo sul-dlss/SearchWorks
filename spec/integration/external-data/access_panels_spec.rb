@@ -11,7 +11,7 @@ describe "Access Panels", feature: true, :"data-integration" => true do
 
       within(".panel-online") do
         within("ul.links") do
-          expect(page).to have_css("li a", text: "purl.access.gpo.gov")
+          expect(page).to have_css("li a", text: "Pt. [1]: text version:")
         end
       end
     end
@@ -51,7 +51,7 @@ describe "Access Panels", feature: true, :"data-integration" => true do
       visit catalog_path('10020587')
 
       within(".panel-course-reserve") do
-        expect(page).to have_css("li a", text: "ACCT-212-01-02 -- Managerial Accounting: Base")
+        expect(page).to have_css("dl dd a", text: "ACCT-212-01-02 -- Managerial Accounting: Base")
       end
     end
   end
@@ -63,7 +63,7 @@ describe "Access Panels", feature: true, :"data-integration" => true do
     end
     it "should be displayed for objects held at libraries" do
       visit catalog_path('3195844')
-      expect(page).to have_css(".panel-library-location", count:6)
+      expect(page).to have_css(".panel-library-location", count:7)
     end
   end
 end

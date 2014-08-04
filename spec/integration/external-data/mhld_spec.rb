@@ -21,11 +21,11 @@ describe "MHLD", feature: true, :"data-integration" => true do
         expect(page).to have_content('At the library')
         within('.accordion-section.location') do
           find('a.header').click
-          expect(page).to have_css('tr td strong', text: 'Current Periodicals')
-          expect(page).to have_css('tr td .public-note', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
+          expect(page).to have_css('tr th strong', text: 'Current Periodicals')
+          expect(page).to have_css('tr th .public-note', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
           expect(page).to have_css('tr td', text: 'Latest: v.21:no.4 (2013)')
         end
-        
+
       end
     end
   end
