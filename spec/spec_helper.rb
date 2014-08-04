@@ -67,17 +67,9 @@ RSpec.configure do |config|
 end
 
 def greater_than_integer value, integer
-  if value.gsub(',', '').to_i > integer
-    true
-  else
-    value
-  end
+  value.gsub(',', '').to_i > integer ? true : value
 end
 
 def less_than_integer value, integer
-  if value.gsub(',', '').to_i < integer
-    true
-  else
-    value
-  end
+  value.gsub(',', '').to_i < integer ? true : value
 end

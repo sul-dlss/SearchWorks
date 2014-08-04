@@ -1,5 +1,7 @@
 require "spec_helper"
 
+number_pattern = /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
+
 describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integration" => true do
   before do
     visit advanced_search_path
@@ -19,8 +21,6 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "Zukofsky"
       fill_in "search_title", with: "A"
       click_on "advanced-search-submit"
-      click_link "10 per page"
-      click_link "20"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("9082824")).to_not be_nil
       expect(docs.index("1398728")).to_not be_nil
@@ -40,8 +40,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 4000000)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 4000000)).to be_true
       end
     end
   end
@@ -49,8 +49,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at least 500 results" do
       fill_in "search_title", with: "something"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 500)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 500)).to be_true
       end
     end
   end
@@ -82,8 +82,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 100000)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 100000)).to be_true
       end
     end
   end
@@ -126,8 +126,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should get at most 2,000,000" do
       fill_in "search", with: "NOT p"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.find("strong", text: /^.*,+.*$/).text, 2000000)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 2000000)).to be_true
       end
     end
   end
@@ -139,8 +139,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       # This only checks first page of results
       expect(docs.index("6865307")).to be_nil
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 1520000)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 1520000)).to be_true
       end
     end
   end
@@ -159,8 +159,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search", with: "IEEE Xplore"
       fill_in "subject_terms", with: "-Congresses"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 1500)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 1500)).to be_true
       end
     end
   end
@@ -170,10 +170,12 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "John Steinbeck"
       fill_in "search_title", with: "Pearl OR Grapes"
       click_on "advanced-search-submit"
-      click_link "10 per page"
+      click_button "20 per page"
       click_link "100"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 225)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 225)).to be_true
+      end
       expect(docs.index("6746743")).to_not be_nil
       expect(docs.index("6747313")).to_not be_nil
     end
@@ -182,8 +184,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at least 400 results" do
       fill_in "search_title", with: "nossa OR nuestra america"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 400)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 400)).to be_true
       end
     end
   end
@@ -191,8 +193,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at least 80 results" do
       fill_in "search_title", with: "color OR colour photography"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 80)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 80)).to be_true
       end
     end
   end
@@ -200,8 +202,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at least 50 results and these keys in first 5 results" do
       fill_in "search_title", with: "Hello AND Goodbye"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 50)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 50)).to be_true
       end
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("6502314")).to be < 5
@@ -214,8 +216,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at most 3 results and this key" do
       fill_in "search_author", with: "nabokov OR hofstadter AND pushkin"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 4)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 4)).to be_true
       end
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("4076380")).to_not be_nil
@@ -225,8 +227,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     pending "should return at most 3 results and not this key" do
       fill_in "search_author", with: "hofstadter OR nabokov AND pushkin"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 3)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 3)).to be_true
       end
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       # TODO: Fails and actually is returned as first result
@@ -237,9 +239,9 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should get between 5 and 7 results" do
       fill_in "search_author", with: "(nabokov OR hofstadter) AND pushkin"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 5)).to be_true
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 7)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 5)).to be_true
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 7)).to be_true
       end
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(docs.index("4076380")).to_not be_nil
@@ -250,9 +252,9 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: "(Dutch OR Netherlands) AND painting"
       fill_in "search", with: "trade OR commerce"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 8)).to be_true
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 12)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 8)).to be_true
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 12)).to be_true
       end
     end
   end
@@ -261,8 +263,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: "Dutch OR Netherlands"
       fill_in "search", with: "(trade OR commerce) AND painting"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 15)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 15)).to be_true
       end
     end
   end
@@ -272,7 +274,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Library"
       check "f_inclusive_building_facet_art-architecture"
       click_on "advanced-search-submit"
-      expect(page).to have_css(".page_entries", text: "1 entry found")
+      expect(page).to have_css(".search_num_of_results", text: "1 result")
     end
   end
   describe "Title Plus Format Facet Value (SW-326)" do
@@ -291,8 +293,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Language"
       check "f_inclusive_language_english"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 100)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 100)).to be_true
       end
     end
   end
@@ -336,8 +338,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: '"Home Schooling"'
       fill_in "search", with: "Socialization"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 150)).to be_true
+      within ".search_num_of_results" do
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 150)).to be_true
       end
     end
   end
@@ -363,9 +365,9 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "range_pub_year_tisim_begin", with: "1789"
       fill_in "range_pub_year_tisim_end", with: "1800"
       click_on "advanced-search-submit"
-      within ".page_entries" do
-        expect(less_than_integer(page.all("strong").map{|e| e.text}[2], 5000)).to be_true
-        expect(greater_than_integer(page.all("strong").map{|e| e.text}[2], 6000)).to be_true
+      within ".search_num_of_results" do
+        expect(less_than_integer(page.find("h2", text: number_pattern).text, 5000)).to be_true
+        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 6000)).to be_true
       end
     end
   end
