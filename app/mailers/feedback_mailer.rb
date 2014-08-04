@@ -1,5 +1,4 @@
-class RecordMailer < ActionMailer::Base
-
+class FeedbackMailer < ActionMailer::Base
   def submit_feedback(params, ip)
     if params[:name].present?
       @name = params[:name]

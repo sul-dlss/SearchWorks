@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "view/:id" => "catalog#show", :as => :catalog
   get "view/:id" => "catalog#show", :as => :solr_document
   get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
+  post "catalog/sms" => 'catalog#sms' # we can remove when we upgrade to Blacklight > 5.5.2
 
   blacklight_for(:catalog)
   Blacklight::Marc.add_routes(self)
