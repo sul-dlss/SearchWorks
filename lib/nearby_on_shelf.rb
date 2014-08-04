@@ -11,6 +11,11 @@ class NearbyOnShelf
   end
 
   protected
+
+  def logger
+    ::Rails.logger
+  end
+
   def blacklight_config
     @blacklight_config
   end
@@ -73,7 +78,6 @@ class NearbyOnShelf
     }
     result
   end
-  
   # create an array of sorted html list items containing the appropriate display text
   #  (analogous to what would be visible if you were looking at the spine of 
   #  a book on a shelf) from relevant solr docs, given a particular solr
