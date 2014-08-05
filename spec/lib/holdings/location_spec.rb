@@ -21,6 +21,9 @@ describe Holdings::Location do
     describe "present_on_index?" do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
+      it "should not throw an error on items w/o an mhld" do
+        expect(location_no_items_or_mhld).to_not be_present_on_index
+      end
       it "should return false unless the public note or latest received are present" do
         location_no_items_or_mhld.mhld = [library_has_mhld]
         expect(location_no_items_or_mhld).to_not be_present_on_index
