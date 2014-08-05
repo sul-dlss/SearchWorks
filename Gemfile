@@ -87,3 +87,4 @@ gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.0'
+gem 'marc'

@@ -782,4 +782,36 @@ module MarcMetadataFixtures
   def no_fields_fixture
     "<record></record>"
   end
+  def marc_382_instrumentation
+    <<-xml
+      <record>
+        <datafield tag="382" ind1="0" ind2="1">
+          <subfield code="a">singer</subfield>
+          <subfield code="n">1</subfield>
+          <subfield code="d">bass guitar</subfield>
+          <subfield code="n">2</subfield>
+          <subfield code="a">percussion</subfield>
+          <subfield code="n">1</subfield>
+          <subfield code="a">guitar</subfield>
+          <subfield code="n">1</subfield>
+          <subfield code="d">electronics</subfield>
+          <subfield code="n">1</subfield>
+        </datafield>
+        <datafield tag="382" ind1="0" ind2=" ">
+          <subfield code="a">singer</subfield>
+          <subfield code="n">3</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def marc_382_partial_instrumentation
+    <<-xml
+      <record>
+        <datafield tag="382" ind1="1" ind2="1">
+          <subfield code="a">backup singer</subfield>
+          <subfield code="n">4</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

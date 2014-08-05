@@ -22,9 +22,13 @@ module SearchWorks
     require 'holdings'
     require 'live_lookup'
     require 'search_query_modifier'
+    require 'custom_marc'
 
     # load all access panels
     config.autoload_paths += %W(#{config.root}/lib/access_panels)
+
+    # load all marc_data_fields
+    config.autoload_paths += %W(#{config.root}/lib/custom_marc)
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
