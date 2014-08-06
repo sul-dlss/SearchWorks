@@ -1,6 +1,34 @@
 require "spec_helper"
 
 describe "Facets Customizations", feature: true, :"data-integration" => true  do
+  describe "range limits" do
+    it "should retain range parameters when navigating a range limited search", js: true do
+      visit root_path
+
+      fill_in 'q', with: 'search'
+      click_button 'search'
+
+      within('#facets') do
+        click_link 'Date'
+
+        click_button 'Limit'
+      end
+
+      within('.breadcrumb') do
+        expect(page).to have_css('.filterName', text: "Date")
+      end
+
+      within("#facets") do
+        click_link 'Access'
+
+        click_link 'At the Library'
+      end
+
+      within('.breadcrumb') do
+        expect(page).to have_css('.filterName', text: "Date")
+      end
+    end
+  end
   describe "more links" do
     before do
       visit root_path
