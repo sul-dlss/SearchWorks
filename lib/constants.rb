@@ -1030,6 +1030,7 @@ module Constants
     "MATH-CS" => "http://library.stanford.edu/libraries/mathstat/about",
     "MUSIC" => "http://library.stanford.edu/libraries/music/about",
     "MEYER" => "http://library.stanford.edu/libraries/meyer/about",
+    "TANNER" => "http://library.stanford.edu/libraries/philosophy/about",
     "SPEC-COLL" => "http://library.stanford.edu/libraries/spc/about",
     "SAL" => "http://library.stanford.edu/libraries/sal/about",
     "SAL-NEWARK" => "http://library.stanford.edu/libraries/newark/about",
