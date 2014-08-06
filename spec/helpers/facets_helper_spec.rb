@@ -41,6 +41,11 @@ describe FacetsHelper do
       params = {"range" => {test: "123"}, "stuff" => "stuff", "commit" => "yolo"}
       expect(helper.remove_range_param("fake_field", params)).to eq ({"stuff" => "stuff"})
     end
+    it "should not change the original parameters hash" do
+      params = {"range" => {test: "123"}, "stuff" => "stuff"}
+      expect(helper.remove_range_param("fake_field", params)).to eq ({"stuff" => "stuff"})
+      expect(params["range"]).to be_present
+    end
   end
   describe "#render_resource_icon" do
     it "should not render anything if format_main_ssim field is not present" do

@@ -14,6 +14,7 @@ module FacetsHelper
 
   # Overwrites blacklight_range_limit plugin method to remove parameters
   def remove_range_param(solr_field, my_params = params)
+    my_params = my_params.clone #clone params so we only edit a copy for linking purposes
     if my_params["range"]
       my_params.delete("range")
       if my_params["search_field"].present? &&
