@@ -146,7 +146,7 @@ GEM
       childprocess
       i18n
       logger
-    jquery-datatables-rails (2.1.10.0.4)
+    jquery-datatables-rails (2.2.0)
       jquery-rails
       sass-rails
     jquery-rails (3.1.1)
@@ -331,7 +331,7 @@ DEPENDENCIES
   i18n
   jbuilder
   jettywrapper (~> 1.7)
-  jquery-datatables-rails (~> 2.1.10.0.4)
+  jquery-datatables-rails (~> 2.2.0)
   jquery-rails
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)
