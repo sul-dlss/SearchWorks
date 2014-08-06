@@ -26,7 +26,7 @@ class Holdings
       mhld.present? && mhld.any?(&:present?)
     end
     def any_index_mhlds?
-      mhld.any? do |mhld_item|
+      mhld.present? && mhld.any? do |mhld_item|
         mhld_item.latest_received.present? ||
         mhld_item.public_note.present?
       end
