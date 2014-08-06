@@ -3,6 +3,23 @@ require "spec_helper"
 describe "catalog/record/_marc_subjects.html.erb" do
   include MarcMetadataFixtures
 
+  describe "subjects" do
+    before do
+      assign(:document, SolrDocument.new(
+        marcxml: marc_mixed_subject_fixture
+      ))
+      render
+    end
+    it "should render non-marc 655 subjects under 'Subject'" do
+      expect(rendered).to have_css('dt', text: "Subject")
+      expect(rendered).to have_css('dd a', text: "Subject A1")
+    end
+    it "should render non-marc 655 subjects under 'Genre'" do
+      expect(rendered).to have_css('dt', text: "Genre")
+      expect(rendered).to have_css('dd a', text: "Subject A1")
+    end
+  end
+
   describe "Database subjects" do
     let(:document) {
       SolrDocument.new(

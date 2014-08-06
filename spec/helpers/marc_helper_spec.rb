@@ -271,43 +271,64 @@ describe MarcHelper do
       get_toc(nil_document.to_marc).should be_nil
     end
   end
-  describe "#get_subjects" do
+  describe "subjects" do
     let(:multi_a_subject) { SolrDocument.new(marcxml: multi_a_subject_fixture ) }
     let(:multi_vxyz_subject) { SolrDocument.new(marcxml: multi_vxyz_subject_fixture ) }
     let(:collection_690) { SolrDocument.new(marcxml: collection_690_fixture ) }
     let(:ordered_subjects) { SolrDocument.new(marcxml: ordered_subjects_fixture) }
-    it "should return a valid list of linked subjects" do
-      subjects = get_subjects(document.to_marc)
-      subjects.should match(/title=\"Search: Subject1 Subject2\"/) and
-      subjects.should match(/>Subject1 Subject2</)
+    let(:genre_subjects) { SolrDocument.new(marcxml: marc_655_subject_fixture) }
+    describe "#get_genre_subjects" do
+      it "should return MARC 655 formatted as hierarchical subjects" do
+        subjects = get_genre_subjects(genre_subjects.to_marc)
+        expect(subjects).to be_present
+        expect(subjects).to have_css('dt', text: 'Genre')
+        expect(subjects).to have_css('dd a', text: 'Subject A1')
+        expect(subjects).to have_css('dd a', text: 'Subject V1')
+        expect(subjects).to have_css('dd a', text: 'Subject X1')
+        expect(subjects).to match /<\/a> &gt. <a/
+      end
+      it "should be nil for non 655 subjects" do
+        expect(get_genre_subjects(multi_a_subject.to_marc)).to be_nil
+      end
     end
-    it "should not include subjects where subfield 'a' begins with a % sign" do
-      get_subjects(percent_record.to_marc).should_not match(/.*%Subject1.*/)
-    end
-    it "should handle items with several A subfields as separate subjects (separate dd elements)" do
-      get_subjects(multi_a_subject.to_marc).should match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
-    end
-    it "should concat all subfields except for v x y z" do
-      get_subjects(multi_vxyz_subject.to_marc).should match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
-    end
-    it "should wrap all of the subject terms in quotes" do
-      data = get_subjects(multi_vxyz_subject.to_marc)
-      data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C%22.*\".*/)
-      data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C\+Subject\+V\+Subject\+X%22.*\".*/)
-      # should not have any quoted phrases concatinated with a space in the URL
-      data.should_not match(/\"\+\"/)
-    end
-    it "should not display a 690 if the subfield a includes 'collection'" do
-      get_subjects(collection_690.to_marc).should_not match(/.*Subject Collection 1.*/)
-    end
-    it "should order the subjects as they are in the original MARC record" do
-      get_subjects(ordered_subjects.to_marc).should match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
-      get_subjects(ordered_subjects.to_marc).should_not match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
-    end
-    it "should return nothing if no subjects are available" do
-      get_subjects(nil_document.to_marc).should be_nil
+    describe "#get_subjects" do
+      it "should return a valid list of linked subjects" do
+        subjects = get_subjects(document.to_marc)
+        subjects.should match(/title=\"Search: Subject1 Subject2\"/) and
+        subjects.should match(/>Subject1 Subject2</)
+      end
+      it "should not include subjects where subfield 'a' begins with a % sign" do
+        get_subjects(percent_record.to_marc).should_not match(/.*%Subject1.*/)
+      end
+      it "should handle items with several A subfields as separate subjects (separate dd elements)" do
+        get_subjects(multi_a_subject.to_marc).should match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
+      end
+      it "should concat all subfields except for v x y z" do
+        get_subjects(multi_vxyz_subject.to_marc).should match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
+      end
+      it "should wrap all of the subject terms in quotes" do
+        data = get_subjects(multi_vxyz_subject.to_marc)
+        data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C%22.*\".*/)
+        data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C\+Subject\+V\+Subject\+X%22.*\".*/)
+        # should not have any quoted phrases concatinated with a space in the URL
+        data.should_not match(/\"\+\"/)
+      end
+      it "should not display a 690 if the subfield a includes 'collection'" do
+        get_subjects(collection_690.to_marc).should_not match(/.*Subject Collection 1.*/)
+      end
+      it "should order the subjects as they are in the original MARC record" do
+        get_subjects(ordered_subjects.to_marc).should match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
+        get_subjects(ordered_subjects.to_marc).should_not match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
+      end
+      it "should not return anything for 655 genre subjects" do
+        get_subjects(genre_subjects.to_marc).should be_nil
+      end
+      it "should return nothing if no subjects are available" do
+        get_subjects(nil_document.to_marc).should be_nil
+      end
     end
   end
+
   describe "#get_related_works_from_marc" do
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
     it "should pass on the given label for all indicators except for  when 2 is 2" do

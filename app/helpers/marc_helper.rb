@@ -283,31 +283,38 @@ module MarcHelper
 
   # Generate hierarchical structure of subject headings from marc
   def get_subjects(marc)
-    text = "<dt>Subject</dt>".html_safe
-    data = get_subjects_array(marc)
-    unless data.blank?
-      data.each_with_index do |fields,i|
+    subs = ['600','610','611','630','650','651','653','654','656','657','658','690','691','693','696', '697','698','699']
+    get_subjects_hierarchy('Subject', get_subjects_array(marc, subs))
+  end
+
+
+  # Generate hierarchical structure of subject headings from marc
+  def get_genre_subjects(marc)
+    get_subjects_hierarchy('Genre', get_subjects_array(marc, ['655']))
+  end
+
+  def get_subjects_hierarchy(label, subjects)
+    text = "<dt>#{label}</dt>".html_safe
+    unless subjects.blank?
+      subjects.each_with_index do |fields,i|
         text << "<dd>".html_safe
         link_text = ""
         title_text = "Search: "
         fields.each do |field|
-          link_text << " " unless field == data[i].first
+          link_text << " " unless field == subjects[i].first
           link_text << field.strip
-          #link_text << "\"#{field.strip}\""
-          title_text <<  " - " unless field == data[i].first
+          title_text <<  " - " unless field == subjects[i].first
           title_text << "#{field.strip}"
-          text << link_to(field.strip, {:controller => 'catalog', :action => 'index', :q => "\"#{link_text}\"", :search_field => 'subject_terms'}, :title => title_text)
-          #text << link_to(field.strip, {:controller => 'catalog', :action => 'index', :q => link_text, :search_field => 'subject_terms'}, :title => title_text)
-          text << " &gt; ".html_safe unless field == data[i].last
+          text << link_to(field.strip, catalog_index_path(:q => "\"#{link_text}\"", :search_field => 'subject_terms'), :title => title_text)
+          text << " &gt; ".html_safe unless field == subjects[i].last
         end
         text << "</dd>".html_safe
       end
     end
-    return text unless text == "<dt>Subject</dt>"
+    return text unless text == "<dt>#{label}</dt>"
   end
 
-  def get_subjects_array(marc)
-    subs = ['600','610','611','630','650','651','653','654','655','656','657','658','690','691','693','696', '697','698','699']
+  def get_subjects_array(marc, subs)
     data = []
     marc.find_all{|f| f.tag =~ /^6../}.each do |l|
       if subs.include?(l.tag)
