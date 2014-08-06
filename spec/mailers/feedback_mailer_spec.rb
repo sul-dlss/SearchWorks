@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe RecordMailer do
+describe FeedbackMailer do
   describe "submit_feedback" do
     describe "with all fields" do
       let(:ip) {"123.43.54.123"}
       let(:params) { { name: "Mildred Turner ", to: "test@test.com" } }
-      let(:mail) { RecordMailer.submit_feedback(params, ip) }
+      let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the correct to field" do
         expect(mail.to).to eq ["fake-email@kittenz.com"]
@@ -43,7 +43,7 @@ describe RecordMailer do
     describe "without name and email" do
       let(:ip) {"123.43.54.123"}
       let(:params) { {  } }
-      let(:mail) { RecordMailer.submit_feedback(params, ip) }
+      let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the right email" do
         expect(mail.body).to have_content "Name: No name given"

@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+ActionMailer::Base.default :from => 'no-reply@searchworks.stanford.edu'
+
 module SearchWorks
   class Application < Rails::Application
     config.application_name = "SearchWorks"
