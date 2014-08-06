@@ -7,14 +7,14 @@ describe "MHLD", feature: true do
 
       within('[data-hours-route="/hours/CHEMCHMENG"]') do
         expect(page).to have_css('.location-name', text: 'Current Periodicals')
-        expect(page).to have_css('li.mhld.public-note', text: 'public note2')
-        expect(page).to have_css('li.mhld', text: 'Latest: latest received2')
+        expect(page).to have_css('li.mhld', text: 'public note2')
+        expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: latest received2')
         expect(page).to have_css('li.mhld', text: 'Library has: library has2')
       end
       within('[data-hours-route="/hours/GREEN"]') do
         expect(page).to have_css('.location-name', text: 'Stacks')
-        expect(page).to have_css('li.mhld.public-note', text: 'public note3')
-        expect(page).to have_css('li.mhld', text: 'Latest: latest received3')
+        expect(page).to have_css('li.mhld', text: 'public note3')
+        expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: latest received3')
         expect(page).to have_css('li.mhld', text: 'Library has: library has3')
       end
     end
@@ -28,12 +28,12 @@ describe "MHLD", feature: true do
         within('.accordion-section.location') do
           find('a.header').click
           expect(page).to have_css('tr th strong', text: 'Current Periodicals')
-          expect(page).to have_css('tr th .public-note', text: 'public note1')
-          expect(page).to have_css('tr th .public-note', text: 'public note2')
-          expect(page).to have_css('tr th .public-note', text: 'public note3')
-          expect(page).to have_css('tr td', text: 'Latest: latest received1')
-          expect(page).to have_css('tr td', text: 'Latest: latest received2')
-          expect(page).to have_css('tr td', text: 'Latest: latest received3')
+          expect(page).to have_css('tr th', text: 'public note1')
+          expect(page).to have_css('tr th', text: 'public note2')
+          expect(page).to have_css('tr th', text: 'public note3')
+          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received1')
+          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received2')
+          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received3')
         end
       end
     end

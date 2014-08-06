@@ -34,6 +34,16 @@ describe Holdings::Location do
       end
     end
   end
+  describe "#bound_with?" do
+    let(:location) { Holdings::Location.new("STACKS") }
+    let(:bound_with_location) { Holdings::Location.new("SEE-OTHER") }
+    it "should return true for locations that are SEE-OTHER" do
+      expect(bound_with_location).to be_bound_with
+    end
+    it "should return false for locations that are not SEE-OTHER" do
+      expect(location).to_not be_bound_with
+    end
+  end
   describe "#mhld" do
     let(:location) {Holdings::Location.new("STACKS")}
     it "should be an accessible attribute" do
