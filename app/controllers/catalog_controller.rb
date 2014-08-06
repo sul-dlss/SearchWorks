@@ -240,8 +240,10 @@ class CatalogController < ApplicationController
       field.label = "Publisher"
       field.include_in_simple_select = false
       field.solr_local_parameters = {
-        qf: '$pub_search_qf',
-        pf: '$pub_search_pf'
+        :qf  => "$qf_pub_info",
+        :pf  => "$pf_pub_info",
+        :pf3 => "$pf3_pub_info",
+        :pf2 => "$pf2_pub_info"
       }
     end
 
@@ -249,8 +251,10 @@ class CatalogController < ApplicationController
       field.label = "ISBN/ISSN"
       field.include_in_simple_select = false
       field.solr_local_parameters = {
-        qf: '$isbn_search_qf',
-        pf: '$isbn_search_pf'
+        :qf  => "$qf_number",
+        :pf  => "$pf_number",
+        :pf3 => "$pf3_number",
+        :pf2 => "$pf2_number"
       }
     end
 

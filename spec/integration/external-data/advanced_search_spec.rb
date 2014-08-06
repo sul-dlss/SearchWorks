@@ -87,6 +87,14 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       end
     end
   end
+  describe "Publisher search" do
+    it "should return results only if there is a match in the publisher" do
+      fill_in "pub_search", with: "NEW MEXICO"
+      click_on 'advanced-search-submit'
+      expect(greater_than_integer(page.find("h2", text: number_pattern).text, 8000)).to be_true
+      expect(less_than_integer(page.find("h2", text: number_pattern).text, 9000)).to be_true
+    end
+  end
   describe "Advanced search sorting" do
     before do
       fill_in "search_author", with: "Rowling"
