@@ -14,3 +14,12 @@
     line-height: 3em;
   }
 }
+
+@media only screen and (max-width : $screen-sm) {
+  .record-browse-nearby {
+    .callnumber {
+      display: block;
+      margin: 10px 10px 0 0;
+    }
+  }
+}
