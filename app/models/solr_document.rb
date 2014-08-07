@@ -17,6 +17,7 @@ class SolrDocument
   include DigitalImage
   include OpenSeadragon
   include SolrHoldings
+  include MarcInstrumentation
 
   include Blacklight::Solr::Document
 

@@ -334,6 +334,7 @@ DEPENDENCIES
   jquery-datatables-rails (~> 2.2.0)
   jquery-rails
   lyberteam-capistrano-devel
+  marc
   mods_display (= 0.3.3)
   mysql
   openseadragon!
