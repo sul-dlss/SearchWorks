@@ -7,7 +7,7 @@ feature "View options" do
     click_button 'search'
 
     within('#view-type-dropdown') do
-      expect(page).to have_css("li a.view-type-list span.view-type-label", text: 'List')
+      expect(page).to have_css("li a.view-type-list span.view-type-label", text: 'Normal')
       expect(page).to have_css("li a.view-type-list i.fa.fa-th-list")
 
       expect(page).to have_css("li a.view-type-gallery span.view-type-label", text: 'Gallery')
