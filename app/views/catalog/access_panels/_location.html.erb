@@ -19,6 +19,8 @@
             <% library.locations.select(&:present?).each do |location| %>
               <li>
                 <strong class="location-name"><%= location.name %></strong>
+                <%= render partial: "catalog/stackmap_link", locals: { document: document } %>
+
                 <% if location.items.present? %>
                   <% if location.bound_with? && document.respond_to?(:to_marc) %>
                     <p class="bound-with-note note-highlight">

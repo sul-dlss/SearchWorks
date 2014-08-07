@@ -20,6 +20,8 @@
     .items {
       li {
         padding-left: 20px;
+        margin-top: 10px;
+
         i {
           margin-left: -12px;
         }
@@ -28,5 +30,10 @@
         color: #990000;
       }
     }
+
+    .stackmap-find-it {
+      margin-left: 10px;
+    }
+
   }
 }

@@ -87,6 +87,10 @@ class Holdings
       request_status.must_request?
     end
 
+    def has_stackmap?
+      library == "GREEN" and home_location !~ /GREEN-RESV|GRE-LOAN|SL3-LOAN|SLN-LOAN/i
+    end
+
     private
 
     def standard_or_zombie_library

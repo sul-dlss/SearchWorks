@@ -1,0 +1,77 @@
+.stackmap {
+  padding: 10px 0;
+
+  span.callnumber {
+    font-weight: bold;
+  }
+
+  .map-template {
+    padding: 5px 0;
+
+    .library, .floorname, .shelving-range, .callnumber-display {
+      font-weight: bold;
+    }
+
+    .controls {
+      clear: both;
+      overflow: auto;
+      padding: 20px 0 10px 0;
+
+      .zoom-controls {
+        padding: 0;
+
+        a {
+          border-bottom: 0;
+        }
+
+        .zoom-in, .zoom-out, .zoom-fit {
+          margin-right: 10px;
+        }
+      }
+
+      .show-description {
+        padding: 0;
+        text-align: right;
+
+        a {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .osd {
+      background-color: $white;
+      border: 1px solid $sul-stackmap-image-border-color;
+      height: 450px;
+      padding: 0;
+    }
+
+    .text-directions {
+      display: none;
+      line-height: 1.8em;
+      padding: 0;
+
+      ul {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+#ajax-modal {
+  .stackmap {
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .stackmap {
+    .map-template {
+      .osd {
+        height: 250px;
+      }
+    }
+  }
+}

@@ -303,6 +303,10 @@ class CatalogController < ApplicationController
     end
   end
 
+  def stackmap
+    render layout: !request.xhr?
+  end
+
   private
 
   def modifiable_params_keys

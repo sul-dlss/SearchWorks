@@ -36,6 +36,9 @@ describe CatalogController do
       it "should route the librarian view properly" do
         expect({get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
       end
+      it "should route the stackmap view properly" do
+        expect({get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
+      end
     end
     describe "/databases" do
       it "should route to the database format" do
