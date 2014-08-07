@@ -26,6 +26,7 @@ en:
       view:
         label: 'View'
         brief: 'Brief'
+        list: 'Normal'
       per_page:
         button_label_html: '%{count}<span class="hidden-xs hidden-sm"> per page</span>'
       pagination_info:
@@ -35,7 +36,7 @@ en:
         single_item_found: ''
         no_items_found: "<h2>No results found in catalog</h2>"
       entry_pagination_info:
-        other: '%{current} of %{total}'        
+        other: '%{current} of %{total}'
     bookmarks:
       add:
         all_html: '<i class="fa fa-check-square-o"></i> <span class="hidden-sm hidden-xs">Select </span>all'
