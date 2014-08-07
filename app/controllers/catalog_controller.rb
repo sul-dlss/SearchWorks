@@ -35,6 +35,8 @@ class CatalogController < ApplicationController
 
     # items to show per page, each number in the array represent another option to choose from.
     #config.per_page = [10,20,50,100]
+    config.default_per_page = 20
+
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
