@@ -22,5 +22,15 @@ describe CourseReserveAccessPointHelper do
         expect(helper.instance_variable_get("@course_info").name).to eq "Mice and Men"
       end
     end
+    describe "when the course does not exist in the first document" do
+      it "should still find the course" do
+        params[:f] = { course: ["CATZ-102"], instructor: ["Cat, Tom"] }
+        response.should_receive(:docs).at_least(:once).and_return([{crez_course_info: ["SOULSTEEP-101-|-42-|-Winfrey, Oprah"]}, {crez_course_info: ["CATZ-102-|-Mice and Men-|-Cat, Tom"]}])
+        helper.create_course
+        expect(helper.instance_variable_get("@course_info").id).to eq "CATZ-102"
+        expect(helper.instance_variable_get("@course_info").instructor).to eq "Cat, Tom"
+        expect(helper.instance_variable_get("@course_info").name).to eq "Mice and Men"
+      end
+    end
   end
 end
