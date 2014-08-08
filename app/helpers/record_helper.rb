@@ -1,5 +1,24 @@
 # encoding: UTF-8
 module RecordHelper
+
+  def display_content_field field
+    if field.respond_to?(:label, :values) &&
+        field.values.any?(&:present?)
+      display_content_label(field.label) +
+      display_content_values(field.values)
+    end
+  end
+
+  def display_content_label label
+    content_tag :dt, label
+  end
+
+  def display_content_values values
+    values.map do |value|
+      content_tag :dd, value.join(', ')
+    end.join('').html_safe
+  end
+
   def mods_display_label label
     content_tag(:dt, label.gsub(":",""))
   end

@@ -72,6 +72,12 @@
       <%= render "field_from_index", :fields => physical_desc %>
     <%- end -%>
 
+    <% if (instrumentation = document.marc_instrumentation).present? %>
+      <% instrumentation.parse_marc_record.each do |field| %>
+        <%= display_content_field field %>
+      <% end %>
+    <% end %>
+
     <% series = link_to_series_from_marc(document.to_marc) %>
     <% if series.present? %>
       <dt>Series</dt>

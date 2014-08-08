@@ -1,0 +1,9 @@
+:id: 43
+:title_display: Best Album Every Written
+:author_person_full_display: McDonald, Ronald
+:display_type:
+  - sirsi
+:format: music
+:format_main_ssim: Music
+:marcxml: <%= marc_382_instrumentation %>
+:pub_date: 2008
