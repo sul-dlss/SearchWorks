@@ -14,7 +14,33 @@ module CJKQuery
   def add_cjk_params_logic
     if self.class.respond_to?(:solr_search_params_logic)
       self.class.solr_search_params_logic << :modify_params_for_cjk
+      self.class.solr_search_params_logic << :modify_params_for_cjk_advanced
     end
+  end
+
+  def modify_params_for_cjk_advanced(solr_params, user_params)
+    if user_params.present? && !(solr_params[:q] =~ /_cjk/)
+      modifiable_params_keys.each do |param|
+        if user_params[param]
+          if cjk_unigrams_size(user_params[param]) > 0
+            cjk_local_params = cjk_mm_qs_params(user_params[param])
+            if param == 'search'
+              solr_params[:q].gsub!("pf2=$p2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
+            else
+              stripped_param = modify_field_key_for_cjk(param)
+              if cjk_local_params.present?
+                solr_params[:q].gsub!(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{user_params[param]}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + user_params[param])
+              end
+              solr_params[:q].gsub!(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
+            end
+          end
+        end
+      end
+    end
+  end
+
+  def modify_field_key_for_cjk(field_key)
+    field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')
   end
 
   def modify_params_for_cjk(solr_params,user_params)
@@ -28,19 +54,28 @@ module CJKQuery
       if number_of_unigrams > 0
         case user_params[:search_field]
           when 'search', nil
-            solr_params[:q] = "{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"
+            #solr_params[:q] = "{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"
+            solr_params[:q] = cjk_qf_pf_params(nil, q_str)
           when 'search_title'
-            solr_params[:q] = "{!qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk}#{q_str}"
+            solr_params[:q] = cjk_qf_pf_params('title', q_str)
           when 'search_author'
-            solr_params[:q] = "{!qf=$qf_author_cjk pf=$pf_author_cjk pf3=$pf3_author_cjk pf2=$pf2_author_cjk}#{q_str}"
+            solr_params[:q] = cjk_qf_pf_params('author', q_str)
           when 'search_series'
-            solr_params[:q] = "{!qf=$qf_series_cjk pf=$pf_series_cjk pf3=$pf3_series_cjk pf2=$pf2_series_cjk}#{q_str}"
+            solr_params[:q] = cjk_qf_pf_params('series', q_str)
           when 'subject_terms'
-            solr_params[:q] = "{!qf=$qf_subject_cjk pf=$pf_subject_cjk pf3=$pf3_subject_cjk pf2=$pf2_subject_cjk}#{q_str}"
+            solr_params[:q] = cjk_qf_pf_params('subject', q_str)
           # do not change for  author_title, call_number or advanced
         end
       end
     end
+  end
+
+  def cjk_qf_pf_params(field, query)
+    "{!#{cjk_field('qf', field)} #{cjk_field('pf', field)} #{cjk_field('pf3', field)} #{cjk_field('pf2', field)}}#{query}"
+  end
+
+  def cjk_field(kind, field)
+    "#{kind}=$#{[kind, field, 'cjk'].compact.join('_')}"
   end
 
   def cjk_unigrams_size(str)
