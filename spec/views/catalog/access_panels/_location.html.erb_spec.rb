@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe "catalog/access_panels/_location.html.erb", js:true do
+  include MarcMetadataFixtures
   describe "non location record" do
     before do
       assign(:document, SolrDocument.new)
@@ -19,6 +20,23 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css(".library-location-heading-text a", text: "Earth Sciences Library (Branner)")
       expect(rendered).to have_css("div.location-hours-today")
       expect(rendered).to have_css(".panel-body")
+    end
+  end
+  describe "bound with locations" do
+    before do
+      assign(:document, SolrDocument.new(
+        id: '1234',
+        item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
+        marcxml: linked_ckey_fixture
+      ))
+      render
+    end
+    it "should display the MARC 590 as a bound with note" do
+      expect(rendered).to have_css('p.bound-with-note.note-highlight', text: 'Copy 1 bound with v. 140 55523 (parent record’s ckey)')
+      expect(rendered).to have_css('p.bound-with-note.note-highlight a', text: '55523')
+    end
+    it "should not display request links for requestable libraries" do
+      expect(rendered).to_not have_content("Request")
     end
   end
   describe "status text" do
@@ -88,8 +106,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       it "should include the matched MHLD" do
         expect(rendered).to have_css('h3 a', text: "Green Library", count: 1)
         expect(rendered).to have_css('li .location-name', text: "Stacks", count: 1)
-        expect(rendered).to have_css('ul.items li.mhld.public-note', text: "public note")
-        expect(rendered).to have_css('ul.items li.mhld', text: "Latest: latest received")
+        expect(rendered).to have_css('ul.items li.mhld', text: "public note")
+        expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
         expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
         expect(rendered).to have_css('ul.items li', text: "ABC 123")
       end
@@ -105,8 +123,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       it "should invoke a library block w/ the appropriate mhld data" do
         expect(rendered).to have_css('h3 a', text: "Green Library")
         expect(rendered).to have_css('li .location-name', text: "Stacks")
-        expect(rendered).to have_css('ul.items li.mhld.public-note', text: "public note")
-        expect(rendered).to have_css('ul.items li.mhld', text: "Latest: latest received")
+        expect(rendered).to have_css('ul.items li.mhld', text: "public note")
+        expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
         expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
       end
     end

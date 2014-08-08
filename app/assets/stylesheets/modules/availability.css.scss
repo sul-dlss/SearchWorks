@@ -1,0 +1,9 @@
+.availability {
+  .note-highlight {
+    padding: 2px 5px;
+    background-color: $public-note-yellow;
+    &.bound-with-note {
+      margin-left: 10px;
+    }
+  }
+}

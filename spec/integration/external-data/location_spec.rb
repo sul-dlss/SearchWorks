@@ -43,4 +43,22 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
   end
+  describe "bound with items" do
+    before do
+      visit catalog_path('796463')
+    end
+    it "should not show request links for requstable libraries" do
+      within('.availability') do
+        expect(page).to_not have_content('Request')
+      end
+    end
+    it "should show the MARC 590 note in the availability display" do
+      within('.availability') do
+        expect(page).to have_css('.bound-with-note.note-highlight', text: "Copy 1 bound with 1967, pt. 1. 796443(parent record's ckey)")
+        expect(page).to have_css('.bound-with-note.note-highlight a', text:"796443")
+        click_link '796443'
+      end
+      expect(page).to have_css('h1', text: /Der Urheberschutz wissenschaftlicher/)
+    end
+  end
 end

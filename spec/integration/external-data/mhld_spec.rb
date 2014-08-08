@@ -7,8 +7,8 @@ describe "MHLD", feature: true, :"data-integration" => true do
 
       within('.access-panel.panel-library-location') do
         expect(page).to have_css('li.mhld', text: 'Library has: v.1(1985)-v.20(2012)')
-        expect(page).to have_css('li.mhld.public-note', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
-        expect(page).to have_css('li.mhld', text: 'Latest: v.21:no.4 (2013)')
+        expect(page).to have_css('li.mhld', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
+        expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: v.21:no.4 (2013)')
         expect(page).to have_css('li.mhld', text: 'Library has: v.21(2013)-')
       end
     end
@@ -22,8 +22,8 @@ describe "MHLD", feature: true, :"data-integration" => true do
         within('.accordion-section.location') do
           find('a.header').click
           expect(page).to have_css('tr th strong', text: 'Current Periodicals')
-          expect(page).to have_css('tr th .public-note', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
-          expect(page).to have_css('tr td', text: 'Latest: v.21:no.4 (2013)')
+          expect(page).to have_css('tr th', text: 'Latest issues in CURRENT PERIODICALS; earlier issues in STACKS.')
+          expect(page).to have_css('tr td .note-highlight', text: 'Latest: v.21:no.4 (2013)')
         end
 
       end

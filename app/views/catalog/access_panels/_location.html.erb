@@ -20,18 +20,28 @@
               <li>
                 <strong class="location-name"><%= location.name %></strong>
                 <% if location.items.present? %>
-                  <% if library.location_level_request? || location.location_level_request? %>
-                    <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                  <% if location.bound_with? && document.respond_to?(:to_marc) %>
+                    <p class="bound-with-note note-highlight">
+                      <% if (bound_with_note = get_data_with_label_from_marc(document.to_marc,"Note", '590')).present? %>
+                        <%= bound_with_note[:fields].map do |note|
+                              note[:field]
+                            end.join.html_safe %>
+                      <% end %>
+                    </p>
+                  <% else %>
+                    <% if library.location_level_request? || location.location_level_request? %>
+                      <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                    <% end %>
                   <% end %>
                 <% end %>
                 <ul class="list-unstyled items">
                   <% if location.mhld.present? %>
                     <% location.mhld.each do |mhld| %>
                       <% if mhld.public_note.present? %>
-                        <li class='mhld public-note'><%= mhld.public_note.html_safe %></li>
+                        <li class='mhld'><%= mhld.public_note.html_safe %></li>
                       <% end %>
                       <% if mhld.latest_received.present? %>
-                        <li class='mhld'>Latest: <%= mhld.latest_received.html_safe %></li>
+                        <li class='mhld note-highlight'>Latest: <%= mhld.latest_received.html_safe %></li>
                       <% end %>
                       <% if mhld.library_has.present? %>
                         <li class='mhld'>Library has: <%= mhld.library_has.html_safe %></li>

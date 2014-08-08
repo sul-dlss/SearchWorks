@@ -16,7 +16,7 @@
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.public_note.present? %>
-                    <span class='public-note'><%= mhld.public_note %></span>
+                    <%= mhld.public_note %>
                   <% end %>
                 <% end %>
               <% end %>
@@ -25,11 +25,11 @@
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.latest_received.present? %>
-                    Latest: <%= mhld.latest_received%>
+                    <span class='note-highlight'>Latest: <%= mhld.latest_received%></span>
                   <% end %>
                 <% end %>
               <% end %>
-              <% if location.items.present? %>
+              <% if location.items.present? && !location.bound_with? %>
                 <% if library.location_level_request? || location.location_level_request? %>
                   <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs') %>
                 <% end %>

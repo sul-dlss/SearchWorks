@@ -87,6 +87,20 @@ describe "catalog/_index_location.html.erb" do
       expect(rendered).to have_css('tbody tr td.indent-callnumber', count: 2)
     end
   end
+  describe "bound with" do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          id: '123',
+          item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123']
+        )
+      )
+      render
+    end
+    it "should not display request links for requestable libraries" do
+      expect(rendered).to_not have_content("Request")
+    end
+  end
   describe "mhld" do
     describe "with matching library/location" do
       before do

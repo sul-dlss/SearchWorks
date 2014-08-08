@@ -9,6 +9,9 @@ class Holdings
     def name
       Constants::LOCS[@code]
     end
+    def bound_with?
+      @code && @code == "SEE-OTHER"
+    end
     def location_level_request?
       Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code)
     end
