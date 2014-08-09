@@ -9,26 +9,15 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "McRae"
       fill_in "search_title", with: "Jazz"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("7637875")).to_not be_nil
-      expect(docs.index("336046")).to_not be_nil
-      expect(docs.index("9512303")).to_not be_nil
-      expect(docs.index("2130330")).to_not be_nil
+      expect(results_all_on_page(['7637875', '336046', '9512303', '2130330'])).to be_true
     end
     it "Advanced search for author Zukofsky and title 'A' (SW-501)" do
       fill_in "search_author", with: "Zukofsky"
       fill_in "search_title", with: "A"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("9082824")).to_not be_nil
-      expect(docs.index("1398728")).to_not be_nil
-      expect(docs.index("290602")).to_not be_nil
-      expect(docs.index("4515607")).to_not be_nil
-      expect(docs.index("743649")).to_not be_nil
-      expect(docs.index("1209196")).to_not be_nil
-      expect(docs.index("2767209")).to_not be_nil
-      expect(docs.index("2431848")).to_not be_nil
-      expect(docs.index("857890")).to_not be_nil
+      expect(results_all_on_page([
+        "9082824", "1398728", "290602", "4515607", "743649", "1209196", "2767209", "2431848", "857890"
+      ])).to be_true
     end
   end
   describe "Facet searching" do
@@ -38,18 +27,14 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 4000000)).to be_true
-      end
+      expect(total_results).to be > 4000000
     end
   end
   describe "No facet searching" do
     it "should return at least 500 results" do
       fill_in "search_title", with: "something"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 500)).to be_true
-      end
+      expect(total_results).to be >= 500
     end
   end
   describe "All fields ANDed filled in plus facets" do
@@ -63,7 +48,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      expect(page).to have_css("div.document", count: 1)
+      expect(total_results).to eq 1
       # NOTE: currently only matches 1 doc same as old sw in prod, but old integration
       # tests incorrectly say to match at least 5 books
     end
@@ -80,17 +65,14 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 100000)).to be_true
-      end
+      expect(total_results).to be > 100000
     end
   end
   describe "Publisher search" do
     it "should return results only if there is a match in the publisher" do
       fill_in "pub_search", with: "NEW MEXICO"
       click_on 'advanced-search-submit'
-      expect(greater_than_integer(page.find("h2", text: number_pattern).text, 8000)).to be_true
-      expect(less_than_integer(page.find("h2", text: number_pattern).text, 9000)).to be_true
+      expect((8000..9000)).to include total_results
     end
   end
   describe "Advanced search sorting" do
@@ -114,8 +96,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return title" do
       select "year (old to new)", from: "sort"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("4819125")).to be < 5
+      expect(document_index("4819125")).to be < 5
     end
   end
   describe "NOT as first word queries" do
@@ -132,9 +113,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should get at most 2,000,000" do
       fill_in "search", with: "NOT p"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 2000000)).to be_true
-      end
+      expect(total_results).to be <= 2000000
     end
   end
   describe "NOT in the middle of query terms" do
@@ -144,10 +123,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "advanced-search-submit"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       # This only checks first page of results
-      expect(docs.index("6865307")).to be_nil
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 1520000)).to be_true
-      end
+      expect(result_on_page("6865307")).to be_false
+      expect(total_results).to be < 1520000
     end
   end
   describe "Hyphen as NOT queries" do
@@ -165,9 +142,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search", with: "IEEE Xplore"
       fill_in "subject_terms", with: "-Congresses"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 1500)).to be_true
-      end
+      expect(total_results).to be < 1500
     end
   end
   describe "OR query" do
@@ -179,78 +154,57 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_button "20 per page"
       click_link "100"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 225)).to be_true
-      end
-      expect(docs.index("6746743")).to_not be_nil
-      expect(docs.index("6747313")).to_not be_nil
+      expect(total_results).to be >= 225
+      expect(results_all_on_page(['6746743', '6747313'])).to be_true
     end
   end
   describe "nossa OR nuestra america (SW-939)" do
     it "should return at least 400 results" do
       fill_in "search_title", with: "nossa OR nuestra america"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 400)).to be_true
-      end
+      expect(total_results).to be > 400
     end
   end
   describe "color OR colour photography (SW-939)" do
     it "should return at least 80 results" do
       fill_in "search_title", with: "color OR colour photography"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 80)).to be_true
-      end
+      expect(total_results).to be > 80
     end
   end
   describe "AND query" do
     it "should return at least 50 results and these keys in first 5 results" do
       fill_in "search_title", with: "Hello AND Goodbye"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 50)).to be_true
+      expect(total_results).to be <= 50
+      ["6502314","8218325","6314136","2432242"].each do |id|
+        expect(document_index(id)).to be < 5
       end
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("6502314")).to be < 5
-      expect(docs.index("8218325")).to be < 5
-      expect(docs.index("6314136")).to be < 5
-      expect(docs.index("2432242")).to be < 5
     end
   end
   describe "AND and OR query nabokov OR hofstadter AND pushkin" do
-    it "should return at most 3 results and this key" do
+    it "should return at most 10 results and this key" do
       fill_in "search_author", with: "nabokov OR hofstadter AND pushkin"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 4)).to be_true
-      end
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("4076380")).to_not be_nil
+      expect(total_results).to be <= 10
+      expect(result_on_page('4076380')).to be_true
     end
   end
   describe "AND and OR query hofstadter OR nabokov AND pushkin" do
     pending "should return at most 3 results and not this key" do
       fill_in "search_author", with: "hofstadter OR nabokov AND pushkin"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 3)).to be_true
-      end
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      expect(total_results).to be > 3
       # TODO: Fails and actually is returned as first result
-      expect(docs.index("4076380")).to be_nil
+      expect(result_on_page('4076380')).to be_false
     end
   end
   describe "AND and OR  (nabokov OR hofstadter) AND pushkin" do
     it "should get between 5 and 7 results" do
       fill_in "search_author", with: "(nabokov OR hofstadter) AND pushkin"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 5)).to be_true
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 7)).to be_true
-      end
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("4076380")).to_not be_nil
+      expect((5..7)).to include total_results
+      expect(result_on_page('4076380')).to be_true
     end
   end
   describe "parenthesis  (Dutch OR Netherlands) AND painting  (VUF-1879)" do
@@ -258,10 +212,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: "(Dutch OR Netherlands) AND painting"
       fill_in "search", with: "trade OR commerce"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 8)).to be_true
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 12)).to be_true
-      end
+      expect((8..12)).to include total_results
     end
   end
   describe "(trade OR commerce) AND painting  (VUF-1879)" do
@@ -269,9 +220,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: "Dutch OR Netherlands"
       fill_in "search", with: "(trade OR commerce) AND painting"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 15)).to be_true
-      end
+      expect(total_results).to be >= 15
     end
   end
   describe "Description Plus Building Facet Value" do
@@ -280,7 +229,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Library"
       check "f_inclusive_building_facet_art-architecture"
       click_on "advanced-search-submit"
-      expect(page).to have_css(".search_num_of_results", text: "1 result")
+      expect(total_results).to eq 1
     end
   end
   describe "Title Plus Format Facet Value (SW-326)" do
@@ -289,8 +238,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_journal-periodical"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("365647")).to_not be_nil
+      expect(document_index("365647")).to be_true
     end
   end
   describe "Subject China History Women and language English" do
@@ -299,9 +247,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Language"
       check "f_inclusive_language_english"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 100)).to be_true
-      end
+      expect(total_results).to be >= 100
     end
   end
   describe "Multi-Facet Query" do
@@ -322,9 +268,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("5680298")).to_not be_nil
-      expect(docs.index("8303176")).to be_nil
+      expect(result_on_page('5680298')).to be_true
+      expect(result_on_page('8303176')).to be_false
     end
   end
   describe "Author Title Plus Format Video" do
@@ -334,9 +279,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_video"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
-      expect(docs.index("8303176")).to_not be_nil
-      expect(docs.index("5680298")).to be_nil
+      expect(result_on_page('8303176')).to be_true
+      expect(result_on_page('5680298')).to be_false
     end
   end
   describe "Phrase search: subject 'Home Schooling' and Keyword Socialization VUF-1352" do
@@ -344,9 +288,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "subject_terms", with: '"Home Schooling"'
       fill_in "search", with: "Socialization"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 150)).to be_true
-      end
+      expect(total_results).to be <= 150
     end
   end
   describe "Searches with date ranges" do
@@ -371,10 +313,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "range_pub_year_tisim_begin", with: "1789"
       fill_in "range_pub_year_tisim_end", with: "1800"
       click_on "advanced-search-submit"
-      within ".search_num_of_results" do
-        expect(less_than_integer(page.find("h2", text: number_pattern).text, 5000)).to be_true
-        expect(greater_than_integer(page.find("h2", text: number_pattern).text, 6000)).to be_true
-      end
+      expect((5000..6000)).to include total_results
     end
   end
 end

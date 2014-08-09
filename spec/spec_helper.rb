@@ -80,6 +80,10 @@ def result_on_page id
   !all_docs_on_page.index(id).nil?
 end
 
+def document_index id
+  all_docs_on_page.index(id)
+end
+
 def all_docs_on_page
   page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
 end
