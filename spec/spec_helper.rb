@@ -66,10 +66,24 @@ RSpec.configure do |config|
   config.order = "random"
 end
 
-def greater_than_integer value, integer
-  value.gsub(',', '').to_i > integer ? true : value
+def total_results
+  page.find("h2", text: number_pattern).text.gsub(/\D+/, '').to_i
 end
 
-def less_than_integer value, integer
-  value.gsub(',', '').to_i < integer ? true : value
+def results_all_on_page ids
+  ids.all? do |id|
+    result_on_page id
+  end
+end
+
+def result_on_page id
+  !all_docs_on_page.index(id).nil?
+end
+
+def all_docs_on_page
+  page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+end
+
+def number_pattern
+  /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
 end

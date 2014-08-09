@@ -1,7 +1,5 @@
 require "spec_helper"
 
-number_pattern = /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
-
 describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integration" => true do
   before do
     visit advanced_search_path
