@@ -6,7 +6,7 @@
       <span class="hidden-xs hidden-sm">
         <%= render_view_type_group_icon document_index_view_type %>
       </span>
-      <%= t('blacklight.search.view.label', :field =>current_sort_field.label).html_safe %>
+      <%= t('blacklight.search.view.label').html_safe %>
       <span class="caret"></span>
     </button>
 
@@ -14,6 +14,9 @@
       <%  document_index_views.each do |view, config| %>
       <li>
         <%= link_to url_for(params.merge(:view => view)), :title => t("blacklight.search.view_title.#{view}", default: t("blacklight.search.view.#{view}", default: blacklight_config.view[view].title)), :class => "view-type-#{ view.to_s.parameterize }" do %>
+          <% if current_view == view.to_s %>
+            <%= t 'blacklight.search.highlight.active_html' %>
+          <% end %>
           <%= render_view_type_group_icon view %>
           <span class="view-type-label"><%= t("blacklight.search.view.#{view}") %></span>
         <% end %>
