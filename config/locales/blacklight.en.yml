@@ -37,6 +37,8 @@ en:
         no_items_found: "<h2>No results found in catalog</h2>"
       entry_pagination_info:
         other: '%{current} of %{total}'
+      highlight:
+        active_html: '<i class="fa fa-check active-icon"></i>'
     bookmarks:
       add:
         all_html: '<i class="fa fa-check-square-o"></i> <span class="hidden-sm hidden-xs">Select </span>all'
