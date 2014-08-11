@@ -10,7 +10,13 @@ describe Holdings::Library do
       Holdings::Callnumber.new("barcode -|- library -|- home-loc2 -|- "),
       Holdings::Callnumber.new("barcode -|- library -|- home-loc -|- ")
     ] }
+    let(:sort_callnumbers) { [
+      Holdings::Callnumber.new("barcode -|- library -|- TINY -|- "),
+      Holdings::Callnumber.new("barcode -|- library -|- STACKS -|- "),
+      Holdings::Callnumber.new("barcode -|- library -|- CURRENTPER -|- ")
+    ] }
     let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
+    let(:sort_locations) { Holdings::Library.new("GREEN", sort_callnumbers).locations }
     it "should return an array of Holdings::Locations" do
       expect(locations).to be_a Array
       locations.each do |location|
@@ -21,6 +27,10 @@ describe Holdings::Library do
       expect(callnumbers.length).to eq 3
       expect(locations.length).to eq 2
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
+    end
+    it "should sort locations alpha by name" do
+      expect(sort_locations.map(&:name)).to eq ["Current Periodicals", "Miniature", "Stacks"]
+      expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "TINY", "STACKS"]
     end
   end
   describe "#present?" do

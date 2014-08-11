@@ -4,7 +4,7 @@ class Holdings
     attr_accessor :mhld
     def initialize(code, items=[])
       @code = code
-      @items = items
+      @items = items.sort_by(&:full_shelfkey)
     end
     def name
       Constants::LOCS[@code]

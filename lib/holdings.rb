@@ -31,6 +31,7 @@ class Holdings
         Holdings::Library.new(library, items)
       end
       append_mhld(:library, @libraries, Holdings::Library)
+      @libraries.sort_by!(&:sort)
     end
     @libraries
   end
