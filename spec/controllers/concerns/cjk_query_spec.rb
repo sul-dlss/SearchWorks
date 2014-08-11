@@ -4,12 +4,60 @@ require "spec_helper"
 
 describe CJKQuery do
   let(:controller) { double('CatalogController') }
+  let(:cjk_mm) { '3<86%' }
+  let(:q_str) { '舊小說' }
   before do
     controller.extend(CJKQuery)
   end
+  describe "modify_params_for_cjk_advanced" do
+    let(:user_params) { {'search' => q_str, 'search_title' => q_str,'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str} }
+    let(:solr_params) { {q: solr_q} }
+    let(:local_params) { "mm=#{cjk_mm} qs=0" }
+    before do
+      controller.stub(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
+      controller.send(:modify_params_for_cjk_advanced, solr_params, user_params)
+    end
+    describe "unprocessed" do
+      let(:solr_q) {"_query_:\"{!edismax pf2=$p2 pf3=$pf3}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_series pf=$pf_series pf3=$pf3_series pf2=$pf2_series}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_pub_info pf=$pf_pub_info pf3=$pf3_pub_info pf2=$pf2_pub_info}#{q_str}\" AND
+                     _query_:\"{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}\""}
+
+      it "should handle the non-fielded pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk #{local_params} }#{q_str}"
+      end
+      it "should handle title pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
+      end
+      it "should handle author pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_author_cjk pf=$pf_author_cjk pf3=$pf3_author_cjk pf2=$pf2_author_cjk #{local_params} }#{q_str}"
+      end
+      it "should handle subject pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_subject_cjk pf=$pf_subject_cjk pf3=$pf3_subject_cjk pf2=$pf2_subject_cjk #{local_params} }#{q_str}"
+      end
+      it "should handle series pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_series_cjk pf=$pf_series_cjk pf3=$pf3_series_cjk pf2=$pf2_series_cjk #{local_params} }#{q_str}"
+      end
+      it "should handle pub_info pf/qf" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_pub_info_cjk pf=$pf_pub_info_cjk pf3=$pf3_pub_info_cjk pf2=$pf2_pub_info_cjk #{local_params} }#{q_str}"
+      end
+      it "should not do anything w/ the number qf/pf" do
+        expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
+      end
+    end
+    describe "pre-processed" do
+      let(:solr_q) { "_query_:\"{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}\"" }
+      it "should not try to append _cjk onto already processed solr params logic" do
+        expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
+        expect(solr_params[:q]).to_not include "_cjk_cjk"
+      end
+    end
+  end
+  
   describe "cjk_query_addl_params" do
-    let(:cjk_mm) { '3<86%' }
-    let(:q_str) { '舊小說' }
     it "should leave unrelated solr params alone" do
       user_params = {:q => '舊小說', :search_field => 'search_title'}
       my_solr_params = {'key1'=>'val1', 'key2'=>'val2'}

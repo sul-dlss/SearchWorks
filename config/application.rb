@@ -24,7 +24,7 @@ module SearchWorks
     require 'holdings'
     require 'live_lookup'
     require 'search_query_modifier'
-
+    require 'blacklight_advanced_search/parsing_nesting_parser'
     # load all access panels
     config.autoload_paths += %W(#{config.root}/lib/access_panels)
 
