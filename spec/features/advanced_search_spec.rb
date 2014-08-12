@@ -49,4 +49,14 @@ feature "Advanced Search" do
       end
     end
   end
+  scenario "simple search should work normally" do
+    fill_in 'q', with: "A search"
+    click_button 'search'
+
+    within('.breadcrumb') do
+      expect(page).to have_content("You searched for: A search")
+    end
+
+    expect(page).to_not have_content("Advanced search")
+  end
 end
