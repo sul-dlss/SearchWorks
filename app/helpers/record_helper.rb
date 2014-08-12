@@ -6,7 +6,7 @@ module RecordHelper
 
   def mods_display_content values
     Array[values].flatten.map do |value|
-      content_tag(:dd, link_urls_and_email(value).html_safe)
+      content_tag(:dd, link_urls_and_email(value).html_safe) if value.present?
     end.join.html_safe
   end
 

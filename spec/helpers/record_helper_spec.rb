@@ -16,6 +16,9 @@ describe RecordHelper do
     it "should return multiple dd elements when a multi-element array is passed" do
       expect(helper.mods_display_content(["hello", "there"])).to have_css("dd", count: 2)
     end
+    it "should handle nil values correctly" do
+      expect(helper.mods_display_content(['something', nil])).to have_css("dd", count: 1)
+    end
   end
 
   describe "mods_record_field" do
