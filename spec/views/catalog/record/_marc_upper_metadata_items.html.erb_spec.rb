@@ -47,4 +47,17 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
       expect(rendered).to have_css('dd', text: 'SubfieldA SubfieldB')
     end
   end
+  describe "Instrumentation (Marc 382)" do
+    before do
+      assign(:document, SolrDocument.new(marcxml: marc_382_instrumentation))
+      render
+    end
+    it "should be rendered and include specific dts/dds" do
+      expect(rendered).to have_css('dt', text: 'Instrumentation')
+      expect(rendered).to have_css('dd', text: 'singer (1), doubling bass guitar (2), percussion (1), guitar (1), doubling electronics (1)')
+      expect(rendered).to have_css('dd', text: 'singer (3)')
+      expect(rendered).to have_css('dt', text: 'Partial instrumentation')
+      expect(rendered).to have_css('dd', text: 'cowbell')
+    end
+  end
 end
