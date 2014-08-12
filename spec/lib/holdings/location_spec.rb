@@ -9,7 +9,7 @@ describe Holdings::Location do
   end
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
-    let(:location_with_items) { Holdings::Location.new("STACKS", ['abc']) }
+    let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')]) }
     it "should be true when there are items" do
       expect(location_with_items).to be_present
     end
@@ -32,6 +32,17 @@ describe Holdings::Location do
         location_no_items_or_mhld.mhld = [mhld]
         expect(location_no_items_or_mhld).to be_present_on_index
       end
+    end
+  end
+  describe "sorting items" do
+    let(:callnumbers) { [
+      Holdings::Callnumber.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),
+      Holdings::Callnumber.new("barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- "),
+      Holdings::Callnumber.new("barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ")
+    ] }
+    let(:location) { Holdings::Location.new("STACKS", callnumbers) }
+    it "should sort items by the full shelfkey" do
+      expect(location.items.map(&:callnumber)).to eq ["ABC 100", "ABC 210", "ABC 321"]
     end
   end
   describe "#bound_with?" do

@@ -16,6 +16,7 @@ class Holdings
           Holdings::Location.new(location_code, items)
         end
         append_mhld(:location, @locations, Holdings::Location)
+        @locations.sort_by!(&:name)
       end
       @locations
     end
@@ -31,6 +32,13 @@ class Holdings
     end
     def location_level_request?
       Constants::REQUEST_LIBS.include?(@code)
+    end
+    def sort
+      if @code == "GREEN"
+        '0'
+      else
+        name
+      end
     end
   end
 end

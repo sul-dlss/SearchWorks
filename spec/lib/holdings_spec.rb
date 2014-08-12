@@ -66,9 +66,24 @@ describe Holdings do
         )
       )
     }
+    let(:sortable_libraries) {
+      Holdings.new(
+        SolrDocument.new(
+          item_display: [
+            'barcode -|- SAL3 -|- home-location',
+            'barcode -|- GREEN -|- home-location',
+            'barcode -|- BIOLOGY -|- home-location'
+          ]
+        )
+      )
+    }
     it "should group by library" do
       expect(libraries.libraries.length).to eq 2
       expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
+    end
+    it "should sort Green first then the rest alpha" do
+      expect(sortable_libraries.libraries.length).to eq 3
+      expect(sortable_libraries.libraries.map(&:code)).to eq ['GREEN', 'BIOLOGY', 'SAL3']
     end
   end
   describe "#browsable_callnumbers" do
