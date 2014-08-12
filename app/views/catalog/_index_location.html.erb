@@ -13,6 +13,7 @@
           <tr>
             <th scope='col'>
               <strong><%= location.name%></strong>
+              <%= render partial: "catalog/stackmap_link", locals: { document: document } %>
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.public_note.present? %>

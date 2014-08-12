@@ -55,6 +55,11 @@ en:
       cite_entries: 'Cite %{current_range}'
       send_to_html: 'Send %{current_range} to <span class="caret"></span>'
       librarian_view: 'Librarian view'
+      find_it: '<i class="fa fa-map-marker"></i> Find it'
+      stackmap:
+        zoom_in: '<i class="fa fa-plus-circle"></i><span class="hidden-xs"> Zoom in</span>'
+        zoom_out: '<i class="fa fa-minus-circle"></i><span class="hidden-xs">  Zoom out</span>'
+        reset_size: '<i class="fa fa-compress"></i><span class="hidden-xs">  Reset size</span>'
   views:
     pagination_compact:
       next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'

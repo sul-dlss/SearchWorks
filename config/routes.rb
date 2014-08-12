@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get "view/:id" => "catalog#show", :as => :catalog
   get "view/:id" => "catalog#show", :as => :solr_document
-  get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
+  get "view/:id/librarian_view" => "catalog#librarian_view", :as => :librarian_view
+  get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
   post "catalog/sms" => 'catalog#sms' # we can remove when we upgrade to Blacklight > 5.5.2
 
   blacklight_for(:catalog)
