@@ -4,6 +4,10 @@ class SearchQueryModifier
     @config = config
   end
 
+  def present?
+    has_filters_and_query? || fielded_search? || query_has_stopwords?
+  end
+
   def params_without_stopwords
     @params.merge(q: query_without_stopwords)
   end
@@ -15,15 +19,11 @@ class SearchQueryModifier
   end
 
   def params_without_fielded_search_and_filters
-    @params.merge(search_field: nil, f: nil)
+    @params.merge(search_field: nil, f: nil, range: nil)
   end
 
   def params_without_fielded_search
     @params.merge(search_field: nil)
-  end
-
-  def query_search?
-    @params[:q].present?
   end
 
   def fielded_search?
@@ -33,19 +33,19 @@ class SearchQueryModifier
   end
 
   def params_without_filters
-    @params.merge(f: nil)
+    @params.merge(f: nil, range: nil)
   end
 
   def selected_filter_labels
     if has_filters?
       @config.facet_fields.values.map do |facet|
-        "#{facet.label}: #{@params[:f][facet.field].join(', ')}" if @params[:f][facet.field].present?
+        "#{facet.label}: #{@params[:f][facet.field].join(', ')}" if @params[:f].present? && @params[:f][facet.field].present?
       end.compact.join(', ')
     end
   end
 
   def has_filters?
-    @params[:f].present?
+    @params[:f].present? || @params[:range].present?
   end
 
   def has_query?
@@ -57,6 +57,10 @@ class SearchQueryModifier
   end
 
   private
+
+  def has_filters_and_query?
+    has_filters? && has_query?
+  end
 
   def query_without_stopwords
     if has_query?

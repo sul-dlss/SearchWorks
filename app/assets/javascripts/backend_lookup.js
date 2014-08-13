@@ -37,16 +37,38 @@ Blacklight.onLoad(function(){
     Plugin.prototype = {
 
         init: function() {
-          $url = $(this.element).data('lookup');
-          this.lookupResults();
+          var el = this;
+          $url = $(el.element).data('lookup');
+          if(el.onScreen()){
+            el.lookupResults();
+          } else {
+            $(document).on('scroll', function(){
+              if(el.onScreen()){
+                el.lookupResults();
+              }
+            });
+          }
+        },
+        onScreen: function(){
+          var el = $(this.element);
+          var viewport = {};
+          viewport.top = $(window).scrollTop();
+          viewport.bottom = viewport.top + $(window).height();
+          var bounds = {};
+          bounds.top = el.offset().top;
+          bounds.bottom = bounds.top + el.outerHeight();
+          return ((bounds.top <= viewport.bottom) && (bounds.bottom >= viewport.top));
         },
         lookupResults: function(){
           var el = this.element;
-          $.getJSON($url, function(data){
-            $response = data.response;
-            $total_count = $response.pages.total_count;
-            updateLink($total_count, el);
-          });
+          if(!$(el).data(pluginName + '_processed')) {
+            $(el).data(pluginName + '_processed', true);
+            $.getJSON($url, function(data){
+              $response = data.response;
+              $total_count = $response.pages.total_count;
+              updateLink($total_count, el);
+            });
+          }
         }
     };
 
