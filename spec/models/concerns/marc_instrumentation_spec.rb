@@ -12,6 +12,6 @@ describe MarcInstrumentation do
   end
   it 'should return SearchWorksMarc::Instrumentation for document with 382 field' do
     document = SolrDocument.new(marcxml: marc_382_instrumentation)
-    expect(document.marc_instrumentation.class).to eq SearchWorksMarc::Instrumentation
+    expect(document.marc_instrumentation.class).to eq Instrumentation
   end
 end

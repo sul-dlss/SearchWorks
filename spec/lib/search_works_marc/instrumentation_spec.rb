@@ -5,7 +5,7 @@ describe Instrumentation do
 
   describe 'initialize' do
     let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
-    let(:instrumentation) { SearchWorksMarc::Instrumentation.new(document) }
+    let(:instrumentation) { Instrumentation.new(document) }
     it 'should be type Instrumentation' do
       expect(instrumentation.class).to eq Instrumentation
     end
@@ -17,7 +17,7 @@ describe Instrumentation do
   end
   describe 'parse_marc_record' do
     let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
-    let(:instrumentation) { SearchWorksMarc::Instrumentation.new(document) }
+    let(:instrumentation) { Instrumentation.new(document) }
     it 'should return an array' do
       expect(instrumentation.parse_marc_record.class).to eq Array
     end
