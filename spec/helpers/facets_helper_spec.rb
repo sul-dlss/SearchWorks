@@ -22,6 +22,16 @@ describe FacetsHelper do
       expect(helper.send(:render_single_facet, "this_facet", options)).to eq "a-partial"
     end
   end
+  describe "#collapse_home_page_facet?" do
+    let(:collapse_facet) { OpenStruct.new(field: 'building_facet') }
+    let(:non_collapse_facet) { OpenStruct.new(field: 'other_facet') }
+    it "should identify building_facet to be collapsed on the home page" do
+      expect(collapse_home_page_facet?(collapse_facet)).to be_true
+    end
+    it "should identify other facets to not be collapsed on the home page" do
+      expect(collapse_home_page_facet?(non_collapse_facet)).to be_false
+    end
+  end
   describe "#remove_range_param" do
     it "should delete range key" do
       params = {"range" => {test: "123"}, "stuff" => "stuff"}
