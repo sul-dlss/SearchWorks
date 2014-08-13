@@ -3,6 +3,10 @@ module FacetsHelper
   include BlacklightRangeLimit::ViewHelperOverride
 
 
+  def collapse_home_page_facet?(facet)
+    facet.field == 'building_facet'
+  end
+
   def render_single_facet(facet_name, options={})
     facet = @response.facets.find do |facet|
       facet.name == facet_name

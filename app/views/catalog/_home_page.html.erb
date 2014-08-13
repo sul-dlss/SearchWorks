@@ -2,68 +2,72 @@
 
 <h1 class="sr-only">SearchWorks</h1>
 
-<div class="row features">
-  <h2 class="sr-only">Features</h2>
-
-  <div class="col-xs-4 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag('digital-collections.jpg', alt: "", title: '"Cesar Chavez, Friday night meeting at Filipino Hall, Delano CA organizing briefing, 1970." Fitch, Bob (Photographer)', data: { "no-link-href" => catalog_index_path(collections_search_params) }) %>
-      <div class="caption">
-        <h3><%= link_to "Digital collections", catalog_index_path(collections_search_params) %></h3>
-        <p class="hidden-xs">Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xs-4 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag('dissertations-theses.png', alt: "", title: '', data: { "no-link-href" => catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
-      <div class="caption">
-        <h3><%= link_to "Dissertations & theses", catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h3>
-        <p class="hidden-xs">Dissertations and theses in Stanford's collections.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xs-4 col-md-3">
-    <div class="thumbnail">
-      <%= image_tag('selected-databases.png', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
-      <div class="caption">
-        <h3><%= link_to "Selected databases",  selected_databases_path %></h3>
-        <p class="hidden-xs">Not sure where to start? Find articles and reference information by discipline.</p>
-      </div>
-    </div>
-  </div>
+<div class="col-md-4 col-sm-6 home-page-facets home-page-column" data-home-page-facet-collapse='true'>
+  <h2>Find materials by&hellip;</h2>
+  <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
+  <%=
+    render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
+    render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
+  %>
+  <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
 </div>
 
-<div class="col-md-8 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
-  <h2>Limit your search</h2>
-  <div class="col-md-6 col-facets">
-    <%=
-      render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
-      render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
-    %>
-  </div>
-  <div class="col-md-6 col-facets">
-    <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
-    <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
-  </div>
-</div>
-<div class="col-md-4 col-sm-6 home-page-featured">
-  <h2>Searching for articles?</h2>
+<div class="features col-md-5 col-sm-6 home-page-column">
+  <h2>Access points</h2>
   <ul class="media-list">
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "http://xsearch.stanford.edu", class: "pull-left", tabindex: "-1" %>
+      <%= image_tag('digital-collections.jpg', class: 'media-object pull-left', alt: "", title: '"Cesar Chavez, Friday night meeting at Filipino Hall, Delano CA organizing briefing, 1970." Fitch, Bob (Photographer)', data: { "no-link-href" => catalog_index_path(collections_search_params) }) %>
+      <div class="media-body">
+        <%= link_to "Digital collections", catalog_index_path(collections_search_params), class: 'media-heading' %>
+        <p>Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
+      </div>
+    </li>
+    <li class="media">
+      <%= image_tag('dissertations-theses.png', class: 'media-object pull-left', alt: "", title: '', data: { "no-link-href" => catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
+      <div class="media-body">
+        <%= link_to "Dissertations & theses", catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}, class: 'media-heading') %>
+        <p>Dissertations and theses in Stanford's collections.</p>
+      </div>
+    </li>
+
+    <li class="media">
+      <%= image_tag('selected-databases.png', class: 'media-object pull-left', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
+      <div class="media-body">
+        <%= link_to "Selected databases",  selected_databases_path, class: 'media-heading' %>
+        <p>Not sure where to start? Find articles and reference information by discipline.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="articles-help col-md-3 col-sm-6 home-page-column">
+  <h2>Articles</h2>
+  <ul class="media-list">
+    <li class="media">
       <div class="media-body">
         <%= link_to "xSearch", "http://xsearch.stanford.edu", class: "media-heading" %>
         <p>Search for articles in multiple databases simultaneously.</p>
       </div>
     </li>
     <li class="media">
-      <%= link_to image_tag("http://placehold.it/50x50", class: "media-object", alt: ""), "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "pull-left", tabindex: "-1" %>
       <div class="media-body">
-        <%= link_to "eJournals", "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "media-heading" %>
-        <p>Search or browse Stanford's electronic journal holdings by title, subject, and vendor or use the citation linker to retrieve full text with an article.</p>
+        <%= link_to "Citation finder", "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "media-heading" %>
+        <p>Find an article in one of Stanford's ejournal subscriptions.</p>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Help with SearchWorks</h2>
+  <ul class="media-list">
+    <li class="media">
+      <div class="media-body">
+        <%= link_to "SearchWorks basics", "http://library.stanford.edu/guides/searchworks-basics-searching-library-catalog", class: "media-heading" %>
+        <p>Overview of SearchWorks features, including basic search strategies, facets, browsing.</p>
+      </div>
+    </li>
+    <li class="media">
+      <div class="media-body">
+        <%= link_to "Advanced search", "http://library.stanford.edu/guides/searchworks-advanced-search", class: "media-heading" %>
+        <p>How advanced searching works, including Boolean.</p>
       </div>
     </li>
   </ul>

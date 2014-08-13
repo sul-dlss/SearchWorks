@@ -1,39 +1,30 @@
-.home-page-facets h2, .home-page-featured h2 {
+.home-page-column h2 {
   border-bottom: 1px solid $sul-h2-border-color;
   color: $sul-h2-font-color;
 }
 
-.row.features {
-  margin-top: 15px;
-
-  .thumbnail {
-    padding: 0;
-    border-radius: 0;
+.features {
+  .media {
+    img.media-object {
+      max-width: 95px;
+      @media only screen and (max-width: $screen-sm) {
+        max-width: 50px;
+      }
+    }
   }
 }
 
-@media only screen and (min-width : 768px) {
-  .home-page-facets {
-    padding-left: 0;
-
-    .col-facets:first-of-type {
-      padding-left: 0;
-    }
-
-    .col-facets:last-of-type {
+.home-page-column {
+  padding-left: 0;
+  &.articles-help {
+    padding-right: 0;
+  }
+  &.features {
+    @media only screen and (max-width: $screen-md) {
       padding-right: 0;
     }
   }
-
-  .home-page-featured {
+  @media only screen and (max-width: $screen-sm) {
     padding-right: 0;
-  }
-}
-
-@media only screen and (max-width : 768px) {
-  .home-page-facets {
-    .col-facets {
-      padding: 0;
-    }
   }
 }
