@@ -57,14 +57,20 @@ class Holdings
     def full_shelfkey
       item_display[9]
     end
-    def course_id
-      item_display[10]
+    def public_note
+      item_display[10].gsub('.PUBLIC.', '').strip if item_display[10]
     end
-    def reserve_desk
+    def callnumber_type
       item_display[11]
     end
-    def loan_period
+    def course_id
       item_display[12]
+    end
+    def reserve_desk
+      item_display[13]
+    end
+    def loan_period
+      item_display[14]
     end
 
     def status
