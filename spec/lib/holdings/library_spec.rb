@@ -26,6 +26,8 @@ describe Holdings::Library do
     it "should group by home location" do
       expect(callnumbers.length).to eq 3
       expect(locations.length).to eq 2
+    end
+    it "should sort by location code when there is no translation" do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
     it "should sort locations alpha by name" do
