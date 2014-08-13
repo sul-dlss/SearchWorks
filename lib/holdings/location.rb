@@ -21,6 +21,9 @@ class Holdings
     def present_on_index?
       any_items? || any_index_mhlds?
     end
+    def sort
+      name || @code
+    end
     private
     def any_items?
       items.any?(&:present?)

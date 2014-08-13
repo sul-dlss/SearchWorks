@@ -16,7 +16,7 @@ class Holdings
           Holdings::Location.new(location_code, items)
         end
         append_mhld(:location, @locations, Holdings::Location)
-        @locations.sort_by!(&:name)
+        @locations.sort_by!(&:sort)
       end
       @locations
     end
@@ -37,7 +37,7 @@ class Holdings
       if @code == "GREEN"
         '0'
       else
-        name
+        name || @code
       end
     end
   end

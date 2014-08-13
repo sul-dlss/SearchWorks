@@ -79,6 +79,8 @@ describe Holdings do
     }
     it "should group by library" do
       expect(libraries.libraries.length).to eq 2
+    end
+    it "should sort by library code when there is no translation" do
       expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
     end
     it "should sort Green first then the rest alpha" do
