@@ -1,0 +1,6 @@
+<% if show_quick_report? %>
+  <%= form_tag quick_reports_path, method: :post, class:'form-horizontal feedback-form', role:'form' do %>
+    <%= hidden_field_tag(:url, request.referer, class: 'reporting-from-field') %>
+    <button type='submit' class='btn btn-default btn-quick-report'>Report wrong cover image</button>
+  <% end %>
+<% end %>
