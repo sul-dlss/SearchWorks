@@ -2,8 +2,24 @@ require "spec_helper"
 
 describe SearchQueryModifier do
   let(:default_config) { {} }
+  let(:stopwords_query) { SearchQueryModifier.new({q: "And we have stopwords oF THE month", other: 'something'}, default_config) }
+  describe "#present?" do
+    it "should return true when there is a facet and query" do
+      expect(SearchQueryModifier.new({q: "hello", f: {something: ''}}, default_config)).to be_present
+    end
+    it "should return true when the search is fielded" do
+      config = OpenStruct.new(default_search_field: OpenStruct.new(field: 'search') )
+      expect(SearchQueryModifier.new({q: "hello", search_field: 'someting_else'}, config)).to be_present
+    end
+    it "should return true when there are stopwords" do
+      expect(stopwords_query).to be_present
+    end
+    it "should return false when there is only a facet OR query" do
+      expect(SearchQueryModifier.new({q: "hello"}, default_config)).to_not be_present
+      expect(SearchQueryModifier.new({f: {something: ''}}, default_config)).to_not be_present
+    end
+  end
   describe "stopwords" do
-    let(:stopwords_query) { SearchQueryModifier.new({q: "And we have stopwords oF THE month", other: 'something'}, default_config) }
     let(:no_stopwords_query) { SearchQueryModifier.new({q: "This query does not have stopwords", other: 'something'}, default_config) }
     describe "#params_without_stopwords" do
       it "should replace the 'q' parameter in the options with one that doesn't contain stopwords" do
@@ -39,12 +55,12 @@ describe SearchQueryModifier do
         expect(default_fielded_search.fielded_search?).to be_false
       end
     end
-    describe "#query_search?" do
+    describe "#has_query?" do
       it "should return true when a search has a query" do
-        expect(fielded_search.query_search?).to be_true
+        expect(fielded_search.has_query?).to be_true
       end
       it "should return false when a search does not have a query" do
-        expect(no_query_search.query_search?).to be_false
+        expect(no_query_search.has_query?).to be_false
       end
     end
     describe "#params_without_fielded_search" do
@@ -68,10 +84,14 @@ describe SearchQueryModifier do
       end
     }
     let(:filtered_search) { SearchQueryModifier.new({f: {'fieldA' => ['Something'], 'fieldB' => ['Something Else']}, q: 'something'}, facet_config) }
+    let(:ranged_search) { SearchQueryModifier.new({range: {'range_field' => {'begin' => '1234', 'end' => '4321'}}, q: 'something'}, facet_config) }
     let(:no_filter_search) { SearchQueryModifier.new({q: 'something'}, default_config) }
     describe "#has_filters?" do
       it "should return true when a search has filters" do
         expect(filtered_search.has_filters?).to be_true
+      end
+      it "should return true when there is a range" do
+        expect(ranged_search.has_filters?).to be_true
       end
       it "should return false when a search has no filters" do
         expect(no_filter_search.has_filters?).to be_false
@@ -82,10 +102,17 @@ describe SearchQueryModifier do
         expect(filtered_search.params_without_fielded_search[:q]).to eq 'something'
         expect(filtered_search.params_without_filters[:f]).to_not be_present
       end
+      it "should return the parameters hash without a range param" do
+        expect(ranged_search.params_without_fielded_search[:q]).to eq 'something'
+        expect(ranged_search.params_without_filters[:range]).to_not be_present
+      end
     end
     describe "#selected_filter_labels" do
       it "should return labels as a string" do
         expect(filtered_search.selected_filter_labels).to eq "A field: Something, Another field: Something Else"
+      end
+      it "should handle when there is no f parameter" do
+        expect(ranged_search.selected_filter_labels).to eq ''
       end
     end
   end

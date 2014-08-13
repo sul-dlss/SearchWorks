@@ -32,7 +32,6 @@ describe "catalog/_zero_results.html.erb" do
     render
     expect(rendered).to have_css("h3", text: "Check other sources")
     expect(rendered).to have_css("a", text: "Check WorldCat")
-    expect(rendered).to have_css("a", text: "Check articles")
     expect(rendered).to have_css("a", text: "Check library website")
   end
 
