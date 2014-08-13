@@ -3,6 +3,7 @@
   .document {
     @include document;
 
+
     h3.index_title {
       @include h3-index-title-indent;
     }
@@ -33,6 +34,11 @@
   .cursor-pointer {
     cursor: pointer;
   }
+
+  .label-items-online {
+    @include label-items-online;
+  }
+
 }
 
 .document-metadata {

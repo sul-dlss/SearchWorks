@@ -27,7 +27,7 @@ describe CollectionHelper do
       no_collection_doc.stub(:collection_members).and_return([])
     end
     it "should return the correct number of document including the #total" do
-      expect(collection_members_enumeration(document)).to eq "1 - 2 of 5 items online"
+      expect(collection_members_enumeration(document)).to eq "5 items online"
     end
     it "should not return anything if an document does not have collection members" do
       expect(collection_members_enumeration(no_collection_doc)).to be_nil

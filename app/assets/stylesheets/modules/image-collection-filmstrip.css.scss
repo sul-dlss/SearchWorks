@@ -84,7 +84,10 @@
         margin-right: 0;
       }
     }
-
-
   }
+
+  .label-items-online {
+    @include label-items-online;
+  }
+
 }

@@ -7,7 +7,7 @@ describe "Breadcrumb Customizations", type: :feature do
       fill_in 'q', with: '29'
       click_button 'search'
 
-      click_link '1 - 1 of 1 item online'
+      click_link '1 item online'
 
       within('.breadcrumb') do
         expect(page).to have_css('.filterValue', text: 'Image Collection1')

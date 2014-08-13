@@ -1,23 +1,22 @@
 <% document ||= @document %>
 <% if document.collection_members(rows: 3).present? %>
   <div class="file-collection-members">
-    <span class="members-number label label-success">
+    <span class="members-number label label-items-online">
       <%= link_to_collection_members(collection_members_enumeration(document), document) %>
     </span>
     <% document.collection_members.each do |collection_member| %>
       <div class="row file-item">
-        <div class="col-xs-1 file-icon">
-          <%= link_to(image_tag("http://placehold.it/50x50"), catalog_path(collection_member)) %>
+        <div class="col-xs-2 file-icon">
+          <%= render_resource_icon collection_member[collection_member.format_key] %>
         </div>
-        <div class="col-xs-8 file-title">
+        <div class="col-xs-10 file-title">
           <%= link_to(presenter(collection_member).document_heading, catalog_path(collection_member)) %>
           <% if collection_member[:pub_date] %>
             <span class="main-title-date">[<%= collection_member[:pub_date] %>]</span>
           <% end %>
-        </div>
-        <div class="col-xs-3 file-author">
+          <br/>
           <% if collection_member.authors_from_index.present? %>
-            <%= collection_member.authors_from_index.first %>
+            <span class="file-author"><%= collection_member.authors_from_index.first %></span>
           <% end %>
         </div>
       </div>
