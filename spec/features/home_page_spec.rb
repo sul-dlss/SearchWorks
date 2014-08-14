@@ -16,11 +16,12 @@ feature "Home Page" do
     expect(page).to have_css(".media a", text: "Digital collections")
     expect(page).to have_css(".media a", text: "Dissertations & theses")
     expect(page).to have_css(".media a", text: "Selected databases")
+    expect(page).to have_css(".media a", text: "Course reserves")
   end
   scenario "'Featured sets' images should be clickable", js: true do
     within('.features') do
       all('[data-no-link-href]').last.click
-      expect(current_url).to match /#{selected_databases_path}$/
+      expect(current_url).to match /#{course_reserves_path}$/
     end
   end
   scenario "'Articles' section should display" do
