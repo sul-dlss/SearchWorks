@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   blacklight_for(:catalog)
   Blacklight::Marc.add_routes(self)
-  devise_for :users
+  devise_for :users, skip: [:registrations, :passwords, :sessions]
 
   get "databases" => "catalog#index", :defaults => {:f => {:format=>["Database"]}}
 
