@@ -1,0 +1,9 @@
+.record-panels.col-md-4{
+  @extend .col-xs-4;
+}
+.record-sections.col-md-8{
+  @extend .col-xs-8;
+}
+#content.col-sm-7.col-md-8 {
+  @extend .col-xs-12;
+}

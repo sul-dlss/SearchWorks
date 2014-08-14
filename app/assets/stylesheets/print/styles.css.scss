@@ -1,0 +1,91 @@
+.print-header {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  h1 {
+    font-size: floor(($font-size-base * 1.6))
+  }
+  h2 {
+    border: none;
+    font-size: floor(($font-size-base * 1.4))
+  }
+}
+
+.breadcrumb.row {
+  float: left;
+}
+
+#appliedParams {
+  float:left;
+}
+
+.search_num_of_results {
+  margin-top: -45px;
+}
+
+// Do not display these elements
+.navbar, #topnav, #search-navbar-container, #facets, #sortAndPerPage, .record-toolbar, a.remove, .index-document-functions, footer, #sul-footer-container, #global-footer, .additional-results, .pagination, .record-side-nav, .library-location-heading img, .record-browse-nearby, .tech-details a, a.btn, .gallery-buttons, .preview-button-container, .google-preview {
+  display: none !important;
+}
+a[href]:after {
+  content: "";
+}
+
+h3.index_title {
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+a,  a:visited {
+  text-decoration: none; border-bottom: none;
+}
+#documents .document, #documents .brief-document, #documents .gallery-document {
+  border: 0;
+  border-bottom: 1px solid #ddd; margin: 0;
+}
+.gallery .gallery-document {
+  height: 350px;
+}
+.callnumber-bar {
+  font-weight: normal; font-size: 1.1em;
+}
+#appliedParams {
+  padding: 0;
+}
+.constraint-value {
+  border: 0;
+}
+.accordion-section .snippet {
+  display: none;
+}
+.accordion-section .details {
+  display: block !important; border: 0;
+}
+.details dl {
+  margin-bottom: 0;
+}
+.accordion-section a.header {
+  text-align: left; padding-left: 0; font-weight: bold;
+}
+.accordion-section a.header i {
+  display: none;
+}
+.panel-library-location .library-location-heading-text {
+  padding-left: 0;
+}
+.document h1 {
+  margin-top: 0; padding-top: 0;
+}
+.record-sections .section {
+  padding-bottom: 0;
+}
+.panel-heading {
+  padding-left: 0;
+}
+#masthead {
+  border: none;
+}
+#su-content {
+  padding-bottom: 0!important;
+}
