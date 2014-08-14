@@ -21,6 +21,10 @@
   line-height: 1.5em;
 }
 
+@mixin h3-index-title-font {
+  font-family: 'dejavu_sansextralight';
+}
+
 @mixin panel-borders {
   border: 1px solid $sul-panel-border;
 }
