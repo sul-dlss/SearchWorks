@@ -17,6 +17,7 @@
     <%= opensearch_description_tag application_name, opensearch_catalog_path(:format => 'xml', :only_path => false) %>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag "application", media: "all" %>
+    <%= stylesheet_link_tag 'print', media: 'print' %>
     <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" %>
     <%= javascript_include_tag "application" %>
@@ -45,7 +46,7 @@
           <%= render_masthead_partial %>
 
           <%= render partial: 'shared/ajax_modal' %>
-
+          <%= render 'shared/print_header' %>
           <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
