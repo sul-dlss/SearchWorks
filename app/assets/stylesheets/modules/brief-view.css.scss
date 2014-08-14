@@ -2,6 +2,7 @@
   @include document;
 
   h3.index_title {
+    @include h3-index-title-font;
     @include h3-index-title-small-font;
     text-indent: -20px;
   }

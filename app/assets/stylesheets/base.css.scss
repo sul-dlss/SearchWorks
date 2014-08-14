@@ -7,7 +7,7 @@ a {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
 }
 
 a, a:hover, a:focus {
@@ -16,6 +16,7 @@ a, a:hover, a:focus {
 }
 
 h1 {
+  font-family: 'dejavu_sansextralight';
   color: $sul-h1-font-color;
   padding: 10px 0;
 }
