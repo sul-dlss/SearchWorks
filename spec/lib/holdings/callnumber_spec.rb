@@ -2,10 +2,10 @@ require "spec_helper"
 
 describe Holdings::Callnumber do
   let(:complex_item_display) {
-    'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- course_id -|- reserve_desk -|- loan_period'
+    'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period'
   }
   let(:callnumber) { Holdings::Callnumber.new(complex_item_display) }
-  let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :course_id, :reserve_desk, :loan_period] }
+  let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   it "should have an attribute for each piece of the item display field" do
     methods.each do |method|
       expect(callnumber).to respond_to(method)
@@ -63,6 +63,13 @@ describe Holdings::Callnumber do
     end
     it "should replace the home location with the current location" do
       expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- IC-DISPLAY -|-").home_location).to eq "IC-DISPLAY"
+    end
+  end
+  describe "public_note" do
+    let(:public_note) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- .PUBLIC. The Public Note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period') }
+    it "should remove the .PUBLIC. string from the public note field" do
+      expect(public_note.public_note).to eq 'The Public Note'
+      expect(public_note.public_note).to_not include 'PUBLIC'
     end
   end
   describe "reserves" do
