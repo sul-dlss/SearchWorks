@@ -31,4 +31,10 @@ feature 'Course reserves browse', js: true do
 
     expect(page).to have_css('h1', text: 'Browse course reserves')
   end
+  scenario "should be accessible from the home page" do
+    visit root_path
+    click_link "Course reserves"
+    expect(page).to have_css("h1", text: "Browse course reserves")
+  end
+
 end
