@@ -44,6 +44,27 @@ describe RecordHelper do
     end
   end
 
+  describe 'mods_display_content_together' do
+    it 'should return correct content delimited by a semi colon and space' do
+      expect(helper.mods_display_content_together(['hello', 'there'])).to have_css('dd', count: 1, text: 'hello; there')
+    end
+  end
+
+  describe 'mods_language_field' do
+    let(:mods_field)  { OpenStruct.new({label: "test", values: ["hello", "there"]}) }
+    let(:url_field)  { OpenStruct.new({label: "test", values: ["http://library.stanford.edu"]}) }
+    it 'should return correct content' do
+      expect(helper.mods_language_field(mods_field)).to have_css("dt", text: "test")
+      expect(helper.mods_language_field(mods_field)).to have_css("dd", text: "hello; there")
+    end
+    it "should link fields with URLs" do
+      expect(mods_language_field(url_field)).to have_css("a[href='http://library.stanford.edu']", text: "http://library.stanford.edu")
+    end
+    it "should not print empty labels" do
+      expect(helper.mods_language_field(empty_field)).to_not be_present
+    end
+  end
+
   describe "mods_record_field" do
     let(:mods_field)  { OpenStruct.new({label: "test", values: ["hello, there"]}) }
     let(:url_field)  { OpenStruct.new({label: "test", values: ["http://library.stanford.edu"]}) }

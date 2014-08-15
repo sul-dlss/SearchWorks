@@ -87,6 +87,7 @@ module ModsFixtures
         </originInfo>
         <language displayLabel="Lang">
           <languageTerm type="code">eng</languageTerm>
+          <languageTerm type="code">per</languageTerm>
         </language>
         <physicalDescription>
           <note displayLabel="Condition">amazing</note>

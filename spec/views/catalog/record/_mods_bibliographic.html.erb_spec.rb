@@ -22,7 +22,7 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
     it "should display language" do
       render
       expect(rendered).to have_css("dt", text: "Lang")
-      expect(rendered).to have_css("dd", text: "English")
+      expect(rendered).to have_css("dd", text: "English; Persian")
     end
     it "should display audience" do
       render

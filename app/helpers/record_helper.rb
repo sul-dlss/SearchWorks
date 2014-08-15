@@ -19,6 +19,22 @@ module RecordHelper
     end.join('').html_safe
   end
 
+  def mods_language_field field
+    if field.respond_to?(:label, :values) &&
+       field.values.any?(&:present?)
+      mods_display_label(field.label) +
+      mods_display_content_together(field.values)
+    end
+  end
+
+  def mods_display_content_together values
+    linked_values = []
+    Array[values].flatten.map do |value|
+      linked_values.push(link_urls_and_email(value).html_safe) if value.present?
+    end
+    content_tag(:dd, linked_values.join('; ').html_safe)
+  end
+
   def mods_display_label label
     content_tag(:dt, label.gsub(":",""))
   end
