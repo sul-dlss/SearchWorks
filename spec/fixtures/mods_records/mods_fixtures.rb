@@ -86,7 +86,7 @@ module ModsFixtures
           <dateIssued>copyright 2014</dateIssued>
         </originInfo>
         <language displayLabel="Lang">
-          <languageTerm type="text">Esperanza</languageTerm>
+          <languageTerm type="code">eng</languageTerm>
         </language>
         <physicalDescription>
           <note displayLabel="Condition">amazing</note>
@@ -102,10 +102,9 @@ module ModsFixtures
         <note displayLabel="Notez">Pick up milkz</note>
         <relatedItem>
           <titleInfo>
-            <title>The collection of everything</title>
+            The collection of everything
           </titleInfo>
           <identifier type="uri">http://fakeurl.stanford.edu/abc123</identifier>
-          <typeOfResource collection="yes" />
         </relatedItem>
         <identifier type="uri">http://www.myspace.com/myband</identifier>
         <location>

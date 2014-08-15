@@ -2,18 +2,6 @@
   <%= mods_name_field(name) %>
 <% end %>
 
-<% @document.mods.resourceType.each do |resource_type| %>
-  <%= mods_record_field(resource_type) %>
-<% end %>
-
-<% @document.mods.imprint.each do |imprint| %>
-  <%= mods_record_field(imprint) %>
-<% end %>
-
-<% @document.mods.language.each do |language| %>
-  <%= mods_record_field(language) %>
-<% end %>
-
 <% @document.mods.description.each do |description| %>
   <%= mods_record_field(description) %>
 <% end %>

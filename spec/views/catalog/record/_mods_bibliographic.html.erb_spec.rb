@@ -9,6 +9,21 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
     before do
       assign(:document, document)
     end
+    it "should display type" do
+      render
+      expect(rendered).to have_css("dt", text: "Type of resource")
+      expect(rendered).to have_css("dd", text: "Still image")
+    end
+    it "should display imprint" do
+      render
+      expect(rendered).to have_css("dt", text: "Imprint")
+      expect(rendered).to have_css("dd", text: "copyright 2014")
+    end
+    it "should display language" do
+      render
+      expect(rendered).to have_css("dt", text: "Lang")
+      expect(rendered).to have_css("dd", text: "English")
+    end
     it "should display audience" do
       render
       expect(rendered).to have_css("dt", text: "Who?")
@@ -21,10 +36,10 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
       expect(rendered).to have_css("dt", text: "Notez")
       expect(rendered).to have_css("dd", text: "Pick up milkz")
     end
-    pending "should display related item" do
-      # render
-      # expect(rendered).to have_css("dt", text: "Related")
-      # expect(rendered).to have_css("dd", text: "Cat loverz")
+    it "should display related item" do
+      render
+      expect(rendered).to have_css("dt", text: "Related")
+      expect(rendered).to have_css("dd", text: "Cat loverz")
     end
     it "should display identifier" do
       render
