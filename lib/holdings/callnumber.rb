@@ -8,7 +8,7 @@ class Holdings
       !(item_display[1] == "SUL" && item_display[2] == "INTERNET")
     end
     def browsable?
-      item_display[8].present?
+      item_display[8].present? && callnumber_type != 'ALPHANUM'
     end
     def on_order?
       barcode.blank? &&
