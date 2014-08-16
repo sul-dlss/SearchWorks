@@ -4,10 +4,10 @@ feature "Zero results" do
   scenario "should have no results and prompt to search all fields" do
     visit root_url
     fill_in "q", with: "sdfsda"
-    select 'Author', from: 'search_field'
+    select 'Author/Contributor', from: 'search_field'
     click_button 'search'
     within "#content" do
-      expect(page).to have_css("li", text: "Your search: Author: sdfsda")
+      expect(page).to have_css("li", text: "Your search: Author/Contributor: sdfsda")
       expect(page).to have_css("li", text: "Search all fields: All fields: sdfsda")
       expect(page).to have_css("a", text: "All fields: sdfsda")
     end

@@ -22,7 +22,7 @@ feature "Advanced Search" do
         expect(page).to have_css("input#subject_terms")
         expect(page).to have_css("label.control-label", text: "Series title")
         expect(page).to have_css("input#series_search")
-        expect(page).to have_css("label.control-label", text: "Publisher")
+        expect(page).to have_css("label.control-label", text: "Place, publisher, year")
         expect(page).to have_css("input#pub_search")
         expect(page).to have_css("label.control-label", text: "ISBN/ISSN")
         expect(page).to have_css("input#isbn_search")
