@@ -70,6 +70,9 @@
                       <% if item.on_reserve? %>
                         <div class="reserve-note">On Reserve <%= item.loan_period %></div>
                       <% end %>
+                      <% unless item.public_note.blank? %>
+                        <div class='public-note note-highlight'>Note: <%= item.public_note %></div>
+                      <% end %>
                     </li>
                   <% end %>
                 </ul>

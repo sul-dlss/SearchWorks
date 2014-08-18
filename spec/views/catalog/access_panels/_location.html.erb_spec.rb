@@ -204,4 +204,16 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css('.panel-library-location li', text: 'GHI')
     end
   end
+  describe 'public note' do
+    before do
+      assign(:document, SolrDocument.new(
+          id: '123',
+          item_display: ['123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|- -|- this is public']
+        ))
+      render
+    end
+    it 'should render public note' do
+      expect(rendered).to have_css('div.public-note.note-highlight', text: 'Note: this is public')
+    end
+  end
 end
