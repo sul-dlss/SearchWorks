@@ -15,7 +15,7 @@ describe "catalog/_file_collection_members.html.erb" do
     render
   end
   it "should have an icon" do
-    expect(rendered).to have_css('.file-icon img')
+    expect(rendered).to have_css('.file-icon')
   end
   it "should link the title" do
     expect(rendered).to have_css(".file-title a", text: "File Item")

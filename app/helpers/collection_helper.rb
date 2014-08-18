@@ -5,7 +5,7 @@ module CollectionHelper
 
   def collection_members_enumeration(document)
     if document.collection_members.present?
-      "1 - #{document.collection_members.length} of #{pluralize(document.collection_members.total, 'item')} online"
+      "#{pluralize(document.collection_members.total, 'item')} online"
     end
   end
 

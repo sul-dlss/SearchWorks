@@ -1,143 +1,148 @@
-.accordion-section {
-  font-size: small;
-  margin: 0 0 7px 0;
-  padding-left: 0;
+.accordion-sections {
+  margin-bottom: 15px;
+  overflow: auto;
 
-  .header {
-    float: left;
-    border-radius: 2px;
-    color: $white;
-    display: inline-block;
-    margin-right: 1em;
-    cursor: pointer;
-    padding: 2px 10px;
-    border-bottom: none;
-    font-weight: 300;
-    font-size: 0.9em;
-    padding: 0 8px 1px 10px;
-    white-space: nowrap;
-    width: 10.5em;
-    text-align: right;
+  .accordion-section {
+    font-size: small;
+    margin: 0 0 7px 0;
+    padding-left: 0;
 
-    i.fa {
-      padding-left: 4px;
+    .header {
+      float: left;
+      border-radius: 2px;
+      color: $white;
+      display: inline-block;
+      margin-right: 1em;
+      cursor: pointer;
+      padding: 2px 10px;
+      border-bottom: none;
+      font-weight: 300;
+      font-size: 0.9em;
+      padding: 0 8px 1px 10px;
+      white-space: nowrap;
+      width: 10.5em;
+      text-align: right;
+
+      i.fa {
+        padding-left: 4px;
+      }
     }
-  }
 
-  .remove-list-styles {
-    ul, ol {
-      margin-bottom: 0;
+    .remove-list-styles {
+      ul, ol {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  &.summary {
+    &.summary {
+      .snippet {
+        margin-left: 86px;
+        ul {
+          list-style-type: none;
+        }
+      }
+    }
+
     .snippet {
-      margin-left: 86px;
-      ul {
-        list-style-type: none;
-      }
-    }
-  }
-
-  .snippet {
-    color: $sul-mini-accordion-text-color;
-    @extend .remove-list-styles;
-  }
-
-  .details {
-    border-top: 1px solid $sul-document-border-color;
-    border-right: 1px solid $sul-document-border-color;
-    border-bottom: 1px solid $sul-document-border-bottom-color;
-    border-left: 1px solid $sul-document-border-color;
-    display: none;
-    padding: 10px;
-    clear: left;
-    @extend .remove-list-styles;
-  }
-
-  .details:target {
-    display: block;
-  }
-
-}
-
-.accordion-section.summary {
-  .header {
-    background-color: $sul-summary-bg;
-  }
-}
-
-.accordion-section.online {
-  .header {
-    background-color: $sul-access-online-bg;
-    &.selected-database {
-      width: 10.7em;
-    }
-  }
-
-  .details {
-    .links {
-      list-style-type: none;
-      padding-left: 10px;
+      color: $sul-mini-accordion-text-color;
+      @extend .remove-list-styles;
     }
 
-    .google-books {
+    .details {
+      border-top: 1px solid $sul-document-border-color;
+      border-right: 1px solid $sul-document-border-color;
+      border-bottom: 1px solid $sul-document-border-bottom-color;
+      border-left: 1px solid $sul-document-border-color;
       display: none;
-      margin-top: 10px;
+      padding: 10px;
+      clear: left;
+      @extend .remove-list-styles;
+    }
 
-      ul {
+    .details:target {
+      display: block;
+    }
+
+  }
+
+  .accordion-section.summary {
+    .header {
+      background-color: $sul-summary-bg;
+    }
+  }
+
+  .accordion-section.online {
+    .header {
+      background-color: $sul-access-online-bg;
+      &.selected-database {
+        width: 10.7em;
+      }
+    }
+
+    .details {
+      .links {
         list-style-type: none;
-        padding-left: 0px;
-
-        li a {
-          display: none;
-        }
+        padding-left: 10px;
       }
 
-      .btn-preview {
+      .google-books {
         display: none;
+        margin-top: 10px;
 
-        .preview-link {
+        ul {
+          list-style-type: none;
+          padding-left: 0px;
+
+          li a {
+            display: none;
+          }
+        }
+
+        .btn-preview {
           display: none;
+
+          .preview-link {
+            display: none;
+          }
         }
       }
     }
   }
-}
 
-.accordion-section.course-reserves {
-  .header {
-    background-color: $sul-access-course-reserve-bg;
-  }
-
-  .details {
-    dd {
-      margin: 0 0 10px 15px;
-    }
-  }
-}
-
-.accordion-section.location {
-  .header {
-    background-color: $sul-access-location-bg;
-  }
-
-  .location-header {
-    background-color: #eee;
-    padding: 5px;
-    margin: 0;
-  }
-
-  .details {
-    padding: 0;
-
-    .location-column {
-      padding: 10px 25px;
+  .accordion-section.course-reserves {
+    .header {
+      background-color: $sul-access-course-reserve-bg;
     }
 
-    .stackmap-find-it {
-      font-weight: normal;
-      margin-left: 10px;
+    .details {
+      dd {
+        margin: 0 0 10px 15px;
+      }
+    }
+  }
+
+  .accordion-section.location {
+    .header {
+      background-color: $sul-access-location-bg;
+    }
+
+    .location-header {
+      background-color: #eee;
+      padding: 5px;
+      margin: 0;
+    }
+
+    .details {
+      padding: 0;
+
+      .location-column {
+        padding: 10px 25px;
+      }
+
+      .stackmap-find-it {
+        font-weight: normal;
+        margin-left: 10px;
+      }
     }
   }
 }

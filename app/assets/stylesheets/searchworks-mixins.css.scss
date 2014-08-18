@@ -37,3 +37,16 @@
   background-color: $sul-toolbar-bg;
   border-bottom: 3px solid $sul-toolbar-border !important;
 }
+
+@mixin label-items-online {
+  background-color: $sul-access-online-bg;
+  color: $white;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 4px 8px;
+
+  a {
+    border-bottom: none;
+    color: white;
+  }
+}
