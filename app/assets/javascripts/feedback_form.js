@@ -24,7 +24,7 @@ Blacklight.onLoad(function(){
 
     function Plugin( element, options ) {
         this.element = element;
-        var $el, $form, $action;
+        var $el, $form;
 
         this.options = $.extend( {}, options) ;
         this._name = pluginName;
@@ -33,28 +33,26 @@ Blacklight.onLoad(function(){
 
     function submitListener(){
       // Serialize and submit form if not on action url
-      if (location !== $action){
-        $($form).on('submit', function() {
-          var valuesToSubmit = $(this).serialize();
-          $.ajax({
-              url: $action,
+      $form.each(function(i, form){
+        if (location !== form.action){
+          $(form).on('submit', function(){
+            var valuesToSubmit = $(this).serialize();
+            $.ajax({
+              url: form.action,
               data: valuesToSubmit,
               type: 'post'
-          }).success(function(response){
-
-            // On success collapse and reset the feedback form
-            if (isSuccess(response)){
-              $($el).collapse('hide');
-              $($form)[0].reset();
-            }
-
-            renderFlashMessages(response);
-
-
+            }).success(function(response){
+              if (isSuccess(response)){
+                $($el).collapse('hide');
+                $($form)[0].reset();
+              }
+              renderFlashMessages(response);
+            });
+            return false;
           });
-          return false;
-        });
-      }
+
+        }
+      });
     }
 
     function isSuccess(response){
@@ -98,7 +96,6 @@ Blacklight.onLoad(function(){
         init: function() {
           $el = $(this.element);
           $form = $($el).find('form');
-          $action = $($form).attr('action');
           $cancelLink = $($el).find(".cancel-link");
 
           // Replace "Cancel" link with link styled button

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resource :feedback_form, path: "feedback", only: [:new, :create]
 
+  resource :quick_reports, only: [:create]
+
   resources :browse, only: :index
 
   get "browse/nearby" => "browse#nearby"

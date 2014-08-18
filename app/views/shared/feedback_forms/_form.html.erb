@@ -35,9 +35,9 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <%= render "shared/feedback_forms/chat_with_librarian" %>
-      <%= render "shared/feedback_forms/quick_report" %>
-    </div>
   <% end %>
+  <div class="col-sm-4">
+    <%= render "shared/feedback_forms/chat_with_librarian" %>
+    <%= render "shared/quick_reports/form", layout: nil %>
+  </div>
 </div>
