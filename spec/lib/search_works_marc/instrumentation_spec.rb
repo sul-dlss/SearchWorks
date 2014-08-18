@@ -49,4 +49,13 @@ describe Instrumentation do
       end
     end
   end
+  describe 'each' do
+    let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
+    let(:instrumentation) { Instrumentation.new(document) }
+    it 'should return an enumerable object' do
+      instrumentation.each do |record|
+        expect(record).to be_a_kind_of(OpenStruct)
+      end
+    end
+  end
 end
