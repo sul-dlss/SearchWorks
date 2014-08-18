@@ -23,6 +23,9 @@
 
 @mixin h3-index-title-font {
   font-family: 'dejavu_sansextralight';
+  letter-spacing: -.03em;
+  line-height: 1.4em;
+  font-size: 1.3em;
 }
 
 @mixin panel-borders {
