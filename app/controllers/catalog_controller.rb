@@ -187,7 +187,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('search_author') do |field|
-      field.label = "Author"
+      field.label = "Author/Contributor"
       field.solr_local_parameters = {
         :qf  => '$qf_author',
         :pf  => '$pf_author',
@@ -239,7 +239,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field("pub_search") do |field|
-      field.label = "Publisher"
+      field.label = "Place, publisher, year"
       field.include_in_simple_select = false
       field.solr_local_parameters = {
         :qf  => "$qf_pub_info",
@@ -250,7 +250,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field("isbn_search") do |field|
-      field.label = "ISBN/ISSN"
+      field.label = "ISBN/ISSN etc."
       field.include_in_simple_select = false
       field.solr_local_parameters = {
         :qf  => "$qf_number",
