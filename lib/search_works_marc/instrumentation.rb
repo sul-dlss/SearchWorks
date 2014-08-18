@@ -1,8 +1,15 @@
 class Instrumentation < SearchWorksMarc
+  include Enumerable
   def initialize(marc_record)
     @marc_record = remove_fields marc_record
                     .fields
                     .select { |f| f.tag == '382' }
+  end
+
+  def each
+    for record in parse_marc_record
+      yield record
+    end
   end
 
   private
@@ -21,7 +28,7 @@ class Instrumentation < SearchWorksMarc
       temp_array.compact
     end
   end
-  
+
   def grouping
     @marc_record.group_by { |f| f.indicator1 }
   end

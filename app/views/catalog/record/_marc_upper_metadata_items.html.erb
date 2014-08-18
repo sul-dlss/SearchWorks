@@ -73,7 +73,7 @@
     <%- end -%>
 
     <% if (instrumentation = document.marc_instrumentation).present? %>
-      <% instrumentation.parse_marc_record.each do |field| %>
+      <% instrumentation.each do |field| %>
         <%= display_content_field field %>
       <% end %>
     <% end %>
