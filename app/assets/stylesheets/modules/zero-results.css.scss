@@ -1,6 +1,33 @@
 .zero-results-list{
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .zero-results-list li{
   padding-top: 10px;
+}
+
+.side-icon {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.side-icon-message-away {
+  background-image: url('message-away.png');
+
+}
+
+.side-icon-message-available {
+  background-image: url('message-available.png');
+}
+
+.side-icon-ask-us {
+  background-image: url('ask-us.png');
+}
+
+.side-icon-interlibrary-borrowing {
+  background-image: url('interlibrary-borrowing.png');
+}
+
+.side-icon-search-tools {
+  background-image: url('search-tools.png');
 }
