@@ -5,7 +5,7 @@ describe "Breadcrumb", type: :feature, :"data-integration" => true do
     it "should display the title of the collection and not the ID" do
       visit catalog_path('6780453')
 
-      click_link '1 - 20 of 48 items online'
+      click_link '48 items online'
 
       within('.breadcrumb') do
         expect(page).to have_css('.filterValue', text: 'The Reid W. Dennis Collection of California Lithographs')
