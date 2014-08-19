@@ -1,61 +1,57 @@
-Blacklight.onLoad(function(){
+(function($) {
 
-  //Instantiates select all
-  $('#select_all-dropdown').selectAll();
-})
-
-
-;(function ( $, window, document, undefined ) {
   /*
-    jQuery plugin to select all bookmarks on a page
+    jQuery plugin for selecting/unselecting bookmarks
 
-      Usage: $(selector).selectAll();
-
-    No available options
-
-    This plugin :
-      - removes the disabled class for javascript enabled browsers
-      - "clicks" the input checkbox for all unselected boxes
+      Usage: $(selector).selectUnSelectAll();
   */
 
-    var pluginName = "selectAll";
 
-    function Plugin( element, options ) {
-        this.element = element;
-        this.options = $.extend( {}, options) ;
-        this._name = pluginName;
+  $.fn.selectUnSelectAll = function() {
 
-        this.init();
-    }
+    return this.each(function() {
+      var $element = $(this),
+          $selectAll = $element.find('span.select-all'),
+          $unSelectAll = $element.find('span.unselect-all'),
+          selectorSelectBookmarks = 'input.toggle_bookmark';
 
-    Plugin.prototype = {
+      setInitialAction();
+      init();
 
-        init: function() {
-          var element = this.element;
-          $(element)
-            .removeClass("disabled")
-            .click(function(){
-              $("input.toggle_bookmark").each(function(i,val){
-                if ($(val).prop("checked")){
-                  return;
-                }else{
-                  $(val).click();
-                }
-              });
-            });
-        }
-    };
+      function init() {
+        $element.on('click', function() {
+          var state = $selectAll.is(':visible');
 
+          $(selectorSelectBookmarks).each(function(i, checkbox) {
+            var $checkbox = $(checkbox);
 
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, "plugin_" + pluginName)) {
-                $.data(this, "plugin_" + pluginName,
-                new Plugin( this, options ));
+            if ($checkbox.is(':checked') !== state) {
+              $checkbox.prop('checked', !state).click();
             }
-        });
-    };
+          });
 
-})( jQuery, window, document );
+          toggleActions();
+        });
+      }
+
+      function setInitialAction() {
+        if ($(selectorSelectBookmarks + ':checked').length !== 0) {
+          toggleActions();
+        }
+      }
+
+      function toggleActions() {
+        $selectAll.toggle();
+        $unSelectAll.toggle();
+      }
+
+    });
+
+  }
+
+})(jQuery);
+
+
+Blacklight.onLoad(function() {
+    $('#select_all-dropdown').selectUnSelectAll();
+});

@@ -31,19 +31,21 @@ Blacklight.onLoad(function(){
     Plugin.prototype = {
 
         init: function() {
-          var element = this.element;
-          $(element).on('change', function(){
-            var currentCountEl = $('span#current-selections-count');
-            var currentCount = parseInt(currentCountEl[0].innerText);
+          var $element = $(this.element);
+          $element.on('change', function(){
+            var $currentCount = $('span#current-selections-count');
+            var currentCount = parseInt($currentCount.text(), 10);
             var showList = $("li#show-list");
             var clearList = $("li#clear-list");
-            var status = $(this).prop('checked');
-            if (status){
-              currentCount ++;
-            }else{
-              currentCount --;
+
+            if ($element.is(':checked')) {
+              currentCount += 1;
+            } else {
+              currentCount -= 1;
             }
-            $(currentCountEl).html(currentCount);
+
+            if (currentCount < 0) currentCount = 0;
+            $currentCount.text(currentCount);
 
             // Adds/removes disabled class based off of selections
             if (currentCount === 0){
@@ -51,7 +53,7 @@ Blacklight.onLoad(function(){
                 showList.addClass("disabled");
               }
               clearList.addClass("disabled");
-            }else{
+            } else {
               if (!selectionsPage()){
                 showList.removeClass("disabled");
               }
@@ -63,23 +65,19 @@ Blacklight.onLoad(function(){
     };
 
     function selectionsPage() {
-      if (window.location.pathname == "/selections") {
-        return true;
-      }else{
-        return false;
-      }
+      return window.location.pathname === "/selections";
     }
 
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, "plugin_" + pluginName)) {
-                $.data(this, "plugin_" + pluginName,
-                new Plugin( this, options ));
-            }
-        });
+      return this.each(function () {
+        if (!$.data(this, "plugin_" + pluginName)) {
+          $.data(this, "plugin_" + pluginName,
+          new Plugin( this, options ));
+        }
+      });
     };
 
 })( jQuery, window, document );
