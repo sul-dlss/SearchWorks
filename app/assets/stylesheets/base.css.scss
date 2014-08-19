@@ -19,10 +19,11 @@ h1 {
   font-family: 'dejavu_sansextralight';
   color: $sul-h1-font-color;
   padding: 10px 0;
+  letter-spacing: -.05em;
 }
 
 h2 {
-  letter-spacing: .02em;
+  letter-spacing: 0;
   line-height: 1.2em;
   margin: .5em 0;
   color: $cardinal-red;
@@ -49,4 +50,8 @@ dd {
   margin-left: 2em;
   margin-bottom: .5em;
   max-width: 45em;
+}
+
+label {
+  font-weight: normal;
 }
