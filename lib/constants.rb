@@ -1070,4 +1070,5 @@ module Constants
     "Send To" => "link",
     "Selections" => "check-3"
    }
+   BROWSABLE_CALLNUMBERS = ["LC", "DEWEY"]
 end
