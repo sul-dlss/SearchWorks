@@ -77,7 +77,7 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
-    config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 21
+    config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 20
     config.add_facet_field "access_facet", :label => "Access", limit: 10
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", :label => "Collection type", :show => false

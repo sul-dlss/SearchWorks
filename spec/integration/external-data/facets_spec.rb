@@ -68,5 +68,18 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
         end
       end
     end
+    describe 'database facet' do
+      before do
+        visit root_path
+        click_link 'Database'
+      end
+      it 'should have more link' do
+        within('#facets') do
+          within('.facet_limit.blacklight-db_az_subject') do
+            expect(page).to have_css('a', text: 'more')
+          end
+        end
+      end
+    end
   end
 end
