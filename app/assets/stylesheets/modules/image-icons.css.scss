@@ -1,0 +1,26 @@
+.image-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-icon-message-away {
+  background-image: asset-url('message-away.png');
+}
+
+.image-icon-message-available {
+  background-image: asset-url('message-available.png');
+}
+
+.image-icon-ask-us {
+  background-image: asset-url('ask-us.png');
+}
+
+.image-icon-interlibrary-borrowing {
+  background-image: asset-url('interlibrary-borrowing.png');
+}
+
+.image-icon-search-tools {
+  background-image: asset-url('search-tools.png');
+}
