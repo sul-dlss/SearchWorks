@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Holdings::Status::Pageable do
   describe "pageable libraries" do
-    let(:pageable_libraries) { ["SAL3", "SAL-NEWARK", "EAST-ASIA"] }
+    let(:pageable_libraries) { ["SAL3", "SAL-NEWARK"] }
     it "should identify any items in a page-only library as pageable" do
       pageable_libraries.each do |library|
         expect(Holdings::Status::Pageable.new(OpenStruct.new(library: library))).to be_pageable

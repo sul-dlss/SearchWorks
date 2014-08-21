@@ -315,6 +315,7 @@ module Constants
    "ENG-RESV" => "On reserve at Engineering Library (Terman)",
    "EQUIPMENT" =>"Equipment: ask at desk",
    "EXPEDITION" => "Expedition: Locked Stacks",
+   "FACULTY" => "Faculty",
    "FED-DOCS" => "US Federal Documents",
    "FELTON" => "Felton Collection (non-circulating)",
    "FELTON-30" => "Felton Collection (non-circulating)",
@@ -540,7 +541,7 @@ module Constants
    "SHELBYTITL" => "Serials",
    "SL3-LOAN" => "Ask at Green Library circulation desk",
    "SLN-LOAN" => "Ask at Green Library  circulation desk",
-   "SOUTH-MEZZ" => "Ask at circulation desk",
+   "SOUTH-MEZZ" => "Stacks",
    "SPECDESK" => "Ask at Special Collections service desk",
    "SPEC-STOR" => "Special Collections storage",
    "SPE-LOAN" => "Ask at Special Collections service desk",
@@ -578,6 +579,7 @@ module Constants
    "TECH-ACQ" => "In Tech Services",
    "TECH-CAT" => "In Tech Services",
    "TECH-CONS" => "In Tech Services",
+   "TECH-DESK" => "The Tech Desk",
    "TECH-PROC" => "In Tech Services",
    "TECH-RPTS" => "Technical Reports",
    "TECH-SER" => "In Tech Services",
@@ -762,7 +764,7 @@ module Constants
    "TECH-SERV",
    "TEMP-LL"]
 
- REQUEST_LIBS = ["SAL", "SAL3", "SAL-NEWARK", "EAST-ASIA"]
+ REQUEST_LIBS = ["SAL", "SAL3", "SAL-NEWARK"]
 
  LOCATION_LEVEL_REQUEST_LOCS = ["SSRC-DATA"]
 
@@ -927,6 +929,7 @@ module Constants
    "HV-ARCHIVE" => "Hoover Archives",
    #"ILB" => "Ignore",
    "LANE-MED" => "Medical Library (Lane)",
+   "LATHROP" => "Lathrop Library",
    "LAW" => "Law Library (Crown)",
    "BUSINESS" => "Business Library",
    "JACKSON" => "Business Library",

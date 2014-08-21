@@ -12,7 +12,7 @@ class Holdings
       private
 
       def pageable_library?
-        ["SAL3", "SAL-NEWARK", "EAST-ASIA"].include?(@callnumber.library)
+        ["SAL3", "SAL-NEWARK"].include?(@callnumber.library)
       end
 
       def pageable_home_location?
