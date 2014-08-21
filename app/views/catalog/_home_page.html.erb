@@ -25,7 +25,7 @@
     <li class="media">
       <%= image_tag('dissertations-theses.png', class: 'media-object pull-left', alt: "", title: '', data: { "no-link-href" => catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
       <div class="media-body">
-        <%= link_to "Dissertations & theses", catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}, class: 'media-heading') %>
+        <%= link_to "Dissertations & theses", catalog_index_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'media-heading' %>
         <p>Dissertations and theses in Stanford's collections.</p>
       </div>
     </li>
