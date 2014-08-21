@@ -11,13 +11,14 @@
       <tbody>
         <% library.locations.select(&:present_on_index?).each do |location| %>
           <tr>
-            <th scope='col'>
+            <th scope='col' class="location-info">
               <strong><%= location.name%></strong>
-              <%= render partial: "catalog/stackmap_link", locals: { document: document } %>
+              <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location } %>
               <% if location.mhld.present? %>
+                <br/>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.public_note.present? %>
-                    <%= mhld.public_note %>
+                    <%= mhld.public_note.html_safe %>
                   <% end %>
                 <% end %>
               <% end %>

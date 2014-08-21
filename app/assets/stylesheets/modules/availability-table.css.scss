@@ -15,6 +15,10 @@ table.availability {
       th, td {
         border-top: 1px solid $sul-availability-table-cell-border;
       }
+
+      th.location-info {
+        font-weight: normal;
+      }
     }
   }
 }
