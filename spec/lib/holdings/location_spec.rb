@@ -34,6 +34,13 @@ describe Holdings::Location do
       end
     end
   end
+  describe '#location_level_request?' do
+    it 'should return true for items that are in request locs' do
+      Constants::REQUEST_LOCS.each do |location|
+        expect(Holdings::Location.new(location)).to be_location_level_request
+      end
+    end
+  end
   describe "sorting items" do
     let(:callnumbers) { [
       Holdings::Callnumber.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),

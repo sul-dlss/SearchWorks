@@ -28,6 +28,23 @@ describe "catalog/_index_location.html.erb" do
       end
     end
   end
+  describe 'location level requests' do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          id: '123',
+          item_display: [
+            '123 -|- GREEN -|- UARCH-30 -|- -|- -|- -|- -|- -|- ABC 123'
+          ]
+        )
+      )
+      render
+    end
+    it 'should have the request link at the location level' do
+      expect(rendered).to have_css('tbody th strong', text: "University Archives")
+      expect(rendered).to have_css('tbody td a', text: "Request")
+    end
+  end
   describe "status icon" do
     before do
       view.stub(:document).and_return(

@@ -13,7 +13,8 @@ class Holdings
       @code && @code == "SEE-OTHER"
     end
     def location_level_request?
-      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code)
+      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
+      Constants::REQUEST_LOCS.include?(@code)
     end
     def present?
       any_items? || any_mhlds?

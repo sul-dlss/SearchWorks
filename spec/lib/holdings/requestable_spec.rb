@@ -13,9 +13,6 @@ describe Holdings::Requestable do
       end
     end
     describe "home locations" do
-      it "should be requestable if the home location ends with -30" do
-        expect(Holdings::Requestable.new(Holdings::Callnumber.new('123 -|- GREEN -|- SOMETHING-30 -|- -|- -|- '))).to be_requestable
-      end
       it "should not be requestable if the library is GREEN and the home location is MEDIA-MTXT" do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- '))).to_not be_requestable
       end
@@ -39,19 +36,6 @@ describe Holdings::Requestable do
     end
   end
   describe "must_request?" do
-    describe "home locations" do
-      it "should require home locations that end in '-30' to be requested" do
-        expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- SOMETHING-30 -|- -|- "))).to be_must_request
-      end
-      it "should not require non requestable items to be requested, even if at -30 locations" do
-        expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- SAL3 -|- SOMETHING-30 -|- -|- "))).to_not be_must_request
-      end
-      it "should require explicit request locs to be requested" do
-        Constants::REQUEST_LOCS.each do |location|
-          expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- #{location} -|- -|- "))).to be_must_request
-        end
-      end
-    end
     describe "current locations" do
       it "should require -LOAN current locations to be requested" do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- "))).to be_must_request

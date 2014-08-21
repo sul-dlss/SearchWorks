@@ -25,8 +25,8 @@ class Holdings
     end
 
     def must_request_home_location?
-      Constants::REQUEST_LOCS.include?(@callnumber.home_location) ||
-      @callnumber.home_location.end_with?('-30')
+      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
+      Constants::REQUEST_LOCS.include?(@code)
     end
     def must_request_current_location?
       current_location_is_loan_desk? ||
