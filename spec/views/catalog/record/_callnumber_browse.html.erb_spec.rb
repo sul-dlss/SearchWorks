@@ -4,8 +4,8 @@ describe "catalog/record/_callnumber_browse.html.erb" do
   let(:document) {
     SolrDocument.new(
       item_display: [
-        'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey',
-        'barcode2 -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber2 -|- shelfkey -|- reverse_shelfkey -|- callnumber2 -|- full_shelfkey'
+        'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- -|- LC',
+        'barcode2 -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber2 -|- shelfkey -|- reverse_shelfkey -|- callnumber2 -|- full_shelfkey -|- -|- DEWEY'
       ]
     )
   }

@@ -33,8 +33,8 @@ describe Holdings::Callnumber do
     end
   end
   describe "browsable?" do
-    it "should return true if there is a real callnumber" do
-      expect(Holdings::Callnumber.new(complex_item_display)).to be_browsable
+    it "should return false if not LC or DEWEY" do
+      expect(Holdings::Callnumber.new(complex_item_display)).to_not be_browsable
     end
     it "should return false if there is no real callnumber" do
       expect(Holdings::Callnumber.new('-|- -|- -|-')).to_not be_browsable
@@ -42,6 +42,18 @@ describe Holdings::Callnumber do
     it 'should return false if callnumber type is ALPHANUM' do
       alpha_num = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- ALPHANUM -|- course_id -|- reserve_desk -|- loan_period'
       expect(Holdings::Callnumber.new(alpha_num)).to_not be_browsable
+    end
+    it 'should return false if callnumber type is INTERNET' do
+      internet = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- INTERNET -|- course_id -|- reserve_desk -|- loan_period'
+      expect(Holdings::Callnumber.new(internet)).to_not be_browsable
+    end
+    it 'should return true if callnumber type is LC' do
+      lc = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- LC -|- course_id -|- reserve_desk -|- loan_period'
+      expect(Holdings::Callnumber.new(lc)).to be_browsable
+    end
+    it 'should return true if callnumber type is DEWEY' do
+      dewey = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- DEWEY -|- course_id -|- reserve_desk -|- loan_period'
+      expect(Holdings::Callnumber.new(dewey)).to be_browsable
     end
   end
   describe "#callnumber" do
