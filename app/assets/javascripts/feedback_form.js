@@ -35,6 +35,8 @@ Blacklight.onLoad(function(){
       // Serialize and submit form if not on action url
       $form.each(function(i, form){
         if (location !== form.action){
+          $('#user_agent').val(navigator.userAgent);
+          $('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
           $(form).on('submit', function(){
             var valuesToSubmit = $(this).serialize();
             $.ajax({
