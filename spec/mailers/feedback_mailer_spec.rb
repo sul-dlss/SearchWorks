@@ -4,7 +4,7 @@ describe FeedbackMailer do
   describe "submit_feedback" do
     describe "with all fields" do
       let(:ip) {"123.43.54.123"}
-      let(:params) { { name: "Mildred Turner ", to: "test@test.com" } }
+      let(:params) { { name: "Mildred Turner ", to: "test@test.com", user_agent: 'agent #1', viewport: 'width:100 height:50' } }
       let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the correct to field" do
@@ -37,6 +37,14 @@ describe FeedbackMailer do
 
       it "has the right IP" do
         expect(mail.body).to have_content "123.43.54.123"
+      end
+
+      it 'has the user_agent' do
+        expect(mail.body).to have_content 'agent #1'
+      end
+
+      it 'has the viewport' do
+        expect(mail.body).to have_content 'width:100 height:50'
       end
     end
 

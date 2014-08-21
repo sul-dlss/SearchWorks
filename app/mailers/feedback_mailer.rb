@@ -15,6 +15,8 @@ class FeedbackMailer < ActionMailer::Base
     @message = params[:message]
     @url = params[:url]
     @ip = ip
+    @user_agent = params[:user_agent]
+    @viewport = params[:viewport]
 
     mail(:to => Settings.EMAIL_TO,
          :subject => "Feedback from SearchWorks",
