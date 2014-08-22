@@ -10,3 +10,11 @@ ul.links {
   padding-left: 20px;
   background: image-url('sfx.gif') no-repeat;
 }
+.online-label {
+  @include label-items-online;
+  padding: 0px 7px 2px 7px;
+  font-size: 12px;
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  letter-spacing: 0;
+  border-radius: 2px;
+}

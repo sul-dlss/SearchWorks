@@ -17,6 +17,9 @@ describe "catalog/_osd_viewer.html.erb" do
     it "should not include the paging section" do
       expect(rendered).to_not have_css('.paging')
     end
+    it 'should include the PURL' do
+      expect(rendered).to have_css('.purl-link a', text: 'purl.stanford.edu/12345')
+    end
   end
   describe "multiple images" do
     before do
@@ -30,6 +33,9 @@ describe "catalog/_osd_viewer.html.erb" do
     end
     it "should include the paging section" do
       expect(rendered).to have_css('.paging')
+    end
+    it 'should include the PURL' do
+      expect(rendered).to have_css('.purl-link a', text: 'purl.stanford.edu/12345')
     end
   end
 end
