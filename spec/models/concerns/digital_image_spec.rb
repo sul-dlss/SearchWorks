@@ -17,4 +17,7 @@ describe "Image object" do
     expect(image_document.image_urls.first).to include("/4488/abc123defg")
   end
 
+  it 'should return false if there is no display_type' do
+    expect(SolrDocument.new.has_image_behavior?).to be_false
+  end
 end

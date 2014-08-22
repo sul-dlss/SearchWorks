@@ -8,6 +8,14 @@ describe AccessPanel::Online do
   let(:sfx) { Online.new(
     SolrDocument.new(url_sfx: 'http://example.com/sfx-link', marcxml: fulltext_856)
   ) }
+  let(:image_collection_member) {
+    Online.new(
+      SolrDocument.new(
+        collection: ['12345'],
+        url_fulltext: 'http://library.stanford.edu'
+      )
+    )
+  }
   let(:mods) { Online.new(
     SolrDocument.new(
       collection: ['12345'],
@@ -33,6 +41,12 @@ describe AccessPanel::Online do
       expect(links.length).to eq 1
       expect(links.first).to be_sfx
       expect(links.first.text).to match /^<a href=.*class='sfx'>Find full text<\/a>$/
+    end
+    it 'should return fulltext links from the index for non-image digital collection members' do
+      links = image_collection_member.links
+      expect(links).to be_present
+      expect(links.length).to eq 1
+      expect(links.first.text).to match /^<a.*>library\.stanford\.edu<\/a>$/
     end
     it "should not return any non-fulltext links" do
       expect(supplemental.links).to be_blank

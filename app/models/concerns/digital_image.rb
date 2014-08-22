@@ -3,7 +3,7 @@ module DigitalImage
   # Check for digital image object
   # TODO: Once index fields are finalized, remove additional check
   def has_image_behavior?
-    self[:display_type].include?('image') && file_ids.present?
+    self[:display_type].present? && self[:display_type].include?('image') && file_ids.present?
   end
 
 
