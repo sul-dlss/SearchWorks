@@ -16,8 +16,8 @@
     <li class="disabled">
       <%= link_to t('blacklight.tools.endnote_html'), "#" %>
     </li>
-    <li class="disabled">
-      <%= link_to t('blacklight.tools.printer_html'), "#" %>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer') %></a>
     </li>
   </ul>
 </div>
