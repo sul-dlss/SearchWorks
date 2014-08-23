@@ -27,7 +27,8 @@ class CatalogController < ApplicationController
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       :qt => 'search',
-      :rows => 20
+      :rows => 20,
+      :"f.callnum_facet_hsim.facet.limit" => "-1"
     }
 
     # solr path which will be added to solr base url before the other solr params.
@@ -90,15 +91,17 @@ class CatalogController < ApplicationController
     config.add_facet_field "building_facet", :label => "Library", limit: 100
     config.add_facet_field "language", :label => "Language", limit: 20
     config.add_facet_field "author_person_facet", :label => "Author", limit: 20
+    config.add_facet_field 'callnum_facet_hsim',
+                           label: 'Call number',
+                           partial: 'blacklight/hierarchy/facet_hierarchy',
+                           sort: 'index'
+    config.facet_display = {
+      :hierarchy => {
+        'callnum_facet' => [['hsim'], '|']
+      }
+    }
     config.add_facet_field "topic_facet", :label => "Topic", limit: 20
     config.add_facet_field "genre_ssim", :label => "Genre", limit: 20
-    config.add_facet_field "callnum_top_facet", :label => "Call number", limit: 20
-    config.add_facet_field "lc_alpha_facet", :label => "Refine call number", :show => false
-    config.add_facet_field "lc_b4cutter_facet", :label => "Refine Call number", :show => false
-    config.add_facet_field "dewey_1digit_facet", :label => "Refine Call number", :show => false
-    #config.add_facet_field "dewey_2digit_facet", :label => "Refine Call Number", :show => false
-    #config.add_facet_field "dewey_b4cutter_facet", :label => "Refine Call Number", :show => false
-    #config.add_facet_field "gov_doc_type_facet", :label => "Refine Call Number", :show => false
     config.add_facet_field "course", :label => "Course", :show => false
     config.add_facet_field "instructor", :label => "Instructor", :show => false
 

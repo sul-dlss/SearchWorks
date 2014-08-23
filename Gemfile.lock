@@ -17,6 +17,15 @@ GIT
       rails (>= 3.0, < 5.0)
 
 GIT
+  remote: git://github.com/sul-dlss/blacklight-hierarchy.git
+  revision: 2e686883a66f39871033fb88216385e3d32fb586
+  branch: blacklight5
+  specs:
+    blacklight-hierarchy (1.0.0)
+      blacklight (~> 5, < 6)
+      rails (~> 4.1)
+
+GIT
   remote: git://github.com/sul-dlss/openseadragon-rails.git
   revision: afe09fa081b0a4f854cbeb0c4f9cba7edda17ea9
   specs:
@@ -314,6 +323,7 @@ PLATFORMS
 DEPENDENCIES
   blacklight (~> 5.6.0)
   blacklight-gallery!
+  blacklight-hierarchy!
   blacklight-marc (~> 5.0)
   blacklight_advanced_search
   blacklight_range_limit!

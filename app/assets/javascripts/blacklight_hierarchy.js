@@ -1,0 +1,1 @@
+//= require blacklight/hierarchy/hierarchy
