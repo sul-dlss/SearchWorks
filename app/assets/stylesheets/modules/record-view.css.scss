@@ -3,7 +3,8 @@ $show-title-left-margin: 40px;
   h1 {
     text-indent: -22px;
     margin-left: $show-title-left-margin;
-    margin-bottom: 0;
+    margin-bottom: 15px;
+    padding: 0;
   }
   .vernacular-title {
     font-size: 1.6em;
