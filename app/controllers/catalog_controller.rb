@@ -263,6 +263,18 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('author_title') do |field|
+      field.label = "Author + Title"
+      field.include_in_simple_select = false
+      field.include_in_advanced_search = false
+      field.solr_local_parameters = {
+        :qf  => 'author_title_search',
+        :pf  => 'author_title_search^10',
+        :pf3 => 'author_title_search^5',
+        :pf2 => 'author_title_search^2'
+      }
+    end
+
     # Configure facet fields for BL advanced search
     config.advanced_search = {
       :query_parser => 'edismax',
