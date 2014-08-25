@@ -11,7 +11,7 @@
       <div class="col-md-6">
         <% column.compact.each do |database| %>
           <div class="panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body accordion-sections">
               <h3><%= link_to(database['title_245a_display'], catalog_path(database[:id])) %></h3>
               <span class="subjects">(<%= database.selected_database_subjects.join(', ') %>)</span>
               <div class="accordion-section online">
@@ -29,7 +29,12 @@
                   </ul>
                 </div>
               </div>
-              <div><%= database.selected_database_description %></div>
+              <div>
+                <%= database.selected_database_description %>
+                <% if database.selected_database_see_also %>
+                  (See also <%= link_to(database.selected_database_see_also.text, catalog_path(database.selected_database_see_also.id)) %>)
+                <% end %>
+              </div>
             </div>
           </div>
         <% end %>

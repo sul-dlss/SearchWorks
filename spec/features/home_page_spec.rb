@@ -15,7 +15,7 @@ feature "Home Page" do
   scenario "'Featured sets' section should display" do
     expect(page).to have_css(".media a", text: "Digital collections")
     expect(page).to have_css(".media a", text: "Dissertations & theses")
-    expect(page).to have_css(".media a", text: "Selected databases")
+    expect(page).to have_css(".media a", text: "Selected article databases")
     expect(page).to have_css(".media a", text: "Course reserves")
   end
   scenario "'Featured sets' images should be clickable", js: true do
