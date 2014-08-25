@@ -105,7 +105,7 @@
 
         if (data.preview === 'full') {
           $fullView.attr('href', data.preview_url).show();
-          checkAndEnableOnlineAccordionSection($googleBooks);
+          checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
         }
 
         if (data.preview === 'partial') {
@@ -139,11 +139,15 @@
     }
 
 
-    function checkAndEnableOnlineAccordionSection($googleBooks) {
+    function checkAndEnableOnlineAccordionSection($googleBooks, $fullViewLink) {
       $accordionSection = $googleBooks.parents('.accordion-section');
+      $snippet = $('.snippet', $accordionSection);
 
       if ($accordionSection.length > 0) {
         $accordionSection.removeClass('hide').addClass('show');
+        if($.trim($snippet.text()) == "") {
+          $snippet.html($fullViewLink.clone());
+        }
       }
     }
 

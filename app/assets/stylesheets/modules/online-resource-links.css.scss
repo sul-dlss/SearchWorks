@@ -1,15 +1,20 @@
 ul.links {
   padding-left: 0;
   list-style-type: none;
-
-  li {
-    .stanford-only {
-      padding-right: 20px;
-      background: image-url('sprite-links.png') no-repeat right top;
-    }
-    .sfx {
-      padding-left: 20px;
-      background: image-url('sfx.gif') no-repeat;
-    }
-  }
+}
+.stanford-only {
+  padding-right: 20px;
+  background: image-url('sprite-links.png') no-repeat right top;
+}
+.sfx {
+  padding-left: 20px;
+  background: image-url('sfx.gif') no-repeat;
+}
+.online-label {
+  @include label-items-online;
+  padding: 0px 7px 2px 7px;
+  font-size: 12px;
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  letter-spacing: 0;
+  border-radius: 2px;
 }

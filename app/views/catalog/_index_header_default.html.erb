@@ -10,6 +10,9 @@
     </span>
     <%= link_to_document document, :label => get_main_title(document), :counter => counter %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
+    <% if document.has_image_behavior? %>
+      <span class="online-label">Online</span>
+    <% end %>
   </h3>
 
   <% # bookmark functions for items/docs -%>
