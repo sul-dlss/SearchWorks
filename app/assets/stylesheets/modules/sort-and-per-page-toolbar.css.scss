@@ -6,13 +6,8 @@
     padding-right: 0px;
   }
 
-  .dropdown-menu li > a {
-    border-bottom: none;
-    text-transform: none;
-
-    &:hover, &:focus, &:active {
-      border-bottom: none;
-    }
+  .dropdown-menu {
+    @include toolbar-dropdown;
   }
 
   .page_links {
