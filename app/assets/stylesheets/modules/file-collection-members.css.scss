@@ -1,8 +1,10 @@
 .file-collection-members {
-  border: 1px solid $panel-inner-border;
+  @include panel-borders;
+  @include panel-border-bottom;
   clear: both;
   padding: 20px 5px 10px 5px;
   position: relative;
+  margin-bottom: 15px;
 
   .members-number {
     position: absolute;
