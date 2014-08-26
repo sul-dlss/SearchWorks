@@ -20,7 +20,7 @@ describe "catalog/_accordion_section_online.html.erb" do
       expect(rendered).to have_css('.accordion-section.online')
       expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
       expect(rendered).to have_css('.details .google-books')
-      expect(rendered).to have_css('.details a', text: "Google Books Full view")
+      expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
     end
     it 'should include the first link in the snippet' do
       expect(rendered).to have_css('.snippet span.stanford-only a', text: 'Link text', count: 1)

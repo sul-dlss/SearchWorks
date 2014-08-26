@@ -55,7 +55,7 @@ describe "preview/_show_image.html.erb" do
 
   it "should display online accordion section" do
     expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
-    expect(rendered).to have_css('.details a', text: "Google Books Full view")
+    expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
   end
 
 

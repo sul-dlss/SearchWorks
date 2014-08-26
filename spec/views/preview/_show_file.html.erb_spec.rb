@@ -11,7 +11,7 @@ describe "preview/_show_file.html.erb" do
     item_display: [ "123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123" ],
     isbn_display: [ 123 ],
     imprint_display: ["Imprint Statement"]
-    
+
   ) }
 
   before do
@@ -49,7 +49,7 @@ describe "preview/_show_file.html.erb" do
 
   it "should display online accordion section" do
     expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
-    expect(rendered).to have_css('.details a', text: "Google Books Full view")
+    expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
   end
 
 end
