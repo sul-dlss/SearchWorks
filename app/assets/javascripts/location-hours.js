@@ -1,10 +1,9 @@
-$(function(){
-
+Blacklight.onLoad(function(){
   //Finds all of the location panels and instantiates jQuery plugin for each one
   $('[data-hours-route]').each(function(i,val){
-    $(val).locationHours(); 
+    $(val).locationHours();
   });
-})
+});
 
 
 ;(function ( $, window, document, undefined ) {
@@ -40,19 +39,16 @@ $(function(){
         init: function() {
           var element = this.element;
           var hoursElement = getHoursElement(this.element);
-          var libLocation = $(this.element).data('hours-route');          
+          var libLocation = $(this.element).data('hours-route');
           $.getJSON(libLocation, function(data){
+            if (data === null || !("hours" in data)){
+              return;
+            }
             if (data.error) {
               $(hoursElement).html(data.error);
               return;
             }
-            if (data === null){
-              return;
-            }
-            var open = getOpen(data[0]);
-            var close = getClose(data[0]);
-            var text = "Today's hours: " + open + " - " + close;
-            $(hoursElement).html(text);
+            $(hoursElement).html(data.hours);
           });
         }
     };
