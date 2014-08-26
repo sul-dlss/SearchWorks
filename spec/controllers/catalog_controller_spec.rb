@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe CatalogController do
+  it 'should include the AdvancedSearchParamsMapping concern' do
+    expect(subject).to be_kind_of(AdvancedSearchParamsMapping)
+  end
   it "should include the DatabaseAccessPoint concern" do
     expect(subject).to be_kind_of(DatabaseAccessPoint)
   end
