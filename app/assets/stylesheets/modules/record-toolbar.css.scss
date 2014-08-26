@@ -11,6 +11,10 @@
     @include sul-toolbar-bg-border;
   }
 
+  .dropdown-menu {
+    @include toolbar-dropdown;
+  }
+
   .record-toolbar-tools ul {
     list-style-type: none;
     margin: 0;

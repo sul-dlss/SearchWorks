@@ -4,20 +4,24 @@
     <%= t('blacklight.tools.send_to_html', current_range: current_entries_info(@response)) %>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li class="disabled">
-      <%= link_to t('blacklight.tools.sms_html'), sms_catalog_path(id: @document), {id: 'smsLink', data: {ajax_modal: "trigger"}} %>
-    </li>
-    <li class="disabled">
+    <li>
       <%= link_to t('blacklight.tools.email_html'), email_catalog_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", data: {ajax_modal: "trigger"} %>
     </li>
-    <li class="disabled">
-      <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(id: @document) %>
-    </li>
-    <li class="disabled">
-      <%= link_to t('blacklight.tools.endnote_html'), "#" %>
-    </li>
+
+    <% if @response.documents.any? {|d| d.exports_as? :refworks_marc_txt } %>
+      <li>
+        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, params_for_search)), :id => "refworksLink" %>
+      </li>
+    <% end %>
+
+    <% if @response.documents.any? {|d| d.exports_as? :endnote } %>
+      <li>
+        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, params_for_search), :id => "endnoteLink" %>
+      </li>
+    <% end %>
+
     <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer') %></a>
+      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
     </li>
   </ul>
 </div>

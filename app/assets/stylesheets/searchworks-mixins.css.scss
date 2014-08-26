@@ -12,6 +12,17 @@
   border-left: 1px solid $sul-document-border-color;
 }
 
+@mixin toolbar-dropdown {
+  li > a {
+    border-bottom: none;
+    text-transform: none;
+
+    &:hover, &:focus, &:active {
+      border-bottom: none;
+    }
+  }
+}
+
 @mixin h3-index-title-indent {
   text-indent: -13px;
 }
