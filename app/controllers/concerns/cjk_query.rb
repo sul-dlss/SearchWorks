@@ -1,8 +1,9 @@
+# encoding: UTF-8
 # adjust Solr params as required for CJK chars in user query string
 # if a query string has CJK characters in it, adjust the mm and ps Solr parameters as necessary
 module CJKQuery
   extend ActiveSupport::Concern
-  
+
   included do
     if self.respond_to?(:before_filter)
       before_filter :add_cjk_params_logic, only: :index
@@ -90,7 +91,7 @@ module CJKQuery
   def cjk_mm_qs_params(str)
     number_of_unigrams = cjk_unigrams_size(str)
     if number_of_unigrams > 2
-      num_non_cjk_tokens = str.scan(/[[:alnum]]+/).size 
+      num_non_cjk_tokens = str.scan(/[[:alnum]]+/).size
       if num_non_cjk_tokens > 0
         lower_limit = cjk_mm_val[0].to_i
         mm = (lower_limit + num_non_cjk_tokens).to_s + cjk_mm_val[1, cjk_mm_val.size]
