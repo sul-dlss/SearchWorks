@@ -7,6 +7,8 @@ set :symlinks_directory, "#{fetch(:home_directory)}/SearchWorksSubURIs"
 set :symlink_deploy_path, "#{fetch(:symlinks_directory)}/#{fetch(:sub_dir)}"
 set :bundle_without, %w{production test}.join(' ')
 
+set :rvm_ruby_version, '2.1.0'
+
 task :symlink_sub_directory_deploy do
   on roles(:app), wait: 1 do
     set :last_release, capture("ls #{releases_path}").split("\n").last
