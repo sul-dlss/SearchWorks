@@ -26,7 +26,7 @@
         <% end %>
         <li class="dropdown">
           <button class="btn btn-sul-toolbar" data-toggle="dropdown">
-            <i class=" fa fa-share-alt"></i> Send to <span class="caret"></span>
+            <%= t('blacklight.tools.send_to_html').html_safe %>
           </button>
           <ul class="dropdown-menu" role="menu">
             <%= render "catalog/record/record_toolbar_tools_subset" %>
