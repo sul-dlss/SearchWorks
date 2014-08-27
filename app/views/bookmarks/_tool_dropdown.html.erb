@@ -1,7 +1,7 @@
 <span class="sr-only">Send current page to text, email, RefWorks, EndNote, or printer</span>
 <div id="tools-dropdown" class="btn-group">
   <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown">
-    <%= t('blacklight.tools.send_to_html', current_range: current_entries_info(@response)) %>
+    <%= t('blacklight.tools.send_entries', current_range: current_entries_info(@response)).html_safe %>
   </button>
   <ul class="dropdown-menu" role="menu">
     <li>
