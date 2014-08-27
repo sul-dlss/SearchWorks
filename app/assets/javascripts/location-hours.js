@@ -1,11 +1,10 @@
-$(function(){
+Blacklight.onLoad(function(){
 
   //Finds all of the location panels and instantiates jQuery plugin for each one
   $('[data-hours-route]').each(function(i,val){
-    $(val).locationHours(); 
+    $(val).locationHours();
   });
-})
-
+});
 
 ;(function ( $, window, document, undefined ) {
   /*
@@ -40,7 +39,7 @@ $(function(){
         init: function() {
           var element = this.element;
           var hoursElement = getHoursElement(this.element);
-          var libLocation = $(this.element).data('hours-route');          
+          var libLocation = $(this.element).data('hours-route');
           $.getJSON(libLocation, function(data){
             if (data.error) {
               $(hoursElement).html(data.error);
@@ -59,20 +58,36 @@ $(function(){
 
     function getOpen(data){
       var open = new Date(data.opens_at);
-      open = formatTime(open.toLocaleTimeString());
+      open = formatTime(open.getHours(), open.getMinutes());
       return open;
     }
 
     function getClose(data){
       var close = new Date(data.closes_at);
-      close = formatTime(close.toLocaleTimeString());
+      close = formatTime(close.getHours(), close.getMinutes());
       return close;
     }
 
-    function formatTime(time){
-      var re = /:00|m|\s/gi;
-      time = time.replace(re, '').toLowerCase();
-      return time;
+    function formatTime(hours, minutes){
+      var ampm = (hours >= 12 && hours !== 24) ? 'p' : 'a';
+      hours = hours % 12;
+      var hoursFormated = (hours === 0) ? '12' : hours.toString();
+      var minutesFormated = formatMinutes(minutes);
+      return hoursFormated + minutesFormated + ampm;
+    }
+
+    function formatMinutes(minutes){
+      var minutesFormated;
+      if (minutes === 0){
+        minutesFormated = '';
+      } else {
+        if (minutes.toString().length === 1){
+          minutesFormated = ':0' + minutes;
+        }else{
+          minutesFormated = ':' + minutes;
+        }
+      }
+      return minutesFormated;
     }
 
     // A really lightweight plugin wrapper around the constructor,
