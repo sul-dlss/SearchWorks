@@ -4,28 +4,10 @@
     background: $sul-access-online-bg;
     border-bottom: 1px solid $sul-access-online-bg;
   }
+
   .google-books {
-    display: none;
-    margin-top: 10px;
-
-    ul {
-      list-style-type: none;
-      padding-left: 10px;
-
-      li a {
-        display: none;
-      }
-    }
-
-    .btn-preview {
-      margin-top: 10px;
-
-      .preview-link {
-        display: none;
-      }
-    }
+    @include google-books;
   }
-
 }
 
 .visible {

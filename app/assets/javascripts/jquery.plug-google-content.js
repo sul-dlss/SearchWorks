@@ -55,9 +55,7 @@
     }
 
     function renderCoverAndAccessPanel(json) {
-
       $.each(json, function(bibkey, data) {
-
         if (typeof data.thumbnail_url !== 'undefined') {
           renderCoverImage(bibkey, data);
         }
@@ -65,7 +63,6 @@
         if (typeof data.info_url !== 'undefined') {
           renderAccessPanel(bibkey, data);
         }
-
       });
     }
 
@@ -89,34 +86,24 @@
 
 
     function renderAccessPanel(bibkey, data) {
-      var $panelOnlineBooks = $parent.find('.panel-online'),
-          $googleBooks      = $parent.find('.google-books.' + bibkey),
-          $about            = $googleBooks.find('.about'),
-          $fullView         = $googleBooks.find('.full-view'),
-          $limitedView      = $googleBooks.find('.limited-preview'),
-          $previewLink      = $googleBooks.find('.google-preview .preview-link');
+      var listGoogleBooks = $.unique($parent.find('.google-books.' + bibkey));
 
-      $panelOnlineBooks.removeClass('hide').addClass('show');
-      $googleBooks.show();
-
-      $about.attr('href', data.info_url).show();
-
-      if (typeof data.preview_url !== 'undefined') {
+      $.each(listGoogleBooks, function(i, googleBooks) {
+        var $googleBooks = $(googleBooks),
+            $fullView    = $googleBooks.find('.full-view'),
+            $limitedView = $googleBooks.find('.limited-preview');
 
         if (data.preview === 'full') {
-          $fullView.attr('href', data.preview_url).show();
+          $fullView.attr('href', data.preview_url);
           checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
+          checkAndEnableAccessPanel($googleBooks, '.panel-online');
         }
-
-        if (data.preview === 'partial') {
-          $limitedView.attr('href', data.preview_url).show();
+        else if (data.preview === 'partial') {
+          $limitedView.attr('href', data.preview_url);
+          checkAndEnableAccessPanel($googleBooks, '.panel-related');
         }
+      });
 
-        if (data.preview === 'partial' || data.preview === 'full') {
-          $previewLink.attr('href', data.preview_url).show();
-        }
-
-      }
     }
 
 
@@ -138,6 +125,14 @@
       return bibkeys;
     }
 
+    function checkAndEnableAccessPanel($googleBooks, selectorPanel) {
+      var $accessPanel = $googleBooks.parents(selectorPanel);
+
+      if ($accessPanel.length > 0) {
+        $accessPanel.removeClass('hide').addClass('show');
+        $googleBooks.show();
+      }
+    }
 
     function checkAndEnableOnlineAccordionSection($googleBooks, $fullViewLink) {
       $accordionSection = $googleBooks.parents('.accordion-section');
@@ -145,12 +140,13 @@
 
       if ($accordionSection.length > 0) {
         $accordionSection.removeClass('hide').addClass('show');
-        if($.trim($snippet.text()) == "") {
+        $googleBooks.show();
+
+        if($.trim($snippet.text()) === "") {
           $snippet.html($fullViewLink.clone());
         }
       }
     }
-
 
     return this.each(function() {
       $parent = $(this);
@@ -162,6 +158,6 @@
 
 Blacklight.onLoad(function() {
   $('#documents').plugGoogleBookContent();
-  $('div#content.show-document .document').plugGoogleBookContent();
+  $('div#content .document').plugGoogleBookContent();
   $('.accordion-section').plugGoogleBookContent();
 });
