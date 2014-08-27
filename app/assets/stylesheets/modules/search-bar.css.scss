@@ -1,6 +1,7 @@
 #search-navbar-container {
   padding: 10px 0 0 0;
-  @include sul-toolbar-bg-border;
+  background-color: $cardinal-red;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2)
 }
 
 .search-bar {
@@ -9,11 +10,9 @@
   }
 
   .navbar-brand {
-    padding: 8px 12px 0 0px;
-
-    img {
-      height: 29px;
-    }
+    font-size: 30px;
+    padding-left: 0;
+    line-height: 26px;
   }
 
   .navbar-nav.navbar-right.searchbar-right:last-child {
@@ -29,7 +28,7 @@
   }
   #searchbar-navbar-collapse .nav > li > a {
     &:hover, &:focus, &:active {
-      border-bottom: 3px solid $cardinal-red;
+      border-bottom: 3px solid $white;
     }
   }
 
@@ -48,13 +47,14 @@
     @extend .fa-rotate-90;
   }
 
+  button.navbar-toggle {
+    color: $white;
+  }
+
   .search-target{
     font-size: 1.5em;
     margin-left: -3px;
-
-    img {
-      height: 23px;
-    }
+    color: $white;
   }
 
   span.input-group-addon {
