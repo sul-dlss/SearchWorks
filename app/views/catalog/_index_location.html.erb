@@ -8,7 +8,7 @@
           <th scope='col' class='col-xs-4'>Status</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-long-list data-list-type="location">
         <% library.locations.select(&:present_on_index?).each do |location| %>
           <tr>
             <th scope='col' class="location-info">

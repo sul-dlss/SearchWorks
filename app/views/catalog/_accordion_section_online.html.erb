@@ -19,7 +19,7 @@
     <% end %>
   </span>
   <div class="details <%= id %>-online">
-    <ul class="links">
+    <ul class="links" data-long-list data-list-type="online">
       <% if document.access_panels.online? %>
         <% document.access_panels.online.links.each do |link| %>
           <li>

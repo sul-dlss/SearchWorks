@@ -601,6 +601,7 @@ module Constants
    "UARCHX-30" => "University Archives",
    "UNCAT" => "Uncataloged",
    "UNDERGRAD" => "Undergraduate Collection",
+   "UNKNOWN" => "Unknown",
    "US-LOCAL" => "US Local Documents",
    "US-STATE" => "US State Documents",
    "VARIES" => "Ask at circulation desk",

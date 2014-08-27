@@ -35,7 +35,7 @@
                   <% end %>
                 <% end %>
                 <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location } %>
-                <ul class="list-unstyled items">
+                <ul class="list-unstyled items" data-long-list data-list-type="location">
                   <% if location.mhld.present? %>
                     <% location.mhld.each do |mhld| %>
                       <% if mhld.public_note.present? %>
