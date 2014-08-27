@@ -6,7 +6,7 @@ module FeedbackFormHelper
 
   def show_quick_report?
     unless request.referer.nil?
-      refer = Rails.application.routes.recognize_path(URI(request.referer).path)
+      refer = Rails.application.routes.recognize_path(request.referer)
       if (params[:controller] == 'catalog' && params[:action] == 'show') or
         (refer[:controller] == 'catalog' && refer[:action] == 'show' &&
           params[:controller] == 'feedback_forms' && params[:action] == 'new')
