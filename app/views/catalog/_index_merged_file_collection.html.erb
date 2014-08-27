@@ -13,7 +13,7 @@
 
   <% if document.index_links.finding_aid.present? %>
     <dt>Finding aid</dt>
-    <dd><%= document.index_links.finding_aid.first.text.html_safe %></dd>
+    <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
   <% end %>
 </dl>
 

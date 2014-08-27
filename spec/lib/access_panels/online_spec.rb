@@ -31,7 +31,7 @@ describe AccessPanel::Online do
     it "should return links when they are present in MODS records" do
       expect(mods.links).to be_present
       expect(mods.links.length).to eq 1
-      expect(mods.links.first.text).to match /^<a href=.*purl\.stanford\.edu.*>purl\.stanford\.edu<\/a>$/
+      expect(mods.links.first.html).to match /^<a href=.*purl\.stanford\.edu.*>purl\.stanford\.edu<\/a>$/
     end
     it "should return fulltext links" do
       expect(fulltext.links.all?(&:fulltext?)).to be_true
@@ -40,13 +40,13 @@ describe AccessPanel::Online do
       links = sfx.links
       expect(links.length).to eq 1
       expect(links.first).to be_sfx
-      expect(links.first.text).to match /^<a href=.*class='sfx'>Find full text<\/a>$/
+      expect(links.first.html).to match /^<a href=.*class='sfx'>Find full text<\/a>$/
     end
     it 'should return fulltext links from the index for non-image digital collection members' do
       links = image_collection_member.links
       expect(links).to be_present
       expect(links.length).to eq 1
-      expect(links.first.text).to match /^<a.*>library\.stanford\.edu<\/a>$/
+      expect(links.first.html).to match /^<a.*>library\.stanford\.edu<\/a>$/
     end
     it "should not return any non-fulltext links" do
       expect(supplemental.links).to be_blank

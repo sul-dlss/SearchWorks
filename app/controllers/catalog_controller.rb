@@ -311,6 +311,8 @@ class CatalogController < ApplicationController
 
     config.view.brief.partials = [:index]
     config.view.brief.icon_class = "fa-align-justify"
+
+    config.index.respond_to.mobile = true
   end
 
   def backend_lookup
