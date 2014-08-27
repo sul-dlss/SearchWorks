@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'mobile api', :'data-integration' => true do
   describe 'show page' do
     it 'shows correct mobile elements' do
-      visit catalog_path('2757829', format: 'mobile')
+      visit catalog_path('7861312', format: 'mobile')
       expect(page.body).to have_xml('//title')
       expect(page.body).to have_xml('//image_url')
       expect(page.body).to have_xml('//image_url_lg')
@@ -13,11 +13,12 @@ describe 'mobile api', :'data-integration' => true do
       expect(page.body).to have_xml('//isbn')
       expect(page.body).to have_xml('//imprint')
       expect(page.body).to have_xml('//item_id')
+      expect(page.body).to have_xml('//urls')
+      expect(page.body).to have_xml('//url')
       expect(page.body).to have_xml('//holdings')
       expect(page.body).to have_xml('//library')
       expect(page.body).to have_xml('//location')
       expect(page.body).to have_xml('//callnumber')
-      expect(page.body).to have_xml('//availability')
     end
 
     it 'shows correct drupal api elements' do
@@ -38,7 +39,6 @@ describe 'mobile api', :'data-integration' => true do
       expect(page.body).to have_xml('//title')
       expect(page.body).to have_xml('//format')
       expect(page.body).to have_xml('//record_url')
-      expect(page.body).to_not have_xml('//availability')
     end
 
     it 'shows course reserves api correctly' do
@@ -79,7 +79,6 @@ describe 'mobile api', :'data-integration' => true do
       visit catalog_index_path(format: 'mobile', q: 'Jacobus Houbraken')
       expect(page.body).to have_xml('//response')
       expect(page.body).to have_xml('//LBItem')
-      expect(page.body).to_not have_xml('//availability')
     end
   end
 end

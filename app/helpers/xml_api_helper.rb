@@ -72,22 +72,12 @@ module XmlApiHelper
 
   def get_urls_for_mobile(doc)
     urls = []
-    if doc.respond_to?(:to_marc)
-      if doc.to_marc["856"]
-        doc.to_marc.find_all{|f| ("856") === f.tag}.each do |field|
-          unless field["u"].nil?
-            link = url_label(field)
-            unless link.nil?
-              link_label = [link[:before], link[:link], link[:after]].join(" ")
-              urls << {:label=> link_label,:link=>link[:href]}
-            end
-          end
-        end
+    if doc.index_links.present?
+      doc.index_links.each do |link|
+        urls << {label: link.text, link: link.href}
       end
     end
     return urls unless urls.blank?
-    rescue URI::InvalidURIError
-      return nil
   end
 
   def get_imprint_for_mobile(marc)
