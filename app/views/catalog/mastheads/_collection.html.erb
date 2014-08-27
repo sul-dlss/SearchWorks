@@ -24,7 +24,7 @@
             <% end %>
             <% if @parent.index_links.finding_aid.present? %>
               <dt>Finding aid</dt>
-              <dd><%= @parent.index_links.finding_aid.first.text.html_safe %></dd>
+              <dd><%= @parent.index_links.finding_aid.first.html.html_safe %></dd>
             <% end %>
           </dl>
         </div>

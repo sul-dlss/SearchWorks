@@ -1,6 +1,6 @@
 <% if @document.marc_links.finding_aid.present? %>
   <dt title="Finding aid">Finding aid</dt>
-  <dd><%= @document.marc_links.finding_aid.map(&:text).join("<br/>").html_safe %></dd>
+  <dd><%= @document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
 <% end %>
 
 <% biblio = get_data_with_label_from_marc(@document.to_marc, "Bibliography", '504') %>
@@ -51,6 +51,6 @@
 <% if @document.marc_links.supplemental.present? %>
   <dt title="Supplemental links">Supplemental links</dt>
   <dd>
-    <%= @document.marc_links.supplemental.map(&:text).join("<br/>").html_safe %>
+    <%= @document.marc_links.supplemental.map(&:html).join("<br/>").html_safe %>
   </dd>
 <% end %>

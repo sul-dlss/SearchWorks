@@ -21,7 +21,7 @@
         <% document.access_panels.online.links.each do |link| %>
           <li>
             <span class="<%= 'stanford-only' if link.stanford_only? %>">
-              <%= link.text.html_safe %>
+              <%= link.html.html_safe %>
             </span>
           </li>
         <% end %>

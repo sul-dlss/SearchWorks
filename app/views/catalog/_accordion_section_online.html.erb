@@ -14,7 +14,7 @@
   <span class="snippet <%= id %>-online-snippet" data-behavior="trunk8">
     <% if snippet_link %>
       <span class="<%= 'stanford-only' if snippet_link.stanford_only? %>">
-        <%= snippet_link.text.html_safe %>
+        <%= snippet_link.html.html_safe %>
       </span>
     <% end %>
   </span>
@@ -24,7 +24,7 @@
         <% document.access_panels.online.links.each do |link| %>
           <li>
             <span class="<%= 'stanford-only' if link.stanford_only? %>">
-              <%= link.text.html_safe %>
+              <%= link.html.html_safe %>
             </span>
           </li>
         <% end %>
