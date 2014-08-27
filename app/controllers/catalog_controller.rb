@@ -6,6 +6,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  include AdvancedSearchParamsMapping
+
   include DatabaseAccessPoint
 
   include CallnumberSearch

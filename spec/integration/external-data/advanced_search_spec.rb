@@ -316,4 +316,28 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect((5000..6000)).to include total_results
     end
   end
+  describe 'old params mapping' do
+    it 'should get the same results as filling out the form' do
+      fill_in "search_author", with: 'McRae'
+      fill_in "search_title", with: "Jazz"
+      click_on "advanced-search-submit"
+      expect((30..50)).to include total_results
+      previous_total_results = total_results
+      within(".breadcrumb") do
+        expect(page).to have_css(".filterName", text: "Title")
+        expect(page).to have_css(".filterValue", text: "Jazz")
+        expect(page).to have_css(".filterName", text: "Author/Contributor")
+        expect(page).to have_css(".filterValue", text: "McRae")
+      end
+
+      visit catalog_index_path(search_field: 'advanced', title: "Jazz", author: "McRae")
+      expect(previous_total_results).to eq total_results
+      within(".breadcrumb") do
+        expect(page).to have_css(".filterName", text: "Title")
+        expect(page).to have_css(".filterValue", text: "Jazz")
+        expect(page).to have_css(".filterName", text: "Author/Contributor")
+        expect(page).to have_css(".filterValue", text: "McRae")
+      end
+    end
+  end
 end
