@@ -1,3 +1,18 @@
 .toggle_bookmark span {
   font-size: 0.9em;
 }
+
+#select_all-dropdown {
+  min-width: 7.5em;
+  text-align: left;
+
+  .unselect-all {
+    display: none;
+  }
+
+  .select-all, .unselect-all {
+    i.fa {
+      margin-right: 2px;
+    }
+  }
+}
