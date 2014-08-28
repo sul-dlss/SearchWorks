@@ -12,13 +12,13 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
 }
 
 .btn-topbar-menu {
-  color: $white;
-  background: $cardinal-red;
+  color: $cardinal-red;
+  background: none;
   border: none;
 }
 
 .btn-sul-toolbar {
-  color: $btn-sul-toolbar-bar-color;
+  color: $btn-sul-toolbar-bar-color !important;
   background-color: transparent;
   margin: 0 5px;
   padding: 3px 5px;

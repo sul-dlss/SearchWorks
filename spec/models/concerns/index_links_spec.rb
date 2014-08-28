@@ -24,7 +24,7 @@ describe IndexLinks do
   }
   let(:bad_url_document) {
     SolrDocument.new(
-      url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good", "http://www.example.com/{1234-1431324-431313}Img100.jpg"]
+      url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good", " http://www.example.com/{1234-1431324-431313}Img100.jpg "]
     )
   }
   describe "mixin" do

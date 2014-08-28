@@ -44,8 +44,9 @@ $btn-danger-border: darken($btn-danger-bg, 9.8%);
 $gray-light: #737373;
 
 // Navbar
-$navbar-default-link-color: $cardinal-red;
-$navbar-default-link-hover-color: $cardinal-red;
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $white;
+$navbar-default-link-active-color: $white;
 $navbar-default-toggle-hover-bg: transparent;
 
 // Pagination
