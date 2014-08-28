@@ -8,7 +8,7 @@
     count = document.access_panels.course_reserve.courses.length
     snippet = document.access_panels.course_reserve.courses.map(&:id).join(', ')
   %>
-  <div class="accordion-section course-reserves col-xs-12 col-sm-12 col-md-8 col-lg-9">
+  <div class="accordion-section course-reserves">
     <a class="header" data-accordion-section-target=".<%= id %>-course-reserves">
       Course Reserves (<%= count %>) <i class="fa fa-caret-right"></i>
     </a>
