@@ -53,10 +53,10 @@
 }
 
 @mixin label-items-online {
-  background-color: $sul-access-online-bg;
+  @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
   color: $white;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: normal;
   padding: 4px 8px;
 
   a {
@@ -73,5 +73,25 @@
     img {
       margin-right: 5px;
     }
-  }  
+  }
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+@mixin buttonize-with-gradient($background, $border, $gradient) {
+  border: 1px solid $border;
+  @include linear-gradient($gradient, $background);
+
+  &:hover {
+    @include linear-gradient($background, $gradient);
+  }
 }

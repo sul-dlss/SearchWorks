@@ -4,7 +4,8 @@
   <% id = document[:id] %>
   <div class="accordion-section summary">
     <a class="header" data-accordion-section-target=".<%= id %>-summary">
-      Summary <i class="fa fa-caret-right"></i>
+      <span class="section-label">Summary</span>
+      <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
     <div class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
       <%= summary_data %>
