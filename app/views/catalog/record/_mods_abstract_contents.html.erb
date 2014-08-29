@@ -1,4 +1,5 @@
-<% @document.mods.abstract.each do |abstracts| %>
+<% document ||= @document %>
+<% document.mods.abstract.each do |abstracts| %>
   <% if abstracts.respond_to?(:values) %>
     <div class="section-abstract">
       <%= abstracts.values.join %>
@@ -6,7 +7,7 @@
   <% end %>
 <% end %>
 
-<% @document.mods.contents.each do |contents| %>
+<% document.mods.contents.each do |contents| %>
   <% if contents.respond_to?(:values) %>
     <div class="section-contents">
       <%= contents.values.join %>

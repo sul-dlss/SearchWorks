@@ -1,19 +1,20 @@
-<% @document.mods.audience.each do |audience| %>
+<% document ||= @document %>
+<% document.mods.audience.each do |audience| %>
   <%= mods_record_field(audience) %>
 <% end %>
 
-<% @document.mods.note.each do |notes| %>
+<% document.mods.note.each do |notes| %>
   <%= mods_record_field(notes) %>
 <% end %>
 
-<% @document.mods.relatedItem.each do |related_item| %>
+<% document.mods.relatedItem.each do |related_item| %>
   <%= mods_record_field(related_item) %>
 <% end %>
 
-<% @document.mods.identifier.each do |identifier| %>
+<% document.mods.identifier.each do |identifier| %>
   <%= mods_record_field(identifier) %>
 <% end %>
 
-<% @document.mods.location.each do |location| %>
+<% document.mods.location.each do |location| %>
   <%= mods_record_field(location) %>
 <% end %>

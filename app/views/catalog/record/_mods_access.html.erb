@@ -1,3 +1,4 @@
-<% @document.mods.accessCondition.each do |accessCondition| %>
+<% document ||= @document %>
+<% document.mods.accessCondition.each do |accessCondition| %>
   <%= mods_record_field(accessCondition) %>
 <% end %>

@@ -1,22 +1,23 @@
-<% subject_display = get_subjects(@document.to_marc) %>
+<% document ||= @document %>
+<% subject_display = get_subjects(document.to_marc) %>
 <% if subject_display %>
   <dl>
     <%= subject_display %>
   </dl>
 <% end %>
 
-<% genre_display = get_genre_subjects(@document.to_marc) %>
+<% genre_display = get_genre_subjects(document.to_marc) %>
 <% if genre_display %>
   <dl>
     <%= genre_display %>
   </dl>
 <% end %>
 
-<% if @document.is_a_database? && @document[:db_az_subject] %>
+<% if document.is_a_database? && document[:db_az_subject] %>
   <dl>
     <dt>Database topics</dt>
-    <% @document[:db_az_subject].each do |subject| %>
-      <dd><%= link_to(subject, catalog_index_path(f: { :db_az_subject => [subject], @document.format_key => ["Database"]})) %></dd>
+    <% document[:db_az_subject].each do |subject| %>
+      <dd><%= link_to(subject, catalog_index_path(f: { :db_az_subject => [subject], document.format_key => ["Database"]})) %></dd>
     <% end %>
   </dl>
 <% end %>

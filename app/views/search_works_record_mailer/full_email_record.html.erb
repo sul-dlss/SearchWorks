@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+      .record-side-nav {display: none;}
+    </style>
+  </head>
+  <body>
+    <% if @message.present? %>
+      <dl>
+        <dt>Message</dt>
+        <%= @message %>
+      </dl>
+    <% end %>
+    <% @documents.each do |document| %>
+      <h1><a href="<%= polymorphic_path(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:title_display] %></a></h1>
+      <% if document.respond_to?(:to_marc) %>      
+        <%= render(partial: 'catalog/record/marc_upper_metadata_items', locals: {document: document, blacklight_config: @blacklight_config}) %>
+        <%= render(partial: 'catalog/record/marc_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>
+      <% elsif document.mods.present? %>
+        <%= render(partial: 'catalog/record/mods_upper_metadata_section', locals: {document: document, blacklight_config: @blacklight_config}) %>
+        <%= render(partial: 'catalog/record/mods_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>
+      <% end %>
+      <% if document.access_panels.online? %>
+        <h2>Online</h2>
+        <% document.access_panels.online.links.each do |link| %>
+          <%= link.html.html_safe %><br/>
+        <% end %>
+      <% end %>
+      <% if document.holdings.present? %>
+        <h2>At the library</h2>
+        <dl>
+          <% document.holdings.libraries.each do |library| %>
+            <% library.locations.each do |location| %>
+              <dt><%= library.name %> - <%= location.name %></dt>
+              <% location.items.each do |item| %>
+                <dd><%= item.callnumber %></dd>
+              <% end %>
+            <% end %>
+          <% end %>
+        </dl>
+      <% end %>
+      <hr/>
+    <% end %>
+  </body>
+</html>

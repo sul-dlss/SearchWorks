@@ -315,6 +315,34 @@ class CatalogController < ApplicationController
     config.index.respond_to.mobile = true
   end
 
+  # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
+  # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
+  def email
+    @response, @documents = get_solr_response_for_document_ids(params[:id])
+
+    if request.post? and validate_email_params
+      email_params = {to: params[:to], message: params[:message], subject: params[:subject]}
+      email = if params[:type] == "full"
+        SearchWorksRecordMailer.full_email_record(@documents, email_params, url_options)
+      else
+        SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
+      end
+      email.deliver
+
+      flash[:success] = I18n.t("blacklight.email.success")
+
+      respond_to do |format|
+        format.html { redirect_to catalog_path(params['id']) }
+        format.js { render 'email_sent' }
+      end and return
+    end
+
+    respond_to do |format|
+      format.html
+      format.js { render :layout => false }
+    end
+  end
+
   def backend_lookup
     (@response, @document_list) = get_search_results
     respond_to do |format|
@@ -327,6 +355,19 @@ class CatalogController < ApplicationController
   end
 
   private
+
+  def validate_email_params
+    unless ['full', 'brief'].include?(params[:type])
+      flash[:error] = "Invalid email type provided"
+    end
+    if params[:email_address].present?
+      flash[:error] = "You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields."
+    end
+    if params[:message] =~ /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
+      flash[:error] = "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
+    end
+    super
+  end
 
   def modifiable_params_keys
     %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
