@@ -33,7 +33,5 @@ describe "Callnumber browse", js:true, feature: true, :"data-integration" => tru
     # Browse more links
 
     expect(page).to have_css(".gallery-document a", text: "Continue to full page", count: 2)
-
-
   end
 end

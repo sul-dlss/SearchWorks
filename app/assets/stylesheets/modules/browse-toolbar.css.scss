@@ -3,11 +3,14 @@
 }
 
 .record-browse-nearby {
-  margin: 15px 0 10px 0;
-  padding: 15px 0;
+  margin-bottom: 15px;
+  padding: 0;
 
   h2 {
-    display: inline;
+    span.sul-icon {
+      font-size: 15px;
+      margin-right: 5px;
+    }
   }
   .callnumber {
     margin-left: 10px;

@@ -761,6 +761,10 @@ module MarcMetadataFixtures
   def marc_sections_fixture
     <<-xml
       <record>
+        <datafield tag="050" ind1="0" ind2="0">
+          <subfield code="a">PK2788.9.A9</subfield>
+          <subfield code="b">F55 1998</subfield>
+        </datafield>      
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>
