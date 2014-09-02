@@ -2,7 +2,7 @@
 <div class="documentHeader">
   <div class="callnumber-bar">
     <% if document.holdings.callnumbers.present? %>
-      <%= document.holdings.callnumbers.first.callnumber %>
+      <%= document.holdings.preferred_callnumber.callnumber %>
     <% end %>
   </div>
   <h3 class="index_title">

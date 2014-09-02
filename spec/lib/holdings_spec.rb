@@ -94,6 +94,35 @@ describe Holdings do
       expect(complex_holdings.browsable_callnumbers.length).to eq 1
     end
   end
+  describe '#preferred_barcode' do
+    let(:preferred) {
+      Holdings.new(
+        SolrDocument.new(
+          preferred_barcode: '12345',
+          item_display: [
+            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
+            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
+          ]
+        )
+      )
+    }
+    let(:no_preferred) {
+      Holdings.new(
+        SolrDocument.new(
+          item_display: [
+            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
+            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
+          ]
+        )
+      )
+    }
+    it 'should return the callnumber based on preferred barcode' do
+      expect(preferred.preferred_callnumber.barcode).to eq '12345'
+    end
+    it 'should return the first callnumber if there is no preferred barcode available' do
+      expect(no_preferred.preferred_callnumber.barcode).to eq '54321'
+    end
+  end
   describe "#find_by_barcode" do
     let(:found) { complex_holdings.find_by_barcode('barcode2') }
     it "should return a single Holdings::Callnumber" do
