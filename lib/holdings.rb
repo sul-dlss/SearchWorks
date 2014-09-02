@@ -9,12 +9,20 @@ require 'holdings/status'
 class Holdings
   include AppendMHLD
   def initialize(document)
-    @item_display = document[:item_display]
-    @mhld_display = document[:mhld_display]
+    @document = document
+    @item_display = @document[:item_display]
+    @mhld_display = @document[:mhld_display]
   end
   def find_by_barcode(barcode)
     callnumbers.find do |callnumber|
       callnumber.barcode == barcode
+    end
+  end
+  def preferred_callnumber
+    @preferred_callnumber ||= if @document[:preferred_barcode]
+      find_by_barcode(@document[:preferred_barcode])
+    else
+      callnumbers.first
     end
   end
   def present?
