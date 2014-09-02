@@ -5,13 +5,22 @@ module FeedbackFormHelper
   end
 
   def show_quick_report?
-    refer = Rails.application.routes.recognize_path(request.referer)
     if (params[:controller] == 'catalog' && params[:action] == 'show') or
-      (refer[:controller] == 'catalog' && refer[:action] == 'show' &&
+      (refered_from_catalog_show? &&
         params[:controller] == 'feedback_forms' && params[:action] == 'new')
       true
     else
       false
+    end
+  end
+
+  def refered_from_catalog_show?
+    if request.referer.present?
+      if request.referer =~ /(\/catalog\/|\/view\/)/
+        true
+      else
+        false
+      end
     end
   end
 end
