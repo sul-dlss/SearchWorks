@@ -1,14 +1,15 @@
-<% if @document.marc_links.finding_aid.present? %>
+<% document ||= @document %>
+<% if document.marc_links.finding_aid.present? %>
   <dt title="Finding aid">Finding aid</dt>
-  <dd><%= @document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
+  <dd><%= document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
 <% end %>
 
-<% biblio = get_data_with_label_from_marc(@document.to_marc, "Bibliography", '504') %>
+<% biblio = get_data_with_label_from_marc(document.to_marc, "Bibliography", '504') %>
 <% unless biblio.nil? %>
   <%= render_field_from_marc(biblio) %>
 <% end %>
 
-<% toc = get_toc(@document.to_marc) %>
+<% toc = get_toc(document.to_marc) %>
 <% unless toc.nil? %>
   <dt><%= toc[:label] %></dt>
   <dd>
@@ -43,14 +44,14 @@
 <% end %>
 
 
-<% summary = get_data_with_label_from_marc(@document.to_marc, "Summary", '520') %>
+<% summary = get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
 <% unless summary.nil? %>
   <%= render_field_from_marc(summary) %>
 <% end %>
 
-<% if @document.marc_links.supplemental.present? %>
+<% if document.marc_links.supplemental.present? %>
   <dt title="Supplemental links">Supplemental links</dt>
   <dd>
-    <%= @document.marc_links.supplemental.map(&:html).join("<br/>").html_safe %>
+    <%= document.marc_links.supplemental.map(&:html).join("<br/>").html_safe %>
   </dd>
 <% end %>

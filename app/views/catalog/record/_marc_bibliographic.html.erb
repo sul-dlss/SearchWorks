@@ -1,6 +1,6 @@
 <% document ||= @document %>
 
-<%= render 'catalog/dates_from_solr' %>
+<%= render partial: 'catalog/dates_from_solr', locals: {document: document} %>
 
 <% title_translation = get_data_with_label_from_marc(document.to_marc, "Title Translation", '242') %>
 <% unless title_translation.nil? %>
@@ -432,12 +432,12 @@
 
 <%- isbn = get_data_with_label(document, "ISBN", 'isbn_display') -%>
 <%- unless isbn.nil? -%>
-  <%= render "field_from_index", :fields => isbn %>
+  <%= render "catalog/field_from_index", :fields => isbn %>
 <%- end -%>
 
 <%- issn = get_data_with_label(document, "ISSN", 'issn_display') -%>
 <%- unless issn.nil? -%>
-  <%= render "field_from_index", :fields => issn %>
+  <%= render "catalog/field_from_index", :fields => issn %>
 <%- end -%>
 
 <%- pub_num = get_data_with_label_from_marc(document.to_marc, "Publisher Number", '028') -%>

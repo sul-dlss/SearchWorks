@@ -1,1 +1,2 @@
-<%= link_to_contributor_from_marc(@document.to_marc) %>
+<% document ||= @document %>
+<%= link_to_contributor_from_marc(document.to_marc) %>

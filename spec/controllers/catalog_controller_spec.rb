@@ -25,6 +25,46 @@ describe CatalogController do
       expect(assigns(:search_modifier)).to be_a SearchQueryModifier
     end
   end
+  describe '#email' do
+    it 'should set the provided subject' do
+      expect{post :email, to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}.to change{
+        ActionMailer::Base.deliveries.count
+      }.by(1)
+      expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
+    end
+    it 'should send a brief email when requested' do
+      email = double('email')
+      expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
+      expect(email).to receive(:deliver)
+      post :email, to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'
+    end
+    it 'should send a full email when requested' do
+      email = double('email')
+      expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
+      expect(email).to receive(:deliver)
+      post :email, to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1'
+    end
+    describe 'validations' do
+      it 'should not send emails when the email_address field has been filled out' do
+        expect{post :email, email_address: 'something', to: 'email@example.com'}.to_not change{
+          ActionMailer::Base.deliveries.count
+        }
+        expect(flash[:error]).to eq 'You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields.'
+      end
+      it 'should not allow messages that have links in them' do
+        expect{post :email, to: 'email@example.com', message: "http://library.stanford.edu"}.to_not change{
+          ActionMailer::Base.deliveries.count
+        }
+        expect(flash[:error]).to eq 'Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments.'
+      end
+      it 'should prevent incorrect email types from being sent' do
+        expect{post :email, to: 'email@example.com', type: "not-a-type"}.to_not change{
+          ActionMailer::Base.deliveries.count
+        }
+        expect(flash[:error]).to eq 'Invalid email type provided'
+      end
+    end
+  end
   describe "routes" do
     describe "customized from Blacklight" do
       it "should route /view/:id properly" do
