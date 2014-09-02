@@ -99,6 +99,9 @@ GEM
       capistrano-bundler (~> 1.1)
     capistrano-releaseboard (0.0.1)
       faraday
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -339,6 +342,7 @@ DEPENDENCIES
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-rails
+  capistrano-rvm
   capybara
   coderay
   coveralls
