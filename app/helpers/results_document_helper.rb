@@ -1,7 +1,7 @@
 module ResultsDocumentHelper
 
   def get_main_title document
-    document['title_display'].html_safe
+    (document['title_display'] || "").html_safe
   end
 
 
