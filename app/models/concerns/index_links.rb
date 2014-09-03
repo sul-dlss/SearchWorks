@@ -61,8 +61,7 @@ module IndexLinks
       uri = URI.parse(URI.escape(link_field.strip))
       host = uri.host
       if host =~ /ezproxy\.stanford\.edu/
-        query = CGI.parse(uri.query)
-        if query['url'].present?
+        if uri.query && (query = CGI.parse(uri.query))['url'].present?
           host = URI.parse(query['url'].first).host
         end
       end

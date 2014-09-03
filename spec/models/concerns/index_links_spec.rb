@@ -22,6 +22,11 @@ describe IndexLinks do
       url_sfx: ['http://example.com/sfx-link']
     )
   }
+  let(:ezproxy_document) {
+    SolrDocument.new(
+      url_fulltext: ["http://ezproxy.stanford.edu/login?url=http://library.stanford.edu", "http://ezproxy.stanford.edu:2197/stable/i403360"]
+    )
+  }
   let(:bad_url_document) {
     SolrDocument.new(
       url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good", " http://www.example.com/{1234-1431324-431313}Img100.jpg "]
@@ -42,6 +47,7 @@ describe IndexLinks do
     let(:index_links) {solr_document.index_links}
     let(:finding_aid_links) {finding_aid_document.index_links}
     let(:sfx_links) { sfx_document.index_links }
+    let(:ezproxy_links) { ezproxy_document.index_links }
     let(:bad_links) { bad_url_document.index_links }
     it "should return both fulltext and supplemental links" do
       expect(index_links.all.length).to eq 2
@@ -71,6 +77,11 @@ describe IndexLinks do
     it "should parse bad links properly" do
       expect(bad_links.all.length).to eq 2
       expect(bad_links.all.first.html).to match /<a href=.*example\.com\/lookup\?\^The\+Query.*>www\.example\.com<\/a>/
+    end
+    it 'should return the URL in the url parameter for ezproxy links (but fallback on the URL host)' do
+      expect(ezproxy_links.all.length).to eq 2
+      expect(ezproxy_links.all.first.html).to match /<a href=.*>library\.stanford\.edu<\/a>/
+      expect(ezproxy_links.all.last.html).to match /<a href=.*>ezproxy\.stanford\.edu<\/a>/
     end
     it "should identify sfx URLs and link them appropriately" do
       expect(sfx_links.all.length).to eq 1
