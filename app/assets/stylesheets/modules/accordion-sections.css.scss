@@ -5,7 +5,7 @@
 
   .accordion-section {
     font-size: small;
-    margin: 0 0 7px 0;
+    margin: 0 0 10px 0;
     padding-left: 0;
 
     .header {
@@ -17,15 +17,25 @@
       cursor: pointer;
       padding: 2px 10px;
       border-bottom: none;
-      font-weight: 300;
+      font-weight: normal;
       font-size: 0.9em;
-      padding: 0 8px 1px 10px;
       white-space: nowrap;
       width: 10.5em;
-      text-align: right;
+      text-align: left;
 
-      i.fa {
-        padding-left: 4px;
+      span.section-label {
+        float: left;
+        text-align: left;
+      }
+
+      span.glyphicon {
+        font-size: 10px;
+        float: right;
+        padding-top: 1px;
+      }
+
+      span.glyphicon-chevron-down {
+        padding-top: 2px;
       }
     }
 
@@ -68,13 +78,14 @@
 
   .accordion-section.summary {
     .header {
-      background-color: $sul-summary-bg;
+      @include buttonize-with-gradient($sul-accordion-summary-bg, $sul-accordion-summary-border, $sul-accordion-summary-gradient);
     }
   }
 
   .accordion-section.online {
     .header {
-      background-color: $sul-access-online-bg;
+      @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
+
       &.selected-database {
         width: 10.7em;
       }
@@ -88,7 +99,7 @@
 
       .google-books {
         display: none;
-        
+
         .btn-preview {
           display: none;
 
@@ -102,7 +113,7 @@
 
   .accordion-section.course-reserves {
     .header {
-      background-color: $sul-access-course-reserve-bg;
+      @include buttonize-with-gradient($sul-accordion-course-reserves-bg, $sul-accordion-course-reserves-border, $sul-accordion-course-reserves-gradient);
     }
 
     .details {
@@ -114,7 +125,7 @@
 
   .accordion-section.location {
     .header {
-      background-color: $sul-access-location-bg;
+      @include buttonize-with-gradient($sul-accordion-location-bg, $sul-accordion-location-border, $sul-accordion-location-gradient);
     }
 
     .location-header {

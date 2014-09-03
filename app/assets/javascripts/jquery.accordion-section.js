@@ -12,20 +12,22 @@
     return this.each(function() {
       var $header = $(this),
           $target = $($header.data('accordion-section-target')),
-          $snippet = $($header.data('accordion-section-target') + '-snippet');
+          $snippet = $($header.data('accordion-section-target') + '-snippet'),
+          clsAccordionClose = 'glyphicon-chevron-right',
+          clsAccordionOpen = 'glyphicon-chevron-down';
 
       attachEvents();
 
       function attachEvents() {
         $header.on('click', $.proxy(function() {
-          var $arrow = $header.find('i.fa');
+          var $arrow = $header.find('span.glyphicon');
 
-          if ($arrow.hasClass('fa-caret-right')) {
-            $arrow.removeClass('fa-caret-right').addClass('fa-caret-down');
+          if ($arrow.hasClass(clsAccordionClose)) {
+            $arrow.removeClass(clsAccordionClose).addClass(clsAccordionOpen);
             $target.show();
             $snippet.hide();
           } else {
-            $arrow.removeClass('fa-caret-down').addClass('fa-caret-right');
+            $arrow.removeClass(clsAccordionOpen).addClass(clsAccordionClose);
             $target.hide();
             $snippet.show();
           }

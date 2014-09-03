@@ -19,7 +19,7 @@ describe "catalog/_accordion_section_course_reserves.html.erb" do
 
     it "should include the course reserves accordion and text" do
       expect(rendered).to have_css('.accordion-section.course-reserves')
-      expect(rendered).to have_css('.accordion-section.course-reserves a.header', text: "Course Reserves (2)")
+      expect(rendered).to have_css('.accordion-section.course-reserves a.header', text: "Course reserve")
       expect(rendered).to have_css('.accordion-section.course-reserves span.snippet', text: "ACCT-212-01-02, ACCT-215-01-02")
 
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: "Managerial Accounting: Base")
