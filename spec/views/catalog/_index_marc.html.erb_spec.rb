@@ -45,4 +45,19 @@ describe "catalog/_index_marc.html.erb" do
       expect(rendered).to have_css('dd a', text: "Subject2")
     end
   end
+  describe 'finding aid' do
+    before do
+      view.stub(:document).and_return(
+        SolrDocument.new(
+          marcxml: metadata1,
+          url_fulltext: ['http://oac.cdlib.org/findaid/12345']
+        )
+      )
+      render
+    end
+    it 'should display the finding aid' do
+      expect(rendered).to have_css('dt', text: 'Finding aid')
+      expect(rendered).to have_css('dd a', text: 'Online Archive of California')
+    end
+  end
 end
