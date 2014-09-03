@@ -254,6 +254,10 @@
     <dynamicField name="*_ssim" type="string" stored="true" indexed="true" multiValued="true" omitNorms="true" />
     <dynamicField name="*_isi" type="tint" stored="true" indexed="true" omitNorms="true" />
     <dynamicField name="*_isim" type="tint" stored="true" indexed="true" multiValued="true" omitNorms="true" />
+    <dynamicField name="*_sort" type="alphaSort" stored="false" indexed="true"/>
+    <dynamicField name="*_xml" type="string" stored="true" indexed="false" omitNorms="true" />
+    <dynamicField name="cjk_*" type="text" stored="false" indexed="true" multiValued="true" />
+    <dynamicField name="*_hsim" type="string_hierarch" stored="false" indexed="true" multiValued="true" />
   </fields>
 
   <!-- copy fields -->
@@ -410,6 +414,15 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
 	      <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="string_hierarch" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter="|" />
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.KeywordTokenizerFactory" />
       </analyzer>
     </fieldType>
 
