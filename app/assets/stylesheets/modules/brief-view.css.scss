@@ -1,6 +1,8 @@
 .brief-document {
   @include document;
-
+  margin-bottom: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   h3.index_title {
     @include h3-index-title-font;
     @include h3-index-title-small-font;
@@ -33,9 +35,29 @@
   h3.preview-title {
     margin-left: -26px;
   }
+
+  .preview-button-container {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .index-document-functions{
+    margin-left: -40px;
+  }
 }
 
 .brief-container{
   margin-left: 0px;
   margin-right: 0px;
+  ul {
+    li {
+      color: $gray-46-percent;
+      font-size: 0.9em;
+    }
+  }
+}
+
+.brief-preview-container {
+  margin-top: 15px;
+  margin-bottom: 10px;
 }

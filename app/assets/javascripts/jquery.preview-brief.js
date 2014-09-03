@@ -20,7 +20,7 @@
           previewClass = $item.data('preview-target'),
           $previewTarget = $(previewClass),
           previewUrl = $item.data('preview-url'),
-          $triggerBtn, $briefTarget, briefCounter;
+          $triggerBtn, $briefTarget;
 
       init();
       attachTriggerEvents();
@@ -28,10 +28,9 @@
       function showPreview() {
         $previewTarget.addClass('preview').empty();
 
-        // After preview content is appended, add the counter to the title
-        $.when(PreviewContent.append(previewUrl, $previewTarget)).done(function(){
-          $previewTarget.find('h3 a').before(briefCounter);
-        });
+        $previewTarget.append('<div class="preview-arrow"></div>');
+
+        PreviewContent.append(previewUrl, $previewTarget);
 
         $triggerBtn
           .addClass('preview-open')
@@ -60,7 +59,6 @@
       }
 
       function init() {
-        briefCounter = $item.find('.document-counter').text();
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
         $briefTarget = $item.find('.brief-container .col-md-8');
       }
