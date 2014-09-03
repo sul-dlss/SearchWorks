@@ -15,6 +15,11 @@
     <dt><%= document.extent_label %></dt>
     <dd><%= document.extent %></dd>
   <% end %>
+
+  <% if document.index_links.finding_aid.present? %>
+    <dt>Finding aid</dt>
+    <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
+  <% end %>
 </dl>
 
 <%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>

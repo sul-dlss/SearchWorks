@@ -10,7 +10,8 @@ describe "catalog/_index_merged_image.html.erb" do
         collection_with_title: ['12345 -|- Collection Title'],
         marcbib_xml: metadata1,
         physical: ["The Physical Extent"],
-        imprint_display: ['Imprint Statement']
+        imprint_display: ['Imprint Statement'],
+        url_fulltext: ['http://oac.cdlib.org/findaid/12345']
       )
     )
     expect(view).to receive(:presenter).and_return(presenter)
@@ -29,5 +30,9 @@ describe "catalog/_index_merged_image.html.erb" do
   end
   it "should include the collection" do
     expect(rendered).to have_css('dt', text: 'Collection')
+  end
+  it 'should include the finding aid' do
+    expect(rendered).to have_css('dt', text: 'Finding aid')
+    expect(rendered).to have_css('dd a', text: 'Online Archive of California')
   end
 end
