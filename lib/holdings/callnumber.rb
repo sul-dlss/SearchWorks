@@ -51,7 +51,7 @@ class Holdings
       if item_display[8].present?
         item_display[8]
       else
-        '(no callnumber)'
+        '(no call number)'
       end
     end
     def full_shelfkey

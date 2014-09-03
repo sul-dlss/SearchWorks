@@ -58,8 +58,8 @@ describe Holdings::Callnumber do
   end
   describe "#callnumber" do
     let(:no_callnumber) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
-    it "should return '(no callnumber) if the callnumber is blank" do
-      expect(no_callnumber.callnumber).to eq '(no callnumber)'
+    it "should return '(no call number) if the callnumber is blank" do
+      expect(no_callnumber.callnumber).to eq '(no call number)'
     end
   end
   describe "#status" do
