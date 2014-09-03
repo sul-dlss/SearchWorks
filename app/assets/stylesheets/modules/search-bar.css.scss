@@ -10,9 +10,14 @@
   }
 
   .navbar-brand {
-    font-size: 30px;
-    padding-left: 0;
-    line-height: 26px;
+    padding: 10px 0 10px 0;
+    line-height: 28px;
+
+    img {
+      height: 28px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
   }
 
   .navbar-nav.navbar-right.searchbar-right:last-child {
@@ -22,10 +27,12 @@
   ul.searchbar-right {
     text-transform: uppercase;
   }
+
   .nav > li > a {
     padding: 15px 0 5px 0;
     margin-left: 15px;
   }
+
   #searchbar-navbar-collapse .nav > li > a {
     &:hover, &:focus, &:active {
       border-bottom: 3px solid $white;
@@ -52,9 +59,10 @@
   }
 
   .search-target{
-    font-size: 1.5em;
-    margin-left: -3px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.6em;
     color: $white;
+    margin-left: 0;
   }
 
   span.input-group-addon {
