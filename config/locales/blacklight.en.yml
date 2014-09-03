@@ -22,7 +22,7 @@ en:
         title: '%{document_title} in %{application_name}'
       sort:
         label_html: 'Sort<span class="hidden-xs hidden-sm"> by %{field}</span>'
-      title: '%{num_results} in %{application_name}'
+      searchworks_results_title: '%{num_results} in %{application_name}'
       view:
         label: 'View'
         brief: 'Brief'
