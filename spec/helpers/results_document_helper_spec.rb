@@ -22,14 +22,16 @@ describe ResultsDocumentHelper do
 
     @document_01 = SolrDocument.new(data_01)
     @document_02 = SolrDocument.new(data_02)
-
+    @document_03 = SolrDocument.new
   end
 
   describe "Render metadata" do
     it "should return main title" do
       expect(get_main_title(@document_01)).to eq "Car : a drama of the American workplace"
     end
-
+    it 'should return a blank title if one does not exist' do
+      expect(get_main_title(@document_03)).to eq ""
+    end
     it "should return date and date ranges" do
       expect(get_main_title_date(@document_01)).to eq "[1999]"
       expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
