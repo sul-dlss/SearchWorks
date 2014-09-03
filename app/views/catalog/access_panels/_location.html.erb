@@ -15,6 +15,18 @@
           </div>
         </div>
         <div class="panel-body">
+          <% if document.index_links.finding_aid.present? %>
+              <div class='access-panel-subsection'>
+                <h4>Finding aid</h4>
+                <%= document.index_links.finding_aid.first.html.html_safe %>
+              </div>
+          <% end %>
+          <% if library.library_instructions.present? %>
+            <div class='access-panel-subsection'>
+              <h4><%= library.library_instructions[:heading] %></h4>
+              <p><%= library.library_instructions[:text] %></p>
+            </div>
+          <% end %>
           <ul class="list-unstyled location">
             <% library.locations.select(&:present?).each do |location| %>
               <li>

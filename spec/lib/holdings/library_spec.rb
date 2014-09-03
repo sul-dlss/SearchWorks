@@ -53,6 +53,14 @@ describe Holdings::Library do
       end
     end
   end
+  describe '#library_instructions' do
+    it 'should return instructions for libraries which have them' do
+      Constants::LIBRARY_INSTRUCTIONS.each_key do |library|
+        expect(Holdings::Library.new(library).library_instructions).to have_key(:heading)
+        expect(Holdings::Library.new(library).library_instructions).to have_key(:text)
+      end
+    end
+  end
   describe "zombie" do
     let(:zombie) { Holdings::Library.new("ZOMBIE") }
     it "should be #zombie?" do
