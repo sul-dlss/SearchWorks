@@ -33,6 +33,9 @@ class Holdings
     def location_level_request?
       Constants::REQUEST_LIBS.include?(@code)
     end
+    def library_instructions
+      Constants::LIBRARY_INSTRUCTIONS[@code]
+    end
     def sort
       if @code == "GREEN"
         '0'

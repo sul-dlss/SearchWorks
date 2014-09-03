@@ -1075,4 +1075,10 @@ module Constants
     "Selections" => "check-3"
    }
    BROWSABLE_CALLNUMBERS = ["LC", "DEWEY"]
+   LIBRARY_INSTRUCTIONS = {
+     "SPEC-COLL" => {
+       heading: "Limited access",
+       text: "All materials are stored offsite. Request items 2 business days in advance. Maximum 5 items per day."
+     }
+   }
 end

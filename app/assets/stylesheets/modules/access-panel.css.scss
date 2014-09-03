@@ -7,3 +7,16 @@
   font-size: 1.3em;
   font-weight: 300;
 }
+.access-panel {
+  .panel-body {
+    h4 {
+      font-size: 16px;
+      color: $cardinal-red;
+      margin-bottom: 5px;
+    }
+
+    .access-panel-subsection {
+      padding-bottom: 10px;
+    }
+  }
+}

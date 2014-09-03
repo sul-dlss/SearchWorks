@@ -231,4 +231,31 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css('div.public-note.note-highlight', text: 'Note: this is public')
     end
   end
+  describe 'finding aid' do
+    before do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
+        url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
+      ))
+      render
+    end
+    it 'should display finding aid sections with link' do
+      expect(rendered).to have_css('h4', text: 'Finding aid')
+      expect(rendered).to have_css('a', text: 'Online Archive of California')
+    end
+  end
+  describe 'special instructions' do
+    before do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
+      ))
+      render
+    end
+    it 'should render special instructions field' do
+      expect(rendered).to have_css('h4', text: 'Limited access')
+      expect(rendered).to have_css('p', text: 'All materials are stored offsite. Request items 2 business days in advance. Maximum 5 items per day.')
+    end
+  end
 end
