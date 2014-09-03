@@ -87,7 +87,7 @@
       @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
 
       &.selected-database {
-        width: 10.7em;
+        width: 11.4em;
       }
     }
 
@@ -147,4 +147,8 @@
       }
     }
   }
+}
+
+.selected-databases .accordion-sections {
+  padding-left: 15px;
 }
