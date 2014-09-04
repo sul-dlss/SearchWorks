@@ -4,7 +4,7 @@
 
 .gallery {
   .item-thumb {
-    height: 210px;
+    height: $sul-gallery-cover-height;
     width: $gallery-document-width - 2;
     display: table-cell;
     text-align: center;
@@ -14,6 +14,7 @@
   .callnumber-bar {
     background-color: $sul-gallery-callnumber-bar-bg;
     color: $sul-gallery-callnumber-bar-color;
+    height: 42px;
     font-weight: 300;
     font-size: .9em;
     text-align: center;
@@ -85,14 +86,17 @@
     }
   }
   .stacks-image {
-    max-width: 183px;
-    max-height: 200px;
+    max-width: $gallery-document-width - 2;
+    max-height: $sul-gallery-cover-height;
+  }
+  .cover-image {
+    max-height: $sul-gallery-cover-height;
   }
 }
 
 span.fake-cover {
   width: 130px;
-  height: 195px;
+  height: $sul-gallery-cover-height;
   text-align: center;
   position: relative;
   margin: 0 auto;
@@ -103,7 +107,7 @@ span.fake-cover {
 
 div.fake-cover-text-wrapper {
   width: 130px;
-  height: 195px;
+  height: $sul-gallery-cover-height;
   display: table-cell;
   vertical-align: middle;
 }

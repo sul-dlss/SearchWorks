@@ -2,7 +2,14 @@
 <div class="documentHeader">
   <div class="callnumber-bar">
     <% if document.holdings.callnumbers.present? %>
-      <%= document.holdings.preferred_callnumber.callnumber %>
+      <%= document.holdings.preferred_callnumber.callnumber %><br/>
+      <% if document.holdings.libraries.length == 1 %>
+        <%= document.holdings.libraries.first.name %>
+      <% else %>
+        in <%= document.holdings.libraries.length %> libraries
+      <% end %>
+    <% elsif document.mods.present? %>
+      <br/>Stanford Digital Repository
     <% end %>
   </div>
   <h3 class="index_title">
