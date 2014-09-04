@@ -34,6 +34,9 @@ module SearchWorks
           if collection_parameters?
             return :collection
           end
+          if digital_collections_parameters?
+            return :digital_collections
+          end
         end
       end
 
@@ -50,6 +53,10 @@ module SearchWorks
 
       def collection_parameters?
         @params[:f][:collection].present? && !@params[:f][:collection].include?("sirsi")
+      end
+
+      def digital_collections_parameters?
+        @params[:f][:collection_type].present? && @params[:f][:collection_type].include?("Digital Collection")
       end
 
       def selected_databases_index_access_points
