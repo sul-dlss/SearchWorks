@@ -37,6 +37,9 @@ module SearchWorks
           if digital_collections_parameters?
             return :digital_collections
           end
+          if sdr_parameters?
+            return :sdr
+          end
         end
       end
 
@@ -57,6 +60,10 @@ module SearchWorks
 
       def digital_collections_parameters?
         @params[:f][:collection_type].present? && @params[:f][:collection_type].include?("Digital Collection")
+      end
+
+      def sdr_parameters?
+        @params[:f][:building_facet].present? && @params[:f][:building_facet].include?("Stanford Digital Repository")
       end
 
       def selected_databases_index_access_points

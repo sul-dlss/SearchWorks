@@ -130,6 +130,20 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+        describe 'sdr' do
+          before { base_params[:f] = {building_facet: ["Stanford Digital Repository"]} }
+          it 'should be defined when the building facet is Stanford Digital Repository' do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :sdr
+          end
+          it "should not be defined when Stanford Digital Repository is not present" do
+            base_params[:f] = {}
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+          it "should not be defined when building_facet is a different value" do
+            base_params[:f] = {building_facet: ["Green Library"]}
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe "for SelectedDatabasesController#index" do

@@ -7,6 +7,8 @@
 :format_main_ssim: File
 :collection:
   - 38
+:building_facet:
+  - "Stanford Digital Repository"
 :modsxml: <%= mods_everything %>
 :pub_date: 3204
 :beginning_year_isi: 3204
