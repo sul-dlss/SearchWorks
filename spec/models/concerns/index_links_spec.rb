@@ -29,7 +29,7 @@ describe IndexLinks do
   }
   let(:bad_url_document) {
     SolrDocument.new(
-      url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good", " http://www.example.com/{1234-1431324-431313}Img100.jpg "]
+      url_fulltext: ["http://www.example.com/lookup?^The+Query+Is+No+Good", " http://www.example.com/{1234-1431324-431313}Img100.jpg ", " at: "]
     )
   }
   describe "mixin" do
@@ -75,8 +75,9 @@ describe IndexLinks do
       expect(finding_aid_links.finding_aid.first.html).to match /<a href='.*oac\.cdlib\.org\/findaid\/something-else'>Online Archive of California<\/a>/
     end
     it "should parse bad links properly" do
-      expect(bad_links.all.length).to eq 2
+      expect(bad_links.all.length).to eq 3
       expect(bad_links.all.first.html).to match /<a href=.*example\.com\/lookup\?\^The\+Query.*>www\.example\.com<\/a>/
+      expect(bad_links.all.last.html).to match /<a.*> at: <\/a>/
     end
     it 'should return the URL in the url parameter for ezproxy links (but fallback on the URL host)' do
       expect(ezproxy_links.all.length).to eq 2
