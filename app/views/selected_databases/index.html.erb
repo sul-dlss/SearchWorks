@@ -16,7 +16,8 @@
               <span class="subjects">(<%= database.selected_database_subjects.join(', ') %>)</span>
               <div class="accordion-section online">
                 <a class="header selected-database" data-accordion-section-target=".<%= database[:id] %>-selected-database">
-                  Search database (<%= database.index_links.all.length %>) <i class="fa fa-caret-right"></i>
+                  <span class="section-label">Search database (<%= database.index_links.all.length %>)</span>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
                 <span class="snippet <%= database[:id] %>-selected-database-snippet" data-behavior="trunk8">
                   <%= database.index_links.first.html.html_safe %>
