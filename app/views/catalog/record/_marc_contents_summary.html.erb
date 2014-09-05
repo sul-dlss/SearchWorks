@@ -55,3 +55,5 @@
     <%= document.marc_links.supplemental.map(&:html).join("<br/>").html_safe %>
   </dd>
 <% end %>
+
+<%= link_to_included_works_from_marc(document.to_marc) %>

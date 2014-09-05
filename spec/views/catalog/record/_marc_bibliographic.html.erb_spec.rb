@@ -49,4 +49,16 @@ describe "catalog/record/_marc_bibliographic.html.erb" do
       expect(rendered).to have_css('dd', text: '5678')
     end
   end
+  describe 'Related works' do
+    before do
+      assign(:document, SolrDocument.new(marcxml: contributed_works_fixture))
+      render
+    end
+    it 'should include the related works section' do
+      expect(rendered).to have_css('dt', text: 'Related Work')
+      expect(rendered).to have_css('dd a', text: '700 with t 700 $e Title.')
+      expect(rendered).to_not have_css('dt', text: 'Included Work')
+      expect(rendered).to_not have_css('dt', text: 'Contributor')
+    end
+  end
 end
