@@ -32,7 +32,8 @@ en:
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
-
+    range_limit:
+      submit_limit: 'Apply'
   blacklight_advanced_search:
     form:
       title: "Advanced search"

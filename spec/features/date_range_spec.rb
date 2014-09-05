@@ -6,5 +6,6 @@ feature "Date Range plugin" do
     page.find('h3.panel-title', text: "Date").click
     expect(page).to have_css 'input.range_begin'
     expect(page).to have_css 'input.range_end'
+    expect(page).to have_xpath "//input[@value='Apply']"
   end
 end
