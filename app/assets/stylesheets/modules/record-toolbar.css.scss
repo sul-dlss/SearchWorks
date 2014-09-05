@@ -42,7 +42,7 @@
       border: none;
       &:hover, &:focus, &:active {
         color: $btn-sul-toolbar-bar-color;
-        background-color: $btn-sul-toolbar-bar-hover-bg
+        background-color: $btn-sul-toolbar-bar-hover-bg;
       }
     }
 
@@ -80,6 +80,17 @@
 
 @media screen and (max-width: $screen-xs-max) {
   .record-toolbar {
+    .navbar-collapse {
+      overflow-x: hidden;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a {
+      color: #000;
+      &:hover {
+        color: #000;
+      }
+    }
+
     .navbar-header {
       margin-top: 6px;
       .navbar-toggle {
@@ -89,7 +100,7 @@
     .navbar-collapse > ul > li {
       text-align: right;
       padding-right: 40px;
-      & a{
+      & a {
         text-align: right;
       }
       form {
