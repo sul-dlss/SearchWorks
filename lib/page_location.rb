@@ -40,6 +40,9 @@ module SearchWorks
           if sdr_parameters?
             return :sdr
           end
+          if dissertation_theses_parameters?
+            return :dissertation_theses
+          end
         end
       end
 
@@ -64,6 +67,10 @@ module SearchWorks
 
       def sdr_parameters?
         @params[:f][:building_facet].present? && @params[:f][:building_facet].include?("Stanford Digital Repository")
+      end
+
+      def dissertation_theses_parameters?
+        @params[:f][:genre_ssim].present? && @params[:f][:genre_ssim].include?('Thesis/Dissertation')
       end
 
       def selected_databases_index_access_points

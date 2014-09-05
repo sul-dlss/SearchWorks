@@ -144,6 +144,20 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+        describe 'dissertation_theses' do
+          before { base_params[:f] = { genre_ssim: ['Thesis/Dissertation'] } }
+          it 'should be defined when genre facet is "Thesis/Dissertation"' do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :dissertation_theses
+          end
+          it 'should not be defined when Thesis/Dissertation is not present' do
+            base_params[:f] = {}
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+          it 'should not be defined when genre_ssim is another value' do
+            base_params[:f] = { genre_ssim: ['Cat Tricks'] }
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe "for SelectedDatabasesController#index" do
