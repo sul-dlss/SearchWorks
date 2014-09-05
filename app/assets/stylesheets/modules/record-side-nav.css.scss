@@ -38,3 +38,19 @@
   }
 
 }
+
+@media screen and (max-width: $screen-xs-max) {
+  .record-side-nav {
+    right: 0;
+
+    li {
+      &:first-child button {
+        border-top-right-radius: 0px;
+      }
+
+      &:last-child button {
+        border-bottom-right-radius: 0px;
+      }
+    }
+  }
+}
