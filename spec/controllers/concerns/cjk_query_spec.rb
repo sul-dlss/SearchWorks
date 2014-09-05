@@ -18,7 +18,7 @@ describe CJKQuery do
       controller.send(:modify_params_for_cjk_advanced, solr_params, user_params)
     end
     describe "unprocessed" do
-      let(:solr_q) {"_query_:\"{!edismax pf2=$p2 pf3=$pf3}#{q_str}\" AND
+      let(:solr_q) {"_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND

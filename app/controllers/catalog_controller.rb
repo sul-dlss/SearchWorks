@@ -176,7 +176,7 @@ class CatalogController < ApplicationController
     config.add_search_field("search") do |field|
       field.label = "All fields"
       field.solr_local_parameters = {
-        :pf2 => "$p2",
+        :pf2 => "$pf2",
         :pf3 => "$pf3"
       }
     end

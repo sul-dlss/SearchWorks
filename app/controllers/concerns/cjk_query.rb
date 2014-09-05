@@ -26,7 +26,7 @@ module CJKQuery
           if cjk_unigrams_size(user_params[param]) > 0
             cjk_local_params = cjk_mm_qs_params(user_params[param])
             if param == 'search'
-              solr_params[:q].gsub!("pf2=$p2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
+              solr_params[:q].gsub!("pf2=$pf2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
             else
               stripped_param = modify_field_key_for_cjk(param)
               if cjk_local_params.present?
