@@ -11,7 +11,7 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
       within('#facets') do
         click_link 'Date'
 
-        click_button 'Limit'
+        click_button 'Apply'
       end
 
       within('.breadcrumb') do
