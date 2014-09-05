@@ -59,4 +59,10 @@ feature "Advanced Search" do
 
     expect(page).to_not have_content("Advanced search")
   end
+  scenario "should have search tips" do
+    within ".advanced-search-form" do
+      expect(page).to have_css("h3", text: "Search tips")
+      expect(page).to have_css("ul.advanced-help")
+    end
+  end
 end

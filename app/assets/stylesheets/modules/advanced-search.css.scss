@@ -1,5 +1,4 @@
 #advanced-search-form {
-
   .advanced-search-start-over {
     margin-left: 20px;
   }
@@ -20,6 +19,18 @@
     padding: 0;
   }
 }
+
+.advanced-search-form {
+  .advanced-help {
+    padding: 0 15px;
+
+    li {
+      margin-left: 10px;
+      padding-bottom: 7px;
+    }
+  }
+}
+
 
 @media only screen and (min-width : 768px) {
   #advanced-search-form #advanced_search_facets .facets-list {
