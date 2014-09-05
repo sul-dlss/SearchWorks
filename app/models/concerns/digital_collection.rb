@@ -11,7 +11,7 @@ module DigitalCollection
   private
 
   class CollectionMembers
-    delegate :present?, :each, :map, :length, to: :documents
+    delegate :present?, :each, :first, :last, :map, :length, to: :documents
     def initialize(document, options={})
       @options = options
       @document = document
