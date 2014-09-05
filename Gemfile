@@ -83,7 +83,7 @@ gem "faraday"
 gem "rails_config"
 gem "mods_display", "0.3.3"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search"
+gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'blacklight5'
