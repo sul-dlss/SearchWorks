@@ -61,9 +61,20 @@ module MarcHelper
     return {:label=>label,:fields=>new_fields,:unmatched_vernacular=>new_unmatched_vernacular} unless (new_fields.empty? and new_unmatched_vernacular.empty?)
   end
 
-  # Generate dt/dd pair of contributors with translations
   def link_to_contributor_from_marc(marc)
-    text = ""
+    contributors_and_works_from_marc(marc)[:contributors]
+  end
+
+  def link_to_related_works_from_marc(marc)
+    contributors_and_works_from_marc(marc)[:related_works]
+  end
+
+  def link_to_included_works_from_marc(marc)
+    contributors_and_works_from_marc(marc)[:included_works]
+  end
+
+  def contributors_and_works_from_marc(marc)
+    vern_text = ""
     related_works = []
     included_works = []
     contributors = []
@@ -149,7 +160,7 @@ module MarcHelper
           marc.find_all{|f| ('880') === f.tag}.each do |field|
             if !field['6'].nil? and field['6'].include?("-")
               if field['6'].split("-")[1].gsub("//r","") == "00" and field['6'].split("-")[0] == tag
-                text = "<dt>Contributor</dt><dd>"
+                vern_text = "<dt>Contributor</dt><dd>"
                   link_text = ''
                   relator_text = ""
                   field.each do |subfield|
@@ -163,21 +174,21 @@ module MarcHelper
                       link_text << "#{subfield.value} "
                     end
                   end
-                  text << link_to(h(link_text.strip),:q => "\"#{link_text}\"", :action => 'index', :search_field => 'author_search')
-                  text << relator_text.join(", ") unless relator_text.blank?
-                  text << "</dd>"
+                  vern_text << link_to(h(link_text.strip),:q => "\"#{link_text}\"", :action => 'index', :search_field => 'author_search')
+                  vern_text << relator_text.join(", ") unless relator_text.blank?
+                  vern_text << "</dd>"
               end
             end
           end
         end
       end
     end
-    return_text = ""
-    return_text << "<dt>Contributor</dt><dd>#{contributors.join('</dd><dd>')}</dd>" unless contributors.blank?
-    return_text << text unless text.blank?
-    return_text << "<dt>Related Work</dt><dd>#{related_works.join('</dd><dd>')}</dd>" unless related_works.blank?
-    return_text << "<dt>Included Work</dt><dd>#{included_works.join('</dd><dd>')}</dd>" unless included_works.blank?
-    return_text.html_safe unless return_text.blank?
+    return_hash = {}
+    return_hash[:contributors] = "<dt>Contributor</dt><dd>#{contributors.join('</dd><dd>')}</dd>".html_safe unless contributors.blank?
+    return_hash[:contributors] = "#{return_hash[:contributors]} #{vern_text}".html_safe unless vern_text.blank?
+    return_hash[:related_works] = "<dt>Related Work</dt><dd>#{related_works.join('</dd><dd>')}</dd>".html_safe unless related_works.blank?
+    return_hash[:included_works] = "<dt>Included Work</dt><dd>#{included_works.join('</dd><dd>')}</dd>".html_safe unless included_works.blank?
+    return_hash
   end
 
   def get_marc_vernacular(marc,field)

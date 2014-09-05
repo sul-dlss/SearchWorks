@@ -157,7 +157,7 @@ describe MarcHelper do
       end
     end
   end
-  describe "#link_to_contributor_from_marc" do
+  describe "contributors, related, and included works" do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
     let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
     let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
@@ -171,22 +171,23 @@ describe MarcHelper do
       # Contributor 3 has an RDA $e
       data.should match(/>Contributor3<\/a> Actor</)
       data.should_not match(/>Contributor3<\/a> Performer</)
+      data.should_not match(/act/)
     end
-    it "should handle related and included works correctly" do
-      works = link_to_contributor_from_marc(contributed_works.to_marc)
+    it 'should handle included works correctly' do
+      included_works = link_to_included_works_from_marc(contributed_works.to_marc)
+      included_works.should match(/>Included Work</)
+      # no $t punctuation
+      included_works.should match(/a href=.*q=%22710\+with\+t\+ind2\+Title%21\+sub\+n\+after\+t%22.*search_field=author_title\">710 with t ind2 Title! sub n after t<\/a></)
+      # punctuation after a $t
+      included_works.should match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 Title! subu\.<\/a> sub n after \.</)
+    end
+    it "should handle related works correctly" do
+      works = link_to_related_works_from_marc(contributed_works.to_marc)
       works.should match(/>Related Work</)
       # should include $i before links
       works.should match(/>Includes \(expression\) <a href/)
       # normal $t punctuation
       works.should match(/<a href=.*q=%22700\+with\+t\+Title\.%22.*search_field=author_title\">700 with t 700 \$e Title\.<\/a> sub m after \. 700 \$4</)
-      works.should match(/>Included Work</)
-      # no $t punctuation
-      works.should match(/a href=.*q=%22710\+with\+t\+ind2\+Title%21\+sub\+n\+after\+t%22.*search_field=author_title\">710 with t ind2 Title! sub n after t<\/a></)
-      # punctuation after a $t
-      works.should match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 Title! subu\.<\/a> sub n after \.</)
-      works.should match(/> Performer</)
-      works.should_not match(/> Actor</)
-      works.should_not match(/act/)
     end
     it "should handle repeating subfield e" do
        link_to_contributor_from_marc(multi_role_contributor.to_marc).should match(/\/a> actor\. director\.<\/dd>/)
