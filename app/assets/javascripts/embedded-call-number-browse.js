@@ -75,21 +75,26 @@
     return this.each(function() {
       var $item = $(this),
           $galleryDoc = new GalleryDocs($item),
+          $linkViewFullPage = $('.view-full-page a'),
           $embedScroll;
       init();
 
       function init() {
         $galleryDoc.item.on('click', function(e){
           e.preventDefault();
+          $linkViewFullPage.attr('href', $galleryDoc.browseUrl);
           closeOtherBrowsers();
           openThisBrowser();
         });
+
         addListeners();
+        $('[data-behavior="embed-browse"]').first().click();
       }
 
       function closeOtherBrowsers() {
         $('[data-behavior="embed-browse"]').each(function(i,val){
           var button = $(val);
+          button.removeClass('active');
           if (button[0] !== $galleryDoc.item[0]){
             if (button.hasClass('collapsed')){
               return;
@@ -102,7 +107,7 @@
 
       function openThisBrowser() {
         if ($galleryDoc.item.hasClass('collapsed')){
-          $galleryDoc.item.removeClass('collapsed');
+          $galleryDoc.item.removeClass('collapsed').addClass('active');
           $galleryDoc.embedViewport.slideDown(function(){
             $galleryDoc.calculateDocsPerView();
             showPreview();

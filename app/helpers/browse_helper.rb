@@ -7,6 +7,8 @@ module BrowseHelper
         barcode: (callnumber.barcode unless callnumber.barcode == document[:preferred_barcode]),
         view: :gallery
       ), class: "collapsed",
+         id: "callnumber-browse-#{index}",
+         "aria-labelledby" => "callnumber-browse-#{index}",
          data: { behavior: "embed-browse",
                  start: document[:id],
                  embed_viewport: "#callnumber-#{index}",

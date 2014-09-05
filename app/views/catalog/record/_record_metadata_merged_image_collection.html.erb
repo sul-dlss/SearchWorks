@@ -1,7 +1,3 @@
-<% if @document.holdings.browsable_callnumbers.present? %>
-  <%= render 'catalog/record/callnumber_browse' %>
-<% end %>
-
 <div class="record-metadata row">
   <div class="record-panels col-md-4">
     <%= render "catalog/record/metadata_panels" %>
@@ -12,6 +8,10 @@
     <% end %>
   </div>
 </div>
+
+<% if @document.holdings.browsable_callnumbers.present? %>
+  <%= render 'catalog/record/callnumber_browse' %>
+<% end %>
 
 <%# technical details placeholder - librarian view, catkey etc %>
 <div class="record-technical-details row">

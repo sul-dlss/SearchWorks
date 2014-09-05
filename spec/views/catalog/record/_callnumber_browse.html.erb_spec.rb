@@ -15,9 +15,13 @@ describe "catalog/record/_callnumber_browse.html.erb" do
   end
   it "should render a panel" do
     expect(rendered).to have_css('div.record-browse-nearby')
+    expect(rendered).to have_css(".section#browse-nearby")
+  end
+  it "should render view full page link" do
+    expect(rendered).to have_css('.view-full-page a')
   end
   it "should render a heading" do
-    expect(rendered).to have_css('h2', text: /^Browse nearby/)
+    expect(rendered).to have_css('h2', text: /Browse related items/)
   end
   it "should include links to all unique callnumbers" do
     expect(rendered).to have_css('.callnumber a', text: "callnumber")
