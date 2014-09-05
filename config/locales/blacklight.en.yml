@@ -20,6 +20,7 @@ en:
       masthead_title: '%{title} in %{application_name}'
       show:
         title: '%{document_title} in %{application_name}'
+        title_html: '%{document_title} in %{application_name}'
       sort:
         label_html: 'Sort<span class="hidden-xs hidden-sm"> by %{field}</span>'
       searchworks_results_title: '%{num_results} in %{application_name}'

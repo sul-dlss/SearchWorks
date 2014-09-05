@@ -9,7 +9,7 @@ feature "Search Results Page" do
     visit catalog_index_path(q: '11')
 
     within(first('.document')) do
-      expect(page).to have_css('h3', text: "Amet ad adipisicing ex mollit pariatur minim dolore.")
+      expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
       within('.document-metadata') do
         expect(page).to have_css('li', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
       end
