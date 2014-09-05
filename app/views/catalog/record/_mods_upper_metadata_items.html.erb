@@ -12,7 +12,7 @@
 <% end %>
 
 <% document.mods.language.each do |language| %>
-  <%= mods_record_field(language) %>
+  <%= mods_record_field(language, ', ') %>
 <% end %>
 
 <% document.mods.description.each do |description| %>

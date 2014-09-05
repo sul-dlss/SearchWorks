@@ -23,17 +23,23 @@ module RecordHelper
     content_tag(:dt, label.gsub(":",""))
   end
 
-  def mods_display_content values
-    Array[values].flatten.map do |value|
-      content_tag(:dd, link_urls_and_email(value).html_safe) if value.present?
-    end.join.html_safe
+  def mods_display_content(values, delimiter=nil)
+    if delimiter
+      content_tag(:dd, values.map{|value|
+        link_urls_and_email(value) if value.present?
+      }.compact.join(delimiter).html_safe)
+    else
+      Array[values].flatten.map do |value|
+        content_tag(:dd, link_urls_and_email(value).html_safe) if value.present?
+      end.join.html_safe
+    end
   end
 
-  def mods_record_field field
+  def mods_record_field(field, delimiter=nil)
     if field.respond_to?(:label, :values) &&
        field.values.any?(&:present?)
       mods_display_label(field.label) +
-      mods_display_content(field.values)
+      mods_display_content(field.values, delimiter)
     end
   end
 

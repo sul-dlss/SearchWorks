@@ -47,6 +47,7 @@ describe RecordHelper do
   describe "mods_record_field" do
     let(:mods_field)  { OpenStruct.new({label: "test", values: ["hello, there"]}) }
     let(:url_field)  { OpenStruct.new({label: "test", values: ["http://library.stanford.edu"]}) }
+    let(:multi_values) { double(label: 'test', values: ['123', '321']) }
     it "should return correct content" do
       expect(helper.mods_record_field(mods_field)).to have_css("dt", text: "test")
       expect(helper.mods_record_field(mods_field)).to have_css("dd", text: "hello, there")
@@ -56,6 +57,13 @@ describe RecordHelper do
     end
     it "should not print empty labels" do
       expect(helper.mods_record_field(empty_field)).to_not be_present
+    end
+    it 'should join values with a <dd> by default' do
+      expect(helper.mods_record_field(multi_values)).to have_css("dd", count: 2)
+    end
+    it 'should join values with a supplied delimiter' do
+      expect(helper.mods_record_field(multi_values, 'DELIM')).to have_css("dd", count: 1)
+      expect(helper.mods_record_field(multi_values, 'DELIM')).to have_css("dd", text: '123DELIM321')
     end
   end
   describe "names" do
