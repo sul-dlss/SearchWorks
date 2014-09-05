@@ -20,6 +20,8 @@
     <% if page_location.access_point? %>
       <% if page_location.access_point.collection? && get_collection.present? %>
         <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
+      <% elsif page_location.access_point.sdr? %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: application_name %>
       <% else %>
         <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: application_name %>
       <% end %>

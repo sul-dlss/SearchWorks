@@ -27,4 +27,14 @@ describe MastheadHelper do
       expect(facets_prefix_options).not_to include "X"
     end
   end
+  describe '#digital_collections_params_for' do
+    it 'should always include "Stanford Digital Repository" in the building facet' do
+      expect(digital_collections_params_for).to match /building_facet.*Stanford\+Digital\+Repository/
+      expect(digital_collections_params_for('something')).to match /building_facet.*Stanford\+Digital\+Repository/
+    end
+    it 'should include the given parameter as the format_main_ssim' do
+      expect(digital_collections_params_for).to_not match /format_main_ssim/
+      expect(digital_collections_params_for('something')).to match /format_main_ssim.*something/
+    end
+  end
 end
