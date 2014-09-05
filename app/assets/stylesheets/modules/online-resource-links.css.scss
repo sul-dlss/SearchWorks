@@ -11,7 +11,10 @@ ul.links {
   background: image-url('sfx.gif') no-repeat;
 }
 .online-label {
-  @include label-items-online;
+  @extend .label;
+  @extend .label-success;
+  background-color: $sul-accordion-online-bg;
+  border: 1px solid $sul-accordion-online-border;
   padding: 0px 7px 2px 7px;
   font-size: 12px;
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
