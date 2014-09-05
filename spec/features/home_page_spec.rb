@@ -26,8 +26,9 @@ feature "Home Page" do
   end
   scenario "'Articles' section should display" do
     expect(page).to have_css('h2', text: 'Looking for articles?')
-    expect(page).to have_css(".media a", text: "xSearch")
     expect(page).to have_css(".media a", text: "Citation finder")
+    expect(page).to have_css(".media a", text: "Find articles")
+    expect(page).to have_css(".media a", text: "xSearch")
   end
   scenario "'Help with SearchWorks' section should display" do
     expect(page).to have_css('h2', text: 'Help with SearchWorks')
