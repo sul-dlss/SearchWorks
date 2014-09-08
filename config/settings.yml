@@ -8,3 +8,5 @@ LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
 SQUASH_API_HOST: 'http://squash-host.example.com'
 SQUASH_API_KEY: 'squash-api-key'
 STACKMAP_API_URL: "http://stanford.stackmap.com/json/"
+WHEN_TO_PRUNE_DATA: '12:30am'
+NUMBER_OF_DAYS_TO_PRUNE: '7'
