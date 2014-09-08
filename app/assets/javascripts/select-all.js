@@ -21,15 +21,31 @@
       function init() {
         $element.on('click', function() {
           var state = $selectAll.is(':visible');
-
-          $(selectorSelectBookmarks).each(function(i, checkbox) {
-            var $checkbox = $(checkbox);
-
-            if ($checkbox.is(':checked') !== state) {
-              $checkbox.prop('checked', !state).click();
+          bookmarkSelectors = $(selectorSelectBookmarks);
+          var first = false;
+          var firstCheckboxIsDone = new $.Deferred();
+          bookmarkSelectors.each(function(i, checkbox) {
+            if (!first){
+              var $checkbox = $(checkbox);
+              if ($checkbox.is(':checked') !== state) {
+                var span = $checkbox.next('span');              
+                first = true;
+                $checkbox.prop('checked', !state).click();
+                span.on('DOMSubtreeModified', function(){
+                  firstCheckboxIsDone.resolve();
+                });
+              }
             }
           });
-
+          $.when(firstCheckboxIsDone).done(function(){
+            bookmarkSelectors.each(function(i, checkbox) {
+              var $checkbox = $(checkbox);
+              if ($checkbox.is(':checked') !== state) {
+                $checkbox.prop('checked', !state).click();
+              }
+            });
+          });
+          
           toggleActions();
         });
       }
@@ -47,7 +63,7 @@
 
     });
 
-  }
+  };
 
 })(jQuery);
 
