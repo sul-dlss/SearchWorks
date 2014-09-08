@@ -38,6 +38,9 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
+  post 'select_all/select' => 'select_all#select'
+  post 'select_all/unselect' => 'select_all#unselect'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

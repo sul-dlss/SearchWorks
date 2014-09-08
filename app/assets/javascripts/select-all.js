@@ -13,24 +13,68 @@
       var $element = $(this),
           $selectAll = $element.find('span.select-all'),
           $unSelectAll = $element.find('span.unselect-all'),
-          selectorSelectBookmarks = 'input.toggle_bookmark';
+          selectorSelectBookmarks = 'input.toggle_bookmark',
+          selectionType = {
+            true: 'select',
+            false: 'unselect'
+          };
 
       setInitialAction();
       init();
 
       function init() {
+        var self = this;
         $element.on('click', function() {
-          var state = $selectAll.is(':visible');
-
+          self.state = $selectAll.is(':visible');
+          var data = {
+            "bookmarks": [],
+            "selectAll": state
+          };
           $(selectorSelectBookmarks).each(function(i, checkbox) {
             var $checkbox = $(checkbox);
-
-            if ($checkbox.is(':checked') !== state) {
-              $checkbox.prop('checked', !state).click();
+            if ($checkbox.is(':checked') !== self.state) {
+              data.bookmarks.push($checkbox.attr('id').replace('toggle_bookmark_', ''));
             }
+            
           });
-
+          sendSelections(data);
           toggleActions();
+        });
+      }
+      
+      function sendSelections(data){
+        $.ajax({
+          type: 'POST',
+          url: '/select_all/' + selectionType[data.selectAll],
+          data: data,
+          success: function(response){
+            if (response.bookmarks) {
+             $('[data-role=bookmark-counter]').text(response.bookmarks.count);
+            }
+            console.log(response.status);
+            if (response.status){
+              updateCheckBoxes();
+            }
+          }
+        });
+      }
+      
+      function updateCheckBoxes(){
+        $(selectorSelectBookmarks).each(function(i, checkbox) {
+          var $checkbox = $(checkbox);
+          
+          if ($checkbox.is(':checked') !== self.state) {
+            var form = $checkbox.closest('form');
+            var span = form.find('span');
+            if (self.state){
+              form.find("input[name=_method]").val("delete");
+              span.text(form.attr('data-present'));
+            } else {
+              form.find("input[name=_method]").val("put");
+              span.text(form.attr('data-absent'));
+            }
+            $checkbox.prop("checked", self.state);
+          }
         });
       }
 
@@ -47,7 +91,7 @@
 
     });
 
-  }
+  };
 
 })(jQuery);
 
