@@ -112,6 +112,14 @@ describe CatalogController do
       expect(keys.index("era_facet")).to be < keys.index("author_other_facet")
       expect(keys.index("author_other_facet")).to be < keys.index("format")
     end
+    describe 'facet sort' do
+      it 'should set an index sort for the resource type facet' do
+        expect(config.facet_fields['format_main_ssim'].sort).to eq :index
+      end
+      it 'should set an index sort for the building type facet' do
+        expect(config.facet_fields['building_facet'].sort).to eq :index
+      end
+    end
     describe "facet limits" do
       it "should set a very high facet limit on building and format" do
         ['building_facet', 'format_main_ssim'].each do |facet|
