@@ -7,4 +7,5 @@ SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
 LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
 SQUASH_API_HOST: 'http://squash-host.example.com'
 SQUASH_API_KEY: 'squash-api-key'
+SQUASH_DISABLE: <%= (Rails.env.development? || Rails.env.test?) %>
 STACKMAP_API_URL: "http://stanford.stackmap.com/json/"
