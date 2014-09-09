@@ -90,3 +90,4 @@ gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'bl
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
 gem 'roadie-rails', '~> 1.0.3'
+gem 'whenever', require: false
