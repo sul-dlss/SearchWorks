@@ -23,6 +23,9 @@
       padding-bottom: 3px;
       color: $sul-topnavbar-link-color;
       border-bottom: none;
+      &.first {
+        margin-left: 0;
+      }
     }
     a:hover {
       border-bottom: 3px solid $sul-topnavbar-link-color;
