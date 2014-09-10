@@ -1,3 +1,19 @@
+#sidebar, #facets {
+  @media screen and (max-width: $screen-sm-min) {
+    padding-bottom: 0;
+  }
+}
+#facets {
+  .top-panel-heading {
+    border: 0;
+    .facets-toggle {
+      margin-top: -10px;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+}
 .panel-group .facet_limit {
   margin-bottom: 7px;
 }
