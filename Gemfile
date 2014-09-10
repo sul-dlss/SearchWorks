@@ -69,7 +69,7 @@ end
 
 gem "coderay"
 
-gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
+gem 'openseadragon', github: 'sul-dlss/openseadragon-rails', branch: 'ff36-fix'
 
 gem 'deprecation'
 

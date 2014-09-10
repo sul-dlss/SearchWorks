@@ -35,7 +35,8 @@ GIT
 
 GIT
   remote: git://github.com/sul-dlss/openseadragon-rails.git
-  revision: afe09fa081b0a4f854cbeb0c4f9cba7edda17ea9
+  revision: 9baa6dce49555c9b6c3cc1d650f14499b7cdd23c
+  branch: ff36-fix
   specs:
     openseadragon (0.0.5)
       rails (> 3.2.0)
