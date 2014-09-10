@@ -88,6 +88,14 @@ def all_docs_on_page
   page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
 end
 
+def facet_index(options)
+  all_facets_by_name(options[:facet_name]).index(options[:value])
+end
+
+def all_facets_by_name(facet_name)
+  page.all("##{facet_name} a.facet_select").map(&:text)
+end
+
 def number_pattern
   /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
 end
