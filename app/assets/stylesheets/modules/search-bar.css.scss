@@ -17,6 +17,9 @@
       height: 28px;
       margin-right: 10px;
       vertical-align: middle;
+      @media screen and (max-width: $screen-sm) {
+        height: 26px;
+      }
     }
   }
 
@@ -90,12 +93,19 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .search_field {
+    width: 82px;
+  }
   #searchbar-navbar-collapse .nav > li > a:hover {
     border-bottom: none !important;
   }
 }
 
-
+@media screen and (max-width: $screen-md-min) {
+  .search-form {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (min-width: $screen-md-min) {
   .search-form {
     position: absolute;
