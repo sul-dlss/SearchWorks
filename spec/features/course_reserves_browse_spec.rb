@@ -36,5 +36,10 @@ feature 'Course reserves browse', js: true do
     click_link "Course reserves"
     expect(page).to have_css("h1", text: "Browse course reserves")
   end
-
+  scenario 'it should have a custom masthead' do
+    visit course_reserves_path
+    expect(page).to have_css(".course-reserves-masthead")
+    expect(page).to have_css(".inline-links a", text: "Request course reserves")
+    expect(page).to have_css(".inline-links a", text: "More information")
+  end
 end
