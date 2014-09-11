@@ -1010,6 +1010,7 @@ module Constants
     "BUSINESS" => "business/location/business_library",
     "HV-ARCHIVE" => "hoover_archives/location/hv_archives",
     "HOOVER" => "hoover_library/location/hv_library",
+    "LATHROP" => "meyer/location/meyer_2nd_floor",
     "LAW" => "law/location/law_library",
     "LANE-MED" => "medical/location/medical_library",
     "SLAC" => "slac/location/slac"
