@@ -1029,6 +1029,7 @@ module Constants
     "HOOVER" => "http://library.stanford.edu/libraries/hoover/about",
     "HOPKINS" => "http://library.stanford.edu/libraries/hopkins/about",
     "HV-ARCHIVE" => "http://library.stanford.edu/libraries/hila/about",
+    "LATHROP" => "http://library.stanford.edu/libraries/lathrop/about",
     "LAW" => "http://library.stanford.edu/libraries/law/about",
     "LANE-MED" => "http://library.stanford.edu/libraries/lane/about",
     "MATH-CS" => "http://library.stanford.edu/libraries/mathstat/about",
