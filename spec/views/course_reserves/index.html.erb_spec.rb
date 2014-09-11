@@ -12,7 +12,6 @@ describe 'course_reserves/index.html.erb' do
     render
   end
   it 'should render a table with course info' do
-    expect(rendered).to have_css('h1', text: 'Browse course reserves')
     expect(rendered).to have_css('table')
     expect(rendered).to have_css('th', text: 'Course ID')
     expect(rendered).to have_css('th', text: 'Description')

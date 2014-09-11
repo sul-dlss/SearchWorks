@@ -160,6 +160,12 @@ describe SearchWorks::PageLocation do
         end
       end
     end
+    describe 'for CourseReservesController#index' do
+      let(:base_params) { { controller: 'course_reserves', action: 'index' } }
+      it "should be defined" do
+        expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :course_reserves
+      end
+    end
     describe "for SelectedDatabasesController#index" do
       let(:base_params) { { controller: 'selected_databases', action: 'index' } }
       it "should be defined" do

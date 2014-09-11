@@ -73,6 +73,10 @@ module SearchWorks
         @params[:f][:genre_ssim].present? && @params[:f][:genre_ssim].include?('Thesis/Dissertation')
       end
 
+      def course_reserves_index_access_points
+        :course_reserves
+      end
+
       def selected_databases_index_access_points
         :selected_databases
       end
