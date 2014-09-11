@@ -1,13 +1,10 @@
-set :keep_releases, 50
+set :keep_releases, 70
 
 set :deploy_host, ask("Server", 'e.g. server.stanford.edu')
-
-set :sub_dir, "redesign"
+set :sub_dir, ask('Deploy directory', 'e.g. gdor')
 set :symlinks_directory, "#{fetch(:home_directory)}/SearchWorksSubURIs"
 set :symlink_deploy_path, "#{fetch(:symlinks_directory)}/#{fetch(:sub_dir)}"
 set :bundle_without, %w{production test}.join(' ')
-
-set :rvm_ruby_version, '2.1.0'
 
 task :symlink_sub_directory_deploy do
   on roles(:app), wait: 1 do
@@ -16,7 +13,6 @@ task :symlink_sub_directory_deploy do
     set :public_release_path, "#{fetch(:last_release_path)}/public"
     # Write .htaccess file with RailsBaseURI directive
     execute("echo 'RailsBaseURI /#{fetch(:sub_dir)}' > #{fetch(:public_release_path)}/.htaccess")
-    execute("echo 'PassengerRuby /usr/local/rvm/wrappers/ruby-2.1.0-preview2/ruby' >> #{fetch(:public_release_path)}/.htaccess")
     # Remove symlink if it already exists
     execute("rm #{fetch(:symlink_deploy_path)}") if sub_uri_exists? fetch(:symlink_deploy_path)
     # Symlink release's public directory
