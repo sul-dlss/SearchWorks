@@ -50,11 +50,20 @@ Blacklight.onLoad(function(){
             }
             var open = getOpen(data[0]);
             var close = getClose(data[0]);
-            var text = "Today's hours: " + open + " - " + close;
-            $(hoursElement).html(text);
+            $(hoursElement).html(formatTimeRange(open, close));
           });
         }
     };
+
+    function formatTimeRange(open, close) {
+      if (open == '12a' && close == '12a') {
+        return "Closed today"
+      } else if (open == '12a' && close == '11:59p') {
+        return "Open 24hr today"
+      } else {
+        return "Today's hours: " + open + " - " + close;
+      }
+    }
 
     function getOpen(data){
       var open = new Date(data.opens_at);
