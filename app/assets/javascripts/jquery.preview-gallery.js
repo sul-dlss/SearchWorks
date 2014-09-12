@@ -77,8 +77,8 @@
       }
 
       function currentPreview(e){
-        // Check if it is an accordion button selection
-        if (typeof $(e.target).data('accordion-section-target') !== 'undefined'){
+        // Check if we're clicking in a preview
+        if ($(e.target).parents('.preview-container').length > 0){
           return true;
         }else{
           if (e.target === $triggerBtn[0]) {
