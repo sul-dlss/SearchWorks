@@ -70,10 +70,15 @@
       }
 
       function currentPreview(e){
-        if (e.target === $triggerBtn[0]){
+        // Check if we're clicking in a preview
+        if ($(e.target).parents('.preview-container').length > 0){
           return true;
         }else{
-          return false;
+          if (e.target === $triggerBtn[0]) {
+            return true;
+          }else{
+            return false;
+          }
         }
       }
 
