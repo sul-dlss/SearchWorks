@@ -19,10 +19,13 @@ class Holdings
     end
   end
   def preferred_callnumber
-    @preferred_callnumber ||= if @document[:preferred_barcode]
-      find_by_barcode(@document[:preferred_barcode])
-    else
-      callnumbers.first
+    @preferred_callnumber ||= begin
+      if @document[:preferred_barcode] &&
+         (found_callnumber = find_by_barcode(@document[:preferred_barcode])).present?
+        found_callnumber
+      else
+        callnumbers.first
+      end
     end
   end
   def present?
