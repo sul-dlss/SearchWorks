@@ -16,6 +16,14 @@ class Holdings
       Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
       Constants::REQUEST_LOCS.include?(@code)
     end
+    def external_location?
+      items.first.try(:library) == "LANE-MED"
+    end
+    def location_link
+      if external_location?
+        "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/,'')}&Search_Code=CMD*&CNT=10"
+      end
+    end
     def present?
       any_items? || any_mhlds?
     end
