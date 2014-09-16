@@ -21,13 +21,9 @@ class Holdings
     end
 
     def must_request_item?
-      must_request_home_location? || must_request_current_location?
+      !location_level_request? && must_request_current_location?
     end
 
-    def must_request_home_location?
-      Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
-      Constants::REQUEST_LOCS.include?(@code)
-    end
     def must_request_current_location?
       current_location_is_loan_desk? ||
       Constants::REQUESTABLE_CURRENT_LOCS.include?(@callnumber.current_location.code) ||
@@ -54,7 +50,8 @@ class Holdings
 
     def location_level_request?
       Constants::REQUEST_LIBS.include?(@callnumber.library) ||
-      ["PHYSICS", "MEYER"].include?(@callnumber.library)
+      ["PHYSICS", "MEYER"].include?(@callnumber.library) ||
+      Holdings::Location.new(@callnumber.home_location).location_level_request?
     end
 
     def current_location_is_loan_desk?

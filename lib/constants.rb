@@ -789,7 +789,6 @@ module Constants
    "ENDPROCESS",
    "INPROCESS",
    "INSHIPPING",
-   "ON-ORDER",
    "PAGE-IRON",
    "PUB-TECH",
    "REPAIR",
@@ -807,7 +806,8 @@ module Constants
 
  REQUESTABLE_CURRENT_LOCS = [
      "MISSING",
-     "NEWBOOKS"
+     "NEWBOOKS",
+     "ON-ORDER"
    ]
  FORCE_AVAILABLE_CURRENT_LOCS = [
    "ART-AT-ENG",
