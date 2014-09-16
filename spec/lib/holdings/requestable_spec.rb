@@ -53,6 +53,10 @@ describe Holdings::Requestable do
           expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- #{location} -|- "))).to be_must_request
         end
       end
+      it 'should not require location level requests to be requested at the item level' do
+        expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- UARCH-30 -|- ON-ORDER -|- "))).to_not be_must_request
+        expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- "))).to       be_must_request
+      end
     end
   end
 end
