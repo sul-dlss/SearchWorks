@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   Blacklight::Marc.add_routes(self)
   devise_for :users, skip: [:registrations, :passwords, :sessions]
 
-  get "databases" => "catalog#index", :defaults => {:f => {:format=>["Database"]}}
+  get "databases" => "catalog#index", :defaults => {:f => {:format_main_ssim=>["Database"]}}
 
   resources :selected_databases, only: :index
 
