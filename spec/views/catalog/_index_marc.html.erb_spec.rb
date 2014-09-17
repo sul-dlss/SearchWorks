@@ -11,8 +11,7 @@ describe "catalog/_index_marc.html.erb" do
         SolrDocument.new(
           marcbib_xml: metadata1,
           physical: ["The Physical Extent"],
-          format_main_ssim: ['Book'],
-          imprint_display: ['Imprint Statement']
+          format_main_ssim: ['Book']
         )
       )
       render

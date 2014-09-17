@@ -12,6 +12,9 @@ module MarcMetadataFixtures
           <subfield code="c">Most responsible person ever</subfield>
           <subfield code="f">1979-2010.</subfield>
         </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="a">Imprint Statement</subfield>
+        </datafield>
         <datafield tag="300" ind1=" " ind2=" ">
           <subfield code="a">53 linear feet (12 manuscript boxes, 6 seven-inch reels, 9 8-track cassettes, 1 micro-cassette, 16 hard disk cartridges)</subfield>
         </datafield>
@@ -660,6 +663,21 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def marc_264_copyright_fixture
+    <<-xml
+      <record>
+        <datafield tag="250" ind1=" " ind2="0">
+          <subfield code="a">250 SubA</subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2="4">
+          <subfield code="a">copyright</subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2="0">
+          <subfield code="a">264 SubA</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def vernacular_marc_264_fixture
     <<-xml
       <record>
@@ -779,6 +797,24 @@ module MarcMetadataFixtures
         <datafield tag="700" ind1="1" ind2=" ">
           <subfield code="a">Contributor</subfield>
           <subfield code="4">prf</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+  def edition_imprint_fixture
+    <<-xml
+      <record>
+        <datafield tag="250" ind1=" " ind2=" ">
+          <subfield code="a">SubA</subfield>
+          <subfield code="b">SubB</subfield>
+          <subfield code="z">SubZ</subfield>
+        </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="a">SubA</subfield>
+          <subfield code="b">SubB</subfield>
+          <subfield code="c">SubC</subfield>
+          <subfield code="g">SubG</subfield>
+          <subfield code="z">SubZ</subfield>
         </datafield>
       </record>
     xml

@@ -25,7 +25,7 @@ class Instrumentation < SearchWorksMarc
           temp_array.push code_to_string field.code, field.value
         end
       end
-      temp_array.compact
+      temp_array.compact.join(', ')
     end
   end
 

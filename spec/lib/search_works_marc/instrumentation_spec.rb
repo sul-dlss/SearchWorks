@@ -39,22 +39,13 @@ describe Instrumentation do
     end
     describe "subfields" do
       it 'a subfield should equal the value' do
-        expect(instrumentation.parse_marc_record[1].values.first.first).to eq 'cowbell'
+        expect(instrumentation.parse_marc_record[1].values.first).to eq 'cowbell'
       end
       it 'n subfield should be appended to previous value' do
-        expect(instrumentation.parse_marc_record[0].values.first.first).to eq 'singer (1)'
+        expect(instrumentation.parse_marc_record[0].values.first).to match /singer \(1\)/
       end
       it 'd subfield should should add doubling' do
-        expect(instrumentation.parse_marc_record[0].values.first[1]).to eq 'doubling bass guitar (2)'
-      end
-    end
-  end
-  describe 'each' do
-    let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
-    let(:instrumentation) { Instrumentation.new(document) }
-    it 'should return an enumerable object' do
-      instrumentation.each do |record|
-        expect(record).to be_a_kind_of(OpenStruct)
+        expect(instrumentation.parse_marc_record[0].values.first).to match /doubling bass guitar \(2\)/
       end
     end
   end

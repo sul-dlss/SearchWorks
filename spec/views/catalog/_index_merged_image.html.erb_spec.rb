@@ -10,7 +10,6 @@ describe "catalog/_index_merged_image.html.erb" do
         collection_with_title: ['12345 -|- Collection Title'],
         marcbib_xml: metadata1,
         physical: ["The Physical Extent"],
-        imprint_display: ['Imprint Statement'],
         url_fulltext: ['http://oac.cdlib.org/findaid/12345']
       )
     )

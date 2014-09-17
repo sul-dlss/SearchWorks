@@ -423,6 +423,28 @@ module MarcHelper
     }
   end
 
+  def results_imprint_string(document)
+    if (edition = document.edition).present?
+      edition = edition.map do |field|
+        field.values.join(' ')
+      end.compact.join(' ')
+    end
+    if (imprint = document.imprint).present?
+      imprint = imprint.map do |field|
+        field.values.join(' ')
+      end.compact.join(' ')
+    end
+    if (pub = marc_264(document.to_marc)).present? &&
+      copyright_labels = [marc_264_labels[:" 4"], marc_264_labels[:"24"], marc_264_labels[:"34"]]
+      pub = pub.map do |label, values|
+        unless copyright_labels.include?(label)
+          values.join(' ')
+        end
+      end.compact.join(' ')
+    end
+    [edition, imprint, pub].compact.join(' - ')
+  end
+
   def title_change_data_from_marc(marc)
     fields = []
     if marc['780'] or marc['785']

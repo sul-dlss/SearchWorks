@@ -32,9 +32,8 @@
       <%= render "field_list_from_index", :fields => author_meeting %>
     <% end %>
 
-    <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
-    <% if imprint.present? %>
-      <li><%= render "field_list_from_index", :fields => imprint %></li>
+    <% if (imprint = results_imprint_string(document)).present? %>
+      <li><%= imprint %></li>
     <% end %>
   </ul>
 <% end %>

@@ -3,7 +3,7 @@ require "spec_helper"
 describe RecordHelper do
   let(:empty_field) { OpenStruct.new({label: "test", values: [""] }) }
   describe 'display_content_field' do
-    let(:values) {[['guitar (1)'], ['solo cowbell', 'trombone (2)']]}
+    let(:values) {['guitar (1)', 'solo cowbell, trombone (2)']}
     let(:content) { OpenStruct.new(label: 'Instrumentation', values: values)}
     it 'should return dt with label and dd with values' do
       expect(helper.display_content_field(content)).to have_css('dt', text: 'Instrumentation')
@@ -17,7 +17,7 @@ describe RecordHelper do
   end
 
   describe 'display_content_values' do
-    let(:values) {[['guitar (1)'], ['solo cowbell', 'trombone (2)']]}
+    let(:values) {['guitar (1)', 'solo cowbell, trombone (2)']}
     it 'should return dds of values' do
       expect(helper.display_content_values(values)).to have_css('dd', count: 2)
       expect(helper.display_content_values(values)).to have_css('dd', text: 'guitar (1)')

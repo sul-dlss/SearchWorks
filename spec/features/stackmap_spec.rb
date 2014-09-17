@@ -20,7 +20,6 @@ feature "StackMap View" do
     expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
     within ".preview-container" do
       expect(page).to have_css("h3", text: "An object")
-      expect(page).to have_css("li", text: "1990")
     end
   end
 end

@@ -29,12 +29,22 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
   end
   describe "Imprint" do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_multi_series_fixture, imprint_display: ['Imprint Statement']))
+      assign(:document, SolrDocument.new(marcxml: edition_imprint_fixture))
       render
     end
     it "should include the imprint statement" do
       expect(rendered).to have_css('dt', text: "Imprint")
-      expect(rendered).to have_css('dd', text: "Imprint Statement")
+      expect(rendered).to have_css('dd', text: "SubA SubB SubC SubG")
+    end
+  end
+  describe 'Edition' do
+    before do
+      assign(:document, SolrDocument.new(marcxml: edition_imprint_fixture))
+      render
+    end
+    it "should include the edition statement" do
+      expect(rendered).to have_css('dt', text: "Edition")
+      expect(rendered).to have_css('dd', text: "SubA SubB")
     end
   end
   describe "MARC 264" do

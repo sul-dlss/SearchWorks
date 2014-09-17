@@ -1,6 +1,7 @@
 require 'marc'
 
 class SearchWorksMarc
+  include Enumerable
   attr_reader :marc_record
   def initialize(marc_record)
     @marc_record = remove_fields marc_record.fields
@@ -21,6 +22,16 @@ class SearchWorksMarc
       end
     end
     label_array
+  end
+
+  def present?
+    @marc_record.present?
+  end
+
+  def each
+    for record in parse_marc_record
+      yield record
+    end
   end
 
   private
@@ -49,7 +60,7 @@ class SearchWorksMarc
   end
 
   def format_subfields fields
-    fields.map { |f| f.map { |sf| sf.value } }
+    fields.map { |f| f.map { |sf| sf.value }.join(' ') }
   end
 
   def reject_excluded_subfields field
