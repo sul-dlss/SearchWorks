@@ -12,14 +12,14 @@
 
   $.fn.plugGoogleBookContent = function() {
     var $parent,
-        booksPerAjaxCall = 25,
-        booksApiUrl = 'http://books.google.com/books?jscmd=viewapi&bibkeys=',
-        selectorCoverImg = 'img.cover-image',
-        batches = [];
+      booksPerAjaxCall = 25,
+      booksApiUrl = 'http://books.google.com/books?jscmd=viewapi&bibkeys=',
+      selectorCoverImg = 'img.cover-image',
+      batches = [];
 
     function init() {
       var listCoverImgs = $parent.find(selectorCoverImg),
-          totalCovers = listCoverImgs.length;
+        totalCovers = listCoverImgs.length;
 
       // batch by batch-cutoff value
       while (totalCovers > 0) {
@@ -33,7 +33,7 @@
     function addBookCoversByBatch() {
       $.each(batches, function(index, batch) {
         var bibkeys = getBibKeysForBatch(batch),
-            batchBooksApiUrl = booksApiUrl + bibkeys;
+          batchBooksApiUrl = booksApiUrl + bibkeys;
 
         $.ajax({
           type: 'GET',
@@ -68,7 +68,7 @@
 
     function renderCoverImage(bibkey, data) {
       var thumbUrl = data.thumbnail_url,
-          selectorCoverImg = 'img.' + bibkey;
+        selectorCoverImg = 'img.' + bibkey;
 
       thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
       thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
@@ -90,15 +90,14 @@
 
       $.each(listGoogleBooks, function(i, googleBooks) {
         var $googleBooks = $(googleBooks),
-            $fullView    = $googleBooks.find('.full-view'),
-            $limitedView = $googleBooks.find('.limited-preview');
+          $fullView = $googleBooks.find('.full-view'),
+          $limitedView = $googleBooks.find('.limited-preview');
 
         if (data.preview === 'full') {
           $fullView.attr('href', data.preview_url);
           checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
           checkAndEnableAccessPanel($googleBooks, '.panel-online');
-        }
-        else if (data.preview === 'partial') {
+        } else if (data.preview === 'partial') {
           $limitedView.attr('href', data.preview_url);
           checkAndEnableAccessPanel($googleBooks, '.panel-related');
         }
@@ -112,9 +111,9 @@
 
       $.each(batch, function(index) {
         var $CoverImg = $(this),
-            isbn = $CoverImg.data('isbn') || '',
-            oclc = $CoverImg.data('oclc') || '',
-            lccn = $CoverImg.data('lccn') || '';
+          isbn = $CoverImg.data('isbn') || '',
+          oclc = $CoverImg.data('oclc') || '',
+          lccn = $CoverImg.data('lccn') || '';
 
         bibkeys += [isbn, oclc, lccn].join(',') + ',';
       });
@@ -142,7 +141,7 @@
         $accordionSection.removeClass('hide').addClass('show');
         $googleBooks.show();
 
-        if($.trim($snippet.text()) === "") {
+        if ($.trim($snippet.text()) === "") {
           $snippet.html($fullViewLink.clone());
         }
       }
@@ -152,12 +151,10 @@
       $parent = $(this);
       init();
     });
-  }
+  };
 
 })(jQuery);
 
 Blacklight.onLoad(function() {
-  $('#documents').plugGoogleBookContent();
-  $('div#content .document').plugGoogleBookContent();
-  $('.accordion-section').plugGoogleBookContent();
+  $('body').plugGoogleBookContent();
 });
