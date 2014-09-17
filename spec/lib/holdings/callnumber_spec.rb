@@ -71,6 +71,14 @@ describe Holdings::Callnumber do
       expect(status.availability_class).to eq 'unknown'
     end
   end
+  describe '#live_status?' do
+    it 'should identify material not in LANE-MED for live lookup' do
+      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|- -|-')).to be_live_status
+    end
+    it 'should identify material in LANE-MED to not do a live lookup' do
+      expect(Holdings::Callnumber.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).to_not be_live_status
+    end
+  end
   describe "treat_current_location_as_home_location?" do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |location|

@@ -30,7 +30,7 @@
           <ul class="list-unstyled location">
             <% library.locations.select(&:present?).each do |location| %>
               <li>
-                <strong class="location-name"><%= location.name %></strong>
+                <strong class="location-name"><%= link_to_unless !location.external_location?, location.name, location.location_link %></strong>
                 <% if location.items.present? %>
                   <% if location.bound_with? && document.respond_to?(:to_marc) %>
                     <p class="bound-with-note note-highlight">
@@ -62,7 +62,7 @@
                     <% end %>
                   <% end %>
                   <% location.items.each do |item| %>
-                    <li data-status-target=".availability-icon" data-barcode="<%= item.barcode %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
+                    <li data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item)}'".html_safe if item.requestable? && !item.must_request? %>>
                       <i title="<%= item.status.status_text %>" class="availability-icon <%= item.status.availability_class %>"></i>
                       <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text sr-only'>
                         <%= item.status.status_text %>

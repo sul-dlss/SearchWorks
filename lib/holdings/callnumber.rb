@@ -97,6 +97,10 @@ class Holdings
       library == "GREEN" and home_location !~ /GREEN-RESV|GRE-LOAN|SL3-LOAN|SLN-LOAN/i
     end
 
+    def live_status?
+      library != "LANE-MED"
+    end
+
     private
 
     def standard_or_zombie_library

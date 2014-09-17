@@ -41,6 +41,36 @@ describe Holdings::Location do
       end
     end
   end
+  describe 'external locations' do
+    let(:external_location) {
+      Holdings::Location.new('STACKS', [
+        Holdings::Callnumber.new("LL12345 -|- LANE-MED -|- STACKS -|-  -|-  -|- ABC 321 -|-")
+      ])
+    }
+    let(:non_external_location) {
+      Holdings::Location.new("STACKS")
+    }
+    describe '#external_location?' do
+      it 'should identify LANE-MED properly' do
+        expect(external_location).to be_external_location
+      end
+      it 'should not identify non LANE-MED items as external locations' do
+        expect(non_external_location).to_not be_external_location
+      end
+    end
+    describe '#location_link' do
+      it 'should provide a link for external locations' do
+        expect(external_location.location_link).to match /http:\/\/lmldb\.stanford\.edu.*&Search_Arg=SOCW\+L12345/
+      end
+      it 'should strip the first "L" from the barcode' do
+        expect(external_location.location_link).to match /L12345/
+        expect(external_location.location_link).to_not match /LL12345/
+      end
+      it 'should not provide a link for non-external locations' do
+        expect(non_external_location.location_link).to be_nil
+      end
+    end
+  end
   describe "sorting items" do
     let(:callnumbers) { [
       Holdings::Callnumber.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),
