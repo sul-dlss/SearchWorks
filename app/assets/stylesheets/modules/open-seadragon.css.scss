@@ -1,7 +1,17 @@
 .open-seadragon {
+  border: 1px solid $sul-osd-viewer-border;
   margin-bottom: 10px;
-  .controls {
-    text-align: right;
+  .osd-toolbar {
+    padding: 7px;
+    background-color: $sul-osd-viewer-toolbar-background;
+    .controls {
+      text-align: right;
+      a {
+        border-bottom: none;
+        cursor: pointer;
+        margin-left: 15px;
+      }
+    }
   }
   .purl-link {
     text-align: right;
