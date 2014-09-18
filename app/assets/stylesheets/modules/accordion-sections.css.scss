@@ -152,3 +152,10 @@
 .selected-databases .accordion-sections {
   padding-left: 15px;
 }
+
+@media (max-width: $screen-xs-max) {
+  .accordion-sections {
+    clear: right;
+  }
+}
+
