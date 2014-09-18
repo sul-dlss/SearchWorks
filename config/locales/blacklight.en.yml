@@ -72,5 +72,5 @@ en:
       next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'
       previous: '<i class="fa fa-arrow-left"></i><span class="hidden-xs"> Previous</span>'
     pagination:
-      previous: '<i class="fa fa-arrow-left"></i> Previous'
-      next: 'Next <i class="fa fa-arrow-right"></i>'
+      previous: '<i class="fa fa-arrow-left"></i> <span class="hidden-xs"> Previous</span>'
+      next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'
