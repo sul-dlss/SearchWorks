@@ -61,3 +61,11 @@
   margin-top: 15px;
   margin-bottom: 10px;
 }
+
+@media (min-width: $screen-md-min) {
+  .brief-document {
+    .index-document-functions {
+      margin-bottom: 25px;
+    }
+  }
+}
