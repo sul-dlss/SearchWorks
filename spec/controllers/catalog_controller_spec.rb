@@ -85,7 +85,7 @@ describe CatalogController do
     end
     describe "/databases" do
       it "should route to the database format" do
-        expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format" => ["Database"] })
+        expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
     describe "/backend_lookup" do
