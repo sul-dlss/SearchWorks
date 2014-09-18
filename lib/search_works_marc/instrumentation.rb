@@ -1,18 +1,12 @@
 class Instrumentation < SearchWorksMarc
-  include Enumerable
-  def initialize(marc_record)
-    @marc_record = remove_fields marc_record
-                    .fields
-                    .select { |f| f.tag == '382' }
-  end
+  private
 
-  def each
-    for record in parse_marc_record
-      yield record
+  def selected_fields
+    @fields.select! do |field|
+      field.tag == '382'
     end
   end
 
-  private
   def format_subfields fields
     fields.map do |section|
       temp_array = []
@@ -25,12 +19,12 @@ class Instrumentation < SearchWorksMarc
           temp_array.push code_to_string field.code, field.value
         end
       end
-      temp_array.compact
+      temp_array.compact.join(', ')
     end
   end
 
   def grouping
-    @marc_record.group_by { |f| f.indicator1 }
+    @fields.group_by { |f| f.indicator1 }
   end
 
   def append_to_previous field, array, index

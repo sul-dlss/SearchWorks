@@ -10,9 +10,11 @@ class SolrDocument
   include DigitalCollection
   include MarcCharacteristics
   include Extent
+  include Edition
   include CollectionMember
   include ModsData
   include IndexAuthors
+  include Imprint
   include Druid
   include DigitalImage
   include OpenSeadragon

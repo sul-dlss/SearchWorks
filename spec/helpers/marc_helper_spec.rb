@@ -452,6 +452,22 @@ describe MarcHelper do
       expect(data["Current publication"].first).to eq "SubfieldA SubfieldB"
     end
   end
+  describe '#results_imprint_string' do
+    let(:copyright_document) { SolrDocument.new(marcxml: marc_264_copyright_fixture) }
+    let(:document) { SolrDocument.new(marcxml: edition_imprint_fixture) }
+    let(:no_fields) { SolrDocument.new(marcxml: no_fields_fixture) }
+    it 'should not include copyright-only statements' do
+      data = results_imprint_string(copyright_document)
+      expect(data).to_not match /copyright/
+      expect(data).to eq '250 SubA - 264 SubA'
+    end
+    it 'should concatenate edition, imprint, and publisher info w/ a hyphen' do
+      expect(results_imprint_string(document)).to eq "SubA SubB - SubA SubB SubC SubG"
+    end
+    it 'should be blank when no data is present' do
+      expect(results_imprint_string(no_fields)).to be_blank
+    end
+  end
   describe "#link_to_series_from_marc" do
     let(:single_series_record) { SolrDocument.new(marcxml: marc_single_series_fixture ) }
     let(:multi_series_record) { SolrDocument.new(marcxml: marc_multi_series_fixture ) }

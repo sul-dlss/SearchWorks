@@ -15,7 +15,7 @@ module RecordHelper
 
   def display_content_values values
     values.map do |value|
-      content_tag :dd, value.join(', ')
+      content_tag :dd, value
     end.join('').html_safe
   end
 

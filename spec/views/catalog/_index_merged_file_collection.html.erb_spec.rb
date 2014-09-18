@@ -7,8 +7,7 @@ describe "catalog/_index_merged_file_collection.html.erb" do
       SolrDocument.new(
         marcbib_xml: metadata1,
         physical: ["The Physical Extent"],
-        url_suppl: ["http://oac.cdlib.org/findaid/something-else"],
-        imprint_display: ['Imprint Statement']
+        url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
       )
     )
     render
