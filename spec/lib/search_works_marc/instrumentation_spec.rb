@@ -10,7 +10,7 @@ describe Instrumentation do
       expect(instrumentation.class).to eq Instrumentation
     end
     it "should contain only 382 fields" do
-      instrumentation.marc_record.each do |record|
+      instrumentation.fields.each do |record|
         expect(record.tag).to eq '382'
       end
     end

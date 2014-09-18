@@ -5,7 +5,7 @@ describe MarcImprint do
   let(:marc) { SolrDocument.new(marcxml: edition_imprint_fixture).to_marc }
   let(:imprint) { MarcImprint.new(marc) }
   it 'should return MARC 260' do
-    imprint.marc_record.each do |field|
+    imprint.fields.each do |field|
       expect(field.tag).to eq '260'
     end
   end

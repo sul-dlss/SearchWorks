@@ -2,9 +2,11 @@ require 'marc'
 
 class SearchWorksMarc
   include Enumerable
-  attr_reader :marc_record
+  attr_reader :fields
   def initialize(marc_record)
-    @marc_record = remove_fields marc_record.fields
+    @marc_record = marc_record
+    @fields = marc_record.fields.clone
+    process_fields
   end
 
   def parse_marc_record
@@ -25,7 +27,7 @@ class SearchWorksMarc
   end
 
   def present?
-    @marc_record.present?
+    @fields.present?
   end
 
   def each
@@ -35,24 +37,59 @@ class SearchWorksMarc
   end
 
   private
-  def remove_fields fields
-    remove_control_fields remove_custom_fields fields
+
+  def process_fields
+    remove_fields
+    selected_fields
+    match_vernacular
   end
 
-  def remove_control_fields fields
-    fields.map { |field| field.tag =~ /00./ ? nil : field }.compact
+  def selected_fields
+    @fields
   end
 
-  def remove_custom_fields fields
-    fields.map do |field|
-      unless (Constants::HIDE_1ST_IND.include?(field.tag) and field.indicator1 == "1") or (Constants::HIDE_1ST_IND0.include?(field.tag) and field.indicator1 == "0")
-        field
+  def match_vernacular
+    @fields.each_with_index do |field, index|
+      if (vernacular = vernacular_field(field)).present?
+        @fields.insert(index+1, vernacular)
       end
-    end.compact
+    end
+  end
+
+  def vernacular_field(field)
+    if field.tag != '880' && field['6']
+      field_original = field.tag
+      match_original = field['6'].split("-")[1]
+      @marc_record.find_all{|f| ('880') === f.tag}.each do |field|
+        if field['6'] and field['6'].include?("-")
+          field_880 = field['6'].split("-")[0]
+          match_880 = field['6'].split("-")[1].gsub("//r","")
+          if match_original == match_880 and field_original == field_880
+            return field
+          end
+        end
+      end
+    end
+  end
+
+  def remove_fields
+    remove_control_fields
+    remove_custom_fields
+  end
+
+  def remove_control_fields
+    @fields.select! { |field| !(field.tag =~ /00./) }
+  end
+
+  def remove_custom_fields
+    @fields.reject! do |field|
+      (Constants::HIDE_1ST_IND.include?(field.tag) &&  field.indicator1 == "1") ||
+      (Constants::HIDE_1ST_IND0.include?(field.tag) && field.indicator1 == "0")
+    end
   end
 
   def grouping
-    @marc_record.group_by(&:tag)
+    @fields.group_by(&:tag)
   end
 
   def label_by_indicator key

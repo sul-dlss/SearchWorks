@@ -819,6 +819,28 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def vernacular_edition_imprint_fixture
+    <<-xml
+      <record>
+        <datafield tag="250" ind1=" " ind2=" ">
+          <subfield code="6">880-01</subfield>
+          <subfield code="a">Edition Statement</subfield>
+        </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="6">880-02</subfield>
+          <subfield code="a">Imprint Statement</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">250-01</subfield>
+          <subfield code="a">Vernacular Edition Statement</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">260-02</subfield>
+          <subfield code="a">Vernacular Imprint Statement</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def no_fields_fixture
     "<record></record>"
   end

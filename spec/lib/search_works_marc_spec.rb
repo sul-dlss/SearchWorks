@@ -10,12 +10,12 @@ describe SearchWorksMarc do
       expect(sw_marc.class).to be SearchWorksMarc
     end
     it 'should not contain any control fields or removed custom fields' do
-      expect(sw_marc.marc_record).to match_array []
+      expect(sw_marc.fields).to match_array []
     end
     it 'should contain these fields as the indicator value does not match' do
       document = SolrDocument.new(marcxml: sw_marc_not_removed).to_marc
       sw_marc = SearchWorksMarc.new(document)
-      expect(sw_marc.marc_record.length).to eq 2
+      expect(sw_marc.fields.length).to eq 2
     end
   end
 
@@ -54,6 +54,16 @@ describe SearchWorksMarc do
     it 'should return an enumerable object' do
       instrumentation.each do |record|
         expect(record).to be_a_kind_of(OpenStruct)
+      end
+    end
+  end
+  describe 'matched vernacular' do
+    let(:vernacular_document) { SolrDocument.new(marcxml: vernacular_edition_imprint_fixture).to_marc }
+    let(:marc_field) { MarcImprint.new(vernacular_document) }
+    it 'should return both regular and vernacular fields' do
+      expect(marc_field.fields.length).to eq 2
+      marc_field.each do |field|
+        expect(field.values).to eq ["Imprint Statement", "Vernacular Imprint Statement"]
       end
     end
   end

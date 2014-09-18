@@ -8,7 +8,7 @@ describe MarcInstrumentation do
   end
   it 'should return empty marc_record for marc doc without 382 field' do
     document = SolrDocument.new(marcxml: metadata1)
-    expect(document.marc_instrumentation.marc_record.length).to eq 0
+    expect(document.marc_instrumentation.fields.length).to eq 0
   end
   it 'should return SearchWorksMarc::Instrumentation for document with 382 field' do
     document = SolrDocument.new(marcxml: marc_382_instrumentation)

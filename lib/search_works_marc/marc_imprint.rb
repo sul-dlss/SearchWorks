@@ -1,13 +1,12 @@
 class MarcImprint < SearchWorksMarc
-  def initialize(marc_record)
-    @marc_record = remove_fields(
-      marc_record.fields.select do |f|
-        f.tag == '260'
-      end
-    )
-  end
 
   private
+
+  def selected_fields
+    @fields.select! do |field|
+      field.tag == '260'
+    end
+  end
 
   def format_subfields fields
     fields.map do |field|
@@ -18,5 +17,10 @@ class MarcImprint < SearchWorksMarc
   end
   def label_by_indicator key
     "Imprint"
+  end
+  def grouping
+    @fields.group_by do |field|
+      label_by_indicator(nil)
+    end
   end
 end
