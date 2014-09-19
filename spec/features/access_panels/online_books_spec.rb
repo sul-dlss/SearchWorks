@@ -25,7 +25,7 @@ feature "Record view" do
 
       within "div.panel-related" do
         expect(page).to have_css("div.panel-heading", visible: true)
-        expect(page).to have_css("h3", text: "Related", visible: true)
+        expect(page).to have_css("h3", text: "More options", visible: true)
         expect(page).to have_css("a.limited-preview[href='http://books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&source=gbs_ViewAPI']", text: "(Limited preview)", visible: true)
         expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
       end
