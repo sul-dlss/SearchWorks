@@ -387,6 +387,8 @@ module Constants
    "LANG-RESV" => "Language Lab reserves",
    "LAW-ARCHIV" => "Law Library (Crown) Archives: ask at circulation desk",
    "LAW-BIND" => "At bindery",
+   "LAW-CIRC" => "Law Circulation Desk",
+   "LAW-CAREER" => "Law Circulation Desk",
    "LAW-LOAN" => "Law Library (Crown) circulation desk",
    "LAW-RESV" => "Law Library (Crown) reserves: ask at circulation desk",
    "LAW-REVIEW" => "Law Review",
@@ -609,6 +611,10 @@ module Constants
    "VAULT" => "Vault",
    "VROOMAN" => "Vrooman Collection",
    "WEST-7B" => "Ask at circulation desk"}
+
+ GREEN_SPECIFIC_LOCS = {
+   "LOCKED-STK" => "Locked Stacks: ask at Media & Microtext Center"
+ }
 
  NONCIRC_LOCS = ["2NDFLR-REF",
    "3RDFLR-REF",
