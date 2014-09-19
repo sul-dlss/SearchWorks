@@ -22,7 +22,8 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
   describe "without barcode" do
     it "should select the first callnumber in the heading when no barcode is present" do
       render
-      expect(rendered).to have_css('h1', text: /Browse nearby.*callnumber123/m)
+      expect(rendered).to have_css('h1', text: "Browse related items")
+      expect(rendered).to have_css('p', text: /Starting at call number:.*callnumber123/m)
     end
   end
   describe "with barcode" do
@@ -31,7 +32,8 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
     end
     it "should use the callnumber based on the provided barcode in the heading" do
       render
-      expect(rendered).to have_css('h1', text: /Browse nearby.*callnumber321/m)
+      expect(rendered).to have_css('h1', text: "Browse related items")
+      expect(rendered).to have_css('p', text: /Starting at call number:.*callnumber321/m)
     end
   end
 end
