@@ -535,6 +535,7 @@ module Constants
    "SEE-LOAN" => "See circulation desk for access",
    "SEE-OTHER" => "See related record(s) to request item",
    "SERIALS" => "Serials",
+   "SETS" => "Big Sets",
    "SHELBYSER" => "Serials",
    #"SHELBYSER" => "Serials - Shelved by series title",
    #"SHELBYTITL" => "Serials - Shelved by title",
