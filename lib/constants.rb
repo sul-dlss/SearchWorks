@@ -387,6 +387,8 @@ module Constants
    "LANG-RESV" => "Language Lab reserves",
    "LAW-ARCHIV" => "Law Library (Crown) Archives: ask at circulation desk",
    "LAW-BIND" => "At bindery",
+   "LAW-CIRC" => "Law Circulation Desk",
+   "LAW-CAREER" => "Law Circulation Desk",
    "LAW-LOAN" => "Law Library (Crown) circulation desk",
    "LAW-RESV" => "Law Library (Crown) reserves: ask at circulation desk",
    "LAW-REVIEW" => "Law Review",
