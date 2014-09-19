@@ -3,13 +3,13 @@
   list-style-type: none;
   padding: 0;
   position: fixed;
-  right: 10px;
-  top: 40%;
+  right: 0;
+  top: 50%;
   z-index: 1040;
 
   li {
     button {
-      background-color: $white;
+      background-color: $sul-record-side-nav-background-color;
       border: 1px solid $sul-record-side-nav-border-color;
       height: 35px;
       margin-top: -1px;
@@ -41,8 +41,6 @@
 
 @media screen and (max-width: $screen-xs-max) {
   .record-side-nav {
-    right: 0;
-
     li {
       &:first-child button {
         border-top-right-radius: 0px;
