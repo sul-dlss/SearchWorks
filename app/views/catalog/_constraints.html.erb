@@ -1,6 +1,6 @@
 <% if query_has_constraints? %>
   <div id="appliedParams" class="clearfix constraints-container">
-    <span class="constraints-label"><%= t('blacklight.search.filters.title') %></span>
+    <%= link_to("<i class='fa fa-fast-backward'></i> <span class='hidden-xs'>Start over</span></a>".html_safe, root_path, class: 'btn btn-primary') %>
     <%= render_constraints(params) %>
   </div>
 <% end %>

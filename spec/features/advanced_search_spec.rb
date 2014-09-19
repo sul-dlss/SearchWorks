@@ -54,7 +54,7 @@ feature "Advanced Search" do
     click_button 'search'
 
     within('.breadcrumb') do
-      expect(page).to have_content("You searched for: A search")
+      expect(page).to have_content("A search")
     end
 
     expect(page).to_not have_content("Advanced search")
