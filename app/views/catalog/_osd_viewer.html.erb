@@ -19,8 +19,8 @@
         </div>
     </div>
     <%= openseadragon_picture_tag tiles, class: 'osd-image row', data: { openseadragon: @document.osd_config.merge(prefixUrl: image_url('openseadragon') + "/") } %>
-    <div class="row purl-link">
-      Persistent URL: <%= link_to "purl.stanford.edu/#{@document.druid}", "http://purl.stanford.edu/#{@document.druid}" %>
+    <div class="row purl-link osd-toolbar">
+      Download image at: <%= link_to "purl.stanford.edu/#{@document.druid}", "http://purl.stanford.edu/#{@document.druid}" %>
     </div>
   </div>
 
