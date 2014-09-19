@@ -1,5 +1,8 @@
 span.constraints-label {
   font-size: 1.2em;
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
 }
 
 span.constraint.btn-group {
@@ -20,4 +23,21 @@ span.constraint.btn-group {
     padding-bottom: 5px;
   }
 
+}
+@media (max-width: $screen-xs-max) {
+  .constraint {
+    &.query .filterValue {
+      max-width: 227px;
+    }
+    &.filter .filterValue {
+      max-width: 150px;
+    }
+    .filterValue {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: -6px;
+    }
+  }
 }
