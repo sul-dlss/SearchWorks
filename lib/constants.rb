@@ -610,6 +610,10 @@ module Constants
    "VROOMAN" => "Vrooman Collection",
    "WEST-7B" => "Ask at circulation desk"}
 
+ GREEN_SPECIFIC_LOCS = {
+   "LOCKED-STK" => "Locked Stacks: ask at Media & Microtext Center"
+ }
+
  NONCIRC_LOCS = ["2NDFLR-REF",
    "3RDFLR-REF",
    "ARTLCKL-R",

@@ -1,11 +1,18 @@
 require "spec_helper"
 
 describe Holdings::Location do
-  it "should translate the location code" do
-    expect(Holdings::Location.new("STACKS").name).to eq "Stacks"
-  end
   it "should identify location level requests" do
     expect(Holdings::Location.new("SSRC-DATA")).to be_location_level_request
+  end
+  describe '#name' do
+    let(:location_code) { "LOCKED-STK" }
+    let(:callnumber) { Holdings::Callnumber.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
+    it "should translate the location code" do
+      expect(Holdings::Location.new(location_code).name).to eq "Locked Stacks: ask at circulation desk"
+    end
+    it 'should get location specific names' do
+      expect(Holdings::Location.new(location_code, [callnumber]).name).to eq "Locked Stacks: ask at Media & Microtext Center"
+    end
   end
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
