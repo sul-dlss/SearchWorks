@@ -95,3 +95,13 @@
     @include linear-gradient($background, $gradient);
   }
 }
+
+@mixin stackmap-find-it {
+  margin-left: 10px;
+
+  i.fa-map-marker {
+    color: #0098DB;
+    font-size: 1.4em;
+    margin-right: 2px;
+  }
+}
