@@ -616,6 +616,10 @@ module Constants
    "LOCKED-STK" => "Locked Stacks: ask at Media & Microtext Center"
  }
 
+ SPEC_SPECIFIC_LOCS = {
+   "MANUSCRIPT" => "Manuscript Collection: request at Special Collections service desk"
+ }
+
  NONCIRC_LOCS = ["2NDFLR-REF",
    "3RDFLR-REF",
    "ARTLCKL-R",
