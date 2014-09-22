@@ -62,6 +62,10 @@ class Holdings
       Constants::LOCS.merge(Constants::GREEN_SPECIFIC_LOCS)[@code]
     end
 
+    def spec_coll_specific_location_name
+      Constants::LOCS.merge(Constants::SPEC_SPECIFIC_LOCS)[@code]
+    end
+
     def method_missing(method_name, *args, &block)
       case method_name
       when /#{sanitized_library}_specific_location_name/
