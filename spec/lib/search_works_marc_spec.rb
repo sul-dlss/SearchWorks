@@ -60,10 +60,10 @@ describe SearchWorksMarc do
   describe 'matched vernacular' do
     let(:vernacular_document) { SolrDocument.new(marcxml: vernacular_edition_imprint_fixture).to_marc }
     let(:marc_field) { MarcImprint.new(vernacular_document) }
-    it 'should return both regular and vernacular fields' do
-      expect(marc_field.fields.length).to eq 2
+    it 'should return both regular and vernacular fields (and handle when there is no matching vernacular)' do
+      expect(marc_field.fields.length).to eq 3
       marc_field.each do |field|
-        expect(field.values).to eq ["Imprint Statement", "Vernacular Imprint Statement"]
+        expect(field.values).to eq ["Imprint Statement", "Vernacular Imprint Statement", "Unmatched Imprint Statement"]
       end
     end
   end
