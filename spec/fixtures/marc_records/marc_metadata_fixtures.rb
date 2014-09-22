@@ -830,12 +830,16 @@ module MarcMetadataFixtures
           <subfield code="6">880-02</subfield>
           <subfield code="a">Imprint Statement</subfield>
         </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="6">880-03</subfield>
+          <subfield code="a">Unmatched Imprint Statement</subfield>
+        </datafield>
         <datafield tag="880" ind1=" " ind2=" ">
           <subfield code="6">250-01</subfield>
           <subfield code="a">Vernacular Edition Statement</subfield>
         </datafield>
         <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">260-02</subfield>
+          <subfield code="6">260-02/(2</subfield>
           <subfield code="a">Vernacular Imprint Statement</subfield>
         </datafield>
       </record>

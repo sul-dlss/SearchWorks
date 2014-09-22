@@ -60,12 +60,13 @@ class SearchWorksMarc
     if field.tag != '880' && field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      @marc_record.find_all{|f| ('880') === f.tag}.each do |field|
+      @marc_record.find_all{|f| ('880') === f.tag}.find do |field|
         if field['6'] and field['6'].include?("-")
-          field_880 = field['6'].split("-")[0]
-          match_880 = field['6'].split("-")[1].gsub("//r","")
+          vern_code = field['6'][/^\d{3}-\d{2}/]
+          field_880 = vern_code.split('-')[0]
+          match_880 = vern_code.split('-')[1]
           if match_original == match_880 and field_original == field_880
-            return field
+            true
           end
         end
       end
