@@ -48,21 +48,28 @@ en:
     abstract_contents:
       id: "abstract-contents"
       icon: '<i class="fa fa-align-justify"></i>'
+      label: "Contents"
     contributors:
       id: "contributors"
       icon: '<i class="fa fa-user"></i>'
+      label: "Contributors"
     access_conditions:
       id: "access-conditions"
       icon: '<i class="fa fa-key"></i>'
+      label: "Access"
     contents_summary:
       id: "contents-summary"
       icon: '<i class="fa fa-align-justify"></i>'
+      label: "Summary"
     subjects:
       id: "subjects"
       icon: '<i class="fa fa-tags"></i>'
+      label: "Subjects"
     bibliography_info:
       id: "bibliography-info"
       icon: '<i class="fa fa-info"></i>'
+      label: "Info"
     browse_nearby:
       id: "browse-nearby"
       icon: '<span class="sul-icon sul-icon-books-3"></span>'
+      label: "Browse"

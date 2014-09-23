@@ -1,55 +1,10 @@
-<% document ||= @document %>
-<% if (contributors = render(partial: "catalog/record/marc_contributors", locals: {document: document})).present? %>
-  <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
-    <div class="section-heading">
-      <h2><%= t('record_side_nav.contributors.icon').html_safe %> Contributors</h2>
-    </div>
-    <div class="section-body">
-      <dl>
-        <%= contributors %>
-      </dl>
-    </div>
-  </div>
-<% end %>
-
-<% if (contents_summary = render(partial: "catalog/record/marc_contents_summary", locals: {document: document})).present? %>
-  <div class="section" id="<%= t('record_side_nav.contents_summary.id') %>" data-side-nav-class="<%= t('record_side_nav.contents_summary.id') %>">
-    <div class="section-heading">
-      <h2><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h2>
-    </div>
-    <div class="section-body">
-      <dl>
-        <%= contents_summary %>
-      </dl>
-    </div>
-  </div>
-<% end %>
-
-<% if (subjects = render(partial: "catalog/record/marc_subjects", locals: {document: document})).present? %>
-  <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
-    <div class="section-heading">
-      <h2><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h2>
-    </div>
-    <div class="section-body">
-      <%= subjects %>
-    </div>
-  </div>
-<% end %>
-
-<% if (bibliography = render(partial: "catalog/record/marc_bibliographic", locals: {document: document})).present? %>
-  <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
-    <div class="section-heading">
-      <h2><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h2>
-    </div>
-    <div class="section-body">
-      <dl>
-        <%= bibliography %>
-      </dl>
-    </div>
-  </div>
-<% end %>
-
 <%
+  document ||= @document
+  contributors = render(partial: "catalog/record/marc_contributors", locals: {document: document})
+  contents_summary = render(partial: "catalog/record/marc_contents_summary", locals: {document: document})
+  subjects = render(partial: "catalog/record/marc_subjects", locals: {document: document})
+  bibliography = render(partial: "catalog/record/marc_bibliographic", locals: {document: document})
+
   locals = {
     type: "marc",
     has_data: {
@@ -63,3 +18,53 @@
 %>
 
 <%= render partial: "catalog/record/record_side_nav", locals: locals %>
+
+<% if contributors.present? %>
+  <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.contributors.icon').html_safe %> Contributors</h2>
+    </div>
+    <div class="section-body">
+      <dl>
+        <%= contributors %>
+      </dl>
+    </div>
+  </div>
+<% end %>
+
+<% if contents_summary.present? %>
+  <div class="section" id="<%= t('record_side_nav.contents_summary.id') %>" data-side-nav-class="<%= t('record_side_nav.contents_summary.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h2>
+    </div>
+    <div class="section-body">
+      <dl>
+        <%= contents_summary %>
+      </dl>
+    </div>
+  </div>
+<% end %>
+
+<% if subjects.present? %>
+  <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h2>
+    </div>
+    <div class="section-body">
+      <%= subjects %>
+    </div>
+  </div>
+<% end %>
+
+<% if bibliography.present? %>
+  <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
+    <div class="section-heading">
+      <h2><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h2>
+    </div>
+    <div class="section-body">
+      <dl>
+        <%= bibliography %>
+      </dl>
+    </div>
+  </div>
+<% end %>
