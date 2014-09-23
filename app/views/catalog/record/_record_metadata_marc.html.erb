@@ -9,10 +9,6 @@
   </div>
 </div>
 
-<%# technical details placeholder - librarian view, catkey etc %>
-<div class="record-technical-details row">
-</div>
-
 <% if @document.holdings.browsable_callnumbers.present? %>
   <%= render 'catalog/record/callnumber_browse' %>
 <% end %>
