@@ -22,6 +22,12 @@
   &.articles-help {
     padding-right: 0;
   }
+  .external-link-icon {
+    @extend .fa;
+    @extend .fa-external-link;
+    font-size: 0.9em;
+    margin-left: 2px;
+  }
   &.features {
     @media only screen and (max-width: $screen-md) {
       padding-right: 0;
