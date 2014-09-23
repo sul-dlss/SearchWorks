@@ -8,7 +8,7 @@ module MastheadHelper
     end
   end
   def facets_prefix_options
-    ["0-9", ("A".."Z").to_a.delete_if{|letter| letter == "X"}].flatten
+    ["0-9", ("A".."Z").to_a].flatten
   end
   def digital_collections_params_for(format=nil)
     facet_params = {f: {building_facet: ["Stanford Digital Repository"]}}
