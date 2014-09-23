@@ -50,19 +50,30 @@
   <ul class="media-list">
     <li class="media">
       <div class="media-body">
+        <p>
+          Articles are not indexed in SearchWorks.
+          <%= link_to("Select a database", databases_path, class: 'media-heading') %> to search for articles.
+        </p>
+      </div>
+    </li>
+    <li class="media">
+      <div class="media-body">
         <%= link_to "Citation finder", "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "media-heading" %>
+        <i class="external-link-icon"></i>
         <p>Find an article in one of Stanford's ejournal subscriptions.</p>
       </div>
     </li>
     <li class="media">
       <div class="media-body">
         <%= link_to "xSearch", "http://xsearch.stanford.edu", class: "media-heading" %>
+        <i class="external-link-icon"></i>
         <p>Search for articles in multiple databases simultaneously.</p>
       </div>
     </li>
     <li class="media">
       <div class="media-body">
-        <%= link_to "Find articles", "http://library.stanford.edu/guides/find-articles", class: "media-heading" %>
+        <%= link_to "Guide: Find articles", "http://library.stanford.edu/guides/find-articles", class: "media-heading" %>
+        <i class="external-link-icon"></i>
         <p>Guide to searching for articles at Stanford.</p>
       </div>
     </li>
@@ -72,7 +83,8 @@
   <ul class="media-list">
     <li class="media">
       <div class="media-body">
-        <%= link_to "SearchWorks basics", "http://library.stanford.edu/guides/searchworks-basics-searching-library-catalog", class: "media-heading" %>
+        <%= link_to "Guide: SearchWorks basics", "http://library.stanford.edu/guides/searchworks-basics-searching-library-catalog", class: "media-heading" %>
+        <i class="external-link-icon"></i>
         <p>Overview of SearchWorks features, including basic search strategies, facets, browsing.</p>
       </div>
     </li>

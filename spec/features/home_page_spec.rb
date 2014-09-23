@@ -26,13 +26,14 @@ feature "Home Page" do
   end
   scenario "'Articles' section should display" do
     expect(page).to have_css('h2', text: 'Looking for articles?')
+    expect(page).to have_css(".media a", text: "Select a database")
     expect(page).to have_css(".media a", text: "Citation finder")
-    expect(page).to have_css(".media a", text: "Find articles")
+    expect(page).to have_css(".media a", text: "Guide: Find articles")
     expect(page).to have_css(".media a", text: "xSearch")
   end
   scenario "'Help with SearchWorks' section should display" do
     expect(page).to have_css('h2', text: 'Help with SearchWorks')
-    expect(page).to have_css(".media a", text: "SearchWorks basics")
+    expect(page).to have_css(".media a", text: "Guide: SearchWorks basics")
   end
   scenario "Logo and catalog images should display" do
     expect(page).to have_css("a.navbar-brand")
