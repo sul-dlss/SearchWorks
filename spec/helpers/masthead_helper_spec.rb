@@ -16,15 +16,13 @@ describe MastheadHelper do
   end
   describe "#facets_prefix_options" do
     it "should have the correct number of elements" do
-      expect(facets_prefix_options.length).to eq 26
+      expect(facets_prefix_options.length).to eq 27
     end
     it "should include the necessary options" do
       expect(facets_prefix_options).to include "0-9"
       expect(facets_prefix_options).to include "A"
+      expect(facets_prefix_options).to include "X"
       expect(facets_prefix_options).to include "Z"
-    end
-    it "should not contain 'X'" do
-      expect(facets_prefix_options).not_to include "X"
     end
   end
   describe '#digital_collections_params_for' do
