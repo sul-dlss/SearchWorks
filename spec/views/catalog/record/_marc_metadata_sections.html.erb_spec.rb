@@ -32,6 +32,12 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
       expect(rendered).to have_css(".record-side-nav button.contributors")
       expect(rendered).to have_css(".record-side-nav button.contents-summary")
       expect(rendered).to have_css(".record-side-nav button.bibliography-info")
+
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Top")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Contributors")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Summary")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Info")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Bottom")
     end
   end
 

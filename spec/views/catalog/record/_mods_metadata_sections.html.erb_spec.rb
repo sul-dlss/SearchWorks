@@ -37,6 +37,13 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
       expect(rendered).to have_css(".record-side-nav button.subjects")
       expect(rendered).to have_css(".record-side-nav button.bibliography-info")
       expect(rendered).to have_css(".record-side-nav button.access-conditions")
+
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Top")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Contents")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Subjects")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Info")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Access")
+      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Bottom")
     end
   end
 
