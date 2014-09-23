@@ -23,6 +23,14 @@
     }
   }
 
+  .search-form {
+    .input-group-addon {
+      &.for-search-field {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+  }
+
   .navbar-nav.navbar-right.searchbar-right:last-child {
     margin-right: -15px;
   }
