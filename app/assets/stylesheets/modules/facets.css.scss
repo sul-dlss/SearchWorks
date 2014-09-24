@@ -35,5 +35,33 @@
   &.facet_limit-active .panel-heading {
     background: $sul-facet-active-bg;
     border-bottom: 1px solid $sul-facet-active-border;
+    color: $sul-facet-active-heading-color;
+  }
+}
+
+#sidebar #facets ul.facet-hierarchy {
+  &, ul {
+    padding-left: 0; 
+  }
+  li.h-node {
+    list-style-image: none;
+    list-style-type: none;
+    padding-left: 1.2em;
+    &.twiddle {
+      &:before{
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: -1.2em;
+        width: 1.2em;
+        content: '\f196';
+      }
+    }
+    &.twiddle-open {
+      list-style-image: none;
+      list-style-type: none;
+      &:before {
+        content: "\f147";
+      }
+    }
   }
 }

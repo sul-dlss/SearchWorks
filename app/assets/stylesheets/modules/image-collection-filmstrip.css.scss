@@ -1,7 +1,7 @@
 .image-filmstrip {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fafafa;
+  border: 1px solid $sul-filmstrip-border;
+  border-radius: 3px;
+  background-color: $sul-filmstrip-bg;
   bottom: 0;
   box-sizing: border-box;
   margin-bottom: 10px;

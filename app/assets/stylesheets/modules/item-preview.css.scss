@@ -38,7 +38,7 @@
 
 .preview {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $sul-preview-border;
   border-radius: 3px;
   display: none;
   min-height: 200px;
@@ -79,6 +79,7 @@
   .preview-close {
     cursor: pointer;
     padding: 5px;
+    border-bottom: none;
     position: absolute;
     right: 5px;
     top: 3px;
@@ -93,4 +94,5 @@
 
 h3.preview-title{
   @include h3-index-title-font;
+  margin-right: 30px
 }
