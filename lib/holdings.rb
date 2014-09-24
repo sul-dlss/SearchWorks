@@ -39,7 +39,7 @@ class Holdings
   def libraries
     unless @libraries
       @libraries = callnumbers.group_by(&:library).map do |library, items|
-        Holdings::Library.new(library, items)
+        Holdings::Library.new(library, @document, items)
       end
       append_mhld(:library, @libraries, Holdings::Library)
       @libraries.sort_by!(&:sort)

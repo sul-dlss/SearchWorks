@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe Holdings::Library do
+  include Marc856Fixtures
   it "should translate the library code" do
     expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
   end
@@ -15,8 +16,8 @@ describe Holdings::Library do
       Holdings::Callnumber.new("barcode -|- library -|- STACKS -|- "),
       Holdings::Callnumber.new("barcode -|- library -|- CURRENTPER -|- ")
     ] }
-    let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
-    let(:sort_locations) { Holdings::Library.new("GREEN", sort_callnumbers).locations }
+    let(:locations) { Holdings::Library.new("GREEN", nil, callnumbers).locations }
+    let(:sort_locations) { Holdings::Library.new("GREEN", nil, sort_callnumbers).locations }
     it "should return an array of Holdings::Locations" do
       expect(locations).to be_a Array
       locations.each do |location|
@@ -41,7 +42,7 @@ describe Holdings::Library do
       Holdings::Callnumber.new(""),
       Holdings::Callnumber.new("")
     ] }
-    let(:library) { Holdings::Library.new("GREEN", callnumbers) }
+    let(:library) { Holdings::Library.new("GREEN", nil, callnumbers) }
     it "should be false when libraries have no item display fields" do
       expect(library).to_not be_present
     end
@@ -50,6 +51,25 @@ describe Holdings::Library do
     it "should return true for all libraries that should be requestable at the location level" do
       Constants::REQUEST_LIBS.each do |library|
         expect(Holdings::Library.new(library)).to be_location_level_request
+      end
+    end
+    describe 'HOPKINS' do
+      let(:item_display) { "12345 -|- HOPKINS -|- STACKS -|- " }
+      let(:callnumbers) {[Holdings::Callnumber.new(item_display)]}
+      let(:online_doc) { SolrDocument.new(marcxml: fulltext_856) }
+      let(:online_lib) { Holdings::Library.new("HOPKINS", online_doc, callnumbers) }
+      let(:single_item_doc) { SolrDocument.new(item_display: [item_display]) }
+      let(:not_online_lib) { Holdings::Library.new("HOPKINS", single_item_doc, callnumbers) }
+      let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, "54321 -|- GREEN -|- STACKS -|- "]) }
+      let(:multiple_holding_lib) { Holdings::Library.new("HOPKINS", multi_holdings_doc, callnumbers) }
+      it 'should return true for materials that are not available online' do
+        expect(not_online_lib).to be_location_level_request
+      end
+      it 'should return false for materials that exist in other libraries' do
+        expect(multiple_holding_lib).to_not be_location_level_request
+      end
+      it 'should return false for materials that are available online' do
+        expect(online_lib).to_not be_location_level_request
       end
     end
   end

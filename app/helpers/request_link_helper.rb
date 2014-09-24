@@ -1,7 +1,7 @@
 module RequestLinkHelper
   def request_link(document, callnumber)
     request_query = request_options(document, callnumber)
-    request_query.delete(:item_id) if Holdings::Library.new(callnumber.library).location_level_request?
+    request_query.delete(:item_id) if Holdings::Library.new(callnumber.library, document).location_level_request?
     if callnumber.on_order?
       request_query.delete(:item_id)
       request_query.delete(:home_lib)
