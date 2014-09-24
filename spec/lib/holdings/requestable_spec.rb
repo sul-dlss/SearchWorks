@@ -12,6 +12,17 @@ describe Holdings::Requestable do
         end
       end
     end
+    describe 'reserves' do
+      it 'should not be requestable if the item is on reserve' do
+        expect(
+          Holdings::Requestable.new(
+            Holdings::Callnumber.new(
+              '1234 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC123 -|- -|- -|- -|- course_id -|- reserve_desk -|- loan_period'
+            )
+          )
+        ).to_not be_requestable
+      end
+    end
     describe "home locations" do
       it "should not be requestable if the library is GREEN and the home location is MEDIA-MTXT" do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- '))).to_not be_requestable
