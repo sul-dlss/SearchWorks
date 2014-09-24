@@ -3,8 +3,9 @@ class Holdings
     include AppendMHLD
     attr_reader :code, :items
     attr_accessor :mhld
-    def initialize(code, items=[])
+    def initialize(code, document=nil, items=[])
       @code = code
+      @document = document
       @items = items
     end
     def name
@@ -31,7 +32,7 @@ class Holdings
       (mhld.present? && mhld.any?(&:present?))
     end
     def location_level_request?
-      Constants::REQUEST_LIBS.include?(@code)
+      Constants::REQUEST_LIBS.include?(@code) || hopkins_only_and_not_online?
     end
     def library_instructions
       Constants::LIBRARY_INSTRUCTIONS[@code]
@@ -42,6 +43,22 @@ class Holdings
       else
         name || @code
       end
+    end
+    private
+    def hopkins_only_and_not_online?
+      hopkins_only? && !document_online?
+    end
+    def hopkins_only?
+      @code == "HOPKINS" &&
+      @document.present? &&
+      @document.holdings.libraries.present? &&
+      @document.holdings.libraries.length == 1
+    end
+    def hopkins_and_not_online?
+      @code == "HOPKINS" && !document_online?
+    end
+    def document_online?
+      @document.present? && @document.access_panels.online?
     end
   end
 end
