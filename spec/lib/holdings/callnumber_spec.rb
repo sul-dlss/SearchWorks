@@ -37,7 +37,13 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new(complex_item_display)).to_not be_browsable
     end
     it "should return false if there is no real callnumber" do
-      expect(Holdings::Callnumber.new('-|- -|- -|-')).to_not be_browsable
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- reverse_shelfkey -|- -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
+    end
+    it "should return false if there is no shelfkey" do
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- -|- reverse_shelfkey -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
+    end
+    it "should return false if there is no reverse shelfkey" do
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
     end
     it 'should return false if callnumber type is ALPHANUM' do
       alpha_num = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- ALPHANUM -|- course_id -|- reserve_desk -|- loan_period'
