@@ -5,4 +5,8 @@ describe "Record view", feature: true do
     visit catalog_path("1")
     expect(page).to have_css("h1", text: "An object")
   end
+  it 'should display the correct COinS' do
+    visit catalog_path("1")
+    expect(page).to have_css('span.Z3988[title*="fmt%3Akev%3Amtx%3Abook"]')
+  end
 end
