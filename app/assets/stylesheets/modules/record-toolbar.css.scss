@@ -1,6 +1,6 @@
 .record-toolbar {
   border-radius: 0px;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 5px;
   min-height: 0;
 
@@ -8,6 +8,7 @@
     border-left: none;
     border-right: none;
     border-top: none;
+    margin-top: 15px;
     @include sul-toolbar-bg-border;
   }
 
