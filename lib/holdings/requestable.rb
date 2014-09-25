@@ -15,9 +15,14 @@ class Holdings
     private
 
     def item_is_requestable?
+      !on_reserve? &&
       requestable_item_type? &&
       requestable_home_location? &&
       requestable_current_location?
+    end
+
+    def on_reserve?
+      @callnumber.on_reserve?
     end
 
     def must_request_item?
