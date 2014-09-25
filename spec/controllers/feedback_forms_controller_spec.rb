@@ -28,6 +28,14 @@ describe FeedbackFormsController do
       post :create, :message => "I like to spam by sending you a http://www.somespam.com.  lolzzzz", :url => "http://test.host/", :email_address => ""
       flash[:error].should eq "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
     end
+    it 'should block potential spam with a http:// in the user_agent field' do
+      post :create, user_agent: "http://www.google.com", message: "Legit message", url: "http://test.host"
+      flash[:error].should eq "Your message appears to be spam, and has not been sent."
+    end
+    it 'should block potential spam with a http:// in the viewport field' do
+      post :create, viewport: "http://www.google.com", message: "Legit message", url: "http://test.host"
+      flash[:error].should eq "Your message appears to be spam, and has not been sent."
+    end
     it "should return an error if a bot fills in the email_addrss field (email is correct field)" do
       post :create, :message => "I am spamming you!", :url => "http://test.host/", :email_address => "spam!"
       flash[:error].should eq "You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields."
