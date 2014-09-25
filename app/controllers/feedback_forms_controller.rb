@@ -22,6 +22,10 @@ class FeedbackFormsController < ApplicationController
 
   protected
 
+  def url_regex
+    /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
+  end
+
   def validate
     errors = []
     if params[:message].nil? or params[:message] == ""
@@ -30,8 +34,12 @@ class FeedbackFormsController < ApplicationController
     if params[:email_address] and params[:email_address] != ""
       errors << "You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields."
     end
-    if params[:message] =~ /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
+    if params[:message] =~ url_regex
       errors << "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
+    end
+    if params[:user_agent] =~ url_regex ||
+       params[:viewport]   =~ url_regex
+       errors << "Your message appears to be spam, and has not been sent."
     end
     flash[:error] = errors.join("<br/>") unless errors.empty?
     flash[:error].nil?
