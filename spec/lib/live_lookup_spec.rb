@@ -10,11 +10,11 @@ describe LiveLookup do
   end
   describe "url construction" do
     it "should construct the correct URL for single items" do
-      expect(Faraday).to receive(:new).with("#{Settings.LIVE_LOOKUP_URL}?search=holding&id=123").and_return(response)
+      expect(Faraday).to receive(:new).with({:url=>"#{Settings.LIVE_LOOKUP_URL}?search=holding&id=123"}).and_return(response)
       LiveLookup.new(['123']).to_json
     end
     it "should construct the URL for multiple items properly" do
-      expect(Faraday).to receive(:new).with("#{Settings.LIVE_LOOKUP_URL}?search=holdings&id0=123&id1=321").and_return(response)
+      expect(Faraday).to receive(:new).with({:url=>"#{Settings.LIVE_LOOKUP_URL}?search=holdings&id0=123&id1=321"}).and_return(response)
       LiveLookup.new(['123', '321']).to_json
     end
   end
