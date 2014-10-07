@@ -5,7 +5,7 @@
         <div class="checkbox">
           <%= label_tag "f_inclusive_#{solr_field}_#{item.value.parameterize}"  do %>
           <%= check_box_tag "f_inclusive[#{solr_field}][]", item.value.to_sym, facet_value_checked?(solr_field, item.value), :id =>  "f_inclusive_#{solr_field}_#{item.value.parameterize}"%>
-              <%= content_tag :strong, "#{item.value} #{number_with_delimiter(item.hits)}" %>
+            <%= "#{item.value} #{number_with_delimiter(item.hits)}" %>
           <% end %>
         </div>
       </div>
