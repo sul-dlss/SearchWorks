@@ -1,6 +1,7 @@
 require "spec_helper"
 
-describe "Record view pagination", js: true do
+# This is a data-integration test because so local fixtures are never an issue
+describe "Record view pagination", :"data-integration" => true, js: true do
   before do
     visit root_path
   end

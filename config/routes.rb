@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resource :quick_reports, only: [:create]
 
+  resources :embed, only: :show
+
   resources :browse, only: :index
 
   get "browse/nearby" => "browse#nearby"

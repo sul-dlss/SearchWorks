@@ -23,6 +23,7 @@ module SearchWorks
     require 'hours_request'
     require 'holdings'
     require 'live_lookup'
+    require 'purl_embed'
     require 'search_query_modifier'
     require 'blacklight_advanced_search/parsing_nesting_parser'
     require 'search_works_marc'

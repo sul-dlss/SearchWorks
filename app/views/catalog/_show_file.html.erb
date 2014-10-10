@@ -1,2 +1,8 @@
-<%= render 'catalog/record/mods_upper_metadata_section' %>
-<% #render 'catalog/file_list' %>
+<div class="upper-record-metadata row">
+  <div class="col-sm-6">
+    <div data-behavior="purl-embed" data-embed-url="<%= embed_path(@document.druid) %>"></div>
+  </div>
+  <div class="col-sm-6">
+    <%= render 'catalog/record/mods_upper_metadata_section' %>
+  </div>
+</div>
