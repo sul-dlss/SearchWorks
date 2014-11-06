@@ -18,3 +18,7 @@
 <% document.mods.description.each do |description| %>
   <%= mods_record_field(description) %>
 <% end %>
+
+<% document.mods.cartographics.each do |cartographic| %>
+  <%= mods_record_field(cartographic) %>
+<% end %>
