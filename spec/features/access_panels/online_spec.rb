@@ -14,16 +14,4 @@ feature "Online Access Panel" do
       end
     end
   end
-  scenario "for MODS records" do
-    visit catalog_path('40')
-
-    within(".panel-online") do
-      within(".panel-heading") do
-        expect(page).to have_content("Available online")
-      end
-      within(".panel-body") do
-        expect(page).to have_css("a", text: "purl.stanford.edu")
-      end
-    end
-  end
 end
