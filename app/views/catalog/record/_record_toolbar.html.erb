@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li>
-          <%= render_show_doc_actions @document %>
+          <%= render(:partial => 'catalog/bookmark_control', :locals => {:document=> @document}) %>
         </li>
 
       </ul>
