@@ -3,7 +3,7 @@ require 'spec_helper'
 describe SelectedDatabasesController do
   describe "#index" do
     it "should set the @selected_databases instance variable" do
-      expect(controller).to receive(:get_solr_response_for_field_values).and_return([double('response'), double('documents')])
+      expect(controller).to receive(:get_solr_response_for_document_ids).and_return([double('response'), double('documents')])
       get :index
       expect(assigns(:selected_databases)).to be_a SelectedDatabases
     end

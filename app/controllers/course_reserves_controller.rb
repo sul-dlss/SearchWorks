@@ -11,7 +11,7 @@ class CourseReservesController < ApplicationController
     p[:"facet.field"] = facet
     p[:"f.#{facet}.facet.limit"] = "-1"  # this implies lexical sort
     p[:rows] = 0
-    response = find(p)
+    response = solr_repository.search(p)
     course_reserves = []
     response.facets.first.items.each do |item|
       course_reserves << CourseInfo.new(item.value)

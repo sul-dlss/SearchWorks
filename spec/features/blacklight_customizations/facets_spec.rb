@@ -19,6 +19,8 @@ feature "Facets Customizations" do
 
     click_on "advanced-search-submit"
 
+    expect(page).to have_css(".blacklight-format_main_ssim")
+
     within(".blacklight-format_main_ssim") do
       expect(page).to have_css(".panel-title", text: "Resource type")
       expect(page).to have_css("li span.sul-icon")

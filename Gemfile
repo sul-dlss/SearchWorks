@@ -73,7 +73,7 @@ gem 'openseadragon', github: 'sul-dlss/openseadragon-rails', branch: 'ff36-fix'
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 5.7.1'
+gem 'blacklight', '~> 5.8.0'
 
 gem "jettywrapper", "~> 1.7"
 gem "devise"
