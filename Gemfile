@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.8'
+gem 'sprockets', '~> 2.11.3'
 gem 'i18n'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -86,7 +87,7 @@ gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
-gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'blacklight5'
+gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
 gem 'roadie-rails', '~> 1.0.3'
