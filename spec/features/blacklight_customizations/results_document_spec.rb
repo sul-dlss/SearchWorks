@@ -35,7 +35,7 @@ feature "Results Document Metadata" do
         expect(page).to have_css("img.cover-image[data-isbn='ISBN0393040801,ISBN9780393040807']", visible: true)
         expect(page).to have_css("img.cover-image[data-lccn='LCCN96049953']", visible: true)
         expect(page).to have_css("img.cover-image[data-oclc='OCLC36024029']", visible: true)
-        expect(page).to have_css("img.cover-image[src='http://bks0.books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&img=1&zoom=1']", visible: true)
+        expect(find("img.cover-image")['src']).to match /books\.google\.com\/.*id=3xmDzzNiwiUC/
       end
     end
   end
