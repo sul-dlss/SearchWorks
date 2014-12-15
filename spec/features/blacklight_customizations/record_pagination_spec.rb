@@ -13,7 +13,9 @@ describe "Record view pagination", js: true do
       click_link 'Next'
     end
 
-    document_title = all('.document .index_title a').first.text
+    document_title = all('.index_title a').first.try(:text)
+
+    expect(document_title).to be_present
 
     within(first('.document')) do
       expect(page).to have_css('.document-counter', text: '21')
