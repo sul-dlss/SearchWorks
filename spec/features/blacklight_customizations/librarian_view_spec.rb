@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe "Librarian View Customization", type: :feature, js: true do
+  let(:embed) { double('embed-response') }
   it "MARC records should display" do
     visit catalog_path('28')
 
@@ -18,6 +19,8 @@ describe "Librarian View Customization", type: :feature, js: true do
   end
 
   it "MODS records should display" do
+    expect(embed).to receive(:html).and_return("")
+    expect(PURLEmbed).to receive(:new).and_return(embed)
     visit catalog_path('35')
 
     within(".tech-details") do

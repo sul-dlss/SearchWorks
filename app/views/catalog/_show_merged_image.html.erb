@@ -1,6 +1,10 @@
-<div class='clearfix'>
-  <%= render 'catalog/osd_viewer' %>
-  <div class="col-md-6">
+<% add_purl_embed_header(@document) %>
+
+<div class='upper-record-metadata row'>
+  <div class="col-md-7">
+    <div class="purl-embed-viewer" data-behavior="purl-embed" data-embed-url="<%= embed_path(@document.druid) %>"></div>
+  </div>
+  <div class="col-md-5">
     <%= render 'catalog/record/marc_upper_metadata_items' %>
   </div>
 </div>

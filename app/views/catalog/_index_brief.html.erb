@@ -14,7 +14,7 @@
         </span>
         <%= link_to_document document, :label => get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
         <span class="main-title-date"><%= get_main_title_date(document) %></span>
-        <% if document.has_image_behavior? %>
+        <% if document.is_a_collection_member? %>
           <span class="online-label">Online</span>
         <% end %>
       </h3>

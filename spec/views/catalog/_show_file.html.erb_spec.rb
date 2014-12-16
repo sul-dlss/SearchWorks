@@ -2,9 +2,10 @@ require "spec_helper"
 
 describe "catalog/_show_file.html.erb" do
   include ModsFixtures
-
-  let(:document) { SolrDocument.new(modsxml: mods_file) }
+  let(:presenter) { OpenStruct.new(document_heading: "Object Title") }
+  let(:document) { SolrDocument.new(druid: 'gz624pt5394', modsxml: mods_file) }
   before do
+    allow(view).to receive(:presenter).and_return(presenter)
     assign(:document, document)
   end
   it "should display uppermetadata section" do
