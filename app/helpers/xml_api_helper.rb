@@ -180,7 +180,7 @@ module XmlApiHelper
         xml_doc[:home_location] = record.xpath(".//item_record/home_location").text
         xml_doc[:date_time_due] = record.xpath(".//item_record/date_time_due").text
         xml_doc[:current_location] = record.xpath(".//item_record/current_location").text
-        xml_doc[:shelfkey] = doc.holdings.find_by_barcode(xml_doc[:id]) || "XXXX#{xml_doc[:item_number]}"
+        xml_doc[:shelfkey] = doc.holdings.find_by_barcode(xml_doc[:id]).try(:full_shelfkey) || "XXXX#{xml_doc[:item_number]}"
         item_details << xml_doc
       end
       availability[:item_details] = item_details
