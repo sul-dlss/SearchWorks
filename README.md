@@ -7,6 +7,8 @@ This is the codebase for the SearchWorks redesign.
 
 ## Local Installation
 
+You'll need common dependencies for building rails applications such as a javascript runtime (e.g. v8).  If you don't want to have the mysql gem installed for local development you can run the bundle install command below with the `--without production deployment` flag
+
 After cloning the repository
 
     $ bundle install
@@ -17,12 +19,10 @@ The installation script will
 1. Migrate the database
 2. Download jetty to the rails root if does not already exist.
 3. Unzip the downloaded jetty
-4. Index the local development/test fixtures
-5. Create a local development development config file `config/settings.yml`
+4. Copy over local solr configuration and schema
+5. Index the local development/test fixtures
 
-You will need to update the configuration in `config/settings.yml` to the correct URL for the following:
- - `HOURS_API`
- - `EMAIL_TO`
+You will need to update the configuration in `config/settings.yml` for various parts of the app to work.  Please check that file for more information.
 
 Start jetty
 
