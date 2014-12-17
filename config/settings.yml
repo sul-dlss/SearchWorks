@@ -14,3 +14,4 @@ NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'http://embed-service.example.com/embed'
 PURL_EMBED_URL_SCHEME: 'http://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'http://purl.stanford.edu/'
+FEEDBACK_ALERT: <%= false %>
