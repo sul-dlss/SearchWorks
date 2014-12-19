@@ -1,0 +1,32 @@
+<%= form_for(@tag) do |f| %>
+  <% if @tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+
+      <ul>
+      <% @tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Target' %><nbsp/><nbsp/>
+    <%= f.text_field :hasTarget %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Motivation' %><nbsp/><nbsp/>
+	<%= f.select :motivatedBy, options_for_select(oa_motivations), {:prompt => "Please select"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Text Body' %><br>
+    <%= f.text_area :hasBody, size: "60x5" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
