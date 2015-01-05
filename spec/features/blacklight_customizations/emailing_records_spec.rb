@@ -15,7 +15,7 @@ describe "Emailing Records", type: :feature, js: true do
 
     within('.modal-dialog') do
       fill_in 'to', with: 'email@example.com'
-      click_button 'Send'
+      find('button[type="submit"]').trigger('click')
     end
 
     expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
