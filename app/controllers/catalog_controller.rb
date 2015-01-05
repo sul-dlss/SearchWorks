@@ -347,6 +347,7 @@ class CatalogController < ApplicationController
     (@response, @document_list) = get_search_results
     respond_to do |format|
       format.json { render json: render_search_results_as_json }
+      format.html { render 'public/500', layout: false, status: 400 }
     end
   end
 
