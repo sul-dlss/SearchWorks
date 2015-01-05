@@ -15,3 +15,4 @@ PURL_EMBED_PROVIDER: 'http://embed-service.example.com/embed'
 PURL_EMBED_URL_SCHEME: 'http://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'http://purl.stanford.edu/'
 FEEDBACK_ALERT: <%= false %>
+GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
