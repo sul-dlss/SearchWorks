@@ -14,8 +14,10 @@
       </div>
       <div class="panel-footer">
         <dl class="dl-invert">
-          <dt>Digital content</dt>
-          <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
+          <% if parent_collection.collection_members.present? %>
+            <dt>Digital content</dt>
+            <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
+          <% end %>
           <% if parent_collection.extent.present? %>
             <dt><%= parent_collection.extent_label %></dt>
             <dd><%= parent_collection.extent %></dd>
