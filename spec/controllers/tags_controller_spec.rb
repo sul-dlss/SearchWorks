@@ -82,6 +82,12 @@ describe TagsController do
         assigns(:tag).motivatedBy.first.rdf_subject.to_s.should match RDF::OpenAnnotation.to_uri.to_s
       end
 
+      it "assigns targetURL as a full SearchWorks url" do
+        post :create, {:tag => {:hasTarget => {:id =>"666"}}}, valid_session
+        assigns(:tag).hasTarget.first.rdf_subject.to_s.should match Constants::CONTACT_INFO[:website][:url]
+        assigns(:tag).hasTarget.first.rdf_subject.to_s.should match "http://searchworks.stanford.edu/view/666"
+      end
+
       it "redirects to the created tag" do
         pending "not sure that this will be relevant"
         post :create, {:tag => valid_attributes}, valid_session

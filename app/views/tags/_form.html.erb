@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label 'Target' %><nbsp/><nbsp/>
-    <%= f.text_field :hasTarget %>
+    <%= f.label 'Target (SW Doc ID):' %><nbsp/><nbsp/>
+    <%#= TODO: it should be possible to have multiple targets %>
+    <%= f.fields_for(:hasTarget) do |target| %>
+      <%= target.text_field :id %>
+    <% end %>
+    <small>(will eventually autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.)</small>
   </div>
 
   <div class="field">
-    <%= f.label 'Motivation' %><nbsp/><nbsp/>
+    <%= f.label 'Motivation:' %><nbsp/><nbsp/>
 	<%= f.select :motivatedBy, options_for_select(oa_motivations), {:prompt => "Please select"} %>
   </div>
 

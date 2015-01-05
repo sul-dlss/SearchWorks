@@ -24,11 +24,13 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.motivatedBy << RDF::URI.new(RDF::OpenAnnotation.to_uri.to_s + tag_params["motivatedBy"]) if tag_params["motivatedBy"]
-    # TODO: target should be presupplied as the searchworks url for the resource getting tagged - a URL
-    @tag.hasTarget << tag_params["hasTarget"]
+    # TODO: target will autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.
+    # TODO: it should be possible to have multiple targets
+    @tag.hasTarget << RDF::URI.new(Constants::CONTACT_INFO[:website][:url] + "/view/" + tag_params["hasTarget"]["id"]) if tag_params["hasTarget"]
     # TODO: body should be turned into appropriate text as blank node stuff
     @tag.hasBody << tag_params["hasBody"]
     @tag.annotatedAt << DateTime.now
+    # TODO: annotatedBy - from WebAuth
 
     respond_to do |format|
       if @tag.save
