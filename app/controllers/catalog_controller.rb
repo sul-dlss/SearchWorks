@@ -333,7 +333,7 @@ class CatalogController < ApplicationController
 
       respond_to do |format|
         format.html { redirect_to catalog_path(params['id']) }
-        format.js { render 'email_sent' }
+        format.js { render 'email_success' }
       end and return
     end
 
