@@ -81,4 +81,8 @@ protected
     g
   end
   
+  def conn
+    @c ||= Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+  end
+  
 end

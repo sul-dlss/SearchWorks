@@ -115,6 +115,11 @@ describe Tag do
     end
   end
   
+  it "conn goes to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
+    tag = Tag.new({})
+    expect(tag.send(:conn).url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
+  end
+  
   context '#save' do
     
     before(:each) do
