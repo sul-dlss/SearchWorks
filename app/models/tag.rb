@@ -4,7 +4,8 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
   ActiveTriples::Repositories.add_repository :tags, RDF::Repository.new
   configure :repository => :tags
   
-  validates :motivatedBy, presence: true
+  validates :motivatedBy, length: {minimum: 1}
+  validates :hasTarget, length: {minimum: 1}
   
   # override for class_name declaration
   property :hasBody, :predicate => RDFVocabularies::OA.hasBody, :class_name => TagTextBody
@@ -39,20 +40,9 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
   
   # WRITE_COMMENTS_FOR_THIS_METHOD
   def save
-=begin
-    # add body graphs to main graph when they have content
-    self.hasBody.find_all { |body| body.content.size > 0 && body.content.first.size > 0 }.each { |body_w_chars|
-      body_w_chars.each { |stmt|
-        self << stmt
-      }
-    }
-    # at this point, hasBody  becomes empty from the above ... why???
-
-#    self.reload  # will this work?
-=end
-    puts self.to_ttl
-#    puts self.to_jsonld
-    p "TODO: Send anno to Triannon here! (Tag.save)"
+    puts anno_graph.to_ttl
+#    puts anno_graph.to_jsonld
+    p "TODO: Send anno_graph to Triannon here! (Tag.save)"
     true
   end
   
@@ -61,4 +51,23 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
     p "TODO:  retrieve appropriate tags from Triannon here (Tag.all)"
     []
   end
+  
+protected
+  
+  # @return [RDF::Graph] a graph containing all relevant statements for storing this
+  # object as an OpenAnnotation (e.g. including triples for body nodes) 
+  def anno_graph
+    g = RDF::Graph.new
+    self.each_statement { |stmt| 
+      g << stmt
+    } 
+    # add body graphs to main graph when they have content
+    self.hasBody.find_all { |body| body.content.size > 0 && body.content.first.size > 0 }.each { |body_w_chars|
+      body_w_chars.each_statement { |stmt|
+        g << stmt
+      }
+    }
+    g
+  end
+  
 end

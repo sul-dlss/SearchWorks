@@ -75,6 +75,45 @@ describe Tag do
     end
   end
   
+  context '#anno_graph' do
+    before(:each) do
+      @tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
+    end
+    it "contains all triples in the Tag object" do
+      anno_graph = @tag.send(:anno_graph)
+      @tag.each_statement { |s|
+        expect(anno_graph.query(s).size).to be > 0
+      }
+    end
+    it 'contains all triples from the body object' do
+      anno_graph = @tag.send(:anno_graph)
+      @tag.hasBody.first.each_statement { |s|
+        expect(anno_graph.query(s).size).to be > 0
+      }
+    end
+    context 'no hasBody statement when' do
+      it 'hasBody id is empty String' do
+        tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => ""}})
+        anno_graph = tag.send(:anno_graph)
+        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+      end
+      it 'hasBody id is nil' do
+        tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => nil}})
+        anno_graph = tag.send(:anno_graph)
+        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+      end
+      it 'no hasBody id param' do
+        tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {}})
+        anno_graph = tag.send(:anno_graph)
+        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+      end
+      it 'no hasBody param' do
+        tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}})
+        anno_graph = tag.send(:anno_graph)
+        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+      end
+    end
+  end
   
   context '#save' do
     
@@ -86,13 +125,6 @@ describe Tag do
       pending "test to be implemented"
     end
     
-    it 'adds the triples from the hasBody objects to the Tag graph' do
-      pending "test to be implemented"
-    end
-    
-    it 'graph does not contain a hasBody statement when the only body is a TagTextBody with an empty string' do
-      pending "test to be implemented"
-    end
   end # save
   
   context '#find_all' do
