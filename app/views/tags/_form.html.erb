@@ -21,13 +21,17 @@
   </div>
 
   <div class="field">
+    <%#= TODO: it should be possible to have multiple motivations %>
     <%= f.label 'Motivation:' %><nbsp/><nbsp/>
 	<%= f.select :motivatedBy, options_for_select(oa_motivations), {:prompt => "Please select"} %>
   </div>
 
   <div class="field">
-    <%= f.label 'Text Body' %><br>
-    <%= f.text_area :hasBody, size: "60x5" %>
+    <%= f.label 'Body (text only):' %><br>
+    <%#= TODO: it should be possible to have multiple bodies %>
+    <%= f.fields_for(:hasBody) do |body| %>
+      <%= body.text_area :id, size: "60x5" %>
+    <% end %>
   </div>
   
   <div class="actions">

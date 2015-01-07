@@ -63,31 +63,10 @@ describe TagsController do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new Tag" do
-        pending "not sure that this will be relevant"
-        expect {
-          post :create, {:tag => valid_attributes}, valid_session
-        }.to change(Tag, :count).by(1)
-      end
-
       it "assigns a newly created tag as @tag" do
         post :create, {:tag => valid_attributes}, valid_session
         assigns(:tag).should be_a(Tag)
-        pending "not sure that this will be relevant"
-        assigns(:tag).should be_persisted
       end
-      
-      it "assigns motivatedBy as full url (with OA url prefix)" do
-        post :create, {:tag => {:motivatedBy => "tagging"}}, valid_session
-        assigns(:tag).motivatedBy.first.rdf_subject.to_s.should match RDF::OpenAnnotation.to_uri.to_s
-      end
-
-      it "assigns targetURL as a full SearchWorks url" do
-        post :create, {:tag => {:hasTarget => {:id =>"666"}}}, valid_session
-        assigns(:tag).hasTarget.first.rdf_subject.to_s.should match Constants::CONTACT_INFO[:website][:url]
-        assigns(:tag).hasTarget.first.rdf_subject.to_s.should match "http://searchworks.stanford.edu/view/666"
-      end
-
       it "redirects to the created tag" do
         pending "not sure that this will be relevant"
         post :create, {:tag => valid_attributes}, valid_session

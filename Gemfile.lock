@@ -42,8 +42,7 @@ GIT
 
 GIT
   remote: git@github.com:ld4l/open_annotation_rdf.git
-  revision: 16eb6d4c0a1518a1dc71156ce48220cee54ad56a
-  branch: for-rails
+  revision: 2e59b0da9a9189b66539457981918aa390a95e26
   specs:
     ld4l-open_annotation_rdf (0.0.3)
       active_triples-local_name (~> 0.1)
@@ -193,7 +192,7 @@ GEM
       json (~> 1.8)
       rainbow (~> 2.0)
     htmlentities (4.3.2)
-    i18n (0.6.11)
+    i18n (0.7.0)
     iso-639 (0.2.5)
     jbuilder (2.1.3)
       activesupport (>= 3.0.0, < 5)

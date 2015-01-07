@@ -16,21 +16,13 @@ class TagsController < ApplicationController
 
   # GET /tags/new
   def new
-    @tag = Tag.new
+    @tag = Tag.new({})
   end
 
   # POST /tags
   # POST /tags.json
   def create
     @tag = Tag.new(tag_params)
-    @tag.motivatedBy << RDF::URI.new(RDF::OpenAnnotation.to_uri.to_s + tag_params["motivatedBy"]) if tag_params["motivatedBy"]
-    # TODO: target will autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.
-    # TODO: it should be possible to have multiple targets
-    @tag.hasTarget << RDF::URI.new(Constants::CONTACT_INFO[:website][:url] + "/view/" + tag_params["hasTarget"]["id"]) if tag_params["hasTarget"]
-    # TODO: body should be turned into appropriate text as blank node stuff
-    @tag.hasBody << tag_params["hasBody"]
-    @tag.annotatedAt << DateTime.now
-    # TODO: annotatedBy - from WebAuth
 
     respond_to do |format|
       if @tag.save
