@@ -32,22 +32,6 @@ GIT
     openseadragon (0.0.5)
       rails (> 3.2.0)
 
-GIT
-  remote: git@github.com:ld4l/foaf_rdf.git
-  revision: ba2a2a83a205e6047f63248f4e3daabb121cb9d3
-  specs:
-    ld4l-foaf_rdf (0.0.2)
-      active_triples-local_name (~> 0.1)
-      rdf (~> 1.1)
-
-GIT
-  remote: git@github.com:ld4l/open_annotation_rdf.git
-  revision: 2e59b0da9a9189b66539457981918aa390a95e26
-  specs:
-    ld4l-open_annotation_rdf (0.0.3)
-      active_triples-local_name (~> 0.1)
-      rdf (~> 1.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,6 +198,13 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    ld4l-foaf_rdf (0.0.4)
+      active_triples-local_name (~> 0.1)
+      rdf (~> 1.1)
+    ld4l-open_annotation_rdf (0.0.6)
+      active_triples-local_name (~> 0.1)
+      ld4l-foaf_rdf (~> 0.0)
+      rdf (~> 1.1)
     libv8 (3.16.14.3)
     link_header (0.0.8)
     linkeddata (1.1.2)
@@ -483,8 +474,8 @@ DEPENDENCIES
   jettywrapper (~> 1.7)
   jquery-datatables-rails (~> 2.2.1)
   jquery-rails
-  ld4l-foaf_rdf!
-  ld4l-open_annotation_rdf!
+  ld4l-foaf_rdf
+  ld4l-open_annotation_rdf
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)
   mysql
