@@ -474,7 +474,6 @@ DEPENDENCIES
   jettywrapper (~> 1.7)
   jquery-datatables-rails (~> 2.2.1)
   jquery-rails
-  ld4l-foaf_rdf
   ld4l-open_annotation_rdf
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)
