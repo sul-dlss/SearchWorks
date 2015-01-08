@@ -124,6 +124,7 @@ describe Tag do
       @tag.save
     end
     it "returns true if anno_store returns id" do
+      allow(@tag).to receive(:post_anno_graph_to_storage).and_return("666")
       expect(@tag.save).to be_true
     end
     it "returns false if anno_store doesn't return id" do
@@ -132,10 +133,9 @@ describe Tag do
     end
     it "sets triannon_id attribute" do
       expect(@tag.triannon_id).to be_nil
+      allow(@tag).to receive(:post_anno_graph_to_storage).and_return("666")
       @tag.save
-      tid = @tag.triannon_id
-      expect(tid).to be_a String
-      expect(tid.length).to be > 5
+      expect(@tag.triannon_id).to eq "666"
     end
   end
   
@@ -161,10 +161,13 @@ describe Tag do
       expect(@tag.send(:conn)).to receive(:post).and_return(resp)
       @tag.send(:post_anno_graph_to_storage)
     end 
-    it "returns the storage id of a newly created anno" do
+    it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
+      resp = double("resp")
+      expect(resp).to receive(:status).and_return(201)
+      expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}/new_id"}).twice
+      expect(@tag.send(:conn)).to receive(:post).and_return(resp)
       id = @tag.send(:post_anno_graph_to_storage)
-      expect(id).to be_a String
-      expect(id.size).to be > 5
+      expect(id).to eq "new_id"
     end
     it "returns nil if there was an error" do
       expect(@tag.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
