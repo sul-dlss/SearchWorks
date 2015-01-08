@@ -64,6 +64,12 @@ describe TagsController do
   describe "POST create" do
     describe "with valid params" do
       it "assigns a newly created tag as @tag" do
+        resp = double("resp")
+        allow(resp).to receive(:status).and_return(201)
+        allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
+        conn = double("conn")
+        allow(conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Tag).to receive(:conn).and_return(conn)
         post :create, {:tag => valid_attributes}, valid_session
         assigns(:tag).should be_a(Tag)
       end
