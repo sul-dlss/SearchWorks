@@ -73,6 +73,49 @@ describe TagsController do
         post :create, {:tag => valid_attributes}, valid_session
         assigns(:tag).should be_a(Tag)
       end
+      it 'returns status 201 if tag is successfully created' do
+        resp = double("resp")
+        allow(resp).to receive(:status).and_return(201)
+        allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
+        conn = double("conn")
+        allow(conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Tag).to receive(:conn).and_return(conn)
+        post :create, {:tag => valid_attributes}, valid_session
+        assigns(:tag)
+        expect(response.status).to eq 201
+      end
+      it "sends a flash message if successfully created" do
+        resp = double("resp")
+        allow(resp).to receive(:status).and_return(201)
+        allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
+        conn = double("conn")
+        allow(conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Tag).to receive(:conn).and_return(conn)
+        post :create, {:tag => valid_attributes}, valid_session
+        assigns(:tag)
+        expect(flash[:notice]).to eq 'Tag was successfully created.'
+      end
+      it "returns status 500 if tag isn't successfully created" do
+        resp = double("resp")
+        allow(resp).to receive(:status).and_return(403)
+        conn = double("conn")
+        allow(conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Tag).to receive(:conn).and_return(conn)
+        post :create, {:tag => valid_attributes}, valid_session
+        assigns(:tag)
+        expect(response.status).to eq 500
+      end
+      it "sends a flash message if problem creating tag" do
+        resp = double("resp")
+        allow(resp).to receive(:status).and_return(403)
+        conn = double("conn")
+        allow(conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Tag).to receive(:conn).and_return(conn)
+        post :create, {:tag => valid_attributes}, valid_session
+        assigns(:tag)
+        expect(flash[:alert]).to eq 'There was a problem creating the Tag.'
+      end
+      
       it "redirects to the created tag" do
         pending "not sure that this will be relevant"
         post :create, {:tag => valid_attributes}, valid_session

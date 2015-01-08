@@ -26,11 +26,12 @@ class TagsController < ApplicationController
 
     respond_to do |format|
       if @tag.save
-        format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
+        format.html { redirect_to @tag, status: :created, notice: 'Tag was successfully created.' }
         format.json { render :show, status: :created, location: @tag }
       else
-        format.html { render :new }
-        format.json { render json: @tag.errors, status: :unprocessable_entity }
+        flash[:alert] = 'There was a problem creating the Tag.'
+        format.html { render :new, status: 500 }
+        format.json { render json: @tag.errors, status: 500 }
       end
     end
   end
