@@ -145,9 +145,11 @@ describe Tag do
     end
   end
   
-  it "conn goes to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
+  it "#conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
     tag = Tag.new({})
-    expect(tag.send(:conn).url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
+    conn = tag.send(:conn)
+    expect(conn).to be_a Faraday::Connection
+    expect(conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
   end
   
   context '#post_anno_graph_to_storage' do
