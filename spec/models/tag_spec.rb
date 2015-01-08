@@ -115,26 +115,60 @@ describe Tag do
     end
   end
   
+  context '#save' do
+    before(:each) do
+      @tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
+    end
+    it "calls post_anno_graph_to_storage" do
+      expect(@tag).to receive(:post_anno_graph_to_storage)
+      @tag.save
+    end
+    it "returns true if anno_store returns id" do
+      expect(@tag.save).to be_true
+    end
+    it "returns false if anno_store doesn't return id" do
+      allow(@tag.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
+      expect(@tag.save).to be_false
+    end
+    it "sets triannon_id attribute" do
+      expect(@tag.triannon_id).to be_nil
+      @tag.save
+      tid = @tag.triannon_id
+      expect(tid).to be_a String
+      expect(tid.length).to be > 5
+    end
+  end
+  
+  context '#find_all' do
+    it 'does something' do
+      pending "test to be implemented"
+    end
+  end
+  
   it "conn goes to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
     tag = Tag.new({})
     expect(tag.send(:conn).url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
   end
   
-  context '#save' do
-    
+  context '#post_anno_graph_to_storage' do
     before(:each) do
       @tag = Tag.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
-    
-    it 'POST ttl to Triannon app' do
-      pending "test to be implemented"
+    it 'sends POST to conn, looks for 201 status and Location header' do
+      resp = double("resp")
+      expect(resp).to receive(:status).and_return(201)
+      expect(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
+      expect(@tag.send(:conn)).to receive(:post).and_return(resp)
+      @tag.send(:post_anno_graph_to_storage)
+    end 
+    it "returns the storage id of a newly created anno" do
+      id = @tag.send(:post_anno_graph_to_storage)
+      expect(id).to be_a String
+      expect(id.size).to be > 5
     end
-    
-  end # save
-  
-  context '#find_all' do
-    it 'does something' do
-      pending "test to be implemented"
+    it "returns nil if there was an error" do
+      expect(@tag.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
+      expect(@tag.send(:post_anno_graph_to_storage)).to be_nil
     end
   end
   

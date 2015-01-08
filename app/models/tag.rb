@@ -21,6 +21,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
   # override for class_name declaration
   property :hasBody, :predicate => RDFVocabularies::OA.hasBody, :class_name => TagTextBody
 
+  attr_accessor :triannon_id
 
   # Set up Tag based on passed params
   # @param Hash tag_params params from TagController
@@ -49,12 +50,15 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
     annotatedAt << DateTime.now
   end
   
-  # WRITE_COMMENTS_FOR_THIS_METHOD
+  # send the Tag as an OpenAnnotation to the OA Storage
   def save
-    puts anno_graph.to_ttl
-#    puts anno_graph.to_jsonld
-    p "TODO: Send anno_graph to Triannon here! (Tag.save)"
-    true
+#    puts anno_graph.to_ttl
+    @triannon_id = post_anno_graph_to_storage
+    if @triannon_id
+      true
+    else
+      false
+    end
   end
   
   # WRITE_COMMENTS_FOR_THIS_METHOD
@@ -79,6 +83,20 @@ protected
       }
     }
     g
+  end
+  
+  # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
+  # @return [String] unique id of newly created anno, or nil if there was a problem
+  def post_anno_graph_to_storage
+    response = conn.post do |req|
+      req.headers['Content-Type'] = 'application/x-turtle'
+      req.body = anno_graph.to_ttl
+    end
+    if response.status == 201
+      new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
+      return new_url.split('/').last if new_url
+    end
+    return nil
   end
   
   def conn
