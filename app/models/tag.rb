@@ -6,12 +6,15 @@ require 'ld4l/open_annotation_rdf'
 # which utilize ActiveTriples (https://github.com/ActiveTriples/ActiveTriples).
 # ActiveTriples is an ActiveModel-like interface for RDF data.
 # Note that there is *no local storage* of Tags -- data is actually stored
-# in our Triannon server, which is backed by Fedora4.  The triple store in scope
-# for this model is a simple in-memory RDF Repository;  this allows us to easily
-# work with linked data as objects in this Rails context, but the actual data store
-# is external.
+# in our Triannon (https://github.com/sul-dlss/triannon) server, which is backed by Fedora4.  
+# 
+# The triple store in scope for *this* Tag model is a simple in-memory RDF Repository;  
+# this allows us to easily work with linked data as objects in this Rails context, 
+# while the actual data store is external.
 class Tag < LD4L::OpenAnnotationRDF::Annotation
   # FIXME:  one repo per tag object, or one repo for all tag objects?
+
+  # ***FIXME***:  terrellt (Trey Terrell from OSU) suggests this should be "in an initializer or something, probably."
   ActiveTriples::Repositories.add_repository :tags, RDF::Repository.new
   configure :repository => :tags
   
@@ -60,13 +63,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
       false
     end
   end
-  
-  # WRITE_COMMENTS_FOR_THIS_METHOD
-  def self.all
-    p "TODO:  retrieve appropriate tags from Triannon here (Tag.all)"
-    []
-  end
-  
+
 protected
   
   # @return [RDF::Graph] a graph containing all relevant statements for storing this
@@ -99,8 +96,12 @@ protected
     return nil
   end
   
-  def conn
-    @c ||= Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+  def self.conn
+    Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+  end
+
+  def conn    
+    @c ||= self.class.conn
   end
   
 end

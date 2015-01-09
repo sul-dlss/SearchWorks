@@ -10,8 +10,7 @@ describe Tag do
     context 'motivatedBy' do
       it "full url (with OA url prefix)" do
         t = Tag.new({"motivatedBy" => "tagging"})
-        t.motivatedBy.first.rdf_subject.to_s.should match RDF::OpenAnnotation.to_uri.to_s
-        t.motivatedBy.first.rdf_subject.to_s.should match /tagging$/
+        t.motivatedBy.first.should eq RDF::OpenAnnotation.tagging
       end
     end
     context 'hasTarget' do
@@ -138,12 +137,8 @@ describe Tag do
       expect(@tag.triannon_id).to eq "666"
     end
   end
-  
-  context '#find_all' do
-    it 'does something' do
-      pending "test to be implemented"
-    end
-  end
+    
+# Protected Methods ----------------------------------------------------------------
   
   it "#conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
     tag = Tag.new({})
