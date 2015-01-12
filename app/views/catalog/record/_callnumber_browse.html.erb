@@ -20,7 +20,7 @@
   </div>
 
   <% document.holdings.browsable_callnumbers.each_with_index do |callnumber, index| %>
-    <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container">
+    <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container" style="<%= 'display:none;' unless index == 0 %>">
       <div class="embedded-items"><div class="gallery"></div></div>
       <a class="left embed-browse-control" href="#" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
