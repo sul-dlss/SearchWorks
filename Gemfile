@@ -97,6 +97,5 @@ gem 'whenever', require: false
 
 # Tagging Implementation
 gem 'ld4l-open_annotation_rdf'
-gem 'active-triples' # FIXME:  this should be part of ld4l-open_annotation_rdf Gemfile!
-gem 'rdf-open_annotation'  # full OA vocab
+gem 'rdf-open_annotation'  # full OA vocab for RDF predefined terms and properties
 gem 'pry-byebug', group: [:development, :test]
