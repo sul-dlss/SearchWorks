@@ -2,10 +2,70 @@ require 'spec_helper'
 
 describe Tag do
 
-  it 'has repository set to :tags' do
-    expect(Tag.repository).to be :tags
+  # we used to use :tag repo;  this test may be silly now
+  it 'has repository set to :default' do
+    expect(Tag.repository).to be :default
   end
   
+# Class Methods ----------------------------------------------------------------
+  
+  context '*triannon_id_from_anno_graph' do
+    it "returns unique part of triannon url for Triannon OA::Annotation" do
+      tid = "aaa"
+      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
+      expect(Tag.triannon_id_from_anno_graph(g)).to eq tid
+    end
+    it "returns full url for OA::Annotation that isn't from Triannon storage" do
+      tid = "aaa"
+      g = RDF::Graph.new.from_ttl("<http://my_anno_url/#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
+      expect(Tag.triannon_id_from_anno_graph(g)).to eq "http://my_anno_url/#{tid}"
+    end
+    it "nil for Triannon url that isn't OA::Annotation" do
+      tid = "aaa"
+      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://foo.org/thing> .")
+      expect(Tag.triannon_id_from_anno_graph(g)).to be_nil
+    end
+    it "nil when graph is empty" do
+      solutions = RDF::Graph.new.query Tag.anno_query
+      expect(solutions.size).to eq 0
+    end
+  end
+
+  context '*triannon_id_from_triannon_url' do
+    it "returns the part of the url after the OA storage config setting" do
+      exp_id = "aaa"
+      expect(Tag.triannon_id_from_triannon_url("#{Settings.OPEN_ANNOTATION_STORE_URL}#{exp_id}")).to eq exp_id
+    end
+    it "returns whole url if it doesn't match OA storage config setting" do
+      url = "http://my_anno_url"
+      expect(Tag.triannon_id_from_triannon_url(url)).to eq url
+    end
+    it "nil if url is nil" do
+      expect(Tag.triannon_id_from_triannon_url(nil)).to eq nil
+    end
+  end
+  
+  context '*anno_query' do
+    it "finds solution when graph has RDF.type OA::Annotation" do
+      my_url = "http://fakeurl.org/id"
+      g = RDF::Graph.new.from_ttl("<#{my_url}> a <http://www.w3.org/ns/oa#Annotation> .")
+      solutions = g.query Tag.anno_query
+      expect(solutions.size).to eq 1
+      expect(solutions.first.s.to_s).to eq my_url
+    end
+    it "doesn't find solution when graph has no RDF.type OA::Annotation" do
+      g = RDF::Graph.new.from_ttl("<http://anywehre.com> a <http://foo.org/thing> .")
+      solutions = g.query Tag.anno_query
+      expect(solutions.size).to eq 0
+    end
+    it "doesn't find solution when graph is empty" do
+      solutions = RDF::Graph.new.query Tag.anno_query
+      expect(solutions.size).to eq 0
+    end
+  end
+
+# Instance Methods ----------------------------------------------------------------
+
   context '#initialize' do
     context 'motivatedBy' do
       it "full url (with OA url prefix)" do
@@ -161,7 +221,7 @@ describe Tag do
     it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
-      expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}/new_id"}).twice
+      expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}new_id"}).twice
       expect(@tag.send(:conn)).to receive(:post).and_return(resp)
       id = @tag.send(:post_anno_graph_to_storage)
       expect(id).to eq "new_id"
