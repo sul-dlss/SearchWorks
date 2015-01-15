@@ -8,6 +8,100 @@ describe Tag do
   end
   
 # Class Methods ----------------------------------------------------------------
+
+  context '*model_from_graph' do
+    context 'tag' do
+      before(:each) do
+        ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
+                 <http://www.w3.org/ns/oa#hasBody> [
+                   a <http://purl.org/dc/dcmitype/Text>,
+                     <http://www.w3.org/2011/content#ContentAsText>,
+                     <http://www.w3.org/ns/oa#Tag>;
+                   <http://www.w3.org/2011/content#chars> "blue"
+                 ];
+                 <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
+                 <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .'
+        @tag_anno = Tag.model_from_graph RDF::Graph.new.from_ttl ttl
+      end
+      it "LD4L::OpenAnnotationRDF::TagAnnotation and its properties" do
+        expect(@tag_anno).to be_a LD4L::OpenAnnotationRDF::TagAnnotation
+        expect(@tag_anno.type).to eq [RDF::OpenAnnotation.Annotation]
+        expect(@tag_anno.motivatedBy).to eq [RDF::OpenAnnotation.tagging]
+        expect(@tag_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
+      end
+      it "populates Tag bodies properly" do
+        body = @tag_anno.hasBody.first
+        expect(body).to be_a LD4L::OpenAnnotationRDF::TagBody
+        expect(body.tag.first).to eq "blue"
+        expect(body.type).to include RDF::OpenAnnotation.Tag
+        expect(body.type).to include RDF::Content.ContentAsText
+        expect(body.type).to include RDF::DCMIType.Text
+        expect(body.type.size).to eq 3
+        expect{body.format}.to raise_error(NoMethodError) # not in Tag model
+      end
+    end # tag
+    context 'comment' do
+      before(:each) do
+        ttl = '<https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3> a <http://www.w3.org/ns/oa#Annotation>;
+                 <http://www.w3.org/ns/oa#hasBody> [
+                   a <http://purl.org/dc/dcmitype/Text>,
+                     <http://www.w3.org/2011/content#ContentAsText>;
+                   <http://purl.org/dc/terms/format> "text/plain";
+                   <http://www.w3.org/2011/content#chars> "I am a comment!"
+                 ];
+                 <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
+                 <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#commenting> .'
+        @comment_anno = Tag.model_from_graph RDF::Graph.new.from_ttl ttl
+      end
+      it "LD4L::OpenAnnotationRDF::CommentAnnotation and its properties" do
+        expect(@comment_anno).to be_a LD4L::OpenAnnotationRDF::CommentAnnotation
+        expect(@comment_anno.type).to eq [RDF::OpenAnnotation.Annotation]
+        expect(@comment_anno.motivatedBy).to eq [RDF::OpenAnnotation.commenting]
+        expect(@comment_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
+      end
+      it "populates Comment bodies properly" do
+        body = @comment_anno.hasBody.first
+        expect(body).to be_a LD4L::OpenAnnotationRDF::CommentBody
+        expect(body.content.first).to eq "I am a comment!"
+        expect(body.format).to eq ["text/plain"]
+        expect(body.type).to include RDF::Content.ContentAsText
+        expect(body.type).to include RDF::DCMIType.Text
+        expect(body.type).not_to include RDF::OpenAnnotation.Tag
+        expect(body.type.size).to eq 2
+      end
+    end # comment
+    context 'semantic tag' do
+      before(:each) do
+        ttl = '<https://triannon-dev.stanford.edu/annotations/e8b3ecdc-d8da-4b85-944d-65d800493bce> a <http://www.w3.org/ns/oa#Annotation>;
+                 <http://www.w3.org/ns/oa#hasBody> <http://dbpedia.org/resource/Love>;
+                 <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
+                 <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .
+
+              <http://dbpedia.org/resource/Love> a <http://www.w3.org/ns/oa#SemanticTag> .'
+        @sem_tag_anno = Tag.model_from_graph RDF::Graph.new.from_ttl ttl
+      end
+      it "LD4L::OpenAnnotationRDF::SemanticTagAnnotation and its properties" do
+        expect(@sem_tag_anno).to be_a LD4L::OpenAnnotationRDF::SemanticTagAnnotation
+        expect(@sem_tag_anno.type).to eq [RDF::OpenAnnotation.Annotation]
+        expect(@sem_tag_anno.motivatedBy).to eq [RDF::OpenAnnotation.tagging]
+        expect(@sem_tag_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
+      end
+      it "populates SemanticTag bodies properly" do
+        body = @sem_tag_anno.hasBody.first
+        expect(body).to be_a LD4L::OpenAnnotationRDF::SemanticTagBody
+        expect(body.rdf_subject).to eq RDF::URI.new "http://dbpedia.org/resource/Love"
+        expect(body.type).to eq [RDF::OpenAnnotation.SemanticTag]
+        expect(body.type).not_to include(RDF::OpenAnnotation.Tag)
+        expect(body.type).not_to include(RDF::Content.ContentAsText)
+      end
+    end # semantic tag
+
+    it "LD4L::OpenAnnotationRDF::Annotation when graph has right type" do
+      ttl = '<https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3> a <http://www.w3.org/ns/oa#Annotation> .'
+      result = Tag.model_from_graph RDF::Graph.new.from_ttl ttl
+      expect(result).to be_a LD4L::OpenAnnotationRDF::Annotation
+    end
+  end # *model_from_graph
   
   context '*triannon_id_from_anno_graph' do
     it "returns unique part of triannon url for Triannon OA::Annotation" do
@@ -95,10 +189,10 @@ describe Tag do
       end
     end # hasTarget
     context 'hasBody' do
-      it "is a populated TagTextBody object" do
+      it "is a populated CommentBody object" do
         t = Tag.new({"hasBody" => {"id" =>"blah blah"}})
         body_obj = t.hasBody.first
-        expect(body_obj).to be_a TagTextBody
+        expect(body_obj).to be_a LD4L::OpenAnnotationRDF::CommentBody
         expect(body_obj.content.first).to eq "blah blah"
         expect(body_obj.format.first).to eq "text/plain"
       end

@@ -9,8 +9,13 @@ require 'ld4l/open_annotation_rdf'
 # in our Triannon (https://github.com/sul-dlss/triannon) server, which is backed by Fedora4.  
 # 
 # The triple store in scope for *this* Tag model is a simple in-memory RDF Repository;  
-# this allows us to easily work with linked data as objects in this Rails context, 
+#  (see config/initializers/rdf_repositories.rb)
+# This allows us to easily work with linked data as objects in this Rails context, 
 # while the actual data store is external.
+#
+# This model exists so our anno objects can get from and send to Triannon, and
+#  possibly for validations of annos before they are written to Triannon.  Otherwise, the specific
+#  ActiveTriples models above would be more appropriate.
 class Tag < LD4L::OpenAnnotationRDF::Annotation
   
   # FIXME: this will allow blank nodes???
@@ -23,7 +28,59 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
 
   # Class Methods ----------------------------------------------------------------
   
- 
+  # --- below this line sort of "protected" or "private" class methods
+  
+  # @param <RDF::Graph> an annotation as a Graph
+  # @return <LD4L::OpenAnnotationRDF::Annotation> but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
+  def self.model_from_graph(anno_graph)
+    if anno_graph && anno_graph.size > 0
+      r = ActiveTriples::Repositories.repositories[Tag.repository]
+      r << anno_graph
+      tid = triannon_id_from_anno_graph anno_graph
+      anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
+#      anno = Tag.new(anno_uri) << anno_graph
+#      anno.triannon_id = tid
+      anno_model = LD4L::OpenAnnotationRDF::Annotation.resume(anno_uri)
+    end
+  end
+
+  # @return ttl for annotation, as a String
+  def self.stored_oa_ttl(id)
+    resp = conn.get do |req|
+      req.url id
+      req.headers['Accept'] = 'application/x-turtle'
+    end
+    resp.body
+  end
+  
+  # given a url, return the unique portion of it as the triannon_id
+  # @return <String> triannon id - the unique path at the end of the url
+  def self.triannon_id_from_triannon_url url
+    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
+  end
+  
+  # @param <RDF::Graph> an annotation as a Graph
+  # @return <String> triannon id for the annotation (the unique path at the end of the url)
+  def self.triannon_id_from_anno_graph anno_graph
+    solutions = anno_graph.query self.anno_query
+    if solutions && solutions.size == 1
+      return triannon_id_from_triannon_url(solutions.first.s.to_s)
+    end
+    nil
+  end
+  
+  # query for a subject with type of RDF::OpenAnnotation.Annotation
+  def self.anno_query
+    @anno_query ||= begin
+      q = RDF::Query.new
+      q << [:s, RDF.type, RDF::URI("http://www.w3.org/ns/oa#Annotation")]
+    end
+  end
+  
+  def self.conn
+    Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+  end
+
   # Instance Methods ----------------------------------------------------------------
 
   # If first param is a Hash, then assume it is params from TagController - 
@@ -48,7 +105,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
 
       # TODO: it should be possible to have multiple bodies
       if tag_params["hasBody"] && !tag_params["hasBody"]["id"].blank?
-        body = TagTextBody.new
+        body = LD4L::OpenAnnotationRDF::CommentBody.new
         body.content = tag_params["hasBody"]["id"]
         body.format = "text/plain"
         hasBody << body
@@ -104,34 +161,6 @@ protected
     return nil
   end
   
-  # given a url, return the unique portion of it as the triannon_id
-  # @return <String> triannon id - the unique path at the end of the url
-  def self.triannon_id_from_triannon_url url
-    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
-  end
-  
-  # @param <RDF::Graph> an annotation as a Graph
-  # @return <String> triannon id for the annotation (the unique path at the end of the url)
-  def self.triannon_id_from_anno_graph anno_graph
-    solutions = anno_graph.query self.anno_query
-    if solutions && solutions.size == 1
-      return triannon_id_from_triannon_url(solutions.first.s.to_s)
-    end
-    nil
-  end
-  
-  # query for a subject with type of RDF::OpenAnnotation.Annotation
-  def self.anno_query
-    @anno_query ||= begin
-      q = RDF::Query.new
-      q << [:s, RDF.type, RDF::URI("http://www.w3.org/ns/oa#Annotation")]
-    end
-  end
-  
-  def self.conn
-    Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
-  end
-
   def conn    
     @c ||= self.class.conn
   end
