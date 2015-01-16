@@ -28,6 +28,22 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
 
   # Class Methods ----------------------------------------------------------------
   
+  # @param <String> the URI for the tar
+  # @return <Array<LD4L::OpenAnnotationRDF::Annotation>> an array of specifically typed objects 
+  # (e.g.  TagAnnotation, CommmentAnnotation) loaded from the RDF::Graph data stored by Triannon
+  def self.find_by_target_uri(target_uri)
+    result = []
+    # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
+    #  we would really get back a list of annos as ttl ...
+    tid = target_uri
+    g = RDF::Graph.new.from_ttl stored_oa_ttl(tid)
+#    anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
+#    t = Tag.new(anno_uri) << g  # FIXME:  need to instantiate the specific ActiveTriples model instead!
+#    t.triannon_id = triannon_id_from_anno_graph(g)
+    result << Tag.model_from_graph(g)
+    result
+  end
+  
   # --- below this line sort of "protected" or "private" class methods
   
   # @param <RDF::Graph> an annotation as a Graph

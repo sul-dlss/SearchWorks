@@ -9,6 +9,23 @@ describe Tag do
   
 # Class Methods ----------------------------------------------------------------
 
+  context '*find_by_target_uri' do
+    it "returns Array of LD4L::OpenAnnotationRDF::Annotation objects" do
+      # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
+      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
+      result = Tag.find_by_target_uri tid
+      expect(result).to be_a Array
+      expect(result.size).to eq 1
+      expect(result.first).to be_a LD4L::OpenAnnotationRDF::Annotation
+    end
+    it "calls model_from_graph to populate the specific object" do
+      expect(Tag).to receive(:model_from_graph)
+      # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
+      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
+      result = Tag.find_by_target_uri tid
+    end
+  end
+  
   context '*model_from_graph' do
     context 'tag' do
       before(:each) do
