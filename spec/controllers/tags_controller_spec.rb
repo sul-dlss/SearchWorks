@@ -43,14 +43,25 @@ describe TagsController do
   end
 
   describe "GET show" do
-    it 'does something' do
-      pending "need to implement show action"
-    end
     it "assigns the requested tag as @tag" do
-      pending "not sure that this will be relevant"
-      tag = Tag.create valid_attributes
-      get :show, {:id => tag.to_param}, valid_session
-      assigns(:tag).should eq(tag)
+      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
+      ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
+               <http://www.w3.org/ns/oa#hasBody> [
+                 a <http://purl.org/dc/dcmitype/Text>,
+                   <http://www.w3.org/2011/content#ContentAsText>,
+                   <http://www.w3.org/ns/oa#Tag>;
+                 <http://purl.org/dc/terms/format> "text/plain";
+                 <http://www.w3.org/2011/content#chars> "blue"
+               ];
+               <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
+               <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .'
+      resp = double("resp")
+      expect(resp).to receive(:body).and_return(ttl)
+      conn = double("conn")
+      expect(conn).to receive(:get).and_return(resp)
+      expect(Tag).to receive(:conn).and_return(conn)
+      get :show, {:id => tid}, valid_session
+      assigns(:tag).should be_a LD4L::OpenAnnotationRDF::TagAnnotation
     end
   end
 
