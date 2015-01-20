@@ -1,4 +1,68 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Tag (from OpenAnnotation)</h1>
+<p>
+<strong>Tag id</strong>
+<%= link_to(@tag.id, @tag.id) %>
+</p>
+<p>
+<strong>Motivation:</strong>
+<%= @tag.motivatedBy.map{|m| link_to(m.to_s, m.to_s)}.join(", ").html_safe if @tag.motivatedBy %>
+<%#= @tag.motivatedBy %>
+</p>
+<p>
+<strong>Target:</strong>
+<%= @tag.hasTarget.map { | target_atresource | %>
+	<% target_url = target_atresource.send(:rdf_subject).to_s %>
+	<% link_to(target_url, target_url) }.join(", ").html_safe if @tag.hasTarget %>
+</p>
+<p>
+<strong>Annotated At:</strong>
+<%= @tag.annotatedAt if @tag.annotatedAt %>
+</p>
+
+<p>
+<strong>Model of Annotation:</strong>
+<%= @tag.class %>
+</p>
+
+
+<p>
+<strong>Body:</strong>
+	<% my_body = @tag.hasBody.first %>
+	<p>
+		model: <%= my_body.class %>
+	</p>
+	<p>
+		<% case  %>
+		<% when my_body.class == LD4L::OpenAnnotationRDF::CommentBody %>
+			content:  <%= my_body.content.first %>
+		</p>
+		<p>
+			format:  <%= my_body.format.first %>
+		<% when my_body.class == LD4L::OpenAnnotationRDF::TagBody %>
+			tag:  <%= my_body.tag.first %>
+		<% when my_body.class == LD4L::OpenAnnotationRDF::SemanticTagBody%>
+			semantic tag: <%= my_body.rdf_subject.to_s %>
+		<% else %>
+			not a recognized body type: <%= my_body.rdf_subject.to_s %>
+		<% end %>
+	</p>
+</p>
+
+
+<strong>Turtle:</strong>
+<pre>
+<%= @tag.dump(:ttl) %>
+<%= my_body.dump(:ttl) %>
+</pre>
+
+<strong>JSON-LD (OpenAnnotation context):</strong>
+<pre>
+<%= @tag.to_jsonld %>
+<%= my_body.to_jsonld %>
+</pre>
+
+
 <%#= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>

@@ -37,11 +37,8 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
     #  we would really get back a list of annos as ttl ...
     tid = target_uri
     g = RDF::Graph.new.from_ttl stored_oa_ttl(tid)
-#    anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
-#    t = Tag.new(anno_uri) << g  # FIXME:  need to instantiate the specific ActiveTriples model instead!
-#    t.triannon_id = triannon_id_from_anno_graph(g)
+    # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
     result << Tag.model_from_graph(g)
-    result
   end
   
   # --- below this line sort of "protected" or "private" class methods

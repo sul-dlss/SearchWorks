@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :set_tag, only: [:show]
+#  before_action :set_tag, only: [:show]
 
   # GET /tags
   # GET /tags.json
@@ -11,7 +11,8 @@ class TagsController < ApplicationController
   # GET /tags/1
   # GET /tags/1.json
   def show
-    # TODO:  need to implement show action
+    @tag = Tag.find_by_target_uri(params[:id]).first
+    # TODO:  need to render template based on model type
   end
 
   # GET /tags/new
@@ -38,9 +39,9 @@ class TagsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_tag
-      @tag = Tag.find(params[:id])
-    end
+#    def set_tag
+#      @tag = Tag.find(params[:id])
+#    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tag_params
