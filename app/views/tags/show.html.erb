@@ -2,13 +2,12 @@
 
 <h1>Tag (from OpenAnnotation)</h1>
 <p>
-<strong>Tag id</strong>
+<strong>Triannon Id</strong>
 <%= link_to(@tag.id, @tag.id) %>
 </p>
 <p>
 <strong>Motivation:</strong>
 <%= @tag.motivatedBy.map{|m| link_to(m.to_s, m.to_s)}.join(", ").html_safe if @tag.motivatedBy %>
-<%#= @tag.motivatedBy %>
 </p>
 <p>
 <strong>Target:</strong>
