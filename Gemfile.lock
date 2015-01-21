@@ -218,7 +218,7 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     rack (1.5.2)
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.8)
       actionmailer (= 4.1.8)
