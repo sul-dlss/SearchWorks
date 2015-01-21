@@ -51,8 +51,14 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
       r << anno_graph
       tid = triannon_id_from_anno_graph anno_graph
       anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
-#      anno = Tag.new(anno_uri) << anno_graph
-#      anno.triannon_id = tid
+      # remove extraneous statements from older versions of this anno
+      # TODO: need to remove extraneous statements of children of anno too (e.g. targets, bodies, annotatedBy ...)
+      r.query(subject: anno_uri).each { |stmt|
+        if anno_graph.query(stmt).count == 0
+          r.send(:delete_statement, stmt)
+        end
+      }
+      # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
       anno_model = LD4L::OpenAnnotationRDF::Annotation.resume(anno_uri)
     end
   end

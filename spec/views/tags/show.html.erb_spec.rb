@@ -84,6 +84,13 @@ describe "tags/show" do
       expect(rendered).to match /format: /
       expect(rendered).to match /text\/plain/
     end
+    it "shouldn't display phantom blank nodes for bodies" do
+      # ttl gets [], [], ...
+      expect(rendered).not_to match /\[\],/
+      assign(:tag, @tag_anno)
+      render
+      expect(rendered).not_to match /\[\],/
+    end
   end
   
   describe 'TagAnnotation' do
@@ -97,6 +104,13 @@ describe "tags/show" do
     end
     it "content" do
       expect(rendered).to match /tag: /
+    end
+    it "shouldn't display phantom blank nodes for bodiesd" do
+      # ttl gets [], [], ...
+      expect(rendered).not_to match /\[\],/
+      assign(:tag, @tag_anno)
+      render
+      expect(rendered).not_to match /\[\],/
     end
   end
 
