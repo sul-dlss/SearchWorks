@@ -89,7 +89,7 @@ describe Tag do
     end # comment
     context 'semantic tag' do
       before(:each) do
-        ttl = '<https://triannon-dev.stanford.edu/annotations/e8b3ecdc-d8da-4b85-944d-65d800493bce> a <http://www.w3.org/ns/oa#Annotation>;
+        ttl = '<https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f> a <http://www.w3.org/ns/oa#Annotation>;
                  <http://www.w3.org/ns/oa#hasBody> <http://dbpedia.org/resource/Love>;
                  <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
                  <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .
