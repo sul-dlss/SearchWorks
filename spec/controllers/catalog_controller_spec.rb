@@ -35,13 +35,13 @@ describe CatalogController do
     it 'should send a brief email when requested' do
       email = double('email')
       expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
-      expect(email).to receive(:deliver)
+      expect(email).to receive(:deliver_now)
       post :email, to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'
     end
     it 'should send a full email when requested' do
       email = double('email')
       expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
-      expect(email).to receive(:deliver)
+      expect(email).to receive(:deliver_now)
       post :email, to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1'
     end
     describe 'validations' do

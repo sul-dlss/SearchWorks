@@ -10,11 +10,13 @@ describe AccessPanelHelper do
 
   describe "thumb_for_library" do
     it "should return the image tag for the thumbnail for the specified library" do
-      expect(helper.thumb_for_library(library)).to eq "<img alt=\"\" class=\"pull-left\" data-hidpi-src=\"/assets/GREEN@2x.jpg\" height=\"50\" src=\"/assets/GREEN.jpg\" />"
+      img = Capybara.string(helper.thumb_for_library(library))
+      expect(img).to have_css('img[src="/assets/GREEN.jpg"][data-hidpi-src="/assets/GREEN@2x.jpg"]')
     end
-    it "should reuturn the image tag (w/ png extension) for the ZOMBIE library" do
+    it "should return the image tag (w/ png extension) for the ZOMBIE library" do
       library = Holdings::Library.new("ZOMBIE")
-      expect(helper.thumb_for_library(library)).to eq "<img alt=\"\" class=\"pull-left\" data-hidpi-src=\"/assets/ZOMBIE@2x.png\" height=\"50\" src=\"/assets/ZOMBIE.png\" />"
+      img = Capybara.string(helper.thumb_for_library(library))
+      expect(img).to have_css('img[src="/assets/ZOMBIE.png"][data-hidpi-src="/assets/ZOMBIE@2x.png"]')
     end
   end
 end

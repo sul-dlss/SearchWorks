@@ -12,7 +12,7 @@
       </dl>
     <% end %>
     <% @documents.each do |document| %>
-      <h1><a href="<%= polymorphic_path(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:title_display] %></a></h1>
+      <h1><a href="<%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:title_display] %></a></h1>
       <% if document.respond_to?(:to_marc) %>      
         <%= render(partial: 'catalog/record/marc_upper_metadata_items', locals: {document: document, blacklight_config: @blacklight_config}) %>
         <%= render(partial: 'catalog/record/marc_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>

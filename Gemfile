@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.0'
 gem 'sprockets', '~> 2.11.3'
 gem 'i18n'
 
@@ -22,9 +21,6 @@ gem 'therubyracer'
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 gem 'ruby-oembed'
 
@@ -49,6 +45,12 @@ group :deployment do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'lyberteam-capistrano-devel'
+end
+
+group :development do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'web-console'
 end
 
 group :development, :test do
@@ -92,5 +94,5 @@ gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
-gem 'roadie-rails', '~> 1.0.3'
+gem 'roadie-rails', '~> 1.0.4'
 gem 'whenever', require: false
