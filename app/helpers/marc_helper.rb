@@ -175,7 +175,7 @@ module MarcHelper
                     end
                   end
                   vern_text << link_to(h(link_text.strip),:q => "\"#{link_text}\"", :action => 'index', :search_field => 'author_search')
-                  vern_text << relator_text.join(", ") unless relator_text.blank?
+                  vern_text << relator_text unless relator_text.blank?
                   vern_text << "</dd>"
               end
             end
