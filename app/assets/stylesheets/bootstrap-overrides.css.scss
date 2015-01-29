@@ -29,3 +29,10 @@
   padding: 10px 15px;
   margin: 10px 0;
 }
+
+// Temporarily added since
+// our modal-dialog is not
+// getting its z-index set
+.modal-dialog {
+  z-index: 1040;
+}
