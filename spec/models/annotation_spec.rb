@@ -120,21 +120,21 @@ describe Annotation do
     end
   end # *model_from_graph
   
-  context '*triannon_id_from_anno_graph' do
+  context '*triannon_id_from_graph' do
     it "returns unique part of triannon url for Triannon OA::Annotation" do
       tid = "aaa"
       g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
-      expect(Annotation.triannon_id_from_anno_graph(g)).to eq tid
+      expect(Annotation.triannon_id_from_graph(g)).to eq tid
     end
     it "returns full url for OA::Annotation that isn't from Triannon storage" do
       tid = "aaa"
       g = RDF::Graph.new.from_ttl("<http://my_anno_url/#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
-      expect(Annotation.triannon_id_from_anno_graph(g)).to eq "http://my_anno_url/#{tid}"
+      expect(Annotation.triannon_id_from_graph(g)).to eq "http://my_anno_url/#{tid}"
     end
     it "nil for Triannon url that isn't OA::Annotation" do
       tid = "aaa"
       g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://foo.org/thing> .")
-      expect(Annotation.triannon_id_from_anno_graph(g)).to be_nil
+      expect(Annotation.triannon_id_from_graph(g)).to be_nil
     end
     it "nil when graph is empty" do
       solutions = RDF::Graph.new.query Annotation.anno_query
@@ -245,42 +245,42 @@ describe Annotation do
     end
   end
   
-  context '#anno_graph' do
+  context '#graph' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
     it "contains all triples in the Annotation object" do
-      anno_graph = @anno.send(:anno_graph)
+      graph = @anno.send(:graph)
       @anno.each_statement { |s|
-        expect(anno_graph.query(s).size).to be > 0
+        expect(graph.query(s).size).to be > 0
       }
     end
     it 'contains all triples from the body object' do
-      anno_graph = @anno.send(:anno_graph)
+      graph = @anno.send(:graph)
       @anno.hasBody.first.each_statement { |s|
-        expect(anno_graph.query(s).size).to be > 0
+        expect(graph.query(s).size).to be > 0
       }
     end
     context 'no hasBody statement when' do
       it 'hasBody id is empty String' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => ""}})
-        anno_graph = anno.send(:anno_graph)
-        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        graph = anno.send(:graph)
+        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
       end
       it 'hasBody id is nil' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => nil}})
-        anno_graph = anno.send(:anno_graph)
-        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        graph = anno.send(:graph)
+        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
       end
       it 'no hasBody id param' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {}})
-        anno_graph = anno.send(:anno_graph)
-        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        graph = anno.send(:graph)
+        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
       end
       it 'no hasBody param' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}})
-        anno_graph = anno.send(:anno_graph)
-        expect(anno_graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        graph = anno.send(:graph)
+        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
       end
     end
   end
@@ -289,12 +289,12 @@ describe Annotation do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
-    it "calls post_anno_graph_to_storage" do
-      expect(@anno).to receive(:post_anno_graph_to_storage)
+    it "calls post_graph_to_oa_storage" do
+      expect(@anno).to receive(:post_graph_to_oa_storage)
       @anno.save
     end
     it "returns true if anno_store returns id" do
-      allow(@anno).to receive(:post_anno_graph_to_storage).and_return("666")
+      allow(@anno).to receive(:post_graph_to_oa_storage).and_return("666")
       expect(@anno.save).to be_true
     end
     it "returns false if anno_store doesn't return id" do
@@ -303,7 +303,7 @@ describe Annotation do
     end
     it "sets triannon_id attribute" do
       expect(@anno.triannon_id).to be_nil
-      allow(@anno).to receive(:post_anno_graph_to_storage).and_return("666")
+      allow(@anno).to receive(:post_graph_to_oa_storage).and_return("666")
       @anno.save
       expect(@anno.triannon_id).to eq "666"
     end
@@ -318,7 +318,7 @@ describe Annotation do
     expect(conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
   end
   
-  context '#post_anno_graph_to_storage' do
+  context '#post_graph_to_oa_storage' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
@@ -327,19 +327,19 @@ describe Annotation do
       expect(resp).to receive(:status).and_return(201)
       expect(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
       expect(@anno.send(:conn)).to receive(:post).and_return(resp)
-      @anno.send(:post_anno_graph_to_storage)
+      @anno.send(:post_graph_to_oa_storage)
     end 
     it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
       expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}new_id"}).twice
       expect(@anno.send(:conn)).to receive(:post).and_return(resp)
-      id = @anno.send(:post_anno_graph_to_storage)
+      id = @anno.send(:post_graph_to_oa_storage)
       expect(id).to eq "new_id"
     end
     it "returns nil if there was an error" do
       expect(@anno.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
-      expect(@anno.send(:post_anno_graph_to_storage)).to be_nil
+      expect(@anno.send(:post_graph_to_oa_storage)).to be_nil
     end
   end
   
