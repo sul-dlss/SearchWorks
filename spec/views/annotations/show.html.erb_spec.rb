@@ -3,47 +3,111 @@ require 'spec_helper'
 describe "annotations/show" do
   before(:each) do
     @comment_triannon_id = "5051575d-6248-4ff4-a163-8cc6d59785f3"
-    comment_ttl = '<https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3> a <http://www.w3.org/ns/oa#Annotation>;
-                     <http://www.w3.org/ns/oa#hasBody> [
-                       a <http://purl.org/dc/dcmitype/Text>,
-                         <http://www.w3.org/2011/content#ContentAsText>;
-                       <http://purl.org/dc/terms/format> "text/plain";
-                       <http://www.w3.org/2011/content#chars> "I am a comment!"
-                     ];
-                     <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
-                     <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#commenting> .'
+    comment_jsonld = '{
+                      "@context": {
+                        "content": "http://www.w3.org/2011/content#",
+                        "dc": "http://purl.org/dc/terms/",
+                        "dcmitype": "http://purl.org/dc/dcmitype/",
+                        "openannotation": "http://www.w3.org/ns/oa#"
+                      },
+                      "@graph": [
+                        {
+                          "@id": "_:g70171578915160",
+                          "@type": [
+                            "dcmitype:Text",
+                            "content:ContentAsText"
+                          ],
+                          "content:chars": "I am a comment!",
+                          "dc:format": "text/plain"
+                        },
+                        {
+                          "@id": "https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3",
+                          "@type": "openannotation:Annotation",
+                          "openannotation:hasBody": {
+                            "@id": "_:g70171578915160"
+                          },
+                          "openannotation:hasTarget": {
+                            "@id": "http://searchworks.stanford.edu/view/666"
+                          },
+                          "openannotation:motivatedBy": {
+                            "@id": "openannotation:commenting"
+                          }
+                        }
+                      ]
+                    }'
     comment_resp = double("resp")
-    allow(comment_resp).to receive(:body).and_return(comment_ttl)
+    allow(comment_resp).to receive(:body).and_return(comment_jsonld)
     comment_conn = double("conn")
     allow(comment_conn).to receive(:get).and_return(comment_resp)
     allow(Annotation).to receive(:conn).and_return(comment_conn)
     @comment_anno = Annotation.find_by_target_uri(@comment_triannon_id).first
     @anno_triannon_id = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-    anno_ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
-             <http://www.w3.org/ns/oa#hasBody> [
-               a <http://purl.org/dc/dcmitype/Text>,
-                 <http://www.w3.org/2011/content#ContentAsText>,
-                 <http://www.w3.org/ns/oa#Tag>;
-               <http://purl.org/dc/terms/format> "text/plain";
-               <http://www.w3.org/2011/content#chars> "blue"
-             ];
-             <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
-             <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .'
+    tag_jsonld = '{
+                  "@context": {
+                    "content": "http://www.w3.org/2011/content#",
+                    "dc": "http://purl.org/dc/terms/",
+                    "dcmitype": "http://purl.org/dc/dcmitype/",
+                    "openannotation": "http://www.w3.org/ns/oa#"
+                  },
+                  "@graph": [
+                    {
+                      "@id": "_:g70171583104620",
+                      "@type": [
+                        "dcmitype:Text",
+                        "content:ContentAsText",
+                        "openannotation:Tag"
+                      ],
+                      "content:chars": "blue",
+                      "dc:format": "text/plain"
+                    },
+                    {
+                      "@id": "https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce",
+                      "@type": "openannotation:Annotation",
+                      "openannotation:hasBody": {
+                        "@id": "_:g70171583104620"
+                      },
+                      "openannotation:hasTarget": {
+                        "@id": "http://searchworks.stanford.edu/view/666"
+                      },
+                      "openannotation:motivatedBy": {
+                        "@id": "openannotation:tagging"
+                      }
+                    }
+                  ]
+                }'
     anno_resp = double("resp")
-    allow(anno_resp).to receive(:body).and_return(anno_ttl)
+    allow(anno_resp).to receive(:body).and_return(tag_jsonld)
     anno_conn = double("conn")
     allow(anno_conn).to receive(:get).and_return(anno_resp)
     allow(Annotation).to receive(:conn).and_return(anno_conn).at_least(:once)
     @tag_anno = Annotation.find_by_target_uri(@anno_triannon_id).first
     @semantic_tag_triannon_id = "31e9e5ea-085a-43d7-83f3-b586b3c5783f"
-    st_ttl = '<https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f> a <http://www.w3.org/ns/oa#Annotation>;
-                 <http://www.w3.org/ns/oa#hasBody> <http://dbpedia.org/resource/Love>;
-                 <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
-                 <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .
-
-              <http://dbpedia.org/resource/Love> a <http://www.w3.org/ns/oa#SemanticTag> .'
+    st_jsonld = '{
+                "@context": {
+                  "openannotation": "http://www.w3.org/ns/oa#"
+                },
+                "@graph": [
+                  {
+                    "@id": "http://dbpedia.org/resource/Love",
+                    "@type": "openannotation:SemanticTag"
+                  },
+                  {
+                    "@id": "https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f",
+                    "@type": "openannotation:Annotation",
+                    "openannotation:hasBody": {
+                      "@id": "http://dbpedia.org/resource/Love"
+                    },
+                    "openannotation:hasTarget": {
+                      "@id": "http://searchworks.stanford.edu/view/666"
+                    },
+                    "openannotation:motivatedBy": {
+                      "@id": "openannotation:tagging"
+                    }
+                  }
+                ]
+              }'
     st_resp = double("resp")
-    allow(st_resp).to receive(:body).and_return(st_ttl)
+    allow(st_resp).to receive(:body).and_return(st_jsonld)
     st_conn = double("conn")
     allow(st_conn).to receive(:get).and_return(st_resp)
     allow(Annotation).to receive(:conn).and_return(st_conn)
@@ -85,7 +149,7 @@ describe "annotations/show" do
       expect(rendered).to match /text\/plain/
     end
     it "shouldn't display phantom blank nodes for bodies" do
-      # ttl gets [], [], ...
+      # view gets [], [], ...
       expect(rendered).not_to match /\[\],/
       assign(:annotation, @tag_anno)
       render
@@ -106,7 +170,7 @@ describe "annotations/show" do
       expect(rendered).to match /tag: /
     end
     it "shouldn't display phantom blank nodes for bodies" do
-      # ttl gets [], [], ...
+      # view gets [], [], ...
       expect(rendered).not_to match /\[\],/
       assign(:annotation, @tag_anno)
       render
