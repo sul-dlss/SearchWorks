@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "tags/show" do
+describe "annotations/show" do
   before(:each) do
     @comment_triannon_id = "5051575d-6248-4ff4-a163-8cc6d59785f3"
     comment_ttl = '<https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3> a <http://www.w3.org/ns/oa#Annotation>;
@@ -16,10 +16,10 @@ describe "tags/show" do
     allow(comment_resp).to receive(:body).and_return(comment_ttl)
     comment_conn = double("conn")
     allow(comment_conn).to receive(:get).and_return(comment_resp)
-    allow(Tag).to receive(:conn).and_return(comment_conn)
-    @comment_anno = Tag.find_by_target_uri(@comment_triannon_id).first
-    @tag_triannon_id = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-    tag_ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
+    allow(Annotation).to receive(:conn).and_return(comment_conn)
+    @comment_anno = Annotation.find_by_target_uri(@comment_triannon_id).first
+    @anno_triannon_id = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
+    anno_ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
              <http://www.w3.org/ns/oa#hasBody> [
                a <http://purl.org/dc/dcmitype/Text>,
                  <http://www.w3.org/2011/content#ContentAsText>,
@@ -29,12 +29,12 @@ describe "tags/show" do
              ];
              <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
              <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .'
-    tag_resp = double("resp")
-    allow(tag_resp).to receive(:body).and_return(tag_ttl)
-    tag_conn = double("conn")
-    allow(tag_conn).to receive(:get).and_return(tag_resp)
-    allow(Tag).to receive(:conn).and_return(tag_conn).at_least(:once)
-    @tag_anno = Tag.find_by_target_uri(@tag_triannon_id).first
+    anno_resp = double("resp")
+    allow(anno_resp).to receive(:body).and_return(anno_ttl)
+    anno_conn = double("conn")
+    allow(anno_conn).to receive(:get).and_return(anno_resp)
+    allow(Annotation).to receive(:conn).and_return(anno_conn).at_least(:once)
+    @tag_anno = Annotation.find_by_target_uri(@anno_triannon_id).first
     @semantic_tag_triannon_id = "31e9e5ea-085a-43d7-83f3-b586b3c5783f"
     st_ttl = '<https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f> a <http://www.w3.org/ns/oa#Annotation>;
                  <http://www.w3.org/ns/oa#hasBody> <http://dbpedia.org/resource/Love>;
@@ -46,8 +46,8 @@ describe "tags/show" do
     allow(st_resp).to receive(:body).and_return(st_ttl)
     st_conn = double("conn")
     allow(st_conn).to receive(:get).and_return(st_resp)
-    allow(Tag).to receive(:conn).and_return(st_conn)
-    @semantic_tag_anno = Tag.find_by_target_uri(@semantic_tag_triannon_id).first
+    allow(Annotation).to receive(:conn).and_return(st_conn)
+    @semantic_tag_anno = Annotation.find_by_target_uri(@semantic_tag_triannon_id).first
   end
   
   shared_examples_for 'Annotation display' do
@@ -70,7 +70,7 @@ describe "tags/show" do
   
   describe 'CommentAnnotation' do
     before(:each) do
-      assign(:tag, @comment_anno)
+      assign(:annotation, @comment_anno)
       render
     end
     it_behaves_like "Annotation display"
@@ -87,7 +87,7 @@ describe "tags/show" do
     it "shouldn't display phantom blank nodes for bodies" do
       # ttl gets [], [], ...
       expect(rendered).not_to match /\[\],/
-      assign(:tag, @tag_anno)
+      assign(:annotation, @tag_anno)
       render
       expect(rendered).not_to match /\[\],/
     end
@@ -95,7 +95,7 @@ describe "tags/show" do
   
   describe 'TagAnnotation' do
     before(:each) do
-      assign(:tag, @tag_anno)
+      assign(:annotation, @tag_anno)
       render
     end
     it_behaves_like "Annotation display"
@@ -105,10 +105,10 @@ describe "tags/show" do
     it "content" do
       expect(rendered).to match /tag: /
     end
-    it "shouldn't display phantom blank nodes for bodiesd" do
+    it "shouldn't display phantom blank nodes for bodies" do
       # ttl gets [], [], ...
       expect(rendered).not_to match /\[\],/
-      assign(:tag, @tag_anno)
+      assign(:annotation, @tag_anno)
       render
       expect(rendered).not_to match /\[\],/
     end
@@ -116,7 +116,7 @@ describe "tags/show" do
 
   describe 'SemanticTagAnnotation' do
     before(:each) do
-      assign(:tag, @semantic_tag_anno)
+      assign(:annotation, @semantic_tag_anno)
       render
     end
     it_behaves_like "Annotation display"
@@ -128,7 +128,7 @@ describe "tags/show" do
   describe 'unrecognized Annotation model' do
     before(:each) do
       unrec_model_id = "e8b3ecdc-d8da-4b85-944d-65d800493bce"
-      assign(:tag, Tag.find_by_target_uri(unrec_model_id).first)
+      assign(:annotation, Annotation.find_by_target_uri(unrec_model_id).first)
       render
     end
     it_behaves_like "Annotation display"

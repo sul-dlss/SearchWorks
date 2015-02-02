@@ -1,4 +1,4 @@
-module TagsHelper
+module AnnotationsHelper
   
   # @return [Array<String>] the allowed motivations from the OpenAnnotation spec, without the URL prefix
   def oa_motivations

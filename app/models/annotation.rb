@@ -5,10 +5,10 @@ require 'ld4l/open_annotation_rdf'
 # This model uses Cornell's OpenAnnotation models at https://github.com/ld4l/open_annotation_rdf 
 # which utilize ActiveTriples (https://github.com/ActiveTriples/ActiveTriples).
 # ActiveTriples is an ActiveModel-like interface for RDF data.
-# Note that there is *no local storage* of Tags -- data is actually stored
+# Note that there is *no local storage* of Annotations -- data is actually stored
 # in our Triannon (https://github.com/sul-dlss/triannon) server, which is backed by Fedora4.  
 # 
-# The triple store in scope for *this* Tag model is a simple in-memory RDF Repository;  
+# The triple store in scope for *this* Annotation model is a simple in-memory RDF Repository;  
 #  (see config/initializers/rdf_repositories.rb)
 # This allows us to easily work with linked data as objects in this Rails context, 
 # while the actual data store is external.
@@ -16,7 +16,7 @@ require 'ld4l/open_annotation_rdf'
 # This model exists so our anno objects can get from and send to Triannon, and
 #  possibly for validations of annos before they are written to Triannon.  Otherwise, the specific
 #  ActiveTriples models above would be more appropriate.
-class Tag < LD4L::OpenAnnotationRDF::Annotation
+class Annotation < LD4L::OpenAnnotationRDF::Annotation
   
   # FIXME: this will allow blank nodes???
 #  LD4L::OpenAnnotationRDF.configuration.unique_tags = false
@@ -38,7 +38,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
     tid = target_uri
     g = RDF::Graph.new.from_ttl stored_oa_ttl(tid)
     # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
-    result << Tag.model_from_graph(g)
+    result << Annotation.model_from_graph(g)
   end
   
   # --- below this line sort of "protected" or "private" class methods
@@ -47,7 +47,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
   # @return <LD4L::OpenAnnotationRDF::Annotation> but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
   def self.model_from_graph(anno_graph)
     if anno_graph && anno_graph.size > 0
-      r = ActiveTriples::Repositories.repositories[Tag.repository]
+      r = ActiveTriples::Repositories.repositories[Annotation.repository]
       r << anno_graph
       tid = triannon_id_from_anno_graph anno_graph
       anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
@@ -102,30 +102,30 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
 
   # Instance Methods ----------------------------------------------------------------
 
-  # If first param is a Hash, then assume it is params from TagController - 
+  # If first param is a Hash, then assume it is params from AnnotationController - 
   #  remove those params and use them. 
   # Otherwise, just pass params through superclass
   # @see ActiveTriples::Resource
   def initialize(*args, &block)
-    tag_params = args.shift if args.first.is_a?(Hash)
+    anno_params = args.shift if args.first.is_a?(Hash)
 
     super(*args, &block)
 
-    if tag_params
+    if anno_params
 
       # TODO: it should be possible to have multiple motivations
-      motivatedBy << RDF::URI.new(RDF::OpenAnnotation.to_uri.to_s + tag_params["motivatedBy"]) if tag_params["motivatedBy"]
+      motivatedBy << RDF::URI.new(RDF::OpenAnnotation.to_uri.to_s + anno_params["motivatedBy"]) if anno_params["motivatedBy"]
 
       # TODO: target will autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.
       # TODO: it should be possible to have multiple targets
-      if tag_params["hasTarget"] && !tag_params["hasTarget"]["id"].blank?
-        hasTarget << RDF::URI.new(Constants::CONTACT_INFO[:website][:url] + "/view/" + tag_params["hasTarget"]["id"])
+      if anno_params["hasTarget"] && !anno_params["hasTarget"]["id"].blank?
+        hasTarget << RDF::URI.new(Constants::CONTACT_INFO[:website][:url] + "/view/" + anno_params["hasTarget"]["id"])
       end
 
       # TODO: it should be possible to have multiple bodies
-      if tag_params["hasBody"] && !tag_params["hasBody"]["id"].blank?
+      if anno_params["hasBody"] && !anno_params["hasBody"]["id"].blank?
         body = LD4L::OpenAnnotationRDF::CommentBody.new
-        body.content = tag_params["hasBody"]["id"]
+        body.content = anno_params["hasBody"]["id"]
         body.format = "text/plain"
         hasBody << body
       end
@@ -137,7 +137,7 @@ class Tag < LD4L::OpenAnnotationRDF::Annotation
     
   end
   
-  # send the Tag as an OpenAnnotation to the OA Storage
+  # send the Annotation as an OpenAnnotation to the OA Storage
   def save
 #    puts anno_graph.to_ttl
     @triannon_id = post_anno_graph_to_storage
@@ -175,7 +175,7 @@ protected
     end
     if response.status == 201
       new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
-      return Tag.triannon_id_from_triannon_url new_url
+      return Annotation.triannon_id_from_triannon_url new_url
     end
     return nil
   end

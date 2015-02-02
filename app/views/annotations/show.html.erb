@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tag (from OpenAnnotation)</h1>
+<h1>Annotation (from OpenAnnotation)</h1>
 <p>
 <strong>Triannon Id</strong>
-<%= link_to(@tag.id, @tag.id) %>
+<%= link_to(@annotation.id, @annotation.id) %>
 </p>
 <p>
 <strong>Motivation:</strong>
-<%= @tag.motivatedBy.map{|m| link_to(m.to_s, m.to_s)}.join(", ").html_safe if @tag.motivatedBy %>
+<%= @annotation.motivatedBy.map{|m| link_to(m.to_s, m.to_s)}.join(", ").html_safe if @annotation.motivatedBy %>
 </p>
 <p>
 <strong>Target:</strong>
-<%= @tag.hasTarget.map { | target_atresource | %>
+<%= @annotation.hasTarget.map { | target_atresource | %>
 	<% target_url = target_atresource.send(:rdf_subject).to_s %>
-	<% link_to(target_url, target_url) }.join(", ").html_safe if @tag.hasTarget %>
+	<% link_to(target_url, target_url) }.join(", ").html_safe if @annotation.hasTarget %>
 </p>
 <p>
 <strong>Annotated At:</strong>
-<%= @tag.annotatedAt if @tag.annotatedAt %>
+<%= @annotation.annotatedAt if @annotation.annotatedAt %>
 </p>
 
 <p>
 <strong>Model of Annotation:</strong>
-<%= @tag.class %>
+<%= @annotation.class %>
 </p>
 
 
 <p>
 <strong>Body:</strong>
-	<% my_body = @tag.hasBody.first %>
+	<% my_body = @annotation.hasBody.first %>
 	<p>
 		model: <%= my_body.class %>
 	</p>
@@ -52,16 +52,16 @@
 
 <strong>Turtle:</strong>
 <pre>
-<%= @tag.dump(:ttl) %>
+<%= @annotation.dump(:ttl) %>
 <%= my_body.dump(:ttl) %>
 </pre>
 
 <strong>JSON-LD (OpenAnnotation context):</strong>
 <pre>
-<%= @tag.to_jsonld %>
+<%= @annotation.to_jsonld %>
 <%= my_body.to_jsonld %>
 </pre>
 
 
-<%#= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<%#= link_to 'Edit', edit_annotation_path(@annotation) %> |
+<%= link_to 'Back', annotations_path %>
