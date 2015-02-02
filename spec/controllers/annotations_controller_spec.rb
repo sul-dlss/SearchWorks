@@ -27,18 +27,41 @@ describe AnnotationsController do
   describe "GET show" do
     it "assigns the requested annotation as @annotation" do
       tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-      ttl = '<https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce> a <http://www.w3.org/ns/oa#Annotation>;
-               <http://www.w3.org/ns/oa#hasBody> [
-                 a <http://purl.org/dc/dcmitype/Text>,
-                   <http://www.w3.org/2011/content#ContentAsText>,
-                   <http://www.w3.org/ns/oa#Tag>;
-                 <http://purl.org/dc/terms/format> "text/plain";
-                 <http://www.w3.org/2011/content#chars> "blue"
-               ];
-               <http://www.w3.org/ns/oa#hasTarget> <http://searchworks.stanford.edu/view/666>;
-               <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#tagging> .'
+      jsonld = '{
+                  "@context": {
+                    "content": "http://www.w3.org/2011/content#",
+                    "dc": "http://purl.org/dc/terms/",
+                    "dcmitype": "http://purl.org/dc/dcmitype/",
+                    "openannotation": "http://www.w3.org/ns/oa#"
+                  },
+                  "@graph": [
+                    {
+                      "@id": "_:g70171526504060",
+                      "@type": [
+                        "dcmitype:Text",
+                        "content:ContentAsText",
+                        "openannotation:Tag"
+                      ],
+                      "content:chars": "blue",
+                      "dc:format": "text/plain"
+                    },
+                    {
+                      "@id": "https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce",
+                      "@type": "openannotation:Annotation",
+                      "openannotation:hasBody": {
+                        "@id": "_:g70171526504060"
+                      },
+                      "openannotation:hasTarget": {
+                        "@id": "http://searchworks.stanford.edu/view/666"
+                      },
+                      "openannotation:motivatedBy": {
+                        "@id": "openannotation:tagging"
+                      }
+                    }
+                  ]
+                }'
       resp = double("resp")
-      expect(resp).to receive(:body).and_return(ttl)
+      expect(resp).to receive(:body).and_return(jsonld)
       conn = double("conn")
       expect(conn).to receive(:get).and_return(resp)
       expect(Annotation).to receive(:conn).and_return(conn)
