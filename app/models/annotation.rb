@@ -45,16 +45,16 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   
   # @param <RDF::Graph> an annotation as a Graph
   # @return <LD4L::OpenAnnotationRDF::Annotation> but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
-  def self.model_from_graph(anno_graph)
-    if anno_graph && anno_graph.size > 0
+  def self.model_from_graph(graph)
+    if graph && graph.size > 0
       r = ActiveTriples::Repositories.repositories[Annotation.repository]
-      r << anno_graph
-      tid = triannon_id_from_anno_graph anno_graph
+      r << graph
+      tid = triannon_id_from_graph graph
       anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
       # remove extraneous statements from older versions of this anno
       # TODO: need to remove extraneous statements of children of anno too (e.g. targets, bodies, annotatedBy ...)
       r.query(subject: anno_uri).each { |stmt|
-        if anno_graph.query(stmt).count == 0
+        if graph.query(stmt).count == 0
           r.send(:delete_statement, stmt)
         end
       }
@@ -80,8 +80,8 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   
   # @param <RDF::Graph> an annotation as a Graph
   # @return <String> triannon id for the annotation (the unique path at the end of the url)
-  def self.triannon_id_from_anno_graph anno_graph
-    solutions = anno_graph.query self.anno_query
+  def self.triannon_id_from_graph graph
+    solutions = graph.query self.anno_query
     if solutions && solutions.size == 1
       return triannon_id_from_triannon_url(solutions.first.s.to_s)
     end
@@ -139,8 +139,8 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   
   # send the Annotation as an OpenAnnotation to the OA Storage
   def save
-#    puts anno_graph.to_ttl
-    @triannon_id = post_anno_graph_to_storage
+#    puts graph.to_ttl
+    @triannon_id = post_graph_to_oa_storage
     if @triannon_id
       true
     else
@@ -152,7 +152,7 @@ protected
   
   # @return <RDF::Graph> a graph containing all relevant statements for storing this
   # object as an OpenAnnotation (e.g. including triples for body nodes) 
-  def anno_graph
+  def graph
     g = RDF::Graph.new
     self.each_statement { |stmt| 
       g << stmt
@@ -168,10 +168,10 @@ protected
   
   # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
   # @return <String> unique id of newly created anno, or nil if there was a problem
-  def post_anno_graph_to_storage
+  def post_graph_to_oa_storage
     response = conn.post do |req|
       req.headers['Content-Type'] = 'application/x-turtle'
-      req.body = anno_graph.to_ttl
+      req.body = graph.to_ttl
     end
     if response.status == 201
       new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
