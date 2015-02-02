@@ -1,0 +1,40 @@
+<%= form_for(@annotation) do |f| %>
+  <% if @annotation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@annotation.errors.count, "error") %> prohibited this annotation from being saved:</h2>
+
+      <ul>
+      <% @annotation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Target (SW Doc ID):' %><nbsp/><nbsp/>
+    <%#= TODO: it should be possible to have multiple targets %>
+    <%= f.fields_for(:hasTarget) do |target| %>
+      <%= target.text_field :id %>
+    <% end %>
+    <small>(will eventually autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.)</small>
+  </div>
+
+  <div class="field">
+    <%#= TODO: it should be possible to have multiple motivations %>
+    <%= f.label 'Motivation:' %><nbsp/><nbsp/>
+	<%= f.select :motivatedBy, options_for_select(oa_motivations), {:prompt => "Please select"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Body (text only):' %><br>
+    <%#= TODO: it should be possible to have multiple bodies %>
+    <%= f.fields_for(:hasBody) do |body| %>
+      <%= body.text_area :id, size: "60x5" %>
+    <% end %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
