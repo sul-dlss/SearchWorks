@@ -36,7 +36,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
     #  we would really get back a list of annos as ttl ...
     tid = target_uri
-    g = RDF::Graph.new.from_ttl stored_oa_ttl(tid)
+    g = RDF::Graph.new.from_jsonld stored_oa_jsonld(tid)
     # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
     result << Annotation.model_from_graph(g)
   end
@@ -63,11 +63,10 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
 
-  # @return ttl for annotation, as a String
-  def self.stored_oa_ttl(id)
+  # @return jsonld for annotation from OA storage, as a String
+  def self.stored_oa_jsonld(id)
     resp = conn.get do |req|
       req.url id
-      req.headers['Accept'] = 'application/x-turtle'
     end
     resp.body
   end
