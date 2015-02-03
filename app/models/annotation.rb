@@ -36,7 +36,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
     #  we would really get back a list of annos as ttl ...
     tid = target_uri
-    g = RDF::Graph.new.from_jsonld stored_oa_jsonld(tid)
+    g = RDF::Graph.new.from_jsonld oa_jsonld(tid)
     # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
     result << Annotation.model_from_graph(g)
   end
@@ -63,9 +63,9 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
 
-  # @return jsonld for annotation from OA storage, as a String
-  def self.stored_oa_jsonld(id)
-    resp = oa_storage_conn.get do |req|
+  # @return [String] jsonld for annotation
+  def self.oa_jsonld(id)
+    resp = oa_rsolr_conn.get do |req|
       req.url id
     end
     resp.body
@@ -95,8 +95,9 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
   
-  def self.oa_storage_conn
+  def self.oa_rsolr_conn
     Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+#    @@rsolr_client ||= RSolr.connect Settings.OPEN_ANNOTATION_SOLR_URL
   end
 
   # Instance Methods ----------------------------------------------------------------
@@ -180,7 +181,7 @@ protected
   end
   
   def oa_storage_conn
-    @c ||= self.class.oa_storage_conn
+    @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
   end
   
 end
