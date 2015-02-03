@@ -44,7 +44,7 @@
 		<% when my_body.class == LD4L::OpenAnnotationRDF::SemanticTagBody%>
 			semantic tag: <%= my_body.rdf_subject.to_s %>
 		<% else %>
-			not a recognized body type: <%= my_body.rdf_subject.to_s %>
+			not a recognized body type: <%= my_body.rdf_subject.to_s if my_body %>
 		<% end %>
 	</p>
 </p>
@@ -53,13 +53,13 @@
 <strong>Turtle:</strong>
 <pre>
 <%= @annotation.dump(:ttl) %>
-<%= my_body.dump(:ttl) %>
+<%= my_body.dump(:ttl) if my_body %>
 </pre>
 
 <strong>JSON-LD (OpenAnnotation context):</strong>
 <pre>
 <%= @annotation.to_jsonld %>
-<%= my_body.to_jsonld %>
+<%= my_body.to_jsonld if my_body %>
 </pre>
 
 
