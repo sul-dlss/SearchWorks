@@ -40,9 +40,9 @@ describe "annotations/show" do
                     }'
     comment_resp = double("resp")
     allow(comment_resp).to receive(:body).and_return(comment_jsonld)
-    comment_conn = double("oa_storage_conn")
+    comment_conn = double("oa_search_conn")
     allow(comment_conn).to receive(:get).and_return(comment_resp)
-    allow(Annotation).to receive(:oa_storage_conn).and_return(comment_conn)
+    allow(Annotation).to receive(:oa_search_conn).and_return(comment_conn)
     @comment_anno = Annotation.find_by_target_uri(@comment_triannon_id).first
     @anno_triannon_id = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
     tag_jsonld = '{
@@ -83,9 +83,9 @@ describe "annotations/show" do
                 }'
     anno_resp = double("resp")
     allow(anno_resp).to receive(:body).and_return(tag_jsonld)
-    anno_conn = double("oa_storage_conn")
+    anno_conn = double("oa_search_conn")
     allow(anno_conn).to receive(:get).and_return(anno_resp)
-    allow(Annotation).to receive(:oa_storage_conn).and_return(anno_conn).at_least(:once)
+    allow(Annotation).to receive(:oa_search_conn).and_return(anno_conn).at_least(:once)
     @tag_anno = Annotation.find_by_target_uri(@anno_triannon_id).first
     @semantic_tag_triannon_id = "31e9e5ea-085a-43d7-83f3-b586b3c5783f"
     st_jsonld = '{
@@ -117,9 +117,9 @@ describe "annotations/show" do
               }'
     st_resp = double("resp")
     allow(st_resp).to receive(:body).and_return(st_jsonld)
-    st_conn = double("oa_storage_conn")
+    st_conn = double("oa_search_conn")
     allow(st_conn).to receive(:get).and_return(st_resp)
-    allow(Annotation).to receive(:oa_storage_conn).and_return(st_conn)
+    allow(Annotation).to receive(:oa_search_conn).and_return(st_conn)
     @semantic_tag_anno = Annotation.find_by_target_uri(@semantic_tag_triannon_id).first
   end
   

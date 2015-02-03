@@ -62,9 +62,9 @@ describe AnnotationsController do
                 }'
       resp = double("resp")
       expect(resp).to receive(:body).and_return(jsonld)
-      oa_storage_conn = double("oa_storage_conn")
-      expect(oa_storage_conn).to receive(:get).and_return(resp)
-      expect(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+      oa_search_conn = double("oa_search_conn")
+      expect(oa_search_conn).to receive(:get).and_return(resp)
+      expect(Annotation).to receive(:oa_search_conn).and_return(oa_search_conn)
       get :show, {:id => tid}, valid_session
       assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::TagAnnotation
     end
