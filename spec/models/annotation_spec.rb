@@ -298,7 +298,7 @@ describe Annotation do
       expect(@anno.save).to be_true
     end
     it "returns false if anno_store doesn't return id" do
-      allow(@anno.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
+      allow(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
       expect(@anno.save).to be_false
     end
     it "sets triannon_id attribute" do
@@ -311,34 +311,34 @@ describe Annotation do
     
 # Protected Methods ----------------------------------------------------------------
   
-  it "#conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
+  it "#oa_storage_conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
     anno = Annotation.new({})
-    conn = anno.send(:conn)
-    expect(conn).to be_a Faraday::Connection
-    expect(conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
+    oa_storage_conn = anno.send(:oa_storage_conn)
+    expect(oa_storage_conn).to be_a Faraday::Connection
+    expect(oa_storage_conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
   end
   
   context '#post_graph_to_oa_storage' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
-    it 'sends POST to conn, looks for 201 status and Location header' do
+    it 'sends POST to oa_storage_conn, looks for 201 status and Location header' do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
       expect(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
-      expect(@anno.send(:conn)).to receive(:post).and_return(resp)
+      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
       @anno.send(:post_graph_to_oa_storage)
     end 
     it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
       expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}new_id"}).twice
-      expect(@anno.send(:conn)).to receive(:post).and_return(resp)
+      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
       id = @anno.send(:post_graph_to_oa_storage)
       expect(id).to eq "new_id"
     end
     it "returns nil if there was an error" do
-      expect(@anno.send(:conn)).to receive(:post).and_return(Faraday::Response.new)
+      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
       expect(@anno.send(:post_graph_to_oa_storage)).to be_nil
     end
   end

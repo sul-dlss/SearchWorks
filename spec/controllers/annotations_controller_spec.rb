@@ -62,9 +62,9 @@ describe AnnotationsController do
                 }'
       resp = double("resp")
       expect(resp).to receive(:body).and_return(jsonld)
-      conn = double("conn")
-      expect(conn).to receive(:get).and_return(resp)
-      expect(Annotation).to receive(:conn).and_return(conn)
+      oa_storage_conn = double("oa_storage_conn")
+      expect(oa_storage_conn).to receive(:get).and_return(resp)
+      expect(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
       get :show, {:id => tid}, valid_session
       assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::TagAnnotation
     end
@@ -83,9 +83,9 @@ describe AnnotationsController do
         resp = double("resp")
         allow(resp).to receive(:status).and_return(201)
         allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
-        conn = double("conn")
-        allow(conn).to receive(:post).and_return(resp)
-        allow_any_instance_of(Annotation).to receive(:conn).and_return(conn)
+        oa_storage_conn = double("oa_storage_conn")
+        allow(oa_storage_conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
         post :create, {:annotation => valid_attributes}, valid_session
         assigns(:annotation).should be_a(Annotation)
       end
@@ -93,9 +93,9 @@ describe AnnotationsController do
         resp = double("resp")
         allow(resp).to receive(:status).and_return(201)
         allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
-        conn = double("conn")
-        allow(conn).to receive(:post).and_return(resp)
-        allow_any_instance_of(Annotation).to receive(:conn).and_return(conn)
+        oa_storage_conn = double("oa_storage_conn")
+        allow(oa_storage_conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
         post :create, {:annotation => valid_attributes}, valid_session
         assigns(:annotation)
         expect(response.status).to eq 201
@@ -104,9 +104,9 @@ describe AnnotationsController do
         resp = double("resp")
         allow(resp).to receive(:status).and_return(201)
         allow(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
-        conn = double("conn")
-        allow(conn).to receive(:post).and_return(resp)
-        allow_any_instance_of(Annotation).to receive(:conn).and_return(conn)
+        oa_storage_conn = double("oa_storage_conn")
+        allow(oa_storage_conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
         post :create, {:annotation => valid_attributes}, valid_session
         assigns(:annotation)
         expect(flash[:notice]).to eq 'Annotation was successfully created.'
@@ -114,9 +114,9 @@ describe AnnotationsController do
       it "returns status 500 if anno isn't successfully created" do
         resp = double("resp")
         allow(resp).to receive(:status).and_return(403)
-        conn = double("conn")
-        allow(conn).to receive(:post).and_return(resp)
-        allow_any_instance_of(Annotation).to receive(:conn).and_return(conn)
+        oa_storage_conn = double("oa_storage_conn")
+        allow(oa_storage_conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
         post :create, {:annotation => valid_attributes}, valid_session
         assigns(:annotation)
         expect(response.status).to eq 500
@@ -124,9 +124,9 @@ describe AnnotationsController do
       it "sends a flash message if problem creating anno" do
         resp = double("resp")
         allow(resp).to receive(:status).and_return(403)
-        conn = double("conn")
-        allow(conn).to receive(:post).and_return(resp)
-        allow_any_instance_of(Annotation).to receive(:conn).and_return(conn)
+        oa_storage_conn = double("oa_storage_conn")
+        allow(oa_storage_conn).to receive(:post).and_return(resp)
+        allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
         post :create, {:annotation => valid_attributes}, valid_session
         assigns(:annotation)
         expect(flash[:alert]).to eq 'There was a problem creating the Annotation.'
