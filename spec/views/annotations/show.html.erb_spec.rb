@@ -23,6 +23,9 @@ describe "annotations/show" do
                         {
                           "@id": "https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3",
                           "@type": "openannotation:Annotation",
+                          "openannotation:annotatedAt":{
+                            "@value":"2015-02-02T13:11:05Z","@type":"xsd:dateTime"
+                          },
                           "openannotation:hasBody": {
                             "@id": "_:g70171578915160"
                           },
@@ -63,6 +66,9 @@ describe "annotations/show" do
                     {
                       "@id": "https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce",
                       "@type": "openannotation:Annotation",
+                      "openannotation:annotatedAt":{
+                        "@value":"2015-02-02T01:01:01Z","@type":"xsd:dateTime"
+                      },
                       "openannotation:hasBody": {
                         "@id": "_:g70171583104620"
                       },
@@ -94,6 +100,9 @@ describe "annotations/show" do
                   {
                     "@id": "https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f",
                     "@type": "openannotation:Annotation",
+                    "openannotation:annotatedAt":{
+                      "@value":"2015-02-02T02:02:02Z","@type":"xsd:dateTime"
+                    },
                     "openannotation:hasBody": {
                       "@id": "http://dbpedia.org/resource/Love"
                     },
@@ -125,7 +134,7 @@ describe "annotations/show" do
       expect(rendered).to match /<a href="http:\/\/searchworks.stanford.edu\/view\//
     end
     it "annotated at" do
-      pending "annotated at not yet retained by Triannon"
+      expect(rendered).to match /2015-02-02T/
     end
     it "annotation model" do
       expect(rendered).to match /LD4L::OpenAnnotationRDF::.*Annotation/
