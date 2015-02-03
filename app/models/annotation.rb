@@ -65,7 +65,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   # @return jsonld for annotation from OA storage, as a String
   def self.stored_oa_jsonld(id)
-    resp = conn.get do |req|
+    resp = oa_storage_conn.get do |req|
       req.url id
     end
     resp.body
@@ -95,7 +95,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
   
-  def self.conn
+  def self.oa_storage_conn
     Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
   end
 
@@ -168,7 +168,7 @@ protected
   # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
   # @return <String> unique id of newly created anno, or nil if there was a problem
   def post_graph_to_oa_storage
-    response = conn.post do |req|
+    response = oa_storage_conn.post do |req|
       req.headers['Content-Type'] = 'application/x-turtle'
       req.body = graph.to_ttl
     end
@@ -179,8 +179,8 @@ protected
     return nil
   end
   
-  def conn    
-    @c ||= self.class.conn
+  def oa_storage_conn
+    @c ||= self.class.oa_storage_conn
   end
   
 end
