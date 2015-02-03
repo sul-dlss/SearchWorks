@@ -65,7 +65,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   # @return [String] jsonld for annotation
   def self.oa_jsonld(id)
-    resp = oa_search_conn.get do |req|
+    resp = oa_rsolr_conn.get do |req|
       req.url id
     end
     resp.body
@@ -95,8 +95,9 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
   
-  def self.oa_search_conn
+  def self.oa_rsolr_conn
     Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+#    @@rsolr_client ||= RSolr.connect Settings.OPEN_ANNOTATION_SOLR_URL
   end
 
   # Instance Methods ----------------------------------------------------------------
