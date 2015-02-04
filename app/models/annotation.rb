@@ -28,8 +28,8 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   # Class Methods ----------------------------------------------------------------
   
-  # @param <String> the URI for the tar
-  # @return <Array<LD4L::OpenAnnotationRDF::Annotation>> an array of specifically typed objects 
+  # @param [String] the URI for the target
+  # @return [Array<LD4L::OpenAnnotationRDF::Annotation>] an array of specifically typed objects 
   # (e.g.  TagAnnotation, CommmentAnnotation) loaded from the RDF::Graph data stored by Triannon
   def self.find_by_target_uri(target_uri)
     result = []
@@ -43,8 +43,8 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   
   # --- below this line sort of "protected" or "private" class methods
   
-  # @param <RDF::Graph> an annotation as a Graph
-  # @return <LD4L::OpenAnnotationRDF::Annotation> but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
+  # @param [RDF::Graph] an annotation as a Graph
+  # @return [LD4L::OpenAnnotationRDF::Annotation] but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
   def self.model_from_graph(graph)
     if graph && graph.size > 0
       r = ActiveTriples::Repositories.repositories[Annotation.repository]
@@ -72,13 +72,13 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   end
   
   # given a url, return the unique portion of it as the triannon_id
-  # @return <String> triannon id - the unique path at the end of the url
+  # @return [String] triannon id - the unique path at the end of the url
   def self.triannon_id_from_triannon_url url
     return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
   end
   
-  # @param <RDF::Graph> an annotation as a Graph
-  # @return <String> triannon id for the annotation (the unique path at the end of the url)
+  # @param [RDF::Graph] an annotation as a Graph
+  # @return [String] triannon id for the annotation (the unique path at the end of the url)
   def self.triannon_id_from_graph graph
     solutions = graph.query self.anno_query
     if solutions && solutions.size == 1
@@ -150,7 +150,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
 protected
   
-  # @return <RDF::Graph> a graph containing all relevant statements for storing this
+  # @return [RDF::Graph] a graph containing all relevant statements for storing this
   # object as an OpenAnnotation (e.g. including triples for body nodes) 
   def graph
     g = RDF::Graph.new
@@ -167,7 +167,7 @@ protected
   end
   
   # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
-  # @return <String> unique id of newly created anno, or nil if there was a problem
+  # @return [String] unique id of newly created anno, or nil if there was a problem
   def post_graph_to_oa_storage
     response = oa_storage_conn.post do |req|
       req.headers['Content-Type'] = 'application/x-turtle'
