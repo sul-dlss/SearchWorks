@@ -1,131 +1,36 @@
 require 'spec_helper'
 
-describe "annotations/show" do
-  before(:each) do
-    @comment_triannon_id = "5051575d-6248-4ff4-a163-8cc6d59785f3"
-    comment_jsonld = '{
-                      "@context": {
-                        "content": "http://www.w3.org/2011/content#",
-                        "dc": "http://purl.org/dc/terms/",
-                        "dcmitype": "http://purl.org/dc/dcmitype/",
-                        "openannotation": "http://www.w3.org/ns/oa#"
-                      },
-                      "@graph": [
-                        {
-                          "@id": "_:g70171578915160",
-                          "@type": [
-                            "dcmitype:Text",
-                            "content:ContentAsText"
-                          ],
-                          "content:chars": "I am a comment!",
-                          "dc:format": "text/plain"
-                        },
-                        {
-                          "@id": "https://triannon-dev.stanford.edu/annotations/5051575d-6248-4ff4-a163-8cc6d59785f3",
-                          "@type": "openannotation:Annotation",
-                          "openannotation:annotatedAt":{
-                            "@value":"2015-02-02T13:11:05Z","@type":"xsd:dateTime"
-                          },
-                          "openannotation:hasBody": {
-                            "@id": "_:g70171578915160"
-                          },
-                          "openannotation:hasTarget": {
-                            "@id": "http://searchworks.stanford.edu/view/666"
-                          },
-                          "openannotation:motivatedBy": {
-                            "@id": "openannotation:commenting"
-                          }
-                        }
-                      ]
-                    }'
-    comment_resp = double("resp")
-    allow(comment_resp).to receive(:body).and_return(comment_jsonld)
-    comment_conn = double("oa_rsolr_conn")
-    allow(comment_conn).to receive(:get).and_return(comment_resp)
-    allow(Annotation).to receive(:oa_rsolr_conn).and_return(comment_conn)
-    @comment_anno = Annotation.find_by_target_uri(@comment_triannon_id).first
-    @anno_triannon_id = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-    tag_jsonld = '{
-                  "@context": {
-                    "content": "http://www.w3.org/2011/content#",
-                    "dc": "http://purl.org/dc/terms/",
-                    "dcmitype": "http://purl.org/dc/dcmitype/",
-                    "openannotation": "http://www.w3.org/ns/oa#"
-                  },
-                  "@graph": [
-                    {
-                      "@id": "_:g70171583104620",
-                      "@type": [
-                        "dcmitype:Text",
-                        "content:ContentAsText",
-                        "openannotation:Tag"
-                      ],
-                      "content:chars": "blue",
-                      "dc:format": "text/plain"
-                    },
-                    {
-                      "@id": "https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce",
-                      "@type": "openannotation:Annotation",
-                      "openannotation:annotatedAt":{
-                        "@value":"2015-02-02T01:01:01Z","@type":"xsd:dateTime"
-                      },
-                      "openannotation:hasBody": {
-                        "@id": "_:g70171583104620"
-                      },
-                      "openannotation:hasTarget": {
-                        "@id": "http://searchworks.stanford.edu/view/666"
-                      },
-                      "openannotation:motivatedBy": {
-                        "@id": "openannotation:tagging"
-                      }
-                    }
-                  ]
-                }'
-    anno_resp = double("resp")
-    allow(anno_resp).to receive(:body).and_return(tag_jsonld)
-    anno_conn = double("oa_rsolr_conn")
-    allow(anno_conn).to receive(:get).and_return(anno_resp)
-    allow(Annotation).to receive(:oa_rsolr_conn).and_return(anno_conn).at_least(:once)
-    @tag_anno = Annotation.find_by_target_uri(@anno_triannon_id).first
-    @semantic_tag_triannon_id = "31e9e5ea-085a-43d7-83f3-b586b3c5783f"
-    st_jsonld = '{
-                "@context": {
-                  "openannotation": "http://www.w3.org/ns/oa#"
-                },
-                "@graph": [
-                  {
-                    "@id": "http://dbpedia.org/resource/Love",
-                    "@type": "openannotation:SemanticTag"
-                  },
-                  {
-                    "@id": "https://triannon-dev.stanford.edu/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f",
-                    "@type": "openannotation:Annotation",
-                    "openannotation:annotatedAt":{
-                      "@value":"2015-02-02T02:02:02Z","@type":"xsd:dateTime"
-                    },
-                    "openannotation:hasBody": {
-                      "@id": "http://dbpedia.org/resource/Love"
-                    },
-                    "openannotation:hasTarget": {
-                      "@id": "http://searchworks.stanford.edu/view/666"
-                    },
-                    "openannotation:motivatedBy": {
-                      "@id": "openannotation:tagging"
-                    }
-                  }
-                ]
-              }'
-    st_resp = double("resp")
-    allow(st_resp).to receive(:body).and_return(st_jsonld)
-    st_conn = double("oa_rsolr_conn")
-    allow(st_conn).to receive(:get).and_return(st_resp)
-    allow(Annotation).to receive(:oa_rsolr_conn).and_return(st_conn)
-    @semantic_tag_anno = Annotation.find_by_target_uri(@semantic_tag_triannon_id).first
-  end
+describe "annotations/show", :vcr => true do
+  let(:sw_id) {"666"}
+  let(:solr_response_start) {"{
+                            'responseHeader'=>{
+                              'status'=>0,
+                              'QTime'=>4,
+                              'params'=>{
+                                'q'=>'food'}},
+                            'response'=>{'numFound'=>4,'start'=>0,'maxScore'=>1.047625,'docs'=>
+                              [" }
+  let(:solr_response_end) {" ]
+                            },
+                            'facet_counts'=>{
+                              'facet_queries'=>{},
+                              'facet_fields'=>{
+                                'motivation'=>[
+                                  'tagging',3,
+                                  'commenting',1],
+                                'target_type'=>[
+                                  'external_URI',4],
+                                'body_type'=>[
+                                  'content_as_text',4],
+                                'annotated_at_tdate'=>[]},
+                              'facet_dates'=>{},
+                              'facet_ranges'=>{} 
+                            }
+                           }" }
   
   shared_examples_for 'Annotation display' do
     it "triannon id" do
-      expect(rendered).to match /<a href="https:\/\/triannon-dev.stanford.edu\/annotations\//
+      expect(rendered).to match /<a href="http:\/\/your\.triannon-server\.com\/annotations\//
     end
     it "motivation(s)" do
       expect(rendered).to match /<a href="http:\/\/www.w3.org\/ns\/oa\#.*ing"/
@@ -143,6 +48,21 @@ describe "annotations/show" do
   
   describe 'CommentAnnotation' do
     before(:each) do
+      comment_anno_solr_doc = "{
+          'id'=>'0baba6ca-4e4f-487a-8862-18eb307079b3',
+          'motivation'=>['commenting'],
+          'annotated_at'=>'2015-02-02T18:12:01Z',
+          'target_url'=>['http://searchworks.stanford.edu/view/666'],
+          'target_type'=>['external_URI'],
+          'body_type'=>['content_as_text'],
+          'body_chars_exact'=>['I luvs my food'],
+          'anno_jsonld'=>'{\"@context\":\"http://www.w3.org/ns/oa.jsonld\",\"@graph\":[{\"@id\":\"_:g70153076581040\",\"@type\":[\"dctypes:Text\",\"cnt:ContentAsText\"],\"chars\":\"I luvs my food\",\"dcterms:format\":\"text/plain\"},{\"@id\":\"http://your.triannon-server.com/annotations/0baba6ca-4e4f-487a-8862-18eb307079b3\",\"@type\":\"oa:Annotation\",\"hasBody\":\"_:g70153076581040\",\"hasTarget\":\"http://searchworks.stanford.edu/view/666\",\"motivatedBy\":\"oa:commenting\",\"oa:annotatedAt\":{\"@value\":\"2015-02-02T18:12:01Z\",\"@type\":\"xsd:dateTime\"}}]}',
+          '_version_'=>1492200001168736256,
+          'timestamp'=>'2015-02-04T18:00:16.024Z',
+          'score'=>0.21014 
+        }"
+      allow(Annotation.oa_rsolr_conn).to receive(:get).and_return(eval("#{solr_response_start}#{comment_anno_solr_doc}#{solr_response_end}"))
+      @comment_anno = Annotation.find_by_target_uri(sw_id).first
       assign(:annotation, @comment_anno)
       render
     end
@@ -160,7 +80,7 @@ describe "annotations/show" do
     it "shouldn't display phantom blank nodes for bodies" do
       # view gets [], [], ...
       expect(rendered).not_to match /\[\],/
-      assign(:annotation, @tag_anno)
+      assign(:annotation, @comment_anno)
       render
       expect(rendered).not_to match /\[\],/
     end
@@ -168,6 +88,36 @@ describe "annotations/show" do
   
   describe 'TagAnnotation' do
     before(:each) do
+      tag_jsonld = '{
+        "@context":"http://www.w3.org/ns/oa.jsonld",
+        "@graph":[
+          {"@id":"_:g43350240",
+            "@type":["dctypes:Text","cnt:ContentAsText","oa:Tag"],
+            "chars":"all the way",
+            "dcterms:format":"text/plain"
+          },
+          {"@id":"http://your.triannon-server.com/annotations/16460005-8aa8-444b-9956-fb74996cb124",
+            "@type":"oa:Annotation",
+            "hasBody":"_:g43350240",
+            "hasTarget":"http://searchworks.stanford.edu/view/666",
+            "motivatedBy":"oa:tagging",
+            "oa:annotatedAt":{"@value":"2015-02-02T18:12:01Z","@type":"xsd:dateTime"}
+          }]}'
+      tag_anno_solr_doc = "{
+          'id'=>'22f1dcd0-cfa1-47b6-a115-4c970cf95a7a',
+          'motivation'=>['tagging'],
+          'annotated_at'=>'2015-02-02T18:12:01Z',
+          'target_url'=>['http://searchworks.stanford.edu/view/666'],
+          'target_type'=>['external_URI'],
+          'body_type'=>['content_as_text'],
+          'body_chars_exact'=>['food'],
+          'anno_jsonld'=>'#{tag_jsonld}',
+          '_version_'=>1492200022420226048,
+          'timestamp'=>'2015-02-04T18:00:36.323Z',
+          'score'=>1.047625
+        }"
+      allow(Annotation.oa_rsolr_conn).to receive(:get).and_return(eval("#{solr_response_start}#{tag_anno_solr_doc}#{solr_response_end}"))
+      @tag_anno = Annotation.find_by_target_uri(sw_id).first
       assign(:annotation, @tag_anno)
       render
     end
@@ -189,7 +139,48 @@ describe "annotations/show" do
 
   describe 'SemanticTagAnnotation' do
     before(:each) do
-      assign(:annotation, @semantic_tag_anno)
+      semantic_tag_jsonld = '{
+          "@context": {
+            "openannotation": "http://www.w3.org/ns/oa#"
+          },
+          "@graph": [
+            {
+              "@id": "http://dbpedia.org/resource/Love",
+              "@type": "openannotation:SemanticTag"
+            },
+            {
+              "@id": "http://your.triannon-server.com/annotations/31e9e5ea-085a-43d7-83f3-b586b3c5783f",
+              "@type": "openannotation:Annotation",
+              "openannotation:annotatedAt":{
+                "@value":"2015-02-02T02:02:02Z","@type":"xsd:dateTime"
+              },
+              "openannotation:hasBody": {
+                "@id": "http://dbpedia.org/resource/Love"
+              },
+              "openannotation:hasTarget": {
+                "@id": "http://searchworks.stanford.edu/view/666"
+              },
+              "openannotation:motivatedBy": {
+                "@id": "openannotation:tagging"
+              }
+            }
+          ]
+        }'
+      semantic_tag_anno_solr_doc = "{
+          'id'=>'31e9e5ea-085a-43d7-83f3-b586b3c5783f',
+          'motivation'=>['tagging'],
+          'annotated_at'=>'2015-02-02T02:02:02Z',
+          'target_url'=>['http://searchworks.stanford.edu/view/666'],
+          'target_type'=>['external_URI'],
+          'body_type'=>['external_URI'],
+          'anno_jsonld'=>'#{semantic_tag_jsonld}',
+          '_version_'=>1492200022420226048,
+          'timestamp'=>'2015-02-04T14:14:14.666Z',
+          'score'=>1.047625
+        }"
+      allow(Annotation.oa_rsolr_conn).to receive(:get).and_return(eval("#{solr_response_start}#{semantic_tag_anno_solr_doc}#{solr_response_end}"))
+      semantic_tag_anno = Annotation.find_by_target_uri(sw_id).first
+      assign(:annotation, semantic_tag_anno)
       render
     end
     it_behaves_like "Annotation display"
@@ -200,8 +191,23 @@ describe "annotations/show" do
 
   describe 'unrecognized Annotation model' do
     before(:each) do
-      unrec_model_id = "e8b3ecdc-d8da-4b85-944d-65d800493bce"
-      assign(:annotation, Annotation.find_by_target_uri(unrec_model_id).first)
+      # unrec b/c no   type oa:Tag  on body node
+      unrec_anno_solr_doc = "{
+          'id'=>'22f1dcd0-cfa1-47b6-a115-4c970cf95a7a',
+          'motivation'=>['tagging'],
+          'annotated_at'=>'2015-02-02T18:12:01Z',
+          'target_url'=>['http://searchworks.stanford.edu/view/666'],
+          'target_type'=>['external_URI'],
+          'body_type'=>['content_as_text'],
+          'body_chars_exact'=>['food'],
+          'anno_jsonld'=>'{\"@context\":\"http://www.w3.org/ns/oa.jsonld\",\"@graph\":[{\"@id\":\"_:g70153135527660\",\"@type\":[\"dctypes:Text\",\"cnt:ContentAsText\"],\"chars\":\"food\",\"dcterms:format\":\"text/plain\"},{\"@id\":\"http://your.triannon-server.com/annotations/22f1dcd0-cfa1-47b6-a115-4c970cf95a7a\",\"@type\":\"oa:Annotation\",\"hasBody\":\"_:g70153135527660\",\"hasTarget\":\"http://searchworks.stanford.edu/view/666\",\"motivatedBy\":\"oa:describing\",\"oa:annotatedAt\":{\"@value\":\"2015-02-02T18:13:13Z\",\"@type\":\"xsd:dateTime\"}}]}',
+          '_version_'=>1492200022420226048,
+          'timestamp'=>'2015-02-04T18:00:36.323Z',
+          'score'=>1.047625
+        }"
+      allow(Annotation.oa_rsolr_conn).to receive(:get).and_return(eval("#{solr_response_start}#{unrec_anno_solr_doc}#{solr_response_end}"))
+      anno = Annotation.find_by_target_uri(sw_id).first
+      assign(:annotation, anno)
       render
     end
     it_behaves_like "Annotation display"
