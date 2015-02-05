@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Annotation do
+describe Annotation, :vcr => true do
 
   # we used to use :tag repo;  this test may be silly now
   it 'has repository set to :default' do
@@ -10,19 +10,32 @@ describe Annotation do
 # Class Methods ----------------------------------------------------------------
 
   context '*find_by_target_uri' do
+    let(:target_uri) {"http://searchworks.stanford.edu/view/666"}
     it "returns Array of LD4L::OpenAnnotationRDF::Annotation objects" do
-      # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
-      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-      result = Annotation.find_by_target_uri tid
+      result = Annotation.find_by_target_uri target_uri
       expect(result).to be_a Array
-      expect(result.size).to eq 1
+      expect(result.size).to eq 3
       expect(result.first).to be_a LD4L::OpenAnnotationRDF::Annotation
     end
     it "calls model_from_graph to populate the specific object" do
-      expect(Annotation).to receive(:model_from_graph)
-      # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
-      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-      result = Annotation.find_by_target_uri tid
+      expect(Annotation).to receive(:model_from_graph).exactly(3).times
+      result = Annotation.find_by_target_uri target_uri
+    end
+  end
+  
+  context '*jsonld_annos_for_target_uri' do
+    let(:target_uri) {"http://searchworks.stanford.edu/view/666"}
+    it "Solr escapes the target_uri string" do
+      escaped_url = Annotation.solr_escape(target_uri)
+      expect(Annotation.oa_rsolr_conn).to receive(:get).with('select', {:params => {:q => "target_url:#{escaped_url}", :defType=>"lucene"}})
+      Annotation.jsonld_annos_for_target_uri(target_uri)
+    end
+    it "returns Array of jsonld Strings" do
+      result = Annotation.jsonld_annos_for_target_uri(target_uri)
+      expect(result.size).to be > 0
+      result.each { |anno_string|
+        RDF::Graph.new.from_jsonld anno_string
+      }
     end
   end
   
@@ -172,6 +185,21 @@ describe Annotation do
     it "doesn't find solution when graph is empty" do
       solutions = RDF::Graph.new.query Annotation.anno_query
       expect(solutions.size).to eq 0
+    end
+  end
+
+  context '*solr_escape' do
+    it "adds backslash to Solr query syntax chars" do
+      # per http://lucene.apache.org/core/4_0_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters
+      special_chars = [ "+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^", '"', "~", "*", "?", ":", "\\", "/" ]
+      escaped_str = Annotation.solr_escape("aa#{special_chars.join('aa')}aa")
+      special_chars.each { |c|  
+        expect(escaped_str).to match "\\#{c}"
+      }
+    end
+    it "leaves other chars alone" do
+      str = "nothing to see here; let's move along people."
+      expect(Annotation.solr_escape(str)).to eq str
     end
   end
 

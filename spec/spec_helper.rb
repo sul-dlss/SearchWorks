@@ -99,3 +99,12 @@ end
 def number_pattern
   /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
 end
+
+require 'vcr'
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.allow_http_connections_when_no_cassette = true
+  c.default_cassette_options = { :record => :new_episodes , :re_record_interval => 28.days }
+  c.configure_rspec_metadata!
+end

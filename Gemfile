@@ -99,3 +99,5 @@ gem 'whenever', require: false
 gem 'ld4l-open_annotation_rdf'
 gem 'rdf-open_annotation'  # full OA vocab for RDF predefined terms and properties
 gem 'pry-byebug', group: [:development, :test]
+gem  "vcr", group: [:test]
+gem  "webmock", group: [:test]
