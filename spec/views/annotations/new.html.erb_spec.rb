@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "annotations/new" do
+describe "annotations/new", :vcr => true do
   before(:each) do
     assign(:annotation, Annotation.new({}))
   end

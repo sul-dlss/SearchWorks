@@ -10,8 +10,14 @@ class AnnotationsController < ApplicationController
 
   # GET /annotations/1
   # GET /annotations/1.json
+  # displays the FIRST annotation;  annotations that have match the searchworks record as a target are retrieved
   def show
-    @annotation = Annotation.find_by_target_uri(params[:id]).first
+    # FIXME:  should probably be hardcoded or use hostname but depends on Triannon annos
+    #target_uri = "http://#{Settings.HOSTNAME}.stanford.edu/view/#{params[:id]}"
+    target_uri = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{params[:id]}"
+    annos = Annotation.find_by_target_uri(target_uri)
+    # TODO:  need to render all of 'em that match, not just first one
+    @annotation = annos.first
     # TODO:  need to render template based on model type
   end
 

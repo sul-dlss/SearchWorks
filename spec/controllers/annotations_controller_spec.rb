@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AnnotationsController do
+describe AnnotationsController, :vcr => true do
 
   # This should return the minimal set of attributes required to create a valid
   # Annotation. As you add validations to Annotation, be sure to
@@ -26,47 +26,15 @@ describe AnnotationsController do
 
   describe "GET show" do
     it "assigns the requested annotation as @annotation" do
-      tid = "2155d7f5-cd79-435f-ab86-11f1e246d3ce"
-      jsonld = '{
-                  "@context": {
-                    "content": "http://www.w3.org/2011/content#",
-                    "dc": "http://purl.org/dc/terms/",
-                    "dcmitype": "http://purl.org/dc/dcmitype/",
-                    "openannotation": "http://www.w3.org/ns/oa#"
-                  },
-                  "@graph": [
-                    {
-                      "@id": "_:g70171526504060",
-                      "@type": [
-                        "dcmitype:Text",
-                        "content:ContentAsText",
-                        "openannotation:Tag"
-                      ],
-                      "content:chars": "blue",
-                      "dc:format": "text/plain"
-                    },
-                    {
-                      "@id": "https://triannon-dev.stanford.edu/annotations/2155d7f5-cd79-435f-ab86-11f1e246d3ce",
-                      "@type": "openannotation:Annotation",
-                      "openannotation:hasBody": {
-                        "@id": "_:g70171526504060"
-                      },
-                      "openannotation:hasTarget": {
-                        "@id": "http://searchworks.stanford.edu/view/666"
-                      },
-                      "openannotation:motivatedBy": {
-                        "@id": "openannotation:tagging"
-                      }
-                    }
-                  ]
-                }'
-      resp = double("resp")
-      expect(resp).to receive(:body).and_return(jsonld)
-      oa_rsolr_conn = double("oa_rsolr_conn")
-      expect(oa_rsolr_conn).to receive(:get).and_return(resp)
-      expect(Annotation).to receive(:oa_rsolr_conn).and_return(oa_rsolr_conn)
-      get :show, {:id => tid}, valid_session
-      assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::TagAnnotation
+      # TODO: need to render all of 'em that match, not just first one
+      get :show, {:id => '666'}, valid_session
+      assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::CommentAnnotation
+    end
+    it "calls Annotation.find_by_target_uri with full URL for solr id" do
+      sw_id = "666"
+      full_target_url = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{sw_id}"
+      expect(Annotation).to receive(:find_by_target_uri).with(full_target_url).and_call_original
+      get :show, {:id => sw_id}, valid_session
     end
   end
 
