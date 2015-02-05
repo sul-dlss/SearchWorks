@@ -27,35 +27,55 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   attr_accessor :triannon_id
 
   # Class Methods ----------------------------------------------------------------
+  # TODO: move all the class methods to a find_annotations model concern?
   
-  # @param [String] the URI for the target
+  # Get an Array of Annotation objects with the param as an object of hasTarget
+  # @param [String] target_uri this is a target_url in Annotations we are seeking
   # @return [Array<LD4L::OpenAnnotationRDF::Annotation>] an array of specifically typed objects 
-  # (e.g.  TagAnnotation, CommmentAnnotation) loaded from the RDF::Graph data stored by Triannon
+  #  (e.g.  LD4L::OpenAnnotationRDF::TagAnnotation, LD4L::OpenAnnotationRDF::CommmentAnnotation) 
+  #  loaded from the RDF::Graph data stored by Triannon
   def self.find_by_target_uri(target_uri)
     result = []
-    # FIXME:  pretending a triannon id is a target_uri for now - waiting for query by target URI in Triannon
-    #  we would really get back a list of annos as ttl ...
-    tid = target_uri
-    g = RDF::Graph.new.from_jsonld oa_jsonld(tid)
-    # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
-    result << Annotation.model_from_graph(g)
+    if target_uri
+      jsonld_annos_for_target_uri(target_uri).each { |anno_as_jsonld|
+        result << Annotation.model_from_graph(RDF::Graph.new.from_jsonld(anno_as_jsonld))
+      }
+    end
+    result
   end
   
   # --- below this line sort of "protected" or "private" class methods
+  # TODO: move all these class methods to a find_annotations model concern?
   
+  # get the annotations with the SearchWorks record as a target from Open Annotation Solr
+  # @param [String] target_uri this is a target_url in Annotations we are seeking
+  # @return [Array<String>] an Array of annotations as Strings containing jsonld
+  def self.jsonld_annos_for_target_uri(target_uri)
+    annos_as_jsonld = []
+    solr_params = {:defType => 'lucene', :q => "target_url:#{solr_escape(target_uri)}"}
+    
+    # RSolr handles url escaping
+    rsolr_resp = oa_rsolr_conn.get 'select', :params => solr_params
+    if rsolr_resp && rsolr_resp["response"] && rsolr_resp["response"]["docs"]
+      rsolr_resp["response"]["docs"].each { |anno_solr_doc|
+        annos_as_jsonld << anno_solr_doc["anno_jsonld"]
+      }
+    end
+    annos_as_jsonld
+  end
+
   # @param [RDF::Graph] an annotation as a Graph
   # @return [LD4L::OpenAnnotationRDF::Annotation] but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
   def self.model_from_graph(graph)
     if graph && graph.size > 0
-      r = ActiveTriples::Repositories.repositories[Annotation.repository]
-      r << graph
-      tid = triannon_id_from_graph graph
-      anno_uri = RDF::URI.new("#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}")
-      # remove extraneous statements from older versions of this anno
+      anno_uri = RDF::URI.new(triannon_id_from_graph(graph))
+      # remove extraneous statements from older versions of this anno's graph
       # TODO: need to remove extraneous statements of children of anno too (e.g. targets, bodies, annotatedBy ...)
-      r.query(subject: anno_uri).each { |stmt|
+      rdf_repo = ActiveTriples::Repositories.repositories[Annotation.repository]
+      rdf_repo << graph
+      rdf_repo.query(subject: anno_uri).each { |stmt|
         if graph.query(stmt).count == 0
-          r.send(:delete_statement, stmt)
+          rdf_repo.send(:delete_statement, stmt)
         end
       }
       # TODO: should we also set the xx.triannon_id, which doesn't exist on the active-triples model?
@@ -63,20 +83,6 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
 
-  # @return [String] jsonld for annotation
-  def self.oa_jsonld(id)
-    resp = oa_rsolr_conn.get do |req|
-      req.url id
-    end
-    resp.body
-  end
-  
-  # given a url, return the unique portion of it as the triannon_id
-  # @return [String] triannon id - the unique path at the end of the url
-  def self.triannon_id_from_triannon_url url
-    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
-  end
-  
   # @param [RDF::Graph] an annotation as a Graph
   # @return [String] triannon id for the annotation (the unique path at the end of the url)
   def self.triannon_id_from_graph graph
@@ -87,6 +93,12 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     nil
   end
   
+  # given a url, return the unique portion of it as the triannon_id
+  # @return [String] triannon id - the unique path at the end of the url
+  def self.triannon_id_from_triannon_url url
+    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
+  end
+  
   # query for a subject with type of RDF::OpenAnnotation.Annotation
   def self.anno_query
     @anno_query ||= begin
@@ -95,9 +107,20 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
   end
   
+  # backslash escape characters that have special meaning to Solr query parser
+  # per http://lucene.apache.org/core/4_0_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters
+  #  + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
+  # see also http://svn.apache.org/repos/asf/lucene/dev/tags/lucene_solr_4_9_1/solr/solrj/src/java/org/apache/solr/client/solrj/util/ClientUtils.java
+  #   escapeQueryChars method
+  # @return [String] str with special chars preceded by a backslash
+  def self.solr_escape(str)
+    # note that the gsub will parse the escaped backslashes, as will the ruby code sending the query to Solr 
+    # so the result sent to Solr is ultimately a single backslash in front of the particular character 
+    str.gsub(/([+\-&|!\(\)\{\}\[\]\^"~\*\?:\\\/])/, '\\\\\1')
+  end
+
   def self.oa_rsolr_conn
-    Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
-#    @@rsolr_client ||= RSolr.connect Settings.OPEN_ANNOTATION_SOLR_URL
+    @@rsolr_client ||= RSolr.connect :url => Settings.OPEN_ANNOTATION_SOLR_URL
   end
 
   # Instance Methods ----------------------------------------------------------------

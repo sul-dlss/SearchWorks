@@ -16,3 +16,5 @@ PURL_EMBED_URL_SCHEME: 'http://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'http://purl.stanford.edu/'
 FEEDBACK_ALERT: <%= false %>
 GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
+OPEN_ANNOTATION_STORE_URL: 'http://oa-host.example.com'
+OPEN_ANNOTATION_SOLR_URL: 'http://oa-solr.example.com'
