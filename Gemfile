@@ -55,6 +55,7 @@ group :development, :test do
   gem 'rspec-rails', '< 2.99'
   gem 'capybara'
   gem 'poltergeist'
+  gem "jettywrapper", "~> 1.7"
 end
 
 group :sqlite do
@@ -78,7 +79,6 @@ gem 'deprecation'
 
 gem 'blacklight', '~> 5.8.2'
 
-gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests"
 gem "blacklight-marc", "~> 5.0"
