@@ -25,6 +25,9 @@ if ENV["COVERAGE"] or ENV["CI"]
   end
 end
 
+# We need webmock for annotation fixtures, but we don't want it to block other connections
+require "webmock/rspec"
+WebMock.disable_net_connect!(:allow => [/triannon/, /127.0.0.1/, /localhost/])
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -105,6 +108,6 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock
   c.allow_http_connections_when_no_cassette = true
-  c.default_cassette_options = { :record => :new_episodes , :re_record_interval => 28.days }
+  c.default_cassette_options = { :record => :new_episodes }
   c.configure_rspec_metadata!
 end

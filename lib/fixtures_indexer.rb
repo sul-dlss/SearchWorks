@@ -2,6 +2,10 @@ require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
 require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
 require "#{Rails.root}/spec/fixtures/mods_records/mods_fixtures"
 
+# We need webmock for annotation fixtures, but we don't want it to block other connections
+require "webmock/rspec"
+WebMock.disable_net_connect!(:allow_localhost => true)
+
 class FixturesIndexer
   include Marc856Fixtures
   include MarcMetadataFixtures

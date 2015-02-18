@@ -56,6 +56,7 @@ group :development, :test do
   gem 'rspec-rails', '< 2.99'
   gem 'capybara'
   gem 'poltergeist'
+  gem "jettywrapper", "~> 1.7"
 end
 
 group :sqlite do
@@ -81,17 +82,16 @@ gem 'deprecation'
 
 gem 'blacklight', '~> 5.8.2'
 
-gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests"
 gem "blacklight-marc", "~> 5.0"
 gem "faraday"
 gem "rails_config"
 gem "mods_display", "0.3.3"
-gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
+gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery', ref: '2f9f342518'
+gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search', ref: '199eaeda7faf00e7'
 gem "font-awesome-sass"
-gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
+gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit', ref: '15a140f9ee6c42d'
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
