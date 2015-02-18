@@ -147,10 +147,17 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
       # TODO: it should be possible to have multiple bodies
       if anno_params["hasBody"] && !anno_params["hasBody"]["id"].blank?
-        body = LD4L::OpenAnnotationRDF::CommentBody.new
-        body.content = anno_params["hasBody"]["id"]
-        body.format = "text/plain"
-        hasBody << body
+        # TODO: motivatedBy should allow for mulitple motivations
+        if motivatedBy.first == RDF::OpenAnnotation.commenting
+          body = LD4L::OpenAnnotationRDF::CommentBody.new
+          body.content = anno_params["hasBody"]["id"]
+          body.format = "text/plain"
+          hasBody << body
+        elsif motivatedBy.first == RDF::OpenAnnotation.tagging
+          body = LD4L::OpenAnnotationRDF::TagBody.new
+          body.tag = anno_params["hasBody"]["id"]
+          hasBody << body
+        end
       end
 
       # TODO: annotatedBy - from WebAuth
@@ -181,7 +188,12 @@ protected
       g << stmt
     } 
     # add body graphs to main graph when they have content
-    self.hasBody.find_all { |body| body.content.size > 0 && body.content.first.size > 0 }.each { |body_w_chars|
+    comment_or_tag_bodies = []
+    comment_or_tag_bodies << self.hasBody.find_all { |body| 
+      (body.respond_to?(:content) && body.content.size > 0 && body.content.first.size > 0) || 
+        (body.respond_to?(:tag) && body.tag.size > 0 && body.tag.first.size > 0) 
+    }
+    comment_or_tag_bodies.flatten.each { |body_w_chars|
       body_w_chars.each_statement { |stmt|
         g << stmt
       }

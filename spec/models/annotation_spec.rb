@@ -208,53 +208,85 @@ describe Annotation, :vcr => true do
   context '#initialize' do
     context 'motivatedBy' do
       it "full url (with OA url prefix)" do
-        t = Annotation.new({"motivatedBy" => "tagging"})
-        t.motivatedBy.first.should eq RDF::OpenAnnotation.tagging
+        a = Annotation.new({"motivatedBy" => "tagging"})
+        a.motivatedBy.first.should eq RDF::OpenAnnotation.tagging
       end
     end
     context 'hasTarget' do
       it "is full SearchWorks url" do
-        t = Annotation.new({"hasTarget" => {"id" =>"666"}})
-        t.hasTarget.first.rdf_subject.to_s.should match Constants::CONTACT_INFO[:website][:url]
-        t.hasTarget.first.rdf_subject.to_s.should match "http://searchworks.stanford.edu/view/666"
+        a = Annotation.new({"hasTarget" => {"id" =>"666"}})
+        a.hasTarget.first.rdf_subject.to_s.should match Constants::CONTACT_INFO[:website][:url]
+        a.hasTarget.first.rdf_subject.to_s.should match "http://searchworks.stanford.edu/view/666"
       end
       it "is empty array if id value is empty string" do
-        t = Annotation.new({"hasTarget" => {"id" =>""}})
-        expect(t.hasTarget).to eq []
+        a = Annotation.new({"hasTarget" => {"id" =>""}})
+        expect(a.hasTarget).to eq []
       end
       it "is empty array if id value is nil" do
-        t = Annotation.new({"hasTarget" => {"id" =>nil}})
-        expect(t.hasTarget).to eq []
+        a = Annotation.new({"hasTarget" => {"id" =>nil}})
+        expect(a.hasTarget).to eq []
       end
       it "is empty array if missing from params" do
-        t = Annotation.new({})
-        expect(t.hasTarget).to eq []
-        t = Annotation.new({"hasTarget" => {}})
-        expect(t.hasTarget).to eq []
+        a = Annotation.new({})
+        expect(a.hasTarget).to eq []
+        a = Annotation.new({"hasTarget" => {}})
+        expect(a.hasTarget).to eq []
       end
     end # hasTarget
     context 'hasBody' do
-      it "is a populated CommentBody object" do
-        t = Annotation.new({"hasBody" => {"id" =>"blah blah"}})
-        body_obj = t.hasBody.first
-        expect(body_obj).to be_a LD4L::OpenAnnotationRDF::CommentBody
-        expect(body_obj.content.first).to eq "blah blah"
-        expect(body_obj.format.first).to eq "text/plain"
+      context 'comment anno' do
+        it "is a populated CommentBody object if motivation is commenting" do
+          a = Annotation.new({"motivatedBy" => "commenting", "hasBody" => {"id" =>"blah blah"}})
+          body_obj = a.hasBody.first
+          expect(body_obj).to be_a LD4L::OpenAnnotationRDF::CommentBody
+          expect(body_obj.content.first).to eq "blah blah"
+          expect(body_obj.format.first).to eq "text/plain"
+        end
+        it "calls LD4L::OpenAnnotationRDF::CommentBody.new" do
+          expect(LD4L::OpenAnnotationRDF::CommentBody).to receive(:new).and_call_original
+          Annotation.new({"motivatedBy" => "commenting", "hasBody" => {"id" =>"blah blah"}})
+        end
+        it "has a type of RDF::Content.ContentAsText if motivation is commenting" do
+          a = Annotation.new({"motivatedBy" => "commenting", "hasBody" => {"id" =>"blah blah"}})
+          body_obj = a.hasBody.first
+          expect(body_obj.type).to include RDF::Content.ContentAsText
+        end
+      end
+      context 'tag anno' do
+        it "is a populated TagBody object if the motivation is tagging" do
+          a = Annotation.new({"motivatedBy" => "tagging", "hasBody" => {"id" =>"blah blah"}})
+          body_obj = a.hasBody.first
+          expect(body_obj).to be_a LD4L::OpenAnnotationRDF::TagBody
+          expect(body_obj.tag.first).to eq "blah blah"
+        end
+        it "calls LD4L::OpenAnnotationRDF::TagBody.new" do
+          expect(LD4L::OpenAnnotationRDF::TagBody).to receive(:new).and_call_original
+          Annotation.new({"motivatedBy" => "tagging", "hasBody" => {"id" =>"blah blah"}})
+        end
+        it "has a type of RDF::OpenAnnotation.Tag if motivation is tagging" do
+          a = Annotation.new({"motivatedBy" => "tagging", "hasBody" => {"id" =>"blah blah"}})
+          body_obj = a.hasBody.first
+          expect(body_obj.type).to include RDF::OpenAnnotation.Tag
+        end
       end
 
       it "is empty array if id value is empty string" do
-        t = Annotation.new({"hasBody" => {"id" =>""}})
-        expect(t.hasBody).to eq []
+        a = Annotation.new({"hasBody" => {"id" =>""}})
+        expect(a.hasBody).to eq []
       end
       it "is empty array if id value is nil" do
-        t = Annotation.new({"hasBody" => {"id" => nil}})
-        expect(t.hasBody).to eq []
+        a = Annotation.new({"hasBody" => {"id" => nil}})
+        expect(a.hasBody).to eq []
       end
       it "is empty array if missing from params" do
-        t = Annotation.new({})
-        expect(t.hasBody).to eq []
-        t = Annotation.new({"hasBody" => {}})
-        expect(t.hasBody).to eq []
+        a = Annotation.new({})
+        expect(a.hasBody).to eq []
+        a = Annotation.new({"hasBody" => {}})
+        expect(a.hasBody).to eq []
+      end
+      it "is empty array if motivatedBy isn't tagging or commenting" do
+        a = Annotation.new({"motivatedBy" => "describing", "hasBody" => {"id" =>"blah blah"}})
+        expect(a.hasBody).to eq []
       end
     end # hasBody
 
@@ -265,10 +297,10 @@ describe Annotation, :vcr => true do
     end
     context 'annotatedAt' do
       it "is set to DateTime.now" do
-        t = Annotation.new({})
-        a = t.annotatedAt.first
-        a.class.should == DateTime
-        a.to_i.should <= DateTime.now.to_i
+        a = Annotation.new({})
+        aat = a.annotatedAt.first
+        aat.class.should == DateTime
+        aat.to_i.should <= DateTime.now.to_i
       end
     end
   end
