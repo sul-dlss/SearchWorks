@@ -26,7 +26,7 @@ set :log_level, :info
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml config/solr.yml config/secrets.yml config/schedule.rb}
+set :linked_files, %w{config/database.yml config/solr.yml config/secrets.yml config/schedule.rb public/robots.txt}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin config/settings log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
