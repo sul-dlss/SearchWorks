@@ -1,4 +1,5 @@
 <%= render :partial => "marc_search_results_document_fields", :locals => { :document => document } %>
+<% document_counter ||= 0 %>
 
 <dl class="dl-horizontal dl-invert">
   <% if document.is_a_database? %>
@@ -23,3 +24,4 @@
 </dl>
 
 <%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
+<%= render :partial => "search_results_annotations", :locals => { :document => document, :counter => document_counter_with_offset(document_counter) } %>

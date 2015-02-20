@@ -5,6 +5,8 @@
   <div class="record-sections col-md-8">
     <% if @document.respond_to?(:to_marc) %>
       <%= render "catalog/record/marc_metadata_sections" %>
+      <%= render partial: "catalog/record/marc_tags" %>
+      <%= render partial: "catalog/record/marc_user_comments" %>      
     <% end %>
   </div>
 </div>

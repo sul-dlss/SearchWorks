@@ -1,0 +1,104 @@
+@mixin anno-tags {
+  .tag {
+      background: #ddd;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      color: #333;
+      display: inline-block;
+      font-size: small;
+      margin: 0 20px 10px 0;
+      position: relative;
+      padding: 5px 18px 5px 10px;
+      text-decoration: none;
+  }
+
+  .tag:after {
+      content: "";
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+
+  .tag .arrow {
+      display: inline-block;
+      border: 20px solid;
+      border-color: #fff #fff #fff transparent;
+      height: 2px;
+      z-index: 5000;
+      pointer-events: none;
+      position: absolute;
+      right: -20px;
+      top: -6px;
+      display: inline-block;
+  }
+}
+
+.annotations {
+  clear: both;
+  display: none;
+  margin: 0 -15px 0 -40px;
+
+  .container {
+    border-top: 1px solid $sul-annotations-border-top-color;
+    margin-top: 10px;
+    padding: 10px 0 0 25px;
+
+    .user-comments {
+      display: none;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    .tags {
+      @include anno-tags;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .annotations {
+    .container {
+      .user-comments {
+        margin-bottom: 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.section.annotations-tags, .section.annotations-user-comments {
+  margin-bottom: 20px;
+  position: relative;
+
+  #create-comments, #create-tags {
+    display: none;
+  }
+
+  .tags {
+    clear: both;
+    @include anno-tags;
+  }
+
+  .user-comments ul {
+    clear: both;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  .section-heading button {
+    position: absolute;
+    right: 0;
+    top: -8px;
+  }
+
+  .form-group .cancel-link {
+    margin-left: 10px;
+  }
+
+}

@@ -4,6 +4,8 @@ describe "catalog/_index_marc.html.erb" do
   include MarcMetadataFixtures
   before do
     view.stub(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:document_counter_with_offset).and_return(1)
+    allow(view).to receive(:link_to_document).and_return('<a/>')
   end
   describe "physical extent" do
     before do
@@ -13,7 +15,7 @@ describe "catalog/_index_marc.html.erb" do
           physical: ["The Physical Extent"],
           format_main_ssim: ['Book']
         )
-      )
+      )      
       render
     end
     it "should link to the author" do

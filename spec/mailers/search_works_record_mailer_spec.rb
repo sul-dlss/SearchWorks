@@ -22,7 +22,7 @@ describe SearchWorksRecordMailer do
     ]
   }
   let(:params) { {to: 'email@example.com', message: 'The message', subject: 'The subject'} }
-  let(:url_params) { {host: 'example.com'} }
+  let(:url_params) { {host: 'example.com'} }  
   describe 'email_record' do
     let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
     it 'should send a plain-text email' do
