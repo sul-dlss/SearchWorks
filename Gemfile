@@ -71,6 +71,8 @@ group :test do
   gem 'coveralls', require: false
 end
 
+gem 'newrelic_rpm'
+
 gem "coderay"
 
 gem 'openseadragon', github: 'sul-dlss/openseadragon-rails', branch: 'ff36-fix'

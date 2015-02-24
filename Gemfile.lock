@@ -207,6 +207,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     netrc (0.10.3)
+    newrelic_rpm (3.12.0.288)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nom-xml (0.5.1)
@@ -367,6 +368,7 @@ DEPENDENCIES
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)
   mysql
+  newrelic_rpm
   nokogiri (= 1.6.5)
   openseadragon!
   poltergeist
