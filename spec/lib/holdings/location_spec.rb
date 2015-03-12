@@ -79,6 +79,11 @@ describe Holdings::Location do
         expect(external_location.location_link).to match /L12345/
         expect(external_location.location_link).to_not match /LL12345/
       end
+      it 'should just return a link to the lane library catalog if there are no barcoded items' do
+        allow(external_location).to receive(:items).and_return([])
+        external_location.mhld = [double('mhld', library: "LANE-MED")]
+        expect(external_location.location_link).to eq 'http://lmldb.stanford.edu'
+      end
       it 'should not provide a link for non-external locations' do
         expect(non_external_location.location_link).to be_nil
       end

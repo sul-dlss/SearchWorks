@@ -21,7 +21,11 @@ class Holdings
     end
     def location_link
       if external_location?
-        "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/,'')}&Search_Code=CMD*&CNT=10"
+        if items.first.try(:barcode)
+          "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/,'')}&Search_Code=CMD*&CNT=10"
+        else
+          'http://lmldb.stanford.edu'
+        end
       end
     end
     def present?
