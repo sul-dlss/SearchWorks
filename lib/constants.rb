@@ -493,6 +493,7 @@ module Constants
    "RARE-BOOKS" => "Rare Books Collection (non-circulating)",
    "RARE-STOR" => "Rare Books storage (non-circulating)",
    "RAUB-COLL" => "Raubitschek Collection of Papyrology and Epigraphy",
+   "RAUB-NUM" => "Frank L. Kovacs Numismatic Library",
    "RBC-30" => "Rare Books Collection",
    "RBCX" => "Rare Books Collection: Restricted access",
    "RBCX-30" => "Rare Books Collection",
