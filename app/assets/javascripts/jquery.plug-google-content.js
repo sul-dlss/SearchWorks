@@ -75,13 +75,16 @@
 
       var imageEl = $parent.find(selectorCoverImg);
 
-      imageEl
-        .attr('src', thumbUrl)
-        .removeClass('hide')
-        .addClass('show');
+      // Only set the thumb src if it's not already set
+      if( !imageEl.attr('src') ) {
+        imageEl
+          .attr('src', thumbUrl)
+          .removeClass('hide')
+          .addClass('show');
 
-      imageEl.parent().parent().find('span.fake-cover')
-        .addClass('hide');
+        imageEl.parent().parent().find('span.fake-cover')
+          .addClass('hide');
+      }
     }
 
 
