@@ -45,9 +45,9 @@ describe Holdings::Callnumber do
     it "should return false if there is no reverse shelfkey" do
       expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
     end
-    it 'should return false if callnumber type is ALPHANUM' do
+    it 'should return true if callnumber type is ALPHANUM' do
       alpha_num = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- ALPHANUM -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(alpha_num)).to_not be_browsable
+      expect(Holdings::Callnumber.new(alpha_num)).to be_browsable
     end
     it 'should return false if callnumber type is INTERNET' do
       internet = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- INTERNET -|- course_id -|- reserve_desk -|- loan_period'
