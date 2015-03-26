@@ -1088,7 +1088,7 @@ module Constants
     "Send To" => "link",
     "Selections" => "check-3"
    }
-   BROWSABLE_CALLNUMBERS = ["LC", "DEWEY"]
+   BROWSABLE_CALLNUMBERS = ["LC", "DEWEY", "ALPHANUM"]
    LIBRARY_INSTRUCTIONS = {
      "SPEC-COLL" => {
        heading: "Limited access",
