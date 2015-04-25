@@ -98,4 +98,26 @@ describe Holdings::Library do
       expect(library.mhld).to be_present
     end
   end
+  describe '#as_json' do
+    let(:callnumbers) do
+      [
+        Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Callnumber.new('barcode2 -|- library -|- home_location2 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Callnumber.new('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
+      ]
+    end
+    let(:as_json) { Holdings::Library.new('GREEN', nil, callnumbers).as_json }
+    it 'should return a hash with all of the libraries public reader methods' do
+      expect(as_json).to be_a Hash
+      expect(as_json[:code]).to eq 'GREEN'
+      expect(as_json[:name]).to eq 'Green Library'
+      expect(as_json[:holding_library?]).to be_true
+    end
+    it 'shuold return an array of locations' do
+      expect(as_json[:locations]).to be_a Array
+      expect(as_json[:locations].length).to eq 3
+      expect(as_json[:locations].first).to be_a Hash
+      expect(as_json[:locations].first[:code]).to eq 'home_location'
+    end
+  end
 end

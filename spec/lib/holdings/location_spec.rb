@@ -118,4 +118,25 @@ describe Holdings::Location do
       expect(location.mhld).to be_present
     end
   end
+  describe '#as_json' do
+    let(:callnumbers) do
+      [
+        Holdings::Callnumber.new('barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- '),
+        Holdings::Callnumber.new('barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- '),
+        Holdings::Callnumber.new('barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ')
+      ]
+    end
+    let(:as_json) { Holdings::Location.new('STACKS', callnumbers).as_json }
+    it 'should return a hash with all of the callnumbers public reader methods' do
+      expect(as_json).to be_a Hash
+      expect(as_json[:code]).to eq 'STACKS'
+      expect(as_json[:name]).to eq 'Stacks'
+    end
+    it 'should return an items array' do
+      expect(as_json[:items]).to be_a Array
+      expect(as_json[:items].length).to eq 3
+      expect(as_json[:items].first).to be_a Hash
+      expect(as_json[:items].first[:library]).to eq 'GREEN'
+    end
+  end
 end

@@ -37,6 +37,17 @@ class Holdings
     def sort
       name || @code
     end
+
+    def as_json(*)
+      methods = (public_methods(false) - [:as_json, :items, :mhld])
+      location_info = methods.each_with_object({}) do |meth, obj|
+        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
+      end
+      location_info[:items] = items.select(&:present?).map(&:as_json)
+      location_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
+      location_info
+    end
+
     private
     def library
       if any_items?

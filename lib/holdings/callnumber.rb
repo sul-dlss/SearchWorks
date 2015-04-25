@@ -104,6 +104,16 @@ class Holdings
       library != "LANE-MED"
     end
 
+    def as_json(*)
+      methods = (public_methods(false) - [:as_json, :status, :current_location])
+      callnumber_info = methods.each_with_object({}) do |meth, obj|
+        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
+      end
+      callnumber_info[:current_location] = current_location.as_json
+      callnumber_info[:status] = status.as_json
+      callnumber_info
+    end
+
     private
 
     def standard_or_zombie_library

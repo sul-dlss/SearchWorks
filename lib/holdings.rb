@@ -58,4 +58,8 @@ class Holdings
       Holdings::MHLD.new(mhld_display)
     end
   end
+
+  def as_json(*)
+    libraries.select(&:present?).map(&:as_json)
+  end
 end
