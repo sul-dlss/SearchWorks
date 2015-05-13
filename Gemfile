@@ -57,6 +57,7 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
   gem "jettywrapper", "~> 1.7"
+  gem "pry-byebug" # Annotation Implementation
 end
 
 group :sqlite do
@@ -70,6 +71,8 @@ end
 group :test do
   gem 'simplecov', '~> 0.7.1', require: false
   gem 'coveralls', require: false
+  gem  "vcr", require: false # Annotation Implementation
+  gem  "webmock", require: false # Annotation Implementation
 end
 
 gem 'newrelic_rpm'
@@ -101,6 +104,3 @@ gem 'whenever', require: false
 # Annotation Implementation
 gem 'ld4l-open_annotation_rdf'
 gem 'rdf-open_annotation'  # full OA vocab for RDF predefined terms and properties
-gem 'pry-byebug', group: [:development, :test]
-gem  "vcr", group: [:test]
-gem  "webmock", group: [:test]
