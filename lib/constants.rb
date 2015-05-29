@@ -1090,6 +1090,10 @@ module Constants
    }
    BROWSABLE_CALLNUMBERS = ["LC", "DEWEY", "ALPHANUM"]
    LIBRARY_INSTRUCTIONS = {
+     'ART' => {
+       heading: 'Library closed June25 - August23',
+       text: 'The library will be closed during its relocation to the new McMurty building. Please check out ART materials prior to June 25.'
+     },
      "SPEC-COLL" => {
        heading: "Limited access",
        text: "All materials are stored offsite. Request items 2 business days in advance. Maximum 5 items per day."
