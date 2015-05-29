@@ -11,8 +11,10 @@ feature "Record view" do
       within "div.panel-online" do
         expect(page).to have_css("div.panel-heading", visible: true)
         expect(page).to have_css("h3", text: "Available online", visible: true)
-        expect(page).to have_css("a.full-view[href='http://books.google.com/books?id=GqKSckP3uRIC&printsec=frontcover&source=gbs_ViewAPI']", text: "(Full view)", visible: true)
-        expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
+        within('.google-preview') do
+          expect(page).to have_css('a.full-view', text: '(Full view)', visible: true)
+          expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
+        end
       end
     end
   end
@@ -26,8 +28,10 @@ feature "Record view" do
       within "div.panel-related" do
         expect(page).to have_css("div.panel-heading", visible: true)
         expect(page).to have_css("h3", text: "More options", visible: true)
-        expect(page).to have_css("a.limited-preview[href='http://books.google.com/books?id=3xmDzzNiwiUC&printsec=frontcover&source=gbs_ViewAPI']", text: "(Limited preview)", visible: true)
-        expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
+        within('.google-preview') do
+          expect(page).to have_css('a.limited-preview', text: '(Limited preview)', visible: true)
+          expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
+        end
       end
     end
 
