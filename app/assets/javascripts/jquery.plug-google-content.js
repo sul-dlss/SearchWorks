@@ -38,7 +38,6 @@
         $.ajax({
           type: 'GET',
           url: batchBooksApiUrl,
-          async: false,
           contentType: "application/json",
           dataType: 'jsonp',
 
@@ -58,30 +57,37 @@
       $.each(json, function(bibkey, data) {
         if (typeof data.thumbnail_url !== 'undefined') {
           renderCoverImage(bibkey, data);
+          return;
         }
+      });
 
+      $.each(json, function(bibkey, data) {
         if (typeof data.info_url !== 'undefined') {
           renderAccessPanel(bibkey, data);
+          return;
         }
       });
     }
 
     function renderCoverImage(bibkey, data) {
       var thumbUrl = data.thumbnail_url,
-        selectorCoverImg = 'img.' + bibkey;
+          selectorCoverImg = 'img.' + bibkey;
 
       thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
       thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
 
       var imageEl = $parent.find(selectorCoverImg);
 
-      imageEl
-        .attr('src', thumbUrl)
-        .removeClass('hide')
-        .addClass('show');
+      // Only set the thumb src if it's not already set
+      if(typeof imageEl.attr('src') === 'undefined') {
+        imageEl
+          .attr('src', thumbUrl)
+          .removeClass('hide')
+          .addClass('show');
 
-      imageEl.parent().parent().find('span.fake-cover')
-        .addClass('hide');
+        imageEl.parent().parent().find('span.fake-cover')
+          .addClass('hide');
+      }
     }
 
 
