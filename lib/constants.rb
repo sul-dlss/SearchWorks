@@ -1092,7 +1092,7 @@ module Constants
    LIBRARY_INSTRUCTIONS = {
      'ART' => {
        heading: 'Library closed June25 - August23',
-       text: 'The library will be closed during its relocation to the new McMurty building. Please check out ART materials prior to June 25.'
+       text: 'The library will be closed during its relocation to the new McMurtry building. Please check out ART materials prior to June 25.'
      },
      "SPEC-COLL" => {
        heading: "Limited access",
