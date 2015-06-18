@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.1.11'
 gem 'nokogiri', '1.6.5' # nokogiri/nom-xml throwing error in 1.6.6
 gem 'sprockets', '~> 2.11.3'
 gem 'i18n'
