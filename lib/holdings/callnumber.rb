@@ -1,5 +1,7 @@
 class Holdings
   class Callnumber
+    attr_writer :current_location, :status
+    attr_accessor :due_date
     def initialize(holding_info)
       @holding_info = holding_info
     end

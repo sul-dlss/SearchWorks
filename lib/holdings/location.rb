@@ -49,12 +49,22 @@ class Holdings
       name || @code
     end
 
-    def as_json(*)
+    def as_json(live_data = [])
       methods = (public_methods(false) - [:as_json, :items, :mhld])
       location_info = methods.each_with_object({}) do |meth, obj|
         obj[meth.to_sym] = send(meth) if method(meth).arity == 0
       end
-      location_info[:items] = items.select(&:present?).map(&:as_json)
+      present_items = items.select(&:present?)
+      present_items.map do |item|
+        live_data_string = live_data_for_barcode(live_data, item.barcode)
+        live_data_barcode = JSON.parse(live_data_string) if live_data_string.present?
+        if live_data_barcode.present?
+          item.current_location = Holdings::Location.new(live_data_barcode['current_location']).as_json
+          item.due_date = live_data_barcode['due_date'] if live_data_barcode['due_date']
+          item.status = Holdings::Status.new(item)
+        end
+      end
+      location_info[:items] = present_items.map(&:as_json)
       location_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
       location_info
     end
@@ -97,6 +107,12 @@ class Holdings
 
     def contains_only_must_request_items?
       @items.present? && @items.all?(&:must_request?)
+    end
+
+    def live_data_for_barcode(data, barcode)
+      data.find do |item|
+        JSON.parse(item)['barcode'] == barcode
+      end
     end
 
     def library
