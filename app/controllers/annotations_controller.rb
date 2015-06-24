@@ -17,7 +17,7 @@ class AnnotationsController < ApplicationController
     target_uri = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{params[:id]}"
     annos = Annotation.find_by_target_uri(target_uri)
     # TODO:  need to render all of 'em that match, not just first one
-    @annotation = annos.first
+    @annotation = annos.first if annos.present?
     # TODO:  need to render template based on model type
   end
 
