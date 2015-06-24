@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AnnotationsController, :vcr => true do
+describe AnnotationsController, vcr: true, annos: true do
 
   # This should return the minimal set of attributes required to create a valid
   # Annotation. As you add validations to Annotation, be sure to
@@ -99,7 +99,7 @@ describe AnnotationsController, :vcr => true do
         assigns(:annotation)
         expect(flash[:alert]).to eq 'There was a problem creating the Annotation.'
       end
-      
+
       it "redirects to the created anno" do
         pending "not sure that this will be relevant"
         post :create, {:annotation => valid_attributes}, valid_session

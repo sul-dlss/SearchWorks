@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe Annotation, :vcr => true do
+describe Annotation, vcr: true, annos: true do
 
   # we used to use :tag repo;  this test may be silly now
   it 'has repository set to :default' do
     expect(Annotation.repository).to be :default
   end
-  
+
 # Class Methods ----------------------------------------------------------------
 
   context '*find_by_target_uri' do
@@ -22,7 +22,7 @@ describe Annotation, :vcr => true do
       result = Annotation.find_by_target_uri target_uri
     end
   end
-  
+
   context '*jsonld_annos_for_target_uri' do
     let(:target_uri) {"http://searchworks.stanford.edu/view/666"}
     it "Solr escapes the target_uri string" do
@@ -38,7 +38,7 @@ describe Annotation, :vcr => true do
       }
     end
   end
-  
+
   context '*model_from_graph' do
     context 'tag' do
       before(:each) do
@@ -132,7 +132,7 @@ describe Annotation, :vcr => true do
       expect(result).to be_a LD4L::OpenAnnotationRDF::Annotation
     end
   end # *model_from_graph
-  
+
   context '*triannon_id_from_graph' do
     it "returns unique part of triannon url for Triannon OA::Annotation" do
       tid = "aaa"
@@ -168,7 +168,7 @@ describe Annotation, :vcr => true do
       expect(Annotation.triannon_id_from_triannon_url(nil)).to eq nil
     end
   end
-  
+
   context '*anno_query' do
     it "finds solution when graph has RDF.type OA::Annotation" do
       my_url = "http://fakeurl.org/id"
@@ -193,7 +193,7 @@ describe Annotation, :vcr => true do
       # per http://lucene.apache.org/core/4_0_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters
       special_chars = [ "+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^", '"', "~", "*", "?", ":", "\\", "/" ]
       escaped_str = Annotation.solr_escape("aa#{special_chars.join('aa')}aa")
-      special_chars.each { |c|  
+      special_chars.each { |c|
         expect(escaped_str).to match "\\#{c}"
       }
     end
@@ -304,7 +304,7 @@ describe Annotation, :vcr => true do
       end
     end
   end
-  
+
   context '#graph' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
@@ -344,7 +344,7 @@ describe Annotation, :vcr => true do
       end
     end
   end
-  
+
   context '#save' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
@@ -368,16 +368,16 @@ describe Annotation, :vcr => true do
       expect(@anno.triannon_id).to eq "666"
     end
   end
-    
+
 # Protected Methods ----------------------------------------------------------------
-  
+
   it "#oa_storage_conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
     anno = Annotation.new({})
     oa_storage_conn = anno.send(:oa_storage_conn)
     expect(oa_storage_conn).to be_a Faraday::Connection
     expect(oa_storage_conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
   end
-  
+
   context '#post_graph_to_oa_storage' do
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
@@ -388,7 +388,7 @@ describe Annotation, :vcr => true do
       expect(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
       expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
       @anno.send(:post_graph_to_oa_storage)
-    end 
+    end
     it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
@@ -402,5 +402,5 @@ describe Annotation, :vcr => true do
       expect(@anno.send(:post_graph_to_oa_storage)).to be_nil
     end
   end
-  
+
 end

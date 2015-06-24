@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "annotations/show", :vcr => true do
+describe "annotations/show", vcr: true, annos: true do
   let(:sw_id) {"666"}
   let(:solr_response_start) {"{
                             'responseHeader'=>{
@@ -24,10 +24,10 @@ describe "annotations/show", :vcr => true do
                                   'content_as_text',4],
                                 'annotated_at_tdate'=>[]},
                               'facet_dates'=>{},
-                              'facet_ranges'=>{} 
+                              'facet_ranges'=>{}
                             }
                            }" }
-  
+
   shared_examples_for 'Annotation display' do
     it "triannon id" do
       expect(rendered).to match /<a href="http:\/\/your\.triannon-server\.com\/annotations\//
@@ -45,7 +45,7 @@ describe "annotations/show", :vcr => true do
       expect(rendered).to match /LD4L::OpenAnnotationRDF::.*Annotation/
     end
   end
-  
+
   describe 'CommentAnnotation' do
     before(:each) do
       comment_anno_solr_doc = "{
@@ -59,7 +59,7 @@ describe "annotations/show", :vcr => true do
           'anno_jsonld'=>'{\"@context\":\"http://www.w3.org/ns/oa.jsonld\",\"@graph\":[{\"@id\":\"_:g70153076581040\",\"@type\":[\"dctypes:Text\",\"cnt:ContentAsText\"],\"chars\":\"I luvs my food\",\"dcterms:format\":\"text/plain\"},{\"@id\":\"http://your.triannon-server.com/annotations/0baba6ca-4e4f-487a-8862-18eb307079b3\",\"@type\":\"oa:Annotation\",\"hasBody\":\"_:g70153076581040\",\"hasTarget\":\"http://searchworks.stanford.edu/view/666\",\"motivatedBy\":\"oa:commenting\",\"oa:annotatedAt\":{\"@value\":\"2015-02-02T18:12:01Z\",\"@type\":\"xsd:dateTime\"}}]}',
           '_version_'=>1492200001168736256,
           'timestamp'=>'2015-02-04T18:00:16.024Z',
-          'score'=>0.21014 
+          'score'=>0.21014
         }"
       allow(Annotation.oa_rsolr_conn).to receive(:get).and_return(eval("#{solr_response_start}#{comment_anno_solr_doc}#{solr_response_end}"))
       @comment_anno = Annotation.find_by_target_uri(sw_id).first
@@ -87,7 +87,7 @@ describe "annotations/show", :vcr => true do
       expect(rendered).not_to match /\[\],/
     end
   end
-  
+
   describe 'TagAnnotation' do
     before(:each) do
       tag_jsonld = '{
@@ -214,5 +214,5 @@ describe "annotations/show", :vcr => true do
     end
     it_behaves_like "Annotation display"
   end
-  
+
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AnnotationsHelper do
+describe AnnotationsHelper, annos: true do
   context '#oa_motivations' do
     it 'returns Array of Strings' do
       expect(oa_motivations).to be_an Array

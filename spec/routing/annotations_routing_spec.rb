@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe AnnotationsController do
+describe AnnotationsController, annos: true do
   describe "routing" do
 
     it "routes to #index" do
