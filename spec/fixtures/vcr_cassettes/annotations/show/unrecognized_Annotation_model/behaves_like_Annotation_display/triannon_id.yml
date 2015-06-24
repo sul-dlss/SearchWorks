@@ -2,50 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8983/solr/triannon/select?defType=lucene&q=target_url:e8b3ecdc%5C-d8da%5C-4b85%5C-944d%5C-65d800493bce&wt=ruby
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Last-Modified:
-      - Wed, 04 Feb 2015 18:00:59 GMT
-      Etag:
-      - '"OTAwMDAwMDAwMDAwMDAwMFNvbHI="'
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          'responseHeader'=>{
-            'status'=>0,
-            'QTime'=>0,
-            'params'=>{
-              'q'=>'target_url:e8b3ecdc\\-d8da\\-4b85\\-944d\\-65d800493bce',
-              'defType'=>'lucene',
-              'wt'=>'ruby'}},
-          'response'=>{'numFound'=>0,'start'=>0,'maxScore'=>0.0,'docs'=>[]
-          },
-          'facet_counts'=>{
-            'facet_queries'=>{},
-            'facet_fields'=>{
-              'motivation'=>[],
-              'target_type'=>[],
-              'body_type'=>[],
-              'annotated_at_tdate'=>[]},
-            'facet_dates'=>{},
-            'facet_ranges'=>{}}}
-    http_version: 
-  recorded_at: Thu, 05 Feb 2015 22:48:35 GMT
-- request:
-    method: get
     uri: http://www.w3.org/ns/oa.jsonld
     body:
       encoding: US-ASCII
@@ -63,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Feb 2015 00:39:08 GMT
+      - Wed, 24 Jun 2015 22:51:38 GMT
       Server:
       - Apache/2
       Last-Modified:
@@ -77,9 +33,11 @@ http_interactions:
       Cache-Control:
       - max-age=21600
       Expires:
-      - Fri, 06 Feb 2015 06:39:08 GMT
+      - Thu, 25 Jun 2015 04:51:38 GMT
       P3p:
       - policyref="http://www.w3.org/2014/08/p3p.xml"
+      Access-Control-Allow-Origin:
+      - "*"
       Content-Type:
       - application/ld+json
     body:
@@ -1193,5 +1151,5 @@ http_interactions:
 
 
     http_version: 
-  recorded_at: Fri, 06 Feb 2015 00:39:09 GMT
+  recorded_at: Wed, 24 Jun 2015 22:51:38 GMT
 recorded_with: VCR 2.9.3

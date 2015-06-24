@@ -13,7 +13,7 @@
 
     return this.each(function() {
       var baseUrlSW = "searchworks.stanford.edu/view/",
-          openAnnoUrl = "https://triannon-dev.stanford.edu/solr/select?defType=lucene&wt=json&",
+          openAnnoUrl = "https://sul-solr-tester.stanford.edu/triannon-dev/select?defType=lucene&wt=json&",
           $documents = $(this),
           listRecords = $documents.find('[data-anno-id]'),
           targetUrls = [],

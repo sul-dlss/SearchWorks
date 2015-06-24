@@ -28,7 +28,7 @@ describe AnnotationsController, vcr: true, annos: true do
     it "assigns the requested annotation as @annotation" do
       # TODO: need to render all of 'em that match, not just first one
       get :show, {:id => '666'}, valid_session
-      assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::CommentAnnotation
+      assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::Annotation
     end
     it "calls Annotation.find_by_target_uri with full URL for solr id" do
       sw_id = "666"

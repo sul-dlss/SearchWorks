@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8983/solr/triannon/select?defType=lucene&q=target_url:http%5C:%5C/%5C/searchworks.stanford.edu%5C/view%5C/666&wt=ruby
+    uri: https://sul-solr-tester.stanford.edu/triannon-dev/select?defType=lucene&q=target_url:http%5C:%5C/%5C/searchworks.stanford.edu%5C/view%5C/666&wt=ruby
     body:
       encoding: US-ASCII
       string: ''
@@ -12,12 +12,19 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Date:
+      - Wed, 24 Jun 2015 22:51:42 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains
       Last-Modified:
-      - Wed, 04 Feb 2015 18:00:59 GMT
+      - Fri, 12 Jun 2015 18:11:04 GMT
       Etag:
-      - '"OTAwMDAwMDAwMDAwMDAwMFNvbHI="'
+      - '"OGJmZjQwMDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - text/plain;charset=UTF-8
+      Via:
+      - 1.1 sul-solr-tester.stanford.edu
       Transfer-Encoding:
       - chunked
     body:
@@ -26,61 +33,111 @@ http_interactions:
         {
           'responseHeader'=>{
             'status'=>0,
-            'QTime'=>1,
+            'QTime'=>10,
             'params'=>{
               'q'=>'target_url:http\\:\\/\\/searchworks.stanford.edu\\/view\\/666',
               'defType'=>'lucene',
               'wt'=>'ruby'}},
-          'response'=>{'numFound'=>3,'start'=>0,'maxScore'=>1.0,'docs'=>[
+          'response'=>{'numFound'=>3,'start'=>0,'maxScore'=>10.847724,'docs'=>[
               {
-                'id'=>'0baba6ca-4e4f-487a-8862-18eb307079b3',
+                'id'=>'sw/48/1b/90/6d/481b906d-6acc-4d67-ab69-a5ea7d841e0d',
+                'root'=>'sw',
+                'motivation'=>['tagging'],
+                'target_url'=>['http://searchworks.stanford.edu/view/666'],
+                'target_type'=>['external_URI'],
+                'body_type'=>['content_as_text'],
+                'body_chars_exact'=>['666 tag'],
+                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g44150160","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"666 tag","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/48/1b/90/6d/481b906d-6acc-4d67-ab69-a5ea7d841e0d","@type":"oa:Annotation","hasBody":"_:g44150160","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
+                '_version_'=>1504899827070140416,
+                'timestamp'=>'2015-06-24T22:18:33.881Z',
+                'score'=>10.847724},
+              {
+                'id'=>'sw/ac/d1/8b/25/acd18b25-ec98-48dc-8ec8-ac8dee5ca3de',
+                'root'=>'sw',
                 'motivation'=>['commenting'],
                 'target_url'=>['http://searchworks.stanford.edu/view/666'],
                 'target_type'=>['external_URI'],
                 'body_type'=>['content_as_text'],
-                'body_chars_exact'=>['I luvs my food'],
-                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa.jsonld","@graph":[{"@id":"_:g70153076581040","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"I luvs my food"},{"@id":"http://your.triannon-server.com/annotations/0baba6ca-4e4f-487a-8862-18eb307079b3","@type":"oa:Annotation","hasBody":"_:g70153076581040","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:commenting"}]}',
-                '_version_'=>1492200001168736256,
-                'timestamp'=>'2015-02-04T18:00:16.024Z',
-                'score'=>1.0},
+                'body_chars_exact'=>['666 comment'],
+                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g59073700","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"666 comment","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/ac/d1/8b/25/acd18b25-ec98-48dc-8ec8-ac8dee5ca3de","@type":"oa:Annotation","hasBody":"_:g59073700","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:commenting"}]}',
+                '_version_'=>1504899851442192384,
+                'timestamp'=>'2015-06-24T22:18:57.094Z',
+                'score'=>10.847724},
               {
-                'id'=>'22f1dcd0-cfa1-47b6-a115-4c970cf95a7a',
-                'motivation'=>['tagging'],
+                'id'=>'sw/21/ca/ca/d9/21cacad9-fc4d-4e7e-8b52-98ed0566d6a5',
+                'root'=>'sw',
+                'motivation'=>['commenting'],
                 'target_url'=>['http://searchworks.stanford.edu/view/666'],
                 'target_type'=>['external_URI'],
                 'body_type'=>['content_as_text'],
-                'body_chars_exact'=>['food'],
-                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa.jsonld","@graph":[{"@id":"_:g70153135527660","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"food"},{"@id":"http://your.triannon-server.com/annotations/22f1dcd0-cfa1-47b6-a115-4c970cf95a7a","@type":"oa:Annotation","hasBody":"_:g70153135527660","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
-                '_version_'=>1492200022420226048,
-                'timestamp'=>'2015-02-04T18:00:36.323Z',
-                'score'=>1.0},
-              {
-                'id'=>'4bb7cc04-86b5-4918-b4a6-3540ab72ffbc',
-                'motivation'=>['tagging'],
-                'target_url'=>['http://searchworks.stanford.edu/view/666'],
-                'target_type'=>['external_URI'],
-                'body_type'=>['content_as_text'],
-                'body_chars_exact'=>['foods'],
-                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa.jsonld","@graph":[{"@id":"_:g70153132276660","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"foods"},{"@id":"http://your.triannon-server.com/annotations/4bb7cc04-86b5-4918-b4a6-3540ab72ffbc","@type":"oa:Annotation","hasBody":"_:g70153132276660","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
-                '_version_'=>1492200045829685248,
-                'timestamp'=>'2015-02-04T18:00:58.647Z',
-                'score'=>1.0}]
+                'body_chars_exact'=>['yet another 666 comment'],
+                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g64174880","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"yet another 666 comment","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/21/ca/ca/d9/21cacad9-fc4d-4e7e-8b52-98ed0566d6a5","@type":"oa:Annotation","hasBody":"_:g64174880","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:commenting"}]}',
+                '_version_'=>1504899861121597440,
+                'timestamp'=>'2015-06-24T22:19:06.32Z',
+                'score'=>10.847724}]
           },
           'facet_counts'=>{
             'facet_queries'=>{},
             'facet_fields'=>{
+              'root'=>[
+                'sw',3],
               'motivation'=>[
-                'tagging',2,
-                'commenting',1],
+                'commenting',2,
+                'tagging',1],
               'target_type'=>[
                 'external_URI',3],
               'body_type'=>[
                 'content_as_text',3],
               'annotated_at_tdate'=>[]},
             'facet_dates'=>{},
-            'facet_ranges'=>{}}}
+            'facet_ranges'=>{},
+            'facet_intervals'=>{}}}
     http_version: 
-  recorded_at: Thu, 05 Feb 2015 21:20:58 GMT
+  recorded_at: Wed, 24 Jun 2015 22:51:43 GMT
+- request:
+    method: get
+    uri: http://www.w3.org/ns/oa-context-20130208.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/ld+json, application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      Date:
+      - Wed, 24 Jun 2015 22:51:42 GMT
+      Server:
+      - Apache/2
+      Location:
+      - http://www.w3.org/ns/oa.jsonld
+      Cache-Control:
+      - max-age=21600
+      Expires:
+      - Thu, 25 Jun 2015 04:51:42 GMT
+      Content-Length:
+      - '240'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>307 Temporary Redirect</title>
+        </head><body>
+        <h1>Temporary Redirect</h1>
+        <p>The document has moved <a href="http://www.w3.org/ns/oa.jsonld">here</a>.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 22:51:43 GMT
 - request:
     method: get
     uri: http://www.w3.org/ns/oa.jsonld
@@ -100,7 +157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Feb 2015 21:20:58 GMT
+      - Wed, 24 Jun 2015 22:51:43 GMT
       Server:
       - Apache/2
       Last-Modified:
@@ -114,9 +171,11 @@ http_interactions:
       Cache-Control:
       - max-age=21600
       Expires:
-      - Fri, 06 Feb 2015 03:20:58 GMT
+      - Thu, 25 Jun 2015 04:51:43 GMT
       P3p:
       - policyref="http://www.w3.org/2014/08/p3p.xml"
+      Access-Control-Allow-Origin:
+      - "*"
       Content-Type:
       - application/ld+json
     body:
@@ -1230,7 +1289,51 @@ http_interactions:
 
 
     http_version: 
-  recorded_at: Thu, 05 Feb 2015 21:20:58 GMT
+  recorded_at: Wed, 24 Jun 2015 22:51:43 GMT
+- request:
+    method: get
+    uri: http://www.w3.org/ns/oa-context-20130208.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/ld+json, application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      Date:
+      - Wed, 24 Jun 2015 22:51:43 GMT
+      Server:
+      - Apache/2
+      Location:
+      - http://www.w3.org/ns/oa.jsonld
+      Cache-Control:
+      - max-age=21600
+      Expires:
+      - Thu, 25 Jun 2015 04:51:43 GMT
+      Content-Length:
+      - '240'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>307 Temporary Redirect</title>
+        </head><body>
+        <h1>Temporary Redirect</h1>
+        <p>The document has moved <a href="http://www.w3.org/ns/oa.jsonld">here</a>.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 22:51:43 GMT
 - request:
     method: get
     uri: http://www.w3.org/ns/oa.jsonld
@@ -1250,7 +1353,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Feb 2015 21:20:58 GMT
+      - Wed, 24 Jun 2015 22:51:43 GMT
       Server:
       - Apache/2
       Last-Modified:
@@ -1264,9 +1367,11 @@ http_interactions:
       Cache-Control:
       - max-age=21600
       Expires:
-      - Fri, 06 Feb 2015 03:20:58 GMT
+      - Thu, 25 Jun 2015 04:51:43 GMT
       P3p:
       - policyref="http://www.w3.org/2014/08/p3p.xml"
+      Access-Control-Allow-Origin:
+      - "*"
       Content-Type:
       - application/ld+json
     body:
@@ -2380,7 +2485,51 @@ http_interactions:
 
 
     http_version: 
-  recorded_at: Thu, 05 Feb 2015 21:20:59 GMT
+  recorded_at: Wed, 24 Jun 2015 22:51:44 GMT
+- request:
+    method: get
+    uri: http://www.w3.org/ns/oa-context-20130208.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/ld+json, application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      Date:
+      - Wed, 24 Jun 2015 22:51:44 GMT
+      Server:
+      - Apache/2
+      Location:
+      - http://www.w3.org/ns/oa.jsonld
+      Cache-Control:
+      - max-age=21600
+      Expires:
+      - Thu, 25 Jun 2015 04:51:44 GMT
+      Content-Length:
+      - '240'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>307 Temporary Redirect</title>
+        </head><body>
+        <h1>Temporary Redirect</h1>
+        <p>The document has moved <a href="http://www.w3.org/ns/oa.jsonld">here</a>.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 22:51:44 GMT
 - request:
     method: get
     uri: http://www.w3.org/ns/oa.jsonld
@@ -2400,7 +2549,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Feb 2015 21:20:59 GMT
+      - Wed, 24 Jun 2015 22:51:44 GMT
       Server:
       - Apache/2
       Last-Modified:
@@ -2414,9 +2563,11 @@ http_interactions:
       Cache-Control:
       - max-age=21600
       Expires:
-      - Fri, 06 Feb 2015 03:20:59 GMT
+      - Thu, 25 Jun 2015 04:51:44 GMT
       P3p:
       - policyref="http://www.w3.org/2014/08/p3p.xml"
+      Access-Control-Allow-Origin:
+      - "*"
       Content-Type:
       - application/ld+json
     body:
@@ -3530,5 +3681,5 @@ http_interactions:
 
 
     http_version: 
-  recorded_at: Thu, 05 Feb 2015 21:20:59 GMT
+  recorded_at: Wed, 24 Jun 2015 22:51:44 GMT
 recorded_with: VCR 2.9.3
