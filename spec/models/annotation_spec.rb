@@ -14,11 +14,11 @@ describe Annotation, vcr: true, annos: true do
     it "returns Array of LD4L::OpenAnnotationRDF::Annotation objects" do
       result = Annotation.find_by_target_uri target_uri
       expect(result).to be_a Array
-      expect(result.size).to eq 3
+      expect(result.size).to eq 4
       expect(result.first).to be_a LD4L::OpenAnnotationRDF::Annotation
     end
     it "calls model_from_graph to populate the specific object" do
-      expect(Annotation).to receive(:model_from_graph).exactly(3).times
+      expect(Annotation).to receive(:model_from_graph).exactly(4).times
       result = Annotation.find_by_target_uri target_uri
     end
   end

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 24 Jun 2015 22:51:34 GMT
+      - Thu, 25 Jun 2015 20:55:25 GMT
       Server:
       - Apache/2
       Last-Modified:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=21600
       Expires:
-      - Thu, 25 Jun 2015 04:51:34 GMT
+      - Fri, 26 Jun 2015 02:55:25 GMT
       P3p:
       - policyref="http://www.w3.org/2014/08/p3p.xml"
       Access-Control-Allow-Origin:
@@ -1151,5 +1151,5 @@ http_interactions:
 
 
     http_version: 
-  recorded_at: Wed, 24 Jun 2015 22:51:35 GMT
+  recorded_at: Thu, 25 Jun 2015 20:55:25 GMT
 recorded_with: VCR 2.9.3
