@@ -16,7 +16,7 @@
   </div>
 
   <div id="content" class="col-md-8 col-sm-7">
-    
+
     <% if page_location.access_point? %>
       <% if page_location.access_point.collection? && get_collection.present? %>
         <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>

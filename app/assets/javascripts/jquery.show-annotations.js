@@ -13,9 +13,9 @@
 
     return this.each(function() {
       var baseUrlSW = "searchworks.stanford.edu/view/",
-          openAnnoUrl = "https://sul-solr-tester.stanford.edu/triannon-dev/select?defType=lucene&wt=json&",
           $documents = $(this),
           listRecords = $documents.find('[data-anno-id]'),
+          openAnnoUrl = '',
           targetUrls = [],
           annotations = {};
 
@@ -23,6 +23,10 @@
 
       function init() {
         $.each(listRecords, function(index, record) {
+          // FIXME:  this is really stupid because annoSearchUrl is a constant from Settings
+          //   currently data-anno-search-url is set in _search_results_annotations, _anno_tags and anno_user_comments
+          //   partials.
+          openAnnoUrl = $(record).data('annoSearchUrl') + "/select?defType=lucene&wt=json&",
           targetUrls.push(baseUrlSW + $(record).data('annoId'));
         });
 
