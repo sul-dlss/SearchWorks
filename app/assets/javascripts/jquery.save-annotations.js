@@ -12,7 +12,7 @@
   $.fn.saveAnnotations = function() {
 
     return this.each(function() {
-      var openAnnoUrl = "https://triannon-dev.stanford.edu/annotations/sw",
+      var openAnnoUrl = $(this).data('annoStoreUrl'),
           $container = $(this),
           $formAnnotations = $container.find('.form-annotations'),
           hasTargetPrefix = "http://searchworks.stanford.edu/view/",

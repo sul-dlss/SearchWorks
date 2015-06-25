@@ -1,6 +1,6 @@
 <% document ||= @document %>
 
-<div class="section annotations-tags" id="<%= t('record_side_nav.tags.id') %>" data-side-nav-class="<%= t('record_side_nav.tags.id') %>" data-anno-id="<%= document.id %>"  data-anno-search-url="<%= Settings.OPEN_ANNOTATION_SOLR_URL %>">
+<div class="section annotations-tags" id="<%= t('record_side_nav.tags.id') %>" data-side-nav-class="<%= t('record_side_nav.tags.id') %>" data-anno-id="<%= document.id %>" data-anno-search-url="<%= Settings.OPEN_ANNOTATION_SOLR_URL %>">
   <div class="section-heading">
     <h2>
       <%= t('record_side_nav.tags.icon').html_safe %> Tags
@@ -8,7 +8,7 @@
     </h2>
   </div>
 
-  <div id="create-tags">
+  <div id="create-tags" data-anno-store-url="<%= Settings.OPEN_ANNOTATION_STORE_URL %>">
     <%= form_tag "", method: :post, class:"form-horizontal form-annotations form-create-tags", role:"form" do %>
       <%= hidden_field_tag 'authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
       <%= hidden_field_tag 'motivation', 'oa:tagging' %>

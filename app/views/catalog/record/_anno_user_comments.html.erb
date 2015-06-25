@@ -8,7 +8,7 @@
     </h2>
   </div>
 
-  <div id="create-comments">
+  <div id="create-comments" data-anno-store-url="<%= Settings.OPEN_ANNOTATION_STORE_URL %>">
     <%= form_tag '', method: :post, class:"form-horizontal form-annotations form-create-comments", role:"form" do %>
       <%= hidden_field_tag 'authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
       <%= hidden_field_tag 'motivation', 'oa:commenting' %>
