@@ -2,37 +2,37 @@ require 'ld4l/open_annotation_rdf'
 
 # This is model code to represent the OpenAnnotation RDF Data Model (http://www.openannotation.org/spec/core/).
 #
-# This model uses Cornell's OpenAnnotation models at https://github.com/ld4l/open_annotation_rdf 
+# This model uses Cornell's OpenAnnotation models at https://github.com/ld4l/open_annotation_rdf
 # which utilize ActiveTriples (https://github.com/ActiveTriples/ActiveTriples).
 # ActiveTriples is an ActiveModel-like interface for RDF data.
 # Note that there is *no local storage* of Annotations -- data is actually stored
-# in our Triannon (https://github.com/sul-dlss/triannon) server, which is backed by Fedora4.  
-# 
-# The triple store in scope for *this* Annotation model is a simple in-memory RDF Repository;  
+# in our Triannon (https://github.com/sul-dlss/triannon) server, which is backed by Fedora4.
+#
+# The triple store in scope for *this* Annotation model is a simple in-memory RDF Repository;
 #  (see config/initializers/rdf_repositories.rb)
-# This allows us to easily work with linked data as objects in this Rails context, 
+# This allows us to easily work with linked data as objects in this Rails context,
 # while the actual data store is external.
 #
 # This model exists so our anno objects can get from and send to Triannon, and
 #  possibly for validations of annos before they are written to Triannon.  Otherwise, the specific
 #  ActiveTriples models above would be more appropriate.
 class Annotation < LD4L::OpenAnnotationRDF::Annotation
-  
+
   # FIXME: this will allow blank nodes???
 #  LD4L::OpenAnnotationRDF.configuration.unique_tags = false
-  
+
   validates :motivatedBy, length: {minimum: 1}
   validates :hasTarget, length: {minimum: 1}
-  
+
   attr_accessor :triannon_id
 
   # Class Methods ----------------------------------------------------------------
   # TODO: move all the class methods to a find_annotations model concern?
-  
+
   # Get an Array of Annotation objects with the param as an object of hasTarget
   # @param [String] target_uri this is a target_url in Annotations we are seeking
-  # @return [Array<LD4L::OpenAnnotationRDF::Annotation>] an array of specifically typed objects 
-  #  (e.g.  LD4L::OpenAnnotationRDF::TagAnnotation, LD4L::OpenAnnotationRDF::CommmentAnnotation) 
+  # @return [Array<LD4L::OpenAnnotationRDF::Annotation>] an array of specifically typed objects
+  #  (e.g.  LD4L::OpenAnnotationRDF::TagAnnotation, LD4L::OpenAnnotationRDF::CommmentAnnotation)
   #  loaded from the RDF::Graph data stored by Triannon
   def self.find_by_target_uri(target_uri)
     result = []
@@ -43,17 +43,17 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
     result
   end
-  
+
   # --- below this line sort of "protected" or "private" class methods
   # TODO: move all these class methods to a find_annotations model concern?
-  
+
   # get the annotations with the SearchWorks record as a target from Open Annotation Solr
   # @param [String] target_uri this is a target_url in Annotations we are seeking
   # @return [Array<String>] an Array of annotations as Strings containing jsonld
   def self.jsonld_annos_for_target_uri(target_uri)
     annos_as_jsonld = []
-    solr_params = {:defType => 'lucene', :q => "target_url:#{solr_escape(target_uri)}"}
-    
+    solr_params = {:defType => 'lucene', :q => "target_url:#{RSolr.solr_escape(target_uri)}"}
+
     # RSolr handles url escaping
     rsolr_resp = oa_rsolr_conn.get 'select', :params => solr_params
     if rsolr_resp && rsolr_resp["response"] && rsolr_resp["response"]["docs"]
@@ -92,31 +92,19 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     end
     nil
   end
-  
+
   # given a url, return the unique portion of it as the triannon_id
   # @return [String] triannon id - the unique path at the end of the url
   def self.triannon_id_from_triannon_url url
     return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
   end
-  
+
   # query for a subject with type of RDF::OpenAnnotation.Annotation
   def self.anno_query
     @anno_query ||= begin
       q = RDF::Query.new
       q << [:s, RDF.type, RDF::URI("http://www.w3.org/ns/oa#Annotation")]
     end
-  end
-  
-  # backslash escape characters that have special meaning to Solr query parser
-  # per http://lucene.apache.org/core/4_0_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters
-  #  + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
-  # see also http://svn.apache.org/repos/asf/lucene/dev/tags/lucene_solr_4_9_1/solr/solrj/src/java/org/apache/solr/client/solrj/util/ClientUtils.java
-  #   escapeQueryChars method
-  # @return [String] str with special chars preceded by a backslash
-  def self.solr_escape(str)
-    # note that the gsub will parse the escaped backslashes, as will the ruby code sending the query to Solr 
-    # so the result sent to Solr is ultimately a single backslash in front of the particular character 
-    str.gsub(/([+\-&|!\(\)\{\}\[\]\^"~\*\?:\\\/])/, '\\\\\1')
   end
 
   def self.oa_rsolr_conn
@@ -125,8 +113,8 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   # Instance Methods ----------------------------------------------------------------
 
-  # If first param is a Hash, then assume it is params from AnnotationController - 
-  #  remove those params and use them. 
+  # If first param is a Hash, then assume it is params from AnnotationController -
+  #  remove those params and use them.
   # Otherwise, just pass params through superclass
   # @see ActiveTriples::Resource
   def initialize(*args, &block)
@@ -164,9 +152,9 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
       annotatedAt << DateTime.now
     end
-    
+
   end
-  
+
   # send the Annotation as an OpenAnnotation to the OA Storage
   def save
 #    puts graph.to_ttl
@@ -179,19 +167,19 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   end
 
 protected
-  
+
   # @return [RDF::Graph] a graph containing all relevant statements for storing this
-  # object as an OpenAnnotation (e.g. including triples for body nodes) 
+  # object as an OpenAnnotation (e.g. including triples for body nodes)
   def graph
     g = RDF::Graph.new
-    self.each_statement { |stmt| 
+    self.each_statement { |stmt|
       g << stmt
-    } 
+    }
     # add body graphs to main graph when they have content
     comment_or_tag_bodies = []
-    comment_or_tag_bodies << self.hasBody.find_all { |body| 
-      (body.respond_to?(:content) && body.content.size > 0 && body.content.first.size > 0) || 
-        (body.respond_to?(:tag) && body.tag.size > 0 && body.tag.first.size > 0) 
+    comment_or_tag_bodies << self.hasBody.find_all { |body|
+      (body.respond_to?(:content) && body.content.size > 0 && body.content.first.size > 0) ||
+        (body.respond_to?(:tag) && body.tag.size > 0 && body.tag.first.size > 0)
     }
     comment_or_tag_bodies.flatten.each { |body_w_chars|
       body_w_chars.each_statement { |stmt|
@@ -200,7 +188,7 @@ protected
     }
     g
   end
-  
+
   # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
   # @return [String] unique id of newly created anno, or nil if there was a problem
   def post_graph_to_oa_storage
@@ -214,9 +202,9 @@ protected
     end
     return nil
   end
-  
+
   def oa_storage_conn
     @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
   end
-  
+
 end

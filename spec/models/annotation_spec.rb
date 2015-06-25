@@ -26,7 +26,7 @@ describe Annotation, vcr: true, annos: true do
   context '*jsonld_annos_for_target_uri' do
     let(:target_uri) {"http://searchworks.stanford.edu/view/666"}
     it "Solr escapes the target_uri string" do
-      escaped_url = Annotation.solr_escape(target_uri)
+      escaped_url = RSolr.solr_escape(target_uri)
       expect(Annotation.oa_rsolr_conn).to receive(:get).with('select', {:params => {:q => "target_url:#{escaped_url}", :defType=>"lucene"}})
       Annotation.jsonld_annos_for_target_uri(target_uri)
     end
@@ -185,21 +185,6 @@ describe Annotation, vcr: true, annos: true do
     it "doesn't find solution when graph is empty" do
       solutions = RDF::Graph.new.query Annotation.anno_query
       expect(solutions.size).to eq 0
-    end
-  end
-
-  context '*solr_escape' do
-    it "adds backslash to Solr query syntax chars" do
-      # per http://lucene.apache.org/core/4_0_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Escaping_Special_Characters
-      special_chars = [ "+", "-", "&", "|", "!", "(", ")", "{", "}", "[", "]", "^", '"', "~", "*", "?", ":", "\\", "/" ]
-      escaped_str = Annotation.solr_escape("aa#{special_chars.join('aa')}aa")
-      special_chars.each { |c|
-        expect(escaped_str).to match "\\#{c}"
-      }
-    end
-    it "leaves other chars alone" do
-      str = "nothing to see here; let's move along people."
-      expect(Annotation.solr_escape(str)).to eq str
     end
   end
 
