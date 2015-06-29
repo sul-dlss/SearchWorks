@@ -102,5 +102,6 @@ gem 'roadie-rails', '~> 1.0.3'
 gem 'whenever', require: false
 
 # Annotation Implementation
-gem 'ld4l-open_annotation_rdf'
-gem 'rdf-open_annotation'  # full OA vocab for RDF predefined terms and properties
+gem 'ld4l-open_annotation_rdf'  # active triple models
+gem 'active-triples', '~> 0.6.1' # ld4l-open_annotation_rdf doesn't work (yet) with active-triples 0.8.1
+  # 0.7.1:  29 failures

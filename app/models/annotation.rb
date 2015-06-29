@@ -52,10 +52,10 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   # @return [Array<String>] an Array of annotations as Strings containing jsonld
   def self.jsonld_annos_for_target_uri(target_uri)
     annos_as_jsonld = []
-    solr_params = {:defType => 'lucene', :q => "target_url:#{RSolr.solr_escape(target_uri)}"}
+    solr_params = {defType: 'lucene', q: "target_url:#{RSolr.solr_escape(target_uri)}"}
 
     # RSolr handles url escaping
-    rsolr_resp = oa_rsolr_conn.get 'select', :params => solr_params
+    rsolr_resp = oa_rsolr_conn.get 'select', params: solr_params
     if rsolr_resp && rsolr_resp["response"] && rsolr_resp["response"]["docs"]
       rsolr_resp["response"]["docs"].each { |anno_solr_doc|
         annos_as_jsonld << anno_solr_doc["anno_jsonld"]
@@ -99,7 +99,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
   end
 
-  # query for a subject with type of RDF::OpenAnnotation.Annotation
+  # query for a subject with type of RDF::Vocab::OA.Annotation
   def self.anno_query
     @anno_query ||= begin
       q = RDF::Query.new
@@ -108,7 +108,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   end
 
   def self.oa_rsolr_conn
-    @@rsolr_client ||= RSolr.connect :url => Settings.OPEN_ANNOTATION_SOLR_URL
+    @@rsolr_client ||= RSolr.connect url: Settings.OPEN_ANNOTATION_SOLR_URL
   end
 
   # Instance Methods ----------------------------------------------------------------
@@ -125,7 +125,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
     if anno_params
 
       # TODO: it should be possible to have multiple motivations
-      motivatedBy << RDF::URI.new(RDF::OpenAnnotation.to_uri.to_s + anno_params["motivatedBy"]) if anno_params["motivatedBy"]
+      motivatedBy << RDF::URI.new(RDF::Vocab::OA.to_uri.to_s + anno_params["motivatedBy"]) if anno_params["motivatedBy"]
 
       # TODO: target will autofill from SW as IRI from OCLC number, OCLC work number, Stanford purl page, etc.
       # TODO: it should be possible to have multiple targets
@@ -136,12 +136,12 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
       # TODO: it should be possible to have multiple bodies
       if anno_params["hasBody"] && !anno_params["hasBody"]["id"].blank?
         # TODO: motivatedBy should allow for mulitple motivations
-        if motivatedBy.first == RDF::OpenAnnotation.commenting
+        if motivatedBy.first == RDF::Vocab::OA.commenting
           body = LD4L::OpenAnnotationRDF::CommentBody.new
           body.content = anno_params["hasBody"]["id"]
           body.format = "text/plain"
           hasBody << body
-        elsif motivatedBy.first == RDF::OpenAnnotation.tagging
+        elsif motivatedBy.first == RDF::Vocab::OA.tagging
           body = LD4L::OpenAnnotationRDF::TagBody.new
           body.tag = anno_params["hasBody"]["id"]
           hasBody << body

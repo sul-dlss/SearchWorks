@@ -7,7 +7,7 @@ describe AnnotationsHelper, annos: true do
       expect(oa_motivations.first).to be_a String
     end
     it "doesn't return OA url prefix" do
-      expect(oa_motivations.first).not_to match RDF::OpenAnnotation.to_uri.to_s
+      expect(oa_motivations.first).not_to match RDF::Vocab::OA.to_uri.to_s
     end
     it 'has OA motivation' do
       expect(oa_motivations.size).to be > 8

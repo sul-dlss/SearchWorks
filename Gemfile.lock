@@ -51,12 +51,12 @@ GEM
       activesupport (= 4.1.11)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active-triples (0.8.1)
+    active-triples (0.6.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       deprecation (~> 0.1)
       linkeddata (~> 1.1)
-      rdf (~> 1.1.13)
+      rdf (~> 1.1)
     active_triples-local_name (0.6.0)
       active-triples
       activesupport
@@ -330,8 +330,6 @@ GEM
       rdf-xsd (~> 1.1)
     rdf-n3 (1.1.3)
       rdf (~> 1.1, >= 1.1.5)
-    rdf-open_annotation (0.1.0)
-      rdf
     rdf-rdfa (1.1.6)
       haml (~> 4.0)
       htmlentities (~> 4.3)
@@ -486,6 +484,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active-triples (~> 0.6.1)
   blacklight (~> 5.8.2)
   blacklight-gallery!
   blacklight-hierarchy (~> 0.1.0)
@@ -520,7 +519,6 @@ DEPENDENCIES
   pry-byebug
   rails (= 4.1.11)
   rails_config
-  rdf-open_annotation
   retina_tag
   roadie-rails (~> 1.0.3)
   rspec-rails (< 2.99)

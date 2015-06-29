@@ -55,17 +55,17 @@ describe Annotation, vcr: true, annos: true do
       end
       it "LD4L::OpenAnnotationRDF::TagAnnotation and its properties" do
         expect(@tag_anno).to be_a LD4L::OpenAnnotationRDF::TagAnnotation
-        expect(@tag_anno.type).to eq [RDF::OpenAnnotation.Annotation]
-        expect(@tag_anno.motivatedBy).to eq [RDF::OpenAnnotation.tagging]
+        expect(@tag_anno.type).to eq [RDF::Vocab::OA.Annotation]
+        expect(@tag_anno.motivatedBy).to eq [RDF::Vocab::OA.tagging]
         expect(@tag_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
       end
       it "populates Tag bodies properly" do
         body = @tag_anno.hasBody.first
         expect(body).to be_a LD4L::OpenAnnotationRDF::TagBody
         expect(body.tag.first).to eq "blue"
-        expect(body.type).to include RDF::OpenAnnotation.Tag
-        expect(body.type).to include RDF::Content.ContentAsText
-        expect(body.type).to include RDF::DCMIType.Text
+        expect(body.type).to include RDF::Vocab::OA.Tag
+        expect(body.type).to include RDF::Vocab::CNT.ContentAsText
+        expect(body.type).to include RDF::Vocab::DCMIType.Text
         expect(body.type.size).to eq 3
         expect{body.format}.to raise_error(NoMethodError) # not in Tag model
       end
@@ -85,8 +85,8 @@ describe Annotation, vcr: true, annos: true do
       end
       it "LD4L::OpenAnnotationRDF::CommentAnnotation and its properties" do
         expect(@comment_anno).to be_a LD4L::OpenAnnotationRDF::CommentAnnotation
-        expect(@comment_anno.type).to eq [RDF::OpenAnnotation.Annotation]
-        expect(@comment_anno.motivatedBy).to eq [RDF::OpenAnnotation.commenting]
+        expect(@comment_anno.type).to eq [RDF::Vocab::OA.Annotation]
+        expect(@comment_anno.motivatedBy).to eq [RDF::Vocab::OA.commenting]
         expect(@comment_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
       end
       it "populates Comment bodies properly" do
@@ -94,9 +94,9 @@ describe Annotation, vcr: true, annos: true do
         expect(body).to be_a LD4L::OpenAnnotationRDF::CommentBody
         expect(body.content.first).to eq "I am a comment!"
         expect(body.format).to eq ["text/plain"]
-        expect(body.type).to include RDF::Content.ContentAsText
-        expect(body.type).to include RDF::DCMIType.Text
-        expect(body.type).not_to include RDF::OpenAnnotation.Tag
+        expect(body.type).to include RDF::Vocab::CNT.ContentAsText
+        expect(body.type).to include RDF::Vocab::DCMIType.Text
+        expect(body.type).not_to include RDF::Vocab::OA.Tag
         expect(body.type.size).to eq 2
       end
     end # comment
@@ -112,17 +112,17 @@ describe Annotation, vcr: true, annos: true do
       end
       it "LD4L::OpenAnnotationRDF::SemanticTagAnnotation and its properties" do
         expect(@sem_tag_anno).to be_a LD4L::OpenAnnotationRDF::SemanticTagAnnotation
-        expect(@sem_tag_anno.type).to eq [RDF::OpenAnnotation.Annotation]
-        expect(@sem_tag_anno.motivatedBy).to eq [RDF::OpenAnnotation.tagging]
+        expect(@sem_tag_anno.type).to eq [RDF::Vocab::OA.Annotation]
+        expect(@sem_tag_anno.motivatedBy).to eq [RDF::Vocab::OA.tagging]
         expect(@sem_tag_anno.hasTarget.first.rdf_subject).to eq RDF::URI.new("http://searchworks.stanford.edu/view/666")
       end
       it "populates SemanticTag bodies properly" do
         body = @sem_tag_anno.hasBody.first
         expect(body).to be_a LD4L::OpenAnnotationRDF::SemanticTagBody
         expect(body.rdf_subject).to eq RDF::URI.new "http://dbpedia.org/resource/Love"
-        expect(body.type).to eq [RDF::OpenAnnotation.SemanticTag]
-        expect(body.type).not_to include(RDF::OpenAnnotation.Tag)
-        expect(body.type).not_to include(RDF::Content.ContentAsText)
+        expect(body.type).to eq [RDF::Vocab::OA.SemanticTag]
+        expect(body.type).not_to include(RDF::Vocab::OA.Tag)
+        expect(body.type).not_to include(RDF::Vocab::CNT.ContentAsText)
       end
     end # semantic tag
 
@@ -194,7 +194,7 @@ describe Annotation, vcr: true, annos: true do
     context 'motivatedBy' do
       it "full url (with OA url prefix)" do
         a = Annotation.new({"motivatedBy" => "tagging"})
-        a.motivatedBy.first.should eq RDF::OpenAnnotation.tagging
+        a.motivatedBy.first.should eq RDF::Vocab::OA.tagging
       end
     end
     context 'hasTarget' do
@@ -231,10 +231,10 @@ describe Annotation, vcr: true, annos: true do
           expect(LD4L::OpenAnnotationRDF::CommentBody).to receive(:new).and_call_original
           Annotation.new({"motivatedBy" => "commenting", "hasBody" => {"id" =>"blah blah"}})
         end
-        it "has a type of RDF::Content.ContentAsText if motivation is commenting" do
+        it "has a type of RDF::Vocab::CNT.ContentAsText if motivation is commenting" do
           a = Annotation.new({"motivatedBy" => "commenting", "hasBody" => {"id" =>"blah blah"}})
           body_obj = a.hasBody.first
-          expect(body_obj.type).to include RDF::Content.ContentAsText
+          expect(body_obj.type).to include RDF::Vocab::CNT.ContentAsText
         end
       end
       context 'tag anno' do
@@ -248,10 +248,10 @@ describe Annotation, vcr: true, annos: true do
           expect(LD4L::OpenAnnotationRDF::TagBody).to receive(:new).and_call_original
           Annotation.new({"motivatedBy" => "tagging", "hasBody" => {"id" =>"blah blah"}})
         end
-        it "has a type of RDF::OpenAnnotation.Tag if motivation is tagging" do
+        it "has a type of RDF::Vocab::OA.Tag if motivation is tagging" do
           a = Annotation.new({"motivatedBy" => "tagging", "hasBody" => {"id" =>"blah blah"}})
           body_obj = a.hasBody.first
-          expect(body_obj.type).to include RDF::OpenAnnotation.Tag
+          expect(body_obj.type).to include RDF::Vocab::OA.Tag
         end
       end
 
@@ -310,22 +310,22 @@ describe Annotation, vcr: true, annos: true do
       it 'hasBody id is empty String' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => ""}})
         graph = anno.send(:graph)
-        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        expect(graph.query([nil, RDF::Vocab::OA.hasBody, nil]).size).to eq 0
       end
       it 'hasBody id is nil' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => nil}})
         graph = anno.send(:graph)
-        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        expect(graph.query([nil, RDF::Vocab::OA.hasBody, nil]).size).to eq 0
       end
       it 'no hasBody id param' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {}})
         graph = anno.send(:graph)
-        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        expect(graph.query([nil, RDF::Vocab::OA.hasBody, nil]).size).to eq 0
       end
       it 'no hasBody param' do
         anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}})
         graph = anno.send(:graph)
-        expect(graph.query([nil, RDF::OpenAnnotation.hasBody, nil]).size).to eq 0
+        expect(graph.query([nil, RDF::Vocab::OA.hasBody, nil]).size).to eq 0
       end
     end
   end
