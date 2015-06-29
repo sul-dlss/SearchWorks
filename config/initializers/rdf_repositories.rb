@@ -3,7 +3,9 @@ def configure_repositories
   ActiveTriples::Repositories.add_repository :default, RDF::Repository.new
 end
 
-# Not sure why configure_repositories is called twice in this way. Code modified from Oregon Digital project.
+# Not sure why configure_repositories is called twice in this way.
+#   Code modified from Oregon Digital project:
+#   https://github.com/OregonDigital/oregondigital/blob/master/config/initializers/rdf_repositories.rb
 configure_repositories
 Rails.application.config.to_prepare do
   configure_repositories
