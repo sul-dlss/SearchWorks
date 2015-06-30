@@ -25,16 +25,32 @@ describe AnnotationsController, vcr: true, annos: true do
   end
 
   describe "GET show" do
-    it "assigns the requested annotation as @annotation" do
-      # TODO: need to render all of 'em that match, not just first one
-      get :show, {:id => '666'}, valid_session
-      assigns(:annotation).should be_a LD4L::OpenAnnotationRDF::Annotation
-    end
     it "calls Annotation.find_by_target_uri with full URL for solr id" do
       sw_id = "666"
       full_target_url = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{sw_id}"
       expect(Annotation).to receive(:find_by_target_uri).with(full_target_url).and_call_original
       get :show, {:id => sw_id}, valid_session
+    end
+    it 'populates @annotations Array with annotations with SW id as target' do
+      get :show, {:id => '666'}, valid_session
+      my_annos = assigns(:annotations)
+      expect(my_annos).to be_an Array
+      expect(my_annos.size).to eq 6
+      my_annos.each { |anno|
+        expect(anno).to be_a_kind_of LD4L::OpenAnnotationRDF::Annotation
+      }
+    end
+    it '@annotations can have both tag and comment annos' do
+      get :show, {:id => '666'}, valid_session
+      my_annos = assigns(:annotations)
+      includes_tag_anno = false
+      includes_comment_anno = false
+      my_annos.each { |anno|
+        includes_tag_anno = true if anno.instance_of? LD4L::OpenAnnotationRDF::TagAnnotation
+        includes_comment_anno = true if anno.instance_of? LD4L::OpenAnnotationRDF::CommentAnnotation
+      }
+      expect(includes_tag_anno).to be_true
+      expect(includes_comment_anno).to be_true
     end
   end
 

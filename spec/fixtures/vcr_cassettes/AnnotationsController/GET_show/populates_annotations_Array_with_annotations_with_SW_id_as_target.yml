@@ -13,7 +13,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 30 Jun 2015 22:40:34 GMT
+      - Tue, 30 Jun 2015 22:40:35 GMT
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       - max-age=31536000; includeSubDomains
@@ -129,5 +129,5 @@ http_interactions:
             'facet_ranges'=>{},
             'facet_intervals'=>{}}}
     http_version: 
-  recorded_at: Tue, 30 Jun 2015 22:40:34 GMT
+  recorded_at: Tue, 30 Jun 2015 22:40:35 GMT
 recorded_with: VCR 2.9.3

@@ -13,14 +13,14 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 30 Jun 2015 21:13:04 GMT
+      - Tue, 30 Jun 2015 22:40:34 GMT
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       - max-age=31536000; includeSubDomains
       Last-Modified:
-      - Thu, 25 Jun 2015 23:19:59 GMT
+      - Tue, 30 Jun 2015 22:12:57 GMT
       Etag:
-      - '"ODNmZjQwMDAwMDAwMDAwMFNvbHI="'
+      - '"YTNmZjQwMDAwMDAwMDAwMFNvbHI="'
       Content-Type:
       - text/plain;charset=UTF-8
       Via:
@@ -38,7 +38,7 @@ http_interactions:
               'q'=>'target_url:http\\:\\/\\/searchworks.stanford.edu\\/view\\/666',
               'defType'=>'lucene',
               'wt'=>'ruby'}},
-          'response'=>{'numFound'=>4,'start'=>0,'maxScore'=>10.624686,'docs'=>[
+          'response'=>{'numFound'=>6,'start'=>0,'maxScore'=>10.28824,'docs'=>[
               {
                 'id'=>'sw/21/ca/ca/d9/21cacad9-fc4d-4e7e-8b52-98ed0566d6a5',
                 'root'=>'sw',
@@ -50,7 +50,7 @@ http_interactions:
                 'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g64174880","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"yet another 666 comment","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/21/ca/ca/d9/21cacad9-fc4d-4e7e-8b52-98ed0566d6a5","@type":"oa:Annotation","hasBody":"_:g64174880","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:commenting"}]}',
                 '_version_'=>1504899861121597440,
                 'timestamp'=>'2015-06-24T22:19:06.315Z',
-                'score'=>10.624686},
+                'score'=>10.28824},
               {
                 'id'=>'sw/ac/d1/8b/25/acd18b25-ec98-48dc-8ec8-ac8dee5ca3de',
                 'root'=>'sw',
@@ -62,7 +62,7 @@ http_interactions:
                 'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g59073700","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"666 comment","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/ac/d1/8b/25/acd18b25-ec98-48dc-8ec8-ac8dee5ca3de","@type":"oa:Annotation","hasBody":"_:g59073700","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:commenting"}]}',
                 '_version_'=>1504899851442192384,
                 'timestamp'=>'2015-06-24T22:18:57.084Z',
-                'score'=>10.624686},
+                'score'=>10.28824},
               {
                 'id'=>'sw/48/1b/90/6d/481b906d-6acc-4d67-ab69-a5ea7d841e0d',
                 'root'=>'sw',
@@ -74,7 +74,7 @@ http_interactions:
                 'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g44150160","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"666 tag","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/48/1b/90/6d/481b906d-6acc-4d67-ab69-a5ea7d841e0d","@type":"oa:Annotation","hasBody":"_:g44150160","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
                 '_version_'=>1504899827070140416,
                 'timestamp'=>'2015-06-24T22:18:33.841Z',
-                'score'=>10.624686},
+                'score'=>10.28824},
               {
                 'id'=>'sw/93/58/ad/57/9358ad57-6c37-420b-9ab9-28f5d949a14c',
                 'root'=>'sw',
@@ -86,24 +86,48 @@ http_interactions:
                 'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g67106560","@type":["dctypes:Text","cnt:ContentAsText"],"chars":"naomi","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/93/58/ad/57/9358ad57-6c37-420b-9ab9-28f5d949a14c","@type":"oa:Annotation","hasBody":"_:g67106560","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
                 '_version_'=>1504975640732893184,
                 'timestamp'=>'2015-06-25T18:23:35.384Z',
-                'score'=>10.624686}]
+                'score'=>10.28824},
+              {
+                'id'=>'sw/0a/4d/09/d9/0a4d09d9-a407-46ee-8846-b051b375849f',
+                'root'=>'sw',
+                'motivation'=>['tagging'],
+                'target_url'=>['http://searchworks.stanford.edu/view/666'],
+                'target_type'=>['external_URI'],
+                'body_type'=>['content_as_text'],
+                'body_chars_exact'=>['tag1'],
+                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g52066580","@type":["dctypes:Text","oa:Tag","cnt:ContentAsText"],"chars":"tag1","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/0a/4d/09/d9/0a4d09d9-a407-46ee-8846-b051b375849f","@type":"oa:Annotation","hasBody":"_:g52066580","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
+                '_version_'=>1505443034686291968,
+                'timestamp'=>'2015-06-30T22:12:36.993Z',
+                'score'=>10.28824},
+              {
+                'id'=>'sw/c4/52/98/f9/c45298f9-7e59-43df-b37e-019f1bc5546a',
+                'root'=>'sw',
+                'motivation'=>['tagging'],
+                'target_url'=>['http://searchworks.stanford.edu/view/666'],
+                'target_type'=>['external_URI'],
+                'body_type'=>['content_as_text'],
+                'body_chars_exact'=>['tag2'],
+                'anno_jsonld'=>'{"@context":"http://www.w3.org/ns/oa-context-20130208.json","@graph":[{"@id":"_:g70283613110320","@type":["dctypes:Text","oa:Tag","cnt:ContentAsText"],"chars":"tag2","format":"text/plain","language":"en"},{"@id":"https://triannon-dev.stanford.edu/annotations/sw/c4/52/98/f9/c45298f9-7e59-43df-b37e-019f1bc5546a","@type":"oa:Annotation","hasBody":"_:g70283613110320","hasTarget":"http://searchworks.stanford.edu/view/666","motivatedBy":"oa:tagging"}]}',
+                '_version_'=>1505443055154495488,
+                'timestamp'=>'2015-06-30T22:12:56.512Z',
+                'score'=>10.28824}]
           },
           'facet_counts'=>{
             'facet_queries'=>{},
             'facet_fields'=>{
               'root'=>[
-                'sw',4],
+                'sw',6],
               'motivation'=>[
-                'commenting',2,
-                'tagging',2],
+                'tagging',4,
+                'commenting',2],
               'target_type'=>[
-                'external_URI',4],
+                'external_URI',6],
               'body_type'=>[
-                'content_as_text',4],
+                'content_as_text',6],
               'annotated_at_tdate'=>[]},
             'facet_dates'=>{},
             'facet_ranges'=>{},
             'facet_intervals'=>{}}}
     http_version: 
-  recorded_at: Tue, 30 Jun 2015 21:13:05 GMT
+  recorded_at: Tue, 30 Jun 2015 22:40:34 GMT
 recorded_with: VCR 2.9.3
