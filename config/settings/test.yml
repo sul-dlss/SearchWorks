@@ -1,5 +1,4 @@
 HOSTNAME: "TEST-HOST"
-OPEN_ANNOTATION_STORE_URL: 'http://triannon-dev.stanford.edu/annotations/'
-#OPEN_ANNOTATION_STORE_URL: 'https://localhost:3000/annotations/'
-#OPEN_ANNOTATION_SOLR_URL: 'http://sul-solr.stanford.edu/solr/triannon-dev'
+OPEN_ANNOTATION_STORE_URL: 'https://localhost:3000/annotations/'
+
 OPEN_ANNOTATION_SOLR_URL: 'http://localhost:8983/solr/triannon'
