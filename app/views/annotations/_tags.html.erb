@@ -1,0 +1,39 @@
+<div class="section annotations-tags" id="tags" data-side-nav-class="tags" data-anno-id="<%= @sw_doc_id %>">
+  <div class="section-heading">
+    <h2>
+      <i class="fa fa-tag"></i> Tags
+      <button class="btn btn-default btn-sm btn-add-annotation"><i class="fa fa-plus"></i> Add tag<span class="sr-only">Add tag</span></button>
+    </h2>
+  </div>
+
+  <div id="create-tags" data-anno-store-url="<%= Settings.OPEN_ANNOTATION_STORE_URL %>">
+    <%= form_tag "", method: :post, class:"form-horizontal form-annotations form-create-tags", role:"form" do %>
+      <%= hidden_field_tag 'authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
+      <%= hidden_field_tag 'motivation', 'oa:tagging' %>
+      <%= hidden_field_tag 'sw-id', "#{@sw_doc_id}" %>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <%= label_tag(:'text-tag', 'Tag', class:"col-sm-3 control-label") %>
+          <div class="col-sm-9">
+            <%= text_field_tag 'text-tag', nil, class:"form-control text-annotation" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <%= link_to "Cancel", "javascript:;", class:"cancel-link" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="section-body tags">
+    <% tag_annos.each do |tag_anno| %>
+      <span class="tag">
+        <%= tag_anno.getTag %>
+        <span class="arrow"></span>
+      </span>
+    <% end %>
+  </div>
+</div>
