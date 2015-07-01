@@ -2,14 +2,10 @@ require 'spec_helper'
 
 describe AnnotationsController, vcr: true, annos: true do
 
-  # This should return the minimal set of attributes required to create a valid
-  # Annotation. As you add validations to Annotation, be sure to
-  # adjust the attributes here as well.
+  # Return the minimal set of attributes required to create a valid Annotation.
   let(:valid_attributes) { { :motivatedBy => 'bookmarking' } }
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # AnnotationsController. Be sure to keep this updated too.
+  # Return the minimal set of values that should be in the session in order to pass any filters (e.g. authentication) defined in
   let(:valid_session) { {} }
 
   context "GET index" do
@@ -25,6 +21,11 @@ describe AnnotationsController, vcr: true, annos: true do
   end
 
   describe "GET show" do
+    it '@sw_doc_id is set to :id from params' do
+      sw_id = "666"
+      get :show, {:id => sw_id}, valid_session
+      expect(assigns(:sw_doc_id)).to eq sw_id
+    end
     it "calls Annotation.find_by_target_uri with full URL for solr id" do
       sw_id = "666"
       full_target_url = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{sw_id}"
@@ -51,11 +52,6 @@ describe AnnotationsController, vcr: true, annos: true do
       }
       expect(includes_tag_anno).to be_true
       expect(includes_comment_anno).to be_true
-    end
-    it '@sw_doc_id is set to :id from params' do
-      sw_id = "666"
-      get :show, {:id => sw_id}, valid_session
-      expect(assigns(:sw_doc_id)).to eq sw_id
     end
   end
 
