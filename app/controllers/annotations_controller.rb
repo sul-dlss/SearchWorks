@@ -12,9 +12,10 @@ class AnnotationsController < ApplicationController
   # GET /annotations/1.json
   # returns annotation model objects for annos that have the searchworks solr doc id as a target
   def show
+    @sw_doc_id = params[:id]
     # FIXME:  should probably be hardcoded or use hostname but depends on Triannon annos
-    #target_uri = "http://#{Settings.HOSTNAME}.stanford.edu/view/#{params[:id]}"
-    target_uri = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{params[:id]}"
+    #target_uri = "http://#{Settings.HOSTNAME}.stanford.edu/view/#{@sw_doc_id}"
+    target_uri = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{@sw_doc_id}"
     annos = Annotation.find_by_target_uri(target_uri)
     @annotations = annos if annos.present?
   end

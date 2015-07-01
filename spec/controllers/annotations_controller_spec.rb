@@ -52,6 +52,11 @@ describe AnnotationsController, vcr: true, annos: true do
       expect(includes_tag_anno).to be_true
       expect(includes_comment_anno).to be_true
     end
+    it '@sw_doc_id is set to :id from params' do
+      sw_id = "666"
+      get :show, {:id => sw_id}, valid_session
+      expect(assigns(:sw_doc_id)).to eq sw_id
+    end
   end
 
   describe "GET new" do
