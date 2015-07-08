@@ -38,19 +38,7 @@ describe "annotations/_tags.html.erb", annos: true do
     end
     it 'has create form' do
       render
-      expect(rendered).to have_css("#create-tags")
-    end
-    it 'fills in sw_id value in the create form' do
-      render
-      expect(rendered).to have_css("#sw-id[value*=\"#{sw_doc_id}\"]")
-    end
-    it 'sets motivation to tagging' do
-      render
-      expect(rendered).to have_css('#motivation[value*="oa:tagging"]')
-    end
-    it 'has text-tag input field' do
-      render
-      expect(rendered).to have_css(".text-annotation[name*=\"text-tag\"]")
+      expect(rendered).to have_css("div#create-tag/form")
     end
   end
 end

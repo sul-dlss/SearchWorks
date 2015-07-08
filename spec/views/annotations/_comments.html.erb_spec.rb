@@ -40,19 +40,7 @@ describe "annotations/_comments.html.erb", annos: true do
     end
     it 'has create form' do
       render
-      expect(rendered).to have_css("#create-comments")
-    end
-    it 'fills in sw_id value in the create form' do
-      render
-      expect(rendered).to have_css("#sw-id[value*=\"#{sw_doc_id}\"]")
-    end
-    it 'sets motivation to commenting' do
-      render
-      expect(rendered).to have_css('#motivation[value*="oa:commenting"]')
-    end
-    it 'has text-comment input field' do
-      render
-      expect(rendered).to have_css(".text-annotation[name*=\"text-tag\"]")
+      expect(rendered).to have_css("div#create-comment/form")
     end
   end
 end
