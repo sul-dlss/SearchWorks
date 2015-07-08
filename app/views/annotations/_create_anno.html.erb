@@ -1,0 +1,25 @@
+<div id="<%= "create-#{anno_type}" %>" data-anno-store-url="<%= Settings.OPEN_ANNOTATION_STORE_URL %>">
+  <%= form_tag "", method: :post, class:"form-horizontal form-annotations form-create-#{anno_type}", role:"form" do %>
+    <%= hidden_field_tag 'authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
+    <%= hidden_field_tag 'motivation', motivation_str %>
+    <%= hidden_field_tag 'sw-id', "#{@sw_doc_id}" %>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= label_tag(:'text-tag', anno_type.capitalize, class:"col-sm-3 control-label") %>
+        <div class="col-sm-9">
+          <% if anno_type.match('comment') %>
+            <%= text_area_tag 'text-tag', nil, rows: 5, class:"form-control text-annotation" %>
+          <% else %>
+            <%= text_field_tag 'text-tag', nil, class:"form-control text-annotation" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <%= link_to "Cancel", "javascript:;", class:"cancel-link" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
