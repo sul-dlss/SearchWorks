@@ -1,23 +1,20 @@
 module RequestLinkHelper
-  def request_link(document, callnumber)
+  def request_link(document, callnumber, barcode = nil)
     if callnumber.home_location == 'SSRC-DATA'
+      base_url = Settings.SSRC_REQUESTS_URL
       request_params = ssrc_params(document, callnumber)
-      "#{Settings.SSRC_REQUESTS_URL}?#{request_params.to_query}"
     else
-      request_params = process_request_params(document, callnumber)
-      "#{Settings.REQUESTS_URL}?#{request_params.to_query}"
+      base_url = Settings.REQUESTS_URL
+      request_params = process_request_params(document, callnumber, barcode)
     end
+    "#{base_url}?#{request_params.to_query}"
   end
 
   private
 
-  def process_request_params(document, callnumber)
+  def process_request_params(document, callnumber, barcode)
     request_params = request_options(document, callnumber)
-    request_params.delete(:item_id) if Holdings::Library.new(callnumber.library, document).location_level_request?
-    if callnumber.on_order?
-      request_params.delete(:item_id)
-      request_params.delete(:home_lib)
-    end
+    request_params[:barcode] = barcode if barcode
     request_params
   end
 
@@ -33,16 +30,9 @@ module RequestLinkHelper
 
   def request_options(document, callnumber)
     {
-      ckey:         document[:id],
-      item_id:      callnumber.barcode,
-      home_lib:     callnumber.library,
-      home_loc:     callnumber.home_location,
-      current_loc:  current_or_home_location(callnumber)
+      item_id: document[:id],
+      origin: callnumber.library,
+      origin_location: callnumber.home_location
     }
-  end
-
-  def current_or_home_location(callnumber)
-    return callnumber.current_location.code if callnumber.current_location.code.present?
-    callnumber.home_location
   end
 end
