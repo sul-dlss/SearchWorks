@@ -101,7 +101,7 @@
 })(jQuery);
 
 Blacklight.onLoad(function() {
-  $('#create-tags').saveAnnotations();
-  $('#create-comments').saveAnnotations();
+  $('#create-tag').saveAnnotations();
+  $('#create-comment').saveAnnotations();
 });
 
