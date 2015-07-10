@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   blacklight_for(:catalog)
   Blacklight::Marc.add_routes(self)
   devise_for :users, skip: [:registrations, :passwords, :sessions]
+  devise_scope :user do
+    get 'webauth/login' => 'login#login', as: :new_user_session
+    match 'webauth/logout' => 'devise/sessions#destroy', :as => :destroy_user_session, :via => Devise.mappings[:user].sign_out_via
+  end
 
   get "databases" => "catalog#index", :defaults => {:f => {:format_main_ssim=>["Database"]}}
 
