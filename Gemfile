@@ -84,6 +84,7 @@ gem 'blacklight', '~> 5.8.2'
 gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests"
+gem 'devise-remote-user'
 gem "blacklight-marc", "~> 5.0"
 gem "faraday"
 gem "rails_config"
