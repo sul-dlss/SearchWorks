@@ -11,7 +11,12 @@
     </button>
     <%= render :partial => 'shared/search_navbar_top_menu' %>
     <div class="header-links">
-      <%= link_to "My Account", "http://library.stanford.edu/myaccount", class: 'first' %>
+      <% if current_user %>
+        <%= link_to "Logout: #{current_user.sunet}", destroy_user_session_path, class: 'first' %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path(referrer: request.original_url), class: 'first' %>
+      <% end %>
+      <%= link_to "My Account", "http://library.stanford.edu/myaccount" %>
       <%= link_to feedback_path, data: {toggle:"collapse", target:"#feedback-form"} do %>
         Feedback
       <% end %>
