@@ -202,7 +202,7 @@ GEM
       stanford-mods
     multi_json (1.11.1)
     multipart-post (2.0.0)
-    mysql (2.9.1)
+    mysql2 (0.3.18)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -367,7 +367,7 @@ DEPENDENCIES
   jquery-rails
   lyberteam-capistrano-devel
   mods_display (= 0.3.3)
-  mysql
+  mysql2
   newrelic_rpm
   nokogiri (= 1.6.5)
   openseadragon!
