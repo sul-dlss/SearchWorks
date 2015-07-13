@@ -2,8 +2,8 @@ require "spec_helper"
 
 describe "annotations/_create_anno.html.erb", annos: true do
   let(:sw_doc_id) { '999' }
-  let(:tag_locals) {{anno_type: "tag", motivation_str: "oa:tagging"}}
-  let(:comment_locals) {{anno_type: "comment", motivation_str: "oa:commenting"}}
+  let(:tag_locals) {{anno_type: "tag", motivation_str: "tagging"}}
+  let(:comment_locals) {{anno_type: "comment", motivation_str: "commenting"}}
   before(:each) do
     assign(:sw_doc_id, sw_doc_id)
   end
@@ -26,25 +26,37 @@ describe "annotations/_create_anno.html.erb", annos: true do
       render partial: "annotations/create_anno.html.erb", locals: tag_locals
       expect(rendered).to have_css("form[method='post']")
     end
+    it 'action /annotations' do
+      render partial: "annotations/create_anno.html.erb", locals: tag_locals
+      expect(rendered).to have_css("form[action='/annotations']")
+    end
     it 'class form-annotations' do
       render partial: "annotations/create_anno.html.erb", locals: tag_locals
       expect(rendered).to have_css("form.form-annotations")
     end
-    it 'supplies sw_id value' do
-      render partial: "annotations/create_anno.html.erb", locals: comment_locals
-      expect(rendered).to have_css("form/input#sw-id[value=\"#{sw_doc_id}\"]")
+    context "hidden fields" do
+      it 'annotation_hasTarget_id (id) with name annotation[hasBody][id] and value @sw_doc_id' do
+        render partial: "annotations/create_anno.html.erb", locals: comment_locals
+        expect(rendered).to have_css("form/input#annotation_hasTarget_id[value=\"#{sw_doc_id}\"][type='hidden'][name='annotation[hasTarget][id]']")
+      end
+      context "annotation_motivatedBy" do
+        it 'value = local motivation_str' do
+          render partial: "annotations/create_anno.html.erb", locals: tag_locals
+          expect(rendered).to have_css("form/input#annotation_motivatedBy[value='#{tag_locals[:motivation_str]}'][type='hidden']")
+        end
+        it 'name = annotation[motivatedBy]' do
+          render partial: "annotations/create_anno.html.erb", locals: tag_locals
+          expect(rendered).to have_css("form/input#annotation_motivatedBy[name='annotation[motivatedBy]'][type='hidden']")
+        end
+      end
+      it 'oa-store-authenticity-token = Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN' do
+        render partial: "annotations/create_anno.html.erb", locals: tag_locals
+        expect(rendered).to have_css("form/input#oa-store-authenticity-token[value='#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}']")
+      end
     end
-    it 'motivation = local motivation_str' do
+    it '"Save" submit "button"' do
       render partial: "annotations/create_anno.html.erb", locals: tag_locals
-      expect(rendered).to have_css("form/input#motivation[value='#{tag_locals[:motivation_str]}']")
-    end
-    it 'authenticity-token = Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN' do
-      render partial: "annotations/create_anno.html.erb", locals: tag_locals
-      expect(rendered).to have_css("form/input#authenticity-token[value='#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}']")
-    end
-    it '"Save" submit button' do
-      render partial: "annotations/create_anno.html.erb", locals: tag_locals
-      expect(rendered).to have_css("button[type='submit']", text: "Save")
+      expect(rendered).to have_css("input[type='submit'][name='commit'][value='Save']")
     end
     it 'Cancel link' do
       render partial: "annotations/create_anno.html.erb", locals: tag_locals
@@ -55,14 +67,14 @@ describe "annotations/_create_anno.html.erb", annos: true do
         render partial: "annotations/create_anno.html.erb", locals: tag_locals
         expect(rendered).to have_css("form.form-create-tag")
       end
-      context "text-tag" do
+      context "annotation_hasBody_id" do
         it 'label Tag' do
           render partial: "annotations/create_anno.html.erb", locals: tag_locals
-          expect(rendered).to have_css("div[class='form-group']/label[for='text-tag']", :text => "Tag")
+          expect(rendered).to have_css("div[class='form-group']/label[for='annotation_hasBody_id']", :text => "Tag")
         end
-        it 'input with id text-tag, class text-annotation and name text-tag' do
+        it 'input with id annotation_hasBody_id, class text-annotation and name annotation[hasBody][id]' do
           render partial: "annotations/create_anno.html.erb", locals: tag_locals
-          expect(rendered).to have_css("div[class='form-group']/div/input#text-tag.text-annotation[name='text-tag']")
+          expect(rendered).to have_css("div[class='form-group']/div/input#annotation_hasBody_id.text-annotation[name='annotation[hasBody][id]']")
         end
       end
     end
@@ -71,18 +83,18 @@ describe "annotations/_create_anno.html.erb", annos: true do
         render partial: "annotations/create_anno.html.erb", locals: comment_locals
         expect(rendered).to have_css("form.form-create-comment")
       end
-      context "text-tag" do
+      context "annotation_hasBody_id" do
         it 'label Comment' do
           render partial: "annotations/create_anno.html.erb", locals: comment_locals
-          expect(rendered).to have_css("div[class='form-group']/label[for='text-tag']", :text => "Comment")
+          expect(rendered).to have_css("div[class='form-group']/label[for='annotation_hasBody_id']", :text => "Comment")
         end
-        it 'textarea with id text-tag, class text-annotation and name text-tag' do
+        it 'textarea with id annotation_hasBody_id, class text-annotation and name annotation_hasBody_id' do
           render partial: "annotations/create_anno.html.erb", locals: comment_locals
-          expect(rendered).to have_css("div[class='form-group']/div/textarea#text-tag.text-annotation[name='text-tag']")
+          expect(rendered).to have_css("div[class='form-group']/div/textarea#annotation_hasBody_id.text-annotation[name='annotation[hasBody][id]']")
         end
         it 'textarea has 5 rows' do
           render partial: "annotations/create_anno.html.erb", locals: comment_locals
-          expect(rendered).to have_css("div[class='form-group']/div/textarea#text-tag[rows='5']")
+          expect(rendered).to have_css("div[class='form-group']/div/textarea#annotation_hasBody_id[rows='5']")
         end
       end
     end

@@ -20,9 +20,11 @@
 
           tplAnnoJsonLd = {
             "@context": "http://www.w3.org/ns/oa.jsonld",
-            "@graph": [
-              {
-                "@id": "_:g70289608390920",
+            "@graph": {
+              "@type": "oa:Annotation",
+              "hasTarget": "",
+              "motivatedBy": "",
+              "hasBody": {
                 "@type": [
                   "dctypes:Text",
                   "cnt:ContentAsText"
@@ -30,14 +32,8 @@
                 "chars": "",
                 "format": "text/plain",
                 "language": "en"
-              },
-              {
-                "@type": "oa:Annotation",
-                "hasBody": "_:g70289608390920",
-                "hasTarget": "",
-                "motivatedBy": ""
               }
-            ]
+            }
           };
 
       init();
@@ -45,7 +41,7 @@
       function init() {
         $container.on('submit', 'form.form-annotations', function(event) {
           fetchParams();
-          $formAnnotations.find('button[type="submit"]').text('Saving...');
+          $formAnnotations.find('input[type="submit"]').text('Saving...');
           postAnnotation();
           event.preventDefault();
         });
@@ -64,11 +60,16 @@
       }
 
       function fetchParams() {
-        data['authenticity_token'] = $formAnnotations.find('input#authenticity-token').val();
+        data['authenticity_token'] = $formAnnotations.find('input#oa-store-authenticity-token').val();
 
-        tplAnnoJsonLd['@graph'][0]['chars'] = $formAnnotations.find('.text-annotation').val();
-        tplAnnoJsonLd['@graph'][1]['hasTarget'] = hasTargetPrefix + $formAnnotations.find('input#sw-id').val();
-        tplAnnoJsonLd['@graph'][1]['motivatedBy'] = $formAnnotations.find('input#motivation').val();
+        tplAnnoJsonLd['@graph']['hasBody']['chars'] = $formAnnotations.find('.text-annotation').val();
+        tplAnnoJsonLd['@graph']['hasTarget'] = hasTargetPrefix + $formAnnotations.find('input#annotation_hasTarget_id').val();
+        motivation = $formAnnotations.find('input#annotation_motivatedBy').val();
+        tplAnnoJsonLd['@graph']['motivatedBy'] = "oa:" + motivation
+
+        if (motivation.valueOf() == "tagging") {
+          tplAnnoJsonLd['@graph']['hasBody']['@type'].push(new String("oa:Tag"))
+        }
 
         data["annotation[data]"] = JSON.stringify(tplAnnoJsonLd);
       }
