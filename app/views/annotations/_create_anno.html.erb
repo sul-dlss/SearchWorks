@@ -3,7 +3,7 @@
     <%= hidden_field_tag 'oa-store-authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
     <%= f.hidden_field(:motivatedBy, value: motivation_str) %>
     <%= f.fields_for(:hasTarget) do |target| %>
-      <%= target.hidden_field(:id, value: @sw_doc_id) %>
+      <%= target.hidden_field(:id, value: sw_doc_id) %>
     <% end %>
 
     <div class="col-sm-6">

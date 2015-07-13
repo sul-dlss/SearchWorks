@@ -6,7 +6,7 @@
     </h2>
   </div>
 
-  <%= render partial: "annotations/create_anno", locals: {anno_type: "comment", motivation_str: "commenting"} %>
+  <%= render partial: "annotations/create_anno", locals: {anno_type: "comment", motivation_str: "commenting", sw_doc_id: @sw_doc_id} %>
 
   <div class="section-body user-comments">
     <ul>

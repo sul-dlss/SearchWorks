@@ -2,8 +2,8 @@ require "spec_helper"
 
 describe "annotations/_create_anno.html.erb", annos: true do
   let(:sw_doc_id) { '999' }
-  let(:tag_locals) {{anno_type: "tag", motivation_str: "tagging"}}
-  let(:comment_locals) {{anno_type: "comment", motivation_str: "commenting"}}
+  let(:tag_locals) {{anno_type: "tag", motivation_str: "tagging", sw_doc_id: sw_doc_id}}
+  let(:comment_locals) {{anno_type: "comment", motivation_str: "commenting", sw_doc_id: sw_doc_id}}
   before(:each) do
     assign(:sw_doc_id, sw_doc_id)
   end

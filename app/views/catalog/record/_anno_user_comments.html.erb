@@ -8,27 +8,7 @@
     </h2>
   </div>
 
-  <div id="create-comment" data-anno-store-url="<%= Settings.OPEN_ANNOTATION_STORE_URL %>">
-    <%= form_tag '', method: :post, class:"form-horizontal form-annotations form-create-comments", role:"form" do %>
-      <%= hidden_field_tag 'authenticity-token', "#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}" %>
-      <%= hidden_field_tag 'motivation', 'oa:commenting' %>
-      <%= hidden_field_tag 'sw-id', "#{document.id}" %>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <%= label_tag(:'text-tag', 'Comment', class:"col-sm-3 control-label") %>
-          <div class="col-sm-9">
-            <%= text_area_tag 'text-tag', nil, rows: 5, class:"form-control text-annotation" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <%= link_to "Cancel", "javascript:;", class:"cancel-link" %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <%= render partial: "annotations/create_anno", locals: {anno_type: "comment", motivation_str: "commenting", sw_doc_id: document.id} %>
 
   <div class="section-body user-comments">
     <ul>
