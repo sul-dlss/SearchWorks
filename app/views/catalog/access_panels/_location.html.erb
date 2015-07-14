@@ -42,7 +42,7 @@
                     </p>
                   <% else %>
                     <% if library.location_level_request? || location.location_level_request? %>
-                      <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right') %>
+                      <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs pull-right', data: { behavior: 'requests-modal' }) %>
                     <% end %>
                   <% end %>
                 <% end %>
@@ -70,7 +70,7 @@
                       <%= item.callnumber %>
                       <div class="request-link pull-right">
                         <% if item.must_request? %>
-                          <%= link_to('Request', request_link(document, item, item.barcode), class: 'btn btn-info btn-xs') %>
+                          <%= link_to('Request', request_link(document, item, item.barcode), class: 'btn btn-info btn-xs', data: { behavior: 'requests-modal' }) %>
                         <% end %>
                       </div>
                       <div class="current-location">

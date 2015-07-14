@@ -1,0 +1,20 @@
+.requests-modal {
+  .modal-content {
+    background-color: $beige-5-percent;
+
+    .modal-body {
+      height: 700px;
+    }
+
+    .cancel-footer {
+      box-shadow: 0 -4px 8px 0 rgba(95, 87, 79, .25);
+      margin: 0 -15px;
+      padding: 5px 15px;
+    }
+
+    iframe {
+      height: 90%;
+      width: 100%;
+    }
+  }
+}
