@@ -1,5 +1,9 @@
 require 'fixtures_indexer'
-require 'jettywrapper'
+begin
+  require 'jettywrapper'
+rescue LoadError => e
+  # should only get here when deployed as prod - in which case don't need those rake tasks
+end
 namespace :searchworks do
   desc "Run SearchWorks local installation steps"
   task :install => [:environment] do

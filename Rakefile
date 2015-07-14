@@ -6,7 +6,11 @@ require File.expand_path('../config/application', __FILE__)
 Rails.application.load_tasks
 
 ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.6.0.zip"
-require 'jettywrapper'
+begin
+  require 'jettywrapper'
+rescue LoadError => e
+  # should only get here when deployed as prod - in which case don't need those rake tasks
+end
 
 desc "Execute the test build that runs on travis"
 task :ci => [:environment] do
