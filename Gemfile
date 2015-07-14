@@ -8,7 +8,7 @@ gem 'i18n'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.5'
-# pin to to 3.3.1.0 per requests-dev branch
+# pin to to 3.3.1.0 per requests-dev branch to avoid
 #   "undefined method `type' for .focus:Sass::Selector::Class" in deployment
 gem "bootstrap-sass", "3.3.1.0"
 
@@ -98,7 +98,14 @@ gem "rails_config"
 gem "mods_display", "0.3.3"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery', ref: '2f9f342518'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search', ref: '199eaeda7faf00e7'
-gem "font-awesome-sass"
+# pin to to 4.1.0 per master branch to avoid errors:
+#   ActionController::RoutingError (No route matches [GET] "/fonts/font-awesome/fontawesome-webfont.woff")
+#   ActionController::RoutingError (No route matches [GET] "/fonts/font-awesome/fontawesome-webfont.ttf")
+gem "font-awesome-sass", "4.1.0"
+# pin to to 2.3.1 per master branch to avoid errors:
+#   ActionController::RoutingError (No route matches [GET] "/fonts/font-awesome/fontawesome-webfont.woff")
+#   ActionController::RoutingError (No route matches [GET] "/fonts/font-awesome/fontawesome-webfont.ttf")
+gem "sprockets-rails", "2.3.1"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit', ref: '15a140f9ee6c42d'
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
