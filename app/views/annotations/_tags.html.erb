@@ -9,11 +9,11 @@
   <%= render partial: "annotations/create_anno", locals: {anno_type: "tag", motivation_str: "oa:tagging"} %>
 
   <div class="section-body tags">
-    <% tag_annos.each do |tag_anno| %>
+    <% tag_annos.each do |tag_anno| -%>
       <span class="tag">
-        <%= tag_anno.getTag %>
+        <%= tag_anno.getTag -%>
         <span class="arrow"></span>
       </span>
-    <% end %>
+    <% end -%>
   </div>
 </div>
