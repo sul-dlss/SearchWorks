@@ -1,13 +1,6 @@
 class AnnotationsController < ApplicationController
 #  before_action :set_annotation, only: [:show]
 
-  # GET /annotations
-  # GET /annotations.json
-  def index
-    # TODO:  need to implement Annotation.all
-    @annotations = Annotation.all
-  end
-
   # GET /annotations/1
   # GET /annotations/1.json
   # returns annotation model objects for annos that have the searchworks solr doc id as a target
