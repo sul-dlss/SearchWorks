@@ -6,6 +6,9 @@ describe "annotations/_create_anno.html.erb", annos: true do
   let(:comment_locals) {{anno_type: "comment", motivation_str: "commenting", sw_doc_id: sw_doc_id}}
   before(:each) do
     assign(:sw_doc_id, sw_doc_id)
+    # need the following line to avoid error (view spec does not infer action in partial)
+    #   "No route matches {:action=>"index", :controller=>"annotations"}"
+    controller.request.action = "create"
   end
   context "outer div" do
     it 'id is create-tag for anno_type tag' do

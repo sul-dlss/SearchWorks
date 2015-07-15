@@ -16,6 +16,9 @@ describe "annotations/_comments.html.erb", annos: true do
   }
   before(:each) do
     assign(:sw_doc_id, sw_doc_id)
+    # need the following line to avoid error (view spec does not infer action in partial)
+    #   "No route matches {:action=>"index", :controller=>"annotations"}"
+    controller.request.action = "create"
   end
   it "displays Comments heading with number of comments" do
     assign(:annotations, [first_comment_anno, second_comment_anno])

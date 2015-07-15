@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe "annotations/show", vcr: true, annos: true do
   before(:each) do
-    # need the following line to avoid nested resources error in view spec:
-    #   "No route matches {:action=>"show", :controller=>"annotations"}"
-    allow(view).to receive(:url_for).and_return('#')
+    # need the following line to avoid error (view spec does not infer action in partial)
+    #   "No route matches {:action=>"index", :controller=>"annotations"}"
+    controller.request.action = "create"
   end
   it 'renders _tags partial' do
     render
