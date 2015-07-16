@@ -68,7 +68,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   # @return [LD4L::OpenAnnotationRDF::Annotation] but specifically typed (e.g. TagAnnotation, CommentAnnotation ...)
   def self.model_from_graph(graph)
     if graph && graph.size > 0
-      anno_uri = RDF::URI.new(triannon_id_from_graph(graph))
+      anno_uri = RDF::URI.new(anno_uri_from_graph(graph))
       # remove extraneous statements from older versions of this anno's graph
       # TODO: need to remove extraneous statements of children of anno too (e.g. targets, bodies, annotatedBy ...)
       rdf_repo = ActiveTriples::Repositories.repositories[Annotation.repository]
@@ -84,19 +84,13 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   end
 
   # @param [RDF::Graph] an annotation as a Graph
-  # @return [String] triannon id for the annotation (the unique path at the end of the url)
-  def self.triannon_id_from_graph graph
+  # @return [String] uri for the annotation
+  def self.anno_uri_from_graph graph
     solutions = graph.query self.anno_query
     if solutions && solutions.size == 1
-      return triannon_id_from_triannon_url(solutions.first.s.to_s)
+      return solutions.first.s.to_s
     end
     nil
-  end
-
-  # given a url, return the unique portion of it as the triannon_id
-  # @return [String] triannon id - the unique path at the end of the url
-  def self.triannon_id_from_triannon_url url
-    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
   end
 
   # query for a subject with type of RDF::Vocab::OA.Annotation
@@ -157,7 +151,6 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   # send the Annotation as an OpenAnnotation to the OA Storage
   def save
-#    puts graph.to_ttl
     @triannon_id = post_graph_to_oa_storage
     if @triannon_id
       true
@@ -198,9 +191,15 @@ protected
     end
     if response.status == 201
       new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
-      return Annotation.triannon_id_from_triannon_url new_url
+      return triannon_id_from_triannon_url new_url
     end
     return nil
+  end
+
+  # given a url, return the unique portion of it as the triannon_id
+  # @return [String] triannon id - the unique path at the end of the url
+  def triannon_id_from_triannon_url url
+    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
   end
 
   def oa_storage_conn

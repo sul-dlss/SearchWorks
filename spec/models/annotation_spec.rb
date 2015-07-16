@@ -135,39 +135,25 @@ describe Annotation, vcr: true, annos: true do
     end
   end # *model_from_graph
 
-  context '*triannon_id_from_graph' do
-    it "returns unique part of triannon url for Triannon OA::Annotation" do
+  context '*anno_uri_from_graph' do
+    it "returns full url for OA::Annotation from Triannon storage" do
       tid = "aaa"
       g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
-      expect(Annotation.triannon_id_from_graph(g)).to eq tid
+      expect(Annotation.anno_uri_from_graph(g)).to eq "#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}"
     end
     it "returns full url for OA::Annotation that isn't from Triannon storage" do
       tid = "aaa"
-      g = RDF::Graph.new.from_ttl("<http://my_anno_url/#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
-      expect(Annotation.triannon_id_from_graph(g)).to eq "http://my_anno_url/#{tid}"
+      g = RDF::Graph.new.from_ttl("<https://my_anno_url/#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
+      expect(Annotation.anno_uri_from_graph(g)).to eq "https://my_anno_url/#{tid}"
     end
     it "nil for Triannon url that isn't OA::Annotation" do
       tid = "aaa"
       g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://foo.org/thing> .")
-      expect(Annotation.triannon_id_from_graph(g)).to be_nil
+      expect(Annotation.anno_uri_from_graph(g)).to be_nil
     end
     it "nil when graph is empty" do
       solutions = RDF::Graph.new.query Annotation.anno_query
       expect(solutions.size).to eq 0
-    end
-  end
-
-  context '*triannon_id_from_triannon_url' do
-    it "returns the part of the url after the OA storage config setting" do
-      exp_id = "aaa"
-      expect(Annotation.triannon_id_from_triannon_url("#{Settings.OPEN_ANNOTATION_STORE_URL}#{exp_id}")).to eq exp_id
-    end
-    it "returns whole url if it doesn't match OA storage config setting" do
-      url = "http://my_anno_url"
-      expect(Annotation.triannon_id_from_triannon_url(url)).to eq url
-    end
-    it "nil if url is nil" do
-      expect(Annotation.triannon_id_from_triannon_url(nil)).to eq nil
     end
   end
 
@@ -387,6 +373,23 @@ describe Annotation, vcr: true, annos: true do
     it "returns nil if there was an error" do
       expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
       expect(@anno.send(:post_graph_to_oa_storage)).to be_nil
+    end
+  end
+
+  context '#triannon_id_from_triannon_url' do
+    before(:each) do
+      @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
+    end
+    it "returns the part of the url after the OA storage config setting" do
+      exp_id = "aaa"
+      expect(@anno.send(:triannon_id_from_triannon_url, "#{Settings.OPEN_ANNOTATION_STORE_URL}#{exp_id}")).to eq exp_id
+    end
+    it "returns whole url if it doesn't match OA storage config setting" do
+      url = "http://my_anno_url"
+      expect(@anno.send(:triannon_id_from_triannon_url, url)).to eq url
+    end
+    it "nil if url is nil" do
+      expect(@anno.send(:triannon_id_from_triannon_url, nil)).to eq nil
     end
   end
 
