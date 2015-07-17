@@ -22,15 +22,14 @@ class AnnotationsController < ApplicationController
   # POST /annotations.json
   def create
     @annotation = Annotation.new(anno_params)
-
+    target_sw_doc_id = anno_params['hasTarget']['id'] unless anno_params['hasTarget'].blank? || anno_params['hasTarget']['id'].blank?
     respond_to do |format|
       if @annotation.save
-        format.html { redirect_to @annotation, status: :created, notice: 'Annotation was successfully created.' }
-        format.json { render :show, status: :created, location: @annotation }
+        msg = 'Annotation was successfully created. (You may need to refresh this page to see it.)'
+        format.html { redirect_to annotation_path(target_sw_doc_id), notice: msg}
       else
-        flash[:alert] = 'There was a problem creating the Annotation.'
+        flash[:error] = "There was a problem creating the Annotation (for #{target_sw_doc_id}): #{@annotation.errors.full_messages if @annotation.errors.present?}"
         format.html { render :new, status: 500 }
-        format.json { render json: @annotation.errors, status: 500 }
       end
     end
   end

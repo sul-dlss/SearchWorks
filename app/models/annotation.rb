@@ -187,10 +187,13 @@ protected
   def post_graph_to_oa_storage
     response = oa_storage_conn.post do |req|
       req.headers['Content-Type'] = 'application/x-turtle'
+      req.headers['Accept'] = 'application/x-turtle'
       req.body = graph.to_ttl
     end
     if response.status == 201
-      new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
+      # see https://github.com/sul-dlss/triannon/issues/218 -- this hasn't been implemented yet in Triannon
+      #new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
+      new_url = Annotation.anno_uri_from_graph(RDF::Graph.new.from_ttl(response.body))
       return triannon_id_from_triannon_url new_url
     end
     return nil

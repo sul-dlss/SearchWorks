@@ -352,23 +352,26 @@ describe Annotation, vcr: true, annos: true do
   end
 
   context '#post_graph_to_oa_storage' do
+    let(:anno_ttl) {"<#{Settings.OPEN_ANNOTATION_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
+     <http://www.w3.org/ns/oa#hasTarget> <http://purl.stanford.edu/kq131cs7229>;
+     <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#bookmarking> ."}
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
-    it 'sends POST to oa_storage_conn, looks for 201 status and Location header' do
+    it 'sends POST to oa_storage_conn, looks for 201 status and body' do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
-      expect(resp).to receive(:headers).and_return({"Location" => 'somewhere'}).twice
+      expect(resp).to receive(:body)
       expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
       @anno.send(:post_graph_to_oa_storage)
     end
-    it "returns the storage id (from resp.headers['Location']) of a newly created anno" do
+    it "returns the storage id of a newly created anno" do
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
-      expect(resp).to receive(:headers).and_return({"Location" => "#{Settings.OPEN_ANNOTATION_STORE_URL}new_id"}).twice
+      expect(resp).to receive(:body).and_return(anno_ttl)
       expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
       id = @anno.send(:post_graph_to_oa_storage)
-      expect(id).to eq "new_id"
+      expect(id).to eq "new_anno_id"
     end
     it "returns nil if there was an error" do
       expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
