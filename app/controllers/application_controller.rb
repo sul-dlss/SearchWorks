@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  before_action do
+    current_user.webauth_groups = request.env.fetch('WEBAUTH_LDAPPRIVGROUP', '').split('|') if current_user
+  end
 
   include Squash::Ruby::ControllerMethods
   enable_squash_client

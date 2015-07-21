@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation if Rails::VERSION::MAJOR < 4
+  attr_accessor :webauth_groups
+
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
   # Include default devise modules. Others available are:
