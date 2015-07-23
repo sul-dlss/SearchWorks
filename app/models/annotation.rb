@@ -1,4 +1,5 @@
 require 'ld4l/open_annotation_rdf'
+require 'json'
 
 # This is model code to represent the OpenAnnotation RDF Data Model (http://www.openannotation.org/spec/core/).
 #
@@ -204,6 +205,63 @@ protected
   def triannon_id_from_triannon_url url
     return url.split(Settings.OPEN_ANNO_REPO_STORE_URL).last if url
   end
+
+  # Get a valid accessToken to create or delete annos
+  # @param [String] user_id a webauth id (sunetid)
+  # @param [Array<String>] workgroups the LDAP workgroups for the user (which are needed to allow or diallow posts to an anno container)
+  # @return [String] valid accessToken string, or nil
+  def access_token(user_id, workgroups)
+    auth_code = client_authzn_code
+    if auth_code
+      if user_info_cookie(user_id, workgroups, auth_code)
+        resp = post_json_to_oa_auth('access_token', {code: auth_code})
+        if resp.status == 200
+          return JSON.parse(resp.body)['accessToken']
+        end
+      end
+    end
+    nil
+  end
+
+  # get the client authorizationCode from the OA repo
+  # @return [String] authorizationCode, or nil if it couldn't get one
+  def client_authzn_code
+    client_authz_req_body = "{ \"clientId\": \"#{Settings.OPEN_ANNO_REPO_CLIENT_ID}\",
+                               \"clientSecret\": \"#{Settings.OPEN_ANNO_REPO_CLIENT_SECRET}\"
+                             }"
+    resp = post_json_to_oa_auth('client_identity', {}, client_authz_req_body)
+    if resp.status == 200
+      return JSON.parse(resp.body)['authorizationCode']
+    end
+    nil
+  end
+
+  # get the Cookie / Session data so that we can request an accessToken from OA repo
+  # @param [String] user_id a webauth id (sunetid)
+  # @param [Array<String>] workgroups the LDAP workgroups for the user (which are needed to allow or diallow posts to an anno container)
+  # @param [String] client_auth_code the authorizationCode string returned from a client_identity request to OA store
+  def user_info_cookie(user_id, workgroups, client_auth_code)
+    user_info_req_body = "{ \"userId\": \"#{user_id}\",
+                            \"workgroups\": \"#{workgroups}\"
+                          }"
+    resp = post_json_to_oa_auth('login', {code: client_auth_code}, user_info_req_body)
+    resp.status == 302
+  end
+
+  # sends POST request to oa_repo_auth_conn with given path, params, and body
+  # @return [Faraday::Response]
+  def post_json_to_oa_auth(path, params={}, body = nil)
+    resp = oa_repo_auth_conn.post do |req|
+      req.url path
+      params.each_pair { |k, v|
+        req.params[k] = v
+      }
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['Accept'] = 'application/json'
+      req.body = body
+    end
+  end
+
 
   def oa_storage_conn
     @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNO_REPO_STORE_URL

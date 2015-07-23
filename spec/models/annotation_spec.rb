@@ -403,4 +403,131 @@ describe Annotation, vcr: true, annos: true do
     end
   end
 
+  describe "authzn for OA storage" do
+    let(:anno) {Annotation.new}
+
+    describe "#access_token" do
+      let(:user_id) {'me'}
+      let(:workgroups) {['group1', 'group2']}
+      let(:client_auth_code) {'pretend_this_is_a_client_auth_code'}
+      it 'calls client_authzn_code' do
+        expect(anno).to receive(:client_authzn_code)
+        anno.send(:access_token, user_id, workgroups)
+      end
+      it 'calls user_info_cookie' do
+        allow(anno).to receive(:client_authzn_code).and_return(client_auth_code)
+        expect(anno).to receive(:user_info_cookie)
+        anno.send(:access_token, user_id, workgroups)
+      end
+      it "doesn't call user_info_cookie if no client_authzn_code" do
+        allow(anno).to receive(:client_authzn_code).and_return(nil)
+        expect(anno).not_to receive(:user_info_cookie)
+        anno.send(:access_token, user_id, workgroups)
+      end
+      it "doesn't call post_json_to_oa_auth if user_info_cookie is false" do
+        allow(anno).to receive(:client_authzn_code).and_return(client_auth_code)
+        expect(anno).to receive(:user_info_cookie).and_return(false)
+        expect(anno).not_to receive(:post_json_to_oa_auth)
+        anno.send(:access_token, user_id, workgroups)
+      end
+      it 'gets accessToken if client_authzn_code and user_info_cookie' do
+        access_token = 'some string'
+        resp_body_json = { accessToken: access_token }.to_json
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(200)
+        expect(resp).to receive(:body).and_return(resp_body_json)
+        conn = double("faraday_conn")
+        expect(conn).to receive(:post).and_return(resp)
+        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
+        expect(anno).to receive(:client_authzn_code).and_return(client_auth_code)
+        expect(anno).to receive(:user_info_cookie).and_return(true)
+        expect(anno.send(:access_token, user_id, workgroups)).to eq access_token
+      end
+      it "calls post_json_to_triannon with path 'access_token', authzn_code param" do
+        resp = double("faraday_resp")
+        resp_body_json = { accessToken: 'whatever' }.to_json
+        expect(resp).to receive(:status).and_return(200)
+        expect(resp).to receive(:body).and_return(resp_body_json)
+        expect(anno).to receive(:client_authzn_code).and_return(client_auth_code)
+        expect(anno).to receive(:user_info_cookie).and_return(true)
+        expect(anno).to receive(:post_json_to_oa_auth).with('access_token', {code: client_auth_code}).and_return(resp)
+        anno.send(:access_token, user_id, workgroups)
+      end
+      it 'nil if resp code not 200' do
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(201)
+        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno.send(:access_token, user_id, workgroups)).to be_nil
+      end
+    end # access_token
+
+    describe "#client_authzn_code" do
+      it 'gets authzn code for SW client' do
+        auth_code = 'some string'
+        resp_body_json = { authorizationCode: auth_code }.to_json
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(200)
+        expect(resp).to receive(:body).and_return(resp_body_json)
+        conn = double("faraday_conn")
+        expect(conn).to receive(:post).and_return(resp)
+        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
+        expect(anno.send(:client_authzn_code)).to eq auth_code
+      end
+      it "calls post_json_to_triannon with path 'client_identity' and json body with values from Settings" do
+        expect(Settings).to receive(:OPEN_ANNO_REPO_CLIENT_ID)
+        expect(Settings).to receive(:OPEN_ANNO_REPO_CLIENT_SECRET)
+        resp = double("faraday_resp")
+        resp_body_json = { authorizationCode: 'whatever' }.to_json
+        expect(resp).to receive(:status).and_return(200)
+        expect(resp).to receive(:body).and_return(resp_body_json)
+        expect(anno).to receive(:post_json_to_oa_auth).with('client_identity', {}, an_instance_of(String)).and_return(resp)
+        # FIXME:  would like to check body for string passed
+        anno.send(:client_authzn_code)
+      end
+      it 'nil if resp code not 200' do
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(201)
+        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno.send(:client_authzn_code)).to be_nil
+      end
+    end
+
+    describe "#user_info_cookie" do
+      let(:user_id) {'me'}
+      let(:workgroups) {['group1', 'group2']}
+      let(:client_auth_code) {'pretend_this_is_a_client_auth_code'}
+      it 'true if resp code 302' do
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(302)
+        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_true
+      end
+      it "calls post_json_to_triannon with path 'login', authzn_code param and json body with user id and workgroups" do
+        params = {code: client_auth_code}
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(302)
+        expect(resp).not_to receive(:body)
+        expect(anno).to receive(:post_json_to_oa_auth).with('login', params, an_instance_of(String)).and_return(resp)
+        # FIXME:  would like to check body for string passed
+        anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)
+      end
+      it 'false if resp code not 302' do
+        resp = double("faraday_resp")
+        expect(resp).to receive(:status).and_return(200)
+        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_false
+      end
+    end
+
+    describe "#post_json_to_oa_auth" do
+      it 'sends POST request to oa_repo_auth_conn and returns response' do
+        resp = double("resp")
+        conn = double("faraday_conn")
+        expect(conn).to receive(:post).and_return(resp)
+        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
+        expect(anno.send(:post_json_to_oa_auth, nil)).to eq resp
+      end
+    end
+  end
+
 end
