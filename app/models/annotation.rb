@@ -102,7 +102,7 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
   end
 
   def self.oa_rsolr_conn
-    @@rsolr_client ||= RSolr.connect url: Settings.OPEN_ANNOTATION_SOLR_URL
+    @@rsolr_client ||= RSolr.connect url: Settings.OPEN_ANNO_REPO_SOLR_URL
   end
 
   # Instance Methods ----------------------------------------------------------------
@@ -202,11 +202,16 @@ protected
   # given a url, return the unique portion of it as the triannon_id
   # @return [String] triannon id - the unique path at the end of the url
   def triannon_id_from_triannon_url url
-    return url.split(Settings.OPEN_ANNOTATION_STORE_URL).last if url
+    return url.split(Settings.OPEN_ANNO_REPO_STORE_URL).last if url
   end
 
   def oa_storage_conn
-    @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNOTATION_STORE_URL
+    @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNO_REPO_STORE_URL
+  end
+
+  # TODO: naomi_must_comment_and_test_this_method
+  def oa_repo_auth_conn
+    @oa_repo_auth_conn ||= Faraday.new Settings.OPEN_ANNO_REPO_AUTH_URL
   end
 
 end

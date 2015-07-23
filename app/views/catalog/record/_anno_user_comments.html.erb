@@ -1,6 +1,6 @@
 <% document ||= @document %>
 
-<div class="section annotations-user-comments" id="<%= t('record_side_nav.user_comments.id') %>" data-side-nav-class="<%= t('record_side_nav.user_comments.id') %>" data-anno-id="<%= document.id %>" data-anno-search-url="<%= Settings.OPEN_ANNOTATION_SOLR_URL %>">
+<div class="section annotations-user-comments" id="<%= t('record_side_nav.user_comments.id') %>" data-side-nav-class="<%= t('record_side_nav.user_comments.id') %>" data-anno-id="<%= document.id %>" data-anno-search-url="<%= Settings.OPEN_ANNO_REPO_SOLR_URL %>">
   <div class="section-heading">
     <h2>
       <%= t('record_side_nav.user_comments.icon').html_safe %> User comments <span class="num-found"></span>

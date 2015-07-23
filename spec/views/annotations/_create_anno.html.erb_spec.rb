@@ -19,9 +19,9 @@ describe "annotations/_create_anno.html.erb", annos: true do
       render partial: "annotations/create_anno.html.erb", locals: comment_locals
       expect(rendered).to have_css("div#create-comment/form")
     end
-    it 'data-anno-store_url = Settings.OPEN_ANNOTATION_STORE_URL' do
+    it 'data-anno-store_url = Settings.OPEN_ANNO_REPO_STORE_URL' do
       render partial: "annotations/create_anno.html.erb", locals: tag_locals
-      expect(rendered).to have_css("div[data-anno-store-url='#{Settings.OPEN_ANNOTATION_STORE_URL}']/form")
+      expect(rendered).to have_css("div[data-anno-store-url='#{Settings.OPEN_ANNO_REPO_STORE_URL}']/form")
     end
   end
   context "form" do
@@ -52,9 +52,9 @@ describe "annotations/_create_anno.html.erb", annos: true do
           expect(rendered).to have_css("form/input#annotation_motivatedBy[name='annotation[motivatedBy]'][type='hidden']")
         end
       end
-      it 'oa-store-authenticity-token = Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN' do
+      it 'oa-store-authenticity-token = Settings.OPEN_ANNO_REPO_POST_AUTH_TOKEN' do
         render partial: "annotations/create_anno.html.erb", locals: tag_locals
-        expect(rendered).to have_css("form/input#oa-store-authenticity-token[value='#{Settings.OPEN_ANNOTATION_POST_AUTH_TOKEN}']")
+        expect(rendered).to have_css("form/input#oa-store-authenticity-token[value='#{Settings.OPEN_ANNO_REPO_POST_AUTH_TOKEN}']")
       end
     end
     it '"Save" submit "button"' do

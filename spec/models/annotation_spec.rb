@@ -138,8 +138,8 @@ describe Annotation, vcr: true, annos: true do
   context '*anno_uri_from_graph' do
     it "returns full url for OA::Annotation from Triannon storage" do
       tid = "aaa"
-      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
-      expect(Annotation.anno_uri_from_graph(g)).to eq "#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}"
+      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNO_REPO_STORE_URL}#{tid}> a <http://www.w3.org/ns/oa#Annotation> .")
+      expect(Annotation.anno_uri_from_graph(g)).to eq "#{Settings.OPEN_ANNO_REPO_STORE_URL}#{tid}"
     end
     it "returns full url for OA::Annotation that isn't from Triannon storage" do
       tid = "aaa"
@@ -148,7 +148,7 @@ describe Annotation, vcr: true, annos: true do
     end
     it "nil for Triannon url that isn't OA::Annotation" do
       tid = "aaa"
-      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNOTATION_STORE_URL}#{tid}> a <http://foo.org/thing> .")
+      g = RDF::Graph.new.from_ttl("<#{Settings.OPEN_ANNO_REPO_STORE_URL}#{tid}> a <http://foo.org/thing> .")
       expect(Annotation.anno_uri_from_graph(g)).to be_nil
     end
     it "nil when graph is empty" do
@@ -344,15 +344,22 @@ describe Annotation, vcr: true, annos: true do
 
 # Protected Methods ----------------------------------------------------------------
 
-  it "#oa_storage_conn is Faraday connection to OPEN_ANNOTATION_STORE_URL in Settings.yml" do
+  it "#oa_storage_conn is Faraday connection to OPEN_ANNO_STORE_URL in Settings.yml" do
     anno = Annotation.new({})
     oa_storage_conn = anno.send(:oa_storage_conn)
     expect(oa_storage_conn).to be_a Faraday::Connection
-    expect(oa_storage_conn.url_prefix.to_s).to match Settings.OPEN_ANNOTATION_STORE_URL
+    expect(oa_storage_conn.url_prefix.to_s).to match Settings.OPEN_ANNO_REPO_STORE_URL
+  end
+
+  it "#oa_repo_auth_conn is Faraday connection to OPEN_ANNO_REPO_AUTH_URL in Settings.yml" do
+    anno = Annotation.new({})
+    oa_repo_auth_conn = anno.send(:oa_repo_auth_conn)
+    expect(oa_repo_auth_conn).to be_a Faraday::Connection
+    expect(oa_repo_auth_conn.url_prefix.to_s).to match Settings.OPEN_ANNO_REPO_AUTH_URL
   end
 
   context '#post_graph_to_oa_storage' do
-    let(:anno_ttl) {"<#{Settings.OPEN_ANNOTATION_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
+    let(:anno_ttl) {"<#{Settings.OPEN_ANNO_REPO_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
      <http://www.w3.org/ns/oa#hasTarget> <http://purl.stanford.edu/kq131cs7229>;
      <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#bookmarking> ."}
     before(:each) do
@@ -385,7 +392,7 @@ describe Annotation, vcr: true, annos: true do
     end
     it "returns the part of the url after the OA storage config setting" do
       exp_id = "aaa"
-      expect(@anno.send(:triannon_id_from_triannon_url, "#{Settings.OPEN_ANNOTATION_STORE_URL}#{exp_id}")).to eq exp_id
+      expect(@anno.send(:triannon_id_from_triannon_url, "#{Settings.OPEN_ANNO_REPO_STORE_URL}#{exp_id}")).to eq exp_id
     end
     it "returns whole url if it doesn't match OA storage config setting" do
       url = "http://my_anno_url"

@@ -48,11 +48,11 @@ describe AnnotationsController, vcr: true, annos: true do
   end
 
   describe "POST create" do
-    describe "with valid params" do
+    context "with valid params" do
       let(:target_id) {"foo"}
       # Return the minimal set of attributes required to create a valid Annotation.
       let(:valid_attributes) { {:motivatedBy => 'commenting', :hasTarget => {:id => target_id}} }
-      let(:anno_ttl) {"<#{Settings.OPEN_ANNOTATION_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
+      let(:anno_ttl) {"<#{Settings.OPEN_ANNO_REPO_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
    <http://www.w3.org/ns/oa#hasTarget> <http://purl.stanford.edu/kq131cs7229>;
    <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#bookmarking> ."}
 
