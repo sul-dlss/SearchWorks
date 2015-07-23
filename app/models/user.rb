@@ -16,6 +16,22 @@ class User < ActiveRecord::Base
     email
   end
 
+  # this is a lame workaround so development can proceed:
+  #   hardcode webauth_groups if Rails is running in development mode and if
+  #   we have set the REMOTE_USER as an ENV value (e.g. at the command line spinning up rails)
+  def webauth_groups
+    if @webauth_groups.present?
+      @webauth_groups
+    elsif Rails.env.development? && ENV['REMOTE_USER']
+      ["dlss:triannon-searchworks-users"]
+    end
+  end
+
+  # @return true if current_user is in the appropriate LDAP workgroup; false otherwise
+  def can_annotate?
+    webauth_groups.include?("dlss:triannon-searchworks-users")
+  end
+
   def sunet
     email.gsub('@stanford.edu', '')
   end
