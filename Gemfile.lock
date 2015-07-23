@@ -178,6 +178,9 @@ GEM
     execjs (2.5.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    faraday-cookie_jar (0.0.6)
+      faraday (>= 0.7.4)
+      http-cookie (~> 1.0.0)
     ffi (1.9.10)
     font-awesome-sass (4.1.0)
       sass (~> 3.2)
@@ -508,6 +511,7 @@ DEPENDENCIES
   devise-guests
   devise-remote-user
   faraday
+  faraday-cookie_jar
   font-awesome-sass (= 4.1.0)
   i18n
   jbuilder

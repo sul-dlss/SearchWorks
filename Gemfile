@@ -116,6 +116,7 @@ gem 'whenever', require: false
 # Annotation Implementation
 gem 'ld4l-open_annotation_rdf' # active triple models
 gem 'active-triples', '~> 0.6.1' # ld4l-open_annotation_rdf doesn't work (yet) with active-triples 0.7.x or above
+gem 'faraday-cookie_jar' # to allow cookie management for auth/authz with OA repo
 # to cache jsonld OA context file(s)
 gem 'rest-client'
 gem 'rack-cache'
