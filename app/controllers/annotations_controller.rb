@@ -24,7 +24,7 @@ class AnnotationsController < ApplicationController
     @annotation = Annotation.new(anno_params)
     target_sw_doc_id = anno_params['hasTarget']['id'] unless anno_params['hasTarget'].blank? || anno_params['hasTarget']['id'].blank?
     respond_to do |format|
-      if @annotation.save
+      if @annotation.save(current_user.sunet, current_user.webauth_groups)
         msg = 'Annotation was successfully created. (You may need to refresh this page to see it.)'
         format.html { redirect_to annotation_path(target_sw_doc_id), notice: msg}
       else

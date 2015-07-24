@@ -319,70 +319,98 @@ describe Annotation, vcr: true, annos: true do
   end
 
   context '#save' do
+    let(:user_id) {'me'}
+    let(:workgroups) {['group1', 'group2']}
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
     it "calls post_graph_to_oa_storage" do
-      expect(@anno).to receive(:post_graph_to_oa_storage)
-      @anno.save
+      expect(@anno).to receive(:post_graph_to_oa_storage).with(user_id, workgroups)
+      @anno.save(user_id, workgroups)
     end
     it "returns true if anno_store returns id" do
-      allow(@anno).to receive(:post_graph_to_oa_storage).and_return("666")
-      expect(@anno.save).to be_true
+      allow(@anno).to receive(:post_graph_to_oa_storage).with(user_id, workgroups).and_return("666")
+      expect(@anno.save(user_id, workgroups)).to be_true
     end
     it "returns false if anno_store doesn't return id" do
-      allow(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
-      expect(@anno.save).to be_false
+      allow(@anno).to receive(:access_token).and_return('fake_access_token')
+      allow(@anno.send(:oa_repo_conn)).to receive(:post).and_return(Faraday::Response.new)
+      expect(@anno.save(user_id, workgroups)).to be_false
     end
     it "sets triannon_id attribute" do
       expect(@anno.triannon_id).to be_nil
-      allow(@anno).to receive(:post_graph_to_oa_storage).and_return("666")
-      @anno.save
+      allow(@anno).to receive(:post_graph_to_oa_storage).with(user_id, workgroups).and_return("666")
+      @anno.save(user_id, workgroups)
       expect(@anno.triannon_id).to eq "666"
+    end
+    it 'does nothing if empty user_id' do
+      expect(@anno).not_to receive(:post_graph_to_oa_storage)
+      @anno.save(nil, workgroups)
+    end
+    it 'does nothing if no webauth_groups' do
+      expect(@anno).not_to receive(:post_graph_to_oa_storage)
+      @anno.save(user_id, nil)
+      expect(@anno).not_to receive(:post_graph_to_oa_storage)
+      @anno.save(user_id, [])
     end
   end
 
 # Protected Methods ----------------------------------------------------------------
 
-  it "#oa_storage_conn is Faraday connection to OPEN_ANNO_STORE_URL in Settings.yml" do
-    anno = Annotation.new({})
-    oa_storage_conn = anno.send(:oa_storage_conn)
-    expect(oa_storage_conn).to be_a Faraday::Connection
-    expect(oa_storage_conn.url_prefix.to_s).to match Settings.OPEN_ANNO_REPO_STORE_URL
-  end
-
-  it "#oa_repo_auth_conn is Faraday connection to OPEN_ANNO_REPO_AUTH_URL in Settings.yml" do
-    anno = Annotation.new({})
-    oa_repo_auth_conn = anno.send(:oa_repo_auth_conn)
-    expect(oa_repo_auth_conn).to be_a Faraday::Connection
-    expect(oa_repo_auth_conn.url_prefix.to_s).to match Settings.OPEN_ANNO_REPO_AUTH_URL
+  describe "#oa_repo_conn" do
+    let(:oa_repo_conn) {
+      anno = Annotation.new({})
+      oa_repo_conn = anno.send(:oa_repo_conn)
+    }
+    it "Faraday connection to OPEN_ANNO_REPO_URL in Settings.yml" do
+      expect(oa_repo_conn).to be_a Faraday::Connection
+      expect(oa_repo_conn.url_prefix.to_s).to match Settings.OPEN_ANNO_REPO_URL
+    end
+    it 'uses Faraday::CookieJar to manage cookies for session-ized requests' do
+      expect(oa_repo_conn.builder.handlers).to include(Faraday::CookieJar)
+    end
   end
 
   context '#post_graph_to_oa_storage' do
     let(:anno_ttl) {"<#{Settings.OPEN_ANNO_REPO_STORE_URL}new_anno_id> a <http://www.w3.org/ns/oa#Annotation>;
      <http://www.w3.org/ns/oa#hasTarget> <http://purl.stanford.edu/kq131cs7229>;
      <http://www.w3.org/ns/oa#motivatedBy> <http://www.w3.org/ns/oa#bookmarking> ."}
+    let(:user_id) {'me'}
+    let(:workgroups) {['group1', 'group2']}
+    let(:fake_access_token) {'fake access token'}
     before(:each) do
       @anno = Annotation.new({"motivatedBy" => "tagging", "hasTarget" => {"id" => "666"}, "hasBody" => {"id" => "blah blah"}})
     end
-    it 'sends POST to oa_storage_conn, looks for 201 status and body' do
+    it 'calls access_token' do
+      expect(@anno).to receive(:access_token)
+      @anno.send(:post_graph_to_oa_storage, user_id, workgroups)
+    end
+    it "doesn't post if nil access token" do
+      allow(@anno).to receive(:access_token).and_return(nil)
+      expect(@anno).not_to receive(:oa_repo_conn)
+      @anno.send(:post_graph_to_oa_storage, user_id, workgroups)
+    end
+    it 'sends POST to oa_repo_conn, looks for 201 status and body' do
+      allow(@anno).to receive(:access_token).and_return(fake_access_token)
       resp = double("resp")
       expect(resp).to receive(:status).and_return(201)
       expect(resp).to receive(:body)
-      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
-      @anno.send(:post_graph_to_oa_storage)
+      expect(@anno.send(:oa_repo_conn)).to receive(:post).and_return(resp)
+      @anno.send(:post_graph_to_oa_storage, user_id, workgroups)
     end
     it "returns the storage id of a newly created anno" do
+      allow(@anno).to receive(:access_token).and_return(fake_access_token)
       resp = double("resp")
-      expect(resp).to receive(:status).and_return(201)
-      expect(resp).to receive(:body).and_return(anno_ttl)
-      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(resp)
-      id = @anno.send(:post_graph_to_oa_storage)
+      allow(resp).to receive(:status).and_return(201)
+      allow(resp).to receive(:body).and_return(anno_ttl)
+      allow(@anno.send(:oa_repo_conn)).to receive(:post).and_return(resp)
+      id = @anno.send(:post_graph_to_oa_storage, user_id, workgroups)
       expect(id).to eq "new_anno_id"
     end
-    it "returns nil if there was an error" do
-      expect(@anno.send(:oa_storage_conn)).to receive(:post).and_return(Faraday::Response.new)
-      expect(@anno.send(:post_graph_to_oa_storage)).to be_nil
+    it "returns nil if there was an error doing POST" do
+      allow(@anno).to receive(:access_token).and_return(fake_access_token)
+      allow(@anno.send(:oa_repo_conn)).to receive(:post).and_return(Faraday::Response.new)
+      expect(@anno.send(:post_graph_to_oa_storage, user_id, workgroups)).to be_nil
     end
   end
 
@@ -424,10 +452,10 @@ describe Annotation, vcr: true, annos: true do
         expect(anno).not_to receive(:user_info_cookie)
         anno.send(:access_token, user_id, workgroups)
       end
-      it "doesn't call post_json_to_oa_auth if user_info_cookie is false" do
+      it "doesn't call json_to_oa_auth if user_info_cookie is false" do
         allow(anno).to receive(:client_authzn_code).and_return(client_auth_code)
         expect(anno).to receive(:user_info_cookie).and_return(false)
-        expect(anno).not_to receive(:post_json_to_oa_auth)
+        expect(anno).not_to receive(:json_to_oa_auth)
         anno.send(:access_token, user_id, workgroups)
       end
       it 'gets accessToken if client_authzn_code and user_info_cookie' do
@@ -437,26 +465,26 @@ describe Annotation, vcr: true, annos: true do
         expect(resp).to receive(:status).and_return(200)
         expect(resp).to receive(:body).and_return(resp_body_json)
         conn = double("faraday_conn")
-        expect(conn).to receive(:post).and_return(resp)
-        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
+        expect(conn).to receive(:get).and_return(resp)
+        expect(anno).to receive(:oa_repo_conn).and_return(conn)
         expect(anno).to receive(:client_authzn_code).and_return(client_auth_code)
         expect(anno).to receive(:user_info_cookie).and_return(true)
         expect(anno.send(:access_token, user_id, workgroups)).to eq access_token
       end
-      it "calls post_json_to_triannon with path 'access_token', authzn_code param" do
+      it "calls json_to_oa_auth with get, path 'access_token', authzn_code param" do
         resp = double("faraday_resp")
         resp_body_json = { accessToken: 'whatever' }.to_json
         expect(resp).to receive(:status).and_return(200)
         expect(resp).to receive(:body).and_return(resp_body_json)
         expect(anno).to receive(:client_authzn_code).and_return(client_auth_code)
         expect(anno).to receive(:user_info_cookie).and_return(true)
-        expect(anno).to receive(:post_json_to_oa_auth).with('access_token', {code: client_auth_code}).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).with(:get, 'access_token', {code: client_auth_code}).and_return(resp)
         anno.send(:access_token, user_id, workgroups)
       end
       it 'nil if resp code not 200' do
         resp = double("faraday_resp")
         expect(resp).to receive(:status).and_return(201)
-        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:access_token, user_id, workgroups)).to be_nil
       end
     end # access_token
@@ -470,24 +498,24 @@ describe Annotation, vcr: true, annos: true do
         expect(resp).to receive(:body).and_return(resp_body_json)
         conn = double("faraday_conn")
         expect(conn).to receive(:post).and_return(resp)
-        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
+        expect(anno).to receive(:oa_repo_conn).and_return(conn)
         expect(anno.send(:client_authzn_code)).to eq auth_code
       end
-      it "calls post_json_to_triannon with path 'client_identity' and json body with values from Settings" do
+      it "calls json_to_oa_auth with post, path 'client_identity' and json body with values from Settings" do
         expect(Settings).to receive(:OPEN_ANNO_REPO_CLIENT_ID)
         expect(Settings).to receive(:OPEN_ANNO_REPO_CLIENT_SECRET)
         resp = double("faraday_resp")
         resp_body_json = { authorizationCode: 'whatever' }.to_json
         expect(resp).to receive(:status).and_return(200)
         expect(resp).to receive(:body).and_return(resp_body_json)
-        expect(anno).to receive(:post_json_to_oa_auth).with('client_identity', {}, an_instance_of(String)).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).with(:post, 'client_identity', {}, an_instance_of(String)).and_return(resp)
         # FIXME:  would like to check body for string passed
         anno.send(:client_authzn_code)
       end
       it 'nil if resp code not 200' do
         resp = double("faraday_resp")
         expect(resp).to receive(:status).and_return(201)
-        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:client_authzn_code)).to be_nil
       end
     end
@@ -499,33 +527,33 @@ describe Annotation, vcr: true, annos: true do
       it 'true if resp code 302' do
         resp = double("faraday_resp")
         expect(resp).to receive(:status).and_return(302)
-        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_true
       end
-      it "calls post_json_to_triannon with path 'login', authzn_code param and json body with user id and workgroups" do
+      it "calls json_to_oa_auth with post, path 'login', authzn_code param and json body with user id and workgroups" do
         params = {code: client_auth_code}
         resp = double("faraday_resp")
         expect(resp).to receive(:status).and_return(302)
         expect(resp).not_to receive(:body)
-        expect(anno).to receive(:post_json_to_oa_auth).with('login', params, an_instance_of(String)).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).with(:post, 'login', params, an_instance_of(String)).and_return(resp)
         # FIXME:  would like to check body for string passed
         anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)
       end
       it 'false if resp code not 302' do
         resp = double("faraday_resp")
         expect(resp).to receive(:status).and_return(200)
-        expect(anno).to receive(:post_json_to_oa_auth).and_return(resp)
+        expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_false
       end
     end
 
-    describe "#post_json_to_oa_auth" do
-      it 'sends POST request to oa_repo_auth_conn and returns response' do
+    describe "#json_to_oa_auth" do
+      it 'sends request to oa_repo_conn and returns response' do
         resp = double("resp")
         conn = double("faraday_conn")
         expect(conn).to receive(:post).and_return(resp)
-        expect(anno).to receive(:oa_repo_auth_conn).and_return(conn)
-        expect(anno.send(:post_json_to_oa_auth, nil)).to eq resp
+        expect(anno).to receive(:oa_repo_conn).and_return(conn)
+        expect(anno.send(:json_to_oa_auth, :post, nil)).to eq resp
       end
     end
   end

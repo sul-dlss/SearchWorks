@@ -150,14 +150,17 @@ class Annotation < LD4L::OpenAnnotationRDF::Annotation
 
   end
 
-  # send the Annotation as an OpenAnnotation to the OA Storage
-  def save
-    @triannon_id = post_graph_to_oa_storage
-    if @triannon_id
-      true
-    else
-      false
+  # send the Annotation as an OpenAnnotation to the OA Repo
+  # @param [String] user_id a webauth id (sunetid)
+  # @param [Array<String>] workgroups the LDAP workgroups for the user (which are needed to allow or diallow posts to an anno container)
+  def save(user_id, workgroups)
+    if user_id.present? && workgroups.present?
+      @triannon_id = post_graph_to_oa_storage(user_id, workgroups)
+      if @triannon_id
+        return true
+      end
     end
+    false
   end
 
 protected
@@ -185,17 +188,23 @@ protected
 
   # send turtle RDF data to OpenAnnotation Storage as an HTTP Post request
   # @return [String] unique id of newly created anno, or nil if there was a problem
-  def post_graph_to_oa_storage
-    response = oa_storage_conn.post do |req|
-      req.headers['Content-Type'] = 'application/x-turtle'
-      req.headers['Accept'] = 'application/x-turtle'
-      req.body = graph.to_ttl
-    end
-    if response.status == 201
-      # see https://github.com/sul-dlss/triannon/issues/218 -- this hasn't been implemented yet in Triannon
-      #new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
-      new_url = Annotation.anno_uri_from_graph(RDF::Graph.new.from_ttl(response.body))
-      return triannon_id_from_triannon_url new_url
+  def post_graph_to_oa_storage(user_id, workgroups)
+    # TODO:  store access_token in session data;  if get 401 response, it has expired so get a new one
+    token = access_token(user_id, workgroups)
+    if token
+      response = oa_repo_conn.post do |req|
+        req.url "annotations/#{Settings.OPEN_ANNO_REPO_CONTAINER}"
+        req.headers['Content-Type'] = 'application/x-turtle'
+        req.headers['Accept'] = 'application/x-turtle'
+        req.headers['Authorization'] = "Bearer #{token}"
+        req.body = graph.to_ttl
+      end
+      if response.status == 201
+        # see https://github.com/sul-dlss/triannon/issues/218 -- this hasn't been implemented yet in Triannon
+        #new_url = response.headers['Location'] ? response.headers['Location'] : response.headers['location']
+        new_url = Annotation.anno_uri_from_graph(RDF::Graph.new.from_ttl(response.body))
+        return triannon_id_from_triannon_url new_url
+      end
     end
     return nil
   end
@@ -214,7 +223,7 @@ protected
     auth_code = client_authzn_code
     if auth_code
       if user_info_cookie(user_id, workgroups, auth_code)
-        resp = post_json_to_oa_auth('access_token', {code: auth_code})
+        resp = json_to_oa_auth(:get, 'access_token', {code: auth_code})
         if resp.status == 200
           return JSON.parse(resp.body)['accessToken']
         end
@@ -229,7 +238,7 @@ protected
     client_authz_req_body = "{ \"clientId\": \"#{Settings.OPEN_ANNO_REPO_CLIENT_ID}\",
                                \"clientSecret\": \"#{Settings.OPEN_ANNO_REPO_CLIENT_SECRET}\"
                              }"
-    resp = post_json_to_oa_auth('client_identity', {}, client_authz_req_body)
+    resp = json_to_oa_auth(:post, 'client_identity', {}, client_authz_req_body)
     if resp.status == 200
       return JSON.parse(resp.body)['authorizationCode']
     end
@@ -240,19 +249,18 @@ protected
   # @param [String] user_id a webauth id (sunetid)
   # @param [Array<String>] workgroups the LDAP workgroups for the user (which are needed to allow or diallow posts to an anno container)
   # @param [String] client_auth_code the authorizationCode string returned from a client_identity request to OA store
-  def user_info_cookie(user_id, workgroups, client_auth_code)
-    user_info_req_body = "{ \"userId\": \"#{user_id}\",
-                            \"workgroups\": \"#{workgroups}\"
-                          }"
-    resp = post_json_to_oa_auth('login', {code: client_auth_code}, user_info_req_body)
+  def user_info_cookie(user_id, user_workgroups, client_auth_code)
+    user_info = { userId: user_id, workgroups: user_workgroups}
+    user_info_req_body = user_info.to_json
+    resp = json_to_oa_auth(:post, 'login', {code: client_auth_code}, user_info_req_body)
     resp.status == 302
   end
 
-  # sends POST request to oa_repo_auth_conn with given path, params, and body
+  # sends request to oa_repo_conn with given method, path, params, and body
   # @return [Faraday::Response]
-  def post_json_to_oa_auth(path, params={}, body = nil)
-    resp = oa_repo_auth_conn.post do |req|
-      req.url path
+  def json_to_oa_auth(method, path, params={}, body = nil)
+    resp = oa_repo_conn.send(method) do |req|
+      req.url "auth/#{path}"
       params.each_pair { |k, v|
         req.params[k] = v
       }
@@ -262,14 +270,14 @@ protected
     end
   end
 
-
-  def oa_storage_conn
-    @oa_storage_conn ||= Faraday.new Settings.OPEN_ANNO_REPO_STORE_URL
+  # the oa_repo_conn must use cookies to record OA repo session info, as the authorization info is
+  #  stored in session info in the OA repo.
+  def oa_repo_conn
+    @oa_repo_conn ||= Faraday.new(:url => Settings.OPEN_ANNO_REPO_URL) do |builder|
+      builder.use :cookie_jar
+      builder.adapter Faraday.default_adapter
+    end
   end
 
-  # TODO: naomi_must_comment_and_test_this_method
-  def oa_repo_auth_conn
-    @oa_repo_auth_conn ||= Faraday.new Settings.OPEN_ANNO_REPO_AUTH_URL
-  end
 
 end

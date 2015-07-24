@@ -48,6 +48,18 @@ describe AnnotationsController, vcr: true, annos: true do
   end
 
   describe "POST create" do
+    let(:user) { double('user') }
+    before do
+      allow(user).to receive(:to_key)
+      allow(user).to receive(:authenticatable_salt)
+      allow(user).to receive(:sunet).and_return('jstanford')
+      allow(user).to receive(:webauth_groups=)
+      allow(user).to receive(:webauth_groups).and_return(["dlss:triannon-searchworks-users"])
+      @request.env["devise.mapping"] = Devise.mappings[user]
+      sign_in(:user, user)
+      allow(controller).to receive(:current_user).and_return(user)
+    end
+
     context "with valid params" do
       let(:target_id) {"foo"}
       # Return the minimal set of attributes required to create a valid Annotation.
@@ -61,9 +73,9 @@ describe AnnotationsController, vcr: true, annos: true do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(201)
           allow(resp).to receive(:body).twice
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           assigns(:annotation).should be_a(Annotation)
         end
@@ -71,9 +83,10 @@ describe AnnotationsController, vcr: true, annos: true do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(201)
           allow(resp).to receive(:body).and_return(anno_ttl).twice
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:access_token).and_return('fake_access_token')
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           assigns(:annotation)
           expect(response.status).to eq 302
@@ -82,9 +95,10 @@ describe AnnotationsController, vcr: true, annos: true do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(201)
           allow(resp).to receive(:body).and_return(anno_ttl).twice
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:access_token).and_return('fake_access_token')
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           response.should redirect_to(annotation_path(target_id))
         end
@@ -92,9 +106,10 @@ describe AnnotationsController, vcr: true, annos: true do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(201)
           allow(resp).to receive(:body).and_return(anno_ttl).twice
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:access_token).and_return('fake_access_token')
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           assigns(:annotation)
           expect(flash[:notice]).to eq 'Annotation was successfully created. (You may need to refresh this page to see it.)'
@@ -104,9 +119,9 @@ describe AnnotationsController, vcr: true, annos: true do
         it "returns status 500" do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(403)
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           assigns(:annotation)
           expect(response.status).to eq 500
@@ -114,9 +129,9 @@ describe AnnotationsController, vcr: true, annos: true do
         it "displays a flash error" do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(403)
-          oa_storage_conn = double("oa_storage_conn")
-          allow(oa_storage_conn).to receive(:post).and_return(resp)
-          allow_any_instance_of(Annotation).to receive(:oa_storage_conn).and_return(oa_storage_conn)
+          oa_repo_conn = double("oa_repo_conn")
+          allow(oa_repo_conn).to receive(:post).and_return(resp)
+          allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
           assigns(:annotation)
           expect(flash[:error]).to eq "There was a problem creating the Annotation (for #{target_id}): "
