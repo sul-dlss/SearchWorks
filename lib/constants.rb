@@ -785,7 +785,7 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  REQUEST_LIBS = ['SAL', 'SAL3', 'SAL-NEWARK']
+  REQUEST_LIBS = ['SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL']
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 

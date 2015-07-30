@@ -9,20 +9,25 @@ class Holdings
     end
 
     def must_request?
-      requestable? && must_request_item?
+      requestable? && must_request_item? && !spec_coll_and_inprocess?
     end
 
     private
 
     def item_is_requestable?
       !on_reserve? &&
-      requestable_item_type? &&
-      requestable_home_location? &&
-      requestable_current_location?
+        !spec_coll_and_inprocess? &&
+        requestable_item_type? &&
+        requestable_home_location? &&
+        requestable_current_location?
     end
 
     def on_reserve?
       @callnumber.on_reserve?
+    end
+
+    def spec_coll_and_inprocess?
+      @callnumber.library == 'SPEC-COLL' && @callnumber.current_location.try(:code) == 'INPROCESS'
     end
 
     def must_request_item?
@@ -36,8 +41,7 @@ class Holdings
     end
 
     def requestable_item_type?
-      !@callnumber.type.start_with?('NH-') &&
-      !["REF","NONCIRC","LIBUSEONLY"].include?(@callnumber.type)
+      !((@callnumber.type || '').start_with?('NH-') || %w(REF NONCIRC LIBUSEONLY).include?(@callnumber.type))
     end
 
     def requestable_home_location?
@@ -54,9 +58,8 @@ class Holdings
     end
 
     def location_level_request?
-      Constants::REQUEST_LIBS.include?(@callnumber.library) ||
-      ["PHYSICS", "MEYER"].include?(@callnumber.library) ||
-      Holdings::Location.new(@callnumber.home_location).location_level_request?
+      Holdings::Library.new(@callnumber.library).location_level_request? ||
+        Holdings::Location.new(@callnumber.home_location).location_level_request?
     end
 
     def current_location_is_loan_desk?

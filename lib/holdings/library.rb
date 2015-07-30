@@ -39,7 +39,9 @@ class Holdings
     end
 
     def location_level_request?
-      Constants::REQUEST_LIBS.include?(@code) || hopkins_stacks_only_and_not_online?
+      !spec_coll_only_inprocess? &&
+        !contains_only_must_request_items? &&
+        (Constants::REQUEST_LIBS.include?(@code) || hopkins_stacks_only_and_not_online?)
     end
 
     def library_instructions
@@ -68,6 +70,17 @@ class Holdings
 
     def hopkins_stacks_only_and_not_online?
       hopkins_only? && hopkins_stacks? && !document_online?
+    end
+
+    def spec_coll_only_inprocess?
+      return false unless @items.present?
+      @code == 'SPEC-COLL' && @items.all? do |item|
+        item.current_location.try(:code) == 'INPROCESS'
+      end
+    end
+
+    def contains_only_must_request_items?
+      @items.present? && @items.all?(&:must_request?)
     end
 
     def hopkins_only?

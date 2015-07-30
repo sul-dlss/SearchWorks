@@ -53,6 +53,22 @@ describe Holdings::Location do
         expect(Holdings::Location.new(location)).to be_location_level_request
       end
     end
+
+    it 'returns false when then the location contains only must-request items' do
+      callnumbers = [Holdings::Callnumber.new('12345 -|- GREEN -|- STACKS -|- ON-ORDER ')]
+      location = Holdings::Location.new('GREEN', callnumbers)
+
+      expect(location.send(:contains_only_must_request_items?)).to eq true
+      expect(location).to_not be_location_level_request
+    end
+
+    it 'returns false when the library is SPEC-COLL and the items are INPROCESS' do
+      callnumbers = [Holdings::Callnumber.new('12345 -|- SPEC-COLL -|- STACKS -|- INPROCESS ')]
+      location = Holdings::Location.new('SPEC-COLL', callnumbers)
+
+      expect(location.send(:spec_coll_only_inprocess?)).to eq true
+      expect(location).to_not be_location_level_request
+    end
   end
   describe 'external locations' do
     let(:external_location) {
