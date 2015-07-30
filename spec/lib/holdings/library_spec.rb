@@ -55,21 +55,30 @@ describe Holdings::Library do
     end
     describe 'HOPKINS' do
       let(:item_display) { "12345 -|- HOPKINS -|- STACKS -|- " }
-      let(:callnumbers) {[Holdings::Callnumber.new(item_display)]}
+      let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
       let(:online_doc) { SolrDocument.new(marcxml: fulltext_856) }
       let(:online_lib) { Holdings::Library.new("HOPKINS", online_doc, callnumbers) }
       let(:single_item_doc) { SolrDocument.new(item_display: [item_display]) }
       let(:not_online_lib) { Holdings::Library.new("HOPKINS", single_item_doc, callnumbers) }
       let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, "54321 -|- GREEN -|- STACKS -|- "]) }
       let(:multiple_holding_lib) { Holdings::Library.new("HOPKINS", multi_holdings_doc, callnumbers) }
-      it 'should return true for materials that are not available online' do
+      let(:non_stacks_lib) do
+        Holdings::Library.new(
+          'HOPKINS', SolrDocument.new, [Holdings::Callnumber.new('12345 -|- HOPKINS -|- NOT-STACKS -|- ')]
+        )
+      end
+      it 'returns true for materials that are not available online' do
         expect(not_online_lib).to be_location_level_request
       end
-      it 'should return false for materials that exist in other libraries' do
+      it 'returns false for materials that exist in other libraries' do
         expect(multiple_holding_lib).to_not be_location_level_request
       end
-      it 'should return false for materials that are available online' do
+      it 'returns false for materials that are available online' do
         expect(online_lib).to_not be_location_level_request
+      end
+
+      it 'returns false for materials that are not in STACKS' do
+        expect(non_stacks_lib).to_not be_location_level_request
       end
     end
   end

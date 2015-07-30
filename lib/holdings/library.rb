@@ -3,14 +3,17 @@ class Holdings
     include AppendMHLD
     attr_reader :code, :items
     attr_accessor :mhld
-    def initialize(code, document=nil, items=[])
+
+    def initialize(code, document = nil, items = [])
       @code = code
       @document = document
       @items = items
     end
+
     def name
       Constants::LIB_TRANSLATIONS[@code]
     end
+
     def locations
       unless @locations
         @locations = @items.group_by(&:home_location).map do |location_code, items|
@@ -21,24 +24,30 @@ class Holdings
       end
       @locations
     end
+
     def holding_library?
       !zombie?
     end
+
     def zombie?
-      @code == "ZOMBIE"
+      @code == 'ZOMBIE'
     end
+
     def present?
       @items.any?(&:present?) ||
-      (mhld.present? && mhld.any?(&:present?))
+        (mhld.present? && mhld.any?(&:present?))
     end
+
     def location_level_request?
-      Constants::REQUEST_LIBS.include?(@code) || hopkins_only_and_not_online?
+      Constants::REQUEST_LIBS.include?(@code) || hopkins_stacks_only_and_not_online?
     end
+
     def library_instructions
       Constants::LIBRARY_INSTRUCTIONS[@code]
     end
+
     def sort
-      if @code == "GREEN"
+      if @code == 'GREEN'
         '0'
       else
         name || @code
@@ -57,18 +66,31 @@ class Holdings
 
     private
 
-    def hopkins_only_and_not_online?
-      hopkins_only? && !document_online?
+    def hopkins_stacks_only_and_not_online?
+      hopkins_only? && hopkins_stacks? && !document_online?
     end
+
     def hopkins_only?
-      @code == "HOPKINS" &&
-      @document.present? &&
-      @document.holdings.libraries.present? &&
-      @document.holdings.libraries.length == 1
+      hopkins? &&
+        @document.present? &&
+        @document.holdings.libraries.present? &&
+        @document.holdings.libraries.length == 1
     end
+
+    def hopkins?
+      @code == 'HOPKINS'
+    end
+
+    def hopkins_stacks?
+      hopkins? && @items.any? do |item|
+        item.home_location == 'STACKS'
+      end
+    end
+
     def hopkins_and_not_online?
-      @code == "HOPKINS" && !document_online?
+      hopkins? && !document_online?
     end
+
     def document_online?
       @document.present? && @document.access_panels.online?
     end
