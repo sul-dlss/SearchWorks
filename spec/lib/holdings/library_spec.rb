@@ -32,7 +32,7 @@ describe Holdings::Library do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
     it "should sort locations alpha by name" do
-      expect(sort_locations.map(&:name)).to eq ["Current Periodicals", "Miniature", "Stacks"]
+      expect(sort_locations.map(&:name)).to eq ["Current periodicals", "Miniature", "Stacks"]
       expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "TINY", "STACKS"]
     end
   end

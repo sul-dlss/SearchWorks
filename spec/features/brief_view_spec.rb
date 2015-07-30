@@ -14,7 +14,7 @@ feature "Brief View" do
     end
     within '[data-preview-url="/preview/10"]' do
       expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : (no call number)')
-      expect(page).to have_css('.brief-document ul li', text: 'Chemistry & ChemEng Library (Swain) : Current Periodicals : (no call number)')
+      expect(page).to have_css('.brief-document ul li', text: 'Chemistry & ChemEng Library (Swain) : Current periodicals : (no call number)')
       expect(page).to have_css('.brief-document ul li', text: 'Chemistry & ChemEng Library (Swain) : Stacks : ABC')
     end
   end

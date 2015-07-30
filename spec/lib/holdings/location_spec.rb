@@ -8,16 +8,7 @@ describe Holdings::Location do
     let(:location_code) { "LOCKED-STK" }
     let(:callnumber) { Holdings::Callnumber.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
     it "should translate the location code" do
-      expect(Holdings::Location.new(location_code).name).to eq "Locked Stacks: ask at circulation desk"
-    end
-    describe 'location specific translations' do
-      it 'should be present for Green' do
-        expect(Holdings::Location.new(location_code, [callnumber]).name).to eq "Locked Stacks: ask at Media & Microtext Center"
-      end
-      it 'should be present for SPEC' do
-        expect(Holdings::Location.new("MANUSCRIPT", [Holdings::Callnumber.new("barcode -|- HOOVER -|- MANUSCRIPT -|- -|- -|-")]).name).to eq "Manuscript Collection"
-        expect(Holdings::Location.new("MANUSCRIPT", [Holdings::Callnumber.new("barcode -|- SPEC-COLL -|- MANUSCRIPT -|- -|- -|-")]).name).to eq "Manuscript Collection: request at Special Collections service desk"
-      end
+      expect(Holdings::Location.new(location_code).name).to eq "Locked stacks: Ask at circulation desk"
     end
   end
   describe "#present?" do

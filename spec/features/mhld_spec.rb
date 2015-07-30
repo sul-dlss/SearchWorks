@@ -6,7 +6,7 @@ describe "MHLD", feature: true do
       visit catalog_path('10')
 
       within('[data-hours-route="/hours/CHEMCHMENG"]') do
-        expect(page).to have_css('.location-name', text: 'Current Periodicals')
+        expect(page).to have_css('.location-name', text: 'Current periodicals')
         expect(page).to have_css('li.mhld', text: 'public note2')
         expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: latest received2')
         expect(page).to have_css('li.mhld', text: 'Library has: library has2')
@@ -27,7 +27,7 @@ describe "MHLD", feature: true do
         expect(page).to have_content('At the library')
         within('.accordion-section.location') do
           find('a.header').click
-          expect(page).to have_css('tr th strong', text: 'Current Periodicals')
+          expect(page).to have_css('tr th strong', text: 'Current periodicals')
           expect(page).to have_css('tr th', text: 'public note1')
           expect(page).to have_css('tr th', text: 'public note2')
           expect(page).to have_css('tr th', text: 'public note3')

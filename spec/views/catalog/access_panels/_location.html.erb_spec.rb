@@ -90,8 +90,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should display the current location as the home location" do
-        expect(rendered).to_not have_css('.location-name', text: "Stacks")
-        expect(rendered).to have_css('.location-name', text: "InfoCenter: display")
+        expect(rendered).to_not have_css('.location-name', text: 'Stacks')
+        expect(rendered).to have_css('.location-name', text: 'Information Center display')
       end
       it "should not be displayed if the current location is a special location that gets treated like a home location" do
         expect(rendered).to have_css('.current-location', text: '')
