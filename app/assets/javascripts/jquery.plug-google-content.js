@@ -13,7 +13,7 @@
   $.fn.plugGoogleBookContent = function() {
     var $parent,
       booksPerAjaxCall = 25,
-      booksApiUrl = 'http://books.google.com/books?jscmd=viewapi&bibkeys=',
+      booksApiUrl = 'https://books.google.com/books?jscmd=viewapi&bibkeys=',
       selectorCoverImg = 'img.cover-image',
       batches = [];
 

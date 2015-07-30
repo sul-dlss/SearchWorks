@@ -15,7 +15,7 @@
       function checkStatus(){
         var jidSplit = jid.split('@');
         $.ajax({
-          url: 'http://libraryh3lp.com/presence/jid/' + jidSplit[0] + '/' + jidSplit[1] + '/js?cb=?',
+          url: 'https://libraryh3lp.com/presence/jid/' + jidSplit[0] + '/' + jidSplit[1] + '/js?cb=?',
           dataType: 'jsonp'
         }).done(function(){
           $.each(jabber_resources, function(i, value){
