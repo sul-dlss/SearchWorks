@@ -43,7 +43,7 @@
               <td class='indent-callnumber'>
                 <%= item.callnumber %>
               </td>
-              <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? %>>
+              <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !(library.location_level_request? || location.location_level_request?) %>>
                 <i class="availability-icon <%= item.status.availability_class %>"></i>
                 <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
                   <%= item.status.status_text %>
