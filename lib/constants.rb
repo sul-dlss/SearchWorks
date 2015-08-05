@@ -918,8 +918,7 @@ module Constants
     'HOOV-RESV' => 'HOOVER',
     'HOP-RESV' => 'HOPKINS',
     'LAW-RESV' => 'LAW',
-    'MATH-RESV' => 'MATH-CS',
-    'MEDIA-RESV' => 'SW-MEDIA-RESV',
+    'MATH-RESV' => 'MEDIA-MTXT',
     'MUSIC-RESV' => 'MUSIC'
   }
 
