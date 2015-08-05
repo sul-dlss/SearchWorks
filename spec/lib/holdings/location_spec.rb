@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe Holdings::Location do
+  include Marc856Fixtures
   it "should identify location level requests" do
     expect(Holdings::Location.new("SSRC-DATA")).to be_location_level_request
   end
@@ -59,6 +60,30 @@ describe Holdings::Location do
 
       expect(location.send(:spec_coll_only_inprocess?)).to eq true
       expect(location).to_not be_location_level_request
+    end
+
+    context 'HOPKINS' do
+      let(:item_display) { '12345 -|- HOPKINS -|- STACKS -|- ' }
+      let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
+      let(:not_online_doc) { SolrDocument.new(item_display: [item_display]) }
+      let(:online_doc) { SolrDocument.new(marcxml: fulltext_856, item_display: [item_display]) }
+      let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, '54321 -|- GREEN -|- STACKS -|- ']) }
+      it 'returns true for materials that are not available online' do
+        location = Holdings::Location.new('STACKS', callnumbers, not_online_doc)
+        expect(location).to be_location_level_request
+      end
+      it 'returns false for materials that are available online' do
+        location = Holdings::Location.new('STACKS', callnumbers, online_doc)
+        expect(location).to_not be_location_level_request
+      end
+      it 'returns false for materials that exist in other libraries' do
+        location = Holdings::Location.new('STACKS', callnumbers, multi_holdings_doc)
+        expect(location).to_not be_location_level_request
+      end
+      it 'returns false for materials that are not in STACKS' do
+        location = Holdings::Location.new('REF', callnumbers, not_online_doc)
+        expect(location).to_not be_location_level_request
+      end
     end
   end
   describe 'external locations' do

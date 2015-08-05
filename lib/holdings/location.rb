@@ -2,8 +2,9 @@ class Holdings
   class Location
     attr_reader :code, :items
     attr_accessor :mhld
-    def initialize(code, items = [])
+    def initialize(code, items = [], document = nil)
       @code = code
+      @document = document
       @items = items.sort_by(&:full_shelfkey)
     end
 
@@ -18,7 +19,9 @@ class Holdings
     def location_level_request?
       !contains_only_must_request_items? &&
         !spec_coll_only_inprocess? &&
-        (Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) || Constants::REQUEST_LOCS.include?(@code))
+        (Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
+         Constants::REQUEST_LOCS.include?(@code) ||
+         hopkins_stacks_only_and_not_online?)
     end
 
     def external_location?
@@ -57,6 +60,33 @@ class Holdings
     end
 
     private
+
+    def hopkins_stacks_only_and_not_online?
+      hopkins_only? && hopkins_stacks? && !document_online?
+    end
+
+    def hopkins_only?
+      hopkins? &&
+        @document.present? &&
+        @document.holdings.libraries.present? &&
+        @document.holdings.libraries.length == 1
+    end
+
+    def hopkins?
+      library == 'HOPKINS'
+    end
+
+    def hopkins_stacks?
+      hopkins? && @code && @code == 'STACKS'
+    end
+
+    def hopkins_and_not_online?
+      hopkins? && !document_online?
+    end
+
+    def document_online?
+      @document.present? && @document.access_panels.online?
+    end
 
     def spec_coll_only_inprocess?
       return false unless @items.present?

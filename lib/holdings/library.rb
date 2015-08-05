@@ -17,7 +17,7 @@ class Holdings
     def locations
       unless @locations
         @locations = @items.group_by(&:home_location).map do |location_code, items|
-          Holdings::Location.new(location_code, items)
+          Holdings::Location.new(location_code, items, @document)
         end
         append_mhld(:location, @locations, Holdings::Location)
         @locations.sort_by!(&:sort)
@@ -41,7 +41,7 @@ class Holdings
     def location_level_request?
       !spec_coll_only_inprocess? &&
         !contains_only_must_request_items? &&
-        (Constants::REQUEST_LIBS.include?(@code) || hopkins_stacks_only_and_not_online?)
+        Constants::REQUEST_LIBS.include?(@code)
     end
 
     def library_instructions
@@ -68,10 +68,6 @@ class Holdings
 
     private
 
-    def hopkins_stacks_only_and_not_online?
-      hopkins_only? && hopkins_stacks? && !document_online?
-    end
-
     def spec_coll_only_inprocess?
       return false unless @items.present?
       @code == 'SPEC-COLL' && @items.all? do |item|
@@ -83,29 +79,5 @@ class Holdings
       @items.present? && @items.all?(&:must_request?)
     end
 
-    def hopkins_only?
-      hopkins? &&
-        @document.present? &&
-        @document.holdings.libraries.present? &&
-        @document.holdings.libraries.length == 1
-    end
-
-    def hopkins?
-      @code == 'HOPKINS'
-    end
-
-    def hopkins_stacks?
-      hopkins? && @items.any? do |item|
-        item.home_location == 'STACKS'
-      end
-    end
-
-    def hopkins_and_not_online?
-      hopkins? && !document_online?
-    end
-
-    def document_online?
-      @document.present? && @document.access_panels.online?
-    end
   end
 end
