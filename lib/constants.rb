@@ -1095,8 +1095,8 @@ module Constants
   BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
   LIBRARY_INSTRUCTIONS = {
     'ART' => {
-      heading: 'UPDATE - Library closed July 25 - Sept. 9.',
-      text: 'The Library will be closed during its relocation to the new McMurtry Building. Please check out Art materials prior to July 25.'
+      heading: 'NOT AVAILABLE',
+      text: 'The Art & Architecture Library is closed July 25 - Sept. 9 during its relocation to the new McMurtry Building. The collection is not accessible during this period. Please contact Interlibrary Borrowing to obtain this title.'
     },
     'SPEC-COLL' => {
       heading: 'Limited access',
