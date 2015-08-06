@@ -7,10 +7,14 @@ class AnnotationsController < ApplicationController
   def show
     @sw_doc_id = params[:id]
     # FIXME:  should probably be hardcoded or use hostname but depends on Triannon annos
-    #target_uri = "http://#{Settings.HOSTNAME}.stanford.edu/view/#{@sw_doc_id}"
+    # target_uri = "http://#{Settings.HOSTNAME}.stanford.edu/view/#{@sw_doc_id}"
     target_uri = "#{Constants::CONTACT_INFO[:website][:url]}/view/#{@sw_doc_id}"
     annos = Annotation.find_by_target_uri(target_uri)
     @annotations = annos if annos.present?
+    respond_to do |format|
+      format.json { render json: @annotations, layout: false }
+      format.html { render }
+    end
   end
 
   # GET /annotations/new
@@ -26,10 +30,12 @@ class AnnotationsController < ApplicationController
     respond_to do |format|
       if @annotation.save(current_user.sunet, current_user.webauth_groups)
         msg = 'Annotation was successfully created. (You may need to refresh this page to see it.)'
-        format.html { redirect_to annotation_path(target_sw_doc_id), notice: msg}
+        format.html { redirect_to catalog_path(target_sw_doc_id), notice: msg}
+        format.json { render json: @annotation, layout: false }
       else
         flash[:error] = "There was a problem creating the Annotation (for #{target_sw_doc_id}): #{@annotation.errors.full_messages if @annotation.errors.present?}"
         format.html { render :new, status: 500 }
+        format.json { render json: { error: flash[:error] }, layout: false }
       end
     end
   end
