@@ -1,6 +1,6 @@
 <% document ||= @document %>
 
-<div class="section annotations-tags" id="<%= t('record_side_nav.tags.id') %>" data-side-nav-class="<%= t('record_side_nav.tags.id') %>" data-anno-id="<%= document.id %>" data-anno-search-url="<%= Settings.OPEN_ANNO_REPO_SOLR_URL %>">
+<div class="section annotations-tags" id="<%= t('record_side_nav.tags.id') %>" data-side-nav-class="<%= t('record_side_nav.tags.id') %>">
   <div class="section-heading">
     <h2>
       <%= t('record_side_nav.tags.icon').html_safe %> Tags
@@ -11,5 +11,6 @@
   <%= render partial: "annotations/create_anno", locals: {anno_type: "tag", motivation_str: "tagging", sw_doc_id: document.id} %>
 
   <div class="section-body tags">
+
   </div>
 </div>

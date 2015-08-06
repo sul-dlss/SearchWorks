@@ -3,11 +3,11 @@
   id = document[:id]
 %>
 
-<div class="annotations row" data-anno-id="<%= id %>" data-anno-search-url="<%= Settings.OPEN_ANNO_REPO_SOLR_URL %>">
-  <div class="container col-lg-12">
+<div class="annotations row" data-anno-url="<%= annotation_path(document, format: :json) %>">
+  <div class="annotations-container col-lg-12">
     <div class="col-lg-9 col-sm-12 tags"></div>
-    <div class="col-lg-3 col-sm-12 user-comments">
-      <%= link_to_document document, 'User comments (<span class="num-found"></span>)'.html_safe, :counter => counter  %>
+    <div class="col-lg-3 col-sm-12">
+      <%= link_to_document document, 'User comments <span class="num-found"></span>'.html_safe, :counter => counter  %>
     </div>
   </div>
 </div>

@@ -12,126 +12,84 @@
   $.fn.showAnnotations = function() {
 
     return this.each(function() {
-      var baseUrlSW = "searchworks.stanford.edu/view/",
-          $documents = $(this),
-          listRecords = $documents.find('[data-anno-id]'),
-          openAnnoUrl = '',
-          targetUrls = [],
-          annotations = {};
+      var $annotationEl = $(this),
+          $annotationUrl = $annotationEl.data('annoUrl');
 
       init();
 
       function init() {
-        $.each(listRecords, function(index, record) {
-          // FIXME:  this is really stupid because annoSearchUrl is a constant from Settings
-          //   currently data-anno-search-url is set in _search_results_annotations, _anno_tags and anno_user_comments
-          //   partials.
-          openAnnoUrl = $(record).data('annoSearchUrl') + "/select?defType=lucene&wt=json&",
-          targetUrls.push(baseUrlSW + $(record).data('annoId'));
-        });
-
-        fetchAnnotations();
+        $.ajax($annotationUrl)
+         .success(function(data) {
+           addAnnotations(data);
+         });
       }
 
-      function fetchAnnotations() {
-        var targetUrl = targetUrls.join(' OR '),
-            request;
+      function addAnnotations(data) {
+        renderTags(tags(data));
+        renderComments(comments(data));
+        $annotationEl.show();
+      }
 
-        request = $.ajax({
-          url: openAnnoUrl,
-          type: "GET",
-          data: { q: 'target_url:(' + targetUrl + ')'},
-          dataType: 'jsonp',
-          jsonp: 'json.wrf'
-        });
+      function tags(data) {
+        return fetchContentFromData(data, 'tag');
+      }
 
-        request.success(function(response) {
-          var numFound = parseInt(response.response.numFound, 10);
+      function comments(data) {
+        return fetchContentFromData(data, 'content');
+      }
 
-          if (numFound > 0) {
-            aggregateAnnotations(response);
+      function fetchContentFromData(data, type) {
+        var content = [];
+        $.each(data, function(_, annotation) {
+          if( annotation.hasBody[0][type] ) {
+            content.push(annotation.hasBody[0][type][0]);
           }
         });
+        return content;
       }
 
-      function aggregateAnnotations(response) {
-        var docs = response.response.docs;
-
-        $.each(docs, function(index, doc) {
-          var id = doc.target_url[0].replace(new RegExp('^.*' + baseUrlSW), ''),
-              motivation = doc.motivation[0],
-              bodyChars = doc.body_chars_exact[0];
-
-          if (bodyChars !== '') {
-            annotations[id] = annotations[id] || {};
-            annotations[id][motivation] = annotations[id][motivation] || [];
-            annotations[id][motivation].push(bodyChars);
-          }
-        });
-
-        if ($documents.find('.record-sections').length > 0) {
-          displayAnnotationsInRecordView();
-        } else {
-          displayAnnotationsInSearchResults();
-        }
-      }
-
-      function displayAnnotationsInRecordView() {
-        $.each(annotations, function(id, values) {
-          var $sectionUserComments = $documents.find('.annotations-user-comments[data-anno-id=' + id + ']'),
-              $sectionTags = $documents.find('.annotations-tags[data-anno-id=' + id + ']'),
-              html = [];
-
-          if (values.commenting && values.commenting.length > 0) {
-            $.each(values.commenting, function(index, comment) {
-              html.push($('<li>' + comment + '</li>'));
-            });
-
-            $sectionUserComments.find('.user-comments ul').empty().append(html);
-            $sectionUserComments.find('.num-found').html('(' + values.commenting.length + ')');
-            $sectionUserComments.show();
-          }
-
-          addTags($sectionTags, values.tagging);
-        });
-      }
-
-      function displayAnnotationsInSearchResults() {
-        $.each(annotations, function(id, values) {
-          var $record = $documents.find('[data-anno-id=' + id + ']'),
-              html = [];
-
-          if (values.commenting && values.commenting.length > 0) {
-            $record.find('.num-found').html(values.commenting.length);
-            $record.find('.user-comments').show();
-            $record.show();
-          }
-
-          addTags($record, values.tagging);
-          $record.parent().css('padding-bottom', 0);
-        });
-      }
-
-      function addTags($el, tags) {
-        var html = [];
-
-        if (tags && tags.length > 0) {
-          $.each(tags, function(index, tag) {
-            html.push($('<span class="tag">' + tag + '<span class="arrow"></span></span>'));
+      function renderTags(tags) {
+        var tagsSection = $annotationEl.find('.tags');
+        if(tags.length > 0) {
+          $.each(tags, function(_, tag) {
+            tagsSection.append(tagTemplate(tag));
           });
-
-          $el.find('.tags').empty().append(html);
-          $el.show();
         }
+      }
+
+      function renderComments(comments) {
+        var commentsSection = $annotationEl.find('.user-comments');
+        if(comments.length > 0) {
+          if(commentsSection.length > 0) {
+            var commentsList = $('<ul></ul>');
+            $.each(comments, function(_, comment) {
+              commentsList.append(commentTemplate(comment));
+            });
+            commentsSection.append(commentsList);  
+          }
+          updateCommentCount(comments);
+        }
+      }
+
+      function updateCommentCount(comments) {
+        if($annotationEl.find('.num-found').length > 0) {
+          $annotationEl.find('.num-found').text('(' + comments.length + ')');
+        }
+      }
+
+      function commentTemplate(comment) {
+        return '<li>' + comment + '</li>';
+      }
+
+      function tagTemplate(tag) {
+        return '<span class="tag">' + tag + '<span class="arrow"></span></span>';
       }
 
     });
-  }
+  };
 
 })(jQuery);
 
 Blacklight.onLoad(function() {
-  $('#documents').showAnnotations();
-  $('#document').showAnnotations();
+  $('[data-anno-url]').showAnnotations();
 });
-
