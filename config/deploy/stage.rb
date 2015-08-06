@@ -1,5 +1,6 @@
 set :deploy_host, ask("Server", 'e.g. hostname with no ".stanford.edu" or server node designator')
 set :bundle_without, %w{sqlite development test}.join(' ')
+set :deploy_to, "/opt/app/#{fetch(:user)}/#{fetch(:application)}"
 
 server_extensions = ['a', 'b', 'c']
 
