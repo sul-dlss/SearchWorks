@@ -524,9 +524,9 @@ describe Annotation, vcr: true, annos: true do
       let(:user_id) {'me'}
       let(:workgroups) {['group1', 'group2']}
       let(:client_auth_code) {'pretend_this_is_a_client_auth_code'}
-      it 'true if resp code 302' do
+      it 'true if resp code 200' do
         resp = double("faraday_resp")
-        expect(resp).to receive(:status).and_return(302)
+        expect(resp).to receive(:status).and_return(200)
         expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_true
       end
@@ -539,9 +539,9 @@ describe Annotation, vcr: true, annos: true do
         # FIXME:  would like to check body for string passed
         anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)
       end
-      it 'false if resp code not 302' do
+      it 'false if resp code not 200' do
         resp = double("faraday_resp")
-        expect(resp).to receive(:status).and_return(200)
+        expect(resp).to receive(:status).and_return(302)
         expect(anno).to receive(:json_to_oa_auth).and_return(resp)
         expect(anno.send(:user_info_cookie, user_id, workgroups, client_auth_code)).to be_false
       end

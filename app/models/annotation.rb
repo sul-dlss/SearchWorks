@@ -253,7 +253,7 @@ protected
     user_info = { userId: user_id, workgroups: user_workgroups}
     user_info_req_body = user_info.to_json
     resp = json_to_oa_auth(:post, 'login', {code: client_auth_code}, user_info_req_body)
-    resp.status == 302
+    resp.status == 200
   end
 
   # sends request to oa_repo_conn with given method, path, params, and body

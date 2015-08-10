@@ -91,7 +91,7 @@ describe AnnotationsController, vcr: true, annos: true do
           assigns(:annotation)
           expect(response.status).to eq 302
         end
-        it "redirects to the show view for target id" do
+        it "redirects to the catalog controller show view for target id" do
           resp = double("resp")
           allow(resp).to receive(:status).and_return(201)
           allow(resp).to receive(:body).and_return(anno_ttl).twice
@@ -100,7 +100,7 @@ describe AnnotationsController, vcr: true, annos: true do
           allow_any_instance_of(Annotation).to receive(:access_token).and_return('fake_access_token')
           allow_any_instance_of(Annotation).to receive(:oa_repo_conn).and_return(oa_repo_conn)
           post :create, {:annotation => valid_attributes}, valid_session
-          response.should redirect_to(annotation_path(target_id))
+          response.should redirect_to(catalog_path(target_id))
         end
         it "displays a flash message" do
           resp = double("resp")
