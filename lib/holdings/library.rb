@@ -16,8 +16,10 @@ class Holdings
 
     def locations
       unless @locations
-        @locations = @items.group_by(&:home_location).map do |location_code, items|
-          Holdings::Location.new(location_code, items, @document)
+        @locations = @items.group_by do |item|
+          Constants::LOCS[item.home_location]
+        end.map do |_, items|
+          Holdings::Location.new(items.first.home_location, items, @document)
         end
         append_mhld(:location, @locations, Holdings::Location)
         @locations.sort_by!(&:sort)
