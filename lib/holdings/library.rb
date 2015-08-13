@@ -17,7 +17,7 @@ class Holdings
     def locations
       unless @locations
         @locations = @items.group_by do |item|
-          Constants::LOCS[item.home_location]
+          Constants::LOCS[item.home_location] || item.home_location
         end.map do |_, items|
           Holdings::Location.new(items.first.home_location, items, @document)
         end
