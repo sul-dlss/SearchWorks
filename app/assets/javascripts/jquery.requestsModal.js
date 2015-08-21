@@ -34,6 +34,7 @@
 
       function applyModalCloseBehavior() {
         modalForRequest().find('[data-behavior="cancel-link"]').on('click', function() {
+          modalForRequest().modal('hide');
           modalForRequest().remove();
         });
       }
