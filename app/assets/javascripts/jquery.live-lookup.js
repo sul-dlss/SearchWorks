@@ -35,7 +35,10 @@
                 target.attr('title', status_text.data('unavailable-text'));
               }
               if ( dom_item.data('request-url') ) {
-                $('.request-link', dom_item).html("<a class='btn btn-info btn-xs' href='" + dom_item.data('request-url') + "'>Request</a>")
+                $('.request-link', dom_item)
+                  .html(
+                    "<a data-behavior='requests-modal' class='btn btn-info btn-xs' href='" + dom_item.data('request-url') + "'>Request</a>"
+                  );
               }
             }
             if ( !live_data.due_date && dom_item.length > 0  && target.hasClass('unknown')) {
