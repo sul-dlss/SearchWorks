@@ -24,6 +24,12 @@ describe CatalogController do
       get :index
       expect(assigns(:search_modifier)).to be_a SearchQueryModifier
     end
+
+    it 'redirects to the home page with a flash message when paging too deep' do
+      get :index, page: 251
+      expect(response).to redirect_to(root_path)
+      expect(flash[:error]).to eq 'You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page 250.'
+    end
   end
   describe '#email' do
     it 'should set the provided subject' do
