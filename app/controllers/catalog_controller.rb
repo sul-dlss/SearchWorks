@@ -25,6 +25,13 @@ class CatalogController < ApplicationController
   before_filter :add_show_partials
   before_filter :set_search_query_modifier, only: :index
 
+  before_action only: :index do
+    if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
+      flash[:error] = "You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page #{Settings.PAGINATION_THRESHOLD}."
+      redirect_to root_path
+    end
+  end
+
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
