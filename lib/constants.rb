@@ -1101,10 +1101,6 @@ module Constants
   }
   BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
   LIBRARY_INSTRUCTIONS = {
-    'ART' => {
-      heading: 'NOT AVAILABLE',
-      text: 'The Art & Architecture Library is closed July 25 - Sept. 9 during its relocation to the new McMurtry Building. The collection is not accessible during this period. Please contact Interlibrary Borrowing to obtain this title.'
-    },
     'SPEC-COLL' => {
       heading: 'Limited access',
       text: 'All materials are stored offsite. Request items 2 business days in advance. Maximum 5 items per day.'
