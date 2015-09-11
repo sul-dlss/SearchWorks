@@ -30,17 +30,50 @@
       function createModal() {
         $('body').append(requestsModalTemplate());
         applyModalCloseBehavior();
+        addPostMessageListener();
       }
 
       function applyModalCloseBehavior() {
-        modalForRequest().find('[data-behavior="cancel-link"]').on('click', function() {
+        modalCancelButton().on('click', function() {
           modalForRequest().modal('hide');
           modalForRequest().remove();
         });
       }
 
+      function addPostMessageListener() {
+        $(window).on('message onmessage', function(e) {
+          // If we ever extend this to include more data than contentHeight
+          // and the successPage boolean then we may want to validate that
+          // the event.origin is what we expect it to be. As it stands we
+          // are not doing anything that would allow somebody to do anything
+          // malicious so we can allow these messages without origin validation.
+          var data = e.originalEvent.data;
+          updateModalHeight(data.contentHeight);
+          updateCancelButton(data.successPage);
+        });
+      }
+
+      function updateModalHeight(contentHeight) {
+        var iframeHeight = modalForRequest().find('iframe').height();
+        var setHeight = parseInt(contentHeight, 10) + 10;
+
+        if (contentHeight != setHeight) {
+          modalForRequest().find('iframe').height(setHeight + 'px');
+        }
+      }
+
+      function updateCancelButton(onSuccessPage) {
+        if (onSuccessPage) {
+          modalCancelButton().text('Close');
+        }
+      }
+
       function modalForRequest() {
         return $('[data-request-modal-url="' + requestURL + '"]');
+      }
+
+      function modalCancelButton() {
+        return modalForRequest().find('[data-behavior="cancel-link"]');
       }
 
       function modalIsPresent() {
