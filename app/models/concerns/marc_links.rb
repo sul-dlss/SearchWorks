@@ -19,17 +19,35 @@ module MarcLinks
             href: link[:href],
             fulltext: link_is_fulltext?(link_field),
             stanford_only: stanford_only?(link),
-            finding_aid: link_is_finding_aid?(link_field)
+            finding_aid: link_is_finding_aid?(link_field),
+            managed_purl: link_is_managed_purl?(link),
+            file_id: file_id(link_field)
           )
         end
       end.compact
     end
+
     private
+
     def link_fields
       @document.to_marc.find_all do |field|
         ('856') === field.tag
       end
     end
+
+    def file_id(link_field)
+      return unless link_field['x'].present?
+      subxs = link_field.subfields.select do |subfield|
+        subfield.code == 'x'
+      end
+
+      file_id_value = subxs.find do |subx|
+        subx.value.starts_with?('file:')
+      end.try(:value)
+
+      file_id_value.gsub('file:', '') if file_id_value.present?
+    end
+
     def process_link(field)
       unless field['u'].nil?
         # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
@@ -103,6 +121,10 @@ module MarcLinks
 
     def stanford_only?(link)
       [link[:text], link[:title]].join.downcase =~ stanford_affiliated_regex
+    end
+
+    def link_is_managed_purl?(link)
+      @document[:managed_purl_urls] && @document[:managed_purl_urls].include?(link[:href])
     end
 
     def stanford_affiliated_regex

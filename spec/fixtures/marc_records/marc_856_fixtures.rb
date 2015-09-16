@@ -151,4 +151,16 @@ module Marc856Fixtures
       </record>
     xml
   end
+
+  def managed_purl_856
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='x'>file:abc123</subfield>
+          <subfield code='y'>Link text 2</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

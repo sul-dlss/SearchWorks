@@ -1,23 +1,25 @@
 # IndexLinks module is mixed into the SolrDocument.
 # It proveds an #index_links method which will return
 # Link objects for every link field in the SolrDocument.
-
 module IndexLinks
   def index_links
     @index_links ||= IndexLinks::Processor.new(self)
   end
+
   private
+
   class Processor < SearchWorks::Links
     def all
       link_fields.map do |link_field|
         SearchWorks::Links::Link.new(
-         html: link_html(link_field),
-         text: link_text(link_field),
-         href: link_field,
-         fulltext: link_is_fulltext?(link_field),
-         stanford_only: link_is_stanford_only?(link_field),
-         finding_aid: link_is_finding_aid?(link_field),
-         sfx: link_is_sfx?(link_field)
+          html: link_html(link_field),
+          text: link_text(link_field),
+          href: link_field,
+          fulltext: link_is_fulltext?(link_field),
+          stanford_only: link_is_stanford_only?(link_field),
+          finding_aid: link_is_finding_aid?(link_field),
+          sfx: link_is_sfx?(link_field),
+          managed_purl: link_is_managed_purl?(link_field)
         )
       end
     end
@@ -30,46 +32,58 @@ module IndexLinks
 
     def link_text(link_field)
       if link_is_finding_aid?(link_field)
-        "Online Archive of California"
+        'Online Archive of California'
       elsif link_is_sfx?(link_field)
-        "Find full text"
+        'Find full text'
       else
         link_host(link_field)
       end
     end
 
     def link_is_finding_aid?(link_field)
-      link_field =~ /oac\.cdlib\.org\/findaid/
+      link_field =~ %r{oac\.cdlib\.org\/findaid}
     end
+
     def link_fields
-      [@document[:url_fulltext], @document[:url_suppl], @document[:url_sfx]].flatten.compact.uniq
+      [
+        @document[:url_fulltext],
+        @document[:url_suppl],
+        @document[:url_sfx],
+        @document[:managed_purl_urls]
+      ].flatten.compact.uniq
     end
+
     def link_is_fulltext?(link)
       @document[:url_fulltext] &&
-      @document[:url_fulltext].include?(link)
+        @document[:url_fulltext].include?(link)
     end
+
     def link_is_stanford_only?(link)
       @document[:url_restricted] &&
-      @document[:url_restricted].include?(link)
+        @document[:url_restricted].include?(link)
     end
 
     def link_is_sfx?(link)
       @document[:url_sfx] &&
-      @document[:url_sfx].include?(link)
+        @document[:url_sfx].include?(link)
     end
+
+    def link_is_managed_purl?(link)
+      @document[:managed_purl_urls] &&
+        @document[:managed_purl_urls].include?(link)
+    end
+
     def link_host(link_field)
-      begin
-        uri = URI.parse(URI.escape(link_field.strip))
-        host = uri.host
-        if host =~ /ezproxy\.stanford\.edu/
-          if uri.query && (query = CGI.parse(uri.query))['url'].present?
-            host = URI.parse(query['url'].first).host
-          end
+      uri = URI.parse(URI.escape(link_field.strip))
+      host = uri.host
+      if host =~ /ezproxy\.stanford\.edu/
+        if uri.query && (query = CGI.parse(uri.query))['url'].present?
+          host = URI.parse(query['url'].first).host
         end
-        host
-      rescue URI::InvalidURIError
-        link_field
       end
+      host
+    rescue URI::InvalidURIError
+      link_field
     end
   end
 end
