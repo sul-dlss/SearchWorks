@@ -1,10 +1,14 @@
 <% add_purl_embed_header(@document) %>
 
-<div class='upper-record-metadata row'>
-  <div class="col-md-7">
-    <div class="purl-embed-viewer" data-behavior="purl-embed" data-embed-url="<%= embed_path(@document.druid) %>"></div>
+<% if @document.marc_links.managed_purls.many? %>
+  <%= render 'catalog/managed_purl_embed' %>
+<% else %>
+  <div class='upper-record-metadata row'>
+    <div class="col-md-7">
+      <div class="purl-embed-viewer" data-behavior="purl-embed" data-embed-url="<%= embed_path(@document.druid) %>"></div>
+    </div>
+    <div class="col-md-5">
+      <%= render 'catalog/record/marc_upper_metadata_items' %>
+    </div>
   </div>
-  <div class="col-md-5">
-    <%= render 'catalog/record/marc_upper_metadata_items' %>
-  </div>
-</div>
+<% end %>

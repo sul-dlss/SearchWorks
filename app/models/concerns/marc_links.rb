@@ -21,7 +21,8 @@ module MarcLinks
             stanford_only: stanford_only?(link),
             finding_aid: link_is_finding_aid?(link_field),
             managed_purl: link_is_managed_purl?(link),
-            file_id: file_id(link_field)
+            file_id: file_id(link_field),
+            druid: druid(link)
           )
         end
       end.compact
@@ -125,6 +126,10 @@ module MarcLinks
 
     def link_is_managed_purl?(link)
       @document[:managed_purl_urls] && @document[:managed_purl_urls].include?(link[:href])
+    end
+
+    def druid(link)
+      link[:href].gsub(%r{^https?:\/\/purl.stanford.edu\/?}, '') if link[:href] =~ /purl.stanford.edu/
     end
 
     def stanford_affiliated_regex

@@ -3,6 +3,9 @@
     <%= render "catalog/record/metadata_panels" %>
   </div>
   <div class="record-sections col-md-8">
+    <% if @document.marc_links.managed_purls.many? %>
+      <%= render 'catalog/record/marc_upper_metadata_items' %>
+    <% end %>
     <% if @document.respond_to?(:to_marc) %>
       <%= render "catalog/record/marc_metadata_sections" %>
     <% end %>

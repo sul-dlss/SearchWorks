@@ -1,0 +1,45 @@
+.managed-purl {
+  @include show-page-row-layout;
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    border: 1px solid $white;
+    padding: 4px;
+
+    &.active {
+      background: $beige-5-percent;
+      border: 1px solid $sul-managed-purl-border;
+    }
+
+    &:hover,
+    &:active {
+      background: $beige-5-percent;
+      border: 1px solid $sul-managed-purl-border-hover;
+    }
+
+    button {
+      background: none !important;
+      border: none;
+      cursor: pointer;
+      font: inherit;
+      padding: 0 !important;
+      margin-left: 8px;
+      @include link-styling;
+    }
+  }
+}
+
+.managed-purl-panel {
+  .managed-purl-heading {
+    @include panel-heading($sul-managed-purl-panel-background, $sul-managed-purl-panel-font);
+    height: 40px;
+    padding: 10px;
+  }
+}
+
+.managed-purl-embed {
+  margin: -8px;
+}

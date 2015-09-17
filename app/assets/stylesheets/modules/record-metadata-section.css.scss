@@ -12,7 +12,7 @@
 }
 
 .record-metadata, .upper-record-metadata {
-  margin-right: 25px;
+  @include show-page-row-layout;
 
   dt {
     width: auto;
