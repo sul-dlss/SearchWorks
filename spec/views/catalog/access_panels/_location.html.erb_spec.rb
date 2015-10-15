@@ -254,8 +254,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       render
     end
     it 'should render special instructions field' do
-      expect(rendered).to have_css('h4', text: 'Limited access')
-      expect(rendered).to have_css('p', text: 'All materials are stored offsite. Request items 2 business days in advance. Maximum 5 items per day.')
+      expect(rendered).to have_css('h4', text: 'All items must be viewed on site')
+      expect(rendered).to have_css('p', text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.')
     end
   end
 end
