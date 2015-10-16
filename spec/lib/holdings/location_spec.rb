@@ -62,6 +62,10 @@ describe Holdings::Location do
       expect(location).to_not be_location_level_request
     end
 
+    it 'returns false when the location ends in -RESV' do
+      expect(Holdings::Location.new('SOMETHING-RESV')).to_not be_location_level_request
+    end
+
     context 'HOPKINS' do
       let(:item_display) { '12345 -|- HOPKINS -|- STACKS -|- ' }
       let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
@@ -121,6 +125,13 @@ describe Holdings::Location do
       end
     end
   end
+
+  describe '#reserve_location?' do
+    it 'is true when the location ends in -RESV' do
+      expect(Holdings::Location.new('SOMETHING-RESV')).to be_reserve_location
+    end
+  end
+
   describe "sorting items" do
     let(:callnumbers) { [
       Holdings::Callnumber.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),

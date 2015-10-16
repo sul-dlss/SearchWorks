@@ -40,7 +40,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     end
   end
   describe 'location level requests' do
-    before do
+    it 'should have the request link at the location level' do
       assign(:document, SolrDocument.new(
         id: '123',
         item_display: [
@@ -48,10 +48,19 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ]
       ))
       render
-    end
-    it 'should have the request link at the location level' do
       expect(rendered).to have_css('ul.location li', text: /University Archives\s*Request/)
       expect(rendered).to have_css('ul.location li a', text: "Request")
+    end
+
+    it 'should not have the location level request link for -RESV locations' do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: [
+          '123 -|- SAL -|- SOMETHING-RESV -|- SOMETHING-RESV -|- -|- -|- -|- -|- ABC 123'
+        ]
+      ))
+      render
+      expect(rendered).not_to have_css('a', text: "Request")
     end
   end
   describe "status text" do

@@ -32,7 +32,7 @@
                 <% end %>
               <% end %>
               <% if location.items.present? && !location.bound_with? %>
-                <% if library.location_level_request? || location.location_level_request? %>
+                <% if location_level_request_link?(library, location) %>
                   <%= link_to('Request', request_link(document, location.items.first), class: 'btn btn-info btn-xs', data: { behavior: 'requests-modal' }) %>
                 <% end %>
               <% end %>
@@ -43,7 +43,7 @@
               <td class='indent-callnumber'>
                 <%= item.callnumber %>
               </td>
-              <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !(library.location_level_request? || location.location_level_request?) %>>
+              <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !location_level_request_link?(library, location) %>>
                 <i class="availability-icon <%= item.status.availability_class %>"></i>
                 <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
                   <%= item.status.status_text %>

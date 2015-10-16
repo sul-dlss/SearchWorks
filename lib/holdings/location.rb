@@ -19,6 +19,7 @@ class Holdings
     def location_level_request?
       !contains_only_must_request_items? &&
         !spec_coll_only_inprocess? &&
+        !reserve_location? &&
         (Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
          Constants::REQUEST_LOCS.include?(@code) ||
          hopkins_stacks_only_and_not_online?)
@@ -67,6 +68,10 @@ class Holdings
       location_info[:items] = present_items.map(&:as_json)
       location_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
       location_info
+    end
+
+    def reserve_location?
+      (@code || '').ends_with?('-RESV')
     end
 
     private
