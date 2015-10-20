@@ -1,1 +1,2 @@
-<%= image_tag(document.image_urls(:large).first, class: 'stacks-image', alt: '') %>
+<% thumbnail_src = document.image_urls(:large).try(:first) %>
+<%= image_tag(thumbnail_src, class: 'stacks-image', alt: '') if thumbnail_src.present? %>
