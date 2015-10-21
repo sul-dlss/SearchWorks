@@ -18,6 +18,7 @@
         if ( modalIsPresent() ) {
            showModal();
         } else {
+          removeAllExistingRequestModals();
           createModal();
           showModal();
         }
@@ -31,6 +32,12 @@
         $('body').append(requestsModalTemplate());
         applyModalCloseBehavior();
         addPostMessageListener();
+      }
+
+      function removeAllExistingRequestModals() {
+        $('.requests-modal').each(function(){
+          $(this).remove();
+        });
       }
 
       function applyModalCloseBehavior() {
@@ -55,9 +62,9 @@
 
       function updateModalHeight(contentHeight) {
         var iframeHeight = modalForRequest().find('iframe').height();
-        var setHeight = parseInt(contentHeight, 10) + 10;
+        var setHeight = parseInt(contentHeight, 10);
 
-        if (contentHeight != setHeight) {
+        if (iframeHeight != setHeight && contentHeight > 0) {
           modalForRequest().find('iframe').height(setHeight + 'px');
         }
       }
