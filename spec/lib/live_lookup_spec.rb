@@ -28,7 +28,7 @@ describe LiveLookup do
                 <item_record>
                   <item_id>123456</item_id>
                   <date_time_due>10/10/2014,10:32</date_time_due>
-                  <location>BINDERY</location>
+                  <current_location>BINDERY</current_location>
                 </item_record>
               </catalog>
             </record>
@@ -104,7 +104,7 @@ describe LiveLookup do
                 <catalog>
                   <item_record>
                     <date_time_due>Some due date</date_time_due>
-                    <location>SEE-LOAN</location>
+                    <current_location>SEE-LOAN</current_location>
                   </item_record>
                 </catalog>
               </record>
@@ -192,7 +192,7 @@ describe LiveLookup do
               <record>
                 <catalog>
                   <item_record>
-                    <location>CHECKEDOUT</location>
+                    <current_location>CHECKEDOUT</current_location>
                   </item_record>
                 </catalog>
               </record>
@@ -212,7 +212,7 @@ describe LiveLookup do
               <record>
                 <catalog>
                   <item_record>
-                    <location>BINDERY</location>
+                    <current_location>BINDERY</current_location>
                   </item_record>
                 </catalog>
               </record>
@@ -225,6 +225,29 @@ describe LiveLookup do
           expect(JSON.parse(json.first)['current_location']).to eq 'At bindery'
         end
       end
+
+      describe 'current locations that are identical to the home location' do
+        let(:body) do
+          <<-XML
+            <titles>
+              <record>
+                <catalog>
+                  <item_record>
+                    <home_location>BINDERY</home_location>
+                    <current_location>BINDERY</current_location>
+                  </item_record>
+                </catalog>
+              </record>
+            </titles>
+          XML
+        end
+        it 'are not returned' do
+          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          expect(json.length).to eq 1
+          expect(JSON.parse(json.first)['current_location']).to be_nil
+        end
+      end
+
       describe "multiple locations" do
         let(:body) {
           <<-XML
@@ -232,8 +255,8 @@ describe LiveLookup do
               <record>
                 <catalog>
                   <item_record>
-                    <location>SUL-BIND</location>
-                    <location>BINDERY</location>
+                    <current_location>SUL-BIND</current_location>
+                    <current_location>BINDERY</current_location>
                   </item_record>
                 </catalog>
               </record>

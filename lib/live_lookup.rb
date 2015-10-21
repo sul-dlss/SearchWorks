@@ -68,7 +68,7 @@ class LiveLookup
     end
 
     def barcode
-      @record.xpath('.//item_record/item_id').text
+      @record.xpath('.//item_record/item_id').map(&:text).last
     end
 
     def due_date
@@ -81,15 +81,30 @@ class LiveLookup
     end
 
     def current_location
-      return nil if (location = Holdings::Location.new(current_location_code)).code == 'CHECKEDOUT'
-      location.name
+      return unless valid_current_location?
+      Holdings::Location.new(current_location_code).name
     end
 
     def current_location_code
-      @record.xpath('.//item_record/location').map(&:text).last
+      @record.xpath('.//item_record/current_location').map(&:text).last
     end
 
     private
+
+    def home_location_code
+      @record.xpath('.//item_record/home_location').map(&:text).last
+    end
+
+    def valid_current_location?
+      return false if current_location_code.blank? ||
+                      current_location_code == 'CHECKEDOUT' ||
+                      current_location_same_as_home_location?
+      true
+    end
+
+    def current_location_same_as_home_location?
+      Holdings::Location.new(current_location_code).name == Holdings::Location.new(home_location_code).name
+    end
 
     def valid_due_date?
       due_date_value.present? &&
