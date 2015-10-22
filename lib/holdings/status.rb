@@ -59,5 +59,8 @@ class Holdings
       Holdings::Status::Unknown.new(@callnumber).unknown?
     end
 
+    def as_json(*)
+      { availability_class: availability_class, status_text: status_text }
+    end
   end
 end

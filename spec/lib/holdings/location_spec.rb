@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe Holdings::Location do
+  include Marc856Fixtures
   it "should identify location level requests" do
     expect(Holdings::Location.new("SSRC-DATA")).to be_location_level_request
   end
@@ -8,16 +9,7 @@ describe Holdings::Location do
     let(:location_code) { "LOCKED-STK" }
     let(:callnumber) { Holdings::Callnumber.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
     it "should translate the location code" do
-      expect(Holdings::Location.new(location_code).name).to eq "Locked Stacks: ask at circulation desk"
-    end
-    describe 'location specific translations' do
-      it 'should be present for Green' do
-        expect(Holdings::Location.new(location_code, [callnumber]).name).to eq "Locked Stacks: ask at Media & Microtext Center"
-      end
-      it 'should be present for SPEC' do
-        expect(Holdings::Location.new("MANUSCRIPT", [Holdings::Callnumber.new("barcode -|- HOOVER -|- MANUSCRIPT -|- -|- -|-")]).name).to eq "Manuscript Collection"
-        expect(Holdings::Location.new("MANUSCRIPT", [Holdings::Callnumber.new("barcode -|- SPEC-COLL -|- MANUSCRIPT -|- -|- -|-")]).name).to eq "Manuscript Collection: request at Special Collections service desk"
-      end
+      expect(Holdings::Location.new(location_code).name).to eq "Locked stacks: Ask at circulation desk"
     end
   end
   describe "#present?" do
@@ -51,6 +43,50 @@ describe Holdings::Location do
     it 'should return true for items that are in request locs' do
       Constants::REQUEST_LOCS.each do |location|
         expect(Holdings::Location.new(location)).to be_location_level_request
+      end
+    end
+
+    it 'returns false when then the location contains only must-request items' do
+      callnumbers = [Holdings::Callnumber.new('12345 -|- GREEN -|- STACKS -|- ON-ORDER ')]
+      location = Holdings::Location.new('GREEN', callnumbers)
+
+      expect(location.send(:contains_only_must_request_items?)).to eq true
+      expect(location).to_not be_location_level_request
+    end
+
+    it 'returns false when the library is SPEC-COLL and the items are INPROCESS' do
+      callnumbers = [Holdings::Callnumber.new('12345 -|- SPEC-COLL -|- STACKS -|- INPROCESS ')]
+      location = Holdings::Location.new('SPEC-COLL', callnumbers)
+
+      expect(location.send(:spec_coll_only_inprocess?)).to eq true
+      expect(location).to_not be_location_level_request
+    end
+
+    it 'returns false when the location ends in -RESV' do
+      expect(Holdings::Location.new('SOMETHING-RESV')).to_not be_location_level_request
+    end
+
+    context 'HOPKINS' do
+      let(:item_display) { '12345 -|- HOPKINS -|- STACKS -|- ' }
+      let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
+      let(:not_online_doc) { SolrDocument.new(item_display: [item_display]) }
+      let(:online_doc) { SolrDocument.new(marcxml: fulltext_856, item_display: [item_display]) }
+      let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, '54321 -|- GREEN -|- STACKS -|- ']) }
+      it 'returns true for materials that are not available online' do
+        location = Holdings::Location.new('STACKS', callnumbers, not_online_doc)
+        expect(location).to be_location_level_request
+      end
+      it 'returns false for materials that are available online' do
+        location = Holdings::Location.new('STACKS', callnumbers, online_doc)
+        expect(location).to_not be_location_level_request
+      end
+      it 'returns false for materials that exist in other libraries' do
+        location = Holdings::Location.new('STACKS', callnumbers, multi_holdings_doc)
+        expect(location).to_not be_location_level_request
+      end
+      it 'returns false for materials that are not in STACKS' do
+        location = Holdings::Location.new('REF', callnumbers, not_online_doc)
+        expect(location).to_not be_location_level_request
       end
     end
   end
@@ -89,6 +125,13 @@ describe Holdings::Location do
       end
     end
   end
+
+  describe '#reserve_location?' do
+    it 'is true when the location ends in -RESV' do
+      expect(Holdings::Location.new('SOMETHING-RESV')).to be_reserve_location
+    end
+  end
+
   describe "sorting items" do
     let(:callnumbers) { [
       Holdings::Callnumber.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),
@@ -116,6 +159,27 @@ describe Holdings::Location do
       expect(location.mhld).to_not be_present
       location.mhld = "something"
       expect(location.mhld).to be_present
+    end
+  end
+  describe '#as_json' do
+    let(:callnumbers) do
+      [
+        Holdings::Callnumber.new('barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- '),
+        Holdings::Callnumber.new('barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- '),
+        Holdings::Callnumber.new('barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ')
+      ]
+    end
+    let(:as_json) { Holdings::Location.new('STACKS', callnumbers).as_json }
+    it 'should return a hash with all of the callnumbers public reader methods' do
+      expect(as_json).to be_a Hash
+      expect(as_json[:code]).to eq 'STACKS'
+      expect(as_json[:name]).to eq 'Stacks'
+    end
+    it 'should return an items array' do
+      expect(as_json[:items]).to be_a Array
+      expect(as_json[:items].length).to eq 3
+      expect(as_json[:items].first).to be_a Hash
+      expect(as_json[:items].first[:library]).to eq 'GREEN'
     end
   end
 end

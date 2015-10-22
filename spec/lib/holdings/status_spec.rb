@@ -91,4 +91,11 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'unknown'
     end
   end
+  describe '#as_json' do
+    let(:as_json) { status.as_json }
+    it 'should return a json hash with the availability class and status text' do
+      expect(as_json).to have_key :availability_class
+      expect(as_json).to have_key :status_text
+    end
+  end
 end

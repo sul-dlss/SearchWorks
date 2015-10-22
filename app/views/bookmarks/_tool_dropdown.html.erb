@@ -10,7 +10,7 @@
 
     <% if @response.documents.any? {|d| d.exports_as? :refworks_marc_txt } %>
       <li>
-        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, params_for_search.merge(host: "#{Settings.HOSTNAME}.stanford.edu"))), :id => "refworksLink" %>
+        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, params_for_search)), :id => "refworksLink" %>
       </li>
     <% end %>
 

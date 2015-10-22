@@ -40,9 +40,6 @@ describe Holdings::Requestable do
         Constants::REQUEST_LIBS.each do |library|
           expect(Holdings::Requestable.new(OpenStruct.new(library: library))).to_not be_requestable
         end
-        ["PHYSICS", "MEYER"].each do |library|
-          expect(Holdings::Requestable.new(OpenStruct.new(library: library))).to_not be_requestable
-        end
       end
     end
   end

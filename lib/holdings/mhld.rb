@@ -30,6 +30,13 @@ class Holdings
       sanitize_mhld_data @mhld_display[4]
     end
 
+    def as_json
+      methods = (public_methods(false) - [:as_json])
+      methods.each_with_object({}) do |meth, obj|
+        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
+      end
+    end
+
     private
 
     def standard_or_zombie_library

@@ -25,9 +25,9 @@ class LiveLookup
           open_timeout: 10
         }
       end.body
-    rescue Faraday::Error::ConnectionFailed => error
+    rescue Faraday::Error::ConnectionFailed
       nil
-    rescue Faraday::Error::TimeoutError => error
+    rescue Faraday::Error::TimeoutError
       nil
     end
   end
@@ -35,6 +35,7 @@ class LiveLookup
   def live_lookup_url
     "#{Settings.LIVE_LOOKUP_URL}?#{live_lookup_query_params}"
   end
+
   def live_lookup_query_params
     if multiple_ids?
       "search=holdings&#{mapped_ids}"
@@ -42,18 +43,22 @@ class LiveLookup
       "search=holding&id=#{@ids.first}"
     end
   end
+
   def mapped_ids
     @ids.each_with_index.map do |id, index|
       "id#{index}=#{id}"
     end.join('&')
   end
+
   def multiple_ids?
     @ids.length > 1
   end
+
   class Record
     def initialize(record)
       @record = record
     end
+
     def to_json
       {
         barcode: barcode,
@@ -61,12 +66,13 @@ class LiveLookup
         current_location: current_location
       }.to_json
     end
+
     def barcode
-      @record.xpath('.//item_record/item_id').text
+      @record.xpath('.//item_record/item_id').map(&:text).last
     end
 
     def due_date
-      return nil if !due_date_value.present? || due_date_value == "NEVER"
+      return unless valid_due_date?
       due_date_value.gsub(',23:59', '')
     end
 
@@ -75,13 +81,35 @@ class LiveLookup
     end
 
     def current_location
-      return nil if (location = Holdings::Location.new(current_location_code)).code == "CHECKEDOUT"
-      location.name
+      return unless valid_current_location?
+      Holdings::Location.new(current_location_code).name
     end
 
     def current_location_code
-      @record.xpath('.//item_record/location').map(&:text).last
+      @record.xpath('.//item_record/current_location').map(&:text).last
     end
 
+    private
+
+    def home_location_code
+      @record.xpath('.//item_record/home_location').map(&:text).last
+    end
+
+    def valid_current_location?
+      return false if current_location_code.blank? ||
+                      current_location_code == 'CHECKEDOUT' ||
+                      current_location_same_as_home_location?
+      true
+    end
+
+    def current_location_same_as_home_location?
+      Holdings::Location.new(current_location_code).name == Holdings::Location.new(home_location_code).name
+    end
+
+    def valid_due_date?
+      due_date_value.present? &&
+        due_date_value != 'NEVER' &&
+        !Constants::HIDE_DUE_DATE_CURRENT_LOCS.include?(current_location_code)
+    end
   end
 end

@@ -16,8 +16,16 @@ describe Holdings::Library do
       Holdings::Callnumber.new("barcode -|- library -|- STACKS -|- "),
       Holdings::Callnumber.new("barcode -|- library -|- CURRENTPER -|- ")
     ] }
+    let(:combined_callnumbers) do
+      [
+        Holdings::Callnumber.new("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
+        Holdings::Callnumber.new("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
+        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- "),
+      ]
+    end
     let(:locations) { Holdings::Library.new("GREEN", nil, callnumbers).locations }
     let(:sort_locations) { Holdings::Library.new("GREEN", nil, sort_callnumbers).locations }
+    let(:combined_locations) { Holdings::Library.new('GREEN', nil, combined_callnumbers).locations }
     it "should return an array of Holdings::Locations" do
       expect(locations).to be_a Array
       locations.each do |location|
@@ -28,11 +36,15 @@ describe Holdings::Library do
       expect(callnumbers.length).to eq 3
       expect(locations.length).to eq 2
     end
+    it 'groups by home location translation when they are the same' do
+      expect(combined_callnumbers.length).to eq 3
+      expect(combined_locations.length).to eq 1
+    end
     it "should sort by location code when there is no translation" do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
     it "should sort locations alpha by name" do
-      expect(sort_locations.map(&:name)).to eq ["Current Periodicals", "Miniature", "Stacks"]
+      expect(sort_locations.map(&:name)).to eq ["Current periodicals", "Miniature", "Stacks"]
       expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "TINY", "STACKS"]
     end
   end
@@ -51,25 +63,6 @@ describe Holdings::Library do
     it "should return true for all libraries that should be requestable at the location level" do
       Constants::REQUEST_LIBS.each do |library|
         expect(Holdings::Library.new(library)).to be_location_level_request
-      end
-    end
-    describe 'HOPKINS' do
-      let(:item_display) { "12345 -|- HOPKINS -|- STACKS -|- " }
-      let(:callnumbers) {[Holdings::Callnumber.new(item_display)]}
-      let(:online_doc) { SolrDocument.new(marcxml: fulltext_856) }
-      let(:online_lib) { Holdings::Library.new("HOPKINS", online_doc, callnumbers) }
-      let(:single_item_doc) { SolrDocument.new(item_display: [item_display]) }
-      let(:not_online_lib) { Holdings::Library.new("HOPKINS", single_item_doc, callnumbers) }
-      let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, "54321 -|- GREEN -|- STACKS -|- "]) }
-      let(:multiple_holding_lib) { Holdings::Library.new("HOPKINS", multi_holdings_doc, callnumbers) }
-      it 'should return true for materials that are not available online' do
-        expect(not_online_lib).to be_location_level_request
-      end
-      it 'should return false for materials that exist in other libraries' do
-        expect(multiple_holding_lib).to_not be_location_level_request
-      end
-      it 'should return false for materials that are available online' do
-        expect(online_lib).to_not be_location_level_request
       end
     end
   end
@@ -96,6 +89,28 @@ describe Holdings::Library do
       expect(library.mhld).to_not be_present
       library.mhld = "something"
       expect(library.mhld).to be_present
+    end
+  end
+  describe '#as_json' do
+    let(:callnumbers) do
+      [
+        Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Callnumber.new('barcode2 -|- library -|- home_location2 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Callnumber.new('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
+      ]
+    end
+    let(:as_json) { Holdings::Library.new('GREEN', nil, callnumbers).as_json }
+    it 'should return a hash with all of the libraries public reader methods' do
+      expect(as_json).to be_a Hash
+      expect(as_json[:code]).to eq 'GREEN'
+      expect(as_json[:name]).to eq 'Green Library'
+      expect(as_json[:holding_library?]).to be_true
+    end
+    it 'shuold return an array of locations' do
+      expect(as_json[:locations]).to be_a Array
+      expect(as_json[:locations].length).to eq 3
+      expect(as_json[:locations].first).to be_a Hash
+      expect(as_json[:locations].first[:code]).to eq 'home_location'
     end
   end
 end

@@ -58,4 +58,11 @@ class Holdings
       Holdings::MHLD.new(mhld_display)
     end
   end
+
+  def as_json(*)
+    live_data = JSON.parse(LiveLookup.new(@document[:id]).to_json)
+    libraries.select(&:present?).map do |library|
+      library.as_json(live_data)
+    end
+  end
 end

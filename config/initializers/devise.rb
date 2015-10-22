@@ -1,3 +1,18 @@
+require 'devise_remote_user'
+
+DeviseRemoteUser.configure do |config|
+  config.env_key = lambda do |env|
+    if env['REMOTE_USER']
+      "#{env['REMOTE_USER']}@stanford.edu"
+    elsif Rails.env.development? && ENV['REMOTE_USER']
+      ENV['REMOTE_USER']
+    end
+  end
+  config.auto_create = true
+  config.auto_update = true
+  config.attribute_map = { webauth_groups: 'WEBAUTH_LDAPPRIVGROUP' }
+end
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -5,7 +20,6 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = Settings.DEVISE_SECRET_KEY
-
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
