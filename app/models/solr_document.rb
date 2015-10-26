@@ -21,6 +21,7 @@ class SolrDocument
   include OpenSeadragon
   include SolrHoldings
   include MarcInstrumentation
+  include SolrBookplates
 
   include Blacklight::Solr::Document
 

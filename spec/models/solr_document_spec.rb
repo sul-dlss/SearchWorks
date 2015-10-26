@@ -85,4 +85,10 @@ describe SolrDocument do
       expect(subject).to be_kind_of SolrHoldings
     end
   end
+
+  describe 'SolrBookplates' do
+    it 'is included' do
+      expect(subject).to be_kind_of SolrBookplates
+    end
+  end
 end
