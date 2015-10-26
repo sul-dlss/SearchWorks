@@ -1,0 +1,19 @@
+$bookplate-top-margin: 10px;
+
+.bookplate {
+  .media {
+    @include masthead-panel;
+
+    margin-top: $bookplate-top-margin;
+    padding: 5px;
+
+    &:first-child {
+      margin-top: $bookplate-top-margin;
+    }
+  }
+
+  img {
+    max-height: 150px;
+    max-width: 150px;
+  }
+}

@@ -16,18 +16,10 @@
 
 .home-page-column {
   margin-top: 15px;
-  .media-heading {
-    font-size: 1.1em;
-  }
   padding-left: 0;
+
   &.articles-help {
     padding-right: 0;
-  }
-  .external-link-icon {
-    @extend .fa;
-    @extend .fa-external-link;
-    font-size: 0.9em;
-    margin-left: 2px;
   }
   &.features {
     @media only screen and (max-width: $screen-md) {
@@ -37,4 +29,15 @@
   @media only screen and (max-width: $screen-sm) {
     padding-right: 0;
   }
+}
+
+.external-link-icon {
+  @extend .fa;
+  @extend .fa-external-link;
+  font-size: 0.9em;
+  margin-left: 2px;
+}
+
+.media-heading {
+  font-size: 1.1em;
 }

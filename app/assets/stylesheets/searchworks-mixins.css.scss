@@ -118,3 +118,9 @@
   border-bottom: 1px dotted $sul-link-color-border;
   text-decoration: none;
 }
+
+@mixin masthead-panel {
+  background-color: $sul-masthead-bg;
+  border: 1px solid $sul-masthead-border;
+  border-radius: 5px;
+}
