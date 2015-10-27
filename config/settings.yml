@@ -11,7 +11,7 @@ SQUASH_DISABLE: <%= (Rails.env.development? || Rails.env.test?) %>
 STACKMAP_API_URL: "http://stanford.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'
 NUMBER_OF_DAYS_TO_PRUNE: '7'
-PURL_EMBED_PROVIDER: 'http://embed-service.example.com/embed'
+PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
 PURL_EMBED_URL_SCHEME: 'http://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'http://purl.stanford.edu/'
 FEEDBACK_ALERT: <%= false %>

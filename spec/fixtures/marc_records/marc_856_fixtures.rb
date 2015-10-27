@@ -163,4 +163,22 @@ module Marc856Fixtures
       </record>
     xml
   end
+
+  def many_managed_purl_856
+    <<-xml
+      <record>
+      <datafield tag="245" ind1=" " ind2=" ">
+        <subfield code="a">Many PURLs for One CKey</subfield>
+      </datafield>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='u'>http://purl.stanford.edu/ct493wg6431</subfield>
+          <subfield code='x'>file:ct493wg6431_00_0001.jp2</subfield>
+        </datafield>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='u'>http://purl.stanford.edu/zg338xh5248</subfield>
+          <subfield code='x'>file:zg338xh5248_00_0001.jp2</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end
