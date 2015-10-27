@@ -1,0 +1,24 @@
+<% bookplate = bookplate_from_document_list %>
+<% if bookplate.present? %>
+  <div id="masthead-container">
+    <div id="masthead" class="bookplate-fund-masthead row">
+      <div class='col-md-2 col-sm-3'>
+        <%= image_tag(bookplate.thumbnail_url, alt: bookplate.text) %>
+      </div>
+      <div class='col-md-10 col-sm-9'>
+        <h1><%= bookplate.text %></h1>
+        <p>
+          Bookplates honor donors who have created and sustained acquisition
+          funds, often over many years and sometimes several generations, as
+          well as those who have given the Libraries extraordinary collections.
+        </p>
+        <% if Settings.BOOKPLATES_EXHIBIT_URL.present? %>
+          <p>
+            Find out more at the <%= link_to('Digital Bookplates Exhibit', Settings.BOOKPLATES_EXHIBIT_URL) %>
+            <i class='external-link-icon'></i>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

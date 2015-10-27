@@ -91,7 +91,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "access_facet", :label => "Access", limit: 10
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", :label => "Collection type", :show => false
-    config.add_facet_field 'fund_facet', label: 'Bookplate', show: false
+    config.add_facet_field 'fund_facet', label: 'Bookplate', show: false, helper_method: :bookplate_breadcrumb_value
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
     config.add_facet_field "format_physical_ssim", :label => "Media type", limit: 20
     config.add_facet_field "pub_year_tisim", :label => "Date", :range => {
