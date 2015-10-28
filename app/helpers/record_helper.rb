@@ -132,8 +132,8 @@ module RecordHelper
     # http://daringfireball.net/2010/07/improved_regex_for_matching_urls
     url = /(?i)\b(?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\([^\s()<>]+|\([^\s()<>]+\)*\))+(?:\([^\s()<>]+|\([^\s()<>]+\)*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’])/i
     # http://www.regular-expressions.info/email.html
-    email = /[A-Z0-9_\.%\+\-\']+@(?:[A-Z0-9\-]+\.)+(?:[A-Z]{2,4}|museum|travel)/i
-    matches = [val.scan(url), val.scan(email)].flatten
+    email = %r{[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b}i
+    matches = [val.scan(url), val.scan(email)].flatten.uniq
     unless val =~ /<a/ # we'll assume that linking has alraedy occured and we don't want to double link
       matches.each do |match|
         if match =~ email
