@@ -163,6 +163,7 @@
     <!-- sfx urls should rarely occur more than once in a marc bib record -->
     <field name="url_sfx" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="url_restricted" type="string" indexed="false" stored="true" multiValued="true" />
+    <field name="managed_purl_urls" type="string" indexed="false" stored="true" multiValued="true" />
 
     <!-- Physical Fields -->
     <field name="physical" type="text" indexed="true" stored="true" multiValued="true" />

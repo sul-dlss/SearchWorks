@@ -1,0 +1,13 @@
+:id: 8923346
+:title_display: Many PURLs for One CKey
+:language: English
+:format: Book
+:format_main_ssim: Book
+:access_facet: At the Library
+:marcxml: <%= many_managed_purl_856 %>
+:display_type:
+  - sirsi
+  - image
+:managed_purl_urls:
+  - http://purl.stanford.edu/ct493wg6431
+  - http://purl.stanford.edu/zg338xh5248

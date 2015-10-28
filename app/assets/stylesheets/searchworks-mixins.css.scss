@@ -103,3 +103,18 @@
     margin-right: 2px;
   }
 }
+
+@mixin panel-heading($background, $font-color) {
+  background: $background;
+  border-bottom: 1px solid $background;
+  color: $font-color;
+}
+
+@mixin show-page-row-layout {
+  margin-right: 25px;
+}
+
+@mixin link-styling {
+  border-bottom: 1px dotted $sul-link-color-border;
+  text-decoration: none;
+}

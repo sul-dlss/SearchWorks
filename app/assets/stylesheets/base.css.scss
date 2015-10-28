@@ -11,8 +11,7 @@ body {
 }
 
 a, a:hover, a:focus {
-	text-decoration: none;
-  border-bottom: 1px dotted $sul-link-color-border;
+  @include link-styling;
 }
 
 h1 {

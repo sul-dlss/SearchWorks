@@ -1,10 +1,8 @@
 .panel-library-location {
   .library-location-heading {
-    border-bottom: 1px solid $sul-access-location-bg;
-    padding-bottom: 6px;
-    background: $sul-access-location-bg;
-    color: $sul-access-font;
+    @include panel-heading($sul-access-location-bg, $sul-access-font);
     height: 50px;
+    padding-bottom: 6px;
     a {
       color: #fff;
       text-decoration: underline;

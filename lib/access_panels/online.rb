@@ -1,12 +1,16 @@
 class Online < AccessPanel
   delegate :present?, to: :links
   def links
-    unless @document.is_a_collection_member?
-      if @document.index_links.sfx.present?
-        @document.index_links.sfx
-      elsif @document.marc_links.present?
-        @document.marc_links.fulltext
-      end
-    end
+    sfx_links || marc_fulltext_links
+  end
+
+  private
+
+  def sfx_links
+    @document.index_links.sfx if @document.index_links.sfx.present?
+  end
+
+  def marc_fulltext_links
+    @document.marc_links.fulltext if @document.marc_links.present?
   end
 end

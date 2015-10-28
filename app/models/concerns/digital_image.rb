@@ -8,18 +8,24 @@ module DigitalImage
 
 
   # Get stacks urls for a document using file ids
+  # @return [Array]
   def image_urls(size=:default)
     return nil unless has_image_behavior?
-
-    stacks_url = Settings.STACKS_URL
-
     file_ids.map do |image_id|
-      image_id = image_id.gsub(/\.jp2$/, '')
-
-      "#{stacks_url}/#{self.druid}/#{image_id}#{image_dimensions[size]}"
+      craft_image_url(druid, image_id, size)
     end
   end
 
+  ##
+  # Generates a Stacks image url using given arguments
+  # @param [String] druid
+  # @param [String] image_id
+  # @param [Symbol] size
+  # @return [String]
+  def craft_image_url(druid, image_id, size)
+    image_id = image_id.gsub(/\.jp2$/, '')
+    "#{Settings.STACKS_URL}/#{druid}/#{image_id}#{image_dimensions[size]}"
+  end
 
   # Size definitions for stacks urls
   def image_dimensions(size=:default)

@@ -63,6 +63,23 @@ describe MarcLinks do
       expect(links.all?(&:fulltext?)).to be_true
     end
   end
+
+  describe 'managed_purl?' do
+    let(:document) { SolrDocument.new(marcxml: managed_purl_856, managed_purl_urls: ['http://library.stanford.edu']) }
+    let(:links) { document.marc_links }
+
+    it 'should return the managed purl links' do
+      expect(links.all).to be_present
+      expect(links.managed_purls).to be_present
+      expect(links.all).to eq(links.managed_purls)
+      expect(links.all.all?(&:managed_purl?)).to be true
+    end
+
+    it 'should return the file_id (without "file:")' do
+      expect(links.all.first.file_id).to eq 'abc123'
+    end
+  end
+
   describe "#supplemental" do
     let(:document) {  SolrDocument.new(marcxml: supplemental_856) }
     let(:links) { document.marc_links.all }

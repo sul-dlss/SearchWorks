@@ -1,1 +1,2 @@
 HOSTNAME: "TEST-HOST"
+PURL_EMBED_PROVIDER: 'http://embed.stanford.edu/embed'
