@@ -16,6 +16,7 @@ class SolrDocument
   include IndexAuthors
   include Imprint
   include Druid
+  include StacksImages
   include DigitalImage
   include OpenSeadragon
   include SolrHoldings
