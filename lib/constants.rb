@@ -926,7 +926,7 @@ module Constants
 
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',
-    'ART' => 'Art & Architecture Library',
+    'ART' => 'Art & Architecture Library (Bowes)',
     'BIOLOGY' => 'Biology Library (Falconer)',
     'CHEMCHMENG' => 'Chemistry & ChemEng Library (Swain)',
     'CLASSICS' => 'Classics Library',
