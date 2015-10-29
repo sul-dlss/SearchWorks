@@ -157,6 +157,9 @@
     <field name="pub_date_display" type="string" indexed="false" stored="true"/>
     <field name="imprint_display" type="string" indexed="false" stored="true" multiValued="true"/>
 
+    <!-- Date Cataloged for new items feed -->
+    <field name="date_cataloged" type="date" indexed="true" stored="true"/>
+
     <!-- URL Fields -->
     <field name="url_fulltext" type="string" indexed="false" stored="true" multiValued="true"/>
     <field name="url_suppl" type="string" indexed="false" stored="true" multiValued="true"/>

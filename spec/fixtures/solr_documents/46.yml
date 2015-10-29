@@ -1,0 +1,5 @@
+:id: 46
+:title_display: A new item to the catalog
+:date_cataloged: "<%= Time.new.utc.iso8601 %>"
+:format: Book
+:format_main_ssim: Book
