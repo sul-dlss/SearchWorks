@@ -6,7 +6,7 @@ describe Holdings::Callnumber do
   end
   let(:callnumber) { Holdings::Callnumber.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
-
+  let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
       expect(callnumber).to respond_to(method)
@@ -14,7 +14,6 @@ describe Holdings::Callnumber do
   end
   describe '#present?' do
     let(:no_item_display) { Holdings::Callnumber.new('') }
-    let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|-') }
 
     it "should be false when the item_display doesn't exist" do
       expect(no_item_display).to_not be_present
@@ -40,10 +39,6 @@ describe Holdings::Callnumber do
   describe 'browsable?' do
     it 'should return false if not LC or DEWEY' do
       expect(Holdings::Callnumber.new(complex_item_display)).to_not be_browsable
-    end
-
-    it 'should return false if there is no real callnumber' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- reverse_shelfkey -|- -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
     end
 
     it 'should return false if there is no shelfkey' do
@@ -72,12 +67,20 @@ describe Holdings::Callnumber do
       dewey = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- DEWEY -|- course_id -|- reserve_desk -|- loan_period'
       expect(Holdings::Callnumber.new(dewey)).to be_browsable
     end
+
+    it 'should return true if the item is an internet resource' do
+      expect(internet_callnumber).to be_browsable
+    end
   end
   describe '#callnumber' do
     let(:no_callnumber) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
 
     it "should return '(no call number) if the callnumber is blank" do
       expect(no_callnumber.callnumber).to eq '(no call number)'
+    end
+
+    it 'returns "eResource" when the home location is INTERNET ' do
+      expect(internet_callnumber.callnumber).to eq 'eResource'
     end
   end
   describe '#status' do

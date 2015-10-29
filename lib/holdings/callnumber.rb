@@ -8,13 +8,12 @@ class Holdings
 
     def present?
       @holding_info.present? &&
-        !(item_display[1] == 'SUL' && item_display[2] == 'INTERNET')
+        !(item_display[1] == 'SUL' && internet_resource?)
     end
 
     def browsable?
       shelfkey.present? &&
         reverse_shelfkey.present? &&
-        item_display[8].present? &&
         Constants::BROWSABLE_CALLNUMBERS.include?(callnumber_type)
     end
 
@@ -65,8 +64,11 @@ class Holdings
     end
 
     def callnumber
-      if item_display[8].present?
+      case
+      when item_display[8].present?
         item_display[8]
+      when internet_resource?
+        'eResource'
       else
         '(no call number)'
       end
@@ -131,6 +133,10 @@ class Holdings
     end
 
     private
+
+    def internet_resource?
+      home_location == 'INTERNET'
+    end
 
     def standard_or_zombie_library
       if item_display[1].blank? || %w(SUL PHYSICS).include?(item_display[1])
