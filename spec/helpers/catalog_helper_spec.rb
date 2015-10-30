@@ -33,4 +33,19 @@ describe CatalogHelper do
       expect(location_level_request_link?(non_request, location_level_request)).to be true
     end
   end
+
+  describe 'new_documents_feed_path' do
+    it 'returns the search url to an atom feed' do
+      expect(new_documents_feed_path).to match %r{^/catalog.atom\?}
+    end
+
+    it 'includes the new-to-libs sort key' do
+      expect(new_documents_feed_path).to match(/sort=new-to-libs/)
+    end
+
+    it 'removes the page parameter' do
+      expect(helper).to receive(:params).and_return(page: 5)
+      expect(helper.new_documents_feed_path).not_to match(/page=/)
+    end
+  end
 end

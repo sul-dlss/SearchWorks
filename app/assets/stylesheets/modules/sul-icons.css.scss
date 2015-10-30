@@ -16,6 +16,15 @@ $sul-icon-prefix: 'sul-icon';
 
 }
 
+.rss-icon {
+  // replace this extend when we have SUL Styles available to us
+  @extend .fa;
+  @extend .fa-lg;
+  @extend .fa-rss-square;
+
+  color: $sul-rss-icon-color;
+  margin-right: .3em;
+}
 
 // Style icons in facets
 .facet-values .#{$sul-icon-prefix} {
