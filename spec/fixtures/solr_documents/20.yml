@@ -5,6 +5,8 @@
   ex.
 :language: German
 :format: Database
+:genre_ssim:
+  - Government document
 :format_main_ssim: Database
 :db_az_subject: Biology
 :summary_display:

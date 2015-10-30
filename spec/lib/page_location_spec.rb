@@ -170,6 +170,18 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+
+        describe 'government_documents' do
+          before { base_params[:f] = { genre_ssim: ['Government document', 'Something else'] } }
+          it 'is deined when the genre_ssim includes "Government document"' do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :government_documents
+          end
+
+          it 'is nil when the genre_ssim is something else' do
+            base_params[:f][:genre_ssim] = ['Something else']
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe 'for CourseReservesController#index' do

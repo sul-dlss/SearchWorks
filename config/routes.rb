@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get "databases" => "catalog#index", :defaults => {:f => {:format_main_ssim=>["Database"]}}
 
+  get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
+
   resources :selected_databases, only: :index
 
   resources :hours, only: :show
