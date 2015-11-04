@@ -158,6 +158,18 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+
+        describe 'bookplate_fund' do
+          before { base_params[:f] = { fund_facet: ['ABC123'] } }
+          it 'is defined when the fund_facet is present' do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :bookplate_fund
+          end
+
+          it 'is defined when the fund_facet is empty' do
+            base_params[:f] = { fund_facet: [] }
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe 'for CourseReservesController#index' do

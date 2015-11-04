@@ -62,6 +62,19 @@ describe SolrDocument do
       expect(subject).to be_kind_of Druid
     end
   end
+
+  describe 'StacksImages' do
+    it 'includes the StacksImages mixin' do
+      expect(subject).to be_kind_of StacksImages
+    end
+  end
+
+  describe 'DigitalImage' do
+    it 'includes the DigitalImage mixin' do
+      expect(subject).to be_kind_of DigitalImage
+    end
+  end
+
   describe "OpenSeadragon" do
     it "should include OpenSeadragon" do
       expect(subject).to be_kind_of OpenSeadragon
@@ -70,6 +83,12 @@ describe SolrDocument do
   describe "SolrHoldings" do
     it "should include SolrHoldings" do
       expect(subject).to be_kind_of SolrHoldings
+    end
+  end
+
+  describe 'SolrBookplates' do
+    it 'is included' do
+      expect(subject).to be_kind_of SolrBookplates
     end
   end
 end

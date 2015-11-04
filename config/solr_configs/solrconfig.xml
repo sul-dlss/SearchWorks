@@ -17,8 +17,8 @@
 -->
 
 <!--
- This is a stripped down config file used for a simple example...  
- It is *not* a good example to work from. 
+ This is a stripped down config file used for a simple example...
+ It is *not* a good example to work from.
 -->
 <config>
   <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
@@ -31,18 +31,18 @@
   <lib dir="../lib/contrib/analysis-extras/lucene-libs" />
 
   <dataDir>${solr.blacklight-core.data.dir:}</dataDir>
-  
-  <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" /> 
+
+  <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
 
   <requestDispatcher handleSelect="true" >
     <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" />
   </requestDispatcher>
-  
+
   <requestHandler name="standard" class="solr.StandardRequestHandler" />
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
   <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
-     
+
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
       <str name="q">solrpingquery</str>
@@ -51,8 +51,8 @@
       <str name="echoParams">all</str>
     </lst>
   </requestHandler>
-   
-  <!-- config for the admin interface --> 
+
+  <!-- config for the admin interface -->
   <admin>
     <defaultQuery>solr</defaultQuery>
   </admin>
@@ -845,6 +845,7 @@
       <str name="facet.field">display_type</str>
         <str name="f.display_type.facet.method">enum</str>
       <str name="facet.field">era_facet</str>
+      <str name="facet.field">fund_facet</str>
       <str name="facet.field">format_main_ssim</str>
         <int name="f.format_main_ssim.facet.limit">20</int>
         <str name="f.format_main_ssim.facet.method">enum</str>
@@ -871,6 +872,7 @@
         author_meeting_display,       vern_author_meeting_display,
         author_person_display,        vern_author_person_display,
         author_person_full_display,   vern_author_person_full_display,
+        bookplates_display,
         collection,
         collection_type,
         collection_with_title,
@@ -946,16 +948,16 @@
     <lst name="defaults">
       <str name="defType">lucene</str>
       <str name="echoParams">explicit</str>
-      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>   
-      <str name="df">text</str> 
-      <str name="q.op">AND</str> 
+      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
+      <str name="df">text</str>
+      <str name="q.op">AND</str>
       <str name="qs">1</str>
 
       <!-- used for dismax query parser -->
-      <str name="mm">1</str> 
-      <str name="ps">3</str> 
+      <str name="mm">1</str>
+      <str name="ps">3</str>
       <float name="tie">0.01</float>
-      
+
       <!-- for user query terms in author text box -->
       <str name="qf_author">
         author_unstem_search^200
@@ -969,7 +971,7 @@
         author_t^200
         author_addl_t^10
       </str>
-      
+
       <!-- for user query terms in title text box -->
       <str name="qf_title">
         title_unstem_search^50000
@@ -995,7 +997,7 @@
         title_series_t^50
         title_series_unstem_search^10
       </str>
-      
+
       <!-- for user query terms in subject text box -->
       <str name="qf_subject">
         subject_topic_unstem_search^200
@@ -1013,25 +1015,25 @@
         subject_addl_unstem_search^100
         subject_addl_t^10
       </str>
-      
+
       <!-- for user query terms in number text box -->
       <str name="qf_number">isbn_t</str>
-      
+
       <!-- for user query terms in keyword text box -->
       <str name="qf_keyword">text</str>
       <str name="pf_keyword">text^10</str>
-      
+
       <!-- NOT using marc_display because it is large and will slow things down for search results -->
       <str name="fl">
-        id, 
+        id,
         score,
         author_display,
-        author_vern_display, 
-        format, 
-        isbn_t, 
-        language_facet, 
+        author_vern_display,
+        format,
+        isbn_t,
+        language_facet,
         lc_callnum_display,
-        material_type_display, 
+        material_type_display,
         published_display,
         published_vern_display,
         pub_date,
@@ -1045,7 +1047,7 @@
         url_fulltext_display,
         url_suppl_display,
       </str>
-      
+
       <str name="facet">true</str>
       <str name="facet.mincount">1</str>
       <str name="facet.limit">10</str>
@@ -1058,7 +1060,7 @@
       <str name="facet.field">subject_era_facet</str>
       <str name="facet.field">subject_geo_facet</str>
       <str name="facet.field">subject_topic_facet</str>
-      
+
       <str name="spellcheck">true</str>
       <str name="spellcheck.dictionary">subject</str>
       <str name="spellcheck.onlyMorePopular">true</str>
@@ -1074,7 +1076,7 @@
 <!-- Spell Check
 
         The spell check component can return a list of alternative spelling
-        suggestions.  
+        suggestions.
 
         http://wiki.apache.org/solr/SpellCheckComponent
      -->
@@ -1129,7 +1131,7 @@
        </lst>
      -->
 
-    <!-- a spellchecker that use an alternate comparator 
+    <!-- a spellchecker that use an alternate comparator
 
          comparatorClass be one of:
           1. score (default)
@@ -1158,4 +1160,3 @@
   </searchComponent>
 
 </config>
-

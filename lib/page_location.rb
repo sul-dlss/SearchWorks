@@ -1,54 +1,55 @@
 module SearchWorks
   class PageLocation
-    def initialize(params={})
+    def initialize(params = {})
       @params = params
     end
+
     def access_point
       @access_point ||= AccessPoints.new(@params)
     end
+
     def access_point?
       access_point.to_s.present?
     end
-    private
+
     class AccessPoints
-      def initialize(params={})
+      delegate :to_s, to: :point
+      def initialize(params = {})
         @params = params
       end
+
       def point
-        self.send(:"#{@params[:controller]}_#{@params[:action]}_access_points")
+        send(:"#{@params[:controller]}_#{@params[:action]}_access_points")
       end
+
       def name
         to_s.gsub(/_/, ' ').capitalize.pluralize
       end
-      def to_s
-        point.to_s
-      end
+
       def catalog_index_access_points
-        if @params[:f]
-          if format_includes_databases?
-            return :databases
-          end
-          if course_reserve_parameters?
-            return :course_reserve
-          end
-          if collection_parameters?
-            return :collection
-          end
-          if digital_collections_parameters?
-            return :digital_collections
-          end
-          if sdr_parameters?
-            return :sdr
-          end
-          if dissertation_theses_parameters?
-            return :dissertation_theses
-          end
+        return unless @params[:f]
+        case
+        when format_includes_databases?
+          :databases
+        when course_reserve_parameters?
+          :course_reserve
+        when collection_parameters?
+          :collection
+        when digital_collections_parameters?
+          :digital_collections
+        when sdr_parameters?
+          :sdr
+        when dissertation_theses_parameters?
+          :dissertation_theses
+        when bookplate_fund_parameters?
+          :bookplate_fund
         end
       end
 
       def format_parameter
         @params[:f][:format] || @params[:f][:format_main_ssim]
       end
+
       def format_includes_databases?
         format_parameter.include?('Database') if format_parameter
       end
@@ -58,19 +59,23 @@ module SearchWorks
       end
 
       def collection_parameters?
-        @params[:f][:collection].present? && !@params[:f][:collection].include?("sirsi")
+        @params[:f][:collection].present? && !@params[:f][:collection].include?('sirsi')
       end
 
       def digital_collections_parameters?
-        @params[:f][:collection_type].present? && @params[:f][:collection_type].include?("Digital Collection")
+        @params[:f][:collection_type].present? && @params[:f][:collection_type].include?('Digital Collection')
       end
 
       def sdr_parameters?
-        @params[:f][:building_facet].present? && @params[:f][:building_facet].include?("Stanford Digital Repository")
+        @params[:f][:building_facet].present? && @params[:f][:building_facet].include?('Stanford Digital Repository')
       end
 
       def dissertation_theses_parameters?
         @params[:f][:genre_ssim].present? && @params[:f][:genre_ssim].include?('Thesis/Dissertation')
+      end
+
+      def bookplate_fund_parameters?
+        @params[:f][:fund_facet].present?
       end
 
       def course_reserves_index_access_points
@@ -82,9 +87,8 @@ module SearchWorks
       end
 
       def browse_index_access_points
-        if @params[:start]
-          return :callnumber_browse
-        end
+        return unless @params[:start]
+        :callnumber_browse
       end
 
       def method_missing(method_name, *args, &block)

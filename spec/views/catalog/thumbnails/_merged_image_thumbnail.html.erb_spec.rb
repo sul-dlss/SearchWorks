@@ -26,7 +26,7 @@ describe 'catalog/thumbnails/_merged_image_thumbnail.html.erb' do
     end
     it 'uses the first file id to construct the thumbnail' do
       render
-      expect(rendered).to match(/src=".*\/1234_thumb"/)
+      expect(rendered).to match(%r{src=".*1234/full/!400,400/0/default.jpg"})
     end
   end
 end
