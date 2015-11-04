@@ -1,13 +1,22 @@
 require 'spec_helper'
 
 describe RequestLinkHelper do
-  describe '#request_link' do
-    let(:current_location_document) do
-      SolrDocument.new(
-        id: '1234',
-        item_display: ['barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+  let(:current_location_document) do
+    SolrDocument.new(
+      id: '1234',
+      item_display: ['barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+    )
+  end
+  describe 'link_to_request_link' do
+    it 'returns link html for the given parameters' do
+      link = link_to_request_link(
+        document: current_location_document, callnumber: current_location_document.holdings.callnumbers.first
       )
+      expect(link).to match(%r{^<a.*/requests/new\?item_id=1234.*</a>$})
     end
+  end
+
+  describe '#request_link' do
     it 'returns a url passing the appropriate parameters' do
       link = request_link(current_location_document, current_location_document.holdings.callnumbers.first)
       expect(link).to match(%r{^https://host.example.com})
