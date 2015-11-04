@@ -84,9 +84,20 @@
 .search_num_of_results {
   text-align: right;
 
-  h2 {
+  .results-heading {
     border-bottom: 1px solid $sul-h2-border-color;
     color: $sul-h2-font-color;
+    margin-bottom: .5em;
+
+    a {
+      border-bottom: 0;
+    }
+  }
+
+  h2 {
+    border-bottom: 0;
+    display: inline-block;
+    margin-bottom: 0;
   }
 
 }

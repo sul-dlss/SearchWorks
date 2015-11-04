@@ -16,7 +16,7 @@
   </div>
 
   <div id="content" class="col-md-8 col-sm-7">
-    
+
     <% if page_location.access_point? %>
       <% if page_location.access_point.collection? && get_collection.present? %>
         <% @page_title = t 'blacklight.search.masthead_title', title: "#{presenter(@parent).document_heading} Collection", application_name: application_name %>
@@ -37,11 +37,19 @@
 
     <div class="search_num_of_results">
       <% if @response.empty? %>
-        <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
-        <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
+        <div class='results-heading'>
+          <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
+          <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
+        </div>
       <% else %>
-        <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
-        <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
+        <div class='results-heading'>
+          <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+          <%= link_to new_documents_feed_path do %>
+            <i class="rss-icon" aria-hidden="true"></i>
+            <span class="sr-only">RSS feed for this result</span>
+          <% end %>
+          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
+        </div>
         <%= render 'search_header' %>
       <% end %>
     </div>

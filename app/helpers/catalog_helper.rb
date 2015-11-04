@@ -20,4 +20,10 @@ module CatalogHelper
     return false if location.reserve_location?
     library.location_level_request? || location.location_level_request?
   end
+
+  def new_documents_feed_path
+    catalog_index_path(
+      params.except(:controller, :action, :page).merge(format: 'atom', sort: 'new-to-libs')
+    )
+  end
 end

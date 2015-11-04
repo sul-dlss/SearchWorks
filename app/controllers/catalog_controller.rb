@@ -298,11 +298,12 @@ class CatalogController < ApplicationController
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
-    config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', :label => 'relevance'
-    config.add_sort_field 'pub_date_sort desc, title_sort asc', :label => 'year (new to old)'
-    config.add_sort_field 'pub_date_sort asc, title_sort asc', :label => 'year (old to new)'
-    config.add_sort_field 'author_sort asc, title_sort asc', :label => 'author'
-    config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title'
+    config.add_sort_field 'relevance', sort: 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
+    config.add_sort_field 'new-to-libs', sort: 'date_cataloged desc, title_sort asc', label: 'new to the Libraries'
+    config.add_sort_field 'year-desc', sort: 'pub_date_sort desc, title_sort asc', label: 'year (new to old)'
+    config.add_sort_field 'year-asc', sort: 'pub_date_sort asc, title_sort asc', label: 'year (old to new)'
+    config.add_sort_field 'author', sort: 'author_sort asc, title_sort asc', label: 'author'
+    config.add_sort_field 'title', sort: 'title_sort asc, pub_date_sort desc', label: 'title'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
