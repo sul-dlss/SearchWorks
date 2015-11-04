@@ -1,2 +1,3 @@
 HOSTNAME: "TEST-HOST"
 PURL_EMBED_PROVIDER: 'http://embed.stanford.edu/embed'
+GOVERNMENT_DOCUMENTS_ACCESS_POINT: true

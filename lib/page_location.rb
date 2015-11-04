@@ -43,6 +43,8 @@ module SearchWorks
           :dissertation_theses
         when bookplate_fund_parameters?
           :bookplate_fund
+        when government_documents_parameters?
+          :government_documents
         end
       end
 
@@ -63,19 +65,23 @@ module SearchWorks
       end
 
       def digital_collections_parameters?
-        @params[:f][:collection_type].present? && @params[:f][:collection_type].include?('Digital Collection')
+        (@params[:f][:collection_type] || []).include?('Digital Collection')
       end
 
       def sdr_parameters?
-        @params[:f][:building_facet].present? && @params[:f][:building_facet].include?('Stanford Digital Repository')
+        (@params[:f][:building_facet] || []).include?('Stanford Digital Repository')
       end
 
       def dissertation_theses_parameters?
-        @params[:f][:genre_ssim].present? && @params[:f][:genre_ssim].include?('Thesis/Dissertation')
+        (@params[:f][:genre_ssim] || []).include?('Thesis/Dissertation')
       end
 
       def bookplate_fund_parameters?
         @params[:f][:fund_facet].present?
+      end
+
+      def government_documents_parameters?
+        (@params[:f][:genre_ssim] || []).include?('Government document')
       end
 
       def course_reserves_index_access_points

@@ -29,6 +29,17 @@
         <p>Dissertations and theses in Stanford's collections.</p>
       </div>
     </li>
+
+    <% if Settings.GOVERNMENT_DOCUMENTS_ACCESS_POINT %>
+      <li class='media'>
+        <%= image_tag('govdocs.png', class: 'media-object pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
+        <div class='media-body'>
+          <%= link_to 'Government documents', govdocs_path, class: 'media-heading' %>
+          <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
+        </div>
+      </li>
+    <% end %>
+
     <li class="media">
       <%= image_tag('selected-databases.png', class: 'media-object pull-left', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
       <div class="media-body">
