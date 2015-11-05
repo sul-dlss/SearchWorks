@@ -40,13 +40,8 @@
               $zoomControls = $tpl.find('.zoom-controls'),
               range = map.ranges[0];
 
-          $rangeInfo.find('.library').html(map.library);
-          $rangeInfo.find('.floorname').html(map.floorname);
-          $rangeInfo.find('.shelving-range').html(range.label);
-
-          if (range.callnoDisplay !== "") {
-            $tpl.find('.range-info .callnumber-display').html('(' + range.callnoDisplay + ')');
-          }
+          $container.find('.library').html(map.library);
+          $container.find('.floorname').html(map.floorname);
 
           $tpl.find('.osd').attr('id', 'osd-' + index);
           $tpl.find('.text-directions').html(map.directions);

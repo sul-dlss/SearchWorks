@@ -924,6 +924,10 @@ module Constants
     'MUSIC-RESV' => 'MUSIC'
   }
 
+  STACKMAP_LIBS = %w(GREEN MEDIA-MTXT)
+
+  HIDE_STACKMAP_LOCS = %w(BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN)
+
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',
     'ART' => 'Art & Architecture Library (Bowes)',

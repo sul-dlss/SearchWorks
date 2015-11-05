@@ -4,13 +4,9 @@
 </div>
 
 <div class="stackmap col-md-12" data-behavior="stackmap" data-callnumber="<%= params[:callnumber] %>"  data-library="<%= params[:library] %>" data-location="<%= params[:location] %>" data-stackmap-url="<%= Settings.STACKMAP_API_URL %>">
-  Call number <span class="callnumber"></span> will be found in: <br/>
+  <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
 
   <div class="map-template">
-    <div class="range-info">
-      <span class="library"></span>, <span class="floorname"></span>,
-      Shelving range : <span class="shelving-range"></span> <span class="callnumber-display"></span>
-    </div>
     <div class="controls">
       <div class="zoom-controls col-md-7 col-xs-6">
         <%= link_to t('blacklight.tools.stackmap.zoom_in').html_safe, "", class: "zoom-in" %>
