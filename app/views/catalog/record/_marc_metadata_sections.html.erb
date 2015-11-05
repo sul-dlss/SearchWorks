@@ -74,8 +74,12 @@
     <div class="section-heading">
       <h2>Bookplate</h2>
     </div>
-    <div class="section-body row">
-      <%= render document.bookplates %>
+    <div class="section-body row container-fluid">
+      <% document.bookplates.each_slice(2).each do |bookplates| %>
+        <div class='row'>
+          <%= render bookplates %>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>
