@@ -81,7 +81,7 @@ module IndexLinks
           host = URI.parse(query['url'].first).host
         end
       end
-      host
+      host || link_field
     rescue URI::InvalidURIError
       link_field
     end
