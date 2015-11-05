@@ -114,7 +114,7 @@ class Holdings
 
     delegate :must_request?, to: :request_status
 
-    def has_stackmap?
+    def stackmapable?
       library == 'GREEN' && home_location !~ /GREEN-RESV|GRE-LOAN|SL3-LOAN|SLN-LOAN/i
     end
 
