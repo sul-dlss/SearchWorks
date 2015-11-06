@@ -93,7 +93,7 @@
             '<div class="modal-dialog">',
               '<div class="modal-content">',
                 '<div class="modal-body">',
-                  '<iframe width="100%" height="90%" frameborder="0" src="' + requestURLWithModalParam + '" />',
+                  '<iframe width="100%" height="90%" frameborder="0" scrolling="no" src="' + requestURLWithModalParam + '" />',
                   '<div class="form-group cancel-footer">',
                     '<button data-behavior="cancel-link" class="cancel-link btn btn-link">Cancel</button>',
                   '</div>',
