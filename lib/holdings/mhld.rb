@@ -48,7 +48,7 @@ class Holdings
     end
 
     def sanitize_mhld_data(data)
-      data.gsub('),', '), ').gsub('-', '-<wbr/>') if data.present?
+      CGI.escape_html(data).gsub('),', '), ').gsub('-', '-<wbr/>').html_safe if data.present?
     end
   end
 end

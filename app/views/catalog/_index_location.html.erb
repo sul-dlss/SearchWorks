@@ -18,7 +18,7 @@
                 <br/>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.public_note.present? %>
-                    <%= mhld.public_note.html_safe %>
+                    <%= mhld.public_note %>
                   <% end %>
                 <% end %>
               <% end %>
@@ -27,7 +27,7 @@
               <% if location.mhld.present? %>
                 <% location.mhld.each do |mhld| %>
                   <% if mhld.latest_received.present? %>
-                    <span class='note-highlight'>Latest: <%= mhld.latest_received%></span>
+                    <span class='note-highlight'>Latest: <%= mhld.latest_received %></span>
                   <% end %>
                 <% end %>
               <% end %>

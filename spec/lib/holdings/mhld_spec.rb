@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Holdings::MHLD do
   let(:mhld_display) { 'GREEN -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
-  let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note) -|- library-has-with-hyphens -|- ' }
+  let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note) -|- library-has-with-hyphens and <html> entities -|- ' }
   let(:zombie_mhld) { 'PHYSICS -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
 
   it 'should return the correct elements from the MHLD combined field' do
@@ -12,6 +12,12 @@ describe Holdings::MHLD do
     expect(mhld.public_note).to eq 'mhld public note'
     expect(mhld.library_has).to eq 'mhld library has'
     expect(mhld.latest_received).to eq 'mhld latest received'
+  end
+
+  it 'should escape HTML enteties in MHLD data' do
+    library_has = Holdings::MHLD.new(special_mhld).library_has
+    expect(library_has).not_to include('<html>')
+    expect(library_has).to include('&lt;html&gt;')
   end
 
   it "should replace '),(' with '), ('" do
