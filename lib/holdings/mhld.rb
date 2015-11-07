@@ -14,20 +14,20 @@ class Holdings
 
     def present?
       public_note.present? ||
-      library_has.present? ||
-      latest_received.present?
+        library_has.present? ||
+        latest_received.present?
     end
 
     def public_note
-      sanitize_mhld_data @mhld_display[2]
+      sanitize_mhld_data(@mhld_display[2])
     end
 
     def library_has
-      sanitize_mhld_data @mhld_display[3]
+      sanitize_mhld_data(@mhld_display[3])
     end
 
     def latest_received
-      sanitize_mhld_data @mhld_display[4]
+      sanitize_mhld_data(@mhld_display[4])
     end
 
     def as_json
@@ -40,15 +40,15 @@ class Holdings
     private
 
     def standard_or_zombie_library
-      if @mhld_display[0].blank? || ['SUL', 'PHYSICS'].include?(@mhld_display[0])
-        "ZOMBIE"
+      if @mhld_display[0].blank? || %w(SUL PHYSICS).include?(@mhld_display[0])
+        'ZOMBIE'
       else
         @mhld_display[0]
       end
     end
 
     def sanitize_mhld_data(data)
-      data.gsub("),","), ").gsub("-","-<wbr/>") if data.present?
+      data.gsub('),', '), ').gsub('-', '-<wbr/>') if data.present?
     end
   end
 end
