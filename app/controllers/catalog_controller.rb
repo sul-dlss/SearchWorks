@@ -381,7 +381,7 @@ class CatalogController < ApplicationController
   end
 
   def send_emails_to_all_recipients
-    email_params = { message: params[:message], subject: params[:subject] }
+    email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
     email_addresses.each do |email_address|
       email_params[:to] = email_address
       email = if params[:type] == 'full'
