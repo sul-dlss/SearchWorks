@@ -2,6 +2,20 @@ en:
   blacklight:
     course_reserves:
       page_title: "Browse course reserves in %{application_name}"
+    email:
+      form:
+        to: 'Email to:'
+        email_from:
+          label: 'Email from:'
+          placeholder: '(optional)'
+      errors:
+        email_address: 'You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields.'
+        type: 'Invalid email type provided'
+        message:
+          spam: 'Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments.'
+        to:
+          invalid: 'You must enter only valid email addresses.'
+          too_many: 'You have entered more than the maximum (%{max}) email addresses allowed.'
     search:
       page_heading: "Search results"
       bookmarks:
