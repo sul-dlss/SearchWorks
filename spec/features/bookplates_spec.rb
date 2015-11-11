@@ -64,5 +64,16 @@ describe 'Bookplates' do
 
       expect(page).to have_css('h2', text: '1 result')
     end
+
+    it 'returns a gallery view search result sorted by "new to the Libraries"' do
+      visit catalog_path('45')
+
+      click_link 'Susan and Ruth Sharp Fund'
+
+      expect(page).to have_css('#documents.gallery')
+      expect(current_url).to include 'view=gallery'
+
+      expect(current_url).to include 'sort=new-to-libs'
+    end
   end
 end

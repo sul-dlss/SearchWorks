@@ -48,4 +48,23 @@ describe CatalogHelper do
       expect(helper.new_documents_feed_path).not_to match(/page=/)
     end
   end
+
+  describe 'link_to_bookplate_search' do
+    let(:bookplate) { Bookplate.new('FUND-CODE -|- druid-abc -|- fild-id-123 -|- Bookplate Text') }
+    it 'links to the bookplate' do
+      expect(link_to_bookplate_search(bookplate)).to include 'f%5Bfund_facet%5D%5B%5D=druid-abc'
+    end
+
+    it 'includes the gallery view parameter' do
+      expect(link_to_bookplate_search(bookplate)).to include 'view=gallery'
+    end
+
+    it 'includes the new to the libraries sort parameter' do
+      expect(link_to_bookplate_search(bookplate)).to include 'sort=new-to-libs'
+    end
+
+    it 'includes any link options passed in' do
+      expect(link_to_bookplate_search(bookplate, class: 'some-class')).to include 'class="some-class"'
+    end
+  end
 end
