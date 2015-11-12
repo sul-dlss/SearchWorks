@@ -368,6 +368,9 @@ module MarcMetadataFixtures
           <subfield code="a">Copy 1 bound with v. 140</subfield>
           <subfield code="c">55523 (parent record’s ckey)</subfield>
         </datafield>
+        <datafield tag="590" ind1=" " ind2=" ">
+          <subfield code="a">A 590 that does not have $c</subfield>
+        </datafield>
       </record>
     xml
   end
