@@ -1,15 +1,22 @@
 .breadcrumb {
   background: none;
-  border: none;
+  border: 0;
   margin-bottom: 0;
   padding: 0;
 
   .constraints-container {
     background: none;
-    border: none;
+    border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
     margin-bottom: 0;
     padding: 15px 0;
-    -webkit-box-shadow: none;
+  }
+
+  .constraint-value {
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    -webkit-user-select: initial;
+    user-select: initial;
   }
 }
