@@ -1,3 +1,4 @@
+<%= "Email from: #{@email_from}" if @email_from.present? %>
 Message: <%= @message.html_safe unless @message.nil? %>
 ______________________________________________________________
 <% @documents.each do |document| %>

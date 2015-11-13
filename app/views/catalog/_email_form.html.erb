@@ -17,7 +17,17 @@
         <%= t('blacklight.email.form.to') %>
       </label>
       <div class="col-sm-10">
-        <%= email_field_tag :to, params[:to], class: 'form-control' %>
+        <%= email_field_tag :to, params[:to], multiple: true, class: 'form-control' %>
+        <span class='help-block'>Separate multiple addresses with a comma.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email_from">
+        <%= t('blacklight.email.form.email_from.label') %>
+      </label>
+      <div class="col-sm-10">
+        <%= text_field_tag :email_from, params[:email_from], placeholder: t('blacklight.email.form.email_from.placeholder'), class: 'form-control' %>
       </div>
     </div>
 

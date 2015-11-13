@@ -50,24 +50,65 @@ describe CatalogController do
       expect(email).to receive(:deliver)
       post :email, to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1'
     end
+
+    it 'should be able to send emails to multiple addresses' do
+      expect do
+        post :email, to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1'
+      end.to change { ActionMailer::Base.deliveries.count }.by(3)
+    end
+
     describe 'validations' do
       it 'should not send emails when the email_address field has been filled out' do
-        expect{post :email, email_address: 'something', to: 'email@example.com'}.to_not change{
-          ActionMailer::Base.deliveries.count
-        }
-        expect(flash[:error]).to eq 'You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields.'
+        expect do
+          post :email, email_address: 'something', to: 'email@example.com', type: 'full'
+        end.to_not change { ActionMailer::Base.deliveries.count }
+
+        expect(flash[:error]).to include('You have filled in a field that makes you appear as a spammer.')
+        expect(flash[:error]).to include('Please follow the directions for the individual form fields.')
       end
+
       it 'should not allow messages that have links in them' do
-        expect{post :email, to: 'email@example.com', message: "http://library.stanford.edu"}.to_not change{
-          ActionMailer::Base.deliveries.count
-        }
-        expect(flash[:error]).to eq 'Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments.'
+        expect do
+          post :email, to: 'email@example.com', message: 'http://library.stanford.edu', type: 'full'
+        end.to_not change { ActionMailer::Base.deliveries.count }
+        expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
+        expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
       end
+
       it 'should prevent incorrect email types from being sent' do
-        expect{post :email, to: 'email@example.com', type: "not-a-type"}.to_not change{
-          ActionMailer::Base.deliveries.count
-        }
+        expect do
+          post :email, to: 'email@example.com', type: 'not-a-type'
+        end.to_not change { ActionMailer::Base.deliveries.count }
         expect(flash[:error]).to eq 'Invalid email type provided'
+      end
+
+      it 'should validate multiple emails correctly' do
+        expect do
+          post(
+            :email,
+            to: 'email1@example.com, example.com',
+            type: 'full'
+          )
+        end.to_not change { ActionMailer::Base.deliveries.count }
+
+        expect(flash[:error]).to eq 'You must enter only valid email addresses.'
+      end
+
+      it 'should prevent emails with too many addresses from being sent' do
+        expect do
+          post(
+            :email,
+            to: 'email1@example.com,
+                 email2@example.com,
+                 email3@example.com,
+                 email4@example.com,
+                 email5@example.com,
+                 email6@example.com',
+            type: 'full'
+          )
+        end.to_not change { ActionMailer::Base.deliveries.count }
+
+        expect(flash[:error]).to eq 'You have entered more than the maximum (5) email addresses allowed.'
       end
     end
   end

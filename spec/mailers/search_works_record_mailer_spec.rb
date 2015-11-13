@@ -21,13 +21,30 @@ describe SearchWorksRecordMailer do
       )
     ]
   }
-  let(:params) { {to: 'email@example.com', message: 'The message', subject: 'The subject'} }
+  let(:params) do
+    { to: 'email@example.com', message: 'The message', subject: 'The subject', email_from: 'Jane Stanford' }
+  end
   let(:url_params) { {host: 'example.com'} }
   describe 'email_record' do
     let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
     it 'should send a plain-text email' do
       expect(mail.content_type).to match /text\/plain/
     end
+
+    it 'has the subject that was passed in via method params' do
+      expect(mail.subject).to eq 'The subject'
+    end
+
+    it 'has the subject that from the document when none was passed in' do
+      params[:subject] = nil
+      mail = SearchWorksRecordMailer.email_record([documents.first], params, url_params)
+      expect(mail.subject).to eq 'Item Record: Title1'
+    end
+
+    it 'includes the Email From text when present' do
+      expect(mail.body).to include 'Email from: Jane Stanford'
+    end
+
     it 'should include the provided message' do
       expect(mail.body).to include "Message: The message"
     end
@@ -57,10 +74,17 @@ describe SearchWorksRecordMailer do
     it 'should send a html email' do
       expect(mail.content_type).to match /text\/html/
     end
+
     it 'should include full HTML markup' do
       expect(mail.body).to have_css('html')
       expect(mail.body).to have_css('body')
     end
+
+    it 'includes the Email From text when present' do
+      expect(mail.body).to have_css('dt', text: 'Email from')
+      expect(mail.body).to have_css('dd', text: 'Jane Stanford')
+    end
+
     it 'should include the titles of all documents as links' do
       expect(mail.body).to have_css('h1 a', text: 'Title1')
       expect(mail.body).to have_css('h1 a', text: 'Title2')

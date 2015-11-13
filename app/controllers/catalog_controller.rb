@@ -331,16 +331,8 @@ class CatalogController < ApplicationController
   def email
     @response, @documents = get_solr_response_for_document_ids(params[:id])
 
-    if request.post? and validate_email_params
-      email_params = {to: params[:to], message: params[:message], subject: params[:subject]}
-      email = if params[:type] == "full"
-        SearchWorksRecordMailer.full_email_record(@documents, email_params, url_options)
-      else
-        SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
-      end
-      email.deliver
-
-      flash[:success] = I18n.t("blacklight.email.success")
+    if request.post? && validate_email_params
+      send_emails_to_all_recipients
 
       respond_to do |format|
         format.html { redirect_to catalog_path(params['id']) }
@@ -350,7 +342,7 @@ class CatalogController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.js { render :layout => false }
+      format.js { render layout: false }
     end
   end
 
@@ -388,17 +380,53 @@ class CatalogController < ApplicationController
     }
   end
 
+  def send_emails_to_all_recipients
+    email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
+    email_addresses.each do |email_address|
+      email_params[:to] = email_address
+      email = if params[:type] == 'full'
+                SearchWorksRecordMailer.full_email_record(@documents, email_params, url_options)
+              else
+                SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
+              end
+      email.deliver
+    end
+
+    flash[:success] = I18n.t('blacklight.email.success')
+  end
+
   def validate_email_params
-    unless ['full', 'brief'].include?(params[:type])
-      flash[:error] = "Invalid email type provided"
+    case
+    when !%w(full brief).include?(params[:type])
+      flash[:error] = I18n.t('blacklight.email.errors.type')
+    when params[:email_address].present?
+      flash[:error] = I18n.t('blacklight.email.errors.email_address')
+    when params[:message] =~ %r{href|url=|https?://}i
+      flash[:error] = I18n.t('blacklight.email.errors.message.spam')
+    when params[:to].blank?
+      flash[:error] = I18n.t('blacklight.email.errors.to.blank')
+    when too_many_email_addresses?
+      flash[:error] = I18n.t('blacklight.email.errors.to.too_many', max: Settings.EMAIL_THRESHOLD)
+    when !valid_email_addresses?
+      flash[:error] = I18n.t('blacklight.email.errors.to.invalid', to: params[:to])
     end
-    if params[:email_address].present?
-      flash[:error] = "You have filled in a field that makes you appear as a spammer.  Please follow the directions for the individual form fields."
+
+    flash[:error].blank?
+  end
+
+  def valid_email_addresses?
+    email_regexp = defined?(Devise) ? Devise.email_regexp : /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+    email_addresses.all? do |email|
+      email.match(email_regexp)
     end
-    if params[:message] =~ /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
-      flash[:error] = "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
-    end
-    super
+  end
+
+  def too_many_email_addresses?
+    email_addresses.length > Settings.EMAIL_THRESHOLD.to_i
+  end
+
+  def email_addresses
+    params[:to].split(/,|\s+/).reject(&:blank?)
   end
 
   def modifiable_params_keys

@@ -5,15 +5,21 @@
     </style>
   </head>
   <body>
-    <% if @message.present? %>
+    <% if @message.present? || @email_from.present? %>
       <dl>
-        <dt>Message</dt>
-        <%= @message %>
+        <% if @email_from.present? %>
+          <dt>Email from</dt>
+          <dd><%= @email_from %></dd>
+        <% end %>
+        <% if @message.present? %>
+          <dt>Message</dt>
+          <dd><%= @message %></dd>
+        <% end %>
       </dl>
     <% end %>
     <% @documents.each do |document| %>
       <h1><a href="<%= polymorphic_path(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:title_display] %></a></h1>
-      <% if document.respond_to?(:to_marc) %>      
+      <% if document.respond_to?(:to_marc) %>
         <%= render(partial: 'catalog/record/marc_upper_metadata_items', locals: {document: document, blacklight_config: @blacklight_config}) %>
         <%= render(partial: 'catalog/record/marc_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>
       <% elsif document.mods.present? %>
