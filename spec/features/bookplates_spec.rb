@@ -5,7 +5,7 @@ describe 'Bookplates' do
     it 'displays bookplate data when present' do
       visit catalog_path('45')
 
-      expect(page).to have_css('h2', text: 'Bookplate')
+      expect(page).to have_css('h2', text: 'Acquired with support from')
       expect(page).to have_css('.bookplate', count: 2)
 
       within(first('.bookplate')) do
@@ -22,7 +22,7 @@ describe 'Bookplates' do
     it 'does not include the section when there is no bookplate data' do
       visit catalog_path('44')
 
-      expect(page).not_to have_css('h2', text: 'Bookplate')
+      expect(page).not_to have_css('h2', text: 'Acquired with support from')
       expect(page).not_to have_css('.bookplate')
     end
   end
@@ -41,7 +41,7 @@ describe 'Bookplates' do
       end
 
       within('.constraint') do
-        expect(page).to have_css('.filterName', text: 'Bookplate')
+        expect(page).to have_css('.filterName', text: 'Acquired with support from')
         expect(page).to have_css('.filterValue', text: 'Susan and Ruth Sharp Fund')
       end
 
@@ -58,7 +58,7 @@ describe 'Bookplates' do
       end
 
       within('.constraint') do
-        expect(page).to have_css('.filterName', text: 'Bookplate')
+        expect(page).to have_css('.filterName', text: 'Acquired with support from')
         expect(page).to have_css('.filterValue', text: 'The Edgar Amos Boyles Centennial Book Fund')
       end
 
