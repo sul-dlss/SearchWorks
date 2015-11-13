@@ -51,13 +51,13 @@
                   <% if location.mhld.present? %>
                     <% location.mhld.each do |mhld| %>
                       <% if mhld.public_note.present? %>
-                        <li class='mhld'><%= mhld.public_note.html_safe %></li>
+                        <li class='mhld'><%= mhld.public_note %></li>
                       <% end %>
                       <% if mhld.latest_received.present? %>
-                        <li class='mhld note-highlight'>Latest: <%= mhld.latest_received.html_safe %></li>
+                        <li class='mhld note-highlight'>Latest: <%= mhld.latest_received %></li>
                       <% end %>
                       <% if mhld.library_has.present? %>
-                        <li class='mhld'>Library has: <%= mhld.library_has.html_safe %></li>
+                        <li class='mhld'>Library has: <%= mhld.library_has %></li>
                       <% end %>
                     <% end %>
                   <% end %>
