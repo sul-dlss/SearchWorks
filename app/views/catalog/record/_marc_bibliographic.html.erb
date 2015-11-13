@@ -432,10 +432,9 @@
   <%= render_field_from_marc(related_work_799) %>
 <%- end -%>
 
-<%- isbn = get_data_with_label(document, "ISBN", 'isbn_display') -%>
-<%- unless isbn.nil? -%>
-  <%= render "catalog/field_from_index", :fields => isbn %>
-<%- end -%>
+<% if (isbn = get_data_with_label_from_marc(document.to_marc, 'ISBN', '020')).present? %>
+  <%= render_field_from_marc(isbn) %>
+<% end %>
 
 <%- issn = get_data_with_label(document, "ISSN", 'issn_display') -%>
 <%- unless issn.nil? -%>
