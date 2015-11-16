@@ -1,18 +1,17 @@
-$bookplate-top-margin: 10px;
-
 .bookplate {
   .media {
     @include masthead-panel;
 
-    margin-top: $bookplate-top-margin;
+    margin-top: $sul-bookplate-top-margin;
     padding: 5px;
 
     &:first-child {
-      margin-top: $bookplate-top-margin;
+      margin-top: $sul-bookplate-top-margin;
     }
   }
 
   img {
+    border: 1px solid $sul-bookplate-image-border;
     max-height: 150px;
     max-width: 150px;
   }
@@ -20,6 +19,7 @@ $bookplate-top-margin: 10px;
 
 .bookplate-fund-masthead {
   img {
+    border: 1px solid $sul-bookplate-image-border;
     margin: 5px 0;
     max-width: 200px;
     width: 100%;
