@@ -28,7 +28,10 @@ describe 'Bookplates' do
   end
 
   describe 'search results' do
-    let(:masthead_text) { 'Bookplates honor donors who have created and sustained acquisition funds' }
+    let(:masthead_text) do
+      'The library resources listed below were acquired with the generous support of this endowed book fund.'
+    end
+
     it 'displays a masthead with the bookplate data for each individual fund (with correct breadcrumb)' do
       visit catalog_path('45')
 
