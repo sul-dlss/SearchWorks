@@ -114,8 +114,8 @@ class Holdings
 
     delegate :must_request?, to: :request_status
 
-    def has_stackmap?
-      library == 'GREEN' && home_location !~ /GREEN-RESV|GRE-LOAN|SL3-LOAN|SLN-LOAN/i
+    def stackmapable?
+      stackmapable_library? && stackmapable_location?
     end
 
     def live_status?
@@ -136,6 +136,14 @@ class Holdings
 
     def internet_resource?
       home_location == 'INTERNET'
+    end
+
+    def stackmapable_library?
+      Constants::STACKMAP_LIBS.include?(library)
+    end
+
+    def stackmapable_location?
+      !Constants::HIDE_STACKMAP_LOCS.include?(home_location)
     end
 
     def standard_or_zombie_library

@@ -5,12 +5,15 @@
     font-weight: bold;
   }
 
+  .library,
+  .floorname,
+  .shelving-range,
+  .callnumber-display {
+    font-weight: bold;
+  }
+
   .map-template {
     padding: 5px 0;
-
-    .library, .floorname, .shelving-range, .callnumber-display {
-      font-weight: bold;
-    }
 
     .controls {
       clear: both;

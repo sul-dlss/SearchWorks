@@ -148,19 +148,21 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to_not be_must_request
     end
   end
-  describe 'has stackmap' do
+
+  describe 'stackmapable?' do
     it 'should return true when a library has stackmap feature enabled' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-').has_stackmap?).to be_true
+      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')).to be_stackmapable
     end
 
     it 'should return false when a location does not match given criteria' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- GREEN-RESV -|-').has_stackmap?).to be_false
+      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- GREEN-RESV -|-')).not_to be_stackmapable
     end
 
     it 'should return false when a library does not have stackmap feature enabled' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- ART-RESV -|-').has_stackmap?).to be_false
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- ART-RESV -|-')).not_to be_stackmapable
     end
   end
+
   describe 'zombie libraries' do
     let(:blank) { Holdings::Callnumber.new('123 -|- -|- LOCATION -|- ') }
     let(:sul) { Holdings::Callnumber.new('123 -|- SUL -|- LOCATION -|- ') }
