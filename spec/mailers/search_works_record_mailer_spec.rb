@@ -116,5 +116,19 @@ describe SearchWorksRecordMailer do
     it 'should separate records w/ a horizontal rule' do
       expect(mail.body).to have_css('hr', count: documents.length)
     end
+
+    context 'when there is bookplate data' do
+      let(:bookplate_document) do
+        SolrDocument.new(
+          marcxml: metadata1,
+          bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
+        )
+      end
+      let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
+      it 'renders the bookplate data successfully' do
+        expect(mail.body).to have_css('h2', text: 'Acquired with support from')
+        expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)
+      end
+    end
   end
 end
