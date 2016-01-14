@@ -1,0 +1,29 @@
+<div class='grouped-citations'>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#all" aria-controls="all" role="tab" data-toggle="tab">By title</a>
+    </li>
+    <li role="presentation">
+      <a href="#biblio" aria-controls="biblio" role="tab" data-toggle="tab">By citation format</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="all">
+      <% @documents.each do |document| %>
+        <%= render partial: 'catalog/single_citation', locals: { document: document } %>
+      <% end %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="biblio">
+      <% grouped_citations(@documents).each do |format, citations| %>
+        <% unless format == 'NULL' %>
+          <h4><%= format %></h4>
+
+          <% citations.each do |citation| %>
+            <%= citation %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

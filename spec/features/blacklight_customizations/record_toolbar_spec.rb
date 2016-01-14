@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature "Record Toolbar" do
   before do
+    stub_oclc_response('', for: '12345')
     visit root_path
   end
 

@@ -34,4 +34,8 @@ module CatalogHelper
       link_opts
     )
   end
+
+  def grouped_citations(documents)
+    Citation.grouped_citations(documents.map(&:citations))
+  end
 end

@@ -22,6 +22,7 @@ class SolrDocument
   include SolrHoldings
   include MarcInstrumentation
   include SolrBookplates
+  include Citable
 
   include Blacklight::Solr::Document
 
