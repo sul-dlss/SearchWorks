@@ -23,3 +23,8 @@ BOOKPLATES: false
 BOOKPLATES_EXHIBIT_URL: 'https://exhibits.stanford.edu/digital-bookplates'
 GOVERNMENT_DOCUMENTS_ACCESS_POINT: false
 EMAIL_THRESHOLD: 5
+OCLC:
+  API_KEY: the-oclc-api-key
+  BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
+  CITATION_FORMATS: ['all']
+  DOCUMENT_FIELD: 'oclc'

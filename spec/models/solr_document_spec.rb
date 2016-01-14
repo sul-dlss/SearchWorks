@@ -91,4 +91,10 @@ describe SolrDocument do
       expect(subject).to be_kind_of SolrBookplates
     end
   end
+
+  describe 'CitationConcern' do
+    it 'is included' do
+      expect(subject).to be_kind_of Citable
+    end
+  end
 end
