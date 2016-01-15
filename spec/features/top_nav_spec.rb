@@ -22,8 +22,9 @@ feature "Top Navigation" do
         expect(page).to have_css("ul.dropdown-menu li a", text:"Connect from off campus", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Hours & locations", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Interlibrary borrowing", visible:true)
-        expect(page).to have_css("ul.dropdown-menu li a", text:"Print, copy, scan", visible:true)
+        expect(page).to have_css("ul.dropdown-menu li a", text:"Course guides", visible:true)
         expect(page).to have_css("ul.dropdown-menu li a", text:"Topic guides", visible:true)
+        expect(page).to have_css("ul.dropdown-menu li a", text:"Suggest a purchase", visible:true)
       end
     end
   end
