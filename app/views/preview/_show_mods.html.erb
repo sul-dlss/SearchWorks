@@ -4,10 +4,5 @@
   <div class="document-thumbnail">
     <img class="stacks-image" src="<%= document.image_urls(:large).first %>">
   </div>
-<% else %>
-  <div class="document-thumbnail">
-    <%= render_cover_image(document) %>
-  </div>
 <% end %>
-
-<%= render partial: "catalog/index_marc", locals: { document: document } %>
+<%= render partial: "catalog/index_mods", locals: { document: document } %>

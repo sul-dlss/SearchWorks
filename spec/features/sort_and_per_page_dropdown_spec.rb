@@ -11,24 +11,18 @@ describe 'Sort and per page toolbar', js: true, feature: true do
     it 'should display active icon on the current active view' do
       within '#sortAndPerPage' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
-        within 'a', text: 'normal' do
-          expect(page).to have_css('i.active-icon')
-        end
-        page.find('a span.view-type-label', text: 'gallery').click
+
+        expect(page).to have_css('a.view-type-list i.active-icon')
       end
 
-      wait_for_ajax
+      visit catalog_index_path(q: '', view: 'gallery', search_field: 'search')
 
       within '#sortAndPerPage' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
 
-        within 'a', text: 'normal' do
-          expect(page).to_not have_css('i.active-icon')
-        end
+        expect(page).not_to have_css('a.view-type-list i.active-icon')
 
-        within 'a', text: 'gallery' do
-          expect(page).to have_css('i.active-icon')
-        end
+        expect(page).to have_css('a.view-type-gallery i.active-icon')
       end
     end
   end

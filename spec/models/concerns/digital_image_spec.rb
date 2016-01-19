@@ -1,25 +1,44 @@
 require 'spec_helper'
 
 describe 'Image object' do
-  let(:image_document) do
+  let(:display_type) { nil }
+  subject do
     SolrDocument.new(
       id: 4488,
       druid: 4488,
-      display_type: ['image'],
-      img_info: ['abc123defg']
+      display_type: display_type,
+      file_id: ['abc123defg.jp2']
     )
   end
 
-  it 'should validate digital image object' do
-    expect(image_document.has_image_behavior?).to be_truthy
-  end
+  describe '#image_urls' do
+    context 'for images' do
+      let(:display_type) { ['image'] }
 
-  it 'should return stacks image urls' do
-    expect(image_document.image_urls.length).to eq 1
-    expect(image_document.image_urls.first).to include('/iiif/4488%2Fabc123defg')
-  end
+      it 'is present' do
+        expect(subject.image_urls).to be_present
+      end
 
-  it 'should return false if there is no display_type' do
-    expect(SolrDocument.new.has_image_behavior?).to be_falsey
+      it 'constructs the appropriate Stacks url' do
+        expect(subject.image_urls.length).to eq 1
+        expect(subject.image_urls.first).to match(%r{/image/iiif/4488%2Fabc123defg/})
+      end
+    end
+
+    context 'for books' do
+      let(:display_type) { ['book'] }
+
+      it 'returns the image urls' do
+        expect(subject.image_urls).to be_present
+      end
+    end
+
+    context 'for other display types' do
+      let(:display_type) { ['file'] }
+
+      it 'returns nil' do
+        expect(subject.image_urls).to be_nil
+      end
+    end
   end
 end

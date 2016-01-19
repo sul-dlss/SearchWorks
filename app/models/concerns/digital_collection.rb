@@ -3,37 +3,63 @@ module DigitalCollection
     self[:collection_type] and self[:collection_type].include?('Digital Collection')
   end
 
-  def collection_members(options={})
+  def collection_members(options = {})
     return nil unless is_a_collection?
     @collection_members ||= CollectionMembers.new(self, options)
   end
 
-  private
-
+  ###
+  # Simple Plain Ruby Object to return an array of collection members
   class CollectionMembers
-    delegate :present?, :each, :first, :last, :map, :length, to: :documents
-    def initialize(document, options={})
-      @options = options
+    delegate :[], :present?, :each, :first, :last, :map, :length, to: :documents
+    def initialize(document, options = {})
       @document = document
+      @options = options
     end
 
     def total
       response['numFound']
     end
+
     def documents
-      response['docs'].map do |document|
+      @documents ||= response['docs'].map do |document|
         ::SolrDocument.new(document)
       end
     end
+
+    def render_type
+      @render_type ||= begin
+        return 'list' unless should_display_filmstrip?
+        'filmstrip'
+      end
+    end
+
     private
+
+    attr_reader :document, :options
+
     def response
       @response ||= Blacklight.solr.select(
         params: {
           fq: "collection:\"#{@document[:id]}\"",
-          rows: (@options[:rows] || 20)
+          rows: 20
         }
       )['response']
     end
-  end
 
+    def should_display_filmstrip?
+      return unless number_of_documents_with_image_urls > 0
+      number_of_documents_with_image_urls >= number_of_documents_without_image_urls
+    end
+
+    def number_of_documents_with_image_urls
+      documents.count(&:image_urls)
+    end
+
+    def number_of_documents_without_image_urls
+      documents.count do |doc|
+        doc.image_urls.blank?
+      end
+    end
+  end
 end

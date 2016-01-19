@@ -71,7 +71,7 @@ class SolrDocument
   end
 
   def file_ids
-    self[:img_info] || self[:file_id]
+    self[:img_info] || self[:file_id] || []
   end
 
 end

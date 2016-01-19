@@ -11,9 +11,19 @@
       </dd>
     <% end %>
   <% end %>
+
   <% if document.extent.present? %>
     <dt><%= document.extent_label %></dt>
     <dd><%= document.extent %></dd>
+  <% end %>
+
+  <% if document.index_parent_collections.present? %>
+    <dt>Collection</dt>
+    <dd>
+      <% document.index_parent_collections.each do |collection| %>
+        <%= link_to(presenter(collection).document_heading, catalog_path(collection))%>
+      <% end %>
+    </dd>
   <% end %>
 
   <% if document.index_links.finding_aid.present? %>

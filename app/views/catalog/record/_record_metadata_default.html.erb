@@ -1,7 +1,18 @@
-<%= render_cover_image(@document) %>
+<% document ||= @document %>
 
 <div class="record-metadata row">
   <div class="record-panels col-md-4">
     <%= render "catalog/record/metadata_panels" %>
   </div>
+  <div class="record-sections col-md-8">
+    <% if document.respond_to?(:to_marc) %>
+      <%= render "catalog/record/marc_metadata_sections" %>
+    <% elsif document.respond_to?(:mods) %>
+      <%= render 'catalog/record/mods_metadata_sections' %>
+    <% end %>
+  </div>
 </div>
+
+<% if document.holdings.present? && document.holdings.browsable_callnumbers.present? %>
+  <%= render 'catalog/record/callnumber_browse' %>
+<% end %>

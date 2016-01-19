@@ -10,7 +10,6 @@ describe "catalog/_file_collection_members.html.erb" do
     allow(collection_members).to receive(:total).and_return('10')
     assign(:document, document)
     allow(view).to receive(:presenter).and_return(OpenStruct.new(document_heading: "File Item"))
-    expect(document).to receive(:collection_members).with(rows: 3).and_return(collection_members)
     expect(document).to receive(:collection_members).at_least(1).times.and_return(collection_members)
     render
   end

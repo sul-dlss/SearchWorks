@@ -5,9 +5,9 @@
       <%= text_for_inner_members_link(document) %>
     </span>
   </a>
-<% if document.collection_members(rows: 3).present? %>
+<% if document.collection_members.present? %>
   <div class="file-collection-members">
-    <% document.collection_members.each do |collection_member| %>
+    <% document.collection_members[0...3].each do |collection_member| %>
       <div class="row file-item">
         <div class="col-xs-2 file-icon">
           <%= render_resource_icon collection_member[collection_member.format_key] %>

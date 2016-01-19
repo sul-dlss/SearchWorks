@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "preview/_show_image.html.erb" do
+describe "preview/_show_mods.html.erb" do
   include ModsFixtures
   let(:presenter) { OpenStruct.new(document_heading: "Object Title") }
   let(:document) { SolrDocument.new(
