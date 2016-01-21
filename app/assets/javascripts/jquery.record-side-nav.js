@@ -14,7 +14,6 @@
       function init() {
         calculateAndAttachScrollEvents();
         positionSideNav();
-        attachHoverEvents();
         toggleSideNav();
       }
 
@@ -54,18 +53,6 @@
         hasScrollBar ? $recordSideNav.show() : $recordSideNav.hide();
       }
 
-      function attachHoverEvents() {
-        if (!is_touch_device()) {
-          $recordSideNav.hover(function() {
-            $(this).find('li .nav-label').toggle();
-          });
-
-          $recordSideNav.find('li button')
-            .focus(function() { $recordSideNav.find('li .nav-label').show(); })
-            .blur(function() { $recordSideNav.find('li .nav-label').hide(); });
-        }
-      }
-
       $(window).resize(function() {
         init();
       });
@@ -73,7 +60,7 @@
       init();
     });
 
-  }
+  };
 
   function is_touch_device() {
     return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));

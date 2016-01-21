@@ -7,23 +7,41 @@
   top: 50%;
   z-index: 1040;
 
+  &:hover,
+  &:focus {
+      li {
+          button {
+              .nav-label {
+                  display: inline-block;
+              }
+              
+          }  
+      }
+  }
+
   li {
     border-right: 1px solid $sul-record-side-nav-border-color;
     border-left: 1px solid $sul-record-side-nav-border-color;
     border-bottom: 1px solid $sul-record-side-nav-border-color;
+    white-space: nowrap;
 
     button {
       background-color: $sul-record-side-nav-background-color;
       border: none;
       height: 35px;
-      overflow: auto;
       padding: 0;
       text-align: right;
       width: 100%;
+      white-space: nowrap;
 
       .nav-label {
-        padding: 0 0 0 10px;
-        display: none;
+          padding-left: 10px;
+          display:none;
+      }
+
+      &:focus,
+      &:hover {
+          background-color: $sul-record-side-nav-active-btn-bg;
       }
 
       i.fa, .sul-icon {
