@@ -95,6 +95,14 @@ describe RecordHelper do
           ]
         )
       }
+      let(:author_creator_bad_label) {
+        OpenStruct.new(
+          label: "Author/creator:",
+          values: [
+            OpenStruct.new(name: "Jane Lathrop")
+          ]
+        )
+      }
       let(:primary_contributor) {
         OpenStruct.new(
           label: "Contributor",
@@ -105,6 +113,9 @@ describe RecordHelper do
       }
       it "should identify primary authors by label" do
         expect(mods_primary_names([author_creator])).to be_present
+      end
+      it "should be lenient to capitalization and punctuation when identifying primary authors by label" do
+        expect(mods_primary_names([author_creator_bad_label])).to be_present
       end
       it "should identify primary authors by role" do
         expect(mods_primary_names([primary_contributor])).to be_present
