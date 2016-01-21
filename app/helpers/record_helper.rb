@@ -53,7 +53,7 @@ module RecordHelper
 
   def mods_primary_names(names)
     names.map do |name|
-      if name.label == "Author/Creator"
+      if author_creator_label?(name.label)
         name
       elsif names_include_primary?(name)
         OpenStruct.new(label: name.label, values: name.values.select{|n| roles_include_primary?(n) })
@@ -63,7 +63,7 @@ module RecordHelper
 
   def mods_secondary_names(names)
     names.map do |name|
-      if name.label != "Author/Creator" && !names_include_primary?(name)
+      if !author_creator_label?(name.label) && names_include_secondary?(name)
         OpenStruct.new(label: name.label, values: name.values.reject{|n| roles_include_primary?(n) })
       end
     end.compact
@@ -145,15 +145,27 @@ module RecordHelper
     end
     val
   end
+
   private
+
+  def author_creator_label?(label)
+    label =~ %r{author/creator:?}i
+  end
+
   def names_include_primary?(names)
     names.values.any? do |name|
       roles_include_primary?(name)
     end
   end
-  def roles_include_primary?(name)
-    if name.roles.present?
-      name.roles.include?('Author') || name.roles.include?('Creator')
+
+  def names_include_secondary?(names)
+    names.values.any? do |name|
+      !roles_include_primary?(name)
     end
+  end
+
+  def roles_include_primary?(name)
+    return unless name.roles.present?
+    name.roles.include?('Author') || name.roles.include?('Creator')
   end
 end
