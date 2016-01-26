@@ -45,34 +45,17 @@ module ResultsDocumentHelper
     date = "[#{date}]" unless date.empty?
   end
 
+  def get_book_ids(document)
+    isbn = add_prefix_to_elements(Array(document['isbn_display']), 'ISBN')
+    oclc = add_prefix_to_elements(Array(document['oclc']), 'OCLC')
+    lccn = add_prefix_to_elements(Array(document['lccn']), 'LCCN')
 
-  def get_book_ids document
-    isbn = add_prefix_to_elements( convert_to_array(document['isbn_display']), 'ISBN' )
-    oclc = add_prefix_to_elements( convert_to_array(document['oclc']), 'OCLC' )
-    lccn = add_prefix_to_elements( convert_to_array(document['lccn']), 'LCCN' )
-
-    return { 'isbn' => isbn, 'oclc' => oclc, 'lccn' => lccn }
+    { 'isbn' => isbn, 'oclc' => oclc, 'lccn' => lccn }
   end
 
-
-  def add_prefix_to_elements arr, prefix
-    new_array = []
-
-    arr.each do |i|
-      new_array.push("#{prefix}#{i}")
+  def add_prefix_to_elements(arr, prefix)
+    arr.map do |i|
+      "#{prefix}#{i.to_s.gsub(/\W/, '')}"
     end
-
-    new_array
   end
-
-
-  def convert_to_array value = []
-    arr = []
-
-    arr = value if value.kind_of?(Array)
-    arr.push(value) if value.kind_of?(String)
-
-    arr
-  end
-
 end
