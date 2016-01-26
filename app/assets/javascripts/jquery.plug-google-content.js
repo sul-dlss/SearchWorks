@@ -18,16 +18,20 @@
       batches = [];
 
     function init() {
-      var listCoverImgs = $parent.find(selectorCoverImg),
-        totalCovers = listCoverImgs.length;
+      var currentCovers = listCoverImgs();
+      var totalCovers = currentCovers.length;
 
       // batch by batch-cutoff value
       while (totalCovers > 0) {
-        batches.push(listCoverImgs.splice(0, booksPerAjaxCall));
-        totalCovers = listCoverImgs.length;
+        batches.push(currentCovers.splice(0, booksPerAjaxCall));
+        totalCovers = currentCovers.length;
       }
 
       addBookCoversByBatch();
+    }
+
+    function listCoverImgs() {
+      return $parent.find(selectorCoverImg);
     }
 
     function addBookCoversByBatch() {
@@ -54,61 +58,92 @@
     }
 
     function renderCoverAndAccessPanel(json) {
-      $.each(json, function(bibkey, data) {
-        if (typeof data.thumbnail_url !== 'undefined') {
-          renderCoverImage(bibkey, data);
-          return;
-        }
-      });
-
-      $.each(json, function(bibkey, data) {
-        if (typeof data.info_url !== 'undefined') {
-          renderAccessPanel(bibkey, data);
-          return;
+      // Loop through all the relevant cover elements and if the cover
+      // element has a standard number (order of precidence: OCLC, LCCN, then ISBN)
+      // that exists in the json response and render the cover image for it.
+      $.each(listCoverImgs(), function(_, coverImg) {
+        var data = bestResponseForNumber(json, coverImg);
+        if (typeof data !== 'undefined') {
+          renderCoverImage(data.bibkey, data.data);
+          renderAccessPanel(data.bibkey, data.data);
         }
       });
     }
 
+    function bestResponseForNumber(json, coverImg) {
+      var data,
+        $coverImg = $(coverImg),
+        oclcKeys = $coverImg.data('oclc').split(','),
+        lccnKeys = $coverImg.data('lccn').split(','),
+        isbnKeys = $coverImg.data('isbn').split(',');
+      $.each(oclcKeys, function(_, oclc) {
+        if(json[oclc] && typeof json[oclc].thumbnail_url !== 'undefined') {
+          data = { bibkey: oclc, data: json[oclc] };
+          return false;
+        }
+      });
+      if(typeof data === 'undefined') {
+        $.each(lccnKeys, function(_, lccn) {
+          if(json[lccn] && typeof json[lccn].thumbnail_url !== 'undefined') {
+            data = { bibkey: lccn, data: json[lccn] };
+            return false;
+          }
+        });
+      }
+      if(typeof data === 'undefined') {
+        $.each(isbnKeys, function(_, isbn) {
+          if(json[isbn] && typeof json[isbn].thumbnail_url !== 'undefined') {
+            data = { bibkey: isbn, data: json[isbn] };
+            return false;
+          }
+        });
+      }
+      return data;
+    }
+
     function renderCoverImage(bibkey, data) {
-      var thumbUrl = data.thumbnail_url,
-          selectorCoverImg = 'img.' + bibkey;
+      if (typeof data.thumbnail_url !== 'undefined') {
+        var thumbUrl = data.thumbnail_url,
+            selectorCoverImg = 'img.' + bibkey;
 
-      thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
-      thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
+        thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
+        thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
 
-      var imageEl = $parent.find(selectorCoverImg);
+        var imageEl = $parent.find(selectorCoverImg);
 
-      // Only set the thumb src if it's not already set
-      if(typeof imageEl.attr('src') === 'undefined') {
-        imageEl
-          .attr('src', thumbUrl)
-          .removeClass('hide')
-          .addClass('show');
+        // Only set the thumb src if it's not already set
+        if(typeof imageEl.attr('src') === 'undefined') {
+          imageEl
+            .attr('src', thumbUrl)
+            .removeClass('hide')
+            .addClass('show');
 
-        imageEl.parent().parent().find('span.fake-cover')
-          .addClass('hide');
+          imageEl.parent().parent().find('span.fake-cover')
+            .addClass('hide');
+        }
       }
     }
 
 
     function renderAccessPanel(bibkey, data) {
-      var listGoogleBooks = $.unique($parent.find('.google-books.' + bibkey));
+      if (typeof data.info_url !== 'undefined') {
+        var listGoogleBooks = $.unique($parent.find('.google-books.' + bibkey));
 
-      $.each(listGoogleBooks, function(i, googleBooks) {
-        var $googleBooks = $(googleBooks),
-          $fullView = $googleBooks.find('.full-view'),
-          $limitedView = $googleBooks.find('.limited-preview');
+        $.each(listGoogleBooks, function(i, googleBooks) {
+          var $googleBooks = $(googleBooks),
+            $fullView = $googleBooks.find('.full-view'),
+            $limitedView = $googleBooks.find('.limited-preview');
 
-        if (data.preview === 'full') {
-          $fullView.attr('href', data.preview_url);
-          checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
-          checkAndEnableAccessPanel($googleBooks, '.panel-online');
-        } else if (data.preview === 'partial') {
-          $limitedView.attr('href', data.preview_url);
-          checkAndEnableAccessPanel($googleBooks, '.panel-related');
-        }
-      });
-
+          if (data.preview === 'full') {
+            $fullView.attr('href', data.preview_url);
+            checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
+            checkAndEnableAccessPanel($googleBooks, '.panel-online');
+          } else if (data.preview === 'partial' || data.preview === 'noview') {
+            $limitedView.attr('href', data.preview_url);
+            checkAndEnableAccessPanel($googleBooks, '.panel-related');
+          }
+        });
+      }
     }
 
 
