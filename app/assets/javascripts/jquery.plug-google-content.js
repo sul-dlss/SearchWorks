@@ -159,8 +159,9 @@
         bibkeys += [isbn, oclc, lccn].join(',') + ',';
       });
 
-      bibkeys = bibkeys.replace(/,,/, '');
-      bibkeys = bibkeys.replace(/,$/, '');
+      bibkeys = bibkeys.replace(/,{2,}/, ','); // Replace 2 or more commas with a single
+      bibkeys = bibkeys.replace(/^,/, ''); // Remove leading comma
+      bibkeys = bibkeys.replace(/,$/, ''); // Remove trailing comma
 
       return bibkeys;
     }
