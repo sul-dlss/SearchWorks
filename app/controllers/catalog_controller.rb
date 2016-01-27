@@ -389,7 +389,7 @@ class CatalogController < ApplicationController
               else
                 SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
               end
-      email.deliver
+      email.deliver_now
     end
 
     flash[:success] = I18n.t('blacklight.email.success')
