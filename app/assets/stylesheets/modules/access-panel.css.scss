@@ -3,9 +3,21 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1em;
   font-size: 1.125em;
   font-weight: 400;
+}
+.access-panel-heading {
+  &.library-location-heading h3 {
+    border-bottom: 1px dotted white;
+    display: inline-block; /* so the border won't extend past the text */
+    margin-right: 10px;
+    &:hover,&:active {
+      border-bottom: 1px solid white;
+    }
+    &.no-link {
+      border-bottom: none;
+    }
+  }
 }
 .access-panel {
   .panel-body {

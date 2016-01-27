@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe AccessPanelHelper do
   let(:library) { Holdings::Library.new("GREEN") }
-  describe "link_to_library" do
-    it "should return a link to library about page" do
-      expect(helper.link_to_library(library)).to eq "<a href=\"http://library.stanford.edu/libraries/green/about\">Green Library</a>"
+  describe "link_to_library_header" do
+    it "should return a header with a link to library about page" do
+      expect(helper.link_to_library_header(library)).to include "<h3 class=\"\">Green Library</h3>"
     end
   end
 

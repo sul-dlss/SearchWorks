@@ -49,6 +49,6 @@ This is intended for running tests against the fixtures in the local index.
 
 #### jenkins
 
-This is intended for running production data integration tests agains the remote index.
+This is intended for running production data integration tests against the remote index.
 
     $ TEST_SOLR_URL=http://example-solr.stanford.edu:8983/solr rake jenkins
