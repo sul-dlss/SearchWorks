@@ -4,8 +4,8 @@ module AccessPanelHelper
     link_to("#{course.id} -- #{course.name}", catalog_index_path({f: {course: [course.id], instructor: [course.instructor]}}))
   end
 
-  def link_to_library(library)
-    link_to_unless(Constants::LIBRARY_ABOUT[library.code].nil?, library.name, Constants::LIBRARY_ABOUT[library.code])
+  def link_to_library_header(library)
+    link_to_unless(Constants::LIBRARY_ABOUT[library.code].nil?, render(:partial=>'catalog/access_panels/library',locals:{:library=>library}), Constants::LIBRARY_ABOUT[library.code])
   end
 
   def thumb_for_library(library)
