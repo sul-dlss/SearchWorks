@@ -49,7 +49,8 @@ group :deployment do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'lyberteam-capistrano-devel'
+  gem 'capistrano-passenger'
+  gem 'dlss-capistrano'
 end
 
 group :development, :test do
