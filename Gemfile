@@ -53,7 +53,7 @@ group :deployment do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '< 2.99'
+  gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   # We use database cleaner to empty out the database between tests (see spec_helper for usage)
   gem 'database_cleaner'

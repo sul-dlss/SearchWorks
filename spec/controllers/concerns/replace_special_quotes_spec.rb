@@ -6,8 +6,8 @@ describe ReplaceSpecialQuotes do
   let(:q) { 'query' }  
   before do
     controller.extend(ReplaceSpecialQuotes)
-    controller.stub(:modifiable_params_keys).and_return( ['a_param'] )
-    controller.stub(:params).and_return(HashWithIndifferentAccess.new(params))
+    allow(controller).to receive(:modifiable_params_keys).and_return( ['a_param'] )
+    allow(controller).to receive(:params).and_return(HashWithIndifferentAccess.new(params))
   end
   describe "with special quotes" do
     let(:params) { { a_param: "«#{q}» ‘#{q}’ ‚#{q}‛ “#{q}” „#{q}‟ ‹#{q}› 「#{q}」『#{q}』 〝#{q}〞 〟#{q}〟 ﹂#{q}﹁  ﹄#{q}﹃ ＂#{q}＂ ｢#{q}｣" } }

@@ -11,7 +11,7 @@ describe 'Image object' do
   end
 
   it 'should validate digital image object' do
-    expect(image_document.has_image_behavior?).to be_true
+    expect(image_document.has_image_behavior?).to be_truthy
   end
 
   it 'should return stacks image urls' do
@@ -20,6 +20,6 @@ describe 'Image object' do
   end
 
   it 'should return false if there is no display_type' do
-    expect(SolrDocument.new.has_image_behavior?).to be_false
+    expect(SolrDocument.new.has_image_behavior?).to be_falsey
   end
 end

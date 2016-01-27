@@ -12,7 +12,7 @@ feature "Aria Landmarks", js: true do
   end
 
   scenario "should have feedback landmark" do
-    pending("should have feedback landmark")
+    skip("should have feedback landmark")
   end
 
   scenario "should have SearchWorks navbar landmark" do
@@ -24,7 +24,7 @@ feature "Aria Landmarks", js: true do
   end
 
   scenario "should have context toolbar landmark" do
-    pending("should have context toolbar landmark")
+    skip("should have context toolbar landmark")
   end
 
   scenario "should have main container landmark" do
@@ -32,10 +32,10 @@ feature "Aria Landmarks", js: true do
   end
 
   scenario "should have footer landmark" do
-    pending("should have footer landmark")
+    skip("should have footer landmark")
   end
 
   scenario "should have browse nearby landmark" do
-    pending("should have browse nearby landmark")
+    skip("should have browse nearby landmark")
   end
 end

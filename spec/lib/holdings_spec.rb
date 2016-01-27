@@ -190,7 +190,7 @@ describe Holdings do
       expect(mhld.first).to be_a Hash
       expect(mhld.first[:library]).to eq 'GREEN'
       expect(mhld.first[:location]).to eq 'STACKS'
-      expect(mhld.first[:present?]).to be_true
+      expect(mhld.first[:present?]).to be_truthy
       expect(holdings_doc.holdings.as_json.first[:locations].first[:mhld]).to eq mhld
     end
   end

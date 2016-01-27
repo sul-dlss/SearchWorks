@@ -6,7 +6,7 @@ feature 'Record view' do
   end
 
   scenario 'should have correct cover image attributes', js: true do
-    pending('Google Books API not working under test')
+    skip('Google Books API not working under test')
     within 'div.document' do
       expect(page).to have_css('img.cover-image', visible: true)
       expect(page).to have_css(

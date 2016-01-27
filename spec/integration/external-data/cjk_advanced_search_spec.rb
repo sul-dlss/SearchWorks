@@ -24,7 +24,7 @@ describe "CJK Advanced Search", js: true, feature: true, :"data-integration" => 
         let(:query) { '曉書房' }
         it "should return less than 10 results containing particular records" do
           expect((3..10)).to include total_results
-          expect(results_all_on_page(['6321193','6355327','6668315'])).to be_true
+          expect(results_all_on_page(['6321193','6355327','6668315'])).to be_truthy
         end
       end
       describe "Mineruba Shobō ミネルヴァ 書房" do
@@ -33,7 +33,7 @@ describe "CJK Advanced Search", js: true, feature: true, :"data-integration" => 
           expect(total_results).to be > 900
           expect(results_all_on_page([
             "4196577", "4203788", "4199853", "4198109", "4203994", "4197487", "10365584", "10412633"
-          ])).to be_true
+          ])).to be_truthy
         end
       end
       describe "Okinawa-ken Ginowan-shi 沖縄県宜野湾市" do
@@ -111,7 +111,7 @@ describe "CJK Advanced Search", js: true, feature: true, :"data-integration" => 
       let(:pub) { '濟南' }
       it "should return between 5 and 15 results" do
         expect((5..15)).to include total_results
-        expect(results_all_on_page(["9617331", "5175639", "4822276"])).to be_true
+        expect(results_all_on_page(["9617331", "5175639", "4822276"])).to be_truthy
       end
     end
     describe "unigram title Float (飄) AND place Shanghai (上海)" do
@@ -134,7 +134,7 @@ describe "CJK Advanced Search", js: true, feature: true, :"data-integration" => 
       let(:pub) { '濟南' }
       it "should return between 5000 and 10000 results" do
         expect((5000..10000)).to include total_results
-        expect(results_all_on_page(["9617331", "5175639", "4822276"])).to be_true
+        expect(results_all_on_page(["9617331", "5175639", "4822276"])).to be_truthy
       end
     end
     describe "unigram title Float (飄) OR place Shanghai (上海)" do

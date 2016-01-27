@@ -3,7 +3,7 @@ require "spec_helper"
 describe "catalog/_index_location.html.erb" do
   describe "accessibility" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: [
@@ -30,7 +30,7 @@ describe "catalog/_index_location.html.erb" do
   end
   describe 'location level requests' do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: [
@@ -47,7 +47,7 @@ describe "catalog/_index_location.html.erb" do
   end
   describe "status icon" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: [
@@ -63,7 +63,7 @@ describe "catalog/_index_location.html.erb" do
   end
   describe "status text" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: [
@@ -83,7 +83,7 @@ describe "catalog/_index_location.html.erb" do
   end
   describe "multiple items in a location" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: [
@@ -106,7 +106,7 @@ describe "catalog/_index_location.html.erb" do
   end
   describe "bound with" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
           item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123']
@@ -121,7 +121,7 @@ describe "catalog/_index_location.html.erb" do
   describe "mhld" do
     describe "with matching library/location" do
       before do
-        view.stub(:document).and_return(SolrDocument.new(
+        allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display: ['321 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
@@ -137,7 +137,7 @@ describe "catalog/_index_location.html.erb" do
     end
     describe "that has no matching library/location" do
       before do
-        view.stub(:document).and_return(SolrDocument.new(
+        allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
         ))
@@ -151,7 +151,7 @@ describe "catalog/_index_location.html.erb" do
     end
     describe "with mhld that only has 'Library has' statement" do
       before do
-        view.stub(:document).and_return(SolrDocument.new(
+        allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display: ['123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
           mhld_display: ['GREEN -|- CURRENTPER -|- -|- library has -|-']
@@ -169,7 +169,7 @@ describe "catalog/_index_location.html.erb" do
     describe "location level request links" do
       describe "for multiple items" do
         before do
-          view.stub(:document).and_return(
+          allow(view).to receive(:document).and_return(
             SolrDocument.new(
               id: '123',
               item_display: [

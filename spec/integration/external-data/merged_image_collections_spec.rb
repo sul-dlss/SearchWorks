@@ -9,7 +9,7 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
       click_button 'search'
     end
     it "should render metadata and a filmstrip" do
-      pending("Needs item-level-merge in external data integration index")
+      skip("Needs item-level-merge in external data integration index")
       expect(page).to have_css('h5 a', text: "Reid W. Dennis collection of California lithographs, 1850-1906")
       expect(page).to have_css('dt', text: "Digital content")
       expect(page).to have_css('dd', text: "48 items")
@@ -27,7 +27,7 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
       visit catalog_path('6780453')
     end
     it "should render metadata and a filmstrip" do
-      pending("Needs item-level-merge in external data integration index")
+      skip("Needs item-level-merge in external data integration index")
       expect(page).to have_css('h1', text: "Reid W. Dennis collection of California lithographs, 1850-1906")
 
       expect(page).to have_css('h2', text: "Contents/Summary")

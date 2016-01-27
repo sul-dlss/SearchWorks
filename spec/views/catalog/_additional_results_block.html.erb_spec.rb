@@ -66,7 +66,7 @@ describe "catalog/_additional_results_block.html.erb" do
   describe "other search sources" do
     before do
       assign(:search_modifier, query)
-      view.stub(:params).and_return(q: 'hello')
+      allow(view).to receive(:params).and_return(q: 'hello')
       render
     end
     it "should include a link to the library website" do
@@ -77,7 +77,7 @@ describe "catalog/_additional_results_block.html.erb" do
   describe "pages past the first" do
     before do
       assign(:search_modifier, filter)
-      view.stub(:params).and_return(page: 2)
+      allow(view).to receive(:params).and_return(page: 2)
       render
     end
     it "should not render" do

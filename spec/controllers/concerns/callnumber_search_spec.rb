@@ -9,7 +9,7 @@ describe CallnumberSearch do
   describe "#quote_and_downcase_callnumber_search" do
     let(:params) { {search_field: 'call_number', q: 'ABC 123'} }
     before do
-      subject.stub(:params).and_return( params )
+      allow(subject).to receive(:params).and_return( params )
       subject.send(:quote_and_downcase_callnumber_search)
     end
     it "should downcase the q parameter" do
@@ -22,7 +22,7 @@ describe CallnumberSearch do
     describe "when already quoted" do
       let(:params) { {search_field: 'call_number', q: '"ABC 123"'} }
       before do
-        subject.stub(:params).and_return( params )
+        allow(subject).to receive(:params).and_return( params )
         subject.send(:quote_and_downcase_callnumber_search)
       end
       it "should not double quote" do
@@ -32,7 +32,7 @@ describe CallnumberSearch do
     describe "when not a callnumber search" do
       let(:params) { {search_field: 'not_callnumber', q: 'ABC 123'} }
       before do
-        subject.stub(:params).and_return( params )
+        allow(subject).to receive(:params).and_return( params )
       end
       it "should not change the q parameter" do
         subject.send(:quote_and_downcase_callnumber_search)
@@ -42,7 +42,7 @@ describe CallnumberSearch do
     describe "when a search term is not given" do
       let(:params) { {search_field: 'call_number'} }
       before do
-        subject.stub(:params).and_return( params)
+        allow(subject).to receive(:params).and_return( params)
       end
       it "should not change any parameters" do
         subject.send(:quote_and_downcase_callnumber_search)

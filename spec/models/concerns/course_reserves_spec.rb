@@ -11,12 +11,12 @@ describe CourseReserves do
 
   describe "present?" do
     it "should return false" do
-      expect(CourseReservesTestClass.new.course_reserves.present?).to be_false
+      expect(CourseReservesTestClass.new.course_reserves.present?).to be_falsey
     end
 
     it "should return true" do
       doc = SolrDocument.new(id: '123', crez_course_info: ["CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald"])
-      expect(doc.course_reserves.present?).to be_true
+      expect(doc.course_reserves.present?).to be_truthy
     end
   end
 

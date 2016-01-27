@@ -21,8 +21,8 @@ describe "catalog/access_panels/_collection_details.html.erb" do
     }
     let(:collection_members) { ['a', 'b'] }
     before do
-      collection_members.stub(:total).and_return(2)
-      document.stub(:collection_members).and_return(collection_members)
+      allow(collection_members).to receive(:total).and_return(2)
+      allow(document).to receive(:collection_members).and_return(collection_members)
       assign(:document, document)
       render
     end

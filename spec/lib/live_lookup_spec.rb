@@ -3,7 +3,7 @@ require "spec_helper"
 describe LiveLookup do
   let(:response) { double('response') }
   let(:get) { double('get') }
-  let(:body) { double('body') }
+  let(:body) { 'body' }
   before do
     expect(response).to receive(:get).and_return(get)
     expect(get).to receive(:body).and_return(body)

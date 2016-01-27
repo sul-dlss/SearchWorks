@@ -7,16 +7,16 @@ describe SearchWorks::PageLocation do
     expect(subject.access_point.to_s).to be_blank
   end
   it "should have a '?' accessor" do
-    expect(subject.access_point?).to be_false
-    expect(SearchWorks::PageLocation.new(base_database_params).access_point?).to be_true
+    expect(subject.access_point?).to be_falsey
+    expect(SearchWorks::PageLocation.new(base_database_params).access_point?).to be_truthy
   end
   describe "AccessPoints" do
     describe "*? accessor" do
       it "should return false for method that are not the current access point" do
-        expect(SearchWorks::PageLocation::AccessPoints.new.any_method?).to be_false
+        expect(SearchWorks::PageLocation::AccessPoints.new.any_method?).to be_falsey
       end
       it "should return true if on the current access point" do
-        expect(SearchWorks::PageLocation::AccessPoints.new(base_database_params).databases?).to be_true
+        expect(SearchWorks::PageLocation::AccessPoints.new(base_database_params).databases?).to be_truthy
       end
     end
     describe "#to_s" do

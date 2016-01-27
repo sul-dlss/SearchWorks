@@ -3,11 +3,11 @@ require "spec_helper"
 describe "catalog/_index_marc.html.erb" do
   include MarcMetadataFixtures
   before do
-    view.stub(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
   end
   describe "physical extent" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           marcbib_xml: metadata1,
           physical: ["The Physical Extent"],
@@ -29,7 +29,7 @@ describe "catalog/_index_marc.html.erb" do
   end
   describe "databases" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           format_main_ssim: ["Database"],
           summary_display: ["The summary of the object"],
@@ -46,7 +46,7 @@ describe "catalog/_index_marc.html.erb" do
   end
   describe 'finding aid' do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           marcxml: metadata1,
           url_fulltext: ['http://oac.cdlib.org/findaid/12345']

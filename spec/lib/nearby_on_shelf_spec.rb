@@ -87,7 +87,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       term2 = {"bbb" => 2}
       term3 = {"ccc" => 3}
       term4 = {"ddd" => 4}
-      nearby_obj.stub(:get_next_terms).with("aaa", "foo", 4).and_return([term1, term2, term3, term4])
+      allow(nearby_obj).to receive(:get_next_terms).with("aaa", "foo", 4).and_return([term1, term2, term3, term4])
     end
     
     it "should convert the returned structure from Solr into an array of terms" do
@@ -226,9 +226,9 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     let(:no_spines) { nearby_obj.send(:get_spines_from_field_values,[], shelfkey_field) }
 
     before do
-      nearby_obj.stub(:get_docs_for_field_values).with(desired_shelfkeys, shelfkey_field).and_return([doc1, doc2, doc3, doc4])
-      nearby_obj.stub(:get_docs_for_field_values).with(desired_rev_shelfkeys, reverse_shelfkey_field).and_return([doc1, doc2, doc3])
-      nearby_obj.stub(:get_docs_for_field_values).with([], shelfkey_field).and_return([])
+      allow(nearby_obj).to receive(:get_docs_for_field_values).with(desired_shelfkeys, shelfkey_field).and_return([doc1, doc2, doc3, doc4])
+      allow(nearby_obj).to receive(:get_docs_for_field_values).with(desired_rev_shelfkeys, reverse_shelfkey_field).and_return([doc1, doc2, doc3])
+      allow(nearby_obj).to receive(:get_docs_for_field_values).with([], shelfkey_field).and_return([])
     end
 
     it "should return an Array of Hashs" do
@@ -244,15 +244,15 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       }
     end
     it "should return populated array when given reverse_shelfkey field" do
-      pending('Test ported from old codebase needs to be fixed')
-      expect(spines_preceding.length > 0).to be_true
+      skip('Test ported from old codebase needs to be fixed')
+      expect(spines_preceding.length > 0).to be_truthy
     end
     it "should not return duplicate spines" do
       expect(spines.uniq!).to be_nil
       expect(spines_preceding.uniq!).to be_nil
     end
     it "should return spines sorted by shelfkey (then title, then pub date desc)" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       expect(spines[0][:holding].callnumber).to match /DK340\.3 \.A1/
       expect(spines[1][:holding].callnumber).to match /DK340\.3 \.B1/
       expect(spines[2][:holding].callnumber).to match /DK340\.3 \.B1/
@@ -270,14 +270,14 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       expect(no_spines).to eq []
     end
     it "should have multiple spines for a shelfkey if they are distinct" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       count = 0
       combined_spines.each { |spine|
         if spine[:holding].callnumber =~ /DK340\.3 \.B1/
           count = count + 1
         end
       }
-      expect(count > 1).to be_true
+      expect(count > 1).to be_truthy
     end    
 #    it "should ensure that Solr rows param is large enough to get all the matching docs" do
 #      pending ("in code, need to use term occurrence counts and make sure Solr rows param is big enough")
@@ -346,7 +346,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     let(:reverse_shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, rterm1.keys[0], reverse_shelfkey_field, 2, nil) }
     before do
       # SolrHelper (calls to Solr) stubs
-      nearby_obj.stub(:get_next_terms).at_least(2).times { |start_val, field, how_many|
+      allow(nearby_obj).to receive(:get_next_terms).at_least(2).times { |start_val, field, how_many|
         result = []
         case field
           when shelfkey_field  
@@ -362,7 +362,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
         result
       }
 
-      nearby_obj.stub(:get_docs_for_field_values).at_least(3).times { |desired_vals, field|
+      allow(nearby_obj).to receive(:get_docs_for_field_values).at_least(3).times { |desired_vals, field|
         result = []
         case field
           when shelfkey_field 
@@ -395,14 +395,14 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       }
     end
     it "should get the expected spines for known shelfkey value (via stubbed Solr calls)" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       expect(shelfkey_array.length).to eq 3
       expect(shelfkey_array[0][:holding].callnumber).to match /DK340\.3 \.B1/
       expect(shelfkey_array[1][:holding].callnumber).to match /DK340\.3 \.B1/
       expect(shelfkey_array[2][:holding].callnumber).to match /DK340\.3 \.B2/
     end
     it "should get the expected spines for known callnum_reverse sort value (via stubbed Solr calls)" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       expect(reverse_shelfkey_array.length).to eq 3
       expect(reverse_shelfkey_array[0][:holding].callnumber).to match /DK340\.3 \.B2/
       # reverse shelfkeys messed up in mock data - this is the correct order for the test
@@ -626,7 +626,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     # SolrHelper (calls to Solr) stubs
     before do
       # before(:each) or spec can't resolve catalog_path
-      nearby_obj.stub(:get_next_terms).at_least(3).times { |start_val, field, how_many|
+      allow(nearby_obj).to receive(:get_next_terms).at_least(3).times { |start_val, field, how_many|
         result = []
         case field
           when shelfkey_field  
@@ -647,7 +647,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
         result
       }
 
-      nearby_obj.stub(:get_docs_for_field_values).at_least(4).times { |desired_vals, field|
+      allow(nearby_obj).to receive(:get_docs_for_field_values).at_least(4).times { |desired_vals, field|
         result = []
         case field
           when shelfkey_field 
@@ -674,7 +674,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     end
 
     it "should use the indicated item if there is one" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       t = []
       nearby_set1.each {|spine| t << spine[:holding].callnumber}
       expect(t.to_s).to match /#{chosen_callnum}/
@@ -689,35 +689,35 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       }
     end
     it "should get spines on shelf before the indicated item" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       t = ""
       nearby_set1.each {|spine| t << spine[:holding].callnumber}
       expect(t).to match /DK340\.2 \.A1/
     end
     it "should gets spines on shelf after the indicated item" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       t = ""
       nearby_set1.each {|spine| t << spine[:holding].callnumber}
       expect(t).to match /DK340\.3 \.B1/
     end
     it "should return the requested number of call numbers before/after the selected item" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       expect(auto_nearby_callnums.length).to eq how_many_before + how_many_after + 1
     end
     it "should return fewer call numbers before/after the selected one if they don't exist" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       # there is only one preceding call number, so expect one less.
       expect(nearby_set2.length).to eq how_many_before + how_many_after
     end
     it "should collapse an item if everything is the same except for the library" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       expect(nearby_multi_set1.length).to eq 4
       expect(nearby_multi_set1[0][:holding].callnumber).to eq "EEE"
       expect(nearby_multi_set1[2][:holding].callnumber).to  "GGG"
     end  
     
     it "should have spines sorted properly, with indicated item in the center" do
-      pending('Test ported from old codebase needs to be fixed')
+      skip('Test ported from old codebase needs to be fixed')
       # indicated callnum in center?
       expect(auto_nearby_callnums[how_many_before]).to eq auto_sel_callnum
       expect(auto_nearby_callnums[0]).to eq "DK340.1 .A1"

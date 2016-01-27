@@ -10,7 +10,7 @@ describe PURLEmbed do
   describe 'provider' do
     let(:resource) { double('resource') }
     before do
-      PURLEmbed.any_instance.stub(:provider).and_return(provider)
+      allow_any_instance_of(PURLEmbed).to receive(:provider).and_return(provider)
     end
 
     describe 'URL Scheme' do

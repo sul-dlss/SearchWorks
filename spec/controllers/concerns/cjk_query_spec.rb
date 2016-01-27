@@ -14,7 +14,7 @@ describe CJKQuery do
     let(:solr_params) { {q: solr_q} }
     let(:local_params) { "mm=#{cjk_mm} qs=0" }
     before do
-      controller.stub(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
+      allow(controller).to receive(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
       controller.send(:modify_params_for_cjk_advanced, solr_params, user_params)
     end
     describe "unprocessed" do

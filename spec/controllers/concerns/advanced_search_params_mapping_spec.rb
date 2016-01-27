@@ -7,18 +7,18 @@ end
 describe AdvancedSearchParamsMapping do
   let(:controller) { AdvancedSearchParamsMappingController.new }
   before do
-    controller.stub(:blacklight_config).and_return(OpenStruct.new(advanced_search: { url_key: "advanced" } ))
+    allow(controller).to receive(:blacklight_config).and_return(OpenStruct.new(advanced_search: { url_key: "advanced" } ))
   end
   it 'should not touch params when not doing an advanced search' do
     params = { search_field: 'something-else', title: "title param" }
-    controller.stub(:params).and_return(params)
+    allow(controller).to receive(:params).and_return(params)
     controller.send(:map_advanced_search_params)
     expect(params[:title]).to be_present
   end
   describe 'params to be mapped' do
     let(:params) { { search_field: 'advanced', title: "Title", author: "Author", subject: "Subject", description: "Description", pub_info: "Pub", number: "Number"} }
     before do
-      controller.stub(:params).and_return(params)
+      allow(controller).to receive(:params).and_return(params)
       controller.send(:map_advanced_search_params)
     end
     it 'should modify author' do
