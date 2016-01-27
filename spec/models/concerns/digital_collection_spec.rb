@@ -5,10 +5,10 @@ describe DigitalCollection do
   let(:non_collection) { SolrDocument.new(collection_type: ["DigiColl"]) }
   describe "#is_a_collection?" do
     it "should be true when the collection_type is 'Digital Collection'" do
-      expect(collection.is_a_collection?).to be_true
+      expect(collection.is_a_collection?).to be_truthy
     end
     it "should be false when the collection_type is not 'Digital Collection'" do
-      expect(non_collection.is_a_collection?).to be_false
+      expect(non_collection.is_a_collection?).to be_falsey
     end
   end
   describe "CollectionMembers" do
@@ -25,7 +25,7 @@ describe DigitalCollection do
       }
     }}
     before do
-      Blacklight.stub(:solr).and_return(stub_solr)
+      allow(Blacklight).to receive(:solr).and_return(stub_solr)
     end
     it "should take a rows option" do
       expect(Blacklight.solr).to receive(:select).with(rows_params).and_return(stub_response)

@@ -28,7 +28,7 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
   end
   describe "with barcode" do
     before do
-      view.stub(:params).and_return(barcode: '321')
+      allow(view).to receive(:params).and_return(barcode: '321')
     end
     it "should use the callnumber based on the provided barcode in the heading" do
       render

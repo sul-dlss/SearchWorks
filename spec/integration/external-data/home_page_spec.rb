@@ -6,7 +6,7 @@ describe "Home Page", feature: true, :"data-integration" => true do
   end
   describe "facets" do
     it "should display the Resource type" do
-      pending("This facet is not in the data-integration index yet")
+      skip("This facet is not in the data-integration index yet")
       within(".blacklight-format_main_ssim") do
         expect(page).to have_css(".panel-title", text: "Resource type")
         within("ul.facet-values") do

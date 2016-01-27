@@ -13,18 +13,18 @@ describe BookmarksHelper do
 
     mock_response = Kaminari.paginate_array(mock_docs).page(current_page).per(per_page)
 
-    mock_response.stub(:docs).and_return(mock_docs.slice(start, per_page))
+    allow(mock_response).to receive(:docs).and_return(mock_docs.slice(start, per_page))
     mock_response
   end
 
   describe "bookmarks?" do
     it "should return true if bookmarks controller" do
       params[:controller] = "bookmarks"
-      expect(helper.bookmarks?).to be_true
+      expect(helper.bookmarks?).to be_truthy
     end
     it "should return false if not bookmarks controller" do
       params[:controller] = "catalog"
-      expect(helper.bookmarks?).to be_false
+      expect(helper.bookmarks?).to be_falsey
     end
   end
   describe "current_entries_info" do

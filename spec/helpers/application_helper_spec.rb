@@ -15,8 +15,8 @@ describe ApplicationHelper do
       it "handle arrays from the index correctly" do
         data = get_data_with_label(temp_doc_array, "Food:", "key")
         expect(data[:fields].length).to eq 2 and
-        expect(data[:fields].include?("fudgesicles1")).to be_true
-        expect(data[:fields].include?("fudgesicles2")).to be_true
+        expect(data[:fields].include?("fudgesicles1")).to be_truthy
+        expect(data[:fields].include?("fudgesicles2")).to be_truthy
       end
       it "should display the vernacular equivalent for a field if one exists" do
         expect(get_data_with_label(temp_doc_vern, "Food:", "key")[:vernacular]).to eq ["fudgeyzicles"]
@@ -24,8 +24,8 @@ describe ApplicationHelper do
       it "should handle vernacular arrays correctly" do
         data = get_data_with_label(temp_doc_vern_array,"Food:","key")[:vernacular]
         expect(data.length).to eq 2
-        expect(data.include?("fudgeyzicles1")).to be_true
-        expect(data.include?("fudgeyzicles2")).to be_true
+        expect(data.include?("fudgeyzicles1")).to be_truthy
+        expect(data.include?("fudgeyzicles2")).to be_truthy
       end
       it "should return nil for the vernacular if there is none" do
         expect(get_data_with_label(temp_doc, "Food:", "key")[:vernacular]).to be_nil
@@ -37,24 +37,24 @@ describe ApplicationHelper do
     describe "link_to" do
       it "should return a valid label and fields" do
         data = link_to_data_with_label(temp_doc, "Food:", "key", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
-        data[:label].should == "Food:" and
-        data[:fields].first.should match(/<a href=.*fudgesicles.*search_field=search_author.*>fudgesicles<\/a>/)
+        expect(data[:label]).to eq("Food:") and
+        expect(data[:fields].first).to match(/<a href=.*fudgesicles.*search_field=search_author.*>fudgesicles<\/a>/)
       end
       it "should handle data from the index in an array" do
         fields = link_to_data_with_label(temp_doc_array, "Food:", "key", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})[:fields]
-        fields.include?("<a href=\"/?q=%22fudgesicles1%22&amp;search_field=search_author\">fudgesicles1</a>").should be_true and
-        fields.include?("<a href=\"/?q=%22fudgesicles2%22&amp;search_field=search_author\">fudgesicles2</a>").should be_true
+        expect(fields.include?("<a href=\"/?q=%22fudgesicles1%22&amp;search_field=search_author\">fudgesicles1</a>")).to be_truthy and
+        expect(fields.include?("<a href=\"/?q=%22fudgesicles2%22&amp;search_field=search_author\">fudgesicles2</a>")).to be_truthy
       end
       it "should display the linked vernacular equivalent for a field if one exists" do
-        link_to_data_with_label(temp_doc_vern, "Food:", "key", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})[:vernacular].first.should match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
+        expect(link_to_data_with_label(temp_doc_vern, "Food:", "key", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})[:vernacular].first).to match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
       end
       it "should handle vernacular data from the index in an array" do
         vern = link_to_data_with_label(temp_doc_vern_array, "Food:", "key", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})[:vernacular]
-        vern.include?("<a href=\"/?q=%22fudgeyzicles1%22&amp;search_field=search_author\">fudgeyzicles1</a>").should be_true and
-        vern.include?("<a href=\"/?q=%22fudgeyzicles2%22&amp;search_field=search_author\">fudgeyzicles2</a>").should be_true
+        expect(vern.include?("<a href=\"/?q=%22fudgeyzicles1%22&amp;search_field=search_author\">fudgeyzicles1</a>")).to be_truthy and
+        expect(vern.include?("<a href=\"/?q=%22fudgeyzicles2%22&amp;search_field=search_author\">fudgeyzicles2</a>")).to be_truthy
       end
       it "should return nil if the field does not exist" do
-        get_data_with_label(temp_doc, "Blech:", "not_valid_key").should be_nil
+        expect(get_data_with_label(temp_doc, "Blech:", "not_valid_key")).to be_nil
       end
     end
   end

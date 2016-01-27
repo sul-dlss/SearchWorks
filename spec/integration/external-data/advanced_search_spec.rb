@@ -9,7 +9,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "McRae"
       fill_in "search_title", with: "Jazz"
       click_on "advanced-search-submit"
-      expect(results_all_on_page(['7637875', '336046', '9512303', '2130330'])).to be_true
+      expect(results_all_on_page(['7637875', '336046', '9512303', '2130330'])).to be_truthy
     end
     it "Advanced search for author Zukofsky and title 'A' (SW-501)" do
       fill_in "search_author", with: "Zukofsky"
@@ -17,7 +17,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "advanced-search-submit"
       expect(results_all_on_page([
         "9082824", "1398728", "290602", "4515607", "743649", "1209196", "2767209", "2431848", "857890"
-      ])).to be_true
+      ])).to be_truthy
     end
   end
   describe "Facet searching" do
@@ -123,7 +123,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "advanced-search-submit"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       # This only checks first page of results
-      expect(result_on_page("6865307")).to be_false
+      expect(result_on_page("6865307")).to be_falsey
       expect(total_results).to be < 1520000
     end
   end
@@ -155,7 +155,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_link "100"
       docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
       expect(total_results).to be >= 225
-      expect(results_all_on_page(['6746743', '6747313'])).to be_true
+      expect(results_all_on_page(['6746743', '6747313'])).to be_truthy
     end
   end
   describe "nossa OR nuestra america (SW-939)" do
@@ -187,16 +187,16 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "nabokov OR hofstadter AND pushkin"
       click_on "advanced-search-submit"
       expect(total_results).to be <= 10
-      expect(result_on_page('4076380')).to be_true
+      expect(result_on_page('4076380')).to be_truthy
     end
   end
   describe "AND and OR query hofstadter OR nabokov AND pushkin" do
-    pending "should return at most 3 results and not this key" do
+    skip "should return at most 3 results and not this key" do
       fill_in "search_author", with: "hofstadter OR nabokov AND pushkin"
       click_on "advanced-search-submit"
       expect(total_results).to be > 3
       # TODO: Fails and actually is returned as first result
-      expect(result_on_page('4076380')).to be_false
+      expect(result_on_page('4076380')).to be_falsey
     end
   end
   describe "AND and OR  (nabokov OR hofstadter) AND pushkin" do
@@ -204,7 +204,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "(nabokov OR hofstadter) AND pushkin"
       click_on "advanced-search-submit"
       expect((5..7)).to include total_results
-      expect(result_on_page('4076380')).to be_true
+      expect(result_on_page('4076380')).to be_truthy
     end
   end
   describe "parenthesis  (Dutch OR Netherlands) AND painting  (VUF-1879)" do
@@ -238,7 +238,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_journal-periodical"
       click_on "advanced-search-submit"
-      expect(document_index("365647")).to be_true
+      expect(document_index("365647")).to be_truthy
     end
   end
   describe "Subject China History Women and language English" do
@@ -268,8 +268,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_book"
       click_on "advanced-search-submit"
-      expect(result_on_page('5680298')).to be_true
-      expect(result_on_page('8303176')).to be_false
+      expect(result_on_page('5680298')).to be_truthy
+      expect(result_on_page('8303176')).to be_falsey
     end
   end
   describe "Author Title Plus Format Video" do
@@ -279,8 +279,8 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "Resource type"
       check "f_inclusive_format_main_ssim_video"
       click_on "advanced-search-submit"
-      expect(result_on_page('8303176')).to be_true
-      expect(result_on_page('5680298')).to be_false
+      expect(result_on_page('8303176')).to be_truthy
+      expect(result_on_page('5680298')).to be_falsey
     end
   end
   describe "Phrase search: subject 'Home Schooling' and Keyword Socialization VUF-1352" do

@@ -23,7 +23,7 @@ feature 'Results Document Metadata' do
   end
 
   scenario 'should have correct cover image attributes', js: true do
-    pending('Google Books API not working under test')
+    skip('Google Books API not working under test')
     visit root_path
     first('#q').set '10'
     click_button 'search'

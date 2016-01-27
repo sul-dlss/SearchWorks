@@ -23,7 +23,7 @@ describe "catalog/record/_mods_upper_metadata_items.html.erb" do
       expect(rendered).to have_css("dt", text: "Imprint")
       expect(rendered).to have_css("dd", text: "copyright 2014")
     end
-    pending "should display language" do
+    skip "should display language" do
       # render
       # expect(rendered).to have_css("div.section-uppermetadata dt", text: "Lang")
       # expect(rendered).to have_css("div.section-uppermetadata dd", text: "Esperanza")

@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'capybara/poltergeist'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'

@@ -4,11 +4,11 @@ describe OpenSeadragon do
   let(:document) { double('osd_document') }
   before do
     document.extend(OpenSeadragon)
-    document.stub('druid').and_return('12345')
+    allow(document).to receive('druid').and_return('12345')
   end
   describe "tile source" do
     before do
-      document.stub('file_ids').and_return(['image-id1', 'image-id2.jp2'])
+      allow(document).to receive('file_ids').and_return(['image-id1', 'image-id2.jp2'])
     end
     it "should have the correct stacks URL" do
       document.open_seadragon_tile_source.each do |tile_source|
@@ -33,19 +33,19 @@ describe OpenSeadragon do
   end
   describe "config" do
     it "should have basic OSD configurations" do
-      document.stub('file_ids').and_return(['image-id1'])
+      allow(document).to receive('file_ids').and_return(['image-id1'])
       [:crossOriginPolicy, :zoomInButton, :fullPageButton].each do |config|
         expect(document.osd_config.keys).to include(config)
       end
     end
     it "should not include reference strip configurations if there is only one ID" do
-      document.stub('file_ids').and_return(['image-id1'])
+      allow(document).to receive('file_ids').and_return(['image-id1'])
       expect(document.osd_config).not_to have_key(:showReferenceStrip)
     end
     it "should include reference strip configurations if there is more than one ID" do
-      document.stub('file_ids').and_return(['image-id1', 'image-id2'])
+      allow(document).to receive('file_ids').and_return(['image-id1', 'image-id2'])
       expect(document.osd_config).to have_key(:showReferenceStrip)
-      expect(document.osd_config[:showReferenceStrip]).to be_true
+      expect(document.osd_config[:showReferenceStrip]).to be_truthy
     end
   end
 end

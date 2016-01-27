@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'catalog/thumbnails/_merged_image_thumbnail.html.erb' do
-  before { view.stub(:document).and_return(document) }
+  before { allow(view).to receive(:document).and_return(document) }
 
   context 'when there is no thumbnail image' do
     let(:document) do

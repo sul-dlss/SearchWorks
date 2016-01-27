@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "catalog/_osd_viewer.html.erb" do
   before do
-    view.stub(:openseadragon_picture_tag).and_return('<osd-provided-markup />')
+    allow(view).to receive(:openseadragon_picture_tag).and_return('<osd-provided-markup />')
   end
   describe "single image" do
     before do

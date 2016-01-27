@@ -14,7 +14,7 @@ describe "catalog/_zero_results.html.erb" do
       f: {'fieldA' => ["ValueA"], 'fieldB' => ['ValueB']},
       search_field: 'search_title'
     }, config))
-    view.stub(:label_for_search_field).and_return('Title')
+    allow(view).to receive(:label_for_search_field).and_return('Title')
   end
 
   it "should display modify your search" do

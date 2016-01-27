@@ -22,9 +22,9 @@ describe CollectionHelper do
     let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
     let(:no_collection_doc) { SolrDocument.new }
     before do
-      collection_members.stub(:total).and_return("5")
-      document.stub(:collection_members).and_return(collection_members)
-      no_collection_doc.stub(:collection_members).and_return([])
+      allow(collection_members).to receive(:total).and_return("5")
+      allow(document).to receive(:collection_members).and_return(collection_members)
+      allow(no_collection_doc).to receive(:collection_members).and_return([])
     end
     it "should return the correct number of document including the #total" do
       expect(collection_members_enumeration(document)).to eq "5 items online"
@@ -35,7 +35,7 @@ describe CollectionHelper do
   end
   describe "#collection_breadcrumb_value" do
     it "should return the collection name when present in the @document_list" do
-      helper.stub(:presenter).and_return(
+      allow(helper).to receive(:presenter).and_return(
         OpenStruct.new(document_heading: 'Title2')
       )
       @document_list = [

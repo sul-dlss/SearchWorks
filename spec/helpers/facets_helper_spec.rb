@@ -10,15 +10,15 @@ describe FacetsHelper do
     end
     it "should render the facet limit when the facet does exist " do
       @response.facets = [OpenStruct.new(name: "this_facet")]
-      helper.should_receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
-      helper.should_receive(:render_facet_limit).with("a-facet", {}).and_return("a-partial")
+      expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
+      expect(helper).to receive(:render_facet_limit).with("a-facet", {}).and_return("a-partial")
       expect(helper.send(:render_single_facet, "this_facet")).to eq "a-partial"
     end
     it "should pass options onto #render_facet_limit" do
       @response.facets = [OpenStruct.new(name: "this_facet")]
       options = {partial: "the-partial-to-render"}
-      helper.should_receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
-      helper.should_receive(:render_facet_limit).with("a-facet", options).and_return("a-partial")
+      expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
+      expect(helper).to receive(:render_facet_limit).with("a-facet", options).and_return("a-partial")
       expect(helper.send(:render_single_facet, "this_facet", options)).to eq "a-partial"
     end
   end
@@ -26,10 +26,10 @@ describe FacetsHelper do
     let(:collapse_facet) { OpenStruct.new(field: 'building_facet') }
     let(:non_collapse_facet) { OpenStruct.new(field: 'other_facet') }
     it "should identify building_facet to be collapsed on the home page" do
-      expect(collapse_home_page_facet?(collapse_facet)).to be_true
+      expect(collapse_home_page_facet?(collapse_facet)).to be_truthy
     end
     it "should identify other facets to not be collapsed on the home page" do
-      expect(collapse_home_page_facet?(non_collapse_facet)).to be_false
+      expect(collapse_home_page_facet?(non_collapse_facet)).to be_falsey
     end
   end
   describe "#remove_range_param" do
