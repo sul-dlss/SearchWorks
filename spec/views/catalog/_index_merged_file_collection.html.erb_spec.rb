@@ -3,7 +3,7 @@ require "spec_helper"
 describe "catalog/_index_merged_file_collection.html.erb" do
   include MarcMetadataFixtures
   before do
-    view.stub(:document).and_return(
+    allow(view).to receive(:document).and_return(
       SolrDocument.new(
         marcbib_xml: metadata1,
         physical: ["The Physical Extent"],

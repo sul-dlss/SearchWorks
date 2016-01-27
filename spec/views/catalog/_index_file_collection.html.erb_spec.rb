@@ -3,7 +3,7 @@ require "spec_helper"
 describe "catalog/_index_file_collection.html.erb" do
   include ModsFixtures
   before do
-    view.stub(:document).and_return(
+    allow(view).to receive(:document).and_return(
       SolrDocument.new(
         modsxml: mods_everything,
         physical: ["The Physical Extent"]

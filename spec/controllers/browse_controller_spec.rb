@@ -17,7 +17,7 @@ describe BrowseController, :"data-integration" => true do
     it "should include the originating document" do
       expect(assigns(:document_list).any? do |doc|
         doc[:id] == assigns(:original_doc)[:id]
-      end).to be_true
+      end).to be_truthy
     end
     it "should return a SolrDocuments object" do
       assigns(:document_list).each do |doc|
@@ -41,7 +41,7 @@ describe BrowseController, :"data-integration" => true do
         get :index, start: '9696118', page: '1'
         expect(assigns(:document_list).any? do |doc|
           doc[:id] == assigns(:original_doc)[:id]
-        end).to be_false
+        end).to be_falsey
       end
     end
     describe "backward" do
@@ -49,7 +49,7 @@ describe BrowseController, :"data-integration" => true do
         get :index, start: '9696118', page: '-1'
         expect(assigns(:document_list).any? do |doc|
           doc[:id] == assigns(:original_doc)[:id]
-        end).to be_false
+        end).to be_falsey
       end
     end
   end
@@ -63,7 +63,7 @@ describe BrowseController, :"data-integration" => true do
     it "should include the originating document" do
       expect(assigns(:document_list).any? do |doc|
         doc[:id] == assigns(:original_doc)[:id]
-      end).to be_true
+      end).to be_truthy
     end
     it "should return a SolrDocuments object" do
       assigns(:document_list).each do |doc|

@@ -200,8 +200,8 @@ describe CatalogController do
         search_field = config.search_fields["author_title"]
         expect(search_field).to be_present
         expect(search_field.label).to eq "Author + Title"
-        expect(search_field.include_in_simple_select).to be_false
-        expect(search_field.include_in_advanced_search).to be_false
+        expect(search_field.include_in_simple_select).to be_falsey
+        expect(search_field.include_in_advanced_search).to be_falsey
       end
     end
   end

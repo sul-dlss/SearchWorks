@@ -8,7 +8,7 @@ feature "Search box", js: true do
     expect(page).to have_css('.search-form a.clear-input-text', visible: true)
 
     find('.search-form a.clear-input-text').click
-    find_field('q').value.should eq ''
+    expect(find_field('q').value).to eq ''
     expect(page).to have_css('.search-form a.clear-input-text', visible: false)
   end
 end

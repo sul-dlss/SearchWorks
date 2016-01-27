@@ -7,16 +7,16 @@ describe CollectionMember do
   let(:merged_sirsi) { SolrDocument.new(collection: ['sirsi', '12345']) }
   describe "#is_a_collection_member?" do
     it "should return true for collection members" do
-      expect(member.is_a_collection_member?).to be_true
+      expect(member.is_a_collection_member?).to be_truthy
     end
     it "should return false for non collection members" do
-      expect(non_member.is_a_collection_member?).to be_false
+      expect(non_member.is_a_collection_member?).to be_falsey
     end
     it "should return false for sirsi records" do
-      expect(sirsi.is_a_collection_member?).to be_false
+      expect(sirsi.is_a_collection_member?).to be_falsey
     end
     it "should return true for sirsi records that identify as being in another collection" do
-      expect(merged_sirsi.is_a_collection_member?).to be_true
+      expect(merged_sirsi.is_a_collection_member?).to be_truthy
     end
   end
   describe "#parent_collections" do
@@ -29,7 +29,7 @@ describe CollectionMember do
       }
     }}
     before do
-      Blacklight.stub(:solr).and_return(stub_solr)
+      allow(Blacklight).to receive(:solr).and_return(stub_solr)
     end
     it "should search solr for ids in the collection" do
       expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)

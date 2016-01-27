@@ -19,7 +19,7 @@ describe AvailabilityController do
     let(:lookup) { double('new') }
     let(:json) { [{a: 'a', b: 'b'}] }
     before do
-      lookup.stub(:to_json).and_return(json)
+      allow(lookup).to receive(:to_json).and_return(json)
     end
     it "should return the #to_json response from the LiveLookup class" do
       expect(LiveLookup).to receive(:new).with(['12345', '54321']).and_return(lookup)

@@ -3,14 +3,14 @@ require 'spec_helper'
 describe MastheadHelper do
   describe "#render_masthead_partial" do
     let(:page_location) { SearchWorks::PageLocation.new }
-    before { helper.stub(:page_location).and_return( page_location ) }
+    before { allow(helper).to receive(:page_location).and_return( page_location ) }
     it "should render partials that exist" do
-      page_location.stub(:access_point).and_return("databases")
+      allow(page_location).to receive(:access_point).and_return("databases")
       expect(helper).to receive(:render).with("catalog/mastheads/databases", {}).and_return('databases-partial')
       expect(render_masthead_partial).to eq "databases-partial"
     end
     it "is empty for access points that don't have mastheads" do
-      page_location.stub(:access_point).and_return("not_an_access_point")
+      allow(page_location).to receive(:access_point).and_return("not_an_access_point")
       expect(render_masthead_partial).to eq ''
     end
   end

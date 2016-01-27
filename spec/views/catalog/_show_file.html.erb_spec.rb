@@ -14,7 +14,7 @@ describe "catalog/_show_file.html.erb" do
     expect(rendered).to have_css("dl dd", text: "J. Smith")
   end
 
-  pending "should display table file list" do #wait until we have file items in the record
+  skip "should display table file list" do #wait until we have file items in the record
     # render
     # expect(rendered).to have_css("table.file-list-table thead th", text: "File (size)")
     # expect(rendered).to have_css("tr td", text: "jurrasic_park.jpg")

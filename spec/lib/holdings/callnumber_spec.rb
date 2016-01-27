@@ -105,7 +105,7 @@ describe Holdings::Callnumber do
   describe 'treat_current_location_as_home_location?' do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |location|
-        expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- #{location} -|-").treat_current_location_as_home_location?).to be_true
+        expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- #{location} -|-").treat_current_location_as_home_location?).to be_truthy
       end
     end
 

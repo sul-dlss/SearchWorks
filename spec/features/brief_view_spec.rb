@@ -18,7 +18,7 @@ feature "Brief View" do
       expect(page).to have_css('.brief-document ul li', text: 'Chemistry & ChemEng Library (Swain) : Stacks : ABC')
     end
   end
-  pending 'Brief preview', js: true do
+  skip 'Brief preview', js: true do
     visit catalog_index_path f: {format: ["Book"]}, view: 'brief'
     page.find("button.btn.docid-1").click
     expect(page).to have_css("h3.preview-title", text: "An object")

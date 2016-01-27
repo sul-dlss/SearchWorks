@@ -4,7 +4,7 @@ describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }
   describe "::Available" do
     before do
-      Holdings::Status::Available.any_instance.stub(:available?).and_return(true)
+      allow_any_instance_of(Holdings::Status::Available).to receive(:available?).and_return(true)
     end
     it "should have the available class" do
       expect(status.availability_class).to eq 'available'
@@ -18,7 +18,7 @@ describe Holdings::Status do
   end
   describe "::Noncirc" do
     before do
-      Holdings::Status::Noncirc.any_instance.stub(:noncirc?).and_return(true)
+      allow_any_instance_of(Holdings::Status::Noncirc).to receive(:noncirc?).and_return(true)
     end
     it "should have the noncirc class" do
       expect(status.availability_class).to eq 'noncirc'
@@ -32,7 +32,7 @@ describe Holdings::Status do
   end
   describe "::NoncircPage" do
     before do
-      Holdings::Status::NoncircPage.any_instance.stub(:noncirc_page?).and_return(true)
+      allow_any_instance_of(Holdings::Status::NoncircPage).to receive(:noncirc_page?).and_return(true)
     end
     it "should have the noncirc_page class" do
       expect(status.availability_class).to eq 'noncirc_page'
@@ -46,7 +46,7 @@ describe Holdings::Status do
   end
   describe "::Pageable" do
     before do
-      Holdings::Status::Pageable.any_instance.stub(:pageable?).and_return(true)
+      allow_any_instance_of(Holdings::Status::Pageable).to receive(:pageable?).and_return(true)
     end
     it "should have the page class" do
       expect(status.availability_class).to eq 'page'
@@ -60,7 +60,7 @@ describe Holdings::Status do
   end
   describe "::Unavailable" do
     before do
-      Holdings::Status::Unavailable.any_instance.stub(:unavailable?).and_return(true)
+      allow_any_instance_of(Holdings::Status::Unavailable).to receive(:unavailable?).and_return(true)
     end
     it "should have the unavailable class" do
       expect(status.availability_class).to eq 'unavailable'
@@ -74,7 +74,7 @@ describe Holdings::Status do
   end
   describe "::Unknown" do
     before do
-      Holdings::Status::Unknown.any_instance.stub(:unknown?).and_return(true)
+      allow_any_instance_of(Holdings::Status::Unknown).to receive(:unknown?).and_return(true)
     end
     it "should have the unavailable class" do
       expect(status.availability_class).to eq 'unknown'
