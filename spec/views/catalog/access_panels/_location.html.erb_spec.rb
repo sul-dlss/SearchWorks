@@ -15,9 +15,9 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     it "should render the panel" do
       assign(:document, SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]))
       render
-      expect(rendered).to have_css(".panel-library-location")
+      expect(rendered).to have_css(".panel-library-location a")
       expect(rendered).to have_css(".library-location-heading")
-      expect(rendered).to have_css(".library-location-heading-text a", text: "Earth Sciences Library (Branner)")
+      expect(rendered).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
       expect(rendered).to have_css("div.location-hours-today")
       expect(rendered).to have_css(".panel-body")
     end
@@ -113,7 +113,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
           item_display: ['123 -|- ART -|- STACKS -|- GREEN-RESV -|- -|- -|- -|- -|- ABC 123']
         ))
         render
-        expect(rendered).to have_css('.library-location-heading-text a', text: 'Green Library')
+        expect(rendered).to have_css('.library-location-heading-text h3', text: 'Green Library')
       end
     end
   end
@@ -128,7 +128,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should include the matched MHLD" do
-        expect(rendered).to have_css('h3 a', text: "Green Library", count: 1)
+        expect(rendered).to have_css('.panel-library-location a', count: 2)
+        expect(rendered).to have_css('h3', text: "Green Library", count: 1)
         expect(rendered).to have_css('li .location-name', text: "Stacks", count: 1)
         expect(rendered).to have_css('ul.items li.mhld', text: "public note")
         expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
@@ -145,7 +146,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should invoke a library block w/ the appropriate mhld data" do
-        expect(rendered).to have_css('h3 a', text: "Green Library")
+        expect(rendered).to have_css('.panel-library-location a', count: 1)
+        expect(rendered).to have_css('h3', text: "Green Library")
         expect(rendered).to have_css('li .location-name', text: "Stacks")
         expect(rendered).to have_css('ul.items li.mhld', text: "public note")
         expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
@@ -215,8 +217,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
-    it "should render a zombie library" do
-      expect(rendered).to have_css('.panel-library-location', count: 1)
+    it "should render a zombie library" do #mmm brains
+      expect(rendered).to have_css('.panel-library-location a', count: 1)
     end
     it "should render SUL items in the zombie library" do
       expect(rendered).to have_css('.panel-library-location li', text: 'ABC')
