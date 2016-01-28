@@ -100,3 +100,4 @@ gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
 gem 'roadie-rails', '~> 1.0.3'
 gem 'whenever', require: false
+gem 'rubocop', '~> 0.36'
