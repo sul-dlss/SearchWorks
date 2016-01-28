@@ -58,7 +58,7 @@ group :development, :test do
   gem 'capybara'
   # We use database cleaner to empty out the database between tests (see spec_helper for usage)
   gem 'database_cleaner'
-  gem 'poltergeist'
+  gem 'poltergeist', '>= 1.8.1'
 end
 
 group :sqlite do
