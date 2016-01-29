@@ -24,20 +24,20 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
     end
 
     it "should render side nav content" do
-      expect(rendered).to have_css("ul.record-side-nav")
+      expect(rendered).to have_css("ul.side-nav-minimap")
 
-      expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-up")
-      expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-down")
+      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-up")
+      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-down")
 
-      expect(rendered).to have_css(".record-side-nav button.contributors")
-      expect(rendered).to have_css(".record-side-nav button.contents-summary")
-      expect(rendered).to have_css(".record-side-nav button.bibliography-info")
+      expect(rendered).to have_css(".side-nav-minimap button.contributors")
+      expect(rendered).to have_css(".side-nav-minimap button.contents-summary")
+      expect(rendered).to have_css(".side-nav-minimap button.bibliography-info")
 
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Top")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Contributors")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Summary")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Info")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Bottom")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Top")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Contributors")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Summary")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Info")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Bottom")
     end
   end
 

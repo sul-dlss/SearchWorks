@@ -27,23 +27,23 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
 
     it "should render side nav content" do
-      expect(rendered).to have_css("ul.record-side-nav")
+      expect(rendered).to have_css("ul.side-nav-minimap")
 
-      expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-up")
-      expect(rendered).to have_css(".record-side-nav button i.fa.fa-arrow-down")
+      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-up")
+      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-down")
 
-      expect(rendered).to have_css(".record-side-nav button.contributors")
-      expect(rendered).to have_css(".record-side-nav button.abstract-contents")
-      expect(rendered).to have_css(".record-side-nav button.subjects")
-      expect(rendered).to have_css(".record-side-nav button.bibliography-info")
-      expect(rendered).to have_css(".record-side-nav button.access-conditions")
+      expect(rendered).to have_css(".side-nav-minimap button.contributors")
+      expect(rendered).to have_css(".side-nav-minimap button.abstract-contents")
+      expect(rendered).to have_css(".side-nav-minimap button.subjects")
+      expect(rendered).to have_css(".side-nav-minimap button.bibliography-info")
+      expect(rendered).to have_css(".side-nav-minimap button.access-conditions")
 
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Top")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Contents")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Subjects")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Info")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Access")
-      expect(rendered).to have_css(".record-side-nav button span.nav-label", text: "Bottom")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Top")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Contents")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Subjects")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Info")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Access")
+      expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Bottom")
     end
   end
 
