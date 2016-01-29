@@ -19,7 +19,7 @@
     <div class="navbar-collapse collapse toolbar-collapse">
 
       <ul class="nav navbar-nav navbar-right">
-        <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
+        <% if @document.citable? %>
           <li>
             <%= link_to t('blacklight.tools.cite_html'), citation_catalog_path(:id => @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
           </li>
