@@ -63,7 +63,10 @@
       <%= render 'additional_results_block' %>
     <%- end %>
 
-    <%= render 'results_pagination' %>
+    <%- if !@response.empty? %>
+      <%= render 'catalog/record/record_side_nav' %>
+    <%- end %>
 
+    <%= render 'results_pagination' %>
   </div>
 </div>

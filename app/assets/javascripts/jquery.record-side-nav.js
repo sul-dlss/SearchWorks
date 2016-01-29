@@ -1,12 +1,13 @@
 (function($) {
 
   /*
-    jQuery plugin to enable side nav feature in record view
-    Usage: $(selector).addSideBarNavInRecordView();
+    jQuery plugin to enable side nav feature in  view
+    Usage: $(selector).addSideBarNavInView();
   */
 
-  $.fn.addSideBarNavInRecordView = function() {
-    var $recordSideNav = $('.record-side-nav');
+  $.fn.addSideNavMinimap = function() {
+    var $sideNav = $('.side-nav-minimap');
+      console.log(this);
 
     return this.each(function() {
       var $container = $('body');
@@ -18,7 +19,8 @@
       }
 
       function calculateAndAttachScrollEvents() {
-        $recordSideNav.find('li button').each(function() {
+          console.log($sideNav);
+        $sideNav.find('li button').each(function() {
           var $sideNavButton = $(this),
               $section = $container.find('#' + $sideNavButton.data('target-id')),
               position = Math.round($section.offset().top);
@@ -39,18 +41,18 @@
       }
 
       function highlightActiveButton($button) {
-        $recordSideNav.find('li button').removeClass('active');
+        $sideNav.find('li button').removeClass('active');
         $button.addClass('active');
       }
 
       function positionSideNav() {
-        var top = Math.round(($(window).height() - $recordSideNav.outerHeight()) / 2);
-        $recordSideNav.css({ top: top + 'px' });
+        var top = Math.round(($(window).height() - $sideNav.outerHeight()) / 2);
+        $sideNav.css({ top: top + 'px' });
       }
 
       function toggleSideNav() {
         var hasScrollBar = document.body.scrollHeight > $('body').height();
-        hasScrollBar ? $recordSideNav.show() : $recordSideNav.hide();
+        hasScrollBar ? $sideNav.show() : $sideNav.hide();
       }
 
       $(window).resize(function() {
@@ -69,7 +71,6 @@
 
 })(jQuery);
 
-
 Blacklight.onLoad(function() {
-  $('#document').addSideBarNavInRecordView();
+  $('#content').addSideNavMinimap();
 });
