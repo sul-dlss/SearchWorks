@@ -1,4 +1,4 @@
-.record-side-nav {
+.side-nav-minimap {
   background-color: transparent;
   list-style-type: none;
   padding: 0;
@@ -20,13 +20,13 @@
   }
 
   li {
-    border-right: 1px solid $sul-record-side-nav-border-color;
-    border-left: 1px solid $sul-record-side-nav-border-color;
-    border-bottom: 1px solid $sul-record-side-nav-border-color;
+    border-right: 1px solid $sul-side-nav-minimap-border-color;
+    border-left: 1px solid $sul-side-nav-minimap-border-color;
+    border-bottom: 1px solid $sul-side-nav-minimap-border-color;
     white-space: nowrap;
 
     button {
-      background-color: $sul-record-side-nav-background-color;
+      background-color: $sul-side-nav-minimap-background-color;
       border: none;
       height: 35px;
       padding: 0;
@@ -41,7 +41,7 @@
 
       &:focus,
       &:hover {
-          background-color: $sul-record-side-nav-active-btn-bg;
+          background-color: $sul-side-nav-minimap-active-btn-bg;
       }
 
       i.fa, .sul-icon {
@@ -52,10 +52,10 @@
     }
 
     button.active {
-      background-color: $sul-record-side-nav-active-btn-bg;
-      -webkit-box-shadow: inset 0 0 10px $sul-record-side-nav-active-btn-shadow;
-      -moz-box-shadow: inset 0 0 10px $sul-record-side-nav-active-btn-shadow;
-      box-shadow: inset 0 0 10px $sul-record-side-nav-active-btn-shadow;
+      background-color: $sul-side-nav-minimap-active-btn-bg;
+      -webkit-box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
+      -moz-box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
+      box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
     }
 
     &:last-child, &:last-child button {
@@ -69,13 +69,13 @@
     }
 
     &:first-child {
-      border-top: 1px solid $sul-record-side-nav-border-color;
+      border-top: 1px solid $sul-side-nav-minimap-border-color;
     }
   }
 }
 
 @media screen and (max-width: $screen-xs-max) {
-  .record-side-nav {
+  .side-nav-minimap {
     li {
       &:first-child {
         border-top-right-radius: 0px;
