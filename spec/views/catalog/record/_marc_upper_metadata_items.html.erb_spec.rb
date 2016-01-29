@@ -2,6 +2,19 @@ require "spec_helper"
 
 describe "catalog/record/_marc_upper_metadata_items.html.erb" do
   include MarcMetadataFixtures
+
+  describe 'MARC 245C' do
+    before do
+      assign(:document, SolrDocument.new(marcxml: metadata1))
+    end
+
+    it 'should display for for 245C field' do
+      render
+      expect(rendered).to have_css('dt', text: 'Responsibility')
+      expect(rendered).to have_css('dd', text: 'Most responsible person ever')
+    end
+  end
+
   describe "characteristics" do
     before do
       assign(:document, SolrDocument.new(marcxml: marc_characteristics_fixture))
