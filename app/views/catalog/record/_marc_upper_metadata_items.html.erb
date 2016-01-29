@@ -1,6 +1,9 @@
 <% document ||= @document %>
 <% if document.respond_to?(:to_marc) %>
   <dl class="dl-horizontal  dl-invert">
+    <% responsibility = get_data_with_label_from_marc(document.to_marc, 'Responsibility', '245', { sub_fields: ['c'] }) %>
+    <%= render_field_from_marc(responsibility) if responsibility %>
+
     <%- uniform_title = get_uniform_title(document.to_marc, ["240","130"]) -%>
     <%- unless uniform_title.nil? -%>
       <%= render_field_from_marc(uniform_title) %>
