@@ -19,7 +19,7 @@
   }
 %>
 
-<%= render partial: "catalog/record/record_side_nav", locals: locals %>
+<%= render partial: "shared/side_nav_minimap", locals: locals %>
 
 <% if contributors.present? %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">

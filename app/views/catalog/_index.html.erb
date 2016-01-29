@@ -63,7 +63,10 @@
       <%= render 'additional_results_block' %>
     <%- end %>
 
-    <%= render 'results_pagination' %>
+    <%- if !@response.empty? %>
+      <%= render 'shared/side_nav_minimap' %>
+    <%- end %>
 
+    <%= render 'results_pagination' %>
   </div>
 </div>
