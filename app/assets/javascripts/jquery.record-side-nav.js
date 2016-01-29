@@ -7,7 +7,6 @@
 
   $.fn.addSideNavMinimap = function() {
     var $sideNav = $('.side-nav-minimap');
-      console.log(this);
 
     return this.each(function() {
       var $container = $('body');
@@ -19,7 +18,6 @@
       }
 
       function calculateAndAttachScrollEvents() {
-          console.log($sideNav);
         $sideNav.find('li button').each(function() {
           var $sideNavButton = $(this),
               $section = $container.find('#' + $sideNavButton.data('target-id')),
