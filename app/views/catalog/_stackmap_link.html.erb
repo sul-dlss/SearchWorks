@@ -1,5 +1,16 @@
-<% callnumber = location.items.first %>
+<% callnumber = location.items.first
+   stackmapable = (callnumber and callnumber.stackmapable?)
+%>
 
-<% if callnumber and callnumber.stackmapable? %>
-  <%= link_to t('blacklight.tools.find_it').html_safe, stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: callnumber.callnumber, library: callnumber.library, location: callnumber.home_location), { :data => { :ajax_modal => "trigger" }, :class => "stackmap-find-it" } %>
+<% if stackmapable %>
+  <%= link_to t('blacklight.tools.find_it').html_safe, stackmap_link(document,location), { :data => { :ajax_modal => "trigger" }, :class => "btn btn-xs btn-default stackmap-find-it" } %>
 <% end %>
+<strong class="<%=location_name_class%>">
+  <% if location.external_location? %>
+    <%= link_to location.name, location.location_link %>
+  <% elsif stackmapable%>
+    <%= link_to location.name, stackmap_link(document,location), { :data => { :ajax_modal => "trigger" } } %>
+  <% else %>
+    <%= location.name %>
+  <% end %>
+</strong>

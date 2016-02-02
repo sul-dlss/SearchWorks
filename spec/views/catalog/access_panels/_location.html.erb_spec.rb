@@ -128,9 +128,9 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should include the matched MHLD" do
-        expect(rendered).to have_css('.panel-library-location a', count: 2)
+        expect(rendered).to have_css('.panel-library-location a', count: 3)
         expect(rendered).to have_css('h3', text: "Green Library", count: 1)
-        expect(rendered).to have_css('li .location-name', text: "Stacks", count: 1)
+        expect(rendered).to have_css('li .location-name a', text: "Stacks", count: 1)
         expect(rendered).to have_css('ul.items li.mhld', text: "public note")
         expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
         expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
