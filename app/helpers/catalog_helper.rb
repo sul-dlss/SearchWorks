@@ -21,6 +21,11 @@ module CatalogHelper
     library.location_level_request? || location.location_level_request?
   end
 
+  def stackmap_link(document,location)
+    callnumber = location.items.first
+    stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: callnumber.callnumber, library: callnumber.library, location: callnumber.home_location)
+  end
+
   def new_documents_feed_path
     catalog_index_path(
       params.except(:controller, :action, :page).merge(format: 'atom', sort: 'new-to-libs')

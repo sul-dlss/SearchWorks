@@ -20,7 +20,7 @@
           <ul class="list-unstyled location">
             <% library.locations.select(&:present?).each do |location| %>
               <li>
-                <strong class="location-name"><%= link_to_unless !location.external_location?, location.name, location.location_link %></strong>
+                <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
                 <% if location.items.present? %>
                   <% if location.bound_with? && document.respond_to?(:to_marc) %>
                     <p class="bound-with-note note-highlight">
@@ -36,7 +36,6 @@
                     <% end %>
                   <% end %>
                 <% end %>
-                <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location } %>
                 <ul class="list-unstyled items" data-long-list data-list-type="location">
                   <% if location.mhld.present? %>
                     <% location.mhld.each do |mhld| %>
