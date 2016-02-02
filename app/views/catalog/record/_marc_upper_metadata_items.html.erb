@@ -48,11 +48,7 @@
       <% end %>
     <% end %>
 
-    <% if (imprint = document.imprint).present? %>
-      <% imprint.each do |field| %>
-        <%= display_content_field field %>
-      <% end %>
-    <% end %>
+    <%= render document.imprint if document.imprint.present? %>
 
     <% if (new_publish = marc_264(document.to_marc)).present? %>
       <% new_publish.each do |label,values| %>
