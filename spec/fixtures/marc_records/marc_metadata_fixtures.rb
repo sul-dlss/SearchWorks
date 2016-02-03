@@ -743,16 +743,30 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def uniform_title_fixture
     <<-xml
       <record>
         <datafield tag="240" ind1=" " ind2=" ">
-          <subfield code="a">Instrumental music.</subfield>
-          <subfield code="k">Selections</subfield>
+          <subfield code="a">Instrumental music</subfield>
+          <subfield code="b">Selections</subfield>
+          <subfield code="h">[print/digital].</subfield>
         </datafield>
       </record>
     xml
   end
+
+  def uniform_title_fixture2
+    <<-xml
+      <record>
+        <datafield tag="240" ind1=" " ind2=" ">
+          <subfield code="a">Instrumental music.</subfield>
+          <subfield code="b">Selections</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def marc_characteristics_fixture
     <<-xml
       <record>
