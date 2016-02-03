@@ -3,39 +3,33 @@
   preview_container = 'preview-filmstrip-container-' + collection_document[:id]
 %>
 
-<div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
-
-  <button class="btn btn-default btn-sm prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </button>
-
-  <span class="members-number label label-items-online">
-    <%= link_to_collection_members(collection_members_enumeration(collection_document), collection_document) %>
+<div class="accordion-section">
+  <span class="header label-items-online">
+      <%= link_to_collection_members(collection_members_enumeration(collection_document), collection_document) %>
   </span>
 
+  <div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
+
   <div class="viewport">
-    <ul class="container-images">
+      <ul class="container-images">
       <% collection_document.collection_members.documents.each do |document| %>
 
-        <% unless document.image_urls.blank? %>
+          <% unless document.image_urls.blank? %>
           <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
-            <a href="<%= catalog_path(document[:id]) %>">
+              <a href="<%= catalog_path(document[:id]) %>">
               <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
-            </a>
-            <% if document.image_urls.length > 1 %>
+              </a>
+              <% if document.image_urls.length > 1 %>
               <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
-            <% end %>
+              <% end %>
           </li>
-        <% end %>
+          <% end %>
 
       <% end %>
-    </ul>
+      </ul>
   </div>
 
   <div class="<%= preview_container %>"></div>
 
-  <button class="btn btn-default btn-sm next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </button>
-
+  </div>
 </div>
