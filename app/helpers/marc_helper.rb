@@ -383,7 +383,7 @@ module MarcHelper
     normal_fields = marc.find_all{|f| ("264") === f.tag }
     unmatched_vernacular = get_unmatched_vernacular_fields(marc,"264")
     unless normal_fields.blank? and unmatched_vernacular.blank?
-      allowed_subfields = ["a","b","c"]
+      allowed_subfields = %w(3 a b c)
       new_fields = []
       normal_fields.map{|f| new_fields << f} unless normal_fields.blank?
       unmatched_vernacular.map{|f| new_fields << f} unless unmatched_vernacular.blank?
