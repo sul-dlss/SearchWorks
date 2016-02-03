@@ -1,4 +1,10 @@
 en:
+  searchworks:
+    marc_fields:
+      imprint:
+        label: Imprint
+      default:
+        label: 'Field'
   blacklight:
     course_reserves:
       page_title: "Browse course reserves in %{application_name}"

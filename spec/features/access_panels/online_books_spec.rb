@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Record view', js: true do
   it 'should have online books panel with Google links' do
-    pending('Google Books API not working under test')
+    skip('Google Books API not working under test')
     visit catalog_path('44')
 
     within 'div.document' do
@@ -20,7 +20,7 @@ feature 'Record view', js: true do
   end
 
   scenario 'should have related panel with Google links' do
-    pending('Google Books API not working under test')
+    skip('Google Books API not working under test')
     visit catalog_path('10')
 
     within 'div.document' do

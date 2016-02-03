@@ -3,14 +3,14 @@ require "spec_helper"
 describe "catalog/_index_merged_image_collection.html.erb" do
   include MarcMetadataFixtures
   before do
-    view.stub(:document).and_return(
+    allow(view).to receive(:document).and_return(
       SolrDocument.new(
         marcbib_xml: metadata1,
         physical: ["The Physical Extent"],
         url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
       )
     )
-    view.stub(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
     render
   end
   it "should link to the author" do

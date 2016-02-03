@@ -1,17 +1,14 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.14.1'
-gem 'nokogiri', '~> 1.6.7'
-gem 'sprockets', '~> 2.11.3'
-gem 'i18n'
+gem 'rails', '4.2.5.1'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.5'
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.7.2'
 # Use CoffeeScript for .js.coffee assets and views
-# gem 'coffee-rails', '~> 4.0.0'
+# gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -20,12 +17,22 @@ gem 'turbolinks'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
+
+group :development do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+end
 
 gem 'ruby-oembed'
 
@@ -49,15 +56,17 @@ group :deployment do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'lyberteam-capistrano-devel'
+  gem 'capistrano-passenger'
+  gem 'dlss-capistrano'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '< 2.99'
+  gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   # We use database cleaner to empty out the database between tests (see spec_helper for usage)
   gem 'database_cleaner'
-  gem 'poltergeist'
+  gem 'poltergeist', '>= 1.8.1'
+  gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
 end
 
 group :sqlite do
@@ -77,19 +86,19 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'openseadragon', github: 'sul-dlss/openseadragon-rails', branch: 'ff36-fix'
+gem 'openseadragon'
 
 gem 'deprecation'
 
 gem 'blacklight', '~> 5.8.2'
-
+gem 'nokogiri', '~> 1.6.7'
 gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
 gem "blacklight-marc", "~> 5.0"
 gem "faraday"
-gem "rails_config"
+gem "config"
 gem "mods_display", "~> 0.3.5"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
@@ -98,5 +107,6 @@ gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
-gem 'roadie-rails', '~> 1.0.3'
+gem 'roadie-rails', '~> 1.0.4'
 gem 'whenever', require: false
+gem 'rubocop', '~> 0.36'

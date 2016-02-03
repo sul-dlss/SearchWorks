@@ -4,7 +4,9 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
-  RunRailsCops: true
+
+Rails:
+  Enabled: true
 
 Metrics/LineLength:
   Max: 120

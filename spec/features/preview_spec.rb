@@ -8,5 +8,5 @@ feature "Preview routes functionality" do
 end
 
 feature "Preview integration with plugin" do
-  pending
+  skip
 end

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe SearchWorks::Links do
   let(:links) { SearchWorks::Links.new({}) }
   before do
-    links.stub(:all).and_return([
+    allow(links).to receive(:all).and_return([
       OpenStruct.new(html: 'non-fulltext link', fulltext?: false),
       OpenStruct.new(html: 'fulltext link',     fulltext?: true),
       OpenStruct.new(html: '1st finding aid link', fulltext?: true,  finding_aid?: true),

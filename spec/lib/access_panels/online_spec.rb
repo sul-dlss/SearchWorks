@@ -52,7 +52,7 @@ describe AccessPanel::Online do
     end
 
     it 'should return fulltext links' do
-      expect(fulltext.links.all?(&:fulltext?)).to be_true
+      expect(fulltext.links.all?(&:fulltext?)).to be_truthy
     end
 
     it 'should return the SFX link even if there are other links' do

@@ -96,7 +96,7 @@ describe MarcHelper do
       end
       it "should handle linking to parent ckeys correctly" do
         data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc,"Label:", "590")
-        expect(data[:fields].length).to eq 1
+        expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Copy.*<a href=\"55523\">55523<\/a> \(.*\)/)
         expect(data[:fields].first[:field]).to_not match(/&gt;|&lt;|&quot;/)
       end
@@ -122,7 +122,7 @@ describe MarcHelper do
       end
       it "should display an unmatched vernacular equivelant" do
         data = link_to_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
-        expect(data[:fields].empty?).to be_true
+        expect(data[:fields].empty?).to be_truthy
         expect(data[:unmatched_vernacular].length).to eq 1
         expect(data[:unmatched_vernacular].first).to match(/^<a href=.*This\+is\+Vernacular.*search_field=search_author.*>This is Vernacular<\/a>$/)
       end
@@ -166,34 +166,34 @@ describe MarcHelper do
     end
     it "should display a fields with translated relator codes and raw RDA correctly" do
       data = link_to_contributor_from_marc(contributor.to_marc)
-      data.should match(/>Contributor1<\/a> Performer</)
-      data.should match(/>Contributor2<\/a> Performer</)
+      expect(data).to match(/>Contributor1<\/a> Performer</)
+      expect(data).to match(/>Contributor2<\/a> Performer</)
       # Contributor 3 has an RDA $e
-      data.should match(/>Contributor3<\/a> Actor</)
-      data.should_not match(/>Contributor3<\/a> Performer</)
-      data.should_not match(/act/)
+      expect(data).to match(/>Contributor3<\/a> Actor</)
+      expect(data).not_to match(/>Contributor3<\/a> Performer</)
+      expect(data).not_to match(/act/)
     end
     it 'should handle included works correctly' do
       included_works = link_to_included_works_from_marc(contributed_works.to_marc)
-      included_works.should match(/>Included Work</)
+      expect(included_works).to match(/>Included Work</)
       # no $t punctuation
-      included_works.should match(/a href=.*q=%22710\+with\+t\+ind2\+Title%21\+sub\+n\+after\+t%22.*search_field=author_title\">710 with t ind2 Title! sub n after t<\/a></)
+      expect(included_works).to match(/a href=.*q=%22710\+with\+t\+ind2\+Title%21\+sub\+n\+after\+t%22.*search_field=author_title\">710 with t ind2 Title! sub n after t<\/a></)
       # punctuation after a $t
-      included_works.should match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 Title! subu\.<\/a> sub n after \.</)
+      expect(included_works).to match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 Title! subu\.<\/a> sub n after \.</)
     end
     it "should handle related works correctly" do
       works = link_to_related_works_from_marc(contributed_works.to_marc)
-      works.should match(/>Related Work</)
+      expect(works).to match(/>Related Work</)
       # should include $i before links
-      works.should match(/>Includes \(expression\) <a href/)
+      expect(works).to match(/>Includes \(expression\) <a href/)
       # normal $t punctuation
-      works.should match(/<a href=.*q=%22700\+with\+t\+Title\.%22.*search_field=author_title\">700 with t 700 \$e Title\.<\/a> sub m after \. 700 \$4</)
+      expect(works).to match(/<a href=.*q=%22700\+with\+t\+Title\.%22.*search_field=author_title\">700 with t 700 \$e Title\.<\/a> sub m after \. 700 \$4</)
     end
     it "should handle repeating subfield e" do
-       link_to_contributor_from_marc(multi_role_contributor.to_marc).should match(/\/a> actor\. director\.<\/dd>/)
+       expect(link_to_contributor_from_marc(multi_role_contributor.to_marc)).to match(/\/a> actor\. director\.<\/dd>/)
     end
     it "should not display anything when no contributors are available" do
-      link_to_contributor_from_marc(nil_document.to_marc).should be_nil
+      expect(link_to_contributor_from_marc(nil_document.to_marc)).to be_nil
     end
   end
   describe "#get_toc" do
@@ -201,75 +201,75 @@ describe MarcHelper do
     let(:nielsen_tagged_record) { SolrDocument.new(marcxml: tagged_nielsen_fixture ) }
     it "should return the valid table of contents" do
       data = get_toc(document.to_marc)
-      data[:label].should == "Contents"
-      data[:fields].length.should == 1 and
-      data[:fields].first.length.should == 2
-      data[:fields].first.include?("1.First Chapter").should be_true and
-      data[:fields].first.include?("2.Second Chapter").should be_true
-      data[:vernacular].should be_nil
-      data[:unmatched_vernacular].should be_nil
+      expect(data[:label]).to eq("Contents")
+      expect(data[:fields].length).to eq(1) and
+      expect(data[:fields].first.length).to eq(2)
+      expect(data[:fields].first.include?("1.First Chapter")).to be_truthy and
+      expect(data[:fields].first.include?("2.Second Chapter")).to be_truthy
+      expect(data[:vernacular]).to be_nil
+      expect(data[:unmatched_vernacular]).to be_nil
     end
     it "should return the vernacular table of contents if available" do
       data = get_toc(matched_vern_doc.to_marc)
-      data[:fields].length.should == 1 and
-      data[:fields].first.length.should == 2
-      data[:fields].first.include?("1.This is not Vernacular").should be_true and
-      data[:fields].first.include?("2.This is also not Vernacular").should be_true
+      expect(data[:fields].length).to eq(1) and
+      expect(data[:fields].first.length).to eq(2)
+      expect(data[:fields].first.include?("1.This is not Vernacular")).to be_truthy and
+      expect(data[:fields].first.include?("2.This is also not Vernacular")).to be_truthy
 
-      data[:vernacular].length.should == 1 and
-      data[:vernacular].first.length.should == 2
-      data[:vernacular].first.include?("1.This is Vernacular").should be_true and
-      data[:vernacular].first.include?("2.This is also Vernacular").should be_true
+      expect(data[:vernacular].length).to eq(1) and
+      expect(data[:vernacular].first.length).to eq(2)
+      expect(data[:vernacular].first.include?("1.This is Vernacular")).to be_truthy and
+      expect(data[:vernacular].first.include?("2.This is also Vernacular")).to be_truthy
     end
     it "should return an unmatched vernacular TOC if one is available" do
       data = get_toc(unmatched_vern_doc.to_marc)
-      data[:fields].should be_nil and
-      data[:vernacular].should be_nil
+      expect(data[:fields]).to be_nil and
+      expect(data[:vernacular]).to be_nil
 
-      data[:unmatched_vernacular].length.should == 1 and
-      data[:unmatched_vernacular].first.length.should == 2
-      data[:unmatched_vernacular].first.include?("1.This is Vernacular").should be_true and
-      data[:unmatched_vernacular].first.include?("2.This is also Vernacular").should be_true
+      expect(data[:unmatched_vernacular].length).to eq(1) and
+      expect(data[:unmatched_vernacular].first.length).to eq(2)
+      expect(data[:unmatched_vernacular].first.include?("1.This is Vernacular")).to be_truthy and
+      expect(data[:unmatched_vernacular].first.include?("2.This is also Vernacular")).to be_truthy
     end
     it "should handle handle badly formed vernacular TOCs" do
       data = get_toc(bad_toc.to_marc)
-      data[:fields].length.should == 1 and
-      data[:fields].first.length.should == 2
+      expect(data[:fields].length).to eq(1) and
+      expect(data[:fields].first.length).to eq(2)
 
-      data[:vernacular].should be_nil
+      expect(data[:vernacular]).to be_nil
 
-      data[:unmatched_vernacular].length.should == 1 and
-      data[:unmatched_vernacular].first.length.should == 2
-      data[:unmatched_vernacular].first.include?("1.Vernacular1").should be_true and
-      data[:unmatched_vernacular].first.include?("2.Vernacular2").should be_true
+      expect(data[:unmatched_vernacular].length).to eq(1) and
+      expect(data[:unmatched_vernacular].first.length).to eq(2)
+      expect(data[:unmatched_vernacular].first.include?("1.Vernacular1")).to be_truthy and
+      expect(data[:unmatched_vernacular].first.include?("2.Vernacular2")).to be_truthy
     end
     it "should deal with ending '--' properly" do
       data = get_toc(document.to_marc)
-      data[:fields].length.should == 1 and
-      data[:fields].first.length.should_not == 3
+      expect(data[:fields].length).to eq(1) and
+      expect(data[:fields].first.length).not_to eq(3)
     end
     it "should handle Nielsen properly" do
       data = get_toc(nielsen_record.to_marc)
-      data[:fields].length.should == 1 and
-      data[:fields].first.length.should == 2
-      data[:fields].first.first.include?("NielsenNote1").should be_true and
-      data[:fields].first.first.include?("NielsenNote2").should be_true
-      data[:fields].first.last.include?("source: Nielsen Book Data").should be_true
-      data[:fields].to_s.should_not match(/.*ContentNote.*/)
+      expect(data[:fields].length).to eq(1) and
+      expect(data[:fields].first.length).to eq(2)
+      expect(data[:fields].first.first.include?("NielsenNote1")).to be_truthy and
+      expect(data[:fields].first.first.include?("NielsenNote2")).to be_truthy
+      expect(data[:fields].first.last.include?("source: Nielsen Book Data")).to be_truthy
+      expect(data[:fields].to_s).not_to match(/.*ContentNote.*/)
     end
     it "should handle Nielsen linked TOCs correctly" do
       data = get_toc(nielsen_tagged_record.to_marc)
-      data[:fields].length.should == 1
-      data[:fields].flatten.to_s.include?("Nielsen").should be_false
-      data[:fields].flatten.to_s.include?("Linked").should be_true
+      expect(data[:fields].length).to eq(1)
+      expect(data[:fields].flatten.to_s.include?("Nielsen")).to be_falsey
+      expect(data[:fields].flatten.to_s.include?("Linked")).to be_truthy
     end
     it "should handle bad vernacular TOC correctly" do
       data = get_toc(bad_vern_record.to_marc)
-      data[:vernacular].should be_nil and
-      data[:unmatched_vernacular].should be_nil
+      expect(data[:vernacular]).to be_nil and
+      expect(data[:unmatched_vernacular]).to be_nil
     end
     it "should return nothing if no TOC is available" do
-      get_toc(nil_document.to_marc).should be_nil
+      expect(get_toc(nil_document.to_marc)).to be_nil
     end
   end
   describe "subjects" do
@@ -295,37 +295,37 @@ describe MarcHelper do
     describe "#get_subjects" do
       it "should return a valid list of linked subjects" do
         subjects = get_subjects(document.to_marc)
-        subjects.should match(/title=\"Search: Subject1 Subject2\"/) and
-        subjects.should match(/>Subject1 Subject2</)
+        expect(subjects).to match(/title=\"Search: Subject1 Subject2\"/) and
+        expect(subjects).to match(/>Subject1 Subject2</)
       end
       it "should not include subjects where subfield 'a' begins with a % sign" do
-        get_subjects(percent_record.to_marc).should_not match(/.*%Subject1.*/)
+        expect(get_subjects(percent_record.to_marc)).not_to match(/.*%Subject1.*/)
       end
       it "should handle items with several A subfields as separate subjects (separate dd elements)" do
-        get_subjects(multi_a_subject.to_marc).should match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
+        expect(get_subjects(multi_a_subject.to_marc)).to match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
       end
       it "should concat all subfields except for v x y z" do
-        get_subjects(multi_vxyz_subject.to_marc).should match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
+        expect(get_subjects(multi_vxyz_subject.to_marc)).to match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
       end
       it "should wrap all of the subject terms in quotes" do
         data = get_subjects(multi_vxyz_subject.to_marc)
-        data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C%22.*\".*/)
-        data.should match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C\+Subject\+V\+Subject\+X%22.*\".*/)
+        expect(data).to match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C%22.*\".*/)
+        expect(data).to match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C\+Subject\+V\+Subject\+X%22.*\".*/)
         # should not have any quoted phrases concatinated with a space in the URL
-        data.should_not match(/\"\+\"/)
+        expect(data).not_to match(/\"\+\"/)
       end
       it "should not display a 690 if the subfield a includes 'collection'" do
-        get_subjects(collection_690.to_marc).should_not match(/.*Subject Collection 1.*/)
+        expect(get_subjects(collection_690.to_marc)).not_to match(/.*Subject Collection 1.*/)
       end
       it "should order the subjects as they are in the original MARC record" do
-        get_subjects(ordered_subjects.to_marc).should match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
-        get_subjects(ordered_subjects.to_marc).should_not match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
+        expect(get_subjects(ordered_subjects.to_marc)).to match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
+        expect(get_subjects(ordered_subjects.to_marc)).not_to match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
       end
       it "should not return anything for 655 genre subjects" do
-        get_subjects(genre_subjects.to_marc).should be_nil
+        expect(get_subjects(genre_subjects.to_marc)).to be_nil
       end
       it "should return nothing if no subjects are available" do
-        get_subjects(nil_document.to_marc).should be_nil
+        expect(get_subjects(nil_document.to_marc)).to be_nil
       end
     end
   end
@@ -419,7 +419,7 @@ describe MarcHelper do
       data = marc_264(single)
       expect(data).to have_key("Production")
       expect(data["Production"].length).to eq 1
-      expect(data["Production"].first).to eq "SubfieldA SubfieldB"
+      expect(data["Production"].first).to eq "Subfield3 SubfieldA SubfieldB"
     end
     it "should handle multiple fields under the same label" do
       data = marc_264(multiple)
@@ -468,18 +468,35 @@ describe MarcHelper do
       expect(results_imprint_string(no_fields)).to be_blank
     end
   end
+
+  describe '#get_uniform_title' do
+    it 'does not link $h' do
+      marc = SolrDocument.new(marcxml: uniform_title_fixture).to_marc
+      title = get_uniform_title(marc, %w(240 130))
+      expect(title[:fields].length).to eq 1
+      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music Selections</a> \[print/digital\]})
+    end
+
+    it 'does not link subfields after a certain punctuation' do
+      marc = SolrDocument.new(marcxml: uniform_title_fixture2).to_marc
+      title = get_uniform_title(marc, %w(240 130))
+      expect(title[:fields].length).to eq 1
+      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music.</a> Selections})
+    end
+  end
+
   describe "#link_to_series_from_marc" do
     let(:single_series_record) { SolrDocument.new(marcxml: marc_single_series_fixture ) }
     let(:multi_series_record) { SolrDocument.new(marcxml: marc_multi_series_fixture ) }
     it "should return a valid series" do
       data = link_to_series_from_marc(single_series_record.to_marc)
-      data.length.should == 1
-      data.first.should match(/<a href=.*q=%22Name\+SubZ%22.*search_field=search_series.*>Name SubZ<\/a> SubV/)
+      expect(data.length).to eq(1)
+      expect(data.first).to match(/<a href=.*q=%22Name\+SubZ%22.*search_field=search_series.*>Name SubZ<\/a> SubV/)
     end
     it "should not include $x or $v" do
       data = link_to_series_from_marc(multi_series_record.to_marc)
-      data.length.should == 2
-      data.first.should match(/<a href=.*%22440\+%24a%22.*search_field=search_series.*>440 \$a<\/a> 440 \$v 440 \$x/)
+      expect(data.length).to eq(2)
+      expect(data.first).to match(/<a href=.*%22440\+%24a%22.*search_field=search_series.*>440 \$a<\/a> 440 \$v 440 \$x/)
     end
   end
 end

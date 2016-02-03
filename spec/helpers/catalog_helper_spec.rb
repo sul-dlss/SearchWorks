@@ -4,7 +4,7 @@ describe CatalogHelper do
   describe 'current_view' do
     it 'if params[:view] present, should return it' do
       params = { view: 'gallery' }
-      helper.stub(:params).and_return(params)
+      allow(helper).to receive(:params).and_return(params)
       expect(helper.current_view).to eq 'gallery'
     end
     it 'if params is not present, return list' do
@@ -65,6 +65,17 @@ describe CatalogHelper do
 
     it 'includes any link options passed in' do
       expect(link_to_bookplate_search(bookplate, class: 'some-class')).to include 'class="some-class"'
+    end
+  end
+
+  describe '#grouped_citations' do
+    it 'sends all the given document citations to the grouped_citations method of the Citation class' do
+      documents = [
+        double('Document', citations: :abc),
+        double('Document', citations: :def)
+      ]
+      expect(Citation).to receive(:grouped_citations).with([:abc, :def])
+      grouped_citations(documents)
     end
   end
 end

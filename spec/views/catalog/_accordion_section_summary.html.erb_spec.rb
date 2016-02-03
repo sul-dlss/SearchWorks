@@ -8,7 +8,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
     summary_text = 'Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet. Nullam tincidunt a nisi eu pretium'
 
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           summary_display: [summary_text]
         )
@@ -25,7 +25,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
   end
   describe "Marc Summary" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           marcxml: metadata2
         )
@@ -46,7 +46,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
   end
   describe "Mods Summary" do
     before do
-      view.stub(:document).and_return(
+      allow(view).to receive(:document).and_return(
         SolrDocument.new(
           modsxml: mods_everything
         )
@@ -63,7 +63,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
   end
   describe "no summary" do
     before do
-      view.stub(:document).and_return(SolrDocument.new)
+      allow(view).to receive(:document).and_return(SolrDocument.new)
       render
     end
     it "should not include any summary accordion section" do

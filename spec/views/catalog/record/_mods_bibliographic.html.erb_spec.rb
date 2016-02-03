@@ -21,7 +21,7 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
       expect(rendered).to have_css("dt", text: "Notez")
       expect(rendered).to have_css("dd", text: "Pick up milkz")
     end
-    pending "should display related item" do
+    skip "should display related item" do
       # render
       # expect(rendered).to have_css("dt", text: "Related")
       # expect(rendered).to have_css("dd", text: "Cat loverz")

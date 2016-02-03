@@ -7,11 +7,11 @@ describe "MARC Metadata in search results" do
       fill_in 'q', with: '18'
       click_button 'search'
     end
-    it "should link the uniform title" do
+    it "should link the uniform title (but not $h)" do
       within(first('.document')) do
         within('ul.document-metadata') do
-          expect(page).to have_css('li', text: 'Instrumental music. Selections')
-          expect(page).to have_css('li a', text: 'Instrumental music.')
+          expect(page).to have_css('li', text: 'Instrumental music Selections [print/digital].')
+          expect(page).to have_css('li a', text: 'Instrumental music Selections')
         end
       end
     end
@@ -49,7 +49,7 @@ describe "MARC Metadata in search results" do
       fill_in 'q', with: '15'
       click_button 'search'
     end
-    pending "should link the corporate author" do
+    skip "should link the corporate author" do
       within(first('.document')) do
         within('ul.document-metadata') do
           expect(page).to have_css('li a', text: 'Scientific Council for Africa South of the Sahara.')
@@ -63,7 +63,7 @@ describe "MARC Metadata in search results" do
       fill_in 'q', with: '16'
       click_button 'search'
     end
-    pending "should link the meeting author" do
+    skip "should link the meeting author" do
       within(first('.document')) do
         within('ul.document-metadata') do
           expect(page).to have_css('li a', text: 'Most Excellent Meeting')

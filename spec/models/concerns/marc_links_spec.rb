@@ -49,7 +49,7 @@ describe MarcLinks do
     let(:links) { document.marc_links.all }
     it "should identify all the permutations of the Stanford Only string as Stanford Only resources" do
       expect(links).to be_present
-      expect(links.all?(&:stanford_only?)).to be_true
+      expect(links.all?(&:stanford_only?)).to be_truthy
     end
   end
   describe "fulltext?" do
@@ -60,7 +60,7 @@ describe MarcLinks do
     end
     it "should identify fulltext links" do
       expect(links).to be_present
-      expect(links.all?(&:fulltext?)).to be_true
+      expect(links.all?(&:fulltext?)).to be_truthy
     end
   end
 
@@ -88,7 +88,7 @@ describe MarcLinks do
     end
     it "should identify supplemental links" do
       expect(links).to be_present
-      expect(links.any?(&:fulltext?)).to be_false
+      expect(links.any?(&:fulltext?)).to be_falsey
     end
   end
   describe "#finding_aid" do
@@ -96,7 +96,7 @@ describe MarcLinks do
     let(:links) { document.marc_links.all }
     it "should return all finding aid links" do
       expect(links).to be_present
-      expect(links.all?(&:finding_aid?)).to be_true
+      expect(links.all?(&:finding_aid?)).to be_truthy
       expect(links).to eq document.marc_links.finding_aid
     end
   end

@@ -16,12 +16,12 @@ describe DisplayType do
   let(:non_collection_document) { SolrDocument.new( display_type: ['sirsi']) }
   let(:no_display_type_document) { SolrDocument.new() }
   before do
-    collection_document.stub(:is_a_collection?).and_return(true)
-    old_collection_document.stub(:is_a_collection?).and_return(true)
-    old_image_collection_document.stub(:is_a_collection?).and_return(true)
-    merged_collection_document.stub(:is_a_collection?).and_return(true)
-    complex_collection_document.stub(:is_a_collection?).and_return(true)
-    complex_merged_collection_document.stub(:is_a_collection?).and_return(true)
+    allow(collection_document).to receive(:is_a_collection?).and_return(true)
+    allow(old_collection_document).to receive(:is_a_collection?).and_return(true)
+    allow(old_image_collection_document).to receive(:is_a_collection?).and_return(true)
+    allow(merged_collection_document).to receive(:is_a_collection?).and_return(true)
+    allow(complex_collection_document).to receive(:is_a_collection?).and_return(true)
+    allow(complex_merged_collection_document).to receive(:is_a_collection?).and_return(true)
   end
   describe "single formats" do
     it "should translate sirsi to marc" do
