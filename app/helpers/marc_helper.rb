@@ -602,10 +602,10 @@ module MarcHelper
     end_link = false
     uniform_title.each do |sub_field|
       unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-        if !end_link and sub_field.value.strip =~ /[\.|;]$/
+        if !end_link && sub_field.value.strip =~ /[\.|;]$/ && sub_field.code != 'h'
           link_text << sub_field.value
           end_link = true
-        elsif end_link
+        elsif end_link || sub_field.code == 'h'
           extra_text << sub_field.value
         else
           link_text << sub_field.value

@@ -742,16 +742,30 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def uniform_title_fixture
     <<-xml
       <record>
         <datafield tag="240" ind1=" " ind2=" ">
-          <subfield code="a">Instrumental music.</subfield>
-          <subfield code="k">Selections</subfield>
+          <subfield code="a">Instrumental music</subfield>
+          <subfield code="b">Selections</subfield>
+          <subfield code="h">[print/digital].</subfield>
         </datafield>
       </record>
     xml
   end
+
+  def uniform_title_fixture2
+    <<-xml
+      <record>
+        <datafield tag="240" ind1=" " ind2=" ">
+          <subfield code="a">Instrumental music.</subfield>
+          <subfield code="b">Selections</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def marc_characteristics_fixture
     <<-xml
       <record>
@@ -782,7 +796,7 @@ module MarcMetadataFixtures
         <datafield tag="050" ind1="0" ind2="0">
           <subfield code="a">PK2788.9.A9</subfield>
           <subfield code="b">F55 1998</subfield>
-        </datafield>      
+        </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>
