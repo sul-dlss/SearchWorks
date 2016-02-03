@@ -96,7 +96,7 @@ describe MarcHelper do
       end
       it "should handle linking to parent ckeys correctly" do
         data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc,"Label:", "590")
-        expect(data[:fields].length).to eq 1
+        expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Copy.*<a href=\"55523\">55523<\/a> \(.*\)/)
         expect(data[:fields].first[:field]).to_not match(/&gt;|&lt;|&quot;/)
       end
