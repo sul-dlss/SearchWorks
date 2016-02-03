@@ -585,51 +585,51 @@ module MarcHelper
     return fields unless fields.empty?
   end
 
-  def get_uniform_title(doc,fields,fld=nil)
-    # little hack to return nil if the document doesn't have any of the fields
-    return nil if fields.map{|f| doc[f] ? true : false }.uniq == [false]
-    uniform_title = Object.new
-    # take the last of the passed fields
-    if fld.nil?
-      fields.each do |f|
-        uniform_title = doc[f] if doc[f]
-      end
-    else
-      uniform_title = fld
-    end
+  def get_uniform_title(doc, fields, fld = nil)
+    return unless fields.any? { |f| doc[f].present? }
+    last_present_tag = fields.reverse.find { |f| doc[f].present? }
+    uniform_title = fld || doc[last_present_tag]
     link_text = []
     extra_text = []
     end_link = false
     uniform_title.each do |sub_field|
-      unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-        if !end_link && sub_field.value.strip =~ /[\.|;]$/ && sub_field.code != 'h'
-          link_text << sub_field.value
-          end_link = true
-        elsif end_link || sub_field.code == 'h'
-          extra_text << sub_field.value
-        else
-          link_text << sub_field.value
-        end
+      next if Constants::EXCLUDE_FIELDS.include?(sub_field.code)
+      if !end_link && sub_field.value.strip =~ /[\.|;]$/ && sub_field.code != 'h'
+        link_text << sub_field.value
+        end_link = true
+      elsif end_link || sub_field.code == 'h'
+        extra_text << sub_field.value
+      else
+        link_text << sub_field.value
       end
     end
+
     author = []
-    unless fields.include?("730")
-      auth_field = doc["100"] || doc["110"] || doc["111"]
-      if auth_field
-        auth_field.each do |sub_field|
-          exclude = Constants::EXCLUDE_FIELDS.dup
-          exclude << "e"
-          exclude << "4"
-          unless exclude.include?(sub_field.code)
-            author << sub_field.value
-          end
-        end
-      end
+    unless fields.include?('730')
+      auth_field = doc['100'] || doc['110'] || doc['111']
+      author = auth_field.map do |sub_field|
+        next if (Constants::EXCLUDE_FIELDS + %w(4 e)).include?(sub_field.code)
+        sub_field.value
+      end.compact if auth_field
     end
-    search_field = ["130", "730"].include?(uniform_title.tag) ? "search_title" : "author_title"
+
+    search_field = if %w(130 730).include?(uniform_title.tag)
+                     'search_title'
+                   else
+                     'author_title'
+                   end
     vern = get_marc_vernacular(doc, uniform_title)
-    href = "\"#{[author.join(" "),link_text.join(" ")].join(" ")}\""
-    {:label => "Uniform Title", :fields => [{:field=>"#{link_to(link_text.join(" "),{:action => "index", :controller => "catalog", :q => href, :search_field=>search_field})} #{extra_text.join(" ")}".html_safe, :vernacular => vern ? link_to(vern,{:q => "\"#{vern}\"",:controller=>"catalog",:action=>"index",:search_field=>search_field}) : nil}], :unmatched_vernacular => nil}
+    href = "\"#{[author.join(' '), link_text.join(' ')].join(' ')}\""
+    {
+      label: 'Uniform Title',
+      unmatched_vernacular: nil,
+      fields: [
+        {
+          field: "#{link_to(link_text.join(' '), { action: 'index', controller: 'catalog', q: href, search_field: search_field})} #{extra_text.join(' ')}".html_safe,
+          vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: search_field }) if vern)
+        }
+      ]
+    }
   end
   def link_to_author_from_marc(marc, opts={})
     if marc["100"]
