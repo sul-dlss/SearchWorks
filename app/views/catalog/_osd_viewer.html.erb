@@ -18,7 +18,7 @@
           <a id="osd-full-page"><span class="glyphicon glyphicon-fullscreen"></span></a>
         </div>
     </div>
-    <%= openseadragon_picture_tag tiles, class: 'osd-image row', data: { openseadragon: @document.osd_config.merge(prefixUrl: image_url('openseadragon') + "/") } %>
+    <%= openseadragon_picture_tag tiles, class: 'osd-image row', data: { openseadragon: @document.osd_config } %>
     <div class="row purl-link osd-toolbar">
       Download image at: <%= link_to "purl.stanford.edu/#{@document.druid}", "http://purl.stanford.edu/#{@document.druid}" %>
     </div>

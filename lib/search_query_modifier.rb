@@ -19,11 +19,11 @@ class SearchQueryModifier
   end
 
   def params_without_fielded_search_and_filters
-    @params.merge(search_field: nil, f: nil, range: nil)
+    @params.merge(search_field: nil, f: nil, range: nil).except(:controller, :action)
   end
 
   def params_without_fielded_search
-    @params.merge(search_field: nil)
+    @params.merge(search_field: nil).except(:controller, :action)
   end
 
   def fielded_search?
@@ -33,7 +33,7 @@ class SearchQueryModifier
   end
 
   def params_without_filters
-    @params.merge(f: nil, range: nil)
+    @params.merge(f: nil, range: nil).except(:controller, :action)
   end
 
   def selected_filter_labels

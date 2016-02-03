@@ -21,7 +21,8 @@ describe BrowseHelper do
       expect(link_to_callnumber_browse(document, callnumber)).to match(/<a*.*class=\"collapsed\"*/)
     end
     it "should include correct data attributes" do
-      expect(link_to_callnumber_browse(document, callnumber, 3)).to match(/<a*.*data-behavior=\"embed-browse\"*.*data-embed-viewport=\"#callnumber-3\"*.*data-start=\"abc123\"*/)
+      link = Capybara.string(link_to_callnumber_browse(document, callnumber, 3))
+      expect(link).to have_css('a[data-behavior="embed-browse"][data-embed-viewport="#callnumber-3"][data-start="abc123"]')
     end
   end
 end
