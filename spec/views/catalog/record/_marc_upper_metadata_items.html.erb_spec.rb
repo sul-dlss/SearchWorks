@@ -77,7 +77,7 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
     end
     it "should be rendered and include specific dts/dds" do
       expect(rendered).to have_css('dt', text: 'Instrumentation')
-      expect(rendered).to have_css('dd', text: 'singer (1), doubling bass guitar (2), percussion (1), guitar (1), doubling electronics (1)')
+      expect(rendered).to have_css('dd', text: 'singer (1) or bass guitar (2), percussion (1) (4 hands), guitar (1) / electronics (1), solo flute (1) (total=8)')
       expect(rendered).to have_css('dd', text: 'singer (3)')
       expect(rendered).to have_css('dt', text: 'Partial instrumentation')
       expect(rendered).to have_css('dd', text: 'cowbell')

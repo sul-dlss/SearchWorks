@@ -65,9 +65,7 @@
     <%- end -%>
 
     <% if (instrumentation = document.marc_instrumentation).present? %>
-      <% instrumentation.each do |field| %>
-        <%= display_content_field field %>
-      <% end %>
+      <%= render instrumentation %>
     <% end %>
 
     <% series = link_to_series_from_marc(document.to_marc) %>

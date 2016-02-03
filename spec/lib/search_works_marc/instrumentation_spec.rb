@@ -2,50 +2,63 @@ require 'spec_helper'
 
 describe Instrumentation do
   include MarcMetadataFixtures
+  let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation) }
+  subject { described_class.new(document) }
 
-  describe 'initialize' do
-    let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
-    let(:instrumentation) { Instrumentation.new(document) }
-    it 'should be type Instrumentation' do
-      expect(instrumentation.class).to eq Instrumentation
+  describe 'values' do
+    it 'should return an Hash' do
+      expect(subject.values.class).to eq Hash
     end
-    it "should contain only 382 fields" do
-      instrumentation.fields.each do |record|
-        expect(record.tag).to eq '382'
-      end
-    end
-  end
-  describe 'parse_marc_record' do
-    let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation).to_marc }
-    let(:instrumentation) { Instrumentation.new(document) }
-    it 'should return an array' do
-      expect(instrumentation.parse_marc_record.class).to eq Array
-    end
+
     it 'should have two values grouped by instrumentation/partial instrumentation' do
-      expect(instrumentation.parse_marc_record.length).to eq 2
-      instrumentation.parse_marc_record.each do |group|
-        expect(group.label).to match /(Instrumentation|Partial instrumentation)/
+      expect(subject.values.keys.length).to eq 2
+      subject.values.each do |label, _|
+        expect(label).to match(/(Instrumentation|Partial instrumentation)/)
       end
     end
-    it "grouped values should be an array" do
-      instrumentation.parse_marc_record.each do |group|
-        expect(group.values.class).to eq Array
+
+    it 'grouped values should be an array' do
+      subject.values.each do |_, values|
+        expect(values.class).to eq Array
       end
     end
-    it 'items in array should be OpenStruct' do
-      instrumentation.parse_marc_record.each do |item|
-        expect(item.class).to eq OpenStruct
+
+    it 'items in values array should have a label/value' do
+      subject.values.each do |_, values|
+        values.each do |item|
+          expect(item).to have_key(:label)
+          expect(item).to have_key(:value)
+        end
       end
     end
-    describe "subfields" do
+
+    describe 'subfields' do
       it 'a subfield should equal the value' do
-        expect(instrumentation.parse_marc_record[1].values.first).to eq 'cowbell'
+        expect(subject.values['Partial instrumentation'].first[:value]).to eq 'cowbell'
       end
-      it 'n subfield should be appended to previous value' do
-        expect(instrumentation.parse_marc_record[0].values.first).to match /singer \(1\)/
+
+      it 'b subfield should append "solo"' do
+        expect(subject.values['Instrumentation'].first[:value]).to include 'solo flute (1)'
       end
-      it 'd subfield should should add doubling' do
-        expect(instrumentation.parse_marc_record[0].values.first).to match /doubling bass guitar \(2\)/
+
+      it 'd subfield should append a "/"' do
+        expect(subject.values['Instrumentation'].first[:value]).to include ') / electronics ('
+      end
+
+      it 'n subfield should be appended to previous value and wrapped in parens' do
+        expect(subject.values['Instrumentation'].first[:value]).to include 'singer (1)'
+      end
+
+      it 'p subfield should append "or"' do
+        expect(subject.values['Instrumentation'].first[:value]).to include ') or bass guitar ('
+      end
+
+      it 's subfield should append "total=" and wrap in parens' do
+        expect(subject.values['Instrumentation'].first[:value]).to include '(total=8)'
+      end
+
+      it 'v subfield should be wrapped in parens' do
+        expect(subject.values['Instrumentation'].first[:value]).to include ') (4 hands),'
       end
     end
   end
