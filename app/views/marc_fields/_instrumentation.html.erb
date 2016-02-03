@@ -1,0 +1,6 @@
+<% instrumentation.values.each do |label, values| %>
+  <dt><%= label %></dt>
+  <% values.each do |value| %>
+    <dd><%= value[:value] %></dd>
+  <% end %>
+<% end %>

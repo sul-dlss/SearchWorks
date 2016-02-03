@@ -908,18 +908,21 @@ module MarcMetadataFixtures
   def marc_382_instrumentation
     <<-xml
       <record>
-        <datafield tag="432"></datafield>
         <datafield tag="382" ind1="0" ind2="1">
           <subfield code="a">singer</subfield>
           <subfield code="n">1</subfield>
-          <subfield code="d">bass guitar</subfield>
+          <subfield code="p">bass guitar</subfield>
           <subfield code="n">2</subfield>
           <subfield code="a">percussion</subfield>
           <subfield code="n">1</subfield>
+          <subfield code="v">4 hands</subfield>
           <subfield code="a">guitar</subfield>
           <subfield code="n">1</subfield>
           <subfield code="d">electronics</subfield>
           <subfield code="n">1</subfield>
+          <subfield code="b">flute</subfield>
+          <subfield code="n">1</subfield>
+          <subfield code="s">8</subfield>
         </datafield>
         <datafield tag="382" ind1="0" ind2=" ">
           <subfield code="a">singer</subfield>
