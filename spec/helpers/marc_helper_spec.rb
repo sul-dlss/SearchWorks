@@ -419,7 +419,7 @@ describe MarcHelper do
       data = marc_264(single)
       expect(data).to have_key("Production")
       expect(data["Production"].length).to eq 1
-      expect(data["Production"].first).to eq "SubfieldA SubfieldB"
+      expect(data["Production"].first).to eq "Subfield3 SubfieldA SubfieldB"
     end
     it "should handle multiple fields under the same label" do
       data = marc_264(multiple)

@@ -625,6 +625,7 @@ module MarcMetadataFixtures
     <<-xml
       <record>
         <datafield tag="264" ind1=" " ind2="0">
+          <subfield code="3">Subfield3</subfield>
           <subfield code="a">SubfieldA</subfield>
           <subfield code="b">SubfieldB</subfield>
         </datafield>
@@ -782,7 +783,7 @@ module MarcMetadataFixtures
         <datafield tag="050" ind1="0" ind2="0">
           <subfield code="a">PK2788.9.A9</subfield>
           <subfield code="b">F55 1998</subfield>
-        </datafield>      
+        </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>
