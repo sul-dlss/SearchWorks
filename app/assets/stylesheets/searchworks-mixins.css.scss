@@ -53,9 +53,7 @@
 @mixin label-items-online {
   @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
   color: $white;
-  font-size: 12px;
   font-weight: normal;
-  padding: 4px 8px;
 
   a {
     border-bottom: none;

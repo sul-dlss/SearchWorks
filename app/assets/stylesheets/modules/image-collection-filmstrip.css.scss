@@ -1,33 +1,12 @@
 .image-filmstrip {
   border: 1px solid $sul-filmstrip-border;
-  border-radius: 3px;
   background-color: $sul-filmstrip-bg;
   bottom: 0;
   box-sizing: border-box;
   margin-bottom: 10px;
-  padding: 0 20px 20px 20px;
   position: relative;
   width: 95%;
   -moz-border-sizing: border-box;
-
-  .prev, .next {
-    background-color: #fff;
-    border-radius: 25px;
-    opacity: 0.9;
-    outline: none;
-    position: absolute;
-    padding: 4px 7px;
-    top: 50px;
-    z-index: 10000;
-  }
-
-  .prev {
-    left: 5px;
-  }
-
-  .next {
-    right: 5px;
-  }
 
   .members-number {
     position: absolute;
