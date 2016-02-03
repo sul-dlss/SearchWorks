@@ -36,8 +36,8 @@ describe "Responsive results toolbar", js: true, feature: true do
     it "should display correct tools" do
       page.driver.resize("700", "700")
       within "#sortAndPerPage" do
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: false)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
         expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)

@@ -96,7 +96,7 @@ describe MarcHelper do
       end
       it "should handle linking to parent ckeys correctly" do
         data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc,"Label:", "590")
-        expect(data[:fields].length).to eq 1
+        expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Copy.*<a href=\"55523\">55523<\/a> \(.*\)/)
         expect(data[:fields].first[:field]).to_not match(/&gt;|&lt;|&quot;/)
       end
@@ -419,7 +419,7 @@ describe MarcHelper do
       data = marc_264(single)
       expect(data).to have_key("Production")
       expect(data["Production"].length).to eq 1
-      expect(data["Production"].first).to eq "SubfieldA SubfieldB"
+      expect(data["Production"].first).to eq "Subfield3 SubfieldA SubfieldB"
     end
     it "should handle multiple fields under the same label" do
       data = marc_264(multiple)
@@ -468,6 +468,23 @@ describe MarcHelper do
       expect(results_imprint_string(no_fields)).to be_blank
     end
   end
+
+  describe '#get_uniform_title' do
+    it 'does not link $h' do
+      marc = SolrDocument.new(marcxml: uniform_title_fixture).to_marc
+      title = get_uniform_title(marc, %w(240 130))
+      expect(title[:fields].length).to eq 1
+      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music Selections</a> \[print/digital\]})
+    end
+
+    it 'does not link subfields after a certain punctuation' do
+      marc = SolrDocument.new(marcxml: uniform_title_fixture2).to_marc
+      title = get_uniform_title(marc, %w(240 130))
+      expect(title[:fields].length).to eq 1
+      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music.</a> Selections})
+    end
+  end
+
   describe "#link_to_series_from_marc" do
     let(:single_series_record) { SolrDocument.new(marcxml: marc_single_series_fixture ) }
     let(:multi_series_record) { SolrDocument.new(marcxml: marc_multi_series_fixture ) }

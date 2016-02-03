@@ -141,15 +141,15 @@ module MarcMetadataFixtures
           <subfield code="a">Pīrzādah, Shāh Muḥammad.</subfield>
         </datafield>
         <datafield tag="760" ind1="1" ind2=" ">
-          <subfield code="6">880-00</subfield>
+          <subfield code="6">880-01</subfield>
           <subfield code="a">Item that should not show</subfield>
         </datafield>
         <datafield tag="880" ind1="1" ind2=" ">
-          <subfield code="6">760-00</subfield>
+          <subfield code="6">760-01</subfield>
           <subfield code="a">Vern that should not display</subfield>
         </datafield>
         <datafield tag="880" ind1="0" ind2=" ">
-          <subfield code="6">541-00</subfield>
+          <subfield code="6">541-01</subfield>
           <subfield code="a">541 Vern that should not display</subfield>
         </datafield>
       </record>
@@ -227,6 +227,45 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def complex_vernacular_fixture
+    <<-xml
+      <record>
+        <datafield tag="245" ind1=" " ind2=" ">
+          <subfield code="6">880-01</subfield>
+          <subfield code="a">245 Matched Romanized</subfield>
+        </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+          <subfield code="a">300 Unmatched Romanized</subfield>
+        </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+          <subfield code="6">880-02</subfield>
+          <subfield code="a">300 Matched Romanized</subfield>
+        </datafield>
+        <datafield tag="350" ind1=" " ind2=" ">
+          <subfield code="6">880-03</subfield>
+          <subfield code="a">350 Matched Romanized</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">245-01</subfield>
+          <subfield code="a">245 Matched Vernacular</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">300-02</subfield>
+          <subfield code="a">300 Matched Vernacular</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">300-00</subfield>
+          <subfield code="a">300 Unmatched Vernacular</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">350-03</subfield>
+          <subfield code="a">350 Matched Vernacular</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def bad_vernacular_fixture
     <<-xml
       <record>
@@ -328,6 +367,9 @@ module MarcMetadataFixtures
         <datafield tag="590" ind1=" " ind2=" ">
           <subfield code="a">Copy 1 bound with v. 140</subfield>
           <subfield code="c">55523 (parent record’s ckey)</subfield>
+        </datafield>
+        <datafield tag="590" ind1=" " ind2=" ">
+          <subfield code="a">A 590 that does not have $c</subfield>
         </datafield>
       </record>
     xml
@@ -625,6 +667,7 @@ module MarcMetadataFixtures
     <<-xml
       <record>
         <datafield tag="264" ind1=" " ind2="0">
+          <subfield code="3">Subfield3</subfield>
           <subfield code="a">SubfieldA</subfield>
           <subfield code="b">SubfieldB</subfield>
         </datafield>
@@ -742,16 +785,30 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def uniform_title_fixture
     <<-xml
       <record>
         <datafield tag="240" ind1=" " ind2=" ">
-          <subfield code="a">Instrumental music.</subfield>
-          <subfield code="k">Selections</subfield>
+          <subfield code="a">Instrumental music</subfield>
+          <subfield code="b">Selections</subfield>
+          <subfield code="h">[print/digital].</subfield>
         </datafield>
       </record>
     xml
   end
+
+  def uniform_title_fixture2
+    <<-xml
+      <record>
+        <datafield tag="240" ind1=" " ind2=" ">
+          <subfield code="a">Instrumental music.</subfield>
+          <subfield code="b">Selections</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def marc_characteristics_fixture
     <<-xml
       <record>
@@ -782,7 +839,7 @@ module MarcMetadataFixtures
         <datafield tag="050" ind1="0" ind2="0">
           <subfield code="a">PK2788.9.A9</subfield>
           <subfield code="b">F55 1998</subfield>
-        </datafield>      
+        </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='u'>http://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>

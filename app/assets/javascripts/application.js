@@ -23,6 +23,7 @@
 //= require openseadragon/rails
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require bootstrap/tab
 //
 // Required by Blacklight
 //= require blacklight/blacklight

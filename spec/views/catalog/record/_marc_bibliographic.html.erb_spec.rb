@@ -22,17 +22,6 @@ describe "catalog/record/_marc_bibliographic.html.erb" do
     end
   end
 
-  describe "MARC 245C" do
-    let(:document) { SolrDocument.new(marcxml: metadata1) }
-    before do
-      assign(:document, document)
-    end
-    it "should display for for 245C field" do
-      render
-      expect(rendered).to have_css("dt", text: "Responsibility")
-      expect(rendered).to have_css("dd", text: "Most responsible person ever")
-    end
-  end
   describe "dates from solr" do
     before do
       assign(:document, SolrDocument.new(marcxml: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678'))

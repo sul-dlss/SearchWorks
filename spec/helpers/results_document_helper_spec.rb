@@ -10,9 +10,9 @@ describe ResultsDocumentHelper do
     data_01 = {
       :publication_year_isi => 1999,
       :title_display => "Car : a drama of the American workplace",
-      :isbn_display => [ "0393040801", "9780393040807" ],
-      :lccn => "96049953",
-      :oclc => "36024029"
+      :isbn_display => [ "0393040801x", "9780393040807" ],
+      :lccn => "a 96049953",
+      :oclc => 36024029
     }
 
     data_02 = {
@@ -40,8 +40,8 @@ describe ResultsDocumentHelper do
     it "should return book ids with prefixes" do
       book_ids = get_book_ids(@document_01)
 
-      expect(book_ids['isbn']).to eq ["ISBN0393040801", "ISBN9780393040807"]
-      expect(book_ids['lccn']).to eq ["LCCN96049953"]
+      expect(book_ids['isbn']).to eq ["ISBN0393040801x", "ISBN9780393040807"]
+      expect(book_ids['lccn']).to eq ["LCCNa96049953"]
       expect(book_ids['oclc']).to eq ["OCLC36024029"]
     end
 

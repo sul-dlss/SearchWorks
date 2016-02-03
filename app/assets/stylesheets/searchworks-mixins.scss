@@ -95,12 +95,17 @@
 }
 
 @mixin stackmap-find-it {
-  margin-left: 10px;
-
+  background-color: $sul-location-panel-findit-btn-background;
+  border-color: $sul-location-panel-findit-btn-border;
+  margin-right: 5px;
+  color: $white;
   i.fa-map-marker {
-    color: #0098DB;
     font-size: 1.4em;
     margin-right: 2px;
+  }
+  &:focus, &:hover {
+  background-color: $sul-location-panel-findit-btn-background-hover; 
+  border-color: $sul-location-panel-findit-btn-border-hover;
   }
 }
 

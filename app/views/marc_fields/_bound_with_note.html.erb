@@ -1,0 +1,10 @@
+<% bound_with_note.values.each do |value| %>
+  <% if value[:id] %>
+    <%= value[:value].gsub(
+          value[:id],
+          link_to(value[:id], catalog_path(value[:id]))
+        ).html_safe %>
+  <% else %>
+    <%= value[:value] %>
+  <% end %>
+<% end %>

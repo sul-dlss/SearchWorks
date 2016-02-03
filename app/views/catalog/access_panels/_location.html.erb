@@ -20,15 +20,11 @@
           <ul class="list-unstyled location">
             <% library.locations.select(&:present?).each do |location| %>
               <li>
-                <strong class="location-name"><%= link_to_unless !location.external_location?, location.name, location.location_link %></strong>
+                <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
                 <% if location.items.present? %>
-                  <% if location.bound_with? && document.respond_to?(:to_marc) %>
+                  <% if location.bound_with? && document.bound_with? %>
                     <p class="bound-with-note note-highlight">
-                      <% if (bound_with_note = get_data_with_label_from_marc(document.to_marc,"Note", '590')).present? %>
-                        <%= bound_with_note[:fields].map do |note|
-                              note[:field]
-                            end.join.html_safe %>
-                      <% end %>
+                      <%= render document.bound_with_note %>
                     </p>
                   <% else %>
                     <% if location_level_request_link?(library, location) %>
@@ -36,7 +32,6 @@
                     <% end %>
                   <% end %>
                 <% end %>
-                <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location } %>
                 <ul class="list-unstyled items" data-long-list data-list-type="location">
                   <% if location.mhld.present? %>
                     <% location.mhld.each do |mhld| %>

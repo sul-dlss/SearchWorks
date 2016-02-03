@@ -14,14 +14,16 @@ class SolrDocument
   include CollectionMember
   include ModsData
   include IndexAuthors
-  include Imprint
+  include MarcImprint
   include Druid
   include StacksImages
   include DigitalImage
   include OpenSeadragon
   include SolrHoldings
   include MarcInstrumentation
+  include MarcBoundWithNote
   include SolrBookplates
+  include Citable
 
   include Blacklight::Solr::Document
 
