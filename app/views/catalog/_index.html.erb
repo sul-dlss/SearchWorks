@@ -63,7 +63,7 @@
       <%= render 'additional_results_block' %>
     <%- end %>
 
-    <%- if !@response.empty? %>
+    <%- unless @response.empty? %>
       <%= render 'shared/side_nav_minimap' %>
     <%- end %>
 
