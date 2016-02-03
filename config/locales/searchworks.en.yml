@@ -1,6 +1,8 @@
 en:
   searchworks:
     marc_fields:
+      imprint:
+        label: Imprint
       default:
         label: 'Field'
   blacklight:

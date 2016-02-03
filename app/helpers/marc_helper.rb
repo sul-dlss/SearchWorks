@@ -429,11 +429,7 @@ module MarcHelper
         field.values.join(' ')
       end.compact.join(' ')
     end
-    if (imprint = document.imprint).present?
-      imprint = imprint.map do |field|
-        field.values.join(' ')
-      end.compact.join(' ')
-    end
+    imprint = document.imprint.values.join(' ') if document.imprint.present?
     if (pub = marc_264(document.to_marc)).present? &&
       copyright_labels = [marc_264_labels[:" 4"], marc_264_labels[:"24"], marc_264_labels[:"34"]]
       pub = pub.map do |label, values|
