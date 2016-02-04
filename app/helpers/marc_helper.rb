@@ -294,14 +294,17 @@ module MarcHelper
 
   # Generate hierarchical structure of subject headings from marc
   def get_subjects(marc)
-    subs = ['600','610','611','630','650','651','653','654','656','657','658','690','691','693','696', '697','698','699']
+    subs = ['600','610','611','630','650','651','653','654','656','657','658','691','693','696', '697','698','699']
     get_subjects_hierarchy('Subject', get_subjects_array(marc, subs))
   end
-
 
   # Generate hierarchical structure of subject headings from marc
   def get_genre_subjects(marc)
     get_subjects_hierarchy('Genre', get_subjects_array(marc, ['655']))
+  end
+
+  def get_local_subjects(marc)
+    get_subjects_hierarchy('Local subject', get_subjects_array(marc, ['690']))
   end
 
   def get_subjects_hierarchy(label, subjects)
@@ -333,34 +336,32 @@ module MarcHelper
         temp_data_array = []
         temp_subs_text = ""
         temp_xyv_array = []
-        unless (l.tag == "690" and l['a'] and l['a'].downcase.include?("collection"))
-          l.each{|sf|
-            exclude = Constants::EXCLUDE_FIELDS.dup
-            ["1","2","3","4","7","9"].each{|i| exclude << i}
-            unless exclude.include?(sf.code)
-              if sf.code == "a"
-                multi_a << sf.value unless sf.code == "a" and sf.value[0,1] == "%"
-              end
-              if ["v","x","y","z"].include?(sf.code)
-                temp_xyv_array << sf.value
-              else
-                temp_subs_text << "#{sf.value} " unless (sf.code == "a" or (sf.code == "a" and sf.value[0,1] == "%"))
-              end
+        l.each do |sf|
+          exclude = Constants::EXCLUDE_FIELDS.dup
+          ["1","2","3","4","7","9"].each{|i| exclude << i}
+          unless exclude.include?(sf.code)
+            if sf.code == "a"
+              multi_a << sf.value unless sf.code == "a" and sf.value[0,1] == "%"
             end
-          }
-          if multi_a.length > 1
-            multi_a.each do |a|
-              data << [a]
+            if ["v","x","y","z"].include?(sf.code)
+              temp_xyv_array << sf.value
+            else
+              temp_subs_text << "#{sf.value} " unless (sf.code == "a" or (sf.code == "a" and sf.value[0,1] == "%"))
             end
-          elsif multi_a.length == 1
-            str = multi_a.first << " " << temp_subs_text unless (temp_subs_text.blank? and multi_a.empty?)
-            temp_data_array << str
-          else
-            temp_data_array << temp_subs_text unless temp_subs_text.blank?
           end
-          temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?
-          data << temp_data_array unless temp_data_array.empty?
         end
+        if multi_a.length > 1
+          multi_a.each do |a|
+            data << [a]
+          end
+        elsif multi_a.length == 1
+          str = multi_a.first << " " << temp_subs_text unless (temp_subs_text.blank? and multi_a.empty?)
+          temp_data_array << str
+        else
+          temp_data_array << temp_subs_text unless temp_subs_text.blank?
+        end
+        temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?
+        data << temp_data_array unless temp_data_array.empty?
       end
     end
     return data

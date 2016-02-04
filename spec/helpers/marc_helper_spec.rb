@@ -278,6 +278,8 @@ describe MarcHelper do
     let(:collection_690) { SolrDocument.new(marcxml: collection_690_fixture ) }
     let(:ordered_subjects) { SolrDocument.new(marcxml: ordered_subjects_fixture) }
     let(:genre_subjects) { SolrDocument.new(marcxml: marc_655_subject_fixture) }
+    let(:local_subjects) { SolrDocument.new(marcxml: collection_690_fixture) }
+
     describe "#get_genre_subjects" do
       it "should return MARC 655 formatted as hierarchical subjects" do
         subjects = get_genre_subjects(genre_subjects.to_marc)
@@ -292,6 +294,16 @@ describe MarcHelper do
         expect(get_genre_subjects(multi_a_subject.to_marc)).to be_nil
       end
     end
+
+    describe '#get_local_subjects' do
+      it 'returns the MARC 690 formatted as hierarchical subjects' do
+        subjects = get_local_subjects(local_subjects.to_marc)
+        expect(subjects).to be_present
+        expect(subjects).to have_css('dt', text: 'Local subject')
+        expect(subjects).to have_css('dd a', text: 'Subject Collection 1')
+      end
+    end
+
     describe "#get_subjects" do
       it "should return a valid list of linked subjects" do
         subjects = get_subjects(document.to_marc)

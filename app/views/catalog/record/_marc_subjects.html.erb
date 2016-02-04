@@ -13,6 +13,13 @@
   </dl>
 <% end %>
 
+<% if (local_subject = get_local_subjects(document.to_marc)).present? %>
+  <dl>
+    <%= local_subject %>
+  </dl>
+<% end %>
+
+
 <% if document.is_a_database? && document[:db_az_subject] %>
   <dl>
     <dt>Database topics</dt>
