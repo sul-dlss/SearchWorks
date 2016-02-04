@@ -18,6 +18,11 @@ describe "catalog/record/_marc_subjects.html.erb" do
       expect(rendered).to have_css('dt', text: "Genre")
       expect(rendered).to have_css('dd a', text: "Subject A1")
     end
+
+    it 'should render the MARC 690 as local subjects' do
+      expect(rendered).to have_css('dt', text: 'Local subject')
+      expect(rendered).to have_css('dd', text: 'Local Subject A1')
+    end
   end
 
   describe "Database subjects" do

@@ -506,11 +506,14 @@ module MarcMetadataFixtures
   def marc_mixed_subject_fixture
     <<-xml
       <record>
-      <datafield tag="650" ind1="1" ind2=" ">
-        <subfield code="a">Subject A1</subfield>
-      </datafield>
+        <datafield tag="650" ind1="1" ind2=" ">
+          <subfield code="a">Subject A1</subfield>
+        </datafield>
         <datafield tag="655" ind1="1" ind2=" ">
           <subfield code="a">Subject A1</subfield>
+        </datafield>
+        <datafield tag="690" ind1="1" ind2=" ">
+          <subfield code="a">Local Subject A1</subfield>
         </datafield>
       </record>
     xml

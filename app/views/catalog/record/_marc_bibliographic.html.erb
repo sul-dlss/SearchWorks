@@ -297,13 +297,6 @@
   <%= render_field_from_marc(note_592) %>
 <% end %>
 
-<%- if document.to_marc['690'] and document.to_marc['690']['a'] and document.to_marc['690']['a'].downcase.include?("collection") -%>
-  <%- local_subject_690 = link_to_data_with_label_from_marc(document.to_marc,"Local Subject", '690', {:action => 'index', :search_field => 'search'}) -%>
-  <%- unless local_subject_690.nil? -%>
-    <%= render_field_from_marc(local_subject_690) %>
-  <%- end -%>
-<%- end -%>
-
 <%= link_to_related_works_from_marc(document.to_marc) %>
 
 <%- new_related_work_740 = get_related_works_from_marc(document.to_marc, "Related Work", '740') -%>
