@@ -6,20 +6,20 @@ describe "Responsive Home Page", feature: true, js: true do
       visit root_path
     end
     it "should show the facets on large screens" do
-      within(".blacklight-format_main_ssim") do
-        expect(page).to have_css(".panel-title", text: "Resource type")
+      within(".blacklight-access_facet") do
+        expect(page).to have_css(".panel-title", text: "Access")
         within("ul.facet-values") do
-          expect(page).to have_css("li a", text: "Book", visible: true)
-          expect(page).to have_css("li a", text: "Newspaper", visible: true)
+          expect(page).to have_css("li a", text: "Online", visible: true)
+          expect(page).to have_css("li a", text: "At the Library", visible: true)
         end
       end
 
       page.driver.resize("700", "700")
 
-      within(".blacklight-format_main_ssim") do
-        expect(page).to have_css(".panel-title", text: "Resource type")
-        expect(page).not_to have_css("li a", text: "Book", visible: true)
-        expect(page).not_to have_css("li a", text: "Newspaper", visible: true)
+      within(".blacklight-access_facet") do
+        expect(page).to have_css(".panel-title", text: "Access")
+        expect(page).not_to have_css("li a", text: "Online", visible: true)
+        expect(page).not_to have_css("li a", text: "At the Library", visible: true)
       end
     end
   end
