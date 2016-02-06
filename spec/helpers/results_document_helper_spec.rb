@@ -20,9 +20,15 @@ describe ResultsDocumentHelper do
       :latest_poss_year_isi => 1837
     }
 
+    data_03 = {
+      :pub_year_ss => '199 B.C.',
+      :earliest_poss_year_isi => -199,
+      :latest_poss_year_isi => -250
+    }
     @document_01 = SolrDocument.new(data_01)
     @document_02 = SolrDocument.new(data_02)
-    @document_03 = SolrDocument.new
+    @document_03 = SolrDocument.new(data_03)
+    @document_04 = SolrDocument.new
   end
 
   describe "Render metadata" do
@@ -30,11 +36,12 @@ describe ResultsDocumentHelper do
       expect(get_main_title(@document_01)).to eq "Car : a drama of the American workplace"
     end
     it 'should return a blank title if one does not exist' do
-      expect(get_main_title(@document_03)).to eq ""
+      expect(get_main_title(@document_04)).to eq ""
     end
     it "should return date and date ranges" do
       expect(get_main_title_date(@document_01)).to eq "[1999]"
       expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
+      expect(get_main_title_date(@document_03)).to eq "[199 B.C.]"
     end
 
     it "should return book ids with prefixes" do
