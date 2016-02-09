@@ -78,4 +78,7 @@ module ApplicationHelper
       "disabled"
     end
   end
+  def from_advanced_search?
+    params[:search_field] == 'advanced'
+  end
 end

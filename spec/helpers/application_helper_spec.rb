@@ -88,4 +88,10 @@ describe ApplicationHelper do
       expect(helper.disabled_class_for_no_selections(1)).to be_nil
     end
   end
+  describe "#from_advanced_search" do
+    it "should indicate if we are coming from the advanced search form" do
+      params[:search_field]='advanced'
+      expect(helper.from_advanced_search?).to be_truthy
+    end
+  end
 end

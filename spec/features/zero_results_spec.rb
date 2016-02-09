@@ -12,6 +12,15 @@ feature "Zero results" do
       expect(page).to have_css("a", text: "All fields: sdfsda")
     end
   end
+  scenario "should have no results and show correct link from advanced search", js: true do
+    visit advanced_search_path
+    fill_in "search_title", with: "sdfsda"
+    click_button 'advanced-search-submit'
+    within "#content" do
+      expect(page).to have_css("li", text: I18n.t('blacklight.search.zero_results.limit'))
+      expect(page).to have_css("a", text: I18n.t('blacklight.search.zero_results.return_to_advanced_search'))
+    end
+  end
   scenario "should have no results and prompt to remove limit" do
     visit root_url
     click_link "Book"
