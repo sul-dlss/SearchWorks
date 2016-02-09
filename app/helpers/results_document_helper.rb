@@ -1,11 +1,15 @@
 module ResultsDocumentHelper
 
-  def get_main_title document
+  def get_main_title(document)
     (document['title_display'] || "").html_safe
   end
 
+  def get_main_title_date(document)
+    # MODS data is indexed with the display date in Solr field pub_year_ss
+    return "[#{document["pub_year_ss"]}]" if document["pub_year_ss"].present?
 
-  def get_main_title_date document
+    # the code below is for MARC data
+    # TODO:  have solrmarc-sw index the date display string into pub_year_ss for MARC data
     publication_year    = document["publication_year_isi"].to_s
     beginning_year      = document["beginning_year_isi"].to_s
     earliest_year       = document["earliest_year_isi"].to_s
