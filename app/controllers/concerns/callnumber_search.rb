@@ -3,7 +3,7 @@ module CallnumberSearch
 
   included do
     if self.respond_to?(:before_filter)
-      before_filter :quote_and_downcase_callnumber_search, only: :index
+      prepend_before_filter :quote_and_downcase_callnumber_search, only: :index
     end
   end
 
