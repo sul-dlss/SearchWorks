@@ -1,24 +1,39 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <h3>Modify your search</h3>
+    <h3><%= t 'blacklight.search.zero_results.modify_your_search' %></h3>
     <ul class="list-unstyled zero-results-list">
-      <li>
-        <%= t 'blacklight.search.zero_results.your_search' %>
-        <% if @search_modifier.has_query? %>
-          <%= "#{search_field_label(params)}: #{params[:q]}" %>
-        <% end %>
-        <%= @search_modifier.selected_filter_labels %>
-      </li>
-      <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
-        <li><%= t 'blacklight.search.zero_results.limit_fields' %>
-          <%= link_to "#{search_field_label(params)}: #{params[:q]}", catalog_index_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_filters)}"} %>
+
+      <% if from_advanced_search? %>
+
+        <li>
+          <i class="fa fa-search-plus"></i>
+          <%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), "JavaScript:history.back();" %>
         </li>
-      <% end %>
-      <% if @search_modifier.fielded_search? %>
-        <li><%= t 'blacklight.search.zero_results.search_fields' %>
-          <%= link_to "All fields: #{params[:q]}", catalog_index_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_fielded_search_and_filters)}"} %>
-        </li>
-      <% end %>
+        <li><%= t 'blacklight.search.zero_results.limit' %></li>
+
+      <% else %>
+
+        <li>
+         <%= t 'blacklight.search.zero_results.your_search' %>
+         <% if @search_modifier.has_query? %>
+           <%= "#{search_field_label(params)}: #{params[:q]}" %>
+         <% end %>
+         <%= @search_modifier.selected_filter_labels %>
+       </li>
+       <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
+         <li><%= t 'blacklight.search.zero_results.limit_fields' %>
+           <%= link_to "#{search_field_label(params)}: #{params[:q]}", catalog_index_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_filters)}"} %>
+         </li>
+       <% end %>
+       <% if @search_modifier.fielded_search? %>
+         <li><%= t 'blacklight.search.zero_results.search_fields' %>
+           <%= link_to "All fields: #{params[:q]}", catalog_index_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_fielded_search_and_filters)}"} %>
+         </li>
+       <% end %>
+
+       <% end %>
+
+   </ul>
   </div>
 </div>
 <% if @search_modifier.has_query? %>

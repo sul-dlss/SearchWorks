@@ -30,10 +30,13 @@ en:
       form:
         q: ''
       zero_results:
+        modify_your_search: "Modify your search"
         page_heading: "No results"
         limit_fields: "Remove limit(s): "
         search_fields: "Search all fields: "
         your_search: "Your search: "
+        return_to_advanced_search: "Return to Advanced search page"
+        limit: "Try using fewer terms to start, then limit your results."
 
     bookmarks:
       page_heading: "Selections list"
