@@ -2,6 +2,6 @@
 # Simple mixin to add return an Imprint statement from MARC
 module MarcImprint
   def imprint
-    @imprint = Imprint.new(self)
+    @imprint ||= Imprint.new(self)
   end
 end

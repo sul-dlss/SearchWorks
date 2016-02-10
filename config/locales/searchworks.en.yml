@@ -3,6 +3,10 @@ en:
     marc_fields:
       imprint:
         label: Imprint
+      linked_series:
+        label: Series
+      unlinked_series:
+        label: Series
       default:
         label: 'Field'
   blacklight:

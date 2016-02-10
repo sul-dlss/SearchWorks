@@ -103,4 +103,10 @@ describe SolrDocument do
       expect(subject).to be_kind_of MarcBoundWithNote
     end
   end
+
+  describe 'MarcSeries' do
+    it 'is included' do
+      expect(subject).to be_kind_of MarcSeries
+    end
+  end
 end

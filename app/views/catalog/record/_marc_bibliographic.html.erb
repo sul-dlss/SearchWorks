@@ -57,10 +57,7 @@
   <%= render_field_from_marc(date_range) %>
 <% end %>
 
-<% series_490 = get_data_with_label_from_marc(document.to_marc, 'Series', '490') %>
-<% unless series_490.nil? %>
-  <%= render_field_from_marc(series_490) %>
-<% end %>
+<%= render document.unlinked_series if document.unlinked_series.present? %>
 
 <% note_500 = get_data_with_label_from_marc(document.to_marc, "Note", '500') %>
 <% unless note_500.nil? %>

@@ -15,6 +15,7 @@ class SolrDocument
   include ModsData
   include IndexAuthors
   include MarcImprint
+  include MarcSeries
   include Druid
   include StacksImages
   include DigitalImage
