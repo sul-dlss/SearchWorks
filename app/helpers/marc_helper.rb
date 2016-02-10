@@ -526,62 +526,6 @@ module MarcHelper
     "8" => "Changed back to"}
   end
 
-  def link_to_series_from_marc(marc)
-    fields = []
-    tags = ["440","800","810","811","830"]
-    tags.each do |tag|
-      if marc[tag]
-        marc.find_all{|f| (tag) === f.tag}.each do |field|
-          text = ""
-          link = []
-          extra = []
-          sub_a = []
-          prep_string = []
-          field.each do |subfield|
-            if ("a".."z").to_a.delete_if{|tg| ["x","v"].include?(tg) }.include?(subfield.code)
-              link << subfield.value
-              prep_string << subfield.value
-            elsif !Constants::EXCLUDE_FIELDS.include?(subfield.code)
-              extra << subfield.value
-              prep_string << subfield.value
-            end
-            sub_a << subfield.value if subfield.code == "a"
-          end
-          if sub_a.length > 1
-            text << link.join(" ")
-            text << " #{extra.join(" ")}" unless extra.blank?
-          else
-            text << link_to(link.join(" "), catalog_index_path(q: "\"#{link.join(" ")}\"", search_field: "search_series"))
-            text << " #{extra.join(" ")}" unless extra.blank?
-          end
-          fields << text unless text.blank?
-          if field["6"]
-            field_original = field.tag
-            match_original = field['6'].split("-")[1]
-            marc.find_all{|f| ('880') === f.tag}.each do |vern_field|
-              if !vern_field['6'].nil? and vern_field['6'].include?("-")
-                field_880 = vern_field['6'].split("-")[0]
-                match_880 = vern_field['6'].split("-")[1].gsub("//r","")
-                if match_original == match_880 and field_original == field_880
-                  vern_text = ""
-                  vern_field.each{ |sub_field|
-                    if sub_field.code == "a"
-                      vern_text << link_to(sub_field.value, catalog_index_path(q: "\"#{sub_field.value}\"", search_field: "title"))
-                    elsif ["v","x"].include?(sub_field.code)
-                      vern_text << " #{sub_field.value} "
-                    end
-                  }
-                  fields << vern_text unless vern_text.blank?
-                end
-              end
-            end
-          end
-        end
-      end
-    end
-    return fields unless fields.empty?
-  end
-
   def get_uniform_title(doc, fields, fld = nil)
     return unless fields.any? { |f| doc[f].present? }
     last_present_tag = fields.reverse.find { |f| doc[f].present? }

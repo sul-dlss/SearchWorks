@@ -496,19 +496,4 @@ describe MarcHelper do
       expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music.</a> Selections})
     end
   end
-
-  describe "#link_to_series_from_marc" do
-    let(:single_series_record) { SolrDocument.new(marcxml: marc_single_series_fixture ) }
-    let(:multi_series_record) { SolrDocument.new(marcxml: marc_multi_series_fixture ) }
-    it "should return a valid series" do
-      data = link_to_series_from_marc(single_series_record.to_marc)
-      expect(data.length).to eq(1)
-      expect(data.first).to match(/<a href=.*q=%22Name\+SubZ%22.*search_field=search_series.*>Name SubZ<\/a> SubV/)
-    end
-    it "should not include $x or $v" do
-      data = link_to_series_from_marc(multi_series_record.to_marc)
-      expect(data.length).to eq(2)
-      expect(data.first).to match(/<a href=.*%22440\+%24a%22.*search_field=search_series.*>440 \$a<\/a> 440 \$v 440 \$x/)
-    end
-  end
 end
