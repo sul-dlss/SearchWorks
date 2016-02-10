@@ -18,7 +18,7 @@ class Instrumentation < MarcField
 
   def whitelist_subfields
     relevant_fields.each do |field|
-      field.subfields.reject! do |subfield|
+      field.subfields = field.subfields.reject do |subfield|
         !%w(a b d n p s v).include?(subfield.code)
       end
     end

@@ -70,6 +70,17 @@ describe MarcField do
   describe 'preprocessors' do
     let(:tags) { %w(600) }
 
+    context 'MarcFieldWrapper classes' do
+      let(:marc) { complex_vernacular_fixture }
+      let(:tags) { %w(245 300 350) }
+
+      it 'are used to wrap all relevant fields' do
+        expect(subject.send(:relevant_fields)).to be_all do |field|
+          field.is_a?(MarcFieldWrapper)
+        end
+      end
+    end
+
     context 'fields that should not be displayed' do
       let(:marc) { metadata2 }
       let(:tags) { %w(541 760) }

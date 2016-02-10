@@ -7,7 +7,7 @@ class Imprint < MarcField
 
   def reject_non_imprint_subfields
     relevant_fields.each do |field|
-      field.subfields.reject! do |subfield|
+      field.subfields = field.subfields.reject do |subfield|
         !subfields.include?(subfield.code)
       end
     end

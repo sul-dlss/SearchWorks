@@ -45,6 +45,12 @@ class MarcField
     @relevant_fields ||= marc.fields(tags)
   end
 
+  def wrap_marc_fields
+    relevant_fields.map! do |field|
+      MarcFieldWrapper.new(field)
+    end
+  end
+
   def remove_hidden_indicators
     relevant_fields.reject! do |field|
       (Constants::HIDE_1ST_IND.include?(field.tag) && field.indicator1 == '1') ||
@@ -54,7 +60,7 @@ class MarcField
 
   def remove_hidden_subfields
     relevant_fields.each do |field|
-      field.subfields.reject! do |subfield|
+      field.subfields = field.subfields.reject do |subfield|
         Constants::EXCLUDE_FIELDS.include?(subfield.code)
       end
     end
@@ -63,18 +69,19 @@ class MarcField
   def merge_matched_vernacular_fields
     relevant_fields.each_with_index do |field, index|
       next if field.tag =~ /^880/
-      next unless field_has_vernacular_matcher?(field)
+      next unless field.vernacular_matcher?
       vernacular_field = matching_vernacular_field(field)
-      relevant_fields.insert(index + 1, vernacular_field) if vernacular_field
+      @relevant_fields.insert(index + 1, MarcFieldWrapper.new(vernacular_field)) if vernacular_field
     end
   end
 
   def append_unmatched_vernacular_fields
-    marc.fields(['880']).each do |vernacular_field|
-      next unless field_has_vernacular_matcher?(vernacular_field)
-      tag, matcher = vernacular_field_tag(vernacular_field)
-      next unless tags.include?(tag) && matcher == '00'
-      relevant_fields.insert(tag_indexes[tag], vernacular_field)
+    marc.fields(['880']).each do |vern_field|
+      vernacular_field = MarcFieldWrapper.new(vern_field)
+      next unless vernacular_field.vernacular_matcher? &&
+                  tags.include?(vernacular_field.vernacular_matcher_tag) &&
+                  vernacular_field.vernacular_matcher_iterator == '00'
+      @relevant_fields.insert(tag_indexes[vernacular_field.vernacular_matcher_tag], vernacular_field)
     end
   end
 
@@ -93,13 +100,7 @@ class MarcField
   end
 
   def grouped_fields
-    relevant_fields.group_by do |field|
-      if field.tag == '880'
-        vernacular_field_tag(field)[0]
-      else
-        field.tag
-      end
-    end
+    relevant_fields.group_by(&:canonical_tag)
   end
 
   def run_preprocessors
@@ -108,6 +109,7 @@ class MarcField
 
   def preprocessors
     [
+      :wrap_marc_fields,
       :remove_hidden_indicators,
       :merge_matched_vernacular_fields,
       :append_unmatched_vernacular_fields,
@@ -124,21 +126,11 @@ class MarcField
   end
 
   def matching_vernacular_field(field)
-    tag_880, tag_matcher = vernacular_field_tag(field)
-    marc.fields([tag_880]).find do |vernacular_field|
-      next unless field_has_vernacular_matcher?(vernacular_field)
-      venacular_original_tag, vernacular_matcher = vernacular_field_tag(vernacular_field)
-      field.tag == venacular_original_tag && tag_matcher == vernacular_matcher
+    marc.fields([field.vernacular_matcher_tag]).find do |vern_field|
+      vernacular_field = MarcFieldWrapper.new(vern_field)
+      next unless vernacular_field.vernacular_matcher?
+      field.tag == vernacular_field.vernacular_matcher_tag &&
+        field.vernacular_matcher_iterator == vernacular_field.vernacular_matcher_iterator
     end
-  end
-
-  def field_has_vernacular_matcher?(field)
-    field['6'] && field['6'].include?('-')
-  end
-
-  def vernacular_field_tag(field)
-    return [] unless field_has_vernacular_matcher?(field)
-    field['6'][/^(\d{3})-(\d{2})/]
-    [Regexp.last_match(1), Regexp.last_match(2)]
   end
 end
