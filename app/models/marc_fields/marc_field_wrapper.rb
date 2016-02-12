@@ -6,7 +6,7 @@
 class MarcFieldWrapper
   attr_reader :marc_field
   attr_writer :subfields
-  delegate :[], :each, :each_with_object, :indicator1, :indicator2, :tag, to: :marc_field
+  delegate :[], :==, :each, :each_with_object, :indicator1, :indicator2, :tag, to: :marc_field
 
   def initialize(marc_field)
     @marc_field = marc_field
