@@ -24,8 +24,6 @@ feature "Image Collection" do
     expect(page).to have_css(".image-filmstrip")
 
     within "div.image-filmstrip" do
-      expect(page).to have_css("button.prev")
-      expect(page).to have_css("button.next")
       expect(page).to have_css(".viewport .container-images")
 
       within ".viewport .container-images" do
@@ -44,8 +42,6 @@ feature "Image Collection" do
     expect(page).to have_css(".image-filmstrip")
 
     within "div.image-filmstrip" do
-      expect(page).to have_css("button.prev")
-      expect(page).to have_css("button.next")
       expect(page).to have_css(".viewport .container-images")
 
       within ".viewport .container-images" do

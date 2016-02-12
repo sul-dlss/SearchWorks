@@ -3,9 +3,25 @@ module CollectionHelper
     link_to(link_text, catalog_index_path(f: { collection: [document[:id]] }))
   end
 
+  def collection_members_path(document, options={})
+    catalog_index_path(f: { collection: [document[:id]] })
+  end
+
   def collection_members_enumeration(document)
     if document.collection_members.present?
       "#{pluralize(document.collection_members.total, 'item')} online"
+    end
+  end
+
+  def text_for_inner_members_link(document)
+    if document.collection_members.present?
+      if document.collection_members.total == 1
+        return "View this item"
+      elsif document.collection_members.total == 2
+        return "View both items"
+      else
+        return "View all #{document.collection_members.total} items"
+      end
     end
   end
 

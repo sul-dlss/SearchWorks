@@ -17,6 +17,12 @@ describe CollectionHelper do
       expect(collections_search_params[:f][:collection_type]).to eq ["Digital Collection"]
     end
   end
+  describe "#collection_members_path" do
+    let(:document) { SolrDocument.new(id: '1234') }
+    it "should link document id" do
+      expect(collection_members_path(document)).to match /.*collection.*=1234.*/
+    end
+  end
   describe "#collection_members_enumeration" do
     let(:document) { SolrDocument.new }
     let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
@@ -28,6 +34,32 @@ describe CollectionHelper do
     end
     it "should return the correct number of document including the #total" do
       expect(collection_members_enumeration(document)).to eq "5 items online"
+    end
+    it "should not return anything if an document does not have collection members" do
+      expect(collection_members_enumeration(no_collection_doc)).to be_nil
+    end
+  end
+  describe "#text_for_inner_members_link" do
+    let(:document) { SolrDocument.new }
+    let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
+    let(:no_collection_doc) { SolrDocument.new }
+    before do
+      allow(no_collection_doc).to receive(:collection_members_length_1).and_return([])
+    end
+    it "should return appropriate text for one item" do
+      allow(collection_members).to receive(:total).and_return(1)
+      allow(document).to receive(:collection_members).and_return(collection_members)
+      expect(text_for_inner_members_link(document)).to eq "View this item"
+    end
+    it "should return appropriate text for two items" do
+      allow(collection_members).to receive(:total).and_return(2)
+      allow(document).to receive(:collection_members).and_return(collection_members)
+      expect(text_for_inner_members_link(document)).to eq "View both items"
+    end
+    it "should return the correct number of document including the #total if greater than 2" do
+      allow(collection_members).to receive(:total).and_return(3)
+      allow(document).to receive(:collection_members).and_return(collection_members)
+      expect(text_for_inner_members_link(document)).to eq "View all 3 items"
     end
     it "should not return anything if an document does not have collection members" do
       expect(collection_members_enumeration(no_collection_doc)).to be_nil
