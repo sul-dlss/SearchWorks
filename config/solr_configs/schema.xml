@@ -208,6 +208,7 @@
     <field name="preferred_barcode" type="string" indexed="false" stored="true" />
     <field name="access_facet" type="string" indexed="true" stored="false" multiValued="true" />
     <field name="building_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="location_facet" type="string" indexed="true" stored="false" multiValued="true" />
     <!-- barcode -|- lib -|- location -|- lopped_callnum -|- shelfkey -|- reverse_shelfkey -|- full_callnum -|- callnum_show_sort  -->
     <field name="item_display" type="string" indexed="false" stored="true" multiValued="true" />
 

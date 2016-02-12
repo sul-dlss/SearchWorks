@@ -826,6 +826,8 @@
       <str name="facet.field">author_other_facet</str>
       <str name="facet.field">building_facet</str>
         <str name="f.building_facet.facet.method">enum</str>
+      <str name="facet.field">location_facet</str>
+        <str name="f.location_facet.facet.method">enum</str>
       <str name="facet.field">callnum_top_facet</str>
         <str name="f.callnum_top_facet.facet.method">enum</str>
         <str name="facet.field">lc_alpha_facet</str>

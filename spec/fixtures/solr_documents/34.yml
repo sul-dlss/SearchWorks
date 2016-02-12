@@ -13,4 +13,7 @@
 :beginning_year_isi: 2007
 :imprint_display: 2008
 :druid: mf774fs2413
-
+:building_facet:
+  - "Art & Architecture (Bowes)"
+:location_facet:
+  - "Art Locked Stacks"
