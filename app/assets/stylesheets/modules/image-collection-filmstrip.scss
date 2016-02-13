@@ -1,43 +1,12 @@
 .image-filmstrip {
   border: 1px solid $sul-filmstrip-border;
-  border-radius: 3px;
   background-color: $sul-filmstrip-bg;
   bottom: 0;
   box-sizing: border-box;
   margin-bottom: 10px;
-  padding: 0 20px 20px 20px;
   position: relative;
   width: 95%;
   -moz-border-sizing: border-box;
-
-  .prev, .next {
-    background-color: #fff;
-    border-radius: 25px;
-    opacity: 0.9;
-    outline: none;
-    position: absolute;
-    padding: 4px 7px;
-    top: 50px;
-    z-index: 10000;
-  }
-
-  .prev {
-    left: 5px;
-  }
-
-  .next {
-    right: 5px;
-  }
-
-  .members-number {
-    position: absolute;
-    padding: 3px 5px;
-    top: -10px;
-    left: 45%;
-    a {
-      color: white;
-    }
-  }
 
   .viewport {
     clear: both;
@@ -74,6 +43,9 @@
           width: 80%;
         }
 
+        a.collection-all-items-link {
+            line-height:1.5em;
+        }
       }
 
       li:first-child {
@@ -82,12 +54,14 @@
 
       li:last-child {
         margin-right: 0;
+        width:100px;
+        height:100px;
+        padding:27px;
+        text-align: center;
+        span {
+            color:#666;
+        }
       }
     }
   }
-
-  .label-items-online {
-    @include label-items-online;
-  }
-
 }

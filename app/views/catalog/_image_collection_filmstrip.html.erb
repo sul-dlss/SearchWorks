@@ -3,39 +3,40 @@
   preview_container = 'preview-filmstrip-container-' + collection_document[:id]
 %>
 
-<div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
+<div class="clearfix collection-result-preview">
+  <a class="label label-items-online" href="<%= collection_members_path(collection_document) %>">
+    <span>
+      <%= text_for_inner_members_link(collection_document) %>
+    </span>
+  </a>
 
-  <button class="btn btn-default btn-sm prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </button>
+  <div class="col-md-12 image-filmstrip" data-thumb-width="100" data=thumb-height="100">
+    <div class="viewport">
+      <ul class="container-images">
+        <% collection_document.collection_members.documents.each do |document| %>
 
-  <span class="members-number label label-items-online">
-    <%= link_to_collection_members(collection_members_enumeration(collection_document), collection_document) %>
-  </span>
-
-  <div class="viewport">
-    <ul class="container-images">
-      <% collection_document.collection_members.documents.each do |document| %>
-
-        <% unless document.image_urls.blank? %>
-          <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
+            <% unless document.image_urls.blank? %>
+            <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
             <a href="<%= catalog_path(document[:id]) %>">
-              <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
+            <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
             </a>
             <% if document.image_urls.length > 1 %>
-              <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+            <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
             <% end %>
-          </li>
+            </li>
+            <% end %>
+
         <% end %>
 
-      <% end %>
-    </ul>
+        <li>
+            <a class="collection-all-items-link" href="<%= collection_members_path(collection_document) %>">
+                <%= text_for_inner_members_link(collection_document) %>
+            </a>
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </li>
+
+      </ul>
+    </div>
+    <div class="<%= preview_container %>"></div>
   </div>
-
-  <div class="<%= preview_container %>"></div>
-
-  <button class="btn btn-default btn-sm next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </button>
-
 </div>

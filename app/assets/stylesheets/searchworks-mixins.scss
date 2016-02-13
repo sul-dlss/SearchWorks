@@ -52,11 +52,15 @@
 
 @mixin label-items-online {
   @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
+  display:inline-block;
   color: $white;
-  font-size: 12px;
+  font-size: 0.9em;
   font-weight: normal;
-  padding: 4px 8px;
-
+  border-radius: 2px;
+  width:10.5em;
+  padding: 2px 10px;
+  text-align:left;
+  line-height:normal;
   a {
     border-bottom: none;
     color: white;
