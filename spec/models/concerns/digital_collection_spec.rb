@@ -27,14 +27,7 @@ describe DigitalCollection do
     before do
       allow(Blacklight).to receive(:solr).and_return(stub_solr)
     end
-    it "should take a rows option" do
-      expect(Blacklight.solr).to receive(:select).with(rows_params).and_return(stub_response)
-      expect(collection_members_with_rows.documents).to be_present
-    end
-    it "should pass the rows option through collection_members" do
-      expect(Blacklight.solr).to receive(:select).with(small_rows_params).and_return(stub_response)
-      expect(collection.collection_members(rows: 3)).to be_present
-    end
+
     describe "#documents" do
       it "solr documents should return collection members" do
         expect(collection.collection_members).to be_a(DigitalCollection::CollectionMembers)
@@ -58,6 +51,52 @@ describe DigitalCollection do
     end
     it "should return nil for a non-collection" do
       expect(non_collection.collection_members).to be_nil
+    end
+  end
+
+  describe '#render_type' do
+    before do
+      allow(collection.collection_members).to receive_messages(documents: documents)
+    end
+    context 'when the majority of items have an image' do
+      let(:documents) do
+        [
+          double('Document', image_urls: ['http:example.com/1']),
+          double('Document', image_urls: ['http:example.com/2']),
+          double('Document', image_urls: nil)
+        ]
+      end
+      it 'is filmstrip' do
+        expect(collection.collection_members.render_type).to eq 'filmstrip'
+      end
+    end
+
+    context 'when the number of items that have images is equal to the number without' do
+      let(:documents) do
+        [
+          double('Document', image_urls: ['http:example.com/1']),
+          double('Document', image_urls: ['http:example.com/2']),
+          double('Document', image_urls: nil),
+          double('Document', image_urls: nil)
+        ]
+      end
+
+      it 'is filmstrip' do
+        expect(collection.collection_members.render_type).to eq 'filmstrip'
+      end
+    end
+
+    context 'when the majority of items do not have an image' do
+      let(:documents) do
+        [
+          double('Document', image_urls: ['http:example.com/1']),
+          double('Document', image_urls: nil),
+          double('Document', image_urls: nil)
+        ]
+      end
+      it 'is list' do
+        expect(collection.collection_members.render_type).to eq 'list'
+      end
     end
   end
 end

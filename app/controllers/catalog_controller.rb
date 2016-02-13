@@ -22,7 +22,6 @@ class CatalogController < ApplicationController
 
   helper Openseadragon::OpenseadragonHelper
 
-  before_filter :add_show_partials
   before_filter :set_search_query_modifier, only: :index
 
   before_action only: :index do
@@ -436,9 +435,4 @@ class CatalogController < ApplicationController
   def set_search_query_modifier
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
-
-  def add_show_partials
-    blacklight_config.show.partials += ["record/record_metadata"]
-  end
-
 end

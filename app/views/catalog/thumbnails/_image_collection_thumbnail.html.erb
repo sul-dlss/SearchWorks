@@ -1,3 +1,0 @@
-<% if document_index_view_type == :gallery && document.collection_members.present?  %>
-  <%= image_tag(document.collection_members.first.image_urls(:large).first, class: 'stacks-image', alt: '') if document.collection_members.first.image_urls.present? %>
-<% end %>

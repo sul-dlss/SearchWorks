@@ -1,6 +1,0 @@
-<% document ||= @document %>
-
-<div class="document-thumbnail">
-  <img class="stacks-image" src="<%= @document.image_urls(:large).first %>">
-</div>
-<%= render partial: "catalog/index_image", locals: { document: document } %>

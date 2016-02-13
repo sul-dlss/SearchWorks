@@ -4,6 +4,7 @@
 :author_person_display: Moss, Pollard
 :title_display: Officia consequat aliqua esse ipsum.
 :language: Russian
+:marcxml: <%= metadata1 %>
 :format: Image
 :format_main_ssim: Image
 :access_facet: Online

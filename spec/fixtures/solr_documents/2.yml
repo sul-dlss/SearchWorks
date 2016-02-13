@@ -6,6 +6,7 @@
 :language: English
 :pub_date: 2013
 :pub_year_tisim: 2013
+:marcxml: <%= metadata1 %>
 :access_facet: Online
 :building_facet: SAL3 (off-campus storage)
 :course: "CAT-401-01-01"
