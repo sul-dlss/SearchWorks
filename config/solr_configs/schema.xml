@@ -237,14 +237,17 @@
     <field name="modsxml" type="string" indexed="false" stored="true" />
     <!-- collection (facet and display): "sirsi" or, for DOR items, the id of their parent coll -->
     <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
+    <!-- set: the id (druid or ckey) of the set the item is in -->
+    <field name="set" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!-- collection_search: allow searching within collections for aggr. colls -->
     <field name="collection_search" type="string_punct_stop" indexed="true" stored="false" multiValued="true" omitNorms="true" />
     <!-- display_type is used by UI code, e.g. for Hydrus objects -->
     <field name="display_type" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!--  used to determine when something is a digital collection -->
     <field name="collection_type" type="string" indexed="true" stored="true" multiValued="true" />
-    <!--  easy way to indicate collection's parent in UI (may be deprecated in future) -->
+    <!--  easy way to indicate collection's parent and set in UI (may be deprecated in future) -->
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
+    <field name="set_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="img_info" type="string" indexed="false" stored="true" multiValued="true"/>
     <field name="file_id" type="string" indexed="false" stored="true" multiValued="true"/>
     <!-- *************** dynamic field types  ****************** -->

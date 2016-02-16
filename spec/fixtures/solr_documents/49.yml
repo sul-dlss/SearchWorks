@@ -1,0 +1,14 @@
+:id: 49
+:title_display: Another Virtual Object
+:format_main_ssim: Map
+:marcxml: <%= contributed_works_fixture %>
+:marcbib_xml: <%= contributed_works_fixture %>
+:display_type:
+  - image
+:file_id:
+  - jw923xn5254%2F2542B.jp2
+:druid: hj097bm8879
+:collection:
+  - '47'
+:collection_with_title:
+  - '47 -|- A Collection of Virtual Objects'

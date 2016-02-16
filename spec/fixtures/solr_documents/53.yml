@@ -1,0 +1,18 @@
+:id: 53
+:title_display: Another item in a another virtual object
+:format_main_ssim: Map
+:marcxml: <%= marc_382_instrumentation %>
+:marcbib_xml: <%= marc_382_instrumentation %>
+:display_type:
+  - image
+:file_id:
+  - ty335fg4673%2F2542004.jp2
+:druid: ty335fg4673
+:collection:
+  - '47'
+:collection_with_title:
+  - '47 -|- A Collection of Virtual Objects'
+:set:
+  - '49'
+:set_with_title:
+  - '49 -|- Another Virtual Object'
