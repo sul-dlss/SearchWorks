@@ -53,7 +53,9 @@ module DigitalCollection
     end
 
     def number_of_documents_with_image_urls
-      documents.count(&:image_urls)
+      documents.count do |doc|
+        doc.image_urls.present?
+      end
     end
 
     def number_of_documents_without_image_urls

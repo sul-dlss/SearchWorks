@@ -8,9 +8,15 @@ module StacksImages
   # @param [String] image_id
   # @param [Symbol] size
   # @return [String]
-  def craft_image_url(druid, image_id, size)
-    image_id = image_id.gsub(/\.jp2$/, '')
-    "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{image_id}/#{image_dimensions[size]}"
+  def craft_image_url(opts = {})
+    druid = opts[:druid]
+    image_id = opts[:image_id].gsub(/\.jp2$/, '')
+    size = image_dimensions[opts[:size]] || image_dimensions[:default]
+    if druid
+      "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{image_id}/#{size}"
+    else
+      "#{Settings.STACKS_URL}/iiif/#{image_id}/#{size}"
+    end
   end
 
   # Size definitions for stacks IIIF urls
