@@ -570,6 +570,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def title_change_fixture
     <<-xml
       <record>
@@ -577,95 +578,58 @@ module MarcMetadataFixtures
           <subfield code="t">This is the t subfield for 780</subfield>
           <subfield code="x">subfield X</subfield>
         </datafield>
-        <datafield tag="785" ind1="0" ind2="0">
+        <datafield tag="785" ind1="0" ind2="5">
           <subfield code="t">This is the t subfield for 785</subfield>
           <subfield code="x">subfield X</subfield>
         </datafield>
       </record>
     xml
   end
-  def title_change_alt_subs_fixture
+
+  def main_entry_and_title_serial_fixture
     <<-xml
       <record>
         <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="t">This is the t subfield for 780</subfield>
-          <subfield code="z">780 subfield Z</subfield>
+          <subfield code="a">Serial Main Entry</subfield>
+          <subfield code="t">Serial Title</subfield>
+          <subfield code="s">Serial Uniform Title</subfield>
         </datafield>
-        <datafield tag="785" ind1="0" ind2="0">
-          <subfield code="s">785 subfield S</subfield>
-          <subfield code="t">This is the t subfield for 785</subfield>
+        <datafield tag="774" ind1="0" ind2="0">
+          <subfield code="i">Some text:</subfield>
+          <subfield code="z">Serial ISSN</subfield>
         </datafield>
       </record>
     xml
   end
-  def title_change_sub_w_fixture
+
+  def only_title_serial_fixture
     <<-xml
       <record>
         <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="t">This is the t subfield for 780</subfield>
-          <subfield code="w">subfield W</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="0">
-          <subfield code="t">This is the t subfield for 785</subfield>
-          <subfield code="w">subfield W</subfield>
+          <subfield code="i">Other Data:</subfield>
+          <subfield code="t">Serial Title</subfield>
+          <subfield code="s">Serial Uniform Title</subfield>
         </datafield>
       </record>
     xml
   end
-  def title_change_ind2_fixture
+
+  def merged_with_serial_fixture
     <<-xml
       <record>
         <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the t subfield for 785</subfield>
-          <subfield code="x">subfield X</subfield>
+          <subfield code="a">Serial Main Entry1</subfield>
         </datafield>
         <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the 2nd t subfield for 785</subfield>
-          <subfield code="x">second subfield X</subfield>
+          <subfield code="a">Serial Main Entry2</subfield>
+        </datafield>
+        <datafield tag="785" ind1="0" ind2="7">
+          <subfield code="z">Serial Main Entry3</subfield>
         </datafield>
       </record>
     xml
   end
-  def title_change_3_785_fixture
-    <<-xml
-      <record>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the t subfield for 785</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the 2nd t subfield for 785</subfield>
-          <subfield code="x">second subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the 3rd t subfield for 785</subfield>
-          <subfield code="x">third subfield X</subfield>
-        </datafield>
-      </record>
-    xml
-  end
-  def complex_title_change_fixture
-    <<-xml
-      <record>
-        <datafield tag="785" ind1="0" ind2="2">
-          <subfield code="t">This is the t subfield for 785 ind2 = 2</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the t subfield for 785</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="t">This is the 2nd t subfield for 785</subfield>
-          <subfield code="x">second subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="8">
-          <subfield code="t">This is the t subfield for 785 ind2 = 8</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-      </record>
-    xml
-  end
+
   def single_marc_264_fixture
     <<-xml
       <record>

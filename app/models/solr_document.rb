@@ -25,6 +25,7 @@ class SolrDocument
   include MarcBoundWithNote
   include SolrBookplates
   include Citable
+  include MarcLinkedSerials
 
   include Blacklight::Solr::Document
 

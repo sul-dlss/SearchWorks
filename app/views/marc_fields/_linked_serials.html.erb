@@ -1,0 +1,12 @@
+<% linked_serials.values.each do |value| %>
+  <dt><%= value[:label] %></dt>
+  <dd>
+    <% value[:values].each do |val|%>
+      <% if val[:link] %>
+        <%= link_to(val[:link], catalog_index_path(q: (val[:href] || val[:link]), search_field: val[:search_field])) %>
+      <% else %>
+        <%= val[:text] %>
+      <% end %>
+    <% end %>
+  </dd>
+<% end %>

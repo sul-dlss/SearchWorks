@@ -354,73 +354,7 @@ describe MarcHelper do
       expect(get_related_works_from_marc(document.to_marc,"Label","740")).to be_nil
     end
   end
-  describe "#title_change_data_from_marc" do
-    let(:title_change) { SolrDocument.new(marcxml: title_change_fixture) }
-    let(:title_change_alt_subs) { SolrDocument.new(marcxml: title_change_alt_subs_fixture) }
-    let(:title_change_sub_w) { SolrDocument.new(marcxml: title_change_sub_w_fixture) }
-    let(:title_change_ind2) { SolrDocument.new(marcxml: title_change_ind2_fixture) }
-    let(:title_change_3_785) { SolrDocument.new(marcxml: title_change_3_785_fixture) }
-    let(:complex_title_change) { SolrDocument.new(marcxml: complex_title_change_fixture) }
-    it "should translate the second indicator into an appropriate label" do
-      data = title_change_data_from_marc(title_change.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:label]).to eq "Continues"
-      expect(data.last[:label]).to eq "Continued by"
-    end
-    it "should link the t subfield" do
-      data = title_change_data_from_marc(title_change.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:field]).to match(/<a href=.*search_title.*>This is the t subfield for 780<\/a>/)
-      expect(data.last[:field]).to match(/<a href=.*search_title.*>This is the t subfield for 785<\/a>/)
-    end
-    it "should display non link text for subfields other that x and t" do
-      data = title_change_data_from_marc(title_change_alt_subs.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:field]).to match(/780 subfield Z/)
-      expect(data.first[:field]).to_not match(/<a.*>.*780 subfield Z.*<\/a>/)
 
-      expect(data.last[:field]).to match(/785 subfield S/)
-      expect(data.last[:field]).to_not match(/<a.*>.*785 subfield S.*<\/a>/)
-    end
-    it "should not display the w subfield" do
-      data = title_change_data_from_marc(title_change_sub_w.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:field]).to_not match(/subfield W/)
-      expect(data.last[:field]).to_not match(/subfield W/)
-    end
-    it "should link the x subfield as an everything search" do
-      data = title_change_data_from_marc(title_change.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:field]).to match(/\(<a href=.*search_field=search.*>subfield X<\/a>\)/)
-      expect(data.last[:field]).to match(/\(<a href=.*search_field=search.*>subfield X<\/a>\)/)
-    end
-    it "should handle 785 ind2 7 correctly" do
-      data = title_change_data_from_marc(title_change_ind2.to_marc)
-      expect(data.length).to eq 2
-      expect(data.first[:label]).to eq "Merged with"
-      expect(data.last[:label]).to eq "to form"
-    end
-    it "should handle 785 ind2 7 correctly when there are 3 present" do
-      data = title_change_data_from_marc(title_change_3_785.to_marc)
-      expect(data.length).to eq 3
-      expect(data.first[:label]).to eq "Merged with"
-      expect(data.first[:field]).to match(/This is the t subfield for 785/)
-
-      expect(data[1][:label]).to eq "and with"
-      expect(data[1][:field]).to match(/This is the 2nd t subfield for 785/)
-
-      expect(data.last[:label]).to eq "to form"
-      expect(data.last[:field]).to match(/This is the 3rd t subfield for 785/)
-    end
-    it "should handle 785 ind2 7 correctly when other 785s (not ind2 = 7) are present" do
-      data = title_change_data_from_marc(complex_title_change.to_marc)
-      expect(data.length).to eq 4
-      expect(data.first[:label]).to eq "Superseded by"
-      expect(data[1][:label]).to eq "Merged with"
-      expect(data[2][:label]).to eq "to form"
-      expect(data.last[:label]).to eq "Changed back to"
-    end
-  end
   describe "#marc_264" do
     let(:single) { SolrDocument.new(marcxml: single_marc_264_fixture ).to_marc }
     let(:multiple) { SolrDocument.new(marcxml: multiple_marc_264_fixture ).to_marc }
