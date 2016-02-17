@@ -66,6 +66,18 @@ class MarcField
     end
   end
 
+  def translate_relator_terms
+    relevant_fields.map do |field|
+      field.subfields = field.subfields.map do |subfield|
+        if subfield.code == '4'
+          subfield.tap { |s| s.value = Constants::RELATOR_TERMS[s.value] || s.value }
+        else
+          subfield
+        end
+      end
+    end
+  end
+
   def merge_matched_vernacular_fields
     relevant_fields.each_with_index do |field, index|
       next if field.tag =~ /^880/
@@ -113,7 +125,8 @@ class MarcField
       :remove_hidden_indicators,
       :merge_matched_vernacular_fields,
       :append_unmatched_vernacular_fields,
-      :remove_hidden_subfields
+      :remove_hidden_subfields,
+      :translate_relator_terms
     ]
   end
 
