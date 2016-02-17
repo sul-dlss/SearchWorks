@@ -15,6 +15,7 @@ describe MarcHelper do
     let(:standard_linking_doc) { SolrDocument.new(marcxml: linking_fields_fixture ) }
     let(:linked_ckey_590_record) { SolrDocument.new(marcxml: linked_ckey_fixture ) }
     let(:special_character_record) { SolrDocument.new(marcxml: escape_characters_fixture ) }
+    let(:relator_vern_record) { SolrDocument.new(marcxml: marc_sections_fixture ) }
     describe "get" do
       it "should display a valid definition list row" do
         field = get_data_with_label_from_marc(document.to_marc, "Label:", "520")
@@ -56,6 +57,13 @@ describe MarcHelper do
         expect(data[:fields].first[:field]).to match(/This is not Vernacular/) and
         expect(data[:fields].first[:vernacular]).to match(/This is Vernacular/)
       end
+
+      it 'should not include relator terms in the vernacular' do
+        data = get_data_with_label_from_marc(relator_vern_record.to_marc, 'Label', '700')
+        expect(data[:fields].length).to eq 1
+        expect(data[:fields].first[:vernacular]).to_not match(/Performer|prf/)
+      end
+
       it "should handle bad vernacular records correctly" do
         bad_600 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","600")
         bad_245 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","245")
@@ -412,6 +420,36 @@ describe MarcHelper do
     end
     it 'should be blank when no data is present' do
       expect(results_imprint_string(no_fields)).to be_blank
+    end
+  end
+
+  describe '#link_to_author_from_marc' do
+    let(:label) { nil }
+    let(:document) { SolrDocument.new(marcxml: relator_code_fixture) }
+    let(:subject) { link_to_author_from_marc(document.to_marc, label: label) }
+
+    describe 'label' do
+      context 'when provided' do
+        let(:label) { 'Provided Label' }
+
+        it 'is used' do
+          expect(subject[:label]).to eq 'Provided Label'
+        end
+      end
+
+      context 'when not provided' do
+        it 'defaults to "Author/Creator"' do
+          expect(subject[:label]).to eq 'Author/Creator'
+        end
+      end
+    end
+
+    describe 'relator terms' do
+      it 'are translated' do
+        expect(subject[:fields].length).to eq 1
+        link = subject[:fields].first[:field]
+        expect(link).to match(%r{<a href="/\?q=%22100\+%24a%22.*">100 \$a</a> Performer})
+      end
     end
   end
 

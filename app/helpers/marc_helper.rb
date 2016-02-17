@@ -151,7 +151,7 @@ module MarcHelper
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
             vernacular = get_marc_vernacular(marc,field)
             temp_vern = "\"#{vernacular}\""
-            temp_text << "#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?
+            temp_text << "<br/>#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?
             contributors << temp_text
           end
         end
@@ -202,9 +202,8 @@ module MarcHelper
           match_880 = field['6'].split("-")[1].gsub("//r","")
           if match_original == match_880 and field_original == field_880
             field.each do |sub|
-              if !Constants::EXCLUDE_FIELDS.include?(sub.code)
-                return_text << sub.value
-              end
+              next if Constants::EXCLUDE_FIELDS.include?(sub.code) || sub.code == '4'
+              return_text << sub.value
             end
           end
         end
@@ -496,8 +495,11 @@ module MarcHelper
       marc["100"].each do |sub_field|
         unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
           subs << sub_field.code
-          if subs.include?("e") or subs.include?("4")
+          case
+          when subs.include?('e')
             extra << sub_field.value
+          when subs.include?('4')
+            extra << Constants::RELATOR_TERMS[sub_field.value] || sub_field.value
           else
             link << sub_field.value
           end
