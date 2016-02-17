@@ -8,10 +8,10 @@
 %>
 
 <div class="accordion-section online <%= visible %>">
-  <a class="header" data-accordion-section-target=".<%= id %>-online">
+  <button class="header" data-accordion-section-target=".<%= id %>-online" aria-expanded="false">
     <span class="section-label">Online</span>
     <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+  </button>
   <span class="snippet <%= id %>-online-snippet" data-behavior="trunk8">
     <% if snippet_link %>
       <span class="<%= 'stanford-only' if snippet_link.stanford_only? %>">
@@ -19,7 +19,7 @@
       </span>
     <% end %>
   </span>
-  <div class="details <%= id %>-online">
+  <div class="details <%= id %>-online" aria-expanded="false">
     <ul class="links" data-long-list data-list-type="online">
       <% if document.access_panels.online? %>
         <% document.access_panels.online.links.each do |link| %>

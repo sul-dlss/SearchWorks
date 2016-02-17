@@ -18,8 +18,8 @@ describe "catalog/_accordion_section_online.html.erb" do
 
     it "should include the online accordion and text" do
       expect(rendered).to have_css('.accordion-section.online')
-      expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
-      expect(rendered).to have_css('.details .google-books')
+      expect(rendered).to have_css('.accordion-section.online button.header[aria-expanded="false"]', text: "Online")
+      expect(rendered).to have_css('.details[aria-expanded="false"] .google-books')
       expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
     end
     it 'should include the first link in the snippet' do

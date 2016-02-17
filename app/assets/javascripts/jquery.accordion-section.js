@@ -19,17 +19,21 @@
       attachEvents();
 
       function attachEvents() {
-        $header.on('click', $.proxy(function() {
+        $header.on('click', $.proxy(function(event) {
           var $arrow = $header.find('span.glyphicon');
 
           if ($arrow.hasClass(clsAccordionClose)) {
             $arrow.removeClass(clsAccordionClose).addClass(clsAccordionOpen);
             $target.show();
             $snippet.hide();
+            $target.attr('aria-expanded', true);
+            $(event.target).attr('aria-expanded', true);
           } else {
             $arrow.removeClass(clsAccordionOpen).addClass(clsAccordionClose);
             $target.hide();
             $snippet.show();
+            $target.attr('aria-expanded', false);
+            $(event.target).attr('aria-expanded', false);
           }
         }, this));
       }
