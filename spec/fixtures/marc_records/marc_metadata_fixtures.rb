@@ -950,4 +950,18 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def organization_and_arrangement_fixture
+    <<-xml
+      <record>
+        <datafield tag="351">
+          <subfield code="3">351 $3</subfield>
+          <subfield code="c">351 $c</subfield>
+          <subfield code="a">351 $a</subfield>
+          <subfield code="b">351 $b</subfield>
+          <subfield code="z">351 $z</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

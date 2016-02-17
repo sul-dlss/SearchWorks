@@ -109,4 +109,10 @@ describe SolrDocument do
       expect(subject).to be_kind_of MarcSeries
     end
   end
+
+  describe 'MarcOrganizationAndArrangement' do
+    it 'adds the organization_and_arrangement method' do
+      expect(subject).to respond_to :organization_and_arrangement
+    end
+  end
 end
