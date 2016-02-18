@@ -75,4 +75,9 @@ class SolrDocument
     self[:img_info] || self[:file_id] || []
   end
 
+  concerning :MarcOrganizationAndArrangmenet do
+    def organization_and_arrangement
+      @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
+    end
+  end
 end

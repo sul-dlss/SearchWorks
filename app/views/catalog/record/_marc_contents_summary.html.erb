@@ -1,8 +1,11 @@
 <% document ||= @document %>
+
 <% if document.marc_links.finding_aid.present? %>
   <dt title="Finding aid">Finding aid</dt>
   <dd><%= document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
 <% end %>
+
+<%= render document.organization_and_arrangement if document.organization_and_arrangement.present? %>
 
 <% biblio = get_data_with_label_from_marc(document.to_marc, "Bibliography", '504') %>
 <% unless biblio.nil? %>
@@ -14,7 +17,7 @@
   <dt><%= toc[:label] %></dt>
   <dd>
     <%- unless toc[:fields].nil? -%>
-      <%- toc[:fields].each do |toc_field| -%>  
+      <%- toc[:fields].each do |toc_field| -%>
         <ul class="toc">
           <%- toc_field.each do |field| -%>
             <li><%= field %></li>
@@ -25,7 +28,7 @@
     <%- unless toc[:vernacular].nil? -%>
       <%- toc[:vernacular].each do |toc_field| -%>
         <ul class="toc">
-          <%- toc_field.each do |field| -%>  
+          <%- toc_field.each do |field| -%>
             <li><%= field %></li>
           <%- end -%>
         </ul>
@@ -34,7 +37,7 @@
     <%- unless toc[:unmatched_vernacular].nil? -%>
       <%- toc[:unmatched_vernacular].each do |toc_field| -%>
         <ul class="toc">
-          <%- toc_field.each do |field| -%>  
+          <%- toc_field.each do |field| -%>
             <li><%= field %></li>
           <%- end -%>
         </ul>

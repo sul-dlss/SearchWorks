@@ -5,6 +5,8 @@ en:
         label: Imprint
       linked_series:
         label: Series
+      organization_and_arrangement:
+        label: 'Organization & arrangement'
       unlinked_series:
         label: Series
       default:

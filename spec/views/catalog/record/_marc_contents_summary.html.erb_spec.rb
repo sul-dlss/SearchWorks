@@ -4,6 +4,31 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
   include MarcMetadataFixtures
   include Marc856Fixtures
 
+  describe 'Organization & arrangement' do
+    context 'when present' do
+      before do
+        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture) )
+        render
+      end
+
+      it 'is rendered when present' do
+        expect(rendered).to have_css('dt', text: 'Organization & arrangement')
+        expect(rendered).to have_css('dd', text: '351 $3 351 $c 351 $a 351 $b')
+      end
+    end
+
+    context 'when not present' do
+      before do
+        assign(:document, SolrDocument.new(marcxml: finding_aid_856) )
+        render
+      end
+
+      it 'is not renedered' do
+        expect(rendered).to_not have_css('dt', text: 'Organization & arrangement')
+      end
+    end
+  end
+
   describe "finding aids" do
     before do
       assign(:document, SolrDocument.new(marcxml: finding_aid_856) )
