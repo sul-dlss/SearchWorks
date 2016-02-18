@@ -7,15 +7,15 @@ describe "MHLD", feature: true do
 
       within('[data-hours-route="/hours/CHEMCHMENG"]') do
         expect(page).to have_css('.location-name', text: 'Current periodicals')
-        expect(page).to have_css('li.mhld', text: 'public note2')
-        expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: latest received2')
-        expect(page).to have_css('li.mhld', text: 'Library has: library has2')
+        expect(page).to have_css('.mhld', text: 'public note2')
+        expect(page).to have_css('.mhld.note-highlight', text: 'Latest: latest received2')
+        expect(page).to have_css('.mhld', text: 'Library has: library has2')
       end
       within('[data-hours-route="/hours/GREEN"]') do
         expect(page).to have_css('.location-name', text: 'Stacks')
-        expect(page).to have_css('li.mhld', text: 'public note3')
-        expect(page).to have_css('li.mhld.note-highlight', text: 'Latest: latest received3')
-        expect(page).to have_css('li.mhld', text: 'Library has: library has3')
+        expect(page).to have_css('.mhld', text: 'public note3')
+        expect(page).to have_css('.mhld.note-highlight', text: 'Latest: latest received3')
+        expect(page).to have_css('.mhld', text: 'Library has: library has3')
       end
     end
   end

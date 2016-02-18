@@ -1,4 +1,32 @@
+.note-highlight {
+  padding: 2px 5px;
+  background-color: $public-note-yellow;
+  &.bound-with-note {
+    margin-left: 10px;
+  }
+}
+
 .availability {
+  width: 100%;
+
+  &.record-view {
+    margin-top: 4px;
+    margin-bottom: 15px;
+  }
+
+  tr td:first-child {
+    width: 60%;
+  }
+
+  td {
+    padding: 2px 5px 5px 0;
+    vertical-align: top;
+  }
+
+  .availability-icon-wrapper {
+    white-space: nowrap;
+  }
+
   .availability-icon {
     width: 1.2em;
   }
@@ -9,13 +37,5 @@
   }
   .current-location {
     color: $sul-availability-current-location-color;
-    margin-right: 0.5em;
-  }
-  .note-highlight {
-    padding: 2px 5px;
-    background-color: $public-note-yellow;
-    &.bound-with-note {
-      margin-left: 10px;
-    }
   }
 }
