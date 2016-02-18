@@ -37,7 +37,7 @@ class Holdings
       end
 
       def type_is_default_noncirc?
-        ["REF", "NONCIRC", "LIBUSEONLY"].include?(@callnumber.type)
+        %w(LIBUSEONLY NH-INHOUSE NONCIRC REF).include?(@callnumber.type)
       end
 
       def sanitized_library

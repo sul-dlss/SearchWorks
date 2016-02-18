@@ -22,7 +22,8 @@ describe Holdings::Status::Noncirc do
       let(:noncirc_types) {
         [OpenStruct.new(type: 'REF'),
          OpenStruct.new(type: 'NONCIRC'),
-         OpenStruct.new(type: 'LIBUSEONLY')
+         OpenStruct.new(type: 'LIBUSEONLY'),
+         OpenStruct.new(type: 'NH-INHOUSE')
         ]
       }
       let(:circ_type) { OpenStruct.new(type: "SOMETHING") }
