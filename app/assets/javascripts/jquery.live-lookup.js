@@ -27,8 +27,10 @@
             if ( live_data.due_date ) {
               current_location.append(' Due ' + live_data.due_date);
             }
-            if ( live_data.due_date && target.hasClass('unknown') ) {
+
+            if ( live_data.due_date && (target.hasClass('unknown') || target.hasClass('page')) ) {
               target.removeClass('unknown');
+              target.removeClass('page');
               target.addClass('unavailable');
               status_text.text(''); // The due date/current location acts as the status text at this point
               if (target.attr('title')) {
