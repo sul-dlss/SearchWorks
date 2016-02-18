@@ -7,7 +7,10 @@
 :marcxml: <%= metadata1 %>
 :format_main_ssim: Book
 :access_facet: At the Library
-:building_facet: Green
+:building_facet:
+  - "Art & Architecture (Bowes)"
+:location_facet:
+  - "Art Locked Stacks"
 :bookplates_display:
   - "SHARPS -|- druid:rq470hm8269 -|- rq470hm8269_00_0001.jp2 -|- Susan and Ruth Sharp Fund"
   - "BOYLESE -|- druid:qr382wm8668 -|- qr382wm8668_00_0001.jp2 -|- The Edgar Amos Boyles Centennial Book Fund"
