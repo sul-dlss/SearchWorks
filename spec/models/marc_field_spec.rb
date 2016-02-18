@@ -98,5 +98,24 @@ describe MarcField do
         end
       end
     end
+
+    describe 'relator codes' do
+      let(:marc) { relator_code_fixture }
+      let(:tags) { ['100'] }
+
+      context 'when a valid term' do
+        it 'translates the code to the appropriate term' do
+          expect(subject.values.length).to eq 2
+          expect(subject.values.first).to eq '100 $a Performer'
+        end
+      end
+
+      context 'when an invalid term' do
+        it 'dispalys the raw relator code' do
+          expect(subject.values.length).to eq 2
+          expect(subject.values.last).to eq '100 $a bad-relator'
+        end
+      end
+    end
   end
 end

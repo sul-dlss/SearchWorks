@@ -400,6 +400,22 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def relator_code_fixture
+    <<-xml
+      <record>
+        <datafield tag="100" ind1="1" ind2=" ">
+          <subfield code="a">100 $a</subfield>
+          <subfield code="4">prf</subfield>
+        </datafield>
+        <datafield tag="100" ind1="1" ind2=" ">
+          <subfield code="a">100 $a</subfield>
+          <subfield code="4">bad-relator</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def contributor_fixture
     <<-xml
       <record>
@@ -850,7 +866,13 @@ module MarcMetadataFixtures
           <subfield code="a">Unpublished listing available in the department.</subfield>
         </datafield>
         <datafield tag="700" ind1="1" ind2=" ">
+          <subfield code="6">880-01</subfield>
           <subfield code="a">Contributor</subfield>
+          <subfield code="4">prf</subfield>
+        </datafield>
+        <datafield tag="880" ind1="1" ind2=" ">
+          <subfield code="6">700-01</subfield>
+          <subfield code="a">Vernacular Contributor</subfield>
           <subfield code="4">prf</subfield>
         </datafield>
       </record>
