@@ -16,6 +16,18 @@
   <%= mods_record_field(description) %>
 <% end %>
 
+<% document.mods.extent.each do |extent| %>
+  <%= mods_record_field(extent) %>
+<% end %>
+
+<% document.mods.form.each do |form| %>
+  <%= mods_record_field(form) %>
+<% end %>
+
+<% document.mods.geo.each do |geo| %>
+  <%= mods_record_field(geo) %>
+<% end %>
+
 <% document.mods.cartographics.each do |cartographic| %>
   <%= mods_record_field(cartographic) %>
 <% end %>

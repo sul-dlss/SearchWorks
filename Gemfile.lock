@@ -217,9 +217,9 @@ GEM
       iso-639
       nokogiri
       nom-xml (~> 0.5.2)
-    mods_display (0.3.5)
+    mods_display (0.4.0)
       i18n
-      stanford-mods
+      stanford-mods (< 1.2.0)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     mysql2 (0.3.18)
@@ -420,7 +420,7 @@ DEPENDENCIES
   jquery-datatables-rails (~> 2.2.1)
   jquery-rails
   launchy
-  mods_display (~> 0.3.5)
+  mods_display (~> 0.4.0)
   mysql2
   newrelic_rpm
   nokogiri (~> 1.6.7)
