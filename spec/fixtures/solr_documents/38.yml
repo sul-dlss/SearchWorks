@@ -7,7 +7,7 @@
   - file
   - sirsi
 :format: File
-:format_main_ssim: File
+:format_main_ssim: Dataset
 :marcxml: <%= metadata1 %>
 :marcbib_xml: <%= metadata1 %>
 :pub_date: 2010
