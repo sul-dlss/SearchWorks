@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "sul-icon";
-  src: font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.eot");
-  src: font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.eot?#iefix") format("embedded-opentype"),
-       font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.woff") format("woff"),
-       font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.ttf") format("truetype"),
-       font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.svg#sul-icon") format("svg");
+  src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot");
+  src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot?#iefix") format("embedded-opentype"),
+       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.woff") format("woff"),
+       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.ttf") format("truetype"),
+       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "sul-icon";
-    src: font-url("sul-icon_2c1beaef4e00fbf5d0122c95a169831d.svg#sul-icon") format("svg");
+    src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
   }
 }
 
@@ -29,6 +29,7 @@
 .sul-icon-books-3:before,
 .sul-icon-bubble-2:before,
 .sul-icon-business-chart-1:before,
+.sul-icon-check-3:before,
 .sul-icon-contacts-1:before,
 .sul-icon-cube:before,
 .sul-icon-database-search:before,
@@ -39,12 +40,15 @@
 .sul-icon-film-3:before,
 .sul-icon-gramophone:before,
 .sul-icon-ipad-1:before,
+.sul-icon-link:before,
 .sul-icon-list-4:before,
+.sul-icon-mail-1:before,
 .sul-icon-map-location:before,
 .sul-icon-microphone-2:before,
 .sul-icon-mouse-2:before,
 .sul-icon-movie-play-2:before,
 .sul-icon-music-note-1:before,
+.sul-icon-network-web:before,
 .sul-icon-newspaper-1:before,
 .sul-icon-newspaper-2:before,
 .sul-icon-photos-1:before,
@@ -75,6 +79,7 @@
 .sul-icon-books-3:before { content: "\f11b"; }
 .sul-icon-bubble-2:before { content: "\f11c"; }
 .sul-icon-business-chart-1:before { content: "\f105"; }
+.sul-icon-check-3:before { content: "\f11d"; }
 .sul-icon-contacts-1:before { content: "\f11e"; }
 .sul-icon-cube:before { content: "\f101"; }
 .sul-icon-database-search:before { content: "\f107"; }
@@ -85,12 +90,15 @@
 .sul-icon-film-3:before { content: "\f10e"; }
 .sul-icon-gramophone:before { content: "\f10f"; }
 .sul-icon-ipad-1:before { content: "\f110"; }
+.sul-icon-link:before { content: "\f11f"; }
 .sul-icon-list-4:before { content: "\f120"; }
+.sul-icon-mail-1:before { content: "\f121"; }
 .sul-icon-map-location:before { content: "\f111"; }
 .sul-icon-microphone-2:before { content: "\f112"; }
 .sul-icon-mouse-2:before { content: "\f113"; }
 .sul-icon-movie-play-2:before { content: "\f114"; }
 .sul-icon-music-note-1:before { content: "\f115"; }
+.sul-icon-network-web:before { content: "\f124"; }
 .sul-icon-newspaper-1:before { content: "\f116"; }
 .sul-icon-newspaper-2:before { content: "\f117"; }
 .sul-icon-photos-1:before { content: "\f118"; }
@@ -101,6 +109,3 @@
 .sul-icon-text-wrapping-1:before { content: "\f103"; }
 .sul-icon-window-search:before { content: "\f106"; }
 .sul-icon-window-selection:before { content: "\f11a"; }
-
-.sul-icon-refworks { color: $sul-icon-refworks-color; }
-.sul-icon-endnote { color: $sul-icon-endnote-color; }

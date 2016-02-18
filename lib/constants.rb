@@ -1072,6 +1072,7 @@ module Constants
   SUL_ICONS = {
     'Object' => 'cube',
     'Archive/Manuscript' => 'document-box-1',
+    'Archived website' => 'network-web',
     'Article' => 'text-wrapping-1',
     'Book' => 'book-1',
     'Dataset' => 'business-chart-1',
@@ -1086,7 +1087,6 @@ module Constants
     'Software/Multimedia' => 'mouse-2',
     'Sound recording' => 'microphone-2',
     'Video' => 'film-2',
-    'Web Archive' => 'window-selection',
     'Credits' => 'contacts-1',
     'Subjects' => 'tags-1',
     'Contents' => 'list-4',
