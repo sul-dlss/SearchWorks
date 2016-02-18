@@ -40,13 +40,13 @@ describe "preview/_show_mods.html.erb" do
   end
 
   it "should display summary accordion section" do
-    expect(rendered).to have_css('.accordion-section.summary a.header', text: "Summary")
+    expect(rendered).to have_css('.accordion-section.summary button.header', text: "Summary")
     expect(rendered).to have_css('.accordion-section.summary .snippet', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
     expect(rendered).to have_css('.accordion-section.summary .details', text: "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet")
   end
 
   it "should display library accordion section" do
-    expect(rendered).to have_css('.accordion-section.location a.header', text: "At the library")
+    expect(rendered).to have_css('.accordion-section.location button.header', text: "Check availability")
     expect(rendered).to have_css('.accordion-section.location span.snippet', text: "Green Library")
     expect(rendered).to have_css('.accordion-section .details tbody tr', count: 2)
     expect(rendered).to have_css('.accordion-section .details tbody tr th', text: /Stacks/)
@@ -54,7 +54,7 @@ describe "preview/_show_mods.html.erb" do
   end
 
   it "should display online accordion section" do
-    expect(rendered).to have_css('.accordion-section.online a.header', text: "Online")
+    expect(rendered).to have_css('.accordion-section.online button.header', text: "Online")
     expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
   end
 

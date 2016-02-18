@@ -3,14 +3,14 @@
 <% if summary_data.present? %>
   <% id = document[:id] %>
   <div class="accordion-section summary">
-    <a class="header" data-accordion-section-target=".<%= id %>-summary">
+    <button class="header" data-accordion-section-target=".<%= id %>-summary" aria-expanded="false"">
       <span class="section-label">Summary</span>
       <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
+    </button>
     <div class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
       <%= summary_data %>
     </div>
-    <div class="details <%= id %>-summary">
+    <div class="details <%= id %>-summary" aria-expanded="false">
       <%= summary_data %>
     </div>
   </div>

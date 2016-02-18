@@ -24,9 +24,9 @@ describe "MHLD", feature: true do
       visit catalog_index_path(q: '10')
 
       within(first('.document')) do
-        expect(page).to have_content('At the library')
+        expect(page).to have_content('Check availability')
         within('.accordion-section.location') do
-          find('a.header').click
+          find('button.header').click
           expect(page).to have_css('tr th strong', text: 'Current periodicals')
           expect(page).to have_css('tr th', text: 'public note1')
           expect(page).to have_css('tr th', text: 'public note2')

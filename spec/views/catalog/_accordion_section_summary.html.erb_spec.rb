@@ -18,9 +18,9 @@ describe "catalog/_accordion_section_summary.html.erb" do
 
     it "should include the summary accordion and text" do
       expect(rendered).to have_css('.accordion-section.summary')
-      expect(rendered).to have_css('.accordion-section.summary a.header', text: "Summary")
+      expect(rendered).to have_css('.accordion-section.summary button.header[aria-expanded="false"]', text: "Summary")
       expect(rendered).to have_css('.accordion-section.summary .snippet', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
-      expect(rendered).to have_css('.accordion-section.summary .details', text: summary_text)
+      expect(rendered).to have_css('.accordion-section.summary .details[aria-expanded="false"]', text: summary_text)
     end
   end
   describe "Marc Summary" do
@@ -34,7 +34,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
     end
     it "should include the summary accordion section" do
       expect(rendered).to have_css('.accordion-section.summary')
-      expect(rendered).to have_css('.accordion-section.summary a.header', text: "Summary")
+      expect(rendered).to have_css('.accordion-section.summary button.header', text: "Summary")
     end
     it "should include the toc" do
       expect(rendered).to have_css('ul.toc li', text: '1.First Chapter')
@@ -55,7 +55,7 @@ describe "catalog/_accordion_section_summary.html.erb" do
     end
     it "should include the summary accordion section" do
       expect(rendered).to have_css('.accordion-section.summary')
-      expect(rendered).to have_css('.accordion-section.summary a.header', text: "Summary")
+      expect(rendered).to have_css('.accordion-section.summary button.header', text: "Summary")
     end
     it "should include the abstract data" do
       expect(rendered).to have_css('.accordion-section.summary', text: /Nunc venenatis et odio ac elementum/)

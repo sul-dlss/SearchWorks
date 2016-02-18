@@ -8,14 +8,14 @@
     snippet = document.access_panels.library_locations.libraries.map(&:name).join(', ')
   %>
   <div class="accordion-section location">
-    <a class="header" data-accordion-section-target=".<%= id %>-location">
-      <span class="section-label">At the library</span>
+    <button class="header" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">
+      <span class="section-label">Check availability</span>
       <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
+    </button>
     <span class="snippet <%= id %>-location-snippet" data-behavior="trunk8">
       <%= snippet %>
     </span>
-    <div class="details <%= id %>-location">
+    <div class="details <%= id %>-location" aria-expanded="false">
       <%= render :partial => "catalog/index_location", :locals => { :document => document } %>
     </div>
   </div>
