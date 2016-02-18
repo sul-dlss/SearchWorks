@@ -99,7 +99,7 @@ gem 'devise-remote-user'
 gem "blacklight-marc", "~> 5.0"
 gem "faraday"
 gem "config"
-gem "mods_display", "~> 0.3.5"
+gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
