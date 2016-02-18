@@ -6,7 +6,7 @@
 :display_type:
   - file
 :format: File
-:format_main_ssim: File
+:format_main_ssim: Dataset
 :modsxml: <%= mods_everything %>
 :pub_date: 2010
 :beginning_year_isi: 2010
