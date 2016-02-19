@@ -1,13 +1,13 @@
 <div id="topnav-container">
   <header id="topnav" class="header-logo" role="banner">
-    <%= link_to 'http://library.stanford.edu' do %>
-      <%= image_tag "sul-logo.png", class: "hidden-xs", alt: "Stanford University Libraries", height: 25 %>
-      <%= image_tag "sul-logo-small.png", class: "visible-xs", alt: "Stanford University Libraries", height: 25 %>
-    <% end %>
     <button class="btn-topbar-menu dropdown-toggle searchbar-topnav" type="button" data-toggle="dropdown" data-target="#searchbar-topnav-menu">
       <span class="sr-only">Menu</span>
       <span class="fa fa-bars"></span>
     </button>
+    <%= link_to 'http://library.stanford.edu' do %>
+      <%= image_tag "sul-logo.png", class: "hidden-xs", alt: "Stanford University Libraries", height: 25 %>
+      <%= image_tag "sul-logo-small.png", class: "visible-xs", alt: "Stanford University Libraries", height: 25 %>
+    <% end %>
     <%= render :partial => 'shared/search_navbar_top_menu' %>
     <div class="header-links">
       <% if current_user %>
