@@ -98,18 +98,21 @@
   }
 }
 
-@mixin stackmap-find-it {
-  background-color: $sul-location-panel-findit-btn-background;
-  border-color: $sul-location-panel-findit-btn-border;
+@mixin location-buttons {
+  background-color: $sul-location-panel-btn-background;
+  border-color: $sul-location-panel-btn-border;
   margin-right: 5px;
   color: $white;
-  i.fa-map-marker {
+
+  .fa-map-marker {
     font-size: 1.4em;
     margin-right: 2px;
   }
-  &:focus, &:hover {
-  background-color: $sul-location-panel-findit-btn-background-hover; 
-  border-color: $sul-location-panel-findit-btn-border-hover;
+
+  &:focus,
+  &:hover {
+    background-color: $sul-location-panel-btn-background-hover;
+    border-color: $sul-location-panel-btn-border-hover;
   }
 }
 

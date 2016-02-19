@@ -142,7 +142,7 @@
 
       .stackmap-find-it {
         font-weight: normal;
-        @include stackmap-find-it;
+        @include location-buttons;
       }
     }
   }
