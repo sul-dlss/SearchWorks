@@ -182,6 +182,9 @@ describe CatalogController do
       it 'should set an index sort for the building type facet' do
         expect(config.facet_fields['building_facet'].sort).to eq :index
       end
+      it 'should set an index sort for the database topic facet' do
+        expect(config.facet_fields['db_az_subject'].sort).to eq :index
+      end
     end
     describe "facet limits" do
       it "should set a very high facet limit on building and format" do
