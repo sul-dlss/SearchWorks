@@ -10,10 +10,6 @@
   display: table;
   padding: 2px 0;
 
-  a img {
-    float: left;
-  }
-
   .header-links {
     float: right;
     margin-top: 2px;
@@ -33,10 +29,11 @@
   }
 
   .btn-topbar-menu {
+    font-size: 1.7em;
     height: 25px;
-    margin-left: 20px;
-    font-size: 1.3em;
     margin-top: -2px;
+    padding-left: 0;
+    vertical-align: text-bottom;
   }
 
   &.open {
