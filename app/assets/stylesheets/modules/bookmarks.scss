@@ -2,6 +2,16 @@
   font-size: 0.9em;
 }
 
+.index-document-functions {
+  text-align: right;
+}
+
+label {
+  &.toggle_bookmark {
+    min-width: 0;
+  }
+}
+
 #select_all-dropdown {
   min-width: 7.5em;
   text-align: left;
