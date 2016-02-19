@@ -1,1 +1,3 @@
 HOSTNAME: "TEST-HOST"
+# Test needs to be under http otherwise jquery cannot be loaded
+PURL_EMBED_PROVIDER: 'http://embed.stanford.edu/embed'
