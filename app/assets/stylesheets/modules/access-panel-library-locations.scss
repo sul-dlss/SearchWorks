@@ -36,9 +36,9 @@
       }
     }
 
+    .request-button,
     .stackmap-find-it {
-      @include stackmap-find-it;
+      @include location-buttons;
     }
-
   }
 }

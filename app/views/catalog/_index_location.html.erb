@@ -32,7 +32,7 @@
               <% end %>
               <% if location.items.present? && !location.bound_with? %>
                 <% if location_level_request_link?(library, location) %>
-                  <%= link_to_request_link(document: document, callnumber: location.items.first, class: 'btn btn-info btn-xs') %>
+                  <%= link_to_request_link(document: document, callnumber: location.items.first, class: 'btn btn-default btn-xs request-button') %>
                 <% end %>
               <% end %>
             </td>
