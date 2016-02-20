@@ -71,7 +71,7 @@
                        <% end %>
                      </span>
                      <% if item.on_reserve? %>
-                       On Reserve <%= item.loan_period %>
+                       <%= item.loan_period %>
                      <% end %>
                      <span class="request-link">
                        <% if item.must_request? %>
