@@ -8,7 +8,7 @@ describe FixturesIndexer do
   end
   describe "run" do
     it "should index the fixtures and commit them" do
-      expect(stub_solr).to receive(:add).twice.with(subject.fixtures).and_return(true)
+      expect(stub_solr).to receive(:add).twice.and_return(true)
       expect(stub_solr).to receive(:commit).twice.and_return(true)
       FixturesIndexer.run
       subject.run
