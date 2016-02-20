@@ -35,10 +35,10 @@
         color: #990000;
       }
     }
-
-    .request-button,
-    .stackmap-find-it {
-      @include location-buttons;
-    }
   }
+}
+
+.request-button,
+.stackmap-find-it {
+  @include location-buttons;
 }

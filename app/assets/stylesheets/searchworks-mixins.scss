@@ -111,6 +111,7 @@
 
   &:focus,
   &:hover {
+    color: $white;
     background-color: $sul-location-panel-btn-background-hover;
     border-color: $sul-location-panel-btn-border-hover;
   }
