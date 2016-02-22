@@ -22,10 +22,9 @@
       this.startDoc = item.data('start');
       this.embedContainer = this.embedViewport.find('.gallery');
       this.url = item.data('url');
-      this.browseUrl = item.attr('href');
+      this.browseUrl = item.data('index-path');
       this.docs = [];
       this.currentDoc = this.startDoc;
-      this.updateHref();
     };
 
     GalleryDocs.prototype.updateDocs = function() {
@@ -50,11 +49,6 @@
     // Returns the position of the $galleryDoc.currentDoc in $galleryDoc.docs
     GalleryDocs.prototype.currentPosition = function() {
       return $.inArray(this.currentDoc, this.docs);
-    };
-
-    // Updates the href to activate plugin for javascript enabled browsers
-    GalleryDocs.prototype.updateHref = function() {
-      this.item.attr("href", this.item.data('embed-viewport'));
     };
 
     // Calculates how many docs can be viewed in the viewport
@@ -108,14 +102,18 @@
       function openThisBrowser() {
         if ($galleryDoc.item.hasClass('collapsed')){
           $galleryDoc.item.removeClass('collapsed').addClass('active');
+          $galleryDoc.item.attr('aria-expanded', 'true');
+          $galleryDoc.embedViewport.attr('aria-expanded', 'true');
           $galleryDoc.embedViewport.slideDown(function(){
             $galleryDoc.calculateDocsPerView();
             showPreview();
           });
         }else{
           $galleryDoc.item.addClass('collapsed');
+          $galleryDoc.item.attr('aria-expanded', 'false');
           $galleryDoc.embedViewport.slideUp(function(){
           });
+          $galleryDoc.embedViewport.attr('aria-expanded', 'false');
         }
       }
 

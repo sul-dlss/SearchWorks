@@ -1,9 +1,9 @@
-.callnumber a.collapsed {
+.callnumber button.collapsed {
   @extend .btn;
   @extend .btn-default;
 }
 
-.callnumber a {
+.callnumber button {
   @extend .btn;
   @extend .btn-default;
 }
