@@ -63,6 +63,16 @@ describe LinkedSerials do
           expect(subject.values.first[:values].first[:search_field]).to eq 'search'
         end
       end
+
+      context 'for vernacular' do
+        let(:marc) { vernacular_serial_fixture }
+
+        it 'labels vernacular fields correctly' do
+          expect(subject.values.length).to eq 2
+          expect(subject.values.last[:label]).to eq 'Continues'
+          expect(subject.values.last[:values].first[:link]).to eq 'Vernacular Serial Uniform Title'
+        end
+      end
     end
 
     context 'for standard number ($x or $z)' do

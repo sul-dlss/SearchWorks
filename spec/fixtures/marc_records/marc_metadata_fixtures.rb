@@ -646,6 +646,24 @@ module MarcMetadataFixtures
     xml
   end
 
+  def vernacular_serial_fixture
+    <<-xml
+      <record>
+        <datafield tag="780" ind1="0" ind2="0">
+          <subfield code="6">880-01</subfield>
+          <subfield code="i">Other Data:</subfield>
+          <subfield code="t">Serial Title</subfield>
+          <subfield code="s">Serial Uniform Title</subfield>
+        </datafield>
+        <datafield tag="880" ind1="0" ind2="0">
+          <subfield code="6">780-01</subfield>
+          <subfield code="t">Vernacular Serial Title</subfield>
+          <subfield code="s">Vernacular Serial Uniform Title</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def single_marc_264_fixture
     <<-xml
       <record>
