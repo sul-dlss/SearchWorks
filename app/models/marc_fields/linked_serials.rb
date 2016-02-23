@@ -70,16 +70,16 @@ class LinkedSerials < MarcField
         'and with'
       end
     else
-      FIELD_LABELS[field.tag][field.indicator2] || FIELD_LABELS[field.tag]['*']
+      FIELD_LABELS[field.canonical_tag][field.indicator2] || FIELD_LABELS[field.canonical_tag]['*']
     end
   end
 
   def merged_with?(field)
-    field.tag == '785' && field.indicator2 == '7'
+    field.canonical_tag == '785' && field.indicator2 == '7'
   end
 
   def merged_with_785s
-    @merged_with_785s ||= marc.fields('785').select(&method(:merged_with?))
+    @merged_with_785s ||= relevant_fields.select(&method(:merged_with?))
   end
 
   def tags
