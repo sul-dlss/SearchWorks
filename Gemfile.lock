@@ -24,6 +24,13 @@ GIT
       jquery-rails
       rails (>= 3.0, < 5.0)
 
+GIT
+  remote: git://github.com/sul-dlss/openseadragon-rails.git
+  revision: 88e48e1f62a49d4e382948ae08eba6e993cd6773
+  specs:
+    openseadragon (0.0.5)
+      rails (> 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -234,8 +241,6 @@ GEM
       activesupport (>= 3.2.18)
       i18n
       nokogiri
-    openseadragon (0.2.1)
-      rails (> 3.2.0)
     orm_adapter (0.5.0)
     parser (2.3.0.2)
       ast (~> 2.2)
@@ -424,7 +429,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   nokogiri (~> 1.6.7)
-  openseadragon
+  openseadragon!
   poltergeist (>= 1.8.1)
   rails (= 4.2.5.1)
   retina_tag
