@@ -86,7 +86,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'openseadragon'
+gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
 
