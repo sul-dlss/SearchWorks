@@ -27,8 +27,8 @@ describe Holdings::Status::Unavailable do
     it "should handle identify -LOAN properly as unavailable" do
       expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new("SOMETHING-LOAN")))).to be_unavailable
     end
-    it "should not identify SEE-LOAN as unavailable" do
-      expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new("SEE-LOAN")))).to_not be_unavailable
+    it "should not identify SPE-LOAN as unavailable" do
+      expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new("SPE-LOAN")))).to_not be_unavailable
     end
   end
 end

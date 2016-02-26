@@ -13,6 +13,8 @@ class Holdings
 
     def availability_class
       case
+      when unavailable?
+        'unavailable'
       when noncirc_page?
         'noncirc_page'
       when noncirc?
@@ -21,8 +23,6 @@ class Holdings
         'page'
       when available?
         'available'
-      when unavailable?
-        'unavailable'
       when unknown?
         'unknown'
       else

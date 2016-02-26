@@ -30,7 +30,7 @@ class Holdings
 
       def current_location_ends_with_loan?
         @callnumber.current_location.try(:code) &&
-        @callnumber.current_location.code != "SEE-LOAN" &&
+        @callnumber.current_location.code != 'SPE-LOAN' &&
         @callnumber.current_location.code.ends_with?("-LOAN")
       end
     end

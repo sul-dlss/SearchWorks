@@ -91,6 +91,27 @@ describe Holdings::Status do
       expect(status.availability_class).to eq 'unknown'
     end
   end
+
+  describe 'precedence' do
+    subject { Holdings::Status.new(callnumber) }
+
+    describe 'unavailable' do
+      let(:callnumber) do
+        double(
+          'Call number',
+          library: 'SAL3',
+          home_location: 'STACKS',
+          current_location: double('Location', code: 'LOST-ASSUM'),
+          type: 'STACKS'
+        )
+      end
+
+      it 'takes precedence over things like page' do
+        expect(subject.availability_class).to eq 'unavailable'
+      end
+    end
+  end
+
   describe '#as_json' do
     let(:as_json) { status.as_json }
     it 'should return a json hash with the availability class and status text' do
