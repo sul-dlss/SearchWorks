@@ -1,6 +1,9 @@
 <dt><%= linked_series.label %></dt>
 <% linked_series.values.each do |series| %>
   <dd>
-    <%= link_to(series[:link].strip, catalog_index_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %> <%= series[:extra_text] %>
+    <% if series[:link] %>
+      <%= link_to(series[:link].strip, catalog_index_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
+    <% end %>
+    <%= series[:extra_text] %>
   </dd>
 <% end %>

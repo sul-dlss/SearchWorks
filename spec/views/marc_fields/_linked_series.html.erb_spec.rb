@@ -33,6 +33,22 @@ describe 'marc_fields/_linked_series.html.erb' do
   end
 
   it 'included the extra text after the link' do
-    expect(subject).to have_css('dd', text: 'The Link Value Some other text')
+    expect(subject).to have_css('dd', text: /The Link Value\s+Some other text/)
+  end
+
+  context 'when a link is not present' do
+    let(:linked_series) do
+      double(
+        'LinkedSeries',
+        label: 'Series',
+        values: [
+          { extra_text: 'Some other text' }
+        ]
+      )
+    end
+
+    it 'successfully renders just the extra text' do
+      expect(subject).to have_css('dd', text: 'Some other text')
+    end
   end
 end
