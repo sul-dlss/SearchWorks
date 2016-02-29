@@ -1,8 +1,10 @@
 module RequestLinkHelper
   def link_to_request_link(options = {})
+    url = request_link(options[:document], options[:callnumber], options[:barcode])
+    return unless url
     link_to(
       'Request',
-      request_link(options[:document], options[:callnumber], options[:barcode]),
+      url,
       rel: 'nofollow',
       class: options[:class],
       data: { behavior: 'requests-modal' }
@@ -10,6 +12,7 @@ module RequestLinkHelper
   end
 
   def request_link(document, callnumber, barcode = nil)
+    return unless callnumber
     if callnumber.home_location == 'SSRC-DATA'
       base_url = Settings.SSRC_REQUESTS_URL
       request_params = ssrc_params(document, callnumber)
