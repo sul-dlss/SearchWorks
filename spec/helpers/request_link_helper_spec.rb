@@ -14,6 +14,11 @@ describe RequestLinkHelper do
       )
       expect(link).to match(%r{^<a.*/requests/new\?item_id=1234.*</a>$})
     end
+
+    it 'returns nil if the call number is not present' do
+      link = link_to_request_link(document: current_location_document, callnumber: nil)
+      expect(link).to be_nil
+    end
   end
 
   describe '#request_link' do
@@ -24,6 +29,12 @@ describe RequestLinkHelper do
       expect(link).to match(/origin_location=home_location/)
       expect(link).to match(/origin=library/)
     end
+
+    it 'returns nil when the call number is not present' do
+      link = request_link(current_location_document, nil)
+      expect(link).to be_nil
+    end
+
     describe 'with barcode' do
       let(:no_current_location_document) do
         SolrDocument.new(
