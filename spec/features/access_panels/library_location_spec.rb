@@ -21,9 +21,9 @@ feature "Library Location Access Panel" do
   feature 'long lists should be truncated', js: true do
     scenario 'items with more than 5 callnumbers should be truncated with a more link' do
       visit catalog_path '10'
-      expect(page).to_not have_css('li', text: 'GHI', visible: true)
+      expect(page).not_to have_css('td', text: 'IHG', visible: true)
       click_button 'show all'
-      expect(page).to have_css('li', text: 'GHI', visible: true)
+      expect(page).to have_css('td', text: 'IHG', visible: true)
     end
   end
 end

@@ -48,8 +48,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ]
       ))
       render
-      expect(rendered).to have_css('ul.location li', text: /University Archives\s*Request/)
-      expect(rendered).to have_css('ul.location li a', text: "Request")
+      expect(rendered).to have_css('.location a', text: "Request")
     end
 
     it 'should not have the location level request link for -RESV locations' do
@@ -74,11 +73,11 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
-    it "should have screen-reader-only unknown status text for items we'll be looking up" do
-      expect(rendered).to have_css('.status-text.sr-only', text: 'Unknown')
+    it "should have unknown status text for items we'll be looking up" do
+      expect(rendered).to have_css('.status-text', text: 'Unknown')
     end
-    it "should have explicit screen-reader-only status text for items that we know the status" do
-      expect(rendered).to have_css('.status-text.sr-only', text: 'In-library use')
+    it "should have explicit status text for items that we know the status" do
+      expect(rendered).to have_css('.status-text', text: 'In-library use')
     end
   end
   describe "current locations" do
@@ -130,11 +129,11 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       it "should include the matched MHLD" do
         expect(rendered).to have_css('.panel-library-location a', count: 3)
         expect(rendered).to have_css('h3', text: "Green Library", count: 1)
-        expect(rendered).to have_css('li .location-name a', text: "Stacks", count: 1)
-        expect(rendered).to have_css('ul.items li.mhld', text: "public note")
-        expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
-        expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
-        expect(rendered).to have_css('ul.items li', text: "ABC 123")
+        expect(rendered).to have_css('.location-name a', text: "Stacks", count: 1)
+        expect(rendered).to have_css('.panel-library-location .mhld', text: "public note")
+        expect(rendered).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
+        expect(rendered).to have_css('.panel-library-location .mhld', text: "Library has: library has")
+        expect(rendered).to have_css('.panel-library-location td', text: "ABC 123")
       end
     end
     describe "that has no matching library/location" do
@@ -148,10 +147,10 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       it "should invoke a library block w/ the appropriate mhld data" do
         expect(rendered).to have_css('.panel-library-location a', count: 1)
         expect(rendered).to have_css('h3', text: "Green Library")
-        expect(rendered).to have_css('li .location-name', text: "Stacks")
-        expect(rendered).to have_css('ul.items li.mhld', text: "public note")
-        expect(rendered).to have_css('ul.items li.mhld.note-highlight', text: "Latest: latest received")
-        expect(rendered).to have_css('ul.items li.mhld', text: "Library has: library has")
+        expect(rendered).to have_css('.location-name', text: "Stacks")
+        expect(rendered).to have_css('.panel-library-location .mhld', text: "public note")
+        expect(rendered).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
+        expect(rendered).to have_css('.panel-library-location .mhld', text: "Library has: library has")
       end
     end
   end
@@ -165,10 +164,10 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should be present" do
-        expect(rendered).to have_css('ul.location li a', text: 'Request')
+        expect(rendered).to have_css('.location a', text: 'Request')
       end
       it "should not have any requestable items" do
-        expect(rendered).to_not have_css('ul.items li[data-request-url]')
+        expect(rendered).to_not have_css('td[data-request-url]')
       end
     end
     describe "item level request links" do
@@ -180,10 +179,10 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should not have a request url stored in the data attribute" do
-        expect(rendered).to_not have_css('ul.items li[data-request-url]')
+        expect(rendered).to_not have_css('td[data-request-url]')
       end
       it "should not have a request link in the item" do
-        expect(rendered).to have_css('ul.items li a', text: 'Request')
+        expect(rendered).to have_css('tbody a', text: 'Request')
       end
     end
     describe "requestable vs. non-requestable items" do
@@ -198,10 +197,10 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should have an item that has a request url" do
-        expect(rendered).to have_css('ul.items li[data-request-url]', text: 'ABC 456')
+        expect(rendered).to have_css('.availability td[data-barcode="456"][data-request-url]')
       end
       it "should have an item that does not have a request url" do
-        expect(rendered).to_not have_css('ul.items li[data-request-url]', text: 'ABC 123')
+        expect(rendered).to_not have_css('.availability td[data-barcode="123"][data-request-url]')
       end
     end
   end
@@ -221,13 +220,13 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css('.panel-library-location a', count: 1)
     end
     it "should render SUL items in the zombie library" do
-      expect(rendered).to have_css('.panel-library-location li', text: 'ABC')
+      expect(rendered).to have_css('.panel-library-location td', text: 'ABC')
     end
     it "should render PHYSICS items in the zombie library" do
-      expect(rendered).to have_css('.panel-library-location li', text: 'DEF')
+      expect(rendered).to have_css('.panel-library-location td', text: 'DEF')
     end
     it "should render blank (i.e. on order) items in the zombie library" do
-      expect(rendered).to have_css('.panel-library-location li', text: 'GHI')
+      expect(rendered).to have_css('.panel-library-location td', text: 'GHI')
     end
   end
   describe 'public note' do
