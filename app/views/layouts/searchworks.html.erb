@@ -60,12 +60,12 @@
       </div> <!-- #su-content end -->
     </div> <!-- #su-wrap end -->
     <%= render 'shared/su_footer' %>
-    <% if Rails.env.production? %>
+    <% if Settings.MOUSEFLOW %>
       <script type="text/javascript">
         var _mfq = _mfq || [];
         (function() {
             var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
-            mf.src = "//cdn.mouseflow.com/projects/552a9fe4-bbb8-4b20-b833-a4ef96d0eb64.js";
+            mf.src = "//cdn.mouseflow.com/projects/<%= Settings.MOUSEFLOW_KEY %>.js";
             document.getElementsByTagName("head")[0].appendChild(mf);
         })();
       </script>
