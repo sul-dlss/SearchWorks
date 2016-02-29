@@ -203,6 +203,13 @@ describe MarcHelper do
     it "should not display anything when no contributors are available" do
       expect(link_to_contributor_from_marc(nil_document.to_marc)).to be_nil
     end
+
+    it 'should not display blacklisted fields' do
+      link = contributors_and_works_from_marc(contributor.to_marc)
+      link.each do |_, value|
+        expect(value).to_not match(/880-00/)
+      end
+    end
   end
   describe "#get_toc" do
     let(:bad_toc) { SolrDocument.new(marcxml: bad_toc_fixture) }
