@@ -134,6 +134,7 @@ module MarcMetadataFixtures
           <subfield code="d">Subject2</subfield>
         </datafield>
         <datafield tag="700" ind1="1" ind2=" ">
+          <subfield code="6">880-04</subfield>
           <subfield code="a">Farruk̲h̲ī, Āṣif,</subfield>
           <subfield code="d">1959-</subfield>
         </datafield>
@@ -431,6 +432,11 @@ module MarcMetadataFixtures
           <subfield code="a">Contributor3</subfield>
           <subfield code="e">Actor</subfield>
           <subfield code="4">prf</subfield>
+        </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+          <subfield code="6">880-00</subfield>
+          <subfield code="a">Contributor4</subfield>
+          <subfield code="t">Contributor $t</subfield>
         </datafield>
       </record>
     xml
@@ -865,6 +871,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_sections_fixture
     <<-xml
       <record>

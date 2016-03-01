@@ -96,28 +96,27 @@ module MarcHelper
             href_text = []
             extra_href = []
             field.each do |subfield|
-              unless ["?","="].include?(subfield.code)
-                # $e $i $4
-                if subfield.code == "t"
-                  subt = :now
-                end
-                if subfield.code == "i" and subt == :none
-                  before_text << subfield.value
-                elsif subt == :none
-                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
-                  link_text << subfield.value
-                elsif subt == :now or (subt == :passed and subfield.value.strip =~ /[\.|;]$/)
-                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
-                  link_text << subfield.value
-                  subt = :passed
-                  subt = :done if subfield.value.strip =~ /[\.|;]$/
-                elsif subt == :done
-                  extra_href << subfield.value unless ["e","i","4"].include?(subfield.code)
-                  extra_text << subfield.value
-                else
-                  href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
-                  link_text << subfield.value
-                end
+              next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
+              # $e $i $4
+              if subfield.code == "t"
+                subt = :now
+              end
+              if subfield.code == "i" and subt == :none
+                before_text << subfield.value
+              elsif subt == :none
+                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                link_text << subfield.value
+              elsif subt == :now or (subt == :passed and subfield.value.strip =~ /[\.|;]$/)
+                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                link_text << subfield.value
+                subt = :passed
+                subt = :done if subfield.value.strip =~ /[\.|;]$/
+              elsif subt == :done
+                extra_href << subfield.value unless ["e","i","4"].include?(subfield.code)
+                extra_text << subfield.value
+              else
+                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                link_text << subfield.value
               end
             end
             href = "\"#{href_text.join(" ")}\""
@@ -135,16 +134,13 @@ module MarcHelper
             temp_text = ""
             relator_text = []
             field.each do |subfield|
-              unless ["?","="].include?(subfield.code)
-                if subfield.code == "e"
-                  relator_text << subfield.value
-                elsif subfield.code == "4" and relator_text.blank?
-                  relator_text << Constants::RELATOR_TERMS[subfield.value]
-                elsif subfield.code == "6"
-                  nil
-                elsif subfield.code != "e" and subfield.code != "4"
-                  link_text << "#{subfield.value} "
-                end
+              next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
+              if subfield.code == "e"
+                relator_text << subfield.value
+              elsif subfield.code == "4" and relator_text.blank?
+                relator_text << Constants::RELATOR_TERMS[subfield.value]
+              elsif subfield.code != "e" and subfield.code != "4"
+                link_text << "#{subfield.value} "
               end
             end
             temp_text << link_to(link_text.strip, catalog_index_path(:q => "\"#{link_text}\"", :search_field => 'search_author'))
