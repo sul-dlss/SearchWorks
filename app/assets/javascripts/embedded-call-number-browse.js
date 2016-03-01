@@ -122,12 +122,12 @@
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function(data){
               $galleryDoc.updateDocs();
-              scrollOver();
               Blacklight.do_bookmark_toggle_behavior();
               $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();
+              scrollOver();
           });
         }
       }
@@ -138,48 +138,22 @@
       }
 
       function addListeners() {
-        $galleryDoc.embedViewport.find('.embed-browse-control.right').on('click', function(e){
-          e.preventDefault();
-          processNext();
-        });
-        $galleryDoc.embedViewport.find('.embed-browse-control.left').on('click', function(e){
-          e.preventDefault();
-          processPrevious();
-        });
-
       }
 
       // Scroll to the current document
-      function scrollOver(additional){
+      function scrollOver(){
         var current = $galleryDoc.docById();
-        var left;
+        var scrollAmount;
         if (current.length){
-          left = current.position().left;
+          scrollAmount = current.position().left - current.parent().width()/2 + current.innerWidth()/2;
         }else{
-          console.log('could not get current position');
           return;
         }
 
+        current.addClass('current-document');
         $galleryDoc.embedViewport.find('.gallery').animate({
-          right: left - $galleryDoc.scrollOffset
-        });
-      }
-
-      function processPrevious() {
-        $galleryDoc.currentDoc = $galleryDoc.docs[$galleryDoc.currentPosition() - $galleryDoc.docsPerView];
-        if ($galleryDoc.currentDoc === undefined){
-          $galleryDoc.currentDoc = $galleryDoc.docs[0];
-        }
-        scrollOver();
-      }
-
-      function processNext() {
-        var currentIndex = $.inArray($galleryDoc.currentDoc, $galleryDoc.docs);
-        $galleryDoc.currentDoc = $galleryDoc.docs[currentIndex + $galleryDoc.docsPerView];
-        if ($galleryDoc.currentDoc === undefined){
-          $galleryDoc.currentDoc = $galleryDoc.docs[$galleryDoc.docs.length-1];
-        }
-        scrollOver();
+          scrollLeft: scrollAmount
+        }, 200);
       }
     });
 
