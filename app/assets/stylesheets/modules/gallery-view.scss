@@ -89,8 +89,9 @@
     max-width: $gallery-document-width - 2;
     max-height: $sul-gallery-cover-height;
   }
-  .cover-image {
+  img.cover-image {
     max-height: $sul-gallery-cover-height;
+    margin: 0 auto;
   }
 }
 
