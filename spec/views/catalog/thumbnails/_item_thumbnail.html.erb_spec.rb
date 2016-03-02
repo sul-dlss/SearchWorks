@@ -28,13 +28,17 @@ describe "catalog/thumbnails/_item_thumbnail.html.erb" do
 
   context 'SDR object' do
     let(:document) { SolrDocument.new(display_type: ['image'], file_id: ['abc123']) }
+    subject { Capybara.string(rendered) }
+    before { render }
 
     describe 'thumbnail image' do
       it 'should be present from stacks' do
-        render
-        html = Capybara.string(rendered)
-        expect(html).to have_css('img.stacks-image')
-        expect(html.all('img.stacks-image').first['src']).to match(%r{iiif/%2Fabc123/full})
+        expect(subject).to have_css('img.stacks-image')
+        expect(subject.all('img.stacks-image').first['src']).to match(%r{iiif/%2Fabc123/full})
+      end
+
+      it 'should not include the thumbnail image element if there is a known stacks image' do
+        expect(subject).to_not have_css('img.cover-image')
       end
     end
   end
