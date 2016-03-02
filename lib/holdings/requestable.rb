@@ -9,14 +9,14 @@ class Holdings
     end
 
     def must_request?
-      requestable? && must_request_item? && !spec_coll_and_inprocess?
+      requestable? && must_request_item? && !noncirc_library_and_inprocess?
     end
 
     private
 
     def item_is_requestable?
       !on_reserve? &&
-        !spec_coll_and_inprocess? &&
+        !noncirc_library_and_inprocess? &&
         requestable_item_type? &&
         requestable_home_location? &&
         requestable_current_location?
@@ -26,8 +26,9 @@ class Holdings
       @callnumber.on_reserve?
     end
 
-    def spec_coll_and_inprocess?
-      @callnumber.library == 'SPEC-COLL' && @callnumber.current_location.try(:code) == 'INPROCESS'
+    def noncirc_library_and_inprocess?
+      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
+        @callnumber.current_location.try(:code) == 'INPROCESS'
     end
 
     def must_request_item?

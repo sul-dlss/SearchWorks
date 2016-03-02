@@ -2,7 +2,8 @@ require "spec_helper"
 
 describe Holdings::Status::NoncircPage do
   describe "noncirc_page libraries" do
-    let(:noncirc_page_libraries) { ["SPEC-COLL", "HV-ARCHIVE"] }
+    let(:noncirc_page_libraries) { %w(HV-ARCHIVE RUMSEYMAP SPEC-COLL) }
+
     it "should identify any items as noncirc_page" do
       noncirc_page_libraries.each do |library|
         expect(Holdings::Status::NoncircPage.new(OpenStruct.new(library: library))).to be_noncirc_page

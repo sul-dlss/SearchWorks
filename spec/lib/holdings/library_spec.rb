@@ -65,6 +65,15 @@ describe Holdings::Library do
         expect(Holdings::Library.new(library)).to be_location_level_request
       end
     end
+
+    it 'is false for NONCIRC libraries that only include INPROCESS items' do
+      library = Holdings::Library.new(
+        'RUMSEYMAP',
+        nil,
+        [double(current_location: double(code: 'INPROCESS'))]
+      )
+      expect(library).to_not be_location_level_request
+    end
   end
   describe '#library_instructions' do
     it 'should return instructions for libraries which have them' do
