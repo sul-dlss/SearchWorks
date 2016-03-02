@@ -23,6 +23,12 @@ module CollectionMember
     @index_parent_collections
   end
 
+  def online_label
+    return if is_a_collection?
+    return if druid.blank?
+    "<span class='online-label'>Online</span>".html_safe
+  end
+
   private
   def parent_collection_params
     self["collection"].map do |collection_id|

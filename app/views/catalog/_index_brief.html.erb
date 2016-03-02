@@ -14,9 +14,7 @@
         </span>
         <%= link_to_document document, get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
         <span class="main-title-date"><%= get_main_title_date(document) %></span>
-        <% if document.is_a_collection_member? %>
-          <span class="online-label">Online</span>
-        <% end %>
+        <%= document.online_label %>
       </h3>
       <% if document[:vern_title_display].present? %>
         <ul class="document-metadata"><li><%= document[:vern_title_display].html_safe %></li></ul>
