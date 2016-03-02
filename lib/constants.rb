@@ -893,6 +893,7 @@ module Constants
   NON_REQUESTABLE_HOME_LOCS = [
     'SEE-OTHER'
   ]
+
   HIDE_DUE_DATE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'IC-DISPLAY',

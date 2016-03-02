@@ -1,4 +1,6 @@
 class LiveLookup
+  HIDE_DUE_DATE_LIBS = ['RUMSEYMAP'].freeze
+
   delegate :to_json, to: :records
   def initialize(ids)
     @ids = [ids].flatten.compact
@@ -91,6 +93,10 @@ class LiveLookup
 
     private
 
+    def library_code
+      @record.xpath('.//item_record/library').map(&:text).last
+    end
+
     def home_location_code
       @record.xpath('.//item_record/home_location').map(&:text).last
     end
@@ -109,7 +115,8 @@ class LiveLookup
     def valid_due_date?
       due_date_value.present? &&
         due_date_value != 'NEVER' &&
-        !Constants::HIDE_DUE_DATE_CURRENT_LOCS.include?(current_location_code)
+        !Constants::HIDE_DUE_DATE_CURRENT_LOCS.include?(current_location_code) &&
+        !HIDE_DUE_DATE_LIBS.include?(library_code)
     end
   end
 end
