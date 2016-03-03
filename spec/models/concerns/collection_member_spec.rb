@@ -74,4 +74,30 @@ describe CollectionMember do
       expect(document_without_parent.index_parent_collections).to be_nil
     end
   end
+
+  describe '#online_label' do
+    context 'for collections' do
+      subject { SolrDocument.new(collection_type: ['Digital Collection'], druid: ['12345']) }
+
+      it 'is nil' do
+        expect(subject.online_label).to be_nil
+      end
+    end
+
+    context 'for items w/o druids' do
+      subject { SolrDocument.new }
+
+      it 'is nil' do
+        expect(subject.online_label).to be_nil
+      end
+    end
+
+    context 'for items with a druid' do
+      subject { SolrDocument.new(druid: ['12345']) }
+
+      it 'is the online-label markup' do
+        expect(Capybara.string(subject.online_label)).to have_css('span.online-label', text: 'Online')
+      end
+    end
+  end
 end

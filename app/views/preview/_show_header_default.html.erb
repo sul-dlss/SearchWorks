@@ -2,7 +2,5 @@
   <%= render_resource_icon document[document.format_key] %>
   <%= link_to_document document, get_main_title(document) %>
   <span class="main-title-date"><%= get_main_title_date(document) %></span>
-  <% if document.is_a_collection_member? %>
-    <span class="online-label">Online</span>
-  <% end %>
+  <%= document.online_label %>
 </h3>
