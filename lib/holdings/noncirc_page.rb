@@ -1,6 +1,8 @@
 class Holdings
   class Status
     class NoncircPage
+      LIBRARIES = ['HV-ARCHIVE', 'RUMSEYMAP', 'SPEC-COLL'].freeze
+
       def initialize(callnumber)
         @callnumber = callnumber
       end
@@ -24,7 +26,7 @@ class Holdings
       end
 
       def library_noncirc_page?
-        ["SPEC-COLL", "HV-ARCHIVE"].include?(@callnumber.library)
+        LIBRARIES.include?(@callnumber.library)
       end
     end
   end

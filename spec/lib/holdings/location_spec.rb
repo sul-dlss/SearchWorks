@@ -54,11 +54,11 @@ describe Holdings::Location do
       expect(location).to_not be_location_level_request
     end
 
-    it 'returns false when the library is SPEC-COLL and the items are INPROCESS' do
+    it 'returns false when the library is a NONCIRC library that only includes INPROCESS items' do
       callnumbers = [Holdings::Callnumber.new('12345 -|- SPEC-COLL -|- STACKS -|- INPROCESS ')]
       location = Holdings::Location.new('SPEC-COLL', callnumbers)
 
-      expect(location.send(:spec_coll_only_inprocess?)).to eq true
+      expect(location.send(:noncirc_library_only_inprocess?)).to eq true
       expect(location).to_not be_location_level_request
     end
 

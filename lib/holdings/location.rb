@@ -18,7 +18,7 @@ class Holdings
 
     def location_level_request?
       !contains_only_must_request_items? &&
-        !spec_coll_only_inprocess? &&
+        !noncirc_library_only_inprocess? &&
         !reserve_location? &&
         (Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
          Constants::REQUEST_LOCS.include?(@code) ||
@@ -103,9 +103,9 @@ class Holdings
       @document.present? && @document.access_panels.online?
     end
 
-    def spec_coll_only_inprocess?
+    def noncirc_library_only_inprocess?
       return false unless @items.present?
-      library == 'SPEC-COLL' && @items.all? do |item|
+      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(library) && @items.all? do |item|
         item.current_location.try(:code) == 'INPROCESS'
       end
     end

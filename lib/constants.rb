@@ -893,6 +893,7 @@ module Constants
   NON_REQUESTABLE_HOME_LOCS = [
     'SEE-OTHER'
   ]
+
   HIDE_DUE_DATE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'IC-DISPLAY',
@@ -957,6 +958,8 @@ module Constants
   STACKMAP_LIBS = %w(GREEN MEDIA-MTXT)
 
   HIDE_STACKMAP_LOCS = %w(BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN)
+
+  INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
 
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',
@@ -1088,6 +1091,7 @@ module Constants
     'MUSIC' => 'http://library.stanford.edu/libraries/music/about',
     'MEDIA-MTXT' => 'http://library.stanford.edu/libraries/green/media-microtext-center',
     'MEYER' => 'http://library.stanford.edu/libraries/meyer/about',
+    'RUMSEYMAP' => 'https://library.stanford.edu/branner/david-rumsey-map-center-preview',
     'TANNER' => 'http://library.stanford.edu/libraries/philosophy/about',
     'SPEC-COLL' => 'http://library.stanford.edu/libraries/spc/about',
     'SAL' => 'http://library.stanford.edu/libraries/sal/about',
@@ -1129,10 +1133,15 @@ module Constants
     'Selections' => 'check-3'
   }
   BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
+
   LIBRARY_INSTRUCTIONS = {
+    'RUMSEYMAP' => {
+      heading: 'Opening April 25, 2016',
+      text: 'Digital access is available for some items; physical access will be available after opening.'
+    },
     'SPEC-COLL' => {
       heading: 'All items must be viewed on site',
       text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.'
     }
-  }
+  }.freeze
 end

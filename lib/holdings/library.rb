@@ -41,7 +41,7 @@ class Holdings
     end
 
     def location_level_request?
-      !spec_coll_only_inprocess? &&
+      !noncirc_library_only_inprocess? &&
         !contains_only_must_request_items? &&
         Constants::REQUEST_LIBS.include?(@code)
     end
@@ -72,9 +72,9 @@ class Holdings
 
     private
 
-    def spec_coll_only_inprocess?
+    def noncirc_library_only_inprocess?
       return false unless @items.present?
-      @code == 'SPEC-COLL' && @items.all? do |item|
+      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
         item.current_location.try(:code) == 'INPROCESS'
       end
     end

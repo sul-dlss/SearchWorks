@@ -119,6 +119,29 @@ describe LiveLookup do
         end
       end
 
+      describe 'libraries that should hide the due date' do
+        let(:body) do
+          <<-XML
+            <titles>
+              <record>
+                <catalog>
+                  <item_record>
+                    <library>RUMSEYMAP</library>
+                    <date_time_due>Some due date</date_time_due>
+                  </item_record>
+                </catalog>
+              </record>
+            </titles>
+          XML
+        end
+
+        it 'should not be returned' do
+          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          expect(json.length).to eq 1
+          expect(JSON.parse(json.first)['due_date']).to be_nil
+        end
+      end
+
       describe "end of day" do
         let(:body) {
           <<-XML
