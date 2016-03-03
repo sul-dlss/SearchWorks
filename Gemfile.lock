@@ -196,11 +196,14 @@ GEM
       childprocess
       i18n
       logger
-    jquery-datatables-rails (2.2.1)
+    jquery-datatables-rails (3.3.0)
+      actionpack (>= 3.1)
       jquery-rails
+      railties (>= 3.1)
       sass-rails
-    jquery-rails (3.1.3)
-      railties (>= 3.0, < 5.0)
+    jquery-rails (4.1.0)
+      rails-dom-testing (~> 1.0)
+      railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     kaminari (0.16.1)
@@ -343,7 +346,7 @@ GEM
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.3)
+    sprockets-rails (3.0.4)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
@@ -422,7 +425,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jettywrapper (~> 1.7)
-  jquery-datatables-rails (~> 2.2.1)
+  jquery-datatables-rails
   jquery-rails
   launchy
   mods_display (~> 0.4.0)

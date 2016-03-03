@@ -106,7 +106,7 @@ gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
-gem 'jquery-datatables-rails', '~> 2.2.1'
+gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.0.4'
 gem 'whenever', require: false
 gem 'rubocop', '~> 0.36'
