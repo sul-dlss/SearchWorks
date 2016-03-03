@@ -1,13 +1,16 @@
-<img class="cover-image center-block <%= css_class %> hide" alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
 <% thumbnail_src = document.image_urls(:large).try(:first) %>
 <% if thumbnail_src.present? %>
   <%= image_tag(thumbnail_src, class: 'stacks-image', alt: '') %>
-<% elsif document_index_view_type == :gallery %>
-  <%= link_to document, tabindex: '-1' do %>
-    <%= content_tag(:span, class:"fake-cover") do %>
-      <%# Wrapper needed for the way that Firefox handles display: table-cell %>
-      <%= content_tag(:div, class: "fake-cover-text-wrapper") do %>
-        <%= content_tag(:div, get_main_title(document), class: "fake-cover-text") %>
+<% else %>
+  <img class="cover-image center-block <%= css_class %> hide" alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
+
+  <% if document_index_view_type == :gallery %>
+    <%= link_to document, tabindex: '-1' do %>
+      <%= content_tag(:span, class:"fake-cover") do %>
+        <%# Wrapper needed for the way that Firefox handles display: table-cell %>
+        <%= content_tag(:div, class: "fake-cover-text-wrapper") do %>
+          <%= content_tag(:div, get_main_title(document), class: "fake-cover-text") %>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
