@@ -806,7 +806,7 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  REQUEST_LIBS = ['SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL']
+  REQUEST_LIBS = ['RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
