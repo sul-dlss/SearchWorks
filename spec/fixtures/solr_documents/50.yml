@@ -1,0 +1,17 @@
+:id: 50
+:title_display: An item in a virtual object
+:format_main_ssim: Map
+:modsxml: <%= mods_everything %>
+:display_type:
+  - image
+:file_id:
+  - wn461xh4882%2F2542001.jp2
+:druid: wn461xh4882
+:collection:
+  - '47'
+:collection_with_title:
+  - '47 -|- A Collection of Virtual Objects'
+:set:
+  - '48'
+:set_with_title:
+  - '48 -|- A Virtual Object'

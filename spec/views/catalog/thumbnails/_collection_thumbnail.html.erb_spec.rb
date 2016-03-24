@@ -9,7 +9,7 @@ describe 'catalog/thumbnails/_collection_thumbnail.html.erb' do
     before { allow(view).to receive(:document_index_view_type).and_return(:gallery) }
 
     context 'when the first child has a thumbnail' do
-      let(:collection_member) { SolrDocument.new(display_type: ['image'], file_id: ['abc123']) }
+      let(:collection_member) { SolrDocument.new(file_id: ['abc123.jp2']) }
       before do
         allow(document).to receive_messages(collection_members: [collection_member])
       end

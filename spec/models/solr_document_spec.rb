@@ -86,6 +86,12 @@ describe SolrDocument do
     end
   end
 
+  describe 'SolrSet' do
+    it 'should be included' do
+      expect(subject).to be_kind_of SolrSet
+    end
+  end
+
   describe 'SolrBookplates' do
     it 'is included' do
       expect(subject).to be_kind_of SolrBookplates

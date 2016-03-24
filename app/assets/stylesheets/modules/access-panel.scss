@@ -27,9 +27,14 @@
 .access-panel {
   .panel-body {
     h4 {
-      font-size: 16px;
       color: $cardinal-red;
+      font-size: 16px;
+      line-height: 1.4em;
       margin-bottom: 5px;
+
+      .sul-icon {
+        color: $sul-text-color;
+      }
     }
 
     .access-panel-subsection {

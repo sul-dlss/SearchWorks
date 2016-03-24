@@ -1,43 +1,39 @@
 require 'spec_helper'
 
 describe 'Image object' do
-  let(:display_type) { nil }
   subject do
     SolrDocument.new(
-      id: 4488,
-      druid: 4488,
-      display_type: display_type,
-      file_id: ['abc123defg.jp2']
+      file_id: file_ids
     )
   end
 
   describe '#image_urls' do
-    context 'for images' do
-      let(:display_type) { ['image'] }
+    context 'when there are .jp2' do
+      let(:file_ids) { ['abc123%2Fxyz321.jp2'] }
 
       it 'is present' do
         expect(subject.image_urls).to be_present
       end
 
-      it 'constructs the appropriate Stacks url' do
+      it 'constructs the appropriate stacks url stripping of .jp2' do
         expect(subject.image_urls.length).to eq 1
-        expect(subject.image_urls.first).to match(%r{/image/iiif/4488%2Fabc123defg/})
+        expect(subject.image_urls.first).to match(%r{/image/iiif/abc123%2Fxyz321/})
       end
     end
 
-    context 'for books' do
-      let(:display_type) { ['book'] }
+    context 'when there are no .jp2' do
+      let(:file_ids) { ['abc123%2Fxyz321'] }
 
-      it 'returns the image urls' do
-        expect(subject.image_urls).to be_present
+      it 'is not present' do
+        expect(subject.image_urls).to_not be_present
       end
     end
 
-    context 'for other display types' do
-      let(:display_type) { ['file'] }
+    context 'when there are no file ids' do
+      let(:file_ids) { nil }
 
-      it 'returns nil' do
-        expect(subject.image_urls).to be_nil
+      it 'is not present' do
+        expect(subject.image_urls).to_not be_present
       end
     end
   end

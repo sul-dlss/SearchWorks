@@ -14,6 +14,15 @@
       <% end %>
     </dd>
   <% end %>
+
+  <% if document.index_parent_sets.present? %>
+    <dt>Appears in</dt>
+    <dd>
+      <% document.index_parent_sets.each do |set| %>
+        <%= link_to(presenter(set).document_heading, catalog_path(set))%>
+      <% end %>
+    </dd>
+  <% end %>
 </dl>
 
 <%= render :partial => "catalog/search_results_accordion_sections", :locals => { :document => document } %>

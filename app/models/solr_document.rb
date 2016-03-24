@@ -21,6 +21,7 @@ class SolrDocument
   include DigitalImage
   include OpenSeadragon
   include SolrHoldings
+  include SolrSet
   include MarcInstrumentation
   include MarcBoundWithNote
   include SolrBookplates
