@@ -1,7 +1,7 @@
 class Holdings
   class Status
     class Noncirc
-      NONCIRC_TYPES = %w(LIBUSEONLY NH-INHOUSE NONCIRC REF).freeze
+      NONCIRC_TYPES = %w(ARCHIVE EXPEDITION INDEX LIBUSEONLY MFICHE MFILM NH-INHOUSE NH-MAP NONCIRC REF VAULT).freeze
 
       def initialize(callnumber)
         @callnumber = callnumber
