@@ -38,6 +38,11 @@
     height: 40px;
     padding: 10px;
   }
+
+  .panel-body {
+    max-height: 430px;
+    overflow-y: scroll;
+  }
 }
 
 .managed-purl-embed {
