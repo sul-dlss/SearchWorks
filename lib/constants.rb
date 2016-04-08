@@ -583,6 +583,7 @@ module Constants
     'STACKS-30' => 'Stacks',
     'STACKS-BW' => 'Bound with another item',
     'STAFF' => 'Ask at circulation desk',
+    'STK-GEMS' => 'Collection Gems',
     'STK-NOCIRC' => 'Stacks',
     'STK-SM' => 'Request for use at Map Center (small stacks)',
     'STK-MED' => 'Request for use at Map Center (medium stacks)',
