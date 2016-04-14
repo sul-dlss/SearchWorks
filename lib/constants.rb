@@ -1111,7 +1111,7 @@ module Constants
     'MUSIC' => 'http://library.stanford.edu/libraries/music/about',
     'MEDIA-MTXT' => 'http://library.stanford.edu/libraries/green/media-microtext-center',
     'MEYER' => 'http://library.stanford.edu/libraries/meyer/about',
-    'RUMSEYMAP' => 'https://library.stanford.edu/branner/david-rumsey-map-center-preview',
+    'RUMSEYMAP' => 'https://library.stanford.edu/libraries/rumsey/about',
     'TANNER' => 'http://library.stanford.edu/libraries/philosophy/about',
     'SPEC-COLL' => 'http://library.stanford.edu/libraries/spc/about',
     'SAL' => 'http://library.stanford.edu/libraries/sal/about',
