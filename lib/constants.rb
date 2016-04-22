@@ -1156,8 +1156,8 @@ module Constants
 
   LIBRARY_INSTRUCTIONS = {
     'RUMSEYMAP' => {
-      heading: 'Opening April 25, 2016',
-      text: 'Digital access is available for some items; physical access will be available after opening.'
+      heading: 'All items must be viewed on site',
+      text: 'Request items by Noon (12p) the day before your visit to allow for retrieval by staff. You can request at most 5 items per day.'
     },
     'SPEC-COLL' => {
       heading: 'All items must be viewed on site',
