@@ -1080,6 +1080,7 @@ module Constants
     'MATH-CS' => 'math_stats/location/math_stats_library',
     'MEDIA-MTXT' => 'green/location/media_microtext',
     'MUSIC' => 'music/location/music_library',
+    'RUMSEYMAP' => 'Rumsey/location/visitor-access',
     'SPEC-COLL' => 'special_collections/location/spec_coll_reading',
     'BUSINESS' => 'business/location/business_library',
     'HV-ARCHIVE' => 'hoover_archives/location/hv_archives',
