@@ -681,7 +681,6 @@ module Constants
                   'GUNST-STOR',
                   'HAS-ATLAS',
                   'HAS-CA',
-                  'HAS-DIGIT',
                   'HAS-FOLIO',
                   'HAS-JOURN',
                   'HAS-LIT',
