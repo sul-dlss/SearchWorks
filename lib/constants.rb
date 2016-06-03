@@ -317,6 +317,7 @@ module Constants
     'ENGDISPLAY' => 'Magazine display (latest issues only)',
     'EQUIPMENT' => 'Equipment: Ask at circulation desk',
     'EXPEDITION' => 'Expedition: Locked Stacks',
+    'EYLESAISLE' => 'Eyles aisle',
     'FACULTY' => 'Faculty',
     'FED-DOCS' => 'US Federal Documents',
     'FELT-STOR' => 'Felton Collection',
