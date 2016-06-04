@@ -25,6 +25,12 @@ feature "Home Page" do
       expect(current_url).to match /#{course_reserves_path}$/
     end
   end
+
+  scenario "'Looking for ideas?' section should display" do
+    expect(page).to have_css('h2', text: 'Looking for ideas?')
+    expect(page).to have_css('.media a', text: 'Yewno [beta]')
+  end
+
   scenario "'Articles' section should display" do
     expect(page).to have_css('h2', text: 'Looking for articles?')
     expect(page).to have_css(".media a", text: "Select a database")
