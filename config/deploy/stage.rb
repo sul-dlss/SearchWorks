@@ -1,4 +1,4 @@
-set :deploy_host, ask("Server", 'e.g. hostname with no ".stanford.edu" or server node designator')
+set :deploy_host, 'sw-webapp-stage'
 set :bundle_without, %w{sqlite development test}.join(' ')
 set :deploy_to, "/opt/app/#{fetch(:user)}/#{fetch(:application)}"
 

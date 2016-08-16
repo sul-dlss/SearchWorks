@@ -1,6 +1,6 @@
 set :keep_releases, 70
 
-set :deploy_host, ask("Server", 'e.g. server.stanford.edu')
+set :deploy_host, 'searchworks-test.stanford.edu'
 set :sub_dir, ask('Deploy directory', 'e.g. gdor')
 set :symlinks_directory, "#{fetch(:home_directory)}/SearchWorksSubURIs"
 set :symlink_deploy_path, "#{fetch(:symlinks_directory)}/#{fetch(:sub_dir)}"
