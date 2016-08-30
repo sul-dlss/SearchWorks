@@ -5,8 +5,7 @@ describe 'PURL Embed', js: true do
     visit catalog_path('mf774fs2413')
 
     within('.purl-embed-viewer') do
-      expect(page).to have_css('#sul-embed-object')
-      expect(page).to have_content('180 images')
+      expect(page).to have_css('iframe')
     end
   end
 
