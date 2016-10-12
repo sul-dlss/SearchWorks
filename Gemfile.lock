@@ -184,6 +184,7 @@ GEM
       sass (~> 3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    honeybadger (2.6.1)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -354,10 +355,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.9)
-    squash_rails (1.3.3)
-      squash_ruby
-    squash_ruby (1.4.0)
-      json
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -426,6 +423,7 @@ DEPENDENCIES
   dlss-capistrano
   faraday
   font-awesome-sass
+  honeybadger (~> 2.0)
   jbuilder (~> 2.0)
   jettywrapper (~> 1.7)
   jquery-datatables-rails
@@ -449,8 +447,6 @@ DEPENDENCIES
   simplecov (~> 0.7.1)
   spring
   sqlite3
-  squash_rails
-  squash_ruby
   therubyracer
   turbolinks
   uglifier (>= 2.7.2)
@@ -458,4 +454,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.13.1
+   1.13.3
