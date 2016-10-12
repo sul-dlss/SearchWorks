@@ -37,8 +37,8 @@ end
 gem 'ruby-oembed'
 
 gem 'okcomputer' # monitors application and its dependencies
-gem 'squash_ruby', require: 'squash/ruby'
-gem 'squash_rails', require: 'squash/rails'
+
+gem 'honeybadger', '~> 2.0'
 
 group :deployment do
   gem 'capistrano', '~> 3.0'

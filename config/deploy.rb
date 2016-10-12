@@ -36,5 +36,3 @@ set :linked_dirs, %w{config/settings log tmp/pids tmp/cache tmp/sockets vendor/b
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
-before 'deploy:publishing', 'squash:write_revision'
