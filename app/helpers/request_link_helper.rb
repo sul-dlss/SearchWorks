@@ -2,13 +2,12 @@ module RequestLinkHelper
   def link_to_request_link(options = {})
     url = request_link(options[:document], options[:callnumber], options[:barcode])
     return unless url
-    link_to(
-      'Request',
-      url,
-      rel: 'nofollow',
-      class: options[:class],
-      data: { behavior: 'requests-modal' }
-    )
+    link_text = if Constants::REQUEST_ON_SITE_ACCESS_LIBS.include?(options[:library].try(:code))
+                  'Request on-site access'
+                else
+                  'Request'
+                end
+    link_to(link_text, url, rel: 'nofollow', class: options[:class], data: { behavior: 'requests-modal' })
   end
 
   def request_link(document, callnumber, barcode = nil)
