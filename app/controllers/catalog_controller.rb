@@ -360,7 +360,8 @@ class CatalogController < ApplicationController
     _, documents = get_solr_response_for_document_ids(params[:id])
     respond_to do |format|
       format.json do
-        render json: render_document_with_availability_as_json(documents.first)
+        live = params[:live].nil? || params[:live] == 'true'
+        render json: render_document_with_availability_as_json(documents.first, live)
       end
       format.html { render 'public/500', layout: false, status: 400 }
     end
@@ -372,13 +373,13 @@ class CatalogController < ApplicationController
 
   private
 
-  def render_document_with_availability_as_json(document = nil)
+  def render_document_with_availability_as_json(document, live = true)
     return {} unless document.is_a?(SolrDocument)
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),
       format: document[document.format_key],
-      holdings: document.holdings.as_json
+      holdings: document.holdings.as_json(live: live)
     }
   end
 
