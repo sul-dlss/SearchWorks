@@ -59,8 +59,9 @@ class Holdings
     end
   end
 
-  def as_json(*)
-    live_data = JSON.parse(LiveLookup.new(@document[:id]).to_json)
+  def as_json(live: true)
+    live_data = {}
+    live_data = JSON.parse(LiveLookup.new(@document[:id]).to_json) if live
     libraries.select(&:present?).map do |library|
       library.as_json(live_data)
     end

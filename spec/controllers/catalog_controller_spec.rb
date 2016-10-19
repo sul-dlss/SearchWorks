@@ -144,6 +144,7 @@ describe CatalogController do
       it 'should route to the availability api json' do
         expect(get: '/view/1234/availability').to route_to(id: '1234', controller: 'catalog', action: 'availability', format: :json)
       end
+
       it 'should return the appropriate json' do
         get :availability, id: '10', format: 'json'
         body = JSON.parse(response.body)
@@ -154,6 +155,20 @@ describe CatalogController do
         expect(body['holdings'].length).to eq 4
         expect(body['holdings'].first['code']).to eq 'GREEN'
         expect(body['holdings'].first['name']).to eq 'Green Library'
+      end
+
+      context 'when the live flag is not passed' do
+        it 'live lookups should occur' do
+          expect(LiveLookup).to receive(:new).with('10').and_call_original
+          get :availability, id: '10', format: 'json'
+        end
+      end
+
+      context 'when the live flag is passed as false' do
+        it 'live lookups should not occur' do
+          expect(LiveLookup).not_to receive(:new).with('10').and_call_original
+          get :availability, id: '10', format: 'json', live: 'false'
+        end
       end
     end
   end
