@@ -57,6 +57,7 @@
           var data = e.originalEvent.data;
           updateModalHeight(data.contentHeight);
           updateCancelButton(data.successPage);
+          closeModal(data.closeModal);
         });
       }
 
@@ -72,6 +73,12 @@
       function updateCancelButton(onSuccessPage) {
         if (onSuccessPage) {
           modalCancelButton().text('Close');
+        }
+      }
+
+      function closeModal(shouldClose) {
+        if (shouldClose) {
+          modalForRequest().modal('hide');
         }
       }
 
