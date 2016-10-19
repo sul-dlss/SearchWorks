@@ -911,7 +911,8 @@ module Constants
     'SEE-LOAN'
   ]
   NON_REQUESTABLE_HOME_LOCS = [
-    'SEE-OTHER'
+    'SEE-OTHER',
+    'TECH-DESK'
   ]
 
   HIDE_DUE_DATE_CURRENT_LOCS = [
