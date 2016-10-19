@@ -830,6 +830,12 @@ module Constants
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
+  REQUEST_ON_SITE_ACCESS_LIBS = [
+    'HV-ARCHIVE',
+    'RUMSEYMAP',
+    'SPEC-COLL'
+  ].freeze
+
   REQUEST_LOCS = ['GUNST-30',
                   'FELTON-30',
                   'RBC-30',

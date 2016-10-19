@@ -19,6 +19,22 @@ describe RequestLinkHelper do
       link = link_to_request_link(document: current_location_document, callnumber: nil)
       expect(link).to be_nil
     end
+
+    it 'has the link text "Request" by default' do
+      link = link_to_request_link(
+        document: current_location_document, callnumber: current_location_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).to have_link('Request')
+    end
+
+    it 'has the link text "Request on-site access" for on-site libraries' do
+      link = link_to_request_link(
+        document: current_location_document, library: double(code: 'SPEC-COLL'), callnumber: current_location_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).to have_link('Request on-site access')
+    end
   end
 
   describe '#request_link' do
