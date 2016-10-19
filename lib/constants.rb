@@ -224,6 +224,7 @@ module Constants
     '3RDFLR-REF' => 'Ask at circulation desk',
     'ACAD-DATA' => 'Social Science Data and Software',
     'ARABIC' => 'Arabic',
+    'ARS-LOAN' => 'In Archive of Recorded Sound: Ask at service desk',
     'ART-AT-ENG' => 'Currently at Terman Library',
     'ART-LOAN' => 'At Art Library circulation desk',
     'ART-RESV' => 'On reserve at Art Library',
