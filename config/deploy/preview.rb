@@ -8,4 +8,6 @@ task :deploy_preview do
   system('cap preview_prod deploy')
   puts 'deploying preview stage'
   system('cap preview_stage deploy')
+  puts 'deploying preview C'
+  system('cap preview_gryphon deploy')
 end
