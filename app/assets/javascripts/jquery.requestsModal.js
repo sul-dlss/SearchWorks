@@ -48,7 +48,9 @@
       }
 
       function addPostMessageListener() {
+        var timer;
         $(window).on('message onmessage', function(e) {
+          if (timer !== null) { window.clearTimeout(timer); }
           // If we ever extend this to include more data than contentHeight
           // and the successPage boolean then we may want to validate that
           // the event.origin is what we expect it to be. As it stands we
@@ -58,15 +60,28 @@
           updateModalHeight(data.contentHeight);
           updateCancelButton(data.successPage);
           closeModal(data.closeModal);
+
+          // In the case the user has navigated away from the request form
+          // (e.g. webauth login) we will stop receiving post messages. In
+          // this case, we can't know if the height that our modal was last
+          // set is tall enough to display all the content. Setting scroll='yes'
+          // unfortunately doesn't work w/o reloading the iframe entirely.
+          timer = window.setTimeout(function(){
+            setIframeToLargeHeight();
+          }, 2500);
         });
       }
 
+      function setIframeToLargeHeight(){
+        iframeForRequest().height('900px');
+      }
+
       function updateModalHeight(contentHeight) {
-        var iframeHeight = modalForRequest().find('iframe').height();
+        var iframeHeight = iframeForRequest().height();
         var setHeight = parseInt(contentHeight, 10);
 
         if (iframeHeight != setHeight && contentHeight > 0) {
-          modalForRequest().find('iframe').height(setHeight + 'px');
+          iframeForRequest().height(setHeight + 'px');
         }
       }
 
@@ -84,6 +99,10 @@
 
       function modalForRequest() {
         return $('[data-request-modal-url="' + requestURL + '"]');
+      }
+
+      function iframeForRequest() {
+        return modalForRequest().find('iframe');
       }
 
       function modalCancelButton() {
