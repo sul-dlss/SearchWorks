@@ -262,7 +262,7 @@ module Constants
     'BUS-ARCH' => 'Archives: Ask at i-Desk',
     'BUS-CMC' => 'Career Corner',
     'BUS-COMPF' => 'Computer files: Ask at i-Desk',
-    'BUS-LOAN' => 'Ask at i-Desk',
+    'BUS-LOAN' => 'At Business Library i-Desk',
     'BUS-LOCKED' => 'Locked stacks: Ask at i-Desk',
     'BUS-MAKENA' => 'Makena Capital Traders Pit',
     'BUS-PER' => 'Periodicals',
@@ -1099,7 +1099,7 @@ module Constants
     'BUSINESS' => 'business/location/business_library',
     'HV-ARCHIVE' => 'hoover_archives/location/hv_archives',
     'HOOVER' => 'hoover_library/location/hv_library',
-    'LATHROP' => 'meyer/location/meyer_2nd_floor',
+    'LATHROP' => 'lathrop/location/tech-lounge',
     'LAW' => 'law/location/law_library',
     'LANE-MED' => 'medical/location/medical_library',
     'SLAC' => 'slac/location/slac'
