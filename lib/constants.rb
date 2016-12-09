@@ -506,6 +506,7 @@ module Constants
     'PHY-LOAN' => 'Ask at circulation desk',
     'PHYS-RESV' => 'Ask at circulation desk',
     'PHYSTEMP' => 'Currently online only',
+    'POPSCI' => 'Popular science',
     'PUB-TECH' => 'Ask at circulation desk',
     'R-FOLIO' => 'Folio (Limited loan)',
     'R-FOLIO-FL' => 'Flat folio (Limited loan)',
@@ -550,6 +551,8 @@ module Constants
     'SAMSON' => 'Samson Collection',
     'SCBS' => 'Stanford Center for Buddhist Studies (Bldg. 70)',
     'SCORES' => 'Scores',
+    'SCI-LOAN' => 'At Li and Ma Science Library circulation desk',
+    'SCI-RESV' => 'On reserve at Li and Ma Science Library',
     'SEE-ARCHIV' => 'Currently at Hoover Archives',
     'SEE-EASTA' => 'Ask at circulation desk',
     'SEE-LOAN' => 'Ask at circulation desk',
@@ -986,7 +989,8 @@ module Constants
     'LAW-RESV' => 'LAW',
     'MATH-RESV' => 'MATH-CS',
     'MEDIA-RESV' => 'MEDIA-MTXT',
-    'MUSIC-RESV' => 'MUSIC'
+    'MUSIC-RESV' => 'MUSIC',
+    'SCI-RESV' => 'SCIENCE'
   }
 
   STACKMAP_LIBS = %w(GREEN MEDIA-MTXT)
@@ -1029,6 +1033,7 @@ module Constants
     'SAL' => 'SAL1&2 (on-campus shelving)',
     'SAL3' => 'SAL3 (off-campus storage)',
     'SAL-NEWARK' => 'SAL Newark (off-campus storage)',
+    'SCIENCE' => 'Science Library (Li and Ma)',
     'SPEC-COLL' => 'Special Collections',
     # "SPEC-DESK" => "(In-transit location for SAL paged items)",
     'TANNER' => 'Philosophy Library (Tanner)',
@@ -1071,6 +1076,7 @@ module Constants
       ['Music Library', '650 723 1211'],
       ['Archive of Recorded Sound', '650 723 9312'],
       ['Philosophy Library (Tanner)', '650 723 1539'],
+      ['Science Library (Li and Ma)', '650 723 1528'],
       ['Special Collections', '650 725 1022'],
       ['Stanford Auxiliary Library (SAL1&2)', '650 723 9201'],
       ['SLAC National Accelerator Laboratory Library', '650 926 2411']
@@ -1095,6 +1101,7 @@ module Constants
     'MEDIA-MTXT' => 'green/location/media_microtext',
     'MUSIC' => 'music/location/music_library',
     'RUMSEYMAP' => 'Rumsey/location/visitor-access',
+    'SCIENCE' => 'science/location/library-circulation',
     'SPEC-COLL' => 'special_collections/location/spec_coll_reading',
     'BUSINESS' => 'business/location/business_library',
     'HV-ARCHIVE' => 'hoover_archives/location/hv_archives',
@@ -1132,6 +1139,7 @@ module Constants
     'SAL' => 'http://library.stanford.edu/libraries/sal/about',
     'SAL-NEWARK' => 'http://library.stanford.edu/libraries/newark/about',
     'SAL3' => 'http://library.stanford.edu/libraries/sal3/about',
+    'SCIENCE' => 'http://library.stanford.edu/libraries/science/about',
     'SLAC' => 'http://library.stanford.edu/libraries/slac/about'
   }
 
