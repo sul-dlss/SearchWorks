@@ -451,6 +451,7 @@ module Constants
     'MM-STACKS' => 'Ask at Media Microtext desk',
     'MP-CASE-LG' => 'Request for use at Map Center (large case)',
     'MP-CASE-MD' => 'Request for use at Map Center (medium case)',
+    'MP-CASE-RF' => 'Raised Relief Maps',
     'MP-CASE-SM' => 'Request for use at Map Center (small case)',
     'MSS-10' => 'Manuscript Collection',
     'MSS-20' => 'Manuscript Collection',
