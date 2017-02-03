@@ -10,4 +10,6 @@ task :deploy_preview do
   system('cap preview_stage deploy')
   puts 'deploying preview C'
   system('cap preview_gryphon deploy')
+  puts 'deploying preview morison (sandbox-d)'
+  system('cap preview_morison deploy')
 end
