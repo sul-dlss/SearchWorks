@@ -80,7 +80,7 @@ gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
 gem 'deprecation'
 
 gem 'blacklight', '~> 5.8.2'
-gem 'nokogiri', '~> 1.6.7'
+gem 'nokogiri', '>= 1.7.1'
 gem "jettywrapper", "~> 1.7"
 gem "devise"
 gem "devise-guests"
