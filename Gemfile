@@ -86,7 +86,7 @@ gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
 gem "blacklight-marc", "~> 5.0"
-gem "faraday"
+gem "faraday", "<= 0.9.1"
 gem "config"
 gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
