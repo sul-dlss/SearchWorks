@@ -10,4 +10,6 @@ task :deploy_preview do
   system('cap preview_stage deploy')
   puts 'deploying preview C'
   system('cap preview_gryphon deploy')
+  puts 'deploying preview RDF (sandbox-e)'
+  system('cap preview_rdf deploy')
 end
