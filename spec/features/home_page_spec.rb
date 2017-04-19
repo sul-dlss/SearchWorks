@@ -28,7 +28,7 @@ feature "Home Page" do
 
   scenario "'Looking for ideas?' section should display" do
     expect(page).to have_css('h2', text: 'Looking for ideas?')
-    expect(page).to have_css('.media a', text: 'Yewno [beta]')
+    expect(page).to have_css('.media a', text: 'Yewno')
   end
 
   scenario "'Articles' section should display" do
