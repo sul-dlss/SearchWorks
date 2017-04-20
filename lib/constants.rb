@@ -298,7 +298,7 @@ module Constants
     'CURRENTPER' => 'Current periodicals',
     'CURRICULUM' => 'Curriculum Collection',
     'CURRSTOR' => 'Ask at circulation desk',
-    'DISPLAY-1ST' => '1st floor display case',
+    'DSPLAY-1ST' => '1st floor display case',
     'DSPLAY-2ND' => '2nd floor display case',
     'DOMESTIC' => 'Domestic',
     'EAL-SETS' => 'East Asia Big Sets',
