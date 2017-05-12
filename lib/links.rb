@@ -1,5 +1,7 @@
 module SearchWorks
   class Links
+    PROXY_REGEX = /stanford\.idm\.oclc\.org/
+
     delegate :present?, :first, :last, :each, :map, :select, :find, to: :all
     def initialize(document)
       @document = document
