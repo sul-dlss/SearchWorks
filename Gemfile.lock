@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/projectblacklight/blacklight-gallery.git
-  revision: 2f9f342518585a6e48d93a8e4ed5621afcf918a7
-  specs:
-    blacklight-gallery (0.0.1)
-      blacklight (>= 5.0.0.pre4, < 6.0)
-      bootstrap-sass (~> 3.0)
-      rails
-
-GIT
   remote: git://github.com/projectblacklight/blacklight_advanced_search.git
   revision: 199eaeda7faf00e7773da842b89bfe94f9309b91
   specs:
@@ -23,13 +14,6 @@ GIT
       blacklight (>= 5.0.0.pre4, < 6)
       jquery-rails
       rails (>= 3.0, < 5.0)
-
-GIT
-  remote: git://github.com/sul-dlss/openseadragon-rails.git
-  revision: 88e48e1f62a49d4e382948ae08eba6e993cd6773
-  specs:
-    openseadragon (0.0.5)
-      rails (> 3.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -85,6 +69,11 @@ GEM
       nokogiri (~> 1.6)
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
+    blacklight-gallery (0.3.0)
+      blacklight (~> 5.0)
+      bootstrap-sass (~> 3.0)
+      openseadragon (>= 0.2.0)
+      rails
     blacklight-hierarchy (0.1.0)
       blacklight (~> 5, < 6)
       rails (~> 4.1)
@@ -249,6 +238,8 @@ GEM
       i18n
       nokogiri
     okcomputer (1.12.0)
+    openseadragon (0.3.3)
+      rails (> 3.2.0)
     orm_adapter (0.5.0)
     parser (2.3.0.2)
       ast (~> 2.2)
@@ -402,7 +393,7 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight (~> 5.8.2)
-  blacklight-gallery!
+  blacklight-gallery (= 0.3.0)
   blacklight-hierarchy (~> 0.1.0)
   blacklight-marc (~> 5.0)
   blacklight_advanced_search!
@@ -436,7 +427,7 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri (>= 1.7.1)
   okcomputer
-  openseadragon!
+  openseadragon
   poltergeist (>= 1.8.1)
   rails (= 4.2.7.1)
   retina_tag

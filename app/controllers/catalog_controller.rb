@@ -314,14 +314,16 @@ class CatalogController < ApplicationController
     config.spell_max = 5
 
     # Deletes slideshow view
-    config.view.delete_field("slideshow")
+    # config.view.delete_field("slideshow")
 
     # View type group config
     config.view.list.icon_class = "fa-th-list"
 
+    config.view.gallery ||= OpenStruct.new
     config.view.gallery.partials = [:index]
     config.view.gallery.icon_class = "fa-th"
 
+    config.view.brief ||= OpenStruct.new
     config.view.brief.partials = [:index]
     config.view.brief.icon_class = "fa-align-justify"
 
