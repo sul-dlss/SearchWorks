@@ -106,7 +106,7 @@ class Holdings
     def noncirc_library_only_inprocess?
       return false unless @items.present?
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(library) && @items.all? do |item|
-        item.current_location.try(:code) == 'INPROCESS'
+        Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
       end
     end
 

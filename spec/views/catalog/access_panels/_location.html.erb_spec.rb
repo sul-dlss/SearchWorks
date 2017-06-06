@@ -61,6 +61,17 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       render
       expect(rendered).not_to have_css('a', text: "Request")
     end
+
+    it 'should not have the location level request link for inprocess noncirculating collections' do
+      assign(:document, SolrDocument.new(
+        id: '123',
+        item_display: [
+          '123 -|- SPEC-COLL -|- GUNST -|- SPEC-INPRO -|- -|- -|- -|- -|- ABC 123'
+        ]
+      ))
+      render
+      expect(rendered).not_to have_css('a', text: "Request")
+    end
   end
   describe "status text" do
     before do
