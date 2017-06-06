@@ -137,7 +137,7 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://ezproxy.stanford.edu/?url=http://library.stanford.edu</subfield>
+          <subfield code='u'>http://stanford.idm.oclc.org/?url=http://library.stanford.edu</subfield>
         </datafield>
       </record>
     xml

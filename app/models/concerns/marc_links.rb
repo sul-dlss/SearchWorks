@@ -66,10 +66,10 @@ module MarcLinks
             suby = subfield.value
           end
         }
-        if fixed_url.include?("ezproxy.stanford.edu") and fixed_url.include?("url=")
-          ezproxy = CGI.parse(URI.parse(fixed_url).query)
-          if ezproxy.has_key?("url")
-            url_host = URI.parse(ezproxy["url"].first).host
+        if fixed_url =~ SearchWorks::Links::PROXY_REGEX && fixed_url.include?("url=")
+          proxy = CGI.parse(URI.parse(fixed_url).query)
+          if proxy.has_key?("url")
+            url_host = URI.parse(proxy["url"].first).host
           else
             url_host = url.host
           end
