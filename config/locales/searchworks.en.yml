@@ -5,6 +5,13 @@ en:
         label: Imprint
       language:
         label: Language
+      linked_author:
+        corporate_author:
+          label: Corporate Author
+        creator:
+          label: Author/Creator
+        meeting:
+          label: Meeting
       linked_series:
         label: Series
       notation:
