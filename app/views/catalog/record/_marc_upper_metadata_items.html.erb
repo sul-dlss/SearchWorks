@@ -9,31 +9,7 @@
       <%= render_field_from_marc(uniform_title) %>
     <%- end -%>
 
-    <%- language = get_data_with_label(document, "Language", 'language') -%>
-    <%- marc_language = get_data_with_label_from_marc(document.to_marc, "Language", '546') -%>
-    <%- unless (language.nil? and marc_language.nil?) -%>
-      <dt>Language</dt>
-      <%- languages = [] -%>
-      <%- unless (language.nil? or language[:fields].nil?) -%>
-        <%- languages << language[:fields] unless language[:fields].blank? -%>
-        <%- languages << language[:vernacular] unless language[:vernacular].blank? -%>
-        <%- languages << language[:unmatched_vernacular] unless language[:unmatched_vernacular].nil? -%>
-      <%- end -%>
-      <%- languages.flatten!
-          languages.compact! -%>
-
-      <%- marc_languages = [] -%>
-      <%- unless (marc_language.nil? or marc_language[:fields].nil?) -%>
-        <%- marc_language[:fields].each do |lang| -%>
-          <%- marc_languages << lang[:field] -%>
-          <%- marc_languages << lang[:vernacular] unless lang[:vernacular].nil? -%>
-        <%- end -%>
-        <%- marc_languages << marc_language[:unmatched_vernacular] unless marc_language[:unmatched_vernacular].nil? -%>
-      <%- end -%>
-      <%- marc_languages.flatten!
-          marc_languages.compact! -%>
-      <dd><%= [languages.join(", "), marc_languages.join(", ")].compact.join(". ") %></dd>
-    <%- end -%>
+    <%= render document.language if document.language.present? %>
 
     <% if (characteristics = document.marc_characteristics).present? %>
       <% characteristics.each do |characteristic| %>
