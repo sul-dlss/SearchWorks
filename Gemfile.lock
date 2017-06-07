@@ -1,20 +1,3 @@
-GIT
-  remote: git://github.com/projectblacklight/blacklight_advanced_search.git
-  revision: 199eaeda7faf00e7773da842b89bfe94f9309b91
-  specs:
-    blacklight_advanced_search (5.1.1)
-      blacklight (>= 5.2, < 6.0)
-      parslet
-
-GIT
-  remote: git://github.com/projectblacklight/blacklight_range_limit.git
-  revision: 15a140f9ee6c42d47e3bb1bbe905053079811bc2
-  specs:
-    blacklight_range_limit (5.0.2)
-      blacklight (>= 5.0.0.pre4, < 6)
-      jquery-rails
-      rails (>= 3.0, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,7 +63,13 @@ GEM
       blacklight (>= 5.4.0.rc1, < 6.0)
       marc (>= 0.4.3, < 1.1)
       rails
-    blankslate (2.1.2.4)
+    blacklight_advanced_search (5.1.2)
+      blacklight (>= 5.2, < 6.0)
+      parslet
+    blacklight_range_limit (5.0.4)
+      blacklight (>= 5.0.0.pre4, < 6)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
     builder (3.2.3)
@@ -242,8 +231,7 @@ GEM
     orm_adapter (0.5.0)
     parser (2.3.0.2)
       ast (~> 2.2)
-    parslet (1.6.1)
-      blankslate (~> 2.0)
+    parslet (1.8.0)
     poltergeist (1.8.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -395,8 +383,8 @@ DEPENDENCIES
   blacklight-gallery (= 0.3.0)
   blacklight-hierarchy (~> 0.1.0)
   blacklight-marc (~> 5.0)
-  blacklight_advanced_search!
-  blacklight_range_limit!
+  blacklight_advanced_search (~> 5.1.2)
+  blacklight_range_limit (~> 5.0.3)
   byebug
   capistrano (~> 3.0)
   capistrano-bundler
