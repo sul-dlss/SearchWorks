@@ -75,7 +75,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
+gem 'openseadragon'# , github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
 
@@ -89,7 +89,7 @@ gem "blacklight-marc", "~> 5.0"
 gem "faraday", "<= 0.9.1"
 gem "config"
 gem "mods_display", "~> 0.4.0"
-gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
+gem "blacklight-gallery", '0.3.0' # github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
