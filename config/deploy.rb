@@ -1,6 +1,3 @@
-# config valid only for Capistrano 3.4
-lock '3.4.0'
-
 set :application, 'SearchWorks'
 set :repo_url, 'https://github.com/sul-dlss/SearchWorks.git'
 
