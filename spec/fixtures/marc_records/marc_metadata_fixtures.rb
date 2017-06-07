@@ -417,6 +417,27 @@ module MarcMetadataFixtures
     xml
   end
 
+  def language_fixture
+    <<-xml
+      <record>
+        <datafield tag="546" ind1="1" ind2=" ">
+          <subfield code="a">Language $a</subfield>
+          <subfield code="b">Language $b</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def notation_fixture
+    <<-xml
+      <record>
+        <datafield tag="546" ind1="1" ind2=" ">
+          <subfield code="b">Notation $b</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def contributor_fixture
     <<-xml
       <record>
