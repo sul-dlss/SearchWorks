@@ -605,6 +605,7 @@ module MarcMetadataFixtures
     <<-xml
       <record>
         <datafield tag="730" ind1=" " ind2=" ">
+          <subfield code="i">Includes (expression)</subfield>
           <subfield code="a">Contributor1</subfield>
         </datafield>
         <datafield tag="740" ind1=" " ind2="2">
