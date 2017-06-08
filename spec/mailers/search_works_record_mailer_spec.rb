@@ -9,14 +9,14 @@ describe SearchWorksRecordMailer do
         id: '123',
         title_display: "Title1",
         item_display: ["12345 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"],
-        url_sfx: ["http://library.stanford.edu"],
+        url_sfx: ["https://library.stanford.edu"],
         modsxml: mods_everything
       ),
       SolrDocument.new(
         id: '321',
         title_display: "Title2",
         item_display: ["54321 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321"],
-        url_sfx: ["http://stacks.stanford.edu"],
+        url_sfx: ["https://stacks.stanford.edu"],
         marcxml: metadata1
       )
     ]
@@ -61,8 +61,8 @@ describe SearchWorksRecordMailer do
     end
     it 'should include the URLs' do
       expect(mail.body).to include "Online:"
-      expect(mail.body).to include "http://library.stanford.edu"
-      expect(mail.body).to include "http://stacks.stanford.edu"
+      expect(mail.body).to include "https://library.stanford.edu"
+      expect(mail.body).to include "https://stacks.stanford.edu"
     end
     it 'should include the URL to all the documents' do
       expect(mail.body).to include "Bookmark: http://example.com/view/123"

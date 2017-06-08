@@ -36,7 +36,7 @@ module ModsFixtures
           <titleInfo>
             <title>Reid W. Dennis collection of California lithographs, 1850-1906</title>
           </titleInfo>
-          <identifier type="uri">http://purl.stanford.edu/sg213ph2100</identifier>
+          <identifier type="uri">https://purl.stanford.edu/sg213ph2100</identifier>
           <typeOfResource collection="yes" />
         </relatedItem>
         <accessCondition type="useAndReproduction">Property rights reside with the repository. Literary rights reside with the creators of the documents or their heirs. To obtain permission to publish or reproduce, please contact the Special Collections Public Services Librarian at speccollref@stanford.edu.</accessCondition>

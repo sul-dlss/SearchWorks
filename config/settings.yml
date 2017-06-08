@@ -5,12 +5,12 @@ STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
 SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
 LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
-STACKMAP_API_URL: "http://stanford.stackmap.com/json/"
+STACKMAP_API_URL: "https://stanford.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'
 NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
-PURL_EMBED_URL_SCHEME: 'http://purl.stanford.edu/*'
-PURL_EMBED_RESOURCE: 'http://purl.stanford.edu/'
+PURL_EMBED_URL_SCHEME: 'https://purl.stanford.edu/*'
+PURL_EMBED_RESOURCE: 'https://purl.stanford.edu/'
 FEEDBACK_ALERT: <%= false %>
 GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
 NEW_RELIC_LICENSE_KEY: 'NEW_RELIC_KEY'
@@ -22,7 +22,7 @@ GOVERNMENT_DOCUMENTS_ACCESS_POINT: true
 EMAIL_THRESHOLD: 5
 OCLC:
   API_KEY: the-oclc-api-key
-  BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
+  BASE_URL: https://www.worldcat.org/webservices/catalog/content/citations
   CITATION_FORMATS: ['all']
   DOCUMENT_FIELD: 'oclc'
 MOUSEFLOW: <%= Rails.env.production? %>

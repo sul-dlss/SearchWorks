@@ -69,7 +69,7 @@ describe CatalogController do
 
       it 'should not allow messages that have links in them' do
         expect do
-          post :email, to: 'email@example.com', message: 'http://library.stanford.edu', type: 'full'
+          post :email, to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full'
         end.to_not change { ActionMailer::Base.deliveries.count }
         expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
         expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')

@@ -7,9 +7,9 @@ end
 describe IndexLinks do
   let(:solr_document) do
     SolrDocument.new(
-      url_fulltext:   ['http://library.stanford.edu'],
-      url_suppl:      ['http://searchworks.stanford.edu'],
-      url_restricted: ['http://library.stanford.edu']
+      url_fulltext:   ['https://library.stanford.edu'],
+      url_suppl:      ['https://searchworks.stanford.edu'],
+      url_restricted: ['https://library.stanford.edu']
     )
   end
   let(:finding_aid_document) do
@@ -19,7 +19,7 @@ describe IndexLinks do
   end
   let(:managed_purl_document) do
     SolrDocument.new(
-      managed_purl_urls: ['http://purl.stanford.edu/abc123']
+      managed_purl_urls: ['https://purl.stanford.edu/abc123']
     )
   end
   let(:sfx_document) do
@@ -30,7 +30,7 @@ describe IndexLinks do
   let(:ezproxy_document) do
     SolrDocument.new(
       url_fulltext: [
-        'http://stanford.idm.oclc.org/login?url=http://library.stanford.edu',
+        'https://stanford.idm.oclc.org/login?url=https://library.stanford.edu',
         'http://ezproxy.stanford.edu:2197/stable/i403360'
       ]
     )
@@ -69,9 +69,9 @@ describe IndexLinks do
     it 'should return the plain text and href separately' do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.text).to eq 'library.stanford.edu'
-      expect(index_links.all.first.href).to eq 'http://library.stanford.edu'
+      expect(index_links.all.first.href).to eq 'https://library.stanford.edu'
       expect(index_links.all.last.text).to eq 'searchworks.stanford.edu'
-      expect(index_links.all.last.href).to eq 'http://searchworks.stanford.edu'
+      expect(index_links.all.last.href).to eq 'https://searchworks.stanford.edu'
     end
     it 'should identify urls that are in the url_restricted field as stanford only' do
       expect(index_links.all.first).to be_stanford_only

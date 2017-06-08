@@ -13,9 +13,9 @@ feature "Collection details access panel" do
         expect(page).to have_css('dt', text: 'Finding aid')
         expect(page).to have_css('dd a', text: 'Online Archive of California')
         expect(page).to have_css('dt', text: 'Collection PURL')
-        expect(page).to have_css('dd a', text: 'http://purl.stanford.edu/29')
+        expect(page).to have_css('dd a', text: 'https://purl.stanford.edu/29')
       end
     end
-    
+
   end
 end

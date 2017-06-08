@@ -18,7 +18,7 @@
       <% end %>
       <% if @search_modifier.has_query? %>
         <p>
-          <span>Search elsewhere:</span> <%= link_to "Search WorldCat", "http://www.worldcat.org/search?q=#{params[:q]}" %> <%= link_to("Search library website", "http://library.stanford.edu/search/website?search=#{params[:q]}") %>
+          <span>Search elsewhere:</span> <%= link_to "Search WorldCat", "https://www.worldcat.org/search?q=#{params[:q]}" %> <%= link_to("Search library website", "https://library.stanford.edu/search/website?search=#{params[:q]}") %>
         </p>
       <% end %>
     </div>

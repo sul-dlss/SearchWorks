@@ -34,7 +34,7 @@ describe "catalog/access_panels/_collection_details.html.erb" do
       expect(rendered).to have_css('dt', text: 'Physical extent')
       expect(rendered).to have_css('dd', text: '2 things')
       expect(rendered).to have_css('dt', text: 'Collection PURL')
-      expect(rendered).to have_css('dd a', text: 'http://purl.stanford.edu/1234')
+      expect(rendered).to have_css('dd a', text: 'https://purl.stanford.edu/1234')
     end
   end
 end
