@@ -90,9 +90,9 @@ gem "faraday", "<= 0.9.1"
 gem "config"
 gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", '0.3.0' # github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
+gem "blacklight_advanced_search", "~> 5.1.2"
 gem "font-awesome-sass"
-gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
+gem "blacklight_range_limit", "~> 5.0.3"
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
