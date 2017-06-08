@@ -3,8 +3,12 @@ en:
     marc_fields:
       imprint:
         label: Imprint
+      language:
+        label: Language
       linked_series:
         label: Series
+      notation:
+        label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
       unlinked_series:

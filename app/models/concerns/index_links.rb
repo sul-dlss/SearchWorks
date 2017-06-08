@@ -76,7 +76,7 @@ module IndexLinks
     def link_host(link_field)
       uri = URI.parse(URI.escape(link_field.strip))
       host = uri.host
-      if host =~ /ezproxy\.stanford\.edu/
+      if host =~ SearchWorks::Links::PROXY_REGEX
         if uri.query && (query = CGI.parse(uri.query))['url'].present?
           host = URI.parse(query['url'].first).host
         end

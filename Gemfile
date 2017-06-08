@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.8'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -75,7 +75,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'openseadragon', github: 'sul-dlss/openseadragon-rails'
+gem 'openseadragon'# , github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
 
@@ -89,10 +89,10 @@ gem "blacklight-marc", "~> 5.0"
 gem "faraday", "<= 0.9.1"
 gem "config"
 gem "mods_display", "~> 0.4.0"
-gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
+gem "blacklight-gallery", '0.3.0' # github: 'projectblacklight/blacklight-gallery'
+gem "blacklight_advanced_search", "~> 5.1.2"
 gem "font-awesome-sass"
-gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
+gem "blacklight_range_limit", "~> 5.0.3"
 gem 'blacklight-hierarchy', "~> 0.1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'

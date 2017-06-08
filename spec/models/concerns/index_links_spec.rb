@@ -30,7 +30,7 @@ describe IndexLinks do
   let(:ezproxy_document) do
     SolrDocument.new(
       url_fulltext: [
-        'http://ezproxy.stanford.edu/login?url=http://library.stanford.edu',
+        'http://stanford.idm.oclc.org/login?url=http://library.stanford.edu',
         'http://ezproxy.stanford.edu:2197/stable/i403360'
       ]
     )
