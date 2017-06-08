@@ -1,7 +1,7 @@
 class CourseReservesController < ApplicationController
-  include Blacklight::Catalog::SearchContext
+  include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SolrHelper
+  include Blacklight::SearchHelper
   include CourseReserves
   copy_blacklight_config_from(CatalogController)
 

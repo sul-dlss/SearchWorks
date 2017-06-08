@@ -1,5 +1,5 @@
 class NearbyOnShelf
-  include Blacklight::SolrHelper
+  include Blacklight::SearchHelper
   attr_reader :items
   def initialize(type,config,options)
     @blacklight_config = config

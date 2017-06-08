@@ -1,7 +1,7 @@
 class RecentSelectionsController < ApplicationController
 
-  include Blacklight::SolrHelper
-  include Blacklight::Catalog::SearchContext
+  include Blacklight::SearchHelper
+  include Blacklight::SearchContext
   def index
     _, @recent_selections =
       get_solr_response_for_document_ids(
