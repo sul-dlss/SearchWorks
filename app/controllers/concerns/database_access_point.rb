@@ -6,8 +6,8 @@ module DatabaseAccessPoint
       before_filter :default_databases_sort, only: :index
       before_filter :add_database_topic_facet, only: [:index, :facet]
     end
-    if self.respond_to?(:solr_search_params_logic)
-      self.solr_search_params_logic << :database_prefix_search
+    if self.respond_to?(:search_params_logic)
+      self.search_params_logic += [:database_prefix_search]
     end
   end
 
