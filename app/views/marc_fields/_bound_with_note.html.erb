@@ -1,10 +1,12 @@
 <% bound_with_note.values.each do |value| %>
-  <% if value[:id] %>
-    <%= value[:value].gsub(
-          value[:id],
-          link_to(value[:id], solr_document_path(value[:id]))
-        ).html_safe %>
-  <% else %>
-    <%= value[:value] %>
-  <% end %>
+  <div>
+    <% if value[:id] %>
+      <%= value[:value].gsub(
+            value[:id],
+            link_to(value[:id], solr_document_path(value[:id]))
+          ).html_safe %>
+    <% else %>
+      <%= value[:value] %>
+    <% end %>
+  </div>
 <% end %>
