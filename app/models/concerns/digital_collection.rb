@@ -39,7 +39,7 @@ module DigitalCollection
     attr_reader :document, :options
 
     def response
-      @response ||= Blacklight.solr.select(
+      @response ||= blacklight_solr.select(
         params: {
           fq: "collection:\"#{@document[:id]}\"",
           rows: 20
@@ -62,6 +62,10 @@ module DigitalCollection
       documents.count do |doc|
         doc.image_urls.blank?
       end
+    end
+
+    def blacklight_solr
+      Blacklight.default_index.connection
     end
   end
 end

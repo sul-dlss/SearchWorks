@@ -26,7 +26,7 @@ module SolrSet
   private
 
   def set_document_list
-    @document_list ||= Blacklight.solr.select(set_solr_params)['response']['docs']
+    @document_list ||= Blacklight.default_index.connection.select(set_solr_params)['response']['docs']
   end
 
   def set_solr_params

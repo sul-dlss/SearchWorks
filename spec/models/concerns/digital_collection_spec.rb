@@ -25,7 +25,7 @@ describe DigitalCollection do
       }
     }}
     before do
-      allow(Blacklight).to receive(:solr).and_return(stub_solr)
+      allow(Blacklight.default_index).to receive(:connection).and_return(stub_solr)
     end
 
     describe "#documents" do
@@ -33,11 +33,11 @@ describe DigitalCollection do
         expect(collection.collection_members).to be_a(DigitalCollection::CollectionMembers)
       end
       it "should search solr for all members of a collection" do
-        expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)
+        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         expect(collection_members.documents).to be_present
       end
       it "should return solr documents" do
-        expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)
+        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         collection_members.documents.each do |member|
           expect(member).to be_a SolrDocument
         end
@@ -45,7 +45,7 @@ describe DigitalCollection do
     end
     describe "#total" do
       it "should return the numFound integer" do
-        expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)
+        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         expect(collection_members.total).to eq 2
       end
     end
