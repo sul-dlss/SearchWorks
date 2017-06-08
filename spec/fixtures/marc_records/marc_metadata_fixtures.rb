@@ -75,11 +75,11 @@ module MarcMetadataFixtures
         </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='3'>Finding aid at:</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='z'>Link title</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>
           <subfield code='z'>This is the Finding Aid</subfield>
         </datafield>
@@ -320,7 +320,7 @@ module MarcMetadataFixtures
           <subfield code="u">http://socrates.stanford.edu</subfield>
         </datafield>
         <datafield tag="520" ind1=" " ind2=" ">
-          <subfield code="u">http://searchworks.stanford.edu</subfield>
+          <subfield code="u">https://searchworks.stanford.edu</subfield>
         </datafield>
         <datafield tag="530" ind1=" " ind2=" ">
           <subfield code="u">library.stanford.edu</subfield>
@@ -901,7 +901,7 @@ module MarcMetadataFixtures
           <subfield code="b">F55 1998</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>A different finding aid</subfield>
           <subfield code='z'>This is the Finding Aid</subfield>
         </datafield>

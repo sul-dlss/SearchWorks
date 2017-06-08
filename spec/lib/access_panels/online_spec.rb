@@ -25,7 +25,7 @@ describe AccessPanel::Online do
   let(:managed_purl_doc) do
     Online.new(
       SolrDocument.new(
-        managed_purl_urls: ['http://library.stanford.edu'],
+        managed_purl_urls: ['https://library.stanford.edu'],
         marcxml: managed_purl_856
       )
     )
@@ -35,7 +35,7 @@ describe AccessPanel::Online do
     Online.new(
       SolrDocument.new(
         collection: ['12345'],
-        url_fulltext: 'http://purl.stanford.edu/',
+        url_fulltext: 'https://purl.stanford.edu/',
         modsxml: mods_everything
       )
     )

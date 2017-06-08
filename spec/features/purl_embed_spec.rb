@@ -16,14 +16,14 @@ describe 'PURL Embed', js: true do
 
     it 'has the managed purl panel with an item for each managed purl' do
       within('.managed-purl-panel') do
-        expect(page).to have_css('li[data-embed-target="http://purl.stanford.edu/ct493wg6431"]')
-        expect(page).to have_css('li[data-embed-target="http://purl.stanford.edu/zg338xh5248"]')
+        expect(page).to have_css('li[data-embed-target="https://purl.stanford.edu/ct493wg6431"]')
+        expect(page).to have_css('li[data-embed-target="https://purl.stanford.edu/zg338xh5248"]')
       end
     end
 
     it 'switches iframe src attributes on item selection' do
-      first_item = all('li[data-embed-target="http://purl.stanford.edu/ct493wg6431"]').first
-      last_item = all('li[data-embed-target="http://purl.stanford.edu/zg338xh5248"]').first
+      first_item = all('li[data-embed-target="https://purl.stanford.edu/ct493wg6431"]').first
+      last_item = all('li[data-embed-target="https://purl.stanford.edu/zg338xh5248"]').first
       expect(all('iframe').first['src']).to include('purl.stanford.edu/ct493wg6431')
 
       last_item.click

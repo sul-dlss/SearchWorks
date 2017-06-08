@@ -4,7 +4,7 @@ module Marc856Fixtures
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='3'>Link text 1</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text 2</subfield>
           <subfield code='z'>Title text1</subfield>
           <subfield code='z'>Title text2</subfield>
@@ -16,7 +16,7 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
         </datafield>
       </record>
     xml
@@ -26,7 +26,7 @@ module Marc856Fixtures
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='3'>Link text</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='x'>CasaliniTOC</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Title text1</subfield>
@@ -39,22 +39,22 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Available to stanford affiliated users at:4 at one time</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Available-to-stanford-affiliated-users-at:</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='3'>Available to stanford affiliated users at</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Available to stanford affiliated users</subfield>
         </datafield>
@@ -65,15 +65,15 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='1'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2=''>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
       </record>
@@ -84,32 +84,32 @@ module Marc856Fixtures
       <record>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='3'>Before text</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Title text1</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Title text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='3'>this is the table of contents</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='3'>this is sample text</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='1'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>this is the abstract</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2=''>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>this is the description</subfield>
         </datafield>
@@ -121,12 +121,12 @@ module Marc856Fixtures
       <record>
         <datafield tag='856' ind1='0' ind2='2'>
           <subfield code='3'>FINDING AID:</subfield>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>Title text1</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='y'>Link text</subfield>
           <subfield code='z'>This is a finding aid</subfield>
         </datafield>
@@ -137,7 +137,7 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://stanford.idm.oclc.org/?url=http://library.stanford.edu</subfield>
+          <subfield code='u'>https://stanford.idm.oclc.org/?url=https://library.stanford.edu</subfield>
         </datafield>
       </record>
     xml
@@ -156,7 +156,7 @@ module Marc856Fixtures
     <<-xml
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://library.stanford.edu</subfield>
+          <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='x'>file:abc123</subfield>
           <subfield code='y'>Link text 2</subfield>
         </datafield>
@@ -171,11 +171,11 @@ module Marc856Fixtures
         <subfield code="a">Many PURLs for One CKey</subfield>
       </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://purl.stanford.edu/ct493wg6431</subfield>
+          <subfield code='u'>https://purl.stanford.edu/ct493wg6431</subfield>
           <subfield code='x'>file:ct493wg6431_00_0001.jp2</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
-          <subfield code='u'>http://purl.stanford.edu/zg338xh5248</subfield>
+          <subfield code='u'>https://purl.stanford.edu/zg338xh5248</subfield>
           <subfield code='x'>file:zg338xh5248_00_0001.jp2</subfield>
         </datafield>
       </record>

@@ -28,7 +28,7 @@ describe MarcLinks do
       expect(link_text).to eq "Link text 1 Link text 2"
     end
     it 'should include the href' do
-      expect(link_href).to eq "http://library.stanford.edu"
+      expect(link_href).to eq "https://library.stanford.edu"
     end
   end
   describe "casalini links" do
@@ -65,7 +65,7 @@ describe MarcLinks do
   end
 
   describe 'managed_purl?' do
-    let(:document) { SolrDocument.new(marcxml: managed_purl_856, managed_purl_urls: ['http://library.stanford.edu']) }
+    let(:document) { SolrDocument.new(marcxml: managed_purl_856, managed_purl_urls: ['https://library.stanford.edu']) }
     let(:links) { document.marc_links }
 
     it 'should return the managed purl links' do
