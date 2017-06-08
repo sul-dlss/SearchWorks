@@ -101,8 +101,8 @@ module MarcHelper
               if subfield.code == "t"
                 subt = :now
               end
-              if subfield.code == "i" and subt == :none
-                before_text << subfield.value
+              if subfield.code == "i" and subt == :none # assumes $i at beginning
+                before_text << subfield.value.gsub(/\s*\(.+\)\s*/, '')
               elsif subt == :none
                 href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
                 link_text << subfield.value
@@ -441,6 +441,7 @@ module MarcHelper
     return unless fields.any? { |f| doc[f].present? }
     last_present_tag = fields.reverse.find { |f| doc[f].present? }
     uniform_title = fld || doc[last_present_tag]
+    pre_text = []
     link_text = []
     extra_text = []
     end_link = false
@@ -451,6 +452,8 @@ module MarcHelper
         end_link = true
       elsif end_link || sub_field.code == 'h'
         extra_text << sub_field.value
+      elsif sub_field.code == 'i' # assumes $i is at beginning
+        pre_text << sub_field.value.gsub(/\s*\(.+\)/, '')
       else
         link_text << sub_field.value
       end
@@ -477,7 +480,7 @@ module MarcHelper
       unmatched_vernacular: nil,
       fields: [
         {
-          field: "#{link_to(link_text.join(' '), { action: 'index', controller: 'catalog', q: href, search_field: search_field})} #{extra_text.join(' ')}".html_safe,
+          field: "#{pre_text.join(' ')} #{link_to(link_text.join(' '), { action: 'index', controller: 'catalog', q: href, search_field: search_field})} #{extra_text.join(' ')}".html_safe,
           vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: search_field }) if vern)
         }
       ]
