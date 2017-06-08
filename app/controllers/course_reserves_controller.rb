@@ -13,7 +13,7 @@ class CourseReservesController < ApplicationController
     p[:rows] = 0
     response = repository.search(p)
     course_reserves = []
-    response.facets.first.items.each do |item|
+    response.aggregations.values.first.items.each do |item|
       course_reserves << CourseInfo.new(item.value)
     end
     @course_reserves = course_reserves
