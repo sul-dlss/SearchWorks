@@ -79,7 +79,7 @@ gem 'openseadragon'# , github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 5.9.0'
+gem 'blacklight', '~> 5.19.0'
 gem 'nokogiri', '>= 1.7.1'
 gem "jettywrapper", "~> 1.7"
 gem "devise"
@@ -90,7 +90,7 @@ gem "faraday", "<= 0.9.1"
 gem "config"
 gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", '0.3.0' # github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search", "~> 5.1.2"
+gem "blacklight_advanced_search", "~> 5.3.0", github: 'projectblacklight/blacklight_advanced_search', branch: 'release-5.x'
 gem "font-awesome-sass"
 gem "blacklight_range_limit", "~> 5.0.3"
 gem 'blacklight-hierarchy', "~> 0.1.0"
