@@ -31,10 +31,12 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
-    it "should display the MARC 590 as a bound with note" do
-      expect(rendered).to have_css('p.bound-with-note.note-highlight', text: 'Copy 1 bound with v. 140 55523 (parent record’s ckey)')
-      expect(rendered).to have_css('p.bound-with-note.note-highlight a', text: '55523')
+
+    it 'should display the MARC 590 as a bound with note (excluding subfield $c)' do
+      expect(rendered).to have_css('.bound-with-note.note-highlight a', text: 'Copy 1 bound with v. 140')
+      expect(rendered).not_to have_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')
     end
+
     it "should not display request links for requestable libraries" do
       expect(rendered).to_not have_content("Request")
     end
