@@ -169,6 +169,7 @@ describe MarcHelper do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
     let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
     let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
+    let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
     it "should return multiple dd elements when there are multiple values" do
       expect(link_to_contributor_from_marc(contributor.to_marc)).to have_css('dd', count: 3)
     end
@@ -192,10 +193,13 @@ describe MarcHelper do
     it "should handle related works correctly" do
       works = link_to_related_works_from_marc(contributed_works.to_marc)
       expect(works).to match(/>Related Work</)
-      # should include $i before links
-      expect(works).to match(/>Includes \(expression\) <a href/)
+      # should include $i before links but strip ()'s
+      expect(works).to match(/>Includes <a href/)
       # normal $t punctuation
       expect(works).to match(/<a href=.*q=%22700\+with\+t\+Title\.%22.*search_field=author_title\">700 with t 700 \$e Title\.<\/a> sub m after \. 700 \$4</)
+      works = link_to_related_works_from_marc(related_works.to_marc) # 730
+      # should include $i before links but strip ()'s
+      expect(works).to match(/>Includes <a href/)
     end
     it "should handle repeating subfield e" do
        expect(link_to_contributor_from_marc(multi_role_contributor.to_marc)).to match(/\/a> actor\. director\.<\/dd>/)
