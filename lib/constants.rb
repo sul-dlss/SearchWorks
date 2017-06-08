@@ -571,6 +571,7 @@ module Constants
     'SLN-LOAN' => 'Ask at circulation desk',
     'SOUTH-MEZZ' => 'Stacks',
     'SPE-LOAN' => 'In Reading Room: Ask at service desk',
+    'SPEC-INPRO' => 'In process',
     'SPEC-STOR' => 'In storage, not available',
     'SPECDESK' => 'In Reading Room: Ask at service desk',
     'SSRC' => 'Jonsson Social Sciences Reading Room',
@@ -833,6 +834,7 @@ module Constants
                       'SAL-RETURN',
                       'SEE-ARCHIV',
                       'SEE-EASTA',
+                      'SPEC-INPRO',
                       'SUL-BIND',
                       'SULBIND-WA',
                       'TECH-ACQ',
@@ -918,6 +920,7 @@ module Constants
                               'PUB-TECH',
                               'REPAIR',
                               'SAL-RETURN',
+                              'SPEC-INPRO',
                               'SUL-BIND',
                               'SULBIND-WA',
                               'TECH-ACQ',
@@ -1005,6 +1008,8 @@ module Constants
   HIDE_STACKMAP_LOCS = %w(BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN)
 
   INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
+
+  INPROCESS_NONCIRC_LOCS = ['INPROCESS', 'SPEC-INPRO'].freeze
 
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',

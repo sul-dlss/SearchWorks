@@ -28,7 +28,7 @@ class Holdings
 
     def noncirc_library_and_inprocess?
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
-        @callnumber.current_location.try(:code) == 'INPROCESS'
+        Constants::INPROCESS_NONCIRC_LOCS.include?(@callnumber.current_location.try(:code))
     end
 
     def must_request_item?
