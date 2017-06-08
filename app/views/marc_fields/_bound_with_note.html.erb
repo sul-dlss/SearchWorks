@@ -1,9 +1,11 @@
-<% bound_with_note.values.each do |value| %>
-  <div>
-    <% if value[:id] %>
-      <%= link_to(value[:value], solr_document_path(value[:id])) %>
-    <% else %>
-      <%= value[:value] %>
-    <% end %>
-  </div>
-<% end %>
+<ul>
+  <% bound_with_note.values.each do |value| %>
+    <li>
+      <% if value[:id] %>
+        <%= link_to(value[:value], solr_document_path(value[:id])) %>
+      <% else %>
+        <%= value[:value] %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
