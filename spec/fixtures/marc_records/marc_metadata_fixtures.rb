@@ -1106,4 +1106,18 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def physical_medium_fixture
+    <<-xml
+      <record>
+        <datafield tag="340"> <!-- adapted from 10329653 -->
+          <subfield code="a">a</subfield>
+          <subfield code="c">c</subfield>
+          <subfield code="d">d1</subfield>
+          <subfield code="d">d2</subfield>
+          <subfield code="m">m</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end
