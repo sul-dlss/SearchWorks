@@ -9,7 +9,7 @@
 
 <% if has_thumbnail?(document) && tn = render_thumbnail_tag(document, {}, options) %>
   <div class="document-thumbnail">
-    <div class="cover-image-wrapper" data-target="<%= catalog_path document %>" data-context-href="<%= context_href %>">
+    <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
       <%= tn %>
     </div>
   </div>

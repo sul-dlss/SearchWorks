@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Call num search', js:true do
   it "should correctly show a search result when the call number has special characters in it" do
     object_title='An object'
-    visit catalog_index_path
+    visit search_catalog_path
     fill_in "q", with: "g70.212 .a426 2011:test"
     select 'Call number', from: 'search_field'
     click_button 'search'

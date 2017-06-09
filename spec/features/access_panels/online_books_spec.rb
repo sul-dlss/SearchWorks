@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Record view', js: true do
   it 'should have online books panel with Google links' do
     skip('Google Books API not working under test')
-    visit catalog_path('44')
+    visit solr_document_path('44')
 
     within 'div.document' do
       expect(page).to have_css('div.panel-online', visible: true)
@@ -21,7 +21,7 @@ feature 'Record view', js: true do
 
   scenario 'should have related panel with Google links' do
     skip('Google Books API not working under test')
-    visit catalog_path('10')
+    visit solr_document_path('10')
 
     within 'div.document' do
       expect(page).to have_css('div.panel-related', visible: true)

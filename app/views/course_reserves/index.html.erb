@@ -17,7 +17,7 @@
   <% @course_reserves.each do |course| %>
     <tr>
       <td>
-        <%= link_to course.id, catalog_index_path({f: {course: [course.id], instructor: [course.instructor]}}) %>
+        <%= link_to course.id, search_catalog_path({f: {course: [course.id], instructor: [course.instructor]}}) %>
       </td>
       <td>
         <%= course.name %>

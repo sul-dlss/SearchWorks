@@ -330,7 +330,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
         expect(page).to have_css(".filterValue", text: "McRae")
       end
 
-      visit catalog_index_path(search_field: 'advanced', title: "Jazz", author: "McRae")
+      visit search_catalog_path(search_field: 'advanced', title: "Jazz", author: "McRae")
       expect(previous_total_results).to eq total_results
       within(".breadcrumb") do
         expect(page).to have_css(".filterName", text: "Title")

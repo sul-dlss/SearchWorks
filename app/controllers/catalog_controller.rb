@@ -337,7 +337,7 @@ class CatalogController < ApplicationController
       send_emails_to_all_recipients
 
       respond_to do |format|
-        format.html { redirect_to catalog_path(params['id']) }
+        format.html { redirect_to solr_document_path(params['id']) }
         format.js { render 'email_success' }
       end and return
     end

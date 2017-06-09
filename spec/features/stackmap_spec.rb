@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'StackMap View' do
   scenario 'Search results', js: true do
-    visit catalog_index_path f: { format: ['Book'] }
+    visit search_catalog_path f: { format: ['Book'] }
     page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-gallery').click
 

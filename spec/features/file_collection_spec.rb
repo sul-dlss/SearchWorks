@@ -14,7 +14,7 @@ feature "File Collection" do
   end
 
   scenario "Record view" do
-    visit catalog_path('31')
+    visit solr_document_path('31')
 
     expect(page).to have_css("h1", text: "File Collection1") # Title
     expect(page).to have_css("h2", text: "Subjects")

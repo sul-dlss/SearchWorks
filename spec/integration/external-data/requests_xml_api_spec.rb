@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'mobile api', :'data-integration' => true do
   it 'should display correct elements for standard record' do
-    visit catalog_path('713891', format: 'request', lib: 'SAL3')
+    visit solr_document_path('713891', format: 'request', lib: 'SAL3')
     expect(page.body).to have_xml('//record')
     expect(page.body).to have_xml('//title')
     expect(page.body).to have_xml('//pub_info')
@@ -19,7 +19,7 @@ describe 'mobile api', :'data-integration' => true do
     expect(page.body).to have_xml('//current_location')
   end
   it 'should include a proper shelfkey' do
-    visit catalog_path('351080', format: 'request', lib: "SAL3")
+    visit solr_document_path('351080', format: 'request', lib: "SAL3")
     expect(page.body).to have_xml('//shelfkey')
     expect(page.body).to match(/<shelfkey>lc bf  0001\.000000 a0.500000.*~~~~~~<\/shelfkey>/)
   end

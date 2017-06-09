@@ -6,13 +6,13 @@
         <p>
           <span>Modify your search:</span>
           <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
-            <%= link_to("Remove limit(s)", catalog_index_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_filters)}"}) %>
+            <%= link_to("Remove limit(s)", search_catalog_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_filters)}"}) %>
           <% end %>
           <% if @search_modifier.fielded_search? %>
-            <%= link_to("Search all fields", catalog_index_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_fielded_search_and_filters)}"}) %>
+            <%= link_to("Search all fields", search_catalog_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_fielded_search_and_filters)}"}) %>
           <% end %>
           <% if @search_modifier.query_has_stopwords? %>
-            <%= link_to("Search without #{SearchQueryModifier.stopwords.map{|w| "\"#{w}\""}.join(' ')}", catalog_index_path(@search_modifier.params_without_stopwords), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_stopwords)}"}) %>
+            <%= link_to("Search without #{SearchQueryModifier.stopwords.map{|w| "\"#{w}\""}.join(' ')}", search_catalog_path(@search_modifier.params_without_stopwords), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_stopwords)}"}) %>
           <% end %>
         </p>
       <% end %>

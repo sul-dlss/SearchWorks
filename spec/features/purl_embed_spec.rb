@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'PURL Embed', js: true do
   it 'should be present for images' do
-    visit catalog_path('mf774fs2413')
+    visit solr_document_path('mf774fs2413')
 
     within('.purl-embed-viewer') do
       expect(page).to have_css('iframe')
@@ -11,7 +11,7 @@ describe 'PURL Embed', js: true do
 
   describe 'many purls for one ckey' do
     before do
-      visit catalog_path('8923346')
+      visit solr_document_path('8923346')
     end
 
     it 'has the managed purl panel with an item for each managed purl' do

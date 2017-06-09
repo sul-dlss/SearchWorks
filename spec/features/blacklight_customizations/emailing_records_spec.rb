@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Emailing Records", type: :feature, js: true do
   it "should be successful" do
-    visit catalog_path('14')
+    visit solr_document_path('14')
 
     within('.record-toolbar') do
       within('li.dropdown') do
@@ -23,7 +23,7 @@ describe "Emailing Records", type: :feature, js: true do
 
   context 'emailing a full record' do
     it 'should hide the side-nav-minimap' do
-      visit catalog_path('14')
+      visit solr_document_path('14')
 
       within('.record-toolbar') do
         within('li.dropdown') do

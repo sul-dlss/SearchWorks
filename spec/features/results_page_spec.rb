@@ -2,11 +2,11 @@ require "spec_helper"
 
 feature "Search Results Page" do
   scenario "should have correct page title" do
-    visit catalog_index_path f: {format: ["Book"]}
+    visit search_catalog_path f: {format: ["Book"]}
     expect(page).to have_title(/.*\d (result|results) in SearchWorks/)
   end
   scenario "vernacular title" do
-    visit catalog_index_path(q: '11')
+    visit search_catalog_path(q: '11')
 
     within(first('.document')) do
       expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")

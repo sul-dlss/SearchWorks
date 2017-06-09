@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "In collection Access Panel" do
   scenario "for MODS derived documents" do
-    visit catalog_path('mf774fs2413')
+    visit solr_document_path('mf774fs2413')
 
     within(".panel-in-collection") do
       within(".panel-heading") do

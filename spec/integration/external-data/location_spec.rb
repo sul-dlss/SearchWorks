@@ -3,7 +3,7 @@ require "spec_helper"
 describe "Location", feature: true, :"data-integration" => true do
   describe "SAL3" do
     it "items should be pageable" do
-      visit catalog_path('10385184')
+      visit solr_document_path('10385184')
 
       within('.panel-library-location') do
         within('ul.items') do
@@ -14,7 +14,7 @@ describe "Location", feature: true, :"data-integration" => true do
   end
   describe "ARS" do
     it "should be noncirc for non STK item type" do
-      visit catalog_path('10160087')
+      visit solr_document_path('10160087')
 
       within('.panel-library-location') do
         within(page.all('ul.items').first) do
@@ -23,7 +23,7 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
     it "should not be noncirc for non STK item type" do
-      visit catalog_path('10458422')
+      visit solr_document_path('10458422')
 
       within('.panel-library-location') do
         within(page.all('ul.items').first) do
@@ -34,7 +34,7 @@ describe "Location", feature: true, :"data-integration" => true do
   end
   describe "standard item" do
     it "should default w/ an unknown item status" do
-      visit catalog_path('10424524')
+      visit solr_document_path('10424524')
 
       within('.panel-library-location') do
         within(page.all('ul.items').first) do
@@ -45,7 +45,7 @@ describe "Location", feature: true, :"data-integration" => true do
   end
   describe "bound with items" do
     before do
-      visit catalog_path('796463')
+      visit solr_document_path('796463')
     end
     it "should not show request links for requstable libraries" do
       within('.availability') do

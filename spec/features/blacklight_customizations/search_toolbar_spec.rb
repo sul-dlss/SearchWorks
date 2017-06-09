@@ -29,7 +29,7 @@ describe "Search toolbar", js: true, feature: true do
     describe "clear list", js:true do
       it "should clear selections and update selections count and recently added list" do
         skip("Passes locally, not on Travis.") if ENV['CI']
-        visit catalog_index_path f: {format: ["Book"]}, view: "default"
+        visit search_catalog_path f: {format: ["Book"]}, view: "default"
         expect(page).to have_css("li a", text: /SELECTIONS \(0\)/)
         click_link "Selections"
         expect(page).to have_css("li#show-list.disabled")

@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "Brief View" do
   scenario "Search results", js: true do
-    visit catalog_index_path f: {format: ["Book"]}
+    visit search_catalog_path f: {format: ["Book"]}
     page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
     expect(page).to have_css("i.fa.fa-align-justify")
@@ -19,14 +19,14 @@ feature "Brief View" do
     end
   end
   skip 'Brief preview', js: true do
-    visit catalog_index_path f: {format: ["Book"]}, view: 'brief'
+    visit search_catalog_path f: {format: ["Book"]}, view: 'brief'
     page.find("button.btn.docid-1").click
     expect(page).to have_css("h3.preview-title", text: "An object")
     expect(page).to have_css("li", text: "1990")
     expect(page).to have_css(".btn-preview", text: "Close")
   end
   scenario "vernacular title" do
-    visit catalog_index_path(q: '11')
+    visit search_catalog_path(q: '11')
 
     within(first('.document')) do
       expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")

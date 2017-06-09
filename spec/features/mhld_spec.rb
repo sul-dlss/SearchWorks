@@ -3,7 +3,7 @@ require "spec_helper"
 describe "MHLD", feature: true do
   describe "record view" do
     it "should be present in the location access panel" do
-      visit catalog_path('10')
+      visit solr_document_path('10')
 
       within('[data-hours-route="/hours/CHEMCHMENG"]') do
         expect(page).to have_css('.location-name', text: 'Current periodicals')
@@ -21,7 +21,7 @@ describe "MHLD", feature: true do
   end
   describe "results view", js: true do
     it "should be present in the accordion section" do
-      visit catalog_index_path(q: '10')
+      visit search_catalog_path(q: '10')
 
       within(first('.document')) do
         expect(page).to have_content('Check availability')

@@ -3,7 +3,7 @@
     <%= render partial: "paginate_compact", object: @response %>
     <div id="search-results-toolbar" class="search-widgets pull-right">
       <% if bookmarks? %>
-        <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(@response)).html_safe, citation_catalog_path(:sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-sul-toolbar', :data => {:ajax_modal => "trigger"}} %>
+        <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(@response)).html_safe, citation_solr_documents_path(:sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-sul-toolbar', :data => {:ajax_modal => "trigger"}} %>
         <%= render "bookmarks/tool_dropdown" %>
       <% end %>
       <%= render partial: 'view_type_group' %>
