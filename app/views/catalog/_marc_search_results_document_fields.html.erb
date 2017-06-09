@@ -17,19 +17,8 @@
       <% end if uniform_title[:unmatched_vernacular].present? %>
     <% end %>
 
-    <% author_creator = link_to_author_from_marc(document.to_marc) %>
-    <% unless author_creator.blank? %>
-      <li><%= render_field_list_from_marc(author_creator) %></li>
-    <% end %>
-
-    <% author_corp = link_to_data_with_label(document, "Corporate Author", 'author_corp_display', {controller: 'catalog', action: 'index', search_field: 'search_author'}) %>
-    <% unless author_corp.blank? %>
-      <%= render "field_list_from_index", :fields => author_corp %>
-    <% end %>
-
-    <% author_meeting = link_to_data_with_label(document, "Meeting", 'author_meeting_display', {controller: 'catalog', action: 'index', search_field: 'search_author'}) %>
-    <% unless author_meeting.nil? %>
-      <%= render "field_list_from_index", :fields => author_meeting %>
+    <% %i[creator corporate_author meeting].each do |target| %>
+      <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
     <% end %>
 
     <% if (imprint = results_imprint_string(document)).present? %>

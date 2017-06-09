@@ -47,10 +47,7 @@
   <%= render_field_from_marc(former_frequency) %>
 <% end %>
 
-<% medium = get_data_with_label_from_marc(document.to_marc, "Medium", '340') %>
-<% unless medium.nil? %>
-  <%= render_field_from_marc(medium) %>
-<% end %>
+<%= render document.physical_medium %>
 
 <% date_range = get_data_with_label_from_marc(document.to_marc, "Vol/date range", '362') %>
 <% unless date_range.nil? %>
@@ -219,7 +216,7 @@
   <%= render_field_from_marc(note_552) %>
 <% end %>
 
-<% finding_aid = get_data_with_label_from_marc(document.to_marc, "Finding Aid", '555') %>
+<% finding_aid = get_data_with_label_from_marc(document.to_marc, "Cumulative index or finding aid", '555') %>
 <% unless finding_aid.nil? %>
   <%= render_field_from_marc(finding_aid) %>
 <% end %>

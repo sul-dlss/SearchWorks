@@ -168,6 +168,7 @@ describe MarcHelper do
   describe "contributors, related, and included works" do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
     let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
+    let(:contributed_works_without_title) { SolrDocument.new(marcxml: contributed_works_without_title_fixture ) }
     let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
     it "should return multiple dd elements when there are multiple values" do
@@ -188,7 +189,14 @@ describe MarcHelper do
       # no $t punctuation
       expect(included_works).to match(/a href=.*q=%22710\+with\+t\+ind2\+Title%21\+sub\+n\+after\+t%22.*search_field=author_title\">710 with t ind2 Title! sub n after t<\/a></)
       # punctuation after a $t
-      expect(included_works).to match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 Title! subu\.<\/a> sub n after \.</)
+      expect(included_works).to match(/a href=.*q=%22711\+with\+t\+ind2\+Title%21\+subu\.%22.*search_field=author_title\">711 with t ind2 middle Title! subu\.<\/a> sub n after \.</)
+    end
+    it 'should handle dropping 711$j from the link/search without a title' do
+      included_works = link_to_contributor_from_marc(contributed_works_without_title.to_marc)
+      expect(included_works).to have_css('dd a', text: '711 with t ind2 subu. sub n after .')
+      expect(included_works).to have_css('dd a @href', text: /q=%22711\+with\+t\+ind2\+subu\.\+sub\+n\+after\+\.\+%22/)
+      expect(included_works).to have_css('dd a @href', text: /search_field=search_author/)
+      expect(included_works).to have_css('dd', text: /last\./)
     end
     it "should handle related works correctly" do
       works = link_to_related_works_from_marc(contributed_works.to_marc)
@@ -431,36 +439,6 @@ describe MarcHelper do
     end
     it 'should be blank when no data is present' do
       expect(results_imprint_string(no_fields)).to be_blank
-    end
-  end
-
-  describe '#link_to_author_from_marc' do
-    let(:label) { nil }
-    let(:document) { SolrDocument.new(marcxml: relator_code_fixture) }
-    let(:subject) { link_to_author_from_marc(document.to_marc, label: label) }
-
-    describe 'label' do
-      context 'when provided' do
-        let(:label) { 'Provided Label' }
-
-        it 'is used' do
-          expect(subject[:label]).to eq 'Provided Label'
-        end
-      end
-
-      context 'when not provided' do
-        it 'defaults to "Author/Creator"' do
-          expect(subject[:label]).to eq 'Author/Creator'
-        end
-      end
-    end
-
-    describe 'relator terms' do
-      it 'are translated' do
-        expect(subject[:fields].length).to eq 1
-        link = subject[:fields].first[:field]
-        expect(link).to match(%r{<a href="/\?q=%22100\+%24a%22.*">100 \$a</a> Performer})
-      end
     end
   end
 

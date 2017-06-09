@@ -5,7 +5,16 @@ module MarcMetadataFixtures
       <record>
         <datafield tag="100" ind1="1" ind2=" ">
           <subfield code="a">Arbitrary, Stewart.</subfield>
+          <subfield code="e">fantastic.</subfield>
           <subfield code="=">^A170662</subfield>
+        </datafield>
+        <datafield tag="110" ind1="1" ind2=" ">
+          <subfield code="a">Arbitrary, Corporate.</subfield>
+          <subfield code="e">fantastic.</subfield>
+        </datafield>
+        <datafield tag="111" ind1="1" ind2=" ">
+          <subfield code="a">Arbitrary Meeting.</subfield>
+          <subfield code="j">fantastic.</subfield>
         </datafield>
         <datafield tag="245" ind1="1" ind2="0">
           <subfield code="a">Some intersting papers,</subfield>
@@ -492,6 +501,7 @@ module MarcMetadataFixtures
         </datafield>
         <datafield tag="711" ind1=" " ind2="2">
           <subfield code="a">711 with t ind2</subfield>
+          <subfield code="j">middle</subfield>
           <subfield code="t">Title!</subfield>
           <subfield code="u">subu.</subfield>
           <subfield code="n">sub n after .</subfield>
@@ -499,6 +509,20 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def contributed_works_without_title_fixture
+    <<-xml
+      <record>
+        <datafield tag="711" ind1=" " ind2=" ">
+          <subfield code="a">711 with t ind2</subfield>
+          <subfield code="u">subu.</subfield>
+          <subfield code="n">sub n after .</subfield>
+          <subfield code="j">last.</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def multi_role_contributor_fixture
     <<-xml
       <record>
@@ -1029,6 +1053,69 @@ module MarcMetadataFixtures
           <subfield code="a">351 $a</subfield>
           <subfield code="b">351 $b</subfield>
           <subfield code="z">351 $z</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def linked_author_creator_fixture
+    <<-xml
+      <record>
+        <datafield tag="100" ind1="1" ind2=" "><!-- adapated from 9952016 -->
+          <subfield code="a">Dodaro, Gene L.</subfield>
+          <subfield code="e">author.</subfield>
+          <subfield code="4">aut</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def linked_author_corporate_author_fixture
+    <<-xml
+      <record>
+        <datafield tag="110" ind1="1" ind2=" "><!-- adapated from 10159310 -->
+          <subfield code="a">Ecuador.</subfield>
+          <subfield code="b">Procuraduría General del Estado,</subfield>
+          <subfield code="t">A Title</subfield>
+          <subfield code="e">author,</subfield>
+          <subfield code="e">issuing body.</subfield>
+          <subfield code="4">acp</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def linked_author_meeting_fixture
+    <<-xml
+      <record>
+        <datafield tag="111" ind1="2" ind2=" "><!-- adapated from 10165011 -->
+          <subfield code="6">880-01</subfield>
+          <subfield code="a">Technical Workshop on Organic Agriculture</subfield>
+          <subfield code="n">(1st :</subfield>
+          <subfield code="d">2010 :</subfield>
+          <subfield code="c">Ogbomoso, Nigeria)</subfield>
+          <subfield code="t">A title</subfield>
+          <subfield code="j">creator.</subfield>
+          <subfield code="4">oth</subfield>
+        </datafield>
+        <datafield tag="880" ind1="0" ind2="0">
+          <subfield code="6">111-01</subfield>
+          <subfield code="t">Vernacular Title</subfield>
+          <subfield code="s">Vernacular Uniform Title</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def physical_medium_fixture
+    <<-xml
+      <record>
+        <datafield tag="340"> <!-- adapted from 10329653 -->
+          <subfield code="a">a</subfield>
+          <subfield code="c">c</subfield>
+          <subfield code="d">d1</subfield>
+          <subfield code="d">d2</subfield>
+          <subfield code="m">m</subfield>
         </datafield>
       </record>
     xml

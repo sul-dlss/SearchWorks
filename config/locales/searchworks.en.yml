@@ -5,12 +5,21 @@ en:
         label: Imprint
       language:
         label: Language
+      linked_author:
+        corporate_author:
+          label: Corporate Author
+        creator:
+          label: Author/Creator
+        meeting:
+          label: Meeting
       linked_series:
         label: Series
       notation:
         label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
+      physical_medium:
+        label: 'Medium'
       unlinked_series:
         label: Series
       default:
