@@ -350,7 +350,7 @@ class CatalogController < ApplicationController
   end
 
   def backend_lookup
-    (@response, @document_list) = search_results(params, search_params_logic)
+    (@response, @document_list) = search_results(params)
     respond_to do |format|
       format.json { render json: render_search_results_as_json }
       format.html { render 'public/500', layout: false, status: 400 }
