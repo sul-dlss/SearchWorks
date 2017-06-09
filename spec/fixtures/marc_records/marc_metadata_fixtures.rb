@@ -471,6 +471,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def contributed_works_fixture
     <<-xml
       <record>
@@ -534,6 +535,18 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def place_name_fixture
+    <<-xml
+      <record>
+        <datafield tag="752">
+          <subfield code="a">Florida</subfield>
+          <subfield code="d">Tampa</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def bad_toc_fixture
     <<-xml
       <record>

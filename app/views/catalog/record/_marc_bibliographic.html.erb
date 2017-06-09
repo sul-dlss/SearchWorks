@@ -298,10 +298,7 @@
   <%= render_field_from_marc(new_related_work_740) %>
 <%- end -%>
 
-<%- location = get_data_with_label_from_marc(document.to_marc, "Location", '752') -%>
-<%- unless location.nil? -%>
-  <%= render_field_from_marc(location) %>
-<%- end -%>
+<%= render document.place_name %>
 
 <%- system_reqs = get_data_with_label_from_marc(document.to_marc, "System Reqs", '753') -%>
 <%- unless system_reqs.nil? -%>

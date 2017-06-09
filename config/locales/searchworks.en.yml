@@ -18,6 +18,8 @@ en:
         label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
+      place_name:
+        label: 'Location'
       physical_medium:
         label: 'Medium'
       unlinked_series:

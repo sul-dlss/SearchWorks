@@ -13,4 +13,8 @@ module MarcMetadata
   def physical_medium
     @physical_medium ||= PhysicalMedium.new(self)
   end
+
+  def place_name
+    @place_name ||= PlaceName.new(self)
+  end
 end
