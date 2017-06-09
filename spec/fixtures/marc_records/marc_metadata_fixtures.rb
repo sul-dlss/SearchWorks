@@ -1133,4 +1133,57 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def linked_related_works_fixture
+    <<-xml
+      <record>
+        <datafield tag="730" ind1="0" ind2=" ">
+          <subfield code="i">i1_subfield_text:</subfield>
+          <subfield code="i">i2_subfield_text:</subfield>
+          <subfield code="a">a_subfield_text.</subfield>
+          <subfield code="d">d_subfield_text.</subfield>
+          <subfield code="f">f_subfield_text.</subfield>
+          <subfield code="k">k_subfield_text.</subfield>
+          <subfield code="l">l_subfield_text.</subfield>
+          <subfield code="h">h_subfield_text.</subfield>
+          <subfield code="m">m_subfield_text.</subfield>
+          <subfield code="n">n_subfield_text.</subfield>
+          <subfield code="o">o_subfield_text.</subfield>
+          <subfield code="p">p_subfield_text.</subfield>
+          <subfield code="r">r_subfield_text.</subfield>
+          <subfield code="s">s_subfield_text.</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+          <subfield code="x">x1_subfield_text.</subfield>
+          <subfield code="x">x2_subfield_text.</subfield>
+          <subfield code="0">0_subfield_text.</subfield>
+          <subfield code="3">3_subfield_text.</subfield>
+          <subfield code="5">5_subfield_text.</subfield>
+          <subfield code="8">8_subfield_text.</subfield>
+        </datafield>
+        <datafield tag="700" ind1=" " ind2=" ">
+          <subfield code="a">700_a_subfield_text</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+        </datafield>
+        <datafield tag="700" ind1=" " ind2=" "> <!-- missing title $t -->
+          <subfield code="a">700_a_subfield_text</subfield>
+        </datafield>
+        <datafield tag="710" ind1=" " ind2="1">
+          <subfield code="a">710_with_ind2_1</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+        </datafield>
+        <datafield tag="710" ind1=" " ind2="2">
+          <subfield code="a">710_with_ind2_2</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+        </datafield>
+        <datafield tag="711" ind1=" " ind2=" ">
+          <subfield code="a">711_a_subfield_text</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+        </datafield>
+        <datafield tag="720" ind1=" " ind2=" ">
+          <subfield code="a">720_a_subfield_text</subfield>
+          <subfield code="t">t_subfield_text.</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

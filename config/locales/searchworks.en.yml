@@ -12,6 +12,8 @@ en:
           label: Author/Creator
         meeting:
           label: Meeting
+      linked_related_works:
+        label: 'Related Work'
       linked_series:
         label: Series
       notation:
