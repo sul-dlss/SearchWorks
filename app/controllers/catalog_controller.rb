@@ -290,6 +290,7 @@ class CatalogController < ApplicationController
     # Configure facet fields for BL advanced search
     config.advanced_search = {
       :query_parser => 'edismax',
+      :url_key => 'advanced',
       :form_solr_parameters => {
         "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
         "facet.limit" => -1, # return all facet values
