@@ -10,15 +10,16 @@ class NearbyOnShelf
     end
   end
 
-  protected
+  def blacklight_config
+    @blacklight_config
+  end
+
+  private
 
   def logger
     ::Rails.logger
   end
 
-  def blacklight_config
-    @blacklight_config
-  end
   def params
     {}
   end
