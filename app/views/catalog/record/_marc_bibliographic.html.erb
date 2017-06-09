@@ -216,7 +216,7 @@
   <%= render_field_from_marc(note_552) %>
 <% end %>
 
-<% finding_aid = get_data_with_label_from_marc(document.to_marc, "Finding Aid", '555') %>
+<% finding_aid = get_data_with_label_from_marc(document.to_marc, "Cumulative index or finding aid", '555') %>
 <% unless finding_aid.nil? %>
   <%= render_field_from_marc(finding_aid) %>
 <% end %>
