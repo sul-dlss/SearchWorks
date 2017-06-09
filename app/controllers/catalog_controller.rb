@@ -2,9 +2,9 @@
 #
 class CatalogController < ApplicationController
 
-  include Blacklight::Marc::Catalog
-
   include Blacklight::Catalog
+
+  include Blacklight::Marc::Catalog
 
   include AdvancedSearchParamsMapping
 
