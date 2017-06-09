@@ -104,18 +104,18 @@ module MarcHelper
               if subfield.code == "i" and subt == :none # assumes $i at beginning
                 before_text << subfield.value.gsub(/\s*\(.+\)\s*/, '')
               elsif subt == :none
-                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                href_text << subfield.value unless ["e","i","j","4"].include?(subfield.code)
                 link_text << subfield.value
               elsif subt == :now or (subt == :passed and subfield.value.strip =~ /[\.|;]$/)
-                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                href_text << subfield.value unless ["e","i","j","4"].include?(subfield.code)
                 link_text << subfield.value
                 subt = :passed
                 subt = :done if subfield.value.strip =~ /[\.|;]$/
               elsif subt == :done
-                extra_href << subfield.value unless ["e","i","4"].include?(subfield.code)
+                extra_href << subfield.value unless ["e","i","j","4"].include?(subfield.code)
                 extra_text << subfield.value
               else
-                href_text << subfield.value unless ["e","i","4"].include?(subfield.code)
+                href_text << subfield.value unless ["e","i","j","4"].include?(subfield.code)
                 link_text << subfield.value
               end
             end
@@ -133,18 +133,22 @@ module MarcHelper
             link_text = ""
             temp_text = ""
             relator_text = []
+            extra_text = ""
             field.each do |subfield|
               next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
               if subfield.code == "e"
                 relator_text << subfield.value
               elsif subfield.code == "4" and relator_text.blank?
                 relator_text << Constants::RELATOR_TERMS[subfield.value]
+              elsif tag == '711' && subfield.code == 'j'
+                extra_text << "#{subfield.value} "
               elsif subfield.code != "e" and subfield.code != "4"
                 link_text << "#{subfield.value} "
               end
             end
             temp_text << link_to(link_text.strip, catalog_index_path(:q => "\"#{link_text}\"", :search_field => 'search_author'))
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
+            temp_text << " #{extra_text} " unless extra_text.blank?
             vernacular = get_marc_vernacular(marc,field)
             temp_vern = "\"#{vernacular}\""
             temp_text << "<br/>#{link_to h(vernacular), catalog_index_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?
@@ -485,35 +489,6 @@ module MarcHelper
         }
       ]
     }
-  end
-  def link_to_author_from_marc(marc, opts={})
-    if marc["100"]
-      opts[:label] ||= "Author/Creator"
-      opts[:search_options] ||= {:controller => "catalog", :action => 'index', :search_field => 'search_author'}
-      link, extra, subs = [],[], []
-      marc["100"].each do |sub_field|
-        unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-          subs << sub_field.code
-          case
-          when subs.include?('e')
-            extra << sub_field.value
-          when subs.include?('4')
-            extra << Constants::RELATOR_TERMS[sub_field.value] || sub_field.value
-          else
-            link << sub_field.value
-          end
-        end
-      end
-      vernacular = get_marc_vernacular(marc, marc["100"])
-      unless vernacular.blank?
-        vernacular = link_to(vernacular, opts[:search_options].merge(:q => "\"#{vernacular}\"")).html_safe
-      end
-      {:label  => opts[:label],
-       :fields => [{:field      => [link_to(link.join(' '), opts[:search_options].merge(:q => "\"#{link.join(' ')}\"")), extra].flatten.compact.join(" ").html_safe,
-                    :vernacular => vernacular
-                   }]
-      }
-    end
   end
 
   def render_field_from_marc(fields,opts={})

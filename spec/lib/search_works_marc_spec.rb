@@ -25,9 +25,9 @@ describe SearchWorksMarc do
     it 'should return an array' do
       expect(sw_marc.parse_marc_record.class).to eq Array
     end
-    it 'should have 14 values grouped by tag' do
-      expect(sw_marc.parse_marc_record.count).to eq 14
-      expect(sw_marc.parse_marc_record.map{ |f| f.label }.uniq.length).to eq 14
+    it 'should have 16 values grouped by tag' do
+      expect(sw_marc.parse_marc_record.count).to eq 16
+      expect(sw_marc.parse_marc_record.map{ |f| f.label }.uniq.length).to eq 16
     end
     it 'grouped values should be an array' do
       sw_marc.parse_marc_record.each do |group|
@@ -44,7 +44,7 @@ describe SearchWorksMarc do
     end
     describe 'subfields' do
       it 'should equal the value' do
-        expect(sw_marc.parse_marc_record[1].values.first).to match /Some intersting papers,/
+        expect(sw_marc.parse_marc_record[3].values.first).to match /Some intersting papers,/
       end
     end
   end
