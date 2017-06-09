@@ -1,11 +1,8 @@
 <% document ||= @document %>
-<% author_creator = link_to_author_from_marc(document.to_marc) %>
-<%= render_field_from_marc(author_creator) if author_creator.present? %>
 
-<% author_corp = link_to_data_with_label(document, 'Corporate Author', 'author_corp_display', { action: 'index', search_field: 'search_author' }) %>
-<%= render('catalog/field_from_index', fields: author_corp) if author_corp.present? %>
+<% %i[creator corporate_author meeting].each do |target| %>
+  <%= render document.linked_author(target) %>
+<% end %>
 
-<% author_meeting = link_to_data_with_label(document, 'Meeting', 'author_meeting_display', { action: 'index', search_field: 'search_author' }) %>
-<%= render('catalog/field_from_index', fields: author_meeting) if author_meeting.present? %>
-
+<%# TODO: this code has not been ported over yet %>
 <%= link_to_contributor_from_marc(document.to_marc) %>

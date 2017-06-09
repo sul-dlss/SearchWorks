@@ -18,6 +18,18 @@ describe "catalog/_index_marc.html.erb" do
     end
     it "should link to the author" do
       expect(rendered).to have_css('li a', text: 'Arbitrary, Stewart.')
+      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_css('li', text: /fantastic\./)
+    end
+    it "should link to the corporate author" do
+      expect(rendered).to have_css('li a', text: 'Arbitrary, Corporate.')
+      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_css('li', text: /fantastic\./)
+    end
+    it "should link to the meeting" do
+      expect(rendered).to have_css('li a', text: 'Arbitrary Meeting.')
+      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_css('li', text: /fantastic\./)
     end
     it "should render the imprint" do
       expect(rendered).to have_css('li', text: 'Imprint Statement')
