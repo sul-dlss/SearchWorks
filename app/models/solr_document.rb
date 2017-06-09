@@ -31,9 +31,11 @@ class SolrDocument
 
   include Blacklight::Solr::Document
 
-  def initialize(*args)
+  delegate :empty?, :blank?, to: :to_h
+
+  def initialize(source_doc = {}, response = nil)
+    source_doc[:marcfield] = (source_doc[:marcxml] || source_doc['marcxml'] || source_doc[:marcbib_xml] || source_doc['marcbib_xml'])
     super
-    self[:marcfield] = (self[:marcxml] || self[:marcbib_xml])
   end
 
       # The following shows how to setup this blacklight document to display marc documents
