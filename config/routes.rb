@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
 
   mount Blacklight::Engine => '/'
+  mount BlacklightAdvancedSearch::Engine => '/'
 
   concern :searchable, Blacklight::Routes::Searchable.new
   concern :exportable, Blacklight::Routes::Exportable.new

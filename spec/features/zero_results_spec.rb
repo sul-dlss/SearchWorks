@@ -13,7 +13,7 @@ feature "Zero results" do
     end
   end
   scenario "should have no results and show correct link from advanced search", js: true do
-    visit advanced_search_path
+    visit blacklight_advanced_search_engine.advanced_search_path
     fill_in "search_title", with: "sdfsda"
     click_button 'advanced-search-submit'
     within "#content" do

@@ -13,7 +13,7 @@ feature "Facets Customizations" do
   end
   scenario "material type icons should display after an advanced search", js: true do
     skip('Fails intermitently on Travis.') if ENV['CI']
-    visit advanced_search_path
+    visit blacklight_advanced_search_engine.advanced_search_path
 
     click_on "Resource type"
     check "f_inclusive_format_main_ssim_book"
