@@ -126,7 +126,7 @@ class Holdings
     end
 
     def bound_with?
-      home_location == 'SEE-OTHER'
+      Constants::BOUND_WITH_LOCS.include?(home_location)
     end
 
     def live_status?

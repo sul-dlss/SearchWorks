@@ -13,7 +13,7 @@ class Holdings
     end
 
     def bound_with?
-      @code && @code == 'SEE-OTHER'
+      @code && Constants::BOUND_WITH_LOCS.include?(@code)
     end
 
     def location_level_request?

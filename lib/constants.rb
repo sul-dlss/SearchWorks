@@ -1061,6 +1061,8 @@ module Constants
     ]
   }.freeze
 
+  BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
+
   INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
 
   INPROCESS_NONCIRC_LOCS = ['INPROCESS', 'SPEC-INPRO'].freeze
