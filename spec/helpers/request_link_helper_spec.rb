@@ -77,10 +77,10 @@ describe RequestLinkHelper do
         )
       end
       let(:presenter) do
-        OpenStruct.new(document_heading: 'Document Title')
+        OpenStruct.new(heading: 'Document Title')
       end
       before do
-        expect(helper).to receive(:presenter).with(ssrc_document).and_return(presenter)
+        expect(helper).to receive(:show_presenter).with(ssrc_document).and_return(presenter)
       end
       it 'should link to a different form' do
         link = helper.request_link(ssrc_document, ssrc_document.holdings.callnumbers.first)

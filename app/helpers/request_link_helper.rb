@@ -34,7 +34,7 @@ module RequestLinkHelper
     {
       authid: '',
       unicorn_id_in: document[:id],
-      title_in: presenter(document).document_heading,
+      title_in: show_presenter(document).heading,
       icpsr_no_in: '',
       call_no_in: callnumber.callnumber
     }

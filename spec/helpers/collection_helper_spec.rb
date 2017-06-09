@@ -67,8 +67,8 @@ describe CollectionHelper do
   end
   describe "#collection_breadcrumb_value" do
     it "should return the collection name when present in the @document_list" do
-      allow(helper).to receive(:presenter).and_return(
-        OpenStruct.new(document_heading: 'Title2')
+      allow(helper).to receive(:show_presenter).and_return(
+        OpenStruct.new(heading: 'Title2')
       )
       @document_list = [
         SolrDocument.new(collection: ['12345', '54321'], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
