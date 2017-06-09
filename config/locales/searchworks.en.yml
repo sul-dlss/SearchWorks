@@ -18,6 +18,8 @@ en:
         label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
+      physical_medium:
+        label: 'Medium'
       unlinked_series:
         label: Series
       default:
