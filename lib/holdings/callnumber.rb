@@ -14,7 +14,8 @@ class Holdings
 
     def present?
       @holding_info.present? &&
-        !(item_display[1] == 'SUL' && internet_resource?)
+        !(item_display[1] == 'SUL' && internet_resource?) &&
+        !bound_with?
     end
 
     def browsable?
@@ -122,6 +123,10 @@ class Holdings
 
     def stackmapable?
       stackmapable_library? && stackmapable_location?
+    end
+
+    def bound_with?
+      home_location == 'SEE-OTHER'
     end
 
     def live_status?

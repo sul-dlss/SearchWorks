@@ -39,7 +39,7 @@ class Holdings
     end
 
     def present?
-      any_items? || any_mhlds?
+      any_items? || any_mhlds? || bound_with?
     end
 
     def present_on_index?

@@ -48,7 +48,7 @@
                 </tr>
              </thead>
              <tbody data-long-list data-list-type="location">
-               <% location.items.each do |item| %>
+               <% location.items.select(&:present?).each do |item| %>
                  <tr>
                    <td>
                      <%= item.callnumber %>
