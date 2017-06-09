@@ -117,8 +117,8 @@ describe CatalogController do
       it "should route /view/:id properly" do
         expect({get: '/view/1234'}).to route_to(controller: 'catalog', action: 'show', id: '1234')
       end
-      it "should route catalog_path to /view" do
-        expect(catalog_path('1234')).to eq '/view/1234'
+      it "should route solr_document_path to /view" do
+        expect(solr_document_path('1234')).to eq '/view/1234'
       end
       it "should route solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'

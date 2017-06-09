@@ -47,7 +47,7 @@ feature "Skip-to Navigation" do
   end
 
   scenario "should have skip-to navigation links to search field, main container and records in record view page" do
-    visit catalog_path 20
+    visit solr_document_path 20
 
     within "#skip-link" do
       expect(page).to have_css("a[href='#search_field']", text: "Skip to search")

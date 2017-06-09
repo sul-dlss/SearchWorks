@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Responsive results view Page', feature: true, js: true do
   describe 'facets' do
     before do
-      visit catalog_index_path f: { access_facet: ['Online'] }
+      visit search_catalog_path f: { access_facet: ['Online'] }
     end
     it 'should show previous/next on large screens' do
       within('ul.pagination') do

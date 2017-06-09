@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Bookplates' do
   describe 'on the record view' do
     it 'displays bookplate data when present' do
-      visit catalog_path('45')
+      visit solr_document_path('45')
 
       expect(page).to have_css('h2', text: 'Acquired with support from')
       expect(page).to have_css('.bookplate', count: 2)
@@ -20,7 +20,7 @@ describe 'Bookplates' do
     end
 
     it 'does not include the section when there is no bookplate data' do
-      visit catalog_path('44')
+      visit solr_document_path('44')
 
       expect(page).not_to have_css('h2', text: 'Acquired with support from')
       expect(page).not_to have_css('.bookplate')
@@ -33,7 +33,7 @@ describe 'Bookplates' do
     end
 
     it 'displays a masthead with the bookplate data for each individual fund (with correct breadcrumb)' do
-      visit catalog_path('45')
+      visit solr_document_path('45')
 
       click_link 'Susan and Ruth Sharp Fund'
 
@@ -50,7 +50,7 @@ describe 'Bookplates' do
 
       expect(page).to have_css('h2', text: '1 result')
 
-      visit catalog_path('45')
+      visit solr_document_path('45')
 
       click_link 'The Edgar Amos Boyles Centennial Book Fund'
 
@@ -69,7 +69,7 @@ describe 'Bookplates' do
     end
 
     it 'returns a gallery view search result sorted by "new to the Libraries"' do
-      visit catalog_path('45')
+      visit solr_document_path('45')
 
       click_link 'Susan and Ruth Sharp Fund'
 

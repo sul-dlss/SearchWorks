@@ -24,7 +24,7 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
   end
   describe "record view" do
     before do
-      visit catalog_path('6780453')
+      visit solr_document_path('6780453')
     end
     it "should render metadata and a filmstrip" do
       skip("Needs item-level-merge in external data integration index")

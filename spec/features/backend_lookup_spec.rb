@@ -13,7 +13,7 @@ feature 'Backend lookup', js: true do
   end
 
   scenario 'lookup should return additional results on the results page' do
-    visit catalog_index_path(
+    visit search_catalog_path(
       q: 'statement',
       f: { access_facet: ['Online'] }
     )

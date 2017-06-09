@@ -14,7 +14,7 @@ feature "Merged File Collections" do
     end
   end
   scenario "record view should display metadata and file list" do
-    visit catalog_path('38')
+    visit solr_document_path('38')
 
     expect(page).to have_css('h1', text: 'Merged File Collection1')
 

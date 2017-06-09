@@ -10,7 +10,7 @@ feature "Selections Path" do
 
   scenario "should render some bookmarks and toolbar", js: true do
     skip('Passes locally, not on Travis.') if ENV['CI']
-    visit catalog_index_path f: {format: ["Book"]}, view: "default"
+    visit search_catalog_path f: {format: ["Book"]}, view: "default"
     page.all('label.toggle_bookmark')[0].click
     page.all('label.toggle_bookmark')[1].click
     expect(page).to have_css("label.toggle_bookmark span", text: "Selected", count: 2)

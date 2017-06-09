@@ -86,7 +86,7 @@ class NearbyOnShelf
   # Each html list item must match a desired value
   def get_spines_from_field_values(desired_values, field)
     spines_hash = {}
-      response, docs = get_solr_response_for_field_values(field, desired_values.compact)
+      response, docs = search_results(q: { field => desired_values.compact})
       docs.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
         spines_hash.merge!(hsh) 

@@ -3,7 +3,7 @@
   <dd>
     <% value[:values].each do |val|%>
       <% if val[:link] %>
-        <%= link_to(val[:link], catalog_index_path(q: (val[:href] || val[:link]), search_field: val[:search_field])) %>
+        <%= link_to(val[:link], search_catalog_path(q: (val[:href] || val[:link]), search_field: val[:search_field])) %>
       <% else %>
         <%= val[:text] %>
       <% end %>

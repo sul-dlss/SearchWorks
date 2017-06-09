@@ -53,7 +53,7 @@ module RecordHelper
   def mods_display_name(names)
     names.map do |name|
       content_tag(:dd) do
-        "#{link_to(name.name, catalog_index_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}".html_safe
+        "#{link_to(name.name, search_catalog_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}".html_safe
       end
     end.join.html_safe
   end
@@ -98,7 +98,7 @@ module RecordHelper
     subject_text = subject.respond_to?(:name) ? subject.name : subject
     link = link_to(
       subject_text,
-      catalog_index_path(
+      search_catalog_path(
         q: "\"#{[buffer, subject_text.strip].flatten.join(' ')}\"",
         search_field: 'subject_terms'
       )
