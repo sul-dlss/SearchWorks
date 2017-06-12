@@ -6,6 +6,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Marc::Catalog
 
+  include BlacklightAdvancedSearch::Controller
+
   include AdvancedSearchParamsMapping
 
   include DatabaseAccessPoint
