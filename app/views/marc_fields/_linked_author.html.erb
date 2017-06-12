@@ -2,7 +2,7 @@
   <dt><%= linked_author.label %></dt>
   <% linked_author.values.each do |author| %>
     <dd>
-      <%= link_to(author[:link].strip, catalog_index_path(q: '"' + author[:search] + '"', search_field: 'search_author')) %>
+      <%= link_to(author[:link].strip, search_catalog_path(q: '"' + author[:search] + '"', search_field: 'search_author')) %>
       <%= author[:post_text] if author[:post_text] %>
     </dd>
   <% end %>
