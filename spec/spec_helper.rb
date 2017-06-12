@@ -12,7 +12,7 @@ Capybara.register_driver :poltergeist do |app|
 end
 Capybara.javascript_driver = :poltergeist
 
-Capybara.default_wait_time = 10
+Capybara.default_max_wait_time = 10
 
 if ENV["COVERAGE"] or ENV["CI"]
   require 'simplecov'
