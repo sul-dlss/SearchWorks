@@ -6,6 +6,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Marc::Catalog
 
+  include BlacklightRangeLimit::ControllerOverride
+
   include BlacklightAdvancedSearch::Controller
 
   include AdvancedSearchParamsMapping
