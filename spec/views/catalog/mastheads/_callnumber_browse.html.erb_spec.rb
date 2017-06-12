@@ -17,7 +17,7 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
   end
   it "should link to the document" do
     render
-    expect(rendered).to have_css('a', 'doc-id')
+    expect(rendered).to have_css('a', text: 'doc-id')
   end
   describe "without barcode" do
     it "should select the first callnumber in the heading when no barcode is present" do

@@ -10,7 +10,7 @@ describe 'Facets' do
 
         within('.facets') do
           expect(page).to have_css('h3', text: 'Location')
-          expect(page).to have_css('a', 'Art Locked Stacks')
+          expect(page).to have_css('a', text: 'Art Locked Stacks')
         end
       end
     end

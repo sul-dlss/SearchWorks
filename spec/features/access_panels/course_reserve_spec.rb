@@ -20,7 +20,7 @@ feature "Course Reserve Access Panel" do
       expect(page).to have_css('dt', text: "Course")
       expect(page).to have_css('dd a', text: "CAT-401-01-01 -- Emergency Kittenz")
       expect(page).to have_css('dt', text: "Instructor(s)")
-      expect(page).to have_css('dd', "McDonald, Ronald")
+      expect(page).to have_css('dd', text: "McDonald, Ronald")
     end
   end
 
