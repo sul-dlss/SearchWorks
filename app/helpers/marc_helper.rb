@@ -65,30 +65,19 @@ module MarcHelper
     contributors_and_works_from_marc(marc)[:contributors]
   end
 
-  def link_to_related_works_from_marc(marc)
-    contributors_and_works_from_marc(marc)[:related_works]
-  end
-
   def link_to_included_works_from_marc(marc)
     contributors_and_works_from_marc(marc)[:included_works]
   end
 
   def contributors_and_works_from_marc(marc)
     vern_text = ""
-    related_works = []
     included_works = []
     contributors = []
-    ['700', '710', '711', '720', '730'].each do |tag|
+    ['700', '710', '711', '720'].each do |tag|
       if marc[tag]
         marc.find_all{|f| (tag) === f.tag}.each do |field|
-          if tag == "730"
-            uniform_title = get_uniform_title(marc,[tag], field)
-            uniform_title[:fields].each do |field|
-              related_works << field[:field] unless field[:field].nil?
-              related_works << field[:vernacular] unless field[:vernacular].nil?
-            end
-            related_works << uniform_title[:unmatched_vernacular] unless uniform_title[:unmatched_vernacular].nil?
-          elsif !field["t"].blank?
+          if !field["t"].blank?
+            next unless field.indicator2 == "2"
             subt = :none
             link_text = []
             extra_text = []
@@ -97,6 +86,7 @@ module MarcHelper
             extra_href = []
             field.each do |subfield|
               next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
+
               # $e $i $4
               if subfield.code == "t"
                 subt = :now
@@ -124,11 +114,7 @@ module MarcHelper
             link << "#{before_text.join(" ")} " unless before_text.blank?
             link << link_to(link_text.join(" "), catalog_index_path(q: href, search_field: 'author_title'))
             link << " #{extra_text.join(" ")}" unless extra_text.blank?
-            if field.indicator2 == "2"
-              included_works << link
-            else
-              related_works << link
-            end
+            included_works << link
           else
             link_text = ""
             temp_text = ""
@@ -186,7 +172,6 @@ module MarcHelper
     return_hash = {}
     return_hash[:contributors] = "<dt>Contributor</dt><dd>#{contributors.join('</dd><dd>')}</dd>".html_safe unless contributors.blank?
     return_hash[:contributors] = "#{return_hash[:contributors]} #{vern_text}".html_safe unless vern_text.blank?
-    return_hash[:related_works] = "<dt>Related Work</dt><dd>#{related_works.join('</dd><dd>')}</dd>".html_safe unless related_works.blank?
     return_hash[:included_works] = "<dt>Included Work</dt><dd>#{included_works.join('</dd><dd>')}</dd>".html_safe unless included_works.blank?
     return_hash
   end
@@ -366,7 +351,7 @@ module MarcHelper
     return data
   end
 
-  def get_related_works_from_marc(marc,label,field)
+  def get_740_works_from_marc(marc,label,field = '740')
     if marc[field]
       marc.find_all{|f| (field) === f.tag}.each do |f|
         if f.indicator2 == "2"
