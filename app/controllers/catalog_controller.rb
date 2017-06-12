@@ -352,7 +352,12 @@ class CatalogController < ApplicationController
   def backend_lookup
     (@response, @document_list) = search_results(params)
     respond_to do |format|
-      format.json { render json: render_search_results_as_json }
+      format.json do
+        @presenter = Blacklight::JsonPresenter.new(@response,
+                                                   @document_list,
+                                                   facets_from_request,
+                                                   blacklight_config)
+      end
       format.html { render 'public/500', layout: false, status: 400 }
     end
   end
