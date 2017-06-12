@@ -22,10 +22,8 @@ class LiveLookup
     @response_xml ||= begin
       conn = Faraday.new(url: live_lookup_url)
       conn.get do |request|
-        request.options = {
-          timeout: 10,
-          open_timeout: 10
-        }
+        request.options.timeout = 10
+        request.options.open_timeout = 10
       end.body
     rescue Faraday::Error::ConnectionFailed
       nil
