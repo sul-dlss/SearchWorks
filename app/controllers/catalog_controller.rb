@@ -226,6 +226,7 @@ class CatalogController < ApplicationController
     config.add_search_field('call_number') do |field|
       field.label = "Call number"
       field.include_in_advanced_search = false
+      field.advanced_parse = false
       field.solr_parameters = { :defType => "lucene"}
       field.solr_local_parameters = {
         :df => 'callnum_search'
