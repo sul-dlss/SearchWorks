@@ -26,7 +26,7 @@ class CatalogController < ApplicationController
 
   include LocationFacet
 
-  before_filter :set_search_query_modifier, only: :index
+  before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i

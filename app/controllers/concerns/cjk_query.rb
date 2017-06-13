@@ -5,8 +5,8 @@ module CJKQuery
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_filter)
-      before_filter :add_cjk_params_logic, only: :index
+    if self.respond_to?(:before_action)
+      before_action :add_cjk_params_logic, only: :index
     end
   end
 
