@@ -19,13 +19,15 @@ class SearchWorksRecordMailer < ActionMailer::Base
     mail(to: details[:to], subject: subject_from_details(details, documents))
   end
 
-  helper_method :link_to
+  helper_method :link_to, :search_catalog_path
 
   private
 
   def link_to(*args)
     args.first
   end
+
+  def search_catalog_path(*args); end
 
   def setup_email_defaults(documents, details, url_gen_params)
     @documents         = documents
