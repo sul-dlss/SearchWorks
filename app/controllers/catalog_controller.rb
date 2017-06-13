@@ -22,8 +22,6 @@ class CatalogController < ApplicationController
 
   include LocationFacet
 
-  helper Openseadragon::OpenseadragonHelper
-
   before_filter :set_search_query_modifier, only: :index
 
   before_action only: :index do
