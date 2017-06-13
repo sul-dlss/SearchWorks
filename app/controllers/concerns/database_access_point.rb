@@ -2,9 +2,9 @@ module DatabaseAccessPoint
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_filter)
-      before_filter :default_databases_sort, only: :index
-      before_filter :add_database_topic_facet, only: [:index, :facet]
+    if self.respond_to?(:before_action)
+      before_action :default_databases_sort, only: :index
+      before_action :add_database_topic_facet, only: [:index, :facet]
     end
     if self.respond_to?(:search_params_logic)
       self.search_params_logic += [:database_prefix_search]

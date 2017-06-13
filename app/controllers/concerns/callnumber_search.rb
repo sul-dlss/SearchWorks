@@ -2,8 +2,8 @@ module CallnumberSearch
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_filter)
-      prepend_before_filter :quote_and_downcase_callnumber_search, only: :index
+    if self.respond_to?(:before_action)
+      prepend_before_action :quote_and_downcase_callnumber_search, only: :index
     end
   end
 

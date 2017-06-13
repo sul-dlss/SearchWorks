@@ -2,8 +2,8 @@ module ReplaceSpecialQuotes
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_filter)
-      before_filter :replace_special_quotes, only: :index
+    if self.respond_to?(:before_action)
+      before_action :replace_special_quotes, only: :index
     end
   end
 
