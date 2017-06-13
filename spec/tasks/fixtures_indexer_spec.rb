@@ -4,7 +4,7 @@ require 'fixtures_indexer'
 describe FixturesIndexer do
   let(:stub_solr) { double('solr') }
   before do
-    expect(Blacklight).to receive(:solr).at_least(1).times.and_return(stub_solr)
+    expect(Blacklight.default_index).to receive(:connection).at_least(1).times.and_return(stub_solr)
   end
   describe "run" do
     it "should index the fixtures and commit them" do

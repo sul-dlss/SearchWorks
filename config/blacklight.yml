@@ -12,7 +12,10 @@
 
 development:
   url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr" %>
+  adapter: solr
 test: &test
   url: <%= ENV['TEST_SOLR_URL'] || "http://127.0.0.1:8888/solr" %>
+  adapter: solr
 production:
   url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr" %>
+  adapter: solr

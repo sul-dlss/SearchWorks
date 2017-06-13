@@ -5,7 +5,7 @@ module CollectionMember
 
   def parent_collections
     return nil unless is_a_collection_member?
-    @parent_collections ||= Blacklight.solr.select(
+    @parent_collections ||= blacklight_solr.select(
       params: { fq: parent_collection_params }
     )['response']['docs'].map do |doc|
       SolrDocument.new(doc)
@@ -34,5 +34,9 @@ module CollectionMember
     self["collection"].map do |collection_id|
       "id:#{collection_id}"
     end.join(" OR ")
+  end
+
+  def blacklight_solr
+    Blacklight.default_index.connection
   end
 end

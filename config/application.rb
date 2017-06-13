@@ -19,7 +19,6 @@ module SearchWorks
     require 'access_panels'
     require 'access_panel'
     require 'links'
-    require 'nearby_on_shelf'
     require 'hours_request'
     require 'holdings'
     require 'live_lookup'
@@ -36,7 +35,6 @@ module SearchWorks
 
     # load all SearchWorksMarc
     config.autoload_paths += %W(#{config.root}/lib/search_works_marc)
-
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'

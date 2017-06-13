@@ -1,10 +1,10 @@
 class RecentSelectionsController < ApplicationController
 
-  include Blacklight::SolrHelper
-  include Blacklight::Catalog::SearchContext
+  include Blacklight::SearchHelper
+  include Blacklight::SearchContext
   def index
     _, @recent_selections =
-      get_solr_response_for_document_ids(
+      fetch(
         current_or_guest_user.bookmarks.last(3).map(&:document_id)
       )
     if request.xhr?
