@@ -3,6 +3,10 @@
 ###
 class LoginController < ApplicationController
   def login
-    redirect_to params[:referrer] || :back
+    if params[:referrer].present?
+      redirect_to params[:referrer]
+    else
+      redirect_back fallback_location: root_url
+    end
   end
 end
