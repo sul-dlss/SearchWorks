@@ -924,6 +924,20 @@
       </str>
     </lst>
   </requestHandler>
+
+  <!-- used to get consecutive terms for browsing -->
+  <searchComponent name="termsComp" class="solr.TermsComponent"/>
+  <requestHandler name="/alphaTerms" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <bool name="terms">true</bool>
+      <bool name="terms.lower.incl">true</bool>
+    </lst>
+    <arr name="components">
+      <str>termsComp</str>
+    </arr>
+  </requestHandler>
+
   <!-- for requests to get a single document; use id=666 instead of q=id:666 -->
   <requestHandler name="document" class="solr.SearchHandler" >
     <lst name="defaults">

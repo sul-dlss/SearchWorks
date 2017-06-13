@@ -10,7 +10,7 @@ class FixturesIndexer
     FixturesIndexer.new.run
   end
   def initialize
-    @solr = Blacklight.solr
+    @solr = Blacklight.default_index.connection
   end
   def run
     index

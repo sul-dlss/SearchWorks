@@ -12,7 +12,7 @@ OkComputer::Registry.register 'ruby_version', OkComputer::RubyVersionCheck.new
 OkComputer::Registry.register 'rails_cache', OkComputer::GenericCacheCheck.new
 
 env = ENV['RAILS_ENV'] || 'test'
-solr_url = Blacklight.solr_yml[env]['url']
+solr_url = Blacklight.blacklight_yml[env]['url']
 OkComputer::Registry.register 'sw_solr', OkComputer::SolrCheck.new(solr_url)
 
 # TODO:  add required checks
