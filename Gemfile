@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.8'
+gem 'rails', '5.0.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.7.2'
 # Use CoffeeScript for .js.coffee assets and views
-# gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -17,9 +17,7 @@ gem 'turbolinks'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,6 +50,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'rails-controller-testing'
   # We use database cleaner to empty out the database between tests (see spec_helper for usage)
   gem 'database_cleaner'
   gem 'poltergeist', '>= 1.8.1'
@@ -94,9 +93,9 @@ gem "blacklight-gallery", '~> 0.4'
 gem "blacklight_advanced_search", "~> 6.0"
 gem "font-awesome-sass"
 gem "blacklight_range_limit", "~> 6.0"
-gem 'blacklight-hierarchy', "~> 0.1"
+gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
-gem 'roadie-rails', '~> 1.0.4'
+gem 'roadie-rails', '~> 1.1'
 gem 'whenever', require: false
 gem 'rubocop', '~> 0.36'
