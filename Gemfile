@@ -95,7 +95,7 @@ gem "config"
 gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", '~> 0.4'
 gem "blacklight_advanced_search", "~> 6.3"
-gem "font-awesome-sass"
+gem "font-awesome-rails"
 gem "blacklight_range_limit", "~> 6.0"
 gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
