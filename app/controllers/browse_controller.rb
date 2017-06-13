@@ -1,7 +1,7 @@
 class BrowseController < ApplicationController
-  include Blacklight::Catalog::SearchContext
+  include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SolrHelper
+  include Blacklight::SearchHelper
   include Thumbnail
   copy_blacklight_config_from(CatalogController)
 

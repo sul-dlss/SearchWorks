@@ -29,14 +29,14 @@ describe CollectionMember do
       }
     }}
     before do
-      allow(Blacklight).to receive(:solr).and_return(stub_solr)
+      allow(Blacklight.default_index).to receive(:connection).and_return(stub_solr)
     end
     it "should search solr for ids in the collection" do
-      expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)
+      expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
       expect(member.parent_collections).to be_present
     end
     it "should return a solr document" do
-      expect(Blacklight.solr).to receive(:select).with(stub_params).and_return(stub_response)
+      expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
       member.parent_collections.each do |parent|
         expect(parent).to be_a SolrDocument
       end

@@ -120,6 +120,7 @@ describe SearchWorksRecordMailer do
     context 'when there is bookplate data' do
       let(:bookplate_document) do
         SolrDocument.new(
+          id: '123',
           marcxml: metadata1,
           bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
         )

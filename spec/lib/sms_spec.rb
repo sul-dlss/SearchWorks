@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Blacklight::Solr::Document::Sms" do
+describe "Searchworks::Document::Sms" do
   let(:doc) {
     SolrDocument.new(
       preferred_barcode: '12345',
@@ -12,7 +12,7 @@ describe "Blacklight::Solr::Document::Sms" do
   }
 
   before(:all) do
-    SolrDocument.use_extension(Blacklight::Solr::Document::Sms)
+    SolrDocument.use_extension(Searchworks::Document::Sms)
   end
 
   it "should return preferred call number with its library and location" do

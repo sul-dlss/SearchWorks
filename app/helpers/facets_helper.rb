@@ -8,7 +8,7 @@ module FacetsHelper
   end
 
   def render_single_facet(facet_name, options={})
-    facet = @response.facets.find do |facet|
+    facet = @response.aggregations.values.find do |facet|
       facet.name == facet_name
     end
     if facet

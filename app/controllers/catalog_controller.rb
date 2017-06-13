@@ -331,7 +331,7 @@ class CatalogController < ApplicationController
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
   def email
-    @response, @documents = get_solr_response_for_document_ids(params[:id])
+    @response, @documents = fetch(Array(params[:id]))
 
     if request.post? && validate_email_params
       send_emails_to_all_recipients
@@ -349,7 +349,7 @@ class CatalogController < ApplicationController
   end
 
   def backend_lookup
-    (@response, @document_list) = get_search_results
+    (@response, @document_list) = search_results(params, search_params_logic)
     respond_to do |format|
       format.json { render json: render_search_results_as_json }
       format.html { render 'public/500', layout: false, status: 400 }
@@ -357,11 +357,11 @@ class CatalogController < ApplicationController
   end
 
   def availability
-    _, documents = get_solr_response_for_document_ids(params[:id])
+    _, document = fetch(params[:id])
     respond_to do |format|
       format.json do
         live = params[:live].nil? || params[:live] == 'true'
-        render json: render_document_with_availability_as_json(documents.first, live)
+        render json: render_document_with_availability_as_json(document, live)
       end
       format.html { render 'public/500', layout: false, status: 400 }
     end

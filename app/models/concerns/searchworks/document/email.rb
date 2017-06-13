@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 # Overridding Blacklight's module to provide our own breif email text
-module Blacklight::Solr::Document::Email
+module Searchworks::Document::Email
+  include Blacklight::Document::Email
 
   # Return a text string that will be the body of the email
   def to_email_text

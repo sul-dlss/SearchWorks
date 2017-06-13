@@ -13,9 +13,8 @@ module CJKQuery
   private
 
   def add_cjk_params_logic
-    if self.class.respond_to?(:solr_search_params_logic)
-      self.class.solr_search_params_logic << :modify_params_for_cjk
-      self.class.solr_search_params_logic << :modify_params_for_cjk_advanced
+    if self.class.respond_to?(:search_params_logic)
+      self.class.search_params_logic += [:modify_params_for_cjk, :modify_params_for_cjk_advanced]
     end
   end
 

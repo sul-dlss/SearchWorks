@@ -1,5 +1,5 @@
 class NearbyOnShelf
-  include Blacklight::SolrHelper
+  include Blacklight::SearchHelper
   attr_reader :items
   def initialize(type,config,options)
     @blacklight_config = config
@@ -10,15 +10,16 @@ class NearbyOnShelf
     end
   end
 
-  protected
+  def blacklight_config
+    @blacklight_config
+  end
+
+  private
 
   def logger
     ::Rails.logger
   end
 
-  def blacklight_config
-    @blacklight_config
-  end
   def params
     {}
   end
@@ -151,7 +152,7 @@ class NearbyOnShelf
       'terms.sort' => 'index',
       'terms.limit' => how_many
     }
-    solr_response = Blacklight.solr.alphaTerms({params: solr_params})
+    solr_response = Blacklight.default_index.connection.alphaTerms({params: solr_params})
     # create array of one element hashes with key=term and value=count
     result = []
     terms ||= solr_response['terms'] || []
