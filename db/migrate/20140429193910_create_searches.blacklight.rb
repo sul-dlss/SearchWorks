@@ -1,6 +1,6 @@
 # This migration comes from blacklight (originally 20140202020201)
 # -*- encoding : utf-8 -*-
-class CreateSearches < ActiveRecord::Migration
+class CreateSearches < ActiveRecord::Migration[5.0]
   def self.up
     create_table :searches do |t|
       t.text  :query_params
