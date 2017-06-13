@@ -30,13 +30,13 @@ describe "preview/_show_mods.html.erb" do
   end
 
   it "should display the collection" do
-    expect(rendered).to have_css('dt', "Collection")
-    expect(rendered).to have_css('dd', "Collection Title")
+    expect(rendered).to have_css('dt', text: "Collection")
+    expect(rendered).to have_css('dd', text: "Collection Title")
   end
 
   it "should display the collection" do
-    expect(rendered).to have_css('dt', "Collection")
-    expect(rendered).to have_css('dd', "Collection Title")
+    expect(rendered).to have_css('dt', text: "Collection")
+    expect(rendered).to have_css('dd', text: "Collection Title")
   end
 
   it "should display summary accordion section" do
