@@ -5,6 +5,6 @@ Blacklight::BookmarksController.class_eval do
     else
       flash[:error] = I18n.t('blacklight.bookmarks.clear.failure')
     end
-    redirect_to :back
+    redirect_back fallback_location: bookmarks_url
   end
 end
