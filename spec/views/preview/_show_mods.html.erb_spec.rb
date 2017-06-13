@@ -29,14 +29,10 @@ describe "preview/_show_mods.html.erb" do
     expect(rendered).to have_css('li', text: "Imprint Statement")
   end
 
-  it "should display the collection" do
-    expect(rendered).to have_css('dt', "Collection")
-    expect(rendered).to have_css('dd', "Collection Title")
-  end
-
-  it "should display the collection" do
-    expect(rendered).to have_css('dt', "Collection")
-    expect(rendered).to have_css('dd', "Collection Title")
+  it 'should display the collection' do
+    expect(rendered).to have_css('dt', text: 'Collection')
+    # Note: This is the object title because we're stubbing the presenter in this test
+    expect(rendered).to have_css('dd a', text: 'Object Title')
   end
 
   it "should display summary accordion section" do
