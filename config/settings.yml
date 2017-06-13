@@ -22,7 +22,7 @@ GOVERNMENT_DOCUMENTS_ACCESS_POINT: true
 EMAIL_THRESHOLD: 5
 OCLC:
   API_KEY: the-oclc-api-key
-  BASE_URL: https://www.worldcat.org/webservices/catalog/content/citations
+  BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
   CITATION_FORMATS: ['all']
   DOCUMENT_FIELD: 'oclc'
 MOUSEFLOW: <%= Rails.env.production? %>
