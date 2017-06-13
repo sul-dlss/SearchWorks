@@ -7,7 +7,7 @@
     <ul class="dropdown-menu" role="menu">
       <%- per_page_options_for_select.each do |(label, count)| %>
         <li>
-          <%= link_to url_for params_for_search :per_page => count do %>
+          <%= link_to url_for search_state.params_for_search :per_page => count do %>
             <% if current_per_page == count %>
               <%= t 'blacklight.search.highlight.active_html' %>
             <% end %>
