@@ -9,7 +9,7 @@ describe BrowseController, :"data-integration" => true do
   end
   describe "#index" do
     before do
-      get :index, start: '9696118'
+      get :index, params: { start: '9696118' }
     end
     it "should set the @document_list instance variable" do
       expect(assigns(:document_list)).to be_present
@@ -38,7 +38,7 @@ describe BrowseController, :"data-integration" => true do
   describe "pagination" do
     describe "forward" do
       it "should not include the original doc" do
-        get :index, start: '9696118', page: '1'
+        get :index, params: { start: '9696118', page: '1' }
         expect(assigns(:document_list).any? do |doc|
           doc[:id] == assigns(:original_doc)[:id]
         end).to be_falsey
@@ -46,7 +46,7 @@ describe BrowseController, :"data-integration" => true do
     end
     describe "backward" do
       it "should not include the original doc" do
-        get :index, start: '9696118', page: '-1'
+        get :index, params: { start: '9696118', page: '-1' }
         expect(assigns(:document_list).any? do |doc|
           doc[:id] == assigns(:original_doc)[:id]
         end).to be_falsey
@@ -55,7 +55,7 @@ describe BrowseController, :"data-integration" => true do
   end
   describe "nearby" do
     before do
-      get :nearby, start: '9696118'
+      get :nearby, params: { start: '9696118' }
     end
     it "should set the @document_list instance variable" do
       expect(assigns(:document_list)).to be_present

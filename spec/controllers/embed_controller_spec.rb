@@ -13,7 +13,7 @@ describe EmbedController do
       expect(embed).to receive(:html).and_return("<p>stuff</p>")
     end
     it "should return correct response" do
-      get :show, format: "json", id: "abc123"
+      get :show, params: { format: "json", id: "abc123" }
       expect(response.status).to eq 200
     end
   end
