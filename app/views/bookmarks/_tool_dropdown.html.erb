@@ -10,13 +10,13 @@
 
     <% if @response.documents.any? {|d| d.exports_as? :refworks_marc_txt } %>
       <li>
-        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, params_for_search)), :id => "refworksLink" %>
+        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search)), :id => "refworksLink" %>
       </li>
     <% end %>
 
     <% if @response.documents.any? {|d| d.exports_as? :endnote } %>
       <li>
-        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, params_for_search), :id => "endnoteLink" %>
+        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, search_state.params_for_search), :id => "endnoteLink" %>
       </li>
     <% end %>
 
