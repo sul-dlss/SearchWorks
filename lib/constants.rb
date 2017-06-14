@@ -1003,9 +1003,24 @@ module Constants
     'SCI-RESV' => 'SCIENCE'
   }
 
-  STACKMAP_LIBS = %w(GREEN MEDIA-MTXT)
-
-  HIDE_STACKMAP_LOCS = %w(BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN)
+  STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART].freeze
+  STACKMAP_BLACKLIST = { # keys are libraries (with `:global` for a global blacklist) and values are home locations
+    global: %w[BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN],
+    'ART' => %w[
+      ARTLCKL
+      ARTLCKL-R
+      ARTLCKM
+      ARTLCKM-R
+      ARTLCKO
+      ARTLCKO-R
+      ARTLCKS
+      ARTLCKS-R
+      MEDIA
+      MEDIA-FOLI
+      MICROFILM
+      MICROTEXT
+    ]
+  }.freeze
 
   INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
 

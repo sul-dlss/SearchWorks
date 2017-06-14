@@ -144,12 +144,16 @@ class Holdings
       home_location == 'INTERNET'
     end
 
+    # supports whitelist for library
     def stackmapable_library?
       Constants::STACKMAP_LIBS.include?(library)
     end
 
+    # supports a global blacklist and local blacklist for home_location
     def stackmapable_location?
-      !Constants::HIDE_STACKMAP_LOCS.include?(home_location)
+      return false if Constants::STACKMAP_BLACKLIST[:global].include?(home_location)
+      return true if Constants::STACKMAP_BLACKLIST[library].blank? # no local blacklist registered, so we're done
+      !Constants::STACKMAP_BLACKLIST[library].include?(home_location)
     end
 
     def standard_or_zombie_library
