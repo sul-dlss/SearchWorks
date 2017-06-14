@@ -1,20 +1,20 @@
 require 'spec_helper'
 
-describe AccessPanel::Online do
+describe AccessPanels::Online do
   include ModsFixtures
   include Marc856Fixtures
 
-  let(:fulltext) { Online.new(SolrDocument.new(marcxml: fulltext_856)) }
-  let(:supplemental) { Online.new(SolrDocument.new(marcxml: supplemental_856)) }
+  let(:fulltext) { described_class.new(SolrDocument.new(marcxml: fulltext_856)) }
+  let(:supplemental) { described_class.new(SolrDocument.new(marcxml: supplemental_856)) }
 
   let(:sfx) do
-    Online.new(
+    described_class.new(
       SolrDocument.new(url_sfx: 'http://example.com/sfx-link', marcxml: fulltext_856)
     )
   end
 
   let(:image_collection_member) do
-    Online.new(
+    described_class.new(
       SolrDocument.new(
         collection: ['12345'],
         marcxml: fulltext_856
@@ -23,7 +23,7 @@ describe AccessPanel::Online do
   end
 
   let(:managed_purl_doc) do
-    Online.new(
+    described_class.new(
       SolrDocument.new(
         managed_purl_urls: ['https://library.stanford.edu'],
         marcxml: managed_purl_856
@@ -32,7 +32,7 @@ describe AccessPanel::Online do
   end
 
   let(:mods) do
-    Online.new(
+    described_class.new(
       SolrDocument.new(
         collection: ['12345'],
         url_fulltext: 'https://purl.stanford.edu/',

@@ -1,3 +1,5 @@
+require 'marc_edition'
+
 module Edition
   def edition
     @edition ||= begin
