@@ -1,3 +1,9 @@
 .document-thumbnail {
   margin-bottom: 0;
 }
+
+#documents .preview .document-thumbnail {
+  float: right;
+  padding-left: $line-height-computed;
+  margin-bottom: $line-height-computed;
+}
