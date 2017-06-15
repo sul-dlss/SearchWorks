@@ -20,8 +20,6 @@ class CatalogController < ApplicationController
 
   include ReplaceSpecialQuotes
 
-  include CJKQuery
-
   include Thumbnail
 
   include LocationFacet

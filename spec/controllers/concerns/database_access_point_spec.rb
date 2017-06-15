@@ -54,32 +54,4 @@ describe DatabaseAccessPoint do
       expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_truthy
     end
   end
-  describe "#database_prefix_search" do
-    let(:solr_params) { {} }
-    let(:user_params) { {} }
-    before do
-      allow(page_location).to receive(:access_point).and_return(OpenStruct.new(:"databases?" => true))
-      allow(controller).to receive(:solr_params).and_return(solr_params)
-      allow(controller).to receive(:user_params).and_return(user_params)
-    end
-    it "should handle 0-9 filters properly" do
-      user_params[:prefix] = "0-9"
-      controller.send(:database_prefix_search, solr_params, user_params)
-      (0..9).to_a.each do |number|
-        expect(solr_params[:q]).to match /title_sort:#{number}\*/
-      end
-      expect(solr_params[:q]).to match /^title_sort:0\*.*title_sort:9\*$/
-    end
-    it "should handle alpha filters properly" do
-      user_params[:prefix] = "B"
-      controller.send(:database_prefix_search, solr_params, user_params)
-      expect(solr_params[:q]).to eq "title_sort:B*"
-    end
-    it "should AND user supplied queries" do
-      user_params[:prefix] = "B"
-      user_params[:q] = "My Query"
-      controller.send(:database_prefix_search, solr_params, user_params)
-      expect(solr_params[:q]).to eq "title_sort:B* AND My Query"
-    end
-  end
 end
