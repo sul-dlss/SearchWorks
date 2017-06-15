@@ -198,17 +198,6 @@ describe MarcHelper do
       expect(included_works).to have_css('dd a @href', text: /search_field=search_author/)
       expect(included_works).to have_css('dd', text: /last\./)
     end
-    it "should handle related works correctly" do
-      works = link_to_related_works_from_marc(contributed_works.to_marc)
-      expect(works).to match(/>Related Work</)
-      # should include $i before links but strip ()'s
-      expect(works).to match(/>Includes <a href/)
-      # normal $t punctuation
-      expect(works).to match(/<a href=.*q=%22700\+with\+t\+Title\.%22.*search_field=author_title\">700 with t 700 \$e Title\.<\/a> sub m after \. 700 \$4</)
-      works = link_to_related_works_from_marc(related_works.to_marc) # 730
-      # should include $i before links but strip ()'s
-      expect(works).to match(/>Includes <a href/)
-    end
     it "should handle repeating subfield e" do
        expect(link_to_contributor_from_marc(multi_role_contributor.to_marc)).to match(/\/a> actor\. director\.<\/dd>/)
     end
@@ -369,16 +358,13 @@ describe MarcHelper do
     end
   end
 
-  describe "#get_related_works_from_marc" do
+  describe "#get_740_works_from_marc" do
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
-    it "should pass on the given label for all indicators except for  when 2 is 2" do
-      expect(get_related_works_from_marc(related_works.to_marc,"Label","730")[:label]).to eq "Label"
-    end
     it "should use Included Work for records with a 2nd indicator of 2" do
-      expect(get_related_works_from_marc(related_works.to_marc,"Label","740")[:label]).to eq "Included Work"
+      expect(get_740_works_from_marc(related_works.to_marc,"Label")[:label]).to eq "Included Work"
     end
     it "should return nil when there is no field" do
-      expect(get_related_works_from_marc(document.to_marc,"Label","740")).to be_nil
+      expect(get_740_works_from_marc(document.to_marc,"Label")).to be_nil
     end
   end
 

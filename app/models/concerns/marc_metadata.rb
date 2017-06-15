@@ -10,6 +10,10 @@ module MarcMetadata
     @linked_author[target] ||= LinkedAuthor.new(self, target)
   end
 
+  def linked_related_works
+    @linked_related_works ||= LinkedRelatedWorks.new(self)
+  end
+
   def physical_medium
     @physical_medium ||= PhysicalMedium.new(self)
   end
