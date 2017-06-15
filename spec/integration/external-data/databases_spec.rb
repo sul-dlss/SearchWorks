@@ -39,7 +39,7 @@ describe "Databases Access Point", feature: true, :"data-integration" => true do
       expect(page).to have_css("h3.index_title", text: "19th century British Library newspapers [electronic resource].")
     end
 
-    within("#documents .document:nth-of-type(6)") do
+    within("#documents .document:nth-of-type(7)") do
       expect(page).to have_css("h3.index_title", text: "AAPG data systems/publications [electronic resource].")
     end
   end
