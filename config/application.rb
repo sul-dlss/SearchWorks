@@ -16,8 +16,11 @@ module SearchWorks
     # -- all .rb files in that directory are automatically loaded.
     require 'constants'
     require 'page_location'
-    require 'access_panels'
     require 'access_panel'
+    require 'access_panels'
+    require 'access_panels/course_reserve'
+    require 'access_panels/library_location'
+    require 'access_panels/online'
     require 'links'
     require 'hours_request'
     require 'holdings'
@@ -29,9 +32,6 @@ module SearchWorks
 
     # load all marc fields
     config.autoload_paths += %W(#{config.root}/app/models/marc_fields)
-
-    # load all access panels
-    config.autoload_paths += %W(#{config.root}/lib/access_panels)
 
     # load all SearchWorksMarc
     config.autoload_paths += %W(#{config.root}/lib/search_works_marc)
