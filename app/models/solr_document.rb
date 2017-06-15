@@ -34,6 +34,7 @@ class SolrDocument
   delegate :empty?, :blank?, to: :to_h
 
   def initialize(source_doc = {}, response = nil)
+    source_doc = source_doc.to_h if source_doc.respond_to?(:to_h)
     source_doc[:marcfield] = (source_doc[:marcxml] || source_doc['marcxml'] || source_doc[:marcbib_xml] || source_doc['marcbib_xml'])
     super
   end
