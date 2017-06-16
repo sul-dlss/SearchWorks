@@ -35,4 +35,15 @@ describe SearchBuilder do
       expect(solr_params[:q]).to eq "title_sort:B* AND My Query"
     end
   end
+
+  describe "advanced search" do
+    it "sets the facet limit to -1 (unlimited)" do
+      search_builder.facets_for_advanced_search_form(solr_params)
+      expect(solr_params).to include "f.access_facet.facet.limit" => -1,
+                                     "f.format_main_ssim.facet.limit" => -1,
+                                     "f.format_physical_ssim.facet.limit" => -1,
+                                     "f.building_facet.facet.limit" => -1,
+                                     "f.language.facet.limit" => -1
+    end
+  end
 end
