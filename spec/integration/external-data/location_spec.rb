@@ -6,7 +6,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit solr_document_path('10385184')
 
       within('.panel-library-location') do
-        within('ul.items') do
+        within('.location table') do
           expect(page).to have_css('i.page')
         end
       end
@@ -17,7 +17,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit solr_document_path('10160087')
 
       within('.panel-library-location') do
-        within(page.all('ul.items').first) do
+        within(first('.location table')) do
           expect(page).to have_css('i.noncirc', count: 3)
         end
       end
@@ -26,7 +26,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit solr_document_path('10458422')
 
       within('.panel-library-location') do
-        within(page.all('ul.items').first) do
+        within(first('.location table')) do
           expect(page).to_not have_css('i.noncirc')
         end
       end
@@ -37,7 +37,7 @@ describe "Location", feature: true, :"data-integration" => true do
       visit solr_document_path('10424524')
 
       within('.panel-library-location') do
-        within(page.all('ul.items').first) do
+        within(first('.location table')) do
           expect(page).to have_css('i.unknown')
         end
       end
@@ -53,7 +53,7 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
     it "should show the MARC 590 note in the availability display" do
-      within('.availability') do
+      within('.location') do
         expect(page).to have_css('.bound-with-note.note-highlight', text: "Copy 1 bound with 1967, pt. 1. 796443(parent record's ckey)")
         expect(page).to have_css('.bound-with-note.note-highlight a', text:"796443")
         click_link '796443'
