@@ -72,7 +72,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return results only if there is a match in the publisher" do
       fill_in "pub_search", with: "NEW MEXICO"
       click_on 'advanced-search-submit'
-      expect((8000..9000)).to include total_results
+      expect((8500..9500)).to include total_results
     end
   end
   describe "Advanced search sorting" do
@@ -110,10 +110,10 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     end
   end
   describe "Standalone NOT as first word query" do
-    it "should get at most 2,000,000" do
+    it "should get at most 2,700,000" do
       fill_in "search", with: "NOT p"
       click_on "advanced-search-submit"
-      expect(total_results).to be <= 2000000
+      expect(total_results).to be <= 2700000
     end
   end
   describe "NOT in the middle of query terms" do
@@ -142,7 +142,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search", with: "IEEE Xplore"
       fill_in "subject_terms", with: "-Congresses"
       click_on "advanced-search-submit"
-      expect(total_results).to be < 1500
+      expect(total_results).to be < 2300
     end
   end
   describe "OR query" do
@@ -176,7 +176,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return at least 50 results and these keys in first 5 results" do
       fill_in "search_title", with: "Hello AND Goodbye"
       click_on "advanced-search-submit"
-      expect(total_results).to be <= 50
+      expect(total_results).to be >= 50
       ["6502314","8218325","6314136","2432242"].each do |id|
         expect(document_index(id)).to be < 5
       end
@@ -224,12 +224,12 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     end
   end
   describe "Description Plus Building Facet Value" do
-    it "should return at most 1 result" do
+    it "should return at most 3 results" do
       fill_in "search", with: "Sally Ride"
       click_on "Library"
-      check "f_inclusive_building_facet_art-architecture"
+      check "f_inclusive_building_facet_art-architecture-bowes"
       click_on "advanced-search-submit"
-      expect(total_results).to eq 1
+      expect(total_results).to be <= 3
     end
   end
   describe "Title Plus Format Facet Value (SW-326)" do
