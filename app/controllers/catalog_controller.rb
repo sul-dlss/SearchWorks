@@ -366,7 +366,7 @@ class CatalogController < ApplicationController
                                                    facets_from_request,
                                                    blacklight_config)
       end
-      format.html { render 'public/500', layout: false, status: 400 }
+      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 
@@ -377,7 +377,7 @@ class CatalogController < ApplicationController
         live = params[:live].nil? || params[:live] == 'true'
         render json: render_document_with_availability_as_json(document, live)
       end
-      format.html { render 'public/500', layout: false, status: 400 }
+      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 

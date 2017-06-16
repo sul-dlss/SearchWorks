@@ -3,7 +3,7 @@ class HoursController < ApplicationController
     response = HoursRequest.new(params[:id]).get
     respond_to do |format|
       format.json { render json: response }
-      format.html { render 'public/500', layout: false, status: 400 }
+      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 end
