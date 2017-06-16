@@ -51,7 +51,7 @@ describe "Access Panels", feature: true, :"data-integration" => true do
       visit solr_document_path('10020587')
 
       within(".panel-course-reserve") do
-        expect(page).to have_css("dl dd a", text: "ACCT-212-01-02 -- Managerial Accounting: Base")
+        expect(page).to have_css("dl dd a", text: "ACCT-212-01-04 -- Managerial Accounting: Base")
       end
     end
   end
@@ -63,7 +63,7 @@ describe "Access Panels", feature: true, :"data-integration" => true do
     end
     it "should be displayed for objects held at libraries" do
       visit solr_document_path('3195844')
-      expect(page).to have_css(".panel-library-location", count:7)
+      expect(page).to have_css(".panel-library-location", count: 6)
     end
   end
 end
