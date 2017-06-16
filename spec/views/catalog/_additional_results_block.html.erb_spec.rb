@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "catalog/_additional_results_block.html.erb" do
-  let(:simple_config) { OpenStruct.new(default_search_field: OpenStruct.new(field: 'search') ) }
+  let(:simple_config) { instance_double(Blacklight::Configuration, default_search_field: instance_double('field', field: 'search') ) }
   let(:facet_config) {
     Blacklight::Configuration.new do |config|
       config.add_facet_field 'fieldA', label: "A field"

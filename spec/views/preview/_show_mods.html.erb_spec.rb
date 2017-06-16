@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "preview/_show_mods.html.erb" do
   include ModsFixtures
-  let(:presenter) { OpenStruct.new(document_heading: "Object Title") }
+  let(:presenter) { instance_double(Blacklight::DocumentPresenter, document_heading: "Object Title") }
   let(:document) { SolrDocument.new(
     id: '123',
     collection: ['12345'],

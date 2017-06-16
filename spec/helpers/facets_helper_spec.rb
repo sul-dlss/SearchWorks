@@ -2,20 +2,24 @@ require "spec_helper"
 
 describe FacetsHelper do
   describe "#render_single_facet" do
+    let(:response) { instance_double(Blacklight::Solr::Response) }
+
     before do
-      @response = OpenStruct.new(aggregations: {})
+      assign(:response, response)
+      expect(response).to receive(:aggregations).and_return(this_facet:
+        instance_double(Blacklight::Solr::Response::Facets::FacetField, name: 'this_facet')
+      )
     end
+
     it "should return nil if there is no facet available" do
       expect(helper.send(:render_single_facet, "not_a_facet")).to be_nil
     end
     it "should render the facet limit when the facet does exist " do
-      @response.aggregations = { this_facet: OpenStruct.new(name: "this_facet") }
       expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
       expect(helper).to receive(:render_facet_limit).with("a-facet", {}).and_return("a-partial")
       expect(helper.send(:render_single_facet, "this_facet")).to eq "a-partial"
     end
     it "should pass options onto #render_facet_limit" do
-      @response.aggregations = { this_facet: OpenStruct.new(name: "this_facet") }
       options = {partial: "the-partial-to-render"}
       expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
       expect(helper).to receive(:render_facet_limit).with("a-facet", options).and_return("a-partial")
@@ -23,8 +27,8 @@ describe FacetsHelper do
     end
   end
   describe "#collapse_home_page_facet?" do
-    let(:collapse_facet) { OpenStruct.new(field: 'building_facet') }
-    let(:non_collapse_facet) { OpenStruct.new(field: 'other_facet') }
+    let(:collapse_facet) { instance_double(Blacklight::Solr::Response::Group, field: 'building_facet') }
+    let(:non_collapse_facet) { instance_double(Blacklight::Solr::Response::Group, field: 'other_facet') }
     it "should identify building_facet to be collapsed on the home page" do
       expect(collapse_home_page_facet?(collapse_facet)).to be_truthy
     end

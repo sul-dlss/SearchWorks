@@ -1,7 +1,13 @@
 require "spec_helper"
 
 describe Holdings::Status do
-  let(:status) { Holdings::Status.new(OpenStruct.new) }
+  let(:status) { described_class.new(instance_double(Holdings::Callnumber,
+                                     library: '',
+                                     home_location: '',
+                                     current_location: '',
+                                     type: ''
+  )) }
+
   describe "::Available" do
     before do
       allow_any_instance_of(Holdings::Status::Available).to receive(:available?).and_return(true)
@@ -93,7 +99,7 @@ describe Holdings::Status do
   end
 
   describe 'precedence' do
-    subject { Holdings::Status.new(callnumber) }
+    subject { described_class.new(callnumber) }
 
     describe 'unavailable' do
       let(:callnumber) do
@@ -101,7 +107,7 @@ describe Holdings::Status do
           'Call number',
           library: 'SAL3',
           home_location: 'STACKS',
-          current_location: double('Location', code: 'LOST-ASSUM'),
+          current_location: instance_double('Location', code: 'LOST-ASSUM'),
           type: 'STACKS'
         )
       end

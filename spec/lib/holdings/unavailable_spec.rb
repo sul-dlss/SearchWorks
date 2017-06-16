@@ -3,8 +3,8 @@ require "spec_helper"
 describe Holdings::Status::Unavailable do
   describe "unavailable libraries" do
     let(:status) {
-      Holdings::Status::Unavailable.new(
-        OpenStruct.new(library: "ZOMBIE")
+      described_class.new(
+        instance_double(Holdings::Callnumber, library: "ZOMBIE")
       )
     }
     it "should be unavailable" do
@@ -14,21 +14,21 @@ describe Holdings::Status::Unavailable do
   describe "unavailable home locations" do
     it "should be unavailable" do
       Constants::UNAVAILABLE_LOCS.each do |location|
-        expect(Holdings::Status::Unavailable.new(OpenStruct.new(home_location: location))).to be_unavailable
+        expect(described_class.new(instance_double(Holdings::Callnumber, home_location: location, library: ''))).to be_unavailable
       end
     end
   end
   describe "unavailable current locations" do
     it "should be unavailable" do
       Constants::UNAVAILABLE_CURRENT_LOCS.each do |location|
-        expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new(location)))).to be_unavailable
+        expect(described_class.new(instance_double(Holdings::Callnumber, current_location: Holdings::Location.new(location), library: '', home_location: ''))).to be_unavailable
       end
     end
     it "should handle identify -LOAN properly as unavailable" do
-      expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new("SOMETHING-LOAN")))).to be_unavailable
+      expect(described_class.new(instance_double(Holdings::Callnumber, current_location: Holdings::Location.new("SOMETHING-LOAN"), library: '', home_location: ''))).to be_unavailable
     end
     it "should not identify SPE-LOAN as unavailable" do
-      expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new("SPE-LOAN")))).to_not be_unavailable
+      expect(described_class.new(instance_double(Holdings::Callnumber, current_location: Holdings::Location.new("SPE-LOAN"), library: '', home_location: ''))).to_not be_unavailable
     end
   end
 end

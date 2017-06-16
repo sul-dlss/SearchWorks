@@ -14,13 +14,10 @@ describe PaginationHelper do
 
   describe 'label_current_sort' do
     def field(value)
-      field = double('field')
-      expect(field).to receive(:label).and_return(value)
-      expect(field).to receive(:field).and_return(value)
-      field
+      instance_double('field', label: value, field: value)
     end
 
-    before { expect(helper).to receive(:current_sort_field).and_return(OpenStruct.new(field: 'relevance')) }
+    before { expect(helper).to receive(:current_sort_field).and_return(field('relevance')) }
 
     it 'labels current sort' do
       expect(helper.label_current_sort(field('relevance'))).to eql '<span class="glyphicon glyphicon-ok"></span> Relevance'
