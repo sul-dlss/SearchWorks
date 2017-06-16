@@ -292,7 +292,12 @@ class CatalogController < ApplicationController
       :query_parser => 'edismax',
       :form_solr_parameters => {
         "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
-        "facet.limit" => -1, # return all facet values
+         # return all facet values
+        "f.access_facet.facet.limit" => -1,
+        "f.format_main_ssim.facet.limit" => -1,
+        "f.format_physical_ssim.facet.limit" => -1,
+        "f.building_facet.facet.limit" => -1,
+        "f.language.facet.limit" => -1,
         "facet.sort" => "index" # sort by byte order of values
       }
     }
