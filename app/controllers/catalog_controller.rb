@@ -98,7 +98,7 @@ class CatalogController < ApplicationController
     end
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
     config.add_facet_field "format_physical_ssim", :label => "Media type", limit: 20
-    config.add_facet_field "pub_year_tisim", :label => "Date", :range => {
+    config.add_facet_field "pub_year_tisim", :label => "Date", :partial => "blacklight_range_limit/range_limit_panel", :range => {
       :input_label_range_begin => "from year",
       :input_label_range_end => "to year"
     }
