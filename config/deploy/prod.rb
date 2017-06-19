@@ -1,21 +1,13 @@
-set :deploy_to, "/opt/app/#{fetch(:user)}/#{fetch(:application)}"
-set :deploy_host, 'sw-webapp'
-set :bundle_without, %w(sqlite development test).join(' ')
+set :bundle_without, %w[sqlite development test].join(' ')
 
-user_server_extensions = %w(a b c d e)
-bot_server_extensions = %w(a b)
+server 'sw-webapp-a.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-b.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-c.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-d.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-e.stanford.edu', user: 'blacklight', roles: %w[web db app]
 
-user_server_extensions.each do |extension|
-  server "#{fetch(:deploy_host)}-#{extension}.stanford.edu",
-         user: fetch(:user),
-         roles: %w(web db app)
-end
-
-bot_server_extensions.each do |extension|
-  server "#{fetch(:deploy_host)}-bot-#{extension}.stanford.edu",
-         user: fetch(:user),
-         roles: %w(web db app)
-end
+server 'sw-webapp-bot-a.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-bot-b.stanford.edu', user: 'blacklight', roles: %w[web db app]
 
 Capistrano::OneTimeKey.generate_one_time_key!
-set :rails_env, "production"
+set :rails_env, 'production'

@@ -1,7 +1,7 @@
-set :bundle_without, %w(sqlite development test).join(' ')
-set :deploy_to, "/opt/app/#{fetch(:user)}/#{fetch(:application)}"
+set :bundle_without, %w[sqlite development test].join(' ')
 
-server 'searchworks-preview.stanford.edu', user: fetch(:user), roles: %w(web db app)
+# alias searchworks-preview
+server 'sw-webapp-sandbox-a.stanford.edu', user: 'blacklight', roles: %w[web db app]
 
 Capistrano::OneTimeKey.generate_one_time_key!
 set :rails_env, 'production'
