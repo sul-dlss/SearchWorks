@@ -3,10 +3,8 @@ set :repo_url, 'https://github.com/sul-dlss/SearchWorks.git'
 
 # Default branch is :master
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
-set :user, 'blacklight'
-set :home_directory, "/home/#{fetch(:user)}"
 
-set :deploy_to, "#{fetch(:home_directory)}/#{fetch(:application)}"
+set :deploy_to, '/opt/app/blacklight/SearchWorks'
 
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
