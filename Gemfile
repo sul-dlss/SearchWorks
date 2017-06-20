@@ -101,5 +101,4 @@ gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.1'
-gem 'whenever', require: false
 gem 'rubocop', '~> 0.36'
