@@ -9,6 +9,7 @@ module AdvancedSearchParamsMapping
   private
 
   def map_advanced_search_params
+    return unless params && blacklight_config.advanced_search
     if params[:search_field] == blacklight_config.advanced_search[:url_key]
       if params[:author]
         params[:search_author] = params[:author]

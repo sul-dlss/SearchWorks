@@ -8,7 +8,7 @@ describe SearchQueryModifier do
       expect(SearchQueryModifier.new({q: "hello", f: {something: ''}}, default_config)).to be_present
     end
     it "should return true when the search is fielded" do
-      config = OpenStruct.new(default_search_field: OpenStruct.new(field: 'search') )
+      config = instance_double(Blacklight::Configuration, default_search_field: instance_double('field', field: 'search'))
       expect(SearchQueryModifier.new({q: "hello", search_field: 'someting_else'}, config)).to be_present
     end
     it "should return true when there are stopwords" do
@@ -36,7 +36,7 @@ describe SearchQueryModifier do
     end
   end
   describe "fielded search" do
-    let(:config) { OpenStruct.new(default_search_field: OpenStruct.new(field: 'search') ) }
+    let(:config) { instance_double(Blacklight::Configuration, default_search_field: instance_double('field', field: 'search') ) }
     let(:fielded_search) { SearchQueryModifier.new({search_field: "search_title", q: 'something', f: 'else'}, config) }
     let(:no_query_search) { SearchQueryModifier.new({search_field: 'search_title'}, config) }
     let(:no_fielded_search) { SearchQueryModifier.new({q: 'something'}, config) }

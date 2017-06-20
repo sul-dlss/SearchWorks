@@ -4,10 +4,17 @@ class AdvancedSearchParamsMappingController
   include AdvancedSearchParamsMapping
 end
 
+# Blacklight Advanced Search plugin adds this variable
+class Blacklight::Configuration
+  attr_accessor :advanced_search
+end
+
 describe AdvancedSearchParamsMapping do
   let(:controller) { AdvancedSearchParamsMappingController.new }
   before do
-    allow(controller).to receive(:blacklight_config).and_return(OpenStruct.new(advanced_search: { url_key: "advanced" } ))
+    blacklight_config = instance_double(Blacklight::Configuration)
+    allow(blacklight_config).to receive(:advanced_search).and_return(url_key: "advanced")
+    allow(controller).to receive(:blacklight_config).and_return(blacklight_config)
   end
   it 'should not touch params when not doing an advanced search' do
     params = { search_field: 'something-else', title: "title param" }

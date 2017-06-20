@@ -77,7 +77,7 @@ describe RequestLinkHelper do
         )
       end
       let(:presenter) do
-        OpenStruct.new(document_heading: 'Document Title')
+        instance_double(Blacklight::DocumentPresenter, document_heading: 'Document Title')
       end
       before do
         expect(helper).to receive(:presenter).with(ssrc_document).and_return(presenter)

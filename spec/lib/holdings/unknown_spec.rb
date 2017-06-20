@@ -3,8 +3,8 @@ require "spec_helper"
 describe Holdings::Status::Unknown do
   describe "unknown libraries" do
     let(:status) {
-      Holdings::Status::Unknown.new(
-        OpenStruct.new(library: "LANE-MED")
+      described_class.new(
+        instance_double(Holdings::Callnumber, library: "LANE-MED")
       )
     }
     it "should identify specific libraries as unknown" do
@@ -14,7 +14,9 @@ describe Holdings::Status::Unknown do
   describe "unknown locations" do
     it "should identify specific locations as unknown" do
       Constants::UNKNOWN_LOCS.each do |location|
-        expect(Holdings::Status::Unknown.new(OpenStruct.new(home_location: location))).to be_unknown
+        expect(described_class.new(
+          instance_double(Holdings::Callnumber, home_location: location, library: '')
+        )).to be_unknown
       end
     end
   end
