@@ -3,7 +3,7 @@
   <% linked_related_works.values.each do |related_work| %>
     <dd>
       <%= related_work[:pre_text] %>
-      <%= link_to(related_work[:link], catalog_index_path(q: related_work[:search], search_field: 'search_title')) %>
+      <%= link_to(related_work[:link], search_catalog_path(q: related_work[:search], search_field: 'search_title')) %>
       <%= related_work[:post_text] %>
     </dd>
   <% end %>

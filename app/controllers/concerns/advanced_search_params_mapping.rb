@@ -1,8 +1,8 @@
 module AdvancedSearchParamsMapping
   extend ActiveSupport::Concern
   included do
-    if self.respond_to?(:before_filter)
-      before_filter :map_advanced_search_params, only: :index
+    if self.respond_to?(:before_action)
+      before_action :map_advanced_search_params, only: :index
     end
   end
 

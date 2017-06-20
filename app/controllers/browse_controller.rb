@@ -7,7 +7,7 @@ class BrowseController < ApplicationController
 
   def index
     if params[:start].present?
-      @response, @original_doc = get_solr_response_for_doc_id(params[:start])
+      @response, @original_doc = fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do
@@ -29,7 +29,7 @@ class BrowseController < ApplicationController
 
   def nearby
     if params[:start].present?
-      @response, @original_doc = get_solr_response_for_doc_id(params[:start])
+      @response, @original_doc = fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do

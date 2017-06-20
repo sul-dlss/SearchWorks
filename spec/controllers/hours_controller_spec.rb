@@ -8,7 +8,7 @@ describe HoursController do
   end
   describe "GET library" do
     it "should return correct response" do
-      get :show, format: "json", id: "GREEN"
+      get :show, params: { format: "json", id: "GREEN" }
       expect(response.status).to eq 200
     end
   end

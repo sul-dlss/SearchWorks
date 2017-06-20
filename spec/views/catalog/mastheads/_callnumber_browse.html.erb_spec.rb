@@ -10,14 +10,14 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
       ]
     )
   }
-  let(:presenter) { OpenStruct.new(document_heading: "Title") }
+  let(:presenter) { OpenStruct.new(heading: "Title") }
   before do
     assign(:original_doc, original_doc)
-    expect(view).to receive(:presenter).with(original_doc).and_return(presenter)
+    expect(view).to receive(:show_presenter).with(original_doc).and_return(presenter)
   end
   it "should link to the document" do
     render
-    expect(rendered).to have_css('a', 'doc-id')
+    expect(rendered).to have_css('a', text: 'Title')
   end
   describe "without barcode" do
     it "should select the first callnumber in the heading when no barcode is present" do

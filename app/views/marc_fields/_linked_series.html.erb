@@ -2,7 +2,7 @@
 <% linked_series.values.each do |series| %>
   <dd>
     <% if series[:link] %>
-      <%= link_to(series[:link].strip, catalog_index_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
+      <%= link_to(series[:link].strip, search_catalog_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
     <% end %>
     <%= series[:extra_text] %>
   </dd>

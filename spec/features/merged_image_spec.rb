@@ -11,7 +11,7 @@ feature "Merged Images" do
     expect(page).to have_css("ul.document-metadata") # metadata items
   end
   scenario "record view" do
-    visit catalog_path('37')
+    visit solr_document_path('37')
 
     expect(page).to have_css("h1", text: "Merged Image1") # Title
     within(".panel-in-collection") do # In Collection Access Panel

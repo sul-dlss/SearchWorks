@@ -208,9 +208,9 @@ module XmlApiHelper
     display_type = document[blacklight_config.index.display_type_field]
     if display_type
       if display_type.respond_to?(:join)
-        display_type.map{|dt| dt.gsub("-"," ").parameterize("_") }.join(" ")
+        display_type.map{|dt| dt.gsub("-"," ").parameterize(separator: "_") }.join(" ")
       else
-        "#{display_type.gsub("-"," ")}".parameterize("_").to_s
+        "#{display_type.gsub("-"," ")}".parameterize(separator: "_").to_s
       end
     end
   end

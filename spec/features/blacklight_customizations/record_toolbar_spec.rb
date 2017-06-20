@@ -29,7 +29,7 @@ feature "Record Toolbar" do
   end
 
   scenario "should have back to search and pagination", js: true do
-    visit catalog_index_path f: {format: ["Book"]}
+    visit search_catalog_path f: {format: ["Book"]}
     page.find("a", text: "An object").click
 
     within "#content" do

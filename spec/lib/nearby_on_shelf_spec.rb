@@ -625,7 +625,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
 
     # SolrHelper (calls to Solr) stubs
     before do
-      # before(:each) or spec can't resolve catalog_path
+      # before(:each) or spec can't resolve solr_document_path
       allow(nearby_obj).to receive(:get_next_terms).at_least(3).times { |start_val, field, how_many|
         result = []
         case field

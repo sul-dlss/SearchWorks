@@ -47,7 +47,7 @@ feature "Skip-to Navigation" do
   end
 
   scenario "should have skip-to navigation links to search field, main container and records in record view page" do
-    visit catalog_path 20
+    visit solr_document_path 20
 
     within "#skip-link" do
       expect(page).to have_css("a[href='#search_field']", text: "Skip to search")
@@ -56,7 +56,7 @@ feature "Skip-to Navigation" do
   end
 
   scenario "should have skip-to navigation links to form in advanced search page" do
-    visit advanced_search_path
+    visit blacklight_advanced_search_engine.advanced_search_path
 
     within "#skip-link" do
       expect(page).to have_css("a[href='#advanced-search-form']", text: "Skip to advanced search form")

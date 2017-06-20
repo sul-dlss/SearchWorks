@@ -23,7 +23,7 @@ feature "Merged Image Collections" do
   end
 
   scenario "record view should display metadata and filmstrip" do
-    visit catalog_path('34')
+    visit solr_document_path('34')
 
     expect(page).to have_css('h1', text: 'Merged Image Collection1')
 

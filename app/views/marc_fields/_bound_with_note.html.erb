@@ -2,7 +2,7 @@
   <% if value[:id] %>
     <%= value[:value].gsub(
           value[:id],
-          link_to(value[:id], catalog_path(value[:id]))
+          link_to(value[:id], solr_document_path(value[:id]))
         ).html_safe %>
   <% else %>
     <%= value[:value] %>

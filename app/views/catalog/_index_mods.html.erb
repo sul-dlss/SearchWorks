@@ -10,7 +10,7 @@
     <dt>Collection</dt>
     <dd>
       <% document.index_parent_collections.each do |collection| %>
-        <%= link_to(presenter(collection).document_heading, catalog_path(collection))%>
+        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
       <% end %>
     </dd>
   <% end %>
@@ -19,7 +19,7 @@
     <dt>Appears in</dt>
     <dd>
       <% document.index_parent_sets.each do |set| %>
-        <%= link_to(presenter(set).document_heading, catalog_path(set))%>
+        <%= link_to(show_presenter(set).heading, solr_document_path(set))%>
       <% end %>
     </dd>
   <% end %>

@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "preview/_show_mods.html.erb" do
   include ModsFixtures
-  let(:presenter) { OpenStruct.new(document_heading: "Object Title") }
+  let(:presenter) { OpenStruct.new(heading: "Object Title") }
   let(:document) { SolrDocument.new(
     id: '123',
     collection: ['12345'],
@@ -16,7 +16,7 @@ describe "preview/_show_mods.html.erb" do
   ) }
 
   before do
-    expect(view).to receive(:presenter).and_return(presenter)
+    expect(view).to receive(:show_presenter).and_return(presenter)
     assign(:document, document)
     render
   end

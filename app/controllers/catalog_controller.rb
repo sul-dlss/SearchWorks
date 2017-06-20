@@ -2,9 +2,13 @@
 #
 class CatalogController < ApplicationController
 
+  include Blacklight::Catalog
+
   include Blacklight::Marc::Catalog
 
-  include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
+  include BlacklightAdvancedSearch::Controller
 
   include AdvancedSearchParamsMapping
 
@@ -16,13 +20,11 @@ class CatalogController < ApplicationController
 
   include ReplaceSpecialQuotes
 
-  include CJKQuery
-
   include Thumbnail
 
   include LocationFacet
 
-  before_filter :set_search_query_modifier, only: :index
+  before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
@@ -96,7 +98,7 @@ class CatalogController < ApplicationController
     end
     config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
     config.add_facet_field "format_physical_ssim", :label => "Media type", limit: 20
-    config.add_facet_field "pub_year_tisim", :label => "Date", :range => {
+    config.add_facet_field "pub_year_tisim", :label => "Date", :partial => "blacklight_range_limit/range_limit_panel", :range => {
       :input_label_range_begin => "from year",
       :input_label_range_end => "to year"
     }
@@ -224,6 +226,7 @@ class CatalogController < ApplicationController
     config.add_search_field('call_number') do |field|
       field.label = "Call number"
       field.include_in_advanced_search = false
+      field.advanced_parse = false
       field.solr_parameters = { :defType => "lucene"}
       field.solr_local_parameters = {
         :df => 'callnum_search'
@@ -290,6 +293,7 @@ class CatalogController < ApplicationController
     # Configure facet fields for BL advanced search
     config.advanced_search = {
       :query_parser => 'edismax',
+      :url_key => 'advanced',
       :form_solr_parameters => {
         "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
          # return all facet values
@@ -342,7 +346,7 @@ class CatalogController < ApplicationController
       send_emails_to_all_recipients
 
       respond_to do |format|
-        format.html { redirect_to catalog_path(params['id']) }
+        format.html { redirect_to solr_document_path(params['id']) }
         format.js { render 'email_success' }
       end and return
     end
@@ -354,10 +358,15 @@ class CatalogController < ApplicationController
   end
 
   def backend_lookup
-    (@response, @document_list) = search_results(params, search_params_logic)
+    (@response, @document_list) = search_results(params)
     respond_to do |format|
-      format.json { render json: render_search_results_as_json }
-      format.html { render 'public/500', layout: false, status: 400 }
+      format.json do
+        @presenter = Blacklight::JsonPresenter.new(@response,
+                                                   @document_list,
+                                                   facets_from_request,
+                                                   blacklight_config)
+      end
+      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 
@@ -368,7 +377,7 @@ class CatalogController < ApplicationController
         live = params[:live].nil? || params[:live] == 'true'
         render json: render_document_with_availability_as_json(document, live)
       end
-      format.html { render 'public/500', layout: false, status: 400 }
+      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 

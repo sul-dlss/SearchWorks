@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "Online Access Panel" do
   scenario "for databases" do
-    visit catalog_path('24')
+    visit solr_document_path('24')
 
     within(".panel-online") do
       within(".panel-heading") do

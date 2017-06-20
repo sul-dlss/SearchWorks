@@ -28,15 +28,15 @@ module CatalogHelper
   end
 
   def new_documents_feed_path
-    catalog_index_path(
-      params.except(:controller, :action, :page).merge(format: 'atom', sort: 'new-to-libs')
+    search_catalog_path(
+      params.except(:controller, :action, :page, :format, :sort).to_hash.merge(sort: 'new-to-libs', format: 'atom')
     )
   end
 
   def link_to_bookplate_search(bookplate, link_opts = {})
     link_to(
       bookplate.text,
-      catalog_index_path(bookplate.params_for_search.merge(view: 'gallery', sort: 'new-to-libs')),
+      search_catalog_path(bookplate.params_for_search.merge(view: 'gallery', sort: 'new-to-libs')),
       link_opts
     )
   end

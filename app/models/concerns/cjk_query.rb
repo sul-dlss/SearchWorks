@@ -4,55 +4,16 @@
 module CJKQuery
   extend ActiveSupport::Concern
 
-  included do
-    if self.respond_to?(:before_filter)
-      before_filter :add_cjk_params_logic, only: :index
-    end
-  end
-
-  private
-
-  def add_cjk_params_logic
-    if self.class.respond_to?(:search_params_logic)
-      self.class.search_params_logic += [:modify_params_for_cjk, :modify_params_for_cjk_advanced]
-    end
-  end
-
-  def modify_params_for_cjk_advanced(solr_params, user_params)
-    if user_params.present? && !(solr_params[:q] =~ /_cjk/)
-      modifiable_params_keys.each do |param|
-        if user_params[param]
-          if cjk_unigrams_size(user_params[param]) > 0
-            cjk_local_params = cjk_mm_qs_params(user_params[param])
-            if param == 'search'
-              solr_params[:q].gsub!("pf2=$p2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
-            else
-              stripped_param = modify_field_key_for_cjk(param)
-              if cjk_local_params.present?
-                solr_params[:q].gsub!(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{user_params[param]}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + user_params[param])
-              end
-              solr_params[:q].gsub!(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
-            end
-          end
-        end
-      end
-    end
-  end
-
-  def modify_field_key_for_cjk(field_key)
-    field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')
-  end
-
-  def modify_params_for_cjk(solr_params,user_params)
-    if user_params && user_params[:q].present?
-      q_str = user_params[:q]
+  def modify_params_for_cjk(solr_params)
+    if blacklight_params && blacklight_params[:q].present?
+      q_str = blacklight_params[:q]
       number_of_unigrams = cjk_unigrams_size(q_str)
       if number_of_unigrams > 2
         solr_params.merge!(cjk_mm_qs_params(q_str))
       end
       # adjust q local params to use cjk flavored fields for qf, pf
       if number_of_unigrams > 0
-        case user_params[:search_field]
+        case blacklight_params[:search_field]
           when 'search', nil
             #solr_params[:q] = "{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"
             solr_params[:q] = cjk_qf_pf_params(nil, q_str)
@@ -68,6 +29,33 @@ module CJKQuery
         end
       end
     end
+  end
+
+  def modify_params_for_cjk_advanced(solr_params)
+    if blacklight_params.present? && !(solr_params[:q] =~ /_cjk/)
+      modifiable_params_keys.each do |param|
+        if blacklight_params[param]
+          if cjk_unigrams_size(blacklight_params[param]) > 0
+            cjk_local_params = cjk_mm_qs_params(blacklight_params[param])
+            if param == 'search'
+              solr_params[:q].gsub!("pf2=$p2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
+            else
+              stripped_param = modify_field_key_for_cjk(param)
+              if cjk_local_params.present?
+                solr_params[:q].gsub!(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{blacklight_params[param]}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + blacklight_params[param])
+              end
+              solr_params[:q].gsub!(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
+            end
+          end
+        end
+      end
+    end
+  end
+
+  private
+
+  def modify_field_key_for_cjk(field_key)
+    field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')
   end
 
   def cjk_qf_pf_params(field, query)

@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "Collection details access panel" do
   scenario "for collection objects" do
-    visit catalog_path('29')
+    visit solr_document_path('29')
 
 
     within('.panel-collection-details') do

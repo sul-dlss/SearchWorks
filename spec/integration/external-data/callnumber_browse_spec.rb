@@ -3,11 +3,11 @@ require "spec_helper"
 
 describe "Callnumber browse", feature: true, :"data-integration" => true do
   it "should have an embedded panel on the record page" do
-    visit catalog_path('9696118')
+    visit solr_document_path('9696118')
     within('.record-browse-nearby') do
-      expect(page).to have_css('a', text: 'PS3552 .E74 B4 2012')
-      expect(page).to have_css('a', text: 'Z239 .G75 B477 2012')
-      click_link('Z239 .G75 B477 2012')
+      expect(page).to have_css('button', text: 'PS3552 .E74 B4 2012')
+      expect(page).to have_css('button', text: 'Z239 .G75 B477 2012')
+      click_button('Z239 .G75 B477 2012')
     end
     expect(page).to have_css("h1", text: "Browse related items")
     expect(page).to have_css('p', text: /Starting at call number:.*Z239 .G75 B477 2012/m)

@@ -1,7 +1,7 @@
 module AccessPanelHelper
 
   def link_to_course_reserve_course(course)
-    link_to("#{course.id} -- #{course.name}", catalog_index_path({f: {course: [course.id], instructor: [course.instructor]}}))
+    link_to("#{course.id} -- #{course.name}", search_catalog_path({f: {course: [course.id], instructor: [course.instructor]}}))
   end
 
   def link_to_library_header(library)

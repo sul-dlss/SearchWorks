@@ -10,7 +10,7 @@
 
 <div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], ".#{preview_container}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
   <div class="item-thumb">
-    <div class="cover-image-wrapper" data-target="<%= catalog_path document %>" data-context-href="<%= context_href %>">
+    <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
       <%= render_thumbnail_tag(document, {}, options) %>
     </div>
   </div>

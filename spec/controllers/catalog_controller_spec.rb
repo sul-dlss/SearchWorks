@@ -16,9 +16,6 @@ describe CatalogController do
   it "should include the ReplaceSpecialQuotes concern" do
     expect(subject).to be_kind_of(ReplaceSpecialQuotes)
   end
-  it "should include CJKQuery" do
-    expect(subject).to be_kind_of(CJKQuery)
-  end
   describe "#index" do
     it "should set the search modifier" do
       get :index
@@ -26,14 +23,14 @@ describe CatalogController do
     end
 
     it 'redirects to the home page with a flash message when paging too deep' do
-      get :index, page: 251
+      get :index, params: { page: 251 }
       expect(response).to redirect_to(root_path)
       expect(flash[:error]).to eq 'You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page 250.'
     end
   end
   describe '#email' do
     it 'should set the provided subject' do
-      expect{post :email, to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}.to change{
+      expect{post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'} }.to change{
         ActionMailer::Base.deliveries.count
       }.by(1)
       expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
@@ -42,25 +39,25 @@ describe CatalogController do
       email = double('email')
       expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
       expect(email).to receive(:deliver_now)
-      post :email, to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'
+      post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
     end
     it 'should send a full email when requested' do
       email = double('email')
       expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
       expect(email).to receive(:deliver_now)
-      post :email, to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1'
+      post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1' }
     end
 
     it 'should be able to send emails to multiple addresses' do
       expect do
-        post :email, to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1'
+        post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1' }
       end.to change { ActionMailer::Base.deliveries.count }.by(3)
     end
 
     describe 'validations' do
       it 'should not send emails when the email_address field has been filled out' do
         expect do
-          post :email, email_address: 'something', to: 'email@example.com', type: 'full'
+          post :email, params: { email_address: 'something', to: 'email@example.com', type: 'full' }
         end.to_not change { ActionMailer::Base.deliveries.count }
 
         expect(flash[:error]).to include('You have filled in a field that makes you appear as a spammer.')
@@ -69,7 +66,7 @@ describe CatalogController do
 
       it 'should not allow messages that have links in them' do
         expect do
-          post :email, to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full'
+          post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
         end.to_not change { ActionMailer::Base.deliveries.count }
         expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
         expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
@@ -77,7 +74,7 @@ describe CatalogController do
 
       it 'should prevent incorrect email types from being sent' do
         expect do
-          post :email, to: 'email@example.com', type: 'not-a-type'
+          post :email, params: { to: 'email@example.com', type: 'not-a-type' }
         end.to_not change { ActionMailer::Base.deliveries.count }
         expect(flash[:error]).to eq 'Invalid email type provided'
       end
@@ -86,8 +83,10 @@ describe CatalogController do
         expect do
           post(
             :email,
-            to: 'email1@example.com, example.com',
-            type: 'full'
+            params: { 
+              to: 'email1@example.com, example.com',
+              type: 'full'
+            }
           )
         end.to_not change { ActionMailer::Base.deliveries.count }
 
@@ -98,13 +97,15 @@ describe CatalogController do
         expect do
           post(
             :email,
-            to: 'email1@example.com,
-                 email2@example.com,
-                 email3@example.com,
-                 email4@example.com,
-                 email5@example.com,
-                 email6@example.com',
-            type: 'full'
+            params: { 
+              to: 'email1@example.com,
+                   email2@example.com,
+                   email3@example.com,
+                   email4@example.com,
+                   email5@example.com,
+                   email6@example.com',
+              type: 'full'
+            }
           )
         end.to_not change { ActionMailer::Base.deliveries.count }
 
@@ -117,8 +118,8 @@ describe CatalogController do
       it "should route /view/:id properly" do
         expect({get: '/view/1234'}).to route_to(controller: 'catalog', action: 'show', id: '1234')
       end
-      it "should route catalog_path to /view" do
-        expect(catalog_path('1234')).to eq '/view/1234'
+      it "should route solr_document_path to /view" do
+        expect(solr_document_path('1234')).to eq '/view/1234'
       end
       it "should route solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'
@@ -146,7 +147,7 @@ describe CatalogController do
       end
 
       it 'should return the appropriate json' do
-        get :availability, id: '10', format: 'json'
+        get :availability, params: { id: '10', format: 'json' }
         body = JSON.parse(response.body)
         expect(body['title']).to eq 'Car : a drama of the American workplace'
         expect(body['format']).to eq(['Book'])
@@ -160,14 +161,14 @@ describe CatalogController do
       context 'when the live flag is not passed' do
         it 'live lookups should occur' do
           expect(LiveLookup).to receive(:new).with('10').and_call_original
-          get :availability, id: '10', format: 'json'
+          get :availability, params: { id: '10', format: 'json' }
         end
       end
 
       context 'when the live flag is passed as false' do
         it 'live lookups should not occur' do
           expect(LiveLookup).not_to receive(:new).with('10').and_call_original
-          get :availability, id: '10', format: 'json', live: 'false'
+          get :availability, params: { id: '10', format: 'json', live: 'false' }
         end
       end
     end

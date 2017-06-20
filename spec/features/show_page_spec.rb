@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "Search Results Page" do
   before do
-    visit catalog_path 11
+    visit solr_document_path 11
   end
   scenario "should have correct page title" do
     expect(page).to have_title("Amet ad & adipisicing ex mollit pariatur minim dolore.")

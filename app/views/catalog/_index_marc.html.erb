@@ -6,7 +6,7 @@
       <dt>Database topics</dt>
       <dd>
         <%= document[:db_az_subject].map do |subject| %>
-          <% link_to(subject, catalog_index_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
+          <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
         <% end.join('; ').html_safe %>
       </dd>
     <% end %>
@@ -21,7 +21,7 @@
     <dt>Collection</dt>
     <dd>
       <% document.index_parent_collections.each do |collection| %>
-        <%= link_to(presenter(collection).document_heading, catalog_path(collection))%>
+        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
       <% end %>
     </dd>
   <% end %>

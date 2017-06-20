@@ -17,7 +17,7 @@
 
             <% unless document.image_urls.blank? %>
             <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
-            <a href="<%= catalog_path(document[:id]) %>">
+            <a href="<%= solr_document_path(document[:id]) %>">
             <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
             </a>
             <% if document.image_urls.length > 1 %>

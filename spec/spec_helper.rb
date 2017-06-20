@@ -12,7 +12,7 @@ Capybara.register_driver :poltergeist do |app|
 end
 Capybara.javascript_driver = :poltergeist
 
-Capybara.default_wait_time = 10
+Capybara.default_max_wait_time = 10
 
 if ENV["COVERAGE"] or ENV["CI"]
   require 'simplecov'
@@ -86,6 +86,7 @@ RSpec.configure do |config|
 end
 
 def total_results
+  expect(page).to have_selector 'h2', text: number_pattern
   page.find("h2", text: number_pattern).text.gsub(/\D+/, '').to_i
 end
 

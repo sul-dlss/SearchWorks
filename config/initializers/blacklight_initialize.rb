@@ -1,1 +1,1 @@
-Blacklight.secret_key = Settings.BLACKLIGHT_SECRET_KEY
+# Blacklight.secret_key = Settings.BLACKLIGHT_SECRET_KEY

@@ -1,5 +1,5 @@
 class AvailabilityController < ApplicationController
-  before_filter :redirect_bots, :redirect_no_ids
+  before_action :redirect_bots, :redirect_no_ids
   def index
     render json: LiveLookup.new(params[:ids]).to_json, layout: false
   end
@@ -7,7 +7,7 @@ class AvailabilityController < ApplicationController
 
   def redirect_bots
     if request.env['HTTP_USER_AGENT'] =~ /bot|spider|crawl|teoma/
-      render status: :forbidden, text: "No bots allowed"
+      render status: :forbidden, plain: "No bots allowed"
     end
   end
   def redirect_no_ids

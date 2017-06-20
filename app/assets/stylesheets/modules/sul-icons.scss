@@ -31,6 +31,8 @@ $sul-icon-prefix: 'sul-icon';
   @extend .#{$sul-icon-prefix}-1-5x;
   @extend .#{$sul-icon-prefix}-va-middle;
   color: $black;
+  display: table-cell;
+  width: 30px;
 }
 
 .facet-values .#{$sul-icon-prefix} + .facet-label {

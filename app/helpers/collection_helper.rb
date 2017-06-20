@@ -1,10 +1,10 @@
 module CollectionHelper
   def link_to_collection_members(link_text, document, options={})
-    link_to(link_text, catalog_index_path(f: { collection: [document[:id]] }))
+    link_to(link_text, search_catalog_path(f: { collection: [document[:id]] }))
   end
 
   def collection_members_path(document, options={})
-    catalog_index_path(f: { collection: [document[:id]] })
+    search_catalog_path(f: { collection: [document[:id]] })
   end
 
   def collection_members_enumeration(document)
@@ -34,7 +34,7 @@ module CollectionHelper
       collection = @document_list.first.index_parent_collections.find do |coll|
         coll[:id] == collection_id
       end
-      return presenter(collection).document_heading if collection.present?
+      return show_presenter(collection).heading if collection.present?
     end
     collection_id
   end
@@ -42,7 +42,7 @@ module CollectionHelper
   def add_purl_embed_header(document)
     content_for(:head) do
       ['json', 'xml'].map do |format|
-        "<link rel='alternate' type='application/#{format}+oembed' title='#{presenter(@document).document_heading}' href='#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{@document.druid}&format=#{format}' />"
+        "<link rel='alternate' type='application/#{format}+oembed' title='#{show_presenter(@document).heading}' href='#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{@document.druid}&format=#{format}' />"
       end.join.html_safe
     end
   end

@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Searching within collections" do
   it "should return the zero results page when no items are present" do
-    visit catalog_index_path( f: { collection: ['29'] } )
+    visit search_catalog_path( f: { collection: ['29'] } )
 
     fill_in 'q', with: 'abcde'
     click_button 'search'

@@ -15,7 +15,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
         expect(page).to have_css('a.view-type-list i.active-icon')
       end
 
-      visit catalog_index_path(q: '', view: 'gallery', search_field: 'search')
+      visit search_catalog_path(q: '', view: 'gallery', search_field: 'search')
 
       within '#sortAndPerPage' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
