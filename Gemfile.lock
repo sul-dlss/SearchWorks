@@ -119,7 +119,6 @@ GEM
       xpath (~> 2.0)
     childprocess (0.7.0)
       ffi (~> 1.0, >= 1.0.11)
-    chronic (0.10.2)
     cliver (0.3.2)
     coderay (1.1.1)
     coffee-rails (4.2.2)
@@ -425,8 +424,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    whenever (0.9.7)
-      chronic (>= 0.6.3)
     xpath (2.1.0)
       nokogiri (~> 1.3)
     yell (2.0.7)
@@ -493,7 +490,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 2.7.2)
   web-console (>= 3.3.0)
-  whenever
 
 BUNDLED WITH
-   1.14.6
+   1.15.1

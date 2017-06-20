@@ -6,8 +6,6 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 set :deploy_to, '/opt/app/blacklight/SearchWorks'
 
-set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
-
 # Default value for :scm is :git
 # set :scm, :git
 
