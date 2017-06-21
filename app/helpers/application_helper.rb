@@ -2,7 +2,7 @@ module ApplicationHelper
   # This is a path helper that routes the main search
   # form based on the current search context.
   def searchworks_search_action_path(opts = {})
-    return article_home_path(opts) if article_search?
+    return article_index_path(opts) if article_search?
     search_catalog_path(opts)
   end
 
