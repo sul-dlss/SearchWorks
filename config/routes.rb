@@ -67,4 +67,7 @@ Rails.application.routes.draw do
   resources :recent_selections, only: :index
 
   resources :course_reserves, only: :index, path: "reserves"
+
+  resources :article, only: :new, defaults: { format: :html }
+  get 'article/home' => 'article#new' # alias for article search home page
 end
