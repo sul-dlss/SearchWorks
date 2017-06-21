@@ -16,7 +16,7 @@ feature 'Article Searching' do
         click_link 'articles'
       end
 
-      expect(page).to have_current_path(article_home_path)
+      expect(page).to have_current_path(article_home_path) # the landing page for Article Search
 
       within '.search-dropdown' do
         click_link 'search articles'
@@ -30,6 +30,7 @@ feature 'Article Searching' do
   end
 
   scenario 'when searching w/i the article context we stay in the articles controller' do
+    skip 'need to stub out Eds::SearchService'
     visit article_home_path
 
     within '.search-form' do
@@ -38,6 +39,6 @@ feature 'Article Searching' do
       click_button 'Search'
     end
 
-    expect(current_url).to match(%r{/article/home\?.*&q=Kittens})
+    expect(current_url).to match(%r{/article\?.*&q=Kittens})
   end
 end
