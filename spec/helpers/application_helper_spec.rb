@@ -6,7 +6,7 @@ describe ApplicationHelper do
     context 'when in an article search' do
       before { expect(helper).to receive_messages(article_search?: true) }
 
-      it { expect(helper.searchworks_search_action_path).to eq article_home_path }
+      it { expect(helper.searchworks_search_action_path).to eq article_index_path }
     end
 
     context 'everywhere else' do
