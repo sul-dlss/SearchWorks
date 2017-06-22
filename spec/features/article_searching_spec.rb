@@ -28,4 +28,16 @@ feature 'Article Searching' do
       end
     end
   end
+
+  scenario 'when searching w/i the article context we stay in the articles controller' do
+    visit article_home_path
+
+    within '.search-form' do
+      fill_in 'q', with: 'Kittens'
+
+      click_button 'Search'
+    end
+
+    expect(current_url).to match(%r{/article/home\?.*&q=Kittens})
+  end
 end
