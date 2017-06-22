@@ -69,6 +69,14 @@
     color: $white;
   }
 
+  .search-dropdown {
+    display: inline-block;
+
+    .dropdown-menu {
+      left: auto;
+    }
+  }
+
   .search-target{
     font-family: 'Crimson Text', serif;
     font-size: 1.6em;
