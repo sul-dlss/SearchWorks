@@ -1,5 +1,12 @@
 en:
   searchworks:
+    search_dropdown:
+      articles:
+        label: articles
+        description_html: articles <span class="help-block">journal articles, e-books, and other licensed e-resources</span>
+      catalog:
+        label: catalog
+        description_html: catalog <span class="help-block">books &amp; media in the Stanford Libraries'collections</span>
     marc_fields:
       imprint:
         label: Imprint
