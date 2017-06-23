@@ -1,3 +1,5 @@
 require 'ebsco/eds'
 
-fail unless Settings.EDS_USER && Settings.EDS_PASS && Settings.EDS_PROFILE
+raise ArgumentError, 'EDS API requires user, password, and profile settings' if Settings.EDS_USER.blank? ||
+                                                                                Settings.EDS_PASS.blank? ||
+                                                                                Settings.EDS_PROFILE.blank?
