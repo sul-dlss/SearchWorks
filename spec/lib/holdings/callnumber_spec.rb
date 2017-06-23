@@ -150,16 +150,28 @@ describe Holdings::Callnumber do
   end
 
   describe 'stackmapable?' do
-    it 'should return true when a library has stackmap feature enabled' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')).to be_stackmapable
+    # 0 barcode -|- 1 library -|- 2 home location -|- 3 current location
+    it 'when a library is stackmapable and the home location is not blacklisted' do
+      expect(described_class.new('barcode -|- GREEN -|- STACKS')).to be_stackmapable
+      expect(described_class.new('barcode -|- ART -|- STACKS')).to be_stackmapable
     end
 
-    it 'should return false when a location does not match given criteria' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- GREEN-RESV -|-')).not_to be_stackmapable
+    it 'when a library is not stackmapable' do
+      expect(described_class.new('barcode -|- UNKNOWN -|- STACKS')).not_to be_stackmapable
     end
 
-    it 'should return false when a library does not have stackmap feature enabled' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- ART-RESV -|-')).not_to be_stackmapable
+    it 'when the library is stackmapable but the home location is globally blacklisted' do
+      expect(described_class.new('barcode -|- GREEN -|- GREEN-RESV')).not_to be_stackmapable
+    end
+
+    it 'when the library is stackmapable but the home location is locally blacklisted' do
+      expect(described_class.new('barcode -|- ART -|- MEDIA')).not_to be_stackmapable
+    end
+
+    it 'when the library is stackmapable but the home location is locally blacklisted for a different library' do
+      expect(Constants::STACKMAP_BLACKLIST['GREEN']).to be_nil
+      expect(Constants::STACKMAP_BLACKLIST['ART']).to include 'MEDIA'
+      expect(described_class.new('barcode -|- GREEN -|- MEDIA')).to be_stackmapable
     end
   end
 
