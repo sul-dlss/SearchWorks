@@ -7,10 +7,10 @@ class ArticleController < ApplicationController
   before_action :eds_init, only: %i[index show]
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
-    session['guest'] = false # TODO: hardcoded to bypass auth
+    session['guest'] = true # TODO: hardcoded to non-authenticated
     session['eds_session_token'] =
       EBSCO::EDS::Session.new(
-        guest: false, # TODO: hardcoded to bypass auth
+        guest: true, # TODO: hardcoded to non-authenticated
         caller: 'new-session',
         user: Settings.EDS_USER,
         pass: Settings.EDS_PASS,
