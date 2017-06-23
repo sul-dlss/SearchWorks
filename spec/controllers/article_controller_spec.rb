@@ -13,7 +13,9 @@ RSpec.describe ArticleController do
 
   context 'Article Search API (via EDS)' do
     before do
-      expect(controller).to receive(:eds_init).and_return(nil)
+      expect(EBSCO::EDS::Session).to receive(:new).and_return(
+        instance_double(EBSCO::EDS::Session, session_token: double)
+      )
       @search_service = instance_double(Eds::SearchService)
       expect(Eds::SearchService).to receive(:new).and_return(@search_service)
     end
