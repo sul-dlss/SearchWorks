@@ -1,3 +1,24 @@
-<p class="navbar-text search-target">
-  catalog
-</p>
+<div class="search-dropdown">
+  <a href="#" class="dropdown-toggle navbar-text search-target" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">search</span>
+    <% if article_search?  %>
+      <%= t('searchworks.search_dropdown.articles.label') %>
+    <% else %>
+      <%= t('searchworks.search_dropdown.catalog.label') %>
+    <% end %>
+
+    <span class="caret"></span>
+  </a>
+   <ul class="dropdown-menu" role="menu">
+     <li class="<%= 'active' unless article_search? %>">
+       <%= link_to root_path do %>
+         <%= t('searchworks.search_dropdown.catalog.description_html') %>
+       <% end %>
+     </li>
+     <li class="<%= 'active' if article_search? %>">
+      <%= link_to article_home_path do %>
+        <%= t('searchworks.search_dropdown.articles.description_html') %>
+      <% end %>
+    </li>
+  </ul>
+</div>

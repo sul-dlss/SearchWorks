@@ -44,7 +44,7 @@ feature "Home Page" do
   end
   scenario "Logo and catalog images should display" do
     expect(page).to have_css("a.navbar-brand")
-    expect(page).to have_css("p.navbar-text.search-target", text: "catalog")
+    expect(page).to have_css(".navbar-text.search-target", text: "catalog")
   end
   scenario "there should be no more link on any facets" do
     expect(page).to_not have_css('a', text: /more/)
