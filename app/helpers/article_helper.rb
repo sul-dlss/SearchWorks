@@ -15,6 +15,6 @@ module ArticleHelper
     doi = options[:value].try(:first)
     return if doi.blank?
     url = 'https://doi.org/' + doi.to_s
-    link_to(doi, url, target: '_blank')
+    link_to(doi, url)
   end
 end
