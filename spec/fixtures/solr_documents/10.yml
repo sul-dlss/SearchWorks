@@ -14,15 +14,15 @@
 :display_type:
   - sirsi
 :item_display:
-  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-"
-  - "456 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- DEF -|-"
-  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- GHI -|-"
-  - "321 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- CBA -|-"
-  - "654 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- FED -|-"
-  - "876 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- IHG -|-"
-  - "678 -|- EARTH-SCI -|- STACKS -|- -|- -|- -|- -|- -|- JKL -|-"
-  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- MNO -|-"
-  - "543 -|- BIOLOGY -|- STACKS -|- -|- -|- -|- -|- -|- PQR -|-"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|- ABC"
+  - "456 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- DEF -|- DEF"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- GHI -|- GHI"
+  - "321 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- CBA -|- CBA"
+  - "654 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- FED -|- FED"
+  - "876 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- IHG -|- IHG"
+  - "678 -|- EARTH-SCI -|- STACKS -|- -|- -|- -|- -|- -|- JKL -|- JKL"
+  - "123 -|- CHEMCHMENG -|- STACKS -|- -|- -|- -|- -|- -|- MNO -|- MNO"
+  - "543 -|- BIOLOGY -|- STACKS -|- -|- -|- -|- -|- -|- PQR -|- PQR"
 :mhld_display:
   - "CHEMCHMENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
   - "CHEMCHMENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
