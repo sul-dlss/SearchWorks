@@ -39,7 +39,7 @@
       <% if @response.empty? %>
         <div class='results-heading'>
           <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
-          <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
+          <%= t('blacklight.search.pagination_info.no_items_found', search_type: 'catalog').html_safe %>
         </div>
       <% else %>
         <div class='results-heading'>
@@ -55,7 +55,7 @@
     </div>
 
     <%- if @response.empty? %>
-      <%= render "zero_results" %>
+      <%= render "shared/zero_results" %>
     <%- elsif render_grouped_response? %>
       <%= render_grouped_document_index %>
     <%- else %>

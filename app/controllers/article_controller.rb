@@ -4,6 +4,8 @@
 class ArticleController < ApplicationController
   include Blacklight::Configurable
 
+  before_action :set_search_query_modifier, only: :index
+
   before_action :eds_init, only: %i[index show]
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
@@ -77,5 +79,9 @@ class ArticleController < ApplicationController
       'session_token' => session['eds_session_token']
     }
     Eds::SearchService.new(blacklight_config, search_state.to_h, eds_params)
+  end
+
+  def set_search_query_modifier
+    @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
 end
