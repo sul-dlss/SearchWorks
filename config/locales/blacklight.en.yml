@@ -35,7 +35,7 @@ en:
           one: '%{start_num} - %{end_num}'
           other: '%{start_num} - %{end_num}'
         single_item_found: ''
-        no_items_found: "<h2>No results found in catalog</h2>"
+        no_items_found: "<h2>No results found in %{search_type}</h2>"
       entry_pagination_info:
         other: '%{current} of %{total}'
       highlight:

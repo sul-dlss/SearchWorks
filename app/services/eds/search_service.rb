@@ -9,7 +9,7 @@ module Eds
       @blacklight_config = blacklight_config
       @user_params = user_params
       @repository = blacklight_config.repository_class.new(blacklight_config)
-      @eds_params = eds_params.merge('previous-next-index' => nil) # TODO: disable wonky prev/next logic
+      @eds_params = eds_params
     end
 
     attr_reader :blacklight_config # used by search_builder
