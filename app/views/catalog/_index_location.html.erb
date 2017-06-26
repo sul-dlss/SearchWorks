@@ -57,7 +57,7 @@
                 <% end %>
                 <span class="request-link">
                   <% if item.must_request? %>
-                    <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-info btn-xs') %>
+                    <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
                   <% end %>
                 </span>
               </td>
