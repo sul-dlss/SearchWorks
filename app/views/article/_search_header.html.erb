@@ -1,0 +1,8 @@
+<div id="sortAndPerPage" class="clearfix sul-toolbar">
+  <div class="container-fluid">
+    <%= render partial: "catalog/paginate_compact", object: @response %>
+    <div id="search-results-toolbar" class="search-widgets pull-right">
+      <%= render partial: 'shared/per_page_widget' %>
+    </div>
+  </div>
+</div>
