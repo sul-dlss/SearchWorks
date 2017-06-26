@@ -4,10 +4,10 @@ module Eds
     # Execute a search against EDS
     #
     def search(search_builder = {}, eds_params = {})
-      send_and_receive(blacklight_config.solr_path, search_builder, eds_params)
+      send_and_receive(search_builder, eds_params)
     end
 
-    def send_and_receive(path, search_builder = {}, eds_params = {})
+    def send_and_receive(search_builder = {}, eds_params = {})
       benchmark('EDS fetch', level: :info) do
 
         # results list passes a full searchbuilder, detailed record only passes params
@@ -16,17 +16,8 @@ module Eds
         bl_params = bl_params.update('hl' => 'on')
 
         eds = EBSCO::EDS::Session.new(eds_options(eds_params.update(caller: 'bl-search')))
-        if eds_params['previous-next-index']
-          # [1] NEXT-PREVIOUS
-          bl_params.update('previous-next-index' => eds_params['previous-next-index'])
-          results = eds.solr_retrieve_previous_next(bl_params)
-        elsif  bl_params && bl_params['q'] && bl_params['q']['id']
-          # [2] LIST OF IDS (e.g., bookmarks, email, sms, cite)
-          results = eds.solr_retrieve_list(list: bl_params['q']['id'])
-        else
-          # [3] REGULAR SEARCH
-          results = eds.search(bl_params).to_solr
-        end
+        # REGULAR SEARCH
+        results = eds.search(bl_params).to_solr
         blacklight_config.response_model.new(results, bl_params,
                                              document_model: blacklight_config.document_model,
                                              blacklight_config: blacklight_config)
