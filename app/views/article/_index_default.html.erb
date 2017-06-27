@@ -1,0 +1,19 @@
+<% doc_presenter = presenter(document) %>
+<ul class='document-metadata dl-horizontal dl-invert'>
+  <% if document['eds_authors'].present? %>
+    <li><%= doc_presenter.field_value('eds_authors') %></li>
+  <% end %>
+
+  <% if document['eds_source_title'].present? %>
+    <li><%= doc_presenter.field_value('eds_source_title') %></li>
+  <% end %>
+</ul>
+<ul class='document-metadata dl-horizontal dl-invert'>
+  <% if document['eds_subjects'].present? %>
+    <li><%= doc_presenter.field_value('eds_subjects') %></li>
+  <% end %>
+
+  <% if document['eds_abstract'].present? %>
+    <li><%= doc_presenter.field_value('eds_abstract') %></li>
+  <% end %>
+</ul>
