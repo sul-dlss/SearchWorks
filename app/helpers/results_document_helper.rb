@@ -1,7 +1,8 @@
 module ResultsDocumentHelper
 
   def get_main_title(document)
-    (document['title_display'] || "").html_safe
+    title_field = blacklight_config.index.title_field
+    (document[title_field] || '').html_safe
   end
 
   def get_main_title_date(document)
