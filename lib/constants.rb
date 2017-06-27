@@ -1192,6 +1192,7 @@ module Constants
   SOURCES = { 'Nielsen' => '(source: Nielsen Book Data)' }
   SUL_ICONS = {
     'Object' => 'cube',
+    'Academic Journal' => 'book-2',
     'Archive/Manuscript' => 'document-box-1',
     'Archived website' => 'network-web',
     'Article' => 'text-wrapping-1',

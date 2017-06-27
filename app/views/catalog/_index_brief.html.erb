@@ -2,13 +2,13 @@
   preview_container = 'preview-container-' + document.id
   preview_attrs = preview_data_attrs(true, "preview-brief", document[:id], '.' + preview_container)
 %>
-
+<% doc_presenter = presenter(document) %>
 <div class=" brief-document container-fluid" <%= preview_attrs %>>
   <div class="row row-eq-height brief-container">
     <div class="col-md-10">
       <h3 class="index_title">
         <% counter = document_counter_with_offset(document_counter) %>
-        <%= render_resource_icon document[document.format_key] %>
+        <%= render_resource_icon doc_presenter.formats %>
         <span class="document-counter">
           <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
         </span>
