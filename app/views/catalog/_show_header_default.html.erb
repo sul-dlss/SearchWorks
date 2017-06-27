@@ -1,5 +1,6 @@
+<% doc_presenter = presenter(document) %>
 <h1>
-  <%= render_resource_icon document[document.format_key] %>
+  <%= render_resource_icon doc_presenter.formats %>
   <%= render_document_heading(document, :tag => :span) %>
 </h1>
 <% if document[:vern_title_display].present? %>
