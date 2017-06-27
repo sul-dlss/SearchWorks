@@ -29,6 +29,9 @@ describe ResultsDocumentHelper do
     @document_02 = SolrDocument.new(data_02)
     @document_03 = SolrDocument.new(data_03)
     @document_04 = SolrDocument.new
+    @document_05 = SolrDocument.new(
+      eds_publication_year: '2017'
+    )
   end
 
   describe "Render metadata" do
@@ -38,10 +41,17 @@ describe ResultsDocumentHelper do
     it 'should return a blank title if one does not exist' do
       expect(get_main_title(@document_04)).to eq ""
     end
-    it "should return date and date ranges" do
-      expect(get_main_title_date(@document_01)).to eq "[1999]"
-      expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
-      expect(get_main_title_date(@document_03)).to eq "[199 B.C.]"
+
+    describe '#get_main_title_date' do
+      it "should return date and date ranges" do
+        expect(get_main_title_date(@document_01)).to eq "[1999]"
+        expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
+        expect(get_main_title_date(@document_03)).to eq "[199 B.C.]"
+      end
+
+      it 'returns the eds publication year when present' do
+        expect(get_main_title_date(@document_05)).to eq '[2017]'
+      end
     end
 
     it "should return book ids with prefixes" do
