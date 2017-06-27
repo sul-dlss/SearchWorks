@@ -27,9 +27,10 @@ class ArticleController < ApplicationController
     config.repository_class = Eds::Repository
 
     # solr field configuration for search results/index views
+    config.index.document_presenter_class = IndexDocumentPresenter
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
-    config.index.record_display_type = 'format'
+    config.index.display_type_field = 'eds_publication_type'
     config.index.document_actions = [] # Uncomment to add bookmark toggles to results
 
     # Configured index fields not used
@@ -37,6 +38,7 @@ class ArticleController < ApplicationController
     # config.add_index_field 'id'
 
     # solr field configuration for document/show views
+    config.show.document_presenter_class = ShowDocumentPresenter
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'
     config.show.display_type = 'format'
