@@ -21,6 +21,7 @@ module ResultsDocumentHelper
     production_year     = document["production_year_isi"].to_s
     original_year       = document["original_year_isi"].to_s
     copyright_year      = document["copyright_year_isi"].to_s
+    journal_pub_year    = document['eds_publication_year'].to_s
 
     # single date
     date = publication_year
@@ -46,6 +47,8 @@ module ResultsDocumentHelper
     if date.empty? and (!earliest_poss_year.empty? or !latest_poss_year.empty?)
       date = "#{earliest_poss_year} ... #{latest_poss_year}"
     end
+
+    date = journal_pub_year if journal_pub_year.present?
 
     date = "[#{date}]" unless date.empty?
   end
