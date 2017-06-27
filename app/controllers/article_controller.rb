@@ -2,6 +2,7 @@
 
 # ArticleController is the controller for Article Search
 class ArticleController < ApplicationController
+  include Blacklight::Catalog
   include Blacklight::Configurable
 
   before_action :set_search_query_modifier, only: :index
@@ -29,14 +30,11 @@ class ArticleController < ApplicationController
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
     config.index.record_display_type = 'format'
+    config.index.document_actions = [] # Uncomment to add bookmark toggles to results
 
-    config.add_index_field 'author_display', label: 'Author'
-    config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'academic_journal', label: 'Journal'
-    config.add_index_field 'language_facet', label: 'Language'
-    config.add_index_field 'pub_date', label: 'Year'
-    config.add_index_field 'pub_info', label: 'Published'
-    config.add_index_field 'id'
+    # Configured index fields not used
+    # config.add_index_field 'author_display', label: 'Author'
+    # config.add_index_field 'id'
 
     # solr field configuration for document/show views
     config.show.html_title = 'eds_title'
@@ -75,6 +73,10 @@ class ArticleController < ApplicationController
   def new; end
 
   protected
+
+  def _prefixes
+    @_prefixes ||= super + ['catalog']
+  end
 
   def search_service
     eds_params = {

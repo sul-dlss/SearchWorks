@@ -1,21 +1,27 @@
-<div class="article-search-results">
-  <% if @response.empty? %>
-    <div class="search_num_of_results">
-      <div class='results-heading'>
-        <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
-        <%= t('blacklight.search.pagination_info.no_items_found', search_type: 'articles').html_safe %>
-      </div>
+<div class='row'>
+  <div id="sidebar" class="col-md-4 col-sm-5">
+  </div>
+  <div id="content" class="col-md-8 col-sm-7">
+    <div id='documents' class="article-search-results">
+      <% if @response.empty? %>
+        <div class="search_num_of_results">
+          <div class='results-heading'>
+            <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
+            <%= t('blacklight.search.pagination_info.no_items_found', search_type: 'articles').html_safe %>
+          </div>
+        </div>
+        <%= render "shared/zero_results" %>
+      <% else %>
+        <div class="search_num_of_results">
+          <div class='results-heading'>
+            <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+            <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
+          </div>
+        </div>
+        <%= render 'search_header' %>
+        <%= render @response.documents, as: :document %>
+        <%= render 'search_footer' %>
+      <% end %>
     </div>
-    <%= render "shared/zero_results" %>
-  <% else %>
-    <div class="search_num_of_results">
-      <div class='results-heading'>
-        <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
-        <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
-      </div>
-    </div>
-    <%= render 'search_header' %>
-    <%= render @response.documents, as: :document %>
-    <%= render 'search_footer' %>
-  <% end %>
+  </div>
 </div>
