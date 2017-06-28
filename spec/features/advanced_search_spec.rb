@@ -56,8 +56,6 @@ feature "Advanced Search" do
     within('.breadcrumb') do
       expect(page).to have_content("A search")
     end
-
-    expect(page).to_not have_content("Advanced search")
   end
   scenario "should have search tips" do
     within ".advanced-search-form" do
