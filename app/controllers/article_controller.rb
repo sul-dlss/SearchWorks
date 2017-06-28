@@ -37,6 +37,10 @@ class ArticleController < ApplicationController
     # config.add_index_field 'author_display', label: 'Author'
     # config.add_index_field 'id'
 
+    config.add_search_field('search') do |field|
+      field.label = 'All fields'
+    end
+
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowDocumentPresenter
     config.show.html_title = 'eds_title'
