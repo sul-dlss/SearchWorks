@@ -4,7 +4,7 @@
   padding: 0 0;
 }
 
-#outer-container, #topnav-container, #search-navbar-container, #sul-footer-container {
+#outer-container, #topnav-container, #search-navbar-container, #search-subnavbar-container, #sul-footer-container {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -15,7 +15,7 @@
 	border-bottom: none;
 }
 
-#topnav, #search-navbar, #main-container, #sul-footer, #masthead-container {
+#topnav, #search-navbar, #search-subnavbar-container, #main-container, #sul-footer, #masthead-container {
 	margin: 0 auto;
 	text-align: left;
 }
