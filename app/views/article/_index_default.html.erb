@@ -17,3 +17,8 @@
     <li><%= doc_presenter.field_value('eds_abstract') %></li>
   <% end %>
 </ul>
+<% if document['eds_fulltext_links'].present? && !article_restricted?(document) %>
+  <ul class='document-metadata dl-horizontal dl-invert'>
+    <%= safe_join(doc_presenter.fulltext_links) %>
+  </ul>
+<% end %>
