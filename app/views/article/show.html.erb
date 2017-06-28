@@ -2,5 +2,12 @@
   <div id="doc_<%= @document.id.to_s.parameterize %>">
     <% # bookmark/folder functions -%>
     <%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
+    <% if @document['eds_fulltext_links'].present? && !article_restricted?(@document) %>
+    <dl class="dl-horizontal dl-invert"><dt>Links:</dt><dd>
+      <ul class='document-metadata dl-horizontal dl-invert'>
+        <%= safe_join(presenter(@document).fulltext_links) %>
+      </ul>
+    </dd></dl>
+    <% end %>
   </div>
 </div>
