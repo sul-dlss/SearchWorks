@@ -175,7 +175,7 @@ GEM
     docile (1.1.5)
     dot-properties (0.1.3)
     dotenv (2.2.1)
-    ebsco-eds (0.1.6.pre)
+    ebsco-eds (0.1.7.pre)
       activesupport (~> 5.0)
       bibtex-ruby (~> 4.0)
       citeproc (>= 1.0.4, < 2.0)
