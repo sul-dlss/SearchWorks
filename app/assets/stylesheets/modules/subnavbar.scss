@@ -18,6 +18,7 @@
   .navbar-nav > li {
     a {
       color: $white;
+      background-color: $sul-subnavbar-bg-color;
       padding: 6px 0;
       margin: 0 20px 0 0;
       line-height: 20px;
@@ -28,11 +29,12 @@
 
     a:hover {
       text-decoration: underline;
-      background-color: $sul-subnavbar-bg-color;
     }
 
     a:focus {
-      background-color: $sul-subnavbar-bg-color;
+      // restore bootstrap defaults to override their navbar focus (outline: 0)
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
     }
   }
 
