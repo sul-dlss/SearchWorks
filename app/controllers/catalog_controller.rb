@@ -61,11 +61,13 @@ class CatalogController < ApplicationController
     #}
 
     # solr field configuration for search results/index views
+    config.index.document_presenter_class = IndexDocumentPresenter
     config.index.title_field = 'title_display'
-    config.index.display_type_field = 'format'
+    config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_method = :thumbnail
 
     # solr field configuration for document/show views
+    config.show.document_presenter_class = ShowDocumentPresenter
     #config.show.title_field = 'title_display'
     #config.show.display_type_field = 'format'
 
