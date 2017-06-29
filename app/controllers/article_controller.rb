@@ -33,6 +33,34 @@ class ArticleController < ApplicationController
       field.label = 'All fields'
     end
 
+    config.add_search_field('author') do |field|
+      field.label = 'Author'
+    end
+
+    config.add_search_field('title') do |field|
+      field.label = 'Article title'
+    end
+
+    config.add_search_field('subject') do |field|
+      field.label = 'Subject'
+    end
+
+    config.add_search_field('journal_title') do |field| # TODO: EDS gem doesn't support yet
+      field.label = 'Journal title'
+    end
+
+    config.add_search_field('abstract') do |field| # TODO: EDS gem doesn't support yet
+      field.label = 'Abstract'
+    end
+
+    config.add_search_field('issn') do |field| # TODO: EDS gem doesn't support yet
+      field.label = 'ISSN'
+    end
+
+    config.add_search_field('isbn') do |field| # TODO: EDS gem doesn't support yet
+      field.label = 'ISBN'
+    end
+
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowDocumentPresenter
     config.show.html_title = 'eds_title'
