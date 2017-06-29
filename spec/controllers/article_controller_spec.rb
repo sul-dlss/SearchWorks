@@ -37,7 +37,7 @@ RSpec.describe ArticleController do
     before { allow(controller).to receive(:session).and_return(user_session) }
     it 'will create a new session' do
       expect(EBSCO::EDS::Session).to receive(:new).with(
-        hash_including(caller: 'new-session')
+        hash_including(caller: 'new-session', guest: true)
       ).and_return(eds_session)
       controller.eds_init
     end
