@@ -23,7 +23,6 @@ class ArticleController < ApplicationController
     config.index.show_link = 'eds_title'
     config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
-    config.index.document_actions = [] # Uncomment to add bookmark toggles to results
 
     # Configured index fields not used
     # config.add_index_field 'author_display', label: 'Author'
@@ -110,7 +109,7 @@ class ArticleController < ApplicationController
   end
 
   def show
-    _deprecated_response, @document = search_service.fetch(params[:id])
+    @response, @document = search_service.fetch(params[:id])
   end
 
   def new; end
