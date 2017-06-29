@@ -31,6 +31,7 @@ class ArticleController < ApplicationController
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
     config.index.display_type_field = 'eds_publication_type'
+    config.index.fulltext_links_field = 'eds_fulltext_links'
     config.index.document_actions = [] # Uncomment to add bookmark toggles to results
 
     # Configured index fields not used
