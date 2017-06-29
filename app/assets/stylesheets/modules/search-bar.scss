@@ -1,31 +1,51 @@
-#search-navbar-container,
-#search-subnavbar-container {
-  padding: 0 0 0 0;
+#search-navbar-container {
   background-color: $sul-navbar-brand-color;
+  height: 100px;
+  max-height: 100px;
+  padding: 0;
 
-  .navbar-header {
-    height: 100px;
+  #search-navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+    max-height: inherit;
   }
 
   a {
-    border: none;
+    border: 0;
   }
 
-  .navbar-brand {
-    padding: 0 0 0 0;
-    height: 28px;
-    margin: 36px 10px 36px 0px;
-
-    img {
+  .search-navbar-headings {
+    .navbar-brand {
       height: 28px;
-      @media screen and (max-width: $screen-sm) {
-        height: 26px;
+      margin: 36px 10px 36px 0;
+      padding: 0;
+
+      img {
+        height: 28px;
+      }
+    }
+
+    .search-dropdown {
+      display: inline-block;
+      height: inherit;
+
+      .dropdown-menu {
+        left: auto;
+
+        li.active > a {
+          background-color: $public-note-yellow;
+          color: $black; // override bootstrap
+        }
       }
     }
   }
 
   // For text search pulldown
   .search-form {
+    flex: auto;
+
     .input-group-addon {
       &.for-search-field {
         border-radius: 4px 0 0 4px;
@@ -33,79 +53,70 @@
     }
   }
 
-  .navbar-form {
-    float: left;
-    margin-bottom: 0;
-  }
-
-  button.navbar-toggle.search-navbar-dropdown-btn-rotate-90 span.fa {
-    @extend .fa-rotate-90;
-  }
-
-  button.navbar-toggle {
+  .search-target {
+    border-bottom: $white dashed 1px;
     color: $white;
+    display: inline-table;
+    font-size: 22px;
+    font-weight: 100;
+    margin: 39px 0 0;
+    padding: 0;
   }
 
-  .search-dropdown {
-    display: inline-flex;
-    height: inherit;
+  @media screen and (max-width: $screen-md-min) {
+    .input-group-btn {
+      width: 1%;
+    }
 
-    .dropdown-menu {
-      left: auto;
-      top: 70px;
+    .navbar-form {
+      border: 0;
+      margin: 0 auto;
+      max-height: 40px;
+      padding: 0;
+      width: 100%;
+    }
 
-      li.active > a {
-        color: $black; // override bootstrap
-        background-color: #faf8d2;
+    .navbar-header {
+      float: none;
+    }
+
+    .search-form {
+      display: block;
+      margin: 10px auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+    }
+
+    .search_field {
+      width: 82px;
+    }
+
+    .search-navbar-headings {
+      margin-top: 5px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .search-target {
+      float: none;
+      margin-top: 5px;
+      vertical-align: middle;
+    }
+
+    #searchworks-logo {
+      float: none;
+
+      img {
+        display: inline-block;
+        height: 24px;
       }
     }
   }
 
-  .search-target {
-    font-size: 22px;
-    font-weight: 100;
-    color: $white;
-    margin: 39px 0 0 0;
-    padding: 0;
-    border-bottom-width: 1px;
-    border-bottom-color: $white;
-    border-bottom-style: dashed;
-    display: inline-table;
-  }
-
-  @media screen and (max-width: $screen-sm-min) {
-    .search-form {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .search_field {
-      width: 82px;
-    }
-    #searchbar-navbar-collapse .nav > li > a:hover {
-      border-bottom: none !important;
-    }
-  }
-
-  @media screen and (max-width: $screen-md-min) {
-    .search-form {
-      margin-bottom: 10px;
-    }
-  }
   @media screen and (min-width: $screen-md-min) {
-    .search-form {
-      position: absolute;
-      top: 36px;
-      left: 300px;
-      margin-right: 60px;
-    }
-  }
-
-  @media screen and (min-width: $screen-lg-min) {
-    .search-form {
-      position: absolute;
-      top: 36px;
-      left: 300px;
-      margin-right: 60px;
+    .navbar-form {
+      margin: 0 auto;
     }
   }
 }
