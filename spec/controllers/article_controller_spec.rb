@@ -30,4 +30,21 @@ RSpec.describe ArticleController do
       get :show, params: { id: 123 }
     end
   end
+
+  context 'EDS Session Management' do
+    let(:user_session) { {} }
+    let(:eds_session) { instance_double(EBSCO::EDS::Session, session_token: 'abc') }
+    before { allow(controller).to receive(:session).and_return(user_session) }
+    it 'will create a new session' do
+      expect(EBSCO::EDS::Session).to receive(:new).with(
+        hash_including(caller: 'new-session')
+      ).and_return(eds_session)
+      controller.eds_init
+    end
+    it 'will reuse the session if in the user session data' do
+      user_session['eds_session_token'] = 'def'
+      expect(EBSCO::EDS::Session).not_to receive(:new)
+      controller.eds_init
+    end
+  end
 end
