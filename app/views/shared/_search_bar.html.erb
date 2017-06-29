@@ -8,11 +8,6 @@
         <%= link_to (image_tag 'searchworks.svg', {:"data-svg-fallback" => "#{image_path('searchworks.png')}", :alt => 'SearchWorks'}), root_path, :class => 'navbar-brand' %>
         <%= render_search_targets_widget %>
     </div>
-    <div class="collapsed-search-navs">
-      <div class="collapse navbar-collapse" id="searchbar-navbar-collapse">
-        <%= render "catalog/search_bar_nav_list" %>
-      </div>
-    </div>
     <div class="search-form">
       <%= render_search_bar %>
     </div>

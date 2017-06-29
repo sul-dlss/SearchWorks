@@ -13,4 +13,6 @@ feature "Search types" do
       expect(page).to have_css('option[value="search_series"]', text: 'Series')
     end
   end
+
+  it 'should have different types for article search'
 end
