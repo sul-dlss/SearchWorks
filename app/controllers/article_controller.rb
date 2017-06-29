@@ -11,15 +11,7 @@ class ArticleController < ApplicationController
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
     session['guest'] = true # TODO: hardcoded to non-authenticated
-    session['eds_session_token'] =
-      EBSCO::EDS::Session.new(
-        guest: true, # TODO: hardcoded to non-authenticated
-        caller: 'new-session',
-        user: Settings.EDS_USER,
-        pass: Settings.EDS_PASS,
-        profile: Settings.EDS_PROFILE,
-        debug: Settings.EDS_DEBUG
-      ).session_token
+    setup_eds_session(session)
   end
 
   configure_blacklight do |config|
@@ -94,5 +86,19 @@ class ArticleController < ApplicationController
 
   def set_search_query_modifier
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
+  end
+
+  # Reuse the EDS session token if available in the user's session data,
+  # otherwise establish a session
+  def setup_eds_session(session)
+    return if session['eds_session_token'].present?
+    session['eds_session_token'] = EBSCO::EDS::Session.new(
+      guest: session['guest'],
+      caller: 'new-session',
+      user: Settings.EDS_USER,
+      pass: Settings.EDS_PASS,
+      profile: Settings.EDS_PROFILE,
+      debug: Settings.EDS_DEBUG
+    ).session_token
   end
 end
