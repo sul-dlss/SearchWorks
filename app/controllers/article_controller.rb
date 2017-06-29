@@ -10,7 +10,6 @@ class ArticleController < ApplicationController
   before_action :eds_init, only: %i[index show]
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
-    session['guest'] = true # TODO: hardcoded to non-authenticated
     setup_eds_session(session)
   end
 
@@ -74,7 +73,7 @@ class ArticleController < ApplicationController
 
   def search_service
     eds_params = {
-      'guest' => session['guest'],
+      'guest' => true, # TODO: hardcoded to non-authenticated
       'session_token' => session['eds_session_token']
     }
     Eds::SearchService.new(blacklight_config, search_state.to_h, eds_params)
@@ -89,7 +88,7 @@ class ArticleController < ApplicationController
   def setup_eds_session(session)
     return if session['eds_session_token'].present?
     session['eds_session_token'] = EBSCO::EDS::Session.new(
-      guest: session['guest'],
+      guest: true, # TODO: hardcoded to non-authenticated
       caller: 'new-session',
       user: Settings.EDS_USER,
       pass: Settings.EDS_PASS,
