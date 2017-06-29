@@ -39,7 +39,7 @@ module Eds
 
     def fetch_one(id, extra_controller_params)
       solr_response = @repository.find id, extra_controller_params, @eds_params
-      [nil, solr_response.documents.first]
+      [solr_response, solr_response.documents.first]
     end
   end
 end
