@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 RSpec.describe ArticleController do
-  context '#new' do
+  context '#index' do
     it 'shows a home page' do
-      get :new
-      expect(response).to render_template('new')
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      get :index
+      expect(response).to render_template('index')
     end
   end
 
