@@ -7,7 +7,7 @@ module StubArticleService
     allow_any_instance_of(ArticleController).to receive(:setup_eds_session).and_return('abc123')
     case type
     when :multiple
-      expect_any_instance_of(Eds::SearchService).to receive(:search_results).and_return(
+      allow_any_instance_of(Eds::SearchService).to receive(:search_results).and_return(
         [StubArticleResponse.new(docs), nil]
       )
     when :single
