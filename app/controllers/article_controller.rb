@@ -186,4 +186,8 @@ class ArticleController < ApplicationController
       debug: Settings.EDS_DEBUG
     ).session_token
   end
+
+  def has_search_parameters?
+    params[:q].present? || params[:f].present?
+  end
 end
