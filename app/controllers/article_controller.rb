@@ -102,6 +102,12 @@ class ArticleController < ApplicationController
     # config.add_facet_field 'eds_library_location_facet', label: 'Library'
     # config.add_facet_field 'eds_library_collection_facet', label: 'Location'
     # config.add_facet_field 'eds_author_university_facet', label: 'University'
+
+    # View type group config
+    config.view.list.icon_class = "fa-th-list"
+    config.view.brief ||= OpenStruct.new
+    config.view.brief.partials = %i[index]
+    config.view.brief.icon_class = "fa-align-justify"
   end
 
   def index
