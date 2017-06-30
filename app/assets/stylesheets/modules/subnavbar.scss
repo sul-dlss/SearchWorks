@@ -31,6 +31,12 @@
     }
   }
 
+  // the last menu item should be right-aligned
+  .navbar-nav > li:last-child > a {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
   // For dropdowns
   .dropdown-menu {
     background-color: $sul-subnavbar-bg-color;
