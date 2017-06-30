@@ -45,19 +45,19 @@ class ArticleController < ApplicationController
       field.label = 'Subject'
     end
 
-    config.add_search_field('journal_title') do |field| # TODO: EDS gem doesn't support yet
+    config.add_search_field('source') do |field|
       field.label = 'Journal title'
     end
 
-    config.add_search_field('abstract') do |field| # TODO: EDS gem doesn't support yet
+    config.add_search_field('abstract') do |field|
       field.label = 'Abstract'
     end
 
-    config.add_search_field('issn') do |field| # TODO: EDS gem doesn't support yet
+    config.add_search_field('issn') do |field|
       field.label = 'ISSN'
     end
 
-    config.add_search_field('isbn') do |field| # TODO: EDS gem doesn't support yet
+    config.add_search_field('isbn') do |field|
       field.label = 'ISBN'
     end
 
