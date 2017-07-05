@@ -74,16 +74,25 @@ class ArticleController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
     config.add_show_field 'eds_title', label: 'Title'
+    config.add_show_field 'eds_composed_title', label: 'Composed Title'
+    config.add_show_field 'eds_other_titles', label: 'Other Titles'
     config.add_show_field 'eds_languages', label: 'Language'
     config.add_show_field 'eds_physical_description', label: 'Physical Description'
     config.add_show_field 'eds_source_title', label: 'Journal'
     config.add_show_field 'eds_database_name', label: 'Database'
     config.add_show_field 'eds_authors', label: 'Author'
+    config.add_show_field 'eds_author_affiliations', label: 'Author Affiliations'
+    config.add_show_field 'eds_author_supplied_keywords', label: 'Author Supplied Keywords'
     config.add_show_field 'eds_publication_type', label: 'Format'
+    config.add_show_field 'eds_document_type', label: 'Document Type'
     config.add_show_field 'eds_publication_date', label: 'Publication Date'
-    config.add_show_field 'eds_publisher_info', label: 'Published'
+    config.add_show_field 'eds_publication_info', label: 'Published'
     config.add_show_field 'eds_abstract', label: 'Abstract'
+    config.add_show_field 'eds_notes', label: 'Notes'
     config.add_show_field 'eds_subjects', label: 'Subjects'
+    config.add_show_field 'eds_subjects_geographic', label: 'Geographic Subjects'
+    config.add_show_field 'eds_subjects_person', label: 'Person Subjects'
+    config.add_show_field 'eds_document_oclc', label: 'OCLC'
     config.add_show_field 'eds_document_doi', label: 'DOI', helper_method: :doi_link
 
     # Facet field configuration
