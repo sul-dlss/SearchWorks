@@ -87,6 +87,7 @@ class ArticleController < ApplicationController
     config.add_show_field 'eds_document_doi', label: 'DOI', helper_method: :doi_link
 
     # Facet field configuration
+    config.add_facet_field 'eds_search_limiters_facet', label: 'Options'
     config.add_facet_field 'eds_publication_type_facet', label: 'Source type'
     config.add_facet_field 'eds_language_facet', label: 'Language' # , limit: 20 TODO: Need to handle facet limiting
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic'
@@ -96,7 +97,6 @@ class ArticleController < ApplicationController
     config.add_facet_field 'eds_content_provider_facet', label: 'Database'
 
     # Other available facets
-    # config.add_facet_field 'eds_search_limiters_facet', label: 'Limiters'
     # config.add_facet_field 'eds_publication_year_facet', label: 'Publication Year'
     # config.add_facet_field 'eds_category_facet', label: 'Category'
     # config.add_facet_field 'eds_library_location_facet', label: 'Library'
