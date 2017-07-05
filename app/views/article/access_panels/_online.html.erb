@@ -1,0 +1,13 @@
+<% doc_presenter = presenter(document) %>
+<div class="panel panel-default access-panel panel-online">
+  <div class="access-panel-heading panel-heading">
+    <h3>
+      Available online
+    </h3>
+  </div>
+  <div class="panel-body">
+    <ul class='document-metadata dl-horizontal dl-invert'>
+      <%= safe_join(presenter(document).fulltext_links) %>
+    </ul>
+  </div>
+</div>
