@@ -13,6 +13,12 @@ class ArticleController < ApplicationController
     setup_eds_session(session)
   end
 
+  BREAKS = {
+    words_connector: '<br/>',
+    two_words_connector: '<br/>',
+    last_word_connector: '<br/>'
+  }
+
   configure_blacklight do |config|
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
@@ -70,30 +76,50 @@ class ArticleController < ApplicationController
     config.show.abstract = 'eds_abstract'
     config.show.plink = 'eds_plink'
     config.show.route = { controller: 'article' }
+    config.show.sections = {
+      'Summary' => {
+        eds_authors:              { label: 'Authors', separator_options: BREAKS },
+        eds_author_affiliations:  { label: 'Author Affiliations' },
+        eds_composed_title:       { label: 'Composed Title', helper_method: :render_text_from_html },
+        eds_publication_date:     { label: 'Publication Date' },
+        eds_languages:            { label: 'Language' }
+      },
+      'Abstract' => {
+        eds_abstract: { label: 'Abstract', helper_method: :render_text_from_html },
+        eds_notes:    { label: 'Notes' }
+      },
+      'Subjects' => {
+        eds_subjects:                 { label: 'Subjects', separator_options: BREAKS },
+        eds_subjects_geographic:      { label: 'Geography', helper_method: :render_text_from_html, seperator: '<br/>'.html_safe },
+        eds_subjects_person:          { label: 'Person Subjects' },
+        eds_author_supplied_keywords: { label: 'Author Supplied Keywords' }
+      },
+      'Details' => {
+        eds_publication_type:     { label: 'Format' },
+        eds_document_doi:         { label: 'DOI', helper_method: :link_to_doi },
+        eds_database_name:        { label: 'Database' },
+        eds_source_title:         { label: 'Journal' },
+        eds_volume:               { label: 'Volume' },
+        eds_series:               { label: 'Series' },
+        eds_issue:                { label: 'Issue' },
+        eds_page_start:           { label: 'Page Start' },
+        eds_page_count:           { label: 'Page Count' },
+        eds_isbns:                { label: 'ISBN' },
+        eds_issns:                { label: 'ISSN' },
+        eds_publication_info:     { label: 'Published' },
+        eds_document_oclc:        { label: 'OCLC' },
+        eds_document_type:        { label: 'Document Type' },
+        eds_other_titles:         { label: 'Other Titles' },
+        eds_physical_description: { label: 'Physical Description' }
+      }
+    }
 
-    # solr fields to be displayed in the show (single result) view
-    #   The ordering of the field names is the order of the display
-    config.add_show_field 'eds_title', label: 'Title'
-    config.add_show_field 'eds_composed_title', label: 'Composed Title'
-    config.add_show_field 'eds_other_titles', label: 'Other Titles'
-    config.add_show_field 'eds_languages', label: 'Language'
-    config.add_show_field 'eds_physical_description', label: 'Physical Description'
-    config.add_show_field 'eds_source_title', label: 'Journal'
-    config.add_show_field 'eds_database_name', label: 'Database'
-    config.add_show_field 'eds_authors', label: 'Author'
-    config.add_show_field 'eds_author_affiliations', label: 'Author Affiliations'
-    config.add_show_field 'eds_author_supplied_keywords', label: 'Author Supplied Keywords'
-    config.add_show_field 'eds_publication_type', label: 'Format'
-    config.add_show_field 'eds_document_type', label: 'Document Type'
-    config.add_show_field 'eds_publication_date', label: 'Publication Date'
-    config.add_show_field 'eds_publication_info', label: 'Published'
-    config.add_show_field 'eds_abstract', label: 'Abstract'
-    config.add_show_field 'eds_notes', label: 'Notes'
-    config.add_show_field 'eds_subjects', label: 'Subjects'
-    config.add_show_field 'eds_subjects_geographic', label: 'Geographic Subjects'
-    config.add_show_field 'eds_subjects_person', label: 'Person Subjects'
-    config.add_show_field 'eds_document_oclc', label: 'OCLC'
-    config.add_show_field 'eds_document_doi', label: 'DOI', helper_method: :doi_link
+    # Register section fields with `add_show_field` to leverage rendering pipeline
+    config.show.sections.each do |_section, fields|
+      fields.each do |field, options|
+        config.add_show_field field.to_s, options
+      end
+    end
 
     # Facet field configuration
     config.add_facet_field 'eds_search_limiters_facet', label: 'Options'
