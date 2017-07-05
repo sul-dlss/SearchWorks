@@ -1,9 +1,17 @@
-<%  %>
-<div class="record-metadata row">
-  <div class="record-panels col-md-4">
-    <%= render "article/record/metadata_panels", document: document %>
+<div class="article-record-metadata row">
+  <div class="article-record-panels col-md-4">
+    <%= render "article/record/metadata_panels", document: document -%>
   </div>
-  <div class="record-sections col-md-8">
-    <%= render "catalog/show_default", document: document %>
+  <div class="article-record-sections col-md-8">
+    <dl class="dl-horizontal dl-invert">
+      <% blacklight_config.show.sections.each do |section_name, fields| -%>
+        <% if (section = render('article/record/section_fields', document: document, fields: fields.keys)).present? -%>
+          <% if section_name != 'Summary' -%>
+            <h2><%= section_name -%></h2>
+          <% end -%>
+          <%= section -%>
+        <% end -%>
+      <% end -%>
+    </dl>
   </div>
 </div>
