@@ -20,6 +20,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+faraday.log
 
 config/settings.local.yml
 config/settings/*.local.yml
