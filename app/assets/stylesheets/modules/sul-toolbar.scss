@@ -1,5 +1,20 @@
 .sul-toolbar {
   @include sul-toolbar-bg-border;
   padding: 5px 0px;
-  margin: 0 0 15px 0px;
+  margin: 35px 0px;
+  height: 40px;
+  color: $sul-toolbar-color;
+
+  // Back to results button
+  .back-to-results {
+    margin-left: -10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+}
+
+// Override Blacklight style
+#sort-dropdown .dropdown-toggle .caret, #per_page-dropdown .dropdown-toggle .caret {
+  color: $sul-toolbar-color;
 }
