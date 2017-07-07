@@ -47,7 +47,7 @@
 
 @mixin sul-toolbar-bg-border {
   background-color: $sul-toolbar-bg;
-  border-bottom: 3px solid $sul-toolbar-border !important;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
 @mixin label-items-online {
