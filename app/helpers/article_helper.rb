@@ -19,6 +19,16 @@ module ArticleHelper
     document['eds_title'] =~ /^This title is unavailable for guests, please login to see more information./
   end
 
+  def link_subjects(options = {})
+    return unless options[:value]
+    separators = options.dig(:config, :separator_options) || {}
+    values = render_text_from_html(options[:value])
+    values.collect do |value|
+      # TODO: Remove DE when we are able to move to a (hidden) search field
+      link_to value, article_index_path(q: "DE \"#{value}\"")
+    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+  end
+
   def link_to_doi(options = {})
     doi = options[:value].try(:first)
     return if doi.blank?
@@ -26,11 +36,12 @@ module ArticleHelper
     link_to(doi, url)
   end
 
-  def render_text_from_html(options = {})
-    html = options[:value].try(:first)
-    return if html.blank?
-    doc = Nokogiri::HTML(CGI.unescapeHTML(html))
-    sep = options[:config][:seperator] if options[:config].present?
-    safe_join(doc.xpath('//text()').to_a, sep)
+  def render_text_from_html(values)
+    values = Array.wrap(values)
+    return [] if values.blank?
+    values.map do |value|
+      doc = Nokogiri::HTML(CGI.unescapeHTML(value))
+      doc.xpath('//text()').to_a.map(&:to_s)
+    end.flatten
   end
 end
