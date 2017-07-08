@@ -68,5 +68,9 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
-  resources :article, only: %i[index show]
+  resources :article, only: %i[index show] do
+    member do
+      get :facet
+    end
+  end
 end
