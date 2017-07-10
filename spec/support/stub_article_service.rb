@@ -7,13 +7,13 @@ module StubArticleService
     allow_any_instance_of(ArticleController).to receive(:setup_eds_session).and_return('abc123')
     case type
     when :multiple
-      allow_any_instance_of(Eds::SearchService).to receive(:search_results).and_return(
-        [StubArticleResponse.new(docs), nil]
+      allow_any_instance_of(Eds::Repository).to receive(:search).and_return(
+        StubArticleResponse.new(docs)
       )
     when :single
       raise "Single document response requsted but #{docs.length} provided." if docs.many?
-      expect_any_instance_of(Eds::SearchService).to receive(:fetch).and_return(
-        [StubArticleResponse.new(docs.first), docs.first]
+      allow_any_instance_of(Eds::Repository).to receive(:find).and_return(
+        StubArticleResponse.new([docs.first])
       )
     else
       raise "Unknown article stub type #{type} provided."
