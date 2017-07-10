@@ -46,9 +46,7 @@ describe "Emailing Records", type: :feature, js: true do
 
       body = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
 
-      minimap = body.find('.side-nav-minimap', visible: false)
-
-      expect(minimap['style']).to eq 'display:none'
+      expect(page).to have_css('.side-nav-minimap', visible: false)
     end
   end
 end
