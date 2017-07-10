@@ -45,6 +45,14 @@ RSpec.describe ArticleHelper do
     end
   end
 
+  context '#strip_html_from_solr_field' do
+    it 'uses the render_text_from_html helper to strip html tags from a solr field' do
+      result = helper.strip_html_from_solr_field(value: %w[<a>b</a><c>d</e>f])
+
+      expect(result).to eq 'bdf'
+    end
+  end
+
   context '#render_text_from_html' do
     it 'returns only text from HTML' do
       result = helper.render_text_from_html(%w[ab<c>d</c>])

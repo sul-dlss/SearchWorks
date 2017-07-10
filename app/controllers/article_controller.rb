@@ -80,12 +80,12 @@ class ArticleController < ApplicationController
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS },
         eds_author_affiliations:  { label: 'Author Affiliations' },
-        eds_composed_title:       { label: 'Composed Title' },
+        eds_composed_title:       { label: 'Composed Title', helper_method: :strip_html_from_solr_field },
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language' }
       },
       'Abstract' => {
-        eds_abstract: { label: 'Abstract' },
+        eds_abstract: { label: 'Abstract', helper_method: :strip_html_from_solr_field },
         eds_notes:    { label: 'Notes' }
       },
       'Subjects' => {
