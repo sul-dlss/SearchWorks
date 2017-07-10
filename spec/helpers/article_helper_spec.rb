@@ -31,26 +31,42 @@ RSpec.describe ArticleHelper do
     end
   end
 
+  describe '#link_subjects' do
+    it 'quotes the subject and does a subject search' do
+      result = Capybara.string(helper.link_subjects(value: %w[ABC 123]))
+      expect(result).to have_link 'ABC', href: /\?q=DE\+%22ABC%22/
+      expect(result).to have_link '123', href: /\?q=DE\+%22123%22/
+    end
+
+    it 'handles html (via render_text_from_html)' do
+      result = Capybara.string(helper.link_subjects(value: %w[<p>ABC</p><p>123</p>]))
+      expect(result).to have_link 'ABC', href: /\?q=DE\+%22ABC%22/
+      expect(result).to have_link '123', href: /\?q=DE\+%22123%22/
+    end
+  end
+
+  context '#strip_html_from_solr_field' do
+    it 'uses the render_text_from_html helper to strip html tags from a solr field' do
+      result = helper.strip_html_from_solr_field(value: %w[<a>b</a><c>d</e>f])
+
+      expect(result).to eq 'bdf'
+    end
+  end
+
   context '#render_text_from_html' do
-    it 'renders only text from HTML' do
-      result = helper.render_text_from_html(value: %w[ab<c>d</c>])
-      expect(result).to eq 'abd'
+    it 'returns only text from HTML' do
+      result = helper.render_text_from_html(%w[ab<c>d</c>])
+      expect(result).to eq %w[ab d]
     end
-    it 'renders element seperated text from HTML with spaces' do
-      result = helper.render_text_from_html(value: %w[ab<c>d</c><f>g</f>h], config: { seperator: ' '})
-      expect(result).to eq 'ab d g h'
+
+    it 'handles single values the same as arrays' do
+      result = helper.render_text_from_html('ab<c>d</c>')
+      expect(result).to eq %w[ab d]
     end
-    it 'renders space seperated text from HTML' do
-      result = helper.render_text_from_html(value: %w[ab<c>d</c>\ e<f>g</f>h])
-      expect(result).to eq 'abd egh'
-    end
-    it 'renders only the first value' do
-      result = helper.render_text_from_html(value: %w[ab<c>d</c> more text])
-      expect(result).to eq 'abd'
-    end
-    it 'renders nothing if missing' do
-      result = helper.render_text_from_html(value: nil)
-      expect(result).to be_nil
+
+    it 'returns an empty array if missing' do
+      result = helper.render_text_from_html(nil)
+      expect(result).to eq []
     end
   end
 end

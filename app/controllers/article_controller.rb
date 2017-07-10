@@ -80,19 +80,19 @@ class ArticleController < ApplicationController
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS },
         eds_author_affiliations:  { label: 'Author Affiliations' },
-        eds_composed_title:       { label: 'Composed Title', helper_method: :render_text_from_html },
+        eds_composed_title:       { label: 'Composed Title', helper_method: :strip_html_from_solr_field },
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language' }
       },
       'Abstract' => {
-        eds_abstract: { label: 'Abstract', helper_method: :render_text_from_html },
+        eds_abstract: { label: 'Abstract', helper_method: :strip_html_from_solr_field },
         eds_notes:    { label: 'Notes' }
       },
       'Subjects' => {
-        eds_subjects:                 { label: 'Subjects', separator_options: BREAKS },
-        eds_subjects_geographic:      { label: 'Geography', helper_method: :render_text_from_html, seperator: '<br/>'.html_safe },
-        eds_subjects_person:          { label: 'Person Subjects' },
-        eds_author_supplied_keywords: { label: 'Author Supplied Keywords' }
+        eds_subjects:                 { label: 'Subjects', separator_options: BREAKS, helper_method: :link_subjects },
+        eds_subjects_geographic:      { label: 'Geography', separator_options: BREAKS, helper_method: :link_subjects },
+        eds_subjects_person:          { label: 'Person Subjects', separator_options: BREAKS, helper_method: :link_subjects },
+        eds_author_supplied_keywords: { label: 'Author Supplied Keywords', separator_options: BREAKS, helper_method: :link_subjects }
       },
       'Details' => {
         eds_publication_type:     { label: 'Format' },
