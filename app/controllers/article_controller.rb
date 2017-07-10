@@ -151,6 +151,9 @@ class ArticleController < ApplicationController
 
   def show
     @response, @document = search_service.fetch(params[:id])
+    respond_to do |format|
+      format.html { setup_next_and_previous_documents }
+    end
   end
 
   def new; end
