@@ -114,10 +114,11 @@ class ArticleController < ApplicationController
       }
     }
 
-    # Register section fields with `add_show_field` to leverage rendering pipeline
+    # Register section fields with show/index presenters to leverage rendering pipeline
     config.show.sections.each do |_section, fields|
       fields.each do |field, options|
         config.add_show_field field.to_s, options
+        config.add_index_field field.to_s, options.except(:separator_options)
       end
     end
 

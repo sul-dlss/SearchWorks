@@ -104,4 +104,7 @@ feature 'Article Searching' do
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
   end
+  it 'displays the appropriate fields in the search' do
+    skip 'we need some EDS fixtures'
+  end
 end
