@@ -143,6 +143,11 @@ class ArticleController < ApplicationController
     config.view.brief ||= OpenStruct.new
     config.view.brief.partials = %i[index]
     config.view.brief.icon_class = "fa-align-justify"
+
+    # Sorting, using EDS sort keys
+    config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
+    config.add_sort_field 'newest', sort: 'newest', label: 'date (most recent)'
+    config.add_sort_field 'oldest', sort: 'oldest', label: 'date (oldest)'
   end
 
   def index
