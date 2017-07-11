@@ -10,7 +10,7 @@ feature "Results Toolbar", js: true do
 
     within "#sortAndPerPage" do
       within "div.page_links" do
-        expect(page).to have_css("a.btn.btn-sul-toolbar.disabled", text: /Previous/, visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: /Previous/)
         expect(page).to have_css("span.page_entries", text: /1 - 20/, visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: /Next/, visible: true)
       end
@@ -28,20 +28,20 @@ feature "Results Toolbar", js: true do
     click_button 'search'
 
     within('.sul-toolbar') do
-      expect(page).to_not have_css('.page_links')
+      expect(page).to have_css('.page_links')
       expect(page).to_not have_content('1 entry')
     end
   end
   scenario "pagination links for multiple items but no pages should not have any number of results info" do
-    visit root_path
-    fill_in "q", with: '34'
-    click_button 'search'
+    visit root_path q: '34'
 
     expect(page).to have_css('h2', text: '4 results')
 
-    within('.sul-toolbar') do
-      expect(page).to_not have_css('.page_links')
-      expect(page).to_not have_content('1 - 4')
+    within('.sul-toolbar .page_links') do
+      expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: /Previous/)
+      expect(page).to have_css("span.page_entries", text: /1 - 4/)
+      expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: /Next/)
+
     end
   end
 end
