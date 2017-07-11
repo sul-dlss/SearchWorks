@@ -1,0 +1,7 @@
+:id: 54
+:title_display: RFE/RL broadcast records, 1951-2005
+:format_main_ssim: Map
+:marcxml: <%= marc_382_instrumentation %>
+:marcbib_xml: <%= marc_382_instrumentation %>
+:item_display:
+  - "36105217238315 -|- HV-ARCHIVE -|- STACKS -|-  -|-  -|- G70.212 .A426 2011:test -|-  -|-  -|- G70.212 .A426 2011:test -|- "

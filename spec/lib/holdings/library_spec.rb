@@ -66,6 +66,10 @@ describe Holdings::Library do
       end
     end
 
+    it 'HV-ARCHIVE is a special case that should always be requestable' do
+      expect(Holdings::Library.new('HV-ARCHIVE')).to be_location_level_request
+    end
+
     it 'is false for NONCIRC libraries that only include INPROCESS items' do
       library = Holdings::Library.new(
         'RUMSEYMAP',
