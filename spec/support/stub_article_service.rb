@@ -1,6 +1,12 @@
 ##
 # Module included for RSpec tests to stub the article search service
 module StubArticleService
+  SAMPLE_RESULTS = [
+      SolrDocument.new(id: 'abc123', eds_title: 'The title of the document'),
+      SolrDocument.new(id: '321cba', eds_title: 'Another title for the document'),
+      SolrDocument.new(id: 'wqoeif', eds_title: 'Yet another title for the document')
+  ]
+
   def stub_article_service(type: :multiple, docs:)
     raise 'Article search service stubbed without any documents.' if docs.blank?
 

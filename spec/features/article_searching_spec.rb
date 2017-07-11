@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Article Searching' do
   describe 'Search bar dropdown', js: true do
     scenario 'allows the user to switch to the article search context' do
-      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit root_path
 
       within '.search-dropdown' do
@@ -32,14 +32,14 @@ feature 'Article Searching' do
 
   describe 'articles index page' do
     scenario 'renders home page if no search parameters are present' do
-      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit article_index_path
       expect(page).to have_css('.home-page-column', count: 3)
       expect(page).to have_css('h1', text: /Find journal articles/)
     end
 
     scenario 'renders results page if search parameters are present' do
-      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit article_index_path
       within '.search-form' do
         fill_in 'q', with: 'Kittens'
@@ -52,12 +52,8 @@ feature 'Article Searching' do
   end
 
   scenario 'article records are navigable from search results' do
-    results = [
-      SolrDocument.new(id: 'abc123', eds_title: 'The title of the document'),
-      SolrDocument.new(id: '321cba', eds_title: 'Another title for the document')
-    ]
-    stub_article_service(docs: results)
-    stub_article_service(type: :single, docs: [results.first]) # just a single document for the record view
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first]) # just a single document for the record view
 
     visit article_index_path
 
@@ -77,7 +73,7 @@ feature 'Article Searching' do
 
   describe 'breadcrumbs', js: true do
     scenario 'start over button returns users to articles home page' do
-      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit article_index_path
 
       within '.search-form' do
@@ -93,7 +89,7 @@ feature 'Article Searching' do
     end
 
     scenario 'removing last breadcrumb redirects to articles home' do
-      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit article_index_path
 
       within '.search-form' do
