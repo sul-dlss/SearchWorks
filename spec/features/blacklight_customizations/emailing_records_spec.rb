@@ -36,7 +36,7 @@ describe "Emailing Records", type: :feature, js: true do
 
       within('.modal-dialog') do
         fill_in 'to', with: 'email@example.com'
-        choose 'Full record'
+        find('#type_full').trigger('click')
 
         find('button[type="submit"]').click
       end
