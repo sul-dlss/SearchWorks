@@ -29,4 +29,4 @@ sudo: false
 language: ruby
 cache: bundler
 
-script: bundle exec rake ci
+script: bundle exec rake
