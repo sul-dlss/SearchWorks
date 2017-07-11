@@ -57,6 +57,10 @@ module StubArticleService
     def rows
       documents.count
     end
+
+    def sort
+      'score desc'
+    end
   end
 end
 
