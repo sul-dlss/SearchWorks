@@ -26,4 +26,11 @@
       <%= next_page_tag %>
     </div>
   <% end -%>
+<% else -%>
+  <%# we still want the "1-n" to show up -%>
+  <div class="page_links pull-left">
+    <span class="page_entries">
+      <%= page_entries_info %>
+    </span>
+  </div>
 <% end -%>
