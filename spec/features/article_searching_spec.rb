@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'Article Searching' do
   describe 'Search bar dropdown', js: true do
     scenario 'allows the user to switch to the article search context' do
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
       visit root_path
 
       within '.search-dropdown' do
@@ -16,7 +17,7 @@ feature 'Article Searching' do
         click_link 'articles'
       end
 
-      expect(page).to have_current_path(article_home_path) # the landing page for Article Search
+      expect(page).to have_current_path(article_index_path) # the landing page for Article Search
 
       within '.search-dropdown' do
         click_link 'search articles'
@@ -29,19 +30,25 @@ feature 'Article Searching' do
     end
   end
 
-  scenario 'when searching w/i the article context we stay in the articles controller' do
-    stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
-    visit article_home_path
-
-    within '.search-form' do
-      fill_in 'q', with: 'Kittens'
-
-      click_button 'Search'
+  describe 'articles index page' do
+    scenario 'renders home page if no search parameters are present' do
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      visit article_index_path
+      expect(page).to have_css('.home-page-column', count: 3)
+      expect(page).to have_css('h1', text: /Find journal articles/)
     end
 
-    expect(page).to have_css('h2', text: /\d+ results?/)
+    scenario 'renders results page if search parameters are present' do
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      visit article_index_path
+      within '.search-form' do
+        fill_in 'q', with: 'Kittens'
+        click_button 'Search'
+      end
 
-    expect(current_url).to match(%r{/article\?.*&q=Kittens})
+      expect(page).to have_css('h2', text: /\d+ results?/)
+      expect(current_url).to match(%r{/article\?.*&q=Kittens})
+    end
   end
 
   scenario 'article records are navigable from search results' do
@@ -52,7 +59,7 @@ feature 'Article Searching' do
     stub_article_service(docs: results)
     stub_article_service(type: :single, docs: [results.first]) # just a single document for the record view
 
-    visit article_home_path
+    visit article_index_path
 
     within '.search-form' do
       fill_in 'q', with: 'Kittens'
@@ -66,5 +73,39 @@ feature 'Article Searching' do
 
     expect(page).to have_css('h1', text: 'The title of the document')
     expect(current_url).to match(%r{/article/abc123})
+  end
+
+  describe 'breadcrumbs', js: true do
+    scenario 'start over button returns users to articles home page' do
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      visit article_index_path
+
+      within '.search-form' do
+        fill_in 'q', with: 'kittens'
+        find('#search').trigger('click')
+      end
+
+      expect(page).to have_css('.appliedFilter', text: /kittens/)
+
+      find('a.btn', text: /Start over/).trigger('click')
+      expect(page).to have_current_path(article_index_path)
+      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+    end
+
+    scenario 'removing last breadcrumb redirects to articles home' do
+      stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
+      visit article_index_path
+
+      within '.search-form' do
+        fill_in 'q', with: 'kittens'
+        find('#search').trigger('click')
+      end
+
+      expect(page).to have_css('.appliedFilter', text: /kittens/)
+
+      find(:css, 'a.remove').trigger('click')
+      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+      expect(current_url).not_to match(%r{/article\?.*&q=kittens})
+    end
   end
 end
