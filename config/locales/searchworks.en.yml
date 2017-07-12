@@ -99,6 +99,10 @@ en:
     page_title: '%{application_name} advanced search'
 
   record_side_nav:
+    abstract:
+      id: "abstract"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Abstract"
     abstract_contents:
       id: "abstract-contents"
       icon: '<i class="fa fa-align-justify"></i>'
@@ -123,6 +127,10 @@ en:
       id: "bibliography-info"
       icon: '<i class="fa fa-info"></i>'
       label: "Info"
+    details:
+      id: "details"
+      icon: '<i class="fa fa-info"></i>'
+      label: "Details"
     browse_nearby:
       id: "browse-nearby"
       icon: '<span class="sul-icon sul-icon-books-3"></span>'
