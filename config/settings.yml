@@ -33,3 +33,7 @@ EDS_USER: the-eds-user
 EDS_PASS: the-eds-password
 EDS_PROFILE: the-eds-profile
 EDS_DEBUG: false
+EDS_CACHE: true
+EDS_LOGDIR: <%= Rails.root.join('log') %>
+EDS_TIMEOUT: 15
+EDS_OPEN_TIMEOUT: 2
