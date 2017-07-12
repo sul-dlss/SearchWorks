@@ -22,6 +22,7 @@ class ArticleController < ApplicationController
   configure_blacklight do |config|
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
+    config.search_builder_class = ArticleSearchBuilder
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
@@ -163,18 +164,8 @@ class ArticleController < ApplicationController
     config.add_sort_field 'oldest', sort: 'oldest', label: 'date (oldest)'
   end
 
-  def index
-    (@response, _deprecated_document_list) = search_service.search_results
-  end
-
-  def show
-    @response, @document = search_service.fetch(params[:id])
-    respond_to do |format|
-      format.html { setup_next_and_previous_documents }
-    end
-  end
-
-  def new; end
+  # Used by default Blacklight `index` and `show` actions
+  delegate :search_results, :fetch, to: :search_service
 
   protected
 
@@ -187,7 +178,7 @@ class ArticleController < ApplicationController
       'guest' => true, # TODO: hardcoded to non-authenticated
       'session_token' => session['eds_session_token']
     }
-    Eds::SearchService.new(blacklight_config, search_state.to_h, eds_params)
+    Eds::SearchService.new(blacklight_config, eds_params)
   end
 
   def set_search_query_modifier
