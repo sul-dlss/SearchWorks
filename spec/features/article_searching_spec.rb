@@ -39,12 +39,7 @@ feature 'Article Searching' do
     end
 
     scenario 'renders results page if search parameters are present' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path
-      within '.search-form' do
-        fill_in 'q', with: 'Kittens'
-        click_button 'Search'
-      end
+      article_search_for('Kittens')
 
       expect(page).to have_css('h2', text: /\d+ results?/)
       expect(current_url).to match(%r{/article\?.*&q=Kittens})
@@ -52,16 +47,9 @@ feature 'Article Searching' do
   end
 
   scenario 'article records are navigable from search results' do
-    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first]) # just a single document for the record view
 
-    visit article_index_path
-
-    within '.search-form' do
-      fill_in 'q', with: 'Kittens'
-
-      click_button 'Search'
-    end
+    article_search_for('Kittens')
 
     within(first('.document')) do
       click_link 'The title of the document'
@@ -73,13 +61,7 @@ feature 'Article Searching' do
 
   describe 'breadcrumbs', js: true do
     scenario 'start over button returns users to articles home page' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path
-
-      within '.search-form' do
-        fill_in 'q', with: 'kittens'
-        find('#search').trigger('click')
-      end
+      article_search_for('kittens')
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
@@ -89,13 +71,7 @@ feature 'Article Searching' do
     end
 
     scenario 'removing last breadcrumb redirects to articles home' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path
-
-      within '.search-form' do
-        fill_in 'q', with: 'kittens'
-        find('#search').trigger('click')
-      end
+      article_search_for('kittens')
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
@@ -107,14 +83,7 @@ feature 'Article Searching' do
 
   describe 'sidenav mini-map' do
     it 'top/bottom buttons are present in search results' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-
-      visit article_index_path
-
-      within '.search-form' do
-        fill_in 'q', with: 'kittens'
-        find('#search').trigger('click')
-      end
+      article_search_for('kittens')
 
       expect(page).to have_button('Top')
       expect(page).to have_button('Bottom')
@@ -124,5 +93,19 @@ feature 'Article Searching' do
 
   it 'displays the appropriate fields in the search' do
     skip 'we need some EDS fixtures'
+  end
+
+  def article_search_for(query)
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    visit article_index_path
+
+    within '.search-form' do
+      fill_in 'q', with: query
+      if Capybara.current_driver == :poltergeist
+        find('#search').trigger('click')
+      else
+        click_button 'Search'
+      end
+    end
   end
 end
