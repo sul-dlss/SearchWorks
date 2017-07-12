@@ -21,6 +21,11 @@
   }
 }
 
+@mixin h1-show-title-font {
+  font-family: 'dejavu_sansextralight';
+  letter-spacing: -.03em;
+}
+
 @mixin h3-index-title-indent {
   text-indent: -12px;
 }
