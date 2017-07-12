@@ -104,6 +104,24 @@ feature 'Article Searching' do
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
   end
+
+  describe 'sidenav mini-map' do
+    it 'top/bottom buttons are present in search results' do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+
+      visit article_index_path
+
+      within '.search-form' do
+        fill_in 'q', with: 'kittens'
+        find('#search').trigger('click')
+      end
+
+      expect(page).to have_button('Top')
+      expect(page).to have_button('Bottom')
+    end
+  end
+
+
   it 'displays the appropriate fields in the search' do
     skip 'we need some EDS fixtures'
   end
