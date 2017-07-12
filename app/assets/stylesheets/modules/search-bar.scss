@@ -33,6 +33,7 @@
 
       .dropdown-menu {
         left: auto;
+        top: 70%;
 
         li.active > a {
           background-color: $public-note-yellow;
@@ -100,6 +101,12 @@
       margin-top: 5px;
       text-align: center;
       width: 100%;
+      
+      .search-dropdown {
+        .dropdown-menu {
+          top: 45%;
+        }
+      }
     }
 
     .search-target {
