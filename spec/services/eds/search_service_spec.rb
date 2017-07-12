@@ -9,16 +9,24 @@ RSpec.describe Eds::SearchService do
     )
   }
   subject(:instance) { described_class.new(blacklight_config) }
+  subject(:user_params) { {} }
+
+  before do
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
+  end
 
   it '#search_results' do
-    expect(instance.respond_to?(:search_results)).to be_truthy
-    expect(instance.repository).to receive(:search)
-    expect(instance.search_results).to be_truthy
+    results = instance.search_results(user_params)
+    expect(results.length).to eq 2
+    expect(results[0]).to be_an(Blacklight::Solr::Response)
+    expect(results[1]).to eq StubArticleService::SAMPLE_RESULTS
   end
 
   it '#fetch' do
-    expect(instance.respond_to?(:fetch)).to be_truthy
-    expect(instance.repository).to receive(:find).and_return(instance_double(Blacklight::Solr::Response, documents: []))
-    expect(instance.fetch).to be_truthy
+    results = instance.fetch(StubArticleService::SAMPLE_RESULTS.first.id)
+    expect(results.length).to eq 2
+    expect(results[0]).to be_an(Blacklight::Solr::Response)
+    expect(results[1].id).to eq StubArticleService::SAMPLE_RESULTS.first.id
   end
 end
