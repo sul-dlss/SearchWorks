@@ -17,4 +17,27 @@ feature 'Article Record Display' do
       end
     end
   end
+
+  describe 'sidenav mini-map' do
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        eds_abstract: 'The Abstract',
+        eds_subjects_person: %w[A Subject],
+        eds_volume: 'The Volumne'
+      )
+    end
+
+    it 'is present for each section on the page (+ top/bottom)' do
+      visit article_path(document[:id])
+
+      within '.side-nav-minimap' do
+        expect(page).to have_button('Top')
+        expect(page).to have_button('Abstract')
+        expect(page).to have_button('Subjects')
+        expect(page).to have_button('Details')
+        expect(page).to have_button('Bottom')
+      end
+    end
+  end
 end
