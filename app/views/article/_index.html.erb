@@ -26,6 +26,11 @@
         </div>
         <%= render 'search_header' %>
         <%= render @response.documents, as: :document %>
+
+        <%- unless @response.empty? %>
+          <%= render 'shared/side_nav_minimap' %>
+        <%- end %>
+
         <%= render 'search_footer' %>
       <% end %>
     </div>
