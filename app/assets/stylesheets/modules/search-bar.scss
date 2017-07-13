@@ -33,6 +33,7 @@
 
       .dropdown-menu {
         left: auto;
+        top: 70%;
 
         li.active > a {
           background-color: $public-note-yellow;
@@ -54,13 +55,17 @@
   }
 
   .search-target {
-    border-bottom: $white dashed 1px;
+    border-bottom: $white dashed 2px;
     color: $white;
-    display: inline-table;
-    font-size: 22px;
-    font-weight: 100;
-    margin: 39px 0 0;
+    margin: 3px 0;
     padding: 0;
+
+    h1 {
+      color: $white;
+      display: inline-block;
+      margin: 30px 0 0;
+      padding: 0;
+    }
   }
 
   @media screen and (max-width: $screen-md-min) {
@@ -96,12 +101,22 @@
       margin-top: 5px;
       text-align: center;
       width: 100%;
+      
+      .search-dropdown {
+        .dropdown-menu {
+          top: 45%;
+        }
+      }
     }
 
     .search-target {
       float: none;
       margin-top: 5px;
-      vertical-align: middle;
+      vertical-align: baseline;
+
+      h1 {
+        margin-top: 0;
+      }
     }
 
     #searchworks-logo {
@@ -109,7 +124,7 @@
 
       img {
         display: inline-block;
-        height: 24px;
+        vertical-align: baseline;
       }
     }
   }
