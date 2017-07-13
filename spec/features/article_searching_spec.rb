@@ -46,17 +46,28 @@ feature 'Article Searching' do
     end
   end
 
-  scenario 'article records are navigable from search results' do
-    stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first]) # just a single document for the record view
-
-    article_search_for('Kittens')
-
-    within(first('.document')) do
-      click_link 'The title of the document'
+  describe 'article search results' do
+    scenario 'subjects are not linked' do
+      stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
+      article_search_for('kittens')
+      within '.document-position-0' do
+        expect(page).to have_css('li', text: /Kittens/)
+        expect(page).not_to have_link('Kittens')
+      end
     end
 
-    expect(page).to have_css('h1', text: 'The title of the document')
-    expect(current_url).to match(%r{/article/abc123})
+    scenario 'records are navigable' do
+      stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first]) # just a single document for the record view
+
+      article_search_for('Kittens')
+
+      within(first('.document')) do
+        click_link 'The title of the document'
+      end
+
+      expect(page).to have_css('h1', text: 'The title of the document')
+      expect(current_url).to match(%r{/article/abc123})
+    end
   end
 
   describe 'breadcrumbs', js: true do
