@@ -34,6 +34,19 @@ class ArticleController < ApplicationController
     # config.add_index_field 'author_display', label: 'Author'
     # config.add_index_field 'id'
 
+    # Summary
+    config.add_index_field "eds_authors", label: 'Authors'
+    config.add_index_field "eds_author_affiliations", label: 'Author Affiliations'
+    config.add_index_field "eds_composed_title", label: 'Composed Title', helper_method: :strip_html_from_solr_field
+    config.add_index_field "eds_publication_date", label: 'Publication Date'
+    config.add_index_field "eds_languages", label: 'Language'
+
+    # Subjects
+    config.add_index_field "eds_subjects", label: 'Subjects'
+    config.add_index_field "eds_subjects_geographic", label: 'Geography'
+    config.add_index_field "eds_subjects_person", label: 'Person Subjects'
+    config.add_index_field "eds_author_supplied_keywords", label: 'Author Supplied Keywords'
+
     config.add_search_field('search') do |field|
       field.label = 'All fields'
     end
@@ -118,7 +131,6 @@ class ArticleController < ApplicationController
     config.show.sections.each do |_section, fields|
       fields.each do |field, options|
         config.add_show_field field.to_s, options
-        config.add_index_field field.to_s, options.except(:separator_options)
       end
     end
 
