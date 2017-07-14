@@ -6,6 +6,7 @@ HOSTNAME: <%= (`echo $HOSTNAME`).gsub('.stanford.edu', '') %>
 STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
 SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
+HOOVER_REQUESTS_URL: 'https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20'
 LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
 STACKMAP_API_URL: "https://stanford.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'

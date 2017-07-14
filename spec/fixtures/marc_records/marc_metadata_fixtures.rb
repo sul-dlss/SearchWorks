@@ -1182,4 +1182,36 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def hoover_request_fixture
+    <<-xml
+      <record>
+      <datafield tag="100" ind1=" " ind2=" ">
+        <subfield code="a">100 Subfield $a</subfield>
+      </datafield>
+        <datafield tag="245" ind1=" " ind2=" ">
+          <subfield code="f">245 Subfield $f</subfield>
+        </datafield>
+        <datafield tag="250" ind1=" " ind2=" ">
+          <subfield code="a">250 Subfield $a</subfield>
+        </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="a">260 Subfield $a</subfield>
+          <subfield code="b">260 Subfield $b</subfield>
+          <subfield code="c">260 Subfield $c</subfield>
+        </datafield>
+        <datafield tag="264" ind1=" " ind2=" ">
+          <subfield code="c">264 Subfield $c</subfield>
+        </datafield>
+        <datafield tag="506" ind1=" " ind2=" ">
+          <subfield code="3">506 Subfield $3</subfield>
+          <subfield code="a">506 Subfield $a</subfield>
+        </datafield>
+        <datafield tag="540" ind1=" " ind2=" ">
+          <subfield code="3">540 Subfield $3</subfield>
+          <subfield code="a">540 Subfield $a</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end
