@@ -30,9 +30,10 @@ class ArticleController < ApplicationController
     config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
 
-    # Configured index fields not used
-    # config.add_index_field 'author_display', label: 'Author'
-    # config.add_index_field 'id'
+    config.add_index_field "eds_authors", label: 'Authors'
+    config.add_index_field "eds_composed_title", label: 'Composed Title', helper_method: :strip_html_from_solr_field
+    config.add_index_field "eds_subjects", label: 'Subjects'
+    config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :strip_html_from_solr_field
 
     config.add_search_field('search') do |field|
       field.label = 'All fields'
@@ -118,7 +119,6 @@ class ArticleController < ApplicationController
     config.show.sections.each do |_section, fields|
       fields.each do |field, options|
         config.add_show_field field.to_s, options
-        config.add_index_field field.to_s, options.except(:separator_options)
       end
     end
 
