@@ -30,22 +30,10 @@ class ArticleController < ApplicationController
     config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
 
-    # Configured index fields not used
-    # config.add_index_field 'author_display', label: 'Author'
-    # config.add_index_field 'id'
-
-    # Summary
     config.add_index_field "eds_authors", label: 'Authors'
-    config.add_index_field "eds_author_affiliations", label: 'Author Affiliations'
     config.add_index_field "eds_composed_title", label: 'Composed Title', helper_method: :strip_html_from_solr_field
-    config.add_index_field "eds_publication_date", label: 'Publication Date'
-    config.add_index_field "eds_languages", label: 'Language'
-
-    # Subjects
     config.add_index_field "eds_subjects", label: 'Subjects'
-    config.add_index_field "eds_subjects_geographic", label: 'Geography'
-    config.add_index_field "eds_subjects_person", label: 'Person Subjects'
-    config.add_index_field "eds_author_supplied_keywords", label: 'Author Supplied Keywords'
+    config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :strip_html_from_solr_field
 
     config.add_search_field('search') do |field|
       field.label = 'All fields'
