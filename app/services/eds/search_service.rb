@@ -41,5 +41,13 @@ module Eds
       solr_response = @repository.find id, extra_controller_params, @eds_params
       [solr_response, solr_response.documents.first]
     end
+
+    ##
+    # Get the solr response when retrieving only a single facet field
+    # @return [Blacklight::Solr::Response] the solr response
+    def facet_field_response(facet_field, extra_controller_params = {})
+      query = search_builder.with(@user_params).facet(facet_field)
+      @repository.search(query.merge(extra_controller_params), @eds_params)
+    end
   end
 end

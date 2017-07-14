@@ -125,7 +125,7 @@ class ArticleController < ApplicationController
     # Facet field configuration
     config.add_facet_field 'eds_search_limiters_facet', label: 'Options'
     config.add_facet_field 'eds_publication_type_facet', label: 'Source type'
-    config.add_facet_field 'eds_language_facet', label: 'Language' # , limit: 20 TODO: Need to handle facet limiting
+    config.add_facet_field 'eds_language_facet', label: 'Language', limit: 10
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic'
     config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography'
     config.add_facet_field 'eds_journal_facet', label: 'Journal title'
@@ -163,6 +163,18 @@ class ArticleController < ApplicationController
   end
 
   def new; end
+
+  def facet
+    @facet = blacklight_config.facet_fields[params[:id]]
+    @response = search_service.facet_field_response(@facet.key)
+    @display_facet = @response.aggregations[@facet.field]
+    @pagination = facet_paginator(@facet, @display_facet)
+    respond_to do |format|
+      format.html
+      format.json
+      format.js { render layout: false }
+    end
+  end
 
   protected
 
