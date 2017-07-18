@@ -18,6 +18,10 @@ RSpec.describe ArticleSearchBuilder do
       expect(search_builder['page']).to be_nil
       expect(search_builder['per_page']).to be_nil
     end
+
+    it 'has a simple processor chain' do
+      expect(described_class.default_processor_chain).to eq %i[add_eds_params]
+    end
   end
 
   context 'paged search' do
