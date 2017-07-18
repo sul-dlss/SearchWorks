@@ -21,6 +21,25 @@ module ArticleHelper
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 
+  def link_authors(options = {})
+    return if options[:value].blank?
+    separators = options.dig(:config, :separator_options) || {}
+    values = render_text_from_html(options[:value])
+    values.collect do |value|
+      search, label_relator = parse_out_relators(value)
+      (link_to search, article_index_path(q: "\"#{search}\"", search_field: :author)) + "#{label_relator}"
+    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+  end
+
+  def strip_author_relators(options = {})
+    return if options[:value].blank?
+    separators = options.dig(:config, :separator_options) || {}
+    values = render_text_from_html(options[:value])
+    values.collect do |value|
+      parse_out_relators(value).first # ignore second return value (label)
+    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+  end
+
   def link_to_doi(options = {})
     doi = options[:value].try(:first)
     return if doi.blank?
@@ -42,4 +61,20 @@ module ArticleHelper
       doc.xpath('//text()').to_a.map(&:to_s)
     end.flatten
   end
+
+  private
+
+  RELATOR_TERMS = %w[Author Originator]
+
+  def parse_out_relators(value)
+    value = value.dup
+    label = ''
+    RELATOR_TERMS.each do |relator|
+      next unless value =~ /, #{relator}$/i
+      label = ", #{relator}"
+      value.gsub!(/, #{relator}$/i, '')
+    end
+    [value, label]
+  end
+
 end
