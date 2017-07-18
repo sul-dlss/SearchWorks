@@ -101,10 +101,13 @@
       margin-top: 5px;
       text-align: center;
       width: 100%;
-      
+
       .search-dropdown {
         .dropdown-menu {
+          left: 0;
           top: 45%;
+          width: 100%;
+          z-index: 10001;
         }
       }
     }
