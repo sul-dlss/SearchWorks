@@ -12,6 +12,7 @@ module RequestLinkHelper
 
   def request_link(document, callnumber, barcode = nil)
     return unless callnumber
+    return hoover_request_url(document, callnumber) if Constants::HOOVER_LIBS.include?(callnumber.library)
     if callnumber.home_location == 'SSRC-DATA'
       base_url = Settings.SSRC_REQUESTS_URL
       request_params = ssrc_params(document, callnumber)
@@ -23,6 +24,10 @@ module RequestLinkHelper
   end
 
   private
+
+  def hoover_request_url(document, callnumber)
+    HooverOpenUrlRequest.new(callnumber.library, document, self).to_url
+  end
 
   def process_request_params(document, callnumber, barcode)
     request_params = request_options(document, callnumber)

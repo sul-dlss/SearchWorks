@@ -845,15 +845,18 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  REQUEST_LIBS = ['MEDIA-MTXT', 'RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
+  REQUEST_LIBS = ['HOOVER', 'HV-ARCHIVE', 'MEDIA-MTXT', 'RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
   REQUEST_ON_SITE_ACCESS_LIBS = [
+    'HOOVER',
     'HV-ARCHIVE',
     'RUMSEYMAP',
     'SPEC-COLL'
   ].freeze
+
+  HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
 
   REQUEST_LOCS = ['GUNST-30',
                   'FELTON-30',

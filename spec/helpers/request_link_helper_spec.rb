@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe RequestLinkHelper do
+  include MarcMetadataFixtures
+
   let(:current_location_document) do
     SolrDocument.new(
       id: '1234',
@@ -66,6 +68,22 @@ describe RequestLinkHelper do
             no_current_location_document.holdings.callnumbers.first.barcode
           )
         ).to match(/barcode=barcode/)
+      end
+    end
+
+    describe 'Hoover Library/Archive' do
+      let(:hoover_doc) do
+        SolrDocument.new(
+          id: '1234',
+          marcxml: hoover_request_fixture,
+          item_display: ['9876 -|- HOOVER -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123']
+        )
+      end
+
+      it "returns the OpenURL link for Hoover's request system" do
+        link = helper.request_link(hoover_doc, hoover_doc.holdings.callnumbers.first)
+
+        expect(link).to match(/^#{Regexp.escape(Settings.HOOVER_REQUESTS_URL)}/)
       end
     end
 
