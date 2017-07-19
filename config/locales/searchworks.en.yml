@@ -37,7 +37,7 @@ en:
         label: 'Field'
   blacklight:
     course_reserves:
-      page_title: "Browse course reserves in %{application_name}"
+      page_title: "Course reserves in %{application_name}"
     email:
       form:
         to: 'Email to:'
@@ -85,7 +85,7 @@ en:
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
-      feedback_alert_html: "The Stanford University Libraries will be closed for Winter Break from December 19th through January 3rd. All SearchWorks inquiries submitted during the closure will not be read until January 4th. If you require a response before January 4th, please send your comments to %{href}."
+      feedback_alert_html: "The Stanford Libraries will be closed for Winter Break from December 19th through January 3rd. All SearchWorks inquiries submitted during the closure will not be read until January 4th. If you require a response before January 4th, please send your comments to %{href}."
     range_limit:
       submit_limit: 'Apply'
   blacklight_advanced_search:
@@ -96,7 +96,7 @@ en:
       search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
-    page_title: '%{application_name} advanced search'
+    page_title: 'Advanced search in %{application_name}'
 
   record_side_nav:
     abstract:
