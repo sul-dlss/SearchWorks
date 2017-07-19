@@ -156,6 +156,12 @@ class ArticleController < ApplicationController
   # Used by default Blacklight `index` and `show` actions
   delegate :search_results, :fetch, to: :search_service
 
+  # TODO: remove me when EDS gem supports more efficient Prev/Next functionality
+  #       see https://github.com/sul-dlss/SearchWorks/issues/1493
+  def setup_next_and_previous_documents
+    # do nothing
+  end
+
   protected
 
   def _prefixes
