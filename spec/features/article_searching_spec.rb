@@ -18,10 +18,9 @@ feature 'Article Searching' do
       end
 
       expect(page).to have_current_path(article_index_path) # the landing page for Article Search
-
+      expect(page).to have_title('SearchWorks articles : Stanford Libraries')
       within '.search-dropdown' do
         click_link 'search articles'
-
         expect(page).to have_css('.dropdown-menu', visible: true)
 
         expect(page).not_to have_css('li.active a', text: /catalog/)
@@ -53,6 +52,7 @@ feature 'Article Searching' do
     scenario 'renders results page if search parameters are present' do
       article_search_for('Kittens')
 
+      expect(page).to have_title(/\d+ (result|results) in SearchWorks articles/)
       expect(page).to have_css('h2', text: /\d+ results?/)
       expect(current_url).to match(%r{/article\?.*&q=Kittens})
     end

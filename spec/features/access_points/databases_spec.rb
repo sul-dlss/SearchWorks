@@ -5,7 +5,7 @@ feature "Databases Access Point" do
     visit databases_path
   end
   scenario "should have a custom masthead" do
-    expect(page).to have_title("Databases in SearchWorks")
+    expect(page).to have_title("Databases in SearchWorks catalog")
     within("#masthead") do
       expect(page).to have_css("h1", text: "Databases")
       expect(page).to have_css("a", text: "Find articles")

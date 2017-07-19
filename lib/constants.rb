@@ -1072,7 +1072,7 @@ module Constants
     'MEYER' => 'Meyer Library',
     'MUSIC' => 'Music Library',
     'RUMSEYMAP' => 'David Rumsey Map Center',
-    # "PHYSICS" => "Stanford University Libraries",
+    # "PHYSICS" => "Stanford Libraries",
     'SAL' => 'SAL1&2 (on-campus shelving)',
     'SAL3' => 'SAL3 (off-campus storage)',
     'SAL-NEWARK' => 'SAL Newark (off-campus storage)',
@@ -1080,8 +1080,8 @@ module Constants
     'SPEC-COLL' => 'Special Collections',
     # "SPEC-DESK" => "(In-transit location for SAL paged items)",
     'TANNER' => 'Philosophy Library (Tanner)',
-    'ZOMBIE' => 'Stanford University Libraries'
-    # "SUL" => "Stanford University Libraries"
+    'ZOMBIE' => 'Stanford Libraries'
+    # "SUL" => "Stanford Libraries"
   }
   TRANSLATE_STATUS = {
     'available' => 'Available',
