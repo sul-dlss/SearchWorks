@@ -16,15 +16,17 @@
           <%= render :partial => 'shared/search_navbar_top_menu' %>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-link">
-          <%= render_search_bar_advanced_widget %>
-        </li>
-        <li class="navbar-link">
-          <%= link_to "Course reserves", course_reserves_path %>
-        </li>
-        <%= render_search_bar_selections_widget %>
-      </ul>
+      <% unless article_search? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-link">
+            <%= render_search_bar_advanced_widget %>
+          </li>
+          <li class="navbar-link">
+            <%= link_to "Course reserves", course_reserves_path %>
+          </li>
+          <%= render_search_bar_selections_widget %>
+        </ul>
+      <% end %>
     </div>
   </div>
 </div>
