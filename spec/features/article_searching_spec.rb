@@ -30,6 +30,18 @@ feature 'Article Searching' do
     end
   end
 
+  describe 'subnavbar' do
+    scenario 'catalog-specific sub-menus are not rendered' do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+      visit article_index_path
+
+      expect(page).to have_css('a', text: /Library services/)
+      expect(page).not_to have_css('a', text: /Advanced search/)
+      expect(page).not_to have_css('a', text: /Course reserves/)
+      expect(page).not_to have_css('a', text: /Selections/)
+    end
+  end
+
   describe 'articles index page' do
     scenario 'renders home page if no search parameters are present' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
