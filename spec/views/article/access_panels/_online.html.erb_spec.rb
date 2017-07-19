@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe 'article/access_panels/_online.html.erb' do
   let(:document) do
     SolrDocument.new(
-      fulltext_link_field: [{ 'label' => 'Link Label', 'url' => 'http://example.com' }]
+      fulltext_link_field: [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
     )
   end
 
@@ -32,6 +32,6 @@ RSpec.describe 'article/access_panels/_online.html.erb' do
   end
 
   it 'includes EDS fulltext links' do
-    expect(rendered).to have_css('.panel-body ul li a', text: 'Link Label')
+    expect(rendered).to have_css('.panel-body ul li a', text: 'View full text')
   end
 end
