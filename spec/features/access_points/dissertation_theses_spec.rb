@@ -6,7 +6,7 @@ describe 'Dissertation Theses Access Point' do
     click_link 'Dissertations & theses'
   end
   it 'should have a custom page title' do
-    expect(page).to have_title('Dissertation theses in SearchWorks')
+    expect(page).to have_title('Dissertation theses in SearchWorks catalog')
   end
   it 'should include the dissertation/theses masthead' do
     within(".dissertation-theses-masthead") do
