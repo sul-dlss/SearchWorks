@@ -1,7 +1,8 @@
 .sul-toolbar {
   @include sul-toolbar-bg-border;
-  padding: 5px 0px;
+  padding: 0;
   margin: 35px 0px;
+  min-height: 40px;
   height: 40px;
   color: $sul-toolbar-color;
 
