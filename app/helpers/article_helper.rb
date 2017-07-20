@@ -28,12 +28,10 @@ module ArticleHelper
     link_to(doi, url)
   end
 
-  def strip_html_from_solr_field(options = {})
-    return unless options[:value]
+  def mark_html_safe(options = {})
+    return unless options[:value].present?
     separators = options.dig(:config, :separator_options) || {}
-    options[:value].collect do |value|
-      safe_join(render_text_from_html(value))
-    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+    options[:value].map(&:to_s).to_sentence(separators).html_safe
   end
 
   def render_text_from_html(values)
