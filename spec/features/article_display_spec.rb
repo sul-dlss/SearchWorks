@@ -18,6 +18,18 @@ feature 'Article Record Display' do
     end
   end
 
+  describe 'Fulltext' do
+    let(:document) do
+      SolrDocument.new(id: '123', eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
+    end
+
+    it 'renders HTML' do
+      visit article_path(document[:id])
+      expect(page).to have_css('.blacklight-eds_html_fulltext')
+      expect(page).not_to have_content('<anid>')
+    end
+  end
+
   describe 'sidenav mini-map' do
     let(:document) do
       SolrDocument.new(
