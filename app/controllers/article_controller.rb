@@ -32,9 +32,9 @@ class ArticleController < ApplicationController
     config.index.fulltext_links_field = 'eds_fulltext_links'
 
     config.add_index_field "eds_authors", label: 'Authors'
-    config.add_index_field "eds_composed_title", label: 'Composed Title', helper_method: :strip_html_from_solr_field
+    config.add_index_field "eds_composed_title", label: 'Composed Title', helper_method: :mark_html_safe
     config.add_index_field "eds_subjects", label: 'Subjects'
-    config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :strip_html_from_solr_field
+    config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :mark_html_safe
 
     config.add_search_field('search') do |field|
       field.label = 'All fields'
@@ -82,12 +82,12 @@ class ArticleController < ApplicationController
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS },
         eds_author_affiliations:  { label: 'Author Affiliations' },
-        eds_composed_title:       { label: 'Composed Title', helper_method: :strip_html_from_solr_field },
+        eds_composed_title:       { label: 'Composed Title', helper_method: :mark_html_safe },
         eds_publication_date:     { label: 'Publication Date' },
-        eds_languages:            { label: 'Language' }
+        eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
       },
       'Abstract' => {
-        eds_abstract: { label: 'Abstract', helper_method: :strip_html_from_solr_field },
+        eds_abstract: { label: 'Abstract', helper_method: :mark_html_safe },
         eds_notes:    { label: 'Notes' }
       },
       'Subjects' => {

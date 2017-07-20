@@ -45,14 +45,6 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context '#strip_html_from_solr_field' do
-    it 'uses the render_text_from_html helper to strip html tags from a solr field' do
-      result = helper.strip_html_from_solr_field(value: %w[<a>b</a><c>d</e>f])
-
-      expect(result).to eq 'bdf'
-    end
-  end
-
   context '#render_text_from_html' do
     it 'returns only text from HTML' do
       result = helper.render_text_from_html(%w[ab<c>d</c>])
@@ -67,6 +59,27 @@ RSpec.describe ArticleHelper do
     it 'returns an empty array if missing' do
       result = helper.render_text_from_html(nil)
       expect(result).to eq []
+    end
+  end
+
+  context '#mark_html_safe' do
+    it 'preserves HTML entities to render' do
+      result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
+      expect(result).to eq 'This &amp; That'
+    end
+    it 'preserves HTML elements to render' do
+      result = helper.mark_html_safe(value: Array.wrap('<i>This Journal</i>, 10(1)'))
+      expect(result).to eq '<i>This Journal</i>, 10(1)'
+    end
+    it 'handles multiple values' do
+      result = helper.mark_html_safe(value: %w[This That])
+      expect(result).to eq 'This and That'
+      result = helper.mark_html_safe(value: %w[This That The\ Other])
+      expect(result).to eq 'This, That, and The Other'
+    end
+    it 'handles multiple values with separators' do
+      result = helper.mark_html_safe(value: %w[This That], config: { separator_options: { two_words_connector: '<br/>' } })
+      expect(result).to eq 'This<br/>That'
     end
   end
 end
