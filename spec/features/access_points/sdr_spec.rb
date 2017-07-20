@@ -6,7 +6,7 @@ describe 'SDR Access Point' do
     click_link "Stanford Digital Repository"
   end
   it 'should have a custom page title' do
-    expect(page).to have_title("SDR items in SearchWorks")
+    expect(page).to have_title("SDR items in SearchWorks catalog")
   end
   it 'should include the SDR masthead' do
     within(".sdr-masthead") do

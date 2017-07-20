@@ -3,7 +3,7 @@ require "spec_helper"
 feature "Search Results Page" do
   scenario "should have correct page title" do
     visit search_catalog_path f: {format: ["Book"]}
-    expect(page).to have_title(/.*\d (result|results) in SearchWorks/)
+    expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)
   end
   scenario "vernacular title" do
     visit search_catalog_path(q: '11')

@@ -4,7 +4,10 @@ en:
     entry_name:
       default: 'result'
     home:
-      title: 'SearchWorks : Stanford University Libraries catalog'
+      title: 'SearchWorks catalog : Stanford Libraries'
+    articles:
+      home:
+        title: 'SearchWorks articles : Stanford Libraries'
     search:
       facets:
         access_point:
