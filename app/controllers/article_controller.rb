@@ -95,6 +95,9 @@ class ArticleController < ApplicationController
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
       },
+      'Full Text' => {
+        eds_html_fulltext: { label: 'Full Text', helper_method: :sanitize_fulltext }
+      },
       'Abstract' => {
         eds_abstract: { label: 'Abstract', helper_method: :mark_html_safe },
         eds_notes:    { label: 'Notes' }

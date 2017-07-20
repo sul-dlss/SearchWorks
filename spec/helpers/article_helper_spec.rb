@@ -107,4 +107,21 @@ RSpec.describe ArticleHelper do
       expect(result).to eq 'This<br/>That'
     end
   end
+
+  context '#sanitize_fulltext' do
+    it 'preserves HTML entities to render' do
+      result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
+      expect(result).to eq 'This &amp; That'
+    end
+
+    it 'preserves HTML elements to render' do
+      result = helper.sanitize_fulltext(value: Array.wrap('<p>This Journal</p>, 10(1)'))
+      expect(result).to eq '<p>This Journal</p>, 10(1)'
+    end
+
+    it 'removes non-HTML EDS tags' do
+      result = helper.sanitize_fulltext(value: Array.wrap('<anid>09dfa;</anid><p>This Journal</p>, 10(1)'))
+      expect(result).to eq '<p>This Journal</p>, 10(1)'
+    end
+  end
 end
