@@ -53,6 +53,16 @@ module ArticleHelper
     options[:value].map(&:to_s).to_sentence(separators).html_safe
   end
 
+  def sanitize_fulltext(options = {})
+    return unless options[:value].present?
+    separators = options.dig(:config, :separator_options) || {}
+    textblock = options[:value].map(&:to_s).to_sentence(separators)
+    textblock = Nokogiri::HTML.fragment(CGI.unescapeHTML(textblock))
+    textblock.search('anid').remove
+    textblock = textblock.to_html
+    sanitize(textblock).html_safe
+  end
+
   def render_text_from_html(values)
     values = Array.wrap(values)
     return [] if values.blank?
