@@ -11,6 +11,6 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
     eds_params.except!('start', 'rows', 'page', 'per_page') # avoid the Solr-like EDS API parameters
     eds_params[:page_number] = page
     eds_params[:results_per_page] = rows
-    eds_params[:highlight] = true # TODO: make highlighting configurable
+    eds_params[:highlight] = false # TODO: make highlighting configurable
   end
 end
