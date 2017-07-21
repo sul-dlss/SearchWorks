@@ -13,14 +13,10 @@
   </a>
    <ul class="dropdown-menu" role="menu">
      <li class="<%= 'active' unless article_search? %>">
-       <%= link_to root_path do %>
-         <%= t('searchworks.search_dropdown.catalog.description_html') %>
-       <% end %>
+       <%= link_to_catalog_search %>
      </li>
      <li class="<%= 'active' if article_search? %>">
-      <%= link_to article_index_path do %>
-        <%= t('searchworks.search_dropdown.articles.description_html') %>
-      <% end %>
+       <%= link_to_article_search %>
     </li>
   </ul>
 </div>

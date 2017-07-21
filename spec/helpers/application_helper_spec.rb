@@ -109,4 +109,46 @@ describe ApplicationHelper do
       expect(helper.from_advanced_search?).to be_truthy
     end
   end
+  describe '#link_to_catalog_search' do
+    subject(:result) { Capybara.string(helper.link_to_catalog_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { title: :search_title })))
+    end
+    it 'passes parameters if currently in article search' do
+      params[:q] = 'my query'
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /catalog/, href: '/?q=my+query')
+    end
+    it 'goes to the home page if currently in catalog search' do
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /catalog/, href: '/')
+    end
+    it 'performs a mapping between fielded search' do
+      params[:q] = 'my query'
+      params[:search_field] = 'title'
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /catalog/, href: '/?q=my+query&search_field=search_title')
+    end
+  end
+  describe '#link_to_article_search' do
+    subject(:result) { Capybara.string(helper.link_to_article_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { search_title: :title })))
+    end
+    it 'passes parameters if currently in catalog search' do
+      params[:q] = 'my query'
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /articles/, href: '/article?q=my+query')
+    end
+    it 'goes to the home page if currently in article search' do
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /articles/, href: '/article')
+    end
+    it 'performs a mapping between fielded search' do
+      params[:q] = 'my query'
+      params[:search_field] = 'search_title'
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /articles/, href: '/article?q=my+query&search_field=title')
+    end
+  end
 end
