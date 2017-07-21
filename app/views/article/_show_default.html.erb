@@ -8,21 +8,34 @@
     <dl class="dl-horizontal dl-invert">
       <% blacklight_config.show.sections.each do |section_name, fields| -%>
         <% if (section = render('article/record/section_fields', document: document, fields: fields.keys)).present? -%>
-          <div class='section'>
-            <% if section_name != 'Summary' -%>
-              <div class='section-heading'>
-                <% mini_map_sections[section_name.downcase] = true %>
-                <h2 id="<%= section_name.downcase %>">
-                  <%= t("record_side_nav.#{section_name.downcase}.icon").html_safe %>
-                  <%= section_name -%>
-                </h2>
-              </div>
-            <% end -%>
+          <% if section_name == 'Fulltext' -%>
+            <div class="section-container-heading">
+              <h2>Full Text</h2>
+            </div>
             <div class='section-body'>
               <%= section -%>
             </div>
-          </div>
-        <% end -%>
+          <% else -%>
+            <% if section_name == 'Summary' -%>
+              <div class="section-container-heading">
+                <h2>About this article</h2>
+              </div>
+              <div class='section'>
+            <% else -%>
+              <div class='section'>
+                <div class='section-heading'>
+                  <% mini_map_sections[section_name.downcase] = true %>
+                  <h2 id="<%= section_name.downcase %>">
+                    <%= section_name -%>
+                  </h2>
+                </div>
+            <% end -%>
+              <div class='section-body'>
+                <%= section -%>
+              </div>
+            </div>
+          <% end -%>
+        <% end %>
       <% end -%>
     </dl>
   </div>
