@@ -30,7 +30,16 @@ class ArticleController < ApplicationController
     config.index.show_link = 'eds_title'
     config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
-
+    config.index.search_field_mapping = { # Article -> Catalog
+      search:   :search,
+      author:   :search_author,
+      title:    :search_title,
+      subject:  :subject_terms,
+      source:   :search_title,
+      abstract: :search,
+      issn:     :isbn_search, # advanced search
+      isbn:     :isbn_search  # advanced search
+    }
     config.add_index_field "eds_authors", label: 'Authors', helper_method: :strip_author_relators
     config.add_index_field "eds_composed_title", label: 'Source', helper_method: :mark_html_safe
     config.add_index_field "eds_subjects", label: 'Subjects'
