@@ -135,3 +135,11 @@ en:
       id: "browse-nearby"
       icon: '<span class="sul-icon sul-icon-books-3"></span>'
       label: "Browse"
+    fulltext:
+      id: "full-text"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Full Text"
+    summary:
+      id: "summary"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Summary"
