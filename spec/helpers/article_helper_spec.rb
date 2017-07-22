@@ -45,6 +45,31 @@ RSpec.describe ArticleHelper do
     end
   end
 
+  context 'authors' do
+    let(:authors) { %w[John\ Doe,\ Author Doe,\ Jane Fred\ Doe] }
+
+    context '#link_authors' do
+      subject(:result) { Capybara.string(helper.link_authors(value: authors)) }
+
+      it 'includes a search link for each author' do
+        expect(result).to have_link 'John Doe', href: '/article?q=%22John+Doe%22&search_field=author'
+        expect(result).to have_link 'Doe, Jane', href: '/article?q=%22Doe%2C+Jane%22&search_field=author'
+        expect(result).to have_link 'Fred Doe', href: '/article?q=%22Fred+Doe%22&search_field=author'
+        expect(result).to have_content 'John Doe, Author, Doe, Jane, and Fred Doe'
+      end
+    end
+    context '#strip_author_relators' do
+      subject(:result) { Capybara.string(helper.strip_author_relators(value: authors)) }
+
+      it 'removes relator terms' do
+        expect(result).to have_content 'John Doe, Doe, Jane, and Fred Doe'
+      end
+      it 'has no links' do
+        expect(result).not_to have_link
+      end
+    end
+  end
+
   context '#render_text_from_html' do
     it 'returns only text from HTML' do
       result = helper.render_text_from_html(%w[ab<c>d</c>])

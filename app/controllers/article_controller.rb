@@ -31,7 +31,7 @@ class ArticleController < ApplicationController
     config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
 
-    config.add_index_field "eds_authors", label: 'Authors'
+    config.add_index_field "eds_authors", label: 'Authors', helper_method: :strip_author_relators
     config.add_index_field "eds_composed_title", label: 'Source', helper_method: :mark_html_safe
     config.add_index_field "eds_subjects", label: 'Subjects'
     config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :mark_html_safe
@@ -80,7 +80,7 @@ class ArticleController < ApplicationController
     config.show.route = { controller: 'article' }
     config.show.sections = {
       'Summary' => {
-        eds_authors:              { label: 'Authors', separator_options: BREAKS },
+        eds_authors:              { label: 'Authors', separator_options: BREAKS, helper_method: :link_authors },
         eds_author_affiliations:  { label: 'Author Affiliations' },
         eds_composed_title:       { label: 'Source', helper_method: :mark_html_safe },
         eds_publication_date:     { label: 'Publication Date' },
