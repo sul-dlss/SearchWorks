@@ -79,6 +79,9 @@ class ArticleController < ApplicationController
     config.show.plink = 'eds_plink'
     config.show.route = { controller: 'article' }
     config.show.sections = {
+      'Fulltext' => {
+        eds_html_fulltext: { label: 'Full Text', helper_method: :sanitize_fulltext }
+      },
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS, helper_method: :link_authors },
         eds_author_affiliations:  { label: 'Author Affiliations' },

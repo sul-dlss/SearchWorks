@@ -1,4 +1,19 @@
 .record-sections {
+  .section-container-heading {
+    background-color: #009B76;
+    border-bottom: 1px solid $sul-panel-border-bottom;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+
+    h2 {
+      border-bottom: 0;
+      color: white;
+      margin: 0;
+      font-size: 1.125em;
+      font-weight: 400;
+    }
+  }
   .section {
     padding-bottom: 0;
 
