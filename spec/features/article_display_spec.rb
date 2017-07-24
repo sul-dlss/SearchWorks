@@ -18,15 +18,27 @@ feature 'Article Record Display' do
     end
   end
 
-  describe 'Fulltext' do
+  describe 'Fulltext', js: true do
     let(:document) do
       SolrDocument.new(id: '123', eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
     end
 
+    it 'toggled via panel heading' do
+      visit article_path(document[:id])
+      expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: false)
+
+      find('#fulltextToggleBar').click
+      expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
+      expect(page).to have_content('This Journal')
+    end
+
     it 'renders HTML' do
       visit article_path(document[:id])
+      find('#fulltextToggleBar').click
       expect(page).to have_css('.blacklight-eds_html_fulltext')
-      expect(page).not_to have_content('<anid>')
+      within('div.blacklight-eds_html_fulltext') do
+        expect(page).not_to have_content('<anid>')
+      end
     end
   end
 
