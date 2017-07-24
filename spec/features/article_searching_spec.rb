@@ -63,7 +63,7 @@ feature 'Article Searching' do
       stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
       article_search_for('kittens')
       within '.document-position-0' do
-        expect(page).to have_css('li', text: /Kittens/)
+        expect(page).to have_css('dd', text: /Kittens/)
         expect(page).not_to have_link('Kittens')
       end
     end
