@@ -849,13 +849,6 @@ module Constants
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
-  REQUEST_ON_SITE_ACCESS_LIBS = [
-    'HOOVER',
-    'HV-ARCHIVE',
-    'RUMSEYMAP',
-    'SPEC-COLL'
-  ].freeze
-
   HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
 
   REQUEST_LOCS = ['GUNST-30',
