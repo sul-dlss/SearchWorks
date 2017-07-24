@@ -8,15 +8,16 @@
     <li><%= doc_presenter.field_value('eds_composed_title') %></li>
   <% end %>
 </ul>
-<ul class='document-metadata dl-horizontal dl-invert'>
-  <% if document['eds_subjects'].present? %>
-    <li><%= doc_presenter.field_value('eds_subjects') %></li>
-  <% end %>
-
-  <% if document['eds_abstract'].present? %>
+<% if document['eds_subjects'].present? %>
+  <dl class="document-metadata dl-horizontal dl-invert">
+    <dt>Subjects</dt> <dd><%= doc_presenter.field_value('eds_subjects') %></dd>
+  </dl>
+<% end %>
+<% if document['eds_abstract'].present? %>
+  <ul class='document-metadata dl-horizontal dl-invert'>
     <li><%= doc_presenter.field_value('eds_abstract') %></li>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
 <% if document['eds_fulltext_links'].present? && !article_restricted?(document) %>
   <ul class='document-metadata dl-horizontal dl-invert'>
     <%= safe_join(doc_presenter.fulltext_links) %>
