@@ -121,4 +121,10 @@ describe SolrDocument do
       expect(subject).to respond_to :organization_and_arrangement
     end
   end
+
+  describe 'EdsDocument' do
+    it 'is included' do
+      expect(subject).to be_kind_of EdsDocument
+    end
+  end
 end
