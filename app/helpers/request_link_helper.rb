@@ -6,7 +6,7 @@ module RequestLinkHelper
       "searchworks.request_link.#{options[:library].try(:code) || 'default'}",
       default: :'searchworks.request_link.default'
     )
-    link_to(link_text, url, rel: 'nofollow', class: options[:class], data: { behavior: 'requests-modal' })
+    link_to(link_text, url, rel: 'nofollow', class: options[:class], data: link_data_attributes(options[:callnumber]))
   end
 
   def request_link(document, callnumber, barcode = nil)
@@ -23,6 +23,12 @@ module RequestLinkHelper
   end
 
   private
+
+  def link_data_attributes(callnumber)
+    return {} if Constants::HOOVER_LIBS.include?(callnumber.library)
+
+    { behavior: 'requests-modal' }
+  end
 
   def hoover_request_url(document, callnumber)
     HooverOpenUrlRequest.new(callnumber.library, document, self).to_url

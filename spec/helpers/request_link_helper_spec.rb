@@ -3,6 +3,14 @@ require 'spec_helper'
 describe RequestLinkHelper do
   include MarcMetadataFixtures
 
+  let(:hoover_document) do
+    SolrDocument.new(
+      id: '1234',
+      marcxml: hoover_request_fixture,
+      item_display: ['barcode -|- HOOVER -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+    )
+  end
+
   let(:current_location_document) do
     SolrDocument.new(
       id: '1234',
@@ -36,6 +44,22 @@ describe RequestLinkHelper do
       )
 
       expect(Capybara.string(link)).to have_link('Request on-site access')
+    end
+
+    it 'has has the requests-modal attribute for non-hoover items' do
+      link = link_to_request_link(
+        document: current_location_document, callnumber: current_location_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).to have_css('a[data-behavior="requests-modal"]')
+    end
+
+    it 'has does not have requests-modal attribute for hoover items' do
+      link = link_to_request_link(
+        document: hoover_document, callnumber: hoover_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).not_to have_css('a[data-behavior="requests-modal"]')
     end
   end
 
