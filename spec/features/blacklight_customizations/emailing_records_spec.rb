@@ -38,7 +38,7 @@ describe "Emailing Records", type: :feature, js: true do
         fill_in 'to', with: 'email@example.com'
         choose 'Full record'
 
-        find('button[type="submit"]').click
+        find('button[type="submit"]').trigger('click')
       end
 
       # triggers capybara to wait until email is sent
