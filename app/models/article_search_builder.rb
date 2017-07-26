@@ -12,5 +12,6 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
     eds_params[:page_number] = page
     eds_params[:results_per_page] = rows
     eds_params[:highlight] = false # TODO: make highlighting configurable
+    eds_params['search_field'] = 'descriptor' if eds_params['search_field'] == 'subject'
   end
 end

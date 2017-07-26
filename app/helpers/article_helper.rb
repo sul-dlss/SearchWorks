@@ -16,8 +16,7 @@ module ArticleHelper
     separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
-      # TODO: Remove DE when we are able to move to a (hidden) search field
-      link_to value, article_index_path(q: "DE \"#{value}\"")
+      link_to value, article_index_path(q: "\"#{value}\"", search_field: :subject)
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 
