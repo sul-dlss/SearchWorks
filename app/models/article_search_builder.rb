@@ -11,7 +11,7 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
     eds_params.except!('start', 'rows', 'page', 'per_page') # avoid the Solr-like EDS API parameters
     eds_params[:page_number] = page
     eds_params[:results_per_page] = rows
-    eds_params[:highlight] = false # TODO: make highlighting configurable
+    eds_params[:highlight] = 'y' # TODO: must be true in order to workaround EDS bug with missing research starter abstracts. See https://github.com/ebsco/edsapi-ruby/issues/55
     eds_params['search_field'] = 'descriptor' if eds_params['search_field'] == 'subject'
   end
 end

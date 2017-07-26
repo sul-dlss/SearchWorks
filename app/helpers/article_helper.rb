@@ -6,6 +6,11 @@ module ArticleHelper
     controller_name == 'article'
   end
 
+  def article_research_starter?(document)
+    # TODO: we probably need a better place to put this...
+    document['eds_database_name'] == 'Research Starters' if document
+  end
+
   def article_restricted?(document)
     # TODO: we probably need a better way to determine this
     document['eds_title'] =~ /^This title is unavailable for guests, please login to see more information./
@@ -54,6 +59,7 @@ module ArticleHelper
 
   def sanitize_fulltext(options = {})
     return unless options[:value].present?
+    return safe_join(options[:value]) if article_research_starter?(@document)
     separators = options.dig(:config, :separator_options) || {}
     textblock = options[:value].map(&:to_s).to_sentence(separators)
     textblock = Nokogiri::HTML.fragment(CGI.unescapeHTML(textblock))
@@ -71,6 +77,37 @@ module ArticleHelper
     end.flatten
   end
 
+  #
+  def transform_research_starter_text(options = {})
+    return if options[:value].blank?
+    doc = Nokogiri::HTML.fragment(CGI.unescapeHTML(options[:value]))
+    doc.search('anid', 'title').remove # remove EDS header content
+
+    # Translate EDS elements into regular HTML
+    element_rename(doc, 'bold', 'b')
+    element_rename(doc, 'emph', 'i')
+    element_rename(doc, 'ulist', 'ul')
+    element_rename(doc, 'item', 'li')
+    element_rename(doc, 'subs', 'sub')
+    element_rename(doc, 'sups', 'sup')
+
+    # Rewrite EDS eplinks into actual hyperlinks to other research starters
+    doc.search('eplink').each do |node|
+      node.name = 'a'
+      node['href'] = article_path(id: "#{@document['eds_database_id']}__#{node['linkkey']}")
+    end
+
+    # Wrap images into figures with captions
+    doc.search('img').each do |node|
+      figure = Nokogiri::HTML.fragment("
+      <div class=\"research-starter-figure clearfix\">
+        #{node.to_html}<span>#{node['title']}</span>
+      </div>")
+      node.replace(figure)
+    end
+    sanitize(doc.to_html, tags: %w[p a b i ul li img div span sub sup])
+  end
+
   private
 
   RELATOR_TERMS = %w[Author Originator]
@@ -86,4 +123,9 @@ module ArticleHelper
     [value, label]
   end
 
+  def element_rename(doc, from, to)
+    doc.search(from).each do |node|
+      node.name = to
+    end
+  end
 end
