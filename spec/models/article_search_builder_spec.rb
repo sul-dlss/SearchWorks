@@ -9,7 +9,7 @@ RSpec.describe ArticleSearchBuilder do
       expect(search_builder[:q]).to eq 'my search'
       expect(search_builder[:page_number]).to eq 1
       expect(search_builder[:results_per_page]).to eq 10
-      expect(search_builder[:highlight]).to be_falsey
+      expect(search_builder[:highlight]).to eq 'y'
     end
 
     it 'excludes some Solr-like parameters' do
