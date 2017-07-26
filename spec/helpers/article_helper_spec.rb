@@ -34,14 +34,14 @@ RSpec.describe ArticleHelper do
   describe '#link_subjects' do
     it 'quotes the subject and does a subject search' do
       result = Capybara.string(helper.link_subjects(value: %w[ABC 123]))
-      expect(result).to have_link 'ABC', href: /\?q=DE\+%22ABC%22/
-      expect(result).to have_link '123', href: /\?q=DE\+%22123%22/
+      expect(result).to have_link 'ABC', href: /\?q=%22ABC%22&search_field=subject/
+      expect(result).to have_link '123', href: /\?q=%22123%22&search_field=subject/
     end
 
     it 'handles html (via render_text_from_html)' do
       result = Capybara.string(helper.link_subjects(value: %w[<p>ABC</p><p>123</p>]))
-      expect(result).to have_link 'ABC', href: /\?q=DE\+%22ABC%22/
-      expect(result).to have_link '123', href: /\?q=DE\+%22123%22/
+      expect(result).to have_link 'ABC', href: /\?q=%22ABC%22&search_field=subject/
+      expect(result).to have_link '123', href: /\?q=%22123%22&search_field=subject/
     end
   end
 
