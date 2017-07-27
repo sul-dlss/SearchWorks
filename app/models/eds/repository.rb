@@ -37,7 +37,7 @@ module Eds
 
     def eds_session_options(eds_params = {})
       {
-        guest:          true, # TODO: hardcoded to non-authenticated
+        guest:          $EDS_GUEST_MODE, # TODO: hardcoded to non-authenticated
         session_token:  eds_params['session_token'],
         caller:         eds_params[:caller],
         user:           Settings.EDS_USER,
