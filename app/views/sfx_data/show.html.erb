@@ -1,0 +1,14 @@
+<ul class='document-metadata dl-horizontal dl-invert' >
+  <% @sfx_data.targets.each do |target| %>
+    <li>
+      <%= link_to(target.name, target.url) %>
+      <% if target.coverage.present? %>
+        <ul>
+          <% target.coverage.each do |coverage| %>
+            <li><%= coverage %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
