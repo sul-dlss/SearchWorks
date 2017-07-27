@@ -1,9 +1,27 @@
 .record-sections {
+  .section {
+    padding-bottom: 0;
+  }
+}
+
+.record-metadata, .upper-record-metadata {
+  @include show-page-row-layout;
+  dt {
+    width: auto;
+  }
+}
+
+.article-record-sections {
+  .fulltext-toggle-bar {
+    border: 0;
+    text-align: left;
+    width: 100%;
+  }
+
   .section-container-heading {
-    background-color: #009B76;
-    border-bottom: 1px solid $sul-panel-border-bottom;
-    margin-top: 10px;
+    background-color: $pantone-334;
     margin-bottom: 15px;
+    margin-top: 10px;
     padding: 10px 15px;
 
     h2 {
@@ -14,27 +32,6 @@
       font-weight: 400;
     }
   }
-  .section {
-    padding-bottom: 0;
-
-    .section-heading h2 {
-      i.fa {
-        font-size: 15px;
-        margin-right: 5px;
-      }
-    }
-  }
-}
-
-.record-metadata, .upper-record-metadata {
-  @include show-page-row-layout;
-
-  dt {
-    width: auto;
-  }
-}
-
-.article-record-sections {
   dt {
     text-align: right;
   }
