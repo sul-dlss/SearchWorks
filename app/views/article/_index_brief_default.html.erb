@@ -13,7 +13,7 @@
   </h3>
 </div>
 
-<% if document['eds_fulltext_links'].present? && !article_restricted?(document) %>
+<% if document['eds_fulltext_links'].present? && !document.article_restricted? %>
   <ul class='document-metadata dl-horizontal dl-invert'>
     <%= safe_join(doc_presenter.fulltext_links) %>
   </ul>

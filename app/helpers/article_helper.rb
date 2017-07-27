@@ -6,11 +6,6 @@ module ArticleHelper
     controller_name == 'article'
   end
 
-  def article_restricted?(document)
-    # TODO: we probably need a better way to determine this
-    document['eds_title'] =~ /^This title is unavailable for guests, please login to see more information./
-  end
-
   def link_subjects(options = {})
     return unless options[:value]
     separators = options.dig(:config, :separator_options) || {}

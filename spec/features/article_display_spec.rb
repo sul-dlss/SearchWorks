@@ -27,14 +27,14 @@ feature 'Article Record Display' do
       visit article_path(document[:id])
       expect(page).to have_css('dd.blacklight-eds_html_fulltext', visible: false)
 
-      find('button.full-text-toggle-bar').click
+      find('#fulltextToggleBar').click
       expect(page).to have_css('dd.blacklight-eds_html_fulltext', visible: true)
       expect(page).to have_content('This Journal')
     end
 
     it 'renders HTML' do
       visit article_path(document[:id])
-      find('div.section-container-heading').click
+      find('#fulltextToggleBar').click
       expect(page).to have_css('.blacklight-eds_html_fulltext')
       within('dd.blacklight-eds_html_fulltext') do
         expect(page).not_to have_content('<anid>')
