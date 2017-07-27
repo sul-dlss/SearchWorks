@@ -25,8 +25,8 @@ module Eds
     end
 
     def eds_find(id, params, eds_params)
-      dbid = id.split('__').first
-      accession = id.split('__').last.tr('_', '.')
+      dbid = id.split('__', 2).first
+      accession = id.split('__', 2).last.tr('_', '.')
       eds_session = EBSCO::EDS::Session.new(eds_session_options(eds_params.update(caller: 'bl-repo-find')))
       record = eds_session.retrieve(dbid: dbid, an: accession)
       blacklight_config.response_model.new(record.to_solr,

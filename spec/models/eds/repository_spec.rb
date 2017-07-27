@@ -21,8 +21,9 @@ RSpec.describe Eds::Repository do
         to_solr: instance_double(SolrDocument)
       )
     )
-    expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+    expect(EBSCO::EDS::Session).to receive(:new).twice.and_return(session)
     expect(instance.find('123__abc')).to be_truthy
+    expect(instance.find('123__abc__def')).to be_truthy
   end
 
   context '#search (normal)' do
