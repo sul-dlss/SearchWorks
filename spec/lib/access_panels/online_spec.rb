@@ -6,7 +6,13 @@ describe AccessPanels::Online do
 
   let(:fulltext) { described_class.new(SolrDocument.new(marcxml: fulltext_856)) }
   let(:supplemental) { described_class.new(SolrDocument.new(marcxml: supplemental_856)) }
-  let(:eds_links) { described_class.new(SolrDocument.new(eds_fulltext_links: ['link-object'])) }
+  let(:eds_links) do
+    described_class.new(
+      SolrDocument.new(
+        eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
+      )
+    )
+  end
 
   let(:sfx) do
     described_class.new(
