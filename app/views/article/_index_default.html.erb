@@ -18,8 +18,11 @@
     <li><%= doc_presenter.field_value('eds_abstract') %></li>
   </ul>
 <% end %>
-<% if document['eds_fulltext_links'].present? && !document.eds_restricted? %>
+
+<% if document.access_panels.online? && !document.eds_restricted? %>
   <ul class='document-metadata dl-horizontal dl-invert'>
-    <%= safe_join(doc_presenter.fulltext_links) %>
+    <% document.access_panels.online.links.each do |link| %>
+      <li><%= link_to(link.text, link.href) %></li>
+    <% end %>
   </ul>
 <% end %>

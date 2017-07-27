@@ -1,14 +1,9 @@
 class AccessPanels
   class Online < ::AccessPanel
-    def links
-      sfx_links || marc_fulltext_links
-    end
+    delegate :present?, to: :links
 
-    # We are using present? for both marc/solr links but also EDS links
-    # We'll use another method of accessing the EDS links given that they
-    # don't match the same format/behavior as the marc/solr links
-    def present?
-      links.present? || @document['eds_fulltext_links'].present?
+    def links
+      sfx_links || marc_fulltext_links || eds_links
     end
 
     private
@@ -19,6 +14,10 @@ class AccessPanels
 
     def marc_fulltext_links
       @document.marc_links.fulltext if @document.marc_links.present?
+    end
+
+    def eds_links
+      @document.eds_links.fulltext if @document.eds_links.present?
     end
   end
 end
