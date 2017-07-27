@@ -16,6 +16,10 @@ describe CatalogController do
   it "should include the ReplaceSpecialQuotes concern" do
     expect(subject).to be_kind_of(ReplaceSpecialQuotes)
   end
+
+  it "should include the EmailValidation concern" do
+    expect(subject).to be_kind_of(EmailValidation)
+  end
   describe "#index" do
     it "should set the search modifier" do
       get :index
