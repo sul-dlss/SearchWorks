@@ -70,66 +70,79 @@ describe SearchWorksRecordMailer do
     end
   end
   describe 'full_email_record' do
-    let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
-    it 'should send a html email' do
-      expect(mail.content_type).to match /text\/html/
-    end
+    context 'catalog' do
+      let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
 
-    it 'should include full HTML markup' do
-      expect(mail.body).to have_css('html')
-      expect(mail.body).to have_css('body')
-    end
-
-    it 'includes the Email From text when present' do
-      expect(mail.body).to have_css('dt', text: 'Email from')
-      expect(mail.body).to have_css('dd', text: 'Jane Stanford')
-    end
-
-    it 'should include the titles of all documents as links' do
-      expect(mail.body).to have_css('h1 a', text: 'Title1')
-      expect(mail.body).to have_css('h1 a', text: 'Title2')
-    end
-    it 'should include Subjects and Bibliographic information from both MARC and MODS records' do
-      expect(mail.body).to have_css('h2', text: 'Subjects', count: 2)
-      expect(mail.body).to have_css('h2', text: 'Bibliographic information', count: 2)
-    end
-    it 'should include the HTML markup for MARC records' do
-      expect(mail.body).to have_css('dt', text: 'Related Work')
-      expect(mail.body).to have_css('dd', text: 'A quartely publication.')
-    end
-    it 'should include the HTML markup for MODS records' do
-      expect(mail.body).to have_css('dt', text: 'Contributor')
-      expect(mail.body).to have_css('dd', text: 'B. Smith (Producer)')
-    end
-    it 'should include holdings of all documents' do
-      expect(mail.body).to have_css('h2', text: 'At the library', count: documents.length)
-      expect(mail.body).to have_css('dt', text: 'Green Library - Stacks')
-      expect(mail.body).to have_css('dd', text: 'ABC 123')
-
-      expect(mail.body).to have_css('dt', text: 'SAL3 (off-campus storage) - Stacks')
-      expect(mail.body).to have_css('dd', text: 'ABC 321')
-    end
-    it 'should include links of all the documents' do
-      expect(mail.body).to have_css('h2', text: 'Online')
-      expect(mail.body).to have_css('a', text: 'Find full text', count: documents.length)
-    end
-    it 'should separate records w/ a horizontal rule' do
-      expect(mail.body).to have_css('hr', count: documents.length)
-    end
-
-    context 'when there is bookplate data' do
-      let(:bookplate_document) do
-        SolrDocument.new(
-          id: '123',
-          marcxml: metadata1,
-          bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
-        )
+      it 'should send a html email' do
+        expect(mail.content_type).to match(/text\/html/)
       end
-      let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
-      it 'renders the bookplate data successfully' do
-        expect(mail.body).to have_css('h2', text: 'Acquired with support from')
-        expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)
+
+      it 'should include full HTML markup' do
+        expect(mail.body).to have_css('html')
+        expect(mail.body).to have_css('body')
       end
+
+      it 'includes the Email From text when present' do
+        expect(mail.body).to have_css('dt', text: 'Email from')
+        expect(mail.body).to have_css('dd', text: 'Jane Stanford')
+      end
+
+      it 'should include the titles of all documents as links' do
+        expect(mail.body).to have_css('h1 a', text: 'Title1')
+        expect(mail.body).to have_css('h1 a', text: 'Title2')
+      end
+
+      it 'should include Subjects and Bibliographic information from both MARC and MODS records' do
+        expect(mail.body).to have_css('h2', text: 'Subjects', count: 2)
+        expect(mail.body).to have_css('h2', text: 'Bibliographic information', count: 2)
+      end
+
+      it 'should include the HTML markup for MARC records' do
+        expect(mail.body).to have_css('dt', text: 'Related Work')
+        expect(mail.body).to have_css('dd', text: 'A quartely publication.')
+      end
+
+      it 'should include the HTML markup for MODS records' do
+        expect(mail.body).to have_css('dt', text: 'Contributor')
+        expect(mail.body).to have_css('dd', text: 'B. Smith (Producer)')
+      end
+
+      it 'should include holdings of all documents' do
+        expect(mail.body).to have_css('h2', text: 'At the library', count: documents.length)
+        expect(mail.body).to have_css('dt', text: 'Green Library - Stacks')
+        expect(mail.body).to have_css('dd', text: 'ABC 123')
+
+        expect(mail.body).to have_css('dt', text: 'SAL3 (off-campus storage) - Stacks')
+        expect(mail.body).to have_css('dd', text: 'ABC 321')
+      end
+
+      it 'should include links of all the documents' do
+        expect(mail.body).to have_css('h2', text: 'Online')
+        expect(mail.body).to have_css('a', text: 'Find full text', count: documents.length)
+      end
+
+      it 'should separate records w/ a horizontal rule' do
+        expect(mail.body).to have_css('hr', count: documents.length)
+      end
+
+      context 'when there is bookplate data' do
+        let(:bookplate_document) do
+          SolrDocument.new(
+            id: '123',
+            marcxml: metadata1,
+            bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
+          )
+        end
+        let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
+        it 'renders the bookplate data successfully' do
+          expect(mail.body).to have_css('h2', text: 'Acquired with support from')
+          expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)
+        end
+      end
+    end
+
+    context 'article' do
+      skip('Todo: article full record email')
     end
   end
 end
