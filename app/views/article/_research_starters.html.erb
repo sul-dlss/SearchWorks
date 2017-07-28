@@ -1,7 +1,7 @@
 <% if params[:page].blank? || params[:page] == '1' -%>
   <% research_starters = @response['research_starters'] -%>
   <% if research_starters.present? -%>
-    <% starter = research_starters.first -%>
+    <% starter = research_starters.first # only show first research starter -%>
     <div class='research-starter clearfix'>
       <a class="research-starter-close" role="button" data-toggle="collapse" href="#research-starter-body" aria-expanded="true" aria-controls="research-starter-body">
         <span id='research-starter-close-icon' class='fa fa-times-circle research-starter-close-icon'></span>
@@ -11,7 +11,9 @@
         <h3>
           <%= link_to starter['eds_title'], article_path(id: "#{starter['eds_database_id']}__#{starter['eds_accession_number']}") -%>
         </h3>
-        <img src="<%= starter['eds_cover_thumb_url'] -%>"/>
+        <% if starter['eds_cover_thumb_url'].present? -%>
+          <img src="<%= starter['eds_cover_thumb_url'] -%>"/>
+        <% end -%>
         <p>
           <%= truncate(sanitize(starter['eds_abstract']), length: 250, separator: ' ') -%>
         </p>
