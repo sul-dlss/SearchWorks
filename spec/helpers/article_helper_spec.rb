@@ -124,37 +124,4 @@ RSpec.describe ArticleHelper do
       expect(result).to eq '<p>This Journal</p>, 10(1)'
     end
   end
-
-  context '#transform_research_starter_text' do
-    it 'removes anid and title' do
-      result = helper.transform_research_starter_text(value: '<anid>abc</anid><title>123</title>')
-      expect(result).to eq ''
-    end
-    it 'rewrites EDS tags with regular HTML tags' do
-      result = helper.transform_research_starter_text(value: '<bold/><emph/><ulist><item><subs/><sups/></item></ulist>')
-      expect(result).to eq "<b></b><i></i><ul><li>\n<sub></sub><sup></sup>\n</li></ul>"
-    end
-    it 'rewrites EDS eplinks' do
-      assign(:document, { 'eds_database_id' => 'xyz' })
-      result = helper.transform_research_starter_text(value: '<eplink linkkey="abc123">def456</eplink>')
-      expect(result).to eq '<a href="/article/xyz__abc123">def456</a>'
-    end
-    it 'converts images to figures with captions' do
-      result = helper.transform_research_starter_text(value: '<img src="abc.jpg" title="def"/>')
-      result = Capybara.string(result)
-      expect(result).to have_css('.research-starter-figure')
-      expect(result).to have_css('img[src="abc.jpg"]')
-      expect(result).to have_css('span', text: 'def')
-    end
-    it 'removes any unknown elements' do
-      result = helper.transform_research_starter_text(value: '<unknown/>')
-      expect(result).to eq ''
-    end
-    it 'preserves any desired elements' do
-      %w[p a b i ul li div span sub sup].each do |tag|
-        result = helper.transform_research_starter_text(value: "<#{tag}>abc</#{tag}>")
-        expect(result).to eq "<#{tag}>abc</#{tag}>"
-      end
-    end
-  end
 end
