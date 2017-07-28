@@ -182,8 +182,8 @@ class ArticleController < ApplicationController
 
   def search_service
     eds_params = {
-      'guest' => $EDS_GUEST_MODE, # TODO: hardcoded to non-authenticated
-      'session_token' => session['eds_session_token']
+      guest:          !eds_authenticated_user?,
+      session_token:  session['eds_session_token']
     }
     Eds::SearchService.new(blacklight_config, eds_params)
   end
@@ -197,13 +197,17 @@ class ArticleController < ApplicationController
   def setup_eds_session(session)
     return if session['eds_session_token'].present?
     session['eds_session_token'] = EBSCO::EDS::Session.new(
-      guest: $EDS_GUEST_MODE, # TODO: hardcoded to non-authenticated
-      caller: 'new-session',
-      user: Settings.EDS_USER,
-      pass: Settings.EDS_PASS,
-      profile: Settings.EDS_PROFILE,
-      debug: Settings.EDS_DEBUG
+      guest:    !eds_authenticated_user?,
+      caller:   'new-session',
+      user:     Settings.EDS_USER,
+      pass:     Settings.EDS_PASS,
+      profile:  Settings.EDS_PROFILE,
+      debug:    Settings.EDS_DEBUG
     ).session_token
+  end
+
+  def eds_authenticated_user?
+    IPRange.includes?(request.remote_ip)
   end
 
   def has_search_parameters?
