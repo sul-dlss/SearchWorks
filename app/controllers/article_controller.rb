@@ -4,6 +4,7 @@
 class ArticleController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
+  include EmailValidation
 
   before_action :set_search_query_modifier, only: :index
 
@@ -174,7 +175,41 @@ class ArticleController < ApplicationController
     # do nothing
   end
 
+  def email
+    # TODO: Handle arrays of IDs in future selection work
+    @response, @documents = fetch(params[:id])
+    if request.post? && validate_email_params
+      send_emails_to_all_recipients
+
+      respond_to do |format|
+        format.html { redirect_to solr_document_path(params['id']) }
+        format.js { render 'email_success' }
+      end and return
+    end
+
+    respond_to do |format|
+      format.html
+      format.js { render layout: false }
+    end
+  end
+
   protected
+
+  def send_emails_to_all_recipients
+    @documents = Array.wrap(@documents)
+    email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
+    email_addresses.each do |email_address|
+      email_params[:to] = email_address
+      email = if params[:type] == 'full'
+                SearchWorksRecordMailer.full_email_record(@documents, email_params, url_options)
+              else
+                SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
+              end
+      email.deliver_now
+    end
+
+    flash[:success] = I18n.t('blacklight.email.success')
+  end
 
   def _prefixes
     @_prefixes ||= super + ['catalog']
