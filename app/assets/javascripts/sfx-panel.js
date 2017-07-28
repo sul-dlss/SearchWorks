@@ -10,6 +10,8 @@ var SfxPanel = (function() {
     $.ajax(url).done(function(data){
       updatePanelBody(data);
       $sfxPanel().show();
+    }).fail(function(){
+      updatePanelBody('Unable to connect to SFX');
     });
   }
 
