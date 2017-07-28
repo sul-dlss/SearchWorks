@@ -4,14 +4,14 @@
   left: 10px;
   font-size: 16px;
   font-weight: 400;
-  color: #8c1515;
+  color: $sul-research-starter-color;
   text-transform: uppercase;
   letter-spacing: 1px;
   content: "Research Starter";
 }
 
 .research-starter {
-  border: 1px solid #8c1515;
+  border: 1px solid $sul-research-starter-color;
   box-shadow: 0 4px 8px -2px rgba(0,0,0,0.2);
 
   h3, p {
@@ -27,7 +27,7 @@
     margin-bottom: 10px;
   }
 
-  #research-starter-close-icon {
+  .research-starter-close-icon {
     border: none;
     position: relative;
     top: -15px;
@@ -35,7 +35,7 @@
     float: right;
     font-size: 2em;
     font-weight: 400;
-    color: #8c1515;
+    color: $sul-research-starter-color;
   }
 }
 
@@ -44,7 +44,7 @@
     margin-left: 10px;
     font-size: 16px;
     font-weight: 400;
-    color: #8c1515;
+    color: $sul-research-starter-color;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -55,8 +55,8 @@
 
 .research-starter-figure {
   padding: 12px;
-  background-color: #fff;
-  border: 1px solid #e3dfd5;
+  background-color: $white;
+  border: 1px solid $beige-30-percent;
   margin-bottom: 20px;
 
   img {
