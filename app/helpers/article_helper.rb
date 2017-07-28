@@ -6,16 +6,6 @@ module ArticleHelper
     controller_name == 'article'
   end
 
-  def article_research_starter?(document)
-    # TODO: we probably need a better place to put this...
-    document['eds_database_name'] == 'Research Starters' if document
-  end
-
-  def article_restricted?(document)
-    # TODO: we probably need a better way to determine this
-    document['eds_title'] =~ /^This title is unavailable for guests, please login to see more information./
-  end
-
   def link_subjects(options = {})
     return unless options[:value]
     separators = options.dig(:config, :separator_options) || {}
@@ -59,7 +49,7 @@ module ArticleHelper
 
   def sanitize_fulltext(options = {})
     return unless options[:value].present?
-    return safe_join(options[:value]) if article_research_starter?(@document)
+    return safe_join(options[:value]) if @document && @document.research_starter?
     separators = options.dig(:config, :separator_options) || {}
     textblock = options[:value].map(&:to_s).to_sentence(separators)
     textblock = Nokogiri::HTML.fragment(CGI.unescapeHTML(textblock))
