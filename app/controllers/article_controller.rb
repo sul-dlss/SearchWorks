@@ -196,9 +196,9 @@ class ArticleController < ApplicationController
     email_addresses.each do |email_address|
       email_params[:to] = email_address
       email = if params[:type] == 'full'
-                SearchWorksRecordMailer.full_email_record(documents, email_params, url_options)
+                SearchWorksRecordMailer.article_full_email_record(documents, email_params, url_options)
               else
-                SearchWorksRecordMailer.email_record(documents, email_params, url_options)
+                SearchWorksRecordMailer.article_email_record(documents, email_params, url_options)
               end
       email.deliver_now
     end
