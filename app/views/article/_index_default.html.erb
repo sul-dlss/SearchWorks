@@ -8,15 +8,27 @@
     <li><%= doc_presenter.field_value('eds_composed_title') %></li>
   <% end %>
 </ul>
-<% if document['eds_subjects'].present? %>
-  <dl class="document-metadata dl-horizontal dl-invert">
-    <dt>Subjects</dt> <dd><%= doc_presenter.field_value('eds_subjects') %></dd>
+
+<% if document['eds_subjects'].present? ||  document['eds_abstract'].present? %>
+  <dl class="document-metadata dl-horizontal dl-invert article-metadata">
+    <% if document['eds_subjects'].present? %>
+      <dt>Subjects</dt>
+      <dd>
+        <div data-behavior='article-metadata-truncate'>
+          <%= doc_presenter.field_value('eds_subjects') %>
+        </div>
+      </dd>
+    <% end %>
+
+    <% if document['eds_abstract'].present? %>
+      <dt>Abstract</dt>
+      <dd>
+        <div data-behavior='article-metadata-truncate'>
+          <%= doc_presenter.field_value('eds_abstract') %>
+        </div>
+      </dd>
+    <% end %>
   </dl>
-<% end %>
-<% if document['eds_abstract'].present? %>
-  <ul class='document-metadata dl-horizontal dl-invert'>
-    <li><%= doc_presenter.field_value('eds_abstract') %></li>
-  </ul>
 <% end %>
 
 <% if document.access_panels.online? && !document.eds_restricted? %>
