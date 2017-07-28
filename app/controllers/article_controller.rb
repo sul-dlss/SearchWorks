@@ -81,7 +81,7 @@ class ArticleController < ApplicationController
     config.show.document_presenter_class = ShowDocumentPresenter
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'
-    config.show.display_type = 'format'
+    config.show.display_type_field = 'eds_publication_type'
     config.show.pub_date = 'eds_publication_date'
     config.show.pub_info = 'eds_publisher_info'
     config.show.abstract = 'eds_abstract'
