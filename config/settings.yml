@@ -37,3 +37,6 @@ EDS_CACHE: true
 EDS_LOGDIR: <%= Rails.root.join('log') %>
 EDS_TIMEOUT: 15
 EDS_OPEN_TIMEOUT: 2
+STANFORD_NETWORK:
+  singletons: []
+  ranges: []
