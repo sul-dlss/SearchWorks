@@ -61,37 +61,54 @@ RSpec.describe EdsLinks do
   end
 
   context 'prioritizing links' do
-    let(:document) do
-      SolrDocument.new(
-        'eds_fulltext_links' => [
-          { 'label' => 'HTML FULL TEXT', 'url' => 'http://example.com/1' },
-          { 'label' => 'PDF FULL TEXT', 'url' => 'http://example.com/2' },
-          { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3' },
-          { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
-        ]
-      )
+    context 'categories 1 and 2' do
+      let(:document) do
+        SolrDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'HTML FULL TEXT', 'url' => 'http://example.com/1' },
+            { 'label' => 'PDF FULL TEXT', 'url' => 'http://example.com/2' },
+            { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3' },
+            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
+          ]
+        )
+      end
+
+      it 'shows 1 and 2 only' do
+        expect(document.eds_links.fulltext.length).to eq 2
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/1')
+        expect(document.eds_links.fulltext.last.href).to eq('http://example.com/2')
+      end
     end
 
-    it 'shows 1 and 2 only' do
-      document['eds_fulltext_links'] = document['eds_fulltext_links']
+    context 'category 3' do
+      let(:document) do
+        SolrDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3' },
+            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
+          ]
+        )
+      end
 
-      expect(document.eds_links.fulltext.length).to eq 2
-      expect(document.eds_links.fulltext.first.href).to eq('http://example.com/1')
-      expect(document.eds_links.fulltext.last.href).to eq('http://example.com/2')
+      it 'shows 3 only' do
+        expect(document.eds_links.fulltext.length).to eq 1
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/3')
+      end
     end
 
-    it 'shows 3 only' do
-      document['eds_fulltext_links'] = document['eds_fulltext_links'].drop(2)
+    context 'category 4' do
+      let(:document) do
+        SolrDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
+          ]
+        )
+      end
 
-      expect(document.eds_links.fulltext.length).to eq 1
-      expect(document.eds_links.fulltext.first.href).to eq('http://example.com/3')
-    end
-
-    it 'shows 4 only' do
-      document['eds_fulltext_links'] = document['eds_fulltext_links'].drop(3)
-
-      expect(document.eds_links.fulltext.length).to eq 1
-      expect(document.eds_links.fulltext.first.href).to eq('http://example.com/4')
+      it 'shows 4 only' do
+        expect(document.eds_links.fulltext.length).to eq 1
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/4')
+      end
     end
   end
 end
