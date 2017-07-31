@@ -26,7 +26,7 @@ RSpec.describe EdsLinks do
     it 'does not consider links full-text when type is not correct' do
       expect(document.eds_links.fulltext).to be_present
 
-      document['eds_fulltext_links'].first['type'] = 'pdf'
+      document['eds_fulltext_links'].first['type'] = 'unknown'
       expect(document.eds_links.fulltext).not_to be_present
     end
   end
@@ -37,9 +37,20 @@ RSpec.describe EdsLinks do
       expect(document.eds_links.all.first.text).to eq('View full text')
     end
 
-    it 'handles PDF full text' do
+    it 'handles PDF full text variants' do
       document['eds_fulltext_links'].first['label'] = 'PDF full text'
+      document['eds_fulltext_links'].first['type'] = 'pdf'
       expect(document.eds_links.all.first.text).to eq('View/download full text PDF')
+
+      document['eds_fulltext_links'].first['label'] = 'PDF eBook Full Text'
+      document['eds_fulltext_links'].first['type'] = 'ebook-pdf'
+      expect(document.eds_links.all.first.text).to eq('View/download full text PDF')
+    end
+
+    it 'retains label for ebook-epub links' do
+      document['eds_fulltext_links'].first['label'] = 'ePub eBook Full Text'
+      document['eds_fulltext_links'].first['type'] = 'ebook-epub'
+      expect(document.eds_links.all.first.text).to eq('ePub eBook Full Text')
     end
 
     it 'handles Check SFX for full text' do
@@ -72,7 +83,7 @@ RSpec.describe EdsLinks do
 
   context 'non customlink-fulltext links' do
     it 'ignores other link types' do
-      document['eds_fulltext_links'].first['type'] = 'pdf'
+      document['eds_fulltext_links'].first['type'] = 'unknown'
       expect(document.eds_links.fulltext).to be_blank
     end
   end
@@ -130,6 +141,7 @@ RSpec.describe EdsLinks do
       it 'shows 5 only' do
         expect(document.eds_links.fulltext.length).to eq 1
         expect(document.eds_links.fulltext.first.href).to eq('http://example.com/5')
+        expect(document.eds_links.fulltext.first.ill?).to be_truthy
       end
     end
   end

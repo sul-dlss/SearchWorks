@@ -23,4 +23,16 @@ RSpec.describe 'article/access_panels/_online.html.erb' do
   it 'includes EDS fulltext links' do
     expect(rendered).to have_css('.panel-body ul li a', text: 'View full text')
   end
+
+  context 'ILL links' do
+    let(:document) do
+      SolrDocument.new(
+        eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+      )
+    end
+
+    it 'includes label icon' do
+      expect(rendered).to have_css('.panel-body ul li a.sfx', text: /^Find it in print/)
+    end
+  end
 end
