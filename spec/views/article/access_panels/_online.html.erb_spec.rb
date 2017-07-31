@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe 'article/access_panels/_online.html.erb' do
   let(:document) do
     SolrDocument.new(
-      eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
+      eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
     )
   end
 
