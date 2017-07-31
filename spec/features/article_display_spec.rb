@@ -64,4 +64,65 @@ feature 'Article Record Display' do
       end
     end
   end
+
+  describe 'Embedded SFX Menu', js: true do
+    let(:document) do
+      SolrDocument.new(
+        id: 'abc123',
+        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com' }]
+      )
+    end
+
+    context 'when the SFX data is not loaded successfully' do
+      before do
+        expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(
+          Nokogiri::XML.parse('')
+        )
+      end
+
+      it 'returns an error message in the panel' do
+        visit article_path(document[:id])
+
+        within '.article-record-panels .metadata-panels' do
+          expect(page).to have_css('[data-behavior="sfx-panel"]', visible: true)
+
+          expect(page).to have_content 'Unable to connect to SFX'
+        end
+      end
+    end
+
+    context 'when the SFX data is loaded successfully' do
+      before do
+        expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(
+          Nokogiri::XML.parse(
+            <<-XML
+              <root>
+                <target>
+                  <service_type>getFullTxt</service_type>
+                  <target_public_name>TargetName</target_public_name>
+                  <target_url>http://example.com</target_url>
+                  <coverage>
+                    <coverage_statement>Statement 1</coverage_statement>
+                    <coverage_statement>Statement 2</coverage_statement>
+                  </coverage>
+                </target>
+              </root>
+            XML
+          )
+        )
+      end
+
+      it 'is loaded asyc on the page' do
+        visit article_path(document[:id])
+
+        within '.article-record-panels .metadata-panels' do
+          expect(page).to have_css('[data-behavior="sfx-panel"]', visible: true)
+          within '[data-behavior="sfx-panel"]' do
+            expect(page).to have_css('ul li a', text: 'TargetName')
+            expect(page).to have_css('li ul li', text: 'Statement 1')
+          end
+        end
+      end
+    end
+  end
 end

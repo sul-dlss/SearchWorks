@@ -72,4 +72,6 @@ Rails.application.routes.draw do
     resources :article, only: %i[index show]
     post "article/:id/track" => 'article#track', as: :track_article
   end
+
+  resource :sfx_data, only: :show
 end
