@@ -10,6 +10,8 @@ module BlacklightHelper
 
     display_type ||= document.display_type
 
+    display_type ||= document[view_config.display_type_field]
+
     display_type ||= 'default'
 
     type = type_field_to_partial_name(document, display_type)

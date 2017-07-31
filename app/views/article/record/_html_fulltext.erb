@@ -2,7 +2,7 @@
 <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-toggle="collapse" href="#toggleFulltext" aria-expanded="false" aria-controls="toggleFulltext">
   <h2>Full text</h2>
 </button>
-<div class='section-body collapse' id="toggleFulltext">
+<div class='section-body <%= document.research_starter? ? 'collapse.in' : 'collapse' -%>' id="toggleFulltext">
 <% fields.each do |field_name| -%>
   <% field_name = field_name.to_s -%>
   <% value = doc_presenter.field_value field_name -%>
