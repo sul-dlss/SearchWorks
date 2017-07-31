@@ -15,11 +15,15 @@ module EdsLinks
     end
 
     def present?
-      type == 'customlink-fulltext' && label.present?
+      %w[customlink-fulltext pdf ebook-pdf ebook-epub].include?(type) && label.present?
     end
 
     def sfx?
       category == 3
+    end
+
+    def ill?
+      category == 5
     end
 
     def category
@@ -32,10 +36,11 @@ module EdsLinks
 
     private
 
-    # Unfortunately we can only do this mapping via the EDS Label
+    # Primarily an EDS-label based mapping
     LINK_MAPPING = {
       'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
       'PDF full text'.downcase =>            { label: 'View/download full text PDF', category: 2 },
+      'PDF eBook Full Text'.downcase =>      { label: 'View/download full text PDF', category: 2 },
       'Check SFX for full text'.downcase =>  { label: 'View full text on content provider\'s site', category: 3 },
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find it in print or via interlibrary services', category: 5 }
@@ -61,13 +66,14 @@ module EdsLinks
       end
 
       # Then, map them into the SearchWorks objects
-      categories = links.map(&:category).map(&:to_i)
+      categories = links.map(&:category).compact.map(&:to_i)
       links.map do |link|
         SearchWorks::Links::Link.new(
           text:     link.label,
           href:     link.url,
           fulltext: link.present? && show?(categories, link.category),
-          sfx:      link.sfx?
+          sfx:      link.sfx?,
+          ill:      link.ill?
         )
       end
     end

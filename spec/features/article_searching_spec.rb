@@ -98,6 +98,14 @@ feature 'Article Searching' do
         expect(page).to have_css('a.responsiveTruncatorToggle', text: 'more...', count: 2)
       end
     end
+
+    scenario 'fulltext links are present and have labels' do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+      article_search_for('Kittens')
+
+      expect(page).to have_css('ul.document-metadata li span.online-label', text: 'Full text')
+      expect(page).to have_css('ul.document-metadata li a.sfx', text: /^Find it in print/)
+    end
   end
 
   describe 'breadcrumbs', js: true do
@@ -130,7 +138,6 @@ feature 'Article Searching' do
       expect(page).to have_button('Bottom')
     end
   end
-
 
   it 'displays the appropriate fields in the search' do
     skip 'we need some EDS fixtures'

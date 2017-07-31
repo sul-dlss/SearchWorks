@@ -7,7 +7,9 @@
   <div class="panel-body">
     <ul class='document-metadata dl-horizontal dl-invert'>
       <% document.access_panels.online.links.each do |link| %>
-        <li><%= link_to(link.text, link.href) %></li>
+        <li>
+          <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
+        </li>
       <% end %>
     </ul>
   </div>
