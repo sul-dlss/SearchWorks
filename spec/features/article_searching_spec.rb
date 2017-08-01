@@ -80,6 +80,24 @@ feature 'Article Searching' do
       expect(page).to have_css('h1', text: 'The title of the document')
       expect(current_url).to match(%r{/article/abc123})
     end
+
+    scenario 'subject and abstracts are truncated', js: true do
+      long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
+      document = SolrDocument.new(
+        id: '1234',
+        eds_abstract: long_data,
+        eds_subjects: long_data
+      )
+      stub_article_service(docs: [document])
+
+      visit article_index_path(q: 'Example Search')
+
+      within(first('.document')) do
+        expect(page).to have_css('dt', text: /subjects/i)
+        expect(page).to have_css('dt', text: /abstract/i)
+        expect(page).to have_css('a.responsiveTruncatorToggle', text: 'more...', count: 2)
+      end
+    end
   end
 
   describe 'breadcrumbs', js: true do
