@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 RSpec.describe EdsLinks do
-  context '#eds_links' do
-    let(:document) do
-      SolrDocument.new(
-        'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
-      )
-    end
+  let(:document) do
+    SolrDocument.new(
+      'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+    )
+  end
 
+  context '#eds_links' do
     it '#all returns an array of SearchWorks::Links:link' do
       expect(document.eds_links.all).to be_present
 
@@ -16,61 +16,81 @@ RSpec.describe EdsLinks do
       end
     end
 
-    it 'does not consider a links a full-text when label is missing' do
+    it 'does not consider links full-text when label is missing' do
       expect(document.eds_links.fulltext).to be_present
 
       document['eds_fulltext_links'].first.delete('label')
       expect(document.eds_links.fulltext).not_to be_present
     end
+
+    it 'does not consider links full-text when type is not correct' do
+      expect(document.eds_links.fulltext).to be_present
+
+      document['eds_fulltext_links'].first['type'] = 'pdf'
+      expect(document.eds_links.fulltext).not_to be_present
+    end
   end
 
   context 'rewriting labels' do
-    let(:document) do
-      SolrDocument.new(
-        'eds_fulltext_links' => [{ 'label' => 'My label', 'url' => 'http://example.com' }]
-      )
-    end
-
     it 'handles HTML full text' do
       document['eds_fulltext_links'].first['label'] = 'HTML full text'
-
       expect(document.eds_links.all.first.text).to eq('View full text')
     end
 
     it 'handles PDF full text' do
       document['eds_fulltext_links'].first['label'] = 'PDF full text'
-
       expect(document.eds_links.all.first.text).to eq('View/download full text PDF')
     end
 
     it 'handles Check SFX for full text' do
       document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
-
       expect(document.eds_links.all.first.text).to eq('View full text on content provider\'s site')
     end
 
     it 'handles View request options' do
       document['eds_fulltext_links'].first['label'] = 'View request options'
-
       expect(document.eds_links.all.first.text).to eq('Find it in print or via interlibrary services')
     end
 
-    it 'errors on some other label' do
+    it 'handles Open Access' do
+      document['eds_fulltext_links'].first['label'] = 'View in HathiTrust Open Access'
+      expect(document.eds_links.all.first.text).to eq('View in HathiTrust Open Access')
+    end
+
+    context 'omits unwanted links' do
+      it 'skips Access URL' do
+        document['eds_fulltext_links'].first['label'] = 'ACCESS URL'
+        expect(document.eds_links.fulltext).to be_blank
+      end
+
+      it 'skips Availability' do
+        document['eds_fulltext_links'].first['label'] = 'AVAILABILITY'
+        expect(document.eds_links.fulltext).to be_blank
+      end
+    end
+  end
+
+  context 'non customlink-fulltext links' do
+    it 'ignores other link types' do
+      document['eds_fulltext_links'].first['type'] = 'pdf'
       expect(document.eds_links.fulltext).to be_blank
     end
   end
 
   context 'prioritizing links' do
+    let(:all_link_categories) do
+      [
+        { 'label' => 'HTML FULL TEXT',          'url' => 'http://example.com/1', 'type' => 'customlink-fulltext' },
+        { 'label' => 'PDF FULL TEXT',           'url' => 'http://example.com/2', 'type' => 'customlink-fulltext' },
+        { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3', 'type' => 'customlink-fulltext' },
+        { 'label' => 'OPEN ACCESS',             'url' => 'http://example.com/4', 'type' => 'customlink-fulltext' },
+        { 'label' => 'VIEW REQUEST OPTIONS',    'url' => 'http://example.com/5', 'type' => 'customlink-fulltext' },
+        { 'label' => 'ACCESS URL',              'url' => 'http://example.com/6', 'type' => 'customlink-fulltext' } # blacklisted
+      ]
+    end
     context 'categories 1 and 2' do
       let(:document) do
-        SolrDocument.new(
-          'eds_fulltext_links' => [
-            { 'label' => 'HTML FULL TEXT', 'url' => 'http://example.com/1' },
-            { 'label' => 'PDF FULL TEXT', 'url' => 'http://example.com/2' },
-            { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3' },
-            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
-          ]
-        )
+        SolrDocument.new('eds_fulltext_links' => all_link_categories)
       end
 
       it 'shows 1 and 2 only' do
@@ -82,12 +102,7 @@ RSpec.describe EdsLinks do
 
     context 'category 3' do
       let(:document) do
-        SolrDocument.new(
-          'eds_fulltext_links' => [
-            { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3' },
-            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
-          ]
-        )
+        SolrDocument.new('eds_fulltext_links' => all_link_categories[2..4])
       end
 
       it 'shows 3 only' do
@@ -98,16 +113,23 @@ RSpec.describe EdsLinks do
 
     context 'category 4' do
       let(:document) do
-        SolrDocument.new(
-          'eds_fulltext_links' => [
-            { 'label' => 'VIEW REQUEST OPTIONS', 'url' => 'http://example.com/4' }
-          ]
-        )
+        SolrDocument.new('eds_fulltext_links' => all_link_categories[3..4])
       end
 
       it 'shows 4 only' do
         expect(document.eds_links.fulltext.length).to eq 1
         expect(document.eds_links.fulltext.first.href).to eq('http://example.com/4')
+      end
+    end
+
+    context 'category 5' do
+      let(:document) do
+        SolrDocument.new('eds_fulltext_links' => [all_link_categories[4]])
+      end
+
+      it 'shows 5 only' do
+        expect(document.eds_links.fulltext.length).to eq 1
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/5')
       end
     end
   end

@@ -9,7 +9,7 @@ describe AccessPanels::Online do
   let(:eds_links) do
     described_class.new(
       SolrDocument.new(
-        eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
+        eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
       )
     )
   end
