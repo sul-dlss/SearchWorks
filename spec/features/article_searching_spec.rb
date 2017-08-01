@@ -124,7 +124,7 @@ feature 'Article Searching' do
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
-      find(:css, 'a.remove').trigger('click')
+      first(:css, 'a.remove').trigger('click')
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
