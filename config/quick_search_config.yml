@@ -1,0 +1,80 @@
+defaults: &defaults
+
+  # QuickSearch theme name
+  #
+  # To use a different theme, you must first add a new theme gem to the Gemfile,
+  # run 'bundle install', then update this with the new theme name.
+  #
+  # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
+
+  theme: 'quick_search_generic_theme'
+
+  # Searchers that QuickSearch will automatically search
+  #
+  # To use different searchers, you must first add the new searcher gem to the Gemfile,
+  # run 'bundle install', then add the searcher name to this list. You must also
+  # add a 'render_module()' helper call to your search results page tempate to expose the
+  # results for that searcher.
+  #
+  # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
+
+  searchers: [best_bets,arxiv,open_library,wikipedia,placeholder]
+
+  # Searchers listed in the "result type guide" bar that lists result types that were found for a given search
+
+  found_types: [best_bets,arxiv,open_library,wikipedia,placeholder]
+
+  per_page: 3
+  max_per_page: 50
+  http_timeout: 1.5
+  xhr_http_timeout: 15
+# google_analytics_tracking_id: ""
+  user: "stats"
+  password: "stats"
+
+  on_campus:
+    - !ruby/regexp '/^192\.(1|168)\.\d*\.\d*$/'
+
+
+  common_searches: ["web of science", "google scholar", "refworks", "harvard business review", "pubmed", "ieee"]
+
+  common_website_searches: ["dissertations", "exhibits", "textbooks", "visit the libraries", "government information", "literature review", "printing"]
+
+  loaded_searches:
+    - name: "Google Scholar"
+      landing_page: "http://scholar.google.com/"
+      query: "https://scholar.google.com/scholar?hl=en&q="
+    - name: "WorldCat"
+      landing_page: "https://www.worldcat.org"
+      query: "https://www.worldcat.org/search?qt=worldcat_org_all&q="
+    - name: "Google"
+      landing_page: "https://www.google.com/"
+      query: "https://www.google.com/#q="
+
+  loaded_website_searches:
+    - name: "Books, Articles, Journals & More"
+      landing_page: "http://search.lib.ncsu.edu"
+      query: "http://search.lib.ncsu.edu/?q="
+
+  doi_loaded_link: "http://doi.org/"
+
+  best_bets:
+    solr_url: "http://localhost:8983/solr/bestbets/select?"
+
+development:
+  <<: *defaults
+#  realtime_url: http://path_to_websockets_server
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+#  realtime_url: http://path_to_websockets_server
+#  google_analytics_tracking_id: ""
+
+
+production:
+  <<: *defaults
+#  realtime_url: http://path_to_websockets_server
+  # Add or override config options here

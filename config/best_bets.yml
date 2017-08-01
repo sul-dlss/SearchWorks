@@ -1,0 +1,86 @@
+---
+best_bets:
+  academicsearchpremier:
+    title: Academic Search Complete
+    url: http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=a9h
+    description: Search for full-text articles from a wide range of scholarly journals.
+      Formerly named Academic Search Premier.
+    keywords:
+    - academic search complete
+    - academic search complet
+    - academic search compleat
+    - academic search compleet
+    - academic search elite
+    - academic elite
+    - search elite
+    - academic search fulltext elite
+    - academic search premier
+    - academic premier
+    - academic premiere
+    - academic search premiere
+    - academic search premeir
+    - acedemic search premier
+    - academic search premire
+    - academic search primer
+  acm:
+    title: ACM Digital Library
+    url: http://www.acm.org/dl/
+    description: Provides access to ACM journals, magazines, and conference proceedings
+    keywords:
+    - acm
+    - acm digital library
+    - acm portal
+    - acm database
+    - acm digital
+  eric:
+    title: ERIC (Educational Resource Information Center)
+    url: http://search.ebscohost.com/login.aspx?authtype=ip,uid&profile=ehost&defaultdb=eric
+    description: Use ERIC to find journal articles in the field of education
+    keywords:
+    - eric database
+    - eric
+    - education
+    - educational resources information center
+  googlescholar:
+    title: Google Scholar
+    url: http://scholar.google.com
+    description: Use Google Scholar and get access to articles via our library
+    keywords:
+    - google scholar
+    - google search
+    - google com
+    - www google com
+    - googlescholar
+    - googlescholar
+    - google
+  lexisnexis:
+    title: LexisNexis Academic
+    url: http://www.lexisnexis.com/
+    description: Search for news, business, legal, medical, and congressional information
+    keywords:
+    - lexis
+    - nexis
+    - lexis nexis
+    - lexis nexus
+    - lexus nexis
+    - lexis-nexis
+    - lexisnexis
+    - lexus
+    - nexus
+    - lexus nexus
+    - lexus-nexus
+    - lexusnexus
+    - lexxis nexxis
+    - lexxus nexus
+    - lexxus nexxus
+    - academic universe
+    - lexis nexis academic
+    - lexisnexis academic
+  pubmed:
+    title: PubMed
+    url: http://www.ncbi.nlm.nih.gov/
+    description: Search citations from MEDLINE and other medical and life science
+      journals
+    keywords:
+    - pubmed
+    - pub med
