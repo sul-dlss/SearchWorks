@@ -44,6 +44,7 @@ module Eds
         pass:           Settings.EDS_PASS,
         profile:        Settings.EDS_PROFILE,
         use_cache:      Settings.EDS_CACHE,
+        eds_cache_dir:  Settings.EDS_CACHE_DIR,
         timeout:        Settings.EDS_TIMEOUT,
         open_timeout:   Settings.EDS_OPEN_TIMEOUT,
         debug:          Settings.EDS_DEBUG,
