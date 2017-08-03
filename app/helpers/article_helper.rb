@@ -41,6 +41,19 @@ module ArticleHelper
     link_to(doi, url)
   end
 
+  ##
+  # EDS returns structured data (as XML) sometimes so use that
+  # but when it's just a string, italicize the first phrase
+  def italicize_composed_title(options = {})
+    composed_title = options[:value].try(:first).to_s # We only compose the first value
+    return if composed_title.blank?
+    return composed_title.html_safe if composed_title =~ /\<\/\w+\>/ # has XML so use as-is
+
+    match = /^([^[:punct:]]+)(.*)$/.match(composed_title)
+    return "<i>#{match[1]}</i>#{match[2]}".html_safe if match # italicize first phrase
+    composed_title.html_safe
+  end
+
   def mark_html_safe(options = {})
     return unless options[:value].present?
     separators = options.dig(:config, :separator_options) || {}
