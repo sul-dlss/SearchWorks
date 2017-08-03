@@ -124,4 +124,90 @@ RSpec.describe ArticleHelper do
       expect(result).to eq '<p>This Journal</p>, 10(1)'
     end
   end
+
+  context '#italicize_composed_title' do
+    let(:result) { helper.italicize_composed_title(value: Array.wrap(title)) }
+
+    context 'no title' do
+      let(:title) { nil }
+
+      it 'returns nil' do
+        expect(result).to be_nil
+      end
+    end
+
+    context 'blank title' do
+      let(:title) { '  ' }
+
+      it 'returns nil' do
+        expect(result).to be_nil
+      end
+    end
+
+    context 'already marked up' do
+      let(:title) { '<i>This Journal</i>. 10(1)' }
+
+      it 'just returns as-is but marked HTML safe' do
+        expect(result).to eq title
+        expect(result).to be_html_safe
+      end
+    end
+
+    context 'already marked up with anchor' do
+      let(:title) { '<searchLink fieldCode="FT">This Journal</searchLink>. 10(1)' }
+
+      it 'just returns as-is' do
+        expect(result).to eq title
+        expect(result).to be_html_safe
+      end
+    end
+
+    context 'even marked up multiple times' do
+      let(:title) { '<searchLink fieldCode="FT">This Journal</searchLink>. <i>10</i>(1)' }
+
+      it 'just returns as-is' do
+        expect(result).to eq title
+        expect(result).to be_html_safe
+      end
+    end
+
+    context 'no markup' do
+      let(:title) { 'This Journal. 10(1)' }
+
+      it 'italicizes first phrase' do
+        expect(result).to eq '<i>This Journal</i>. 10(1)'
+        expect(result).to be_html_safe
+      end
+    end
+
+    context 'no markup but weird punctuation' do
+
+      context 'with []' do
+        let(:title) { 'This Journal [Alternate Name]. 10(1)' }
+
+        it 'italicizes first phrase' do
+          expect(result).to eq '<i>This Journal </i>[Alternate Name]. 10(1)'
+          expect(result).to be_html_safe
+        end
+      end
+
+      context 'with commas' do
+        let(:title) { 'Agriculture, ecosystems & environment. 10(1)' }
+
+        it 'fails to do a good job' do
+          expect(result).to eq '<i>Agriculture</i>, ecosystems & environment. 10(1)'
+          expect(result).to be_html_safe
+        end
+      end
+
+      context 'with &' do
+        let(:title) { 'Ecosystems & environment. 10(1)' }
+
+        it 'fails to do a good job' do
+          expect(result).to eq '<i>Ecosystems </i>& environment. 10(1)'
+          expect(result).to be_html_safe
+        end
+      end
+    end
+  end
 end
