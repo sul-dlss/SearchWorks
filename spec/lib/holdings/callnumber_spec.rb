@@ -154,6 +154,7 @@ describe Holdings::Callnumber do
     it 'when a library is stackmapable and the home location is not blacklisted' do
       expect(described_class.new('barcode -|- GREEN -|- STACKS')).to be_stackmapable
       expect(described_class.new('barcode -|- ART -|- STACKS')).to be_stackmapable
+      expect(described_class.new('barcode -|- EAST-ASIA -|- KOREAN')).to be_stackmapable
     end
 
     it 'when a library is not stackmapable' do
