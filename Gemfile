@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'quick_search-core'
 gem 'jquery-rails'
 
+gem 'config'
+gem 'faraday'
+
 # -Inserted by QuickSearch-
 
 # QuickSearch searchers
