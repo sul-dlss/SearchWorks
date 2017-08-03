@@ -41,7 +41,7 @@ class ArticleController < ApplicationController
       isbn:     :isbn_search  # advanced search
     }
     config.add_index_field "eds_authors", label: 'Authors', helper_method: :strip_author_relators
-    config.add_index_field "eds_composed_title", label: 'Source', helper_method: :mark_html_safe
+    config.add_index_field "eds_composed_title", label: 'Source', helper_method: :italicize_composed_title
     config.add_index_field "eds_subjects", label: 'Subjects'
     config.add_index_field "eds_abstract", label: 'Abstract', helper_method: :mark_html_safe
 
@@ -94,7 +94,7 @@ class ArticleController < ApplicationController
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS, helper_method: :link_authors },
         eds_author_affiliations:  { label: 'Author Affiliations' },
-        eds_composed_title:       { label: 'Source', helper_method: :mark_html_safe },
+        eds_composed_title:       { label: 'Source', helper_method: :italicize_composed_title },
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
       },
