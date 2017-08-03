@@ -241,6 +241,8 @@ GEM
       unicode (~> 0.4)
     launchy (2.4.3)
       addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     library_stdnums (1.6.0)
     libv8 (3.16.14.19)
     listen (3.1.5)
@@ -500,6 +502,7 @@ DEPENDENCIES
   jquery-datatables-rails
   jquery-rails
   launchy
+  letter_opener
   listen (>= 3.0.5, < 3.2)
   mods_display (~> 0.4.0)
   mysql2
