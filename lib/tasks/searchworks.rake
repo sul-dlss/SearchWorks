@@ -67,4 +67,13 @@ namespace :searchworks do
       sleep(10)
     end
   end
+  desc "Prune expired files in EDS cache"
+  task :prune_eds_cache => [:environment] do |t, args|
+    cache_dir = File.join(Settings.EDS_CACHE_DIR, 'faraday_eds_cache')
+    if File.directory?(cache_dir)
+      cache = ActiveSupport::Cache::FileStore.new(cache_dir)
+      puts "Cleaning cache in #{cache_dir}"
+      cache.cleanup
+    end
+  end
 end
