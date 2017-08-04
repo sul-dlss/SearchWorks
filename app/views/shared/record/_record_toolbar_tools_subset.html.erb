@@ -5,7 +5,7 @@
 <% end %>
 <% if @document.respond_to?( :to_email_text ) %>
   <li class="email" role="presentation">
-    <% if @document[:eds_result_id].present? %>
+    <% if @document[:eds_title].present? %>
       <%= link_to t('blacklight.tools.email_html'), email_article_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
     <% else %>
       <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
