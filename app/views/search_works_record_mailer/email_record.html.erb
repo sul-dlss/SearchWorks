@@ -1,0 +1,41 @@
+<%= "Email from: #{@email_from}" if @email_from.present? %>
+<p><%= @message.html_safe unless @message.nil? %></p>
+
+<html>
+  <head>
+    <style>
+      .side-nav-minimap { display: none; }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <% @documents.each do |document| %>
+        <% semantics = document.to_semantic_values %>
+        <li>
+          <strong><a href="<%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= semantics[:title].join(" ") if semantics[:title].present? %></a></strong>
+          <div>
+            <% if document.holdings.present? %>
+              <% document.holdings.libraries.each do |library| %>
+                <% library.locations.each do |location| %>
+                  <ul><li><%= library.name %> - <%= location.name %>
+                  <% location.items.each do |item| %>
+                    <ul><li><%= item.callnumber %></li></ul>
+                  <% end %>
+                </li>
+                <% end %>
+              </ul>
+              <% end %>
+            <% end %>
+          </div>
+          <div>
+            <% if document.access_panels.online? %>
+            <% document.access_panels.online.links.each do |link| %>
+              Online: <a href="<%= link.href %>"><%= link.text.html_safe %></a>
+            <% end %>
+          <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ol>
+  </body>
+</html>
