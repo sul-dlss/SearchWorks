@@ -13,7 +13,19 @@ class SearchWorksRecordMailer < ActionMailer::Base
     mail(to: details[:to], subject: subject_from_details(details, documents))
   end
 
+  def article_email_record(documents, details, url_gen_params)
+    setup_email_defaults(documents, details, url_gen_params)
+
+    mail(to: details[:to], subject: subject_from_details(details, documents))
+  end
+
   def full_email_record(documents, details, url_gen_params)
+    setup_email_defaults(documents, details, url_gen_params)
+
+    mail(to: details[:to], subject: subject_from_details(details, documents))
+  end
+
+  def article_full_email_record(documents, details, url_gen_params)
     setup_email_defaults(documents, details, url_gen_params)
 
     mail(to: details[:to], subject: subject_from_details(details, documents))

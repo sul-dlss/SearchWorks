@@ -26,47 +26,90 @@ describe SearchWorksRecordMailer do
   end
   let(:url_params) { {host: 'example.com'} }
   describe 'email_record' do
-    let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
-    it 'should send a plain-text email' do
-      expect(mail.content_type).to match /text\/plain/
+    context 'article' do
+      let(:documents) {[SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+        )]}
+      let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }
+
+      it 'should send an HTML email' do
+        expect(mail.content_type).to match "text/html; charset=UTF-8"
+      end
+
+      it 'has the subject that was passed in via method params' do
+        expect(mail.subject).to eq 'The subject'
+      end
+
+      it 'has the subject that from the document when none was passed in' do
+        skip('Need to update subject_from_details ')
+        params[:subject] = nil
+        mail = SearchWorksRecordMailer.email_record(documents, params, url_params)
+        expect(mail.subject).to eq 'Item Record: N/A'
+      end
+
+      it 'includes the Email From text when present' do
+        expect(mail.body).to include 'Email from: Jane Stanford'
+      end
+
+      it 'should include the provided message' do
+        expect(mail.body).to include "The message"
+      end
+
+      it 'includes the title' do
+        expect(mail.body).to include "Title1"
+      end
+
+      it 'links to the record' do
+        expect(mail.body).to have_link("Title1", href: "http://example.com/article/123")
+      end
+
+      it 'includes links to fulltext' do
+        expect(mail.body).to have_link('Find it in print', href: "http://example.com")
+      end
     end
 
-    it 'has the subject that was passed in via method params' do
-      expect(mail.subject).to eq 'The subject'
-    end
+    context 'catalog'
+      let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
+      it 'should send an HTML email' do
+        expect(mail.content_type).to match "text/html; charset=UTF-8"
+      end
 
-    it 'has the subject that from the document when none was passed in' do
-      params[:subject] = nil
-      mail = SearchWorksRecordMailer.email_record([documents.first], params, url_params)
-      expect(mail.subject).to eq 'Item Record: Title1'
-    end
+      it 'has the subject that was passed in via method params' do
+        expect(mail.subject).to eq 'The subject'
+      end
 
-    it 'includes the Email From text when present' do
-      expect(mail.body).to include 'Email from: Jane Stanford'
-    end
+      it 'has the subject that from the document when none was passed in' do
+        params[:subject] = nil
+        mail = SearchWorksRecordMailer.email_record([documents.first], params, url_params)
+        expect(mail.subject).to eq 'Item Record: Title1'
+      end
 
-    it 'should include the provided message' do
-      expect(mail.body).to include "Message: The message"
-    end
-    it 'should include the titles of all documents' do
-      expect(mail.body).to include "Title: Title1"
-      expect(mail.body).to include "Title: Title2"
-    end
-    it 'should include the callnumbers' do
-      expect(mail.body).to include "Green Library - Stacks"
-      expect(mail.body).to include "ABC 123"
+      it 'includes the Email From text when present' do
+        expect(mail.body).to include 'Email from: Jane Stanford'
+      end
 
-      expect(mail.body).to include "SAL3 (off-campus storage) - Stacks"
-      expect(mail.body).to include "ABC 321"
-    end
-    it 'should include the URLs' do
-      expect(mail.body).to include "Online:"
-      expect(mail.body).to include "https://library.stanford.edu"
-      expect(mail.body).to include "https://stacks.stanford.edu"
-    end
-    it 'should include the URL to all the documents' do
-      expect(mail.body).to include "Bookmark: http://example.com/view/123"
-      expect(mail.body).to include "Bookmark: http://example.com/view/321"
+      it 'should include the provided message' do
+        expect(mail.body).to include "The message"
+      end
+      it 'should include the titles of all documents' do
+        expect(mail.body).to include "Title1"
+        expect(mail.body).to include "Title2"
+      end
+      it 'should include the callnumbers' do
+        expect(mail.body).to include "Green Library - Stacks"
+        expect(mail.body).to include "ABC 123"
+
+        expect(mail.body).to include "SAL3 (off-campus storage) - Stacks"
+        expect(mail.body).to include "ABC 321"
+      end
+      it 'should include the URLs' do
+        expect(mail.body).to include "Online:"
+        expect(mail.body).to include "https://library.stanford.edu"
+        expect(mail.body).to include "https://stacks.stanford.edu"
+      end
+      it 'should include the URL to all the documents' do
+        expect(mail.body).to have_link("Title1", href: "http://example.com/view/123")
+        expect(mail.body).to have_link("Title2", href: "http://example.com/view/321")
+      end
     end
   end
   describe 'full_email_record' do
@@ -132,4 +175,3 @@ describe SearchWorksRecordMailer do
       end
     end
   end
-end

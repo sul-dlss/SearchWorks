@@ -1,8 +1,0 @@
-<%= "Email from: #{@email_from}" if @email_from.present? %>
-Message: <%= @message.html_safe unless @message.nil? %>
-______________________________________________________________
-<% @documents.each do |document| %>
-<%= document.to_email_text %>
-Bookmark: <%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>
-______________________________________________________________
-<% end %>
