@@ -18,7 +18,38 @@
       </dl>
     <% end %>
     <% @documents.each do |document| %>
-      <h1><a href="<%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:eds_title] %></a></h1>
+      <h1><a href="<%= article_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:eds_title] %></a></h1>
+      <h2>Summary</h2>
+        <%= render_document_show_field_label document, field: :eds_authors %><%= document[:eds_authors] %>
+        <%= document[:eds_author_affiliations].html_safe if document[:eds_author_affiliations].present? %>
+        <%= document[:eds_composed_title].html_safe if document[:eds_composed_title].present? %>
+        <%= document[:eds_publication_date] if document[:eds_publication_date].present? %>
+        <%= document[:eds_languages] if document[:eds_languages].present? %>
+      <h2>Abstract</h2>
+        <%= document[:eds_abstract] if document[:eds_abstract].present? %>
+        <%= document[:eds_notes] if document[:eds_notes].present? %>
+      <h2>Subjects</h2>
+        <%= document[:eds_subjects] if document[:eds_subjects].present? %>
+        <%= document[:eds_subjects_geographic] if document[:eds_subjects_geographic].present? %>
+        <%= document[:eds_subjects_person] if document[:eds_subjects_person].present? %>
+        <%= document[:eds_author_supplied_keywords] if document[:eds_author_supplied_keywords].present? %>
+      <h2>Details</h2>
+        <%= document[:eds_publication_type] if document[:eds_publication_type].present? %>
+        <%= document[:eds_document_doi] if document[:eds_document_doi].present? %>
+        <%= document[:eds_database_name] if document[:eds_database_name].present? %>
+        <%= document[:eds_source_title] if document[:eds_source_title].present? %>
+        <%= document[:eds_volume] if document[:eds_volume].present? %>
+        <%= document[:eds_series] if document[:eds_series].present? %>
+        <%= document[:eds_issue] if document[:eds_issue].present? %>
+        <%= document[:eds_page_start] if document[:eds_page_start].present? %>
+        <%= document[:eds_page_count] if document[:eds_page_count].present? %>
+        <%= document[:eds_isbns] if document[:eds_isbns].present? %>
+        <%= document[:eds_issns] if document[:eds_issns].present? %>
+        <%= document[:eds_publication_info] if document[:eds_publication_info].present? %>
+        <%= document[:eds_document_oclc] if document[:eds_document_oclc].present? %>
+        <%= document[:eds_document_type] if document[:eds_document_type].present? %>
+        <%= document[:eds_other_titles] if document[:eds_other_titles].present? %>
+        <%= document[:eds_physical_description] if document[:eds_physical_description].present? %>
       <% if document.access_panels.online? %>
         <h2>Online</h2>
         <% document.eds_links.fulltext.each do |link| %>
