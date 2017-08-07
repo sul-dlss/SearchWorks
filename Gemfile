@@ -104,3 +104,4 @@ gem 'roadie-rails', '~> 1.1'
 gem 'rubocop', '~> 0.36'
 
 gem 'ebsco-eds'
+gem 'whenever' # manages cron jobs
