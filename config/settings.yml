@@ -1,2 +1,4 @@
 EDS_QUERY_URL: 'http://example.com/query?q=%{q}&max=%{max}'
 EDS_FETCH_URL: 'http://example.com/fetch?id=%{id}'
+CATALOG_QUERY_URL: 'http://example.com/query?q=%{q}&max=%{max}'
+CATALOG_FETCH_URL: 'http://example.com/fetch?id=%{id}'

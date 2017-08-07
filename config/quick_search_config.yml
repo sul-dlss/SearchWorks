@@ -18,14 +18,14 @@ defaults: &defaults
   #
   # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
 
-  searchers: [best_bets,arxiv,open_library,wikipedia,placeholder]
+  searchers: [article,catalog]
 
   # Searchers listed in the "result type guide" bar that lists result types that were found for a given search
 
-  found_types: [best_bets,arxiv,open_library,wikipedia,placeholder]
+  found_types: [article,catalog]
 
-  per_page: 3
-  max_per_page: 50
+  per_page: 10
+  max_per_page: 10
   http_timeout: 1.5
   xhr_http_timeout: 15
 # google_analytics_tracking_id: ""
