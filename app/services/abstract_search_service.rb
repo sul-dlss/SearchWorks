@@ -46,7 +46,7 @@ class AbstractSearchService
       raise NotImplementedError
     end
 
-    # @return [Array<Hash>] where the hash has `:title`, `:description`, and `:url`
+    # @return [Array<Result>] where the hash has `:title`, `:description`, and `:url`
     def results
       raise NotImplementedError
     end
@@ -55,6 +55,10 @@ class AbstractSearchService
     def facets
       raise NotImplementedError
     end
+  end
+
+  class Result
+    attr_accessor :title, :description, :link, :id, :thumbnail
   end
 
   def initialize(options = {})

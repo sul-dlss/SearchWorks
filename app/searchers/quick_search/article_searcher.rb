@@ -3,7 +3,7 @@ module QuickSearch
     delegate :results, :total, :facets, to: :@response
 
     def search
-      @response ||= ArticleSearchService.new.search(params[:q])
+      @response ||= ::ArticleSearchService.new.search(q)
     end
   end
 end

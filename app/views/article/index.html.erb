@@ -10,8 +10,8 @@ body {
 <ol>
   <% @response.results.each do |doc| %>
   <li>
-    <%= link_to doc[:title], doc[:url] %><br/>
-    <%= doc[:description].try(:html_safe) %>
+    <%= link_to doc.title, doc.link %><br/>
+    <%= doc.description.try(:html_safe) %>
   </li>
   <% end %>
 </ol>

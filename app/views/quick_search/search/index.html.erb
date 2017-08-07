@@ -1,0 +1,19 @@
+<%= render partial: 'layouts/quick_search/page_title', locals: { page_title: @page_title } %>
+<%= render partial: 'layouts/quick_search/search_form' %>
+<div class="quicksearch-ga-click-tracking">
+  <div id="result-types" class="row">
+    <div class="small-12 columns result-types">
+      <%= render partial: 'layouts/quick_search/found_types' %>
+    </div>
+  </div>
+</div>
+<div class="quicksearch-ga-click-tracking">
+  <div class="row articles-catalog">
+    <div class="small-12 medium-6 columns summon module">
+      <%= render_module(@article, 'article') if @article.present? %>
+    </div>
+    <div class="small-12 medium-6 columns catalog module">
+      <%= render_module(@catalog, 'catalog') if @catalog.present? %>
+    </div>
+  </div>
+</div>

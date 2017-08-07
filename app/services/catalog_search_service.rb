@@ -8,28 +8,30 @@ class CatalogSearchService < AbstractSearchService
 
   class Response < AbstractSearchService::Response
     def total
-      @json ||= JSON.parse(@body)
-      @json['response']['pages']['total_count'].to_i
+      json['response']['pages']['total_count'].to_i
     end
 
     def results
-      @json ||= JSON.parse(@body)
-      solr_docs = @json['response']['docs']
+      solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
-        {
-          title:        doc['title_display'] || doc['title_full_display'],
-          description:  doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml']),
-          url:          Settings.CATALOG_FETCH_URL.to_s % { id: doc['id'] }
-        }
+        result = AbstractSearchService::Result.new
+        result.title = doc['title_display'] || doc['title_full_display']
+        result.link = Settings.CATALOG_FETCH_URL.to_s % { id: doc['id'] }
+        result.id = doc['id']
+        result.description = doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml'])
+        result
       end
     end
 
     def facets
-      @json ||= JSON.parse(@body)
-      @json['response']['facets']
+      json['response']['facets']
     end
 
     private
+
+    def json
+      @json ||= JSON.parse(@body)
+    end
 
     def find_description_in_marcxml(xml)
       doc = Nokogiri::XML(xml)

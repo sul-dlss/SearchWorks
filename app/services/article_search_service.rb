@@ -8,25 +8,29 @@ class ArticleSearchService < AbstractSearchService
 
   class Response < AbstractSearchService::Response
     def total
-      @json ||= JSON.parse(@body)
-      @json['response']['pages']['total_count'].to_i
+      json['response']['pages']['total_count'].to_i
     end
 
     def results
-      @json ||= JSON.parse(@body)
-      solr_docs = @json['response']['docs']
+      solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
-        {
-          title:        doc['eds_title'],
-          description:  doc['eds_abstract'],
-          url:          Settings.EDS_FETCH_URL.to_s % { id: doc['id'] }
-        }
+        result = AbstractSearchService::Result.new
+        result.title = doc['eds_title']
+        result.link = Settings.EDS_FETCH_URL.to_s % { id: doc['id'] }
+        result.id = doc['id']
+        result.description = doc['eds_abstract']
+        result
       end
     end
 
     def facets
+      json['response']['facets']
+    end
+
+    private
+
+    def json
       @json ||= JSON.parse(@body)
-      @json['response']['facets']
     end
   end
 end
