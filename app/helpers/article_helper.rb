@@ -34,6 +34,15 @@ module ArticleHelper
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 
+  def clean_affiliations(options = {})
+    return if options[:value].blank?
+    separators = options.dig(:config, :separator_options) || {}
+    affiliations = options[:value].map(&:to_s).to_sentence(separators)
+    affiliations = Nokogiri::HTML.fragment(CGI.unescapeHTML(affiliations))
+    affiliations.search('relatesto').remove
+    affiliations.to_html.html_safe
+  end
+
   def link_to_doi(options = {})
     doi = options[:value].try(:first)
     return if doi.blank?
