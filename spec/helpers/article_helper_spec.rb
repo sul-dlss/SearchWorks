@@ -47,6 +47,7 @@ RSpec.describe ArticleHelper do
 
   context 'authors' do
     let(:authors) { %w[John\ Doe,\ Author Doe,\ Jane Fred\ Doe] }
+    let(:affiliations) { ["<relatesTo>1</relatesTo>Institute A<br /><relatesTo>2</relatesTo>Institute B<br /><relatesTo>3</relatesTo>Institute C"] }
 
     context '#link_authors' do
       subject(:result) { Capybara.string(helper.link_authors(value: authors)) }
@@ -58,6 +59,7 @@ RSpec.describe ArticleHelper do
         expect(result).to have_content 'John Doe, Author, Doe, Jane, and Fred Doe'
       end
     end
+
     context '#strip_author_relators' do
       subject(:result) { Capybara.string(helper.strip_author_relators(value: authors)) }
 
@@ -66,6 +68,15 @@ RSpec.describe ArticleHelper do
       end
       it 'has no links' do
         expect(result).not_to have_link
+      end
+    end
+
+    context '#clean_affiliations' do
+      let(:result) {helper.clean_affiliations(value: affiliations)}
+
+      it 'removes relatesTo tags and content' do
+        expect(result).not_to have_content('1')
+        expect(result).to have_content('Institute A')
       end
     end
   end

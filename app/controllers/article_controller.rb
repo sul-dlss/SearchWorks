@@ -94,7 +94,7 @@ class ArticleController < ApplicationController
       },
       'Summary' => {
         eds_authors:              { label: 'Authors', separator_options: BREAKS, helper_method: :link_authors },
-        eds_author_affiliations:  { label: 'Author Affiliations' },
+        eds_author_affiliations:  { label: 'Author Affiliations', separator_options: BREAKS, helper_method: :clean_affiliations },
         eds_composed_title:       { label: 'Source', helper_method: :italicize_composed_title },
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
