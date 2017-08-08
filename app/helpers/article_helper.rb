@@ -34,6 +34,13 @@ module ArticleHelper
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 
+  def clean_affiliations(options = {})
+    return if options[:value].blank?
+    separators = options.dig(:config, :separator_options) || {}
+    affiliations = options[:value].map(&:to_s).to_sentence(separators)
+    remove_eds_tag(affiliations,'relatesto').html_safe
+  end
+
   def link_to_doi(options = {})
     doi = options[:value].try(:first)
     return if doi.blank?
@@ -64,11 +71,9 @@ module ArticleHelper
     return unless options[:value].present?
     return safe_join(options[:value]) if @document && @document.research_starter?
     separators = options.dig(:config, :separator_options) || {}
-    textblock = options[:value].map(&:to_s).to_sentence(separators)
-    textblock = Nokogiri::HTML.fragment(CGI.unescapeHTML(textblock))
-    textblock.search('anid').remove
-    textblock = textblock.to_html
-    sanitize(textblock).html_safe
+    fulltext = options[:value].map(&:to_s).to_sentence(separators)
+    fulltext = remove_eds_tag(fulltext, 'anid')
+    sanitize(fulltext).html_safe
   end
 
   def render_text_from_html(values)
@@ -93,5 +98,11 @@ module ArticleHelper
       value.gsub!(/, #{relator}$/i, '')
     end
     [value, label]
+  end
+
+  def remove_eds_tag(text, tag)
+    text = Nokogiri::HTML.fragment(CGI.unescapeHTML(text))
+    text.search(tag).remove
+    text.to_html
   end
 end
