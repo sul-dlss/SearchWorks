@@ -58,7 +58,16 @@ class AbstractSearchService
   end
 
   class Result
-    attr_accessor :title, :description, :link, :id, :thumbnail
+    ATTRS = %i[title description link id thumbnail]
+    attr_accessor *ATTRS
+
+    def to_h
+      h = {}
+      ATTRS.each do |k|
+        h[k] = send(k)
+      end
+      h.compact
+    end
   end
 
   def initialize(options = {})
