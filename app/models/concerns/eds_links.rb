@@ -58,7 +58,7 @@ module EdsLinks
 
   # Maps EDS-centric links into SearchWorks links
   class Processor < SearchWorks::Links
-    # @return [Array<SearchWorks::Links::Link]
+    # @return [Array<SearchWorks::Links::Link>]
     def all
       # First convert into our FulltextLink objects
       links = link_fields.map do |link_field|
@@ -73,7 +73,8 @@ module EdsLinks
           href:     link.url,
           fulltext: link.present? && show?(categories, link.category),
           sfx:      link.sfx?,
-          ill:      link.ill?
+          ill:      link.ill?,
+          type:     link.type
         )
       end
     end

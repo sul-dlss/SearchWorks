@@ -72,7 +72,9 @@ Rails.application.routes.draw do
     resources :articles, only: %i[index show] do
       concerns :exportable
     end
+
     post 'articles/:id/track' => 'articles#track', as: :track_article
+    get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link
   end
 
   resource :sfx_data, only: :show

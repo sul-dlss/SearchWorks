@@ -168,6 +168,12 @@ class ArticlesController < ApplicationController
     config.add_sort_field 'oldest', sort: 'oldest', label: 'date (oldest)'
   end
 
+  def fulltext_link
+    _response, document = search_service.fetch(params[:id])
+    url = extract_fulltext_link(document, params[:type])
+    redirect_to url if url.present?
+  end
+
   # Used by default Blacklight `index` and `show` actions
   delegate :search_results, :fetch, to: :search_service
 
@@ -244,5 +250,14 @@ class ArticlesController < ApplicationController
 
   def has_search_parameters?
     params[:q].present? || params[:f].present?
+  end
+
+  def extract_fulltext_link(document, type)
+    links = document.fetch('eds_fulltext_links', [])
+    links.each do |link|
+      next if link['url'].blank? || link['url'] == 'detail'
+      return link['url'] if link['type'] == type.to_s
+    end
+    raise ArgumentError, "Missing #{type} fulltext link in document #{document.id}"
   end
 end

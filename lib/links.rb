@@ -35,7 +35,7 @@ module SearchWorks
     end
 
     class Link
-      attr_accessor :html, :text, :href, :file_id, :druid
+      attr_accessor :html, :text, :href, :file_id, :druid, :type
       def initialize(options={})
         @html = options[:html]
         @text = options[:text]
@@ -48,6 +48,7 @@ module SearchWorks
         @file_id = options[:file_id]
         @druid = options[:druid]
         @ill = options[:ill]
+        @type = options[:type]
       end
 
       def ==(other)

@@ -22,6 +22,21 @@ RSpec.describe ArticlesController do
     end
   end
 
+  context '#fulltext_link' do
+    it 'redirect to a fulltext link' do
+      stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
+        eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdf' }])])
+      get :fulltext_link, params: { id: '123', type: :pdf }
+      expect(response).to redirect_to('http://example.com/file.pdf')
+    end
+
+    it 'errors on missing links' do
+      stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
+        eds_fulltext_links: [{ url: 'detail', type: 'pdf' }])])
+      expect { get :fulltext_link, params: { id: '123', type: :pdf } }.to raise_error(ArgumentError, 'Missing pdf fulltext link in document 123')
+    end
+  end
+
   it 'handles authentication'
   it 'handles configuration'
 
