@@ -35,9 +35,10 @@
         left: auto;
         top: 70%;
 
-        li.active > a {
+        li.active {
           background-color: $public-note-yellow;
           color: $black; // override bootstrap
+          padding: 3px 20px;
         }
       }
     }

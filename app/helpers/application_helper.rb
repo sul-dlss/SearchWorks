@@ -89,8 +89,10 @@ module ApplicationHelper
       mapped_params = { q: params[:q] }
       mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
     end
-    link_to t('searchworks.search_dropdown.catalog.description_html'),
-            root_path(mapped_params)
+    link_to_unless_current(
+      t('searchworks.search_dropdown.catalog.description_html'),
+      root_path(mapped_params)
+    )
   end
 
   def link_to_article_search
@@ -98,7 +100,9 @@ module ApplicationHelper
       mapped_params = { q: params[:q] }
       mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
     end
-    link_to t('searchworks.search_dropdown.articles.description_html'),
-            article_index_path(mapped_params)
+    link_to_unless_current(
+      t('searchworks.search_dropdown.articles.description_html'),
+      article_index_path(mapped_params)
+    )
   end
 end

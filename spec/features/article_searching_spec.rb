@@ -11,7 +11,7 @@ feature 'Article Searching' do
 
         expect(page).to have_css('.dropdown-menu', visible: true)
 
-        expect(page).to have_css('li.active a', text: /catalog/)
+        expect(page).to have_css('li.active', text: /catalog/)
         expect(page).not_to have_css('li.active a', text: /articles/)
 
         click_link 'articles'
@@ -24,7 +24,7 @@ feature 'Article Searching' do
         expect(page).to have_css('.dropdown-menu', visible: true)
 
         expect(page).not_to have_css('li.active a', text: /catalog/)
-        expect(page).to have_css('li.active a', text: /articles/)
+        expect(page).to have_css('li.active', text: /articles/)
       end
     end
   end
