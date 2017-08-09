@@ -23,7 +23,6 @@ RSpec.describe 'Article Record Toolbar', js: true do
     end
   end
   it 'shows both prev and next buttons' do
-    skip 'TODO: disabled temporarily'
     within '.record-toolbar' do
       expect(page).to have_css('.previous', text: 'Previous')
       expect(page).to have_css('.next', text: 'Next')

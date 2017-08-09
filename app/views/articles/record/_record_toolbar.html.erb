@@ -1,6 +1,10 @@
 <div class="record-toolbar container-fluid sul-toolbar navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".toolbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-bars"></span>
+      </button>
       <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe -%>
       <% if @previous_document || @next_document -%>
         <div class="sul-record-page-info">
