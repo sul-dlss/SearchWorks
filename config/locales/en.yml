@@ -1,6 +1,6 @@
 en:
-  default_title: "SearchWorks"
-  opensearch_description: "SearchWorks"
+  default_title: "Stanford Libraries"
+  opensearch_description: "Stanford Libraries"
   catalog_search:
     display_name: "SearchWorks catalog"
     short_display_name: "SearchWorks catalog"
@@ -16,4 +16,4 @@ en:
     module_callout: "Search SearchWorks article"
     error_service_mesasge: "searching SearchWorks article"
     no_results_service_message: "a different search"
-    no_results_link: "http://searchworks.stanford.edu/"
+    no_results_link: "http://searchworks.stanford.edu/article"
