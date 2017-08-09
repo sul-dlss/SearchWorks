@@ -3,7 +3,6 @@
   margin-top: 35px;
   margin-bottom: 35px;
   padding: 5px;
-  height: 40px;
   color: $sul-toolbar-color;
   font-size: 15px;
 
@@ -63,8 +62,8 @@
 }
 
 .sul-record-page-info {
+  display: inline-block;
   margin: 0;
-  float: left;
 }
 
 .sul-record-page-info-inner {
@@ -76,7 +75,8 @@
 }
 
 .back-to-results {
-  float: left;
+  border-radius: 0;
+  display: inline-block;
 }
 
 #citeLink {
@@ -97,16 +97,16 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
     }
 
     .navbar-nav .open .dropdown-menu > li > a {
-      color: #000;
-      &:hover {
-        color: #000;
+      color: $white;
+      &:hover, &:focus {
+        text-decoration: underline;
       }
     }
 
     .navbar-header {
-      margin-top: 6px;
       .navbar-toggle {
-        margin-top: 0px;
+        border: 0;
+        margin: 0 15px 0 0;
       }
     }
     .navbar-collapse > ul > li {
