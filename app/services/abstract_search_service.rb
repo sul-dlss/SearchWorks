@@ -15,7 +15,7 @@ class AbstractSearchService
   class NoResults < StandardError; end
 
   class Request
-    def initialize(search_terms, max_results = 10)
+    def initialize(search_terms, max_results = Settings.MAX_RESULTS)
       @search_terms = search_terms.respond_to?(:join) ? search_terms.join(' ') : search_terms
       @max_results = max_results
     end
@@ -80,7 +80,7 @@ class AbstractSearchService
     url = if request_or_query.respond_to?(:url)
             request_or_query.url(@query_url.to_s)
           else
-            @query_url.to_s % { q: URI.escape(request_or_query.to_s), max: 10 }
+            @query_url.to_s % { q: URI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS }
           end
 
     response = Faraday.get url.to_s

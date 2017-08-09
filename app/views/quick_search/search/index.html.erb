@@ -10,10 +10,18 @@
 <div class="quicksearch-ga-click-tracking">
   <div class="row articles-catalog">
     <div class="small-12 medium-6 columns summon module">
-      <%= render_module(@article, 'article') if @article.present? %>
+      <div id="article" class="module-contents" >
+        <p class="search-error" data-quicksearch-search-endpoint="article"
+                                data-quicksearch-page=""
+                                data-quicksearch-template=""></p>
+      </div>
     </div>
     <div class="small-12 medium-6 columns catalog module">
-      <%= render_module(@catalog, 'catalog') if @catalog.present? %>
+      <div id="catalog" class="module-contents" >
+        <p class="search-error" data-quicksearch-search-endpoint="catalog"
+                                data-quicksearch-page=""
+                                data-quicksearch-template=""></p>
+      </div>
     </div>
   </div>
 </div>

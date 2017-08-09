@@ -1,7 +1,7 @@
 # Uses the Blacklight JSON API to search and then extracts select Catalog fields
 class CatalogSearchService < AbstractSearchService
   def initialize(options = {})
-    options[:query_url] ||= Settings.CATALOG_QUERY_URL.to_s
+    options[:query_url] ||= Settings.CATALOG_QUERY_API_URL.to_s
     options[:response_class] ||= Response
     super
   end

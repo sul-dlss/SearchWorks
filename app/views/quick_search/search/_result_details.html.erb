@@ -1,5 +1,5 @@
 <h3>
-  <%= render partial: "/quick_search/search/result_title", locals: { link: result.link, title: result.title, date: nil } %>
+  <%= link_to result.title, result.link %>
 </h3>
 <p>
   <%= result.description.html_safe if result.description.present? %>
