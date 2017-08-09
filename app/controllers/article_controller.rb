@@ -177,7 +177,7 @@ class ArticleController < ApplicationController
 
   def search_service
     eds_params = {
-      guest:          !eds_authenticated_user?,
+      guest:          session['eds_guest'],
       session_token:  session['eds_session_token']
     }
     Eds::SearchService.new(blacklight_config, eds_params)
@@ -190,9 +190,10 @@ class ArticleController < ApplicationController
   # Reuse the EDS session token if available in the user's session data,
   # otherwise establish a session
   def setup_eds_session(session)
-    return if session['eds_session_token'].present?
+    return if session['eds_session_token'].present? && session.has_key?('eds_guest')
+    session['eds_guest'] = !eds_authenticated_user?
     session['eds_session_token'] = EBSCO::EDS::Session.new(
-      guest:    !eds_authenticated_user?,
+      guest:    session['eds_guest'],
       caller:   'new-session',
       user:     Settings.EDS_USER,
       pass:     Settings.EDS_PASS,
