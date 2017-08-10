@@ -10,6 +10,6 @@ module EdsDocument
 
   def eds_restricted?
     # TODO: we probably need a better way to determine this
-    self['eds_title'] =~ /^This title is unavailable for guests, please login to see more information./
+    self['eds_title'] =~ ::SolrDocument::EDS_RESTRICTED_PATTERN
   end
 end
