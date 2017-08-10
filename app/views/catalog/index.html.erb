@@ -1,0 +1,22 @@
+<style>
+body {
+  background-color: white;
+  margin: 20px;
+  width: 80%;
+}
+</style>
+<h2>Catalog Query: <%= params[:q] %></h2>
+<h2>Results: <%= @response.total %> found</h2>
+<ol>
+  <% @response.results.each do |doc| %>
+  <li>
+    <%= link_to doc.title, doc.link %><br/>
+    <%= doc.description.try(:html_safe) %>
+  </li>
+  <% end %>
+</ol>
+
+<h2>Format Facet data</h2>
+<pre>
+<%= JSON.pretty_generate(@response.facets.select {|facet| facet['name'] == 'format_main_ssim' }) %>
+</pre>
