@@ -1,0 +1,17 @@
+<%= form_tag url_for(:controller => "article", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
+  <%= render :partial=>'shared/email_form' %>
+
+  <%=hidden_field_tag :type, 'brief' %>
+  <!-- TODO: update after article selections  -->
+  <%=hidden_field_tag "id[]", @documents.id %>
+  <%- if params[:sort] -%>
+    <%= hidden_field_tag "sort", params[:sort] %>
+  <%- end -%>
+  <%- if params[:per_page] -%>
+    <%= hidden_field_tag "per_page", params[:per_page] %>
+  <%- end -%>
+  </div>
+  <div class="modal-footer">
+  <button type="submit" class="btn btn-primary"> <%= t('blacklight.sms.form.submit') %></button>
+  </div>
+<% end %>

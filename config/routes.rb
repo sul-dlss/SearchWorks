@@ -69,7 +69,9 @@ Rails.application.routes.draw do
   resources :course_reserves, only: :index, path: "reserves"
 
   constraints(id: /[-~\+\w]+/) do # EDS identifier rules (e.g., db__id)
-    resources :article, only: %i[index show]
+    resources :article, only: %i[index show] do
+      concerns :exportable
+    end
     post "article/:id/track" => 'article#track', as: :track_article
   end
 
