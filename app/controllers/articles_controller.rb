@@ -172,6 +172,10 @@ class ArticlesController < ApplicationController
     _response, document = search_service.fetch(params[:id])
     url = extract_fulltext_link(document, params[:type])
     redirect_to url if url.present?
+  rescue => e
+    Honeybadger.notify(e) if defined? Honeybadger
+    flash[:error] = 'Sorry, the PDF download was not successful.<br/>Alternative route: click the title of the article you want, then try the PDF link on the detail page.'
+    redirect_back fallback_location: articles_path
   end
 
   # Used by default Blacklight `index` and `show` actions

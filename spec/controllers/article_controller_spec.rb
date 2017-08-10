@@ -33,7 +33,9 @@ RSpec.describe ArticlesController do
     it 'errors on missing links' do
       stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
         eds_fulltext_links: [{ url: 'detail', type: 'pdf' }])])
-      expect { get :fulltext_link, params: { id: '123', type: :pdf } }.to raise_error(ArgumentError, 'Missing pdf fulltext link in document 123')
+      get :fulltext_link, params: { id: '123', type: :pdf }
+      expect(flash[:error]).to eq 'Sorry, the PDF download was not successful.<br/>Alternative route: click the title of the article you want, then try the PDF link on the detail page.'
+      expect(response).to have_http_status(:found) # redirects back
     end
   end
 
