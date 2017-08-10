@@ -10,6 +10,7 @@ RSpec.describe 'Article Routing', type: :routing do
     expect(get('/article/eds__Style2-with-hyphens')).to route_to(controller: 'article', action: 'show', id: 'eds__Style2-with-hyphens')
     expect(get('/article/eds__Style2-with~tildes')).to route_to(controller: 'article', action: 'show', id: 'eds__Style2-with~tildes')
     expect(get('/article/eds__Style2-with+pluses')).to route_to(controller: 'article', action: 'show', id: 'eds__Style2-with+pluses')
+    expect(get('/article/eds__Style2-with%3bsemicolon')).to route_to(controller: 'article', action: 'show', id: 'eds__Style2-with;semicolon')
   end
   it '#track' do
     expect(post('/article/1/track')).to route_to(controller: 'article', action: 'track', id: '1')
