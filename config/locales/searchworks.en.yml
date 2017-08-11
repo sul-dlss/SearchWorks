@@ -64,6 +64,7 @@ en:
       default:
         label: 'Field'
     request_link:
+      aeon_note: Requires Aeon signup/login<br/>Opens in new tab
       default: Request
       HOOVER: Request on-site access
       HV-ARCHIVE: Request on-site access

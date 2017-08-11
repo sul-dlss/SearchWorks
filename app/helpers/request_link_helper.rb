@@ -37,9 +37,9 @@ module RequestLinkHelper
   end
 
   def link_data_attributes(callnumber)
-    return {} if Constants::HOOVER_LIBS.include?(callnumber.library)
+    return { behavior: 'requests-modal' } unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
 
-    { behavior: 'requests-modal' }
+    { toggle: 'tooltip', html: 'true', title: t('searchworks.request_link.aeon_note') }
   end
 
   def hoover_request_url(document, callnumber)

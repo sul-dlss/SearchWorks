@@ -68,6 +68,11 @@ describe RequestLinkHelper do
       it 'has a "_blank" target for hoover items' do
         expect(link).to have_css('a[target="_blank"]')
       end
+
+      it 'has the bootstrap tooltip data attributes' do
+        expect(link).to have_css('a[data-toggle="tooltip"]')
+        expect(link).to have_css('a[data-title^="Requires Aeon signup"]')
+      end
     end
   end
 
