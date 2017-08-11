@@ -28,7 +28,7 @@ RSpec.describe ArticleSearchBuilder do
     let(:blacklight_params) { { q: 'my search', page: 12 } }
     it 'maps to EDS API' do
       expect(search_builder[:page_number]).to eq 12
-      expect(search_builder[:results_per_page]).to eq 10
+      expect(search_builder[:results_per_page]).to eq 20
     end
   end
 

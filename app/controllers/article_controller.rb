@@ -25,6 +25,7 @@ class ArticleController < ApplicationController
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
     config.search_builder_class = ArticleSearchBuilder
+    config.default_per_page = 20
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
