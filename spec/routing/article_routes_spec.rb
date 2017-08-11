@@ -4,20 +4,40 @@ RSpec.describe 'Article Routing', type: :routing do
   it '#index' do
     expect(get('/articles')).to route_to('articles#index')
   end
-  it '#show' do
-    expect(get('/articles/1')).to route_to(controller: 'articles', action: 'show', id: '1')
-    expect(get('/articles/eds__style1')).to route_to(controller: 'articles', action: 'show', id: 'eds__style1')
-    expect(get('/articles/eds__Style2-with-hyphens')).to route_to(controller: 'articles', action: 'show', id: 'eds__Style2-with-hyphens')
-    expect(get('/articles/eds__Style2-with~tildes')).to route_to(controller: 'articles', action: 'show', id: 'eds__Style2-with~tildes')
-    expect(get('/articles/eds__Style2-with+pluses')).to route_to(controller: 'articles', action: 'show', id: 'eds__Style2-with+pluses')
-    expect(get('/articles/eds__Style2-with%3bsemicolon')).to route_to(controller: 'articles', action: 'show', id: 'eds__Style2-with;semicolon')
+
+  context '#show' do
+    let(:uri) { '/articles/' + URI.escape(id) }
+    subject(:result) { get(uri) }
+
+    context 'handles EDS identifiers' do
+      let(:id) { 'eds__1(2).3-4~5,6;7|8%9:A_b' }
+
+      it 'route to the show page' do
+        expect(result).to route_to(controller: 'articles', action: 'show', id: id)
+      end
+
+      context 'identifier with an encoded semicolon' do
+        let(:id) { 'eds__idwith%3bsemicolon' }
+
+        it 'routes to the page with the appropriate identifier' do
+          expect(result).to route_to(controller: 'articles', action: 'show', id: 'eds__idwith;semicolon')
+        end
+      end
+    end
+    context 'rejects unknown identifiers' do
+      let(:id) { 'eds__1 2/3' }
+
+      it 'should not route to show page' do
+        expect(result).not_to be_routable
+      end
+    end
   end
   it '#track' do
-    expect(post('/articles/1/track')).to route_to(controller: 'articles', action: 'track', id: '1')
-    expect(post('/articles/eds__style1/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__style1')
-    expect(post('/articles/eds__Style2-with-hyphens/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__Style2-with-hyphens')
-    expect(post('/articles/eds__Style2-with~tildes/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__Style2-with~tildes')
-    expect(post('/articles/eds__Style2-with+pluses/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__Style2-with+pluses')
+    expect(post('/articles/eds__1/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__1')
+  end
+  it '#fulltext' do
+    expect(get('/articles/eds__1/ebook-pdf/fulltext')).to route_to(controller: 'articles', action: 'fulltext_link', id: 'eds__1', type: 'ebook-pdf')
+    expect(get('/articles/eds__1/wrong type/fulltext')).not_to be_routable
   end
   it 'other actions are not routable' do
     expect(post('/articles')).not_to be_routable
