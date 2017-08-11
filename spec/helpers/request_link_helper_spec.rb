@@ -54,12 +54,20 @@ describe RequestLinkHelper do
       expect(Capybara.string(link)).to have_css('a[data-behavior="requests-modal"]')
     end
 
-    it 'has does not have requests-modal attribute for hoover items' do
-      link = link_to_request_link(
-        document: hoover_document, callnumber: hoover_document.holdings.callnumbers.first
-      )
+    describe 'Hoover links' do
+      let(:link) do
+        Capybara.string(
+          link_to_request_link(document: hoover_document, callnumber: hoover_document.holdings.callnumbers.first)
+        )
+      end
 
-      expect(Capybara.string(link)).not_to have_css('a[data-behavior="requests-modal"]')
+      it 'does not have requests-modal attribute for hoover items' do
+        expect(link).not_to have_css('a[data-behavior="requests-modal"]')
+      end
+
+      it 'has a "_blank" target for hoover items' do
+        expect(link).to have_css('a[target="_blank"]')
+      end
     end
   end
 
