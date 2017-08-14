@@ -12,7 +12,7 @@ RSpec.describe PresenterResearchStarter do
       include ActionView::Helpers::UrlHelper
       include ActionView::Helpers::SanitizeHelper
       def article_path(id:)
-        "/article/#{id}"
+        "/articles/#{id}"
       end
     end.new
   end
@@ -51,7 +51,7 @@ RSpec.describe PresenterResearchStarter do
       let(:document) { { 'eds_html_fulltext' => value, 'eds_database_id' => 'xyz' } }
 
       it do
-        expect(result).to eq '<a href="/article/xyz__abc123">def456</a>'
+        expect(result).to eq '<a href="/articles/xyz__abc123">def456</a>'
       end
     end
 

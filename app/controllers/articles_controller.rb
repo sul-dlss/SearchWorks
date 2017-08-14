@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # ArticleController is the controller for Article Search
-class ArticleController < ApplicationController
+class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EdsPaging
@@ -89,7 +89,7 @@ class ArticleController < ApplicationController
     config.show.pub_info = 'eds_publisher_info'
     config.show.abstract = 'eds_abstract'
     config.show.plink = 'eds_plink'
-    config.show.route = { controller: 'article' }
+    config.show.route = { controller: 'articles' }
     config.show.sections = {
       'Fulltext' => {
         eds_html_fulltext: { label: 'Full Text', helper_method: :sanitize_fulltext }

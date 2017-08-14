@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe ArticleController do
+RSpec.describe ArticlesController do
   it 'should include the EmailValidation concern' do
     expect(subject).to be_kind_of(EmailValidation)
   end

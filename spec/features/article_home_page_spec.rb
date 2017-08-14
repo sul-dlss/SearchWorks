@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Article Home Page' do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    visit article_index_path
+    visit articles_path
   end
 
   it 'has the correct title' do

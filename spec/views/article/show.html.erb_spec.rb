@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'article/show.html.erb' do
+RSpec.describe 'articles/show.html.erb' do
   before { render }
   it 'shows the metadata'
   it 'has a Summary section'
