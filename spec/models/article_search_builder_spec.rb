@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe ArticleSearchBuilder do
-  subject(:search_builder) { described_class.new(ArticleController).with(blacklight_params).to_hash }
+  subject(:search_builder) { described_class.new(ArticlesController).with(blacklight_params).to_hash }
 
   context 'basic search' do
     let(:blacklight_params) { { q: 'my search', page: 1, per_page: 10 } }

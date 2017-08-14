@@ -6,7 +6,7 @@ describe ApplicationHelper do
     context 'when in an article search' do
       before { expect(helper).to receive_messages(article_search?: true) }
 
-      it { expect(helper.searchworks_search_action_path).to eq article_index_path }
+      it { expect(helper.searchworks_search_action_path).to eq articles_path }
     end
 
     context 'everywhere else' do
@@ -138,17 +138,17 @@ describe ApplicationHelper do
     it 'passes parameters if currently in catalog search' do
       params[:q] = 'my query'
       expect(helper).to receive(:article_search?).and_return(false)
-      expect(result).to have_link(text: /articles/, href: '/article?q=my+query')
+      expect(result).to have_link(text: /articles/, href: '/articles?q=my+query')
     end
     it 'goes to the home page if currently in article search' do
       expect(helper).to receive(:article_search?).and_return(true)
-      expect(result).to have_link(text: /articles/, href: '/article')
+      expect(result).to have_link(text: /articles/, href: '/articles')
     end
     it 'performs a mapping between fielded search' do
       params[:q] = 'my query'
       params[:search_field] = 'search_title'
       expect(helper).to receive(:article_search?).and_return(false)
-      expect(result).to have_link(text: /articles/, href: '/article?q=my+query&search_field=title')
+      expect(result).to have_link(text: /articles/, href: '/articles?q=my+query&search_field=title')
     end
   end
 end

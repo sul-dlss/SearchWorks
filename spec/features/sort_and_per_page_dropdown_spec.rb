@@ -88,7 +88,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
   describe 'Article search' do
     before do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path q: 'my search'
+      visit articles_path q: 'my search'
     end
     it 'has a sort dropdown' do
       within '#sort-dropdown' do

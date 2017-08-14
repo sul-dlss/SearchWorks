@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe ArticleHelper do
   describe '#article_search?' do
     context 'when in the ArticlesController' do
-      before { expect(helper).to receive_messages(controller_name: 'article') }
+      before { expect(helper).to receive_messages(controller_name: 'articles') }
 
       it { expect(helper.article_search?).to be true }
     end
@@ -53,9 +53,9 @@ RSpec.describe ArticleHelper do
       subject(:result) { Capybara.string(helper.link_authors(value: authors)) }
 
       it 'includes a search link for each author' do
-        expect(result).to have_link 'John Doe', href: '/article?q=%22John+Doe%22&search_field=author'
-        expect(result).to have_link 'Doe, Jane', href: '/article?q=%22Doe%2C+Jane%22&search_field=author'
-        expect(result).to have_link 'Fred Doe', href: '/article?q=%22Fred+Doe%22&search_field=author'
+        expect(result).to have_link 'John Doe', href: '/articles?q=%22John+Doe%22&search_field=author'
+        expect(result).to have_link 'Doe, Jane', href: '/articles?q=%22Doe%2C+Jane%22&search_field=author'
+        expect(result).to have_link 'Fred Doe', href: '/articles?q=%22Fred+Doe%22&search_field=author'
         expect(result).to have_content 'John Doe, Author, Doe, Jane, and Fred Doe'
       end
     end

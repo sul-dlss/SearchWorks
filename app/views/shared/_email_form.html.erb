@@ -1,7 +1,7 @@
 <div class="modal-body">
   <%= render :partial=>'/flash_msg' %>
   <div class="form-group">
-    <% unless controller.controller_name == 'article' # TODO: full record for articles %>
+    <% unless controller.controller_name == 'articles' # TODO: full record for articles %>
       <div class="col-sm-10 col-sm-offset-2">
         <%= radio_button_tag :type, 'brief', true %> <%= label_tag(:type_brief,  "<strong>Brief record</strong> (title & author, library & call number, links, bookmark)".html_safe) %><br/>
         <%= radio_button_tag :type, 'full' %> <%= label_tag(:type_full, "<strong>Full record</strong>".html_safe) %>

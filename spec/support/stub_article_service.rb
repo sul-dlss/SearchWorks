@@ -10,7 +10,7 @@ module StubArticleService
   def stub_article_service(type: :multiple, docs:)
     raise 'Article search service stubbed without any documents.' if docs.blank?
 
-    allow_any_instance_of(ArticleController).to receive(:setup_eds_session).and_return('abc123')
+    allow_any_instance_of(ArticlesController).to receive(:setup_eds_session).and_return('abc123')
     case type
     when :multiple
       allow_any_instance_of(Eds::Repository).to receive(:search).and_return(
