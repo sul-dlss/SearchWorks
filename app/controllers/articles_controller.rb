@@ -223,10 +223,10 @@ class ArticlesController < ApplicationController
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
 
-  # Reuse the EDS session token if available in the user's session data,
-  # otherwise establish a session
+  # Reuse the EDS session token if available in the user's session data and the
+  # eds_guest flag has been set (i.e. not nil), otherwise establish a session
   def setup_eds_session(session)
-    return if session['eds_session_token'].present? && session.has_key?('eds_guest')
+    return if session['eds_session_token'].present? && !session['eds_guest'].nil?
     session['eds_guest'] = !eds_authenticated_user?
     session['eds_session_token'] = EBSCO::EDS::Session.new(
       guest:    session['eds_guest'],
@@ -239,7 +239,7 @@ class ArticlesController < ApplicationController
   end
 
   def eds_authenticated_user?
-    IPRange.includes?(request.remote_ip)
+    IPRange.includes?(request.remote_ip) || current_user.present?
   end
 
   def has_search_parameters?
