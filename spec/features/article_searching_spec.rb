@@ -17,7 +17,7 @@ feature 'Article Searching' do
         click_link 'articles'
       end
 
-      expect(page).to have_current_path(article_index_path) # the landing page for Article Search
+      expect(page).to have_current_path(articles_path) # the landing page for Article Search
       expect(page).to have_title('SearchWorks articles : Stanford Libraries')
       within '.search-dropdown' do
         click_link 'search articles'
@@ -32,7 +32,7 @@ feature 'Article Searching' do
   describe 'subnavbar' do
     scenario 'catalog-specific sub-menus are not rendered' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path
+      visit articles_path
 
       expect(page).to have_css('a', text: /Library services/)
       expect(page).not_to have_css('a', text: /Advanced search/)
@@ -44,7 +44,7 @@ feature 'Article Searching' do
   describe 'articles index page' do
     scenario 'renders home page if no search parameters are present' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit article_index_path
+      visit articles_path
       expect(page).to have_css('.home-page-column', count: 3)
       expect(page).to have_css('h1', text: /Find journal articles/)
     end
@@ -54,7 +54,7 @@ feature 'Article Searching' do
 
       expect(page).to have_title(/\d+ (result|results) in SearchWorks articles/)
       expect(page).to have_css('h2', text: /\d+ results?/)
-      expect(current_url).to match(%r{/article\?.*&q=Kittens})
+      expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
   end
 
@@ -78,7 +78,7 @@ feature 'Article Searching' do
       end
 
       expect(page).to have_css('h1', text: 'The title of the document')
-      expect(current_url).to match(%r{/article/abc123})
+      expect(current_url).to match(%r{/articles/abc123})
     end
 
     scenario 'subject and abstracts are truncated', js: true do
@@ -90,7 +90,7 @@ feature 'Article Searching' do
       )
       stub_article_service(docs: [document])
 
-      visit article_index_path(q: 'Example Search')
+      visit articles_path(q: 'Example Search')
 
       within(first('.document')) do
         expect(page).to have_css('dt', text: /subjects/i)
@@ -115,7 +115,7 @@ feature 'Article Searching' do
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
       find('a.btn', text: /Start over/).trigger('click')
-      expect(page).to have_current_path(article_index_path)
+      expect(page).to have_current_path(articles_path)
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
     end
 
@@ -145,7 +145,7 @@ feature 'Article Searching' do
 
   def article_search_for(query)
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    visit article_index_path
+    visit articles_path
 
     within '.search-form' do
       fill_in 'q', with: query

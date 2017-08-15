@@ -10,7 +10,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
     stub_article_service(type: :single, docs: [document])
 
     Capybara.current_session.reset!         # ensure a clean session
-    visit article_index_path q: 'my query'  # sets up search session
+    visit articles_path q: 'my query'  # sets up search session
     click_on document[:eds_title]           # show the article record
   end
 

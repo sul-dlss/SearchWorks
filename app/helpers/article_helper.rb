@@ -3,7 +3,7 @@ require 'cgi'
 
 module ArticleHelper
   def article_search?
-    controller_name == 'article'
+    controller_name == 'articles'
   end
 
   def link_subjects(options = {})
@@ -11,7 +11,7 @@ module ArticleHelper
     separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
-      link_to value, article_index_path(q: "\"#{value}\"", search_field: :subject)
+      link_to value, articles_path(q: "\"#{value}\"", search_field: :subject)
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 
@@ -21,7 +21,7 @@ module ArticleHelper
     values = render_text_from_html(options[:value])
     values.collect do |value|
       search, label_relator = parse_out_relators(value)
-      (link_to search, article_index_path(q: "\"#{search}\"", search_field: :author)) + "#{label_relator}"
+      (link_to search, articles_path(q: "\"#{search}\"", search_field: :author)) + "#{label_relator}"
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 

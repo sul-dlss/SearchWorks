@@ -60,7 +60,7 @@ describe SearchWorksRecordMailer do
       end
 
       it 'links to the record' do
-        expect(mail.body).to have_link("Title1", href: "http://example.com/article/123")
+        expect(mail.body).to have_link("Title1", href: "http://example.com/articles/123")
       end
 
       it 'includes links to fulltext' do

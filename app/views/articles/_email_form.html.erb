@@ -1,4 +1,4 @@
-<%= form_tag url_for(:controller => "article", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
+<%= form_tag email_article_path(@documents.id), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
   <%= render :partial=>'shared/email_form' %>
 
   <%=hidden_field_tag :type, 'brief' %>
