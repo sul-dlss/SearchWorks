@@ -24,6 +24,22 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
     expect(rendered).to have_css('.panel-body ul li a', text: 'View full text')
   end
 
+  context 'fulltext PDF links (e.g. "detail" href)' do
+    let(:document) do
+      SolrDocument.new(
+        id: 'abc123',
+        eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
+      )
+    end
+
+    it 'links to the article_fulltext_link route instead of "detail"' do
+      content = Capybara.string(rendered.to_s)
+      link = content.find('.panel-body li a')
+      expect(link['href']).not_to include('detail')
+      expect(link['href']).to match(%r{abc123\/pdf\/fulltext})
+    end
+  end
+
   context 'ILL links' do
     let(:document) do
       SolrDocument.new(
