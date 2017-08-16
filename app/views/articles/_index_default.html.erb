@@ -35,16 +35,23 @@
   </dl>
 <% end %>
 
-<% if document.access_panels.online? && !document.eds_restricted? %>
+<% if !document.eds_restricted? %>
   <ul class='document-metadata dl-horizontal dl-invert'>
-    <% document.access_panels.online.links.each do |link| %>
+    <% if document.access_panels.online? %>
+      <% document.access_panels.online.links.each do |link| %>
+        <li>
+          <% if link.ill? -%>
+            <%= link_to(link.text, link.href, class: 'sfx') %>
+          <% else %>
+            <span class="online-label">Full text</span>
+            <%= link_to(link.text, link.href) %>
+          <% end %>
+        </li>
+      <% end %>
+    <% elsif document.html_fulltext? %>
       <li>
-        <% if link.ill? -%>
-          <%= link_to(link.text, link.href, class: 'sfx') %>
-        <% else %>
-          <span class="online-label">Full text</span>
-          <%= link_to(link.text, link.href) %>
-        <% end %>
+        <span class="online-label">Full text</span>
+        <%= link_to('View on detail page',article_path(document)) %>
       </li>
     <% end %>
   </ul>
