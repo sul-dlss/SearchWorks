@@ -40,6 +40,7 @@ class ArticlesController < ApplicationController
       subject:  :subject_terms,
       source:   :search_title,
       abstract: :search,
+      series: :search_series,
       issn:     :isbn_search, # advanced search
       isbn:     :isbn_search  # advanced search
     }
@@ -70,6 +71,10 @@ class ArticlesController < ApplicationController
 
     config.add_search_field('abstract') do |field|
       field.label = 'Abstract'
+    end
+
+    config.add_search_field('series') do |field|
+      field.label = 'Series'
     end
 
     config.add_search_field('issn') do |field|
