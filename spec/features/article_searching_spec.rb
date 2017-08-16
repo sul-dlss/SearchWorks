@@ -110,7 +110,9 @@ feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_css('ul.document-metadata li span.online-label', text: 'Full text')
-      expect(page).to have_css('ul.document-metadata li a.sfx', text: /^Find it in print/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^View on detail page/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^View full text/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^Find it in print/)
     end
   end
 

@@ -2,9 +2,31 @@
 # Module included for RSpec tests to stub the article search service
 module StubArticleService
   SAMPLE_RESULTS = [
-      SolrDocument.new(id: 'abc123', eds_title: 'The title of the document', eds_subjects: %w[Kittens Felines Companions]),
-      SolrDocument.new(id: '321cba', eds_title: 'Another title for the document', eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]),
-      SolrDocument.new(id: 'wqoeif', eds_title: 'Yet another title for the document', eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }])
+    SolrDocument.new(
+      id: 'abc123',
+      eds_title: 'The title of the document',
+      eds_subjects: %w[Kittens Felines Companions],
+      eds_html_fulltext_available: true
+    ),
+    SolrDocument.new(
+      id: '321cba',
+      eds_title: 'Another title for the document',
+      eds_html_fulltext_available: true,
+      eds_fulltext_links: [{
+        'label' => 'HTML full text',
+        'url' => 'http://example.com',
+        'type' => 'customlink-fulltext'
+      }]
+    ),
+    SolrDocument.new(
+      id: 'wqoeif',
+      eds_title: 'Yet another title for the document',
+      eds_fulltext_links: [{
+        'label' => 'View request options',
+        'url' => 'http://example.com',
+        'type' => 'customlink-fulltext'
+      }]
+    )
   ]
 
   def stub_article_service(type: :multiple, docs:)

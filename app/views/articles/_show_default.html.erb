@@ -6,7 +6,7 @@
   </div>
   <div class="article-record-sections record-sections col-md-8">
     <% sections = blacklight_config.show.sections %>
-    <% if document.html_fulltext_available? %>
+    <% if document.html_fulltext? %>
       <div class="html-fulltext-container">
         <%= render('articles/record/html_fulltext', document: document, fields: sections["Fulltext"].keys)%>
       </div>
