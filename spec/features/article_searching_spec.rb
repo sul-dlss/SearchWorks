@@ -19,11 +19,16 @@ feature 'Article Searching' do
 
       expect(page).to have_current_path(articles_path) # the landing page for Article Search
       expect(page).to have_title('SearchWorks articles : Stanford Libraries')
+    end
+
+    scenario 'does not allow selecting current search context' do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+      visit articles_path
+
       within '.search-dropdown' do
         click_link 'search articles'
         expect(page).to have_css('.dropdown-menu', visible: true)
-
-        expect(page).not_to have_css('li.active a', text: /catalog/)
+        expect(page).not_to have_css('li.active a', text: /articles/)
         expect(page).to have_css('li.active', text: /articles/)
       end
     end
