@@ -17,7 +17,7 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
   end
 
   it 'has the proper heading' do
-    expect(rendered).to have_css('.panel-heading h3', text: 'Available online')
+    expect(rendered).to have_css('.panel-heading h3', text: 'Best source')
   end
 
   it 'includes EDS fulltext links' do
