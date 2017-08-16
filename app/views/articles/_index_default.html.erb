@@ -1,7 +1,11 @@
 <% doc_presenter = presenter(document) %>
 <ul class='document-metadata dl-horizontal dl-invert'>
   <% if document['eds_authors'].present? %>
-    <li><%= doc_presenter.field_value('eds_authors') %></li>
+    <li>
+      <div data-behavior='article-metadata-truncate'>
+        <%= doc_presenter.field_value('eds_authors') %>
+      </div>
+    </li>
   <% end %>
 
   <% if document['eds_composed_title'].present? %>
