@@ -22,6 +22,54 @@ RSpec.describe ArticlesController do
     end
   end
 
+  context '#fulltext_link' do
+    it 'redirect to a fulltext link' do
+      stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
+        eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdf' }])])
+      get :fulltext_link, params: { id: '123', type: :pdf }
+      expect(response).to redirect_to('http://example.com/file.pdf')
+    end
+
+    describe 'errors on missing links' do
+      before do
+        stub_article_service(
+          type: :single,
+          docs: [
+            SolrDocument.new(id: '123', eds_fulltext_links: [{ url: 'detail', type: 'pdf' }])
+          ]
+        )
+      end
+      context 'when the user is in guest mode' do
+        before { session['eds_guest'] = true }
+
+        it 'returns an error message indicating to login to view the content' do
+          get :fulltext_link, params: { id: '123', type: :pdf }
+          error_message = Capybara.string(flash[:error])
+          expect(error_message).to have_content(
+            'Sorry, the PDF download was not successful because you are currently in guest mode.'
+          )
+          expect(error_message).to have_css('a', text: 'Log in to try the download again')
+          expect(response).to have_http_status(:found) # redirects back
+        end
+      end
+
+      context 'when the user is not in guest mode' do
+        before { session['eds_guest'] = false }
+
+        it 'returns an error message indicating to report it as a connection problem' do
+          get :fulltext_link, params: { id: '123', type: :pdf }
+          error_message = Capybara.string(flash[:error])
+          expect(error_message).to have_content 'Sorry, the PDF download was not successful'
+          expect(error_message).to have_content 'We don\'t know the source of the error.'
+          expect(error_message).to have_css('a', text: 'please report it as a connection problem')
+          expect(response).to have_http_status(:found) # redirects back
+        end
+      end
+    end
+
+
+  end
+
   it 'handles authentication'
   it 'handles configuration'
 

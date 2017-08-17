@@ -17,7 +17,10 @@
   <ul class='document-metadata dl-horizontal dl-invert'>
     <% document.access_panels.online.links.each do |link| %>
       <li>
-        <% if link.ill? -%>
+        <% if link.href == 'detail' %>
+          <span class="online-label">Full text</span>
+          <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
+        <% elsif link.ill? -%>
           <%= link_to(link.text, link.href, class: 'sfx') %>
         <% else %>
           <span class="online-label">Full text</span>

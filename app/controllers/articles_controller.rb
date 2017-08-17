@@ -168,6 +168,16 @@ class ArticlesController < ApplicationController
     config.add_sort_field 'oldest', sort: 'oldest', label: 'date (oldest)'
   end
 
+  def fulltext_link
+    _response, document = search_service.fetch(params[:id])
+    url = extract_fulltext_link(document, params[:type])
+    redirect_to url if url.present?
+  rescue => e
+    Honeybadger.notify(e) if defined? Honeybadger
+    flash[:error] = flash_message_for_link_error
+    redirect_back fallback_location: articles_path
+  end
+
   # Used by default Blacklight `index` and `show` actions
   delegate :search_results, :fetch, to: :search_service
 
@@ -244,5 +254,21 @@ class ArticlesController < ApplicationController
 
   def has_search_parameters?
     params[:q].present? || params[:f].present?
+  end
+
+  def extract_fulltext_link(document, type)
+    links = document.fetch('eds_fulltext_links', [])
+    links.each do |link|
+      next if link['url'].blank? || link['url'] == 'detail'
+      return link['url'] if link['type'] == type.to_s
+    end
+    raise ArgumentError, "Missing #{type} fulltext link in document #{document.id}"
+  end
+
+  def flash_message_for_link_error
+    base_key = 'searchworks.articles.flashes.fulltext_link'
+    return I18n.t("#{base_key}.guest_html", login_url: new_user_session_path) if session['eds_guest']
+
+    I18n.t("#{base_key}.non_guest_html")
   end
 end
