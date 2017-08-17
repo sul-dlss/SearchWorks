@@ -25,11 +25,14 @@ feature 'Article Record Display' do
 
     it 'toggled via panel heading' do
       visit article_path(document[:id])
-      expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: false)
-
-      find('#fulltextToggleBar').click
+      expect(page).to have_css('.fulltext-toggle-bar', text: 'Hide full text')
       expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
       expect(page).to have_content('This Journal')
+
+      find('#fulltextToggleBar').click
+      expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
+      expect(page).not_to have_css('div.blacklight-eds_html_fulltext', visible: true)
+      expect(page).not_to have_content('This Journal')
     end
 
     it 'renders HTML' do
