@@ -1,7 +1,11 @@
 <% doc_presenter = presenter(document) %>
 <ul class='document-metadata dl-horizontal dl-invert'>
   <% if document['eds_authors'].present? %>
-    <li><%= doc_presenter.field_value('eds_authors') %></li>
+    <li>
+      <div data-behavior='article-metadata-truncate'>
+        <%= doc_presenter.field_value('eds_authors') %>
+      </div>
+    </li>
   <% end %>
 
   <% if document['eds_composed_title'].present? %>
@@ -31,10 +35,11 @@
   </dl>
 <% end %>
 
-<% if document.access_panels.online? && !document.eds_restricted? %>
+<% if !document.eds_restricted? %>
   <ul class='document-metadata dl-horizontal dl-invert'>
-    <% document.access_panels.online.links.each do |link| %>
-      <li>
+    <% if document.access_panels.online? %>
+      <% document.access_panels.online.links.each do |link| %>
+        <li>
         <% if link.href == 'detail' %>
           <span class="online-label">Full text</span>
           <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
@@ -44,6 +49,12 @@
           <span class="online-label">Full text</span>
           <%= link_to(link.text, link.href) %>
         <% end %>
+        </li>
+      <% end %>
+    <% elsif document.html_fulltext? %>
+      <li>
+        <span class="online-label">Full text</span>
+        <%= link_to('View on detail page',article_path(document)) %>
       </li>
     <% end %>
   </ul>

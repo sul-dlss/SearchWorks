@@ -8,8 +8,37 @@ describe 'catalog/_search_form.html.erb' do
     )
   end
 
+  describe 'input placeholder' do
+    context 'article search' do
+      before do
+        expect(view).to receive_messages(controller_name: 'articles')
+        expect(view).to receive_messages(has_search_parameters?: false)
+      end
+
+      it 'has a contextual placeholder' do
+        render
+
+        expect(rendered).to have_css(
+          'input[type="text"][placeholder="articles, e-books, & other e-resources"]'
+        )
+      end
+    end
+
+    context 'non-article search' do
+      before { expect(view).to receive_messages(controller_name: 'anything-else') }
+
+      it 'has a contextual placeholder' do
+        render
+
+        expect(rendered).to have_css(
+          'input[type="text"][placeholder="books & media"]'
+        )
+      end
+    end
+  end
+
   context 'article search' do
-    before { expect(view).to receive_messages(article_search?: true) }
+    before { expect(view).to receive_messages(controller_name: 'articles') }
 
     describe 'default options facet params' do
       context 'when there are no query parameters' do

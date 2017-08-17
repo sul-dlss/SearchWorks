@@ -20,7 +20,7 @@ feature 'Article Record Display' do
 
   describe 'Fulltext', js: true do
     let(:document) do
-      SolrDocument.new(id: '123', eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
+      SolrDocument.new(id: '123', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
     end
 
     it 'toggled via panel heading' do

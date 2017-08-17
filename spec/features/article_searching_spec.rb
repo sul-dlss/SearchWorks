@@ -86,10 +86,11 @@ feature 'Article Searching' do
       expect(current_url).to match(%r{/articles/abc123})
     end
 
-    scenario 'subject and abstracts are truncated', js: true do
+    scenario 'authors, subjects, and abstracts are truncated', js: true do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
       document = SolrDocument.new(
         id: '1234',
+        eds_authors:  long_data,
         eds_abstract: long_data,
         eds_subjects: long_data
       )
@@ -100,7 +101,7 @@ feature 'Article Searching' do
       within(first('.document')) do
         expect(page).to have_css('dt', text: /subjects/i)
         expect(page).to have_css('dt', text: /abstract/i)
-        expect(page).to have_css('a.responsiveTruncatorToggle', text: 'more...', count: 2)
+        expect(page).to have_css('a.responsiveTruncatorToggle', text: 'more...', count: 3)
       end
     end
 
@@ -109,7 +110,9 @@ feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_css('ul.document-metadata li span.online-label', text: 'Full text')
-      expect(page).to have_css('ul.document-metadata li a.sfx', text: /^Find it in print/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^View on detail page/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^View full text/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^Find it in print/)
     end
   end
 

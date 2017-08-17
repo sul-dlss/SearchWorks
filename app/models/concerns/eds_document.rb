@@ -1,6 +1,6 @@
 module EdsDocument
-  def html_fulltext_available?
-    self[:eds_html_fulltext].present?
+  def html_fulltext?
+    self['eds_html_fulltext_available'] == true
   end
 
   def research_starter?
