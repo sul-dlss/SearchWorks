@@ -3,7 +3,8 @@ require 'spec_helper'
 describe 'shared/_top_navbar.html.erb' do
   let(:user) { double('user') }
   before do
-    allow(view).to receive(:current_user).and_return(user)
+    expect(view).to receive(:current_user).at_least(:once).and_return(user)
+    expect(view).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
   end
   describe 'when there is a current user' do
     before do

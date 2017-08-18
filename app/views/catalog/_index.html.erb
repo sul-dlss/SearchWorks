@@ -8,7 +8,7 @@
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
       <h2 class="sr-only">Assistance</h2>
-      <%= render "catalog/chat_librarian_sidebar" %>
+      <%= render "catalog/chat_librarian_sidebar" if on_campus_or_su_affiliated_user? %>
       <%= render "catalog/library_website_sidebar" %>
     <% elsif %>
       <%= render 'search_sidebar' %>
