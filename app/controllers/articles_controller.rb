@@ -122,7 +122,7 @@ class ArticlesController < ApplicationController
         eds_database_name:        { label: 'Database' },
         eds_source_title:         { label: 'Journal' },
         eds_volume:               { label: 'Volume' },
-        eds_series:               { label: 'Series' },
+        eds_series:               { label: 'Series', helper_method: :remove_html_from_document_field },
         eds_issue:                { label: 'Issue' },
         eds_page_start:           { label: 'Page Start' },
         eds_page_count:           { label: 'Page Count' },
