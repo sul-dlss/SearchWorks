@@ -52,6 +52,7 @@
       <li>
         <% if link.href == 'detail' %>
           <span class="online-label">Full text</span>
+          <%= image_tag("pdf-icon.svg", height: "20px", alt: "PDF") %>
           <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
         <% elsif link.ill? -%>
           <%= link_to(link.text, link.href, class: 'sfx') %>
