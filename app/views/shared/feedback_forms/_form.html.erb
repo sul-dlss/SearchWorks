@@ -44,7 +44,7 @@
     </div>
   <% end %>
   <div class="col-sm-4">
-    <%= render "shared/feedback_forms/chat_with_librarian" %>
+    <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
     <%= render "shared/quick_reports/form", layout: nil %>
   </div>
 </div>
