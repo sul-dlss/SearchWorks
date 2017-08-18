@@ -76,6 +76,13 @@ module ArticleHelper
     sanitize(fulltext).html_safe
   end
 
+  def remove_html_from_document_field(options = {})
+    return if options[:value].blank?
+
+    separators = options.dig(:config, :separator_options) || {}
+    render_text_from_html(options[:value]).map(&:to_s).to_sentence(separators)
+  end
+
   def render_text_from_html(values)
     values = Array.wrap(values)
     return [] if values.blank?

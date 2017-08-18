@@ -130,7 +130,7 @@ class ArticlesController < ApplicationController
         eds_issns:                { label: 'ISSN' },
         eds_publication_info:     { label: 'Published' },
         eds_document_oclc:        { label: 'OCLC' },
-        eds_document_type:        { label: 'Document Type' },
+        eds_document_type:        { label: 'Document Type', helper_method: :remove_html_from_document_field },
         eds_other_titles:         { label: 'Other Titles' },
         eds_physical_description: { label: 'Physical Description' }
       }
