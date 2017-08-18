@@ -136,6 +136,14 @@ RSpec.describe ArticleHelper do
     end
   end
 
+  describe '#remove_html_from_document_field' do
+    it 'returns to_sentance joined text splitting on and stripping HTML' do
+      result = remove_html_from_document_field(value: Array.wrap('Thing1<br/>Thing2<br/>Thing3'))
+
+      expect(result).to eq 'Thing1, Thing2, and Thing3'
+    end
+  end
+
   context '#italicize_composed_title' do
     let(:result) { helper.italicize_composed_title(value: Array.wrap(title)) }
 
