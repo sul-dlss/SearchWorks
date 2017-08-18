@@ -172,7 +172,7 @@ RSpec.describe EdsPaging do
 
       it 'grabs the penultimate hit for the previous doc but no next doc' do
         expect(@docs.first).to be_truthy
-        expect(@docs.first['id']).to eq '321cba'
+        expect(@docs.first['id']).to eq 'wqoeif'
         expect(@docs.last).to be_nil
       end
     end
