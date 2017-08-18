@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe ArticlesController do
-  include Devise::Test::ControllerHelpers
   it 'should include the EmailValidation concern' do
     expect(subject).to be_kind_of(EmailValidation)
   end
@@ -73,26 +72,12 @@ RSpec.describe ArticlesController do
   it 'handles authentication'
   it 'handles configuration'
 
-  describe '#eds_authenticated_user?' do
-    context 'when there is a current user' do
-      before do
-        expect(controller).to receive(:current_user).and_return(double('User'))
-      end
-
-      it { expect(controller.send(:eds_authenticated_user?)).to be true }
-    end
-
-    context 'when there is not a current user' do
-      it { expect(controller.send(:eds_authenticated_user?)).to be false }
-    end
-  end
-
   context 'EDS Session Management' do
     let(:user_session) { {} }
     let(:eds_session) { instance_double(EBSCO::EDS::Session, session_token: 'abc') }
     before do
       allow(controller).to receive(:session).and_return(user_session)
-      allow(controller).to receive(:eds_authenticated_user?).and_return(true)
+      allow(controller).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
     end
     it 'will create a new session' do
       expect(EBSCO::EDS::Session).to receive(:new).with(
