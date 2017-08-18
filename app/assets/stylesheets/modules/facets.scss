@@ -13,6 +13,10 @@
       margin-bottom: 0;
     }
   }
+
+  .blacklight-eds_publication_type_facet {
+    .facet-count { display: none; }
+  }
 }
 .panel-group .facet_limit {
   margin-bottom: 7px;
@@ -41,7 +45,7 @@
 
 #sidebar #facets ul.facet-hierarchy {
   &, ul {
-    padding-left: 0; 
+    padding-left: 0;
   }
   li.h-node {
     list-style-image: none;
