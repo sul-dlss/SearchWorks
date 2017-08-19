@@ -26,6 +26,11 @@ module StubArticleService
         'url' => 'http://example.com',
         'type' => 'customlink-fulltext'
       }]
+    ),
+    SolrDocument.new(
+      id: 'pdfyyy',
+      eds_html_fulltext_available: true,
+      eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
     )
   ]
 

@@ -39,9 +39,9 @@ module EdsLinks
     # Primarily an EDS-label based mapping
     LINK_MAPPING = {
       'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
-      'PDF full text'.downcase =>            { label: 'View/download full text PDF', category: 2 },
-      'PDF eBook Full Text'.downcase =>      { label: 'View/download full text PDF', category: 2 },
-      'Check SFX for full text'.downcase =>  { label: 'View full text on content provider\'s site', category: 3 },
+      'PDF full text'.downcase =>            { label: 'View/download PDF', category: 2 },
+      'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
+      'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 3 },
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find it in print or via interlibrary services', category: 5 }
     }.freeze

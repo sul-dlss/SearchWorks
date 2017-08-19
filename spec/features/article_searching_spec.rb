@@ -113,6 +113,7 @@ feature 'Article Searching' do
       expect(page).to have_css('ul.document-metadata li a', text: /^View on detail page/)
       expect(page).to have_css('ul.document-metadata li a', text: /^View full text/)
       expect(page).to have_css('ul.document-metadata li a', text: /^Find it in print/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^View\/download PDF/)
     end
   end
 

@@ -40,11 +40,11 @@ RSpec.describe EdsLinks do
     it 'handles PDF full text variants' do
       document['eds_fulltext_links'].first['label'] = 'PDF full text'
       document['eds_fulltext_links'].first['type'] = 'pdf'
-      expect(document.eds_links.all.first.text).to eq('View/download full text PDF')
+      expect(document.eds_links.all.first.text).to eq('View/download PDF')
 
       document['eds_fulltext_links'].first['label'] = 'PDF eBook Full Text'
       document['eds_fulltext_links'].first['type'] = 'ebook-pdf'
-      expect(document.eds_links.all.first.text).to eq('View/download full text PDF')
+      expect(document.eds_links.all.first.text).to eq('View/download PDF')
     end
 
     it 'retains label for ebook-epub links' do
@@ -55,7 +55,7 @@ RSpec.describe EdsLinks do
 
     it 'handles Check SFX for full text' do
       document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
-      expect(document.eds_links.all.first.text).to eq('View full text on content provider\'s site')
+      expect(document.eds_links.all.first.text).to eq('View on content provider\'s site')
     end
 
     it 'handles View request options' do
