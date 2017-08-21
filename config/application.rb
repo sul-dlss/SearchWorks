@@ -44,5 +44,7 @@ module SearchWorks
     # config.i18n.default_locale = :de
 
     config.action_controller.permit_all_parameters = true
+
+    config.middleware.insert 0, Rack::UTF8Sanitizer
   end
 end

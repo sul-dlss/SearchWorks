@@ -102,3 +102,4 @@ gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.1'
 gem 'rubocop', '~> 0.36'
+gem 'rack-utf8_sanitizer'
