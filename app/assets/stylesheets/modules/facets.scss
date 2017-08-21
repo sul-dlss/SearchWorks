@@ -14,10 +14,10 @@
     }
   }
 
-  // TODO: restore after review
-  // .blacklight-eds_publication_type_facet {
-  //   .facet-count { display: none; }
-  // }
+  // Source Type facet counts disabled 
+  .blacklight-eds_publication_type_facet {
+    .facet-count { display: none; }
+  }
 }
 .panel-group .facet_limit {
   margin-bottom: 7px;
