@@ -44,5 +44,10 @@ module SearchWorks
     # config.i18n.default_locale = :de
 
     config.action_controller.permit_all_parameters = true
+
+    # This will not be required once we upgrade to Blacklight 7
+    config.action_dispatch.rescue_responses.merge!(
+      "Blacklight::Exceptions::RecordNotFound" => :not_found
+    )
   end
 end
