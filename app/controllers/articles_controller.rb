@@ -243,7 +243,7 @@ class ArticlesController < ApplicationController
   # eds_guest flag has been set (i.e. not nil), otherwise establish a session
   def setup_eds_session(session)
     return if session['eds_session_token'].present? && !session['eds_guest'].nil?
-    session['eds_guest'] = !eds_authenticated_user?
+    session['eds_guest'] = !on_campus_or_su_affiliated_user?
     session['eds_session_token'] = EBSCO::EDS::Session.new(
       guest:    session['eds_guest'],
       caller:   'new-session',
@@ -252,10 +252,6 @@ class ArticlesController < ApplicationController
       profile:  Settings.EDS_PROFILE,
       debug:    Settings.EDS_DEBUG
     ).session_token
-  end
-
-  def eds_authenticated_user?
-    IPRange.includes?(request.remote_ip) || current_user.present?
   end
 
   def has_search_parameters?
