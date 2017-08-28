@@ -7,7 +7,7 @@ feature 'Article Home Page' do
   end
 
   it 'has the correct title' do
-    expect(page).to have_title('SearchWorks articles : Stanford Libraries')
+    expect(page).to have_title('SearchWorks articles+ : Stanford Libraries')
   end
 
   it 'has fielded search' do

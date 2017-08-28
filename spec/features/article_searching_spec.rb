@@ -18,7 +18,7 @@ feature 'Article Searching' do
       end
 
       expect(page).to have_current_path(articles_path) # the landing page for Article Search
-      expect(page).to have_title('SearchWorks articles : Stanford Libraries')
+      expect(page).to have_title('SearchWorks articles+ : Stanford Libraries')
     end
 
     scenario 'does not allow selecting current search context' do
@@ -57,7 +57,7 @@ feature 'Article Searching' do
     scenario 'renders results page if search parameters are present' do
       article_search_for('Kittens')
 
-      expect(page).to have_title(/\d+ (result|results) in SearchWorks articles/)
+      expect(page).to have_title(/\d+ (result|results) in SearchWorks articles+/)
       expect(page).to have_css('h2', text: /\d+ results?/)
       expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
