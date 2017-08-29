@@ -123,7 +123,7 @@ feature 'Article Searching' do
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
-      find('a.btn', text: /Start over/).trigger('click')
+      find('a.btn-reset').trigger('click')
       expect(page).to have_current_path(articles_path)
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
     end
