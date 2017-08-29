@@ -7,6 +7,6 @@ describe "Searching within collections" do
     fill_in 'q', with: 'abcde'
     click_button 'search'
 
-    expect(page).to have_css('h2', text: 'No results found in catalog')
+    expect(page).to have_css('h2', text: 'No catalog results found')
   end
 end

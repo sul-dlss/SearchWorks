@@ -35,7 +35,7 @@ feature "Results Toolbar", js: true do
   scenario "pagination links for multiple items but no pages should not have any number of results info" do
     visit root_path q: '34'
 
-    expect(page).to have_css('h2', text: '4 results')
+    expect(page).to have_css('h2', text: '4 catalog results')
 
     within('.sul-toolbar .page_links') do
       expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: /Previous/)
