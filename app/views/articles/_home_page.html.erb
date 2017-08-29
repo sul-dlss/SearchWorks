@@ -1,39 +1,62 @@
 <% @page_title= t 'blacklight.articles.home.title' %>
-<div class="article-home-page">
-  <h1>Find journal articles and other e-resources</h1>
-  <div class="col-md-4 home-page-facets home-page-column">
-    <h2>Find materials&hellip;</h2>
-    <div class="home-facet">
-      <p><i>&hellip;Facet(s) go here&hellip;</i></p>
-    </div>
-  </div>
-
-  <div class="col-md-4 features home-page-column">
-    <h2>What's here?</h2>
-    <div class="features-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <h2>What's not?</h2>
-    <div class="features-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-
-  <div class="col-md-4 articles-help home-page-column">
-    <h2>Related</h2>
-    <ul class="media">
-      <li class="media">
-        <div class="media-body">
-          <%= link_to "Example Link", root_path, class: "media-heading" %>
+<div class="article-home-page container">
+  <div class="row">
+    <h1>Journal articles &amp; other e-resources</h1>
+    <div class="col-md-4 home-page-settings">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2>Search settings</h2>
+          <div class="home-settings">
+            <p>coming soon</p>
+            <!-- <%= form_tag articles_path, method: :get do %>
+              <ul>
+                <li>
+                  <%= check_box_tag "setting", 'peerreviewed', false %>
+                  <span class="setting-label">Scholarly &amp; peer-reviewed only</span>
+                  <p class="setting-tip">Limit your search to scholarly content. Includes University presses.</p>
+                </li>
+                <li>
+                  <%= check_box_tag "setting", 'fulltext', true %>
+                  <span class="setting-label">Direct access to full text</span>
+                  <p class="setting-tip">Stanford subscribes to the full text, or it’s available via open access.</p>
+                </li>
+              </ul>
+            <% end %> -->
+          </div>
         </div>
-      </li>
-
-      <li class="media">
-        <div class="media-body">
-          <%= link_to "Example External Link", root_path, class: "media-heading" %>
-          <div class="external-link-icon"/>
+      </div>
+    </div>
+    <div class="col-md-8 home-page-tips">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>How do I access articles?</h2>
         </div>
-      </li>
-    </ul>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>On campus</h4>
+              <p>No configuration required. Just click the links in the search results or detail page.</p>
+            </div>
+            <div class="col-md-6">
+              <h4>Off campus</h4>
+              <p>You’ll need to log in. You can <%= link_to 'log in now', new_user_session_path %>, or when you find an article of interest.</p>
+              <p class="text-right"><%= link_to 'More about article access at Stanford Libraries', 'https://library.stanford.edu' %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Search tip</h2>
+        </div>
+        <div class="panel-body">
+          <% search_tip_n = (1..t('searchworks.articles.search_tips.max').to_i).to_a.sample %>
+          <h4><%= t("searchworks.articles.search_tips.tip_#{search_tip_n}.heading") %></h4>
+          <p><%= t("searchworks.articles.search_tips.tip_#{search_tip_n}.body") %></p>
+          <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/guides/article-search-tips' %></p>
+        </div>
+      </div>
+    </div>
   </div>
+  <%= render 'shared/home_page_bento' %>
 </div>

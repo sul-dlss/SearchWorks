@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Dissertation Theses Access Point' do
   before do
     visit root_path
-    click_link 'Dissertations & theses'
+    click_link 'Theses & dissertations'
   end
   it 'should have a custom page title' do
     expect(page).to have_title('Dissertation theses in SearchWorks catalog')

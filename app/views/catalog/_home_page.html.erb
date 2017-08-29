@@ -1,118 +1,65 @@
 <% @page_title= t 'blacklight.home.title' %>
 
+<h1>Books, media, &amp; more</h1>
 <h1 class="sr-only">SearchWorks</h1>
 
-<div class="col-md-4 col-sm-6 home-page-facets home-page-column" data-home-page-facet-collapse='true'>
-  <h2>Find materials by&hellip;</h2>
-  <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
-  <%=
-    render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
-    render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
-  %>
-  <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
-  <%= render_single_facet("language", layout: "home_page_facet_layout") %>
-</div>
-
-<div class="features col-md-5 col-sm-6 home-page-column">
-  <h2>Featured resources</h2>
-  <ul class="media-list">
-    <li class="media">
-      <%= image_tag('digital-collections.png', class: 'media-object pull-left', alt: "", title: "'The Burning of San Francisco April 18, 19, 20, 1906.'", data: { "no-link-href" => search_catalog_path(collections_search_params) }) %>
-      <div class="media-body">
-        <%= link_to "Digital collections", search_catalog_path(collections_search_params), class: 'media-heading' %>
-        <p>Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
-      </div>
-    </li>
-    <li class="media">
-      <%= image_tag('dissertations-theses.png', class: 'media-object pull-left', alt: "", title: '', data: { "no-link-href" => search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
-      <div class="media-body">
-        <%= link_to "Dissertations & theses", search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'media-heading' %>
-        <p>Dissertations and theses in Stanford's collections.</p>
-      </div>
-    </li>
-
-    <% if Settings.GOVERNMENT_DOCUMENTS_ACCESS_POINT %>
-      <li class='media'>
-        <%= image_tag('govdocs.png', class: 'media-object pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
-        <div class='media-body'>
-          <%= link_to 'Government documents', govdocs_path, class: 'media-heading' %>
-          <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
+<div class="row catalog-home-page">
+  <div class="col-md-4 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
+    <h2>Find materials by&hellip;</h2>
+    <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
+    <%=
+      render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
+      render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
+    %>
+    <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
+    <%= render_single_facet("language", layout: "home_page_facet_layout") %>
+  </div>
+  <div class="features col-md-8 col-sm-6">
+    <h2>Featured resources</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('homepage/digital', class: 'pull-left', alt: "", title: "'The Burning of San Francisco April 18, 19, 20, 1906.'", data: { "no-link-href" => search_catalog_path(collections_search_params) }) %>
+            <h4><%= link_to "Digital collections", search_catalog_path(collections_search_params) %></h4>
+            <p>Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
+          </div>
         </div>
-      </li>
-    <% end %>
-
-    <li class="media">
-      <%= image_tag('selected-databases.png', class: 'media-object pull-left', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
-      <div class="media-body">
-        <%= link_to "Selected article databases", selected_databases_path, class: 'media-heading' %>
-        <p>Not sure where to start? Find articles by discipline.</p>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('homepage/theses', class: 'pull-left', alt: "", title: '', data: { "no-link-href" => search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
+            <h4><%= link_to "Theses & dissertations", search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h4>
+            <p>Theses &amp; dissertations in the Stanford Libraries and Digital Repository.</p>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('homepage/databases', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
+            <h4><%= link_to "Databases", selected_databases_path %></h4>
+            <p>A-Z list of topic-specific databases. Not sure where to start? Try these <%= link_to 'selected databases', selected_databases_path %>.</p>
+          </div>
+        </div>
       </div>
-    </li>
-    <li class="media">
-      <%= image_tag('course-reserves.png', class: 'media-object pull-left', alt: "", title: '',  data: { "no-link-href" =>  course_reserves_path }) %>
-      <div class="media-body">
-        <%= link_to "Course reserves", course_reserves_path, class: 'media-heading' %>
-        <p>Find print, media, and e-resources set aside for classes.<br/>For instructors: <%= link_to "Request course reserves", "https://reserves.stanford.edu" %>.</p>
+      <div class="col-md-6">
+        <% if Settings.GOVERNMENT_DOCUMENTS_ACCESS_POINT %>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <%= image_tag('homepage/govdocs', class: 'pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
+              <h4><%= link_to 'Government documents', govdocs_path %></h4>
+              <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
+            </div>
+          </div>
+        <% end %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('homepage/coursereserves', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  course_reserves_path }) %>
+            <h4><%= link_to "Course reserves", course_reserves_path %></h4>
+            <p>Find books, media, and e-resources set aside for classes.</p>
+          </div>
+        </div>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
-<div class="articles-help col-md-3 col-sm-6 home-page-column">
-  <h2>Looking for ideas?</h2>
-  <ul class="media-list">
-    <li class="media">
-      <div class="media-body">
-        <%= link_to "Yewno", "https://yewno.com/edu", class: "media-heading" %>
-        <i class="external-link-icon"></i>
-        <p>
-          Find new information, expose hidden links, and understand why.
-          [<%= link_to "What is Yewno?", "https://library.stanford.edu/search-tools/yewno" %>]
-        </p>
-      </div>
-    </li>
-  </ul>
 
-  <h2>Looking for articles?</h2>
-  <ul class="media-list">
-    <li class="media">
-      <div class="media-body">
-        <p>
-          Articles are not indexed in SearchWorks.
-          <%= link_to("Select a database", databases_path, class: 'media-heading') %> to search for articles.
-        </p>
-      </div>
-    </li>
-    <li class="media">
-      <div class="media-body">
-        <%= link_to "Citation finder", "http://sul-sfx.stanford.edu/sfxlcl41/az", class: "media-heading" %>
-        <i class="external-link-icon"></i>
-        <p>Find an article in one of Stanford's ejournal subscriptions.</p>
-      </div>
-    </li>
-    <li class="media">
-      <div class="media-body">
-        <%= link_to "xSearch", "https://xsearch.stanford.edu", class: "media-heading" %>
-        <i class="external-link-icon"></i>
-        <p>Search for articles in multiple databases simultaneously.</p>
-      </div>
-    </li>
-    <li class="media">
-      <div class="media-body">
-        <%= link_to "Guide: Find articles", "https://library.stanford.edu/guides/find-articles", class: "media-heading" %>
-        <i class="external-link-icon"></i>
-        <p>Guide to searching for articles at Stanford.</p>
-      </div>
-    </li>
-  </ul>
-
-  <h2>Help with SearchWorks</h2>
-  <ul class="media-list">
-    <li class="media">
-      <div class="media-body">
-        <%= link_to "Guide: SearchWorks basics", "https://library.stanford.edu/guides/searchworks-basics-searching-library-catalog", class: "media-heading" %>
-        <i class="external-link-icon"></i>
-        <p>Overview of SearchWorks features, including basic search strategies, facets, browsing.</p>
-      </div>
-    </li>
-  </ul>
-</div>
+<%= render 'shared/home_page_bento' %>

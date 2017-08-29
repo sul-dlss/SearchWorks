@@ -4,7 +4,7 @@ describe 'Government Documents Access Point' do
   before do
     visit root_path
 
-    within('.home-page-column.features') do
+    within('.features') do
       click_link 'Government documents'
     end
   end
