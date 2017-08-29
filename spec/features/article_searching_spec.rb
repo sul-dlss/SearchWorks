@@ -58,7 +58,7 @@ feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_title(/\d+ (result|results) in SearchWorks articles+/)
-      expect(page).to have_css('h2', text: /\d+ results?/)
+      expect(page).to have_css('h2', text: /\d+ articles\+ results?/)
       expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
   end
