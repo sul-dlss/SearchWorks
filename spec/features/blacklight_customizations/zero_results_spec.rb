@@ -9,7 +9,7 @@ feature "Zero results" do
     click_button 'search'
   end
   scenario "search widgets and start over should not be present" do
-    expect(page).to_not have_css("a.catalog_startOverLink", text: "Start Over")
+    expect(page).to_not have_css("a.catalog_startOverLink", text: /Catalog start/i)
     expect(page).to_not have_css("div#search-widgets")
   end
 
