@@ -44,11 +44,11 @@
       <% else %>
         <div class='results-heading'>
           <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'catalog result') %></h2>
           <%= link_to new_documents_feed_path do %>
             <i class="rss-icon" aria-hidden="true"></i>
             <span class="sr-only">RSS feed for this result</span>
           <% end %>
-          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'catalog result') %></h2>
         </div>
         <%= render 'search_header' %>
       <% end %>
