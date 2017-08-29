@@ -50,8 +50,7 @@ feature 'Article Searching' do
     scenario 'renders home page if no search parameters are present' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path
-      expect(page).to have_css('.home-page-column', count: 3)
-      expect(page).to have_css('h1', text: /Find journal articles/)
+      expect(page).to have_css('h1', text: /Journal articles . other e-resources/)
     end
 
     scenario 'renders results page if search parameters are present' do
