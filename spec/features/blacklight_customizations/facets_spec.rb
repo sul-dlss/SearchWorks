@@ -53,7 +53,7 @@ feature "Facets Customizations" do
     click_button 'search'
 
     within "div#facets" do
-      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Limit your search")
+      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Refine your results")
     end
   end
 

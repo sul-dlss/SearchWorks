@@ -48,7 +48,7 @@ describe "Search toolbar", js: true, feature: true do
         click_link "Selections"
         click_link "Clear list"
         expect(page).to have_css("div.alert.alert-success", text: "Your selections have been deleted.")
-        expect(page).to have_css("h2", text: "Limit your search")
+        expect(page).to have_css("h2", text: "Refine your results")
       end
     end
   end
