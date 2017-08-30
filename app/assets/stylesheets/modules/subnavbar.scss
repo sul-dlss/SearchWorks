@@ -25,7 +25,15 @@
     color: $white;
   }
 
+  .sul-services-menu {
+    white-space: nowrap;
+  }
+
   // For all subnavbar navbar lists
+  .sul-services-menu ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
   .navbar-nav > li {
     a {
       background-color: $sul-subnavbar-bg-color;
@@ -88,6 +96,10 @@
   @media screen and (max-width: $screen-sm-min) {
     .navbar-collapse {
       padding: 0 15px;
+    }
+
+    .sul-top-menu {
+      white-space: normal;
     }
   }
 }

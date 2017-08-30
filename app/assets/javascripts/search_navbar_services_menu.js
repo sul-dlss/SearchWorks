@@ -4,4 +4,3 @@ Blacklight.onLoad(function() {
   $('.navbar-toggle').rotateHelper();
 
 });
-
