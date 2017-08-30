@@ -243,13 +243,10 @@ class ArticlesController < ApplicationController
   def setup_eds_session(session)
     return if session['eds_session_token'].present? && !session['eds_guest'].nil?
     session['eds_guest'] = !on_campus_or_su_affiliated_user?
-    session['eds_session_token'] = EBSCO::EDS::Session.new(
-      guest:    session['eds_guest'],
-      caller:   'new-session',
-      user:     Settings.EDS_USER,
-      pass:     Settings.EDS_PASS,
-      profile:  Settings.EDS_PROFILE,
-      debug:    Settings.EDS_DEBUG
+
+    session['eds_session_token'] = Eds::Session.new(
+      guest: session['eds_guest'],
+      caller: 'new-session'
     ).session_token
   end
 
