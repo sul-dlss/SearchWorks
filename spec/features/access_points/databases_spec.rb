@@ -27,13 +27,13 @@ feature "Databases Access Point" do
   end
 
   scenario 'databases should be able to be prefix filtered' do
-    expect(page).to have_css('h2', text: '8 results')
+    expect(page).to have_css('h2', text: '8 catalog results')
 
     within '.database-prefix' do
       click_link 'S'
     end
 
-    expect(page).to have_css('h2', text: '4 results')
+    expect(page).to have_css('h2', text: '4 catalog results')
     expect(page).to have_css('h3', text: /Selected Database \d/, count: 4)
   end
 end

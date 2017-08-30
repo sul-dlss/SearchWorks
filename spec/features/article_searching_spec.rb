@@ -58,7 +58,7 @@ feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_title(/\d+ (result|results) in SearchWorks articles+/)
-      expect(page).to have_css('h2', text: /\d+ results?/)
+      expect(page).to have_css('h2', text: /\d+ articles\+ results?/)
       expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
   end
@@ -123,7 +123,7 @@ feature 'Article Searching' do
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
-      find('a.btn', text: /Start over/).trigger('click')
+      find('a.btn-reset').trigger('click')
       expect(page).to have_current_path(articles_path)
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
     end

@@ -63,7 +63,7 @@ en:
           invalid: 'You must enter only valid email addresses.'
           too_many: 'You have entered more than the maximum (%{max}) email addresses allowed.'
     search:
-      page_heading: "Search results"
+      page_heading: "%{search_type} search results"
       bookmarks:
         present: "Selected"
         absent: "Select"

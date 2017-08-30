@@ -1,36 +1,42 @@
-span.constraint.btn-group {
-  margin: 0.5em;
-
-  span.constraint-value.btn {
-    border-top-left-radius: $sul-constraint-btn-radius;
-    border-bottom-left-radius: $sul-constraint-btn-radius;
-    font-size: $font-size-base;
+.constraints-container {
+  .btn-reset span {
+    text-transform: uppercase;
   }
 
-  a.btn.remove {
-    border-top-right-radius: $sul-constraint-btn-radius;
-    border-bottom-right-radius: $sul-constraint-btn-radius;
-    font-size: 12px;
-    padding-left: 4px;
-    padding-top: 8px;
-    padding-bottom: 5px;
-  }
+  span.constraint.btn-group {
+    margin: 0.5em;
 
-}
-@media (max-width: $screen-xs-max) {
-  .constraint {
-    &.query .filterValue {
-      max-width: 227px;
+    span.constraint-value.btn {
+      border-top-left-radius: $sul-constraint-btn-radius;
+      border-bottom-left-radius: $sul-constraint-btn-radius;
+      font-size: $font-size-base;
     }
-    &.filter .filterValue {
-      max-width: 150px;
+
+    a.btn.remove {
+      border-top-right-radius: $sul-constraint-btn-radius;
+      border-bottom-right-radius: $sul-constraint-btn-radius;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-top: 8px;
+      padding-bottom: 5px;
     }
-    .filterValue {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-bottom: -6px;
+
+  }
+  @media (max-width: $screen-xs-max) {
+    .constraint {
+      &.query .filterValue {
+        max-width: 227px;
+      }
+      &.filter .filterValue {
+        max-width: 150px;
+      }
+      .filterValue {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: -6px;
+      }
     }
   }
 }

@@ -38,17 +38,17 @@
     <div class="search_num_of_results">
       <% if @response.empty? %>
         <div class='results-heading'>
-          <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
+          <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: 'catalog') %></h1>
           <%= t('blacklight.search.pagination_info.no_items_found', search_type: 'catalog').html_safe %>
         </div>
       <% else %>
         <div class='results-heading'>
           <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'catalog result') %></h2>
           <%= link_to new_documents_feed_path do %>
             <i class="rss-icon" aria-hidden="true"></i>
             <span class="sr-only">RSS feed for this result</span>
           <% end %>
-          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
         </div>
         <%= render 'search_header' %>
       <% end %>
