@@ -1,4 +1,11 @@
 <% # Overridden from Blacklight to use   %>
+<% if article_search? && facet_field.key == 'eds_publication_type_facet'%>
+  <% if facet_field_in_params?('eds_publication_type_facet') %>
+    <div class="alert alert-warning" role="alert">
+      <%= t('searchworks.articles.flashes.source_type_warning_html') %>
+    </div>
+  <% end %>
+<% end %>
 <ul class="facet-values list-unstyled">
   <% paginator = facet_paginator(facet_field, display_facet) %>
   <%= render_facet_limit_list paginator, solr_field %>
