@@ -59,10 +59,19 @@ module StubArticleService
 
     def initialize(documents)
       @documents = documents
+      super({ date_range: { minyear: '1501', maxyear: '2018' } }, {})
     end
 
     def response
       { numFound: documents.count }
+    end
+
+    def facet_counts
+      {
+        'facet_fields' => {
+          'pub_year_tisim' => ['2001', 1, '2002', 1]
+        }
+      }
     end
 
     def limit_value
