@@ -1,0 +1,24 @@
+<div class="top-panel-heading panel-heading">
+  <h2>
+    <%= t("searchworks.articles.facets.options.heading") %>
+  </h2>
+</div>
+<div class="facet-options">
+  <% facet_options_presenter.limiters.each do |limiter| %>
+    <div>
+      <%= label_tag("eds_limiter_#{limiter.id}") do %>
+        <%= link_to(limiter.search_url) do %>
+          <%= check_box(
+                'f',
+                'eds_search_limiters_facet',
+                { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
+                limiter.label,
+                nil
+              )
+          %>
+          <%= limiter.label %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
