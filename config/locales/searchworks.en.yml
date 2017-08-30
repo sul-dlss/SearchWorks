@@ -7,6 +7,8 @@ en:
           heading: "For a known citation, type author name and title in the main search box."
           body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
       flashes:
+        source_type_warning_html:
+          Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
         fulltext_link:
           guest_html: Sorry, the PDF download was not successful because you are currently in guest mode.<br/><a href="%{login_url}">Log in to try the download again</a>.
           non_guest_html: Sorry, the PDF download was not successful.<br/>We don't know the source of the error. Try again, and if it continues to fail, <a href=" http://library.stanford.edu/ask/email/connection-problems">please report it as a connection problem</a>.
