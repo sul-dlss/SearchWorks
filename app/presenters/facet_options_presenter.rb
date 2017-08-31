@@ -16,7 +16,7 @@ class FacetOptionsPresenter
   attr_reader :params, :context
 
   def available_limiters
-    eds_session.info.available_search_criteria['AvailableLimiters']
+    eds_session.info.available_search_criteria['AvailableLimiters'] || []
   end
 
   def eds_session
