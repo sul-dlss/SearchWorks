@@ -34,10 +34,23 @@ module StubArticleService
     )
   ]
 
+  def available_search_criteria
+    {
+      'AvailableLimiters' => [
+        { 'Type' => 'select', 'Id' => 'FT', 'Label' => 'Limiter1' },
+        { 'Type' => 'select', 'Id' => 'FT', 'Label' => 'Limiter2' }
+      ]
+    }
+  end
+
   def stub_article_service(type: :multiple, docs:)
     raise 'Article search service stubbed without any documents.' if docs.blank?
 
-    allow_any_instance_of(ArticlesController).to receive(:setup_eds_session).and_return('abc123')
+    allow_any_instance_of(Eds::Session).to receive_messages(
+      info: double(available_search_criteria: available_search_criteria),
+      session_token: 'abc123'
+    )
+
     case type
     when :multiple
       allow_any_instance_of(Eds::Repository).to receive(:search).and_return(
