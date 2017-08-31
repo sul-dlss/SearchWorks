@@ -68,7 +68,7 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
-  constraints(id: /[-~\+\(\)\.\|,:;%\w]+/) do # EDS identifier rules (e.g., db__id)
+  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index show] do
       concerns :exportable
     end
