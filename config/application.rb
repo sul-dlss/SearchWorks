@@ -45,6 +45,8 @@ module SearchWorks
 
     config.action_controller.permit_all_parameters = true
 
+    config.middleware.insert 0, Rack::UTF8Sanitizer
+
     # This will not be required once we upgrade to Blacklight 7
     config.action_dispatch.rescue_responses.merge!(
       "Blacklight::Exceptions::RecordNotFound" => :not_found

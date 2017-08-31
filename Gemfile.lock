@@ -269,6 +269,8 @@ GEM
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-utf8_sanitizer (1.3.2)
+      rack (>= 1.0, < 3.0)
     rails (5.1.2)
       actioncable (= 5.1.2)
       actionmailer (= 5.1.2)
@@ -472,6 +474,7 @@ DEPENDENCIES
   openseadragon
   poltergeist (>= 1.8.1)
   puma (~> 3.7)
+  rack-utf8_sanitizer
   rails (~> 5.1)
   rails-controller-testing
   retina_tag
@@ -492,4 +495,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.1
+   1.15.4
