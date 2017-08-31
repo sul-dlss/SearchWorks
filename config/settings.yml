@@ -38,6 +38,9 @@ EDS_CACHE_DIR: /tmp
 EDS_LOGDIR: <%= Rails.root.join('log') %>
 EDS_TIMEOUT: 15
 EDS_OPEN_TIMEOUT: 5
+EDS_HOSTS:
+  - edshost1.example.com
+  - edshost2.example.com
 STANFORD_NETWORK:
   singletons: []
   ranges: []

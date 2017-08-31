@@ -47,6 +47,7 @@ module Eds
         eds_cache_dir:  Settings.EDS_CACHE_DIR,
         timeout:        Settings.EDS_TIMEOUT,
         open_timeout:   Settings.EDS_OPEN_TIMEOUT,
+        api_hosts_list: Settings.EDS_HOSTS,
         debug:          Settings.EDS_DEBUG,
         log:            File.join(Settings.EDS_LOGDIR, 'faraday.log')
       }
