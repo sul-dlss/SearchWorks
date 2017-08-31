@@ -39,8 +39,9 @@ EDS_LOGDIR: <%= Rails.root.join('log') %>
 EDS_TIMEOUT: 15
 EDS_OPEN_TIMEOUT: 5
 EDS_HOSTS:
-  - edshost1.example.com
-  - edshost2.example.com
+  - eds-api-a.ebscohost.com
+  - eds-api-b.ebscohost.com
+  - eds-api.ebscohost.com
 STANFORD_NETWORK:
   singletons: []
   ranges: []
