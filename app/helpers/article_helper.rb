@@ -15,7 +15,7 @@ module ArticleHelper
     separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
-      link_to value, articles_path(q: "\"#{value}\"", search_field: :subject)
+      link_to value.html_safe, articles_path(q: "\"#{CGI.unescapeHTML(value)}\"", search_field: :subject)
     end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
   end
 

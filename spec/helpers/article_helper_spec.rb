@@ -43,6 +43,11 @@ RSpec.describe ArticleHelper do
       expect(result).to have_link 'ABC', href: /\?q=%22ABC%22&search_field=subject/
       expect(result).to have_link '123', href: /\?q=%22123%22&search_field=subject/
     end
+
+    it 'properly handles HTML entities' do
+      result = Capybara.string(helper.link_subjects(value: %w[ABC\ &amp;\ 123]))
+      expect(result).to have_link 'ABC & 123', href: /\?q=%22ABC\+%26\+123%22&search_field=subject/
+    end
   end
 
   context 'authors' do
