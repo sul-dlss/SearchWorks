@@ -19,7 +19,7 @@ module StubArticleService
       }]
     ),
     SolrDocument.new(
-      id: 'wqoeif',
+      id: 'wqoeif.zzz',
       eds_title: 'Yet another title for the document',
       eds_fulltext_links: [{
         'label' => 'View request options',
