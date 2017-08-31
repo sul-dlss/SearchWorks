@@ -78,8 +78,8 @@ GEM
     blacklight_advanced_search (6.3.1)
       blacklight (~> 6.0, >= 6.0.1)
       parslet
-    blacklight_range_limit (6.1.2)
-      blacklight (~> 6.0)
+    blacklight_range_limit (6.2.0)
+      blacklight (>= 6.0.2)
       jquery-rails
       rails (>= 3.0)
     bootstrap-sass (3.3.7)
@@ -481,7 +481,7 @@ DEPENDENCIES
   blacklight-hierarchy (~> 1.0)
   blacklight-marc (~> 6.0)
   blacklight_advanced_search (~> 6.3)
-  blacklight_range_limit (~> 6.0)
+  blacklight_range_limit (~> 6.2)
   byebug
   capistrano (~> 3.0)
   capistrano-bundler
@@ -539,4 +539,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.15.3
+   1.15.4

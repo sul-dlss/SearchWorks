@@ -146,7 +146,7 @@ class ArticlesController < ApplicationController
     # Facet field configuration
     config.add_facet_field 'eds_search_limiters_facet', label: 'Options'
     # Commenting this out temporarily until we have a better date facet option
-    # config.add_facet_field 'eds_publication_year_facet', label: 'Date'
+    config.add_facet_field 'pub_year_tisim', label: 'Date', partial: 'articles/range_limit_panel'
     config.add_facet_field 'eds_publication_type_facet', label: 'Source type'
     config.add_facet_field 'eds_language_facet', label: 'Language' # , limit: 20 TODO: Need to handle facet limiting
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic'
