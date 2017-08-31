@@ -144,9 +144,12 @@ class ArticlesController < ApplicationController
     end
 
     # Facet field configuration
-    config.add_facet_field 'eds_search_limiters_facet', label: 'Options'
+    # Setting `if: false` for the limiters facet so the facet does not render as
+    # a facet but we still can apploy our configured label to the breadcrumbs
+    config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false
+    # Commenting this out temporarily until we have a better date facet option
     config.add_facet_field 'pub_year_tisim', label: 'Date', partial: 'articles/range_limit_panel'
-      config.add_facet_field 'eds_publication_type_facet', label: 'Source type', partial: "facet_eds_publication_type"
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', partial: "facet_eds_publication_type"
     config.add_facet_field 'eds_language_facet', label: 'Language' # , limit: 20 TODO: Need to handle facet limiting
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic'
     config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography'

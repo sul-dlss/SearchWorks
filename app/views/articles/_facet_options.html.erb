@@ -3,22 +3,24 @@
     <%= t("searchworks.articles.facets.options.heading") %>
   </h2>
 </div>
-<div class="facet-options">
+<div class="facet-options" data-behavior='facet-options-checkboxes'>
   <% facet_options_presenter.limiters.each do |limiter| %>
-    <div>
+    <div data-behavior='facet-options-checkbox'>
       <%= label_tag("eds_limiter_#{limiter.id}") do %>
-        <%= link_to(limiter.search_url) do %>
-          <%= check_box(
-                'f',
-                'eds_search_limiters_facet',
-                { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
-                limiter.label,
-                nil
-              )
-          %>
+        <%= check_box(
+              'f',
+              'eds_search_limiters_facet',
+              { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
+              limiter.label,
+              nil
+            )
+        %>
+        <%= link_to(limiter.search_url, 'data-turbolinks': false) do %>
           <%= limiter.label %>
         <% end %>
       <% end %>
     </div>
   <% end %>
+
+  <div data-behavior='loading-spinner' class='loading-spinner' style='display:none'></div>
 </div>
