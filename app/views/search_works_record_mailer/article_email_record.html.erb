@@ -11,7 +11,7 @@
     <ol>
       <% @documents.each do |document| %>
         <li>
-          <strong><a href="<%= article_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:eds_title] if document[:eds_title].present? %></a></strong>
+          <strong><a href="<%= article_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:eds_title] if document.eds? %></a></strong>
           <div><%= document[:eds_authors].to_sentence if document[:eds_authors].present? %></div>
           <div><%= document[:eds_composed_title].html_safe  if document[:eds_composed_title].present? %></div>
           <% if document.eds_links.present? %>
