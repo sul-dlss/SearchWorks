@@ -12,7 +12,6 @@ describe 'catalog/_search_form.html.erb' do
     context 'article search' do
       before do
         expect(view).to receive_messages(controller_name: 'articles')
-        expect(view).to receive_messages(has_search_parameters?: false)
       end
 
       it 'has a contextual placeholder' do
@@ -33,38 +32,6 @@ describe 'catalog/_search_form.html.erb' do
         expect(rendered).to have_css(
           'input[type="text"][placeholder="books & media"]'
         )
-      end
-    end
-  end
-
-  context 'article search' do
-    before { expect(view).to receive_messages(controller_name: 'articles') }
-
-    describe 'default options facet params' do
-      context 'when there are no query parameters' do
-        before { expect(view).to receive_messages(has_search_parameters?: false) }
-
-        it 'renders a hidden field for eds_search_limiters_facet' do
-          render
-
-          expect(rendered).to have_css(
-            'input[type="hidden"][name="f[eds_search_limiters_facet][]"][value="Stanford has it"]',
-            visible: false
-          )
-        end
-      end
-
-      context 'when there are query parameters' do
-        before { expect(view).to receive_messages(has_search_parameters?: true) }
-
-        it 'does not render a hidden field for eds_search_limiters_facet' do
-          render
-
-          expect(rendered).not_to have_css(
-            'input[type="hidden"][name="f[eds_search_limiters_facet][]"][value="Stanford has it"]',
-            visible: false
-          )
-        end
       end
     end
   end

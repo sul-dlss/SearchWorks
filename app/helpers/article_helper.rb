@@ -6,6 +6,10 @@ module ArticleHelper
     controller_name == 'articles'
   end
 
+  def facet_options_presenter
+    @facet_options ||= FacetOptionsPresenter.new(params: params, context: self)
+  end
+
   def link_subjects(options = {})
     return unless options[:value]
     separators = options.dig(:config, :separator_options) || {}
