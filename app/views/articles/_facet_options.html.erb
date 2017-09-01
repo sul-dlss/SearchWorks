@@ -6,24 +6,25 @@
     </h2>
   </div>
   <div class="facet-options" data-behavior='facet-options-checkboxes'>
-    <% limiters.each do |limiter| %>
-      <div data-behavior='facet-options-checkbox'>
-        <%= label_tag("eds_limiter_#{limiter.id}") do %>
-          <%= check_box(
-                'f',
-                'eds_search_limiters_facet',
-                { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
-                limiter.label,
-                nil
-              )
-          %>
-          <%= link_to(limiter.search_url, 'data-turbolinks': false) do %>
-            <%= limiter.label %>
+    <ul class="checkbox-facet-list">
+      <% limiters.each do |limiter| %>
+        <li data-behavior='facet-options-checkbox'>
+          <%= label_tag("eds_limiter_#{limiter.id}") do %>
+            <%= check_box(
+                  'f',
+                  'eds_search_limiters_facet',
+                  { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
+                  limiter.label,
+                  nil
+                )
+            %>
+            <%= link_to(limiter.search_url, 'data-turbolinks': false) do %>
+              <%= limiter.label %>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
-    <% end %>
-
+        </li>
+      <% end %>
+    </ul>
     <div data-behavior='loading-spinner' class='loading-spinner' style='display:none'></div>
   </div>
 <% end %>
