@@ -45,3 +45,5 @@ EDS_HOSTS:
 STANFORD_NETWORK:
   singletons: []
   ranges: []
+BITLY:
+  ACCESS_TOKEN: 'the_bitly_apikey'
