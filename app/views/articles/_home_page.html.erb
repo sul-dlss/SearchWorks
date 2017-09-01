@@ -7,21 +7,31 @@
         <div class="panel-body">
           <h2>Search settings</h2>
           <div class="home-settings">
-            <p>coming soon</p>
-            <!-- <%= form_tag articles_path, method: :get do %>
-              <ul>
+            <% limiters = facet_options_presenter.limiters %>
+            <ul class="checkbox-facet-list">
+              <% limiters.each do |limiter| %>
                 <li>
-                  <%= check_box_tag "setting", 'peerreviewed', false %>
-                  <span class="setting-label">Scholarly &amp; peer-reviewed only</span>
-                  <p class="setting-tip">Limit your search to scholarly content. Includes University presses.</p>
+                  <%= label_tag("eds_limiter_#{limiter.id}") do %>
+                    <%= check_box(
+                          'f',
+                          'eds_search_limiters_facet',
+                          {
+                            multiple: true,
+                            id: "eds_limiter_#{limiter.id}",
+                            checked: limiter.enabled_by_default?,
+                            'aria-described-by': "limiter_tip_#{limiter.id}",
+                            data: { behavior: 'update-hidden-inputs-by-checkbox', 'target-selector': '#dynamic-hidden-inputs-target' }
+                          },
+                          limiter.label,
+                          nil
+                        )
+                    %>
+                    <%= limiter.label %>
+                  <% end %>
+                  <p id="limiter_tip_<%= limiter.id %>" class='setting-tip help-block'><%= t("searchworks.articles.facets.options.#{limiter.id}.tip") %></p>
                 </li>
-                <li>
-                  <%= check_box_tag "setting", 'fulltext', true %>
-                  <span class="setting-label">Direct access to full text</span>
-                  <p class="setting-tip">Stanford subscribes to the full text, or it’s available via open access.</p>
-                </li>
-              </ul>
-            <% end %> -->
+              <% end %>
+            </ul>
           </div>
         </div>
       </div>

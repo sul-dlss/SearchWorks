@@ -13,6 +13,10 @@ en:
       facets:
         options:
           heading: Search settings
+          RV:
+            tip: Limit your search to scholarly content. Includes University presses.
+          FT1:
+            tip: Stanford subscribes to the full text, or it's available via open access.
     search:
       form:
         q:
