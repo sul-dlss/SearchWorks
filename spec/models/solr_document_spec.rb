@@ -123,8 +123,14 @@ describe SolrDocument do
   end
 
   describe 'EdsDocument' do
+    let(:eds) { SolrDocument.new(eds_title: 'yup') }
+    let(:non_eds) { SolrDocument.new }
     it 'is included' do
       expect(subject).to be_kind_of EdsDocument
+    end
+    it 'eds?' do
+      expect(eds.eds?).to eq true
+      expect(non_eds.eds?).to eq false
     end
   end
 end
