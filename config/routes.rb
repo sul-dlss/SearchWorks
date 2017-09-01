@@ -73,7 +73,7 @@ Rails.application.routes.draw do
       concerns :exportable
     end
 
-    post 'articles/:id/track' => 'articles#track', as: :track_article
+    post 'articles/:id/track' => 'articles#track', as: :track_articles
     get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link, constraints: { type: /[-\w]+/ }
   end
 
