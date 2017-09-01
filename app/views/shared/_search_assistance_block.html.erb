@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <ul class="media-list">
+      <%= render 'shared/chat_librarian_sidebar' if on_campus_or_su_affiliated_user? %>
+      <li class="media">
+        <%= content_tag(:span, "", class: "image-icon image-icon-search-tools media-object pull-left") %>
+        <div class="media-body">
+          <%= link_to "Search tools", "https://library.stanford.edu/search-services", class: "media-heading" %>
+          <p>Links to help you find images, data, dissertations, archival materials, and more.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

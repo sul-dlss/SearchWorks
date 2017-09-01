@@ -29,6 +29,12 @@ en:
       catalog:
         label: catalog
         description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
+      library_webiste:
+        label: library website
+        description_html: <span class="h3">library website</span> <span class="help-block">library info, guides, collections &amp; services</span>
+      bento:
+        label: all
+        description_html: <span class="h3">all</span> <span class="help-block">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
       imprint:
         label: Imprint
@@ -89,6 +95,7 @@ en:
         your_search: "Your search: "
         return_to_advanced_search: "Return to Advanced search page"
         limit: "Try using fewer terms to start, then limit your results."
+        search_context: "Try your search in…"
 
     bookmarks:
       page_heading: "Selections list"
