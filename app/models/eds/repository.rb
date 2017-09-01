@@ -17,7 +17,13 @@ module Eds
     def eds_search(search_builder = {}, eds_params = {})
       eds_session = Eds::Session.new(eds_params.update(caller: 'bl-search'))
       bl_params = search_builder.to_hash
-      results = eds_session.search(bl_params).to_solr
+      if bl_params && bl_params['q'] && bl_params['q']['id']
+        # List of ID's
+        results = eds_session.solr_retrieve_list(list: bl_params['q']['id'])
+      else
+        # Regular search
+        results = eds_session.search(bl_params).to_solr
+      end
       blacklight_config.response_model.new(results,
                                            bl_params,
                                            document_model: blacklight_config.document_model,
