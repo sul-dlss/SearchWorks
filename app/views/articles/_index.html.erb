@@ -5,18 +5,22 @@
   </div>
 </div>
 <div class='row'>
+  <% if @response.empty? %>
+    <div class="zero-results-heading">
+      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
+    </div>
+  <% end %>
   <div id="sidebar" class="col-md-4 col-sm-5">
-    <%= render 'search_sidebar' %>
+    <% if @response.empty? %>
+      <%= render 'shared/search_context_sidebar' %>
+    <% else %>
+      <%= render 'search_sidebar' %>
+    <% end %>
   </div>
   <div id="content" class="col-md-8 col-sm-7">
     <div id='documents' class="article-search-results">
       <% if @response.empty? %>
-        <div class="search_num_of_results">
-          <div class='results-heading'>
-            <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
-            <%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %>
-          </div>
-        </div>
         <%= render "shared/zero_results" %>
       <% else %>
         <div class="search_num_of_results">
