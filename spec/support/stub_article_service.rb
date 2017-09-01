@@ -37,8 +37,8 @@ module StubArticleService
   def available_search_criteria
     {
       'AvailableLimiters' => [
-        { 'Type' => 'select', 'Id' => 'FT', 'Label' => 'Limiter1' },
-        { 'Type' => 'select', 'Id' => 'FT', 'Label' => 'Limiter2' }
+        { 'Type' => 'select', 'Id' => 'RT', 'Label' => 'Limiter1' },
+        { 'Type' => 'select', 'Id' => 'FT1', 'Label' => 'Limiter2', 'DefaultOn' => 'y' }
       ]
     }
   end

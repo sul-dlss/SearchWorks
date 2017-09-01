@@ -7,19 +7,13 @@
 
 .article-home-page {
   .home-settings {
-    ul {
-        list-style: none;
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    .setting-label {
+    label {
       font-weight: bold;
     }
 
     .setting-tip {
       margin-left: 17px;
-      margin-top: 5px;
+      margin-top: 0;
     }
   }
 
