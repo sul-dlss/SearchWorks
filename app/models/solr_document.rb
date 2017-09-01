@@ -50,14 +50,34 @@ class SolrDocument
     document.key?( :marcxml  ) || document.key?( :marcbib_xml  )
   end
 
-  field_semantics.merge!(
-                         :title => "title_display",
-                         :author => "author_display",
-                         :language => "language_facet",
-                         :format => "format"
-                         )
+  sw_field_semantics = {
+    title: %w[title_display eds_title],
+    author: 'author_display',
+    language: 'language_facet',
+    format: 'format'
+  }
 
+  ##
+  # Use catalog_field_semantics by default
+  field_semantics.merge!(sw_field_semantics)
 
+  ##
+  # Overriding method until we get a version of Blacklight with new functionality
+  def to_semantic_values
+    semantic_value_hash = super
+    semantic_value_hash = self.class.field_semantics.each_with_object(semantic_value_hash) do |(key, field_names), hash|
+
+      ##
+      # Handles single string field_name or an array of field_names
+      value = Array.wrap(field_names).map { |field_name| self[field_name] }.flatten.compact
+
+      # Make single and multi-values all arrays, so clients
+      # don't have to know.
+      hash[key] = Array.wrap(value) unless value.empty?
+    end
+
+    semantic_value_hash || {}
+  end
 
   # self.unique_key = 'id'
 
