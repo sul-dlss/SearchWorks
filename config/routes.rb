@@ -68,12 +68,12 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
-  constraints(id: /[-~\+\(\)\.\|,:;%\w]+/) do # EDS identifier rules (e.g., db__id)
+  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index show] do
       concerns :exportable
     end
 
-    post 'articles/:id/track' => 'articles#track', as: :track_article
+    post 'articles/:id/track' => 'articles#track', as: :track_articles
     get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link, constraints: { type: /[-\w]+/ }
   end
 
