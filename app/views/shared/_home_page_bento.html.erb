@@ -5,7 +5,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/catalog.png' %>
-          <h4><%= link_to 'Catalog', root_path %></h4>
+          <h4><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h4>
           <p>Search the physical collections and digital resources of Stanford’s libraries. Find books, media, <%= link_to 'topic-specific databases', databases_path %>.</p>
         </div>
       </div>
@@ -14,7 +14,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/articles.png' %>
-          <h4><%= link_to 'Articles+', articles_path %></h4>
+          <h4><%= link_to_unless article_search?, 'Articles+', articles_path %></h4>
           <p>Search a combined index of 100s of databases, and connect directly to the article or resource. Covers ~87% of our subscribed databases.</p>
         </div>
       </div>
