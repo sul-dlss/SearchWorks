@@ -50,9 +50,8 @@
           <h2>Search tip</h2>
         </div>
         <div class="panel-body">
-          <% search_tip_n = (1..t('searchworks.articles.search_tips.max').to_i).to_a.sample %>
-          <h4><%= t("searchworks.articles.search_tips.tip_#{search_tip_n}.heading") %></h4>
-          <p><%= t("searchworks.articles.search_tips.tip_#{search_tip_n}.body") %></p>
+          <h4><%= t("searchworks.articles.search_tips.heading") %></h4>
+          <p><%= t("searchworks.articles.search_tips.body") %></p>
           <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/guides/article-search-tips' %></p>
         </div>
       </div>
