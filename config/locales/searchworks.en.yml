@@ -1,6 +1,9 @@
 en:
   searchworks:
     articles:
+      search_tips:
+        heading: "For a known citation, type author name and title in the main search box."
+        body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
       flashes:
         source_type_warning_html:
           Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.

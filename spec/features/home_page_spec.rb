@@ -13,34 +13,17 @@ feature "Home Page" do
     expect(page).to have_css(".panel-heading", text: "Library")
   end
   scenario "'Featured sets' section should display" do
-    expect(page).to have_css(".media a", text: "Digital collections")
-    expect(page).to have_css(".media a", text: "Dissertations & theses")
-    expect(page).to have_css('.media a', text: 'Government documents')
-    expect(page).to have_css(".media a", text: "Selected article databases")
-    expect(page).to have_css(".media a", text: "Course reserves")
+    expect(page).to have_css(".features a", text: "Digital collections")
+    expect(page).to have_css(".features a", text: "Theses & dissertations")
+    expect(page).to have_css('.features a', text: 'Government documents')
+    expect(page).to have_css(".features a", text: "Databases")
+    expect(page).to have_css(".features a", text: "Course reserves")
   end
   scenario "'Featured sets' images should be clickable", js: true do
     within('.features') do
       all('[data-no-link-href]').last.click
       expect(current_url).to match /#{course_reserves_path}$/
     end
-  end
-
-  scenario "'Looking for ideas?' section should display" do
-    expect(page).to have_css('h2', text: 'Looking for ideas?')
-    expect(page).to have_css('.media a', text: 'Yewno')
-  end
-
-  scenario "'Articles' section should display" do
-    expect(page).to have_css('h2', text: 'Looking for articles?')
-    expect(page).to have_css(".media a", text: "Select a database")
-    expect(page).to have_css(".media a", text: "Citation finder")
-    expect(page).to have_css(".media a", text: "Guide: Find articles")
-    expect(page).to have_css(".media a", text: "xSearch")
-  end
-  scenario "'Help with SearchWorks' section should display" do
-    expect(page).to have_css('h2', text: 'Help with SearchWorks')
-    expect(page).to have_css(".media a", text: "Guide: SearchWorks basics")
   end
   scenario "Logo and catalog images should display" do
     expect(page).to have_css("a.navbar-brand")
