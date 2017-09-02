@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <h3><%= t 'blacklight.search.zero_results.modify_your_search' %></h3>
+    <h3><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h3>
     <ul class="list-unstyled zero-results-list">
 
       <% if from_advanced_search? %>
