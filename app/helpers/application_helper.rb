@@ -107,4 +107,8 @@ module ApplicationHelper
       articles_path(mapped_params)
     )
   end
+
+  def search_type_name
+    t("searchworks.search_dropdown.#{controller_name}.label")
+  end
 end

@@ -25,10 +25,10 @@ en:
     search_dropdown:
       articles:
         label: articles+
-        description_html: <span class="h3">articles+</span> <span class="help-block">journal articles, e-books, and other licensed e-resources</span>
+        description_html: <span class="h3">articles+</span> <span class="help-block">journal articles &amp; other e-resources</span>
       catalog:
         label: catalog
-        description_html: <span class="h3">catalog</span> <span class="help-block">books &amp; media in the Stanford Libraries' collections</span>
+        description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
     marc_fields:
       imprint:
         label: Imprint
@@ -82,7 +82,7 @@ en:
       form:
         q: ''
       zero_results:
-        modify_your_search: "Modify your search"
+        modify_your_search: "Modify your search in %{search_type}"
         page_heading: "No results"
         limit_fields: "Remove limit(s): "
         search_fields: "Search all fields: "
