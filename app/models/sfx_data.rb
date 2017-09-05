@@ -16,7 +16,7 @@ class SfxData
   def targets
     return [] unless sfx_xml
     @targets ||= sfx_xml.xpath('//target').map do |t|
-      next unless t.xpath('./service_type').try(:text) == FULL_TEXT_SERVICE_TYPE
+      next unless target_xml_is_fulltext?(t)
 
       Target.new(t)
     end.compact
@@ -25,6 +25,11 @@ class SfxData
   private
 
   attr_reader :base_sfx_url
+
+  def target_xml_is_fulltext?(target_xml)
+    target_xml.xpath('./service_type').try(:text) == FULL_TEXT_SERVICE_TYPE &&
+      target_xml.xpath('./is_related').try(:text) == 'no'
+  end
 
   def sfx_xml
     return unless sfx_response.success?
