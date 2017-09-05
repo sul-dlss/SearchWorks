@@ -4,7 +4,7 @@ module Eds
   # We are wrapping this class so that we can easily instantiate a session object
   # without having to pass in all the session options every time (which is very versbose).
   class Session
-    delegate :info, :retrieve, :search, :session_token, to: :object
+    delegate :info, :retrieve, :search, :session_token, :solr_retrieve_list, to: :object
     def initialize(eds_params)
       @eds_params = eds_params
     end

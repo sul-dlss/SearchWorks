@@ -26,29 +26,51 @@ RSpec.describe Eds::Repository do
     expect(instance.find('123__abc__def')).to be_truthy
   end
 
-  context '#search (normal)' do
-    let(:search_builder) do
-      instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
+  describe '#search' do
+    context '(normal)' do
+      let(:search_builder) do
+        instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
+      end
+      it 'uses a session to execute a search' do
+        session = instance_double(
+          EBSCO::EDS::Session,
+          search: instance_double(EBSCO::EDS::Results, to_solr: {})
+        )
+        expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+        expect(instance.search(search_builder)).to be_truthy
+      end
     end
-    it 'uses a session to execute a search' do
-      session = instance_double(EBSCO::EDS::Session,
-        search: instance_double(EBSCO::EDS::Results, to_solr: {})
-      )
-      expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
-      expect(instance.search(search_builder)).to be_truthy
-    end
-  end
 
-  context '#search (peek query for prev/next)' do
-    let(:search_builder) do
-      instance_double(ArticleSearchBuilder, rows: 3, to_hash: { q: 'my query', start: 11, rows: 3 })
+    context '(peek query for prev/next)' do
+      let(:search_builder) do
+        instance_double(ArticleSearchBuilder, rows: 3, to_hash: { q: 'my query', start: 11, rows: 3 })
+      end
+      it 'uses a session to run the previous-next search' do
+        session = instance_double(
+          EBSCO::EDS::Session,
+          search: instance_double(EBSCO::EDS::Results, to_solr: double)
+        )
+        expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+        expect(instance.search(search_builder)).to be_truthy
+      end
     end
-    it 'uses a session to run the previous-next search' do
-      session = instance_double(EBSCO::EDS::Session,
-        search: instance_double(EBSCO::EDS::Results, to_solr: double)
-      )
-      expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
-      expect(instance.search(search_builder)).to be_truthy
+
+    context '(id fetch)' do
+      let(:search_builder) do
+        instance_double(
+          ArticleSearchBuilder,
+          rows: 10,
+          to_hash: { 'q' => { 'id' => 'abc' }, rows: 10 }
+        )
+      end
+      it 'uses a session to run solr_retrieve_list' do
+        session = instance_double(
+          Eds::Session
+        )
+        expect(Eds::Session).to receive(:new).and_return(session)
+        expect(session).to receive(:solr_retrieve_list)
+        instance.search(search_builder)
+      end
     end
   end
 end

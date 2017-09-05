@@ -17,7 +17,8 @@ module Eds
     def eds_search(search_builder = {}, eds_params = {})
       eds_session = Eds::Session.new(eds_params.update(caller: 'bl-search'))
       bl_params = search_builder.to_hash
-      if bl_params && bl_params['q'] && bl_params['q']['id']
+
+      if bl_params.try(:dig, 'q').try(:dig, 'id')
         # List of ID's
         results = eds_session.solr_retrieve_list(list: bl_params['q']['id'])
       else
