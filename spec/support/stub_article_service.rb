@@ -5,7 +5,11 @@ module StubArticleService
     SolrDocument.new(
       id: 'abc123',
       eds_title: 'The title of the document',
-      eds_subjects: %w[Kittens Felines Companions],
+      eds_subjects: '<searchLink fieldCode="SU" term="Kittens">Kittens</searchLink>' \
+                    '<br/>' \
+                    '<searchLink fieldCode="SU" term="Felines">Felines</searchLink>' \
+                    '<br/>' \
+                    '<searchLink fieldCode="SU" term="Companions">Companions</searchLink>',
       eds_html_fulltext_available: true
     ),
     SolrDocument.new(

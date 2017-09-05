@@ -91,7 +91,7 @@ feature 'Article Searching' do
         id: '1234',
         eds_authors:  long_data,
         eds_abstract: long_data,
-        eds_subjects: long_data
+        eds_subjects: "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"
       )
       stub_article_service(docs: [document])
 

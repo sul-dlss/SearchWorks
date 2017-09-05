@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
       subject:  :subject_terms,
       source:   :search_title,
       abstract: :search,
-      series: :search_series,
+      series:   :search_series,
       issn:     :isbn_search, # advanced search
       isbn:     :isbn_search  # advanced search
     }
@@ -83,6 +83,22 @@ class ArticlesController < ApplicationController
 
     config.add_search_field('isbn') do |field|
       field.label = 'ISBN'
+    end
+
+    # Additional "subject"-based searches as EDS uses multiple field codes
+    config.add_search_field('subject_heading') do |field| # SH field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
+    end
+
+    config.add_search_field('descriptor') do |field| # DE field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
+    end
+
+    config.add_search_field('keyword') do |field| # KW field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
     end
 
     # solr field configuration for document/show views

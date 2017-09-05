@@ -5,7 +5,7 @@ feature 'Article Record Display' do
 
   describe 'Subjects' do
     let(:document) do
-      SolrDocument.new(id: '123', eds_subjects_person: %w[Person1 Person2])
+      SolrDocument.new(id: '123', eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
     end
 
     it 'are linked' do
@@ -64,7 +64,7 @@ feature 'Article Record Display' do
       SolrDocument.new(
         id: '123',
         eds_abstract: 'The Abstract',
-        eds_subjects_person: %w[A Subject],
+        eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>',
         eds_volume: 'The Volumne'
       )
     end
