@@ -50,6 +50,7 @@
 
   .home-page-you-are-here {
     .panel .panel-body {
+      border: none;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
       -moz-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
       box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
@@ -64,10 +65,6 @@
       color: $white;
       padding: 4px;
       position: absolute;
-    }
-
-    img {
-      width: 101%; // extends image to the right just a pixel to fill a gap there
     }
   }
 
