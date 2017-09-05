@@ -13,13 +13,13 @@
   <% end %>
 </ul>
 
-<% if document['eds_subjects'].present? ||  document['eds_abstract'].present? %>
+<% if document.eds_subjects.present? || document['eds_abstract'].present? %>
   <dl class="document-metadata dl-horizontal dl-invert article-metadata">
-    <% if document['eds_subjects'].present? %>
+    <% if document.eds_subjects.present? %>
       <dt>Subjects</dt>
       <dd>
         <div data-behavior='article-metadata-truncate'>
-          <%= doc_presenter.field_value('eds_subjects') %>
+          <%= document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
         </div>
       </dd>
     <% end %>
@@ -53,7 +53,7 @@
         <% end %>
         </li>
       <% end %>
-    <% elsif document.html_fulltext? # HTML fulltext only %> 
+    <% elsif document.html_fulltext? # HTML fulltext only %>
       <li>
         <span class="online-label">Full text</span>
         <%= link_to('View on detail page',article_path(document)) %>
