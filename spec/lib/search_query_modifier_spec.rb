@@ -109,7 +109,7 @@ describe SearchQueryModifier do
     end
     describe "#selected_filter_labels" do
       it "should return labels as a string" do
-        expect(filtered_search.selected_filter_labels).to eq "A field: Something, Another field: Something Else"
+        expect(filtered_search.selected_filter_labels).to eq "A field > Something+ Another field > Something Else"
       end
       it "should handle when there is no f parameter" do
         expect(ranged_search.selected_filter_labels).to eq ''
