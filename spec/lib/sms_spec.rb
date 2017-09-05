@@ -10,6 +10,11 @@ describe "Searchworks::Document::Sms" do
       ]
     )
   }
+  let(:eds_doc) do
+    SolrDocument.new(
+      eds_title: 'holla back'
+    )
+  end
 
   before(:all) do
     SolrDocument.use_extension(Searchworks::Document::Sms)
@@ -20,6 +25,12 @@ describe "Searchworks::Document::Sms" do
     expect(sms_text).to match(/callnumber2/)
     expect(sms_text).to match(/Green Library - Stacks/)
     expect(sms_text).to_not match(/Biology Library (Falconer) - Stacks/)
+  end
+
+  context 'eds document' do
+    it 'should use the eds title' do
+      expect(eds_doc.to_sms_text).to eq 'holla back'
+    end
   end
 
 end

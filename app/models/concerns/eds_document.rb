@@ -12,4 +12,8 @@ module EdsDocument
     # TODO: we probably need a better way to determine this
     self['eds_title'] =~ ::SolrDocument::EDS_RESTRICTED_PATTERN
   end
+
+  def eds?
+    self[:eds_title].present?
+  end
 end
