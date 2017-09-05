@@ -13,6 +13,5 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
     eds_params[:results_per_page] = rows
     eds_params[:view] = 'detailed'
     eds_params[:highlight] = 'y' # TODO: must be true in order to workaround EDS bug with missing research starter abstracts. See https://github.com/ebsco/edsapi-ruby/issues/55
-    eds_params['search_field'] = 'descriptor' if eds_params['search_field'] == 'subject'
   end
 end

@@ -32,6 +32,7 @@ class SolrDocument
   include MarcLinkedSerials
   include MarcMetadata
   include EdsDocument
+  include EdsSubjects
 
   include Blacklight::Solr::Document
 

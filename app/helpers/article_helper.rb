@@ -11,12 +11,10 @@ module ArticleHelper
   end
 
   def link_subjects(options = {})
-    return unless options[:value]
     separators = options.dig(:config, :separator_options) || {}
-    values = render_text_from_html(options[:value])
-    values.collect do |value|
-      link_to value, articles_path(q: "\"#{value}\"", search_field: :subject)
-    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+    subjects = @document.send(options[:field].to_sym) if options[:field].present? && @document.respond_to?(options[:field].to_sym)
+    subjects ||= EdsSubjects::Subject.from(options[:value])
+    subjects.map(&:to_html).to_sentence(separators).html_safe
   end
 
   def link_authors(options = {})
