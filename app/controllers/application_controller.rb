@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_out_path_for(*)
+    '/Shibboleth.sso/Logout'
+  end
+
   def on_campus_or_su_affiliated_user?
     IPRange.includes?(request.remote_ip) || current_user.present?
   end
