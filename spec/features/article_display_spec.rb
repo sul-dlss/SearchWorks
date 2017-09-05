@@ -104,6 +104,7 @@ feature 'Article Record Display' do
                   <service_type>getFullTxt</service_type>
                   <target_public_name>TargetName</target_public_name>
                   <target_url>http://example.com</target_url>
+                  <is_related>no</is_related>
                   <coverage>
                     <coverage_statement>Statement 1</coverage_statement>
                     <coverage_statement>Statement 2</coverage_statement>
