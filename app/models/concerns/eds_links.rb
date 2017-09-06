@@ -65,6 +65,9 @@ module EdsLinks
         EdsLinks::FulltextLink.new(link_field)
       end
 
+      # Ensure they meet our requirements
+      links.select!(&:present?)
+
       # Then, map them into the SearchWorks objects
       categories = links.map(&:category).compact.map(&:to_i)
       links.map do |link|

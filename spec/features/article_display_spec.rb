@@ -72,7 +72,7 @@ feature 'Article Record Display' do
     let(:document) do
       SolrDocument.new(
         id: 'abc123',
-        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com?param=abc&sid=xyz' }]
+        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com?param=abc&sid=xyz', 'type' => 'customlink-fulltext' }]
       )
     end
     let(:sfx_xml) { Nokogiri::XML.parse('') }
