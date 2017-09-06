@@ -22,6 +22,17 @@ class SfxData
     end.compact
   end
 
+  class << self
+    def url_without_sid(sfx_url)
+      uri = Addressable::URI.parse(sfx_url)
+      params = uri.query_values
+      params.delete('sid') if params.present?
+      uri.query_values = params
+
+      uri.to_s
+    end
+  end
+
   private
 
   attr_reader :base_sfx_url
