@@ -29,7 +29,7 @@ en:
       catalog:
         label: catalog
         description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
-      library_webiste:
+      library_website:
         label: library website
         description_html: <span class="h3">library website</span> <span class="help-block">library info, guides, collections &amp; services</span>
       bento:
