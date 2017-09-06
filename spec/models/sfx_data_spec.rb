@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SfxData do
-  let(:sfx_url) { 'http://sul-sfx.stanford.edu/sfx?thing=thing&other_thing=this_other_thing' }
+  let(:sfx_url) { 'http://sul-sfx.stanford.edu/sfx?thing=thing&other_thing=this_other_thing&sid=the_sid_of_the_url' }
 
   let(:sfx_xml) do
     Nokogiri::XML.parse(
@@ -25,7 +25,16 @@ describe SfxData do
   subject(:sfx_data) { described_class.new(sfx_url) }
 
   before do
-    expect(sfx_data).to receive(:sfx_xml).at_least(:once).and_return(sfx_xml)
+    allow(sfx_data).to receive(:sfx_xml).at_least(:once).and_return(sfx_xml)
+  end
+
+  describe '#url_without_sid' do
+    it 'removes the "sid" param from the URL and returns the rest' do
+      new_url = described_class.url_without_sid(sfx_url)
+      expect(sfx_url).to include 'sid=the_sid_of_the_url'
+      expect(new_url).not_to include 'sid=the_sid_of_the_url'
+      expect(new_url).to include 'http://sul-sfx.stanford.edu'
+    end
   end
 
   describe '#targets' do

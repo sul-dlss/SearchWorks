@@ -72,17 +72,24 @@ feature 'Article Record Display' do
     let(:document) do
       SolrDocument.new(
         id: 'abc123',
-        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com' }]
+        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com?param=abc&sid=xyz' }]
       )
+    end
+    let(:sfx_xml) { Nokogiri::XML.parse('') }
+
+    before do
+      expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(sfx_xml)
+    end
+
+    it 'renders a link to the SFX menu' do
+      visit article_path(document[:id])
+
+      within '.article-record-panels .metadata-panels' do
+        expect(page).to have_link('See the full find it @ Stanford menu', href: 'http://example.com?param=abc')
+      end
     end
 
     context 'when the SFX data is not loaded successfully' do
-      before do
-        expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(
-          Nokogiri::XML.parse('')
-        )
-      end
-
       it 'returns an error message in the panel' do
         visit article_path(document[:id])
 
@@ -95,24 +102,22 @@ feature 'Article Record Display' do
     end
 
     context 'when the SFX data is loaded successfully' do
-      before do
-        expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(
-          Nokogiri::XML.parse(
-            <<-XML
-              <root>
-                <target>
-                  <service_type>getFullTxt</service_type>
-                  <target_public_name>TargetName</target_public_name>
-                  <target_url>http://example.com</target_url>
-                  <is_related>no</is_related>
-                  <coverage>
-                    <coverage_statement>Statement 1</coverage_statement>
-                    <coverage_statement>Statement 2</coverage_statement>
-                  </coverage>
-                </target>
-              </root>
-            XML
-          )
+      let(:sfx_xml) do
+        Nokogiri::XML.parse(
+          <<-XML
+            <root>
+              <target>
+                <service_type>getFullTxt</service_type>
+                <target_public_name>TargetName</target_public_name>
+                <target_url>http://example.com</target_url>
+                <is_related>no</is_related>
+                <coverage>
+                  <coverage_statement>Statement 1</coverage_statement>
+                  <coverage_statement>Statement 2</coverage_statement>
+                </coverage>
+              </target>
+            </root>
+          XML
         )
       end
 
