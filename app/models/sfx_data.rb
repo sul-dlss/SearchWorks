@@ -16,15 +16,31 @@ class SfxData
   def targets
     return [] unless sfx_xml
     @targets ||= sfx_xml.xpath('//target').map do |t|
-      next unless t.xpath('./service_type').try(:text) == FULL_TEXT_SERVICE_TYPE
+      next unless target_xml_is_fulltext?(t)
 
       Target.new(t)
     end.compact
   end
 
+  class << self
+    def url_without_sid(sfx_url)
+      uri = Addressable::URI.parse(sfx_url)
+      params = uri.query_values
+      params.delete('sid') if params.present?
+      uri.query_values = params
+
+      uri.to_s
+    end
+  end
+
   private
 
   attr_reader :base_sfx_url
+
+  def target_xml_is_fulltext?(target_xml)
+    target_xml.xpath('./service_type').try(:text) == FULL_TEXT_SERVICE_TYPE &&
+      target_xml.xpath('./is_related').try(:text) == 'no'
+  end
 
   def sfx_xml
     return unless sfx_response.success?
