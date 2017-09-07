@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
+##
+# Controller used for feedback forms
 class FeedbackFormsController < ApplicationController
+  before_action :set_form_type, only: %i[new create]
 
   def new
   end
@@ -6,8 +11,14 @@ class FeedbackFormsController < ApplicationController
   def create
     if request.post?
       if validate
-        FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
-        flash[:success] = t("blacklight.feedback_form.success")
+        case @form_type
+        when 'connection'
+          FeedbackMailer.submit_connection(params, request.remote_ip).deliver_now
+          flash[:success] = t('blacklight.connection_form.success')
+        else
+          FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
+          flash[:success] = t('blacklight.feedback_form.success')
+        end
       end
       respond_to do |format|
         format.json do
@@ -21,6 +32,10 @@ class FeedbackFormsController < ApplicationController
   end
 
   protected
+
+  def set_form_type
+    @form_type = params.permit(:type)[:type]
+  end
 
   def url_regex
     /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i

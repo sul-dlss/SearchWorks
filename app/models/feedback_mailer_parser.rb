@@ -34,7 +34,11 @@ class FeedbackMailerParser
     params[:viewport]
   end
 
-  def type
-    'submit_feedback'
+  def resource_name
+    params[:resource_name]
+  end
+
+  def problem_url
+    params[:problem_url]
   end
 end
