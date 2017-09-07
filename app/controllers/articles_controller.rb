@@ -38,11 +38,7 @@ class ArticlesController < ApplicationController
       author:   :search_author,
       title:    :search_title,
       subject:  :subject_terms,
-      source:   :search_title,
-      abstract: :search,
-      series: :search_series,
-      issn:     :isbn_search, # advanced search
-      isbn:     :isbn_search  # advanced search
+      source:   :search_title
     }
     config.add_index_field "eds_authors", label: 'Authors', helper_method: :strip_author_relators
     config.add_index_field "eds_composed_title", label: 'Source', helper_method: :italicize_composed_title
@@ -58,7 +54,7 @@ class ArticlesController < ApplicationController
     end
 
     config.add_search_field('title') do |field|
-      field.label = 'Article title'
+      field.label = 'Title'
     end
 
     config.add_search_field('subject') do |field|
@@ -66,23 +62,7 @@ class ArticlesController < ApplicationController
     end
 
     config.add_search_field('source') do |field|
-      field.label = 'Journal title'
-    end
-
-    config.add_search_field('abstract') do |field|
-      field.label = 'Abstract'
-    end
-
-    config.add_search_field('series') do |field|
-      field.label = 'Series'
-    end
-
-    config.add_search_field('issn') do |field|
-      field.label = 'ISSN'
-    end
-
-    config.add_search_field('isbn') do |field|
-      field.label = 'ISBN'
+      field.label = 'Journal/Source'
     end
 
     # solr field configuration for document/show views

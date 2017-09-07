@@ -12,7 +12,7 @@ feature 'Article Home Page' do
 
   it 'has fielded search' do
     within '#search_field' do
-      %w[search author title subject source abstract issn isbn].each do |search_field|
+      %w[search author title subject source].each do |search_field|
         expect(page).to have_css("option[value=\"#{search_field}\"]")
       end
       expect(page).not_to have_css("option[selected]") # defaults to top one (i.e., search)
