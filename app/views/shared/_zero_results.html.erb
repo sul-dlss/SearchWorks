@@ -39,19 +39,4 @@
       <% end %>
   </div>
 </div>
-
-<%= render 'shared/search_assistance_block' %>
-<% if @search_modifier.has_query? %>
-  <div class="panel panel-default">
-    <div class="panel-body search-assistance">
-      <h3>Check other sources</h3>
-      <ul class="list-unstyled zero-results-list">
-        <li>
-          <%= link_to "Check WorldCat", "https://www.worldcat.org/search?q=#{params[:q]}" %>
-        </li>
-        <li>
-          <%= link_to "Check library website", "https://library.stanford.edu/search/website?search=#{params[:q]}" %>
-        </li>
-    </div>
-  </div>
-<% end %>
+<%= render "shared/search_assistance_block"%>

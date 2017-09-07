@@ -36,12 +36,4 @@ describe "shared/_zero_results.html.erb" do
     expect(rendered).to have_css("a", text: /Chat with a librarian/)
     expect(rendered).to have_css("a", text: /Search tools/)
   end
-
-  it "displays check other sources" do
-    render
-    expect(rendered).to have_css("h3", text: "Check other sources")
-    expect(rendered).to have_css("a", text: "Check WorldCat")
-    expect(rendered).to have_css("a", text: "Check library website")
-  end
-
 end
