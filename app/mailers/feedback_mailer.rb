@@ -1,34 +1,28 @@
 class FeedbackMailer < ActionMailer::Base
   def submit_feedback(params, ip)
-    if params[:name].present?
-      @name = params[:name]
-    else
-      @name = 'No name given'
-    end
+    @mailer_parser = FeedbackMailerParser.new(params, ip)
 
-    if params[:to].present?
-      @email = params[:to]
-    else
-      @email = 'No email given'
-    end
-
-    @message = params[:message]
-    @url = params[:url]
-    @ip = ip
-    @user_agent = params[:user_agent]
-    @viewport = params[:viewport]
-
-    mail(:to => Settings.EMAIL_TO,
-         :subject => "Feedback from SearchWorks",
-         :from => "feedback@searchworks.stanford.edu",
-         :reply_to => Settings.EMAIL_TO)
+    mail(to: Settings.EMAIL_TO.FEEDBACK,
+         subject: 'Feedback from SearchWorks',
+         from: 'feedback@searchworks.stanford.edu',
+         reply_to: Settings.EMAIL_TO.FEEDBACK)
   end
+
+  def submit_connection(params, ip)
+    @mailer_parser = FeedbackMailerParser.new(params, ip)
+
+    mail(to: Settings.EMAIL_TO.CONNECTION,
+         subject: "Connection problem: #{@mailer_parser.resource_name}",
+         from: @mailer_parser.email,
+         reply_to: Settings.EMAIL_TO.CONNECTION)
+  end
+
   def submit_wrong_book_cover(params, ip)
     @url = params[:url]
     @ip = ip
-    mail(to: Settings.EMAIL_TO,
+    mail(to: Settings.EMAIL_TO.FEEDBACK,
          subject: 'Quick Report Wrong Book Cover from SearchWorks',
          from: 'feedback@searchworks.stanford.edu',
-         reply_to: Settings.EMAIL_TO)
+         reply_to: Settings.EMAIL_TO.FEEDBACK)
   end
 end
