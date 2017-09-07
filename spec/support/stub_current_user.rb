@@ -6,13 +6,16 @@ module StubCurrentUser
   def stub_current_user(
         user: User.new(email: 'example@stanford.edu'),
         context: ApplicationController,
-        method_name: :current_user
+        method_name: :current_user,
+        affiliation: nil
   )
     return unless user
     if context.is_a?(Class)
       allow_any_instance_of(context).to receive(method_name).and_return(user)
+      allow_any_instance_of(context).to receive(:session).and_return('suAffiliation' => affiliation) if affiliation
     else
       allow(context).to receive(method_name).and_return(user)
+      allow(context).to receive(:session).and_return('suAffiliation' => affiliation) if affiliation
     end
   end
 end

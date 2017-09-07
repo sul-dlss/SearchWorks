@@ -42,6 +42,7 @@ EDS_HOSTS:
   - eds-api-a.ebscohost.com
   - eds-api-b.ebscohost.com
   - eds-api.ebscohost.com
+SU_AFFILIATIONS: []
 STANFORD_NETWORK:
   singletons: []
   ranges: []

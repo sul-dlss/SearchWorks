@@ -34,5 +34,23 @@ describe LoginController do
         end
       end
     end
+
+    describe 'suAffiliation session attribute' do
+      it 'is set to the request.env attribute when present' do
+        expect(request).to receive(:env).and_return('suAffiliation' => 'stanford:stanford')
+
+        get :login
+
+        expect(session['suAffiliation']).to eq 'stanford:stanford'
+      end
+
+      it 'is set to the ENV attribute when present' do
+        expect(ENV).to receive(:[]).with('suAffiliation').and_return('stanford:staff')
+
+        get :login
+
+        expect(session['suAffiliation']).to eq 'stanford:staff'
+      end
+    end
   end
 end
