@@ -37,6 +37,14 @@ Start the rails app
 
     $ rails s
 
+## "Logging in" as a User in development
+
+Given that this app is using shibboleth + devise for login, it can be tricky to get a user context set.  The user itself can be set by starting rails with a `REMOTE_USER` env var set (e.g. `REMOTE_USER=jstanford rails s`).
+
+If you need to set your affiliation attribute (e.g. `stanford:staff`) for things like testing article search, you can start rails with a `suAffiliation` env var set (e.g. `REMOTE_USER=jstanford suAffiliation=stanford:staff rails s`).
+
+One caveat to this is that you may still need to go through the login path `/webauth/login` in order to ensure proper session setup (e.g. eds guest flag set).
+
 ## Testing
 
 There are two testing tasks: `rake ci` and `rake jenkins`

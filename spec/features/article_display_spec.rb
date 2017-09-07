@@ -24,7 +24,9 @@ feature 'Article Record Display' do
     end
 
     context 'when a user has access' do
-      before { stub_current_user }
+      before do
+        stub_current_user(affiliation: 'test-stanford:test')
+      end
 
       it 'toggled via panel heading' do
         visit article_path(document[:id])
