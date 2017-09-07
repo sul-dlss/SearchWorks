@@ -3,7 +3,8 @@ require 'spec_helper'
 feature "Zero results" do
   let(:user) { nil }
   before do
-    stub_current_user(user: user)
+    stub_current_user(user: user, affiliation: 'test-stanford:test')
+
     visit root_path
     first("#q").set '9999zzzz2222'
     click_button 'search'
