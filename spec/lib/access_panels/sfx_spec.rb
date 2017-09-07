@@ -20,7 +20,7 @@ describe AccessPanels::Sfx do
     context 'when an sfx link is present' do
       let(:document) do
         SolrDocument.new(
-          'eds_fulltext_links' => [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com' }]
+          'eds_fulltext_links' => [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
         )
       end
 
@@ -34,7 +34,7 @@ describe AccessPanels::Sfx do
     context 'when no sfx links is present' do
       let(:document) do
         SolrDocument.new(
-          'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com' }]
+          'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
         )
       end
 

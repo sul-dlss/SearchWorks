@@ -84,7 +84,7 @@ RSpec.describe EdsLinks do
   context 'non customlink-fulltext links' do
     it 'ignores other link types' do
       document['eds_fulltext_links'].first['type'] = 'unknown'
-      expect(document.eds_links.fulltext).to be_blank
+      expect(document.eds_links.all).not_to be_present
     end
   end
 
