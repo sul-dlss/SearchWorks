@@ -129,6 +129,7 @@ class ArticlesController < ApplicationController
         eds_isbns:                { label: 'ISBN' },
         eds_issns:                { label: 'ISSN' },
         eds_publication_info:     { label: 'Published' },
+        eds_publication_status:   { label: 'Publication Status' },
         eds_document_oclc:        { label: 'OCLC' },
         eds_document_type:        { label: 'Document Type', helper_method: :remove_html_from_document_field },
         eds_other_titles:         { label: 'Other Titles' },
