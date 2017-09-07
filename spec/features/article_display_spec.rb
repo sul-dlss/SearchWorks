@@ -23,24 +23,38 @@ feature 'Article Record Display' do
       SolrDocument.new(id: '123', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
     end
 
-    it 'toggled via panel heading' do
-      visit article_path(document[:id])
-      expect(page).to have_css('.fulltext-toggle-bar', text: 'Hide full text')
-      expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
-      expect(page).to have_content('This Journal')
+    context 'when a user has access' do
+      before { stub_current_user }
 
-      find('#fulltextToggleBar').click
-      expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
-      expect(page).not_to have_css('div.blacklight-eds_html_fulltext', visible: true)
-      expect(page).not_to have_content('This Journal')
+      it 'toggled via panel heading' do
+        visit article_path(document[:id])
+        expect(page).to have_css('.fulltext-toggle-bar', text: 'Hide full text')
+        expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
+        expect(page).to have_content('This Journal')
+
+        find('#fulltextToggleBar').click
+        expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
+        expect(page).not_to have_css('div.blacklight-eds_html_fulltext', visible: true)
+        expect(page).not_to have_content('This Journal')
+      end
+
+      it 'renders HTML' do
+        visit article_path(document[:id])
+        find('#fulltextToggleBar').click
+        expect(page).to have_css('.blacklight-eds_html_fulltext')
+        within('div.blacklight-eds_html_fulltext') do
+          expect(page).not_to have_content('<anid>')
+        end
+      end
     end
 
-    it 'renders HTML' do
-      visit article_path(document[:id])
-      find('#fulltextToggleBar').click
-      expect(page).to have_css('.blacklight-eds_html_fulltext')
-      within('div.blacklight-eds_html_fulltext') do
-        expect(page).not_to have_content('<anid>')
+    context 'when a user does not have access' do
+      it 'renders a login link instead' do
+        visit article_path(document[:id])
+
+        expect(page).not_to have_css('button#fulltextToggleBar')
+
+        expect(page).to have_css('a h2', text: 'Log in to show fulltext')
       end
     end
   end
