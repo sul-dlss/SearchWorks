@@ -21,6 +21,11 @@
     .panel-heading {
       color: $cardinal-red;
     }
+
+    dt {
+      width: 100%;
+      text-transform: none !important; // Fighting !important in base.scss
+    }
   }
 }
 

@@ -19,6 +19,15 @@ feature 'Article Home Page' do
     end
   end
 
+  describe 'search tip' do
+    it 'renders a random search tip' do
+      within '.home-page-tips' do
+        expect(page).to have_css('dt', text: /\S+/)
+        expect(page).to have_css('dd', text: /\S+/)
+      end
+    end
+  end
+
   describe 'Search Settings', js: true do
     it 'adds a hidden input for any initial selections' do
       within '#dynamic-hidden-inputs-target' do
