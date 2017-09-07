@@ -26,7 +26,19 @@
           </li>
           <%= render_search_bar_selections_widget %>
         </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-link">
+            <%= link_to feedback_path(type: 'connection'), data: {toggle:"collapse", target:"#connection-form"}, class: 'connection-problem' do %>
+              Report a connection problem
+            <% end %>
+          </li>
+        </ul>
       <% end %>
     </div>
   </div>
+</div>
+<div id="connection-form" class="feedback-form-container collapse">
+  <%= render "shared/feedback_forms/connection_form" if show_feedback_form? %>
+  <hr>
 </div>

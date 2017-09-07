@@ -33,7 +33,9 @@ describe FeedbackMailerParser do
         {
           url: 'http://www.example.com',
           user_agent: 'Yo',
-          viewport: 'Lo'
+          viewport: 'Lo',
+          resource_name: 'Hey',
+          problem_url: 'There'
         }, ''
       )
     end
@@ -41,9 +43,8 @@ describe FeedbackMailerParser do
       expect(subject.url).to eq 'http://www.example.com'
       expect(subject.user_agent).to eq 'Yo'
       expect(subject.viewport).to eq 'Lo'
+      expect(subject.resource_name).to eq 'Hey'
+      expect(subject.problem_url).to eq 'There'
     end
-  end
-  describe '#type' do
-    it { expect(described_class.new({}, '').type).to eq 'submit_feedback' }
   end
 end

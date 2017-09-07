@@ -43,9 +43,13 @@
       font-weight: 100;
       margin-right: 20px;
       padding: 6px 0;
-    }
 
-    a:hover {
+      &.connection-problem {
+        font-size: 1.1em;
+      }
+    }
+    // Add the border on hover, or when the #connection-form is open
+    a:hover, a[data-target="#connection-form"][aria-expanded="true"] {
       text-decoration: underline;
     }
 
@@ -55,6 +59,10 @@
       outline-offset: -2px;
     }
   }
+  
+  .navbar-nav > li.connection-problem > a {
+    font-size: 1.1em;
+  } 
 
   // the last menu item should be right-aligned
   .navbar-nav > li:last-child > a {
