@@ -73,7 +73,7 @@ class CatalogController < ApplicationController
       search_title:   :title,
       subject_terms:  :subject,
       call_number:    :search,
-      search_series:  :series
+      search_series:  :search
     }
 
     # solr field configuration for document/show views
