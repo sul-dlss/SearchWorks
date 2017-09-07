@@ -32,7 +32,7 @@ Blacklight.onLoad(function(){
         this.init();
     }
 
-    function submitListener(){
+    function submitListener($el, $form){
       // Serialize and submit form if not on action url
       $form.each(function(i, form){
         if (location !== form.action){
@@ -99,15 +99,15 @@ Blacklight.onLoad(function(){
     Plugin.prototype = {
 
         init: function() {
-          $el = $(this.element);
-          $form = $($el).find('form');
-          $cancelLink = $($el).find(".cancel-link");
+          var $el = $(this.element);
+          var $form = $($el).find('form');
+          var $cancelLink = $el.find(".cancel-link");
 
           // Replace "Cancel" link with link styled button
           replaceLink($el, $cancelLink);
 
           //Add listener for form submit
-          submitListener($el,$form);
+          submitListener($el, $form);
 
           //Update href in nav link to '#'
           $('*[data-target="#' + this.element.id +'"]').attr('href', '#');
@@ -118,7 +118,7 @@ Blacklight.onLoad(function(){
 
           // Listen for form open and then add focus to message
           $('#' + this.element.id).on('shown.bs.collapse', function () {
-            $("textarea#message").focus();
+            $form.find('.form-control').first().focus();
           });
         }
     };
