@@ -1,4 +1,8 @@
 a {
+  border-bottom: 0;
+  color: $sul-link-color;
+  text-decoration: none;
+
   &.disabled {
     color: #ccc;
     cursor: not-allowed;
@@ -10,7 +14,7 @@ body {
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
 }
 
-a, a:hover, a:focus {
+a:hover, a:focus, a:active  {
   @include link-styling;
 }
 

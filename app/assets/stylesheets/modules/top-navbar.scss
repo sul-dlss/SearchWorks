@@ -22,11 +22,13 @@
     float: right;
     margin-top: 2px;
     a {
+      color: $sul-topnavbar-link-color;
+      border-bottom: 0;
       font-weight: normal;
       margin-left: 15px;
       padding-bottom: 3px;
-      color: $sul-topnavbar-link-color;
-      border-bottom: none;
+      text-decoration: none;
+
       &.first {
         margin-left: 0;
       }
