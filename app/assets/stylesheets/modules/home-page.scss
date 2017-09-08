@@ -74,13 +74,10 @@
   }
 
   .home-page-search-tools {
-    img {
-      width: unset;
-      display: inline-block;
-      vertical-align: middle;
-      float: left;
-      margin-top: 25px;
-      padding: 0px;
+    .media-object {
+      width: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 
