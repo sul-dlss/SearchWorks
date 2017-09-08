@@ -24,7 +24,7 @@
               <%= t 'blacklight.search.zero_results.limit_fields' %>
             </dt>
             <dd>
-              <%= link_to "#{search_field_label(params)} > #{params[:q]}", search_catalog_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_filters)}"} %>
+              <%= link_to "#{search_field_label(params)} > #{params[:q]}", searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} %>
             </dd>
           <% end %>
           <% if @search_modifier.fielded_search? %>
@@ -32,7 +32,7 @@
               <%= t 'blacklight.search.zero_results.search_fields' %>
             </dt>
             <dd>
-              <%= link_to "#{params[:q]}", search_catalog_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{catalog_backend_lookup_path(@search_modifier.params_without_fielded_search_and_filters)}"} %>
+              <%= link_to "#{params[:q]}", searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} %>
             </dd>
           <% end %>
         </dl>

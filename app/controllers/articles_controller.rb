@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   include Blacklight::Configurable
   include EdsPaging
   include EmailValidation
+  include BackendLookup
 
   before_action :set_search_query_modifier, only: :index
 
