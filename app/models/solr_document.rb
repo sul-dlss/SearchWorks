@@ -44,6 +44,11 @@ class SolrDocument
     super
   end
 
+  # TODO: change this to #to_param when we have upgraded to Blacklight 6.11.1
+  def id
+    (super || '').to_s.gsub('/', '%2F')
+  end
+
       # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marcfield
   extension_parameters[:marc_format_type] = :marcxml

@@ -122,6 +122,12 @@ describe SolrDocument do
     end
   end
 
+  describe '#id' do
+    it 'escapes slashes' do
+      expect(SolrDocument.new(id: 'abc/123').id).to eq 'abc%2F123'
+    end
+  end
+
   describe 'EdsDocument' do
     let(:eds) { SolrDocument.new(eds_title: 'yup') }
     let(:non_eds) { SolrDocument.new }
