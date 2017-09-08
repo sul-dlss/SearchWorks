@@ -39,6 +39,11 @@ RSpec.describe 'Article Routing', type: :routing do
     expect(get('/articles/eds__1/ebook-pdf/fulltext')).to route_to(controller: 'articles', action: 'fulltext_link', id: 'eds__1', type: 'ebook-pdf')
     expect(get('/articles/eds__1/wrong type/fulltext')).not_to be_routable
   end
+
+  it '#backend_lookup' do
+    expect(get('/articles/backend_lookup')).to route_to(controller: 'articles', action: 'backend_lookup', format: :json)
+  end
+
   it 'other actions are not routable' do
     expect(post('/articles')).not_to be_routable
     expect(put('/articles')).not_to be_routable

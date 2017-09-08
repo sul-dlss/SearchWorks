@@ -36,4 +36,15 @@ feature "Zero results" do
       expect(page).to have_css('a', text: 'All fields > sdfsda')
     end
   end
+
+  context 'article search' do
+    before { stub_article_service(docs: []) }
+
+    scenario 'displays backend lookup links', js: true do
+      visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] })
+
+      # Has zero results because we pass an empty array of docs, but is sucessfully searching
+      expect(page).to have_link('Keyword > Kittens... found 0 results', href: %r{.*/articles\?q=Kittens})
+    end
+  end
 end
