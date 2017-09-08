@@ -1,6 +1,15 @@
-.zero-results-list{
-  padding-left: 10px;
+.zero-results-heading {
+  padding-left: 15px;
+
+  h2 {
+    border-bottom: 0;
+  }
 }
-.zero-results-list li{
-  padding-top: 10px;
+
+.zero-results-list {
+  padding-left: 10px;
+
+  li {
+    padding-top: 10px;
+  }
 }

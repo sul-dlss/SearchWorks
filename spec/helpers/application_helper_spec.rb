@@ -151,4 +151,24 @@ describe ApplicationHelper do
       expect(result).to have_link(text: /articles/, href: '/articles?q=my+query&search_field=title')
     end
   end
+
+  # TODO: Add bento search link, see issue #1695
+  describe '#link_to_bento_search' do
+    subject(:result) { Capybara.string(helper.link_to_bento_search) }
+    xit 'passes query to bento search params' do
+      params[:q] = 'my query'
+      expect(result).to have_link(text: /all/ )
+    end
+  end
+
+  describe '#link_to_library_search' do
+    subject(:result) { Capybara.string(helper.link_to_library_website_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { search_title: :title })))
+    end
+    it 'passes query to library website search params and does not pass search fields' do
+      controller.params = { q: 'kittens' }
+      expect(result).to have_link(text: /library website/, href: 'https://library.stanford.edu/search/all?search=kittens')
+    end
+  end
 end

@@ -5,10 +5,11 @@ feature 'Backend lookup', js: true do
   scenario 'lookup should return additional results on the zero results page' do
     fill_in 'q', with: 'sdfsda'
     select 'Author', from: 'search_field'
-    click_button 'Search'
+    find('#search').trigger('click')
 
-    within(first('.zero-results-list')) do
-      expect(page).to have_css('a', text: 'All fields: sdfsda ... found 0 results')
+    within '.zero-results' do
+      expect(page).to have_css('a', text: /sdfsda/)
+      expect(page).to have_css('strong', text: /found 0 results/)
     end
   end
 
@@ -18,8 +19,9 @@ feature 'Backend lookup', js: true do
       f: { access_facet: ['Online'] }
     )
 
-    within(first('.zero-results-list')) do
-      expect(page).to have_css('a', text: 'Keyword: statement ... found 1 results')
+    within '.zero-results' do
+      expect(page).to have_css('a', text: /Keyword > statement/)
+      expect(page).to have_css('strong', text: /found 1 results/)
     end
   end
 end

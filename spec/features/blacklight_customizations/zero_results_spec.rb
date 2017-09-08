@@ -17,27 +17,28 @@ feature "Zero results" do
   scenario "should have correct headings and elements present" do
     within "#content" do
       expect(page).to have_css("h3", text: "Modify your search")
-      expect(page).to have_css("h3", text: "Check other sources")
     end
   end
 
-  describe 'sidebar' do
-    context 'when a user can access the chat widget' do
-      let(:user) { User.new(email: 'example@stanford.edu') }
-
-      scenario 'the widget is rendered' do
+  describe 'search context sidebar' do
+    context 'catalog' do
+      scenario 'links to articles+' do
         within '#sidebar' do
-          expect(page).to have_css('h3', text: 'Want help?')
-          expect(page).to have_css('h3', text: 'On the library website')
-          expect(page).to have_css('a', count: 4)
+          expect(page).to_not have_css('span.h3', text: 'catalog')
+          expect(page).to have_css('a', text: 'articles+')
+          expect(page).to have_css('a', text: 'library website')
+          expect(page).to have_css('a', text: 'all')
+          expect(page).to have_css('a', count: 3)
         end
       end
     end
 
-    context 'when a user cannot access the chat widget' do
-      scenario 'the widget is not rendered' do
+    context 'articles' do
+      scenario 'links to catalog' do
         within '#sidebar' do
-          expect(page).not_to have_css('h3', text: 'Want help?')
+          expect(page).to have_css('a', text: 'library website')
+          expect(page).to have_css('a', text: 'all')
+          expect(page).to have_css('a', count: 3)
         end
       end
     end

@@ -5,12 +5,16 @@
 </div>
 
 <div class="row">
+  <% if @response.empty? %>
+    <div class="zero-results-heading">
+      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
+    </div>
+  <% end %>
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
-      <h2 class="sr-only">Assistance</h2>
-      <%= render "catalog/chat_librarian_sidebar" if on_campus_or_su_affiliated_user? %>
-      <%= render "catalog/library_website_sidebar" %>
-    <% elsif %>
+      <%= render 'shared/search_context_sidebar' %>
+    <% else %>
       <%= render 'search_sidebar' %>
     <% end %>
   </div>
@@ -36,15 +40,10 @@
     <% end -%>
 
     <div class="search_num_of_results">
-      <% if @response.empty? %>
-        <div class='results-heading'>
-          <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: 'catalog') %></h1>
-          <%= t('blacklight.search.pagination_info.no_items_found', search_type: 'catalog').html_safe %>
-        </div>
-      <% else %>
+      <% unless @response.empty? %>
         <div class='results-heading'>
           <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
-          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'catalog result') %></h2>
+          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
           <%= link_to new_documents_feed_path do %>
             <i class="rss-icon" aria-hidden="true"></i>
             <span class="sr-only">RSS feed for this result</span>

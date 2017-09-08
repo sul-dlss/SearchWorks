@@ -15,24 +15,25 @@ describe "shared/_zero_results.html.erb" do
       search_field: 'search_title'
     }, config))
     allow(view).to receive(:label_for_search_field).and_return('Title')
+    allow(view).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
   end
 
-  it "should display modify your search" do
+  it "displays modify your search" do
     render
     expect(rendered).to have_css("h3", text: "Modify your search")
   end
 
-  it "should render text indicating tips to modify the search along with links to the relevant search" do
+  it "renders text indicating tips to modify the search along with links to the relevant search" do
     render
-    expect(rendered).to have_css("li", text: /Your search:/)
-    expect(rendered).to have_css("a", text: /Title:/)
+    expect(rendered).to have_css("dt", text: /Your current search/)
+    expect(rendered).to have_css("a", text: /Title >/)
+    expect(rendered).to have_css("dt", text: 'Remove limit(s)')
+    expect(rendered).to have_css("dt", text: /Search all fields/)
   end
 
-  it "should display check other sources" do
+  it "renders chat and search tools" do
     render
-    expect(rendered).to have_css("h3", text: "Check other sources")
-    expect(rendered).to have_css("a", text: "Check WorldCat")
-    expect(rendered).to have_css("a", text: "Check library website")
+    expect(rendered).to have_css("a", text: /Chat with a librarian/)
+    expect(rendered).to have_css("a", text: /Search tools/)
   end
-
 end

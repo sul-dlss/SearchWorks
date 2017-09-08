@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/_chat_librarian_sidebar.html.erb' do
+describe 'shared/_chat_librarian_sidebar.html.erb' do
   before do
     render
   end

@@ -107,4 +107,23 @@ module ApplicationHelper
       articles_path(mapped_params)
     )
   end
+
+  # TODO: add bento link, see issue #1695
+  def link_to_bento_search
+    link_to(
+      t('searchworks.search_dropdown.bento.description_html'),
+      'https://library.stanford.edu/'
+    )
+  end
+
+  def link_to_library_website_search
+    link_to(
+      t('searchworks.search_dropdown.library_website.description_html'),
+      "https://library.stanford.edu/search/all?search=#{params[:q]}"
+    )
+  end
+
+  def search_type_name
+    t("searchworks.search_dropdown.#{controller_name}.label")
+  end
 end
