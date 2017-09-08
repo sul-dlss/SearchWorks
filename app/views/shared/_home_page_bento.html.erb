@@ -53,12 +53,14 @@
     <div class="col-md-6 home-page-more">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="col-md-1 home-page-search-tools">
-            <%= image_tag 'homepage/search.svg' %>
-          </div>
-          <div class="col-md-11">
-            <h4><%= link_to 'More search tools', 'https://library.stanford.edu/search-services' %></h4>
-            <p class="hidden-xs">Discover and access library and archival materials, journals, databases, data, and e-resources beyond SearchWorks.</p>
+          <div class="col-md-12 home-page-search-tools media">
+            <div class="search-tools-icon media-left">
+              <%= image_tag 'homepage/search.svg', class: 'media-object' %>
+            </div>
+            <div class="search-tools-body media-body">
+              <h4><%= link_to 'More search tools', 'https://library.stanford.edu/search-services' %></h4>
+              <p class="hidden-xs">Discover and access library and archival materials, journals, databases, data, and e-resources beyond SearchWorks.</p>
+            </div>
           </div>
         </div>
       </div>
