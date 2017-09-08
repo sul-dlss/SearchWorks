@@ -5,6 +5,10 @@
   }
 }
 
+.bento-search-panel {
+  display: none;
+}
+
 .article-home-page {
   .home-settings {
     label {
@@ -39,6 +43,7 @@
 }
 
 .home-page-bento {
+
   .panel .panel-body {
     padding: 0px;
   }
