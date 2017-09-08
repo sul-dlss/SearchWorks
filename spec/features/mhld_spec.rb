@@ -20,6 +20,9 @@ describe "MHLD", feature: true do
     end
   end
   describe "results view", js: true do
+    before do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    end
     it "should be present in the accordion section" do
       visit search_catalog_path(q: '10')
 
