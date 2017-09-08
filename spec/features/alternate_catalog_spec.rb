@@ -14,7 +14,7 @@ feature 'Alterate catalog results', js: true do
       expect(page).to have_css 'h3', text: 'YOUR SEARCH ALSO FOUND RESULTS IN'
       expect(page).to have_css 'a.btn', text: 'See 4 article+ results'
       expect(page).to have_css(
-        'a[href="/articles?q=1%2A&f[eds_publication_type_facet][]=Academic journals"]',
+        'a[href="/articles?q=1%2A&f[eds_publication_type_facet][]=Academic%20journals"]',
         text: 'Academic journals (1)'
       )
     end

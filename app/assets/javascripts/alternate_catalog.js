@@ -62,7 +62,7 @@
         return b.hits - a.hits;
       }).slice(0, 5);
       topFive.forEach(function (item) {
-        linkedUrl = url + '&f[' + facet.name + '][]=' + item.value;
+        linkedUrl = url + '&f[' + facet.name + '][]=' + encodeURI(item.value);
         linkText = item.label + ' (' + parseInt(item.hits).toLocaleString() + ')';
         facetLinks.push('<a href="' + linkedUrl + '">' + linkText + '</a>');
       });
