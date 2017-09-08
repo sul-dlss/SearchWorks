@@ -32,6 +32,7 @@
         <%= render 'search_header' %>
         <%= render 'research_starters' %>
         <%= render @response.documents, as: :document %>
+        <%= render 'alternate_catalog' if show_alternate_catalog? %>
 
         <%- unless @response.empty? %>
           <%= render 'shared/side_nav_minimap' %>

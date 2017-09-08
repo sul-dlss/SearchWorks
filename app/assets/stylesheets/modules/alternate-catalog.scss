@@ -1,0 +1,39 @@
+.alternate-catalog {
+  background-color: $white;
+  border: 1px solid $cardinal-red;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-left: 10px;
+
+  h3 {
+    color: $cardinal-red;
+    font-size: 1.3em;
+    padding-top: 10px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+
+  .alternate-catalog-body {
+    display: none;
+    padding: 10px;
+  }
+
+  .alternate-catalog-close {
+    padding-right: 8px;
+    padding-top: 8px;
+
+    &:hover,
+    &:focus {
+      color: $cardinal-red;
+      opacity: 1;
+    }
+  }
+
+  .alternate-catalog-facet-section {
+    padding-top: 10px;
+  }
+}
