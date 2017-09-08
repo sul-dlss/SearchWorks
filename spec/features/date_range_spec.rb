@@ -20,9 +20,9 @@ feature 'Date Range', js: true do
       fill_in 'range_pub_year_tisim_begin', with: 1900
       click_button 'Apply'
     end
-    page.find('h3.panel-title', text: 'Date').click
+
     within '.panel.blacklight-pub_year_tisim' do
-      expect(page).to have_field 'range[pub_year_tisim][begin]', with: 1900
+      expect(page).to have_field 'range[pub_year_tisim][begin]', with: 1900, visible: true
     end
   end
 end
