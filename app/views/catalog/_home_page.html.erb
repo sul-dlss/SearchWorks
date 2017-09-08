@@ -21,21 +21,21 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <%= image_tag('homepage/digital.svg', class: 'pull-left', alt: "", title: "'The Burning of San Francisco April 18, 19, 20, 1906.'", data: { "no-link-href" => search_catalog_path(collections_search_params) }) %>
-            <h4><%= link_to "Digital collections", search_catalog_path(collections_search_params) %></h4>
+            <h3><%= link_to "Digital collections", search_catalog_path(collections_search_params) %></h3>
             <p>Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
           </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <%= image_tag('homepage/theses.svg', class: 'pull-left', alt: "", title: '', data: { "no-link-href" => search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
-            <h4><%= link_to "Theses & dissertations", search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h4>
+            <h3><%= link_to "Theses & dissertations", search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h3>
             <p>Theses &amp; dissertations in the Stanford Libraries and Digital Repository.</p>
           </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <%= image_tag('homepage/databases.svg', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  selected_databases_path }) %>
-            <h4><%= link_to "Databases", selected_databases_path %></h4>
+            <h3><%= link_to "Databases", selected_databases_path %></h3>
             <p>A-Z list of topic-specific databases. Not sure where to start? Try these <%= link_to 'selected databases', selected_databases_path %>.</p>
           </div>
         </div>
@@ -45,7 +45,7 @@
           <div class="panel panel-default">
             <div class="panel-body">
               <%= image_tag('homepage/govdocs.svg', class: 'pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
-              <h4><%= link_to 'Government documents', govdocs_path %></h4>
+              <h3><%= link_to 'Government documents', govdocs_path %></h3>
               <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
             </div>
           </div>
@@ -53,7 +53,7 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <%= image_tag('homepage/coursereserves.svg', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  course_reserves_path }) %>
-            <h4><%= link_to "Course reserves", course_reserves_path %></h4>
+            <h3><%= link_to "Course reserves", course_reserves_path %></h3>
             <p>Find books, media, and e-resources set aside for classes.</p>
           </div>
         </div>
