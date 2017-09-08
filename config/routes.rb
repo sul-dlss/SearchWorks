@@ -55,6 +55,7 @@ Rails.application.routes.draw do
 
   get "feedback" => "feedback_forms#new"
   get "backend_lookup" => "catalog#backend_lookup", defaults: {format: :json}, as: :catalog_backend_lookup
+  get 'articles/backend_lookup' => 'articles#backend_lookup', defaults: {format: :json}, as: :articles_backend_lookup
 
   get 'view/:id/availability' => 'catalog#availability', defaults: { format: :json }
 

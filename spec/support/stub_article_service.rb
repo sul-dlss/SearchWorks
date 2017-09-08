@@ -44,7 +44,7 @@ module StubArticleService
   end
 
   def stub_article_service(type: :multiple, docs:)
-    raise 'Article search service stubbed without any documents.' if docs.blank?
+    raise 'Article search service stubbed without any documents.' unless docs
 
     allow_any_instance_of(Eds::Session).to receive_messages(
       info: double(available_search_criteria: available_search_criteria),

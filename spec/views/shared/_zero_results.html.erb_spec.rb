@@ -14,6 +14,7 @@ describe "shared/_zero_results.html.erb" do
       f: {'fieldA' => ["ValueA"], 'fieldB' => ['ValueB']},
       search_field: 'search_title'
     }, config))
+    allow(view).to receive(:controller_name).and_return('catalog')
     allow(view).to receive(:label_for_search_field).and_return('Title')
     allow(view).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
   end
