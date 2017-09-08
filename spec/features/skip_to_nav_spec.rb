@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 feature "Skip-to Navigation" do
+  before do
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+  end
 
   scenario "should have skip-to navigation links to search field and main container in home page" do
     visit root_url
