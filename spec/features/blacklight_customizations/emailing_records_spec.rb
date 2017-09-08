@@ -30,7 +30,7 @@ describe "Emailing Records", type: :feature, js: true do
         id: '123',
         eds_title: 'The title',
         eds_abstract: 'The Abstract',
-        eds_subjects_person: %w[A Subject],
+        eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>',
         eds_volume: 'The Volumne'
       )
     end

@@ -65,6 +65,22 @@ class ArticlesController < ApplicationController
       field.label = 'Journal/Source'
     end
 
+    # Additional "subject"-based searches as EDS uses multiple field codes
+    config.add_search_field('subject_heading') do |field| # SH field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
+    end
+
+    config.add_search_field('descriptor') do |field| # DE field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
+    end
+
+    config.add_search_field('keyword') do |field| # KW field code
+      field.label = 'Keyword'
+      field.include_in_simple_select = false
+    end
+
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowDocumentPresenter
     config.show.html_title = 'eds_title'
