@@ -26,6 +26,8 @@ class CatalogController < ApplicationController
 
   include EmailValidation
 
+  include BackendLookup
+
   before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
@@ -366,19 +368,6 @@ class CatalogController < ApplicationController
     respond_to do |format|
       format.html
       format.js { render layout: false }
-    end
-  end
-
-  def backend_lookup
-    (@response, @document_list) = search_results(params)
-    respond_to do |format|
-      format.json do
-        @presenter = Blacklight::JsonPresenter.new(@response,
-                                                   @document_list,
-                                                   facets_from_request,
-                                                   blacklight_config)
-      end
-      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
     end
   end
 
