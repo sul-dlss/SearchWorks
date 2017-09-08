@@ -59,7 +59,7 @@
       <%= render_grouped_document_index %>
     <%- else %>
       <%= render_document_index %>
-      <%= render 'additional_results_block' %>
+      <%= render 'alternate_catalog' if show_alternate_catalog? %>
     <%- end %>
 
     <%- unless @response.empty? %>
