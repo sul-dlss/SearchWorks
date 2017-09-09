@@ -3,6 +3,7 @@ Blacklight.onLoad(function(){
   //Instantiates plugin for feedback form
 
   $("#feedback-form").feedbackForm();
+  $("#connection-form").feedbackForm();
 })
 
 
@@ -31,13 +32,15 @@ Blacklight.onLoad(function(){
         this.init();
     }
 
-    function submitListener(){
+    function submitListener($el, $form){
       // Serialize and submit form if not on action url
       $form.each(function(i, form){
         if (location !== form.action){
-          $('#user_agent').val(navigator.userAgent);
-          $('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
-          $(form).on('submit', function(){
+          var $thisform = $(form);
+          $thisform.find('#user_agent').val(navigator.userAgent);
+          $thisform.find('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
+          $thisform.on('submit', function(e){
+            e.preventDefault();
             var valuesToSubmit = $(this).serialize();
             $.ajax({
               url: form.action,
@@ -96,15 +99,15 @@ Blacklight.onLoad(function(){
     Plugin.prototype = {
 
         init: function() {
-          $el = $(this.element);
-          $form = $($el).find('form');
-          $cancelLink = $($el).find(".cancel-link");
+          var $el = $(this.element);
+          var $form = $($el).find('form');
+          var $cancelLink = $el.find(".cancel-link");
 
           // Replace "Cancel" link with link styled button
           replaceLink($el, $cancelLink);
 
           //Add listener for form submit
-          submitListener($el,$form);
+          submitListener($el, $form);
 
           //Update href in nav link to '#'
           $('*[data-target="#' + this.element.id +'"]').attr('href', '#');
@@ -114,8 +117,8 @@ Blacklight.onLoad(function(){
           $('input.reporting-from-field').val(location.href);
 
           // Listen for form open and then add focus to message
-          $('#feedback-form').on('shown.bs.collapse', function () {
-            $("textarea#message").focus();
+          $('#' + this.element.id).on('shown.bs.collapse', function () {
+            $form.find('.form-control').first().focus();
           });
         }
     };

@@ -1,0 +1,32 @@
+<% doc_presenter = presenter(document) %>
+<% # header bar for doc items in index view %>
+<div class="documentHeader row">
+  <h3 class="index_title col-sm-9 col-lg-10">
+    <% counter = document_counter_with_offset(document_counter) %>
+    <%= render_resource_icon doc_presenter.formats %>
+    <span class="document-counter">
+      <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+    </span>
+    <%= link_to_document document, get_main_title(document), :counter => counter %>
+    <span class="main-title-date"><%= get_main_title_date(document) %></span>
+    <%= document.online_label %>
+  </h3>
+</div>
+
+<% if document.access_panels.online? && !document.eds_restricted? %>
+  <ul class='document-metadata dl-horizontal dl-invert'>
+    <% document.access_panels.online.links.each do |link| %>
+      <li>
+        <% if link.href == 'detail' %>
+          <span class="online-label">Full text</span>
+          <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
+        <% elsif link.ill? -%>
+          <%= link_to(link.text, link.href, class: 'sfx') %>
+        <% else %>
+          <span class="online-label">Full text</span>
+          <%= link_to(link.text, link.href) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

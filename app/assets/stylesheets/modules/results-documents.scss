@@ -41,6 +41,29 @@
     @include label-items-online;
   }
 
+  &.article-search-results {
+    .article-metadata {
+      border-bottom: 1px solid $beige-30-percent;
+      border-top: 1px solid $beige-30-percent;
+      padding: 8px 0;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      .dl-horizontal {
+        dd {
+          margin-left: 80px; // Get dds working better for article results
+        }
+      }
+    }
+  }
+
+  .zero-results {
+    dd {
+      margin-left: 2em;
+      margin-bottom: .5em;
+      max-width: 45em;
+    }
+  }
 }
 
 .document-metadata {
@@ -82,7 +105,7 @@
 }
 
 .search_num_of_results {
-  text-align: right;
+  text-align: left;
 
   .results-heading {
     border-bottom: 1px solid $sul-h2-border-color;
@@ -98,6 +121,10 @@
     border-bottom: 0;
     display: inline-block;
     margin-bottom: 0;
+  }
+
+  .rss-icon {
+    vertical-align: baseline;
   }
 
 }

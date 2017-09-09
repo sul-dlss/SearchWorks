@@ -14,9 +14,10 @@
 }
 
 .table-top-bar {
+  color: $white;
+  margin-left: 0;
+  margin-right: 0;
   padding-top: 6px;
-  margin-left: 0px;
-  margin-right: 0px;
   @include sul-toolbar-bg-border;
 }
 

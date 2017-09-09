@@ -1,14 +1,16 @@
 .record-toolbar {
   border-radius: 0px;
-  margin-top: 15px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   padding: 5px;
-  min-height: 0;
+  color: $sul-toolbar-color;
+  font-size: 15px;
 
   &.sul-toolbar {
     border-left: none;
     border-right: none;
     border-top: none;
-    margin-top: 15px;
+    border-bottom: none;
     @include sul-toolbar-bg-border;
   }
 
@@ -34,7 +36,8 @@
   }
 
   .btn-sul-toolbar {
-    padding: 3px 5px;
+    padding: 10px 5px;
+    border: none;
   }
 
   .navbar-nav > li {
@@ -43,13 +46,13 @@
       border: none;
       &:hover, &:focus, &:active {
         color: $btn-sul-toolbar-bar-color;
-        background-color: $btn-sul-toolbar-bar-hover-bg;
+        background-color: $btn-sul-toolbar-bar-bg;
       }
     }
 
     div.toggle_bookmark {
       color: $btn-sul-toolbar-bar-color;
-      padding-top: 4px;
+      padding-top: 10px;
     }
   }
 
@@ -59,8 +62,8 @@
 }
 
 .sul-record-page-info {
+  display: inline-block;
   margin: 0;
-  float: left;
 }
 
 .sul-record-page-info-inner {
@@ -72,7 +75,19 @@
 }
 
 .back-to-results {
-  float: left;
+  border-radius: 0;
+  display: inline-block;
+}
+
+#citeLink {
+  padding: 10px 5px;
+}
+
+// Select dropdown
+div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: $screen-xs-max) {
@@ -82,16 +97,16 @@
     }
 
     .navbar-nav .open .dropdown-menu > li > a {
-      color: #000;
-      &:hover {
-        color: #000;
+      color: $white;
+      &:hover, &:focus {
+        text-decoration: underline;
       }
     }
 
     .navbar-header {
-      margin-top: 6px;
       .navbar-toggle {
-        margin-top: 0px;
+        border: 0;
+        margin: 0 15px 0 0;
       }
     }
     .navbar-collapse > ul > li {

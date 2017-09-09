@@ -1,9 +1,9 @@
 <div class="row">
   <div id="content" class="col-md-12 show-document">
 
-    <%= render "catalog/record/record_toolbar" %>
+    <%= render "shared/record/record_toolbar" %>
 
-    <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_show_html_title, :application_name => application_name -%>
+    <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_show_html_title, :application_name => "#{application_name} catalog" -%>
     <% content_for(:head) { render_link_rel_alternates } -%>
     <%# this should be in a partial -%>
 

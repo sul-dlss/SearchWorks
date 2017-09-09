@@ -4,7 +4,10 @@ en:
     entry_name:
       default: 'result'
     home:
-      title: 'SearchWorks : Stanford University Libraries catalog'
+      title: 'SearchWorks catalog : Stanford Libraries'
+    articles:
+      home:
+        title: 'SearchWorks articles+ : Stanford Libraries'
     search:
       facets:
         access_point:
@@ -35,7 +38,7 @@ en:
           one: '%{start_num} - %{end_num}'
           other: '%{start_num} - %{end_num}'
         single_item_found: ''
-        no_items_found: "<h2>No results found in catalog</h2>"
+        no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:
         other: '%{current} of %{total}'
       highlight:

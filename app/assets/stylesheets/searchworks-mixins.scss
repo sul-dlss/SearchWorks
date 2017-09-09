@@ -21,6 +21,11 @@
   }
 }
 
+@mixin h1-show-title-font {
+  font-family: 'dejavu_sansextralight';
+  letter-spacing: -.03em;
+}
+
 @mixin h3-index-title-indent {
   text-indent: -12px;
 }
@@ -47,7 +52,7 @@
 
 @mixin sul-toolbar-bg-border {
   background-color: $sul-toolbar-bg;
-  border-bottom: 3px solid $sul-toolbar-border !important;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
 @mixin label-items-online {
@@ -128,8 +133,9 @@
 }
 
 @mixin link-styling {
-  border-bottom: 1px dotted $sul-link-color-border;
-  text-decoration: none;
+  border-bottom: 0;
+  color: $sul-link-color-border;
+  text-decoration: underline;
 }
 
 @mixin masthead-panel {

@@ -6,6 +6,13 @@ describe AccessPanels::Online do
 
   let(:fulltext) { described_class.new(SolrDocument.new(marcxml: fulltext_856)) }
   let(:supplemental) { described_class.new(SolrDocument.new(marcxml: supplemental_856)) }
+  let(:eds_links) do
+    described_class.new(
+      SolrDocument.new(
+        eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+      )
+    )
+  end
 
   let(:sfx) do
     described_class.new(
@@ -41,9 +48,18 @@ describe AccessPanels::Online do
     )
   end
 
-  it 'should delegate present? to links' do
-    expect(fulltext).to be_present
-    expect(supplemental).to_not be_present
+  describe '#present?' do
+    it 'is true when there are fulltext links present' do
+      expect(fulltext).to be_present
+    end
+
+    it 'is true when there are eds links present' do
+      expect(eds_links).to be_present
+    end
+
+    it 'is false when there are only supplemental links present' do
+      expect(supplemental).to_not be_present
+    end
   end
 
   describe '#links' do

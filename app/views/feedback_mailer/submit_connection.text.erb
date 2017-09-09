@@ -1,0 +1,11 @@
+<%= render 'shared_heading' %>
+Name of resource:
+<%= @mailer_parser.resource_name %>
+
+Problem url:
+<%= @mailer_parser.problem_url %>
+
+Describe the connection issue:
+<%= @mailer_parser.message.html_safe %>
+
+<%= render 'shared_closing' %>

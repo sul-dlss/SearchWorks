@@ -1,11 +1,13 @@
 module ApplicationHelper
+  # This is a path helper that routes the main search
+  # form based on the current search context.
+  def searchworks_search_action_path(opts = {})
+    return articles_path(opts) if article_search?
+    search_catalog_path(opts)
+  end
 
   def render_search_bar_advanced_widget
     render partial:'catalog/search_bar_advanced_widget'
-  end
-
-  def render_search_bar_browse_widget
-    render partial: 'catalog/search_bar_browse_widget'
   end
 
   def render_search_bar_selections_widget
@@ -80,5 +82,48 @@ module ApplicationHelper
   end
   def from_advanced_search?
     params[:search_field] == 'advanced'
+  end
+
+  def link_to_catalog_search
+    if article_search?
+      mapped_params = { q: params[:q] }
+      mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
+    end
+    link_to_unless(
+      controller_name == 'catalog',
+      t('searchworks.search_dropdown.catalog.description_html'),
+      root_path(mapped_params)
+    )
+  end
+
+  def link_to_article_search
+    unless article_search?
+      mapped_params = { q: params[:q] }
+      mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
+    end
+    link_to_unless(
+      controller_name == 'articles',
+      t('searchworks.search_dropdown.articles.description_html'),
+      articles_path(mapped_params)
+    )
+  end
+
+  # TODO: add bento link, see issue #1695
+  def link_to_bento_search
+    link_to(
+      t('searchworks.search_dropdown.bento.description_html'),
+      'https://library.stanford.edu/'
+    )
+  end
+
+  def link_to_library_website_search
+    link_to(
+      t('searchworks.search_dropdown.library_website.description_html'),
+      "https://library.stanford.edu/search/all?search=#{params[:q]}"
+    )
+  end
+
+  def search_type_name
+    t("searchworks.search_dropdown.#{controller_name}.label")
   end
 end

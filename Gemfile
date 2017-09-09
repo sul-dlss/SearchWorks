@@ -35,6 +35,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "letter_opener"
 end
 
 gem 'ruby-oembed'
@@ -96,10 +97,13 @@ gem "mods_display", "~> 0.4.0"
 gem "blacklight-gallery", '~> 0.4'
 gem "blacklight_advanced_search", "~> 6.3"
 gem "font-awesome-rails"
-gem "blacklight_range_limit", "~> 6.0"
+gem "blacklight_range_limit", "~> 6.2"
 gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.1'
 gem 'rubocop', '~> 0.36'
 gem 'rack-utf8_sanitizer'
+gem 'ebsco-eds'
+gem 'whenever' # manages cron jobs
+gem 'bitly' # For bit.ly

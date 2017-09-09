@@ -5,12 +5,16 @@
 </div>
 
 <div class="row">
+  <% if @response.empty? %>
+    <div class="zero-results-heading">
+      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
+    </div>
+  <% end %>
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
-      <h2 class="sr-only">Assistance</h2>
-      <%= render "catalog/chat_librarian_sidebar" %>
-      <%= render "catalog/library_website_sidebar" %>
-    <% elsif %>
+      <%= render 'shared/search_context_sidebar' %>
+    <% else %>
       <%= render 'search_sidebar' %>
     <% end %>
   </div>
@@ -19,14 +23,14 @@
 
     <% if page_location.access_point? %>
       <% if page_location.access_point.collection? && get_collection.present? %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: "#{show_presenter(@parent).heading} Collection", application_name: application_name %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: "#{show_presenter(@parent).heading} Collection", application_name: "#{application_name} catalog" %>
       <% elsif page_location.access_point.sdr? %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: application_name %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{application_name} catalog" %>
       <% else %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: application_name %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.name, application_name: "#{application_name} catalog" %>
       <% end %>
     <% else %>
-      <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: application_name) %>
+      <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{application_name} catalog") %>
     <% end %>
 
     <% content_for(:head) do -%>
@@ -36,31 +40,26 @@
     <% end -%>
 
     <div class="search_num_of_results">
-      <% if @response.empty? %>
-        <div class='results-heading'>
-          <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading') %></h1>
-          <%= t('blacklight.search.pagination_info.no_items_found').html_safe %>
-        </div>
-      <% else %>
+      <% unless @response.empty? %>
         <div class='results-heading'>
           <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
           <%= link_to new_documents_feed_path do %>
             <i class="rss-icon" aria-hidden="true"></i>
             <span class="sr-only">RSS feed for this result</span>
           <% end %>
-          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), 'result') %></h2>
         </div>
         <%= render 'search_header' %>
       <% end %>
     </div>
 
     <%- if @response.empty? %>
-      <%= render "zero_results" %>
+      <%= render "shared/zero_results" %>
     <%- elsif render_grouped_response? %>
       <%= render_grouped_document_index %>
     <%- else %>
       <%= render_document_index %>
-      <%= render 'additional_results_block' %>
+      <%= render 'alternate_catalog' if show_alternate_catalog? %>
     <%- end %>
 
     <%- unless @response.empty? %>

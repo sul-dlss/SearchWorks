@@ -121,4 +121,22 @@ describe SolrDocument do
       expect(subject).to respond_to :organization_and_arrangement
     end
   end
+
+  describe '#id' do
+    it 'escapes slashes' do
+      expect(SolrDocument.new(id: 'abc/123').id).to eq 'abc%2F123'
+    end
+  end
+
+  describe 'EdsDocument' do
+    let(:eds) { SolrDocument.new(eds_title: 'yup') }
+    let(:non_eds) { SolrDocument.new }
+    it 'is included' do
+      expect(subject).to be_kind_of EdsDocument
+    end
+    it 'eds?' do
+      expect(eds.eds?).to eq true
+      expect(non_eds.eds?).to eq false
+    end
+  end
 end

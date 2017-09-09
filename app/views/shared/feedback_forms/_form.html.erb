@@ -4,47 +4,11 @@
       <%= t('blacklight.feedback_form.feedback_alert_html', href: mail_to("infocenter@stanford.edu")) %>
     </p>
   <% end %>
-  <%= form_tag feedback_form_path, method: :post, class:"form-horizontal feedback-form", role:"form" do %>
-    <div class="col-sm-6 col-sm-offset-2">
-      <div class="col-sm-offset-3">
-        <%= render "shared/feedback_forms/reporting_from" %>
-      </div>
-    </div>
-    <span style="display:none;visibility:hidden;">
-      <%= label_tag(:email_address, 'Ignore this text box. It is used to detect spammers. If you enter anything into this text box, your message will not be sent.') %><br/>
-      <%= email_field_tag :email_address %><br/>
-      <%= text_field_tag :user_agent %>
-      <%= text_field_tag :viewport %>
-    </span>
-    <div class="col-sm-6 col-sm-offset-2">
-      <div class="form-group">
-        <%= label_tag(:message, 'Message', class:"col-sm-3 control-label") %>
-        <div class="col-sm-9">
-          <%= text_area_tag :message, "", rows:"5", class:"form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <%= label_tag(:name, 'Your name', class:"col-sm-3 control-label") %>
-        <div class="col-sm-9">
-          <%= text_field_tag :name, "", class:"form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <%= label_tag(:to, 'Your email', class:"col-sm-3 control-label") %>
-        <div class="col-sm-9">
-          <%= email_field_tag :to, "", class:"form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-          <button type="submit" class="btn btn-primary">Send</button>
-          <%= link_to "Cancel", :back, class:"cancel-link", data: {toggle:"collapse", target:"#feedback-form"} %>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  <div class="col-sm-6 col-sm-offset-2">
+    <%= render "shared/feedback_forms/form_fields", locals: { target: '#feedback-form'} %>
+  </div>
   <div class="col-sm-4">
-    <%= render "shared/feedback_forms/chat_with_librarian" %>
+    <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
     <%= render "shared/quick_reports/form", layout: nil %>
   </div>
 </div>

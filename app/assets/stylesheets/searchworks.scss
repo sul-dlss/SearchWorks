@@ -9,11 +9,12 @@
 @import 'modules/access-panel-online';
 @import 'modules/access-panel-related';
 @import 'modules/accordion-sections';
-@import 'modules/additional-results';
+@import 'modules/alternate-catalog';
 @import 'modules/availability-icons';
 @import 'modules/availability-table';
 @import 'modules/advanced-search';
 @import 'modules/alert';
+@import 'modules/article';
 @import 'modules/availability';
 @import 'modules/bookmarks';
 @import 'modules/bookplates';
@@ -26,6 +27,7 @@
 @import 'modules/constraints';
 @import 'modules/course_reserve_browse';
 @import 'modules/data-tables';
+@import 'modules/eds_range_slider';
 @import 'modules/feedback-form';
 @import 'modules/facets';
 @import 'modules/facets-callnumber';
@@ -34,6 +36,7 @@
 @import 'modules/gallery-view';
 @import 'modules/home-page';
 @import 'modules/collection-result-preview';
+@import 'modules/facet-options';
 @import 'modules/image-collection-filmstrip';
 @import 'modules/image-icons';
 @import 'modules/item-preview';
@@ -50,8 +53,12 @@
 @import 'modules/side-nav-minimap';
 @import 'modules/record-toolbar';
 @import 'modules/requests-modal';
+@import 'modules/research-starter';
 @import 'modules/results-documents';
 @import 'modules/search-bar';
+@import 'modules/sfx-panel';
+@import 'modules/spinner';
+@import 'modules/subnavbar';
 @import 'modules/selected-databases';
 @import 'modules/skip-to-nav';
 @import 'modules/sort-and-per-page-toolbar';

@@ -1,6 +1,21 @@
 require "spec_helper"
 
 describe ApplicationHelper do
+
+  describe '#searchworks_search_action_path' do
+    context 'when in an article search' do
+      before { expect(helper).to receive_messages(article_search?: true) }
+
+      it { expect(helper.searchworks_search_action_path).to eq articles_path }
+    end
+
+    context 'everywhere else' do
+      before { expect(helper).to receive_messages(article_search?: false) }
+
+      it { expect(helper.searchworks_search_action_path).to eq search_catalog_path }
+    end
+  end
+
   describe "#data_with_label" do
     let(:temp_doc) {{'key' => 'fudgesicles'}}
     let(:temp_doc_array) {{'key' => ['fudgesicles1','fudgesicles2']}}
@@ -92,6 +107,68 @@ describe ApplicationHelper do
     it "should indicate if we are coming from the advanced search form" do
       params[:search_field]='advanced'
       expect(helper.from_advanced_search?).to be_truthy
+    end
+  end
+  describe '#link_to_catalog_search' do
+    subject(:result) { Capybara.string(helper.link_to_catalog_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { title: :search_title })))
+    end
+    it 'passes parameters if currently in article search' do
+      params[:q] = 'my query'
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /catalog/, href: '/?q=my+query')
+    end
+    it 'goes to the home page if currently in catalog search' do
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /catalog/, href: '/')
+    end
+    it 'performs a mapping between fielded search' do
+      params[:q] = 'my query'
+      params[:search_field] = 'title'
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /catalog/, href: '/?q=my+query&search_field=search_title')
+    end
+  end
+  describe '#link_to_article_search' do
+    subject(:result) { Capybara.string(helper.link_to_article_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { search_title: :title })))
+    end
+    it 'passes parameters if currently in catalog search' do
+      params[:q] = 'my query'
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /articles/, href: '/articles?q=my+query')
+    end
+    it 'goes to the home page if currently in article search' do
+      expect(helper).to receive(:article_search?).and_return(true)
+      expect(result).to have_link(text: /articles/, href: '/articles')
+    end
+    it 'performs a mapping between fielded search' do
+      params[:q] = 'my query'
+      params[:search_field] = 'search_title'
+      expect(helper).to receive(:article_search?).and_return(false)
+      expect(result).to have_link(text: /articles/, href: '/articles?q=my+query&search_field=title')
+    end
+  end
+
+  # TODO: Add bento search link, see issue #1695
+  describe '#link_to_bento_search' do
+    subject(:result) { Capybara.string(helper.link_to_bento_search) }
+    xit 'passes query to bento search params' do
+      params[:q] = 'my query'
+      expect(result).to have_link(text: /all/ )
+    end
+  end
+
+  describe '#link_to_library_search' do
+    subject(:result) { Capybara.string(helper.link_to_library_website_search) }
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(double(index: double(search_field_mapping: { search_title: :title })))
+    end
+    it 'passes query to library website search params and does not pass search fields' do
+      controller.params = { q: 'kittens' }
+      expect(result).to have_link(text: /library website/, href: 'https://library.stanford.edu/search/all?search=kittens')
     end
   end
 end

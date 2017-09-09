@@ -24,6 +24,10 @@ class CatalogController < ApplicationController
 
   include LocationFacet
 
+  include EmailValidation
+
+  include BackendLookup
+
   before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
@@ -61,11 +65,21 @@ class CatalogController < ApplicationController
     #}
 
     # solr field configuration for search results/index views
+    config.index.document_presenter_class = IndexDocumentPresenter
     config.index.title_field = 'title_display'
-    config.index.display_type_field = 'format'
+    config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_method = :thumbnail
+    config.index.search_field_mapping = { # Catalog -> Article
+      search:         :search,
+      search_author:  :author,
+      search_title:   :title,
+      subject_terms:  :subject,
+      call_number:    :search,
+      search_series:  :search
+    }
 
     # solr field configuration for document/show views
+    config.show.document_presenter_class = ShowDocumentPresenter
     #config.show.title_field = 'title_display'
     #config.show.display_type_field = 'format'
 
@@ -357,19 +371,6 @@ class CatalogController < ApplicationController
     end
   end
 
-  def backend_lookup
-    (@response, @document_list) = search_results(params)
-    respond_to do |format|
-      format.json do
-        @presenter = Blacklight::JsonPresenter.new(@response,
-                                                   @document_list,
-                                                   facets_from_request,
-                                                   blacklight_config)
-      end
-      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
-    end
-  end
-
   def availability
     _, document = fetch(params[:id])
     respond_to do |format|
@@ -410,40 +411,6 @@ class CatalogController < ApplicationController
     end
 
     flash[:success] = I18n.t('blacklight.email.success')
-  end
-
-  def validate_email_params
-    case
-    when !%w(full brief).include?(params[:type])
-      flash[:error] = I18n.t('blacklight.email.errors.type')
-    when params[:email_address].present?
-      flash[:error] = I18n.t('blacklight.email.errors.email_address')
-    when params[:message] =~ %r{href|url=|https?://}i
-      flash[:error] = I18n.t('blacklight.email.errors.message.spam')
-    when params[:to].blank?
-      flash[:error] = I18n.t('blacklight.email.errors.to.blank')
-    when too_many_email_addresses?
-      flash[:error] = I18n.t('blacklight.email.errors.to.too_many', max: Settings.EMAIL_THRESHOLD)
-    when !valid_email_addresses?
-      flash[:error] = I18n.t('blacklight.email.errors.to.invalid', to: params[:to])
-    end
-
-    flash[:error].blank?
-  end
-
-  def valid_email_addresses?
-    email_regexp = defined?(Devise) ? Devise.email_regexp : /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
-    email_addresses.all? do |email|
-      email.match(email_regexp)
-    end
-  end
-
-  def too_many_email_addresses?
-    email_addresses.length > Settings.EMAIL_THRESHOLD.to_i
-  end
-
-  def email_addresses
-    params[:to].split(/,|\s+/).reject(&:blank?)
   end
 
   def modifiable_params_keys

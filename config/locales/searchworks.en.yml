@@ -1,5 +1,40 @@
 en:
   searchworks:
+    articles:
+      search_tips:
+        heading: "For a known citation, type author name and title in the main search box."
+        body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
+      flashes:
+        source_type_warning_html:
+          Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
+        fulltext_link:
+          guest_html: Sorry, the PDF download was not successful because you are currently in guest mode.<br/><a href="%{login_url}">Log in to try the download again</a>.
+          non_guest_html: Sorry, the PDF download was not successful.<br/>We don't know the source of the error. Try again, and if it continues to fail, <a href=" http://library.stanford.edu/ask/email/connection-problems">please report it as a connection problem</a>.
+      facets:
+        options:
+          heading: Search settings
+          RV:
+            tip: Limit your search to scholarly content. Includes University presses.
+          FT1:
+            tip: Stanford subscribes to the full text, or it's available via open access.
+    search:
+      form:
+        q:
+          articles: articles, e-books, & other e-resources
+          default: books & media
+    search_dropdown:
+      articles:
+        label: articles+
+        description_html: <span class="h3">articles+</span> <span class="help-block">journal articles &amp; other e-resources</span>
+      catalog:
+        label: catalog
+        description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
+      library_website:
+        label: library website
+        description_html: <span class="h3">library website</span> <span class="help-block">library info, guides, collections &amp; services</span>
+      bento:
+        label: all
+        description_html: <span class="h3">all</span> <span class="help-block">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
       imprint:
         label: Imprint
@@ -30,7 +65,7 @@ en:
         label: 'Field'
   blacklight:
     course_reserves:
-      page_title: "Browse course reserves in %{application_name}"
+      page_title: "Course reserves in %{application_name}"
     email:
       form:
         to: 'Email to:'
@@ -46,20 +81,21 @@ en:
           invalid: 'You must enter only valid email addresses.'
           too_many: 'You have entered more than the maximum (%{max}) email addresses allowed.'
     search:
-      page_heading: "Search results"
+      page_heading: "%{search_type} search results"
       bookmarks:
         present: "Selected"
         absent: "Select"
       form:
         q: ''
       zero_results:
-        modify_your_search: "Modify your search"
+        modify_your_search: "Modify your search in %{search_type}"
         page_heading: "No results"
-        limit_fields: "Remove limit(s): "
-        search_fields: "Search all fields: "
-        your_search: "Your search: "
+        limit_fields: "Remove limit(s)"
+        search_fields: "Search all fields"
+        your_search: "Your current search"
         return_to_advanced_search: "Return to Advanced search page"
         limit: "Try using fewer terms to start, then limit your results."
+        search_context: "Try your search in…"
 
     bookmarks:
       page_heading: "Selections list"
@@ -78,7 +114,9 @@ en:
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
-      feedback_alert_html: "The Stanford University Libraries will be closed for Winter Break from December 19th through January 3rd. All SearchWorks inquiries submitted during the closure will not be read until January 4th. If you require a response before January 4th, please send your comments to %{href}."
+      feedback_alert_html: "The Stanford Libraries will be closed for Winter Break from December 19th through January 3rd. All SearchWorks inquiries submitted during the closure will not be read until January 4th. If you require a response before January 4th, please send your comments to %{href}."
+    connection_form:
+      success: '<strong>Thank you!</strong> Your connection problem report has been sent.'
     range_limit:
       submit_limit: 'Apply'
   blacklight_advanced_search:
@@ -89,9 +127,13 @@ en:
       search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
-    page_title: '%{application_name} advanced search'
+    page_title: 'Advanced search in %{application_name}'
 
   record_side_nav:
+    abstract:
+      id: "abstract"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Abstract"
     abstract_contents:
       id: "abstract-contents"
       icon: '<i class="fa fa-align-justify"></i>'
@@ -116,7 +158,19 @@ en:
       id: "bibliography-info"
       icon: '<i class="fa fa-info"></i>'
       label: "Info"
+    details:
+      id: "details"
+      icon: '<i class="fa fa-info"></i>'
+      label: "Details"
     browse_nearby:
       id: "browse-nearby"
       icon: '<span class="sul-icon sul-icon-books-3"></span>'
       label: "Browse"
+    fulltext:
+      id: "full-text"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Full Text"
+    summary:
+      id: "summary"
+      icon: '<i class="fa fa-align-justify"></i>'
+      label: "Summary"

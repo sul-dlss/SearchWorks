@@ -6,8 +6,6 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<% if current_page.last? %>
-  <%= link_to raw(t 'views.pagination_compact.next'), "#", :rel => 'next', class: 'btn btn-sul-toolbar disabled', role: 'button', :remote => remote %>
-<% else %>
+<% unless current_page.last? %>
   <%= link_to raw(t 'views.pagination_compact.next'), url, :rel => 'next', class: 'btn btn-sul-toolbar', role: 'button', :remote => remote %>
 <% end %>

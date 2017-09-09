@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe 'Call num search', js:true do
+  before do
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+  end
   it "should correctly show a search result when the call number has special characters in it" do
     object_title='An object'
     visit search_catalog_path

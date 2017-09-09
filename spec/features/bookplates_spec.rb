@@ -48,7 +48,7 @@ describe 'Bookplates' do
         expect(page).to have_css('.filterValue', text: 'Susan and Ruth Sharp Fund')
       end
 
-      expect(page).to have_css('h2', text: '1 result')
+      expect(page).to have_css('h2', text: '1 catalog result')
 
       visit solr_document_path('45')
 
@@ -65,7 +65,7 @@ describe 'Bookplates' do
         expect(page).to have_css('.filterValue', text: 'The Edgar Amos Boyles Centennial Book Fund')
       end
 
-      expect(page).to have_css('h2', text: '1 result')
+      expect(page).to have_css('h2', text: '1 catalog result')
     end
 
     it 'returns a gallery view search result sorted by "new to the Libraries"' do

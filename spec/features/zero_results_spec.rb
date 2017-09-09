@@ -7,9 +7,11 @@ feature "Zero results" do
     select 'Author/Contributor', from: 'search_field'
     click_button 'search'
     within "#content" do
-      expect(page).to have_css("li", text: "Your search: Author/Contributor: sdfsda")
-      expect(page).to have_css("li", text: "Search all fields: All fields: sdfsda")
-      expect(page).to have_css("a", text: "All fields: sdfsda")
+      expect(page).to have_css('dt', text: 'Your current search')
+      expect(page).to have_css('dd', text: 'Author/Contributor > sdfsda')
+      expect(page).to have_css('dt', text: 'Search all fields')
+      expect(page).to have_css('dd', text: 'sdfsda')
+      expect(page).to have_css('a', text: 'sdfsda')
     end
   end
   scenario "should have no results and show correct link from advanced search", js: true do
@@ -27,9 +29,22 @@ feature "Zero results" do
     fill_in "q", with: "sdfsda"
     click_button 'search'
     within "#content" do
-      expect(page).to have_css("li", text: "Your search: All fields: sdfsda Resource type: Book")
-      expect(page).to have_css("li", text: "Remove limit(s): All fields: sdfsda")
-      expect(page).to have_css("a", text: "All fields: sdfsda")
+      expect(page).to have_css('dt', text: 'Your current search')
+      expect(page).to have_css('dd', text: 'sdfsda + Resource type > Book')
+      expect(page).to have_css('dt', text: 'Remove limit(s)')
+      expect(page).to have_css('dd', text: 'All fields > sdfsda')
+      expect(page).to have_css('a', text: 'All fields > sdfsda')
+    end
+  end
+
+  context 'article search' do
+    before { stub_article_service(docs: []) }
+
+    scenario 'displays backend lookup links', js: true do
+      visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] })
+
+      # Has zero results because we pass an empty array of docs, but is sucessfully searching
+      expect(page).to have_link('Keyword > Kittens... found 0 results', href: %r{.*/articles\?q=Kittens})
     end
   end
 end

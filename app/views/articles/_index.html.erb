@@ -1,0 +1,45 @@
+<% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{application_name} articles") %>
+<div class="breadcrumb row">
+  <div class="col-md-12">
+    <%= render 'constraints' %>
+  </div>
+</div>
+<div class='row'>
+  <% if @response.empty? %>
+    <div class="zero-results-heading">
+      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
+    </div>
+  <% end %>
+  <div id="sidebar" class="col-md-4 col-sm-5">
+    <% if @response.empty? %>
+      <%= render 'shared/search_context_sidebar' %>
+    <% else %>
+      <%= render 'search_sidebar' %>
+    <% end %>
+  </div>
+  <div id="content" class="col-md-8 col-sm-7">
+    <div id='documents' class="article-search-results">
+      <% if @response.empty? %>
+        <%= render "shared/zero_results" %>
+      <% else %>
+        <div class="search_num_of_results">
+          <div class='results-heading'>
+            <h1 class="sr-only"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
+            <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
+          </div>
+        </div>
+        <%= render 'search_header' %>
+        <%= render 'research_starters' %>
+        <%= render @response.documents, as: :document %>
+        <%= render 'alternate_catalog' if show_alternate_catalog? %>
+
+        <%- unless @response.empty? %>
+          <%= render 'shared/side_nav_minimap' %>
+        <%- end %>
+
+        <%= render 'search_footer' %>
+      <% end %>
+    </div>
+  </div>
+</div>

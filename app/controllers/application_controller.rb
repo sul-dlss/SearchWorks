@@ -20,6 +20,17 @@ class ApplicationController < ActionController::Base
     '/Shibboleth.sso/Logout'
   end
 
+  def on_campus_or_su_affiliated_user?
+    IPRange.includes?(request.remote_ip) || user_is_stanford_affiliated?
+  end
+  helper_method :on_campus_or_su_affiliated_user?
+
+  def user_is_stanford_affiliated?
+    return unless current_user.present? && session['suAffiliation']
+
+    Settings.SU_AFFILIATIONS.include?(session['suAffiliation'])
+  end
+
   def page_location
     SearchWorks::PageLocation.new(params)
   end

@@ -1,10 +1,5 @@
-Name: <%= @name %>
-Email: <%= @email %>
+<%= render 'shared_heading' %>
 Comment:
-<%= @message.html_safe unless @message.nil? %>
+<%= @mailer_parser.message.html_safe %>
 
-Message sent from: <%= @url %>
-Host: <%= Settings.HOSTNAME %>
-IP: <%= @ip %>
-User agent: <%= @user_agent %>
-Viewport: <%= @viewport %>
+<%= render 'shared_closing' %>

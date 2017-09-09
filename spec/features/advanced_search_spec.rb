@@ -5,7 +5,7 @@ feature "Advanced Search" do
     visit blacklight_advanced_search_engine.advanced_search_path
   end
   scenario "should have correct fields and headings" do
-    expect(page).to have_title("SearchWorks advanced search")
+    expect(page).to have_title("Advanced search in SearchWorks catalog")
     within ".advanced-search-form" do
       expect(page).to have_css("h1", text: "Advanced search")
       within ".query-criteria" do
@@ -56,8 +56,6 @@ feature "Advanced Search" do
     within('.breadcrumb') do
       expect(page).to have_content("A search")
     end
-
-    expect(page).to_not have_content("Advanced search")
   end
   scenario "should have search tips" do
     within ".advanced-search-form" do

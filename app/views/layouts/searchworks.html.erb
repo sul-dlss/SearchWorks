@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Stanford University Libraries' official online search tool for books, media, journals, databases, government documents and more." />
+    <meta name="description" content="Stanford Libraries' official online search tool for books, media, journals, databases, government documents and more." />
     <!-- Mobile viewport optimization h5bp.com/ad -->
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -44,8 +44,11 @@
     <div id="su-wrap"> <!-- #su-wrap start -->
       <div id="su-content"> <!-- #su-content start -->
         <div id="outer-container" class="container-fluid">
-          <%= render 'shared/top_navbar' %>
-          <%= render 'shared/search_bar' %>
+          <div id="stacked-banner">
+            <%= render 'shared/top_navbar' %>
+            <%= render 'shared/search_bar' %>
+            <%= render 'shared/search_subnavbar' %>
+          </div>
           <%= render_masthead_partial %>
 
           <%= render partial: 'shared/ajax_modal' %>

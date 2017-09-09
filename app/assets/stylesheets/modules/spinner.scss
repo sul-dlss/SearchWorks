@@ -1,0 +1,14 @@
+.loading-spinner {
+  animation: loading-spinner 2s linear infinite;
+  border: 8px solid $light-grey;
+  border-top: 8px solid $gray-80-percent;
+  border-radius: 50%;
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+
+@keyframes loading-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

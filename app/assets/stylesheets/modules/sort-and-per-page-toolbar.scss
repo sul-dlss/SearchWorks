@@ -1,5 +1,7 @@
 #sortAndPerPage {
-  padding-bottom: 4px;
+  padding: 4px 0;
+  margin-top: .8em;
+  border-bottom: none;
 
   .container-fluid {
     padding-left: 0px;
@@ -11,7 +13,7 @@
   }
 
   .page_links {
-    padding: 0 0 0 0;
+    padding: 0px 10px;
   }
 
   .page_entries {

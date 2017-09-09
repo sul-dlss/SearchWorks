@@ -1,0 +1,31 @@
+#documents {
+  &.article-search-results {
+    .document {
+      h3 {
+        padding-top: 10px;
+        &.index_title {
+          text-indent: -22px;
+        }
+      }
+
+      span.sul-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+.article-search-show {
+  h1 {
+    padding-top: 10px;
+
+    span.sul-icon {
+      display: none;
+    }
+  }
+}
+
+// EDS markup
+searchLink {
+  font-style: italic;
+}

@@ -13,7 +13,7 @@ feature "Record Toolbar" do
 
       within "div.navbar-header" do
         expect(page).to_not have_css("button.navbar-toggle", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
         expect(page).to_not have_css("a.previous.disabled", visible: true)
         expect(page).to_not have_css("a.previous", visible: true)
         expect(page).to_not have_css("a.next.disabled", visible: true)
@@ -36,7 +36,7 @@ feature "Record Toolbar" do
       within "div.navbar-header" do
         expect(page).to_not have_css("button.navbar-toggle", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
-        expect(page).to have_css("a.previous", visible: true)
+        expect(page).not_to have_css("a.previous", visible: true) # Previous button is not shown for first hit
         expect(page).to have_css("a.next", visible: true)
       end
       within "div.navbar-collapse" do

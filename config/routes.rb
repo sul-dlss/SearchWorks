@@ -55,6 +55,7 @@ Rails.application.routes.draw do
 
   get "feedback" => "feedback_forms#new"
   get "backend_lookup" => "catalog#backend_lookup", defaults: {format: :json}, as: :catalog_backend_lookup
+  get 'articles/backend_lookup' => 'articles#backend_lookup', defaults: {format: :json}, as: :articles_backend_lookup
 
   get 'view/:id/availability' => 'catalog#availability', defaults: { format: :json }
 
@@ -67,4 +68,15 @@ Rails.application.routes.draw do
   resources :recent_selections, only: :index
 
   resources :course_reserves, only: :index, path: "reserves"
+
+  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
+    resources :articles, only: %i[index show] do
+      concerns :exportable
+    end
+
+    post 'articles/:id/track' => 'articles#track', as: :track_articles
+    get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link, constraints: { type: /[-\w]+/ }
+  end
+
+  resource :sfx_data, only: :show
 end

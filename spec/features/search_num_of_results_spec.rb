@@ -5,7 +5,7 @@ feature "Search results count" do
     visit search_catalog_path f: { format: ["Book"] }
     within "#content" do
       within ".search_num_of_results" do
-        expect(page).to have_css("h2", text: /[\d,]+ results?/)
+        expect(page).to have_css("h2", text: /[\d,]+ catalog results?/)
       end
     end
   end

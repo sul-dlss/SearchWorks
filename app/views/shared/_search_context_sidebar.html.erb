@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <h3 class="sr-only panel-title">Search context</h3>
+  <div class="panel-body">
+    <h3><%= t('blacklight.search.zero_results.search_context') %></h3>
+    <div class="media">
+      <div class="media-body">
+        <% if article_search? %>
+          <%= link_to_catalog_search %>
+        <% else %>
+          <%= link_to_article_search %>
+        <% end %>
+        <%= link_to_library_website_search %>
+        <%# TODO: add bento search, issue #1695 %>
+        <%= link_to_bento_search %>
+      </div>
+    </div>
+  </div>
+</div>

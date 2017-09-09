@@ -1,5 +1,7 @@
 HOURS_API: <%= ENV['HOURS_API'] || 'http://example.com' %>
-EMAIL_TO: "fake-email@kittenz.com"
+EMAIL_TO:
+  FEEDBACK: "fake-email@kittenz.com"
+  CONNECTION: "fake-connectionz@kittenz.com"
 HOSTNAME: <%= (`echo $HOSTNAME`).gsub('.stanford.edu', '') %>
 STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
@@ -29,3 +31,22 @@ OCLC:
   DOCUMENT_FIELD: 'oclc'
 MOUSEFLOW: <%= Rails.env.production? %>
 MOUSEFLOW_KEY: '55d6233e-5245-4a7c-854d-f6e64e753af4'
+EDS_USER: the-eds-user
+EDS_PASS: the-eds-password
+EDS_PROFILE: the-eds-profile
+EDS_DEBUG: false
+EDS_CACHE: true
+EDS_CACHE_DIR: /tmp
+EDS_LOGDIR: <%= Rails.root.join('log') %>
+EDS_TIMEOUT: 15
+EDS_OPEN_TIMEOUT: 5
+EDS_HOSTS:
+  - eds-api-a.ebscohost.com
+  - eds-api-b.ebscohost.com
+  - eds-api.ebscohost.com
+SU_AFFILIATIONS: []
+STANFORD_NETWORK:
+  singletons: []
+  ranges: []
+BITLY:
+  ACCESS_TOKEN: 'the_bitly_apikey'

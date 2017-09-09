@@ -84,4 +84,38 @@ describe 'Sort and per page toolbar', js: true, feature: true do
       end
     end
   end
+
+  describe 'Article search' do
+    before do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+      visit articles_path q: 'my search'
+    end
+    it 'has a sort dropdown' do
+      within '#sort-dropdown' do
+        expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'Sort by relevance')
+      end
+    end
+    it 'sort dropdown brings up options' do
+      within '#sort-dropdown' do
+        page.find('button.btn.btn-sul-toolbar').click
+        expect(page).to have_css('a', text: 'relevance', visible: true)
+        expect(page).to have_css('a', text: 'date (most recent)', visible: true)
+        expect(page).to have_css('a', text: 'date (oldest)', visible: true)
+      end
+    end
+    it 'has a per page dropdown' do
+      within '#per_page-dropdown' do
+        expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'per page')
+      end
+    end
+    it 'per page dropdown brings up options' do
+      within '#per_page-dropdown' do
+        page.find('button.btn.btn-sul-toolbar').click
+        expect(page).to have_css('a', text: '10 per page', visible: true)
+        expect(page).to have_css('a', text: '20 per page', visible: true)
+        expect(page).to have_css('a', text: '50 per page', visible: true)
+        expect(page).to have_css('a', text: '100 per page', visible: true)
+      end
+    end
+  end
 end

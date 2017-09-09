@@ -39,8 +39,8 @@ class SearchQueryModifier
   def selected_filter_labels
     if has_filters?
       @config.facet_fields.values.map do |facet|
-        "#{facet.label}: #{@params[:f][facet.field].join(', ')}" if @params[:f].present? && @params[:f][facet.field].present?
-      end.compact.join(', ')
+        "#{facet.label} > #{@params[:f][facet.field].join(', ')}" if @params[:f].present? && @params[:f][facet.field].present?
+      end.compact.join('+ ')
     end
   end
 

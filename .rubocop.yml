@@ -11,6 +11,10 @@ Rails:
 Metrics/LineLength:
   Max: 120
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes

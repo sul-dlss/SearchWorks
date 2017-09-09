@@ -22,72 +22,21 @@
     float: right;
     margin-top: 2px;
     a {
+      color: $sul-topnavbar-link-color;
+      border-bottom: 0;
       font-weight: normal;
       margin-left: 15px;
       padding-bottom: 3px;
-      color: $sul-topnavbar-link-color;
-      border-bottom: none;
+      text-decoration: none;
+
       &.first {
         margin-left: 0;
       }
     }
-    a:hover {
+    // Add the border on hover, or when the #feedback-form is open
+    a:hover, a[data-target="#feedback-form"][aria-expanded="true"] {
       border-bottom: 3px solid $sul-topnavbar-link-color;
     }
-  }
-
-  .btn-topbar-menu {
-    font-size: 1.7em;
-    height: 25px;
-    margin-top: -2px;
-    padding-left: 0;
-    vertical-align: text-bottom;
-  }
-
-  &.open {
-    .btn-topbar-menu span {
-      @extend .fa-rotate-90;
-    }
-  }
-}
-.sul-top-menu {
-  width: 350px;
-  background: rgba($cardinal-red, .9);
-  margin-left: 2px;
-  margin-top: -1px;
-  border-radius: 0px;
-  left: inherit;
-
-  li a {
-    color: $white;
-    border: none;
-    padding-left: 40px;
-  }
-
-  li a[role=menuitem] i.fa-bookmark-o {
-    padding-right: 4px;
-  }
-
-  li a:hover {
-    color: $cardinal-red;
-    margin-left: 15px;
-    padding-left: 25px;
-    margin-right: 15px;
-  }
-
-  li.menu-header {
-    padding-left: 0;
-  }
-
-  .dropdown-header {
-    font-size: $font-size-base;
-  }
-
-  .divider {
-    margin-left: 15px;
-    margin-right: 15px;
-    border-bottom: white dotted 1px;
-    background-color: transparent;
   }
 }
 .dropdown-list-title{
