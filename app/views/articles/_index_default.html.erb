@@ -40,17 +40,7 @@
     <% if document.access_panels.online? %>
       <% document.access_panels.online.links.each do |link| %>
         <li>
-          <% if link.ill? -%>
-            <%= link_to(link.text, link.href, class: 'sfx') %>
-          <% else %>
-            <span class="online-label">Full text</span>
-            <%= link_to(link.text, link.href) %>
-          <% end %>
-        </li>
-      <% end %>
-    <% elsif document.html_fulltext? %>
-      <li>
-        <% if link.href == 'detail' %>
+        <% if link.href == 'detail' # PDFs %>
           <span class="online-label">Full text</span>
           <%= link_to('View on detail page',article_path(document)) unless !document.html_fulltext? %>
           <%= image_tag("pdf-icon.svg", height: "20px", alt: "PDF") %>
