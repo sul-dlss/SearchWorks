@@ -1,13 +1,17 @@
-.article-search-results {
-  h3 {
-    padding-top: 10px;
-    &.index_title {
-      text-indent: -22px;
-    }
-  }
+#documents {
+  &.article-search-results {
+    .document {
+      h3 {
+        padding-top: 10px;
+        &.index_title {
+          text-indent: -22px;
+        }
+      }
 
-  span.sul-icon {
-    display: none;
+      span.sul-icon {
+        display: none;
+      }
+    }
   }
 }
 
