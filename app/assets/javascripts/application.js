@@ -13,3 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require quick_search
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
