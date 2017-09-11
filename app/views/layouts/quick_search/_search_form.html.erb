@@ -1,0 +1,19 @@
+<div class="row main-search-form">
+    <div class="small-12 columns">
+    <%= form_for("search", method: :get, html: {id: 'main-search-form'}) do |f| %>
+        <div class="row">
+            <div class="small-10 columns">
+                <% if @query  %>
+                    <input type="search" name="q" id="params-q" class="search-query" value="<%= @query %>" />
+                <% else %>
+                    <input type="search" name="q" id="params-q" class="search-query" placeholder="<%= @search_form_placeholder %>" />
+                <% end %>
+            </div>
+            <div class="small-2 columns">
+                <button type="submit" class="button prefix show-for-small"><i class="fa fa-search"></i></button>
+                <button type="submit" class="button prefix show-for-medium-up">Search</button>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>
