@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Do not eager load code on boot.
-  config.eager_load = false
+  config.eager_load = true # TODO: if false, causes constant loading to hang
 
   # Show full error reports.
   config.consider_all_requests_local = true
