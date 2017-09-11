@@ -33,7 +33,7 @@ defaults: &defaults
   password: "stats"
 
   on_campus:
-    - !ruby/regexp '/^192\.(1|168)\.\d*\.\d*$/'
+    - !ruby/regexp '/^\d+\.\d+\.\d+\.\d+$/' # TODO: any IP for now
 
 
   common_searches: ["web of science", "google scholar", "refworks", "harvard business review", "pubmed", "ieee"]
