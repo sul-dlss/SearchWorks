@@ -16,39 +16,39 @@
       <div class="form-group">
         <%= label_tag(:resource_name, 'Name of resource', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_field_tag :resource_name, "", class:"form-control" %>
+          <%= text_field_tag :resource_name, "", class:"form-control", required: true %>
         </div>
       </div>
       <div class="form-group">
         <%= label_tag(:name, 'Problem URL', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_field_tag :problem_url, "", class:"form-control" %>
+          <%= text_field_tag :problem_url, "", class:"form-control", required: true %>
         </div>
       </div>
       <div class="form-group">
         <%= label_tag(:message, 'Describe the connection issue', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_area_tag :message, "", rows:"5", class:"form-control" %>
+          <%= text_area_tag :message, "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% else %>
       <div class="form-group">
         <%= label_tag(:message, 'Message', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_area_tag :message, "", rows:"5", class:"form-control" %>
+          <%= text_area_tag :message, "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% end %>
     <div class="form-group">
       <%= label_tag(:name, 'Your name', class:"col-sm-3 control-label") %>
       <div class="col-sm-9">
-        <%= text_field_tag :name, "", class:"form-control" %>
+        <%= text_field_tag :name, "", class:"form-control", required: true %>
       </div>
     </div>
     <div class="form-group">
       <%= label_tag(:to, 'Your email', class:"col-sm-3 control-label") %>
       <div class="col-sm-9">
-        <%= email_field_tag :to, "", class:"form-control" %>
+        <%= email_field_tag :to, "", class:"form-control", required: true %>
       </div>
     </div>
     <div class="form-group">
