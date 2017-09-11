@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Developer environment
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Run searchworks locally, or point your `settings.local.yml` to the production instance of SearchWorks
+2. Run `bundle exec rails s -p 3001`
+3. Now, you can visit http://localhost:3001/ for the Bento app
