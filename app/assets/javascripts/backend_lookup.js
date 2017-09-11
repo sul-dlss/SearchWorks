@@ -65,7 +65,7 @@ Blacklight.onLoad(function(){
             $(el).data(pluginName + '_processed', true);
             $.getJSON($url, function(data){
               $response = data.response;
-              $total_count = $response.pages.total_count;
+              $total_count = parseInt($response.pages.total_count).toLocaleString();
               updateLink($total_count, el);
             });
           }
