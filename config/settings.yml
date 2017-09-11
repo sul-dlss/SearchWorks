@@ -1,7 +1,7 @@
-EDS_QUERY_API_URL: 'http://example.com/query?q=%{q}&max=%{max}&format=json'
-EDS_QUERY_URL: 'http://example.com/query?q=%{q}&max=%{max}'
-EDS_FETCH_URL: 'http://example.com/fetch?id=%{id}'
-CATALOG_QUERY_API_URL: 'http://example.com/query?q=%{q}&max=%{max}&format=json'
-CATALOG_QUERY_URL: 'http://example.com/query?q=%{q}&max=%{max}'
-CATALOG_FETCH_URL: 'http://example.com/fetch?id=%{id}'
-MAX_RESULTS: 5
+EDS_QUERY_API_URL: 'http://localhost:3000/articles?q=%{q}&rows=%{max}&format=json'
+EDS_QUERY_URL: 'http://localhost:3000/articles?q=%{q}'
+EDS_FETCH_URL: 'http://localhost:3000/articles/%{id}'
+CATALOG_QUERY_API_URL: 'http://localhost:3000/?q=%{q}&rows=%{max}&format=json'
+CATALOG_QUERY_URL: 'http://localhost:3000/?q=%{q}'
+CATALOG_FETCH_URL: 'http://localhost:3000/view/%{id}'
+MAX_RESULTS: 3
