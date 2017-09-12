@@ -15,8 +15,7 @@
         <% unless defined? searcher.loaded_link_mobile %>
             <h2 class='result-set-heading'><%= module_display_name %></h2>
         <% else %>
-            <h2 class='show-for-medium-up result-set-heading'><%= module_display_name %></h2>
-            <h2 class='show-for-small-only result-set-heading'><%= module_display_name %></h2>
+            <h2 class='result-set-heading'><%= module_display_name %></h2>
         <% end %>
         <ol>
             <%= render partial: '/quick_search/search/result', collection: searcher.results %>
