@@ -1,0 +1,18 @@
+<div class="search-container">
+  <h1>Search</h1>
+  <div class="main-search-form">
+    <%= form_for("search", method: :get, html: {id: 'main-search-form', class: 'form-inline'}) do |f| %>
+    <% if @query  %>
+    <input type="search" name="q" id="params-q" class="search-query form-control" value="<%= @query %>"/>
+  <% else %>
+    <input type="search" name="q" id="params-q" class="search-query form-control" placeholder="<%= @search_form_placeholder %>"/>
+    <% end %>
+    <span class="input-group-btn">
+      <button type="submit" class="btn search-btn">
+        <span class="sr-only">Search</span>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </span>
+    <% end %>
+  </div>
+</div>

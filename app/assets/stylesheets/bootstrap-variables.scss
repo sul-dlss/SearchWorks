@@ -1,0 +1,66 @@
+// Override Bootstrap variables here
+
+// Body
+$body-bg: $sul-body-bg;
+
+// Text / Links
+$text-color: $sul-text-color;
+$link-color: $sul-text-color;
+$link-hover-color: $sul-text-color;
+
+// Panels
+$panel-border-radius: 0px;
+$panel-bg: $sul-panel-bg;
+$panel-footer-bg: $sul-panel-bg;
+$panel-default-heading-bg: $sul-panel-heading-default;
+$panel-default-border: $sul-panel-border-bottom;
+
+// Buttons
+$btn-default-color: $gray;
+$btn-default-bg: $beige-10-percent;
+$btn-default-border: $beige-30-percent;
+
+$btn-primary-color: $white;
+$btn-primary-bg: $cardinal-red;
+$btn-primary-border: darken($btn-primary-bg, 9.8%);
+
+$btn-success-color: $white;
+$btn-success-bg: $pantone-334;
+$btn-success-border: darken($btn-success-bg, 9.8%);
+
+$btn-info-color: $white;
+$btn-info-bg: $pantone-3145;
+$btn-info-border: darken($btn-info-bg, 9.8%);
+
+$btn-warning-color: $white;
+$btn-warning-bg: $pantone-144;
+$btn-warning-border: darken($btn-warning-bg, 9.8%);
+
+$btn-danger-color: $white;
+$btn-danger-bg: $boston-university-red;
+$btn-danger-border: darken($btn-danger-bg, 9.8%);
+
+// Colors
+$gray-light: #737373;
+
+// Navbar
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $white;
+$navbar-default-link-active-color: $white;
+$navbar-default-toggle-hover-bg: transparent;
+
+// Pagination
+$pagination-active-bg: $sul-pagination-active-bg;
+$pagination-active-border: $sul-pagination-active-bg;
+
+// Tables
+$table-bg-accent: $beige-10-percent;
+
+// Tooltip
+$tooltip-bg: $sul-tooltip-bg;
+
+// Typography
+$font-size-h1: 2.3em;
+$font-size-h2: 1.6em;
+$font-size-h3: 1.4em;
+$headings-font-weight: 300;

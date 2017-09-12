@@ -1,22 +1,21 @@
-<%= render partial: 'layouts/quick_search/page_title', locals: { page_title: @page_title } %>
 <%= render partial: 'layouts/quick_search/search_form' %>
 <div class="quicksearch-ga-click-tracking">
   <div id="result-types" class="row">
-    <div class="small-12 columns result-types">
+    <div class="col result-types">
       <%= render partial: 'layouts/quick_search/found_types' %>
     </div>
   </div>
 </div>
 <div class="quicksearch-ga-click-tracking">
   <div class="row articles-catalog">
-    <div class="small-12 medium-6 columns summon module">
+    <div class="col-md-6 module">
       <div id="article" class="module-contents" >
         <p class="search-error" data-quicksearch-search-endpoint="article"
                                 data-quicksearch-page=""
                                 data-quicksearch-template=""></p>
       </div>
     </div>
-    <div class="small-12 medium-6 columns catalog module">
+    <div class="col-md-6 catalog module">
       <div id="catalog" class="module-contents" >
         <p class="search-error" data-quicksearch-search-endpoint="catalog"
                                 data-quicksearch-page=""
