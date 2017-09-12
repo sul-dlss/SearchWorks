@@ -21,3 +21,6 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
   'public/system',
   'config/settings'
 )
+
+# update shared_configs before restarting app
+before 'deploy:restart', 'shared_configs:update'
