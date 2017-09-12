@@ -19,5 +19,13 @@ en:
     error_service_mesasge: "searching SearchWorks articles+"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
+  library_website_search:
+    display_name: "Library website"
+    short_display_name: "Library website"
+    search_form_placeholder: "Search Library website"
+    module_callout: "Search Library website"
+    error_service_mesasge: "searching library website"
+    no_results_service_message: "a different search"
+    no_results_link: "http://library.stanford.edu/search/website"
   search_form:
     placeholder: "catalog + articles + website + more"
