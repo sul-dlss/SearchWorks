@@ -1,0 +1,102 @@
+#top-navbar {
+  background-color: $light-sandstone;
+  min-height: 35px;
+
+  ul {
+    font-size: 14px;
+    list-style-type: none;
+    margin: 0;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+    }
+  }
+
+  a {
+    color: $cardinal-red;
+  }
+}
+
+#masthead-container {
+  background-color: #9D2520;
+  min-height: 100px;
+  #masthead {
+    margin: 0 auto;
+    color: white;
+
+    .masthead-logo {
+      min-height: 100px;
+    }
+  }
+}
+
+#subnavbar-container {
+  background-color: $sul-subnavbar-bg-color;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+  color: $white;
+  min-height: 35px;
+
+  .dropdown-toggle {
+    color: $white;
+    font-size: 20px;
+  }
+
+  .navbar-toggle {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sul-services-menu {
+    background-color: $sul-subnavbar-bg-color;
+    white-space: nowrap;
+
+    a {
+      background-color: $sul-subnavbar-bg-color;
+      border: 0;
+      color: $white;
+      font-size: 20px;
+      font-weight: 100;
+      margin-right: 20px;
+      padding: 6px 0;
+    }
+  }
+
+  // For all subnavbar navbar lists
+  .sul-services-menu ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+
+  // For dropdowns
+  .dropdown-menu {
+    background-color: $sul-subnavbar-bg-color;
+    border-radius: 0;
+    left: inherit;
+
+    li a {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 35px;
+      margin: 0;
+      padding: 0 24px;
+    }
+
+    li.text-muted, li.dropdown-header {
+      color: $white;
+      padding-left: 15px;
+    }
+
+    .divider {
+      background-color: transparent;
+      border-bottom: $white dotted 1px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+}
