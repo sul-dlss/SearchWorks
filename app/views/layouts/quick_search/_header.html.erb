@@ -1,28 +1,34 @@
-<div class="top-navbar">
-  <ul>
-    <li>
-      Login
-    </li>
-    <li>
-      My Account
-    </li>
-    <li>
-      Feedback
-    </li>
-  </ul>
+<div id="top-navbar-container">
+  <div id="top-navbar">
+    <ul>
+      <li>
+        Login
+      </li>
+      <li>
+        My Account
+      </li>
+      <li>
+        Feedback
+      </li>
+    </ul>
+  </div>
 </div>
-<div class="masthead">
-  <%= link_to root_path do %>
-    <%= image_tag 'sul_banner_white.svg', class: 'masthead-logo', alt: 'Stanford Libraries' %>
-  <% end %>
+<div id="masthead-container">
+  <div id="masthead">
+    <%= link_to root_path do %>
+      <%= image_tag 'sul_banner_white.svg', class: 'masthead-logo', alt: 'Stanford Libraries' %>
+    <% end %>
+  </div>
 </div>
-<div class="subnavbar-container">
-  <ul class="nav navbar-nav navbar-left" role="navigation">
-        <li class="dropdown search-subnavbar-about">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Library services<span class="caret"/>
-          </a>
-          <%= render :partial => '/shared/services_menu' %>
-        </li>
-  </ul>
+<div id="subnavbar-container">
+  <div id="subnavbar">
+    <ul class="nav navbar-nav navbar-left" role="navigation">
+      <li class="dropdown search-subnavbar-about">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Library services<span class="caret"/>
+        </a>
+        <%= render :partial => '/shared/services_menu' %>
+      </li>
+    </ul>
+  </div>
 </div>

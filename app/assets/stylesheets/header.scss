@@ -1,13 +1,13 @@
-.top-navbar {
+#top-navbar {
   background-color: $light-sandstone;
-  color: $cardinal-red;
   min-height: 35px;
-  text-align: right;
 
   ul {
     font-size: 14px;
     list-style-type: none;
     margin: 0;
+    text-align: right;
+
 
     li {
       display: inline-block;
@@ -22,18 +22,22 @@
   }
 }
 
-.masthead {
-  background-color: #9D2520;
-  color: white;
-  min-height: 100px;
-  width: 100%;
 
-  .masthead-logo {
-    min-height: 100px;
+#masthead-container {
+  background-color: #9D2520;
+  min-height: 100px;
+
+  #masthead {
+    margin: 0 auto;
+    color: white;
+
+    .masthead-logo {
+      min-height: 100px;
+    }
   }
 }
 
-.subnavbar-container {
+#subnavbar-container {
   background-color: $sul-subnavbar-bg-color;
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
   color: $white;
