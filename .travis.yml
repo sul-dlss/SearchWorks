@@ -1,3 +1,7 @@
+dist: trusty
+addons:
+  chrome: stable
+
 notifications:
   email: false
 
@@ -8,3 +12,5 @@ cache: bundler
 rvm:
   - 2.4.1
 
+before_install:
+  google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
