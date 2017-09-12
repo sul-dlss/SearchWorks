@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <title><%= content_for(:title) %></title>
+    <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="<%= opensearch_path %>" title="<%= t('opensearch_description') %>"/>
+    <!-- css -->
+    <%= stylesheet_link_tag 'application' %>
+
+    <!-- js -->
+    <%= javascript_include_tag 'application' %>
+    <%= render '/layouts/quick_search/head' %>
+    <%= render '/layouts/quick_search/google_analytics' %>
+
+    <!-- datepicker (temp) -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body class="<%= body_class %>" data-quicksearch-ga-query="<%= strip_tags(@log_query) %>">
+    <%= render '/layouts/quick_search/header' %>
+    <div id="content" role="document" class="page">
+      <div class="container">
+        <main id="main-content" role="main" class="row l-main">
+          <div class="skip-link">
+            <a href="#main-content"></a>
+          </div>
+          <!-- CONTENT: enter content below this line -->
+          <div id="quicksearch">
+            <%= yield %>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        $('body').hide().show();
+      });
+      window.I18n = <%= I18n.backend.send(:translations).to_json.html_safe %>
+    </script>
+  </body>
+</html>
