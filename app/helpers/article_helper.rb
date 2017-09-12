@@ -94,6 +94,14 @@ module ArticleHelper
     end.flatten
   end
 
+  def render_fulltext_link(link, document)
+    if link.href == 'detail'
+      link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false })
+    else
+      link_to(link.text, link.href, class: link.ill? ? 'sfx' : '')
+    end
+  end
+
   private
 
   RELATOR_TERMS = %w[Author Originator]
