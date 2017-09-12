@@ -266,7 +266,8 @@ class ArticlesController < ApplicationController
 
   def flash_message_for_link_error
     base_key = 'searchworks.articles.flashes.fulltext_link'
-    return I18n.t("#{base_key}.guest_html", login_url: new_user_session_path) if session['eds_guest']
+    url = new_user_session_path(referrer: request.original_url)
+    return I18n.t("#{base_key}.guest_html", login_url: url) if session['eds_guest']
 
     I18n.t("#{base_key}.non_guest_html")
   end
