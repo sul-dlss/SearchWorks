@@ -13,6 +13,12 @@ describe ApplicationController do
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
     end
 
+    context 'when the user has multiple affiliations' do
+      before { stub_current_user(context: controller, affiliation: 'test-stanford:test; test-stanford:another-test;test-stanford:testing') }
+
+      it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
+    end
+
     context 'when there is a current user not in the correct affilation' do
       before { stub_current_user(context: controller) }
 

@@ -28,7 +28,9 @@ class ApplicationController < ActionController::Base
   def user_is_stanford_affiliated?
     return unless current_user.present? && session['suAffiliation']
 
-    Settings.SU_AFFILIATIONS.include?(session['suAffiliation'])
+    session['suAffiliation'].split(';').any? do |affiliation|
+      Settings.SU_AFFILIATIONS.include?(affiliation.strip)
+    end
   end
 
   def page_location
