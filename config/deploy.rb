@@ -22,7 +22,7 @@ set :log_level, :info
 set :linked_files, %w{config/database.yml config/blacklight.yml config/honeybadger.yml config/secrets.yml public/robots.txt}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{config/settings log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{config/settings log tmp/pids tmp/cache tmp/sockets tmp/faraday_eds_cache vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
