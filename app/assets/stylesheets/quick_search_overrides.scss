@@ -7,3 +7,34 @@
   border-top: 5px solid #9D2520;
   padding: 10px 15px;
 }
+
+.search-container {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    display: inline-block;
+    color: #9D2520;
+  }
+
+  .main-search-form {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: text-bottom;
+
+    .form-control {
+      display: inline-block;
+    }
+
+    .search-query {
+      width: 38rem;
+    }
+
+    .search-btn {
+      background-color: #9D2520;
+      color: white;
+    }
+  }
+}

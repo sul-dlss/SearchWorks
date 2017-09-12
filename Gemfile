@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'quick_search-core'
 gem 'jquery-rails'
 gem 'bootstrap', '>= 4.0.0.beta', '< 5'
+gem 'font-awesome-rails'
 
 gem 'config'
 gem 'faraday'
