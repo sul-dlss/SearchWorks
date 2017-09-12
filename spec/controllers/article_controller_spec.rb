@@ -48,7 +48,7 @@ RSpec.describe ArticlesController do
           expect(error_message).to have_content(
             'Sorry, the PDF download was not successful because you are currently in guest mode.'
           )
-          expect(error_message).to have_css('a', text: 'Log in to try the download again')
+          expect(error_message).to have_content('Log in to try the download again')
           expect(response).to have_http_status(:found) # redirects back
         end
       end
