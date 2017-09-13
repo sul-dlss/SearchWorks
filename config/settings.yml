@@ -39,7 +39,7 @@ EDS_CACHE: true
 EDS_CACHE_DIR: <%= Rails.root.join('tmp') %>
 EDS_LOGDIR: <%= Rails.root.join('log') %>
 EDS_TIMEOUT: 15
-EDS_OPEN_TIMEOUT: 5
+EDS_OPEN_TIMEOUT: 10
 EDS_HOSTS:
   - eds-api-a.ebscohost.com
   - eds-api-b.ebscohost.com
