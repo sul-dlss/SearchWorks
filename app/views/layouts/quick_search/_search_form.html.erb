@@ -1,18 +1,22 @@
 <div class="search-container">
-  <h1>Search</h1>
-  <div class="main-search-form">
-    <%= form_for("search", method: :get, html: {id: 'main-search-form', class: 'form-inline'}) do |f| %>
-    <% if @query  %>
-    <input type="search" name="q" id="params-q" class="search-query form-control" value="<%= @query %>"/>
-  <% else %>
-    <input type="search" name="q" id="params-q" class="search-query form-control" placeholder="<%= @search_form_placeholder %>"/>
-    <% end %>
-    <span class="input-group-btn">
-      <button type="submit" class="btn search-btn">
-        <span class="sr-only">Search</span>
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </button>
-    </span>
-    <% end %>
+  <div class="main-search-form row justify-content-center">
+    <div class="form-group col-8 text-center">
+      <%= form_for("search", method: :get, html: {id: 'main-search-form'}) do |f| %>
+        <div class='form-group row'>
+          <label for="params-q" class='col-md-4 col-form-label'>Search</label>
+          <div class='col-md-8 search-input-container'>
+            <div class='input-group'>
+              <input type="search" name="q" id="params-q" class="search-query form-control" value="<%= @query %>" placeholder="<%= @search_form_placeholder %>"/>
+              <span class="input-group-btn">
+                <button type="submit" class="btn search-btn">
+                  <span class="sr-only">Search</span>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

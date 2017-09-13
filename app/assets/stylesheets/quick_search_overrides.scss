@@ -9,29 +9,16 @@
 }
 
 .search-container {
-  display: inline-block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    display: inline-block;
+  label {
     color: #9D2520;
+    font-size: 40px;
+    padding-right: 20px;
   }
 
-  .main-search-form {
-    margin-left: 20px;
-    display: inline-block;
-    vertical-align: text-bottom;
-
-    .form-control {
-      display: inline-block;
+  .main-search-form {    
+    .search-input-container {
+      padding-top: 18px;
     }
-
-    .search-query {
-      width: 38rem;
-    }
-
     .search-btn {
       background-color: #9D2520;
       color: white;

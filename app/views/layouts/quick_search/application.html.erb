@@ -24,13 +24,13 @@
   <body class="<%= body_class %>" data-quicksearch-ga-query="<%= strip_tags(@log_query) %>">
     <%= render '/layouts/quick_search/header' %>
     <div id="content" role="document" class="page">
-      <div class="container">
-        <main id="main-content" role="main" class="row l-main">
+      <div class="">
+        <main id="main-content" role="main" class="">
           <div class="skip-link">
             <a href="#main-content"></a>
           </div>
           <!-- CONTENT: enter content below this line -->
-          <div id="quicksearch">
+          <div id="quicksearch" class='container'>
             <%= yield %>
           </div>
         </main>
