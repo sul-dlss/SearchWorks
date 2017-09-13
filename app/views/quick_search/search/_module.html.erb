@@ -17,6 +17,9 @@
         <% else %>
             <h2 class='result-set-heading'><%= module_display_name %></h2>
         <% end %>
+
+        <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>
+
         <ol>
             <%= render partial: '/quick_search/search/result', collection: searcher.results %>
         </ol>

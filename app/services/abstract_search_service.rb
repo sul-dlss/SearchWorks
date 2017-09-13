@@ -34,7 +34,13 @@ class AbstractSearchService
     end
   end
 
+  ##
+  # The AbstractSearchService::Response class is intended to be subclassed by various AbstractSearchService subclasses
+  # Various methods or constants will need to be overriden in order for the subclassed response class to work properly
   class Response
+    HIGHLIGHTED_FACET_FIELD = nil
+    QUERY_URL = nil
+
     attr_reader :body
     # @param [String] `body` is the HTTP response body
     def initialize(body)
@@ -54,6 +60,30 @@ class AbstractSearchService
     # @return [Array<Hash>] where the hash is the same as Solr's response
     def facets
       raise NotImplementedError
+    end
+
+    # @param [Integer] `count` is the number of facets to return
+    # @return [Array<HighlightedFacetItem>]
+    def highlighted_facet_values(count = 3)
+      return [] unless defined?(self.class::HIGHLIGHTED_FACET_FIELD) && defined?(self.class::QUERY_URL)
+
+      sorted_highlighted_facet_values.take(count).map do |facet_hash|
+        HighlightedFacetItem.new(facet_hash, self.class::HIGHLIGHTED_FACET_FIELD, self.class::QUERY_URL)
+      end
+    end
+
+    private
+
+    def sorted_highlighted_facet_values
+      return [] unless highlighted_facet['items'].present?
+
+      highlighted_facet['items'].sort { |a, b| b['hits'].to_i <=> a['hits'].to_i }
+    end
+
+    def highlighted_facet
+      facets.find do |facet|
+        facet['name'] == self.class::HIGHLIGHTED_FACET_FIELD
+      end || {}
     end
   end
 
@@ -87,5 +117,40 @@ class AbstractSearchService
     raise NoResults unless response.success? && response.body.present?
 
     @response_class.new(response.body)
+  end
+
+  ##
+  # A generic model to represent a solr facet that includes the ability to merge the configured
+  # query url for the bento endpoint with a given query and append a facet query param
+  class HighlightedFacetItem
+    def initialize(facet_hash, field_name, base_query_url)
+      @facet_hash = facet_hash
+      @field_name = field_name
+      @base_query_url = base_query_url
+    end
+
+    def label
+      facet_hash['label']
+    end
+
+    def value
+      facet_hash['value']
+    end
+
+    def hits
+      (facet_hash['hits'] || 0).to_i
+    end
+
+    def query_url(query_string)
+      "#{base_query_url % { q: query_string }}&#{facet_field_to_param}"
+    end
+
+    private
+
+    attr_reader :facet_hash, :field_name, :base_query_url
+
+    def facet_field_to_param
+      { f: { field_name => [value] } }.to_query
+    end
   end
 end
