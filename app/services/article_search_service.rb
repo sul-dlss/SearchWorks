@@ -7,6 +7,9 @@ class ArticleSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
+    HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'.freeze
+    QUERY_URL = Settings.EDS_QUERY_URL
+
     def total
       json['response']['pages']['total_count'].to_i
     end

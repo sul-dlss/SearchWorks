@@ -7,6 +7,9 @@ class CatalogSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
+    HIGHLIGHTED_FACET_FIELD = 'format_main_ssim'.freeze
+    QUERY_URL = Settings.CATALOG_QUERY_URL
+
     def total
       json['response']['pages']['total_count'].to_i
     end
