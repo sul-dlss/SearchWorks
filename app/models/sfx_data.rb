@@ -1,8 +1,8 @@
 ##
 # Pull full-text source data from the SFX XML endpoint and render it.
 #
-# Initializes with the SFX URL that would normally render the HTML
-# form/links and append a paramter to it that returns XML instead.
+# Initializes with the a URI encoded SFX URL that would normally render
+# the HTML form/links and append a parameter to it that returns XML instead.
 #
 # This class parses that XML and returns it both as ruby objects and an HTML rendering.
 class SfxData

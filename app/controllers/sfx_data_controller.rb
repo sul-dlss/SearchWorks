@@ -14,8 +14,6 @@ class SfxDataController < ApplicationController
   private
 
   def setup_sfx_data
-    url = CGI.unescape(params.fetch(:url))
-
-    @sfx_data = SfxData.new(url)
+    @sfx_data = SfxData.new(params.fetch(:url))
   end
 end
