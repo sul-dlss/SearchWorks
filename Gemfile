@@ -79,6 +79,7 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'webmock'
 end
 
 group :development do
