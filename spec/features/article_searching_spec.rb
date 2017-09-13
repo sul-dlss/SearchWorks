@@ -147,6 +147,18 @@ feature 'Article Searching' do
     end
   end
 
+  describe 'JSON API' do
+    it 'includes the fulltext_link_html data' do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+      visit articles_path(q: 'kittens', format: 'json')
+      results = JSON.parse(page.body)
+      expect(results['response']['docs'][0]).not_to include('fulltext_link_html')
+      expect(results['response']['docs'][1]).to include('fulltext_link_html' => '<a class="" href="http://example.com">View full text</a>')
+      expect(results['response']['docs'][2]).to include('fulltext_link_html' => '<a class="sfx" href="http://example.com">Find it in print or via interlibrary services</a>')
+      expect(results['response']['docs'][3]).to include('fulltext_link_html' => '<a data-turbolinks="false" href="/articles/pdfyyy/pdf/fulltext">View/download PDF</a>')
+    end
+  end
+
   it 'displays the appropriate fields in the search' do
     skip 'we need some EDS fixtures'
   end
