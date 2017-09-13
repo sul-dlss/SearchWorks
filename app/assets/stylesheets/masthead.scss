@@ -1,0 +1,23 @@
+#masthead-container {
+  background-color: #9D2520;
+  min-height: 100px;
+
+  #masthead {
+    margin: 0 auto;
+    height: 100px;
+    color: white;
+
+    .masthead-logo {
+      height: 100px;
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    #masthead {
+      .masthead-logo {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,42 +1,3 @@
-#top-navbar {
-  background-color: $light-sandstone;
-  min-height: 35px;
-
-  ul {
-    font-size: 14px;
-    list-style-type: none;
-    margin: 0;
-    text-align: right;
-
-
-    li {
-      display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
-    }
-  }
-
-  a {
-    color: $cardinal-red;
-  }
-}
-
-
-#masthead-container {
-  background-color: #9D2520;
-  min-height: 100px;
-
-  #masthead {
-    margin: 0 auto;
-    color: white;
-
-    .masthead-logo {
-      min-height: 100px;
-    }
-  }
-}
-
 #subnavbar-container {
   background-color: $sul-subnavbar-bg-color;
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
@@ -101,5 +62,4 @@
       margin-right: 15px;
     }
   }
-
 }
