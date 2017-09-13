@@ -10,7 +10,6 @@ describe 'shared/_header.html.erb' do
   end
   it 'renders user links' do
     render
-    expect(rendered).to have_link 'Login'
     expect(rendered).to have_link 'My Account'
     expect(rendered).to have_link 'Feedback'
   end
