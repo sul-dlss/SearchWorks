@@ -29,6 +29,8 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rails'
 require 'dlss/capistrano'
 require 'capistrano/passenger'
+require 'capistrano/shared_configs'
+
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
