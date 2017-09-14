@@ -17,3 +17,5 @@ en:
     error_service_mesasge: "searching SearchWorks articles+"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
+  search_form:
+    placeholder: "catalog + articles + website + more"
