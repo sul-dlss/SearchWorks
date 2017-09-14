@@ -1,27 +1,27 @@
 #content {
-  background-color: $light-sandstone;
+  background-color: $beige-5-percent;
 }
 
 .module-contents {
-  background-color: white;
-  border-top: 5px solid #9D2520;
+  background-color: $white;
+  border-top: 5px solid $cardinal-red;
   padding: 10px 15px;
 }
 
 .search-container {
   label {
-    color: #9D2520;
+    color: $cardinal-red;
     font-size: 40px;
     padding-right: 20px;
   }
 
-  .main-search-form {    
+  .main-search-form {
     .search-input-container {
       padding-top: 18px;
     }
     .search-btn {
-      background-color: #9D2520;
-      color: white;
+      background-color: $cardinal-red;
+      color: $white;
     }
   }
 }
