@@ -1,5 +1,5 @@
-.article-home-page, .catalog-home-page {
-  h2, h4 {
+.article-home-page, .catalog-home-page, .home-page-bento {
+  h2, h3, h4 {
     font-weight: 400;
     border-bottom: none;
   }
@@ -54,12 +54,13 @@
     margin: auto;
   }
 
-  h4 {
-    font-weight: normal;
+  h3, p {
+    padding: 2px 10px;
   }
 
-  h4, p {
-    padding: 2px 10px;
+  h3 {
+    padding-top: 5px;
+    padding-bottom: 0px;
   }
 
   .home-page-you-are-here {
