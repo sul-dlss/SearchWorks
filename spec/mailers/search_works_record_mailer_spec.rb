@@ -64,7 +64,7 @@ describe SearchWorksRecordMailer do
       end
 
       it 'includes links to fulltext' do
-        expect(mail.body).to have_link('Find it in print', href: "http://example.com")
+        expect(mail.body).to have_link('Find full text or request', href: "http://example.com")
       end
     end
 

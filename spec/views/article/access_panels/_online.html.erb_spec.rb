@@ -48,7 +48,7 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
     end
 
     it 'includes label icon' do
-      expect(rendered).to have_css('.panel-body ul li a.sfx', text: /^Find it in print/)
+      expect(rendered).to have_css('.panel-body ul li a.sfx', text: /^Find full text or request/)
     end
   end
 end

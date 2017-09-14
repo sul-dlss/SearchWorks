@@ -60,7 +60,7 @@ RSpec.describe EdsLinks do
 
     it 'handles View request options' do
       document['eds_fulltext_links'].first['label'] = 'View request options'
-      expect(document.eds_links.all.first.text).to eq('Find it in print or via interlibrary services')
+      expect(document.eds_links.all.first.text).to eq('Find full text or request')
     end
 
     it 'handles Open Access' do

@@ -111,7 +111,7 @@ feature 'Article Searching' do
       expect(page).to have_css('ul.document-metadata li span.online-label', text: 'Full text')
       expect(page).to have_css('ul.document-metadata li a', text: /^View on detail page/)
       expect(page).to have_css('ul.document-metadata li a', text: /^View full text/)
-      expect(page).to have_css('ul.document-metadata li a', text: /^Find it in print/)
+      expect(page).to have_css('ul.document-metadata li a', text: /^Find full text or request/)
       expect(page).to have_css('ul.document-metadata li a', text: /^View\/download PDF/)
     end
   end
@@ -154,7 +154,7 @@ feature 'Article Searching' do
       results = JSON.parse(page.body)
       expect(results['response']['docs'][0]).not_to include('fulltext_link_html')
       expect(results['response']['docs'][1]).to include('fulltext_link_html' => '<a class="" href="http://example.com">View full text</a>')
-      expect(results['response']['docs'][2]).to include('fulltext_link_html' => '<a class="sfx" href="http://example.com">Find it in print or via interlibrary services</a>')
+      expect(results['response']['docs'][2]).to include('fulltext_link_html' => '<a class="sfx" href="http://example.com">Find full text or request</a>')
       expect(results['response']['docs'][3]).to include('fulltext_link_html' => '<a data-turbolinks="false" href="/articles/pdfyyy/pdf/fulltext">View/download PDF</a>')
     end
   end
