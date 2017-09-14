@@ -87,7 +87,8 @@ module StubArticleService
       {
         'facet_fields' => {
           'pub_year_tisim' => ['2001', 1, '2002', 1],
-          'eds_publication_type_facet' => ['Academic journals', 1]
+          'eds_publication_type_facet' => ['Academic journals', 1],
+          'eds_content_provider_facet' => ['Journal provider', 1]
         }
       }
     end

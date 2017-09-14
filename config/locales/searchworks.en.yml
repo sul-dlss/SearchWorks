@@ -5,7 +5,7 @@ en:
         heading: "For a known citation, type author name and title in the main search box."
         body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
       flashes:
-        source_type_warning_html:
+        additional_selections_warning_html:
           Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
         fulltext_link:
           guest_html: Sorry, the PDF download was not successful because you are currently in guest mode.<br/>Log in to try the download again.
