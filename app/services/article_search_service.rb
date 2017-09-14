@@ -21,7 +21,7 @@ class ArticleSearchService < AbstractSearchService
         result.title = doc['eds_title']
         result.link = Settings.EDS_FETCH_URL.to_s % { id: doc['id'] }
         result.id = doc['id']
-        result.description = doc['eds_abstract']
+        result.description = doc['eds_composed_title']
         result
       end
     end
