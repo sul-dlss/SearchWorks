@@ -9,7 +9,8 @@ set :deploy_to, '/opt/app/bento/bento'
 
 set :linked_files, fetch(:linked_files, []).push(
   'config/database.yml',
-  'config/secrets.yml'
+  'config/secrets.yml',
+  'config/honeybadger.yml'
 )
 
 set :linked_dirs, fetch(:linked_dirs, []).push(
@@ -21,6 +22,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
   'public/system',
   'config/settings'
 )
+
+set :honeybadger_env, fetch(:stage)
 
 # update shared_configs before restarting app
 before 'deploy:restart', 'shared_configs:update'

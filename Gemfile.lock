@@ -138,6 +138,7 @@ GEM
       sass (>= 3.2.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    honeybadger (3.1.2)
     httpclient (2.8.3)
     i18n (0.8.6)
     io-like (0.3.0)
@@ -335,6 +336,7 @@ DEPENDENCIES
   dlss-capistrano
   faraday
   font-awesome-rails
+  honeybadger
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

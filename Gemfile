@@ -36,6 +36,7 @@ gem 'font-awesome-rails'
 
 gem 'config'
 gem 'faraday'
+gem 'honeybadger'
 
 # -Inserted by QuickSearch-
 
