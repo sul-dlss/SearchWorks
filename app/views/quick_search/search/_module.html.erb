@@ -35,5 +35,11 @@
                 </span>
             <% end %>
         </p>
+        <% if searcher.total.present? %>
+          <script type='text/javascript'>
+            var searcherLink = $('.searcher-anchors a[href="#<%= service_name %>"]');
+            searcherLink.append('(<%= number_with_delimiter(total) %>)')
+          </script>
+        <% end %>
     <% end %>
 </div>
