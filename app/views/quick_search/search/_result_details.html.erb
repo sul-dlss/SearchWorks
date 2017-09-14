@@ -6,3 +6,6 @@
   <p><%= result.description.html_safe %></p>
 <% end %>
 
+<% if result.fulltext_link_html %>
+  <p><%= result.fulltext_link_html.html_safe %></p>
+<% end %>
