@@ -10,7 +10,7 @@ class LibraryWebsiteSearchService < AbstractSearchService
     QUERY_URL = Settings.LIBRARY_WEBSITE_QUERY_API_URL.freeze
 
     def total
-      999_999_999 # TODO: library web scrape doesn't provide the total number of hits
+      nil # TODO: library web scrape doesn't provide the total number of hits
     end
 
     # @return [Array<AbstractSearchService::Result>]

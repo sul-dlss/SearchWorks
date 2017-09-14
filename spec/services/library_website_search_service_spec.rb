@@ -30,7 +30,7 @@ RSpec.describe LibraryWebsiteSearchService do
       expect(facets.first['items'][1]).to include('value' => 'Person', 'label' => 'Person', 'hits' => 2)
     end
     it '#total' do
-      expect(response.total).to eq 999_999_999
+      expect(response.total).to be_nil
     end
   end
 end
