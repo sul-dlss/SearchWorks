@@ -1,6 +1,8 @@
 <h3 class="result-title">
   <%= link_to result.title, result.link %>
 </h3>
-<p>
-  <%= result.description.html_safe if result.description.present? %>
-</p>
+
+<% if result.description.present? %>
+  <p><%= result.description.html_safe %></p>
+<% end %>
+
