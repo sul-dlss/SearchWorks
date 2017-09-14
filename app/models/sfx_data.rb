@@ -53,7 +53,10 @@ class SfxData
 
   def sfx_response
     @sfx_response ||= begin
-      Faraday.get(sfx_url)
+      Faraday.new(url: sfx_url) do |faraday|
+        faraday.use FaradayMiddleware::FollowRedirects
+        faraday.adapter Faraday.default_adapter
+      end.get
     rescue Faraday::Error::ConnectionFailed
       Honeybadger.notify("SFX data for #{sfx_url} failed to load")
 
