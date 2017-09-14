@@ -4,7 +4,7 @@ a {
   text-decoration: none;
 
   &.disabled {
-    color: #ccc;
+    color: $gray-80-percent;
     cursor: not-allowed;
     text-decoration: none;
   }
@@ -27,7 +27,7 @@ h1 {
 
 h2 {
   border-bottom: 1px solid $sul-h2-border-color;
-  color: $sul-h2-font-color ;
+  color: $sul-h2-font-color;
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
   letter-spacing: 0;
   line-height: 1.2em;

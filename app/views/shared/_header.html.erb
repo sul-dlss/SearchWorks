@@ -1,0 +1,27 @@
+<div id="top-navbar-container">
+  <div id="top-navbar">
+    <ul>
+      <li><a href='https://library.stanford.edu/myaccount'>My Account</a></li>
+      <li><a href='https://library.stanford.edu/ask/email/feedback'>Feedback</a></li>
+    </ul>
+  </div>
+</div>
+<div id="masthead-container">
+  <div id="masthead">
+    <%= link_to root_path do %>
+      <%= image_tag 'sul_banner_white.svg', class: 'masthead-logo', alt: 'Stanford Libraries' %>
+    <% end %>
+  </div>
+</div>
+<div id="subnavbar-container">
+  <div id="subnavbar">
+    <ul class="nav navbar-nav navbar-left" role="navigation">
+      <li class="dropdown search-subnavbar-about">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Library services<span class="caret"/>
+        </a>
+        <%= render :partial => '/shared/services_menu' %>
+      </li>
+    </ul>
+  </div>
+</div>
