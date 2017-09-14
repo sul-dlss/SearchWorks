@@ -43,7 +43,7 @@ module EdsLinks
       'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
       'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 3 },
       :open_access_link =>                   { label: :as_is, category: 4 },
-      'View request options'.downcase =>     { label: 'Find it in print or via interlibrary services', category: 5 }
+      'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }
     }.freeze
 
     def map
