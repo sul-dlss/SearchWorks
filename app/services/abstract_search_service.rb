@@ -113,7 +113,11 @@ class AbstractSearchService
             @query_url.to_s % { q: URI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS }
           end
 
-    response = Faraday.get url.to_s
+    response = Faraday.get do |req|
+      req.url url.to_s
+      # Passing a known "non-Stanford" ipaddress
+      req.headers['X-Forwarded-For'] = '192.168.0.1'
+    end
     raise NoResults unless response.success? && response.body.present?
 
     @response_class.new(response.body)
