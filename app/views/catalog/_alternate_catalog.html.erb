@@ -1,4 +1,4 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= articles_path(q: params.fetch(:q)) %>">
+<div class='alternate-catalog' data-alternate-catalog="<%= articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }) %>">
   <button type='button' class='alternate-catalog-close close' aria-label="Close">
     <i class='fa fa-times-circle'></i>
   </button>
@@ -13,8 +13,9 @@
           Journal articles, e-books, &amp; other e-resources
         </div>
       </div>
+      <%=  %>
       <div class='col-md-6'>
-        <%= link_to(articles_path(q: params.fetch(:q)), class: 'btn btn-primary') do %>
+        <%= link_to(articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }), class: 'btn btn-primary') do %>
           See <span class="alternate-catalog-count"%></span> article+ results
         <% end %>
       </div>
