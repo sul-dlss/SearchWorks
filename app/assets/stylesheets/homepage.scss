@@ -21,3 +21,18 @@
     padding: 2px 10px;
   }
 }
+
+.more-search-tools {
+  padding-top: 25px;
+
+  .card-body {
+    padding-left: 55px;
+  }
+
+  img {
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+}
