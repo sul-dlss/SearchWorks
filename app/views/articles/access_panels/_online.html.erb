@@ -8,7 +8,11 @@
     <ul class='document-metadata dl-horizontal dl-invert'>
       <% document.access_panels.online.links.each do |link| %>
         <li>
-          <%= render_fulltext_link(link, document) %>
+          <% if link.href == 'detail' %>
+            <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
+          <% else %>
+            <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
+          <% end %>
         </li>
       <% end %>
     </ul>
