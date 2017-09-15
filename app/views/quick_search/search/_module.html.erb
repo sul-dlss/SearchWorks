@@ -11,7 +11,7 @@
         <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name} %>
     <% else %>
-        <% total = number_with_delimiter(searcher.total) %>
+        <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
         <% unless defined? searcher.loaded_link_mobile %>
           <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <% else %>

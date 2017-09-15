@@ -88,7 +88,7 @@ class AbstractSearchService
   end
 
   class Result
-    ATTRS = %i[title description link id thumbnail fulltext_link_html]
+    ATTRS = %i[title description link id thumbnail breadcrumbs fulltext_link_html]
     attr_accessor *ATTRS
 
     def to_h

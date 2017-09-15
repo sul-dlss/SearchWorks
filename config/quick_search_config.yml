@@ -18,11 +18,11 @@ defaults: &defaults
   #
   # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
 
-  searchers: [catalog,article]
+  searchers: [catalog,article,library_website]
 
   # Searchers listed in the "result type guide" bar that lists result types that were found for a given search
 
-  found_types: [catalog,article]
+  found_types: [catalog,article,library_website]
 
   per_page: 10
   max_per_page: 10
