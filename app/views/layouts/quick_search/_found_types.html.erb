@@ -7,13 +7,13 @@
         <% if @found_types.include? searcher  %>
           <li class='list-inline-item'>
             <a href="#<%= searcher.dasherize %>" data-quicksearch-ga-action="<%= searcher.dasherize %>">
-              <%= t("#{searcher}_search.display_name") %>
+              <%= t("#{searcher}_search.short_display_name") %>
             </a>
           </li>
         <% else %>
           <li class="<%= searcher.dasherize %> list-inline-item">
             <span class="no-results-label">
-              <%= t("#{searcher}_search.display_name") %>
+              <%= t("#{searcher}_search.short_display_name") %>
             </span>
           </li>
         <% end %>

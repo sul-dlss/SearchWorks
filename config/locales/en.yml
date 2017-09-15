@@ -21,7 +21,8 @@ en:
     no_results_link: "http://searchworks.stanford.edu/articles"
   library_website_search:
     display_name: "Library website"
-    short_display_name: "Library website"
+    short_display_name: "Website"
+    sub_heading_html: "Library info; guides & content by subject specialists"
     micro_display_name: "website"
     search_form_placeholder: "Search Library website"
     module_callout: "Search Library website"
