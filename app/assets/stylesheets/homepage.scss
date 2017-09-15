@@ -21,3 +21,29 @@
     padding: 2px 10px;
   }
 }
+
+.more-search-tools {
+  padding-top: 25px;
+
+  .card-body {
+    padding-left: 55px;
+  }
+
+  img {
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .more-search-tools {
+    img {
+      width: 20px;
+      position: absolute;
+      left: 30px;
+      top: 15px;
+    }
+  }
+}

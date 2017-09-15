@@ -7,7 +7,7 @@ feature 'Homepage' do
     visit quick_search_path
   end
   scenario 'has links to various search contexts' do
-    within '.homepage-panels' do
+    within '.bento-panels' do
       expect(page).to have_css(
         'a[href="https://searchworks.stanford.edu"]',
         text: 'Catalog'
@@ -25,5 +25,11 @@ feature 'Homepage' do
         text: 'Yewno'
       )
     end
+  end
+  scenario 'has links to more search tools' do
+    expect(page).to have_css(
+      'a[href="https://library.stanford.edu/search-services"]',
+      text: 'More search tools'
+    )
   end
 end
