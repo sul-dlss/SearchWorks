@@ -1,0 +1,6 @@
+<div class='search-error-message'>
+  No <%= t("#{service_name}_search.micro_display_name") %> results found...
+  <%= link_to t("#{service_name}_search.no_results_link"), data: {"quicksearch_ga_action" => "no-results"} do %>
+      Try <%= t("#{service_name}_search.no_results_service_message") %>
+  <% end %>
+</div>
