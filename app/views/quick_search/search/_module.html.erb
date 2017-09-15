@@ -1,6 +1,6 @@
 <div id="<%= service_name.dasherize %>" class="module-contents" >
     <% if searcher.is_a? StandardError %>
-        <h2 class="result-set-heading"><%= module_display_name %></h2>
+        <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <% if params[:page].blank? %>
             <% page = 1 %>
         <% else %>
@@ -8,14 +8,14 @@
         <% end %>
         <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging' } %>
     <% elsif searcher.results.blank? %>
-        <h2 class="result-set-heading"><%= module_display_name %></h2>
+        <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name} %>
     <% else %>
         <% total = number_with_delimiter(searcher.total) %>
         <% unless defined? searcher.loaded_link_mobile %>
-            <h2 class='result-set-heading'><%= module_display_name %></h2>
+          <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <% else %>
-            <h2 class='result-set-heading'><%= module_display_name %></h2>
+          <%= render partial: 'module_heading', locals: { service_name: service_name } %>
         <% end %>
 
         <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>

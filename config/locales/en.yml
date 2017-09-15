@@ -3,6 +3,7 @@ en:
   opensearch_description: "Stanford Libraries"
   catalog_search:
     display_name: "SearchWorks catalog"
+    sub_heading_html: Books, media, physical & digital resources
     short_display_name: "SearchWorks catalog"
     search_form_placeholder: "Search SearchWorks catalog"
     module_callout: "Search SearchWorks catalog"
@@ -11,6 +12,7 @@ en:
     no_results_link: "http://searchworks.stanford.edu/"
   article_search:
     display_name: "SearchWorks articles+"
+    sub_heading_html: Journal articles, e-books, & other e-resources
     short_display_name: "SearchWorks articles+"
     search_form_placeholder: "Search SearchWorks articles+"
     module_callout: "Search SearchWorks articles+"
