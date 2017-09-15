@@ -13,7 +13,8 @@
 #
 class AbstractSearchService
   class NoResults < StandardError; end
-
+  class HighlightedFacetItem; end
+  
   class Request
     def initialize(search_terms, max_results = Settings.MAX_RESULTS)
       @search_terms = search_terms.respond_to?(:join) ? search_terms.join(' ') : search_terms
@@ -39,6 +40,7 @@ class AbstractSearchService
   # Various methods or constants will need to be overriden in order for the subclassed response class to work properly
   class Response
     HIGHLIGHTED_FACET_FIELD = nil
+    HIGHLIGHTED_FACET_CLASS = AbstractSearchService::HighlightedFacetItem
     QUERY_URL = nil
 
     attr_reader :body
@@ -68,7 +70,7 @@ class AbstractSearchService
       return [] unless defined?(self.class::HIGHLIGHTED_FACET_FIELD) && defined?(self.class::QUERY_URL)
 
       sorted_highlighted_facet_values.take(count).map do |facet_hash|
-        HighlightedFacetItem.new(facet_hash, self.class::HIGHLIGHTED_FACET_FIELD, self.class::QUERY_URL)
+        self.class::HIGHLIGHTED_FACET_CLASS.new(facet_hash, self.class::HIGHLIGHTED_FACET_FIELD, self.class::QUERY_URL)
       end
     end
 
