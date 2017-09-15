@@ -6,13 +6,13 @@ describe 'shared/_home_page_bento.html.erb' do
 
     it 'links the "Articles+" section' do
       render
-      expect(rendered).to have_css('h4 a', text: 'Articles+')
+      expect(rendered).to have_css('h3 a', text: 'Articles+')
     end
 
     it 'does not link the "Catalog" section' do
       render
-      expect(rendered).to have_css('h4', text: 'Catalog')
-      expect(rendered).not_to have_css('h4 a', text: 'Catalog')
+      expect(rendered).to have_css('h3', text: 'Catalog')
+      expect(rendered).not_to have_css('h3 a', text: 'Catalog')
     end
   end
 
@@ -21,13 +21,13 @@ describe 'shared/_home_page_bento.html.erb' do
 
     it 'links the "Catalog" section' do
       render
-      expect(rendered).to have_css('h4 a', text: 'Catalog')
+      expect(rendered).to have_css('h3 a', text: 'Catalog')
     end
 
     it 'does not link the "Articles+" section' do
       render
-      expect(rendered).to have_css('h4', text: 'Articles+')
-      expect(rendered).not_to have_css('h4 a', text: 'Articles+')
+      expect(rendered).to have_css('h3', text: 'Articles+')
+      expect(rendered).not_to have_css('h3 a', text: 'Articles+')
     end
   end
 end
