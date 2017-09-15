@@ -9,7 +9,6 @@ set :deploy_to, '/opt/app/bento/bento'
 
 set :linked_files, fetch(:linked_files, []).push(
   'config/database.yml',
-  'config/secrets.yml',
   'config/honeybadger.yml'
 )
 
