@@ -5,6 +5,7 @@ en:
     display_name: "Catalog"
     short_display_name: "Catalog"
     sub_heading_html: Books, media, physical & digital resources
+    micro_display_name: "catalog"
     search_form_placeholder: "Search SearchWorks catalog"
     module_callout: "Search SearchWorks catalog"
     error_service_mesasge: "searching SearchWorks catalog"
@@ -12,8 +13,9 @@ en:
     no_results_link: "http://searchworks.stanford.edu/"
   article_search:
     display_name: "Articles+"
-    sub_heading_html: Journal articles, e-books, & other e-resources
     short_display_name: "Articles+"
+    sub_heading_html: Journal articles, e-books, & other e-resources
+    micro_display_name: "articles+"
     search_form_placeholder: "Search SearchWorks articles+"
     module_callout: "Search SearchWorks articles+"
     error_service_mesasge: "searching SearchWorks articles+"

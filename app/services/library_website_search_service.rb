@@ -16,13 +16,14 @@ class LibraryWebsiteSearchService < AbstractSearchService
     # @return [Array<AbstractSearchService::Result>]
     def results
       doc.css('.search-results .views-row').first(Settings.MAX_RESULTS).collect do |hit|
+        next if hit.blank?
         result = AbstractSearchService::Result.new
         result.title = hit.at_css('.views-field-title .field-content a').text
         result.link = hit.at_css('.views-field-title .field-content a')['href']
         result.description = hit.at_css('.views-field-body-value .field-content').text
         result.breadcrumbs = hit.at_css('.result-breadcrumbs span').text
         result
-      end
+      end.compact
     end
 
     # @return [Array<Hash>] mimics Solr facets response
