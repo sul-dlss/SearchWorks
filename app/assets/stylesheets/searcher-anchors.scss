@@ -1,0 +1,27 @@
+.searcher-anchors {
+
+  dt {
+    text-align: right;
+  }
+
+  @include media-breakpoint-down(md) {
+    dt {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    dd {
+      display: block;
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    li {
+      display: block;
+    }
+  }
+}

@@ -30,7 +30,7 @@ describe 'Searcher Anchor Links', js: true do
       expect(page).to have_css('a', text: /See all 666,666 .* results/)
 
       within '.searcher-anchors' do
-        expect(page).to have_css('a', text: 'SearchWorks articles+ (666,666)')
+        expect(page).to have_css('a', text: 'Articles+ (666,666)')
       end
     end
   end
@@ -52,7 +52,7 @@ describe 'Searcher Anchor Links', js: true do
       expect(page).to have_css('.see-all-results', visible: true)
 
       within '.searcher-anchors' do
-        expect(page).to have_css('a', text: /^SearchWorks articles\+$/)
+        expect(page).to have_css('a', text: /^Articles\+$/)
       end
     end
   end
