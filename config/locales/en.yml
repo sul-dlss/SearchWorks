@@ -22,6 +22,7 @@ en:
   library_website_search:
     display_name: "Library website"
     short_display_name: "Library website"
+    micro_display_name: "website"
     search_form_placeholder: "Search Library website"
     module_callout: "Search Library website"
     error_service_mesasge: "searching library website"
