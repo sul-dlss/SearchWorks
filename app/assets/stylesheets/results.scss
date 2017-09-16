@@ -1,6 +1,5 @@
 .result-title {
   font-size: 18px;
-  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -16,4 +15,10 @@
   font-size: 14px;
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+.result {
+  p {
+    margin-bottom: 0.5rem;
+  }
 }
