@@ -1,0 +1,38 @@
+.panel {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+.panel-default {
+  border: none;
+}
+.panel-body {
+  @include panel-borders;
+  background-color: white;
+}
+
+.panel-footer {
+  @include panel-borders;
+  @include panel-border-bottom;
+  border-top: none;
+}
+
+.panel-group .panel-heading {
+  @include panel-border-bottom;
+}
+
+.panel-heading {
+  @include panel-border-bottom;
+}
+.alert {
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+// Temporarily added since
+// our modal-dialog is not
+// getting its z-index set
+.modal-dialog {
+  z-index: 1040;
+}

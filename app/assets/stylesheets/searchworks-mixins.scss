@@ -1,0 +1,63 @@
+@mixin toolbar-dropdown {
+  li > a {
+    border-bottom: none;
+    text-transform: none;
+
+    &:hover, &:focus, &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+@mixin h1-show-title-font {
+  font-family: 'dejavu_sansextralight';
+  letter-spacing: -.03em;
+}
+
+@mixin h3-index-title-indent {
+  text-indent: -12px;
+}
+
+@mixin h3-index-title-small-font {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+@mixin h3-index-title-font {
+  font-family: 'dejavu_sansextralight';
+  letter-spacing: -.03em;
+  line-height: 1.4em;
+  font-size: 1.3em;
+}
+
+@mixin panel-borders {
+  border: 1px solid $sul-panel-border;
+}
+
+@mixin panel-border-bottom {
+  border-bottom: 1px solid $sul-panel-border-bottom;
+}
+
+@mixin sul-toolbar-bg-border {
+  background-color: $sul-toolbar-bg;
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+@mixin panel-heading($background, $font-color) {
+  background: $background;
+  border-bottom: 1px solid $background;
+  color: $font-color;
+}
+
+@mixin link-styling {
+  border-bottom: 0;
+  color: $sul-link-color-border;
+  text-decoration: underline;
+}
+
+@mixin masthead-panel {
+  background-color: $sul-masthead-bg;
+  border: 1px solid $sul-masthead-border;
+  border-radius: 5px;
+  color: $sul-masthead-color;
+}
