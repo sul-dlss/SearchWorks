@@ -7,20 +7,6 @@ $body-bg: $sul-body-bg;
 $link-color: $sul-text-color;
 $link-hover-color: $sul-text-color;
 
-
-// Buttons
-$theme-colors: ();
-$theme-colors: map-merge((
-  primary: $cardinal-red,
-  secondary: $beige-10-percent,
-  success: $pantone-334,
-  info: $pantone-3145,
-  warning: $pantone-144,
-  danger: $boston-university-red,
-  light: $light-grey,
-  dark: $gray-80-percent
-), $theme-colors);
-
 // Pagination
 $pagination-active-bg: $sul-pagination-active-bg;
 $pagination-active-border: $sul-pagination-active-bg;
