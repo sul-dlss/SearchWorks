@@ -19,19 +19,20 @@ module Eds
 
     def session_options
       {
-        guest:          eds_params[:guest],
-        session_token:  eds_params[:session_token],
-        caller:         eds_params[:caller],
-        user:           Settings.EDS_USER,
-        pass:           Settings.EDS_PASS,
-        profile:        Settings.EDS_PROFILE,
-        use_cache:      Settings.EDS_CACHE,
-        eds_cache_dir:  Settings.EDS_CACHE_DIR,
-        timeout:        Settings.EDS_TIMEOUT,
-        open_timeout:   Settings.EDS_OPEN_TIMEOUT,
-        api_hosts_list: Settings.EDS_HOSTS,
-        debug:          Settings.EDS_DEBUG,
-        log:            File.join(Settings.EDS_LOGDIR, 'faraday.log')
+        guest:                eds_params[:guest],
+        session_token:        eds_params[:session_token],
+        caller:               eds_params[:caller],
+        user:                 Settings.EDS_USER,
+        pass:                 Settings.EDS_PASS,
+        profile:              Settings.EDS_PROFILE,
+        use_cache:            Settings.EDS_CACHE,
+        eds_cache_dir:        Settings.EDS_CACHE_DIR,
+        timeout:              Settings.EDS_TIMEOUT,
+        open_timeout:         Settings.EDS_OPEN_TIMEOUT,
+        api_hosts_list:       Settings.EDS_HOSTS,
+        debug:                Settings.EDS_DEBUG,
+        log:                  File.join(Settings.EDS_LOGDIR, 'faraday.log'),
+        decode_sanitize_html: true
       }
     end
   end
