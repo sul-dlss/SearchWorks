@@ -1,4 +1,8 @@
 #content {
+  h3.result-title {
+    @include h3-index-title-font;
+  }
+
   background-color: $beige-5-percent;
 }
 
