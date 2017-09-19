@@ -8,6 +8,12 @@ class ArticlesController < ApplicationController
   include EmailValidation
   include BackendLookup
 
+  rescue_from 'EBSCO::EDS::BadRequest' do |exception|
+    raise exception if params[:q].present?
+    flash[:alert] = 'An empty search is not possible in articles+. Enter a keyword to start your search.'
+    redirect_back fallback_location: articles_path
+  end
+
   before_action :set_search_query_modifier, only: :index
 
   before_action :eds_init, only: %i[index show]

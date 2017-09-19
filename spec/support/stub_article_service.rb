@@ -65,6 +65,8 @@ module StubArticleService
       allow_any_instance_of(Eds::Repository).to receive(:find).and_return(
         StubArticleResponse.new([docs.first])
       )
+    when :error
+      allow_any_instance_of(Eds::Repository).to receive(:search).and_raise(EBSCO::EDS::BadRequest)
     else
       raise "Unknown article stub type #{type} provided."
     end

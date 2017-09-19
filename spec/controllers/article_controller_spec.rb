@@ -12,6 +12,29 @@ RSpec.describe ArticlesController do
       get :index
       expect(response).to render_template('index')
     end
+
+    context 'when a query causes an EDS error' do
+      before { stub_article_service(type: :error, docs: []) }
+      context 'with an empty query' do
+        it 'sets a flash error and redirects' do
+          get :index, params: { q: '' }
+
+          expect(flash[:alert]).to eq(
+            'An empty search is not possible in articles+. Enter a keyword to start your search.'
+          )
+
+          expect(response).to redirect_to(articles_path)
+        end
+      end
+
+      context 'with a query' do
+        it 'raises the error' do
+          expect do
+            get :index, params: { q: 'A query' }
+          end.to raise_error(EBSCO::EDS::BadRequest)
+        end
+      end
+    end
   end
 
   context '#show' do
