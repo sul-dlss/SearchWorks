@@ -1,3 +1,13 @@
+#yewno {
+  border-color: $black;
+}
 .yewno #yewno-results {
   height: 400px;
+}
+
+.yn-figcaption a {
+  @include button-variant($black, $black);
+  display: block;
+  font-size: 13px;
+  text-align: center;
 }
