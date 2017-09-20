@@ -13,3 +13,7 @@
 .btn-danger {
   @include button-variant($boston-university-red, $boston-university-red)
 }
+
+.btn-yewno {
+  @include button-variant($black, $black);
+}

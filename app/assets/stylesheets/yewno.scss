@@ -1,3 +1,15 @@
+#yewno {
+  border-color: $black;
+}
 .yewno #yewno-results {
   height: 400px;
+}
+
+.yn-figcaption {
+  text-align: center;
+}
+
+.btn-yewno {
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  display: inline-block;
 }
