@@ -16,10 +16,14 @@ body {
   font-size: 15px;
 }
 
-a:hover, a:focus, a:active  {
-  border-bottom: 0;
-  color: $sul-link-color-border;
-  text-decoration: underline;
+a:not(.btn) {
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 0;
+    color: $sul-link-color-border;
+    text-decoration: underline;
+  }
 }
 
 h1 {
