@@ -5,9 +5,11 @@
   height: 400px;
 }
 
-.yn-figcaption a {
-  @include button-variant($black, $black);
-  display: block;
-  font-size: 13px;
+.yn-figcaption {
   text-align: center;
+}
+
+.btn-yewno {
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  display: inline-block;
 }
