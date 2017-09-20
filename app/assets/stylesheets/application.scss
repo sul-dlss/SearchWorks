@@ -4,22 +4,7 @@
 @import 'bootstrap';
 @import 'searchworks-mixins';
 @import 'bootstrap-overrides';
-@import 'base';
-@import 'font-awesome';
 @import 'foundation_compatibility';
 @import 'quick_search_overrides';
-@import 'layout';
-
-@import 'homepage';
-@import 'masthead';
-@import 'subnavbar';
-@import 'top-navbar';
-
-@import 'results';
-@import 'highlighted_facet';
-@import 'online-label';
-@import 'yewno';
-@import 'searcher-anchors';
-@import 'modules/buttons';
-@import 'modules/sul-footer';
-@import 'modules/global-footer';
+@import 'sul-bento';
+@import 'font-awesome';
