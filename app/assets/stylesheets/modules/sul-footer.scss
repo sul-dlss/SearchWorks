@@ -1,0 +1,47 @@
+#su-content {
+  padding-bottom: 200px;
+}
+
+#sul-footer-container {
+  padding: 0;
+  min-height: 200px;
+  -webkit-box-shadow: 0 4px 8px -8px rgba(0, 0, 0, .2) inset;
+  box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2) inset;
+  background-color: $sul-footer-bg-color;
+}
+
+#sul-footer {
+  display: table;
+  height: 80px;
+  padding: 0;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      margin: 0 13px 3px 0;
+      padding: 0;
+
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  #sul-footer-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 162px;
+  }
+
+  #sul-footer-links {
+    display: table-cell;
+    font-size: small;
+    padding-left: 15px;
+    text-align: left;
+    vertical-align: middle;
+  }
+}

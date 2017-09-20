@@ -1,0 +1,23 @@
+#global-footer {
+  box-shadow: none;
+  height: 120px;
+  max-height: none;
+
+  .copyright {
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+    min-height: 196px;
+    text-align: center;
+
+    .copyright {
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 213px;
+  }
+}

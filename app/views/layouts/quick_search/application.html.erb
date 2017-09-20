@@ -9,7 +9,18 @@
     <link rel="search" type="application/opensearchdescription+xml" href="<%= opensearch_path %>" title="<%= t('opensearch_description') %>"/>
     <!-- css -->
     <%= stylesheet_link_tag 'application' %>
-
+    <!-- Stanford identity -->
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+    <![endif]-->
     <!-- js -->
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'https://static.yewno.com/assets/widget/yewno.min.js' %>
@@ -22,20 +33,27 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body class="<%= body_class %>" data-quicksearch-ga-query="<%= strip_tags(@log_query) %>">
-    <%= render '/shared/header' %>
-    <div id="content" role="document" class="page">
-      <div class="">
-        <main id="main-content" role="main" class="">
-          <div class="skip-link">
-            <a href="#main-content"></a>
+    <div id="su-wrap"> <!-- #su-wrap start -->
+      <div id="su-content"> <!-- #su-content start -->
+        <%= render '/shared/header' %>
+        <div id="content" role="document" class="page">
+          <div class="">
+            <main id="main-content" role="main" class="">
+              <div class="skip-link">
+                <a href="#main-content"></a>
+              </div>
+              <!-- CONTENT: enter content below this line -->
+              <div id="quicksearch" class='container'>
+                <%= yield %>
+              </div>
+            </main>
           </div>
-          <!-- CONTENT: enter content below this line -->
-          <div id="quicksearch" class='container'>
-            <%= yield %>
-          </div>
-        </main>
-      </div>
-    </div>
+        </div>
+      </div> <!-- #su-content end -->
+    </div> <!-- #su-wrap end -->
+    <%= render '/shared/sul_footer' %>
+    <%= render '/shared/global_footer' %>
+    <!-- Global footer snippet end -->
     <script type="text/javascript">
       $(function () {
         $('body').hide().show();
