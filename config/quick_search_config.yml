@@ -28,7 +28,6 @@ defaults: &defaults
   max_per_page: 10
   http_timeout: 1.5
   xhr_http_timeout: 15
-# google_analytics_tracking_id: ""
   user: "stats"
   password: "stats"
 
@@ -76,5 +75,6 @@ staging:
 
 production:
   <<: *defaults
+  google_analytics_tracking_id: "UA-7219229-34"
 #  realtime_url: http://path_to_websockets_server
   # Add or override config options here
