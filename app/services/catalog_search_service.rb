@@ -9,6 +9,7 @@ class CatalogSearchService < AbstractSearchService
   class Response < AbstractSearchService::Response
     HIGHLIGHTED_FACET_FIELD = 'format_main_ssim'.freeze
     QUERY_URL = Settings.CATALOG_QUERY_URL
+    ADDITIONAL_FACET_TARGET = 'Database'.freeze
 
     def total
       json['response']['pages']['total_count'].to_i
@@ -30,6 +31,14 @@ class CatalogSearchService < AbstractSearchService
       json['response']['facets']
     end
 
+    def additional_facet_details(q)
+      return nil if additional_facet_item['hits'].to_i.zero?
+      Struct.new(:hits, :href).new(
+        additional_facet_item['hits'],
+        "#{QUERY_URL % { q: CGI.escape(q) }}&f[#{HIGHLIGHTED_FACET_FIELD}][]=#{ADDITIONAL_FACET_TARGET}"
+      )
+    end
+
     private
 
     def json
@@ -41,6 +50,16 @@ class CatalogSearchService < AbstractSearchService
       doc.xpath('/marc:collection/marc:record/marc:datafield[@tag="500" or @tag="520"]/marc:subfield[@code="a"]',
                 '/marc:collection/marc:record/marc:datafield[@tag="920"]/marc:subfield[@code="b"]',
                 'marc' => 'http://www.loc.gov/MARC21/slim').text
+    end
+
+    def additional_facet_item
+      facet = facets.find do |f|
+        f['name'] == HIGHLIGHTED_FACET_FIELD
+      end || {}
+
+      (facet['items'] || []).find do |item|
+        item['label'] == ADDITIONAL_FACET_TARGET
+      end || { 'hits' => 0 }
     end
   end
 end

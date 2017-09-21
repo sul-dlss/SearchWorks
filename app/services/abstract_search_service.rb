@@ -14,7 +14,7 @@
 class AbstractSearchService
   class NoResults < StandardError; end
   class HighlightedFacetItem; end
-  
+
   class Request
     def initialize(search_terms, max_results = Settings.MAX_RESULTS)
       @search_terms = search_terms.respond_to?(:join) ? search_terms.join(' ') : search_terms
@@ -62,6 +62,10 @@ class AbstractSearchService
     # @return [Array<Hash>] where the hash is the same as Solr's response
     def facets
       raise NotImplementedError
+    end
+
+    def additional_facet_details(*)
+      nil
     end
 
     # @param [Integer] `count` is the number of facets to return
