@@ -83,6 +83,7 @@ gem 'openseadragon'# , github: 'sul-dlss/openseadragon-rails'
 
 gem 'deprecation'
 
+gem 'rake'
 gem 'blacklight', '~> 6.0'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
