@@ -2,12 +2,12 @@
     <% short_display_name = I18n.t("#{service_name}_search.short_display_name") %>
     <i class='fa fa-angle-right'></i>
     <% if total == '1' %>
-        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See #{total} #{short_display_name} result") %>
+        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See #{total} result") %>
     <% elsif total == '2' or total == '3' %>
-        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See #{total} #{short_display_name} results") %>
+        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See #{total} results") %>
     <% elsif total.nil? %>
-        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See all #{short_display_name} results") %>
+        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See all results") %>
     <% else %>
-        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See all #{total} #{short_display_name} results") %>
+        <%= I18n.t("#{service_name}_search.see_all_message", :default => "See all #{total} results") %>
     <% end %>
 <% end %>

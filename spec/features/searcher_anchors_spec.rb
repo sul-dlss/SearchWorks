@@ -27,7 +27,7 @@ describe 'Searcher Anchor Links', js: true do
     it 'updates the anchor link with the total count' do
       expect(page).to have_css('.see-all-results', visible: true)
 
-      expect(page).to have_css('a', text: /See all 666,666 .* results/)
+      expect(page).to have_css('a', text: /See all 666,666 results/)
 
       within '.searcher-anchors' do
         expect(page).to have_css('a', text: 'Articles+ (666,666)')
