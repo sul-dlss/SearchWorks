@@ -1,6 +1,22 @@
-<h2 class='result-set-heading'>
-  <%= I18n.t("#{service_name}_search.display_name") %>
-</h2>
+<div class="row">
+  <div class="col-md-5">
+    <h2 class='result-set-heading'>
+      <%= I18n.t("#{service_name}_search.display_name") %>
+    </h2>
+  </div>
+  <div class="col-md-7 see-all-results">
+    <% unless defined? searcher.loaded_link_mobile %>
+      <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+    <% else %>
+      <span class="show-for-medium-up">
+        <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+      </span>
+      <span class="show-for-small-only">
+        <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link_mobile} %>
+      </span>
+    <% end %>
+  </div>
+</div>
 <h3 class='result-set-subheading'>
   <%= I18n.t("#{service_name}_search.sub_heading_html") %>
 </h3>

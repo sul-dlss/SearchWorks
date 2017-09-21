@@ -1,6 +1,7 @@
 <div id="<%= service_name.dasherize %>" class="module-contents" >
+    <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
     <% if searcher.is_a? StandardError %>
-        <%= render partial: 'module_heading', locals: { service_name: service_name } %>
+        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total } %>
         <% if params[:page].blank? %>
             <% page = 1 %>
         <% else %>
@@ -8,33 +9,19 @@
         <% end %>
         <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging' } %>
     <% elsif searcher.results.blank? %>
-        <%= render partial: 'module_heading', locals: { service_name: service_name } %>
+        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total } %>
         <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name} %>
     <% else %>
-        <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
         <% unless defined? searcher.loaded_link_mobile %>
-          <%= render partial: 'module_heading', locals: { service_name: service_name } %>
+          <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
         <% else %>
-          <%= render partial: 'module_heading', locals: { service_name: service_name } %>
+          <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
         <% end %>
-
         <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>
 
         <ol>
             <%= render partial: '/quick_search/search/result', collection: searcher.results %>
         </ol>
-        <p class="see-all-results">
-            <% unless defined? searcher.loaded_link_mobile %>
-                <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
-            <% else %>
-                <span class="show-for-medium-up">
-                <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
-                </span>
-                <span class="show-for-small-only">
-                <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link_mobile} %>
-                </span>
-            <% end %>
-        </p>
         <% if searcher.total.present? %>
           <script type='text/javascript'>
             var searcherLink = $('.searcher-anchors a[href="#<%= service_name %>"]');

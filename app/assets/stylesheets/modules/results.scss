@@ -19,6 +19,25 @@
 
 .result {
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
+  }
+}
+
+.see-all-results {
+  text-align: right;
+
+  .btn {
+    white-space: normal;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .result-set-heading,
+  .result-set-subheading {
+    text-align: center;
+  }
+
+  .see-all-results .btn {
+    display: block;
   }
 }
