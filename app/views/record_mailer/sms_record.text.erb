@@ -1,4 +1,8 @@
 <% # Overridden from Blacklight to create Bit.ly urls %>
 <% @documents.each do |document| %>
-<%= SmsPresenter.new(document, polymorphic_url(document, @url_gen_params)).sms_content %>  
+<%= SmsPresenter.new(
+      document,
+      url_for(@url_gen_params.merge((@url_gen_params[:_recall] || {}).merge(id: @documents.first.id, action: :show)))
+    ).sms_content
+%>
 <% end %>
