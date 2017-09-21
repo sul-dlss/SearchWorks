@@ -108,11 +108,11 @@ module ApplicationHelper
     )
   end
 
-  # TODO: add bento link, see issue #1695
   def link_to_bento_search
+    query_string = params[:q].present? ? "?#{{ q: params[:q] }.to_query}" : nil
     link_to(
       t('searchworks.search_dropdown.bento.description_html'),
-      'https://library.stanford.edu/'
+      "https://library.stanford.edu/all/#{query_string}"
     )
   end
 
