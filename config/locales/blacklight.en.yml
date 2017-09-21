@@ -1,6 +1,6 @@
 en:
   blacklight:
-    application_name: 'Blacklight'
+    application_name: 'SearchWorks'
     entry_name:
       default: 'result'
     home:
