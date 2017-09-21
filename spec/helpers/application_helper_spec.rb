@@ -152,12 +152,14 @@ describe ApplicationHelper do
     end
   end
 
-  # TODO: Add bento search link, see issue #1695
   describe '#link_to_bento_search' do
     subject(:result) { Capybara.string(helper.link_to_bento_search) }
-    xit 'passes query to bento search params' do
-      params[:q] = 'my query'
-      expect(result).to have_link(text: /all/ )
+    it 'passes query to bento search params' do
+      controller.params = { q: 'my query' }
+      expect(result).to have_link(
+        text: /all/,
+        href: 'https://library.stanford.edu/all/?q=my+query'
+      )
     end
   end
 
