@@ -538,7 +538,7 @@ module Constants
     'RESEARCH' => 'Research',
     'RESERVES' => 'Reserves',
     'RESV-DESKS' => 'Ask at circulation desk',
-    'RET-REF' => 'Reference',
+    'RET-REF' => 'Retired Reference',
     'ROB-STOR' => 'Robinson Collection',
     'ROBINSON' => 'Robinson Collection',
     'RUM-LOAN' => 'In Map Center: Ask at service desk',
