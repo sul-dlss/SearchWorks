@@ -14,7 +14,7 @@ feature 'Article Searching' do
         expect(page).to have_css('li.active', text: /catalog/)
         expect(page).not_to have_css('li.active a', text: /articles/)
 
-        click_link 'articles'
+        click_link 'articles+'
       end
 
       expect(page).to have_current_path(articles_path) # the landing page for Article Search

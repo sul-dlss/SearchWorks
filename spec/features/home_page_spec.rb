@@ -30,7 +30,9 @@ feature "Home Page" do
     expect(page).to have_css(".navbar-text.search-target", text: "catalog")
   end
   scenario "there should be no more link on any facets" do
-    expect(page).to_not have_css('a', text: /more/)
+    within ('.home-page-facets') do
+      expect(page).to_not have_css('a', text: /more/)
+    end
   end
   scenario "should have the library facet hidden by default", js: true do
     within(".blacklight-building_facet") do

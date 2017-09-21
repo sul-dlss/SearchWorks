@@ -14,6 +14,11 @@ describe 'shared/_home_page_bento.html.erb' do
       expect(rendered).to have_css('h3', text: 'Catalog')
       expect(rendered).not_to have_css('h3 a', text: 'Catalog')
     end
+
+    it 'links to Bento section' do
+      render
+      expect(rendered).to have_css('h3', text: 'All of the above')
+    end
   end
 
   context 'articles controller' do
@@ -28,6 +33,11 @@ describe 'shared/_home_page_bento.html.erb' do
       render
       expect(rendered).to have_css('h3', text: 'Articles+')
       expect(rendered).not_to have_css('h3 a', text: 'Articles+')
+    end
+
+    it 'links to Bento section' do
+      render
+      expect(rendered).to have_css('h3', text: 'All of the above')
     end
   end
 end
