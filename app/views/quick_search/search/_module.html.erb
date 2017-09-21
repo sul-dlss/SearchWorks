@@ -22,6 +22,14 @@
         <ol>
             <%= render partial: '/quick_search/search/result', collection: searcher.results %>
         </ol>
+
+        <% if (addl_facet = searcher.search.additional_facet_details(params[:q])) %>
+          <p class='text-center'>
+            Your search also found
+            <%= link_to("#{number_with_delimiter(addl_facet.hits)} topic specific databases", addl_facet.href) %>.
+          </p>
+        <% end %>
+
         <% if searcher.total.present? %>
           <script type='text/javascript'>
             var searcherLink = $('.searcher-anchors a[href="#<%= service_name %>"]');
