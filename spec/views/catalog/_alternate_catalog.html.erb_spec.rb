@@ -8,7 +8,8 @@ describe 'catalog/_alternate_catalog.html.erb' do
     render
   end
   it 'has data-attributes' do
-    expect(rendered).to have_css '[data-alternate-catalog="/articles?q=question"]'
+    expect(rendered).to have_css '[data-alternate-catalog="/articles?f%5Beds_s'\
+      'earch_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=question"]'
   end
   it 'has a close button' do
     expect(rendered).to have_css 'button.close'
@@ -20,7 +21,8 @@ describe 'catalog/_alternate_catalog.html.erb' do
     expect(rendered).to have_css '.alternate-catalog-body'
   end
   it 'has a link to search' do
-    expect(rendered).to have_css 'a[href="/articles?q=question"].btn'
+    expect(rendered).to have_css 'a[href="/articles?f%5Beds_search_limiters_fa'\
+      'cet%5D%5B%5D=Direct+access+to+full+text&q=question"].btn'
   end
   it 'has a facet section' do
     expect(rendered).to have_css '.alternate-catalog-facet-section'

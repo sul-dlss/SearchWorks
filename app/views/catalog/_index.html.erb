@@ -59,7 +59,9 @@
       <%= render_grouped_document_index %>
     <%- else %>
       <%= render_document_index %>
+      <% benchmark 'Alt results' do %>
       <%= render 'alternate_catalog' if show_alternate_catalog? %>
+      <% end %>
     <%- end %>
 
     <%- unless @response.empty? %>
