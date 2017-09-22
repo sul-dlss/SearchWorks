@@ -1,7 +1,7 @@
 <div id="<%= service_name.dasherize %>" class="module-contents" >
     <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
     <% if searcher.is_a? StandardError %>
-        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total } %>
+        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: nil } %>
         <% if params[:page].blank? %>
             <% page = 1 %>
         <% else %>
@@ -9,7 +9,7 @@
         <% end %>
         <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging' } %>
     <% elsif searcher.results.blank? %>
-        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total } %>
+        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
         <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name} %>
     <% else %>
         <% unless defined? searcher.loaded_link_mobile %>
