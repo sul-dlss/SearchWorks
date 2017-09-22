@@ -74,6 +74,12 @@ RSpec.describe ArticlesController do
           expect(error_message).to have_content('Log in to try the download again')
           expect(response).to have_http_status(:found) # redirects back
         end
+
+        it 'does not send an exception to Honeybadger (because this can be expected)' do
+          expect(Honeybadger).not_to receive(:notify)
+
+          get :fulltext_link, params: { id: '123', type: :pdf }
+        end
       end
 
       context 'when the user is not in guest mode' do
@@ -86,6 +92,12 @@ RSpec.describe ArticlesController do
           expect(error_message).to have_content 'We don\'t know the source of the error.'
           expect(error_message).to have_css('a', text: 'please report it as a connection problem')
           expect(response).to have_http_status(:found) # redirects back
+        end
+
+        it 'sends and exception notification' do
+          expect(Honeybadger).to receive(:notify)
+
+          get :fulltext_link, params: { id: '123', type: :pdf }
         end
       end
     end

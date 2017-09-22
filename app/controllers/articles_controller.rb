@@ -185,7 +185,7 @@ class ArticlesController < ApplicationController
     url = extract_fulltext_link(document, params[:type])
     redirect_to url if url.present?
   rescue => e
-    Honeybadger.notify(e) if defined? Honeybadger
+    Honeybadger.notify(e) if defined?(Honeybadger) && !session['eds_guest']
     flash[:error] = flash_message_for_link_error
     redirect_back fallback_location: articles_path
   end
