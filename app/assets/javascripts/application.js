@@ -12,8 +12,11 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require quick_search
 //= require jquery3
+//= require jquery-migrate-3.0.0
+//= require custom_quick_search
 //= require popper
 //= require bootstrap-sprockets
 //= require yewno
+
+jQuery.migrateMute = true
