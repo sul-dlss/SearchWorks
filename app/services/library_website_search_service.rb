@@ -24,11 +24,13 @@ class LibraryWebsiteSearchService < AbstractSearchService
     def results
       doc.css('.search-results .views-row').first(Settings.MAX_RESULTS).collect do |hit|
         next if hit.blank?
+        title = hit.at_css('.views-field-title .field-content a')
+        next if title.blank?
         result = AbstractSearchService::Result.new
-        result.title = hit.at_css('.views-field-title .field-content a').text
-        result.link = hit.at_css('.views-field-title .field-content a')['href']
-        result.description = hit.at_css('.views-field-body-value .field-content').text
-        result.breadcrumbs = hit.at_css('.result-breadcrumbs span').text
+        result.title = title.text
+        result.link = title['href']
+        result.description = hit.at_css('.views-field-body-value .field-content').try(:text)
+        result.breadcrumbs = hit.at_css('.result-breadcrumbs span').try(:text)
         result
       end.compact
     end
