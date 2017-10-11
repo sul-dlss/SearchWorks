@@ -63,6 +63,13 @@ en:
         label: Series
       default:
         label: 'Field'
+    request_link:
+      aeon_note: Requires Aeon signup/login<br/>Opens in new tab
+      default: Request
+      HOOVER: Request on-site access
+      HV-ARCHIVE: Request on-site access
+      RUMSEYMAP: Request on-site access
+      SPEC-COLL: Request on-site access
   blacklight:
     course_reserves:
       page_title: "Course reserves in %{application_name}"

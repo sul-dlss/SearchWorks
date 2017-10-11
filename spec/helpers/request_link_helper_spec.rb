@@ -1,6 +1,16 @@
 require 'spec_helper'
 
 describe RequestLinkHelper do
+  include MarcMetadataFixtures
+
+  let(:hoover_document) do
+    SolrDocument.new(
+      id: '1234',
+      marcxml: hoover_request_fixture,
+      item_display: ['barcode -|- HOOVER -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+    )
+  end
+
   let(:current_location_document) do
     SolrDocument.new(
       id: '1234',
@@ -35,6 +45,35 @@ describe RequestLinkHelper do
 
       expect(Capybara.string(link)).to have_link('Request on-site access')
     end
+
+    it 'has has the requests-modal attribute for non-hoover items' do
+      link = link_to_request_link(
+        document: current_location_document, callnumber: current_location_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).to have_css('a[data-behavior="requests-modal"]')
+    end
+
+    describe 'Hoover links' do
+      let(:link) do
+        Capybara.string(
+          link_to_request_link(document: hoover_document, callnumber: hoover_document.holdings.callnumbers.first)
+        )
+      end
+
+      it 'does not have requests-modal attribute for hoover items' do
+        expect(link).not_to have_css('a[data-behavior="requests-modal"]')
+      end
+
+      it 'has a "_blank" target for hoover items' do
+        expect(link).to have_css('a[target="_blank"]')
+      end
+
+      it 'has the bootstrap tooltip data attributes' do
+        expect(link).to have_css('a[data-toggle="tooltip"]')
+        expect(link).to have_css('a[data-title^="Requires Aeon signup"]')
+      end
+    end
   end
 
   describe '#request_link' do
@@ -66,6 +105,22 @@ describe RequestLinkHelper do
             no_current_location_document.holdings.callnumbers.first.barcode
           )
         ).to match(/barcode=barcode/)
+      end
+    end
+
+    describe 'Hoover Library/Archive' do
+      let(:hoover_doc) do
+        SolrDocument.new(
+          id: '1234',
+          marcxml: hoover_request_fixture,
+          item_display: ['9876 -|- HOOVER -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123']
+        )
+      end
+
+      it "returns the OpenURL link for Hoover's request system" do
+        link = helper.request_link(hoover_doc, hoover_doc.holdings.callnumbers.first)
+
+        expect(link).to match(/^#{Regexp.escape(Settings.HOOVER_REQUESTS_URL)}/)
       end
     end
 

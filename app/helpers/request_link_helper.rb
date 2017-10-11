@@ -2,16 +2,23 @@ module RequestLinkHelper
   def link_to_request_link(options = {})
     url = request_link(options[:document], options[:callnumber], options[:barcode])
     return unless url
-    link_text = if Constants::REQUEST_ON_SITE_ACCESS_LIBS.include?(options[:library].try(:code))
-                  'Request on-site access'
-                else
-                  'Request'
-                end
-    link_to(link_text, url, rel: 'nofollow', class: options[:class], data: { behavior: 'requests-modal' })
+    link_text = t(
+      "searchworks.request_link.#{options[:library].try(:code) || 'default'}",
+      default: :'searchworks.request_link.default'
+    )
+    link_to(
+      link_text,
+      url,
+      target: request_link_target(options[:callnumber]),
+      rel: 'nofollow',
+      class: options[:class],
+      data: link_data_attributes(options[:callnumber])
+    )
   end
 
   def request_link(document, callnumber, barcode = nil)
     return unless callnumber
+    return hoover_request_url(document, callnumber) if Constants::HOOVER_LIBS.include?(callnumber.library)
     if callnumber.home_location == 'SSRC-DATA'
       base_url = Settings.SSRC_REQUESTS_URL
       request_params = ssrc_params(document, callnumber)
@@ -23,6 +30,21 @@ module RequestLinkHelper
   end
 
   private
+
+  def request_link_target(callnumber)
+    return unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
+    '_blank'
+  end
+
+  def link_data_attributes(callnumber)
+    return { behavior: 'requests-modal' } unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
+
+    { toggle: 'tooltip', html: 'true', title: t('searchworks.request_link.aeon_note') }
+  end
+
+  def hoover_request_url(document, callnumber)
+    HooverOpenUrlRequest.new(callnumber.library, document, self).to_url
+  end
 
   def process_request_params(document, callnumber, barcode)
     request_params = request_options(document, callnumber)

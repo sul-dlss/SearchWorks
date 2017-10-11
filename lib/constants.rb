@@ -845,15 +845,11 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  REQUEST_LIBS = ['MEDIA-MTXT', 'RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
+  REQUEST_LIBS = ['HOOVER', 'MEDIA-MTXT', 'RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
-  REQUEST_ON_SITE_ACCESS_LIBS = [
-    'HV-ARCHIVE',
-    'RUMSEYMAP',
-    'SPEC-COLL'
-  ].freeze
+  HOOVER_LIBS = %w[HOOVER].freeze
 
   REQUEST_LOCS = ['GUNST-30',
                   'FELTON-30',
@@ -1222,6 +1218,10 @@ module Constants
   BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
 
   LIBRARY_INSTRUCTIONS = {
+    'HOOVER' => {
+      heading: 'All items must be requested in advance',
+      text: 'Stanford ID holders may be able to check out some monographs marked "Available" next to the call number. "In-library use" call numbers are for reading-room use only.'
+    },
     'RUMSEYMAP' => {
       heading: 'All items must be viewed on site',
       text: 'Request items by Noon (12p) the day before your visit to allow for retrieval by staff. You can request at most 5 items per day.'
