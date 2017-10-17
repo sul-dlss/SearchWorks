@@ -7,3 +7,7 @@ set :output, 'log/cron.log'
 every 1.hours, roles: %i[app] do
   rake 'searchworks:prune_eds_cache'
 end
+
+every '0 0 1,15 * *', roles: %i[app] do # biweekly
+  rake 'searchworks:clear_eds_cache'
+end
