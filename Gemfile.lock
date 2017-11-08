@@ -158,7 +158,6 @@ GEM
       csl (~> 1.0)
     css_parser (1.5.0)
       addressable
-    database_cleaner (1.6.1)
     deep_merge (1.1.1)
     deprecation (1.0.0)
       activesupport
@@ -516,7 +515,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config
   coveralls
-  database_cleaner
   deprecation
   devise
   devise-guests
