@@ -56,8 +56,6 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
-  # We use database cleaner to empty out the database between tests (see spec_helper for usage)
-  gem 'database_cleaner'
   gem 'poltergeist', '>= 1.8.1'
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
 end
