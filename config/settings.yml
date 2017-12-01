@@ -9,4 +9,4 @@ MAX_RESULTS: 3
 CATALOG_HOME_URL: 'https://searchworks.stanford.edu'
 ARTICLES_HOME_URL: 'https://searchworks.stanford.edu/articles'
 LIBRARY_WEBSITE_HOME_URL: 'https://library.stanford.edu'
-YEWNO_HOME_URL: 'https://yewno.com/edu'
+YEWNO_HOME_URL: 'https://stanford.idm.oclc.org/login?url=https://yewno.com/edu'
