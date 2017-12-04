@@ -999,7 +999,7 @@ module Constants
     'SCI-RESV' => 'SCIENCE'
   }
 
-  STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA].freeze
+  STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA LAW].freeze
   STACKMAP_BLACKLIST = { # keys are libraries (with `:global` for a global blacklist) and values are home locations
     global: %w[BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN],
     'ART' => %w[
@@ -1031,6 +1031,22 @@ module Constants
       REF-JPN
       REF-KOR
       STACKS
+    ],
+    'LAW' => %w[
+      BINDERY
+      ENDPROCESS
+      FACULTY
+      GRE-LOAN
+      GREEN-RESV
+      INPROCESS
+      INTERNET
+      LAW-ARCHIV
+      ON-ORDER
+      REPAIR
+      SL3-LOAN
+      SLN-LOAN
+      STAFF
+      TECH-SERV
     ]
   }.freeze
 
