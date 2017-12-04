@@ -3,7 +3,7 @@
 </h3>
 
 <% if result.description.present? %>
-  <p><%= result.description.html_safe %></p>
+  <p><%= truncate(result.description.html_safe, length: Settings.DESCRIPTION_SIZE) %></p>
 <% end %>
 
 <% if result.fulltext_link_html %>
