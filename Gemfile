@@ -105,3 +105,4 @@ gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
 gem 'whenever' # manages cron jobs
 gem 'bitly' # For bit.ly
+gem 'bootsnap', require: false
