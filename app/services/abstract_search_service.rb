@@ -23,7 +23,7 @@ class AbstractSearchService
 
     # @param [String] `base` is a URL that has format parameters `q` and `max`
     def url(base)
-      base.to_s % { q: URI.escape(q), max: max }
+      base.to_s % { q: CGI.escape(q), max: max }
     end
 
     def q
@@ -116,7 +116,7 @@ class AbstractSearchService
     url = if request_or_query.respond_to?(:url)
             request_or_query.url(@query_url.to_s)
           else
-            @query_url.to_s % { q: URI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS }
+            @query_url.to_s % { q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS }
           end
 
     response = Faraday.get do |req|

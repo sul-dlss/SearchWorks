@@ -7,7 +7,7 @@ module QuickSearch
     end
 
     def loaded_link
-      Settings.CATALOG_QUERY_URL.to_s % { q: URI.escape(q.to_s) }
+      Settings.CATALOG_QUERY_URL.to_s % { q: CGI.escape(q.to_s) }
     end
   end
 end
