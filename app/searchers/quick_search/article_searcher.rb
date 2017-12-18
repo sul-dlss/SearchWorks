@@ -7,7 +7,7 @@ module QuickSearch
     end
 
     def loaded_link
-      Settings.EDS_QUERY_URL.to_s % { q: URI.escape(q.to_s) }
+      Settings.EDS_QUERY_URL.to_s % { q: CGI.escape(q.to_s) }
     end
   end
 end
