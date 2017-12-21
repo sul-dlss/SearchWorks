@@ -16,7 +16,7 @@ NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
 PURL_EMBED_URL_SCHEME: 'https://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'https://purl.stanford.edu/'
-FEEDBACK_ALERT: <%= false %>
+FEEDBACK_ALERT: <%= true %>
 GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
 NEW_RELIC_LICENSE_KEY: 'NEW_RELIC_KEY'
 NEW_RELIC_APP_NAME: "SearchWorks"
