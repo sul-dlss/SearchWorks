@@ -27,4 +27,19 @@ describe 'Facets' do
       end
     end
   end
+
+  context 'Genre specific facets' do
+    context 'Thesis/Dissertation' do
+      it 'renders the Stanford theses & dissertations facet when genre
+          Thesis/Dissertation is selected' do
+        visit search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']})
+
+        within('.facets') do
+          expect(page).to have_css('h3', text: 'Stanford theses & dissertations')
+          expect(page).to have_css('a', text: 'Type of degree')
+          expect(page).to have_css('a', text: 'Department, school, or program')
+        end
+      end
+    end
+  end
 end

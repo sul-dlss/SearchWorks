@@ -1,0 +1,9 @@
+:id: 1343750
+:title_display: Stanford dissertations & theses facet
+:language: English
+:format: Book
+:format_main_ssim: Book
+:genre_ssim: Thesis/Dissertation
+:stanford_theses_facet_hsim:
+  - "Type of degree|Doctoral|Doctor of Musical Arts (DMA)"
+  - "Department, school, or program|Department of Music"
