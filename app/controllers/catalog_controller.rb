@@ -28,6 +28,8 @@ class CatalogController < ApplicationController
 
   include BackendLookup
 
+  include StanfordWorkFacet
+
   before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
@@ -42,7 +44,8 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       :qt => 'search',
       :rows => 20,
-      :"f.callnum_facet_hsim.facet.limit" => "-1"
+      :"f.callnum_facet_hsim.facet.limit" => "-1",
+      :"f.stanford_work_facet_hsim.facet.limit" => "-1"
     }
 
     # solr path which will be added to solr base url before the other solr params.
@@ -104,6 +107,11 @@ class CatalogController < ApplicationController
     # facet bar
     config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 20, sort: :index
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20
+    config.add_facet_field 'stanford_work_facet_hsim',
+                            label: 'Stanford student work',
+                            partial: 'blacklight/hierarchy/facet_hierarchy',
+                            sort: 'index', collapse: false, show: false
+    config.add_facet_field 'stanford_dept_sim', :label => 'Stanford school or department', collapse: false, show: false, limit: 20
     config.add_facet_field "access_facet", :label => "Access", limit: 10
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", :label => "Collection type", :show => false
@@ -125,7 +133,8 @@ class CatalogController < ApplicationController
                            sort: 'index'
     config.facet_display = {
       :hierarchy => {
-        'callnum_facet' => [['hsim'], '|']
+        'callnum_facet' => [['hsim'], '|'],
+        'stanford_work_facet' => [['hsim'], '|']
       }
     }
     config.add_facet_field "topic_facet", :label => "Topic", limit: 20
