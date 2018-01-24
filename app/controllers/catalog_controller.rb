@@ -110,7 +110,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'stanford_work_facet_hsim',
                             label: 'Stanford student work',
                             partial: 'blacklight/hierarchy/facet_hierarchy',
-                            sort: 'index', collapse: false, show: false
+                            sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', :label => 'Stanford school or department', collapse: false, show: false, limit: 20
     config.add_facet_field "access_facet", :label => "Access", limit: 10
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
