@@ -30,9 +30,9 @@ Blacklight.onLoad(function(){
     }
 
     function updateLink(count, el){
-      var linkText = $(el).text();
+      var linkText = $(el).html();
       linkText += "... <strong>found " + count + " results</strong>";
-      $(el).html(linkText)
+      $(el).html(linkText);
     }
     Plugin.prototype = {
 
