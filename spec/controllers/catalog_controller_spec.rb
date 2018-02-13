@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe CatalogController do
+  include Devise::Test::ControllerHelpers
+
   it 'should include the AdvancedSearchParamsMapping concern' do
     expect(subject).to be_kind_of(AdvancedSearchParamsMapping)
   end
@@ -33,87 +35,100 @@ describe CatalogController do
     end
   end
   describe '#email' do
-    it 'should set the provided subject' do
-      expect{post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'} }.to change{
-        ActionMailer::Base.deliveries.count
-      }.by(1)
-      expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
-    end
-    it 'should send a brief email when requested' do
-      email = double('email')
-      expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
-      expect(email).to receive(:deliver_now)
-      post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
-    end
-    it 'should send a full email when requested' do
-      email = double('email')
-      expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
-      expect(email).to receive(:deliver_now)
-      post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1' }
+    context 'when the user is not logged in' do
+      it 'does not allow emails to be submitted' do
+        expect do
+          post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}
+        end.not_to change { ActionMailer::Base.deliveries.count }
+      end
     end
 
-    it 'should be able to send emails to multiple addresses' do
-      expect do
-        post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1' }
-      end.to change { ActionMailer::Base.deliveries.count }.by(3)
-    end
-
-    describe 'validations' do
-      it 'should not send emails when the email_address field has been filled out' do
-        expect do
-          post :email, params: { email_address: 'something', to: 'email@example.com', type: 'full' }
-        end.to_not change { ActionMailer::Base.deliveries.count }
-
-        expect(flash[:error]).to include('You have filled in a field that makes you appear as a spammer.')
-        expect(flash[:error]).to include('Please follow the directions for the individual form fields.')
+    context 'when the user is logged in' do
+      before do
+        allow(controller).to receive(:current_user).and_return(User.new(email: 'user@stanford.edu'))
       end
 
-      it 'should not allow messages that have links in them' do
-        expect do
-          post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
-        end.to_not change { ActionMailer::Base.deliveries.count }
-        expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
-        expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
+      it 'should set the provided subject' do
+        expect{post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'} }.to change{
+          ActionMailer::Base.deliveries.count
+        }.by(1)
+        expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
+      end
+      it 'should send a brief email when requested' do
+        email = double('email')
+        expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
+        expect(email).to receive(:deliver_now)
+        post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
+      end
+      it 'should send a full email when requested' do
+        email = double('email')
+        expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
+        expect(email).to receive(:deliver_now)
+        post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1' }
       end
 
-      it 'should prevent incorrect email types from being sent' do
+      it 'should be able to send emails to multiple addresses' do
         expect do
-          post :email, params: { to: 'email@example.com', type: 'not-a-type' }
-        end.to_not change { ActionMailer::Base.deliveries.count }
-        expect(flash[:error]).to eq 'Invalid email type provided'
+          post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1' }
+        end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
+      describe 'validations' do
+        it 'should not send emails when the email_address field has been filled out' do
+          expect do
+            post :email, params: { email_address: 'something', to: 'email@example.com', type: 'full' }
+          end.to_not change { ActionMailer::Base.deliveries.count }
 
-      it 'should validate multiple emails correctly' do
-        expect do
-          post(
-            :email,
-            params: { 
-              to: 'email1@example.com, example.com',
-              type: 'full'
-            }
-          )
-        end.to_not change { ActionMailer::Base.deliveries.count }
+          expect(flash[:error]).to include('You have filled in a field that makes you appear as a spammer.')
+          expect(flash[:error]).to include('Please follow the directions for the individual form fields.')
+        end
 
-        expect(flash[:error]).to eq 'You must enter only valid email addresses.'
-      end
+        it 'should not allow messages that have links in them' do
+          expect do
+            post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
+          end.to_not change { ActionMailer::Base.deliveries.count }
+          expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
+          expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
+        end
 
-      it 'should prevent emails with too many addresses from being sent' do
-        expect do
-          post(
-            :email,
-            params: { 
-              to: 'email1@example.com,
-                   email2@example.com,
-                   email3@example.com,
-                   email4@example.com,
-                   email5@example.com,
-                   email6@example.com',
-              type: 'full'
-            }
-          )
-        end.to_not change { ActionMailer::Base.deliveries.count }
+        it 'should prevent incorrect email types from being sent' do
+          expect do
+            post :email, params: { to: 'email@example.com', type: 'not-a-type' }
+          end.to_not change { ActionMailer::Base.deliveries.count }
+          expect(flash[:error]).to eq 'Invalid email type provided'
+        end
 
-        expect(flash[:error]).to eq 'You have entered more than the maximum (5) email addresses allowed.'
+        it 'should validate multiple emails correctly' do
+          expect do
+            post(
+              :email,
+              params: {
+                to: 'email1@example.com, example.com',
+                type: 'full'
+              }
+            )
+          end.to_not change { ActionMailer::Base.deliveries.count }
+
+          expect(flash[:error]).to eq 'You must enter only valid email addresses.'
+        end
+
+        it 'should prevent emails with too many addresses from being sent' do
+          expect do
+            post(
+              :email,
+              params: {
+                to: 'email1@example.com,
+                     email2@example.com,
+                     email3@example.com,
+                     email4@example.com,
+                     email5@example.com,
+                     email6@example.com',
+                type: 'full'
+              }
+            )
+          end.to_not change { ActionMailer::Base.deliveries.count }
+
+          expect(flash[:error]).to eq 'You have entered more than the maximum (5) email addresses allowed.'
+        end
       end
     end
   end
