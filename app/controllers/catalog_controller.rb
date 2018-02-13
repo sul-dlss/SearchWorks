@@ -356,7 +356,7 @@ class CatalogController < ApplicationController
   def email
     @response, @documents = fetch(Array(params[:id]))
 
-    if request.post? && validate_email_params
+    if request.post? && validate_email_params && current_user.present?
       send_emails_to_all_recipients
 
       respond_to do |format|
