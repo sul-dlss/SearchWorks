@@ -1,7 +1,7 @@
 module OpenSeadragon
   def open_seadragon_tile_source
     file_ids.map do |file_id|
-      "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{file_id.gsub(/\.jp2$/, '')}/info.json"
+      "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{ERB::Util.url_encode(file_id.gsub(/\.jp2$/, ''))}/info.json"
     end
   end
 
