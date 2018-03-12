@@ -8,7 +8,7 @@ describe OpenSeadragon do
   end
   describe "tile source" do
     before do
-      allow(document).to receive('file_ids').and_return(['image-id1', 'image-id2.jp2'])
+      allow(document).to receive('file_ids').and_return(['image-id1', 'image-id2.jp2', 'image space.jp2'])
     end
     it "should have the correct stacks URL" do
       document.open_seadragon_tile_source.each do |tile_source|
@@ -21,9 +21,10 @@ describe OpenSeadragon do
       end
     end
     it "should include the file ids" do
-      document.open_seadragon_tile_source.each do |tile_source|
-        expect(tile_source).to match /12345%2Fimage-id\d/
-      end
+      expect(document.open_seadragon_tile_source).to include a_string_matching(/12345%2Fimage-id\d/)
+    end
+    it "should escape the file ids" do
+      expect(document.open_seadragon_tile_source).to include a_string_matching(/12345%2Fimage%20space/)
     end
     it "should not include .jp2 extensions" do
       document.open_seadragon_tile_source.each do |tile_source|
