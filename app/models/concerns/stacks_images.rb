@@ -13,7 +13,7 @@ module StacksImages
     image_id = opts[:image_id].gsub(/\.jp2$/, '')
     size = image_dimensions[opts[:size]] || image_dimensions[:default]
     if druid
-      "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{image_id}/#{size}"
+      "#{Settings.STACKS_URL}/iiif/#{druid}%2F#{ERB::Util.url_encode(image_id)}/#{size}"
     else
       "#{Settings.STACKS_URL}/iiif/#{image_id}/#{size}"
     end

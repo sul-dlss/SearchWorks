@@ -23,10 +23,16 @@ describe StacksImages do
           subject.craft_image_url(druid: 'abc123', image_id: 'file-123.jp2', size: :thumbnail)
         ).not_to include('jp2')
       end
+
+      it 'url-escapes the file name' do
+        expect(subject.craft_image_url(druid: 'abc123', image_id: 'file 123', size: :thumbnail)).to match(
+          %r{/image/iiif/abc123%2Ffile%20123/square/100,100/0/default.jpg}
+        )
+      end
     end
 
     context 'when a druid is present in the image id' do
-      it 'returns the iamge url using the image id directly' do
+      it 'returns the image url using the image id directly' do
         expect(subject.craft_image_url(image_id: 'druid123%2Ffile-123.jp2')).to match(%r{iiif/druid123%2Ffile-123/})
       end
     end
