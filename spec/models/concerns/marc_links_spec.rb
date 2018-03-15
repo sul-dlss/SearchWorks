@@ -112,5 +112,12 @@ describe MarcLinks do
       document = SolrDocument.new(marcxml: no_url_856)
       expect(document.marc_links.all).to_not be_present
     end
+
+    it 'handles pulling th proxy host out of URLs with spaces in them' do
+      document = SolrDocument.new(marcxml: ez_proxy_with_spaces_856)
+
+      expect(document.marc_links.all.length).to eq 1
+      expect(document.marc_links.all.first.html).to match(%r{>library\.stanford\.edu</a>})
+    end
   end
 end
