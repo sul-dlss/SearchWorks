@@ -849,7 +849,7 @@ module Constants
 
   LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
 
-  HOOVER_LIBS = %w[HOOVER].freeze
+  HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
 
   REQUEST_LOCS = ['GUNST-30',
                   'FELTON-30',
@@ -1237,6 +1237,10 @@ module Constants
     'HOOVER' => {
       heading: 'All items must be requested in advance',
       text: 'Stanford ID holders may be able to check out some monographs marked "Available" next to the call number. "In-library use" call numbers are for reading-room use only.'
+    },
+    'HV-ARCHIVE' => {
+      heading: 'All items must be viewed on site',
+      text: "If there's a finding aid shown above, use the Online Archive of California link to request items. Otherwise, use the Request on-site access button below."
     },
     'RUMSEYMAP' => {
       heading: 'All items must be viewed on site',
