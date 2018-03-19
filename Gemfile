@@ -70,7 +70,7 @@ end
 
 group :test do
   gem 'simplecov', '~> 0.14', require: false
-  gem 'coveralls', require: false
+  gem 'coveralls', '~> 0.8', require: false
 end
 
 gem 'newrelic_rpm'
@@ -84,7 +84,7 @@ gem 'deprecation'
 gem 'blacklight', '~> 6.0'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
-gem "jettywrapper", "~> 1.7"
+gem "jettywrapper", "~> 1.7", require: false
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
