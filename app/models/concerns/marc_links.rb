@@ -49,6 +49,17 @@ module MarcLinks
       file_id_value.gsub('file:', '') if file_id_value.present?
     end
 
+    # Parse a URI object to return the host of the URL in the "url" parameter if it's a proxied resoruce
+    def link_host(link)
+      return link.host unless link.to_s =~ SearchWorks::Links::PROXY_REGEX && link.to_s.include?('url=')
+      proxy = CGI.parse(link.query)
+      return link.host unless proxy.key?('url')
+
+      extracted_url = URI.extract(proxy['url'].first).first
+      return link.host unless extracted_url
+      URI.parse(extracted_url).host
+    end
+
     def process_link(field)
       unless field['u'].nil?
         # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
@@ -66,16 +77,7 @@ module MarcLinks
             suby = subfield.value
           end
         }
-        if fixed_url =~ SearchWorks::Links::PROXY_REGEX && fixed_url.include?("url=")
-          proxy = CGI.parse(URI.parse(fixed_url).query)
-          if proxy.has_key?("url")
-            url_host = URI.parse(proxy["url"].first).host
-          else
-            url_host = url.host
-          end
-        else
-          url_host = url.host
-        end
+
         if field["x"] and field["x"] == "CasaliniTOC"
           {:text=>field["3"],
            :title=>"",
@@ -83,7 +85,7 @@ module MarcLinks
            :casalini_toc => true
           }
         else
-          link_text = (!suby.present? && !sub3.present?) ? url_host : [sub3, suby].compact.join(' ')
+          link_text = (!suby.present? && !sub3.present?) ? link_host(url) : [sub3, suby].compact.join(' ')
           title = subz.join(" ")
           additional_text = nil
           if title =~ stanford_affiliated_regex

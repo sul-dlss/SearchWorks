@@ -142,6 +142,17 @@ module Marc856Fixtures
       </record>
     xml
   end
+
+  def ez_proxy_with_spaces_856
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='u'>https://stanford.idm.oclc.org/?url=https://library.stanford.edu/url%20that has+spaces</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def no_url_856
     <<-xml
       <record>
@@ -181,4 +192,5 @@ module Marc856Fixtures
       </record>
     xml
   end
+
 end
