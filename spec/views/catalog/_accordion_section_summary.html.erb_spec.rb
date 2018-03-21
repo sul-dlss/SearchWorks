@@ -4,6 +4,12 @@ describe "catalog/_accordion_section_summary.html.erb" do
   include MarcMetadataFixtures
   include ModsFixtures
 
+  it 'sanitizes summary content' do
+    allow(view).to receive(:document).and_return(SolrDocument.new(summary_display: ['Text <br> needs to be sanitized']))
+    render
+    expect(rendered).to have_css('.accordion-section.summary .snippet', text: /Text  needs to be sanitized/)
+  end
+
   describe "Index Summary" do
     summary_text = 'Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet. Nullam tincidunt a nisi eu pretium'
 
