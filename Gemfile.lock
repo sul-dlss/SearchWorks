@@ -212,7 +212,7 @@ GEM
     modernizr-rails (2.7.1)
     multi_json (1.13.1)
     multipart-post (2.0.0)
-    mysql2 (0.5.0)
+    mysql2 (0.4.10)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
@@ -377,6 +377,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mysql2 (~> 0.4.0)
   puma (~> 3.7)
   quick_search-arxiv_searcher
   quick_search-core (= 0.1.1)
