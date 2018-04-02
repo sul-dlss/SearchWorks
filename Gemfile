@@ -84,7 +84,7 @@ gem 'deprecation'
 gem 'blacklight', '~> 6.0'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
-gem "jettywrapper", "~> 1.7"
+gem "jettywrapper", "~> 1.7", require: false
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
