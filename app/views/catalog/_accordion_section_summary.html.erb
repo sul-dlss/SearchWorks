@@ -8,10 +8,10 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
     </button>
     <div class="snippet <%= id %>-summary-snippet" data-behavior="trunk8">
-      <%= summary_data %>
+      <%= sanitize summary_data %>
     </div>
     <div class="details <%= id %>-summary" aria-expanded="false">
-      <%= summary_data %>
+      <%= sanitize summary_data %>
     </div>
   </div>
 
