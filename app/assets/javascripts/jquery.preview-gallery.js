@@ -121,6 +121,16 @@
         var previewDivs = $('.preview-container');
         var previewIndex = previewDivs.index($previewTarget) + 1;
         $itemsPerRow = itemsPerRow();
+        /* 
+        / If $itemsPerRow is NaN or 0 we should return here. If not we are going 
+        / to have a bad time with an infinite while loop. This only manifests
+        / on the show page when using the "back" button to get back to a show
+        / page using the browse nearby feature.
+        */
+        if ($itemsPerRow === NaN || $itemsPerRow === 0) {
+          return;
+        }
+
         if (previewIndex % $itemsPerRow !== 0){
           while (previewIndex % $itemsPerRow !== 0){
             previewIndex++;
