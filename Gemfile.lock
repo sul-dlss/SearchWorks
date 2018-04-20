@@ -313,7 +313,7 @@ GEM
       rails (> 3.2.0)
     orm_adapter (0.5.0)
     parallel (1.12.1)
-    parser (2.5.0.4)
+    parser (2.5.1.0)
       ast (~> 2.4.0)
     parslet (1.8.0)
     poltergeist (1.17.0)
