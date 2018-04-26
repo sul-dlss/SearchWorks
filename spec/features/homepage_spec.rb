@@ -21,7 +21,7 @@ feature 'Homepage' do
         text: 'Library website'
       )
       expect(page).to have_css(
-        'a[href="https://stanford.idm.oclc.org/login?url=https://yewno.com/edu"]',
+        'a[href="https://stanford.idm.oclc.org/login?url=https://discover.yewno.com"]', # rubocop:disable LineLength
         text: 'Yewno'
       )
     end
