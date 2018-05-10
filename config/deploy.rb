@@ -9,7 +9,8 @@ set :deploy_to, '/opt/app/bento/bento'
 
 set :linked_files, fetch(:linked_files, []).push(
   'config/database.yml',
-  'config/honeybadger.yml'
+  'config/honeybadger.yml',
+  'config/newrelic.yml'
 )
 
 set :linked_dirs, fetch(:linked_dirs, []).push(
