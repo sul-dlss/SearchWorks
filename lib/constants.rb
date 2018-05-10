@@ -409,6 +409,7 @@ module Constants
     'LOCK-HOLDS' => 'Locked stacks: Ask at circulation desk',
     'LOCK-JPN' => 'Locked stacks: Ask at circulation desk',
     'LOCK-KOR' => 'Locked stacks: Ask at circulation desk',
+    'LOCK-STK-O' => 'Locked stacks (Oversize): Ask at circulation desk',
     'LOCKED-DIS' => 'Locked stacks: Ask at circulation desk',
     'LOCKED-MAP' => 'Locked map files: Ask at circulation desk',
     'LOCKED-STK' => 'Locked stacks: Ask at circulation desk',
