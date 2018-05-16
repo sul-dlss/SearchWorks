@@ -1,6 +1,6 @@
 module QuickSearch
   class ArticleSearcher < QuickSearch::Searcher
-    delegate :results, :total, :facets, to: :@response
+    delegate :results, :total, :facets, to: :search
 
     def search
       @response ||= ::ArticleSearchService.new.search(q)
