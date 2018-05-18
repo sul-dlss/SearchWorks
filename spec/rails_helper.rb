@@ -20,7 +20,7 @@ Capybara.register_driver(:headless_chrome) do |app|
 end
 
 Capybara.javascript_driver = :headless_chrome
-Capybara.default_wait_time = 15
+Capybara.default_max_wait_time = 15
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

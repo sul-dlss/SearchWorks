@@ -20,7 +20,8 @@ describe 'Jump links', js: true do
         ],
         total: 666_666,
         facets: [],
-        highlighted_facet_values: []
+        highlighted_facet_values: [],
+        additional_facet_details: nil
       )
     end
 
