@@ -649,6 +649,7 @@ module Constants
     'VARIES' => 'Ask at circulation desk',
     'VAULT' => 'Vault',
     'VROOMAN' => 'Vrooman Collection',
+    'VROOMAN2' => 'Vrooman Collection, 2nd Floor',
     'W7-CASE-MP' => 'Request for use at Map Center (W7 case map)',
     'W7-CASE-MT' => 'Request for use at Map Center (W7 matted maps)',
     'W7-CASE-MD' => 'Request for use at Map Center (W7 map case)',
