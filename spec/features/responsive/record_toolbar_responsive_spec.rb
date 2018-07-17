@@ -3,66 +3,107 @@ require "spec_helper"
 describe "Record toolbar", js: true, feature: true do
   before do
     stub_oclc_response('', for: '12345')
-    visit search_catalog_path f: {format: ["Book"]}
-    page.find("a", text: "An object").click
+    visit search_catalog_path f: { format: ['Book'] }
   end
 
   describe " - tablet view (768px - 980px) - " do
-    it "should display all toolbar items" do
-      within "#content" do
-        expect(page).to have_css("div.record-toolbar", visible: true)
+    context 'a citable item' do
+      before { page.find('a', text: 'An object').click }
 
-        within "div.navbar-header" do
-          expect(page).to_not have_css("button.navbar-toggle", visible: true)
-          expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
-          expect(page).not_to have_css("a.previous", visible: true)
-          expect(page).to have_css("a.next", visible: true)
+      it 'should display a cite this link toolbar items' do
+        expect(page).to have_css('div.record-toolbar', visible: true)
+        within '#content' do
+          within 'div.navbar-collapse' do
+            expect(page).to have_css('li a', text: 'Cite')
+          end
         end
+      end
+    end
 
-        within "div.navbar-collapse" do
-          expect(page).to have_css("li a", text: "Cite")
-          expect(page).to have_css("li button", text: "Send to")
-          expect(page).to have_css("form label", text: "Select")
+    context 'any item' do
+      before do
+        # Specifically trying to not get the first item in the results
+        within '.document-position-1' do
+          page.find('h3 a').click
+        end
+      end
+
+      it "should display all toolbar items" do
+        within "#content" do
+          expect(page).to have_css("div.record-toolbar", visible: true)
+
+          within "div.navbar-header" do
+            expect(page).to_not have_css("button.navbar-toggle", visible: true)
+            expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
+            expect(page).to have_css("a.previous", visible: true)
+            expect(page).to have_css("a.next", visible: true)
+          end
+
+          within "div.navbar-collapse" do
+            expect(page).to have_css("li button", text: "Send to")
+            expect(page).to have_css("form label", text: "Select")
+          end
         end
       end
     end
   end
 
   describe " - mobile landscape view (480px - 767px) - " do
-    it "should display correct toolbar items" do
-      page.driver.resize("700", "700")
-      within "#content" do
-        expect(page).to have_css("div.record-toolbar", visible: true)
+    context 'a citable item' do
+      before { page.find('a', text: 'An object').click }
 
-        within "div.navbar-header" do
-          expect(page).to have_css("button.navbar-toggle", visible: true)
-          expect(page).to have_css("a.btn.btn-sul-toolbar", text:"", visible: true)
-          expect(page).not_to have_css("a.previous", visible: true)
-          expect(page).to have_css("a.next", visible: true)
+      it 'renders a cite this link' do
+        page.driver.resize('700', '700')
+        within '#content' do
+          expect(page).to have_css('div.record-toolbar', visible: true)
+
+          page.find("button.navbar-toggle").click
+
+          within 'div.navbar-collapse' do
+            expect(page).to have_css('li a', text: 'Cite', visible: true)
+            expect(page).to_not have_css("li a", text: "RefWorks", visible: true)
+            expect(page).to_not have_css("li a", text: "EndNote", visible: true)
+          end
         end
+      end
+    end
 
-        expect(page).to_not have_css("div.navbar-collapse", visible: true)
+    context 'any item' do
+      before do
+        # Specifically trying to not get the first item in the results
+        within '.document-position-1' do
+          page.find('h3 a').click
+        end
+      end
+      it "should display correct toolbar items" do
+        page.driver.resize('700', '700')
+        within "#content" do
+          expect(page).to have_css("div.record-toolbar", visible: true)
 
-        page.find("button.navbar-toggle").click
+          within "div.navbar-header" do
+            expect(page).to have_css("button.navbar-toggle", visible: true)
+            expect(page).to have_css("a.btn.btn-sul-toolbar", text:"", visible: true)
+            expect(page).to have_css("a.previous", visible: true)
+            expect(page).to have_css("a.next", visible: true)
+          end
 
-        within "div.navbar-collapse" do
-          expect(page).to have_css("li a", text: "Cite", visible: true)
-          expect(page).to have_css("li button", text: "Send to", visible: true)
-          expect(page).to have_css("form label", text: "Select", visible: true)
-          expect(page).to_not have_css("li a", text: "text", visible: true)
-          expect(page).to_not have_css("li a", text: "email", visible: true)
-          expect(page).to_not have_css("li a", text: "RefWorks", visible: true)
-          expect(page).to_not have_css("li a", text: "EndNote", visible: true)
-          expect(page).to_not have_css("li a", text: "printer", visible: true)
-          click_button "Send to"
-          expect(page).to have_css("li a", text: "text", visible: true)
-          expect(page).to have_css("li a", text: "email", visible: true)
-          expect(page).to have_css("li a", text: "RefWorks", visible: true)
-          expect(page).to have_css("li a", text: "EndNote", visible: true)
-          expect(page).to have_css("li a", text: "printer", visible: true)
+          expect(page).to_not have_css("div.navbar-collapse", visible: true)
+
+          page.find("button.navbar-toggle").click
+
+          within "div.navbar-collapse" do
+            expect(page).to have_css("li button", text: "Send to", visible: true)
+            expect(page).to have_css("form label", text: "Select", visible: true)
+            expect(page).to_not have_css("li a", text: "text", visible: true)
+            expect(page).to_not have_css("li a", text: "email", visible: true)
+            expect(page).to_not have_css("li a", text: "printer", visible: true)
+            click_button "Send to"
+            expect(page).to have_css("li a", text: "text", visible: true)
+            expect(page).to have_css("li a", text: "email", visible: true)
+            expect(page).to have_css("li a", text: "printer", visible: true)
+          end
         end
       end
     end
   end
-
 end
