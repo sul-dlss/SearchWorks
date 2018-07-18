@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe BlacklightHelper do
-  it "#application_name should be overridden" do
-    expect(application_name).to eq "SearchWorks"
-  end
   describe "#document_partial_name" do
     let(:marc) { SolrDocument.new(marcxml: '<xml />') }
     let(:mods) { SolrDocument.new(modsxml: '<xml />') }

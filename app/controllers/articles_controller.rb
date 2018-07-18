@@ -200,14 +200,12 @@ class ArticlesController < ApplicationController
       send_emails_to_all_recipients
 
       respond_to do |format|
-        format.html { redirect_to solr_document_path(params['id']) }
-        format.js { render 'email_success' }
+        format.html { render 'email_success', layout: !request.xhr? }
       end and return
     end
 
     respond_to do |format|
-      format.html
-      format.js { render layout: false }
+      format.html { render layout: !request.xhr? }
     end
   end
 

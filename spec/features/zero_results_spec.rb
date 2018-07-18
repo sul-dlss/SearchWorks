@@ -49,10 +49,10 @@ feature "Zero results" do
     before { stub_article_service(docs: []) }
 
     scenario 'displays backend lookup links', js: true do
-      visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] })
+      visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] }, search_field: 'search')
 
       # Has zero results because we pass an empty array of docs, but is sucessfully searching
-      expect(page).to have_link('Keyword > Kittens... found 0 results', href: %r{.*/articles\?q=Kittens})
+      expect(page).to have_link('All fields > Kittens... found 0 results', href: %r{.*/articles\?q=Kittens})
     end
   end
 end

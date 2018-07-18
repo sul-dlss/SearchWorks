@@ -1,4 +1,4 @@
-<% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{application_name} articles") %>
+<% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} articles") %>
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>

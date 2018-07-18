@@ -16,11 +16,12 @@ feature 'Backend lookup', js: true do
   scenario 'lookup should return additional results on the results page' do
     visit search_catalog_path(
       q: 'statement',
-      f: { access_facet: ['Online'] }
+      f: { access_facet: ['Online'] },
+      search_field: 'search'
     )
 
     within '.zero-results' do
-      expect(page).to have_css('a', text: /Keyword > statement/)
+      expect(page).to have_css('a', text: /All fields > statement/)
       expect(page).to have_css('strong', text: /found 1 results/)
     end
   end
