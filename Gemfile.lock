@@ -463,7 +463,7 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
     scrub_rb (1.0.1)
-    selenium-webdriver (3.13.0)
+    selenium-webdriver (3.12.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     simplecov (0.16.1)
@@ -597,7 +597,7 @@ DEPENDENCIES
   rubocop (~> 0.36)
   ruby-oembed
   sass-rails (~> 5.0)
-  selenium-webdriver
+  selenium-webdriver (!= 3.13.0)
   simplecov (~> 0.14)
   spring
   spring-watcher-listen (~> 2.0.0)
