@@ -16,7 +16,7 @@
     <![endif]-->
 
     <title><%= render_page_title %></title>
-    <%= opensearch_description_tag application_name, opensearch_catalog_path(format: 'xml') %>
+    <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= stylesheet_link_tag 'print', media: 'print' %>

@@ -1,4 +1,4 @@
-<% @page_title = t 'blacklight_advanced_search.page_title', application_name: "#{application_name} catalog" %>
+<% @page_title = t 'blacklight_advanced_search.page_title', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <% unless (search_context_str = render_search_to_s( advanced_search_context)).blank? %>
   <div class="constraints well search_history">
     <h4><%= t 'blacklight_advanced_search.form.search_context' %></h4>
