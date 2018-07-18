@@ -31,6 +31,8 @@
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
 
+  <lib dir="${solr.install.dir:../../../..}/contrib" regex="CJKFoldingFilter-1.0.4.jar" />
+
   <dataDir>${solr.blacklight-core.data.dir:}</dataDir>
 
   <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
@@ -826,43 +828,36 @@
       <str name="facet.field">author_other_facet</str>
       <str name="facet.field">building_facet</str>
         <str name="f.building_facet.facet.method">enum</str>
-      <str name="facet.field">location_facet</str>
-        <str name="f.location_facet.facet.method">enum</str>
-      <str name="facet.field">callnum_top_facet</str>
-        <str name="f.callnum_top_facet.facet.method">enum</str>
-        <str name="facet.field">lc_alpha_facet</str>
-          <str name="f.lc_alpha_facet.facet.method">enum</str>
-        <str name="facet.field">lc_b4cutter_facet</str>
-        <str name="facet.field">dewey_1digit_facet</str>
-          <str name="f.dewey_1digit_facet.facet.method">enum</str>
-        <str name="facet.field">dewey_2digit_facet</str>
-        <str name="facet.field">dewey_b4cutter_facet</str>
-        <str name="facet.field">gov_doc_type_facet</str>
-          <str name="f.gov_doc_type_facet.facet.method">enum</str>
+        <str name="f.building_facet.facet.limit">-1</str>
+      <str name="facet.field">callnum_facet_hsim</str>
+        <str name="f.callnum_facet_hsim.facet.sort">index</str>
+        <int name="f.callnum_facet_hsim.facet.limit">-1</int>
+        <str name="f.callnum_facet_hsim.facet.method">enum</str>
+      <str name="facet.field">stanford_work_facet_hsim</str>
+        <str name="f.stanford_work_facet_hsim.facet.sort">index</str>
+        <int name="f.stanford_work_facet_hsim.facet.limit">-1</int>
+        <str name="f.stanford_work_facet_hsim.facet.method">enum</str>
+      <str name="facet.field">stanford_dept_sim</str>
       <str name="facet.field">collection</str>
         <str name="f.collection.facet.method">enum</str>
       <str name="facet.field">db_az_subject</str>
+        <str name="f.db_az_subject.facet.method">enum</str>
         <str name="f.db_az_subject.facet.sort">index</str>
-        <int name="f.db_az_subject.facet.limit">-1</int>
-      <str name="facet.field">display_type</str>
-        <str name="f.display_type.facet.method">enum</str>
       <str name="facet.field">era_facet</str>
-      <str name="facet.field">fund_facet</str>
       <str name="facet.field">format_main_ssim</str>
-        <int name="f.format_main_ssim.facet.limit">20</int>
+        <int name="f.format_main_ssim.facet.limit">-1</int>
         <str name="f.format_main_ssim.facet.method">enum</str>
       <str name="facet.field">format_physical_ssim</str>
         <int name="f.format_physical_ssim.facet.limit">20</int>
         <str name="f.format_physical_ssim.facet.method">enum</str>
+      <str name="facet.field">format</str> <!-- deprecated: left for continuity in UI URLs for old formats --> -->
+        <str name="f.format.facet.method">enum</str>
+      <str name="facet.field">fund_facet</str>
       <str name="facet.field">genre_ssim</str>
         <str name="f.genre_ssim.facet.method">enum</str>
-      <str name="facet.field">format</str>
-        <int name="f.format.facet.limit">20</int>
-        <str name="f.format.facet.method">enum</str>
       <str name="facet.field">geographic_facet</str>
       <str name="facet.field">language</str>
-      <str name="facet.field">pub_date_group_facet</str>
-        <str name="f.pub_date_group_facet.facet.method">enum</str>
+      <str name="facet.field">location_facet</str>
       <str name="facet.field">pub_date</str>
       <str name="facet.field">pub_year_tisim</str>
       <str name="facet.field">topic_facet</str>

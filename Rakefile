@@ -15,6 +15,7 @@ task :ci => [:environment] do
   if Rails.env.test?
     Rake::Task["db:migrate"].invoke
     SolrWrapper.wrap do |solr|
+      FileUtils.cp File.join(__dir__, 'config', 'solr_configs', 'CJKFoldingFilter-1.0.4.jar'), File.join(solr.instance_dir, 'contrib')
       solr.with_collection(name: 'blacklight-core') do
         Rake::Task["searchworks:fixtures"].invoke
         Rake::Task["searchworks:spec:without-data-integration"].invoke
