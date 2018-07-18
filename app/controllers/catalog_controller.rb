@@ -199,41 +199,41 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
 
-    config.add_search_field("search") do |field|
-      field.label = "All fields"
-      field.solr_local_parameters = {
-        :pf2 => "$p2",
-        :pf3 => "$pf3"
+    config.add_search_field('search') do |field|
+      field.label = 'All fields'
+      field.solr_parameters = {
+        pf2: '${pf2}',
+        pf3: '${pf3}'
       }
     end
 
     config.add_search_field('search_title') do |field|
       field.label = "Title"
-      field.solr_local_parameters = {
-        :qf  => '$qf_title',
-        :pf  => '$pf_title',
-        :pf3 => "$pf3_title",
-        :pf2 => "$pf2_title"
+      field.solr_parameters = {
+        qf:  '${qf_title}',
+        pf:  '${pf_title}',
+        pf3: '${pf3_title}',
+        pf2: '${pf2_title}'
       }
     end
 
     config.add_search_field('search_author') do |field|
       field.label = "Author/Contributor"
-      field.solr_local_parameters = {
-        :qf  => '$qf_author',
-        :pf  => '$pf_author',
-        :pf3 => "$pf3_author",
-        :pf2 => "$pf2_author"
+      field.solr_parameters = {
+        qf:  '${qf_author}',
+        pf:  '${pf_author}',
+        pf3: '${pf3_author}',
+        pf2: '${pf2_author}'
       }
     end
 
     config.add_search_field('subject_terms') do |field|
       field.label = "Subject"
-      field.solr_local_parameters = {
-        :qf  => '$qf_subject',
-        :pf  => '$pf_subject',
-        :pf3 => "$pf3_subject",
-        :pf2 => "$pf2_subject"
+      field.solr_parameters = {
+        qf:  '${qf_subject}',
+        pf:  '${pf_subject}',
+        pf3: '${pf3_subject}',
+        pf2: '${pf2_subject}'
       }
     end
 
@@ -241,20 +241,20 @@ class CatalogController < ApplicationController
       field.label = "Call number"
       field.include_in_advanced_search = false
       field.advanced_parse = false
-      field.solr_parameters = { :defType => "lucene"}
+      field.solr_parameters = { defType: 'lucene' }
       field.solr_local_parameters = {
-        :df => 'callnum_search'
+        df: 'callnum_search'
       }
     end
 
     config.add_search_field('search_series') do |field|
       field.label = "Series"
       field.include_in_advanced_search = false
-      field.solr_local_parameters = {
-        :qf  => '$qf_series',
-        :pf  => '$pf_series',
-        :pf3 => "$pf3_series",
-        :pf2 => "$pf2_series"
+      field.solr_parameters = {
+        qf:  '${qf_series}',
+        pf:  '${pf_series}',
+        pf3: '${pf3_series}',
+        pf2: '${pf2_series}'
       }
     end
 
@@ -262,33 +262,33 @@ class CatalogController < ApplicationController
     config.add_search_field("series_search") do |field|
       field.label = "Series title"
       field.include_in_simple_select = false
-      field.solr_local_parameters = {
-        :qf  => '$qf_series',
-        :pf  => '$pf_series',
-        :pf3 => "$pf3_series",
-        :pf2 => "$pf2_series"
+      field.solr_parameters = {
+        qf:  '${qf_series}',
+        pf:  '${pf_series}',
+        pf3: '${pf3_series}',
+        pf2: '${pf2_series}'
       }
     end
 
     config.add_search_field("pub_search") do |field|
       field.label = "Place, publisher, year"
       field.include_in_simple_select = false
-      field.solr_local_parameters = {
-        :qf  => "$qf_pub_info",
-        :pf  => "$pf_pub_info",
-        :pf3 => "$pf3_pub_info",
-        :pf2 => "$pf2_pub_info"
+      field.solr_parameters = {
+        qf:  '${qf_pub_info}',
+        pf:  '${pf_pub_info}',
+        pf3: '${pf3_pub_info}',
+        pf2: '${pf2_pub_info}'
       }
     end
 
     config.add_search_field("isbn_search") do |field|
       field.label = "ISBN/ISSN etc."
       field.include_in_simple_select = false
-      field.solr_local_parameters = {
-        :qf  => "$qf_number",
-        :pf  => "$pf_number",
-        :pf3 => "$pf3_number",
-        :pf2 => "$pf2_number"
+      field.solr_parameters = {
+        qf:  '${qf_number}',
+        pf:  '${pf_number}',
+        pf3: '${pf3_number}',
+        pf2: '${pf2_number}'
       }
     end
 
@@ -296,11 +296,11 @@ class CatalogController < ApplicationController
       field.label = "Author + Title"
       field.include_in_simple_select = false
       field.include_in_advanced_search = false
-      field.solr_local_parameters = {
-        :qf  => 'author_title_search',
-        :pf  => 'author_title_search^10',
-        :pf3 => 'author_title_search^5',
-        :pf2 => 'author_title_search^2'
+      field.solr_parameters = {
+        qf:  'author_title_search',
+        pf:  'author_title_search^10',
+        pf3: 'author_title_search^5',
+        pf2: 'author_title_search^2'
       }
     end
 

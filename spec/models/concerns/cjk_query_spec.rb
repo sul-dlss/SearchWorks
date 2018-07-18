@@ -19,7 +19,7 @@ describe CJKQuery do
       search_builder.modify_params_for_cjk_advanced(solr_params)
     end
     describe "unprocessed" do
-      let(:solr_q) {"_query_:\"{!edismax pf2=$p2 pf3=$pf3}#{q_str}\" AND
+      let(:solr_q) {"_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND
@@ -57,7 +57,7 @@ describe CJKQuery do
       end
     end
   end
-  
+
   describe "cjk_query_addl_params" do
     it "should leave unrelated solr params alone" do
       blacklight_params.merge!(:q => '舊小說', :search_field => 'search_title')
@@ -123,7 +123,7 @@ describe CJKQuery do
         # mm is changed:  minimum adds in non-cjk tokens
         expect(solr_params['mm']).to eq '5<86%'
         expect(solr_params['qs']).to eq 0
-      end        
+      end
     end
 
     describe "qf and pf local solr params" do
@@ -140,7 +140,7 @@ describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"})
       end
-      
+
       it "should exhibit the same behavior without a search_field" do
         blacklight_params.merge!(:q => q_str)
         solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"}
@@ -291,7 +291,7 @@ describe CJKQuery do
               expect(search_builder.send(:cjk_mm_qs_params, "abc 董桥 abc")['mm']).to be_nil
             end
           end
-        end # mixed      
+        end # mixed
       end # 1 or 2 CJK chars
 
       describe "only CJK chars in query" do
