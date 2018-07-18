@@ -4,6 +4,13 @@ namespace :searchworks do
   desc "Run SearchWorks local installation steps"
   task :install => [:environment] do
     Rake::Task["db:migrate"].invoke
+    SolrWrapper.wrap do |solr|
+      FileUtils.cp(Rails.root.join('config', 'solr_configs', 'CJKFoldingFilter-1.0.4.jar'),
+                   File.join(solr.instance_dir, 'contrib'))
+      solr.with_collection(name: 'blacklight-core') do
+        Rake::Task['searchworks:fixtures'].invoke
+      end
+    end
   end
   desc "Index test fixtures"
   task :fixtures do

@@ -11,6 +11,7 @@ You'll need common dependencies for building rails applications such as a javasc
 After cloning the repository
 
     $ bundle install
+    $ rake searchworks:install
 
 The installation script will
 
@@ -20,7 +21,7 @@ You will need to update the configuration in `config/settings.yml` for various p
 
 Start Solr
 
-To start Solr, you can use the `solr_wrapper` command. However, if starting from a fresh instance, you may first need to run `rake ci` so that the CJK tokenizer gets copied into the appropriate directory.
+To start Solr, you can use the `solr_wrapper` command. However, if starting from a fresh instance, you may first need to run `rake searchworks:install` or `rake ci` so that the CJK tokenizer gets copied into the appropriate directory.
 
     $ solr_wrapper
 
