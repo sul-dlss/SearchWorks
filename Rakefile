@@ -8,18 +8,17 @@ Rails.application.load_tasks
 task(:default).clear
 task default: [:ci]
 
-ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.6.0.zip"
-require 'jettywrapper'
+require 'solr_wrapper'
 
 desc "Execute the test build that runs on travis"
 task :ci => [:environment] do
   if Rails.env.test?
     Rake::Task["db:migrate"].invoke
-    Rake::Task["searchworks:download_and_unzip_jetty"].invoke
-    Rake::Task["searchworks:copy_solr_configs"].invoke
-    Jettywrapper.wrap(Jettywrapper.load_config) do
-      Rake::Task["searchworks:fixtures"].invoke
-      Rake::Task["searchworks:spec:without-data-integration"].invoke
+    SolrWrapper.wrap do |solr|
+      solr.with_collection(name: 'blacklight-core') do
+        Rake::Task["searchworks:fixtures"].invoke
+        Rake::Task["searchworks:spec:without-data-integration"].invoke
+      end
     end
   else
     system("rake ci RAILS_ENV=test")

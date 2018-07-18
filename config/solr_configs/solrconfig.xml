@@ -21,14 +21,15 @@
  It is *not* a good example to work from.
 -->
 <config>
-  <luceneMatchVersion>LUCENE_40</luceneMatchVersion>
+  <luceneMatchVersion>LUCENE_6_6_5</luceneMatchVersion>
   <!--  The DirectoryFactory to use for indexes.
         solr.StandardDirectoryFactory, the default, is filesystem based.
         solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
   <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
 
-  <lib dir="../lib/contrib/analysis-extras/lib" />
-  <lib dir="../lib/contrib/analysis-extras/lucene-libs" />
+  <!-- NOTE:  these 2 lib dirs are here for testing only and do NOT go in the prod file -->
+  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
+  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
 
   <dataDir>${solr.blacklight-core.data.dir:}</dataDir>
 
@@ -41,7 +42,6 @@
   <requestHandler name="standard" class="solr.StandardRequestHandler" />
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
   <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
-  <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
 
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
