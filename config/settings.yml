@@ -18,10 +18,6 @@ PURL_EMBED_URL_SCHEME: 'https://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'https://purl.stanford.edu/'
 FEEDBACK_ALERT: <%= false %>
 GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
-NEW_RELIC_LICENSE_KEY: 'NEW_RELIC_KEY'
-NEW_RELIC_APP_NAME: "SearchWorks"
-NEW_RELIC_ENABLED: false
-NEW_RELIC_LOCATION: 'Unknown'
 PAGINATION_THRESHOLD: 250
 BOOKPLATES: true
 BOOKPLATES_EXHIBIT_URL: 'https://exhibits.stanford.edu/digital-bookplates'
