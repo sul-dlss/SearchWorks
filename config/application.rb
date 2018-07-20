@@ -14,6 +14,12 @@ module SearchWorks
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # TODO: A temporary Rails 5.2+ fix until we determine master_key policies
+    def credentials
+      Rails.application.secrets
+    end
+
     require 'constants'
     require 'page_location'
     require 'access_panel'
