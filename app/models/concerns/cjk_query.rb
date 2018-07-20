@@ -5,30 +5,18 @@ module CJKQuery
   extend ActiveSupport::Concern
 
   def modify_params_for_cjk(solr_params)
-    if blacklight_params && blacklight_params[:q].present?
-      q_str = blacklight_params[:q]
-      number_of_unigrams = cjk_unigrams_size(q_str)
-      if number_of_unigrams > 2
-        solr_params.merge!(cjk_mm_qs_params(q_str))
-      end
-      # adjust q local params to use cjk flavored fields for qf, pf
-      if number_of_unigrams > 0
-        case blacklight_params[:search_field]
-          when 'search', nil
-            #solr_params[:q] = "{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"
-            solr_params[:q] = cjk_qf_pf_params(nil, q_str)
-          when 'search_title'
-            solr_params[:q] = cjk_qf_pf_params('title', q_str)
-          when 'search_author'
-            solr_params[:q] = cjk_qf_pf_params('author', q_str)
-          when 'search_series'
-            solr_params[:q] = cjk_qf_pf_params('series', q_str)
-          when 'subject_terms'
-            solr_params[:q] = cjk_qf_pf_params('subject', q_str)
-          # do not change for  author_title, call_number or advanced
-        end
-      end
-    end
+    return unless blacklight_params && blacklight_params[:q].present?
+    q_str = blacklight_params[:q]
+    number_of_unigrams = cjk_unigrams_size(q_str)
+    solr_params.merge!(cjk_mm_qs_params(q_str)) if number_of_unigrams > 2
+    # adjust q local params to use cjk flavored fields for qf, pf
+
+    return if cjk_config.blank?
+    return unless number_of_unigrams.positive?
+    solr_params[:qf] = cjk_config[:qf]
+    solr_params[:pf] = cjk_config[:pf]
+    solr_params[:pf2] = cjk_config[:pf2]
+    solr_params[:pf3] = cjk_config[:pf3]
   end
 
   def modify_params_for_cjk_advanced(solr_params)
@@ -53,6 +41,16 @@ module CJKQuery
   end
 
   private
+
+  def cjk_config
+    if search_field.nil? && blacklight_config&.search_fields&.values&.first&.cjk_solr_parameters
+      blacklight_config.search_fields.values.first.cjk_solr_parameters
+    elsif search_field&.cjk_solr_parameters
+      search_field.cjk_solr_parameters
+    else
+      {}
+    end
+  end
 
   def modify_field_key_for_cjk(field_key)
     field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')

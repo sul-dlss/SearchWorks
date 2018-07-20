@@ -205,6 +205,12 @@ class CatalogController < ApplicationController
         pf2: '${pf2}',
         pf3: '${pf3}'
       }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_cjk}',
+        pf:  '${pf_cjk}',
+        pf2: '${pf2_cjk}',
+        pf3: '${pf3_cjk}'
+      }
     end
 
     config.add_search_field('search_title') do |field|
@@ -214,6 +220,12 @@ class CatalogController < ApplicationController
         pf:  '${pf_title}',
         pf3: '${pf3_title}',
         pf2: '${pf2_title}'
+      }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_title_cjk}',
+        pf:  '${pf_title_cjk}',
+        pf3: '${pf3_title_cjk}',
+        pf2: '${pf2_title_cjk}'
       }
     end
 
@@ -225,6 +237,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_author}',
         pf2: '${pf2_author}'
       }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_author_cjk}',
+        pf:  '${pf_author_cjk}',
+        pf3: '${pf3_author_cjk}',
+        pf2: '${pf2_author_cjk}'
+      }
     end
 
     config.add_search_field('subject_terms') do |field|
@@ -234,6 +252,12 @@ class CatalogController < ApplicationController
         pf:  '${pf_subject}',
         pf3: '${pf3_subject}',
         pf2: '${pf2_subject}'
+      }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_subject_cjk}',
+        pf:  '${pf_subject_cjk}',
+        pf3: '${pf3_subject_cjk}',
+        pf2: '${pf2_subject_cjk}'
       }
     end
 
@@ -256,6 +280,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_series_cjk}',
+        pf:  '${pf_series_cjk}',
+        pf3: '${pf3_series_cjk}',
+        pf2: '${pf2_series_cjk}'
+      }
     end
 
     # Adds search fields for use only in BL Advanced Search
@@ -268,6 +298,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_series_cjk}',
+        pf:  '${pf_series_cjk}',
+        pf3: '${pf3_series_cjk}',
+        pf2: '${pf2_series_cjk}'
+      }
     end
 
     config.add_search_field("pub_search") do |field|
@@ -278,6 +314,12 @@ class CatalogController < ApplicationController
         pf:  '${pf_pub_info}',
         pf3: '${pf3_pub_info}',
         pf2: '${pf2_pub_info}'
+      }
+      field.cjk_solr_parameters = {
+        qf:  '${qf_pub_info_cjk}',
+        pf:  '${pf_pub_info_cjk}',
+        pf3: '${pf3_pub_info_cjk}',
+        pf2: '${pf2_pub_info_cjk}'
       }
     end
 
