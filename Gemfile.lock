@@ -215,7 +215,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.4, >= 0.4.0)
       dry-types (~> 0.13.1)
-    ebsco-eds (1.0.0)
+    ebsco-eds (0.3.19.pre)
       activesupport (~> 5.0)
       bibtex-ruby (~> 4.0)
       citeproc (>= 1.0.4, < 2.0)
@@ -447,7 +447,7 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    sanitize (4.6.5)
+    sanitize (4.6.6)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)
@@ -568,7 +568,7 @@ DEPENDENCIES
   devise-guests
   devise-remote-user
   dlss-capistrano
-  ebsco-eds
+  ebsco-eds (= 0.3.19.pre)
   faraday (~> 0.10)
   font-awesome-rails
   honeybadger (~> 3.0)
