@@ -176,7 +176,7 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
-    honeybadger (3.3.1)
+    honeybadger (4.0.0)
     httpclient (2.8.3)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
