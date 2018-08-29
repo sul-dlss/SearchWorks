@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema name="Stanford Searchworks" version="1.5">
   <uniqueKey>id</uniqueKey>
+  <similarity class="solr.ClassicSimilarityFactory"/>
 
   <fields>
     <!-- needed by some of Solr 4.0 functionality like transaction log or partial documents update -->
@@ -13,8 +14,8 @@
     <field name="marcxml" type="string" indexed="false" stored="true" />
     <!-- all_search: catch-all field for searchable text; stored for hit highlighting />-->
     <field name="all_search" type="text" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
-    <field name="all_unstem_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="vern_all_search" type="text" indexed="true" stored="false" />
+    <field name="all_unstem_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="vern_all_search" type="text" indexed="true" stored="true" />
 
     <!-- Format Field: facet and display
       (deprecated in favor of format_main_ssim, left for continuity in UI URLs for old formats) -->
@@ -26,9 +27,9 @@
     <!-- Standard Number Fields -->
     <!-- allow end users to search our index by ISBN and ISSN; more values than display isbn/issn.-->
     <!-- isbn_search is type text to accommodate hyphens that could be entered by end users -->
-    <field name="isbn_search" type="text" indexed="true" stored="false" multiValued="true" omitNorms="true" />
+    <field name="isbn_search" type="text" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!-- text for issn to accommodate hyphen present or not -->
-    <field name="issn_search" type="text" indexed="true" stored="false" multiValued="true" omitNorms="true"/>
+    <field name="issn_search" type="text" indexed="true" stored="true" multiValued="true" omitNorms="true"/>
     <!-- display fields to allow external lookups (e.g. Google book search, xISBN, xISSN ...) -->
     <field name="isbn_display" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="issn_display" type="string" indexed="false" stored="true" multiValued="true" />
@@ -36,22 +37,22 @@
     <field name="oclc" type="string_punct_stop" indexed="true" stored="true" multiValued="true" />
 
     <!-- Title Search Fields -->
-    <field name="title_245a_exact_search" type="text_anchored" indexed="true" stored="false" />
-    <field name="title_245a_search" type="text" indexed="true" stored="false" />
-    <field name="vern_title_245a_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_245a_unstem_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_245_search" type="text" indexed="true" stored="false" />
-    <field name="vern_title_245_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_245_unstem_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_uniform_search" type="text" indexed="true" stored="false" />
-    <field name="vern_title_uniform_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_uniform_unstem_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="title_variant_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_title_variant_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="title_variant_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="title_related_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_title_related_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="title_related_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="title_245a_exact_search" type="text_anchored" indexed="true" stored="true" />
+    <field name="title_245a_search" type="text" indexed="true" stored="true" />
+    <field name="vern_title_245a_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_245a_unstem_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_245_search" type="text" indexed="true" stored="true" />
+    <field name="vern_title_245_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_245_unstem_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_uniform_search" type="text" indexed="true" stored="true" />
+    <field name="vern_title_uniform_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_uniform_unstem_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="title_variant_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_title_variant_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="title_variant_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="title_related_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_title_related_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="title_related_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
 
     <!-- Title Display fields -->
     <field name="title_display" type="string" indexed="false" stored="true" />
@@ -69,30 +70,30 @@
     <field name="title_sort" type="alphaSort" indexed="true" stored="true" />
 
     <!-- Series Search Fields -->
-    <field name="series_exact_search" type="text_anchored" indexed="true" stored="false" multiValued="true" />
-    <field name="series_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_series_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="series_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="series_exact_search" type="text_anchored" indexed="true" stored="true" multiValued="true" />
+    <field name="series_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_series_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="series_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
 
     <!-- Author Title Search Fields -->
-    <field name="author_title_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="author_title_search" type="text" indexed="true" stored="true" multiValued="true" />
 
     <!-- Author Search Fields -->
-    <field name="author_1xx_search" type="text" indexed="true" stored="false" />
-    <field name="vern_author_1xx_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="author_1xx_unstem_search" type="textNoStem" indexed="true" stored="false" />
-    <field name="author_7xx_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_author_7xx_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="author_7xx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="author_8xx_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_author_8xx_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="author_8xx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="author_1xx_search" type="text" indexed="true" stored="true" />
+    <field name="vern_author_1xx_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="author_1xx_unstem_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="author_7xx_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_author_7xx_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="author_7xx_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="author_8xx_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_author_8xx_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="author_8xx_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
 
     <!-- Author Facet Fields -->
-    <field name="author_person_facet" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="author_other_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="author_person_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="author_other_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
-    <field name="author_sort" type="alphaSort" indexed="true" stored="false" />
+    <field name="author_sort" type="alphaSort" indexed="true" stored="true" />
 
     <!-- Author Display Fields -->
     <field name="author_person_display" type="string" indexed="false" stored="true" multiValued="true" />
@@ -105,51 +106,51 @@
     <field name="vern_author_meeting_display" type="string" indexed="false" stored="true" />
 
     <!--  Subject Search Fields -->
-    <field name="topic_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_topic_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="topic_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="topic_subx_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_topic_subx_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="topic_subx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="geographic_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_geographic_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="geographic_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="geographic_subz_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_geographic_subz_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="geographic_subz_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_other_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_subject_other_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_other_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_other_subvy_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_subject_other_subvy_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_other_subvy_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_all_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_subject_all_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="subject_all_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="topic_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_topic_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="topic_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="topic_subx_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_topic_subx_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="topic_subx_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="geographic_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_geographic_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="geographic_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="geographic_subz_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_geographic_subz_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="geographic_subz_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_other_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_subject_other_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_other_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_other_subvy_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_subject_other_subvy_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_other_subvy_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_all_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_subject_all_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="subject_all_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
 
     <field name="db_az_subject" type="string" indexed="true" stored="true" multiValued="true" />
-    <field name="db_az_subject_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="db_az_subject_search" type="text" indexed="true" stored="true" multiValued="true" />
 
     <!-- Subject Facet Fields -->
-    <field name="topic_facet" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="geographic_facet" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="era_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="topic_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="geographic_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="era_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- Subject Display Fields -->
     <field name="topic_display" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="subject_other_display" type="string" indexed="false" stored="true" multiValued="true" />
 
     <!-- Publishing Fields -->
-    <field name="pub_search" type="text" indexed="true" stored="false" omitNorms="true" multiValued="true"/>
-    <field name="vern_pub_search" type="textNoStem" indexed="true" stored="false" omitNorms="true" multiValued="true"/>
-    <field name="pub_country" type="text" indexed="true" stored="false" omitNorms="true"/>
+    <field name="pub_search" type="text" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
+    <field name="vern_pub_search" type="textNoStem" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
+    <field name="pub_country" type="text" indexed="true" stored="true" omitNorms="true"/>
     <!-- TODO: should pub_date_search be a date or a text field? -->
-    <field name="pub_date_search" type="text" indexed="true" stored="false" omitNorms="true"/>
-    <field name="pub_date_sort" type="alphaSort" indexed="true" stored="false" />
+    <field name="pub_date_search" type="text" indexed="true" stored="true" omitNorms="true"/>
+    <field name="pub_date_sort" type="alphaSort" indexed="true" stored="true" />
     <!-- Pub Date Facet Fields -->
     <!-- pub_date was facet and display, now deprecated -->
     <field name="pub_date" type="string" indexed="true" stored="true" />
-    <field name="pub_year_tisim" type="tint" indexed="true" stored="false" multiValued="true" />
+    <field name="pub_year_tisim" type="tint" indexed="true" stored="true" multiValued="true" />
     <field name="pub_display" type="string" indexed="false" stored="true" multiValued="true"/>
     <!-- pub_date_display can be removed after all DOR objects reindexed in Feb/March 2016 -->
     <field name="pub_date_display" type="string" indexed="false" stored="true"/>
@@ -171,33 +172,33 @@
     <field name="vern_physical" type="textNoStem" indexed="true" stored="true" multiValued="true" />
 
     <!-- Table of Contents -->
-    <field name="toc_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_toc_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="toc_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="toc_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_toc_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="toc_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
     <!-- Context -->
-    <field name="context_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_context_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="context_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="context_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_context_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="context_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
     <!-- Summary -->
-    <field name="summary_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_summary_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="summary_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="summary_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_summary_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="summary_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
     <field name="summary_display" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- Award -->
-    <field name="award_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="award_search" type="text" indexed="true" stored="true" multiValued="true" />
 
     <!-- Item Info Fields (derived from 999) -->
     <!-- Call Number Fields -->
-    <field name="callnum_search" type="callnum_ws" indexed="true" stored="false" multiValued="true"/>
+    <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
-    <field name="shelfkey" type="alphaSort" indexed="true" stored="false" multiValued="true"/>
-    <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="false" multiValued="true"/>
+    <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true"/>
+    <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true"/>
 
-    <field name="barcode_search" type="string_punct_stop" indexed="true" stored="false" multiValued="true" />
+    <field name="barcode_search" type="string_punct_stop" indexed="true" stored="true" multiValued="true" />
     <field name="preferred_barcode" type="string" indexed="false" stored="true" />
-    <field name="access_facet" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="building_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="building_facet" type="string" indexed="true" stored="true" multiValued="true" />
     <!-- barcode -|- lib -|- location -|- lopped_callnum -|- shelfkey -|- reverse_shelfkey -|- full_callnum -|- callnum_show_sort  -->
     <field name="item_display" type="string" indexed="false" stored="true" multiValued="true" />
 
@@ -208,24 +209,24 @@
     <!-- fund_code -|- druid -|- filename -|- long fund code text  -->
     <field name="bookplates_display" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- Druid of the fund bookplate -->
-    <field name="fund_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="fund_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- Location facet -->
-    <field name="location_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="location_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
 
     <!-- Course Reserve Fields -->
-    <field name="crez_course_id_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="crez_course_name_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
-    <field name="crez_instructor_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="crez_course_id_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="crez_course_name_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="crez_instructor_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
     <!--  instructor, course facet field names are exposed to end users in SW -->
-    <field name="instructor" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="course" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="instructor" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="course" type="string" indexed="true" stored="true" multiValued="true" />
     <!-- crez_course_info is a facet and display field at this time (2012-03-21) -->
     <field name="crez_course_info" type="string" indexed="true" stored="true" multiValued="true" />
     <!-- the next two facets are not used in SW at this time -->
-    <field name="crez_dept_facet" type="string" indexed="true" stored="false" multiValued="true" />
-    <field name="crez_desk_facet" type="string" indexed="true" stored="false" multiValued="true" />
+    <field name="crez_dept_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="crez_desk_facet" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- *************** additional fields for DOR objects  ****************** -->
     <field name="druid" type="string_punct_stop" indexed="true" stored="true" />
@@ -235,7 +236,7 @@
     <!-- collection_with_title: easy way to indicate item's parent coll title in UI (may be deprecated in future) -->
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- collection_search: allow searching within collections for aggr. colls -->
-    <field name="collection_search" type="string_punct_stop" indexed="true" stored="false" multiValued="true" omitNorms="true" />
+    <field name="collection_search" type="string_punct_stop" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!-- display_type: used by UI code, e.g. 'file' or 'image' -->
     <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
     <field name="display_type" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
@@ -250,23 +251,23 @@
 
     <!-- *************** dynamic field types  ****************** -->
 <!--
-    <dynamicField name="*_unstem_search" type="textNoStem" stored="false" indexed="true" multiValued="true" />
-    <dynamicField name="*_search" type="text" stored="false" indexed="true" multiValued="true" />
-    <dynamicField name="*_facet" type="string" stored="false" indexed="true" multiValued="true" />
+    <dynamicField name="*_unstem_search" type="textNoStem" stored="true" indexed="true" multiValued="true" />
+    <dynamicField name="*_search" type="text" stored="true" indexed="true" multiValued="true" />
+    <dynamicField name="*_facet" type="string" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="*_display" type="string" stored="true" indexed="false" multiValued="true"/>
 -->
-    <dynamicField name="*_si" type="string" stored="false" indexed="true" omitNorms="true" />
-    <dynamicField name="*_sim" type="string" stored="false" indexed="true" multiValued="true" omitNorms="true" />
+    <dynamicField name="*_si" type="string" stored="true" indexed="true" omitNorms="true" />
+    <dynamicField name="*_sim" type="string" stored="true" indexed="true" multiValued="true" omitNorms="true" />
     <dynamicField name="*_ss" type="string" stored="true" indexed="false" omitNorms="true" />
     <dynamicField name="*_ssm" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" />
     <dynamicField name="*_ssi" type="string" stored="true" indexed="true" omitNorms="true" />
     <dynamicField name="*_ssim" type="string" stored="true" indexed="true" multiValued="true" omitNorms="true" />
     <dynamicField name="*_isi" type="tint" stored="true" indexed="true" omitNorms="true" />
     <dynamicField name="*_isim" type="tint" stored="true" indexed="true" multiValued="true" omitNorms="true" />
-    <dynamicField name="*_sort" type="alphaSort" stored="false" indexed="true"/>
+    <dynamicField name="*_sort" type="alphaSort" stored="true" indexed="true"/>
     <dynamicField name="*_xml" type="string" stored="true" indexed="false" omitNorms="true" />
-    <dynamicField name="cjk_*" type="text_cjk" stored="false" indexed="true" multiValued="true" />
-    <dynamicField name="*_hsim" type="string_hierarch" stored="false" indexed="true" multiValued="true" />
+    <dynamicField name="cjk_*" type="text_cjk" stored="true" indexed="true" multiValued="true" />
+    <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
   </fields>
 
   <!-- copy fields -->
@@ -359,11 +360,23 @@
 
     <!-- Analyzed Text, general case -->
     <fieldtype name="text" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
-      <analyzer>
+      <analyzer type="index">
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
         <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
-        <filter class="solr.WordDelimiterFilterFactory"
+        <filter class="solr.WordDelimiterGraphFilterFactory"
+          splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
+          splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
+          catenateAll="0" preserveOriginal="0" stemEnglishPossessive="1" />
+        <filter class="solr.FlattenGraphFilterFactory"/>
+        <filter class="solr.SnowballPorterFilterFactory" language="English"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
+        <filter class="solr.WordDelimiterGraphFilterFactory"
           splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
           splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
           catenateAll="0" preserveOriginal="0" stemEnglishPossessive="1" />
@@ -374,11 +387,21 @@
 
     <!-- Analyzed Text, no Stemming -->
     <fieldtype name="textNoStem" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
-      <analyzer>
+      <analyzer type="index">
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
         <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
-        <filter class="solr.WordDelimiterFilterFactory"
+        <filter class="solr.WordDelimiterGraphFilterFactory"
+          splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
+          splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
+          catenateAll="0" preserveOriginal="0" stemEnglishPossessive="0" />
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
+        <filter class="solr.WordDelimiterGraphFilterFactory"
           splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
           splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
           catenateAll="0" preserveOriginal="0" stemEnglishPossessive="0" />
@@ -387,7 +410,7 @@
 
     <!-- Left and Right Anchored Analyzed Text, no Stemming -->
     <fieldtype name="text_anchored" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
-      <analyzer>
+      <analyzer type="index">
         <!-- put beginning and ending anchors on field value, removing trailing chars -->
         <!-- watch out for query time whitespace separated chars that will be processed as their own token stream, e.g. in 'felines : warm and fuzzy' -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(.*[\S&amp;&amp;[^\.\,:;/=&lt;&gt;\(\)\[\]\&amp;\|]])[\s\.\,:;/=&lt;&gt;\(\)\[\]\&amp;\|]*$" replacement="aaaaaa$1zzzzzz"/>
@@ -397,7 +420,23 @@
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms_both_anchors.txt" ignoreCase="true" expand="true"/>
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms_left_anchor.txt" ignoreCase="true" expand="true"/>
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms_right_anchor.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.WordDelimiterFilterFactory"
+        <filter class="solr.WordDelimiterGraphFilterFactory"
+          splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
+          splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
+          catenateAll="0" preserveOriginal="0" stemEnglishPossessive="1" />
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <!-- put beginning and ending anchors on field value, removing trailing chars -->
+        <!-- watch out for query time whitespace separated chars that will be processed as their own token stream, e.g. in 'felines : warm and fuzzy' -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(.*[\S&amp;&amp;[^\.\,:;/=&lt;&gt;\(\)\[\]\&amp;\|]])[\s\.\,:;/=&lt;&gt;\(\)\[\]\&amp;\|]*$" replacement="aaaaaa$1zzzzzz"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms_both_anchors.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms_left_anchor.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms_right_anchor.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.WordDelimiterGraphFilterFactory"
           splitOnCaseChange="1" generateWordParts="1" catenateWords="1"
           splitOnNumerics="0" generateNumberParts="1" catenateNumbers="1"
           catenateAll="0" preserveOriginal="0" stemEnglishPossessive="1" />
@@ -411,13 +450,13 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{InHangul_Jamo}\p{InHangul_Compatibility_Jamo}\p{InHangul_Syllables}][\p{InBopomofo}\p{InBopomofo_Extended}\p{InCJK_Compatibility}\p{InCJK_Compatibility_Forms}\p{InCJK_Compatibility_Ideographs}\p{InCJK_Compatibility_Ideographs_Supplement}\p{InCJK_Radicals_Supplement}\p{InCJK_Symbols_And_Punctuation}\p{InCJK_Unified_Ideographs}\p{InCJK_Unified_Ideographs_Extension_A}\p{InCJK_Unified_Ideographs_Extension_B}\p{InKangxi_Radicals}\p{InHalfwidth_And_Fullwidth_Forms}\p{InIdeographic_Description_Characters}]*)\s+(?=[\p{InHangul_Jamo}\p{InHangul_Compatibility_Jamo}\p{InHangul_Syllables}\p{InBopomofo}\p{InBopomofo_Extended}\p{InCJK_Compatibility}\p{InCJK_Compatibility_Forms}\p{InCJK_Compatibility_Ideographs}\p{InCJK_Compatibility_Ideographs_Supplement}\p{InCJK_Radicals_Supplement}\p{InCJK_Symbols_And_Punctuation}\p{InCJK_Unified_Ideographs}\p{InCJK_Unified_Ideographs_Extension_A}\p{InCJK_Unified_Ideographs_Extension_B}\p{InKangxi_Radicals}\p{InHalfwidth_And_Fullwidth_Forms}\p{InIdeographic_Description_Characters}])" replacement="$1"/>
         <!-- a korean char guaranteed at the end of the pattern:    pattern="([\p{Hangul}\p{Han}])\s+(?=[\p{Han}\s]*\p{Hangul})" -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{InHangul_Jamo}\p{InHangul_Compatibility_Jamo}\p{InHangul_Syllables}\p{InBopomofo}\p{InBopomofo_Extended}\p{InCJK_Compatibility}\p{InCJK_Compatibility_Forms}\p{InCJK_Compatibility_Ideographs}\p{InCJK_Compatibility_Ideographs_Supplement}\p{InCJK_Radicals_Supplement}\p{InCJK_Symbols_And_Punctuation}\p{InCJK_Unified_Ideographs}\p{InCJK_Unified_Ideographs_Extension_A}\p{InCJK_Unified_Ideographs_Extension_B}\p{InKangxi_Radicals}\p{InHalfwidth_And_Fullwidth_Forms}\p{InIdeographic_Description_Characters}])\s+(?=[\p{InBopomofo}\p{InBopomofo_Extended}\p{InCJK_Compatibility}\p{InCJK_Compatibility_Forms}\p{InCJK_Compatibility_Ideographs}\p{InCJK_Compatibility_Ideographs_Supplement}\p{InCJK_Radicals_Supplement}\p{InCJK_Symbols_And_Punctuation}\p{InCJK_Unified_Ideographs}\p{InCJK_Unified_Ideographs_Extension_A}\p{InCJK_Unified_Ideographs_Extension_B}\p{InKangxi_Radicals}\p{InHalfwidth_And_Fullwidth_Forms}\p{InIdeographic_Description_Characters}\s]*[\p{InHangul_Jamo}\p{InHangul_Compatibility_Jamo}\p{InHangul_Syllables}])" replacement="$1"/>
+        <charFilter class="edu.stanford.lucene.analysis.ICUCustomTransformCharFilterFactory" id="edu/stanford/lucene/analysis/stanford_cjk_transliterations.txt" />
+        <charFilter class="edu.stanford.lucene.analysis.ICUTransformCharFilterFactory" id="Traditional-Simplified" />
+        <charFilter class="edu.stanford.lucene.analysis.ICUTransformCharFilterFactory" id="Katakana-Hiragana" />
         <tokenizer class="solr.ICUTokenizerFactory" />
         <filter class="solr.CJKWidthFilterFactory"/>
-        <filter class="edu.stanford.lucene.analysis.CJKFoldingFilterFactory"/>
-        <filter class="solr.ICUTransformFilterFactory" id="Traditional-Simplified"/>
-        <filter class="solr.ICUTransformFilterFactory" id="Katakana-Hiragana"/>
         <filter class="solr.ICUFoldingFilterFactory"/>   <!-- NFKC, case folding, diacritics removed -->
-        <filter class="solr.CJKBigramFilterFactory" han="true" hiragana="true" katakana="true" hangul="true" outputUnigrams="true" />
+        <filter class="solr.CJKBigramFilterFactory" han="false" hiragana="false" katakana="false" hangul="true" outputUnigrams="true" />
       </analyzer>
     </fieldtype>
 
