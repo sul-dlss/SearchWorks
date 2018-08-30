@@ -453,6 +453,10 @@
         <charFilter class="edu.stanford.lucene.analysis.ICUCustomTransformCharFilterFactory" id="edu/stanford/lucene/analysis/stanford_cjk_transliterations.txt" />
         <charFilter class="edu.stanford.lucene.analysis.ICUTransformCharFilterFactory" id="Traditional-Simplified" />
         <charFilter class="edu.stanford.lucene.analysis.ICUTransformCharFilterFactory" id="Katakana-Hiragana" />
+        <charFilter class="solr.PatternReplaceCharFilterFactory"
+          pattern="([\p{InHiragana}\p{InKatakana}\p{InKatakana_Phonetic_Extensions}])([^\p{InHiragana}\p{InKatakana}\p{InKatakana_Phonetic_Extensions}])"
+          replacement="$1 $2"
+        />
         <tokenizer class="solr.ICUTokenizerFactory" />
         <filter class="solr.CJKWidthFilterFactory"/>
         <filter class="solr.ICUFoldingFilterFactory"/>   <!-- NFKC, case folding, diacritics removed -->
