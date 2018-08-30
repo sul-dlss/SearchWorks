@@ -267,6 +267,7 @@
     <dynamicField name="*_sort" type="alphaSort" stored="true" indexed="true"/>
     <dynamicField name="*_xml" type="string" stored="true" indexed="false" omitNorms="true" />
     <dynamicField name="cjk_*" type="text_cjk" stored="true" indexed="true" multiValued="true" />
+    <dynamicField name="ja_*" type="text_ja" indexed="true" stored="true" multiValued="true" />
     <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
   </fields>
 
@@ -340,6 +341,31 @@
   <copyField source="vern_summary_search" dest="cjk_summary_search" />
   <copyField source="vern_all_search" dest="cjk_all_search" />
 
+  <!-- Japanese fields -->
+  <copyField source="vern_title_245a_search" dest="ja_title_245a_search" />
+  <copyField source="vern_title_245_search" dest="ja_title_245_search" />
+  <copyField source="vern_title_uniform_search" dest="ja_title_uniform_search" />
+  <copyField source="vern_title_variant_search" dest="ja_title_variant_search" />
+  <copyField source="vern_title_related_search" dest="ja_title_related_search" />
+  <copyField source="vern_series_search" dest="ja_series_search" />
+  <copyField source="vern_author_1xx_search" dest="ja_author_1xx_search" />
+  <copyField source="vern_author_7xx_search" dest="ja_author_7xx_search" />
+  <copyField source="vern_author_8xx_search" dest="ja_author_8xx_search" />
+  <copyField source="vern_topic_search" dest="ja_topic_search" />
+  <copyField source="vern_topic_subx_search" dest="ja_topic_subx_search" />
+  <copyField source="vern_geographic_search" dest="ja_geographic_search" />
+  <copyField source="vern_geographic_subz_search" dest="ja_geographic_subz_search" />
+  <copyField source="vern_subject_other_search" dest="ja_subject_other_search" />
+  <copyField source="vern_subject_other_subvy_search" dest="ja_subject_other_subvy_search" />
+  <copyField source="vern_subject_all_search" dest="ja_subject_all_search" />
+  <copyField source="vern_pub_search" dest="ja_pub_search" />
+  <copyField source="vern_physical" dest="ja_physical_search" />
+  <copyField source="toc_search" dest="ja_toc_search" />  <!-- we find CJK text in regular 505s -->
+  <copyField source="vern_toc_search" dest="ja_toc_search" />
+  <copyField source="vern_context_search" dest="ja_context_search" />
+  <copyField source="summary_search" dest="ja_summary_search" />  <!-- we find CJK text in regular 520s -->
+  <copyField source="vern_summary_search" dest="ja_summary_search" />
+  <copyField source="vern_all_search" dest="ja_all_search" />
 
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
@@ -463,6 +489,59 @@
         <filter class="solr.CJKBigramFilterFactory" han="false" hiragana="false" katakana="false" hangul="true" outputUnigrams="true" />
       </analyzer>
     </fieldtype>
+
+    <!-- Japanese using morphological analysis (see text_cjk for a configuration using bigramming)
+
+           NOTE: If you want to optimize search for precision, use default operator AND in your request
+           handler config (q.op) Use OR if you would like to optimize for recall (default).
+      -->
+
+    <fieldType name="text_ja" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="false">
+      <analyzer>
+        <!-- Kuromoji Japanese morphological analyzer/tokenizer (JapaneseTokenizer)
+
+           Kuromoji has a search mode (default) that does segmentation useful for search.  A heuristic
+           is used to segment compounds into its parts and the compound itself is kept as synonym.
+
+           Valid values for attribute mode are:
+              normal: regular segmentation
+              search: segmentation useful for search with synonyms compounds (default)
+            extended: same as search mode, but unigrams unknown words (experimental)
+
+           For some applications it might be good to use search mode for indexing and normal mode for
+           queries to reduce recall and prevent parts of compounds from being matched and highlighted.
+           Use <analyzer type="index"> and <analyzer type="query"> for this and mode normal in query.
+
+           Kuromoji also has a convenient user dictionary feature that allows overriding the statistical
+           model with your own entries for segmentation, part-of-speech tags and readings without a need
+           to specify weights.  Notice that user dictionaries have not been subject to extensive testing.
+
+           User dictionary attributes are:
+                     userDictionary: user dictionary filename
+             userDictionaryEncoding: user dictionary encoding (default is UTF-8)
+
+           See lang/userdict_ja.txt for a sample user dictionary file.
+
+           Punctuation characters are discarded by default.  Use discardPunctuation="false" to keep them.
+        -->
+        <tokenizer class="solr.JapaneseTokenizerFactory" mode="search"/>
+        <!--<tokenizer class="solr.JapaneseTokenizerFactory" mode="search" userDictionary="lang/userdict_ja.txt"/>-->
+        <!-- Reduces inflected verbs and adjectives to their base/dictionary forms (辞書形) -->
+        <filter class="solr.JapaneseBaseFormFilterFactory"/>
+        <!-- Removes tokens with certain part-of-speech tags -->
+        <filter class="solr.JapanesePartOfSpeechStopFilterFactory" tags="stoptags_ja.txt" />
+        <!-- Normalizes full-width romaji to half-width and half-width kana to full-width (Unicode NFKC subset) -->
+        <filter class="solr.CJKWidthFilterFactory"/>
+        <!-- Local customization, at the moment we are not interested in using ja stopwords -->
+        <!-- Removes common tokens typically not useful for search, but have a negative effect on ranking -->
+        <!-- <filter class="solr.StopFilterFactory" ignoreCase="true" words="lang/stopwords_ja.txt" /> -->
+        <!-- Normalizes common katakana spelling variations by removing any last long sound character (U+30FC) -->
+        <filter class="solr.JapaneseKatakanaStemFilterFactory" minimumLength="4"/>
+        <!-- Lower-cases romaji characters -->
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
 
     <!-- single token analyzed text, for sorting.  Punctuation is significant. -->
     <fieldtype name="alphaSort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
