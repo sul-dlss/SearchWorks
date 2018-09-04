@@ -29,7 +29,9 @@ OkComputer::Registry.register 'sw_solr', OkComputer::SolrCheck.new(solr_url)
 # stacks
 # hours api
 # SSRC_REQUESTS_URL
-# LIVE_LOOKUP_URL
 # STACKMAP_API_URL
 # BOOKPLATES_EXHIBIT_URL
 # OCLC.BASE_URL
+
+OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)
+OkComputer.make_optional %w[live_lookups]
