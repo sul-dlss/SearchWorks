@@ -93,7 +93,7 @@ describe Citation do
   describe '#api_url' do
     let(:document) { SolrDocument.new(oclc: '12345') }
     it 'returns a URL with the given document field' do
-      expect(subject.send(:api_url)).to match %r{/citations/12345\?cformat=all}
+      expect(subject.api_url).to match %r{/citations/12345\?cformat=all}
     end
   end
 
@@ -121,6 +121,12 @@ describe Citation do
       grouped_citations = described_class.grouped_citations(citations)
       expect(grouped_citations.keys.length).to eq 2
       expect(grouped_citations.keys.first).to eq 'PREFERRED CITATION'
+    end
+  end
+
+  describe '.test_api_url' do
+    it 'is a URL without the field present' do
+      expect(described_class.test_api_url).to match %r{/citations/\?cformat=all}
     end
   end
 end

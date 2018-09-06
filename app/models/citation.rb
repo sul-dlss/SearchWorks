@@ -19,6 +19,10 @@ class Citation
     end
   end
 
+  def api_url
+    "#{base_url}/#{field}?cformat=all&wskey=#{api_key}"
+  end
+
   class << self
     def grouped_citations(all_citations)
       citations = all_citations.each_with_object({}) do |cites, hash|
@@ -36,6 +40,12 @@ class Citation
 
     def preferred_citation_key
       'PREFERRED CITATION'
+    end
+
+    # This being a valid test URL is predicated on the fact
+    # that passing no OCLC number to the citations API responds successfully
+    def test_api_url
+      new(SolrDocument.new).api_url
     end
   end
 
@@ -90,10 +100,6 @@ class Citation
       Rails.logger.warn("HTTP GET for #{api_url} failed with #{e}")
       ''
     end
-  end
-
-  def api_url
-    "#{base_url}/#{field}?cformat=all&wskey=#{api_key}"
   end
 
   def field
