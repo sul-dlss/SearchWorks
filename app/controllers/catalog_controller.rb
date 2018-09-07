@@ -468,6 +468,38 @@ class CatalogController < ApplicationController
 
   Blacklight::ActionBuilder.new(self, :citation, {}).build
 
+  # get search results from the solr index
+  def home
+    @response = Rails.cache.fetch('home_page_search_results', expires_in: 24.hours) do
+      builder = search_builder.with(params)
+      response = repository.search(builder)
+
+      # make the response cacheable
+      response.document_model = nil
+      response.blacklight_config = nil
+      response
+    end
+
+    @response.document_model = SolrDocument
+    @response.blacklight_config = blacklight_config
+
+    @document_list = @response.documents
+
+    respond_to do |format|
+      format.html { render action: 'index' }
+      format.rss  { render action: 'index', :layout => false }
+      format.atom { render action: 'index', :layout => false }
+      format.json do
+        @presenter = Blacklight::JsonPresenter.new(@response,
+                                                   @document_list,
+                                                   facets_from_request,
+                                                   blacklight_config)
+      end
+      additional_response_formats(format)
+      document_export_formats(format)
+    end
+  end
+
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
   def email

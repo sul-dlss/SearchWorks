@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "catalog#index"
+  root to: "catalog#home"
 
   get "view/:id/librarian_view" => "catalog#librarian_view", :as => :librarian_view
   get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
