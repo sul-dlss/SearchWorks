@@ -11,11 +11,11 @@
 # how to start up solr, generally for automated testing. 
 
 development:
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr" %>
+  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
   adapter: solr
 test: &test
-  url: <%= ENV['TEST_SOLR_URL'] || "http://127.0.0.1:8888/solr" %>
+  url: <%= ENV['TEST_SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
   adapter: solr
 production:
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr" %>
+  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
   adapter: solr

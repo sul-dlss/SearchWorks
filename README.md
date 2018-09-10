@@ -16,21 +16,14 @@ After cloning the repository
 The installation script will
 
 1. Migrate the database
-2. Download jetty to the rails root if does not already exist.
-3. Unzip the downloaded jetty
-4. Copy over local solr configuration and schema
-5. Index the local development/test fixtures
 
 You will need to update the configuration in `config/settings.yml` for various parts of the app to work.  Please check that file for more information.
 
-Start jetty
+Start Solr
 
-    $ rake jetty:start
+To start Solr, you can use the `solr_wrapper` command. However, if starting from a fresh instance, you may first need to run `rake searchworks:install` or `rake ci` so that the CJK tokenizer gets copied into the appropriate directory.
 
-or
-
-    $ cd jetty
-    $ java -jar start.jar
+    $ solr_wrapper
 
 Start the rails app
 

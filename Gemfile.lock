@@ -258,11 +258,6 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    jettywrapper (1.8.3)
-      activesupport (>= 3.0.0)
-      childprocess
-      i18n
-      logger
     jquery-datatables-rails (3.4.0)
       actionpack (>= 3.1)
       jquery-rails
@@ -409,6 +404,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     retina_tag (1.4.1)
       rails (>= 3.1)
+    retriable (3.1.2)
     roadie (3.4.0)
       css_parser (~> 1.4)
       nokogiri (~> 1.5)
@@ -472,6 +468,11 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
     slop (3.6.0)
+    solr_wrapper (2.0.0)
+      faraday
+      retriable
+      ruby-progressbar
+      rubyzip
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -573,7 +574,6 @@ DEPENDENCIES
   font-awesome-rails
   honeybadger (~> 3.0)
   jbuilder (~> 2.5)
-  jettywrapper (~> 1.7)
   jquery-datatables-rails
   jquery-rails
   launchy
@@ -599,6 +599,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver (!= 3.13.0)
   simplecov (~> 0.14)
+  solr_wrapper
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

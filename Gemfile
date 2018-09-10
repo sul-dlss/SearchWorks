@@ -58,6 +58,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'poltergeist', '>= 1.8.1'
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
+  gem 'solr_wrapper'
 end
 
 group :sqlite do
@@ -84,7 +85,6 @@ gem 'deprecation'
 gem 'blacklight', '~> 6.0'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
-gem "jettywrapper", "~> 1.7", require: false
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
