@@ -239,7 +239,7 @@ class CatalogController < ApplicationController
         pf3: '${pf3_author}',
         pf2: '${pf2_author}'
       }
-      field.adv_solr_parameters = {
+      field.solr_adv_parameters = {
         qf:  '$qf_author',
         pf:  '$pf_author',
         pf3: '$pf3_author',
@@ -261,7 +261,7 @@ class CatalogController < ApplicationController
         pf3: '${pf3_subject}',
         pf2: '${pf2_subject}'
       }
-      field.solr_parameters = {
+      field.solr_adv_parameters = {
         qf:  '$qf_subject',
         pf:  '$pf_subject',
         pf3: '$pf3_subject',
