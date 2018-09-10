@@ -3,11 +3,13 @@
 require "spec_helper"
 
 describe CJKQuery do
-  let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
+  # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
+  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config)) }
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
   before do
+    allow(search_builder).to receive(:blacklight_params).and_return(blacklight_params)
     search_builder.extend(CJKQuery)
   end
   describe "modify_params_for_cjk_advanced" do
@@ -19,7 +21,7 @@ describe CJKQuery do
       search_builder.modify_params_for_cjk_advanced(solr_params)
     end
     describe "unprocessed" do
-      let(:solr_q) {"_query_:\"{!edismax pf2=$p2 pf3=$pf3}#{q_str}\" AND
+      let(:solr_q) {"_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND
@@ -57,7 +59,7 @@ describe CJKQuery do
       end
     end
   end
-  
+
   describe "cjk_query_addl_params" do
     it "should leave unrelated solr params alone" do
       blacklight_params.merge!(:q => '舊小說', :search_field => 'search_title')
@@ -123,63 +125,102 @@ describe CJKQuery do
         # mm is changed:  minimum adds in non-cjk tokens
         expect(solr_params['mm']).to eq '5<86%'
         expect(solr_params['qs']).to eq 0
-      end        
+      end
     end
 
-    describe "qf and pf local solr params" do
-      it "everything search should add cjk local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'search')
-        solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"}
+    describe 'qf and pf local solr params' do
+      it 'everything search should add cjk local params to q if CJK detected' do
+        blacklight_params.merge!(q: q_str, search_field: 'search')
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"})
-        expect(solr_params).to_not include({:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_cjk}',
+          pf:  '${pf_cjk}',
+          pf2: '${pf2_cjk}',
+          pf3: '${pf3_cjk}'
+        )
       end
-      it "should exhibit the same behavior when search_field = 'search'" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'search')
-        solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"}
+
+      it 'should exhibit the same behavior without a search_field' do
+        blacklight_params[:q] = q_str
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_cjk}',
+          pf:  '${pf_cjk}',
+          pf2: '${pf2_cjk}',
+          pf3: '${pf3_cjk}'
+        )
       end
-      
-      it "should exhibit the same behavior without a search_field" do
-        blacklight_params.merge!(:q => q_str)
-        solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"}
-        search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"})
-      end
-      it "should add cjk local params to q if it is a CJK unigram" do
+
+      it 'should add cjk local params to q if it is a CJK unigram' do
         q_uni = '飘'
-        blacklight_params.merge!(:q => q_uni, :search_field => 'search')
-        solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_uni}"}
+        blacklight_params.merge!(q: q_uni, search_field: 'search')
+        solr_params = { q: q_uni }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_uni}"})
-        expect(solr_params).to_not include({:q=>"{!pf2=$pf2 pf3=$pf3}#{q_uni}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_cjk}',
+          pf:  '${pf_cjk}',
+          pf2: '${pf2_cjk}',
+          pf3: '${pf3_cjk}'
+        )
       end
-      it "title search should add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'search_title')
-        solr_params = {:q=>"{!qf=$qf_title pf=$pf_title pf2=$pf2_title pf3=$pf3_title}#{q_str}"}
+
+      it 'title search should add CJK local params to q if CJK detected' do
+        blacklight_params.merge!(q: q_str, search_field: 'search_title')
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk}#{q_str}"})
-        expect(solr_params).to_not include({:q=>"{!qf=$qf_title pf=$pf_title pf2=$pf2_title pf3=$pf3_title}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_title_cjk}',
+          pf:  '${pf_title_cjk}',
+          pf2: '${pf2_title_cjk}',
+          pf3: '${pf3_title_cjk}'
+        )
       end
-      it "author search should add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'search_author')
-        solr_params = {:q=>"{!qf=$qf_author pf=$pf_author pf2=$pf2_author pf3=$pf3_author}#{q_str}"}
+
+      it 'author search should add CJK local params to q if CJK detected' do
+        blacklight_params.merge!(q: q_str, search_field: 'search_author')
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_author_cjk pf=$pf_author_cjk pf3=$pf3_author_cjk pf2=$pf2_author_cjk}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_author_cjk}',
+          pf:  '${pf_author_cjk}',
+          pf2: '${pf2_author_cjk}',
+          pf3: '${pf3_author_cjk}'
+        )
       end
-      it "subject search should add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'subject_terms')
-        solr_params = {:q=>"{!qf=$qf_subject pf=$pf_subject pf2=$pf2_subject pf3=$pf3_subject}#{q_str}"}
+
+      it 'subject search should add CJK local params to q if CJK detected' do
+        blacklight_params.merge!(q: q_str, search_field: 'subject_terms')
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_subject_cjk pf=$pf_subject_cjk pf3=$pf3_subject_cjk pf2=$pf2_subject_cjk}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_subject_cjk}',
+          pf:  '${pf_subject_cjk}',
+          pf2: '${pf2_subject_cjk}',
+          pf3: '${pf3_subject_cjk}'
+        )
       end
-      it "series search should add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'search_series')
-        solr_params = {:q=>"{!qf=$qf_series pf=$pf_series pf2=$pf2_series pf3=$pf3_series}#{q_str}"}
+
+      it 'series search should add CJK local params to q if CJK detected' do
+        blacklight_params.merge!(q: q_str, search_field: 'search_series')
+        solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to include({:q=>"{!qf=$qf_series_cjk pf=$pf_series_cjk pf3=$pf3_series_cjk pf2=$pf2_series_cjk}#{q_str}"})
+
+        expect(solr_params).to include(
+          qf:  '${qf_series_cjk}',
+          pf:  '${pf_series_cjk}',
+          pf2: '${pf2_series_cjk}',
+          pf3: '${pf3_series_cjk}'
+        )
       end
+
       it "advanced search should NOT add CJK local params to q if CJK detected" do
         blacklight_params.merge!(:description => q_str, :search_field => 'advanced')
         q_solr_param = {:q=>"_query_:\"{!edismax pf=$pf_description qf=$qf_description pf2=$pf_description2 pf3=$pf_description3}+#{q_str}\""}
@@ -203,12 +244,15 @@ describe CJKQuery do
       end
     end
 
-    it "should add mm, qs and CJK local params to q if CJK detected" do
-      blacklight_params.merge!(:q => q_str, :search_field => 'search')
-      solr_params = {:q=>"{!pf2=$pf2 pf3=$pf3}#{q_str}"}
+    it 'should add mm, qs and CJK local params to q if CJK detected' do
+      blacklight_params.merge!(q: q_str, search_field: 'search')
+      solr_params = { q: q_str }
       search_builder.modify_params_for_cjk(solr_params)
-      expect(solr_params).to include({:q=>"{!qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk}#{q_str}"})
-      expect(solr_params).to include({'mm'=>cjk_mm, 'qs'=>0})
+
+      expect(solr_params).to include(
+        'mm' => cjk_mm,
+        'qs' => 0
+      )
     end
   end
 
@@ -291,7 +335,7 @@ describe CJKQuery do
               expect(search_builder.send(:cjk_mm_qs_params, "abc 董桥 abc")['mm']).to be_nil
             end
           end
-        end # mixed      
+        end # mixed
       end # 1 or 2 CJK chars
 
       describe "only CJK chars in query" do
