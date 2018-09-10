@@ -201,10 +201,6 @@ class CatalogController < ApplicationController
 
     config.add_search_field('search') do |field|
       field.label = 'All fields'
-      field.solr_parameters = {
-        pf2: '${pf2}',
-        pf3: '${pf3}'
-      }
       field.cjk_solr_parameters = {
         qf:  '${qf_cjk}',
         pf:  '${pf_cjk}',
