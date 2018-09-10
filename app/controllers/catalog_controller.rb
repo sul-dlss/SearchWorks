@@ -217,6 +217,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_title}',
         pf2: '${pf2_title}'
       }
+      field.solr_adv_parameters = {
+        qf:  '$qf_title',
+        pf:  '$pf_title',
+        pf3: '$pf3_title',
+        pf2: '$pf2_title'
+      }
       field.cjk_solr_parameters = {
         qf:  '${qf_title_cjk}',
         pf:  '${pf_title_cjk}',
@@ -233,6 +239,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_author}',
         pf2: '${pf2_author}'
       }
+      field.adv_solr_parameters = {
+        qf:  '$qf_author',
+        pf:  '$pf_author',
+        pf3: '$pf3_author',
+        pf2: '$pf2_author'
+      }
       field.cjk_solr_parameters = {
         qf:  '${qf_author_cjk}',
         pf:  '${pf_author_cjk}',
@@ -248,6 +260,12 @@ class CatalogController < ApplicationController
         pf:  '${pf_subject}',
         pf3: '${pf3_subject}',
         pf2: '${pf2_subject}'
+      }
+      field.solr_parameters = {
+        qf:  '$qf_subject',
+        pf:  '$pf_subject',
+        pf3: '$pf3_subject',
+        pf2: '$pf2_subject'
       }
       field.cjk_solr_parameters = {
         qf:  '${qf_subject_cjk}',
@@ -276,6 +294,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
+      field.solr_adv_parameters = {
+        qf:  '$qf_series',
+        pf:  '$pf_series',
+        pf3: '$pf3_series',
+        pf2: '$pf2_series'
+      }
       field.cjk_solr_parameters = {
         qf:  '${qf_series_cjk}',
         pf:  '${pf_series_cjk}',
@@ -294,6 +318,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
+      field.solr_adv_parameters = {
+        qf:  '$qf_series',
+        pf:  '$pf_series',
+        pf3: '$pf3_series',
+        pf2: '$pf2_series'
+      }
       field.cjk_solr_parameters = {
         qf:  '${qf_series_cjk}',
         pf:  '${pf_series_cjk}',
@@ -311,6 +341,12 @@ class CatalogController < ApplicationController
         pf3: '${pf3_pub_info}',
         pf2: '${pf2_pub_info}'
       }
+      field.solr_adv_parameters = {
+        qf:  '$qf_pub_info',
+        pf:  '$pf_pub_info',
+        pf3: '$pf3_pub_info',
+        pf2: '$pf2_pub_info'
+      }
       field.cjk_solr_parameters = {
         qf:  '${qf_pub_info_cjk}',
         pf:  '${pf_pub_info_cjk}',
@@ -327,6 +363,12 @@ class CatalogController < ApplicationController
         pf:  '${pf_number}',
         pf3: '${pf3_number}',
         pf2: '${pf2_number}'
+      }
+      field.solr_adv_parameters = {
+        qf:  '$qf_number',
+        pf:  '$pf_number',
+        pf3: '$pf3_number',
+        pf2: '$pf2_number'
       }
     end
 
