@@ -8,11 +8,11 @@ Rails.application.load_tasks
 task(:default).clear
 task default: [:ci]
 
-require 'solr_wrapper'
-
 desc "Execute the test build that runs on travis"
 task :ci => [:environment] do
   if Rails.env.test?
+    require 'solr_wrapper'
+
     Rake::Task["db:migrate"].invoke
     SolrWrapper.wrap do |solr|
       FileUtils.cp File.join(__dir__, 'config', 'solr_configs', 'CJKFilterUtils-v2.1.jar'), File.join(solr.instance_dir, 'contrib')
