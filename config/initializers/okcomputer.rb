@@ -13,7 +13,7 @@ OkComputer::Registry.register 'rails_cache', OkComputer::GenericCacheCheck.new
 
 env = ENV['RAILS_ENV'] || 'test'
 solr_url = Blacklight.blacklight_yml[env]['url']
-OkComputer::Registry.register 'sw_solr', OkComputer::SolrCheck.new(solr_url)
+OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/admin/ping")
 
 # TODO:  add required checks
 # mailer
