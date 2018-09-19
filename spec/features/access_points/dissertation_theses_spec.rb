@@ -10,8 +10,7 @@ describe 'Dissertation Theses Access Point' do
   end
   it 'should include the dissertation/theses masthead' do
     within(".dissertation-theses-masthead") do
-      expect(page).to have_css('h1', text: 'Dissertations and theses')
-      expect(page).to have_css('li', count: 3)
+      expect(page).to have_css('h1', text: 'Theses and dissertations')
     end
   end
 end
