@@ -1,7 +1,7 @@
 ##
 # A mixin to add dynamic libary specific location facet support
 module LocationFacet
-  SUBLOCATION_LIBRARIES = ['Art & Architecture (Bowes)'].freeze
+  SUBLOCATION_LIBRARIES = ['Art & Architecture (Bowes)', 'Education (Cubberley)'].freeze
 
   extend ActiveSupport::Concern
 
