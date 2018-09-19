@@ -106,3 +106,4 @@ gem 'ebsco-eds', '0.3.19.pre' # Pin to 0.3.19.pre to fix an error in prod for no
 gem 'whenever' # manages cron jobs
 gem 'bitly' # For bit.ly
 gem 'bootsnap', require: false
+gem 'net-http-persistent' # for persistent http connections to solr

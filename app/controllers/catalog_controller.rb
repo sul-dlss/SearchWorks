@@ -45,6 +45,8 @@ class CatalogController < ApplicationController
       :"f.callnum_facet_hsim.facet.limit" => "-1"
     }
 
+    config.connection_config = config.connection_config.merge(http_adapter: :net_http_persistent)
+
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 
