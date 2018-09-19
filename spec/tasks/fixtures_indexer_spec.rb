@@ -2,9 +2,9 @@ require 'spec_helper'
 require 'fixtures_indexer'
 
 describe FixturesIndexer do
-  let(:stub_solr) { double('solr') }
+  let(:stub_solr) { double('solr', uri: URI.parse('http://localhost:8983/solr/blacklight-core')) }
   before do
-    expect(Blacklight.default_index).to receive(:connection).at_least(1).times.and_return(stub_solr)
+    allow(Blacklight.default_index).to receive(:connection).at_least(1).times.and_return(stub_solr)
   end
   describe "run" do
     it "should index the fixtures and commit them" do
@@ -38,6 +38,21 @@ describe FixturesIndexer do
       subject.file_list.each do |file|
         expect(file).to match /\/fixtures\/solr_documents\/.*.yml$/
       end
+    end
+  end
+
+  context 'when trying to index to something other than what is configured in the solr_wraper.yml' do
+    before do
+      allow_any_instance_of(described_class).to receive(:configured_blacklight_collection).and_return('might-be-prod')
+    end
+
+    it 'raises an error' do
+      expect do
+        subject.run
+      end.to raise_error(
+        ArgumentError,
+        a_string_including('You are trying to index to the "might-be-prod" collection')
+      )
     end
   end
 end
