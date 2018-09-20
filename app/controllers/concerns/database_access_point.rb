@@ -3,18 +3,7 @@ module DatabaseAccessPoint
 
   included do
     if self.respond_to?(:before_action)
-      before_action :default_databases_sort, only: :index
       before_action :add_database_topic_facet, only: [:index, :facet]
-    end
-  end
-
-  protected
-  def default_databases_sort
-    if page_location.access_point.databases? and params[:sort].blank?
-      title_sort = blacklight_config.sort_fields.map do |sort, config|
-        sort if config.label == "title"
-      end.compact.first
-      params[:sort] = title_sort
     end
   end
 
