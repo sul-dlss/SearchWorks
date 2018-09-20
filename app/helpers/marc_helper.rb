@@ -14,21 +14,19 @@ module MarcHelper
             end
           else
             field.each do |sub_field|
-              unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-                if tag == "590" and sub_field.code == "c"
-                  ckey = sub_field.value[/^(\d+)/]
-                  ckey_link = link_to(ckey,url_for(ckey))
-                  field_text << "#{sub_field.value.gsub(ckey,ckey_link)} " unless (ckey.nil? or ckey_link.nil?)
-                  field_text = field_text.html_safe
-                elsif linking_fields.include?(tag) and sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
-                  field_text << "#{link_to(sub_field.value, sub_field.value)} "
-                  field_text = field_text.html_safe
-                elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
-                  field_text << "<br/><span class='source'>#{Constants::SOURCES[sub_field.value]}</span>"
-                  field_text = field_text.html_safe
-                else
-                  field_text << "#{sub_field.value} " unless (sub_field.code == 'a' and sub_field.value[0,1] == "%")
-                end
+              if tag == "590" and sub_field.code == "c"
+                ckey = sub_field.value[/^(\d+)/]
+                ckey_link = link_to(ckey,url_for(ckey))
+                field_text << "#{sub_field.value.gsub(ckey,ckey_link)} " unless (ckey.nil? or ckey_link.nil?)
+                field_text = field_text.html_safe
+              elsif linking_fields.include?(tag) and sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
+                field_text << "#{link_to(sub_field.value, sub_field.value)} "
+                field_text = field_text.html_safe
+              elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
+                field_text << "<br/><span class='source'>#{Constants::SOURCES[sub_field.value]}</span>"
+                field_text = field_text.html_safe
+              elsif !Constants::EXCLUDE_FIELDS.include?(sub_field.code)
+                field_text << "#{sub_field.value} " unless (sub_field.code == 'a' and sub_field.value[0,1] == "%")
               end
             end
           end
@@ -242,14 +240,12 @@ module MarcHelper
       marc.find_all{|f| (tag) === f.tag}.each do |field|
         text = ""
         field.each do |sub_field|
-          unless Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-            if sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
-              text << "#{link_to(sub_field.value,sub_field.value)} "
-            elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
-              text << " -|- #{Constants::SOURCES[sub_field.value.strip]}"
-            else
-              text << "#{sub_field.value} "
-            end
+          if sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
+            text << "#{link_to(sub_field.value,sub_field.value)} "
+          elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
+            text << " -|- #{Constants::SOURCES[sub_field.value.strip]}"
+          elsif !Constants::EXCLUDE_FIELDS.include?(sub_field.code)
+            text << "#{sub_field.value} "
           end
         end
         # we could probably just do /\s--\s/ but this works so we'll stick w/ it.

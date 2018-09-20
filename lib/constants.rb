@@ -1209,7 +1209,7 @@ module Constants
     'SLAC' => 'https://library.stanford.edu/libraries/slac/about'
   }
 
-  EXCLUDE_FIELDS = ['w', '0', '5', '6', '8', '?', '=']
+  EXCLUDE_FIELDS = ['w', '0', '1', '5', '6', '8', '?', '=']
 
   NIELSEN_TAGS = { '505' => '905', '520' => '920', '586' => '986' }
   SOURCES = { 'Nielsen' => '(source: Nielsen Book Data)' }
