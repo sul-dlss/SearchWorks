@@ -29,7 +29,7 @@ describe 'Bookplates' do
 
   describe 'search results' do
     let(:masthead_text) do
-      'The library resources listed below were acquired with the generous support of this endowed book fund.'
+      'The library resources listed below were acquired with the generous support of this endowed materials fund.'
     end
 
     it 'displays a masthead with the bookplate data for each individual fund (with correct breadcrumb)' do
