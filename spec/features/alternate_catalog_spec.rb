@@ -26,8 +26,8 @@ feature 'Alterate catalog results', js: true do
     wait_for_ajax
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'YOUR SEARCH ALSO FOUND RESULTS IN'
-      expect(page).to have_css 'a.btn', text: 'See 29 catalog results'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (9)'
+      expect(page).to have_css 'a.btn', text: 'See 30 catalog results'
+      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (10)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (4)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"]', text: 'Newspaper (4)'
