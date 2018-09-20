@@ -15,7 +15,46 @@
     }
   }
 
-  p a, li a {
-    font-size: 1.1em;
+  .flexgrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    .col {
+      border-left: 3px $beige-30-percent solid;
+      flex: 1;
+      margin-left: 10px;
+      padding: 10px;
+      a {
+        display: block;
+      }
+    }
+
+    div:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .flexgrid {
+      flex-direction: column;
+
+      .col {
+        a {
+          font-size: 1.4em;
+        }
+      }
+
+      div:first-of-type {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .database-prefix {
+    h2 {
+      margin-bottom: 0;
+    }
   }
 }

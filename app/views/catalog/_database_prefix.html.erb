@@ -1,4 +1,5 @@
 <div class="database-prefix">
+  <h2>Filter by database title</h2>
   <ul class="pagination">
     <li class="<%= 'active' unless params[:prefix] %>">
       <%= link_to "Show all", params.merge(prefix: nil, page: nil)  %>

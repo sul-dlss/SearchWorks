@@ -8,8 +8,9 @@ feature "Selected Databases Access Point" do
     expect(page).to have_title("Databases in SearchWorks catalog")
     within("#masthead") do
       expect(page).to have_css("h1", text: "Selected article databases")
-      expect(page).to have_css("a", text: "All databases")
-      expect(page).to have_css("a", text: "Connect from off campus")
+      expect(page).to have_css("a", text: "Articles+")
+      expect(page).to have_css("a", text: "Databases")
+      expect(page).to have_css("a", text: "Connecting to e-resources")
       expect(page).to have_css("a", text: "Report a connection problem")
     end
   end
