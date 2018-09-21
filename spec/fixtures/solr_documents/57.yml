@@ -1,0 +1,6 @@
+:id: 57
+:title_display: SFX Catalog Item
+:format_main_ssim: Journal/Periodical
+:marcxml: <%= metadata1 %>
+:marcbib_xml: <%= metadata1 %>
+:url_sfx: http://sfx.example.com/
