@@ -15,6 +15,19 @@ describe 'Facets' do
       end
     end
 
+    context 'Education (Cubberley)' do
+      it 'renders the location facet when Education is selected' do
+        visit root_path
+
+        click_link 'Education (Cubberley)'
+
+        within('.facets') do
+          expect(page).to have_css('h3', text: 'Location')
+          expect(page).to have_css('a', text: 'Curriculum Collection')
+        end
+      end
+    end
+    
     context 'other libraries' do
       it 'does not render the location facet' do
         visit root_path

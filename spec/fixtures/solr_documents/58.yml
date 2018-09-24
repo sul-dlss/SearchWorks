@@ -1,0 +1,13 @@
+:id: 58
+:title_display: The Item in Curriculum Collection
+:language: English
+:format: Book
+:display_type:
+  - sirsi
+:marcxml: <%= metadata1 %>
+:format_main_ssim: Book
+:access_facet: At the Library
+:building_facet:
+  - "Education (Cubberley)"
+:location_facet:
+  - "Curriculum Collection"
