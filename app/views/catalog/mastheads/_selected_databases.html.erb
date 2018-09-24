@@ -1,14 +1,18 @@
 <div id="masthead-container">
   <div id="masthead" class="selected-databases-masthead">
     <h1>Selected article databases</h1>
-    <ul>
-      <li>
-        See our guides about <a href="https://library.stanford.edu/guides/find-articles">finding articles</a>, <a href="https://library.stanford.edu/guides/find-newspapersnewspaper-articles">newspapers</a>, and <a href="https://library.stanford.edu/guides/find-online-reference">reference information</a>.
-      </li>
-      <li>
-        For more specific resources, see the Subject pages associated with our <a href="https://library.stanford.edu/people">Subject Librarians</a>.
-      </li>
-    </ul>
-    <p class="inline-links"><%= link_to "All databases", databases_path %> | <%= link_to "Connect from off campus", "https://library.stanford.edu/using/connect-campus" %> | <%= link_to "Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems" %></p>
+    <p>Start your research with one of our selected databases below. <%= link_to 'Learn more about finding articles.', 'https://library.stanford.edu/guides/find-articles' %></p>
+    <div class="flexgrid">
+      <div class="col">
+        <%= link_to 'Articles+', articles_path %> <span>Search a combined index of 100s of databases.</span>
+      </div>
+      <div class="col">
+        <%= link_to 'Databases', databases_path %> <span>Find a topic-specific database for in-depth research.</span>
+      </div>
+      <div class="col">
+        <%= link_to 'Connecting to e-resources', 'https://library.stanford.edu/using/connecting-e-resources' %>
+        <%= link_to 'Report a connection problem', 'https://library.stanford.edu/ask/email/connection-problems' %>
+      </div>
+    </div>
   </div>
 </div>
