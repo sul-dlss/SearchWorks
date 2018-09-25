@@ -13,7 +13,7 @@
       var $container = $(this),
           stackMapApiUrl = $container.data('stackmap-url'),
           location = $container.data('location'),
-          $tplMap = $container.find('.map-template').detach();
+          $tplMap = $container.find('.map-template');
 
       var params = {
         "callno": $container.data('callnumber'),
@@ -50,7 +50,7 @@
           $zoomControls.find('.zoom-out').attr('id', 'zoom-out-' + index);
           $zoomControls.find('.zoom-fit').attr('id', 'zoom-fit-' + index);
 
-          $container.append($tpl);
+          $tplMap.replaceWith($tpl);
           addOsd(map, index, $zoomControls);
           attachEvents(index);
         });
