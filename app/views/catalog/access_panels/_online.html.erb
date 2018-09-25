@@ -19,10 +19,14 @@
     <% if document.access_panels.sfx? %>
       <% sfx_url = document.access_panels.sfx.links.first.href %>
       <% # Intentionally not encoding sfx_url here as the URLs from the catalog appear to already be encoded %>
-      <div data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: sfx_url) %>">
+      <div class='sfx-panel' data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: sfx_url) %>">
         <div data-behavior="sfx-panel-body">
           <div class='loading-spinner'></div>
         </div>
+
+        <%= link_to(SfxData.url_without_sid(sfx_url)) do %>
+          See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
+        <% end %>
       </div>
 
       <% # duplicating this ul w/ the Google link until we get an answer on if it is okay to surpress it for SFX items %>
