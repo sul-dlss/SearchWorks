@@ -35,6 +35,7 @@ describe "catalog/access_panels/_online.html.erb" do
         expect(rendered).to     have_css('.panel-online')
         expect(rendered).to_not have_link('Find full text')
         expect(rendered).to     have_css('[data-behavior="sfx-panel"]')
+        expect(rendered).to     have_link('See the full find it @ Stanford menu')
       end
     end
 
