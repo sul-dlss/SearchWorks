@@ -6,7 +6,7 @@
     </li>
     <% facets_prefix_options.each do |prefix_option| %>
       <li class="<%= 'active' if params[:prefix] == prefix_option.downcase %>">
-        <%= link_to prefix_option, params.merge(prefix: prefix_option.downcase, page: nil) %>
+        <%= link_to prefix_option, params.merge(prefix: prefix_option.downcase, page: nil,sort: 'title') %>
       </li>
     <% end %>
   </ul>
