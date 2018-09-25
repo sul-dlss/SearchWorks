@@ -35,5 +35,9 @@ feature "Databases Access Point" do
 
     expect(page).to have_css('h2', text: '4 catalog results')
     expect(page).to have_css('h3', text: /Selected Database \d/, count: 4)
+
+    within '#sort-dropdown' do
+      expect(page).to have_content('Sort by title')
+    end
   end
 end
