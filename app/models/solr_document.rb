@@ -22,7 +22,6 @@ class SolrDocument
   include Druid
   include StacksImages
   include DigitalImage
-  include OpenSeadragon
   include SolrHoldings
   include SolrSet
   include MarcInstrumentation

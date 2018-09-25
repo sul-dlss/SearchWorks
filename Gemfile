@@ -78,8 +78,6 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'openseadragon'# , github: 'sul-dlss/openseadragon-rails'
-
 gem 'deprecation'
 
 gem 'blacklight', '~> 6.0'
@@ -106,3 +104,4 @@ gem 'ebsco-eds', '0.3.19.pre' # Pin to 0.3.19.pre to fix an error in prod for no
 gem 'whenever' # manages cron jobs
 gem 'bitly' # For bit.ly
 gem 'bootsnap', require: false
+gem 'leaflet-rails'
