@@ -1,4 +1,9 @@
 <% document ||= @document %>
+
+<% document.mods.subTitle.each do |title| %>
+  <%= mods_record_field(title) %>
+<% end %>
+
 <% document.mods.audience.each do |audience| %>
   <%= mods_record_field(audience) %>
 <% end %>

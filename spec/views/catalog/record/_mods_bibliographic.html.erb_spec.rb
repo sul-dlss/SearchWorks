@@ -9,6 +9,11 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
     before do
       assign(:document, document)
     end
+    it "should display titles" do
+      render
+      expect(rendered).to have_css("dt", text: "Alternative title")
+      expect(rendered).to have_css("dd", text: "A record")
+    end
     it "should display audience" do
       render
       expect(rendered).to have_css("dt", text: "Who?")
