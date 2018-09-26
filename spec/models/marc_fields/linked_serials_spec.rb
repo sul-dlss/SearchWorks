@@ -75,10 +75,23 @@ describe LinkedSerials do
       end
     end
 
-    context 'for standard number ($x or $z)' do
+    context 'for ISSN number ($x)' do
+      let(:marc) { main_entry_and_title_serial_fixture_with_issn }
+
+      it 'has an ISSN prefix' do
+        expect(subject.values.last[:values][2][:text]).to eq 'ISSN'
+      end
+
+      it 'links to the isbn_search search field' do
+        expect(subject.values.last[:values][3][:search_field]).to eq 'isbn_search'
+      end
+    end
+
+
+    context 'for ISBN number ($z)' do
       let(:marc) { main_entry_and_title_serial_fixture }
 
-      it 'links to the search_isbn search field' do
+      it 'links to the isbn_search search field' do
         expect(subject.values.last[:values][2][:search_field]).to eq 'isbn_search'
       end
     end

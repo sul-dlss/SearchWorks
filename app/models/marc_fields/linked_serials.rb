@@ -48,11 +48,19 @@ class LinkedSerials < MarcField
   def x_subfield(_, value)
     [
       { text: '(' },
+      { text: 'ISSN' },
       { link: value, search_field: 'isbn_search' },
       { text: ')' }
     ]
   end
-  alias z_subfield x_subfield
+
+  def z_subfield(_, value)
+    [
+      { text: '(' },
+      { link: value, search_field: 'isbn_search' },
+      { text: ')' }
+    ]
+  end
 
   def field_title(field)
     field['s'] || field['t']
