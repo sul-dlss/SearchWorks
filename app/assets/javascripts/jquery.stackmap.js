@@ -13,7 +13,7 @@
       var $container = $(this),
           stackMapApiUrl = $container.data('stackmap-url'),
           location = $container.data('location'),
-          $tplMap = $container.find('.map-template').detach();
+          $tplMap = $container.find('.map-template');
 
       var params = {
         "callno": $container.data('callnumber'),
@@ -50,28 +50,35 @@
           $zoomControls.find('.zoom-out').attr('id', 'zoom-out-' + index);
           $zoomControls.find('.zoom-fit').attr('id', 'zoom-fit-' + index);
 
-          $container.append($tpl);
-          addOsd(map, index);
+          $tplMap.replaceWith($tpl);
+          addOsd(map, index, $zoomControls);
           attachEvents(index);
         });
       }
 
-      function addOsd(map, index) {
-        var viewer = OpenSeadragon({
-          id: 'osd-' + index,
-          hash: (new Date()).getTime(),
-          tileSources: {
-            type: 'legacy-image-pyramid',
-            levels:[{
-              url: map.mapurl + '&marker=1&type=.png',
-              width: map.width,
-              height: map.height
-            }]
-          },
-          zoomInButton: 'zoom-in-' + index,
-          zoomOutButton: 'zoom-out-' + index,
-          homeButton: 'zoom-fit-' + index,
-          showFullPageControl: false
+      function addOsd(map, index, $zoomControls) {
+        var viewer = L.map('osd-' + index, {
+          crs: L.CRS.Simple,
+          minZoom: -2,
+          zoomControl: false
+        });
+        var bounds = [[0, 0], [map.height, map.width]];
+        var image = L.imageOverlay(
+          map.mapurl + '&marker=1&type=.png',
+          bounds
+        ).addTo(viewer);
+        viewer.fitBounds(bounds);
+        $zoomControls.find('.zoom-in').on('click', function(e) {
+          e.preventDefault();
+          viewer.zoomIn();
+        });
+        $zoomControls.find('.zoom-out').on('click', function(e) {
+          e.preventDefault();
+          viewer.zoomOut();
+        });
+        $zoomControls.find('.zoom-fit').on('click', function(e) {
+          e.preventDefault();
+          viewer.fitBounds(bounds);
         });
       }
 
@@ -109,7 +116,7 @@
 Blacklight.onLoad(function() {
   $('*[data-behavior=stackmap]').stackMap();
 
-  $('#ajax-modal').on('show.bs.modal', function() {
+  $('#ajax-modal').on('shown.bs.modal', function() {
     $('*[data-behavior=stackmap]').stackMap();
   });
 });

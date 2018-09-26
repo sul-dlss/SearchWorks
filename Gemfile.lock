@@ -284,6 +284,8 @@ GEM
     latex-decode (0.3.1)
     launchy (2.4.3)
       addressable (~> 2.3)
+    leaflet-rails (1.3.1)
+      rails (>= 4.2.0)
     letter_opener (1.6.0)
       launchy (~> 2.2)
     library_stdnums (1.6.0)
@@ -577,6 +579,7 @@ DEPENDENCIES
   jquery-datatables-rails
   jquery-rails
   launchy
+  leaflet-rails
   letter_opener
   listen (>= 3.0.5, < 3.2)
   mods_display (~> 0.4.0)
@@ -584,7 +587,6 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri (>= 1.7.1)
   okcomputer
-  openseadragon
   poltergeist (>= 1.8.1)
   puma (~> 3.7)
   rack-utf8_sanitizer
@@ -610,4 +612,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.16.3
+   1.16.5
