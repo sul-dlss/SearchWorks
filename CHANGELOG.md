@@ -31,4 +31,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 [Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...HEAD
-[3.3.3]: https://github.com/olivierlacan/SearchWorks/compare/v3.3.2...v3.3.3
+[3.3.3]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.2...v3.3.3
