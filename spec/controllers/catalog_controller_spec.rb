@@ -33,6 +33,18 @@ describe CatalogController do
       expect(response).to redirect_to(root_path)
       expect(flash[:error]).to eq 'You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page 250.'
     end
+
+    it 'does not include publication date stats on the home page' do
+      get :index
+
+      expect(assigns(:response).dig('responseHeader', 'params')).not_to include 'stats'
+    end
+
+    it 'includes publication date stats on search pages' do
+      get :index, params: { q: 'x' }
+
+      expect(assigns(:response).dig('responseHeader', 'params')).to include 'stats'
+    end
   end
   describe '#email' do
     context 'when the user is not logged in' do
