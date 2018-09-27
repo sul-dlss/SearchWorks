@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Added an ISSN prefix to ISSN search link in linked serials [#1972](https://github.com/sul-dlss/SearchWorks/issues/1972)
 ### Changed
+- Replaced OpenSeadragon StackMap image viewer with Leaflet (to improve general page performance) [#1981](https://github.com/sul-dlss/SearchWorks/issues/1981)
+- Changed stylesheet loading to a preload mechanism for javascript based browsers (to improve general performance) [#1990](https://github.com/sul-dlss/SearchWorks/issues/1990)
+- Optimized requests to index to build the home page (to improve home page load performance) [#2007](https://github.com/sul-dlss/SearchWorks/pull/2007)
 ### Removed
+- Removed display of MARC subfield $2 from display [#2001](https://github.com/sul-dlss/SearchWorks/issues/2001)
+- Removed dispaly of MARC 776 fields [#2003](https://github.com/sul-dlss/SearchWorks/issues/2003)
 ### Fixed
 ### Security
 
