@@ -5,17 +5,36 @@ namespace :searchworks do
   task :install => [:environment] do
     Rake::Task["db:migrate"].invoke
     SolrWrapper.wrap do |solr|
-      FileUtils.cp(Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v2.1.jar'),
-                   File.join(solr.instance_dir, 'contrib'))
+      Rake::Task['searchworks:copy_solr_dependencies'].invoke
       solr.with_collection(name: 'blacklight-core') do
         Rake::Task['searchworks:fixtures'].invoke
       end
     end
   end
+
   desc "Index test fixtures"
   task :fixtures do
     FixturesIndexer.run
   end
+
+  desc 'Copy necessary solr dependencies to local solr instance'
+  task copy_solr_dependencies: [:environment] do
+    copy_task = lambda do
+      FileUtils.cp(
+        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v2.1.jar'),
+        File.join(SolrWrapper.instance.instance_dir, 'contrib')
+      )
+    end
+
+    begin
+      copy_task.call
+    rescue Errno::ENOENT # solr instance_dir does not exist
+      SolrWrapper.wrap do
+        copy_task.call
+      end
+    end
+  end
+
   namespace :spec do
     begin
       require 'rspec/core/rake_task'
