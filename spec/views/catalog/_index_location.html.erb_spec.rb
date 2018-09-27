@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe "catalog/_index_location.html.erb" do
+  include MarcMetadataFixtures
   describe "accessibility" do
     before do
       allow(view).to receive(:document).and_return(
@@ -109,13 +110,18 @@ describe "catalog/_index_location.html.erb" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123']
+          item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
+          marcxml: linked_ckey_fixture
         )
       )
       render
     end
     it "should not display request links for requestable libraries" do
       expect(rendered).to_not have_content("Request")
+    end
+    it 'displays a link to the full record' do
+      expect(rendered).to have_css 'th', text: 'Some records bound together'
+      expect(rendered).to have_css 'a[href="/view/123"]', text: 'See full record for details'
     end
   end
   describe "mhld" do
