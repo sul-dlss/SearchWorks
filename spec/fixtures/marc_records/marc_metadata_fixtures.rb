@@ -673,7 +673,23 @@ module MarcMetadataFixtures
         </datafield>
         <datafield tag="774" ind1="0" ind2="0">
           <subfield code="i">Some text:</subfield>
-          <subfield code="z">Serial ISSN</subfield>
+          <subfield code="z">Serial ISBN</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
+  def main_entry_and_title_serial_fixture_with_issn
+    <<-xml
+      <record>
+        <datafield tag="780" ind1="0" ind2="0">
+          <subfield code="a">Serial Main Entry</subfield>
+          <subfield code="t">Serial Title</subfield>
+          <subfield code="s">Serial Uniform Title</subfield>
+        </datafield>
+        <datafield tag="774" ind1="0" ind2="0">
+          <subfield code="i">Some text:</subfield>
+          <subfield code="x">Serial ISSN</subfield>
         </datafield>
       </record>
     xml

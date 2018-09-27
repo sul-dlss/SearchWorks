@@ -14,7 +14,7 @@ module MarcLinks
         link = process_link(link_field)
         if link.present?
           SearchWorks::Links::Link.new(
-            html: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}", " #{link[:additional_text] if link[:additional_text]}"].compact.join(' '),
+            html: ["<a title='#{link[:title]}' href='#{link[:href]}'>#{link[:text]}</a>", "#{'(source: Casalini)' if link[:casalini_toc]}", (" #{link[:additional_text]}" if link[:additional_text])].compact.join(' '),
             text: [link[:text], "#{'(source: Casalini)' if link[:casalini_toc]}", " #{link[:additional_text] if link[:additional_text]}"].compact.join(' ').strip,
             href: link[:href],
             fulltext: link_is_fulltext?(link_field),
