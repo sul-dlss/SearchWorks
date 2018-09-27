@@ -48,7 +48,7 @@ RSpec.describe Eds::Repository do
       it 'uses a session to run the previous-next search' do
         session = instance_double(
           EBSCO::EDS::Session,
-          search: instance_double(EBSCO::EDS::Results, to_solr: double)
+          search: instance_double(EBSCO::EDS::Results, to_solr: {})
         )
         expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
         expect(instance.search(search_builder)).to be_truthy
@@ -71,6 +71,44 @@ RSpec.describe Eds::Repository do
         expect(session).to receive(:solr_retrieve_list)
         instance.search(search_builder)
       end
+    end
+  end
+
+  describe '#eds_results_with_date_range' do
+    let(:empty_pub_year_response) do
+      {
+        'date_range' => {
+          minyear: '1900',
+          maxyear: '1999'
+        },
+        'facet_counts' => {
+          'facet_fields' => {
+            'pub_year_tisim' => []
+          }
+        }
+      }
+    end
+
+    let(:pupulated_pub_year_response) do
+      {
+        'facet_counts' => {
+          'facet_fields' => {
+            'pub_year_tisim' => %w[2010 2012 2014]
+          }
+        }
+      }
+    end
+
+    it 'returns the min/max from EDS response date_range in the absence of the pub year field' do
+      response = instance.send(:eds_results_with_date_range, empty_pub_year_response)
+
+      expect(response['facet_counts']['facet_fields']['pub_year_tisim']).to eq(%w[1900 1999])
+    end
+
+    it 'returns the response unchanged when the pub year field is already populated' do
+      response = instance.send(:eds_results_with_date_range, pupulated_pub_year_response)
+
+      expect(response['facet_counts']['facet_fields']['pub_year_tisim']).to eq(%w[2010 2012 2014])
     end
   end
 end
