@@ -83,7 +83,7 @@ class LinkedSerials < MarcField
   end
 
   def tags
-    %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
+    %w(760 762 765 767 770 772 773 774 775 777 780 785 786 787)
   end
 
   FIELD_780_LABELS = {
@@ -119,7 +119,6 @@ class LinkedSerials < MarcField
     '773' => { '*' => 'In' },
     '774' => { '*' => 'Constituent unit' },
     '775' => { '*' => 'Other edition' },
-    '776' => { '*' => 'Available in another form' },
     '777' => { '*' => 'Issued with' },
     '780' => FIELD_780_LABELS,
     '785' => FIELD_785_LABELS,
