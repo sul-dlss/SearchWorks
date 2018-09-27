@@ -40,6 +40,11 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     it "should not display request links for requestable libraries" do
       expect(rendered).to_not have_content("Request")
     end
+
+    it 'should display the callnumber without live lookup' do
+      expect(rendered).to have_css 'td', 'ABC 123'
+      expect(rendered).to_not have_css 'td[data-live-lookup-id]'
+    end
   end
   describe 'location level requests' do
     it 'should have the request link at the location level' do
