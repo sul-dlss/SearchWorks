@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed stylesheet loading to a preload mechanism for javascript based browsers (to improve general performance) [#1990](https://github.com/sul-dlss/SearchWorks/issues/1990)
 - Optimized requests to index to build the home page (to improve home page load performance) [#2007](https://github.com/sul-dlss/SearchWorks/pull/2007)
 - Now using reCAPTCHA to deter spam from anonymous feedback instead of custom spam capturing methods [#2009](https://github.com/sul-dlss/SearchWorks/pull/2009)
+- Hides attribution "Leaflet" link in new stackmap display #2010
 ### Removed
 - Removed display of MARC subfield $2 from display [#2001](https://github.com/sul-dlss/SearchWorks/issues/2001)
 - Removed dispaly of MARC 776 fields [#2003](https://github.com/sul-dlss/SearchWorks/issues/2003)
