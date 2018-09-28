@@ -60,7 +60,8 @@
         var viewer = L.map('osd-' + index, {
           crs: L.CRS.Simple,
           minZoom: -2,
-          zoomControl: false
+          zoomControl: false,
+          attributionControl: false
         });
         var bounds = [[0, 0], [map.height, map.width]];
         var image = L.imageOverlay(
