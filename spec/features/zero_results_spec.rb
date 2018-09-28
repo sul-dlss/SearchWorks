@@ -33,12 +33,15 @@ feature "Zero results" do
     end
   end
 
-  scenario 'it does not replace query string in a way that will execute js', js: true do
-    expect do
-      accept_alert do
-        visit '/?f[building_facet][]=Engineering (Terman)&search_field=title&q=><script>alert%28"BAD%20JUJU"%29<%2Fscript>'
-      end
-    end.to raise_error(Capybara::ModalNotFound)
+  context 'it does not replace query string in a way that will execute js', js: true do
+    before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
+    scenario do
+      expect do
+        accept_alert do
+          visit '/?f[building_facet][]=Engineering (Terman)&search_field=title&q=><script>alert%28"BAD%20JS"%29<%2Fscript>'
+        end
+      end.to raise_error(Capybara::ModalNotFound)
+    end
   end
 
   context 'article search' do

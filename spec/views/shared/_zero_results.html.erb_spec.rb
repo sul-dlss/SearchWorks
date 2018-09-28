@@ -36,4 +36,13 @@ describe "shared/_zero_results.html.erb" do
     expect(rendered).to have_css("a", text: /Chat with a librarian/)
     expect(rendered).to have_css("a", text: /Search tools/)
   end
+
+  it 'renders alternate catalog' do
+    allow(view).to receive(:show_alternate_catalog?).and_return(true)
+    allow(view).to receive(:params).and_return(q: 'test123')
+    # set view context /shrug
+    lookup_context.view_paths = ['app/views/catalog', 'app/views']
+    render
+    expect(rendered).to have_css '.alternate-catalog'
+  end
 end
