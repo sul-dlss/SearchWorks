@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe FeedbackFormHelper do
+  before { stub_current_user(context: helper) }
   describe '#render_feedback_form' do
     context 'connection type' do
       it { expect(helper.render_feedback_form('connection')).to include 'Name of resource'}

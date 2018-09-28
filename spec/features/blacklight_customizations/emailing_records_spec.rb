@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Emailing Records", type: :feature, js: true do
   context 'when a user is not logged in' do
-    it 'renders a message instructing the user to login in place of the form' do
+    it 'the are provided a reCAPTCHA challenge' do
       visit solr_document_path('14')
 
       within('.record-toolbar') do
@@ -17,9 +17,7 @@ describe "Emailing Records", type: :feature, js: true do
       expect(page).to have_css('h1', text: 'Email This', visible: true)
 
       within('.modal-dialog') do
-        expect(page).to have_css('p', text: 'Send to Email is temporarily limited to Stanford users.')
-        expect(page).to have_link('Login with your SUNet ID')
-        expect(page).not_to have_css('#email_form')
+        expect(page).to have_css('p', text: '(Stanford users can avoid this Captcha by logging in.)')
       end
     end
   end

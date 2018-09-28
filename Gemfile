@@ -105,3 +105,4 @@ gem 'whenever' # manages cron jobs
 gem 'bitly' # For bit.ly
 gem 'bootsnap', require: false
 gem 'leaflet-rails'
+gem 'recaptcha'
