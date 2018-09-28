@@ -20,8 +20,14 @@
       function calculateAndAttachScrollEvents() {
         $sideNav.find('li button').each(function() {
           var $sideNavButton = $(this),
-              $section = $container.find('#' + $sideNavButton.data('target-id')),
-              position = Math.round($section.offset().top);
+              $section = $container.find('#' + $sideNavButton.data('target-id'));
+
+          if($section.length === 0) {
+            $sideNavButton.hide();
+            return;
+          }
+
+          var position = Math.round($section.offset().top);
 
           $section.scrollspy({
             min: position,
