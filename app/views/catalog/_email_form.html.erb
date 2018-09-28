@@ -1,23 +1,16 @@
-<% if current_user.present? %>
-  <%= form_tag url_for(:controller => "catalog", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
-    <%= render :partial=>'shared/email_form' %>
-      <% @documents.each do |doc| %>
-        <%=hidden_field_tag "id[]", doc.id %>
-      <% end %>
-      <%- if params[:sort] -%>
-        <%= hidden_field_tag "sort", params[:sort] %>
-      <%- end -%>
-      <%- if params[:per_page] -%>
-        <%= hidden_field_tag "per_page", params[:per_page] %>
-      <%- end -%>
-    </div>
-    <div class="modal-footer">
-      <button type="submit" class="btn btn-primary"> <%= t('blacklight.sms.form.submit') %></button>
-    </div>
-  <% end %>
-<% else %>
-  <div class="modal-body">
-    <p class="h2">Send to Email is temporarily limited to Stanford users.</p>
-    <p><strong><%= link_to 'Login with your SUNet ID', new_user_session_path(referrer: request.xhr? ? request.referrer : request.original_url) %></strong>, then select Send to Email again.</p>
+<%= form_tag url_for(:controller => "catalog", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
+  <%= render :partial=>'shared/email_form' %>
+    <% @documents.each do |doc| %>
+      <%=hidden_field_tag "id[]", doc.id %>
+    <% end %>
+    <%- if params[:sort] -%>
+      <%= hidden_field_tag "sort", params[:sort] %>
+    <%- end -%>
+    <%- if params[:per_page] -%>
+      <%= hidden_field_tag "per_page", params[:per_page] %>
+    <%- end -%>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary"> <%= t('blacklight.sms.form.submit') %></button>
   </div>
 <% end %>

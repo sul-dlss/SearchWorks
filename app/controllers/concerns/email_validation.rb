@@ -5,8 +5,6 @@ module EmailValidation
     case
     when !%w(full brief).include?(params[:type])
       flash[:error] = I18n.t('blacklight.email.errors.type')
-    when params[:email_address].present?
-      flash[:error] = I18n.t('blacklight.email.errors.email_address')
     when params[:message] =~ %r{href|url=|https?://}i
       flash[:error] = I18n.t('blacklight.email.errors.message.spam')
     when params[:to].blank?
@@ -35,4 +33,13 @@ module EmailValidation
     params[:to].split(/,|\s+/).reject(&:blank?)
   end
 
+  def validate_email_params_and_recaptcha
+    validate_email_params && verify_recaptcha_if_no_user
+  end
+
+  def verify_recaptcha_if_no_user
+    return true if current_user.present?
+
+    verify_recaptcha
+  end
 end

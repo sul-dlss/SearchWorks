@@ -196,7 +196,7 @@ class ArticlesController < ApplicationController
   def email
     # TODO: Handle arrays of IDs in future selection work
     @response, @documents = fetch(params[:id])
-    if request.post? && validate_email_params
+    if request.post? && validate_email_params_and_recaptcha
       send_emails_to_all_recipients
 
       respond_to do |format|

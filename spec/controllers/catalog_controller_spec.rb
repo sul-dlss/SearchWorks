@@ -47,8 +47,9 @@ describe CatalogController do
     end
   end
   describe '#email' do
-    context 'when the user is not logged in' do
+    context 'when the user is not logged in and the recaptcha fails' do
       it 'does not allow emails to be submitted' do
+        expect_any_instance_of(CatalogController).to receive(:verify_recaptcha).and_return(false)
         expect do
           post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}
         end.not_to change { ActionMailer::Base.deliveries.count }
@@ -85,15 +86,6 @@ describe CatalogController do
         end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
       describe 'validations' do
-        it 'should not send emails when the email_address field has been filled out' do
-          expect do
-            post :email, params: { email_address: 'something', to: 'email@example.com', type: 'full' }
-          end.to_not change { ActionMailer::Base.deliveries.count }
-
-          expect(flash[:error]).to include('You have filled in a field that makes you appear as a spammer.')
-          expect(flash[:error]).to include('Please follow the directions for the individual form fields.')
-        end
-
         it 'should not allow messages that have links in them' do
           expect do
             post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
