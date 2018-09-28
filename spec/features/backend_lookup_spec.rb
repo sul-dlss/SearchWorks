@@ -9,7 +9,7 @@ feature 'Backend lookup', js: true do
 
     within '.zero-results' do
       expect(page).to have_css('a', text: /sdfsda/)
-      expect(page).to have_css('strong', text: /found 0 results/)
+      expect(page).to have_css('strong', text: /finds 0 results/)
     end
   end
 
@@ -22,7 +22,7 @@ feature 'Backend lookup', js: true do
 
     within '.zero-results' do
       expect(page).to have_css('a', text: /All fields > statement/)
-      expect(page).to have_css('strong', text: /found 1 results/)
+      expect(page).to have_css('strong', text: /finds 1 results/)
     end
   end
 end

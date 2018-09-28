@@ -7,10 +7,8 @@ feature "Zero results" do
     select 'Author/Contributor', from: 'search_field'
     click_button 'search'
     within "#content" do
-      expect(page).to have_css('dt', text: 'Your current search')
-      expect(page).to have_css('dd', text: 'Author/Contributor > sdfsda')
-      expect(page).to have_css('dt', text: 'Search all fields')
-      expect(page).to have_css('dd', text: 'sdfsda')
+      expect(page).to have_css('li', text: 'Search all fields:')
+      expect(page).to have_css('li', text: 'sdfsda')
       expect(page).to have_css('a', text: 'sdfsda')
     end
   end
@@ -19,7 +17,7 @@ feature "Zero results" do
     fill_in "search_title", with: "sdfsda"
     click_button 'advanced-search-submit'
     within "#content" do
-      expect(page).to have_css("li", text: I18n.t('blacklight.search.zero_results.limit'))
+      expect(page).to have_css("li", text: I18n.t('blacklight.search.zero_results.check_spelling'))
       expect(page).to have_css("a", text: I18n.t('blacklight.search.zero_results.return_to_advanced_search'))
     end
   end
@@ -29,10 +27,8 @@ feature "Zero results" do
     fill_in "q", with: "sdfsda"
     click_button 'search'
     within "#content" do
-      expect(page).to have_css('dt', text: 'Your current search')
-      expect(page).to have_css('dd', text: 'sdfsda + Resource type > Book')
-      expect(page).to have_css('dt', text: 'Remove limit(s)')
-      expect(page).to have_css('dd', text: 'All fields > sdfsda')
+      expect(page).to have_css('li', text: 'Remove limit(s)')
+      expect(page).to have_css('li', text: 'All fields > sdfsda')
       expect(page).to have_css('a', text: 'All fields > sdfsda')
     end
   end
@@ -52,7 +48,7 @@ feature "Zero results" do
       visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] }, search_field: 'search')
 
       # Has zero results because we pass an empty array of docs, but is sucessfully searching
-      expect(page).to have_link('All fields > Kittens... found 0 results', href: %r{.*/articles\?q=Kittens})
+      expect(page).to have_link('All fields > Kittens finds 0 results', href: %r{.*/articles\?q=Kittens})
     end
   end
 end

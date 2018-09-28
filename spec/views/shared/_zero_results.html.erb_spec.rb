@@ -21,15 +21,14 @@ describe "shared/_zero_results.html.erb" do
 
   it "displays modify your search" do
     render
-    expect(rendered).to have_css("h3", text: "Modify your search")
+    expect(rendered).to have_css("h3", text: "Modify your catalog search")
   end
 
   it "renders text indicating tips to modify the search along with links to the relevant search" do
     render
-    expect(rendered).to have_css("dt", text: /Your current search/)
     expect(rendered).to have_css("a", text: /Title >/)
-    expect(rendered).to have_css("dt", text: 'Remove limit(s)')
-    expect(rendered).to have_css("dt", text: /Search all fields/)
+    expect(rendered).to have_css("li", text: 'Remove limit(s)')
+    expect(rendered).to have_css("li", text: /Search all fields/)
   end
 
   it "renders chat and search tools" do

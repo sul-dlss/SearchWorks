@@ -36,3 +36,11 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
 a.btn-sul-toolbar {
   border-bottom: none;
 }
+
+.btn-zero-results {
+  @include button-variant($sul-link-color, transparent, $cardinal-red);
+  border-radius: $sul-constraint-btn-radius;
+  &:hover,:focus {
+    text-decoration: underline;
+  };
+}

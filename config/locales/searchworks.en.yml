@@ -94,14 +94,13 @@ en:
       form:
         q: ''
       zero_results:
-        modify_your_search: "Modify your search in %{search_type}"
+        modify_your_search: "Modify your %{search_type} search"
         page_heading: "No results"
-        limit_fields: "Remove limit(s)"
-        search_fields: "Search all fields"
-        your_search: "Your current search"
+        limit_fields: "Remove limit(s): "
+        search_fields: "Search all fields: "
         return_to_advanced_search: "Return to Advanced search page"
-        limit: "Try using fewer terms to start, then limit your results."
         search_context: "Try your search in…"
+        check_spelling: 'Check spelling, or use fewer words to start.'
 
     bookmarks:
       page_heading: "Selections list"

@@ -16,7 +16,7 @@ feature "Zero results" do
 
   scenario "should have correct headings and elements present" do
     within "#content" do
-      expect(page).to have_css("h3", text: "Modify your search")
+      expect(page).to have_css("h3", text: "Modify your catalog search")
     end
   end
 
