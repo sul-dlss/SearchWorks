@@ -1,6 +1,20 @@
 require 'spec_helper'
 
 describe CatalogHelper do
+  describe '#catalog_search?' do
+    context 'when in the CatalogController' do
+      before { expect(helper).to receive_messages(controller_name: 'catalog') }
+
+      it { expect(helper.catalog_search?).to be true }
+    end
+
+    context 'when not in the CatalogController' do
+      before { expect(helper).to receive_messages(controller_name: 'anything_else') }
+
+      it { expect(helper.catalog_search?).to be false }
+    end
+  end
+
   describe 'current_view' do
     it 'if params[:view] present, should return it' do
       params = { view: 'gallery' }

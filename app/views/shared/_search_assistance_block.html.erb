@@ -1,13 +1,30 @@
 <div class="panel panel-default">
   <div class="panel-body">
+    <h3>More options</h3>
     <ul class="media-list">
-      <%= render 'shared/chat_librarian_sidebar' if on_campus_or_su_affiliated_user? %>
+      <li class='media'>
+        <%= link_to 'Interlibrary loan', 'https://sulils.stanford.edu/', class: 'media-heading stanford-only' %>
+        <p>For Stanford affiliates. We can get just about anything.</p>
+      </li>
+      <% if catalog_search? %>
+        <li class='media'>
+          <%= link_to 'WorldCat', "https://www.worldcat.org/search?qt=worldcat_org_all&q=#{params.fetch(:q, nil)}", class: 'media-heading' %>
+          <p>Search other libraries nearby and worldwide.</p>
+        </li>
+        <li class='media'>
+          <%= link_to 'HathiTrust', "https://catalog.hathitrust.org/Search/Home?lookfor=#{params.fetch(:q, nil)}", class: 'media-heading' %>
+          <p>Millions of digitized resources; especially helpful for government documents.</p>
+        </li>
+      <% end %>
+      <% if article_search? %>
+        <li class='media'>
+          <%= link_to 'Databases', databases_path, class: 'media-heading' %>
+          <p>Search directly in a topic-specific database.</p>
+        </li>
+      <% end %>
       <li class="media">
-        <%= content_tag(:span, "", class: "image-icon image-icon-search-tools media-object pull-left") %>
-        <div class="media-body">
-          <%= link_to "Search tools", "https://library.stanford.edu/search-services", class: "media-heading" %>
-          <p>Links to help you find images, data, dissertations, archival materials, and more.</p>
-        </div>
+        <%= link_to "Search tools", "https://library.stanford.edu/search-services", class: "media-heading" %>
+        <p>Links to help you find images, data, dissertations, archival materials, and more.</p>
       </li>
     </ul>
   </div>

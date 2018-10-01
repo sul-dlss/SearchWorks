@@ -4,6 +4,10 @@
 module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
+  def catalog_search?
+    controller_name == 'catalog'
+  end
+
   def render_view_type_group_icon(view)
     content_tag(
       :i,

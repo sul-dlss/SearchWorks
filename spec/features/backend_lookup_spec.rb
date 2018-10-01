@@ -1,7 +1,10 @@
 require 'spec_helper'
 
 feature 'Backend lookup', js: true do
-  before { visit root_path }
+  before do
+    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    visit root_path
+  end
   scenario 'lookup should return additional results on the zero results page' do
     fill_in 'q', with: 'sdfsda'
     select 'Author', from: 'search_field'

@@ -16,7 +16,6 @@ describe "shared/_zero_results.html.erb" do
     }, config))
     allow(view).to receive(:controller_name).and_return('catalog')
     allow(view).to receive(:label_for_search_field).and_return('Title')
-    allow(view).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
   end
 
   it "displays modify your search" do
@@ -31,9 +30,8 @@ describe "shared/_zero_results.html.erb" do
     expect(rendered).to have_css("li", text: /Search all fields/)
   end
 
-  it "renders chat and search tools" do
+  it 'renders search tools' do
     render
-    expect(rendered).to have_css("a", text: /Chat with a librarian/)
     expect(rendered).to have_css("a", text: /Search tools/)
   end
 
