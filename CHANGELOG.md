@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.4] - 2018-10-01
+
 ### Added
 - Added an ISSN prefix to ISSN search link in linked serials [#1972](https://github.com/sul-dlss/SearchWorks/issues/1972)
 - Added reCAPTCHA (I am not a robot checkbox) to record email dialog to re-enable anonymous users to send records to themselves [#1942](https://github.com/sul-dlss/SearchWorks/issues/1942)
@@ -13,13 +22,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed stylesheet loading to a preload mechanism for javascript based browsers (to improve general performance) [#1990](https://github.com/sul-dlss/SearchWorks/issues/1990)
 - Optimized requests to index to build the home page (to improve home page load performance) [#2007](https://github.com/sul-dlss/SearchWorks/pull/2007)
 - Now using reCAPTCHA to deter spam from anonymous feedback instead of custom spam capturing methods [#2009](https://github.com/sul-dlss/SearchWorks/pull/2009)
-- Hides attribution "Leaflet" link in new stackmap display #2010
+- Hides attribution "Leaflet" link in new stackmap display [#2010](https://github.com/sul-dlss/SearchWorks/issues/2010)
 ### Removed
 - Removed display of MARC subfield $2 from display [#2001](https://github.com/sul-dlss/SearchWorks/issues/2001)
 - Removed dispaly of MARC 776 fields [#2003](https://github.com/sul-dlss/SearchWorks/issues/2003)
 ### Fixed
 - Fixed a bug in Article Search where the date slider facet would disappear for some Databases [#1721](https://github.com/sul-dlss/SearchWorks/issues/1721)
-- Fixed a bug where the browse button in the side-nav minimap was rendering when there was no browse section [#1961] (https://github.com/sul-dlss/SearchWorks/issues/1961)
+- Fixed a bug where the browse button in the side-nav minimap was rendering when there was no browse section [#1961](https://github.com/sul-dlss/SearchWorks/issues/1961)
 ### Security
 
 ## [3.3.3] - 2018-09-26
@@ -41,5 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...HEAD
+[3.3.4]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...v3.3.4
 [3.3.3]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.2...v3.3.3
