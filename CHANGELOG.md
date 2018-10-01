@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Adds an OKComputer status check for degraded performance alerts from NewRelic (for the status dashboard) [#2051](https://github.com/sul-dlss/SearchWorks/pull/2051)
+- Adds citations to the "Cite" modal for article records [#1727](https://github.com/sul-dlss/SearchWorks/pull/1727)
 ### Changed
 ### Removed
 ### Fixed

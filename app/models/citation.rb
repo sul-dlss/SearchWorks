@@ -8,12 +8,13 @@ class Citation
   end
 
   def citable?
-    field.present? || citations_from_mods.present?
+    field.present? || citations_from_mods.present? || citations_from_eds.present?
   end
 
   def citations
     return null_citation if return_null_citation?
     return all_citations if all_formats_requested?
+
     all_citations.select do |format, _|
       desired_formats.include?(format)
     end
@@ -73,6 +74,9 @@ class Citation
       if citations_from_mods.present?
         citation_hash[self.class.preferred_citation_key] = "<p>#{citations_from_mods}</p>".html_safe
       end
+
+      citation_hash.merge!(citations_from_eds) if citations_from_eds.present?
+
       citation_hash.merge!(citations_from_oclc_response) if field.present?
       citation_hash
     end
@@ -91,6 +95,14 @@ class Citation
     document.mods.note.find do |note|
       note.label.downcase =~ /preferred citation:?/
     end.try(:values).try(:join)
+  end
+
+  def citations_from_eds
+    return unless document.eds? && document['eds_citation_styles'].present?
+
+    document['eds_citation_styles'].each_with_object({}) do |citation, hash|
+      hash[citation['id'].upcase] = citation['data'].html_safe
+    end
   end
 
   def response

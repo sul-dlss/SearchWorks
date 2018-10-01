@@ -10,13 +10,19 @@ describe Citation do
     ]
   end
   let(:document) { SolrDocument.new }
+  let(:eds_document) do
+    SolrDocument.new(
+      eds_title: 'The Title',
+      eds_citation_styles: [{ 'id': 'APA', 'data': 'Citation Content' }]
+    )
+  end
   let(:formats) { [] }
   let(:oclc_response) { '' }
   let(:stub_opts) { {} }
   before { stub_oclc_response(oclc_response, stub_opts) }
 
   describe '#citable?' do
-    context 'when there is no OCLC number or MODS citation' do
+    context 'when there is no OCLC number, MODS citation, or EDS citation' do
       it 'is false' do
         expect(subject).to_not be_citable
       end
@@ -33,6 +39,14 @@ describe Citation do
       let(:document) { SolrDocument.new(modsxml: mods_preferred_citation) }
       it 'is true' do
         skip('Passes locally, not on Travis.') if ENV['CI']
+        expect(subject).to be_citable
+      end
+    end
+
+    context 'when there is an EDS citation' do
+      let(:document) { eds_document }
+
+      it 'is true' do
         expect(subject).to be_citable
       end
     end
@@ -86,6 +100,15 @@ describe Citation do
         skip('Passes locally, not on Travis.') if ENV['CI']
         expect(subject.citations.keys).to eq ['PREFERRED CITATION']
         expect(subject.citations['PREFERRED CITATION']).to eq '<p>This is the preferred citation data</p>'
+      end
+    end
+
+    context 'from EDS' do
+      let(:document) { eds_document }
+
+      it 'returns the citations from the formatted EDS data' do
+        expect(subject.citations.keys).to eq(['APA'])
+        expect(subject.citations['APA']).to eq 'Citation Content'
       end
     end
   end
