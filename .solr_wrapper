@@ -2,5 +2,4 @@
 collection:
   dir: config/solr_configs/
   name: blacklight-core
-version: 7.4.0
 port: 8983
