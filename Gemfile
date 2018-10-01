@@ -106,3 +106,4 @@ gem 'bitly' # For bit.ly
 gem 'bootsnap', require: false
 gem 'leaflet-rails'
 gem 'recaptcha'
+gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded

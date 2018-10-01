@@ -588,6 +588,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   nokogiri (>= 1.7.1)
+  oauth2 (~> 1.4)
   okcomputer
   poltergeist (>= 1.8.1)
   puma (~> 3.7)
