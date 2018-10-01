@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed dispaly of MARC 776 fields [#2003](https://github.com/sul-dlss/SearchWorks/issues/2003)
 ### Fixed
 - Fixed a bug in Article Search where the date slider facet would disappear for some Databases [#1721](https://github.com/sul-dlss/SearchWorks/issues/1721)
+- Fixed a bug where the browse button in the side-nav minimap was rendering when there was no browse section [#1961] (https://github.com/sul-dlss/SearchWorks/issues/1961)
 ### Security
 
 ## [3.3.3] - 2018-09-26
