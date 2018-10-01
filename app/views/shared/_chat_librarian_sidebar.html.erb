@@ -4,7 +4,12 @@
       <span class="image-icon image-icon-message-away media-object pull-left"></span>
       <div class="media-body">
         <%= link_to "Chat with a librarian", "https://library.stanford.edu/ask" %>
-        <p>Chat reference is available 10-6 Monday through Thursday and 10-5 on Friday.</p>
+        <p>
+          Chat reference is available during normal <%= link_to 'Information Center', 'https://library.stanford.edu/libraries/green/information-center' %> hours.
+          <span data-hours-route='<%= "#{hour_path('IC')}" %>'>
+            <span class='location-hours-today'></span>
+          </span>
+        </p>
       </div>
     </div>
   </div>
