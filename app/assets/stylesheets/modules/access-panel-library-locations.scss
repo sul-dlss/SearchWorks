@@ -39,3 +39,10 @@
 .stackmap-find-it {
   @include location-buttons;
 }
+
+.bound-with-note {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}

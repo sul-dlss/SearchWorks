@@ -9,6 +9,18 @@
         </tr>
       </thead>
       <tbody data-long-list data-list-type="location">
+        <% if document.respond_to?(:to_marc) && document.bound_with? %>
+          <tr>
+            <th scope='col' class=''>
+              Some records bound together
+            </th>
+          </tr>
+          <tr>
+            <td colspan='2' class='indent-callnumber'>
+              <%= link_to('See full record for details', solr_document_path(document)) %>
+            </td>
+          </tr>
+        <% end %>
         <% library.locations.select(&:present_on_index?).each do |location| %>
           <tr>
             <th scope='col' class="location-info">

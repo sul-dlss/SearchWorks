@@ -37,7 +37,8 @@ class Holdings
 
     def present?
       @items.any?(&:present?) ||
-        (mhld.present? && mhld.any?(&:present?))
+        (mhld.present? && mhld.any?(&:present?)) ||
+        locations.any?(&:bound_with?)
     end
 
     def location_level_request?

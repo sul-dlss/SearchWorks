@@ -6,7 +6,7 @@ class BoundWithNote < MarcField
     relevant_fields.map do |field|
       field.each_with_object({}) do |subfield, hash|
         hash[:value] ||= ''
-        hash[:value] << "#{subfield.value} "
+        hash[:value] << "#{subfield.value} " unless subfield.code == 'c'
         hash[:id] = subfield.value[/^(\d+)/] if subfield.code == 'c'
       end
     end.flatten

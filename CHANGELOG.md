@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+- Changed the way that bound with items are displayed. Bound with call numbers are removed from search results. On a show page, the notes are formatted in a more pleasant way while the live lookup data information is removed. [#1345](https://github.com/sul-dlss/SearchWorks/pull/1345)
 ### Removed
 ### Fixed
 - Reverts stylesheet preloading as it was causing an issue in FireFox. [#2019](https://github.com/sul-dlss/SearchWorks/pull/2019)

@@ -20,9 +20,7 @@
           <% library.locations.select(&:present?).each do |location| %>
             <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
             <% if location.bound_with? && document.bound_with? %>
-              <p class="bound-with-note note-highlight">
-                <%= render document.bound_with_note %>
-              </p>
+              <%= content_tag(:div, class: 'bound-with-note note-highlight') { render document.bound_with_note } %>
             <% else %>
               <% if location_level_request_link?(library, location) %>
                 <%= link_to_request_link(document: document, library: library, callnumber: location.items.first, class: 'btn btn-default btn-xs request-button pull-right') %>
@@ -58,27 +56,29 @@
                        <div class='public-note note-highlight'>Note: <%= item.public_note %></div>
                      <% end %>
                    </td>
-                   <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !location_level_request_link?(library, location) %>>
-                     <span class="availability-icon-wrapper">
-                       <i class="availability-icon <%= item.status.availability_class %>"></i>
-                       <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
-                         <%= item.status.status_text unless item.current_location && item.current_location.name.present? %>
+                   <% if item.present? %>
+                     <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !location_level_request_link?(library, location) %>>
+                       <span class="availability-icon-wrapper">
+                         <i class="availability-icon <%= item.status.availability_class %>"></i>
+                         <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
+                           <%= item.status.status_text unless item.current_location && item.current_location.name.present? %>
+                         </span>
                        </span>
-                     </span>
-                     <span class="current-location">
-                       <% unless item.treat_current_location_as_home_location? %>
-                         <%= item.current_location.name %>
+                       <span class="current-location">
+                         <% unless item.treat_current_location_as_home_location? %>
+                           <%= item.current_location.name %>
+                         <% end %>
+                       </span>
+                       <% if item.on_reserve? %>
+                         <%= item.loan_period %>
                        <% end %>
-                     </span>
-                     <% if item.on_reserve? %>
-                       <%= item.loan_period %>
-                     <% end %>
-                     <span class="request-link">
-                       <% if item.must_request? %>
-                         <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
-                       <% end %>
-                     </span>
-                   </td>
+                       <span class="request-link">
+                         <% if item.must_request? %>
+                           <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
+                         <% end %>
+                       </span>
+                     </td>
+                   <% end %>
                  </tr>
                <% end %>
              </tbody>

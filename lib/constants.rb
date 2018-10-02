@@ -566,7 +566,7 @@ module Constants
     'SEE-ARCHIV' => 'Currently at Hoover Archives',
     'SEE-EASTA' => 'Ask at circulation desk',
     'SEE-LOAN' => 'Ask at circulation desk',
-    'SEE-OTHER' => 'See related record(s) to request item',
+    'SEE-OTHER' => 'See linked record to request items bound together',
     'SERIALS' => 'Serials',
     'SETS' => 'Big Sets',
     'SHELBYSER' => 'Serials',
@@ -1060,6 +1060,8 @@ module Constants
       TECH-SERV
     ]
   }.freeze
+
+  BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
 
   INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
 
