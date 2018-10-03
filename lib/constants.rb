@@ -1177,7 +1177,8 @@ module Constants
     'LATHROP' => 'lathrop/location/tech-lounge',
     'LAW' => 'law/location/law_library',
     'LANE-MED' => 'medical/location/medical_library',
-    'SLAC' => 'slac/location/slac'
+    'SLAC' => 'slac/location/slac',
+    'IC' => 'green/location/information-center'
   }
 
   LIBRARY_ABOUT = {

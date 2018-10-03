@@ -31,7 +31,7 @@ Blacklight.onLoad(function(){
     }
 
     function getHoursElement(element) {
-      return $(element).find("div.location-hours-today");
+      return $(element).find(".location-hours-today");
     }
 
     Plugin.prototype = {

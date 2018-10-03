@@ -3,7 +3,7 @@
 
     return this.each(function(){
       var $item = $(this),
-        $link = $item.find('a'),
+        $link = $item.find('a').first(),
         $icon = $item.find('span.image-icon'),
         jid = $item.data('jid');
       init();

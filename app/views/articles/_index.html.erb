@@ -13,16 +13,16 @@
   <% end %>
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
-      <%= render 'shared/search_context_sidebar' %>
+      <%= render 'shared/chat_librarian_sidebar' %>
     <% else %>
       <%= render 'search_sidebar' %>
     <% end %>
   </div>
   <div id="content" class="col-md-8 col-sm-7">
-    <div id='documents' class="article-search-results">
-      <% if @response.empty? %>
-        <%= render "shared/zero_results" %>
-      <% else %>
+    <% if @response.empty? %>
+      <%= render "shared/zero_results" %>
+    <% else %>
+      <div id='documents' class="article-search-results">
         <div class="search_num_of_results">
           <div class='results-heading'>
             <h1 class="sr-only"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
