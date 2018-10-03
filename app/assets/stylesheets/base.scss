@@ -4,7 +4,7 @@ a {
   text-decoration: none;
 
   &.disabled {
-    color: #ccc;
+    color: $gray-light;
     cursor: not-allowed;
     text-decoration: none;
   }
