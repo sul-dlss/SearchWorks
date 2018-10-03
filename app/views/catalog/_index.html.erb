@@ -13,7 +13,7 @@
   <% end %>
   <div id="sidebar" class="col-md-4 col-sm-5">
     <% if @response.empty? %>
-      <%= render 'shared/chat_librarian_sidebar' if on_campus_or_su_affiliated_user? %>
+      <%= render 'shared/chat_librarian_sidebar' %>
     <% else %>
       <%= render 'search_sidebar' %>
     <% end %>
