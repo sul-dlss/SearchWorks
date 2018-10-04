@@ -1230,4 +1230,23 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def managed_purl_fixture
+    <<-xml
+      <record>
+        <datafield ind1='4' ind2='1' tag='856'>
+          <subfield code='u'>http://purl.stanford.edu/gg853cy1667</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
+          <subfield code='x'>item</subfield>
+          <subfield code='x'>file:gg853cy1667%2Fgg853cy1667_0001.jp2</subfield>
+        </datafield>
+        <datafield ind1='4' ind2='1' tag='856'>
+          <subfield code='u'>http://purl.stanford.edu/rw779rf3064</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
+          <subfield code='x'>item</subfield>
+          <subfield code='x'>file:rw779rf3064%2Frw779rf3064_0001.jp2</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end
