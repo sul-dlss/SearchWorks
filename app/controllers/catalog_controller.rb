@@ -85,6 +85,7 @@ class CatalogController < ApplicationController
     config.show.document_presenter_class = ShowDocumentPresenter
     #config.show.title_field = 'title_display'
     #config.show.display_type_field = 'format'
+    config.show.partials += [:schema_dot_org]
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
