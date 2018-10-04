@@ -2,15 +2,17 @@
   <div id="sul-footer-container">
     <div id="sul-footer">
       <div id="sul-footer-img" class="span2">
-        <%= image_tag "sul-logo-stacked.svg", alt: "Stanford Libraries", height: 45 %>
+        <%= link_to 'https://library.stanford.edu' do %>
+          <%= image_tag "sul-logo-stacked.svg", alt: "Stanford Libraries", height: 45 %>
+        <% end %>
       </div>
       <div id="sul-footer-links" class="span2">
         <ul>
-          <li><a href="https://library.stanford.edu">Stanford Libraries</a></li>
           <li><a href="https://library.stanford.edu/hours">Hours &amp; locations</a></li>
-          <li> <a href="https://library.stanford.edu/myaccount">My Account</a></li>
-          <li> <a href="https://library.stanford.edu/ask">Ask us</a></li>
-          <li> <a href="https://library.stanford.edu/opt-out">Opt out of analytics</a></li>
+          <li><a href="https://library.stanford.edu/myaccount">My Account</a></li>
+          <li><a href="https://library.stanford.edu/ask">Ask us</a></li>
+          <li><a href="https://library.stanford.edu/opt-out">Opt out of analytics</a></li>
+          <li><a href="https://searchworks-status.stanford.edu/">Searchworks status</a></li>
         </ul>
       </div>
     </div>
