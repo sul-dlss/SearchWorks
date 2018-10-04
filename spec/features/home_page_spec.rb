@@ -40,4 +40,7 @@ feature "Home Page" do
       expect(page).to_not have_css('li a', visible: true)
     end
   end
+  it 'has schema.org markup for searching' do
+    expect(page).to have_css('script[type="application/ld+json"]', text: %r{http://schema.org}, visible: false)
+  end
 end
