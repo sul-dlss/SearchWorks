@@ -1,6 +1,9 @@
 require "spec_helper"
 
-feature "Image Collection" do
+feature "Image Collection", js: true do
+  before do
+    stub_article_service(docs: [])
+  end
   scenario "Search results" do
     visit root_path
 
@@ -9,7 +12,7 @@ feature "Image Collection" do
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
     expect(page).to have_css("[data-behavior='trunk8']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
-    expect(page).to have_css("dt", text: "Digital content")
+    expect(page).to have_css("dt", text: "DIGITAL CONTENT")
     expect(page).to have_css("dd", text: /\d+ items?/) # collection members
   end
 

@@ -1,0 +1,7 @@
+<% if @document.collection_members.present? %>
+  <% if @document.collection_members.render_type == 'filmstrip' %>
+    <%= render partial: 'collection_members/image_collection_filmstrip', locals: { collection_document: @document } %>
+  <% else %>
+    <%= render partial: 'collection_members/file_collection_members', locals: { document: @document } %>
+  <% end %>
+<% end %>

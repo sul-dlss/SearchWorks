@@ -28,6 +28,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :collection_members, only: :show
+
   Blacklight::Marc.add_routes(self)
   devise_for :users, skip: [:registrations, :passwords, :sessions]
   devise_scope :user do

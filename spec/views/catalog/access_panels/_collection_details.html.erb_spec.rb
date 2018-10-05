@@ -29,8 +29,8 @@ describe "catalog/access_panels/_collection_details.html.erb" do
     it "should render an access panel" do
       expect(rendered).to have_css('.panel-collection-details')
       expect(rendered).to have_css('.panel-heading', text: 'Collection details')
-      expect(rendered).to have_css('dt', text: 'Digital content')
-      expect(rendered).to have_css('dd a', text: '2 items')
+      expect(rendered).to have_css('dt', text: 'Digital content', visible: false)
+      expect(rendered).to have_css('dd a', text: 'item', visible: false)
       expect(rendered).to have_css('dt', text: 'Physical extent')
       expect(rendered).to have_css('dd', text: '2 things')
       expect(rendered).to have_css('dt', text: 'Collection PURL')
