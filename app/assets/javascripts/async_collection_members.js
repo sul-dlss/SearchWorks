@@ -11,8 +11,15 @@ var AsyncCollectionMembers = (function() {
 
     replaceCollectionMemberContent: function(element) {
       var _this = this;
+      var placeholder = '<div class="async-placeholder">' +
+                          '<h3 class="col-md-9"></h3>' +
+                          '<p class="col-md-6"></p>' +
+                          '<p class="col-md-12"></p>' +
+                          '<p class="col-md-3"></p>' +
+                        '</div>';
+      element.html(placeholder);
       $.ajax(element.data().collectionMembersPath).success(function(data) {
-        element.html(data.html);
+        element.hide().html(data.html).fadeIn(500);
 
         // Trigger filmstrip rendering and preview
         element.find('.image-filmstrip').renderFilmstrip();
