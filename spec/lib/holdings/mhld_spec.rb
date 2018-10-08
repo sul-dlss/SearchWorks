@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Holdings::MHLD do
   let(:mhld_display) { 'GREEN -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
-  let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note) -|- library-has-with-hyphens and <html> entities -|- ' }
+  let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note),no.17,no.14 -|- library-has-with-hyphens and <html> entities -|- ' }
   let(:zombie_mhld) { 'PHYSICS -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
 
   it 'should return the correct elements from the MHLD combined field' do
@@ -22,6 +22,10 @@ describe Holdings::MHLD do
 
   it "should replace '),(' with '), ('" do
     expect(Holdings::MHLD.new(special_mhld).public_note).to match(/\), \(/)
+  end
+
+  it "should replace ',' with ', '" do
+    expect(Holdings::MHLD.new(special_mhld).public_note).to match(/no\.17, no\.14/)
   end
 
   it 'should append <wbr/> to hyphens' do
