@@ -1,5 +1,9 @@
 .librarian-chat{
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+}
+
+.check-status {
+  padding-bottom: 25px;
 }
 
 .quick-report{
@@ -8,8 +12,6 @@
 
 .btn-quick-report{
   white-space: normal;
-  max-width: 100px;
-  font-size: $font-size-small;
 }
 
 .cancel-link .btn .btn-link {
@@ -19,6 +21,11 @@
 
 #feedback-form{
   border-bottom: 3px solid $sul-toolbar-border;
+  margin-top: 25px;
+
+  div.col-sm-4 {
+    margin-top: 25px;
+  }
 }
 
 .feedback-alert {

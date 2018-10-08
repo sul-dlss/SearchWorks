@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Adds links to the SearchWorks status dashboard [#2027](https://github.com/sul-dlss/SearchWorks/pull/2027)
+- Adds links to the SearchWorks status dashboard [#2027](https://github.com/sul-dlss/SearchWorks/pull/2027) [#2032](https://github.com/sul-dlss/SearchWorks/pull/2032)
 ### Changed
 - Changed the way that bound with items are displayed. Bound with call numbers are removed from search results. On a show page, the notes are formatted in a more pleasant way while the live lookup data information is removed. [#1345](https://github.com/sul-dlss/SearchWorks/pull/1345)
 - Changes the "zero results" page in the following ways: change copy of headings, simplifies formatting of list elements, adds mini-bento search results for alternate search backends, adds more options for search results, moves the chat link and adds live hours. [#2014](https://github.com/sul-dlss/SearchWorks/pull/2014)
