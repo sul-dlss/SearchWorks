@@ -1,12 +1,15 @@
 require "spec_helper"
 
-feature "Merged Image Collections" do
+feature "Merged Image Collections", js: true do
+  before do
+    stub_article_service(docs: [])
+  end
   scenario "in search results" do
     visit root_path
     fill_in 'q', with: '34'
     click_button 'search'
 
-    expect(page).to have_css('dt', text: "Digital content")
+    expect(page).to have_css('dt', text: 'DIGITAL CONTENT')
     expect(page).to have_css('dd', text: /\d+ items?/)
 
     within('.image-filmstrip') do

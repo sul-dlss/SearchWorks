@@ -1,9 +1,3 @@
-<% document ||= @document %>
-
-<% if document.collection_members.present? %>
-  <% if document.collection_members.render_type == 'filmstrip' %>
-    <%= render partial: "catalog/image_collection_filmstrip", locals: { collection_document: document } %>
-  <% else %>
-    <%= render partial: 'catalog/file_collection_members', locals: { document: document } %>
-  <% end %>
-<% end %>
+<div data-behavior="async-collection-members" data-collection-members-path="<%= collection_member_path(document[:id], format: :json) %>" aria-live="polite">
+  <%= link_to_collection_members('View all items', document) %>
+</div>

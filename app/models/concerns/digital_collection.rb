@@ -34,6 +34,25 @@ module DigitalCollection
       end
     end
 
+    def as_json(*)
+      {
+        total: total,
+        id: document[:id],
+        html: render
+      }
+    end
+
+    def to_partial_path
+      'collection_members/show'
+    end
+
+    def render
+      ApplicationController.render(
+        file: to_partial_path,
+        assigns: { document: document }
+      )
+    end
+
     private
 
     attr_reader :document, :options

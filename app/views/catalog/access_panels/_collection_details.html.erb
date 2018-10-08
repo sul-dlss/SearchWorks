@@ -5,8 +5,12 @@
     </div>
     <div class="panel-body">
         <dl class="dl-invert">
-          <dt>Digital content</dt>
-          <dd><%= link_to_collection_members(pluralize(@document.collection_members.total, 'item'), @document) %></dd>
+          <dt style="display:none;" data-behavior="display-digital-content-count" data-document-id="<%= @document[:id] %>">
+            Digital content
+          </dt>
+          <dd style="display:none;" data-behavior="display-digital-content-count" data-document-id="<%= @document[:id] %>">
+            <%= link_to_collection_members('item', @document, { data: { behavior: 'update-digital-content-count', 'document-id': @document[:id] } }) %>
+          </dd>
           <% if @document.extent.present? %>
             <dt><%= @document.extent_label %></dt>
             <dd><%= @document.extent %></dd>

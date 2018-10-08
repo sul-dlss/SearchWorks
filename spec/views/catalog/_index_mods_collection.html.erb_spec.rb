@@ -5,6 +5,7 @@ describe "catalog/_index_mods_collection.html.erb" do
   before do
     allow(view).to receive(:document).and_return(
       SolrDocument.new(
+        id: 'abc123',
         modsxml: mods_everything,
         physical: ["The Physical Extent"]
       )
