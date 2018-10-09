@@ -59,4 +59,25 @@ describe MarcFieldWrapper do
       end
     end
   end
+
+  describe '#==' do
+    let(:field) { marc_fields(metadata1, '100').first }
+    let(:other_field) { marc_fields(complex_vernacular_fixture, '880').first }
+
+    it 'is true for the same object' do
+      expect(subject).to eq subject
+    end
+
+    it 'is true if the object wraps the same field' do
+      expect(subject).to eq described_class.new(field)
+    end
+
+    it 'is false if the object wraps different fields' do
+      expect(subject).not_to eq described_class.new(other_field)
+    end
+
+    it 'is false if they are totally different objects' do
+      expect(subject).not_to eq ''
+    end
+  end
 end
