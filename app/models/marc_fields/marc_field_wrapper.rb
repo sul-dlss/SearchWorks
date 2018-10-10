@@ -6,7 +6,7 @@
 class MarcFieldWrapper
   attr_reader :marc_field
   attr_writer :subfields
-  delegate :[], :==, :each, :each_with_object, :indicator1, :indicator2, :tag, to: :marc_field
+  delegate :[], :each, :each_with_object, :indicator1, :indicator2, :tag, to: :marc_field
 
   def initialize(marc_field)
     @marc_field = marc_field
@@ -39,6 +39,10 @@ class MarcFieldWrapper
 
   def subfields
     @subfields ||= marc_field.subfields
+  end
+
+  def ==(other)
+    self.equal?(other) || (other.is_a?(MarcFieldWrapper) && self.marc_field == other.marc_field)
   end
 
   private
