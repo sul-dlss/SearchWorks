@@ -10,7 +10,11 @@ describe "catalog/_index_mods.html.erb" do
         collection_with_title: ['12345 -|- Collection Title'],
         modsxml: mods_everything,
         physical: ["The Physical Extent"],
-        imprint_display: ["Imprint Statement"]
+        imprint_display: ["Imprint Statement"],
+        author_struct: [
+          { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
+          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+        ]
       )
     )
     expect(view).to receive(:show_presenter).and_return(presenter)

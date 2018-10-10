@@ -17,4 +17,18 @@ module ModsData
     return nil unless self["modsxml"]
     @prettified_mods ||= CodeRay::Duo[:xml, :div].highlight(self["modsxml"]).html_safe
   end
+
+  ##
+  # Convenience accessors and parsers for mods_display content already indexed
+
+  ##
+  # A ModsDisplay::Values object dumped while indexing. The object is needed
+  # as there is there is some necessary display logic.
+  def mods_display_name
+    fetch(:author_struct, [])
+  end
+
+  def mods_abstract
+    fetch(:summary_display, [])
+  end
 end
