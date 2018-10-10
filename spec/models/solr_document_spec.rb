@@ -42,11 +42,6 @@ describe SolrDocument do
       expect(subject).to be_kind_of CollectionMember
     end
   end
-  describe "MarcCharacteristics" do
-    it "should include the marc characteristics" do
-      expect(subject).to be_kind_of MarcCharacteristics
-    end
-  end
   describe "Extent" do
     it "should include the extent" do
       expect(subject).to be_kind_of Extent

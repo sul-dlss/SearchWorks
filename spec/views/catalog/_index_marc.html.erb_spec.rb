@@ -9,6 +9,14 @@ describe "catalog/_index_marc.html.erb" do
     before do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
+          author_struct: [
+            {
+              creator: [{link:'Arbitrary, Stewart.', search: 'Arbitrary, Stewart.', post_text: 'fantastic.' }],
+              corporate_author: [{link:'Arbitrary, Corporate.', search: 'Arbitrary, Corporate.', post_text: 'fantastic.' }],
+              meeting: [{link:'Arbitrary Meeting.', search: 'Arbitrary, Meeting.', post_text: 'fantastic.' }],
+            }
+          ],
+          imprint_display: ['Imprint Statement'],
           marcbib_xml: metadata1,
           physical: ["The Physical Extent"],
           format_main_ssim: ['Book']

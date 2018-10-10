@@ -22,10 +22,7 @@ module Extent
   end
 
   def characteristics_string
-    return nil unless self.marc_characteristics.present?
-    self.marc_characteristics.map do |characteristic|
-      "#{characteristic.label}: #{characteristic.values.join(' ')}"
-    end.join(' ')
+    self['characteristics_ssim'].join(' ') if self['characteristics_ssim']
   end
 
   def sanitized_format
