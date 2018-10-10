@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe SchemaDotOrg do
   context 'with data serialized into the solr document' do
-    let(:document) { SolrDocument.new(schema_dot_org_struct: { schema: '.org' }) }
+    let(:document) { SolrDocument.new(schema_dot_org_struct: [{ schema: '.org' }]) }
 
     it 'uses that data' do
       expect(document).to be_schema_dot_org

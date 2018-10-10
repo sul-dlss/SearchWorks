@@ -4,7 +4,7 @@ module SchemaDotOrg
   end
 
   def as_schema_dot_org
-    self[:schema_dot_org_struct] || solr_values_to_schema_dot_org
+    self[:schema_dot_org_struct] ?  self[:schema_dot_org_struct].first : solr_values_to_schema_dot_org
   end
 
   def solr_values_to_schema_dot_org

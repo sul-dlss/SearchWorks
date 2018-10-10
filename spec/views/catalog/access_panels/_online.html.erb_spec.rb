@@ -11,21 +11,20 @@ describe "catalog/access_panels/_online.html.erb" do
       expect(rendered).to have_css("div.panel-online", visible:false)
     end
   end
-  describe "marc record" do
+  describe "ma6rc record" do
     it "should render the panel with a link" do
-      assign(:document, SolrDocument.new(marcxml: simple_856))
+      assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }]))
       render
       expect(rendered).to have_css(".panel-online")
       expect(rendered).to have_css(".panel-heading", text: "Available online")
       expect(rendered).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do
-      assign(:document, SolrDocument.new(marcxml: stanford_only_856))
+      assign(:document, SolrDocument.new(marc_links_struct: [{ html: "<a href='...'>Link text</a>'<span class='additional-link-text'>4 at one time</span>", fulltext: true, stanford_only: true }]))
       render
       expect(rendered).to have_css(".panel-online")
       expect(rendered).to have_css("ul.links li span.stanford-only")
       expect(rendered).to have_css("span.additional-link-text", text: "4 at one time")
-      expect(rendered).to have_css("a[title='Available to Stanford-affiliated users only']", text: "Link text", count: 3)
     end
 
     context 'when the record has an SFX link' do
@@ -41,7 +40,7 @@ describe "catalog/access_panels/_online.html.erb" do
 
     describe "database" do
       before do
-        assign(:document, SolrDocument.new(marcxml: simple_856, format_main_ssim: ["Database"]))
+        assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }], format_main_ssim: ["Database"]))
       end
       it "should render a special panel heading" do
         render

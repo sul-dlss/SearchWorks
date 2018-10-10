@@ -10,7 +10,12 @@ describe "catalog/_index_online_section.html.erb" do
           document: SolrDocument.new(
             id: '12345',
             isbn_display: [123],
-            marcbib_xml: stanford_only_856
+            marc_links_struct: [
+              { html: 'a', fulltext: true },
+              { html: 'b', fulltext: true },
+              { html: 'c', fulltext: true },
+              { html: 'd', fulltext: true },
+            ]
           )
         )
         render

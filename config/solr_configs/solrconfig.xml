@@ -870,6 +870,7 @@
         author_person_display,        vern_author_person_display,
         author_person_full_display,   vern_author_person_full_display,
         bookplates_display,
+        characteristics_ssim,
         collection,
         collection_type,
         collection_with_title,
@@ -916,7 +917,12 @@
         url_fulltext,
         url_restricted,
         url_suppl,
-        url_sfx
+        url_sfx,
+        author_struct:[json],
+        marc_links_struct:[json],
+        summary_struct:[json],
+        toc_struct:[json],
+        uniform_title_display_struct: [json]
       </str>
     </lst>
   </requestHandler>
@@ -938,7 +944,12 @@
   <requestHandler name="document" class="solr.SearchHandler" >
     <lst name="defaults">
       <str name="echoParams">explicit</str>
-      <str name="fl">*</str>
+      <str name="fl">*,
+      author_struct:[json],
+      marc_links_struct:[json],
+      summary_struct:[json],
+      toc_struct:[json],
+      uniform_title_display_struct: [json]</str>
       <int name="rows">1</int>
       <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
     </lst>
@@ -1058,6 +1069,11 @@
         subtitle_vern_display,
         url_fulltext_display,
         url_suppl_display,
+        author_struct:[json],
+        characteristics_struct:[json],
+        summary_struct:[json]
+        toc_struct:[json]
+        uniform_title_display_struct: [json]
       </str>
 
       <str name="facet">true</str>

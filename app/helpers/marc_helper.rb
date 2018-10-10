@@ -403,67 +403,27 @@ module MarcHelper
   end
 
   def results_imprint_string(document)
-    if (edition = document.edition).present?
-      edition = edition.map do |field|
-        field.values.join(' ')
-      end.compact.join(' ')
-    end
-    imprint = document.imprint.values.join(' ') if document.imprint.present?
-    if (pub = marc_264(document.to_marc)).present? &&
-      copyright_labels = [marc_264_labels[:" 4"], marc_264_labels[:"24"], marc_264_labels[:"34"]]
-      pub = pub.map do |label, values|
-        unless copyright_labels.include?(label)
-          values.join(' ')
-        end
-      end.compact.join(' ')
-    end
-    [edition, imprint, pub].compact.join(' - ')
+    document.fetch(:imprint_display, []).first
   end
 
-  def get_uniform_title(doc, fields, fld = nil)
-    return unless fields.any? { |f| doc[f].present? }
-    last_present_tag = fields.reverse.find { |f| doc[f].present? }
-    uniform_title = fld || doc[last_present_tag]
-    pre_text = []
-    link_text = []
-    extra_text = []
-    end_link = false
-    uniform_title.each do |sub_field|
-      next if Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-      if !end_link && sub_field.value.strip =~ /[\.|;]$/ && sub_field.code != 'h'
-        link_text << sub_field.value
-        end_link = true
-      elsif end_link || sub_field.code == 'h'
-        extra_text << sub_field.value
-      elsif sub_field.code == 'i' # assumes $i is at beginning
-        pre_text << sub_field.value.gsub(/\s*\(.+\)/, '')
-      else
-        link_text << sub_field.value
-      end
-    end
+  def get_uniform_title(doc)
+    return unless doc['uniform_title_display_struct']
+    data = doc['uniform_title_display_struct'].first
+    field_data = data[:fields].first[:field]
 
-    author = []
-    unless fields.include?('730')
-      auth_field = doc['100'] || doc['110'] || doc['111']
-      author = auth_field.map do |sub_field|
-        next if (Constants::EXCLUDE_FIELDS + %w(4 e)).include?(sub_field.code)
-        sub_field.value
-      end.compact if auth_field
-    end
-
-    search_field = if %w(130 730).include?(uniform_title.tag)
+    search_field = if %w(130 730).include?(data[:uniform_title_tag])
                      'search_title'
                    else
                      'author_title'
                    end
-    vern = get_marc_vernacular(doc, uniform_title)
-    href = "\"#{[author.join(' '), link_text.join(' ')].join(' ')}\""
+    vern = data[:fields].first[:vernacular][:vern]
+    href = "\"#{[field_data[:author], field_data[:link_text]].join(' ')}\""
     {
-      label: 'Uniform Title',
-      unmatched_vernacular: nil,
+      label: data[:label],
+      unmatched_vernacular: data[:unmatched_vernacular],
       fields: [
         {
-          field: "#{pre_text.join(' ')} #{link_to(link_text.join(' '), { action: 'index', controller: 'catalog', q: href, search_field: search_field})} #{extra_text.join(' ')}".html_safe,
+          field: "#{field_data[:pre_text]} #{link_to(field_data[:link_text], { action: 'index', controller: 'catalog', q: href, search_field: search_field})} #{field_data[:post_text]}".html_safe,
           vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: search_field }) if vern)
         }
       ]

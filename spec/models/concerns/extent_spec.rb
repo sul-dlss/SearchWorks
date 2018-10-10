@@ -38,7 +38,7 @@ describe Extent do
     let(:marc_extent) {
       SolrDocument.new(
         physical: ['Extent'],
-        marcbib_xml: marc_characteristics_fixture
+        characteristics_ssim: ['Sound: digital; optical; surround; stereo; Dolby.', 'Video: NTSC. Digital: video file; DVD video; Region 1.']
       )
     }
     it "should not be present if the appropriate metadata is not available" do

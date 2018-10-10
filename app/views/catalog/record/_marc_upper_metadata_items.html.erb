@@ -4,17 +4,17 @@
     <% responsibility = get_data_with_label_from_marc(document.to_marc, 'Responsibility', '245', { sub_fields: ['c'] }) %>
     <%= render_field_from_marc(responsibility) if responsibility %>
 
-    <%- uniform_title = get_uniform_title(document.to_marc, ["240","130"]) -%>
+    <%- uniform_title = get_uniform_title(document) -%>
     <%- unless uniform_title.nil? -%>
       <%= render_field_from_marc(uniform_title) %>
     <%- end -%>
 
     <%= render document.language if document.language.present? %>
 
-    <% if (characteristics = document.marc_characteristics).present? %>
-      <% characteristics.each do |characteristic| %>
-        <dt><%= characteristic.label %></dt>
-        <dd><%= characteristic.values.join(' ') %></dd>
+    <% if (characteristics = document[:characteristics_ssim]).present? %>
+      <% characteristics.map { |x| x.split(': ', 2) }.each do |label, value| %>
+        <dt><%= label %></dt>
+        <dd><%= value %></dd>
       <% end %>
     <% end %>
 

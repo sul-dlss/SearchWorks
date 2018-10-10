@@ -13,3 +13,5 @@
 :db_az_subject: Biology
 :access_facet: Online
 :building_facet: Hoover Library
+:marc_links_struct:
+  - '{ "fulltext": true, "html": "...", "text": "..." }'

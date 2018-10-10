@@ -417,35 +417,18 @@ describe MarcHelper do
     end
   end
   describe '#results_imprint_string' do
-    let(:copyright_document) { SolrDocument.new(marcxml: marc_264_copyright_fixture) }
-    let(:document) { SolrDocument.new(marcxml: edition_imprint_fixture) }
-    let(:no_fields) { SolrDocument.new(marcxml: no_fields_fixture) }
-    it 'should not include copyright-only statements' do
-      data = results_imprint_string(copyright_document)
-      expect(data).to_not match /copyright/
-      expect(data).to eq '250 SubA - 264 SubA'
-    end
-    it 'should concatenate edition, imprint, and publisher info w/ a hyphen' do
-      expect(results_imprint_string(document)).to eq "SubA SubB - SubA SubB SubC SubG"
-    end
-    it 'should be blank when no data is present' do
-      expect(results_imprint_string(no_fields)).to be_blank
+    let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
+    it 'returns the first imprint statement from the index' do
+      expect(results_imprint_string(document)).to eq 'a'
     end
   end
 
   describe '#get_uniform_title' do
-    it 'does not link $h' do
-      marc = SolrDocument.new(marcxml: uniform_title_fixture).to_marc
-      title = get_uniform_title(marc, %w(240 130))
+    it 'assembles the uniform title' do
+      doc = SolrDocument.new(uniform_title_display_struct: [{ fields: [{ field: { pre_text: 'xyz', link_text: 'Instrumental music Selections', post_text: '[print/digital]' }, vernacular: { vern: '' }}]}])
+      title = get_uniform_title(doc)
       expect(title[:fields].length).to eq 1
-      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music Selections</a> \[print/digital\]})
-    end
-
-    it 'does not link subfields after a certain punctuation' do
-      marc = SolrDocument.new(marcxml: uniform_title_fixture2).to_marc
-      title = get_uniform_title(marc, %w(240 130))
-      expect(title[:fields].length).to eq 1
-      expect(title[:fields].first[:field]).to match(%r{<a href=.*>Instrumental music.</a> Selections})
+      expect(title[:fields].first[:field]).to match(%r{xyz <a href=.*>Instrumental music Selections</a> \[print/digital\]})
     end
   end
 end

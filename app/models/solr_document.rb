@@ -11,7 +11,6 @@ class SolrDocument
   include AccessPanelsConcern
   include DatabaseDocument
   include DigitalCollection
-  include MarcCharacteristics
   include Extent
   include Edition
   include CollectionMember

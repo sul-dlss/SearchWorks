@@ -1,4 +1,4 @@
-<% if linked_author.present? %>
+<% if linked_author.present? && linked_author.values.present? %>
   <dt><%= linked_author.label %></dt>
   <% linked_author.values.each do |author| %>
     <dd>
