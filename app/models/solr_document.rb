@@ -34,6 +34,7 @@ class SolrDocument
   include EdsSubjects
 
   include Blacklight::Solr::Document
+  include SchemaDotOrg
 
   delegate :empty?, :blank?, to: :to_h
 

@@ -18,4 +18,8 @@ feature 'Record view' do
       expect(find('img.cover-image')['src']).to match(/books\.google\.com.*id=crOdQgAACAAJ/)
     end
   end
+
+  it 'has schema.org markup' do
+    expect(page).to have_css('script[type="application/ld+json"]', text: %r{http://schema.org}, visible: false)
+  end
 end
