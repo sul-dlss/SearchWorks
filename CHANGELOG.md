@@ -7,15 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Adds links to the SearchWorks status dashboard [#2027](https://github.com/sul-dlss/SearchWorks/pull/2027) [#2032](https://github.com/sul-dlss/SearchWorks/pull/2032)
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.5] - 2018-10-12
+
+### Added
+- Adds links to the SearchWorks status dashboard [#2027](https://github.com/sul-dlss/SearchWorks/pull/2027) [#2032](https://github.com/sul-dlss/SearchWorks/pull/2032) [#2046](https://github.com/sul-dlss/SearchWorks/pull/2046)
+- Adds basic Schema.org JSON-LD markup [#2030](https://github.com/sul-dlss/SearchWorks/pull/2030).
 ### Changed
 - Changed the way that bound with items are displayed. Bound with call numbers are removed from search results. On a show page, the notes are formatted in a more pleasant way while the live lookup data information is removed. [#1345](https://github.com/sul-dlss/SearchWorks/pull/1345)
 - Changes the "zero results" page in the following ways: change copy of headings, simplifies formatting of list elements, adds mini-bento search results for alternate search backends, adds more options for search results, moves the chat link and adds live hours. [#2014](https://github.com/sul-dlss/SearchWorks/pull/2014)
-- Changes the way SDR objects in search results are looked up. Now this happens in the background not blocking the page load which speeds up search results significantly. #2031
+- Changes the way SDR objects in search results are looked up. Now this happens in the background not blocking the page load which speeds up search results significantly. [#2031](https://github.com/sul-dlss/SearchWorks/pull/2031)
+- Updates the EDS gem used for article search [#1951](https://github.com/sul-dlss/SearchWorks/pull/1951)
 ### Removed
+- Removed Ruby 2.3 build as production was upgraded to Ruby 2.5.1 [#2045](https://github.com/sul-dlss/SearchWorks/pull/2045)
+- Removed links to Google Book on search results for SDR objects with managed purls [#2049](https://github.com/sul-dlss/SearchWorks/pull/2049)
 ### Fixed
 - Reverts stylesheet preloading as it was causing an issue in FireFox. [#2019](https://github.com/sul-dlss/SearchWorks/pull/2019)
-### Security
+- Fixes an issue where mhld records were overflowing onto other parts of the page [#2034](https://github.com/sul-dlss/SearchWorks/pull/2034)
 
 ## [3.3.4] - 2018-10-01
 
@@ -55,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...HEAD
+[3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...v3.3.5
 [3.3.4]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...v3.3.4
 [3.3.3]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.2...v3.3.3
