@@ -47,6 +47,13 @@ STANFORD_NETWORK:
   ranges: []
 BITLY:
   ACCESS_TOKEN: 'the_bitly_apikey'
+NEW_RELIC_API:
+  alert_url: 'https://api.newrelic.com/v2/alerts_violations.json'
+  api_key: the-api-key
+  policies:
+    - key: low_app_apdex_alert
+      label: application apdex low
+      id: 318894
 RECAPTCHA:
   SITE_KEY: 6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy
   SECRET_KEY: 6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx
