@@ -30,9 +30,11 @@
           </li>
         <% end %>
       <% end %>
-      <li class="google-books <%= css_class %>">
-        <a href="" class="full-view">Google Books (Full view)</a></li>
-      </li>
+      <% if document[:managed_purl_urls].blank? %>
+        <li class="google-books <%= css_class %>">
+          <a href="" class="full-view">Google Books (Full view)</a></li>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>
