@@ -41,18 +41,16 @@
     @include label-items-online;
   }
 
-  &.article-search-results {
-    .article-metadata {
-      border-bottom: 1px solid $beige-30-percent;
-      border-top: 1px solid $beige-30-percent;
-      padding: 8px 0;
-    }
+  .results-metadata-section {
+    border-bottom: 1px solid $beige-30-percent;
+    border-top: 1px solid $beige-30-percent;
+    padding: 8px 0;
+  }
 
-    @media (min-width: $screen-sm-min) {
-      .dl-horizontal {
-        dd {
-          margin-left: 80px; // Get dds working better for article results
-        }
+  @media (min-width: $screen-sm-min) {
+    .results-metadata-section {
+      dd {
+        margin-left: 80px; // Get dds working better for article results
       }
     }
   }
