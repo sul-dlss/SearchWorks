@@ -1,4 +1,22 @@
 require 'okcomputer'
+require 'performance_alerts'
+
+class PerformanceCheck < OkComputer::Check
+  attr_reader :policy
+  def initialize(policy)
+    super()
+    @policy = policy
+  end
+
+  def check
+    if PerformanceAlerts.for(policy_id: policy.id).open.none?
+      mark_message "No open #{policy.label} alerts"
+    else
+      mark_failure
+      mark_message "There is an open #{policy.label} alert"
+    end
+  end
+end
 
 # /status for 'upness', e.g. for load balancer
 # /status/all to show all dependencies
@@ -34,4 +52,11 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 
 OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)
 OkComputer::Registry.register 'oclc_citation_service', OkComputer::HttpCheck.new(Citation.test_api_url)
-OkComputer.make_optional %w[live_lookups oclc_citation_service]
+
+Settings.NEW_RELIC_API.policies.each do |policy|
+  OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
+end
+
+OkComputer.make_optional(%w[live_lookups oclc_citation_service]).concat(
+  Settings.NEW_RELIC_API.policies.map(&:key)
+)
