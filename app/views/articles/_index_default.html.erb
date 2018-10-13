@@ -2,7 +2,7 @@
 <ul class='document-metadata dl-horizontal dl-invert'>
   <% if document['eds_authors'].present? %>
     <li>
-      <div data-behavior='article-metadata-truncate'>
+      <div data-behavior='metadata-truncate'>
         <%= doc_presenter.field_value('eds_authors') %>
       </div>
     </li>
@@ -18,7 +18,7 @@
     <% if document.eds_subjects.present? %>
       <dt>Subjects</dt>
       <dd>
-        <div data-behavior='article-metadata-truncate'>
+        <div data-behavior='metadata-truncate'>
           <%= document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
         </div>
       </dd>
@@ -27,7 +27,7 @@
     <% if document['eds_abstract'].present? %>
       <dt>Abstract</dt>
       <dd>
-        <div data-behavior='article-metadata-truncate'>
+        <div data-behavior='metadata-truncate'>
           <%= doc_presenter.field_value('eds_abstract') %>
         </div>
       </dd>
