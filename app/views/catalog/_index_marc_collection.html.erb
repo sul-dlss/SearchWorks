@@ -11,6 +11,12 @@
     <dd><%= document.extent %></dd>
   <% end %>
 
+  <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
+  <% if summary_data.present? %>
+    <dt>Summary</dt>
+    <dd><%= sanitize summary_data %></dd>
+  <% end %>
+
   <% if document.index_links.finding_aid.present? %>
     <dt>Finding aid</dt>
     <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>

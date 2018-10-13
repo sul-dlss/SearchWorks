@@ -10,6 +10,12 @@
     <dt><%= document.extent_label %></dt>
     <dd><%= document.extent %></dd>
   <% end %>
+
+  <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
+  <% if summary_data.present? %>
+    <dt>Summary</dt>
+    <dd><%= sanitize summary_data %></dd>
+  <% end %>
 </dl>
 
 <%= render partial: 'search_results_accordion_sections', locals: { document: document } %>
