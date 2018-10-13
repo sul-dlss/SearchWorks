@@ -1,10 +1,13 @@
 module Extent
   def extent_label
-    sanitized_format || "Physical extent"
+    'Description'
   end
 
   def extent
-    [physical_string, characteristics_string].compact.join(' ')
+    [
+      sanitized_format,
+      [physical_string, characteristics_string].compact.join(' ')
+    ].reject(&:blank?).compact.join(' — ')
   end
 
   private
