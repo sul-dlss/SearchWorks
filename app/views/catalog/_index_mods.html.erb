@@ -9,7 +9,11 @@
   <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
   <% if summary_data.present? %>
     <dt>Summary</dt>
-    <dd><%= sanitize summary_data %></dd>
+    <dd>
+      <div data-behavior='metadata-truncate'>
+        <%= sanitize summary_data %>
+      </div>
+    </dd>
   <% end %>
 
   <% if document.index_parent_collections.present? %>
