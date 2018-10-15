@@ -293,12 +293,13 @@ describe MarcHelper do
     let(:multi_vxyz_subject) { SolrDocument.new(marcxml: multi_vxyz_subject_fixture ) }
     let(:collection_690) { SolrDocument.new(marcxml: collection_690_fixture ) }
     let(:ordered_subjects) { SolrDocument.new(marcxml: ordered_subjects_fixture) }
+    let(:vernacular_subjects) { SolrDocument.new(marcxml: vernacular_subjects_fixture) }
     let(:genre_subjects) { SolrDocument.new(marcxml: marc_655_subject_fixture) }
     let(:local_subjects) { SolrDocument.new(marcxml: collection_690_fixture) }
 
     describe "#get_genre_subjects" do
       it "should return MARC 655 formatted as hierarchical subjects" do
-        subjects = get_genre_subjects(genre_subjects.to_marc)
+        subjects = get_genre_subjects(genre_subjects)
         expect(subjects).to be_present
         expect(subjects).to have_css('dt', text: 'Genre')
         expect(subjects).to have_css('dd a', text: 'Subject A1')
@@ -307,13 +308,13 @@ describe MarcHelper do
         expect(subjects).to match /<\/a> &gt. <a/
       end
       it "should be nil for non 655 subjects" do
-        expect(get_genre_subjects(multi_a_subject.to_marc)).to be_nil
+        expect(get_genre_subjects(multi_a_subject)).to be_nil
       end
     end
 
     describe '#get_local_subjects' do
       it 'returns the MARC 690 formatted as hierarchical subjects' do
-        subjects = get_local_subjects(local_subjects.to_marc)
+        subjects = get_local_subjects(local_subjects)
         expect(subjects).to be_present
         expect(subjects).to have_css('dt', text: 'Local subject')
         expect(subjects).to have_css('dd a', text: 'Subject Collection 1')
@@ -322,38 +323,42 @@ describe MarcHelper do
 
     describe "#get_subjects" do
       it "should return a valid list of linked subjects" do
-        subjects = get_subjects(document.to_marc)
+        subjects = get_subjects(document)
         expect(subjects).to match(/title=\"Search: Subject1 Subject2\"/) and
         expect(subjects).to match(/>Subject1 Subject2</)
       end
       it "should not include subjects where subfield 'a' begins with a % sign" do
-        expect(get_subjects(percent_record.to_marc)).not_to match(/.*%Subject1.*/)
+        expect(get_subjects(percent_record)).not_to match(/.*%Subject1.*/)
       end
       it "should handle items with several A subfields as separate subjects (separate dd elements)" do
-        expect(get_subjects(multi_a_subject.to_marc)).to match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
+        expect(get_subjects(multi_a_subject)).to match(/.*<dd>.*Subject A1.*<\/dd>.*<dd>.*Subject A2.*<\/dd>.*<dd>.*Subject A3.*<\/dd>.*<dd>.*Subject A4.*<\/dd>.*/)
       end
       it "should concat all subfields except for v x y z" do
-        expect(get_subjects(multi_vxyz_subject.to_marc)).to match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
+        expect(get_subjects(multi_vxyz_subject)).to match(/.*<dd><a.*>Subject A Subject B Subject C<\/a> &gt; <a.*>Subject V<\/a> &gt; <a.*>Subject X<\/a> &gt; <a.*>Subject Y<\/a> &gt; <a.*>Subject Z<\/a>.*/)
       end
       it "should wrap all of the subject terms in quotes" do
-        data = get_subjects(multi_vxyz_subject.to_marc)
+        data = get_subjects(multi_vxyz_subject)
         expect(data).to match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C%22.*\".*/)
         expect(data).to match(/.*href=\".*%22Subject\+A\+Subject\+B\+Subject\+C\+Subject\+V\+Subject\+X%22.*\".*/)
         # should not have any quoted phrases concatinated with a space in the URL
         expect(data).not_to match(/\"\+\"/)
       end
       it "should not display a 690 if the subfield a includes 'collection'" do
-        expect(get_subjects(collection_690.to_marc)).not_to match(/.*Subject Collection 1.*/)
+        expect(get_subjects(collection_690)).not_to match(/.*Subject Collection 1.*/)
       end
       it "should order the subjects as they are in the original MARC record" do
-        expect(get_subjects(ordered_subjects.to_marc)).to match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
-        expect(get_subjects(ordered_subjects.to_marc)).not_to match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
+        expect(get_subjects(ordered_subjects)).to match(/.*<dd>.*Subject 651.*<\/dd>.*<dd>.*Subject 650.*<\/dd>.*/) and
+        expect(get_subjects(ordered_subjects)).not_to match(/.*<dd>.*Subject 650.*<\/dd>.*<dd>.*Subject 651.*<\/dd>.*/)
+      end
+      it "should display vernacular subjects" do
+        expect(get_subjects(vernacular_subjects)).to match(/Linked vernacular subject/)
+        expect(get_subjects(vernacular_subjects)).to match(/Unlinked vernacular subject/)
       end
       it "should not return anything for 655 genre subjects" do
-        expect(get_subjects(genre_subjects.to_marc)).to be_nil
+        expect(get_subjects(genre_subjects)).to be_nil
       end
       it "should return nothing if no subjects are available" do
-        expect(get_subjects(nil_document.to_marc)).to be_nil
+        expect(get_subjects(nil_document)).to be_nil
       end
     end
   end

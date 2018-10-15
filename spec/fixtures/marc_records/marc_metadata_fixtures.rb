@@ -638,6 +638,24 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+  def vernacular_subjects_fixture
+    <<-xml
+      <record>
+        <datafield tag="650" ind1=" " ind2=" ">
+          <subfield code="6">880-01</subfield>
+          <subfield code="a">Subject 650</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">650-01</subfield>
+          <subfield code="a">Linked vernacular subject</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">651-00</subfield>
+          <subfield code="a">Unlinked vernacular subject</subfield>
+        </datafield>
+      </record>
+    xml
+  end
   def related_works_fixture
     <<-xml
       <record>

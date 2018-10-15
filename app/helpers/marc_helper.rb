@@ -273,18 +273,18 @@ module MarcHelper
   end
 
   # Generate hierarchical structure of subject headings from marc
-  def get_subjects(marc)
+  def get_subjects(document)
     subs = ['600','610','611','630','650','651','653','654','656','657','658','691','693','696', '697','698','699']
-    get_subjects_hierarchy('Subject', get_subjects_array(marc, subs))
+    get_subjects_hierarchy('Subject', get_subjects_array(document, subs))
   end
 
   # Generate hierarchical structure of subject headings from marc
-  def get_genre_subjects(marc)
-    get_subjects_hierarchy('Genre', get_subjects_array(marc, ['655']))
+  def get_genre_subjects(document)
+    get_subjects_hierarchy('Genre', get_subjects_array(document, ['655']))
   end
 
-  def get_local_subjects(marc)
-    get_subjects_hierarchy('Local subject', get_subjects_array(marc, ['690']))
+  def get_local_subjects(document)
+    get_subjects_hierarchy('Local subject', get_subjects_array(document, ['690']))
   end
 
   def get_subjects_hierarchy(label, subjects)
@@ -308,43 +308,41 @@ module MarcHelper
     return text unless text == "<dt>#{label}</dt>"
   end
 
-  def get_subjects_array(marc, subs)
+  def get_subjects_array(document, subs)
     data = []
-    marc.find_all{|f| f.tag =~ /^6../}.each do |l|
-      if subs.include?(l.tag)
-        multi_a = []
-        temp_data_array = []
-        temp_subs_text = ""
-        temp_xyv_array = []
-        l.each do |sf|
-          exclude = Constants::EXCLUDE_FIELDS.dup
-          ["1","2","3","4","7","9"].each{|i| exclude << i}
-          unless exclude.include?(sf.code)
-            if sf.code == "a"
-              multi_a << sf.value unless sf.code == "a" and sf.value[0,1] == "%"
-            end
-            if ["v","x","y","z"].include?(sf.code)
-              temp_xyv_array << sf.value
-            else
-              temp_subs_text << "#{sf.value} " unless (sf.code == "a" or (sf.code == "a" and sf.value[0,1] == "%"))
-            end
+    document.subjects(subs).fields.each do |l|
+      multi_a = []
+      temp_data_array = []
+      temp_subs_text = ""
+      temp_xyv_array = []
+      l.each do |sf|
+        exclude = Constants::EXCLUDE_FIELDS.dup
+        ["1","2","3","4","7","9"].each{|i| exclude << i}
+        unless exclude.include?(sf.code)
+          if sf.code == "a"
+            multi_a << sf.value unless sf.code == "a" and sf.value[0,1] == "%"
+          end
+          if ["v","x","y","z"].include?(sf.code)
+            temp_xyv_array << sf.value
+          else
+            temp_subs_text << "#{sf.value} " unless (sf.code == "a" or (sf.code == "a" and sf.value[0,1] == "%"))
           end
         end
-        if multi_a.length > 1
-          multi_a.each do |a|
-            data << [a]
-          end
-        elsif multi_a.length == 1
-          str = multi_a.first << " " << temp_subs_text unless (temp_subs_text.blank? and multi_a.empty?)
-          temp_data_array << str
-        else
-          temp_data_array << temp_subs_text unless temp_subs_text.blank?
-        end
-        temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?
-        data << temp_data_array unless temp_data_array.empty?
       end
+      if multi_a.length > 1
+        multi_a.each do |a|
+          data << [a]
+        end
+      elsif multi_a.length == 1
+        str = multi_a.first << " " << temp_subs_text unless (temp_subs_text.blank? and multi_a.empty?)
+        temp_data_array << str
+      else
+        temp_data_array << temp_subs_text unless temp_subs_text.blank?
+      end
+      temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?
+      data << temp_data_array unless temp_data_array.empty?
     end
-    return data
+    data
   end
 
   def get_740_works_from_marc(marc,label,field = '740')
