@@ -16,20 +16,20 @@
     </dd>
   <% end %>
 
-  <% if document.index_parent_collections.present? %>
-    <dt>Collection</dt>
-    <dd>
-      <% document.index_parent_collections.each do |collection| %>
-        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
-      <% end %>
-    </dd>
-  <% end %>
-
   <% if document.index_parent_sets.present? %>
     <dt>Appears in</dt>
     <dd>
       <% document.index_parent_sets.each do |set| %>
         <%= link_to(show_presenter(set).heading, solr_document_path(set))%>
+      <% end %>
+    </dd>
+  <% end %>
+
+  <% if document.index_parent_collections.present? %>
+    <dt>Collection</dt>
+    <dd>
+      <% document.index_parent_collections.each do |collection| %>
+        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
       <% end %>
     </dd>
   <% end %>
