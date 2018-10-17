@@ -15,10 +15,11 @@ ul.links {
   @extend .label-success;
   background-color: $sul-accordion-online-bg;
   border: 1px solid $sul-accordion-online-border;
-  padding: 0px 7px 2px 7px;
+  padding: 2px 7px;
   font-size: 12px;
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
   letter-spacing: 0;
   font-weight: normal;
   border-radius: 2px;
+  vertical-align: middle;
 }
