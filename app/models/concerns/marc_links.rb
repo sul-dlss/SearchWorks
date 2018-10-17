@@ -21,7 +21,7 @@ module MarcLinks
             stanford_only: stanford_only?(link),
             finding_aid: link_is_finding_aid?(link_field),
             managed_purl: link[:managed_purl],
-            file_id: file_id(link_field),
+            file_id: link[:file_id],
             druid: druid(link),
             sort: link[:sort]
           )
@@ -35,19 +35,6 @@ module MarcLinks
       @document.to_marc.find_all do |field|
         ('856') === field.tag
       end
-    end
-
-    def file_id(link_field)
-      return unless link_field['x'].present?
-      subxs = link_field.subfields.select do |subfield|
-        subfield.code == 'x'
-      end
-
-      file_id_value = subxs.find do |subx|
-        subx.value.starts_with?('file:')
-      end.try(:value)
-
-      file_id_value.gsub('file:', '') if file_id_value.present?
     end
 
     # Parse a URI object to return the host of the URL in the "url" parameter if it's a proxied resoruce
@@ -102,7 +89,8 @@ module MarcLinks
           casalini_toc: false,
           additional_text: additional_text,
           sort: sort,
-          managed_purl: true
+          managed_purl: true,
+          file_id: subxes['file']
         }
       else
         link_text = (!suby.present? && !sub3.present?) ? link_host(url) : [sub3, suby].compact.join(' ')
