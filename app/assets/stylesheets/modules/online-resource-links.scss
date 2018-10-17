@@ -13,13 +13,14 @@ ul.links {
 .online-label {
   @extend .label;
   @extend .label-success;
+
   background-color: $sul-accordion-online-bg;
   border: 1px solid $sul-accordion-online-border;
-  padding: 2px 7px;
-  font-size: 12px;
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-  letter-spacing: 0;
-  font-weight: normal;
   border-radius: 2px;
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0;
+  padding: 2px 7px;
   vertical-align: middle;
 }
