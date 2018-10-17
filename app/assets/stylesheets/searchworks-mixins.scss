@@ -94,6 +94,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+@mixin buttonize($background, $border) {
+  background-color: $background;
+  border: 1px solid $border;
+}
+
 @mixin buttonize-with-gradient($background, $border, $gradient) {
   border: 1px solid $border;
   @include linear-gradient($gradient, $background);
