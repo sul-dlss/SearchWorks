@@ -1,19 +1,19 @@
 <% document ||= @document %>
-<% subject_display = get_subjects(document.to_marc) %>
+<% subject_display = get_subjects(document) %>
 <% if subject_display %>
   <dl>
     <%= subject_display %>
   </dl>
 <% end %>
 
-<% genre_display = get_genre_subjects(document.to_marc) %>
+<% genre_display = get_genre_subjects(document) %>
 <% if genre_display %>
   <dl>
     <%= genre_display %>
   </dl>
 <% end %>
 
-<% if (local_subject = get_local_subjects(document.to_marc)).present? %>
+<% if (local_subject = get_local_subjects(document)).present? %>
   <dl>
     <%= local_subject %>
   </dl>
