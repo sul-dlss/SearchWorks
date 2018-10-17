@@ -1239,6 +1239,7 @@ module MarcMetadataFixtures
           <subfield code='x'>SDR-PURL</subfield>
           <subfield code='x'>item</subfield>
           <subfield code='x'>file:gg853cy1667%2Fgg853cy1667_0001.jp2</subfield>
+          <subfield code='x'>label:Some Part Label</subfield>
         </datafield>
         <datafield ind1='4' ind2='1' tag='856'>
           <subfield code='u'>http://purl.stanford.edu/rw779rf3064</subfield>

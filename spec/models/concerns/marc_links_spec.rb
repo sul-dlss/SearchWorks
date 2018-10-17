@@ -65,7 +65,7 @@ describe MarcLinks do
   end
 
   describe 'managed_purl?' do
-    let(:document) { SolrDocument.new(marcxml: managed_purl_856, managed_purl_urls: ['https://library.stanford.edu']) }
+    let(:document) { SolrDocument.new(marcxml: managed_purl_856) }
     let(:links) { document.marc_links }
 
     it 'should return the managed purl links' do
@@ -77,6 +77,14 @@ describe MarcLinks do
 
     it 'should return the file_id (without "file:")' do
       expect(links.all.first.file_id).to eq 'abc123'
+    end
+
+    it 'should return the sort (without "sort:")' do
+      expect(links.all.first.sort).to eq '123'
+    end
+
+    it 'should return the label (without "label:")' do
+      expect(links.all.first.text).to eq 'some label'
     end
   end
 
