@@ -170,6 +170,8 @@ module Marc856Fixtures
           <subfield code='u'>https://library.stanford.edu</subfield>
           <subfield code='x'>SDR-PURL</subfield>
           <subfield code='x'>file:abc123</subfield>
+          <subfield code='x'>label:some label</subfield>
+          <subfield code='x'>sort:123</subfield>
           <subfield code='y'>Link text 2</subfield>
         </datafield>
       </record>
