@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+- Updates Blacklight to v6.16.0 which fixes part of select button issues #1370. [#2063](https://github.com/sul-dlss/SearchWorks/pull/2063)
 ### Security
 
 ## [3.3.5] - 2018-10-12
