@@ -44,6 +44,8 @@ module SchemaDotOrg
     case
     when genre.include?('Thesis/Dissertation')
       'http://schema.org/Thesis'
+    when format.include?('Equipment')
+      'http://schema.org/Thing'
     when format.include?('Book')
       'http://schema.org/Book'
     when format.include?('Dataset')

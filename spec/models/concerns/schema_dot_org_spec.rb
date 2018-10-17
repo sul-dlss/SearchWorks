@@ -73,4 +73,17 @@ RSpec.describe SchemaDotOrg do
       expect(document.as_schema_dot_org).to include '@type': 'Thesis'
     end
   end
+
+  context 'a equipment' do
+    let(:document) do
+      SolrDocument.new(
+        format_main_ssim: ['Equipment']
+      )
+    end
+
+    it 'fabricates schema.org data' do
+      expect(document).to be_schema_dot_org
+      expect(document.as_schema_dot_org).to include '@type': 'Thing'
+    end
+  end
 end
