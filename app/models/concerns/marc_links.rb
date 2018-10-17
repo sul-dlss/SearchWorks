@@ -10,7 +10,7 @@ module MarcLinks
       @document = document
     end
     def all
-      link_fields.map do |link_field|
+      @all ||= link_fields.map do |link_field|
         link = process_link(link_field)
         if link.present?
           SearchWorks::Links::Link.new(
