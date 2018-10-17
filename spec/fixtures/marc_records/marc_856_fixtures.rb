@@ -168,6 +168,7 @@ module Marc856Fixtures
       <record>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>https://library.stanford.edu</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
           <subfield code='x'>file:abc123</subfield>
           <subfield code='y'>Link text 2</subfield>
         </datafield>
@@ -183,10 +184,12 @@ module Marc856Fixtures
       </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>https://purl.stanford.edu/ct493wg6431</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
           <subfield code='x'>file:ct493wg6431%252Fct493wg6431_00_0001.jp2</subfield>
         </datafield>
         <datafield tag='856' ind1='0' ind2='0'>
           <subfield code='u'>https://purl.stanford.edu/zg338xh5248</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
           <subfield code='x'>file:zg338xh5248%252Fzg338xh5248_00_0001.jp2</subfield>
         </datafield>
       </record>
