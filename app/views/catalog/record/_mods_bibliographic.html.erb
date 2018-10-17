@@ -11,6 +11,10 @@
   <%= mods_record_field(related_item) %>
 <% end %>
 
+<% document.mods.nestedRelatedItem.each do |nested_related_item| %>
+  <%= mods_record_field(nested_related_item) %>
+<% end %>
+
 <% document.mods.identifier.each do |identifier| %>
   <%= mods_record_field(identifier) %>
 <% end %>

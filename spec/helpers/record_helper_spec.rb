@@ -96,11 +96,12 @@ describe RecordHelper do
       it 'should link to an author search' do
         expect(name).to match /<a href.*search_field=search_author.*>/
       end
-      it "should join the person's roles" do
-        expect(name).to match /\(Host, Producer\)/
-      end
-      it 'should not attempt to print empty roles' do
-        expect(name).not_to match /\(\)/
+    end
+
+    describe '#sanitize_mods_name_label' do
+      it 'removes a ":" at the end of label if present' do
+        expect(sanitize_mods_name_label('Test String:')).to eq 'Test String'
+        expect(sanitize_mods_name_label('Test String')).to eq 'Test String'
       end
     end
   end

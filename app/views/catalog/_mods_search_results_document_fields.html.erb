@@ -5,7 +5,10 @@
     <% end %>
 
     <% if document.mods.name.present? && document.mods.name.first.values.present? %>
-      <li><%= mods_display_name([document.mods.name.first.values.first]) %></li>
+      <li>
+        <% name = document.mods.name.first %>
+        <%= link_to_mods_name(name.values.first) %> (<%= sanitize_mods_name_label(name.label) %>)
+      </li>
     <% end %>
 
     <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>

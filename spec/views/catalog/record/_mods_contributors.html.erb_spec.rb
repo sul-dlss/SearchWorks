@@ -10,14 +10,13 @@ describe "catalog/record/_mods_contributors.html.erb" do
     end
 
     it 'should display primary authors' do
-      expect(rendered).to have_css('dt', text: 'Author/Creator')
+      expect(rendered).to have_css('dt', text: 'Author')
       expect(rendered).to have_css('dd', text: 'J. Smith')
     end
 
     it "should display secondary authors" do
-      expect(rendered).to have_css("dt", text: "Contributor")
+      expect(rendered).to have_css("dt", text: "Producer")
       expect(rendered).to have_css("dd a", text: "B. Smith")
-      expect(rendered).to have_css("dd", text: /\(Producer\)/)
     end
   end
 end

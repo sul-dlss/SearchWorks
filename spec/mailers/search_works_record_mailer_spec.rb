@@ -152,8 +152,8 @@ describe SearchWorksRecordMailer do
       end
 
       it 'should include the HTML markup for MODS records' do
-        expect(mail.body).to have_css('dt', text: 'Contributor')
-        expect(mail.body).to have_css('dd', text: 'B. Smith (Producer)')
+        expect(mail.body).to have_css('dt', text: 'Producer')
+        expect(mail.body).to have_css('dd', text: 'B. Smith')
       end
 
       it 'should include holdings of all documents' do
