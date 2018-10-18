@@ -53,9 +53,18 @@ module RecordHelper
   def mods_display_name(names)
     names.map do |name|
       content_tag(:dd) do
-        "#{link_to(name.name, search_catalog_path(q: "\"#{name.name}\"", search_field: 'search_author'))}#{" (#{name.roles.join(', ')})" if name.roles.present?}".html_safe
+        link_to_mods_name(name.name)
       end
     end.join.html_safe
+  end
+
+  def link_to_mods_name(name)
+    link_to(name, search_catalog_path(q: "\"#{name}\"", search_field: 'search_author'))
+  end
+
+  # We need this to remove the ending ":" from the role labels
+  def sanitize_mods_name_label(label)
+    label.sub(/:$/, '')
   end
 
   def mods_subject_field(subjects)

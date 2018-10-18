@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Adds an OKComputer status check for degraded performance alerts from NewRelic (for the status dashboard) [#2051](https://github.com/sul-dlss/SearchWorks/pull/2051)
 ### Changed
+- Updated to [ModsDisplay 0.5.1](https://github.com/sul-dlss/mods_display/releases/tag/v0.5.1) [#2062](https://github.com/sul-dlss/SearchWorks/pull/2062)
+  - Most notable changes are labeling authors by their roles and splitting out host/constituent related items into separate section that renders full MODS representation
 ### Removed
 ### Fixed
 - Updates Blacklight to v6.16.0 which fixes part of select button issues #1370. [#2063](https://github.com/sul-dlss/SearchWorks/pull/2063)
