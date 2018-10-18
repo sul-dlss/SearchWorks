@@ -10,7 +10,7 @@ module MarcLinks
       @document = document
     end
     def all
-      link_fields.map do |link_field|
+      @all ||= link_fields.map do |link_field|
         link = process_link(link_field)
         if link.present?
           SearchWorks::Links::Link.new(
@@ -20,9 +20,10 @@ module MarcLinks
             fulltext: link_is_fulltext?(link_field),
             stanford_only: stanford_only?(link),
             finding_aid: link_is_finding_aid?(link_field),
-            managed_purl: link_is_managed_purl?(link),
-            file_id: file_id(link_field),
-            druid: druid(link)
+            managed_purl: link[:managed_purl],
+            file_id: link[:file_id],
+            druid: druid(link),
+            sort: link[:sort]
           )
         end
       end.compact
@@ -34,19 +35,6 @@ module MarcLinks
       @document.to_marc.find_all do |field|
         ('856') === field.tag
       end
-    end
-
-    def file_id(link_field)
-      return unless link_field['x'].present?
-      subxs = link_field.subfields.select do |subfield|
-        subfield.code == 'x'
-      end
-
-      file_id_value = subxs.find do |subx|
-        subx.value.starts_with?('file:')
-      end.try(:value)
-
-      file_id_value.gsub('file:', '') if file_id_value.present?
     end
 
     # Parse a URI object to return the host of the URL in the "url" parameter if it's a proxied resoruce
@@ -61,47 +49,66 @@ module MarcLinks
     end
 
     def process_link(field)
-      unless field['u'].nil?
-        # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
-        fixed_url = field['u'].gsub("^","").strip
-        url = URI.parse(fixed_url)
-        sub3 = nil
-        subz = []
-        suby = ""
-        field.each{|subfield|
-          if subfield.code == "3"
-            sub3 = subfield.value
-          elsif subfield.code == "z"
-            subz << subfield.value
-          elsif subfield.code == "y"
-            suby = subfield.value
-          end
-        }
+      return if field['u'].nil?
 
-        if field["x"] and field["x"] == "CasaliniTOC"
-          {:text=>field["3"],
-           :title=>"",
-           :href=>field["u"],
-           :casalini_toc => true
-          }
-        else
-          link_text = (!suby.present? && !sub3.present?) ? link_host(url) : [sub3, suby].compact.join(' ')
-          title = subz.join(" ")
-          additional_text = nil
-          if title =~ stanford_affiliated_regex
-            additional_text = "<span class='additional-link-text'>#{title.gsub(stanford_affiliated_regex, '')}</span>"
-            title = "Available to Stanford-affiliated users only"
-          end
-          {:text=>link_text,
-           :title=> title,
-           :href=>field["u"],
-           :casalini_toc => false,
-           :additional_text => additional_text
-          }
+      # Not sure why I need this, but it fails on certain URLs w/o it.  The link printed still has character in it
+      fixed_url = field['u'].gsub("^","").strip
+      url = URI.parse(fixed_url)
+      sub3 = nil
+      subz = []
+      suby = ""
+      field.each{|subfield|
+        if subfield.code == "3"
+          sub3 = subfield.value
+        elsif subfield.code == "z"
+          subz << subfield.value
+        elsif subfield.code == "y"
+          suby = subfield.value
         end
+      }
+
+      if field["x"] and field["x"] == "CasaliniTOC"
+        {:text=>field["3"],
+         :title=>"",
+         :href=>field["u"],
+         :casalini_toc => true
+        }
+      elsif field['x'] && field['x'] =~ /SDR-PURL/
+        subxes = field.subfields.select { |subfield| subfield.code == 'x' }.map { |subfield| subfield.value.split(':', 2).map(&:strip) }.select { |x| x.length == 2 }.to_h
+
+        link_text = subxes['label'] if subxes['label'].present?
+        sort = subxes['sort']
+
+        title = subz.join(' ') if subz.present?
+        additional_text = "<span class='additional-link-text'>#{title.gsub(stanford_affiliated_regex, '')}</span>" if title =~ stanford_affiliated_regex
+
+        {
+          text: link_text,
+          title: title,
+          href: field['u'],
+          casalini_toc: false,
+          additional_text: additional_text,
+          sort: sort,
+          managed_purl: true,
+          file_id: subxes['file']
+        }
+      else
+        link_text = (!suby.present? && !sub3.present?) ? link_host(url) : [sub3, suby].compact.join(' ')
+        title = subz.join(" ")
+        additional_text = nil
+        if title =~ stanford_affiliated_regex
+          additional_text = "<span class='additional-link-text'>#{title.gsub(stanford_affiliated_regex, '')}</span>"
+          title = "Available to Stanford-affiliated users only"
+        end
+        {:text=>link_text,
+         :title=> title,
+         :href=>field["u"],
+         :casalini_toc => false,
+         :additional_text => additional_text
+        }
       end
-      rescue URI::InvalidURIError
-        return nil
+    rescue URI::InvalidURIError
+      return nil
     end
     def link_is_fulltext?(field)
       resource_labels = ["table of contents", "abstract", "description", "sample text"]
@@ -124,10 +131,6 @@ module MarcLinks
 
     def stanford_only?(link)
       [link[:text], link[:title]].join.downcase =~ stanford_affiliated_regex
-    end
-
-    def link_is_managed_purl?(link)
-      @document[:managed_purl_urls] && @document[:managed_purl_urls].include?(link[:href])
     end
 
     def druid(link)

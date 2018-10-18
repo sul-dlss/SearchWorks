@@ -26,8 +26,9 @@ module SearchWorks
       all.select(&:sfx?)
     end
 
+    # sort managed purls by the sort key from the 856$x (with empty values last), then by link text (again with empty values last)
     def managed_purls
-      all.select(&:managed_purl?)
+      all.select(&:managed_purl?).sort_by { |x| [x.sort.present? ? 0 : 1, x.sort, x.text.present? ? 0 : 1, x.text] }
     end
 
     def ill
@@ -35,7 +36,7 @@ module SearchWorks
     end
 
     class Link
-      attr_accessor :html, :text, :href, :file_id, :druid, :type
+      attr_accessor :html, :text, :href, :file_id, :druid, :type, :sort
       def initialize(options={})
         @html = options[:html]
         @text = options[:text]
@@ -49,6 +50,7 @@ module SearchWorks
         @druid = options[:druid]
         @ill = options[:ill]
         @type = options[:type]
+        @sort = options[:sort]
       end
 
       def ==(other)

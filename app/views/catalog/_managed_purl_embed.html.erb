@@ -11,7 +11,7 @@
               <% if purl.file_id %>
                 <img src="<%= @document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
               <% end %>
-              <%= button_tag "part #{i + 1}" %>
+              <%= button_tag purl.text.present? ? purl.text : "part #{i + 1}" %>
             </li>
           <% end %>
         </ul>

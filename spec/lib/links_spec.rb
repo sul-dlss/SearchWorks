@@ -33,6 +33,21 @@ describe SearchWorks::Links do
     expect(links.managed_purls.first.html).to eq 'Managed purl link'
   end
 
+  context 'with multiple managed purls' do
+    before do
+      allow(links).to receive(:all).and_return([
+        OpenStruct.new(text: '1', managed_purl?: true),
+        OpenStruct.new(managed_purl?: true),
+        OpenStruct.new(text: '2', managed_purl?: true, sort: 'xyz'),
+        OpenStruct.new(text: '3', managed_purl?: true, sort: 'abc')
+      ])
+    end
+
+    it 'sorts by the sort key and then by the title, with empty values last' do
+      expect(links.managed_purls.map { |x| x.text }).to eq ['3', '2', '1', nil]
+    end
+  end
+
   describe 'Link' do
     let(:link) do
       SearchWorks::Links::Link.new(

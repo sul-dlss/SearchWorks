@@ -10,10 +10,12 @@ describe 'catalog/_show_marc.html.erb' do
   end
 
   context 'when a document has a managed purl' do
-    let(:document) { SolrDocument.new(id: '123', marcxml: managed_purl_fixture, managed_purl_urls: ['http://purl.stanford.edu/gg853cy1667', 'http://purl.stanford.edu/rw779rf3064']) }
+    let(:document) { SolrDocument.new(id: '123', marcxml: managed_purl_fixture) }
     it 'includes the managed purl panel and upper metadata elements' do
       expect(rendered).to have_css('.managed-purl-panel')
       expect(rendered).to have_css('.upper-record-metadata')
+      expect(rendered).to have_css('li', text: 'Some Part Label')
+      expect(rendered).to have_css('li', text: 'part 2')
     end
   end
 end
