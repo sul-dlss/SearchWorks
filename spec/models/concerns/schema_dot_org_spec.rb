@@ -86,4 +86,17 @@ RSpec.describe SchemaDotOrg do
       expect(document.as_schema_dot_org).to include '@type': 'Thing'
     end
   end
+
+  context 'a video game' do
+    let(:document) do
+      SolrDocument.new(
+        genre_ssim: ['Video games']
+      )
+    end
+
+    it 'fabricates schema.org data' do
+      expect(document).to be_schema_dot_org
+      expect(document.as_schema_dot_org).to include '@type': 'VideoGame'
+    end
+  end
 end

@@ -44,6 +44,8 @@ module SchemaDotOrg
     case
     when genre.include?('Thesis/Dissertation')
       'http://schema.org/Thesis'
+    when genre.include?('Video games')
+      'http://schema.org/VideoGame'
     when format.include?('Equipment')
       'http://schema.org/Thing'
     when format.include?('Book')
