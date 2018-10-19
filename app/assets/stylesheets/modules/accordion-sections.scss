@@ -75,41 +75,6 @@
 
   }
 
-  .accordion-section.summary {
-    .header {
-      @include buttonize($sul-accordion-summary-bg, $sul-accordion-summary-border);
-    }
-  }
-
-  .accordion-section.online {
-    .header {
-      @include buttonize($sul-accordion-online-bg, $sul-accordion-online-border);
-
-      &.selected-database {
-        width: 11.4em;
-      }
-    }
-
-    .details {
-      .links {
-        list-style-type: none;
-        padding-left: 10px;
-      }
-
-      .google-books {
-        display: none;
-
-        .btn-preview {
-          display: none;
-
-          .preview-link {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
   .accordion-section.course-reserves {
     .header {
       @include buttonize($sul-accordion-course-reserves-bg, $sul-accordion-course-reserves-border);
