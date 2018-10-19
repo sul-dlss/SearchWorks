@@ -1,0 +1,23 @@
+<div data-behavior="results-online-section" class="results-online-section <%= 'hide' unless document.access_panels.online? %>">
+  <% if document.druid %>
+    <span class="also-online-label">Also online at</span>
+  <% else %>
+    <span class="online-label">Online</span>
+  <% end %>
+  <ul data-behavior="truncate-results-online-links">
+    <% if document.access_panels.online? %>
+      <% document.access_panels.online.links.each do |link| %>
+        <li class="<%= 'stanford-only' if link.stanford_only? %>">
+          <%= link.html.html_safe %>
+        </li>
+      <% end %>
+    <% end %>
+
+    <% if document[:managed_purl_urls].blank? %>
+      <% book_ids  = get_book_ids(document) %>
+      <li class="hide google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
+        <a href="" class="full-view">Google Books (Full view)</a></li>
+      </li>
+    <% end %>
+  </ul>
+</div>

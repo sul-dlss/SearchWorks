@@ -176,16 +176,15 @@
     }
 
     function checkAndEnableOnlineAccordionSection($googleBooks, $fullViewLink) {
-      $accordionSection = $googleBooks.parents('.accordion-section');
-      $snippet = $('.snippet', $accordionSection);
+      $resultsOnlineSection = $googleBooks.parents('[data-behavior="results-online-section"]');
 
-      if ($accordionSection.length > 0) {
-        $accordionSection.removeClass('hide').addClass('show');
-        $googleBooks.show();
-
-        if ($.trim($snippet.text()) === "") {
-          $snippet.html($fullViewLink.clone());
-        }
+      if ($resultsOnlineSection.length > 0) {
+        $resultsOnlineSection.removeClass('hide').addClass('show');
+        $googleBooks.removeClass('hide').addClass('show');
+        // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
+        $googleBooks
+          .parents("[data-behavior='truncate-results-online-links']")
+          .responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
       }
     }
 

@@ -42,4 +42,6 @@
   <% end %>
 </dl>
 
+<%= render :partial => "index_online_section", locals: { document: document } %>
+
 <%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>

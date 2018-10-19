@@ -1,0 +1,15 @@
+.results-online-section {
+  border-bottom: 1px solid $beige-30-percent;
+  clear: both;
+
+  ul {
+    display: inline-table;
+    list-style-type: none;
+    padding-left: 25px;
+  }
+
+  .also-online-label {
+    color: $sul-access-also-online-color;
+    text-transform: uppercase;
+  }
+}
