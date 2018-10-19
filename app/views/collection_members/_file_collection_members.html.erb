@@ -1,12 +1,8 @@
 <% document ||= @document %>
 <div class="collection-result-preview">
-  <a class="label label-items-online" href="<%= collection_members_path(document) %>">
-    <span>
-      <%= text_for_inner_members_link(document) %>
-    </span>
-  </a>
 <% if document.collection_members.present? %>
   <div class="file-collection-members">
+    <h4>Digital items preview</h4>
     <% document.collection_members[0...3].each do |collection_member| %>
       <div class="row file-item">
         <div class="col-xs-2 file-icon">
@@ -24,12 +20,15 @@
         </div>
       </div>
     <% end %>
-    <span class="collection-all-items-link">
-        <a class="collection-all-items-link" href="<%= collection_members_path(document) %>">
-            <%= text_for_inner_members_link(document) %>
-        </a>
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </span>
+  </div>
+
+  <div class="results-online-section">
+    <span class="online-label">Online</span>
+    <ul>
+      <li>
+        <%= link_to(text_for_inner_members_link(document), collection_members_path(document)) %>
+      </li>
+    </ul>
   </div>
 <% end %>
 </div>

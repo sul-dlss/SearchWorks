@@ -4,12 +4,7 @@
 %>
 
 <div class="clearfix collection-result-preview">
-  <a class="label label-items-online" href="<%= collection_members_path(collection_document) %>">
-    <span>
-      <%= text_for_inner_members_link(collection_document) %>
-    </span>
-  </a>
-
+  <h4>Digital items preview</h4>
   <div class="col-md-12 image-filmstrip" data-thumb-width="100" data-thumb-height="100">
     <div class="viewport">
       <ul class="container-images">
@@ -38,5 +33,14 @@
       </ul>
     </div>
     <div class="<%= preview_container %>"></div>
+  </div>
+
+  <div class="results-online-section">
+    <span class="online-label">Online</span>
+    <ul>
+      <li>
+        <%= link_to(text_for_inner_members_link(collection_document), collection_members_path(collection_document)) %>
+      </li>
+    </ul>
   </div>
 </div>
