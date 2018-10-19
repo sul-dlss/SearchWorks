@@ -13,7 +13,7 @@
             <% unless document.image_urls.blank? %>
             <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
             <a href="<%= solr_document_path(document[:id]) %>">
-            <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
+            <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>" data-alt="<%= get_main_title(document) %>">
             </a>
             <% if document.image_urls.length > 1 %>
             <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
