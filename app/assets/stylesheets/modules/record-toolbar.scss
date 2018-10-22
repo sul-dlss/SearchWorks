@@ -16,6 +16,21 @@
 
   .dropdown-menu {
     @include toolbar-dropdown;
+
+    .refworks {
+      padding: 3px 10px;
+
+      form a {
+        color: $dropdown-link-hover-color;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+      &:hover, &:focus, &:active {
+        background-color: $dropdown-link-hover-bg;
+      }
+    }
   }
 
   .record-toolbar-tools ul {
