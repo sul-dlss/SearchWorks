@@ -1,7 +1,14 @@
-<h3 class="modal-title"><%= document_heading(document) %></h3>
-<% document.citations.each do |format, citation| %>
-  <% unless format == 'NULL' %>
-    <h4><%= format %></h4>
+<div class="modal-header">
+  <% if request.xhr? %>
+    <button type="button" class="ajax-modal-close close" data-dismiss="modal" aria-hidden="true">×</button>
   <% end %>
-  <%= citation %>
-<% end %>
+  <h3 class="modal-title"><%= document_heading(document) %></h3>
+</div>
+<div class="modal-body">
+  <% document.citations.each do |format, citation| %>
+    <% unless format == 'NULL' %>
+      <h4><%= format %></h4>
+    <% end %>
+    <%= citation %>
+  <% end %>
+</div>

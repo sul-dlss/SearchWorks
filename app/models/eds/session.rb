@@ -33,7 +33,10 @@ module Eds
         debug:                        Settings.EDS_DEBUG,
         log:                          File.join(Settings.EDS_LOGDIR, 'faraday.log'),
         decode_sanitize_html:         true,
-        recover_from_bad_source_type: true
+        recover_from_bad_source_type: true,
+        citation_link_find:           Settings.EDS_CITATION_LINK_PATTERN,
+        citation_link_replace:        Settings.EDS_CITATION_LINK_REPLACE,
+        citation_db_find:             Settings.EDS_CITATION_DB_PATTERN
       }
     end
   end

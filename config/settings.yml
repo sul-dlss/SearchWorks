@@ -26,7 +26,13 @@ EMAIL_THRESHOLD: 5
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
-  CITATION_FORMATS: ['all']
+  CITATION_FORMATS:
+    - APA
+    - CHICAGO
+    - HARVARD
+    - MLA
+    - TURABIAN
+    - PREFERRED CITATION
   DOCUMENT_FIELD: 'oclc'
 MOUSEFLOW: <%= Rails.env.production? %>
 MOUSEFLOW_KEY: '55d6233e-5245-4a7c-854d-f6e64e753af4'
@@ -41,6 +47,9 @@ EDS_TIMEOUT: 15
 EDS_OPEN_TIMEOUT: 10
 EDS_HOSTS:
   - eds-api.ebscohost.com
+EDS_CITATION_LINK_PATTERN: '[.,]\s+(&lt;i&gt;EBSCOhost|viewed|Available|Retrieved from|(?:https?:\/\/)?stanford\.idm\.oclc\.org|Disponível em).+$'
+EDS_CITATION_LINK_REPLACE: '.'
+EDS_CITATION_DB_PATTERN: '\s+<i>EBSCOhost<\/i>\.?'
 SU_AFFILIATIONS: []
 STANFORD_NETWORK:
   singletons: []
