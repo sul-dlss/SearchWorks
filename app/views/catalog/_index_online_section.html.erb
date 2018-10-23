@@ -1,23 +1,25 @@
-<div data-behavior="results-online-section" class="results-online-section <%= 'hide' unless document.access_panels.online? %>">
+<dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8 <%= 'hide' unless document.access_panels.online? %>">
   <% if document.druid %>
-    <span class="also-online-label">Also online at</span>
+    <dt class="also-online-label">Also online at</dt>
   <% else %>
-    <span class="online-label">Online</span>
+    <dt class="online-label">Online</dt>
   <% end %>
-  <ul data-behavior="truncate-results-online-links">
-    <% if document.access_panels.online? %>
-      <% document.access_panels.online.links.each do |link| %>
-        <li class="<%= 'stanford-only' if link.stanford_only? %>">
-          <%= link.html.html_safe %>
+  <dd>
+    <ul data-behavior="truncate-results-online-links">
+      <% if document.access_panels.online? %>
+        <% document.access_panels.online.links.each do |link| %>
+          <li class="<%= 'stanford-only' if link.stanford_only? %>">
+            <%= link.html.html_safe %>
+          </li>
+        <% end %>
+      <% end %>
+
+      <% if document[:managed_purl_urls].blank? %>
+        <% book_ids  = get_book_ids(document) %>
+        <li class="hide google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
+          <a href="" class="full-view">Google Books (Full view)</a>
         </li>
       <% end %>
-    <% end %>
-
-    <% if document[:managed_purl_urls].blank? %>
-      <% book_ids  = get_book_ids(document) %>
-      <li class="hide google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
-        <a href="" class="full-view">Google Books (Full view)</a></li>
-      </li>
-    <% end %>
-  </ul>
-</div>
+    </ul>
+  </dd>
+</dl>

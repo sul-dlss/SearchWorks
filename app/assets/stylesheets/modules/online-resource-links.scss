@@ -17,10 +17,15 @@ ul.links {
   background-color: $sul-accordion-online-bg;
   border: 1px solid $sul-accordion-online-border;
   border-radius: 2px;
+  color: $white;
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
   font-size: 12px;
   font-weight: normal;
   letter-spacing: 0;
   padding: 2px 7px;
   vertical-align: middle;
+}
+
+dt.online-label {
+  text-transform: none !important;
 }

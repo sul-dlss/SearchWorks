@@ -43,8 +43,14 @@
 
   .results-metadata-section {
     border-bottom: 1px solid $beige-30-percent;
-    border-top: 1px solid $beige-30-percent;
-    padding: 8px 0;
+    clear: left;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+
+  .results-metadata-section:last-child {
+    border-bottom: 0;
   }
 
   @media (min-width: $screen-sm-min) {
