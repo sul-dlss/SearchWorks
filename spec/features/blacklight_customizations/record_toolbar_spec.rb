@@ -44,7 +44,7 @@ feature "Record Toolbar" do
     within '#content' do
       within 'div.navbar-collapse', visible: true do
         click_button 'Send to'
-        expect(page).to have_css('li a', text: 'RefWorks')
+        expect(page).to have_css('li form a', text: 'RefWorks')
         expect(page).to have_css('li a', text: 'EndNote')
       end
     end
