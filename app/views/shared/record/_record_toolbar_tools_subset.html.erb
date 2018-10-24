@@ -32,6 +32,9 @@
       <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
     <% end %>
   </li>
+  <li class="ris" role="presentation">
+    <%= link_to t('blacklight.tools.ris_html'), articles_ris_path(@document, :format => 'ris') %>
+  </li>
 <% end %>
 <% if @document.export_formats.keys.include?( :endnote ) %>
   <li class="endnote" role="presentation">

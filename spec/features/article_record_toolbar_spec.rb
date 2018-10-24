@@ -26,6 +26,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
       expect(page).to have_css('.sms', text: 'text', visible: false)
       expect(page).to have_css('.email', text: 'email', visible: false)
       expect(page).to have_css('.refworks', text: 'RefWorks', visible: false)
+      expect(page).to have_css('.ris', text: 'RIS download', visible: false)
       expect(page).to have_css('a[role="menuitem"]', text: 'printer', visible: false)
     end
   end
