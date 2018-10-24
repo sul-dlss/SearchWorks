@@ -33,5 +33,19 @@ set :linked_dirs, %w{config/settings log tmp/pids tmp/cache tmp/sockets tmp/fara
 # We want Honeybadger to report deployments to our Capistrano stage names (e.g., dev, stage, prod)
 set :honeybadger_env, fetch(:stage)
 
+desc 'Clear EDS cache on all web hosts'
+task :clear_eds_cache do
+  on roles(:web) do
+    within release_path do
+      with rails_env: fetch(:rails_env) do
+        execute :rake, 'searchworks:clear_eds_cache'
+      end
+    end
+  end
+end
+
+# Clear EDS cache before we restart in case configurations have changed
+before 'deploy:restart', :clear_eds_cache
+
 # update shared_configs before restarting app
 before 'deploy:restart', 'shared_configs:update'
