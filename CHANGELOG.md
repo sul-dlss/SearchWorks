@@ -7,14 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.6] - 2018-10-24
+
+### Added
 - Adds an OKComputer status check for degraded performance alerts from NewRelic (for the status dashboard) [#2051](https://github.com/sul-dlss/SearchWorks/pull/2051)
 - Adds citations to the "Cite" modal for article records [#1727](https://github.com/sul-dlss/SearchWorks/pull/1727)
+- Adds the display of vernacular subjects to the record view [#1971](https://github.com/sul-dlss/SearchWorks/pull/1971)
 ### Changed
 - Updated to [ModsDisplay 0.5.1](https://github.com/sul-dlss/mods_display/releases/tag/v0.5.1) [#2062](https://github.com/sul-dlss/SearchWorks/pull/2062)
   - Most notable changes are labeling authors by their roles and splitting out host/constituent related items into separate section that renders full MODS representation
+- Updated Schema.org type mappings around Theses, Video Games, and Equipment [#2047](https://github.com/sul-dlss/SearchWorks/pull/2047)
+- Changed labels and sort for digital serials when a relevant label or sort key is present [#2037](https://github.com/sul-dlss/SearchWorks/issues/2037)
 ### Removed
 ### Fixed
 - Updates Blacklight to v6.16.0 which fixes part of select button issues #1370. [#2063](https://github.com/sul-dlss/SearchWorks/pull/2063)
+- Fixes an accessibility issue with expanding/collapsing sort widgets and facets [#2067](https://github.com/sul-dlss/SearchWorks/pull/2067)
+- Fixes a bug in exporting diacritics to RefWorks [#1944](https://github.com/sul-dlss/SearchWorks/issues/1944)
 ### Security
 
 ## [3.3.5] - 2018-10-12
@@ -72,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...HEAD
+[3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...v3.3.6
 [3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...v3.3.5
 [3.3.4]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...v3.3.4
 [3.3.3]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.2...v3.3.3
