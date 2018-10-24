@@ -56,15 +56,15 @@ describe Extent do
 
     describe 'including format' do
       it 'should upcase the given format' do
-        expect(single_format.extent).to start_with 'Book —'
+        expect(single_format.extent).to start_with 'Book'
       end
 
       it "should select the non-database format (even if it's the first one)" do
-        expect(multi_format.extent).to start_with 'Book —'
+        expect(multi_format.extent).to start_with 'Book'
       end
 
       it 'should select the first format when multiple non-Database formats are present' do
-        expect(bad_format.extent).to start_with 'Book —'
+        expect(bad_format.extent).to start_with 'Book'
       end
     end
   end

@@ -59,7 +59,7 @@ describe CollectionHelper do
     it "should return the correct number of document including the #total if greater than 2" do
       allow(collection_members).to receive(:total).and_return(3)
       allow(document).to receive(:collection_members).and_return(collection_members)
-      expect(text_for_inner_members_link(document)).to eq "View all 3 items"
+      expect(text_for_inner_members_link(document)).to eq 'Search and filter 3 digital items'
     end
     it "should not return anything if an document does not have collection members" do
       expect(collection_members_enumeration(no_collection_doc)).to be_nil

@@ -35,10 +35,9 @@ describe "preview/_show_mods.html.erb" do
     expect(rendered).to have_css('dd a', text: 'Object Title')
   end
 
-  it "should display summary accordion section" do
-    expect(rendered).to have_css('.accordion-section.summary button.header', text: "Summary")
-    expect(rendered).to have_css('.accordion-section.summary .snippet', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
-    expect(rendered).to have_css('.accordion-section.summary .details', text: "Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet")
+  it 'should display summary section' do
+    expect(rendered).to have_css('dt', 'Description')
+    expect(rendered).to have_css('dd', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
   end
 
   it "should display library accordion section" do
@@ -48,11 +47,4 @@ describe "preview/_show_mods.html.erb" do
     expect(rendered).to have_css('.accordion-section .details tbody tr th', text: /Stacks/)
     expect(rendered).to have_css('.accordion-section .details tbody tr td', text: /ABC 123/)
   end
-
-  it "should display online accordion section" do
-    expect(rendered).to have_css('.accordion-section.online button.header', text: "Online")
-    expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
-  end
-
-
 end

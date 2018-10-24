@@ -1,39 +1,31 @@
 require "spec_helper"
 
-describe "catalog/_accordion_section_online.html.erb" do
+describe "catalog/_index_online_section.html.erb" do
   include Marc856Fixtures
 
   describe "Accordion section - Online" do
     context 'regular sirsi record' do
       before do
-        assign(:document,
-          SolrDocument.new(
-            id: "12345",
-            isbn_display: [ 123 ],
+        expect(view).to receive_messages(
+          document: SolrDocument.new(
+            id: '12345',
+            isbn_display: [123],
             marcbib_xml: stanford_only_856
           )
         )
         render
       end
 
-      it "should include the online accordion and text" do
-        expect(rendered).to have_css('.accordion-section.online')
-        expect(rendered).to have_css('.accordion-section.online button.header[aria-expanded="false"]', text: "Online")
-        expect(rendered).to have_css('.details[aria-expanded="false"] .google-books')
-        expect(rendered).to have_css('.details a', text: "Google Books (Full view)")
-      end
-      it 'should include the first link in the snippet' do
-        expect(rendered).to have_css('.snippet span.stanford-only a', text: 'Link text', count: 1)
-      end
-      it "should include the links" do
-        expect(rendered).to have_css('ul.links span.stanford-only a', text: 'Link text', count: 4)
+      it 'should include the online dl' do
+        expect(rendered).to have_css('dt', text: 'Online')
+        expect(rendered).to have_css('dd li', count: 5) # 4 links and a Google Books link
+        expect(rendered).to have_css('dd li a', text: 'Google Books (Full view)')
       end
     end
     context 'managed purl record' do
       before do
-        assign(
-          :document,
-          SolrDocument.new(
+        expect(view).to receive_messages(
+          document: SolrDocument.new(
             id: '12345',
             isbn_display: [123],
             marcbib_xml: many_managed_purl_856,
@@ -45,8 +37,9 @@ describe "catalog/_accordion_section_online.html.erb" do
         )
         render
       end
+
       it 'does not display Google Books link' do
-        expect(rendered).not_to have_css '.details a', text: 'Google Books (Full view)'
+        expect(rendered).not_to have_css('dd li a', text: 'Google Books (Full view)')
       end
     end
   end
