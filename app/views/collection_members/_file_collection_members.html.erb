@@ -1,8 +1,13 @@
 <% document ||= @document %>
+
 <div class="collection-result-preview">
 <% if document.collection_members.present? %>
   <div class="file-collection-members">
-    <h4>Digital items preview</h4>
+    <% if @type == 'show' %>
+      <h2>Digital collection preview</h2>
+    <% else %>
+      <h4>Digital collection preview</h4>
+    <% end %>
     <% document.collection_members[0...3].each do |collection_member| %>
       <div class="row file-item">
         <div class="col-xs-2 file-icon">

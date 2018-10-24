@@ -15,6 +15,7 @@ module DigitalCollection
     def initialize(document, options = {})
       @document = document
       @options = options
+      @type = 'index'
     end
 
     def total
@@ -34,6 +35,11 @@ module DigitalCollection
       end
     end
 
+    def with_type(type)
+      @type = type
+      self
+    end
+
     def as_json(*)
       {
         total: total,
@@ -49,13 +55,13 @@ module DigitalCollection
     def render
       ApplicationController.render(
         file: to_partial_path,
-        assigns: { document: document }
+        assigns: { document: document, type: type }
       )
     end
 
     private
 
-    attr_reader :document, :options
+    attr_reader :document, :options, :type
 
     def response
       @response ||= blacklight_solr.select(

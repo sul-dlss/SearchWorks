@@ -5,6 +5,20 @@
     padding-left: 25px;
   }
 
+  dt {
+    width: auto;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    dd {
+      margin-left: 80px;
+    }
+  }
+
   .also-online-label {
     color: $sul-access-also-online-color;
     text-transform: uppercase;

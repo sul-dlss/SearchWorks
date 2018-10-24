@@ -1,3 +1,9 @@
+#document {
+  .image-filmstrip {
+    margin-bottom: 5px; // Give a little extra margin on the record view
+  }
+}
+
 .image-filmstrip {
   border: 1px solid $sul-filmstrip-border;
   background-color: $sul-filmstrip-bg;
@@ -49,17 +55,6 @@
 
       li:first-child {
         margin-left: 0;
-      }
-
-      li:last-child {
-        margin-right: 0;
-        width:100px;
-        height:100px;
-        padding:27px;
-        text-align: center;
-        span {
-            color:#666;
-        }
       }
     }
   }

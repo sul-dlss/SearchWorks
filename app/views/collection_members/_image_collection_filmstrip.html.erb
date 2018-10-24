@@ -4,7 +4,11 @@
 %>
 
 <div class="clearfix collection-result-preview">
-  <h4>Digital items preview</h4>
+  <% if @type == 'show' %>
+    <h2>Digital collection preview</h2>
+  <% else %>
+    <h4>Digital collection preview</h4>
+  <% end %>
   <div class="col-md-12 image-filmstrip" data-thumb-width="100" data-thumb-height="100">
     <div class="viewport">
       <ul class="container-images">
@@ -22,13 +26,6 @@
             <% end %>
 
         <% end %>
-
-        <li>
-            <a class="collection-all-items-link" href="<%= collection_members_path(collection_document) %>">
-                <%= text_for_inner_members_link(collection_document) %>
-            </a>
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </li>
 
       </ul>
     </div>

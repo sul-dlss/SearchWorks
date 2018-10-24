@@ -20,7 +20,7 @@ module CollectionHelper
       elsif document.collection_members.total == 2
         return "View both items"
       else
-        return "View all #{document.collection_members.total} items"
+        return "Search and filter #{document.collection_members.total} digital items"
       end
     end
   end
