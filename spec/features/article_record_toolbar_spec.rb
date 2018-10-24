@@ -2,7 +2,13 @@ require 'spec_helper'
 
 RSpec.describe 'Article Record Toolbar', js: true do
   let(:previous_document) { SolrDocument.new(id: 1, eds_title: 'My Prev Title') }
-  let(:document) { SolrDocument.new(id: 2, eds_title: 'My Title') }
+  let(:document) do
+    SolrDocument.new(
+      id: 2,
+      eds_title: 'My Title',
+      eds_citation_exports: [{ 'id' => 'RIS', 'data' => 'TI  - CatZ N Bagelz' }]
+    )
+  end
   let(:next_document) { SolrDocument.new(id: 3, eds_title: 'My Next Title') }
 
   before do
@@ -19,6 +25,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
       expect(page).to have_css('.btn-sul-toolbar', text: 'Send to')
       expect(page).to have_css('.sms', text: 'text', visible: false)
       expect(page).to have_css('.email', text: 'email', visible: false)
+      expect(page).to have_css('.refworks', text: 'RefWorks', visible: false)
       expect(page).to have_css('a[role="menuitem"]', text: 'printer', visible: false)
     end
   end

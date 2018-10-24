@@ -25,6 +25,14 @@
     <% end %>
   </li>
 <% end %>
+<% if @document.export_formats.key?(:ris) %>
+  <li class="refworks" role="presentation">
+    <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
+      <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
+      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
+    <% end %>
+  </li>
+<% end %>
 <% if @document.export_formats.keys.include?( :endnote ) %>
   <li class="endnote" role="presentation">
     <%= link_to t('blacklight.tools.endnote_html'), solr_document_path(@document, :format => 'endnote') %>
