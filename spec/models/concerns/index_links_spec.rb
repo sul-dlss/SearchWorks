@@ -14,7 +14,12 @@ describe IndexLinks do
   end
   let(:finding_aid_document) do
     SolrDocument.new(
-      url_suppl: ['http://oac.cdlib.org/findaid/something-else']
+      url_suppl: ['http://oac.cdlib.org/findaid/ark:/something-else']
+    )
+  end
+  let(:finding_aid_document_alternate_format) do
+    SolrDocument.new(
+      url_suppl: ['http://oac.cdlib.org/ark:/abc123']
     )
   end
   let(:managed_purl_document) do
@@ -57,6 +62,7 @@ describe IndexLinks do
   describe 'SearchWorks::Links' do
     let(:index_links) { solr_document.index_links }
     let(:finding_aid_links) { finding_aid_document.index_links }
+    let(:finding_aid_links_alternate) { finding_aid_document_alternate_format.index_links }
     let(:managed_purl_links) { managed_purl_document.index_links }
     let(:sfx_links) { sfx_document.index_links }
     let(:ezproxy_links) { ezproxy_document.index_links }
@@ -83,9 +89,10 @@ describe IndexLinks do
     end
     it 'should identify finding aid links' do
       expect(finding_aid_links.all.first).to be_finding_aid
+      expect(finding_aid_links_alternate.all.first).to be_finding_aid
       expect(finding_aid_links.finding_aid.length).to eq 1
       expect(finding_aid_links.finding_aid.first.html).to match(
-        %r{<a href='.*oac\.cdlib\.org\/findaid\/something-else'>Online Archive of California<\/a>}
+        %r{<a href='.*oac\.cdlib\.org\/findaid\/ark:\/something-else'>Online Archive of California<\/a>}
       )
     end
 

@@ -61,7 +61,7 @@ describe "catalog/_index_marc.html.erb" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           marcxml: metadata1,
-          url_fulltext: ['http://oac.cdlib.org/findaid/12345']
+          url_fulltext: ['http://oac.cdlib.org/findaid/ark:/12345']
         )
       )
       render

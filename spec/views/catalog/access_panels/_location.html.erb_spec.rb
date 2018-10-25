@@ -264,7 +264,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       assign(:document, SolrDocument.new(
         id: '123',
         item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
-        url_suppl: ["http://oac.cdlib.org/findaid/something-else"]
+        url_suppl: ["http://oac.cdlib.org/findaid/ark:/something-else"]
       ))
       render
     end
