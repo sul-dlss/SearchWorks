@@ -1,12 +1,19 @@
 #documents {
 
+  dt {
+    width: auto;
+  }
+
   .document {
     @include document;
 
 
     h3.index_title {
       @include h3-index-title-font;
-      @include h3-index-title-indent;
+
+      span.sul-icon {
+        margin-left: -24px;
+      }
     }
 
     .cover-image-wrapper {
@@ -26,9 +33,6 @@
     font-size: .9em;
   }
 
-  dt {
-    width: auto;
-  }
   dd {
     margin: 0;
   }
@@ -42,19 +46,22 @@
     clear: left;
     margin: 0;
     padding: 10px 0;
+
+
+    dd {
+      margin-left: 2em;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      dd {
+        margin-left: 8.5em;
+      }
+    }
   }
 
 
   .results-metadata-section:last-child {
     border-bottom: 0;
-  }
-
-  @media (min-width: $screen-sm-min) {
-    .results-metadata-section {
-      dd {
-        margin-left: 80px; // Get dds working better for article results
-      }
-    }
   }
 
   .zero-results {
@@ -74,6 +81,14 @@
 .stacks-image {
   max-height: 200px;
   max-width: 200px;
+}
+
+// This screen width is doing some weird things wrt metadata size and thumbnail.
+// This makes the thumb just a bit smaller in this range to accomodate the metadata
+@media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+  .stacks-image {
+    max-width: 170px;
+  }
 }
 
 #content {

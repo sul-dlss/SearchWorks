@@ -5,7 +5,7 @@
     <dt class="online-label">Online</dt>
   <% end %>
   <dd>
-    <ul data-behavior="truncate-results-online-links">
+    <ul class="online-links" data-behavior="truncate-results-online-links">
       <% if document.access_panels.online? %>
         <% document.access_panels.online.links.each do |link| %>
           <li class="<%= 'stanford-only' if link.stanford_only? %>">

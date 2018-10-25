@@ -36,3 +36,18 @@
 .modal-dialog {
   z-index: 1040;
 }
+
+.dl-horizontal dt {
+  text-align: left;
+  width: 10em;
+}
+
+.dl-horizontal dd {
+  margin-left: 2em;
+}
+
+@media (min-width: $screen-sm-min) {
+  .dl-horizontal dd {
+    margin-left: 10.5em;
+  }
+}
