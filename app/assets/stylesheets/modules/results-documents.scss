@@ -37,10 +37,6 @@
     cursor: pointer;
   }
 
-  .label-items-online {
-    @include label-items-online;
-  }
-
   .results-metadata-section {
     border-bottom: 1px solid $beige-30-percent;
     clear: left;
