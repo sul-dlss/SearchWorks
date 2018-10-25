@@ -41,7 +41,7 @@ module IndexLinks
     end
 
     def link_is_finding_aid?(link_field)
-      link_field =~ %r{oac\.cdlib\.org\/findaid}
+      link_field =~ %r{oac\.cdlib\.org(\/findaid)?\/ark:}
     end
 
     def link_fields
