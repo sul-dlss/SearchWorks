@@ -36,6 +36,7 @@ class SolrDocument
 
   include Blacklight::Solr::Document
   include SchemaDotOrg
+  include EdsExport
 
   delegate :empty?, :blank?, to: :to_h
 
@@ -55,6 +56,10 @@ class SolrDocument
   extension_parameters[:marc_format_type] = :marcxml
   use_extension( Blacklight::Solr::Document::Marc) do |document|
     document.key?( :marcxml  ) || document.key?( :marcbib_xml  )
+  end
+
+  use_extension(EdsExport) do |document|
+    document.key?(:eds_citation_exports) && document['eds_citation_exports']&.select { |e| e['id'] == 'RIS' }.any?
   end
 
   sw_field_semantics = {
