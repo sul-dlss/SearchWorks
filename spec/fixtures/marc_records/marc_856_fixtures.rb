@@ -198,4 +198,16 @@ module Marc856Fixtures
     xml
   end
 
+  def stanford_affiliated_managed_purl_856
+    <<-xml
+      <record>
+        <datafield tag='856' ind1='0' ind2='0'>
+          <subfield code='u'>https://library.stanford.edu</subfield>
+          <subfield code='x'>SDR-PURL</subfield>
+          <subfield code='x'>file:abc123</subfield>
+          <subfield code='z'>Available to stanford affiliated users at</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end
