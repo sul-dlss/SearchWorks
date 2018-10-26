@@ -20,11 +20,13 @@ Rails.application.routes.draw do
     concerns :exportable
   end
 
-  resources :bookmarks do
-    concerns :exportable
+  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
+    resources :bookmarks do
+      concerns :exportable
 
-    collection do
-      delete 'clear'
+      collection do
+        delete 'clear'
+      end
     end
   end
 
