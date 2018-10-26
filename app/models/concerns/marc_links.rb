@@ -80,7 +80,9 @@ module MarcLinks
         sort = subxes['sort']
 
         title = subz.join(' ') if subz.present?
-        additional_text = "<span class='additional-link-text'>#{title.gsub(stanford_affiliated_regex, '')}</span>" if title =~ stanford_affiliated_regex
+        if title =~ stanford_affiliated_regex && (subbed_title = title.gsub(stanford_affiliated_regex, '')).present?
+          additional_text = "<span class='additional-link-text'>#{subbed_title}</span>".html_safe
+        end
 
         {
           text: link_text,

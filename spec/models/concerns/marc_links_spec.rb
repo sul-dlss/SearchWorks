@@ -86,6 +86,14 @@ describe MarcLinks do
     it 'should return the label (without "label:")' do
       expect(links.all.first.text).to eq 'some label'
     end
+
+    context 'when stanford affiliated' do
+      let(:document) { SolrDocument.new(marcxml: stanford_affiliated_managed_purl_856) }
+
+      it 'does not include emmpty html from the additional_text that cannot be displayed' do
+        expect(links.all.first.text).to be_blank
+      end
+    end
   end
 
   describe "#supplemental" do

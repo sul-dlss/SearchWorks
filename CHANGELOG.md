@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+- Fixed a bug where HTML was being rendered in the multiple managed purl sidebar [#2081](https://github.com/sul-dlss/SearchWorks/issues/2081)
 ### Security
 
 ## [3.3.6] - 2018-10-24
