@@ -269,6 +269,7 @@
     <dynamicField name="cjk_*" type="text_cjk" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="ja_*" type="text_ja" indexed="true" stored="true" multiValued="true" />
     <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
+    <dynamicField name="*_struct" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" />
   </fields>
 
   <!-- copy fields -->
