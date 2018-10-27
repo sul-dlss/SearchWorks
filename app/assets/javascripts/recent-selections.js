@@ -38,12 +38,7 @@ Blacklight.onLoad(function(){
           var element = this.element;
           var url = $(element).data('url');
           $(element).on('show.bs.dropdown', function(){
-            if (plugin.updated){
-              plugin.getRecentSelections(url);
-            }
-          });
-          $('input.toggle_bookmark').on('change', function(){
-            plugin.updated = true;
+            plugin.getRecentSelections(url);
           });
         },
 
@@ -57,23 +52,20 @@ Blacklight.onLoad(function(){
           request.done(function(html){
             plugin.updateLinks(html);
             plugin.updateList(html);
-            plugin.updated = false;
           });
         },
 
         updateLinks: function(html){
           if ($.trim(html) == '') {
-            $('li#show-list').addClass('disabled');
             $('li#clear-list').addClass('disabled');
           } else {
-            $('li#show-list').removeClass('disabled');
             $('li#clear-list').removeClass('disabled');
           }
         },
         updateList: function(html){
           var list = $('[data-attribute="added-list"]');
           if (list.length === 0) {
-            $("li#show-list").append(html);
+            $("ul#show-list").prepend(html);
           }else{
             list.html(html);
           }
