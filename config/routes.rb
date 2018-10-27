@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
-    resources :bookmarks do
+    resources :bookmarks, path: :selections do
       concerns :exportable
 
       collection do
@@ -66,8 +66,6 @@ Rails.application.routes.draw do
   resources :preview, only: :show
 
   resources :availability, only: :index
-
-  get "selections" => "bookmarks#index"
 
   resources :recent_selections, only: :index
 
