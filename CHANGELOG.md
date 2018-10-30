@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+- Updated results metadata styling and formatting for both MODS and MARC records [#2053](https://github.com/sul-dlss/SearchWorks/issue/2053)
 ### Removed
 ### Fixed
 - Fixed a bug where HTML was being rendered in the multiple managed purl sidebar [#2081](https://github.com/sul-dlss/SearchWorks/issues/2081)
