@@ -22,6 +22,12 @@ describe BookmarksHelper do
       params[:controller] = "bookmarks"
       expect(helper.bookmarks?).to be_truthy
     end
+
+    it 'should return true if in the article_selections controller' do
+      params[:controller] = 'article_selections'
+      expect(helper.bookmarks?).to be_truthy
+    end
+
     it "should return false if not bookmarks controller" do
       params[:controller] = "catalog"
       expect(helper.bookmarks?).to be_falsey

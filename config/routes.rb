@@ -27,6 +27,12 @@ Rails.application.routes.draw do
       collection do
         delete 'clear'
       end
+
+      collection do
+        resources :article_selections, path: :articles do
+          concerns :exportable
+        end
+      end
     end
   end
 
