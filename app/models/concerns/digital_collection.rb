@@ -11,7 +11,7 @@ module DigitalCollection
   ###
   # Simple Plain Ruby Object to return an array of collection members
   class CollectionMembers
-    delegate :[], :present?, :each, :first, :last, :map, :length, to: :documents
+    delegate :[], :present?, :blank?, :each, :first, :last, :map, :length, to: :documents
     def initialize(document, options = {})
       @document = document
       @options = options
