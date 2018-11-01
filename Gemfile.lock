@@ -317,7 +317,7 @@ GEM
       iso-639
       nokogiri
       nom-xml (~> 1.0)
-    mods_display (0.5.1)
+    mods_display (0.6.0)
       i18n
       stanford-mods (~> 2.1)
     msgpack (1.2.4)
