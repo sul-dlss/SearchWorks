@@ -97,4 +97,13 @@ describe CatalogHelper do
       grouped_citations(documents)
     end
   end
+
+  describe '#iiif_drag_n_drop' do
+    it 'creates a IIIF drag n drop link' do
+      dnd_link = iiif_drag_n_drop('http://example.io/kittenz/iiif/manifest')
+      expect(dnd_link).to match(/data-turbolinks="false" data-toggle="tooltip" data-placement="left"/)
+      expect(dnd_link).to match(/title="Drag icon to any IIIF viewer. — Click icon to learn more."/)
+      expect(dnd_link).to match(%r{<img width="40" alt="IIIF Drag-n-drop" src="/images/iiif-drag-n-drop.svg" />})
+    end
+  end
 end

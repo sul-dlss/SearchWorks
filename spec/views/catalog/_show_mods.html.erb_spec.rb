@@ -14,6 +14,14 @@ describe 'catalog/_show_mods.html.erb' do
     it 'includes the purl-embed-viewer element' do
       expect(rendered).to have_css('.purl-embed-viewer')
     end
+    context 'with a iiif manifest' do
+      let(:document) do
+        SolrDocument.new(druid: 'abc123', modsxml: mods_001, iiif_manifest_url_ssim: 'example.com')
+      end
+      it 'includes IIIF Drag n Drop link' do
+        expect(rendered).to have_css 'a.iiif-dnd'
+      end
+    end
   end
 
   context 'when a document does not have a druid' do

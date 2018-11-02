@@ -4,8 +4,9 @@
 
 <div class="upper-record-metadata row">
   <% if document.druid %>
-    <div class="col-md-7">
-      <div class="purl-embed-viewer" data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+    <div class="col-md-7 purl-embed-viewer">
+      <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+      <%= iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
     </div>
   <% end %>
   <div class="col-md-5">

@@ -11,8 +11,9 @@
 <% elsif document.druid %>
   <% add_purl_embed_header(document) %>
   <div class='upper-record-metadata row'>
-    <div class="col-md-7">
-      <div class="purl-embed-viewer" data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+    <div class="col-md-7 purl-embed-viewer">
+      <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+      <%= iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
     </div>
     <div class="col-md-5">
       <%= render 'catalog/record/marc_upper_metadata_items' %>

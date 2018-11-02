@@ -882,6 +882,7 @@
         format_main_ssim,
         format_physical_ssim,
         genre_ssim,
+        iiif_manifest_url_ssim,
         img_info,
         imprint_display,
         isbn_display,

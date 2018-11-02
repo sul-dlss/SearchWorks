@@ -12,5 +12,6 @@
     <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
       <%= tn %>
     </div>
+    <%= iiif_drag_n_drop(document.iiif_manifest, position: 'top') if document.iiif_manifest %>
   </div>
 <% end %>
