@@ -35,10 +35,38 @@ describe "catalog/_index_marc.html.erb" do
       expect(rendered).to have_css('li', text: 'Imprint Statement')
     end
     it "should include the physical extent" do
-      expect(rendered).to have_css("dt", text: "Book")
+      expect(rendered).to have_css("dt", text: "Description")
       expect(rendered).to have_css("dd", text: "The Physical Extent")
     end
   end
+
+  describe 'summary' do
+    before do
+      expect(view).to receive(:document).at_least(:once).and_return(
+        SolrDocument.new(
+          marcbib_xml: marc_record
+        )
+      )
+      render
+    end
+
+    context 'when present' do
+      let(:marc_record) { metadata2 }
+
+      it 'renders the section (that would be truncated by js)' do
+        expect(rendered).to have_css('dt', text: 'Summary')
+      end
+    end
+
+    context 'when not present' do
+      let(:marc_record) { metadata1 }
+
+      it 'does not render the heading/section at all' do
+        expect(rendered).not_to have_css('dt', text: 'Summary')
+      end
+    end
+  end
+
   describe "databases" do
     before do
       allow(view).to receive(:document).and_return(

@@ -1,9 +1,30 @@
 <%= render :partial => "catalog/mods_search_results_document_fields", :locals => { :document => document } %>
 
-<dl class="dl-horizontal dl-invert">
+<dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
   <% if document.extent.present? %>
     <dt><%= document.extent_label %></dt>
     <dd><%= document.extent %></dd>
+  <% end %>
+
+  <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
+  <% if summary_data.present? %>
+    <dt>Summary</dt>
+    <dd>
+      <div data-behavior='metadata-truncate'>
+        <%= sanitize summary_data %>
+      </div>
+    </dd>
+  <% end %>
+
+  <% if document.index_parent_sets.present? %>
+    <dt>Included in</dt>
+    <dd>
+      <div data-behavior="metadata-truncate">
+        <% document.index_parent_sets.each do |set| %>
+          <%= link_to(show_presenter(set).heading, solr_document_path(set))%>
+        <% end %>
+      </div>
+    </dd>
   <% end %>
 
   <% if document.index_parent_collections.present? %>
@@ -11,15 +32,6 @@
     <dd>
       <% document.index_parent_collections.each do |collection| %>
         <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
-      <% end %>
-    </dd>
-  <% end %>
-
-  <% if document.index_parent_sets.present? %>
-    <dt>Appears in</dt>
-    <dd>
-      <% document.index_parent_sets.each do |set| %>
-        <%= link_to(show_presenter(set).heading, solr_document_path(set))%>
       <% end %>
     </dd>
   <% end %>

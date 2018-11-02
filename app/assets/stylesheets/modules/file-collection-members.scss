@@ -1,11 +1,7 @@
 .file-collection-members {
-  @include panel-borders;
-  @include panel-border-bottom;
   clear: both;
-  padding: 20px 5px 10px 5px;
   position: relative;
-  margin-bottom: 15px;
-  background: $white;
+  padding-top: 5px;
 
   .file-item {
     margin: 0 0 8px 0;
@@ -25,7 +21,7 @@
     margin-left:4px;
     span {
       color: #666;
-    } 
+    }
 
     &:hover {
       span {

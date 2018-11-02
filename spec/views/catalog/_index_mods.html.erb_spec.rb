@@ -24,10 +24,15 @@ describe "catalog/_index_mods.html.erb" do
     expect(rendered).to have_css('li a', text: 'J. Smith')
   end
   it "should include the physical extent" do
-    expect(rendered).to have_css("dt", text: "Physical extent")
+    expect(rendered).to have_css("dt", text: "Description")
     expect(rendered).to have_css("dd", text: "The Physical Extent")
   end
   it "should include the collection" do
     expect(rendered).to have_css('dt', text: 'Collection')
+  end
+
+  it 'should include the summary' do
+    expect(rendered).to have_css('dt', text: 'Summary')
+    expect(rendered).to have_css('dd', text: /Nunc venenatis et odio ac elementum/)
   end
 end

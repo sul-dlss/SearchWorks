@@ -1,0 +1,20 @@
+.results-online-section {
+  ul {
+    display: inline-table;
+    list-style-type: none;
+    padding-left: 25px;
+  }
+
+  dt {
+    width: auto;
+  }
+
+  .also-online-label {
+    color: $sul-access-also-online-color;
+    text-transform: uppercase;
+  }
+}
+
+ul.online-links {
+  padding-left: 0;
+}

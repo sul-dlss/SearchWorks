@@ -9,6 +9,7 @@
       <h3 class="index_title">
         <% counter = document_counter_with_offset(document_counter) %>
         <%= render_resource_icon doc_presenter.formats %>
+        <%= document.online_label %>
         <span class="document-counter">
           <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
         </span>

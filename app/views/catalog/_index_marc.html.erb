@@ -1,35 +1,49 @@
-<%= render :partial => "marc_search_results_document_fields", :locals => { :document => document } %>
+<div class="results-metadata-sections">
+  <%= render :partial => "marc_search_results_document_fields", :locals => { :document => document } %>
 
-<dl class="dl-horizontal dl-invert">
-  <% if document.is_a_database? %>
-    <% if document[:db_az_subject].present? %>
-      <dt>Database topics</dt>
+  <dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
+    <% if document.extent.present? %>
+      <dt><%= document.extent_label %></dt>
+      <dd><%= document.extent %></dd>
+    <% end %>
+
+    <% if document.is_a_database? %>
+      <% if document[:db_az_subject].present? %>
+        <dt>Database topics</dt>
+        <dd>
+          <%= document[:db_az_subject].map do |subject| %>
+            <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
+          <% end.join('; ').html_safe %>
+        </dd>
+      <% end %>
+    <% end %>
+
+    <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
+    <% if summary_data.present? %>
+      <dt>Summary</dt>
       <dd>
-        <%= document[:db_az_subject].map do |subject| %>
-          <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
-        <% end.join('; ').html_safe %>
+        <div data-behavior='metadata-truncate'>
+          <%= sanitize summary_data %>
+        </div>
       </dd>
     <% end %>
-  <% end %>
 
-  <% if document.extent.present? %>
-    <dt><%= document.extent_label %></dt>
-    <dd><%= document.extent %></dd>
-  <% end %>
+    <% if document.index_links.finding_aid.present? %>
+      <dt>Finding aid</dt>
+      <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
+    <% end %>
 
-  <% if document.index_parent_collections.present? %>
-    <dt>Collection</dt>
-    <dd>
-      <% document.index_parent_collections.each do |collection| %>
-        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
-      <% end %>
-    </dd>
-  <% end %>
+    <% if document.index_parent_collections.present? %>
+      <dt>Collection</dt>
+      <dd>
+        <% document.index_parent_collections.each do |collection| %>
+          <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
+        <% end %>
+      </dd>
+    <% end %>
+  </dl>
 
-  <% if document.index_links.finding_aid.present? %>
-    <dt>Finding aid</dt>
-    <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
-  <% end %>
-</dl>
+  <%= render :partial => "index_online_section", locals: { document: document } %>
 
-<%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
+  <%= render :partial => "search_results_accordion_sections", :locals => { :document => document } %>
+</div>

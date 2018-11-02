@@ -18,20 +18,11 @@ describe Extent do
       format_main_ssim: ['Book', 'Something else']
     )
   }
-  describe "label" do
-    it "should use a fallback label of physical extent if the document does not have a format" do
-      expect(no_format.extent_label).to eq 'Physical extent'
-    end
-    it "should upcase the given format" do
-      expect(single_format.extent_label).to eq 'Book'
-    end
-    it "should select the non-database format (even if it's the first one)" do
-      expect(multi_format.extent_label).to eq 'Book'
-    end
-    it "should select the first format when multiple non-Database formats are present" do
-      expect(bad_format.extent_label).to eq 'Book'
-    end
+
+  describe 'label' do
+    it { expect(single_format.extent_label).to eq 'Description' }
   end
+
   describe "value" do
     let(:no_extent) { SolrDocument.new() }
     let(:single_extent) {
@@ -61,6 +52,20 @@ describe Extent do
     end
     it "should join physical and characteristics statements" do
       expect(marc_extent.extent).to eq 'Extent Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.'
+    end
+
+    describe 'including format' do
+      it 'should upcase the given format' do
+        expect(single_format.extent).to start_with 'Book'
+      end
+
+      it "should select the non-database format (even if it's the first one)" do
+        expect(multi_format.extent).to start_with 'Book'
+      end
+
+      it 'should select the first format when multiple non-Database formats are present' do
+        expect(bad_format.extent).to start_with 'Book'
+      end
     end
   end
 end

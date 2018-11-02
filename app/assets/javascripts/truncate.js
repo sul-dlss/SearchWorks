@@ -1,7 +1,8 @@
 Blacklight.onLoad(function(){
-  $("[data-behavior='article-metadata-truncate']").responsiveTruncate(
+  $("[data-behavior='metadata-truncate']").responsiveTruncate(
     { height: 40, more: 'more...', less: 'less...' }
   );
+  $("[data-behavior='truncate-results-online-links']").responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
   $("[data-behavior='truncate']").responsiveTruncate({height: 60});
   $("[data-behavior='trunk8']").trunk8({
     tooltip: false

@@ -31,7 +31,7 @@ describe "catalog/access_panels/_collection_details.html.erb" do
       expect(rendered).to have_css('.panel-heading', text: 'Collection details')
       expect(rendered).to have_css('dt', text: 'Digital content', visible: false)
       expect(rendered).to have_css('dd a', text: 'item', visible: false)
-      expect(rendered).to have_css('dt', text: 'Physical extent')
+      expect(rendered).to have_css('dt', text: 'Description')
       expect(rendered).to have_css('dd', text: '2 things')
       expect(rendered).to have_css('dt', text: 'Collection PURL')
       expect(rendered).to have_css('dd a', text: 'https://purl.stanford.edu/1234')

@@ -3,24 +3,21 @@
   padding-left: 0;
 
   .accordion-section {
-    font-size: small;
-    margin: 0 0 10px 0;
     padding-left: 0;
 
     .header {
-      float: left;
-      border-radius: 2px;
+      @extend .btn;
       color: $white;
-      display: inline-block;
       margin-right: 1em;
       cursor: pointer;
-      padding: 2px 10px;
-      border-bottom: none;
       font-weight: normal;
-      font-size: 0.9em;
       white-space: nowrap;
       width: 10.5em;
       text-align: left;
+
+      &:hover, &:focus {
+        color: $white;
+      }
 
       span.section-label {
         float: left;
@@ -28,7 +25,6 @@
       }
 
       span.glyphicon {
-        font-size: 10px;
         float: right;
         padding-top: 1px;
       }
@@ -75,44 +71,11 @@
 
   }
 
-  .accordion-section.summary {
-    .header {
-      @include buttonize-with-gradient($sul-accordion-summary-bg, $sul-accordion-summary-border, $sul-accordion-summary-gradient);
-    }
-  }
-
-  .accordion-section.online {
-    .header {
-      @include buttonize-with-gradient($sul-accordion-online-bg, $sul-accordion-online-border, $sul-accordion-online-gradient);
-
-      &.selected-database {
-        width: 11.4em;
-      }
-    }
-
-    .details {
-      .links {
-        list-style-type: none;
-        padding-left: 10px;
-      }
-
-      .google-books {
-        display: none;
-
-        .btn-preview {
-          display: none;
-
-          .preview-link {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
   .accordion-section.course-reserves {
+    padding-top: 4px; // Add a little top padding for the Availability section above (which should always exist)
+
     .header {
-      @include buttonize-with-gradient($sul-accordion-course-reserves-bg, $sul-accordion-course-reserves-border, $sul-accordion-course-reserves-gradient);
+      @include buttonize($sul-accordion-course-reserves-bg, $sul-accordion-course-reserves-border);
     }
 
     .details {
@@ -124,7 +87,7 @@
 
   .accordion-section.location {
     .header {
-      @include buttonize-with-gradient($sul-accordion-location-bg, $sul-accordion-location-border, $sul-accordion-location-gradient);
+      @include buttonize($sul-accordion-location-bg, $sul-accordion-location-border);
     }
 
     .location-header {

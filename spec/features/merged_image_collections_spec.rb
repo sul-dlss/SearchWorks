@@ -7,10 +7,7 @@ feature "Merged Image Collections", js: true do
   scenario "in search results" do
     visit root_path
     fill_in 'q', with: '34'
-    click_button 'search'
-
-    expect(page).to have_css('dt', text: 'DIGITAL CONTENT')
-    expect(page).to have_css('dd', text: /\d+ items?/)
+    page.find('button#search').trigger('click')
 
     within('.image-filmstrip') do
       within('ul.container-images') do

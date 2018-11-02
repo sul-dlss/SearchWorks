@@ -4,7 +4,7 @@ class CollectionMembersController < ApplicationController
     respond_to do |format|
       format.json {
         render(
-          json: @document.collection_members,
+          json: @document.collection_members.with_type(params.permit(:type)[:type]),
           layout: false
         )
       }

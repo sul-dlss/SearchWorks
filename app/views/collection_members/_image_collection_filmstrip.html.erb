@@ -4,12 +4,11 @@
 %>
 
 <div class="clearfix collection-result-preview">
-  <a class="label label-items-online" href="<%= collection_members_path(collection_document) %>">
-    <span>
-      <%= text_for_inner_members_link(collection_document) %>
-    </span>
-  </a>
-
+  <% if @type == 'show' %>
+    <h2>Digital collection preview</h2>
+  <% else %>
+    <h4>Digital collection preview</h4>
+  <% end %>
   <div class="col-md-12 image-filmstrip" data-thumb-width="100" data-thumb-height="100">
     <div class="viewport">
       <ul class="container-images">
@@ -18,7 +17,7 @@
             <% unless document.image_urls.blank? %>
             <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
             <a href="<%= solr_document_path(document[:id]) %>">
-            <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>">
+            <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>" data-alt="<%= get_main_title(document) %>">
             </a>
             <% if document.image_urls.length > 1 %>
             <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
@@ -28,15 +27,17 @@
 
         <% end %>
 
-        <li>
-            <a class="collection-all-items-link" href="<%= collection_members_path(collection_document) %>">
-                <%= text_for_inner_members_link(collection_document) %>
-            </a>
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </li>
-
       </ul>
     </div>
     <div class="<%= preview_container %>"></div>
+  </div>
+
+  <div class="results-online-section">
+    <dl class="dl-horizontal results-metadata-section">
+      <dt class="online-label">Online</dt>
+      <dd>
+        <%= link_to(text_for_inner_members_link(collection_document), collection_members_path(collection_document)) %>
+      </dd>
+    </dl>
   </div>
 </div>

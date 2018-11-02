@@ -1,7 +1,7 @@
 require "spec_helper"
 
 feature "File Collection" do
-  scenario "Search results", js: true do
+  scenario "Search results" do
     stub_article_service(docs: [])
     visit root_path
 
@@ -9,9 +9,7 @@ feature "File Collection" do
     click_button 'search'
 
     expect(page).to have_css("h3 a", text: "File Collection1") #title
-    expect(page).to have_css("[data-behavior='trunk8']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
-    expect(page).to have_css("dt", text: "DIGITAL CONTENT")
-    expect(page).to have_css("dd", text: /\d+ items?/) # collection members
+    expect(page).to have_css("[data-behavior='metadata-truncate']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
   end
 
   scenario "Record view" do

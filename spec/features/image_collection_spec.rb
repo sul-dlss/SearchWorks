@@ -8,12 +8,10 @@ feature "Image Collection", js: true do
     visit root_path
 
     fill_in "q", with: "29"
-    click_button 'search'
+    page.find('button#search').trigger('click')
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
-    expect(page).to have_css("[data-behavior='trunk8']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
-    expect(page).to have_css("dt", text: "DIGITAL CONTENT")
-    expect(page).to have_css("dd", text: /\d+ items?/) # collection members
+    expect(page).to have_css("[data-behavior='metadata-truncate']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
   end
 
   scenario "Record view" do
@@ -40,7 +38,7 @@ feature "Image Collection", js: true do
     visit root_path
 
     fill_in "q", with: "29"
-    click_button 'search'
+    find('button#search').trigger('click')
 
     expect(page).to have_css(".image-filmstrip")
 

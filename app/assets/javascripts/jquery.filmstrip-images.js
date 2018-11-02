@@ -32,6 +32,13 @@
 
         $containerImgs.width(listingTotalWidth).height($filmstrip.data('thumb-height'));
 
+        // Change all data-alts to alts
+        $.each(imgs, function() {
+          var $img = $(this);
+          $img.prop('alt', $img.data('alt'));
+          $img.removeAttr('data-alt');
+        });
+
         attachEvents();
         loadThumbsInViewport();
       }

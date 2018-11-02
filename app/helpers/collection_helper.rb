@@ -14,15 +14,10 @@ module CollectionHelper
   end
 
   def text_for_inner_members_link(document)
-    if document.collection_members.present?
-      if document.collection_members.total == 1
-        return "View this item"
-      elsif document.collection_members.total == 2
-        return "View both items"
-      else
-        return "View all #{document.collection_members.total} items"
-      end
-    end
+    return if document.collection_members.blank?
+
+    items_count_text = pluralize(document.collection_members.total, 'digital item')
+    "Explore this collection <strong>(#{items_count_text})</strong>".html_safe
   end
 
   def collections_search_params

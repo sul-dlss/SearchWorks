@@ -1,8 +1,8 @@
 <% doc_presenter = presenter(document) %>
-<ul class='document-metadata dl-horizontal dl-invert'>
+<ul class='document-metadata dl-horizontal dl-invert results-metadata-section'>
   <% if document['eds_authors'].present? %>
     <li>
-      <div data-behavior='article-metadata-truncate'>
+      <div data-behavior='metadata-truncate'>
         <%= doc_presenter.field_value('eds_authors') %>
       </div>
     </li>
@@ -14,11 +14,11 @@
 </ul>
 
 <% if document.eds_subjects.present? || document['eds_abstract'].present? %>
-  <dl class="document-metadata dl-horizontal dl-invert article-metadata">
+  <dl class="document-metadata dl-horizontal dl-invert results-metadata-section">
     <% if document.eds_subjects.present? %>
       <dt>Subjects</dt>
       <dd>
-        <div data-behavior='article-metadata-truncate'>
+        <div data-behavior='metadata-truncate'>
           <%= document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
         </div>
       </dd>
@@ -27,7 +27,7 @@
     <% if document['eds_abstract'].present? %>
       <dt>Abstract</dt>
       <dd>
-        <div data-behavior='article-metadata-truncate'>
+        <div data-behavior='metadata-truncate'>
           <%= doc_presenter.field_value('eds_abstract') %>
         </div>
       </dd>
@@ -36,7 +36,7 @@
 <% end %>
 
 <% if !document.eds_restricted? %>
-  <ul class='document-metadata dl-horizontal dl-invert'>
+  <ul class='document-metadata dl-horizontal dl-invert results-metadata-section'>
     <% ArticleFulltextLinkPresenter.new(document: document, context: self).links.each do |link| %>
       <li><%= link.html_safe %></li>
     <% end %>

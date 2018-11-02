@@ -1,22 +1,9 @@
 .collection-result-preview {
-    float:left;
     width:100%;
-    font-size: small; /* to match accordion sections */
 }
 
-#document {
-    .collection-result-preview {
-        .label-items-online {
-            font-size: 1.2em;
-            font-weight: normal;
-            padding: 0.5em 0;
-            display: inline-block;
-            color: black;
-            span {
-                @include link-styling;
-            }
-        }
-    }
+.async-collection-members {
+  clear: left;
 }
 
 .async-placeholder {
