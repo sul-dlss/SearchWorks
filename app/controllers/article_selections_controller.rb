@@ -4,6 +4,7 @@ class ArticleSelectionsController < ApplicationController
   include Blacklight::SearchContext
   include Blacklight::SearchHelper
   include Blacklight::TokenBasedUser
+  include SelectionsCount
 
   copy_blacklight_config_from(ArticlesController)
 
@@ -30,6 +31,9 @@ class ArticleSelectionsController < ApplicationController
     else
       @document_list = []
     end
+
+    @catalog_count = selections_counts.catalog
+    @article_count = selections_counts.articles
 
     respond_to do |format|
       format.html { render 'bookmarks/index' }

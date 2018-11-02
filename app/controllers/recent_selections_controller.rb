@@ -1,9 +1,11 @@
 class RecentSelectionsController < ApplicationController
+  include SelectionsCount
+
   def index
     redirect_to(root_url) unless request.xhr?
 
-    @catalog_count = current_or_guest_user.bookmarks.where(record_type: 'catalog').count
-    @article_count = current_or_guest_user.bookmarks.where(record_type: 'article').count
+    @catalog_count = selections_counts.catalog
+    @article_count = selections_counts.articles
 
     respond_to do |format|
       format.html do

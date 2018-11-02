@@ -2,6 +2,7 @@
 
 class BookmarksController < CatalogController
   include Blacklight::Bookmarks
+  include SelectionsCount
 
   # Overidden from Blacklight to add our tabbed interface
   def index
@@ -9,6 +10,9 @@ class BookmarksController < CatalogController
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
     @response, @document_list = fetch(bookmark_ids)
+
+    @catalog_count = selections_counts.catalog
+    @article_count = selections_counts.articles
 
     respond_to do |format|
       format.html { }
