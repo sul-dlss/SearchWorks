@@ -148,6 +148,11 @@ class CatalogController < ApplicationController
     config.add_facet_field "era_facet", :label => "Era", limit: 20
     config.add_facet_field "author_other_facet", :label => "Organization (as author)", limit: 20
     config.add_facet_field "format", :label => "Format", show: false
+    config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
+      available: {
+        label: 'Available', fq: 'iiif_manifest_url_ssim:*'
+      }
+    }
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']

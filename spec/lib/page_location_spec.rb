@@ -182,6 +182,18 @@ describe SearchWorks::PageLocation do
             expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
           end
         end
+
+        describe 'iiif_resources' do
+          before { base_params[:f] = { iiif_resources: ['available'] } }
+          it 'is defined when the iiif_resources includes "available"' do
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :iiif_resources
+          end
+
+          it 'is nil when the iiif_resources is something else' do
+            base_params[:f][:iiif_resources] = ['Something else']
+            expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to be_nil
+          end
+        end
       end
     end
     describe 'for CourseReservesController#index' do

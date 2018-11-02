@@ -45,6 +45,8 @@ module SearchWorks
           :bookplate_fund
         when government_documents_parameters?
           :government_documents
+        when iiif_resources_parameters?
+          :iiif_resources
         end
       end
 
@@ -82,6 +84,10 @@ module SearchWorks
 
       def government_documents_parameters?
         (@params[:f][:genre_ssim] || []).include?('Government document')
+      end
+
+      def iiif_resources_parameters?
+        (@params[:f][:iiif_resources] || []).include?('available')
       end
 
       def course_reserves_index_access_points

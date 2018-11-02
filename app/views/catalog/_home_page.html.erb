@@ -62,6 +62,14 @@
             <p>Find books, media, and e-resources set aside for classes.</p>
           </div>
         </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('iiif_logo.svg', class: 'pull-left', width: '100', alt: '', title: '',  data: { "no-link-href" =>  search_catalog_path(f: {iiif_resources: ['available'] }) }) %>
+            <h3><%= link_to "IIIF resources", search_catalog_path(f: {iiif_resources: ['available'] }) %></h3>
+            <p>Find IIIF-compatible items in the Stanford Digital Repository.</p>
+            <p><a href="https://library.stanford.edu/projects/international-image-interoperability-framework/viewers">What is IIIF?</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
