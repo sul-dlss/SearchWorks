@@ -18,7 +18,7 @@ class ArticleSelectionsController < ApplicationController
 
 
   def index
-    @bookmarks = token_or_current_or_guest_user.bookmarks.where(record_type: 'article')
+    @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
     eds_params = {
@@ -53,6 +53,13 @@ class ArticleSelectionsController < ApplicationController
   end
 
   protected
+
+  def paged_bookmarks
+    token_or_current_or_guest_user
+      .bookmarks.where(record_type: 'article')
+      .page(params[:page])
+      .per(params[:per_page] || 20)
+  end
 
   def verify_user
     unless current_or_guest_user or (action == "index" and token_or_current_or_guest_user)
