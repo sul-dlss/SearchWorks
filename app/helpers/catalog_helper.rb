@@ -48,4 +48,21 @@ module CatalogHelper
   def grouped_citations(documents)
     Citation.grouped_citations(documents.map(&:citations))
   end
+
+  ##
+  # Creates a IIIF Drag 'n Drop link with IIIF logo
+  # @param [String] manifest
+  # @param [String, Number] width
+  # @param [String] position
+  def iiif_drag_n_drop(manifest, width: '40', position: 'left')
+    link_url = format Settings.IIIF_DND_BASE_URL, query: { manifest: manifest }.to_query
+    link_to(
+      link_url,
+      class: 'iiif-dnd pull-right',
+      data: { turbolinks: false, toggle: 'tooltip', placement: position, manifest: manifest },
+      title: 'Drag icon to any IIIF viewer. — Click icon to learn more.'
+    ) do
+      image_tag 'iiif-drag-n-drop.svg', width: width, alt: 'IIIF Drag-n-drop'
+    end
+  end
 end

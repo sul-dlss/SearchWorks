@@ -18,10 +18,11 @@ feature "Home Page" do
     expect(page).to have_css('.features a', text: 'Government documents')
     expect(page).to have_css(".features a", text: "Databases")
     expect(page).to have_css(".features a", text: "Course reserves")
+    expect(page).to have_css(".features a", text: "IIIF resources")
   end
   scenario "'Featured sets' images should be clickable", js: true do
     within('.features') do
-      all('[data-no-link-href]').last.click
+      all('[data-no-link-href]')[-2].click
       expect(current_url).to match /#{course_reserves_path}$/
     end
   end

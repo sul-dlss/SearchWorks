@@ -48,4 +48,17 @@ Blacklight.onLoad(function(){
   if (GoogleAnalytics.analyticsId){
     GoogleAnalytics.trackPageview();
   }
+
+  $('.iiif-dnd').on('click', function(e) {
+    e.preventDefault();
+    var link = $(e.currentTarget)
+    var manifest = link.data().manifest;
+    window._gaq.push(['_trackEvent', 'IIIF DnD', 'clicked', manifest]);
+    window.location = link.attr('href');
+  });
+
+  $('.iiif-dnd').on('dragstart', function(e) {
+    var manifest = $(e.currentTarget).data().manifest;
+    window._gaq.push(['_trackEvent', 'IIIF DnD', 'dragged', manifest]);
+  })
 });
