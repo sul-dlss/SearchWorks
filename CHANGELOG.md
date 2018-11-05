@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Importing Article record into RefWorks [#2073](https://github.com/sul-dlss/SearchWorks/pulls/2073)
+- Adds IIIF drag n drop badge to items with IIIF manifest URL [#2097](https://github.com/sul-dlss/SearchWorks/pulls/2097)
 ### Changed
 - Updated results metadata styling and formatting for both MODS and MARC records [#2053](https://github.com/sul-dlss/SearchWorks/issue/2053)
+- Updated 404 and 500 pages to link to status page [#2079](https://github.com/sul-dlss/SearchWorks/pulls/2079) [#2078](https://github.com/sul-dlss/SearchWorks/pulls/2078)
+- Update matching algorithm for sidebar finding aid link (supports Hoover OAC new url pattern)[#2069](https://github.com/sul-dlss/SearchWorks/issues/2069)
+- Updates mods display and display additional titles [#1996](https://github.com/sul-dlss/SearchWorks/pulls/1996)
 ### Removed
 ### Fixed
 - Fixed a bug where HTML was being rendered in the multiple managed purl sidebar [#2081](https://github.com/sul-dlss/SearchWorks/issues/2081)
+- Clears EDS cache on deploy [#2075](https://github.com/sul-dlss/SearchWorks/pulls/2075)
 ### Security
+- Loofah security update, other dependency updates [#2093](https://github.com/sul-dlss/SearchWorks/pulls/2093) [#2098](https://github.com/sul-dlss/SearchWorks/pulls/2098)
 
 ## [3.3.6] - 2018-10-24
 
