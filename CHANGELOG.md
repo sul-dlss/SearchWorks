@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.7] - 2018-11-06
+
+### Added
 - Importing Article record into RefWorks [#2073](https://github.com/sul-dlss/SearchWorks/pulls/2073)
 - Adds IIIF drag n drop badge to items with IIIF manifest URL [#2097](https://github.com/sul-dlss/SearchWorks/pulls/2097)
 - Adds a more useful error message when selections/bookmarks have failed [#2103](https://github.com/sul-dlss/SearchWorks/pulls/2103)
@@ -95,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...HEAD
+[3.3.7]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...v3.3.7
 [3.3.6]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...v3.3.6
 [3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...v3.3.5
 [3.3.4]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.3...v3.3.4
