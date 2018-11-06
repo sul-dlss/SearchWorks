@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Importing Article record into RefWorks [#2073](https://github.com/sul-dlss/SearchWorks/pulls/2073)
 - Adds IIIF drag n drop badge to items with IIIF manifest URL [#2097](https://github.com/sul-dlss/SearchWorks/pulls/2097)
+- Adds a more useful error message when selections/bookmarks have failed [#2103](https://github.com/sul-dlss/SearchWorks/pulls/2103)
 ### Changed
 - Updated results metadata styling and formatting for both MODS and MARC records [#2053](https://github.com/sul-dlss/SearchWorks/issue/2053)
 - Updated 404 and 500 pages to link to status page [#2079](https://github.com/sul-dlss/SearchWorks/pulls/2079) [#2078](https://github.com/sul-dlss/SearchWorks/pulls/2078)
