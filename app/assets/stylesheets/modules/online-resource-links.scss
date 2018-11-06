@@ -2,9 +2,10 @@ ul.links {
   padding-left: 0;
   list-style-type: none;
 }
-.stanford-only {
-  padding-right: 20px;
-  background: image-url('sprite-links.png') no-repeat right top;
+
+.stanford-only:after {
+  content: image-url('stanford-only.svg');
+  margin-left: 5px;
 }
 .sfx {
   padding-left: 20px;
