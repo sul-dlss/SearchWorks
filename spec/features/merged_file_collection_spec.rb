@@ -22,8 +22,8 @@ feature "Merged File Collections", js: true do
       expect(page).to have_css("a", text: /File Item/, count: 3)
     end
 
-    expect(page).to have_css('h2', text: 'Contents/Summary')
-    expect(page).to have_css('h2', text: 'Subjects')
-    expect(page).to have_css('h2', text: 'Bibliographic information')
+    expect(page).to have_css('h3', text: 'Contents/Summary')
+    expect(page).to have_css('h3', text: 'Subjects')
+    expect(page).to have_css('h3', text: 'Bibliographic information')
   end
 end

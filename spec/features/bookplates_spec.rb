@@ -5,7 +5,7 @@ describe 'Bookplates' do
     it 'displays bookplate data when present' do
       visit solr_document_path('45')
 
-      expect(page).to have_css('h2', text: 'Acquired with support from')
+      expect(page).to have_css('h3', text: 'Acquired with support from')
       expect(page).to have_css('.bookplate', count: 2)
 
       within(first('.bookplate')) do
