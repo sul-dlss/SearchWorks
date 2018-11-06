@@ -1,5 +1,6 @@
 <% document ||= @document %>
 <% if document.access_panels.library_locations? %>
+  <h2>At the library</h2>
   <div data-live-lookup-id="<%= document[:id] %>" data-live-lookup-url="<%= availability_index_path %>">
     <% document.access_panels.library_locations.libraries.each do |library| %>
       <div class="panel panel-default access-panel panel-library-location" <%= "data-hours-route='#{hour_path(library.code)}'".html_safe if library.holding_library? %>>
