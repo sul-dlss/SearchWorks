@@ -21,6 +21,26 @@
   }
 }
 
+@mixin refworks-form {
+  .refworks {
+    form {
+      padding: 3px 20px;
+
+      a {
+        color: $dropdown-link-hover-color;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
 @mixin h1-show-title-font {
   font-family: 'dejavu_sansextralight';
   letter-spacing: -.03em;
