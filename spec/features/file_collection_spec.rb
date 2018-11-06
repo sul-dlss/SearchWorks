@@ -16,8 +16,8 @@ feature "File Collection" do
     visit solr_document_path('31')
 
     expect(page).to have_css("h1", text: "File Collection1") # Title
-    expect(page).to have_css("h2", text: "Subjects")
-    expect(page).to have_css("h2", text: "Bibliographic information")
-    expect(page).to have_css("h2", text: "Access conditions")
+    expect(page).to have_css('h3', text: "Subjects")
+    expect(page).to have_css('h3', text: "Bibliographic information")
+    expect(page).to have_css('h3', text: "Access conditions")
   end
 end
