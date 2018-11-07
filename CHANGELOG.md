@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+- Updated the EBSCO gem to 1.0.5 to address issues around records throwing errors when trying to sanitize HTML [#1704](https://github.com/sul-dlss/SearchWorks/issues/1704)
 ### Security
 
 ## [3.3.7] - 2018-11-06
