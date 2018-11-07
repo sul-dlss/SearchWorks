@@ -13,6 +13,8 @@ class Holdings
 
     def availability_class
       case
+      when in_process?
+        'in_process'
       when unavailable?
         'unavailable'
       when noncirc_page?
@@ -57,6 +59,10 @@ class Holdings
 
     def unknown?
       Holdings::Status::Unknown.new(@callnumber).unknown?
+    end
+
+    def in_process?
+      Holdings::Status::InProcess.new(@callnumber).in_process?
     end
 
     def as_json(*)

@@ -1,5 +1,6 @@
 require 'holdings/append_mhld'
 require 'holdings/callnumber'
+require 'holdings/in_process'
 require 'holdings/library'
 require 'holdings/location'
 require 'holdings/mhld'

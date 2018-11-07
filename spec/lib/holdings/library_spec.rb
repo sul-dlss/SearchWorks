@@ -92,6 +92,12 @@ describe Holdings::Library do
       expect(zombie).to_not be_holding_library
     end
   end
+  describe '#hoover_archive?' do
+    let(:hv_archive) { Holdings::Library.new('HV-ARCHIVE') }
+    it 'is true' do
+      expect(hv_archive.hoover_archive?).to be true
+    end
+  end
   describe "#mhld" do
     let(:library) {Holdings::Library.new("GREEN")}
     it "should be an accessible attribute" do

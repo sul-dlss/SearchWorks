@@ -1114,7 +1114,8 @@ module Constants
     'unavailable' => 'Unavailable',
     'noncirc' => 'In-library use',
     'unknown' => 'Unknown',
-    'noncirc_page' => 'In-library use'
+    'noncirc_page' => 'In-library use',
+    'in_process' => 'In process'
   }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
