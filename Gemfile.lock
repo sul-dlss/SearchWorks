@@ -215,7 +215,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.4, >= 0.4.0)
       dry-types (~> 0.13.1)
-    ebsco-eds (1.0.3)
+    ebsco-eds (1.0.5)
       activesupport (~> 5.0)
       bibtex-ruby (~> 4.0)
       citeproc (>= 1.0.4, < 2.0)
@@ -573,7 +573,7 @@ DEPENDENCIES
   devise-guests
   devise-remote-user
   dlss-capistrano
-  ebsco-eds (= 1.0.3)
+  ebsco-eds (= 1.0.5)
   faraday (~> 0.10)
   font-awesome-rails
   honeybadger (~> 3.0)
