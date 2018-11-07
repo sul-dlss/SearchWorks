@@ -16,10 +16,10 @@ describe 'catalog/_show_mods.html.erb' do
     end
     context 'with a iiif manifest' do
       let(:document) do
-        SolrDocument.new(druid: 'abc123', modsxml: mods_001, iiif_manifest_url_ssim: 'example.com')
+        SolrDocument.new(druid: 'abc123', modsxml: mods_001, iiif_manifest_url_ssim: ['example.com'])
       end
       it 'includes IIIF Drag n Drop link' do
-        expect(rendered).to have_css 'a.iiif-dnd'
+        expect(rendered).to have_css 'a.iiif-dnd[href="https://library.stanford.edu/projects/international-image-interoperability-framework/viewers?manifest=example.com"]'
       end
     end
   end
