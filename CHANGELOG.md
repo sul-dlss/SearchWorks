@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Adds the ability to track outbound links for usage analysis [#2135](https://github.com/sul-dlss/SearchWorks/pull/2135)
 ### Changed
 - Now returning a 404 Not Found error when an article record is not found [#2133](https://github.com/sul-dlss/SearchWorks/pull/2133)
 - Updates the way that Hoover Archive records are requested and shown in the access panel [#2123](https://github.com/sul-dlss/SearchWorks/pull/2123)
