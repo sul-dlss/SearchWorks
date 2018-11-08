@@ -54,7 +54,6 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
     it "should display correct sections" do
       render
-      puts rendered
       expect(rendered).to_not have_css("h2", text: "Abstract/Contents")
       expect(rendered).to_not have_css("h2", text: "Subjects")
       expect(rendered).to_not have_css("h2", text: "Access conditions")
