@@ -8,10 +8,28 @@
   }
 }
 
-.record-metadata, .upper-record-metadata {
+.record-metadata,
+.upper-record-metadata {
   @include show-page-row-layout;
+
+  .section-heading {
+    h3 {
+      color: $smoke;
+    }
+  }
+}
+
+.record-metdata {
   dt {
     width: auto;
+  }
+}
+
+.upper-record-metadata {
+  dt {
+    padding-right: 30px;
+    text-align: right;
+    width: 10em;
   }
 }
 
