@@ -1114,7 +1114,8 @@ module Constants
     'unavailable' => 'Unavailable',
     'noncirc' => 'In-library use',
     'unknown' => 'Unknown',
-    'noncirc_page' => 'In-library use'
+    'noncirc_page' => 'In-library use',
+    'in_process' => 'In process'
   }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
@@ -1249,12 +1250,12 @@ module Constants
 
   LIBRARY_INSTRUCTIONS = {
     'HOOVER' => {
-      heading: 'All items must be requested in advance',
-      text: 'Stanford ID holders may be able to check out some monographs marked "Available" next to the call number. "In-library use" call numbers are for reading-room use only.'
+      heading: 'Access',
+      text: 'Items must be requested in advance and viewed on-site.'
     },
     'HV-ARCHIVE' => {
-      heading: 'All items must be viewed on site',
-      text: "If there's a finding aid shown above, use the Online Archive of California link to request items. Otherwise, use the Request on-site access button below."
+      heading: 'Access',
+      text: 'Items must be requested in advance and viewed on-site.'
     },
     'RUMSEYMAP' => {
       heading: 'All items must be viewed on site',
