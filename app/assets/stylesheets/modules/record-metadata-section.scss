@@ -11,6 +11,12 @@
 .record-metadata,
 .upper-record-metadata {
   @include show-page-row-layout;
+
+  .section-heading {
+    h3 {
+      color: $smoke;
+    }
+  }
 }
 
 .record-metdata {
