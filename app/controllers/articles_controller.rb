@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
 
   rescue_from 'EBSCO::EDS::BadRequest' do |exception|
     raise exception if params[:q].present?
+    raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
+
     flash[:alert] = 'An empty search is not possible in articles+. Enter a keyword to start your search.'
     redirect_back fallback_location: articles_path
   end
