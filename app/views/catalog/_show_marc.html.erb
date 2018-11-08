@@ -2,21 +2,24 @@
 
 <% if document.marc_links.managed_purls.many? %>
   <% add_purl_embed_header(document) %>
-  <%= render 'catalog/managed_purl_embed' %>
-  <div class='upper-record-metadata row'>
-    <div class="col-md-8 col-md-offset-4">
-      <%= render 'catalog/record/marc_upper_metadata_items' %>
-    </div>
+
+  <div class='upper-record-metadata'>
+    <%= render 'catalog/record/marc_upper_metadata_items' %>
   </div>
+
+  <%= render 'catalog/managed_purl_embed' %>
 <% elsif document.druid %>
   <% add_purl_embed_header(document) %>
-  <div class='upper-record-metadata row'>
-    <div class="col-md-7 purl-embed-viewer">
+
+  <div class="upper-record-metadata col-md-12">
+    <%= render 'catalog/record/marc_upper_metadata_items' %>
+  </div>
+
+  <div class="purl-embed-viewer row">
+    <div class="col-md-12">
+      <h2>Digital content</h2>
       <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
       <%= iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
-    </div>
-    <div class="col-md-5">
-      <%= render 'catalog/record/marc_upper_metadata_items' %>
     </div>
   </div>
 <% else %>
