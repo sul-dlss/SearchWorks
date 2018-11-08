@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 ### Fixed
 - Updated the EBSCO gem to 1.0.5 to address issues around records throwing errors when trying to sanitize HTML [#1704](https://github.com/sul-dlss/SearchWorks/issues/1704)
+- Fixed a visual display issue that was cause a dot to display beneath the Stanford Only S icon in some cases [#2113](https://github.com/sul-dlss/SearchWorks/pull/2113)
 ### Security
 
 ## [3.3.7] - 2018-11-06
