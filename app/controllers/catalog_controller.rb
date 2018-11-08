@@ -444,6 +444,7 @@ class CatalogController < ApplicationController
     config.view.brief.icon_class = "fa-align-justify"
 
     config.index.respond_to.mobile = true
+    config.fetch_many_document_params = {}
   end
 
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
