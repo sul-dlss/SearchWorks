@@ -27,6 +27,7 @@ RSpec.describe ArticlesController do
         end
       end
 
+
       context 'with a query' do
         it 'raises the error' do
           expect do
@@ -42,6 +43,16 @@ RSpec.describe ArticlesController do
       stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')])
       get :show, params: { id: '123' }
       expect(response).to render_template('show')
+    end
+
+    context 'when a BadReqest error is returned from the API (which we have to assume means the record is not found)' do
+      before { stub_article_service(type: :error, docs: []) }
+
+      it 'raises a not found error' do
+        expect do
+          get :show, params: { id: '123' }
+        end.to raise_error(ActionController::RoutingError, 'Not Found')
+      end
     end
   end
 

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+- Now returning a 404 Not Found error when an article record is not found [#2133](https://github.com/sul-dlss/SearchWorks/pull/2133)
 ### Removed
 ### Fixed
 - Updated the EBSCO gem to 1.0.5 to address issues around records throwing errors when trying to sanitize HTML [#1704](https://github.com/sul-dlss/SearchWorks/issues/1704)
