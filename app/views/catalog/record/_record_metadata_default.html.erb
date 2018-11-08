@@ -5,7 +5,6 @@
     <%= render "catalog/record/metadata_panels" %>
   </div>
   <div class="record-sections col-md-8">
-    <h2>Description</h2>
     <% if document.respond_to?(:to_marc) %>
       <%= render "catalog/record/marc_metadata_sections" %>
     <% elsif document.respond_to?(:mods) %>
