@@ -52,6 +52,16 @@ class ArticleSelectionsController < ApplicationController
     @_prefixes ||= super + ['articles', 'catalog']
   end
 
+  # Overridden Blacklight helper method to generate a "start"
+  # for bookmarks similar to what the solr response provides
+  def document_counter_with_offset idx, offset = nil
+    offset ||= ((@bookmarks.current_page - 1) * @bookmarks.limit_value) if @bookmarks
+    offset ||= 0
+
+    idx + 1 + offset
+  end
+  helper_method :document_counter_with_offset
+
   protected
 
   def paged_bookmarks
