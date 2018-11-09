@@ -28,11 +28,28 @@ class BookmarksController < CatalogController
   end
 
   def clear
-    if current_or_guest_user.bookmarks.clear
+    if clear_bookmarks
       flash[:success] = I18n.t('blacklight.bookmarks.clear.success')
     else
       flash[:error] = I18n.t('blacklight.bookmarks.clear.failure')
     end
     redirect_back fallback_location: bookmarks_url
+  end
+
+  protected
+
+  # Clears bookmarks from an ActiveRecord CollectionProxy
+  # and deletes bookmarks from an AssociationRelation (and returns true)
+  def clear_bookmarks
+    return current_or_guest_user.bookmarks.clear unless clear_params[:type]
+
+    # calling delete_all to be fast, I don't believe we care about callbacks in this case
+    current_or_guest_user.bookmarks.where(record_type: clear_params[:type]).delete_all
+    true # Returning true so this is viewed as a success
+  end
+
+  # Only permit a type param of articles or catalog
+  def clear_params
+    params.permit(:type).select { |_, val| %w[article catalog].include? val }
   end
 end

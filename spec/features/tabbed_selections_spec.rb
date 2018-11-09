@@ -66,4 +66,42 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
       expect(page).to have_css('.document', count: 3)
     end
   end
+
+  describe 'clearing lists' do
+    it 'clears article lists' do
+      visit '/selections/articles'
+
+      within('#sortAndPerPage') do
+        click_link 'Clear list'
+      end
+
+      expect(page).to have_css('.btn', text: '3 catalog items')
+      expect(page).to have_css('.btn', text: '0 articles+ items')
+    end
+
+    it 'clears catalog lists' do
+      visit '/selections'
+
+      within('#sortAndPerPage') do
+        click_link 'Clear list'
+      end
+
+      expect(page).to have_css('.btn', text: '0 catalog items')
+      expect(page).to have_css('.btn', text: '4 articles+ items')
+    end
+
+    it 'clears both lists' do
+      visit '/selections'
+
+      expect(page).to have_css('.btn', text: '3 catalog items')
+      expect(page).to have_css('.btn', text: '4 articles+ items')
+
+      within('#search-subnavbar ul.recent-selections') do
+        click_link 'Clear list'
+      end
+
+      expect(page).to have_css('.btn', text: '0 catalog items')
+      expect(page).to have_css('.btn', text: '0 articles+ items')
+    end
+  end
 end

@@ -17,6 +17,13 @@ en:
             tip: Limit your search to scholarly content. Includes University presses.
           FT1:
             tip: Stanford subscribes to the full text, or it's available via open access.
+    bookmarks:
+      article:
+        clear:
+          action_confirm: Clear your articles+ selections?
+      catalog:
+        clear:
+          action_confirm: Clear your catalog selections?
     search:
       form:
         q:
@@ -26,6 +33,8 @@ en:
       articles:
         label: articles+
         description_html: <span class="h3">articles+</span> <span class="help-block">journal articles &amp; other e-resources</span>
+      articles_selections:
+        label: articles+
       catalog:
         label: catalog
         description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
