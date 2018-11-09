@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.8] - 2018-11-09
+
+### Added
 - Adds the ability to track outbound links for usage analysis [#2135](https://github.com/sul-dlss/SearchWorks/pull/2135)
 ### Changed
 - Now returning a 404 Not Found error when an article record is not found [#2133](https://github.com/sul-dlss/SearchWorks/pull/2133)
@@ -108,7 +116,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...HEAD
+[3.3.8]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...v3.3.8
 [3.3.7]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...v3.3.7
 [3.3.6]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...v3.3.6
 [3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...v3.3.5
