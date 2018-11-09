@@ -301,6 +301,8 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       end
       it 'renders request via OAC finding aid' do
         expect(rendered).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
+        expect(rendered).to have_css '.availability-icon.noncirc_page'
+        expect(rendered).to have_css '.status-text', text: 'In-library use'
       end
     end
     context 'without a finding aid' do

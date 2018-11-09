@@ -50,7 +50,7 @@ class Holdings
   def callnumbers
     return [] unless @item_display.present?
     @callnumbers ||= @item_display.map do |item_display|
-      Holdings::Callnumber.new(item_display)
+      Holdings::Callnumber.new(item_display, document: @document)
     end.sort_by(&:full_shelfkey)
   end
   def mhld

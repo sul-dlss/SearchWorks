@@ -7,9 +7,11 @@ class Holdings
   # 9 full shelfkey -|- 10 public note -|- 11 callnumber type -|- 12 course id -|- 13 reserve desk -|- 14 loan period
   class Callnumber
     attr_writer :current_location, :status
+    attr_reader :document
     attr_accessor :due_date
-    def initialize(holding_info)
+    def initialize(holding_info, document: nil)
       @holding_info = holding_info
+      @document = document
     end
 
     def present?
