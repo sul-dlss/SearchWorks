@@ -10,7 +10,7 @@ class Holdings
       end
 
       def in_process?
-        library_in_process?
+        library_in_process? && !@callnumber.document&.index_links&.finding_aid.present?
       end
 
       private
