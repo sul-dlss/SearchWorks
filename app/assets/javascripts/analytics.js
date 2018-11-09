@@ -60,5 +60,21 @@ Blacklight.onLoad(function(){
   $('.iiif-dnd').on('dragstart', function(e) {
     var manifest = $(e.currentTarget).data().manifest;
     window._gaq.push(['_trackEvent', 'IIIF DnD', 'dragged', manifest]);
-  })
+  });
+
+  // Track external link clicks
+  $('a[href]:not([href^="/"],[href^="#"])').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var _this = this;
+    var link = $(e.currentTarget);
+    try {
+      if (link[0].host !== window.location.host) {
+        window._gaq.push(['_trackEvent', 'External link', 'clicked', link.attr('href')]);
+      }
+    }
+    finally {
+      window.location.href = _this.href;
+    }
+  });
 });
