@@ -6,6 +6,10 @@ module ArticleHelper
     controller_name == 'articles'
   end
 
+  def article_selections?
+    controller_name == 'article_selections'
+  end
+
   def facet_options_presenter
     @facet_options ||= FacetOptionsPresenter.new(params: params, context: self)
   end
