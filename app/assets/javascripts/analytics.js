@@ -63,7 +63,7 @@ Blacklight.onLoad(function(){
   });
 
   // Track external link clicks
-  $('a[href]:not([href^="/"],[href^="#"])').on('click', function(e) {
+  $('a[href]:not([href^="/"],[href^="#"],[data-behavior="requests-modal"],[href=""])').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     var _this = this;
