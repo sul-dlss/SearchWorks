@@ -38,6 +38,7 @@
           var facetHtml = createFacets(response.response.facets, data.alternateCatalog);
           $facets.html(facetHtml);
           $body.show();
+          $el.trigger('alternateResultsLoaded', $body);
         } else {
           $title.text('No additional results were found in');
           $body.find('a.btn').remove();

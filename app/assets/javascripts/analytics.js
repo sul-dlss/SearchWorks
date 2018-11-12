@@ -74,5 +74,39 @@ Blacklight.onLoad(function(){
     ga('send', 'event', 'External link', 'clicked', this.href, {
       'transport': 'beacon'
     });
+    if ($('.zero-results').length > 0) {
+      ga('send', 'event', 'Zero results', 'clicked', this.href, {
+        'transport': 'beacon'
+      });
+    }
+  });
+
+  $('a[data-track="zero-results-remove-limit"]').on('click', function(e) {
+    ga('send', 'event', 'Zero results', 'clicked-remove-limit', this.href, {
+      'transport': 'beacon'
+    });
+  });
+
+  $('a[data-track="zero-results-search-all-fields"]').on('click', function(e) {
+    ga('send', 'event', 'Zero results', 'clicked-search-all-fields', this.href, {
+      'transport': 'beacon'
+    });
+  });
+
+  // When an alternate catalog is loaded, track those link clicks
+  $('[data-alternate-catalog]').on('alternateResultsLoaded', function(event) {
+    $(event.currentTarget).find('a').on('click', function(e) {
+      var eventCategory = $('.zero-results').length > 0 ? 'Zero results' : 'Alternate Results';
+      ga('send', 'event', eventCategory, 'clicked-alternate-results', this.href, {
+        'transport': 'beacon'
+      });
+    });
+  });
+
+  // Just track when a zero results page gets loaded
+  $('.zero-results').each(function() {
+    ga('send', 'event', 'Zero results', 'loaded', this.href, {
+      'transport': 'beacon'
+    });
   });
 });
