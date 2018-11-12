@@ -12,6 +12,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [3.3.9] - 2018-11-12
+
+### Added
+### Changed
+ - Updates various dependencies [#2153](https://github.com/sul-dlss/SearchWorks/pull/2153)
+### Removed
+### Fixed
+ - Fixes an issue where the "Full Text" label was cut off [#2155](https://github.com/sul-dlss/SearchWorks/pull/2155)
+ - Fixes an issue where the "Online" label in gallery view was sometimes overlapping with the preview button [#2154](https://github.com/sul-dlss/SearchWorks/pull/2154)
+ - Partially fixes an issue where some links and modals did not properly work [#2156](https://github.com/sul-dlss/SearchWorks/pull/2156)
+### Security
+
 ## [3.3.8] - 2018-11-09
 
 ### Added
@@ -116,7 +128,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...HEAD
+[3.3.9]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...v3.3.9
 [3.3.8]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...v3.3.8
 [3.3.7]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...v3.3.7
 [3.3.6]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...v3.3.6
