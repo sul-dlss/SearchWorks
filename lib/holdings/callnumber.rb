@@ -136,7 +136,7 @@ class Holdings
     end
 
     def as_json(*)
-      methods = (public_methods(false) - [:as_json, :status, :current_location])
+      methods = (public_methods(false) - [:as_json, :status, :current_location, :document])
       callnumber_info = methods.each_with_object({}) do |meth, obj|
         obj[meth.to_sym] = send(meth) if method(meth).arity == 0
       end
