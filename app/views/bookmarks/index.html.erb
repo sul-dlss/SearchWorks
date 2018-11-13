@@ -1,8 +1,15 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <h1>Selection lists</h1>
 
-<%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: "btn #{'btn-danger' unless article_selections?}") %>
-<%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: "btn #{'btn-danger' if article_selections?}") %>
+<nav class="selections-nav">
+  <% if article_selections? %>
+    <%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg') %>
+    <h2><%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+  <% else %>
+    <h2><%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+    <%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg') %>
+  <% end %>
+</nav>
 
 <div id="content" class="col-md-12">
   <% if current_or_guest_user.blank? %>
