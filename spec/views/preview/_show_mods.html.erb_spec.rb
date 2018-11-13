@@ -12,7 +12,12 @@ describe "preview/_show_mods.html.erb" do
     display_type: ["image"],
     item_display: [ "123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123" ],
     isbn_display: [ 123 ],
-    imprint_display: ["Imprint Statement"]
+    imprint_display: ["Imprint Statement"],
+    author_struct: [
+      { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
+      { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+    ],
+    summary_display: ['Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet']
   ) }
 
   before do

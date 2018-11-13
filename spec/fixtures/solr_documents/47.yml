@@ -3,3 +3,8 @@
 :format_main_ssim: "Archive/Manuscript"
 :modsxml: <%= mods_everything %>
 :collection_type: Digital Collection
+:author_struct:
+  - '{"link":"J. Smith","search":"\"J. Smith\"","post_text":"(Author)"}'
+  - '{"link":"B. Smith","search":"\"B. Smith\"","post_text":"(Producer)"}'
+:summary_display:
+  - This collection of Virtual Objects is really important.

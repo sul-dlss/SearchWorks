@@ -62,7 +62,8 @@ module RecordHelper
     link_to(name, search_catalog_path(q: "\"#{name}\"", search_field: 'search_author'))
   end
 
-  # We need this to remove the ending ":" from the role labels
+  # We need this to remove the ending ":" from the role labels only in data from
+  # mods_display
   def sanitize_mods_name_label(label)
     label.sub(/:$/, '')
   end

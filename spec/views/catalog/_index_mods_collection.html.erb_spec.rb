@@ -7,7 +7,11 @@ describe "catalog/_index_mods_collection.html.erb" do
       SolrDocument.new(
         id: 'abc123',
         modsxml: mods_everything,
-        physical: ["The Physical Extent"]
+        physical: ["The Physical Extent"],
+        author_struct: [
+          { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
+          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+        ]
       )
     )
     render
