@@ -4,26 +4,32 @@ GoogleAnalytics = (function() {
   function GoogleAnalytics() {}
 
   GoogleAnalytics.load = function() {
-    var firstScript, ga;
-    window._gaq = [];
     GoogleAnalytics.analyticsId = GoogleAnalytics.getAnalyticsId();
-    window._gaq.push(["_setAccount", GoogleAnalytics.analyticsId]);
-    ga = document.createElement("script");
-    ga.type = "text/javascript";
-    ga.async = true;
-    ga.src = ("https:" === document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
-    firstScript = document.getElementsByTagName("script")[0];
-    firstScript.parentNode.insertBefore(ga, firstScript);
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments);
+      };
+
+      i[r].l = 1 * new Date;
+
+      a = s.createElement(o);
+      m = s.getElementsByTagName(o)[0];
+
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', GoogleAnalytics.analyticsId, 'auto');
   };
 
   GoogleAnalytics.trackPageview = function(url) {
     if (!GoogleAnalytics.isLocalRequest()) {
-      if (url) {
-        window._gaq.push(["_trackPageview", url]);
-      } else {
-        window._gaq.push(["_trackPageview"]);
-      }
-      return window._gaq.push(["_trackPageLoadTime"]);
+      return ga('send', {
+          hitType: 'pageview',
+          page: location.pathname
+        }
+      );
     }
   };
 
@@ -50,31 +56,23 @@ Blacklight.onLoad(function(){
   }
 
   $('.iiif-dnd').on('click', function(e) {
-    e.preventDefault();
-    var link = $(e.currentTarget)
-    var manifest = link.data().manifest;
-    window._gaq.push(['_trackEvent', 'IIIF DnD', 'clicked', manifest]);
-    window.location = link.attr('href');
+    var manifest = $(e.currentTarget).data().manifest;
+    ga('send', 'event', 'IIIF DnD', 'yo', manifest, {
+      'transport': 'beacon',
+    });
   });
 
   $('.iiif-dnd').on('dragstart', function(e) {
     var manifest = $(e.currentTarget).data().manifest;
-    window._gaq.push(['_trackEvent', 'IIIF DnD', 'dragged', manifest]);
+    ga('send', 'event', 'IIIF DnD', 'dragged', manifest, {
+      'transport': 'beacon'
+    });
   });
 
   // Track external link clicks
   $('a[href]:not([href^="/"],[href^="#"],[data-behavior="requests-modal"],[href=""])').on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var _this = this;
-    var link = $(e.currentTarget);
-    try {
-      if (link[0].host !== window.location.host) {
-        window._gaq.push(['_trackEvent', 'External link', 'clicked', link.attr('href')]);
-      }
-    }
-    finally {
-      window.location.href = _this.href;
-    }
+    ga('send', 'event', 'External link', 'clicked', this.href, {
+      'transport': 'beacon'
+    });
   });
 });
