@@ -85,7 +85,7 @@ module ResultsDocumentHelper
     when Array
       safe_join(field.map { |x| render_struct_field_data(document, x) }, ' ')
     else
-      field
+      auto_link(field.to_s)
     end
   end
 end

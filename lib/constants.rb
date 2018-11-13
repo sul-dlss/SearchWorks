@@ -1201,7 +1201,10 @@ module Constants
   EXCLUDE_FIELDS = ['w', '0', '1', '2', '5', '6', '8', '?', '=']
 
   NIELSEN_TAGS = { '505' => '905', '520' => '920', '586' => '986' }
-  SOURCES = { 'Nielsen' => '(source: Nielsen Book Data)' }
+  SOURCES = {
+    'Nielsen' => '(source: Nielsen Book Data)',
+    'AuxAmateurs' => '(source: Amalivre)'
+  }
   SUL_ICONS = {
     'Object' => 'cube',
     'Academic Journal' => 'book-2',
