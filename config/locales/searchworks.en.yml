@@ -70,6 +70,7 @@ en:
       HV-ARCHIVE: Request on-site access
       RUMSEYMAP: Request on-site access
       SPEC-COLL: Request on-site access
+      request_on_site: Request on-site access
   blacklight:
     course_reserves:
       page_title: "Course reserves in %{application_name}"

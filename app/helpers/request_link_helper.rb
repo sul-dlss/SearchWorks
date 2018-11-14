@@ -2,12 +2,9 @@ module RequestLinkHelper
   def link_to_request_link(options = {})
     url = request_link(options[:document], options[:callnumber], options[:barcode])
     return unless url
-    link_text = t(
-      "searchworks.request_link.#{options[:library].try(:code) || 'default'}",
-      default: :'searchworks.request_link.default'
-    )
+
     link_to(
-      link_text,
+      request_link_text(options[:callnumber], options[:library]),
       url,
       target: request_link_target(options[:callnumber]),
       rel: 'nofollow',
@@ -30,6 +27,15 @@ module RequestLinkHelper
   end
 
   private
+
+  def request_link_text(callnumber, library)
+    locale_key = "searchworks.request_link.#{library.try(:code) || 'default'}"
+    locale_key = 'searchworks.request_link.request_on_site' if Constants::REQUEST_ONSITE_LOCATIONS.include?(callnumber.home_location)
+    t(
+      locale_key,
+      default: :'searchworks.request_link.default'
+    )
+  end
 
   def request_link_target(callnumber)
     return unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
