@@ -5,6 +5,9 @@
       <%= render partial: 'catalog/view_type_group' %>
       <%= render partial: 'sort_widget' %>
       <%= render partial: 'shared/per_page_widget' %>
+      <% unless bookmarks? %>
+        <%= render partial: 'select_all_widget' %>
+      <% end %>
     </div>
   </div>
 </div>

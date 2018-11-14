@@ -42,7 +42,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     end
 
     it 'should display the callnumber without live lookup' do
-      expect(rendered).to have_css 'td', 'ABC 123'
+      expect(rendered).to have_css 'td', text: 'ABC 123'
       expect(rendered).to_not have_css 'td[data-live-lookup-id]'
     end
   end

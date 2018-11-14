@@ -72,7 +72,7 @@ describe "Emailing Records", type: :feature, js: true do
           end
         end
 
-        expect(URI(find('#email_form')['action']).path).to eq(email_article_path(document))
+        expect(URI(find('#email_form')['action']).path).to eq(email_articles_path)
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'

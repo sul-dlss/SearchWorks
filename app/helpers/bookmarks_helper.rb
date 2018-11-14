@@ -1,9 +1,7 @@
 module BookmarksHelper
 
   def bookmarks?
-    if params[:controller] == 'bookmarks'
-      true
-    end
+    %w[bookmarks article_selections].include? params[:controller]
   end
 
   #Similar to BL page_entries_info /app/helpers/blacklight/catalog_helper_behavior.rb

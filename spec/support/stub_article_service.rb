@@ -60,9 +60,15 @@ module StubArticleService
       allow_any_instance_of(Eds::Repository).to receive(:search).and_return(
         StubArticleResponse.new(docs)
       )
+      allow_any_instance_of(Eds::Repository).to receive(:find_by_ids).and_return(
+        StubArticleResponse.new(docs)
+      )
     when :single
       raise "Single document response requsted but #{docs.length} provided." if docs.many?
       allow_any_instance_of(Eds::Repository).to receive(:find).and_return(
+        StubArticleResponse.new([docs.first])
+      )
+      allow_any_instance_of(Eds::Repository).to receive(:find_by_ids).and_return(
         StubArticleResponse.new([docs.first])
       )
     when :error

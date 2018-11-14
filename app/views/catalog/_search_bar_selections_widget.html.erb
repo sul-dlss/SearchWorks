@@ -2,12 +2,9 @@
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">
     Selections (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)<span class="caret"></span>
   </a>
-  <ul class="dropdown-menu dropdown-fixed-width recent-selections">
-    <li id="show-list" class= <%= disabled_class_for_current_page(selections_path)%> <%= disabled_class_for_no_selections(current_or_guest_user.bookmarks.length) %>>
-      <%= link_to "Show list", selections_path %>
-    </li>
+  <ul id="show-list" class="dropdown-menu dropdown-fixed-width recent-selections">
     <li id="clear-list" class= <%= disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)%>>
-      <%= link_to "Clear list", clear_bookmarks_path, method: :delete, data: { confirm: t('blacklight.bookmarks.clear.action_confirm') } %>
+      <%= link_to "Clear all lists", clear_bookmarks_path, method: :delete, data: { confirm: t('searchworks.bookmarks.clear_all.action_confirm') } %>
     </li>
   </ul>
 </li>

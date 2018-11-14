@@ -38,12 +38,7 @@ Blacklight.onLoad(function(){
           var element = this.element;
           var url = $(element).data('url');
           $(element).on('show.bs.dropdown', function(){
-            if (plugin.updated){
-              plugin.getRecentSelections(url);
-            }
-          });
-          $('input.toggle_bookmark').on('change', function(){
-            plugin.updated = true;
+            plugin.getRecentSelections(url);
           });
         },
 
@@ -57,26 +52,24 @@ Blacklight.onLoad(function(){
           request.done(function(html){
             plugin.updateLinks(html);
             plugin.updateList(html);
-            plugin.updated = false;
           });
         },
 
         updateLinks: function(html){
           if ($.trim(html) == '') {
-            $('li#show-list').addClass('disabled');
             $('li#clear-list').addClass('disabled');
           } else {
-            $('li#show-list').removeClass('disabled');
             $('li#clear-list').removeClass('disabled');
           }
         },
         updateList: function(html){
-          var list = $('[data-attribute="added-list"]');
-          if (list.length === 0) {
-            $("li#show-list").append(html);
-          }else{
-            list.html(html);
+          var addedListItems = $('ul#show-list li[data-attribute="added-list"]');
+
+          if (addedListItems.length > 0) {
+            addedListItems.remove(); // Clear out any existing items for replacing
           }
+
+          $("ul#show-list").prepend(html);
         }
     };
 

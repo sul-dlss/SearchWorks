@@ -1,19 +1,17 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-<h1 class="sr-only"><%= t('blacklight.bookmarks.page_heading') %></h1>
+<h1>Selection lists</h1>
+
+<nav class="selections-nav">
+  <% if article_selections? %>
+    <%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg') %>
+    <h2><%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+  <% else %>
+    <h2><%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+    <%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg') %>
+  <% end %>
+</nav>
 
 <div id="content" class="col-md-12">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="search_num_of_results">
-        <div class='results-heading'>
-          <h2>
-            <%= "#{@response.total_count} #{t('blacklight.bookmarks.selection_title').pluralize(@response.documents.length)}" %>
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <% if current_or_guest_user.blank? %>
     <h2><%= t('blacklight.bookmarks.need_login') %></h2>
   <% elsif @document_list.blank? %>

@@ -36,15 +36,8 @@ module Eds
     # Retrieve a set of documents by id
     # @param [Array] ids
     # @param [HashWithIndifferentAccess] extra_controller_params
-    def fetch_many(ids, extra_controller_params)
-      extra_controller_params ||= {}
-
-      query = search_builder
-              .with(user_params)
-              .where(blacklight_config.document_model.unique_key => ids)
-              .merge(extra_controller_params)
-              .merge(fl: '*')
-      solr_response = @repository.search(query, @eds_params)
+    def fetch_many(ids, extra_controller_params = {})
+      solr_response = @repository.find_by_ids(ids, @eds_params)
 
       [solr_response, solr_response.documents]
     end

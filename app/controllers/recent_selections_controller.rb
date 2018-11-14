@@ -1,20 +1,16 @@
 class RecentSelectionsController < ApplicationController
+  include SelectionsCount
 
-  include Blacklight::SearchHelper
-  include Blacklight::SearchContext
   def index
-    _, @recent_selections =
-      fetch(
-        current_or_guest_user.bookmarks.last(3).map(&:document_id)
-      )
-    if request.xhr?
-      respond_to do |format|
-        format.html do
-          render recent_selections: @recent_selections, layout: false
-        end
+    redirect_to(root_url) unless request.xhr?
+
+    @catalog_count = selections_counts.catalog
+    @article_count = selections_counts.articles
+
+    respond_to do |format|
+      format.html do
+        render layout: false
       end
-    else
-      redirect_to root_url
     end
   end
 end

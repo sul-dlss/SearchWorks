@@ -41,7 +41,7 @@ describe "preview/_show_mods.html.erb" do
   end
 
   it 'should display summary section' do
-    expect(rendered).to have_css('dt', 'Description')
+    expect(rendered).to have_css('dt', text: 'Summary')
     expect(rendered).to have_css('dd', text: /Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet/)
   end
 
