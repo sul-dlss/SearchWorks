@@ -10,7 +10,7 @@ feature 'Record view', js: true do
 
       within 'div.panel-online' do
         expect(page).to have_css('div.panel-heading', visible: true)
-        expect(page).to have_css('h3', text: 'Available online', visible: true)
+        expect(page).to have_css('h3', text: 'Also available at', visible: true)
         within('.google-preview') do
           expect(page).to have_css('a.full-view', text: '(Full view)', visible: true)
           expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")
