@@ -44,13 +44,11 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
 
     it 'paginates articles' do
       visit '/selections/articles?per_page=2'
-      expect(page).to have_css('h2', text: '4 selections')
       expect(page).to have_css('.document-counter', text: '1.')
       expect(page).to have_css('.document-counter', text: '2.')
       expect(page).to have_css('#citeLink', text: '1 - 2')
 
       visit '/selections/articles?per_page=2&page=2'
-      expect(page).to have_css('h2', text: '4 selections')
       expect(page).to have_css('.document-counter', text: '3.')
       expect(page).to have_css('.document-counter', text: '4.')
       expect(page).to have_css('#citeLink', text: '3 - 4')
@@ -97,7 +95,7 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
       expect(page).to have_css('.btn', text: '4 articles+ items')
 
       within('#search-subnavbar ul.recent-selections') do
-        click_link 'Clear list'
+        click_link 'Clear all lists'
       end
 
       expect(page).to have_css('.btn', text: '0 catalog items')

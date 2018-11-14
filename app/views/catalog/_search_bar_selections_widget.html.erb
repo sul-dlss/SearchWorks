@@ -4,7 +4,7 @@
   </a>
   <ul id="show-list" class="dropdown-menu dropdown-fixed-width recent-selections">
     <li id="clear-list" class= <%= disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)%>>
-      <%= link_to "Clear list", clear_bookmarks_path, method: :delete, data: { confirm: t('blacklight.bookmarks.clear.action_confirm') } %>
+      <%= link_to "Clear all lists", clear_bookmarks_path, method: :delete, data: { confirm: t('searchworks.bookmarks.clear_all.action_confirm') } %>
     </li>
   </ul>
 </li>

@@ -18,6 +18,8 @@ en:
           FT1:
             tip: Stanford subscribes to the full text, or it's available via open access.
     bookmarks:
+      clear_all:
+        action_confirm: 'Clear all your selection lists?'
       article:
         clear:
           action_confirm: Clear your articles+ selections?

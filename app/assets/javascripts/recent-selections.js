@@ -63,12 +63,13 @@ Blacklight.onLoad(function(){
           }
         },
         updateList: function(html){
-          var list = $('[data-attribute="added-list"]');
-          if (list.length === 0) {
-            $("ul#show-list").prepend(html);
-          }else{
-            list.html(html);
+          var addedListItems = $('ul#show-list li[data-attribute="added-list"]');
+
+          if (addedListItems.length > 0) {
+            addedListItems.remove(); // Clear out any existing items for replacing
           }
+
+          $("ul#show-list").prepend(html);
         }
     };
 

@@ -4,7 +4,8 @@ feature "Selections Path" do
 
   scenario "should render bookmarks page" do
     visit bookmarks_path
-    expect(page).to have_css("h2", text: "0 selections")
+    expect(page).to have_css('h2', text: '0 catalog items')
+    expect(page).to have_css('a', text: '0 articles+ items')
     expect(page).to have_css("h3", text: "You have no bookmarks")
   end
 
@@ -15,7 +16,8 @@ feature "Selections Path" do
     page.all('label.toggle_bookmark')[1].click
     expect(page).to have_css("label.toggle_bookmark span", text: "Selected", count: 2)
     visit bookmarks_path
-    expect(page).to have_css("h2", text: "2 selections")
+    expect(page).to have_css('h2', text: '2 catalog items')
+    expect(page).to have_css('a', text: '0 articles+ items')
     within "#documents" do
       expect(page).to have_css("h3.index_title a", count: 2)
     end

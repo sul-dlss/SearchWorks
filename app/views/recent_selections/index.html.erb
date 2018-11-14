@@ -1,11 +1,9 @@
 <% if @catalog_count || @article_count %>
-  <span data-attribute="added-list">
-    <li class="dropdown-list-title text-muted">
-      <%= link_to("Catalog selections (#{@catalog_count})", bookmarks_path) %>
-    </li>
-    <li class="dropdown-list-title text-muted">
-      <%= link_to("Articles+ selections (#{@article_count})", article_selections_path) %>
-    </li>
-    <li class="divider"></li>
-  </span>
+  <li data-attribute="added-list">
+    <%= link_to("Catalog selections (#{@catalog_count})", bookmarks_path) %>
+  </li>
+  <li data-attribute="added-list">
+    <%= link_to("Articles+ selections (#{@article_count})", article_selections_path) %>
+  </li>
+  <li class="divider" data-attribute="added-list"></li>
 <% end %>
