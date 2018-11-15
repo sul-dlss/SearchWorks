@@ -194,6 +194,17 @@ describe Holdings::Callnumber do
     end
   end
 
+  describe 'document accessor' do
+    describe 'isbn' do
+      let(:document) { SolrDocument.new(isbn_display: ['abc123']) }
+      let(:callnumber) { Holdings::Callnumber.new('', document: document) }
+
+      it 'returns the isbns from the document' do
+        expect(callnumber.isbn).to eq(['abc123'])
+      end
+    end
+  end
+
   describe '#as_json' do
     let(:as_json) { Holdings::Callnumber.new(complex_item_display).as_json }
     it 'should return a hash with all of the callnumbers public reader methods' do

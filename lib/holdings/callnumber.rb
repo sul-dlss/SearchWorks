@@ -107,6 +107,12 @@ class Holdings
       item_display[14]
     end
 
+    def isbn
+      return unless document
+
+      document[:isbn_display]
+    end
+
     def status
       @status ||= Holdings::Status.new(self)
     end
