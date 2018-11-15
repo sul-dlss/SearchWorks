@@ -135,4 +135,22 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // Select / Select all
+  // Note: this is counted extra when select-all or unselect-all is also used
+  $('input.toggle_bookmark').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'select', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+  $('span.unselect-all').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'unselect-all', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+  $('span.select-all').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'select-all', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
 });
