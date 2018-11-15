@@ -109,4 +109,76 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // Featured resources on home page
+  $('.catalog-home-page .features a').on('click', function(e) {
+    ga('send', 'event', 'Featured resource', 'clicked', this.href, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Side mini-nav
+  $('.side-nav-minimap button').on('click', function(e) {
+    ga('send', 'event', 'Side mini nav', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+  
+  // Facet collapse - expand events
+  $('.facet-content').on('hide.bs.collapse', function(e) {
+    ga('send', 'event', 'Facet', 'closed', $(e.currentTarget).parent().find('h3').text().trim(), {
+      'transport': 'beacon'
+    });
+  })
+  $('.facet-content').on('show.bs.collapse', function(e) {
+    ga('send', 'event', 'Facet', 'expanded', $(e.currentTarget).parent().find('h3').text().trim(), {
+      'transport': 'beacon'
+    });
+  });
+
+  // Select / Select all
+  // Note: this is counted extra when select-all or unselect-all is also used
+  $('input.toggle_bookmark').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'select', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+  $('span.unselect-all').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'unselect-all', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+  $('span.select-all').on('click', function(e) {
+    ga('send', 'event', 'Selection', 'select-all', location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Accordion selection / collapse
+  $('button[data-accordion-section-target]').on('click', function(e) {
+    ga('send', 'event', 'Accordion selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // View type dropdown
+  $('#view-type-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'View selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Sort by dropdown
+  $('#sort-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'Sort selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Per page dropdown
+  $('#per_page-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'Per page selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
 });
