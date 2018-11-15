@@ -17,8 +17,8 @@ $panel-default-border: $sul-panel-border-bottom;
 
 // Buttons
 $btn-default-color: $gray;
-$btn-default-bg: $beige-10-percent;
-$btn-default-border: $beige-30-percent;
+$btn-default-bg: $light-sandstone;
+$btn-default-border: $cloud;
 
 $btn-primary-color: $white;
 $btn-primary-bg: $cardinal-red;
@@ -37,7 +37,7 @@ $btn-warning-bg: $pantone-144;
 $btn-warning-border: darken($btn-warning-bg, 9.8%);
 
 $btn-danger-color: $white;
-$btn-danger-bg: $boston-university-red;
+$btn-danger-bg: $bright-red;
 $btn-danger-border: darken($btn-danger-bg, 9.8%);
 
 // Colors
@@ -54,13 +54,14 @@ $pagination-active-bg: $sul-pagination-active-bg;
 $pagination-active-border: $sul-pagination-active-bg;
 
 // Tables
-$table-bg-accent: $beige-10-percent;
+$table-bg-accent: $light-sandstone;
 
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;
 
 // Typography
-$font-size-h1: 2.3em;
-$font-size-h2: 1.6em;
-$font-size-h3: 1.4em;
-$headings-font-weight: 300;
+$font-size-h1: 2.323em;
+$font-size-h2: 1.793em;
+$font-size-h3: 1.383em;
+$font-size-h4: 1.215em;
+$headings-font-weight: 400;

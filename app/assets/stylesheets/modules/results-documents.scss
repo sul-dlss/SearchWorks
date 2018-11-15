@@ -30,11 +30,7 @@
 
   .main-title-date {
     color: $sul-main-title-date-color;
-    font-size: .9em;
-  }
-
-  dd {
-    margin: 0;
+    font-size: .938em;
   }
 
   .cursor-pointer {
@@ -42,7 +38,7 @@
   }
 
   .results-metadata-section {
-    border-bottom: 1px solid $beige-30-percent;
+    border-bottom: 1px solid $cloud;
     clear: left;
     margin: 0;
     padding: 10px 0;
@@ -122,14 +118,8 @@
 .search_num_of_results {
   text-align: left;
 
-  .results-heading {
-    border-bottom: 1px solid $sul-h2-border-color;
-    color: $sul-h2-font-color;
-    margin-bottom: .5em;
-
-    a {
-      border-bottom: 0;
-    }
+  .results-heading a {
+    border-bottom: 0;
   }
 
   h2 {
