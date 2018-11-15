@@ -8,10 +8,9 @@ describe 'Digital Collections Access Point' do
   it 'should include the digital collections masthead' do
     within(".digital-collections-masthead") do
       expect(page).to have_css('h1', text: 'Digital collections')
-      expect(page).to have_css('.inline-links a', text: 'data')
-      expect(page).to have_css('.inline-links a', text: 'images')
-      expect(page).to have_css('.inline-links a', text: 'maps')
-      expect(page).to have_css('.inline-links a', text: 'all items')
+      expect(page).to have_css('a', text: 'All digital items')
+      expect(page).to have_css('a', text: 'IIIF resources')
+      expect(page).to have_css('a', text: 'More about the SDR')
     end
   end
 end
