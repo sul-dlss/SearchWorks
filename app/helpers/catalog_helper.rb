@@ -49,6 +49,23 @@ module CatalogHelper
     Citation.grouped_citations(documents.map(&:citations))
   end
 
+  def tech_details(document)
+    details = []
+    details.push link_to(
+      t('blacklight.tools.librarian_view'),
+      librarian_view_path(document), id: 'librarianLink', data: { ajax_modal: 'trigger' }
+    )
+    details.push link_to('Collection PURL', "https://purl.stanford.edu/#{document.druid}") if document.is_a_collection?
+    if document.respond_to?(:to_marc)
+      details.push "Catkey: #{document[:id]}"
+    elsif document.mods.present?
+      details.push "DRUID: #{document[:id]}"
+    else
+      details.push "ID: #{document[:id]}"
+    end
+    safe_join(details, ' | ')
+  end
+
   ##
   # Creates a IIIF Drag 'n Drop link with IIIF logo
   # @param [String] manifest
