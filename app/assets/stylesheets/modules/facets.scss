@@ -46,14 +46,15 @@
   li.h-node {
     list-style-image: none;
     list-style-type: none;
-    padding-left: 1.2em;
+    padding-left: 15px;
     &.twiddle {
       &:before{
         font-family: FontAwesome;
         display: inline-block;
-        margin-left: -1.2em;
-        width: 1.2em;
+        margin-left: -15px;
+        width: 15px;
         content: '\f196';
+        color: $cool-grey;
       }
     }
     &.twiddle-open {
@@ -64,4 +65,21 @@
       }
     }
   }
+
+  li.h-leaf {
+    margin-left: 15px;
+  }
+}
+
+.facet-hierarchy .facet-count {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    width: 4.5em;
+}
+
+.facet-hierarchy a.facet_select {
+    display: inline-block;
+    max-width: calc(100% - 5em);
+    padding-bottom: 6px;
 }
