@@ -11,7 +11,7 @@ feature 'Alterate catalog results', js: true do
     visit search_catalog_path(q: '1*')
     wait_for_ajax
     within '.alternate-catalog' do
-      expect(page).to have_css 'h3', text: 'YOUR SEARCH ALSO FOUND RESULTS IN'
+      expect(page).to have_css 'h3', text: 'Your search also found results in'
       expect(page).to have_css 'a.btn', text: 'See 4 article+ results'
       expect(page).to have_css(
         'a[href="/articles?f%5Beds_search_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=1'\
@@ -25,7 +25,7 @@ feature 'Alterate catalog results', js: true do
     visit articles_path(q: '1*')
     wait_for_ajax
     within '.alternate-catalog' do
-      expect(page).to have_css 'h3', text: 'YOUR SEARCH ALSO FOUND RESULTS IN'
+      expect(page).to have_css 'h3', text: 'Your search also found results in'
       expect(page).to have_css 'a.btn', text: 'See 30 catalog results'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (10)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'

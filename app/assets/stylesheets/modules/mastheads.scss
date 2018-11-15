@@ -11,7 +11,7 @@
     margin-top: 0.5em;
     a {
       margin: 0 0.5em;
-      font-size: 1.1em;
+      font-size: 1.138em;
     }
   }
 
@@ -28,6 +28,7 @@
       padding: 10px;
       a {
         display: block;
+        font-size: 1.138em;
       }
     }
 
@@ -39,6 +40,7 @@
   @media only screen and (max-width: 576px) {
     .flexgrid {
       flex-direction: column;
+      font-size: 1.138em;
 
       .col {
         a {

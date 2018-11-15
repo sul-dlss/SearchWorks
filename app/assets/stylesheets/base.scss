@@ -1,10 +1,10 @@
 a {
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
   color: $sul-link-color;
   text-decoration: none;
 
   &.disabled {
-    color: $gray-light;
+    color: $sul-btn-disabled-color;
     cursor: not-allowed;
     text-decoration: none;
   }
@@ -20,21 +20,27 @@ a:hover, a:focus, a:active  {
 
 h1 {
   color: $sul-h1-font-color;
+  font-weight: 300;
+  line-height: 1.2em;
   padding: 10px 0;
 }
 
 h2 {
+  color: $sul-h2-font-color;
   letter-spacing: 0;
   line-height: 1.2em;
   margin: .5em 0;
-  color: $sul-h2-font-color ;
-  border-bottom: 1px solid $sul-h2-border-color;
 }
 
 h3 {
-  font-weight: 400;
-  line-height: 1.3em;
-  margin: 0 0 .4em 0;
+  color: $sul-h3-font-color;
+  line-height: 1.2em;
+  margin: 0 0 .4em;
+}
+
+h4 {
+  color: $sul-h4-font-color; 
+  line-height: 1.2em;
 }
 
 dl {
@@ -50,6 +56,11 @@ dt {
 dd {
   margin-left: 2em;
   margin-bottom: .5em;
+}
+
+p,
+li,
+dd {
   max-width: 45em;
 }
 
