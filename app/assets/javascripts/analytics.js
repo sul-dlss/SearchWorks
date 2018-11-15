@@ -153,4 +153,11 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // Accordion selection / collapse
+  $('button[data-accordion-section-target]').on('click', function(e) {
+    ga('send', 'event', 'Accordion selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
 });
