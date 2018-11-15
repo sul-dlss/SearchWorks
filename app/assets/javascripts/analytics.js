@@ -160,4 +160,25 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // View type dropdown
+  $('#view-type-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'View selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Sort by dropdown
+  $('#sort-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'Sort selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
+
+  // Per page dropdown
+  $('#per_page-dropdown a').on('click', function(e) {
+    ga('send', 'event', 'Per page selection', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
 });
