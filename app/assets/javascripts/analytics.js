@@ -123,4 +123,16 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+  
+  // Facet collapse - expand events
+  $('.facet-content').on('hide.bs.collapse', function(e) {
+    ga('send', 'event', 'Facet', 'closed', $(e.currentTarget).parent().find('h3').text().trim(), {
+      'transport': 'beacon'
+    });
+  })
+  $('.facet-content').on('show.bs.collapse', function(e) {
+    ga('send', 'event', 'Facet', 'expanded', $(e.currentTarget).parent().find('h3').text().trim(), {
+      'transport': 'beacon'
+    });
+  });
 });
