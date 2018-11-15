@@ -109,4 +109,11 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // Featured resources on home page
+  $('.catalog-home-page .features a').on('click', function(e) {
+    ga('send', 'event', 'Featured resource', 'clicked', this.href, {
+      'transport': 'beacon'
+    });
+  });
 });
