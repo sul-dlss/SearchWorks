@@ -116,4 +116,11 @@ Blacklight.onLoad(function(){
       'transport': 'beacon'
     });
   });
+
+  // Side mini-nav
+  $('.side-nav-minimap button').on('click', function(e) {
+    ga('send', 'event', 'Side mini nav', $(e.currentTarget).text().trim(), location.pathname, {
+      'transport': 'beacon'
+    });
+  });
 });
