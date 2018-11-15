@@ -17,6 +17,13 @@ describe RequestLinkHelper do
       item_display: ['barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
     )
   end
+
+  let(:home_location_document) do
+    SolrDocument.new(
+      id: '1234',
+      item_display: ['barcode -|- library -|- PAGE-AR -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+    )
+  end
   describe 'link_to_request_link' do
     it 'returns link html for the given parameters' do
       link = link_to_request_link(
@@ -41,6 +48,14 @@ describe RequestLinkHelper do
     it 'has the link text "Request on-site access" for on-site libraries' do
       link = link_to_request_link(
         document: current_location_document, library: double(code: 'SPEC-COLL'), callnumber: current_location_document.holdings.callnumbers.first
+      )
+
+      expect(Capybara.string(link)).to have_link('Request on-site access')
+    end
+
+    it 'has the link text "Request on-site access" for on-site locations' do
+      link = link_to_request_link(
+        document: home_location_document, library: double(code: 'GREEN'), callnumber: home_location_document.holdings.callnumbers.first
       )
 
       expect(Capybara.string(link)).to have_link('Request on-site access')
