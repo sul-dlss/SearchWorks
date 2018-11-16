@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed how we handle metadata parsing of MODS data in search results to improve performance [#2042](https://github.com/sul-dlss/SearchWorks/pull/2042)
 - Changes the "Request" link text to "Request on-site Access" for certain locations [#2166](https://github.com/sul-dlss/SearchWorks/pull/2166)
 - Changes content and layout of the SDR and Digital collections access point mastheads [#2170](https://github.com/sul-dlss/SearchWorks/pull/2170)
-- Updated various styling around the application [#2172](https://github.com/sul-dlss/SearchWorks/pull/2172) [#2174](https://github.com/sul-dlss/SearchWorks/pull/2174)
+- Updated various styling around the application [#2172](https://github.com/sul-dlss/SearchWorks/pull/2172) [#2174](https://github.com/sul-dlss/SearchWorks/pull/2174) [#2180](https://github.com/sul-dlss/SearchWorks/pull/2180)
 - Adds in "Last search" to user feedback form [#2187](https://github.com/sul-dlss/SearchWorks/pull/2187)
 ### Removed
 - Removed the Google Book link from the Available Online panel when we have and SFX link [#2185](https://github.com/sul-dlss/SearchWorks/pull/2185)

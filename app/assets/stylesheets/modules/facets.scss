@@ -31,6 +31,10 @@
         color: $gray;
         border-bottom: none;
       }
+      &.h-leaf {
+        list-style-image: none;
+        list-style-type: none;
+      }
     }
   }
 
@@ -51,6 +55,7 @@
   &,
   ul {
     padding-left: 0;
+    vertical-align: top;
   }
 
   li.h-node {
@@ -93,6 +98,6 @@
 
 .facet-hierarchy a.facet_select {
   display: inline-block;
+  margin-bottom: 6px;
   max-width: calc(100% - 5em);
-  padding-bottom: 6px;
 }
