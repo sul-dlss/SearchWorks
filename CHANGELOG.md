@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+- Change font from DejaVu Sans Extralight to DejaVu Sans Condensed Book [#2181](https://github.com/sul-dlss/SearchWorks/pull/2181)
 ### Removed
 ### Fixed
 - Fixes link styling for multiple PURL embed side-panel so that they doesn't always appear active [#2203](https://github.com/sul-dlss/SearchWorks/pull/2203)
