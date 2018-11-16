@@ -37,6 +37,9 @@ describe Holdings::Location do
         location_no_items_or_mhld.mhld = [mhld]
         expect(location_no_items_or_mhld).to be_present_on_index
       end
+      it 'should return true for a "SEE-OTHER" location' do
+        expect(described_class.new('SEE-OTHER')).to be_present_on_index
+      end
     end
   end
   describe '#location_level_request?' do
