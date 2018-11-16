@@ -43,7 +43,7 @@ class Holdings
     end
 
     def present_on_index?
-      any_items? || any_index_mhlds?
+      any_items? || any_index_mhlds? || @code == 'SEE-OTHER'
     end
 
     def sort
