@@ -28,18 +28,6 @@
           See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
         <% end %>
       </div>
-
-      <% # duplicating this ul w/ the Google link until we get an answer on if it is okay to surpress it for SFX items %>
-      <ul class="links" data-long-list data-list-type="online">
-        <li>
-          <div class="row google-books <%= css_class %>">
-            <div class="col-lg-12 col-md-12 google-preview">
-              <%= image_tag "gbs_preview_button.gif", alt:"" %>
-              <a href="" class="full-view">(Full view)</a>
-            </div>
-          </div>
-        </li>
-      </ul>
     <% elsif document.access_panels.online? %>
       <ul class="links" data-long-list data-list-type="online">
         <% if document.access_panels.online? %>

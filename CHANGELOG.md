@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added the ability to add Articles+ records to selection lists [#2094](https://github.com/sul-dlss/SearchWorks/pull/2094)
 ### Changed
 ### Removed
+- Removed the Google Book link from the Available Online panel when we have and SFX link [#2185](https://github.com/sul-dlss/SearchWorks/pull/2185)
 ### Fixed
 ### Security
 
