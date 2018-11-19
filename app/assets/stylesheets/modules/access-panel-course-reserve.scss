@@ -3,6 +3,9 @@
     color: $sul-access-font;
     background: $sul-access-course-reserve-bg;
     border-bottom: 1px solid $sul-access-course-reserve-bg;
+    h3 {
+      color: $sul-access-font;
+    }
   }
   ul.links {
     padding-left: 0;
