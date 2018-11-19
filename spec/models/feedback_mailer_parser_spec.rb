@@ -35,7 +35,8 @@ describe FeedbackMailerParser do
           user_agent: 'Yo',
           viewport: 'Lo',
           resource_name: 'Hey',
-          problem_url: 'There'
+          problem_url: 'There',
+          last_search: '/?q=kittenz'
         }, ''
       )
     end
@@ -45,6 +46,7 @@ describe FeedbackMailerParser do
       expect(subject.viewport).to eq 'Lo'
       expect(subject.resource_name).to eq 'Hey'
       expect(subject.problem_url).to eq 'There'
+      expect(subject.last_search).to eq '/?q=kittenz'
     end
   end
 end
