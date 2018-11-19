@@ -4,6 +4,10 @@ feature "In collection Access Panel" do
   scenario "for MODS derived documents" do
     visit solr_document_path('mf774fs2413')
 
+    within('.metadata-panels') do
+      expect(page).to have_css('h2', text: 'Context')
+    end
+
     within(".panel-in-collection") do
       within(".panel-heading") do
         expect(page).to have_content('Item belongs to a collection')
