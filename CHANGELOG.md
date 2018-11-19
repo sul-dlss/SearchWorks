@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.10] - 2018-11-19
+
+### Added
 - Added the ability to add Articles+ records to selection lists [#2094](https://github.com/sul-dlss/SearchWorks/pull/2094)
 - Added various click tracking to help us refine features
 ### Changed
@@ -138,7 +146,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...HEAD
+[3.3.10]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...v3.3.10
 [3.3.9]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...v3.3.9
 [3.3.8]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...v3.3.8
 [3.3.7]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...v3.3.7
