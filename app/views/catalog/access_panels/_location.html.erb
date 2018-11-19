@@ -24,7 +24,15 @@
               <%= content_tag(:div, class: 'bound-with-note note-highlight') { render document.bound_with_note } %>
             <% else %>
               <% if location_level_request_link?(library, location) %>
-                <%= link_to_request_link(document: document, library: library, callnumber: location.items.first, class: 'btn btn-default btn-xs request-button pull-right') %>
+                <% if library.hoover_archive? %>
+                  <% if document.index_links.finding_aid.present? %>
+                    <%= link_to 'Request via Finding Aid', document.index_links.finding_aid.first.href, class: 'btn btn-default btn-xs request-button pull-right' %>
+                  <% else %>
+                    <div class='pull-right'>Not available to request</div>
+                  <% end %>
+                <% else %>
+                  <%= link_to_request_link(document: document, library: library, callnumber: location.items.first, class: 'btn btn-default btn-xs request-button pull-right') %>
+                <% end %>
               <% end %>
             <% end %>
             <% if location.mhld.present? %>

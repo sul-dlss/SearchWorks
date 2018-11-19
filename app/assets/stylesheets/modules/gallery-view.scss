@@ -15,8 +15,8 @@
     background-color: $sul-gallery-callnumber-bar-bg;
     color: $sul-gallery-callnumber-bar-color;
     height: 42px;
-    font-weight: 300;
-    font-size: .9em;
+    font-weight: 400;
+    font-size: .937em;
     text-align: center;
     padding: 3px 0;
     overflow: hidden;
@@ -32,7 +32,7 @@
   .gallery-document {
     @include document-borders;
     position: relative;
-    margin: 0px 0px 15px 15px;
+    margin: 0 0 15px 15px;
     float: left;
     display: inline;
     background-color: $white;
@@ -78,7 +78,7 @@
     form {
       position: absolute;
       left: 106px;
-      font-size: .9em;
+      font-size: .937em;
 
       .toggle_bookmark {
         bottom: 4px;
@@ -114,6 +114,8 @@ div.fake-cover-text-wrapper {
 }
 
 div.fake-cover-text {
+  color: $clay;
+  font-variant: all-small-caps;
   padding: 4px;
   max-height: 7.3em;
   overflow: hidden;

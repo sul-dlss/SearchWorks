@@ -1,0 +1,28 @@
+<span class="sr-only">Send current page to text, email, RefWorks, EndNote, or printer</span>
+<div id="tools-dropdown" class="btn-group">
+  <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown">
+    <%= t('blacklight.tools.send_entries', current_range: current_entries_info(@bookmarks)).html_safe %>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <%= link_to t('blacklight.tools.email_html'),  email_articles_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", data: {ajax_modal: "trigger"} %>
+    </li>
+
+    <% if @response.documents.any? {|d| d.export_formats.key?(:ris) } %>
+      <li class="refworks" role="presentation">
+        <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
+          <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @response.documents.map(&:export_as_ris).join) %>
+          <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
+        <% end %>
+      </li>
+
+      <li class="ris" role="presentation">
+        <%= link_to t('blacklight.tools.ris_html'), params.except(:host, :port).merge(format: 'ris') %>
+      </li>
+    <% end %>
+
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
+    </li>
+  </ul>
+</div>

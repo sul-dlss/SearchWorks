@@ -10,7 +10,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+### Security
+
+## [3.3.10] - 2018-11-19
+
+### Added
+- Added the ability to add Articles+ records to selection lists [#2094](https://github.com/sul-dlss/SearchWorks/pull/2094)
+- Added various click tracking to help us refine features
+### Changed
+- Update to non-deprecated Google Analytics tracking [#2158](https://github.com/sul-dlss/SearchWorks/pull/2158)
+- Changed how we handle metadata parsing of MODS data in search results to improve performance [#2042](https://github.com/sul-dlss/SearchWorks/pull/2042)
+- Changes the "Request" link text to "Request on-site Access" for certain locations [#2166](https://github.com/sul-dlss/SearchWorks/pull/2166)
+- Changes content and layout of the SDR and Digital collections access point mastheads [#2170](https://github.com/sul-dlss/SearchWorks/pull/2170)
+- Updated various styling around the application [#2172](https://github.com/sul-dlss/SearchWorks/pull/2172) [#2174](https://github.com/sul-dlss/SearchWorks/pull/2174) [#2180](https://github.com/sul-dlss/SearchWorks/pull/2180)
+- Adds in "Last search" to user feedback form [#2187](https://github.com/sul-dlss/SearchWorks/pull/2187)
+### Removed
+- Removed the Google Book link from the Available Online panel when we have and SFX link [#2185](https://github.com/sul-dlss/SearchWorks/pull/2185)
+### Fixed
+- Fixed issue with SEE-OTHER location having no availability information in search results [#2182](https://github.com/sul-dlss/SearchWorks/pull/2182)
+### Security
+
+## [3.3.9] - 2018-11-12
+
+### Added
+### Changed
+ - Updates various dependencies [#2153](https://github.com/sul-dlss/SearchWorks/pull/2153)
+### Removed
+### Fixed
+ - Fixes an issue where the "Full Text" label was cut off [#2155](https://github.com/sul-dlss/SearchWorks/pull/2155)
+ - Fixes an issue where the "Online" label in gallery view was sometimes overlapping with the preview button [#2154](https://github.com/sul-dlss/SearchWorks/pull/2154)
+ - Partially fixes an issue where some links and modals did not properly work [#2156](https://github.com/sul-dlss/SearchWorks/pull/2156)
+### Security
+
+## [3.3.8] - 2018-11-09
+
+### Added
+- Adds the ability to track outbound links for usage analysis [#2135](https://github.com/sul-dlss/SearchWorks/pull/2135)
+### Changed
+- Now returning a 404 Not Found error when an article record is not found [#2133](https://github.com/sul-dlss/SearchWorks/pull/2133)
+- Updates the way that Hoover Archive records are requested and shown in the access panel [#2123](https://github.com/sul-dlss/SearchWorks/pull/2123)
+### Removed
+### Fixed
 - Updated the EBSCO gem to 1.0.5 to address issues around records throwing errors when trying to sanitize HTML [#1704](https://github.com/sul-dlss/SearchWorks/issues/1704)
+- Fixed a visual display issue that was cause a dot to display beneath the Stanford Only S icon in some cases [#2113](https://github.com/sul-dlss/SearchWorks/pull/2113)
 ### Security
 
 ## [3.3.7] - 2018-11-06
@@ -104,7 +146,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...HEAD
+[3.3.10]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...v3.3.10
+[3.3.9]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...v3.3.9
+[3.3.8]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...v3.3.8
 [3.3.7]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.6...v3.3.7
 [3.3.6]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.5...v3.3.6
 [3.3.5]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.4...v3.3.5

@@ -42,7 +42,7 @@ feature 'Article Searching' do
       expect(page).to have_css('a', text: /Library services/)
       expect(page).not_to have_css('a', text: /Advanced search/)
       expect(page).not_to have_css('a', text: /Course reserves/)
-      expect(page).not_to have_css('a', text: /Selections/)
+      expect(page).to have_css('a', text: /Selections \(\d+\)/)
     end
   end
 

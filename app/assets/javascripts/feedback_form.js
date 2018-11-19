@@ -39,6 +39,8 @@ Blacklight.onLoad(function(){
           var $thisform = $(form);
           $thisform.find('#user_agent').val(navigator.userAgent);
           $thisform.find('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
+          var lastSearch = $('.back-to-results').map(function() { return this.href }).get().join();
+          $thisform.find('#last_search').val(lastSearch);
           $thisform.on('submit', function(e){
             e.preventDefault();
             var valuesToSubmit = $(this).serialize();

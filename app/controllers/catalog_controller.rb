@@ -492,6 +492,7 @@ class CatalogController < ApplicationController
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),
       format: document[document.format_key],
+      isbn: document['isbn_display'],
       holdings: document.holdings.as_json(live: live)
     }
   end

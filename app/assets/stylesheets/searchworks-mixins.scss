@@ -21,21 +21,41 @@
   }
 }
 
+@mixin refworks-form {
+  .refworks {
+    form {
+      padding: 3px 20px;
+
+      a {
+        color: $dropdown-link-hover-color;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+}
+
 @mixin h1-show-title-font {
-  font-family: 'dejavu_sansextralight';
+  font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
   letter-spacing: -.03em;
 }
 
 @mixin h3-index-title-small-font {
-  font-size: 1.1em;
-  line-height: 1.5em;
+  font-size: 1.138em;
+  line-height: 1.4em;
 }
 
 @mixin h3-index-title-font {
-  font-family: 'dejavu_sansextralight';
+  font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-size: $font-size-h4;
   letter-spacing: -.03em;
-  line-height: 1.4em;
-  font-size: 1.3em;
+  line-height: 1.5em;
 }
 
 @mixin panel-borders {
@@ -117,9 +137,9 @@
 }
 
 @mixin link-styling {
-  border-bottom: 0;
+  border-bottom: 1px solid $sul-link-color-border;
   color: $sul-link-color-border;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @mixin masthead-panel {

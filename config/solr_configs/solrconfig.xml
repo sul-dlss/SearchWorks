@@ -869,6 +869,7 @@
         author_meeting_display,       vern_author_meeting_display,
         author_person_display,        vern_author_person_display,
         author_person_full_display,   vern_author_person_full_display,
+        author_struct:[json],
         bookplates_display,
         collection,
         collection_type,

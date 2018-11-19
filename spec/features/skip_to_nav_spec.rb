@@ -30,7 +30,7 @@ feature "Skip-to Navigation" do
     fill_in 'q', with: '20'
     find('button#search').trigger('click')
     find(:css, '#toggle_bookmark_20').set(true)
-    visit selections_path
+    visit bookmarks_path
 
     within "#skip-link" do
       expect(page).to have_css("a[href='#search_field']", text: "Skip to search")

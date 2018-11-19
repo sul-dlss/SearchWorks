@@ -1,6 +1,8 @@
 .constraints-container {
   .btn-reset span {
-    text-transform: uppercase;
+    font-size: $font-size-h4;
+    font-variant: all-small-caps;
+    line-height: $font-size-h4;
   }
 
   span.constraint.btn-group {

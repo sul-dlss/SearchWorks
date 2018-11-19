@@ -42,7 +42,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     end
 
     it 'should display the callnumber without live lookup' do
-      expect(rendered).to have_css 'td', 'ABC 123'
+      expect(rendered).to have_css 'td', text: 'ABC 123'
       expect(rendered).to_not have_css 'td[data-live-lookup-id]'
     end
   end
@@ -284,6 +284,43 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     it 'should render special instructions field' do
       expect(rendered).to have_css('h4', text: 'All items must be viewed on site')
       expect(rendered).to have_css('p', text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.')
+    end
+  end
+  describe 'Hoover Archives' do
+    context 'when a finding aid is present' do
+      before do
+        assign(
+          :document,
+          SolrDocument.new(
+            id: '123',
+            item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
+            url_suppl: ['http://oac.cdlib.org/findaid/ark:/something-else']
+          )
+        )
+        render
+      end
+      it 'renders request via OAC finding aid' do
+        expect(rendered).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
+        expect(rendered).to have_css '.availability-icon.noncirc_page'
+        expect(rendered).to have_css '.status-text', text: 'In-library use'
+      end
+    end
+    context 'without a finding aid' do
+      before do
+        assign(
+          :document,
+          SolrDocument.new(
+            id: '123',
+            item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
+          )
+        )
+        render
+      end
+      it 'renders not available text' do
+        expect(rendered).to have_css '.panel-body .pull-right', text: 'Not available to request'
+        expect(rendered).to have_css '.availability-icon.in_process'
+        expect(rendered).to have_css '.status-text', text: 'In process'
+      end
     end
   end
 end

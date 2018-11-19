@@ -21,7 +21,8 @@ $noncirc-color: darkorange;
     @extend .fa-truck;
     color: $noncirc-color;
   }
-  .unavailable {
+  .unavailable,
+  .in_process {
     @extend .fa-times;
     color: #990000;
   }

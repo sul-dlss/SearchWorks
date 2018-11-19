@@ -3,7 +3,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.125em;
+  font-size: $font-size-h3;
   font-weight: 400;
 }
 
@@ -28,7 +28,7 @@
   .panel-body {
     h4 {
       color: $cardinal-red;
-      font-size: 16px;
+      font-size: $font-size-h4;
       line-height: 1.4em;
       margin-bottom: 5px;
 

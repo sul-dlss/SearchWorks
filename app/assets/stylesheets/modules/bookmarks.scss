@@ -26,3 +26,14 @@ label {
     }
   }
 }
+
+.selections-nav {
+  h2 {
+    border-bottom: 0;
+    display: inline;
+  }
+
+  a:hover, a:focus, a:active {
+    border: 1px solid transparent;
+  }
+}

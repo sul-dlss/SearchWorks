@@ -1,11 +1,18 @@
 <div id="masthead-container">
   <div id="masthead" class="sdr-masthead">
     <h1>Stanford Digital Repository</h1>
-    <div>
-      The SDR is Stanford Libraries' managed repository for scholarly content of enduring value. It includes digitized content from our archival collections as well as research materials deposited by scholars.
-      <p class="inline-links">
-        Search SDR for: <%= link_to('data', digital_collections_params_for('Dataset')) %> | <%= link_to('images', digital_collections_params_for('Image')) %> | <%= link_to('maps', digital_collections_params_for('Map')) %> | <%= link_to('collections', search_catalog_path(collections_search_params)) %>
-      </p>
+    <p>These results include all digital items and collections from the SDR. Filter by <b>Resource type</b> to find images, maps, data, and more.</p>
+
+    <div class="flexgrid">
+      <div class="col">
+          <%= link_to('Digital collections', search_catalog_path(collections_search_params)) %> <span>Find collections of digital content — archives, donations, and grouped materials — in the SDR.</span>
+      </div>
+      <div class="col">
+        <%= link_to 'IIIF resources', search_catalog_path(f: {iiif_resources: ['available'] })  %> <span>Find IIIF-compatible items in the SDR.</span>
+      </div>
+      <div class="col">
+        <%= link_to("More about the SDR", "https://library.stanford.edu/research/stanford-digital-repository")%> <span>Stanford Libraries' managed repository for scholarly content of enduring value.</span>
+      </div>
     </div>
   </div>
 </div>

@@ -3,6 +3,10 @@
     @include panel-heading($sul-access-location-bg, $sul-access-font);
     height: 50px;
     padding-bottom: 6px;
+    h3 {
+      color: $sul-access-font;
+      line-height: 1em;
+    }
     a {
       color: #fff;
       text-decoration: underline;
@@ -20,7 +24,7 @@
 
   }
   .library-location-heading:hover {
-    background-color: #565347; /* $color-gray-90 */
+    background-color: $warm-grey;
   }
   .location {
     .items {

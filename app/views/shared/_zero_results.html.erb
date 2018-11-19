@@ -15,7 +15,7 @@
         <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
           <li>
             <%= t 'blacklight.search.zero_results.limit_fields' %>
-            <%= link_to searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} do %>
+            <%= link_to searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", track: 'zero-results-remove-limit', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} do %>
               <%= content_tag :span, "#{search_field_label(params)} > #{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
             <% end %>
           </li>
@@ -23,7 +23,7 @@
         <% if @search_modifier.fielded_search? %>
           <li>
             <%= t 'blacklight.search.zero_results.search_fields' %>
-            <%= link_to searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} do %>
+            <%= link_to searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", track: 'zero-results-search-all-fields', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} do %>
               <%= content_tag :span, "#{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
             <% end %>
           </li>

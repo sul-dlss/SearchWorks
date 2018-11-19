@@ -1,7 +1,7 @@
 #masthead {
   @include masthead-panel;
 
-  margin: 15px 0;
+  margin: 25px 0 15px;
   padding: 0 15px;
 
   h1 {
@@ -11,7 +11,7 @@
     margin-top: 0.5em;
     a {
       margin: 0 0.5em;
-      font-size: 1.1em;
+      font-size: 1.138em;
     }
   }
 
@@ -22,12 +22,13 @@
     margin: 10px 0;
 
     .col {
-      border-left: 3px $beige-30-percent solid;
+      border-left: 3px $cloud solid;
       flex: 1;
       margin-left: 10px;
       padding: 10px;
       a {
         display: block;
+        font-size: 1.138em;
       }
     }
 
@@ -39,6 +40,7 @@
   @media only screen and (max-width: 576px) {
     .flexgrid {
       flex-direction: column;
+      font-size: 1.138em;
 
       .col {
         a {

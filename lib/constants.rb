@@ -476,37 +476,28 @@ module Constants
     'OPEN-RES' => 'Open reserves',
     'OUT-TRAVEL' => 'Outdoors & travel',
     'OVERSIZED' => 'Oversized',
-    'PAGE-AR' => 'Request for use in Art & Architecture Library  or Special Collections',
-    'PAGE-AS' => 'Request for use in Archive of Recorded Sound',
-    'PAGE-BI' => 'Request for use in Falconer Library',
+    'PAGE-AR' => 'For use in Art & Architecture Library or Special Collections',
+    'PAGE-AS' => 'For use in Archive of Recorded Sound',
     'PAGE-BU' => 'Request for pickup at Business Library',
-    'PAGE-CH' => 'Request for use in Swain Library',
-    'PAGE-CL' => 'Request for use in Classics Library',
-    'PAGE-EA' => 'Request for use in East Asia Library',
-    'PAGE-ED' => 'Request for use in Cubberley Library',
-    'PAGE-EN' => 'Request for use in Terman Library',
-    'PAGE-ES' => 'Request for use in Branner Library',
-    'PAGE-GR' => 'Request for use in Green Library',
-    'PAGE-HA' => 'Request for use in Hoover Archives',
-    'PAGE-HP' => 'Request for use in Miller Library or Green Library',
-    'PAGE-HV' => 'Request for use in Hoover Library',
-    'PAGE-ILL' => 'Paged to Interlibrary Loan Department',
+    'PAGE-EA' => 'For use in East Asia Library',
+    'PAGE-ED' => 'For use in Cubberley Library',
+    'PAGE-EN' => 'For use in Terman Library',
+    'PAGE-ES' => 'For use in Branner Library',
+    'PAGE-GR' => 'For use in Green Library',
+    'PAGE-HA' => 'For use in Hoover Archives',
+    'PAGE-HP' => 'For use in Miller Library or Green Library',
+    'PAGE-HV' => 'For use in Hoover Library',
     'PAGE-IRON' => 'Offsite',
-    'PAGE-JA' => 'Ask at circulation desk',
     'PAGE-LN' => 'Paged to Medical Library',
     'PAGE-LP' => 'Request for pickup at Music Library or Media & Microtext Center',
-    'PAGE-LW' => 'Request for use in Law Library',
-    'PAGE-MA' => 'Request for use in Math & Statistics Library',
-    'PAGE-MD' => 'Request for use in Green Media & Microtext Center',
+    'PAGE-LW' => 'For use in Law Library',
+    'PAGE-MD' => 'For use in Green Media & Microtext Center',
     'PAGE-MP' => 'Request for pickup at Branner Library',
-    'PAGE-MU' => 'Request for use in Music Library',
-    'PAGE-MY' => 'Ask at circulation desk',
-    'PAGE-PH' => 'Ask at circulation desk',
-    'PAGE-RLCP' => 'Ask at circulation desk',
-    'PAGE-RM' => 'Request for use in David Rumsey Map Center',
-    'PAGE-SI' => 'Request for use in Science Library',
-    'PAGE-SP' => 'Request for use in Special Collections Reading Room',
-    'PAGE-TA' => 'Request for use in Philosophy Library',
+    'PAGE-MU' => 'For use in Music Library',
+    'PAGE-RM' => 'For use in David Rumsey Map Center',
+    'PAGE-SI' => 'For use in Science Library',
+    'PAGE-SP' => 'For use in Special Collections Reading Room',
+    'PAGE-TA' => 'For use in Philosophy Library',
     'PERM-RES' => 'Permanent reserve: Ask at circulation desk',
     'PERSIAN' => 'Persian',
     'PGDFROMSAL' => 'In transit to campus library',
@@ -777,9 +768,6 @@ module Constants
   NONCIRC_PAGE_LOCS = ['FELTON-30',
                        'PAGE-AR',
                        'PAGE-AS',
-                       'PAGE-BI',
-                       'PAGE-CH',
-                       'PAGE-CL',
                        'PAGE-EA',
                        'PAGE-ED',
                        'PAGE-EN',
@@ -789,11 +777,8 @@ module Constants
                        'PAGE-HP',
                        'PAGE-HV',
                        'PAGE-LW',
-                       'PAGE-MA',
                        'PAGE-MD',
                        'PAGE-MU',
-                       'PAGE-MY',
-                       'PAGE-PH',
                        'PAGE-RM',
                        'PAGE-SI',
                        'PAGE-SP',
@@ -1114,7 +1099,8 @@ module Constants
     'unavailable' => 'Unavailable',
     'noncirc' => 'In-library use',
     'unknown' => 'Unknown',
-    'noncirc_page' => 'In-library use'
+    'noncirc_page' => 'In-library use',
+    'in_process' => 'In process'
   }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
@@ -1249,12 +1235,12 @@ module Constants
 
   LIBRARY_INSTRUCTIONS = {
     'HOOVER' => {
-      heading: 'All items must be requested in advance',
-      text: 'Stanford ID holders may be able to check out some monographs marked "Available" next to the call number. "In-library use" call numbers are for reading-room use only.'
+      heading: 'Access',
+      text: 'Items must be requested in advance and viewed on-site.'
     },
     'HV-ARCHIVE' => {
-      heading: 'All items must be viewed on site',
-      text: "If there's a finding aid shown above, use the Online Archive of California link to request items. Otherwise, use the Request on-site access button below."
+      heading: 'Access',
+      text: 'Items must be requested in advance and viewed on-site.'
     },
     'RUMSEYMAP' => {
       heading: 'All items must be viewed on site',
@@ -1265,4 +1251,6 @@ module Constants
       text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.'
     }
   }.freeze
+
+  REQUEST_ONSITE_LOCATIONS = %w(PAGE-AR PAGE-AS PAGE-EA PAGE-ED PAGE-EN PAGE-ES PAGE-GR PAGE-HA PAGE-HP PAGE-HV PAGE-LW PAGE-MD PAGE-MU PAGE-RM PAGE-SP)
 end

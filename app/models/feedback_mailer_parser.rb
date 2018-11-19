@@ -41,4 +41,8 @@ class FeedbackMailerParser
   def problem_url
     params[:problem_url]
   end
+
+  def last_search
+    params[:last_search]
+  end
 end

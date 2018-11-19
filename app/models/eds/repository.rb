@@ -12,6 +12,17 @@ module Eds
       end
     end
 
+    def find_by_ids(ids, eds_params = {})
+      eds_session = Eds::Session.new(eds_params.update(caller: 'bl-repo-find-by-ids'))
+      results = eds_session.solr_retrieve_list(list: ids)
+      blacklight_config.response_model.new(
+        results,
+        {},
+        document_model: blacklight_config.document_model,
+        blacklight_config: blacklight_config
+      )
+    end
+
     private
 
     def eds_search(search_builder = {}, eds_params = {})
