@@ -16,7 +16,7 @@ describe "catalog/access_panels/_online.html.erb" do
       assign(:document, SolrDocument.new(marcxml: simple_856))
       render
       expect(rendered).to have_css(".panel-online")
-      expect(rendered).to have_css('.panel-heading', text: 'Also available at')
+      expect(rendered).to have_css(".panel-heading", text: "Available online")
       expect(rendered).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do

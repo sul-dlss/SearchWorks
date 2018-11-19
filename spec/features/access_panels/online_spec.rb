@@ -44,7 +44,7 @@ feature "Online Access Panel" do
 
       within('.panel-online') do
         within('.panel-heading') do
-          expect(page).to have_content('Also available at')
+          expect(page).to have_content('Available online')
         end
 
         within('.panel-body') do
