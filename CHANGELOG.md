@@ -8,9 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added the ability to add Articles+ records to selection lists [#2094](https://github.com/sul-dlss/SearchWorks/pull/2094)
+- Added various click tracking to help us refine features
 ### Changed
+- Update to non-deprecated Google Analytics tracking [#2158](https://github.com/sul-dlss/SearchWorks/pull/2158)
+- Changed how we handle metadata parsing of MODS data in search results to improve performance [#2042](https://github.com/sul-dlss/SearchWorks/pull/2042)
+- Changes the "Request" link text to "Request on-site Access" for certain locations [#2166](https://github.com/sul-dlss/SearchWorks/pull/2166)
+- Changes content and layout of the SDR and Digital collections access point mastheads [#2170](https://github.com/sul-dlss/SearchWorks/pull/2170)
+- Updated various styling around the application [#2172](https://github.com/sul-dlss/SearchWorks/pull/2172) [#2174](https://github.com/sul-dlss/SearchWorks/pull/2174)
 ### Removed
 ### Fixed
+- Fixed issue with SEE-OTHER location having no availability information in search results [#2182](https://github.com/sul-dlss/SearchWorks/pull/2182)
 ### Security
 
 ## [3.3.9] - 2018-11-12
