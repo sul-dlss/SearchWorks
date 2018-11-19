@@ -1,8 +1,16 @@
+<%
+  appears_in = render "catalog/access_panels/appears_in"
+  in_collection = render "catalog/access_panels/in_collection"
+%>
+
 <div class="metadata-panels">
   <%= render "catalog/access_panels/online" %>
   <%= render "catalog/access_panels/course_reserve" %>
   <%= render "catalog/access_panels/location" %>
-  <%= render "catalog/access_panels/appears_in" %>
-  <%= render "catalog/access_panels/in_collection" %>
+  <% if appears_in.present? || in_collection.present? %>
+    <h2>Context</h2>
+  <% end %>
+  <%= appears_in %>
+  <%= in_collection %>
   <%= render "catalog/access_panels/related" %>
 </div>

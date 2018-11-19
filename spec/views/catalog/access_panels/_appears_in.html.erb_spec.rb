@@ -18,10 +18,8 @@ describe 'catalog/access_panels/_appears_in.html.erb' do
       [{ id: 'abc123', format_main_ssim: 'Map', title_display: 'The Set Object' }]
     end
 
-    describe 'panel heading' do
-      it 'renders an h3 with "Appears in"' do
-        expect(subject).to have_css('.panel-heading h3', text: 'Appears in')
-      end
+    it 'renders a panel heading' do
+      expect(subject).to have_css('.panel-heading h3', text: 'Item is included in another record')
     end
 
     describe 'panel body' do

@@ -12,7 +12,7 @@ describe "catalog/access_panels/_in_collection.html.erb" do
       render
     end
     it 'should render the block properly if the collection members are not present' do
-      expect(rendered).to have_css("h3", text: 'In collection')
+      expect(rendered).to have_css("h3", text: 'Item belongs to a collection')
       expect(rendered).to_not have_content("Digital content")
     end
   end
