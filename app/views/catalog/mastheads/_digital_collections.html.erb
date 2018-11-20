@@ -5,13 +5,16 @@
 
     <div class="flexgrid">
       <div class="col">
-          <%= link_to 'All digital items', digital_collections_params_for %> <span>Find all items and collections in the SDR. Filter by images, maps, data, and more.</span>
+        <%= link_to 'All digital items', digital_collections_params_for %>
+        <p>Find all items and collections in the SDR. Filter by images, maps, data, and more.</p>
       </div>
       <div class="col">
-        <%= link_to 'IIIF resources', search_catalog_path(f: {iiif_resources: ['available'] })  %> <span>Find IIIF-compatible items in the SDR.</span>
+        <%= link_to 'IIIF resources', search_catalog_path(f: {iiif_resources: ['available'] })  %>
+        <p>Find IIIF-compatible items in the SDR.</p>
       </div>
       <div class="col">
-        <%= link_to("More about the SDR", "https://library.stanford.edu/research/stanford-digital-repository")%> <span>Stanford Libraries' managed repository for scholarly content of enduring value.</span>
+        <%= link_to("More about the SDR", "https://library.stanford.edu/research/stanford-digital-repository")%>
+        <p>Stanford Libraries' managed repository for scholarly content of enduring value.</p>
       </div>
     </div>
   </div>

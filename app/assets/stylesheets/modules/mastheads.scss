@@ -7,6 +7,7 @@
   h1 {
     margin: 0;
   }
+
   .inline-links {
     margin-top: 0.5em;
     a {
@@ -27,7 +28,6 @@
       margin-left: 10px;
       padding: 10px;
       a {
-        display: block;
         font-size: 1.138em;
       }
     }
@@ -57,6 +57,19 @@
   .database-prefix {
     h2 {
       margin-bottom: 0;
+    }
+  }
+
+  .collection-content {
+    display: flex;
+
+    .collection-summary {
+      flex-shrink: 2;
+      margin-right: 30px;
+    }
+
+    .collection-metadata {
+      flex-shrink: 1;
     }
   }
 }

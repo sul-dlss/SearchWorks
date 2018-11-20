@@ -18,8 +18,9 @@
     font-weight: 400;
     font-size: .937em;
     text-align: center;
-    padding: 3px 0;
+    padding: 3px;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     width: $gallery-document-width - 2;
   }
@@ -32,7 +33,7 @@
   .gallery-document {
     @include document-borders;
     position: relative;
-    margin: 0 0 15px 15px;
+    margin: 0 0 25px 15px;
     float: left;
     display: inline;
     background-color: $white;

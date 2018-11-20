@@ -5,14 +5,16 @@
     <p>Licensed resources are for the non-profit educational use of Stanford University. Use of these resources is governed by copyright law and individual license agreements. Systematic downloading, distributing, or retaining substantial portions of information is prohibited.</p>
     <div class="flexgrid">
       <div class="col">
-        <%= link_to 'Articles+', articles_path %> <span>Search a combined index of 100s of databases.</span>
+        <%= link_to 'Articles+', articles_path %>
+        <p>Search a combined index of 100s of databases.</p>
       </div>
       <div class="col">
-        <%= link_to 'Selected article databases', selected_databases_path %> <span>Not sure where to start? Try one of these.</span>
+        <%= link_to 'Selected article databases', selected_databases_path %>
+        <p>Not sure where to start? Try one of these.</p>
       </div>
       <div class="col">
-        <%= link_to 'Connecting to e-resources', 'https://library.stanford.edu/using/connecting-e-resources' %>
-        <%= link_to 'Report a connection problem', 'https://library.stanford.edu/ask/email/connection-problems' %>
+        <p><%= link_to 'Connecting to e-resources', 'https://library.stanford.edu/using/connecting-e-resources' %></p>
+        <p><%= link_to 'Report a connection problem', 'https://library.stanford.edu/ask/email/connection-problems' %></p>
       </div>
     </div>
     <%= render "catalog/database_prefix" %>
