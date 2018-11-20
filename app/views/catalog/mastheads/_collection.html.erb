@@ -3,26 +3,30 @@
   <div id="masthead-container">
     <div id="masthead" class="collection-masthead">
       <h1><%= @parent[:title_display] %></h1>
-      <% if @parent[:summary_display] %>
-        <p data-behavior='truncate'>
-          <%= @parent[:summary_display].join(', ') %>
-        </p>
-      <% end %>
-      <dl class="dl-horizontal dl-invert">
-        <% if @parent.collection_members.present? %>
-          <dt>Digital content</dt>
-          <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+      <div class="collection-content">
+        <% if @parent[:summary_display] %>
+          <div class="collection-summary">
+            <div data-behavior='truncate'>
+              <%= @parent[:summary_display].join(', ') %>
+            </div>
+          </div>
         <% end %>
-        <% # this stuff is temporary until we have item level merge (mods + marc) %>
-        <% if @parent.extent.present? %>
-          <dt><%= @parent.extent_label %></dt>
-          <dd><%= @parent.extent %></dd>
-        <% end %>
-        <% if @parent.index_links.finding_aid.present? %>
-          <dt>Finding aid</dt>
-          <dd><%= @parent.index_links.finding_aid.first.html.html_safe %></dd>
-        <% end %>
-      </dl>
+        <dl class="dl-horizontal dl-invert collection-metadata">
+          <% if @parent.collection_members.present? %>
+            <dt>Digital content</dt>
+            <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+          <% end %>
+          <% # this stuff is temporary until we have item level merge (mods + marc) %>
+          <% if @parent.extent.present? %>
+            <dt><%= @parent.extent_label %></dt>
+            <dd><%= @parent.extent %></dd>
+          <% end %>
+          <% if @parent.index_links.finding_aid.present? %>
+            <dt>Finding aid</dt>
+            <dd><%= @parent.index_links.finding_aid.first.html.html_safe %></dd>
+          <% end %>
+        </dl>
+      </div>
     </div>
   </div>
 <% end %>

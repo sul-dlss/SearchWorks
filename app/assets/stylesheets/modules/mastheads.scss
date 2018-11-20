@@ -8,10 +8,6 @@
     margin: 0;
   }
 
-  dl {
-    margin-top: 10px;
-  }
-
   .inline-links {
     margin-top: 0.5em;
     a {
@@ -61,6 +57,19 @@
   .database-prefix {
     h2 {
       margin-bottom: 0;
+    }
+  }
+
+  .collection-content {
+    display: flex;
+
+    .collection-summary {
+      flex-shrink: 2;
+      margin-right: 30px;
+    }
+
+    .collection-metadata {
+      flex-shrink: 1;
     }
   }
 }
