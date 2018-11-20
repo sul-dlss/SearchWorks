@@ -7,6 +7,11 @@
   h1 {
     margin: 0;
   }
+
+  dl {
+    margin-top: 10px;
+  }
+
   .inline-links {
     margin-top: 0.5em;
     a {
@@ -27,7 +32,6 @@
       margin-left: 10px;
       padding: 10px;
       a {
-        display: block;
         font-size: 1.138em;
       }
     }
