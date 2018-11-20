@@ -11,6 +11,8 @@
     <h3>
       <% if document.is_a_database? %>
         Search this database
+      <% elsif document.druid %>
+        Also available at
       <% else %>
         Available online
       <% end %>
