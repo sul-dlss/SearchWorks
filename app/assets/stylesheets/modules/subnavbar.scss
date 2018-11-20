@@ -44,10 +44,6 @@
       line-height: 35px;
       margin-right: 20px;
       padding: 0;
-
-      &.connection-problem {
-        font-size: 1.1em;
-      }
     }
     // Add the border on hover, or when the #connection-form is open
     a:hover, a[data-target="#connection-form"][aria-expanded="true"] {
