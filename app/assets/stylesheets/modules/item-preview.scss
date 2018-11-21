@@ -37,7 +37,7 @@
 
 .preview {
   background-color: #fff;
-  border: 1px solid $sul-btn-preview-bg;
+  border: 1px solid $sul-preview-border;
   border-radius: 3px;
   display: none;
   min-height: 200px;
@@ -60,7 +60,11 @@
   }
 
   .preview-content {
-    overflow: auto;
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
 
     dt {
       width: auto;

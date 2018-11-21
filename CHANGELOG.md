@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-## [3.3.10] - 2018-11-19
+## [3.3.10] - 2018-11-20
 
 ### Added
 - Added the ability to add Articles+ records to selection lists [#2094](https://github.com/sul-dlss/SearchWorks/pull/2094)
