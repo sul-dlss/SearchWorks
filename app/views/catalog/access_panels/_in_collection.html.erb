@@ -2,7 +2,7 @@
   <% @document.parent_collections.each do |parent_collection| %>
     <div class="panel panel-default access-panel panel-in-collection">
       <div class="access-panel-heading panel-heading">
-        <h3>In collection</h3>
+        <h3>Item belongs to a collection</h3>
       </div>
       <div class="panel-body">
         <h4><%= link_to(show_presenter(parent_collection).heading, solr_document_path(parent_collection[:id])) %></h4>
@@ -11,23 +11,19 @@
             <%= parent_collection[:summary_display].join(', ') %>
           </div>
         <% end %>
-      </div>
-      <div class="panel-footer">
         <dl class="dl-invert">
           <% if parent_collection.collection_members.present? %>
-            <dt>Digital content</dt>
-            <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'item'), parent_collection) %></dd>
+            <dt>Digital collection</dt>
+            <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'digital item'), parent_collection) %></dd>
           <% end %>
-          <% if parent_collection.extent.present? %>
-            <dt><%= parent_collection.extent_label %></dt>
-            <dd><%= parent_collection.extent %></dd>
+          <% if parent_collection.extent_sans_format.present? %>
+            <dt>Physical collection</dt>
+            <dd><%= parent_collection.extent_sans_format %></dd>
           <% end %>
           <% if parent_collection.index_links.finding_aid.present? %>
             <dt>Finding aid</dt>
             <dd><%= parent_collection.index_links.finding_aid.first.html.html_safe %></dd>
           <% end %>
-          <dt>Collection PURL</dt>
-          <dd><%= link_to("https://purl.stanford.edu/#{parent_collection.druid}", "https://purl.stanford.edu/#{parent_collection.druid}") %></dd>
         </dl>
       </div>
     </div>

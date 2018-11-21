@@ -12,9 +12,9 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
     end
 
     it "should display correct sections" do
-      expect(rendered).to have_css("h2", text: "Contributors")
-      expect(rendered).to have_css("h2", text: "Contents/Summary")
-      expect(rendered).to have_css("h2", text: "Bibliographic information")
+      expect(rendered).to have_css('h3', text: "Contributors")
+      expect(rendered).to have_css('h3', text: "Contents/Summary")
+      expect(rendered).to have_css('h3', text: "Bibliographic information")
     end
 
     it "should have side nav content handles" do

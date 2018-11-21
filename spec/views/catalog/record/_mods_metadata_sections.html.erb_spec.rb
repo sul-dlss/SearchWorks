@@ -11,11 +11,11 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
 
     it "should display correct sections" do
-      expect(rendered).to have_css("h2", text: "Contributors")
-      expect(rendered).to have_css("h2", text: "Abstract/Contents")
-      expect(rendered).to have_css("h2", text: "Subjects")
-      expect(rendered).to have_css("h2", text: "Bibliographic information")
-      expect(rendered).to have_css("h2", text: "Access conditions")
+      expect(rendered).to have_css('h3', text: "Contributors")
+      expect(rendered).to have_css('h3', text: "Abstract/Contents")
+      expect(rendered).to have_css('h3', text: "Subjects")
+      expect(rendered).to have_css('h3', text: "Bibliographic information")
+      expect(rendered).to have_css('h3', text: "Access conditions")
     end
 
     it "should have side nav content handles" do
@@ -54,9 +54,9 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
     end
     it "should display correct sections" do
       render
-      expect(rendered).to_not have_css("h2", text: "Abstract/Contents")
-      expect(rendered).to_not have_css("h2", text: "Subjects")
-      expect(rendered).to_not have_css("h2", text: "Access conditions")
+      expect(rendered).to_not have_css('h3', text: "Abstract/Contents")
+      expect(rendered).to_not have_css('h3', text: "Subjects")
+      expect(rendered).to_not have_css('h3', text: "Access conditions")
     end
   end
 end

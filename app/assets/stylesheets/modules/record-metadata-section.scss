@@ -2,12 +2,35 @@
   .section {
     padding-bottom: 0;
   }
+
+  h3 {
+    color: $stone;
+  }
 }
 
-.record-metadata, .upper-record-metadata {
+.record-metadata,
+.upper-record-metadata,
+.purl-embed-viewer {
   @include show-page-row-layout;
+
+  .section-heading {
+    h3 {
+      color: $stone;
+    }
+  }
+}
+
+.record-metdata {
   dt {
     width: auto;
+  }
+}
+
+.upper-record-metadata {
+  dt {
+    padding-right: 30px;
+    text-align: right;
+    width: 10em;
   }
 }
 

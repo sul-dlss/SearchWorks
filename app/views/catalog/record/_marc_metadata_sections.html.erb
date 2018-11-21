@@ -20,10 +20,11 @@
 
 <%= render partial: "shared/side_nav_minimap", locals: locals %>
 
+<h2>Description</h2>
 <% if contributors.present? %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
     <div class="section-heading">
-      <h2><%= t('record_side_nav.contributors.icon').html_safe %> Creators/Contributors</h2>
+      <h3><%= t('record_side_nav.contributors.icon').html_safe %> Creators/Contributors</h3>
     </div>
     <div class="section-body">
       <dl>
@@ -36,7 +37,7 @@
 <% if contents_summary.present? %>
   <div class="section" id="<%= t('record_side_nav.contents_summary.id') %>" data-side-nav-class="<%= t('record_side_nav.contents_summary.id') %>">
     <div class="section-heading">
-      <h2><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h2>
+      <h3><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h3>
     </div>
     <div class="section-body">
       <dl>
@@ -49,7 +50,7 @@
 <% if subjects.present? %>
   <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
     <div class="section-heading">
-      <h2><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h2>
+      <h3><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h3>
     </div>
     <div class="section-body">
       <%= subjects %>
@@ -60,7 +61,7 @@
 <% if bibliography.present? %>
   <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
     <div class="section-heading">
-      <h2><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h2>
+      <h3><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h3>
     </div>
     <div class="section-body">
       <dl>
@@ -73,7 +74,7 @@
 <% if Settings.BOOKPLATES && document.bookplates.present? %>
   <div class="section">
     <div class="section-heading">
-      <h2>Acquired with support from</h2>
+      <h3>Acquired with support from</h3>
     </div>
     <div class="section-body row container-fluid">
       <% document.bookplates.each_slice(2).each do |bookplates| %>

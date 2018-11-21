@@ -13,13 +13,13 @@
         <% end %>
         <dl class="dl-horizontal dl-invert collection-metadata">
           <% if @parent.collection_members.present? %>
-            <dt>Digital content</dt>
-            <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'item'), @parent) %></dd>
+            <dt>Digital collection</dt>
+            <dd><%= link_to_collection_members(pluralize(@parent.collection_members.total, 'digital item'), @parent) %></dd>
           <% end %>
           <% # this stuff is temporary until we have item level merge (mods + marc) %>
-          <% if @parent.extent.present? %>
-            <dt><%= @parent.extent_label %></dt>
-            <dd><%= @parent.extent %></dd>
+          <% if @parent.extent_sans_format.present? %>
+            <dt>Physical collection</dt>
+            <dd><%= @parent.extent_sans_format %></dd>
           <% end %>
           <% if @parent.index_links.finding_aid.present? %>
             <dt>Finding aid</dt>

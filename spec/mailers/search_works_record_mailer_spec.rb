@@ -142,8 +142,8 @@ describe SearchWorksRecordMailer do
       end
 
       it 'should include Subjects and Bibliographic information from both MARC and MODS records' do
-        expect(mail.body).to have_css('h2', text: 'Subjects', count: 2)
-        expect(mail.body).to have_css('h2', text: 'Bibliographic information', count: 2)
+        expect(mail.body).to have_css('h3', text: 'Subjects', count: 2)
+        expect(mail.body).to have_css('h3', text: 'Bibliographic information', count: 2)
       end
 
       it 'should include the HTML markup for MARC records' do
@@ -184,7 +184,7 @@ describe SearchWorksRecordMailer do
         end
         let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
         it 'renders the bookplate data successfully' do
-          expect(mail.body).to have_css('h2', text: 'Acquired with support from')
+          expect(mail.body).to have_css('h3', text: 'Acquired with support from')
           expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)
         end
       end

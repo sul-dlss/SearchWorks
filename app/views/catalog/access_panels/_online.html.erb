@@ -6,10 +6,13 @@
 %>
 
 <div class="panel panel-default access-panel panel-online <%= visible %>">
+  <h2>Online</h2>
   <div class="access-panel-heading panel-heading">
     <h3>
       <% if document.is_a_database? %>
         Search this database
+      <% elsif document.druid %>
+        Also available at
       <% else %>
         Available online
       <% end %>

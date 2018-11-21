@@ -10,6 +10,10 @@ module Extent
     ].reject(&:blank?).compact.join(' — ')
   end
 
+  def extent_sans_format
+    [physical_string, characteristics_string].compact.join(' ')
+  end
+
   private
 
   def physical_string

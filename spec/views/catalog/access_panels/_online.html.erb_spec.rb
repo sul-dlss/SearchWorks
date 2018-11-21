@@ -27,6 +27,12 @@ describe "catalog/access_panels/_online.html.erb" do
       expect(rendered).to have_css("span.additional-link-text", text: "4 at one time")
       expect(rendered).to have_css("a[title='Available to Stanford-affiliated users only']", text: "Link text", count: 3)
     end
+    it 'renders a different heading for SDR items' do
+      assign(:document, SolrDocument.new(marcxml: simple_856, druid: 'ng161qh7958'))
+      render
+      expect(rendered).to have_css '.panel-online'
+      expect(rendered).to have_css '.panel-heading', text: 'Also available at'
+    end
 
     context 'when the record has an SFX link' do
       it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
