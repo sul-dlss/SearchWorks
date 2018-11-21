@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 ### Fixed
 - Fixes link styling for multiple PURL embed side-panel so that they doesn't always appear active [#2203](https://github.com/sul-dlss/SearchWorks/pull/2203)
+- Fixes online label styling for brief view search results [#2206](https://github.com/sul-dlss/SearchWorks/pull/2206)
 ### Security
 
 ## [3.3.10] - 2018-11-20
