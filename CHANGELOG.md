@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+### Security
+
+## [3.3.11] - 2018-11-21
+
+### Added
+### Changed
+- Redesign record view for SDR items [#2126](https://github.com/sul-dlss/SearchWorks/pull/2126)
+### Removed
+### Fixed
 - Fixes link styling for multiple PURL embed side-panel so that they doesn't always appear active [#2203](https://github.com/sul-dlss/SearchWorks/pull/2203)
 - Fixes online label styling for brief view search results [#2206](https://github.com/sul-dlss/SearchWorks/pull/2206)
 ### Security
@@ -148,7 +157,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.11...HEAD
+[3.3.11]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...v3.3.11
 [3.3.10]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...v3.3.10
 [3.3.9]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...v3.3.9
 [3.3.8]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.7...v3.3.8
