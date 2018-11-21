@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+- Fixes link styling for multiple PURL embed side-panel so that they doesn't always appear active [#2203](https://github.com/sul-dlss/SearchWorks/pull/2203)
 ### Security
 
 ## [3.3.10] - 2018-11-20
