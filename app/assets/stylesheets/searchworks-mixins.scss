@@ -43,18 +43,16 @@
 
 @mixin h1-show-title-font {
   font-family: 'dejavu_sanscondensed', 'Arial Unicode MS', Helvetica, sans-serif;
-  letter-spacing: -.03em;
 }
 
 @mixin h3-index-title-small-font {
-  font-size: 1.138em;
+  font-size: $font-size-h4;
   line-height: 1.4em;
 }
 
 @mixin h3-index-title-font {
   font-family: 'dejavu_sanscondensed', 'Arial Unicode MS', Helvetica, sans-serif;
-  font-size: $font-size-h4;
-  letter-spacing: -.03em;
+  font-size: $font-size-h3;
   line-height: 1.5em;
 }
 
