@@ -1,11 +1,11 @@
-<% if document.respond_to?(:to_marc) %>
-  <% toc = get_toc(document.to_marc) %>
+<% if document.key?(:toc_struct) || document.respond_to?(:to_marc) %>
+  <% toc = document.fetch(:toc_struct, []).first || get_toc(document.to_marc) %>
   <% if toc.present? %>
     <% if toc[:fields].present? %>
-      <% toc[:fields].each do |toc_field| %>  
+      <% toc[:fields].each do |toc_field| %>
         <ul class="toc">
-          <% toc_field.each do |field| %>
-            <li><%= field %></li>
+          <% Array.wrap(toc_field).each do |field| %>
+            <li><%= render_struct_field_data(document, field) %></li>
           <% end %>
         </ul>
       <% end %>
@@ -13,7 +13,7 @@
     <% if toc[:vernacular].present? %>
       <% toc[:vernacular].each do |toc_field| %>
         <ul class="toc">
-          <% toc_field.each do |field| %>  
+          <% Array.wrap(toc_field).each do |field| %>
             <li><%= field %></li>
           <% end %>
         </ul>
@@ -22,7 +22,7 @@
     <% if toc[:unmatched_vernacular].present? %>
       <% toc[:unmatched_vernacular].each do |toc_field| %>
         <ul class="toc">
-          <% toc_field.each do |field| %>  
+          <% Array.wrap(toc_field).each do |field| %>
             <li><%= field %></li>
           <% end %>
         </ul>
@@ -30,11 +30,11 @@
     <% end %>
   <% end %>
 
-  <% summary = get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
+  <% summary = document.fetch(:summary_struct, []).first || get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
   <% if summary.present? %>
     <% if summary[:fields].present? %>
       <% summary[:fields].each do |field| %>
-        <%= field[:field] %>
+        <%= render_struct_field_data document, field[:field] %>
         <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
         <%= "<br/>".html_safe if field != summary[:fields].last %>
       <% end %>

@@ -17,7 +17,7 @@ describe "catalog/record/_marc_upper_metadata_items.html.erb" do
 
   describe "characteristics" do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_characteristics_fixture))
+      assign(:document, SolrDocument.new(marcxml: metadata1, characteristics_ssim: ['Sound: digital; optical; surround; stereo; Dolby.', 'Video: NTSC.', 'Digital: video file; DVD video; Region 1.']))
       render
     end
     it "should display the characteristics with labels" do

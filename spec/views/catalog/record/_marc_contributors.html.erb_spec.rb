@@ -5,7 +5,15 @@ describe "catalog/record/_marc_contributors.html.erb" do
 
   describe "Contributors section" do
     before do
-      assign(:document, SolrDocument.new(marcxml: contributor_fixture))
+      assign(:document, SolrDocument.new(author_struct: [
+        {
+          contributors: [
+            { link: '<a href="...">Contributor1</a>', search: '...', post_text: 'Performer' },
+            { link: '<a href="...">Contributor2</a>', search: '...', post_text: 'Performer' },
+            { link: '<a href="...">Contributor3</a>', search: '...', post_text: 'Actor' }
+          ]
+        }
+      ]))
       render
     end
     it "should display secondary authors" do

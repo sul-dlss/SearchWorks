@@ -73,7 +73,7 @@ describe Holdings::Location do
       let(:item_display) { '12345 -|- HOPKINS -|- STACKS -|- ' }
       let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
       let(:not_online_doc) { SolrDocument.new(item_display: [item_display]) }
-      let(:online_doc) { SolrDocument.new(marcxml: fulltext_856, item_display: [item_display]) }
+      let(:online_doc) { SolrDocument.new(marc_links_struct: [{ fulltext: true }], item_display: [item_display]) }
       let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, '54321 -|- GREEN -|- STACKS -|- ']) }
       it 'returns true for materials that are not available online' do
         location = Holdings::Location.new('STACKS', callnumbers, not_online_doc)

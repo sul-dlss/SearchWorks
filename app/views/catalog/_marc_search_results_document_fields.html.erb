@@ -4,7 +4,7 @@
       <li><%= document[:vern_title_display].html_safe %></li>
     <% end %>
 
-    <% uniform_title = get_uniform_title(document.to_marc, ["240","130"]) %>
+    <% uniform_title = get_uniform_title(document) %>
     <% unless uniform_title.nil? %>
       <% uniform_title[:fields].each do |field| %>
         <li><%= field[:field] %></li>
