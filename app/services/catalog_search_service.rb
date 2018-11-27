@@ -9,9 +9,9 @@ class CatalogSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    HIGHLIGHTED_FACET_FIELD = 'format_main_ssim'.freeze
+    HIGHLIGHTED_FACET_FIELD = 'format_main_ssim'
     QUERY_URL = Settings.CATALOG_QUERY_URL
-    ADDITIONAL_FACET_TARGET = 'Database'.freeze
+    ADDITIONAL_FACET_TARGET = 'Database'
 
     def total
       json['response']['pages']['total_count'].to_i
@@ -22,7 +22,7 @@ class CatalogSearchService < AbstractSearchService
       solr_docs.collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc['title_display'] || doc['title_full_display']
-        result.link = Settings.CATALOG_FETCH_URL.to_s % { id: doc['id'] }
+        result.link = format(Settings.CATALOG_FETCH_URL.to_s, id: doc['id'])
         result.id = doc['id']
         result.description = doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml'])
         result
@@ -38,7 +38,7 @@ class CatalogSearchService < AbstractSearchService
 
       Struct.new(:hits, :href).new(
         additional_facet_item['hits'],
-        "#{QUERY_URL % { q: CGI.escape(q) }}&f[#{HIGHLIGHTED_FACET_FIELD}][]=#{ADDITIONAL_FACET_TARGET}"
+        "#{format(QUERY_URL, q: CGI.escape(q))}&f[#{HIGHLIGHTED_FACET_FIELD}][]=#{ADDITIONAL_FACET_TARGET}"
       )
     end
 

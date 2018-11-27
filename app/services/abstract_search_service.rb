@@ -25,7 +25,7 @@ class AbstractSearchService
 
     # @param [String] `base` is a URL that has format parameters `q` and `max`
     def url(base)
-      base.to_s % { q: CGI.escape(q), max: max }
+      format(base.to_s, q: CGI.escape(q), max: max)
     end
 
     def q
@@ -96,7 +96,7 @@ class AbstractSearchService
   end
 
   class Result
-    ATTRS = %i[title description link id thumbnail breadcrumbs fulltext_link_html]
+    ATTRS = %i[title description link id thumbnail breadcrumbs fulltext_link_html].freeze
     attr_accessor *ATTRS
 
     def to_h
@@ -118,7 +118,7 @@ class AbstractSearchService
     url = if request_or_query.respond_to?(:url)
             request_or_query.url(@query_url.to_s)
           else
-            @query_url.to_s % { q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS }
+            format(@query_url.to_s, q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS)
           end
 
     response = Faraday.get do |req|
@@ -154,7 +154,7 @@ class AbstractSearchService
     end
 
     def query_url(query_string)
-      "#{base_query_url % { q: query_string }}&#{facet_field_to_param}"
+      "#{format(base_query_url, q: query_string)}&#{facet_field_to_param}"
     end
 
     private

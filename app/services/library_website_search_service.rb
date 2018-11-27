@@ -14,7 +14,7 @@ class LibraryWebsiteSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    HIGHLIGHTED_FACET_FIELD = 'document_type_facet'.freeze
+    HIGHLIGHTED_FACET_FIELD = 'document_type_facet'
     HIGHLIGHTED_FACET_CLASS = LibraryWebsiteSearchService::HighlightedFacetItem
     QUERY_URL = Settings.LIBRARY_WEBSITE_QUERY_API_URL.freeze
 
@@ -61,11 +61,12 @@ class LibraryWebsiteSearchService < AbstractSearchService
       facet_group.css('li').collect do |facet|
         href = facet.at_css('a')['href']
         match = facet.at_css('a').text.to_s.match(/^(.*)\s+\((\d+)\)/)
+        next unless match
         {
           'value' => CGI.parse(URI.parse(href).query)['f[0]'].first, # search term is in the href params
           'label' => match[1].to_s,
           'hits' => match[2].to_i
-        } if match
+        }
       end.compact
     end
   end
