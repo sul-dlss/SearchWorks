@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe ArticleSearchService do
   subject(:service) { described_class.new }
+
   let(:response) do
     JSON.dump(
       response: {

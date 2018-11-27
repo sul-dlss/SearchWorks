@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe QuickSearch::ArticleSearcher do
   subject(:searcher) { described_class.new(instance_double(HTTPClient), query, 10) }
+
   let(:query) { 'my query' }
   let(:response) { JSON.dump(response: { docs: [] }) }
 
@@ -12,6 +13,7 @@ RSpec.describe QuickSearch::ArticleSearcher do
                                                                success?: true,
                                                                body: response))
   end
+
   it { expect(searcher).to be_an(QuickSearch::Searcher) }
   it { expect(searcher.search).to be_an(ArticleSearchService::Response) }
   it do

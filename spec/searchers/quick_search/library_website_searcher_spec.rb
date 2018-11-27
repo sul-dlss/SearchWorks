@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe QuickSearch::LibraryWebsiteSearcher do
   subject(:searcher) { described_class.new(instance_double(HTTPClient), query, 10) }
+
   let(:query) { 'my query' }
   let(:body) { File.read(Rails.root.join('spec', 'fixtures', 'library.stanford.edu', '1.html')) }
 

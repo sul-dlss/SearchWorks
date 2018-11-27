@@ -14,6 +14,7 @@ describe 'quick_search/search/_highlighted_facet.html.erb' do
       AbstractSearchService::HighlightedFacetItem, label: 'Cba', value: 'Cba', hits: 10, query_url: 'query2'
     )
   end
+
   before do
     without_partial_double_verification do
       allow(view).to receive(:searcher).and_return(searcher)

@@ -9,6 +9,7 @@ feature 'Yewno', js: true do
       .and_return response
     visit quick_search_path
   end
+
   scenario 'is present on index page' do
     fill_in 'params-q', with: 'geology'
     click_button 'Search'

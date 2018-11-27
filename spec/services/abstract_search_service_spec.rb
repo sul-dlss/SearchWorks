@@ -10,6 +10,7 @@ describe AbstractSearchService do
         query_url: 'http://www.example.com'
       )
     end
+
     it 'sets the X-Forwarded-For header' do
       stub_request(:get, 'http://www.example.com/')
         .with(headers: { 'X-Forwarded-For' => '192.168.0.1' })
@@ -17,6 +18,7 @@ describe AbstractSearchService do
       subject.search 'test'
     end
   end
+
   describe 'Response' do
     let(:response) { AbstractSearchService::Response.new(nil) }
 

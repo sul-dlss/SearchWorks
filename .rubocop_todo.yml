@@ -117,44 +117,6 @@ RSpec/DescribeClass:
     - 'spec/views/quick_search/search/_result_details.html.erb_spec.rb'
     - 'spec/views/shared/_header.html.erb_spec.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-RSpec/EmptyLineAfterExampleGroup:
-  Exclude:
-    - 'spec/services/abstract_search_service_spec.rb'
-
-# Offense count: 4
-# Cop supports --auto-correct.
-RSpec/EmptyLineAfterFinalLet:
-  Exclude:
-    - 'spec/services/library_website_search_service_spec.rb'
-    - 'spec/views/quick_search/search/_highlighted_facet.html.erb_spec.rb'
-    - 'spec/views/quick_search/search/_module_heading.html.erb_spec.rb'
-    - 'spec/views/quick_search/search/_result_details.html.erb_spec.rb'
-
-# Offense count: 6
-# Cop supports --auto-correct.
-RSpec/EmptyLineAfterHook:
-  Exclude:
-    - 'spec/features/homepage_spec.rb'
-    - 'spec/features/yewno_spec.rb'
-    - 'spec/searchers/quick_search/article_searcher_spec.rb'
-    - 'spec/searchers/quick_search/catalog_searcher_spec.rb'
-    - 'spec/views/quick_search/search/_module_heading.html.erb_spec.rb'
-    - 'spec/views/shared/_header.html.erb_spec.rb'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-RSpec/EmptyLineAfterSubject:
-  Exclude:
-    - 'spec/searchers/quick_search/article_searcher_spec.rb'
-    - 'spec/searchers/quick_search/catalog_searcher_spec.rb'
-    - 'spec/searchers/quick_search/library_website_searcher_spec.rb'
-    - 'spec/services/abstract_search_service_spec.rb'
-    - 'spec/services/article_search_service_spec.rb'
-    - 'spec/services/catalog_search_service_spec.rb'
-    - 'spec/services/library_website_search_service_spec.rb'
-
 # Offense count: 7
 # Configuration parameters: Max.
 RSpec/ExampleLength:

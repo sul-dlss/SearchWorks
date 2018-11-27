@@ -5,8 +5,10 @@ require 'rails_helper'
 RSpec.describe LibraryWebsiteSearchService do
   context 'request/response' do
     subject(:service) { described_class.new }
+
     let(:query) { LibraryWebsiteSearchService::Request.new('my query') }
     let(:response) { service.search(query) }
+
     before do
       allow(Faraday).to receive(:get).and_return(instance_double(Faraday::Response,
                                                                  success?: true,
