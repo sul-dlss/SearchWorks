@@ -26,8 +26,10 @@ class LibraryWebsiteSearchService < AbstractSearchService
     def results
       doc.css('.search-results .views-row').first(Settings.MAX_RESULTS).collect do |hit|
         next if hit.blank?
+
         title = hit.at_css('.views-field-title .field-content a')
         next if title.blank?
+
         result = AbstractSearchService::Result.new
         result.title = title.text
         result.link = title['href']
@@ -39,9 +41,9 @@ class LibraryWebsiteSearchService < AbstractSearchService
 
     # @return [Array<Hash>] mimics Solr facets response
     def facets
-      facet_response = [ {
+      facet_response = [{
         'name' => HIGHLIGHTED_FACET_FIELD
-      } ]
+      }]
       doc.css('.facetapi-facetapi-links').each do |facet_group|
         facet_response.first['items'] = parse_facet_group(facet_group)
       end

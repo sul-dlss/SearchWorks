@@ -35,6 +35,7 @@ class CatalogSearchService < AbstractSearchService
 
     def additional_facet_details(q)
       return nil if additional_facet_item['hits'].to_i.zero?
+
       Struct.new(:hits, :href).new(
         additional_facet_item['hits'],
         "#{QUERY_URL % { q: CGI.escape(q) }}&f[#{HIGHLIGHTED_FACET_FIELD}][]=#{ADDITIONAL_FACET_TARGET}"
