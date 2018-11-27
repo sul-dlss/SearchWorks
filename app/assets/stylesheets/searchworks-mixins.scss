@@ -42,7 +42,7 @@
 }
 
 @mixin h1-show-title-font {
-  font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
   letter-spacing: -.03em;
 }
 
@@ -52,7 +52,7 @@
 }
 
 @mixin h3-index-title-font {
-  font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
   font-size: $font-size-h4;
   letter-spacing: -.03em;
   line-height: 1.5em;

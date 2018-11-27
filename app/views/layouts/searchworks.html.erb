@@ -102,7 +102,7 @@
       if(typeof(WebFont) !== 'undefined') {
         WebFont.load({
           google: {
-            families: ['Source Sans Pro:300,400,700', 'Crimson Text:400']
+            families: ['Source Sans Pro:300,400,700', 'Crimson Text:400', 'Noto Sans:cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese']
           }
         });  
       }
@@ -110,6 +110,7 @@
     <noscript>
       <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" %>
       <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Crimson+Text:400" %>
+      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese" %>
     </noscript>
   </body>
 </html>
