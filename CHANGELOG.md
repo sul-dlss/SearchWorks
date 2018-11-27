@@ -166,7 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.11...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.12...HEAD
+[3.3.12]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.11...v3.3.12
 [3.3.11]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...v3.3.11
 [3.3.10]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...v3.3.10
 [3.3.9]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.8...v3.3.9
