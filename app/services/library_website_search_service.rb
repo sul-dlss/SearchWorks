@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LibraryWebsiteSearchService < AbstractSearchService
   def initialize(options = {})
     options[:query_url] ||= Settings.LIBRARY_WEBSITE_QUERY_API_URL.to_s

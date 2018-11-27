@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Uses the Blacklight JSON API to search and then extracts select EDS fields
 class ArticleSearchService < AbstractSearchService
   def initialize(options = {})

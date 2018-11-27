@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module QuickSearch
   class CatalogSearcher < QuickSearch::Searcher
     delegate :results, :total, :facets, to: :@response
