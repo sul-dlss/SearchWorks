@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-## [3.3.12] - 2018-11-27
+## [3.3.12] - 2018-11-28
 ### Added
 ### Changed
 - Improves search performance by pushing additional work into the indexer [#2043](https://github.com/sul-dlss/SearchWorks/pull/2043)
