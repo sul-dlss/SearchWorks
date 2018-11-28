@@ -12,6 +12,7 @@ describe 'quick_search/search/_result_details.html.erb' do
       r.fulltext_link_html = '<a href="#">Link</a>'
     end
   end
+
   before do
     without_partial_double_verification do
       allow(view).to receive(:result).and_return(result)

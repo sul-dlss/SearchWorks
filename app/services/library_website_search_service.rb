@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LibraryWebsiteSearchService < AbstractSearchService
   def initialize(options = {})
     options[:query_url] ||= Settings.LIBRARY_WEBSITE_QUERY_API_URL.to_s
@@ -12,7 +14,7 @@ class LibraryWebsiteSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    HIGHLIGHTED_FACET_FIELD = 'document_type_facet'.freeze
+    HIGHLIGHTED_FACET_FIELD = 'document_type_facet'
     HIGHLIGHTED_FACET_CLASS = LibraryWebsiteSearchService::HighlightedFacetItem
     QUERY_URL = Settings.LIBRARY_WEBSITE_QUERY_API_URL.freeze
 
@@ -24,8 +26,10 @@ class LibraryWebsiteSearchService < AbstractSearchService
     def results
       doc.css('.search-results .views-row').first(Settings.MAX_RESULTS).collect do |hit|
         next if hit.blank?
+
         title = hit.at_css('.views-field-title .field-content a')
         next if title.blank?
+
         result = AbstractSearchService::Result.new
         result.title = title.text
         result.link = title['href']
@@ -37,9 +41,9 @@ class LibraryWebsiteSearchService < AbstractSearchService
 
     # @return [Array<Hash>] mimics Solr facets response
     def facets
-      facet_response = [ {
+      facet_response = [{
         'name' => HIGHLIGHTED_FACET_FIELD
-      } ]
+      }]
       doc.css('.facetapi-facetapi-links').each do |facet_group|
         facet_response.first['items'] = parse_facet_group(facet_group)
       end
@@ -57,11 +61,12 @@ class LibraryWebsiteSearchService < AbstractSearchService
       facet_group.css('li').collect do |facet|
         href = facet.at_css('a')['href']
         match = facet.at_css('a').text.to_s.match(/^(.*)\s+\((\d+)\)/)
+        next unless match
         {
           'value' => CGI.parse(URI.parse(href).query)['f[0]'].first, # search term is in the href params
           'label' => match[1].to_s,
           'hits' => match[2].to_i
-        } if match
+        }
       end.compact
     end
   end

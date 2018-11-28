@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Uses the Blacklight JSON API to search and then extracts select EDS fields
 class ArticleSearchService < AbstractSearchService
   def initialize(options = {})
@@ -7,7 +9,7 @@ class ArticleSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'.freeze
+    HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'
     QUERY_URL = Settings.EDS_QUERY_URL
 
     def total
@@ -19,7 +21,7 @@ class ArticleSearchService < AbstractSearchService
       solr_docs.collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc['eds_title']
-        result.link = Settings.EDS_FETCH_URL.to_s % { id: doc['id'] }
+        result.link = format(Settings.EDS_FETCH_URL.to_s, id: doc['id'])
         result.id = doc['id']
         result.fulltext_link_html = doc['fulltext_link_html']
         result.description = doc['eds_composed_title']

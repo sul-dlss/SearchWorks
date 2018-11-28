@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module QuickSearch
   class ArticleSearcher < QuickSearch::Searcher
     delegate :results, :total, :facets, to: :search
@@ -7,7 +9,7 @@ module QuickSearch
     end
 
     def loaded_link
-      Settings.EDS_QUERY_URL.to_s % { q: CGI.escape(q.to_s) }
+      format(Settings.EDS_QUERY_URL.to_s, q: CGI.escape(q.to_s))
     end
   end
 end

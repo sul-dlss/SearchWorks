@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe CatalogSearchService do
   subject(:service) { described_class.new }
+
   let(:response) { JSON.dump(response: { docs: [] }) }
   let(:query) { CatalogSearchService::Request.new('my query') }
 
@@ -24,7 +27,7 @@ RSpec.describe CatalogSearchService do
       let(:addl_facet_details) { service.search(query).additional_facet_details('blah') }
 
       context 'when the facet data is present' do
-        let(:facet_data) { [{ 'name' => 'format_main_ssim', 'items' => [{ 'label' => 'Database', 'hits' => 123 }]}] }
+        let(:facet_data) { [{ 'name' => 'format_main_ssim', 'items' => [{ 'label' => 'Database', 'hits' => 123 }] }] }
 
         it 'has hits returned from the facet' do
           expect(addl_facet_details.hits).to eq 123
@@ -36,7 +39,7 @@ RSpec.describe CatalogSearchService do
       end
 
       context 'when the facet does not have any hits' do
-        let(:facet_data) { [{ 'name' => 'format_main_ssim', 'items' => [{ 'label' => 'Database', 'hits' => '0' }]}] }
+        let(:facet_data) { [{ 'name' => 'format_main_ssim', 'items' => [{ 'label' => 'Database', 'hits' => '0' }] }] }
 
         it { expect(addl_facet_details).to be_nil }
       end

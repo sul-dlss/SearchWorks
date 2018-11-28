@@ -83,6 +83,8 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'webmock'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do

@@ -8,6 +8,7 @@ describe 'shared/_header.html.erb' do
       allow(view).to receive(:root_path).and_return('/')
     end
   end
+
   it 'renders user links' do
     render
     expect(rendered).to have_link 'My Account'

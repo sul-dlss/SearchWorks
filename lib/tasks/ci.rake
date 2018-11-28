@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Run continuous integration build'
 task ci: %i[environment] do
   if Rails.env.test?

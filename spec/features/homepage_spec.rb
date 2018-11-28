@@ -6,6 +6,7 @@ feature 'Homepage' do
   before do
     visit quick_search_path
   end
+
   scenario 'has links to various search contexts' do
     within '.bento-panels' do
       expect(page).to have_css(

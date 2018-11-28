@@ -6,6 +6,7 @@ describe 'quick_search/search/_module_heading.html.erb' do
   let(:catalog) do
     double('QuickSearch::CatalogSearcher', loaded_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
   end
+
   before do
     without_partial_double_verification do
       allow(view).to receive(:service_name).and_return('catalog')
@@ -14,6 +15,7 @@ describe 'quick_search/search/_module_heading.html.erb' do
     end
     render
   end
+
   it 'renders if there are no results' do
     expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
     expect(rendered).to have_css('.result-set-subheading', text: /Books/)
