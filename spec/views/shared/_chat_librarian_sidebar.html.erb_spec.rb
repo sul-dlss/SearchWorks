@@ -8,7 +8,11 @@ describe 'shared/_chat_librarian_sidebar.html.erb' do
       allow(view).to receive(:on_campus_or_su_affiliated_user?).and_return true
       render
     end
-    it 'should have correct data attributes' do
+    it 'renders a link to chat' do
+      expect(rendered).to have_css 'a', text: 'Chat with a librarian'
+    end
+
+    it 'has correct data attributes' do
       expect(rendered).to have_css('[data-jid="ic@chat.libraryh3lp.com"]')
       expect(rendered).to have_css('[data-library-h3lp]')
       expect(rendered).to have_css('[data-hours-route=\'/hours/IC\']')
@@ -22,6 +26,7 @@ describe 'shared/_chat_librarian_sidebar.html.erb' do
     end
     it 'renders alternative view' do
       expect(rendered).to have_css 'h3', text: 'Chat with a librarian'
+      expect(rendered).not_to have_css 'a', text: 'Chat with a librarian'
       expect(rendered).to have_css 'a', text: 'Login to access chat assistance.'
     end
   end
