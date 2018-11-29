@@ -27,7 +27,7 @@ describe 'Facets' do
         end
       end
     end
-    
+
     context 'other libraries' do
       it 'does not render the location facet' do
         visit root_path

@@ -78,7 +78,7 @@ describe FeedbackMailer do
   describe 'submit_connection' do
     describe 'with all fields' do
       let(:ip) { '123.43.54.123' }
-      let(:params) do 
+      let(:params) do
         {
           name: 'Mildred Turner ',
           to: 'test@test.com',

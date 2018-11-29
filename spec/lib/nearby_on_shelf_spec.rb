@@ -12,7 +12,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     title_sort: 'title2',
     shelfkey: ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
     preferred_barcode: "3610521",
-    item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore", 
+    item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore",
                       "3610522 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- www -|- DK340.3 .B2 -|- ignore"]
   }) }
   let(:doc2) { SolrDocument.new({
@@ -23,7 +23,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     title_sort: 'title1',
     shelfkey: ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
     preferred_barcode: "3610511",
-    item_display: ["3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- zzz -|- DK340.3 .A1 -|- ignore", 
+    item_display: ["3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- zzz -|- DK340.3 .A1 -|- ignore",
                       "3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore"]
   }) }
   let(:doc3) { SolrDocument.new({
@@ -64,7 +64,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
 
   describe "get_item_display" do
     let(:doc) { {
-      item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore", 
+      item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore",
                         "3610522 -|- SAL3 -|- STACKS -|- -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- ignore -|- ignore -|- ignore"]
     } }
 
@@ -91,7 +91,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       term4 = { "ddd" => 4 }
       allow(nearby_obj).to receive(:get_next_terms).with("aaa", "foo", 4).and_return([term1, term2, term3, term4])
     end
-    
+
     it "should convert the returned structure from Solr into an array of terms" do
       expect(terms_array).to be_an_instance_of(Array)
       terms_array.each { |e| expect(e).to be_an_instance_of(String) }
@@ -115,7 +115,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     it "should return empty hash if field is not shelfkey or callnum_reverse sort" do
       expect(nearby_obj.send(:get_spine_hash_from_doc, doc1, ['aaa'], "building")).to be_empty
     end
-    
+
     it "should return empty hash if doc has no relevant item for display" do
       expect(nearby_obj.send(:get_spine_hash_from_doc, doc1, ['aaa'], shelfkey_field)).to be_empty
     end
@@ -123,27 +123,27 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     it "should retrieve same spine for reverse_shelfkey value as for corresponding shelfkey value" do
       spine_hash_doc3_rev = nearby_obj.send(:get_spine_hash_from_doc, doc3, "vvv", reverse_shelfkey_field)
       expect(spine_hash_doc3_rev).to eq spine_hash_doc3
-    end      
+    end
 
     describe "spine text (the values for the hash)" do
       it "should only be present when shelfkey matches desired list" do
-        spine_hash_doc3.values.each { |spine|  
+        spine_hash_doc3.values.each { |spine|
           expect(spine[:holding].callnumber).not_to match /DK340\.3 \.A2 C4/
         }
       end
-      
+
       it "should always have a call number" do
         all.values.each { |spine|
           expect(spine[:holding].callnumber).to match /DK340\.3 /
         }
       end
       it "should always have a library building" do
-        all.values.each { |spine|  
+        all.values.each { |spine|
           expect(spine[:holding].library).to match /(green|sal3)/i
         }
       end
       it "should always have a location" do
-        all.values.each { |spine|  
+        all.values.each { |spine|
           expect(spine[:holding].home_location).to match /Stacks/i
         }
       end
@@ -155,7 +155,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         spine_hash_doc4.values.each { |e| expect(e[:holding].shelfkey).to match /dk  3400.3.*/ and expect(e[:holding].reverse_shelfkey).to match /[v-z]{3}/ }
       end
     end
-    
+
     describe "sort keys for spines (the hash keys)" do
       it "should have multiple keys for multiple desired items (unless key collisions)" do
          expect(spine_hash_doc1.keys.size).to eq 2
@@ -203,7 +203,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         expect(spine_hash_doc4.keys[0]).to match /^.{100} -\|- title3 {94} -\|- 9999 -\|- /
       end
       it "should have ckey after pub year to allow for collapse docs with the same call number, title, pub date, and ckey if they come up" do
-        all.keys.each { |sortkey|  
+        all.keys.each { |sortkey|
           expect(sortkey).to match /^.{100} -\|- .{100} -\|- \d{4} -\|- .{20}/
         }
       end
@@ -213,12 +213,12 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         }
       end
     end
-    
+
   end # specs for get_spine_hash_from_doc
 
   describe "get_spines_from_field_values" do
     let(:desired_shelfkeys) { ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000', 'dk  3400.300000 c0.300000'] }
-    
+
     let(:spines) { nearby_obj.send(:get_spines_from_field_values, desired_shelfkeys, shelfkey_field) }
 
     let(:desired_rev_shelfkeys) { ['xxx', 'vvv', 'yyy'] }
@@ -237,12 +237,12 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     it "should return an Array of Hashs" do
       expect(spines).to be_an_instance_of(Array)
       expect(spines_preceding).to be_an_instance_of(Array)
-      combined_spines.each { |spine| 
+      combined_spines.each { |spine|
         expect(spine).to be_an_instance_of(Hash)
       }
     end
     it "should not return nil or zero-length list items" do
-      combined_spines.each { |spine| 
+      combined_spines.each { |spine|
         expect(spine).to be_present
       }
     end
@@ -281,13 +281,13 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         end
       }
       expect(count > 1).to be_truthy
-    end    
+    end
 #    it "should ensure that Solr rows param is large enough to get all the matching docs" do
 #      pending ("in code, need to use term occurrence counts and make sure Solr rows param is big enough")
 #    end
   end # get_spines_from_field_values
-  
-  
+
+
   describe "get_next_spines_from_field" do
     let(:test_doc1) { SolrDocument.new({
       id: '111',
@@ -332,7 +332,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       reverse_shelfkey: ['zzz'],
       item_display: ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- zzz -|- DK340.3 .C3 -|- ignore"]
     }) }
-    
+
     let(:term1) { { 'dk  3400.300000 a0.100000' => 1 } }
     let(:term2) { { 'dk  3400.300000 b0.100000' => 2 } }
     let(:term3) { { 'dk  3400.300000 b0.200000' => 3 } }
@@ -344,7 +344,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     let(:desired_rev_shelfkeys) { [rterm2.keys[0], rterm3.keys[0]] }
 
     let(:shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, term1.keys[0], shelfkey_field, 2, nil) }
-    
+
     let(:reverse_shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, rterm1.keys[0], reverse_shelfkey_field, 2, nil) }
 
     before do
@@ -352,7 +352,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       allow(nearby_obj).to receive(:get_next_terms).at_least(2).times { |start_val, field, how_many|
         result = []
         case field
-          when shelfkey_field  
+          when shelfkey_field
             case start_val
               when term1.keys[0] then result = [term1, term2, term3]
               when 'zzzz' then result = []
@@ -368,18 +368,18 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       allow(nearby_obj).to receive(:get_docs_for_field_values).at_least(3).times { |desired_vals, field|
         result = []
         case field
-          when shelfkey_field 
+          when shelfkey_field
             result = case desired_vals
               when desired_shelfkeys then [test_doc1, test_doc2]
               when [] then []
             end
-          when reverse_shelfkey_field 
+          when reverse_shelfkey_field
             result = case desired_vals
               when desired_rev_shelfkeys then [test_doc1, test_doc3, test_doc4]
             end
         end
         result
-      }   
+      }
     end # before each
 
     it "should return an Array" do
@@ -390,10 +390,10 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(nearby_obj.send(:get_next_spines_from_field, 'zzzz', shelfkey_field, 3, nil)).to eq []
     end
     it "should return spines for the requested number of field values" do
-      shelfkey_array.each { |spine_text|  
+      shelfkey_array.each { |spine_text|
         expect(spine_text[:holding].callnumber).to match /(DK340\.3 \.B1|DK340\.3 \.B2)/
       }
-      reverse_shelfkey_array.each { |spine_text|  
+      reverse_shelfkey_array.each { |spine_text|
         expect(spine_text[:holding].callnumber).to match /(DK340\.3 \.B2|DK340\.3 \.C3)/
       }
     end
@@ -413,7 +413,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(reverse_shelfkey_array[2][:holding].callnumber).to match /^DK340\.3 \.C3?/
     end
   end # get_next_spines_from_field
-  
+
   describe "get_nearby_items" do
     let(:doc1) { SolrDocument.new({
       id: 'doc1',
@@ -425,7 +425,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       reverse_shelfkey: ['vvv', 'www'],
       preferred_barcode: "3610521",
       item_display: ["3610521 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- vvv -|- DK340.3 .B2 -|- ignore",
-                        "3610522 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore"]                           
+                        "3610522 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore"]
     }) }
     let(:doc2) { SolrDocument.new({
       id: 'doc2',
@@ -437,7 +437,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       reverse_shelfkey: ['www', 'yyy'],
       preferred_barcode: "3610511",
       item_display: ["3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore",
-                        "3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- yyy -|- DK340.3 .A1 -|- ignore", 
+                        "3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- yyy -|- DK340.3 .A1 -|- ignore",
                         "3610513 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore"]
     }) }
     let(:doc3) { SolrDocument.new({
@@ -463,7 +463,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       item_display: ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- uuu -|- DK340.3 .C3 -|- ignore",
                         "3610542 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.2 .A1 -|- dk  3400.200000 a0.100000 -|- zzz -|- DK340.2 .A1 -|- ignore",
                         "3610543 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.1 .A1 -|- dk  3400.100000 a0.100000 -|- ~~~ -|- DK340.1 .A1 -|- ignore"
-                        ] 
+                        ]
     }) }
     let(:doc1_set2) { SolrDocument.new({
       id: 'doc1_set2',
@@ -508,7 +508,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       preferred_barcode: "111",
       item_display: ["111 -|- GREEN -|- STACKS -|- -|- -|- EEE -|- eee -|- ggg -|- EEE -|- ignore",
                         "112 -|- SAL3 -|- STACKS -|- -|- -|- EEE -|- eee -|- ggg -|- EEE -|- ignore"
-                        ] 
+                        ]
     }) }
     let(:doc2_multi_set1) { SolrDocument.new({
       id: 'doc2_multi_set1',
@@ -571,7 +571,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     let(:rterm6) { { rev_sk6 => 1 } }
     let(:chosen_rev_sk) { rev_sk4 }
     let(:chosen_rev_shelfkeys) { [rev_sk5, rev_sk6] }
-    
+
     # given doc2_set2 as the starting point, set up mocks for Solr calls
     let(:sk7) { "bbb" }
     let(:sk8) { "ccc" }
@@ -588,7 +588,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     let(:rterm8) { { rev_sk8 => 1 } }
     let(:set2_rev_sk) { rev_sk7 }
     let(:set2_rev_shelfkeys) { [rev_sk8] }
-    
+
     # given doc2_multi_set1 as the starting point, set up mocks for Solr calls
     let(:sk10) { "fff" }
     let(:sk11) { "ggg" }
@@ -612,7 +612,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     let(:nearby_set1) { nearby_obj.send(:get_nearby_items, doc2[:item_display], doc2[:preferred_barcode], how_many_before, how_many_after, page) }
     let(:nearby_set2) { nearby_obj.send(:get_nearby_items, doc2_set2[:item_display], doc2_set2[:preferred_barcode], how_many_before, how_many_after, page) }
     let(:nearby_multi_set1) { nearby_obj.send(:get_nearby_items, doc2_multi_set1[:item_display], doc2_multi_set1[:preferred_barcode], how_many_before, how_many_after, page) }
-    
+
     # arrays of callnums
     let(:auto_nearby_callnums) {
       nearby_set1.map do |spine|
@@ -632,19 +632,19 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       allow(nearby_obj).to receive(:get_next_terms).at_least(3).times { |start_val, field, how_many|
         result = []
         case field
-          when shelfkey_field  
+          when shelfkey_field
             case start_val
               when auto_sel_sk then result = [term1, term2, term3]
-              when chosen_sk then result = [term4, term5, term1]         
-              when set2_sk then result = [term7, term8, term9]    
-              when multi_set1_sk then result = [term10, term11, term12]  
+              when chosen_sk then result = [term4, term5, term1]
+              when set2_sk then result = [term7, term8, term9]
+              when multi_set1_sk then result = [term10, term11, term12]
             end
           when reverse_shelfkey_field
             case start_val
               when auto_sel_rev_sk then result = [rterm1, rterm2, rterm3]
-              when chosen_rev_sk then result = [rterm4, rterm5, rterm6]         
-              when set2_rev_sk then result = [rterm7, rterm8]      
-              when multi_set1_rev_sk then result = [rterm10, rterm11]   
+              when chosen_rev_sk then result = [rterm4, rterm5, rterm6]
+              when set2_rev_sk then result = [rterm7, rterm8]
+              when multi_set1_rev_sk then result = [rterm10, rterm11]
             end
         end
         result
@@ -653,7 +653,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       allow(nearby_obj).to receive(:get_docs_for_field_values).at_least(4).times { |desired_vals, field|
         result = []
         case field
-          when shelfkey_field 
+          when shelfkey_field
             result = case desired_vals
               when [auto_sel_sk] then [doc1, doc2]
               when auto_sel_shelfkeys then [doc1, doc3, doc4]
@@ -717,8 +717,8 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(nearby_multi_set1.length).to eq 4
       expect(nearby_multi_set1[0][:holding].callnumber).to eq "EEE"
       expect(nearby_multi_set1[2][:holding].callnumber).to "GGG"
-    end  
-    
+    end
+
     it "should have spines sorted properly, with indicated item in the center" do
       skip('Test ported from old codebase needs to be fixed')
       # indicated callnum in center?
@@ -728,7 +728,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(auto_nearby_callnums[2]).to eq "DK340.3 .A1"
       expect(auto_nearby_callnums[3]).to eq "DK340.3 .A2 C4"
       expect(auto_nearby_callnums[4]).to eq "DK340.3 .B1"
-      
+
       # chosen bumps the boundary and is less one preceding callnum
       expect(set2_callnums[0]).to eq "AAA"
       expect(set2_callnums[1]).to eq "BBB"
@@ -741,7 +741,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         id: 'doc5',
         title_245a_display: 'title5',
         author_person_display: 'person5',
-        item_display: [] 
+        item_display: []
       }
       _doc_no_good_callnums = {
         id: 'doc6',
@@ -749,7 +749,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
         author_person_display: 'person6',
         shelfkey: ['whatever6'],
         reverse_shelfkey: ['zzz'],
-        item_display: [nil, nil, nil, nil] 
+        item_display: [nil, nil, nil, nil]
       }
       doc_no_items = SolrDocument.new(_doc_no_items)
       doc_no_good_callnums = SolrDocument.new(_doc_no_good_callnums)
@@ -758,4 +758,3 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
     end
   end # get_nearby_items
 end
-

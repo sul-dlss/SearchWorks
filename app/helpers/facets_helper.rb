@@ -3,7 +3,7 @@ module FacetsHelper
   include BlacklightRangeLimit::ViewHelperOverride
 
   def collapse_home_page_facet?(facet)
-    ['language', 'building_facet', 'format_main_ssim'].include? facet.field 
+    ['language', 'building_facet', 'format_main_ssim'].include? facet.field
   end
 
   def render_single_facet(facet_name, options = {})

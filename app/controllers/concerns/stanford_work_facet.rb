@@ -29,7 +29,7 @@ module StanfordWorkFacet
         facet.if = true
       end
   end
-  
+
   def genre_facet_includes_thesis_value?
     params[:f] &&
       params[:f][:genre_ssim] &&

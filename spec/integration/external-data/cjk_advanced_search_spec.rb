@@ -180,4 +180,3 @@ describe "CJK Advanced Search", js: true, feature: true, "data-integration": tru
     end
   end
 end
-

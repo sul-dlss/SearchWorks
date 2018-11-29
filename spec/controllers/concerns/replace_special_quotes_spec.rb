@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe ReplaceSpecialQuotes do
   let(:controller) { double('CatalogContrller') }
-  let(:q) { 'query' }  
+  let(:q) { 'query' }
 
   before do
     controller.extend(ReplaceSpecialQuotes)

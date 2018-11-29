@@ -34,7 +34,7 @@ class NearbyOnShelf
 
       if page.nil? or page.to_i == 0
         # get preceding bookspines
-        items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", before, nil)          
+        items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", before, nil)
         # TODO: can we avoid this extra call to Solr but keep the code this clean?
         # What is the purpose of this call?  To just return the original document?
         items << get_spines_from_field_values([my_shelfkey], "shelfkey").uniq
@@ -49,9 +49,9 @@ class NearbyOnShelf
       end
       items.flatten
     end
-  end  # get_nearby_items  
-  
-  # given a shelfkey or reverse shelfkey (for a lopped call number), get the 
+  end  # get_nearby_items
+
+  # given a shelfkey or reverse shelfkey (for a lopped call number), get the
   #  text for the next "n" nearby items
   def get_next_spines_from_field(starting_value, field_name, how_many, page)
     number_of_items = how_many
@@ -68,7 +68,7 @@ class NearbyOnShelf
     get_spines_from_field_values(desired_values, field_name)
   end
 
-  # return an array of the next terms in the index for the indicated field and 
+  # return an array of the next terms in the index for the indicated field and
   # starting term. Returned array does NOT include starting term.  Queries Solr (duh).
   def get_next_terms_for_field(starting_term, field_name, how_many = 3)
     result = []
@@ -81,7 +81,7 @@ class NearbyOnShelf
   end
 
   # create an array of sorted html list items containing the appropriate display text
-  #  (analogous to what would be visible if you were looking at the spine of 
+  #  (analogous to what would be visible if you were looking at the spine of
   #  a book on a shelf) from relevant solr docs, given a particular solr
   #  field and value for which to retrieve spine info.
   # Each html list item must match a desired value
@@ -90,23 +90,23 @@ class NearbyOnShelf
       response, docs = search_results(q: { field => desired_values.compact })
       docs.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
-        spines_hash.merge!(hsh) 
+        spines_hash.merge!(hsh)
       end
       result = []
-      spines_hash.keys.sort.each { |sortkey|  
+      spines_hash.keys.sort.each { |sortkey|
         result << spines_hash[sortkey]
       }
       result
   end
 
-  # create a hash with  
-  #     key = sorting key for the spine, 
+  # create a hash with
+  #     key = sorting key for the spine,
   #     value = the html list item containing appropriate display text
-  #  (analogous to what would be visible if you were looking at the spine of 
-  #  a book on a shelf) from a solr doc.  
+  #  (analogous to what would be visible if you were looking at the spine of
+  #  a book on a shelf) from a solr doc.
   #   spine is:  <li> title [(pub year)] [<br/> author] <br/> callnum </li>
   # Each element of the hash must match a desired value in the
-  #   desired_values array for the indicated piece (shelfkey or reverse shelfkey)  
+  #   desired_values array for the indicated piece (shelfkey or reverse shelfkey)
   def get_spine_hash_from_doc(doc, desired_values, field)
     result_hash = {}
     return if doc[:item_display].nil?
@@ -127,7 +127,7 @@ class NearbyOnShelf
         #  separator of " -|- " is for human readability only
         sort_key = "#{callnumber.shelfkey[0, 100].ljust(100)} -|- "
         sort_key << "#{doc[:title_sort][0, 100].ljust(100)} -|- " unless doc[:title_sort].nil?
-      
+
         # pub_year must be inverted for descending sort
         if doc[:pub_date].nil? || doc[:pub_date].length == 0
           sort_key << '9999'
@@ -139,9 +139,9 @@ class NearbyOnShelf
         # We were adding the library to the sortkey. However; if we don't add the library we can easily collapse items that have the same
         # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
         #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
-      
+
         result_hash[sort_key] = { doc: doc, holding: callnumber }
-      end  # end each item display    
+      end  # end each item display
     end
     return result_hash
   end
@@ -170,7 +170,7 @@ class NearbyOnShelf
       result << term_hash
       i = i + 2
     end
-  
+
     result
   end
 
@@ -188,12 +188,12 @@ class NearbyOnShelf
     end
     return item unless item == ""
   end
-  
+
   # return the shelfkey (lopped) piece of the item_display field
   def get_shelfkey(item_display)
     get_item_display_piece(item_display, 6)
   end
-  
+
   # return the reverse shelfkey (lopped) piece of the item_display field
   def get_reverse_shelfkey(item_display)
     get_item_display_piece(item_display, 7)

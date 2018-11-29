@@ -51,7 +51,7 @@ class SelectedDatabases
      },
      { id: "497192",
        subjects: ["Literature", "Humanities"],
-       description: "A bibliography of journal articles, books and dissertations covering literature, language and linguistics, film, folklore, literary theory & criticism, dramatic arts, as well as the historical aspects of printing and publishing." 
+       description: "A bibliography of journal articles, books and dissertations covering literature, language and linguistics, film, folklore, literary theory & criticism, dramatic arts, as well as the historical aspects of printing and publishing."
      },
      { id: "8785205",
        subjects: ["General", "Multidisciplinary"],

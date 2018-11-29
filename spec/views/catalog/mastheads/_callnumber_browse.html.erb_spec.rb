@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "catalog/mastheads/_callnumber_browse.html.erb" do
-  let(:original_doc) { 
+  let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',
       item_display: [
