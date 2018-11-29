@@ -98,7 +98,7 @@ gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.1'
-gem 'rubocop', '~> 0.36'
+gem 'rubocop'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds', '1.0.5' # External vendor, upgrade requires testing
 gem 'whenever' # manages cron jobs
