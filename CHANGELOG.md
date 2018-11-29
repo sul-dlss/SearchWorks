@@ -10,15 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
-- Fix access to Chat with a librarian link #2212
 ### Security
 
-## [3.3.12] - 2018-11-28
+## [3.3.12] - 2018-11-29
 ### Added
 ### Changed
 - Improves search performance by pushing additional work into the indexer [#2043](https://github.com/sul-dlss/SearchWorks/pull/2043)
 ### Removed
 ### Fixed
+- Fix access to Chat with a librarian link #2212
 ### Security
 - Dependency updates to address vulnerabilities in upstream gems [#2215](https://github.com/sul-dlss/SearchWorks/pull/2215)
 
