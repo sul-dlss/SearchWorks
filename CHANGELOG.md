@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+- Swapped poltergeist out with chromedriver (a testing dependency) [#2218](https://github.com/sul-dlss/SearchWorks/pull/2218)
 ### Removed
 ### Fixed
 ### Security
