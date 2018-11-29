@@ -140,7 +140,7 @@ class NearbyOnShelf
         # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
         #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
       
-        result_hash[sort_key] = { :doc => doc, :holding => callnumber }
+        result_hash[sort_key] = { doc: doc, holding: callnumber }
       end  # end each item display    
     end
     return result_hash

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Backend lookup", type: :feature, js: true, :"data-integration" => true do
+describe "Backend lookup", type: :feature, js: true, "data-integration": true do
   before do
     visit root_path
   end

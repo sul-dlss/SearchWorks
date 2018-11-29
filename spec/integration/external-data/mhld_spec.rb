@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "MHLD", feature: true, :"data-integration" => true do
+describe "MHLD", feature: true, "data-integration": true do
   describe "record view" do
     it "should be present in the location access panel" do
       visit solr_document_path('492502')

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Selected Databases Access Point", :"data-integration" => true do
+feature "Selected Databases Access Point", "data-integration": true do
   before do
     visit selected_databases_path
   end

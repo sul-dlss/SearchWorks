@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Library location hours", feature: true, js: true, :"data-integration" => true do
+describe "Library location hours", feature: true, js: true, "data-integration": true do
   it "should display today's hours" do
     visit solr_document_path("10365287")
     within "div.location-hours-today" do

@@ -2,7 +2,7 @@ require 'fixtures_indexer'
 
 namespace :searchworks do
   desc "Run SearchWorks local installation steps"
-  task :install => [:environment] do
+  task install: [:environment] do
     Rake::Task["db:migrate"].invoke
     SolrWrapper.wrap do |solr|
       Rake::Task['searchworks:copy_solr_dependencies'].invoke
@@ -82,14 +82,14 @@ namespace :searchworks do
   end
 
   desc "Prune expired files in EDS cache"
-  task :prune_eds_cache => [:environment] do |t, args|
+  task prune_eds_cache: [:environment] do |t, args|
     if eds_cache
       puts "Cleaning cache in #{eds_cache.cache_path}"
       eds_cache.cleanup
     end
   end
   desc "Clear all files in EDS cache"
-  task :clear_eds_cache => [:environment] do |t, args|
+  task clear_eds_cache: [:environment] do |t, args|
     if eds_cache
       puts "Clearing cache in #{eds_cache.cache_path}"
       eds_cache.clear

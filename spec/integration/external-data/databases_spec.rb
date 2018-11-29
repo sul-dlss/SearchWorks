@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Databases Access Point", feature: true, :"data-integration" => true do
+describe "Databases Access Point", feature: true, "data-integration": true do
   it "should display the database specific facet" do
     skip("Needs format/resource-type facet to settle down")
     visit root_path

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'mobile api', :'data-integration' => true do
+describe 'mobile api', 'data-integration': true do
   describe 'show page' do
     it 'shows correct mobile elements' do
       visit solr_document_path('7861312', format: 'mobile')

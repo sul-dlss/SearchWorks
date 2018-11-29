@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Gallery View", feature: true, :"data-integration" => true  do
+describe "Gallery View", feature: true, "data-integration": true  do
   describe 'Callnumber/Library Bar' do
     it 'should display the first call number and a single library name if a record only exists at one library' do
       visit search_catalog_path(view: 'gallery', q: '7861312')

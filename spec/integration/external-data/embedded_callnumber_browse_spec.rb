@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "Callnumber browse", js: true, feature: true, :"data-integration" => true do
+describe "Callnumber browse", js: true, feature: true, "data-integration": true do
   it "should have an embedded panel on the record page" do
     visit solr_document_path("9696118")
     within(".record-browse-nearby") do

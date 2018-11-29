@@ -52,20 +52,20 @@ describe ApplicationHelper do
 
     describe "link_to" do
       it "should return a valid label and fields" do
-        data = link_to_data_with_label(temp_doc, "Food:", "key", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })
+        data = link_to_data_with_label(temp_doc, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(data[:label]).to eq("Food:") and
         expect(data[:fields].first).to match(/<a href=.*fudgesicles.*search_field=search_author.*>fudgesicles<\/a>/)
       end
       it "should handle data from the index in an array" do
-        fields = link_to_data_with_label(temp_doc_array, "Food:", "key", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })[:fields]
+        fields = link_to_data_with_label(temp_doc_array, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })[:fields]
         expect(fields.include?("<a href=\"/?q=%22fudgesicles1%22&amp;search_field=search_author\">fudgesicles1</a>")).to be_truthy and
         expect(fields.include?("<a href=\"/?q=%22fudgesicles2%22&amp;search_field=search_author\">fudgesicles2</a>")).to be_truthy
       end
       it "should display the linked vernacular equivalent for a field if one exists" do
-        expect(link_to_data_with_label(temp_doc_vern, "Food:", "key", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })[:vernacular].first).to match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
+        expect(link_to_data_with_label(temp_doc_vern, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })[:vernacular].first).to match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
       end
       it "should handle vernacular data from the index in an array" do
-        vern = link_to_data_with_label(temp_doc_vern_array, "Food:", "key", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })[:vernacular]
+        vern = link_to_data_with_label(temp_doc_vern_array, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })[:vernacular]
         expect(vern.include?("<a href=\"/?q=%22fudgeyzicles1%22&amp;search_field=search_author\">fudgeyzicles1</a>")).to be_truthy and
         expect(vern.include?("<a href=\"/?q=%22fudgeyzicles2%22&amp;search_field=search_author\">fudgeyzicles2</a>")).to be_truthy
       end

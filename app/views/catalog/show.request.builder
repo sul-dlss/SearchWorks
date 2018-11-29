@@ -1,4 +1,4 @@
-xml.instruct! :xml, :version => "1.0", :encoding => "UTF-8"
+xml.instruct! :xml, version: "1.0", encoding: "UTF-8"
 xml.record {
   if @document.respond_to?(:to_marc)
     author_100 = get_data_from_marc_for_mobile(@document.to_marc, "100")

@@ -31,7 +31,7 @@ module ApplicationHelper
         items << fields
       end
     end
-    return { :label => label, :fields => items, :vernacular => get_indexed_vernacular(doc, field_string) } unless items.empty?
+    return { label: label, fields: items, vernacular: get_indexed_vernacular(doc, field_string) } unless items.empty?
   end
 
   # Generate a dt/dd pair with a link with a label given a field in the SolrDocument
@@ -42,16 +42,16 @@ module ApplicationHelper
     unless fields.nil?
       unless fields[:fields].nil?
         fields[:fields].each do |field|
-          items << link_to(field, url.merge!(:q => "\"#{field}\""))
+          items << link_to(field, url.merge!(q: "\"#{field}\""))
         end
       end
       unless fields[:vernacular].nil?
         fields[:vernacular].each do |field|
-          vern << link_to(field, url.merge!(:q => "\"#{field}\""))
+          vern << link_to(field, url.merge!(q: "\"#{field}\""))
         end
       end
     end
-    return { :label => label, :fields => items, :vernacular => vern } unless (items.empty? and vern.empty?)
+    return { label: label, fields: items, vernacular: vern } unless (items.empty? and vern.empty?)
   end
 
   def get_indexed_vernacular(doc, field)

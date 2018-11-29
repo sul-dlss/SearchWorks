@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Breadcrumb", type: :feature, :"data-integration" => true do
+describe "Breadcrumb", type: :feature, "data-integration": true do
   describe "for collections" do
     it "should display the title of the collection and not the ID" do
       visit solr_document_path('6780453')

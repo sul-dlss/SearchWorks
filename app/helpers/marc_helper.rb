@@ -30,13 +30,13 @@ module MarcHelper
               end
             end
           end
-          fields << { :field => field_text, :vernacular => get_marc_vernacular(marc, field) } unless field_text.blank?
+          fields << { field: field_text, vernacular: get_marc_vernacular(marc, field) } unless field_text.blank?
         end
       end
     else
       unmatched_vern = get_unmatched_vernacular(marc, tag)
     end
-    return { :label => label, :fields => fields, :unmatched_vernacular => unmatched_vern } unless (fields.empty? and unmatched_vern.nil?)
+    return { label: label, fields: fields, unmatched_vernacular: unmatched_vern } unless (fields.empty? and unmatched_vern.nil?)
   end
 
   # Generate dt/dd pair with a link with a label given a marc field
@@ -46,17 +46,17 @@ module MarcHelper
     fields = get_data_with_label_from_marc(marc, label, tag, opts)
     unless fields.nil? or fields[:fields].nil?
       fields[:fields].each do |field|
-        vernacular = link_to(field[:vernacular], url.merge!(:q => "\"#{field[:vernacular]}\"")) unless field[:vernacular].nil?
-        new_field = link_to(field[:field].strip, url.merge!(:q => "\"#{field[:field].strip}\"")) unless field[:field].nil?
-        new_fields << { :field => new_field, :vernacular => vernacular }
+        vernacular = link_to(field[:vernacular], url.merge!(q: "\"#{field[:vernacular]}\"")) unless field[:vernacular].nil?
+        new_field = link_to(field[:field].strip, url.merge!(q: "\"#{field[:field].strip}\"")) unless field[:field].nil?
+        new_fields << { field: new_field, vernacular: vernacular }
       end
       unless fields.nil? or fields[:unmatched_vernacular].nil?
         fields[:unmatched_vernacular].each do |field|
-          new_unmatched_vernacular << link_to(field, url.merge!(:q => "\"#{field}\""))
+          new_unmatched_vernacular << link_to(field, url.merge!(q: "\"#{field}\""))
         end
       end
     end
-    return { :label => label, :fields => new_fields, :unmatched_vernacular => new_unmatched_vernacular } unless (new_fields.empty? and new_unmatched_vernacular.empty?)
+    return { label: label, fields: new_fields, unmatched_vernacular: new_unmatched_vernacular } unless (new_fields.empty? and new_unmatched_vernacular.empty?)
   end
 
   def link_to_contributor_from_marc(marc)
@@ -132,12 +132,12 @@ module MarcHelper
                 link_text << "#{subfield.value} "
               end
             end
-            temp_text << link_to(link_text.strip, search_catalog_path(:q => "\"#{link_text}\"", :search_field => 'search_author'))
+            temp_text << link_to(link_text.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'search_author'))
             temp_text << " #{relator_text.join(" ")}" unless relator_text.blank?
             temp_text << " #{extra_text} " unless extra_text.blank?
             vernacular = get_marc_vernacular(marc, field)
             temp_vern = "\"#{vernacular}\""
-            temp_text << "<br/>#{link_to h(vernacular), search_catalog_path(:q => temp_vern, :search_field => 'search_author')}" unless vernacular.nil?
+            temp_text << "<br/>#{link_to h(vernacular), search_catalog_path(q: temp_vern, search_field: 'search_author')}" unless vernacular.nil?
             contributors << temp_text
           end
         end
@@ -160,7 +160,7 @@ module MarcHelper
                       link_text << "#{subfield.value} "
                     end
                   end
-                  vern_text << link_to(h(link_text.strip), :q => "\"#{link_text}\"", :action => 'index', :search_field => 'author_search')
+                  vern_text << link_to(h(link_text.strip), q: "\"#{link_text}\"", action: 'index', search_field: 'author_search')
                   vern_text << relator_text unless relator_text.blank?
                   vern_text << "</dd>"
               end
@@ -272,7 +272,7 @@ module MarcHelper
     new_vern = vern unless vern.empty?
     new_fields = fields unless fields.empty?
     new_unmatched_vern = unmatched_vern unless unmatched_vern.empty?
-    return { :label => "Contents", :fields => new_fields, :vernacular => new_vern, :unmatched_vernacular => new_unmatched_vern } unless (new_fields.nil? and new_vern.nil? and new_unmatched_vern.nil?)
+    return { label: "Contents", fields: new_fields, vernacular: new_vern, unmatched_vernacular: new_unmatched_vern } unless (new_fields.nil? and new_vern.nil? and new_unmatched_vern.nil?)
   end
 
   # Generate hierarchical structure of subject headings from marc
@@ -302,7 +302,7 @@ module MarcHelper
           link_text << field.strip
           title_text << " - " unless field == subjects[i].first
           title_text << "#{field.strip}"
-          text << link_to(field.strip, search_catalog_path(:q => "\"#{link_text}\"", :search_field => 'subject_terms'), :title => title_text)
+          text << link_to(field.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'subject_terms'), title: title_text)
           text << " &gt; ".html_safe unless field == subjects[i].last
         end
         text << "</dd>".html_safe
@@ -387,21 +387,21 @@ module MarcHelper
 
   def marc_264_labels
     {
-      :" 0" => "Production",
-      :"20" => "Former production",
-      :"30" => "Current production",
-      :" 1" => "Publication",
-      :"21" => "Former publication",
-      :"31" => "Current publication",
-      :" 2" => "Distribution",
-      :"22" => "Former distribution",
-      :"32" => "Current distribution",
-      :" 3" => "Manufacture",
-      :"23" => "Former manufacture",
-      :"33" => "Current manufacture",
-      :" 4" => "Copyright notice",
-      :"24" => "Former copyright",
-      :"34" => "Current copyright"
+      " 0": "Production",
+      "20": "Former production",
+      "30": "Current production",
+      " 1": "Publication",
+      "21": "Former publication",
+      "31": "Current publication",
+      " 2": "Distribution",
+      "22": "Former distribution",
+      "32": "Current distribution",
+      " 3": "Manufacture",
+      "23": "Former manufacture",
+      "33": "Current manufacture",
+      " 4": "Copyright notice",
+      "24": "Former copyright",
+      "34": "Current copyright"
     }
   end
 
@@ -435,10 +435,10 @@ module MarcHelper
   end
 
   def render_field_from_marc(fields, opts = {})
-    render "catalog/field_from_marc", :fields => fields, :options => opts
+    render "catalog/field_from_marc", fields: fields, options: opts
   end
 
   def render_field_list_from_marc(fields, opts = {})
-    render "catalog/field_list_from_marc", :fields => fields, :options => opts
+    render "catalog/field_list_from_marc", fields: fields, options: opts
   end
 end

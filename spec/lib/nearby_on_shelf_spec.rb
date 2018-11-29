@@ -1,50 +1,50 @@
 require "spec_helper"
 
-describe "Stanford::NearbyOnShelf", :"data-integration" => true do
-  let(:nearby_obj) { NearbyOnShelf.new("ajax", Blacklight::Configuration.new, { :start => "na 1234", :field => 'reverse_shelfkey', :num => 5 }) }
+describe "Stanford::NearbyOnShelf", "data-integration": true do
+  let(:nearby_obj) { NearbyOnShelf.new("ajax", Blacklight::Configuration.new, { start: "na 1234", field: 'reverse_shelfkey', num: 5 }) }
   let(:shelfkey_field) { "shelfkey" }
   let(:reverse_shelfkey_field) { "reverse_shelfkey" }
   let(:doc1) { SolrDocument.new({
-    :id => '111',
-    :title_245a_display => 'title2',
-    :author_corp_display => 'corp2',
-    :pub_date => '2002',
-    :title_sort => 'title2',
-    :shelfkey => ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
-    :preferred_barcode => "3610521",
-    :item_display => ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore", 
+    id: '111',
+    title_245a_display: 'title2',
+    author_corp_display: 'corp2',
+    pub_date: '2002',
+    title_sort: 'title2',
+    shelfkey: ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
+    preferred_barcode: "3610521",
+    item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore", 
                       "3610522 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- www -|- DK340.3 .B2 -|- ignore"]
   }) }
   let(:doc2) { SolrDocument.new({
-    :id => '222',
-    :title_245a_display => 'title1',
-    :author_person_display => 'person1',
-    :pub_date => '2001',
-    :title_sort => 'title1',
-    :shelfkey => ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
-    :preferred_barcode => "3610511",
-    :item_display => ["3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- zzz -|- DK340.3 .A1 -|- ignore", 
+    id: '222',
+    title_245a_display: 'title1',
+    author_person_display: 'person1',
+    pub_date: '2001',
+    title_sort: 'title1',
+    shelfkey: ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
+    preferred_barcode: "3610511",
+    item_display: ["3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- zzz -|- DK340.3 .A1 -|- ignore", 
                       "3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore"]
   }) }
   let(:doc3) { SolrDocument.new({
-    :id => '333',
-    :title_245a_display => 'title3',
-    :author_meeting_display => 'meeting3',
-    :pub_date => '2003',
-    :title_sort => 'title3',
-    :shelfkey => ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
-    :preferred_barcode => "361032",
-    :item_display => ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- yyy -|- DK340.3 .A2 C4 -|- ignore",
+    id: '333',
+    title_245a_display: 'title3',
+    author_meeting_display: 'meeting3',
+    pub_date: '2003',
+    title_sort: 'title3',
+    shelfkey: ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
+    preferred_barcode: "361032",
+    item_display: ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- yyy -|- DK340.3 .A2 C4 -|- ignore",
                       "3610531 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- vvv -|- DK340.3 .C3 -|- ignore"]
   }) }
   let(:doc4) { SolrDocument.new({
-    :id => '334',
-    :title_245a_display => 'title3',
-    :author_person_display => 'person1',
-    :title_sort => 'title3',
-    :shelfkey => ['dk  3400.300000 c0.300000'],
-    :preferred_barcode => "3610541",
-    :item_display => ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- vvv -|- DK340.3 .C3 -|- ignore"]
+    id: '334',
+    title_245a_display: 'title3',
+    author_person_display: 'person1',
+    title_sort: 'title3',
+    shelfkey: ['dk  3400.300000 c0.300000'],
+    preferred_barcode: "3610541",
+    item_display: ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- vvv -|- DK340.3 .C3 -|- ignore"]
   }) }
 
   describe "parsing for item_display pieces" do
@@ -64,7 +64,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
 
   describe "get_item_display" do
     let(:doc) { {
-      :item_display => ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore", 
+      item_display: ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore", 
                         "3610522 -|- SAL3 -|- STACKS -|- -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- ignore -|- ignore -|- ignore"]
     } }
 
@@ -290,47 +290,47 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
   
   describe "get_next_spines_from_field" do
     let(:test_doc1) { SolrDocument.new({
-      :id => '111',
-      :title_245a_display => 'title2',
-      :author_corp_display => 'corp2',
-      :pub_date => '2002',
-      :title_sort => 'title2',
-      :shelfkey => ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
-      :reverse_shelfkey => ['yyy', 'xxx'],
-      :item_display => ["3610521 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- yyy -|- DK340.3 .B2 -|- ignore",
+      id: '111',
+      title_245a_display: 'title2',
+      author_corp_display: 'corp2',
+      pub_date: '2002',
+      title_sort: 'title2',
+      shelfkey: ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
+      reverse_shelfkey: ['yyy', 'xxx'],
+      item_display: ["3610521 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- yyy -|- DK340.3 .B2 -|- ignore",
                         "3610522 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore"]
     }) }
     let(:test_doc2) { SolrDocument.new({
-      :id => '222',
-      :title_245a_display => 'title1',
-      :author_person_display => 'person1',
-      :pub_date => '2001',
-      :title_sort => 'title1',
-      :shelfkey => ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
-      :reverse_shelfkey => ['xxx', 'www'],
-      :item_display => ["3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore",
+      id: '222',
+      title_245a_display: 'title1',
+      author_person_display: 'person1',
+      pub_date: '2001',
+      title_sort: 'title1',
+      shelfkey: ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
+      reverse_shelfkey: ['xxx', 'www'],
+      item_display: ["3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore",
                         "3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- www -|- DK340.3 .A1 -|- ignore",
                         "3610513 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- xxx -|- DK340.3 .B1 -|- ignore"]
     }) }
     let(:test_doc3) { SolrDocument.new({
-      :id => '333',
-      :title_245a_display => 'title3',
-      :author_meeting_display => 'meeting3',
-      :pub_date => '2003',
-      :title_sort => 'title3',
-      :shelfkey => ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
-      :reverse_shelfkey => ['vvv', 'zzz'],
-      :item_display => ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- vvv -|- DK340.3 .A2 C4 -|- ignore",
+      id: '333',
+      title_245a_display: 'title3',
+      author_meeting_display: 'meeting3',
+      pub_date: '2003',
+      title_sort: 'title3',
+      shelfkey: ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
+      reverse_shelfkey: ['vvv', 'zzz'],
+      item_display: ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- vvv -|- DK340.3 .A2 C4 -|- ignore",
                         "3610531 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- zzz -|- DK340.3 .C3 -|- ignore"]
     }) }
     let(:test_doc4) { SolrDocument.new({
-      :id => '444',
-      :title_245a_display => 'title3',
-      :author_person_display => 'person1',
-      :title_sort => 'title3',
-      :shelfkey => ['dk  3400.300000 c0.300000'],
-      :reverse_shelfkey => ['zzz'],
-      :item_display => ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- zzz -|- DK340.3 .C3 -|- ignore"]
+      id: '444',
+      title_245a_display: 'title3',
+      author_person_display: 'person1',
+      title_sort: 'title3',
+      shelfkey: ['dk  3400.300000 c0.300000'],
+      reverse_shelfkey: ['zzz'],
+      item_display: ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- zzz -|- DK340.3 .C3 -|- ignore"]
     }) }
     
     let(:term1) { { 'dk  3400.300000 a0.100000' => 1 } }
@@ -416,120 +416,120 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
   
   describe "get_nearby_items" do
     let(:doc1) { SolrDocument.new({
-      :id => 'doc1',
-      :title_245a_display => 'title2',
-      :author_corp_display => 'corp2',
-      :pub_date => '2002',
-      :title_sort => 'something',
-      :shelfkey => ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
-      :reverse_shelfkey => ['vvv', 'www'],
-      :preferred_barcode => "3610521",
-      :item_display => ["3610521 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- vvv -|- DK340.3 .B2 -|- ignore",
+      id: 'doc1',
+      title_245a_display: 'title2',
+      author_corp_display: 'corp2',
+      pub_date: '2002',
+      title_sort: 'something',
+      shelfkey: ['dk  3400.300000 b0.100000', 'dk  3400.300000 b0.200000'],
+      reverse_shelfkey: ['vvv', 'www'],
+      preferred_barcode: "3610521",
+      item_display: ["3610521 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- vvv -|- DK340.3 .B2 -|- ignore",
                         "3610522 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore"]                           
     }) }
     let(:doc2) { SolrDocument.new({
-      :id => 'doc2',
-      :title_245a_display => 'title1',
-      :author_person_display => 'person1',
-      :pub_date => '2001',
-      :title_sort => 'title1',
-      :shelfkey => ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
-      :reverse_shelfkey => ['www', 'yyy'],
-      :preferred_barcode => "3610511",
-      :item_display => ["3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore",
+      id: 'doc2',
+      title_245a_display: 'title1',
+      author_person_display: 'person1',
+      pub_date: '2001',
+      title_sort: 'title1',
+      shelfkey: ['dk  3400.300000 a0.100000', 'dk  3400.300000 b0.100000'],
+      reverse_shelfkey: ['www', 'yyy'],
+      preferred_barcode: "3610511",
+      item_display: ["3610512 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore",
                         "3610511 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A1 -|- dk  3400.300000 a0.100000 -|- yyy -|- DK340.3 .A1 -|- ignore", 
                         "3610513 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- www -|- DK340.3 .B1 -|- ignore"]
     }) }
     let(:doc3) { SolrDocument.new({
-      :id => 'doc3',
-      :title_245a_display => 'title3',
-      :author_meeting_display => 'meeting3',
-      :pub_date => '2003',
-      :title_sort => 'something',
-      :shelfkey => ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
-      :reverse_shelfkey => ['uuu', 'xxx'],
-      :preferred_barcode => "361032",
-      :item_display => ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- xxx -|- DK340.3 .A2 C4 -|- ignore",
+      id: 'doc3',
+      title_245a_display: 'title3',
+      author_meeting_display: 'meeting3',
+      pub_date: '2003',
+      title_sort: 'something',
+      shelfkey: ['dk  3400.300000 a0.200000 c0.400000', 'dk  3400.300000 c0.300000'],
+      reverse_shelfkey: ['uuu', 'xxx'],
+      preferred_barcode: "361032",
+      item_display: ["361032 -|- SAL3 -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .A2 C4 -|- dk  3400.300000 a0.200000 c0.400000 -|- xxx -|- DK340.3 .A2 C4 -|- ignore",
                         "3610531 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- uuu -|- DK340.3 .C3 -|- ignore"]
     }) }
     let(:doc4) { SolrDocument.new({
-      :id => 'doc4',
-      :title_245a_display => 'title3',
-      :author_person_display => 'person1',
-      :title_sort => 'something',
-      :shelfkey => ['dk  3400.300000 c0.300000', 'dk  3400.200000 a0.100000', 'dk  3400.100000 a0.100000'],
-      :reverse_shelfkey => ['uuu', 'zzz', '~~~'],
-      :preferred_barcode => "3610542",
-      :item_display => ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- uuu -|- DK340.3 .C3 -|- ignore",
+      id: 'doc4',
+      title_245a_display: 'title3',
+      author_person_display: 'person1',
+      title_sort: 'something',
+      shelfkey: ['dk  3400.300000 c0.300000', 'dk  3400.200000 a0.100000', 'dk  3400.100000 a0.100000'],
+      reverse_shelfkey: ['uuu', 'zzz', '~~~'],
+      preferred_barcode: "3610542",
+      item_display: ["3610541 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .C3 -|- dk  3400.300000 c0.300000 -|- uuu -|- DK340.3 .C3 -|- ignore",
                         "3610542 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.2 .A1 -|- dk  3400.200000 a0.100000 -|- zzz -|- DK340.2 .A1 -|- ignore",
                         "3610543 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.1 .A1 -|- dk  3400.100000 a0.100000 -|- ~~~ -|- DK340.1 .A1 -|- ignore"
                         ] 
     }) }
     let(:doc1_set2) { SolrDocument.new({
-      :id => 'doc1_set2',
-      :title_245a_display => 'title1',
-      :author_person_display => 'person1',
-      :title_sort => 'something',
-      :shelfkey => ['aaa'],
-      :reverse_shelfkey => ['ppp'],
-      :preferred_barcode => "11",
-      :item_display => ["11 -|- GREEN -|- STACKS -|- -|- -|- AAA -|- aaa -|- ppp -|- AAA -|- ignore"]
+      id: 'doc1_set2',
+      title_245a_display: 'title1',
+      author_person_display: 'person1',
+      title_sort: 'something',
+      shelfkey: ['aaa'],
+      reverse_shelfkey: ['ppp'],
+      preferred_barcode: "11",
+      item_display: ["11 -|- GREEN -|- STACKS -|- -|- -|- AAA -|- aaa -|- ppp -|- AAA -|- ignore"]
     }) }
     let(:doc2_set2) { SolrDocument.new({
-      :id => 'doc2_set2',
-      :title_245a_display => 'title2',
-      :author_person_display => 'person2',
-      :title_sort => 'something',
-      :shelfkey => ['bbb'],
-      :reverse_shelfkey => ['nnn'],
-      :preferred_barcode => "21",
-      :item_display => ["21 -|- GREEN -|- STACKS -|- -|- -|- BBB -|- bbb -|- nnn -|- BBB -|- ignore"
+      id: 'doc2_set2',
+      title_245a_display: 'title2',
+      author_person_display: 'person2',
+      title_sort: 'something',
+      shelfkey: ['bbb'],
+      reverse_shelfkey: ['nnn'],
+      preferred_barcode: "21",
+      item_display: ["21 -|- GREEN -|- STACKS -|- -|- -|- BBB -|- bbb -|- nnn -|- BBB -|- ignore"
                         ]
     }) }
     let(:doc3_set2) { SolrDocument.new({
-      :id => 'doc3_set2',
-      :title_245a_display => 'title3',
-      :author_person_display => 'person3',
-      :title_sort => 'something',
-      :shelfkey => ['ccc', 'ddd'],
-      :reverse_shelfkey => ['kkk', 'mmm'],
-      :preferred_barcode => "31",
-      :item_display => ["31 -|- GREEN -|- STACKS -|- -|- -|- CCC -|- ccc -|- mmm -|- CCC -|- ignore",
+      id: 'doc3_set2',
+      title_245a_display: 'title3',
+      author_person_display: 'person3',
+      title_sort: 'something',
+      shelfkey: ['ccc', 'ddd'],
+      reverse_shelfkey: ['kkk', 'mmm'],
+      preferred_barcode: "31",
+      item_display: ["31 -|- GREEN -|- STACKS -|- -|- -|- CCC -|- ccc -|- mmm -|- CCC -|- ignore",
                         "33 -|- GREEN -|- STACKS -|- -|- -|- DDD -|- ddd -|- kkk -|- DDD -|- ignore"
                         ]
     }) }
     let(:doc1_multi_set1) { SolrDocument.new({
-      :id => 'doc1_multi_set1',
-      :title_245a_display => 'title1',
-      :author_person_display => 'person1',
-      :title_sort => 'something',
-      :shelfkey => ['eee'],
-      :reverse_shelfkey => ['ggg'],
-      :preferred_barcode => "111",
-      :item_display => ["111 -|- GREEN -|- STACKS -|- -|- -|- EEE -|- eee -|- ggg -|- EEE -|- ignore",
+      id: 'doc1_multi_set1',
+      title_245a_display: 'title1',
+      author_person_display: 'person1',
+      title_sort: 'something',
+      shelfkey: ['eee'],
+      reverse_shelfkey: ['ggg'],
+      preferred_barcode: "111",
+      item_display: ["111 -|- GREEN -|- STACKS -|- -|- -|- EEE -|- eee -|- ggg -|- EEE -|- ignore",
                         "112 -|- SAL3 -|- STACKS -|- -|- -|- EEE -|- eee -|- ggg -|- EEE -|- ignore"
                         ] 
     }) }
     let(:doc2_multi_set1) { SolrDocument.new({
-      :id => 'doc2_multi_set1',
-      :title_245a_display => 'title2',
-      :author_person_display => 'person2',
-      :title_sort => 'something',
-      :shelfkey => ['fff'],
-      :reverse_shelfkey => ['fff'],
-      :preferred_barcode => "121",
-      :item_display => ["121 -|- GREEN -|- STACKS -|- -|- -|- FFF -|- fff -|- fff -|- FFF -|- ignore"
+      id: 'doc2_multi_set1',
+      title_245a_display: 'title2',
+      author_person_display: 'person2',
+      title_sort: 'something',
+      shelfkey: ['fff'],
+      reverse_shelfkey: ['fff'],
+      preferred_barcode: "121",
+      item_display: ["121 -|- GREEN -|- STACKS -|- -|- -|- FFF -|- fff -|- fff -|- FFF -|- ignore"
                         ]
     }) }
     let(:doc3_multi_set1) { SolrDocument.new({
-      :id => 'doc3_multi_set1',
-      :title_245a_display => 'title3',
-      :author_person_display => 'person3',
-      :title_sort => 'something',
-      :shelfkey => ['ggg', 'hhh'],
-      :reverse_shelfkey => ['eee', 'ddd'],
-      :preferred_barcode => "131",
-      :item_display => ["131 -|- GREEN -|- STACKS -|- -|- -|- GGG -|- ggg -|- eee -|- GGG -|- ignore",
+      id: 'doc3_multi_set1',
+      title_245a_display: 'title3',
+      author_person_display: 'person3',
+      title_sort: 'something',
+      shelfkey: ['ggg', 'hhh'],
+      reverse_shelfkey: ['eee', 'ddd'],
+      preferred_barcode: "131",
+      item_display: ["131 -|- GREEN -|- STACKS -|- -|- -|- GGG -|- ggg -|- eee -|- GGG -|- ignore",
                         "132 -|- SAL -|- STACKS -|- -|- -|- GGG -|- ggg -|- eee -|- GGG -|- ignore",
                         "133 -|- GREEN -|- STACKS -|- -|- -|- HHH -|- hhh -|- ddd -|- HHH -|- ignore"
                         ]
@@ -738,18 +738,18 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
 
     it "should return nil if there are no items or all items have blacklisted callnums" do
       _doc_no_items = {
-        :id => 'doc5',
-        :title_245a_display => 'title5',
-        :author_person_display => 'person5',
-        :item_display => [] 
+        id: 'doc5',
+        title_245a_display: 'title5',
+        author_person_display: 'person5',
+        item_display: [] 
       }
       _doc_no_good_callnums = {
-        :id => 'doc6',
-        :title_245a_display => 'title6',
-        :author_person_display => 'person6',
-        :shelfkey => ['whatever6'],
-        :reverse_shelfkey => ['zzz'],
-        :item_display => [nil, nil, nil, nil] 
+        id: 'doc6',
+        title_245a_display: 'title6',
+        author_person_display: 'person6',
+        shelfkey: ['whatever6'],
+        reverse_shelfkey: ['zzz'],
+        item_display: [nil, nil, nil, nil] 
       }
       doc_no_items = SolrDocument.new(_doc_no_items)
       doc_no_good_callnums = SolrDocument.new(_doc_no_good_callnums)

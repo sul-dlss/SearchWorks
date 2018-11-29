@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Location", feature: true, :"data-integration" => true do
+describe "Location", feature: true, "data-integration": true do
   describe "SAL3" do
     it "items should be pageable" do
       visit solr_document_path('10385184')

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integration" => true do
+describe "Legacy Advanced Search Tests", js: true, feature: true, "data-integration": true do
   before do
     visit blacklight_advanced_search_engine.advanced_search_path
   end

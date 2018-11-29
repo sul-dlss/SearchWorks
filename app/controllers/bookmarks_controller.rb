@@ -16,8 +16,8 @@ class BookmarksController < CatalogController
 
     respond_to do |format|
       format.html {}
-      format.rss  { render :layout => false }
-      format.atom { render :layout => false }
+      format.rss  { render layout: false }
+      format.atom { render layout: false }
       format.json do
         render json: render_search_results_as_json
       end

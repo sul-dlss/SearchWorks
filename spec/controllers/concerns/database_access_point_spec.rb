@@ -21,7 +21,7 @@ describe DatabaseAccessPoint do
     end
 
     it "should set show and if to true when under the databases page location" do
-      allow(page_location).to receive(:access_point).and_return(OpenStruct.new(:"databases?" => true))
+      allow(page_location).to receive(:access_point).and_return(OpenStruct.new("databases?": true))
       expect(blacklight_config.facet_fields["db_az_subject"].show).to be_falsey
       expect(blacklight_config.facet_fields["db_az_subject"].if).to   be_falsey
       expect(controller.send(:add_database_topic_facet))

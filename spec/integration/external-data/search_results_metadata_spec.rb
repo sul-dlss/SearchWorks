@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Search results metadata", :"data-integration" => true do
+describe "Search results metadata", "data-integration": true do
   describe "Uniform title" do
     it "should display for MARC records" do
       visit root_path

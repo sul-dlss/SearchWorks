@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Home Page", feature: true, :"data-integration" => true do
+describe "Home Page", feature: true, "data-integration": true do
   before do
     visit root_path
   end

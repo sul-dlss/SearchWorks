@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => "catalog#index"
+  root to: "catalog#index"
 
   get "view/:id/librarian_view" => "catalog#librarian_view", :as => :librarian_view
   get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
@@ -45,7 +45,7 @@ Rails.application.routes.draw do
     match 'webauth/logout' => 'devise/sessions#destroy', :as => :destroy_user_session, :via => Devise.mappings[:user].sign_out_via
   end
 
-  get "databases" => "catalog#index", :defaults => { :f => { :format_main_ssim => ["Database"] } }
+  get "databases" => "catalog#index", :defaults => { f: { format_main_ssim: ["Database"] } }
 
   get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
 

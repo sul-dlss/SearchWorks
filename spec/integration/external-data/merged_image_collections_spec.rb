@@ -1,7 +1,7 @@
 require "spec_helper"
 #6780453
 
-describe "Merged Image Collection", feature: true, :"data-integration" => true do
+describe "Merged Image Collection", feature: true, "data-integration": true do
   describe "search results" do
     before do
       visit root_path

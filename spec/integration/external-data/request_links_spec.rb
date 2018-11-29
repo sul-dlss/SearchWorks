@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe 'Request Links', type: :feature, :"data-integration" => true do
+describe 'Request Links', type: :feature, "data-integration": true do
   describe 'Location level request links' do
     it 'should be rendered for configured -30 locations' do
       visit solr_document_path '4085340'

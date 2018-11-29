@@ -68,7 +68,7 @@ describe CJKQuery do
 
   describe "cjk_query_addl_params" do
     it "should leave unrelated solr params alone" do
-      blacklight_params.merge!(:q => '舊小說', :search_field => 'search_title')
+      blacklight_params.merge!(q: '舊小說', search_field: 'search_title')
       my_solr_params = { 'key1' => 'val1', 'key2' => 'val2' }
       solr_params = my_solr_params
       search_builder.modify_params_for_cjk(solr_params)
@@ -76,56 +76,56 @@ describe CJKQuery do
     end
     describe "mm and qs solr params" do
       it "if only 1 CJK char, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(:q => '飘')
+        blacklight_params.merge!(q: '飘')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
       it "if only 2 CJK chars, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(:q => '三國')
+        blacklight_params.merge!(q: '三國')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
       it "should detect Han - Traditional and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '舊小說')
+        blacklight_params.merge!(q: '舊小說')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Han - Simplified and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '旧小说')
+        blacklight_params.merge!(q: '旧小说')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hiragana and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'まんが')
+        blacklight_params.merge!(q: 'まんが')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Katakana and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'マンガ')
+        blacklight_params.merge!(q: 'マンガ')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hangul and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '한국경제')
+        blacklight_params.merge!(q: '한국경제')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect CJK mixed with other alphabets and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'abcけいちゅうabc')
+        blacklight_params.merge!(q: 'abcけいちゅうabc')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         # mm is changed:  minimum adds in non-cjk tokens
@@ -228,22 +228,22 @@ describe CJKQuery do
       end
 
       it "advanced search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:description => q_str, :search_field => 'advanced')
-        q_solr_param = { :q => "_query_:\"{!edismax pf=$pf_description qf=$qf_description pf2=$pf_description2 pf3=$pf_description3}+#{q_str}\"" }
+        blacklight_params.merge!(description: q_str, search_field: 'advanced')
+        q_solr_param = { q: "_query_:\"{!edismax pf=$pf_description qf=$qf_description pf2=$pf_description2 pf3=$pf_description3}+#{q_str}\"" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
       it "author-title search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'author_title')
-        q_solr_param = { :q => "{!qf=author_title_search pf=author_title_search^10 pf2=author_title_search^2 pf3=author_title_search^5}#{q_str}" }
+        blacklight_params.merge!(q: q_str, search_field: 'author_title')
+        q_solr_param = { q: "{!qf=author_title_search pf=author_title_search^10 pf2=author_title_search^2 pf3=author_title_search^5}#{q_str}" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
       it "call number search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'call_number')
-        q_solr_param = { :q => "{!df=callnum_search'}\"#{q_str}\"" }
+        blacklight_params.merge!(q: q_str, search_field: 'call_number')
+        q_solr_param = { q: "{!df=callnum_search'}\"#{q_str}\"" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)

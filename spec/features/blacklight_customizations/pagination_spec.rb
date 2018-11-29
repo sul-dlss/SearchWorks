@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-feature "Pagination customization", :"data-integration" => true do
+feature "Pagination customization", "data-integration": true do
   before do
     skip("Needs format/resource-type facet to settle down")
     visit root_path

@@ -91,7 +91,7 @@ describe MarcHelper do
         expect(bad_url[:fields].first[:field]).not_to match(/<a href=.*>.*<\/a>/)
       end
       it "should return the approprate subfield when one is requested" do
-        data = get_data_with_label_from_marc(document.to_marc, "Label:", "650", { :sub_fields => ["d"] })
+        data = get_data_with_label_from_marc(document.to_marc, "Label:", "650", { sub_fields: ["d"] })
         expect(data[:fields].first[:field]).to match /Subject2/
         data[:fields].each do |field|
           expect(field[:field]).not_to match /Subject1/
@@ -120,38 +120,38 @@ describe MarcHelper do
 
     describe "link_to" do
       it "should display a valid and linked definition list row" do
-        data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })
+        data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(data[:label]).to eq "Label:"
         expect(data[:fields].length).to eq 1
         expect(data[:fields].first[:field]).to match(/<a href=.*In\+Urdu.*search_field=search_author.*>In Urdu\.<\/a>/)
       end
       it "should display a valid and linked venacular equivelant" do
-        fields = link_to_data_with_label_from_marc(matched_vern_doc.to_marc, "Label:", "245", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })
+        fields = link_to_data_with_label_from_marc(matched_vern_doc.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(fields[:fields].length).to eq 1
         expect(fields[:fields].first[:field]).to match(/<a href=.*This\+is\+not\+Vernacular.*search_field=search_author.*>This is not Vernacular<\/a>/)
         expect(fields[:fields].first[:vernacular]).to match(/<a href=.*This\+is\+Vernacular.*search_field=search_author.*>This is Vernacular<\/a>/)
       end
       it "should display an unmatched vernacular equivelant" do
-        data = link_to_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })
+        data = link_to_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(data[:fields].empty?).to be_truthy
         expect(data[:unmatched_vernacular].length).to eq 1
         expect(data[:unmatched_vernacular].first).to match(/^<a href=.*This\+is\+Vernacular.*search_field=search_author.*>This is Vernacular<\/a>$/)
       end
       it "should handle special characters properly" do
-        data = link_to_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690", { :controller => 'catalog', :action => 'index' })
+        data = link_to_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690", { controller: 'catalog', action: 'index' })
         expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Artists%27\+Books/)
         expect(data[:fields].last[:field]).to  match(/Stanford\+%3E\+Berkeley/)
         expect(data[:fields].last[:field]).to  match(/Stanford &gt; Berkeley/)
       end
       it "should not include fields that start with a % sign" do
-        data = link_to_data_with_label_from_marc(percent_record.to_marc, "Label:", "245", { :controller => 'catalog', :action => 'index', :search_field => 'search' })
+        data = link_to_data_with_label_from_marc(percent_record.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search' })
         expect(data[:fields].length).to eq 1
         expect(data[:fields].first[:field]).not_to match(/%Bad/)
       end
       it "should handle bad vernacular records correctly" do
-        bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", { :controller => 'catalog', :action => 'index', :search_field => 'search' })
-        bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", { :controller => 'catalog', :action => 'index', :search_field => 'search' })
+        bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", { controller: 'catalog', action: 'index', search_field: 'search' })
+        bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search' })
 
         expect(bad_600[:fields].length).to eq 1
         expect(bad_600[:fields].first[:field]).not_to match(/This is Vernacular/)
@@ -164,7 +164,7 @@ describe MarcHelper do
         expect(bad_245[:fields].first[:vernacular]).to be_nil
       end
       it "should return nil if the field doesn't exist in the marc record" do
-        expect(link_to_data_with_label_from_marc(document.to_marc, "Label:", "510", { :controller => 'catalog', :action => 'index', :search_field => 'search_author' })).to be_nil
+        expect(link_to_data_with_label_from_marc(document.to_marc, "Label:", "510", { controller: 'catalog', action: 'index', search_field: 'search_author' })).to be_nil
       end
     end
   end

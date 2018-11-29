@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'mobile api', :'data-integration' => true do
+describe 'mobile api', 'data-integration': true do
   it 'should display correct elements for standard record' do
     visit solr_document_path('713891', format: 'request', lib: 'SAL3')
     expect(page.body).to have_xml('//record')

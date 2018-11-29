@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Callnumber Search", feature: true, :"data-integration" => true do
+describe "Callnumber Search", feature: true, "data-integration": true do
   before do
     visit root_path
     fill_in 'q', with: 'JQ1879 .A15 D385'

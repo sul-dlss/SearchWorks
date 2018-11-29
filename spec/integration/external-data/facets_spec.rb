@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Facets Customizations", feature: true, :"data-integration" => true  do
+describe "Facets Customizations", feature: true, "data-integration": true  do
   describe "range limits" do
     it "should retain range parameters when navigating a range limited search", js: true do
       visit root_path
