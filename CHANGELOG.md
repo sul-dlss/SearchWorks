@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 ### Fixed
+- Fix access to Chat with a librarian link #2212
 ### Security
 
 ## [3.3.12] - 2018-11-28
