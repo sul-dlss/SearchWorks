@@ -136,6 +136,25 @@ Blacklight.onLoad(function(){
     });
   });
 
+  // Browse-nearby
+  $('.index_title a').on('click', function(e) {
+    ga('send', 'event', 'Browse-nearby', 'recommendation clicked', {
+      'transport': 'beacon'
+    });
+  });
+
+  $('.embedded-items .gallery').on('scroll', function(e) {
+    ga('send', 'event', 'Browse-nearby', 'scrolled', {
+    'transport': 'beacon'
+    });
+  });
+
+  $('.browse-link a').on('click', function(e) {
+    ga('send', 'event', 'Browse-nearby', 'nav arrow clicked', $(e.currentTarget).parent().find('h3').text().trim(), {
+    'transport': 'beacon'
+    });
+  });
+
   // Select / Select all
   // Note: this is counted extra when select-all or unselect-all is also used
   $('input.toggle_bookmark').on('click', function(e) {
