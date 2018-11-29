@@ -1,12 +1,12 @@
 class NearbyOnShelf
   include Blacklight::SearchHelper
   attr_reader :items
-  def initialize(type,config,options)
+  def initialize(type, config, options)
     @blacklight_config = config
     if type == "ajax"
-      @items = get_next_spines_from_field(options[:start],options[:field],options[:num],nil)
+      @items = get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
     else
-      @items = get_nearby_items(options[:item_display],options[:preferred_barcode],options[:before],options[:after],options[:page])
+      @items = get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
     end
   end
 
@@ -24,8 +24,8 @@ class NearbyOnShelf
     {}
   end
   def get_nearby_items(itm_display, barcode, before, after, page)
-    items=[]
-    item_display = get_item_display(itm_display,barcode)
+    items = []
+    item_display = get_item_display(itm_display, barcode)
 
     if !item_display.nil?
       my_shelfkey = get_shelfkey(item_display)
@@ -41,9 +41,9 @@ class NearbyOnShelf
         items << get_next_spines_from_field(my_shelfkey, "shelfkey", after, nil)
       else
         if page.to_i < 0 # page is negative so we need to get the preceding docs
-          items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", (before.to_i+1)*2, page.to_i)
+          items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", (before.to_i + 1) * 2, page.to_i)
         elsif page.to_i > 0 # page is possitive, so we need to get the following bookspines
-          items << get_next_spines_from_field(my_shelfkey, "shelfkey", after.to_i*2, page.to_i)
+          items << get_next_spines_from_field(my_shelfkey, "shelfkey", after.to_i * 2, page.to_i)
         end
       end
       items.flatten
@@ -58,22 +58,22 @@ class NearbyOnShelf
     number_of_items = how_many
     unless page.nil?
       if page < 0
-        page = page.to_s[1,page.to_s.length]
+        page = page.to_s[1, page.to_s.length]
       end
-      number_of_items = how_many.to_i * page.to_i+1
+      number_of_items = how_many.to_i * page.to_i + 1
     end
     desired_values = get_next_terms_for_field(starting_value, field_name, number_of_items)
     unless page.nil? or page.to_i == 0
-      desired_values = desired_values.values_at((desired_values.length-how_many.to_i)..desired_values.length)
+      desired_values = desired_values.values_at((desired_values.length - how_many.to_i)..desired_values.length)
     end
     get_spines_from_field_values(desired_values, field_name)
   end
   # return an array of the next terms in the index for the indicated field and 
   # starting term. Returned array does NOT include starting term.  Queries Solr (duh).
-  def get_next_terms_for_field(starting_term, field_name, how_many=3)
+  def get_next_terms_for_field(starting_term, field_name, how_many = 3)
     result = []
     # terms is array of one element hashes with key=term and value=count
-    terms_array = get_next_terms(starting_term, field_name, how_many.to_i+1)
+    terms_array = get_next_terms(starting_term, field_name, how_many.to_i + 1)
     terms_array.each { |term_hash|
       result << term_hash.keys[0] unless term_hash.keys[0] == starting_term
     }
@@ -86,7 +86,7 @@ class NearbyOnShelf
   # Each html list item must match a desired value
   def get_spines_from_field_values(desired_values, field)
     spines_hash = {}
-      response, docs = search_results(q: { field => desired_values.compact})
+      response, docs = search_results(q: { field => desired_values.compact })
       docs.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
         spines_hash.merge!(hsh) 
@@ -123,8 +123,8 @@ class NearbyOnShelf
         # shelfkey asc, then by sorting title asc, then by pub date desc
         # notice that shelfkey and sort_title need to be a constant length
         #  separator of " -|- " is for human readability only
-        sort_key = "#{callnumber.shelfkey[0,100].ljust(100)} -|- "
-        sort_key << "#{doc[:title_sort][0,100].ljust(100)} -|- " unless doc[:title_sort].nil?
+        sort_key = "#{callnumber.shelfkey[0, 100].ljust(100)} -|- "
+        sort_key << "#{doc[:title_sort][0, 100].ljust(100)} -|- " unless doc[:title_sort].nil?
       
         # pub_year must be inverted for descending sort
         if doc[:pub_date].nil? || doc[:pub_date].length == 0
@@ -133,12 +133,12 @@ class NearbyOnShelf
          sort_key << doc[:pub_date].tr('0123456789', '9876543210')
         end
         # Adding ckey to sort to make sure we collapse things that have the same callnumber, title, pub date, AND ckey
-        sort_key << " -|- #{doc[:id][0,20].ljust(20)}"
+        sort_key << " -|- #{doc[:id][0, 20].ljust(20)}"
         # We were adding the library to the sortkey. However; if we don't add the library we can easily collapse items that have the same
         # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
         #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
       
-        result_hash[sort_key] = {:doc=>doc,:holding=>callnumber}
+        result_hash[sort_key] = { :doc => doc, :holding => callnumber }
       end  # end each item display    
     end
     return result_hash
@@ -152,7 +152,7 @@ class NearbyOnShelf
       'terms.sort' => 'index',
       'terms.limit' => how_many
     }
-    solr_response = Blacklight.default_index.connection.alphaTerms({params: solr_params})
+    solr_response = Blacklight.default_index.connection.alphaTerms({ params: solr_params })
     # create array of one element hashes with key=term and value=count
     result = []
     terms ||= solr_response['terms'] || []
@@ -164,7 +164,7 @@ class NearbyOnShelf
     # field_terms is an array of value, then num hits, then next value, then hits ...
     i = 0
     until result.length == how_many || i >= field_terms.length do
-      term_hash = {field_terms[i] => field_terms[i+1]}
+      term_hash = { field_terms[i] => field_terms[i + 1] }
       result << term_hash
       i = i + 2
     end

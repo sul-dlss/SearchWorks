@@ -7,7 +7,7 @@ describe ReplaceSpecialQuotes do
 
   before do
     controller.extend(ReplaceSpecialQuotes)
-    allow(controller).to receive(:modifiable_params_keys).and_return( ['a_param'] )
+    allow(controller).to receive(:modifiable_params_keys).and_return(['a_param'])
     allow(controller).to receive(:params).and_return(HashWithIndifferentAccess.new(params))
   end
 

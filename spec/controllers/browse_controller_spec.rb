@@ -3,8 +3,8 @@ require "spec_helper"
 describe BrowseController, :"data-integration" => true do
   describe "routes" do
     it "should be accessible via /browse" do
-      expect({get: "/browse"}).to route_to(controller: 'browse', action: 'index')
-      expect({get: "/browse/nearby"}).to route_to(controller: 'browse', action: 'nearby')
+      expect({ get: "/browse" }).to route_to(controller: 'browse', action: 'index')
+      expect({ get: "/browse/nearby" }).to route_to(controller: 'browse', action: 'nearby')
     end
   end
 

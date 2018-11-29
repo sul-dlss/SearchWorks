@@ -122,7 +122,7 @@ def document_index id
 end
 
 def all_docs_on_page
-  page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+  page.all(:xpath, "//form[@data-doc-id]").map { |e| e["data-doc-id"] }
 end
 
 def facet_index(options)

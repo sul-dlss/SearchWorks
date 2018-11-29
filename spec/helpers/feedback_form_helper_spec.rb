@@ -5,7 +5,7 @@ describe FeedbackFormHelper do
 
   describe '#render_feedback_form' do
     context 'connection type' do
-      it { expect(helper.render_feedback_form('connection')).to include 'Name of resource'}
+      it { expect(helper.render_feedback_form('connection')).to include 'Name of resource' }
     end
 
     context 'anything else' do
@@ -13,7 +13,7 @@ describe FeedbackFormHelper do
         expect(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
       end
 
-      it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource'}
+      it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource' }
     end
   end
 

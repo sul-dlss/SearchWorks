@@ -7,7 +7,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
   describe 'Organization & arrangement' do
     context 'when present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture) )
+        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture))
         render
       end
 
@@ -19,7 +19,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
 
     context 'when not present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: finding_aid_856) )
+        assign(:document, SolrDocument.new(marcxml: finding_aid_856))
         render
       end
 
@@ -31,7 +31,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
 
   describe "finding aids" do
     before do
-      assign(:document, SolrDocument.new(marcxml: finding_aid_856, marc_links_struct: [{ finding_aid: true, html: '<a href="...">FINDING AID: Link text</a>' }]) )
+      assign(:document, SolrDocument.new(marcxml: finding_aid_856, marc_links_struct: [{ finding_aid: true, html: '<a href="...">FINDING AID: Link text</a>' }]))
     end
 
     it "should be displayed when present" do

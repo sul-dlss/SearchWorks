@@ -18,7 +18,7 @@ describe HoursRequest do
     HoursRequest.new("SAL3").get
   end
   it "should return a JSON error if the library is not real" do
-    expect(JSON.parse(HoursRequest.new("NOT-A-REAL-LIBRARY").get)).to eq({'error' => 'No public access'})
+    expect(JSON.parse(HoursRequest.new("NOT-A-REAL-LIBRARY").get)).to eq({ 'error' => 'No public access' })
   end
 
   it "should receive " do

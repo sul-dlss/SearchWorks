@@ -7,7 +7,7 @@ describe Holdings::Requestable do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new('123 -|- GREEN -|- STACKS -|- -|- NH-SOMETHING'))).not_to be_requestable
       end
       it "should not be requestable if the item type is non-requestable" do
-        ["REF","NONCIRC","LIBUSEONLY"].each do |type|
+        ["REF", "NONCIRC", "LIBUSEONLY"].each do |type|
           expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- -|- #{type} -|-"))).not_to be_requestable
         end
       end

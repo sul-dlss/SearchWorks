@@ -4,7 +4,7 @@ describe AccessPanels::Online do
   include ModsFixtures
   include Marc856Fixtures
 
-  let(:fulltext) { described_class.new(SolrDocument.new(marc_links_struct: [{:html=>"<a title='' href='https://library.stanford.edu'>Link text</a> ", :text=>"Link text", :href=>"https://library.stanford.edu", :fulltext=>true, :stanford_only=>nil, :finding_aid=>false, :managed_purl=>nil, :file_id=>nil, :druid=>nil}])) }
+  let(:fulltext) { described_class.new(SolrDocument.new(marc_links_struct: [{ :html => "<a title='' href='https://library.stanford.edu'>Link text</a> ", :text => "Link text", :href => "https://library.stanford.edu", :fulltext => true, :stanford_only => nil, :finding_aid => false, :managed_purl => nil, :file_id => nil, :druid => nil }])) }
   let(:supplemental) { described_class.new(SolrDocument.new) }
   let(:eds_links) do
     described_class.new(
@@ -24,7 +24,7 @@ describe AccessPanels::Online do
     described_class.new(
       SolrDocument.new(
         collection: ['12345'],
-        marc_links_struct: [{:html=>"<a title='' href='https://library.stanford.edu'>Link text</a> ", :text=>"Link text", :href=>"https://library.stanford.edu", :fulltext=>true, :stanford_only=>nil, :finding_aid=>false, :managed_purl=>nil, :file_id=>nil, :druid=>nil}]
+        marc_links_struct: [{ :html => "<a title='' href='https://library.stanford.edu'>Link text</a> ", :text => "Link text", :href => "https://library.stanford.edu", :fulltext => true, :stanford_only => nil, :finding_aid => false, :managed_purl => nil, :file_id => nil, :druid => nil }]
       )
     )
   end

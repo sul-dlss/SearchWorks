@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe 'course_reserves/index.html.erb' do
-  let(:course_1) {'CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald'}
-  let(:course_2) {'DOG-902-10-01 -|- Of Dogs and Men -|- Dog, Crime'}
+  let(:course_1) { 'CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald' }
+  let(:course_2) { 'DOG-902-10-01 -|- Of Dogs and Men -|- Dog, Crime' }
   let(:course_reserves) { [
     CourseReserves::CourseInfo.new(course_1),
     CourseReserves::CourseInfo.new(course_2)

@@ -9,7 +9,7 @@ describe "catalog/access_panels/_online.html.erb" do
 
     it "should render the panel hidden" do
       render
-      expect(rendered).to have_css("div.panel-online", visible:false)
+      expect(rendered).to have_css("div.panel-online", visible: false)
     end
   end
 

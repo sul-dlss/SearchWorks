@@ -51,7 +51,7 @@ class SearchWorksMarc
   def match_vernacular
     @fields.each_with_index do |field, index|
       if (vernacular = vernacular_field(field)).present?
-        @fields.insert(index+1, vernacular)
+        @fields.insert(index + 1, vernacular)
       end
     end
   end
@@ -60,7 +60,7 @@ class SearchWorksMarc
     if field.tag != '880' && field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      @marc_record.find_all{|f| ('880') === f.tag}.find do |field|
+      @marc_record.find_all { |f| ('880') === f.tag }.find do |field|
         if field['6'] and field['6'].include?("-")
           vern_code = field['6'][/^\d{3}-\d{2}/]
           field_880 = vern_code.split('-')[0]

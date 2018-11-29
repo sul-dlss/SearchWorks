@@ -3,7 +3,7 @@ require "spec_helper"
 describe "catalog/_index_marc.html.erb" do
   include MarcMetadataFixtures
   before do
-    allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
     allow(view).to receive(:document).and_return(document)
   end
 
@@ -11,9 +11,9 @@ describe "catalog/_index_marc.html.erb" do
     SolrDocument.new(
       author_struct: [
         {
-          creator: [{link:'Arbitrary, Stewart.', search: 'Arbitrary, Stewart.', post_text: 'fantastic.' }],
-          corporate_author: [{link:'Arbitrary, Corporate.', search: 'Arbitrary, Corporate.', post_text: 'fantastic.' }],
-          meeting: [{link:'Arbitrary Meeting.', search: 'Arbitrary, Meeting.', post_text: 'fantastic.' }],
+          creator: [{ link: 'Arbitrary, Stewart.', search: 'Arbitrary, Stewart.', post_text: 'fantastic.' }],
+          corporate_author: [{ link: 'Arbitrary, Corporate.', search: 'Arbitrary, Corporate.', post_text: 'fantastic.' }],
+          meeting: [{ link: 'Arbitrary Meeting.', search: 'Arbitrary, Meeting.', post_text: 'fantastic.' }],
         }
       ],
       imprint_display: ['Imprint Statement'],
@@ -54,7 +54,7 @@ describe "catalog/_index_marc.html.erb" do
   describe 'summary' do
     context 'when present' do
       before do
-        document[:summary_struct] = [{unmatched_vernacular: ['!']}]
+        document[:summary_struct] = [{ unmatched_vernacular: ['!'] }]
         render
       end
 
@@ -78,6 +78,7 @@ describe "catalog/_index_marc.html.erb" do
         db_az_subject: ["Subject1", "Subject2"]
       )
     end
+
     before do
       render
     end
@@ -96,6 +97,7 @@ describe "catalog/_index_marc.html.erb" do
         url_fulltext: ['http://oac.cdlib.org/findaid/ark:/12345']
       )
     end
+
     before do
       render
     end

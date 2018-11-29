@@ -3,7 +3,7 @@ require "spec_helper"
 describe SolrDocument do
   include MarcMetadataFixtures
   describe "marc field" do
-    let(:marcxml) { SolrDocument.new( marcxml: metadata1 ) }
+    let(:marcxml) { SolrDocument.new(marcxml: metadata1) }
 
     it "should respond to #to_marc for for marcxml" do
       expect(marcxml).to respond_to(:to_marc)

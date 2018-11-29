@@ -155,7 +155,7 @@ RSpec.describe ArticlesController do
   end
 
   describe '#email' do
-    before {stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')])}
+    before { stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')]) }
 
     it 'should set the provided subject' do
       expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' } }.to change {

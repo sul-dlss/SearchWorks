@@ -8,6 +8,6 @@ describe AccessPanels do
     expect(access_panel.online).to be_an AccessPanels::Online
   end
   it "should raise NameError for methods that are not defined classes" do
-    expect( -> { access_panel.not_an_access_panel } ).to raise_error(NameError)
+    expect(-> { access_panel.not_an_access_panel }).to raise_error(NameError)
   end
 end

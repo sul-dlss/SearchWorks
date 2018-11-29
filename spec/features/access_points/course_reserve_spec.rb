@@ -2,7 +2,7 @@ require "spec_helper"
 
 feature "Course Reserve Access Point" do
   before do
-    visit search_catalog_path({f: {course: ["CAT-401-01-01"], instructor: ["McDonald, Ronald"]}})
+    visit search_catalog_path({ f: { course: ["CAT-401-01-01"], instructor: ["McDonald, Ronald"] } })
   end
 
   scenario "Access point masthead should be visible with 1 course reserve document" do
@@ -15,7 +15,7 @@ feature "Course Reserve Access Point" do
       expect(page).to have_css("dd", text: "CAT-401-01-01 -- Emergency Kittenz")
     end
     within("#content") do
-      expect(page).to have_css("div.document", count:1)
+      expect(page).to have_css("div.document", count: 1)
     end
   end
 end

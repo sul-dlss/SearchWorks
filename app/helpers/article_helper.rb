@@ -44,7 +44,7 @@ module ArticleHelper
     return if options[:value].blank?
     separators = options.dig(:config, :separator_options) || {}
     affiliations = options[:value].map(&:to_s).to_sentence(separators)
-    remove_eds_tag(affiliations,'relatesto').html_safe
+    remove_eds_tag(affiliations, 'relatesto').html_safe
   end
 
   def link_to_doi(options = {})

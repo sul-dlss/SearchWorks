@@ -19,7 +19,7 @@ describe "catalog/_index_mods.html.erb" do
       )
     )
     expect(view).to receive(:show_presenter).and_return(presenter)
-    allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
     render
   end
 

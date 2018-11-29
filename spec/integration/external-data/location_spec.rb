@@ -59,7 +59,7 @@ describe "Location", feature: true, :"data-integration" => true do
     it "should show the MARC 590 note in the availability display" do
       within('.location') do
         expect(page).to have_css('.bound-with-note.note-highlight', text: "Copy 1 bound with 1967, pt. 1. 796443(parent record's ckey)")
-        expect(page).to have_css('.bound-with-note.note-highlight a', text:"796443")
+        expect(page).to have_css('.bound-with-note.note-highlight a', text: "796443")
         click_link '796443'
       end
       expect(page).to have_css('h1', text: /Der Urheberschutz wissenschaftlicher/)

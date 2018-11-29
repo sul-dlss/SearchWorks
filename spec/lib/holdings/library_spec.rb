@@ -109,7 +109,7 @@ describe Holdings::Library do
   end
 
   describe "#mhld" do
-    let(:library) {Holdings::Library.new("GREEN")}
+    let(:library) { Holdings::Library.new("GREEN") }
 
     it "should be an accessible attribute" do
       expect(library.mhld).not_to be_present

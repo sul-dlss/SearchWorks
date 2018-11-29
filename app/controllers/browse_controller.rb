@@ -14,11 +14,11 @@ class BrowseController < ApplicationController
           @document_list = NearbyOnShelf.new(
             "static",
             blacklight_config,
-            {:item_display => @original_doc[:item_display],
-             :preferred_barcode=>barcode,
+            { :item_display => @original_doc[:item_display],
+             :preferred_barcode => barcode,
              :before => 9,
              :after => 10,
-             :page => params[:page]}
+             :page => params[:page] }
           ).items.map do |document|
             SolrDocument.new(document[:doc])
           end
@@ -36,14 +36,14 @@ class BrowseController < ApplicationController
           @document_list = NearbyOnShelf.new(
             "static",
             blacklight_config,
-            {:item_display => @original_doc[:item_display],
-             :preferred_barcode=>barcode,
+            { :item_display => @original_doc[:item_display],
+             :preferred_barcode => barcode,
              :before => 12,
-             :after => 12}
+             :after => 12 }
           ).items.map do |document|
             SolrDocument.new(document[:doc])
           end
-          render browse: @document_list, layout:false
+          render browse: @document_list, layout: false
         end
       end
     end

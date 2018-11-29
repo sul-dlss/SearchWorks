@@ -30,7 +30,7 @@ describe "Search toolbar", js: true, feature: true do
     describe "clear list" do
       it "should clear selections and update selections count and recently added list" do
         skip 'Not working correctly'
-        visit search_catalog_path f: {format: ["Book"]}, view: "default"
+        visit search_catalog_path f: { format: ["Book"] }, view: "default"
         expect(page).to have_css("li a", text: /SELECTIONS \(0\)/i)
         click_link "Selections"
         expect(page).to have_css("li#show-list.disabled")

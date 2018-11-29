@@ -3,7 +3,7 @@ require "spec_helper"
 describe FeedbackMailer do
   describe "submit_feedback" do
     describe "with all fields" do
-      let(:ip) {"123.43.54.123"}
+      let(:ip) { "123.43.54.123" }
       let(:params) do
         {
           name: 'Mildred Turner',
@@ -61,8 +61,8 @@ describe FeedbackMailer do
     end
 
     describe "without name and email" do
-      let(:ip) {"123.43.54.123"}
-      let(:params) { {  } }
+      let(:ip) { "123.43.54.123" }
+      let(:params) { {} }
       let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the right email" do

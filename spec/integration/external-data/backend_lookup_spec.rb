@@ -16,7 +16,7 @@ describe "Backend lookup", type: :feature, js: true, :"data-integration" => true
       expect(page).to     have_css('a', text: /^Remove limit\(s\)$/)
       expect(page).not_to have_css('a', text: /^Remove limit\(s\) \.{3} found \d{4,} results$/)
       page.driver.scroll_to(0, 10000)
-      expect(page).to     have_css('a', text: /^Remove limit\(s\) \.{3} found \d{4,} results$/)
+      expect(page).to have_css('a', text: /^Remove limit\(s\) \.{3} found \d{4,} results$/)
     end
   end
 end

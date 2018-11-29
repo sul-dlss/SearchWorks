@@ -24,11 +24,11 @@ describe SearchWorksRecordMailer do
   let(:params) do
     { to: 'email@example.com', message: 'The message', subject: 'The subject', email_from: 'Jane Stanford' }
   end
-  let(:url_params) { {host: 'example.com'} }
+  let(:url_params) { { host: 'example.com' } }
 
   describe 'email_record' do
     context 'article' do
-      let(:documents) {[SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+      let(:documents) { [SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'], eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
         )]}
       let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }
 

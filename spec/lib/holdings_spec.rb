@@ -30,7 +30,7 @@ describe Holdings do
 
   describe "#present?" do
     let(:blank_callnumber) {
-      Holdings.new( SolrDocument.new() )
+      Holdings.new(SolrDocument.new())
     }
 
     it "should return false if there are no holdings" do

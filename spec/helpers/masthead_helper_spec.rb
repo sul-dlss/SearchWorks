@@ -4,7 +4,7 @@ describe MastheadHelper do
   describe "#render_masthead_partial" do
     let(:page_location) { SearchWorks::PageLocation.new }
 
-    before { allow(helper).to receive(:page_location).and_return( page_location ) }
+    before { allow(helper).to receive(:page_location).and_return(page_location) }
 
     it "should render partials that exist" do
       allow(page_location).to receive(:access_point).and_return("databases")

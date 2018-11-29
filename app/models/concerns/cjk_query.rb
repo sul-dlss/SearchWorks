@@ -80,9 +80,9 @@ module CJKQuery
       if num_non_cjk_tokens > 0
         lower_limit = cjk_mm_val[0].to_i
         mm = (lower_limit + num_non_cjk_tokens).to_s + cjk_mm_val[1, cjk_mm_val.size]
-        {'mm' => mm, 'qs' => cjk_qs_val}
+        { 'mm' => mm, 'qs' => cjk_qs_val }
       else
-        {'mm' => cjk_mm_val, 'qs' => cjk_qs_val}
+        { 'mm' => cjk_mm_val, 'qs' => cjk_qs_val }
       end
     else
       {}

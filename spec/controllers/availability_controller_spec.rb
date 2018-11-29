@@ -19,7 +19,7 @@ describe AvailabilityController do
 
   describe "with IDs" do
     let(:lookup) { double('new') }
-    let(:json) { [{a: 'a', b: 'b'}] }
+    let(:json) { [{ a: 'a', b: 'b' }] }
 
     before do
       allow(lookup).to receive(:to_json).and_return(json)

@@ -170,7 +170,7 @@ describe Holdings::Location do
   end
 
   describe "#mhld" do
-    let(:location) {Holdings::Location.new("STACKS")}
+    let(:location) { Holdings::Location.new("STACKS") }
 
     it "should be an accessible attribute" do
       expect(location.mhld).not_to be_present

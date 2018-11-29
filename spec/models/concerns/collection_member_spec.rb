@@ -22,12 +22,12 @@ describe CollectionMember do
   end
 
   describe "#parent_collections" do
-    let(:multi_collection) { SolrDocument.new( collection: ['12345', '54321'] ) }
+    let(:multi_collection) { SolrDocument.new(collection: ['12345', '54321']) }
     let(:stub_solr) { double('solr') }
-    let(:stub_params) { { params: {fq: "id:12345"}} }
-    let(:stub_response) {{
+    let(:stub_params) { { params: { fq: "id:12345" } } }
+    let(:stub_response) { {
       'response' => {
-        'docs' => [{id: 12345}]
+        'docs' => [{ id: 12345 }]
       }
     }}
 

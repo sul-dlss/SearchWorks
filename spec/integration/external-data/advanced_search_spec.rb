@@ -91,13 +91,13 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
     it "should return year (old to new)" do
       select "year (old to new)", from: "sort"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      docs = page.all(:xpath, "//form[@data-doc-id]").map { |e| e["data-doc-id"] }
       expect(docs.index("4819125")).to be < 5
     end
     it "should return title" do
       select "title", from: "sort"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      docs = page.all(:xpath, "//form[@data-doc-id]").map { |e| e["data-doc-id"] }
       expect(docs.index("5453649")).to be < 5
     end
     # Question: Duplicate test?
@@ -132,7 +132,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_author", with: "John Steinbeck"
       fill_in "search_title", with: "pearl NOT perla"
       click_on "advanced-search-submit"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      docs = page.all(:xpath, "//form[@data-doc-id]").map { |e| e["data-doc-id"] }
       # This only checks first page of results
       expect(result_on_page("6865307")).to be_falsey
       expect(total_results).to be < 1520000
@@ -167,7 +167,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       click_on "advanced-search-submit"
       click_button "20 per page"
       click_link "100"
-      docs = page.all(:xpath, "//form[@data-doc-id]").map{|e| e["data-doc-id"]}
+      docs = page.all(:xpath, "//form[@data-doc-id]").map { |e| e["data-doc-id"] }
       expect(total_results).to be >= 225
       expect(results_all_on_page(['6746743', '6747313'])).to be_truthy
     end
@@ -194,7 +194,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_title", with: "Hello AND Goodbye"
       click_on "advanced-search-submit"
       expect(total_results).to be >= 50
-      ["6502314","8218325","6314136","2432242"].each do |id|
+      ["6502314", "8218325", "6314136", "2432242"].each do |id|
         expect(document_index(id)).to be < 5
       end
     end

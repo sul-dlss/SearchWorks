@@ -4,7 +4,7 @@ module EdsPaging
   #
   # Get the previous and next document from a search result
   # @return [Blacklight::Solr::Response, Array<Blacklight::SolrDocument>] the solr response and a list of the first and last document
-  def get_previous_and_next_documents_for_search(index, request_params, extra_controller_params={})
+  def get_previous_and_next_documents_for_search(index, request_params, extra_controller_params = {})
     params, prev_hit, next_hit = previous_and_next_document_params(index)
     query = search_builder.with(request_params).merge(extra_controller_params).merge(params)
     response = repository.search(query)

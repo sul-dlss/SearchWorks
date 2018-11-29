@@ -35,7 +35,7 @@ describe "Record toolbar", js: true, feature: true do
 
           within "div.navbar-header" do
             expect(page).not_to have_css("button.navbar-toggle", visible: true)
-            expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
+            expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
           end
@@ -84,7 +84,7 @@ describe "Record toolbar", js: true, feature: true do
 
           within "div.navbar-header" do
             expect(page).to have_css("button.navbar-toggle", visible: true)
-            expect(page).to have_css("a.btn.btn-sul-toolbar", text:"", visible: true)
+            expect(page).to have_css("a.btn.btn-sul-toolbar", text: "", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
           end

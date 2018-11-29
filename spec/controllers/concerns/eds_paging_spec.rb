@@ -156,7 +156,7 @@ RSpec.describe EdsPaging do
 
     before do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      expect(controller).to receive(:search_builder).and_return(instance_double(Blacklight::SearchBuilder, with: { q: 'my query'}))
+      expect(controller).to receive(:search_builder).and_return(instance_double(Blacklight::SearchBuilder, with: { q: 'my query' }))
       expect(controller).to receive(:repository).and_return(Eds::Repository.new(double))
       _response, @docs = controller.get_previous_and_next_documents_for_search(hit, { q: 'my query' })
     end

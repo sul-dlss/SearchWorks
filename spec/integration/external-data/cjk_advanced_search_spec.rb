@@ -30,7 +30,7 @@ describe "CJK Advanced Search", js: true, feature: true, :"data-integration" => 
 
         it "should return less than 10 results containing particular records" do
           expect((3..10)).to include total_results
-          expect(results_all_on_page(['6321193','6355327','6668315'])).to be_truthy
+          expect(results_all_on_page(['6321193', '6355327', '6668315'])).to be_truthy
         end
       end
 

@@ -66,7 +66,7 @@ RSpec.describe ArticleHelper do
     end
 
     context '#clean_affiliations' do
-      let(:result) {helper.clean_affiliations(value: affiliations)}
+      let(:result) { helper.clean_affiliations(value: affiliations) }
 
       it 'removes relatesTo tags and content' do
         expect(result).not_to have_content('1')

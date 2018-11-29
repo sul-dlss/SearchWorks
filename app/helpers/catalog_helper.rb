@@ -26,7 +26,7 @@ module CatalogHelper
     library.location_level_request? || location.location_level_request?
   end
 
-  def stackmap_link(document,location)
+  def stackmap_link(document, location)
     callnumber = location.items.first
     stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: callnumber.callnumber, library: callnumber.library, location: callnumber.home_location)
   end

@@ -667,7 +667,7 @@ module Constants
     'W7-STFSHD' => 'Request for use at Map Center (W7 shadowed)',
     'W7-FRAME' => 'Request for use at Map Center (W7 framed)',
     'W7-POCKET' => 'Request for use at Map Center (W7 pocket)',
-    'WELLNESS' =>' Wellness wall',
+    'WELLNESS' => ' Wellness wall',
     'WEST-7B' => 'Ask at circulation desk'
   }.freeze
 

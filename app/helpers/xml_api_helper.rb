@@ -17,12 +17,12 @@ module XmlApiHelper
 
   def get_standard_nums(doc)
     nums = []
-    [:isbn_display,:oclc,:lccn].each do |number|
+    [:isbn_display, :oclc, :lccn].each do |number|
       if doc[number]
         temp_number = doc[number]
         temp_number = [temp_number] unless doc[number].is_a? Array
         temp_number.each do |num|
-          nums << "#{number.to_s.gsub('_display','').upcase}:#{num.gsub(' ','')}"
+          nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.gsub(' ', '')}"
         end
       end
     end
@@ -30,18 +30,18 @@ module XmlApiHelper
   end
 
   def get_covers_from_response(hsh)
-    google_url = "https://books.google.com/books?bibkeys=#{hsh.values.delete_if{|val|val.nil?}.join(",")}&jscmd=viewapi"
+    google_url = "https://books.google.com/books?bibkeys=#{hsh.values.delete_if { |val| val.nil? }.join(",")}&jscmd=viewapi"
     string = make_call_to_gbs(google_url)
     #in case of throttled response from GBS
-    return {} if string[0,1] != "{"
+    return {} if string[0, 1] != "{"
     google_response = eval(string)
     url_hash = {}
-    hsh.each do |ckey,numbers|
+    hsh.each do |ckey, numbers|
       numbers.split(",").each do |number|
         if !url_hash.has_key?(ckey) and google_response.has_key?(number) and google_response[number].has_key?("thumbnail_url")
-          cover_url = google_response[number]["thumbnail_url"].gsub("u0026","&")
-          lg_cover_url = cover_url.gsub(/pg=\w+/, "printsec=frontcover").gsub("zoom=5","zoom=1")
-          url_hash[ckey] = [cover_url,lg_cover_url]
+          cover_url = google_response[number]["thumbnail_url"].gsub("u0026", "&")
+          lg_cover_url = cover_url.gsub(/pg=\w+/, "printsec=frontcover").gsub("zoom=5", "zoom=1")
+          url_hash[ckey] = [cover_url, lg_cover_url]
         end
       end
     end
@@ -50,17 +50,17 @@ module XmlApiHelper
 
   def make_call_to_gbs(url)
     # Nasty hack to turn GBS response into a ruby acceptable hash
-    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ","").gsub('":{','"=>{').gsub('":"','"=>"').gsub('":','"=>')
+    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").gsub('":{', '"=>{').gsub('":"', '"=>"').gsub('":', '"=>')
   end
 
   def get_authors_for_mobile(doc)
     doc[:author_person_full_display] ? text = doc[:author_person_full_display].to_a : text = []
     if doc.respond_to?(:to_marc)
-      ["700","710","711","720"].each do |num|
+      ["700", "710", "711", "720"].each do |num|
         if doc.to_marc[num]
-          doc.to_marc.find_all{|f| (num) === f.tag}.each do |field|
+          doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
             temp = ""
-            field.each{|sf| ["4","6"].include?(sf.code) ? nil : temp << "#{sf.value} "}
+            field.each { |sf| ["4", "6"].include?(sf.code) ? nil : temp << "#{sf.value} " }
             text << temp.strip
           end
         end
@@ -74,7 +74,7 @@ module XmlApiHelper
     urls = []
     if doc.index_links.present?
       doc.index_links.each do |link|
-        urls << {label: link.text, link: link.href}
+        urls << { label: link.text, link: link.href }
       end
     end
     return urls unless urls.blank?
@@ -86,9 +86,9 @@ module XmlApiHelper
       text << marc["250"]["a"]
     end
     if marc["260"]
-      marc.find_all{|f| "260" === f.tag}.each do |field|
+      marc.find_all { |f| "260" === f.tag }.each do |field|
         temp = []
-        field.each{|sf| ["a","b","c"].include?(sf.code) ? temp << sf.value : nil}
+        field.each { |sf| ["a", "b", "c"].include?(sf.code) ? temp << sf.value : nil }
         text << temp.join(" ")
       end
     end
@@ -96,13 +96,13 @@ module XmlApiHelper
     text.join(" ")
   end
 
-  def get_data_from_marc_for_mobile(marc,field)
+  def get_data_from_marc_for_mobile(marc, field)
     text = []
     if marc[field] or (Constants::NIELSEN_TAGS.has_key?(field) and marc[Constants::NIELSEN_TAGS[field]])
       field = Constants::NIELSEN_TAGS[field] if marc[Constants::NIELSEN_TAGS[field]]
-      marc.find_all{|f| (field) === f.tag}.each do |item|
+      marc.find_all { |f| (field) === f.tag }.each do |item|
         temp = ""
-        vernacular = get_vernacular(marc,item)
+        vernacular = get_vernacular(marc, item)
         if vernacular.nil?
           item.each do |sf|
             if sf.code == "1" and Constants::NIELSEN_TAGS.has_value?(field)
@@ -112,18 +112,18 @@ module XmlApiHelper
             end
           end
         else
-          temp << get_vernacular(marc,item)
+          temp << get_vernacular(marc, item)
         end
         text << temp.strip
       end
     end
     if marc['880']
-      marc.find_all{|f| ('880') === f.tag}.each do |item|
+      marc.find_all { |f| ('880') === f.tag }.each do |item|
         if !item['6'].nil? and item['6'].include?('-')
-          if item['6'].split("-")[1].gsub("//r","") == "00" and item['6'].split("-")[0] == field
+          if item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
             text = []
             temp = ""
-            item.each{|sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} "}
+            item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
             text << temp.strip
           end
         end
@@ -133,15 +133,15 @@ module XmlApiHelper
     text
   end
 
-  def get_vernacular(marc,field)
+  def get_vernacular(marc, field)
     return_text = []
     if field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      marc.find_all{|f| ('880') === f.tag}.each do |field|
+      marc.find_all { |f| ('880') === f.tag }.each do |field|
         if !field['6'].nil? and field['6'].include?("-")
           field_880 = field['6'].split("-")[0]
-          match_880 = field['6'].split("-")[1].gsub("//r","")
+          match_880 = field['6'].split("-")[1].gsub("//r", "")
           if match_original == match_880 and field_original == field_880
             field.each do |sub|
               if !Constants::EXCLUDE_FIELDS.include?(sub.code)
@@ -158,11 +158,11 @@ module XmlApiHelper
   def get_live_data_for_requests(doc, lib = nil)
     url = URI.parse(Settings.LIVE_LOOKUP_URL)
     request_params = "/cgi-bin/requests.pl?id=#{doc[:id]}&lib=#{params[:lib]}"
-    xml = Net::HTTP.start(url.host,url.port) {|http|
+    xml = Net::HTTP.start(url.host, url.port) { |http|
       http.read_timeout = 120
       http.get(request_params)
     }
-    parse_lookup_for_requests(Nokogiri::XML(xml.response.body),doc,lib)
+    parse_lookup_for_requests(Nokogiri::XML(xml.response.body), doc, lib)
     rescue Timeout::Error
       nil
   end
@@ -208,14 +208,14 @@ module XmlApiHelper
     display_type = document[blacklight_config.index.display_type_field]
     if display_type
       if display_type.respond_to?(:join)
-        display_type.map{|dt| dt.gsub("-"," ").parameterize(separator: "_") }.join(" ")
+        display_type.map { |dt| dt.gsub("-", " ").parameterize(separator: "_") }.join(" ")
       else
-        "#{display_type.gsub("-"," ")}".parameterize(separator: "_").to_s
+        "#{display_type.gsub("-", " ")}".parameterize(separator: "_").to_s
       end
     end
   end
 
-  def index_link_is_stanford_only?(doc,link)
+  def index_link_is_stanford_only?(doc, link)
     if doc["url_restricted"]
       doc["url_restricted"].each do |su_only|
         return true if CGI.unescapeHTML(link.strip).include?("#{CGI.unescapeHTML(su_only.strip)}")

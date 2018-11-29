@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Top Navigation" do
-  scenario "should have navigational links and top menu", js:true do
+  scenario "should have navigational links and top menu", js: true do
     visit root_path
     within "#topnav" do
       within ".header-links" do

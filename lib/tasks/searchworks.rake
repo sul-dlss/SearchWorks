@@ -44,7 +44,7 @@ namespace :searchworks do
       end
       desc "spec task that ignores data-integration tests (run during local development/travis on local data)"
       RSpec::Core::RakeTask.new("without-data-integration") do |t|
-        t.rspec_opts =  "--tag ~data-integration"
+        t.rspec_opts = "--tag ~data-integration"
       end
       task 'spec:all' => 'test:prepare'
     rescue LoadError => e
@@ -62,7 +62,7 @@ namespace :searchworks do
   task :prune_old_search_data, [:days_old] => [:environment] do |t, args|
     chunk = 20000
     raise ArgumentError.new('days_old is expected to be greater than 0') if args[:days_old].to_i <= 0
-    total = Search.where("updated_at < :date", {date: (Date.today - args[:days_old].to_i)}).count
+    total = Search.where("updated_at < :date", { date: (Date.today - args[:days_old].to_i) }).count
     total = total - (total % chunk) if (total % chunk) != 0
     i = 0
     while i < total

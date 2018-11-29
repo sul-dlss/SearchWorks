@@ -24,7 +24,7 @@ module RecordHelper
 
   def mods_display_content(values, delimiter = nil)
     if delimiter
-      content_tag(:dd, values.map do|value|
+      content_tag(:dd, values.map do |value|
         link_urls_and_email(value) if value.present?
       end.compact.join(delimiter).html_safe)
     else

@@ -29,7 +29,7 @@ describe SearchWorksMarc do
     end
     it 'should have 16 values grouped by tag' do
       expect(sw_marc.parse_marc_record.count).to eq 16
-      expect(sw_marc.parse_marc_record.map{ |f| f.label }.uniq.length).to eq 16
+      expect(sw_marc.parse_marc_record.map { |f| f.label }.uniq.length).to eq 16
     end
     it 'grouped values should be an array' do
       sw_marc.parse_marc_record.each do |group|

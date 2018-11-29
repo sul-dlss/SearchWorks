@@ -52,7 +52,7 @@ describe CatalogController do
       it 'does not allow emails to be submitted' do
         expect_any_instance_of(CatalogController).to receive(:verify_recaptcha).and_return(false)
         expect do
-          post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}
+          post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
         end.not_to change { ActionMailer::Base.deliveries.count }
       end
     end
@@ -63,7 +63,7 @@ describe CatalogController do
       end
 
       it 'should set the provided subject' do
-        expect{post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'} }.to change{
+        expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' } }.to change {
           ActionMailer::Base.deliveries.count
         }.by(1)
         expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
@@ -141,7 +141,7 @@ describe CatalogController do
   describe "routes" do
     describe "customized from Blacklight" do
       it "should route /view/:id properly" do
-        expect({get: '/view/1234'}).to route_to(controller: 'catalog', action: 'show', id: '1234')
+        expect({ get: '/view/1234' }).to route_to(controller: 'catalog', action: 'show', id: '1234')
       end
       it "should route solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'
@@ -150,22 +150,22 @@ describe CatalogController do
         expect(solr_document_path('1234')).to eq '/view/1234'
       end
       it "should route the librarian view properly" do
-        expect({get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
+        expect({ get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
       end
       it "should route the stackmap view properly" do
-        expect({get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
+        expect({ get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
       end
     end
 
     describe "/databases" do
       it "should route to the database format" do
-        expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
+        expect({ get: "/databases" }).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
 
     describe "/backend_lookup" do
       it "should route to the backend lookup path as json" do
-        expect({get: "/backend_lookup"}).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
+        expect({ get: "/backend_lookup" }).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
       end
     end
 

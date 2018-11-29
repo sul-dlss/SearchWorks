@@ -10,7 +10,7 @@ describe ResultsDocumentHelper do
     data_01 = {
       :publication_year_isi => 1999,
       :title_display => "Car : a drama of the American workplace",
-      :isbn_display => [ "0393040801x", "9780393040807" ],
+      :isbn_display => ["0393040801x", "9780393040807"],
       :lccn => "a 96049953",
       :oclc => 36024029
     }

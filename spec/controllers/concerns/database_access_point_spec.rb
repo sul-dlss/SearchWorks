@@ -3,7 +3,7 @@ require 'spec_helper'
 describe DatabaseAccessPoint do
   let(:controller) { double('CatalogController') }
   let(:page_location) { SearchWorks::PageLocation.new }
-  let(:params) { {controller: 'catalog'} }
+  let(:params) { { controller: 'catalog' } }
   let(:blacklight_config) { OpenStruct.new }
 
   before do
