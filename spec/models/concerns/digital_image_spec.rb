@@ -25,7 +25,7 @@ describe 'Image object' do
       let(:file_ids) { ['abc123%2Fxyz321'] }
 
       it 'is not present' do
-        expect(subject.image_urls).to_not be_present
+        expect(subject.image_urls).not_to be_present
       end
     end
 
@@ -33,7 +33,7 @@ describe 'Image object' do
       let(:file_ids) { nil }
 
       it 'is not present' do
-        expect(subject.image_urls).to_not be_present
+        expect(subject.image_urls).not_to be_present
       end
     end
   end

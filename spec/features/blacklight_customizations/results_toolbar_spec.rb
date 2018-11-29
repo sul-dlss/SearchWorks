@@ -21,8 +21,8 @@ feature "Results Toolbar", js: true do
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
       expect(page).to have_css("#select_all-dropdown .select-all", text: "Select all")
       expect(page).to have_css("#select_all-dropdown .unselect-all", text: "Unselect all", visible: false)
-      expect(page).to_not have_css("a", text: /Cite/)
-      expect(page).to_not have_css("button", text: /Send/)
+      expect(page).not_to have_css("a", text: /Cite/)
+      expect(page).not_to have_css("button", text: /Send/)
     end
   end
   scenario "pagination links for single items should not have any number of results info" do
@@ -32,7 +32,7 @@ feature "Results Toolbar", js: true do
 
     within('.sul-toolbar') do
       expect(page).to have_css('.page_links')
-      expect(page).to_not have_content('1 entry')
+      expect(page).not_to have_content('1 entry')
     end
   end
   scenario "pagination links for multiple items but no pages should not have any number of results info" do

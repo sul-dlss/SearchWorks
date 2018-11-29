@@ -19,7 +19,7 @@ describe Holdings::Location do
       expect(location_with_items).to be_present
     end
     it "should be present when there is an mhld" do
-      expect(location_no_items_or_mhld).to_not be_present
+      expect(location_no_items_or_mhld).not_to be_present
       location_no_items_or_mhld.mhld = ['something']
       expect(location_no_items_or_mhld).to be_present
     end
@@ -27,11 +27,11 @@ describe Holdings::Location do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
       it "should not throw an error on items w/o an mhld" do
-        expect(location_no_items_or_mhld).to_not be_present_on_index
+        expect(location_no_items_or_mhld).not_to be_present_on_index
       end
       it "should return false unless the public note or latest received are present" do
         location_no_items_or_mhld.mhld = [library_has_mhld]
-        expect(location_no_items_or_mhld).to_not be_present_on_index
+        expect(location_no_items_or_mhld).not_to be_present_on_index
       end
       it "should return true when an item has a present public note or latest received" do
         location_no_items_or_mhld.mhld = [mhld]
@@ -54,7 +54,7 @@ describe Holdings::Location do
       location = Holdings::Location.new('GREEN', callnumbers)
 
       expect(location.send(:contains_only_must_request_items?)).to eq true
-      expect(location).to_not be_location_level_request
+      expect(location).not_to be_location_level_request
     end
 
     it 'returns false when the library is a NONCIRC library that only includes INPROCESS items' do
@@ -62,11 +62,11 @@ describe Holdings::Location do
       location = Holdings::Location.new('SPEC-COLL', callnumbers)
 
       expect(location.send(:noncirc_library_only_inprocess?)).to eq true
-      expect(location).to_not be_location_level_request
+      expect(location).not_to be_location_level_request
     end
 
     it 'returns false when the location ends in -RESV' do
-      expect(Holdings::Location.new('SOMETHING-RESV')).to_not be_location_level_request
+      expect(Holdings::Location.new('SOMETHING-RESV')).not_to be_location_level_request
     end
 
     context 'HOPKINS' do
@@ -81,15 +81,15 @@ describe Holdings::Location do
       end
       it 'returns false for materials that are available online' do
         location = Holdings::Location.new('STACKS', callnumbers, online_doc)
-        expect(location).to_not be_location_level_request
+        expect(location).not_to be_location_level_request
       end
       it 'returns false for materials that exist in other libraries' do
         location = Holdings::Location.new('STACKS', callnumbers, multi_holdings_doc)
-        expect(location).to_not be_location_level_request
+        expect(location).not_to be_location_level_request
       end
       it 'returns false for materials that are not in STACKS' do
         location = Holdings::Location.new('REF', callnumbers, not_online_doc)
-        expect(location).to_not be_location_level_request
+        expect(location).not_to be_location_level_request
       end
     end
   end
@@ -107,7 +107,7 @@ describe Holdings::Location do
         expect(external_location).to be_external_location
       end
       it 'should not identify non LANE-MED items as external locations' do
-        expect(non_external_location).to_not be_external_location
+        expect(non_external_location).not_to be_external_location
       end
     end
     describe '#location_link' do
@@ -116,7 +116,7 @@ describe Holdings::Location do
       end
       it 'should strip the first "L" from the barcode' do
         expect(external_location.location_link).to match /L12345/
-        expect(external_location.location_link).to_not match /LL12345/
+        expect(external_location.location_link).not_to match /LL12345/
       end
       it 'should just return a link to the lane library catalog if there are no barcoded items' do
         allow(external_location).to receive(:items).and_return([])
@@ -153,13 +153,13 @@ describe Holdings::Location do
       expect(bound_with_location).to be_bound_with
     end
     it "should return false for locations that are not SEE-OTHER" do
-      expect(location).to_not be_bound_with
+      expect(location).not_to be_bound_with
     end
   end
   describe "#mhld" do
     let(:location) {Holdings::Location.new("STACKS")}
     it "should be an accessible attribute" do
-      expect(location.mhld).to_not be_present
+      expect(location.mhld).not_to be_present
       location.mhld = "something"
       expect(location.mhld).to be_present
     end

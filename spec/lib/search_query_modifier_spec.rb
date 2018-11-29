@@ -15,8 +15,8 @@ describe SearchQueryModifier do
       expect(stopwords_query).to be_present
     end
     it "should return false when there is only a facet OR query" do
-      expect(SearchQueryModifier.new({q: "hello"}, default_config)).to_not be_present
-      expect(SearchQueryModifier.new({f: {something: ''}}, default_config)).to_not be_present
+      expect(SearchQueryModifier.new({q: "hello"}, default_config)).not_to be_present
+      expect(SearchQueryModifier.new({f: {something: ''}}, default_config)).not_to be_present
     end
   end
   describe "stopwords" do
@@ -66,12 +66,12 @@ describe SearchQueryModifier do
     describe "#params_without_fielded_search" do
       it "should return the parameters w/o the search_field param" do
         expect(fielded_search.params_without_fielded_search[:q]).to eq 'something'
-        expect(fielded_search.params_without_fielded_search[:search_field]).to_not be_present
+        expect(fielded_search.params_without_fielded_search[:search_field]).not_to be_present
       end
     end
     describe "#params_without_fielded_search_and_filters" do
       it "should return the parameters w/o the search_field param or filters" do
-        expect(fielded_search.params_without_fielded_search_and_filters[:search_field]).to_not be_present
+        expect(fielded_search.params_without_fielded_search_and_filters[:search_field]).not_to be_present
         # expect(fielded_search.params_without_fielded_search[:f]).to_not be present
       end
     end
@@ -100,11 +100,11 @@ describe SearchQueryModifier do
     describe "#params_without_filters" do
       it "should return the parameters hash without an f param" do
         expect(filtered_search.params_without_fielded_search[:q]).to eq 'something'
-        expect(filtered_search.params_without_filters[:f]).to_not be_present
+        expect(filtered_search.params_without_filters[:f]).not_to be_present
       end
       it "should return the parameters hash without a range param" do
         expect(ranged_search.params_without_fielded_search[:q]).to eq 'something'
-        expect(ranged_search.params_without_filters[:range]).to_not be_present
+        expect(ranged_search.params_without_filters[:range]).not_to be_present
       end
     end
     describe "#selected_filter_labels" do

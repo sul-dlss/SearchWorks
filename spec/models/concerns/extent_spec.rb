@@ -42,8 +42,8 @@ describe Extent do
       )
     }
     it "should not be present if the appropriate metadata is not available" do
-      expect(no_extent.extent).to_not be_present
-      expect(no_extent.extent_sans_format).to_not be_present
+      expect(no_extent.extent).not_to be_present
+      expect(no_extent.extent_sans_format).not_to be_present
     end
     it "should include a single extent statement" do
       expect(single_extent.extent).to eq 'an extent statement'

@@ -32,13 +32,13 @@ feature "Home Page" do
   end
   scenario "there should be no more link on any facets" do
     within ('.home-page-facets') do
-      expect(page).to_not have_css('a', text: /more/)
+      expect(page).not_to have_css('a', text: /more/)
     end
   end
   scenario "should have the library facet hidden by default", js: true do
     within(".blacklight-building_facet") do
       expect(page).to have_css(".panel-title", text: "Library")
-      expect(page).to_not have_css('li a', visible: true)
+      expect(page).not_to have_css('li a', visible: true)
     end
   end
   it 'has schema.org markup for searching' do

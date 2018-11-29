@@ -23,7 +23,7 @@ describe 'mobile api', :'data-integration' => true do
 
     it 'shows correct drupal api elements' do
       visit solr_document_path('2757829', format: 'mobile', drupal_api: true)
-      expect(page.body).to_not have_xml('//image_url')
+      expect(page.body).not_to have_xml('//image_url')
     end
 
     it 'shows GryphonDor Item elements correctly' do
@@ -59,14 +59,14 @@ describe 'mobile api', :'data-integration' => true do
       expect(page.body).to have_xml('//image_url_lg')
       expect(page.body).to have_xml('//formats')
       expect(page.body).to have_xml('//format')
-      expect(page.body).to_not have_xml('//holding')
+      expect(page.body).not_to have_xml('//holding')
     end
 
     it 'shows correct drupal api elements' do
       visit search_catalog_path(format: 'mobile', drupal_api: true, q: 'harry potter')
-      expect(page.body).to_not have_xml('//image_url')
-      expect(page.body).to_not have_xml('//availability')
-      expect(page.body).to_not have_xml('//holding')
+      expect(page.body).not_to have_xml('//image_url')
+      expect(page.body).not_to have_xml('//availability')
+      expect(page.body).not_to have_xml('//holding')
       visit search_catalog_path(format: 'mobile', q: '7155816')
       expect(page.body).to have_xml('//database_url')
     end

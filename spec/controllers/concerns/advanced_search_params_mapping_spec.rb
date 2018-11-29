@@ -22,27 +22,27 @@ describe AdvancedSearchParamsMapping do
       controller.send(:map_advanced_search_params)
     end
     it 'should modify author' do
-      expect(params[:author]).to_not be_present
+      expect(params[:author]).not_to be_present
       expect(params[:search_author]).to eq "Author"
     end
     it 'should modify title' do
-      expect(params[:title]).to_not be_present
+      expect(params[:title]).not_to be_present
       expect(params[:search_title]).to eq "Title"
     end
     it 'should modify subject' do
-      expect(params[:subject]).to_not be_present
+      expect(params[:subject]).not_to be_present
       expect(params[:subject_terms]).to eq "Subject"
     end
     it 'should modify description and pass it as the search' do
-      expect(params[:description]).to_not be_present
+      expect(params[:description]).not_to be_present
       expect(params[:search]).to eq "Description"
     end
     it 'should modify pub info' do
-      expect(params[:pub_info]).to_not be_present
+      expect(params[:pub_info]).not_to be_present
       expect(params[:pub_search]).to eq "Pub"
     end
     it 'should modify number' do
-      expect(params[:number]).to_not be_present
+      expect(params[:number]).not_to be_present
       expect(params[:isbn_search]).to eq "Number"
     end
   end

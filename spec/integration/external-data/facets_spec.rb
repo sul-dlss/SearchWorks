@@ -62,8 +62,8 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
       it "should not include more links" do
         within('#facets') do
           within('.facet_limit.blacklight-building_facet') do
-            expect(page).to_not have_css('.more_facets_link')
-            expect(page).to_not have_content('more')
+            expect(page).not_to have_css('.more_facets_link')
+            expect(page).not_to have_content('more')
           end
         end
       end

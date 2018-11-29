@@ -38,12 +38,12 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     end
 
     it "should not display request links for requestable libraries" do
-      expect(rendered).to_not have_content("Request")
+      expect(rendered).not_to have_content("Request")
     end
 
     it 'should display the callnumber without live lookup' do
       expect(rendered).to have_css 'td', text: 'ABC 123'
-      expect(rendered).to_not have_css 'td[data-live-lookup-id]'
+      expect(rendered).not_to have_css 'td[data-live-lookup-id]'
     end
   end
   describe 'location level requests' do
@@ -116,7 +116,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should display the current location as the home location" do
-        expect(rendered).to_not have_css('.location-name', text: 'Stacks')
+        expect(rendered).not_to have_css('.location-name', text: 'Stacks')
         expect(rendered).to have_css('.location-name', text: 'Information Center display')
       end
       it "should not be displayed if the current location is a special location that gets treated like a home location" do
@@ -185,7 +185,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('.location a', text: 'Request')
       end
       it "should not have any requestable items" do
-        expect(rendered).to_not have_css('td[data-request-url]')
+        expect(rendered).not_to have_css('td[data-request-url]')
       end
     end
     describe "item level request links" do
@@ -197,7 +197,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         render
       end
       it "should not have a request url stored in the data attribute" do
-        expect(rendered).to_not have_css('td[data-request-url]')
+        expect(rendered).not_to have_css('td[data-request-url]')
       end
       it "should not have a request link in the item" do
         expect(rendered).to have_css('tbody a', text: 'Request')
@@ -218,7 +218,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('.availability td[data-barcode="456"][data-request-url]')
       end
       it "should have an item that does not have a request url" do
-        expect(rendered).to_not have_css('.availability td[data-barcode="123"][data-request-url]')
+        expect(rendered).not_to have_css('.availability td[data-barcode="123"][data-request-url]')
       end
     end
   end

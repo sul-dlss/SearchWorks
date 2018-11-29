@@ -24,7 +24,7 @@ describe Citation do
   describe '#citable?' do
     context 'when there is no OCLC number, MODS citation, or EDS citation' do
       it 'is false' do
-        expect(subject).to_not be_citable
+        expect(subject).not_to be_citable
       end
     end
 

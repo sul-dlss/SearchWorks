@@ -105,7 +105,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_title", with: "NOT Potter"
       click_on "advanced-search-submit"
       within "#documents" do
-        expect(page).to_not have_content("Harry Potter")
+        expect(page).not_to have_content("Harry Potter")
       end
     end
   end
@@ -133,7 +133,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       fill_in "search_title", with: "-potter"
       click_on "advanced-search-submit"
       within "#documents" do
-        expect(page).to_not have_content("Harry Potter")
+        expect(page).not_to have_content("Harry Potter")
       end
     end
   end

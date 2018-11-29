@@ -24,7 +24,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
       end
 
       it 'is not renedered' do
-        expect(rendered).to_not have_css('dt', text: 'Organization & arrangement')
+        expect(rendered).not_to have_css('dt', text: 'Organization & arrangement')
       end
     end
   end
@@ -54,8 +54,8 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
       expect(rendered).to have_css('dt', text: 'Included Work')
       expect(rendered).to have_css('dd a', count: 2)
       expect(rendered).to have_css('dd a', text: '710 with t ind2 Title! sub n after t')
-      expect(rendered).to_not have_css('dt', text: 'Related Work')
-      expect(rendered).to_not have_css('dt', text: 'Contributor')
+      expect(rendered).not_to have_css('dt', text: 'Related Work')
+      expect(rendered).not_to have_css('dt', text: 'Contributor')
     end
   end
 end

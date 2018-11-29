@@ -5,7 +5,7 @@ describe Holdings::Status::Noncirc do
     let(:other_microfilm) { OpenStruct.new(library: 'SOMETHING-ELSE', home_location: 'MICROFILM') }
     let(:business_microfilm) { OpenStruct.new(library: 'BUSINESS', home_location: 'MICROFILM') }
     it "should have custom noncirc locations" do
-      expect(Holdings::Status::Noncirc.new(other_microfilm)).to_not be_noncirc
+      expect(Holdings::Status::Noncirc.new(other_microfilm)).not_to be_noncirc
       expect(Holdings::Status::Noncirc.new(business_microfilm)).to be_noncirc
     end
   end
@@ -13,7 +13,7 @@ describe Holdings::Status::Noncirc do
     let(:ars_stks) { OpenStruct.new(library: 'ARS', type: 'STKS') }
     let(:ars_other_type) { OpenStruct.new(library: 'ARS', type: 'SOMETHING') }
     it "should have identify any NON-STKS type as noncirc" do
-      expect(Holdings::Status::Noncirc.new(ars_stks)).to_not be_noncirc
+      expect(Holdings::Status::Noncirc.new(ars_stks)).not_to be_noncirc
       expect(Holdings::Status::Noncirc.new(ars_other_type)).to be_noncirc
     end
   end
@@ -33,7 +33,7 @@ describe Holdings::Status::Noncirc do
         end
       end
       it "should identify other types as circulating" do
-        expect(Holdings::Status::Noncirc.new(circ_type)).to_not be_noncirc
+        expect(Holdings::Status::Noncirc.new(circ_type)).not_to be_noncirc
       end
     end
     describe "locations" do

@@ -81,11 +81,11 @@ describe IndexLinks do
     end
     it 'should identify urls that are in the url_restricted field as stanford only' do
       expect(index_links.all.first).to be_stanford_only
-      expect(index_links.all.last).to_not be_stanford_only
+      expect(index_links.all.last).not_to be_stanford_only
     end
     it 'should identify urls that are in the url_fulltext field as fulltext' do
       expect(index_links.all.first).to be_fulltext
-      expect(index_links.all.last).to_not be_fulltext
+      expect(index_links.all.last).not_to be_fulltext
     end
     it 'should identify finding aid links' do
       expect(finding_aid_links.all.first).to be_finding_aid

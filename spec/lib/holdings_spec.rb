@@ -32,10 +32,10 @@ describe Holdings do
       Holdings.new( SolrDocument.new() )
     }
     it "should return false if there are no holdings" do
-      expect(no_holdings).to_not be_present
+      expect(no_holdings).not_to be_present
     end
     it "should return false if an item's call number is blank" do
-      expect(blank_callnumber).to_not be_present
+      expect(blank_callnumber).not_to be_present
     end
     it "should return true if there are items in a viewable library" do
       expect(complex_holdings).to be_present
@@ -180,7 +180,7 @@ describe Holdings do
       expect(holdings.libraries.first.locations.length).to eq 1
       location = holdings.libraries.first.locations.first
       expect(location.code).to eq 'STACKS'
-      expect(location.items).to_not be_present
+      expect(location.items).not_to be_present
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end

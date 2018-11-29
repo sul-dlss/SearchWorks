@@ -21,7 +21,7 @@ describe 'Request Links', type: :feature, :"data-integration" => true do
       it 'should not render request links for items that are available online' do
         visit solr_document_path("10402123")
 
-        expect(page).to_not have_css('.request-button', text: "Request on-site access")
+        expect(page).not_to have_css('.request-button', text: "Request on-site access")
       end
       it 'should render request links for items that are not available online or at other libraries' do
         visit solr_document_path("3010807")

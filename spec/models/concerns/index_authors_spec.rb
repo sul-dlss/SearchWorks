@@ -11,7 +11,7 @@ describe IndexAuthors do
     vern_author_meeting_display: ["Vern Author Meeting"]
   ) }
   it "should not return anything for a document without authors" do
-    expect(no_authors_document.authors_from_index).to_not be_present
+    expect(no_authors_document.authors_from_index).not_to be_present
   end
   it "should return authors for all supplied types" do
     expect(document.authors_from_index.length).to eq 6

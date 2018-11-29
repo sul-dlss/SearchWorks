@@ -55,7 +55,7 @@ describe CJKQuery do
       let(:solr_q) { "_query_:\"{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}\"" }
       it "should not try to append _cjk onto already processed solr params logic" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
-        expect(solr_params[:q]).to_not include "_cjk_cjk"
+        expect(solr_params[:q]).not_to include "_cjk_cjk"
       end
     end
   end
@@ -73,15 +73,15 @@ describe CJKQuery do
         blacklight_params.merge!(:q => '飘')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to_not have_key("mm")
-        expect(solr_params).to_not have_key("qs")
+        expect(solr_params).not_to have_key("mm")
+        expect(solr_params).not_to have_key("qs")
       end
       it "if only 2 CJK chars, it shouldn't send in additional Solr params" do
         blacklight_params.merge!(:q => '三國')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to_not have_key("mm")
-        expect(solr_params).to_not have_key("qs")
+        expect(solr_params).not_to have_key("mm")
+        expect(solr_params).not_to have_key("qs")
       end
       it "should detect Han - Traditional and add mm and qs to Solr params" do
         blacklight_params.merge!(:q => '舊小說')

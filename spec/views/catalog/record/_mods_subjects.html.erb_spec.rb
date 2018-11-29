@@ -18,7 +18,7 @@ describe "catalog/record/_mods_subjects.html.erb" do
     it "should should not render anything when a document has no subjects" do
       assign(:document, no_subjects_doc)
       render
-      expect(rendered).to_not be_present
+      expect(rendered).not_to be_present
     end
   end
   describe "Object genres" do
@@ -35,7 +35,7 @@ describe "catalog/record/_mods_subjects.html.erb" do
     it "should should not render anything when a document has no genres" do
       assign(:document, no_genres_doc)
       render
-      expect(rendered).to_not be_present
+      expect(rendered).not_to be_present
     end
   end
 end

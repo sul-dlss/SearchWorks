@@ -56,7 +56,7 @@ describe Holdings::Library do
     ] }
     let(:library) { Holdings::Library.new("GREEN", nil, callnumbers) }
     it "should be false when libraries have no item display fields" do
-      expect(library).to_not be_present
+      expect(library).not_to be_present
     end
   end
   describe "#location_level_request?" do
@@ -72,7 +72,7 @@ describe Holdings::Library do
         nil,
         [double(current_location: double(code: 'INPROCESS'))]
       )
-      expect(library).to_not be_location_level_request
+      expect(library).not_to be_location_level_request
     end
   end
   describe '#library_instructions' do
@@ -89,7 +89,7 @@ describe Holdings::Library do
       expect(zombie).to be_zombie
     end
     it "should not be a holding library" do
-      expect(zombie).to_not be_holding_library
+      expect(zombie).not_to be_holding_library
     end
   end
   describe '#hoover_archive?' do
@@ -101,7 +101,7 @@ describe Holdings::Library do
   describe "#mhld" do
     let(:library) {Holdings::Library.new("GREEN")}
     it "should be an accessible attribute" do
-      expect(library.mhld).to_not be_present
+      expect(library.mhld).not_to be_present
       library.mhld = "something"
       expect(library.mhld).to be_present
     end

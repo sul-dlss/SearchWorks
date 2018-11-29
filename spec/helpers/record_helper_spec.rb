@@ -27,7 +27,7 @@ describe RecordHelper do
 
   describe 'mods_display_label' do
     it 'should return correct label' do
-      expect(helper.mods_display_label('test:')).to_not have_content ':'
+      expect(helper.mods_display_label('test:')).not_to have_content ':'
       expect(helper.mods_display_label('test:')).to have_css('dt', text: 'test')
     end
   end
@@ -56,7 +56,7 @@ describe RecordHelper do
       expect(mods_record_field(url_field)).to have_css("a[href='https://library.stanford.edu']", text: 'https://library.stanford.edu')
     end
     it 'should not print empty labels' do
-      expect(helper.mods_record_field(empty_field)).to_not be_present
+      expect(helper.mods_record_field(empty_field)).not_to be_present
     end
     it 'should join values with a <dd> by default' do
       expect(helper.mods_record_field(multi_values)).to have_css('dd', count: 2)
@@ -83,7 +83,7 @@ describe RecordHelper do
         expect(name).to match /<dd><a href.*<\/dd>/
       end
       it 'should not print empty labels' do
-        expect(mods_name_field(empty_field)).to_not be_present
+        expect(mods_name_field(empty_field)).not_to be_present
       end
     end
 
@@ -117,7 +117,7 @@ describe RecordHelper do
         expect(mods_subject_field(subjects)).to match /Subject2b<\/a> &gt; <a href/
       end
       it 'should not print empty labels' do
-        expect(mods_subject_field(empty_field)).to_not be_present
+        expect(mods_subject_field(empty_field)).not_to be_present
       end
     end
     describe '#mods_genre_field' do
@@ -125,7 +125,7 @@ describe RecordHelper do
         expect(mods_genre_field(genres)).to match /<dd><a href=*.*>Genre1*.*<\/a><\/dd><dd><a*.*Genre2<\/a><\/dd>/
       end
       it 'should not print empty labels' do
-        expect(mods_genre_field(empty_field)).to_not be_present
+        expect(mods_genre_field(empty_field)).not_to be_present
       end
     end
     describe '#link_mods_subjects' do

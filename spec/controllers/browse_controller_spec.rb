@@ -32,7 +32,7 @@ describe BrowseController, :"data-integration" => true do
     it "should not throw an error" do
       get :index
       expect(response).to be_success
-      expect(assigns(:original_doc)).to_not be_present
+      expect(assigns(:original_doc)).not_to be_present
     end
   end
   describe "pagination" do

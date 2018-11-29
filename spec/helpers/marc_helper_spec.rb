@@ -61,17 +61,17 @@ describe MarcHelper do
       it 'should not include relator terms in the vernacular' do
         data = get_data_with_label_from_marc(relator_vern_record.to_marc, 'Label', '700')
         expect(data[:fields].length).to eq 1
-        expect(data[:fields].first[:vernacular]).to_not match(/Performer|prf/)
+        expect(data[:fields].first[:vernacular]).not_to match(/Performer|prf/)
       end
 
       it "should handle bad vernacular records correctly" do
         bad_600 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","600")
         bad_245 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","245")
 
-        expect(bad_600[:fields].first[:field]).to_not match /This is Vernacular/
+        expect(bad_600[:fields].first[:field]).not_to match /This is Vernacular/
         expect(bad_600[:fields].first[:field]).to match /This is not Vernacular/
 
-        expect(bad_245[:fields].first[:field]).to_not match /This is Vernacular/
+        expect(bad_245[:fields].first[:field]).not_to match /This is Vernacular/
         expect(bad_245[:fields].first[:field]).to match /This is not Vernacular/
       end
       it "should link subfield U for certain fields" do
@@ -83,16 +83,16 @@ describe MarcHelper do
         expect(linking[:fields].first[:field]).to match(/<a href=.*>.*<\/a>/)
 
         expect(non_linking[:fields].length).to eq 1
-        expect(non_linking[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
+        expect(non_linking[:fields].first[:field]).not_to match(/<a href=.*>.*<\/a>/)
 
         expect(bad_url[:fields].length).to eq 1
-        expect(bad_url[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
+        expect(bad_url[:fields].first[:field]).not_to match(/<a href=.*>.*<\/a>/)
       end
       it "should return the approprate subfield when one is requested" do
         data = get_data_with_label_from_marc(document.to_marc, "Label:", "650",{:sub_fields=>["d"]})
         expect(data[:fields].first[:field]).to match /Subject2/
         data[:fields].each do |field|
-          expect(field[:field]).to_not match /Subject1/
+          expect(field[:field]).not_to match /Subject1/
         end
       end
       it "should handle nielsen data correctly" do
@@ -100,13 +100,13 @@ describe MarcHelper do
         expect(data[:fields].length).to eq 1
         expect(data[:fields].first[:field]).to match(/Nielsen Field/)
         expect(data[:fields].first[:field]).to match(/source: Nielsen Book Data/)
-        expect(data[:fields].to_s).to_not match(/.*Note.*/)
+        expect(data[:fields].to_s).not_to match(/.*Note.*/)
       end
       it "should handle linking to parent ckeys correctly" do
         data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc,"Label:", "590")
         expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Copy.*<a href=\"55523\">55523<\/a> \(.*\)/)
-        expect(data[:fields].first[:field]).to_not match(/&gt;|&lt;|&quot;/)
+        expect(data[:fields].first[:field]).not_to match(/&gt;|&lt;|&quot;/)
       end
       it "should handle special characters correctly" do
         data = get_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690")
@@ -144,19 +144,19 @@ describe MarcHelper do
       it "should not include fields that start with a % sign" do
         data = link_to_data_with_label_from_marc(percent_record.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
         expect(data[:fields].length).to eq 1
-        expect(data[:fields].first[:field]).to_not match(/%Bad/)
+        expect(data[:fields].first[:field]).not_to match(/%Bad/)
       end
       it "should handle bad vernacular records correctly" do
         bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
         bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
 
         expect(bad_600[:fields].length).to eq 1
-        expect(bad_600[:fields].first[:field]).to_not match(/This is Vernacular/)
+        expect(bad_600[:fields].first[:field]).not_to match(/This is Vernacular/)
         expect(bad_600[:fields].first[:field]).to match(/This is not Vernacular/)
         expect(bad_600[:fields].first[:vernacular]).to be_nil
 
         expect(bad_245[:fields].length).to eq 1
-        expect(bad_245[:fields].first[:field]).to_not match(/This is Vernacular/)
+        expect(bad_245[:fields].first[:field]).not_to match(/This is Vernacular/)
         expect(bad_245[:fields].first[:field]).to match(/This is not Vernacular/)
         expect(bad_245[:fields].first[:vernacular]).to be_nil
       end
@@ -208,7 +208,7 @@ describe MarcHelper do
     it 'should not display blacklisted fields' do
       link = contributors_and_works_from_marc(contributor.to_marc)
       link.each do |_, value|
-        expect(value).to_not match(/880-00/)
+        expect(value).not_to match(/880-00/)
       end
     end
   end

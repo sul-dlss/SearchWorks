@@ -31,7 +31,7 @@ describe MastheadHelper do
       expect(digital_collections_params_for('something')).to match /building_facet.*Stanford\+Digital\+Repository/
     end
     it 'should include the given parameter as the format_main_ssim' do
-      expect(digital_collections_params_for).to_not match /format_main_ssim/
+      expect(digital_collections_params_for).not_to match /format_main_ssim/
       expect(digital_collections_params_for('something')).to match /format_main_ssim.*something/
     end
   end

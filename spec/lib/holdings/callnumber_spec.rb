@@ -16,7 +16,7 @@ describe Holdings::Callnumber do
     let(:no_item_display) { Holdings::Callnumber.new('') }
 
     it "should be false when the item_display doesn't exist" do
-      expect(no_item_display).to_not be_present
+      expect(no_item_display).not_to be_present
     end
 
     it 'should return true when the item_display exists' do
@@ -24,7 +24,7 @@ describe Holdings::Callnumber do
     end
 
     it 'should return false for INTERNET callnumbers' do
-      expect(internet_callnumber).to_not be_present
+      expect(internet_callnumber).not_to be_present
     end
   end
   describe '#on_order?' do
@@ -33,20 +33,20 @@ describe Holdings::Callnumber do
     end
 
     it 'should return false for non on-order items' do
-      expect(callnumber).to_not be_on_order
+      expect(callnumber).not_to be_on_order
     end
   end
   describe 'browsable?' do
     it 'should return false if not LC or DEWEY' do
-      expect(Holdings::Callnumber.new(complex_item_display)).to_not be_browsable
+      expect(Holdings::Callnumber.new(complex_item_display)).not_to be_browsable
     end
 
     it 'should return false if there is no shelfkey' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- -|- reverse_shelfkey -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- -|- reverse_shelfkey -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
     end
 
     it 'should return false if there is no reverse shelfkey' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).to_not be_browsable
+      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
     end
 
     it 'should return true if callnumber type is ALPHANUM' do
@@ -56,7 +56,7 @@ describe Holdings::Callnumber do
 
     it 'should return false if callnumber type is INTERNET' do
       internet = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- INTERNET -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(internet)).to_not be_browsable
+      expect(Holdings::Callnumber.new(internet)).not_to be_browsable
     end
     it 'should return true if callnumber type is LC' do
       lc = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- LC -|- course_id -|- reserve_desk -|- loan_period'
@@ -99,7 +99,7 @@ describe Holdings::Callnumber do
     end
 
     it 'should identify material in LANE-MED to not do a live lookup' do
-      expect(Holdings::Callnumber.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).to_not be_live_status
+      expect(Holdings::Callnumber.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).not_to be_live_status
     end
   end
   describe 'treat_current_location_as_home_location?' do
@@ -118,7 +118,7 @@ describe Holdings::Callnumber do
 
     it 'should remove the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
-      expect(public_note.public_note).to_not include 'PUBLIC'
+      expect(public_note.public_note).not_to include 'PUBLIC'
     end
   end
   describe 'reserves' do
@@ -136,7 +136,7 @@ describe Holdings::Callnumber do
     end
 
     it 'should return false when an item is not populated with reserve desk and loan period' do
-      expect(Holdings::Callnumber.new('123 -|- abc')).to_not be_on_reserve
+      expect(Holdings::Callnumber.new('123 -|- abc')).not_to be_on_reserve
     end
   end
   describe 'request status' do
@@ -145,7 +145,7 @@ describe Holdings::Callnumber do
     end
 
     it 'should respond to #must_request? from the Holdings::Requestable class' do
-      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to_not be_must_request
+      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).not_to be_must_request
     end
   end
 

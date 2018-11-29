@@ -56,13 +56,13 @@ describe AccessPanels::Online do
     end
 
     it 'is false when there are only supplemental links present' do
-      expect(supplemental).to_not be_present
+      expect(supplemental).not_to be_present
     end
   end
 
   describe '#links' do
     it 'should not return links when they are present in MODS records' do
-      expect(mods.links).to_not be_present
+      expect(mods.links).not_to be_present
     end
 
     it 'should return fulltext links' do

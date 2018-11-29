@@ -8,7 +8,7 @@ describe 'mobile api', :'data-integration' => true do
     expect(page.body).to have_xml('//pub_info')
     expect(page.body).to have_xml('//physical_description')
     # Shouldn't have any brackets
-    expect(page.body).to_not match /(\[|\])/
+    expect(page.body).not_to match /(\[|\])/
     expect(page.body).to have_xml('//item_details')
     expect(page.body).to have_xml('//item')
     expect(page.body).to have_xml('//id')

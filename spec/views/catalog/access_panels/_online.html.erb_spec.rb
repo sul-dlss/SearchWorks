@@ -38,7 +38,7 @@ describe "catalog/access_panels/_online.html.erb" do
         assign(:document, SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856))
         render
         expect(rendered).to     have_css('.panel-online')
-        expect(rendered).to_not have_link('Find full text')
+        expect(rendered).not_to have_link('Find full text')
         expect(rendered).to     have_css('[data-behavior="sfx-panel"]')
         expect(rendered).to     have_link('See the full find it @ Stanford menu')
       end

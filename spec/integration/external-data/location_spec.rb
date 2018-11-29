@@ -27,7 +27,7 @@ describe "Location", feature: true, :"data-integration" => true do
 
       within('.panel-library-location') do
         within(first('.location table')) do
-          expect(page).to_not have_css('i.noncirc')
+          expect(page).not_to have_css('i.noncirc')
         end
       end
     end
@@ -49,7 +49,7 @@ describe "Location", feature: true, :"data-integration" => true do
     end
     it "should not show request links for requstable libraries" do
       within('.availability') do
-        expect(page).to_not have_content('Request')
+        expect(page).not_to have_content('Request')
       end
     end
     it "should show the MARC 590 note in the availability display" do

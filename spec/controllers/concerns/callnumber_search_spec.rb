@@ -14,7 +14,7 @@ describe CallnumberSearch do
     end
     it "should downcase the q parameter" do
       expect(params[:q]).to match /abc 123/
-      expect(params[:q]).to_not include "ABC"
+      expect(params[:q]).not_to include "ABC"
     end
     it "should quote the q parameter" do
       expect(params[:q]).to eq '"abc 123"'

@@ -7,13 +7,13 @@ describe "Databases Access Point", feature: true, :"data-integration" => true do
     fill_in 'q', with: ''
     click_button 'search'
     within("#facets") do
-      expect(page).to_not have_css('.panel-title', text: "Database topic")
+      expect(page).not_to have_css('.panel-title', text: "Database topic")
       click_link "Database"
     end
 
     within("#facets") do
       within(".blacklight-db_az_subject") do
-        expect(page).to_not have_css(".collapsed")
+        expect(page).not_to have_css(".collapsed")
         expect(page).to have_css(".panel-title", text: "Database topic")
       end
     end

@@ -117,7 +117,7 @@ describe "catalog/_index_location.html.erb" do
       render
     end
     it "should not display request links for requestable libraries" do
-      expect(rendered).to_not have_content("Request")
+      expect(rendered).not_to have_content("Request")
     end
     it 'displays a link to the full record' do
       expect(rendered).to have_css 'th', text: 'Some records bound together'
@@ -166,8 +166,8 @@ describe "catalog/_index_location.html.erb" do
       end
       it "should not display the location" do
         expect(rendered).to have_css('tbody tr', count: 2)
-        expect(rendered).to_not have_content('library has')
-        expect(rendered).to_not have_content('Current Periodicals')
+        expect(rendered).not_to have_content('library has')
+        expect(rendered).not_to have_content('Current Periodicals')
       end
     end
   end
@@ -188,7 +188,7 @@ describe "catalog/_index_location.html.erb" do
         end
         it "should put the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
           expect(rendered).to have_css('tbody td a', text: 'Request')
-          expect(rendered).to_not have_css('tbody td[data-barcode] a', text: 'Request')
+          expect(rendered).not_to have_css('tbody td[data-barcode] a', text: 'Request')
         end
       end
     end

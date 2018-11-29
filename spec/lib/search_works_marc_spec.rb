@@ -40,7 +40,7 @@ describe SearchWorksMarc do
       end
     end
     it 'values should not contain excluded subfields' do
-      expect(sw_marc.parse_marc_record.first.values.join('')).to_not match /\^A170662/
+      expect(sw_marc.parse_marc_record.first.values.join('')).not_to match /\^A170662/
     end
     describe 'subfields' do
       it 'should equal the value' do

@@ -95,7 +95,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       terms_array.each { |e| expect(e).to be_an_instance_of(String) }
     end
     it "should not include starting term in the returned array" do
-      expect(terms_array).to_not include("aaa")
+      expect(terms_array).not_to include("aaa")
       expect(terms_array).to include("bbb")
     end
   end
@@ -125,7 +125,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     describe "spine text (the values for the hash)" do
       it "should only be present when shelfkey matches desired list" do
         spine_hash_doc3.values.each { |spine|  
-          expect(spine[:holding].callnumber).to_not match /DK340\.3 \.A2 C4/
+          expect(spine[:holding].callnumber).not_to match /DK340\.3 \.A2 C4/
         }
       end
       

@@ -9,7 +9,7 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Sort by relevance", visible: true)
@@ -26,8 +26,8 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
-        expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
+        expect(page).not_to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
@@ -42,8 +42,8 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: false)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
-        expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
+        expect(page).not_to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)

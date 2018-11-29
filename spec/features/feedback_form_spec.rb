@@ -5,7 +5,7 @@ feature "Feedback form (js)", js: true do
     visit root_path
   end
   scenario "feedback form should be hidden" do
-    expect(page).to_not have_css("#feedback-form", visible: true)
+    expect(page).not_to have_css("#feedback-form", visible: true)
   end
   scenario "feedback form should be shown filled out and submitted" do
     skip("Passes locally, not on Travis.") if ENV['CI']

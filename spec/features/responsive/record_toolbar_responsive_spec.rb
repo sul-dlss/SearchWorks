@@ -34,7 +34,7 @@ describe "Record toolbar", js: true, feature: true do
           expect(page).to have_css("div.record-toolbar", visible: true)
 
           within "div.navbar-header" do
-            expect(page).to_not have_css("button.navbar-toggle", visible: true)
+            expect(page).not_to have_css("button.navbar-toggle", visible: true)
             expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
@@ -63,8 +63,8 @@ describe "Record toolbar", js: true, feature: true do
 
           within 'div.navbar-collapse' do
             expect(page).to have_css('li a', text: 'Cite', visible: true)
-            expect(page).to_not have_css("li a", text: "RefWorks", visible: true)
-            expect(page).to_not have_css("li a", text: "EndNote", visible: true)
+            expect(page).not_to have_css("li a", text: "RefWorks", visible: true)
+            expect(page).not_to have_css("li a", text: "EndNote", visible: true)
           end
         end
       end
@@ -88,16 +88,16 @@ describe "Record toolbar", js: true, feature: true do
             expect(page).to have_css("a.next", visible: true)
           end
 
-          expect(page).to_not have_css("div.navbar-collapse", visible: true)
+          expect(page).not_to have_css("div.navbar-collapse", visible: true)
 
           page.find("button.navbar-toggle").click
 
           within "div.navbar-collapse" do
             expect(page).to have_css("li button", text: "Send to", visible: true)
             expect(page).to have_css("form label", text: "Select", visible: true)
-            expect(page).to_not have_css("li a", text: "text", visible: true)
-            expect(page).to_not have_css("li a", text: "email", visible: true)
-            expect(page).to_not have_css("li a", text: "printer", visible: true)
+            expect(page).not_to have_css("li a", text: "text", visible: true)
+            expect(page).not_to have_css("li a", text: "email", visible: true)
+            expect(page).not_to have_css("li a", text: "printer", visible: true)
             click_button "Send to"
             expect(page).to have_css("li a", text: "text", visible: true)
             expect(page).to have_css("li a", text: "email", visible: true)

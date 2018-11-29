@@ -15,7 +15,7 @@ describe ReplaceSpecialQuotes do
       controller.send(:replace_special_quotes)
       expect(params[:a_param].scan("\"#{q}\"").length).to eq 14
       ["«", "「", "〟", "』"].each do |character|
-        expect(params[:a_param]).to_not include(character)
+        expect(params[:a_param]).not_to include(character)
       end
     end
   end

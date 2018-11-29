@@ -10,7 +10,7 @@ describe AvailabilityController do
   end
   describe "without IDs" do
     it "should render a blank JSON array w/o making a live lookup request" do
-      expect(LiveLookup).to_not receive(:new)
+      expect(LiveLookup).not_to receive(:new)
       get :index
       expect(response.body).to eq '[]'
     end
