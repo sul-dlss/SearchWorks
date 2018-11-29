@@ -11,7 +11,7 @@ feature 'Course reserves browse', js: true do
     end
     scenario "should be accessible from the subnavbar" do
       within '#search-subnavbar-container' do
-        find_link('Course reserves').trigger('click')
+        find_link('Course reserves').click
       end
       expect(page).to have_css("h1", text: "Browse course reserves")
     end

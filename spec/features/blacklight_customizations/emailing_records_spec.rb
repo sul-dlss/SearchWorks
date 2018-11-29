@@ -42,7 +42,7 @@ describe "Emailing Records", type: :feature, js: true do
 
       within('.modal-dialog') do
         fill_in 'to', with: 'email@example.com'
-        find('button[type="submit"]').trigger('click')
+        find('button[type="submit"]').click
       end
 
       expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
@@ -76,7 +76,7 @@ describe "Emailing Records", type: :feature, js: true do
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'
-          find('button[type="submit"]').trigger('click')
+          find('button[type="submit"]').click
         end
 
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
@@ -98,9 +98,9 @@ describe "Emailing Records", type: :feature, js: true do
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'
-          find('#type_full').trigger('click')
+          find('#type_full').click
 
-          find('button[type="submit"]').trigger('click')
+          find('button[type="submit"]').click
         end
 
         # triggers capybara to wait until email is sent

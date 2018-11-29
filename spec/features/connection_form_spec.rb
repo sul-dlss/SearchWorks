@@ -9,7 +9,7 @@ feature 'Connection form (js)', js: true do
   end
   scenario 'connection form should be shown filled out and submitted' do
     skip('Passes locally, not on Travis.') if ENV['CI']
-    find('.connection-problem').trigger('click')
+    find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)
     expect(page).to have_css('button', text: 'Cancel')
     within 'form.feedback-form' do

@@ -1,13 +1,12 @@
 require "spec_helper"
 
 describe "Responsive results toolbar", js: true, feature: true do
-  before do
-    visit root_path
-    fill_in "q", with: ''
-    click_button 'search'
-  end
   describe " - desktop view (> 992px)" do
     it "should display correct tools" do
+      visit root_path
+      fill_in "q", with: ''
+      click_button 'search'
+
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
         expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
@@ -19,10 +18,13 @@ describe "Responsive results toolbar", js: true, feature: true do
       end
     end
   end
-  describe " - tablet view (768px - 992px) - " do
+  describe " - tablet view (768px - 992px) - ", responsive: true, page_width: 800 do
     it "should display correct tools" do
+      visit root_path
+      fill_in "q", with: ''
+      click_button 'search'
+
       within "#sortAndPerPage" do
-        page.driver.resize("800", "800")
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
         expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
         expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
@@ -32,9 +34,12 @@ describe "Responsive results toolbar", js: true, feature: true do
       end
     end
   end
-  describe " - mobile landscape view (480px - 767px) - " do
+  describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
     it "should display correct tools" do
-      page.driver.resize("700", "700")
+      visit root_path
+      fill_in "q", with: ''
+      click_button 'search'
+
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: false)
         expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)

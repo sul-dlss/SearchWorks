@@ -42,8 +42,8 @@ feature 'Article Record Display' do
 
       it 'renders HTML' do
         visit article_path(document[:id])
-        find('#fulltextToggleBar').click
-        expect(page).to have_css('.blacklight-eds_html_fulltext')
+
+        expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
         within('div.blacklight-eds_html_fulltext') do
           expect(page).not_to have_content('<anid>')
         end

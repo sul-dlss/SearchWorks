@@ -23,7 +23,7 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
 
       within('#search-subnavbar') do
         expect(page).to have_css('li a', text: 'Selections (7)')
-        find('li a', text: 'Selections (7)').trigger('click')
+        find('li a', text: 'Selections (7)').click
 
         within('ul.recent-selections') do
           expect(page).to have_css('li a', text: 'Catalog selections (3)')

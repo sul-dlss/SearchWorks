@@ -122,7 +122,7 @@ feature 'Article Searching' do
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
-      find('a.btn-reset').trigger('click')
+      find('a.btn-reset').click
       expect(page).to have_current_path(articles_path)
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
     end
@@ -132,7 +132,7 @@ feature 'Article Searching' do
 
       expect(page).to have_css('.appliedFilter', text: /kittens/)
 
-      first(:css, 'a.remove').trigger('click')
+      first(:css, 'a.remove').click
       expect(page).not_to have_css('.appliedFilter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
@@ -173,8 +173,8 @@ feature 'Article Searching' do
 
     within '.search-form' do
       fill_in 'q', with: query
-      if Capybara.current_driver == :poltergeist
-        find('#search').trigger('click')
+      if Capybara.current_driver == :headless_chrome
+        find('#search').click
       else
         click_button 'Search'
       end
