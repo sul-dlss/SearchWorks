@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 require "spec_helper"
 
 describe "catalog/record/_mods_bibliographic.html.erb" do

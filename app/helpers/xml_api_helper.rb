@@ -34,6 +34,7 @@ module XmlApiHelper
     string = make_call_to_gbs(google_url)
     #in case of throttled response from GBS
     return {} if string[0, 1] != "{"
+
     google_response = eval(string)
     url_hash = {}
     hsh.each do |ckey, numbers|
@@ -67,6 +68,7 @@ module XmlApiHelper
       end
     end
     return nil if text.empty?
+
     text
   end
 
@@ -93,6 +95,7 @@ module XmlApiHelper
       end
     end
     return nil if text.empty?
+
     text.join(" ")
   end
 
@@ -130,6 +133,7 @@ module XmlApiHelper
       end
     end
     return nil if text.empty?
+
     text
   end
 

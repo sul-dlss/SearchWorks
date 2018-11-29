@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 module RecordHelper
   def display_content_field(field)
     if field.respond_to?(:label, :values) &&

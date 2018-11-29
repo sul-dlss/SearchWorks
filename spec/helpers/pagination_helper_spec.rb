@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe PaginationHelper do
-
   describe 'label_current_per_page' do
     before { expect(helper).to receive(:current_per_page).and_return(10) }
 
@@ -30,5 +29,4 @@ describe PaginationHelper do
       expect(helper.label_current_sort(field('Title'))).to eql 'Title'
     end
   end
-
 end

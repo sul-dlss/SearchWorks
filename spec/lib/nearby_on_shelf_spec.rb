@@ -62,7 +62,6 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     end
   end
 
-
   describe "get_item_display" do
     let(:doc) { {
       :item_display => ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore", 
@@ -343,7 +342,6 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     let(:rterm2) { { 'yyy' => 2 } }
     let(:rterm3) { { 'zzz' => 3 } }
     let(:desired_rev_shelfkeys) { [rterm2.keys[0], rterm3.keys[0]] }
-
 
     let(:shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, term1.keys[0], shelfkey_field, 2, nil) }
     
@@ -759,6 +757,5 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       expect(nearby_obj.send(:get_nearby_items, doc_no_good_callnums[:item_display], "", how_many_before, how_many_after, page)).to be_nil
     end
   end # get_nearby_items
-
 end
 

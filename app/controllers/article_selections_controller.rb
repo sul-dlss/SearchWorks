@@ -16,7 +16,6 @@ class ArticleSelectionsController < ApplicationController
   blacklight_config.show.document_actions[:bookmark].if = false if blacklight_config.show.document_actions[:bookmark]
   blacklight_config.show.document_actions[:sms].if = false if blacklight_config.show.document_actions[:sms]
 
-
   def index
     @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }

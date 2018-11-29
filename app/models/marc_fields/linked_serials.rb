@@ -21,6 +21,7 @@ class LinkedSerials < MarcField
 
   def process_subfield(field, subfield)
     return { text: subfield.value } unless respond_to?("#{subfield.code}_subfield", true)
+
     send("#{subfield.code}_subfield", field, subfield.value)
   end
 
@@ -34,6 +35,7 @@ class LinkedSerials < MarcField
 
   def s_subfield(field, _)
     return if field_has_main_entry?(field)
+
     { link: field_title(field), href: "\"#{field_title(field)}\"", search_field: 'search_title' }
   end
 
@@ -42,6 +44,7 @@ class LinkedSerials < MarcField
   # no $s we want to process $s as if it were $t.
   def t_subfield(field, value)
     return if field['s'].present?
+
     s_subfield(field, value)
   end
 

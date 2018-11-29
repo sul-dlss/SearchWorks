@@ -23,6 +23,7 @@ module CatalogHelper
   def location_level_request_link?(library, location)
     return if location.reserve_location?
     return if Constants::NON_REQUESTABLE_HOME_LOCS.include?(location.try(:code))
+
     library.location_level_request? || location.location_level_request?
   end
 

@@ -76,6 +76,7 @@ module MarcHelper
         marc.find_all { |f| (tag) === f.tag }.each do |field|
           if !field["t"].blank?
             next unless field.indicator2 == "2"
+
             subt = :none
             link_text = []
             extra_text = []
@@ -120,6 +121,7 @@ module MarcHelper
             extra_text = ""
             field.each do |subfield|
               next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
+
               if subfield.code == "e"
                 relator_text << subfield.value
               elsif subfield.code == "4" and relator_text.blank?
@@ -186,6 +188,7 @@ module MarcHelper
           if match_original == match_880 and field_original == field_880
             field.each do |sub|
               next if Constants::EXCLUDE_FIELDS.include?(sub.code) || sub.code == '4'
+
               return_text << sub.value
             end
           end
@@ -408,6 +411,7 @@ module MarcHelper
 
   def get_uniform_title(doc)
     return unless doc['uniform_title_display_struct']
+
     data = doc['uniform_title_display_struct'].first
     field_data = data[:fields].first[:field]
 
@@ -433,6 +437,7 @@ module MarcHelper
   def render_field_from_marc(fields, opts = {})
     render "catalog/field_from_marc", :fields => fields, :options => opts
   end
+
   def render_field_list_from_marc(fields, opts = {})
     render "catalog/field_list_from_marc", :fields => fields, :options => opts
   end

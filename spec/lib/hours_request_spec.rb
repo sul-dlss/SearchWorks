@@ -26,5 +26,4 @@ describe HoursRequest do
     expect(Faraday).to receive(:new).with({ url: "http://example.com/green/location/green_library/hours/for/today" }).and_return(struct)
     expect(HoursRequest.new("GREEN").get).to eq("test")
   end
-
 end

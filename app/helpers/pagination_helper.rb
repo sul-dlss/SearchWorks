@@ -1,5 +1,4 @@
 module PaginationHelper
-
   def label_current_per_page(count, label)
     if count == current_per_page
       content_tag(:span, '', class: 'glyphicon glyphicon-ok') + " " + label
@@ -16,5 +15,4 @@ module PaginationHelper
       label.to_s.titleize
     end
   end
-
 end

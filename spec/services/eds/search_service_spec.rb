@@ -48,7 +48,6 @@ RSpec.describe Eds::SearchService do
       expect(results[1]).to eq StubArticleService::SAMPLE_RESULTS
     end
 
-
     it '#fetch_many' do
       results = instance.fetch_many(StubArticleService::SAMPLE_RESULTS.map(&:id), {})
       expect(results.length).to eq 2

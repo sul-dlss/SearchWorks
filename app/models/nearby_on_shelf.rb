@@ -23,6 +23,7 @@ class NearbyOnShelf
   def params
     {}
   end
+
   def get_nearby_items(itm_display, barcode, before, after, page)
     items = []
     item_display = get_item_display(itm_display, barcode)
@@ -48,9 +49,7 @@ class NearbyOnShelf
       end
       items.flatten
     end
-  end  # get_nearby_items
-
-  
+  end  # get_nearby_items  
   
   # given a shelfkey or reverse shelfkey (for a lopped call number), get the 
   #  text for the next "n" nearby items
@@ -68,6 +67,7 @@ class NearbyOnShelf
     end
     get_spines_from_field_values(desired_values, field_name)
   end
+
   # return an array of the next terms in the index for the indicated field and 
   # starting term. Returned array does NOT include starting term.  Queries Solr (duh).
   def get_next_terms_for_field(starting_term, field_name, how_many = 3)
@@ -79,6 +79,7 @@ class NearbyOnShelf
     }
     result
   end
+
   # create an array of sorted html list items containing the appropriate display text
   #  (analogous to what would be visible if you were looking at the spine of 
   #  a book on a shelf) from relevant solr docs, given a particular solr
@@ -109,6 +110,7 @@ class NearbyOnShelf
   def get_spine_hash_from_doc(doc, desired_values, field)
     result_hash = {}
     return if doc[:item_display].nil?
+
     # This winnows down the holdings hashs on only ones where the desired values includes the shelfkey or reverse shelfkey using a very quick select statment
     # The resulting array looke like [[:"36105123456789",{:barcode=>"36105123456789",:callnumber=>"PS3156 .A53"}]]
     item_array = doc.holdings.callnumbers.select do |callnumber|
@@ -180,12 +182,12 @@ class NearbyOnShelf
     if barcode.nil? || barcode.length == 0
       return nil
     end
+
     [item_display].flatten.each do |item_disp|
       item = item_disp if item_disp =~ /^#{CGI::escape(barcode)}/
     end
     return item unless item == ""
   end
-
   
   # return the shelfkey (lopped) piece of the item_display field
   def get_shelfkey(item_display)

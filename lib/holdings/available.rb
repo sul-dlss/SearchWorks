@@ -14,7 +14,6 @@ class Holdings
       def available_current_location?
         Constants::FORCE_AVAILABLE_CURRENT_LOCS.include?(@callnumber.current_location.try(:code))
       end
-
     end
   end
 end

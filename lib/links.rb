@@ -6,6 +6,7 @@ module SearchWorks
     def initialize(document)
       @document = document
     end
+
     def all
       []
     end

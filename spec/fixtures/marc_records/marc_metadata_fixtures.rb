@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 module MarcMetadataFixtures
   def metadata1
     <<-xml
@@ -101,6 +102,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def metadata2
     <<-xml
       <record>
@@ -165,6 +167,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def matched_vernacular_fixture
     <<-xml
       <record>
@@ -187,6 +190,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def unmatched_vernacular_fixture
     <<-xml
       <record>
@@ -201,6 +205,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def matched_vernacular_rtl_fixture
     <<-xml
       <record>
@@ -223,6 +228,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def unmatched_vernacular_rtl_fixture
     <<-xml
       <record>
@@ -322,6 +328,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def linking_fields_fixture
     <<-xml
       <record>
@@ -337,6 +344,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def nielsen_fixture
     <<-xml
       <record>
@@ -357,6 +365,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def tagged_nielsen_fixture
     <<-xml
       <record>
@@ -371,6 +380,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def linked_ckey_fixture
     <<-xml
       <record>
@@ -384,6 +394,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def escape_characters_fixture
     <<-xml
       <record>
@@ -396,6 +407,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def percent_fixture
     <<-xml
       <record>
@@ -560,6 +572,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def multi_a_subject_fixture
     <<-xml
       <record>
@@ -572,6 +585,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_655_subject_fixture
     <<-xml
       <record>
@@ -583,6 +597,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_mixed_subject_fixture
     <<-xml
       <record>
@@ -598,6 +613,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def multi_vxyz_subject_fixture
     <<-xml
       <record>
@@ -613,6 +629,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def collection_690_fixture
     <<-xml
       <record>
@@ -626,6 +643,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def ordered_subjects_fixture
     <<-xml
       <record>
@@ -638,6 +656,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def vernacular_subjects_fixture
     <<-xml
       <record>
@@ -656,6 +675,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def related_works_fixture
     <<-xml
       <record>
@@ -770,6 +790,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def multiple_marc_264_fixture
     <<-xml
       <record>
@@ -784,6 +805,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def complex_marc_264_fixture
     <<-xml
       <record>
@@ -802,6 +824,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_264_copyright_fixture
     <<-xml
       <record>
@@ -817,6 +840,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def vernacular_marc_264_fixture
     <<-xml
       <record>
@@ -833,6 +857,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def unmatched_vernacular_marc_264_fixture
     <<-xml
       <record>
@@ -844,6 +869,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_592_fixture
     <<-xml
       <record>
@@ -854,6 +880,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_single_series_fixture
     <<-xml
       <record>
@@ -865,6 +892,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def marc_multi_series_fixture
     <<-xml
       <record>
@@ -992,6 +1020,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def edition_imprint_fixture
     <<-xml
       <record>
@@ -1010,6 +1039,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def vernacular_edition_imprint_fixture
     <<-xml
       <record>
@@ -1036,9 +1066,11 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def no_fields_fixture
     "<record></record>"
   end
+
   def marc_382_instrumentation
     <<-xml
       <record>
@@ -1068,6 +1100,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def sw_marc_removed
     <<-xml
       <record>
@@ -1077,6 +1110,7 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
   def sw_marc_not_removed
     <<-xml
       <record>

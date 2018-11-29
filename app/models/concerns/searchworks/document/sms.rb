@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+
 # This module provides the body of an email export based on the document's semantic values
 module Searchworks::Document::Sms
   include Blacklight::Document::Sms
@@ -21,5 +22,4 @@ module Searchworks::Document::Sms
 
     return body.join("\n") unless body.empty?
   end
-
 end

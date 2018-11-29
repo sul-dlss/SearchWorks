@@ -62,6 +62,7 @@ namespace :searchworks do
   task :prune_old_search_data, [:days_old] => [:environment] do |t, args|
     chunk = 20000
     raise ArgumentError.new('days_old is expected to be greater than 0') if args[:days_old].to_i <= 0
+
     total = Search.where("updated_at < :date", { date: (Date.today - args[:days_old].to_i) }).count
     total = total - (total % chunk) if (total % chunk) != 0
     i = 0
@@ -76,6 +77,7 @@ namespace :searchworks do
   def eds_cache
     cache_dir = File.join(Settings.EDS_CACHE_DIR, 'faraday_eds_cache')
     return ActiveSupport::Cache::FileStore.new(cache_dir) if File.directory?(cache_dir)
+
     nil
   end
 

@@ -19,7 +19,6 @@ class Holdings
         @callnumber.home_location.try(:end_with?, '-30') ||
         Constants::PAGE_LOCS.include?(@callnumber.home_location)
       end
-
     end
   end
 end

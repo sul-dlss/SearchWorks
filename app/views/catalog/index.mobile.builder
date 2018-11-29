@@ -17,5 +17,4 @@ xml.response {
     # This tests if the current number of docs is the same size as the per_page.  If it's less, we should be on the last page
     xml.has_more_page(page_size.to_i == @response.docs.length.to_i)
   end
-
 } #end xml.data

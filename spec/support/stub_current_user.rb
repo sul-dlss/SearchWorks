@@ -10,6 +10,7 @@ module StubCurrentUser
         affiliation: nil
   )
     return unless user
+
     if context.is_a?(Class)
       allow_any_instance_of(context).to receive(method_name).and_return(user)
       allow_any_instance_of(context).to receive(:session).and_return('suAffiliation' => affiliation) if affiliation

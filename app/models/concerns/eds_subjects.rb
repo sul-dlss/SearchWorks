@@ -59,12 +59,14 @@ module EdsSubjects
     # @return [Array<Subject>]
     def self.from(string_or_array)
       return [] if string_or_array.blank?
+
       xml = Array.wrap(string_or_array).map { |s| convert_simple_string_to_xml(s) }.join('<br/>')
       from_xml(xml)
     end
 
     def self.convert_simple_string_to_xml(subject)
       return subject if subject =~ /<searchLink/i # already has markup
+
       "<searchLink fieldCode=\"DE\" term=\"#{subject}\">#{subject}</searchLink>"
     end
 

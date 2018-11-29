@@ -16,10 +16,13 @@ module ModsData
 
   def mods
     return nil unless mods?
+
     @mods ||= render_mods_display(self)
   end
+
   def prettified_mods
     return nil unless mods?
+
     @prettified_mods ||= CodeRay::Duo[:xml, :div].highlight(self["modsxml"]).html_safe
   end
 

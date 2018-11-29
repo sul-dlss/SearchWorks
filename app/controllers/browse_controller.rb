@@ -50,6 +50,7 @@ class BrowseController < ApplicationController
   end
 
   private
+
   def _prefixes
     @_prefixes ||= super + ['catalog']
   end

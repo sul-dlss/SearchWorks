@@ -81,14 +81,19 @@ class SelectedDatabases
     def selected_database_subjects
       database_config[:subjects]
     end
+
     def selected_database_description
       database_config[:description]
     end
+
     def selected_database_see_also
       return nil unless database_config[:see_also].present?
+
       OpenStruct.new(id: database_config[:see_also][:id], text: database_config[:see_also][:text])
     end
+
     private
+
     def database_config
       @database_config ||= SelectedDatabases.config.find do |database|
         database[:id] == self[:id]

@@ -32,5 +32,4 @@ describe "Searchworks::Document::Sms" do
       expect(eds_doc.to_sms_text).to eq 'holla back'
     end
   end
-
 end

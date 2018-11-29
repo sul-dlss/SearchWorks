@@ -1,5 +1,4 @@
 module AccessPanelHelper
-
   def link_to_course_reserve_course(course)
     link_to("#{course.id} -- #{course.name}", search_catalog_path({ f: { course: [course.id], instructor: [course.instructor] } }))
   end
@@ -16,5 +15,4 @@ module AccessPanelHelper
     end
     image_tag(image_name, class: "pull-left", alt: "", height: 50)
   end
-
 end

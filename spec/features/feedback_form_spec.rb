@@ -40,6 +40,4 @@ feature "Feedback form (no js)" do
     end
     expect(page).to have_css("div.alert-success", text: "Thank you! Your feedback has been sent.")
   end
-
-
 end

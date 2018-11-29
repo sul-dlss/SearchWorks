@@ -28,6 +28,7 @@ module SearchWorks
 
       def catalog_index_access_points
         return unless @params[:f]
+
         case
         when format_includes_databases?
           :databases
@@ -100,6 +101,7 @@ module SearchWorks
 
       def browse_index_access_points
         return unless @params[:start]
+
         :callnumber_browse
       end
 

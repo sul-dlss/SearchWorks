@@ -41,5 +41,4 @@ module CollectionHelper
       end.join.html_safe
     end
   end
-
 end

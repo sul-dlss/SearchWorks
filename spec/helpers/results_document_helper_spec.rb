@@ -5,7 +5,6 @@ def blacklight_config
 end
 
 describe ResultsDocumentHelper do
-
   before(:all) do
     data_01 = {
       :publication_year_isi => 1999,
@@ -61,7 +60,5 @@ describe ResultsDocumentHelper do
       expect(book_ids['lccn']).to eq ["LCCNa96049953"]
       expect(book_ids['oclc']).to eq ["OCLC36024029"]
     end
-
   end
-
 end

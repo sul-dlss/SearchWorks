@@ -107,7 +107,6 @@ RSpec.describe EdsSubjects do
       subj = document.eds_author_supplied_keywords[1]
       expect(subj.to_html).to eq '<a href="/articles?q=taxation&search_field=keyword">taxation</a>'
     end
-
   end
 
   pending 'sometimes EDS uses semi-colons rather than <br> as delimiters'

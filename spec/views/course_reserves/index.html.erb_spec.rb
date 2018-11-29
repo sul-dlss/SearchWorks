@@ -25,5 +25,4 @@ describe 'course_reserves/index.html.erb' do
     expect(rendered).to have_css('td', text: 'McDonald, Ronald')
     expect(rendered).to have_css('td', text: 'Dog, Crime')
   end
-
 end

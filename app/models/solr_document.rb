@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+
 class SolrDocument
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
   UPDATED_EDS_RESTRICTED_TITLE = 'This title is not available for guests. Log in to see the title and access the article.'.freeze
@@ -72,7 +73,6 @@ class SolrDocument
   def to_semantic_values
     semantic_value_hash = super
     semantic_value_hash = self.class.field_semantics.each_with_object(semantic_value_hash) do |(key, field_names), hash|
-
       ##
       # Handles single string field_name or an array of field_names
       value = Array.wrap(field_names).map { |field_name| self[field_name] }.flatten.compact

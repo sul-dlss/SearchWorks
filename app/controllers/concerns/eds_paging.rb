@@ -19,6 +19,7 @@ module EdsPaging
   # out of a result set.
   def previous_and_next_document_params(index)
     raise ArgumentError, "Negative index: #{index}" if index.negative?
+
     eds_params = {}
     # we don't know the max number of results at this point so it's handled in the caller after the query is issued
     window = PagingWindow.new(index, 999_999_999)

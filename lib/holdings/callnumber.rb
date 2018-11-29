@@ -160,6 +160,7 @@ class Holdings
     def stackmapable_location?
       return false if Constants::STACKMAP_BLACKLIST[:global].include?(home_location)
       return true if Constants::STACKMAP_BLACKLIST[library].blank? # no local blacklist registered, so we're done
+
       !Constants::STACKMAP_BLACKLIST[library].include?(home_location)
     end
 

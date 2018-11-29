@@ -194,7 +194,6 @@ RSpec.describe ArticleHelper do
     end
 
     context 'no markup but weird punctuation' do
-
       context 'with []' do
         let(:title) { 'This Journal [Alternate Name]. 10(1)' }
 

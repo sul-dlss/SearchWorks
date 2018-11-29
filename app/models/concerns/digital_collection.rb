@@ -5,6 +5,7 @@ module DigitalCollection
 
   def collection_members(options = {})
     return nil unless is_a_collection?
+
     @collection_members ||= CollectionMembers.new(self, options)
   end
 
@@ -31,6 +32,7 @@ module DigitalCollection
     def render_type
       @render_type ||= begin
         return 'list' unless should_display_filmstrip?
+
         'filmstrip'
       end
     end
@@ -74,6 +76,7 @@ module DigitalCollection
 
     def should_display_filmstrip?
       return unless number_of_documents_with_image_urls > 0
+
       number_of_documents_with_image_urls >= number_of_documents_without_image_urls
     end
 

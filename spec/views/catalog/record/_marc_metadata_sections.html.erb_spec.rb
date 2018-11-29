@@ -40,5 +40,4 @@ describe "catalog/record/_marc_metadata_sections.html.erb" do
       expect(rendered).to have_css(".side-nav-minimap button span.nav-label", text: "Bottom")
     end
   end
-
 end

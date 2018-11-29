@@ -12,6 +12,7 @@ class ArticleFulltextLinkPresenter
   def links
     return [] unless online_access_panel? || document_has_fulltext?
     return access_panel_links.map { |link| render_fulltext_link(link) } if online_access_panel?
+
     ["#{online_label} #{link_to('View on detail page', article_url(document))}"]
   end
 

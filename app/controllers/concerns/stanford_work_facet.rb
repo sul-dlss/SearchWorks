@@ -1,7 +1,6 @@
 ##
 # A mixin to add dynamic genre specific facet support
 module StanfordWorkFacet
-
   extend ActiveSupport::Concern
 
   included do
@@ -15,6 +14,7 @@ module StanfordWorkFacet
 
   def add_stanford_work_facet
     return unless genre_facet_includes_thesis_value?
+
     blacklight_config.facet_fields['stanford_work_facet_hsim'].tap do |facet|
       facet.show = true
       facet.if = true
@@ -23,6 +23,7 @@ module StanfordWorkFacet
 
   def add_stanford_dept_facet
       return unless genre_facet_includes_thesis_value?
+
       blacklight_config.facet_fields['stanford_dept_sim'].tap do |facet|
         facet.show = true
         facet.if = true

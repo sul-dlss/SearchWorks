@@ -3,6 +3,7 @@ module PresenterResearchStarter
   def transform_research_starter_text
     value = document['eds_html_fulltext']
     return if value.blank?
+
     doc = Nokogiri::HTML.fragment(CGI.unescapeHTML(value))
     doc.search('anid', 'title').remove # remove EDS header content
 

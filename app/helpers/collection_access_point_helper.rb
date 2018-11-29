@@ -4,5 +4,4 @@ module CollectionAccessPointHelper
       @parent = SolrDocument.new(@response.docs.first).parent_collections.find { |c| c.id == params[:f][:collection][0] }
     end
   end
-
 end

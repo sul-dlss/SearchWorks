@@ -2,7 +2,6 @@ require "spec_helper"
 
 describe "Mods Subjects", feature: true, :"data-integration" => true do
   describe "linking" do
-
     it "should do a subject terms search" do
       visit solr_document_path('vb267mw8946')
 

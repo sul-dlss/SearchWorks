@@ -1,5 +1,4 @@
 module CourseReserveAccessPointHelper
-
   def create_course
     if @response.docs.present?
       # Find the document in the response that contains the requested course

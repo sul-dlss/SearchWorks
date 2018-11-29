@@ -249,6 +249,7 @@ class ArticlesController < ApplicationController
   # eds_guest flag has been set (i.e. not nil), otherwise establish a session
   def setup_eds_session(session)
     return if session['eds_session_token'].present? && !session['eds_guest'].nil?
+
     session['eds_guest'] = !on_campus_or_su_affiliated_user?
 
     session['eds_session_token'] = Eds::Session.new(

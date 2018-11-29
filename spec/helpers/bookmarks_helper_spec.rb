@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe BookmarksHelper do
-
   # From BL /spec/helpers/catalog_helper_spec.rb
   def mock_response args
     current_page = args[:current_page] || 1
@@ -60,6 +59,4 @@ describe BookmarksHelper do
       expect(current_entries_info(@response)).to eq '41 - 47'
     end
   end
-
-
 end

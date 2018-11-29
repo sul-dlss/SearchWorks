@@ -1,7 +1,6 @@
 # -*- encoding : utf-8 -*-
-#
-class CatalogController < ApplicationController
 
+class CatalogController < ApplicationController
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
@@ -54,7 +53,6 @@ class CatalogController < ApplicationController
     # items to show per page, each number in the array represent another option to choose from.
     #config.per_page = [10,20,50,100]
     config.default_per_page = 20
-
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
@@ -156,7 +154,6 @@ class CatalogController < ApplicationController
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
-
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -489,6 +486,7 @@ class CatalogController < ApplicationController
 
   def render_document_with_availability_as_json(document, live = true)
     return {} unless document.is_a?(SolrDocument)
+
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),

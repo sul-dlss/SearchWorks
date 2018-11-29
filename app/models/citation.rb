@@ -85,6 +85,7 @@ class Citation
   def citations_from_oclc_response
     Nokogiri::HTML(response).css('p').each_with_object({}) do |element, hash|
       next unless element_is_citation?(element)
+
       element.attributes['class'].value[/^citation_style_(.*)$/i]
       hash[Regexp.last_match[1].upcase] = element.to_html.html_safe
     end
@@ -92,6 +93,7 @@ class Citation
 
   def citations_from_mods
     return unless document.mods && document.mods.note.present?
+
     document.mods.note.find do |note|
       note.label.downcase =~ /preferred citation:?/
     end.try(:values).try(:join)
@@ -120,6 +122,7 @@ class Citation
 
   def desired_formats
     return config.CITATION_FORMATS.map(&:upcase) unless formats.present?
+
     formats.map(&:upcase)
   end
 

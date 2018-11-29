@@ -42,7 +42,6 @@ if ENV["COVERAGE"] or ENV["CI"]
   end
 end
 
-
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
@@ -52,7 +51,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-
   config.include Capybara::DSL
 
   config.before(:example, responsive: true) do |example|

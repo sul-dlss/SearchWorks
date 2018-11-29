@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe ApplicationHelper do
-
   describe '#searchworks_search_action_path' do
     context 'when in an article search' do
       before { expect(helper).to receive_messages(article_search?: true) }

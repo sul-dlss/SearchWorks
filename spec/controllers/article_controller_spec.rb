@@ -28,7 +28,6 @@ RSpec.describe ArticlesController do
         end
       end
 
-
       context 'with a query' do
         it 'raises the error' do
           expect do
@@ -114,8 +113,6 @@ RSpec.describe ArticlesController do
         end
       end
     end
-
-
   end
 
   it 'handles authentication'

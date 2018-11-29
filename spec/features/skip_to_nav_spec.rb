@@ -68,5 +68,4 @@ feature "Skip-to Navigation" do
       expect(page).to have_css("a[href='#advanced-search-form']", text: "Skip to advanced search form")
     end
   end
-
 end

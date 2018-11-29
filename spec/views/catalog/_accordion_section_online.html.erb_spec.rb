@@ -48,5 +48,4 @@ describe "catalog/_index_online_section.html.erb" do
       end
     end
   end
-
 end

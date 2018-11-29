@@ -87,7 +87,6 @@ describe LinkedSerials do
       end
     end
 
-
     context 'for ISBN number ($z)' do
       let(:marc) { main_entry_and_title_serial_fixture }
 

@@ -14,8 +14,8 @@ class PreviewController < ApplicationController
   end
 
   private
+
   def _prefixes
     @_prefixes ||= super + ['catalog']
   end
-
 end

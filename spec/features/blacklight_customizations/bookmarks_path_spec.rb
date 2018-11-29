@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature "Selections Path" do
-
   scenario "should render bookmarks page" do
     visit bookmarks_path
     expect(page).to have_css('h2', text: '0 catalog items')

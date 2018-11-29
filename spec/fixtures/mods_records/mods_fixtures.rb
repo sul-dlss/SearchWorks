@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 module ModsFixtures
   def mods_001
     <<-xml

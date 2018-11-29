@@ -23,6 +23,7 @@ module ArticleHelper
 
   def link_authors(options = {})
     return if options[:value].blank?
+
     separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
@@ -33,6 +34,7 @@ module ArticleHelper
 
   def strip_author_relators(options = {})
     return if options[:value].blank?
+
     separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
@@ -42,6 +44,7 @@ module ArticleHelper
 
   def clean_affiliations(options = {})
     return if options[:value].blank?
+
     separators = options.dig(:config, :separator_options) || {}
     affiliations = options[:value].map(&:to_s).to_sentence(separators)
     remove_eds_tag(affiliations, 'relatesto').html_safe
@@ -50,6 +53,7 @@ module ArticleHelper
   def link_to_doi(options = {})
     doi = options[:value].try(:first)
     return if doi.blank?
+
     url = 'https://doi.org/' + doi.to_s
     link_to(doi, url)
   end
@@ -64,11 +68,13 @@ module ArticleHelper
 
     match = /^([^[:punct:]]+)(.*)$/.match(composed_title)
     return "<i>#{match[1]}</i>#{match[2]}".html_safe if match # italicize first phrase
+
     composed_title.html_safe
   end
 
   def mark_html_safe(options = {})
     return unless options[:value].present?
+
     separators = options.dig(:config, :separator_options) || {}
     options[:value].map(&:to_s).to_sentence(separators).html_safe
   end
@@ -76,6 +82,7 @@ module ArticleHelper
   def sanitize_fulltext(options = {})
     return unless options[:value].present?
     return safe_join(options[:value]) if @document && @document.research_starter?
+
     separators = options.dig(:config, :separator_options) || {}
     fulltext = options[:value].map(&:to_s).to_sentence(separators)
     fulltext = remove_eds_tag(fulltext, 'anid')
@@ -92,6 +99,7 @@ module ArticleHelper
   def render_text_from_html(values)
     values = Array.wrap(values)
     return [] if values.blank?
+
     values.map do |value|
       doc = Nokogiri::HTML(CGI.unescapeHTML(value))
       doc.xpath('//text()').to_a.map(&:to_s)
@@ -107,6 +115,7 @@ module ArticleHelper
     label = ''
     RELATOR_TERMS.each do |relator|
       next unless value =~ /, #{relator}$/i
+
       label = ", #{relator}"
       value.gsub!(/, #{relator}$/i, '')
     end

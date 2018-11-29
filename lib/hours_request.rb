@@ -1,5 +1,4 @@
 class HoursRequest
-
   def initialize(library)
     @library = library
   end
