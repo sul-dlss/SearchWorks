@@ -21,10 +21,12 @@ describe "catalog/_index_marc.html.erb" do
       format_main_ssim: ['Book']
     )
   end
+
   describe "physical extent" do
     before do
       render
     end
+
     it "should link to the author" do
       expect(rendered).to have_css('li a', text: 'Arbitrary, Stewart.')
       expect(rendered).not_to have_css('li a', text: /fantastic/)
@@ -79,12 +81,14 @@ describe "catalog/_index_marc.html.erb" do
     before do
       render
     end
+
     it "should display the database topics" do
       expect(rendered).to have_css('dt', text: "Database topics")
       expect(rendered).to have_css('dd a', text: "Subject1")
       expect(rendered).to have_css('dd a', text: "Subject2")
     end
   end
+
   describe 'finding aid' do
     let(:document) do
       SolrDocument.new(
@@ -95,6 +99,7 @@ describe "catalog/_index_marc.html.erb" do
     before do
       render
     end
+
     it 'should display the finding aid' do
       expect(rendered).to have_css('dt', text: 'Finding aid')
       expect(rendered).to have_css('dd a', text: 'Online Archive of California')

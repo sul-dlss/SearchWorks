@@ -2,7 +2,9 @@ require 'spec_helper'
 
 describe 'catalog/thumbnails/_collection_thumbnail.html.erb' do
   let(:document) { SolrDocument.new(id: '123') }
+
   subject { Capybara.string(rendered) }
+
   before {  allow(view).to receive(:document).and_return(document) }
 
   context 'gallery view' do
@@ -10,6 +12,7 @@ describe 'catalog/thumbnails/_collection_thumbnail.html.erb' do
 
     context 'when the first child has a thumbnail' do
       let(:collection_member) { SolrDocument.new(file_id: ['abc123.jp2']) }
+
       before do
         allow(document).to receive_messages(collection_members: [collection_member])
       end

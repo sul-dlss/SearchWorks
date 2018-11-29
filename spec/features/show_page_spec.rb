@@ -4,6 +4,7 @@ feature "Search Results Page" do
   before do
     visit solr_document_path 11
   end
+
   scenario "should have correct page title" do
     expect(page).to have_title("Amet ad & adipisicing ex mollit pariatur minim dolore. in SearchWorks catalog")
   end

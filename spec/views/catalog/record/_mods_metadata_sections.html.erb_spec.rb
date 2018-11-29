@@ -5,6 +5,7 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
 
   describe "Metadata sections all available" do
     let(:document) { SolrDocument.new(modsxml: mods_001) }
+
     before do
       assign(:document, document)
       render
@@ -49,9 +50,11 @@ describe "catalog/record/_mods_metadata_sections.html.erb" do
 
   describe "Metadata sections none available" do
     let(:document) { SolrDocument.new(modsxml: mods_only_title) }
+
     before do
       assign(:document, document)
     end
+
     it "should display correct sections" do
       render
       expect(rendered).not_to have_css('h3', text: "Abstract/Contents")

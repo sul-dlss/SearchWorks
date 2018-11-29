@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Imprint do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marcxml: edition_imprint_fixture) }
+
   subject { described_class.new(document) }
 
   it 'returns MARC 260' do

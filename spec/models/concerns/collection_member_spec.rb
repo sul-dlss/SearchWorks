@@ -5,6 +5,7 @@ describe CollectionMember do
   let(:non_member) { SolrDocument.new }
   let(:sirsi) { SolrDocument.new(collection: ['sirsi']) }
   let(:merged_sirsi) { SolrDocument.new(collection: ['sirsi', '12345']) }
+
   describe "#is_a_collection_member?" do
     it "should return true for collection members" do
       expect(member.is_a_collection_member?).to be_truthy
@@ -19,6 +20,7 @@ describe CollectionMember do
       expect(merged_sirsi.is_a_collection_member?).to be_truthy
     end
   end
+
   describe "#parent_collections" do
     let(:multi_collection) { SolrDocument.new( collection: ['12345', '54321'] ) }
     let(:stub_solr) { double('solr') }
@@ -28,9 +30,11 @@ describe CollectionMember do
         'docs' => [{id: 12345}]
       }
     }}
+
     before do
       allow(Blacklight.default_index).to receive(:connection).and_return(stub_solr)
     end
+
     it "should search solr for ids in the collection" do
       expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
       expect(member.parent_collections).to be_present
@@ -48,6 +52,7 @@ describe CollectionMember do
       expect(non_member.parent_collections).to be_nil
     end
   end
+
   describe "index_parent_collections" do
     let(:document_with_parent) {
       SolrDocument.new(
@@ -59,6 +64,7 @@ describe CollectionMember do
       )
     }
     let(:document_without_parent) { SolrDocument.new() }
+
     it "should return the parent collections from the index" do
       collections = document_with_parent.index_parent_collections
       expect(collections.length).to eq 2

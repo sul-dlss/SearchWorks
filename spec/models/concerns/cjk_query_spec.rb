@@ -8,18 +8,22 @@ describe CJKQuery do
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
+
   before do
     allow(search_builder).to receive(:blacklight_params).and_return(blacklight_params)
     search_builder.extend(CJKQuery)
   end
+
   describe "modify_params_for_cjk_advanced" do
     let(:blacklight_params) { {'search' => q_str, 'search_title' => q_str,'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str} }
     let(:solr_params) { {q: solr_q} }
     let(:local_params) { "mm=#{cjk_mm} qs=0" }
+
     before do
       allow(search_builder).to receive(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
       search_builder.modify_params_for_cjk_advanced(solr_params)
     end
+
     describe "unprocessed" do
       let(:solr_q) {"_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
@@ -51,8 +55,10 @@ describe CJKQuery do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
       end
     end
+
     describe "pre-processed" do
       let(:solr_q) { "_query_:\"{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}\"" }
+
       it "should not try to append _cjk onto already processed solr params logic" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
         expect(solr_params[:q]).not_to include "_cjk_cjk"
@@ -307,6 +313,7 @@ describe CJKQuery do
       expect(search_builder.send(:cjk_unigrams_size, "abc 近世仮名遣い abc")).to eq 6
     end
   end
+
   describe "#cjk_mm_qs_params" do
     describe "Solr mm and ps parameters" do
       describe "should not send in a Solr mm param if only 1 or 2 CJK chars" do
@@ -341,6 +348,7 @@ describe CJKQuery do
       describe "only CJK chars in query" do
         let(:cjk_mm_val) { search_builder.send(:cjk_mm_val) }
         let(:cjk_qs_val) { search_builder.send(:cjk_qs_val) }
+
         it "3 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "マンガ")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
         end
@@ -363,6 +371,7 @@ describe CJKQuery do
         let(:mm_plus_2) { '5<86%' }
         let(:cjk_qs_val) { search_builder.send(:cjk_qs_val) }
         # for each non-cjk token, add 1 to the lower limit of mm
+
         it "first CJK" do
           expect(search_builder.send(:cjk_mm_qs_params, "マンガabc")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
           expect(search_builder.send(:cjk_mm_qs_params, "マンガ abc")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})

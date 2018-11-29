@@ -7,10 +7,12 @@ describe Holdings::Status::Unavailable do
         OpenStruct.new(library: "ZOMBIE")
       )
     }
+
     it "should be unavailable" do
       expect(status).to be_unavailable
     end
   end
+
   describe "unavailable home locations" do
     it "should be unavailable" do
       Constants::UNAVAILABLE_LOCS.each do |location|
@@ -18,6 +20,7 @@ describe Holdings::Status::Unavailable do
       end
     end
   end
+
   describe "unavailable current locations" do
     it "should be unavailable" do
       Constants::UNAVAILABLE_CURRENT_LOCS.each do |location|

@@ -5,6 +5,7 @@ describe "Callnumber facet", feature: true, js: true, :"data-integration" => tru
     visit root_path
     click_link "At the Library"
   end
+
   it 'should collapse the call numbers' do
     within("#facets") do
       within(".facet_limit.blacklight-callnum_facet_hsim") do

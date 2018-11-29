@@ -18,6 +18,7 @@ describe "Responsive results toolbar", js: true, feature: true do
       end
     end
   end
+
   describe " - tablet view (768px - 992px) - ", responsive: true, page_width: 800 do
     it "should display correct tools" do
       visit root_path
@@ -34,6 +35,7 @@ describe "Responsive results toolbar", js: true, feature: true do
       end
     end
   end
+
   describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
     it "should display correct tools" do
       visit root_path

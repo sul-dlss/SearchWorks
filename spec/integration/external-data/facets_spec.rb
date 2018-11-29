@@ -29,12 +29,14 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
       end
     end
   end
+
   describe "more links" do
     before do
       visit root_path
       fill_in 'q', with: 'search'
       click_button 'search'
     end
+
     describe "for standard facets" do
       it "should include 20 facet values" do
         within('#facets') do
@@ -51,6 +53,7 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
         end
       end
     end
+
     describe "for special facets" do
       it "should include more than 20 values" do
         within('#facets') do
@@ -68,11 +71,13 @@ describe "Facets Customizations", feature: true, :"data-integration" => true  do
         end
       end
     end
+
     describe 'database facet' do
       before do
         visit root_path
         click_link 'Database'
       end
+
       it 'should have more link' do
         within('#facets') do
           within('.facet_limit.blacklight-db_az_subject') do

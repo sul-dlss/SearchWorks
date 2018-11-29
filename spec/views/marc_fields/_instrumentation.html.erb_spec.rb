@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'marc_fields/_instrumentation.html.erb' do
   subject { Capybara.string(rendered) }
+
   let(:instrumentation) do
     double(
       'Instrumentation',
@@ -16,6 +17,7 @@ describe 'marc_fields/_instrumentation.html.erb' do
       }
     )
   end
+
   before do
     allow(view).to receive_messages(instrumentation: instrumentation)
     render

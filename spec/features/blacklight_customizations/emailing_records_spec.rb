@@ -50,6 +50,7 @@ describe "Emailing Records", type: :feature, js: true do
 
     context 'article' do
       before { stub_article_service(type: :single, docs: [document]) }
+
       let(:document) do
         SolrDocument.new(
           id: '123',

@@ -7,6 +7,7 @@ describe "Callnumber Search", feature: true, :"data-integration" => true do
     select 'Call number', from: 'search_field'
     click_button 'search'
   end
+
   it "should quote and downcase the callnumber" do
     expect(find('#q').value).to eq '"jq1879 .a15 d385"'
     within('.breadcrumb') do

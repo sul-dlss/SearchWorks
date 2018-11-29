@@ -74,6 +74,7 @@ describe FeedbackMailer do
       end
     end
   end
+
   describe 'submit_connection' do
     describe 'with all fields' do
       let(:ip) { '123.43.54.123' }
@@ -148,6 +149,7 @@ describe FeedbackMailer do
     let(:ip) { '123.45.67.890' }
     let(:params) { { url: 'http://www.example.com/view/1234' } }
     let(:mail) { FeedbackMailer.submit_wrong_book_cover(params, ip) }
+
     it 'should include the ip address' do
       expect(mail.body).to have_content '123.45.67.890'
     end

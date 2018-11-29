@@ -4,6 +4,7 @@ describe LinkedRelatedWorks do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marcxml: linked_related_works_fixture) }
+
   subject(:instance) { described_class.new(document) }
 
   it '#label' do

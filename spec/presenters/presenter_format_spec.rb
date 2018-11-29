@@ -23,6 +23,7 @@ describe PresenterFormat do
 
   context 'when the field is not present' do
     let(:document) { {} }
+
     it { expect(presenter.formats).to be_nil }
   end
 end

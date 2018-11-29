@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'Course reserves browse', js: true do
   context 'homepage and subnavbar' do
     before { visit root_path }
+
     scenario "should be accessible from the home page" do
       within '.features' do
         click_link 'Course reserves'
@@ -16,6 +17,7 @@ feature 'Course reserves browse', js: true do
       expect(page).to have_css("h1", text: "Browse course reserves")
     end
   end
+
   scenario 'should have correct manual route' do # TODO: move to routing spec?
     visit '/reserves'
     expect(page).to have_css('h1', text: 'Browse course reserves')

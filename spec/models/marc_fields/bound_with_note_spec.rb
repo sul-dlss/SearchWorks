@@ -4,6 +4,7 @@ describe BoundWithNote do
   include MarcMetadataFixtures
   let(:marc) { linked_ckey_fixture }
   let(:document) { SolrDocument.new(marcxml: marc) }
+
   subject { described_class.new(document, %w(590)) }
 
   describe '#values' do

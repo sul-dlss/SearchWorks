@@ -3,7 +3,9 @@ require 'spec_helper'
 describe MastheadHelper do
   describe "#render_masthead_partial" do
     let(:page_location) { SearchWorks::PageLocation.new }
+
     before { allow(helper).to receive(:page_location).and_return( page_location ) }
+
     it "should render partials that exist" do
       allow(page_location).to receive(:access_point).and_return("databases")
       expect(helper).to receive(:render).with("catalog/mastheads/databases", {}).and_return('databases-partial')
@@ -14,6 +16,7 @@ describe MastheadHelper do
       expect(render_masthead_partial).to eq ''
     end
   end
+
   describe "#facets_prefix_options" do
     it "should have the correct number of elements" do
       expect(facets_prefix_options.length).to eq 27
@@ -25,6 +28,7 @@ describe MastheadHelper do
       expect(facets_prefix_options).to include "Z"
     end
   end
+
   describe '#digital_collections_params_for' do
     it 'should always include "Stanford Digital Repository" in the building facet' do
       expect(digital_collections_params_for).to match /building_facet.*Stanford\+Digital\+Repository/

@@ -5,6 +5,7 @@ RSpec.describe ArticleSearchBuilder do
 
   context 'basic search' do
     let(:blacklight_params) { { q: 'my search', page: 1, per_page: 10 } }
+
     it 'maps to EDS API' do
       expect(search_builder[:q]).to eq 'my search'
       expect(search_builder[:page_number]).to eq 1
@@ -26,6 +27,7 @@ RSpec.describe ArticleSearchBuilder do
 
   context 'paged search' do
     let(:blacklight_params) { { q: 'my search', page: 12 } }
+
     it 'maps to EDS API' do
       expect(search_builder[:page_number]).to eq 12
       expect(search_builder[:results_per_page]).to eq 20
@@ -34,6 +36,7 @@ RSpec.describe ArticleSearchBuilder do
 
   context 'per page change' do
     let(:blacklight_params) { { q: 'my search', per_page: 100 } }
+
     it 'maps to EDS API' do
       expect(search_builder[:page_number]).to eq 1
       expect(search_builder[:results_per_page]).to eq 100
@@ -42,6 +45,7 @@ RSpec.describe ArticleSearchBuilder do
 
   context 'faceted search' do
     let(:blacklight_params) { { f: { facet_name: 'facet value' } } }
+
     it 'maps to EDS API' do
       expect(search_builder[:f][:facet_name]).to eq 'facet value'
     end

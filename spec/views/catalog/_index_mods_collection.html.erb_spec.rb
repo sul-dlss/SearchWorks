@@ -16,6 +16,7 @@ describe "catalog/_index_mods_collection.html.erb" do
     )
     render
   end
+
   it "should include a link to the contributor" do
     expect(rendered).to have_css('li', text: 'J. Smith')
   end

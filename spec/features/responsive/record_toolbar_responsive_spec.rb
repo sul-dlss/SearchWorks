@@ -77,6 +77,7 @@ describe "Record toolbar", js: true, feature: true do
           page.find('h3 a').click
         end
       end
+
       it "should display correct toolbar items" do
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)

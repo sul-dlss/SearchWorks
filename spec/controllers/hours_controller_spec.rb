@@ -6,6 +6,7 @@ describe HoursController do
       expect(get: "/hours/GREEN").to route_to(controller: 'hours', action: 'show', id: 'GREEN')
     end
   end
+
   describe "GET library" do
     it "should return correct response" do
       get :show, params: { format: "json", id: "GREEN" }

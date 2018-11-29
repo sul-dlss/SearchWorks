@@ -4,6 +4,7 @@ describe Druid do
   let(:explicit_druid) { SolrDocument.new(druid: "321cba", url_fulltext: ["https://purl.stanford.edu/abc123"]) }
   let(:document) { SolrDocument.new(url_fulltext: ["https://purl.stanford.edu/abc123"], url_suppl: ["https://stanford.edu/blah"]) }
   let(:another_document) { SolrDocument.new(url_fulltext: ["https://stanford.edu/blah"], url_suppl: ["https://purl.stanford.edu/abc123"]) }
+
   it "should return the druid from the druid field if available" do
     expect(explicit_druid.druid).to eq "321cba"
   end

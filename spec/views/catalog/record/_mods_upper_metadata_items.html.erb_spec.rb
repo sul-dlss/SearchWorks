@@ -5,9 +5,11 @@ describe "catalog/record/_mods_upper_metadata_items.html.erb" do
 
   describe "Object upper metadata items" do
     let(:document) { SolrDocument.new(modsxml: mods_everything) }
+
     before do
       assign(:document, document)
     end
+
     it "should display type" do
       render
       expect(rendered).to have_css("dt", text: "Type of resource")

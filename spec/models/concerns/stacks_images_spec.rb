@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe StacksImages do
   let(:subject) { Class.new }
+
   before { subject.extend StacksImages }
 
   it 'includes an image dimensions hash' do

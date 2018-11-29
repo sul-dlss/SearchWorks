@@ -12,6 +12,7 @@ describe CourseReserveAccessPointHelper do
         expect(helper.instance_variable_get("@course_info").name).to eq ""
       end
     end
+
     describe "when documents are present" do
       it "should return first document course values that match params" do
         params[:f] = {course: ["CATZ-102"], instructor: ["Cat, Tom"] }
@@ -22,6 +23,7 @@ describe CourseReserveAccessPointHelper do
         expect(helper.instance_variable_get("@course_info").name).to eq "Mice and Men"
       end
     end
+
     describe "when the course does not exist in the first document" do
       it "should still find the course" do
         params[:f] = { course: ["CATZ-102"], instructor: ["Cat, Tom"] }

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe AccessPanels::Sfx do
   let(:document) { SolrDocument.new }
+
   subject(:access_panel) { described_class.new(document) }
 
   describe '#present?' do

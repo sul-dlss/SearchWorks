@@ -7,6 +7,7 @@ describe Holdings::Callnumber do
   let(:callnumber) { Holdings::Callnumber.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
+
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
       expect(callnumber).to respond_to(method)
@@ -27,6 +28,7 @@ describe Holdings::Callnumber do
       expect(internet_callnumber).not_to be_present
     end
   end
+
   describe '#on_order?' do
     it 'should return true for on-order items' do
       expect(Holdings::Callnumber.new(' -|- -|- ON-ORDER -|- ON-ORDER -|-')).to be_on_order
@@ -36,6 +38,7 @@ describe Holdings::Callnumber do
       expect(callnumber).not_to be_on_order
     end
   end
+
   describe 'browsable?' do
     it 'should return false if not LC or DEWEY' do
       expect(Holdings::Callnumber.new(complex_item_display)).not_to be_browsable
@@ -72,6 +75,7 @@ describe Holdings::Callnumber do
       expect(internet_callnumber).to be_browsable
     end
   end
+
   describe '#callnumber' do
     let(:no_callnumber) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
 
@@ -83,8 +87,10 @@ describe Holdings::Callnumber do
       expect(internet_callnumber.callnumber).to eq 'eResource'
     end
   end
+
   describe '#status' do
     let(:status) { callnumber.status }
+
     it 'should return a Holdings::Status object' do
       expect(status).to be_a Holdings::Status
     end
@@ -93,6 +99,7 @@ describe Holdings::Callnumber do
       expect(status.availability_class).to eq 'unknown'
     end
   end
+
   describe '#live_status?' do
     it 'should identify material not in LANE-MED for live lookup' do
       expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|- -|-')).to be_live_status
@@ -102,6 +109,7 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).not_to be_live_status
     end
   end
+
   describe 'treat_current_location_as_home_location?' do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |location|
@@ -113,6 +121,7 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- IC-DISPLAY -|-').home_location).to eq 'IC-DISPLAY'
     end
   end
+
   describe 'public_note' do
     let(:public_note) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- .PUBLIC. The Public Note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period') }
 
@@ -121,6 +130,7 @@ describe Holdings::Callnumber do
       expect(public_note.public_note).not_to include 'PUBLIC'
     end
   end
+
   describe 'reserves' do
     it 'should use the pseudo home location if an item is has a reserve desk current location' do
       expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- ART-RESV -|-').home_location).to eq 'SW-RESERVE-DESK'
@@ -130,6 +140,7 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('barcode -|- GREEN -|- home_location -|- ART-RESV -|-').library).to eq 'ART'
     end
   end
+
   describe '#on_reserve?' do
     it 'should return true when an item is populated with reserve desks and loan period' do
       expect(callnumber).to be_on_reserve
@@ -139,6 +150,7 @@ describe Holdings::Callnumber do
       expect(Holdings::Callnumber.new('123 -|- abc')).not_to be_on_reserve
     end
   end
+
   describe 'request status' do
     it 'should respond to #requestable? from the Holdings::Requestable class' do
       expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to be_requestable
@@ -196,6 +208,7 @@ describe Holdings::Callnumber do
 
   describe '#as_json' do
     let(:as_json) { Holdings::Callnumber.new(complex_item_display).as_json }
+
     it 'should return a hash with all of the callnumbers public reader methods' do
       expect(as_json).to be_a Hash
       expect(as_json[:present?]).to be true

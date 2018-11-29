@@ -4,10 +4,12 @@ describe LiveLookup do
   let(:response) { double('response') }
   let(:get) { double('get') }
   let(:body) { 'body' }
+
   before do
     expect(response).to receive(:get).and_return(get)
     expect(get).to receive(:body).and_return(body)
   end
+
   describe "url construction" do
     it "should construct the correct URL for single items" do
       expect(Faraday).to receive(:new).with({:url=>"#{Settings.LIVE_LOOKUP_URL}?search=holding&id=123"}).and_return(response)
@@ -18,6 +20,7 @@ describe LiveLookup do
       LiveLookup.new(['123', '321']).to_json
     end
   end
+
   describe "Record" do
     describe "#to_json" do
       let(:body) {
@@ -35,9 +38,11 @@ describe LiveLookup do
           </titles>
         XML
       }
+
       before do
         expect(Faraday).to receive(:new).and_return(response)
       end
+
       it "should return a json representation w/ the barcode, due date, and current location " do
         json = JSON.parse(LiveLookup.new(['123']).to_json)
         expect(json.length).to eq 1
@@ -48,6 +53,7 @@ describe LiveLookup do
         })
       end
     end
+
     describe "barcode" do
       let(:body) {
         <<-XML
@@ -62,19 +68,23 @@ describe LiveLookup do
           </titles>
         XML
       }
+
       before do
         expect(Faraday).to receive(:new).and_return(response)
       end
+
       it "should get fetched correctly" do
         json = JSON.parse(LiveLookup.new(['123']).to_json)
         expect(json.length).to eq 1
         expect(JSON.parse(json.first)["barcode"]).to eq '123456'
       end
     end
+
     describe "due date" do
       before do
         expect(Faraday).to receive(:new).and_return(response)
       end
+
       describe "NEVER" do
         let(:body) {
           <<-XML
@@ -89,6 +99,7 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should not be returned" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
@@ -156,12 +167,14 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should truncate the time" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(JSON.parse(json.first)['due_date']).to eq '10/10/2014'
         end
       end
+
       describe "standard" do
         let(:body) {
           <<-XML
@@ -176,12 +189,14 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should return the full due date" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(JSON.parse(json.first)['due_date']).to eq '10/10/2014,10:32'
         end
       end
+
       describe "multiple due dates" do
         let(:body) {
           <<-XML
@@ -197,6 +212,7 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should use the last due date available" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
@@ -204,10 +220,12 @@ describe LiveLookup do
         end
       end
     end
+
     describe "current location" do
       before do
         expect(Faraday).to receive(:new).and_return(response)
       end
+
       describe "CHECKEDOUT" do
         let(:body) {
           <<-XML
@@ -222,12 +240,14 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should not be returned" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(JSON.parse(json.first)['current_location']).to be_nil
         end
       end
+
       describe "standard" do
         let(:body) {
           <<-XML
@@ -242,6 +262,7 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should return a translated value" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
@@ -264,6 +285,7 @@ describe LiveLookup do
             </titles>
           XML
         end
+
         it 'are not returned' do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
@@ -286,6 +308,7 @@ describe LiveLookup do
             </titles>
           XML
         }
+
         it "should return the last current location" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1

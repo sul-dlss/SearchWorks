@@ -10,6 +10,7 @@ end
 describe DatabaseDocument do
   describe "#is_a_database?" do
     let(:document) { DatabaseDocumentTest.new }
+
     it "should return true for databases" do
       document[:the_format] = ["Book", "Database"]
       expect(document.is_a_database?).to be_truthy

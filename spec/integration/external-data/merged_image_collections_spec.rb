@@ -8,6 +8,7 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
       fill_in 'q', with: '6780453'
       click_button 'search'
     end
+
     it "should render metadata and a filmstrip" do
       skip("Needs item-level-merge in external data integration index")
       expect(page).to have_css('h5 a', text: "Reid W. Dennis collection of California lithographs, 1850-1906")
@@ -22,10 +23,12 @@ describe "Merged Image Collection", feature: true, :"data-integration" => true d
       end
     end
   end
+
   describe "record view" do
     before do
       visit solr_document_path('6780453')
     end
+
     it "should render metadata and a filmstrip" do
       skip("Needs item-level-merge in external data integration index")
       expect(page).to have_css('h1', text: "Reid W. Dennis collection of California lithographs, 1850-1906")

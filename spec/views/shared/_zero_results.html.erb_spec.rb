@@ -8,6 +8,7 @@ describe "shared/_zero_results.html.erb" do
       config.add_facet_field 'fieldB', label: 'Another field'
     end
   }
+
   before do
     assign(:search_modifier, SearchQueryModifier.new({
       q: "A query",

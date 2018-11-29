@@ -16,6 +16,7 @@ describe "catalog/record/_marc_contributors.html.erb" do
       ]))
       render
     end
+
     it "should display secondary authors" do
       expect(rendered).to have_css("dt", text: "Contributor")
       expect(rendered).to have_css('dd', count: 3)

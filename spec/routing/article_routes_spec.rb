@@ -7,6 +7,7 @@ RSpec.describe 'Article Routing', type: :routing do
 
   context '#show' do
     let(:uri) { '/articles/' + URI.escape(id) }
+
     subject(:result) { get(uri) }
 
     context 'handles EDS identifiers' do
@@ -24,6 +25,7 @@ RSpec.describe 'Article Routing', type: :routing do
         end
       end
     end
+
     context 'rejects unknown identifiers' do
       let(:id) { 'eds__1 2/3' }
 
@@ -32,6 +34,7 @@ RSpec.describe 'Article Routing', type: :routing do
       end
     end
   end
+
   it '#track' do
     expect(post('/articles/eds__1/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__1')
   end

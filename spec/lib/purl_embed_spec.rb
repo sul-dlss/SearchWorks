@@ -3,12 +3,14 @@ require 'spec_helper'
 describe PURLEmbed do
   let(:druid) { 'abc123' }
   let(:provider) { double('provider') }
+
   before do
     expect(provider).to receive(:<<).with(Settings.PURL_EMBED_URL_SCHEME)
   end
 
   describe 'provider' do
     let(:resource) { double('resource') }
+
     before do
       allow_any_instance_of(PURLEmbed).to receive(:provider).and_return(provider)
     end

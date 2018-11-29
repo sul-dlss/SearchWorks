@@ -49,6 +49,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
 
   describe "parsing for item_display pieces" do
     let(:item_display1) {'36105129852856 -|- CHEMCHMENG -|- STACKS -|- -|- STCKS-MONO -|- GT2850 .P65 -|- gt  2850.000000 p0.650000 002008 -|- J6~~XRUZ~ZZZZZZ~AZ~TUZZZZ~ZZXZZT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -|- GT2850 .P65 2008 V.26 -|- GT  2850.000000 P0.650000 002006'}
+
     it "(get_shelfkey) should return the shelfkey piece" do
       expect(nearby_obj.send(:get_shelfkey,item_display1)).to eq 'gt  2850.000000 p0.650000 002008'
     end
@@ -67,6 +68,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
       :item_display => ["3610521 -|- GREEN -|- STACKS -|- -|- STCKS-MONO -|- DK340.3 .B1 -|- dk  3400.300000 b0.100000 -|- ignore -|- ignore -|- ignore", 
                         "3610522 -|- SAL3 -|- STACKS -|- -|- DK340.3 .B2 -|- dk  3400.300000 b0.200000 -|- ignore -|- ignore -|- ignore"]
     } }
+
     it "should return the item_display field matching the barcode" do
       expect(nearby_obj.send(:get_item_display,doc[:item_display], "3610521")).to match /^3610521/
       expect(nearby_obj.send(:get_item_display,doc[:item_display], "3610522")).to match /^3610522/
@@ -82,6 +84,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
 
   describe "get_next_terms_for_field" do
     let(:terms_array) { nearby_obj.send(:get_next_terms_for_field,"aaa", "foo", 3) }
+
     before do
       term1 = {"aaa" => 1}
       term2 = {"bbb" => 2}
@@ -109,6 +112,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     let(:spine_hash_doc3) { nearby_obj.send(:get_spine_hash_from_doc,doc3, desired_shelf_keys, shelfkey_field) }
     let(:spine_hash_doc4) { nearby_obj.send(:get_spine_hash_from_doc,doc4, desired_shelf_keys, shelfkey_field) }
     let(:all) { spine_hash_doc1.merge(spine_hash_doc2.merge(spine_hash_doc3.merge(spine_hash_doc4) ) ) }
+
     it "should return empty hash if field is not shelfkey or callnum_reverse sort" do
       expect(nearby_obj.send(:get_spine_hash_from_doc,doc1, ['aaa'], "building")).to be_empty
     end
@@ -344,6 +348,7 @@ describe "Stanford::NearbyOnShelf", :"data-integration" => true do
     let(:shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, term1.keys[0], shelfkey_field, 2, nil) }
     
     let(:reverse_shelfkey_array) { nearby_obj.send(:get_next_spines_from_field, rterm1.keys[0], reverse_shelfkey_field, 2, nil) }
+
     before do
       # SolrHelper (calls to Solr) stubs
       allow(nearby_obj).to receive(:get_next_terms).at_least(2).times { |start_val, field, how_many|

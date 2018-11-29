@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'marc_fields/_linked_series.html.erb' do
   subject { Capybara.string(rendered) }
+
   let(:linked_series) do
     double(
       'LinkedSeries',

@@ -7,10 +7,12 @@ describe 'course_reserves/index.html.erb' do
     CourseReserves::CourseInfo.new(course_1),
     CourseReserves::CourseInfo.new(course_2)
   ] }
+
   before do
     assign(:course_reserves, course_reserves)
     render
   end
+
   it 'should render a table with course info' do
     expect(rendered).to have_css('table')
     expect(rendered).to have_css('th', text: 'Course ID')

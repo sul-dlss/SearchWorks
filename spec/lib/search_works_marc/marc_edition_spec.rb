@@ -4,6 +4,7 @@ describe MarcEdition do
   include MarcMetadataFixtures
   let(:marc) { SolrDocument.new(marcxml: edition_imprint_fixture).to_marc }
   let(:edition) { MarcEdition.new(marc) }
+
   it 'should return MARC 250' do
     edition.fields.each do |field|
       expect(field.tag).to eq '250'

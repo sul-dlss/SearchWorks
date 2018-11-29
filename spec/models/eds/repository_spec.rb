@@ -8,6 +8,7 @@ RSpec.describe Eds::Repository do
       default_per_page: 10
     )
   }
+
   subject(:instance) { described_class.new(blacklight_config) }
 
   it 'has the right methods' do
@@ -31,6 +32,7 @@ RSpec.describe Eds::Repository do
       let(:search_builder) do
         instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
       end
+
       it 'uses a session to execute a search' do
         session = instance_double(
           EBSCO::EDS::Session,
@@ -45,6 +47,7 @@ RSpec.describe Eds::Repository do
       let(:search_builder) do
         instance_double(ArticleSearchBuilder, rows: 3, to_hash: { q: 'my query', start: 11, rows: 3 })
       end
+
       it 'uses a session to run the previous-next search' do
         session = instance_double(
           EBSCO::EDS::Session,
@@ -63,6 +66,7 @@ RSpec.describe Eds::Repository do
           to_hash: { 'q' => { 'id' => 'abc' }, rows: 10 }
         )
       end
+
       it 'uses a session to run solr_retrieve_list' do
         session = instance_double(
           Eds::Session

@@ -17,6 +17,7 @@ describe ArticleFulltextLinkPresenter do
   end
 
   let(:document) { SolrDocument.new }
+
   subject(:presenter) { described_class.new(document: document, context: context) }
 
   describe '#links' do

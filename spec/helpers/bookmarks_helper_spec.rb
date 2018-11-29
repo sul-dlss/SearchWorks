@@ -33,6 +33,7 @@ describe BookmarksHelper do
       expect(helper.bookmarks?).to be_falsey
     end
   end
+
   describe "current_entries_info" do
     it "with no results" do
       @response = mock_response total: 0

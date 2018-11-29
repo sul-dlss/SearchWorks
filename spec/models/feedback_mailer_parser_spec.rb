@@ -7,18 +7,22 @@ describe FeedbackMailerParser do
     context 'when present' do
       it { expect(described_class.new({ name: 'yo' }, '').name).to eq 'yo' }
     end
+
     context 'when absent' do
       it { expect(described_class.new({}, '').name).to eq 'No name given' }
     end
   end
+
   describe '#email' do
     context 'when present' do
       it { expect(described_class.new({ to: 'yo' }, '').email).to eq 'yo' }
     end
+
     context 'when absent' do
       it { expect(described_class.new({}, '').email).to eq 'No email given' }
     end
   end
+
   describe '#message' do
     it 'casts to a String' do
       expect(described_class.new({}, '').message).to be_an String
@@ -27,6 +31,7 @@ describe FeedbackMailerParser do
       expect(described_class.new({ message: 'yo' }, '').message).to eq 'yo'
     end
   end
+
   describe 'accessors' do
     subject do
       described_class.new(
@@ -40,6 +45,7 @@ describe FeedbackMailerParser do
         }, ''
       )
     end
+
     it 'calls and accesses params' do
       expect(subject.url).to eq 'http://www.example.com'
       expect(subject.user_agent).to eq 'Yo'

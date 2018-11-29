@@ -5,6 +5,7 @@ describe DatabaseAccessPoint do
   let(:page_location) { SearchWorks::PageLocation.new }
   let(:params) { {controller: 'catalog'} }
   let(:blacklight_config) { OpenStruct.new }
+
   before do
     controller.extend(DatabaseAccessPoint)
     allow(controller).to receive(:page_location).and_return(page_location)
@@ -18,6 +19,7 @@ describe DatabaseAccessPoint do
         "db_az_subject" => OpenStruct.new(show: false, if: false)
       })
     end
+
     it "should set show and if to true when under the databases page location" do
       allow(page_location).to receive(:access_point).and_return(OpenStruct.new(:"databases?" => true))
       expect(blacklight_config.facet_fields["db_az_subject"].show).to be_falsey

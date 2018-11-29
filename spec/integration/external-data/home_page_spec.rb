@@ -4,6 +4,7 @@ describe "Home Page", feature: true, :"data-integration" => true do
   before do
     visit root_path
   end
+
   describe "facets" do
     it "should display the Resource type" do
       skip("This facet is not in the data-integration index yet")

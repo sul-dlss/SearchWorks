@@ -7,6 +7,7 @@ describe 'articles/_alternate_catalog.html.erb' do
     controller.params[:q] = 'question'
     render
   end
+
   it 'has data-attributes' do
     expect(rendered).to have_css '[data-alternate-catalog="/catalog?q=question"]'
   end

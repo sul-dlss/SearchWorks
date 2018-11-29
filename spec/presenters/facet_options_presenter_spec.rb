@@ -41,6 +41,7 @@ describe FacetOptionsPresenter do
       )
     )
   end
+
   subject(:presenter) { described_class.new(params: params, context: view_context) }
 
   describe '#limiters' do

@@ -6,6 +6,7 @@ describe BlacklightHelper do
     let(:mods) { SolrDocument.new(modsxml: '<xml />') }
     let(:eds) { SolrDocument.new(eds_title: 'Some title') }
     let(:blacklight_config) { Blacklight::Configuration.new }
+
     it "should use the #display_type when available" do
       expect(document_partial_name(marc)).to eq "marc"
       expect(document_partial_name(mods)).to eq "mods"

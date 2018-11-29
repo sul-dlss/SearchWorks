@@ -6,6 +6,7 @@ describe PlaceName do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marcxml: place_name_fixture) }
+
   subject(:place_name) { described_class.new(document) }
 
   it 'returns MARC 752' do

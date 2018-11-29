@@ -24,6 +24,7 @@ describe RequestLinkHelper do
       item_display: ['barcode -|- library -|- PAGE-AR -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
     )
   end
+
   describe 'link_to_request_link' do
     it 'returns link html for the given parameters' do
       link = link_to_request_link(
@@ -112,6 +113,7 @@ describe RequestLinkHelper do
           item_display: ['barcode -|- library -|- home_location -|- -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
         )
       end
+
       it 'returns the given barcode in the url' do
         expect(
           request_link(
@@ -149,9 +151,11 @@ describe RequestLinkHelper do
       let(:presenter) do
         OpenStruct.new(heading: 'Document Title')
       end
+
       before do
         expect(helper).to receive(:show_presenter).with(ssrc_document).and_return(presenter)
       end
+
       it 'should link to a different form' do
         link = helper.request_link(ssrc_document, ssrc_document.holdings.callnumbers.first)
         expect(link).to match(%r{^http://host.example.com})

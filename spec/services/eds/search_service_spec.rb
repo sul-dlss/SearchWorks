@@ -10,7 +10,9 @@ RSpec.describe Eds::SearchService do
       document_model: document_model
     )
   }
+
   subject(:instance) { described_class.new(blacklight_config) }
+
   subject(:user_params) { {} }
 
   context 'with a single document' do

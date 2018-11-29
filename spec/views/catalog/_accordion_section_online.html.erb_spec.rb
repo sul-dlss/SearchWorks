@@ -27,6 +27,7 @@ describe "catalog/_index_online_section.html.erb" do
         expect(rendered).to have_css('dd li a', text: 'Google Books (Full view)')
       end
     end
+
     context 'managed purl record' do
       before do
         expect(view).to receive_messages(

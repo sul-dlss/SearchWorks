@@ -12,6 +12,7 @@ describe Holdings::Requestable do
         end
       end
     end
+
     describe 'reserves' do
       it 'should not be requestable if the item is on reserve' do
         expect(
@@ -23,11 +24,13 @@ describe Holdings::Requestable do
         ).not_to be_requestable
       end
     end
+
     describe "home locations" do
       it "should not be requestable if the library is GREEN and the home location is MEDIA-MTXT" do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- '))).not_to be_requestable
       end
     end
+
     describe "current locations" do
       it "should be not requestable if in the list of current locations" do
         Constants::NON_REQUESTABLE_CURRENT_LOCS.each do |location|
@@ -35,6 +38,7 @@ describe Holdings::Requestable do
         end
       end
     end
+
     describe "location level requests" do
       it "libraries that are requestable at the location level should not be requestable" do
         Constants::REQUEST_LIBS.each do |library|
@@ -43,6 +47,7 @@ describe Holdings::Requestable do
       end
     end
   end
+
   describe "must_request?" do
     describe "current locations" do
       it "should require -LOAN current locations to be requested" do

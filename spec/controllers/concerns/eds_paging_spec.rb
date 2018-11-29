@@ -153,6 +153,7 @@ RSpec.describe EdsPaging do
 
   context '#get_previous_and_next_documents_for_search' do
     let(:hit) { 1 }
+
     before do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       expect(controller).to receive(:search_builder).and_return(instance_double(Blacklight::SearchBuilder, with: { q: 'my query'}))

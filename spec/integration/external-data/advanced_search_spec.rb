@@ -4,6 +4,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
   before do
     visit blacklight_advanced_search_engine.advanced_search_path
   end
+
   describe "Single author title" do
     it "search matches Socrates results" do
       fill_in "search_author", with: "McRae"
@@ -20,6 +21,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       ])).to be_truthy
     end
   end
+
   describe "Facet searching" do
     it "should return more than 4,000,000 results for only facets" do
       click_on "Access"
@@ -30,6 +32,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be > 4000000
     end
   end
+
   describe "No facet searching" do
     it "should return at least 500 results" do
       fill_in "search_title", with: "something"
@@ -37,6 +40,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be >= 500
     end
   end
+
   describe "All fields ANDed filled in plus facets" do
     it "should return a few results" do
       fill_in "search_author", with: "Rowling"
@@ -53,6 +57,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       # tests incorrectly say to match at least 5 books
     end
   end
+
   describe "All fields ORed filled in plus facets" do
     it "should return a lot of results" do
       fill_in "search_author", with: "Rowling"
@@ -68,6 +73,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be > 100000
     end
   end
+
   describe "Publisher search" do
     it "should return results only if there is a match in the publisher" do
       fill_in "pub_search", with: "NEW MEXICO"
@@ -75,11 +81,13 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect((8500..9500)).to include total_results
     end
   end
+
   describe "Advanced search sorting" do
     before do
       fill_in "search_author", with: "Rowling"
       fill_in "search_title", with: "Potter"
     end
+
     it "should return year (old to new)" do
       select "year (old to new)", from: "sort"
       click_on "advanced-search-submit"
@@ -99,6 +107,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(document_index("4819125")).to be < 5
     end
   end
+
   describe "NOT as first word queries" do
     it "should not get Harry Potter as a result" do
       fill_in "search_author", with: "Rowling"
@@ -109,6 +118,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       end
     end
   end
+
   describe "Standalone NOT as first word query" do
     it "should get at most 2,700,000" do
       fill_in "search", with: "NOT p"
@@ -116,6 +126,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be <= 2700000
     end
   end
+
   describe "NOT in the middle of query terms" do
     it "should get at most 100 results and not 6865307" do
       fill_in "search_author", with: "John Steinbeck"
@@ -127,6 +138,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be < 1520000
     end
   end
+
   describe "Hyphen as NOT queries" do
     it "should not get Harry Potter as a result" do
       fill_in "search_author", with: "Rowling"
@@ -137,6 +149,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       end
     end
   end
+
   describe "Hyphen as NOT queries (SW-623)" do
     it "should get at most 1500 total results" do
       fill_in "search", with: "IEEE Xplore"
@@ -145,6 +158,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be < 2300
     end
   end
+
   describe "OR query" do
     # Test fails because of timeout, can't return 100 records quick enough
     it "should get at least 225 results and ckeys 6746743, 6747313 in first 100 results" do
@@ -158,6 +172,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(results_all_on_page(['6746743', '6747313'])).to be_truthy
     end
   end
+
   describe "nossa OR nuestra america (SW-939)" do
     it "should return at least 400 results" do
       fill_in "search_title", with: "nossa OR nuestra america"
@@ -165,6 +180,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be > 400
     end
   end
+
   describe "color OR colour photography (SW-939)" do
     it "should return at least 80 results" do
       fill_in "search_title", with: "color OR colour photography"
@@ -172,6 +188,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be > 80
     end
   end
+
   describe "AND query" do
     it "should return at least 50 results and these keys in first 5 results" do
       fill_in "search_title", with: "Hello AND Goodbye"
@@ -182,6 +199,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       end
     end
   end
+
   describe "AND and OR query nabokov OR hofstadter AND pushkin" do
     it "should return at most 10 results and this key" do
       fill_in "search_author", with: "nabokov OR hofstadter AND pushkin"
@@ -190,6 +208,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(result_on_page('4076380')).to be_truthy
     end
   end
+
   describe "AND and OR query hofstadter OR nabokov AND pushkin" do
     skip "should return at most 3 results and not this key" do
       fill_in "search_author", with: "hofstadter OR nabokov AND pushkin"
@@ -199,6 +218,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(result_on_page('4076380')).to be_falsey
     end
   end
+
   describe "AND and OR  (nabokov OR hofstadter) AND pushkin" do
     it "should get between 5 and 7 results" do
       fill_in "search_author", with: "(nabokov OR hofstadter) AND pushkin"
@@ -207,6 +227,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(result_on_page('4076380')).to be_truthy
     end
   end
+
   describe "parenthesis  (Dutch OR Netherlands) AND painting  (VUF-1879)" do
     it "should get between 8 and 12 results" do
       fill_in "subject_terms", with: "(Dutch OR Netherlands) AND painting"
@@ -215,6 +236,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect((8..12)).to include total_results
     end
   end
+
   describe "(trade OR commerce) AND painting  (VUF-1879)" do
     it "should return at least 15 results" do
       fill_in "subject_terms", with: "Dutch OR Netherlands"
@@ -223,6 +245,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be >= 15
     end
   end
+
   describe "Description Plus Building Facet Value" do
     it "should return at most 3 results" do
       fill_in "search", with: "Sally Ride"
@@ -232,6 +255,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be <= 3
     end
   end
+
   describe "Title Plus Format Facet Value (SW-326)" do
     it "should get ckey 365647 in the results" do
       fill_in "search_title", with: "Jewish book annual"
@@ -241,6 +265,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(document_index("365647")).to be_truthy
     end
   end
+
   describe "Subject China History Women and language English" do
     it "should return at least 100 results" do
       fill_in "subject_terms", with: "china women history"
@@ -250,6 +275,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be >= 100
     end
   end
+
   describe "Multi-Facet Query" do
     it "should return zero results" do
       fill_in "search", with: "African Maps"
@@ -261,6 +287,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(page).to have_css("h2", text: "No results found in catalog")
     end
   end
+
   describe "Author Title Plus Format Book" do
     it "should get ckey 5680298 and not 8303176 in the results" do
       fill_in "search_author", with: "Rowling"
@@ -272,6 +299,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(result_on_page('8303176')).to be_falsey
     end
   end
+
   describe "Author Title Plus Format Video" do
     it "should get ckey 8303176 and not 5680298 in the results" do
       fill_in "search_author", with: "Rowling"
@@ -283,6 +311,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(result_on_page('5680298')).to be_falsey
     end
   end
+
   describe "Phrase search: subject 'Home Schooling' and Keyword Socialization VUF-1352" do
     it "should get at most 150 results" do
       fill_in "subject_terms", with: '"Home Schooling"'
@@ -291,6 +320,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(total_results).to be <= 150
     end
   end
+
   describe "Searches with date ranges" do
     it "should see Date: 1900 - 2000" do
       fill_in "search_author", with: "Rowling"
@@ -300,6 +330,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(page).to have_css("span", text: "1900 to 2000")
     end
   end
+
   describe "Searches without date ranges" do
     it "should not see date facet open" do
       fill_in "search_author", with: "Rowling"
@@ -307,6 +338,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect(page).to have_css("div.collapsed.collapse-toggle.panel-heading", text: "Date")
     end
   end
+
   describe "Faceting on advanced searches with date ranges" do
     it "should get between 5000 and 6000 results" do
       fill_in "search", with: "France"
@@ -316,6 +348,7 @@ describe "Legacy Advanced Search Tests", js: true, feature: true, :"data-integra
       expect((5000..6000)).to include total_results
     end
   end
+
   describe 'old params mapping' do
     it 'should get the same results as filling out the form' do
       fill_in "search_author", with: 'McRae'

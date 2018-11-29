@@ -15,6 +15,7 @@ RSpec.describe ArticlesController do
 
     context 'when a query causes an EDS error' do
       before { stub_article_service(type: :error, docs: []) }
+
       context 'with an empty query' do
         it 'sets a flash error and redirects' do
           get :index, params: { q: '' }
@@ -73,6 +74,7 @@ RSpec.describe ArticlesController do
           ]
         )
       end
+
       context 'when the user is in guest mode' do
         before { session['eds_guest'] = true }
 
@@ -122,10 +124,12 @@ RSpec.describe ArticlesController do
   context 'EDS Session Management' do
     let(:user_session) { {} }
     let(:eds_session) { instance_double(EBSCO::EDS::Session, session_token: 'abc') }
+
     before do
       allow(controller).to receive(:session).and_return(user_session)
       allow(controller).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
     end
+
     it 'will create a new session' do
       expect(EBSCO::EDS::Session).to receive(:new).with(
         hash_including(caller: 'new-session', guest: false)
@@ -152,6 +156,7 @@ RSpec.describe ArticlesController do
 
   describe '#email' do
     before {stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')])}
+
     it 'should set the provided subject' do
       expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' } }.to change {
         ActionMailer::Base.deliveries.count

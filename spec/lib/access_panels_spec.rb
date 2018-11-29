@@ -3,6 +3,7 @@ require "spec_helper"
 describe AccessPanels do
   let(:document) { SolrDocument.new }
   let(:access_panel) { AccessPanels.new(document) }
+
   it "should have an accessor method for all defined classes" do
     expect(access_panel.online).to be_an AccessPanels::Online
   end

@@ -10,6 +10,7 @@ feature "Pagination customization", :"data-integration" => true do
       click_link 'Book'
     end
   end
+
   scenario "should not have deep paging links" do
     within('ul.pagination') do
       expect(page).to have_css('li a', count: 8) # would be 10 w/ deep paging links

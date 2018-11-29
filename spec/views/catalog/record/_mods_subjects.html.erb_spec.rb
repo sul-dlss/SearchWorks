@@ -7,9 +7,11 @@ describe "catalog/record/_mods_subjects.html.erb" do
   describe "Object subjects" do
     let(:document) { SolrDocument.new(modsxml: mods_001) }
     let(:no_subjects_doc) { SolrDocument.new(modsxml: mods_file) }
+
     before do
       assign(:document, document)
     end
+
     it "should display subjects if available" do
       render
       expect(rendered).to have_css("dt", text: "Subject")
@@ -21,12 +23,15 @@ describe "catalog/record/_mods_subjects.html.erb" do
       expect(rendered).not_to be_present
     end
   end
+
   describe "Object genres" do
     let(:document) { SolrDocument.new(modsxml: mods_001) }
     let(:no_genres_doc) { SolrDocument.new(modsxml: mods_file) }
+
     before do
       assign(:document, document)
     end
+
     it "should display genres if available" do
       render
       expect(rendered).to have_css("dt", text: "Genre")

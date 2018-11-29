@@ -10,6 +10,7 @@ describe CollectionAccessPointHelper do
         expect(helper.instance_variable_get("@parent").nil?).to be_truthy
       end
     end
+
     describe "when documents are present" do
       it "should return 1st doc parent collection values" do
         params[:f] = {collection: ["29"]}

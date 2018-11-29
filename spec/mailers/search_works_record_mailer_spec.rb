@@ -70,6 +70,7 @@ describe SearchWorksRecordMailer do
 
     context 'catalog' do
       let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
+
       it 'should send an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"
       end
@@ -183,6 +184,7 @@ describe SearchWorksRecordMailer do
           )
         end
         let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
+
         it 'renders the bookplate data successfully' do
           expect(mail.body).to have_css('h3', text: 'Acquired with support from')
           expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)

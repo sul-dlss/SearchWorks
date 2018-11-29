@@ -42,6 +42,7 @@ describe FeedbackFormsController do
         expect(flash[:success]).to eq "<strong>Thank you!</strong> Your feedback has been sent."
       end
     end
+
     describe "validate" do
       it "should return an error if no message is sent" do
         post :create, params: { :url => "http://test.host/", :message => "", :email_address => "" }

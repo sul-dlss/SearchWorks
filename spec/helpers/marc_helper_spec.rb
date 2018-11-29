@@ -9,6 +9,7 @@ describe MarcHelper do
   let(:bad_vern_record) { SolrDocument.new(marcxml: bad_vernacular_fixture ) }
   let(:nielsen_record) { SolrDocument.new(marcxml: nielsen_fixture ) }
   let(:percent_record) { SolrDocument.new(marcxml: percent_fixture )}
+
   describe "#data_with_label_from_marc" do
     let(:matched_vern_doc_rtl) { SolrDocument.new(marcxml: matched_vernacular_rtl_fixture ) }
     let(:unmatched_vern_doc_rtl) { SolrDocument.new(marcxml: unmatched_vernacular_rtl_fixture ) }
@@ -16,6 +17,7 @@ describe MarcHelper do
     let(:linked_ckey_590_record) { SolrDocument.new(marcxml: linked_ckey_fixture ) }
     let(:special_character_record) { SolrDocument.new(marcxml: escape_characters_fixture ) }
     let(:relator_vern_record) { SolrDocument.new(marcxml: marc_sections_fixture ) }
+
     describe "get" do
       it "should display a valid definition list row" do
         field = get_data_with_label_from_marc(document.to_marc, "Label:", "520")
@@ -115,6 +117,7 @@ describe MarcHelper do
         expect(data[:fields].last[:field]).to  match(/Stanford > Berkeley/)
       end
     end
+
     describe "link_to" do
       it "should display a valid and linked definition list row" do
         data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
@@ -165,12 +168,14 @@ describe MarcHelper do
       end
     end
   end
+
   describe "contributors, related, and included works" do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
     let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
     let(:contributed_works_without_title) { SolrDocument.new(marcxml: contributed_works_without_title_fixture ) }
     let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
+
     it "should return multiple dd elements when there are multiple values" do
       expect(link_to_contributor_from_marc(contributor.to_marc)).to have_css('dd', count: 3)
     end
@@ -212,9 +217,11 @@ describe MarcHelper do
       end
     end
   end
+
   describe "#get_toc" do
     let(:bad_toc) { SolrDocument.new(marcxml: bad_toc_fixture) }
     let(:nielsen_tagged_record) { SolrDocument.new(marcxml: tagged_nielsen_fixture ) }
+
     it "should return the valid table of contents" do
       data = get_toc(document.to_marc)
       expect(data[:label]).to eq("Contents")
@@ -288,6 +295,7 @@ describe MarcHelper do
       expect(get_toc(nil_document.to_marc)).to be_nil
     end
   end
+
   describe "subjects" do
     let(:multi_a_subject) { SolrDocument.new(marcxml: multi_a_subject_fixture ) }
     let(:multi_vxyz_subject) { SolrDocument.new(marcxml: multi_vxyz_subject_fixture ) }
@@ -365,6 +373,7 @@ describe MarcHelper do
 
   describe "#get_740_works_from_marc" do
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
+
     it "should use Included Work for records with a 2nd indicator of 2" do
       expect(get_740_works_from_marc(related_works.to_marc,"Label")[:label]).to eq "Included Work"
     end
@@ -379,6 +388,7 @@ describe MarcHelper do
     let(:vernacular) { SolrDocument.new(marcxml: vernacular_marc_264_fixture ).to_marc }
     let(:unmatched_vernacular) { SolrDocument.new(marcxml: unmatched_vernacular_marc_264_fixture ).to_marc }
     let(:complex) { SolrDocument.new(marcxml: complex_marc_264_fixture ).to_marc }
+
     it "should handle a simple single 264" do
       data = marc_264(single)
       expect(data).to have_key("Production")
@@ -416,8 +426,10 @@ describe MarcHelper do
       expect(data["Current publication"].first).to eq "SubfieldA SubfieldB"
     end
   end
+
   describe '#results_imprint_string' do
     let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
+
     it 'returns the first imprint statement from the index' do
       expect(results_imprint_string(document)).to eq 'a'
     end

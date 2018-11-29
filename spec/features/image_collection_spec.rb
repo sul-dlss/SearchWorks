@@ -4,6 +4,7 @@ feature "Image Collection", js: true do
   before do
     stub_article_service(docs: [])
   end
+
   scenario "Search results" do
     visit root_path
 

@@ -18,6 +18,7 @@ describe 'shared/_search_assistance_block.html.erb' do
     before do
       allow(view).to receive(:controller_name).and_return('articles')
     end
+
     it 'displays articles specific links' do
       render
       expect(rendered).to have_css 'a', text: 'Databases'

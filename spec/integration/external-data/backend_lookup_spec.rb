@@ -11,6 +11,7 @@ describe "Backend lookup", type: :feature, js: true, :"data-integration" => true
       fill_in 'q', with: 'Search'
       click_button 'search'
     end
+
     it "should not execute until scrolled to" do
       expect(page).to     have_css('a', text: /^Remove limit\(s\)$/)
       expect(page).not_to have_css('a', text: /^Remove limit\(s\) \.{3} found \d{4,} results$/)

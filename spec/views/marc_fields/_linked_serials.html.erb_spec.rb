@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'marc_fields/_linked_serials.html.erb' do
   subject { Capybara.string(rendered) }
+
   let(:linked_serial) do
     double(
       'LinkedSerial',
@@ -18,6 +19,7 @@ describe 'marc_fields/_linked_serials.html.erb' do
       ]
     )
   end
+
   before do
     allow(view).to receive(:linked_serials).and_return(linked_serial)
     render

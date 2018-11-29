@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'Bookmarking Items' do
   context 'Citations', js: true do
     let(:citations) { '<p class="citation_style_MLA">MLA Citation</p>' }
+
     before { stub_oclc_response(citations, for: '12345') }
 
     scenario 'should be viewable grouped by title and citation format' do

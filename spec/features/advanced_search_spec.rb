@@ -4,6 +4,7 @@ feature "Advanced Search" do
   before do
     visit blacklight_advanced_search_engine.advanced_search_path
   end
+
   scenario "should have correct fields and headings" do
     expect(page).to have_title("Advanced search in SearchWorks catalog")
     within ".advanced-search-form" do

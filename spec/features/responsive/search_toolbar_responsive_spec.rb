@@ -12,6 +12,7 @@ describe "Responsive search bar", js: true, feature: true do
       end
     end
   end
+
   describe " - tablet view (768px - 980px) - ", responsive: true, page_width: 800 do
     it "displays the search form" do
       visit root_path
@@ -23,6 +24,7 @@ describe "Responsive search bar", js: true, feature: true do
       end
     end
   end
+
   describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
     it "displays the search form" do
       visit root_path

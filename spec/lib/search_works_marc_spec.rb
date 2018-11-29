@@ -6,6 +6,7 @@ describe SearchWorksMarc do
   describe 'initialize' do
     let(:document) { SolrDocument.new(marcxml: sw_marc_removed).to_marc }
     let(:sw_marc) { SearchWorksMarc.new(document) }
+
     it 'should be type SearchWorksMarc' do
       expect(sw_marc.class).to be SearchWorksMarc
     end
@@ -22,6 +23,7 @@ describe SearchWorksMarc do
   describe 'parse_marc_record' do
     let(:document) { SolrDocument.new(marcxml: metadata1).to_marc }
     let(:sw_marc) { SearchWorksMarc.new(document) }
+
     it 'should return an array' do
       expect(sw_marc.parse_marc_record.class).to eq Array
     end
@@ -48,9 +50,11 @@ describe SearchWorksMarc do
       end
     end
   end
+
   describe 'each' do
     let(:document) { SolrDocument.new(marcxml: metadata1).to_marc }
     let(:instrumentation) { SearchWorksMarc.new(document) }
+
     it 'should return an enumerable object' do
       instrumentation.each do |record|
         expect(record).to be_a_kind_of(OpenStruct)

@@ -8,6 +8,7 @@ describe Thumbnail do
   let(:view_context) { double(:view_context) }
   let(:thumbnail) { ThumbnailTestClass.new }
   let(:doc) { {id: '123'} }
+
   it "should provide a thumbnail method" do
     expect(thumbnail).to respond_to(:thumbnail)
   end

@@ -12,6 +12,7 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
   end
+
   describe "ARS" do
     it "should be noncirc for non STK item type" do
       visit solr_document_path('10160087')
@@ -32,6 +33,7 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
   end
+
   describe "standard item" do
     it "should default w/ an unknown item status" do
       visit solr_document_path('10424524')
@@ -43,10 +45,12 @@ describe "Location", feature: true, :"data-integration" => true do
       end
     end
   end
+
   describe "bound with items" do
     before do
       visit solr_document_path('796463')
     end
+
     it "should not show request links for requstable libraries" do
       within('.availability') do
         expect(page).not_to have_content('Request')

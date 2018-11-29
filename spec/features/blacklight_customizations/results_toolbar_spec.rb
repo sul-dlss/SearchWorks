@@ -6,6 +6,7 @@ feature "Results Toolbar", js: true do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
+
   scenario "should have desktop tools visible" do
     visit root_path
     fill_in "q", with: ''

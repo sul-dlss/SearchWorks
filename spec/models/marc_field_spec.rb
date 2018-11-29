@@ -5,6 +5,7 @@ describe MarcField do
   let(:marc) { metadata1 }
   let(:document) { SolrDocument.new(marcxml: marc) }
   let(:tags) { [] }
+
   subject { described_class.new(document, tags) }
 
   describe '#label' do

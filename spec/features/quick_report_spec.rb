@@ -4,6 +4,7 @@ feature 'Quick report form (js)', js: true do
   before do
     visit root_path
   end
+
   scenario 'Quick report should only be available on show page' do
     skip('Passes locally, not on Travis.') if ENV['CI']
     click_link 'Feedback'
@@ -20,6 +21,7 @@ feature 'Quick report form (no js)' do
   before do
     visit root_path
   end
+
   scenario 'Quick report should only be available on show page' do
     click_link 'Feedback'
     expect(page).not_to have_css('button.btn-quick-report')

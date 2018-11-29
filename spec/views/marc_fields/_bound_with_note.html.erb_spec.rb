@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'marc_fields/_bound_with_note.html.erb' do
   subject { Capybara.string(rendered) }
+
   let(:bound_with_note) do
     double(
       'BoundWithNote',
@@ -10,6 +11,7 @@ describe 'marc_fields/_bound_with_note.html.erb' do
       ]
     )
   end
+
   before do
     allow(view).to receive_messages(bound_with_note: bound_with_note)
     render

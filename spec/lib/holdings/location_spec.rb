@@ -8,13 +8,16 @@ describe Holdings::Location do
   describe '#name' do
     let(:location_code) { "LOCKED-STK" }
     let(:callnumber) { Holdings::Callnumber.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
+
     it "should translate the location code" do
       expect(Holdings::Location.new(location_code).name).to eq "Locked stacks: Ask at circulation desk"
     end
   end
+
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
     let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')]) }
+
     it "should be true when there are items" do
       expect(location_with_items).to be_present
     end
@@ -26,6 +29,7 @@ describe Holdings::Location do
     describe "present_on_index?" do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
+
       it "should not throw an error on items w/o an mhld" do
         expect(location_no_items_or_mhld).not_to be_present_on_index
       end
@@ -42,6 +46,7 @@ describe Holdings::Location do
       end
     end
   end
+
   describe '#location_level_request?' do
     it 'should return true for items that are in request locs' do
       Constants::REQUEST_LOCS.each do |location|
@@ -75,6 +80,7 @@ describe Holdings::Location do
       let(:not_online_doc) { SolrDocument.new(item_display: [item_display]) }
       let(:online_doc) { SolrDocument.new(marc_links_struct: [{ fulltext: true }], item_display: [item_display]) }
       let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, '54321 -|- GREEN -|- STACKS -|- ']) }
+
       it 'returns true for materials that are not available online' do
         location = Holdings::Location.new('STACKS', callnumbers, not_online_doc)
         expect(location).to be_location_level_request
@@ -93,6 +99,7 @@ describe Holdings::Location do
       end
     end
   end
+
   describe 'external locations' do
     let(:external_location) {
       Holdings::Location.new('STACKS', [
@@ -102,6 +109,7 @@ describe Holdings::Location do
     let(:non_external_location) {
       Holdings::Location.new("STACKS")
     }
+
     describe '#external_location?' do
       it 'should identify LANE-MED properly' do
         expect(external_location).to be_external_location
@@ -110,6 +118,7 @@ describe Holdings::Location do
         expect(non_external_location).not_to be_external_location
       end
     end
+
     describe '#location_link' do
       it 'should provide a link for external locations' do
         expect(external_location.location_link).to match /http:\/\/lmldb\.stanford\.edu.*&Search_Arg=SOCW\+L12345/
@@ -142,13 +151,16 @@ describe Holdings::Location do
       Holdings::Callnumber.new("barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ")
     ] }
     let(:location) { Holdings::Location.new("STACKS", callnumbers) }
+
     it "should sort items by the full shelfkey" do
       expect(location.items.map(&:callnumber)).to eq ["ABC 100", "ABC 210", "ABC 321"]
     end
   end
+
   describe "#bound_with?" do
     let(:location) { Holdings::Location.new("STACKS") }
     let(:bound_with_location) { Holdings::Location.new("SEE-OTHER") }
+
     it "should return true for locations that are SEE-OTHER" do
       expect(bound_with_location).to be_bound_with
     end
@@ -156,14 +168,17 @@ describe Holdings::Location do
       expect(location).not_to be_bound_with
     end
   end
+
   describe "#mhld" do
     let(:location) {Holdings::Location.new("STACKS")}
+
     it "should be an accessible attribute" do
       expect(location.mhld).not_to be_present
       location.mhld = "something"
       expect(location.mhld).to be_present
     end
   end
+
   describe '#as_json' do
     let(:callnumbers) do
       [
@@ -173,6 +188,7 @@ describe Holdings::Location do
       ]
     end
     let(:as_json) { Holdings::Location.new('STACKS', callnumbers).as_json }
+
     it 'should return a hash with all of the callnumbers public reader methods' do
       expect(as_json).to be_a Hash
       expect(as_json[:code]).to eq 'STACKS'

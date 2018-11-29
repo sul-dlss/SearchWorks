@@ -41,6 +41,7 @@ describe Extent do
         characteristics_ssim: ['Sound: digital; optical; surround; stereo; Dolby.', 'Video: NTSC. Digital: video file; DVD video; Region 1.']
       )
     }
+
     it "should not be present if the appropriate metadata is not available" do
       expect(no_extent.extent).not_to be_present
       expect(no_extent.extent_sans_format).not_to be_present
@@ -71,6 +72,7 @@ describe Extent do
         expect(bad_format.extent).to start_with 'Book'
       end
     end
+
     describe 'not including format' do
       it 'should not append the format' do
         expect(single_extent.extent_sans_format).to start_with 'an extent statement'

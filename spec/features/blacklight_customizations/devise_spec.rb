@@ -24,6 +24,7 @@ describe 'Devise functionality restrictions', type: :routing do
       expect(:delete => '/users').not_to be_routable
     end
   end
+
   describe 'passwords' do
     it 'user password should not be available' do
       expect(:post => '/users/password').not_to be_routable
@@ -41,6 +42,7 @@ describe 'Devise functionality restrictions', type: :routing do
       expect(:post => '/users/password/edit').not_to be_routable
     end
   end
+
   describe 'sessions' do
     it 'new user session should not be available' do
       expect(:get => '/users/sign_in').not_to be_routable

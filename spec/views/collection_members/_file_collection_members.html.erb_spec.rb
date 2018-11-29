@@ -6,6 +6,7 @@ describe "collection_members/_file_collection_members.html.erb" do
     SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean"),
     SolrDocument.new(id: 2, pub_date: "2011")
   ] }
+
   before do
     allow(collection_members).to receive(:total).and_return('10')
     assign(:document, document)
@@ -13,6 +14,7 @@ describe "collection_members/_file_collection_members.html.erb" do
     expect(document).to receive(:collection_members).at_least(1).times.and_return(collection_members)
     render
   end
+
   it "should have an icon" do
     expect(rendered).to have_css('.file-icon')
   end

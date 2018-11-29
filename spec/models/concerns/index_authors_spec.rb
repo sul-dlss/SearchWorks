@@ -10,6 +10,7 @@ describe IndexAuthors do
     author_meeting_display: ["Author Meeting", "Author Meeting"],
     vern_author_meeting_display: ["Vern Author Meeting"]
   ) }
+
   it "should not return anything for a document without authors" do
     expect(no_authors_document.authors_from_index).not_to be_present
   end

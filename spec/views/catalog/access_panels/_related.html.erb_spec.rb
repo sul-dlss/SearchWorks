@@ -13,6 +13,7 @@ describe "catalog/access_panels/_related.html.erb" do
       ))
       render
     end
+
     it 'should render an OCLC link' do
       expect(rendered).to have_css('div.panel-related', visible: true)
       expect(rendered).to have_css('li.worldcat a', text: "Find it at other libraries via WorldCat")

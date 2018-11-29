@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe "Search toolbar", js: true, feature: true do
   before { visit root_path }
+
   describe "has SearchWorks customizations" do
     it "should display correct subnavbar elements" do
       within '#search-navbar-container' do
@@ -15,6 +16,7 @@ describe "Search toolbar", js: true, feature: true do
       end
     end
   end
+
   describe "Selections dropdown" do
     describe "show list" do
       it "should navigate to selections page" do
@@ -24,6 +26,7 @@ describe "Search toolbar", js: true, feature: true do
         expect(page).to have_css("h3", text: "You have no bookmarks")
       end
     end
+
     describe "clear list" do
       it "should clear selections and update selections count and recently added list" do
         skip 'Not working correctly'

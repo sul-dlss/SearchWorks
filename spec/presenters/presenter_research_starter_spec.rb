@@ -57,6 +57,7 @@ RSpec.describe PresenterResearchStarter do
 
     context 'converts images to figures with captions' do
       let(:value) { '<img src="abc.jpg" title="def"/>' }
+
       it do
         html = Capybara.string(result)
         expect(html).to have_css('.research-starter-figure')

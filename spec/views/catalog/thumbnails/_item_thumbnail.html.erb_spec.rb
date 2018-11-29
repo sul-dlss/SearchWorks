@@ -11,6 +11,7 @@ describe "catalog/thumbnails/_item_thumbnail.html.erb" do
 
   context 'non SDR object' do
     let(:document) { SolrDocument.new(id: '1234', title_display: 'Title') }
+
     describe "fake covers" do
       it "should be included on the gallery view" do
         allow(view).to receive(:document_index_view_type).and_return(:gallery)

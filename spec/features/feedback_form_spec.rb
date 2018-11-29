@@ -4,6 +4,7 @@ feature "Feedback form (js)", js: true do
   before do
     visit root_path
   end
+
   scenario "feedback form should be hidden" do
     expect(page).not_to have_css("#feedback-form", visible: true)
   end
@@ -26,6 +27,7 @@ feature "Feedback form (no js)" do
   before do
     visit root_path
   end
+
   scenario "feedback form should be shown filled out and submitted" do
     click_link "Feedback"
     expect(page).to have_css("#feedback-form", visible: true)

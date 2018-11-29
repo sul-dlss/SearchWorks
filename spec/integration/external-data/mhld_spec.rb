@@ -12,6 +12,7 @@ describe "MHLD", feature: true, :"data-integration" => true do
       end
     end
   end
+
   describe "results view", js: true do
     it "should be present in the accordion section" do
       visit search_catalog_path(q: '492502')

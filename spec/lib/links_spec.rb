@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe SearchWorks::Links do
   let(:links) { SearchWorks::Links.new({}) }
+
   before do
     allow(links).to receive(:all).and_return([
       OpenStruct.new(html: 'non-fulltext link', fulltext?: false),

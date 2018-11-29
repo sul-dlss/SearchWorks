@@ -90,6 +90,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path q: 'my search'
     end
+
     it 'has a sort dropdown' do
       within '#sort-dropdown' do
         expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'Sort by relevance')

@@ -7,6 +7,7 @@ describe 'catalog/_alternate_catalog.html.erb' do
     controller.params[:q] = 'question'
     render
   end
+
   it 'has data-attributes' do
     expect(rendered).to have_css '[data-alternate-catalog="/articles?f%5Beds_s'\
       'earch_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=question"]'

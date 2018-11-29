@@ -5,6 +5,7 @@ describe FacetsHelper do
     before do
       @response = OpenStruct.new(aggregations: {})
     end
+
     it "should return nil if there is no facet available" do
       expect(helper.send(:render_single_facet, "not_a_facet")).to be_nil
     end
@@ -22,9 +23,11 @@ describe FacetsHelper do
       expect(helper.send(:render_single_facet, "this_facet", options)).to eq "a-partial"
     end
   end
+
   describe "#collapse_home_page_facet?" do
     let(:collapse_facet) { OpenStruct.new(field: 'building_facet') }
     let(:non_collapse_facet) { OpenStruct.new(field: 'other_facet') }
+
     it "should identify building_facet to be collapsed on the home page" do
       expect(collapse_home_page_facet?(collapse_facet)).to be_truthy
     end
@@ -32,6 +35,7 @@ describe FacetsHelper do
       expect(collapse_home_page_facet?(non_collapse_facet)).to be_falsey
     end
   end
+
   describe "#remove_range_param" do
     it "should delete range key" do
       params = {"range" => {test: "123"}, "stuff" => "stuff"}
@@ -57,6 +61,7 @@ describe FacetsHelper do
       expect(params["range"]).to be_present
     end
   end
+
   describe "#render_resource_icon" do
     it "should not render anything if format_main_ssim field is not present" do
       expect(helper.render_resource_icon(nil)).to be_nil

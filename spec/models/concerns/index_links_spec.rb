@@ -48,6 +48,7 @@ describe IndexLinks do
       ]
     )
   end
+
   describe 'mixin' do
     it 'should add the #index_links method' do
       expect(solr_document).to respond_to(:index_links)
@@ -59,6 +60,7 @@ describe IndexLinks do
       end
     end
   end
+
   describe 'SearchWorks::Links' do
     let(:index_links) { solr_document.index_links }
     let(:finding_aid_links) { finding_aid_document.index_links }
@@ -67,6 +69,7 @@ describe IndexLinks do
     let(:sfx_links) { sfx_document.index_links }
     let(:ezproxy_links) { ezproxy_document.index_links }
     let(:bad_links) { bad_url_document.index_links }
+
     it 'should return both fulltext and supplemental links' do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.html).to match(%r{^<a.*>library\.stanford\.edu<\/a>$})

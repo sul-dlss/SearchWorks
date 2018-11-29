@@ -6,11 +6,13 @@ describe "catalog/access_panels/_location.html.erb", js:true do
     before do
       assign(:document, SolrDocument.new)
     end
+
     it "should not render any panel" do
       render
       expect(rendered).to be_blank
     end
   end
+
   describe "object with a location" do
     it "should render the panel" do
       assign(:document, SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]))
@@ -22,6 +24,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css(".panel-body")
     end
   end
+
   describe "bound with locations" do
     before do
       assign(:document, SolrDocument.new(
@@ -46,6 +49,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).not_to have_css 'td[data-live-lookup-id]'
     end
   end
+
   describe 'location level requests' do
     it 'should have the request link at the location level' do
       assign(:document, SolrDocument.new(
@@ -80,6 +84,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).not_to have_css('a', text: "Request")
     end
   end
+
   describe "status text" do
     before do
       assign(:document, SolrDocument.new(
@@ -91,6 +96,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
+
     it "should have unknown status text for items we'll be looking up" do
       expect(rendered).to have_css('.status-text', text: 'Unknown')
     end
@@ -98,6 +104,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css('.status-text', text: 'In-library use')
     end
   end
+
   describe "current locations" do
     it "should be displayed" do
       assign(:document, SolrDocument.new(
@@ -115,6 +122,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should display the current location as the home location" do
         expect(rendered).not_to have_css('.location-name', text: 'Stacks')
         expect(rendered).to have_css('.location-name', text: 'Information Center display')
@@ -123,6 +131,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('.current-location', text: '')
       end
     end
+
     describe "is reserve desk" do
       it "should use the library of the owning reserve desk" do
         assign(:document, SolrDocument.new(
@@ -134,6 +143,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       end
     end
   end
+
   describe "mhld" do
     describe "with matching library/location" do
       before do
@@ -144,6 +154,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should include the matched MHLD" do
         expect(rendered).to have_css('.panel-library-location a', count: 3)
         expect(rendered).to have_css('h3', text: "Green Library", count: 1)
@@ -154,6 +165,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('.panel-library-location td', text: "ABC 123")
       end
     end
+
     describe "that has no matching library/location" do
       before do
         assign(:document, SolrDocument.new(
@@ -162,6 +174,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should invoke a library block w/ the appropriate mhld data" do
         expect(rendered).to have_css('.panel-library-location a', count: 1)
         expect(rendered).to have_css('h3', text: "Green Library")
@@ -172,6 +185,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       end
     end
   end
+
   describe "request links" do
     describe "location level request links" do
       before do
@@ -181,6 +195,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should be present" do
         expect(rendered).to have_css('.location a', text: 'Request')
       end
@@ -188,6 +203,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).not_to have_css('td[data-request-url]')
       end
     end
+
     describe "item level request links" do
       before do
         assign(:document, SolrDocument.new(
@@ -196,6 +212,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should not have a request url stored in the data attribute" do
         expect(rendered).not_to have_css('td[data-request-url]')
       end
@@ -203,6 +220,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         expect(rendered).to have_css('tbody a', text: 'Request')
       end
     end
+
     describe "requestable vs. non-requestable items" do
       before do
         assign(:document, SolrDocument.new(
@@ -214,6 +232,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
         render
       end
+
       it "should have an item that has a request url" do
         expect(rendered).to have_css('.availability td[data-barcode="456"][data-request-url]')
       end
@@ -222,6 +241,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       end
     end
   end
+
   describe "zombie libraries" do
     before do
       assign(:document, SolrDocument.new(
@@ -234,6 +254,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
+
     it "should render a zombie library" do #mmm brains
       expect(rendered).to have_css('.panel-library-location a', count: 1)
     end
@@ -247,6 +268,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       expect(rendered).to have_css('.panel-library-location td', text: 'GHI')
     end
   end
+
   describe 'public note' do
     before do
       assign(:document, SolrDocument.new(
@@ -255,10 +277,12 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         ))
       render
     end
+
     it 'should render public note' do
       expect(rendered).to have_css('div.public-note.note-highlight', text: 'Note: this is public')
     end
   end
+
   describe 'finding aid' do
     before do
       assign(:document, SolrDocument.new(
@@ -268,11 +292,13 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
+
     it 'should display finding aid sections with link' do
       expect(rendered).to have_css('h4', text: 'Finding aid')
       expect(rendered).to have_css('a', text: 'Online Archive of California')
     end
   end
+
   describe 'special instructions' do
     before do
       assign(:document, SolrDocument.new(
@@ -281,11 +307,13 @@ describe "catalog/access_panels/_location.html.erb", js:true do
       ))
       render
     end
+
     it 'should render special instructions field' do
       expect(rendered).to have_css('h4', text: 'All items must be viewed on site')
       expect(rendered).to have_css('p', text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.')
     end
   end
+
   describe 'Hoover Archives' do
     context 'when a finding aid is present' do
       before do
@@ -299,12 +327,14 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         )
         render
       end
+
       it 'renders request via OAC finding aid' do
         expect(rendered).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
         expect(rendered).to have_css '.availability-icon.noncirc_page'
         expect(rendered).to have_css '.status-text', text: 'In-library use'
       end
     end
+
     context 'without a finding aid' do
       before do
         assign(
@@ -316,6 +346,7 @@ describe "catalog/access_panels/_location.html.erb", js:true do
         )
         render
       end
+
       it 'renders not available text' do
         expect(rendered).to have_css '.panel-body .pull-right', text: 'Not available to request'
         expect(rendered).to have_css '.availability-icon.in_process'

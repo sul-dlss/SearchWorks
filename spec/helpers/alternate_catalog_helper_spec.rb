@@ -10,11 +10,13 @@ describe AlternateCatalogHelper do
         expect(helper.show_alternate_catalog?).to eq true
       end
     end
+
     context 'no q params' do
       it do
         expect(helper.show_alternate_catalog?).to eq false
       end
     end
+
     context 'gallery view' do
       it do
         controller.params[:view] = 'gallery'
