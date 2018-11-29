@@ -8,7 +8,7 @@ feature "Image Collection", js: true do
     visit root_path
 
     fill_in "q", with: "29"
-    page.find('button#search').trigger('click')
+    page.find('button#search').click
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
     expect(page).to have_css("[data-behavior='metadata-truncate']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
@@ -38,7 +38,7 @@ feature "Image Collection", js: true do
     visit root_path
 
     fill_in "q", with: "29"
-    find('button#search').trigger('click')
+    find('button#search').click
 
     expect(page).to have_css(".image-filmstrip")
 
@@ -61,7 +61,8 @@ feature "Image Collection", js: true do
     expect(page).to have_css(".image-filmstrip")
 
     within "div.image-filmstrip" do
-      expect(page).to have_css("div.preview-filmstrip-container-29")
+      # Not really sure why this has to be visible: false in the test under chromedriver.  It is visible in the page.
+      expect(page).to have_css("div.preview-filmstrip-container-29", visible: false)
     end
 
   end

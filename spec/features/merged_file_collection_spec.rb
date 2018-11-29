@@ -7,7 +7,7 @@ feature "Merged File Collections", js: true do
   scenario "in search results" do
     visit root_path
     fill_in 'q', with: '38'
-    find('button#search').trigger('click')
+    find('button#search').click
 
     within('.file-collection-members') do
       expect(page).to have_css("a", text: /File Item/, count: 3)

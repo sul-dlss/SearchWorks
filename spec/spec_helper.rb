@@ -2,15 +2,33 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'capybara/poltergeist'
+require 'selenium-webdriver'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, {timeout: 60})
+Capybara.javascript_driver = :headless_chrome
+
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox window-size=1000,700] }
+  )
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
-Capybara.javascript_driver = :poltergeist
+
+Capybara.register_driver :mobile_headless do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox window-size=700,700] }
+  )
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+end
+
+Capybara.register_driver :tablet_headless do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox window-size=800,700] }
+  )
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+end
 
 Capybara.default_max_wait_time = ENV["CI"] ? 30 : 10
 
@@ -36,6 +54,25 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
 
   config.include Capybara::DSL
+
+  config.before(:example, responsive: true) do |example|
+    page_width = example.metadata[:page_width].to_i
+    driver = if page_width < 767
+               :mobile_headless
+             elsif page_width < 980
+               :tablet_headless
+             else
+               raise ArgumentError, "Browsers over 980px wide don't need to use the responsive test mode"
+             end
+
+    Capybara.javascript_driver = driver
+    Capybara.current_driver = driver
+  end
+
+  config.after(:example, responsive: true) do
+    Capybara.javascript_driver = :headless_chrome
+    Capybara.current_driver = :headless_chrome
+  end
 
   # ## Mock Framework
   #

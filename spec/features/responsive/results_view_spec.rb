@@ -10,8 +10,6 @@ describe 'Responsive results view Page', feature: true, js: true do
         expect(page).to have_css('span', text: 'Previous', visible: true)
       end
 
-      page.driver.resize('700', '700')
-
       within('ul.pagination') do
         expect(page).to have_css('span', text: 'Previous', visible: false)
       end

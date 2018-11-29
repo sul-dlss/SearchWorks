@@ -3,10 +3,11 @@ require "spec_helper"
 describe "Record toolbar", js: true, feature: true do
   before do
     stub_oclc_response('', for: '12345')
-    visit search_catalog_path f: { format: ['Book'] }
   end
 
   describe " - tablet view (768px - 980px) - " do
+    before { visit search_catalog_path f: { format: ['Book'] } }
+
     context 'a citable item' do
       before { page.find('a', text: 'An object').click }
 
@@ -48,12 +49,13 @@ describe "Record toolbar", js: true, feature: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - " do
+  describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
+    before { visit search_catalog_path f: { format: ['Book'] } }
+
     context 'a citable item' do
       before { page.find('a', text: 'An object').click }
 
       it 'renders a cite this link' do
-        page.driver.resize('700', '700')
         within '#content' do
           expect(page).to have_css('div.record-toolbar', visible: true)
 
@@ -76,7 +78,6 @@ describe "Record toolbar", js: true, feature: true do
         end
       end
       it "should display correct toolbar items" do
-        page.driver.resize('700', '700')
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)
 

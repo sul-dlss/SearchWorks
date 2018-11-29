@@ -56,7 +56,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
-  gem 'poltergeist', '>= 1.8.1'
+  gem 'chromedriver-helper'
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
   gem 'solr_wrapper'
 end

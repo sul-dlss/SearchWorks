@@ -28,7 +28,7 @@ feature "Skip-to Navigation" do
   scenario "should have skip-to navigation links to search field, main container and records in selections page", js: true do
     visit root_path
     fill_in 'q', with: '20'
-    find('button#search').trigger('click')
+    find('button#search').click
     find(:css, '#toggle_bookmark_20').set(true)
     visit bookmarks_path
 
@@ -43,7 +43,10 @@ feature "Skip-to Navigation" do
     visit root_path
 
     within '#skip-link' do
-      find('a[href="#main-container"]', text: 'Skip to main content').trigger('click')
+      page.execute_script('$("a[href=\'#main-container\']").trigger("focus")') # Focus on link to make it visible
+      expect(page).to have_css('a[href="#main-container"]', visible: true)
+
+      click_link 'Skip to main content'
       active_element = page.evaluate_script('$(document.activeElement).attr("id")')
       expect(active_element).to eq 'main-container'
     end
