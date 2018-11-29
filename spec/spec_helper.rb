@@ -2,15 +2,19 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'capybara/poltergeist'
+require 'selenium-webdriver'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, {timeout: 60})
+Capybara.javascript_driver = :headless_chrome
+
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w[headless disable-gpu no-sandbox window-size=1000,700] }
+  )
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
-Capybara.javascript_driver = :poltergeist
 
 Capybara.default_max_wait_time = ENV["CI"] ? 30 : 10
 
