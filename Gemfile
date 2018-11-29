@@ -59,6 +59,8 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
   gem 'solr_wrapper'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :sqlite do
@@ -98,7 +100,6 @@ gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 1.1'
-gem 'rubocop'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds', '1.0.5' # External vendor, upgrade requires testing
 gem 'whenever' # manages cron jobs
