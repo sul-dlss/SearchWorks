@@ -136,6 +136,32 @@ Blacklight.onLoad(function(){
     });
   });
 
+  // Cite link
+  $('#citeLink').on('click', function(e) {
+    ga('send', 'event', 'Cite', 'citation tool opened', {
+      'transport': 'beacon'
+    });
+  });
+
+  // Stacks Map Tool
+  $('.stackmap-find-it').on('click', function(e) {
+    ga('send', 'event', 'Stacks Map', 'Stacks Map Opened (from find-it button)', {
+      'transport': 'beacon'
+    });
+  });
+
+  $('.location-name a').on('click', function(e) {
+    ga('send', 'event', 'Stacks Map', 'Stacks Map Opened (from location link)', {
+      'transport': 'beacon'
+    });
+  });
+
+  $('.show-description a').on('click', function(e) {
+    ga('send', 'event', 'Stacks Map', 'Text Description Opened', {
+      'transport': 'beacon'
+    });
+  });
+
   // Browse-nearby
   $('.index_title a').on('click', function(e) {
     ga('send', 'event', 'Browse-nearby', 'recommendation clicked', {
@@ -145,12 +171,6 @@ Blacklight.onLoad(function(){
 
   $('.embedded-items .gallery').on('scroll', function(e) {
     ga('send', 'event', 'Browse-nearby', 'scrolled', {
-    'transport': 'beacon'
-    });
-  });
-
-  $('.browse-link a').on('click', function(e) {
-    ga('send', 'event', 'Browse-nearby', 'nav arrow clicked', $(e.currentTarget).parent().find('h3').text().trim(), {
     'transport': 'beacon'
     });
   });
