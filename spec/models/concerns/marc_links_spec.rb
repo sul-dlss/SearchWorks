@@ -12,7 +12,7 @@ describe MarcLinks do
         { text: 'fulltext', fulltext: true },
         { text: 'stanford only',  stanford_only: true },
         { html: 'finding aid', finding_aid: true },
-        { text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' },
+        { text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' }
       ])
     end
 

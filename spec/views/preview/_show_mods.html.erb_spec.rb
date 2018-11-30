@@ -15,7 +15,7 @@ describe "preview/_show_mods.html.erb" do
     imprint_display: ["Imprint Statement"],
     author_struct: [
       { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
-      { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+      { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }
     ],
     summary_display: ['Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet']
   ) }

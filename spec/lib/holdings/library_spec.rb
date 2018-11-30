@@ -20,7 +20,7 @@ describe Holdings::Library do
       [
         Holdings::Callnumber.new("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
         Holdings::Callnumber.new("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
-        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- "),
+        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
       ]
     end
     let(:locations) { Holdings::Library.new("GREEN", nil, callnumbers).locations }

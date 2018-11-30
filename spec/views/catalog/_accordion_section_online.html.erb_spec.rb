@@ -14,7 +14,7 @@ describe "catalog/_index_online_section.html.erb" do
               { html: 'a', fulltext: true },
               { html: 'b', fulltext: true },
               { html: 'c', fulltext: true },
-              { html: 'd', fulltext: true },
+              { html: 'd', fulltext: true }
             ]
           )
         )
