@@ -11,7 +11,6 @@
 :display_type:
   - sirsi
 :marcxml: <%= simple_856 %>
-:marcbib_xml: <%= simple_856 %>
 :format_main_ssim: Newspaper
 :access_facet: Online
 :building_facet: SAL3 (off-campus storage)

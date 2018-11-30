@@ -4,24 +4,25 @@ describe "catalog/_index_marc.html.erb" do
   include MarcMetadataFixtures
   before do
     allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:document).and_return(document)
+  end
+
+  let(:document) do
+    SolrDocument.new(
+      author_struct: [
+        {
+          creator: [{link:'Arbitrary, Stewart.', search: 'Arbitrary, Stewart.', post_text: 'fantastic.' }],
+          corporate_author: [{link:'Arbitrary, Corporate.', search: 'Arbitrary, Corporate.', post_text: 'fantastic.' }],
+          meeting: [{link:'Arbitrary Meeting.', search: 'Arbitrary, Meeting.', post_text: 'fantastic.' }],
+        }
+      ],
+      imprint_display: ['Imprint Statement'],
+      physical: ["The Physical Extent"],
+      format_main_ssim: ['Book']
+    )
   end
   describe "physical extent" do
     before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          author_struct: [
-            {
-              creator: [{link:'Arbitrary, Stewart.', search: 'Arbitrary, Stewart.', post_text: 'fantastic.' }],
-              corporate_author: [{link:'Arbitrary, Corporate.', search: 'Arbitrary, Corporate.', post_text: 'fantastic.' }],
-              meeting: [{link:'Arbitrary Meeting.', search: 'Arbitrary, Meeting.', post_text: 'fantastic.' }],
-            }
-          ],
-          imprint_display: ['Imprint Statement'],
-          marcbib_xml: metadata1,
-          physical: ["The Physical Extent"],
-          format_main_ssim: ['Book']
-        )
-      )
       render
     end
     it "should link to the author" do
@@ -49,17 +50,11 @@ describe "catalog/_index_marc.html.erb" do
   end
 
   describe 'summary' do
-    before do
-      expect(view).to receive(:document).at_least(:once).and_return(
-        SolrDocument.new(
-          marcbib_xml: marc_record
-        )
-      )
-      render
-    end
-
     context 'when present' do
-      let(:marc_record) { metadata2 }
+      before do
+        document[:summary_struct] = [{unmatched_vernacular: ['!']}]
+        render
+      end
 
       it 'renders the section (that would be truncated by js)' do
         expect(rendered).to have_css('dt', text: 'Summary')
@@ -67,8 +62,6 @@ describe "catalog/_index_marc.html.erb" do
     end
 
     context 'when not present' do
-      let(:marc_record) { metadata1 }
-
       it 'does not render the heading/section at all' do
         expect(rendered).not_to have_css('dt', text: 'Summary')
       end
@@ -76,14 +69,14 @@ describe "catalog/_index_marc.html.erb" do
   end
 
   describe "databases" do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          format_main_ssim: ["Database"],
-          summary_display: ["The summary of the object"],
-          db_az_subject: ["Subject1", "Subject2"]
-        )
+    let(:document) do
+      SolrDocument.new(
+        format_main_ssim: ["Database"],
+        summary_display: ["The summary of the object"],
+        db_az_subject: ["Subject1", "Subject2"]
       )
+    end
+    before do
       render
     end
     it "should display the database topics" do
@@ -93,13 +86,13 @@ describe "catalog/_index_marc.html.erb" do
     end
   end
   describe 'finding aid' do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          marcxml: metadata1,
-          url_fulltext: ['http://oac.cdlib.org/findaid/ark:/12345']
-        )
+    let(:document) do
+      SolrDocument.new(
+        marcxml: metadata1,
+        url_fulltext: ['http://oac.cdlib.org/findaid/ark:/12345']
       )
+    end
+    before do
       render
     end
     it 'should display the finding aid' do

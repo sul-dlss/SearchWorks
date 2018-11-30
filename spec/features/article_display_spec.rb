@@ -5,7 +5,7 @@ feature 'Article Record Display' do
 
   describe 'Subjects' do
     let(:document) do
-      SolrDocument.new(id: '123', eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
+      SolrDocument.new(id: '123', eds_title: 'TITLE', eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
     end
 
     it 'are linked' do
@@ -20,7 +20,7 @@ feature 'Article Record Display' do
 
   describe 'Fulltext', js: true do
     let(:document) do
-      SolrDocument.new(id: '123', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
+      SolrDocument.new(id: '123', eds_title: 'TITLE', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
     end
 
     context 'when a user has access' do
@@ -65,6 +65,7 @@ feature 'Article Record Display' do
     let(:document) do
       SolrDocument.new(
         id: '123',
+        eds_title: 'The title of the document',
         eds_abstract: 'The Abstract',
         eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>',
         eds_volume: 'The Volumne'
@@ -88,6 +89,7 @@ feature 'Article Record Display' do
     let(:document) do
       SolrDocument.new(
         id: 'abc123',
+        eds_title: 'TITLE',
         eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com?param=abc&sid=xyz', 'type' => 'customlink-fulltext' }]
       )
     end

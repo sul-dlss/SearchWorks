@@ -33,6 +33,7 @@ module StubArticleService
     ),
     SolrDocument.new(
       id: 'pdfyyy',
+      eds_title: 'Another title for the document',
       eds_html_fulltext_available: true,
       eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
     )

@@ -3,14 +3,14 @@
 # the formats and whitelisting supported format types.
 module DisplayType
   def display_type
-    return nil unless (self[:marcfield] || mods).present?
+    return nil if eds?
     @display_type ||= [marc_or_mods, collection_suffix].compact.join('_')
   end
 
   private
 
   def marc_or_mods
-    return 'mods' if mods
+    return 'mods' if mods?
     'marc'
   end
 

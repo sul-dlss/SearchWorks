@@ -2,7 +2,6 @@
 :title_display: Another Virtual Object
 :format_main_ssim: Map
 :marcxml: <%= contributed_works_fixture %>
-:marcbib_xml: <%= contributed_works_fixture %>
 :display_type:
   - image
 :file_id:

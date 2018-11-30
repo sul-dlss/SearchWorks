@@ -40,22 +40,16 @@ class SolrDocument
 
   delegate :empty?, :blank?, to: :to_h
 
-  def initialize(source_doc = {}, response = nil)
-    source_doc = source_doc.to_h if source_doc.respond_to?(:to_h)
-    source_doc[:marcfield] = (source_doc[:marcxml] || source_doc['marcxml'] || source_doc[:marcbib_xml] || source_doc['marcbib_xml'])
-    super
-  end
-
   # TODO: change this to #to_param when we have upgraded to Blacklight 6.11.1
   def id
     (super || '').to_s.gsub('/', '%2F')
   end
 
       # The following shows how to setup this blacklight document to display marc documents
-  extension_parameters[:marc_source_field] = :marcfield
+  extension_parameters[:marc_source_field] = :marcxml
   extension_parameters[:marc_format_type] = :marcxml
   use_extension( Blacklight::Solr::Document::Marc) do |document|
-    document.key?( :marcxml  ) || document.key?( :marcbib_xml  )
+    document.key?(:marcxml)
   end
 
   use_extension(EdsExport) do |document|
@@ -116,7 +110,7 @@ class SolrDocument
     self[:img_info] || self[:file_id] || []
   end
 
-  concerning :MarcOrganizationAndArrangmenet do
+  concerning :MarcOrganizationAndArrangement do
     def organization_and_arrangement
       @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
     end

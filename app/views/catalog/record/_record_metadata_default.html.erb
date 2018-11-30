@@ -7,7 +7,7 @@
   <div class="record-sections col-md-8">
     <% if document.respond_to?(:to_marc) %>
       <%= render "catalog/record/marc_metadata_sections" %>
-    <% elsif document.respond_to?(:mods) %>
+    <% elsif document.respond_to?(:mods?) && document.mods? %>
       <%= render 'catalog/record/mods_metadata_sections' %>
     <% end %>
   </div>
