@@ -4,8 +4,8 @@ describe AccessPanels::Online do
   include ModsFixtures
   include Marc856Fixtures
 
-  let(:fulltext) { described_class.new(SolrDocument.new(marcxml: fulltext_856, marc_links_struct: [{:html=>"<a title='' href='https://library.stanford.edu'>Link text</a> ", :text=>"Link text", :href=>"https://library.stanford.edu", :fulltext=>true, :stanford_only=>nil, :finding_aid=>false, :managed_purl=>nil, :file_id=>nil, :druid=>nil}])) }
-  let(:supplemental) { described_class.new(SolrDocument.new(marcxml: supplemental_856)) }
+  let(:fulltext) { described_class.new(SolrDocument.new(marc_links_struct: [{:html=>"<a title='' href='https://library.stanford.edu'>Link text</a> ", :text=>"Link text", :href=>"https://library.stanford.edu", :fulltext=>true, :stanford_only=>nil, :finding_aid=>false, :managed_purl=>nil, :file_id=>nil, :druid=>nil}])) }
+  let(:supplemental) { described_class.new(SolrDocument.new) }
   let(:eds_links) do
     described_class.new(
       SolrDocument.new(
@@ -24,7 +24,6 @@ describe AccessPanels::Online do
     described_class.new(
       SolrDocument.new(
         collection: ['12345'],
-        marcxml: fulltext_856,
         marc_links_struct: [{:html=>"<a title='' href='https://library.stanford.edu'>Link text</a> ", :text=>"Link text", :href=>"https://library.stanford.edu", :fulltext=>true, :stanford_only=>nil, :finding_aid=>false, :managed_purl=>nil, :file_id=>nil, :druid=>nil}]
       )
     )
@@ -33,8 +32,7 @@ describe AccessPanels::Online do
   let(:managed_purl_doc) do
     described_class.new(
       SolrDocument.new(
-        managed_purl_urls: ['https://library.stanford.edu'],
-        marcxml: managed_purl_856
+        managed_purl_urls: ['https://library.stanford.edu']
       )
     )
   end
@@ -43,8 +41,7 @@ describe AccessPanels::Online do
     described_class.new(
       SolrDocument.new(
         collection: ['12345'],
-        url_fulltext: 'https://purl.stanford.edu/',
-        modsxml: mods_everything
+        url_fulltext: 'https://purl.stanford.edu/'
       )
     )
   end
