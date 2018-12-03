@@ -69,9 +69,10 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-bundle_audit (0.2.1)
+    capistrano-bundle_audit (0.2.2)
       bundler-audit (~> 0.5)
       capistrano (~> 3.0)
+      capistrano-bundler (~> 1.4)
     capistrano-bundler (1.4.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
@@ -83,7 +84,7 @@ GEM
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-shared_configs (0.2.2)
-    capybara (3.11.1)
+    capybara (3.12.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -166,7 +167,7 @@ GEM
     execjs (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    fastimage (2.1.4)
+    fastimage (2.1.5)
     ffi (1.9.25)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
@@ -363,7 +364,7 @@ GEM
       ref
     thor (0.20.3)
     thread_safe (0.3.6)
-    tilt (2.0.8)
+    tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
