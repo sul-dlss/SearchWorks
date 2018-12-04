@@ -10,7 +10,7 @@
 :display_type:
   - sirsi
 :physical: The physical statement
-:marcbib_xml: <%= marc_characteristics_fixture %>
+:marcxml: <%= marc_characteristics_fixture %>
 :access_facet: At the Library
 :building_facet: Hoover Library
 :item_display:

@@ -88,6 +88,8 @@ class MarcField
   end
 
   def append_unmatched_vernacular_fields
+    return unless marc.respond_to? :fields
+
     marc.fields(['880']).each do |vern_field|
       vernacular_field = MarcFieldWrapper.new(vern_field)
       next unless vernacular_field.vernacular_matcher? &&

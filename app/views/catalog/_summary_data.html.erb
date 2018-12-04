@@ -1,5 +1,5 @@
-<% if document.key?(:toc_struct) || document.respond_to?(:to_marc) %>
-  <% toc = document.fetch(:toc_struct, []).first || get_toc(document.to_marc) %>
+<% if document.key?(:toc_struct) ||  document.key?(:summary_struct) || document.respond_to?(:to_marc) %>
+  <% toc = document.fetch(:toc_struct, []).first || ( document.respond_to?(:to_marc) && get_toc(document.to_marc)) %>
   <% if toc.present? %>
     <% if toc[:fields].present? %>
       <% toc[:fields].each do |toc_field| %>
@@ -30,7 +30,7 @@
     <% end %>
   <% end %>
 
-  <% summary = document.fetch(:summary_struct, []).first || get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
+  <% summary = document.fetch(:summary_struct, []).first || (document.respond_to?(:to_marc) && get_data_with_label_from_marc(document.to_marc, "Summary", '520')) %>
   <% if summary.present? %>
     <% if summary[:fields].present? %>
       <% summary[:fields].each do |field| %>

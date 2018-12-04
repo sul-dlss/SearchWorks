@@ -2,6 +2,5 @@
 :title_display: Hoover Item
 :format_main_ssim: Map
 :marcxml: <%= hoover_request_fixture %>
-:marcbib_xml: <%= hoover_request_fixture %>
 :item_display:
   - "123 -|- HOOVER -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"

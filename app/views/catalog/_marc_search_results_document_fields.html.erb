@@ -1,28 +1,26 @@
-<% if document.respond_to?(:to_marc) %>
-  <ul class="document-metadata dl-horizontal dl-invert results-metadata-section col-md-8">
-    <% if document[:vern_title_display].present? %>
-      <li><%= document[:vern_title_display].html_safe %></li>
-    <% end %>
+<ul class="document-metadata dl-horizontal dl-invert results-metadata-section col-md-8">
+  <% if document[:vern_title_display].present? %>
+    <li><%= document[:vern_title_display].html_safe %></li>
+  <% end %>
 
-    <% uniform_title = get_uniform_title(document) %>
-    <% unless uniform_title.nil? %>
-      <% uniform_title[:fields].each do |field| %>
-        <li><%= field[:field] %></li>
-        <% if field[:vernacular] %>
-          <li><%= field[:vernacular] %></li>
-        <% end %>
-      <% end if uniform_title[:fields].present? %>
-      <% uniform_title[:unmatched_vernacular].each do |field| %>
-        <li><%= field %></li>
-      <% end if uniform_title[:unmatched_vernacular].present? %>
-    <% end %>
+  <% uniform_title = get_uniform_title(document) %>
+  <% unless uniform_title.nil? %>
+    <% uniform_title[:fields].each do |field| %>
+      <li><%= field[:field] %></li>
+      <% if field[:vernacular] %>
+        <li><%= field[:vernacular] %></li>
+      <% end %>
+    <% end if uniform_title[:fields].present? %>
+    <% uniform_title[:unmatched_vernacular].each do |field| %>
+      <li><%= field %></li>
+    <% end if uniform_title[:unmatched_vernacular].present? %>
+  <% end %>
 
-    <% %i[creator corporate_author meeting].each do |target| %>
-      <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
-    <% end %>
+  <% %i[creator corporate_author meeting].each do |target| %>
+    <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
+  <% end %>
 
-    <% if (imprint = results_imprint_string(document)).present? %>
-      <li><%= imprint %></li>
-    <% end %>
-  </ul>
-<% end %>
+  <% if (imprint = results_imprint_string(document)).present? %>
+    <li><%= imprint %></li>
+  <% end %>
+</ul>

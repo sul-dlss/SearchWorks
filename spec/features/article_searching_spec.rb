@@ -89,6 +89,7 @@ feature 'Article Searching' do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
       document = SolrDocument.new(
         id: '1234',
+        eds_title: 'Some title',
         eds_authors:  long_data,
         eds_abstract: long_data,
         eds_subjects: "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"

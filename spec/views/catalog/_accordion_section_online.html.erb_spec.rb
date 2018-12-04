@@ -33,7 +33,6 @@ describe "catalog/_index_online_section.html.erb" do
           document: SolrDocument.new(
             id: '12345',
             isbn_display: [123],
-            marcbib_xml: many_managed_purl_856,
             managed_purl_urls: [
               'https://purl.stanford.edu/ct493wg6431',
               'https://purl.stanford.edu/zg338xh5248'

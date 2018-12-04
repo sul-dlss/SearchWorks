@@ -2,7 +2,6 @@
 :title_display: Another item in a another virtual object
 :format_main_ssim: Map
 :marcxml: <%= marc_382_instrumentation %>
-:marcbib_xml: <%= marc_382_instrumentation %>
 :display_type:
   - image
 :file_id:

@@ -11,7 +11,6 @@
 :building_facet:
   - "Stanford Digital Repository"
 :marcxml: <%= metadata1 %>
-:marcbib_xml: <%= metadata1 %>
 :pub_date: 2004
 :beginning_year_isi: 2004
 :imprint_display: 2012

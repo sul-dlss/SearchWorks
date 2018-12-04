@@ -45,8 +45,8 @@ describe DisplayType do
   end
 
   describe 'unknown documents' do
-    it 'returns nil when there is not enough information to determine display type' do
-      expect(subject).to be_nil
+    it 'returns marc when there is not enough information to determine display type' do
+      expect(subject).to eq 'marc'
     end
   end
 end

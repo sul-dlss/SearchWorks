@@ -6,7 +6,7 @@
 :format: Book
 :display_type:
   - sirsi
-:marcbib_xml: <%= metadata1 %>
+:marcxml: <%= metadata1 %>
 :format_main_ssim: Book
 :imprint_display: 1788
 :access_facet: At the Library
