@@ -8,7 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+### Removed
+### Fixed
+### Security
+
+## [3.3.13] - 2018-12-04
+### Added
+- Add additional analytics events for browse nearby, stack map, and citations [#2219](https://github.com/sul-dlss/SearchWorks/pull/2219)
+### Changed
 - Swapped poltergeist out with chromedriver (a testing dependency) [#2218](https://github.com/sul-dlss/SearchWorks/pull/2218)
+- Performance optimization: use pre-parsed fields exclusively when rendering search results pages [#2221](https://github.com/sul-dlss/SearchWorks/pull/2221)
 ### Removed
 ### Fixed
 ### Security
@@ -168,7 +177,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
-[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.12...HEAD
+[Unreleased]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.13...HEAD
+[3.3.13]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.12...v3.3.13
 [3.3.12]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.11...v3.3.12
 [3.3.11]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.10...v3.3.11
 [3.3.10]: https://github.com/sul-dlss/SearchWorks/compare/v3.3.9...v3.3.10
