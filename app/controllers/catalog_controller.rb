@@ -1,7 +1,6 @@
 # -*- encoding : utf-8 -*-
-#
-class CatalogController < ApplicationController
 
+class CatalogController < ApplicationController
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
@@ -42,10 +41,10 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
-      :qt => 'search',
-      :rows => 20,
-      :"f.callnum_facet_hsim.facet.limit" => "-1",
-      :"f.stanford_work_facet_hsim.facet.limit" => "-1"
+      qt: 'search',
+      rows: 20,
+      "f.callnum_facet_hsim.facet.limit": "-1",
+      "f.stanford_work_facet_hsim.facet.limit": "-1"
     }
 
     # solr path which will be added to solr base url before the other solr params.
@@ -54,7 +53,6 @@ class CatalogController < ApplicationController
     # items to show per page, each number in the array represent another option to choose from.
     #config.per_page = [10,20,50,100]
     config.default_per_page = 20
-
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
@@ -106,48 +104,48 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
-    config.add_facet_field "db_az_subject", :label => "Database topic", collapse: false, show: false, limit: 20, sort: :index
+    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20
     config.add_facet_field 'stanford_work_facet_hsim',
                             label: 'Stanford student work',
                             partial: 'blacklight/hierarchy/facet_hierarchy',
                             sort: 'count', collapse: false, show: false
-    config.add_facet_field 'stanford_dept_sim', :label => 'Stanford school or department', collapse: false, show: false, limit: 20
-    config.add_facet_field "access_facet", :label => "Access", limit: 10
+    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
+    config.add_facet_field "access_facet", label: "Access", limit: 10
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
-    config.add_facet_field "collection_type", :label => "Collection type", :show => false
+    config.add_facet_field "collection_type", label: "Collection type", show: false
     if Settings.BOOKPLATES
       config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value
     end
-    config.add_facet_field "format_main_ssim", :label => "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
-    config.add_facet_field "format_physical_ssim", :label => "Media type", limit: 20
-    config.add_facet_field "pub_year_tisim", :label => "Date", :partial => "blacklight_range_limit/range_limit_panel", :range => {
-      :input_label_range_begin => "from year",
-      :input_label_range_end => "to year"
+    config.add_facet_field "format_main_ssim", label: "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20
+    config.add_facet_field "pub_year_tisim", label: "Date", partial: "blacklight_range_limit/range_limit_panel", range: {
+      input_label_range_begin: "from year",
+      input_label_range_end: "to year"
     }
-    config.add_facet_field "building_facet", :label => "Library", limit: 100, sort: :index
-    config.add_facet_field "language", :label => "Language", limit: 20
-    config.add_facet_field "author_person_facet", :label => "Author", limit: 20
+    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index
+    config.add_facet_field "language", label: "Language", limit: 20
+    config.add_facet_field "author_person_facet", label: "Author", limit: 20
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
                            partial: 'blacklight/hierarchy/facet_hierarchy',
                            sort: 'index'
     config.facet_display = {
-      :hierarchy => {
+      hierarchy: {
         'callnum_facet' => [['hsim'], '|'],
         'stanford_work_facet' => [['hsim'], '|']
       }
     }
-    config.add_facet_field "topic_facet", :label => "Topic", limit: 20
-    config.add_facet_field "genre_ssim", :label => "Genre", limit: 20
-    config.add_facet_field "course", :label => "Course", :show => false
-    config.add_facet_field "instructor", :label => "Instructor", :show => false
+    config.add_facet_field "topic_facet", label: "Topic", limit: 20
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 20
+    config.add_facet_field "course", label: "Course", show: false
+    config.add_facet_field "instructor", label: "Instructor", show: false
 
     # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
-    config.add_facet_field "geographic_facet", :label => "Region", limit: 20
-    config.add_facet_field "era_facet", :label => "Era", limit: 20
-    config.add_facet_field "author_other_facet", :label => "Organization (as author)", limit: 20
-    config.add_facet_field "format", :label => "Format", show: false
+    config.add_facet_field "geographic_facet", label: "Region", limit: 20
+    config.add_facet_field "era_facet", label: "Era", limit: 20
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20
+    config.add_facet_field "format", label: "Format", show: false
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
@@ -157,7 +155,6 @@ class CatalogController < ApplicationController
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
 
-
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
@@ -165,36 +162,36 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field "author_person_display", :label => "Author/Creator"
-    config.add_index_field "vern_author_person_display", :label => "Author/Creator"
-    config.add_index_field "author_corp_display", :label => "Corporate Author"
-    config.add_index_field "vern_author_corp_display", :label => "Corporate Author"
-    config.add_index_field "author_meeting_display", :label => "Meeting"
-    config.add_index_field "vern_author_meeting_display", :label => "Meeting"
-    config.add_index_field "pub_date", :label => "Date"
-    config.add_index_field "imprint_display", :label => "Imprint"
+    config.add_index_field "author_person_display", label: "Author/Creator"
+    config.add_index_field "vern_author_person_display", label: "Author/Creator"
+    config.add_index_field "author_corp_display", label: "Corporate Author"
+    config.add_index_field "vern_author_corp_display", label: "Corporate Author"
+    config.add_index_field "author_meeting_display", label: "Meeting"
+    config.add_index_field "vern_author_meeting_display", label: "Meeting"
+    config.add_index_field "pub_date", label: "Date"
+    config.add_index_field "imprint_display", label: "Imprint"
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field "title_full_display", :label => "Title"
-    config.add_show_field "vern_title_full_display", :label => "Title"
-    config.add_show_field "vern_title_uniform_display", :label => "Uniform Title"
-    config.add_show_field "title_variant_display", :label => "Alternate Title"
-    config.add_show_field "author_person_display", :label => "Author/Creator"
-    config.add_show_field "author_person_full_display", :label => "Author/Creator"
-    config.add_show_field "vern_author_person_full_display", :label => "Author/Creator"
-    config.add_show_field "author_corp_display", :label => "Corporate Author"
-    config.add_show_field "vern_author_corp_display", :label => "Corporate Author"
-    config.add_show_field "author_meeting_display", :label => "Meeting Author"
-    config.add_show_field "vern_author_meeting_display", :label => "Meeting Author"
-    config.add_show_field "medium", :label => "Medium"
-    config.add_show_field "summary_display", :label => "Description"
-    config.add_show_field "topic_display", :label => "Subject"
-    config.add_show_field "subject_other_display", :label => "Subject"
-    config.add_show_field "language", :label => "Language"
-    config.add_show_field "physical", :label => "Physical Description"
-    config.add_show_field "pub_display", :label => "Publication Info"
-    config.add_show_field "pub_date", :label => "Date"
+    config.add_show_field "title_full_display", label: "Title"
+    config.add_show_field "vern_title_full_display", label: "Title"
+    config.add_show_field "vern_title_uniform_display", label: "Uniform Title"
+    config.add_show_field "title_variant_display", label: "Alternate Title"
+    config.add_show_field "author_person_display", label: "Author/Creator"
+    config.add_show_field "author_person_full_display", label: "Author/Creator"
+    config.add_show_field "vern_author_person_full_display", label: "Author/Creator"
+    config.add_show_field "author_corp_display", label: "Corporate Author"
+    config.add_show_field "vern_author_corp_display", label: "Corporate Author"
+    config.add_show_field "author_meeting_display", label: "Meeting Author"
+    config.add_show_field "vern_author_meeting_display", label: "Meeting Author"
+    config.add_show_field "medium", label: "Medium"
+    config.add_show_field "summary_display", label: "Description"
+    config.add_show_field "topic_display", label: "Subject"
+    config.add_show_field "subject_other_display", label: "Subject"
+    config.add_show_field "language", label: "Language"
+    config.add_show_field "physical", label: "Physical Description"
+    config.add_show_field "pub_display", label: "Publication Info"
+    config.add_show_field "pub_date", label: "Date"
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -401,9 +398,9 @@ class CatalogController < ApplicationController
 
     # Configure facet fields for BL advanced search
     config.advanced_search = {
-      :query_parser => 'edismax',
-      :url_key => 'advanced',
-      :form_solr_parameters => {
+      query_parser: 'edismax',
+      url_key: 'advanced',
+      form_solr_parameters: {
         "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
          # return all facet values
         "f.access_facet.facet.limit" => -1,
@@ -489,6 +486,7 @@ class CatalogController < ApplicationController
 
   def render_document_with_availability_as_json(document, live = true)
     return {} unless document.is_a?(SolrDocument)
+
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),

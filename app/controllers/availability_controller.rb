@@ -3,6 +3,7 @@ class AvailabilityController < ApplicationController
   def index
     render json: LiveLookup.new(params[:ids]).to_json, layout: false
   end
+
   private
 
   def redirect_bots
@@ -10,6 +11,7 @@ class AvailabilityController < ApplicationController
       render status: :forbidden, plain: "No bots allowed"
     end
   end
+
   def redirect_no_ids
     render json: [] unless params[:ids].present?
   end

@@ -10,7 +10,7 @@ describe 'marc_fields/_linked_author.html.erb', type: :view do
   end
 
   context 'Creator' do
-    let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Dodaro, Gene L.', search: 'Dodaro, Gene L.', post_text: 'author. Author'}] }]) }
+    let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Dodaro, Gene L.', search: 'Dodaro, Gene L.', post_text: 'author. Author' }] }]) }
     let(:target) { :creator }
 
     it 'renders the label in a dt' do
@@ -35,7 +35,7 @@ describe 'marc_fields/_linked_author.html.erb', type: :view do
   end
 
   context 'Corporate Author' do
-    let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Ecuador. Procuraduría General del Estado, A Title', search: 'Ecuador. Procuraduría General del Estado,', post_text: 'author, issuing body. Art copyist'}] }]) }
+    let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Ecuador. Procuraduría General del Estado, A Title', search: 'Ecuador. Procuraduría General del Estado,', post_text: 'author, issuing body. Art copyist' }] }]) }
     let(:target) { :corporate_author }
 
     it 'renders the label in a dt' do

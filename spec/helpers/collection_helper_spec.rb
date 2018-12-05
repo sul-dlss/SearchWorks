@@ -3,6 +3,7 @@ require "spec_helper"
 describe CollectionHelper do
   describe "#link_to_collection_members" do
     let(:document) { SolrDocument.new(id: '1234') }
+
     it "should link to the given text" do
       expect(link_to_collection_members("LinkText", document)).to match /<a href.*>LinkText<\/a>/
     end
@@ -10,6 +11,7 @@ describe CollectionHelper do
       expect(link_to_collection_members("LinkText", document)).to match /<a href=\".*collection.*=1234\".*/
     end
   end
+
   describe "#collections_search_params" do
     it "should be the collection_type facet value of 'Digital Collection" do
       expect(collections_search_params).to have_key(:f)
@@ -17,21 +19,26 @@ describe CollectionHelper do
       expect(collections_search_params[:f][:collection_type]).to eq ["Digital Collection"]
     end
   end
+
   describe "#collection_members_path" do
     let(:document) { SolrDocument.new(id: '1234') }
+
     it "should link document id" do
       expect(collection_members_path(document)).to match /.*collection.*=1234.*/
     end
   end
+
   describe "#collection_members_enumeration" do
     let(:document) { SolrDocument.new }
     let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
     let(:no_collection_doc) { SolrDocument.new }
+
     before do
       allow(collection_members).to receive(:total).and_return("5")
       allow(document).to receive(:collection_members).and_return(collection_members)
       allow(no_collection_doc).to receive(:collection_members).and_return([])
     end
+
     it "should return the correct number of document including the #total" do
       expect(collection_members_enumeration(document)).to eq "5 items online"
     end

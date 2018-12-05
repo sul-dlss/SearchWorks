@@ -28,6 +28,7 @@ module EdsLinks
 
     def category
       return map[:category] if map.present? # matches a label exactly
+
       [/Access URL/i, /Availability/i].each do |blacklisted| # always exclude these labels
         return nil if label =~ blacklisted
       end
@@ -52,6 +53,7 @@ module EdsLinks
 
     def relabel
       return map[:label] if map[:label].present? && map[:label] != :as_is
+
       @original_label
     end
   end

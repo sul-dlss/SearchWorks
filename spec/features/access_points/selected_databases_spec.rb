@@ -4,6 +4,7 @@ feature "Selected Databases Access Point" do
   before do
     visit selected_databases_path
   end
+
   scenario "should have a custom masthead" do
     expect(page).to have_title("Databases in SearchWorks catalog")
     within("#masthead") do

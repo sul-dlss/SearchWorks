@@ -54,6 +54,7 @@ class LinkedRelatedWorks < MarcField
     # grab before text at top of the list
     all.dup.each do |subfield|
       break if LINK_CODES.include?(subfield.code)
+
       result[:before] << subfield if TEXT_CODES.include?(subfield.code)
       all.delete(subfield)
     end
@@ -61,6 +62,7 @@ class LinkedRelatedWorks < MarcField
     # grab after text from the back of the list
     all.reverse.dup.each do |subfield|
       break if LINK_CODES.include?(subfield.code)
+
       result[:after] << subfield if TEXT_CODES.include?(subfield.code)
       all.delete(subfield)
     end
@@ -85,6 +87,7 @@ class LinkedRelatedWorks < MarcField
       destinations.each do |to|
         subfields[from].each do |subfield|
           next if to == :search && TEXT_CODES.include?(subfield.code) # omit text subfields from searches
+
           result[to] ||= ''
           result[to] << subfield.value.to_s + ' '
         end

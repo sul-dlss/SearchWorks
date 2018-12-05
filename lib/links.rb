@@ -6,6 +6,7 @@ module SearchWorks
     def initialize(document)
       @document = document
     end
+
     def all
       []
     end
@@ -37,7 +38,7 @@ module SearchWorks
 
     class Link
       attr_accessor :html, :text, :href, :file_id, :druid, :type, :sort
-      def initialize(options={})
+      def initialize(options = {})
         @html = options[:html]
         @text = options[:text]
         @href = options[:href]

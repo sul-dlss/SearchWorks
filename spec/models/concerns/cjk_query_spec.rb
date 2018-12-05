@@ -8,20 +8,24 @@ describe CJKQuery do
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
+
   before do
     allow(search_builder).to receive(:blacklight_params).and_return(blacklight_params)
     search_builder.extend(CJKQuery)
   end
+
   describe "modify_params_for_cjk_advanced" do
-    let(:blacklight_params) { {'search' => q_str, 'search_title' => q_str,'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str} }
-    let(:solr_params) { {q: solr_q} }
+    let(:blacklight_params) { { 'search' => q_str, 'search_title' => q_str, 'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str } }
+    let(:solr_params) { { q: solr_q } }
     let(:local_params) { "mm=#{cjk_mm} qs=0" }
+
     before do
       allow(search_builder).to receive(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
       search_builder.modify_params_for_cjk_advanced(solr_params)
     end
+
     describe "unprocessed" do
-      let(:solr_q) {"_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
+      let(:solr_q) { "_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND
@@ -51,75 +55,77 @@ describe CJKQuery do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
       end
     end
+
     describe "pre-processed" do
       let(:solr_q) { "_query_:\"{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}\"" }
+
       it "should not try to append _cjk onto already processed solr params logic" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
-        expect(solr_params[:q]).to_not include "_cjk_cjk"
+        expect(solr_params[:q]).not_to include "_cjk_cjk"
       end
     end
   end
 
   describe "cjk_query_addl_params" do
     it "should leave unrelated solr params alone" do
-      blacklight_params.merge!(:q => '舊小說', :search_field => 'search_title')
-      my_solr_params = {'key1'=>'val1', 'key2'=>'val2'}
+      blacklight_params.merge!(q: '舊小說', search_field: 'search_title')
+      my_solr_params = { 'key1' => 'val1', 'key2' => 'val2' }
       solr_params = my_solr_params
       search_builder.modify_params_for_cjk(solr_params)
       expect(solr_params).to include(my_solr_params)
     end
     describe "mm and qs solr params" do
       it "if only 1 CJK char, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(:q => '飘')
+        blacklight_params.merge!(q: '飘')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to_not have_key("mm")
-        expect(solr_params).to_not have_key("qs")
+        expect(solr_params).not_to have_key("mm")
+        expect(solr_params).not_to have_key("qs")
       end
       it "if only 2 CJK chars, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(:q => '三國')
+        blacklight_params.merge!(q: '三國')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
-        expect(solr_params).to_not have_key("mm")
-        expect(solr_params).to_not have_key("qs")
+        expect(solr_params).not_to have_key("mm")
+        expect(solr_params).not_to have_key("qs")
       end
       it "should detect Han - Traditional and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '舊小說')
+        blacklight_params.merge!(q: '舊小說')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Han - Simplified and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '旧小说')
+        blacklight_params.merge!(q: '旧小说')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hiragana and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'まんが')
+        blacklight_params.merge!(q: 'まんが')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Katakana and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'マンガ')
+        blacklight_params.merge!(q: 'マンガ')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hangul and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => '한국경제')
+        blacklight_params.merge!(q: '한국경제')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect CJK mixed with other alphabets and add mm and qs to Solr params" do
-        blacklight_params.merge!(:q => 'abcけいちゅうabc')
+        blacklight_params.merge!(q: 'abcけいちゅうabc')
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         # mm is changed:  minimum adds in non-cjk tokens
@@ -222,22 +228,22 @@ describe CJKQuery do
       end
 
       it "advanced search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:description => q_str, :search_field => 'advanced')
-        q_solr_param = {:q=>"_query_:\"{!edismax pf=$pf_description qf=$qf_description pf2=$pf_description2 pf3=$pf_description3}+#{q_str}\""}
+        blacklight_params.merge!(description: q_str, search_field: 'advanced')
+        q_solr_param = { q: "_query_:\"{!edismax pf=$pf_description qf=$qf_description pf2=$pf_description2 pf3=$pf_description3}+#{q_str}\"" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
       it "author-title search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'author_title')
-        q_solr_param = {:q=>"{!qf=author_title_search pf=author_title_search^10 pf2=author_title_search^2 pf3=author_title_search^5}#{q_str}"}
+        blacklight_params.merge!(q: q_str, search_field: 'author_title')
+        q_solr_param = { q: "{!qf=author_title_search pf=author_title_search^10 pf2=author_title_search^2 pf3=author_title_search^5}#{q_str}" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
       it "call number search should NOT add CJK local params to q if CJK detected" do
-        blacklight_params.merge!(:q => q_str, :search_field => 'call_number')
-        q_solr_param = {:q=>"{!df=callnum_search'}\"#{q_str}\""}
+        blacklight_params.merge!(q: q_str, search_field: 'call_number')
+        q_solr_param = { q: "{!df=callnum_search'}\"#{q_str}\"" }
         solr_params = q_solr_param
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
@@ -307,6 +313,7 @@ describe CJKQuery do
       expect(search_builder.send(:cjk_unigrams_size, "abc 近世仮名遣い abc")).to eq 6
     end
   end
+
   describe "#cjk_mm_qs_params" do
     describe "Solr mm and ps parameters" do
       describe "should not send in a Solr mm param if only 1 or 2 CJK chars" do
@@ -341,20 +348,21 @@ describe CJKQuery do
       describe "only CJK chars in query" do
         let(:cjk_mm_val) { search_builder.send(:cjk_mm_val) }
         let(:cjk_qs_val) { search_builder.send(:cjk_qs_val) }
+
         it "3 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
-          expect(search_builder.send(:cjk_mm_qs_params, "マンガ")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "マンガ")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
         it "4 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
-          expect(search_builder.send(:cjk_mm_qs_params, "历史研究")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "历史研究")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
         it "5 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
-          expect(search_builder.send(:cjk_mm_qs_params, "妇女与婚姻")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "妇女与婚姻")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
         it "6 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
-          expect(search_builder.send(:cjk_mm_qs_params, "한국주택은행")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "한국주택은행")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
         it "7 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
-          expect(search_builder.send(:cjk_mm_qs_params, "中国地方志集成")).to eq({'mm'=>cjk_mm_val, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "中国地方志集成")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
       end
 
@@ -363,21 +371,22 @@ describe CJKQuery do
         let(:mm_plus_2) { '5<86%' }
         let(:cjk_qs_val) { search_builder.send(:cjk_qs_val) }
         # for each non-cjk token, add 1 to the lower limit of mm
+
         it "first CJK" do
-          expect(search_builder.send(:cjk_mm_qs_params, "マンガabc")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "マンガ abc")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, " マンガ abc")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "マンガabc")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "マンガ abc")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, " マンガ abc")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
         end
         it "last CJK" do
-          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガ")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ ")).to eq({'mm'=>mm_plus_1, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
         end
         it "(latin)(CJK)(latin)" do
-          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガabc")).to eq({'mm'=>mm_plus_2, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガabc")).to eq({'mm'=>mm_plus_2, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガ abc")).to eq({'mm'=>mm_plus_2, 'qs'=>cjk_qs_val})
-          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ abc")).to eq({'mm'=>mm_plus_2, 'qs'=>cjk_qs_val})
+          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガabc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガabc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "abcマンガ abc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })
+          expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ abc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })
         end
       end
     end

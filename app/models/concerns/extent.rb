@@ -18,6 +18,7 @@ module Extent
 
   def physical_string
     return nil unless self[:physical].present?
+
     Array[self[:physical]].flatten.join(', ')
   end
 

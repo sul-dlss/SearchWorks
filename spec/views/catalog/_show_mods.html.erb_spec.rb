@@ -3,6 +3,7 @@ require 'spec_helper'
 describe 'catalog/_show_mods.html.erb' do
   include ModsFixtures
   let(:document) { SolrDocument.new(modsxml: mods_001) }
+
   before do
     allow(view).to receive(:add_purl_embed_header).and_return('')
     assign(:document, document)
@@ -11,6 +12,7 @@ describe 'catalog/_show_mods.html.erb' do
 
   context 'when a document has a druid' do
     let(:document) { SolrDocument.new(druid: 'abc123', modsxml: mods_001) }
+
     it 'includes the purl-embed-viewer element' do
       expect(rendered).to have_css('.purl-embed-viewer')
     end
@@ -18,6 +20,7 @@ describe 'catalog/_show_mods.html.erb' do
       let(:document) do
         SolrDocument.new(druid: 'abc123', modsxml: mods_001, iiif_manifest_url_ssim: ['example.com'])
       end
+
       it 'includes IIIF Drag n Drop link' do
         expect(rendered).to have_css 'a.iiif-dnd[href="https://library.stanford.edu/projects/international-image-interoperability-framework/viewers?manifest=example.com"]'
       end

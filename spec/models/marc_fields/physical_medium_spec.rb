@@ -4,6 +4,7 @@ describe PhysicalMedium do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marcxml: physical_medium_fixture) }
+
   subject(:instance) { described_class.new(document) }
 
   it '#label' do

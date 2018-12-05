@@ -5,6 +5,7 @@ feature "Digital Collections Search" do
     visit root_path
     click_link "Digital collections"
   end
+
   scenario "should have the filter applied" do
     within(".breadcrumb") do
       expect(page).to have_css('.filterName', text: "Collection type")

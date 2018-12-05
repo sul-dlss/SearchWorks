@@ -10,6 +10,7 @@ describe Holdings::Status::NoncircPage do
       end
     end
   end
+
   describe "noncirc_page current locations" do
     it "should identify any items in noncirc_page current locations" do
       Constants::FORCE_NONCIRC_CURRENT_LOCS.each do |location|
@@ -17,6 +18,7 @@ describe Holdings::Status::NoncircPage do
       end
     end
   end
+
   describe "noncirc_page home locations" do
     it "should identify any items in noncirc_page current locations" do
       Constants::NONCIRC_PAGE_LOCS.each do |location|

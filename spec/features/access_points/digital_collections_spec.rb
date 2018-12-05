@@ -5,6 +5,7 @@ describe 'Digital Collections Access Point' do
     visit root_path
     click_link "Digital collections"
   end
+
   it 'should include the digital collections masthead' do
     within(".digital-collections-masthead") do
       expect(page).to have_css('h1', text: 'Digital collections')

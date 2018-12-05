@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 require "spec_helper"
 
 describe "Special Quotes", type: :feature do
@@ -9,7 +10,7 @@ describe "Special Quotes", type: :feature do
 
     within('.breadcrumb') do
       expect(page).to have_content '"stuff"'
-      expect(page).to_not have_content '『stuff』'
+      expect(page).not_to have_content '『stuff』'
     end
   end
 end

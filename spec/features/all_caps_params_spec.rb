@@ -7,7 +7,7 @@ describe "Search parameters in all caps", type: :feature do
     click_button 'search'
 
     within('.breadcrumb') do
-      expect(page).to_not have_content("HELLO WORLD")
+      expect(page).not_to have_content("HELLO WORLD")
       expect(page).to have_content("hello world")
     end
 

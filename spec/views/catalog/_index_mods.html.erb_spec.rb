@@ -3,6 +3,7 @@ require "spec_helper"
 describe "catalog/_index_mods.html.erb" do
   include ModsFixtures
   let(:presenter) { OpenStruct.new(heading: "Object Title") }
+
   before do
     allow(view).to receive(:document).and_return(
       SolrDocument.new(
@@ -13,14 +14,15 @@ describe "catalog/_index_mods.html.erb" do
         imprint_display: ["Imprint Statement"],
         author_struct: [
           { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
-          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }
         ]
       )
     )
     expect(view).to receive(:show_presenter).and_return(presenter)
-    allow(view).to receive(:blacklight_config).and_return( Blacklight::Configuration.new )
+    allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
     render
   end
+
   it "should include the imprint" do
     expect(rendered).to have_css('li', text: "Imprint Statement")
   end

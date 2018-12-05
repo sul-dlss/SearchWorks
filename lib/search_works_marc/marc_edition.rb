@@ -14,9 +14,11 @@ class MarcEdition < SearchWorksMarc
       end.compact.join(' ')
     end
   end
+
   def label_by_indicator key
     "Edition"
   end
+
   def grouping
     @fields.group_by do |field|
       label_by_indicator(nil)

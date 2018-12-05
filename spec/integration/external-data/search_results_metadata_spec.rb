@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Search results metadata", :"data-integration" => true do
+describe "Search results metadata", "data-integration": true do
   describe "Uniform title" do
     it "should display for MARC records" do
       visit root_path
@@ -13,6 +13,7 @@ describe "Search results metadata", :"data-integration" => true do
       end
     end
   end
+
   describe "Author/Contributor" do
     it "should display for MARC records" do
       visit root_path
@@ -34,6 +35,7 @@ describe "Search results metadata", :"data-integration" => true do
       end
     end
   end
+
   describe "Imprint" do
     it "should display for MARC records" do
       visit root_path
@@ -54,6 +56,7 @@ describe "Search results metadata", :"data-integration" => true do
       end
     end
   end
+
   describe "Physical Description" do
     it "should display for MARC records" do
       visit root_path
@@ -66,6 +69,7 @@ describe "Search results metadata", :"data-integration" => true do
       end
     end
   end
+
   describe "Collection" do
     it "should display for MARC records" do
       visit root_path

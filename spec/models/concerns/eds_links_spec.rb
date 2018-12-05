@@ -99,6 +99,7 @@ RSpec.describe EdsLinks do
         { 'label' => 'ACCESS URL',              'url' => 'http://example.com/6', 'type' => 'customlink-fulltext' } # blacklisted
       ]
     end
+
     context 'categories 1 and 2' do
       let(:document) do
         SolrDocument.new('eds_fulltext_links' => all_link_categories)

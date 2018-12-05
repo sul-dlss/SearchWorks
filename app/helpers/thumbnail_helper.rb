@@ -1,7 +1,5 @@
 module ThumbnailHelper
-
   def render_cover_image(document, options = {})
-
     book_ids = get_book_ids(document)
 
     locals = {
@@ -17,7 +15,5 @@ module ThumbnailHelper
     rescue ActionView::MissingTemplate
       nil
     end
-
   end
-
 end

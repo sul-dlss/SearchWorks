@@ -4,6 +4,7 @@
 module SolrBookplates
   def bookplates
     return [] unless bookplates_present?
+
     @bookplates ||= bookplates_fields.map do |bookplate_field|
       Bookplate.new(bookplate_field)
     end

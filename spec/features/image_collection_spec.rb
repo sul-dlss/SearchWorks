@@ -4,6 +4,7 @@ feature "Image Collection", js: true do
   before do
     stub_article_service(docs: [])
   end
+
   scenario "Search results" do
     visit root_path
 
@@ -31,7 +32,6 @@ feature "Image Collection", js: true do
         expect(page).to have_css("a[href='/view/mf774fs2413']")
       end
     end
-
   end
 
   scenario "Search results image filmstrip" do
@@ -64,7 +64,5 @@ feature "Image Collection", js: true do
       # Not really sure why this has to be visible: false in the test under chromedriver.  It is visible in the page.
       expect(page).to have_css("div.preview-filmstrip-container-29", visible: false)
     end
-
   end
-
 end

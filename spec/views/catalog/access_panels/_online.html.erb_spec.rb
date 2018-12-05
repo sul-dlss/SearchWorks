@@ -6,11 +6,13 @@ describe "catalog/access_panels/_online.html.erb" do
     before do
       assign(:document, SolrDocument.new)
     end
+
     it "should render the panel hidden" do
       render
-      expect(rendered).to have_css("div.panel-online", visible:false)
+      expect(rendered).to have_css("div.panel-online", visible: false)
     end
   end
+
   describe "ma6rc record" do
     it "should render the panel with a link" do
       assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }]))
@@ -38,7 +40,7 @@ describe "catalog/access_panels/_online.html.erb" do
         assign(:document, SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856))
         render
         expect(rendered).to     have_css('.panel-online')
-        expect(rendered).to_not have_link('Find full text')
+        expect(rendered).not_to have_link('Find full text')
         expect(rendered).to     have_css('[data-behavior="sfx-panel"]')
         expect(rendered).to     have_link('See the full find it @ Stanford menu')
       end
@@ -48,6 +50,7 @@ describe "catalog/access_panels/_online.html.erb" do
       before do
         assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }], format_main_ssim: ["Database"]))
       end
+
       it "should render a special panel heading" do
         render
         expect(rendered).to have_css(".panel-heading", text: "Search this database")

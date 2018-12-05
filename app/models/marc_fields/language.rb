@@ -9,6 +9,7 @@ class Language < MarcField
 
   def label
     return I18n.t('searchworks.marc_fields.notation.label') if notation?
+
     super
   end
 

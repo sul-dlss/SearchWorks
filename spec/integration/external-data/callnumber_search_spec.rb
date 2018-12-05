@@ -1,12 +1,13 @@
 require "spec_helper"
 
-describe "Callnumber Search", feature: true, :"data-integration" => true do
+describe "Callnumber Search", feature: true, "data-integration": true do
   before do
     visit root_path
     fill_in 'q', with: 'JQ1879 .A15 D385'
     select 'Call number', from: 'search_field'
     click_button 'search'
   end
+
   it "should quote and downcase the callnumber" do
     expect(find('#q').value).to eq '"jq1879 .a15 d385"'
     within('.breadcrumb') do

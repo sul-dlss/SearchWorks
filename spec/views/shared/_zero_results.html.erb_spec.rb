@@ -8,10 +8,11 @@ describe "shared/_zero_results.html.erb" do
       config.add_facet_field 'fieldB', label: 'Another field'
     end
   }
+
   before do
     assign(:search_modifier, SearchQueryModifier.new({
       q: "A query",
-      f: {'fieldA' => ["ValueA"], 'fieldB' => ['ValueB']},
+      f: { 'fieldA' => ["ValueA"], 'fieldB' => ['ValueB'] },
       search_field: 'search_title'
     }, config))
     allow(view).to receive(:controller_name).and_return('catalog')

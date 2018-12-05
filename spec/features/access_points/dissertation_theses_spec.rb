@@ -5,6 +5,7 @@ describe 'Dissertation Theses Access Point' do
     visit root_path
     click_link 'Theses & dissertations'
   end
+
   it 'should have a custom page title' do
     expect(page).to have_title('Dissertation theses in SearchWorks catalog')
   end

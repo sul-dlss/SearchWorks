@@ -2,8 +2,9 @@ require "spec_helper"
 
 feature "Collection Access Point" do
   before do
-    visit search_catalog_path({f: {collection: ["29"] } } )
+    visit search_catalog_path({ f: { collection: ["29"] } })
   end
+
   scenario "Access point masthead should be visible with 1 course reserve document" do
     expect(page).to have_title("Image Collection1 Collection in SearchWorks catalog")
     within("#masthead") do
@@ -15,7 +16,7 @@ feature "Collection Access Point" do
       expect(page).to have_css("dd a", text: "Online Archive of California")
     end
     within("#content") do
-      expect(page).to have_css("div.document", count:1)
+      expect(page).to have_css("div.document", count: 1)
     end
   end
 end

@@ -14,7 +14,7 @@ describe "catalog/_index_online_section.html.erb" do
               { html: 'a', fulltext: true },
               { html: 'b', fulltext: true },
               { html: 'c', fulltext: true },
-              { html: 'd', fulltext: true },
+              { html: 'd', fulltext: true }
             ]
           )
         )
@@ -27,6 +27,7 @@ describe "catalog/_index_online_section.html.erb" do
         expect(rendered).to have_css('dd li a', text: 'Google Books (Full view)')
       end
     end
+
     context 'managed purl record' do
       before do
         expect(view).to receive_messages(
@@ -47,5 +48,4 @@ describe "catalog/_index_online_section.html.erb" do
       end
     end
   end
-
 end

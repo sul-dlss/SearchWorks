@@ -3,6 +3,7 @@ require 'spec_helper'
 describe IndexDocumentPresenter do
   let(:document) { SolrDocument.new }
   let(:view_context) { double('ViewContext', blacklight_config: Blacklight::Configuration.new) }
+
   subject(:presenter) { described_class.new(document, view_context) }
 
   describe '#label' do

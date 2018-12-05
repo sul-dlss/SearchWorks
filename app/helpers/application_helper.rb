@@ -3,11 +3,12 @@ module ApplicationHelper
   # form based on the current search context.
   def searchworks_search_action_path(opts = {})
     return articles_path(opts) if article_search?
+
     search_catalog_path(opts)
   end
 
   def render_search_bar_advanced_widget
-    render partial:'catalog/search_bar_advanced_widget'
+    render partial: 'catalog/search_bar_advanced_widget'
   end
 
   def render_search_bar_selections_widget
@@ -30,28 +31,30 @@ module ApplicationHelper
         items << fields
       end
     end
-    return {:label=>label,:fields=>items,:vernacular=>get_indexed_vernacular(doc,field_string)} unless items.empty?
+    return { label: label, fields: items, vernacular: get_indexed_vernacular(doc, field_string) } unless items.empty?
   end
+
   # Generate a dt/dd pair with a link with a label given a field in the SolrDocument
-  def link_to_data_with_label(doc,label,field_string,url)
+  def link_to_data_with_label(doc, label, field_string, url)
     items = []
     vern = []
-    fields = get_data_with_label(doc,label,field_string)
+    fields = get_data_with_label(doc, label, field_string)
     unless fields.nil?
       unless fields[:fields].nil?
         fields[:fields].each do |field|
-          items << link_to(field,url.merge!(:q => "\"#{field}\""))
+          items << link_to(field, url.merge!(q: "\"#{field}\""))
         end
       end
       unless fields[:vernacular].nil?
         fields[:vernacular].each do |field|
-          vern << link_to(field,url.merge!(:q => "\"#{field}\""))
+          vern << link_to(field, url.merge!(q: "\"#{field}\""))
         end
       end
     end
-    return {:label=>label,:fields=>items,:vernacular=>vern} unless (items.empty? and vern.empty?)
+    return { label: label, fields: items, vernacular: vern } unless (items.empty? and vern.empty?)
   end
-  def get_indexed_vernacular(doc,field)
+
+  def get_indexed_vernacular(doc, field)
     fields = []
     if doc["vern_#{field}"]
       vern_fields = doc["vern_#{field}"]
@@ -65,21 +68,25 @@ module ApplicationHelper
     end
     return fields unless fields.empty?
   end
+
   def active_class_for_current_page(page)
     if current_page?(page)
       "active"
     end
   end
+
   def disabled_class_for_current_page(page)
     if current_page?(page)
       "disabled"
     end
   end
+
   def disabled_class_for_no_selections(count)
     if count == 0
       "disabled"
     end
   end
+
   def from_advanced_search?
     params[:search_field] == 'advanced'
   end

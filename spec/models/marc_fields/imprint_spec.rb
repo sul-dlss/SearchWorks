@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Imprint do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marcxml: edition_imprint_fixture) }
+
   subject { described_class.new(document) }
 
   it 'returns MARC 260' do
@@ -16,7 +17,7 @@ describe Imprint do
 
   it 'does not include subfields that should not be displayed' do
     expect(subject.values.length).to eq 1
-    expect(subject.values.first).to_not match(/SubZ/)
+    expect(subject.values.first).not_to match(/SubZ/)
   end
 
   it 'is labeled Imprint' do

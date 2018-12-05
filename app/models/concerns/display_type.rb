@@ -4,6 +4,7 @@
 module DisplayType
   def display_type
     return nil if eds?
+
     @display_type ||= [marc_or_mods, collection_suffix].compact.join('_')
   end
 
@@ -11,11 +12,13 @@ module DisplayType
 
   def marc_or_mods
     return 'mods' if mods?
+
     'marc'
   end
 
   def collection_suffix
     return unless is_a_collection?
+
     'collection'
   end
 end

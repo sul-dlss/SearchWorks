@@ -35,6 +35,7 @@ feature "Zero results" do
 
   context 'it does not replace query string in a way that will execute js', js: true do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
+
     scenario do
       expect do
         accept_alert do

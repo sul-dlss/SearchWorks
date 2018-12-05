@@ -11,6 +11,7 @@ describe 'catalog/_show_marc.html.erb' do
 
   context 'when a document has a managed purl' do
     let(:document) { SolrDocument.new(id: '123', marcxml: managed_purl_fixture, marc_links_struct: [{ text: 'Some Part Label', managed_purl: true }, { managed_purl: true }]) }
+
     it 'includes the managed purl panel and upper metadata elements' do
       expect(rendered).to have_css('.managed-purl-panel')
       expect(rendered).to have_css('.upper-record-metadata')

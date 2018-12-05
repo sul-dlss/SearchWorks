@@ -1,9 +1,13 @@
+inherit_from: .rubocop_todo.yml
+require: rubocop-rspec
+
 AllCops:
   Exclude:
     - 'Gemfile'
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
+  TargetRubyVersion: 2.5
 
 Rails:
   Enabled: true

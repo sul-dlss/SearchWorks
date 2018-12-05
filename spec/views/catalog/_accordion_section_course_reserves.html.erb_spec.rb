@@ -1,9 +1,7 @@
 require "spec_helper"
 
 describe "catalog/_accordion_section_course_reserves.html.erb" do
-
   describe "Accordion section - course reserves" do
-
     before do
       assign(:document,
         SolrDocument.new(
@@ -26,12 +24,10 @@ describe "catalog/_accordion_section_course_reserves.html.erb" do
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: "Managerial Accounting: Base")
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: "Managerial Accounting: Accelerated")
 
-
       expect(rendered).to have_css('.accordion-section.course-reserves .details dt', text: "Instructor(s)")
 
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd', text: "Reichelstein, Stefan J")
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd', text: "Marinovic Vial, Ivan")
     end
   end
-
 end

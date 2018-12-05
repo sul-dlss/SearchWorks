@@ -7,7 +7,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
   describe 'Organization & arrangement' do
     context 'when present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture) )
+        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture))
         render
       end
 
@@ -19,20 +19,21 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
 
     context 'when not present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: finding_aid_856) )
+        assign(:document, SolrDocument.new(marcxml: finding_aid_856))
         render
       end
 
       it 'is not renedered' do
-        expect(rendered).to_not have_css('dt', text: 'Organization & arrangement')
+        expect(rendered).not_to have_css('dt', text: 'Organization & arrangement')
       end
     end
   end
 
   describe "finding aids" do
     before do
-      assign(:document, SolrDocument.new(marcxml: finding_aid_856, marc_links_struct: [{ finding_aid: true, html: '<a href="...">FINDING AID: Link text</a>' }]) )
+      assign(:document, SolrDocument.new(marcxml: finding_aid_856, marc_links_struct: [{ finding_aid: true, html: '<a href="...">FINDING AID: Link text</a>' }]))
     end
+
     it "should be displayed when present" do
       render
       expect(rendered).to have_css("dt", text: "Finding aid")
@@ -40,6 +41,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
       expect(rendered).to have_css("dd a", text: "Link text")
     end
   end
+
   it "should be blank if the document has not fields" do
     assign(:document, SolrDocument.new(marcxml: no_fields_fixture))
     render
@@ -50,12 +52,13 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
       assign(:document, SolrDocument.new(marcxml: contributed_works_fixture))
       render
     end
+
     it 'should include the included works section' do
       expect(rendered).to have_css('dt', text: 'Included Work')
       expect(rendered).to have_css('dd a', count: 2)
       expect(rendered).to have_css('dd a', text: '710 with t ind2 Title! sub n after t')
-      expect(rendered).to_not have_css('dt', text: 'Related Work')
-      expect(rendered).to_not have_css('dt', text: 'Contributor')
+      expect(rendered).not_to have_css('dt', text: 'Related Work')
+      expect(rendered).not_to have_css('dt', text: 'Contributor')
     end
   end
 end

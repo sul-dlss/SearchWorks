@@ -4,6 +4,7 @@
 module MastheadHelper
   def render_masthead_partial
     return '' unless page_location.access_point?
+
     begin
       render "catalog/mastheads/#{page_location.access_point}"
     rescue ActionView::MissingTemplate
@@ -23,6 +24,7 @@ module MastheadHelper
 
   def bookplate_from_document_list(response = @response)
     return unless params[:f] && params[:f][:fund_facet].present? && response.docs.present?
+
     SolrDocument.new(response.docs.first).bookplates.find do |bookplate|
       bookplate.linking_value == params[:f][:fund_facet].first
     end
@@ -30,6 +32,7 @@ module MastheadHelper
 
   def bookplate_breadcrumb_value(druid, response = @response)
     return druid unless response.docs.present?
+
     bookplate_from_document_list.try(:text) || druid
   end
 end

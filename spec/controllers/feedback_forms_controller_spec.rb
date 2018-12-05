@@ -42,21 +42,22 @@ describe FeedbackFormsController do
         expect(flash[:success]).to eq "<strong>Thank you!</strong> Your feedback has been sent."
       end
     end
+
     describe "validate" do
       it "should return an error if no message is sent" do
-        post :create, params: { :url => "http://test.host/", :message => "", :email_address => "" }
+        post :create, params: { url: "http://test.host/", message: "", email_address: "" }
         expect(flash[:error]).to eq "A message is required"
       end
       it "should block potential spam with a href in the message" do
-        post :create, params: { :message => "I like to spam by sending you a <a href='http://www.somespam.com'>Link</a>.  lolzzzz", :url => "http://test.host/", :email_address => "" }
+        post :create, params: { message: "I like to spam by sending you a <a href='http://www.somespam.com'>Link</a>.  lolzzzz", url: "http://test.host/", email_address: "" }
         expect(flash[:error]).to eq "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
       end
       it "should block potential spam with a url= in the message" do
-        post :create, params: { :message => "I like to spam by sending you a <a url='http://www.somespam.com'>Link</a>.  lolzzzz", :url => "http://test.host/", :email_address => "" }
+        post :create, params: { message: "I like to spam by sending you a <a url='http://www.somespam.com'>Link</a>.  lolzzzz", url: "http://test.host/", email_address: "" }
         expect(flash[:error]).to eq "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
       end
       it "should block potential spam with a http:// in the message" do
-        post :create, params: { :message => "I like to spam by sending you a http://www.somespam.com.  lolzzzz", :url => "http://test.host/", :email_address => "" }
+        post :create, params: { message: "I like to spam by sending you a http://www.somespam.com.  lolzzzz", url: "http://test.host/", email_address: "" }
         expect(flash[:error]).to eq "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
       end
       it 'should block potential spam with a http:// in the user_agent field' do

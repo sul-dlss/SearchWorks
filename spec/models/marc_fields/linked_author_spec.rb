@@ -4,7 +4,8 @@ describe LinkedAuthor, type: :model do # rubocop: disable Metrics/BlockLength
   include MarcMetadataFixtures
 
   subject(:instance) { described_class.new(document, target) }
-  let(:document) { SolrDocument.new(author_struct: [{ target => [value]}])}
+
+  let(:document) { SolrDocument.new(author_struct: [{ target => [value] }]) }
   let(:target) { :corporate_author }
   let(:value) { double }
 

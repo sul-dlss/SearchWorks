@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "catalog/mastheads/_callnumber_browse.html.erb" do
-  let(:original_doc) { 
+  let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',
       item_display: [
@@ -11,10 +11,12 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
     )
   }
   let(:presenter) { OpenStruct.new(heading: "Title") }
+
   before do
     assign(:original_doc, original_doc)
     expect(view).to receive(:show_presenter).with(original_doc).and_return(presenter)
   end
+
   it "should link to the document" do
     render
     expect(rendered).to have_css('a', text: 'Title')
@@ -26,10 +28,12 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
       expect(rendered).to have_css('p', text: /Starting at call number:.*callnumber123/m)
     end
   end
+
   describe "with barcode" do
     before do
       allow(view).to receive(:params).and_return(barcode: '321')
     end
+
     it "should use the callnumber based on the provided barcode in the heading" do
       render
       expect(rendered).to have_css('h1', text: "Browse related items")

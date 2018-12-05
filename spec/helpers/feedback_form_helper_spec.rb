@@ -2,23 +2,29 @@ require "spec_helper"
 
 describe FeedbackFormHelper do
   before { stub_current_user(context: helper) }
+
   describe '#render_feedback_form' do
     context 'connection type' do
-      it { expect(helper.render_feedback_form('connection')).to include 'Name of resource'}
+      it { expect(helper.render_feedback_form('connection')).to include 'Name of resource' }
     end
+
     context 'anything else' do
       before do
         expect(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
       end
-      it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource'}
+
+      it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource' }
     end
   end
+
   describe "show_feedback_form?" do
     let(:form_controller) { FeedbackFormsController.new }
+
     before do
       form_controller.extend(FeedbackFormHelper)
       allow(form_controller).to receive(:controller).and_return(form_controller)
     end
+
     it "should return false when being viewed under the FeedbackFormsController" do
       expect(form_controller.show_feedback_form?).to be_falsey
     end
@@ -26,6 +32,7 @@ describe FeedbackFormHelper do
       expect(helper.show_feedback_form?).to be_truthy
     end
   end
+
   describe 'show_quick_report?' do
     it 'should be false unless it meets certain criteria' do
       expect(helper.show_quick_report?).to be_falsey
@@ -42,6 +49,7 @@ describe FeedbackFormHelper do
       expect(helper.show_quick_report?).to be_truthy
     end
   end
+
   describe 'refered_from_catalog_show?' do
     it 'should be true if referer is from view show' do
       expect(controller.request).to receive(:referer).at_least(:once).and_return('http://127.0.0.1:3000/view/12')

@@ -2,9 +2,10 @@ require 'spec_helper'
 
 describe SearchBuilder do
   subject(:search_builder) { described_class.new(scope).with(blacklight_params) }
+
   let(:blacklight_params) { {} }
   let(:solr_params) { {} }
-  let(:scope) { double(blacklight_config: CatalogController.blacklight_config)}
+  let(:scope) { double(blacklight_config: CatalogController.blacklight_config) }
 
   before do
     # silly hack to avoid refactoring these tests
@@ -15,6 +16,7 @@ describe SearchBuilder do
     before do
       allow(search_builder).to receive(:page_location).and_return(instance_double(SearchWorks::PageLocation, access_point: double(databases?: true)))
     end
+
     it "should handle 0-9 filters properly" do
       blacklight_params[:prefix] = "0-9"
       search_builder.database_prefix_search(solr_params)

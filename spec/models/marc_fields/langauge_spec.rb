@@ -4,6 +4,7 @@ describe Language do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marcxml: marc, format_main_ssim: formats) }
+
   subject(:language) { described_class.new(document) }
 
   describe 'label' do

@@ -1,10 +1,11 @@
 require "spec_helper"
 
-describe "Callnumber facet", feature: true, js: true, :"data-integration" => true do
+describe "Callnumber facet", feature: true, js: true, "data-integration": true do
   before do
     visit root_path
     click_link "At the Library"
   end
+
   it 'should collapse the call numbers' do
     within("#facets") do
       within(".facet_limit.blacklight-callnum_facet_hsim") do

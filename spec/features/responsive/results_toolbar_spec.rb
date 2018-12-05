@@ -9,7 +9,7 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Sort by relevance", visible: true)
@@ -18,6 +18,7 @@ describe "Responsive results toolbar", js: true, feature: true do
       end
     end
   end
+
   describe " - tablet view (768px - 992px) - ", responsive: true, page_width: 800 do
     it "should display correct tools" do
       visit root_path
@@ -26,14 +27,15 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
-        expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
+        expect(page).not_to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
       end
     end
   end
+
   describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
     it "should display correct tools" do
       visit root_path
@@ -42,8 +44,8 @@ describe "Responsive results toolbar", js: true, feature: true do
 
       within "#sortAndPerPage" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: false)
-        expect(page).to_not have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
-        expect(page).to_not have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
+        expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
+        expect(page).not_to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
         expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)

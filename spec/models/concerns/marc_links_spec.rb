@@ -3,7 +3,7 @@ require "spec_helper"
 describe MarcLinks do
   include Marc856Fixtures
   it "should return an empty array for non marc records" do
-    expect( SolrDocument.new.marc_links.all).to eq []
+    expect(SolrDocument.new.marc_links.all).to eq []
   end
 
   describe 'with a SolrDocument with structured data extracted from the marc' do
@@ -12,7 +12,7 @@ describe MarcLinks do
         { text: 'fulltext', fulltext: true },
         { text: 'stanford only',  stanford_only: true },
         { html: 'finding aid', finding_aid: true },
-        { text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' },
+        { text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' }
       ])
     end
 

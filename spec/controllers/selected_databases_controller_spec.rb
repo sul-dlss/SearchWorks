@@ -8,10 +8,11 @@ describe SelectedDatabasesController do
       expect(assigns(:selected_databases)).to be_a SelectedDatabases
     end
   end
+
   describe "routes" do
     describe "/selected_databases" do
       it "should route to the index action" do
-        expect({get: "/selected_databases"}).to route_to(controller: 'selected_databases', action: 'index')
+        expect({ get: "/selected_databases" }).to route_to(controller: 'selected_databases', action: 'index')
       end
     end
   end

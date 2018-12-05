@@ -5,6 +5,7 @@ describe BrowseHelper do
     let(:document) { SolrDocument.new(id: 'abc123', preferred_barcode: '123') }
     let(:preferred_callnumber) { Holdings::Callnumber.new('123 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- preferred-callnumber') }
     let(:callnumber) { Holdings::Callnumber.new('321 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber') }
+
     it "should link to the callnumber" do
       expect(link_to_callnumber_browse(document, callnumber)).to have_css('button', text: 'callnumber')
     end

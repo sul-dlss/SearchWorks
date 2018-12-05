@@ -16,6 +16,7 @@ module LocationFacet
 
   def add_location_facet
     return unless building_facet_includes_library_with_sublocation?
+
     blacklight_config.facet_fields['location_facet'].tap do |facet|
       facet.show = true
       facet.if = true

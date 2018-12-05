@@ -5,6 +5,7 @@ class ShowDocumentPresenter < Blacklight::ShowPresenter
   def heading
     original = super
     return SolrDocument::UPDATED_EDS_RESTRICTED_TITLE if original =~ SolrDocument::EDS_RESTRICTED_PATTERN
+
     original
   end
 end

@@ -66,6 +66,7 @@ module StubArticleService
       )
     when :single
       raise "Single document response requsted but #{docs.length} provided." if docs.many?
+
       allow_any_instance_of(Eds::Repository).to receive(:find).and_return(
         StubArticleResponse.new([docs.first])
       )

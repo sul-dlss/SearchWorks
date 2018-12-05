@@ -73,6 +73,7 @@ class LiveLookup
 
     def due_date
       return unless valid_due_date?
+
       due_date_value.gsub(',23:59', '')
     end
 
@@ -82,6 +83,7 @@ class LiveLookup
 
     def current_location
       return unless valid_current_location?
+
       Holdings::Location.new(current_location_code).name
     end
 
@@ -103,6 +105,7 @@ class LiveLookup
       return false if current_location_code.blank? ||
                       current_location_code == 'CHECKEDOUT' ||
                       current_location_same_as_home_location?
+
       true
     end
 

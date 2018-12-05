@@ -9,7 +9,7 @@ task(:default).clear
 task default: [:ci]
 
 desc "Execute the test build that runs on travis"
-task :ci => [:environment] do
+task ci: [:environment] do
   if Rails.env.test?
     require 'solr_wrapper'
 
@@ -26,7 +26,7 @@ task :ci => [:environment] do
   end
 end
 desc "Execute the test build that runs on jenkins"
-task :jenkins => [:environment] do
+task jenkins: [:environment] do
   if Rails.env.test?
     Rake::Task["searchworks:spec:data-integration"].invoke
   else

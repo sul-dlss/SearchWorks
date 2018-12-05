@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 ##
 # A class to parse MARC 752 Hierarchical Place Name for display
 # https://www.loc.gov/marc/bibliographic/bd752.html

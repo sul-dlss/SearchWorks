@@ -5,9 +5,11 @@ describe "catalog/record/_mods_upper_metadata_section.html.erb" do
 
   describe "Upper metadata available" do
     let(:document) { SolrDocument.new(modsxml: mods_everything) }
+
     before do
       assign(:document, document)
     end
+
     it "should display correct sections" do
       render
       expect(rendered).to have_css("dt", count: 3)
@@ -17,13 +19,15 @@ describe "catalog/record/_mods_upper_metadata_section.html.erb" do
 
   describe "Metadata sections none available" do
     let(:document) { SolrDocument.new(modsxml: mods_only_title) }
+
     before do
       assign(:document, document)
     end
+
     it "should display correct sections" do
       render
-      expect(rendered).to_not have_css("dt")
-      expect(rendered).to_not have_css("dd")
+      expect(rendered).not_to have_css("dt")
+      expect(rendered).not_to have_css("dd")
     end
   end
 end

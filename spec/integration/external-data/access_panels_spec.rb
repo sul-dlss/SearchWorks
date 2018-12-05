@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Access Panels", feature: true, :"data-integration" => true do
+describe "Access Panels", feature: true, "data-integration": true do
   describe "Online" do
     it "should be hidden for objects without fulltext links" do
       visit solr_document_path('10365287')

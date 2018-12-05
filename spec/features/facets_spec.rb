@@ -27,7 +27,7 @@ describe 'Facets' do
         end
       end
     end
-    
+
     context 'other libraries' do
       it 'does not render the location facet' do
         visit root_path
@@ -45,7 +45,7 @@ describe 'Facets' do
     context 'Thesis/Dissertation' do
       it 'renders the Stanford student work facet when genre
           Thesis/Dissertation is selected' do
-        visit search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']})
+        visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })
 
         within('.facets') do
           expect(page).to have_css('h3', text: 'Stanford student work')
@@ -54,7 +54,7 @@ describe 'Facets' do
       end
       it 'renders the Stanford school or department facet when genre
           Thesis/Dissertation is selected' do
-        visit search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']})
+        visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })
 
         within('.facets') do
           expect(page).to have_css('h3', text: 'Stanford school or department')

@@ -15,9 +15,9 @@ class BookmarksController < CatalogController
     @article_count = selections_counts.articles
 
     respond_to do |format|
-      format.html { }
-      format.rss  { render :layout => false }
-      format.atom { render :layout => false }
+      format.html {}
+      format.rss  { render layout: false }
+      format.atom { render layout: false }
       format.json do
         render json: render_search_results_as_json
       end

@@ -79,6 +79,7 @@ class Holdings
 
     def noncirc_library_only_inprocess?
       return false unless @items.present?
+
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
         Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
       end
@@ -87,6 +88,5 @@ class Holdings
     def contains_only_must_request_items?
       @items.present? && @items.all?(&:must_request?)
     end
-
   end
 end

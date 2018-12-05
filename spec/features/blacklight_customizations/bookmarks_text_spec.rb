@@ -23,5 +23,4 @@ feature "Bookmarks Select/UnSelect Text", js: true do
       expect(page).to have_css("span", text: "Selected", visible: true)
     end
   end
-
 end

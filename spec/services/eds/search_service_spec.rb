@@ -10,7 +10,9 @@ RSpec.describe Eds::SearchService do
       document_model: document_model
     )
   }
+
   subject(:instance) { described_class.new(blacklight_config) }
+
   subject(:user_params) { {} }
 
   context 'with a single document' do
@@ -45,7 +47,6 @@ RSpec.describe Eds::SearchService do
       expect(results[0]).to be_an(Blacklight::Solr::Response)
       expect(results[1]).to eq StubArticleService::SAMPLE_RESULTS
     end
-
 
     it '#fetch_many' do
       results = instance.fetch_many(StubArticleService::SAMPLE_RESULTS.map(&:id), {})

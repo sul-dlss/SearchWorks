@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Citation do
   include ModsFixtures
   subject { described_class.new(document, formats) }
+
   let(:citations) do
     [
       '<p class="citation_style_MLA">MLA Citation</p>',
@@ -19,17 +20,19 @@ describe Citation do
   let(:formats) { [] }
   let(:oclc_response) { '' }
   let(:stub_opts) { {} }
+
   before { stub_oclc_response(oclc_response, stub_opts) }
 
   describe '#citable?' do
     context 'when there is no OCLC number, MODS citation, or EDS citation' do
       it 'is false' do
-        expect(subject).to_not be_citable
+        expect(subject).not_to be_citable
       end
     end
 
     context 'when there is an OCLC number' do
       let(:stub_opts) { { for: '12345' } }
+
       it 'is true' do
         expect(subject).to be_citable
       end
@@ -37,6 +40,7 @@ describe Citation do
 
     context 'when there is a MODS citation' do
       let(:document) { SolrDocument.new(modsxml: mods_preferred_citation) }
+
       it 'is true' do
         skip('Passes locally, not on Travis.') if ENV['CI']
         expect(subject).to be_citable
@@ -63,6 +67,7 @@ describe Citation do
 
       context 'when there is no data returned from OCLC' do
         let(:document) { SolrDocument.new(oclc: '12345') }
+
         it 'returns the NULL citation' do
           expect(subject.citations.keys.length).to eq 1
           expect(subject.citations['NULL']).to eq '<p>No citation available for this record</p>'
@@ -115,6 +120,7 @@ describe Citation do
 
   describe '#api_url' do
     let(:document) { SolrDocument.new(oclc: '12345') }
+
     it 'returns a URL with the given document field' do
       expect(subject.api_url).to match %r{/citations/12345\?cformat=all}
     end

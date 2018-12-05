@@ -6,6 +6,7 @@ module CourseReserves
   end
 
   private
+
   class Processor
     def initialize(document)
       @courses = document[:crez_course_info].map { |course| CourseInfo.new(course) } unless document[:crez_course_info].nil?
@@ -16,7 +17,6 @@ module CourseReserves
     end
 
     attr_reader :courses
-
   end
 
   class CourseInfo
@@ -35,6 +35,5 @@ module CourseReserves
     def instructor
       @course[2]
     end
-
   end
 end

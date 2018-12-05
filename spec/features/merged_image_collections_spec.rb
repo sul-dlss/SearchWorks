@@ -4,6 +4,7 @@ feature "Merged Image Collections", js: true do
   before do
     stub_article_service(docs: [])
   end
+
   scenario "in search results" do
     visit root_path
     fill_in 'q', with: '34'

@@ -10,12 +10,13 @@ describe "catalog/_index_mods_collection.html.erb" do
         physical: ["The Physical Extent"],
         author_struct: [
           { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
-          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' },
+          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }
         ]
       )
     )
     render
   end
+
   it "should include a link to the contributor" do
     expect(rendered).to have_css('li', text: 'J. Smith')
   end

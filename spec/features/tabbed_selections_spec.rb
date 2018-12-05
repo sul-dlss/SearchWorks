@@ -4,6 +4,7 @@ require 'spec_helper'
 
 RSpec.describe 'Tabbed selections UI', type: :feature do
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
+
   before do
     StubArticleService::SAMPLE_RESULTS.map do |article|
       Bookmark.create!(document_id: article.id, user: user, record_type: 'article')

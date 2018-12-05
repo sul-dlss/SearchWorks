@@ -7,6 +7,7 @@ feature 'Connection form (js)', js: true do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path
   end
+
   scenario 'connection form should be shown filled out and submitted' do
     skip('Passes locally, not on Travis.') if ENV['CI']
     find('.connection-problem').click
@@ -35,6 +36,7 @@ feature 'Connection form (no js)' do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path
   end
+
   scenario 'connection form should be shown filled out and submitted' do
     find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)

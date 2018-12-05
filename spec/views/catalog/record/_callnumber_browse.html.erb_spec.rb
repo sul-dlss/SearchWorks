@@ -10,10 +10,12 @@ describe "catalog/record/_callnumber_browse.html.erb" do
       ]
     )
   }
+
   before do
     assign(:document, document)
     render
   end
+
   it "should render a panel" do
     expect(rendered).to have_css('div.record-browse-nearby')
     expect(rendered).to have_css(".section#browse-nearby")

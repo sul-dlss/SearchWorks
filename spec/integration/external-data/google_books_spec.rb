@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe 'Google Books', type: :feature, js: :true, :"data-integration" => true do
+describe 'Google Books', type: :feature, js: :true, "data-integration": true do
   describe 'links in accordion section' do
     before do
       visit root_path

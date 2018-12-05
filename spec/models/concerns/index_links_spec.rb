@@ -48,6 +48,7 @@ describe IndexLinks do
       ]
     )
   end
+
   describe 'mixin' do
     it 'should add the #index_links method' do
       expect(solr_document).to respond_to(:index_links)
@@ -59,6 +60,7 @@ describe IndexLinks do
       end
     end
   end
+
   describe 'SearchWorks::Links' do
     let(:index_links) { solr_document.index_links }
     let(:finding_aid_links) { finding_aid_document.index_links }
@@ -67,6 +69,7 @@ describe IndexLinks do
     let(:sfx_links) { sfx_document.index_links }
     let(:ezproxy_links) { ezproxy_document.index_links }
     let(:bad_links) { bad_url_document.index_links }
+
     it 'should return both fulltext and supplemental links' do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.html).to match(%r{^<a.*>library\.stanford\.edu<\/a>$})
@@ -81,11 +84,11 @@ describe IndexLinks do
     end
     it 'should identify urls that are in the url_restricted field as stanford only' do
       expect(index_links.all.first).to be_stanford_only
-      expect(index_links.all.last).to_not be_stanford_only
+      expect(index_links.all.last).not_to be_stanford_only
     end
     it 'should identify urls that are in the url_fulltext field as fulltext' do
       expect(index_links.all.first).to be_fulltext
-      expect(index_links.all.last).to_not be_fulltext
+      expect(index_links.all.last).not_to be_fulltext
     end
     it 'should identify finding aid links' do
       expect(finding_aid_links.all.first).to be_finding_aid

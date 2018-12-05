@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 require "spec_helper"
 
 describe "catalog/record/_mods_bibliographic.html.erb" do
@@ -6,9 +7,11 @@ describe "catalog/record/_mods_bibliographic.html.erb" do
 
   describe "Object bibliographic" do
     let(:document) { SolrDocument.new(modsxml: mods_everything) }
+
     before do
       assign(:document, document)
     end
+
     it "should display titles" do
       render
       expect(rendered).to have_css("dt", text: "Alternative title")

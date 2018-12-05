@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature "Course Reserve Access Panel" do
-
   scenario "should have 3 course reservations" do
     visit '/view/1'
     within "div.panel-course-reserve" do
@@ -27,7 +26,5 @@ feature "Course Reserve Access Panel" do
   scenario "should have 0 course reservations" do
     visit '/view/3'
     expect(page.has_no_css?('div.panel-course-reserve')).to eql true
-
   end
-
 end

@@ -1,5 +1,4 @@
 module ResultsDocumentHelper
-
   def get_main_title(document)
     title_field = blacklight_config.index.title_field
     (document[title_field] || '').html_safe

@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe "Librarian View Customization", type: :feature, js: true do
   let(:embed) { double('embed-response') }
+
   it "MARC records should display" do
     visit solr_document_path('28')
 

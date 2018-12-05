@@ -3,9 +3,11 @@ require 'fixtures_indexer'
 
 describe FixturesIndexer do
   let(:stub_solr) { double('solr', uri: URI.parse('http://localhost:8983/solr/blacklight-core')) }
+
   before do
     allow(Blacklight.default_index).to receive(:connection).at_least(1).times.and_return(stub_solr)
   end
+
   describe "run" do
     it "should index the fixtures and commit them" do
       expect(stub_solr).to receive(:add).twice.and_return(true)
@@ -14,11 +16,13 @@ describe FixturesIndexer do
       subject.run
     end
   end
+
   describe "#new" do
     it "should set the solr client" do
       expect(FixturesIndexer.new.instance_variable_get("@solr")).to eq stub_solr
     end
   end
+
   describe "#fixtures" do
     it "should be an array" do
       expect(subject.fixtures).to be_an Array
@@ -30,6 +34,7 @@ describe FixturesIndexer do
       end
     end
   end
+
   describe "#file_list" do
     it "should be an array" do
       expect(subject.file_list).to be_an Array

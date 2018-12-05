@@ -7,6 +7,7 @@ describe "MARC Metadata in search results" do
       fill_in 'q', with: '18'
       click_button 'search'
     end
+
     it "should link the uniform title (but not $h)" do
       within(first('.document')) do
         within('ul.document-metadata') do
@@ -16,6 +17,7 @@ describe "MARC Metadata in search results" do
       end
     end
   end
+
   describe "characteristics" do
     before do
       visit root_path
@@ -30,12 +32,14 @@ describe "MARC Metadata in search results" do
       end
     end
   end
+
   describe "author/creator" do
     before do
       visit root_path
       fill_in 'q', with: '14'
       click_button 'search'
     end
+
     it "should link the author/creator, corporate author, and meeting" do
       within(first('.document')) do
         within('ul.document-metadata') do
@@ -44,12 +48,14 @@ describe "MARC Metadata in search results" do
       end
     end
   end
+
   describe "corporate author" do
     before do
       visit root_path
       fill_in 'q', with: '15'
       click_button 'search'
     end
+
     skip "should link the corporate author" do
       within(first('.document')) do
         within('ul.document-metadata') do
@@ -58,12 +64,14 @@ describe "MARC Metadata in search results" do
       end
     end
   end
+
   describe "meeting author" do
     before do
       visit root_path
       fill_in 'q', with: '16'
       click_button 'search'
     end
+
     skip "should link the meeting author" do
       within(first('.document')) do
         within('ul.document-metadata') do

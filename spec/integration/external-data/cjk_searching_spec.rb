@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "CJK Searching", feature: true, :"data-integration" => true do
+describe "CJK Searching", feature: true, "data-integration": true do
   it "should return results for an everything search" do
     visit root_path
     fill_in 'q', with: '郑州地理'

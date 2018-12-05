@@ -3,25 +3,25 @@ xml.item_id(doc[:id])
 xml.full_title(doc[:title_full_display])
 xml.title(doc[:title_display])
 unless get_authors_for_mobile(doc).nil?
-  xml.authors{
+  xml.authors {
     get_authors_for_mobile(doc).each do |author|
       xml.author(author)
     end
   }
 end
 if cover_hash.has_key?(doc[:id])
-  xml.image_url{xml.cdata!(cover_hash[doc[:id]][0])}
-  xml.image_url_lg{xml.cdata!(cover_hash[doc[:id]][1])}
+  xml.image_url { xml.cdata!(cover_hash[doc[:id]][0]) }
+  xml.image_url_lg { xml.cdata!(cover_hash[doc[:id]][1]) }
 end
 if doc[:format]
-  xml.formats{
+  xml.formats {
     doc[:format].each do |format|
       xml.format(format)
     end
   }
 end
 if doc[:isbn_display]
-  xml.isbns{
+  xml.isbns {
     doc[:isbn_display].each do |isbn|
       xml.isbn(isbn)
     end
@@ -29,7 +29,7 @@ if doc[:isbn_display]
 end
 
 if doc.respond_to?(:to_marc)
-  summary = get_data_with_label_from_marc(doc.to_marc,"l","520")
+  summary = get_data_with_label_from_marc(doc.to_marc, "l", "520")
   unless summary.nil?
     summary_text = []
     summary[:fields].each do |field|
@@ -44,7 +44,7 @@ if doc.respond_to?(:to_marc)
 
   toc = get_toc(doc.to_marc)
   unless toc.nil?
-    xml.contents{
+    xml.contents {
       unless toc[:fields].nil?
         toc[:fields].flatten.each do |content|
           xml.content(content)
@@ -75,20 +75,20 @@ if @document.index_parent_collections.present?
 end
 urls = get_urls_for_mobile(doc)
 unless urls.nil?
-  xml.urls{
+  xml.urls {
     urls.each do |url|
-      xml.url("label"=>url[:label]){xml.cdata!(url[:link])}
+      xml.url("label" => url[:label]) { xml.cdata!(url[:link]) }
     end
   }
 end
-xml.record_url('label' => "View Item in SearchWorks"){ xml.cdata!(url_for controller: 'catalog', action: 'show', id: doc[:id], only_path: false) }
-xml.holdings{
+xml.record_url('label' => "View Item in SearchWorks") { xml.cdata!(url_for controller: 'catalog', action: 'show', id: doc[:id], only_path: false) }
+xml.holdings {
   doc.holdings.libraries.each do |library|
-    xml.library('name' => library.name){
+    xml.library('name' => library.name) {
       library.locations.each do |location|
-        xml.location('name' => location.name){
+        xml.location('name' => location.name) {
           location.items.each do |item|
-            xml.item{
+            xml.item {
               xml.callnumber(item.callnumber)
             }
           end

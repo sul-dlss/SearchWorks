@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe DisplayType do
   let(:document_attributes) { {} }
+
   subject { SolrDocument.new(document_attributes).display_type }
 
   describe 'MARC' do

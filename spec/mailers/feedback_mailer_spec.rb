@@ -3,7 +3,7 @@ require "spec_helper"
 describe FeedbackMailer do
   describe "submit_feedback" do
     describe "with all fields" do
-      let(:ip) {"123.43.54.123"}
+      let(:ip) { "123.43.54.123" }
       let(:params) do
         {
           name: 'Mildred Turner',
@@ -61,8 +61,8 @@ describe FeedbackMailer do
     end
 
     describe "without name and email" do
-      let(:ip) {"123.43.54.123"}
-      let(:params) { {  } }
+      let(:ip) { "123.43.54.123" }
+      let(:params) { {} }
       let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the right email" do
@@ -74,10 +74,11 @@ describe FeedbackMailer do
       end
     end
   end
+
   describe 'submit_connection' do
     describe 'with all fields' do
       let(:ip) { '123.43.54.123' }
-      let(:params) do 
+      let(:params) do
         {
           name: 'Mildred Turner ',
           to: 'test@test.com',
@@ -148,6 +149,7 @@ describe FeedbackMailer do
     let(:ip) { '123.45.67.890' }
     let(:params) { { url: 'http://www.example.com/view/1234' } }
     let(:mail) { FeedbackMailer.submit_wrong_book_cover(params, ip) }
+
     it 'should include the ip address' do
       expect(mail.body).to have_content '123.45.67.890'
     end

@@ -1,9 +1,10 @@
 require 'spec_helper'
 
-feature "Selected Databases Access Point", :"data-integration" => true do
+feature "Selected Databases Access Point", "data-integration": true do
   before do
     visit selected_databases_path
   end
+
   scenario "should have a custom masthead" do
     within("#masthead") do
       expect(page).to have_css("h1", text: "Selected article databases")

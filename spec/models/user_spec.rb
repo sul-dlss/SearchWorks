@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe User do
   let(:subject) { described_class.new }
+
   before do
     allow(subject).to receive(:email).and_return('jstanford@stanford.edu')
   end

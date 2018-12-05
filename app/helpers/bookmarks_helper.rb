@@ -1,5 +1,4 @@
 module BookmarksHelper
-
   def bookmarks?
     %w[bookmarks article_selections].include? params[:controller]
   end
@@ -24,5 +23,4 @@ module BookmarksHelper
     end
     "#{begin_num} - #{end_num}"
   end
-
 end

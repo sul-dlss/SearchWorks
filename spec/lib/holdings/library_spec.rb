@@ -20,12 +20,13 @@ describe Holdings::Library do
       [
         Holdings::Callnumber.new("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
         Holdings::Callnumber.new("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
-        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- "),
+        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
       ]
     end
     let(:locations) { Holdings::Library.new("GREEN", nil, callnumbers).locations }
     let(:sort_locations) { Holdings::Library.new("GREEN", nil, sort_callnumbers).locations }
     let(:combined_locations) { Holdings::Library.new('GREEN', nil, combined_callnumbers).locations }
+
     it "should return an array of Holdings::Locations" do
       expect(locations).to be_a Array
       locations.each do |location|
@@ -48,6 +49,7 @@ describe Holdings::Library do
       expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "TINY", "STACKS"]
     end
   end
+
   describe "#present?" do
     let(:callnumbers) { [
       Holdings::Callnumber.new(""),
@@ -55,10 +57,12 @@ describe Holdings::Library do
       Holdings::Callnumber.new("")
     ] }
     let(:library) { Holdings::Library.new("GREEN", nil, callnumbers) }
+
     it "should be false when libraries have no item display fields" do
-      expect(library).to_not be_present
+      expect(library).not_to be_present
     end
   end
+
   describe "#location_level_request?" do
     it "should return true for all libraries that should be requestable at the location level" do
       Constants::REQUEST_LIBS.each do |library|
@@ -72,9 +76,10 @@ describe Holdings::Library do
         nil,
         [double(current_location: double(code: 'INPROCESS'))]
       )
-      expect(library).to_not be_location_level_request
+      expect(library).not_to be_location_level_request
     end
   end
+
   describe '#library_instructions' do
     it 'should return instructions for libraries which have them' do
       Constants::LIBRARY_INSTRUCTIONS.each_key do |library|
@@ -83,29 +88,36 @@ describe Holdings::Library do
       end
     end
   end
+
   describe "zombie" do
     let(:zombie) { Holdings::Library.new("ZOMBIE") }
+
     it "should be #zombie?" do
       expect(zombie).to be_zombie
     end
     it "should not be a holding library" do
-      expect(zombie).to_not be_holding_library
+      expect(zombie).not_to be_holding_library
     end
   end
+
   describe '#hoover_archive?' do
     let(:hv_archive) { Holdings::Library.new('HV-ARCHIVE') }
+
     it 'is true' do
       expect(hv_archive.hoover_archive?).to be true
     end
   end
+
   describe "#mhld" do
-    let(:library) {Holdings::Library.new("GREEN")}
+    let(:library) { Holdings::Library.new("GREEN") }
+
     it "should be an accessible attribute" do
-      expect(library.mhld).to_not be_present
+      expect(library.mhld).not_to be_present
       library.mhld = "something"
       expect(library.mhld).to be_present
     end
   end
+
   describe '#as_json' do
     let(:callnumbers) do
       [
@@ -115,6 +127,7 @@ describe Holdings::Library do
       ]
     end
     let(:as_json) { Holdings::Library.new('GREEN', nil, callnumbers).as_json }
+
     it 'should return a hash with all of the libraries public reader methods' do
       expect(as_json).to be_a Hash
       expect(as_json[:code]).to eq 'GREEN'

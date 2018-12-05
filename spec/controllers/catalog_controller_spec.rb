@@ -46,12 +46,13 @@ describe CatalogController do
       expect(assigns(:response).dig('responseHeader', 'params')).to include 'stats'
     end
   end
+
   describe '#email' do
     context 'when the user is not logged in and the recaptcha fails' do
       it 'does not allow emails to be submitted' do
         expect_any_instance_of(CatalogController).to receive(:verify_recaptcha).and_return(false)
         expect do
-          post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'}
+          post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
         end.not_to change { ActionMailer::Base.deliveries.count }
       end
     end
@@ -62,7 +63,7 @@ describe CatalogController do
       end
 
       it 'should set the provided subject' do
-        expect{post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1'} }.to change{
+        expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' } }.to change {
           ActionMailer::Base.deliveries.count
         }.by(1)
         expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
@@ -89,7 +90,7 @@ describe CatalogController do
         it 'should not allow messages that have links in them' do
           expect do
             post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
-          end.to_not change { ActionMailer::Base.deliveries.count }
+          end.not_to change { ActionMailer::Base.deliveries.count }
           expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
           expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
         end
@@ -97,7 +98,7 @@ describe CatalogController do
         it 'should prevent incorrect email types from being sent' do
           expect do
             post :email, params: { to: 'email@example.com', type: 'not-a-type' }
-          end.to_not change { ActionMailer::Base.deliveries.count }
+          end.not_to change { ActionMailer::Base.deliveries.count }
           expect(flash[:error]).to eq 'Invalid email type provided'
         end
 
@@ -110,7 +111,7 @@ describe CatalogController do
                 type: 'full'
               }
             )
-          end.to_not change { ActionMailer::Base.deliveries.count }
+          end.not_to change { ActionMailer::Base.deliveries.count }
 
           expect(flash[:error]).to eq 'You must enter only valid email addresses.'
         end
@@ -129,17 +130,18 @@ describe CatalogController do
                 type: 'full'
               }
             )
-          end.to_not change { ActionMailer::Base.deliveries.count }
+          end.not_to change { ActionMailer::Base.deliveries.count }
 
           expect(flash[:error]).to eq 'You have entered more than the maximum (5) email addresses allowed.'
         end
       end
     end
   end
+
   describe "routes" do
     describe "customized from Blacklight" do
       it "should route /view/:id properly" do
-        expect({get: '/view/1234'}).to route_to(controller: 'catalog', action: 'show', id: '1234')
+        expect({ get: '/view/1234' }).to route_to(controller: 'catalog', action: 'show', id: '1234')
       end
       it "should route solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'
@@ -148,22 +150,25 @@ describe CatalogController do
         expect(solr_document_path('1234')).to eq '/view/1234'
       end
       it "should route the librarian view properly" do
-        expect({get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
+        expect({ get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
       end
       it "should route the stackmap view properly" do
-        expect({get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
+        expect({ get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
       end
     end
+
     describe "/databases" do
       it "should route to the database format" do
-        expect({get: "/databases"}).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
+        expect({ get: "/databases" }).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
+
     describe "/backend_lookup" do
       it "should route to the backend lookup path as json" do
-        expect({get: "/backend_lookup"}).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
+        expect({ get: "/backend_lookup" }).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
       end
     end
+
     describe 'availability api' do
       it 'should route to the availability api json' do
         expect(get: '/view/1234/availability').to route_to(id: '1234', controller: 'catalog', action: 'availability', format: :json)
@@ -197,8 +202,10 @@ describe CatalogController do
       end
     end
   end
+
   describe "blacklight config" do
     let(:config) { controller.blacklight_config }
+
     it "should have the correct facet order" do
       keys = config.facet_fields.keys
       expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
@@ -226,6 +233,7 @@ describe CatalogController do
         expect(config.facet_fields['db_az_subject'].sort).to eq :index
       end
     end
+
     describe "facet limits" do
       it "should set a very high facet limit on building and format" do
         ['building_facet', 'format_main_ssim'].each do |facet|
@@ -238,6 +246,7 @@ describe CatalogController do
         end
       end
     end
+
     describe 'search types' do
       it 'should include Author+Title search' do
         search_field = config.search_fields["author_title"]

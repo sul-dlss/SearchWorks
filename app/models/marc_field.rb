@@ -37,11 +37,13 @@ class MarcField
 
   def marc
     return {} unless document.respond_to?(:to_marc)
+
     document.to_marc
   end
 
   def relevant_fields
     return [] unless marc.present?
+
     @relevant_fields ||= marc.fields(tags)
   end
 
@@ -82,6 +84,7 @@ class MarcField
     relevant_fields.each_with_index do |field, index|
       next if field.tag =~ /^880/
       next unless field.vernacular_matcher?
+
       vernacular_field = matching_vernacular_field(field)
       @relevant_fields.insert(index + 1, MarcFieldWrapper.new(vernacular_field)) if vernacular_field
     end
@@ -95,6 +98,7 @@ class MarcField
       next unless vernacular_field.vernacular_matcher? &&
                   tags.include?(vernacular_field.vernacular_matcher_tag) &&
                   vernacular_field.vernacular_matcher_iterator == '00'
+
       @relevant_fields.insert(tag_indexes[vernacular_field.vernacular_matcher_tag], vernacular_field)
     end
   end
@@ -144,6 +148,7 @@ class MarcField
     marc.fields([field.vernacular_matcher_tag]).find do |vern_field|
       vernacular_field = MarcFieldWrapper.new(vern_field)
       next unless vernacular_field.vernacular_matcher?
+
       field.tag == vernacular_field.vernacular_matcher_tag &&
         field.vernacular_matcher_iterator == vernacular_field.vernacular_matcher_iterator
     end

@@ -12,12 +12,12 @@ feature "Record Toolbar" do
       expect(page).to have_css("div.record-toolbar", visible: true)
 
       within "div.navbar-header" do
-        expect(page).to_not have_css("button.navbar-toggle", visible: true)
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
-        expect(page).to_not have_css("a.previous.disabled", visible: true)
-        expect(page).to_not have_css("a.previous", visible: true)
-        expect(page).to_not have_css("a.next.disabled", visible: true)
-        expect(page).to_not have_css("a.next", visible: true)
+        expect(page).not_to have_css("button.navbar-toggle", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
+        expect(page).not_to have_css("a.previous.disabled", visible: true)
+        expect(page).not_to have_css("a.previous", visible: true)
+        expect(page).not_to have_css("a.next.disabled", visible: true)
+        expect(page).not_to have_css("a.next", visible: true)
       end
 
       within "div.navbar-collapse" do
@@ -51,7 +51,7 @@ feature "Record Toolbar" do
   end
 
   scenario "should have back to search and pagination", js: true do
-    visit search_catalog_path f: {format: ["Book"]}
+    visit search_catalog_path f: { format: ["Book"] }
 
     # Specifically trying to not get the first item in the results
     within '.document-position-1' do
@@ -60,8 +60,8 @@ feature "Record Toolbar" do
 
     within "#content" do
       within "div.navbar-header" do
-        expect(page).to_not have_css("button.navbar-toggle", visible: true)
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text:"Back to results", visible: true)
+        expect(page).not_to have_css("button.navbar-toggle", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).to have_css("a.previous", visible: true)
         expect(page).to have_css("a.next", visible: true)
       end

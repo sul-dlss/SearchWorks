@@ -1,19 +1,19 @@
 require "spec_helper"
 
-describe "Databases Access Point", feature: true, :"data-integration" => true do
+describe "Databases Access Point", feature: true, "data-integration": true do
   it "should display the database specific facet" do
     skip("Needs format/resource-type facet to settle down")
     visit root_path
     fill_in 'q', with: ''
     click_button 'search'
     within("#facets") do
-      expect(page).to_not have_css('.panel-title', text: "Database topic")
+      expect(page).not_to have_css('.panel-title', text: "Database topic")
       click_link "Database"
     end
 
     within("#facets") do
       within(".blacklight-db_az_subject") do
-        expect(page).to_not have_css(".collapsed")
+        expect(page).not_to have_css(".collapsed")
         expect(page).to have_css(".panel-title", text: "Database topic")
       end
     end

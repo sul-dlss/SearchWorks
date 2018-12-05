@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 module RecordHelper
   def display_content_field(field)
     if field.respond_to?(:label, :values) &&
@@ -24,7 +25,7 @@ module RecordHelper
 
   def mods_display_content(values, delimiter = nil)
     if delimiter
-      content_tag(:dd, values.map do|value|
+      content_tag(:dd, values.map do |value|
         link_urls_and_email(value) if value.present?
       end.compact.join(delimiter).html_safe)
     else

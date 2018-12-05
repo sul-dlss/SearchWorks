@@ -24,7 +24,7 @@ describe "Searchworks::Document::Sms" do
     sms_text = doc.to_sms_text
     expect(sms_text).to match(/callnumber2/)
     expect(sms_text).to match(/Green Library - Stacks/)
-    expect(sms_text).to_not match(/Biology Library (Falconer) - Stacks/)
+    expect(sms_text).not_to match(/Biology Library (Falconer) - Stacks/)
   end
 
   context 'eds document' do
@@ -32,5 +32,4 @@ describe "Searchworks::Document::Sms" do
       expect(eds_doc.to_sms_text).to eq 'holla back'
     end
   end
-
 end

@@ -16,7 +16,6 @@ class ArticleSelectionsController < ApplicationController
   blacklight_config.show.document_actions[:bookmark].if = false if blacklight_config.show.document_actions[:bookmark]
   blacklight_config.show.document_actions[:sms].if = false if blacklight_config.show.document_actions[:sms]
 
-
   def index
     @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
@@ -37,8 +36,8 @@ class ArticleSelectionsController < ApplicationController
 
     respond_to do |format|
       format.html { render 'bookmarks/index' }
-      format.rss  { render :layout => false }
-      format.atom { render :layout => false }
+      format.rss  { render layout: false }
+      format.atom { render layout: false }
       format.json do
         render json: render_search_results_as_json
       end

@@ -8,7 +8,7 @@ describe "Breadcrumb Customizations", type: :feature do
 
       within('.breadcrumb') do
         expect(page).to have_css('.filterValue', text: 'Image Collection1')
-        expect(page).to_not have_content('29')
+        expect(page).not_to have_content('29')
       end
     end
   end

@@ -5,6 +5,7 @@ describe 'RSS Feeds' do
     visit root_path
     click_button 'search'
   end
+
   it 'provides a link to the new books feed in search results' do
     within('.search_num_of_results') do
       expect(page).to have_css('a i.rss-icon')

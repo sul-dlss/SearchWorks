@@ -31,8 +31,9 @@ class Holdings
 
     def location_link
       return unless external_location?
+
       if items.first.try(:barcode)
-        "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/,'')}&Search_Code=CMD*&CNT=10"
+        "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/, '')}&Search_Code=CMD*&CNT=10"
       else
         'http://lmldb.stanford.edu'
       end
@@ -105,6 +106,7 @@ class Holdings
 
     def noncirc_library_only_inprocess?
       return false unless @items.present?
+
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(library) && @items.all? do |item|
         Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
       end

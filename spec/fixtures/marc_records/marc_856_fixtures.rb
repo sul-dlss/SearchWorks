@@ -12,6 +12,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def labelless_856
     <<-xml
       <record>
@@ -21,6 +22,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def casalini_856
     <<-xml
       <record>
@@ -35,6 +37,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def stanford_only_856
     <<-xml
       <record>
@@ -61,6 +64,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def fulltext_856
     <<-xml
       <record>
@@ -79,6 +83,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def supplemental_856
     <<-xml
       <record>
@@ -116,6 +121,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def finding_aid_856
     <<-xml
       <record>
@@ -133,6 +139,7 @@ module Marc856Fixtures
       </record>
     xml
   end
+
   def ez_proxy_856
     <<-xml
       <record>

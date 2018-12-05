@@ -7,11 +7,11 @@ record_url = solr_document_url(doc[:id])
 record_url << ".mobile" unless drupal_api?
 xml.mobile_record(record_url)
 if cover_hash.has_key?(doc[:id])
-  xml.image_url{xml.cdata!(cover_hash[doc[:id]][0])}
-  xml.image_url_lg{xml.cdata!(cover_hash[doc[:id]][1])}
+  xml.image_url { xml.cdata!(cover_hash[doc[:id]][0]) }
+  xml.image_url_lg { xml.cdata!(cover_hash[doc[:id]][1]) }
 end
 if doc[:format]
-  xml.formats{
+  xml.formats {
     doc[:format].each do |format|
       xml.format(format)
     end
@@ -19,9 +19,9 @@ if doc[:format]
 end
 if doc_is_a_database?(doc)
   if doc["summary_display"]
-    xml.summary(truncate(doc["summary_display"].join(" "), :length => 140))
+    xml.summary(truncate(doc["summary_display"].join(" "), length: 140))
   end
   if doc["url_fulltext"]
-    xml.database_url("stanford_only" => index_link_is_stanford_only?(doc,doc["url_fulltext"].first.strip)){xml.cdata!(doc["url_fulltext"].first.strip)}
+    xml.database_url("stanford_only" => index_link_is_stanford_only?(doc, doc["url_fulltext"].first.strip)) { xml.cdata!(doc["url_fulltext"].first.strip) }
   end
 end

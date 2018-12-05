@@ -69,5 +69,4 @@ class SearchQueryModifier
       end.join(' ')
     end
   end
-
 end

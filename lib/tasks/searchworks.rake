@@ -2,7 +2,7 @@ require 'fixtures_indexer'
 
 namespace :searchworks do
   desc "Run SearchWorks local installation steps"
-  task :install => [:environment] do
+  task install: [:environment] do
     Rake::Task["db:migrate"].invoke
     SolrWrapper.wrap do |solr|
       Rake::Task['searchworks:copy_solr_dependencies'].invoke
@@ -44,7 +44,7 @@ namespace :searchworks do
       end
       desc "spec task that ignores data-integration tests (run during local development/travis on local data)"
       RSpec::Core::RakeTask.new("without-data-integration") do |t|
-        t.rspec_opts =  "--tag ~data-integration"
+        t.rspec_opts = "--tag ~data-integration"
       end
       task 'spec:all' => 'test:prepare'
     rescue LoadError => e
@@ -62,7 +62,8 @@ namespace :searchworks do
   task :prune_old_search_data, [:days_old] => [:environment] do |t, args|
     chunk = 20000
     raise ArgumentError.new('days_old is expected to be greater than 0') if args[:days_old].to_i <= 0
-    total = Search.where("updated_at < :date", {date: (Date.today - args[:days_old].to_i)}).count
+
+    total = Search.where("updated_at < :date", { date: (Date.today - args[:days_old].to_i) }).count
     total = total - (total % chunk) if (total % chunk) != 0
     i = 0
     while i < total
@@ -76,18 +77,19 @@ namespace :searchworks do
   def eds_cache
     cache_dir = File.join(Settings.EDS_CACHE_DIR, 'faraday_eds_cache')
     return ActiveSupport::Cache::FileStore.new(cache_dir) if File.directory?(cache_dir)
+
     nil
   end
 
   desc "Prune expired files in EDS cache"
-  task :prune_eds_cache => [:environment] do |t, args|
+  task prune_eds_cache: [:environment] do |t, args|
     if eds_cache
       puts "Cleaning cache in #{eds_cache.cache_path}"
       eds_cache.cleanup
     end
   end
   desc "Clear all files in EDS cache"
-  task :clear_eds_cache => [:environment] do |t, args|
+  task clear_eds_cache: [:environment] do |t, args|
     if eds_cache
       puts "Clearing cache in #{eds_cache.cache_path}"
       eds_cache.clear

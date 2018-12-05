@@ -2,9 +2,11 @@ require 'spec_helper'
 
 describe 'marc_fields/_marc_field.html.erb' do
   subject { Capybara.string(rendered) }
+
   let(:marc_field) do
     double('MarcField', label: 'Field Label', values: %w(Value1 Value2))
   end
+
   before do
     allow(view).to receive_messages(marc_field: marc_field)
     render

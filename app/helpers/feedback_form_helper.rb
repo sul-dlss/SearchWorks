@@ -1,5 +1,4 @@
 module FeedbackFormHelper
-
   def render_feedback_form(form_type)
     case form_type
     when 'connection'

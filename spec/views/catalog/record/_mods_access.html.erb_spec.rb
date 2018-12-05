@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 require "spec_helper"
 
 describe "catalog/record/_mods_access.html.erb" do
@@ -6,9 +7,11 @@ describe "catalog/record/_mods_access.html.erb" do
 
   describe "Object access" do
     let(:document) { SolrDocument.new(modsxml: mods_001) }
+
     before do
       assign(:document, document)
     end
+
     it "should display access" do
       render
       expect(rendered).to have_css("dt", text: "Use and reproduction")

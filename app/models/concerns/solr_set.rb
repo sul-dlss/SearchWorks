@@ -9,6 +9,7 @@ module SolrSet
 
   def parent_sets
     return unless set_member?
+
     @parent_sets ||= set_document_list.map do |doc|
       SolrDocument.new(doc)
     end
@@ -17,6 +18,7 @@ module SolrSet
   # Used for generating simple title links to the parent sets w/o making a Solr request
   def index_parent_sets
     return unless set_member? && self[:set_with_title].present?
+
     @index_parent_sets ||= self[:set_with_title].map do |set_with_title|
       id, title = set_with_title.split('-|-').map(&:strip)
       SolrDocument.new(id: id, title_display: title)

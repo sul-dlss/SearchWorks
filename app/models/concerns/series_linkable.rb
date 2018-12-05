@@ -28,6 +28,7 @@ module SeriesLinkable
 
   def field_490_has_first_indicator_0?(field)
     return true unless field.canonical_tag == '490'
+
     field.indicator1 == '0'
   end
 

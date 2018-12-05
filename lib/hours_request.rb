@@ -1,5 +1,4 @@
 class HoursRequest
-
   def initialize(library)
     @library = library
   end
@@ -20,7 +19,7 @@ class HoursRequest
         nil
       end
     else
-      {error: 'No public access'}.to_json
+      { error: 'No public access' }.to_json
     end
   end
 end

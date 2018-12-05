@@ -72,6 +72,7 @@ describe CatalogHelper do
 
   describe 'link_to_bookplate_search' do
     let(:bookplate) { Bookplate.new('FUND-CODE -|- druid-abc -|- fild-id-123 -|- Bookplate Text') }
+
     it 'links to the bookplate' do
       expect(link_to_bookplate_search(bookplate)).to include 'f%5Bfund_facet%5D%5B%5D=druid-abc'
     end
@@ -103,20 +104,25 @@ describe CatalogHelper do
   describe '#tech_details' do
     context 'marc document' do
       let(:document) { SolrDocument.new(id: '12345', marcxml: metadata1) }
+
       it 'adds correct tech details' do
         expect(tech_details(document)).to have_content('Catkey: 12345')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
       end
     end
+
     context 'mods document' do
       let(:document) { SolrDocument.new(id: '12345', modsxml: mods_everything) }
+
       it 'adds correct tech details' do
         expect(tech_details(document)).to have_content('DRUID: 12345')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
       end
     end
+
     context 'a collection document' do
       let(:document) { SolrDocument.new(id: '12345', modsxml: mods_everything) }
+
       it 'adds correct tech details' do
         expect(document).to receive(:is_a_collection?).at_least(:once).and_return(true)
         expect(tech_details(document)).to have_content('DRUID: 12345')

@@ -2,20 +2,22 @@ require "spec_helper"
 
 describe MarcHelper do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: metadata2 ) }
+  let(:document) { SolrDocument.new(marcxml: metadata2) }
   let(:nil_document) { SolrDocument.new(marcxml: no_fields_fixture) }
-  let(:matched_vern_doc) { SolrDocument.new(marcxml: matched_vernacular_fixture ) }
-  let(:unmatched_vern_doc) { SolrDocument.new( marcxml: unmatched_vernacular_fixture ) }
-  let(:bad_vern_record) { SolrDocument.new(marcxml: bad_vernacular_fixture ) }
-  let(:nielsen_record) { SolrDocument.new(marcxml: nielsen_fixture ) }
-  let(:percent_record) { SolrDocument.new(marcxml: percent_fixture )}
+  let(:matched_vern_doc) { SolrDocument.new(marcxml: matched_vernacular_fixture) }
+  let(:unmatched_vern_doc) { SolrDocument.new(marcxml: unmatched_vernacular_fixture) }
+  let(:bad_vern_record) { SolrDocument.new(marcxml: bad_vernacular_fixture) }
+  let(:nielsen_record) { SolrDocument.new(marcxml: nielsen_fixture) }
+  let(:percent_record) { SolrDocument.new(marcxml: percent_fixture) }
+
   describe "#data_with_label_from_marc" do
-    let(:matched_vern_doc_rtl) { SolrDocument.new(marcxml: matched_vernacular_rtl_fixture ) }
-    let(:unmatched_vern_doc_rtl) { SolrDocument.new(marcxml: unmatched_vernacular_rtl_fixture ) }
-    let(:standard_linking_doc) { SolrDocument.new(marcxml: linking_fields_fixture ) }
-    let(:linked_ckey_590_record) { SolrDocument.new(marcxml: linked_ckey_fixture ) }
-    let(:special_character_record) { SolrDocument.new(marcxml: escape_characters_fixture ) }
-    let(:relator_vern_record) { SolrDocument.new(marcxml: marc_sections_fixture ) }
+    let(:matched_vern_doc_rtl) { SolrDocument.new(marcxml: matched_vernacular_rtl_fixture) }
+    let(:unmatched_vern_doc_rtl) { SolrDocument.new(marcxml: unmatched_vernacular_rtl_fixture) }
+    let(:standard_linking_doc) { SolrDocument.new(marcxml: linking_fields_fixture) }
+    let(:linked_ckey_590_record) { SolrDocument.new(marcxml: linked_ckey_fixture) }
+    let(:special_character_record) { SolrDocument.new(marcxml: escape_characters_fixture) }
+    let(:relator_vern_record) { SolrDocument.new(marcxml: marc_sections_fixture) }
+
     describe "get" do
       it "should display a valid definition list row" do
         field = get_data_with_label_from_marc(document.to_marc, "Label:", "520")
@@ -24,16 +26,16 @@ describe MarcHelper do
         expect(field[:fields].first[:field]).to match /Selected poems and articles from the works of renowned Sindhi poet; chiefly translated from Sindhi\./
       end
       it "should not display items that have a 1st indicator of 1 for certain MARC fields" do
-        expect(get_data_with_label_from_marc(document.to_marc, "Label:","760")).to be_nil
+        expect(get_data_with_label_from_marc(document.to_marc, "Label:", "760")).to be_nil
       end
       it "should not display vernacular items that have a 1st indicator of 1 for certain MARC fields" do
-        expect(get_data_with_label_from_marc(document.to_marc, "Label:","760")).to be_nil
+        expect(get_data_with_label_from_marc(document.to_marc, "Label:", "760")).to be_nil
       end
       it "should not display items that have a 1st indicator of 0 for certain MARC fields" do
-        expect(get_data_with_label_from_marc(document.to_marc, "Label:","541")).to be_nil
+        expect(get_data_with_label_from_marc(document.to_marc, "Label:", "541")).to be_nil
       end
       it "should not display vernacular items that have a 1st indicator of 1 for certain MARC fields" do
-        expect(get_data_with_label_from_marc(document.to_marc, "Label:","541")).to be_nil
+        expect(get_data_with_label_from_marc(document.to_marc, "Label:", "541")).to be_nil
       end
       it "should return nil if the field doesn't exist in the marc record" do
         expect(get_data_with_label_from_marc(document.to_marc, "Label:", "510")).to be_nil
@@ -61,17 +63,17 @@ describe MarcHelper do
       it 'should not include relator terms in the vernacular' do
         data = get_data_with_label_from_marc(relator_vern_record.to_marc, 'Label', '700')
         expect(data[:fields].length).to eq 1
-        expect(data[:fields].first[:vernacular]).to_not match(/Performer|prf/)
+        expect(data[:fields].first[:vernacular]).not_to match(/Performer|prf/)
       end
 
       it "should handle bad vernacular records correctly" do
-        bad_600 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","600")
-        bad_245 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:","245")
+        bad_600 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600")
+        bad_245 = get_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245")
 
-        expect(bad_600[:fields].first[:field]).to_not match /This is Vernacular/
+        expect(bad_600[:fields].first[:field]).not_to match /This is Vernacular/
         expect(bad_600[:fields].first[:field]).to match /This is not Vernacular/
 
-        expect(bad_245[:fields].first[:field]).to_not match /This is Vernacular/
+        expect(bad_245[:fields].first[:field]).not_to match /This is Vernacular/
         expect(bad_245[:fields].first[:field]).to match /This is not Vernacular/
       end
       it "should link subfield U for certain fields" do
@@ -83,30 +85,30 @@ describe MarcHelper do
         expect(linking[:fields].first[:field]).to match(/<a href=.*>.*<\/a>/)
 
         expect(non_linking[:fields].length).to eq 1
-        expect(non_linking[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
+        expect(non_linking[:fields].first[:field]).not_to match(/<a href=.*>.*<\/a>/)
 
         expect(bad_url[:fields].length).to eq 1
-        expect(bad_url[:fields].first[:field]).to_not match(/<a href=.*>.*<\/a>/)
+        expect(bad_url[:fields].first[:field]).not_to match(/<a href=.*>.*<\/a>/)
       end
       it "should return the approprate subfield when one is requested" do
-        data = get_data_with_label_from_marc(document.to_marc, "Label:", "650",{:sub_fields=>["d"]})
+        data = get_data_with_label_from_marc(document.to_marc, "Label:", "650", { sub_fields: ["d"] })
         expect(data[:fields].first[:field]).to match /Subject2/
         data[:fields].each do |field|
-          expect(field[:field]).to_not match /Subject1/
+          expect(field[:field]).not_to match /Subject1/
         end
       end
       it "should handle nielsen data correctly" do
-        data = get_data_with_label_from_marc(nielsen_record.to_marc,"Label:","520")
+        data = get_data_with_label_from_marc(nielsen_record.to_marc, "Label:", "520")
         expect(data[:fields].length).to eq 1
         expect(data[:fields].first[:field]).to match(/Nielsen Field/)
         expect(data[:fields].first[:field]).to match(/source: Nielsen Book Data/)
-        expect(data[:fields].to_s).to_not match(/.*Note.*/)
+        expect(data[:fields].to_s).not_to match(/.*Note.*/)
       end
       it "should handle linking to parent ckeys correctly" do
-        data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc,"Label:", "590")
+        data = get_data_with_label_from_marc(linked_ckey_590_record.to_marc, "Label:", "590")
         expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Copy.*<a href=\"55523\">55523<\/a> \(.*\)/)
-        expect(data[:fields].first[:field]).to_not match(/&gt;|&lt;|&quot;/)
+        expect(data[:fields].first[:field]).not_to match(/&gt;|&lt;|&quot;/)
       end
       it "should handle special characters correctly" do
         data = get_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690")
@@ -115,62 +117,65 @@ describe MarcHelper do
         expect(data[:fields].last[:field]).to  match(/Stanford > Berkeley/)
       end
     end
+
     describe "link_to" do
       it "should display a valid and linked definition list row" do
-        data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
+        data = link_to_data_with_label_from_marc(document.to_marc, "Label:", "546", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(data[:label]).to eq "Label:"
         expect(data[:fields].length).to eq 1
         expect(data[:fields].first[:field]).to match(/<a href=.*In\+Urdu.*search_field=search_author.*>In Urdu\.<\/a>/)
       end
       it "should display a valid and linked venacular equivelant" do
-        fields = link_to_data_with_label_from_marc(matched_vern_doc.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
+        fields = link_to_data_with_label_from_marc(matched_vern_doc.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(fields[:fields].length).to eq 1
         expect(fields[:fields].first[:field]).to match(/<a href=.*This\+is\+not\+Vernacular.*search_field=search_author.*>This is not Vernacular<\/a>/)
         expect(fields[:fields].first[:vernacular]).to match(/<a href=.*This\+is\+Vernacular.*search_field=search_author.*>This is Vernacular<\/a>/)
       end
       it "should display an unmatched vernacular equivelant" do
-        data = link_to_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})
+        data = link_to_data_with_label_from_marc(unmatched_vern_doc.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search_author' })
         expect(data[:fields].empty?).to be_truthy
         expect(data[:unmatched_vernacular].length).to eq 1
         expect(data[:unmatched_vernacular].first).to match(/^<a href=.*This\+is\+Vernacular.*search_field=search_author.*>This is Vernacular<\/a>$/)
       end
       it "should handle special characters properly" do
-        data = link_to_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690", {:controller => 'catalog', :action => 'index'})
+        data = link_to_data_with_label_from_marc(special_character_record.to_marc, "Label:", "690", { controller: 'catalog', action: 'index' })
         expect(data[:fields].length).to eq 2
         expect(data[:fields].first[:field]).to match(/Artists%27\+Books/)
         expect(data[:fields].last[:field]).to  match(/Stanford\+%3E\+Berkeley/)
         expect(data[:fields].last[:field]).to  match(/Stanford &gt; Berkeley/)
       end
       it "should not include fields that start with a % sign" do
-        data = link_to_data_with_label_from_marc(percent_record.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
+        data = link_to_data_with_label_from_marc(percent_record.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search' })
         expect(data[:fields].length).to eq 1
-        expect(data[:fields].first[:field]).to_not match(/%Bad/)
+        expect(data[:fields].first[:field]).not_to match(/%Bad/)
       end
       it "should handle bad vernacular records correctly" do
-        bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
-        bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", {:controller => 'catalog', :action => 'index', :search_field => 'search'})
+        bad_600 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "600", { controller: 'catalog', action: 'index', search_field: 'search' })
+        bad_245 = link_to_data_with_label_from_marc(bad_vern_record.to_marc, "Label:", "245", { controller: 'catalog', action: 'index', search_field: 'search' })
 
         expect(bad_600[:fields].length).to eq 1
-        expect(bad_600[:fields].first[:field]).to_not match(/This is Vernacular/)
+        expect(bad_600[:fields].first[:field]).not_to match(/This is Vernacular/)
         expect(bad_600[:fields].first[:field]).to match(/This is not Vernacular/)
         expect(bad_600[:fields].first[:vernacular]).to be_nil
 
         expect(bad_245[:fields].length).to eq 1
-        expect(bad_245[:fields].first[:field]).to_not match(/This is Vernacular/)
+        expect(bad_245[:fields].first[:field]).not_to match(/This is Vernacular/)
         expect(bad_245[:fields].first[:field]).to match(/This is not Vernacular/)
         expect(bad_245[:fields].first[:vernacular]).to be_nil
       end
       it "should return nil if the field doesn't exist in the marc record" do
-        expect(link_to_data_with_label_from_marc(document.to_marc, "Label:", "510", {:controller => 'catalog', :action => 'index', :search_field => 'search_author'})).to be_nil
+        expect(link_to_data_with_label_from_marc(document.to_marc, "Label:", "510", { controller: 'catalog', action: 'index', search_field: 'search_author' })).to be_nil
       end
     end
   end
+
   describe "contributors, related, and included works" do
     let(:contributor) { SolrDocument.new(marcxml: contributor_fixture) }
-    let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture ) }
-    let(:contributed_works_without_title) { SolrDocument.new(marcxml: contributed_works_without_title_fixture ) }
-    let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture ) }
+    let(:contributed_works) { SolrDocument.new(marcxml: contributed_works_fixture) }
+    let(:contributed_works_without_title) { SolrDocument.new(marcxml: contributed_works_without_title_fixture) }
+    let(:multi_role_contributor) { SolrDocument.new(marcxml: multi_role_contributor_fixture) }
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
+
     it "should return multiple dd elements when there are multiple values" do
       expect(link_to_contributor_from_marc(contributor.to_marc)).to have_css('dd', count: 3)
     end
@@ -208,13 +213,15 @@ describe MarcHelper do
     it 'should not display blacklisted fields' do
       link = contributors_and_works_from_marc(contributor.to_marc)
       link.each do |_, value|
-        expect(value).to_not match(/880-00/)
+        expect(value).not_to match(/880-00/)
       end
     end
   end
+
   describe "#get_toc" do
     let(:bad_toc) { SolrDocument.new(marcxml: bad_toc_fixture) }
-    let(:nielsen_tagged_record) { SolrDocument.new(marcxml: tagged_nielsen_fixture ) }
+    let(:nielsen_tagged_record) { SolrDocument.new(marcxml: tagged_nielsen_fixture) }
+
     it "should return the valid table of contents" do
       data = get_toc(document.to_marc)
       expect(data[:label]).to eq("Contents")
@@ -288,10 +295,11 @@ describe MarcHelper do
       expect(get_toc(nil_document.to_marc)).to be_nil
     end
   end
+
   describe "subjects" do
-    let(:multi_a_subject) { SolrDocument.new(marcxml: multi_a_subject_fixture ) }
-    let(:multi_vxyz_subject) { SolrDocument.new(marcxml: multi_vxyz_subject_fixture ) }
-    let(:collection_690) { SolrDocument.new(marcxml: collection_690_fixture ) }
+    let(:multi_a_subject) { SolrDocument.new(marcxml: multi_a_subject_fixture) }
+    let(:multi_vxyz_subject) { SolrDocument.new(marcxml: multi_vxyz_subject_fixture) }
+    let(:collection_690) { SolrDocument.new(marcxml: collection_690_fixture) }
     let(:ordered_subjects) { SolrDocument.new(marcxml: ordered_subjects_fixture) }
     let(:vernacular_subjects) { SolrDocument.new(marcxml: vernacular_subjects_fixture) }
     let(:genre_subjects) { SolrDocument.new(marcxml: marc_655_subject_fixture) }
@@ -365,20 +373,22 @@ describe MarcHelper do
 
   describe "#get_740_works_from_marc" do
     let(:related_works) { SolrDocument.new(marcxml: related_works_fixture) }
+
     it "should use Included Work for records with a 2nd indicator of 2" do
-      expect(get_740_works_from_marc(related_works.to_marc,"Label")[:label]).to eq "Included Work"
+      expect(get_740_works_from_marc(related_works.to_marc, "Label")[:label]).to eq "Included Work"
     end
     it "should return nil when there is no field" do
-      expect(get_740_works_from_marc(document.to_marc,"Label")).to be_nil
+      expect(get_740_works_from_marc(document.to_marc, "Label")).to be_nil
     end
   end
 
   describe "#marc_264" do
-    let(:single) { SolrDocument.new(marcxml: single_marc_264_fixture ).to_marc }
-    let(:multiple) { SolrDocument.new(marcxml: multiple_marc_264_fixture ).to_marc }
-    let(:vernacular) { SolrDocument.new(marcxml: vernacular_marc_264_fixture ).to_marc }
-    let(:unmatched_vernacular) { SolrDocument.new(marcxml: unmatched_vernacular_marc_264_fixture ).to_marc }
-    let(:complex) { SolrDocument.new(marcxml: complex_marc_264_fixture ).to_marc }
+    let(:single) { SolrDocument.new(marcxml: single_marc_264_fixture).to_marc }
+    let(:multiple) { SolrDocument.new(marcxml: multiple_marc_264_fixture).to_marc }
+    let(:vernacular) { SolrDocument.new(marcxml: vernacular_marc_264_fixture).to_marc }
+    let(:unmatched_vernacular) { SolrDocument.new(marcxml: unmatched_vernacular_marc_264_fixture).to_marc }
+    let(:complex) { SolrDocument.new(marcxml: complex_marc_264_fixture).to_marc }
+
     it "should handle a simple single 264" do
       data = marc_264(single)
       expect(data).to have_key("Production")
@@ -416,8 +426,10 @@ describe MarcHelper do
       expect(data["Current publication"].first).to eq "SubfieldA SubfieldB"
     end
   end
+
   describe '#results_imprint_string' do
     let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
+
     it 'returns the first imprint statement from the index' do
       expect(results_imprint_string(document)).to eq 'a'
     end
@@ -425,7 +437,7 @@ describe MarcHelper do
 
   describe '#get_uniform_title' do
     it 'assembles the uniform title' do
-      doc = SolrDocument.new(uniform_title_display_struct: [{ fields: [{ field: { pre_text: 'xyz', link_text: 'Instrumental music Selections', post_text: '[print/digital]' }, vernacular: { vern: '' }}]}])
+      doc = SolrDocument.new(uniform_title_display_struct: [{ fields: [{ field: { pre_text: 'xyz', link_text: 'Instrumental music Selections', post_text: '[print/digital]' }, vernacular: { vern: '' } }] }])
       title = get_uniform_title(doc)
       expect(title[:fields].length).to eq 1
       expect(title[:fields].first[:field]).to match(%r{xyz <a href=.*>Instrumental music Selections</a> \[print/digital\]})

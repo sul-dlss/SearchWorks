@@ -66,7 +66,7 @@ RSpec.describe ArticleHelper do
     end
 
     context '#clean_affiliations' do
-      let(:result) {helper.clean_affiliations(value: affiliations)}
+      let(:result) { helper.clean_affiliations(value: affiliations) }
 
       it 'removes relatesTo tags and content' do
         expect(result).not_to have_content('1')
@@ -194,7 +194,6 @@ RSpec.describe ArticleHelper do
     end
 
     context 'no markup but weird punctuation' do
-
       context 'with []' do
         let(:title) { 'This Journal [Alternate Name]. 10(1)' }
 

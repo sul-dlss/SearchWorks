@@ -1,4 +1,5 @@
 # encoding: UTF-8
+
 # adjust Solr params as required for CJK chars in user query string
 # if a query string has CJK characters in it, adjust the mm and ps Solr parameters as necessary
 module CJKQuery
@@ -6,6 +7,7 @@ module CJKQuery
 
   def modify_params_for_cjk(solr_params)
     return unless blacklight_params && blacklight_params[:q].present?
+
     q_str = blacklight_params[:q]
     number_of_unigrams = cjk_unigrams_size(q_str)
     solr_params.merge!(cjk_mm_qs_params(q_str)) if number_of_unigrams > 2
@@ -13,6 +15,7 @@ module CJKQuery
 
     return if cjk_config.blank?
     return unless number_of_unigrams.positive?
+
     solr_params[:qf] = cjk_config[:qf]
     solr_params[:pf] = cjk_config[:pf]
     solr_params[:pf2] = cjk_config[:pf2]
@@ -80,9 +83,9 @@ module CJKQuery
       if num_non_cjk_tokens > 0
         lower_limit = cjk_mm_val[0].to_i
         mm = (lower_limit + num_non_cjk_tokens).to_s + cjk_mm_val[1, cjk_mm_val.size]
-        {'mm' => mm, 'qs' => cjk_qs_val}
+        { 'mm' => mm, 'qs' => cjk_qs_val }
       else
-        {'mm' => cjk_mm_val, 'qs' => cjk_qs_val}
+        { 'mm' => cjk_mm_val, 'qs' => cjk_qs_val }
       end
     else
       {}
@@ -96,5 +99,4 @@ module CJKQuery
   def cjk_qs_val
     0
   end
-
 end

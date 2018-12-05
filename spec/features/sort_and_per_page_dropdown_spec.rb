@@ -42,7 +42,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
 
     it 'should change to current sort' do
       within '#sortAndPerPage' do
-        expect(page).to_not have_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
+        expect(page).not_to have_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by relevance').click
         within 'a', text: 'relevance' do
           expect(page).to have_css('i.active-icon')
@@ -50,7 +50,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
         click_link 'author'
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by author').click
         within 'a', text: 'relevance' do
-          expect(page).to_not have_css('i.active-icon')
+          expect(page).not_to have_css('i.active-icon')
         end
         within 'a', text: 'author' do
           expect(page).to have_css('i.active-icon')
@@ -76,7 +76,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
         page.find('#per_page-dropdown ul li a', text: '50').click
         page.find('button.btn.btn-sul-toolbar', text: '50 per page').click
         within 'a', text: '20' do
-          expect(page).to_not have_css('i.active-icon')
+          expect(page).not_to have_css('i.active-icon')
         end
         within 'a', text: '50' do
           expect(page).to have_css('i.active-icon')
@@ -90,6 +90,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path q: 'my search'
     end
+
     it 'has a sort dropdown' do
       within '#sort-dropdown' do
         expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'Sort by relevance')

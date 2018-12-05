@@ -15,6 +15,7 @@ class SfxData
 
   def targets
     return [] unless sfx_xml
+
     @targets ||= sfx_xml.xpath('//target').map do |t|
       next unless target_xml_is_fulltext?(t)
 
@@ -44,6 +45,7 @@ class SfxData
 
   def sfx_xml
     return unless sfx_response.success?
+
     @sfx_xml ||= begin
       Nokogiri::XML.parse(sfx_response.body)
     rescue => e
