@@ -9,7 +9,7 @@ class Holdings
     end
 
     def name
-      send("#{sanitized_library}_specific_location_name".to_sym)
+      Constants::LOCS[@code]
     end
 
     def bound_with?
@@ -146,15 +146,6 @@ class Holdings
       mhld.present? && mhld.any? do |mhld_item|
         mhld_item.latest_received.present? ||
           mhld_item.public_note.present?
-      end
-    end
-
-    def method_missing(method_name, *args, &block)
-      case method_name
-      when /#{sanitized_library}_specific_location_name/
-        Constants::LOCS[@code]
-      else
-        super
       end
     end
   end
