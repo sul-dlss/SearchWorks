@@ -34,6 +34,20 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
     end
   end
 
+  describe 'selections send to', js: true do
+    it 'renders export formats' do
+      visit '/selections'
+      find('#tools-dropdown button').click
+
+      within('#tools-dropdown .dropdown-menu') do
+        expect(page).to have_css('li a', text: 'email')
+        expect(page).to have_css('li a', text: 'RefWorks')
+        expect(page).to have_css('li a', text: 'EndNote')
+        expect(page).to have_css('li a', text: 'printer')
+      end
+    end
+  end
+
   describe 'article records' do
     it 'renders selected articles' do
       visit '/selections/articles'
