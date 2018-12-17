@@ -16,7 +16,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer'
+# gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
@@ -108,3 +108,4 @@ gem 'leaflet-rails'
 gem 'recaptcha'
 gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
+gem 'bootstrap-sass', '3.3.7' # our centos6 environments can't deal with sassc 2.x
