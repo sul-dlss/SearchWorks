@@ -112,10 +112,10 @@ describe 'Sort and per page toolbar', js: true, feature: true do
     it 'per page dropdown brings up options' do
       within '#per_page-dropdown' do
         page.find('button.btn.btn-sul-toolbar').click
-        expect(page).to have_css('a', text: '10 per page', visible: true)
-        expect(page).to have_css('a', text: '20 per page', visible: true)
-        expect(page).to have_css('a', text: '50 per page', visible: true)
-        expect(page).to have_css('a', text: '100 per page', visible: true)
+        expect(page).to have_css('a', text: "10\nper page", visible: true)
+        expect(page).to have_css('a', text: "20\nper page", visible: true)
+        expect(page).to have_css('a', text: "50\nper page", visible: true)
+        expect(page).to have_css('a', text: "100\nper page", visible: true)
       end
     end
   end

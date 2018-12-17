@@ -16,7 +16,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer'
+# gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
@@ -24,7 +24,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '~> 3.0'
   gem 'selenium-webdriver','!= 3.13.0'
 end
 
@@ -108,3 +108,4 @@ gem 'leaflet-rails'
 gem 'recaptcha'
 gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
+gem 'bootstrap-sass', '3.3.7' # our centos6 environments can't deal with sassc 2.x
