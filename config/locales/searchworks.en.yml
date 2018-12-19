@@ -133,7 +133,7 @@ en:
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
-      feedback_alert_html: "The Stanford Libraries will be closed for Winter Break from December 23rd through January 7th. All SearchWorks inquiries submitted during the closure will not be read until January 8th. If you require a response before January 8th, please send your comments to %{href}."
+      feedback_alert_html: "The Stanford Libraries will be operating on a reduced schedule during the Stanford Winter Closure period (December 22, 2018 - January 6, 2019).<br/>%{link}"
     connection_form:
       success: '<strong>Thank you!</strong> Your connection problem report has been sent.'
     range_limit:
