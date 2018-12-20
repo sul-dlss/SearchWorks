@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require honeybadger
 //= require 'blacklight_advanced_search'
 //= require retina_tag
 
