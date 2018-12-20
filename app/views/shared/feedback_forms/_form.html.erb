@@ -1,9 +1,4 @@
 <div class="container">
-  <% if Settings.FEEDBACK_ALERT %>
-    <p class="feedback-alert">
-      <%= t('blacklight.feedback_form.feedback_alert_html', href: mail_to("infocenter@stanford.edu")) %>
-    </p>
-  <% end %>
   <div class="col-sm-6 col-sm-offset-2">
     <%= render "shared/feedback_forms/form_fields", locals: { target: '#feedback-form'} %>
   </div>

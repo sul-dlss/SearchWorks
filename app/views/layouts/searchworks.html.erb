@@ -86,6 +86,11 @@
           <%= render partial: 'shared/ajax_modal' %>
           <%= render 'shared/print_header' %>
           <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
+            <% if Settings.GLOBAL_ALERT %>
+              <div class="global-alert">
+                <%= t('searchworks.global_alert_html', link: link_to('More information about schedules and affected services', 'https://library.stanford.edu/blogs/stanford-libraries-blog/2018/12/libraries-intersession-and-winter-closure-hours-2018-19')) %>
+              </div>
+            <% end %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
             <%= yield %>
@@ -113,7 +118,7 @@
           google: {
             families: ['Source Sans Pro:300,400,700', 'Crimson Text:400']
           }
-        });  
+        });
       }
     </script>
     <noscript>
