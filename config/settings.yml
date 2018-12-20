@@ -67,3 +67,4 @@ RECAPTCHA:
   SITE_KEY: 6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy
   SECRET_KEY: 6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx
 IIIF_DND_BASE_URL: https://library.stanford.edu/projects/international-image-interoperability-framework/viewers?%{query}
+REVISION: <%= File.read("#{Rails.root}/REVISION").chomp if File.exists?("#{Rails.root}/REVISION") %>
