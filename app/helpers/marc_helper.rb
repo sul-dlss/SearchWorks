@@ -228,53 +228,6 @@ module MarcHelper
     return fields unless fields.blank?
   end
 
-  # Generate dt/dd pair with an unordered list from the table of contents (IE marc 505s)
-  def get_toc(marc)
-    fields = []
-    vern = []
-    unmatched_vern = []
-    tag = "505"
-    if marc[tag] or marc[Constants::NIELSEN_TAGS[tag]]
-      if marc[Constants::NIELSEN_TAGS[tag]]
-        if marc[tag].nil? or (marc[tag]["t"].nil? and marc[tag]["r"].nil?)
-          tag = Constants::NIELSEN_TAGS[tag] if marc[Constants::NIELSEN_TAGS[tag]]
-        end
-      end
-      marc.find_all { |f| (tag) === f.tag }.each do |field|
-        text = ""
-        field.each do |sub_field|
-          if sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
-            text << "#{link_to(sub_field.value, sub_field.value)} "
-          elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
-            text << " -|- #{Constants::SOURCES[sub_field.value.strip]}"
-          elsif !Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-            text << "#{sub_field.value} "
-          end
-        end
-        # we could probably just do /\s--\s/ but this works so we'll stick w/ it.
-        if Constants::NIELSEN_TAGS.has_value?(tag)
-          fields << text.split("-|-").map { |w| w.strip unless w.strip.blank? }.compact
-        else
-          fields << text.split(/[^\S]--[^\S]/).map { |w| w.strip unless w.strip.blank? }.compact
-        end
-        vernacular = get_marc_vernacular(marc, field)
-        vern << vernacular.split(/[^\S]--[^\S]/).map { |w| w.strip unless w.strip.blank? }.compact unless vernacular.nil?
-      end
-    end
-
-    unmatched_vern_fields = get_unmatched_vernacular(marc, "505")
-    unless unmatched_vern_fields.nil?
-      unmatched_vern_fields.each do |vern_field|
-        unmatched_vern << vern_field.split(/[^\S]--[^\S]/).map { |w| w.strip unless w.strip.blank? }.compact
-      end
-    end
-
-    new_vern = vern unless vern.empty?
-    new_fields = fields unless fields.empty?
-    new_unmatched_vern = unmatched_vern unless unmatched_vern.empty?
-    return { label: "Contents", fields: new_fields, vernacular: new_vern, unmatched_vernacular: new_unmatched_vern } unless (new_fields.nil? and new_vern.nil? and new_unmatched_vern.nil?)
-  end
-
   # Generate hierarchical structure of subject headings from marc
   def get_subjects(document)
     subs = ['600', '610', '611', '630', '650', '651', '653', '654', '656', '657', '658', '691', '693', '696', '697', '698', '699']

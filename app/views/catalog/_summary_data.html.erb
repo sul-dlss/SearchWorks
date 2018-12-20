@@ -1,5 +1,5 @@
 <% if document.key?(:toc_struct) ||  document.key?(:summary_struct) || document.respond_to?(:to_marc) %>
-  <% toc = document.fetch(:toc_struct, []).first || ( document.respond_to?(:to_marc) && get_toc(document.to_marc)) %>
+  <% toc = document.fetch(:toc_struct, []).first %>
   <% if toc.present? %>
     <% if toc[:fields].present? %>
       <% toc[:fields].each do |toc_field| %>

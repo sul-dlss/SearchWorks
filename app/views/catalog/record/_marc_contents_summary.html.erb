@@ -12,8 +12,8 @@
   <%= render_field_from_marc(biblio) %>
 <% end %>
 
-<% toc = get_toc(document.to_marc) %>
-<% unless toc.nil? %>
+<% toc = document.fetch(:toc_struct, []).first %>
+<% if toc.present? %>
   <dt><%= toc[:label] %></dt>
   <dd>
     <%- unless toc[:fields].nil? -%>
@@ -47,7 +47,7 @@
 <% end %>
 
 
-<% summary = get_data_with_label_from_marc(document.to_marc, "Summary", '520') %>
+<% summary = document.fetch(:summary_struct, []).first %>
 <% unless summary.nil? %>
   <%= render_field_from_marc(summary) %>
 <% end %>

@@ -28,40 +28,41 @@ if doc[:isbn_display]
   }
 end
 
-if doc.respond_to?(:to_marc)
-  summary = get_data_with_label_from_marc(doc.to_marc, "l", "520")
-  unless summary.nil?
-    summary_text = []
-    summary[:fields].each do |field|
-      if field[:vernacular].nil?
-        summary_text << field[:field]
-      else
-        summary_text << field[:vernacular]
+summary = doc.fetch(:summary_struct, []).first
+unless summary.nil?
+  summary_text = []
+  summary[:fields].each do |field|
+    if field[:vernacular].nil?
+      summary_text << field[:field]
+    else
+      summary_text << field[:vernacular]
+    end
+  end
+  xml.summary(summary_text.join(" "))
+end
+
+toc = doc.fetch(:toc_struct, []).first
+unless toc.nil?
+  xml.contents {
+    unless toc[:fields].nil?
+      toc[:fields].flatten.each do |content|
+        xml.content(content)
       end
     end
-    xml.summary(summary_text.join(" "))
-  end
+    unless toc[:vernacular].nil?
+      toc[:vernacular].flatten.each do |content|
+        xml.content(content)
+      end
+    end
+    unless toc[:unmatched_vernacular].nil?
+      toc[:unmatched_vernacular].flatten.each do |content|
+        xml.content(content)
+      end
+    end
+  }
+end
 
-  toc = get_toc(doc.to_marc)
-  unless toc.nil?
-    xml.contents {
-      unless toc[:fields].nil?
-        toc[:fields].flatten.each do |content|
-          xml.content(content)
-        end
-      end
-      unless toc[:vernacular].nil?
-        toc[:vernacular].flatten.each do |content|
-          xml.content(content)
-        end
-      end
-      unless toc[:unmatched_vernacular].nil?
-        toc[:unmatched_vernacular].flatten.each do |content|
-          xml.content(content)
-        end
-      end
-    }
-  end
+if doc.respond_to?(:to_marc)
   xml.imprint(get_imprint_for_mobile(doc.to_marc)) unless get_imprint_for_mobile(doc.to_marc).nil?
 end
 # index_parent_collections
