@@ -232,6 +232,7 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    okcomputer (1.17.3)
     parallel (1.12.1)
     parser (2.5.3.0)
       ast (~> 2.4.0)
@@ -409,6 +410,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (~> 0.5.0)
+  okcomputer
   puma (~> 3.11)
   quick_search-arxiv_searcher
   quick_search-core (= 0.1.1)
