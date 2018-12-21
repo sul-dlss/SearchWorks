@@ -108,4 +108,4 @@ gem 'leaflet-rails'
 gem 'recaptcha'
 gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap-sass', '3.3.7' # our centos6 environments can't deal with sassc 2.x
+gem 'bootstrap-sass'
