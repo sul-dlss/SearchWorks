@@ -58,6 +58,13 @@ describe FeedbackMailer do
       it 'has the last search' do
         expect(mail.body).to have_content '/?q=kittenz'
       end
+
+      describe 'time' do
+        it 'has the current time' do
+          expect(Time.zone).to receive(:now).at_least(:once).and_return('NOW!')
+          expect(mail.body).to have_content 'Time sent: NOW!'
+        end
+      end
     end
 
     describe "without name and email" do
