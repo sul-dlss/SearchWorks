@@ -11,6 +11,7 @@ cache: bundler
 
 rvm:
   - 2.5.1
+  - 2.6.0
 
 before_install:
   - google-chrome-stable --headless --disable-gpu --disable-dev-shm-usage --remote-debugging-port=9222 http://localhost &
