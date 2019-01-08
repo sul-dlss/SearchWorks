@@ -3,6 +3,7 @@ notifications:
 
 rvm:
   - 2.5.1
+  - 2.6.0
 
 addons:
   chrome: stable
