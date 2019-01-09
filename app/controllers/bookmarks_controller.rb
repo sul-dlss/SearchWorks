@@ -59,4 +59,8 @@ class BookmarksController < CatalogController
   def clear_params
     params.permit(:type).select { |_, val| %w[article catalog].include? val }
   end
+
+  def permit_bookmarks
+    params.permit(bookmarks: [:document_id, :document_type, :record_type])
+  end
 end
