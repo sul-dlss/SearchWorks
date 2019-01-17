@@ -25,6 +25,13 @@ describe RequestLinkHelper do
     )
   end
 
+  let(:ssrc_document) do
+    SolrDocument.new(
+      id: '1234',
+      item_display: ['barcode -|- library -|- SSRC-DATA -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+    )
+  end
+
   describe 'link_to_request_link' do
     it 'returns link html for the given parameters' do
       link = link_to_request_link(
@@ -90,6 +97,26 @@ describe RequestLinkHelper do
         expect(link).to have_css('a[data-title^="Requires Aeon signup"]')
       end
     end
+
+    describe 'SSRC-DATA links' do
+      let(:presenter) do
+        OpenStruct.new(heading: 'Document Title')
+      end
+
+      let(:link) do
+        Capybara.string(
+          helper.link_to_request_link(document: ssrc_document, callnumber: ssrc_document.holdings.callnumbers.first)
+        )
+      end
+
+      before do
+        expect(helper).to receive(:show_presenter).with(ssrc_document).and_return(presenter)
+      end
+
+      it 'should not include data attributes that will cause the link to be rendered in a modal' do
+        expect(link).not_to have_css('[data-behavior="requests-modal"]')
+      end
+    end
   end
 
   describe '#request_link' do
@@ -142,12 +169,6 @@ describe RequestLinkHelper do
     end
 
     describe 'SSRC-DATA' do
-      let(:ssrc_document) do
-        SolrDocument.new(
-          id: '1234',
-          item_display: ['barcode -|- library -|- SSRC-DATA -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
-        )
-      end
       let(:presenter) do
         OpenStruct.new(heading: 'Document Title')
       end

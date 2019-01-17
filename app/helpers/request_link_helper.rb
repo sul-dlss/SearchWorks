@@ -45,9 +45,15 @@ module RequestLinkHelper
   end
 
   def link_data_attributes(callnumber)
-    return { behavior: 'requests-modal' } unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
+    return unless callnumber
 
-    { toggle: 'tooltip', html: 'true', title: t('searchworks.request_link.aeon_note') }
+    if Constants::HOOVER_LIBS.include?(callnumber.library)
+      { toggle: 'tooltip', html: 'true', title: t('searchworks.request_link.aeon_note') }
+    elsif callnumber.home_location == 'SSRC-DATA'
+      {}
+    else
+      { behavior: 'requests-modal' }
+    end
   end
 
   def hoover_request_url(document, callnumber)
