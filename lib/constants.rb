@@ -488,6 +488,7 @@ module Constants
     'PAGE-HP' => 'For use in Miller Library or Green Library',
     'PAGE-HV' => 'For use in Hoover Library',
     'PAGE-IRON' => 'Offsite',
+    'PAGE-IRON2' => 'Offsite',
     'PAGE-LN' => 'Paged to Medical Library',
     'PAGE-LP' => 'Request for pickup at Music Library or Media & Microtext Center',
     'PAGE-LW' => 'For use in Law Library',
