@@ -27,7 +27,7 @@ GoogleAnalytics = (function() {
     if (!GoogleAnalytics.isLocalRequest()) {
       return ga('send', {
           hitType: 'pageview',
-          page: location.pathname
+          page: GoogleAnalytics.getPath()
         }
       );
     }
@@ -43,6 +43,12 @@ GoogleAnalytics = (function() {
 
   GoogleAnalytics.getAnalyticsId = function() {
     return $("[data-analytics-id]").data('analytics-id');
+  };
+
+  // Remove the protocol and the host and only return the path with any params
+  GoogleAnalytics.getPath = function() {
+    return location.href
+             .replace(location.protocol + '//' + location.host, '');
   };
 
   return GoogleAnalytics;
@@ -119,11 +125,11 @@ Blacklight.onLoad(function(){
 
   // Side mini-nav
   $('.side-nav-minimap button').on('click', function(e) {
-    ga('send', 'event', 'Side mini nav', $(e.currentTarget).text().trim(), location.pathname, {
+    ga('send', 'event', 'Side mini nav', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
-  
+
   // Facet collapse - expand events
   $('.facet-content').on('hide.bs.collapse', function(e) {
     ga('send', 'event', 'Facet', 'closed', $(e.currentTarget).parent().find('h3').text().trim(), {
@@ -178,45 +184,45 @@ Blacklight.onLoad(function(){
   // Select / Select all
   // Note: this is counted extra when select-all or unselect-all is also used
   $('input.toggle_bookmark').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'select', location.pathname, {
+    ga('send', 'event', 'Selection', 'select', GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
   $('span.unselect-all').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'unselect-all', location.pathname, {
+    ga('send', 'event', 'Selection', 'unselect-all', GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
   $('span.select-all').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'select-all', location.pathname, {
+    ga('send', 'event', 'Selection', 'select-all', GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
 
   // Accordion selection / collapse
   $('button[data-accordion-section-target]').on('click', function(e) {
-    ga('send', 'event', 'Accordion selection', $(e.currentTarget).text().trim(), location.pathname, {
+    ga('send', 'event', 'Accordion selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
 
   // View type dropdown
   $('#view-type-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'View selection', $(e.currentTarget).text().trim(), location.pathname, {
+    ga('send', 'event', 'View selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
 
   // Sort by dropdown
   $('#sort-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'Sort selection', $(e.currentTarget).text().trim(), location.pathname, {
+    ga('send', 'event', 'Sort selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
 
   // Per page dropdown
   $('#per_page-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'Per page selection', $(e.currentTarget).text().trim(), location.pathname, {
+    ga('send', 'event', 'Per page selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
       'transport': 'beacon'
     });
   });
