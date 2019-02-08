@@ -85,7 +85,7 @@ describe "Emailing Records", type: :feature, js: true do
     end
 
     context 'emailing a full record' do
-      it 'should hide the side-nav-minimap' do
+      before do
         visit solr_document_path('14')
 
         within('.record-toolbar') do
@@ -103,7 +103,17 @@ describe "Emailing Records", type: :feature, js: true do
 
           find('button[type="submit"]').click
         end
+      end
 
+      it 'should render metadata from MARC/MODS' do
+        # triggers capybara to wait until email is sent
+        expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
+        email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
+        expect(email).to have_css('h3', text: /Bibliographic information/)
+        expect(email).to have_css('dd', text: /A quartely publication/)
+      end
+
+      it 'should hide the side-nav-minimap' do
         # triggers capybara to wait until email is sent
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
 
