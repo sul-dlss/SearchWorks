@@ -46,6 +46,16 @@ describe "catalog/access_panels/_online.html.erb" do
       end
     end
 
+    describe 'when the record is not online, has an SFX link, but may return a GBS link (due to a standard number)' do
+      it 'renders content to be filled by GBS if something is returned' do
+        assign(:document, SolrDocument.new(oclc: ['abc123']))
+        render
+
+        expect(rendered).to have_css('.panel-online', visible: false)
+        expect(rendered).to have_css('.panel-online .google-books.OCLCabc123')
+      end
+    end
+
     describe "database" do
       before do
         assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }], format_main_ssim: ["Database"]))

@@ -51,6 +51,17 @@
           </div>
         </li>
       </ul>
+    <% elsif book_ids.values.any?(&:present?) %>
+      <ul class="links" data-long-list data-list-type="online">
+        <li>
+          <div class="row google-books <%= css_class %>">
+            <div class="col-lg-12 col-md-12 google-preview">
+              <%= image_tag "gbs_preview_button.gif", alt:"" %>
+              <a href="" class="full-view">(Full view)</a>
+            </div>
+          </div>
+        </li>
+      </ul>
     <% end %>
   </div>
   <% if document.access_panels.online? and document.is_a_database? %>
