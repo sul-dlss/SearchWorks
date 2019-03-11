@@ -50,7 +50,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.4.9)
+    autoprefixer-rails (9.4.10.2)
       execjs
     bcrypt (3.1.12)
     bibtex-ruby (4.4.7)
@@ -174,7 +174,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise-guests (0.6.1)
+    devise-guests (0.7.0)
       devise
     devise-remote-user (1.0.0)
       devise
@@ -195,7 +195,7 @@ GEM
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.4.7)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.2.1)
+    dry-equalizer (0.2.2)
     dry-inflector (0.1.2)
     dry-logic (0.5.0)
       dry-container (~> 0.2, >= 0.2.6)
@@ -322,7 +322,7 @@ GEM
     mods_display (0.6.0)
       i18n
       stanford-mods (~> 2.1)
-    msgpack (1.2.7)
+    msgpack (1.2.8)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
