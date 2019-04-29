@@ -4,6 +4,20 @@
     <dd>
       <%= link_to(author[:link].strip, search_catalog_path(q: '"' + author[:search] + '"', search_field: 'search_author')) if author[:link].present? %>
       <%= author[:post_text] if author[:post_text] %>
+      <% if author[:authorities].present? || author[:rwo].present? %>
+        <% uri_map = knowledge_panel_uri_map(author[:authorities], author[:rwo]) %>
+        <i
+          style="display:none;"
+          class="fa fa-info-circle knowledge-panel-toggle"
+          data-behavior="togglePanel"
+          data-loc-uris="<%= uri_map['id.loc.gov'].try(:join, ',')  %>"
+          data-viaf-uris="<%= uri_map['viaf.org'].try(:join, ',') %>"
+          data-isni-uris="<%= uri_map['isni.org'].try(:join, ',') %>"
+        >
+        </i>
+        <div style="display: none;" class="knowledge-panel">
+        </div>
+      <% end %>
     </dd>
   <% end %>
 <% end %>
