@@ -20,6 +20,19 @@
 
 <%= render partial: "shared/side_nav_minimap", locals: locals %>
 
+<% if document.to_marc['130'] && (document.to_marc['130']['0'] || document.to_marc['130']['1']) %>
+  <% uri_map = knowledge_panel_uri_map(document.to_marc['130']['0'], document.to_marc['130']['1']) %>
+  <div
+    style="display: none;"
+    class="knowledge-panel"
+    data-wikidata-panel-autoopen
+    data-loc-uris="<%= uri_map['id.loc.gov'].try(:join, ',')  %>"
+    data-viaf-uris="<%= uri_map['viaf.org'].try(:join, ',') %>"
+    data-isni-uris="<%= uri_map['isni.org'].try(:join, ',') %>"
+  >
+  </div>
+<% end %>
+
 <h2>Description</h2>
 <% if contributors.present? %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">

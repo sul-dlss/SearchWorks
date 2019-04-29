@@ -1,0 +1,65 @@
+.fa.knowledge-panel-toggle {
+  color: $sky;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-left: 5px;
+}
+
+.knowledge-panel {
+  border: 1px solid $sky;
+  border-top: 15px solid $sky;
+  box-shadow: 0 4px 8px -2px rgba(0,0,0,0.2);
+  padding: 15px;
+
+  audio {
+    height: 33px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  dd {
+    width: 23em;
+  }
+
+  .P800 {
+    li {
+      border-bottom: 1px solid $cloud;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .author-date {
+    color: $cool-grey;
+  }
+
+  .knowledge-panel-thumb {
+    float: right;
+    margin-bottom: 5px;
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  .knowledge-panel-footer {
+    border-top: 1px solid $cloud;
+    clear: both;
+    margin: 5px 0 0;
+    padding: 5px 0 0;
+    text-align: right;
+
+    .editable-source-help {
+      color: $cool-grey;
+    }
+  }
+
+  .wikidata-source-link {
+    &::before {
+      content: '\00270E';
+      font-size: 16px;
+      vertical-align: middle;
+    }
+  }
+}
