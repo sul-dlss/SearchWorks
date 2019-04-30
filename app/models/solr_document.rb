@@ -34,6 +34,7 @@ class SolrDocument
   include EdsSubjects
   include MarcSubjects
   include IiifConcern
+  include WofConcern
 
   include Blacklight::Solr::Document
   include SchemaDotOrg

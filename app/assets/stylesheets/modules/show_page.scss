@@ -1,3 +1,15 @@
 .show-document h2 {
   border-bottom: 1px solid $sul-h2-font-color;
 }
+
+.wof-show {
+  height: 400px;
+
+  .wof-show-map {
+    height: 400px;
+    // width: '100%';
+  }
+  .wof-show-info {
+    // width: '200px';
+  }
+}
