@@ -66,6 +66,32 @@ class WikiDataSparql {
     });
   }
 
+  getDescriptionByLoCID(callback) {
+    $.ajax({
+      url: this.endpoint,
+      headers: { Accept: 'application/sparql-results+json' },
+      format: 'jsonp',
+      data: { query: this.queryForDescriptionByLoCID },
+      success: (data) => {
+        console.log(data);
+        if(!(data
+              && data.results
+              && data.results.bindings
+              && data.results.bindings[0]
+              && data.results.bindings[0].objectDescription
+              && data.results.bindings[0].objectDescription.value
+        )) return;
+
+        if(typeof callback === 'function') {
+          callback(
+            data.results.bindings[0].objectDescription.value,
+            data.results.bindings[0].object.value // the Object URI
+          );
+        }
+      },
+    });
+  }
+
   get endpoint() {
     return 'https://query.wikidata.org/sparql?';
   }
@@ -98,6 +124,17 @@ class WikiDataSparql {
       { ?entity wdtn:P214 <${this.uriMap.viaf && this.uriMap.viaf[0]}> }
       UNION
       { ?entity wdtn:P213 <${this.uriMap.isni && this.uriMap.isni[0]}> }
+    }`;
+  }
+
+  get queryForDescriptionByLoCID() {
+    return `
+    SELECT ?object ?objectDescription
+    WHERE {
+      ?object wdt:P244 "${this.uriMap.loc}"
+      SERVICE wikibase:label {
+        bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en"
+      }
     }`;
   }
 
@@ -182,6 +219,10 @@ var AuthorityLookups = (function() {
     return $('[data-wikidata-panel-autoopen]');
   }
 
+  function $wofPanels() {
+    return $('[data-wof]');
+  }
+
   function groupStatements(statements) {
     var items = {};
     for(var index in statements) {
@@ -203,6 +244,16 @@ var AuthorityLookups = (function() {
       }
     }
     return items;
+  }
+
+  function wikiDataSourceLink(url) {
+    return `<a class="wikidata-source-link" href="${url}">
+              <span class="sr-only">editable source </span>Wikidata
+             </a>`;
+  }
+
+  function invitationToEdit() {
+    return '<div class="editable-source-help">Improve this knowledge panel by contributing to its open data source.</div>';
   }
 
   function uriObjectFromData(element) {
@@ -323,12 +374,11 @@ var AuthorityLookups = (function() {
           panel.append(`<img class="knowledge-panel-thumb" src="${imageProp.image}" />`)
         }
         panel.append($dl);
+        var wdUri = `https://wikidata.org/wiki/${wid}`
         panel.append(
           `<div class="knowledge-panel-footer">
-            Sources: <a class="wikidata-source-link" href="https://wikidata.org/wiki/${wid}">
-                      <span class="sr-only">editable source </span>Wikidata
-                     </a>
-            <div class="editable-source-help">Improve this knowledge panel by contributing to its open data source.</div>
+            Sources: ${wikiDataSourceLink(wdUri)}
+            ${invitationToEdit()}
           </div>`
         );
 
@@ -352,9 +402,24 @@ var AuthorityLookups = (function() {
       });
     },
 
+    augmentWoFPanel: function() {
+      if($wofPanels().length === 0) return;
+
+      $wofPanels().each(function() {
+        var panel = $(this);
+        new WikiDataSparql({ loc: panel.data('loc-id') }).getDescriptionByLoCID((description, wdUri) => {
+          $(panel).find('dl').prepend('<dt>Description</dt>' + `<dd>${description}</dd>`);
+          var $footer = $(panel).find('.knowledge-panel-footer');
+          $footer.find('.links').prepend(`${wikiDataSourceLink(wdUri)}, `);
+          $footer.append(invitationToEdit());
+        });
+      });
+    },
+
     init: function() {
       this.fetchDataForAutoOpenPanels();
       this.showTogglesForWikiDataEntities();
+      this.augmentWoFPanel();
       this.addClickBehavior();
     },
 

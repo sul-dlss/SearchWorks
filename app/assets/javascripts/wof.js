@@ -48,7 +48,7 @@ Blacklight.onLoad(function(){
       var bounds = (data.properties['lbl:bbox'] || data.properties['geom:bbox']).split(',');
       map.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
 
-      var $dl = $('<dl></dl>');
+      var $dl = $el.find('.wof-show-info dl');
       if(data.properties['wof:hierarchy']) {
         var hierarchy = data.properties['wof:hierarchy'][0];
         $dl.append(`<dt>Located in</dt>`);

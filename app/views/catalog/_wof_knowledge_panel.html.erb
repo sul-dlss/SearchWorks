@@ -2,12 +2,12 @@
   <div class="knowledge-panel" data-wof="<%= wof['wof_id'] %>"  data-loc-id="<%= wof['loc_id'] %>">
     <i class="fa fa-times-circle knowledge-panel-toggle" style="float:right;"></i>
     <h3 class="wof-title"></h3>
-    <div class="wof-show-info col-md-5"></div>
+    <div class="wof-show-info col-md-5"><dl></dl></div>
     <div class="wof-show col-md-7" style="margin-bottom: 10px;">
       <div id='<%= "#{wof['wof_id']}" %>' class="wof-show-map" ></div>
     </div>
     <div class="knowledge-panel-footer">
-      Sources: <%= link_to("Who's on First", "https://spelunker.whosonfirst.org/id/#{wof['wof_id']}/") %>
+      Sources: <span class="links"><%= link_to("Who's on First", "https://spelunker.whosonfirst.org/id/#{wof['wof_id']}/") %></span>
     </div>
   </div>
 <% end %>
