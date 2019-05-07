@@ -58,7 +58,8 @@
     <%- elsif render_grouped_response? %>
       <%= render_grouped_document_index %>
     <%- else %>
-      <%= render partial: 'wof_knowledge_panel' %>
+      <%= render 'wof_knowledge_panel' %>
+      <%= render 'author_knowledge_panel' %>
       <%= render_document_index %>
       <% benchmark 'Alt results' do %>
       <%= render 'alternate_catalog' if show_alternate_catalog? %>

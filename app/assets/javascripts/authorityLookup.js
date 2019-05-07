@@ -278,8 +278,10 @@ var AuthorityLookups = (function() {
         new WikiDataSparql(uriMap).wikiIdFromLocId((entityUri) => {
           var wid = idFromURI(entityUri);
           if(!wid) return;
+          var link = toggle.prevAll('a');
 
-          toggle.next().data('wikidata-id', wid)
+          toggle.next().data('wikidata-id', wid);
+          link.prop('href', `${link.prop('href')}&wdid=${wid}`);
           toggle.show();
         });
       });
@@ -301,7 +303,7 @@ var AuthorityLookups = (function() {
     },
 
     fetchWikiData: function(panel, autoOpen = false) {
-      if(panel.data('wikiDataFetched')) return;
+      if(panel.data('wikiDataFetched') || panel.children().length > 0) return;
       panel.data('wikiDataFetched', true);
       var _this = this;
       var wid = panel.data('wikidata-id');
@@ -391,6 +393,11 @@ var AuthorityLookups = (function() {
       var _this = this;
       $autoOpenPanels().each(function() {
         var panel = $(this)
+        if(panel.data('wikidata-id')) { // Bypass lookups if we already have a wikidata ID
+          _this.fetchWikiData(panel, true);
+          return;
+        }
+
         var uriMap = uriObjectFromData(panel);
         new WikiDataSparql(uriMap).wikiIdFromLocId((entityUri) => {
           var wid = idFromURI(entityUri)

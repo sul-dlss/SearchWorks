@@ -1,0 +1,15 @@
+<% if display_author_knowledge_panel? %>
+  <div class="knowledge-panel" data-wikidata-panel-autoopen data-wikidata-id="<%= sanitize(params[:wdid]) %>">
+  </div>
+<% elsif (author_uris = author_uris_from_results).present?  %>
+  <% uri_map = knowledge_panel_uri_map(author_uris, []) %>
+  <div
+    style="display: none;"
+    class="knowledge-panel"
+    data-wikidata-panel-autoopen
+    data-loc-uris="<%= uri_map['id.loc.gov'].try(:join, ',')  %>"
+    data-viaf-uris="<%= uri_map['viaf.org'].try(:join, ',') %>"
+    data-isni-uris="<%= uri_map['isni.org'].try(:join, ',') %>"
+  >
+  </div>
+<% end %>
