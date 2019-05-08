@@ -325,7 +325,7 @@ GEM
     msgpack (1.2.10)
     multi_json (1.13.1)
     multi_xml (0.6.0)
-    multipart-post (2.0.0)
+    multipart-post (2.1.0)
     mysql2 (0.5.2)
     namae (1.0.1)
     net-http-persistent (2.9.4)
@@ -465,7 +465,7 @@ GEM
       ffi (~> 1.9)
       rake
     scrub_rb (1.0.1)
-    selenium-webdriver (3.142.0)
+    selenium-webdriver (3.142.1)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     simplecov (0.16.1)
