@@ -21,6 +21,7 @@ GoogleAnalytics = (function() {
       m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', GoogleAnalytics.analyticsId, 'auto');
+    ga('set', 'anonymizeIp', true);
   };
 
   GoogleAnalytics.trackPageview = function(url) {
