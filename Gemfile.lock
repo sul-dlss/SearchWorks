@@ -181,7 +181,6 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -219,7 +218,7 @@ GEM
     quick_search-arxiv_searcher (0.0.1)
       nokogiri (~> 1.6)
       quick_search-core (~> 0)
-    quick_search-core (0.1.1)
+    quick_search-core (0.2.0)
       fastimage
       httpclient
       kaminari
@@ -227,7 +226,6 @@ GEM
       mysql2
       nokogiri
       rails (~> 5.0)
-      therubyracer
     quick_search-generic_theme (0.2.0)
       font-awesome-sass (~> 4.4)
       foundation-rails (= 5.4.5)
@@ -271,7 +269,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    ref (2.0.0)
     regexp_parser (1.4.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
@@ -337,9 +334,6 @@ GEM
     sshkit (1.18.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -393,7 +387,7 @@ DEPENDENCIES
   okcomputer
   puma (~> 3.11)
   quick_search-arxiv_searcher
-  quick_search-core (= 0.1.1)
+  quick_search-core
   quick_search-generic_theme
   quick_search-open_library_searcher
   quick_search-placeholder_searcher
