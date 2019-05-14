@@ -101,16 +101,6 @@
       </div> <!-- #su-content end -->
     </div> <!-- #su-wrap end -->
     <%= render 'shared/su_footer' %>
-    <% if Settings.MOUSEFLOW %>
-      <script type="text/javascript">
-        var _mfq = _mfq || [];
-        (function() {
-            var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
-            mf.src = "//cdn.mouseflow.com/projects/<%= Settings.MOUSEFLOW_KEY %>.js";
-            document.getElementsByTagName("head")[0].appendChild(mf);
-        })();
-      </script>
-    <% end %>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       if(typeof(WebFont) !== 'undefined') {
