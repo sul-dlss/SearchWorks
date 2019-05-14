@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'quick_search-core'
 gem 'jquery-rails'
 gem 'bootstrap', '>= 4.0.0.beta', '< 5'
-gem 'autoprefixer-rails', '~> 8.0' # pin to 8.x until we can update to quick_search-core 0.2+ (without therubyracer dependency)
+gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
 gem 'config'
