@@ -30,8 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'quick_search-core'
 gem 'jquery-rails'
-gem 'bootstrap', '>= 4.0.0.beta', '< 5'
-gem 'autoprefixer-rails', '~> 8.0' # pin to 8.x until we can update to quick_search-core 0.2+ (without therubyracer dependency)
+gem 'bootstrap', '>= 4.3.1', '< 5'
+gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
 gem 'config'
@@ -49,9 +49,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # your config/quick_search_config.yml file as well as references to them in your theme's search
 # results page template
 
-gem 'quick_search-wikipedia_searcher'
-gem 'quick_search-open_library_searcher'
-gem 'quick_search-arxiv_searcher'
 gem 'quick_search-placeholder_searcher'
 
 # -END Inserted by QuickSearch-
