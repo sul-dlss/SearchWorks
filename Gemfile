@@ -49,9 +49,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # your config/quick_search_config.yml file as well as references to them in your theme's search
 # results page template
 
-gem 'quick_search-wikipedia_searcher'
-gem 'quick_search-open_library_searcher'
-gem 'quick_search-arxiv_searcher'
 gem 'quick_search-placeholder_searcher'
 
 # -END Inserted by QuickSearch-

@@ -213,9 +213,6 @@ GEM
     popper_js (1.14.5)
     public_suffix (3.0.3)
     puma (3.12.1)
-    quick_search-arxiv_searcher (0.0.1)
-      nokogiri (~> 1.6)
-      quick_search-core (~> 0)
     quick_search-core (0.2.0)
       fastimage
       httpclient
@@ -230,11 +227,8 @@ GEM
       quick_search-core (~> 0.1)
       sass (~> 3.2)
       sass-rails (~> 5.0)
-    quick_search-open_library_searcher (0.0.1)
-      quick_search-core (~> 0)
     quick_search-placeholder_searcher (0.0.1)
       quick_search-core (~> 0)
-    quick_search-wikipedia_searcher (0.0.1)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -393,12 +387,9 @@ DEPENDENCIES
   mysql2 (~> 0.5.0)
   okcomputer
   puma (~> 3.11)
-  quick_search-arxiv_searcher
   quick_search-core
   quick_search-generic_theme
-  quick_search-open_library_searcher
   quick_search-placeholder_searcher
-  quick_search-wikipedia_searcher
   rails (~> 5.2)
   rspec
   rspec-rails
