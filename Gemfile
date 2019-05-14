@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'quick_search-core'
 gem 'jquery-rails'
-gem 'bootstrap', '>= 4.0.0.beta', '< 5'
+gem 'bootstrap', '>= 4.3.1', '< 5'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
