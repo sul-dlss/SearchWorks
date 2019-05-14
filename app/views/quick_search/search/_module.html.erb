@@ -1,16 +1,17 @@
 <div id="<%= service_name.dasherize %>" class="module-contents" >
     <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
     <% if searcher.is_a? StandardError %>
+        <% module_link = QuickSearch::Searcher.module_link_on_error(service_name, searcher, @query) %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: nil } %>
         <% if params[:page].blank? %>
             <% page = 1 %>
         <% else %>
             <% page = params[:page] %>
         <% end %>
-        <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging' } %>
+        <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging', module: module_link } %>
     <% elsif searcher.results.blank? %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
-        <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name} %>
+        <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
     <% else %>
         <% unless defined? searcher.loaded_link_mobile %>
           <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
