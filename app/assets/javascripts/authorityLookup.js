@@ -73,7 +73,6 @@ class WikiDataSparql {
       format: 'jsonp',
       data: { query: this.queryForDescriptionByLoCID },
       success: (data) => {
-        console.log(data);
         if(!(data
               && data.results
               && data.results.bindings

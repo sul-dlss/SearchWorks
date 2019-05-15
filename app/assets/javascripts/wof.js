@@ -19,6 +19,7 @@ class WoFGeoJSON {
 Blacklight.onLoad(function(){
   $("[data-wof]").each(function() {
     var $el = $(this);
+
     var $toggleButton = $(this).find('.knowledge-panel-toggle');
     $toggleButton.on('click', function() {
       $(this).toggleClass('fa-plus-circle', !$(this).hasClass('fa-plus-circle'));
@@ -29,6 +30,8 @@ Blacklight.onLoad(function(){
         }
       });
     });
+
+    if ($el.find('.wof-show-info dl dt').length > 0) return;
 
     var wofId = $el.data().wof.toString();
     var map = L.map($el.find('.wof-show-map').first().attr('id'), {
