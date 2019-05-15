@@ -47,8 +47,8 @@ class NearbyOnShelf
           items << get_next_spines_from_field(my_shelfkey, "shelfkey", after.to_i * 2, page.to_i)
         end
       end
-      items.flatten
     end
+    items.flatten
   end  # get_nearby_items
 
   # given a shelfkey or reverse shelfkey (for a lopped call number), get the

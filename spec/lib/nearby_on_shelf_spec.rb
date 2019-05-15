@@ -736,7 +736,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(set2_callnums[3]).to eq "DDD"
     end
 
-    it "should return nil if there are no items or all items have blacklisted callnums" do
+    it "should return an empty array if there are no items or all items have blacklisted callnums" do
       _doc_no_items = {
         id: 'doc5',
         title_245a_display: 'title5',
@@ -753,8 +753,8 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       }
       doc_no_items = SolrDocument.new(_doc_no_items)
       doc_no_good_callnums = SolrDocument.new(_doc_no_good_callnums)
-      expect(nearby_obj.send(:get_nearby_items, doc_no_items[:item_display], "", how_many_before, how_many_after, page)).to be_nil
-      expect(nearby_obj.send(:get_nearby_items, doc_no_good_callnums[:item_display], "", how_many_before, how_many_after, page)).to be_nil
+      expect(nearby_obj.send(:get_nearby_items, doc_no_items[:item_display], "", how_many_before, how_many_after, page)).to eq([])
+      expect(nearby_obj.send(:get_nearby_items, doc_no_good_callnums[:item_display], "", how_many_before, how_many_after, page)).to eq([])
     end
   end # get_nearby_items
 end
