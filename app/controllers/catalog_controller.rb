@@ -65,6 +65,8 @@ class CatalogController < ApplicationController
     #  # :q => '{!raw f=id v=$id}'
     #}
 
+    config.crawler_detector = lambda { |_| Settings.DISABLE_SESSIONS }
+
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.title_field = 'title_display'
