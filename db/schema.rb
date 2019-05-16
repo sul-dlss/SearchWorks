@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_05_10_184554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "action"
-    t.integer "session_id"
+    t.bigint "session_id"
     t.string "created_at_string"
     t.index ["created_at_string"], name: "index_events_on_created_at_string"
     t.index ["session_id"], name: "index_events_on_session_id"
