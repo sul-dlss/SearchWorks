@@ -7,3 +7,8 @@
   padding-left: $line-height-computed;
   margin-bottom: $line-height-computed;
 }
+
+.iiif-dnd {
+  position: relative;
+  z-index: 1;
+}
