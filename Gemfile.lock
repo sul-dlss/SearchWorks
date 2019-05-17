@@ -353,6 +353,8 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
+    rack-attack (6.0.0)
+      rack (>= 1.0, < 3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rack-utf8_sanitizer (1.6.0)
@@ -587,6 +589,7 @@ DEPENDENCIES
   oauth2 (~> 1.4)
   okcomputer
   puma (~> 3.7)
+  rack-attack
   rack-utf8_sanitizer
   rails (~> 5.2)
   rails-controller-testing
