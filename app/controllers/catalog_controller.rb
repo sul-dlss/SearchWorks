@@ -47,6 +47,8 @@ class CatalogController < ApplicationController
       "f.stanford_work_facet_hsim.facet.limit": "-1"
     }
 
+    config.fetch_many_document_params = { fl: '*' }
+
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 

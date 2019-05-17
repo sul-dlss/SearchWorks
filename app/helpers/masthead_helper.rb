@@ -25,7 +25,7 @@ module MastheadHelper
   def bookplate_from_document_list(response = @response)
     return unless params[:f] && params[:f][:fund_facet].present? && response.docs.present?
 
-    SolrDocument.new(response.docs.first).bookplates.find do |bookplate|
+    SolrDocument.new(response.docs.first.to_h).bookplates.find do |bookplate|
       bookplate.linking_value == params[:f][:fund_facet].first
     end
   end

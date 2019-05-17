@@ -17,7 +17,7 @@ describe SfxDataController do
     it 'is successful and renders the show template' do
       get :show, params: { url: URI.encode('http://example.com') }
 
-      expect(response).to be_success
+      expect(response).to be_successful
       expect(response).to render_template('show')
     end
   end

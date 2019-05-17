@@ -7,7 +7,7 @@ class SelectedDatabases
 
   def databases
     @databases ||= @solr_documents.map do |solr_document|
-      SelectedDatabase.new(solr_document)
+      SelectedDatabase.new(solr_document.to_h)
     end
   end
 
