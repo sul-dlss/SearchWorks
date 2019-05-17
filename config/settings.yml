@@ -24,6 +24,7 @@ BOOKPLATES_EXHIBIT_URL: 'https://exhibits.stanford.edu/digital-bookplates'
 GOVERNMENT_DOCUMENTS_ACCESS_POINT: true
 EMAIL_THRESHOLD: 5
 DISABLE_SESSIONS: false
+THROTTLE_TRAFFIC: false
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
