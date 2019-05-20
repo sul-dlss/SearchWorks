@@ -235,13 +235,13 @@ GEM
       faraday (~> 0.8)
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.11.0)
+    ffi (1.11.1)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashie (3.6.0)
-    honeybadger (3.3.1)
+    honeybadger (4.3.0)
     httparty (0.17.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -529,7 +529,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webdrivers (3.9.3)
+    webdrivers (3.9.4)
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
       selenium-webdriver (~> 3.0)
@@ -573,7 +573,7 @@ DEPENDENCIES
   ebsco-eds (= 1.0.7)
   faraday (~> 0.10)
   font-awesome-rails
-  honeybadger (~> 3.0)
+  honeybadger
   jbuilder (~> 2.5)
   jquery-datatables-rails
   jquery-rails

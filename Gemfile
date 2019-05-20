@@ -42,7 +42,7 @@ gem 'ruby-oembed'
 
 gem 'okcomputer' # monitors application and its dependencies
 
-gem 'honeybadger', '~> 3.0'
+gem 'honeybadger'
 
 group :deployment do
   gem 'capistrano', '~> 3.0'
