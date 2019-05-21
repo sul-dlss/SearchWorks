@@ -53,8 +53,13 @@ describe "catalog/_index_marc.html.erb" do
 
   describe 'summary' do
     context 'when present' do
+      let(:document) do
+        SolrDocument.new(
+          summary_struct: [{ unmatched_vernacular: ['!'] }]
+        )
+      end
+
       before do
-        document[:summary_struct] = [{ unmatched_vernacular: ['!'] }]
         render
       end
 
@@ -64,6 +69,10 @@ describe "catalog/_index_marc.html.erb" do
     end
 
     context 'when not present' do
+      let(:document) do
+        SolrDocument.new({})
+      end
+
       it 'does not render the heading/section at all' do
         expect(rendered).not_to have_css('dt', text: 'Summary')
       end
