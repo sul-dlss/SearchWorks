@@ -4,7 +4,7 @@ a {
   text-decoration: none;
 
   &.disabled {
-    color: $gray-80-percent;
+    color: $sul-btn-disabled-color;
     cursor: not-allowed;
     text-decoration: none;
   }
@@ -13,7 +13,7 @@ a {
 body {
   color: $sul-text-color;
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 a:not(.btn) {
@@ -28,22 +28,27 @@ a:not(.btn) {
 
 h1 {
   color: $sul-h1-font-color;
+  font-weight: 300;
+  line-height: 1.2em;
   padding: 10px 0;
 }
 
 h2 {
-  color: $sul-h2-font-color ;
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-  font-weight: 400;
+  color: $sul-h2-font-color;
   letter-spacing: 0;
   line-height: 1.2em;
+  margin: .5em 0;
 }
 
 h3 {
-  font-size: 1.4em;
-  font-weight: 400;
-  line-height: 1.3em;
-  margin: 0 0 .4em 0;
+  color: $sul-h3-font-color;
+  line-height: 1.2em;
+  margin: 0 0 .4em;
+}
+
+h4 {
+  color: $sul-h4-font-color; 
+  line-height: 1.2em;
 }
 
 dl {
@@ -51,7 +56,7 @@ dl {
 }
 
 dt {
-  color: $gray-41-percent;
+  color: $cool-grey;
   font-weight: normal;
   font-size: .9em;
   text-transform: uppercase !important;

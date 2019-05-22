@@ -1,7 +1,27 @@
 .searcher-anchors {
+  margin-bottom: 30px;
+  justify-content: center;
 
   dt {
     text-align: right;
+    margin: 7px;
+  }
+  
+  dd {
+    margin: 0;
+  }
+  
+  .list-inline {
+    margin: 0;
+  }
+  
+  .list-inline-item {
+    margin: 0;
+  }
+  
+  .list-inline-item a {
+    display: inline-block;
+    margin: 7px;
   }
 
   @include media-breakpoint-down(md) {
@@ -19,9 +39,8 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
-    li {
-      display: block;
-    }
-  }
+}
+
+#result-types {
+  justify-content: center;
 }

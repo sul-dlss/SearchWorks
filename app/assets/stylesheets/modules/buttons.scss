@@ -8,10 +8,10 @@
   @include button-variant($pantone-3145, $pantone-3145)
 }
 .btn-warning {
-  @include button-variant($pantone-144, $pantone-144)
+  @include button-variant($poppy, $poppy)
 }
 .btn-danger {
-  @include button-variant($boston-university-red, $boston-university-red)
+  @include button-variant($bright-red, $bright-red)
 }
 
 .btn-yewno {

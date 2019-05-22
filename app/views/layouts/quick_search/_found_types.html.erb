@@ -1,7 +1,7 @@
 <% # overriden from the QuickSearch gem %>
 <div class='row searcher-anchors'>
-  <dt class='col-sm-4'>Found results in</dt>
-  <dd class='col-sm-5'>
+  <dt>Found results in</dt>
+  <dd>
     <ul class="list-inline">
       <% QuickSearch::Engine::APP_CONFIG['found_types'].each do |searcher| %>
         <% if @found_types.include? searcher  %>

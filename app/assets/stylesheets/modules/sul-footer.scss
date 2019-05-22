@@ -1,13 +1,16 @@
 #su-content {
-  padding-bottom: 200px;
+  padding-bottom: 200px !important;
 }
 
 #sul-footer-container {
-  padding: 0;
-  min-height: 200px;
-  -webkit-box-shadow: 0 4px 8px -8px rgba(0, 0, 0, .2) inset;
-  box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2) inset;
-  background-color: $sul-footer-bg-color;
+	padding: 0 !important;
+	position: relative;
+	margin-top: -200px;
+	min-height: 200px;
+	clear: both;
+	-webkit-box-shadow: 0 4px 8px -8px rgba(0,0,0,0.2) inset;
+	box-shadow: 0 4px 8px -8px rgba(0,0,0,0.2) inset;
+	background-color: $sul-footer-bg-color;
 }
 
 #sul-footer {
