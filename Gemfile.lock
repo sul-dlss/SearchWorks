@@ -141,13 +141,6 @@ GEM
       csl (~> 1.5)
     climate_control (0.2.0)
     coderay (1.1.2)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     config (1.7.1)
       activesupport (>= 3.0)
@@ -203,7 +196,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 0.5, >= 0.5)
-    dry-validation (0.13.2)
+    dry-validation (0.13.3)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
       dry-core (~> 0.2, >= 0.2.1)
@@ -405,8 +398,8 @@ GEM
     roadie (3.5.0)
       css_parser (~> 1.4)
       nokogiri (~> 1.8)
-    roadie-rails (1.3.0)
-      railties (>= 3.0, < 5.3)
+    roadie-rails (2.1.0)
+      railties (>= 5.1, < 6.1)
       roadie (~> 3.1)
     rsolr (2.2.1)
       builder (>= 2.1.2)
@@ -428,7 +421,7 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.69.0)
+    rubocop (0.70.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
@@ -462,7 +455,7 @@ GEM
       ffi (~> 1.9)
       rake
     scrub_rb (1.0.1)
-    selenium-webdriver (3.142.2)
+    selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     simplecov (0.16.1)
@@ -488,7 +481,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    sqlite3 (1.4.1)
     sshkit (1.18.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -563,7 +556,6 @@ DEPENDENCIES
   capistrano-rvm
   capybara (~> 3.0)
   coderay
-  coffee-rails (~> 4.2)
   config
   deprecation
   devise
@@ -595,7 +587,7 @@ DEPENDENCIES
   recaptcha
   retina_tag
   rinku
-  roadie-rails (~> 1.1)
+  roadie-rails (~> 2)
   rsolr
   rspec-rails (~> 3.0)
   rubocop
@@ -608,7 +600,7 @@ DEPENDENCIES
   solr_wrapper
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.3.13)
+  sqlite3
   turbolinks
   uglifier (>= 2.7.2)
   web-console (>= 3.3.0)
