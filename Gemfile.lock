@@ -405,8 +405,8 @@ GEM
     roadie (3.5.0)
       css_parser (~> 1.4)
       nokogiri (~> 1.8)
-    roadie-rails (1.3.0)
-      railties (>= 3.0, < 5.3)
+    roadie-rails (2.1.0)
+      railties (>= 5.1, < 6.1)
       roadie (~> 3.1)
     rsolr (2.2.1)
       builder (>= 2.1.2)
@@ -488,7 +488,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    sqlite3 (1.4.1)
     sshkit (1.18.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -595,7 +595,7 @@ DEPENDENCIES
   recaptcha
   retina_tag
   rinku
-  roadie-rails (~> 1.1)
+  roadie-rails (~> 2)
   rsolr
   rspec-rails (~> 3.0)
   rubocop
@@ -608,7 +608,7 @@ DEPENDENCIES
   solr_wrapper
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.3.13)
+  sqlite3
   turbolinks
   uglifier (>= 2.7.2)
   web-console (>= 3.3.0)

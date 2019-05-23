@@ -65,7 +65,7 @@ group :development, :test do
 end
 
 group :sqlite do
-  gem 'sqlite3', '~> 1.3.13'
+  gem 'sqlite3'
 end
 
 group :production do
@@ -99,7 +99,7 @@ gem "blacklight_range_limit", "~> 6.2"
 gem 'blacklight-hierarchy', "~> 1.0"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
-gem 'roadie-rails', '~> 1.1'
+gem 'roadie-rails', '~> 2'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds', '1.0.7' # External vendor, upgrade requires testing
 gem 'whenever' # manages cron jobs
