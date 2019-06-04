@@ -46,12 +46,10 @@
   </dd>
 <% end %>
 
-<% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
-<% if summary_data.present? %>
-  <dt>Summary</dt>
-  <dd>
-    <%= sanitize summary_data %>
-  </dd>
+
+<% summary = document.fetch(:summary_struct, []).first %>
+<% unless summary.nil? %>
+  <%= render_field_from_marc(summary) %>
 <% end %>
 
 <% if document.marc_links.supplemental.present? %>
