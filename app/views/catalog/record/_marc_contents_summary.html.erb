@@ -46,10 +46,23 @@
   </dd>
 <% end %>
 
-
 <% summary = document.fetch(:summary_struct, []).first %>
-<% unless summary.nil? %>
-  <%= render_field_from_marc(summary) %>
+<% if summary.present? %>
+  <% if summary[:fields].present? %>
+    <dt>Summary</dt>
+    <% summary[:fields].each do |field| %>
+      <dd>
+        <%= render_struct_field_data document, field[:field] %>
+        <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
+        <%= "<br/>".html_safe if field != summary[:fields].last %>
+      </dd>
+    <% end %>
+  <% end %>
+  <% if summary[:unmatched_vernacular].present? %>
+    <dd>
+      <%= summary[:unmatched_vernacular].join("<br/>").html_safe %>
+    </dd>
+  <% end %>
 <% end %>
 
 <% if document.marc_links.supplemental.present? %>
