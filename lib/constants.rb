@@ -650,6 +650,8 @@ module Constants
     'W7-CASE-MP' => 'Request for use at Map Center (W7 case map)',
     'W7-CASE-MT' => 'Request for use at Map Center (W7 matted maps)',
     'W7-CASE-MD' => 'Request for use at Map Center (W7 map case)',
+    'W7-CATALOG' => 'Request for use at Map Center (W7 catalog)',
+    'W7-CONSERV' => 'Request for use at Map Center (W7 conservation)',
     'W7-MAP-BXS' => 'Request for use at Map Center (W7 small box)',
     'W7-MAP-BXL' => 'Request for use at Map Center (W7 large box)',
     'W7-POCK-LG' => 'Request for use at Map Center (W7 large pocket maps)',
