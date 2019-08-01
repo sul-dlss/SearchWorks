@@ -27,6 +27,9 @@ en:
         clear:
           action_confirm: Clear your catalog selections?
     global_alert_html: "The Stanford Libraries will be operating on a reduced schedule during the Stanford Winter Closure period (December 22, 2018 - January 6, 2019).<br/>%{link}"
+    home_page_notice:
+      heading: 'Coming soon!'
+      body_html: 'A completely new <strong>My Library Account</strong> is being prepared for launch within the next week. Stay tuned for more information.'
     search:
       form:
         q:
