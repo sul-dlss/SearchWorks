@@ -28,8 +28,13 @@ en:
           action_confirm: Clear your catalog selections?
     global_alert_html: "The Stanford Libraries will be operating on a reduced schedule during the Stanford Winter Closure period (December 22, 2018 - January 6, 2019).<br/>%{link}"
     home_page_notice:
-      heading: 'Coming soon!'
-      body_html: 'A completely new <strong>My Library Account</strong> is being prepared for launch within the next week. Stay tuned for more information.'
+      heading: 'New My Library Account!'
+      body_html:
+        <div>Stanford Libraries borrowers now have a new way to view their checkouts, requests, and fines.</div>
+        <div>
+          SUNet ID and PIN borrowers can log in via any <strong><a href="https://library.stanford.edu/myaccount">My Account</a></strong> link.
+          <a href="https://library.stanford.edu/blogs/stanford-libraries-blog/2019/08/new-my-library-account">&raquo; Find out more.</a>
+        </div>
     search:
       form:
         q:
