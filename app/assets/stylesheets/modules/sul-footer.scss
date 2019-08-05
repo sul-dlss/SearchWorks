@@ -1,26 +1,43 @@
+$stanford-footer-height: 250px;
+$stanford-footer-md-height: 140px;
+$sul-footer-height: 80px;
+
 #su-content {
-	padding-bottom: 200px !important;
+  padding-bottom: $stanford-footer-height + $sul-footer-height !important;
+
+  @media (min-width: 768px) {
+    padding-bottom: $stanford-footer-md-height + $sul-footer-height !important;
+  }
 }
+
 #sul-footer-container {
-	padding: 0 !important;
-	position: relative;
-	margin-top: -200px;
-	min-height: 200px;
-	clear: both;
-	-webkit-box-shadow: 0 4px 8px -8px rgba(0,0,0,0.2) inset;
-	box-shadow: 0 4px 8px -8px rgba(0,0,0,0.2) inset;
-	background-color: $sul-footer-bg-color;
-	}
-#sul-footer {
-	display: table;
-	height: 80px;
-	padding: 0px;
+  background-color: $sul-footer-bg-color;
+  box-shadow: inset 0 4px 8px -8px $sul-shadow-color;
+  clear: both;
+  margin-top: -1 * ($stanford-footer-height + $sul-footer-height);
+  min-height: $stanford-footer-height + $sul-footer-height;
+
+  @media (min-width: 768px) {
+    margin-top: -1 * ($stanford-footer-md-height + $sul-footer-height);
+    min-height: $stanford-footer-md-height + $sul-footer-height;
+  }
+
+  padding: 0;
+  position: relative;
 }
+
+#sul-footer {
+  display: table;
+  height: $sul-footer-height;
+  padding: 0;
+}
+
 #sul-footer-img {
 	display: table-cell;
 	vertical-align: middle;
 	width: 162px;
 }
+
 #sul-footer-links {
 	display: table-cell;
 	vertical-align: middle;
@@ -28,20 +45,44 @@
 	padding-left: 15px;
 	font-size: small;
 }
-#sul-footer li a {
-	white-space: nowrap;
-}
-#sul-footer ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-#sul-footer ul li {
-	margin:  0 13px 3px 0;
-	padding: 0;
-	display: inline;
+
+#sul-footer {
+  display: table;
+  height: $sul-footer-height;
+  padding: 0;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      margin: 0 13px 3px 0;
+      padding: 0;
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+  #sul-footer-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 162px;
+  }
+  #sul-footer-links {
+    display: table-cell;
+    font-size: small;
+    padding-left: 15px;
+    text-align: left;
+    vertical-align: middle;
+  }
 }
 
 #global-footer {max-width: 100%;}
 #global-footer p {max-width: 100%;}
 #global-footer #bottom-text {margin-right: 6px;}
+#global-footer {
+  .vcard {
+    margin-left: 2rem;
+  }
+}
