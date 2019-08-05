@@ -540,6 +540,7 @@ module Constants
     'RUMSEY' => 'Rumsey Collection',
     'RUMSEYREF' => 'David Rumsey Map Center',
     'RUMXEMPLAR' => 'Request for use at Map Center (Exemplars)',
+    'RWC-LOAN' => 'On hold for a borrower',
     'SAFETY' => 'Safety Collection',
     'SAL-ARABIC' => 'Temporary shelving for Arabic materials',
     'SAL-FOLIO' => 'Temporary shelving for Folio materials',
