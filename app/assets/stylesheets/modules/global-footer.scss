@@ -3,10 +3,6 @@
   height: 120px;
   max-height: none;
 
-  .copyright {
-    padding-left: 0;
-  }
-
   @include media-breakpoint-down(md) {
     height: auto;
     min-height: 196px;
