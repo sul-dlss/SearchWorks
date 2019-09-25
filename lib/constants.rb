@@ -395,7 +395,7 @@ module Constants
     'LANG-RESV' => 'Language Lab reserves',
     'LAW-ARCHIV' => 'Archives: Ask at circulation desk',
     'LAW-BIND' => 'At bindery',
-    'LAW-CAREER' => 'Ask at circulation desk',
+    'LAW-CAREER' => 'Law Careers collection: Ask at circulation desk',
     'LAW-CIRC' => 'At Law Library circulation desk',
     'LAW-DSPLAY' => 'Law temporary display: ask at circulation desk',
     'LAW-LOAN' => 'On hold for a borrower',
