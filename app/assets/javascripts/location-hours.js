@@ -50,13 +50,14 @@ Blacklight.onLoad(function(){
             }
             var open = getOpen(data[0]);
             var close = getClose(data[0]);
-            $(hoursElement).html(formatTimeRange(open, close));
+            var closed = data[0].closed;
+            $(hoursElement).html(formatTimeRange(open, close, closed));
           });
         }
     };
 
-    function formatTimeRange(open, close) {
-      if (open == '12a' && close == '12a') {
+    function formatTimeRange(open, close, closed) {
+      if (closed) {
         return "Closed today"
       } else if (open == '12a' && close == '11:59p') {
         return "Open 24hr today"
