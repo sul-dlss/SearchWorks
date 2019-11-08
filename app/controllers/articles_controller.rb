@@ -133,6 +133,7 @@ class ArticlesController < ApplicationController
         eds_page_count:           { label: 'Page Count' },
         eds_isbns:                { label: 'ISBN' },
         eds_issns:                { label: 'ISSN' },
+        eds_publisher:            { label: 'Publisher' },
         eds_publication_info:     { label: 'Published' },
         eds_publication_status:   { label: 'Publication Status' },
         eds_document_oclc:        { label: 'OCLC' },
