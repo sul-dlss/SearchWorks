@@ -58,6 +58,20 @@ describe MarcFieldWrapper do
         expect(subject).not_to be_vernacular_matcher
       end
     end
+
+    describe 'when the $6 points to a non-880' do
+      let(:field) { marc_fields(bad_vernacular_fixture, '610').first }
+
+      it { expect(subject).not_to be_vernacular_matcher }
+    end
+
+    describe 'when the $6 in an 880 does not point to a regular marc field' do
+      let(:field) do
+        marc_fields(bad_vernacular_fixture, '880').find { |f| f['6'] == '880-00'  }
+      end
+
+      it { expect(subject).not_to be_vernacular_matcher }
+    end
   end
 
   describe '#==' do

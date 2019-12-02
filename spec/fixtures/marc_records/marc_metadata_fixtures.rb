@@ -297,6 +297,10 @@ module MarcMetadataFixtures
           <subfield code="6">880-03</subfield>
           <subfield code="a">This is not Vernacular</subfield>
         </datafield>
+        <datafield tag="610" ind1="1" ind2="0">
+          <subfield code="6">610-00</subfield>
+          <subfield code="a">Bad Venacular Matcher</subfield>
+        </datafield>
         <datafield tag="700" ind1=" " ind2=" ">
           <subfield code="6">880-04</subfield>
           <subfield code="a">This is not Vernacular</subfield>
@@ -324,6 +328,10 @@ module MarcMetadataFixtures
         <datafield tag="880" ind1=" " ind2=" ">
           <subfield code="a">710-05</subfield>
           <subfield code="6">This is Vernacular</subfield>
+        </datafield>
+        <datafield tag="880" ind1=" " ind2=" ">
+          <subfield code="6">880-00</subfield>
+          <subfield code="6">This is A vernacular matching field that does not point to a valid field</subfield>
         </datafield>
       </record>
     xml
