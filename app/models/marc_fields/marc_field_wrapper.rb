@@ -34,7 +34,11 @@ class MarcFieldWrapper
   end
 
   def vernacular_matcher?
-    vernacular_matching_field.include?('-')
+    vernacular_matching_field.include?('-') && if marc_field.tag.start_with?('8')
+                                                !vernacular_matching_field.start_with?('8')
+                                               else
+                                                 vernacular_matching_field.start_with?('8')
+                                               end
   end
 
   def subfields
