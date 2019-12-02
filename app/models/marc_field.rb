@@ -81,13 +81,17 @@ class MarcField
   end
 
   def merge_matched_vernacular_fields
+    arr = []
     relevant_fields.each_with_index do |field, index|
+      arr << field
       next if field.tag =~ /^880/
       next unless field.vernacular_matcher?
 
       vernacular_field = matching_vernacular_field(field)
-      @relevant_fields.insert(index + 1, MarcFieldWrapper.new(vernacular_field)) if vernacular_field
+      arr << MarcFieldWrapper.new(vernacular_field) if vernacular_field
     end
+
+    relevant_fields.replace(arr)
   end
 
   def append_unmatched_vernacular_fields
