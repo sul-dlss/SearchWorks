@@ -88,7 +88,7 @@
           <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
             <% if Settings.GLOBAL_ALERT %>
               <div class="global-alert">
-                <%= t('searchworks.global_alert_html', link: link_to('More information about schedules and affected services', 'https://library.stanford.edu/blogs/stanford-libraries-blog/2018/12/libraries-intersession-and-winter-closure-hours-2018-19')) %>
+                <%= t('searchworks.global_alert_html') %>
               </div>
             <% end %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
