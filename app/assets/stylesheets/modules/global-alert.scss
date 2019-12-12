@@ -1,0 +1,7 @@
+$global-alert-color: rgb(204, 0, 0);
+
+.global-alert {
+  border: 1px solid $global-alert-color;
+  margin: 10px auto;
+  padding: 10px;
+}
