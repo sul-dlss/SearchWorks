@@ -313,7 +313,7 @@ GEM
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
+    mysql2 (0.5.2)
     namae (1.0.1)
     net-http-persistent (2.9.4)
     net-scp (2.0.0)
@@ -576,7 +576,7 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   mods_display (~> 0.5)
-  mysql2
+  mysql2 (< 0.5.3)
   newrelic_rpm
   nokogiri (>= 1.7.1)
   oauth2 (~> 1.4)
