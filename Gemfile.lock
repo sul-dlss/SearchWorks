@@ -73,10 +73,10 @@ GEM
       bootstrap-sass (~> 3.0)
       openseadragon (>= 0.2.0)
       rails
-    blacklight-hierarchy (1.1.0)
-      blacklight (~> 6.0)
+    blacklight-hierarchy (4.0.0)
+      blacklight (> 6.20, < 8.0)
       jquery-rails
-      rails (>= 4.1, < 6)
+      rails (>= 5.1, < 7)
     blacklight-marc (6.2.0)
       blacklight (> 6.1, < 8.a)
       library_stdnums
@@ -544,7 +544,7 @@ DEPENDENCIES
   bitly
   blacklight (~> 6.0)
   blacklight-gallery (~> 0.4)
-  blacklight-hierarchy (~> 1.0)
+  blacklight-hierarchy (~> 4.0)
   blacklight-marc (~> 6.0)
   blacklight_advanced_search (~> 6.3)
   blacklight_range_limit (~> 6.2)
