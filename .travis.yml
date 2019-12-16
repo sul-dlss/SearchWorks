@@ -14,7 +14,6 @@ env:
     - CC_TEST_REPORTER_ID=1ba3e5d2ea97b884bba5b75480edfc439cab179afadd458c9870614e539cb727
 
 before_install:
-  - gem update --system
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 sudo: false
