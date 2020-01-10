@@ -74,6 +74,19 @@ namespace :searchworks do
     end
   end
 
+  desc "Clear Rack::Attack cache"
+  task clear_rack_attack_cache: [:environment] do
+    if Settings.THROTTLE_TRAFFIC
+      # This functionality will be available as Rack::Attack.reset! but as of 6.2.2 this is not released
+      store = Rack::Attack.cache.store
+      if store.respond_to?(:delete_matched)
+        store.delete_matched("#{Rack::Attack.cache.prefix}*")
+      else
+        puts "Error Clearing Rack::Attack cache. Store #{store.class.name} does not respond to #delete_matched"
+      end
+    end
+  end
+
   def eds_cache
     cache_dir = File.join(Settings.EDS_CACHE_DIR, 'faraday_eds_cache')
     return ActiveSupport::Cache::FileStore.new(cache_dir) if File.directory?(cache_dir)
