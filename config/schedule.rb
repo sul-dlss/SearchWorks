@@ -11,3 +11,7 @@ end
 every '0 0 1,15 * *', roles: %i[app] do # biweekly
   rake 'searchworks:clear_eds_cache'
 end
+
+every '0 3 * * *', roles: %i[app] do # daily at 3 am
+  rake 'searchworks:clear_rack_attack_cache'
+end
