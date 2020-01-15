@@ -3,3 +3,5 @@ HOSTNAME: "TEST-HOST"
 PURL_EMBED_PROVIDER: 'http://embed.stanford.edu/embed'
 SU_AFFILIATIONS:
   - test-stanford:test
+EXHIBITS_ACCESS_PANEL:
+  enabled: true
