@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   mount Blacklight::Engine => '/'
   mount BlacklightAdvancedSearch::Engine => '/'
+  mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder' if Rails.env.test?
 
   concern :searchable, Blacklight::Routes::Searchable.new
   concern :exportable, Blacklight::Routes::Exportable.new
