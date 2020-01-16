@@ -1,3 +1,5 @@
+Dir[Rails.root.join("spec/support/rack_apps/*.rb")].each { |f| require f }
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

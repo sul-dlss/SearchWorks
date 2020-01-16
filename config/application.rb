@@ -25,6 +25,7 @@ module SearchWorks
     require 'access_panel'
     require 'access_panels'
     require 'access_panels/course_reserve'
+    require 'access_panels/exhibit'
     require 'access_panels/library_location'
     require 'access_panels/online'
     require 'access_panels/sfx'
