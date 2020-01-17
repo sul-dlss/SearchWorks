@@ -14,7 +14,12 @@
       this.druid = this.panel.data('druid');
       this.exhibitsHost = this.panel.data('exhibitsHost');
       this.isCollection = this.panel.data('isCollection');
-      this.fetchExhibits();
+
+      if (panel.find('.media').length === 0) { // Only run the fetch if the panel has no exhibits yet
+        this.fetchExhibits();
+      } else {
+        this.addToggleLinkBehavior(); // Add toggleLinkBehavior if inited with exhibits already (e.g. back button click)
+      }
     },
 
     fetchExhibits: function() {
@@ -30,12 +35,11 @@
 
         _this.showAppropriatePanelHeading(data.length);
 
-        var panelBody = _this.panel.find('.panel-body');
         $.each(data, function(i, exhibit) {
-          panelBody.append(_this.exhibitMediaObject(exhibit));
+          _this.panel.find('.panel-body').append(_this.exhibitMediaObject(exhibit));
         });
 
-        _this.addToggleLinkBehavior(panelBody, data.length);
+        _this.addToggleLinkBehavior();
 
         $('[data-behavior="metadata-panel-context-heading"]').show(); // Ensure heading is displayed
         _this.panel.show();
@@ -59,17 +63,25 @@
       }
     },
 
-    addToggleLinkBehavior: function(container, exhibitCount) {
+    addToggleLinkBehavior: function() {
       var _this = this;
+      var container = _this.panel.find('.panel-body');
+      var exhibitMediaObjects = container.find('.media');
+      var exhibitCount = exhibitMediaObjects.length;
       if (exhibitCount >= _this.exhibitToggleThreshold) {
-        var toggleLink = $('<a href="#">See all ' + exhibitCount + ' exhibits</a>');
+        if (container.find('a.see-all-exhibits').length > 0) {
+          var toggleLink = container.find('a.see-all-exhibits');
+        } else {
+          var toggleLink = $('<a class="see-all-exhibits" href="#">See all ' + exhibitCount + ' exhibits</a>');
+        }
+
         var exhibitMediaObjects = container.find('.media');
         exhibitMediaObjects.each(function(i) {
           if (i >= _this.exhibitToggleThreshold) {
             $(this).hide();
           }
         });
-        toggleLink.on('click', function(e) {
+        toggleLink.on('click.see-all-exhibits-link', function(e) {
           e.preventDefault();
 
           // We don't have good text for a toggle off link.
@@ -85,7 +97,12 @@
             }
           });
         });
-        container.append(toggleLink);
+
+
+        // Don't add the link if it's already there (back-button click)
+        if (container.find(toggleLink).length === 0 ) {
+          container.append(toggleLink);
+        }
       }
     },
 
