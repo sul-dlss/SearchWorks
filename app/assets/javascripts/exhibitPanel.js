@@ -126,6 +126,13 @@
       if (exhibit.subtitle && exhibit.subtitle !== '') {
         heading.append(exhibit.subtitle)
       }
+      // Exhibit link clicked, add a custom event
+      wrapper.find('a').on('click', function(e) {
+        ga('send', 'event', 'Exhibit link', 'clicked', heading.text(), {
+          'transport': 'beacon'
+        });
+      });
+
       return wrapper;
     }
   }
