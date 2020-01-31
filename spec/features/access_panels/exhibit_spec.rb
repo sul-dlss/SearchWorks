@@ -115,10 +115,10 @@ RSpec.describe 'Exhibit Access Panel', type: :feaature, js: true do
 
       within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('.media', count: 5, visible: true)
-        expect(page).to have_link('See all 7 exhibits')
-        click_link('See all 7 exhibits')
+        expect(page).to have_button('show all 7 exhibits')
+        click_button('show all 7 exhibits')
         expect(page).to have_css('.media', count: 7, visible: true)
-        expect(page).not_to have_link('See all 7 exhibits')
+        expect(page).not_to have_button('show all 7 exhibits')
       end
     end
   end

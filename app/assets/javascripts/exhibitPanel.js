@@ -18,7 +18,7 @@
       if (panel.find('.media').length === 0) { // Only run the fetch if the panel has no exhibits yet
         this.fetchExhibits();
       } else {
-        this.addToggleLinkBehavior(); // Add toggleLinkBehavior if inited with exhibits already (e.g. back button click)
+        this.addToggleButtonBehavior(); // Add toggleButtonBehavior if inited with exhibits already (e.g. back button click)
       }
     },
 
@@ -39,7 +39,7 @@
           _this.panel.find('.panel-body').append(_this.exhibitMediaObject(exhibit));
         });
 
-        _this.addToggleLinkBehavior();
+        _this.addToggleButtonBehavior();
 
         $('[data-behavior="metadata-panel-context-heading"]').show(); // Ensure heading is displayed
         _this.panel.show();
@@ -63,16 +63,16 @@
       }
     },
 
-    addToggleLinkBehavior: function() {
+    addToggleButtonBehavior: function() {
       var _this = this;
       var container = _this.panel.find('.panel-body');
       var exhibitMediaObjects = container.find('.media');
       var exhibitCount = exhibitMediaObjects.length;
       if (exhibitCount >= _this.exhibitToggleThreshold) {
-        if (container.find('a.see-all-exhibits').length > 0) {
-          var toggleLink = container.find('a.see-all-exhibits');
+        if (container.find('button.see-all-exhibits').length > 0) {
+          var toggleButton = container.find('button.see-all-exhibits');
         } else {
-          var toggleLink = $('<a class="see-all-exhibits" href="#">See all ' + exhibitCount + ' exhibits</a>');
+          var toggleButton = $('<button class="see-all-exhibits btn btn-default btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
         }
 
         var exhibitMediaObjects = container.find('.media');
@@ -81,12 +81,12 @@
             $(this).hide();
           }
         });
-        toggleLink.on('click.see-all-exhibits-link', function(e) {
+        toggleButton.on('click.see-all-exhibits-button', function(e) {
           e.preventDefault();
 
           // We don't have good text for a toggle off link.
           // When we do we can remove this and update the text appropriately
-          toggleLink.remove();
+          toggleButton.remove();
           exhibitMediaObjects.each(function(i) {
             if (i >= _this.exhibitToggleThreshold) {
               if($(this).is(':visible')) {
@@ -100,8 +100,8 @@
 
 
         // Don't add the link if it's already there (back-button click)
-        if (container.find(toggleLink).length === 0 ) {
-          container.append(toggleLink);
+        if (container.find(toggleButton).length === 0 ) {
+          container.append(toggleButton);
         }
       }
     },
