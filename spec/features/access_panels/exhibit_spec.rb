@@ -65,7 +65,7 @@ RSpec.describe 'Exhibit Access Panel', type: :feaature, js: true do
 
   context 'when the exhibit has a thumbnail' do
     let(:content) do
-      [{ slug: 'exhibit1', title: 'Exhibit Titlte', thumbnail_url: 'http://example.com/thumb.jpg' }]
+      [{ slug: 'exhibit1', title: 'Exhibit Title', thumbnail_url: 'http://example.com/thumb.jpg' }]
     end
 
     it 'is displayed and linked' do
@@ -73,7 +73,7 @@ RSpec.describe 'Exhibit Access Panel', type: :feaature, js: true do
       expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
       within '[data-behavior="exhibits-panel"]' do
-        expect(page).to have_css('.media-left img[src="http://example.com/thumb.jpg"]')
+        expect(page).to have_css('.media-left img[src="http://example.com/thumb.jpg"]', visible: false)
       end
     end
   end
