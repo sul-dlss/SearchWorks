@@ -941,6 +941,7 @@ module Constants
 
   HIDE_DUE_DATE_CURRENT_LOCS = [
     'ART-AT-ENG',
+    'ENDPROCESS',
     'IC-DISPLAY',
     'LOST-ASSUM',
     'LOST-CLAIM',
