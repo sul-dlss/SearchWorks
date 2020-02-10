@@ -1,4 +1,6 @@
-HOURS_API: <%= ENV['HOURS_API'] || 'http://example.com' %>
+HOURS_API:
+  enabled: true
+  host: <%= ENV['HOURS_API'] || 'http://example.com' %>
 EMAIL_TO:
   FEEDBACK: "fake-email@kittenz.com"
   CONNECTION: "fake-connectionz@kittenz.com"
