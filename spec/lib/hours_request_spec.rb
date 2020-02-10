@@ -23,6 +23,7 @@ describe HoursRequest do
 
   it "should receive " do
     # Fake URL that resolves for testing
+    expect(Settings.HOURS_API).to receive(:enabled).and_return(true)
     expect(Faraday).to receive(:new).with({ url: "http://example.com/green/location/green_library/hours/for/today" }).and_return(struct)
     expect(HoursRequest.new("GREEN").get).to eq("test")
   end

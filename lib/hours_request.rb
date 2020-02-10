@@ -4,7 +4,7 @@ class HoursRequest
   end
 
   def full_url
-    "#{Settings.HOURS_API}/#{find_library}/hours/for/today"
+    "#{Settings.HOURS_API.host}/#{find_library}/hours/for/today"
   end
 
   def find_library
@@ -13,6 +13,7 @@ class HoursRequest
 
   def get
     if find_library.present?
+      return unless Settings.HOURS_API.enabled
       begin
         Faraday.new(url: full_url).get.body
       rescue Faraday::Error::ConnectionFailed => e
