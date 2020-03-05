@@ -103,7 +103,7 @@ gem 'roadie-rails', '~> 2'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds', '1.0.7' # External vendor, upgrade requires testing
 gem 'whenever' # manages cron jobs
-gem 'bitly' # For bit.ly
+gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'bootsnap', require: false
 gem 'leaflet-rails'
 gem 'recaptcha'
