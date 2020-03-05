@@ -8,10 +8,10 @@ describe SmsPresenter do
     let(:url) { 'http://www.example.com/really_great' }
     subject { described_class.new(doc, url) }
 
-    let(:bitly) { double(short_url: 'http://bit.ly/2evYAOW') }
+    let(:bitly) { double(link: 'http://bit.ly/2evYAOW') }
 
     before do
-      allow_any_instance_of(Bitly::V3::Client).to receive(:shorten).and_return(bitly)
+      allow_any_instance_of(Bitly::API::Client).to receive(:shorten).and_return(bitly)
     end
 
     context 'with a really long title' do
@@ -28,7 +28,7 @@ describe SmsPresenter do
 
     context 'when something bad happens to bitly' do
       it 'returns original url' do
-        allow_any_instance_of(Bitly::V3::Client).to receive(:shorten).and_raise(StandardError)
+        allow_any_instance_of(Bitly::API::Client).to receive(:shorten).and_raise(StandardError)
         expect(subject.sms_content).to include 'http://www.example.com/really_great'
       end
     end

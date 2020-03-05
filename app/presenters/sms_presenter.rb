@@ -32,9 +32,13 @@ class SmsPresenter
   # If the Bit.ly call fails, fallback to the URL
   # @return [String]
   def short_url
-    @short_url ||= Bitly.client.shorten(url).short_url
+    @short_url ||= client.shorten(long_url: url).link
   rescue => e
     Rails.logger.warn("Could not shorten bit.ly url #{e.message}")
     url
+  end
+
+  def client
+    @client ||= Bitly::API::Client.new(token: Settings.BITLY.ACCESS_TOKEN)
   end
 end
