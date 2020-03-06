@@ -1059,6 +1059,9 @@ module Constants
 
   INPROCESS_NONCIRC_LOCS = ['INPROCESS', 'SPEC-INPRO'].freeze
 
+  ON_ORDER_NONCIRC_LIBRARIES = ['SPEC-COLL'].freeze
+  ON_ORDER_NONCIRC_LOCS = ['ON-ORDER'].freeze
+
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',
     'ART' => 'Art & Architecture Library (Bowes)',

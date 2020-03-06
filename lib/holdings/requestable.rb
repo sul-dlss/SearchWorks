@@ -17,6 +17,7 @@ class Holdings
     def item_is_requestable?
       !on_reserve? &&
         !noncirc_library_and_inprocess? &&
+        !on_order_noncirc? &&
         requestable_item_type? &&
         requestable_home_location? &&
         requestable_current_location?
@@ -29,6 +30,11 @@ class Holdings
     def noncirc_library_and_inprocess?
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
         Constants::INPROCESS_NONCIRC_LOCS.include?(@callnumber.current_location.try(:code))
+    end
+
+    def on_order_noncirc?
+      Constants::ON_ORDER_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
+        Constants::ON_ORDER_NONCIRC_LOCS.include?(@callnumber.current_location.try(:code))
     end
 
     def must_request_item?
