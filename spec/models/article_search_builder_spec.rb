@@ -21,7 +21,13 @@ RSpec.describe ArticleSearchBuilder do
     end
 
     it 'has a simple processor chain' do
-      expect(described_class.default_processor_chain).to eq %i[add_eds_params]
+      expect(described_class.default_processor_chain).to eq %i[add_eds_params strip_nil_f]
+    end
+
+    it 'removes nil "f"' do
+      blacklight_params['f'] = nil
+
+      expect(search_builder).not_to have_key('f')
     end
   end
 
