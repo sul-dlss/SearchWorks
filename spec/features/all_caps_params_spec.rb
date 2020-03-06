@@ -15,4 +15,10 @@ describe "Search parameters in all caps", type: :feature do
     expect(text_field.value).not_to eq 'HELLO WORLD'
     expect(text_field.value).to eq 'hello world'
   end
+
+  it 'handles a nil query' do
+    expect do
+      visit '/catalog?q'
+    end.not_to raise_error
+  end
 end

@@ -11,7 +11,7 @@ module AllCapsParams
 
   def downcase_all_caps_params
     modifiable_params_keys.each do |param|
-      if params.has_key?(param)
+      if params[param]
         downcase_all_caps_param param, params[param]
       end
     end
