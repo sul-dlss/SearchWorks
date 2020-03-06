@@ -78,6 +78,15 @@ describe Holdings::Library do
       )
       expect(library).not_to be_location_level_request
     end
+
+    it 'is false for libraries configured to be NONCIRC when the item is ON-ORDER' do
+      library = Holdings::Library.new(
+        'SPEC-COLL',
+        nil,
+        [double(current_location: double(code: 'ON-ORDER'))]
+      )
+      expect(library).not_to be_location_level_request
+    end
   end
 
   describe '#library_instructions' do

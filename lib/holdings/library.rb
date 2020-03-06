@@ -47,6 +47,7 @@ class Holdings
 
     def location_level_request?
       !noncirc_library_only_inprocess? &&
+        !noncirc_library_only_on_order? &&
         !contains_only_must_request_items? &&
         Constants::REQUEST_LIBS.include?(@code)
     end
@@ -82,6 +83,14 @@ class Holdings
 
       Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
         Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
+      end
+    end
+
+    def noncirc_library_only_on_order?
+      return false unless @items.present?
+
+      Constants::ON_ORDER_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
+        Constants::ON_ORDER_NONCIRC_LOCS.include?(item.current_location.try(:code))
       end
     end
 

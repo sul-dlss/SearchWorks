@@ -46,6 +46,12 @@ describe Holdings::Requestable do
         end
       end
     end
+
+    describe 'ON-ORDER items' do
+      it 'are not requestable if the library is configured to be noncirc in this case' do
+        expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- "))).not_to be_requestable
+      end
+    end
   end
 
   describe "must_request?" do
