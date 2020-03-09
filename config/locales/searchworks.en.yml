@@ -26,7 +26,10 @@ en:
       catalog:
         clear:
           action_confirm: Clear your catalog selections?
-    global_alert_html: "The Stanford Libraries will be operating on a reduced schedule during the Stanford Winter Closure period (December 21, 2019 - January 5, 2020).<br/><a href=\"https://library.stanford.edu/winterclosure\">More information about schedules and affected services</a>"
+    global_alert_html: >
+      <b>COVID-19 update</b> <br/>
+      Until further notice, access to Stanford Libraries is restricted to Stanford ID cardholders only. We apologize for the inconvenience this may cause visitors, who will be unable to access requested materials. <br/>
+      Updates available at <a href="https://library.stanford.edu/alerts">library.stanford.edu/alerts</a>
     home_page_notice:
       heading: 'New My Library Account!'
       body_html:
