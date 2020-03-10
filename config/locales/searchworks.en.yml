@@ -28,7 +28,7 @@ en:
           action_confirm: Clear your catalog selections?
     global_alert_html: >
       <b>COVID-19 update</b> <br/>
-      Access to Stanford Libraries will require a current Stanford ID. <br/>
+      Access to Stanford Libraries will require a valid Stanford ID. <br/>
       Until further notice, visitor access has been suspended. <a href="https://library.stanford.edu/alerts">read more</a> <br/>
       We apologize for the inconvenience this may cause visitors who will be unable to retrieve requested materials.
     home_page_notice:
