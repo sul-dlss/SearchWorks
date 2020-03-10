@@ -103,6 +103,8 @@ class Citation
     return unless document.eds? && document['eds_citation_styles'].present?
 
     document['eds_citation_styles'].each_with_object({}) do |citation, hash|
+      next unless citation['id'] && citation['data']
+
       hash[citation['id'].upcase] = citation['data'].html_safe
     end
   end

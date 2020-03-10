@@ -14,7 +14,10 @@ describe Citation do
   let(:eds_document) do
     SolrDocument.new(
       eds_title: 'The Title',
-      eds_citation_styles: [{ 'id': 'APA', 'data': 'Citation Content' }]
+      eds_citation_styles: [
+        { 'id': 'APA', 'data': 'Citation Content' },
+        { 'status': 'error', 'description': 'Could not do a thing' }
+      ]
     )
   end
   let(:formats) { [] }
