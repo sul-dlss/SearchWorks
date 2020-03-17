@@ -28,10 +28,8 @@ en:
           action_confirm: Clear your catalog selections?
     global_alert_html: >
       <b>COVID-19 update</b> <br/>
-      Access to Stanford Libraries will require a valid Stanford ID. <br/>
-      Until further notice, visitor access has been suspended. <br/>
-      Stanford Libraries is suspending all Request services until further notice. <br/>
-      <a href="https://library.stanford.edu/alerts">read more</a>
+      Stanford Libraries are closed per the Bay Area shelter in place orders. <br/>
+      Access to e-resources and remote reference remain available. <a href="https://library.stanford.edu/alerts">read more</a>
     home_page_notice:
       heading: 'New My Library Account!'
       body_html:
