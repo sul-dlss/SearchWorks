@@ -387,7 +387,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    recaptcha (5.4.0)
+    recaptcha (5.3.0)
       json
     regexp_parser (1.7.0)
     require_all (2.0.0)
@@ -589,7 +589,7 @@ DEPENDENCIES
   rack-utf8_sanitizer
   rails (~> 5.2)
   rails-controller-testing
-  recaptcha
+  recaptcha (!= 5.4.0)
   retina_tag
   rinku
   roadie-rails (~> 2)
@@ -614,4 +614,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
