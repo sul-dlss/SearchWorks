@@ -3,7 +3,6 @@ notifications:
   email: false
 
 rvm:
-  - 2.6.3
   - 2.7.0
 
 addons:
