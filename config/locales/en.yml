@@ -2,8 +2,8 @@ en:
   default_title: "Stanford Libraries"
   global_alert_html: >
     <b>COVID-19 update</b> <br/>
-    Access to Stanford Libraries will require a valid Stanford ID. <br/>
-    Until further notice, visitor access has been suspended. <a href="https://library.stanford.edu/alerts">read more</a>
+    Stanford Libraries are closed per the Bay Area shelter in place orders.  <br/>
+    Access to e-resources and remote reference remain available. <a href="https://library.stanford.edu/alerts">read more</a>
   opensearch_description: "Stanford Libraries"
   defaults_search:
     title_name: Search
