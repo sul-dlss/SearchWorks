@@ -68,7 +68,7 @@ namespace :searchworks do
     i = 0
     while i < total
       # might want to add a .where("user_id = NULL") when we have authentication hooked up.
-      Search.destroy(Search.order("updated_at").limit(chunk).map(&:id))
+      Search.destroy(Search.order("updated_at").limit(chunk).pluck(:id))
       i += chunk
       sleep(10)
     end
