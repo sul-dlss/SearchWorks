@@ -63,7 +63,7 @@ namespace :searchworks do
     chunk = 20000
     raise ArgumentError.new('days_old is expected to be greater than 0') if args[:days_old].to_i <= 0
 
-    total = Search.where("updated_at < :date", { date: (Date.today - args[:days_old].to_i) }).count
+    total = Search.where("updated_at < :date", { date: args[:days_old].to_i.days.ago }).count
     total = total - (total % chunk) if (total % chunk) != 0
     i = 0
     while i < total
