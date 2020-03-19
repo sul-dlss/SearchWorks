@@ -106,7 +106,7 @@ gem 'whenever' # manages cron jobs
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'bootsnap', require: false
 gem 'leaflet-rails'
-gem 'recaptcha', '!= 5.4.0'
+gem 'recaptcha', '>= 5.4.1'
 gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap-sass'
