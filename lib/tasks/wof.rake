@@ -40,6 +40,22 @@ def uri_for_name_from_loc(connection:, name:)
 end
 
 namespace :wof do
+  desc 'Get top 10K geographic_facet values (by count)'
+  task get_top_10k_places: [:environment] do
+    index = Blacklight.default_index
+    field = 'geographic_facet'
+    params = {
+      rows: 0,
+      'facet.field': field,
+      "f.#{field}.facet.sort": 'count',
+      "f.#{field}.facet.limit": 10000
+    }
+
+    places = index.search(params).dig('facet_counts', 'facet_fields', field).select {|v| v.is_a?(String)}
+    File.open(Rails.root.join('top_10000_geographic.json'), 'w') { |f| f.write(places.to_json) }
+  end
+
+
   desc 'Getting LOC ids for strings'
   task update: [:environment] do
     geo_names = JSON.parse(
