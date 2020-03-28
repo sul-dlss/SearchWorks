@@ -54,6 +54,14 @@ describe CJKQuery do
       it "should not do anything w/ the number qf/pf" do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
       end
+
+      context 'when there are unbalanced parenthesis in the query' do
+        let(:q_str) { '((舊小說)' }
+
+        it 'is handled without error' do
+          expect(solr_params[:q]).to include "{!edismax qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk #{local_params} }#{q_str}"
+        end
+      end
     end
 
     describe "pre-processed" do
