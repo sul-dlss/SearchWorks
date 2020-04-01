@@ -30,10 +30,6 @@ en:
       <b>COVID-19 update</b> <br/>
       Stanford Libraries are closed per the Bay Area shelter in place orders. <br/>
       Access to e-resources and remote reference remain available. <a href="https://library.stanford.edu/alerts">read more</a>
-      <br/><br/>
-      <b>System alert</b> <br/>
-      Find full text links from SearchWorks and Articles+ are currently unavailable. <br/>
-      Vendor support has been contacted and is working to fix the problem as soon as possible.
     home_page_notice:
       heading: 'New My Library Account!'
       body_html:
