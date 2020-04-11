@@ -11,6 +11,7 @@ feature 'Yewno', js: true do
   end
 
   scenario 'is present on index page' do
+    skip 'Temporarily disabling Yewno'
     fill_in 'params-q', with: 'geology'
     click_button 'Search'
     expect(page).to have_css 'h2', text: 'Yewno'
