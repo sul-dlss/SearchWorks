@@ -109,6 +109,17 @@ describe Holdings::Library do
     end
   end
 
+  describe "eresv?" do
+    let(:eresv) { Holdings::Library.new("E-RESV") }
+
+    it "should be #eresv?" do
+      expect(eresv).to be_eresv
+    end
+    it "should not be a holding library" do
+      expect(eresv).not_to be_holding_library
+    end
+  end
+
   describe '#hoover_archive?' do
     let(:hv_archive) { Holdings::Library.new('HV-ARCHIVE') }
 
