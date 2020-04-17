@@ -7,6 +7,7 @@ describe Holdings::Callnumber do
   let(:callnumber) { Holdings::Callnumber.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
+  let(:eresv_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INSTRUCTOR -|- E-RESV -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -26,6 +27,10 @@ describe Holdings::Callnumber do
 
     it 'should return false for INTERNET callnumbers' do
       expect(internet_callnumber).not_to be_present
+    end
+
+    it 'should return false for E-RESVs' do
+      expect(eresv_callnumber).not_to be_present
     end
   end
 

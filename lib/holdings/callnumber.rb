@@ -16,7 +16,7 @@ class Holdings
 
     def present?
       @holding_info.present? &&
-        !(item_display[1] == 'SUL' && internet_resource?) &&
+        !(item_display[1] == 'SUL' && (internet_resource? || eresv?)) &&
         !bound_with?
     end
 
@@ -149,6 +149,10 @@ class Holdings
 
     def internet_resource?
       home_location == 'INTERNET'
+    end
+
+    def eresv?
+      current_location.code == 'E-RESV'
     end
 
     # supports whitelist for library
