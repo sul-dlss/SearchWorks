@@ -28,11 +28,15 @@ class Holdings
     end
 
     def holding_library?
-      !zombie?
+      !zombie? && !eresv?
     end
 
     def zombie?
       @code == 'ZOMBIE'
+    end
+
+    def eresv?
+      @code == 'E-RESV'
     end
 
     def hoover_archive?
