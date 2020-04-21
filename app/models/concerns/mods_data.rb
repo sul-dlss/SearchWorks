@@ -37,6 +37,6 @@ module ModsData
   end
 
   def mods_abstract
-    fetch(:summary_display, [])
+    fetch(:summary_display, [])&.uniq
   end
 end

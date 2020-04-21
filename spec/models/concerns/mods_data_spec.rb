@@ -29,4 +29,20 @@ describe ModsData do
       expect(document.prettified_mods).to match />A record with everything</
     end
   end
+
+  describe '#mods_abstract' do
+    let(:document) { SolrDocument.new(summary_display: ['The Abstract']) }
+
+    it 'is fetched from the index' do
+      expect(document.mods_abstract).to eq ['The Abstract']
+    end
+
+    context 'when the index data has duplicate content' do
+      let(:document) { SolrDocument.new(summary_display: ['The Abstract', 'The Abstract']) }
+
+      it 'de-duplicates it' do
+        expect(document.mods_abstract).to eq ['The Abstract']
+      end
+    end
+  end
 end
