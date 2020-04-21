@@ -19,9 +19,9 @@
     <%- unless toc[:fields].nil? -%>
       <%- toc[:fields].each do |toc_field| -%>
         <ul class="toc">
-          <%- toc_field.each do |field| -%>
-            <li><%= field %></li>
-          <%- end -%>
+          <% Array.wrap(toc_field).each do |field| %>
+            <li><%= render_struct_field_data(document, field) %></li>
+          <% end %>
         </ul>
       <%- end -%>
     <%- end -%>
