@@ -87,14 +87,6 @@ describe CatalogController do
         end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
       describe 'validations' do
-        it 'should not allow messages that have links in them' do
-          expect do
-            post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full' }
-          end.not_to change { ActionMailer::Base.deliveries.count }
-          expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
-          expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
-        end
-
         it 'should prevent incorrect email types from being sent' do
           expect do
             post :email, params: { to: 'email@example.com', type: 'not-a-type' }

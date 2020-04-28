@@ -5,8 +5,6 @@ module EmailValidation
     case
     when !%w(full brief).include?(params[:type])
       flash[:error] = I18n.t('blacklight.email.errors.type')
-    when params[:message] =~ %r{href|url=|https?://}i
-      flash[:error] = I18n.t('blacklight.email.errors.message.spam')
     when params[:to].blank?
       flash[:error] = I18n.t('blacklight.email.errors.to.blank')
     when too_many_email_addresses?
