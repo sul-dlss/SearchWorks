@@ -37,10 +37,6 @@ class FeedbackFormsController < ApplicationController
     @form_type = params.permit(:type)[:type]
   end
 
-  def url_regex
-    /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
-  end
-
   def validate
     errors = []
 
@@ -48,13 +44,6 @@ class FeedbackFormsController < ApplicationController
 
     if params[:message].nil? or params[:message] == ""
       errors << "A message is required"
-    end
-    if params[:message] =~ url_regex
-      errors << "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
-    end
-    if params[:user_agent] =~ url_regex ||
-       params[:viewport]   =~ url_regex
-       errors << "Your message appears to be spam, and has not been sent."
     end
     flash[:error] = errors.join("<br/>") unless errors.empty?
     flash[:error].nil?
