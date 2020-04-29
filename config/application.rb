@@ -29,6 +29,7 @@ module SearchWorks
     require 'access_panels/library_location'
     require 'access_panels/online'
     require 'access_panels/sfx'
+    require 'access_panels/temporary_access'
     require 'links'
     require 'hours_request'
     require 'holdings'
