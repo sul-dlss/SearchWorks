@@ -115,7 +115,17 @@ class CatalogController < ApplicationController
                             partial: 'blacklight/hierarchy/facet_hierarchy',
                             sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
-    config.add_facet_field "access_facet", label: "Access", limit: 10
+    config.add_facet_field 'access_facet', label: 'Access', query: {
+      'At the Library': {
+        label: 'At the Library', fq: 'access_facet:"At the Library"'
+      },
+      'Online': {
+        label: 'Online', fq: "access_facet:Online OR ht_access_sim:#{Settings.HATHI_ETAS_ACCESS ? '[* TO *]' : 'allow'}"
+      },
+      'On order': {
+        label: 'On order', fq: 'access_facet:"On order"'
+      }
+    }
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
     config.add_facet_field "collection_type", label: "Collection type", show: false
     if Settings.BOOKPLATES
