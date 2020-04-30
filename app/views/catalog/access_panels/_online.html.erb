@@ -1,12 +1,18 @@
 <%
   document ||= @document
+  temp_access = render 'catalog/access_panels/temporary_access' if Settings.HATHI_ETAS_ACCESS
   visible = document.access_panels.online.links.blank? ?  'hide' : 'show'
   book_ids = get_book_ids(@document)
   css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
 %>
 
-<div class="panel panel-default access-panel panel-online <%= visible %>">
+<% if visible || temp_access.present? %>
   <h2>Online</h2>
+<% end %>
+
+<%= temp_access %>
+
+<div class="panel panel-default access-panel panel-online <%= visible %>">
   <div class="access-panel-heading panel-heading">
     <h3>
       <% if document.is_a_database? %>
