@@ -1,6 +1,8 @@
 class AccessPanels
   class TemporaryAccess < ::AccessPanel
     def present?
+      return false unless Settings.HATHI_ETAS_ACCESS
+
       @document['hathitrust_info_struct'].present? && !fulltext_available?
     end
 
