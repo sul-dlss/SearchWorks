@@ -36,11 +36,15 @@ class AccessPanels
     private
 
     def work_url
-      "https://catalog.hathitrust.org/Record/#{hathitrust_item['ht_bib_key']}"
+      "https://catalog.hathitrust.org/Record/#{hathitrust_item['ht_bib_key']}?signon=swle:#{stanford_shib_id}"
     end
 
     def item_url
-      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=urn:mace:incommon:stanford.edu&target=#{URI.encode(item_target(hathitrust_item['htid']))}"
+      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{URI.encode(item_target(hathitrust_item['htid']))}"
+    end
+
+    def stanford_shib_id
+      'urn:mace:incommon:stanford.edu'
     end
 
     def many_holdings?
