@@ -8,8 +8,10 @@
       <span class="<%= 'stanford-only' unless temp_access.publicly_available? %>">
         <%= link_to('Full text via HathiTrust', temp_access.url) %>
       </span>
-      <p class="etas-notice">Available by special arrangement in response to the COVID-19 outbreak. Simultaneous access is limited. </p>
-      <%= link_to('More about HathiTrust ETAS', 'https://www.hathitrust.org/ETAS-User-Information') %>
+      <div class="etas-results-block">
+        <p class="etas-notice">Available by special arrangement in response to the COVID-19 outbreak. Simultaneous access is limited. </p>
+        <%= link_to('More about HathiTrust ETAS', 'https://www.hathitrust.org/ETAS-User-Information') %>
+      </div>
     </div>
   </div>
 <% end %>
