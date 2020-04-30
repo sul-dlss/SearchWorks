@@ -24,7 +24,7 @@ class AccessPanels
 
     # TODO: use criteria to select this item based on contributor,...others?
     def hathitrust_info
-      @hathitrust_info ||= JSON.parse(@document['hathitrust_info_struct'].first)
+      @hathitrust_info ||= @document['hathitrust_info_struct'].first
     end
 
     private
