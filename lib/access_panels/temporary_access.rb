@@ -14,8 +14,8 @@ class AccessPanels
     # even in the case that the item is copyrighted in the US, or only Public Domain in the US
     # (and therefore not available to users outside the US).
     def publicly_available?
-      hathitrust_info['access'] == 'allow' &&
-      !%w[icus pdus].include?(hathitrust_info['rights'])
+      hathitrust_item['access'] == 'allow' &&
+      !%w[icus pdus].include?(hathitrust_item['rights'])
     end
 
     def url
@@ -25,18 +25,22 @@ class AccessPanels
     end
 
     # TODO: use criteria to select this item based on contributor,...others?
+    def hathitrust_item
+      hathitrust_info.first
+    end
+
     def hathitrust_info
-      @hathitrust_info ||= @document['hathitrust_info_struct'].first
+      @document['hathitrust_info_struct']
     end
 
     private
 
     def work_url
-      "https://catalog.hathitrust.org/Record/#{hathitrust_info['ht_bib_key']}"
+      "https://catalog.hathitrust.org/Record/#{hathitrust_item['ht_bib_key']}"
     end
 
     def item_url
-      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=urn:mace:incommon:stanford.edu&target=#{URI.encode(item_target(hathitrust_info['htid']))}"
+      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=urn:mace:incommon:stanford.edu&target=#{URI.encode(item_target(hathitrust_item['htid']))}"
     end
 
     def many_holdings?
