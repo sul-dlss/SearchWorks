@@ -115,7 +115,7 @@ class CatalogController < ApplicationController
                             partial: 'blacklight/hierarchy/facet_hierarchy',
                             sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
-    config.add_facet_field 'access_facet', label: 'Access', query: {
+    config.add_facet_field 'access_facet', label: 'Access', partial: 'access_facet', query: {
       'At the Library': {
         label: 'At the Library', fq: 'access_facet:"At the Library"'
       },
