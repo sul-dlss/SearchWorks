@@ -3,44 +3,52 @@ class AccessPanels
     def present?
       return false unless Settings.HATHI_ETAS_ACCESS
 
-      @document['hathitrust_info_struct'].present? && !fulltext_available?
+      (hathitrust_work_id.present? || hathitrust_item_id.present?) && !fulltext_available?
     end
 
     def many?
-      hathitrust_info.many? || many_holdings?
+      hathitrust_item_id.nil? || many_holdings?
     end
 
     # According to https://www.hathitrust.org/hathifiles_description access will be "allow"
     # even in the case that the item is copyrighted in the US, or only Public Domain in the US
     # (and therefore not available to users outside the US).
     def publicly_available?
-      hathitrust_item['access'] == 'allow' &&
-      !%w[icus pdus].include?(hathitrust_item['rights'])
+      return false if access_rights.present?
+
+      access_rights.none? do |value|
+        value == 'deny' || %w[allow:icus allow:pdus].include?(value)
+      end
+    end
+
+    def access_rights
+      Array(@document['ht_access_sim'])
     end
 
     def url
-      return work_url if many?
-
-      item_url
+      if hathitrust_item_id.nil? || many_holdings?
+        work_url
+      else
+        item_url
+      end
     end
 
-    # TODO: use criteria to select this item based on contributor,...others?
-    def hathitrust_item
-      hathitrust_info.first
+    def hathitrust_item_id
+      @document.first('ht_htid_ssim')
     end
 
-    def hathitrust_info
-      @document['hathitrust_info_struct']
+    def hathitrust_work_id
+      @document.first('ht_bib_key_ssim')
     end
 
     private
 
     def work_url
-      "https://catalog.hathitrust.org/Record/#{hathitrust_item['ht_bib_key']}?signon=swle:#{stanford_shib_id}"
+      "https://catalog.hathitrust.org/Record/#{hathitrust_work_id}?signon=swle:#{stanford_shib_id}"
     end
 
     def item_url
-      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{URI.encode(item_target(hathitrust_item['htid']))}"
+      "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{URI.encode(item_target(hathitrust_item_id))}"
     end
 
     def stanford_shib_id
