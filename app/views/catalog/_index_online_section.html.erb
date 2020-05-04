@@ -1,4 +1,6 @@
-<dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8 <%= 'hide' unless document.access_panels.online? %>">
+<% display_panel = document.access_panels.online? %>
+<% display_panel = (document.access_panels.online? || document.access_panels.temporary_access?) if Settings.HATHI_ETAS_ACCESS %>
+<dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8 <%= 'hide' unless display_panel %>">
   <% if document.druid %>
     <dt class="also-online-label">Also online at</dt>
   <% else %>
@@ -6,6 +8,13 @@
   <% end %>
   <dd>
     <ul class="online-links" data-behavior="truncate-results-online-links">
+      <% if document.access_panels.temporary_access? %>
+        <% temp_access = document.access_panels.temporary_access %>
+        <li class="<%= 'stanford-only' unless temp_access.publicly_available? %>">
+          <%= link_to('Full text via HathiTrust', temp_access.url) %>
+        </li>
+      <% end %>
+
       <% if document.access_panels.online? %>
         <% document.access_panels.online.links.each do |link| %>
           <li class="<%= 'stanford-only' if link.stanford_only? %>">
@@ -21,5 +30,12 @@
         </li>
       <% end %>
     </ul>
+
+    <% if document.access_panels.temporary_access? %>
+      <div class="etas-results-block">
+        <p class="etas-notice">Available by special arrangement in response to the COVID-19 outbreak. Simultaneous access is limited. </p>
+        <%= link_to('More about HathiTrust ETAS', 'https://www.hathitrust.org/ETAS-User-Information') %>
+      </div>
+    <% end %>
   </dd>
 </dl>
