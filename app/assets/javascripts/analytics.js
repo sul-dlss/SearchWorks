@@ -91,7 +91,7 @@ Blacklight.onLoad(function(){
   // HathiTrust Temporary Access
   $('.panel.temporary-access a, .results-online-section .online-links').on('click', function(e) {
     if (/Full text via HathiTrust/.test(this.text)) {
-      ga('send', 'event', 'HathTrust', 'clicked', this.href, {
+      ga('send', 'event', 'HathiTrust', 'clicked', this.href, {
         'transport': 'beacon'
       });
     }
