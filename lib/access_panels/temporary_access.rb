@@ -14,7 +14,7 @@ class AccessPanels
     # even in the case that the item is copyrighted in the US, or only Public Domain in the US
     # (and therefore not available to users outside the US).
     def publicly_available?
-      return false if access_rights.present?
+      return false unless access_rights.present?
 
       access_rights.none? do |value|
         value == 'deny' || %w[allow:icus allow:pdus].include?(value)
