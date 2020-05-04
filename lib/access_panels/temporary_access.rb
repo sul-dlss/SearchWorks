@@ -6,10 +6,6 @@ class AccessPanels
       (hathitrust_work_id.present? || hathitrust_item_id.present?) && !fulltext_available?
     end
 
-    def many?
-      hathitrust_item_id.nil? || many_holdings?
-    end
-
     # According to https://www.hathitrust.org/hathifiles_description access will be "allow"
     # even in the case that the item is copyrighted in the US, or only Public Domain in the US
     # (and therefore not available to users outside the US).
@@ -21,16 +17,18 @@ class AccessPanels
       end
     end
 
-    def access_rights
-      Array(@document['ht_access_sim'])
-    end
-
     def url
       if hathitrust_item_id.nil? || many_holdings?
         work_url
       else
         item_url
       end
+    end
+
+    private
+
+    def access_rights
+      Array(@document['ht_access_sim'])
     end
 
     def hathitrust_item_id
@@ -40,8 +38,6 @@ class AccessPanels
     def hathitrust_work_id
       @document.first('ht_bib_key_ssim')
     end
-
-    private
 
     def work_url
       "https://catalog.hathitrust.org/Record/#{hathitrust_work_id}?signon=swle:#{stanford_shib_id}"
