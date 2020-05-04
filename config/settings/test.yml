@@ -7,3 +7,4 @@ SU_AFFILIATIONS:
   - test-stanford:test
 EXHIBITS_ACCESS_PANEL:
   enabled: true
+HATHI_ETAS_ACCESS: true
