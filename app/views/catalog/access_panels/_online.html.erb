@@ -6,7 +6,7 @@
   css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
 %>
 
-<% if visible || temp_access.present? %>
+<% if document.access_panels.online.links.present? || temp_access.present? %>
   <h2>Online</h2>
 <% end %>
 
