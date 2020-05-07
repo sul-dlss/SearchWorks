@@ -10,7 +10,7 @@
     <ul class="online-links" data-behavior="truncate-results-online-links">
       <% if document.access_panels.temporary_access? %>
         <% temp_access = document.access_panels.temporary_access %>
-        <li class="<%= 'stanford-only' unless temp_access.publicly_available? %>">
+        <li class="stanford-only">
           <%= link_to('Full text via HathiTrust', temp_access.url) %>
         </li>
       <% end %>
