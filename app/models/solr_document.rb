@@ -7,6 +7,7 @@ class SolrDocument
   include MarcLinks
   include IndexLinks
   include EdsLinks
+  include HathiLinks
   include DisplayType
   include CourseReserves
   include AccessPanelsConcern
