@@ -42,10 +42,15 @@ class HathiTrustLinks
   end
 
   def work_url
-    "https://catalog.hathitrust.org/Record/#{hathitrust_work_id}?signon=swle:#{stanford_shib_id}"
+    work_base_url = "https://catalog.hathitrust.org/Record/#{hathitrust_work_id}"
+    return work_base_url if publicly_available?
+
+    "#{work_base_url}?signon=swle:#{stanford_shib_id}"
   end
 
   def item_url
+    return item_target(hathitrust_item_id) if publicly_available?
+
     "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{URI.encode(item_target(hathitrust_item_id))}"
   end
 

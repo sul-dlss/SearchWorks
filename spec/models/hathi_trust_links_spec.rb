@@ -57,6 +57,21 @@ describe HathiTrustLinks do
 
       it 'is the url to the work' do
         expect(ht_links.url).to include('hathitrust.org/Record/abc123')
+        expect(ht_links.url).to include('?signon=swle:urn:mace')
+      end
+
+      context 'when publicly_available' do
+        it 'includes the signon param' do
+          expect(ht_links.url).to include('?signon=swle:urn:mace')
+        end
+      end
+
+      context 'when not publicly_available' do
+        before { document_data[:ht_access_sim] = ['access'] }
+
+        it 'does not include the signon param (and sends the user directly to the work)' do
+          expect(ht_links.url).not_to include('?signon=swle:urn:mace')
+        end
       end
     end
 
@@ -83,7 +98,21 @@ describe HathiTrustLinks do
       it 'is the url to the item' do
         expect(ht_links.url).to include('hathitrust.org/cgi/pt?id=1234567&view=1up')
       end
+
+      context 'when publicly_available' do
+        it 'passes the item URL through the target param' do
+          expect(ht_links.url).to include('target=https://babel.hathitrust.org/cgi/pt?id=1234567&view=1up')
+        end
+      end
+
+      context 'when not publicly_available' do
+        before { document_data[:ht_access_sim] = ['access'] }
+
+        it 'is the item URL directly (not passed as a the targer param)' do
+          expect(ht_links.url).not_to include('target=')
+          expect(ht_links.url).to start_with('https://babel.hathitrust.org/cgi/pt?id=1234567&view=1up')
+        end
+      end
     end
   end
-
 end
