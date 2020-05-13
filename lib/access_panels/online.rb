@@ -3,7 +3,7 @@ class AccessPanels
     delegate :present?, to: :links
 
     def links
-      sfx_links || marc_fulltext_links || eds_links
+      sfx_links || marc_fulltext_links || hathi_links || eds_links
     end
 
     private
@@ -18,6 +18,14 @@ class AccessPanels
 
     def eds_links
       @document.eds_links.fulltext if @document.eds_links.present?
+    end
+
+    def hathi_links
+      non_stanford_links = @document.hathi_links.all.reject(&:stanford_only?)
+
+      return unless non_stanford_links.any?
+
+      non_stanford_links
     end
   end
 end
