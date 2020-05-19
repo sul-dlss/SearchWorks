@@ -64,7 +64,7 @@ Blacklight.onLoad(function(){
 
   $('.iiif-dnd').on('click', function(e) {
     var manifest = $(e.currentTarget).data().manifest;
-    ga('send', 'event', 'IIIF DnD', 'yo', manifest, {
+    ga('send', 'event', 'IIIF DnD', 'clicked', manifest, {
       'transport': 'beacon',
     });
   });
