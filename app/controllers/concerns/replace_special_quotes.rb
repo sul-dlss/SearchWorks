@@ -1,8 +1,13 @@
+# frozen_string_literal: true
+
+##
+# Module to be mixed into a controller to replace
+# special quote characters on the index action
 module ReplaceSpecialQuotes
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_action)
+    if respond_to?(:before_action)
       before_action :replace_special_quotes, only: :index
     end
   end
@@ -11,12 +16,31 @@ module ReplaceSpecialQuotes
 
   def replace_special_quotes
     modifiable_params_keys.each do |param|
-      if params.has_key?(param) and params[param].present?
-        special_quote_characters.each do |char|
-          params[param].gsub!(/#{char}/, '"')
-        end
+      next unless params[param]&.present?
+
+      replace_single_quotes_from_param(params[param])
+
+      special_quote_characters.each do |char|
+        params[param].gsub!(/#{char}/, '"')
       end
     end
+  end
+
+  def replace_single_quotes_from_param(param)
+    special_single_quotation_marks.each do |open_quote, close_quote|
+      opens = param.scan(open_quote)
+      closes = param.scan(close_quote)
+
+      # only uneven single quotes
+      next unless opens.length != closes.length
+
+      param.sub!(/#{open_quote}/, "'") if opens.length == 1
+      param.sub!(/#{close_quote}/, "'") if closes.length == 1
+    end
+  end
+
+  def special_single_quotation_marks
+    [["\u2018", "\u2019"], ["\u201A", "\u201B"]]
   end
 
   def special_quote_characters

@@ -8,7 +8,7 @@ describe ReplaceSpecialQuotes do
 
   before do
     controller.extend(ReplaceSpecialQuotes)
-    allow(controller).to receive(:modifiable_params_keys).and_return(['a_param'])
+    allow(controller).to receive(:modifiable_params_keys).and_return(%w[a_param b_param c_param d_param])
     allow(controller).to receive(:params).and_return(HashWithIndifferentAccess.new(params))
   end
 
@@ -20,6 +20,48 @@ describe ReplaceSpecialQuotes do
       expect(params[:a_param].scan("\"#{q}\"").length).to eq 14
       ["«", "「", "〟", "』"].each do |character|
         expect(params[:a_param]).not_to include(character)
+      end
+    end
+  end
+
+  describe 'with special single quotes' do
+    context 'when there is only one single quotation mark in the string' do
+      let(:params) do
+        {
+          a_param: "#{q}‘s",
+          b_param: "#{q}’s",
+          c_param: "#{q}‚s",
+          d_param: "#{q}‛s"
+        }
+      end
+
+      it 'should be replaced with an apostrophe' do
+        controller.send(:replace_special_quotes)
+
+        expect(params[:a_param]).to eq "query's"
+        expect(params[:b_param]).to eq "query's"
+        expect(params[:c_param]).to eq "query's"
+        expect(params[:d_param]).to eq "query's"
+      end
+    end
+
+    context 'when there are multiple single quotation marks in the string' do
+      let(:params) do
+        {
+          a_param: "‘#{q}‘",
+          b_param: "’#{q}’",
+          c_param: "‚#{q}‚",
+          d_param: "‛#{q}‛"
+        }
+      end
+
+      it 'should be replaced with the standard double quote character' do
+        controller.send(:replace_special_quotes)
+
+        expect(params[:a_param]).to eq '"query"'
+        expect(params[:b_param]).to eq '"query"'
+        expect(params[:c_param]).to eq '"query"'
+        expect(params[:d_param]).to eq '"query"'
       end
     end
   end
