@@ -1,0 +1,71 @@
+# frozen_string_literal: true
+
+require 'spec_helper'
+
+RSpec.describe RequestLink do
+  subject(:link) { described_class.new(document: document, library: library, location: location, items: items) }
+
+  let(:document) { SolrDocument.new(id: '12345') }
+  let(:library) { 'GREEN' }
+  let(:location) { 'STACKS' }
+  let(:items) { [double(must_request?: false, type: 'STKS-MONO')] }
+
+  describe '#present?' do
+    context 'for libaries/locations that are configured to have request links' do
+      it { expect(link).to be_present }
+    end
+
+    context 'for libaries that are not configured to have request links' do
+      let(:library) { 'CLASSICS' }
+
+      it { expect(link).not_to be_present }
+    end
+
+    context 'for locations that not configured to have request links' do
+      let(:location) { 'IC' }
+
+      it { expect(link).not_to be_present }
+    end
+
+    context 'when none of the items have a circulating type ' do
+      let(:items) { [double(must_request?: false, type: 'NONCIRC')] }
+
+      it { expect(link).not_to be_present }
+    end
+
+    context 'when none of the items are requestable' do
+      let(:items) { [double(must_request?: true, type: 'STKS-MONO')] }
+
+      it { expect(link).not_to be_present }
+    end
+
+    context 'when available under a temporary access agreement' do
+      let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123') }
+
+      it { expect(link).not_to be_present }
+    end
+  end
+
+  describe '#render' do
+    context 'when not present' do
+      let(:location) { 'IC' }
+
+      it { expect(link.render).to eq '' }
+    end
+
+    context 'when present' do
+      it 'renders the #markup as html_safe' do
+        expect(link.render).to match(/<a .*>Request<\/a>/)
+      end
+    end
+  end
+
+  describe '#url' do
+    it 'appends the request app params to the base URL' do
+      expect(link.url).to start_with(Settings.REQUESTS_URL)
+      expect(link.url).to include('item_id=12345')
+      expect(link.url).to include('origin=GREEN')
+      expect(link.url).to include('origin_location=STACKS')
+    end
+  end
+end
