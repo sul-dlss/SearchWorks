@@ -37,7 +37,7 @@ describe "catalog/_index_location.html.erb" do
         SolrDocument.new(
           id: '123',
           item_display: [
-            '123 -|- GREEN -|- UARCH-30 -|- -|- -|- -|- -|- -|- ABC 123'
+            '123 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
           ]
         )
       )
@@ -45,7 +45,7 @@ describe "catalog/_index_location.html.erb" do
     end
 
     it 'should have the request link at the location level' do
-      expect(rendered).to have_css('tbody th strong', text: "University Archives")
+      expect(rendered).to have_css('tbody th strong', text: "Stacks")
       expect(rendered).to have_css('tbody td a', text: "Request")
     end
   end
@@ -197,8 +197,8 @@ describe "catalog/_index_location.html.erb" do
             SolrDocument.new(
               id: '123',
               item_display: [
-                '123 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
-                '456 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
+                '123 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123',
+                '456 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 456'
               ]
             )
           )
