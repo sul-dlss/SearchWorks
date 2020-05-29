@@ -69,7 +69,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN]
+    %w[GREEN MEDIA-MTXT]
   end
 
   def enabled_locations
@@ -96,6 +96,7 @@ class RequestLink
   def circulating_item_type_map
     {
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
+      'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'default' => %w[STKS-MONO]
     }
   end
@@ -118,6 +119,7 @@ class RequestLink
         SSRC-NEWBK
         STACKS
       ],
+      'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
       'default' => %w[STACKS]
     }
   end
