@@ -104,14 +104,16 @@ class RequestLink
   def enabled_locations_map
     {
       'GREEN' => %w[
-        CALIF-DOCS
         BENDER
+        CALIF-DOCS
+        FED-DOCS
         FOLIO
         FOLIO-FLAT
         HAS-CA
         HAS-DIGIT
         HAS-FIC
         HAS-NEWBK
+        IC-DISPLAY
         INTL-DOCS
         LOCKED-STK
         SSRC-CLASS
