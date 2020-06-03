@@ -13,7 +13,7 @@ class RequestLink
 
   def present?
     enabled_libraries.include?(library) &&
-      enabled_locations.include?(location) &&
+      in_enabled_location? &&
       any_items_circulate? &&
       any_items_requestable? && # Will this need to change now? This assumes an item level link, which may temp. be gone
       !available_via_temporary_access?
@@ -69,7 +69,13 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN MEDIA-MTXT]
+    %w[GREEN MEDIA-MTXT SPEC-COLL]
+  end
+
+  def in_enabled_location?
+    return true if enabled_locations == '*'
+
+    enabled_locations.include?(location)
   end
 
   def enabled_locations
@@ -81,6 +87,8 @@ class RequestLink
   end
 
   def any_items_circulate?
+    return true if circulating_item_types == '*'
+
     items.any? { |item| circulating_item_types.include?(item.type) }
   end
 
@@ -97,6 +105,7 @@ class RequestLink
     {
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
+      'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
     }
   end
@@ -122,6 +131,7 @@ class RequestLink
         STACKS
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
+      'SPEC-COLL' => '*',
       'default' => %w[STACKS]
     }
   end

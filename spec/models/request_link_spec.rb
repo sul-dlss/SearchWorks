@@ -8,7 +8,7 @@ RSpec.describe RequestLink do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'STACKS' }
-  let(:items) { [double(must_request?: false, type: 'STKS-MONO')] }
+  let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: nil))] }
 
   describe '#present?' do
     context 'for libaries/locations that are configured to have request links' do
@@ -28,13 +28,13 @@ RSpec.describe RequestLink do
     end
 
     context 'when none of the items have a circulating type ' do
-      let(:items) { [double(must_request?: false, type: 'NONCIRC')] }
+      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).not_to be_present }
     end
 
     context 'when none of the items are requestable' do
-      let(:items) { [double(must_request?: true, type: 'STKS-MONO')] }
+      let(:items) { [double(must_request?: true, type: 'STKS-MONO', current_location: double(code: nil))] }
 
       it { expect(link).not_to be_present }
     end
@@ -43,6 +43,21 @@ RSpec.describe RequestLink do
       let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123') }
 
       it { expect(link).not_to be_present }
+    end
+
+    context 'when an item is in a location that wildcards item types' do
+      let(:library) { 'SPEC-COLL' }
+      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+
+      it { expect(link).to be_present }
+    end
+
+    context 'when a library has its locations wildcarded' do
+      let(:library) { '???' }
+      let(:location) { 'UNKNOWN-LOCATION' }
+
+      # We don't have this case yet, but here's the test if we ever do
+      pending { expect(link).to be_present }
     end
   end
 
