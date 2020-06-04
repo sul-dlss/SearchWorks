@@ -71,7 +71,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN MEDIA-MTXT SPEC-COLL]
+    %w[GREEN MEDIA-MTXT SAL SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -119,6 +119,7 @@ class RequestLink
     {
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
+      'SAL' => %w[DVDCD PAGE-1DAY NH-MICR STKS-MONO STKS-PERI],
       'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
     }
@@ -152,6 +153,38 @@ class RequestLink
         STACKS
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
+      'SAL' => %w[
+        CHINESE
+        EAL-SETS
+        EAL-STKS-C
+        EAL-STKS-J
+        EAL-STKS-K
+        FED-DOCS
+        FOLIO
+        HY-PAGE-EA
+        JAPANESE
+        KOREAN
+        L-PAGE-EA
+        LOCK-JPN
+        LOCKED-STK
+        MEDIA-MTXT
+        MICROTEXT
+        ND-PAGE-EA
+        PAGE-EA
+        PAGE-GR
+        PAGE-SP
+        SAL-ARABIC
+        SAL-FOLIO
+        SAL-PAGE
+        SAL-SERG
+        SAL-TEMP
+        SALTURKISH
+        SHELFBYSER
+        SHELFBYTITL
+        SOUTH-MEZZ
+        STACKS
+        TECH-RPTS
+      ],
       'SPEC-COLL' => %w[
         BARCHAS
         FELT-STOR
