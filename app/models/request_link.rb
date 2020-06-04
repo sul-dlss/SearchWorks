@@ -65,6 +65,7 @@ class RequestLink
 
   def link_text_map
     {
+      'SPEC-COLL' => 'Request on-site access',
       'default' => 'Request'
     }
   end
@@ -151,7 +152,43 @@ class RequestLink
         STACKS
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
-      'SPEC-COLL' => '*',
+      'SPEC-COLL' => %w[
+        BARCHAS
+        FELT-STOR
+        FELTON
+        FELTON-30
+        FRECOT
+        GOLDSTAR
+        GUNST
+        GUNST-30
+        LOCKED-MAP
+        LOCKED-STK
+        MANNING
+        MANUSCRIPT
+        MEDIA-30
+        MEDIA-MTXT
+        MEDIAX-30
+        MSS-10
+        MSS-20
+        MSS-30
+        MSSX-30
+        NEWTON
+        RARE-BOOKS
+        RARE-STOR
+        RBC-30
+        REFERENCE
+        ROBINSON
+        SAMSON
+        STACKS
+        STORAGE
+        TAUBE
+        THEATRE
+        THESES
+        U-ARCHIVES
+        UARCH-30
+        UARCH-REF
+        UARCHX-30
+      ],
       'default' => %w[STACKS]
     }
   end
