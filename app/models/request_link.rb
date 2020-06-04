@@ -14,6 +14,7 @@ class RequestLink
   def present?
     enabled_libraries.include?(library) &&
       in_enabled_location? &&
+      not_in_disabled_current_location? &&
       any_items_circulate? &&
       any_items_requestable? && # Will this need to change now? This assumes an item level link, which may temp. be gone
       !available_via_temporary_access?
@@ -78,6 +79,18 @@ class RequestLink
     enabled_locations.include?(location)
   end
 
+  def not_in_disabled_current_location?
+    items.any? do |item|
+      !disabled_current_locations.include?(item.current_location.code)
+    end
+  end
+
+  def disabled_current_locations
+    library_map = disabled_current_locations_map[library]
+
+    library_map || disabled_current_locations_map['default']
+  end
+
   def enabled_locations
     enabled_locations_map[library] || enabled_locations_map['default']
   end
@@ -107,6 +120,13 @@ class RequestLink
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
+    }
+  end
+
+  def disabled_current_locations_map
+    {
+      'SPEC-COLL' => %w[INPROCESS ON-ORDER SPEC-INPRO],
+      'default' => %w[INPROCESS ON-ORDER]
     }
   end
 

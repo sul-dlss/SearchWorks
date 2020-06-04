@@ -59,6 +59,13 @@ RSpec.describe RequestLink do
       # We don't have this case yet, but here's the test if we ever do
       pending { expect(link).to be_present }
     end
+
+    context 'when all items are in a blacklisted current location' do
+      let(:library) { 'GREEN' }
+      let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: 'INPROCESS'))] }
+
+      it { expect(link).not_to be_present }
+    end
   end
 
   describe '#render' do
