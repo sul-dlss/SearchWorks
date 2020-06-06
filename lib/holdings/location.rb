@@ -32,7 +32,7 @@ class Holdings
     def request_link
       return if items.empty? || bound_with?
 
-      @request_link ||= RequestLink.new(document: @document, library: library, location: @code, items: items)
+      @request_link ||= RequestLink.for(document: @document, library: library, location: @code, items: items)
     end
 
     def location_link

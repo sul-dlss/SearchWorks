@@ -57,7 +57,7 @@ module RequestLinkHelper
   end
 
   def hoover_request_url(document, callnumber)
-    HooverOpenUrlRequest.new(callnumber.library, document, self).to_url
+    HooverOpenUrlRequest.new(callnumber.library, document).to_url
   end
 
   def process_request_params(document, callnumber, barcode)

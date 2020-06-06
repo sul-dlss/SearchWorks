@@ -42,7 +42,7 @@
                   <% end %>
                 <% end %>
               <% end %>
-              <%= location.request_link&.render %>
+              <%= location.request_link&.render unless Constants::HOOVER_LIBS.include?(library.code) %>
             </td>
           </tr>
           <% if Constants::HOOVER_LIBS.include?(library.code) %>

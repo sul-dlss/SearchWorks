@@ -1,10 +1,10 @@
 class HooverOpenUrlRequest
+  include ActionView::Helpers::OutputSafetyHelper
+
   delegate :to_param, to: :as_params
-  delegate :safe_join, :solr_document_url, to: :view_context
-  def initialize(library, document, view_context)
+  def initialize(library, document)
     @library = library
     @document = document
-    @view_context = view_context
   end
 
   def to_url
@@ -29,7 +29,7 @@ class HooverOpenUrlRequest
   end
 
   def record_url
-    solr_document_url(document)
+    "https://searchworks.stanford.edu/view/#{ckey}"
   end
 
   def ckey
@@ -89,9 +89,10 @@ class HooverOpenUrlRequest
 
   private
 
-  attr_reader :library, :document, :view_context
+  attr_reader :library, :document
 
   def archive?
+    # We are not currently routing any HV-ARCHIVE request links through this code...
     library == 'HV-ARCHIVE'
   end
 

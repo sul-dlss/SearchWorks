@@ -11,6 +11,10 @@ class RequestLink
     @items = items
   end
 
+  def self.for(document:, library:, location:, items: [])
+    RequestLinkFactory.for(library: library).new(document: document, library: library, location: location, items: items)
+  end
+
   def present?
     enabled_libraries.include?(library) &&
       in_enabled_location? &&
