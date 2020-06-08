@@ -12,7 +12,9 @@ class RequestLink
   end
 
   def self.for(document:, library:, location:, items: [])
-    RequestLinkFactory.for(library: library).new(document: document, library: library, location: location, items: items)
+    RequestLinkFactory.for(
+      library: library, location: location
+    ).new(document: document, library: library, location: location, items: items)
   end
 
   def present?
