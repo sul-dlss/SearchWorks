@@ -11,7 +11,7 @@ describe OrganizationAndArrangement do
   end
 
   describe 'values' do
-    it 'whitelists $3, $a, $b, and $c for display' do
+    it 'selects $3, $a, $b, and $c for display' do
       expect(subject.values.length).to eq 1
       expect(subject.values.first).to eq '351 $3 351 $c 351 $a 351 $b'
     end

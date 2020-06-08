@@ -168,7 +168,7 @@ describe Holdings::Callnumber do
 
   describe 'stackmapable?' do
     # 0 barcode -|- 1 library -|- 2 home location -|- 3 current location
-    it 'when a library is stackmapable and the home location is not blacklisted' do
+    it 'when a library is stackmapable and the home location is not skipped' do
       expect(described_class.new('barcode -|- GREEN -|- STACKS')).to be_stackmapable
       expect(described_class.new('barcode -|- ART -|- STACKS')).to be_stackmapable
       expect(described_class.new('barcode -|- EAST-ASIA -|- KOREAN')).to be_stackmapable
@@ -178,17 +178,17 @@ describe Holdings::Callnumber do
       expect(described_class.new('barcode -|- UNKNOWN -|- STACKS')).not_to be_stackmapable
     end
 
-    it 'when the library is stackmapable but the home location is globally blacklisted' do
+    it 'when the library is stackmapable but the home location is globally skipped' do
       expect(described_class.new('barcode -|- GREEN -|- GREEN-RESV')).not_to be_stackmapable
     end
 
-    it 'when the library is stackmapable but the home location is locally blacklisted' do
+    it 'when the library is stackmapable but the home location is locally skipped' do
       expect(described_class.new('barcode -|- ART -|- MEDIA')).not_to be_stackmapable
     end
 
-    it 'when the library is stackmapable but the home location is locally blacklisted for a different library' do
-      expect(Constants::STACKMAP_BLACKLIST['GREEN']).to be_nil
-      expect(Constants::STACKMAP_BLACKLIST['ART']).to include 'MEDIA'
+    it 'when the library is stackmapable but the home location is locally skipped for a different library' do
+      expect(Constants::STACKMAP_SKIPLIST['GREEN']).to be_nil
+      expect(Constants::STACKMAP_SKIPLIST['ART']).to include 'MEDIA'
       expect(described_class.new('barcode -|- GREEN -|- MEDIA')).to be_stackmapable
     end
   end

@@ -96,7 +96,7 @@ RSpec.describe EdsLinks do
         { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3', 'type' => 'customlink-fulltext' },
         { 'label' => 'OPEN ACCESS',             'url' => 'http://example.com/4', 'type' => 'customlink-fulltext' },
         { 'label' => 'VIEW REQUEST OPTIONS',    'url' => 'http://example.com/5', 'type' => 'customlink-fulltext' },
-        { 'label' => 'ACCESS URL',              'url' => 'http://example.com/6', 'type' => 'customlink-fulltext' } # blacklisted
+        { 'label' => 'ACCESS URL',              'url' => 'http://example.com/6', 'type' => 'customlink-fulltext' } # ignored
       ]
     end
 

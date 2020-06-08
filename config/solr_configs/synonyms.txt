@@ -1,9 +1,9 @@
 # http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#solr.SynonymFilterFactory
 # A synonym file for Solr SynonymFilterFactory.
-# Needs to be included at both index and query time 
+# Needs to be included at both index and query time
 #  AFTER the case folding
 #  BEFORE the WordDelimiterFilterFactory that removes punctuation
-# e.g. 
+# e.g.
 # <analyzer>
 #   <tokenizer class="solr.WhitespaceTokenizerFactory" />
 #   <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
@@ -44,7 +44,7 @@ violoncello, violincello => cello
 
 # The below is inspired by Jonathan Rochkind at Johns Hopkins University, 2013-04-15
 
-# punctuation-including terms we want to whitelist protect and make searchable.
+# punctuation-including terms we want to protect and make searchable.
 # We do this by mapping them to unique tokens that do not include punctuation
 
 # computer languages

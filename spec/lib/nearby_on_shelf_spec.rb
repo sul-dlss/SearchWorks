@@ -736,7 +736,7 @@ describe "Stanford::NearbyOnShelf", "data-integration": true do
       expect(set2_callnums[3]).to eq "DDD"
     end
 
-    it "should return an empty array if there are no items or all items have blacklisted callnums" do
+    it "should return an empty array if there are no items or all items have skipped callnums" do
       _doc_no_items = {
         id: 'doc5',
         title_245a_display: 'title5',

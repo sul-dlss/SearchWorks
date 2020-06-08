@@ -29,8 +29,8 @@ module EdsLinks
     def category
       return map[:category] if map.present? # matches a label exactly
 
-      [/Access URL/i, /Availability/i].each do |blacklisted| # always exclude these labels
-        return nil if label =~ blacklisted
+      [/Access URL/i, /Availability/i].each do |excluded| # always exclude these labels
+        return nil if label =~ excluded
       end
       LINK_MAPPING[:open_access_link][:category] # the rest are open-access
     end

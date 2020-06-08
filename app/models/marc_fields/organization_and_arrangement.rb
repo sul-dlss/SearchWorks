@@ -5,10 +5,10 @@ class OrganizationAndArrangement < MarcField
   private
 
   def preprocessors
-    super + [:whitelist_subfields]
+    super + [:relevant_subfields]
   end
 
-  def whitelist_subfields
+  def relevant_subfields
     relevant_fields.each do |field|
       field.subfields = field.subfields.select do |subfield|
         %w(3 a b c).include?(subfield.code)

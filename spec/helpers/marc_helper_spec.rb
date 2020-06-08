@@ -210,7 +210,7 @@ describe MarcHelper do
       expect(link_to_contributor_from_marc(nil_document.to_marc)).to be_nil
     end
 
-    it 'should not display blacklisted fields' do
+    it 'should not display certain fields' do
       link = contributors_and_works_from_marc(contributor.to_marc)
       link.each do |_, value|
         expect(value).not_to match(/880-00/)

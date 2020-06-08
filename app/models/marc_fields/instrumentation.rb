@@ -13,10 +13,10 @@ class Instrumentation < MarcField
   private
 
   def preprocessors
-    super + [:whitelist_subfields]
+    super + [:relevant_subfields]
   end
 
-  def whitelist_subfields
+  def relevant_subfields
     relevant_fields.each do |field|
       field.subfields = field.subfields.reject do |subfield|
         !%w(a b d n p s v).include?(subfield.code)

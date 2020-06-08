@@ -1003,7 +1003,7 @@ module Constants
   }
 
   STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA LAW].freeze
-  STACKMAP_BLACKLIST = { # keys are libraries (with `:global` for a global blacklist) and values are home locations
+  STACKMAP_SKIPLIST = { # keys are libraries (with `:global` used for any library) and values are home locations
     global: %w[BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN],
     'ART' => %w[
       ARTLCKL
