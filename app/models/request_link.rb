@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN MEDIA-MTXT SAL SPEC-COLL]
+    %w[GREEN MEDIA-MTXT SAL SAL3 SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -130,6 +130,7 @@ class RequestLink
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'SAL' => %w[DVDCD PAGE-1DAY NH-MICR STKS-MONO STKS-PERI],
+      'SAL3' => %w[MEDIA NH-7DAY SCORE STKS STKS-PERI STKS-MONO],
       'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
     }
@@ -195,6 +196,52 @@ class RequestLink
         SOUTH-MEZZ
         STACKS
         TECH-RPTS
+      ],
+      'SAL3' => %w[
+        ASK@EASIA
+        ATLASES
+        BUS-STACKS
+        CALIF-DOCS
+        CHINESE
+        FED-DOCS
+        HY-PAGE-EA
+        IC-NEWS
+        IC-STATS
+        INDEXES
+        INTL-DOCS
+        JAPANESE
+        KOREAN
+        L-PAGE-EA
+        LOCKED-STK
+        MEDIA-MTXT
+        MICROTEXT
+        PAGE-AR
+        PAGE-AS
+        PAGE-BU
+        PAGE-EA
+        PAGE-ED
+        PAGE-EN
+        PAGE-ES
+        PAGE-GR
+        PAGE-HP
+        PAGE-LP
+        PAGE-MD
+        PAGE-MP
+        PAGE-MU
+        PAGE-RM
+        PAGE-SI
+        PAGE-SP
+        R-STACKS
+        RARE-BOOKS
+        RBC-30
+        RECORDINGS
+        SAFETY
+        SAL-PAGE
+        SCORES
+        SOUTH-MEZZ
+        STACKS
+        STORAGE
+        UARCH-30
       ],
       'SPEC-COLL' => %w[
         BARCHAS
