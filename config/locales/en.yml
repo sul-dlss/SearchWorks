@@ -1,9 +1,9 @@
 en:
   default_title: "Stanford Libraries"
   global_alert_html: >
-    <b>COVID-19 update</b><br/>
-    Stanford Libraries <a href="https://library.stanford.edu/remote-resources">e-resources</a> are available to support you during remote instruction.<br/>
-    At this time, physical access to materials is unavailable and locations remain closed. <a href="https://library.stanford.edu/alerts">read more</a>
+    <b>RESEARCH RESTART</b><br/>
+    The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's <a href="https://cardinalrecovery.stanford.edu/research/research-recovery/">Research Restart Plan</a>.<br/>
+    Learn more about the Libraries' entry requirements and <a href="https://library.stanford.edu/returntoresearch">available services</a>.
   opensearch_description: "Stanford Libraries"
   defaults_search:
     title_name: Search
