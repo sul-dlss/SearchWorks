@@ -18,7 +18,7 @@ module RequestLinks
 
     def markup
       if url
-        "<a href=\"#{url}\" rel=\"nofollow\" class=\"btn btn-default btn-xs request-button\">#{link_text}</a>"
+        "<a href=\"#{url}\" rel=\"nofollow\" class=\"#{classes}\">#{link_text}</a>"
       else
         'Not available to request'
       end

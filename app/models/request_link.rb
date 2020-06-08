@@ -44,8 +44,12 @@ class RequestLink
     document&.access_panels&.temporary_access&.present?
   end
 
+  def classes
+    'btn btn-default btn-xs request-button'
+  end
+
   def markup
-    "<a href=\"#{url}\" rel=\"nofollow\" data-behavior=\"requests-modal\" class=\"btn btn-default btn-xs request-button\">#{link_text}</a>"
+    "<a href=\"#{url}\" rel=\"nofollow\" data-behavior=\"requests-modal\" class=\"#{classes}\">#{link_text}</a>"
   end
 
   def base_request_url

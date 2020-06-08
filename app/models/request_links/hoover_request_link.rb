@@ -21,7 +21,7 @@ module RequestLinks
     end
 
     def markup
-      "<a href=\"#{url}\" rel=\"nofollow\" #{tooltip} class=\"btn btn-default btn-xs request-button\">#{link_text}</a>"
+      "<a href=\"#{url}\" rel=\"nofollow\" #{tooltip} class=\"#{classes}\">#{link_text}</a>"
     end
   end
 end
