@@ -1,6 +1,6 @@
 # Mixin to provide a display_type string for determining which
 # partial for Blacklight to render. This handles translating
-# the formats and whitelisting supported format types.
+# the formats and specific supported format types.
 module DisplayType
   def display_type
     return nil if eds?

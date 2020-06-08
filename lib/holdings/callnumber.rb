@@ -155,17 +155,17 @@ class Holdings
       current_location.code == 'E-RESV'
     end
 
-    # supports whitelist for library
+    # is in the list of stackmappable libraries
     def stackmapable_library?
       Constants::STACKMAP_LIBS.include?(library)
     end
 
-    # supports a global blacklist and local blacklist for home_location
+    # supports a global and local skip list for home_location
     def stackmapable_location?
-      return false if Constants::STACKMAP_BLACKLIST[:global].include?(home_location)
-      return true if Constants::STACKMAP_BLACKLIST[library].blank? # no local blacklist registered, so we're done
+      return false if Constants::STACKMAP_SKIPLIST[:global].include?(home_location)
+      return true if Constants::STACKMAP_SKIPLIST[library].blank? # no local skiplist registered, so we're done
 
-      !Constants::STACKMAP_BLACKLIST[library].include?(home_location)
+      !Constants::STACKMAP_SKIPLIST[library].include?(home_location)
     end
 
     def standard_or_zombie_library
