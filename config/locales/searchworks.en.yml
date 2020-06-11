@@ -29,7 +29,7 @@ en:
     global_alert_html: >
       <b>RESEARCH RESTART</b><br/>
       The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's <a href="https://cardinalrecovery.stanford.edu/research/research-recovery/">Research Restart Plan</a>.<br/>
-      Learn more about the Libraries' entry requirements and <a href="https://library.stanford.edu/returntoresearch">available services</a>.<br/><br/>
+      Learn more about the Libraries' <a href="https://library.stanford.edu/remote-resources">entry requirements and available services</a>.<br/><br/>
       If you can’t find a digital version of an item you need in SearchWorks or <a href="https://www.hathitrust.org/ETAS-User-Information">HathiTrust</a>, we’ll do our best to buy it. <a href="https://library.stanford.edu/request-digital-item">Request a digital item</a>.
     home_page_notice:
       heading: 'New My Library Account!'
