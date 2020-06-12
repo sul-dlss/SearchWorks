@@ -9,7 +9,8 @@ class RequestLinkFactory
       when 'HV-ARCHIVE'
         RequestLinks::HooverArchiveRequestLink
       else
-        for_location(location)
+        RequestLink
+        # for_location(location)
       end
     end
 
