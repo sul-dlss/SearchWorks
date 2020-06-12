@@ -3,15 +3,9 @@ require 'spec_helper'
 describe HooverOpenUrlRequest do
   include MarcMetadataFixtures
 
-  subject(:url) { described_class.new(library, document, view_context) }
+  subject(:url) { described_class.new(library, document) }
 
   let(:library) { 'HOOVER' }
-  let(:view_context) do
-    Class.new do
-      include Rails.application.routes.url_helpers
-      include ActionView::Helpers::OutputSafetyHelper
-    end.new
-  end
   let(:marcxml) { metadata1 }
   let(:document) do
     SolrDocument.new(
@@ -82,7 +76,7 @@ describe HooverOpenUrlRequest do
   context 'Non library-specific' do
     describe '#record_url' do
       it 'returns the solr document url from the view context' do
-        expect(url.record_url).to eq 'http://example.com/view/abc123'
+        expect(url.record_url).to eq 'https://searchworks.stanford.edu/view/abc123'
       end
     end
 
