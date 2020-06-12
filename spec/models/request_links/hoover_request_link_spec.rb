@@ -13,8 +13,15 @@ RSpec.describe RequestLinks::HooverRequestLink do
   subject(:link) { described_class.new(document: document, library: library, location: location, items: items) }
 
   describe '#present?' do
-    # Always render links for Hoover
-    it { expect(link).to be_present }
+    context 'when available via temporary access' do
+      let(:document) { SolrDocument.new(marcxml: metadata1, ht_htid_ssim: 'abc123') }
+
+      it { expect(link).not_to be_present }
+    end
+
+    context 'when not available via temporary access' do
+      it { expect(link).to be_present }
+    end
   end
 
   describe '#url' do

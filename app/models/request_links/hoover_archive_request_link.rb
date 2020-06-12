@@ -7,6 +7,8 @@ module RequestLinks
     end
 
     def url
+      return if available_via_temporary_access?
+
       document&.index_links&.finding_aid&.first&.href
     end
 

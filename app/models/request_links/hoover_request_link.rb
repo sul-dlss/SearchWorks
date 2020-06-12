@@ -3,7 +3,7 @@
 module RequestLinks
   class HooverRequestLink < RequestLink
     def present?
-      true
+      !available_via_temporary_access?
     end
 
     def url
