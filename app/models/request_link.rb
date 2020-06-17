@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN MEDIA-MTXT SAL SAL3 SPEC-COLL]
+    %w[ART GREEN MEDIA-MTXT SAL SAL3 SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -127,6 +127,7 @@ class RequestLink
 
   def circulating_item_type_map
     {
+      'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
@@ -145,6 +146,13 @@ class RequestLink
 
   def enabled_locations_map
     {
+      'ART' => %w[
+        FOLIO
+        MEDIA
+        REF-FOLIO
+        REFERENCE
+        STACKS
+      ],
       'GREEN' => %w[
         BENDER
         CALIF-DOCS
