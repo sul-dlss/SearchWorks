@@ -173,9 +173,13 @@ class RequestLink
         EAL-STKS-K
         FED-DOCS
         FOLIO
+        HY-PAGE-EA
         JAPANESE
         KOREAN
+        L-PAGE-EA
         MEDIA-MTXT
+        ND-PAGE-EA
+        PAGE-EA
         PAGE-GR
         SAL-ARABIC
         SAL-FOLIO
@@ -195,15 +199,18 @@ class RequestLink
         CALIF-DOCS
         CHINESE
         FED-DOCS
+        HY-PAGE-EA
         IC-NEWS
         IC-STATS
         INDEXES
         INTL-DOCS
         JAPANESE
         KOREAN
+        L-PAGE-EA
         LOCKED-STK
         MEDIA-MTXT
         MICROTEXT
+        PAGE-EA
         PAGE-GR
         R-STACKS
         RARE-BOOKS
