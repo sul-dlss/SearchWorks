@@ -8,6 +8,8 @@ class RequestLinkFactory
         RequestLinks::HooverRequestLink
       when 'HV-ARCHIVE'
         RequestLinks::HooverArchiveRequestLink
+      when 'HOPKINS'
+        RequestLinks::HopkinsRequestLink
       else
         RequestLink
         # for_location(location)
