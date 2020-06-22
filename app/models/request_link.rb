@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[GREEN MEDIA-MTXT SAL SAL3 SPEC-COLL]
+    %w[ARS ART EDUCATION GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -127,8 +127,12 @@ class RequestLink
 
   def circulating_item_type_map
     {
+      'ARS' => %w[STKS],
+      'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
+      'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
+      'MUSIC' => %w[DVDCD SCORE STKS],
       'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
       'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND SCORE STKS STKS-MONO STKS-PERI],
       'SPEC-COLL' => '*',
@@ -145,6 +149,19 @@ class RequestLink
 
   def enabled_locations_map
     {
+      'ART' => %w[
+        FOLIO
+        MEDIA
+        REF-FOLIO
+        REFERENCE
+        STACKS
+      ],
+      'EDUCATION' => %w[
+        CURRICULUM
+        CURRSTOR
+        STACKS
+        STORAGE
+      ],
       'GREEN' => %w[
         BENDER
         CALIF-DOCS
@@ -165,6 +182,7 @@ class RequestLink
         STACKS
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
+      'MUSIC' => %w[FOLIO FOLIO-FLAT MINIATURE RECORDINGS SCORES STACKS],
       'SAL' => %w[
         CHINESE
         EAL-SETS
