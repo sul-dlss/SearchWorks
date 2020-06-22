@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ART EDUCATION GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
+    %w[ARS ART EDUCATION GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -127,6 +127,7 @@ class RequestLink
 
   def circulating_item_type_map
     {
+      'ARS' => %w[STKS],
       'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
