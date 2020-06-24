@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EDUCATION GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
+    %w[ARS ART EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -130,6 +130,7 @@ class RequestLink
       'ARS' => %w[STKS],
       'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
+      'ENG' => %w[STKS PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'MUSIC' => %w[DVDCD SCORE STKS],
@@ -161,6 +162,12 @@ class RequestLink
         CURRSTOR
         STACKS
         STORAGE
+      ],
+      'ENG' => %w[
+        SERIALS
+        SHELBYSER
+        STACKS
+        TECH-RPTS
       ],
       'GREEN' => %w[
         BENDER
