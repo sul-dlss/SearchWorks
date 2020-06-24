@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
+    %w[ARS ART EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -136,6 +136,7 @@ class RequestLink
       'MUSIC' => %w[DVDCD SCORE STKS],
       'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
       'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND SCORE STKS STKS-MONO STKS-PERI],
+      'SCIENCE' => %w[STKS PERI MEDIA],
       'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
     }
@@ -239,6 +240,13 @@ class RequestLink
         SOUTH-MEZZ
         STACKS
         STORAGE
+      ],
+      'SCIENCE' => %w[
+        POPSCI
+        SERIALS
+        SHELBYSER
+        SHELBYTITL
+        STACKS
       ],
       'SPEC-COLL' => %w[
         BARCHAS
