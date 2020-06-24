@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SCIENCE SPEC-COLL]
+    %w[ARS ART EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -129,6 +129,7 @@ class RequestLink
     {
       'ARS' => %w[STKS],
       'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
+      'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'ENG' => %w[STKS PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
@@ -157,6 +158,16 @@ class RequestLink
         REF-FOLIO
         REFERENCE
         STACKS
+      ],
+      'EARTH-SCI' => %w[
+        ATCIRCDESK
+        MAP-CASES
+        MAP-FILE
+        MEZZANINE
+        STACKS
+        STORAGE
+        TECH-RPTS
+        THESES
       ],
       'EDUCATION' => %w[
         CURRICULUM
