@@ -122,13 +122,23 @@ class RequestLink
     return circulating_item_type_map['default'] unless library_map
     return library_map if library_map.is_a?(Array)
 
-    library_map[location] || library_map
+    library_map[location] || library_map['default'] || library_map
   end
 
   def circulating_item_type_map
     {
       'ARS' => %w[STKS],
-      'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
+      'ART' => {
+        'ARTLCKL' => '*',
+        'ARTLCKL-R' => '*',
+        'ARTLCKM' => '*',
+        'ARTLCKM-R' => '*',
+        'ARTLCKO' => '*',
+        'ARTLCKO-R' => '*',
+        'ARTLCKS' => '*',
+        'ARTLCKS-R' => '*',
+        'default' => %w[STKS-MONO STKS-PERI REF MEDIA]
+      },
       'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'ENG' => %w[STKS PERI],

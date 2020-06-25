@@ -45,11 +45,27 @@ RSpec.describe RequestLink do
       it { expect(link).not_to be_present }
     end
 
-    context 'when an item is in a location that wildcards item types' do
+    context 'when an item is in a library that wildcards item types' do
       let(:library) { 'SPEC-COLL' }
       let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).to be_present }
+    end
+
+    context 'when an item is in a location that wildcards item types' do
+      let(:library) { 'ART' }
+      let(:location) { 'ARTLCKL' }
+      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+
+      it { expect(link).to be_present }
+    end
+
+    context 'when an item is in a non wildcarded location within a library that specifies location specific item types' do
+      let(:library) { 'ART' }
+      let(:location) { 'STACKS' }
+      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+
+      it { expect(link).not_to be_present }
     end
 
     context 'when a library has its locations wildcarded' do
@@ -60,7 +76,7 @@ RSpec.describe RequestLink do
       pending { expect(link).to be_present }
     end
 
-    context 'when all items are in a blacklisted current location' do
+    context 'when all items are in a disallowed current location' do
       let(:library) { 'GREEN' }
       let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: 'INPROCESS'))] }
 
