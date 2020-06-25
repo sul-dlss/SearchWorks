@@ -15,7 +15,7 @@
           <% if library.library_instructions.present? %>
             <div class='access-panel-subsection'>
               <h4><%= library.library_instructions[:heading] %></h4>
-              <p><%= library.library_instructions[:text] %></p>
+              <p><%= library.library_instructions[:text].html_safe %></p>
             </div>
           <% end %>
           <% library.locations.select(&:present?).each do |location| %>
