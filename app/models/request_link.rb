@@ -153,6 +153,14 @@ class RequestLink
   def enabled_locations_map
     {
       'ART' => %w[
+        ARTLCKL
+        ARTLCKL-R
+        ARTLCKM
+        ARTLCKM-R
+        ARTLCKO
+        ARTLCKO-R
+        ARTLCKS
+        ARTLCKS-R
         FOLIO
         MEDIA
         REF-FOLIO
