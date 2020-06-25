@@ -1256,12 +1256,12 @@ module Constants
       text: 'Items must be requested in advance and viewed on-site.'
     },
     'RUMSEYMAP' => {
-      heading: 'All items must be viewed on site',
-      text: 'Request items by Noon (12p) the day before your visit to allow for retrieval by staff. You can request at most 5 items per day.'
+      heading: 'Limited on-site access',
+      text: 'Researchers in the Stanford community can request to view these materials in the <b>Special Collections Reading Room</b>. Entry to the Reading Room is by appointment only.'
     },
     'SPEC-COLL' => {
-      heading: 'All items must be viewed on site',
-      text: 'Request items at least 2 days before you visit to allow retrieval from off-site storage. You can request at most 5 items per day.'
+      heading: 'Limited on-site access',
+      text: 'Researchers in the Stanford community can request to view these materials in the <b>Special Collections Reading Room</b>. Entry to the Reading Room is by appointment only.'
     }
   }.freeze
 
