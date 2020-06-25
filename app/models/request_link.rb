@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC SAL SAL3 SCIENCE SPEC-COLL]
+    %w[ARS ART EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -135,6 +135,7 @@ class RequestLink
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'MUSIC' => %w[DVDCD SCORE STKS],
+      'RUMSEYMAP' => '*',
       'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
       'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND SCORE STKS STKS-MONO STKS-PERI],
       'SCIENCE' => %w[STKS PERI MEDIA],
@@ -210,6 +211,52 @@ class RequestLink
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
       'MUSIC' => %w[FOLIO FOLIO-FLAT MINIATURE RECORDINGS SCORES STACKS],
+      'RUMSEYMAP' => %w[
+        FOLIO
+        MAP-CASES
+        MAP-FILE
+        MAPCASES-S
+        MEZZ-STOR
+        MEZZANINE
+        MP-CASE-LG
+        MP-CASE-MD
+        MP-CASE-SM
+        PAGE-RM
+        REFERENCE
+        RUMSEY
+        RUMSEYREF
+        RUMXEMPLAR
+        STACKS
+        STK-GEMS
+        STK-LG
+        STK-MED
+        STK-SM
+        STK-XLG
+        W7-ATLASES
+        W7-BXLG-HM
+        W7-BXSM-HM
+        W7-CASE-HM
+        W7-CASE-MD
+        W7-CASE-MT
+        W7-FOLIO
+        W7-FRAME
+        W7-M-CASES
+        W7-MAP-BXL
+        W7-MAP-BXS
+        W7-OBJECTS
+        W7-POCK-LG
+        W7-POCK-RG
+        W7-POCKET
+        W7-REF
+        W7-ROLLED
+        W7-SANBORN
+        W7-STAFF
+        W7-STK-LG
+        W7-STK-MED
+        W7-STK-SM
+        W7-STK-XLG
+        W7-STKS
+      ],
       'SAL' => %w[
         CHINESE
         EAL-SETS
