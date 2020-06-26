@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EDUCATION GREEN MEDIA-MTXT MUSIC SAL SAL3 SPEC-COLL]
+    %w[ARS ART EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -122,19 +122,33 @@ class RequestLink
     return circulating_item_type_map['default'] unless library_map
     return library_map if library_map.is_a?(Array)
 
-    library_map[location] || library_map
+    library_map[location] || library_map['default'] || library_map
   end
 
   def circulating_item_type_map
     {
       'ARS' => %w[STKS],
-      'ART' => %w[STKS-MONO STKS-PERI REF MEDIA],
+      'ART' => {
+        'ARTLCKL' => '*',
+        'ARTLCKL-R' => '*',
+        'ARTLCKM' => '*',
+        'ARTLCKM-R' => '*',
+        'ARTLCKO' => '*',
+        'ARTLCKO-R' => '*',
+        'ARTLCKS' => '*',
+        'ARTLCKS-R' => '*',
+        'default' => %w[STKS-MONO STKS-PERI REF MEDIA]
+      },
+      'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
+      'ENG' => %w[STKS PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'MUSIC' => %w[DVDCD SCORE STKS],
+      'RUMSEYMAP' => '*',
       'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
       'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND SCORE STKS STKS-MONO STKS-PERI],
+      'SCIENCE' => %w[STKS PERI MEDIA],
       'SPEC-COLL' => '*',
       'default' => %w[STKS-MONO]
     }
@@ -150,17 +164,41 @@ class RequestLink
   def enabled_locations_map
     {
       'ART' => %w[
+        ARTLCKL
+        ARTLCKL-R
+        ARTLCKM
+        ARTLCKM-R
+        ARTLCKO
+        ARTLCKO-R
+        ARTLCKS
+        ARTLCKS-R
         FOLIO
         MEDIA
         REF-FOLIO
         REFERENCE
         STACKS
       ],
+      'EARTH-SCI' => %w[
+        ATCIRCDESK
+        MAP-CASES
+        MAP-FILE
+        MEZZANINE
+        STACKS
+        STORAGE
+        TECH-RPTS
+        THESES
+      ],
       'EDUCATION' => %w[
         CURRICULUM
         CURRSTOR
         STACKS
         STORAGE
+      ],
+      'ENG' => %w[
+        SERIALS
+        SHELBYSER
+        STACKS
+        TECH-RPTS
       ],
       'GREEN' => %w[
         BENDER
@@ -183,6 +221,52 @@ class RequestLink
       ],
       'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
       'MUSIC' => %w[FOLIO FOLIO-FLAT MINIATURE RECORDINGS SCORES STACKS],
+      'RUMSEYMAP' => %w[
+        FOLIO
+        MAP-CASES
+        MAP-FILE
+        MAPCASES-S
+        MEZZ-STOR
+        MEZZANINE
+        MP-CASE-LG
+        MP-CASE-MD
+        MP-CASE-SM
+        PAGE-RM
+        REFERENCE
+        RUMSEY
+        RUMSEYREF
+        RUMXEMPLAR
+        STACKS
+        STK-GEMS
+        STK-LG
+        STK-MED
+        STK-SM
+        STK-XLG
+        W7-ATLASES
+        W7-BXLG-HM
+        W7-BXSM-HM
+        W7-CASE-HM
+        W7-CASE-MD
+        W7-CASE-MT
+        W7-FOLIO
+        W7-FRAME
+        W7-M-CASES
+        W7-MAP-BXL
+        W7-MAP-BXS
+        W7-OBJECTS
+        W7-POCK-LG
+        W7-POCK-RG
+        W7-POCKET
+        W7-REF
+        W7-ROLLED
+        W7-SANBORN
+        W7-STAFF
+        W7-STK-LG
+        W7-STK-MED
+        W7-STK-SM
+        W7-STK-XLG
+        W7-STKS
+      ],
       'SAL' => %w[
         CHINESE
         EAL-SETS
@@ -232,6 +316,13 @@ class RequestLink
         SOUTH-MEZZ
         STACKS
         STORAGE
+      ],
+      'SCIENCE' => %w[
+        POPSCI
+        SERIALS
+        SHELBYSER
+        SHELBYTITL
+        STACKS
       ],
       'SPEC-COLL' => %w[
         BARCHAS
