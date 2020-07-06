@@ -61,5 +61,7 @@ module SearchWorks
     config.action_dispatch.rescue_responses.merge!(
       "Blacklight::Exceptions::RecordNotFound" => :not_found
     )
+
+    config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log', 'daily')
   end
 end
