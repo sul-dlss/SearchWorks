@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
+    %w[ARS ART BUSINESS EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -139,6 +139,7 @@ class RequestLink
         'ARTLCKS-R' => '*',
         'default' => %w[STKS-MONO STKS-PERI REF MEDIA]
       },
+      'BUSINESS' => %w[STKS AUDIO CAREERCOLL POP-COLL NH-DVDCD NH-PERI],
       'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'ENG' => %w[STKS PERI],
@@ -176,6 +177,14 @@ class RequestLink
         MEDIA
         REF-FOLIO
         REFERENCE
+        STACKS
+      ],
+      'BUSINESS' => %w[
+        BUS-CMC
+        BUS-PER
+        BUS-TEMP
+        MEDIA
+        PAGE-IRON
         STACKS
       ],
       'EARTH-SCI' => %w[
