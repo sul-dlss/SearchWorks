@@ -20,6 +20,13 @@ Blacklight.onLoad(function(){
   browseCourseReservesTable.on('draw', function(){
     modifyPaginationElements();
   });
+  
+  $(document).on('turbolinks:before-cache', function() {
+    if (browseCourseReservesTable !== null) {
+     browseCourseReservesTable.destroy();
+     browseCourseReservesTable = null;
+    }
+  });
 
   function modifyPaginationElements(){
     // Change the active anchor element to a span
