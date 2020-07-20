@@ -2,7 +2,7 @@ set :application, 'SearchWorks'
 set :repo_url, 'https://github.com/sul-dlss/SearchWorks.git'
 
 # Default branch is :master
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call unless ENV['DEPLOY']
 
 set :deploy_to, '/opt/app/blacklight/SearchWorks'
 
