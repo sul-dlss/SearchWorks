@@ -1,6 +1,6 @@
 <dt title="<%= fields[:label] %>"><%= fields[:label] %></dt>
 <% fields[:fields].each do |field| %>
-  <dd><%= field[:field] %></dd>
+  <dd><%= auto_link(field[:field]) %></dd>
   <% if field[:vernacular].present? %>
     <dd><%= field[:vernacular] %></dd>
   <% end %>
