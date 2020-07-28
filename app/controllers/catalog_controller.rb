@@ -504,6 +504,7 @@ class CatalogController < ApplicationController
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),
+      temporary_access: document.access_panels.temporary_access?,
       format: document[document.format_key],
       isbn: document['isbn_display'],
       holdings: document.holdings.as_json(live: live)
