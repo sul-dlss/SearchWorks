@@ -249,5 +249,48 @@ describe CatalogController do
         expect(search_field.include_in_advanced_search).to be_falsey
       end
     end
+
+    describe '#augment_solr_document_json_response' do
+      context 'when an item is not available online' do
+        let(:documents) { [SolrDocument.new(id: 'abc123', title_display: 'The Title')] }
+
+        it 'returns the solr document as a hash' do
+          expect(controller.send(:augment_solr_document_json_response, documents)).to eq([
+            { 'id' => 'abc123', 'title_display' => 'The Title' }
+          ])
+        end
+      end
+
+      context 'when an item is online' do
+        let(:documents) { [SolrDocument.new(id: 'abc123', title_display: 'The Title', url_sfx: 'https://example.com')] }
+
+        it 'includes link HTML' do
+          augmented_docs = controller.send(:augment_solr_document_json_response, documents)
+          expect(augmented_docs.first['fulltext_link_html'].length).to eq 1
+          expect(augmented_docs.first['fulltext_link_html'].first).to include('<span class="online-label">Online</span>')
+          expect(augmented_docs.first['fulltext_link_html'].first).to match(/<a href=.*example.com.*>Find full text<\/a>/)
+        end
+      end
+
+      context 'when an item is only available online to Stanford patrons' do
+        let(:documents) do
+          [
+            SolrDocument.new(id: 'abc123', title_display: 'The Title', "marc_links_struct": [{
+              "html": "<a href='https://example.com'>The Link</a> ",
+              "fulltext": true,
+              "stanford_only": true
+            }])
+          ]
+        end
+
+        it 'includes the link wrapped in a span with a class to be styled' do
+          augmented_docs = controller.send(:augment_solr_document_json_response, documents)
+          expect(augmented_docs.first['fulltext_link_html'].length).to eq 1
+          expect(augmented_docs.first['fulltext_link_html'].first).to include('<span class="online-label">Online</span>')
+          expect(augmented_docs.first['fulltext_link_html'].first).to include('<span class="stanford-only">')
+          expect(augmented_docs.first['fulltext_link_html'].first).to match(/<a href=.*example.com.*>The Link<\/a>/)
+        end
+      end
+    end
   end
 end
