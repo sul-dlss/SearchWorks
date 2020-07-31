@@ -9,6 +9,8 @@ describe 'quick_search/search/_result_details.html.erb' do
       r.title = 'Title'
       r.link = 'http://example.com'
       r.description = description
+      r.author = 'The Author'
+      r.imprint = 'The Imprint Statement'
       r.fulltext_link_html = '<a href="#">Link</a>'
     end
   end
@@ -27,18 +29,16 @@ describe 'quick_search/search/_result_details.html.erb' do
     end
   end
 
-  it 'renders the description' do
-    expect(rendered).to have_css('p', text: 'The Description')
+  it 'renders the author' do
+    expect(rendered).to have_content('The Author')
   end
 
-  context 'long descriptions' do
-    let(:description) { 'The description ' * 50 }
+  it 'renders the imprint' do
+    expect(rendered).to have_content('The Imprint Statement')
+  end
 
-    it 'are truncated to 150 characters' do
-      text = Capybara.string(rendered).find('p', text: /^The description/).text
-      expect(text.length).to eq 150
-      expect(text).to end_with '...'
-    end
+  it 'renders the description' do
+    expect(rendered).to have_css('p', text: 'The Description')
   end
 
   it 'renders the fulltext link html' do

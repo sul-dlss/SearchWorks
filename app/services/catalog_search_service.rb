@@ -23,7 +23,11 @@ class CatalogSearchService < AbstractSearchService
         result = AbstractSearchService::Result.new
         result.title = doc['title_display'] || doc['title_full_display']
         result.link = format(Settings.CATALOG_FETCH_URL.to_s, id: doc['id'])
+        result.author = doc['author_person_display']&.first
+        result.imprint = doc['imprint_display']&.first
+        result.fulltext_link_html = doc['fulltext_link_html']&.first
         result.id = doc['id']
+
         result.description = doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml'])
         result
       end
