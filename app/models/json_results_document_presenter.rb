@@ -6,12 +6,34 @@ class JsonResultsDocumentPresenter
   end
 
   def as_json(*)
-    source_document.as_json.merge(fulltext_link_html)
+    transformations = [fulltext_link_html, temporary_access_link_html]
+
+    source_document.as_json.tap do |json|
+      transformations.each do |data|
+        json.merge!(data)
+      end
+    end
   end
 
   private
 
   attr_reader :source_document
+
+  def temporary_access_link_html
+    return {} unless temporary_access_link
+
+    {
+      'temporary_access_link_html' => [
+        "<span class=\"stanford-only\">#{temporary_access_link}</span>"
+      ]
+    }
+  end
+
+  def temporary_access_link
+    return unless source_document&.access_panels&.temporary_access?
+
+    source_document&.access_panels&.temporary_access&.link&.html
+  end
 
   def fulltext_link_html
     return {} if online_links.blank?
