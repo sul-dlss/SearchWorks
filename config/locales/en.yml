@@ -28,6 +28,9 @@ en:
     error_service_mesasge: "searching SearchWorks articles+"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
+  lib_guides_search:
+    display_name: Guides
+    sub_heading_html: Wayfinders for our collections, tools, and services
   library_website_search:
     display_name: "Library website"
     short_display_name: "Website"

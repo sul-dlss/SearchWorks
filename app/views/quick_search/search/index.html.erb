@@ -44,6 +44,20 @@
   </div>
 </div>
 
+<% if Settings.LIBGUIDES.ENABLED %>
+  <div class="quicksearch-ga-click-tracking">
+    <div class="row">
+      <div class="col-md-6 lib-guides module">
+        <div id="lib-guides" class="module-contents" >
+          <p class="search-error" data-quicksearch-search-endpoint="lib_guides"
+                                  data-quicksearch-page=""
+                                  data-quicksearch-template=""></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="quicksearch-ga-click-tracking">
   <%= render partial: 'shared/more_search_tools' %>
 </div>

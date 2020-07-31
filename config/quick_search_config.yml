@@ -18,7 +18,7 @@ defaults: &defaults
   #
   # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
 
-  searchers: [catalog,article,library_website]
+  searchers: [catalog,article,library_website,lib_guides]
 
   # Searchers listed in the "result type guide" bar that lists result types that were found for a given search
 
