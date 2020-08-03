@@ -1,12 +1,14 @@
 <% if searcher.search.highlighted_facet_values.present? %>
-  <% element_id = searcher.class.name.underscore.parameterize %>
-  <div class='highlighted-facet'>
-    <span class="includes-label" id="<%= element_id %>">Results include</span>
-    <% searcher.search.highlighted_facet_values.each_with_index do |facet, index| %>
-      <%= "&middot;".html_safe unless index == 0 %>
-      <span aria-labelledby="<%= element_id %>">
-        <%= link_to("#{facet.label} (#{number_with_delimiter(facet.hits)})", facet.query_url(params[:q])) %>
-      </span>
-    <% end %>
-  </div>
+  <dl class='highlighted-facet d-flex'>
+    <dt class="includes-label">Results include</dt>
+    <dd>
+      <ul class="list-inline mb-0">
+        <% searcher.search.highlighted_facet_values.each_with_index do |facet, index| %>
+          <li class="list-inline-item">
+            <%= link_to("#{facet.label} (#{number_with_delimiter(facet.hits)})", facet.query_url(params[:q])) %>
+          </li>
+        <% end %>
+      </ul>
+    </dd>
+  </dl>
 <% end %>

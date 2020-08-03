@@ -51,24 +51,29 @@ h4 {
   line-height: 1.2em;
 }
 
-dl {
-  margin-bottom: 15px;
-}
-
 dt {
-  color: $cool-grey;
   font-weight: normal;
-  font-size: .9em;
   text-transform: uppercase !important;
-  padding-right: 1em;
-  padding-top: .15em;
-  width: 12em;
 }
 
-dd {
-  margin-left: 2em;
-  margin-bottom: .5em;
-  max-width: 45em;
+#result-types {
+  dl {
+    margin-bottom: 15px;
+  }
+
+  dt {
+    color: $cool-grey;
+    font-size: .9em;
+    padding-right: 1em;
+    padding-top: .15em;
+    width: 12em;
+  }
+
+  dd {
+    margin-left: 2em;
+    margin-bottom: .5em;
+    max-width: 45em;
+  }
 }
 
 label {
