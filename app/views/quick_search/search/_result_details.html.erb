@@ -17,6 +17,14 @@
   <p class="description"><%= result.description.html_safe %></p>
 <% end %>
 
+<% if result.temporary_access_link_html.present? %>
+  <%= result.temporary_access_link_html.html_safe %>
+  <div class="etas-results-block">
+    <p class="etas-notice">Available to students, faculty, and staff, by special arrangement in response to COVID-19. To protect our access to ETAS, the physical copy is temporarily not requestable.</p>
+    <%= link_to('More about HathiTrust ETAS', 'https://www.hathitrust.org/ETAS-User-Information') %>
+  </div>
+<% end %>
+
 <% if result.fulltext_link_html %>
   <p><%= result.fulltext_link_html.html_safe %></p>
 <% end %>

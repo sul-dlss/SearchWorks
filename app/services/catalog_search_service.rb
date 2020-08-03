@@ -26,6 +26,7 @@ class CatalogSearchService < AbstractSearchService
         result.author = doc['author_person_display']&.first
         result.imprint = doc['imprint_display']&.first
         result.fulltext_link_html = doc['fulltext_link_html']&.first
+        result.temporary_access_link_html = doc['temporary_access_link_html']&.first
         result.id = doc['id']
 
         result.description = doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml'])

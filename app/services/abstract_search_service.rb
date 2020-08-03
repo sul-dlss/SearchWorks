@@ -96,7 +96,7 @@ class AbstractSearchService
   end
 
   class Result
-    ATTRS = %i[author title imprint description link id thumbnail breadcrumbs fulltext_link_html].freeze
+    ATTRS = %i[author title imprint description link id thumbnail breadcrumbs fulltext_link_html temporary_access_link_html].freeze
     attr_accessor *ATTRS
 
     def to_h
