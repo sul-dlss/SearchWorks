@@ -528,15 +528,7 @@ class CatalogController < ApplicationController
 
   def augment_solr_document_json_response(documents)
     documents.map do |document|
-      next document.as_json unless document&.access_panels&.online?
-
-      links = document&.access_panels&.online&.links&.map do |link|
-        html = link.stanford_only? ? "<span class=\"stanford-only\">#{link.html}</span>" : link.html
-
-        "<span class=\"online-label\">Online</span> #{html}"
-      end
-
-      document.as_json.merge('fulltext_link_html' => links)
+      JsonResultsDocumentPresenter.new(document)
     end
   end
   helper_method :augment_solr_document_json_response
