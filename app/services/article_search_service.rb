@@ -24,7 +24,9 @@ class ArticleSearchService < AbstractSearchService
         result.link = format(Settings.EDS_FETCH_URL.to_s, id: doc['id'])
         result.id = doc['id']
         result.fulltext_link_html = doc['fulltext_link_html']
-        result.description = doc['eds_composed_title']
+        result.author = doc['eds_authors']&.first
+        result.imprint = doc['eds_composed_title']&.html_safe
+        result.description = doc['eds_abstract']
         result
       end
     end
