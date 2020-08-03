@@ -1,22 +1,25 @@
-#top-navbar {
-  min-height: 35px;
+#topnav {
+  .nav-item {
+    a {
+      color: $cardinal-red;
+      padding-bottom: 2px;
+      text-decoration: none;
+      margin-left: 15px;
+      border-bottom: 3px solid transparent;
 
-  ul {
-    font-size: $font-size-base;
-    list-style-type: none;
-    margin: 0;
-    text-align: right;
+      &.first {
+        margin-left: 0;
+      }
 
-
-    li {
-      display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
+      &:hover,
+      &:focus {
+        border-bottom: 3px solid $cardinal-red;
+      }
     }
-  }
 
-  a {
-    color: $cardinal-red;
+    // Add the border on hover, or when the #feedback-form is open
+    a:hover, a[data-target="#feedback-form"][aria-expanded="true"] {
+      border-bottom: 3px solid $cardinal-red;
+    }
   }
 }

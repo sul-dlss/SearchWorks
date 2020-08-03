@@ -18,7 +18,7 @@
     margin: 0 15px 0 0;
     padding: 0;
     }
-    
+
     width: 100%;
     justify-content: center;
     margin-bottom: 0;
@@ -29,20 +29,5 @@
     font-weight: inherit;
     line-height: inherit;
     padding: 0;
-  }
-
-  .main-search-form {
-    .form-group.row{
-      align-items: center;
-      margin: 30px auto;
-      padding: 0px;
-    }
-    .search-input-container {
-      .input-group {
-        min-width: 300px;
-      }
-      
-      flex-grow: 1;
-    }
   }
 }

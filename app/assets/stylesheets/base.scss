@@ -10,12 +10,7 @@ a {
   }
 }
 
-body {
-  color: $sul-text-color;
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-}
-
-a:not(.btn) {
+a:not(.btn):not(.dropdown-item) {
   &:hover,
   &:focus,
   &:active {
@@ -46,7 +41,7 @@ h3 {
 }
 
 h4 {
-  color: $sul-h4-font-color; 
+  color: $sul-h4-font-color;
   line-height: 1.2em;
 }
 
