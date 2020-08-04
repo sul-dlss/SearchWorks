@@ -1,19 +1,2 @@
-.btn-sul {
-  @include button-variant($cardinal-red, $cardinal-red)
-}
-.btn-success {
-  @include button-variant($pantone-334, $pantone-334)
-}
-.btn-info {
-  @include button-variant($pantone-3145, $pantone-3145)
-}
-.btn-warning {
-  @include button-variant($poppy, $poppy)
-}
-.btn-danger {
-  @include button-variant($bright-red, $bright-red)
-}
-
 .btn-yewno {
-  @include button-variant($black, $black);
 }

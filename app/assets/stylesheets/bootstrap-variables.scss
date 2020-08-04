@@ -1,21 +1,11 @@
 // Override Bootstrap variables here
-
-// Body
-$body-bg: $sul-body-bg;
-
-// Text / Links
-$link-color: $sul-text-color;
-$link-hover-color: $sul-text-color;
-
-// Pagination
-$pagination-active-bg: $sul-pagination-active-bg;
-$pagination-active-border: $sul-pagination-active-bg;
+@import 'identity/bootstrap-variables';
 
 // Tables
-$table-accent-bg: $light-sandstone;
+$table-accent-bg: $su-light-sandstone;
 
 // Tooltip
-$tooltip-bg: $sul-tooltip-bg;
+$tooltip-bg: $su-lagunita;
 
 // Typography
 $h1-font-size: 2.323rem;
@@ -25,3 +15,7 @@ $h4-font-size: 1.215rem;
 $headings-font-weight: 400;
 
 $font-size-base: 0.9375rem; // 15px
+
+$dropdown-link-hover-color: $gray-900;
+$dropdown-link-active-color: $gray-900;
+$dropdown-link-active-bg: #faf8d2

@@ -1,6 +1,5 @@
 a {
   border-bottom: 0;
-  color: $sul-link-color;
   text-decoration: none;
 
   &.disabled {
@@ -10,17 +9,12 @@ a {
   }
 }
 
-body {
-  color: $sul-text-color;
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-}
-
-a:not(.btn) {
+a:not(.btn):not(.dropdown-item) {
   &:hover,
   &:focus,
   &:active {
     border-bottom: 0;
-    color: $sul-link-color-border;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 }
@@ -46,7 +40,7 @@ h3 {
 }
 
 h4 {
-  color: $sul-h4-font-color; 
+  color: $sul-h4-font-color;
   line-height: 1.2em;
 }
 
@@ -61,7 +55,7 @@ dt {
   }
 
   dt {
-    color: $cool-grey;
+    color: $su-cool-gray;
     font-size: .9em;
     padding-right: 1em;
     padding-top: .15em;

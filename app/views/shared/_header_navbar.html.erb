@@ -1,0 +1,37 @@
+<%= render 'layouts/header_navbar' do %>
+  <%= form_for("search", method: :get, url: quick_search.root_path, html: {id: 'main-search-form', class:'d-flex align-items-center'}) do |f| %>
+    <h1 class="py-0 my-0">
+      <label for="params-q" class='col-form-label'>Search</label>
+      <span class="dropdown">
+        <a href="#" class="dropdown-toggle navbar-text search-target" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          all
+        </a>
+        <div class="dropdown-menu" role="menu">
+          <%= link_to '#', class: 'active dropdown-item' do %>
+            <span class="h3 d-block">all</span>
+            <span class="help-block">catalog, articles, website, &amp; more in one search</span>
+          <% end %>
+          <%= link_to root_url, class: 'dropdown-item' do %>
+            <span class="h3 d-block">catalog</span>
+            <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
+          <% end %>
+          <%= link_to root_url, class: 'dropdown-item' do %>
+            <span class="h3 d-block">articles+</span>
+            <span class="help-block">journal articles &amp; other e-resources</span>
+          <% end %>
+        </div>
+      </span>
+    </h1>
+    <div class='search-input-container'>
+      <div class='input-group'>
+        <input type="search" name="q" id="params-q" class="search-query form-control" value="<%= @query %>" placeholder="<%= t('search_form.placeholder') %>"/>
+        <span class="input-group-append">
+          <button type="submit" class="btn btn-beige">
+            <span class="sr-only">Search</span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+  <% end %>
+<% end %>
