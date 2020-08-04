@@ -19,27 +19,27 @@ a:not(.btn):not(.dropdown-item) {
   }
 }
 
-h1 {
+h1, .h1 {
   color: $sul-h1-font-color;
   font-weight: 300;
   line-height: 1.2em;
   padding: 10px 0;
 }
 
-h2 {
+h2, .h2 {
   color: $sul-h2-font-color;
   letter-spacing: 0;
   line-height: 1.2em;
   margin: .5em 0;
 }
 
-h3 {
+h3, .h3 {
   color: $sul-h3-font-color;
   line-height: 1.2em;
   margin: 0 0 .4em;
 }
 
-h4 {
+h4, .h4 {
   color: $sul-h4-font-color;
   line-height: 1.2em;
 }
@@ -47,6 +47,7 @@ h4 {
 dt {
   font-weight: normal;
   text-transform: uppercase !important;
+  white-space: nowrap;
 }
 
 #result-types {
