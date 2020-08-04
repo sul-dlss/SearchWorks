@@ -29,6 +29,7 @@ en:
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
   lib_guides_search:
+    short_display_name: Guides
     display_name: Guides
     micro_display_name: guide
     no_results_service_message: "a different search"

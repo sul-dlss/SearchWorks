@@ -1,2 +1,5 @@
-LIBGUIDES:
-  ENABLED: true
+ENABLED_SEARCHERS:
+  - catalog
+  - article
+  - lib_guides
+  - library_website

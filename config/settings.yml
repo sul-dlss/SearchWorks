@@ -11,9 +11,12 @@ ARTICLES_HOME_URL: 'https://searchworks.stanford.edu/articles'
 LIBRARY_WEBSITE_HOME_URL: 'https://library.stanford.edu'
 YEWNO_HOME_URL: 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com'
 GLOBAL_ALERT: <%= false %>
+ENABLED_SEARCHERS:
+  - catalog
+  - article
+  - library_website
 LIBGUIDES:
   API_URL: 'https://example.com/1.1/guides'
   SITE_ID: 123456
   KEY: abc1234
   QUERY_URL: 'TODO'
-  ENABLED: false

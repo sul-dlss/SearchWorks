@@ -18,11 +18,12 @@ defaults: &defaults
   #
   # See docs for more details: https://github.com/NCSU-Libraries/quick_search/blob/master/docs/configuration.md
 
-  searchers: [catalog,article,library_website,lib_guides]
+  # These will be set dynamically from Settings in the application.rb file
+  searchers: []
 
   # Searchers listed in the "result type guide" bar that lists result types that were found for a given search
-
-  found_types: [catalog,article,library_website]
+  # These will be set dynamically from Settings in the application.rb file
+  found_types: []
 
   per_page: 10
   max_per_page: 10

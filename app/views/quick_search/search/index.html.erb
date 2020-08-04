@@ -25,6 +25,7 @@
     </div>
   </div>
 </div>
+
 <div class="quicksearch-ga-click-tracking">
   <div class="row">
     <div class="col-md-6 library-website module">
@@ -44,7 +45,7 @@
   </div>
 </div>
 
-<% if Settings.LIBGUIDES.ENABLED %>
+<% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
   <div class="quicksearch-ga-click-tracking">
     <div class="row">
       <div class="col-md-6 lib-guides module">
