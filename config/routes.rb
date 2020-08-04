@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  mount OkComputer::Engine, at: "/status"
-
   root to: 'quick_search/search#index'
 
   # Disable all of the appstats pages
