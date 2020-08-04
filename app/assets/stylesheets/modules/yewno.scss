@@ -10,6 +10,7 @@
 }
 
 .btn-yewno {
+  @include button-variant($black, $black);
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
   display: inline-block;
 }

@@ -1,13 +1,14 @@
 #content {
   h3.result-title {
-    @include h3-index-title-font;
+    font-family: 'dejavu_sansextralight';
+    letter-spacing: -.03em;
   }
 }
 
 .module-contents {
   background-color: $white;
-  border: 1px solid $cloud;
-  border-top: 5px solid $cardinal-red;
+  border: 1px solid $su-cloud;
+  border-top: 5px solid $red;
   padding: 10px 15px;
   margin-bottom: 15px;
 }
@@ -25,7 +26,7 @@
   }
 
   label {
-    color: $cardinal-red;
+    color: $red;
     font-weight: inherit;
     line-height: inherit;
     padding: 0;
