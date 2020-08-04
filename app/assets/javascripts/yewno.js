@@ -3,7 +3,8 @@ $(window).ready(function() {
   $("#yewno-results").each(function(t) {
     new YewnoDiscoverWidget({
       containerElementSelector: "#yewno-results",
-      urlSearchParam: "q"
+      urlSearchParam: "q",
+      urlPrefix: "https://stanford.idm.oclc.org/login?url="
     })
   });
 
