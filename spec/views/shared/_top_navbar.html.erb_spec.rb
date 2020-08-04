@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'shared/_header.html.erb' do
+describe 'shared/_top_navbar.html.erb' do
   before do
     without_partial_double_verification do
       allow(view).to receive(:root_path).and_return('/')
@@ -13,10 +13,5 @@ describe 'shared/_header.html.erb' do
     render
     expect(rendered).to have_link 'My Account'
     expect(rendered).to have_link 'Feedback'
-  end
-
-  it 'renders the library services menus' do
-    render
-    expect(rendered).to have_link 'Library services'
   end
 end

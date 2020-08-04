@@ -48,17 +48,17 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="su-wrap"> <!-- #su-wrap start -->
       <div id="su-content"> <!-- #su-content start -->
-        <%= render '/shared/header' %>
+        <%= render 'shared/top_navbar' %>
+        <%= render 'shared/header_navbar' %>
+        <%= render 'shared/sub_navbar' %>
         <div id="content" role="document" class="page">
-          <div class="">
-            <main id="main-content" role="main" class="">
-              <!-- CONTENT: enter content below this line -->
-              <div id="quicksearch" class='container'>
-                <%= render '/shared/global_alert' %>
-                <%= yield %>
-              </div>
-            </main>
-          </div>
+          <main id="main-content" role="main">
+            <!-- CONTENT: enter content below this line -->
+            <div id="quicksearch" class='container'>
+              <%= render '/shared/global_alert' %>
+              <%= yield %>
+            </div>
+          </main>
         </div>
       </div> <!-- #su-content end -->
     </div> <!-- #su-wrap end -->

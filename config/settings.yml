@@ -20,3 +20,4 @@ LIBGUIDES:
   SITE_ID: 123456
   KEY: abc1234
   QUERY_URL: 'TODO'
+  HOME_URL: 'https://guides.library.stanford.edu/'
