@@ -7,13 +7,13 @@
   <% unless (defined?(searcher.toggleable?) && searcher.toggleable?)  %>
     <div class="col-md-7 see-all-results">
       <% unless defined? searcher.loaded_link_mobile %>
-        <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+        <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
       <% else %>
         <span class="show-for-medium-up">
-          <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+          <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
         </span>
         <span class="show-for-small-only">
-          <%= render partial: '/quick_search/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link_mobile} %>
+          <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link_mobile} %>
         </span>
       <% end %>
     </div>

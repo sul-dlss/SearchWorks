@@ -8,16 +8,16 @@
         <% else %>
             <% page = params[:page] %>
         <% end %>
-        <%= render partial: '/quick_search/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging', module: module_link } %>
+        <%= render partial: '/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging', module: module_link } %>
     <% elsif searcher.results.blank? %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
-        <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
+        <%= render partial: '/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
     <% else %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
 
-        <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>
+        <%= render partial: '/search/highlighted_facet', locals: { searcher: searcher } %>
         <ol id="<%= service_name %>-toggleable-results" <%= "data-behavior=\"toggleable-results\" data-toggle-threshold=\"#{searcher.toggle_threshold}\"".html_safe if defined?(searcher.toggleable?) && searcher.toggleable? %>>
-          <%= render partial: '/quick_search/search/result', collection: searcher.results %>
+          <%= render partial: '/search/result', collection: searcher.results %>
         </ol>
 
         <% if (addl_facet = searcher.search.additional_facet_details(params[:q])) %>

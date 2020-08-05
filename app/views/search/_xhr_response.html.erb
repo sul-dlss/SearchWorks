@@ -1,0 +1,15 @@
+<% if service_name == 'best_bets' %>
+    <%= render partial: 'layouts/quick_search/best_bets', locals: { best_bets: searcher.results.first } %>
+<% elsif service_name == 'spelling_suggestion' %>
+    <%= render partial: 'layouts/quick_search/spelling_suggestion', locals: { spelling_suggestion: searcher.spelling_suggestion } %>
+<% elsif service_name == 'related_topics' %>
+    <%= render partial: 'layouts/quick_search/related_topics', locals: { related_topics: searcher.related_topics } %>
+<% elsif service_name == 'topic_snippet' %>
+    <%= render partial: 'layouts/quick_search/topic_snippet', locals: { topic_snippet: searcher.topic_snippet } %>
+<% elsif service_name == 'smart_subjects' %>
+    <% unless searcher.results.blank? %>
+        <%= render_module(searcher, service_name) %>
+    <% end %>
+<% else %>
+    <%= render_module(searcher, service_name) %>
+<% end %>

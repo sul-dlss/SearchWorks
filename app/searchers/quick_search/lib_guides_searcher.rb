@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module QuickSearch
-  class LibGuidesSearcher < QuickSearch::Searcher
+  class LibGuidesSearcher < QuickSearch::ApplicationSearcher
     delegate :results, :total, :facets, to: :@response
 
     def search

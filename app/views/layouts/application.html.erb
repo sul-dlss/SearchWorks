@@ -37,7 +37,7 @@
     <%= render '/layouts/quick_search/google_analytics' %>
 
   </head>
-  <body class="<%= body_class %>" data-quicksearch-ga-query="<%= strip_tags(@log_query) %>">
+  <%= content_tag :body, class: body_class, data: { 'quicksearch-ga-query': strip_tags(params_q_scrubbed) } do %>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6F99S9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -71,5 +71,5 @@
       });
       window.I18n = <%= I18n.backend.send(:translations).to_json.html_safe %>
     </script>
-  </body>
+  <% end %>
 </html>

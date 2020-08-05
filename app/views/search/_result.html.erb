@@ -2,13 +2,13 @@
   <% if result.try(:thumbnail) %>
     <li class='with-thumbnail'>
       <div class="result">
-        <%= render partial: '/quick_search/search/result_with_thumbnail', locals: { result: result } %>
+        <%= render partial: '/search/result_with_thumbnail', locals: { result: result } %>
       </div>
     </li>
   <% else %>
     <li class='no-thumbnail'>
       <div class="result">
-        <%= render partial: '/quick_search/search/result_no_thumbnail', locals: { result: result } %>
+        <%= render partial: '/search/result_no_thumbnail', locals: { result: result } %>
       </div>
     </li>
   <% end %>
