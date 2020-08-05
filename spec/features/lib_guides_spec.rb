@@ -14,6 +14,5 @@ feature 'LibGuides', js: true do
     fill_in 'params-q', with: 'geology'
     click_button 'Search'
     expect(page).to have_css 'h2', text: 'Guides'
-    page.save_and_open_screenshot
   end
 end
