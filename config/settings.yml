@@ -25,6 +25,7 @@ LIBGUIDES:
 
 EXHIBITS:
   API_URL: 'https://exhibits.stanford.edu/exhibit_finder?q=%{q}'
+  HOME_URL: 'https://exhibits.stanford.edu'
   LINK_URL: 'https://exhibits.stanford.edu/%{id}'
   NUM_RESULTS_SHOWN: 5
   QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
