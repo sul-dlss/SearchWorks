@@ -17,5 +17,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require yewno
+//= require toggleableResults
 
 jQuery.migrateMute = true

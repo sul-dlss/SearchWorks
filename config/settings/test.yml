@@ -3,3 +3,4 @@ ENABLED_SEARCHERS:
   - article
   - lib_guides
   - library_website
+  - exhibits

@@ -44,9 +44,10 @@
   </div>
 </div>
 
-<% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
-  <div class="quicksearch-ga-click-tracking">
-    <div class="row">
+
+<div class="quicksearch-ga-click-tracking">
+  <div class="row">
+    <% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
       <div class="col-md-6 lib-guides module">
         <div id="lib-guides" class="module-contents" >
           <p class="search-error" data-quicksearch-search-endpoint="lib_guides"
@@ -54,9 +55,20 @@
                                   data-quicksearch-template=""></p>
         </div>
       </div>
-    </div>
+    <% end %>
+
+    <% if Settings.ENABLED_SEARCHERS.include?('exhibits') %>
+      <div class="col-md-6 exhibits module">
+        <div id="exhibits" class="module-contents" >
+          <p class="search-error" data-quicksearch-search-endpoint="exhibits"
+                                  data-quicksearch-page=""
+                                  data-quicksearch-template=""></p>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
 
 <div class="quicksearch-ga-click-tracking">
   <%= render partial: 'shared/more_search_tools' %>

@@ -21,3 +21,9 @@ LIBGUIDES:
   KEY: abc1234
   QUERY_URL: 'TODO'
   HOME_URL: 'https://guides.library.stanford.edu/'
+
+EXHIBITS:
+  API_URL: 'https://exhibits.stanford.edu/exhibit_finder?q=%{q}'
+  LINK_URL: 'https://exhibits.stanford.edu/%{id}'
+  NUM_RESULTS_SHOWN: 5
+  QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'

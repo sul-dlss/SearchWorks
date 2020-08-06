@@ -1,5 +1,13 @@
 en:
   default_title: "Stanford Libraries"
+  exhibits_search:
+    short_display_name: Exhibits
+    display_name: Exhibits
+    micro_display_name: exhibits
+    no_results_service_message: "a different search"
+    pass_on_search_link_text: Search "%{query}" in all exhibit items
+    sub_heading_html: Digital showcase for research and teaching
+    toggle_button_text: Show %{total} exhibits
   global_alert_html: >
     <b>RESEARCH RESTART</b><br/>
     The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's <a href="https://cardinalrecovery.stanford.edu/research/research-recovery/">Research Restart Plan</a>.<br/>

@@ -13,15 +13,11 @@
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
         <%= render partial: '/quick_search/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
     <% else %>
-        <% unless defined? searcher.loaded_link_mobile %>
-          <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
-        <% else %>
-          <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
-        <% end %>
-        <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>
+        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
 
-        <ol>
-            <%= render partial: '/quick_search/search/result', collection: searcher.results %>
+        <%= render partial: '/quick_search/search/highlighted_facet', locals: { searcher: searcher } %>
+        <ol id="<%= service_name %>-toggleable-results" <%= "data-behavior=\"toggleable-results\" data-toggle-threshold=\"#{searcher.toggle_threshold}\"".html_safe if defined?(searcher.toggleable?) && searcher.toggleable? %>>
+          <%= render partial: '/quick_search/search/result', collection: searcher.results %>
         </ol>
 
         <% if (addl_facet = searcher.search.additional_facet_details(params[:q])) %>
@@ -29,6 +25,22 @@
             Your search also found
             <%= link_to("#{number_with_delimiter(addl_facet.hits)} topic specific databases", addl_facet.href) %>.
           </p>
+        <% end %>
+
+        <% if defined?(searcher.toggleable?) && searcher.toggleable? %>
+          <% if searcher.total.to_i > searcher.toggle_threshold.to_i %>
+            <button aria-expanded="false" aria-controls="<%= service_name %>-toggleable-results" data-original-text="<%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>" id="<%= service_name %>-results-toggle-button" class="btn btn-cardinal-red">
+              <i class="fa fa-chevron-down"></i> <%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>
+            </button>
+
+            <script type='text/javascript'>
+              toggleableResults('<%= service_name %>');
+            </script>
+          <% end %>
+
+          <div class="mt-3">
+            <i class="fa fa-external-link"></i> <%= link_to(I18n.t("#{service_name}_search.pass_on_search_link_text", query: searcher.q), searcher.loaded_link) %>
+          </div>
         <% end %>
 
         <% if searcher.total.present? %>
