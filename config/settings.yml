@@ -1,13 +1,6 @@
-EDS_QUERY_API_URL: 'https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&format=json'
-EDS_QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
-EDS_FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
-CATALOG_QUERY_API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
-CATALOG_QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
-CATALOG_FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
 LIBRARY_WEBSITE_QUERY_API_URL: 'https://library.stanford.edu/search/website?search=%{q}'
 MAX_RESULTS: 3
-CATALOG_HOME_URL: 'https://searchworks.stanford.edu'
-ARTICLES_HOME_URL: 'https://searchworks.stanford.edu/articles'
+
 LIBRARY_WEBSITE_HOME_URL: 'https://library.stanford.edu'
 YEWNO_HOME_URL: 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com'
 GLOBAL_ALERT: <%= false %>
@@ -28,3 +21,13 @@ EXHIBITS:
   LINK_URL: 'https://exhibits.stanford.edu/%{id}'
   NUM_RESULTS_SHOWN: 3
   QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
+CATALOG:
+  API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
+  QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
+  FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
+  HOME_URL: 'https://searchworks.stanford.edu'
+ARTICLE:
+  API_URL: 'https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&format=json'
+  QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
+  FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
+  HOME_URL: 'https://searchworks.stanford.edu/articles'

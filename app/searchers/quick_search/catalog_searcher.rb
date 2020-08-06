@@ -9,7 +9,7 @@ module QuickSearch
     end
 
     def loaded_link
-      format(Settings.CATALOG_QUERY_URL.to_s, q: CGI.escape(q.to_s))
+      format(Settings.CATALOG.QUERY_URL.to_s, q: CGI.escape(q.to_s))
     end
   end
 end
