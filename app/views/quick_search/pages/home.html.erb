@@ -5,20 +5,25 @@
 </div>
 
 <div class='card-deck bento-panels homepage-panels'>
-  <div class='card'>
-    <%= image_tag 'catalog.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
-    <div class='card-body'>
-      <h2 class='card-title'><%= link_to 'Catalog', Settings.CATALOG_HOME_URL %></h2>
-      <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('catalog_search.sub_heading_html') %></p>
+  <% if Settings.ENABLED_SEARCHERS.include?('catalog') %>
+    <div class='card'>
+      <%= image_tag 'catalog.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
+      <div class='card-body'>
+        <h2 class='card-title'><%= link_to 'Catalog', Settings.CATALOG.HOME_URL %></h2>
+        <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('catalog_search.sub_heading_html') %></p>
+      </div>
     </div>
-  </div>
-  <div class='card'>
-    <%= image_tag 'articles.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
-    <div class='card-body'>
-      <h2 class='card-title'><%= link_to 'Articles+', Settings.ARTICLES_HOME_URL %></h2>
-      <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('article_search.sub_heading_html') %></p>
+  <% end %>
+
+  <% if Settings.ENABLED_SEARCHERS.include?('article') %>
+    <div class='card'>
+      <%= image_tag 'articles.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
+      <div class='card-body'>
+        <h2 class='card-title'><%= link_to 'Articles+', Settings.ARTICLE.HOME_URL %></h2>
+        <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('article_search.sub_heading_html') %></p>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
     <div class='card'>

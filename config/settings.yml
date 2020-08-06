@@ -8,6 +8,16 @@ ENABLED_SEARCHERS:
   - catalog
   - article
   - library_website
+CATALOG:
+  API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
+  QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
+  FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
+  HOME_URL: 'https://searchworks.stanford.edu'
+ARTICLE:
+  API_URL: 'https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&format=json'
+  QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
+  FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
+  HOME_URL: 'https://searchworks.stanford.edu/articles'
 LIBGUIDES:
   API_URL: 'https://example.com/1.1/guides'
   SITE_ID: 123456
@@ -21,13 +31,3 @@ EXHIBITS:
   LINK_URL: 'https://exhibits.stanford.edu/%{id}'
   NUM_RESULTS_SHOWN: 3
   QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
-CATALOG:
-  API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
-  QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
-  FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
-  HOME_URL: 'https://searchworks.stanford.edu'
-ARTICLE:
-  API_URL: 'https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&format=json'
-  QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
-  FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
-  HOME_URL: 'https://searchworks.stanford.edu/articles'
