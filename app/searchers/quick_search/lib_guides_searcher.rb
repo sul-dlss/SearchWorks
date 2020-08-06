@@ -11,5 +11,13 @@ module QuickSearch
     def loaded_link
       format(Settings.LIBGUIDES.QUERY_URL.to_s, q: CGI.escape(q.to_s))
     end
+
+    def toggleable?
+      true
+    end
+
+    def toggle_threshold
+      Settings.LIBGUIDES.NUM_RESULTS_SHOWN
+    end
   end
 end

@@ -41,7 +41,9 @@ en:
     display_name: Guides
     micro_display_name: guide
     no_results_service_message: "a different search"
+    pass_on_search_link_text: Search "%{query}" in all guide pages
     sub_heading_html: Wayfinders for our collections, tools, and services
+    toggle_button_text: Show %{total} guides
   library_website_search:
     display_name: "Library website"
     short_display_name: "Website"

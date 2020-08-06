@@ -24,7 +24,7 @@ class LibGuidesSearchService < AbstractSearchService
 
   class Response < AbstractSearchService::Response
     def results
-      json.first(5).collect do |doc|
+      json.collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc['name']
         result.link = doc['url']
@@ -47,6 +47,6 @@ class LibGuidesSearchService < AbstractSearchService
     def json
       @json ||= JSON.parse(@body)
     end
-    
+
   end
 end

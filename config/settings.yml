@@ -19,7 +19,8 @@ LIBGUIDES:
   API_URL: 'https://example.com/1.1/guides'
   SITE_ID: 123456
   KEY: abc1234
-  QUERY_URL: 'TODO'
+  NUM_RESULTS_SHOWN: 5
+  QUERY_URL: 'https://guides.library.stanford.edu/srch.php?q=%{q}'
   HOME_URL: 'https://guides.library.stanford.edu/'
 
 EXHIBITS:
