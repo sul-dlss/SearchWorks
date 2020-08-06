@@ -81,7 +81,7 @@ class RequestLink
   end
 
   def enabled_libraries
-    %w[ARS ART BUSINESS EARTH-SCI EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
+    %w[ARS ART BUSINESS EARTH-SCI EAST-ASIA EDUCATION ENG GREEN MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL]
   end
 
   def in_enabled_location?
@@ -141,13 +141,14 @@ class RequestLink
       },
       'BUSINESS' => %w[STKS AUDIO CAREERCOLL POP-COLL NH-DVDCD NH-PERI],
       'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
+      'EAST-ASIA' => %w[STKS-MONO STKS-PERI NH-DVDCD],
       'EDUCATION' => %w[NH-7DAY STKS-MONO STKS-PERI],
       'ENG' => %w[STKS PERI],
       'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
       'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
       'MUSIC' => %w[DVDCD SCORE STKS],
       'RUMSEYMAP' => '*',
-      'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
+      'SAL' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER NH-MICR PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS],
       'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND SCORE STKS STKS-MONO STKS-PERI],
       'SCIENCE' => %w[STKS PERI MEDIA],
       'SPEC-COLL' => '*',
@@ -157,6 +158,7 @@ class RequestLink
 
   def disabled_current_locations_map
     {
+      'EAST-ASIA' => %w[ON-ORDER],
       'SPEC-COLL' => %w[INPROCESS ON-ORDER SPEC-INPRO],
       'default' => %w[INPROCESS ON-ORDER]
     }
@@ -196,6 +198,28 @@ class RequestLink
         STORAGE
         TECH-RPTS
         THESES
+      ],
+      'EAST-ASIA' => %w[
+        CHINESE
+        EAL-SETS
+        EAL-STKS-C
+        EAL-STKS-J
+        EAL-STKS-K
+        FOLIO
+        FOLIO-CHN
+        FOLIO-FLAT
+        FOLIO-JPN
+        FOLIO-KOR
+        HY-PAGE-EA
+        INPROCESS
+        JAPANESE
+        KOREAN
+        L-PAGE-EA
+        MEDIA
+        MICROTEXT
+        ND-PAGE-EA
+        SETS
+        STACKS
       ],
       'EDUCATION' => %w[
         CURRICULUM
@@ -284,9 +308,13 @@ class RequestLink
         EAL-STKS-K
         FED-DOCS
         FOLIO
+        HY-PAGE-EA
         JAPANESE
         KOREAN
+        L-PAGE-EA
         MEDIA-MTXT
+        ND-PAGE-EA
+        PAGE-EA
         PAGE-GR
         SAL-ARABIC
         SAL-FOLIO
@@ -306,15 +334,18 @@ class RequestLink
         CALIF-DOCS
         CHINESE
         FED-DOCS
+        HY-PAGE-EA
         IC-NEWS
         IC-STATS
         INDEXES
         INTL-DOCS
         JAPANESE
         KOREAN
+        L-PAGE-EA
         LOCKED-STK
         MEDIA-MTXT
         MICROTEXT
+        PAGE-EA
         PAGE-GR
         R-STACKS
         RARE-BOOKS
