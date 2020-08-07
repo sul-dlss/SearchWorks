@@ -32,8 +32,8 @@ feature 'Exhibits', js: true do
 
     within('#exhibits') do
       expect(page).to have_css('ol li', count: 10, visible: :all)
-      expect(page).to have_css('ol li', count: 5, visible: :visible)
-      expect(page).to have_css('ol li', count: 5, visible: :hidden)
+      expect(page).to have_css('ol li', count: 3, visible: :visible)
+      expect(page).to have_css('ol li', count: 7, visible: :hidden)
 
       click_button 'Show 10 exhibits'
       expect(page).to have_css('ol li', count: 10, visible: :visible)
@@ -41,8 +41,8 @@ feature 'Exhibits', js: true do
 
       click_button 'Show fewer'
       expect(page).to have_css('ol li', count: 10, visible: :all)
-      expect(page).to have_css('ol li', count: 5, visible: :visible)
-      expect(page).to have_css('ol li', count: 5, visible: :hidden)
+      expect(page).to have_css('ol li', count: 3, visible: :visible)
+      expect(page).to have_css('ol li', count: 7, visible: :hidden)
 
       expect(page).to have_button('Show 10 exhibits')
       expect(page).not_to have_button('Show fewer')
