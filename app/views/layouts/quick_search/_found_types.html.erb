@@ -1,26 +1,23 @@
 <% # overriden from the QuickSearch gem %>
-<dl class='row searcher-anchors'>
-  <dt>Found results in</dt>
-  <dd>
-    <ul class="list-inline">
-      <% QuickSearch::Engine::APP_CONFIG['found_types'].each do |searcher| %>
-        <% if @found_types.include? searcher  %>
-          <li class='list-inline-item'>
-            <a href="#<%= searcher.underscore %>" data-quicksearch-ga-action="<%= searcher.underscore %>">
-              <%= t("#{searcher}_search.short_display_name") %>
-            </a>
-          </li>
-        <% else %>
-          <li class="<%= searcher.underscore %> list-inline-item">
-            <span class="no-results-label">
-              <%= t("#{searcher}_search.short_display_name") %>
-            </span>
-          </li>
-        <% end %>
+<nav class='row searcher-anchors'>
+  <ul class="list-inline h4" aria-label="Results found in">
+    <% QuickSearch::Engine::APP_CONFIG['found_types'].each do |searcher| %>
+      <% if @found_types.include? searcher  %>
+        <li class='list-inline-item'>
+          <a href="#<%= searcher.underscore %>" data-quicksearch-ga-action="<%= searcher.underscore %>">
+            <%= t("#{searcher}_search.short_display_name") %>
+          </a>
+        </li>
+      <% else %>
+        <li class="<%= searcher.underscore %> list-inline-item">
+          <span class="no-results-label">
+            <%= t("#{searcher}_search.short_display_name") %>
+          </span>
+        </li>
       <% end %>
-      <li class='list-inline-item'>
-        <a href="#yewno" data-quicksearch-ga-action="yewno">Yewno</a>
-      </li>
-    </ul>
-  </dd>
-</dl>
+    <% end %>
+    <li class='list-inline-item'>
+      <a href="#yewno" data-quicksearch-ga-action="yewno">Yewno</a>
+    </li>
+  </ul>
+</nav>
