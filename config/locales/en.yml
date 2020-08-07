@@ -6,7 +6,7 @@ en:
     micro_display_name: exhibits
     no_results_service_message: "a different search"
     pass_on_search_link_text: Search "%{query}" in all exhibit items
-    sub_heading_html: Digital showcase for research and teaching
+    sub_heading_html: Digital showcases for research and teaching.
     toggle_button_text: Show %{total} exhibits
   global_alert_html: >
     <b>RESEARCH RESTART</b><br/>
@@ -19,7 +19,7 @@ en:
   catalog_search:
     display_name: "Catalog"
     short_display_name: "Catalog"
-    sub_heading_html: Books, media, physical & digital resources
+    sub_heading_html: Physical and digital books, media, journals, archives, and databases.
     micro_display_name: "catalog"
     search_form_placeholder: "Search SearchWorks catalog"
     module_callout: "Search SearchWorks catalog"
@@ -29,7 +29,7 @@ en:
   article_search:
     display_name: "Articles+"
     short_display_name: "Articles+"
-    sub_heading_html: Journal articles, e-books, & other e-resources
+    sub_heading_html: Journal articles, e-books, and other e-resources.
     micro_display_name: "articles+"
     search_form_placeholder: "Search SearchWorks articles+"
     module_callout: "Search SearchWorks articles+"
@@ -42,17 +42,19 @@ en:
     micro_display_name: guide
     no_results_service_message: "a different search"
     pass_on_search_link_text: Search "%{query}" in all guide pages
-    sub_heading_html: Wayfinders for our collections, tools, and services
+    sub_heading_html: Course- and topic-based guides to collections, tools, and services.
     toggle_button_text: Show %{total} guides
   library_website_search:
     display_name: "Library website"
     short_display_name: "Website"
-    sub_heading_html: "Library info; guides & content by subject specialists"
+    sub_heading_html: "Libraries and subject specialists; blogs, events, and policies."
     micro_display_name: "website"
     search_form_placeholder: "Search Library website"
     module_callout: "Search Library website"
     error_service_mesasge: "searching library website"
     no_results_service_message: "a different search"
     no_results_link: "http://library.stanford.edu/search/website"
+  yewno:
+    sub_heading_html: Knowledge graphs for interconnecting concepts.
   search_form:
     placeholder: "catalog + articles + website + more"

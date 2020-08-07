@@ -18,6 +18,6 @@ describe 'quick_search/search/_module_heading.html.erb' do
 
   it 'renders if there are no results' do
     expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-    expect(rendered).to have_css('.result-set-subheading', text: /Books/)
+    expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital/)
   end
 end
