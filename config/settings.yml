@@ -24,7 +24,7 @@ LIBGUIDES:
   KEY: abc1234
   NUM_RESULTS_SHOWN: 3
   QUERY_URL: 'https://guides.library.stanford.edu/srch.php?q=%{q}'
-  HOME_URL: 'https://guides.library.stanford.edu/'
+  HOME_URL: 'https://guides.library.stanford.edu'
 EXHIBITS:
   API_URL: 'https://exhibits.stanford.edu/exhibit_finder?q=%{q}'
   HOME_URL: 'https://exhibits.stanford.edu'

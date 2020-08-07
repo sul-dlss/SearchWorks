@@ -18,8 +18,16 @@ feature 'Homepage' do
         text: 'Articles+'
       )
       expect(page).to have_css(
+        'a[href="https://guides.library.stanford.edu"]',
+        text: 'Guides'
+      )
+      expect(page).to have_css(
         'a[href="https://library.stanford.edu"]',
         text: 'Library website'
+      )
+      expect(page).to have_css(
+        'a[href="https://exhibits.stanford.edu"]',
+        text: 'Exhibits'
       )
       expect(page).to have_css(
         'a[href="https://stanford.idm.oclc.org/login?url=https://discover.yewno.com"]', # rubocop:disable LineLength
