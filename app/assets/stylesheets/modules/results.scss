@@ -1,10 +1,23 @@
 .result-title {
   font-size: 1.215em;
-  padding-top: 10px;
 }
 
 .module-contents {
-  ol { padding-left: 18px; }
+  ol {
+    padding-left: 18px;
+
+    .no-thumbnail {
+      border-bottom: 1px solid $su-cloud;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+
+    .with-thumbnail {
+      border-bottom: 1px solid $su-cloud;
+      margin-bottom: 15px;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .result-set-subheading {
