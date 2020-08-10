@@ -20,6 +20,12 @@
   }
 }
 
+.exhibits.module {
+  ol {
+    list-style-type: none;
+  }
+}
+
 .result-set-subheading {
   display: block;
   font-size: $font-size-base;
