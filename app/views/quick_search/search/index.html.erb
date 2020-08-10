@@ -6,69 +6,58 @@
     </div>
   </div>
 </div>
-<div class="quicksearch-ga-click-tracking">
-  <div class="row articles-catalog">
-    <div class="col-md-6 module">
-      <% if Settings.ENABLED_SEARCHERS.include?('catalog') %>
-        <div id="catalog" class="module-contents" tabindex="-1">
-          <p class="search-error" data-quicksearch-search-endpoint="catalog"
-                                  data-quicksearch-page=""
-                                  data-quicksearch-template=""></p>
-        </div>
-      <% end %>
-    </div>
-    <div class="col-md-6 module">
-      <% if Settings.ENABLED_SEARCHERS.include?('article') %>
-        <div id="article" class="module-contents" tabindex="-1">
-          <p class="search-error" data-quicksearch-search-endpoint="article"
-                                  data-quicksearch-page=""
-                                  data-quicksearch-template=""></p>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div class="quicksearch-ga-click-tracking">
-  <div class="row">
-    <% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
-      <div class="col-md-6 lib-guides module">
-        <div id="lib-guides" class="module-contents" >
-          <p class="search-error" data-quicksearch-search-endpoint="lib_guides"
-                                  data-quicksearch-page=""
-                                  data-quicksearch-template=""></p>
-        </div>
+<div class="quicksearch-ga-click-tracking row row-cols-1 row-cols-md-2">
+  <div class="col module">
+    <% if Settings.ENABLED_SEARCHERS.include?('catalog') %>
+      <div id="catalog" class="module-contents" tabindex="-1">
+        <p class="search-error" data-quicksearch-search-endpoint="catalog"
+                                data-quicksearch-page=""
+                                data-quicksearch-template=""></p>
       </div>
     <% end %>
-    <div class="col-md-6 library-website module">
-      <div id="library-website" class="module-contents" tabindex="-1">
-        <p class="search-error" data-quicksearch-search-endpoint="library_website"
+  </div>
+  <div class="col module">
+    <% if Settings.ENABLED_SEARCHERS.include?('article') %>
+      <div id="article" class="module-contents" tabindex="-1">
+        <p class="search-error" data-quicksearch-search-endpoint="article"
+                                data-quicksearch-page=""
+                                data-quicksearch-template=""></p>
+      </div>
+    <% end %>
+  </div>
+
+  <% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
+    <div class="col lib-guides module">
+      <div id="lib-guides" class="module-contents" >
+        <p class="search-error" data-quicksearch-search-endpoint="lib_guides"
                                 data-quicksearch-page=""
                                 data-quicksearch-template=""></p>
       </div>
     </div>
+  <% end %>
+  <div class="col library-website module">
+    <div id="library-website" class="module-contents" tabindex="-1">
+      <p class="search-error" data-quicksearch-search-endpoint="library_website"
+                              data-quicksearch-page=""
+                              data-quicksearch-template=""></p>
+    </div>
   </div>
-</div>
 
-
-<div class="quicksearch-ga-click-tracking">
-  <div class="row">
-    <% if Settings.ENABLED_SEARCHERS.include?('exhibits') %>
-      <div class="col-md-6 exhibits module">
-        <div id="exhibits" class="module-contents" >
-          <p class="search-error" data-quicksearch-search-endpoint="exhibits"
-                                  data-quicksearch-page=""
-                                  data-quicksearch-template=""></p>
-        </div>
+  <% if Settings.ENABLED_SEARCHERS.include?('exhibits') %>
+    <div class="col exhibits module">
+      <div id="exhibits" class="module-contents" >
+        <p class="search-error" data-quicksearch-search-endpoint="exhibits"
+                                data-quicksearch-page=""
+                                data-quicksearch-template=""></p>
       </div>
-    <% end %>
+    </div>
+  <% end %>
 
-    <div class="col-md-6 yewno module">
-      <div id="yewno" class="module-contents" tabindex="-1">
-        <h2 class="result-set-heading">Yewno</h2>
-        <span class="h3 result-set-subheading"><%= t('yewno.sub_heading_html') %></span>
-        <div id="yewno-results"></div>
-      </div>
+  <div class="col yewno module">
+    <div id="yewno" class="module-contents" tabindex="-1">
+      <h2 class="result-set-heading">Yewno</h2>
+      <span class="h3 result-set-subheading"><%= t('yewno.sub_heading_html') %></span>
+      <div id="yewno-results"></div>
     </div>
   </div>
 </div>
