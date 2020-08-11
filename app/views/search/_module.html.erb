@@ -1,23 +1,14 @@
 <div id="<%= service_name.underscore %>" class="module-contents" >
     <% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
-    <% if searcher.is_a? StandardError %>
-        <% module_link = QuickSearch::ApplicationSearcher.module_link_on_error(service_name, searcher, @query) %>
-        <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: nil } %>
-        <% if params[:page].blank? %>
-            <% page = 1 %>
-        <% else %>
-            <% page = params[:page] %>
-        <% end %>
-        <%= render partial: '/search/search_error', locals: { service_name: service_name, page: page, template: 'without_paging', module: module_link } %>
-    <% elsif searcher.results.blank? %>
+    <% if searcher.results.blank? %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
-        <%= render partial: '/search/no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
+        <%= render partial: 'no_results', locals: {module_display_name: module_display_name, service_name: service_name, searcher: searcher} %>
     <% else %>
         <%= render partial: 'module_heading', locals: { service_name: service_name, total: total, searcher: searcher } %>
 
-        <%= render partial: '/search/highlighted_facet', locals: { searcher: searcher } %>
+        <%= render partial: 'highlighted_facet', locals: { searcher: searcher } %>
         <ol id="<%= service_name %>-toggleable-results" <%= "data-behavior=\"toggleable-results\" data-toggle-threshold=\"#{searcher.toggle_threshold}\"".html_safe if defined?(searcher.toggleable?) && searcher.toggleable? %>>
-          <%= render partial: '/search/result', collection: searcher.results %>
+          <%= render partial: 'result', collection: searcher.results %>
         </ol>
 
         <% if (addl_facet = searcher.search.additional_facet_details(params[:q])) %>

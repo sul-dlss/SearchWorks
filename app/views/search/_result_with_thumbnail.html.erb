@@ -1,23 +1,10 @@
 <div class="row mb-3">
-  <% unless defined? result.mobile_link %>
-      <div class="col-sm-3">
-          <%= link_to result.link do %>
-              <%= image_tag result.thumbnail, :class => 'thumbnail img-fluid' %>
-          <% end %>
-      </div>
-  <% else %>
-      <div class="col-sm-3 columns show-for-medium-up">
-          <%= link_to result.link do %>
-              <%= image_tag result.thumbnail, :class => 'thumbnail img-fluid' %>
-          <% end %>
-      </div>
-      <div class="col-sm-3 columns show-for-small-only">
-          <%= link_to result.mobile_link do %>
-              <%= image_tag result.thumbnail, :class => 'thumbnail img-fluid' %>
-          <% end %>
-      </div>
-  <% end %>
+  <div class="col-sm-3">
+      <%= link_to result.link do %>
+          <%= image_tag result.thumbnail, :class => 'thumbnail img-fluid' %>
+      <% end %>
+  </div>
   <div class="col-sm-9 pl-0 columns">
-      <%= render partial: '/search/result_details', locals: { result: result } %>
+      <%= render partial: 'result_details', locals: { result: result } %>
   </div>
 </div>
