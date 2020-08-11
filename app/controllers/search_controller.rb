@@ -10,32 +10,11 @@ class SearchController < ApplicationController
   end
 
   def ip
-    request.env['HTTP_X_FORWARDED_FOR'] || request.remote_ip
+    nil
   end
 
   def on_campus?(ip)
-    ip = remote_ip(ip)
-    ip_range_check(ip)
-  end
-
-  # To spoof ON and OFF campus for development
-  def remote_ip(ip)
-    if ip == '127.0.0.1'
-      '204.84.244.1' #On Campus
-      #'127.0.0.1'  #Off Campus
-    else
-      ip
-    end
-  end
-
-  def ip_range_check(ip)
-    QuickSearch::Engine::APP_CONFIG['on_campus'].each do |on_campus_ip_regex|
-      if on_campus_ip_regex === ip
-        return true
-      end
-    end
-
-    return false
+    return true
   end
 
   # include QuickSearch::SearcherConcern
@@ -79,7 +58,7 @@ class SearchController < ApplicationController
                 end
                 searcher = klass.new(http_client, query, per_page, offset(page, per_page), page, on_campus?(ip), scope)
               else
-                searcher = klass.new(http_client, query, QuickSearch::Engine::APP_CONFIG['per_page'], 0, 1, on_campus?(ip), scope)
+                searcher = klass.new(http_client, query, Settings.quick_search.per_page, 0, 1, on_campus?(ip), scope)
               end
               searcher.search
               unless searcher.is_a? StandardError or searcher.results.blank?
@@ -126,11 +105,11 @@ class SearchController < ApplicationController
 
   def update_searcher_timeout(client, search_method, xhr=false)
     timeout_type = xhr ? 'xhr_http_timeout' : 'http_timeout'
-    timeout = QuickSearch::Engine::APP_CONFIG[timeout_type]
-
-    if QuickSearch::Engine::APP_CONFIG.has_key? search_method and QuickSearch::Engine::APP_CONFIG[search_method].has_key? timeout_type
-        timeout = QuickSearch::Engine::APP_CONFIG[search_method][timeout_type]
-    end
+    timeout = Settings.quick_search[timeout_type]
+    #
+    # if QuickSearch::Engine::APP_CONFIG.has_key? search_method and QuickSearch::Engine::APP_CONFIG[search_method].has_key? timeout_type
+    #     timeout = QuickSearch::Engine::APP_CONFIG[search_method][timeout_type]
+    # end
 
     client.receive_timeout = timeout
     client.send_timeout = timeout
@@ -164,7 +143,7 @@ class SearchController < ApplicationController
   end
 
   def doi_loaded_link
-     QuickSearch::Engine::APP_CONFIG['doi_loaded_link'] + CGI.escape(doi_regex.match(doi_query)[1])
+     Settings.quick_search.doi_loaded_link + CGI.escape(doi_regex.match(doi_query)[1])
   end
 
   def doi_query

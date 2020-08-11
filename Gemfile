@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'quick_search-core'
 gem 'jquery-rails'
 gem 'bootstrap', '>= 4.3.1', '< 5'
 gem 'autoprefixer-rails'
@@ -35,35 +34,11 @@ gem 'font-awesome-rails'
 gem 'config'
 gem 'faraday'
 gem 'honeybadger'
+gem 'kaminari'
+gem 'httpclient'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-# -Inserted by QuickSearch-
-
-# QuickSearch searchers
-#
-# If you want to use different searchers, remove/replace these and be sure to remove them from
-# your config/quick_search_config.yml file as well as references to them in your theme's search
-# results page template
-
-gem 'quick_search-placeholder_searcher'
-
-# -END Inserted by QuickSearch-
-
-
-
-# -Inserted by QuickSearch-
-
-# QuickSearch theme
-#
-# Remove the following if you want to use a different theme
-
-gem 'quick_search-generic_theme'
-
-# END -Inserted by QuickSearch-
-
-
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
