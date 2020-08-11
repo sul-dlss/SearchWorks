@@ -1,9 +1,28 @@
-@import 'deja-vu-font';
+@import 'application/deja-vu-font';
 @import 'identity/bootstrap-variables';
-@import 'sul-variables';
-@import 'bootstrap-variables';
+@import 'application/sul-variables';
+@import 'application/bootstrap-variables';
 @import 'bootstrap';
-@import 'bootstrap-overrides';
-@import 'quick_search_overrides';
-@import 'sul-bento';
+@import 'application/bootstrap-overrides';
+@import 'application/quick_search_overrides';
+@import 'application/base';
+@import 'application/layout';
+
+@import 'modules/homepage';
+@import 'modules/masthead';
+@import 'modules/subnavbar';
+@import 'modules/top-navbar';
+@import 'modules/global-alert';
+@import 'modules/sul-footer';
+@import 'modules/global-footer';
+
+@import 'modules/results';
+@import 'modules/stanford-only';
+@import 'modules/highlighted_facet';
+@import 'modules/online-label';
+@import 'modules/libweb';
+@import 'modules/yewno';
+@import 'modules/searcher-anchors';
+@import 'modules/skip-links';
+
 @import 'font-awesome';
