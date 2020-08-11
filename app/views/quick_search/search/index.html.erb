@@ -7,55 +7,19 @@
   </div>
 </div>
 <div class="quicksearch-ga-click-tracking row row-cols-1 row-cols-md-2">
-  <div class="col module">
-    <% if Settings.ENABLED_SEARCHERS.include?('catalog') %>
-      <div id="catalog" class="module-contents" tabindex="-1">
-        <p class="search-error" data-quicksearch-search-endpoint="catalog"
-                                data-quicksearch-page=""
-                                data-quicksearch-template=""></p>
-      </div>
-    <% end %>
-  </div>
-  <div class="col module">
-    <% if Settings.ENABLED_SEARCHERS.include?('article') %>
-      <div id="article" class="module-contents" tabindex="-1">
-        <p class="search-error" data-quicksearch-search-endpoint="article"
-                                data-quicksearch-page=""
-                                data-quicksearch-template=""></p>
-      </div>
-    <% end %>
-  </div>
-
-  <% if Settings.ENABLED_SEARCHERS.include?('lib_guides') %>
-    <div class="col lib-guides module">
-      <div id="lib-guides" class="module-contents" >
-        <p class="search-error" data-quicksearch-search-endpoint="lib_guides"
-                                data-quicksearch-page=""
-                                data-quicksearch-template=""></p>
-      </div>
-    </div>
-  <% end %>
-
-    <div class="col library-website module">
-      <% if Settings.ENABLED_SEARCHERS.include?('library_website_api') %>
-        <div id="library-website-api" class="module-contents" tabindex="-1">
-          <p class="search-error" data-quicksearch-search-endpoint="library_website_api"
+  <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
+    <div class="col module">
+      <% if instance_variable_get("@#{searcher}") && !instance_variable_get("@#{searcher}").is_a?(Exception) %>
+        <%= render_module(instance_variable_get("@#{searcher}"), searcher) %>
+      <% else %>
+        <%= content_tag :div, id: searcher, class: 'module-contents', tabindex: -1 do %>
+          <p class="search-error" data-quicksearch-search-endpoint="<%= searcher %>"
                                   data-quicksearch-page=""
                                   data-quicksearch-template=""></p>
-        </div>
-      <% end %>  
-    </div>
-
-  <% if Settings.ENABLED_SEARCHERS.include?('exhibits') %>
-    <div class="col exhibits module">
-      <div id="exhibits" class="module-contents" >
-        <p class="search-error" data-quicksearch-search-endpoint="exhibits"
-                                data-quicksearch-page=""
-                                data-quicksearch-template=""></p>
-      </div>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
-
   <div class="col yewno module">
     <div id="yewno" class="module-contents" tabindex="-1">
       <h2 class="result-set-heading">Yewno</h2>
