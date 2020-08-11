@@ -14,7 +14,6 @@ RSpec.describe QuickSearch::CatalogSearcher do
                                                                body: response))
   end
 
-  it { expect(searcher).to be_an(QuickSearch::Searcher) }
   it { expect(searcher.search).to be_an(CatalogSearchService::Response) }
   it do
     searcher.search # loads response

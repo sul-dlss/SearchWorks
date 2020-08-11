@@ -14,7 +14,6 @@ RSpec.describe QuickSearch::LibGuidesSearcher do
                                                                body: response))
   end
 
-  it { expect(searcher).to be_an(QuickSearch::Searcher) }
   it { expect(searcher.search).to be_an(LibGuidesSearchService::Response) }
   it { expect(searcher).to be_toggleable }
   it { expect(searcher.toggle_threshold).to be 3 }

@@ -24,8 +24,8 @@ RSpec.describe QuickSearch::LibraryWebsiteApiSearcher do
                                                                body: body.to_json))
   end
 
-  it { expect(searcher).to be_an(QuickSearch::Searcher) }
   it { expect(searcher.search).to be_an(LibraryWebsiteApiSearchService::Response) }
+
   it do
     searcher.search # loads response
     expect(searcher.results).to be_an(Array)
