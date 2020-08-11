@@ -85,15 +85,6 @@ class SearchController < ApplicationController
     http_search
   end
 
-  # TODO: throw error if required files not in place
-  def single_searcher
-    searcher_name = params[:searcher_name]
-
-
-    #TODO: maybe a default template for single-searcher searches?
-    http_search(searcher_name, "search/#{searcher_name}_search")
-  end
-
   # The following searches for individual sections of the page.
   # This allows us to do client-side requests in cases where the original server-side
   # request times out or otherwise fails.
