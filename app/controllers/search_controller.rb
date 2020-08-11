@@ -1,14 +1,4 @@
 class SearchController < ApplicationController
-  class SearcherError < StandardError
-    attr_reader :searcher
-
-    def initialize(e=nil, searcher)
-      super e
-      @searcher = searcher
-      set_backtrace e.backtrace if e
-    end
-  end
-
   # include QuickSearch::SearcherConcern
   def search_all_in_threads(query, primary_searcher = 'defaults')
     @searches = Settings.ENABLED_SEARCHERS.each_with_object({}) do |hash, searcher|
