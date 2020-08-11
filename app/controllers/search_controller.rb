@@ -124,24 +124,16 @@ class SearchController < ApplicationController
       searcher = klass.new(http_client, @query)
       searcher.search
 
-      searcher_partials = {}
-      services = [endpoint]
-
       respond_to do |format|
-
         format.html {
-          services.each do |service|
-            service_template = render_to_string(
-              :partial => "search/xhr_response",
-              :layout => false,
-              :locals => { module_display_name: t("#{endpoint}_search.display_name"),
-                           searcher: searcher,
-                           search: '',
-                           service_name: service
-                          })
-            searcher_partials[service] = service_template
-          end
-          render :json => searcher_partials
+          render :json => { service => render_to_string(
+            :partial => "search/xhr_response",
+            :layout => false,
+            :locals => { module_display_name: t("#{endpoint}_search.display_name"),
+                         searcher: searcher,
+                         search: '',
+                         service_name: endpoint
+                        })}
         }
 
         format.json {
