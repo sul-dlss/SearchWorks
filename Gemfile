@@ -34,7 +34,6 @@ gem 'font-awesome-rails'
 gem 'config'
 gem 'faraday'
 gem 'honeybadger'
-gem 'kaminari'
 gem 'httpclient'
 
 # Reduces boot times through caching; required in config/boot.rb
