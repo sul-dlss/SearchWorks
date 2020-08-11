@@ -78,6 +78,7 @@ class SearchController < ApplicationController
   def params_q_scrubbed
     params[:q]&.scrub
   end
+  helper_method :params_q_scrubbed
 
   BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
   BenchmarkLogger.formatter = Logger::Formatter.new

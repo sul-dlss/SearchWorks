@@ -14,18 +14,14 @@ module ApplicationHelper
   end
 
   def application_name
-    if action_name == "website"
-      I18n.t "website_search.title_name"
-    else
-      I18n.t "defaults_search.title_name"
-    end
+    I18n.t "defaults_search.title_name"
   end
 
   def organization_name
     I18n.t 'organization_name'
   end
 
- def body_class
+  def body_class
     [controller_name, action_name].join('-')
   end
 
@@ -39,15 +35,7 @@ module ApplicationHelper
     content_for :title, page_title.compact.join('')
   end
 
-  def render_module(searcher, service_name, partial_name = '/search/module', per_page = 3)
+  def render_module(searcher, service_name, partial_name = 'module', per_page = 3)
     render partial: partial_name , locals: { module_display_name: t("#{service_name}_search.display_name"), searcher: searcher, search: '', service_name: service_name, per_page: per_page }
-  end
-
-  private
-
-  def params_q_scrubbed
-    unless params[:q].nil?
-      params[:q].scrub
-    end
   end
 end

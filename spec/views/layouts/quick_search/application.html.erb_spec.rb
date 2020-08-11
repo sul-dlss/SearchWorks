@@ -7,6 +7,7 @@ describe 'layouts/application.html.erb' do
     without_partial_double_verification do
       allow(view).to receive(:opensearch_path).and_return ''
       allow(view).to receive(:body_class).and_return ''
+      allow(view).to receive(:params_q_scrubbed).and_return ''
     end
     render
   end
