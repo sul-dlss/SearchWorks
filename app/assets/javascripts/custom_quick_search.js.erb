@@ -8,7 +8,7 @@ function add_found_item_types(endpoint, result_count) {
   if (result_count) {
     result_count_display = " (" + String(result_count) + ")";
   }
-  var dasherized_endpoint = endpoint; // .replace("_", "-")
+  var dasherized_endpoint = endpoint.replace("_", "-")
   $('.result-types li.' + dasherized_endpoint + " .no-results-label")
     .replaceWith('<a href="#' + dasherized_endpoint + '" data-quicksearch-ga-action="' +
       dasherized_endpoint + '">' + I18n["en"][endpoint + "_search"]["display_name"] + result_count_display);
@@ -47,7 +47,8 @@ var xhr_searches = function(){
         timeout: 15000,
         success: function(response){
           var response_object = jQuery.parseJSON(response);
-          debugger;
+          parent.replaceWith(response_object[endpoint]);
+
           if (!that.hasClass('silent-search-error')) {
             if (response_object[endpoint].indexOf("search-error-message") <= -1) {
               add_found_item_types(endpoint);
@@ -58,12 +59,12 @@ var xhr_searches = function(){
             if (response_object.related_topics != ' ') {
                 $('#related-topics').append(response_object.related_topics).removeClass('hidden');
             }
-            parent.replaceWith(response_object[endpoint]);
           } else {
+            that.replaceWith(response_object[endpoint]);
+
             if ($.trim(response_object[endpoint]) !== '') {
               add_found_item_types(endpoint);
             }
-            that.replaceWith(response_object[endpoint]);
           }
         },
         error: function(){

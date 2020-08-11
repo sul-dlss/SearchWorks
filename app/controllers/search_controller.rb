@@ -9,6 +9,35 @@ class SearchController < ApplicationController
     end
   end
 
+  def ip
+    request.env['HTTP_X_FORWARDED_FOR'] || request.remote_ip
+  end
+
+  def on_campus?(ip)
+    ip = remote_ip(ip)
+    ip_range_check(ip)
+  end
+
+  # To spoof ON and OFF campus for development
+  def remote_ip(ip)
+    if ip == '127.0.0.1'
+      '204.84.244.1' #On Campus
+      #'127.0.0.1'  #Off Campus
+    else
+      ip
+    end
+  end
+
+  def ip_range_check(ip)
+    QuickSearch::Engine::APP_CONFIG['on_campus'].each do |on_campus_ip_regex|
+      if on_campus_ip_regex === ip
+        return true
+      end
+    end
+
+    return false
+  end
+
   # include QuickSearch::SearcherConcern
   def search_all_in_threads(primary_searcher = 'defaults')
     benchmark "%s server ALL" % CGI.escape(query.to_str) do
