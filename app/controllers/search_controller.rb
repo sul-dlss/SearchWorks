@@ -1,21 +1,17 @@
 class SearchController < ApplicationController
   # include QuickSearch::SearcherConcern
   def search_all_in_threads(query, primary_searcher = 'defaults')
-    @searches = Settings.ENABLED_SEARCHERS.each_with_object({}) do |hash, searcher|
-      # Constantize all searchers before creating searcher threads
-      # Excluding this line causes threads to hang indefinitely as of Rails 5
-      "QuickSearch::#{searcher_name.camelize}Searcher".constantize
-
+    @searches = Settings.ENABLED_SEARCHERS.each_with_object({}) do |searcher, hash|
       hash[searcher] = nil
     end
 
     benchmark "%s server ALL" % CGI.escape(query.to_str) do
       search_threads = @searches.keys.shuffle.map do |search_method|
+        klass = "QuickSearch::#{search_method.camelize}Searcher".constantize
+
         Thread.new(search_method) do |sm|
           benchmark "%s server #{sm}" % CGI.escape(query.to_str) do
             begin
-              klass = "QuickSearch::#{sm.camelize}Searcher".constantize
-
               http_client = HTTPClient.new
               update_searcher_timeout(http_client, sm)
               searcher = klass.new(http_client, query)
@@ -30,7 +26,7 @@ class SearchController < ApplicationController
       search_threads.each {|t| t.join}
     end
 
-    @found_types = @searchers.select { |searcher| searcher && !searcher.results.blank? }
+    @found_types = @searches.select { |key, searcher| searcher && !searcher.results.blank? }.keys
   end
 
   def update_searcher_timeout(client, search_method, xhr=false)
@@ -117,7 +113,7 @@ class SearchController < ApplicationController
 
       respond_to do |format|
         format.html {
-          render :json => { service => render_to_string(
+          render :json => { endpoint => render_to_string(
             :partial => "search/xhr_response",
             :layout => false,
             :locals => { module_display_name: t("#{endpoint}_search.display_name"),
@@ -159,7 +155,6 @@ class SearchController < ApplicationController
       #log_search(@query, page_to_render)
       render page_to_render
     else
-      @search_in_params = false
       render '/pages/home'
     end
   end
