@@ -11,20 +11,17 @@ class SearchController < ApplicationController
 
   # include QuickSearch::SearcherConcern
   def search_all_in_threads(query, primary_searcher = 'defaults')
-    benchmark "%s server ALL" % CGI.escape(query.to_str) do
-      search_threads = []
-      @found_types = [] # add the types that are found to a navigation bar
-
-      searchers = Settings.ENABLED_SEARCHERS
-
+    @searches = Settings.ENABLED_SEARCHERS.each_with_object({}) do |hash, searcher|
       # Constantize all searchers before creating searcher threads
       # Excluding this line causes threads to hang indefinitely as of Rails 5
-      Settings.ENABLED_SEARCHERS.each do |searcher_name|
-        "QuickSearch::#{searcher_name.camelize}Searcher".constantize
-      end
+      "QuickSearch::#{searcher_name.camelize}Searcher".constantize
 
-      searchers.shuffle.each do |search_method|
-        search_threads << Thread.new(search_method) do |sm|
+      hash[searcher] = nil
+    end
+
+    benchmark "%s server ALL" % CGI.escape(query.to_str) do
+      search_threads = @searches.keys.shuffle.map do |search_method|
+        Thread.new(search_method) do |sm|
           benchmark "%s server #{sm}" % CGI.escape(query.to_str) do
             begin
               klass = "QuickSearch::#{sm.camelize}Searcher".constantize
@@ -33,24 +30,17 @@ class SearchController < ApplicationController
               update_searcher_timeout(http_client, sm)
               searcher = klass.new(http_client, query)
               searcher.search
-              unless searcher.is_a? StandardError or searcher.results.blank?
-                @found_types.push(sm)
-              end
-              instance_variable_set "@#{sm}", searcher
+              @searches[search_method] = searcher
             rescue StandardError => e
-              # logger.info e
-
-              # Wrap e in a SearcherError, so that the searcher object is
-              # available for retrieval.
-              searcher_error = SearcherError.new(e, searcher)
-              logger.info "FAILED SEARCH: #{sm} | #{params_q_scrubbed}"
-              instance_variable_set :"@#{sm.to_s}", searcher_error
+              logger.info "FAILED SEARCH: #{sm} | #{params_q_scrubbed} | #{e}"
             end
           end
         end
       end
       search_threads.each {|t| t.join}
     end
+
+    @found_types = @searchers.select { |searcher| searcher && !searcher.results.blank? }
   end
 
   def update_searcher_timeout(client, search_method, xhr=false)

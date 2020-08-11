@@ -9,8 +9,8 @@
 <div class="quicksearch-ga-click-tracking row row-cols-1 row-cols-md-2">
   <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
     <div class="col module">
-      <% if instance_variable_get("@#{searcher}") && !instance_variable_get("@#{searcher}").is_a?(Exception) %>
-        <%= render_module(instance_variable_get("@#{searcher}"), searcher) %>
+      <% if @searches[searcher] %>
+        <%= render_module(@searches[searcher], searcher) %>
       <% else %>
         <%= content_tag :div, id: searcher, class: 'module-contents', tabindex: -1 do %>
           <p class="search-error" data-quicksearch-search-endpoint="<%= searcher %>"
