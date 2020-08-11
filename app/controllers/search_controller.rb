@@ -9,30 +9,13 @@ class SearchController < ApplicationController
     end
   end
 
-  def ip
-    nil
-  end
-
-  def on_campus?(ip)
-    return true
-  end
-
   # include QuickSearch::SearcherConcern
-  def search_all_in_threads(primary_searcher = 'defaults')
+  def search_all_in_threads(query, primary_searcher = 'defaults')
     benchmark "%s server ALL" % CGI.escape(query.to_str) do
       search_threads = []
       @found_types = [] # add the types that are found to a navigation bar
 
-      if primary_searcher == 'defaults'
-        searchers = Settings.ENABLED_SEARCHERS
-      else
-        searcher_config = searcher_config(primary_searcher)
-        if searcher_config and searcher_config.has_key? 'with_paging'
-          searchers = searcher_config['with_paging']['searchers']
-        else
-          searchers = [primary_searcher]
-        end
-      end
+      searchers = Settings.ENABLED_SEARCHERS
 
       # Constantize all searchers before creating searcher threads
       # Excluding this line causes threads to hang indefinitely as of Rails 5
@@ -48,18 +31,7 @@ class SearchController < ApplicationController
 
               http_client = HTTPClient.new
               update_searcher_timeout(http_client, sm)
-              # FIXME: Probably want to set paging and offset somewhere else.
-              # searcher = klass.new(http_client, params_q_scrubbed, QuickSearch::Engine::APP_CONFIG['per_page'], 0, 1, on_campus?(request.remote_ip))
-              if sm == primary_searcher
-                if searcher_config.has_key? 'with_paging'
-                  per_page = searcher_config['with_paging']['per_page']
-                else
-                  per_page = 10
-                end
-                searcher = klass.new(http_client, query, per_page, offset(page, per_page), page, on_campus?(ip), scope)
-              else
-                searcher = klass.new(http_client, query, Settings.quick_search.per_page, 0, 1, on_campus?(ip), scope)
-              end
+              searcher = klass.new(http_client, query)
               searcher.search
               unless searcher.is_a? StandardError or searcher.results.blank?
                 @found_types.push(sm)
@@ -81,35 +53,9 @@ class SearchController < ApplicationController
     end
   end
 
-
-  def page
-    if page_in_params?
-      page = params[:page].to_i
-    else
-      page = 1
-    end
-    page
-  end
-
-  def offset(page, per_page)
-    (page * per_page) - per_page
-  end
-
-  def query
-    extracted_query(params_q_scrubbed)
-  end
-
-  def scope
-    extracted_scope(params_q_scrubbed)
-  end
-
   def update_searcher_timeout(client, search_method, xhr=false)
     timeout_type = xhr ? 'xhr_http_timeout' : 'http_timeout'
     timeout = Settings.quick_search[timeout_type]
-    #
-    # if QuickSearch::Engine::APP_CONFIG.has_key? search_method and QuickSearch::Engine::APP_CONFIG[search_method].has_key? timeout_type
-    #     timeout = QuickSearch::Engine::APP_CONFIG[search_method][timeout_type]
-    # end
 
     client.receive_timeout = timeout
     client.send_timeout = timeout
@@ -121,11 +67,7 @@ class SearchController < ApplicationController
   def doi_trap
     unless params_q_scrubbed.nil?
       if is_a_doi?(doi_query)
-        Event.create(category: 'doi-trap', query: doi_query, action: 'click')
         redirect_to doi_loaded_link
-        # Alternately insert a loaded link into the results interface
-        # @doi_loaded_link = loaded_link
-        # @doi_callout = "Searching for a DOI? Try this: "
       end
     end
   end
@@ -153,65 +95,8 @@ class SearchController < ApplicationController
     query
   end
 
-  # include QuickSearch::QueryParser
-  def extracted_query(unfiltered_query)
-    @unfiltered_query = unfiltered_query
-    if extracted_query_and_scope
-      query = extracted_query_and_scope[:query]
-    else
-      query = unfiltered_query
-    end
-    query
-  end
-
-  def extracted_scope(unfiltered_query)
-    @unfiltered_query = unfiltered_query
-    if extracted_query_and_scope
-      scope = extracted_query_and_scope[:value]
-    else
-      scope = ''
-    end
-  end
-
-  def extracted_query_and_scope
-    if regex_matches = prefix_scope_multi_regex.match(@unfiltered_query)
-      regex_matches
-    elsif regex_matches = suffix_scope_multi_regex.match(@unfiltered_query)
-      regex_matches
-    elsif regex_matches = prefix_scope_regex.match(@unfiltered_query)
-      regex_matches
-    elsif regex_matches = suffix_scope_regex.match(@unfiltered_query)
-      regex_matches
-    end
-    regex_matches
-  end
-
-  def prefix_scope_regex
-    /^(?<option>scope):(?<value>\S+)\s?(?<query>.*)$/
-  end
-
-  def prefix_scope_multi_regex
-    /^(?<option>scope):\((?<value>.*?)\)\s?(?<query>.*)$/
-  end
-
-  def suffix_scope_regex
-    /(?<query>.*)\s(?<option>scope):(?<value>\S+)/
-  end
-
-  def suffix_scope_multi_regex
-    /^(?<query>.*)\s(?<option>scope):\((?<value>.*)\)$/
-  end
-
-  # include QuickSearch::EncodeUtf8
   def params_q_scrubbed
-    unless params[:q].nil?
-      params[:q].scrub
-    end
-  end
-  # include QuickSearch::QueryFilter
-  #include QuickSearch::SearcherConfig
-  def searcher_config(*args)
-    nil
+    params[:q]&.scrub
   end
 
   BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
@@ -220,8 +105,6 @@ class SearchController < ApplicationController
   before_action :doi_trap
 
   def index
-    loaded_searches
-    @common_searches = common_searches
     http_search
   end
 
@@ -229,18 +112,6 @@ class SearchController < ApplicationController
   def single_searcher
     searcher_name = params[:searcher_name]
 
-    searcher_cfg = searcher_config(searcher_name)
-    if searcher_cfg and searcher_cfg.has_key? 'loaded_searches'
-      additional_services = Array.new(searcher_cfg['loaded_searches'])
-    else
-      additional_services = []
-    end
-    loaded_searches(additional_services)
-
-    @common_searches = []
-    if searcher_cfg and searcher_cfg.has_key? 'common_searches'
-      @common_searches = searcher_cfg['common_searches']
-    end
 
     #TODO: maybe a default template for single-searcher searches?
     http_search(searcher_name, "search/#{searcher_name}_search")
@@ -252,16 +123,7 @@ class SearchController < ApplicationController
   def xhr_search
     endpoint = params[:endpoint]
 
-    if params[:template] == 'with_paging'
-      template = 'xhr_response_with_paging'
-    else
-      template = 'xhr_response'
-    end
-
     @query = params_q_scrubbed
-    @page = page
-    @per_page = per_page(endpoint)
-    @offset = offset(@page,@per_page)
 
     http_client = HTTPClient.new
     update_searcher_timeout(http_client, endpoint, true)
@@ -269,30 +131,18 @@ class SearchController < ApplicationController
     benchmark "%s xhr #{endpoint}" % CGI.escape(@query.to_str) do
 
       klass = "QuickSearch::#{endpoint.camelize}Searcher".constantize
-      searcher = klass.new(http_client,
-                           extracted_query(params_q_scrubbed),
-                           @per_page,
-                           @offset,
-                           @page,
-                           true, # on campus
-                           extracted_scope(params_q_scrubbed))
+      searcher = klass.new(http_client, @query)
       searcher.search
 
       searcher_partials = {}
-      searcher_cfg = searcher_config(endpoint)
-      unless searcher_cfg.blank?
-        services = searcher_cfg['services'].blank? ? [] : searcher_cfg['services']
-      else
-        services = []
-      end
-      services << endpoint
+      services = [endpoint]
 
       respond_to do |format|
 
         format.html {
           services.each do |service|
             service_template = render_to_string(
-              :partial => "search/#{template}",
+              :partial => "search/xhr_response",
               :layout => false,
               :locals => { module_display_name: t("#{endpoint}_search.display_name"),
                            searcher: searcher,
@@ -314,8 +164,6 @@ class SearchController < ApplicationController
           end
 
           render :json => { :endpoint => endpoint,
-                            :per_page => @per_page.to_s,
-                            :page => @page.to_s,
                             :total => searcher.total,
                             :results => result_list
           }
@@ -327,8 +175,6 @@ class SearchController < ApplicationController
   private
 
   def http_search(endpoint = 'defaults', page_to_render = :index)
-    @ip = request.remote_ip
-
     @search_form_placeholder = I18n.t "#{endpoint}_search.search_form_placeholder"
     @page_title = I18n.t "#{endpoint}_search.display_name"
     @module_callout = I18n.t "#{endpoint}_search.module_callout"
@@ -336,7 +182,7 @@ class SearchController < ApplicationController
     if search_in_params?
       @query = params_q_scrubbed
       @search_in_params = true
-      search_all_in_threads(endpoint)
+      search_all_in_threads(@query, endpoint)
       #log_search(@query, page_to_render)
       render page_to_render
     else
@@ -345,67 +191,10 @@ class SearchController < ApplicationController
     end
   end
 
-  def page
-    if page_in_params?
-      page = params[:page].to_i
-    else
-      page = 1
-    end
-    page
-  end
-  helper_method :page
-
-  def per_page(endpoint)
-    searcher_cfg = searcher_config(endpoint)
-    if params[:per_page]
-      per_page = params[:per_page].to_i
-    elsif params[:template] == 'with_paging'
-      if searcher_cfg and searcher_cfg.has_key? 'with_paging'
-        per_page = searcher_cfg['with_paging']['per_page']
-      else
-        per_page = 10
-      end
-    else
-      per_page = Settings.quick_search.per_page
-    end
-
-    if per_page > Settings.quick_search.max_per_page
-      per_page = Settings.quick_search.max_per_page
-    end
-
-    per_page
-  end
-
-  def offset(page, per_page)
-    (page * per_page) - per_page
-  end
-
-  def page_in_params?
-    params[:page] && !params[:page].blank?
-  end
-
   def search_in_params?
-    params_q_scrubbed && !params_q_scrubbed.blank?
+    params_q_scrubbed.present?
   end
   helper_method :search_in_params?
-
-  def common_searches
-    Settings.quick_search.common_searches
-  end
-
-  def loaded_searches(additional_services=[])
-    @search_services_for_display = []
-    @extracted_query = extracted_query(params_q_scrubbed)
-    search_services = additional_services + Array.new(Settings.quick_search.loaded_searches)
-
-    search_services.each do |search_service|
-      if search_in_params?
-        @search_services_for_display << {'name' => search_service['name'], 'link'=> search_service['query'] + extracted_query(params_q_scrubbed)}
-      else
-        @search_services_for_display << {'name' => search_service['name'], 'link'=> search_service['landing_page']}
-      end
-    end
-  end
 
   def benchmark(message)
     result = nil
