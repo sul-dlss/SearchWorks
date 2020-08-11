@@ -6,7 +6,7 @@
         <div class="panel-body">
           <%= image_tag 'homepage/catalog.jpg' %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
-          <p class="hidden-xs">Search the physical collections and digital resources of Stanford’s libraries. Find books, media, and <%= link_to 'topic-specific databases', databases_path %>.</p>
+          <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="panel-body">
           <%= image_tag 'homepage/articles.jpg' %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
-          <p class="hidden-xs">Search a combined index of 100s of databases and connect directly to the article or resource.</p>
+          <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="panel-body">
           <%= image_tag 'homepage/website.jpg' %>
           <h3><%= link_to 'Library website', 'https://library.stanford.edu' %></h3>
-          <p class="hidden-xs">Find topic specialists, blog posts, descriptions of our notable collections, as well as libraries, hours, and policies.</p>
+          <p class="hidden-xs">Libraries and subject specialists; blogs, events, and policies.</p>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
         <div class="panel-body">
           <%= image_tag 'homepage/yewno.jpg' %>
           <h3><%= link_to 'Yewno', 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com' %></h3>
-          <p class="hidden-xs">Explore concepts and connections, and understand interdisciplinary subjects, in a graph interface.</p>
+          <p class="hidden-xs">Knowledge graphs for interconnecting concepts.</p>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://library.stanford.edu/search-services' %></h3>
-              <p class="hidden-xs">Discover and access library and archival materials, journals, databases, data, and e-resources beyond SearchWorks.</p>
+              <p class="hidden-xs">Tools to help you discover resources at Stanford and beyond.</p>
             </div>
           </div>
         </div>
