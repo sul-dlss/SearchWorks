@@ -1,7 +1,7 @@
 <div class="home-page-bento">
   <h1>Search Stanford's library resources</h1>
-  <div class="row">
-    <div class="col-sm-3 col-xs-6 home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
+  <div class="bento-sections">
+    <div class="bento-block home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/catalog.jpg' %>
@@ -10,7 +10,8 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3 col-xs-6 home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
+
+    <div class="bento-block home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/articles.jpg' %>
@@ -19,8 +20,8 @@
         </div>
       </div>
     </div>
-    <div class="clearfix visible-xs"></div>
-    <div class="col-sm-3 col-xs-6 home-page-website">
+
+    <div class="bento-block home-page-website">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/website.jpg' %>
@@ -29,7 +30,8 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3 col-xs-6 home-page-yewno">
+
+    <div class="bento-block home-page-yewno">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/yewno.jpg' %>
@@ -39,6 +41,7 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-6">
       <div class="panel panel-default">
@@ -55,6 +58,7 @@
         </div>
       </div>
     </div>
+
     <div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-body">
