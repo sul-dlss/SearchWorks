@@ -1,16 +1,8 @@
 class SearchController < ApplicationController
-  def params_q_scrubbed
-    params[:q]&.scrub
-  end
-  helper_method :params_q_scrubbed
-
   def index
     @search_form_placeholder = I18n.t "defaults_search.search_form_placeholder"
     @page_title = I18n.t "defaults_search.display_name"
     @module_callout = I18n.t "defaults_search.module_callout"
-
-    render '/pages/home' and return unless search_in_params?
-
     @query = params_q_scrubbed
     @search_in_params = true
     @searches = SearchService.new.all(@query)
@@ -57,6 +49,9 @@ class SearchController < ApplicationController
   end
 
   private
+  def params_q_scrubbed
+    params[:q]&.scrub
+  end
 
   def search_in_params?
     params_q_scrubbed.present?

@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
   def title(page_title = nil)
-    query = params_q_scrubbed.nil? || params_q_scrubbed == "" ? "" : truncate(params_q_scrubbed, length: 40, separator: ' ', escape: false)
+    query = @query.blank? ? "" : truncate(@query, length: 40, separator: ' ', escape: false)
     page_title ||= []
     page_title << "#{query} |" unless query.blank?
     page_title << " #{application_name} |" unless application_name.blank?

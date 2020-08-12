@@ -27,6 +27,10 @@ Rails.application.routes.draw do
     }
   end
 
+  constraints(lambda { |request| request.params[:q].blank? || request.params[:q].scrub.blank? }) do
+    get '/' => 'pages#home'
+  end
+
   root to: 'search#index'
   get '/' => 'search#index', as: 'quick_search'
   get 'opensearch' => 'opensearch#opensearch', :defaults => { :format => 'xml' }
