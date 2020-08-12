@@ -36,13 +36,13 @@
           $count.text(parseInt(count).toLocaleString());
           // Update body
           var facetHtml = createFacets(response.response.facets, data.alternateCatalog);
-          $facets.html(facetHtml);
+          $facets.append(facetHtml);
           $body.show();
           $el.trigger('alternateResultsLoaded', $body);
         } else {
           $title.text('No additional results were found in');
           $body.find('a.btn').remove();
-          $body.find('dl').remove();
+          $facets.remove();
           $body.show();
         }
       });
@@ -65,10 +65,10 @@
       topFive.forEach(function (item) {
         linkedUrl = url + '&f[' + facet.name + '][]=' + encodeURI(item.value);
         linkText = item.label + ' (' + parseInt(item.hits).toLocaleString() + ')';
-        facetLinks.push('<a href="' + linkedUrl + '">' + linkText + '</a>');
+        facetLinks.push('<li><a href="' + linkedUrl + '">' + linkText + '</a></li>');
       });
     });
-    return facetLinks.join(' - ')
+    return facetLinks
   }
 
   global.AlternateCatalog = AlternateCatalog;
