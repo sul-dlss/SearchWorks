@@ -16,22 +16,8 @@ var xhr_searches = function(){
   $.when.apply(this,
     $('.search-error').map(function(index){
       var that = $(this);
-      var endpoint = that.data('quicksearchSearchEndpoint');
-      var params_q = $('#params-q').val();
-      var params_page = that.data('quicksearch-page');
-      var params_template = that.data('quicksearch-template');
-      if (!that.hasClass('silent-search-error')) {
-        var parent = that.parent('.module-contents');
-        var parent_id = parent[0].id;
-      }
-      var pathname = window.location.pathname;
-
-      var url = pathname;
-
-      if (url.substr(-1) != '/'){
-        url += '/';
-      }
-      url += 'xhr_search.html?q=' + encodeURIComponent(params_q) + '&endpoint=' + endpoint + '&page=' + params_page + '&template=' + params_template;
+      var parent = that.parent('.module-contents');
+      var url = that.data('quicksearch-xhr-url');
 
       if (!that.hasClass('silent-search-error')) {
         parent.append('<div class="trying_again"><i class="fa fa-refresh fa-spin"></i> Just a few more seconds </div>');
@@ -42,6 +28,7 @@ var xhr_searches = function(){
         timeout: 15000,
         success: function(response){
           var response_object = jQuery.parseJSON(response);
+          var endpoint = Object.keys(response_object)[0];
 
           if (!that.hasClass('silent-search-error')) {
             if (response_object[endpoint].indexOf("search-error-message") <= -1) {

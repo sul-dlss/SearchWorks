@@ -13,9 +13,7 @@
         <%= render_module(@searches[searcher], searcher) %>
       <% else %>
         <%= content_tag :div, id: searcher, class: 'module-contents', tabindex: -1 do %>
-          <p class="search-error" data-quicksearch-search-endpoint="<%= searcher %>"
-                                  data-quicksearch-page=""
-                                  data-quicksearch-template=""></p>
+          <%= content_tag :p, '', class: 'search-error', data: { 'quicksearch-xhr-url' => xhr_search_path(searcher, q: params[:q]) } %>
         <% end %>
       <% end %>
     </div>
