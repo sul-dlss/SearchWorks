@@ -18,6 +18,9 @@
 
       // Try other catalog
       this.fetchOtherCatalog();
+
+      // Try LibGuides
+      this.fetchLibGuides();
     },
 
     initCloseButton: function() {
@@ -65,6 +68,31 @@
           $body.find('a.btn').remove();
           $facets.remove();
           $body.show();
+        }
+      });
+    },
+
+    fetchLibGuides: function() {
+      var $guidesContainer = this.container.find('[data-lib-guides-api-url]');
+      if ($guidesContainer.length === 0) {
+        return;
+      }
+      var $guideList = $guidesContainer.find('ol');
+      var libGuidesApiUrl = $guidesContainer.data('libGuidesApiUrl');
+
+      var _this = this;
+
+      $.getJSON({
+        url: libGuidesApiUrl
+      }).done(function (response) {
+        if (response.length > 0) {
+          response.forEach(function(guide) {
+            $guideList.append(
+              '<li><a href="' + guide.url + '">' + guide.name + '</a></li>'
+            );
+          });
+        } else {
+          $guidesContainer.remove();
         }
       });
     }

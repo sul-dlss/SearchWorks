@@ -5,6 +5,7 @@ require 'spec_helper'
 describe 'catalog/_alternate_catalog.html.erb' do
   before do
     controller.params[:q] = 'question'
+    stub_template '_lib_guides_alternate_catalog' => ''
     render
   end
 

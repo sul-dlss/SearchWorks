@@ -5,6 +5,7 @@
   margin-bottom: 15px;
   margin-top: 15px;
   padding-left: 10px;
+  padding-right: 10px;
 
   h3 {
     color: $cardinal-red;
@@ -23,7 +24,6 @@
   }
 
   .alternate-catalog-close {
-    padding-right: 8px;
     padding-top: 8px;
 
     &:hover,
@@ -35,5 +35,9 @@
 
   .alternate-catalog-facet-section {
     padding-top: 10px;
+  }
+
+  .lib-guides-alternate-catalog {
+    border-top: 1px solid $cloud;
   }
 }
