@@ -1,43 +1,4 @@
 class SearchController < ApplicationController
-  # include QuickSearch::SearcherConcern
-  def search_all_in_threads(query, primary_searcher = 'defaults')
-    @searches = Settings.ENABLED_SEARCHERS.each_with_object({}) do |searcher, hash|
-      hash[searcher] = nil
-    end
-
-    benchmark "%s server ALL" % CGI.escape(query.to_str) do
-      search_threads = @searches.keys.shuffle.map do |search_method|
-        klass = "QuickSearch::#{search_method.camelize}Searcher".constantize
-
-        Thread.new(search_method) do |sm|
-          benchmark "%s server #{sm}" % CGI.escape(query.to_str) do
-            begin
-              http_client = HTTPClient.new
-              update_searcher_timeout(http_client, sm)
-              searcher = klass.new(http_client, query)
-              searcher.search
-              @searches[search_method] = searcher
-            rescue StandardError => e
-              logger.info "FAILED SEARCH: #{sm} | #{params_q_scrubbed} | #{e}"
-            end
-          end
-        end
-      end
-      search_threads.each {|t| t.join}
-    end
-
-    @found_types = @searches.select { |key, searcher| searcher && !searcher.results.blank? }.keys
-  end
-
-  def update_searcher_timeout(client, search_method, xhr=false)
-    timeout_type = xhr ? 'xhr_http_timeout' : 'http_timeout'
-    timeout = Settings.quick_search[timeout_type]
-
-    client.receive_timeout = timeout
-    client.send_timeout = timeout
-    client.connect_timeout = timeout
-  end
-
   # include QuickSearch::DoiTrap
 
   def doi_trap
@@ -76,13 +37,19 @@ class SearchController < ApplicationController
   end
   helper_method :params_q_scrubbed
 
-  BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
-  BenchmarkLogger.formatter = Logger::Formatter.new
-
   before_action :doi_trap
 
   def index
-    http_search
+    @search_form_placeholder = I18n.t "defaults_search.search_form_placeholder"
+    @page_title = I18n.t "defaults_search.display_name"
+    @module_callout = I18n.t "defaults_search.module_callout"
+
+    render '/pages/home' and return unless search_in_params?
+
+    @query = params_q_scrubbed
+    @search_in_params = true
+    @searches = SearchService.new.all(@query)
+    @found_types = @searches.select { |key, searcher| searcher && !searcher.results.blank? }.keys
   end
 
   # The following searches for individual sections of the page.
@@ -93,72 +60,42 @@ class SearchController < ApplicationController
 
     @query = params_q_scrubbed
 
-    http_client = HTTPClient.new
-    update_searcher_timeout(http_client, endpoint, true)
+    searcher = SearchService.new.one(endpoint, @query)
 
-    benchmark "%s xhr #{endpoint}" % CGI.escape(@query.to_str) do
+    respond_to do |format|
+      format.html {
+        render :json => { endpoint => render_to_string(
+          :partial => "search/xhr_response",
+          :layout => false,
+          :locals => { module_display_name: t("#{endpoint}_search.display_name"),
+                       searcher: searcher,
+                       search: '',
+                       service_name: endpoint
+                      })}
+      }
 
-      klass = "QuickSearch::#{endpoint.camelize}Searcher".constantize
-      searcher = klass.new(http_client, @query)
-      searcher.search
+      format.json {
 
-      respond_to do |format|
-        format.html {
-          render :json => { endpoint => render_to_string(
-            :partial => "search/xhr_response",
-            :layout => false,
-            :locals => { module_display_name: t("#{endpoint}_search.display_name"),
-                         searcher: searcher,
-                         search: '',
-                         service_name: endpoint
-                        })}
+        # prevents openstruct object from results being nested inside tables
+        # See: http://stackoverflow.com/questions/7835047/collecting-hashes-into-openstruct-creates-table-entry
+        result_list = []
+        searcher.results.each do |result|
+          result_list << result.to_h
+        end
+
+        render :json => { :endpoint => endpoint,
+                          :total => searcher.total,
+                          :results => result_list
         }
-
-        format.json {
-
-          # prevents openstruct object from results being nested inside tables
-          # See: http://stackoverflow.com/questions/7835047/collecting-hashes-into-openstruct-creates-table-entry
-          result_list = []
-          searcher.results.each do |result|
-            result_list << result.to_h
-          end
-
-          render :json => { :endpoint => endpoint,
-                            :total => searcher.total,
-                            :results => result_list
-          }
-        }
-      end
+      }
     end
   end
 
   private
-
-  def http_search(endpoint = 'defaults', page_to_render = :index)
-    @search_form_placeholder = I18n.t "#{endpoint}_search.search_form_placeholder"
-    @page_title = I18n.t "#{endpoint}_search.display_name"
-    @module_callout = I18n.t "#{endpoint}_search.module_callout"
-
-    if search_in_params?
-      @query = params_q_scrubbed
-      @search_in_params = true
-      search_all_in_threads(@query, endpoint)
-      #log_search(@query, page_to_render)
-      render page_to_render
-    else
-      render '/pages/home'
-    end
-  end
 
   def search_in_params?
     params_q_scrubbed.present?
   end
   helper_method :search_in_params?
 
-  def benchmark(message)
-    result = nil
-    ms = Benchmark.ms { result = yield }
-    BenchmarkLogger.info '%s (%.1fms)' % [ message, ms ]
-    result
-  end
 end
