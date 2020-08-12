@@ -1,46 +1,67 @@
 (function (global) {
   var AlternateCatalog = {
+    container: null,
+    titleElement: null,
+
     init: function(el) {
-      var $el = $(el);
-      var data = $el.data();
-      var $documents = $('#documents');
-      var $title = $el.find('.alternate-catalog-title');
-      var $body = $el.find('.alternate-catalog-body');
-      var $count = $el.find('.alternate-catalog-count');
-      var $close = $el.find('.alternate-catalog-close');
-      var $facets = $el.find('.alternate-catalog-facets');
+      this.container = $(el);
+      this.titleElement = this.container.find('.alternate-catalog-title');
 
       // Setup close click handler
-      $close.click(function () {
-        $el.hide();
-      });
+      this.initCloseButton();
 
       // Insert between the 3rd and 4th document
-      var afterThird = $documents.find('.document-position-2').after($el);
-      // If there is no third document, just append to the end of #documents
-      if (afterThird.length === 0) {
-        $documents.append($el);
-      }
+      this.injectAlternateCatalogInotResults();
 
       // Update title
-      $title.text('Searching...')
+      this.titleElement.text('Searching...')
 
       // Try other catalog
+      this.fetchOtherCatalog();
+    },
+
+    initCloseButton: function() {
+      var $close = this.container.find('.alternate-catalog-close');
+      var _this = this;
+
+      $close.click(function () {
+        _this.container.hide();
+      });
+    },
+
+    injectAlternateCatalogInotResults: function() {
+      var $documents = $('#documents');
+      var afterThird = $documents.find('.document-position-2').after(this.container);
+      var _this = this;
+
+      // If there is no third document, just append to the end of #documents
+      if (afterThird.length === 0) {
+        $documents.append(_this.container);
+      }
+    },
+
+    fetchOtherCatalog: function() {
+      var alternateCatalogUrl = this.container.data().alternateCatalog;
+      var $body = this.container.find('.alternate-catalog-body');
+      var $count = this.container.find('.alternate-catalog-count');
+      var $facets = this.container.find('.alternate-catalog-facets');
+      var _this = this;
+
       $.getJSON({
-        url: data.alternateCatalog
+        url: alternateCatalogUrl
       }).done(function (response) {
         var count = response.response.pages.total_count;
         if (count > 0) {
           // Update title
-          $title.text('Your search also found results in');
+          _this.titleElement.text('Your search also found results in');
           $count.text(parseInt(count).toLocaleString());
           // Update body
-          var facetHtml = createFacets(response.response.facets, data.alternateCatalog);
+          var facetHtml = createFacets(response.response.facets, alternateCatalogUrl);
           $facets.append(facetHtml);
           $body.show();
-          $el.trigger('alternateResultsLoaded', $body);
+          _this.container.trigger('alternateResultsLoaded', $body);
         } else {
-          $title.text('No additional results were found in');
+          _this.titleElement.text('No additional results were found in');
           $body.find('a.btn').remove();
           $facets.remove();
           $body.show();
