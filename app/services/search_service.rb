@@ -32,10 +32,7 @@ class SearchService
         "QuickSearch::#{searcher.camelize}Searcher".constantize
       end
 
-      client = HTTPClient.new
-      client.receive_timeout = timeout
-      client.send_timeout = timeout
-      client.connect_timeout = timeout
+      client = HTTP.timeout(timeout)
 
       klass.new(client, query).tap { |searcher| searcher.search }
     end

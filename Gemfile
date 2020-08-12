@@ -32,9 +32,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
 gem 'config'
-gem 'faraday'
+gem 'http'
 gem 'honeybadger'
-gem 'httpclient'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

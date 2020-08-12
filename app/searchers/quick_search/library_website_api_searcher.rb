@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module QuickSearch
-  class LibraryWebsiteApiSearcher < QuickSearch::Searcher
+  class LibraryWebsiteApiSearcher < QuickSearch::ApplicationSearcher
     delegate :results, :total, :facets, to: :@response
 
     def search
-      @response ||= ::LibraryWebsiteApiSearchService.new.search(q)
+      @response ||= ::LibraryWebsiteApiSearchService.new(http: http).search(q)
     end
 
     def loaded_link

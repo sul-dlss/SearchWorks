@@ -111,6 +111,7 @@ class AbstractSearchService
   def initialize(options = {})
     @query_url = options[:query_url]
     @response_class = options[:response_class].to_s.constantize
+    @http = options.fetch(:http, HTTP)
   end
 
   # @param [Request | String]
@@ -121,14 +122,12 @@ class AbstractSearchService
             format(@query_url.to_s, q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS)
           end
 
-    response = Faraday.get do |req|
-      req.url url.to_s
-      # Passing a known "non-Stanford" ipaddress
-      req.headers['X-Forwarded-For'] = '192.168.0.1'
-    end
-    raise NoResults unless response.success? && response.body.present?
+    # Passing a known "non-Stanford" ipaddress
+    response = @http.headers('X-Forwarded-For' => '192.168.0.1').get(url.to_s)
 
-    @response_class.new(response.body)
+    raise NoResults unless response.status.success? && response.body.present?
+
+    @response_class.new(response.body.to_s)
   end
 
   ##

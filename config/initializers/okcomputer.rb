@@ -14,7 +14,7 @@ class SearcherCheck < OkComputer::Check
 
 
   def check
-    search = searcher.new(HTTPClient.new, 'status-check', 1).search
+    search = searcher.new(HTTP, 'status-check', 1).search
 
     mark_message "#{searcher} found #{search.total.inspect} results"
   rescue => e

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-
 RSpec.describe QuickSearch::LibraryWebsiteApiSearcher do
-  subject(:searcher) { described_class.new(instance_double(HTTPClient), query, 10) }
+  subject(:searcher) { described_class.new(HTTP, query, 10) }
 
   let(:query) { 'my query' }
   let(:body) do

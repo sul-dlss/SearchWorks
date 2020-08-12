@@ -18,9 +18,7 @@ RSpec.describe ArticleSearchService do
   let(:query) { ArticleSearchService::Request.new('my query') }
 
   before do
-    allow(Faraday).to receive(:get).and_return(instance_double(Faraday::Response,
-                                                               success?: true,
-                                                               body: response))
+    stub_request(:get, /.*/).to_return(body: response)
   end
 
   it { expect(service).to be_an AbstractSearchService }
