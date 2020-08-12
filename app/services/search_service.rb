@@ -1,5 +1,11 @@
 class SearchService
-  def all(query, threads: true, searchers: Settings.ENABLED_SEARCHERS)
+  attr_reader :query
+
+  def initialize(query)
+    @query = query
+  end
+
+  def all(threads: true, searchers: Settings.ENABLED_SEARCHERS)
     searches = searchers.each_with_object({}) do |searcher, hash|
       hash[searcher] = nil
     end
@@ -23,7 +29,7 @@ class SearchService
     searches
   end
 
-  def one(searcher, query, timeout: 15)
+  def one(searcher, timeout: 15)
     benchmark "%s #{searcher}" % CGI.escape(query.to_str) do
       klass = case searcher
       when Class

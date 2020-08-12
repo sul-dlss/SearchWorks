@@ -4,8 +4,7 @@ class SearchController < ApplicationController
     @page_title = I18n.t "defaults_search.display_name"
     @module_callout = I18n.t "defaults_search.module_callout"
     @query = params_q_scrubbed
-    @search_in_params = true
-    @searches = SearchService.new.all(@query)
+    @searches = search_service.all
     @found_types = @searches.select { |key, searcher| searcher && !searcher.results.blank? }.keys
   end
 
@@ -17,7 +16,7 @@ class SearchController < ApplicationController
 
     @query = params_q_scrubbed
 
-    searcher = SearchService.new.one(endpoint, @query)
+    searcher = search_service.one(endpoint)
 
     respond_to do |format|
       format.html {
@@ -49,13 +48,12 @@ class SearchController < ApplicationController
   end
 
   private
+
   def params_q_scrubbed
     params[:q]&.scrub
   end
 
-  def search_in_params?
-    params_q_scrubbed.present?
+  def search_service
+    SearchService.new(@query)
   end
-  helper_method :search_in_params?
-
 end
