@@ -210,9 +210,9 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5)
-    ebsco-eds (1.0.8)
+    ebsco-eds (1.1.0)
       activesupport (~> 5.2)
-      bibtex-ruby (~> 5.0, >= 5.0.0)
+      bibtex-ruby (~> 5.1, >= 5.1.0)
       citeproc (>= 1.0.4, < 2.0)
       citeproc-ruby (~> 1.0, >= 1.0.2)
       climate_control (~> 0)
@@ -570,7 +570,7 @@ DEPENDENCIES
   devise-guests
   devise-remote-user
   dlss-capistrano
-  ebsco-eds (= 1.0.8)
+  ebsco-eds (= 1.1.0)
   faraday (~> 0.10)
   font-awesome-rails
   honeybadger
