@@ -19,6 +19,8 @@ var xhr_searches = function(){
       var parent = that.parent('.module-contents');
       var url = that.data('quicksearch-xhr-url');
 
+      parent.append('<div class="trying_again"><i class="fa fa-refresh fa-spin"></i> Just a few more seconds </div>');
+
       return $.ajax({
         url: url,
         timeout: 15000,
