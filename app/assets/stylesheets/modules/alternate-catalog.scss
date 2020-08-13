@@ -5,6 +5,7 @@
   margin-bottom: 15px;
   margin-top: 15px;
   padding-left: 10px;
+  padding-right: 10px;
 
   h3 {
     color: $cardinal-red;
@@ -13,8 +14,14 @@
     padding-top: 10px;
   }
 
-  h4 {
+  .alternate-catalog-name {
     font-size: $font-size-h3;
+    margin-top: 0;
+  }
+
+  ol,
+  ul {
+    font-size: $font-size-h5;
   }
 
   .alternate-catalog-body {
@@ -22,8 +29,11 @@
     padding: 10px;
   }
 
+  .alternate-catalog-desc {
+    color: $gray-light;
+  }
+
   .alternate-catalog-close {
-    padding-right: 8px;
     padding-top: 8px;
 
     &:hover,
@@ -35,5 +45,9 @@
 
   .alternate-catalog-facet-section {
     padding-top: 10px;
+  }
+
+  .lib-guides-alternate-catalog {
+    border-top: 1px solid $cloud;
   }
 }

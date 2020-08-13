@@ -8,6 +8,8 @@ feature 'Alterate catalog results', js: true do
   end
 
   scenario 'on catalog search' do
+    expect(LibGuidesApi).to receive(:fetch).and_return([])
+
     visit search_catalog_path(q: '1*')
     wait_for_ajax
     within '.alternate-catalog' do
@@ -18,10 +20,29 @@ feature 'Alterate catalog results', js: true do
           '%2A&f[eds_publication_type_facet][]=Academic%20journals"]',
         text: 'Academic journals (1)'
       )
+
+      expect(page).not_to have_css('.lib-guides-alternate-catalog', visible: :visible)
+    end
+  end
+
+  scenario 'LibGuides Results' do
+    expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
+
+    visit search_catalog_path(q: '1*')
+    wait_for_ajax
+    within '.alternate-catalog' do
+      expect(page).to have_css('.lib-guides-alternate-catalog', visible: :visible)
+      within('.lib-guides-alternate-catalog') do
+        expect(page).to have_css('ol li', count: 1)
+
+        expect(page).to have_link('Guide 1', href: 'https://example.com/1')
+      end
     end
   end
 
   scenario 'on article search' do
+    expect(LibGuidesApi).to receive(:fetch).and_return([])
+
     visit articles_path(q: '1*')
     wait_for_ajax
     within '.alternate-catalog' do
@@ -32,6 +53,8 @@ feature 'Alterate catalog results', js: true do
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (4)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"]', text: 'Newspaper (4)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Video"]', text: 'Video (4)'
+
+      expect(page).not_to have_css('.lib-guides-alternate-catalog', visible: :visible)
     end
   end
 end

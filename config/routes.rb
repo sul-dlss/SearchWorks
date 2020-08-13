@@ -62,6 +62,8 @@ Rails.application.routes.draw do
 
   resources :embed, only: :show
 
+  resources :lib_guides, only: :index
+
   resources :browse, only: :index
 
   get "browse/nearby" => "browse#nearby"

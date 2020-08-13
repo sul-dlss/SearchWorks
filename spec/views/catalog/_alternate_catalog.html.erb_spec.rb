@@ -5,6 +5,7 @@ require 'spec_helper'
 describe 'catalog/_alternate_catalog.html.erb' do
   before do
     controller.params[:q] = 'question'
+    stub_template '_lib_guides_alternate_catalog' => ''
     render
   end
 
@@ -28,7 +29,7 @@ describe 'catalog/_alternate_catalog.html.erb' do
   it 'has a facet section' do
     expect(rendered).to have_css '.alternate-catalog-facet-section'
   end
-  it 'has a dl/dd for facets' do
-    expect(rendered).to have_css 'dl dd.alternate-catalog-facets'
+  it 'has a ul/li for facets' do
+    expect(rendered).to have_css 'ul.alternate-catalog-facets'
   end
 end

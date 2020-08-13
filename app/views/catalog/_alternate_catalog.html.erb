@@ -6,7 +6,7 @@
   <div class='alternate-catalog-body'>
     <div class='row'>
       <div class='col-md-6'>
-        <h4 class='alternate-catalog-name'>
+        <h4 class="alternate-catalog-name">
           Articles+
         </h4>
         <div class='alternate-catalog-desc'>
@@ -22,11 +22,11 @@
     </div>
     <div class='row alternate-catalog-facet-section'>
       <div class='col-md-12'>
-        <dl class='dl-horizontal dl-invert'>
-          <dt>Articles+ results include</dt>
-          <dd class='alternate-catalog-facets'></dd>
-        </dl>
+        <ul class="alternate-catalog-facets list-inline">
+        </ul>
       </div>
     </div>
   </div>
+
+  <%= render 'lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
 </div>
