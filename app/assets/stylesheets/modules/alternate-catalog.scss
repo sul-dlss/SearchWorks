@@ -14,13 +14,23 @@
     padding-top: 10px;
   }
 
-  h4 {
+  .alternate-catalog-name {
     font-size: $font-size-h3;
+    margin-top: 0;
+  }
+
+  ol,
+  ul {
+    font-size: $font-size-h5;
   }
 
   .alternate-catalog-body {
     display: none;
     padding: 10px;
+  }
+
+  .alternate-catalog-desc {
+    color: $gray-light;
   }
 
   .alternate-catalog-close {
