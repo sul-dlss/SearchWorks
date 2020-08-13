@@ -1,56 +1,65 @@
 <div class="home-page-bento">
   <h1>Search Stanford's library resources</h1>
-  <div class="row">
-    <div class="col-sm-3 col-xs-6 home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
+  <div class="bento-sections">
+    <div class="bento-block home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/catalog.jpg' %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
-          <p class="hidden-xs">Search the physical collections and digital resources of Stanford’s libraries. Find books, media, and <%= link_to 'topic-specific databases', databases_path %>.</p>
+          <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-3 col-xs-6 home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
+
+    <div class="bento-block home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/articles.jpg' %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
-          <p class="hidden-xs">Search a combined index of 100s of databases and connect directly to the article or resource.</p>
+          <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>
         </div>
       </div>
     </div>
-    <div class="clearfix visible-xs"></div>
-    <div class="col-sm-3 col-xs-6 home-page-website">
+
+    <div class="bento-block home-page-website">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/website.jpg' %>
           <h3><%= link_to 'Library website', 'https://library.stanford.edu' %></h3>
-          <p class="hidden-xs">Find topic specialists, blog posts, descriptions of our notable collections, as well as libraries, hours, and policies.</p>
+          <p class="hidden-xs">Libraries and subject specialists; blogs, events, and policies.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-3 col-xs-6 home-page-yewno">
+
+    <div class="bento-block home-page-yewno">
       <div class="panel panel-default">
         <div class="panel-body">
           <%= image_tag 'homepage/yewno.jpg' %>
           <h3><%= link_to 'Yewno', 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com' %></h3>
-          <p class="hidden-xs">Explore concepts and connections, and understand interdisciplinary subjects, in a graph interface.</p>
+          <p class="hidden-xs">Knowledge graphs for interconnecting concepts.</p>
         </div>
       </div>
     </div>
   </div>
+
   <div class="row">
-    <div class="col-md-12 home-page-bento bento-search-panel">
+    <div class="col-md-6">
       <div class="panel panel-default">
-        <div class="panel-body text-center">
-          <h3><%= link_to 'All of the above', 'https://library.stanford.edu/all' %></h3>
-          <p class="hidden-xs">Get an overview of what’s available in all these sources for your search topic.</p>
+        <div class="panel-body">
+          <div class="col-md-12 home-page-search-all media">
+            <div class="search-tools-icon media-left">
+              <span aria-hidden="true" class="media-object">🍱</span>
+            </div>
+            <div class="search-tools-body media-body">
+              <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
+              <p class="hidden-xs">See an overview of what's available for your topic in all these sources.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 home-page-more">
+
+    <div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="col-md-12 home-page-search-tools media">
@@ -59,7 +68,7 @@
             </div>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://library.stanford.edu/search-services' %></h3>
-              <p class="hidden-xs">Discover and access library and archival materials, journals, databases, data, and e-resources beyond SearchWorks.</p>
+              <p class="hidden-xs">Tools to help you discover resources at Stanford and beyond.</p>
             </div>
           </div>
         </div>

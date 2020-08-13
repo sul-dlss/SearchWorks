@@ -17,7 +17,7 @@ describe 'shared/_home_page_bento.html.erb' do
 
     it 'links to Bento section' do
       render
-      expect(rendered).to have_css('h3', text: 'All of the above')
+      expect(rendered).to have_css('h3', text: 'Search all')
     end
   end
 
@@ -37,7 +37,7 @@ describe 'shared/_home_page_bento.html.erb' do
 
     it 'links to Bento section' do
       render
-      expect(rendered).to have_css('h3', text: 'All of the above')
+      expect(rendered).to have_css('h3', text: 'Search all')
     end
   end
 end
