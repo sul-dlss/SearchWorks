@@ -316,6 +316,7 @@ class RequestLink
         ND-PAGE-EA
         PAGE-EA
         PAGE-GR
+        PAGE-SP
         SAL-ARABIC
         SAL-FOLIO
         SAL-PAGE
@@ -347,6 +348,7 @@ class RequestLink
         MICROTEXT
         PAGE-EA
         PAGE-GR
+        PAGE-SP
         R-STACKS
         RARE-BOOKS
         RECORDINGS
