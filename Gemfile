@@ -40,7 +40,8 @@ gem 'ruby-oembed'
 
 gem 'okcomputer' # monitors application and its dependencies
 
-gem 'honeybadger'
+# honeybadger 4.7.1 has a bug that prevents us from deploying
+gem 'honeybadger', '~> 4.7', '!= 4.7.1'
 
 group :deployment do
   gem 'capistrano', '~> 3.0'
