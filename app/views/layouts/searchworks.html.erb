@@ -76,6 +76,13 @@
 
   </head>
   <body class="<%= render_body_class %>">
+    <div style="display:none">
+      suAffiliation: <%= session['suAffiliation'].inspect %>
+      eduPersonAffiliation: <%= session['eduPersonAffiliation'].inspect %>
+      eduPersonScopedAffiliation: <%= session['eduPersonScopedAffiliation'].inspect %>
+      unscoped-affiliation: <%= session['unscoped-affiliation'].inspect %>
+      eduPersonEntitlement: <%= session['eduPersonEntitlement'].inspect %>
+    </div>
     <%= render 'shared/skip_to_nav' %>
 
     <div id="su-wrap"> <!-- #su-wrap start -->
