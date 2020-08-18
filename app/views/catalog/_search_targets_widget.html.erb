@@ -1,17 +1,14 @@
 <div class="search-dropdown">
-  <a href="#" class="dropdown-toggle navbar-text search-target" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-    <h1>
-      <span class="sr-only">search</span>
-      <% if article_search?  %>
-        <%= t('searchworks.search_dropdown.articles.label') %>
-      <% else %>
-        <%= t('searchworks.search_dropdown.catalog.label') %>
-      <% end %>
-
-      <span class="caret"></span>
-    </h1>
+  <a href="#" class="dropdown-toggle navbar-text search-target h1" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="sr-only">Select search scope, currently:</span>
+    <% if article_search? %>
+      <%= t('searchworks.search_dropdown.articles.label') %>
+    <% else %>
+      <%= t('searchworks.search_dropdown.catalog.label') %>
+    <% end %>
+    <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu">
     <li>
       <%= link_to_bento_search %>
     </li>
