@@ -1,4 +1,8 @@
 <div id="search-navbar-container">
+  <h2 class="sr-only">
+    <%= t("searchworks.headers.#{article_search? ? 'articles' : 'catalog'}.search_bar") %>
+  </h2>
+
   <nav id="search-navbar" class="navbar search-bar navbar-default" role="navigation">
     <div class="search-navbar-headings">
       <%= link_to (image_tag 'searchworks.svg', {:"data-svg-fallback" => "#{image_path('searchworks.png')}", :alt => 'SearchWorks'}), root_path, :class => 'navbar-brand', :id => 'searchworks-logo' %>
