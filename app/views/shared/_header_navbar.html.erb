@@ -1,9 +1,11 @@
 <%= render 'layouts/header_navbar' do %>
+  <h1 class="sr-only">Search all library resources</h1>
   <%= form_for("search", method: :get, url: quick_search.root_path, html: {id: 'main-search-form', class:'d-flex align-items-center'}) do |f| %>
     <div class="h1 py-0 my-0 search-navbar-headings">
       <label for="params-q" class='col-form-label'>Search</label>
       <span class="dropdown">
         <a href="#" class="dropdown-toggle navbar-text search-target" data-toggle="dropdown" role="button" aria-expanded="false">
+          <span class="sr-only">Select search scope, currently:</span>
           all
         </a>
         <div class="dropdown-menu">
