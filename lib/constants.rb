@@ -405,6 +405,7 @@ module Constants
     'LCK-STOR' => 'Locked storage: Ask at circulation desk',
     'LCKBYTITL' => 'Locked Stacks: ask at circulation desk',
     'LEWIS-COLL' => 'Lewis Collection',
+    'LL-NEWS' => 'Lower level: Newspapers',
     'LOAN-DESK' => 'Ask at circulation desk',
     'LOCK-CHN' => 'Locked stacks: Ask at circulation desk',
     'LOCK-HOLDS' => 'Locked stacks: Ask at circulation desk',
