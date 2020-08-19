@@ -1,6 +1,6 @@
 <%= render 'layouts/header_navbar' do %>
   <%= form_for("search", method: :get, url: quick_search.root_path, html: {id: 'main-search-form', class:'d-flex align-items-center'}) do |f| %>
-    <h1 class="py-0 my-0">
+    <div class="h1 py-0 my-0 search-navbar-headings">
       <label for="params-q" class='col-form-label'>Search</label>
       <span class="dropdown">
         <a href="#" class="dropdown-toggle navbar-text search-target" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -21,7 +21,7 @@
           <% end %>
         </div>
       </span>
-    </h1>
+    </div>
     <div class='search-input-container'>
       <div class='input-group'>
         <input type="search" name="q" id="params-q" class="search-query form-control" value="<%= @query %>" placeholder="<%= t('search_form.placeholder') %>"/>
