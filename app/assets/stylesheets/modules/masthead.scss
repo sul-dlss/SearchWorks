@@ -1,6 +1,13 @@
 
 #header-navbar {
-  padding: 1rem;
+  @extend .pt-0;
+  @extend .pt-lg-3;
+
+  // Set fixed height on breakpoints above medium
+  @media (min-width: breakpoint-max(md)) {
+    height: 100px;
+  }
+
   .container {
     padding: 0;
   }
@@ -17,7 +24,7 @@
   .search-navbar-headings {
     label {
       color: #fff;
-      font-weight: 100;  
+      font-weight: 100;
     }
   }
 
