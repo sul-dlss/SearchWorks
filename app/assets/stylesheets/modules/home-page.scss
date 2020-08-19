@@ -3,6 +3,15 @@
     font-weight: 400;
     border-bottom: none;
   }
+
+  // This is suboptimal, but we want this particular h2 to be styled
+  // exactly like an h1 (but not the others on this page)
+  .h1 {
+    color: $sul-h1-font-color;
+    font-weight: 300;
+    line-height: 1.2em;
+    padding: 10px 0;
+  }
 }
 
 .article-home-page {
