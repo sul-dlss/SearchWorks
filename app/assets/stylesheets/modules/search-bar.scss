@@ -17,23 +17,36 @@
   }
 
   .search-navbar-headings {
+    align-items: center;
+    display: flex;
+    height: 100%;
+
     .navbar-brand {
       height: 28px;
-      margin: 36px 10px 36px 0;
       padding: 0;
 
       img {
         height: 28px;
+        // Adding negative top margin to handle images + text alignment issues
+        margin-top: -1px;
       }
     }
 
     .search-dropdown {
       display: inline-block;
-      height: inherit;
+      margin-left: 1em;
+
+      .search-target {
+        margin: 0;
+      }
 
       .dropdown-menu {
         left: auto;
         top: 70%;
+
+        li {
+          max-width: inherit;
+        }
 
         li.active {
           background-color: $public-note-yellow;
@@ -58,15 +71,11 @@
   .search-target {
     border-bottom: $white dashed 2px;
     color: $white;
-    margin: 3px 0;
-    padding: 0;
 
     &.h1 {
       color: $white;
       display: inline-block;
       font-weight: 100;
-      margin: 30px 0 0;
-      padding: 0;
       text-indent: 0;
     }
   }
@@ -101,9 +110,16 @@
     }
 
     .search-navbar-headings {
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 5px;
       text-align: center;
-      width: 100%;
+
+      .navbar-brand img {
+        // Adding negative top margin to handle images + text alignment issues
+        margin-top: -2px;
+      }
 
       .search-dropdown {
         .dropdown-menu {
