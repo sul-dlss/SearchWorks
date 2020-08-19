@@ -9,9 +9,8 @@ en:
     sub_heading_html: Digital showcases for research and teaching.
     toggle_button_text: Show %{total} exhibits
   global_alert_html: >
-    <b>RESEARCH RESTART</b><br/>
-    The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's <a href="https://cardinalrecovery.stanford.edu/research/research-recovery/">Research Restart Plan</a>.<br/>
-    Learn more about the Libraries' <a href="https://library.stanford.edu/remote-resources">entry requirements and available services</a>.
+    <b>AIR QUALITY ALERT</b><br/>
+    All libraries are CLOSED today, August 19th, due to poor air quality. Online services are available.
   opensearch_description: "Stanford Libraries"
   defaults_search:
     title_name: Search
