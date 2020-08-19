@@ -7,7 +7,7 @@ feature 'Article Searching' do
       visit root_path
 
       within '.search-dropdown' do
-        click_link 'search catalog'
+        click_link 'Select search scope, currently: catalog'
 
         expect(page).to have_css('.dropdown-menu', visible: true)
 
@@ -26,7 +26,7 @@ feature 'Article Searching' do
       visit articles_path
 
       within '.search-dropdown' do
-        click_link 'search articles'
+        click_link 'Select search scope, currently: articles+'
         expect(page).to have_css('.dropdown-menu', visible: true)
         expect(page).not_to have_css('li.active a', text: /articles/)
         expect(page).to have_css('li.active', text: /articles/)
