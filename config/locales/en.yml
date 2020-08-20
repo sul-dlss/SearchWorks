@@ -56,5 +56,15 @@ en:
     no_results_link: "http://library.stanford.edu/search/website"
   yewno:
     sub_heading_html: Knowledge graphs for interconnecting concepts.
+  library_website_api_search:
+    display_name: "Library website"
+    short_display_name: "Website"
+    sub_heading_html: "Library info; guides & content by subject specialists"
+    micro_display_name: "website"
+    search_form_placeholder: "Search Library website"
+    module_callout: "Search Library website"
+    error_service_mesasge: "searching library website"
+    no_results_service_message: "a different search"
+    no_results_link: "http://library.stanford.edu/search/website"
   search_form:
     placeholder: "catalog + articles + website + more"

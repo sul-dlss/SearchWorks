@@ -35,13 +35,22 @@
       </div>
     </div>
   <% end %>
-  <div class="col library-website module">
-    <div id="library-website" class="module-contents" tabindex="-1">
-      <p class="search-error" data-quicksearch-search-endpoint="library_website"
-                              data-quicksearch-page=""
-                              data-quicksearch-template=""></p>
+
+    <div class="col library-website module">
+      <% if Settings.ENABLED_SEARCHERS.include?('library_website_api') %>
+        <div id="library-website-api" class="module-contents" tabindex="-1">
+          <p class="search-error" data-quicksearch-search-endpoint="library_website_api"
+                                  data-quicksearch-page=""
+                                  data-quicksearch-template=""></p>
+        </div>
+      <% else %>
+        <div id="library-website" class="module-contents" tabindex="-1">
+          <p class="search-error" data-quicksearch-search-endpoint="library_website"
+                                  data-quicksearch-page=""
+                                  data-quicksearch-template=""></p>
+        </div>
+      <% end %>  
     </div>
-  </div>
 
   <% if Settings.ENABLED_SEARCHERS.include?('exhibits') %>
     <div class="col exhibits module">

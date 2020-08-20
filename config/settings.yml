@@ -31,3 +31,6 @@ EXHIBITS:
   LINK_URL: 'https://exhibits.stanford.edu/%{id}'
   NUM_RESULTS_SHOWN: 3
   QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
+LIBRARY_WEBSITE:
+  API_URL: 'https://library.stanford.edu/bento?keys=%{q}'
+  QUERY_URL: 'https://library.stanford.edu/search/website?search=%{q}'

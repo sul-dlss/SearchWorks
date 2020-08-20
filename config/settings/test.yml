@@ -2,5 +2,5 @@ ENABLED_SEARCHERS:
   - catalog
   - article
   - lib_guides
-  - library_website
+  - library_website_api
   - exhibits
