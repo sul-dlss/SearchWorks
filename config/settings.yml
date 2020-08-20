@@ -7,7 +7,9 @@ GLOBAL_ALERT: <%= false %>
 ENABLED_SEARCHERS:
   - catalog
   - article
+  - lib_guides
   - library_website
+  - exhibits
 CATALOG:
   API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
   QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
