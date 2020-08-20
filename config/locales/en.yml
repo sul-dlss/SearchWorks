@@ -10,7 +10,8 @@ en:
     toggle_button_text: Show %{total} exhibits
   global_alert_html: >
     <b>AIR QUALITY ALERT</b><br/>
-    All libraries are CLOSED today, August 19th, due to poor air quality. Online services are available.
+    All libraries are CLOSED due to poor air quality. Online services are available. <br/>
+    For updates visit <a href="https://library.stanford.edu/COVID-19-updates">library.stanford.edu/alerts</a>.
   opensearch_description: "Stanford Libraries"
   defaults_search:
     title_name: Search
