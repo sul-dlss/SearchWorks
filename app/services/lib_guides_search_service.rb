@@ -29,7 +29,6 @@ class LibGuidesSearchService < AbstractSearchService
         result.title = doc['name']
         result.link = doc['url']
         result.id = doc['slug_id']
-        result.description = doc['description']
         result
       end
     end
