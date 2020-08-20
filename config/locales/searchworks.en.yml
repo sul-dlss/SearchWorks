@@ -27,9 +27,9 @@ en:
         clear:
           action_confirm: Clear your catalog selections?
     global_alert_html: >
-      <b>AIR QUALITY ALERT</b><br/>
-      All libraries are CLOSED due to poor air quality. Online services are available. <br/>
-      For updates visit <a href="https://library.stanford.edu/COVID-19-updates">library.stanford.edu/alerts</a>.
+      <b>RESEARCH RESTART</b><br/>
+      The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's <a href="https://cardinalrecovery.stanford.edu/research/research-recovery/">Research Restart Plan</a>.<br/>
+      Learn more about the Libraries' <a href="https://library.stanford.edu/remote-resources">entry requirements and available services</a>.
     headers:
       articles:
         search_bar: SearchWorks articles+
