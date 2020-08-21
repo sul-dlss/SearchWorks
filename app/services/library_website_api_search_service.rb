@@ -50,11 +50,8 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     private
 
     def json
-      # Force UTF-8 as the API returns BOM
-      @json ||= JSON.parse(
-        @body.gsub("\xEF\xBB\xBF".dup.force_encoding(Encoding::BINARY), '')
-      )
+      @json ||= JSON.parse(@body)
     end
-    
+
   end
 end
