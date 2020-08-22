@@ -20,11 +20,12 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     QUERY_URL = Settings.LIBRARY_WEBSITE.QUERY_URL.freeze
 
     def results
+    sanitizer = Rails::Html::FullSanitizer.new
       Array.wrap(json['results']).first(3).collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc['title']
         result.link = doc['url']
-        result.description = doc['description']
+        result.description = sanitizer.sanitize(doc['description'])
         result
       end
     end
