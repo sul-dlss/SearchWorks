@@ -26,10 +26,6 @@ en:
       catalog:
         clear:
           action_confirm: Clear your catalog selections?
-    global_alert_html: >
-      <b>AIR QUALITY ALERT</b><br/>
-      All libraries are CLOSED due to poor air quality. Online services are available. <br/>
-      For updates visit <a href="https://library.stanford.edu/alerts">library.stanford.edu/alerts</a>.
     headers:
       articles:
         search_bar: SearchWorks articles+
