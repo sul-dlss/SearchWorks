@@ -11,7 +11,17 @@ RSpec.describe LibraryWebsiteApiSearchService do
         {
           title: 'Chinese art: Traditional',
           url: 'https://library.stanford.edu/guides/chinese-art-traditional',
-          description: 'This guide...'
+          description: 'This guide...',
+          breadcrumbs: [
+            {
+              "label": "Home",
+              "url": "https://library.stanford.edu/"
+            },
+            {
+              "label": "Guides",
+              "url": "https://library.stanford.edu/guides"
+            }
+          ]
         }
       ],
       facets: {
@@ -53,6 +63,12 @@ RSpec.describe LibraryWebsiteApiSearchService do
       results = service.search(query).results
       expect(results.length).to eq 1
       expect(results.first.title).to eq 'Chinese art: Traditional'
+    end
+
+    it 'provides libweb breadcrumbs' do
+      results = service.search(query).results
+      expect(results.first.breadcrumbs.length).to eq 2
+      expect(results.first.breadcrumbs.last["label"]).to eq 'Guides'
     end
   end
 end

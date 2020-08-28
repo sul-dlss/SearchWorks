@@ -26,6 +26,7 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
         result.title = doc['title']
         result.link = doc['url']
         result.description = sanitizer.sanitize(doc['description'])
+        result.breadcrumbs = doc['breadcrumbs']
         result
       end
     end
