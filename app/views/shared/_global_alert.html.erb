@@ -1,5 +1,1 @@
-<% if Settings.GLOBAL_ALERT %>
-  <div class="global-alert">
-    <%= t('global_alert_html') %>
-  </div>
-<% end %>
+<%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
