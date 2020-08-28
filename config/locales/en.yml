@@ -44,16 +44,6 @@ en:
     pass_on_search_link_text: Search "%{query}" in all guide pages
     sub_heading_html: Course- and topic-based guides to collections, tools, and services.
     toggle_button_text: Show %{total} guides
-  library_website_search:
-    display_name: "Library website"
-    short_display_name: "Website"
-    sub_heading_html: "Libraries and subject specialists; blogs, events, and policies."
-    micro_display_name: "website"
-    search_form_placeholder: "Search Library website"
-    module_callout: "Search Library website"
-    error_service_mesasge: "searching library website"
-    no_results_service_message: "a different search"
-    no_results_link: "http://library.stanford.edu/search/website"
   yewno:
     sub_heading_html: Knowledge graphs for interconnecting concepts.
   library_website_api_search:
