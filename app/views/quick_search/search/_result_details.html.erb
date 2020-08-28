@@ -30,14 +30,12 @@
 <% end %>
 
 <% if result.breadcrumbs.present? %>
-  <nav aria-label="breadcrumb" class="libweb-breadcrumb">
-    <ol>
-      <% result.breadcrumbs.each do |breadcrumb| %>
-        <li>
-          <span aria-hidden="true">&raquo;</span>
-          <%= link_to breadcrumb["label"], breadcrumb["url"] %>
-        </li>
-      <% end %>
-    </ol>
-  </nav>
+  <ol aria-label="breadcrumb" class="libweb-breadcrumb">
+    <% result.breadcrumbs.each do |breadcrumb| %>
+      <li>
+        <span aria-hidden="true">&raquo;</span>
+        <%= link_to breadcrumb["label"], breadcrumb["url"] %>
+      </li>
+    <% end %>
+  </ol>
 <% end %>
