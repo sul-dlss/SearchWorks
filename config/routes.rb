@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   end
 
   constraints(DoiQueryConstraint.new) do
+    get '/', to: redirect { |path_params, req|
+      doi = DoiQueryConstraint.extract_doi(req.params[:q])
+      Settings.quick_search.doi_loaded_link + CGI.escape(DoiQueryConstraint.doi_regex.match(doi)[1])
+    }
     get '/all', to: redirect { |path_params, req|
       doi = DoiQueryConstraint.extract_doi(req.params[:q])
       Settings.quick_search.doi_loaded_link + CGI.escape(DoiQueryConstraint.doi_regex.match(doi)[1])
