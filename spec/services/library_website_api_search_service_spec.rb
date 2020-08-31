@@ -67,8 +67,8 @@ RSpec.describe LibraryWebsiteApiSearchService do
 
     it 'provides libweb breadcrumbs' do
       results = service.search(query).results
-      expect(results.first.breadcrumbs.length).to eq 2
-      expect(results.first.breadcrumbs.last["label"]).to eq 'Guides'
+      expect(results.first.breadcrumbs.length).to eq 1
+      expect(results.first.breadcrumbs.first["label"]).to eq 'Guides'
     end
   end
 end
