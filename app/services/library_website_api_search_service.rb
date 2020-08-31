@@ -46,7 +46,8 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     end
 
     def total
-      nil
+      facets = json["facets"]["items"]
+      facets.sum {|facet| facet["hits"]}
     end
 
     private
