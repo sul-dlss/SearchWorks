@@ -18,9 +18,7 @@ RSpec.describe QuickSearch::LibraryWebsiteApiSearcher do
   end
 
   before do
-    allow(Faraday).to receive(:get).and_return(instance_double(Faraday::Response,
-                                                               success?: true,
-                                                               body: body.to_json))
+    stub_request(:get, /.*/).to_return(body: body.to_json)
   end
 
   it { expect(searcher.search).to be_an(LibraryWebsiteApiSearchService::Response) }
