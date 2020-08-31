@@ -72,16 +72,16 @@ RSpec/ContextWording:
   Exclude:
     - 'spec/features/jumplinks_spec.rb'
     - 'spec/services/library_website_search_service_spec.rb'
-    - 'spec/views/quick_search/search/_result_details.html.erb_spec.rb'
+    - 'spec/views/search/_result_details.html.erb_spec.rb'
 
 # Offense count: 6
 RSpec/DescribeClass:
   Exclude:
     - 'spec/features/jumplinks_spec.rb'
     - 'spec/features/searcher_anchors_spec.rb'
-    - 'spec/views/quick_search/search/_highlighted_facet.html.erb_spec.rb'
-    - 'spec/views/quick_search/search/_module_heading.html.erb_spec.rb'
-    - 'spec/views/quick_search/search/_result_details.html.erb_spec.rb'
+    - 'spec/views/search/_highlighted_facet.html.erb_spec.rb'
+    - 'spec/views/search/_module_heading.html.erb_spec.rb'
+    - 'spec/views/search/_result_details.html.erb_spec.rb'
     - 'spec/views/shared/_header.html.erb_spec.rb'
 
 # Offense count: 7
@@ -128,8 +128,8 @@ RSpec/NestedGroups:
 # Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
 RSpec/VerifiedDoubles:
   Exclude:
-    - 'spec/views/quick_search/search/_highlighted_facet.html.erb_spec.rb'
-    - 'spec/views/quick_search/search/_module_heading.html.erb_spec.rb'
+    - 'spec/views/search/_highlighted_facet.html.erb_spec.rb'
+    - 'spec/views/search/_module_heading.html.erb_spec.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.

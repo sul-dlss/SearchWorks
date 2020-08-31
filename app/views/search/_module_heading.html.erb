@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-5">
+    <h2 class='result-set-heading'>
+      <%= I18n.t("#{service_name}_search.display_name") %>
+    </h2>
+  </div>
+  <% unless (defined?(searcher.toggleable?) && searcher.toggleable?)  %>
+    <div class="col-md-7 see-all-results">
+      <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+    </div>
+  <% end %>
+</div>
+<span class='h3 result-set-subheading'>
+  <%= I18n.t("#{service_name}_search.sub_heading_html") %>
+</span>

@@ -1,0 +1,27 @@
+<% title %>
+<div class="quicksearch-ga-click-tracking">
+  <div id="result-types" class="row">
+    <div class="col result-types">
+      <%= render partial: 'layouts/quick_search/found_types' %>
+    </div>
+  </div>
+</div>
+<div class="quicksearch-ga-click-tracking row row-cols-1 row-cols-md-2">
+  <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
+    <div class="col module">
+      <%= render_module(@searches[searcher], searcher) %>
+    </div>
+  <% end %>
+
+  <div class="col yewno module">
+    <div id="yewno" class="module-contents" tabindex="-1">
+      <h2 class="result-set-heading">Yewno</h2>
+      <span class="h3 result-set-subheading"><%= t('yewno.sub_heading_html') %></span>
+      <div id="yewno-results"></div>
+    </div>
+  </div>
+</div>
+
+<div class="quicksearch-ga-click-tracking">
+  <%= render partial: 'shared/more_search_tools' %>
+</div>

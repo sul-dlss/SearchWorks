@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 module QuickSearch
-  class ArticleSearcher < QuickSearch::Searcher
+  class ArticleSearcher < QuickSearch::ApplicationSearcher
     delegate :results, :total, :facets, to: :search
 
     def search
-      @response ||= ::ArticleSearchService.new.search(q)
+      @response ||= ::ArticleSearchService.new(http: http).search(q)
     end
 
     def loaded_link

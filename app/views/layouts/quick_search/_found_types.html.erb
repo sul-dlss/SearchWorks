@@ -1,7 +1,7 @@
 <% # overriden from the QuickSearch gem %>
-<nav class='row searcher-anchors' aria-label="Results found in">
+<nav class="row searcher-anchors" aria-label="Results found in">
   <ul class="list-inline h4">
-    <% QuickSearch::Engine::APP_CONFIG['found_types'].each do |searcher| %>
+    <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
       <% if @found_types.include? searcher  %>
         <li class='list-inline-item'>
           <a href="#<%= searcher.underscore %>" data-quicksearch-ga-action="<%= searcher.underscore %>">

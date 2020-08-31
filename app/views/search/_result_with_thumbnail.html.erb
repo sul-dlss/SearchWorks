@@ -1,0 +1,10 @@
+<div class="row mb-3">
+  <div class="col-sm-3">
+      <%= link_to result.link do %>
+          <%= image_tag result.thumbnail, :class => 'thumbnail img-fluid' %>
+      <% end %>
+  </div>
+  <div class="col-sm-9 pl-0 columns">
+      <%= render partial: 'result_details', locals: { result: result } %>
+  </div>
+</div>

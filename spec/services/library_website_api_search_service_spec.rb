@@ -40,9 +40,7 @@ RSpec.describe LibraryWebsiteApiSearchService do
   let(:query) { LibraryWebsiteApiSearchService::Request.new('chinese art') }
 
   before do
-    allow(Faraday).to receive(:get).and_return(instance_double(Faraday::Response,
-                                                               success?: true,
-                                                               body: response))
+    stub_request(:get, /.*/).to_return(body: response)
   end
 
   it { expect(service).to be_an AbstractSearchService }
