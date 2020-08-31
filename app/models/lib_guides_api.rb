@@ -53,7 +53,7 @@ class LibGuidesApi
         status: 1,
         sort_by: 'relevance'
       }.to_query,
-      "&search_terms=#{query}"
+      "&search_terms=#{CGI.escape(query)}"
     ].join
   end
 end
