@@ -3,7 +3,20 @@
 require 'spec_helper'
 
 RSpec.describe LibGuidesApi do
-  subject(:api) { described_class.new('Search Term') }
+  let(:term) { 'Search Term' }
+
+  subject(:api) { described_class.new(term) }
+
+  describe 'user search term encoding' do
+    let(:term) { 'Kōzanji' }
+
+    it 'encodes the users query' do
+      url = api.send(:url)
+
+      expect(url).not_to include(term)
+      expect(url).to include('Ko%CC%84zanji')
+    end
+  end
 
   context 'when the API responds successfully' do
     it 'returns data from the API response as json' do
