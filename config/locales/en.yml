@@ -8,10 +8,6 @@ en:
     pass_on_search_link_text: Search "%{query}" in all exhibit items
     sub_heading_html: Digital showcases for research and teaching.
     toggle_button_text: Show %{total} exhibits
-  global_alert_html: >
-    <b>RESEARCH RESTART</b><br/>
-    The Libraries are resuming limited in-person research activities <a href="https://mylibrary.stanford.edu">by appointment only</a> as part of the University's Research Restart Plan.<br/>
-    Learn more about the Libraries' <a href="https://library.stanford.edu/remote-resources">entry requirements and available services</a>.
   opensearch_description: "Stanford Libraries"
   defaults_search:
     title_name: Search

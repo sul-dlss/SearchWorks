@@ -26,7 +26,7 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
         result.title = doc['title']
         result.link = doc['url']
         result.description = sanitizer.sanitize(doc['description'])
-        result.breadcrumbs = doc['breadcrumbs']
+        result.breadcrumbs = doc['breadcrumbs']&.drop(1)
         result
       end
     end
@@ -46,7 +46,8 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     end
 
     def total
-      nil
+      facets = json["facets"]["items"]
+      facets.sum {|facet| facet["hits"]}
     end
 
     private
