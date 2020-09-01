@@ -1,6 +1,6 @@
 <%= render 'layouts/header_navbar' do %>
   <h1 class="sr-only">Search all library resources</h1>
-  <%= form_for("search", method: :get, url: root_path, html: {id: 'main-search-form', class:'d-flex flex-column flex-lg-row align-items-center'}) do |f| %>
+  <%= form_for("search", method: :get, url: quick_search_path, html: {id: 'main-search-form', class:'d-flex flex-column flex-lg-row align-items-center'}) do |f| %>
     <div class="h1 py-0 my-0 mx-auto mx-md-0 search-navbar-headings">
       <label for="params-q" class='col-form-label'>Search</label>
       <span class="dropdown">
