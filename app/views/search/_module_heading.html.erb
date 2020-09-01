@@ -6,7 +6,7 @@
   </div>
   <% unless (defined?(searcher.toggleable?) && searcher.toggleable?)  %>
     <div class="col-md-7 see-all-results">
-      <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} %>
+      <%= render partial: '/search/see_all', locals: {service_name: service_name, total: total, module_link: searcher.loaded_link} unless total == '0' %>
     </div>
   <% end %>
 </div>
