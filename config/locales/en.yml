@@ -5,6 +5,7 @@ en:
     display_name: Exhibits
     micro_display_name: exhibits
     no_results_service_message: "a different search"
+    no_results_link: "https://exhibits.stanford.edu/"
     pass_on_search_link_text: Search "%{query}" in all exhibit items
     sub_heading_html: Digital showcases for research and teaching.
     toggle_button_text: Show %{total} exhibits
