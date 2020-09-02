@@ -111,3 +111,4 @@ gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap-sass'
 gem 'rack-attack' # For throttle configuration
+gem 'global_alerts'

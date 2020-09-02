@@ -90,11 +90,7 @@
 
           <%= render partial: 'shared/ajax_modal' %>
           <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
-            <% if Settings.GLOBAL_ALERT %>
-              <div class="global-alert">
-                <%= t('searchworks.global_alert_html') %>
-              </div>
-            <% end %>
+            <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
             <%= yield %>
