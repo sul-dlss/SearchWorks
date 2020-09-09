@@ -274,6 +274,7 @@ module Constants
     'CALIF-DOCS' => 'California State Documents',
     'CASE-MP' => 'Map Center (case map)',
     'CCRMA' => 'Ask at circulation desk',
+    'CDL' => 'Reserved for digital lending',
     'CDL-2NDFL' => 'Ask at circulation desk',
     'CDP' => 'Ask at circulation desk',
     'CDP-CHI' => 'Ask at circulation desk',

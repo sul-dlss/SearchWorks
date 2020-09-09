@@ -24,6 +24,7 @@ module SearchWorks
     require 'page_location'
     require 'access_panel'
     require 'access_panels'
+    require 'access_panels/cdl'
     require 'access_panels/course_reserve'
     require 'access_panels/exhibit'
     require 'access_panels/library_location'
