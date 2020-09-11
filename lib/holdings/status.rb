@@ -13,6 +13,8 @@ class Holdings
 
     def availability_class
       case
+      when cdl?
+        'unavailable cdl'
       when in_process?
         'in_process'
       when unavailable?
@@ -63,6 +65,10 @@ class Holdings
 
     def in_process?
       Holdings::Status::InProcess.new(@callnumber).in_process?
+    end
+
+    def cdl?
+      @callnumber.home_location == 'CDL'
     end
 
     def as_json(*)
