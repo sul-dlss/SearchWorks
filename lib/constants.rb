@@ -945,6 +945,10 @@ module Constants
     'TECH-DESK'
   ]
 
+  HIDE_DUE_DATE_LOCS = [
+    'CDL'
+  ]
+
   HIDE_DUE_DATE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'ENDPROCESS',
