@@ -8,6 +8,8 @@ module RequestLinks
   class SalRequestLink < RequestLink
     ITEM_TYPES = {
       'PAGE-GR' => %w(BUS-STACKS NEWSPAPER NH-INHOUSE STKS STKS-MONO STKS-PERI),
+      'SAL-PAGE' => %w(NONCIRC),
+      'UNCAT' => %w(NONCIRC),
       'default' => %w(BUS-STACKS STKS STKS-MONO STKS-PERI)
     }.freeze
     LIBRARIES = %w(SAL SAL3).freeze
@@ -15,8 +17,8 @@ module RequestLinks
       'SAL' => %w(
         EAL-SETS EAL-STKS-C EAL-STKS-J EAL-STKS-K
         FED-DOCS HY-PAGE-EA ND-PAGE-EA PAGE-EA PAGE-GR
-        SAL-ARABIC SAL-FOLIO SAL-PAGE SAL-SERG
-        SALTURKISH SOUTH-MEZZ STACKS TECH-RPTS
+        SAL-ARABIC SAL-FOLIO SAL-PAGE SAL-SERG SAL-TEMP
+        SALTURKISH SOUTH-MEZZ STACKS TECH-RPTS UNCAT
       ),
       'SAL3' => %w(BUS-STACKS PAGE-GR STACKS)
     }.freeze
