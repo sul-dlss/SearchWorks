@@ -86,12 +86,12 @@
             <%= render 'shared/search_bar' %>
             <%= render 'shared/search_subnavbar' %>
           </div>
-          <%= render_masthead_partial %>
 
           <%= render partial: 'shared/ajax_modal' %>
           <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
             <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
+            <%= render_masthead_partial %>
 
             <%= yield %>
           </section>
