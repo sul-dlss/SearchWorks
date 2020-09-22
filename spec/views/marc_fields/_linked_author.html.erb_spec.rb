@@ -64,8 +64,10 @@ describe 'marc_fields/_linked_author.html.erb', type: :view do
       SolrDocument.new(author_struct: [
         {
           target => [
-            { link: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria) A title', search: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria)', post_text: 'creator. Other' },
-            { link: 'Vernacular Title Vernacular Uniform Title', search: 'Vernacular Uniform Title' }
+            {
+              link: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria) A title', search: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria)', post_text: 'creator. Other',
+              vern: { link: 'Vernacular Title Vernacular Uniform Title', search: 'Vernacular Uniform Title' }
+            }
           ]
         }
       ])
