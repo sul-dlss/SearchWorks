@@ -1,8 +1,15 @@
 <% if linked_author.present? %>
   <% linked_author.values.each do |author| %>
     <li>
-      <%= link_to(author[:link].strip, search_catalog_path(q: '"' + author[:search] + '"', search_field: 'search_author')) if author[:link].present? %>
+      <%= link_to(author[:link].strip, search_catalog_path(q: "\"#{author[:search]}\"", search_field: 'search_author')) if author[:link].present? %>
       <%= author[:post_text] if author[:post_text] %>
     </li>
+
+    <% if author[:vern] %>
+      <li>
+        <%= link_to(author[:vern][:link].strip, search_catalog_path(q: "\"#{author[:vern][:search]}\"", search_field: 'search_author')) if author[:vern][:link].present? %>
+        <%= author[:vern][:post_text] if author[:vern][:post_text] %>
+      </li>
+    <% end %>
   <% end %>
 <% end %>
