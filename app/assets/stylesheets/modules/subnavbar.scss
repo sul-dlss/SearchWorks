@@ -2,8 +2,12 @@
   background-color: $sul-subnavbar-bg-color;
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
   color: $white;
-  min-height: 35px;
   margin-bottom: 1.5rem;
+  min-height: 35px;
+
+  .dropdown-toggle {
+    padding: 0;
+  }
 
   .dropdown-toggle, .nav-item {
     color: $white;
@@ -12,23 +16,16 @@
   }
 
   .dropdown-toggle:after, .nav-item:after {
-    margin-left:0px;
-    border-top-width:4px;
-    border-right-width:4px;
-    border-left-width:4px;
-  }
-
-  .navbar-toggle {
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    margin-left: 0;
   }
 
   .covid-status {
     background-color: $su-poppy;
     color: $black;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px 2px;
   }
 
   .sul-services-menu {
@@ -58,6 +55,7 @@
     border-radius: 0;
     left: inherit;
 
+    // Menu subheadings
     .menugroup {
       font-variant: all-small-caps;
     }
