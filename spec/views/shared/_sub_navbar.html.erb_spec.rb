@@ -9,8 +9,8 @@ describe 'shared/_sub_navbar.html.erb' do
     end
   end
 
-  it 'renders the library services menus' do
+  it 'renders the help menu' do
     render
-    expect(rendered).to have_link 'Library services'
+    expect(rendered).to have_link 'Help'
   end
 end
