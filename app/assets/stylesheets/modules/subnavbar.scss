@@ -51,7 +51,11 @@
     border-radius: 0;
     left: inherit;
 
-    li a {
+    .menugroup {
+      font-variant: all-small-caps;
+    }
+
+    li a, li span {
       font-size: 16px;
       font-weight: 100;
       line-height: 35px;
@@ -59,7 +63,7 @@
       padding: 0 24px;
     }
 
-    li.text-muted, li.dropdown-header {
+    li.text-muted, li.dropdown-header, li span {
       color: $white;
       padding-left: 15px;
     }
