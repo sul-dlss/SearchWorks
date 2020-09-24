@@ -274,6 +274,7 @@ module Constants
     'CALIF-DOCS' => 'California State Documents',
     'CASE-MP' => 'Map Center (case map)',
     'CCRMA' => 'Ask at circulation desk',
+    'CDL' => 'Reserved for digital lending',
     'CDL-2NDFL' => 'Ask at circulation desk',
     'CDP' => 'Ask at circulation desk',
     'CDP-CHI' => 'Ask at circulation desk',
@@ -809,6 +810,7 @@ module Constants
                       'BILLED-OD',
                       'BINDERY',
                       # "CHECKEDOUT",
+                      'CDL',
                       'CHKD-OUT-D',
                       'CPM-HOLDS',
                       'EDI',
@@ -941,6 +943,10 @@ module Constants
   NON_REQUESTABLE_HOME_LOCS = [
     'SEE-OTHER',
     'TECH-DESK'
+  ]
+
+  HIDE_DUE_DATE_LOCS = [
+    'CDL'
   ]
 
   HIDE_DUE_DATE_CURRENT_LOCS = [
@@ -1111,6 +1117,7 @@ module Constants
     'available' => 'Available',
     'page' => 'Available',
     'unavailable' => 'Unavailable',
+    'unavailable cdl' => 'Physical copy unavailable',
     'noncirc' => 'In-library use',
     'unknown' => 'Unknown',
     'noncirc_page' => 'In-library use',
