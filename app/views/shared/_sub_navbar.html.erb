@@ -1,11 +1,16 @@
 <div id="subnavbar-container">
   <div id="subnavbar">
-    <ul class="nav navbar-nav navbar-left">
-      <li class="dropdown search-subnavbar-about">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <ul class="nav navbar-nav navbar-expand-sm">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
           Help<span class="caret"/>
         </a>
         <%= render :partial => '/shared/services_menu' %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link covid-status" href="https://library.stanford.edu/status" >
+          COVID-19 Libraries update
+        </a>
       </li>
     </ul>
   </div>
