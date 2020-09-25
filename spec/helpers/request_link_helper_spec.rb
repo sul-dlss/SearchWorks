@@ -69,7 +69,7 @@ describe RequestLinkHelper do
       expect(Capybara.string(link)).to have_link('Request on-site access')
     end
 
-    it 'has has the requests-modal attribute for non-hoover items' do
+    pending 'has has the requests-modal attribute for non-hoover items' do
       link = link_to_request_link(
         document: current_location_document, callnumber: current_location_document.holdings.callnumbers.first
       )

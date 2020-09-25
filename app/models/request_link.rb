@@ -49,7 +49,7 @@ class RequestLink
   end
 
   def markup
-    "<a href=\"#{url}\" rel=\"nofollow\" data-behavior=\"requests-modal\" class=\"#{classes}\">#{link_text}</a>"
+    "<a href=\"#{url}\" rel=\"nofollow\" target=\"_blank\" class=\"#{classes}\">#{link_text}</a>"
   end
 
   def base_request_url

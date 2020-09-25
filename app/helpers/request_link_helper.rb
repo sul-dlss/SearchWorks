@@ -52,7 +52,7 @@ module RequestLinkHelper
     elsif callnumber.home_location == 'SSRC-DATA'
       {}
     else
-      { behavior: 'requests-modal' }
+      {} # { behavior: 'requests-modal' } Removing modal since login screwed us
     end
   end
 

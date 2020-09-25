@@ -38,7 +38,7 @@
               }
               if ( dom_item.data('request-url') ) {
                 var link = $(
-                  "<a data-behavior='requests-modal' rel='nofollow' class='btn btn-default btn-xs request-button' href='" + dom_item.data('request-url') + "'>Request</a>"
+                  "<a rel='nofollow' class='btn btn-default btn-xs request-button' href='" + dom_item.data('request-url') + "'>Request</a>"
                 );
                 $('.request-link', dom_item).html(link);
                 link.requestsModal();
