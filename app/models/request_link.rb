@@ -49,7 +49,7 @@ class RequestLink
   end
 
   def markup
-    "<a href=\"#{url}\" rel=\"nofollow\" target=\"_blank\" class=\"#{classes}\">#{link_text}</a>"
+    "<a href=\"#{url}\" rel=\"nofollow\" target=\"_blank\" title=\"Opens in new tab\" class=\"#{classes}\">#{link_text} <span class=\"sr-only\">(opens in new tab)</span></a>"
   end
 
   def base_request_url

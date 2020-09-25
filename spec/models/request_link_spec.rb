@@ -93,7 +93,7 @@ RSpec.describe RequestLink do
 
     context 'when present' do
       it 'renders the #markup as html_safe' do
-        expect(link.render).to match(/<a .*>Request<\/a>/)
+        expect(link.render).to match(/<a .*>Request.*<\/a>/)
       end
     end
   end
