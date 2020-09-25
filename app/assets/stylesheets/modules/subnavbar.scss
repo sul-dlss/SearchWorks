@@ -69,7 +69,12 @@
     border-radius: 0;
     left: inherit;
 
-    li a {
+    // Menu subheadings
+    li span.menugroup {
+      font-variant: all-small-caps;
+    }
+
+    li a, li span {
       font-size: 1.6rem;
       font-weight: 100;
       line-height: 35px;
