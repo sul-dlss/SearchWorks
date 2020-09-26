@@ -9,7 +9,7 @@ describe "Search toolbar", js: true, feature: true do
         expect(page).to have_css("button.btn.btn-default.search-btn", text: "")
       end
       within "#search-subnavbar-container" do
-        expect(page).to have_css("li a", text: "Library services", visible: true)
+        expect(page).to have_css("li a", text: "Help", visible: true)
         expect(page).to have_css("li a", text: "Advanced search", visible: true)
         expect(page).to have_css("li a", text: "Course reserves", visible: true)
         expect(page).to have_css("li a", text: /SELECTIONS/i, visible: true)

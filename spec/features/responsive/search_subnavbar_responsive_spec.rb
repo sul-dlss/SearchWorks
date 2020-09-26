@@ -6,7 +6,7 @@ describe 'Responsive subnavbar (gray banner)', js: true, feature: true, responsi
   scenario 'collapses menu options in mobile view' do
     visit root_path
 
-    expect(page).to have_css('a', text: /Library services/, visible: false)
+    expect(page).to have_css('a', text: /Help/, visible: false)
     expect(page).to have_css('a', text: /Advanced search/, visible: false)
     expect(page).to have_css('a', text: /Course reserves/, visible: false)
     expect(page).to have_css('a', text: /Selections/, visible: false)

@@ -39,7 +39,7 @@ feature 'Article Searching' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path
 
-      expect(page).to have_css('a', text: /Library services/)
+      expect(page).to have_css('a', text: /Help/)
       expect(page).not_to have_css('a', text: /Advanced search/)
       expect(page).not_to have_css('a', text: /Course reserves/)
       expect(page).to have_css('a', text: /Selections \(\d+\)/)

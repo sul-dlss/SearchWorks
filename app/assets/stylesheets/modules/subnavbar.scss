@@ -35,6 +35,13 @@
     padding-left: 20px;
   }
   .navbar-nav > li {
+    a.covid-status {
+      background-color: $poppy;
+      color: $black;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     a {
       background-color: $sul-subnavbar-bg-color;
       border: 0;
@@ -58,7 +65,7 @@
   }
 
   // the last menu item should be right-aligned
-  .navbar-nav > li:last-child > a {
+  .navbar-nav.navbar-right > li:last-child > a {
     margin-right: 0;
     padding-right: 0;
   }
@@ -69,7 +76,12 @@
     border-radius: 0;
     left: inherit;
 
-    li a {
+    // Menu subheadings
+    li span.menugroup {
+      font-variant: all-small-caps;
+    }
+
+    li a, li span {
       font-size: 1.6rem;
       font-weight: 100;
       line-height: 35px;
@@ -101,6 +113,22 @@
 
     .sul-top-menu {
       white-space: normal;
+    }
+  }
+
+  // Responsive fixes for COVID-19 status
+  @media screen and (max-width: $screen-md-min) {
+    .navbar-nav > li {
+      a {
+        font-size: 1.4em;
+      }
+    }
+
+    .dropdown-menu {
+      li a,
+      li span {
+        font-size: 1.4em;
+      }
     }
   }
 }
