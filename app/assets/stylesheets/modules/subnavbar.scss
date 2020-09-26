@@ -115,4 +115,20 @@
       white-space: normal;
     }
   }
+
+  // Responsive fixes for COVID-19 status
+  @media screen and (max-width: $screen-md-min) {
+    .navbar-nav > li {
+      a {
+        font-size: 1.4em;
+      }
+    }
+
+    .dropdown-menu {
+      li a,
+      li span {
+        font-size: 1.4em;
+      }
+    }
+  }
 }
