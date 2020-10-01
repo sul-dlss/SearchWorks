@@ -200,7 +200,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
         expect(rendered).to have_css('.location a', text: 'Request')
       end
 
-      skip "should not have any requestable items" do
+      it "should not have any requestable items" do
         expect(rendered).not_to have_css('td[data-request-url]')
       end
     end
@@ -214,11 +214,11 @@ describe "catalog/access_panels/_location.html.erb", js: true do
         render
       end
 
-      skip "should not have a request url stored in the data attribute" do
+      it "should not have a request url stored in the data attribute" do
         expect(rendered).not_to have_css('td[data-request-url]')
       end
 
-      pending "should have a request link in the item" do
+      it "should have a request link in the item" do
         expect(rendered).to have_css('tbody a', text: 'Request')
       end
     end
@@ -235,11 +235,11 @@ describe "catalog/access_panels/_location.html.erb", js: true do
         render
       end
 
-      pending "should have an item that has a request url" do
+      it "should have an item that has a request url" do
         expect(rendered).to have_css('.availability td[data-barcode="456"][data-request-url]')
       end
 
-      skip "should have an item that does not have a request url" do
+      it "should have an item that does not have a request url" do
         expect(rendered).not_to have_css('.availability td[data-barcode="123"][data-request-url]')
       end
     end

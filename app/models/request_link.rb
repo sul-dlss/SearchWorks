@@ -3,27 +3,27 @@
 ##
 # A model to represent data necessary for rendering a request link
 class RequestLink
-  attr_reader :document, :library, :location, :items
-  def initialize(document:, library:, location:, items: [])
+  attr_reader :document, :library, :location, :items, :barcode
+  def initialize(document:, library:, location:, items: [], barcode: nil)
     @document = document
     @library = library
     @location = location
     @items = items
+    @barcode = barcode
   end
 
-  def self.for(document:, library:, location:, items: [])
+  def self.for(document:, library:, location:, items: [], barcode: nil)
     RequestLinkFactory.for(
       library: library, location: location
-    ).new(document: document, library: library, location: location, items: items)
+    ).new(document: document, library: library, location: location, items: items, barcode: barcode)
   end
 
   def present?
     enabled_libraries.include?(library) &&
       in_enabled_location? &&
-      not_in_disabled_current_location? &&
-      any_items_circulate? &&
-      any_items_requestable? && # Will this need to change now? This assumes an item level link, which may temp. be gone
-      !available_via_temporary_access?
+      !available_via_temporary_access? &&
+      item_requested_or_items_requestable? # Will this need to change now? This assumes an item level link, which may temp. be gone
+
       # Check for real barcodes?  Only for items that are not on-order?
       # Array of procs / methods to be sent configurable on a library basis.
   end
@@ -39,6 +39,14 @@ class RequestLink
   end
 
   private
+
+  def item_requested_or_items_requestable?
+    return true if barcode.present?
+
+    not_in_disabled_current_location? &&
+      any_items_circulate? &&
+      any_items_requestable? # Will this need to change now? This assumes an item level link, which may temp. be gone
+  end
 
   def available_via_temporary_access?
     document&.access_panels&.temporary_access&.present?
@@ -61,7 +69,13 @@ class RequestLink
       item_id: document[:id],
       origin: library,
       origin_location: location
-    }
+    }.merge(barcode_param)
+  end
+
+  def barcode_param
+    return {} if barcode.blank?
+
+    { barcode: barcode }
   end
 
   def link_text
@@ -166,7 +180,7 @@ class RequestLink
     {
       'EAST-ASIA' => %w[ON-ORDER],
       'SPEC-COLL' => %w[INPROCESS ON-ORDER SPEC-INPRO],
-      'default' => %w[INPROCESS ON-ORDER]
+      'default' => %w[]
     }
   end
 

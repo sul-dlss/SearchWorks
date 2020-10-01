@@ -52,6 +52,10 @@ class Holdings
       end
     end
 
+    def request_link
+      @request_link ||= RequestLink.for(document: document, library: library, location: home_location, barcode: barcode)
+    end
+
     def current_location
       Holdings::Location.new(item_display[3])
     end

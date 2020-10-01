@@ -77,8 +77,8 @@ RSpec.describe RequestLink do
     end
 
     context 'when all items are in a disallowed current location' do
-      let(:library) { 'GREEN' }
-      let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: 'INPROCESS'))] }
+      let(:library) { 'SPEC-COLL' }
+      let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: 'SPEC-INPRO'))] }
 
       it { expect(link).not_to be_present }
     end

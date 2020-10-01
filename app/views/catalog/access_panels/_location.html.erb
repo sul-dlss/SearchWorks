@@ -56,7 +56,7 @@
                      <% end %>
                    </td>
                    <% if item.present? %>
-                     <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>">
+                     <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url=\"#{item.request_link&.url}\"" if item.requestable? && !item.must_request? && location.request_link&.render.blank? %> >
                        <span class="availability-icon-wrapper">
                          <i class="availability-icon <%= item.status.availability_class %>"></i>
                          <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
@@ -71,6 +71,11 @@
                        <% if item.on_reserve? %>
                          <%= item.loan_period %>
                        <% end %>
+                       <span class="request-link">
+                         <% if item.must_request? %>
+                           <%= item.request_link&.render %>
+                         <% end %>
+                       </span>
                      </td>
                    <% end %>
                  </tr>
