@@ -51,7 +51,7 @@ GEM
     autoprefixer-rails (10.0.1.0)
       execjs
     bcrypt (3.1.16)
-    bibtex-ruby (5.1.4)
+    bibtex-ruby (5.1.5)
       latex-decode (~> 0.0)
     bindex (0.8.1)
     bitly (2.0.1)
@@ -290,7 +290,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    latex-decode (0.3.1)
+    latex-decode (0.3.2)
     launchy (2.5.0)
       addressable (~> 2.7)
     leaflet-rails (1.7.0)
@@ -404,7 +404,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    recaptcha (5.5.0)
+    recaptcha (5.6.0)
       json
     regexp_parser (1.8.2)
     require_all (2.0.0)
@@ -451,7 +451,7 @@ GEM
       rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.7.1)
+    rubocop-ast (0.8.0)
       parser (>= 2.7.1.5)
     rubocop-performance (1.8.1)
       rubocop (>= 0.87.0)
