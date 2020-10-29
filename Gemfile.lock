@@ -64,7 +64,7 @@ GEM
     autoprefixer-rails (10.0.1.0)
       execjs
     bindex (0.8.1)
-    bootsnap (1.4.8)
+    bootsnap (1.4.9)
       msgpack (~> 1.0)
     bootstrap (4.5.2)
       autoprefixer-rails (>= 9.1.0)
@@ -111,7 +111,7 @@ GEM
     crass (1.0.6)
     deep_merge (1.2.1)
     diff-lcs (1.4.4)
-    dlss-capistrano (3.9.0)
+    dlss-capistrano (3.10.1)
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
       capistrano-one_time_key
@@ -287,7 +287,7 @@ GEM
       rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.0.1)
+    rubocop-ast (1.1.0)
       parser (>= 2.7.1.5)
     rubocop-rspec (1.44.1)
       rubocop (~> 0.87)
