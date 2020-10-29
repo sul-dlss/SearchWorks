@@ -89,7 +89,7 @@ GEM
       blacklight (~> 6.10)
       jquery-rails
       rails (>= 4.2, < 6)
-    bootsnap (1.4.8)
+    bootsnap (1.4.9)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -164,7 +164,7 @@ GEM
     devise-remote-user (1.0.0)
       devise
     diff-lcs (1.4.4)
-    dlss-capistrano (3.9.0)
+    dlss-capistrano (3.10.1)
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
       capistrano-one_time_key
@@ -451,7 +451,7 @@ GEM
       rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.0.1)
+    rubocop-ast (1.1.0)
       parser (>= 2.7.1.5)
     rubocop-performance (1.8.1)
       rubocop (>= 0.87.0)
