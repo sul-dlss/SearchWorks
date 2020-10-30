@@ -58,6 +58,10 @@ class SolrDocument
     document.key?(:eds_citation_exports) && document['eds_citation_exports']&.select { |e| e['id'] == 'RIS' }.any?
   end
 
+  use_extension(ModsExport) do |document|
+    document.key?(:modsxml)
+  end
+
   sw_field_semantics = {
     title: %w[title_display eds_title],
     author: 'author_display',
