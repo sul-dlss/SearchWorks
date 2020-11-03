@@ -34,8 +34,13 @@ module Eds
         results = eds_session.solr_retrieve_list(list: bl_params['q']['id'])
       else
         # Regular search
+        if (bl_params || {})['smarttext']
+          eds_session = eds_session.update_session_options(smarttext_failover: true)
+        end
+
         results = eds_results_with_date_range(eds_session.search(bl_params).to_solr)
       end
+
       blacklight_config.response_model.new(results,
                                            bl_params,
                                            document_model: blacklight_config.document_model,

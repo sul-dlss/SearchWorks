@@ -13,6 +13,12 @@ module Eds
       @object ||= EBSCO::EDS::Session.new(session_options)
     end
 
+    def update_session_options(update_options)
+      @object = EBSCO::EDS::Session.new(session_options.merge(update_options))
+
+      self
+    end
+
     private
 
     attr_reader :eds_params
@@ -36,8 +42,7 @@ module Eds
         recover_from_bad_source_type: true,
         citation_link_find:           Settings.EDS_CITATION_LINK_PATTERN,
         citation_link_replace:        Settings.EDS_CITATION_LINK_REPLACE,
-        citation_db_find:             Settings.EDS_CITATION_DB_PATTERN,
-        smarttext_failover:           Settings.EDS_SMARTTEXT_FAILOVER
+        citation_db_find:             Settings.EDS_CITATION_DB_PATTERN
       }
     end
   end

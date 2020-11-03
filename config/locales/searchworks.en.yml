@@ -126,6 +126,7 @@ en:
         return_to_advanced_search: "Return to Advanced search page"
         search_context: "Try your search in…"
         check_spelling: 'Check spelling, or use fewer words to start.'
+        smarttext: 'Try SmartText searching mode:'
 
     bookmarks:
       page_heading: "Selections list"

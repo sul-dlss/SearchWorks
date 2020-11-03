@@ -28,6 +28,15 @@
             <% end %>
           </li>
         <% end %>
+
+        <% if article_search? && !params['smarttext'] %>
+          <li>
+            <%= t 'blacklight.search.zero_results.smarttext' %>
+            <%= link_to searchworks_search_action_path(params.merge(smarttext: true)), data: {behavior: "backend-lookup", track: 'zero-results-search-all-fields', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(params.merge(smarttext: true)))}"} do %>
+              <%= content_tag :span, "#{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
+            <% end %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

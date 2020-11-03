@@ -57,7 +57,6 @@ EDS_HOSTS:
 EDS_CITATION_LINK_PATTERN: '[.,]\s+(&lt;i&gt;EBSCOhost|viewed|Available|Retrieved from|(?:https?:\/\/)?stanford\.idm\.oclc\.org|Disponível em).+$'
 EDS_CITATION_LINK_REPLACE: '.'
 EDS_CITATION_DB_PATTERN: '\s+<i>EBSCOhost<\/i>\.?'
-EDS_SMARTTEXT_FAILOVER: false
 SU_AFFILIATIONS: []
 STANFORD_NETWORK:
   singletons: []

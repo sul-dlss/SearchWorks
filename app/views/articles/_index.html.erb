@@ -2,6 +2,16 @@
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>
+
+    <% if params['smarttext'] %>
+      <div class="row">
+        <div class="col-md-offset-4 col-md-8 col-sm-offset-5 col-sm-7">
+          <div class="alert alert-info">
+            <strong>Note:</strong> you are using SmartText searching mode. [<%= link_to('remove', url_for(params.merge(smarttext: nil))) %>]
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 <div class='row'>
