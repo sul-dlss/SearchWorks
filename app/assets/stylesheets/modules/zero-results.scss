@@ -13,3 +13,22 @@
     margin-bottom: 15px;
   }
 }
+
+.zero-results-link {
+  &:hover, &:focus { border-bottom: none;}
+
+  .btn-zero-results {
+    @include button-variant($sul-link-color, transparent, $cardinal-red);
+    border-radius: $sul-constraint-btn-radius;
+    white-space: normal;
+
+    &:hover,:focus {
+      text-decoration: underline;
+    };
+  }
+  strong {
+    &:hover,:focus {
+      text-decoration: underline;
+    };
+  }
+}
