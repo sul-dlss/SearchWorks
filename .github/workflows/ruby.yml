@@ -15,6 +15,14 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Bundle install
+      run: bundle config path vendor/bundle
     - name: Install dependencies
       run: bin/setup
     - name: Run tests
