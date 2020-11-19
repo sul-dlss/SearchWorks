@@ -249,6 +249,7 @@ class RequestLink
         HAS-DIGIT
         HAS-FIC
         HAS-NEWBK
+        IC
         IC-DISPLAY
         INTL-DOCS
         LOCKED-STK
