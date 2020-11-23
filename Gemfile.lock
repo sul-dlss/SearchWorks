@@ -164,7 +164,7 @@ GEM
       rake
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
-    global_alerts (0.1.0)
+    global_alerts (0.2.0)
       http
       rails (>= 5.0, < 7)
     globalid (0.4.2)
