@@ -22,7 +22,7 @@ RSpec.describe RequestLink do
     end
 
     context 'for locations that not configured to have request links' do
-      let(:location) { 'IC' }
+      let(:location) { 'IC-NEWSPAPER' }
 
       it { expect(link).not_to be_present }
     end
@@ -86,7 +86,7 @@ RSpec.describe RequestLink do
 
   describe '#render' do
     context 'when not present' do
-      let(:location) { 'IC' }
+      let(:location) { 'IC-NEWSPAPER' }
 
       it { expect(link.render).to eq '' }
     end
