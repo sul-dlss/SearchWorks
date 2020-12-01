@@ -1187,7 +1187,8 @@ module Constants
     'LAW' => 'law/location/law_library',
     'LANE-MED' => 'medical/location/medical_library',
     'SLAC' => 'slac/location/slac',
-    'IC' => 'green/location/information-center'
+    'IC' => 'green/location/information-center',
+    'IC-CHAT' => 'green/location/online-reference-support'
   }
 
   LIBRARY_ABOUT = {

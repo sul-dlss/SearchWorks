@@ -16,7 +16,7 @@ describe 'shared/_chat_librarian_sidebar.html.erb' do
     it 'has correct data attributes' do
       expect(rendered).to have_css('[data-jid="ic@chat.libraryh3lp.com"]')
       expect(rendered).to have_css('[data-library-h3lp]')
-      expect(rendered).to have_css('[data-hours-route=\'/hours/IC\']')
+      expect(rendered).to have_css('[data-hours-route=\'/hours/IC-CHAT\']')
       expect(rendered).to have_css '.location-hours-today'
     end
   end
