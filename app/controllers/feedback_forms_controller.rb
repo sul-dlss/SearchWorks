@@ -33,6 +33,10 @@ class FeedbackFormsController < ApplicationController
 
   protected
 
+  def check_ua_captcha
+    # override to not run the check in this controller
+  end
+
   def set_form_type
     @form_type = params.permit(:type)[:type]
   end

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   # Please be sure to impelement current_user and user_session. Blacklight depends on
   # these methods in order to perform user specific actions.
 
+  before_action :check_ua_captcha
+
   layout 'searchworks'
 
   helper_method :page_location
@@ -33,5 +35,14 @@ class ApplicationController < ActionController::Base
 
   def page_location
     SearchWorks::PageLocation.new(params)
+  end
+
+  def check_ua_captcha
+    return if current_user.present?
+    return if session['throttle_captcha_passed']
+
+    if Settings.USER_AGENT_CAPTCHA_PATTERNS.any? { |pattern| request.user_agent =~ Regexp.new(pattern) }
+      redirect_to new_throttle_recaptcha_path(redirect_to: request.original_fullpath)
+    end
   end
 end

@@ -1,0 +1,13 @@
+<div id="content" class="col-md-12 callnumber-browse">
+  <h2>Verification</h2>
+
+  <div class="alert alert-error">
+    Your session appears to be similar to those that are currenty behaving suspiciously. Please verify that you're not a bot.
+  </div>
+
+  <%= form_tag throttle_recaptcha_path do %>
+    <%= hidden_field_tag :redirect_to, params['redirect_to'] %>
+    <%= recaptcha_tags %>
+    <%= submit_tag 'Verify', class: 'btn btn-primary' %>
+  <% end %>
+</div>
