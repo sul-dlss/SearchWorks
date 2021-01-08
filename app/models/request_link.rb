@@ -164,9 +164,8 @@ class RequestLink
 
   def disabled_current_locations_map
     {
-      'EAST-ASIA' => %w[ON-ORDER],
-      'SPEC-COLL' => %w[INPROCESS ON-ORDER SPEC-INPRO],
-      'default' => %w[INPROCESS ON-ORDER]
+      'SPEC-COLL' => %w[SPEC-INPRO],
+      'default' => %w[]
     }
   end
 
@@ -182,7 +181,9 @@ class RequestLink
         ARTLCKS
         ARTLCKS-R
         FOLIO
+        INPROCESS
         MEDIA
+        ON-ORDER
         REF-FOLIO
         REFERENCE
         STACKS
@@ -191,15 +192,19 @@ class RequestLink
         BUS-CMC
         BUS-PER
         BUS-TEMP
+        INPROCESS
         MEDIA
+        ON-ORDER
         PAGE-IRON
         STACKS
       ],
       'EARTH-SCI' => %w[
         ATCIRCDESK
+        INPROCESS
         MAP-CASES
         MAP-FILE
         MEZZANINE
+        ON-ORDER
         STACKS
         STORAGE
         TECH-RPTS
@@ -224,16 +229,21 @@ class RequestLink
         MEDIA
         MICROTEXT
         ND-PAGE-EA
+        ON-ORDER
         SETS
         STACKS
       ],
       'EDUCATION' => %w[
         CURRICULUM
         CURRSTOR
+        INPROCESS
+        ON-ORDER
         STACKS
         STORAGE
       ],
       'ENG' => %w[
+        INPROCESS
+        ON-ORDER
         SERIALS
         SHELBYSER
         STACKS
@@ -251,8 +261,10 @@ class RequestLink
         HAS-NEWBK
         IC
         IC-DISPLAY
+        INPROCESS
         INTL-DOCS
         LOCKED-STK
+        ON-ORDER
         SSRC
         SSRC-CLASS
         SSRC-CSLI
@@ -272,10 +284,11 @@ class RequestLink
         VROOMAN-OV
         WELLNESS
       ],
-      'MEDIA-MTXT' => %w[MM-CDCAB MM-OVERSIZ MM-STACKS],
-      'MUSIC' => %w[FOLIO FOLIO-FLAT MINIATURE RECORDINGS SCORES STACKS],
+      'MEDIA-MTXT' => %w[INPROCESS MM-CDCAB MM-OVERSIZ MM-STACKS ON-ORDER],
+      'MUSIC' => %w[FOLIO FOLIO-FLAT INPROCESS MINIATURE ON-ORDER RECORDINGS SCORES STACKS],
       'RUMSEYMAP' => %w[
         FOLIO
+        INPROCESS
         MAP-CASES
         MAP-FILE
         MAPCASES-S
@@ -284,6 +297,7 @@ class RequestLink
         MP-CASE-LG
         MP-CASE-MD
         MP-CASE-SM
+        ON-ORDER
         PAGE-RM
         REFERENCE
         RUMSEY
@@ -329,11 +343,13 @@ class RequestLink
         FED-DOCS
         FOLIO
         HY-PAGE-EA
+        INPROCESS
         JAPANESE
         KOREAN
         L-PAGE-EA
         MEDIA-MTXT
         ND-PAGE-EA
+        ON-ORDER
         PAGE-EA
         PAGE-GR
         PAGE-SP
@@ -361,6 +377,7 @@ class RequestLink
         IC-NEWS
         IC-STATS
         INDEXES
+        INPROCESS
         INTL-DOCS
         JAPANESE
         KOREAN
@@ -368,6 +385,7 @@ class RequestLink
         LOCKED-STK
         MEDIA-MTXT
         MICROTEXT
+        ON-ORDER
         PAGE-EA
         PAGE-GR
         PAGE-SP
@@ -382,6 +400,8 @@ class RequestLink
         STORAGE
       ],
       'SCIENCE' => %w[
+        INPROCESS
+        ON-ORDER
         POPSCI
         SERIALS
         SHELBYSER
@@ -397,6 +417,7 @@ class RequestLink
         GOLDSTAR
         GUNST
         GUNST-30
+        INPROCESS
         LOCKED-MAP
         LOCKED-STK
         MANNING
@@ -409,6 +430,7 @@ class RequestLink
         MSS-30
         MSSX-30
         NEWTON
+        ON-ORDER
         RARE-BOOKS
         RARE-STOR
         RBC-30
