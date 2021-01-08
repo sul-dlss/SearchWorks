@@ -22,7 +22,6 @@ class RequestLink
       in_enabled_location? &&
       not_in_disabled_current_location? &&
       any_items_circulate? &&
-      any_items_requestable? && # Will this need to change now? This assumes an item level link, which may temp. be gone
       !available_via_temporary_access?
       # Check for real barcodes?  Only for items that are not on-order?
       # Array of procs / methods to be sent configurable on a library basis.
@@ -104,10 +103,6 @@ class RequestLink
 
   def enabled_locations
     enabled_locations_map[library] || enabled_locations_map['default']
-  end
-
-  def any_items_requestable?
-    items.any? { |item| !item.must_request? }
   end
 
   def any_items_circulate?
