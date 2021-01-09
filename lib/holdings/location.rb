@@ -58,7 +58,7 @@ class Holdings
     end
 
     def as_json(live_data = [])
-      methods = (public_methods(false) - [:as_json, :items, :mhld])
+      methods = (public_methods(false) - [:as_json, :items, :mhld, :request_link])
       location_info = methods.each_with_object({}) do |meth, obj|
         obj[meth.to_sym] = send(meth) if method(meth).arity == 0
       end
