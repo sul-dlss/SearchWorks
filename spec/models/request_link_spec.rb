@@ -8,7 +8,7 @@ RSpec.describe RequestLink do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'STACKS' }
-  let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: nil))] }
+  let(:items) { [double(type: 'STKS-MONO', current_location: double(code: nil))] }
 
   describe '#present?' do
     context 'for libaries/locations that are configured to have request links' do
@@ -28,13 +28,7 @@ RSpec.describe RequestLink do
     end
 
     context 'when none of the items have a circulating type ' do
-      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
-
-      it { expect(link).not_to be_present }
-    end
-
-    context 'when none of the items are requestable' do
-      let(:items) { [double(must_request?: true, type: 'STKS-MONO', current_location: double(code: nil))] }
+      let(:items) { [double(type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).not_to be_present }
     end
@@ -47,7 +41,7 @@ RSpec.describe RequestLink do
 
     context 'when an item is in a library that wildcards item types' do
       let(:library) { 'SPEC-COLL' }
-      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+      let(:items) { [double(type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).to be_present }
     end
@@ -55,7 +49,7 @@ RSpec.describe RequestLink do
     context 'when an item is in a location that wildcards item types' do
       let(:library) { 'ART' }
       let(:location) { 'ARTLCKL' }
-      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+      let(:items) { [double(type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).to be_present }
     end
@@ -63,7 +57,7 @@ RSpec.describe RequestLink do
     context 'when an item is in a non wildcarded location within a library that specifies location specific item types' do
       let(:library) { 'ART' }
       let(:location) { 'STACKS' }
-      let(:items) { [double(must_request?: false, type: 'NONCIRC', current_location: double(code: nil))] }
+      let(:items) { [double(type: 'NONCIRC', current_location: double(code: nil))] }
 
       it { expect(link).not_to be_present }
     end
@@ -77,8 +71,8 @@ RSpec.describe RequestLink do
     end
 
     context 'when all items are in a disallowed current location' do
-      let(:library) { 'GREEN' }
-      let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: 'INPROCESS'))] }
+      let(:library) { 'SPEC-COLL' }
+      let(:items) { [double(type: 'STKS-MONO', current_location: double(code: 'SPEC-INPRO'))] }
 
       it { expect(link).not_to be_present }
     end
