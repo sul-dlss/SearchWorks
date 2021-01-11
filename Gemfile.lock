@@ -48,7 +48,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
     ast (2.4.1)
-    autoprefixer-rails (10.1.0.0)
+    autoprefixer-rails (10.2.0.0)
       execjs
     bcrypt (3.1.16)
     bibtex-ruby (5.1.6)
@@ -151,7 +151,7 @@ GEM
     css_parser (1.7.1)
       addressable
     deep_merge (1.2.1)
-    deprecation (1.0.0)
+    deprecation (1.1.0)
       activesupport
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -242,7 +242,7 @@ GEM
       rake
     font-awesome-rails (4.7.0.6)
       railties (>= 3.2, < 6.2)
-    global_alerts (0.2.0)
+    global_alerts (0.3.0)
       http
       rails (>= 5.0, < 7)
     globalid (0.4.2)
@@ -257,8 +257,8 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.2)
-      ffi-compiler
+    http-parser (1.2.3)
+      ffi-compiler (>= 1.0, < 2.0)
     httpclient (2.8.3)
     i18n (1.8.7)
       concurrent-ruby (~> 1.0)
@@ -316,7 +316,7 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
-    minitest (5.14.2)
+    minitest (5.14.3)
     mods (2.4.1)
       edtf
       iso-639
@@ -330,7 +330,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     mysql2 (0.5.3)
-    namae (1.0.1)
+    namae (1.0.2)
     net-http-persistent (3.1.0)
       connection_pool (~> 2.2)
     net-scp (3.0.0)
@@ -338,10 +338,10 @@ GEM
     net-ssh (6.1.0)
     newrelic_rpm (6.14.0)
     nio4r (2.5.4)
-    nokogiri (1.11.0)
+    nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.0-x86_64-linux)
+    nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     nokogumbo (2.0.4)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -444,15 +444,15 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.4)
-    rubocop (1.7.0)
+    rubocop (1.8.0)
       parallel (~> 1.10)
-      parser (>= 2.7.1.5)
+      parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
       rubocop-ast (>= 1.2.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 2.0)
+      unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.4.0)
       parser (>= 2.7.1.5)
     rubocop-performance (1.9.2)
@@ -469,7 +469,7 @@ GEM
     ruby-progressbar (1.11.0)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
-    sanitize (5.2.1)
+    sanitize (5.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.8.0)
       nokogumbo (~> 2.0)
@@ -490,15 +490,15 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    simplecov (0.21.1)
+    simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
     slop (3.6.0)
-    solr_wrapper (2.2.0)
-      faraday
+    solr_wrapper (3.0.1)
+      http
       retriable
       ruby-progressbar
       rubyzip
@@ -546,7 +546,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    unicode-display_width (1.7.0)
+    unicode-display_width (2.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (3.7.0)
@@ -643,4 +643,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.2.0
+   2.2.4
