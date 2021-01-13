@@ -13,7 +13,7 @@ class AccessPanels
     end
 
     def marc_fulltext_links
-      @document.marc_links.fulltext if @document.marc_links.present?
+      @document.marc_links.fulltext if @document&.marc_links&.fulltext&.present?
     end
 
     def eds_links
