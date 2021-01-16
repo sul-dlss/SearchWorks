@@ -18,18 +18,18 @@
 <% end %>
 <% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
   <li class="refworks" role="presentation">
-    <%= form_tag(refworks_export_url) do %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();" %>
+    <%= form_tag(refworks_export_url, 'aria-hidden': true) do %>
       <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.send(:export_as_refworks_marc_txt)) %>
-      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
     <% end %>
   </li>
 <% end %>
 <% if @document.export_formats.key?(:ris) %>
   <li class="refworks" role="presentation">
-    <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();" %>
+    <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
-      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
     <% end %>
   </li>
   <li class="ris" role="presentation">
