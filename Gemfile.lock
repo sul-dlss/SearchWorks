@@ -514,7 +514,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
-    sshkit (1.21.1)
+    sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     stanford-mods (2.6.2)
@@ -643,4 +643,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.2.5
+   2.2.6
