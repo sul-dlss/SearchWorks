@@ -325,7 +325,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
-    sshkit (1.21.1)
+    sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     thor (1.0.1)
@@ -400,4 +400,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.2.5
+   2.2.6
