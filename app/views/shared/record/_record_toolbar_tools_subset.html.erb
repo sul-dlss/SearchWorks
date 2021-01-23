@@ -1,44 +1,44 @@
 <% if @document.respond_to?( :to_sms_text ) %>
   <li class="sms" role="presentation">
     <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_articles_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.sms_html'), sms_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', :data => {:ajax_modal => "trigger"}} %>
     <% else %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_solr_document_path(:id => @document), {:id => 'smsLink', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.sms_html'), sms_solr_document_path(:id => @document), {:id => 'smsLink', role: 'menuitem', :data => {:ajax_modal => "trigger"}} %>
     <% end %>
   </li>
 <% end %>
 <% if @document.respond_to?( :to_email_text ) %>
   <li class="email" role="presentation">
     <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.email_html'), email_articles_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.email_html'), email_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', :data => {:ajax_modal => "trigger"}} %>
     <% else %>
-      <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', role: 'menuitem', :data => {:ajax_modal => "trigger"}} %>
     <% end %>
   </li>
 <% end %>
 <% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
   <li class="refworks" role="presentation">
-    <%= form_tag(refworks_export_url) do %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem' %>
+    <%= form_tag(refworks_export_url, 'aria-hidden': true) do %>
       <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.send(:export_as_refworks_marc_txt)) %>
-      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
     <% end %>
   </li>
 <% end %>
 <% if @document.export_formats.key?(:ris) %>
   <li class="refworks" role="presentation">
-    <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem' %>
+    <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
-      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).closest('form').submit();" %>
     <% end %>
   </li>
   <li class="ris" role="presentation">
-    <%= link_to t('blacklight.tools.ris_html'), articles_ris_path(@document, :format => 'ris') %>
+    <%= link_to t('blacklight.tools.ris_html'), articles_ris_path(@document, :format => 'ris'), role: 'menuitem' %>
   </li>
 <% end %>
 <% if @document.export_formats.keys.include?( :endnote ) %>
   <li class="endnote" role="presentation">
-    <%= link_to t('blacklight.tools.endnote_html'), solr_document_path(@document, :format => 'endnote') %>
+    <%= link_to t('blacklight.tools.endnote_html'), solr_document_path(@document, :format => 'endnote'), role: 'menuitem' %>
   </li>
 <% end %>
 <li role="presentation">
