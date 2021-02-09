@@ -24,7 +24,7 @@ Blacklight.onLoad(function(){
   // This event mimics the behavior in Bootstrap's Dropdown.prototype.keydown
   // except it adds some additional keyboard functionality.
   function keydownDropdownOverride(e) {
-    if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+    if (!/(38|40|27|32|36|35)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
 
     var $this = $(this)
 
@@ -47,6 +47,15 @@ Blacklight.onLoad(function(){
     if (!$items.length) return
 
     var index = $items.index(e.target)
+
+    // Add Home/End key support (not available in Bootstrap)
+    if (e.which == 35) {
+      index = $items.length - 1
+    }
+
+    if (e.which == 36) {
+      index = 0
+    }
 
     // The Up/Down branches below are what we've overriden from Bootstrap
     // Up
