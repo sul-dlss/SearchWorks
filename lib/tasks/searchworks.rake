@@ -21,7 +21,7 @@ namespace :searchworks do
   task copy_solr_dependencies: [:environment] do
     copy_task = lambda do
       FileUtils.cp(
-        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v2.1.jar'),
+        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v3.0.jar'),
         File.join(SolrWrapper.instance.instance_dir, 'contrib')
       )
     end
