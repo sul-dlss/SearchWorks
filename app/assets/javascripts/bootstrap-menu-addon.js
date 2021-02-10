@@ -83,11 +83,18 @@ Blacklight.onLoad(function(){
   }
 
   $(toggle).parent().on('shown.bs.dropdown', function(e) {
+    var dropdownEvent = e;
     var dropdown = $(this);
-    var toggleButton = e.relatedTarget;
     var menu = dropdown.find('.dropdown-menu');
     var links = menu.children().find('a');
 
     links.first().focus();
+
+    menu.on('focusout.close-dropdown', function(e) {
+      if (links.toArray().indexOf(e.relatedTarget) < 0) {
+        $(dropdownEvent.relatedTarget).dropdown('toggle');
+        menu.off('focusout.close-dropdown');
+      }
+    });
   });
 });
