@@ -15,4 +15,11 @@ module AccessPanelHelper
     end
     image_tag(image_name, class: "pull-left", alt: "", height: 50)
   end
+
+  def display_connection_problem_links?(document)
+    return true if document.access_panels.sfx?
+    return true if document.access_panels.online? && document.is_a_database?
+
+    document.access_panels.online? && document.access_panels.online.links.any?(&:stanford_only?)
+  end
 end

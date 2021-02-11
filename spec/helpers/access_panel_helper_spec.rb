@@ -20,4 +20,39 @@ describe AccessPanelHelper do
       expect(img).to have_css('img[src^="/assets/ZOMBIE"][data-hidpi-src^="/assets/ZOMBIE@2x"]')
     end
   end
+
+  describe '#display_connection_problem_links?' do
+    let(:solr_document_data) { {} }
+    let(:document) { SolrDocument.new(solr_document_data) }
+
+    context 'when a public (non-Stanford only) fulltext resource' do
+      let(:solr_document_data) do
+        { marc_links_struct: [{ fulltext: 'true' }] }
+      end
+
+      it { expect(helper.display_connection_problem_links?(document)).to be false }
+    end
+
+    context 'when given an sfx document' do
+      let(:solr_document_data) { { url_sfx: ['https://example.com/sfx'] } }
+
+      it { expect(helper.display_connection_problem_links?(document)).to be true }
+    end
+
+    context 'when given a database' do
+      let(:solr_document_data) do
+        { marc_links_struct: [{ fulltext: 'true' }], format_main_ssim: ['Database'] }
+      end
+
+      it { expect(helper.display_connection_problem_links?(document)).to be true }
+    end
+
+    context 'when given a stanford only document' do
+      let(:solr_document_data) do
+        { marc_links_struct: [{ fulltext: 'true', stanford_only: true }] }
+      end
+
+      it { expect(helper.display_connection_problem_links?(document)).to be true }
+    end
+  end
 end
