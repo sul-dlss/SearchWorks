@@ -52,6 +52,7 @@ Blacklight.onLoad(function(){
           request.done(function(html){
             plugin.updateLinks(html);
             plugin.updateList(html);
+            $(plugin.element).trigger('updated.selections.dropdown');
           });
         },
 

@@ -1,5 +1,6 @@
 Blacklight.onLoad(function(){
   var toggle   = '[data-toggle="dropdown"]';
+  var menu     = '.dropdown-menu';
   // Remove bootstrap dropdown's keydown events and substitute our own
   $(document).off('keydown.bs.dropdown.data-api', '[data-toggle="dropdown"]');
   $(document).off('keydown.bs.dropdown.data-api', '.dropdown-menu');
@@ -82,19 +83,17 @@ Blacklight.onLoad(function(){
 
   }
 
-  $(toggle).parent().on('shown.bs.dropdown', function(e) {
-    var dropdownEvent = e;
+  $(toggle).parent().on('shown.bs.dropdown updated.selections.dropdown', function() {
     var dropdown = $(this);
     var menu = dropdown.find('.dropdown-menu');
     var links = menu.children().find('a');
-
     links.first().focus();
+  });
 
-    menu.on('focusout.close-dropdown', function(e) {
-      if (links.toArray().indexOf(e.relatedTarget) < 0) {
-        $(dropdownEvent.relatedTarget).dropdown('toggle');
-        menu.off('focusout.close-dropdown');
-      }
-    });
+  // Ensure the menu is closed when tabbing out
+  $(toggle).parent().find(menu).on('keydown', function(e) {
+    if(e.key === 'Tab') {
+      $(this).parent().find(toggle).dropdown('toggle');
+    }
   });
 });
