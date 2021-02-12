@@ -67,7 +67,6 @@ describe "catalog/access_panels/_online.html.erb" do
       end
       it "should render a special panel footer" do
         render
-        expect(rendered).to have_css(".panel-footer a", text: "Connect from off campus")
         expect(rendered).to have_css(".panel-footer a", text: "Report a connection problem")
       end
     end
