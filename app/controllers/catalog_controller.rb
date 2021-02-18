@@ -29,6 +29,8 @@ class CatalogController < ApplicationController
 
   include StanfordWorkFacet
 
+  include SearchRelevancyLogging
+
   before_action :set_search_query_modifier, only: :index
 
   before_action only: :index do
