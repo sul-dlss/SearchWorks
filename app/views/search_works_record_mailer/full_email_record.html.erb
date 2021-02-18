@@ -22,7 +22,7 @@
       <% if document.respond_to?(:to_marc) %>
         <%= render(partial: 'catalog/record/marc_upper_metadata_items', locals: {document: document, blacklight_config: @blacklight_config}) %>
         <%= render(partial: 'catalog/record/marc_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>
-      <% elsif document.mods.present? %>
+      <% elsif document.mods? %>
         <%= render(partial: 'catalog/record/mods_upper_metadata_section', locals: {document: document, blacklight_config: @blacklight_config}) %>
         <%= render(partial: 'catalog/record/mods_metadata_sections', locals: {document: document, blacklight_config: @blacklight_config}) %>
       <% end %>
