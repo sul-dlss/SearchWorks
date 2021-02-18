@@ -1,24 +1,22 @@
-<% if document.mods.present? %>
-  <ul class="document-metadata dl-horizontal dl-invert results-metadata-section col-md-8">
-    <% if document[:vern_title_display].present? %>
-      <li><%= document[:vern_title_display].html_safe %></li>
-    <% end %>
-    <% if document.mods_display_name.present? %>
-      <li>
-        <% name = document.mods_display_name.first %>
-        <%= link_to_mods_name(name['link']) %> <%= name['post_text'] %>
-      </li>
-      <%# TODO: Remove this elsif block after new mods index is in place %>
-    <% elsif document.mods.name.present? && document.mods.name.first.values.present? %>
-      <li>
-        <% name = document.mods.name.first %>
-        <%= link_to_mods_name(name.values.first) %> (<%= sanitize_mods_name_label(name.label) %>)
-      </li>
-    <% end %>
+<ul class="document-metadata dl-horizontal dl-invert results-metadata-section col-md-8">
+  <% if document[:vern_title_display].present? %>
+    <li><%= document[:vern_title_display].html_safe %></li>
+  <% end %>
+  <% if document.mods_display_name.present? %>
+    <li>
+      <% name = document.mods_display_name.first %>
+      <%= link_to_mods_name(name['link']) %> <%= name['post_text'] %>
+    </li>
+    <%# TODO: Remove this elsif block after new mods index is in place %>
+  <% elsif document.mods && document.mods.name.present? && document.mods.name.first.values.present? %>
+    <li>
+      <% name = document.mods.name.first %>
+      <%= link_to_mods_name(name.values.first) %> (<%= sanitize_mods_name_label(name.label) %>)
+    </li>
+  <% end %>
 
-    <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
-    <% if imprint.present? %>
-      <li><%= render "catalog/field_list_from_index", :fields => imprint %></li>
-    <% end %>
-  </ul>
-<% end %>
+  <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
+  <% if imprint.present? %>
+    <li><%= render "catalog/field_list_from_index", :fields => imprint %></li>
+  <% end %>
+</ul>

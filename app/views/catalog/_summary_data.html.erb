@@ -52,7 +52,7 @@
     <%= document[:summary_display].join('<br/>').html_safe %>
   </div>
 <%# TODO: Remove this elsif block after new mods index is in place %>
-<% elsif document.respond_to?(:mods) && document.mods.present? %>
+<% elsif document.respond_to?(:mods?) && document.mods? && document.mods.present? %>
   <% if document.mods.abstract.present? %>
     <%= document.mods.abstract.map(&:values).join('<br/>').html_safe %>
   <% end %>

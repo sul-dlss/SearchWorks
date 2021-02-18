@@ -9,7 +9,7 @@
 </div>
 <% if @document.respond_to?(:to_marc) %>
   <%= render "marc_view" %>
-<% elsif @document.mods.present? %>
+<% elsif @document.mods? %>
   <%= render "mods_view"%>
 <% else %>
   <%= t('blacklight.search.librarian_view.empty') %>

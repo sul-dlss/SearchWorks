@@ -9,7 +9,7 @@
       <% else %>
         in <%= document.holdings.libraries.length %> libraries
       <% end %>
-    <% elsif document.mods.present? %>
+    <% elsif document.mods? %>
       <br/>Stanford Digital Repository
     <% end %>
   </div>
