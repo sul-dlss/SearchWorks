@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
 
   mount Blacklight::Engine => '/'
+  mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP
+
   mount BlacklightAdvancedSearch::Engine => '/'
   mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder' if Rails.env.test?
 
