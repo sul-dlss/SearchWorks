@@ -1,4 +1,5 @@
 :id: 49
+:hashed_id_ssi: f457c545a9ded88f18ecee47145a72c0
 :title_display: Another Virtual Object
 :format_main_ssim: Map
 :marcxml: <%= contributed_works_fixture %>

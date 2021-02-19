@@ -1,4 +1,5 @@
 :id: 57
+:hashed_id_ssi: 72b32a1f754ba1c09b3695e0cb6cde7f
 :title_display: SFX Catalog Item
 :format_main_ssim: Journal/Periodical
 :marcxml: <%= metadata1 %>

@@ -85,6 +85,9 @@ GEM
     blacklight_advanced_search (6.4.1)
       blacklight (~> 6.0, >= 6.0.1)
       parslet
+    blacklight_dynamic_sitemap (0.4.0)
+      blacklight (> 6.0)
+      rails (<= 6.1)
     blacklight_range_limit (6.5.0)
       blacklight (~> 6.10)
       jquery-rails
@@ -576,6 +579,7 @@ DEPENDENCIES
   blacklight-hierarchy (~> 4.0)
   blacklight-marc (~> 6.0)
   blacklight_advanced_search (~> 6.3)
+  blacklight_dynamic_sitemap
   blacklight_range_limit (~> 6.2)
   bootsnap
   bootstrap-sass
