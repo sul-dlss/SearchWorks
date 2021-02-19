@@ -47,11 +47,16 @@ class SolrDocument
     (super || '').to_s.gsub('/', '%2F')
   end
 
-      # The following shows how to setup this blacklight document to display marc documents
+  # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marcxml
   extension_parameters[:marc_format_type] = :marcxml
+
   use_extension(Blacklight::Solr::Document::Marc) do |document|
-    document.key?(:marcxml)
+    document.key?(:marcxml) || document.key?(:marcjson_ss)
+  end
+
+  use_extension(MarcJsonExtension) do |document|
+    document.key?(:marcjson_ss)
   end
 
   use_extension(EdsExport) do |document|
