@@ -1,12 +1,12 @@
 Blacklight.onLoad(function(){
   var toggle   = '[data-toggle="dropdown"]';
-  var menu     = '.dropdown-menu';
+  var menu     = '.dropdown-menu[role="menu"]';
   // Remove bootstrap dropdown's keydown events and substitute our own
-  $(document).off('keydown.bs.dropdown.data-api', '[data-toggle="dropdown"]');
-  $(document).off('keydown.bs.dropdown.data-api', '.dropdown-menu');
+  $(document).off('keydown.bs.dropdown.data-api', toggle);
+  $(document).off('keydown.bs.dropdown.data-api', menu);
 
-  $(document).on('keydown.bs.dropdown.data-api', '[data-toggle="dropdown"]', keydownDropdownOverride);
-  $(document).on('keydown.bs.dropdown.data-api', '.dropdown-menu', keydownDropdownOverride);
+  $(document).on('keydown.bs.dropdown.data-api', toggle, keydownDropdownOverride);
+  $(document).on('keydown.bs.dropdown.data-api', menu, keydownDropdownOverride);
 
   // Overridden from Bootstrap (as a direct copy)
   function getParent($this) {
@@ -85,8 +85,7 @@ Blacklight.onLoad(function(){
 
   $(toggle).parent().on('shown.bs.dropdown updated.selections.dropdown', function() {
     var dropdown = $(this);
-    var menu = dropdown.find('.dropdown-menu');
-    var links = menu.children().find('a');
+    var links = dropdown.find(menu).children().find('a');
     links.first().focus();
   });
 
