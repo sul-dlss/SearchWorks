@@ -129,9 +129,9 @@ describe ApplicationHelper do
       expect(helper).to receive(:article_search?).at_least(:once).and_return(true)
       expect(result).to have_link(text: /catalog/, href: '/?q=my+query')
     end
-    it 'does not link if currently in catalog search' do
+    it 'is an aria-current anchor link if currently in catalog search' do
       expect(helper).to receive(:article_search?).at_least(:once).and_return(false)
-      expect(result).not_to have_link(text: /catalog/)
+      expect(result.find('a[href="#"]', text: /catalog/)['aria-current']).to eq 'true'
     end
     it 'performs a mapping between fielded search' do
       params[:q] = 'my query'
@@ -155,7 +155,7 @@ describe ApplicationHelper do
     end
     it 'does not link if currently in article search' do
       expect(helper).to receive(:article_search?).at_least(:once).and_return(true)
-      expect(result).not_to have_link(text: /articles/)
+      expect(result.find('a[href="#"]', text: /articles/)['aria-current']).to eq 'true'
     end
     it 'performs a mapping between fielded search' do
       params[:q] = 'my query'

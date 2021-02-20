@@ -96,4 +96,14 @@ Blacklight.onLoad(function(){
       $(this).parent().find(toggle).dropdown('toggle');
     }
   });
+
+  // Re-focus on the toggle if an active link (that is only an anchor) is clicked
+  $(toggle).each(function() {
+    var $toggle = $(this);
+    var activeLink = $(this).parent().find(menu).find('li.active a[href="#"]');
+    activeLink.on('click', function(e) {
+      e.preventDefault();
+      $toggle.focus();
+    });
+  });
 });
