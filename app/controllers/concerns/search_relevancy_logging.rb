@@ -34,7 +34,7 @@ module SearchRelevancyLogging
   end
 
   def log_relevancy_data
-    query_params = current_search_session.query_params || {}
+    query_params = current_search_session&.query_params || {}
 
     search_logger.info([
       Time.zone.now.strftime('%Y-%m-%d %H:%M:%S.%L'),
