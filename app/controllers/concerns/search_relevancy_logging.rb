@@ -26,7 +26,7 @@ module SearchRelevancyLogging
       "counter=#{session[:history_counter].to_i}",
       "page=#{params[:page].to_i}",
       "numFound=#{@response.response[:numFound]}",
-      "q=#{params[:q]&.gsub(/s+/, ' ')}",
+      "q=#{params[:q]&.gsub(/\s+/, ' ')}",
       params.except(:utf8, :q, :action, :controller).to_json.gsub(/\s+/, ' ')
     ].join("\t"))
   rescue StandardError => e
@@ -45,7 +45,7 @@ module SearchRelevancyLogging
       "doc=#{params[:id]}",
       "pos=#{search_session['counter']}",
       "total=#{search_session['total']}",
-      "q=#{query_params[:q]&.gsub(/s+/, ' ')}",
+      "q=#{query_params[:q]&.gsub(/\s+/, ' ')}",
       query_params.slice(:f, :search_field, :sort, :format).to_json.gsub(/\s+/, ' ')
     ].join("\t"))
   rescue StandardError => e
