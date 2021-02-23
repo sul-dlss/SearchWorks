@@ -323,7 +323,7 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (0.7.1)
+    mods_display (0.8.0)
       i18n
       stanford-mods (~> 2.1)
     msgpack (1.4.2)
