@@ -1,9 +1,7 @@
 <% document ||= @document %>
 <% if document.mods.subject.any?(&:values) %>
-  <dt>Subject</dt>
   <%= linked_mods_subjects(document.mods.subject) %>
 <% end %>
 <% if document.mods.genre.any?(&:values) %>
-  <dt>Genre</dt>
   <%= linked_mods_genres(document.mods.genre) %>
 <% end %>
