@@ -96,10 +96,12 @@ module ApplicationHelper
       mapped_params = { q: params[:q] }
       mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
     end
-    link_to_unless(
-      controller_name == 'catalog',
+    link_to(
       t('searchworks.search_dropdown.catalog.description_html'),
-      root_path(mapped_params)
+      article_search? ? root_path(mapped_params) : '#',
+      role: 'menuitem',
+      tabindex: '-1',
+      'aria-current': !article_search?
     )
   end
 
@@ -108,10 +110,12 @@ module ApplicationHelper
       mapped_params = { q: params[:q] }
       mapped_params[:search_field] = blacklight_config.index.search_field_mapping[params[:search_field].to_sym] if params[:search_field]
     end
-    link_to_unless(
-      controller_name == 'articles',
+    link_to(
       t('searchworks.search_dropdown.articles.description_html'),
-      articles_path(mapped_params)
+      article_search? ? '#' : articles_path(mapped_params),
+      role: 'menuitem',
+      tabindex: '-1',
+      'aria-current': article_search?
     )
   end
 
@@ -119,7 +123,9 @@ module ApplicationHelper
     query_string = params[:q].present? ? "?#{{ q: params[:q] }.to_query}" : nil
     link_to(
       t('searchworks.search_dropdown.bento.description_html'),
-      "https://library.stanford.edu/all/#{query_string}"
+      "https://library.stanford.edu/all/#{query_string}",
+      role: 'menuitem',
+      tabindex: '-1'
     )
   end
 

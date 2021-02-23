@@ -4,7 +4,6 @@
       <%= image_tag "sul-logo.svg", class: "su-logo hidden-xs", alt: "Stanford Libraries", height: 25 %>
       <%= image_tag "sul-logo-stacked.svg", class: "su-logo visible-xs", alt: "Stanford Libraries", height: 25 %>
     <% end %>
-    <%= render :partial => 'shared/search_navbar_services_menu' %>
     <div class="header-links">
       <% if current_user %>
         <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'first' %>
