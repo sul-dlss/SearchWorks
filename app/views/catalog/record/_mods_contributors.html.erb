@@ -1,5 +1,7 @@
 <% document ||= @document %>
 
 <% document.mods.name.each do |name| %>
-  <%= mods_name_field(name) %>
+  <%= mods_name_field(name) do |name| %>
+    <%= link_to(name, search_catalog_path(q: "\"#{name}\"", search_field: 'search_author')) %>
+  <% end %>
 <% end if document.mods.name.present? %>
