@@ -118,6 +118,7 @@
 
 .search_num_of_results {
   text-align: left;
+  margin-top: $font-size-h2 / 2;
 
   .results-heading a {
     border-bottom: 0;
@@ -125,8 +126,9 @@
 
   h2 {
     border-bottom: 0;
-    display: inline-block;
+    display: inline;
     margin-bottom: 0;
+    width: auto;
   }
 
   .rss-icon {
