@@ -29,7 +29,7 @@ class CatalogSearchService < AbstractSearchService
         result.temporary_access_link_html = doc['temporary_access_link_html']&.first
         result.id = doc['id']
 
-        result.description = doc['summary_display'].try(:join) || find_description_in_marcxml(doc['marcbib_xml'])
+        result.description = doc['summary_display'].try(:join)
         result
       end
     end
@@ -51,13 +51,6 @@ class CatalogSearchService < AbstractSearchService
 
     def json
       @json ||= JSON.parse(@body)
-    end
-
-    def find_description_in_marcxml(xml)
-      doc = Nokogiri::XML(xml)
-      doc.xpath('/marc:collection/marc:record/marc:datafield[@tag="500" or @tag="520"]/marc:subfield[@code="a"]',
-                '/marc:collection/marc:record/marc:datafield[@tag="920"]/marc:subfield[@code="b"]',
-                'marc' => 'http://www.loc.gov/MARC21/slim').text
     end
 
     def additional_facet_item
