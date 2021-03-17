@@ -7,6 +7,19 @@ describe 'Callnumber Browse', type: :feature, js: true do
 
       expect(page).to have_css('h2', text: 'Browse related items')
     end
+
+    it 'has select boxes that work' do
+      visit solr_document_path('1')
+
+      expect(page).to have_css('.embedded-items')
+
+      within '.current-document' do
+        check 'Select'
+      end
+
+      expect(page).to have_css '[data-behavior="recent-selections"]', text: 'Selections (1)'
+      expect(page).to have_field 'Selected', checked: true
+    end
   end
 
   describe 'full browse view' do
