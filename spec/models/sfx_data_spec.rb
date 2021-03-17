@@ -16,6 +16,10 @@ describe SfxData do
               <coverage_statement>Statement 1</coverage_statement>
               <coverage_statement>Statement 2</coverage_statement>
             </coverage>
+            <note>Fulltext access limited to open access articles only</note>
+            <embargo_text>
+             <embargo_statement>Most recent 1 year(s)6 month(s) not available</embargo_statement>
+            </embargo_text>
           </target>
         </root>
       XML
@@ -108,6 +112,14 @@ describe SfxData do
 
     it 'parses the coverage and returns an array of coverate strings' do
       expect(target.coverage).to eq(['Statement 1', 'Statement 2'])
+    end
+
+    it 'parses the note' do
+      expect(target.note).to include 'Fulltext access limited to open access articles only'
+    end
+
+    it 'parses the embargo statements' do
+      expect(target.embargo).to include 'Most recent 1 year(s)6 month(s) not available'
     end
   end
 end
