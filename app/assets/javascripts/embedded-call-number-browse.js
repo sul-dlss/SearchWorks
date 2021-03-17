@@ -122,7 +122,26 @@
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function(data){
               $galleryDoc.updateDocs();
-              Blacklight.do_bookmark_toggle_behavior();
+
+              // fix up the id/for to avoid duplicating html ids for the current document.
+              $('.gallery-document label.toggle_bookmark').each(function(i, val) {
+                var id = 'browse_' + val.attr('for');
+                val.attr('for', id);
+                val.first('input').attr('id', id);
+              });
+
+              // just like Blacklight's doBookmarkToggleBehavior, but scoped to the embed container so we don't
+              // try to set the behavior multiple times
+              $('.embed-callnumber-browse-container').find(Blacklight.do_bookmark_toggle_behavior.selector).bl_checkbox_submit({
+                 // cssClass is added to elements added, plus used for id base
+                 cssClass: 'toggle-bookmark',
+                 success: function(checked, response) {
+                   if (response.bookmarks) {
+                     $('[data-role=bookmark-counter]').text(response.bookmarks.count);
+                   }
+                 }
+              });
+
               $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
