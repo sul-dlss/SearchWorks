@@ -18,18 +18,10 @@ task ci: [:environment] do
       Rake::Task['searchworks:copy_solr_dependencies'].invoke
       solr.with_collection(name: 'blacklight-core') do
         Rake::Task["searchworks:fixtures"].invoke
-        Rake::Task["searchworks:spec:without-data-integration"].invoke
+        Rake::Task["spec"].invoke
       end
     end
   else
     system("rake ci RAILS_ENV=test")
-  end
-end
-desc "Execute the test build that runs on jenkins"
-task jenkins: [:environment] do
-  if Rails.env.test?
-    Rake::Task["searchworks:spec:data-integration"].invoke
-  else
-    system("rake jenkins RAILS_ENV=test")
   end
 end

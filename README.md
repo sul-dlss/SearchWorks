@@ -41,16 +41,10 @@ One caveat to this is that you may still need to go through the login path `/web
 
 ## Testing
 
-There are two testing tasks: `rake ci` and `rake jenkins`
+There is one testing task: `rake ci`
 
 #### ci
 
 This is intended for running tests against the fixtures in the local index.
 
     $ rake ci
-
-#### jenkins
-
-This is intended for running production data integration tests against the remote index.
-
-    $ TEST_SOLR_URL=http://example-solr.stanford.edu:8983/solr rake jenkins
