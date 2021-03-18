@@ -695,7 +695,6 @@ module Constants
                   'ARTLCKS',
                   'ARTVAULT',
                   'BARCHAS',
-                  'BENDER',
                   'BUS-ARCH',
                   'BUS-COMPF',
                   'BUS-LOCKED',
