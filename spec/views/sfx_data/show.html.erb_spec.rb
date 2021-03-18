@@ -5,12 +5,14 @@ describe 'sfx_data/show.html.erb' do
     instance_double(
       SfxData,
       targets: [
-        instance_double(SfxData::Target, name: 'Target1', url: 'http://example.com', coverage: nil),
+        instance_double(SfxData::Target, name: 'Target1', url: 'http://example.com', coverage: nil, embargo: nil, note: nil),
         instance_double(
           SfxData::Target,
           name: 'Target2',
           url: 'http://example2.com',
-          coverage: ['Coverage Statement1', 'Coverage Statement2']
+          coverage: ['Coverage Statement1', 'Coverage Statement2'],
+          note: ['Note1'],
+          embargo: ['Embargo1']
         )
       ]
     )
@@ -33,5 +35,13 @@ describe 'sfx_data/show.html.erb' do
   it 'renderes the coverage statements as a nested list' do
     expect(rendered).to have_css('li ul li', text: 'Coverage Statement1')
     expect(rendered).to have_css('li ul li', text: 'Coverage Statement2')
+  end
+
+  it 'renders the notes' do
+    expect(rendered).to have_css('li ul li', text: 'Note1')
+  end
+
+  it 'renders the embargo statements' do
+    expect(rendered).to have_css('li ul li', text: 'Embargo1')
   end
 end

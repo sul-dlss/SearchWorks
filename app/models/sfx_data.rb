@@ -90,6 +90,14 @@ class SfxData
       target_xml.xpath('.//coverage_statement').map(&:text)
     end
 
+    def embargo
+      target_xml.xpath('.//embargo_statement').map(&:text)
+    end
+
+    def note
+      target_xml.xpath('./note').map(&:text)
+    end
+
     private
 
     attr_reader :target_xml
