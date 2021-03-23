@@ -15,10 +15,13 @@ describe SfxData do
             <coverage>
               <coverage_statement>Statement 1</coverage_statement>
               <coverage_statement>Statement 2</coverage_statement>
+              <coverage_statement></coverage_statement>
             </coverage>
             <note>Fulltext access limited to open access articles only</note>
+            <note></note>
             <embargo_text>
              <embargo_statement>Most recent 1 year(s)6 month(s) not available</embargo_statement>
+             <embargo_statement></embargo_statement>
             </embargo_text>
           </target>
         </root>
@@ -115,11 +118,11 @@ describe SfxData do
     end
 
     it 'parses the note' do
-      expect(target.note).to include 'Fulltext access limited to open access articles only'
+      expect(target.note).to eq ['Fulltext access limited to open access articles only']
     end
 
     it 'parses the embargo statements' do
-      expect(target.embargo).to include 'Most recent 1 year(s)6 month(s) not available'
+      expect(target.embargo).to eq ['Most recent 1 year(s)6 month(s) not available']
     end
   end
 end
