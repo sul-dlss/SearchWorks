@@ -185,10 +185,8 @@ Blacklight.onLoad(function(){
     });
   });
 
-  $('.embedded-items .gallery').on('scroll', function(e) {
-    ga('send', 'event', 'Browse-nearby', 'scrolled', {
-    'transport': 'beacon'
-    });
+  $('.embedded-items .gallery').scrollStop(function(e) {
+    ga('send', 'event', 'Browse-nearby', 'scrolled', { 'transport': 'beacon' });
   });
 
   // Select / Select all
