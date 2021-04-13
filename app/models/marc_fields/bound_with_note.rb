@@ -3,13 +3,13 @@
 ###
 class BoundWithNote < MarcField
   def values
-    relevant_fields.map do |field|
-      field.each_with_object({}) do |subfield, hash|
-        hash[:value] ||= ''
-        hash[:value] << "#{subfield.value} " unless subfield.code == 'c'
-        hash[:id] = subfield.value[/^(\d+)/] if subfield.code == 'c'
-      end
-    end.flatten
+    extracted_fields.map do |_field, subfields|
+      id = subfields.find { |subfield| subfield.code == 'c' }.value[/^(\d+)/]
+
+      value = subfields.reject { |subfield| subfield.code == 'c' }.map(&:value).join(subfield_delimeter)
+
+      { id: id, value: value }
+    end
   end
 
   def to_partial_path
@@ -18,14 +18,8 @@ class BoundWithNote < MarcField
 
   private
 
-  def preprocessors
-    super + [:select_if_c_present]
-  end
-
-  def select_if_c_present
-    relevant_fields.select! do |field|
-      field['c'].present?
-    end
+  def extracted_fields
+    super.select { |field, _subfields| field['c'].present? }
   end
 
   def tags

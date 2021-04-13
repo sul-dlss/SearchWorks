@@ -3,10 +3,10 @@
 # and how to link to discover other items in the serial based on subfields
 class LinkedSerials < MarcField
   def values
-    relevant_fields.map do |field|
+    extracted_fields.map do |field, subfields|
       {
         label: field_label(field),
-        values: field.subfields.map do |subfield|
+        values: subfields.map do |subfield|
                   process_subfield(field, subfield)
                 end.flatten.compact
       }
@@ -90,7 +90,7 @@ class LinkedSerials < MarcField
   end
 
   def merged_with_785s
-    @merged_with_785s ||= relevant_fields.select(&method(:merged_with?))
+    @merged_with_785s ||= extracted_fields.select { |field, _subfields| merged_with?(field) }.map(&:first)
   end
 
   def tags
@@ -137,4 +137,8 @@ class LinkedSerials < MarcField
     '787' => { '*' => 'Related item' }
   }.freeze
   private_constant :FIELD_LABELS, :FIELD_780_LABELS, :FIELD_785_LABELS
+
+  def extracted_fields
+    @extracted_fields ||= super.to_a
+  end
 end

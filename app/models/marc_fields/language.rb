@@ -4,7 +4,10 @@
 # https://www.loc.gov/marc/bibliographic/bd546.html
 class Language < MarcField
   def values
-    [[indexed_languages.join(', '), super.join(', ')].reject(&:blank?).join('. ')]
+    field_values = super
+    return if field_values.blank?
+
+    [[indexed_languages.join(', '), field_values.join(', ')].reject(&:blank?).join('. ')]
   end
 
   def label
@@ -24,8 +27,8 @@ class Language < MarcField
   end
 
   def contains_only_subfield_b?
-    relevant_fields.all? do |field|
-      field.subfields.all? do |subfield|
+    extracted_fields.all? do |_field, subfields|
+      subfields.all? do |subfield|
         subfield.code == 'b'
       end
     end

@@ -6,11 +6,7 @@ class UnlinkedSeries < MarcField
 
   private
 
-  def preprocessors
-    super + [:reject_linkable_series_fields]
-  end
-
-  def reject_linkable_series_fields
-    relevant_fields.reject! { |field| series_is_linkable?(field) }
+  def extracted_fields
+    super.reject { |field, _subfields| series_is_linkable?(field) }
   end
 end

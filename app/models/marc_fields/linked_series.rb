@@ -5,8 +5,8 @@ class LinkedSeries < MarcField
   include SeriesLinkable
 
   def values
-    relevant_fields.map do |field|
-      field.subfields.each_with_object({}) do |subfield, hash|
+    extracted_fields.select { |field, _subfields| series_is_linkable?(field) }.map do |field, subfields|
+      subfields.select { |subfield| ('a'..'z').cover?(subfield.code) }.each_with_object({}) do |subfield, hash|
         key = subfield_is_linkable?(field, subfield) ? :link : :extra_text
         hash[key] ||= ''
         hash[key] << "#{subfield.value} "
@@ -19,14 +19,6 @@ class LinkedSeries < MarcField
   end
 
   private
-
-  def preprocessors
-    super + [:select_linkable_series_fields]
-  end
-
-  def select_linkable_series_fields
-    relevant_fields.select! { |field| series_is_linkable?(field) }
-  end
 
   def subfield_is_linkable?(field, subfield)
     if field.canonical_tag == '490'

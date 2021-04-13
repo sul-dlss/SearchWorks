@@ -12,34 +12,22 @@ class Instrumentation < MarcField
 
   private
 
-  def preprocessors
-    super + [:relevant_subfields]
-  end
-
-  def relevant_subfields
-    relevant_fields.each do |field|
-      field.subfields = field.subfields.reject do |subfield|
-        !%w(a b d n p s v).include?(subfield.code)
-      end
-    end
-  end
-
   def terminating_subfield?(subfield)
     %w(a b).include?(subfield.code)
   end
 
   def relevant_values
-    relevant_fields.map do |field|
+    extracted_fields.map do |field, subfields|
       {
         label: field_label(field),
-        value: process_field(field)
+        value: process_field(field, subfields)
       }
     end
   end
 
-  def process_field(field)
+  def process_field(_field, subfields)
     array = []
-    field.subfields.map do |subfield|
+    subfields.map do |subfield|
       value = subfield_value(subfield)
       if terminating_subfield?(subfield)
         array << value
@@ -93,6 +81,6 @@ class Instrumentation < MarcField
   end
 
   def tags
-    %w(382)
+    %w(382abdnpsv)
   end
 end
