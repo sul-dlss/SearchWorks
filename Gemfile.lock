@@ -51,7 +51,7 @@ GEM
     autoprefixer-rails (10.2.4.0)
       execjs
     bcrypt (3.1.16)
-    bibtex-ruby (5.1.6)
+    bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
     bindex (0.8.1)
     bitly (2.0.1)
@@ -211,13 +211,13 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5, >= 1.5.2)
-    ebsco-eds (1.1.0)
-      activesupport (~> 5.2)
-      bibtex-ruby (~> 5.1, >= 5.1.0)
+    ebsco-eds (1.1.1)
+      activesupport (>= 5.2, < 6.1)
+      bibtex-ruby (>= 5.1.0, < 7.0)
       citeproc (>= 1.0.4, < 2.0)
       citeproc-ruby (~> 1.0, >= 1.0.2)
       climate_control (~> 0)
-      csl (~> 1.4)
+      csl (>= 1.4.0, < 1.6)
       csl-styles (~> 1.0, >= 1.0.1.5)
       dotenv (~> 2.2)
       faraday (~> 0)
@@ -595,7 +595,7 @@ DEPENDENCIES
   devise-guests
   devise-remote-user
   dlss-capistrano
-  ebsco-eds (= 1.1.0)
+  ebsco-eds (= 1.1.1)
   faraday (~> 0.10)
   font-awesome-rails
   global_alerts
