@@ -20,7 +20,7 @@
             <img src="" class="thumb-<%= document[:id] %>" data-url="<%= document.image_urls(:thumbnail).first %>" data-alt="<%= get_main_title(document) %>">
             </a>
             <% if document.image_urls.length > 1 %>
-            <div class="img-label"><%= pluralize(document.image_urls.length,"image") %></div>
+            <div class="img-label"><%= pluralize(document.image_urls.length,"part") %></div>
             <% end %>
             </li>
             <% end %>
