@@ -12,7 +12,7 @@
 
   // Override bootstrap .visible-xs styling to make our logo inline-block
   // Bootstrap uses display: block !important for .visible-xs
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(xs) {
     .su-logo.visible-xs {
       display: inline-block !important;
     }
@@ -47,10 +47,12 @@
   overflow:hidden;
 }
 
-@media screen and (max-width: $screen-xs-max) {
-  #topnav {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
+@media screen {
+  @include media-breakpoint-down(xs) {
+    #topnav {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+    }
   }
 }

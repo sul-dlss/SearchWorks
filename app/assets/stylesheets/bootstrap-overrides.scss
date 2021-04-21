@@ -50,7 +50,7 @@
   margin-left: 2em;
 }
 
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   .dl-horizontal dd {
     margin-left: 10.5em;
   }

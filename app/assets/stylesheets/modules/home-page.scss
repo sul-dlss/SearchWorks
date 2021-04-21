@@ -63,9 +63,11 @@
       max-width: 48%;
       min-width: 48%;
 
-      @media screen and (min-width: $screen-md-min) {
-        max-width: 24%;
-        min-width: 24%;
+      @media screen {
+        @include media-breakpoint-up(md) {
+          max-width: 24%;
+          min-width: 24%;
+        }
       }
     }
   }

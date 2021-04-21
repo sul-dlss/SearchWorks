@@ -91,35 +91,37 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
-  .record-toolbar {
-    .navbar-collapse {
-      overflow-x: hidden;
-    }
 
-    .navbar-nav .open .dropdown-menu > li > a {
-      color: $white;
-      &:hover, &:focus {
-        text-decoration: underline;
+@media screen {
+  @include media-breakpoint-down(xs) {
+    .record-toolbar {
+      .navbar-collapse {
+        overflow-x: hidden;
       }
-    }
 
-    .navbar-header {
-      .navbar-toggle {
-        border: 0;
-        margin: 0 15px 0 0;
+      .navbar-nav .open .dropdown-menu > li > a {
+        color: $white;
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
       }
-    }
-    .navbar-collapse > ul > li {
-      text-align: right;
-      padding-right: 40px;
-      & a {
+
+      .navbar-header {
+        .navbar-toggle {
+          border: 0;
+          margin: 0 15px 0 0;
+        }
+      }
+      .navbar-collapse > ul > li {
         text-align: right;
-      }
-      form {
-        padding-right: 12px;
+        padding-right: 40px;
+        & a {
+          text-align: right;
+        }
+        form {
+          padding-right: 12px;
+        }
       }
     }
   }
-
 }

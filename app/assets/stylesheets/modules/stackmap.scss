@@ -69,11 +69,13 @@
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
-  .stackmap {
-    .map-template {
-      .osd {
-        height: 250px;
+@media screen {
+  @include media-breakpoint-down(xs) {
+    .stackmap {
+      .map-template {
+        .osd {
+          height: 250px;
+        }
       }
     }
   }

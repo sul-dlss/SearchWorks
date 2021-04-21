@@ -1,7 +1,9 @@
 #facets,
 #sidebar {
-  @media screen and (max-width: $screen-sm-min) {
-    padding-bottom: 0;
+  @media screen {
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -12,8 +14,10 @@
     .facets-toggle {
       margin-top: -10px;
     }
-    @media screen and (max-width: $screen-sm-min) {
-      margin-bottom: 0;
+    @media screen {
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -106,28 +106,32 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-min) {
-    .navbar-collapse {
-      padding: 0 15px;
-    }
+  @media screen {
+    @include media-breakpoint-down(sm) {
+      .navbar-collapse {
+        padding: 0 15px;
+      }
 
-    .sul-top-menu {
-      white-space: normal;
+      .sul-top-menu {
+        white-space: normal;
+      }
     }
   }
 
   // Responsive fixes for COVID-19 status
-  @media screen and (max-width: $screen-md-min) {
-    .navbar-nav > li {
-      a {
-        font-size: 1.4em;
+  @media screen {
+    @include media-breakpoint-down(md) {
+      .navbar-nav > li {
+        a {
+          font-size: 1.4em;
+        }
       }
-    }
 
-    .dropdown-menu {
-      li a,
-      li span {
-        font-size: 1.4em;
+      .dropdown-menu {
+        li a,
+        li span {
+          font-size: 1.4em;
+        }
       }
     }
   }

@@ -65,7 +65,7 @@
   margin-bottom: 10px;
 }
 
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(md) {
   .brief-document {
     .index-document-functions {
       margin-bottom: 25px;

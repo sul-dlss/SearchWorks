@@ -114,7 +114,7 @@
   padding-left: 15px;
 }
 
-@media (max-width: $screen-xs-max) {
+@include media-breakpoint-down(xs) {
   .accordion-sections {
     clear: right;
   }
