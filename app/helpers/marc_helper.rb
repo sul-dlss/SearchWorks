@@ -208,46 +208,6 @@ module MarcHelper
     return fields unless fields.blank?
   end
 
-  # Generate hierarchical structure of subject headings from marc
-  def get_subjects(document)
-    subs = ['600', '610', '611', '630', '650', '651', '653', '654', '656', '657', '658', '691', '693', '696', '697', '698', '699']
-    get_subjects_hierarchy('Subject', get_subjects_array(document, subs))
-  end
-
-  # Generate hierarchical structure of subject headings from marc
-  def get_genre_subjects(document)
-    get_subjects_hierarchy('Genre', get_subjects_array(document, ['655']))
-  end
-
-  def get_local_subjects(document)
-    get_subjects_hierarchy('Local subject', get_subjects_array(document, ['690']))
-  end
-
-  def get_subjects_hierarchy(label, subjects)
-    text = "<dt>#{label}</dt>".html_safe
-    unless subjects.blank?
-      subjects.each_with_index do |fields, i|
-        text << "<dd>".html_safe
-        link_text = ""
-        title_text = "Search: "
-        fields.each do |field|
-          link_text << " " unless field == subjects[i].first
-          link_text << field.strip
-          title_text << " - " unless field == subjects[i].first
-          title_text << "#{field.strip}"
-          text << link_to(field.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'subject_terms'), title: title_text)
-          text << " &gt; ".html_safe unless field == subjects[i].last
-        end
-        text << "</dd>".html_safe
-      end
-    end
-    return text unless text == "<dt>#{label}</dt>"
-  end
-
-  def get_subjects_array(document, subs)
-    document.subjects(subs).values
-  end
-
   def results_imprint_string(document)
     document.fetch(:imprint_display, []).first
   end

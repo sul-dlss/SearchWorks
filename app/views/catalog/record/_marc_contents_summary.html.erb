@@ -5,8 +5,7 @@
   <dd><%= document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
 <% end %>
 
-<%= render document.organization_and_arrangement if document.organization_and_arrangement.present? %>
-
+<%= render_if_present document.marc_field(:organization_and_arrangement) %>
 <%= render_if_present document.marc_field(504) %>
 
 <% toc = document.fetch(:toc_struct, []).first %>

@@ -37,4 +37,8 @@ class Subjects < MarcField
     end
     data
   end
+
+  def to_partial_path
+    'marc_fields/subjects'
+  end
 end

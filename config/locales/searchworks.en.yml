@@ -202,6 +202,12 @@ en:
         label: "Note"
       592:
         label: "Note"
+      600:
+        label: 'Subjects'
+      655:
+        label: 'Genre'
+      690:
+        label: 'Local subject'
       740:
         label: "Related Work"
       753:

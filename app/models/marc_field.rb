@@ -11,7 +11,7 @@ class MarcField
 
   def initialize(solr_document, tags = [])
     @document = solr_document
-    @tags = tags
+    @tags = Array(tags)
     @subfield_delimeter = subfield_delimeter
   end
 
