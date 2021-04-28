@@ -28,14 +28,6 @@ module MarcMetadata
     @linked_related_works ||= LinkedRelatedWorks.new(self)
   end
 
-  def physical_medium
-    @physical_medium ||= PhysicalMedium.new(self)
-  end
-
-  def place_name
-    @place_name ||= PlaceName.new(self)
-  end
-
   def database_note
     @database_note ||= DatabaseNote.new(self)
   end

@@ -5,11 +5,11 @@
 class MarcField
   include ActionView::Helpers::OutputSafetyHelper
 
-  attr_reader :document, :tags, :subfield_delimeter
+  attr_reader :document, :tags
 
   delegate :present?, to: :values
 
-  def initialize(solr_document, tags = [], subfield_delimeter: ' ')
+  def initialize(solr_document, tags = [])
     @document = solr_document
     @tags = tags
     @subfield_delimeter = subfield_delimeter
@@ -56,6 +56,17 @@ class MarcField
 
   def extracted_fields
     MarcExtractor.new(marc, tags).extract
+  end
+
+  def subfield_delimeter
+    @subfield_delimeter ||= I18n.t(
+      :"searchworks.marc_fields.#{i18n_key}.delimiter",
+      default: [
+        (:"searchworks.marc_fields.#{tags.first}.delimiter" if tags.present?),
+        (:"searchworks.marc_fields.#{tags.first.scan(/\d{3}|\w+/).first}.delimiter" if tags.present?),
+        :"searchworks.marc_fields.default.delimiter"
+      ].compact
+    )
   end
 
   def display_value(field, subfields)

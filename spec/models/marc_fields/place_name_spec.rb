@@ -2,12 +2,12 @@
 
 require 'spec_helper'
 
-describe PlaceName do
+describe 'Place names' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marcxml: place_name_fixture) }
 
-  subject(:place_name) { described_class.new(document) }
+  subject(:place_name) { document.marc_field(752) }
 
   it 'returns MARC 752' do
     expect(place_name.values).to be_present

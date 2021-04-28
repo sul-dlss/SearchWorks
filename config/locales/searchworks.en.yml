@@ -92,6 +92,18 @@ en:
         label: "Frequency"
       321:
         label: "Former publication frequency"
+      344:
+        label: 'Sound'
+        delimiter: '; '
+      345:
+        label: 'Projection'
+        delimiter: '; '
+      346:
+        label: 'Video'
+        delimiter: '; '
+      347:
+        label: 'Digital'
+        delimiter: '; '
       362:
         label: "Vol/date range"
       500:
@@ -225,13 +237,16 @@ en:
         label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
-      place_name:
+      752:
+        delimiter: ' -- '
         label: 'Location'
-      physical_medium:
+      340:
+        delimiter: '; '
         label: 'Medium'
       unlinked_series:
         label: Series
       default:
+        delimiter: ' '
         label: 'Field'
     request_link:
       aeon_note: Requires Aeon signup/login<br/>Opens in new tab
