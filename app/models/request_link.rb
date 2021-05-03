@@ -159,7 +159,7 @@ class RequestLink
 
   def disabled_current_locations_map
     {
-      'SPEC-COLL' => %w[SPEC-INPRO],
+      'SPEC-COLL' => %w[INPROCESS MISSING ON-ORDER SPEC-INPRO],
       'default' => %w[]
     }
   end
@@ -413,7 +413,6 @@ class RequestLink
         GOLDSTAR
         GUNST
         GUNST-30
-        INPROCESS
         LOCKED-MAP
         LOCKED-STK
         MANNING
@@ -426,7 +425,6 @@ class RequestLink
         MSS-30
         MSSX-30
         NEWTON
-        ON-ORDER
         RARE-BOOKS
         RARE-STOR
         RBC-30
