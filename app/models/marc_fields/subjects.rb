@@ -28,8 +28,8 @@ class Subjects < MarcField
         end
       elsif multi_a.length == 1
         temp_data_array << [multi_a.first, temp_subs_text].flatten.compact.join(' ') unless temp_subs_text.blank? and multi_a.empty?
-      else
-        temp_data_array << temp_subs_text.join(' ') unless temp_subs_text.blank?
+      elsif temp_subs_text.present?
+        temp_data_array << temp_subs_text.join(' ')
       end
 
       temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?

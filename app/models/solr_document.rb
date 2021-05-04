@@ -18,17 +18,14 @@ class SolrDocument
   include ModsData
   include IndexAuthors
   include MarcImprint
-  include MarcSeries
   include Druid
   include StacksImages
   include DigitalImage
   include SolrHoldings
   include SolrSet
-  include MarcInstrumentation
   include MarcBoundWithNote
   include SolrBookplates
   include Citable
-  include MarcLinkedSerials
   include MarcMetadata
   include EdsDocument
   include EdsSubjects

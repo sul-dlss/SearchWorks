@@ -55,9 +55,9 @@ describe MarcField do
         expect(subject.values[2]).to eq '300 Unmatched Romanized'
         expect(subject.values[3]).to eq '300 Matched Romanized'
         expect(subject.values[4]).to eq '300 Matched Vernacular'
-        expect(subject.values[5]).to eq '300 Unmatched Vernacular'
-        expect(subject.values[6]).to eq '350 Matched Romanized'
-        expect(subject.values[7]).to eq '350 Matched Vernacular'
+        expect(subject.values[5]).to eq '350 Matched Romanized'
+        expect(subject.values[6]).to eq '350 Matched Vernacular'
+        expect(subject.values[7]).to eq '300 Unmatched Vernacular'
       end
     end
   end

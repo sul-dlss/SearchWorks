@@ -3,12 +3,10 @@
 ###
 class BoundWithNote < MarcField
   def values
-    extracted_fields.map do |_field, subfields|
+    extracted_fields.map do |field, subfields|
       id = subfields.find { |subfield| subfield.code == 'c' }.value[/^(\d+)/]
 
-      value = subfields.reject { |subfield| subfield.code == 'c' }.map(&:value).join(subfield_delimeter)
-
-      { id: id, value: value }
+      { id: id, value: display_value(field, subfields.reject { |subfield| subfield.code == 'c' }) }
     end
   end
 

@@ -3,6 +3,8 @@
 #  behavior for other classes to inherit from
 ###
 class MarcField
+  include ActionView::Helpers::OutputSafetyHelper
+
   attr_reader :document, :tags, :subfield_delimeter
 
   delegate :present?, to: :values
@@ -22,6 +24,7 @@ class MarcField
       :"searchworks.marc_fields.#{i18n_key}.label",
       default: [
         (:"searchworks.marc_fields.#{tags.first}.label" if tags.present?),
+        (:"searchworks.marc_fields.#{tags.first.scan(/\d{3}|\w+/).first}.label" if tags.present?),
         :"searchworks.marc_fields.default.label"
       ].compact
     )
@@ -30,8 +33,8 @@ class MarcField
   def values
     return [] unless marc.present?
 
-    extracted_fields.map do |field, subfields|
-      subfields.map(&:value).join(subfield_delimeter)
+    @values ||= extracted_fields.map do |field, subfields|
+      display_value(field, subfields)
     end
   end
 
@@ -53,5 +56,18 @@ class MarcField
 
   def extracted_fields
     MarcExtractor.new(marc, tags).extract
+  end
+
+  def display_value(field, subfields)
+    safe_join subfields.map { |subfield| subfield_value(field, subfield) }, subfield_delimeter
+  end
+
+  def subfield_value(_field, subfield)
+    case subfield.code
+    when '4'
+      Constants::RELATOR_TERMS[subfield.value] || subfield.value
+    else
+      subfield.value
+    end
   end
 end

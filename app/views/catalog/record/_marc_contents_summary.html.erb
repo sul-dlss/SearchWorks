@@ -7,10 +7,7 @@
 
 <%= render document.organization_and_arrangement if document.organization_and_arrangement.present? %>
 
-<% biblio = get_data_with_label_from_marc(document.to_marc, "Bibliography", '504') %>
-<% unless biblio.nil? %>
-  <%= render_field_from_marc(biblio) %>
-<% end %>
+<%= render_if_present document.marc_field(504) %>
 
 <% toc = document.fetch(:toc_struct, []).first %>
 <% if toc.present? %>

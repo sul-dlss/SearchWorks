@@ -1,4 +1,8 @@
 module MarcHelper
+  def render_if_present(renderable)
+    render renderable if renderable.present?
+  end
+
   def get_data_with_label_from_marc(marc, label, tag, opts = {})
     linking_fields = %W(506 510 514 520 530 538 540 542 545 552 555 561 563 583 590)
     fields = []
@@ -37,30 +41,6 @@ module MarcHelper
       unmatched_vern = get_unmatched_vernacular(marc, tag)
     end
     return { label: label, fields: fields, unmatched_vernacular: unmatched_vern } unless (fields.empty? and unmatched_vern.nil?)
-  end
-
-  # Generate dt/dd pair with a link with a label given a marc field
-  def link_to_data_with_label_from_marc(marc, label, tag, url, opts = {})
-    new_fields = []
-    new_unmatched_vernacular = []
-    fields = get_data_with_label_from_marc(marc, label, tag, opts)
-    unless fields.nil? or fields[:fields].nil?
-      fields[:fields].each do |field|
-        vernacular = link_to(field[:vernacular], url.merge!(q: "\"#{field[:vernacular]}\"")) unless field[:vernacular].nil?
-        new_field = link_to(field[:field].strip, url.merge!(q: "\"#{field[:field].strip}\"")) unless field[:field].nil?
-        new_fields << { field: new_field, vernacular: vernacular }
-      end
-      unless fields.nil? or fields[:unmatched_vernacular].nil?
-        fields[:unmatched_vernacular].each do |field|
-          new_unmatched_vernacular << link_to(field, url.merge!(q: "\"#{field}\""))
-        end
-      end
-    end
-    return { label: label, fields: new_fields, unmatched_vernacular: new_unmatched_vernacular } unless (new_fields.empty? and new_unmatched_vernacular.empty?)
-  end
-
-  def link_to_contributor_from_marc(marc)
-    contributors_and_works_from_marc(marc)[:contributors]
   end
 
   def link_to_included_works_from_marc(marc)
@@ -268,63 +248,6 @@ module MarcHelper
     document.subjects(subs).values
   end
 
-  def get_740_works_from_marc(marc, label, field = '740')
-    if marc[field]
-      marc.find_all { |f| (field) === f.tag }.each do |f|
-        if f.indicator2 == "2"
-          return get_data_with_label_from_marc(marc, "Included Work", field)
-        else
-          return get_data_with_label_from_marc(marc, label, field)
-        end
-      end
-    end
-  end
-
-  def marc_264(marc)
-    combined_fields = {}
-    normal_fields = marc.find_all { |f| ("264") === f.tag }
-    unmatched_vernacular = get_unmatched_vernacular_fields(marc, "264")
-    unless normal_fields.blank? and unmatched_vernacular.blank?
-      allowed_subfields = %w(3 a b c)
-      new_fields = []
-      normal_fields.map { |f| new_fields << f } unless normal_fields.blank?
-      unmatched_vernacular.map { |f| new_fields << f } unless unmatched_vernacular.blank?
-      new_fields.each do |field|
-        key = marc_264_labels[:"#{field.indicator1}#{field.indicator2}"]
-        combined_fields[key] ||= []
-        field_text = []
-        field.each do |subfield|
-          field_text << subfield.value if allowed_subfields.include?(subfield.code)
-        end
-        combined_fields[key] << field_text.join(" ")
-        vernacular = get_marc_vernacular(marc, field)
-        combined_fields[key] << vernacular unless vernacular.blank?
-      end
-      return combined_fields
-    end
-    return combined_fields unless combined_fields.blank?
-  end
-
-  def marc_264_labels
-    {
-      " 0": "Production",
-      "20": "Former production",
-      "30": "Current production",
-      " 1": "Publication",
-      "21": "Former publication",
-      "31": "Current publication",
-      " 2": "Distribution",
-      "22": "Former distribution",
-      "32": "Current distribution",
-      " 3": "Manufacture",
-      "23": "Former manufacture",
-      "33": "Current manufacture",
-      " 4": "Copyright notice",
-      "24": "Former copyright",
-      "34": "Current copyright"
-    }
-  end
-
   def results_imprint_string(document)
     document.fetch(:imprint_display, []).first
   end
@@ -356,9 +279,5 @@ module MarcHelper
 
   def render_field_from_marc(fields, opts = {})
     render "catalog/field_from_marc", fields: fields, options: opts
-  end
-
-  def render_field_list_from_marc(fields, opts = {})
-    render "catalog/field_list_from_marc", fields: fields, options: opts
   end
 end
