@@ -44,8 +44,8 @@
 
 <% summary = document.fetch(:summary_struct, []).first %>
 <% if summary.present? %>
+  <dt>Summary</dt>
   <% if summary[:fields].present? %>
-    <dt>Summary</dt>
     <% summary[:fields].each do |field| %>
       <dd>
         <%= render_struct_field_data document, field[:field] %>
