@@ -38,13 +38,10 @@ module SearchWorks
     require 'purl_embed'
     require 'search_query_modifier'
     require 'blacklight_advanced_search/parsing_nesting_parser'
-    require 'search_works_marc'
 
     # load all marc fields
     config.autoload_paths += %W(#{config.root}/app/models/marc_fields)
 
-    # load all SearchWorksMarc
-    config.autoload_paths += %W(#{config.root}/lib/search_works_marc)
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'

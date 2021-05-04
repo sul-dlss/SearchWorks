@@ -14,7 +14,6 @@ class SolrDocument
   include DatabaseDocument
   include DigitalCollection
   include Extent
-  include Edition
   include CollectionMember
   include ModsData
   include IndexAuthors
