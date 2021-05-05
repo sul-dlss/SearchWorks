@@ -3,46 +3,6 @@ module MarcHelper
     render renderable if renderable.present?
   end
 
-  def get_data_with_label_from_marc(marc, label, tag, opts = {})
-    linking_fields = %W(506 510 514 520 530 538 540 542 545 552 555 561 563 583 590)
-    fields = []
-    if marc[tag] or (Constants::NIELSEN_TAGS.has_key?(tag) and marc[Constants::NIELSEN_TAGS[tag]])
-      label = "Publisher's Summary" if Constants::NIELSEN_TAGS.has_key?(tag) and marc[Constants::NIELSEN_TAGS[tag]] and tag == "520"
-      tag = Constants::NIELSEN_TAGS[tag] if Constants::NIELSEN_TAGS.has_key?(tag) and marc[Constants::NIELSEN_TAGS[tag]]
-      marc.find_all { |f| (tag) === f.tag }.each do |field|
-        field_text = ""
-        unless (Constants::HIDE_1ST_IND.include?(tag) and field.indicator1 == "1") or (Constants::HIDE_1ST_IND0.include?(tag) and field.indicator1 == "0")
-          if opts[:sub_fields] and opts[:sub_fields].length > 0
-            field.each do |sub_field|
-              field_text << "#{sub_field.value} " if opts[:sub_fields].include?(sub_field.code)
-            end
-          else
-            field.each do |sub_field|
-              if tag == "590" and sub_field.code == "c"
-                ckey = sub_field.value[/^(\d+)/]
-                ckey_link = link_to(ckey, url_for(ckey))
-                field_text << "#{sub_field.value.gsub(ckey, ckey_link)} " unless (ckey.nil? or ckey_link.nil?)
-                field_text = field_text.html_safe
-              elsif linking_fields.include?(tag) and sub_field.code == "u" and sub_field.value.strip =~ /^https*:\/\//
-                field_text << "#{link_to(sub_field.value, sub_field.value)} "
-                field_text = field_text.html_safe
-              elsif sub_field.code == "1" and Constants::NIELSEN_TAGS.has_value?(tag)
-                field_text << "<br/><span class='source'>#{Constants::SOURCES[sub_field.value]}</span>"
-                field_text = field_text.html_safe
-              elsif !Constants::EXCLUDE_FIELDS.include?(sub_field.code)
-                field_text << "#{sub_field.value} " unless (sub_field.code == 'a' and sub_field.value[0, 1] == "%")
-              end
-            end
-          end
-          fields << { field: field_text, vernacular: get_marc_vernacular(marc, field) } unless field_text.blank?
-        end
-      end
-    else
-      unmatched_vern = get_unmatched_vernacular(marc, tag)
-    end
-    return { label: label, fields: fields, unmatched_vernacular: unmatched_vern } unless (fields.empty? and unmatched_vern.nil?)
-  end
-
   def link_to_included_works_from_marc(marc)
     contributors_and_works_from_marc(marc)[:included_works]
   end
@@ -176,36 +136,6 @@ module MarcHelper
       end
     end
     return return_text.join(" ") unless return_text.blank?
-  end
-
-  def get_unmatched_vernacular(marc, tag)
-    fields = []
-    if marc['880']
-      marc.find_all { |f| ('880') === f.tag }.each do |field|
-        text = ""
-        unless field['6'].nil? or !field["6"].include?("-")
-          if field['6'].split("-")[1].gsub("//r", "") == "00" and field['6'].split("-")[0] == tag
-            field.each { |sub_field| Constants::EXCLUDE_FIELDS.include?(sub_field.code) ? nil : text << "#{sub_field.value} " }
-          end
-        end
-        fields << text.strip unless text.blank?
-      end
-    end
-    return fields unless fields.empty?
-  end
-
-  def get_unmatched_vernacular_fields(marc, tag)
-    fields = []
-    if marc['880']
-      marc.find_all { |f| ('880') === f.tag }.each do |field|
-        unless field['6'].nil? or !field["6"].include?("-")
-          if field['6'].split("-")[1].gsub("//r", "") == "00" and field['6'].split("-")[0] == tag
-            fields << field
-          end
-        end
-      end
-    end
-    return fields unless fields.blank?
   end
 
   def results_imprint_string(document)
