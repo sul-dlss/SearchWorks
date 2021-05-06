@@ -57,4 +57,8 @@ module MarcMetadata
   def linked_serials
     @linked_serials ||= LinkedSerials.new(self)
   end
+
+  def included_works
+    @included_works ||= IncludedWorks.new(self)
+  end
 end

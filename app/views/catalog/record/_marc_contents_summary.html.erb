@@ -68,4 +68,4 @@
   </dd>
 <% end %>
 
-<%= link_to_included_works_from_marc(document.to_marc) %>
+<%= render_if_present document.included_works %>

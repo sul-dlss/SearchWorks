@@ -222,6 +222,8 @@ en:
         label: "Contributor"
       799:
         label: "Related work"
+      included_works:
+        label: Included work
       imprint:
         label: Imprint
       language:

@@ -54,7 +54,7 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
     end
 
     it 'should include the included works section' do
-      expect(rendered).to have_css('dt', text: 'Included Work')
+      expect(rendered).to have_css('dt', text: 'Included work')
       expect(rendered).to have_css('dd a', count: 2)
       expect(rendered).to have_css('dd a', text: '710 with t ind2 Title! sub n after t')
       expect(rendered).not_to have_css('dt', text: 'Related Work')
