@@ -166,8 +166,4 @@ module MarcHelper
       ]
     }
   end
-
-  def render_field_from_marc(fields, opts = {})
-    render "catalog/field_from_marc", fields: fields, options: opts
-  end
 end
