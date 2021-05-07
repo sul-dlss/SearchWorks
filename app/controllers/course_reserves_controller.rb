@@ -1,7 +1,6 @@
 class CourseReservesController < ApplicationController
-  include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SearchHelper
+  include Blacklight::Searchable
   include CourseReserves
   copy_blacklight_config_from(CatalogController)
 
@@ -18,4 +17,6 @@ class CourseReservesController < ApplicationController
     end
     @course_reserves = course_reserves
   end
+
+  delegate :repository, to: :blacklight_config
 end

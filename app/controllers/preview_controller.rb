@@ -1,11 +1,10 @@
 class PreviewController < ApplicationController
   include Blacklight::Configurable
-  include Blacklight::SearchHelper
-  include Blacklight::SearchContext
+  include Blacklight::Searchable
   copy_blacklight_config_from(CatalogController)
 
   def show
-    @response, @document = fetch(params[:id])
+    @response, @document = search_service.fetch(params[:id])
     respond_to do |format|
       format.html do
         render preview: @document, layout: false
