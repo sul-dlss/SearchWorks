@@ -36,7 +36,7 @@
         _this.showAppropriatePanelHeading(data.length);
 
         $.each(data, function(i, exhibit) {
-          _this.panel.find('.panel-body').append(_this.exhibitMediaObject(exhibit));
+          _this.panel.find('.card-body').append(_this.exhibitMediaObject(exhibit));
         });
 
         _this.addToggleButtonBehavior();
