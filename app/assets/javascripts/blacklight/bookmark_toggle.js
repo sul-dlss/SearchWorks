@@ -3,7 +3,7 @@
 (function($) {
 //change form submit toggle to checkbox
     Blacklight.do_bookmark_toggle_behavior = function() {
-      $(Blacklight.do_bookmark_toggle_behavior.selector).bl_checkbox_submit({
+      $(Blacklight.do_bookmark_toggle_behavior.selector).blCheckboxSubmit({
          //css_class is added to elements added, plus used for id base
          css_class: "toggle_bookmark",
          error: function() {
