@@ -5,7 +5,7 @@ feature 'Record view', js: true do
     skip('Google Books API not working under test')
     visit solr_document_path('44')
 
-    within 'div.document' do
+    within '.document' do
       expect(page).to have_css('div.panel-online', visible: true)
 
       within 'div.panel-online' do
@@ -23,7 +23,7 @@ feature 'Record view', js: true do
     skip('Google Books API not working under test')
     visit solr_document_path('10')
 
-    within 'div.document' do
+    within '.document' do
       expect(page).to have_css('div.panel-related', visible: true)
 
       within 'div.panel-related' do

@@ -7,7 +7,7 @@ feature 'Record view' do
 
   scenario 'should have correct cover image attributes', js: true do
     skip('Google Books API not working under test')
-    within 'div.document' do
+    within '.document' do
       expect(page).to have_css('img.cover-image', visible: true)
       expect(page).to have_css(
         'img.cover-image.ISBN0393040801.ISBN9780393040807.OCLC36024029.LCCN96049953', visible: true
