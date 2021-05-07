@@ -14,14 +14,14 @@ feature 'Date Range', js: true do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path f: { eds_search_limiters_facet: ['Stanford has it'] }
     page.find('h3.card-header', text: 'Date').click
-    within '.panel.blacklight-pub_year_tisim' do
+    within '.card.blacklight-pub_year_tisim' do
       expect(page).to have_field 'range[pub_year_tisim][begin]', with: 1501
       expect(page).to have_field 'range[pub_year_tisim][end]', with: 2018
       fill_in 'range_pub_year_tisim_begin', with: 1900
       click_button 'Apply'
     end
 
-    within '.panel.blacklight-pub_year_tisim' do
+    within '.card.blacklight-pub_year_tisim' do
       expect(page).to have_field 'range[pub_year_tisim][begin]', with: 1900, visible: true
     end
   end
