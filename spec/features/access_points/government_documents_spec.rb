@@ -21,8 +21,8 @@ describe 'Government Documents Access Point' do
 
   it 'returns the govenment document results' do
     within('.constraint') do
-      expect(page).to have_css('.filterName', text: 'Genre')
-      expect(page).to have_css('.filterValue', text: 'Government document')
+      expect(page).to have_css('.filter-name', text: 'Genre')
+      expect(page).to have_css('.filter-value', text: 'Government document')
     end
 
     expect(total_results).to eq 2

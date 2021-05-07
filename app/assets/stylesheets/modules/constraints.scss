@@ -26,13 +26,13 @@
   }
   @include media-breakpoint-down(xs) {
     .constraint {
-      &.query .filterValue {
+      &.query .filter-value {
         max-width: 227px;
       }
-      &.filter .filterValue {
+      &.filter .filter-value {
         max-width: 150px;
       }
-      .filterValue {
+      .filter-value {
         display: inline-block;
         white-space: nowrap;
         overflow: hidden;
