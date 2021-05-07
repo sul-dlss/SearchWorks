@@ -1,19 +1,23 @@
 class BrowseController < ApplicationController
-  include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SearchHelper
+  include Blacklight::Searchable
+  include Blacklight::SearchContext
   include Thumbnail
   copy_blacklight_config_from(CatalogController)
 
+  before_action do
+    blacklight_config.track_search_session = false
+  end
+
   def index
     if params[:start].present?
-      @response, @original_doc = fetch(params[:start])
+      @response, @original_doc = search_service.fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
             "static",
-            blacklight_config,
+            search_service,
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 9,
@@ -29,13 +33,13 @@ class BrowseController < ApplicationController
 
   def nearby
     if params[:start].present?
-      @response, @original_doc = fetch(params[:start])
+      @response, @original_doc = search_service.fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
             "static",
-            blacklight_config,
+            search_service,
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 12,

@@ -1,17 +1,12 @@
 class NearbyOnShelf
-  include Blacklight::SearchHelper
-  attr_reader :items
-  def initialize(type, config, options)
-    @blacklight_config = config
+  attr_reader :items, :search_service
+  def initialize(type, search_service, options)
+    @search_service = search_service
     if type == "ajax"
       @items = get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
     else
       @items = get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
     end
-  end
-
-  def blacklight_config
-    @blacklight_config
   end
 
   private
@@ -87,7 +82,10 @@ class NearbyOnShelf
   # Each html list item must match a desired value
   def get_spines_from_field_values(desired_values, field)
     spines_hash = {}
-      response, docs = search_results(q: { field => desired_values.compact })
+      response, docs = search_service.search_results do |builder|
+        builder.with(q: { field => desired_values.compact })
+      end
+
       docs.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
         spines_hash.merge!(hsh)
