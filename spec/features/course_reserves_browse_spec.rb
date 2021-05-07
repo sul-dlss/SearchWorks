@@ -24,7 +24,7 @@ feature 'Course reserves browse', js: true do
   end
   scenario 'should have search fields dropdown' do
     visit course_reserves_path
-    expect(page).to have_css('select.search_field')
+    expect(page).to have_css('select.search-field')
   end
   scenario 'should activate the datatables plugin correctly' do
     visit course_reserves_path

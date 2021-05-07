@@ -5,7 +5,7 @@
   <% unless search_fields.empty? %>
     <span class="input-group-addon for-search-field">
       <label for="search_field" class="sr-only"><%= t('blacklight.search.form.search_field.label') %></label>
-      <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t('blacklight.search.form.search_field.title'), :id=>"search_field", :class=>"search_field") %>
+      <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t('blacklight.search.form.search_field.title'), :id=>"search_field", :class=>"custom-select search-field") %>
     </span>
   <% end %>
     <label for="q" class="sr-only"><%= t('blacklight.search.form_label') %></label>
