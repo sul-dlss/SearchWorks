@@ -1,11 +1,11 @@
 <% sfx_url = document.access_panels.sfx.links.first.href %>
-<div class="panel panel-default access-panel panel-online sfx-panel" data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: URI.encode(sfx_url)) %>">
-  <div class="access-panel-heading panel-heading">
+<div class="card access-panel panel-online sfx-panel" data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: URI.encode(sfx_url)) %>">
+  <div class="access-panel-heading card-header">
     <h3>
       All available sources
     </h3>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
     <div data-behavior="sfx-panel-body">
       <div class='loading-spinner'></div>
     </div>

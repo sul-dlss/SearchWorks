@@ -9,7 +9,7 @@ feature 'Record view', js: true do
       expect(page).to have_css('div.panel-online', visible: true)
 
       within 'div.panel-online' do
-        expect(page).to have_css('div.panel-heading', visible: true)
+        expect(page).to have_css('div.card-header', visible: true)
         expect(page).to have_css('h3', text: 'Available online', visible: true)
         within('.google-preview') do
           expect(page).to have_css('a.full-view', text: '(Full view)', visible: true)
@@ -27,7 +27,7 @@ feature 'Record view', js: true do
       expect(page).to have_css('div.panel-related', visible: true)
 
       within 'div.panel-related' do
-        expect(page).to have_css('div.panel-heading', visible: true)
+        expect(page).to have_css('div.card-header', visible: true)
         expect(page).to have_css('h3', text: 'More options', visible: true)
         within('.google-preview') do
           expect(page).to have_css('a.limited-preview', text: '(Limited preview)', visible: true)

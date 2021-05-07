@@ -1,17 +1,17 @@
 <%
   document ||= @document
   book_ids = get_book_ids(@document)
-  visible = document[:oclc].present? ?  'show' : 'hide'
+  visible = document[:oclc].present? ?  'd-block' : 'd-none'
   css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
 %>
 
-<div class="panel panel-default access-panel panel-related <%= visible %>">
-  <div class="access-panel-heading panel-heading">
+<div class="card access-panel panel-related <%= visible %>">
+  <div class="access-panel-heading card-header">
     <h3>
       More options
     </h3>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
     <ul class="links">
       <% if document[:oclc].present? %>
         <li class="worldcat">

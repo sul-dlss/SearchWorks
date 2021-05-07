@@ -1,11 +1,11 @@
 <% document ||= @document %>
 
 <% if document.access_panels.course_reserve.present? %>
-  <div class="panel panel-default access-panel panel-course-reserve">
-    <div class="access-panel-heading panel-heading">
+  <div class="card access-panel panel-course-reserve">
+    <div class="card-header access-panel-heading">
       <h3>Course reserve</h3>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <dl>
         <% document.access_panels.course_reserve.courses.each do |course| %>
           <dt>Course</dt>

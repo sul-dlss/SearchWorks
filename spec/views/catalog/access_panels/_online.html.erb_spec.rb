@@ -18,7 +18,7 @@ describe "catalog/access_panels/_online.html.erb" do
       assign(:document, SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }]))
       render
       expect(rendered).to have_css(".panel-online")
-      expect(rendered).to have_css(".panel-heading", text: "Available online")
+      expect(rendered).to have_css(".card-header", text: "Available online")
       expect(rendered).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do
@@ -32,7 +32,7 @@ describe "catalog/access_panels/_online.html.erb" do
       assign(:document, SolrDocument.new(marcxml: simple_856, druid: 'ng161qh7958'))
       render
       expect(rendered).to have_css '.panel-online'
-      expect(rendered).to have_css '.panel-heading', text: 'Also available at'
+      expect(rendered).to have_css '.card-header', text: 'Also available at'
     end
 
     context 'when the record has an SFX link' do
@@ -63,11 +63,11 @@ describe "catalog/access_panels/_online.html.erb" do
 
       it "should render a special panel heading" do
         render
-        expect(rendered).to have_css(".panel-heading", text: "Search this database")
+        expect(rendered).to have_css(".card-header", text: "Search this database")
       end
       it "should render a special panel footer" do
         render
-        expect(rendered).to have_css(".panel-footer a", text: "Report a connection problem")
+        expect(rendered).to have_css(".card-footer a", text: "Report a connection problem")
       end
     end
   end

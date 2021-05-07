@@ -1,10 +1,10 @@
 <% if @document.access_panels.temporary_access? %>
   <% temp_access = @document.access_panels.temporary_access %>
-  <div class="panel panel-default temporary-access panel-online">
-    <div class="access-panel-heading panel-heading">
+  <div class="card temporary-access panel-online">
+    <div class="access-panel-heading card-header">
       <h3>Temporary access</h3>
     </div>
-    <div class="panel-body">
+    <div class="card">
       <span class="stanford-only">
         <%= temp_access.link.html.html_safe %>
       </span>

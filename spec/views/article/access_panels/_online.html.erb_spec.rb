@@ -13,15 +13,15 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
   end
 
   it 'renders the panel' do
-    expect(rendered).to have_css('.panel.access-panel.panel-online')
+    expect(rendered).to have_css('.card.access-panel.panel-online')
   end
 
   it 'has the proper heading' do
-    expect(rendered).to have_css('.panel-heading h3', text: 'Best source')
+    expect(rendered).to have_css('.card-header h3', text: 'Best source')
   end
 
   it 'includes EDS fulltext links' do
-    expect(rendered).to have_css('.panel-body ul li a', text: 'View full text')
+    expect(rendered).to have_css('.card-body ul li a', text: 'View full text')
   end
 
   context 'fulltext PDF links (e.g. "detail" href)' do
@@ -34,7 +34,7 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
 
     it 'links to the article_fulltext_link route instead of "detail"' do
       content = Capybara.string(rendered.to_s)
-      link = content.find('.panel-body li a')
+      link = content.find('.card-body li a')
       expect(link['href']).not_to include('detail')
       expect(link['href']).to match(%r{abc123\/pdf\/fulltext})
     end
@@ -48,7 +48,7 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
     end
 
     it 'includes label icon' do
-      expect(rendered).to have_css('.panel-body ul li a.sfx', text: /^Find full text or request/)
+      expect(rendered).to have_css('.card-body ul li a.sfx', text: /^Find full text or request/)
     end
   end
 end
