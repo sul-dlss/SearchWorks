@@ -1,8 +1,8 @@
 <% if has_alternative_views? %>
 <div class="view-type">
   <span class="sr-only"><%= t('blacklight.search.view_title') %></span>
-  <div id="view-type-dropdown" class="btn-group">
-    <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div id="view-type-dropdown" class="dropdown">
+    <button type="button" class="btn btn-sul-toolbar dropdown-toggle" id="viewTypeDowndownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="hidden-xs hidden-sm">
         <%= render_view_type_group_icon document_index_view_type %>
       </span>
@@ -10,7 +10,7 @@
       <span class="caret"></span>
     </button>
 
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu" role="menu" aria-labelledby="viewTypeDowndownButton">
       <%  document_index_views.each do |view, config| %>
       <li role="presentation">
         <%= link_to url_for(params.merge(:view => view)), :title => t("blacklight.search.view_title.#{view}", default: t("blacklight.search.view.#{view}", default: blacklight_config.view[view].title)), 'aria-current': current_view == view.to_s, role: 'menuitem', tabindex: '-1', :class => "view-type-#{ view.to_s.parameterize }" do %>
