@@ -11,11 +11,11 @@ feature 'EDS Facets', js: true do
           eds_search_limiters_facet: ['Stanford has it'],
           eds_publication_type_facet: ['Academic journals']
         }
-        within '.panel.blacklight-eds_publication_type_facet' do
+        within '.card.blacklight-eds_publication_type_facet' do
           expect(page).to have_css('.alert-warning')
           click_link 'remove'
         end
-        page.find('h3.panel-title', text: 'Source type').click
+        page.find('h3.card-header', text: 'Source type').click
         within '.panel.blacklight-eds_publication_type_facet' do
           expect(page).not_to have_css('.facet_limit-active')
           expect(page).not_to have_css('.alert-warning')
@@ -30,12 +30,12 @@ feature 'EDS Facets', js: true do
           eds_search_limiters_facet: ['Stanford has it'],
           eds_content_provider_facet: ['Journal provider']
         }
-        within '.panel.blacklight-eds_content_provider_facet' do
+        within '.card.blacklight-eds_content_provider_facet' do
           expect(page).to have_css('.alert-warning')
           click_link 'remove'
         end
-        page.find('h3.panel-title', text: 'Database').click
-        within '.panel.blacklight-eds_content_provider_facet' do
+        page.find('h3.card-header', text: 'Database').click
+        within '.card.blacklight-eds_content_provider_facet' do
           expect(page).not_to have_css('.facet_limit-active')
           expect(page).not_to have_css('.alert-warning')
         end

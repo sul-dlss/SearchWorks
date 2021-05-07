@@ -29,16 +29,16 @@ feature "Advanced Search" do
         expect(page).to have_css("input#isbn_search")
       end
       within ".limit-criteria" do
-        expect(page).to have_css("h3.panel-title a", text: "Access")
+        expect(page).to have_css("h3.card-header a", text: "Access")
         expect(page).to have_css("label", text: "At the Library")
         expect(page).to have_css("input#f_inclusive_access_facet_at-the-library")
-        expect(page).to have_css("h3.panel-title a", text: "Resource type")
+        expect(page).to have_css("h3.card-header a", text: "Resource type")
         expect(page).to have_css("label", text: "Book")
         expect(page).to have_css("input#f_inclusive_format_main_ssim_book")
-        expect(page).to have_css("h3.panel-title a", text: "Library")
+        expect(page).to have_css("h3.card-header a", text: "Library")
         expect(page).to have_css("label", text: "Green")
         expect(page).to have_css("input#f_inclusive_building_facet_green")
-        expect(page).to have_css("h3.panel-title a", text: "Language")
+        expect(page).to have_css("h3.card-header a", text: "Language")
         expect(page).to have_css("label", text: "Chinese")
         expect(page).to have_css("input#f_inclusive_language_chinese")
       end

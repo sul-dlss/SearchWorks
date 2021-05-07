@@ -18,7 +18,7 @@ feature "Databases Access Point" do
     within("#facets") do
       within(".blacklight-db_az_subject") do
         expect(page).not_to have_css(".collapsed")
-        expect(page).to have_css(".panel-title", text: "Database topic")
+        expect(page).to have_css(".card-header", text: "Database topic")
       end
     end
   end
