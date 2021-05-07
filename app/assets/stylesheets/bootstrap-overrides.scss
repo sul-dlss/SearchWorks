@@ -41,18 +41,27 @@
   z-index: 1040;
 }
 
-.dl-horizontal dt {
-  text-align: left;
-  width: 10em;
-}
+$dl-horizontal-offset:        180px !default;
 
-.dl-horizontal dd {
-  margin-left: 2em;
-}
+.dl-horizontal {
+  dd {
+    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+    margin-left: 2em;
+  }
 
-@include media-breakpoint-up(sm) {
-  .dl-horizontal dd {
-    margin-left: 10.5em;
+  @include media-breakpoint-up(sm) {
+    dt {
+      float: left;
+      width: 10em;
+      clear: left;
+      text-align: left !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    dd {
+      margin-left: 10.5em;
+    }
   }
 }
 
