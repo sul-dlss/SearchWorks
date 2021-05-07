@@ -51,6 +51,9 @@ class CatalogController < ApplicationController
 
     config.fetch_many_document_params = { fl: '*' }
 
+    config.document_solr_path = nil
+    config.document_solr_request_handler = 'document'
+
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 
