@@ -86,7 +86,7 @@ class NearbyOnShelf
         builder.with(q: { field => desired_values.compact })
       end
 
-      docs.each do |doc|
+      response.documents.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
         spines_hash.merge!(hsh)
       end

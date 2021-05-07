@@ -23,9 +23,7 @@ class BrowseController < ApplicationController
              before: 9,
              after: 10,
              page: params[:page] }
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
+          ).items.pluck(:doc)
         end
       end
     end
@@ -44,9 +42,7 @@ class BrowseController < ApplicationController
              preferred_barcode: barcode,
              before: 12,
              after: 12 }
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
+          ).items.pluck(:doc)
           render browse: @document_list, layout: false
         end
       end
