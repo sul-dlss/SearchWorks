@@ -8,7 +8,7 @@
   <h3 class="modal-title"><%= t('blacklight.search.librarian_view.title') %></h3>
 </div>
 <% if @document.respond_to?(:to_marc) %>
-  <%= render "marc_view" %>
+  <%= render "marc_view", document: @document %>
 <% elsif @document.mods.present? %>
   <%= render "mods_view"%>
 <% else %>
