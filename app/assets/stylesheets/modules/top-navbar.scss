@@ -10,14 +10,6 @@
   display: table;
   padding: 2px 0;
 
-  // Override bootstrap .visible-xs styling to make our logo inline-block
-  // Bootstrap uses display: block !important for .visible-xs
-  @include media-breakpoint-down(xs) {
-    .su-logo.visible-xs {
-      display: inline-block !important;
-    }
-  }
-
   .header-links {
     float: right;
     margin-top: 2px;
