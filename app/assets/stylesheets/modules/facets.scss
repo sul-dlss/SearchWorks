@@ -43,6 +43,8 @@
   }
 
   .card-header {
+    background: $sul-panel-heading-default !important;
+
     h3 {
       font-weight: 400;
     }
