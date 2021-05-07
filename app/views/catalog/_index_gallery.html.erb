@@ -5,7 +5,7 @@
     :counter => counter,
     :suppress_link => true
   }
-  context_href = (document_link_params(document, {:counter => counter}))[:data][:"context-href"]
+  context_href = (document_link_params(document, {:counter => counter})).dig(:data, :'context-href')
 %>
 
 <div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], ".#{preview_container}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >

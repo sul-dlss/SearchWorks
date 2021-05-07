@@ -44,8 +44,8 @@ describe 'Bookplates' do
       end
 
       within('.constraint') do
-        expect(page).to have_css('.filterName', text: 'Acquired with support from')
-        expect(page).to have_css('.filterValue', text: 'Susan and Ruth Sharp Fund')
+        expect(page).to have_css('.filter-name', text: 'Acquired with support from')
+        expect(page).to have_css('.filter-value', text: 'Susan and Ruth Sharp Fund')
       end
 
       expect(page).to have_css('h2', text: '1 catalog result')
@@ -61,8 +61,8 @@ describe 'Bookplates' do
       end
 
       within('.constraint') do
-        expect(page).to have_css('.filterName', text: 'Acquired with support from')
-        expect(page).to have_css('.filterValue', text: 'The Edgar Amos Boyles Centennial Book Fund')
+        expect(page).to have_css('.filter-name', text: 'Acquired with support from')
+        expect(page).to have_css('.filter-value', text: 'The Edgar Amos Boyles Centennial Book Fund')
       end
 
       expect(page).to have_css('h2', text: '1 catalog result')

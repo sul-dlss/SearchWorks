@@ -1,11 +1,11 @@
 .callnumber button.collapsed {
   @extend .btn;
-  @extend .btn-default;
+  @extend .btn-secondary;
 }
 
 .callnumber button {
   @extend .btn;
-  @extend .btn-default;
+  @extend .btn-secondary;
 }
 
 .view-full-page {
@@ -13,10 +13,12 @@
   text-align: right;
 }
 
-@media screen and (max-width: $screen-md) {
-  .view-full-page {
-    line-height: normal;
-    text-align: left;
+@media screen {
+  @include media-breakpoint-down(md) {
+    .view-full-page {
+      line-height: normal;
+      text-align: left;
+    }
   }
 }
 
@@ -102,11 +104,15 @@
 }
 
 .embed-browse-control{
-  @extend .carousel-control;
+  @extend .carousel-control-prev;
   top: 0px;
   bottom: 0px;
   opacity: 0.65;
   width: 5%;
+}
+
+.embed-browse-control.right {
+  @extend .carousel-control-next;
 }
 
 .record-browse-nearby {

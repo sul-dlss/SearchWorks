@@ -6,7 +6,7 @@ describe "Responsive Home Page", feature: true, js: true do
       visit root_path
 
       within(".blacklight-access_facet") do
-        expect(page).to have_css(".panel-title", text: "Access")
+        expect(page).to have_css(".card-header", text: "Access")
         within("ul.facet-values") do
           expect(page).to have_css("li a", text: "Online", visible: true)
           expect(page).to have_css("li a", text: "At the Library", visible: true)
@@ -18,7 +18,7 @@ describe "Responsive Home Page", feature: true, js: true do
       visit root_path
 
       within(".blacklight-access_facet") do
-        expect(page).to have_css(".panel-title", text: "Access")
+        expect(page).to have_css(".card-header", text: "Access")
         expect(page).not_to have_css("li a", text: "Online", visible: true)
         expect(page).not_to have_css("li a", text: "At the Library", visible: true)
       end

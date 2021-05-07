@@ -10,9 +10,9 @@ feature "Home Page" do
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
     expect(page).to have_css('h2', text: "Find materials by…")
-    expect(page).to have_css(".panel-heading", text: "Resource type")
-    expect(page).to have_css(".panel-heading", text: "Access")
-    expect(page).to have_css(".panel-heading", text: "Library")
+    expect(page).to have_css(".card-header", text: "Resource type")
+    expect(page).to have_css(".card-header", text: "Access")
+    expect(page).to have_css(".card-header", text: "Library")
   end
   scenario "'Featured sets' section should display" do
     expect(page).to have_css(".features a", text: "Digital collections")
@@ -39,7 +39,7 @@ feature "Home Page" do
   end
   scenario "should have the library facet hidden by default", js: true do
     within(".blacklight-building_facet") do
-      expect(page).to have_css(".panel-title", text: "Library")
+      expect(page).to have_css(".card-header", text: "Library")
       expect(page).not_to have_css('li a', visible: true)
     end
   end

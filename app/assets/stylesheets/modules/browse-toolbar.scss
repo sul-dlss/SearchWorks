@@ -21,11 +21,13 @@
   }
 }
 
-@media only screen and (max-width : $screen-sm) {
-  .record-browse-nearby {
-    .callnumber {
-      display: block;
-      margin: 10px 10px 0 0;
+@media only screen {
+  @include media-breakpoint-down(sm) {
+    .record-browse-nearby {
+      .callnumber {
+        display: block;
+        margin: 10px 10px 0 0;
+      }
     }
   }
 }

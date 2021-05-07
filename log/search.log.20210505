@@ -1,0 +1,405 @@
+# Logfile created on 2021-05-05 19:27:16 -0700 by logger.rb/v1.4.2
+2021-05-06 02:27:37.502	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=An object	{"search_field":"search_title"}
+2021-05-06 02:27:37.719	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=Doe, Jane	{"search_field":"search_author"}
+2021-05-06 02:27:41.183	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:27:41.335	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:27:41.496	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:27:41.851	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:42.046	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:27:42.521	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:27:42.971	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:43.395	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:53.795	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:54.358	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:54.994	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:55.594	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:56.028	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:56.421	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:56.893	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:27:57.315	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:28:07.891	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{}
+2021-05-06 02:28:08.082	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:14.023	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:28:14.095	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:28:14.215	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:28:16.113	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:16.207	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:28:16.297	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:28:18.153	127.0.0.1	catalog	show	search=	doc=2	pos=	total=	q=	{}
+2021-05-06 02:28:18.224	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:18.311	127.0.0.1	catalog	show	search=	doc=3	pos=	total=	q=	{}
+2021-05-06 02:28:18.383	127.0.0.1	catalog	show	search=	doc=38	pos=	total=	q=	{}
+2021-05-06 02:28:19.296	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=38	{"search_field":"search"}
+2021-05-06 02:28:20.773	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:20.904	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:21.057	127.0.0.1	catalog	show	search=	doc=20	pos=	total=	q=	{}
+2021-05-06 02:28:21.321	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=20	{"search_field":"search"}
+2021-05-06 02:28:22.147	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=20	{"search_field":"search"}
+2021-05-06 02:28:22.784	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:22.852	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:23.019	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:28:23.182	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:28:23.966	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:28:24.459	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:28:24.793	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","sort":"new-to-libs","format":"atom"}
+2021-05-06 02:28:27.232	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"course":["CAT-401-01-01"],"instructor":["McDonald, Ronald"]}}
+2021-05-06 02:28:27.861	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:28:28.719	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:28:28.952	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=24	q=	{"f":{"access_facet":["Online"]}}
+2021-05-06 02:28:30.466	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=9999zzzz2222	{"search_field":"search"}
+2021-05-06 02:28:30.641	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=9999zzzz2222	{"search_field":"search"}
+2021-05-06 02:28:32.533	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Example Search	{}
+2021-05-06 02:28:33.167	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=kittens	{}
+2021-05-06 02:28:33.838	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=kittens	{}
+2021-05-06 02:28:34.563	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:28:34.630	127.0.0.1	catalog	show	search=	doc=44	pos=	total=	q=	{}
+2021-05-06 02:28:34.708	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:28:34.787	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:28:34.865	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:28:34.930	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:28:35.071	127.0.0.1	catalog	show	search=1	doc=45	pos=	total=	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs"}
+2021-05-06 02:28:35.154	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=1	q=	{"f":{"fund_facet":["qr382wm8668"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:28:35.188	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=57	{"format":"json"}
+2021-05-06 02:28:35.464	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=37	{"search_field":"search"}
+2021-05-06 02:28:35.566	127.0.0.1	catalog	show	search=	doc=37	pos=	total=	q=	{}
+2021-05-06 02:28:35.934	0.0.0.0	catalog	index	search=1	counter=1	page=0	numFound=0	q=x	{}
+2021-05-06 02:28:38.240	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:28:38.639	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:28:39.077	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=24	q=	{"f":{"access_facet":["Online"]}}
+2021-05-06 02:28:40.260	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:28:41.904	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:28:42.419	127.0.0.1	catalog	show	search=	doc=29	pos=	total=	q=	{}
+2021-05-06 02:28:43.224	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:28:43.790	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:44.228	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"gallery"}
+2021-05-06 02:28:44.953	127.0.0.1	catalog	show	search=	doc=24	pos=	total=	q=	{}
+2021-05-06 02:28:45.057	127.0.0.1	catalog	show	search=	doc=57	pos=	total=	q=	{}
+2021-05-06 02:28:46.042	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q="g70.212 .a426 2011:test"	{"search_field":"call_number"}
+2021-05-06 02:28:46.291	127.0.0.1	catalog	show	search=1	doc=1	pos=1	total=1	q="g70.212 .a426 2011:test"	{"search_field":"call_number"}
+2021-05-06 02:28:46.795	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=statement	{"f":{"access_facet":["Online"]},"search_field":"search"}
+2021-05-06 02:28:47.384	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=sdfsda	{"search_field":"search_author"}
+2021-05-06 02:28:48.686	127.0.0.1	catalog	show	search=	doc=17	pos=	total=	q=	{}
+2021-05-06 02:28:48.785	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=17	{}
+2021-05-06 02:28:48.950	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:28:49.466	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:28:50.197	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:28:50.606	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:28:51.398	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:52.103	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:52.354	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:53.105	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:53.366	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:53.989	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:28:54.698	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:54.933	127.0.0.1	catalog	show	search=1	doc=7	pos=1	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:28:55.515	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:28:55.597	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:28:56.064	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=1	{"search_field":"search"}
+2021-05-06 02:28:56.234	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=10	{"search_field":"search"}
+2021-05-06 02:28:56.387	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{"search_field":"search"}
+2021-05-06 02:28:56.574	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=35	{"search_field":"search"}
+2021-05-06 02:28:57.040	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:28:57.575	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:28:58.115	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:28:58.558	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:28:59.039	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:28:59.541	127.0.0.1	catalog	show	search=	doc=31	pos=	total=	q=	{}
+2021-05-06 02:28:59.916	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=3	q=31	{"search_field":"search"}
+2021-05-06 02:29:00.661	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:04.462	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:05.964	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:06.645	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{}
+2021-05-06 02:29:06.864	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:29:07.316	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"brief"}
+2021-05-06 02:29:08.003	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:29:08.063	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=0	q=abcde	{"f":{"collection":["29"]},"search_field":"search"}
+2021-05-06 02:29:08.983	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:10.116	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:12.162	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:13.218	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:14.393	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:14.997	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:29:15.370	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:29:16.086	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:29:17.570	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:29:18.421	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:29:19.391	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:29:20.402	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=4	q=34	{"search_field":"search"}
+2021-05-06 02:29:21.192	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:29:21.579	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"gallery"}
+2021-05-06 02:29:23.820	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=sdfsda	{"search_field":"search_author"}
+2021-05-06 02:29:24.048	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format_main_ssim":["Book"]}}
+2021-05-06 02:29:24.118	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=0	q=sdfsda	{"f":{"format_main_ssim":["Book"]},"search_field":"search"}
+2021-05-06 02:29:24.377	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=	{"op":"AND","search":"","search_title":"sdfsda","search_author":"","subject_terms":"","series_search":"","pub_search":"","isbn_search":"","range":{"pub_year_tisim":{"begin":"","end":""}},"sort":"relevance","search_field":"advanced","button":""}
+2021-05-06 02:29:24.796	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Kittens	{}
+2021-05-06 02:29:25.088	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=><script>alert("BAD JS")</script>	{"f":{"building_facet":["Engineering (Terman)"]},"search_field":"title"}
+2021-05-06 02:29:36.261	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:37.514	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:29:38.106	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:29:38.493	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:29:39.911	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"building_facet":["Education (Cubberley)"]}}
+2021-05-06 02:29:40.085	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"building_facet":["Art \u0026 Architecture (Bowes)"]}}
+2021-05-06 02:29:40.286	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=7	q=	{"f":{"building_facet":["Green"]}}
+2021-05-06 02:29:40.374	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:29:40.456	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:29:41.054	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"op":"AND","search":"","search_title":"","search_author":"","subject_terms":"","series_search":"","pub_search":"","isbn_search":"","range":{"pub_year_tisim":{"begin":"","end":""}},"f_inclusive":{"format_main_ssim":["Book"]},"sort":"relevance","search_field":"advanced","button":""}
+2021-05-06 02:29:42.206	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:42.686	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:29:43.626	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:44.538	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:45.525	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:46.553	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:47.736	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:48.695	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:49.649	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:50.580	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:51.825	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:29:52.482	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:29:52.995	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:29:54.029	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:54.478	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","view":"gallery"}
+2021-05-06 02:29:55.575	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:29:56.965	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"per_page":"50","search_field":"search"}
+2021-05-06 02:29:57.604	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:29:57.983	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:29:58.428	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:29:58.779	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:29:59.772	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:30:00.782	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:30:01.606	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","sort":"author"}
+2021-05-06 02:30:04.250	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q="stuff"	{"search_field":"search"}
+2021-05-06 02:30:05.128	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:30:05.303	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:05.654	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:06.577	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:06.879	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:07.521	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:07.792	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:08.380	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:08.701	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:09.507	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"default"}
+2021-05-06 02:30:10.329	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:30:10.428	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=10	{}
+2021-05-06 02:30:11.079	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:30:11.206	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:30:11.335	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:30:11.424	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=4	q=	{"f":{"format_main_ssim":["Database"]},"prefix":"s","sort":"title"}
+2021-05-06 02:30:11.545	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:30:11.681	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:30:11.982	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=A search	{"search_field":"search"}
+2021-05-06 02:30:12.446	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=hello world	{"search_field":"search"}
+2021-05-06 02:30:12.662	127.0.0.1	catalog	show	search=	doc=28	pos=	total=	q=	{}
+2021-05-06 02:30:13.394	127.0.0.1	catalog	show	search=	doc=35	pos=	total=	q=	{}
+2021-05-06 02:30:18.737	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:30:19.021	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=24	{"search_field":"search"}
+2021-05-06 02:30:19.567	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=4	q=34	{}
+2021-05-06 02:30:20.469	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:30:21.027	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=56	{}
+2021-05-06 02:30:21.129	127.0.0.1	catalog	show	search=	doc=56	pos=	total=	q=	{}
+2021-05-06 02:30:21.321	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=14	{"search_field":"search"}
+2021-05-06 02:30:21.489	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=4	{"search_field":"search"}
+2021-05-06 02:30:21.636	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=18	{"search_field":"search"}
+2021-05-06 02:30:21.879	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Example Query	{}
+2021-05-06 02:30:22.103	127.0.0.1	catalog	index	search=4	counter=1	page=0	numFound=0	q=Example Query	{}
+2021-05-06 02:33:41.987	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:33:42.227	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:33:42.415	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=4	q=	{"f":{"format_main_ssim":["Database"]},"prefix":"s","sort":"title"}
+2021-05-06 02:33:42.647	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:33:42.784	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:33:45.484	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:33:46.183	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","view":"gallery"}
+2021-05-06 02:33:47.338	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:33:48.272	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","sort":"author"}
+2021-05-06 02:33:49.255	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:33:50.059	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:33:50.211	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:33:50.543	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:33:50.986	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my search	{}
+2021-05-06 02:33:51.973	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:33:53.767	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"per_page":"50","search_field":"search"}
+2021-05-06 02:33:54.398	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{}
+2021-05-06 02:33:54.585	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:33:54.992	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"brief"}
+2021-05-06 02:33:55.612	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=14	{"search_field":"search"}
+2021-05-06 02:33:55.776	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=4	{"search_field":"search"}
+2021-05-06 02:33:55.931	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=18	{"search_field":"search"}
+2021-05-06 02:33:56.337	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q="g70.212 .a426 2011:test"	{"search_field":"call_number"}
+2021-05-06 02:33:56.688	127.0.0.1	catalog	show	search=1	doc=1	pos=1	total=1	q="g70.212 .a426 2011:test"	{"search_field":"call_number"}
+2021-05-06 02:33:57.264	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:33:57.868	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:33:58.363	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:33:58.845	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:33:59.330	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=my query	{}
+2021-05-06 02:34:00.471	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:01.584	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:03.052	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:04.263	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:05.475	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:06.513	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:07.622	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:08.611	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:09.177	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q="stuff"	{"search_field":"search"}
+2021-05-06 02:34:09.413	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=hello world	{"search_field":"search"}
+2021-05-06 02:34:09.631	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:34:10.014	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:34:10.095	127.0.0.1	catalog	show	search=	doc=20	pos=	total=	q=	{}
+2021-05-06 02:34:10.358	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=20	{"search_field":"search"}
+2021-05-06 02:34:11.429	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=20	{"search_field":"search"}
+2021-05-06 02:34:11.773	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=	{"op":"AND","search":"","search_title":"sdfsda","search_author":"","subject_terms":"","series_search":"","pub_search":"","isbn_search":"","range":{"pub_year_tisim":{"begin":"","end":""}},"sort":"relevance","search_field":"advanced","button":""}
+2021-05-06 02:34:12.262	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format_main_ssim":["Book"]}}
+2021-05-06 02:34:12.321	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=0	q=sdfsda	{"f":{"format_main_ssim":["Book"]},"search_field":"search"}
+2021-05-06 02:34:12.451	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=sdfsda	{"search_field":"search_author"}
+2021-05-06 02:34:12.547	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=><script>alert("BAD JS")</script>	{"f":{"building_facet":["Engineering (Terman)"]},"search_field":"title"}
+2021-05-06 02:34:22.999	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Kittens	{}
+2021-05-06 02:34:24.551	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:34:24.651	127.0.0.1	catalog	show	search=	doc=2	pos=	total=	q=	{}
+2021-05-06 02:34:24.778	127.0.0.1	catalog	show	search=	doc=3	pos=	total=	q=	{}
+2021-05-06 02:34:25.304	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:34:26.159	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:34:26.966	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=29	{"search_field":"search"}
+2021-05-06 02:34:27.425	127.0.0.1	catalog	show	search=	doc=29	pos=	total=	q=	{}
+2021-05-06 02:34:27.851	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"course":["CAT-401-01-01"],"instructor":["McDonald, Ronald"]}}
+2021-05-06 02:34:28.099	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Example Search	{}
+2021-05-06 02:34:30.114	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=kittens	{}
+2021-05-06 02:34:30.750	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=kittens	{}
+2021-05-06 02:34:32.640	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:34:33.133	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:33.548	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=63	q=	{"search_field":"search","sort":"new-to-libs","format":"atom"}
+2021-05-06 02:34:34.103	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:34.182	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=10	{}
+2021-05-06 02:34:34.874	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:34:35.001	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:34:35.600	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:34:36.016	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:34:39.233	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=An object	{"search_field":"search_title"}
+2021-05-06 02:34:39.402	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=Doe, Jane	{"search_field":"search_author"}
+2021-05-06 02:34:39.597	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:34:39.667	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{}
+2021-05-06 02:34:39.757	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:34:39.820	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:34:39.886	127.0.0.1	catalog	show	search=	doc=11	pos=	total=	q=	{}
+2021-05-06 02:34:41.841	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:44.369	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:46.883	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:47.728	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"default"}
+2021-05-06 02:34:48.734	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=9999zzzz2222	{"search_field":"search"}
+2021-05-06 02:34:48.861	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=9999zzzz2222	{"search_field":"search"}
+2021-05-06 02:34:49.227	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:34:49.334	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:34:50.005	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:34:51.517	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:34:52.313	127.0.0.1	catalog	show	search=	doc=14	pos=	total=	q=	{}
+2021-05-06 02:34:53.271	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=35	{"search_field":"search"}
+2021-05-06 02:34:53.420	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=11	{"search_field":"search"}
+2021-05-06 02:34:53.589	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=10	{"search_field":"search"}
+2021-05-06 02:34:53.744	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=1	{"search_field":"search"}
+2021-05-06 02:34:54.263	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=3	q=31	{"search_field":"search"}
+2021-05-06 02:34:54.385	127.0.0.1	catalog	show	search=	doc=31	pos=	total=	q=	{}
+2021-05-06 02:34:54.459	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=56	{}
+2021-05-06 02:34:54.532	127.0.0.1	catalog	show	search=	doc=56	pos=	total=	q=	{}
+2021-05-06 02:34:55.077	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:34:55.277	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:05.766	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:06.208	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:06.625	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:17.035	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:35:18.547	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:35:18.959	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:19.351	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:19.780	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:20.194	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:20.594	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:20.974	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:35:21.756	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:35:21.838	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:35:22.029	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"building_facet":["Art \u0026 Architecture (Bowes)"]}}
+2021-05-06 02:35:22.252	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=7	q=	{"f":{"building_facet":["Green"]}}
+2021-05-06 02:35:22.411	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"building_facet":["Education (Cubberley)"]}}
+2021-05-06 02:35:22.747	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:35:23.303	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:35:23.996	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=30	q=1*	{}
+2021-05-06 02:35:24.627	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:35:24.780	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Thesis/Dissertation"]}}
+2021-05-06 02:35:26.803	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=4	q=34	{}
+2021-05-06 02:35:27.562	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=24	{"search_field":"search"}
+2021-05-06 02:35:28.577	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:35:29.255	127.0.0.1	catalog	show	search=	doc=34	pos=	total=	q=	{}
+2021-05-06 02:35:30.012	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=4	q=34	{"search_field":"search"}
+2021-05-06 02:35:31.091	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:35:33.028	127.0.0.1	catalog	show	search=	doc=44	pos=	total=	q=	{}
+2021-05-06 02:35:33.129	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:35:33.216	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:35:33.291	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:35:33.435	127.0.0.1	catalog	show	search=1	doc=45	pos=	total=	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs"}
+2021-05-06 02:35:33.496	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=1	q=	{"f":{"fund_facet":["qr382wm8668"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:35:33.581	127.0.0.1	catalog	show	search=	doc=45	pos=	total=	q=	{}
+2021-05-06 02:35:33.643	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"fund_facet":["rq470hm8269"]},"sort":"new-to-libs","view":"gallery"}
+2021-05-06 02:35:33.812	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:35:33.958	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:35:34.098	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=2	q=	{"f":{"genre_ssim":["Government document"]}}
+2021-05-06 02:35:34.441	127.0.0.1	catalog	index	search=2	counter=1	page=0	numFound=0	q=Example Query	{}
+2021-05-06 02:35:34.656	127.0.0.1	catalog	index	search=4	counter=1	page=0	numFound=0	q=Example Query	{}
+2021-05-06 02:35:40.538	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:40.892	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"gallery"}
+2021-05-06 02:35:41.736	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:42.005	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:42.647	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:35:43.431	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:43.667	127.0.0.1	catalog	show	search=1	doc=7	pos=1	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:44.253	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:44.520	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:44.944	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=57	{"format":"json"}
+2021-05-06 02:35:46.984	127.0.0.1	catalog	show	search=	doc=17	pos=	total=	q=	{}
+2021-05-06 02:35:47.064	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=17	{}
+2021-05-06 02:35:47.195	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:35:47.252	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=0	q=abcde	{"f":{"collection":["29"]},"search_field":"search"}
+2021-05-06 02:35:47.457	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=24	q=	{"f":{"access_facet":["Online"]}}
+2021-05-06 02:35:48.522	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:35:49.693	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:35:50.872	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:35:56.392	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:56.692	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:57.065	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:57.733	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:58.059	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:59.078	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:59.369	127.0.0.1	catalog	show	search=1	doc=44	pos=2	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:35:59.956	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:36:00.210	127.0.0.1	catalog	show	search=1	doc=1	pos=4	total=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:36:00.726	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:36:01.250	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:36:01.989	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:36:02.365	127.0.0.1	catalog	show	search=	doc=8923346	pos=	total=	q=	{}
+2021-05-06 02:36:03.017	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:03.115	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:03.312	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:03.378	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:03.859	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"op":"AND","search":"","search_title":"","search_author":"","subject_terms":"","series_search":"","pub_search":"","isbn_search":"","range":{"pub_year_tisim":{"begin":"","end":""}},"f_inclusive":{"format_main_ssim":["Book"]},"sort":"relevance","search_field":"advanced","button":""}
+2021-05-06 02:36:04.412	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=8	q=	{"f":{"format_main_ssim":["Database"]}}
+2021-05-06 02:36:05.187	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:36:06.116	127.0.0.1	catalog	show	search=	doc=mf774fs2413	pos=	total=	q=	{}
+2021-05-06 02:36:06.351	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=statement	{"f":{"access_facet":["Online"]},"search_field":"search"}
+2021-05-06 02:36:07.008	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=sdfsda	{"search_field":"search_author"}
+2021-05-06 02:36:07.467	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=	{"f":{"collection":["29"]}}
+2021-05-06 02:36:08.044	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:36:08.396	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=	{"f":{"collection_type":["Digital Collection"]}}
+2021-05-06 02:36:08.561	0.0.0.0	catalog	index	search=1	counter=1	page=0	numFound=0	q=x	{}
+2021-05-06 02:36:09.273	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=24	q=	{"f":{"access_facet":["Online"]}}
+2021-05-06 02:36:10.549	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=14	q=	{"f":{"format":["Book"]}}
+2021-05-06 02:36:10.896	127.0.0.1	catalog	index	search=2	counter=2	page=0	numFound=14	q=	{"f":{"format":["Book"]},"view":"gallery"}
+2021-05-06 02:36:12.095	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:36:12.200	127.0.0.1	catalog	show	search=	doc=37	pos=	total=	q=	{}
+2021-05-06 02:36:12.371	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=1	q=37	{"search_field":"search"}
+2021-05-06 02:36:13.108	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:36:14.287	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=63	q=	{"search_field":"search"}
+2021-05-06 02:36:16.915	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=5	q=38	{"search_field":"search"}
+2021-05-06 02:36:18.227	127.0.0.1	catalog	show	search=	doc=38	pos=	total=	q=	{}
+2021-05-06 02:36:18.843	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:36:18.929	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:19.033	127.0.0.1	catalog	show	search=	doc=10	pos=	total=	q=	{}
+2021-05-06 02:36:19.793	127.0.0.1	catalog	show	search=	doc=1	pos=	total=	q=	{}
+2021-05-06 02:36:21.003	127.0.0.1	catalog	show	search=	doc=35	pos=	total=	q=	{}
+2021-05-06 02:36:21.698	127.0.0.1	catalog	show	search=	doc=28	pos=	total=	q=	{}
+2021-05-06 02:36:22.404	127.0.0.1	catalog	show	search=	doc=24	pos=	total=	q=	{}
+2021-05-06 02:36:22.516	127.0.0.1	catalog	show	search=	doc=57	pos=	total=	q=	{}
+2021-05-06 02:36:23.060	127.0.0.1	catalog	index	search=1	counter=1	page=0	numFound=0	q=A search	{"search_field":"search"}

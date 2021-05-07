@@ -1,11 +1,16 @@
-<div class="panel panel-default home-facet facet_limit blacklight-<%= facet_field.field.parameterize %> <%= 'facet_limit-active' if facet_field_in_params?(facet_field.field) %>">
-  <div class="collapse-toggle panel-heading <%= 'collapsed' if collapse_home_page_facet?(facet_field) %>" data-toggle="collapse" data-target="#<%= facet_field_id(facet_field) %>">
-    <h3 class="panel-title">
-      <%= link_to facet_field_label(facet_field.field), "#", :"data-no-turbolink" => true %>
-    </h3>
-  </div>
-  <div id="<%= facet_field_id(facet_field) %>" data-toggle-default="<%= collapse_home_page_facet?(facet_field) %>" class="panel-collapse facet-content collapse <%= 'in' unless collapse_home_page_facet?(facet_field) %>">
-    <div class="panel-body">
+<div class="card facet-limit home-facet blacklight-<%= facet_field.key.parameterize %> <%= 'facet-limit-active' if facet_field_in_params?(facet_field.key) %>">
+  <h3 class="card-header p-0 facet-field-heading" id="<%= facet_field_id(facet_field) %>-header">
+    <button
+      class="btn btn-block p-2 text-left collapse-toggle <%= "collapsed" if collapse_home_page_facet?(facet_field) %>"
+      data-toggle="collapse"
+      data-target="#<%= facet_field_id(facet_field) %>"
+      aria-expanded="<%= collapse_home_page_facet?(facet_field) ? 'false' : 'true' %>"
+    >
+      <%= facet_field_label(facet_field.key) %>
+    </button>
+  </h3>
+  <div id="<%= facet_field_id(facet_field) %>" data-toggle-default="<%= collapse_home_page_facet?(facet_field) %>" aria-labelledby="<%= facet_field_id(facet_field) %>-header" class="panel-collapse facet-content <%= collapse_home_page_facet?(facet_field) ? 'collapse' : 'in' %>">
+    <div class="card-body">
       <%= yield %>
     </div>
   </div>

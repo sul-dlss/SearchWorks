@@ -82,20 +82,20 @@ gem "coderay"
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 6.0'
+gem 'blacklight', '~> 7.0'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
-gem "blacklight-marc", "~> 6.0"
+gem "blacklight-marc", "~> 7.0"
 gem "faraday", "~> 0.10"
 gem "config"
 gem "mods_display", "~> 0.5"
-gem "blacklight-gallery", '~> 0.4'
-gem "blacklight_advanced_search", "~> 6.3"
+gem "blacklight-gallery", '~> 3.0'
+gem "blacklight_advanced_search", "~> 7.0"
 gem "font-awesome-rails"
-gem "blacklight_range_limit", "~> 6.2"
+gem "blacklight_range_limit", "~> 8.0"
 gem 'blacklight-hierarchy', "~> 4.0"
 gem 'blacklight_dynamic_sitemap'
 gem "retina_tag"
@@ -110,6 +110,6 @@ gem 'leaflet-rails'
 gem 'recaptcha', '>= 5.4.1'
 gem 'oauth2', '~> 1.4' # Pinning so we don't get downgraded
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap-sass'
+gem 'bootstrap'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'

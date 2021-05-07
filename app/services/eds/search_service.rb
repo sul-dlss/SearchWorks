@@ -3,8 +3,6 @@
 module Eds
   # SearchService returns search results and fetches from the repository
   class SearchService
-    include Blacklight::RequestBuilders
-
     def initialize(blacklight_config, user_params = {}, eds_params = {})
       @blacklight_config = blacklight_config
       @user_params = user_params
@@ -12,9 +10,13 @@ module Eds
       @eds_params = eds_params
     end
 
+    def search_builder
+      SearchBuilder.new(self)
+    end
+
     attr_reader :blacklight_config, :user_params # used by search_builder
 
-    def search_results(user_params)
+    def search_results
       builder = search_builder.with(user_params)
       builder = yield(builder) if block_given?
       response = @repository.search(builder, @eds_params)

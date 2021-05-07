@@ -2,14 +2,14 @@
 
 <% if (access_panel = document.access_panels.exhibit).present? && Settings.EXHIBITS_ACCESS_PANEL.enabled %>
   <div
-    class="panel panel-default access-panel panel-exhibit"
+    class="card access-panel panel-exhibit"
     data-behavior="exhibits-panel"
     data-exhibits-host="<%= Settings.EXHIBITS_ACCESS_PANEL.exhibits_host %>"
     data-is-collection="<%= document.is_a_collection?.to_s %>"
     data-druid="<%= access_panel.druid %>"
     style="display:none;"
   >
-    <div class="access-panel-heading panel-heading">
+    <div class="access-panel-heading card-header">
       <h3>
         <% if document.is_a_collection? %>
           Exhibits
@@ -19,7 +19,7 @@
         <% end %>
       </h3>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <% if document.is_a_collection? %>
         <p>Items from this collection are featured in:</p>
       <% end %>

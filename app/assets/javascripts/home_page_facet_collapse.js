@@ -8,7 +8,7 @@
     function addHomePageFacetCollapseBehavior( container, resize ){
       container.each(function(){
         $(".home-facet", $(this)).each(function(){
-          var header = $('.panel-heading', $(this))
+          var header = $('.card-header', $(this))
           var target = $(header.data('target'));
           if($(window).width() <= '768') {
             header.addClass('collapsed');

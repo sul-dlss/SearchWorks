@@ -23,7 +23,7 @@ feature "Record Toolbar" do
       within "div.navbar-collapse" do
         expect(page).to have_css("li a", text: "Cite")
         expect(page).to have_css("li button", text: "Send to")
-        expect(page).to have_css("form label", text: "Select")
+        expect(page).to have_button("Select")
       end
     end
   end
@@ -54,7 +54,7 @@ feature "Record Toolbar" do
     visit search_catalog_path f: { format: ["Book"] }
 
     # Specifically trying to not get the first item in the results
-    within '.document-position-1' do
+    within '.document-position-2' do
       page.find('h3 a').click
     end
 

@@ -14,8 +14,8 @@
               .nav-label {
                   display: inline-block;
               }
-              
-          }  
+
+          }
       }
   }
 
@@ -74,15 +74,17 @@
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
-  .side-nav-minimap {
-    li {
-      &:first-child {
-        border-top-right-radius: 0px;
-      }
+@media screen {
+  @include media-breakpoint-down(xs) {
+    .side-nav-minimap {
+      li {
+        &:first-child {
+          border-top-right-radius: 0px;
+        }
 
-      &:last-child {
-        border-bottom-right-radius: 0px;
+        &:last-child {
+          border-bottom-right-radius: 0px;
+        }
       }
     }
   }

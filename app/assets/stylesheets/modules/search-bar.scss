@@ -88,80 +88,84 @@
     }
   }
 
-  @media screen and (max-width: $screen-md-min) {
-    .input-group-btn {
-      width: 1%;
-    }
-
-    .navbar-form {
-      border: 0;
-      margin: 0 auto;
-      max-height: 40px;
-      padding: 0;
-      width: 100%;
-    }
-
-    .navbar-header {
-      float: none;
-    }
-
-    .search-form {
-      display: block;
-      margin: 10px auto;
-      padding-left: 15px;
-      padding-right: 15px;
-      width: 100%;
-    }
-
-    .search_field {
-      width: 82px;
-    }
-
-    .search-navbar-headings {
-      height: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-      text-align: center;
-
-      .navbar-brand img {
-        // Adding negative top margin to handle images + text alignment issues
-        margin-top: -2px;
+  @media screen {
+      @include media-breakpoint-down(md) {
+      .input-group-btn {
+        width: 1%;
       }
 
-      .search-dropdown {
-        .dropdown-menu {
-          left: 0;
-          top: 45%;
-          width: 100%;
-          z-index: 10001;
+      .navbar-form {
+        border: 0;
+        margin: 0 auto;
+        max-height: 40px;
+        padding: 0;
+        width: 100%;
+      }
+
+      .navbar-header {
+        float: none;
+      }
+
+      .search-form {
+        display: block;
+        margin: 10px auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+      }
+
+      .search_field {
+        width: 82px;
+      }
+
+      .search-navbar-headings {
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-align: center;
+
+        .navbar-brand img {
+          // Adding negative top margin to handle images + text alignment issues
+          margin-top: -2px;
+        }
+
+        .search-dropdown {
+          .dropdown-menu {
+            left: 0;
+            top: 45%;
+            width: 100%;
+            z-index: 10001;
+          }
         }
       }
-    }
 
-    .search-target {
-      float: none;
-      margin-top: 5px;
-      vertical-align: baseline;
-
-      &.h1 {
-        margin-top: 0;
-      }
-    }
-
-    #searchworks-logo {
-      float: none;
-
-      img {
-        display: inline-block;
+      .search-target {
+        float: none;
+        margin-top: 5px;
         vertical-align: baseline;
+
+        &.h1 {
+          margin-top: 0;
+        }
+      }
+
+      #searchworks-logo {
+        float: none;
+
+        img {
+          display: inline-block;
+          vertical-align: baseline;
+        }
       }
     }
   }
 
-  @media screen and (min-width: $screen-md-min) {
-    .navbar-form {
-      margin: 0 auto;
+  @media screen {
+    @include media-breakpoint-up(md) {
+      .navbar-form {
+        margin: 0 auto;
+      }
     }
   }
 }

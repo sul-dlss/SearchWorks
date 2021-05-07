@@ -8,7 +8,7 @@ describe 'Temporary Access' do
 
     within '.metadata-panels' do
       within '.panel.temporary-access' do
-        expect(page).to have_css('.panel-heading h3', text: 'Temporary access')
+        expect(page).to have_css('.card-header h3', text: 'Temporary access')
         expect(page).to have_link('Full text via HathiTrust')
         expect(page).to have_css('.etas-notice', text: /by special arrangement in response/)
       end

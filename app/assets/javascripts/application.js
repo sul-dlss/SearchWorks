@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
 //= require honeybadger
 //= require 'blacklight_advanced_search'
 //= require retina_tag
 
-//= require jquery_ujs
+//= require rails-ujs
 //= require turbolinks
 //= require responsiveTruncator
 //= require trunk8
@@ -24,7 +24,8 @@
 //= require leaflet
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-//= require bootstrap/tab
+//= require popper.js
+//= require bootstrap
 //
 // Required by Blacklight
 //= require blacklight/blacklight

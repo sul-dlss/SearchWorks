@@ -20,16 +20,16 @@ describe 'catalog/access_panels/_appears_in.html.erb' do
     end
 
     it 'renders a panel heading' do
-      expect(subject).to have_css('.panel-heading h3', text: 'Item is included in another record')
+      expect(subject).to have_css('.card-header h3', text: 'Item is included in another record')
     end
 
     describe 'panel body' do
       it 'renders the resource icon in the h4' do
-        expect(subject).to have_css('.panel-body h4 span.sul-icon')
+        expect(subject).to have_css('.card-body h4 span.sul-icon')
       end
 
       it 'renders the result of #link_to_document in the h4' do
-        expect(subject).to have_css('.panel-body h4', text: 'The Set Object')
+        expect(subject).to have_css('.card-body h4', text: 'The Set Object')
       end
     end
   end

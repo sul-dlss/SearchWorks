@@ -1,17 +1,17 @@
 <% if @document.is_a_collection_member? && @document.parent_collections.present? %>
   <% @document.parent_collections.each do |parent_collection| %>
-    <div class="panel panel-default access-panel panel-in-collection">
-      <div class="access-panel-heading panel-heading">
+    <div class="card access-panel panel-in-collection">
+      <div class="access-panel-heading card-header">
         <h3>Item belongs to a collection</h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <h4><%= link_to(show_presenter(parent_collection).heading, solr_document_path(parent_collection[:id])) %></h4>
         <% if parent_collection[:summary_display] %>
           <div data-behavior='truncate'>
             <%= parent_collection[:summary_display].join(', ') %>
           </div>
         <% end %>
-        <dl class="dl-invert">
+        <dl class="">
           <% if parent_collection.collection_members.present? %>
             <dt>Digital collection</dt>
             <dd><%= link_to_collection_members(pluralize(parent_collection.collection_members.total, 'digital item'), parent_collection) %></dd>
