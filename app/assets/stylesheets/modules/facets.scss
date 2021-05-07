@@ -22,11 +22,11 @@
   }
 }
 
-.panel-group .facet_limit {
+.panel-group .facet-limit {
   margin-bottom: 7px;
 }
 
-.facet_limit {
+.facet-limit {
   ul {
     margin-bottom: 0;
 
@@ -42,14 +42,18 @@
     }
   }
 
-  .panel-heading {
+  .card-header {
     h3 {
       font-weight: 400;
     }
   }
 
-  &.facet_limit-active .panel-heading {
-    background: $sul-facet-active-bg;
+  &.facet-limit-active {
+    border-color: rgba(0, 0, 0, 0.125) !important;
+  }
+
+  &.facet-limit-active .card-header {
+    background: $sul-facet-active-bg !important;
     border-bottom: 1px solid $sul-facet-active-border;
     color: $sul-facet-active-heading-color;
   }
