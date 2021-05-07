@@ -11,8 +11,9 @@
     <label for="q" class="sr-only"><%= t('blacklight.search.form_label') %></label>
     <%= text_field_tag :q, params[:q], :placeholder => t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), :class => "search_q q form-control", :id => "q" %>
     <span class="input-group-btn">
-      <button type="submit" class="btn btn-default search-btn" id="search">
-        <%=t('blacklight.search.form.submit_html')%>
+      <button type="submit" class="btn btn-primary search-btn" id="search">
+        <span class="submit-search-text"><%= t('blacklight.search.form.submit_html') %></span>
+        <%= blacklight_icon :search, aria_hidden: true %>
       </button>
     </span>
   </div>
