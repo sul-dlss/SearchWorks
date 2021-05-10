@@ -18,7 +18,8 @@ class MarcExtractor
     return to_enum(:extract) unless block_given?
 
     merged_and_matched_fields.each do |field|
-      yield field, relevant_subfields(field).to_a
+      subfields = relevant_subfields(field).to_a
+      yield field, subfields if subfields.present?
     end
   end
 

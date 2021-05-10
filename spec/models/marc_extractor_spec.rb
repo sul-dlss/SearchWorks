@@ -38,6 +38,15 @@ describe MarcExtractor do
     end
   end
 
+  context 'with a marc field with subfield codes that do not exist' do
+    subject(:extracted_data) { described_class.new(marc, '541xyz').extract.to_a }
+
+    it 'is not yielded' do
+      expect(marc['541']).to be_present
+      expect(extracted_data.length).to eq 0
+    end
+  end
+
   context 'with a field that has indicators that hide the field from display' do
     let(:fixture) { metadata2 }
 

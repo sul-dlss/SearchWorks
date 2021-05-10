@@ -35,7 +35,7 @@ class MarcField
 
     @values ||= extracted_fields.map do |field, subfields|
       display_value(field, subfields)
-    end
+    end.compact
   end
 
   def to_partial_path
@@ -70,6 +70,8 @@ class MarcField
   end
 
   def display_value(field, subfields)
+    return unless subfields.present?
+
     safe_join subfields.map { |subfield| subfield_value(field, subfield) }, subfield_delimeter
   end
 
