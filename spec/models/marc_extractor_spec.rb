@@ -71,6 +71,19 @@ describe MarcExtractor do
         '300 Unmatched Vernacular'
       ]
     end
+
+    context 'with subfield codes' do
+      let(:fixture) { vernacular_marc_264_fixture }
+
+      subject(:extracted_data) { described_class.new(marc, '264a').extract.to_a }
+
+      it 'filters vernacular data' do
+        expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
+          'SubfieldA',
+          'Vernacular SubfieldA'
+        ]
+      end
+    end
   end
 
   context 'with multiple MARC tags' do

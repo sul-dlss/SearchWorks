@@ -71,14 +71,14 @@ class MarcExtractor
   end
 
   def include_subfield?(field, subfield)
-    return true unless subfields[field.tag]
+    return true unless subfields[field.canonical_tag]
 
-    subfields[field.tag].include? subfield.code
+    subfields[field.canonical_tag].include? subfield.code
   end
 
   def hidden_by_indicator?(field)
-    (Constants::HIDE_1ST_IND.include?(field.tag) && field.indicator1 == '1') ||
-      (Constants::HIDE_1ST_IND0.include?(field.tag) && field.indicator1 == '0')
+    (Constants::HIDE_1ST_IND.include?(field.canonical_tag) && field.indicator1 == '1') ||
+      (Constants::HIDE_1ST_IND0.include?(field.canonical_tag) && field.indicator1 == '0')
   end
 
   def matching_vernacular_field(field)
