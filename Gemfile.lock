@@ -149,7 +149,7 @@ GEM
     crass (1.0.6)
     csl (1.5.2)
       namae (~> 1.0)
-    csl-styles (1.0.1.10)
+    csl-styles (1.0.1.11)
       csl (~> 1.0)
     css_parser (1.9.0)
       addressable
