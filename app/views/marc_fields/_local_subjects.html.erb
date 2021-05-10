@@ -1,0 +1,6 @@
+<% if local_subjects.values.present? %>
+  <dt><%= local_subjects.label %></dt>
+  <% local_subjects.values.each do |value| %>
+    <dd><%= link_to(value.strip, marc_field.url.merge!(q: "\"#{value.strip}\"")) %></dd>
+  <% end  %>
+<% end %>

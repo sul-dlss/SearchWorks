@@ -109,8 +109,12 @@ describe SolrDocument do
   end
 
   describe 'MarcSeries' do
-    it 'is included' do
-      expect(subject).to be_kind_of MarcSeries
+    it 'includes the linked_series method' do
+      expect(subject).to respond_to :linked_series
+    end
+
+    it 'includes the unlinked_series method' do
+      expect(subject).to respond_to :unlinked_series
     end
   end
 

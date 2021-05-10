@@ -60,6 +60,170 @@ en:
         label: all
         description_html: <span class="h3">all</span> <span class="help-block">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
+      020:
+        label: "ISBN"
+      022:
+        label: 'ISSN'
+      028:
+        label: "Publisher number"
+      222:
+        label: "Key title"
+      242:
+        label: "Title translation"
+      243:
+        label: "Collective title"
+      245c:
+        label: "Responsibility"
+      246:
+        label: "Title variation"
+      247:
+        label: "Former title"
+      250:
+        label: "Edition"
+      254:
+        label: "Musical presentation"
+      255:
+        label: "Map data"
+      256:
+        label: "File characteristics"
+      300:
+        label: "Physical description"
+      310:
+        label: "Frequency"
+      321:
+        label: "Former publication frequency"
+      344:
+        label: 'Sound'
+        delimiter: '; '
+      345:
+        label: 'Projection'
+        delimiter: '; '
+      346:
+        label: 'Video'
+        delimiter: '; '
+      347:
+        label: 'Digital'
+        delimiter: '; '
+      362:
+        label: "Vol/date range"
+      500:
+        label: "Note"
+      501:
+        label: "With"
+      502:
+        label: "Note"
+      504:
+        label: "Bibliography"
+      506:
+        label: "Access"
+      507:
+        label: "Scale"
+      508:
+        label: "Production credits"
+      510:
+        label: "Citation"
+      511:
+        label: "Participant"
+      513:
+        label: "Report"
+      514:
+        label: "Accuracy"
+      515:
+        label: "Note"
+      516:
+        label: "File/data type"
+      518:
+        label: "Event"
+      521:
+        label: "Audience"
+      522:
+        label: "Coverage"
+      524:
+        label: "Cite as"
+      525:
+        label: "Supplement"
+      526:
+        label: "Note"
+      530:
+        label: "Note"
+      533:
+        label: "Reproduction"
+      534:
+        label: "Original version"
+      535:
+        label: "Location of originals"
+      536:
+        label: "Funding information"
+      538:
+        label: "Format"
+      540:
+        label: "Terms"
+      541:
+        label: "Source"
+      542:
+        label: "Copyright status"
+      544:
+        label: "Note"
+      545:
+        label: "Note"
+      547:
+        label: "Note"
+      550:
+        label: "Note"
+      552:
+        label: "Note"
+      555:
+        label: "Cumulative index or finding aid"
+      556:
+        label: "Documentation"
+      561:
+        label: "Provenance"
+      562:
+        label: "Copy/version"
+      563:
+        label: "Note"
+      565:
+        label: "Variables"
+      567:
+        label: "Methodology"
+      580:
+        label: "Related items"
+      581:
+        label: "Citations"
+      583:
+        label: "Action note"
+      584:
+        label: "Note"
+      585:
+        label: "Exhibitions"
+      586:
+        label: "Awards"
+      590:
+        label: "Note"
+      592:
+        label: "Note"
+      600:
+        label: 'Subjects'
+      655:
+        label: 'Genre'
+      690:
+        label: 'Local subject'
+      740:
+        label: "Related Work"
+      753:
+        label: "System requirements"
+      754:
+        label: "Taxonomy"
+      796:
+        label: "Contributor"
+      797:
+        label: "Contributor"
+      798:
+        label: "Contributor"
+      799:
+        label: "Related work"
+      included_works:
+        label: Included work
       imprint:
         label: Imprint
       language:
@@ -81,13 +245,16 @@ en:
         label: Notation
       organization_and_arrangement:
         label: 'Organization & arrangement'
-      place_name:
+      752:
+        delimiter: ' -- '
         label: 'Location'
-      physical_medium:
+      340:
+        delimiter: '; '
         label: 'Medium'
       unlinked_series:
         label: Series
       default:
+        delimiter: ' '
         label: 'Field'
     request_link:
       aeon_note: Requires Aeon signup/login<br/>Opens in new tab

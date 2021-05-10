@@ -30,7 +30,7 @@
     <% end %>
   <% end %>
 
-  <% summary = document.fetch(:summary_struct, []).first || (document.respond_to?(:to_marc) && get_data_with_label_from_marc(document.to_marc, "Summary", '520')) %>
+  <% summary = document.fetch(:summary_struct, []).first %>
   <% if summary.present? %>
     <% if summary[:fields].present? %>
       <% summary[:fields].each do |field| %>

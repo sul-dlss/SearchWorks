@@ -1,49 +1,15 @@
 <% document ||= @document %>
 <% if document.respond_to?(:to_marc) %>
   <dl class="dl-horizontal  dl-invert">
-    <% responsibility = get_data_with_label_from_marc(document.to_marc, 'Responsibility', '245', { sub_fields: ['c'] }) %>
-    <%= render_field_from_marc(responsibility) if responsibility %>
+    <%= render_if_present document.marc_field('245c') %>
 
     <%- uniform_title = get_uniform_title(document) -%>
     <%- unless uniform_title.nil? -%>
-      <%= render_field_from_marc(uniform_title) %>
+      <%= render "catalog/field_from_marc", fields: uniform_title %>
     <%- end -%>
 
-    <%= render document.language if document.language.present? %>
-
-    <% if (characteristics = document[:characteristics_ssim]).present? %>
-      <% characteristics.map { |x| x.split(': ', 2) }.each do |label, value| %>
-        <dt><%= label %></dt>
-        <dd><%= value %></dd>
-      <% end %>
+    <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, '300abcefg', :marc_instrumentation, :linked_series].each do |tag| %>
+      <%= render_if_present document.marc_field(tag) %>
     <% end %>
-
-    <% if (edition = document.edition).present? %>
-      <% edition.each do |field| %>
-        <%= display_content_field field %>
-      <% end %>
-    <% end %>
-
-    <%= render document.imprint if document.imprint.present? %>
-
-    <% if (new_publish = marc_264(document.to_marc)).present? %>
-      <% new_publish.each do |label,values| %>
-        <dt><%= label %></dt>
-        <% values.each do |value| %>
-          <dd><%= value %></dd>
-        <% end %>
-      <% end %>
-    <% end %>
-
-    <%- physical_desc = get_data_with_label(document, "Physical description", 'physical')%>
-    <%- unless physical_desc.nil? -%>
-      <%= render "catalog/field_from_index", :fields => physical_desc %>
-    <%- end -%>
-
-    <% if (instrumentation = document.marc_instrumentation).present? %>
-      <%= render instrumentation %>
-    <% end %>
-
-    <%= render document.linked_series if document.linked_series.present? %>
   </dl>
 <% end %>

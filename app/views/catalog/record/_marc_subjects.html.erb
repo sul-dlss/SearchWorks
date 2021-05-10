@@ -1,30 +1,12 @@
 <% document ||= @document %>
-<% subject_display = get_subjects(document) %>
-<% if subject_display %>
-  <dl>
-    <%= subject_display %>
-  </dl>
-<% end %>
 
-<% genre_display = get_genre_subjects(document) %>
-<% if genre_display %>
-  <dl>
-    <%= genre_display %>
-  </dl>
-<% end %>
-
-<% if (local_subject = get_local_subjects(document)).present? %>
-  <dl>
-    <%= local_subject %>
-  </dl>
-<% end %>
-
+<%= render_if_present document.subjects(['600', '610', '611', '630', '650', '651', '653', '654', '656', '657', '658', '691', '693', '696', '697', '698', '699']) %>
+<%= render_if_present document.subjects('655') %>
+<%= render_if_present document.subjects('690') %>
 
 <% if document.is_a_database? && document[:db_az_subject] %>
-  <dl>
-    <dt>Database topics</dt>
-    <% document[:db_az_subject].each do |subject| %>
-      <dd><%= link_to(subject, search_catalog_path(f: { :db_az_subject => [subject], document.format_key => ["Database"]})) %></dd>
-    <% end %>
-  </dl>
+  <dt>Database topics</dt>
+  <% document[:db_az_subject].each do |subject| %>
+    <dd><%= link_to(subject, search_catalog_path(f: { :db_az_subject => [subject], document.format_key => ["Database"]})) %></dd>
+  <% end %>
 <% end %>

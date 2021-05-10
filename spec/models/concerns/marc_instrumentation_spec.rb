@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MarcInstrumentation do
+describe 'MarcInstrumentation' do
   include MarcMetadataFixtures
   it 'should return nil for non marc object' do
     document = SolrDocument.new
@@ -12,7 +12,7 @@ describe MarcInstrumentation do
     expect(document.marc_instrumentation.values.length).to eq 0
   end
 
-  it 'should return SearchWorksMarc::Instrumentation for document with 382 field' do
+  it 'should return Instrumentation for document with 382 field' do
     document = SolrDocument.new(marcxml: marc_382_instrumentation)
     expect(document.marc_instrumentation.class).to eq Instrumentation
   end

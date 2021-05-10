@@ -4,19 +4,13 @@
 # A series field is linkable as long as there are not multiple $a.
 # A 490 is only linkable if the first indicator is 0
 module SeriesLinkable
-  private
-
-  def preprocessors
-    super + [:relevant_subfields]
-  end
-
-  def relevant_subfields
-    relevant_fields.each do |field|
-      field.subfields = field.subfields.select do |subfield|
-        ('a'..'z').cover?(subfield.code)
-      end
+  def values
+    extracted_fields.map do |_field, subfields|
+      subfields.select { |subfield| ('a'..'z').cover?(subfield.code) }.map(&:value).join(subfield_delimeter)
     end
   end
+
+  private
 
   def series_is_linkable?(field)
     !many_subfield_a?(field) && field_490_has_first_indicator_0?(field)

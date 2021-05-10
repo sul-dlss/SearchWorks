@@ -55,9 +55,9 @@ describe MarcField do
         expect(subject.values[2]).to eq '300 Unmatched Romanized'
         expect(subject.values[3]).to eq '300 Matched Romanized'
         expect(subject.values[4]).to eq '300 Matched Vernacular'
-        expect(subject.values[5]).to eq '300 Unmatched Vernacular'
-        expect(subject.values[6]).to eq '350 Matched Romanized'
-        expect(subject.values[7]).to eq '350 Matched Vernacular'
+        expect(subject.values[5]).to eq '350 Matched Romanized'
+        expect(subject.values[6]).to eq '350 Matched Vernacular'
+        expect(subject.values[7]).to eq '300 Unmatched Vernacular'
       end
     end
   end
@@ -70,17 +70,6 @@ describe MarcField do
 
   describe 'preprocessors' do
     let(:tags) { %w(600) }
-
-    context 'MarcFieldWrapper classes' do
-      let(:marc) { complex_vernacular_fixture }
-      let(:tags) { %w(245 300 350) }
-
-      it 'are used to wrap all relevant fields' do
-        expect(subject.send(:relevant_fields)).to be_all do |field|
-          field.is_a?(MarcFieldWrapper)
-        end
-      end
-    end
 
     context 'fields that should not be displayed' do
       let(:marc) { metadata2 }

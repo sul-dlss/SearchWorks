@@ -5,12 +5,8 @@
   <dd><%= document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %></dd>
 <% end %>
 
-<%= render document.organization_and_arrangement if document.organization_and_arrangement.present? %>
-
-<% biblio = get_data_with_label_from_marc(document.to_marc, "Bibliography", '504') %>
-<% unless biblio.nil? %>
-  <%= render_field_from_marc(biblio) %>
-<% end %>
+<%= render_if_present document.marc_field(:organization_and_arrangement) %>
+<%= render_if_present document.marc_field(504) %>
 
 <% toc = document.fetch(:toc_struct, []).first %>
 <% if toc.present? %>
@@ -48,8 +44,8 @@
 
 <% summary = document.fetch(:summary_struct, []).first %>
 <% if summary.present? %>
+  <dt>Summary</dt>
   <% if summary[:fields].present? %>
-    <dt>Summary</dt>
     <% summary[:fields].each do |field| %>
       <dd>
         <%= render_struct_field_data document, field[:field] %>
@@ -72,4 +68,4 @@
   </dd>
 <% end %>
 
-<%= link_to_included_works_from_marc(document.to_marc) %>
+<%= render_if_present document.included_works %>

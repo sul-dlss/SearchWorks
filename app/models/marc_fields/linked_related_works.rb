@@ -18,38 +18,27 @@ class LinkedRelatedWorks < MarcField
 
   # @return [Array<Hash<String>>] output in `:pre_text`, `:link`, `:search`, and `:post_text`
   def values
-    relevant_fields.map do |field|
-      join_to_view(map_to_sections(field))
+    extracted_fields.map do |_field, subfields|
+      join_to_view(map_to_sections(subfields))
     end
-  end
-
-  def preprocessors
-    super + %i[filter_out_indicator2 filter_out_missing_titles]
   end
 
   private
 
-  def filter_out_indicator2
-    relevant_fields.reject! do |field|
-      field.canonical_tag != '730' && field.indicator2 == '2' # are not "included works"
-    end
-  end
-
-  def filter_out_missing_titles
-    relevant_fields.reject! do |field|
-      field.canonical_tag != '730' && field.subfields.none? { |subfield| subfield.code == 't' } # do not have a title
-    end
+  def extracted_fields
+    super.reject { |field, _subfields| field.canonical_tag != '730' && field.indicator2 == '2' } # are not "included works"
+         .reject { |field, subfields| field.canonical_tag != '730' && subfields.none? { |subfield| subfield.code == 't' } } # do not have a title
   end
 
   # Divides the subfields into Before, Inside (the link nodes), and After.
   # @return [Hash<Array<Subfield>>] `:before`, `:inside`, and `:after`
-  def map_to_sections(field)
+  def map_to_sections(subfields)
     result = {
       before: [],
       inside: [],
       after: []
     }
-    all = field.subfields.dup
+    all = subfields.dup
 
     # grab before text at top of the list
     all.dup.each do |subfield|
