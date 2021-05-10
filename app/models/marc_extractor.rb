@@ -56,9 +56,13 @@ class MarcExtractor
       next unless include_subfield? field, subfield
       next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
 
-      if subfield.code == '4'
+      case subfield.code
+      when '4'
         next if field.tag.start_with?('8')
+
         yield MARC::Subfield.new(subfield.code, Constants::RELATOR_TERMS[subfield.value] || subfield.value)
+      when 'a'
+        yield subfield unless subfield.value.starts_with?('%')
       else
         yield subfield
       end
