@@ -15,6 +15,24 @@ $panel-footer-bg: $sul-panel-bg;
 $panel-default-heading-bg: $sul-panel-heading-default;
 $panel-default-border: $sul-panel-border-bottom;
 
+// NOTE: Remove this when upgrading to BS5, as it will then be unnecessary.
+// State -- we lifted these colors from BS5 for better a11y in alerts and elsewhere
+$state-info-bg: #cff4fc;
+$state-info-border: #b6effb;
+$state-info-text: #055160;
+
+$state-success-bg: #d1e7dd;
+$state-success-border: #badbcc;
+$state-success-text: #0f5132;
+
+$state-warning-bg: #fff3cd;
+$state-warning-border: #ffecb5;
+$state-warning-text: #664d03;
+
+$state-danger-bg: #f8d7da;
+$state-danger-border: #f5c2c7;
+$state-danger-text: #842029;
+
 // Buttons
 $btn-default-color: $gray;
 $btn-default-bg: $light-sandstone;

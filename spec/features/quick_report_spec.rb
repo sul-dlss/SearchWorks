@@ -13,7 +13,7 @@ feature 'Quick report form (js)', js: true do
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
     click_button 'Report wrong cover image'
-    expect(page).to have_css('div.alert-success', text: 'Thank you! Your feedback has been sent.')
+    expect(page).to have_css('div.alert-info', text: 'Thank you! Your feedback has been sent.')
   end
 end
 

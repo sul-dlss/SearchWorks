@@ -1,15 +1,19 @@
-<%= form_tag feedback_form_path, method: :post, class:"form-horizontal feedback-form", role:"form" do %>
+<%= render "shared/feedback_forms/reporting_from" %>
+<% if locals[:target] == '#feedback-form' %>
   <div>
-    <div class="col-sm-offset-3">
-      <%= render "shared/feedback_forms/reporting_from" %>
+    <div class="col-sm-12 col-sm-offset-3">
+      <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
+      <%= render "shared/quick_reports/form", layout: nil %>
     </div>
   </div>
+<% end %>
+<%= form_tag feedback_form_path, method: :post, class: "form-horizontal feedback-form", role: "form" do %>
   <span style="display:none;visibility:hidden;">
     <%= text_field_tag :user_agent %>
     <%= text_field_tag :viewport %>
     <%= text_field_tag :last_search %>
   </span>
-  <div>
+  <div class="col-sm-8 col-sm-offset-1">
     <% if locals[:target] == '#connection-form' %>
       <%= hidden_field_tag :type, 'connection' %>
       <div class="form-group">
@@ -64,7 +68,7 @@
     <div class="form-group">
       <div class="col-sm-offset-3 col-sm-9">
         <button type="submit" class="btn btn-primary">Send</button>
-        <%= link_to "Cancel", :back, class:"cancel-link", data: {toggle:"collapse", target: locals[:target] } %>
+        <%= link_to "Cancel", :back, class:"cancel-link", data: { toggle: 'collapse', target: locals[:target] } %>
       </div>
     </div>
   </div>
