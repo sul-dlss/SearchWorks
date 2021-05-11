@@ -18,5 +18,5 @@
   </header>
 </div>
 <div id="feedback-form" class="feedback-form-container collapse">
-  <%= render "shared/feedback_forms/form" if show_feedback_form? %>
+  <%= render_feedback_form('feedback') if show_feedback_form? %>
 </div>

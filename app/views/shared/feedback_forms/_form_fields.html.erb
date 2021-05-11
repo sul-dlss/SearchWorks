@@ -1,13 +1,5 @@
-<%= render "shared/feedback_forms/reporting_from" %>
-<% if locals[:target] == '#feedback-form' %>
-  <div>
-    <div class="col-sm-12 col-sm-offset-3">
-      <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
-      <%= render "shared/quick_reports/form", layout: nil %>
-    </div>
-  </div>
-<% end %>
 <%= form_tag feedback_form_path, method: :post, class: "form-horizontal feedback-form", role: "form" do %>
+  <%= hidden_field_tag :url, request.referer, class:"reporting-from-field" %>
   <span style="display:none;visibility:hidden;">
     <%= text_field_tag :user_agent %>
     <%= text_field_tag :viewport %>
