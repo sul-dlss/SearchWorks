@@ -1,6 +1,5 @@
 ###
-#  MarcBoundWith class to return 590 fields that have a $c
-###
+# BoundWithNote class to render 590 fields
 class BoundWithNote < MarcField
   include ActionView::Helpers::UrlHelper
 

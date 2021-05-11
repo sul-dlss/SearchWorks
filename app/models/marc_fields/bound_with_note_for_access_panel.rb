@@ -1,6 +1,6 @@
-###
-#  MarcBoundWith class to return 590 fields that have a $c
-###
+##
+# BoundWithNoteForAccessPanel class to return only those 590 fields that have a $c
+#   for display in access panels, which differs slightly from the normal display.
 class BoundWithNoteForAccessPanel < BoundWithNote
   def values
     extracted_fields.map do |field, subfields|
