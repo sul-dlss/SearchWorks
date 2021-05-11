@@ -3,10 +3,10 @@
   <% subjects.values.each do |value| %>
     <dd>
       <% value.each_with_index do |field, index| %>
+        <%= ' > ' unless index == 0 %>
         <% link_text = value[0..index].join(' ') %>
         <% title_text = value[0..index].join(' - ') %>
         <%= link_to(field.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'subject_terms'), title: title_text) %>
-        <%= ' > ' unless index == value.length %>
       <% end %>
     </dd>
   <% end  %>

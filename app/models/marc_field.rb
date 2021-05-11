@@ -12,7 +12,7 @@ class MarcField
   def initialize(solr_document, tags = [])
     @document = solr_document
     @tags = Array(tags)
-    @subfield_delimeter = subfield_delimeter
+    @subfield_delimiter = subfield_delimiter
   end
 
   def inspect
@@ -35,7 +35,7 @@ class MarcField
 
     @values ||= extracted_fields.map do |field, subfields|
       display_value(field, subfields)
-    end
+    end.compact
   end
 
   def to_partial_path
@@ -58,8 +58,8 @@ class MarcField
     MarcExtractor.new(marc, tags).extract
   end
 
-  def subfield_delimeter
-    @subfield_delimeter ||= I18n.t(
+  def subfield_delimiter
+    @subfield_delimiter ||= I18n.t(
       :"searchworks.marc_fields.#{i18n_key}.delimiter",
       default: [
         (:"searchworks.marc_fields.#{tags.first}.delimiter" if tags.present?),
@@ -70,7 +70,9 @@ class MarcField
   end
 
   def display_value(field, subfields)
-    safe_join subfields.map { |subfield| subfield_value(field, subfield) }, subfield_delimeter
+    return unless subfields.present?
+
+    safe_join subfields.map { |subfield| subfield_value(field, subfield) }, subfield_delimiter
   end
 
   def subfield_value(_field, subfield)

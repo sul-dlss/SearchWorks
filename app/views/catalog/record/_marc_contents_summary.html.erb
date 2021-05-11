@@ -42,8 +42,8 @@
   </dd>
 <% end %>
 
-<% summary = document.fetch(:summary_struct, []).first %>
-<% if summary.present? %>
+<% summary = document.fetch(:summary_struct, []).first || {} %>
+<% if summary[:fields].present? || summary[:unmatched_vernacular].present? %>
   <dt>Summary</dt>
   <% if summary[:fields].present? %>
     <% summary[:fields].each do |field| %>

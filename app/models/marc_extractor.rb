@@ -18,7 +18,8 @@ class MarcExtractor
     return to_enum(:extract) unless block_given?
 
     merged_and_matched_fields.each do |field|
-      yield field, relevant_subfields(field).to_a
+      subfields = relevant_subfields(field).to_a
+      yield field, subfields if subfields.present?
     end
   end
 
@@ -56,9 +57,13 @@ class MarcExtractor
       next unless include_subfield? field, subfield
       next if Constants::EXCLUDE_FIELDS.include?(subfield.code)
 
-      if subfield.code == '4'
+      case subfield.code
+      when '4'
         next if field.tag.start_with?('8')
+
         yield MARC::Subfield.new(subfield.code, Constants::RELATOR_TERMS[subfield.value] || subfield.value)
+      when 'a'
+        yield subfield unless subfield.value.starts_with?('%')
       else
         yield subfield
       end
@@ -66,14 +71,14 @@ class MarcExtractor
   end
 
   def include_subfield?(field, subfield)
-    return true unless subfields[field.tag]
+    return true unless subfields[field.canonical_tag]
 
-    subfields[field.tag].include? subfield.code
+    subfields[field.canonical_tag].include? subfield.code
   end
 
   def hidden_by_indicator?(field)
-    (Constants::HIDE_1ST_IND.include?(field.tag) && field.indicator1 == '1') ||
-      (Constants::HIDE_1ST_IND0.include?(field.tag) && field.indicator1 == '0')
+    (Constants::HIDE_1ST_IND.include?(field.canonical_tag) && field.indicator1 == '1') ||
+      (Constants::HIDE_1ST_IND0.include?(field.canonical_tag) && field.indicator1 == '0')
   end
 
   def matching_vernacular_field(field)

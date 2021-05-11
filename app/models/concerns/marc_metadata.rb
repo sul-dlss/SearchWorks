@@ -7,6 +7,10 @@ module MarcMetadata
     MarcField.new(self, Array.wrap(tag_or_specialization).map(&:to_s), **kwargs)
   end
 
+  def awards
+    @awards ||= Awards.new(self)
+  end
+
   def linked_series
     @linked_series ||= LinkedSeries.new(self)
   end

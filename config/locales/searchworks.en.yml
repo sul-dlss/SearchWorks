@@ -60,11 +60,11 @@ en:
         label: all
         description_html: <span class="h3">all</span> <span class="help-block">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
-      020:
+      "020":
         label: "ISBN"
-      022:
+      "022":
         label: 'ISSN'
-      028:
+      "028":
         label: "Publisher number"
       222:
         label: "Key title"

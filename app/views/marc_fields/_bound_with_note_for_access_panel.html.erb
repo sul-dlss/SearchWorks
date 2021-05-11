@@ -1,5 +1,5 @@
 <ul>
-  <% bound_with_note.values.each do |value| %>
+  <% bound_with_note_for_access_panel.values.each do |value| %>
     <li>
       <% if value[:id] %>
         <%= link_to(value[:value], solr_document_path(value[:id])) %>

@@ -1,23 +1,17 @@
 ###
-#  MarcBoundWith class to return 590 fields that have a $c
-###
+# BoundWithNote class to render 590 fields
 class BoundWithNote < MarcField
-  def values
-    extracted_fields.map do |field, subfields|
-      id = subfields.find { |subfield| subfield.code == 'c' }.value[/^(\d+)/]
-
-      { id: id, value: display_value(field, subfields.reject { |subfield| subfield.code == 'c' }) }
-    end
-  end
-
-  def to_partial_path
-    'marc_fields/bound_with_note'
-  end
+  include ActionView::Helpers::UrlHelper
 
   private
 
-  def extracted_fields
-    super.select { |field, _subfields| field['c'].present? }
+  def subfield_value(field, subfield)
+    return super unless subfield.code == 'c'
+
+    ckey = subfield.value[/^(\d+)/]
+    ckey_link = link_to(ckey, Rails.application.routes.url_helpers.solr_document_path(ckey))
+
+    subfield.value.gsub(ckey, ckey_link).html_safe
   end
 
   def tags

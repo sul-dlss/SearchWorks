@@ -1310,4 +1310,17 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def issn_fixture
+    <<-xml
+      <record>
+        <datafield tag="022">
+          <subfield code="a">0041-4034</subfield>
+          <subfield code="z">1234-1230</subfield>
+          <subfield code="z">5678-567X any old text</subfield>
+          <subfield code="z">invalid ISSN</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

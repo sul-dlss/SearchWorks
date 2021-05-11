@@ -1,15 +1,19 @@
 ##
-# A class to handle MARC 020a + 020z field logic
-# https://www.loc.gov/marc/bibliographic/bd020.html
+# A class to handle MARC 022a + 022z field logic
+# https://www.loc.gov/marc/bibliographic/bd022.html
 class Issn < MarcField
   def values
-    super.map(&:strip).select { |v| v =~ issn_pattern }
+    return [] if marc.blank?
+
+    @values ||= extracted_fields.flat_map do |field, subfields|
+      subfields.map(&:value).map(&:strip).select { |v| v =~ issn_pattern }
+    end.compact
   end
 
   private
 
   def tags
-    %w[020a 020z]
+    %w[022az]
   end
 
   def issn_pattern

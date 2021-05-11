@@ -6,7 +6,7 @@
 module SeriesLinkable
   def values
     extracted_fields.map do |_field, subfields|
-      subfields.select { |subfield| ('a'..'z').cover?(subfield.code) }.map(&:value).join(subfield_delimeter)
+      subfields.select { |subfield| ('a'..'z').cover?(subfield.code) }.map(&:value).join(subfield_delimiter)
     end
   end
 
