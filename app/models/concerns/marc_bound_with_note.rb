@@ -1,5 +1,5 @@
 ###
-#  Simple mdoule to mixin BoundWithNote behavior
+#  Simple module to mixin BoundWithNote behavior
 ###
 module MarcBoundWithNote
   def bound_with?

@@ -5,7 +5,7 @@ class Awards < MarcField
   private
 
   def display_value(field, subfields)
-    safe_join [super, Constants::SOURCES[field['1']]].compact, subfield_delimeter
+    safe_join [super, Constants::SOURCES[field['1']]].compact, subfield_delimiter
   end
 
   def tags

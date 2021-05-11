@@ -21,6 +21,6 @@ class BoundWithNoteForAccessPanel < BoundWithNote
   end
 
   def display_value(field, subfields)
-    safe_join subfields.reject { |subfield| subfield.code == 'c' }.map { |subfield| subfield_value(field, subfield) }, subfield_delimeter
+    safe_join subfields.reject { |subfield| subfield.code == 'c' }.map { |subfield| subfield_value(field, subfield) }, subfield_delimiter
   end
 end
