@@ -1,2 +1,10 @@
-Reporting from: <span class="reporting-from-field"><%= request.referer %></span>
-<%= hidden_field_tag :url, request.referer, class:"reporting-from-field" %>
+<div class="alert alert-info" role="alert">
+  <div class="row">
+    <div class="col-sm-10">
+      Reporting from: <span class="reporting-from-field"><%= request.referer %></span>
+    </div>
+    <div class="col-sm-2">
+      <%= link_to 'Check system status', 'http://library-status.stanford.edu' %>
+    </div>
+  </div>
+</div>

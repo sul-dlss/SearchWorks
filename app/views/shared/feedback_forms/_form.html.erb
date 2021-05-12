@@ -1,12 +1,16 @@
 <div class="container">
-  <div class="col-sm-6 col-sm-offset-2">
-    <%= render "shared/feedback_forms/form_fields", locals: { target: '#feedback-form'} %>
-  </div>
-  <div class="col-sm-4">
-    <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
-    <div class="check-status">
-      <%= link_to 'Check system status', 'http://library-status.stanford.edu' %>
-    </div>
-    <%= render "shared/quick_reports/form", layout: nil %>
+  <div class="col-sm-10 col-sm-offset-1">
+    <%= render "shared/feedback_forms/reporting_from" %>
+
+    <% if locals[:target] == '#feedback-form' %>
+      <div>
+        <div class="col-sm-12 col-sm-offset-3">
+          <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
+          <%= render "shared/quick_reports/form", layout: nil %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= render "shared/feedback_forms/form_fields", locals: locals %>
   </div>
 </div>
