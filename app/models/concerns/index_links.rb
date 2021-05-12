@@ -74,7 +74,7 @@ module IndexLinks
     end
 
     def link_host(link_field)
-      uri = URI.parse(URI.escape(link_field.strip))
+      uri = URI.parse(Addressable::URI.encode(link_field.strip))
       host = uri.host
       if host =~ SearchWorks::Links::PROXY_REGEX
         if uri.query && (query = CGI.parse(uri.query))['url'].present?

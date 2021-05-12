@@ -5,7 +5,7 @@ describe SfxDataController do
     it 'unescapes the incoming URL param' do
       expect(SfxData).to receive(:new).with('http://example.com').and_return(double(targets: []))
 
-      get :show, params: { url: URI.encode('http://example.com') }
+      get :show, params: { url: Addressable::URI.encode('http://example.com') }
     end
   end
 
@@ -15,7 +15,7 @@ describe SfxDataController do
     end
 
     it 'is successful and renders the show template' do
-      get :show, params: { url: URI.encode('http://example.com') }
+      get :show, params: { url: Addressable::URI.encode('http://example.com') }
 
       expect(response).to be_successful
       expect(response).to render_template('show')
@@ -24,7 +24,7 @@ describe SfxDataController do
 
   context 'when a URL does not have SFX data' do
     it 'returns a 404/Not Found' do
-      get :show, params: { url: URI.encode('http://example.com') }
+      get :show, params: { url: Addressable::URI.encode('http://example.com') }
 
       expect(response).to be_not_found
     end

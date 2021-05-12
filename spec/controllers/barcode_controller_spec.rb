@@ -17,7 +17,7 @@ describe BarcodeController do
 
       get :show, params: { id: '3610512345' }
 
-      expect(response).to be_success
+      expect(response).to be_successful
       response_json = JSON.parse(response.body)
       expect(response_json['id']).to eq(json[:id])
       expect(response_json['barcode']).to eq(json[:barcode])

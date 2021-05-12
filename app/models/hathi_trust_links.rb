@@ -51,7 +51,7 @@ class HathiTrustLinks
   def item_url
     return item_target(hathitrust_item_id) if publicly_available?
 
-    "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{URI.encode(item_target(hathitrust_item_id))}"
+    "https://babel.hathitrust.org/Shibboleth.sso/Login?entityID=#{stanford_shib_id}&target=#{item_target(hathitrust_item_id)}"
   end
 
   def stanford_shib_id
@@ -67,6 +67,6 @@ class HathiTrustLinks
   end
 
   def item_target(id)
-    "https://babel.hathitrust.org/cgi/pt?id=#{URI.encode(id)}&view=1up&seq=9"
+    "https://babel.hathitrust.org/cgi/pt?id=#{ERB::Util.url_encode(id)}"
   end
 end
