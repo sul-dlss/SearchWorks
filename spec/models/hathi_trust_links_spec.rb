@@ -3,9 +3,10 @@
 require 'spec_helper'
 
 describe HathiTrustLinks do
+  subject(:ht_links) { described_class.new(document) }
+
   let(:document_data) { { ht_bib_key_ssim: ['abc123'], ht_htid_ssim: ['1234567'] } }
   let(:document) { SolrDocument.new(document_data) }
-  subject(:ht_links) { described_class.new(document) }
 
   describe '#present?' do
     context 'when there is hathi data' do
@@ -67,10 +68,10 @@ describe HathiTrustLinks do
       end
 
       context 'when not publicly_available' do
-        before { document_data[:ht_access_sim] = ['access'] }
+        before { document_data[:ht_access_sim] = ['deny'] }
 
-        it 'does not include the signon param (and sends the user directly to the work)' do
-          expect(ht_links.url).not_to include('?signon=swle:urn:mace')
+        it 'includes the signon param' do
+          expect(ht_links.url).to include('hathitrust.org/Record/abc123?signon=swle:urn:mace:incommon:stanford.edu')
         end
       end
     end
@@ -96,21 +97,23 @@ describe HathiTrustLinks do
       end
 
       it 'is the url to the item' do
-        expect(ht_links.url).to include('hathitrust.org/cgi/pt?id=1234567&view=1up')
+        expect(ht_links.url).to include('hathitrust.org/cgi/pt?id=1234567')
       end
 
       context 'when publicly_available' do
         it 'passes the item URL through the target param' do
-          expect(ht_links.url).to include('target=https://babel.hathitrust.org/cgi/pt?id=1234567&view=1up')
+          expect(ht_links.url).to include('target=https://babel.hathitrust.org/cgi/pt?id=1234567')
         end
       end
 
       context 'when not publicly_available' do
-        before { document_data[:ht_access_sim] = ['access'] }
+        before do
+          document_data[:ht_access_sim] = ['deny']
+          document_data[:ht_htid_ssim] = ['loc.ark:/13960/t17m0qv0b']
+        end
 
-        it 'is the item URL directly (not passed as a the targer param)' do
-          expect(ht_links.url).not_to include('target=')
-          expect(ht_links.url).to start_with('https://babel.hathitrust.org/cgi/pt?id=1234567&view=1up')
+        it 'bounces the user to shibboleth with the encoded item URL in the target param' do
+          expect(ht_links.url).to include('babel.hathitrust.org/Shibboleth.sso/Login?entityID=urn:mace:incommon:stanford.edu&target=https://babel.hathitrust.org/cgi/pt?id=loc.ark%3A%2F13960%2Ft17m0qv0b')
         end
       end
     end

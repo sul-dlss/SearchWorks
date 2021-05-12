@@ -57,7 +57,7 @@ describe 'marc_fields/_linked_related_works.html.erb', type: :view do
 
     it 'renders 710 fields' do
       expect(rendered).to have_css('dd:nth-of-type(3) a', text: '710_with_ind2_1')
-      expect(rendered).not_to have_css(text: '710_with_ind2_2')
+      expect(rendered).not_to have_css('dd:nth-of-type(3) a', text: '710_with_ind2_2')
     end
 
     it 'renders 711 fields' do

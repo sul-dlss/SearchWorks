@@ -6,7 +6,7 @@ RSpec.describe 'Article Routing', type: :routing do
   end
 
   context '#show' do
-    let(:uri) { '/articles/' + URI.escape(id) }
+    let(:uri) { "/articles/#{Addressable::URI.encode_component(id)}" }
 
     subject(:result) { get(uri) }
 
