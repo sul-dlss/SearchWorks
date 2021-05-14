@@ -34,6 +34,10 @@ describe Bookplate do
     it 'matches if the druid in the facet matches this fund' do
       expect(subject.matches?({ f: { fund_facet: ['abc123'] } })).to eq true
     end
+
+    it 'matches if the fund name in the facet matches this fund' do
+      expect(subject.matches?({ f: { fund_facet: ['FUND-NAME'] } })).to eq true
+    end
   end
 
   describe 'to_partial_path' do

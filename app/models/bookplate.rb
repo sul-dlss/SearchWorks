@@ -29,7 +29,9 @@ class Bookplate
   end
 
   def matches?(params)
-    Array.wrap(params.dig(:f, facet_field_key.to_sym)).include?(druid)
+    values = Array.wrap(params.dig(:f, facet_field_key.to_sym))
+
+    values.include?(druid) || values.include?(fund_name)
   end
 
   private
