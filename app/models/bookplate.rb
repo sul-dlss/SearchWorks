@@ -28,6 +28,10 @@ class Bookplate
     'bookplates/bookplate'
   end
 
+  def matches?(params)
+    Array.wrap(params.dig(:f, facet_field_key.to_sym)).include?(druid)
+  end
+
   private
 
   def fund_name

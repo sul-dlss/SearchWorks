@@ -22,6 +22,20 @@ describe Bookplate do
     end
   end
 
+  describe '#matches?' do
+    it 'does not match when the params are empty' do
+      expect(subject.matches?({})).to eq false
+    end
+
+    it 'does not match if the druid is different' do
+      expect(subject.matches?({ f: { fund_facet: ['something'] } })).to eq false
+    end
+
+    it 'matches if the druid in the facet matches this fund' do
+      expect(subject.matches?({ f: { fund_facet: ['abc123'] } })).to eq true
+    end
+  end
+
   describe 'to_partial_path' do
     it 'returns the bookplates path' do
       expect(subject.to_partial_path).to eq 'bookplates/bookplate'

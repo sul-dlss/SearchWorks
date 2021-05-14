@@ -26,7 +26,7 @@ module MastheadHelper
     return unless params[:f] && params[:f][:fund_facet].present? && response.docs.present?
 
     SolrDocument.new(response.docs.first.to_h).bookplates.find do |bookplate|
-      bookplate.linking_value == params[:f][:fund_facet].first
+      bookplate.matches? params
     end
   end
 
