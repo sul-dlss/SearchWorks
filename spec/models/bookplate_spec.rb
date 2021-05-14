@@ -20,11 +20,6 @@ describe Bookplate do
       expect(subject.params_for_search[:f]).to be_a Hash
       expect(subject.params_for_search[:f][:fund_facet]).to eq ['abc123']
     end
-
-    it 'gets the value that will be used for linking purposes' do
-      druid = subject.send(:druid)
-      expect(subject.linking_value).to eq druid
-    end
   end
 
   describe 'to_partial_path' do
