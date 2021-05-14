@@ -889,6 +889,7 @@
         isbn_display,
         item_display,
         lccn,
+        lc_assigned_callnum_ssim,
         mhld_display,
         modsxml,
         oclc,
