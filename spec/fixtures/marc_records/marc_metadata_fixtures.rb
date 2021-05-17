@@ -622,6 +622,53 @@ module MarcMetadataFixtures
     xml
   end
 
+  def marc_duplicate_subject_fixture
+    <<-xml
+      <record>
+        <datafield ind1=" " ind2="0" tag="650">
+          <subfield code="a">Piano music.</subfield>
+          <subfield code="=">^A1049172</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="0" tag="650">
+          <subfield code="a">Waltzes.</subfield>
+          <subfield code="=">^A1328649</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="0" tag="650">
+          <subfield code="a">Canons, fugues, etc. (Piano)</subfield>
+          <subfield code="=">^A1000979</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="0" tag="650">
+          <subfield code="a">Marches.</subfield>
+          <subfield code="=">^A1037033</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="6" tag="650">
+          <subfield code="a">Piano, Musique de.</subfield>
+          <subfield code="v">Sound recordings.</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+          <subfield code="a">Canons, fugues, etc. (Piano)</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst00846007</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+          <subfield code="a">Marches.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01009043</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+          <subfield code="a">Piano music.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01063403</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="7" tag="650">
+          <subfield code="a">Waltzes.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01170245</subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def multi_vxyz_subject_fixture
     <<-xml
       <record>
