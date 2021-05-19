@@ -6,7 +6,7 @@ class BoundWithNote < MarcField
   private
 
   def subfield_value(field, subfield)
-    return super unless subfield.code == 'c'
+    return super unless subfield.code == 'c' && subfield.value.match?(/^(\d+)/)
 
     ckey = subfield.value[/^(\d+)/]
     ckey_link = link_to(ckey, Rails.application.routes.url_helpers.solr_document_path(ckey))
