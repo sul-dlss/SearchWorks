@@ -403,6 +403,18 @@ module MarcMetadataFixtures
     xml
   end
 
+  def unlinked_ckey_fixture
+    <<-xml
+      <record>
+        <datafield tag="590" ind1=" " ind2=" ">
+          <subfield code='a'>Electronic reproduction. </subfield>
+          <subfield code='b'>Chicago, Illinois : </subfield>
+          <subfield code='c'>McGraw Hill Education, </subfield>
+        </datafield>
+      </record>
+    xml
+  end
+
   def escape_characters_fixture
     <<-xml
       <record>
