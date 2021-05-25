@@ -26,6 +26,23 @@ describe "catalog/record/_marc_subjects.html.erb" do
     end
   end
 
+  context 'with duplicate subjects' do
+    before do
+      assign(:document, SolrDocument.new(
+        marcxml: marc_duplicate_subject_fixture
+      ))
+      render
+    end
+
+    it 'deduplicates the display' do
+      expect(rendered).to have_css('dd', text: 'Piano music.', count: 1)
+      expect(rendered).to have_css('dd', text: 'Waltzes.', count: 1)
+      expect(rendered).to have_css('dd', text: 'Canons, fugues, etc. (Piano)', count: 1)
+      expect(rendered).to have_css('dd', text: 'Marches.', count: 1)
+      expect(rendered).to have_css('dd', text: "Piano, Musique de.\n         > \n        Sound recordings.", count: 1)
+    end
+  end
+
   describe "Database subjects" do
     let(:document) {
       SolrDocument.new(
