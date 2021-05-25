@@ -21,15 +21,17 @@ class Bookplate
   end
 
   def params_for_search
-    { f: { facet_field_key.to_sym => [linking_value] } }
+    { f: { facet_field_key.to_sym => [druid] } }
   end
 
   def to_partial_path
     'bookplates/bookplate'
   end
 
-  def linking_value
-    send(link_key)
+  def matches?(params)
+    values = Array.wrap(params.dig(:f, facet_field_key.to_sym))
+
+    values.include?(druid) || values.include?(fund_name)
   end
 
   private
@@ -52,10 +54,6 @@ class Bookplate
 
   def facet_field_key
     :fund_facet
-  end
-
-  def link_key
-    :druid
   end
 
   def data_delimiter

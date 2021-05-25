@@ -20,10 +20,23 @@ describe Bookplate do
       expect(subject.params_for_search[:f]).to be_a Hash
       expect(subject.params_for_search[:f][:fund_facet]).to eq ['abc123']
     end
+  end
 
-    it 'gets the value that will be used for linking purposes' do
-      druid = subject.send(:druid)
-      expect(subject.linking_value).to eq druid
+  describe '#matches?' do
+    it 'does not match when the params are empty' do
+      expect(subject.matches?({})).to eq false
+    end
+
+    it 'does not match if the druid is different' do
+      expect(subject.matches?({ f: { fund_facet: ['something'] } })).to eq false
+    end
+
+    it 'matches if the druid in the facet matches this fund' do
+      expect(subject.matches?({ f: { fund_facet: ['abc123'] } })).to eq true
+    end
+
+    it 'matches if the fund name in the facet matches this fund' do
+      expect(subject.matches?({ f: { fund_facet: ['FUND-NAME'] } })).to eq true
     end
   end
 
