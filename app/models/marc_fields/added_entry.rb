@@ -5,7 +5,7 @@ class AddedEntry < MarcField
   def label
     f = marc[tags.first]
 
-    if f.indicator2 == '2'
+    if f&.indicator2 == '2'
       'Included Work'
     else
       super
