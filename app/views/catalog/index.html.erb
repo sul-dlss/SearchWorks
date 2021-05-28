@@ -1,4 +1,5 @@
 <% if has_search_parameters? %>
+  <%= render_masthead_partial %>
   <%= render partial: "index" %>
 <% else %>
   <%= render partial: 'shared/home_page_notice' if Settings.HOME_PAGE_NOTICE %>

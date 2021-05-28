@@ -12,6 +12,10 @@ module MastheadHelper
     end
   end
 
+  def page_location
+    SearchWorks::PageLocation.new(params)
+  end
+
   def facets_prefix_options
     ['0-9', ('A'..'Z').to_a].flatten
   end

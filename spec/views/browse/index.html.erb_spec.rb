@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/mastheads/_callnumber_browse.html.erb" do
+describe "browse/index.html.erb" do
   let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',
@@ -14,6 +14,7 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
 
   before do
     assign(:original_doc, original_doc)
+    allow(view).to receive(:params).and_return(start: '123')
     expect(view).to receive(:show_presenter).with(original_doc).and_return(presenter)
   end
 
@@ -31,7 +32,7 @@ describe "catalog/mastheads/_callnumber_browse.html.erb" do
 
   describe "with barcode" do
     before do
-      allow(view).to receive(:params).and_return(barcode: '321')
+      allow(view).to receive(:params).and_return(start: '123', barcode: '321')
     end
 
     it "should use the callnumber based on the provided barcode in the heading" do

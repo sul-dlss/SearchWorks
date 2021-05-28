@@ -1,4 +1,20 @@
-<div id="content" class="col-md-12 callnumber-browse">
+<% if params[:start].present? %>
+  <div id="masthead-container">
+    <div id="masthead" class="browse-masthead">
+      <h1>Browse related items</h1>
+      <p>Starting at call number:
+        <% if params[:barcode] %>
+          <%= @original_doc.holdings.find_by_barcode(params[:barcode]).callnumber %>
+        <% else %>
+          <%= @original_doc.holdings.callnumbers.first.callnumber %>
+        <% end %>
+      </p>
+      <p><%= link_to(show_presenter(@original_doc).heading, solr_document_path(@original_doc)) %></p>
+    </div>
+  </div>
+<% end %>
+
+<div id="content" class="callnumber-browse">
   <% if @document_list.present? %>
     <div class="panel panel-default browse-toolbar">
       <%= link_to('◄', browse_index_path(params.merge(page: (params[:page] || 0).to_i-1)), class: 'btn btn-default btn-sm') %>
