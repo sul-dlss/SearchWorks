@@ -1,3 +1,4 @@
+# Renders the preview pane for browse nearby
 class PreviewController < ApplicationController
   include Blacklight::Configurable
   include Blacklight::SearchHelper
