@@ -227,14 +227,6 @@ describe SearchWorks::PageLocation do
       end
     end
 
-    describe "for SelectedDatabasesController#index" do
-      let(:base_params) { { controller: 'selected_databases', action: 'index' } }
-
-      it "should be defined" do
-        expect(SearchWorks::PageLocation::AccessPoints.new(base_params).point).to eq :selected_databases
-      end
-    end
-
     describe "for BrowseController#index" do
       let(:base_params) { { controller: 'browse', action: 'index', start: '123' } }
       let(:no_start_params) { base_params.merge(start: nil) }

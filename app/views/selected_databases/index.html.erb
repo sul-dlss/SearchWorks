@@ -1,20 +1,21 @@
-<% if @selected_databases.present? %>
-  <% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-  <div class="breadcrumb col-md-12">
-    <div class="search_num_of_results">
-      <div class='results-heading'>
-        <h2><%= pluralize(@selected_databases.length, 'result') %></h2>
-      </div>
+<% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+
+<%= render 'masthead' %>
+
+<div class="breadcrumb col-md-12">
+  <div class="search_num_of_results">
+    <div class='results-heading'>
+      <h2><%= pluralize(@selected_databases.length, 'result') %></h2>
     </div>
   </div>
-  <div class="row selected-databases">
-    <%# render the databases in two columns %>
-    <% @selected_databases.in_groups(2, false).each do |column| %>
-      <div class="col-md-6">
-        <% column.each do |database| %>
-          <%= render 'database', database: database %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+</div>
+<div class="row selected-databases">
+  <%# render the databases in two columns %>
+  <% @selected_databases.in_groups(2, false).each do |column| %>
+    <div class="col-md-6">
+      <% column.each do |database| %>
+        <%= render 'database', database: database %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
