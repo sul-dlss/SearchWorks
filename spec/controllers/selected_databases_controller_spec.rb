@@ -3,9 +3,11 @@ require 'spec_helper'
 describe SelectedDatabasesController do
   describe "#index" do
     it "should set the @selected_databases instance variable" do
-      expect(controller).to receive(:fetch).and_return([double('response'), double('documents')])
+      docs = double('documents')
+
+      expect(controller).to receive(:fetch).and_return([double('response'), docs])
       get :index
-      expect(assigns(:selected_databases)).to be_a SelectedDatabases
+      expect(assigns(:selected_databases)).to eq docs
     end
   end
 
