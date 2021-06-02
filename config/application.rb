@@ -31,7 +31,7 @@ module SearchWorks
     require 'access_panels/online'
     require 'access_panels/sfx'
     require 'access_panels/temporary_access'
-    require 'links'
+    require 'search_works/links'
     require 'hours_request'
     require 'holdings'
     require 'live_lookup'

@@ -1,16 +1,33 @@
 module EdsLinks
   def eds_links
-    @eds_links ||= EdsLinks::Processor.new(self)
+    @eds_links ||= SearchWorks::Links.new(eds_fulltext_links_as_searchworks_links)
+  end
+
+  private
+
+  def eds_fulltext_links
+    fetch('eds_fulltext_links', []).map do |link_field|
+      EdsLinks::FulltextLink.new(link_field)
+    end.select(&:present?)
+  end
+
+  def eds_fulltext_links_as_searchworks_links
+    links = eds_fulltext_links
+
+    categories = links.map(&:category).compact.map(&:to_i)
+
+    links.map { |link| link.to_searchworks_link(categories) }
   end
 
   # EDS-centric full text link
   class FulltextLink
     attr_reader :url, :type, :label
-    def initialize(link_fields)
-      link_fields = link_fields.symbolize_keys
-      @url = link_fields[:url]
-      @original_label = link_fields[:label]
-      @type = link_fields[:type]
+
+    def initialize(link_field)
+      link_field = link_field.symbolize_keys
+      @url = link_field[:url]
+      @original_label = link_field[:label]
+      @type = link_field[:type]
       @label = relabel
     end
 
@@ -35,6 +52,35 @@ module EdsLinks
       LINK_MAPPING[:open_access_link][:category] # the rest are open-access
     end
 
+    def to_searchworks_link(categories = [])
+      SearchWorks::Links::Link.new(
+        text:     label,
+        href:     url,
+        fulltext: present? && show?(categories, category),
+        sfx:      sfx?,
+        ill:      ill?,
+        type:     type
+      )
+    end
+
+    # Link types are prioritized as follows:
+    #
+    # 1 and 2 are preferred, and can coexist
+    # show 3 only if there's no 1 or 2
+    # show 4 only if there's no 1-3
+    # show 5 only if there's no 1-4
+    #
+    # @param [Array<Integer>] `all_categories`
+    # @param [Integer] `category`
+    def show?(categories, category)
+      case category
+      when 1, 2
+        true
+      when 3, 4, 5
+        categories.none? { |i| i < category }
+      end
+    end
+
     private
 
     # Primarily an EDS-label based mapping
@@ -55,57 +101,6 @@ module EdsLinks
       return map[:label] if map[:label].present? && map[:label] != :as_is
 
       @original_label
-    end
-  end
-
-  # Maps EDS-centric links into SearchWorks links
-  class Processor < SearchWorks::Links
-    # @return [Array<SearchWorks::Links::Link>]
-    def all
-      # First convert into our FulltextLink objects
-      links = link_fields.map do |link_field|
-        EdsLinks::FulltextLink.new(link_field)
-      end
-
-      # Ensure they meet our requirements
-      links.select!(&:present?)
-
-      # Then, map them into the SearchWorks objects
-      categories = links.map(&:category).compact.map(&:to_i)
-      links.map do |link|
-        SearchWorks::Links::Link.new(
-          text:     link.label,
-          href:     link.url,
-          fulltext: link.present? && show?(categories, link.category),
-          sfx:      link.sfx?,
-          ill:      link.ill?,
-          type:     link.type
-        )
-      end
-    end
-
-    private
-
-    # Link types are prioritized as follows:
-    #
-    # 1 and 2 are preferred, and can coexist
-    # show 3 only if there's no 1 or 2
-    # show 4 only if there's no 1-3
-    # show 5 only if there's no 1-4
-    #
-    # @param [Array<Integer>] `all_categories`
-    # @param [Integer] `category`
-    def show?(categories, category)
-      case category
-      when 1, 2
-        true
-      when 3, 4, 5
-        categories.none? { |i| i < category }
-      end
-    end
-
-    def link_fields
-      @document['eds_fulltext_links'] || []
     end
   end
 end
