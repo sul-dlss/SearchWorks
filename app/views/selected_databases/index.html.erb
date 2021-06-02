@@ -1,43 +1,21 @@
-<% if @selected_databases.present? %>
-  <% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-  <div class="breadcrumb col-md-12">
-    <div class="search_num_of_results">
-      <div class='results-heading'>
-        <h2><%= pluralize(@selected_databases.length, 'result') %></h2>
-      </div>
+<% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+
+<%= render 'masthead' %>
+
+<div class="breadcrumb col-md-12">
+  <div class="search_num_of_results">
+    <div class='results-heading'>
+      <h2><%= pluralize(@selected_databases.length, 'result') %></h2>
     </div>
   </div>
-  <% column1, column2 = @selected_databases.in_groups(2) %>
-  <div class="row selected-databases">
-    <% [column1, column2].each do |column| %>
-      <div class="col-md-6">
-        <% column.compact.each do |database| %>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h3><%= link_to(database['title_245a_display'], solr_document_path(database[:id])) %></h3>
-              <p>(<%= database.selected_database_subjects.join(', ') %>)</p>
-              <dl data-behavior="results-online-section" class="dl-horizontal results-online-section">
-                <dt class="online-label">Search database</dt>
-                <dd>
-                  <div data-behavior="truncate-results-online-links">
-                    <ul class="links">
-                      <% database.marc_links.each do |link| %>
-                        <li class="<%= 'stanford-only' if link.stanford_only? %>"><%= link.html.html_safe %></li>
-                      <% end %>
-                    </ul>
-                  </div>
-                </dd>
-              </dl>
-              <div>
-                <%= database.selected_database_description %>
-                <% if database.selected_database_see_also %>
-                  (See also <%= link_to(database.selected_database_see_also.text, solr_document_path(database.selected_database_see_also.id)) %>)
-                <% end %>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+</div>
+<div class="row selected-databases">
+  <%# render the databases in two columns %>
+  <% @selected_databases.in_groups(2, false).each do |column| %>
+    <div class="col-md-6">
+      <% column.each do |database| %>
+        <%= render 'database', database: database %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

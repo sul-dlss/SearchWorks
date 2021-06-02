@@ -95,10 +95,6 @@ module SearchWorks
         :course_reserves
       end
 
-      def selected_databases_index_access_points
-        :selected_databases
-      end
-
       def browse_index_access_points
         return unless @params[:start]
 

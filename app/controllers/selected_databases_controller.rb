@@ -1,8 +1,9 @@
-require 'selected_databases'
 class SelectedDatabasesController < ApplicationController
   include Blacklight::SearchHelper
   def index
-    _, solr_documents = fetch(SelectedDatabases.ids, { sort: "title_sort asc", rows: 100 })
-    @selected_databases = SelectedDatabases.new(solr_documents)
+    ids = Settings.selected_databases.keys.map(&:to_s)
+    _, solr_documents = fetch(ids, { sort: "title_sort asc", rows: ids.length })
+
+    @selected_databases = solr_documents
   end
 end
