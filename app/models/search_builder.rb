@@ -22,7 +22,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   end
 
   def database_prefix_search(solr_params)
-    if page_location.access_point.databases? && blacklight_params[:prefix]
+    if page_location.databases? && blacklight_params[:prefix]
       if blacklight_params[:prefix] == "0-9"
         query = ("0".."9").map do |number|
           "title_sort:#{number}*"
@@ -42,7 +42,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   private
 
   def page_location
-    SearchWorks::PageLocation.new(blacklight_params)
+    @page_location ||= SearchWorks::PageLocation.new(blacklight_params)
   end
 
   def on_home_page?

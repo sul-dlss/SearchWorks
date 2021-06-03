@@ -1,4 +1,17 @@
 <% @page_title = t 'blacklight.course_reserves.page_title', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+
+<div id="masthead-container">
+  <div id="masthead" class="course-reserves-masthead">
+    <h1>Browse course reserves</h1>
+    <div>
+      <p>Request items at the library's loan desk, and return them directly to the same location. Loan periods are typically 2-4 hours. Renewals are not permitted.</p>
+      <p class="inline-links">
+        For instructors: <%= link_to "Request course reserves", "https://reserves.stanford.edu" %> | <%= link_to "More information", "https://library.stanford.edu/using/borrow-renew-return/course-reserves" %>
+      </p>
+    </div>
+  </div>
+</div>
+
 <table id="course-reserves-browse" class="table table-striped">
   <thead>
     <tr>

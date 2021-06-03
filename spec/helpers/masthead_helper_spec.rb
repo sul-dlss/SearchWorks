@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'page_location'
 
 describe MastheadHelper do
   describe "#render_masthead_partial" do
@@ -93,6 +94,12 @@ describe MastheadHelper do
         double('Bookplate', text: 'Bookplate-text')
       )
       expect(helper.bookplate_breadcrumb_value('ABC123', response)).to eq 'Bookplate-text'
+    end
+  end
+
+  describe "#page_location" do
+    it "should be a SearchWorks::PageLocation" do
+      expect(helper.page_location).to be_a SearchWorks::PageLocation
     end
   end
 end

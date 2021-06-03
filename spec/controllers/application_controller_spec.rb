@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'page_location'
 
 describe ApplicationController do
   include Devise::Test::ControllerHelpers
@@ -27,12 +26,6 @@ describe ApplicationController do
 
     context 'when there is not a current user' do
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be_falsey }
-    end
-  end
-
-  describe "#page_location" do
-    it "should be a SearchWorks::PageLocation" do
-      expect(controller.send(:page_location)).to be_a SearchWorks::PageLocation
     end
   end
 end
