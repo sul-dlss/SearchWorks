@@ -5,7 +5,7 @@
   <img class="cover-image center-block <%= css_class %> hide" alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
 
   <% if document_index_view_type == :gallery %>
-    <%= link_to document, tabindex: '-1' do %>
+    <%= link_to document, tabindex: '-1', aria: { hidden: true } do %>
       <%= content_tag(:span, class:"fake-cover") do %>
         <%# Wrapper needed for the way that Firefox handles display: table-cell %>
         <%= content_tag(:div, class: "fake-cover-text-wrapper") do %>
