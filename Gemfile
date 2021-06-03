@@ -23,7 +23,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 3.0'
-  gem 'selenium-webdriver','!= 3.13.0'
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -40,8 +40,7 @@ gem 'ruby-oembed'
 
 gem 'okcomputer' # monitors application and its dependencies
 
-# honeybadger 4.7.1 has a bug that prevents us from deploying
-gem 'honeybadger', '~> 4.7', '!= 4.7.1'
+gem 'honeybadger'
 
 group :deployment do
   gem 'capistrano', '~> 3.0'

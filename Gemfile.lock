@@ -600,7 +600,7 @@ DEPENDENCIES
   faraday (~> 0.10)
   font-awesome-rails
   global_alerts
-  honeybadger (~> 4.7, != 4.7.1)
+  honeybadger
   jbuilder (~> 2.5)
   jquery-datatables-rails
   jquery-rails
@@ -631,7 +631,7 @@ DEPENDENCIES
   rubocop-rspec
   ruby-oembed
   sass-rails (~> 5.0)
-  selenium-webdriver (!= 3.13.0)
+  selenium-webdriver
   simplecov (~> 0.14)
   solr_wrapper
   spring
@@ -644,4 +644,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.2.15
+   2.2.17
