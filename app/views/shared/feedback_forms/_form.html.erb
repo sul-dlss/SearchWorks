@@ -2,7 +2,7 @@
   <div class="col-sm-10 col-sm-offset-1">
     <%= render "shared/feedback_forms/reporting_from" %>
 
-    <% if locals[:target] == '#feedback-form' %>
+    <% if target == '#feedback-form' %>
       <div>
         <div class="col-sm-12 col-sm-offset-3">
           <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
@@ -11,6 +11,6 @@
       </div>
     <% end %>
 
-    <%= render "shared/feedback_forms/form_fields", locals: locals %>
+    <%= render "shared/feedback_forms/form_fields", target: target, type: type %>
   </div>
 </div>

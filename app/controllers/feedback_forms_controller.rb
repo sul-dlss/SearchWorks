@@ -34,7 +34,7 @@ class FeedbackFormsController < ApplicationController
   protected
 
   def set_form_type
-    @form_type = params.permit(:type)[:type]
+    @form_type = params.permit(:type)[:type] || 'feedback'
   end
 
   def validate

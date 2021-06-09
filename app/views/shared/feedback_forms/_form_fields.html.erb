@@ -1,49 +1,49 @@
-<%= form_tag feedback_form_path, method: :post, class: "form-horizontal feedback-form", role: "form" do %>
-  <%= hidden_field_tag :url, request.referer, class:"reporting-from-field" %>
+<%= form_with url: feedback_form_path, method: :post, class: "form-horizontal feedback-form", role: "form", namespace: type do |f| %>
+  <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
   <span style="display:none;visibility:hidden;">
-    <%= text_field_tag :user_agent %>
-    <%= text_field_tag :viewport %>
-    <%= text_field_tag :last_search %>
+    <%= f.text_field :user_agent %>
+    <%= f.text_field :viewport %>
+    <%= f.text_field :last_search %>
   </span>
   <div class="col-sm-8 col-sm-offset-1">
-    <% if locals[:target] == '#connection-form' %>
-      <%= hidden_field_tag :type, 'connection' %>
+    <% if type == 'connection' %>
+      <%= f.hidden_field :type, value: type %>
       <div class="form-group">
-        <%= label_tag(:connection_resource_name, 'Name of resource', class:"col-sm-3 control-label") %>
+        <%= f.label(:resource_name, 'Name of resource', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_field_tag :resource_name, "", id: 'connection_resource_name', class:"form-control", required: true %>
+          <%= f.text_field :resource_name, value: "", class:"form-control", required: true %>
         </div>
       </div>
       <div class="form-group">
-        <%= label_tag(:connection_problem_url, 'Problem URL', class:"col-sm-3 control-label") %>
+        <%= f.label(:problem_url, 'Problem URL', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_field_tag :problem_url, "", id: 'connection_problem_url', class:"form-control", required: true %>
+          <%= f.text_field :problem_url, value: "", class:"form-control", required: true %>
         </div>
       </div>
       <div class="form-group">
-        <%= label_tag(:connection_message, 'Describe the connection issue', class:"col-sm-3 control-label") %>
+        <%= f.label(:message, 'Describe the connection issue', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_area_tag :message, "", id: 'connection_message', rows:"5", class:"form-control", required: true %>
+          <%= f.text_area :message, value: "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% else %>
       <div class="form-group">
-        <%= label_tag(:feedback_message, 'Message', class:"col-sm-3 control-label") %>
+        <%= f.label(:message, 'Message', class:"col-sm-3 control-label") %>
         <div class="col-sm-9">
-          <%= text_area_tag :message, "", id: 'feedback_message', rows:"5", class:"form-control", required: true %>
+          <%= f.text_area :message, value: "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% end %>
     <div class="form-group">
-      <%= label_tag(:feedback_name, 'Your name', class:"col-sm-3 control-label") %>
+      <%= f.label(:name, 'Your name', class:"col-sm-3 control-label") %>
       <div class="col-sm-9">
-        <%= text_field_tag :name, "", id: 'feedback_name', class:"form-control", required: true %>
+        <%= f.text_field :name, value: "", class:"form-control", required: true %>
       </div>
     </div>
     <div class="form-group">
-      <%= label_tag(:feedback_to, 'Your email', class:"col-sm-3 control-label") %>
+      <%= f.label(:to, 'Your email', class:"col-sm-3 control-label") %>
       <div class="col-sm-9">
-        <%= email_field_tag :to, "", id: 'feedback_to', class:"form-control", required: true %>
+        <%= f.email_field :to, value: "", class:"form-control", required: true %>
       </div>
     </div>
 
@@ -60,7 +60,7 @@
     <div class="form-group">
       <div class="col-sm-offset-3 col-sm-9">
         <button type="submit" class="btn btn-primary">Send</button>
-        <%= link_to "Cancel", :back, class:"cancel-link", data: { toggle: 'collapse', target: locals[:target] } %>
+        <%= link_to "Cancel", :back, class:"cancel-link", data: { toggle: 'collapse', target: target } %>
       </div>
     </div>
   </div>
