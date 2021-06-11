@@ -20,7 +20,7 @@
                             multiple: true,
                             id: "eds_limiter_#{limiter.id}",
                             checked: limiter.enabled_by_default?,
-                            'aria-described-by': "limiter_tip_#{limiter.id}",
+                            'aria-describedby': "limiter_tip_#{limiter.id}",
                             data: { behavior: 'update-hidden-inputs-by-checkbox', 'target-selector': '#dynamic-hidden-inputs-target' }
                           },
                           limiter.label,
