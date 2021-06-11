@@ -3,12 +3,12 @@ module SearchWorks
     PROXY_REGEX = /stanford\.idm\.oclc\.org/
 
     delegate :present?, :first, :last, :each, :map, :select, :find, to: :all
-    def initialize(document)
-      @document = document
+    def initialize(links = [])
+      @links = links
     end
 
     def all
-      []
+      @links || []
     end
 
     def fulltext
@@ -38,6 +38,7 @@ module SearchWorks
 
     class Link
       attr_accessor :html, :text, :href, :file_id, :druid, :type, :sort
+
       def initialize(options = {})
         @html = options[:html]
         @text = options[:text]

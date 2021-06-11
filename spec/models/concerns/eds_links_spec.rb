@@ -16,16 +16,16 @@ RSpec.describe EdsLinks do
       end
     end
 
-    it 'does not consider links full-text when label is missing' do
+    it 'is present when it has a label' do
       expect(document.eds_links.fulltext).to be_present
+    end
 
+    it 'does not consider links full-text when label is missing' do
       document['eds_fulltext_links'].first.delete('label')
       expect(document.eds_links.fulltext).not_to be_present
     end
 
     it 'does not consider links full-text when type is not correct' do
-      expect(document.eds_links.fulltext).to be_present
-
       document['eds_fulltext_links'].first['type'] = 'unknown'
       expect(document.eds_links.fulltext).not_to be_present
     end

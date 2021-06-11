@@ -1,16 +1,16 @@
 require 'spec_helper'
 
 describe SearchWorks::Links do
-  let(:links) { SearchWorks::Links.new({}) }
+  let(:links) { SearchWorks::Links.new(all_links) }
 
-  before do
-    allow(links).to receive(:all).and_return([
+  let(:all_links) do
+    [
       OpenStruct.new(html: 'non-fulltext link', fulltext?: false),
       OpenStruct.new(html: 'fulltext link',     fulltext?: true),
       OpenStruct.new(html: '1st finding aid link', fulltext?: true,  finding_aid?: true),
       OpenStruct.new(html: '2nd finding aid link', fulltext?: false, finding_aid?: true),
       OpenStruct.new(html: 'Managed purl link', fulltext?: true, managed_purl?: true)
-    ])
+    ]
   end
 
   it 'should identify fulltext links' do
@@ -35,13 +35,13 @@ describe SearchWorks::Links do
   end
 
   context 'with multiple managed purls' do
-    before do
-      allow(links).to receive(:all).and_return([
+    let(:all_links) do
+      [
         OpenStruct.new(text: '1', managed_purl?: true),
         OpenStruct.new(managed_purl?: true),
         OpenStruct.new(text: '2', managed_purl?: true, sort: 'xyz'),
         OpenStruct.new(text: '3', managed_purl?: true, sort: 'abc')
-      ])
+      ]
     end
 
     it 'sorts by the sort key and then by the title, with empty values last' do
