@@ -33,3 +33,5 @@ Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = tr
 
 # Use SHA-1 instead of MD5 to generate non-sensitive digests, such as the ETag header.
 # Rails.application.config.active_support.use_sha1_digests = true
+
+Rails.application.config.action_view.form_with_generates_ids = true

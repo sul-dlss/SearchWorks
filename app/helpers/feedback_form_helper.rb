@@ -1,8 +1,8 @@
 module FeedbackFormHelper
   def render_feedback_form(form_type)
-    render 'shared/feedback_forms/form', locals: {
+    render 'shared/feedback_forms/form',
+      type: form_type,
       target: form_type == 'connection' ? '#connection-form' : '#feedback-form'
-    }
   end
 
   def show_feedback_form?
