@@ -583,6 +583,7 @@ module Constants
     'SSRC-DATA' => 'Velma Denning Room (Social Science Data and Software)',
     'SSRC-DESK' => 'Jonsson Social Sciences Reading Room',
     'SSRC-DOCS' => 'Jonsson Social Sciences Reading Room: Atrium',
+    'SSRC-EDU' => 'Jonsson Social Sciences Reading Room: Education Reference',
     'SSRC-FICHE' => 'Bing Wing lower level: Microform cabinets',
     'SSRC-FILM' => 'Bing Wing lower level: Microform cabinets',
     'SSRC-NEWBK' => 'Jonsson Social Sciences Reading Room: New books',
