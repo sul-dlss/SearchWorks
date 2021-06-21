@@ -159,7 +159,7 @@ GEM
       dry-schema (~> 1.5, >= 1.5.2)
     erubi (1.10.0)
     execjs (2.8.1)
-    ffi (1.15.1)
+    ffi (1.15.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -281,7 +281,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    rubocop (1.16.1)
+    rubocop (1.17.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
