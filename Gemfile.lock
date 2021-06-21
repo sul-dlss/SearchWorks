@@ -75,13 +75,13 @@ GEM
       blacklight (> 6.20, < 8.0)
       jquery-rails
       rails (>= 5.1, < 7)
-    blacklight-marc (6.2.0)
+    blacklight-marc (6.3.0)
       blacklight (> 6.1, < 8.a)
       library_stdnums
-      marc (>= 0.4.3, < 1.1)
+      marc (>= 0.4.3, < 2.0)
       marc-fastxmlwriter
       rails
-      traject (~> 2.1)
+      traject (>= 2.1, < 4)
     blacklight_advanced_search (6.4.1)
       blacklight (~> 6.0, >= 6.0.1)
       parslet
@@ -237,7 +237,7 @@ GEM
       faraday (>= 0.8, < 2)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.15.1)
+    ffi (1.15.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -248,7 +248,7 @@ GEM
       rails (>= 5.0, < 7)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hashie (3.6.0)
+    hashie (4.1.0)
     honeybadger (4.8.0)
     http (5.0.0)
       addressable (~> 2.3)
@@ -307,7 +307,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    marc (1.0.4)
+    marc (1.1.1)
+      rexml
       scrub_rb (>= 1.0.1, < 2)
       unf
     marc-fastxmlwriter (1.0.0)
@@ -444,7 +445,7 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.4)
-    rubocop (1.16.1)
+    rubocop (1.17.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -458,7 +459,7 @@ GEM
     rubocop-performance (1.11.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.10.1)
+    rubocop-rails (2.11.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -496,7 +497,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
-    slop (3.6.0)
+    slop (4.9.1)
     solr_wrapper (3.1.2)
       http
       retriable
@@ -523,14 +524,16 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    traject (2.3.4)
+    traject (3.6.0)
       concurrent-ruby (>= 0.8.0)
       dot-properties (>= 0.1.1)
-      hashie (~> 3.1)
+      hashie (>= 3.1, < 5)
+      http (>= 3.0, < 6)
       httpclient (~> 2.5)
       marc (~> 1.0)
       marc-fastxmlwriter (~> 1.0)
-      slop (>= 3.4.5, < 4.0)
+      nokogiri (~> 1.9)
+      slop (~> 4.0)
       yell
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
