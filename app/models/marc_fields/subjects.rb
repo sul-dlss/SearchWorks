@@ -15,7 +15,7 @@ class Subjects < MarcField
           next if exclude.include?(sf.code)
 
           if sf.code == "a"
-            multi_a << sf.value unless sf.value[0, 1] == "%"
+            multi_a << sf.value unless sf.value[0, 1] == "%" || sf.value.starts_with?('nomesh')
           elsif ["v", "x", "y", "z"].include?(sf.code)
             temp_xyv_array << sf.value
           else
