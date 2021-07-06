@@ -1083,7 +1083,7 @@ module Constants
     # "CPM" => "Obsolete",
     'EARTH-SCI' => 'Earth Sciences Library (Branner)',
     'EAST-ASIA' => 'East Asia Library',
-    'EDUCATION' => 'Education Library (Cubberley)',
+    'EDUCATION' => 'Education Library (at SAL1&2)',
     'SW-E-RESV' => 'eReserve', # Library does not exist, this is an internal code used for reserves.
     'ENG' => 'Engineering Library (Terman)',
     'GOV-DOCS' => 'Green Library',
@@ -1141,7 +1141,7 @@ module Constants
       ['Classics Library', '650 723 0479'],
       ['Earth Sciences Library (Branner)', '650 723 2746'],
       ['East Asia Library', '650 725 3435'],
-      ['Education Library (Cubberley)', '650 723 2121'],
+      ['Education Library (at SAL1&2)', '650 723 2121'],
       ['Engineering Library (Terman)', '650 723 0001'],
       ['Hoover Institution Library', '650 723 2058'],
       ['Hoover Institution Archives', '650 723 3563'],
