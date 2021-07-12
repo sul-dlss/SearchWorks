@@ -13,7 +13,7 @@ describe "catalog/record/_mods_upper_metadata_items.html.erb" do
     it "should display type" do
       render
       expect(rendered).to have_css("dt", text: "Type of resource")
-      expect(rendered).to have_css("dd", text: "Still image")
+      expect(rendered).to have_css("dd", text: "still image")
     end
     it "should display imprint" do
       render
