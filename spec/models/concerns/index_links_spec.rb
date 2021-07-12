@@ -44,7 +44,8 @@ describe IndexLinks do
     SolrDocument.new(
       url_fulltext: [
         'http://www.example.com/lookup?^The+Query+Is+No+Good',
-        ' http://www.example.com/{1234-1431324-431313}Img100.jpg ', ' at: '
+        ' http://www.example.com/{1234-1431324-431313}Img100.jpg ', ' at: ',
+        'http://Coastal erosion is widespread and locally severe in Hawaii and other low-latitude areas'
       ]
     )
   end
@@ -106,11 +107,11 @@ describe IndexLinks do
     end
 
     it 'should parse bad links properly' do
-      expect(bad_links.all.length).to eq 3
+      expect(bad_links.all.length).to eq 4
       expect(bad_links.all.first.html).to match(
         %r{<a href=.*example\.com\/lookup\?\^The\+Query.*>www\.example\.com<\/a>}
       )
-      expect(bad_links.all.last.html).to match(%r{<a.*> at: <\/a>})
+      expect(bad_links.all[2].html).to match(%r{<a.*> at: <\/a>})
     end
     it 'should return the URL in the url parameter for ezproxy links (but fallback on the URL host)' do
       expect(ezproxy_links.all.length).to eq 2
