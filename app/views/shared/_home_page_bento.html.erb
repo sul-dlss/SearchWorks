@@ -4,7 +4,7 @@
     <div class="bento-block home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/catalog.jpg' %>
+          <%= image_tag 'homepage/catalog.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
           <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
         </div>
@@ -14,7 +14,7 @@
     <div class="bento-block home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/articles.jpg' %>
+          <%= image_tag 'homepage/articles.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
           <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>
         </div>
@@ -24,7 +24,7 @@
     <div class="bento-block home-page-website">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/guides.png' %>
+          <%= image_tag 'homepage/guides.png', alt: '', aria: { hidden: true } %>
           <h3><%= link_to 'Guides', 'https://guides.library.stanford.edu' %></h3>
           <p class="hidden-xs">Course- and topic-based guides to collections, tools, and services.</p>
         </div>
@@ -34,7 +34,7 @@
     <div class="bento-block home-page-website">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/website.jpg' %>
+          <%= image_tag 'homepage/website.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to 'Library website', 'https://library.stanford.edu' %></h3>
           <p class="hidden-xs">Libraries and subject specialists; blogs, events, and policies.</p>
         </div>
@@ -44,7 +44,7 @@
     <div class="bento-block home-page-website">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/exhibits.jpg' %>
+          <%= image_tag 'homepage/exhibits.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to 'Exhibits', 'https://exhibits.stanford.edu' %></h3>
           <p class="hidden-xs">Digital showcases for research and teaching.</p>
         </div>
@@ -54,7 +54,7 @@
     <div class="bento-block home-page-yewno">
       <div class="panel panel-default">
         <div class="panel-body">
-          <%= image_tag 'homepage/yewno.jpg' %>
+          <%= image_tag 'homepage/yewno.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to 'Yewno', 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com' %></h3>
           <p class="hidden-xs">Knowledge graphs for interconnecting concepts.</p>
         </div>
@@ -84,7 +84,7 @@
         <div class="panel-body">
           <div class="col-md-12 home-page-search-tools media">
             <div class="search-tools-icon media-left">
-              <%= image_tag 'homepage/search.jpg', class: 'media-object' %>
+              <%= image_tag 'homepage/search.jpg', class: 'media-object', alt: '', aria: { hidden: true } %>
             </div>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://library.stanford.edu/search-services' %></h3>
