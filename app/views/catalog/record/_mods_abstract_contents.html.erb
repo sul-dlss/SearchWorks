@@ -1,16 +1,18 @@
 <% document ||= @document %>
 <% document.mods.abstract.each do |abstracts| %>
   <% if abstracts.respond_to?(:values) %>
-    <div class="section-abstract">
+    <%= mods_display_label(abstracts.label) %>
+    <dd class="section-abstract">
       <%= abstracts.values.join %>
-    </div>
+    </dd>
   <% end %>
 <% end %>
 
 <% document.mods.contents.each do |contents| %>
   <% if contents.respond_to?(:values) %>
-    <div class="section-contents">
+    <%= mods_display_label(contents.label) %>
+    <dd class="section-contents">
       <%= contents.values.join %>
-    </div>  
+    </dd>
   <% end %>
 <% end %>
