@@ -39,13 +39,8 @@
     margin-left: -26px;
   }
 
-  .preview-button-container {
-    position: absolute;
-    bottom: 0px;
-  }
-
-  .index-document-functions{
-    margin-left: -40px;
+  .index-document-functions {
+    text-align: left;
   }
 }
 
@@ -63,12 +58,4 @@
 .brief-preview-container {
   margin-top: 15px;
   margin-bottom: 10px;
-}
-
-@media (min-width: $screen-md-min) {
-  .brief-document {
-    .index-document-functions {
-      margin-bottom: 25px;
-    }
-  }
 }
