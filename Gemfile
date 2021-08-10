@@ -101,7 +101,8 @@ gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 2'
 gem 'rack-utf8_sanitizer'
-gem 'ebsco-eds', '1.1.1' # External vendor, upgrade requires testing
+gem 'ebsco-eds', '1.1.3' # External vendor, upgrade requires testing
+gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever' # manages cron jobs
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'bootsnap', require: false
