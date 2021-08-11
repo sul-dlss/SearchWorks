@@ -44,6 +44,10 @@
       height: 100px;
       margin-right: 12px;
     }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
