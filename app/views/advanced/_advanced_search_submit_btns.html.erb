@@ -1,6 +1,7 @@
 <%= content_tag :h2, t('blacklight_advanced_search.form.sort_label') %>
 <div class="form-group">
   <div class="col-sm-offset-3 col-sm-4">
+    <%- sort_fields = active_sort_fields.values.map { |field_config| [sort_field_label(field_config.key), field_config.key] } %>
     <%= select_tag(:sort, options_for_select(sort_fields, h(params[:sort])), :class => "form-control sort-select col-sm-3 col-offset-sm-3") %>
     <%= hidden_field_tag(:search_field, blacklight_config.advanced_search[:url_key]) %>
   </div>
