@@ -68,6 +68,10 @@ Rails.application.routes.draw do
 
   resources :browse, only: :index
 
+  get 'catalog/:id/track' => 'catalog#track', as: 'track_browse'
+  get 'catalog/:id/track' => 'catalog#track', as: 'track_preview'
+  get 'catalog/:id/track' => 'articles#track', as: 'track_article_selections'
+
   get "browse/nearby" => "browse#nearby"
 
   get "feedback" => "feedback_forms#new"
