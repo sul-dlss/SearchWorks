@@ -487,11 +487,6 @@ class CatalogController < ApplicationController
     render layout: !request.xhr?
   end
 
-  def librarian_view
-    super
-    render layout: !request.xhr?
-  end
-
   private
 
   def render_document_with_availability_as_json(document, live = true)
