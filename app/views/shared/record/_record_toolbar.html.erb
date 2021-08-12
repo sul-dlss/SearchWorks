@@ -20,7 +20,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if @document.citable? %>
           <li>
-            <%= link_to t('blacklight.tools.cite_html'), polymorphic_path(@document.eds? ? :citation_article : :citation_solr_document, @document), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
+            <%= link_to t('blacklight.tools.cite_html'), (@document.eds? ? citation_article_path(@document) : citation_solr_document_path(@document)), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
           </li>
         <% end %>
         <li class="dropdown">
