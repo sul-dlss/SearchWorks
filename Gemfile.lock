@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/sul-dlss/blacklight-hierarchy.git
+  revision: c39b730fc12316377883c0d9eece4025da0d71ff
+  specs:
+    blacklight-hierarchy (5.2.0)
+      blacklight (~> 7.18)
+      deprecation
+      rails (>= 5.1, < 7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,37 +65,34 @@ GEM
     bindex (0.8.1)
     bitly (2.0.1)
       oauth2 (>= 0.5.0, < 2.0)
-    blacklight (6.24.0)
-      bootstrap-sass (~> 3.2)
+    blacklight (7.19.2)
       deprecation
       globalid
+      i18n (>= 1.7.0)
       jbuilder (~> 2.7)
       kaminari (>= 0.15)
-      nokogiri (~> 1.6)
-      rails (>= 4.2, < 6)
-      rsolr (>= 1.0.6, < 3)
-      twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
-    blacklight-hierarchy (4.1.0)
-      blacklight (> 6.20, < 8.0)
-      jquery-rails
+      ostruct (>= 0.3.2)
       rails (>= 5.1, < 7)
-    blacklight-marc (6.3.0)
-      blacklight (> 6.1, < 8.a)
+      view_component (>= 2.28.0)
+    blacklight-hierarchy (5.2.0)
+      blacklight (~> 7.18)
+      deprecation
+      rails (>= 5.1, < 7)
+    blacklight-marc (7.1.0)
+      blacklight (~> 7.0)
       library_stdnums
       marc (>= 0.4.3, < 2.0)
       marc-fastxmlwriter
       rails
-      traject (>= 2.1, < 4)
-    blacklight_advanced_search (6.4.1)
-      blacklight (~> 6.0, >= 6.0.1)
+      traject (~> 3.0)
+    blacklight_advanced_search (7.0.0)
+      blacklight (~> 7.0)
       parslet
     blacklight_dynamic_sitemap (0.6.0)
       blacklight (> 6.0)
       rails
-    blacklight_range_limit (6.5.0)
-      blacklight (~> 6.10)
-      jquery-rails
-      rails (>= 4.2, < 6)
+    blacklight_range_limit (8.0.0)
+      blacklight (~> 7.0)
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
@@ -353,6 +359,7 @@ GEM
       rack (>= 1.2, < 3)
     okcomputer (1.18.4)
     orm_adapter (0.5.0)
+    ostruct (0.4.0)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -574,12 +581,12 @@ PLATFORMS
 
 DEPENDENCIES
   bitly (>= 2.0.0.beta)
-  blacklight (~> 6.0)
-  blacklight-hierarchy (~> 4.0)
-  blacklight-marc (~> 6.0)
-  blacklight_advanced_search (~> 6.3)
+  blacklight (~> 7.0)
+  blacklight-hierarchy (~> 5.0)!
+  blacklight-marc (~> 7.0)
+  blacklight_advanced_search (~> 7.0)
   blacklight_dynamic_sitemap
-  blacklight_range_limit (~> 6.2)
+  blacklight_range_limit (~> 8.0)
   bootsnap
   bootstrap-sass
   byebug
@@ -640,6 +647,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   turbolinks
+  twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
   uglifier (>= 2.7.2)
   web-console (>= 3.3.0)
   webdrivers

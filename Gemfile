@@ -81,21 +81,22 @@ gem "coderay"
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 6.0'
+gem 'blacklight', '~> 7.0'
+gem "blacklight-marc", "~> 7.0"
+gem "blacklight_advanced_search", "~> 7.0"
+gem "blacklight_range_limit", "~> 8.0"
+gem 'blacklight-hierarchy', "~> 5.0", github: 'sul-dlss/blacklight-hierarchy'
+gem 'blacklight_dynamic_sitemap'
 gem 'rsolr'
+gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'nokogiri', '>= 1.7.1'
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
-gem "blacklight-marc", "~> 6.0"
 gem "faraday", "~> 0.10"
 gem "config"
 gem "mods_display", "~> 1.0.0.alpha3"
-gem "blacklight_advanced_search", "~> 6.3"
 gem "font-awesome-rails"
-gem "blacklight_range_limit", "~> 6.2"
-gem 'blacklight-hierarchy', "~> 4.0"
-gem 'blacklight_dynamic_sitemap'
 gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 2'
