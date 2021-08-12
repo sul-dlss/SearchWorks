@@ -456,7 +456,7 @@ class CatalogController < ApplicationController
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
   def email
-    @response, @documents = fetch(Array(params[:id]))
+    @response, @documents = search_service.fetch(Array(params[:id]))
 
     if request.post? && validate_email_params_and_recaptcha
       send_emails_to_all_recipients
@@ -473,7 +473,7 @@ class CatalogController < ApplicationController
 
   # Used by sul-requests to get item data + availability
   def availability
-    _, document = fetch(params[:id])
+    _, document = search_service.fetch(params[:id])
     respond_to do |format|
       format.json do
         live = params[:live].nil? || params[:live] == 'true'

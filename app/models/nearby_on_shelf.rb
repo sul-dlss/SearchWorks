@@ -1,17 +1,23 @@
 class NearbyOnShelf
-  include Blacklight::SearchHelper
-  attr_reader :items
-  def initialize(type, config, options)
+  attr_reader :type, :options, :search_service
+
+  def initialize(type, config, options, search_service:)
+    @type = type
     @blacklight_config = config
-    if type == "ajax"
-      @items = get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
-    else
-      @items = get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
-    end
+    @options = options
+    @search_service = search_service
   end
 
   def blacklight_config
     @blacklight_config
+  end
+
+  def items
+    @items ||= if type == "ajax"
+                 get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
+               else
+                 get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
+               end
   end
 
   private
@@ -87,7 +93,10 @@ class NearbyOnShelf
   # Each html list item must match a desired value
   def get_spines_from_field_values(desired_values, field)
     spines_hash = {}
-      response, docs = search_results(q: { field => desired_values.compact })
+      response, docs = search_service.search_results do |builder|
+        builder.where(field => desired_values.compact)
+      end
+
       docs.each do |doc|
         hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
         spines_hash.merge!(hsh)
@@ -140,7 +149,7 @@ class NearbyOnShelf
         # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
         #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
 
-        result_hash[sort_key] = { doc: doc, holding: callnumber }
+        result_hash[sort_key] = { doc: doc.to_h, holding: callnumber }
       end  # end each item display
     end
     return result_hash

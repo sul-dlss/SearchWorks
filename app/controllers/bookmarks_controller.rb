@@ -16,7 +16,7 @@ class BookmarksController < CatalogController
     @bookmarks = token_or_current_or_guest_user.bookmarks.where(record_type: 'catalog')
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
-    @response, @document_list = fetch(bookmark_ids)
+    @response, @document_list = search_service.fetch(bookmark_ids)
 
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles

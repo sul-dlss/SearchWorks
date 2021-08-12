@@ -4,7 +4,6 @@
 class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
-  include EdsPaging
   include EmailValidation
   include BackendLookup
 
@@ -242,7 +241,7 @@ class ArticlesController < ApplicationController
       guest:          session['eds_guest'],
       session_token:  session['eds_session_token']
     }
-    Eds::SearchService.new(blacklight_config, {}, eds_params)
+    Eds::SearchService.new(blacklight_config, params, eds_params)
   end
 
   def set_search_query_modifier

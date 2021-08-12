@@ -1,13 +1,13 @@
 class BrowseController < ApplicationController
-  include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SearchHelper
+  include Blacklight::Searchable
+  include Blacklight::SearchContext
   include Thumbnail
   copy_blacklight_config_from(CatalogController)
 
   def index
     if params[:start].present?
-      @response, @original_doc = fetch(params[:start])
+      @response, @original_doc = search_service.fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do
@@ -18,7 +18,8 @@ class BrowseController < ApplicationController
              preferred_barcode: barcode,
              before: 9,
              after: 10,
-             page: params[:page] }
+             page: params[:page] },
+             search_service: search_service
           ).items.map do |document|
             SolrDocument.new(document[:doc])
           end
@@ -29,7 +30,7 @@ class BrowseController < ApplicationController
 
   def nearby
     if params[:start].present?
-      @response, @original_doc = fetch(params[:start])
+      @response, @original_doc = search_service.fetch(params[:start])
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
       respond_to do |format|
         format.html do
@@ -39,7 +40,8 @@ class BrowseController < ApplicationController
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 12,
-             after: 12 }
+             after: 12 },
+           search_service: search_service
           ).items.map do |document|
             SolrDocument.new(document[:doc])
           end
