@@ -1,13 +1,13 @@
 
-<% date_range = Eds::DateRangeParser.new(@response, params, solr_field) %>
+<% date_range = Eds::DateRangeParser.new(@response, params, field_name) %>
 
 <div class='limit_content range_limit'>
   <% if date_range.request_range.present? %>
     <ul class='current list-unstyled facet-values'>
       <li class='selected'>
         <span class="facet-label">
-          <span class="selected"><%= range_display(solr_field) %></span> 
-           <%= link_to remove_range_param(solr_field), class: 'remove', title: t('blacklight.range_limit.remove_limit') do %>
+          <span class="selected"><%= range_display(field_name) %></span>
+           <%= link_to remove_range_param(field_name), class: 'remove', title: t('blacklight.range_limit.remove_limit') do %>
             <span class="glyphicon glyphicon-remove"></span>
             <span class="sr-only">[<%= t('blacklight.range_limit.remove_limit') %>]</span>
            <% end %>
@@ -27,8 +27,8 @@
 >
   <%= form_tag articles_path, method: :get, class: 'range_limit subsection form-inline text-center' do %>
     <%= render_hash_as_hidden_fields(search_state.params_for_search) %>
-    <%= text_field_tag("range[#{solr_field}][begin]", date_range.begin, class: 'form-control range_begin') %> -
-    <%= text_field_tag("range[#{solr_field}][end]", date_range.end, class: 'form-control range_end') %>
+    <%= text_field_tag("range[#{field_name}][begin]", date_range.begin, class: 'form-control range_begin') %> -
+    <%= text_field_tag("range[#{field_name}][end]", date_range.end, class: 'form-control range_end') %>
     <%= submit_tag t('blacklight.range_limit.submit_limit'), class: 'submit btn btn-primary' %>
   <% end %>
   <div class='eds-slider slider_js'></div>

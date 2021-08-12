@@ -3,8 +3,8 @@
     <li class="form-group">
       <div class="col-sm-9">
         <div class="checkbox">
-          <%= label_tag "f_inclusive_#{solr_field}_#{item.value.parameterize}"  do %>
-          <%= check_box_tag "f_inclusive[#{solr_field}][]", item.value.to_sym, facet_value_checked?(solr_field, item.value), :id =>  "f_inclusive_#{solr_field}_#{item.value.parameterize}"%>
+          <%= label_tag "f_inclusive_#{field_name}_#{item.value.parameterize}"  do %>
+          <%= check_box_tag "f_inclusive[#{field_name}][]", item.value.to_sym, facet_value_checked?(field_name, item.value), :id =>  "f_inclusive_#{field_name}_#{item.value.parameterize}"%>
             <%= "#{item.value} #{number_with_delimiter(item.hits)}" %>
           <% end %>
         </div>
