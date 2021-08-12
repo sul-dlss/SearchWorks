@@ -41,6 +41,8 @@ class CatalogController < ApplicationController
   end
 
   configure_blacklight do |config|
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qt: 'search',
@@ -452,6 +454,8 @@ class CatalogController < ApplicationController
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
   end
+
+  Blacklight::ActionBuilder.new(self, :citation, {}).build
 
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)

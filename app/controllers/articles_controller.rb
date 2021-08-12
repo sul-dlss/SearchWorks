@@ -30,6 +30,8 @@ class ArticlesController < ApplicationController
   }
 
   configure_blacklight do |config|
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
     config.search_builder_class = ArticleSearchBuilder
