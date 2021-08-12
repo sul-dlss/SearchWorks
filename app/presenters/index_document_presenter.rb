@@ -7,4 +7,8 @@ class IndexDocumentPresenter < Blacklight::IndexPresenter
 
     original
   end
+
+  def display_type(*)
+    document.display_type
+  end
 end
