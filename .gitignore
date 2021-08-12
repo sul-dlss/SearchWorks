@@ -19,6 +19,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/search.log.*
 /tmp
 
 # Ignore test coverage
