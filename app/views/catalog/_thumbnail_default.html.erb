@@ -4,7 +4,7 @@
     :counter => counter,
     :suppress_link => true
   }
-  context_href = (document_link_params(document, {:counter => counter}))[:data][:"context-href"]
+  context_href = document_link_params(document, {:counter => counter}).dig(:data, :"context-href")
 %>
 
 <% if has_thumbnail?(document) && tn = render_thumbnail_tag(document, {}, options) %>
