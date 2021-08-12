@@ -8,8 +8,6 @@ module BackendLookup
     respond_to do |format|
       format.json do
         @presenter = Blacklight::JsonPresenter.new(@response,
-                                                   @document_list,
-                                                   facets_from_request,
                                                    blacklight_config)
       end
       format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
