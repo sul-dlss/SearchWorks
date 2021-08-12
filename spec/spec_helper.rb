@@ -129,7 +129,7 @@ def facet_index(options)
 end
 
 def all_facets_by_name(facet_name)
-  page.all("##{facet_name} a.facet_select").map(&:text)
+  page.all("##{facet_name} a.facet-select").map(&:text)
 end
 
 def number_pattern
