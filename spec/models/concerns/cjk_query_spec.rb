@@ -4,15 +4,10 @@ require "spec_helper"
 
 describe CJKQuery do
   # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
-  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config)) }
+  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config)).with(blacklight_params) }
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
-
-  before do
-    allow(search_builder).to receive(:blacklight_params).and_return(blacklight_params)
-    search_builder.extend(CJKQuery)
-  end
 
   describe "modify_params_for_cjk_advanced" do
     let(:blacklight_params) { { 'search' => q_str, 'search_title' => q_str, 'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str } }
