@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   concern :searchable, Blacklight::Routes::Searchable.new
   concern :exportable, Blacklight::Routes::Exportable.new
+  concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
 
   resources :barcode, only: :show
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
-    concerns :exportable
+    concerns [:exportable, :marc_viewable]
   end
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
@@ -43,7 +44,6 @@ Rails.application.routes.draw do
 
   resources :collection_members, only: :show
 
-  Blacklight::Marc.add_routes(self)
   devise_for :users, skip: [:registrations, :passwords, :sessions]
   devise_scope :user do
     get 'webauth/login' => 'login#login', as: :new_user_session
