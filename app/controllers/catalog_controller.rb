@@ -117,7 +117,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20
     config.add_facet_field 'stanford_work_facet_hsim',
                             label: 'Stanford student work',
-                            partial: 'blacklight/hierarchy/facet_hierarchy',
+                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                             sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
     config.add_facet_field 'access_facet', label: 'Access', query: {
@@ -147,7 +147,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "author_person_facet", label: "Author", limit: 20
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
-                           partial: 'blacklight/hierarchy/facet_hierarchy',
+                           component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'index'
     config.facet_display = {
       hierarchy: {
