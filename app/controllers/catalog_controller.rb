@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 
 class CatalogController < ApplicationController
+  include AllCapsParams
+
+  include ReplaceSpecialQuotes
+
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
@@ -14,10 +18,6 @@ class CatalogController < ApplicationController
   include DatabaseAccessPoint
 
   include CallnumberSearch
-
-  include AllCapsParams
-
-  include ReplaceSpecialQuotes
 
   include Thumbnail
 
