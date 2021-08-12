@@ -1,0 +1,8 @@
+<%- search_fields_for_advanced_search.each do |key, field_def| -%>
+  <div class="form-group advanced-search-field">
+      <%= label_tag key, "#{field_def.label }", :class => "col-sm-3 control-label" %>
+      <div class="col-sm-9">
+        <%= text_field_tag key, label_tag_default_for(key), :class => 'form-control' %>
+      </div>
+  </div>
+<%- end -%>

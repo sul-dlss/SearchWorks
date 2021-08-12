@@ -1,0 +1,90 @@
+<%- # requires solr_config local passed in
+  field_config = range_config(field_name)
+  label = facet_field_label(field_name)
+
+  input_label_range_begin = field_config[:input_label_range_begin] || t("blacklight.range_limit.range_begin", field_label: label)
+  input_label_range_end   = field_config[:input_label_range_end] || t("blacklight.range_limit.range_end", field_label: label)
+  maxlength = field_config[:maxlength]
+-%>
+
+<div class="limit_content range_limit <%= field_name %>-config blrl-plot-config">
+  <% if has_selected_range_limit?(field_name) %>
+    <ul class="current list-unstyled facet-values">
+      <li class="selected">
+        <span class="facet-label">
+          <span class="selected"><%= range_display(field_name) %></span>
+          <%= link_to search_action_url(remove_range_param(field_name).except(:controller, :action)), :class=>"remove", :title => t('blacklight.range_limit.remove_limit') do %>
+            <span class="remove-icon">✖</span>
+            <span class="sr-only">[<%= t('blacklight.range_limit.remove_limit') %>]</span>
+          <% end %>
+        </span>
+        <span class="selected facet-count"><%= number_with_delimiter(@response.total) %></span>
+      </li>
+    </ul>
+
+  <% end %>
+
+  <!-- no results profile if missing is selected -->
+  <% unless selected_missing_for_range_limit?(field_name) %>
+    <!-- you can hide this if you want, but it has to be on page if you want
+         JS slider and calculated facets to show up, JS sniffs it. -->
+    <div class="profile">
+        <% if stats_for_field?(field_name) %>
+          <!-- No stats information found for field  in search response -->
+        <% end %>
+
+        <% if (min = range_results_endpoint(field_name, :min)) &&
+              (max = range_results_endpoint(field_name, :max)) %>
+
+          <% if field_config[:segments] != false %>
+            <div class="distribution subsection <%= 'chart_js' unless field_config[:chart_js] == false %>">
+              <!-- if  we already fetched segments from solr, display them
+                   here. Otherwise, display a link to fetch them, which JS
+                   will AJAX fetch.  -->
+              <% if solr_range_queries_to_a(field_name).length > 0 %>
+
+                 <%= render(:partial => "blacklight_range_limit/range_segments", :locals => {:solr_field => field_name}) %>
+
+              <% else %>
+                <%= link_to(t('blacklight.range_limit.view_distribution'), range_limit_url(range_field: field_name, range_start: min, range_end: max), :class => "load_distribution") %>
+              <% end %>
+            </div>
+          <% end %>
+          <p class="range subsection <%= "slider_js" unless field_config[:slider_js] == false %>">
+            <%= t('blacklight.range_limit.results_range_html', min: range_results_endpoint(field_name, :min), max: range_results_endpoint(field_name, :max)) %>
+          </p>
+        <% end %>
+    </div>
+
+    <%= form_tag search_action_path, :method => :get, class: [BlacklightRangeLimit.classes[:form], "range_#{field_name} d-flex justify-content-center"].join(' ') do %>
+      <%= render_hash_as_hidden_fields(search_state.params_for_search.except(:page)) %>
+      <div class="input-group input-group-sm mb-3 flex-nowrap range-limit-input-group">
+        <%= render_range_input(field_name, :begin, input_label_range_begin, maxlength) %>
+        <%= render_range_input(field_name, :end, input_label_range_end, maxlength) %>
+        <div class="input-group-append">
+          <%= submit_tag t('blacklight.range_limit.submit_limit'), class: BlacklightRangeLimit.classes[:submit] %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to t('blacklight.range_limit.view_larger', field_name: label),
+        range_limit_panel_url(id: field_name, range_start: 0, range_end: 2019),
+        class: 'view_larger mt-1',
+        data: { blacklight_modal: 'trigger' } %>
+
+    <% unless request.xhr? %>
+      <% if (stats = stats_for_field(field_name)) && stats["missing"] > 0 %>
+        <ul class="missing list-unstyled facet-values subsection">
+          <li>
+            <span class="facet-label">
+              <%= link_to t('blacklight.range_limit.missing'), search_action_url(add_range_missing(field_name).except(:controller, :action)) %>
+            </span>
+            <%# note important there be no whitespace inside facet-count to avoid
+                bug in some versions of Blacklight (including 7.1.0.alpha) %>
+            <span class="facet-count"><%= number_with_delimiter(stats["missing"]) %></span>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

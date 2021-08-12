@@ -1,0 +1,42 @@
+/* border between items on marc view */
+$marc_item_separator: 1px solid $text-muted !default;
+
+#librarian_view
+{
+	left:-17%;
+	text-align:left;
+	top:10%;
+	width:700px;
+}
+
+#marc_view
+{
+	text-align:left;
+
+  .field
+  {
+    border-bottom: $marc_item_separator;
+    clear:both;
+  }
+
+  .ind1, .ind2
+  {
+    display:inline;
+    padding:0 $padding-xs-horizontal;
+  }
+
+  .subfields
+  {
+    padding-left:5em;
+  }
+
+  .tag_ind
+  {
+    float:left;
+  }
+}
+
+/* refworks uses a form; we need to give it some additional padding to make it look like a link */
+#refworks-form .btn {
+  padding: $nav-link-padding;
+}

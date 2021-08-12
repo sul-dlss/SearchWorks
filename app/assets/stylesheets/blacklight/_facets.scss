@@ -1,0 +1,180 @@
+#sidebar, #facets {
+  @extend .clearfix;
+  padding-bottom: $padding-large-vertical;
+}
+
+.facets .facets-heading {
+  @extend h4;
+}
+
+.no-js {
+  #sidebar .collapse {
+    @extend .in;
+  }  
+}
+
+.facet_limit-active {
+  @extend .panel-success;
+}
+
+#facet-panel-collapse {
+  @extend .navbar-collapse;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: none;
+  box-shadow: none;
+  max-height: none;
+}
+
+.facets-toggle {
+  @extend .navbar-toggle;
+  @extend .btn;
+  @extend .btn-default;
+
+  border-color: $navbar-default-toggle-border-color;
+
+  .icon-bar {
+    background-color: $navbar-default-toggle-icon-bar-bg;
+  }
+}
+
+.facet-values {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  li {
+
+    display: table-row;
+    .selected {
+      @extend .text-success;
+    }
+
+  }
+
+  .remove {
+    @extend .text-muted;
+    text-indent: $padding-base-horizontal;
+
+    .glyphicon {
+      top: 0.1em;
+      vertical-align: text-top;
+    }
+
+    &:hover {
+      color: $brand-danger;
+    }
+
+  }
+
+  @mixin hyphens-auto {
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .facet-label {
+    display: table-cell;
+    padding-right: 1em;
+    text-indent: -15px;
+    padding-left: 15px;
+    padding-bottom: $padding-base-vertical;
+    @include hyphens-auto;
+  }
+
+  .facet-count {
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    width: 5em;
+  }
+}
+
+.facet_extended_list
+{
+  .sort_options
+  {
+    text-align:right;
+  }
+
+
+  .prev_next_links
+  {
+    float:left;
+  }
+
+}
+
+/* deprecated in Blacklight 5.x */
+ul.facet_extended_list, .facet_extended_list ul
+{
+  @extend .list-unstyled;
+
+}
+
+.collapse-toggle {
+  cursor: pointer;
+}
+
+.panel-heading.collapse-toggle .panel-title:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+    font-size: 0.8em;
+    line-height: normal;
+}
+.panel-heading.collapse-toggle.collapsed .panel-title:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+/* Sidenav
+-------------------------------------------------- */
+
+.facet_pagination {
+  @extend .clearfix;
+
+  &.top {
+    padding: $modal-inner-padding;
+  }
+}
+
+ 
+// Facet modal alphabetical filter
+.alpha-filter {
+  .btn {
+    vertical-align: top;
+  }
+
+  .pagination {
+    margin: 0;
+  }
+}
+
+@media (max-width: $grid-float-breakpoint) {
+
+  .facets-toggle {
+    margin-top: 3px;
+  }
+
+  #facets .top-panel-heading {
+    border: 1px solid $breadcrumb-color;
+    margin-bottom: 1em;
+    @include border-bottom-radius($panel-border-radius - 1);
+  }
+}
+
+/* style for pivot facet's nested list */
+
+.pivot-facet {
+  @extend .list-unstyled;
+
+  ul, .pivot-facet {
+    @extend .list-unstyled;
+    padding-bottom: $padding-base-vertical;
+    padding-left: $padding-large-horizontal;
+  }
+}
