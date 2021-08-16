@@ -442,9 +442,6 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
 
-    # Deletes slideshow view
-    # config.view.delete_field("slideshow")
-
     # View type group config
     config.view.list.icon_class = "fa-th-list"
 
