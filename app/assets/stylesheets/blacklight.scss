@@ -13,3 +13,31 @@
 
 
 @import 'blacklight/hierarchy/hierarchy';
+
+// the default bootstrap font-family list includes "Segoe UI Emoji", which, on windows
+// renders our remove icon as an emoji-sized x instead of what we see on all other platforms...
+// so, for now (until we replace it with an SVG icon or something), we get to override bootstrap:
+$remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+
+.remove-icon {
+  font-family: $remove-icon-font-family;
+  padding-left: 12px;
+}
+
+.range_limit {
+  input {
+    width: 10ch !important;
+  }
+
+  .input-group {
+    display: flex !important;
+  }
+
+  .input-group-append {
+    display: flex;
+  }
+
+  .submit {
+    @extend .btn-sm;
+  }
+}
