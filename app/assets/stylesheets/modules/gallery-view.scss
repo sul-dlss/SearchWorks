@@ -1,7 +1,3 @@
-/* Note Blacklight-Gallery plugin is being used but styles and partials are
-   being overridden.
-*/
-
 .gallery {
   .item-thumb {
     height: $sul-gallery-cover-height;
@@ -120,8 +116,4 @@ div.fake-cover-text {
   padding: 4px;
   max-height: 7.3em;
   overflow: hidden;
-}
-
-.view-icon-slideshow {
-  &:before { content: "\e158"; }
 }

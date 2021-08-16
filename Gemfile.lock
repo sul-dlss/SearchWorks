@@ -66,11 +66,6 @@ GEM
       rails (>= 4.2, < 6)
       rsolr (>= 1.0.6, < 3)
       twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
-    blacklight-gallery (0.12.0)
-      blacklight (~> 6.3)
-      bootstrap-sass (~> 3.0)
-      openseadragon (>= 0.2.0)
-      rails
     blacklight-hierarchy (4.1.0)
       blacklight (> 6.20, < 8.0)
       jquery-rails
@@ -354,8 +349,6 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     okcomputer (1.18.4)
-    openseadragon (0.6.0)
-      rails (> 3.2.0)
     orm_adapter (0.5.0)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -573,7 +566,6 @@ PLATFORMS
 DEPENDENCIES
   bitly (>= 2.0.0.beta)
   blacklight (~> 6.0)
-  blacklight-gallery (~> 0.4)
   blacklight-hierarchy (~> 4.0)
   blacklight-marc (~> 6.0)
   blacklight_advanced_search (~> 6.3)
