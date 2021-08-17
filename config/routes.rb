@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP
 
   mount BlacklightAdvancedSearch::Engine => '/'
-  mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder' if Rails.env.test?
+
+  if Rails.env.test?
+    require_relative '../spec/support/rack_apps/mock_exhibits_finder_endpoint'
+    mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder'
+  end
 
   concern :searchable, Blacklight::Routes::Searchable.new
   concern :exportable, Blacklight::Routes::Exportable.new
