@@ -56,7 +56,7 @@ module DigitalCollection
 
     def render
       ApplicationController.render(
-        file: to_partial_path,
+        template: to_partial_path,
         assigns: { document: document, type: type }
       )
     end
