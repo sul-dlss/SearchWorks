@@ -40,6 +40,10 @@ class CatalogController < ApplicationController
     end
   end
 
+  before_action only: :index do
+    blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
+  end
+
   configure_blacklight do |config|
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
