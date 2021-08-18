@@ -663,6 +663,7 @@ module Constants
     'W7-M-CASES' => 'Map Center',
     'W7-MAP-BXS' => 'Map Center (W7 small box)',
     'W7-MAP-BXL' => 'Map Center (W7 large box)',
+    'W7-MAP-XLG' => 'Map Center (W7 x-large maps)',
     'W7-POCK-LG' => 'Map Center (W7 large pocket maps)',
     'W7-POCK-RG' => 'Map Center (W7 regular pocket maps)',
     'W7-ROLLED' => 'Map Center (W7 rolled)',

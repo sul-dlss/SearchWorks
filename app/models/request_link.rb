@@ -318,6 +318,7 @@ class RequestLink
         W7-M-CASES
         W7-MAP-BXL
         W7-MAP-BXS
+        W7-MAP-XLG
         W7-OBJECTS
         W7-POCK-LG
         W7-POCK-RG
