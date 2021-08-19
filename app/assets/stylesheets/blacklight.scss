@@ -26,11 +26,17 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
 
 .range_limit {
   input {
-    width: 10ch !important;
+    width: 14ch !important;
   }
 
   .input-group {
     display: flex !important;
+    justify-content: center;
+  }
+
+  // Blacklight 6's range limit didn't have this button
+  .view_larger {
+    display: none;
   }
 
   .input-group-append {
@@ -39,5 +45,6 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
 
   .submit {
     @extend .btn-sm;
+    border-radius: 0px 3px 3px 0px;
   }
 }

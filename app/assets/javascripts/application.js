@@ -15,7 +15,7 @@
 //= require 'blacklight_advanced_search'
 //= require retina_tag
 
-//= require jquery_ujs
+//= require rails-ujs
 //= require turbolinks
 //= require responsiveTruncator
 //= require trunk8
