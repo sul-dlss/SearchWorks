@@ -175,13 +175,8 @@ class RequestLink
         ARTLCKO-R
         ARTLCKS
         ARTLCKS-R
-        FOLIO
         INPROCESS
-        MEDIA
         ON-ORDER
-        REF-FOLIO
-        REFERENCE
-        STACKS
       ],
       'BUSINESS' => %w[
         BUS-CMC
@@ -194,39 +189,15 @@ class RequestLink
         STACKS
       ],
       'EARTH-SCI' => %w[
-        ATCIRCDESK
         INPROCESS
-        MAP-CASES
-        MAP-FILE
-        MEZZANINE
         ON-ORDER
-        STACKS
-        STORAGE
-        TECH-RPTS
-        THESES
       ],
       'EAST-ASIA' => %w[
-        CHINESE
-        EAL-SETS
-        EAL-STKS-C
-        EAL-STKS-J
-        EAL-STKS-K
-        FOLIO
-        FOLIO-CHN
-        FOLIO-FLAT
-        FOLIO-JPN
-        FOLIO-KOR
         HY-PAGE-EA
         INPROCESS
-        JAPANESE
-        KOREAN
         L-PAGE-EA
-        MEDIA
-        MICROTEXT
         ND-PAGE-EA
         ON-ORDER
-        SETS
-        STACKS
       ],
       'EDUCATION' => %w[
         CURRICULUM
@@ -242,32 +213,11 @@ class RequestLink
       'ENG' => %w[
         INPROCESS
         ON-ORDER
-        SERIALS
-        SHELBYSER
-        STACKS
-        TECH-RPTS
       ],
       'GREEN' => %w[
-        BENDER
-        CALIF-DOCS
-        FED-DOCS
-        FOLIO
-        FOLIO-FLAT
-        HAS-CA
-        HAS-DIGIT
-        HAS-FIC
-        HAS-NEWBK
-        IC
-        IC-DISPLAY
         INPROCESS
-        INTL-DOCS
         LOCKED-STK
         ON-ORDER
-        SSRC
-        SSRC-CLASS
-        SSRC-CSLI
-        SSRC-NEWBK
-        STACKS
       ],
       'LAW' => %w[
         BASEMENT
@@ -283,7 +233,7 @@ class RequestLink
         WELLNESS
       ],
       'MEDIA-MTXT' => %w[INPROCESS MM-CDCAB MM-OVERSIZ MM-STACKS ON-ORDER],
-      'MUSIC' => %w[FOLIO FOLIO-FLAT INPROCESS MINIATURE ON-ORDER RECORDINGS SCORES STACKS],
+      'MUSIC' => %w[INPROCESS ON-ORDER],
       'RUMSEYMAP' => %w[
         FOLIO
         INPROCESS
@@ -401,11 +351,6 @@ class RequestLink
       'SCIENCE' => %w[
         INPROCESS
         ON-ORDER
-        POPSCI
-        SERIALS
-        SHELBYSER
-        SHELBYTITL
-        STACKS
       ],
       'SPEC-COLL' => %w[
         BARCHAS
@@ -444,7 +389,7 @@ class RequestLink
         UARCH-REF
         UARCHX-30
       ],
-      'default' => %w[STACKS]
+      'default' => %w[]
     }
   end
 end
