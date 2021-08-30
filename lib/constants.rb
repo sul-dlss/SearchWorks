@@ -1,6 +1,6 @@
 module Constants
   UNKNOWN_LOCS = ['ASK@EASIA', 'ASK@GSB', 'ASK@LANE', 'CHECKSHELF', 'SEE-OTHER', 'STACKS-BW']
-  PAGE_LOCS = ['BIO-TEMP', 'EALSAL-CHN', 'EALSAL-JPN', 'EALSAL-KOR', 'L-PAGE-EA', 'MATH-TEMP', 'MEDIA-30', 'MEDIAX-30', 'MSS-30', 'PAGE-BU', 'PAGE-LP', 'PAGE-MP', 'PAGE-IRON', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-LOAN', 'SAL-MUSIC', 'SAL-SERG', 'SAL-TEMP', 'SALTURKISH', 'STACKS-30']
+  PAGE_LOCS = ['BIO-TEMP', 'EALSAL-CHN', 'EALSAL-JPN', 'EALSAL-KOR', 'L-PAGE-EA', 'MATH-TEMP', 'MEDIA-30', 'MEDIAX-30', 'MSS-30', 'PAGE-BU', 'PAGE-LP', 'PAGE-MM', 'PAGE-MP', 'PAGE-IRON', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-LOAN', 'SAL-MUSIC', 'SAL-SERG', 'SAL-TEMP', 'SALTURKISH', 'STACKS-30']
   RELATOR_TERMS = { 'acp' => 'Art copyist',
                     'act' => 'Actor',
                     'adp' => 'Adapter',
@@ -496,6 +496,7 @@ module Constants
     'PAGE-LP' => 'Request for pickup at Music Library or Media & Microtext Center',
     'PAGE-LW' => 'For use in Law Library',
     'PAGE-MD' => 'For use in Green Media & Microtext Center',
+    'PAGE-MM' => 'Request for pickup at Media & Microtext Center',
     'PAGE-MP' => 'Request for pickup at Branner Library',
     'PAGE-MU' => 'For use in Music Library',
     'PAGE-RM' => 'For use in David Rumsey Map Center',
