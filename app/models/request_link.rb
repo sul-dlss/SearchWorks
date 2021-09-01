@@ -236,6 +236,7 @@ class RequestLink
       'MUSIC' => %w[INPROCESS ON-ORDER],
       'RUMSEYMAP' => %w[
         FOLIO
+        FOLIO-FLAT
         INPROCESS
         MAP-CASES
         MAP-FILE
@@ -259,6 +260,7 @@ class RequestLink
         STK-XLG
         W7-ATLASES
         W7-BXLG-HM
+        W7-BXO
         W7-BXSM-HM
         W7-CASE-HM
         W7-CASE-MD
@@ -296,7 +298,9 @@ class RequestLink
         JAPANESE
         KOREAN
         L-PAGE-EA
+        LOCKED-STK
         MEDIA-MTXT
+        MICROTEXT
         ND-PAGE-EA
         ON-ORDER
         PAGE-EA
@@ -331,12 +335,24 @@ class RequestLink
         JAPANESE
         KOREAN
         L-PAGE-EA
+        LL-NEWS
         LOCKED-STK
         MEDIA-MTXT
         MICROTEXT
         ON-ORDER
+        PAGE-AR
+        PAGE-AS
+        PAGE-BU
         PAGE-EA
+        PAGE-EN
+        PAGE-ES
         PAGE-GR
+        PAGE-HP
+        PAGE-LP
+        PAGE-MD
+        PAGE-MP
+        PAGE-MU
+        PAGE-RM
         PAGE-SP
         R-STACKS
         RARE-BOOKS
