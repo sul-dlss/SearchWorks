@@ -21,6 +21,9 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
 
 .remove-icon {
   font-family: $remove-icon-font-family;
+}
+
+.facet-values .remove-icon {
   padding-left: 12px;
 }
 

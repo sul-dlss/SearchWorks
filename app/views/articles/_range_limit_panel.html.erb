@@ -8,7 +8,7 @@
         <span class="facet-label">
           <span class="selected"><%= range_display(field_name) %></span>
            <%= link_to remove_range_param(field_name), class: 'remove', title: t('blacklight.range_limit.remove_limit') do %>
-            <span class="glyphicon glyphicon-remove"></span>
+            <span class="remove-icon" aria-hidden="true">✖</span>
             <span class="sr-only">[<%= t('blacklight.range_limit.remove_limit') %>]</span>
            <% end %>
         </span>

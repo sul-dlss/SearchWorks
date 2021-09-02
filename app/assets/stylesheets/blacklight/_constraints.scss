@@ -39,9 +39,7 @@ span.constraints-label {
 
   .filterName:after {
     @extend .text-muted;
-    font-family: 'Glyphicons Halflings';
-    /* glyphicon-chevron-right */
-    content: "\e080";
+    content: "❯";
     font-size: 70%;
     padding-left: $caret-width-base;
   }

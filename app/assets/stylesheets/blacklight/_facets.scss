@@ -10,7 +10,7 @@
 .no-js {
   #sidebar .collapse {
     @extend .in;
-  }  
+  }
 }
 
 .facet_limit-active {
@@ -55,11 +55,6 @@
   .remove {
     @extend .text-muted;
     text-indent: $padding-base-horizontal;
-
-    .glyphicon {
-      top: 0.1em;
-      vertical-align: text-top;
-    }
 
     &:hover {
       color: $brand-danger;
@@ -119,16 +114,16 @@ ul.facet_extended_list, .facet_extended_list ul
 
 .panel-heading.collapse-toggle .panel-title:after {
     /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: grey;         /* adjust as needed */
-    font-size: 0.8em;
+    content: "❯";
+    float: right;
+    color: grey;
     line-height: normal;
+    transform: rotate(90deg);
 }
 .panel-heading.collapse-toggle.collapsed .panel-title:after {
     /* symbol for "collapsed" panels */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    content: "❯";
+    transform: rotate(0deg);
 }
 
 /* Sidenav
@@ -142,7 +137,7 @@ ul.facet_extended_list, .facet_extended_list ul
   }
 }
 
- 
+
 // Facet modal alphabetical filter
 .alpha-filter {
   .btn {

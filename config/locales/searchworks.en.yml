@@ -333,7 +333,7 @@ en:
       title: "Advanced search"
       query_criteria_heading_html: "Match %{select_menu} of the fields below"
       sort_label: "Sort results by"
-      search_btn: "<span class='glyphicon glyphicon-search'></span> Search"
+      search_btn: "<span class='bi-search'></span> Search"
       start_over: "Clear form"
       limit_criteria_heading_html: "Limit results by"
     page_title: 'Advanced search in %{application_name}'
