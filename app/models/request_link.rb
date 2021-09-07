@@ -21,7 +21,7 @@ class RequestLink
     enabled_libraries.include?(library) &&
       in_enabled_location? &&
       not_in_disabled_current_location? &&
-      any_items_circulate? &&
+      (any_items_circulate? || mediated_pageable?) &&
       !available_via_temporary_access?
       # Check for real barcodes?  Only for items that are not on-order?
       # Array of procs / methods to be sent configurable on a library basis.
@@ -112,49 +112,33 @@ class RequestLink
   end
 
   def circulating_item_types
-    library_map = circulating_item_type_map[library]
+    library_map = Settings.circulating_item_types[library]
 
-    return circulating_item_type_map['default'] unless library_map
+    return Settings.circulating_item_types['default'] unless library_map
     return library_map if library_map.is_a?(Array)
 
     library_map[location] || library_map['default'] || library_map
   end
 
-  def circulating_item_type_map
-    {
-      'ARS' => %w[STKS],
-      'ART' => {
-        'ARTLCKL' => '*',
-        'ARTLCKL-R' => '*',
-        'ARTLCKM' => '*',
-        'ARTLCKM-R' => '*',
-        'ARTLCKO' => '*',
-        'ARTLCKO-R' => '*',
-        'ARTLCKS' => '*',
-        'ARTLCKS-R' => '*',
-        'default' => %w[STKS-MONO STKS-PERI REF MEDIA]
-      },
-      'BUSINESS' => %w[STKS AUDIO CAREERCOLL POP-COLL NH-DVDCD NH-PERI],
-      'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
-      'EAST-ASIA' => %w[STKS-MONO STKS-PERI NH-DVDCD],
-      'EDUCATION' => %w[KIT MEDIA NH-MICR NH-PERMRES NH-PERMRS2 NH-PERMRS7 NH-7DAY STKS-MONO STKS-PERI LCKSTK],
-      'ENG' => %w[STKS PERI],
-      'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
-      'LAW' => %w[LAW-STKS LAW-NEW LAW-PERBND NH-7DAY LAPTOP],
-      'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
-      'MUSIC' => %w[DVDCD SCORE STKS],
-      'RUMSEYMAP' => '*',
-      'SAL' => {
-        'SAL-TEMP' => %w[NONCIRC],
-        'UNCAT' => %w[NONCIRC],
-        'default' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER NH-INHOUSE NH-MICR PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS]
-      },
-      'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND REF SCORE STKS STKS-MONO STKS-PERI],
-      'SCIENCE' => %w[STKS PERI MEDIA],
-      'SPEC-COLL' => '*',
-      'TANNER' => %w[STKS],
-      'default' => %w[STKS-MONO]
+  def mediated_pageable?
+    return true if ['RUMSEYMAP', 'SPEC-COLL'].include? library
+
+    mediated_locations = {
+      'ART' => [
+        'ARTLCKL',
+        'ARTLCKL-R',
+        'ARTLCKM',
+        'ARTLCKM-R',
+        'ARTLCKO',
+        'ARTLCKO-R',
+        'ARTLCKS',
+        'ARTLCKS-R'
+      ],
+      'EDUCATION' => ['LOCKED-STK'],
+      'SAL3' => ['PAGE-MP']
     }
+
+    mediated_locations[library]&.include? location
   end
 
   def disabled_current_locations_map
