@@ -175,13 +175,8 @@ class RequestLink
         ARTLCKO-R
         ARTLCKS
         ARTLCKS-R
-        FOLIO
         INPROCESS
-        MEDIA
         ON-ORDER
-        REF-FOLIO
-        REFERENCE
-        STACKS
       ],
       'BUSINESS' => %w[
         BUS-CMC
@@ -194,39 +189,15 @@ class RequestLink
         STACKS
       ],
       'EARTH-SCI' => %w[
-        ATCIRCDESK
         INPROCESS
-        MAP-CASES
-        MAP-FILE
-        MEZZANINE
         ON-ORDER
-        STACKS
-        STORAGE
-        TECH-RPTS
-        THESES
       ],
       'EAST-ASIA' => %w[
-        CHINESE
-        EAL-SETS
-        EAL-STKS-C
-        EAL-STKS-J
-        EAL-STKS-K
-        FOLIO
-        FOLIO-CHN
-        FOLIO-FLAT
-        FOLIO-JPN
-        FOLIO-KOR
         HY-PAGE-EA
         INPROCESS
-        JAPANESE
-        KOREAN
         L-PAGE-EA
-        MEDIA
-        MICROTEXT
         ND-PAGE-EA
         ON-ORDER
-        SETS
-        STACKS
       ],
       'EDUCATION' => %w[
         CURRICULUM
@@ -242,32 +213,11 @@ class RequestLink
       'ENG' => %w[
         INPROCESS
         ON-ORDER
-        SERIALS
-        SHELBYSER
-        STACKS
-        TECH-RPTS
       ],
       'GREEN' => %w[
-        BENDER
-        CALIF-DOCS
-        FED-DOCS
-        FOLIO
-        FOLIO-FLAT
-        HAS-CA
-        HAS-DIGIT
-        HAS-FIC
-        HAS-NEWBK
-        IC
-        IC-DISPLAY
         INPROCESS
-        INTL-DOCS
         LOCKED-STK
         ON-ORDER
-        SSRC
-        SSRC-CLASS
-        SSRC-CSLI
-        SSRC-NEWBK
-        STACKS
       ],
       'LAW' => %w[
         BASEMENT
@@ -283,9 +233,10 @@ class RequestLink
         WELLNESS
       ],
       'MEDIA-MTXT' => %w[INPROCESS PAGE-MM MM-CDCAB MM-OVERSIZ MM-STACKS ON-ORDER],
-      'MUSIC' => %w[FOLIO FOLIO-FLAT INPROCESS MINIATURE ON-ORDER RECORDINGS SCORES STACKS],
+      'MUSIC' => %w[INPROCESS ON-ORDER],
       'RUMSEYMAP' => %w[
         FOLIO
+        FOLIO-FLAT
         INPROCESS
         MAP-CASES
         MAP-FILE
@@ -309,6 +260,7 @@ class RequestLink
         STK-XLG
         W7-ATLASES
         W7-BXLG-HM
+        W7-BXO
         W7-BXSM-HM
         W7-CASE-HM
         W7-CASE-MD
@@ -346,7 +298,9 @@ class RequestLink
         JAPANESE
         KOREAN
         L-PAGE-EA
+        LOCKED-STK
         MEDIA-MTXT
+        MICROTEXT
         ND-PAGE-EA
         ON-ORDER
         PAGE-EA
@@ -381,12 +335,24 @@ class RequestLink
         JAPANESE
         KOREAN
         L-PAGE-EA
+        LL-NEWS
         LOCKED-STK
         MEDIA-MTXT
         MICROTEXT
         ON-ORDER
+        PAGE-AR
+        PAGE-AS
+        PAGE-BU
         PAGE-EA
+        PAGE-EN
+        PAGE-ES
         PAGE-GR
+        PAGE-HP
+        PAGE-LP
+        PAGE-MD
+        PAGE-MP
+        PAGE-MU
+        PAGE-RM
         PAGE-SP
         R-STACKS
         RARE-BOOKS
@@ -401,11 +367,6 @@ class RequestLink
       'SCIENCE' => %w[
         INPROCESS
         ON-ORDER
-        POPSCI
-        SERIALS
-        SHELBYSER
-        SHELBYTITL
-        STACKS
       ],
       'SPEC-COLL' => %w[
         BARCHAS
@@ -444,7 +405,7 @@ class RequestLink
         UARCH-REF
         UARCHX-30
       ],
-      'default' => %w[STACKS]
+      'default' => %w[]
     }
   end
 end

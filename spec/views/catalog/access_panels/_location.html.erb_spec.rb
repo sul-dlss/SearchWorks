@@ -55,7 +55,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
       assign(:document, SolrDocument.new(
         id: '123',
         item_display: [
-          '123 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
+          '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
         ]
       ))
       render
@@ -156,7 +156,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
       end
 
       it "should include the matched MHLD" do
-        expect(rendered).to have_css('.panel-library-location a', count: 4)
+        expect(rendered).to have_css('.panel-library-location a', count: 3)
         expect(rendered).to have_css('h3', text: "Green Library", count: 1)
         expect(rendered).to have_css('.location-name a', text: "Stacks", count: 1)
         expect(rendered).to have_css('.panel-library-location .mhld', text: "public note")
@@ -191,7 +191,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
       before do
         assign(:document, SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123']
+          item_display: ['123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123']
         ))
         render
       end

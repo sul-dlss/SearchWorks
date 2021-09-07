@@ -7,7 +7,7 @@ RSpec.describe RequestLink do
 
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
-  let(:location) { 'STACKS' }
+  let(:location) { 'LOCKED-STK' }
   let(:items) { [double(type: 'STKS-MONO', current_location: double(code: nil))] }
 
   describe '#present?' do
@@ -97,7 +97,7 @@ RSpec.describe RequestLink do
       expect(link.url).to start_with(Settings.REQUESTS_URL)
       expect(link.url).to include('item_id=12345')
       expect(link.url).to include('origin=GREEN')
-      expect(link.url).to include('origin_location=STACKS')
+      expect(link.url).to include('origin_location=LOCKED-STK')
     end
   end
 end
