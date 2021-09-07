@@ -157,12 +157,8 @@ describe Holdings::Callnumber do
   end
 
   describe 'request status' do
-    it 'should respond to #requestable? from the Holdings::Requestable class' do
-      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).to be_requestable
-    end
-
-    it 'should respond to #must_request? from the Holdings::Requestable class' do
-      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).not_to be_must_request
+    it 'should respond to #show_item_level_request_link? from the Holdings::Requestable class' do
+      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).not_to be_show_item_level_request_link
     end
   end
 

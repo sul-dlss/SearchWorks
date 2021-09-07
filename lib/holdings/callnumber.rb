@@ -119,9 +119,7 @@ class Holdings
       Constants::CURRENT_HOME_LOCS.include?(current_location.code)
     end
 
-    delegate :requestable?, to: :request_status
-
-    delegate :must_request?, to: :request_status
+    delegate :show_item_level_request_link?, to: :request_status
 
     def stackmapable?
       stackmapable_library? && stackmapable_location?
