@@ -31,14 +31,6 @@ describe Holdings::Requestable do
       end
     end
 
-    describe "location level requests" do
-      it "libraries that are requestable at the location level should not be requestable" do
-        Constants::REQUEST_LIBS.each do |library|
-          expect(Holdings::Requestable.new(OpenStruct.new(library: library))).not_to be_requestable
-        end
-      end
-    end
-
     describe 'ON-ORDER items' do
       it 'are not requestable if the library is configured to be noncirc in this case' do
         expect(Holdings::Requestable.new(Holdings::Callnumber.new("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- STKS-MONO"))).not_to be_show_item_level_request_link

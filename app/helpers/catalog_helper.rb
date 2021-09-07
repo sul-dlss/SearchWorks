@@ -20,13 +20,6 @@ module CatalogHelper
     params[:view] ? params[:view] : 'list'
   end
 
-  def location_level_request_link?(library, location)
-    return if location.reserve_location?
-    return if Constants::NON_REQUESTABLE_HOME_LOCS.include?(location.try(:code))
-
-    library.location_level_request? || location.location_level_request?
-  end
-
   def stackmap_link(document, location)
     callnumber = location.items.first
     stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: callnumber.callnumber, library: callnumber.library, location: callnumber.home_location)

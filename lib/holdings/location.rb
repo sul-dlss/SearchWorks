@@ -16,15 +16,6 @@ class Holdings
       @code && Constants::BOUND_WITH_LOCS.include?(@code)
     end
 
-    def location_level_request?
-      !contains_only_must_request_items? &&
-        !noncirc_library_only_inprocess? &&
-        !reserve_location? &&
-        (Constants::LOCATION_LEVEL_REQUEST_LOCS.include?(@code) ||
-         Constants::REQUEST_LOCS.include?(@code) ||
-         hopkins_stacks_only_and_not_online?)
-    end
-
     def external_location?
       library == 'LANE-MED'
     end
@@ -77,50 +68,7 @@ class Holdings
       location_info
     end
 
-    def reserve_location?
-      (@code || '').ends_with?('-RESV')
-    end
-
     private
-
-    def hopkins_stacks_only_and_not_online?
-      hopkins_only? && hopkins_stacks? && !document_online?
-    end
-
-    def hopkins_only?
-      hopkins? &&
-        @document.present? &&
-        @document.holdings.libraries.present? &&
-        @document.holdings.libraries.length == 1
-    end
-
-    def hopkins?
-      library == 'HOPKINS'
-    end
-
-    def hopkins_stacks?
-      hopkins? && @code && @code == 'STACKS'
-    end
-
-    def hopkins_and_not_online?
-      hopkins? && !document_online?
-    end
-
-    def document_online?
-      @document.present? && @document.access_panels.online?
-    end
-
-    def noncirc_library_only_inprocess?
-      return false unless @items.present?
-
-      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(library) && @items.all? do |item|
-        Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
-      end
-    end
-
-    def contains_only_must_request_items?
-      @items.present? && @items.all?(&:must_request?)
-    end
 
     def live_data_for_barcode(data, barcode)
       data.find do |item|
