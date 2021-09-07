@@ -71,6 +71,11 @@
                        <% if item.on_reserve? %>
                          <%= item.loan_period %>
                        <% end %>
+                       <span class="request-link">
+                         <% if item.show_item_level_request_link? %>
+                           <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
+                         <% end %>
+                       </span>
                      </td>
                    <% end %>
                  </tr>

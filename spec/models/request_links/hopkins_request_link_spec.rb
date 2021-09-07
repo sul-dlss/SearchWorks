@@ -9,7 +9,7 @@ RSpec.describe RequestLinks::HopkinsRequestLink do
   let(:document) { SolrDocument.new(item_display: item_display_field) }
   let(:library) { 'HOPKINS' }
   let(:location) { 'STACKS' }
-  let(:items) { [double(must_request?: false, type: 'STKS', current_location: double(code: nil))] }
+  let(:items) { [double(show_item_level_request_link?: false, type: 'STKS', current_location: double(code: nil))] }
 
   subject(:link) { described_class.new(document: document, library: library, location: location, items: items) }
 
@@ -61,7 +61,7 @@ RSpec.describe RequestLinks::HopkinsRequestLink do
       end
 
       context 'item types' do
-        let(:items) { [double(must_request?: false, type: 'NH-INHOUSE', current_location: double(code: nil))] }
+        let(:items) { [double(show_item_level_request_link?: false, type: 'NH-INHOUSE', current_location: double(code: nil))] }
 
         it { expect(link).not_to be_present }
       end
