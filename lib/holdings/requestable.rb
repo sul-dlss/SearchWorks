@@ -8,10 +8,17 @@ class Holdings
       @callnumber = callnumber
     end
 
-    def show_item_level_request_link?
+    # Is it even remotely plausible to request the item?
+    def requestable?
       return false if location_level_request_link? || on_reserve? || mediated_location? || nonrequestable_home_location?
 
-      current_location_is_loan_desk? || (circulates? && must_request_current_location?)
+      current_location_is_loan_desk? || circulates?
+    end
+
+    # Is the item somewhere where we need to show an item-level request link regardless of the
+    # availability check?
+    def show_item_level_request_link?
+      requestable? && (current_location_is_loan_desk? || must_request_current_location?)
     end
 
     private

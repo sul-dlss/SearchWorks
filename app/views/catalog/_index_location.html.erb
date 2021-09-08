@@ -55,7 +55,7 @@
                 <td class='indent-callnumber'>
                   <%= item.callnumber %>
                 </td>
-                <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>">
+                <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if !location.request_link.present? && item.requestable? %>>
                   <i class="availability-icon <%= item.status.availability_class %>"></i>
                   <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
                     <%= item.status.status_text %>
@@ -68,6 +68,11 @@
                   <% if item.on_reserve? %>
                     <%= item.loan_period %>
                   <% end %>
+                  <span class="request-link">
+                    <% if !location.request_link.present? && item.show_item_level_request_link? %>
+                      <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
+                    <% end %>
+                  </span>
                 </td>
               </tr>
             <% end %>
