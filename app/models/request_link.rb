@@ -20,7 +20,7 @@ class RequestLink
   def present?
     enabled_libraries.include?(library) &&
       in_enabled_location? &&
-      not_in_disabled_current_location? &&
+      !all_in_disabled_current_location? &&
       (any_items_circulate? || mediated_pageable?) &&
       !available_via_temporary_access?
       # Check for real barcodes?  Only for items that are not on-order?
@@ -89,9 +89,9 @@ class RequestLink
     enabled_locations.include?(location)
   end
 
-  def not_in_disabled_current_location?
-    items.any? do |item|
-      !disabled_current_locations.include?(item.current_location.code)
+  def all_in_disabled_current_location?
+    items.all? do |item|
+      disabled_current_locations.include?(item.current_location.code)
     end
   end
 
