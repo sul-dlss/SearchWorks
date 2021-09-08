@@ -83,6 +83,8 @@ class RequestLink
   end
 
   def all_in_disabled_current_location?
+    return false if items.blank?
+
     items.all? do |item|
       disabled_current_locations.include?(item.current_location.code)
     end
@@ -95,7 +97,7 @@ class RequestLink
   end
 
   def any_items_circulate?
-    return true if circulating_item_types == '*'
+    return true if items.blank? || circulating_item_types == '*'
 
     items.any? { |item| circulating_item_types.include?(item.type) }
   end

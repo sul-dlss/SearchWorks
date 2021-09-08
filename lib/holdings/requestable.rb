@@ -24,7 +24,7 @@ class Holdings
     private
 
     def location_level_request_link?
-      RequestLink.for(document: document, library: library, location: home_location).present?
+      RequestLink.for(document: document, library: library, location: home_location, items: [self]).present?
     end
 
     def circulates?
