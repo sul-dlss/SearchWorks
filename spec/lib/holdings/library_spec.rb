@@ -63,32 +63,6 @@ describe Holdings::Library do
     end
   end
 
-  describe "#location_level_request?" do
-    it "should return true for all libraries that should be requestable at the location level" do
-      Constants::REQUEST_LIBS.each do |library|
-        expect(Holdings::Library.new(library)).to be_location_level_request
-      end
-    end
-
-    it 'is false for NONCIRC libraries that only include INPROCESS items' do
-      library = Holdings::Library.new(
-        'RUMSEYMAP',
-        nil,
-        [double(current_location: double(code: 'INPROCESS'))]
-      )
-      expect(library).not_to be_location_level_request
-    end
-
-    it 'is false for libraries configured to be NONCIRC when the item is ON-ORDER' do
-      library = Holdings::Library.new(
-        'SPEC-COLL',
-        nil,
-        [double(current_location: double(code: 'ON-ORDER'))]
-      )
-      expect(library).not_to be_location_level_request
-    end
-  end
-
   describe '#library_instructions' do
     it 'should return instructions for libraries which have them' do
       Constants::LIBRARY_INSTRUCTIONS.each_key do |library|

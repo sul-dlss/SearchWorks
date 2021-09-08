@@ -857,46 +857,7 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  REQUEST_LIBS = ['HOOVER', 'HV-ARCHIVE', 'MEDIA-MTXT', 'RUMSEYMAP', 'SAL', 'SAL3', 'SAL-NEWARK', 'SPEC-COLL'].freeze
-
-  LOCATION_LEVEL_REQUEST_LOCS = ['SSRC-DATA']
-
   HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
-
-  REQUEST_LOCS = ['GUNST-30',
-                  'FELTON-30',
-                  'RBC-30',
-                  'RBCX-30',
-                  'UARCH-30',
-                  'UARCHX-30',
-                  'MEDIA-30',
-                  'MEDIAX-30',
-                  'MSS-30',
-                  'STACKS-30',
-                  'AT-REPAIR',
-                  'AVAIL_SOON',
-                  'B&F-HOLD',
-                  'BILLED-OD',
-                  'BINDERY',
-                  # "CHECKEDOUT",
-                  'EDI',
-                  'ENDPROCESS',
-                  'INPROCESS',
-                  'INSHIPPING',
-                  'PAGE-IRON',
-                  'PUB-TECH',
-                  'REPAIR',
-                  'SAL-RETURN',
-                  'SUL-BIND',
-                  'SULBIND-WA',
-                  'TECH-ACQ',
-                  'TECH-CAT',
-                  'TECH-CONS',
-                  'TECH-PROC',
-                  'TECH-SER',
-                  'TECH-SERV',
-                  'TEMP-LL',
-                  'MSSX-30']
 
   REQUESTABLE_CURRENT_LOCS = [
     'MISSING',
@@ -938,12 +899,7 @@ module Constants
                               'TECH-SER',
                               'TECH-SERV',
                               'TEMP-LL']
-  NON_REQUESTABLE_CURRENT_LOCS = [
-    'ART-AT-ENG',
-    'IC-DISPLAY',
-    'LAC',
-    'SEE-LOAN'
-  ]
+
   NON_REQUESTABLE_HOME_LOCS = [
     'SEE-OTHER',
     'TECH-DESK'

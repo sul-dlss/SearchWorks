@@ -6,7 +6,7 @@ module RequestLinkHelper
     link_to(
       request_link_text(options[:callnumber], options[:library]),
       url,
-      target: request_link_target(options[:callnumber]),
+      target: request_link_target,
       rel: 'nofollow',
       class: options[:class],
       data: link_data_attributes(options[:callnumber])
@@ -38,9 +38,7 @@ module RequestLinkHelper
     )
   end
 
-  def request_link_target(callnumber)
-    return unless callnumber && Constants::HOOVER_LIBS.include?(callnumber.library)
-
+  def request_link_target
     '_blank'
   end
 

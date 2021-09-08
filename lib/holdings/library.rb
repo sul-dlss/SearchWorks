@@ -45,13 +45,6 @@ class Holdings
         locations.any?(&:bound_with?)
     end
 
-    def location_level_request?
-      !noncirc_library_only_inprocess? &&
-        !noncirc_library_only_on_order? &&
-        !contains_only_must_request_items? &&
-        Constants::REQUEST_LIBS.include?(@code)
-    end
-
     def library_instructions
       Constants::LIBRARY_INSTRUCTIONS[@code]
     end
@@ -74,28 +67,6 @@ class Holdings
       end
       library_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
       library_info
-    end
-
-    private
-
-    def noncirc_library_only_inprocess?
-      return false unless @items.present?
-
-      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
-        Constants::INPROCESS_NONCIRC_LOCS.include?(item.current_location.try(:code))
-      end
-    end
-
-    def noncirc_library_only_on_order?
-      return false unless @items.present?
-
-      Constants::ON_ORDER_NONCIRC_LIBRARIES.include?(@code) && @items.all? do |item|
-        Constants::ON_ORDER_NONCIRC_LOCS.include?(item.current_location.try(:code))
-      end
-    end
-
-    def contains_only_must_request_items?
-      @items.present? && @items.all?(&:must_request?)
     end
   end
 end

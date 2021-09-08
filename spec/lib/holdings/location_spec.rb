@@ -2,9 +2,6 @@ require "spec_helper"
 
 describe Holdings::Location do
   include Marc856Fixtures
-  it "should identify location level requests" do
-    expect(Holdings::Location.new("SSRC-DATA")).to be_location_level_request
-  end
   describe '#name' do
     let(:location_code) { "LOCKED-STK" }
     let(:callnumber) { Holdings::Callnumber.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
@@ -47,59 +44,6 @@ describe Holdings::Location do
     end
   end
 
-  describe '#location_level_request?' do
-    it 'should return true for items that are in request locs' do
-      Constants::REQUEST_LOCS.each do |location|
-        expect(Holdings::Location.new(location)).to be_location_level_request
-      end
-    end
-
-    it 'returns false when then the location contains only must-request items' do
-      callnumbers = [Holdings::Callnumber.new('12345 -|- GREEN -|- STACKS -|- ON-ORDER ')]
-      location = Holdings::Location.new('GREEN', callnumbers)
-
-      expect(location.send(:contains_only_must_request_items?)).to eq true
-      expect(location).not_to be_location_level_request
-    end
-
-    it 'returns false when the library is a NONCIRC library that only includes INPROCESS items' do
-      callnumbers = [Holdings::Callnumber.new('12345 -|- SPEC-COLL -|- STACKS -|- INPROCESS ')]
-      location = Holdings::Location.new('SPEC-COLL', callnumbers)
-
-      expect(location.send(:noncirc_library_only_inprocess?)).to eq true
-      expect(location).not_to be_location_level_request
-    end
-
-    it 'returns false when the location ends in -RESV' do
-      expect(Holdings::Location.new('SOMETHING-RESV')).not_to be_location_level_request
-    end
-
-    context 'HOPKINS' do
-      let(:item_display) { '12345 -|- HOPKINS -|- STACKS -|- ' }
-      let(:callnumbers) { [Holdings::Callnumber.new(item_display)] }
-      let(:not_online_doc) { SolrDocument.new(item_display: [item_display]) }
-      let(:online_doc) { SolrDocument.new(marc_links_struct: [{ fulltext: true }], item_display: [item_display]) }
-      let(:multi_holdings_doc) { SolrDocument.new(item_display: [item_display, '54321 -|- GREEN -|- STACKS -|- ']) }
-
-      it 'returns true for materials that are not available online' do
-        location = Holdings::Location.new('STACKS', callnumbers, not_online_doc)
-        expect(location).to be_location_level_request
-      end
-      it 'returns false for materials that are available online' do
-        location = Holdings::Location.new('STACKS', callnumbers, online_doc)
-        expect(location).not_to be_location_level_request
-      end
-      it 'returns false for materials that exist in other libraries' do
-        location = Holdings::Location.new('STACKS', callnumbers, multi_holdings_doc)
-        expect(location).not_to be_location_level_request
-      end
-      it 'returns false for materials that are not in STACKS' do
-        location = Holdings::Location.new('REF', callnumbers, not_online_doc)
-        expect(location).not_to be_location_level_request
-      end
-    end
-  end
-
   describe 'external locations' do
     let(:external_location) {
       Holdings::Location.new('STACKS', [
@@ -135,12 +79,6 @@ describe Holdings::Location do
       it 'should not provide a link for non-external locations' do
         expect(non_external_location.location_link).to be_nil
       end
-    end
-  end
-
-  describe '#reserve_location?' do
-    it 'is true when the location ends in -RESV' do
-      expect(Holdings::Location.new('SOMETHING-RESV')).to be_reserve_location
     end
   end
 

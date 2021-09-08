@@ -1,76 +1,61 @@
 class Holdings
   class Requestable
+    attr_reader :callnumber
+
+    delegate :document, :library, :home_location, :current_location, :type, :on_reserve?, to: :callnumber
+
     def initialize(callnumber)
       @callnumber = callnumber
     end
 
+    # Is it even remotely plausible to request the item?
     def requestable?
-      !location_level_request? && item_is_requestable?
+      return false if location_level_request_link? || on_reserve? || mediated_location? || nonrequestable_home_location?
+
+      current_location_is_loan_desk? || circulates?
     end
 
-    def must_request?
-      requestable? && must_request_item? && !noncirc_library_and_inprocess?
+    # Is the item somewhere where we need to show an item-level request link regardless of the
+    # availability check?
+    def show_item_level_request_link?
+      requestable? && (current_location_is_loan_desk? || must_request_current_location?)
     end
 
     private
 
-    def item_is_requestable?
-      !on_reserve? &&
-        !noncirc_library_and_inprocess? &&
-        !on_order_noncirc? &&
-        requestable_item_type? &&
-        requestable_home_location? &&
-        requestable_current_location?
+    def location_level_request_link?
+      RequestLink.for(document: document, library: library, location: home_location, items: [self]).present?
     end
 
-    def on_reserve?
-      @callnumber.on_reserve?
+    def circulates?
+      circulating_item_types.include? type
     end
 
-    def noncirc_library_and_inprocess?
-      Constants::INPROCESS_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
-        Constants::INPROCESS_NONCIRC_LOCS.include?(@callnumber.current_location.try(:code))
+    def mediated_location?
+      Settings.mediated_locations[library] == '*' ||
+        Settings.mediated_locations[library]&.include?(home_location)
     end
 
-    def on_order_noncirc?
-      Constants::ON_ORDER_NONCIRC_LIBRARIES.include?(@callnumber.library) &&
-        Constants::ON_ORDER_NONCIRC_LOCS.include?(@callnumber.current_location.try(:code))
-    end
-
-    def must_request_item?
-      !location_level_request? && must_request_current_location?
-    end
-
-    def must_request_current_location?
-      current_location_is_loan_desk? ||
-      Constants::REQUESTABLE_CURRENT_LOCS.include?(@callnumber.current_location.code) ||
-      Constants::UNAVAILABLE_CURRENT_LOCS.include?(@callnumber.current_location.code)
-    end
-
-    def requestable_item_type?
-      !((@callnumber.type || '').start_with?('NH-') || %w(REF NONCIRC LIBUSEONLY).include?(@callnumber.type))
-    end
-
-    def requestable_home_location?
-      !green_media_microtext? &&
-      !Constants::NON_REQUESTABLE_HOME_LOCS.include?(@callnumber.home_location)
-    end
-
-    def green_media_microtext?
-      @callnumber.library == "GREEN" && @callnumber.home_location == "MEDIA-MTXT"
-    end
-
-    def requestable_current_location?
-      !Constants::NON_REQUESTABLE_CURRENT_LOCS.include?(@callnumber.current_location.code)
-    end
-
-    def location_level_request?
-      Holdings::Library.new(@callnumber.library).location_level_request? ||
-        Holdings::Location.new(@callnumber.home_location).location_level_request?
+    def nonrequestable_home_location?
+      Constants::NON_REQUESTABLE_HOME_LOCS.include?(home_location)
     end
 
     def current_location_is_loan_desk?
-      @callnumber.current_location.code.end_with?('-LOAN') && @callnumber.current_location.code != "SEE-LOAN"
+      current_location.code.end_with?('-LOAN') && current_location.code != "SEE-LOAN"
+    end
+
+    def must_request_current_location?
+      Constants::REQUESTABLE_CURRENT_LOCS.include?(current_location.code) ||
+        Constants::UNAVAILABLE_CURRENT_LOCS.include?(current_location.code)
+    end
+
+    def circulating_item_types
+      library_map = Settings.circulating_item_types[library]
+
+      return Settings.circulating_item_types['default'] unless library_map
+      return library_map if library_map.is_a?(Array)
+
+      library_map[home_location] || library_map['default'] || library_map
     end
   end
 end

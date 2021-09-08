@@ -18,10 +18,8 @@ class RequestLink
   end
 
   def present?
-    enabled_libraries.include?(library) &&
-      in_enabled_location? &&
-      not_in_disabled_current_location? &&
-      any_items_circulate? &&
+    ((in_enabled_location? && any_items_circulate?) || mediated_pageable?) &&
+      !all_in_disabled_current_location? &&
       !available_via_temporary_access?
       # Check for real barcodes?  Only for items that are not on-order?
       # Array of procs / methods to be sent configurable on a library basis.
@@ -79,19 +77,16 @@ class RequestLink
     }
   end
 
-  def enabled_libraries
-    %w[ARS ART BUSINESS EARTH-SCI EAST-ASIA EDUCATION ENG GREEN LAW MEDIA-MTXT MUSIC RUMSEYMAP SAL SAL3 SCIENCE SPEC-COLL TANNER]
-  end
-
   def in_enabled_location?
-    return true if enabled_locations == '*'
-
-    enabled_locations.include?(location)
+    Settings.pageable_locations[library] == '*' ||
+      Settings.pageable_locations[library]&.include?(location)
   end
 
-  def not_in_disabled_current_location?
-    items.any? do |item|
-      !disabled_current_locations.include?(item.current_location.code)
+  def all_in_disabled_current_location?
+    return false if items.blank?
+
+    items.all? do |item|
+      disabled_current_locations.include?(item.current_location.code)
     end
   end
 
@@ -101,310 +96,29 @@ class RequestLink
     library_map || disabled_current_locations_map['default']
   end
 
-  def enabled_locations
-    enabled_locations_map[library] || enabled_locations_map['default']
-  end
-
   def any_items_circulate?
-    return true if circulating_item_types == '*'
+    return true if items.blank? || circulating_item_types == '*'
 
     items.any? { |item| circulating_item_types.include?(item.type) }
   end
 
   def circulating_item_types
-    library_map = circulating_item_type_map[library]
+    library_map = Settings.circulating_item_types[library]
 
-    return circulating_item_type_map['default'] unless library_map
+    return Settings.circulating_item_types['default'] unless library_map
     return library_map if library_map.is_a?(Array)
 
     library_map[location] || library_map['default'] || library_map
   end
 
-  def circulating_item_type_map
-    {
-      'ARS' => %w[STKS],
-      'ART' => {
-        'ARTLCKL' => '*',
-        'ARTLCKL-R' => '*',
-        'ARTLCKM' => '*',
-        'ARTLCKM-R' => '*',
-        'ARTLCKO' => '*',
-        'ARTLCKO-R' => '*',
-        'ARTLCKS' => '*',
-        'ARTLCKS-R' => '*',
-        'default' => %w[STKS-MONO STKS-PERI REF MEDIA]
-      },
-      'BUSINESS' => %w[STKS AUDIO CAREERCOLL POP-COLL NH-DVDCD NH-PERI],
-      'EARTH-SCI' => %w[ATLAS EASTK-DOC LCKSTK MEDIA POP-COLL STKS THESIS THESIS-EXP],
-      'EAST-ASIA' => %w[STKS-MONO STKS-PERI NH-DVDCD],
-      'EDUCATION' => %w[KIT MEDIA NH-MICR NH-PERMRES NH-PERMRS2 NH-PERMRS7 NH-7DAY STKS-MONO STKS-PERI LCKSTK],
-      'ENG' => %w[STKS PERI],
-      'GREEN' => %w[GOVSTKS NEWBOOK STKS-MONO STKS-PERI],
-      'LAW' => %w[LAW-STKS LAW-NEW LAW-PERBND NH-7DAY LAPTOP],
-      'MEDIA-MTXT' => %w[DVDCD VIDEOGAME EQUIP500 EQUIP250 EQUIP100 EQUIP050 MEDSTKS MEDIA],
-      'MUSIC' => %w[DVDCD SCORE STKS],
-      'RUMSEYMAP' => '*',
-      'SAL' => {
-        'SAL-TEMP' => %w[NONCIRC],
-        'UNCAT' => %w[NONCIRC],
-        'default' => %w[ARCHIVE EASTK-DOC GOVSTKS NEWSPAPER NH-INHOUSE NH-MICR PAGE-1DAY PERI PERIBND PERIUNBND STKS-MONO STKS-PERI STKS2 THESIS]
-      },
-      'SAL3' => %w[ATLAS DVDCD EASTK-DOC GOVSTKS INDEX MEDIA NEWSPAPER NH-7DAY NH-DVDCD NH-INHOUSE NH-RECORDNG PERI2 PERIBND REF SCORE STKS STKS-MONO STKS-PERI],
-      'SCIENCE' => %w[STKS PERI MEDIA],
-      'SPEC-COLL' => '*',
-      'TANNER' => %w[STKS],
-      'default' => %w[STKS-MONO]
-    }
+  def mediated_pageable?
+    Settings.mediated_locations[library] == '*' ||
+      Settings.mediated_locations[library]&.include?(location)
   end
 
   def disabled_current_locations_map
     {
       'SPEC-COLL' => %w[INPROCESS MISSING ON-ORDER SPEC-INPRO],
-      'default' => %w[]
-    }
-  end
-
-  def enabled_locations_map
-    {
-      'ART' => %w[
-        ARTLCKL
-        ARTLCKL-R
-        ARTLCKM
-        ARTLCKM-R
-        ARTLCKO
-        ARTLCKO-R
-        ARTLCKS
-        ARTLCKS-R
-        INPROCESS
-        ON-ORDER
-      ],
-      'BUSINESS' => %w[
-        BUS-CMC
-        BUS-PER
-        BUS-TEMP
-        INPROCESS
-        MEDIA
-        ON-ORDER
-        PAGE-IRON
-        STACKS
-      ],
-      'EARTH-SCI' => %w[
-        INPROCESS
-        ON-ORDER
-      ],
-      'EAST-ASIA' => %w[
-        HY-PAGE-EA
-        INPROCESS
-        L-PAGE-EA
-        ND-PAGE-EA
-        ON-ORDER
-      ],
-      'EDUCATION' => %w[
-        CURRICULUM
-        CURRSTOR
-        INPROCESS
-        LOCKED-STK
-        MICROTEXT
-        ON-ORDER
-        PERM-RES
-        STACKS
-        STORAGE
-      ],
-      'ENG' => %w[
-        INPROCESS
-        ON-ORDER
-      ],
-      'GREEN' => %w[
-        INPROCESS
-        LOCKED-STK
-        ON-ORDER
-      ],
-      'LAW' => %w[
-        BASEMENT
-        FOLIO-BAS
-        LAW-CAREER
-        LOCKED-STK
-        NEWBOOKS
-        OUT-TRAVEL
-        PERM-RES
-        STACKS-1
-        VROOMAN
-        VROOMAN-OV
-        WELLNESS
-      ],
-      'MEDIA-MTXT' => %w[INPROCESS PAGE-MM MM-CDCAB MM-OVERSIZ MM-STACKS ON-ORDER],
-      'MUSIC' => %w[INPROCESS ON-ORDER],
-      'RUMSEYMAP' => %w[
-        FOLIO
-        FOLIO-FLAT
-        INPROCESS
-        MAP-CASES
-        MAP-FILE
-        MAPCASES-S
-        MEZZ-STOR
-        MEZZANINE
-        MP-CASE-LG
-        MP-CASE-MD
-        MP-CASE-SM
-        ON-ORDER
-        PAGE-RM
-        REFERENCE
-        RUMSEY
-        RUMSEYREF
-        RUMXEMPLAR
-        STACKS
-        STK-GEMS
-        STK-LG
-        STK-MED
-        STK-SM
-        STK-XLG
-        W7-ATLASES
-        W7-BXLG-HM
-        W7-BXO
-        W7-BXSM-HM
-        W7-CASE-HM
-        W7-CASE-MD
-        W7-CASE-MT
-        W7-FOLIO
-        W7-FRAME
-        W7-M-CASES
-        W7-MAP-BXL
-        W7-MAP-BXS
-        W7-MAP-XLG
-        W7-OBJECTS
-        W7-POCK-LG
-        W7-POCK-RG
-        W7-POCKET
-        W7-REF
-        W7-ROLLED
-        W7-SANBORN
-        W7-STAFF
-        W7-STK-LG
-        W7-STK-MED
-        W7-STK-SM
-        W7-STK-XLG
-        W7-STKS
-      ],
-      'SAL' => %w[
-        CHINESE
-        EAL-SETS
-        EAL-STKS-C
-        EAL-STKS-J
-        EAL-STKS-K
-        FED-DOCS
-        FOLIO
-        HY-PAGE-EA
-        INPROCESS
-        JAPANESE
-        KOREAN
-        L-PAGE-EA
-        LOCKED-STK
-        MEDIA-MTXT
-        MICROTEXT
-        ND-PAGE-EA
-        ON-ORDER
-        PAGE-EA
-        PAGE-GR
-        PAGE-SP
-        SAL-ARABIC
-        SAL-FOLIO
-        SAL-PAGE
-        SAL-SERG
-        SAL-TEMP
-        SALTURKISH
-        SHELBYSER
-        SHELBYTITL
-        SOUTH-MEZZ
-        STACKS
-        TECH-RPTS
-        UNCAT
-      ],
-      'SAL3' => %w[
-        ASK@EASIA
-        ATLASES
-        BUS-STACKS
-        CALIF-DOCS
-        CHINESE
-        FED-DOCS
-        HY-PAGE-EA
-        IC-NEWS
-        IC-STATS
-        INDEXES
-        INPROCESS
-        INTL-DOCS
-        JAPANESE
-        KOREAN
-        L-PAGE-EA
-        LL-NEWS
-        LOCKED-STK
-        MEDIA-MTXT
-        MICROTEXT
-        ON-ORDER
-        PAGE-AR
-        PAGE-AS
-        PAGE-BU
-        PAGE-EA
-        PAGE-EN
-        PAGE-ES
-        PAGE-GR
-        PAGE-HP
-        PAGE-LP
-        PAGE-MD
-        PAGE-MP
-        PAGE-MU
-        PAGE-RM
-        PAGE-SP
-        R-STACKS
-        RARE-BOOKS
-        RECORDINGS
-        SAFETY
-        SAL-PAGE
-        SCORES
-        SOUTH-MEZZ
-        STACKS
-        STORAGE
-      ],
-      'SCIENCE' => %w[
-        INPROCESS
-        ON-ORDER
-      ],
-      'SPEC-COLL' => %w[
-        BARCHAS
-        FELT-STOR
-        FELTON
-        FELTON-30
-        FRECOT
-        GOLDSTAR
-        GUNST
-        GUNST-30
-        LOCKED-MAP
-        LOCKED-STK
-        MANNING
-        MANUSCRIPT
-        MEDIA-30
-        MEDIA-MTXT
-        MEDIAX-30
-        MSS-10
-        MSS-20
-        MSS-30
-        MSSX-30
-        NEWTON
-        RARE-BOOKS
-        RARE-STOR
-        RBC-30
-        REFERENCE
-        ROBINSON
-        SAMSON
-        STACKS
-        STORAGE
-        TAUBE
-        THEATRE
-        THESES
-        U-ARCHIVES
-        UARCH-30
-        UARCH-REF
-        UARCHX-30
-      ],
       'default' => %w[]
     }
   end
