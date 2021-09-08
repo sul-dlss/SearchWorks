@@ -118,7 +118,7 @@ class RequestLink
 
   def disabled_current_locations_map
     {
-      'SPEC-COLL' => %w[INPROCESS MISSING ON-ORDER SPEC-INPRO],
+      'SPEC-COLL' => %w[INPROCESS MISSING ON-ORDER SPEC-INPRO ENDPROCESS],
       'default' => %w[]
     }
   end
