@@ -16,10 +16,6 @@ module RequestLinks
       'Request'
     end
 
-    def markup
-      "<a href=\"#{url}\" rel=\"nofollow\" class=\"#{classes}\">#{link_text}</a>"
-    end
-
     def request_params
       {
         authid: '',

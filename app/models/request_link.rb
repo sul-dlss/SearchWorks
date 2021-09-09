@@ -3,6 +3,8 @@
 ##
 # A model to represent data necessary for rendering a request link
 class RequestLink
+  include ActionView::Helpers::TagHelper
+
   attr_reader :document, :library, :location, :items
   def initialize(document:, library:, location:, items: [])
     @document = document
@@ -61,7 +63,11 @@ class RequestLink
   end
 
   def markup
-    "<a href=\"#{url}\" rel=\"nofollow\" target=\"_blank\" title=\"Opens in new tab\" class=\"#{classes}\">#{link_text} <span class=\"sr-only\">(opens in new tab)</span></a>"
+    tag.a safe_join([link_text, tag.span(' (opens in new tab)', class: 'sr-only')], ''), href: url, rel: 'nofollow', target: '_blank', title: 'Opens in new tab', class: classes, **link_params
+  end
+
+  def link_params
+    {}
   end
 
   def base_request_url
