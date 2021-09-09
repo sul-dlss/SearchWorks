@@ -156,12 +156,6 @@ describe Holdings::Callnumber do
     end
   end
 
-  describe 'request status' do
-    it 'should respond to #show_item_level_request_link? from the Holdings::Requestable class' do
-      expect(Holdings::Callnumber.new('123 -|- abc -|- -|- -|- -|-')).not_to be_show_item_level_request_link
-    end
-  end
-
   describe 'stackmapable?' do
     # 0 barcode -|- 1 library -|- 2 home location -|- 3 current location
     it 'when a library is stackmapable and the home location is not skipped' do

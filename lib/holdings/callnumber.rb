@@ -119,8 +119,6 @@ class Holdings
       Constants::CURRENT_HOME_LOCS.include?(current_location.code)
     end
 
-    delegate :show_item_level_request_link?, :requestable?, to: :request_status
-
     def stackmapable?
       stackmapable_library? && stackmapable_location?
     end
@@ -192,10 +190,6 @@ class Holdings
 
     def current_location_is_reserve_desk?
       Constants::RESERVE_DESKS.keys.include?(current_location.code)
-    end
-
-    def request_status
-      @request_status ||= Holdings::Requestable.new(self)
     end
 
     def item_display

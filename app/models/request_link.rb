@@ -25,6 +25,21 @@ class RequestLink
       # Array of procs / methods to be sent configurable on a library basis.
   end
 
+  NEVER = false
+  ALWAYS = true
+  DEPENDS_ON_AVAILABILITY = 2
+  def show_item_level_request_link?(item)
+    return NEVER if present? || mediated_pageable? || nonrequestable_location? || item.on_reserve?
+
+    if current_location_is_always_requestable?(item)
+      ALWAYS # always show it
+    elsif item_circulates?(item)
+      DEPENDS_ON_AVAILABILITY # depends on availability info
+    else
+      NEVER
+    end
+  end
+
   def render
     return '' unless present?
 
@@ -82,6 +97,10 @@ class RequestLink
       Settings.pageable_locations[library]&.include?(location)
   end
 
+  def nonrequestable_location?
+    (Settings.nonrequestable_locations[library] || Settings.nonrequestable_locations.default).include?(location)
+  end
+
   def all_in_disabled_current_location?
     return false if items.blank?
 
@@ -97,9 +116,13 @@ class RequestLink
   end
 
   def any_items_circulate?
-    return true if items.blank? || circulating_item_types == '*'
+    return true if items.blank?
 
-    items.any? { |item| circulating_item_types.include?(item.type) }
+    items.any? { |item| item_circulates?(item) }
+  end
+
+  def item_circulates?(item)
+    circulating_item_types == '*' || circulating_item_types.include?(item.type)
   end
 
   def circulating_item_types
@@ -114,6 +137,15 @@ class RequestLink
   def mediated_pageable?
     Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(location)
+  end
+
+  def current_location_is_always_requestable?(item)
+    current_location = item.current_location.code
+
+    return true if current_location.end_with?('-LOAN') && current_location != "SEE-LOAN"
+
+    (Settings.requestable_current_locations[library] || Settings.requestable_current_locations.default).include?(current_location) ||
+      (Settings.unavailable_current_locations[library] || Settings.unavailable_current_locations.default).include?(current_location)
   end
 
   def disabled_current_locations_map

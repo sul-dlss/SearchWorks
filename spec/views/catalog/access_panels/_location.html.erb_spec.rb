@@ -218,7 +218,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
         expect(rendered).not_to have_css('td[data-request-url]')
       end
 
-      pending "should have a request link in the item" do
+      it "should have a request link in the item" do
         expect(rendered).to have_css('tbody a', text: 'Request')
       end
     end
@@ -258,7 +258,7 @@ describe "catalog/access_panels/_location.html.erb", js: true do
       render
     end
 
-    pending "should render a zombie library" do #mmm brains
+    it "should render a zombie library" do #mmm brains
       # This seems to be counting request links (not sure if that was the intent)
       expect(rendered).to have_css('.panel-library-location a', count: 1)
     end

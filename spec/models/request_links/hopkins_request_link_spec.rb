@@ -9,7 +9,7 @@ RSpec.describe RequestLinks::HopkinsRequestLink do
   let(:document) { SolrDocument.new(item_display: item_display_field) }
   let(:library) { 'HOPKINS' }
   let(:location) { 'STACKS' }
-  let(:items) { [double(show_item_level_request_link?: false, type: 'STKS', current_location: double(code: nil))] }
+  let(:items) { [double(type: 'STKS', current_location: double(code: nil))] }
 
   subject(:link) { described_class.new(document: document, library: library, location: location, items: items) }
 

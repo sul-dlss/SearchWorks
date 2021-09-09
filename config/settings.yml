@@ -511,3 +511,42 @@ circulating_item_types:
   - STKS
   default:
   - STKS-MONO
+
+nonrequestable_locations:
+  default:
+    - SEE-OTHER
+    - TECH-DESK
+
+unavailable_current_locations:
+  default:
+    - AT-REPAIR
+    - AVAIL_SOON
+    - B&F-HOLD
+    - BILLED-OD
+    - BINDERY
+    - CPM-HOLDS
+    - ENDPROCESS
+    - INPROCESS
+    - INTRANSIT
+    - LOST-ASSUM
+    - MISSING
+    - ON-ORDER
+    - PUB-TECH
+    - REPAIR
+    - SAL-RETURN
+    - SPEC-INPRO
+    - SUL-BIND
+    - SULBIND-WA
+    - TECH-ACQ
+    - TECH-CAT
+    - TECH-CONS
+    - TECH-PROC
+    - TECH-SER
+    - TECH-SERV
+    - TEMP-LL
+
+requestable_current_locations:
+  default:
+    - MISSING
+    - NEWBOOKS
+    - ON-ORDER

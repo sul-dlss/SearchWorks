@@ -1,6 +1,10 @@
 class Holdings
   class Status
     class Unavailable
+      attr_reader :callnumber
+
+      delegate :library, :home_location, :current_location, to: :callnumber
+
       def initialize(callnumber)
         @callnumber = callnumber
       end
@@ -12,7 +16,7 @@ class Holdings
       private
 
       def unavailable_library?
-        ["ZOMBIE"].include?(@callnumber.library)
+        ["ZOMBIE"].include?(library)
       end
 
       def unavailable_location?
@@ -20,18 +24,22 @@ class Holdings
       end
 
       def unavailable_home_location?
-        Constants::UNAVAILABLE_LOCS.include?(@callnumber.home_location)
+        Constants::UNAVAILABLE_LOCS.include?(home_location)
       end
 
       def unavailable_current_location?
         current_location_ends_with_loan? ||
-        Constants::UNAVAILABLE_CURRENT_LOCS.include?(@callnumber.current_location.try(:code))
+        (Settings.unavailable_current_locations[library] || Settings.unavailable_current_locations.default).include?(current_location)
       end
 
       def current_location_ends_with_loan?
-        @callnumber.current_location.try(:code) &&
-        @callnumber.current_location.code != 'SPE-LOAN' &&
-        @callnumber.current_location.code.ends_with?("-LOAN")
+        current_location &&
+        current_location != 'SPE-LOAN' &&
+        current_location.ends_with?("-LOAN")
+      end
+
+      def current_location
+        callnumber.current_location.try(:code)
       end
     end
   end

@@ -100,4 +100,79 @@ RSpec.describe RequestLink do
       expect(link.url).to include('origin_location=LOCKED-STK')
     end
   end
+
+  describe "#show_item_level_request_link?" do
+    def request_link_from_item(item)
+      RequestLink.new(document: SolrDocument.new(id: 1234), library: item.library, location: item.home_location, items: [item])
+    end
+
+    describe "item types" do
+      it "should not be requestable if the item-type begins with 'NH-'" do
+        item = Holdings::Callnumber.new('123 -|- GREEN -|- STACKS -|- -|- NH-SOMETHING')
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+      end
+      it "should not be requestable if the item type is non-requestable" do
+        ["REF", "NONCIRC", "LIBUSEONLY"].each do |type|
+          item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- -|- #{type} -|-")
+          expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+        end
+      end
+    end
+
+    describe 'reserves' do
+      it 'should not be requestable if the item is on reserve' do
+        item = Holdings::Callnumber.new(
+          '1234 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC123 -|- -|- -|- -|- course_id -|- reserve_desk -|- loan_period'
+        )
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+      end
+    end
+
+    describe "home locations" do
+      it "should not be requestable if the library is GREEN and the home location is MEDIA-MTXT" do
+        item = Holdings::Callnumber.new('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- ')
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+      end
+    end
+
+    describe 'ON-ORDER items' do
+      it 'are not requestable if the library is configured to be noncirc in this case' do
+        item = Holdings::Callnumber.new("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- STKS-MONO")
+
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+      end
+    end
+
+    describe "current locations" do
+      it "should require -LOAN current locations to be requested" do
+        item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO")
+
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::ALWAYS
+      end
+      it "should not require SEE-LOAN current locations to be requested" do
+        item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO")
+
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::DEPENDS_ON_AVAILABILITY
+      end
+      it "should require the list of request current locations to be requested" do
+        Settings.requestable_current_locations.default.each do |location|
+          item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- #{location} -|- STKS-MONO")
+          expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::ALWAYS
+        end
+      end
+      it "should require the list of unavailable current locations to be requested" do
+        Settings.unavailable_current_locations.default.each do |location|
+          item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- #{location} -|- STKS-MONO")
+          expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::ALWAYS
+        end
+      end
+      it 'should not require location level requests to be requested at the item level' do
+        item = Holdings::Callnumber.new("123 -|- SPEC-COLL -|- UARCH-30 -|- ON-ORDER -|- STKS-MONO")
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::NEVER
+
+        item = Holdings::Callnumber.new("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO")
+        expect(request_link_from_item(item).show_item_level_request_link?(item)).to eq RequestLink::ALWAYS
+      end
+    end
+  end
 end
