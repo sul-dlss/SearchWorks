@@ -10,18 +10,18 @@ RSpec.describe RequestLinks::SalRequestLink do
   let(:location) { 'STACKS' }
   let(:items) { [double(must_request?: false, type: 'STKS-MONO', current_location: double(code: nil))] }
 
-  describe '#present?' do
+  describe '#show_location_level_request_link?' do
     context 'when an ETAS item is scannable' do
       let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123') }
 
-      it { expect(link).to be_present }
+      it { expect(link).to be_show_location_level_request_link }
     end
 
     context 'when an ETAS item is not scannable' do
       let(:location) { 'LOCKED-STK' }
       let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123') }
 
-      it { expect(link).not_to be_present }
+      it { expect(link).not_to be_show_location_level_request_link }
     end
   end
 

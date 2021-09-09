@@ -4,7 +4,6 @@ require 'holdings/in_process'
 require 'holdings/library'
 require 'holdings/location'
 require 'holdings/mhld'
-require 'holdings/requestable'
 require 'holdings/status'
 
 class Holdings

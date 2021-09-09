@@ -2,7 +2,7 @@
 
 module RequestLinks
   class SsrcDataRequestLink < RequestLink
-    def present?
+    def show_location_level_request_link?
       true
     end
 
@@ -14,10 +14,6 @@ module RequestLinks
 
     def link_text
       'Request'
-    end
-
-    def markup
-      "<a href=\"#{url}\" rel=\"nofollow\" class=\"#{classes}\">#{link_text}</a>"
     end
 
     def request_params

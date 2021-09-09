@@ -859,11 +859,6 @@ module Constants
 
   HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
 
-  REQUESTABLE_CURRENT_LOCS = [
-    'MISSING',
-    'NEWBOOKS',
-    'ON-ORDER'
-  ]
   FORCE_AVAILABLE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'IC-DISPLAY'
@@ -871,38 +866,6 @@ module Constants
 
   FORCE_NONCIRC_CURRENT_LOCS = [
     'NEWBOOKS'
-  ]
-
-  UNAVAILABLE_CURRENT_LOCS = ['AT-REPAIR',
-                              'AVAIL_SOON',
-                              'B&F-HOLD',
-                              'BILLED-OD',
-                              'BINDERY',
-                              # "CHECKEDOUT",
-                              'CPM-HOLDS',
-                              'ENDPROCESS',
-                              'INPROCESS',
-                              'INTRANSIT',
-                              'LOST-ASSUM',
-                              'MISSING',
-                              'ON-ORDER',
-                              'PUB-TECH',
-                              'REPAIR',
-                              'SAL-RETURN',
-                              'SPEC-INPRO',
-                              'SUL-BIND',
-                              'SULBIND-WA',
-                              'TECH-ACQ',
-                              'TECH-CAT',
-                              'TECH-CONS',
-                              'TECH-PROC',
-                              'TECH-SER',
-                              'TECH-SERV',
-                              'TEMP-LL']
-
-  NON_REQUESTABLE_HOME_LOCS = [
-    'SEE-OTHER',
-    'TECH-DESK'
   ]
 
   HIDE_DUE_DATE_LOCS = [
@@ -1024,13 +987,6 @@ module Constants
   }.freeze
 
   BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
-
-  INPROCESS_NONCIRC_LIBRARIES = ['RUMSEYMAP', 'SPEC-COLL'].freeze
-
-  INPROCESS_NONCIRC_LOCS = ['INPROCESS', 'SPEC-INPRO'].freeze
-
-  ON_ORDER_NONCIRC_LIBRARIES = ['SPEC-COLL'].freeze
-  ON_ORDER_NONCIRC_LOCS = ['ON-ORDER'].freeze
 
   LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
     'ARS' => 'Archive of Recorded Sound',

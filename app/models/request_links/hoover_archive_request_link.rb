@@ -2,13 +2,11 @@
 
 module RequestLinks
   class HooverArchiveRequestLink < RequestLink
-    def present?
+    def show_location_level_request_link?
       true
     end
 
     def url
-      return if available_via_temporary_access?
-
       document&.index_links&.finding_aid&.first&.href
     end
 
@@ -19,11 +17,9 @@ module RequestLinks
     end
 
     def markup
-      if url
-        "<a href=\"#{url}\" rel=\"nofollow\" class=\"#{classes}\">#{link_text}</a>"
-      else
-        'Not available to request'
-      end
+      return 'Not available to request' if available_via_temporary_access? || url.blank?
+
+      super
     end
   end
 end
