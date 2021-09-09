@@ -17,7 +17,7 @@ class RequestLink
     ).new(document: document, library: library, location: location, items: items)
   end
 
-  def present?
+  def show_location_level_request_link?
     ((in_enabled_location? && any_items_circulate?) || mediated_pageable?) &&
       !all_in_disabled_current_location? &&
       !available_via_temporary_access?
@@ -29,7 +29,7 @@ class RequestLink
   ALWAYS = true
   DEPENDS_ON_AVAILABILITY = 2
   def show_item_level_request_link?(item)
-    return NEVER if present? || mediated_pageable? || nonrequestable_location? || item.on_reserve?
+    return NEVER if show_location_level_request_link? || mediated_pageable? || nonrequestable_location? || item.on_reserve?
 
     if current_location_is_always_requestable?(item)
       ALWAYS # always show it
@@ -41,7 +41,7 @@ class RequestLink
   end
 
   def render
-    return '' unless present?
+    return '' unless show_location_level_request_link?
 
     markup.html_safe
   end

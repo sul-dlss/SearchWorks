@@ -14,9 +14,9 @@ RSpec.describe RequestLinks::HooverArchiveRequestLink do
 
   subject(:link) { described_class.new(document: document, library: library, location: location, items: items) }
 
-  describe '#present?' do
+  describe '#show_location_level_request_link?' do
     # Always render links for Hoover Archive
-    it { expect(link).to be_present }
+    it { expect(link).to be_show_location_level_request_link }
   end
 
   describe '#url' do

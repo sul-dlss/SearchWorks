@@ -2,7 +2,7 @@
 
 module RequestLinks
   class HooverRequestLink < RequestLink
-    def present?
+    def show_location_level_request_link?
       !available_via_temporary_access?
     end
 

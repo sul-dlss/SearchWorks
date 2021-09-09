@@ -2,7 +2,7 @@
 
 module RequestLinks
   class SsrcDataRequestLink < RequestLink
-    def present?
+    def show_location_level_request_link?
       true
     end
 

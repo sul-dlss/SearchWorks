@@ -2,7 +2,7 @@
 
 module RequestLinks
   class HopkinsRequestLink < RequestLink
-    def present?
+    def show_location_level_request_link?
       super && !available_online? && only_available_at_hopkins?
     end
 
