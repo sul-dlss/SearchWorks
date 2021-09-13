@@ -566,6 +566,7 @@ module Constants
     'SEE-OTHER' => 'See linked record to request items bound together',
     'SERIALS' => 'Serials',
     'SETS' => 'Big Sets',
+    'SGC' => 'Stanford Geospatial Center',
     'SHELBYSER' => 'Serials',
     'SHELBYTITL' => 'Serials',
     'SL3-LOAN' => 'Ask at circulation desk',
