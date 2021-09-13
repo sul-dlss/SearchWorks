@@ -1185,7 +1185,7 @@ module Constants
     },
     'RUMSEYMAP' => {
       heading: 'Limited on-site access',
-      text: 'Researchers in the Stanford community can request to view these materials in the <b>Special Collections Reading Room</b>. Entry to the Reading Room is by appointment only.'
+      text: 'Researchers in the Stanford community can request to view these materials in the <b>David Rumsey Map Center</b>.'
     },
     'SPEC-COLL' => {
       heading: 'Limited on-site access',
