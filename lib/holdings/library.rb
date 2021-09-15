@@ -61,14 +61,12 @@ class Holdings
       end
     end
 
-    def as_json(live_data = [])
+    def as_json
       methods = (public_methods(false) - [:as_json, :items, :locations, :mhld])
       library_info = methods.each_with_object({}) do |meth, obj|
         obj[meth.to_sym] = send(meth) if method(meth).arity == 0
       end
-      library_info[:locations] = locations.select(&:present?).map do |location|
-        location.as_json(live_data)
-      end
+      library_info[:locations] = locations.select(&:present?).map(&:as_json)
       library_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
       library_info
     end
