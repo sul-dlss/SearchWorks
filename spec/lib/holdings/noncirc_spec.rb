@@ -50,11 +50,4 @@ describe Holdings::Status::Noncirc do
       end
     end
   end
-
-  describe "library sanitization" do
-    it "should downcase the library and replace any hyphens with underscores" do
-      noncirc = Holdings::Status::Noncirc.new(OpenStruct.new(library: "SOME-LIBRARY"))
-      expect(noncirc.send(:sanitized_library)).to eq "some_library"
-    end
-  end
 end
