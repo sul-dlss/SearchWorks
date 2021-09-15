@@ -13,8 +13,8 @@ module Searchworks::Document::Sms
 
     if self.holdings.present?
       callnumber = holdings.preferred_callnumber
-      library = Holdings::Library.new(callnumber.library).name
-      location = Holdings::Location.new(callnumber.home_location).name
+      library = Constants::LIB_TRANSLATIONS[callnumber.library]
+      location = Constants::LOCS[callnumber.home_location]
 
       body << I18n.t('blacklight.sms.text.library_location', library: library, location: location)
       body << I18n.t('blacklight.sms.text.callnumber', value: callnumber.callnumber)
