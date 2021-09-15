@@ -105,7 +105,6 @@ describe Holdings::Library do
       expect(as_json).to be_a Hash
       expect(as_json[:code]).to eq 'GREEN'
       expect(as_json[:name]).to eq 'Green Library'
-      expect(as_json[:holding_library?]).to be_truthy
     end
     it 'shuold return an array of locations' do
       expect(as_json[:locations]).to be_a Array
