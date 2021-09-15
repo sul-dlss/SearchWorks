@@ -35,7 +35,7 @@ class Holdings
     end
 
     def status_text
-      Constants::TRANSLATE_STATUS[availability_class]
+      I18n.t(availability_class, scope: 'searchworks.availability')
     end
 
     # we can probably do something clever w/ method missing here

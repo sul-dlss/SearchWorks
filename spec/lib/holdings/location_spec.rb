@@ -14,29 +14,29 @@ describe Holdings::Location do
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
     let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')]) }
+    let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], nil, ['something']) }
 
     it "should be true when there are items" do
       expect(location_with_items).to be_present
     end
     it "should be present when there is an mhld" do
       expect(location_no_items_or_mhld).not_to be_present
-      location_no_items_or_mhld.mhld = ['something']
-      expect(location_no_items_or_mhld).to be_present
+      expect(location_with_mhlds).to be_present
     end
     describe "present_on_index?" do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
+      let(:location_with_library_with_mhld) { Holdings::Location.new("STACKS", [], nil, [library_has_mhld]) }
+      let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], nil, [mhld]) }
 
       it "should not throw an error on items w/o an mhld" do
         expect(location_no_items_or_mhld).not_to be_present_on_index
       end
       it "should return false unless the public note or latest received are present" do
-        location_no_items_or_mhld.mhld = [library_has_mhld]
-        expect(location_no_items_or_mhld).not_to be_present_on_index
+        expect(location_with_library_with_mhld).not_to be_present_on_index
       end
       it "should return true when an item has a present public note or latest received" do
-        location_no_items_or_mhld.mhld = [mhld]
-        expect(location_no_items_or_mhld).to be_present_on_index
+        expect(location_with_mhlds).to be_present_on_index
       end
       it 'should return true for a "SEE-OTHER" location' do
         expect(described_class.new('SEE-OTHER')).to be_present_on_index
@@ -52,6 +52,9 @@ describe Holdings::Location do
     }
     let(:non_external_location) {
       Holdings::Location.new("STACKS")
+    }
+    let(:external_location_with_mhld) {
+      Holdings::Location.new('STACKS', [], nil, [double('mhld', library: "LANE-MED")])
     }
 
     describe '#external_location?' do
@@ -72,9 +75,7 @@ describe Holdings::Location do
         expect(external_location.location_link).not_to match /LL12345/
       end
       it 'should just return a link to the lane library catalog if there are no barcoded items' do
-        allow(external_location).to receive(:items).and_return([])
-        external_location.mhld = [double('mhld', library: "LANE-MED")]
-        expect(external_location.location_link).to eq 'http://lmldb.stanford.edu'
+        expect(external_location_with_mhld.location_link).to eq 'http://lmldb.stanford.edu'
       end
       it 'should not provide a link for non-external locations' do
         expect(non_external_location.location_link).to be_nil
@@ -104,16 +105,6 @@ describe Holdings::Location do
     end
     it "should return false for locations that are not SEE-OTHER" do
       expect(location).not_to be_bound_with
-    end
-  end
-
-  describe "#mhld" do
-    let(:location) { Holdings::Location.new("STACKS") }
-
-    it "should be an accessible attribute" do
-      expect(location.mhld).not_to be_present
-      location.mhld = "something"
-      expect(location.mhld).to be_present
     end
   end
 

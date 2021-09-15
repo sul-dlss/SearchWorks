@@ -1,11 +1,12 @@
 class Holdings
   class Location
-    attr_reader :code, :items
-    attr_accessor :mhld
-    def initialize(code, items = [], document = nil)
+    attr_reader :code, :items, :mhld
+
+    def initialize(code, items = [], document = nil, mhld = [])
       @code = code
       @document = document
       @items = items.sort_by(&:full_shelfkey)
+      @mhld = mhld
     end
 
     def name
@@ -48,33 +49,16 @@ class Holdings
       name || @code
     end
 
-    def as_json(live_data = [])
-      methods = (public_methods(false) - [:as_json, :items, :mhld, :request_link])
-      location_info = methods.each_with_object({}) do |meth, obj|
-        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
-      end
-      present_items = items.select(&:present?)
-      present_items.map do |item|
-        live_data_string = live_data_for_barcode(live_data, item.barcode)
-        live_data_barcode = JSON.parse(live_data_string) if live_data_string.present?
-        if live_data_barcode.present?
-          item.current_location = Holdings::Location.new(live_data_barcode['current_location']).as_json
-          item.due_date = live_data_barcode['due_date'] if live_data_barcode['due_date']
-          item.status = Holdings::Status.new(item)
-        end
-      end
-      location_info[:items] = present_items.map(&:as_json)
-      location_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
-      location_info
+    def as_json
+      {
+        code: code,
+        items: items.select(&:present?).map(&:as_json),
+        mhld: mhld&.select(&:present?)&.map(&:as_json),
+        name: name
+      }
     end
 
     private
-
-    def live_data_for_barcode(data, barcode)
-      data.find do |item|
-        JSON.parse(item)['barcode'] == barcode
-      end
-    end
 
     def library
       if any_items?

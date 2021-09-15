@@ -57,7 +57,7 @@
                 </td>
                 <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if location.request_link&.show_item_level_request_link?(item) == RequestLink::DEPENDS_ON_AVAILABILITY %>>
                   <i class="availability-icon <%= item.status.availability_class %>"></i>
-                  <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
+                  <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable')  %>" class='status-text'>
                     <%= item.status.status_text %>
                   </span>
                   <span class="current-location">

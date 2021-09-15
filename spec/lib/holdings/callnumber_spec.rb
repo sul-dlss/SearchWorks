@@ -206,8 +206,6 @@ describe Holdings::Callnumber do
 
     it 'should return a hash with all of the callnumbers public reader methods' do
       expect(as_json).to be_a Hash
-      expect(as_json[:present?]).to be true
-      expect(as_json[:browsable?]).to be false
       expect(as_json[:callnumber]).to eq 'callnumber'
     end
 

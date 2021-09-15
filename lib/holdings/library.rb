@@ -1,13 +1,12 @@
 class Holdings
   class Library
-    include AppendMHLD
-    attr_reader :code, :items
-    attr_accessor :mhld
+    attr_reader :code, :items, :mhld
 
-    def initialize(code, document = nil, items = [])
+    def initialize(code, document = nil, items = [], mhld = [])
       @code = code
       @document = document
       @items = items
+      @mhld = mhld
     end
 
     def name
@@ -19,9 +18,14 @@ class Holdings
         @locations = @items.group_by do |item|
           Constants::LOCS[item.home_location] || item.home_location
         end.map do |_, items|
-          Holdings::Location.new(items.first.home_location, items, @document)
+          mhlds = mhld.select { |x| x.location == items.first.home_location }
+          Holdings::Location.new(items.first.home_location, items, @document, mhlds)
         end
-        append_mhld(:location, @locations, Holdings::Location)
+
+        @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |code, mhlds|
+          Holdings::Location.new(code, [], @document, mhlds)
+        end
+
         @locations.sort_by!(&:sort)
       end
       @locations
@@ -57,16 +61,14 @@ class Holdings
       end
     end
 
-    def as_json(live_data = [])
-      methods = (public_methods(false) - [:as_json, :items, :locations, :mhld])
-      library_info = methods.each_with_object({}) do |meth, obj|
-        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
-      end
-      library_info[:locations] = locations.select(&:present?).map do |location|
-        location.as_json(live_data)
-      end
-      library_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
-      library_info
+    def as_json
+      {
+        code: code,
+        locations: locations.select(&:present?).map(&:as_json),
+        mhld: mhld.select(&:present?).map(&:as_json),
+        name: name,
+        library_instructions: library_instructions
+      }
     end
   end
 end

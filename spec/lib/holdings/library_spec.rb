@@ -91,16 +91,6 @@ describe Holdings::Library do
     end
   end
 
-  describe "#mhld" do
-    let(:library) { Holdings::Library.new("GREEN") }
-
-    it "should be an accessible attribute" do
-      expect(library.mhld).not_to be_present
-      library.mhld = "something"
-      expect(library.mhld).to be_present
-    end
-  end
-
   describe '#as_json' do
     let(:callnumbers) do
       [
@@ -115,7 +105,6 @@ describe Holdings::Library do
       expect(as_json).to be_a Hash
       expect(as_json[:code]).to eq 'GREEN'
       expect(as_json[:name]).to eq 'Green Library'
-      expect(as_json[:holding_library?]).to be_truthy
     end
     it 'shuold return an array of locations' do
       expect(as_json[:locations]).to be_a Array

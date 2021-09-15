@@ -475,6 +475,7 @@ class CatalogController < ApplicationController
     end
   end
 
+  # Used by sul-requests to get item data + availability
   def availability
     _, document = fetch(params[:id])
     respond_to do |format|
@@ -506,7 +507,7 @@ class CatalogController < ApplicationController
       temporary_access: document.access_panels.temporary_access?,
       format: document[document.format_key],
       isbn: document['isbn_display'],
-      holdings: document.holdings.as_json(live: live)
+      holdings: (live ? document.holdings.with_live_location_data : document.holdings).as_json
     }
   end
 
