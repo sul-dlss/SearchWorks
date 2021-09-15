@@ -1030,16 +1030,6 @@ module Constants
     'ZOMBIE' => 'Stanford Libraries'
     # "SUL" => "Stanford Libraries"
   }
-  TRANSLATE_STATUS = {
-    'available' => 'Available',
-    'page' => 'Available',
-    'unavailable' => 'Unavailable',
-    'unavailable cdl' => 'Physical copy unavailable',
-    'noncirc' => 'In-library use',
-    'unknown' => 'Unknown',
-    'noncirc_page' => 'In-library use',
-    'in_process' => 'In process'
-  }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
   CONTACT_INFO = {

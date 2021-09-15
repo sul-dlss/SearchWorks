@@ -17,6 +17,15 @@ en:
             tip: Limit your search to scholarly content. Includes University presses.
           FT1:
             tip: Stanford subscribes to the full text, or it's available via open access.
+    availability:
+      available: Available
+      page: Available
+      unavailable: Unavailable
+      unavailable cdl: Physical copy unavailable
+      noncirc: In-library use
+      unknown: Unknown
+      noncirc_page: In-library use
+      in_process: In process
     bookmarks:
       clear_all:
         action_confirm: 'Clear all your selection lists?'
