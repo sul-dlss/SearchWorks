@@ -1,11 +1,12 @@
 class Holdings
   class Location
-    attr_reader :code, :items
-    attr_accessor :mhld
-    def initialize(code, items = [], document = nil)
+    attr_reader :code, :items, :mhld
+
+    def initialize(code, items = [], document = nil, mhld = [])
       @code = code
       @document = document
       @items = items.sort_by(&:full_shelfkey)
+      @mhld = mhld
     end
 
     def name

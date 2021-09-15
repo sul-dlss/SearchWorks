@@ -1,4 +1,3 @@
-require 'holdings/append_mhld'
 require 'holdings/callnumber'
 require 'holdings/in_process'
 require 'holdings/library'
@@ -7,7 +6,6 @@ require 'holdings/mhld'
 require 'holdings/status'
 
 class Holdings
-  include AppendMHLD
   def initialize(document)
     @document = document
     @item_display = @document[:item_display]
@@ -43,10 +41,17 @@ class Holdings
 
   def libraries
     unless @libraries
-      @libraries = callnumbers.group_by(&:library).map do |library, items|
-        Holdings::Library.new(library, @document, items)
+      items_by_library = callnumbers.group_by(&:library)
+
+      @libraries = items_by_library.map do |library, items|
+        mhlds = mhld.select { |x| x.library == library }
+        Holdings::Library.new(library, @document, items, mhlds)
       end
-      append_mhld(:library, @libraries, Holdings::Library)
+
+      @libraries += mhld.reject { |x| items_by_library.key? x.library }.group_by(&:library).map do |code, mhlds|
+        Holdings::Library.new(code, @document, [], mhlds)
+      end
+
       @libraries.sort_by!(&:sort)
     end
     @libraries

@@ -91,16 +91,6 @@ describe Holdings::Library do
     end
   end
 
-  describe "#mhld" do
-    let(:library) { Holdings::Library.new("GREEN") }
-
-    it "should be an accessible attribute" do
-      expect(library.mhld).not_to be_present
-      library.mhld = "something"
-      expect(library.mhld).to be_present
-    end
-  end
-
   describe '#as_json' do
     let(:callnumbers) do
       [

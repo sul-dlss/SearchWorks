@@ -1,13 +1,12 @@
 class Holdings
   class Library
-    include AppendMHLD
-    attr_reader :code, :items
-    attr_accessor :mhld
+    attr_reader :code, :items, :mhld
 
-    def initialize(code, document = nil, items = [])
+    def initialize(code, document = nil, items = [], mhld = [])
       @code = code
       @document = document
       @items = items
+      @mhld = mhld
     end
 
     def name
@@ -19,9 +18,14 @@ class Holdings
         @locations = @items.group_by do |item|
           Constants::LOCS[item.home_location] || item.home_location
         end.map do |_, items|
-          Holdings::Location.new(items.first.home_location, items, @document)
+          mhlds = mhld.select { |x| x.location == items.first.home_location }
+          Holdings::Location.new(items.first.home_location, items, @document, mhlds)
         end
-        append_mhld(:location, @locations, Holdings::Location)
+
+        @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |code, mhlds|
+          Holdings::Location.new(code, [], @document, mhlds)
+        end
+
         @locations.sort_by!(&:sort)
       end
       @locations
