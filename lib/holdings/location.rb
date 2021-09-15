@@ -50,13 +50,12 @@ class Holdings
     end
 
     def as_json
-      methods = (public_methods(false) - [:as_json, :items, :mhld, :request_link])
-      location_info = methods.each_with_object({}) do |meth, obj|
-        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
-      end
-      location_info[:items] = items.select(&:present?).map(&:as_json)
-      location_info[:mhld] = mhld.select(&:present?).map(&:as_json) if mhld
-      location_info
+      {
+        code: code,
+        items: items.select(&:present?).map(&:as_json),
+        mhld: mhld&.select(&:present?)&.map(&:as_json),
+        name: name
+      }
     end
 
     private
