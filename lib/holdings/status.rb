@@ -1,9 +1,10 @@
-require 'holdings/available'
-require 'holdings/noncirc'
-require 'holdings/noncirc_page'
-require 'holdings/pageable'
-require 'holdings/unavailable'
-require 'holdings/unknown'
+require 'holdings/status/available'
+require 'holdings/status/noncirc'
+require 'holdings/status/noncirc_page'
+require 'holdings/status/pageable'
+require 'holdings/status/unavailable'
+require 'holdings/status/unknown'
+require 'holdings/status/in_process'
 
 class Holdings
   class Status

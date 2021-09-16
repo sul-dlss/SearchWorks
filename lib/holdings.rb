@@ -1,5 +1,4 @@
 require 'holdings/callnumber'
-require 'holdings/in_process'
 require 'holdings/library'
 require 'holdings/location'
 require 'holdings/mhld'
