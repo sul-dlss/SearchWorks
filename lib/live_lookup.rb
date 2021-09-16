@@ -1,18 +1,18 @@
 class LiveLookup
   HIDE_DUE_DATE_LIBS = ['RUMSEYMAP'].freeze
 
-  delegate :to_json, to: :records
+  delegate :as_json, :to_json, to: :records
   def initialize(ids)
     @ids = [ids].flatten.compact
   end
 
-  private
-
   def records
     @records ||= response.xpath('//record').map do |record|
-      LiveLookup::Record.new(record).to_json
+      LiveLookup::Record.new(record).as_json
     end
   end
+
+  private
 
   def response
     @response ||= Nokogiri::XML(response_xml)
@@ -59,12 +59,12 @@ class LiveLookup
       @record = record
     end
 
-    def to_json
+    def as_json
       {
         barcode: barcode,
         due_date: due_date,
         current_location: current_location
-      }.to_json
+      }
     end
 
     def barcode

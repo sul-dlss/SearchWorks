@@ -46,9 +46,7 @@ module SolrHoldings
   private
 
   def live_data
-    @live_data ||= JSON.parse(LiveLookup.new(id).to_json).map do |item|
-      JSON.parse(item)
-    end
+    @live_data ||= LiveLookup.new(id).records
   end
 
   def live_data_for_barcode(barcode)

@@ -16,7 +16,7 @@
     function liveLookupRequest() {
       $.getJSON(live_lookup_url, function(data){
           for (var i=0, length=data.length; i < length; i++) {
-            var live_data = JSON.parse(data[i]);
+            var live_data = data[i];
             var dom_item = $("[data-barcode='" + live_data.barcode + "']");
             var target = $(dom_item.data('status-target'), dom_item);
             var current_location = $('.current-location', dom_item)

@@ -46,7 +46,7 @@ describe LiveLookup do
       it "should return a json representation w/ the barcode, due date, and current location " do
         json = JSON.parse(LiveLookup.new(['123']).to_json)
         expect(json.length).to eq 1
-        expect(JSON.parse(json.first)).to eq ({
+        expect(json.first).to eq ({
           'barcode' => '123456',
           'due_date' => '10/10/2014,10:32',
           'current_location' => 'At bindery'
@@ -76,7 +76,7 @@ describe LiveLookup do
       it "should get fetched correctly" do
         json = JSON.parse(LiveLookup.new(['123']).to_json)
         expect(json.length).to eq 1
-        expect(JSON.parse(json.first)["barcode"]).to eq '123456'
+        expect(json.first["barcode"]).to eq '123456'
       end
     end
 
@@ -103,7 +103,7 @@ describe LiveLookup do
         it "should not be returned" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to be_nil
+          expect(json.first['due_date']).to be_nil
         end
       end
 
@@ -126,7 +126,7 @@ describe LiveLookup do
         it 'should not be returned' do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to be_nil
+          expect(json.first['due_date']).to be_nil
         end
       end
 
@@ -149,7 +149,7 @@ describe LiveLookup do
         it 'should not be returned' do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to be_nil
+          expect(json.first['due_date']).to be_nil
         end
       end
 
@@ -172,7 +172,7 @@ describe LiveLookup do
         it 'should not be returned' do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to be_nil
+          expect(json.first['due_date']).to be_nil
         end
       end
 
@@ -194,7 +194,7 @@ describe LiveLookup do
         it "should truncate the time" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to eq '10/10/2014'
+          expect(json.first['due_date']).to eq '10/10/2014'
         end
       end
 
@@ -216,7 +216,7 @@ describe LiveLookup do
         it "should return the full due date" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to eq '10/10/2014,10:32'
+          expect(json.first['due_date']).to eq '10/10/2014,10:32'
         end
       end
 
@@ -239,7 +239,7 @@ describe LiveLookup do
         it "should use the last due date available" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['due_date']).to eq '10/10/2014,10:32'
+          expect(json.first['due_date']).to eq '10/10/2014,10:32'
         end
       end
     end
@@ -267,7 +267,7 @@ describe LiveLookup do
         it "should not be returned" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['current_location']).to be_nil
+          expect(json.first['current_location']).to be_nil
         end
       end
 
@@ -289,7 +289,7 @@ describe LiveLookup do
         it "should return a translated value" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['current_location']).to eq 'At bindery'
+          expect(json.first['current_location']).to eq 'At bindery'
         end
       end
 
@@ -312,7 +312,7 @@ describe LiveLookup do
         it 'are not returned' do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['current_location']).to be_nil
+          expect(json.first['current_location']).to be_nil
         end
       end
 
@@ -335,7 +335,7 @@ describe LiveLookup do
         it "should return the last current location" do
           json = JSON.parse(LiveLookup.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(JSON.parse(json.first)['current_location']).to eq 'At bindery'
+          expect(json.first['current_location']).to eq 'At bindery'
         end
       end
     end

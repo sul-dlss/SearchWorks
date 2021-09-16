@@ -22,7 +22,7 @@ describe AvailabilityController do
     let(:json) { [{ a: 'a', b: 'b' }] }
 
     before do
-      allow(lookup).to receive(:to_json).and_return(json)
+      allow(lookup).to receive(:as_json).and_return(json)
     end
 
     it "should return the #to_json response from the LiveLookup class" do
