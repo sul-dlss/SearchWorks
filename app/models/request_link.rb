@@ -6,14 +6,14 @@ class RequestLink
   include ActionView::Helpers::TagHelper
 
   attr_reader :document, :library, :location, :items
-  def initialize(document:, library:, location:, items: [])
-    @document = document
+  def initialize(document: nil, library:, location:, items: [])
+    @document = document || items.first&.document
     @library = library
     @location = location
     @items = items
   end
 
-  def self.for(document:, library:, location:, items: [])
+  def self.for(document: nil, library:, location:, items: [])
     RequestLinkFactory.for(
       library: library, location: location
     ).new(document: document, library: library, location: location, items: items)

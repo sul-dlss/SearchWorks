@@ -31,10 +31,13 @@ class Holdings
     end
 
     def as_json
-      methods = (public_methods(false) - [:as_json])
-      methods.each_with_object({}) do |meth, obj|
-        obj[meth.to_sym] = send(meth) if method(meth).arity == 0
-      end
+      {
+        library: library,
+        location: location,
+        public_note: public_note,
+        library_has: library_has,
+        latest_received: latest_received
+      }
     end
 
     private

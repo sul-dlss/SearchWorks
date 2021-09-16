@@ -101,51 +101,6 @@ describe Holdings do
     end
   end
 
-  describe '#preferred_barcode' do
-    let(:preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          preferred_barcode: '12345',
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-    let(:bad_preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          preferred_barcode: 'does-not-exist',
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-    let(:no_preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-
-    it 'should return the callnumber based on preferred barcode' do
-      expect(preferred.preferred_callnumber.barcode).to eq '12345'
-    end
-    it 'should return the first callnumber when the preferred barcode does not exist in the holdings' do
-      expect(bad_preferred.preferred_callnumber.barcode).to eq '54321'
-    end
-    it 'should return the first callnumber if there is no preferred barcode available' do
-      expect(no_preferred.preferred_callnumber.barcode).to eq '54321'
-    end
-  end
-
   describe "#find_by_barcode" do
     let(:found) { complex_holdings.find_by_barcode('barcode2') }
 
@@ -202,7 +157,6 @@ describe Holdings do
       expect(mhld.first).to be_a Hash
       expect(mhld.first[:library]).to eq 'GREEN'
       expect(mhld.first[:location]).to eq 'STACKS'
-      expect(mhld.first[:present?]).to be_truthy
       expect(holdings_doc.holdings.as_json.first[:locations].first[:mhld]).to eq mhld
     end
   end

@@ -2,8 +2,8 @@
 <% # header bar for doc items in index view gallery %>
 <div class="documentHeader">
   <div class="callnumber-bar">
-    <% if document.holdings.callnumbers.present? %>
-      <%= document.holdings.preferred_callnumber.callnumber %><br/>
+    <% if document.callnumbers.present? %>
+      <%= document.preferred_callnumber.callnumber %><br/>
       <% if document.holdings.libraries.length == 1 %>
         <%= document.holdings.libraries.first.name %>
       <% else %>
