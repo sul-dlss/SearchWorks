@@ -507,7 +507,7 @@ class CatalogController < ApplicationController
       temporary_access: document.access_panels.temporary_access?,
       format: document[document.format_key],
       isbn: document['isbn_display'],
-      holdings: (live ? document.holdings.with_live_location_data : document.holdings).as_json
+      holdings: document.holdings(live: live).as_json
     }
   end
 

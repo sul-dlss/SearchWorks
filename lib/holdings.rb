@@ -6,17 +6,11 @@ require 'holdings/mhld'
 require 'holdings/status'
 
 class Holdings
-  attr_reader :document, :live
+  attr_reader :callnumbers, :mhld
 
-  delegate :mhld, to: :document
-
-  def initialize(document, live: false)
-    @document = document
-    @live = live
-  end
-
-  def with_live_location_data
-    self.class.new(document, live: true)
+  def initialize(callnumbers = [], mhld = [])
+    @callnumbers = callnumbers
+    @mhld = mhld
   end
 
   def present?
@@ -45,14 +39,6 @@ class Holdings
       @libraries.sort_by!(&:sort)
     end
     @libraries
-  end
-
-  def callnumbers
-    if live
-      document.live_lookup_callnumbers
-    else
-      document.callnumbers
-    end
   end
 
   def find_by_barcode(barcode)

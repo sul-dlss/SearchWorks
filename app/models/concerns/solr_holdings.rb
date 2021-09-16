@@ -1,6 +1,7 @@
 module SolrHoldings
-  def holdings
-    @holdings ||= Holdings.new(self)
+  def holdings(live: false)
+    @holdings ||= {}
+    @holdings[live] ||= Holdings.new(live ? live_lookup_callnumbers : callnumbers, mhld)
   end
 
   def mhld

@@ -3,7 +3,7 @@ require "spec_helper"
 describe Holdings do
   let(:holdings) {
     Holdings.new(
-      SolrDocument.new(item_display: ['123 -|- abc'])
+      SolrDocument.new(item_display: ['123 -|- abc']).callnumbers
     )
   }
   let(:complex_holdings) {
@@ -13,7 +13,7 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey -|- -|- LC',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- full-shelfkey2 -|- -|- INTERNET'
         ]
-      )
+      ).callnumbers
     )
   }
   let(:sortable_holdings) {
@@ -23,14 +23,14 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- 999',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- 111'
         ]
-      )
+      ).callnumbers
     )
   }
-  let(:no_holdings) { Holdings.new(SolrDocument.new) }
+  let(:no_holdings) { Holdings.new([]) }
 
   describe "#present?" do
     let(:blank_callnumber) {
-      Holdings.new(SolrDocument.new())
+      Holdings.new([])
     }
 
     it "should return false if there are no holdings" do
@@ -67,7 +67,7 @@ describe Holdings do
             'barcode -|- library2 -|- home-location',
             'barcode -|- library -|- home-location'
           ]
-        )
+        ).callnumbers
       )
     }
     let(:sortable_libraries) {
@@ -78,7 +78,7 @@ describe Holdings do
             'barcode -|- GREEN -|- home-location',
             'barcode -|- BIOLOGY -|- home-location'
           ]
-        )
+        ).callnumbers
       )
     }
 
