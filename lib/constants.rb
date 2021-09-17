@@ -400,7 +400,7 @@ module Constants
     'LAW-CIRC' => 'At Law Library circulation desk',
     'LAW-DSPLAY' => 'Law temporary display: ask at circulation desk',
     'LAW-LOAN' => 'On hold for a borrower',
-    'LAW-RESV' => 'On reserve at Law Library',
+    'LAW-RESV' => 'On reserve: Teaming room',
     'LAW-REVIEW' => 'Law Review',
     'LAW-SPEC' => 'Law Collection',
     'LCK-STOR' => 'Locked storage: Ask at circulation desk',
