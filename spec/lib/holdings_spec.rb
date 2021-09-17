@@ -3,7 +3,7 @@ require "spec_helper"
 describe Holdings do
   let(:holdings) {
     Holdings.new(
-      SolrDocument.new(item_display: ['123 -|- abc'])
+      SolrDocument.new(item_display: ['123 -|- abc']).callnumbers
     )
   }
   let(:complex_holdings) {
@@ -13,7 +13,7 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey -|- -|- LC',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- full-shelfkey2 -|- -|- INTERNET'
         ]
-      )
+      ).callnumbers
     )
   }
   let(:sortable_holdings) {
@@ -23,14 +23,14 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- 999',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- 111'
         ]
-      )
+      ).callnumbers
     )
   }
-  let(:no_holdings) { Holdings.new(SolrDocument.new) }
+  let(:no_holdings) { Holdings.new([]) }
 
   describe "#present?" do
     let(:blank_callnumber) {
-      Holdings.new(SolrDocument.new())
+      Holdings.new([])
     }
 
     it "should return false if there are no holdings" do
@@ -67,7 +67,7 @@ describe Holdings do
             'barcode -|- library2 -|- home-location',
             'barcode -|- library -|- home-location'
           ]
-        )
+        ).callnumbers
       )
     }
     let(:sortable_libraries) {
@@ -78,7 +78,7 @@ describe Holdings do
             'barcode -|- GREEN -|- home-location',
             'barcode -|- BIOLOGY -|- home-location'
           ]
-        )
+        ).callnumbers
       )
     }
 
@@ -98,51 +98,6 @@ describe Holdings do
     it "should collapse callnumbers on the truncated callnumber" do
       expect(complex_holdings.callnumbers.length).to eq 2
       expect(complex_holdings.browsable_callnumbers.length).to eq 1
-    end
-  end
-
-  describe '#preferred_barcode' do
-    let(:preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          preferred_barcode: '12345',
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-    let(:bad_preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          preferred_barcode: 'does-not-exist',
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-    let(:no_preferred) {
-      Holdings.new(
-        SolrDocument.new(
-          item_display: [
-            '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-            '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
-          ]
-        )
-      )
-    }
-
-    it 'should return the callnumber based on preferred barcode' do
-      expect(preferred.preferred_callnumber.barcode).to eq '12345'
-    end
-    it 'should return the first callnumber when the preferred barcode does not exist in the holdings' do
-      expect(bad_preferred.preferred_callnumber.barcode).to eq '54321'
-    end
-    it 'should return the first callnumber if there is no preferred barcode available' do
-      expect(no_preferred.preferred_callnumber.barcode).to eq '54321'
     end
   end
 
@@ -202,7 +157,6 @@ describe Holdings do
       expect(mhld.first).to be_a Hash
       expect(mhld.first[:library]).to eq 'GREEN'
       expect(mhld.first[:location]).to eq 'STACKS'
-      expect(mhld.first[:present?]).to be_truthy
       expect(holdings_doc.holdings.as_json.first[:locations].first[:mhld]).to eq mhld
     end
   end

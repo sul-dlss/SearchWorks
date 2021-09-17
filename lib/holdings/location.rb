@@ -2,9 +2,8 @@ class Holdings
   class Location
     attr_reader :code, :items, :mhld
 
-    def initialize(code, items = [], document = nil, mhld = [])
+    def initialize(code, items = [], mhld = [])
       @code = code
-      @document = document
       @items = items.sort_by(&:full_shelfkey)
       @mhld = mhld
     end
@@ -24,7 +23,7 @@ class Holdings
     def request_link
       return if items.empty? || bound_with?
 
-      @request_link ||= RequestLink.for(document: @document, library: library, location: @code, items: items)
+      @request_link ||= RequestLink.for(library: library, location: @code, items: items)
     end
 
     def location_link

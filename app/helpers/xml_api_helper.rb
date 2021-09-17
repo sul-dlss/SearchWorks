@@ -159,48 +159,6 @@ module XmlApiHelper
     return return_text.join(" ") unless return_text.blank?
   end
 
-  def get_live_data_for_requests(doc, lib = nil)
-    url = URI.parse(Settings.LIVE_LOOKUP_URL)
-    request_params = "/cgi-bin/requests.pl?id=#{doc[:id]}&lib=#{params[:lib]}"
-    xml = Net::HTTP.start(url.host, url.port) { |http|
-      http.read_timeout = 120
-      http.get(request_params)
-    }
-    parse_lookup_for_requests(Nokogiri::XML(xml.response.body), doc, lib)
-    rescue Timeout::Error
-      nil
-  end
-
-  def parse_lookup_for_requests(xml, doc, lib = nil)
-    availability = {}
-      # If we there is a lib parameter that means that we're NOT dealing with an ON-ORDER item.
-    unless lib.blank?
-      item_details = []
-      xml.xpath("//record").each do |record|
-        xml_doc = {}
-        xml_doc[:id] = record.xpath(".//item_record/item_id").text
-        xml_doc[:copy_number] = record.xpath(".//item_record/copy_number").text
-        xml_doc[:item_number] = record.xpath(".//callnum_records/item_number").text
-        xml_doc[:home_location] = record.xpath(".//item_record/home_location").text
-        xml_doc[:date_time_due] = record.xpath(".//item_record/date_time_due").text
-        xml_doc[:current_location] = record.xpath(".//item_record/current_location").text
-        xml_doc[:shelfkey] = doc.holdings.find_by_barcode(xml_doc[:id]).try(:full_shelfkey) || "XXXX#{xml_doc[:item_number]}"
-        item_details << xml_doc
-      end
-      availability[:item_details] = item_details
-    else # then we are dealing with an ON-ORDER item.
-      callnum_records = []
-      xml.xpath("//record").each do |record|
-        xml_doc = {}
-        xml_doc[:library] = record.xpath(".//callnum_records/library").text
-        xml_doc[:item_number] = record.xpath(".//callnum_records/item_number").text
-        callnum_records << xml_doc
-      end
-      availability[:callnum_records] = callnum_records
-    end
-    availability
-  end
-
   def doc_is_a_database?(doc)
     return true if document_format_classes(doc) and document_format_classes(doc).include?("database")
   end

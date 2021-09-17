@@ -12,7 +12,7 @@ module Searchworks::Document::Sms
     body << I18n.t('blacklight.sms.text.author', value: semantics[:author].first) unless semantics[:author].blank?
 
     if self.holdings.present?
-      callnumber = holdings.preferred_callnumber
+      callnumber = preferred_callnumber
       library = Constants::LIB_TRANSLATIONS[callnumber.library]
       location = Constants::LOCS[callnumber.home_location]
 

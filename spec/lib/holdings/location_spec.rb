@@ -14,7 +14,7 @@ describe Holdings::Location do
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
     let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|-')]) }
-    let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], nil, ['something']) }
+    let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], ['something']) }
 
     it "should be true when there are items" do
       expect(location_with_items).to be_present
@@ -26,8 +26,8 @@ describe Holdings::Location do
     describe "present_on_index?" do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
-      let(:location_with_library_with_mhld) { Holdings::Location.new("STACKS", [], nil, [library_has_mhld]) }
-      let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], nil, [mhld]) }
+      let(:location_with_library_with_mhld) { Holdings::Location.new("STACKS", [], [library_has_mhld]) }
+      let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], [mhld]) }
 
       it "should not throw an error on items w/o an mhld" do
         expect(location_no_items_or_mhld).not_to be_present_on_index
@@ -54,7 +54,7 @@ describe Holdings::Location do
       Holdings::Location.new("STACKS")
     }
     let(:external_location_with_mhld) {
-      Holdings::Location.new('STACKS', [], nil, [double('mhld', library: "LANE-MED")])
+      Holdings::Location.new('STACKS', [], [double('mhld', library: "LANE-MED")])
     }
 
     describe '#external_location?' do

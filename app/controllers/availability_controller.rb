@@ -1,7 +1,7 @@
 class AvailabilityController < ApplicationController
   before_action :redirect_bots, :redirect_no_ids
   def index
-    render json: LiveLookup.new(params[:ids]).to_json, layout: false
+    render json: LiveLookup.new(params[:ids]).as_json, layout: false
   end
 
   private

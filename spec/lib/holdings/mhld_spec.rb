@@ -65,7 +65,6 @@ describe Holdings::MHLD do
       expect(as_json[:library]).to eq 'GREEN'
       expect(as_json[:location]).to eq 'STACKS'
       expect(as_json[:library_has]).to eq 'mhld library has'
-      expect(as_json[:present?]).to be true
     end
   end
 end

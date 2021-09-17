@@ -2,9 +2,8 @@ class Holdings
   class Library
     attr_reader :code, :items, :mhld
 
-    def initialize(code, document = nil, items = [], mhld = [])
+    def initialize(code, items = [], mhld = [])
       @code = code
-      @document = document
       @items = items
       @mhld = mhld
     end
@@ -19,11 +18,11 @@ class Holdings
           Constants::LOCS[item.home_location] || item.home_location
         end.map do |_, items|
           mhlds = mhld.select { |x| x.location == items.first.home_location }
-          Holdings::Location.new(items.first.home_location, items, @document, mhlds)
+          Holdings::Location.new(items.first.home_location, items, mhlds)
         end
 
         @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |code, mhlds|
-          Holdings::Location.new(code, [], @document, mhlds)
+          Holdings::Location.new(code, [], mhlds)
         end
 
         @locations.sort_by!(&:sort)

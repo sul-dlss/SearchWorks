@@ -23,9 +23,9 @@ describe Holdings::Library do
         Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
       ]
     end
-    let(:locations) { Holdings::Library.new("GREEN", nil, callnumbers).locations }
-    let(:sort_locations) { Holdings::Library.new("GREEN", nil, sort_callnumbers).locations }
-    let(:combined_locations) { Holdings::Library.new('GREEN', nil, combined_callnumbers).locations }
+    let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
+    let(:sort_locations) { Holdings::Library.new("GREEN", sort_callnumbers).locations }
+    let(:combined_locations) { Holdings::Library.new('GREEN', combined_callnumbers).locations }
 
     it "should return an array of Holdings::Locations" do
       expect(locations).to be_a Array
@@ -56,7 +56,7 @@ describe Holdings::Library do
       Holdings::Callnumber.new(""),
       Holdings::Callnumber.new("")
     ] }
-    let(:library) { Holdings::Library.new("GREEN", nil, callnumbers) }
+    let(:library) { Holdings::Library.new("GREEN", callnumbers) }
 
     it "should be false when libraries have no item display fields" do
       expect(library).not_to be_present
@@ -99,7 +99,7 @@ describe Holdings::Library do
         Holdings::Callnumber.new('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
       ]
     end
-    let(:as_json) { Holdings::Library.new('GREEN', nil, callnumbers).as_json }
+    let(:as_json) { Holdings::Library.new('GREEN', callnumbers).as_json }
 
     it 'should return a hash with all of the libraries public reader methods' do
       expect(as_json).to be_a Hash
