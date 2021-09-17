@@ -46,7 +46,7 @@ class Holdings
 
     def home_location
       if treat_current_location_as_home_location?
-        reserve_desk_or_current_location
+        current_location.code
       else
         item_display[2]
       end
@@ -173,22 +173,6 @@ class Holdings
         'ZOMBIE'
       else
         item_display[1]
-      end
-    end
-
-    def reserve_desk_or_current_location
-      if current_location_is_reserve_desk?
-        reserve_desk_home_location
-      else
-        current_location.code
-      end
-    end
-
-    def reserve_desk_home_location
-      if current_location.code == 'E-RESV'
-        'SW-E-RESERVE-DESK'
-      else
-        'SW-RESERVE-DESK'
       end
     end
 
