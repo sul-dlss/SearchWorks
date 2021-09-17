@@ -137,10 +137,6 @@ describe Holdings::Callnumber do
   end
 
   describe 'reserves' do
-    it 'should use the pseudo home location if an item is has a reserve desk current location' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- ART-RESV -|-').home_location).to eq 'SW-RESERVE-DESK'
-    end
-
     it 'should change the library for an item that is at a reserve desk' do
       expect(Holdings::Callnumber.new('barcode -|- GREEN -|- home_location -|- ART-RESV -|-').library).to eq 'ART'
     end

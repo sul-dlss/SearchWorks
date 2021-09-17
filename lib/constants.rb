@@ -613,7 +613,7 @@ module Constants
     'SUL-BIND' => 'At bindery',
     'SUL-LOAN' => 'Ask at circulation desk',
     'SULBIND-WA' => 'At bindery',
-    'SW-E-RESERVE-DESK' => 'Online item on course reading list',
+    'E-RESV' => 'Online item on course reading list',
     'SW-RESERVE-DESK' => 'On reserve: Ask at circulation desk',
     'TAN-LOAN' => 'On hold for a borrower',
     'TANN-RESV' => 'On reserve at Tanner Library',
