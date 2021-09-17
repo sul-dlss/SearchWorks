@@ -920,6 +920,7 @@ module Constants
   RESERVE_DESKS = {
     'ART-RESV' => 'ART',
     'BIO-RESV' => 'BIOLOGY',
+    'BUS-RESV' => 'BUSINESS',
     'CHEM-RESV' => 'CHEMCHMENG',
     'E-RESV' => 'SW-E-RESV',
     'EARTH-RESV' => 'EARTH-SCI',
