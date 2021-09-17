@@ -919,9 +919,7 @@ module Constants
 
   RESERVE_DESKS = {
     'ART-RESV' => 'ART',
-    'BIO-RESV' => 'BIOLOGY',
     'BUS-RESV' => 'BUSINESS',
-    'CHEM-RESV' => 'CHEMCHMENG',
     'E-RESV' => 'SW-E-RESV',
     'EARTH-RESV' => 'EARTH-SCI',
     'EAS-RESV' => 'EAST-ASIA',
@@ -931,7 +929,6 @@ module Constants
     'HOOV-RESV' => 'HOOVER',
     'HOP-RESV' => 'HOPKINS',
     'LAW-RESV' => 'LAW',
-    'MATH-RESV' => 'MATH-CS',
     'MEDIA-RESV' => 'MEDIA-MTXT',
     'MUSIC-RESV' => 'MUSIC',
     'SCI-RESV' => 'SCIENCE',
