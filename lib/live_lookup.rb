@@ -110,7 +110,8 @@ class LiveLookup
     end
 
     def current_location_same_as_home_location?
-      Holdings::Location.new(current_location_code).name == Holdings::Location.new(home_location_code).name
+      Holdings::Location.new(current_location_code).name == Holdings::Location.new(home_location_code).name ||
+        Constants::CURRENT_HOME_LOCS.include?(current_location_code)
     end
 
     def valid_due_date?
