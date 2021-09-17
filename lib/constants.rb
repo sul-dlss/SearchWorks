@@ -616,7 +616,7 @@ module Constants
     'E-RESV' => 'Online item on course reading list',
     'SW-RESERVE-DESK' => 'On reserve: Ask at circulation desk',
     'TAN-LOAN' => 'On hold for a borrower',
-    'TANN-RESV' => 'On reserve at Tanner Library',
+    'TANN-RESV' => 'On reserve: Ask at circulation desk',
     'TAUBE' => 'Taube Collection',
     'TECH-ACQ' => 'In Tech Services',
     'TECH-CAT' => 'In Tech Services',
@@ -934,7 +934,8 @@ module Constants
     'MATH-RESV' => 'MATH-CS',
     'MEDIA-RESV' => 'MEDIA-MTXT',
     'MUSIC-RESV' => 'MUSIC',
-    'SCI-RESV' => 'SCIENCE'
+    'SCI-RESV' => 'SCIENCE',
+    'TANN-RESV' => 'TANNER'
   }
 
   STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA LAW].freeze
