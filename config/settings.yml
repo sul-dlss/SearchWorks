@@ -456,6 +456,7 @@ circulating_item_types:
   - VIDEOGAME
   - EQUIP500
   - EQUIP250
+  - EQUIP150
   - EQUIP100
   - EQUIP050
   - MEDSTKS
