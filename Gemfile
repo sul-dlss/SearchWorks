@@ -112,3 +112,4 @@ gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap-sass'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
+gem 'faraday-detailed_logger', '< 2.4.0' # Fixes https://github.com/sul-dlss/SearchWorks/issues/2759
