@@ -17,14 +17,14 @@ end
 # aren't any appropriate callbacks in Devise
 # https://github.com/heartcombo/devise/wiki/Callbacks
 Warden::Manager.after_authentication do |user, auth, opts|
-    # Set eds_guest to nil so the EDS session gets reset if needed in the article controller
-    auth.session(:user)['eds_guest'] = nil if auth.session(:user)['eds_guest']
-    auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+  auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+  # Reset EDS session token so that a new session is established
+  auth.env['rack.session']['eds_session_token'] = nil
 end
 
 Warden::Manager.before_logout do |user, auth, opts|
-  auth.session(:user)['eds_guest'] = nil
   auth.session(:user)['suAffiliation'] = nil
+  auth.env['rack.session']['eds_session_token'] = nil
 end
 
 # Use this hook to configure devise mailer, warden hooks and so forth.

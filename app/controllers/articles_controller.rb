@@ -246,10 +246,10 @@ class ArticlesController < ApplicationController
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
 
-  # Reuse the EDS session token if available in the user's session data and the
-  # eds_guest flag has been set (i.e. not nil), otherwise establish a session
+  # Reuse the EDS session token if available in the user's session data, 
+  # otherwise establish a session
   def setup_eds_session(session)
-    return if session['eds_session_token'].present? && !session['eds_guest'].nil?
+    return if session['eds_session_token'].present?
 
     session['eds_guest'] = !on_campus_or_su_affiliated_user?
 
