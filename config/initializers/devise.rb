@@ -13,6 +13,20 @@ DeviseRemoteUser.configure do |config|
   config.attribute_map = { webauth_groups: 'WEBAUTH_LDAPPRIVGROUP' }
 end
 
+# Use Warden callbacks to store and clear user data from Shibboleth since there
+# aren't any appropriate callbacks in Devise
+# https://github.com/heartcombo/devise/wiki/Callbacks
+Warden::Manager.after_authentication do |user, auth, opts|
+    # Set eds_guest to nil so the EDS session gets reset if needed in the article controller
+    auth.session(:user)['eds_guest'] = nil if auth.session(:user)['eds_guest']
+    auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+end
+
+Warden::Manager.before_logout do |user, auth, opts|
+  auth.session(:user)['eds_guest'] = nil
+  auth.session(:user)['suAffiliation'] = nil
+end
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|

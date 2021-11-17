@@ -21,10 +21,18 @@ class ApplicationController < ActionController::Base
   end
   helper_method :on_campus_or_su_affiliated_user?
 
-  def user_is_stanford_affiliated?
-    return unless current_user.present? && session['suAffiliation']
+  def user_affiliation
+    if request.env['warden'].authenticated?(:user)
+      affiliation = request.env['warden'].session(:user)['suAffiliation']
+    end
 
-    session['suAffiliation'].split(';').any? do |affiliation|
+    affiliation || ENV['suAffiliation']
+  end
+
+  def user_is_stanford_affiliated?
+    return false if current_user.nil? || user_affiliation.blank?
+
+    user_affiliation.split(';').any? do |affiliation|
       Settings.SU_AFFILIATIONS.include?(affiliation.strip)
     end
   end
