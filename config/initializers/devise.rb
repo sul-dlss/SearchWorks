@@ -18,8 +18,13 @@ end
 # https://github.com/heartcombo/devise/wiki/Callbacks
 Warden::Manager.after_authentication do |user, auth, opts|
   auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+  user.affiliations = auth.env['suAffiliation']
   # Reset EDS session token so that a new session is established
   auth.env['rack.session']['eds_session_token'] = nil
+end
+
+Warden::Manager.after_fetch do |user, auth, opts|
+  user.affiliations = auth.session(:user)['suAffiliation']
 end
 
 Warden::Manager.before_logout do |user, auth, opts|

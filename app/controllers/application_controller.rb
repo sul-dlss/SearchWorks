@@ -17,23 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def on_campus_or_su_affiliated_user?
-    IPRange.includes?(request.remote_ip) || user_is_stanford_affiliated?
+    IPRange.includes?(request.remote_ip) || current_user&.stanford_affiliated?
   end
   helper_method :on_campus_or_su_affiliated_user?
-
-  def user_affiliation
-    if request.env['warden'].authenticated?(:user)
-      affiliation = request.env['warden'].session(:user)['suAffiliation']
-    end
-
-    affiliation || ENV['suAffiliation']
-  end
-
-  def user_is_stanford_affiliated?
-    return false if current_user.nil? || user_affiliation.blank?
-
-    user_affiliation.split(';').any? do |affiliation|
-      Settings.SU_AFFILIATIONS.include?(affiliation.strip)
-    end
-  end
 end
