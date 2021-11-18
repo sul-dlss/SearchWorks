@@ -14,7 +14,7 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
       Bookmark.create!(document_id: doc_id, user: user)
     end
 
-    stub_current_user(user: user)
+    login_as(user)
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
 

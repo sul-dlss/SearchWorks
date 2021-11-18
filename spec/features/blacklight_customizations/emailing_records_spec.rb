@@ -23,7 +23,9 @@ describe "Emailing Records", type: :feature, js: true do
   end
 
   context 'when a user is logged in' do
-    before { stub_current_user }
+    let(:user) { User.new(email: 'example@stanford.edu') }
+
+    before { login_as(user) }
 
     it "should be successful" do
       visit solr_document_path('14')

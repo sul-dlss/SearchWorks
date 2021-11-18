@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe FeedbackFormsController do
   context 'when the current user is anonymous' do
-    before { stub_current_user(user: double(blank?: true)) }
-
     context 'when they fill in the reCAPTCHA' do
       before do
         expect_any_instance_of(FeedbackFormsController).to receive(:verify_recaptcha).and_return(true)
@@ -30,7 +28,9 @@ describe FeedbackFormsController do
   end
 
   context 'when a current user is present' do
-    before { stub_current_user }
+    before { login_as user }
+
+    let(:user) { User.new }
 
     describe "format json" do
       it "should return json success" do

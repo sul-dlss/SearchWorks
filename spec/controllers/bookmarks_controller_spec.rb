@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe BookmarksController do
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
 
-  before { stub_current_user(user: user) }
+  before { login_as(user) }
 
   describe '#create' do
     it 'creates bookmarks for catalog entries' do

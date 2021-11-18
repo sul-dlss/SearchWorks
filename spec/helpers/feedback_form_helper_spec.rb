@@ -1,7 +1,11 @@
 require "spec_helper"
 
 describe FeedbackFormHelper do
-  before { stub_current_user(context: helper) }
+  before do
+    allow(helper).to receive(:current_user).and_return(user)
+  end
+
+  let(:user) { User.new(email: 'example@stanford.edu') }
 
   describe '#render_feedback_form' do
     context 'connection type' do
@@ -10,7 +14,7 @@ describe FeedbackFormHelper do
 
     context 'anything else' do
       before do
-        expect(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
+        allow(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
       end
 
       it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource' }
