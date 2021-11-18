@@ -13,23 +13,25 @@ DeviseRemoteUser.configure do |config|
   config.attribute_map = { webauth_groups: 'WEBAUTH_LDAPPRIVGROUP' }
 end
 
-# Use Warden callbacks to store and clear user data from Shibboleth since there
-# aren't any appropriate callbacks in Devise
-# https://github.com/heartcombo/devise/wiki/Callbacks
-Warden::Manager.after_authentication do |user, auth, opts|
-  auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
-  user.affiliations = auth.env['suAffiliation']
-  # Reset EDS session token so that a new session is established
-  auth.env['rack.session']['eds_session_token'] = nil
-end
+if Rails.env.production?
+  # Use Warden callbacks to store and clear user data from Shibboleth since there
+  # aren't any appropriate callbacks in Devise
+  # https://github.com/heartcombo/devise/wiki/Callbacks
+  Warden::Manager.after_authentication do |user, auth, opts|
+    auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+    user.affiliations = auth.env['suAffiliation']
+    # Reset EDS session token so that a new session is established
+    auth.env['rack.session']['eds_session_token'] = nil
+  end
 
-Warden::Manager.after_fetch do |user, auth, opts|
-  user.affiliations = auth.session(:user)['suAffiliation']
-end
+  Warden::Manager.after_fetch do |user, auth, opts|
+    user.affiliations = auth.session(:user)['suAffiliation']
+  end
 
-Warden::Manager.before_logout do |user, auth, opts|
-  auth.session(:user)['suAffiliation'] = nil
-  auth.env['rack.session']['eds_session_token'] = nil
+  Warden::Manager.before_logout do |user, auth, opts|
+    auth.session(:user)['suAffiliation'] = nil
+    auth.env['rack.session']['eds_session_token'] = nil
+  end
 end
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
