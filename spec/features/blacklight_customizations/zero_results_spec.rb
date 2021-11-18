@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 feature "Zero results" do
-  let(:user) { nil }
-
   before do
-    stub_current_user(user: user, affiliation: 'test-stanford:test')
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
 
     visit root_path

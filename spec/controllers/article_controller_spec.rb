@@ -139,11 +139,6 @@ RSpec.describe ArticlesController do
       expect(EBSCO::EDS::Session).not_to receive(:new)
       controller.eds_init
     end
-    it 'will require the guest mode in the user session data' do
-      user_session['eds_session_token'] = 'def'
-      expect(EBSCO::EDS::Session).to receive(:new).and_return(eds_session)
-      controller.eds_init
-    end
     it 'will require the session token in the user session data' do
       user_session['eds_guest'] = false
       expect(EBSCO::EDS::Session).to receive(:new).and_return(eds_session)

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  attr_writer :affiliations
+
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
   # Include default devise modules. Others available are:
@@ -15,5 +17,17 @@ class User < ActiveRecord::Base
 
   def sunet
     email.gsub('@stanford.edu', '')
+  end
+
+  def affiliations
+    @affiliations ||= ENV['suAffiliation']
+  end
+
+  def stanford_affiliated?
+    return false if affiliations.blank?
+
+    affiliations.split(';').any? do |affiliation|
+      Settings.SU_AFFILIATIONS.include?(affiliation.strip)
+    end
   end
 end

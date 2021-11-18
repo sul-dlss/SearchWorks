@@ -20,11 +20,6 @@ class ArticleSelectionsController < ApplicationController
     @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
-    eds_params = {
-      guest:          session['eds_guest'],
-      session_token:  session['eds_session_token']
-    }
-
     if bookmark_ids.present?
       @response, @document_list = fetch(bookmark_ids)
     else

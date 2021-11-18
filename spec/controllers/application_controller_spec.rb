@@ -1,30 +1,36 @@
 require 'spec_helper'
 
 describe ApplicationController do
-  include Devise::Test::ControllerHelpers
-
   describe '#on_campus_or_su_affiliated_user?' do
+    before do
+      allow(controller).to receive(:current_user).and_return(user)
+    end
+
     context 'when there is a current user in the correct affiliation' do
-      before do
-        stub_current_user(context: controller, affiliation: 'test-stanford:test')
+      let(:user) do
+        User.new(email: 'user@stanford.edu', affiliations: 'test-stanford:test')
       end
 
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
     end
 
     context 'when the user has multiple affiliations' do
-      before { stub_current_user(context: controller, affiliation: 'test-stanford:test; test-stanford:another-test;test-stanford:testing') }
+      let(:user) do
+        User.new(affiliations: 'test-stanford:test; test-stanford:another-test;test-stanford:testing')
+      end
 
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
     end
 
     context 'when there is a current user not in the correct affilation' do
-      before { stub_current_user(context: controller) }
+      let(:user) { User.new }
 
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be_falsey }
     end
 
     context 'when there is not a current user' do
+      let(:user) { nil }
+
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be_falsey }
     end
   end

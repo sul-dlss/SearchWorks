@@ -60,7 +60,6 @@ Layout/CaseIndentation:
 Layout/ClosingParenthesisIndentation:
   Exclude:
     - 'spec/mailers/search_works_record_mailer_spec.rb'
-    - 'spec/support/stub_current_user.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.
@@ -156,14 +155,6 @@ Layout/FirstArrayElementIndentation:
 # SupportedStyles: special_inside_parentheses, consistent, align_braces
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: consistent, align_parentheses
-Layout/FirstParameterIndentation:
-  Exclude:
-    - 'spec/support/stub_current_user.rb'
 
 # Offense count: 139
 # Cop supports --auto-correct.
@@ -605,7 +596,6 @@ RSpec/AnyInstance:
     - 'spec/lib/purl_embed_spec.rb'
     - 'spec/presenters/sms_presenter_spec.rb'
     - 'spec/support/stub_article_service.rb'
-    - 'spec/support/stub_current_user.rb'
     - 'spec/support/stub_oclc_response.rb'
     - 'spec/tasks/fixtures_indexer_spec.rb'
 

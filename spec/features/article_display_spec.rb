@@ -25,7 +25,7 @@ feature 'Article Record Display' do
 
     context 'when a user has access' do
       before do
-        stub_current_user(affiliation: 'test-stanford:test')
+        login_as(User.new(email: 'example@stanford.edu', affiliations: 'test-stanford:test'))
       end
 
       it 'toggled via panel heading' do
