@@ -3,6 +3,8 @@
 ###
 class LoginController < ApplicationController
   def login
+    Rails.logger.info "Received login for user: #{current_user&.as_json(methods: :affiliations)}"
+
     if params[:referrer].present?
       redirect_to params[:referrer]
     else
