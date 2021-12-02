@@ -188,7 +188,12 @@ class ArticlesController < ApplicationController
     url = extract_fulltext_link(document, params[:type])
     redirect_to url if url.present?
   rescue => e
-    Honeybadger.notify(e) if defined?(Honeybadger) && !session['eds_guest']
+    if current_user
+      # We only care if there's a user, otherwise it's definitely a data problem?
+      context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session['eds_session_token'])
+      Honeybadger.notify(e, context: context)
+    end
+
     flash[:error] = flash_message_for_link_error
     redirect_back fallback_location: articles_path
   end
@@ -246,7 +251,7 @@ class ArticlesController < ApplicationController
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
 
-  # Reuse the EDS session token if available in the user's session data, 
+  # Reuse the EDS session token if available in the user's session data,
   # otherwise establish a session
   def setup_eds_session(session)
     return if session['eds_session_token'].present?
@@ -257,6 +262,15 @@ class ArticlesController < ApplicationController
       guest: session['eds_guest'],
       caller: 'new-session'
     ).session_token
+
+    if current_user
+      Honeybadger.add_breadcrumb('Established EDS session', metadata: {
+        eds_guest: session['eds_guest'],
+        eds_session_token: session['eds_session_token'],
+        request_ip: request.remote_ip,
+        affiliations: current_user.affiliations
+      })
+    end
   end
 
   def has_search_parameters?
