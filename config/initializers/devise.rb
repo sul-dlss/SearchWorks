@@ -28,7 +28,7 @@ if Rails.env.production?
   # going forward, this data is stored in the warden session for the user, but we
   # also support the previous session store for now...
   Warden::Manager.after_fetch do |user, auth, opts|
-    user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['suAffiliation']
+    user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
   end
 
   Warden::Manager.before_logout do |user, auth, opts|
