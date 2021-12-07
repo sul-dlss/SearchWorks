@@ -560,6 +560,7 @@ module Constants
     'SCORES' => 'Scores',
     'SCI-LOAN' => 'On hold for a borrower',
     'SCI-RESV' => 'On reserve: Ask at circulation desk',
+    'SCIFI' => 'Science Fiction Collection',
     'SEE-ARCHIV' => 'Currently at Hoover Archives',
     'SEE-EASTA' => 'Ask at circulation desk',
     'SEE-LOAN' => 'Ask at circulation desk',
