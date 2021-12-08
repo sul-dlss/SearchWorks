@@ -4,41 +4,37 @@ class Subjects < MarcField
   def values
     @values ||= begin
       data = []
-      extracted_fields.each do |_field, subfields|
-        multi_a = []
-        temp_data_array = []
-        temp_subs_text = []
-        temp_xyv_array = []
-
-        subfields.each do |sf|
-          exclude = Constants::EXCLUDE_FIELDS.dup + ["1", "2", "3", "4", "7", "9"]
-          next if exclude.include?(sf.code)
-
-          if sf.code == "a"
-            multi_a << sf.value unless sf.value[0, 1] == "%" || sf.value.starts_with?('nomesh')
-          elsif ["v", "x", "y", "z"].include?(sf.code)
-            temp_xyv_array << sf.value
-          else
-            temp_subs_text << sf.value
+      extracted_fields.each do |field, subfields|
+        if repeating_subfield_a?(field, subfields)
+          data += subfields.select { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) }.map { |sf| [sf.value] }
+          data << subfields.select { |sf| ["v", "x", "y", "z"].include?(sf.code) }.map(&:value)
+        else
+          arr = subfields.reject { |sf| ignored_subfield?(sf) || ignored_subfield_a_value?(sf) }.slice_before { |v| %w(a v x y z).include? v.code }.map do |group|
+            group.map(&:value).flatten.compact.join(' ')
           end
-        end
 
-        if multi_a.length > 1
-          multi_a.each do |a|
-            data << [a]
-          end
-        elsif multi_a.length == 1
-          temp_data_array << [multi_a.first, temp_subs_text].flatten.compact.join(' ') unless temp_subs_text.blank? and multi_a.empty?
-        elsif temp_subs_text.present?
-          temp_data_array << temp_subs_text.join(' ')
+          data << arr
         end
-
-        temp_data_array.concat(temp_xyv_array) unless temp_xyv_array.empty?
-        data << temp_data_array unless temp_data_array.empty?
       end
 
-      data.uniq
+      data.uniq.reject(&:blank?)
     end
+  end
+
+  def repeating_subfield_a?(_field, subfields)
+    subfields.count { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) } > 1
+  end
+
+  def ignored_subfield_a_value?(subfield)
+    return false unless subfield.code == 'a'
+
+    subfield.value[0, 1] == "%" || subfield.value.starts_with?('nomesh')
+  end
+
+  def ignored_subfield?(subfield)
+    exclude = Constants::EXCLUDE_FIELDS.dup + ["1", "2", "3", "4", "7", "9"]
+
+    exclude.include? subfield.code
   end
 
   def to_partial_path
