@@ -17,7 +17,7 @@ class SearchService
 
         Thread.new(search_method) do |sm|
           begin
-            searches[search_method] = one(klass, query, timeout: Settings.quick_search.http_timeout)
+            searches[search_method] = one(klass, timeout: Settings.quick_search.http_timeout)
           rescue StandardError => e
             logger.info "FAILED SEARCH: #{search_method} | #{query} | #{e}"
           end
@@ -29,7 +29,7 @@ class SearchService
     searches
   end
 
-  def one(searcher, query, timeout: 30)
+  def one(searcher, timeout: 30)
     benchmark "%s #{searcher}" % CGI.escape(query.to_str) do
       klass = case searcher
       when Class

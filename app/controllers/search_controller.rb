@@ -16,7 +16,7 @@ class SearchController < ApplicationController
 
     @query = params_q_scrubbed
 
-    searcher = search_service.one(endpoint, @query)
+    searcher = search_service.one(endpoint)
 
     respond_to do |format|
       format.html {
