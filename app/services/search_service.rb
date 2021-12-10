@@ -29,7 +29,7 @@ class SearchService
     searches
   end
 
-  def one(searcher, timeout: 30)
+  def one(searcher, query, timeout: 30)
     benchmark "%s #{searcher}" % CGI.escape(query.to_str) do
       klass = case searcher
       when Class
