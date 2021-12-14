@@ -419,6 +419,7 @@ module Constants
     'LOST-ASSUM' => 'Checked out - Overdue',
     'LOST-CLAIM' => 'Lost',
     'LOST-PAID' => 'Lost',
+    'MAGAZINE' => 'Hohbach Hall: Magazine Collection',
     'MANNING' => 'Manning Collection',
     'MANUSCRIPT' => 'Manuscript Collection',
     'MAP-CASES' => 'Map cases',
