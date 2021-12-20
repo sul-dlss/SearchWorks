@@ -147,12 +147,12 @@ GEM
       namae (~> 1.0)
     csl-styles (1.0.1.11)
       csl (~> 1.0)
-    css_parser (1.10.0)
+    css_parser (1.11.0)
       addressable
     deep_merge (1.2.1)
     deprecation (1.1.0)
       activesupport
-    devise (4.8.0)
+    devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -255,7 +255,7 @@ GEM
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     iso-639 (0.3.5)
-    jbuilder (2.11.3)
+    jbuilder (2.11.4)
       activesupport (>= 5.0.0)
     jquery-datatables-rails (3.4.0)
       actionpack (>= 3.1)
@@ -311,7 +311,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
-    minitest (5.14.4)
+    minitest (5.15.0)
     mods (2.4.1)
       edtf
       iso-639
@@ -415,7 +415,7 @@ GEM
     roadie-rails (2.2.0)
       railties (>= 5.1, < 6.2)
       roadie (>= 3.1, < 5.0)
-    rsolr (2.3.0)
+    rsolr (2.4.0)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
     rspec-core (3.9.3)
