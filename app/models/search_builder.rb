@@ -22,17 +22,12 @@ class SearchBuilder < Blacklight::SearchBuilder
   end
 
   def database_prefix_search(solr_params)
-    if page_location.databases? && blacklight_params[:prefix]
-      if blacklight_params[:prefix] == "0-9"
-        query = ("0".."9").map do |number|
-          "title_sort:#{number}*"
-        end.join(" OR ")
-      else
-        query = "title_sort:#{blacklight_params[:prefix]}*"
-      end
-      solr_params[:qt] = blacklight_config.lucene_req_handler
-      solr_params[:q] = [query, blacklight_params[:q]].compact.join(" AND ")
-    end
+    return unless page_location.databases? &&
+                  blacklight_params[:prefix] &&
+                  blacklight_params[:prefix].match?(/^(0-9|[a-z])$/i)
+
+    solr_params[:fq] ||= []
+    solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
   end
 
   def modifiable_params_keys

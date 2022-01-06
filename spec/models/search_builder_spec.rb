@@ -20,21 +20,17 @@ describe SearchBuilder do
     it "should handle 0-9 filters properly" do
       blacklight_params[:prefix] = "0-9"
       search_builder.database_prefix_search(solr_params)
-      (0..9).to_a.each do |number|
-        expect(solr_params[:q]).to match /title_sort:#{number}\*/
-      end
-      expect(solr_params[:q]).to match /^title_sort:0\*.*title_sort:9\*$/
+      expect(solr_params[:fq]).to include("title_sort:/[0-9].*/")
     end
     it "should handle alpha filters properly" do
-      blacklight_params[:prefix] = "B"
+      blacklight_params[:prefix] = "b"
       search_builder.database_prefix_search(solr_params)
-      expect(solr_params[:q]).to eq "title_sort:B*"
+      expect(solr_params[:fq]).to include("title_sort:/[b].*/")
     end
-    it "should AND user supplied queries" do
-      blacklight_params[:prefix] = "B"
-      blacklight_params[:q] = "My Query"
+    it "should do nothing if prefix param is invalid" do
+      blacklight_params[:prefix] = "*"
       search_builder.database_prefix_search(solr_params)
-      expect(solr_params[:q]).to eq "title_sort:B* AND My Query"
+      expect(solr_params[:fq]).to be_nil
     end
   end
 
