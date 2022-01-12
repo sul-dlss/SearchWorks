@@ -38,6 +38,7 @@ en:
     display_name: Guides
     micro_display_name: guide
     no_results_service_message: "a different search"
+    no_results_link: "https://guides.library.stanford.edu"
     pass_on_search_link_text: Search "%{query}" in all guide pages
     sub_heading_html: Course- and topic-based guides to collections, tools, and services.
     toggle_button_text: Show %{total} guides
