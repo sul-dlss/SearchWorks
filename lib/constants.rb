@@ -256,6 +256,7 @@ module Constants
     'BIO-LOAN' => 'On hold for a borrower',
     'BIO-RESV' => 'On reserve: Ask at circulation desk',
     'BIO-TEMP' => 'Ask at circulation desk',
+    'BOOKCAB' => 'Teaming room: book cabinet',
     'BOX-COLL' => 'Box Collection',
     'BRAN-RESV' => 'On reserve at Branner Library',
     'BRIT-DOCS' => 'British Government Documents',
