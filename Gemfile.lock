@@ -48,7 +48,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
     ast (2.4.2)
-    autoprefixer-rails (10.4.0.0)
+    autoprefixer-rails (10.4.2.0)
       execjs (~> 2)
     bcrypt (3.1.16)
     bibtex-ruby (6.0.0)
@@ -87,7 +87,7 @@ GEM
       blacklight (~> 6.10)
       jquery-rails
       rails (>= 4.2, < 6)
-    bootsnap (1.9.3)
+    bootsnap (1.9.4)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -220,7 +220,7 @@ GEM
       net-http-persistent (~> 3.1)
       public_suffix (~> 4.0)
       require_all (~> 2.0)
-    edtf (3.0.7)
+    edtf (3.0.8)
       activesupport (>= 3.0, < 8.0)
     erubi (1.10.0)
     execjs (2.8.1)
@@ -230,7 +230,7 @@ GEM
       faraday (>= 0.8, < 2)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -318,7 +318,7 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (1.0.0.alpha1)
+    mods_display (1.0.0.alpha2)
       i18n
       stanford-mods (~> 2.1)
       view_component
@@ -333,15 +333,14 @@ GEM
     net-scp (3.0.0)
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
-    newrelic_rpm (8.2.0)
+    newrelic_rpm (8.3.0)
     nio4r (2.5.8)
-    nokogiri (1.13.0)
+    nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
-    nokogiri (1.13.0-x86_64-linux)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
-    nom-xml (1.1.0)
-      activesupport (>= 3.2.18)
+    nom-xml (1.2.0)
       i18n
       nokogiri
     oauth2 (1.4.7)
@@ -394,7 +393,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-    rainbow (3.0.0)
+    rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
@@ -509,7 +508,7 @@ GEM
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stanford-mods (2.6.3)
+    stanford-mods (2.6.4)
       activesupport
       mods (~> 2.2)
     thor (1.2.1)
