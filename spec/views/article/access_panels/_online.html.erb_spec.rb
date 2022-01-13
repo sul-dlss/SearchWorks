@@ -32,11 +32,19 @@ RSpec.describe 'articles/access_panels/_online.html.erb' do
       )
     end
 
+    let(:content) do
+      Capybara.string(rendered.to_s)
+    end
+
     it 'links to the article_fulltext_link route instead of "detail"' do
-      content = Capybara.string(rendered.to_s)
       link = content.find('.panel-body li a')
       expect(link['href']).not_to include('detail')
       expect(link['href']).to match(%r{abc123\/pdf\/fulltext})
+    end
+
+    it 'the list item has the stanford-only class' do
+      list_item = content.find('.panel-body li')
+      expect(list_item['class']).to include('stanford-only')
     end
   end
 

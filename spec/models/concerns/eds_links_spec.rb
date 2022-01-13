@@ -81,6 +81,28 @@ RSpec.describe EdsLinks do
     end
   end
 
+  context 'stanford only links' do
+    it 'sets PDF download links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'PDF full text'
+      expect(document.eds_links.all.first).to be_stanford_only
+    end
+
+    it 'sets eBook PDF download links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'PDF eBook Full Text'
+      expect(document.eds_links.all.first).to be_stanford_only
+    end
+
+    it 'does not set HTML links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'HTML full text'
+      expect(document.eds_links.all.first).not_to be_stanford_only
+    end
+
+    it 'does not set SFX links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
+      expect(document.eds_links.all.first).not_to be_stanford_only
+    end
+  end
+
   context 'non customlink-fulltext links' do
     it 'ignores other link types' do
       document['eds_fulltext_links'].first['type'] = 'unknown'

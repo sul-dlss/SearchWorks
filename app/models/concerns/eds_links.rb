@@ -35,6 +35,10 @@ module EdsLinks
       %w[customlink-fulltext pdf ebook-pdf ebook-epub].include?(type) && label.present?
     end
 
+    def pdf?
+      category == 2
+    end
+
     def sfx?
       category == 3
     end
@@ -59,7 +63,8 @@ module EdsLinks
         fulltext: present? && show?(categories, category),
         sfx:      sfx?,
         ill:      ill?,
-        type:     type
+        type:     type,
+        stanford_only: pdf?
       )
     end
 
