@@ -375,7 +375,7 @@ module Constants
     'IC-DISPLAY' => 'Information Center display',
     'IC-EXHIBIT' => 'Information Center exhibit',
     'IC-NEWS' => 'Information Center: Newspapers',
-    'IC-RREF' => 'Information Center: Reference',
+    'IC-RREF' => 'Hohbach Hall: Reference',
     'IC-STATS' => 'Information Center: Statistics',
     'ILB-LOAN' => 'On hold for a borrower',
     'ILL' => 'Ask at circulation desk',
@@ -1094,8 +1094,8 @@ module Constants
     'LAW' => 'law/location/law_library',
     'LANE-MED' => 'medical/location/medical_library',
     'SLAC' => 'slac/location/slac',
-    'IC' => 'green/location/information-center',
-    'IC-CHAT' => 'green/location/online-reference-support'
+    'IC' => 'green/location/reference',
+    'IC-CHAT' => 'green/location/reference'
   }
 
   LIBRARY_ABOUT = {
