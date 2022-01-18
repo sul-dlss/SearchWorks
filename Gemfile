@@ -90,7 +90,7 @@ gem 'devise-remote-user'
 gem "blacklight-marc", "~> 6.0"
 gem "faraday", "~> 0.10"
 gem "config"
-gem "mods_display", "~> 1.0.0.alpha1"
+gem "mods_display", "~> 1.0.0.alpha3"
 gem "blacklight_advanced_search", "~> 6.3"
 gem "font-awesome-rails"
 gem "blacklight_range_limit", "~> 6.2"
