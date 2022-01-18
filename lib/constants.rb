@@ -375,7 +375,7 @@ module Constants
     'IC-DISPLAY' => 'Information Center display',
     'IC-EXHIBIT' => 'Information Center exhibit',
     'IC-NEWS' => 'Information Center: Newspapers',
-    'IC-RREF' => 'Information Center: Reference',
+    'IC-RREF' => 'Hohbach Hall: Reference',
     'IC-STATS' => 'Information Center: Statistics',
     'ILB-LOAN' => 'On hold for a borrower',
     'ILL' => 'Ask at circulation desk',
