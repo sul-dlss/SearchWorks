@@ -322,7 +322,7 @@ GEM
       i18n
       stanford-mods (~> 2.1)
       view_component
-    msgpack (1.4.2)
+    msgpack (1.4.3)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
