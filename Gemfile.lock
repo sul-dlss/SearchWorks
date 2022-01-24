@@ -87,7 +87,7 @@ GEM
       blacklight (~> 6.10)
       jquery-rails
       rails (>= 4.2, < 6)
-    bootsnap (1.10.1)
+    bootsnap (1.10.2)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -322,7 +322,7 @@ GEM
       i18n
       stanford-mods (~> 2.1)
       view_component
-    msgpack (1.4.3)
+    msgpack (1.4.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -454,7 +454,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rspec (2.7.0)
+    rubocop-rspec (2.8.0)
       rubocop (~> 1.19)
     ruby-oembed (0.16.1)
     ruby-progressbar (1.11.0)
