@@ -58,6 +58,10 @@ module MarcMetadata
     @issn ||= Issn.new(self)
   end
 
+  def doi
+    @doi ||= Doi.new(self)
+  end
+
   def linked_serials
     @linked_serials ||= LinkedSerials.new(self)
   end

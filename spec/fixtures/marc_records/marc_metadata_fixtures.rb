@@ -1382,4 +1382,20 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def doi_fixture
+    <<-xml
+      <record>
+        <datafield ind1='7' ind2=' ' tag='024'><subfield code='a'>10.1111/j.1600-0447.1938.tb03723.x</subfield><subfield code='q'>Preface</subfield><subfield code='2'>doi</subfield></datafield>
+      </record>
+    xml
+  end
+
+  def other_024_fixture
+    <<-xml
+      <record>
+        <datafield ind1='1' ind2=' ' tag='024'><subfield code='a'>12345</subfield></datafield>
+      </record>
+    xml
+  end
 end

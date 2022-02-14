@@ -73,6 +73,8 @@ en:
         label: "ISBN"
       "022":
         label: 'ISSN'
+      doi:
+        label: 'DOI'
       "028":
         label: "Publisher number"
       222:
