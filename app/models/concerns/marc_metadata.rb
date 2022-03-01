@@ -60,6 +60,7 @@ module MarcMetadata
 
   def doi
     @doi ||= Doi.new(self)
+  end
 
   def isbn
     @isbn ||= Isbn.new(self)
