@@ -60,6 +60,9 @@ module MarcMetadata
 
   def doi
     @doi ||= Doi.new(self)
+
+  def isbn
+    @isbn ||= Isbn.new(self)
   end
 
   def linked_serials
