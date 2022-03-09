@@ -7,7 +7,9 @@
 
   li {
     border: 1px solid $white;
+    display: flex;
     padding: 4px;
+    gap: 8px;
 
     &.active {
       background: $beige-5-percent;
@@ -20,6 +22,13 @@
       border: 1px solid $sul-managed-purl-border-hover;
     }
 
+
+    img {
+      border: 1px solid transparent;
+      object-fit: contain;
+      align-self: flex-start;
+    }
+
     button {
       background: none !important;
       border: 1px solid transparent;
@@ -27,7 +36,7 @@
       cursor: pointer;
       font: inherit;
       padding: 0 !important;
-      margin-left: 8px;
+      text-align: left;
 
       &:hover, &:focus, &:active {
         @include link-styling;
