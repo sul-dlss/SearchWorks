@@ -23,7 +23,7 @@ EXHIBITS_ACCESS_PANEL:
   exhibits_host: http://example.com
 GLOBAL_ALERT: <%= false %>
 HOME_PAGE_NOTICE: <%= false %>
-GOOGLE_SITE_VERIFICATION: "FZOfWKmcoL5TIDC-0G8vEHMnqcPXi-PhI5OwDvJL0Zo"
+GOOGLE_SITE_VERIFICATION: "654321sitever"
 PAGINATION_THRESHOLD: 250
 BOOKPLATES: true
 BOOKPLATES_EXHIBIT_URL: 'https://exhibits.stanford.edu/digital-bookplates'
