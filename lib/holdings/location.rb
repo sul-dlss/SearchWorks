@@ -30,9 +30,9 @@ class Holdings
       return unless external_location?
 
       if items.first.try(:barcode)
-        "http://lmldb.stanford.edu/cgi-bin/Pwebrecon.cgi?DB=local&Search_Arg=SOCW+#{items.first.barcode.gsub(/^L/, '')}&Search_Code=CMD*&CNT=10"
+        "https://lane.stanford.edu/view/bib/#{items.first.barcode.gsub(/^LL/, '')}"
       else
-        'http://lmldb.stanford.edu'
+        'https://lane.stanford.edu'
       end
     end
 
