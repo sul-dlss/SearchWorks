@@ -1095,7 +1095,8 @@ module Constants
     'LANE-MED' => 'medical/location/medical_library',
     'SLAC' => 'slac/location/slac',
     'IC' => 'green/location/reference',
-    'IC-CHAT' => 'green/location/reference'
+    'IC-CHAT' => 'green/location/reference',
+    'TANNER' => 'philosophy/location/library-circulation'
   }
 
   LIBRARY_ABOUT = {
