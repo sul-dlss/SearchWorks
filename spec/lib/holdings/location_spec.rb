@@ -68,14 +68,14 @@ describe Holdings::Location do
 
     describe '#location_link' do
       it 'should provide a link for external locations' do
-        expect(external_location.location_link).to match /http:\/\/lmldb\.stanford\.edu.*&Search_Arg=SOCW\+L12345/
+        expect(external_location.location_link).to match %r{https://lane.stanford.edu/view/bib/12345}
       end
       it 'should strip the first "L" from the barcode' do
-        expect(external_location.location_link).to match /L12345/
+        expect(external_location.location_link).to match /12345/
         expect(external_location.location_link).not_to match /LL12345/
       end
       it 'should just return a link to the lane library catalog if there are no barcoded items' do
-        expect(external_location_with_mhld.location_link).to eq 'http://lmldb.stanford.edu'
+        expect(external_location_with_mhld.location_link).to eq 'https://lane.stanford.edu'
       end
       it 'should not provide a link for non-external locations' do
         expect(non_external_location.location_link).to be_nil
