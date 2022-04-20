@@ -35,13 +35,6 @@
     padding-left: 20px;
   }
   .navbar-nav > li {
-    a.covid-status {
-      background-color: $poppy;
-      color: $black;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
     a {
       background-color: $sul-subnavbar-bg-color;
       border: 0;
@@ -113,22 +106,6 @@
 
     .sul-top-menu {
       white-space: normal;
-    }
-  }
-
-  // Responsive fixes for COVID-19 status
-  @media screen and (max-width: $screen-md-min) {
-    .navbar-nav > li {
-      a {
-        font-size: 1.4em;
-      }
-    }
-
-    .dropdown-menu {
-      li a,
-      li span {
-        font-size: 1.4em;
-      }
     }
   }
 }
