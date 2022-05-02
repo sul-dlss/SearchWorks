@@ -1178,12 +1178,12 @@ module Constants
       text: 'Items must be requested in advance and viewed on-site.'
     },
     'RUMSEYMAP' => {
-      heading: 'Limited on-site access',
-      text: 'Researchers in the Stanford community can request to view these materials in the <b>David Rumsey Map Center</b>.'
+      heading: 'On-site access',
+      text: 'Researchers can request to view these materials in the David Rumsey Map Center.'
     },
     'SPEC-COLL' => {
-      heading: 'Limited on-site access',
-      text: 'Researchers in the Stanford community can request to view these materials in the <b>Special Collections Reading Room</b>. Entry to the Reading Room is by appointment only.'
+      heading: 'On-site access',
+      text: 'Researchers can request to view these materials in the Special Collections Reading Room. Request materials at least 2 business days in advance. Maximum 5 items per day.'
     }
   }.freeze
 

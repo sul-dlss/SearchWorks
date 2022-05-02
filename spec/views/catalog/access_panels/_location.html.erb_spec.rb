@@ -313,8 +313,8 @@ describe "catalog/access_panels/_location.html.erb", js: true do
     end
 
     it 'should render special instructions field' do
-      expect(rendered).to have_css('h4', text: 'Limited on-site access')
-      expect(rendered).to have_css('p', text: 'Researchers in the Stanford community can request to view these materials in the Special Collections Reading Room. Entry to the Reading Room is by appointment only.')
+      expect(rendered).to have_css('h4', text: 'On-site access')
+      expect(rendered).to have_css('p', text: 'Researchers can request to view these materials in the Special Collections Reading Room. Request materials at least 2 business days in advance. Maximum 5 items per day.')
     end
   end
 
