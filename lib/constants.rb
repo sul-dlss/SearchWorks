@@ -917,6 +917,7 @@ module Constants
     'RESV-DESKS',
     'RESERVES',
     'TANN-RESV',
+    'SCI-RESV',
     'SSRC-NEWBK'
   ]
 
