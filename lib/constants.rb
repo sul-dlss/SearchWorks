@@ -1170,6 +1170,10 @@ module Constants
   BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
 
   LIBRARY_INSTRUCTIONS = {
+    'EDUCATION' => {
+      heading: 'Access',
+      text: 'The Education Library is closed for construction. Request items for pickup at another library.'
+    },
     'HOOVER' => {
       heading: 'Access',
       text: 'Items must be requested in advance and viewed on-site.'
