@@ -36,32 +36,6 @@ describe FacetsHelper do
     end
   end
 
-  describe "#remove_range_param" do
-    it "should delete range key" do
-      params = { "range" => { test: "123" }, "stuff" => "stuff" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff" })
-    end
-    it "should delete search field key if it is dummy range or search" do
-      params = { "range" => { test: "123" }, "stuff" => "stuff", "search_field" => "search" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff" })
-      params = { "range" => { test: "123" }, "stuff" => "stuff", "search_field" => "dummy_range" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff" })
-    end
-    it "should not delete other search field keys" do
-      params = { "range" => { test: "123" }, "stuff" => "stuff", "search_field" => "title" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff", "search_field" => "title" })
-    end
-    it "should delete commit key" do
-      params = { "range" => { test: "123" }, "stuff" => "stuff", "commit" => "yolo" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff" })
-    end
-    it "should not change the original parameters hash" do
-      params = { "range" => { test: "123" }, "stuff" => "stuff" }
-      expect(helper.remove_range_param("fake_field", params)).to eq ({ "stuff" => "stuff" })
-      expect(params["range"]).to be_present
-    end
-  end
-
   describe "#render_resource_icon" do
     it "should not render anything if format_main_ssim field is not present" do
       expect(helper.render_resource_icon(nil)).to be_nil

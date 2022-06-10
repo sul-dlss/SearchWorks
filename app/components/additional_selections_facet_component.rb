@@ -1,0 +1,2 @@
+class AdditionalSelectionsFacetComponent < Blacklight::FacetFieldListComponent
+end
