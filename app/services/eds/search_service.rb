@@ -19,6 +19,10 @@ module Eds
       blacklight_config.search_builder_class.new(self)
     end
 
+    def search_state_class
+      Blacklight::SearchState
+    end
+
     def search_results
       builder = search_builder.with(user_params)
       builder = yield(builder) if block_given?

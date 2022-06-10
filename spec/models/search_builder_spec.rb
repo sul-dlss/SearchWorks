@@ -5,7 +5,7 @@ describe SearchBuilder do
 
   let(:blacklight_params) { {} }
   let(:solr_params) { {} }
-  let(:scope) { double(blacklight_config: CatalogController.blacklight_config) }
+  let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil) }
 
   before do
     # silly hack to avoid refactoring these tests
