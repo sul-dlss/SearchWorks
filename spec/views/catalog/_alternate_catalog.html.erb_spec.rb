@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'catalog/_alternate_catalog.html.erb' do
+describe 'catalog/_alternate_catalog' do
   before do
     controller.params[:q] = 'question'
     stub_template '_lib_guides_alternate_catalog' => ''

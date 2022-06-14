@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_mods.html.erb" do
+describe "catalog/_index_mods" do
   include ModsFixtures
   let(:presenter) { OpenStruct.new(heading: "Object Title") }
 

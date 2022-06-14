@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "browse/index.html.erb" do
+describe "browse/index" do
   let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',

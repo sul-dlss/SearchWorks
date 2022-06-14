@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "recent_selections/index.html.erb" do
+describe "recent_selections/index" do
   before do
     assign(:catalog_count, 500)
     assign(:article_count, 45)

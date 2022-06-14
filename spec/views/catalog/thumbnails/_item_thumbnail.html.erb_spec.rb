@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/thumbnails/_item_thumbnail.html.erb" do
+describe "catalog/thumbnails/_item_thumbnail" do
   before do
     allow(view).to receive(:css_class).and_return('')
     allow(view).to receive(:oclc).and_return('')

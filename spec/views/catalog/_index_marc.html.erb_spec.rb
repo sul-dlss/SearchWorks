@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_marc.html.erb" do
+describe "catalog/_index_marc" do
   include MarcMetadataFixtures
   before do
     allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)

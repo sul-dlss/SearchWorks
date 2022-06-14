@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_callnumber_browse.html.erb" do
+describe "catalog/record/_callnumber_browse" do
   let(:document) {
     SolrDocument.new(
       id: 'abc123',

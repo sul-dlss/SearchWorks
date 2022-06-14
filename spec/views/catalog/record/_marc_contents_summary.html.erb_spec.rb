@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "catalog/record/_marc_contents_summary.html.erb" do
+describe "catalog/record/_marc_contents_summary" do
   include MarcMetadataFixtures
   include Marc856Fixtures
 

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_mods_upper_metadata_section.html.erb" do
+describe "catalog/record/_mods_upper_metadata_section" do
   include ModsFixtures
 
   describe "Upper metadata available" do

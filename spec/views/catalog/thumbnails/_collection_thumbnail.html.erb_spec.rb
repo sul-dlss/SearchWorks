@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/thumbnails/_collection_thumbnail.html.erb' do
+describe 'catalog/thumbnails/_collection_thumbnail' do
   let(:document) { SolrDocument.new(id: '123') }
 
   subject { Capybara.string(rendered) }

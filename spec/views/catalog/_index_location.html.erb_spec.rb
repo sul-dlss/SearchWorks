@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_location.html.erb" do
+describe "catalog/_index_location" do
   include MarcMetadataFixtures
   describe "accessibility" do
     before do

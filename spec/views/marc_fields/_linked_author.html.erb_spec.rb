@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_linked_author.html.erb', type: :view do
+describe 'marc_fields/_linked_author', type: :view do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marcxml: send("linked_author_#{target}_fixture".to_sym)) }
 

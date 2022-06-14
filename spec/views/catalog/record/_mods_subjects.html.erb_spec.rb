@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "catalog/record/_mods_subjects.html.erb" do
+describe "catalog/record/_mods_subjects" do
   include ModsFixtures
 
   describe "Object subjects" do

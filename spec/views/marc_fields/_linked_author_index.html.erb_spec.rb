@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_linked_author_index.html.erb', type: :view do
+describe 'marc_fields/_linked_author_index', type: :view do
   include MarcMetadataFixtures
 
   before do

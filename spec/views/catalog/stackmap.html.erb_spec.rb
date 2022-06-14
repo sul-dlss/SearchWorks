@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/stackmap.html.erb' do
+describe 'catalog/stackmap' do
   include MarcMetadataFixtures
 
   describe 'StackMap view' do

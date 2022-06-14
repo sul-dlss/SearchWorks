@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/access_panels/_in_collection.html.erb" do
+describe "catalog/access_panels/_in_collection" do
   describe 'merged records w/o collection members' do
     let(:document) { SolrDocument.new(id: '1') }
     let(:parent) { SolrDocument.new(id: '2') }

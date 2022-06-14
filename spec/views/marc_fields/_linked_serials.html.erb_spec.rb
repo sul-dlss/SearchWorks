@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_linked_serials.html.erb' do
+describe 'marc_fields/_linked_serials' do
   subject { Capybara.string(rendered) }
 
   let(:linked_serial) do

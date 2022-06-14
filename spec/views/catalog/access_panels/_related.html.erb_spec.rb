@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/access_panels/_related.html.erb" do
+describe "catalog/access_panels/_related" do
   it 'should be hidden by default' do
     assign(:document, SolrDocument.new)
     render

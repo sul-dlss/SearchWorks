@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/_search_form.html.erb' do
+describe 'catalog/_search_form' do
   before do
     expect(view).to receive_messages(
       search_state: double('SearchState', params_for_search: {}),

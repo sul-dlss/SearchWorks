@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_linked_related_works.html.erb', type: :view do
+describe 'marc_fields/_linked_related_works', type: :view do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marcxml: linked_related_works_fixture) }
 

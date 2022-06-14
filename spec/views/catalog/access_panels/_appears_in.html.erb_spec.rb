@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/access_panels/_appears_in.html.erb' do
+describe 'catalog/access_panels/_appears_in' do
   subject { Capybara.string(rendered) }
 
   let(:set_documents) { [] }

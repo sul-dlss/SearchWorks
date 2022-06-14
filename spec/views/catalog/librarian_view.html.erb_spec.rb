@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/librarian_view.html.erb" do
+describe "catalog/librarian_view" do
   include ModsFixtures
   include MarcMetadataFixtures
   describe "MARC records" do

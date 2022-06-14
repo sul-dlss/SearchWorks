@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "shared/_zero_results.html.erb" do
+describe "shared/_zero_results" do
   let(:config) {
     Blacklight::Configuration.new do |config|
       config.add_search_field 'search', label: 'All fields'

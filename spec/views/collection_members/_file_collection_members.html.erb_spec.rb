@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "collection_members/_file_collection_members.html.erb" do
+describe "collection_members/_file_collection_members" do
   let(:document) { SolrDocument.new() }
   let(:collection_members) { [
     SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean"),

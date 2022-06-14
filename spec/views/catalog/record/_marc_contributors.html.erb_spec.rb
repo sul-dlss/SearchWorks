@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_marc_contributors.html.erb" do
+describe "catalog/record/_marc_contributors" do
   include MarcMetadataFixtures
 
   describe "Contributors section" do

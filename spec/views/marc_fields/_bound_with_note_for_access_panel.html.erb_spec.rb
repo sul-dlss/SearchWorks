@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_bound_with_note_for_access_panel.html.erb' do
+describe 'marc_fields/_bound_with_note_for_access_panel' do
   subject { Capybara.string(rendered) }
 
   let(:bound_with_note) do

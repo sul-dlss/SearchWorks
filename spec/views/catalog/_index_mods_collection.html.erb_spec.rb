@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_mods_collection.html.erb" do
+describe "catalog/_index_mods_collection" do
   include ModsFixtures
   before do
     allow(view).to receive(:document).and_return(
