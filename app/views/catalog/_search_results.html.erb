@@ -23,7 +23,7 @@
 
     <% if page_location.access_point? %>
       <% if page_location.collection? && get_collection.present? %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: "#{show_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+        <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
       <% elsif page_location.sdr? %>
         <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
       <% else %>

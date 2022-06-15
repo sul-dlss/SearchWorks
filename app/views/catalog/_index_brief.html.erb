@@ -2,7 +2,7 @@
   preview_container = 'preview-container-' + document.id
   preview_attrs = preview_data_attrs(true, "preview-brief", document[:id], '.' + preview_container)
 %>
-<% doc_presenter = presenter(document) %>
+<% doc_presenter = document_presenter(document) %>
 <div class=" brief-document container-fluid" <%= preview_attrs %>>
   <div class="row row-eq-height brief-container">
     <div class="col-md-10">

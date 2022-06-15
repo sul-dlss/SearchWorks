@@ -1,4 +1,4 @@
-<% doc_presenter = presenter(document) -%>
+<% doc_presenter = document_presenter(document) -%>
 <% fields.each do |field_name| -%>
   <% field_name = field_name.to_s -%>
   <% value = doc_presenter.field_value field_name -%>

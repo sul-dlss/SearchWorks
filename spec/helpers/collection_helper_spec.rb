@@ -63,7 +63,7 @@ describe CollectionHelper do
 
   describe "#collection_breadcrumb_value" do
     it "should return the collection name when present in the @document_list" do
-      allow(helper).to receive(:show_presenter).and_return(
+      allow(helper).to receive(:document_presenter).and_return(
         OpenStruct.new(heading: 'Title2')
       )
       @document_list = [

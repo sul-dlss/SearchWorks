@@ -21,7 +21,7 @@ describe "preview/_show_mods.html.erb" do
   ) }
 
   before do
-    expect(view).to receive(:show_presenter).and_return(presenter)
+    expect(view).to receive(:document_presenter).and_return(presenter)
     assign(:document, document)
     render
   end

@@ -15,7 +15,7 @@ describe "browse/index.html.erb" do
   before do
     assign(:original_doc, original_doc)
     allow(view).to receive(:params).and_return(start: '123')
-    expect(view).to receive(:show_presenter).with(original_doc).and_return(presenter)
+    expect(view).to receive(:document_presenter).with(original_doc).and_return(presenter)
   end
 
   it "should link to the document" do
