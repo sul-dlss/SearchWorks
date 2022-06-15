@@ -8,7 +8,7 @@
 
 <%= form_tag search_catalog_path, :id => 'advanced-search-form', :class => 'advanced form-horizontal', :method => :get do  %>
 
-  <%= render_hash_as_hidden_fields(search_state.params_for_search(advanced_search_context)) %>
+  <%= render Blacklight::HiddenSearchStateComponent.new(params: search_state.params_for_search(advanced_search_context)) %>
 
   <div class="input-criteria">
 
