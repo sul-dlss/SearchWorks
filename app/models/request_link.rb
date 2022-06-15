@@ -21,8 +21,7 @@ class RequestLink
 
   def show_location_level_request_link?
     ((in_enabled_location? && any_items_circulate?) || mediated_pageable?) &&
-      !all_in_disabled_current_location? &&
-      !available_via_temporary_access?
+      !all_in_disabled_current_location?
       # Check for real barcodes?  Only for items that are not on-order?
       # Array of procs / methods to be sent configurable on a library basis.
   end
@@ -53,10 +52,6 @@ class RequestLink
   end
 
   private
-
-  def available_via_temporary_access?
-    document&.access_panels&.temporary_access&.present?
-  end
 
   def classes
     'btn btn-default btn-xs request-button'

@@ -117,12 +117,12 @@ class CatalogController < ApplicationController
                             partial: 'blacklight/hierarchy/facet_hierarchy',
                             sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
-    config.add_facet_field 'access_facet', label: 'Access', partial: 'access_facet', query: {
+    config.add_facet_field 'access_facet', label: 'Access', query: {
       'At the Library': {
         label: 'At the Library', fq: 'access_facet:"At the Library"'
       },
       'Online': {
-        label: 'Online', fq: "access_facet:Online OR ht_access_sim:#{Settings.HATHI_ETAS_ACCESS ? '[* TO *]' : 'allow'}"
+        label: 'Online', fq: "access_facet:Online"
       },
       'On order': {
         label: 'On order', fq: 'access_facet:"On order"'
@@ -504,7 +504,6 @@ class CatalogController < ApplicationController
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),
-      temporary_access: document.access_panels.temporary_access?,
       format: document[document.format_key],
       isbn: document['isbn_display'],
       holdings: document.holdings(live: live).as_json

@@ -125,7 +125,6 @@ Layout/ExtraSpacing:
     - 'spec/integration/external-data/cjk_advanced_search_spec.rb'
     - 'spec/integration/external-data/facets_spec.rb'
     - 'spec/integration/external-data/gallery_spec.rb'
-    - 'spec/lib/access_panels/temporary_access_spec.rb'
     - 'spec/lib/holdings/location_spec.rb'
     - 'spec/models/concerns/cjk_query_spec.rb'
     - 'spec/models/concerns/marc_links_spec.rb'
@@ -655,7 +654,6 @@ RSpec/EmptyLineAfterExample:
 RSpec/EmptyLineAfterFinalLet:
   Exclude:
     - 'spec/features/access_panels/exhibit_spec.rb'
-    - 'spec/lib/access_panels/temporary_access_spec.rb'
     - 'spec/models/concerns/hathi_links_spec.rb'
     - 'spec/models/hathi_trust_links_spec.rb'
 

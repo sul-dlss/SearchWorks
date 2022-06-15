@@ -17,7 +17,7 @@ module RequestLinks
     end
 
     def markup
-      return 'Not available to request' if available_via_temporary_access? || url.blank?
+      return 'Not available to request' if url.blank?
 
       super
     end

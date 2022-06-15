@@ -39,17 +39,5 @@ RSpec.describe JsonResultsDocumentPresenter do
         expect(presenter.as_json['fulltext_link_html'].first).to match(/<a href=.*example.com.*>The Link<\/a>/)
       end
     end
-
-    context 'when a document is available via temporary access' do
-      before do
-        document_data['ht_htid_ssim'] = '123456'
-      end
-
-      it 'includes the temporary_access_link_html field with appropriate data' do
-        expect(presenter.as_json['temporary_access_link_html'].length).to eq 1
-        expect(presenter.as_json['temporary_access_link_html'].first).to include('<span class="stanford-only">')
-        expect(presenter.as_json['temporary_access_link_html'].first).to match(/<a href=.*babel.hathitrust.org.*<\/a>/)
-      end
-    end
   end
 end
