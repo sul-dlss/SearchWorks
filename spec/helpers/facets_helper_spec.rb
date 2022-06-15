@@ -10,16 +10,17 @@ describe FacetsHelper do
       expect(helper.send(:render_single_facet, "not_a_facet")).to be_nil
     end
     it "should render the facet limit when the facet does exist " do
-      @response.aggregations = { this_facet: OpenStruct.new(name: "this_facet") }
-      expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
-      expect(helper).to receive(:render_facet_limit).with("a-facet", {}).and_return("a-partial")
+      the_facet = OpenStruct.new(name: "this_facet")
+      @response.aggregations = { this_facet: the_facet }
+      expect(helper).to receive(:render_facet_limit).with(the_facet, {}).and_return("a-partial")
       expect(helper.send(:render_single_facet, "this_facet")).to eq "a-partial"
     end
     it "should pass options onto #render_facet_limit" do
-      @response.aggregations = { this_facet: OpenStruct.new(name: "this_facet") }
+      the_facet = OpenStruct.new(name: "this_facet")
+      @response.aggregations = { this_facet: the_facet }
       options = { partial: "the-partial-to-render" }
-      expect(helper).to receive(:facet_by_field_name).with("this_facet").and_return("a-facet")
-      expect(helper).to receive(:render_facet_limit).with("a-facet", options).and_return("a-partial")
+      expect(helper).to receive(:render_facet_limit).with(the_facet, options).and_return("a-partial")
+
       expect(helper.send(:render_single_facet, "this_facet", options)).to eq "a-partial"
     end
   end

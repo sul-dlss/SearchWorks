@@ -9,9 +9,8 @@ module FacetsHelper
     facet = @response.aggregations.values.find do |facet|
       facet.name == facet_name
     end
-    if facet
-      render_facet_limit(facet_by_field_name(facet_name), options)
-    end
+
+    render_facet_limit(facet, options) if facet
   end
 
   def render_resource_icon(values)
