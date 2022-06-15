@@ -444,14 +444,8 @@ class CatalogController < ApplicationController
 
     # View type group config
     config.view.list.icon_class = "fa-th-list"
-
-    config.view.gallery ||= OpenStruct.new
-    config.view.gallery.partials = [:index]
-    config.view.gallery.icon_class = "fa-th"
-
-    config.view.brief ||= OpenStruct.new
-    config.view.brief.partials = [:index]
-    config.view.brief.icon_class = "fa-align-justify"
+    config.view.gallery(partials: [:index], icon_class: "fa-th")
+    config.view.brief(partials: [:index], icon_class: "fa-align-justify")
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }

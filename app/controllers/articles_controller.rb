@@ -173,9 +173,7 @@ class ArticlesController < ApplicationController
 
     # View type group config
     config.view.list.icon_class = "fa-th-list"
-    config.view.brief ||= OpenStruct.new
-    config.view.brief.partials = %i[index]
-    config.view.brief.icon_class = "fa-align-justify"
+    config.view.brief(partials: %i[index], icon_class: "fa-align-justify")
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
