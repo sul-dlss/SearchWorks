@@ -28,32 +28,6 @@ Capybara.register_driver :headless_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
 end
 
-Capybara.register_driver :mobile_headless do |app|
-  Capybara::Selenium::Driver.load_selenium
-  browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|
-    opts.args << '--headless'
-    opts.args << '--disable-gpu'
-    # Workaround https://bugs.chromium.org/p/chromedriver/issues/detail?id=2650&q=load&sort=-id&colspec=ID%20Status%20Pri%20Owner%20Summary
-    opts.args << '--disable-site-isolation-trials'
-    opts.args << '--no-sandbox'
-    opts.args << '--window-size=700,700'
-  end
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
-end
-
-Capybara.register_driver :tablet_headless do |app|
-  Capybara::Selenium::Driver.load_selenium
-  browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|
-    opts.args << '--headless'
-    opts.args << '--disable-gpu'
-    # Workaround https://bugs.chromium.org/p/chromedriver/issues/detail?id=2650&q=load&sort=-id&colspec=ID%20Status%20Pri%20Owner%20Summary
-    opts.args << '--disable-site-isolation-trials'
-    opts.args << '--no-sandbox'
-    opts.args << '--window-size=800,700'
-  end
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
-end
-
 Capybara.default_max_wait_time = ENV["CI"] ? 30 : 10
 
 
@@ -69,22 +43,11 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:example, responsive: true) do |example|
-    page_width = example.metadata[:page_width].to_i
-    driver = if page_width < 767
-               :mobile_headless
-             elsif page_width < 980
-               :tablet_headless
-             else
-               raise ArgumentError, "Browsers over 980px wide don't need to use the responsive test mode"
-             end
-
-    Capybara.javascript_driver = driver
-    Capybara.current_driver = driver
+    page.current_window.resize_to(example.metadata[:page_width].to_i, 700)
   end
 
   config.after(:example, responsive: true) do
-    Capybara.javascript_driver = :headless_chrome
-    Capybara.current_driver = :headless_chrome
+    page.current_window.resize_to(1000, 700)
   end
 
   # Limits the available syntax to the non-monkey patched syntax that is recommended.
