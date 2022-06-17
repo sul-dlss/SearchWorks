@@ -413,7 +413,8 @@ class CatalogController < ApplicationController
     end
 
     # Configure facet fields for BL advanced search
-    config.advanced_search = {
+    config.advanced_search = Blacklight::OpenStructWithHashAccess.new(
+      enabled: false,
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
@@ -426,7 +427,7 @@ class CatalogController < ApplicationController
         "f.language.facet.limit" => -1,
         "facet.sort" => "index" # sort by byte order of values
       }
-    }
+    )
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
