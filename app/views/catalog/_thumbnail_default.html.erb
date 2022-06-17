@@ -5,9 +5,10 @@
     :suppress_link => true
   }
   context_href = document_link_params(document, {:counter => counter}).dig(:data, :"context-href")
+  presenter = document_presenter(document)
 %>
 
-<% if has_thumbnail?(document) && tn = render_thumbnail_tag(document, {}, options) %>
+<% if presenter.thumbnail.exists? && tn = presenter.thumbnail.thumbnail_tag({}, options) %>
   <div class="document-thumbnail">
     <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
       <%= tn %>
