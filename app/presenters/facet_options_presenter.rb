@@ -67,7 +67,7 @@ class FacetOptionsPresenter
 
     def search_url
       if selected?
-        search_action_path(search_state.remove_facet_params(FACET_FIELD, label))
+        search_action_path(search_state.filter(FACET_FIELD).remove(label).to_h)
       else
         path_for_facet(FACET_FIELD, label)
       end
