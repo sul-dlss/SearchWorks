@@ -80,9 +80,9 @@ GEM
     blacklight_advanced_search (6.4.1)
       blacklight (~> 6.0, >= 6.0.1)
       parslet
-    blacklight_dynamic_sitemap (0.5.0)
+    blacklight_dynamic_sitemap (0.6.0)
       blacklight (> 6.0)
-      rails (<= 6.2)
+      rails
     blacklight_range_limit (6.5.0)
       blacklight (~> 6.10)
       jquery-rails
@@ -243,7 +243,7 @@ GEM
       activesupport (>= 5.0)
     hashie (5.0.0)
     honeybadger (4.12.1)
-    http (5.0.4)
+    http (5.1.0)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
@@ -313,7 +313,7 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
     minitar (0.9)
-    minitest (5.15.0)
+    minitest (5.16.0)
     mods (3.0.2)
       edtf (~> 3.0)
       iso-639
@@ -451,7 +451,7 @@ GEM
     rubocop-performance (1.14.2)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.14.2)
+    rubocop-rails (2.15.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -506,7 +506,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
+    sqlite3 (1.4.4)
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -542,7 +542,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (2.1.0)
-    view_component (2.57.0)
+    view_component (2.57.1)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     warden (1.2.9)
