@@ -10,7 +10,7 @@ feature 'Yewno', js: true do
     visit quick_search_path
   end
 
-  scenario 'is present on index page' do
+  xscenario 'is present on index page' do
     fill_in 'params-q', with: 'geology'
     click_button 'Search'
     expect(page).to have_css 'h2', text: 'Yewno'
