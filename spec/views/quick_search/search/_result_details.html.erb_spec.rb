@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'search/_result_details.html.erb' do
+describe 'search/_result_details' do
   let(:description) { 'The Description' }
   let(:result) do
     ArticleSearchService::Result.new.tap do |r|

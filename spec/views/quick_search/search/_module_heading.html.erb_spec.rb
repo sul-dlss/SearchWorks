@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'search/_module_heading.html.erb' do
+describe 'search/_module_heading' do
   let(:catalog) do
     double('QuickSearch::CatalogSearcher', loaded_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
   end

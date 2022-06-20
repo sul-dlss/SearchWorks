@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'shared/_top_navbar.html.erb' do
+describe 'shared/_top_navbar' do
   before do
     without_partial_double_verification do
       allow(view).to receive(:root_path).and_return('/')
