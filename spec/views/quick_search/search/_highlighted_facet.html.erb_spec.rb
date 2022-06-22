@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'search/_highlighted_facet.html.erb' do
+describe 'search/_highlighted_facet' do
   let(:facet1) do
     instance_double(
       AbstractSearchService::HighlightedFacetItem, label: 'Abc', value: 'Abc', hits: 20, query_url: 'query1'

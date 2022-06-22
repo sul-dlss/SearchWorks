@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_213827) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_06_20_205354) do
   create_table "events", force: :cascade do |t|
     t.string "category"
     t.string "item"
     t.string "query"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "action"
-    t.bigint "session_id"
+    t.integer "session_id"
     t.string "created_at_string"
     t.index ["created_at_string"], name: "index_events_on_created_at_string"
     t.index ["session_id"], name: "index_events_on_session_id"
@@ -27,8 +26,8 @@ ActiveRecord::Schema.define(version: 2020_08_11_213827) do
 
   create_table "searches", force: :cascade do |t|
     t.string "query"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "page"
     t.integer "session_id"
     t.string "created_at_string"
@@ -38,13 +37,15 @@ ActiveRecord::Schema.define(version: 2020_08_11_213827) do
 
   create_table "sessions", force: :cascade do |t|
     t.string "session_uuid"
-    t.datetime "expiry"
+    t.datetime "expiry", precision: nil
     t.boolean "on_campus"
     t.boolean "is_mobile"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "created_at_string"
     t.index ["created_at_string"], name: "index_sessions_on_created_at_string"
   end
 
+  add_foreign_key "events", "sessions"
+  add_foreign_key "searches", "sessions"
 end

@@ -1,4 +1,6 @@
-require: rubocop-rspec
+require:
+- rubocop-rspec
+- rubocop-rails
 inherit_from: .rubocop_todo.yml
 
 AllCops:
@@ -9,7 +11,7 @@ AllCops:
     - 'config/**/*'
     - 'spec/spec_helper.rb'
     - 'vendor/**/*'
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.0
 
 Rails:
   Enabled: true

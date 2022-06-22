@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'layouts/application.html.erb' do
+describe 'layouts/application' do
   before do
     without_partial_double_verification do
       allow(view).to receive(:opensearch_path).and_return ''
