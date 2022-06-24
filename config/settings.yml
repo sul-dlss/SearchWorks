@@ -311,6 +311,7 @@ pageable_locations:
   - LOCKED-STK
   - MEDIA-MTXT
   - MICROTEXT
+  - ND-PAGE-EA
   - ON-ORDER
   - PAGE-AR
   - PAGE-AS
