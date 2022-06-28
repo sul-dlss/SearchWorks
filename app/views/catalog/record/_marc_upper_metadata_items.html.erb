@@ -8,7 +8,7 @@
       <%= render "catalog/field_from_marc", fields: uniform_title %>
     <%- end -%>
 
-    <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, '300abcefg', :marc_instrumentation, :linked_series].each do |tag| %>
+    <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, '3003abcefg', :marc_instrumentation, :linked_series].each do |tag| %>
       <%= render_if_present document.marc_field(tag) %>
     <% end %>
   </dl>
