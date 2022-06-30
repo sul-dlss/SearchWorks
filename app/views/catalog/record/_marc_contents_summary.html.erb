@@ -42,17 +42,14 @@
   </dd>
 <% end %>
 
-<% summary = document.fetch(:summary_struct, []).first || {} %>
-<% if summary[:fields].present? || summary[:unmatched_vernacular].present? %>
-  <dt>Summary</dt>
-  <% if summary[:fields].present? %>
-    <% summary[:fields].each do |field| %>
-      <dd>
-        <%= render_struct_field_data document, field[:field] %>
-        <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
-        <%= "<br/>".html_safe if field != summary[:fields].last %>
-      </dd>
-    <% end %>
+<% document.fetch(:summary_struct, []).each do |summary|%>
+  <% summary.fetch(:fields, []).each do |field| %>
+    <dt><%= summary[:label] %></dt>
+    <dd>
+      <%= render_struct_field_data document, field[:field] %>
+      <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
+      <%= "<br/>".html_safe if field != summary[:fields].last %>
+    </dd>
   <% end %>
   <% if summary[:unmatched_vernacular].present? %>
     <dd>

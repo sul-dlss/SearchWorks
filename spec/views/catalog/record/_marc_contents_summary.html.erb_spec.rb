@@ -61,4 +61,26 @@ describe "catalog/record/_marc_contents_summary.html.erb" do
       expect(rendered).not_to have_css('dt', text: 'Contributor')
     end
   end
+
+  describe 'Contents/Summary' do
+    before do
+      assign(:document, SolrDocument.new(
+        summary_struct: [
+          { label: 'Summary', fields: [{ field: 'Summary of content' }] },
+          { label: 'Content advice', fields: [{ field: 'Warning about the content' }] }
+        ]
+      ))
+      render
+    end
+
+    it 'displays a Summary if present' do
+      expect(rendered).to have_css('dt', text: /Summary/)
+      expect(rendered).to have_css('dd', text: /Summary of content/)
+    end
+
+    it 'displays Content advice is present' do
+      expect(rendered).to have_css('dt', text: /Content advice/)
+      expect(rendered).to have_css('dd', text: /Warning about the content/)
+    end
+  end
 end
