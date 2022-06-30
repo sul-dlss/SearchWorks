@@ -163,7 +163,7 @@ GEM
     devise-remote-user (1.1.0)
       devise
     diff-lcs (1.5.0)
-    dlss-capistrano (4.2.1)
+    dlss-capistrano (4.3.0)
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
       capistrano-one_time_key
@@ -362,7 +362,7 @@ GEM
     rack (2.2.3.1)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
-    rack-test (2.0.1)
+    rack-test (2.0.2)
       rack (>= 1.3)
     rack-utf8_sanitizer (1.7.0)
       rack (>= 1.0, < 3.0)
@@ -437,7 +437,8 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.4)
-    rubocop (1.31.0)
+    rubocop (1.31.1)
+      json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
