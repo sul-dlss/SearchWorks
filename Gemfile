@@ -84,9 +84,9 @@ gem "coderay"
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 7.0', path: '/Users/cabeer/Projects/blacklight/blacklight-release7x'
-gem "blacklight-marc", "~> 7.0"
-gem "blacklight_advanced_search", "~> 7.0", path: '/Users/cabeer/Projects/blacklight/blacklight_advanced_search'
+gem 'blacklight', '~> 7.27'
+gem "blacklight-marc", "~> 8.0"
+gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"
 gem 'blacklight-hierarchy', "~> 6.0"
 gem 'blacklight_dynamic_sitemap'
@@ -104,7 +104,7 @@ gem "retina_tag"
 gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 2'
 gem 'rack-utf8_sanitizer'
-gem 'ebsco-eds', github: 'ebsco/edsapi-ruby', branch: 'ruby3_updates'
+gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever' # manages cron jobs
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
@@ -117,4 +117,3 @@ gem 'bootstrap-sass'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
 gem 'faraday-detailed_logger', '< 2.4.0' # Fixes https://github.com/sul-dlss/SearchWorks/issues/2759
-gem 'view_component', '< 2.57'
