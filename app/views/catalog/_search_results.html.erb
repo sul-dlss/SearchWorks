@@ -1,73 +1,69 @@
+<% if page_location.access_point? %>
+  <% if page_location.collection? && get_collection.present? %>
+    <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+  <% elsif page_location.sdr? %>
+    <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+  <% else %>
+    <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+  <% end %>
+<% else %>
+  <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} catalog") %>
+<% end %>
+
+<% content_for(:head) do -%>
+  <%= render '/catalog/opensearch_response_metadata' %>
+  <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
+  <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
+<% end -%>
+
+
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>
   </div>
 </div>
 
+<% if @response.empty? %>
 <div class="row">
-  <% if @response.empty? %>
-    <div class="zero-results-heading">
-      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
-      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
-    </div>
-  <% end %>
-  <div id="sidebar" class="col-md-4 col-sm-5">
-    <% if @response.empty? %>
-      <%= render 'shared/chat_librarian_sidebar' %>
-    <% else %>
-      <%= render 'search_sidebar' %>
-    <% end %>
+  <div class="zero-results-heading">
+    <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+    <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
   </div>
-
+  <div id="sidebar" class="col-md-4 col-sm-5">
+    <%= render 'shared/chat_librarian_sidebar' %>
+  </div>
   <div id="content" class="col-md-8 col-sm-7">
-
-    <% if page_location.access_point? %>
-      <% if page_location.collection? && get_collection.present? %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-      <% elsif page_location.sdr? %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-      <% else %>
-        <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-      <% end %>
-    <% else %>
-      <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} catalog") %>
-    <% end %>
-
-    <% content_for(:head) do -%>
-      <%= render '/catalog/opensearch_response_metadata' %>
-      <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
-      <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
-    <% end -%>
-
-    <div class="search_num_of_results">
-      <% unless @response.empty? %>
-        <div class='results-heading'>
-          <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
-          <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
-          <%= link_to new_documents_feed_path do %>
-            <i class="rss-icon" aria-hidden="true"></i>
-            <span class="sr-only">RSS feed for this result</span>
-          <% end %>
-        </div>
-        <%= render 'search_header' %>
-      <% end %>
-    </div>
-
-    <%- if @response.empty? %>
-      <%= render "shared/zero_results" %>
-    <%- elsif render_grouped_response? %>
-      <%= render_grouped_document_index %>
-    <%- else %>
-      <%= render_document_index @response.documents %>
-      <% benchmark 'Alt results' do %>
-      <%= render 'alternate_catalog' if show_alternate_catalog? %>
-      <% end %>
-    <%- end %>
-
-    <%- unless @response.empty? %>
-      <%= render 'shared/side_nav_minimap' %>
-    <%- end %>
-
+    <div class="search_num_of_results"></div>
+    <%= render "shared/zero_results" %>
     <%= render 'results_pagination' %>
   </div>
 </div>
+<% else %>
+<div class="row">
+  <div id="sidebar" class="col-md-4 col-sm-5">
+    <%= render 'search_sidebar' %>
+  </div>
+
+  <div id="content" class="col-md-8 col-sm-7">
+    <div class="search_num_of_results">
+      <div class='results-heading'>
+        <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+        <h2><%= pluralize(number_with_delimiter(@response.total), "#{search_type_name} result") %></h2>
+        <%= link_to new_documents_feed_path do %>
+          <i class="rss-icon" aria-hidden="true"></i>
+          <span class="sr-only">RSS feed for this result</span>
+        <% end %>
+      </div>
+      <%= render 'search_header' %>
+    </div>
+
+    <%= render_document_index @response.documents %>
+    <% benchmark 'Alt results' do %>
+    <%= render 'alternate_catalog' if show_alternate_catalog? %>
+    <% end %>
+
+    <%= render 'shared/side_nav_minimap' %>
+    <%= render 'results_pagination' %>
+  </div>
+</div>
+<% end %>
