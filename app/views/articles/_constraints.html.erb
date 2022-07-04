@@ -1,6 +1,0 @@
-<% if query_has_constraints? %>
-  <div id="appliedParams" class="clearfix constraints-container">
-    <%= link_to("<i class='fa fa-fast-backward'></i> <span class='hidden-xs'>Articles+ start</span></a>".html_safe, articles_path, class: 'btn btn-primary btn-reset') %>
-    <%= render_constraints(params) %>
-  </div>
-<% end %>
