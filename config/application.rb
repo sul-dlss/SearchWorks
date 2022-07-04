@@ -38,7 +38,6 @@ module SearchWorks
     require 'live_lookup'
     require 'purl_embed'
     require 'search_query_modifier'
-    require 'blacklight_advanced_search/parsing_nesting_parser'
 
     # load all marc fields
     config.autoload_paths += %W(#{config.root}/app/models/marc_fields)

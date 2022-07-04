@@ -5,7 +5,8 @@ describe SearchBuilder do
 
   let(:blacklight_params) { {} }
   let(:solr_params) { {} }
-  let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil) }
+  let(:action_name) { 'index'}
+  let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil, action_name: action_name, controller_name: 'catalog') }
 
   before do
     # silly hack to avoid refactoring these tests
@@ -32,6 +33,8 @@ describe SearchBuilder do
   end
 
   describe "advanced search" do
+    let(:action_name) { 'advanced_search' }
+
     it "sets the facet limit to -1 (unlimited)" do
       search_builder.facets_for_advanced_search_form(solr_params)
       expect(solr_params).to include "f.access_facet.facet.limit" => -1,

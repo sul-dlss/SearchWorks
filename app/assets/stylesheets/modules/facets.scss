@@ -50,3 +50,7 @@
     color: $sul-facet-active-heading-color;
   }
 }
+
+.inclusive_or.card {
+  @extend .well;
+}

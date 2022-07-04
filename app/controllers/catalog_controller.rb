@@ -11,8 +11,6 @@ class CatalogController < ApplicationController
 
   include BlacklightRangeLimit::ControllerOverride
 
-  include BlacklightAdvancedSearch::Controller
-
   include AdvancedSearchParamsMapping
 
   include DatabaseAccessPoint
@@ -43,6 +41,8 @@ class CatalogController < ApplicationController
   before_action only: :index do
     blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
   end
+
+  before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
   configure_blacklight do |config|
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
@@ -117,6 +117,7 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
+    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
     config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
@@ -173,7 +174,7 @@ class CatalogController < ApplicationController
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
       }
-    }, component: Blacklight::FacetFieldListComponent
+    }, component: Blacklight::FacetFieldListComponent, include_in_advanced_search: false
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
@@ -537,5 +538,9 @@ class CatalogController < ApplicationController
 
   def set_search_query_modifier
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
+  end
+
+  def advanced_search_form?(*args, **kwargs)
+    action_name == 'advanced_search'
   end
 end

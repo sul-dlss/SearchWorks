@@ -1,3 +1,5 @@
+require 'blacklight_advanced_search/advanced_search_builder'
+
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
   include BlacklightAdvancedSearch::AdvancedSearchBuilder
@@ -41,6 +43,8 @@ class SearchBuilder < Blacklight::SearchBuilder
   end
 
   def on_home_page?
-    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank?
+    return false unless search_state.controller&.action_name == 'index' && search_state.controller.controller_name == 'catalog'
+
+    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
   end
 end

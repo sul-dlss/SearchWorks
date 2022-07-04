@@ -278,6 +278,15 @@ en:
       SPEC-COLL: Request on-site access
       request_on_site: Request on-site access
   blacklight:
+    advanced_search:
+      page_title: 'Advanced search in SearchWorks catalog'
+      form:
+        title: "Advanced search"
+        query_criteria_heading_html: "Match %{select_menu} of the fields below"
+        sort_label: "Sort results by"
+        search_btn_html: "Search"
+        start_over_html: "Clear form"
+        limit_criteria_heading_html: "Limit results by"
     course_reserves:
       page_title: "Course reserves in %{application_name}"
     email:
@@ -328,15 +337,6 @@ en:
       success: '<strong>Thank you!</strong> Your connection problem report has been sent.'
     range_limit:
       submit_limit: 'Apply'
-  blacklight_advanced_search:
-    form:
-      title: "Advanced search"
-      query_criteria_heading_html: "Match %{select_menu} of the fields below"
-      sort_label: "Sort results by"
-      search_btn: "<span class='bi-search'></span> Search"
-      start_over: "Clear form"
-      limit_criteria_heading_html: "Limit results by"
-    page_title: 'Advanced search in %{application_name}'
 
   record_side_nav:
     abstract:

@@ -1,5 +1,0 @@
-<div class="advanced-facet-limits panel-group">
-  <% facets_from_request(facet_field_names, @response).map { |display_facet| field_config = facet_configuration_for_field(display_facet.name); facet_field_presenter(field_config, display_facet) if should_render_field?(field_config, display_facet) }.compact.each do |facet_presenter| %>
-    <%= render Blacklight::FacetFieldCheckboxesComponent.new(facet_field: facet_presenter) %>
-  <% end %>
-</div>
