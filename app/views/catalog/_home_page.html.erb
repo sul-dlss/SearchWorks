@@ -7,13 +7,7 @@
 <div class="row catalog-home-page">
   <div class="col-md-4 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
     <h2>Find materials by&hellip;</h2>
-    <%= render_single_facet("access_facet", layout: "home_page_facet_layout") %>
-    <%=
-      render_single_facet("format_main_ssim", layout: "home_page_facet_layout", partial: "resource_type_facet") ||
-      render_single_facet("format", layout: "home_page_facet_layout", partial: "resource_type_facet")
-    %>
-    <%= render_single_facet("building_facet", layout: "home_page_facet_layout") %>
-    <%= render_single_facet("language", layout: "home_page_facet_layout") %>
+    <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet', 'language').values, response: @response)%>
   </div>
   <div class="features col-md-8 col-sm-6">
     <h2>Featured resources</h2>
