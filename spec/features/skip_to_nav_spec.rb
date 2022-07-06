@@ -42,10 +42,11 @@ feature "Skip-to Navigation" do
   scenario 'places focus on traditionally non-focusable elements', js: true do
     visit root_path
 
-    within '#skip-link' do
-      page.execute_script('$("a[href=\'#main-container\']").trigger("focus")') # Focus on link to make it visible
-      expect(page).to have_css('a[href="#main-container"]', visible: true)
+    body_element = page.find("body")
+    body_element.native.send_keys(:tab)
+    body_element.native.send_keys(:tab)
 
+    within '#skip-link' do
       click_link 'Skip to main content'
       active_element = page.evaluate_script('$(document.activeElement).attr("id")')
       expect(active_element).to eq 'main-container'
