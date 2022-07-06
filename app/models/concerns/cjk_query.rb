@@ -23,23 +23,23 @@ module CJKQuery
   end
 
   def modify_params_for_cjk_advanced(solr_params)
-    if blacklight_params.present? && !(solr_params[:q] =~ /_cjk/)
-      modifiable_params_keys.each do |param|
-        if blacklight_params[param]
-          if cjk_unigrams_size(blacklight_params[param]) > 0
-            cjk_local_params = cjk_mm_qs_params(blacklight_params[param])
-            if param == 'search'
-              solr_params[:q] = solr_params[:q].gsub("pf2=$pf2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
-            else
-              stripped_param = modify_field_key_for_cjk(param)
-              if cjk_local_params.present?
+    return if blacklight_params&.dig(:clause).blank? || solr_params[:q] =~ /_cjk/
 
-                solr_params[:q] = solr_params[:q].gsub(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{Regexp.escape(blacklight_params[param])}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + blacklight_params[param])
-              end
-              solr_params[:q] = solr_params[:q].gsub(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
-            end
-          end
+    modifiable_params_keys.each do |param|
+      hash = blacklight_params[:clause].values.find { |v| v[:field] == param } || {}
+      query = hash[:query]
+
+      next unless cjk_unigrams_size(query) > 0
+
+      cjk_local_params = cjk_mm_qs_params(query)
+      if param == 'search'
+        solr_params[:q] = solr_params[:q].gsub("pf2=$pf2 pf3=$pf3", "qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk mm=#{cjk_local_params['mm']} qs=#{cjk_local_params['qs']} ")
+      else
+        stripped_param = modify_field_key_for_cjk(param)
+        if cjk_local_params.present?
+          solr_params[:q] = solr_params[:q].gsub(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{Regexp.escape(query)}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + query)
         end
+        solr_params[:q] = solr_params[:q].gsub(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
       end
     end
   end
@@ -55,6 +55,11 @@ module CJKQuery
       {}
     end
   end
+
+  def modifiable_params_keys
+    blacklight_config.search_fields.keys
+  end
+
 
   def modify_field_key_for_cjk(field_key)
     field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')

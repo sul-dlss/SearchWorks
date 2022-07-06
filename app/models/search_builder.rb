@@ -32,10 +32,6 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
   end
 
-  def modifiable_params_keys
-    %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
-  end
-
   private
 
   def page_location
