@@ -1,18 +1,8 @@
 <% document ||= @document %>
-<% document.mods.abstract.each do |abstracts| %>
-  <% if abstracts.respond_to?(:values) %>
-    <%= mods_display_label(abstracts.label) %>
-    <dd class="section-abstract">
-      <%= abstracts.values.join %>
-    </dd>
-  <% end %>
+<% document.mods.abstract.each do |abstract| %>
+  <%= mods_record_field(abstract) %>
 <% end %>
 
 <% document.mods.contents.each do |contents| %>
-  <% if contents.respond_to?(:values) %>
-    <%= mods_display_label(contents.label) %>
-    <dd class="section-contents">
-      <%= contents.values.join %>
-    </dd>
-  <% end %>
+  <%= mods_record_field(contents) %>
 <% end %>
