@@ -62,22 +62,25 @@ describe CollectionHelper do
   end
 
   describe "#collection_breadcrumb_value" do
-    it "should return the collection name when present in the @document_list" do
+    it "should return the collection name when present" do
       allow(helper).to receive(:document_presenter).and_return(
         OpenStruct.new(heading: 'Title2')
       )
-      @document_list = [
+      document_list = [
         SolrDocument.new(collection: ['12345', '54321'], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
       ]
+      assign(:response, OpenStruct.new(documents: document_list))
       expect(helper.send(:collection_breadcrumb_value, '54321')).to eq 'Title2'
     end
-    it "should return the ID if there is no @documen_list" do
+    it "should return the ID if there is no @document_list" do
+      assign(:response, OpenStruct.new(documents: []))
       expect(helper.send(:collection_breadcrumb_value, '54321')).to eq '54321'
     end
-    it "should return the ID if there are no matching collections in the @document_list" do
-      @document_list = [
+    it "should return the ID if there are no matching collections" do
+      document_list = [
         SolrDocument.new(collection: ['12345', '54321'], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
       ]
+      assign(:response, OpenStruct.new(documents: document_list))
       expect(helper.send(:collection_breadcrumb_value, '11111')).to eq '11111'
     end
   end
