@@ -11,10 +11,9 @@
     max-height: 35px;
   }
 
-  .navbar-toggle {
+  .navbar-toggler {
     font-size: 20px;
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
   }
 
   // initial/unopened state is 270deg, triangle pointing to the right
@@ -22,7 +21,7 @@
     @extend .fa-rotate-270;
   }
 
-  button.navbar-toggle {
+  button.navbar-toggler {
     color: $white;
   }
 

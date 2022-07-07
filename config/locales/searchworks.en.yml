@@ -296,6 +296,8 @@ en:
       bookmarks:
         present: "Selected"
         absent: "Select"
+      facets:
+        title: 'Refine your results'
       form:
         q: ''
       zero_results:
