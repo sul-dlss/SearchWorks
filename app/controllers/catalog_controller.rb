@@ -422,7 +422,7 @@ class CatalogController < ApplicationController
 
     # Configure facet fields for BL advanced search
     config.advanced_search = Blacklight::OpenStructWithHashAccess.new(
-      enabled: false,
+      enabled: true,
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {

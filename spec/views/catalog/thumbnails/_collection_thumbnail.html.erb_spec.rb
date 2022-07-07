@@ -5,7 +5,11 @@ describe 'catalog/thumbnails/_collection_thumbnail' do
 
   subject { Capybara.string(rendered) }
 
-  before {  allow(view).to receive(:document).and_return(document) }
+  before do
+    allow(view).to receive(:document).and_return(document)
+    allow(view).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
+  end
+
 
   context 'gallery view' do
     before { allow(view).to receive(:document_index_view_type).and_return(:gallery) }

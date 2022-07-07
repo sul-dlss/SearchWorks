@@ -7,6 +7,7 @@ describe "catalog/thumbnails/_item_thumbnail" do
     allow(view).to receive(:isbn).and_return('')
     allow(view).to receive(:lccn).and_return('')
     allow(view).to receive(:document).and_return(document)
+    allow(view).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
   end
 
   context 'non SDR object' do

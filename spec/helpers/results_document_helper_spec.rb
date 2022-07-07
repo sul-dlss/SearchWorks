@@ -1,10 +1,8 @@
 require "spec_helper"
 
-def blacklight_config
-  CatalogController.blacklight_config
-end
-
 describe ResultsDocumentHelper do
+  let(:blacklight_config) { CatalogController.blacklight_config }
+
   before(:all) do
     data_01 = {
       publication_year_isi: 1999,

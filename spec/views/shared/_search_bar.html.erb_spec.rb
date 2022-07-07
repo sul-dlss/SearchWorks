@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe 'catalog/_search_form' do
+describe 'shared/_search_bar' do
   before do
     expect(view).to receive_messages(
       search_state: double('SearchState', params_for_search: {}),
-      blacklight_config: Blacklight::Configuration.new
+      search_action_url: '/',
+      blacklight_config: Blacklight::Configuration.new,
+      controller_name: controller_name
     )
   end
 
   describe 'input placeholder' do
     context 'article search' do
-      before do
-        expect(view).to receive_messages(controller_name: 'articles')
-      end
+      let(:controller_name) { 'articles' }
 
       it 'has a contextual placeholder' do
         render
@@ -24,7 +24,7 @@ describe 'catalog/_search_form' do
     end
 
     context 'non-article search' do
-      before { expect(view).to receive_messages(controller_name: 'anything-else') }
+      let(:controller_name) { 'anything-else' }
 
       it 'has a contextual placeholder' do
         render
