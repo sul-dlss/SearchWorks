@@ -1,0 +1,2 @@
+class ToolbarSearchContextInfoComponent < Blacklight::SearchContextComponent
+end
