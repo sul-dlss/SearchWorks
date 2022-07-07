@@ -1,5 +1,6 @@
 <% # main container for facets/limits menu -%>
-<% if has_facet_values?  %>
+<% facets = capture { render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) } %>
+<% if facets.present?  %>
   <div id="facets" class="facets sidenav">
     <%= render 'facet_options' %>
     <div class="top-panel-heading panel-heading">
@@ -18,7 +19,7 @@
     </div>
 
     <div id="facet-panel-collapse" class="collapse panel-group">
-      <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+      <%= facets %>
     </div>
   </div>
 <% end %>
