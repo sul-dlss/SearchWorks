@@ -1,7 +1,6 @@
 #search-navbar-container {
   background-color: $sul-navbar-brand-color;
-  height: 100px;
-  max-height: 100px;
+  min-height: 100px;
   padding: 0;
 
   #search-navbar {
@@ -19,25 +18,33 @@
   .search-navbar-headings {
     align-items: center;
     display: flex;
-    height: 100%;
+    justify-content: left;
 
-    .navbar-brand {
+    .navbar-brand img {
       height: 28px;
-      padding: 0;
-
-      img {
-        height: 28px;
-        // Adding negative top margin to handle images + text alignment issues
-        margin-top: -1px;
-      }
+      margin-top: -1px;
     }
 
     .search-dropdown {
       display: inline-block;
-      margin-left: 1em;
+      margin-right: 1em;
 
       .search-target {
+        line-height: 1.1;
         margin: 0;
+        padding: 0;
+
+        .caret {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 2px;
+          vertical-align: middle;
+          border-top: 4px dashed;
+          border-top: 4px solid \9;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+        }
       }
 
       .dropdown-menu {
@@ -70,10 +77,14 @@
     flex: auto;
 
     .input-group-addon {
-      &.for-search-field {
+      &.for-search-field, #search_field {
         border-radius: 4px 0 0 4px;
       }
     }
+  }
+
+  .search-btn {
+    border-radius: 0 4px 4px 0;
   }
 
   .search-target {
@@ -89,10 +100,6 @@
   }
 
   @media screen and (max-width: $screen-md-min) {
-    .input-group-btn {
-      width: 1%;
-    }
-
     .navbar-form {
       border: 0;
       margin: 0 auto;
@@ -114,20 +121,12 @@
     }
 
     .search_field {
-      width: 82px;
+      width: 95px;
     }
 
     .search-navbar-headings {
-      height: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-      text-align: center;
-
-      .navbar-brand img {
-        // Adding negative top margin to handle images + text alignment issues
-        margin-top: -2px;
-      }
+      justify-content: center;
+      width: 100%;
 
       .search-dropdown {
         .dropdown-menu {

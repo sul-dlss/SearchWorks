@@ -112,9 +112,10 @@ GEM
       deprecation
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
+    bootstrap (4.6.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
@@ -418,6 +419,7 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
+    popper_js (1.16.0)
     psych (5.1.0)
       stringio
     public_suffix (4.0.7)
@@ -654,7 +656,7 @@ DEPENDENCIES
   blacklight_dynamic_sitemap
   blacklight_range_limit (~> 8.0)
   bootsnap
-  bootstrap-sass
+  bootstrap (~> 4.0)
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-passenger

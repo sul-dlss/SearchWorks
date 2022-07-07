@@ -13,7 +13,7 @@ en:
         access_point:
           databases:
             title: 'Within %{access_point}'
-        more_html: 'more <span class="sr-only">%{facet}</span> <i class="fa fa-angle-double-right"></i>'
+        more_html: 'more <span class="sr-only">%{field_name}</span> <i class="fa fa-angle-double-right"></i>'
       form:
         submit_html: '<span class="sr-only">Search</span><span class="bi-search"></span>'
         submit: ''
