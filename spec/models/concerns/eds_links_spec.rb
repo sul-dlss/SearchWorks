@@ -92,13 +92,23 @@ RSpec.describe EdsLinks do
       expect(document.eds_links.all.first).to be_stanford_only
     end
 
-    it 'does not set HTML links to stanford only' do
+    it 'sets HTML links to stanford only' do
       document['eds_fulltext_links'].first['label'] = 'HTML full text'
+      expect(document.eds_links.all.first).to be_stanford_only
+    end
+
+    it 'sets SFX links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
+      expect(document.eds_links.all.first).to be_stanford_only
+    end
+
+    it 'does not set ILL links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = 'View request options'
       expect(document.eds_links.all.first).not_to be_stanford_only
     end
 
-    it 'does not set SFX links to stanford only' do
-      document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
+    it 'does not set open access links to stanford only' do
+      document['eds_fulltext_links'].first['label'] = :open_access_link
       expect(document.eds_links.all.first).not_to be_stanford_only
     end
   end
