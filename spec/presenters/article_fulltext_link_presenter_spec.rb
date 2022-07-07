@@ -45,6 +45,27 @@ describe ArticleFulltextLinkPresenter do
       end
     end
 
+    context 'when the document has a stanford-only link' do
+      let(:document) do
+        SolrDocument.new(
+          'id' => '00001',
+          'eds_fulltext_links' => [
+            { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
+          ]
+        )
+      end
+
+      before do
+        allow(presenter).to receive(:article_fulltext_link_url).and_return('http://example.com')
+        allow(presenter).to receive(:image_url)
+        allow(presenter).to receive(:image_tag)
+      end
+
+      it 'includes a span with stanford-only class' do
+        expect(Capybara.string(presenter.links.first)).to have_css('span.stanford-only')
+      end
+    end
+
     context 'when the document does not have a link but does include full-text' do
       let(:document) { SolrDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
 

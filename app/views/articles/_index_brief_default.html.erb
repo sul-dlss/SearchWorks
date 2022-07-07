@@ -26,6 +26,9 @@
           <span class="online-label">Full text</span>
           <%= link_to(link.text, link.href) %>
         <% end %>
+        <% if link.stanford_only? %>
+          <span class="stanford-only"></span>
+        <% end %>
       </li>
     <% end %>
   </ul>

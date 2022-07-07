@@ -24,6 +24,10 @@ class ArticleFulltextLinkPresenter
     "<span class='online-label'>Full text</span>"
   end
 
+  def stanford_only_icon
+    "<span class='stanford-only'></span>"
+  end
+
   def online_access_panel?
     document.access_panels.online?
   end
@@ -52,6 +56,7 @@ class ArticleFulltextLinkPresenter
       #{(link_to('View on detail page', article_url(document)) if document_has_fulltext?)}
       #{image_tag(image_url('pdf-icon.svg'), height: '20px', alt: 'PDF')}
       #{link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type), data: { 'turbolinks' => false })}
+      #{stanford_only_icon}
     HTML
   end
 end
