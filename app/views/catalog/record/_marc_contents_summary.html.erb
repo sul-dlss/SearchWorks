@@ -44,7 +44,7 @@
 
 <% document.fetch(:summary_struct, []).each do |summary|%>
   <% summary.fetch(:fields, []).each do |field| %>
-    <dt><%= summary[:label] %></dt>
+    <dt><%= summary[:label] || 'Summary' %></dt>
     <dd>
       <%= render_struct_field_data document, field[:field] %>
       <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
