@@ -155,7 +155,6 @@ class ArticlesController < ApplicationController
     # Setting `if: false` for the limiters facet so the facet does not render as
     # a facet but we still can apploy our configured label to the breadcrumbs
     config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false
-    # Commenting this out temporarily until we have a better date facet option
     config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true
     config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: AdditionalSelectionsFacetComponent
     config.add_facet_field 'eds_language_facet', label: 'Language', component: Blacklight::FacetFieldListComponent # , limit: 20 TODO: Need to handle facet limiting
