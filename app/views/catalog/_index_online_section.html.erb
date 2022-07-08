@@ -1,4 +1,4 @@
-<% display_panel = document.access_panels.online? %>
+<% display_panel = document.preferred_online_links.present? %>
 <dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8 <%= 'hide' unless display_panel %>">
   <% if document.druid %>
     <dt class="also-online-label">Also online at</dt>
@@ -7,12 +7,10 @@
   <% end %>
   <dd>
     <ul class="online-links" data-behavior="truncate-results-online-links">
-      <% if document.access_panels.online? %>
-        <% document.access_panels.online.links.each do |link| %>
-          <li class="<%= 'stanford-only' if link.stanford_only? %>">
-            <%= link.html.html_safe %>
-          </li>
-        <% end %>
+      <% document.preferred_online_links.each do |link| %>
+        <li class="<%= 'stanford-only' if link.stanford_only? %>">
+          <%= link.html.html_safe %>
+        </li>
       <% end %>
 
       <% if document[:managed_purl_urls].blank? %>

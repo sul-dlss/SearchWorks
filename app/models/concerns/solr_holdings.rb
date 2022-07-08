@@ -44,6 +44,10 @@ module SolrHoldings
     end
   end
 
+  def cdl?
+    druid && holdings.callnumbers.any? { |call| call.home_location == 'CDL' }
+  end
+
   private
 
   def live_data

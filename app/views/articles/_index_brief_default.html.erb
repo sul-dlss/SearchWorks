@@ -13,9 +13,9 @@
   </h3>
 </div>
 
-<% if document.access_panels.online? && !document.eds_restricted? %>
+<% if document.preferred_online_links.present? && !document.eds_restricted? %>
   <ul class='document-metadata dl-horizontal dl-invert'>
-    <% document.access_panels.online.links.each do |link| %>
+    <% document.preferred_online_links.each do |link| %>
       <li>
         <% if link.href == 'detail' %>
           <span class="online-label">Full text</span>

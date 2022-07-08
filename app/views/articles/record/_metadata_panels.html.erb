@@ -1,4 +1,4 @@
 <div class="metadata-panels">
-  <%= render('articles/access_panels/online', document: document) if document.access_panels.online? %>
-  <%= render('articles/access_panels/sfx', document: document) if document.access_panels.sfx? %>
+  <%= render AccessPanels::OnlineEdsComponent.new(document: document) %>
+  <%= render AccessPanels::SfxComponent.new(document: document) %>
 </div>

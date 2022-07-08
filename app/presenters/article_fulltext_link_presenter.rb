@@ -29,11 +29,11 @@ class ArticleFulltextLinkPresenter
   end
 
   def online_access_panel?
-    document.access_panels.online?
+    access_panel_links.present?
   end
 
   def access_panel_links
-    document.access_panels.online.links || []
+    document.preferred_online_links || []
   end
 
   def document_has_fulltext?

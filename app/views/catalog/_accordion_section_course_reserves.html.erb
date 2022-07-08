@@ -3,32 +3,21 @@
   id = document[:id]
 %>
 
-<% if document.access_panels.course_reserve.courses.present? %>
+<% if document.course_reserves&.courses.present? %>
   <%
-    count = document.access_panels.course_reserve.courses.length
-    snippet = document.access_panels.course_reserve.courses.map(&:id).join(', ')
+    count = document.course_reserves.courses.length
+    snippet = document.course_reserves.courses.map(&:id).join(', ')
   %>
   <div class="accordion-section course-reserves">
     <button class="header" data-accordion-section-target=".<%= id %>-course-reserves" aria-expanded="false">
-      <span class="section-label">Course reserve</span> 
+      <span class="section-label">Course reserve</span>
       <span class="glyphicon glyphicon-chevron-right"></span>
     </button>
     <span class="snippet <%= id %>-course-reserves-snippet" data-behavior="trunk8">
       <%= snippet %>
     </span>
     <div class="details <%= id %>-course-reserves" aria-expanded="false">
-      <dl class="dl-horizontal">
-        <% document.access_panels.course_reserve.courses.each do |course| %>
-          <dt>Course</dt>
-          <dd>
-            <%= link_to_course_reserve_course(course) %>
-          </dd>
-          <dt>Instructor(s)</dt>
-          <dd>
-            <%= course.instructor %>
-          </dd>
-        <% end %>
-      </dl>
+      <%= render AccessPanels::CourseReservesListComponent.new(document: document, class: 'dl-horizontal') %>
     </div>
   </div>
 <% end %>
