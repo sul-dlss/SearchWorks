@@ -61,7 +61,12 @@
 <% if document.marc_links.supplemental.present? %>
   <dt title="Supplemental links">Supplemental links</dt>
   <dd>
-    <%= document.marc_links.supplemental.map(&:html).join("<br/>").html_safe %>
+    <% document.marc_links.supplemental.map do |link| %>
+      <%= link.html.html_safe %>
+      <% if link.stanford_only? %>
+        <span class='stanford-only'></span>
+      <% end %>
+    <% end.join("<br/>") %>
   </dd>
 <% end %>
 
