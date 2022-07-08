@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'sfx_data/show.html.erb' do
+describe 'sfx_data/show' do
   let(:sfx_data) do
     instance_double(
       SfxData,

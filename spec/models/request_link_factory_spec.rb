@@ -23,16 +23,6 @@ RSpec.describe RequestLinkFactory do
     end
   end
 
-  context 'for the SALs' do
-    it do
-      expect(factory.for(library: 'SAL', location: 'STACKS')).to eq RequestLinks::SalRequestLink
-    end
-
-    it do
-      expect(factory.for(library: 'SAL3', location: 'STACKS')).to eq RequestLinks::SalRequestLink
-    end
-  end
-
   pending 'for SSRC-DATA' do
     it do
       expect(factory.for(library: 'GREEN', location: 'SSRC-DATA')).to eq RequestLinks::SsrcDataRequestLink

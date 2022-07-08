@@ -3,6 +3,11 @@
 require 'spec_helper'
 
 describe AlternateCatalogHelper do
+  before do
+    allow(helper).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
+    allow(helper).to receive(:blacklight_configuration_context).and_return(Blacklight::Configuration::Context.new(helper))
+  end
+
   describe 'show_alternate_catalog?' do
     context 'with q params and non-gallery view' do
       it do

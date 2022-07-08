@@ -8,18 +8,17 @@ describe ReplaceSpecialQuotes do
 
   before do
     controller.extend(ReplaceSpecialQuotes)
-    allow(controller).to receive(:modifiable_params_keys).and_return(%w[a_param b_param c_param d_param])
-    allow(controller).to receive(:params).and_return(HashWithIndifferentAccess.new(params))
+    allow(controller).to receive(:params).and_return(params)
   end
 
   describe "with special quotes" do
-    let(:params) { { a_param: "«#{q}» ‘#{q}’ ‚#{q}‛ “#{q}” „#{q}‟ ‹#{q}› 「#{q}」『#{q}』 〝#{q}〞 〟#{q}〟 ﹂#{q}﹁  ﹄#{q}﹃ ＂#{q}＂ ｢#{q}｣" } }
+    let(:params) { { clause: { '1': { query: "«#{q}» ‘#{q}’ ‚#{q}‛ “#{q}” „#{q}‟ ‹#{q}› 「#{q}」『#{q}』 〝#{q}〞 〟#{q}〟 ﹂#{q}﹁  ﹄#{q}﹃ ＂#{q}＂ ｢#{q}｣" } } }.with_indifferent_access }
 
     it "should replace the special quote characters w/ actual quote characters" do
       controller.send(:replace_special_quotes)
-      expect(params[:a_param].scan("\"#{q}\"").length).to eq 14
+      expect(params.dig(:clause, '1', :query).scan("\"#{q}\"").length).to eq 14
       ["«", "「", "〟", "』"].each do |character|
-        expect(params[:a_param]).not_to include(character)
+        expect(params.dig(:clause, '1', :query)).not_to include(character)
       end
     end
   end
@@ -28,50 +27,55 @@ describe ReplaceSpecialQuotes do
     context 'when there is only one single quotation mark in the string' do
       let(:params) do
         {
-          a_param: "#{q}‘s",
-          b_param: "#{q}’s",
-          c_param: "#{q}‚s",
-          d_param: "#{q}‛s"
-        }
+          clause: {
+            a_param: { query: "#{q}‘s" },
+            b_param: { query: "#{q}’s" },
+            c_param: { query: "#{q}‚s" },
+            d_param: { query:  "#{q}‛s" }
+          }
+        }.with_indifferent_access
       end
 
       it 'should be replaced with an apostrophe' do
         controller.send(:replace_special_quotes)
 
-        expect(params[:a_param]).to eq "query's"
-        expect(params[:b_param]).to eq "query's"
-        expect(params[:c_param]).to eq "query's"
-        expect(params[:d_param]).to eq "query's"
+        expect(params.dig(:clause, :a_param, :query)).to eq "query's"
+        expect(params.dig(:clause, :b_param, :query)).to eq "query's"
+        expect(params.dig(:clause, :c_param, :query)).to eq "query's"
+        expect(params.dig(:clause, :d_param, :query)).to eq "query's"
       end
     end
 
     context 'when there are multiple single quotation marks in the string' do
       let(:params) do
         {
-          a_param: "‘#{q}‘",
-          b_param: "’#{q}’",
-          c_param: "‚#{q}‚",
-          d_param: "‛#{q}‛"
-        }
+          clause: {
+            a_param: { query: "‘#{q}‘" },
+            b_param: { query: "’#{q}’" },
+            c_param: { query: "‚#{q}‚" },
+            d_param: { query: "‛#{q}‛" }
+          }
+        }.with_indifferent_access
       end
 
       it 'should be replaced with the standard double quote character' do
         controller.send(:replace_special_quotes)
 
-        expect(params[:a_param]).to eq '"query"'
-        expect(params[:b_param]).to eq '"query"'
-        expect(params[:c_param]).to eq '"query"'
-        expect(params[:d_param]).to eq '"query"'
+        expect(params.dig(:clause, :a_param, :query)).to eq '"query"'
+        expect(params.dig(:clause, :b_param, :query)).to eq '"query"'
+        expect(params.dig(:clause, :c_param, :query)).to eq '"query"'
+        expect(params.dig(:clause, :d_param, :query)).to eq '"query"'
       end
     end
   end
 
   describe "without special quotes" do
-    let(:params) { { a_param: 'Hello' } }
+    let(:params) { { clause: { '1': { query: 'Hello' } } }.with_indifferent_access }
 
     it "should not modify the parameter" do
+      expect(params.dig(:clause, '1', :query)).to eq 'Hello'
       controller.send(:replace_special_quotes)
-      expect(params[:a_param]).to eq 'Hello'
+      expect(params.dig(:clause, '1', :query)).to eq 'Hello'
     end
   end
 end

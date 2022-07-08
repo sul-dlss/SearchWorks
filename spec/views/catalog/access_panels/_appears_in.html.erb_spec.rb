@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/access_panels/_appears_in.html.erb' do
+describe 'catalog/access_panels/_appears_in' do
   subject { Capybara.string(rendered) }
 
   let(:set_documents) { [] }
@@ -8,7 +8,7 @@ describe 'catalog/access_panels/_appears_in.html.erb' do
   before do
     allow(document).to receive_messages(set_document_list: set_documents)
     allow(view).to receive(:link_to_document).with(any_args).and_return('The Set Object')
-    allow(view).to receive_messages(current_search_session: {}, search_session: {})
+    allow(view).to receive_messages(current_search_session: {}, search_session: {}, blacklight_config: CatalogController.blacklight_config)
     assign(:document, document)
     render
   end

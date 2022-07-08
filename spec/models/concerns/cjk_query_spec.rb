@@ -4,23 +4,30 @@ require "spec_helper"
 
 describe CJKQuery do
   # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
-  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config)) }
+  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access) }
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
 
-  before do
-    allow(search_builder).to receive(:blacklight_params).and_return(blacklight_params)
-    search_builder.extend(CJKQuery)
-  end
-
   describe "modify_params_for_cjk_advanced" do
-    let(:blacklight_params) { { 'search' => q_str, 'search_title' => q_str, 'search_author' => q_str, 'subject_terms' => q_str, 'series_search' => q_str, 'pub_search' => q_str, 'isbn_search' => q_str } }
+    let(:blacklight_params) do
+      {
+        clause: {
+          '1': { field: 'search', query: q_str },
+          '2': { field: 'search_title', query: q_str },
+          '3': { field: 'search_author', query: q_str },
+          '4': { field: 'subject_terms', query: q_str },
+          '5': { field: 'series_search', query: q_str },
+          '6': { field: 'pub_search', query: q_str },
+          '7': { field: 'isbn_search', query: q_str }
+        }
+      }
+    end
+
     let(:solr_params) { { q: solr_q } }
     let(:local_params) { "mm=#{cjk_mm} qs=0" }
 
     before do
-      allow(search_builder).to receive(:modifiable_params_keys) { ['search', 'search_author', 'search_title', 'subject_terms', 'series_search', 'pub_search', 'isbn_search'] }
       search_builder.modify_params_for_cjk_advanced(solr_params)
     end
 

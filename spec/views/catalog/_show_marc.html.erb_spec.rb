@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/_show_marc.html.erb' do
+describe 'catalog/_show_marc' do
   include MarcMetadataFixtures
   before do
     allow(view).to receive(:add_purl_embed_header).and_return('')

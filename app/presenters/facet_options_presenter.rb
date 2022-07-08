@@ -33,7 +33,7 @@ class FacetOptionsPresenter
 
   class Limiter
     FACET_FIELD = 'eds_search_limiters_facet'.freeze
-    delegate :facet_in_params?, :path_for_facet, :search_action_path, :search_state, to: :context
+    delegate :facet_item_presenter, :search_action_path, :search_state, :facet_configuration_for_field, to: :context
 
     def initialize(limiter, params, context)
       @limiter = limiter
@@ -62,15 +62,19 @@ class FacetOptionsPresenter
     end
 
     def selected?
-      facet_in_params?(FACET_FIELD, label)
+      search_state.filter(config).include?(label)
     end
 
     def search_url
       if selected?
-        search_action_path(search_state.remove_facet_params(FACET_FIELD, label))
+        search_action_path(search_state.filter(FACET_FIELD).remove(label).to_h)
       else
-        path_for_facet(FACET_FIELD, label)
+        (config.item_presenter || Blacklight::FacetItemPresenter).new(label, config, context, FACET_FIELD).href
       end
+    end
+
+    def config
+      facet_configuration_for_field(FACET_FIELD)
     end
 
     private

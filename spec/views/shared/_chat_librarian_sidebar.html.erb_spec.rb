@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'shared/_chat_librarian_sidebar.html.erb' do
+describe 'shared/_chat_librarian_sidebar' do
   context 'on campus or logged in' do
     before do
       allow(view).to receive(:on_campus_or_su_affiliated_user?).and_return true

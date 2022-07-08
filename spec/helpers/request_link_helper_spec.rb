@@ -110,7 +110,7 @@ describe RequestLinkHelper do
       end
 
       before do
-        expect(helper).to receive(:show_presenter).with(ssrc_document).and_return(presenter)
+        expect(helper).to receive(:document_presenter).with(ssrc_document).and_return(presenter)
       end
 
       it 'should not include data attributes that will cause the link to be rendered in a modal' do
@@ -174,7 +174,7 @@ describe RequestLinkHelper do
       end
 
       before do
-        expect(helper).to receive(:show_presenter).with(ssrc_document).and_return(presenter)
+        expect(helper).to receive(:document_presenter).with(ssrc_document).and_return(presenter)
       end
 
       it 'should link to a different form' do

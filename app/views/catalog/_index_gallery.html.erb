@@ -5,13 +5,13 @@
     :counter => counter,
     :suppress_link => true
   }
-  context_href = (document_link_params(document, {:counter => counter}))[:data][:"context-href"]
+  context_href = (document_link_params(document, {:counter => counter})).dig(:data, :"context-href")
 %>
 
 <div class="gallery-document" <%= preview_data_attrs(true, "preview-gallery", document[:id], ".#{preview_container}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
   <div class="item-thumb">
     <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
-      <%= render_thumbnail_tag(document, {}, options) %>
+      <%= document_presenter(document).thumbnail.thumbnail_tag({}, options) %>
     </div>
   </div>
   <div class="caption">

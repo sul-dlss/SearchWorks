@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_marc_field.html.erb' do
+describe 'marc_fields/_marc_field' do
   subject { Capybara.string(rendered) }
 
   let(:marc_field) do

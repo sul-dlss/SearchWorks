@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/access_panels/_online.html.erb" do
+describe "catalog/access_panels/_online" do
   include Marc856Fixtures
   describe "non-marc record" do
     before do

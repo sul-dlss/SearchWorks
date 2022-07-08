@@ -65,12 +65,6 @@ RSpec.describe RequestLinks::HopkinsRequestLink do
 
         it { expect(link).not_to be_show_location_level_request_link }
       end
-
-      context 'temporary access' do
-        let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123', item_display: item_display_field) }
-
-        it { expect(link).not_to be_show_location_level_request_link }
-      end
     end
   end
 end

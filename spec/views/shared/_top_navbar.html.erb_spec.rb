@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'shared/_top_navbar.html.erb' do
+describe 'shared/_top_navbar' do
   let(:user) { double('user') }
 
   before do

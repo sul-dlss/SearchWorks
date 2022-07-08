@@ -6,12 +6,12 @@
         <span class="fa fa-bars"></span>
       </button>
       <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe -%>
-      <% if @previous_document || @next_document -%>
+      <% if @search_context[:prev] || @search_context[:next] -%>
         <div class="sul-record-page-info">
           <div class="sul-record-page-info-inner">
-            <%= link_to_previous_document @previous_document if @previous_document -%>
+            <%= link_to_previous_document @search_context[:prev] if @search_context[:prev] -%>
             <span class="page-entries"><%= item_page_entry_info -%></span>
-            <%= link_to_next_document @next_document if @next_document -%>
+            <%= link_to_next_document @search_context[:next] if @search_context[:next] -%>
           </div>
         </div>
       <% end -%>

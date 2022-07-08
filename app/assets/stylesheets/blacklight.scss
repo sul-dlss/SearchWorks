@@ -3,6 +3,7 @@
 @import 'bootstrap-sprockets';
 
 @import 'bootstrap';
+@import 'bootstrap-backports';
 
 @import 'bootstrap-mixins';
 
@@ -11,5 +12,42 @@
 @import 'blacklight/blacklight';
 @import 'blacklight_marc';
 
-
 @import 'blacklight/hierarchy/hierarchy';
+
+// the default bootstrap font-family list includes "Segoe UI Emoji", which, on windows
+// renders our remove icon as an emoji-sized x instead of what we see on all other platforms...
+// so, for now (until we replace it with an SVG icon or something), we get to override bootstrap:
+$remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+
+.remove-icon {
+  font-family: $remove-icon-font-family;
+}
+
+.facet-values .remove-icon {
+  padding-left: 12px;
+}
+
+.range_limit {
+  input {
+    width: 14ch !important;
+  }
+
+  .input-group {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  // Blacklight 6's range limit didn't have this button
+  .view_larger {
+    display: none;
+  }
+
+  .input-group-append {
+    display: flex;
+  }
+
+  .submit {
+    @extend .btn-sm;
+    border-radius: 0px 3px 3px 0px;
+  }
+}

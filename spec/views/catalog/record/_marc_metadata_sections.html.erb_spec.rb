@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_marc_metadata_sections.html.erb" do
+describe "catalog/record/_marc_metadata_sections" do
   include MarcMetadataFixtures
 
   describe "Metadata sections all available" do

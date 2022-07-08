@@ -1,9 +1,1 @@
-<% doc_presenter = presenter(document) -%>
-<% fields.each do |field_name| -%>
-  <% field_name = field_name.to_s -%>
-  <% value = doc_presenter.field_value field_name -%>
-  <% if value.present? %>
-    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
-    <dd class="blacklight-<%= field_name.parameterize %>"><%= value %></dd>
-  <% end -%>
-<% end -%>
+<%= render Blacklight::MetadataFieldComponent.with_collection(document_presenter(document).field_presenters.select { |presenter| fields_to_render.keys.map(&:to_s).include? presenter.field_config.key.to_s }, layout: MetadataFieldLayoutComponent) %>

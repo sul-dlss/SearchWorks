@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "shared/_zero_results.html.erb" do
+describe "shared/_zero_results" do
   let(:config) {
     Blacklight::Configuration.new do |config|
       config.add_search_field 'search', label: 'All fields'
@@ -39,8 +39,7 @@ describe "shared/_zero_results.html.erb" do
   it 'renders alternate catalog' do
     allow(view).to receive(:show_alternate_catalog?).and_return(true)
     allow(view).to receive(:params).and_return(q: 'test123')
-    # set view context /shrug
-    lookup_context.view_paths = ['app/views/catalog', 'app/views']
+    stub_template '_alternate_catalog.html.erb' => '<div class="alternate-catalog"></div>'
     render
     expect(rendered).to have_css '.alternate-catalog'
   end

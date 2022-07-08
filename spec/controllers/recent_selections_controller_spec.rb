@@ -8,7 +8,7 @@ describe RecentSelectionsController do
     let!(:article_bookmark) { Bookmark.create!(document_id: 'abc__1', user: user, record_type: 'article') }
 
     it 'returns the counts of article and catalog bookmarks' do
-      @controller.stub_chain(:current_or_guest_user, :bookmarks).and_return(Bookmark.all)
+      allow(controller).to receive(:current_or_guest_user).and_return(user)
       get :index, xhr: true
       expect(response).to render_template('index')
       expect(assigns(:catalog_count)).to eq 2

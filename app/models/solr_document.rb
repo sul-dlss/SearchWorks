@@ -47,7 +47,7 @@ class SolrDocument
   extension_parameters[:marc_source_field] = :marcxml
   extension_parameters[:marc_format_type] = :marcxml
 
-  use_extension(Blacklight::Solr::Document::Marc) do |document|
+  use_extension(Blacklight::Marc::DocumentExtension) do |document|
     document.key?(:marcxml) || document.key?(:marcjson_ss)
   end
 

@@ -20,10 +20,8 @@ RSpec.describe RequestLinks::HooverArchiveRequestLink do
   end
 
   describe '#url' do
-    context 'when not available via temporary access' do
-      it 'is the finding aid link' do
-        expect(link.url).to eq 'http://oac.cdlib.org/ark:/abc123'
-      end
+    it 'is the finding aid link' do
+      expect(link.url).to eq 'http://oac.cdlib.org/ark:/abc123'
     end
   end
 
@@ -34,17 +32,6 @@ RSpec.describe RequestLinks::HooverArchiveRequestLink do
       it 'renders a link w/ custom link text' do
         expect(rendered).to have_link('Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123')
       end
-    end
-
-    context 'when available via temporary access' do
-      let(:document) do
-        SolrDocument.new(
-          url_suppl: ['http://oac.cdlib.org/ark:/abc123'],
-          ht_htid_ssim: 'abc123'
-        )
-      end
-
-      it { expect(rendered).to have_content 'Not available to request' }
     end
 
     context 'when a finding aid is not present' do

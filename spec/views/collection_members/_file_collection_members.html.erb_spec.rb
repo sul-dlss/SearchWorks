@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "collection_members/_file_collection_members.html.erb" do
+describe "collection_members/_file_collection_members" do
   let(:document) { SolrDocument.new() }
   let(:collection_members) { [
     SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean"),
@@ -10,7 +10,7 @@ describe "collection_members/_file_collection_members.html.erb" do
   before do
     allow(collection_members).to receive(:total).and_return('10')
     assign(:document, document)
-    allow(view).to receive(:show_presenter).and_return(OpenStruct.new(heading: "File Item"))
+    allow(view).to receive(:document_presenter).and_return(OpenStruct.new(heading: "File Item"))
     expect(document).to receive(:collection_members).at_least(1).times.and_return(collection_members)
     render
   end

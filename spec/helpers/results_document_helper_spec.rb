@@ -1,10 +1,8 @@
 require "spec_helper"
 
-def blacklight_config
-  CatalogController.blacklight_config
-end
-
 describe ResultsDocumentHelper do
+  let(:blacklight_config) { CatalogController.blacklight_config }
+
   before(:all) do
     data_01 = {
       publication_year_isi: 1999,
@@ -34,13 +32,6 @@ describe ResultsDocumentHelper do
   end
 
   describe "Render metadata" do
-    it "should return main title" do
-      expect(get_main_title(@document_01)).to eq "Car : a drama of the American workplace"
-    end
-    it 'should return a blank title if one does not exist' do
-      expect(get_main_title(@document_04)).to eq ""
-    end
-
     describe '#get_main_title_date' do
       it "should return date and date ranges" do
         expect(get_main_title_date(@document_01)).to eq "[1999]"

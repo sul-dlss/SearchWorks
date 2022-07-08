@@ -15,7 +15,7 @@ en:
             title: 'Within %{access_point}'
         more_html: 'more <span class="sr-only">%{facet}</span> <i class="fa fa-angle-double-right"></i>'
       form:
-        submit_html: '<span class="sr-only">Search</span><span class="glyphicon glyphicon-search"></span>'
+        submit_html: '<span class="sr-only">Search</span><span class="bi-search"></span>'
         submit: ''
       form_label: 'search for'
       librarian_view:
@@ -52,12 +52,12 @@ en:
     tools:
       cite_html: '<i class="fa fa-quote-left"></i> Cite'
       send_to_html: '<i class=" fa fa-share-alt"></i> Send to <span class="caret"></span>'
-      sms_html: '<span class="glyphicon glyphicon-phone"></span> text'
-      email_html: '<span class="glyphicon glyphicon-envelope"></span> email'
+      sms_html: '<span class="bi-phone"></span> text'
+      email_html: '<span class="bi-envelope-fill"></span> email'
       refworks_html: '<span class="glyphicon glyphicon-share-alt sul-icon-refworks"></span> RefWorks'
       endnote_html: '<span class="glyphicon glyphicon-share-alt sul-icon-endnote"></span> EndNote'
       ris_html: '<span class="glyphicon glyphicon-download-alt"></span> RIS download'
-      printer_html: '<span class="glyphicon glyphicon-print"></span> printer'
+      printer_html: '<span class="bi-printer-fill"></span> printer'
       cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
       send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to <span class="caret"></span>'
       librarian_view: 'Librarian view'

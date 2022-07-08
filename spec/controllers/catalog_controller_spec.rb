@@ -172,7 +172,6 @@ describe CatalogController do
         expect(body['title']).to eq 'Car : a drama of the American workplace'
         expect(body['format']).to eq(['Book'])
         expect(body['online']).to eq([])
-        expect(body['temporary_access']).to eq false
         expect(body['isbn']).to eq(%w[0393040801 9780393040807])
         expect(body['holdings']).to be_a Array
         expect(body['holdings'].length).to eq 4

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_accordion_section_library.html.erb" do
+describe "catalog/_accordion_section_library" do
   describe "Accordion section - library" do
     before do
       assign(:document,

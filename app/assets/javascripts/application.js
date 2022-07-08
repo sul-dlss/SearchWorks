@@ -12,10 +12,9 @@
 //
 //= require jquery
 //= require honeybadger
-//= require 'blacklight_advanced_search'
 //= require retina_tag
 
-//= require jquery_ujs
+//= require rails-ujs
 //= require turbolinks
 //= require responsiveTruncator
 //= require trunk8
@@ -27,10 +26,12 @@
 //= require bootstrap/tab
 //
 // Required by Blacklight
+//= require twitter/typeahead
+//= require bootstrap/tooltip
 //= require blacklight/blacklight
-//= require_tree .
-
 
 // For blacklight_range_limit built-in JS, if you don't want it you don't need
 // this:
 //= require 'blacklight_range_limit'
+
+//= require_tree .

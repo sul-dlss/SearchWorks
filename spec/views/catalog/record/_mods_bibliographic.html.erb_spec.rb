@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "catalog/record/_mods_bibliographic.html.erb" do
+describe "catalog/record/_mods_bibliographic" do
   include ModsFixtures
 
   describe "Object bibliographic" do

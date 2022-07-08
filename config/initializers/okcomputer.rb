@@ -50,13 +50,15 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 # STACKMAP_API_URL
 # BOOKPLATES_EXHIBIT_URL
 
-OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)
-OkComputer::Registry.register 'oclc_citation_service', OkComputer::HttpCheck.new(Citation.test_api_url)
+Rails.application.reloader.to_prepare do
+  OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)
+  OkComputer::Registry.register 'oclc_citation_service', OkComputer::HttpCheck.new(Citation.test_api_url)
 
-Settings.NEW_RELIC_API.policies.each do |policy|
-  OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
+  Settings.NEW_RELIC_API.policies.each do |policy|
+    OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
+  end
+
+  OkComputer.make_optional(%w[live_lookups oclc_citation_service]).concat(
+    Settings.NEW_RELIC_API.policies.map(&:key)
+  )
 end
-
-OkComputer.make_optional(%w[live_lookups oclc_citation_service]).concat(
-  Settings.NEW_RELIC_API.policies.map(&:key)
-)

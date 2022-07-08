@@ -15,14 +15,20 @@ module ReplaceSpecialQuotes
   private
 
   def replace_special_quotes
-    modifiable_params_keys.each do |param|
-      next unless params[param]&.present?
+    replace_single_quotes_from_hash params, :q
 
-      replace_single_quotes_from_param(params[param])
+    params[:clause]&.each do |key, value|
+      replace_single_quotes_from_hash value, :query
+    end
+  end
 
-      special_quote_characters.each do |char|
-        params[param].gsub!(/#{char}/, '"')
-      end
+  def replace_single_quotes_from_hash(hash, key)
+    return unless hash[key]&.present?
+
+    replace_single_quotes_from_param(hash[key])
+
+    special_quote_characters.each do |char|
+      hash[key].gsub!(/#{char}/, '"')
     end
   end
 

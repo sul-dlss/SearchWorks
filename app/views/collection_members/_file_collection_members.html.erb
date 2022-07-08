@@ -14,7 +14,7 @@
           <%= render_resource_icon collection_member[collection_member.format_key] %>
         </div>
         <div class="col-xs-10 file-title">
-          <%= link_to(show_presenter(collection_member).heading, solr_document_path(collection_member)) %>
+          <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>
           <% if collection_member[:pub_date] %>
             <span class="main-title-date">[<%= collection_member[:pub_date] %>]</span>
           <% end %>

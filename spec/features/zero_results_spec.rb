@@ -14,7 +14,7 @@ feature "Zero results" do
   end
   scenario "should have no results and show correct link from advanced search", js: true do
     visit blacklight_advanced_search_engine.advanced_search_path
-    fill_in "search_title", with: "sdfsda"
+    fill_in "Title", with: "sdfsda"
     click_button 'advanced-search-submit'
     within "#content" do
       expect(page).to have_css("li", text: I18n.t('blacklight.search.zero_results.check_spelling'))

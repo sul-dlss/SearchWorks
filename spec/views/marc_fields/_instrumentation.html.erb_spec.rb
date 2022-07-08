@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'marc_fields/_instrumentation.html.erb' do
+describe 'marc_fields/_instrumentation' do
   subject { Capybara.string(rendered) }
 
   let(:instrumentation) do

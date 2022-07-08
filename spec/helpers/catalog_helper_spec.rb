@@ -18,6 +18,11 @@ describe CatalogHelper do
   end
 
   describe 'current_view' do
+    before do
+      allow(helper).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
+      allow(helper).to receive(:blacklight_configuration_context).and_return(Blacklight::Configuration::Context.new(helper))
+    end
+
     it 'if params[:view] present, should return it' do
       params = { view: 'gallery' }
       allow(helper).to receive(:params).and_return(params)

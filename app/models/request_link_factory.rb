@@ -10,8 +10,6 @@ class RequestLinkFactory
         RequestLinks::HooverArchiveRequestLink
       when 'HOPKINS'
         RequestLinks::HopkinsRequestLink
-      when 'SAL', 'SAL3'
-        RequestLinks::SalRequestLink
       else
         RequestLink
         # for_location(location)

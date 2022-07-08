@@ -2,7 +2,7 @@
   preview_container = 'preview-container-' + document.id
   preview_attrs = preview_data_attrs(true, "preview-brief", document[:id], '.' + preview_container)
 %>
-<% doc_presenter = presenter(document) %>
+<% doc_presenter = document_presenter(document) %>
 <div class=" brief-document container-fluid" <%= preview_attrs %>>
   <div class="row row-eq-height brief-container">
     <div class="col-md-10">
@@ -13,7 +13,7 @@
         <span class="document-counter">
           <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
         </span>
-        <%= link_to_document document, get_main_title(document), :counter => (counter + @response.params[:start].to_i) %>
+        <%= link_to_document document, counter: (counter + @response.params[:start].to_i) %>
         <span class="main-title-date"><%= get_main_title_date(document) %></span>
       </h3>
       <% if document[:vern_title_display].present? %>

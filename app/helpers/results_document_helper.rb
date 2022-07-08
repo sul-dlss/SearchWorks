@@ -1,9 +1,4 @@
 module ResultsDocumentHelper
-  def get_main_title(document)
-    title_field = blacklight_config.index.title_field
-    (document[title_field] || '').html_safe
-  end
-
   def get_main_title_date(document)
     # MODS data is indexed with the display date in Solr field pub_year_ss
     return "[#{document["pub_year_ss"]}]" if document["pub_year_ss"].present?

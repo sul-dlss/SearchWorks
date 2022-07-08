@@ -1,23 +1,21 @@
 # -*- encoding : utf-8 -*-
 
 class CatalogController < ApplicationController
+  include AllCapsParams
+
+  include ReplaceSpecialQuotes
+
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
 
   include BlacklightRangeLimit::ControllerOverride
 
-  include BlacklightAdvancedSearch::Controller
-
   include AdvancedSearchParamsMapping
 
   include DatabaseAccessPoint
 
   include CallnumberSearch
-
-  include AllCapsParams
-
-  include ReplaceSpecialQuotes
 
   include Thumbnail
 
@@ -40,7 +38,15 @@ class CatalogController < ApplicationController
     end
   end
 
+  before_action only: :index do
+    blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
+  end
+
+  before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
+
   configure_blacklight do |config|
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qt: 'search',
@@ -61,13 +67,14 @@ class CatalogController < ApplicationController
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
-    #config.default_document_solr_params = {
-    #  :qt => 'document',
+    config.document_solr_path = 'select'
+    config.default_document_solr_params = {
+     :qt => 'document',
     #  ## These are hard-coded in the blacklight 'document' requestHandler
     #  # :fl => '*',
     #  # :rows => 1
     #  # :q => '{!raw f=id v=$id}'
-    #}
+    }
 
     config.crawler_detector = lambda { |_| Settings.DISABLE_SESSIONS }
 
@@ -110,41 +117,42 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
-    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index
-    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20
+    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
+    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
                             label: 'Stanford student work',
-                            partial: 'blacklight/hierarchy/facet_hierarchy',
+                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                             sort: 'count', collapse: false, show: false
-    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20
-    config.add_facet_field 'access_facet', label: 'Access', partial: 'access_facet', query: {
+    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'access_facet', label: 'Access', query: {
       'At the Library': {
         label: 'At the Library', fq: 'access_facet:"At the Library"'
       },
       'Online': {
-        label: 'Online', fq: "access_facet:Online OR ht_access_sim:#{Settings.HATHI_ETAS_ACCESS ? '[* TO *]' : 'allow'}"
+        label: 'Online', fq: "access_facet:Online"
       },
       'On order': {
         label: 'On order', fq: 'access_facet:"On order"'
       }
-    }
-    config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value
-    config.add_facet_field "collection_type", label: "Collection type", show: false
+    }, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::FacetFieldListComponent
     if Settings.BOOKPLATES
-      config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value
+      config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
     end
-    config.add_facet_field "format_main_ssim", label: "Resource type", partial: "resource_type_facet", limit: 100, sort: :index
-    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20
-    config.add_facet_field "pub_year_tisim", label: "Date", partial: "blacklight_range_limit/range_limit_panel", range: {
+    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent, item_component: ResourceFacetItemComponent
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "pub_year_tisim", label: "Date", range: true, range_config: {
       input_label_range_begin: "from year",
       input_label_range_end: "to year"
     }
-    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index
-    config.add_facet_field "language", label: "Language", limit: 20
-    config.add_facet_field "author_person_facet", label: "Author", limit: 20
+    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
-                           partial: 'blacklight/hierarchy/facet_hierarchy',
+                           component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'index'
     config.facet_display = {
       hierarchy: {
@@ -152,21 +160,21 @@ class CatalogController < ApplicationController
         'stanford_work_facet' => [['hsim'], '|']
       }
     }
-    config.add_facet_field "topic_facet", label: "Topic", limit: 20
-    config.add_facet_field "genre_ssim", label: "Genre", limit: 20
-    config.add_facet_field "course", label: "Course", show: false
-    config.add_facet_field "instructor", label: "Instructor", show: false
+    config.add_facet_field "topic_facet", label: "Topic", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "course", label: "Course", show: false, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "instructor", label: "Instructor", show: false, component: Blacklight::FacetFieldListComponent
 
     # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
-    config.add_facet_field "geographic_facet", label: "Region", limit: 20
-    config.add_facet_field "era_facet", label: "Era", limit: 20
-    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20
-    config.add_facet_field "format", label: "Format", show: false
+    config.add_facet_field "geographic_facet", label: "Region", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "era_facet", label: "Era", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "format", label: "Format", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
       }
-    }
+    }, component: Blacklight::FacetFieldListComponent, include_in_advanced_search: false
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
@@ -413,7 +421,8 @@ class CatalogController < ApplicationController
     end
 
     # Configure facet fields for BL advanced search
-    config.advanced_search = {
+    config.advanced_search = Blacklight::OpenStructWithHashAccess.new(
+      enabled: true,
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
@@ -426,7 +435,7 @@ class CatalogController < ApplicationController
         "f.language.facet.limit" => -1,
         "facet.sort" => "index" # sort by byte order of values
       }
-    }
+    )
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
@@ -444,23 +453,19 @@ class CatalogController < ApplicationController
 
     # View type group config
     config.view.list.icon_class = "fa-th-list"
-
-    config.view.gallery ||= OpenStruct.new
-    config.view.gallery.partials = [:index]
-    config.view.gallery.icon_class = "fa-th"
-
-    config.view.brief ||= OpenStruct.new
-    config.view.brief.partials = [:index]
-    config.view.brief.icon_class = "fa-align-justify"
+    config.view.gallery(partials: [:index], icon_class: "fa-th")
+    config.view.brief(partials: [:index], icon_class: "fa-align-justify")
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
   end
 
+  Blacklight::ActionBuilder.new(self, :citation, {}).build
+
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
   def email
-    @response, @documents = fetch(Array(params[:id]))
+    @response, @documents = search_service.fetch(Array(params[:id]))
 
     if request.post? && validate_email_params_and_recaptcha
       send_emails_to_all_recipients
@@ -477,7 +482,7 @@ class CatalogController < ApplicationController
 
   # Used by sul-requests to get item data + availability
   def availability
-    _, document = fetch(params[:id])
+    _, document = search_service.fetch(params[:id])
     respond_to do |format|
       format.json do
         live = params[:live].nil? || params[:live] == 'true'
@@ -491,11 +496,6 @@ class CatalogController < ApplicationController
     render layout: !request.xhr?
   end
 
-  def librarian_view
-    super
-    render layout: !request.xhr?
-  end
-
   private
 
   def render_document_with_availability_as_json(document, live = true)
@@ -504,7 +504,6 @@ class CatalogController < ApplicationController
     {
       title: document[blacklight_config.index.title_field],
       online: document.index_links.fulltext.map(&:href),
-      temporary_access: document.access_panels.temporary_access?,
       format: document[document.format_key],
       isbn: document['isbn_display'],
       holdings: document.holdings(live: live).as_json
@@ -533,11 +532,11 @@ class CatalogController < ApplicationController
   end
   helper_method :augment_solr_document_json_response
 
-  def modifiable_params_keys
-    %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
-  end
-
   def set_search_query_modifier
     @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
+  end
+
+  def advanced_search_form?(*args, **kwargs)
+    action_name == 'advanced_search'
   end
 end

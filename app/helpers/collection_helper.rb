@@ -25,11 +25,11 @@ module CollectionHelper
   end
 
   def collection_breadcrumb_value(collection_id)
-    if @document_list.present? && @document_list.first.index_parent_collections.present?
-      collection = @document_list.first.index_parent_collections.find do |coll|
+    if @response.documents.first&.index_parent_collections.present?
+      collection = @response.documents.first.index_parent_collections.find do |coll|
         coll[:id] == collection_id
       end
-      return show_presenter(collection).heading if collection.present?
+      return document_presenter(collection).heading if collection.present?
     end
     collection_id
   end
@@ -37,7 +37,7 @@ module CollectionHelper
   def add_purl_embed_header(document)
     content_for(:head) do
       ['json', 'xml'].map do |format|
-        "<link rel='alternate' type='application/#{format}+oembed' title='#{show_presenter(@document).heading}' href='#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{@document.druid}&format=#{format}' />"
+        "<link rel='alternate' type='application/#{format}+oembed' title='#{document_presenter(@document).heading}' href='#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{@document.druid}&format=#{format}' />"
       end.join.html_safe
     end
   end

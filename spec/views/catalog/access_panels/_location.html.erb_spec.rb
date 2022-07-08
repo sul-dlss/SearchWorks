@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/access_panels/_location.html.erb", js: true do
+describe 'catalog/access_panels/_location', js: true do
   include MarcMetadataFixtures
   describe "non location record" do
     before do

@@ -5,7 +5,7 @@ describe SelectedDatabasesController do
     it "should set the @selected_databases instance variable" do
       docs = double('documents')
 
-      expect(controller).to receive(:fetch).and_return([double('response'), docs])
+      allow(controller).to receive(:search_service).and_return(double('MockSearchService', fetch: [double('response'), docs]))
       get :index
       expect(assigns(:selected_databases)).to eq docs
     end

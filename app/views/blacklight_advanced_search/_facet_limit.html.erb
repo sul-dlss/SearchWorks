@@ -1,0 +1,16 @@
+<div class="advanced_facet_limit">
+  <div class="inclusive_or well">
+    <h4>Any of:</h4>
+    <ul class="list-unstyled facet-values">
+    <% advanced_query.filters[field_name].each do |value| %>
+        <li>
+            <span class="selected"><%= h(value) %></span>
+            <%= link_to(remove_advanced_facet_param(field_name, value, params), :class => "remove") do %>
+                <span class="bi-x-lg"></span><span class="sr-only">[remove]</span>
+            <% end %>
+        </li>
+    <% end %>
+    </ul>
+  </div>
+  <%= render_facet_limit display_facet, :layout => nil, :partial => advanced_search_facet_partial_name(display_facet) %>
+</div>

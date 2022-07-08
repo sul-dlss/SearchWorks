@@ -88,15 +88,6 @@ Blacklight.onLoad(function(){
     }
   });
 
-  // HathiTrust Temporary Access
-  $('.panel.temporary-access a, .results-online-section .online-links').on('click', function(e) {
-    if (/Full text via HathiTrust/.test(this.text)) {
-      ga('send', 'event', 'HathiTrust', 'clicked', this.href, {
-        'transport': 'beacon'
-      });
-    }
-  });
-
   $('a[data-track="zero-results-remove-limit"]').on('click', function(e) {
     ga('send', 'event', 'Zero results', 'clicked-remove-limit', this.href, {
       'transport': 'beacon'

@@ -1,7 +1,6 @@
 class CourseReservesController < ApplicationController
   include Blacklight::SearchContext
   include Blacklight::Configurable
-  include Blacklight::SearchHelper
   include CourseReserves
   copy_blacklight_config_from(CatalogController)
 
@@ -11,7 +10,7 @@ class CourseReservesController < ApplicationController
     p[:"facet.field"] = facet
     p[:"f.#{facet}.facet.limit"] = "-1"  # this implies lexical sort
     p[:rows] = 0
-    response = repository.search(p)
+    response = blacklight_config.repository.search(p)
     course_reserves = []
     response.aggregations.values.first.items.each do |item|
       course_reserves << CourseInfo.new(item.value)

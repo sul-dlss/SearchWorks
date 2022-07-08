@@ -1,15 +1,15 @@
-<% doc_presenter = presenter(document) %>
+<% doc_presenter = document_presenter(document) %>
 <ul class='document-metadata dl-horizontal dl-invert results-metadata-section'>
   <% if document['eds_authors'].present? %>
     <li>
       <div data-behavior='metadata-truncate'>
-        <%= doc_presenter.field_value('eds_authors') %>
+        <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors']) %>
       </div>
     </li>
   <% end %>
 
   <% if document['eds_composed_title'].present? %>
-    <li><%= doc_presenter.field_value('eds_composed_title') %></li>
+    <li><%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title']) %></li>
   <% end %>
 </ul>
 
@@ -28,7 +28,7 @@
       <dt>Abstract</dt>
       <dd>
         <div data-behavior='metadata-truncate'>
-          <%= doc_presenter.field_value('eds_abstract') %>
+          <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_abstract']) %>
         </div>
       </dd>
     <% end %>

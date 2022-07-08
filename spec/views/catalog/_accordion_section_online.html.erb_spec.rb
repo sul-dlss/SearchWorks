@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_online_section.html.erb" do
+describe "catalog/_index_online_section" do
   include Marc856Fixtures
 
   describe "Accordion section - Online" do

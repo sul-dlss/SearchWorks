@@ -9,7 +9,10 @@
       <%= render_search_targets_widget %>
     </div>
     <div class="search-form">
-      <%= render_search_bar %>
+      <%= render SearchworksSearchBarComponent.new(
+        url: search_action_url,
+        classes: ['navbar-form'],
+        params: search_state.params_for_search.except(:qt)) %>
     </div>
   </nav>
 </div>

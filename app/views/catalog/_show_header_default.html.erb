@@ -1,7 +1,7 @@
-<% doc_presenter = presenter(document) %>
+<% doc_presenter = document_presenter(document) %>
 <h1>
   <%= render_resource_icon doc_presenter.formats %>
-  <%= render_document_heading(document, :tag => :span) %>
+  <span itemprop="name"><%= document_presenter(document).heading %></span>
 </h1>
 <% if document[:vern_title_display].present? %>
   <p class='vernacular-title'><%= document[:vern_title_display] %></p>

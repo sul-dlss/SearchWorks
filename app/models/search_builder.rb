@@ -1,3 +1,5 @@
+require 'blacklight_advanced_search/advanced_search_builder'
+
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
   include BlacklightAdvancedSearch::AdvancedSearchBuilder
@@ -30,10 +32,6 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
   end
 
-  def modifiable_params_keys
-    %w[q search search_author search_title subject_terms series_search pub_search isbn_search]
-  end
-
   private
 
   def page_location
@@ -41,6 +39,8 @@ class SearchBuilder < Blacklight::SearchBuilder
   end
 
   def on_home_page?
-    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank?
+    return false unless search_state.controller&.action_name == 'index' && search_state.controller.controller_name == 'catalog'
+
+    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
   end
 end

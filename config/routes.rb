@@ -8,10 +8,15 @@ Rails.application.routes.draw do
   mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP
 
   mount BlacklightAdvancedSearch::Engine => '/'
-  mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder' if Rails.env.test?
+
+  if Rails.env.test?
+    require_relative '../spec/support/rack_apps/mock_exhibits_finder_endpoint'
+    mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder'
+  end
 
   concern :searchable, Blacklight::Routes::Searchable.new
   concern :exportable, Blacklight::Routes::Exportable.new
+  concern :marc_viewable, Blacklight::Marc::Routes::MarcViewable.new
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
 
   resources :barcode, only: :show
@@ -22,7 +27,7 @@ Rails.application.routes.draw do
   end
 
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
-    concerns :exportable
+    concerns [:exportable, :marc_viewable]
   end
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
@@ -43,7 +48,6 @@ Rails.application.routes.draw do
 
   resources :collection_members, only: :show
 
-  Blacklight::Marc.add_routes(self)
   devise_for :users, skip: [:registrations, :passwords, :sessions]
   devise_scope :user do
     get 'webauth/login' => 'login#login', as: :new_user_session
@@ -67,6 +71,10 @@ Rails.application.routes.draw do
   resources :lib_guides, only: :index
 
   resources :browse, only: :index
+
+  get 'catalog/:id/track' => 'catalog#track', as: 'track_browse'
+  get 'catalog/:id/track' => 'catalog#track', as: 'track_preview'
+  get 'catalog/:id/track' => 'articles#track', as: 'track_article_selections'
 
   get "browse/nearby" => "browse#nearby"
 

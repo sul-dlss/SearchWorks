@@ -4,7 +4,7 @@
       <span aria-hidden="true">&times;</span>
     </button>
   <% end %>
-  <h3 class="modal-title"><%= document_heading(document) %></h3>
+  <h3 class="modal-title"><%= document_presenter(document).heading %></h3>
 </div>
 <div class="modal-body">
   <% document.citations.each do |format, citation| %>

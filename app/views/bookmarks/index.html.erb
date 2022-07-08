@@ -18,7 +18,7 @@
     <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
   <% else %>
     <%= render 'sort_and_per_page' %>
-    <%= render_document_index %>
+    <%= render_document_index @response.documents %>
     <%= render 'results_pagination' %>
   <% end %>
 </div>

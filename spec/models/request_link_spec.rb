@@ -33,12 +33,6 @@ RSpec.describe RequestLink do
       it { expect(link).not_to be_show_location_level_request_link }
     end
 
-    context 'when available under a temporary access agreement' do
-      let(:document) { SolrDocument.new(ht_htid_ssim: 'abc123') }
-
-      it { expect(link).not_to be_show_location_level_request_link }
-    end
-
     context 'when an item is in a library that wildcards item types' do
       let(:library) { 'SPEC-COLL' }
       let(:items) { [double(type: 'NONCIRC', current_location: double(code: nil))] }

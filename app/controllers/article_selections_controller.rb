@@ -2,7 +2,7 @@ class ArticleSelectionsController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include Blacklight::SearchContext
-  include Blacklight::SearchHelper
+  include Blacklight::Searchable
   include Blacklight::TokenBasedUser
   include SelectionsCount
 
@@ -10,7 +10,7 @@ class ArticleSelectionsController < ApplicationController
 
   before_action :verify_user
 
-  blacklight_config.http_method = Blacklight::Engine.config.bookmarks_http_method
+  blacklight_config.http_method = Blacklight::Engine.config.blacklight.bookmarks_http_method
   blacklight_config.add_results_collection_tool(:clear_bookmarks_widget)
 
   blacklight_config.show.document_actions[:bookmark].if = false if blacklight_config.show.document_actions[:bookmark]
@@ -21,7 +21,7 @@ class ArticleSelectionsController < ApplicationController
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
     if bookmark_ids.present?
-      @response, @document_list = fetch(bookmark_ids)
+      @response, @document_list = search_service.fetch(bookmark_ids)
     else
       @document_list = []
     end

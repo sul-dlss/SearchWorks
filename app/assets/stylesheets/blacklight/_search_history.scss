@@ -1,0 +1,20 @@
+/* Search History */
+.search_history
+{
+
+  .constraint 
+  {
+    display: block;
+    text-indent: -$padding-large-horizontal;
+    padding-left: $padding-large-horizontal;
+
+  }
+
+  .filterName, .filterSeparator
+  {
+    @extend .text-muted;
+  }
+}
+
+
+

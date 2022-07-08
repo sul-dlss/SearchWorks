@@ -1,10 +1,10 @@
-<% doc_presenter = presenter(document) %>
+<% doc_presenter = document_presenter(document) %>
 <% # header bar for doc items in index view %>
 <div class="documentHeader row">
 
   <h3 class="index_title col-sm-9 col-lg-10">
     <%= render_resource_icon doc_presenter.formats %>
-    <%= link_to_document document, get_main_title(document) %>
+    <%= link_to_document document %>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
     <%= document.online_label %>
   </h3>

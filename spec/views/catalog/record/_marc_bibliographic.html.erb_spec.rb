@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_marc_bibliographic.html.erb" do
+describe "catalog/record/_marc_bibliographic" do
   include MarcMetadataFixtures
 
   describe "MARC 592" do

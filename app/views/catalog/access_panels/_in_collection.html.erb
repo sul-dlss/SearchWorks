@@ -5,7 +5,7 @@
         <h3>Item belongs to a collection</h3>
       </div>
       <div class="panel-body">
-        <h4><%= link_to(show_presenter(parent_collection).heading, solr_document_path(parent_collection[:id])) %></h4>
+        <h4><%= link_to(document_presenter(parent_collection).heading, solr_document_path(parent_collection[:id])) %></h4>
         <% if parent_collection[:summary_display] %>
           <div data-behavior='truncate'>
             <%= parent_collection[:summary_display].join(', ') %>

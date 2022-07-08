@@ -1,6 +1,1 @@
-<% if query_has_constraints? %>
-  <div id="appliedParams" class="clearfix constraints-container">
-    <%= link_to("<i class='fa fa-fast-backward'></i> <span class='hidden-xs'>Catalog start</span></a>".html_safe, root_path, class: 'btn btn-primary btn-reset') %>
-    <%= render_constraints(params) %>
-  </div>
-<% end %>
+<%= render((blacklight_config&.view_config(document_index_view_type)&.constraints_component || Blacklight::ConstraintsComponent).new(search_state: convert_to_search_state(controller.params != params ? params : search_state))) %>

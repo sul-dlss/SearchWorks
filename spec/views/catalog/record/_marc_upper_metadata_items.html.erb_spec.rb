@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/record/_marc_upper_metadata_items.html.erb" do
+describe "catalog/record/_marc_upper_metadata_items" do
   include MarcMetadataFixtures
 
   describe 'MARC 245C' do

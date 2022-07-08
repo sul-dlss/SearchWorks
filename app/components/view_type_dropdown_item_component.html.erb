@@ -1,0 +1,7 @@
+<%= link_to url, title: label, 'aria-current': selected?, role: 'menuitem', tabindex: '-1', :class => "view-type-#{ @key.to_s.parameterize }" do %>
+  <% if selected? %>
+    <%= t 'blacklight.search.highlight.active_html' %>
+  <% end %>
+  <%= icon %>
+  <span class="view-type-label"><%= label %></span>
+<% end %>

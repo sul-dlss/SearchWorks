@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'articles/access_panels/_online.html.erb' do
+RSpec.describe 'articles/access_panels/_online' do
   let(:document) do
     SolrDocument.new(
       eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]

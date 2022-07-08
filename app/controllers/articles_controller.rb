@@ -4,7 +4,6 @@
 class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
-  include EdsPaging
   include EmailValidation
   include BackendLookup
 
@@ -31,6 +30,8 @@ class ArticlesController < ApplicationController
   }
 
   configure_blacklight do |config|
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
     config.search_builder_class = ArticleSearchBuilder
@@ -155,14 +156,14 @@ class ArticlesController < ApplicationController
     # a facet but we still can apploy our configured label to the breadcrumbs
     config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false
     # Commenting this out temporarily until we have a better date facet option
-    config.add_facet_field 'pub_year_tisim', label: 'Date', partial: 'articles/range_limit_panel', range: true
-    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', partial: "facet_additional_selections_warning"
-    config.add_facet_field 'eds_language_facet', label: 'Language' # , limit: 20 TODO: Need to handle facet limiting
-    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic'
-    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography'
-    config.add_facet_field 'eds_journal_facet', label: 'Journal title'
-    config.add_facet_field 'eds_publisher_facet', label: 'Publisher'
-    config.add_facet_field 'eds_content_provider_facet', label: 'Database', partial: 'facet_additional_selections_warning'
+    config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: AdditionalSelectionsFacetComponent
+    config.add_facet_field 'eds_language_facet', label: 'Language', component: Blacklight::FacetFieldListComponent # , limit: 20 TODO: Need to handle facet limiting
+    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'eds_journal_facet', label: 'Journal title', component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'eds_publisher_facet', label: 'Publisher', component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'eds_content_provider_facet', label: 'Database', component: AdditionalSelectionsFacetComponent
 
     # Other available facets
     # config.add_facet_field 'eds_publication_year_facet', label: 'Publication Year'
@@ -173,9 +174,7 @@ class ArticlesController < ApplicationController
 
     # View type group config
     config.view.list.icon_class = "fa-th-list"
-    config.view.brief ||= OpenStruct.new
-    config.view.brief.partials = %i[index]
-    config.view.brief.icon_class = "fa-align-justify"
+    config.view.brief(partials: %i[index], icon_class: "fa-align-justify")
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
@@ -204,6 +203,7 @@ class ArticlesController < ApplicationController
   def email
     # TODO: Handle arrays of IDs in future selection work
     @response, @documents = fetch(params[:id])
+    @documents = Array.wrap(@documents)
     if request.post? && validate_email_params_and_recaptcha
       send_emails_to_all_recipients
 
@@ -244,7 +244,7 @@ class ArticlesController < ApplicationController
       guest:          session['eds_guest'],
       session_token:  session['eds_session_token']
     }
-    Eds::SearchService.new(blacklight_config, {}, eds_params)
+    Eds::SearchService.new(blacklight_config, params, eds_params)
   end
 
   def set_search_query_modifier

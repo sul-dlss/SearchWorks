@@ -9,31 +9,28 @@ module AdvancedSearchParamsMapping
   private
 
   def map_advanced_search_params
-    if params[:search_field] == blacklight_config.advanced_search[:url_key]
-      if params[:author]
-        params[:search_author] = params[:author]
-        params.delete(:author)
-      end
-      if params[:title]
-        params[:search_title] = params[:title]
-        params.delete(:title)
-      end
-      if params[:subject]
-        params[:subject_terms] = params[:subject]
-        params.delete(:subject)
-      end
-      if params[:description]
-        params[:search] = params[:description]
-        params.delete(:description)
-      end
-      if params[:pub_info]
-        params[:pub_search] = params[:pub_info]
-        params.delete(:pub_info)
-      end
-      if params[:number]
-        params[:isbn_search] = params[:number]
-        params.delete(:number)
-      end
+    return unless params.slice(*advanced_search_legacy_field_mapping.keys).present?
+
+    params[:clause] ||= {}
+
+    advanced_search_legacy_field_mapping.each do |field, new_field|
+      next unless params[field]
+
+      params[:clause][field] = { query: params[field], field: new_field }
+      params.delete(field)
     end
+  end
+
+  # These were the old, old search fields used by advanced search (before Searchworks 3.0)
+  # https://github.com/sul-dlss/SearchWorks/pull/792/files
+  def advanced_search_legacy_field_mapping
+    {
+      author: :search_author,
+      title: :search_title,
+      subject: :subject_terms,
+      description: :search,
+      pub_info: :pub_search,
+      number: :isbn_search
+    }
   end
 end

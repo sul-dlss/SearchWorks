@@ -17,7 +17,7 @@ module CatalogHelper
   end
 
   def current_view
-    params[:view] ? params[:view] : 'list'
+    document_index_view_type.to_s || 'list'
   end
 
   def stackmap_link(document, location)

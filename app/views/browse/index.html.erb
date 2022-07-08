@@ -11,7 +11,7 @@
           <%= @original_doc.holdings.callnumbers.first.callnumber %>
         <% end %>
       </p>
-      <p><%= link_to(show_presenter(@original_doc).heading, solr_document_path(@original_doc)) %></p>
+      <p><%= link_to(document_presenter(@original_doc).heading, solr_document_path(@original_doc)) %></p>
     </div>
   </div>
 <% end %>
@@ -30,6 +30,6 @@
         <%= render 'catalog/view_type_group' %>
       </div>
     </div>
-    <%= render_document_index %>
+    <%= render_document_index(@document_list) %>
   <% end %>
 </div>

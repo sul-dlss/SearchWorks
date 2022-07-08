@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_accordion_section_course_reserves.html.erb" do
+describe "catalog/_accordion_section_course_reserves" do
   describe "Accordion section - course reserves" do
     before do
       assign(:document,

@@ -21,7 +21,7 @@
     <dd>
       <div data-behavior="metadata-truncate">
         <% document.index_parent_sets.each do |set| %>
-          <%= link_to(show_presenter(set).heading, solr_document_path(set))%>
+          <%= link_to(document_presenter(set).heading, solr_document_path(set))%>
         <% end %>
       </div>
     </dd>
@@ -31,7 +31,7 @@
     <dt>Collection</dt>
     <dd>
       <% document.index_parent_collections.each do |collection| %>
-        <%= link_to(show_presenter(collection).heading, solr_document_path(collection))%>
+        <%= link_to(document_presenter(collection).heading, solr_document_path(collection))%>
       <% end %>
     </dd>
   <% end %>
