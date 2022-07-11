@@ -5,13 +5,13 @@ class CatalogController < ApplicationController
 
   include ReplaceSpecialQuotes
 
+  include AdvancedSearchParamsMapping
+
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
 
   include BlacklightRangeLimit::ControllerOverride
-
-  include AdvancedSearchParamsMapping
 
   include DatabaseAccessPoint
 

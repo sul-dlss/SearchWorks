@@ -25,12 +25,12 @@ module AdvancedSearchParamsMapping
   # https://github.com/sul-dlss/SearchWorks/pull/792/files
   def advanced_search_legacy_field_mapping
     {
-      author: :search_author,
-      title: :search_title,
-      subject: :subject_terms,
-      description: :search,
-      pub_info: :pub_search,
-      number: :isbn_search
+      author: 'search_author',
+      title: 'search_title',
+      subject: 'subject_terms',
+      description: 'search',
+      pub_info: 'pub_search',
+      number: 'isbn_search'
     }
   end
 end
