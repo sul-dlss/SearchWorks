@@ -533,7 +533,7 @@ class CatalogController < ApplicationController
   helper_method :augment_solr_document_json_response
 
   def set_search_query_modifier
-    @search_modifier ||= SearchQueryModifier.new(search_state)
+    @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
   end
 
   def advanced_search_form?(*args, **kwargs)

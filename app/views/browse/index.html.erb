@@ -19,11 +19,11 @@
 <div id="content" class="callnumber-browse">
   <% if @document_list.present? %>
     <div class="panel panel-default browse-toolbar">
-      <%= link_to(browse_index_path(params.to_unsafe_h.merge(page: (params[:page] || 0).to_i-1)), class: 'btn btn-default btn-sm') do %>
+      <%= link_to(browse_index_path(params.merge(page: (params[:page] || 0).to_i-1)), class: 'btn btn-default btn-sm') do %>
         <i class="fa fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
       <% end %>
       <%= @document_list.first.holdings.callnumbers.first.callnumber %> - <%= @document_list.last.holdings.callnumbers.first.callnumber %>
-      <%= link_to(browse_index_path(params.to_unsafe_h.merge(page: (params[:page] || 0).to_i+1)), class: 'btn btn-default btn-sm') do %>
+      <%= link_to(browse_index_path(params.merge(page: (params[:page] || 0).to_i+1)), class: 'btn btn-default btn-sm') do %>
         <i class="fa fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next</span>
       <% end %>
       <div class='pull-right'>
