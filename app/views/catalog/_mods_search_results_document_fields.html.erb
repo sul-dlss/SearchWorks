@@ -16,6 +16,12 @@
   <% end %>
   <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
   <% if imprint.present? %>
-    <li><%= render "catalog/field_list_from_index", :fields => imprint %></li>
+    <li>
+      <%= imprint[:fields].join("<br/>").html_safe %>
+      <% unless imprint[:vernacular].nil? %>
+        <br/>
+        <%= imprint[:vernacular].join("<br/>").html_safe %>
+      <% end %>
+    </li>
   <% end %>
 </ul>

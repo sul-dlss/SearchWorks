@@ -4,8 +4,17 @@
     <%= render_if_present document.marc_field('245c') %>
 
     <%- uniform_title = get_uniform_title(document) -%>
-    <%- unless uniform_title.nil? -%>
-      <%= render "catalog/field_from_marc", fields: uniform_title %>
+    <%- if uniform_title -%>
+      <dt title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
+      <% uniform_title[:uniform_title]&.each do |field| %>
+        <dd><%= auto_link(field[:field]) %></dd>
+        <% if field[:vernacular].present? %>
+          <dd><%= field[:vernacular] %></dd>
+        <% end %>
+      <% end %>
+      <% uniform_title[:unmatched_vernacular]&.each do |field| %>
+        <dd><%= field %></dd>
+      <% end %>
     <%- end -%>
 
     <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, '3003abcefg', :marc_instrumentation, :linked_series].each do |tag| %>
