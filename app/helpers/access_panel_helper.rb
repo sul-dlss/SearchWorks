@@ -14,6 +14,10 @@ module AccessPanelHelper
       "#{library.code}.jpg"
     end
     image_tag(image_name, class: "pull-left", alt: "", height: 50)
+  rescue Sprockets::Rails::Helper::AssetNotFound => e
+    Honeybadger.notify(e, error_message: "Missing library thumbnail for #{library.code}")
+
+    nil
   end
 
   def display_connection_problem_links?(document)
