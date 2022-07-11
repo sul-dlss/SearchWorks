@@ -9,12 +9,16 @@ describe "shared/_zero_results" do
     end
   }
 
-  before do
-    assign(:search_modifier, SearchQueryModifier.new({
+  let(:search_state) do
+    Blacklight::SearchState.new({
       q: "A query",
       f: { 'fieldA' => ["ValueA"], 'fieldB' => ['ValueB'] },
       search_field: 'search_title'
-    }, config))
+    }, config)
+  end
+
+  before do
+    assign(:search_modifier, SearchQueryModifier.new(search_state))
     allow(view).to receive(:controller_name).and_return('catalog')
     allow(view).to receive(:label_for_search_field).and_return('Title')
   end

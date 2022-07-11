@@ -2,31 +2,31 @@ require "spec_helper"
 
 describe SearchQueryModifier do
   let(:default_config) { {} }
-  let(:stopwords_query) { SearchQueryModifier.new({ q: "And we have stopwords oF THE month", other: 'something' }, default_config) }
+  let(:stopwords_query) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: "And we have stopwords oF THE month", other: 'something' }, default_config)) }
 
   describe "#present?" do
     it "should return true when there is a facet and query" do
-      expect(SearchQueryModifier.new({ q: "hello", f: { something: '' } }, default_config)).to be_present
+      expect(SearchQueryModifier.new(Blacklight::SearchState.new({ q: "hello", f: { something: '' } }, default_config))).to be_present
     end
     it "should return true when the search is fielded" do
       config = OpenStruct.new(default_search_field: OpenStruct.new(field: 'search'))
-      expect(SearchQueryModifier.new({ q: "hello", search_field: 'someting_else' }, config)).to be_present
+      expect(SearchQueryModifier.new(Blacklight::SearchState.new({ q: "hello", search_field: 'someting_else' }, config))).to be_present
     end
     it "should return true when there are stopwords" do
       expect(stopwords_query).to be_present
     end
     it "should return false when there is only a facet OR query" do
-      expect(SearchQueryModifier.new({ q: "hello" }, default_config)).not_to be_present
-      expect(SearchQueryModifier.new({ f: { something: '' } }, default_config)).not_to be_present
+      expect(SearchQueryModifier.new(Blacklight::SearchState.new({ q: "hello" }, default_config))).not_to be_present
+      expect(SearchQueryModifier.new(Blacklight::SearchState.new({ f: { something: '' } }, default_config))).not_to be_present
     end
   end
 
   describe "stopwords" do
-    let(:no_stopwords_query) { SearchQueryModifier.new({ q: "This query does not have stopwords", other: 'something' }, default_config) }
+    let(:no_stopwords_query) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: "This query does not have stopwords", other: 'something' }, default_config)) }
 
     describe "#params_without_stopwords" do
       it "should replace the 'q' parameter in the options with one that doesn't contain stopwords" do
-        expect(stopwords_query.params_without_stopwords).to eq({ q: "we have stopwords month", other: 'something' })
+        expect(stopwords_query.params_without_stopwords).to eq({ 'q' => "we have stopwords month", 'other' => 'something' })
       end
     end
 
@@ -42,10 +42,10 @@ describe SearchQueryModifier do
 
   describe "fielded search" do
     let(:config) { OpenStruct.new(default_search_field: OpenStruct.new(field: 'search')) }
-    let(:fielded_search) { SearchQueryModifier.new({ search_field: "search_title", q: 'something', f: 'else' }, config) }
-    let(:no_query_search) { SearchQueryModifier.new({ search_field: 'search_title' }, config) }
-    let(:no_fielded_search) { SearchQueryModifier.new({ q: 'something' }, config) }
-    let(:default_fielded_search) { SearchQueryModifier.new({ search_field: "search", q: 'something' }, config) }
+    let(:fielded_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ search_field: "search_title", q: 'something', f: 'else' }, config)) }
+    let(:no_query_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ search_field: 'search_title' }, config)) }
+    let(:no_fielded_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: 'something' }, config)) }
+    let(:default_fielded_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ search_field: "search", q: 'something' }, config)) }
 
     describe "#fielded_search?" do
       it "should return true when a fielded search is selected" do
@@ -93,9 +93,9 @@ describe SearchQueryModifier do
         config.add_facet_field 'fieldB', label: 'Another field'
       end
     }
-    let(:filtered_search) { SearchQueryModifier.new({ f: { 'fieldA' => ['Something'], 'fieldB' => ['Something Else'] }, q: 'something' }, facet_config) }
-    let(:ranged_search) { SearchQueryModifier.new({ range: { 'range_field' => { 'begin' => '1234', 'end' => '4321' } }, q: 'something' }, facet_config) }
-    let(:no_filter_search) { SearchQueryModifier.new({ q: 'something' }, default_config) }
+    let(:filtered_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ f: { 'fieldA' => ['Something'], 'fieldB' => ['Something Else'] }, q: 'something' }, facet_config)) }
+    let(:ranged_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ range: { 'range_field' => { 'begin' => '1234', 'end' => '4321' } }, q: 'something' }, facet_config)) }
+    let(:no_filter_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: 'something' }, default_config)) }
 
     describe "#has_filters?" do
       it "should return true when a search has filters" do

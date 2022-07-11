@@ -27,7 +27,7 @@ module CatalogHelper
 
   def new_documents_feed_path
     search_catalog_path(
-      params.except(:controller, :action, :page, :format, :sort).to_hash.merge(sort: 'new-to-libs', format: 'atom')
+      search_state.to_h.except(:controller, :action, :page, :format, :sort).to_hash.merge(sort: 'new-to-libs', format: 'atom')
     )
   end
 

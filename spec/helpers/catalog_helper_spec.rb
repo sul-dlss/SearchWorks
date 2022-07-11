@@ -34,16 +34,20 @@ describe CatalogHelper do
   end
 
   describe 'new_documents_feed_path' do
+    before do
+      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({}, CatalogController.blacklight_config))
+    end
+
     it 'returns the search url to an atom feed' do
-      expect(new_documents_feed_path).to match %r{^/catalog.atom\?}
+      expect(helper.new_documents_feed_path).to match %r{^/catalog.atom\?}
     end
 
     it 'includes the new-to-libs sort key' do
-      expect(new_documents_feed_path).to match(/sort=new-to-libs/)
+      expect(helper.new_documents_feed_path).to match(/sort=new-to-libs/)
     end
 
     it 'removes the page parameter' do
-      expect(helper).to receive(:params).and_return(page: 5)
+      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({ page: 5}, CatalogController.blacklight_config))
       expect(helper.new_documents_feed_path).not_to match(/page=/)
     end
   end
