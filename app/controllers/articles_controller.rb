@@ -247,7 +247,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_search_query_modifier
-    @search_modifier ||= SearchQueryModifier.new(params, blacklight_config)
+    @search_modifier ||= SearchQueryModifier.new(search_state)
   end
 
   # Reuse the EDS session token if available in the user's session data,

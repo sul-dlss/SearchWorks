@@ -17,7 +17,7 @@ describe AdvancedSearchParamsMapping do
 
     it 'moves old advanced search queries to the new adv search clauses' do
       expect(params[:author]).not_to be_present
-      expect(params[:clause].values).to include({ field: :search_author, query: "Author" })
+      expect(params[:clause].values).to include(field: 'search_author', query: "Author")
     end
   end
 end

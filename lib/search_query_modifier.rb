@@ -1,7 +1,8 @@
 class SearchQueryModifier
-  def initialize(params, config)
-    @params = params
-    @config = config
+  def initialize(search_state)
+    @search_state = search_state
+    @params = @search_state.params
+    @config = @search_state.blacklight_config
   end
 
   def present?
