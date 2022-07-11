@@ -17,7 +17,7 @@
       </li>
 
       <li class="ris" role="presentation">
-        <%= link_to t('blacklight.tools.ris_html'), params.except(:host, :port).merge(format: 'ris'), role: 'menuitem', tabindex: '-1' %>
+        <%= link_to t('blacklight.tools.ris_html'), params.to_unsafe_h.except(:host, :port).merge(format: 'ris'), role: 'menuitem', tabindex: '-1' %>
       </li>
     <% end %>
 
