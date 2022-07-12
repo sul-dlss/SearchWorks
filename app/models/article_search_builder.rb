@@ -7,8 +7,18 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
 
   # See EBSCO::EDS::RetrievalCriteria
   def add_eds_params(eds_params)
-    eds_params.merge!(blacklight_params.to_hash)
-    eds_params.except!('start', 'rows', 'page', 'per_page') # avoid the Solr-like EDS API parameters
+    # avoid the Solr-like EDS API parameters
+    eds_params.merge!(blacklight_params.to_hash.except('start', 'rows', 'page', 'per_page'))
+
+    # Blacklight (now) uses arrays for the ranges
+    eds_params[:range]&.each do |key, field|
+      filter = search_state.filter(key)
+
+      filter.values.each do |value|
+        eds_params[:range][key] = { begin: value.first.to_s, end: value.last.to_s }
+      end
+    end
+
     eds_params[:page_number] = page
     eds_params[:results_per_page] = rows
     eds_params[:view] = 'detailed'
