@@ -57,6 +57,10 @@ class CatalogController < ApplicationController
 
     config.fetch_many_document_params = { fl: '*' }
 
+    config.search_state_fields += [
+      :prefix, # used to filter by database title
+    ]
+
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
 

@@ -3,6 +3,9 @@ class BrowseController < ApplicationController
   include Blacklight::Searchable
   include Blacklight::SearchContext
   include Thumbnail
+
+  helper_method :browse_params
+
   copy_blacklight_config_from(CatalogController)
 
   def index
@@ -55,5 +58,9 @@ class BrowseController < ApplicationController
 
   def _prefixes
     @_prefixes ||= super + ['catalog']
+  end
+
+  def browse_params
+    params.permit(:start, :page, :barcode)
   end
 end
