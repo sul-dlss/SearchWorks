@@ -475,6 +475,7 @@ circulating_item_types:
     - ARCHIVE
     - EASTK-DOC
     - GOVSTKS
+    - LCKSTK
     - NEWSPAPER
     - NH-INHOUSE
     - NH-MICR
