@@ -29,6 +29,8 @@ class ArticlesController < ApplicationController
     last_word_connector: '<br/>'
   }
 
+  Blacklight::ActionBuilder.new(self, :citation, {}).build
+
   configure_blacklight do |config|
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
