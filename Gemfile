@@ -98,7 +98,7 @@ gem "devise-guests"
 gem 'devise-remote-user'
 gem "faraday", "~> 0.10"
 gem "config"
-gem "mods_display", "~> 1.0.0.alpha3"
+gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
