@@ -2,11 +2,11 @@
   <h2>Filter by database title</h2>
   <ul class="pagination">
     <li class="<%= 'active' unless params[:prefix] %>">
-      <%= link_to "Show all", params.to_unsafe_h.merge(prefix: nil, page: nil)  %>
+      <%= link_to "Show all", search_state.to_h.merge(prefix: nil, page: nil)  %>
     </li>
     <% facets_prefix_options.each do |prefix_option| %>
       <li class="<%= 'active' if params[:prefix] == prefix_option.downcase %>">
-        <%= link_to prefix_option, params.to_unsafe_h.merge(prefix: prefix_option.downcase, page: nil,sort: 'title') %>
+        <%= link_to prefix_option, search_state.to_h.merge(prefix: prefix_option.downcase, page: nil, sort: 'title') %>
       </li>
     <% end %>
   </ul>
