@@ -476,13 +476,18 @@ circulating_item_types:
     - EASTK-DOC
     - GOVSTKS
     - LCKSTK
+    - MFILM
     - NEWSPAPER
     - NH-INHOUSE
+    - NH-MAP
+    - NH-MEDSTKS
     - NH-MICR
     - PAGE-1DAY
     - PERI
     - PERIBND
     - PERIUNBND
+    - REF
+    - STKS
     - STKS-MONO
     - STKS-PERI
     - STKS2
