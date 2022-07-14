@@ -6,7 +6,7 @@
     <%- uniform_title = get_uniform_title(document) -%>
     <%- if uniform_title -%>
       <dt title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
-      <% uniform_title[:uniform_title]&.each do |field| %>
+      <% uniform_title[:fields]&.each do |field| %>
         <dd><%= auto_link(field[:field]) %></dd>
         <% if field[:vernacular].present? %>
           <dd><%= field[:vernacular] %></dd>
