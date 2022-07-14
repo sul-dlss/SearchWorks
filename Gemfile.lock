@@ -346,7 +346,7 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (1.0.0)
+    mods_display (1.2.1)
       i18n
       stanford-mods (>= 3.0.0.alpha1, < 4)
       view_component
@@ -654,7 +654,7 @@ DEPENDENCIES
   leaflet-rails
   letter_opener
   listen (~> 3.3)
-  mods_display (~> 1.0.0.alpha3)
+  mods_display (~> 1.1)
   mysql2
   newrelic_rpm
   nokogiri (>= 1.7.1)
