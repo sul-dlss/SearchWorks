@@ -346,7 +346,7 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (1.2.0)
+    mods_display (1.2.1)
       i18n
       stanford-mods (>= 3.0.0.alpha1, < 4)
       view_component
