@@ -10,7 +10,7 @@ module MarcHelper
   def get_uniform_title(doc)
     return unless doc['uniform_title_display_struct']
 
-    data = doc['uniform_title_display_struct'].first
+    data = doc['uniform_title_display_struct'].first.with_indifferent_access
     field_data = data[:fields].first[:field]
 
     search_field = if %w(130 730).include?(data[:uniform_title_tag])

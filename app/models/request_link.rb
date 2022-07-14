@@ -58,7 +58,11 @@ class RequestLink
   end
 
   def markup
-    tag.a safe_join([link_text, tag.span(' (opens in new tab)', class: 'sr-only')], ''), href: url, rel: 'nofollow', target: '_blank', title: 'Opens in new tab', class: classes, **link_params
+    tag.a safe_join([external_link_icon, link_text, tag.span(' (opens in new tab)', class: 'sr-only')], ''), href: url, rel: 'nofollow', target: '_blank', title: 'Opens in new tab', class: classes, **link_params
+  end
+
+  def external_link_icon
+    tag.span('', class: 'bi bi-box-arrow-up-right', aria: { hidden: true })
   end
 
   def link_params
