@@ -19,9 +19,9 @@
     <% end %>
     <% @documents.each do |document| %>
       <h1><a href="<%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= document[:title_display] %></a></h1>
-      <% if document.access_panels.online? %>
+      <% if document.preferred_online_links.any? %>
         <h2>Online</h2>
-        <% document.access_panels.online.links.each do |link| %>
+        <% document.preferred_online_links.each do |link| %>
           <%= link.html.html_safe %><br/>
         <% end %>
       <% end %>

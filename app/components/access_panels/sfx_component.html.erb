@@ -1,0 +1,13 @@
+<%= render @layout.new(classes: ['panel-online', 'sfx-panel'], data: { behavior: 'sfx-panel', 'sfx-url': sfx_data_path(url: Addressable::URI.encode(sfx_url)) }) do |c| %>
+  <% c.title { 'All available sources' } %>
+
+  <% c.body do %>
+    <div data-behavior="sfx-panel-body">
+      <div class='loading-spinner'></div>
+    </div>
+
+    <%= link_to(SfxData.url_without_sid(sfx_url)) do %>
+      See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
+    <% end %>
+  <% end %>
+<% end %>

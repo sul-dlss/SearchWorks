@@ -1,0 +1,32 @@
+<%= tag.div class: %w[panel panel-default access-panel panel-library-location], data: { 'hours-route': (hour_path(library.code) if library.holding_library?) } do %>
+  <%= link_to_library_about_page do %>
+    <div class="library-location-heading access-panel-heading">
+      <%= thumb_for_library %>
+      <div class="library-location-heading-text">
+        <h3 class="<%= "no-link" if Constants::LIBRARY_ABOUT[library.code].nil? %>"><%= library.name %></h3>
+        <div class="small location-hours-today">
+          <% unless library.holding_library? %>
+            (no holding library)
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="panel-body location">
+    <% if document.index_links.finding_aid.present? %>
+        <div class='access-panel-subsection'>
+          <h4>Finding aid</h4>
+          <%= document.index_links.finding_aid.first.html.html_safe %>
+        </div>
+    <% end %>
+    <% if library.library_instructions.present? %>
+      <div class='access-panel-subsection'>
+        <h4><%= library.library_instructions[:heading] %></h4>
+        <p><%= library.library_instructions[:text].html_safe %></p>
+      </div>
+    <% end %>
+
+    <%= render AccessPanels::LibraryLocationComponent.with_collection(library.locations.select(&:present?), library: library, document: document) %>
+  </div>
+<% end %>

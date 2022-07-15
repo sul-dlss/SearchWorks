@@ -32,8 +32,8 @@ class JsonResultsDocumentPresenter
   end
 
   def online_links
-    return [] unless source_document&.access_panels&.online?
+    return [] unless source_document&.preferred_online_links&.any?
 
-    source_document&.access_panels&.online&.links
+    source_document.preferred_online_links
   end
 end

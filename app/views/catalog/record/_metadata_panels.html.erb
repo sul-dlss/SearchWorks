@@ -1,23 +1,29 @@
-<%
-  appears_in = render "catalog/access_panels/appears_in"
-  in_collection = render "catalog/access_panels/in_collection"
-  exhibits = render 'catalog/access_panels/exhibits'
-%>
-
 <div class="metadata-panels">
-  <%= render "catalog/access_panels/online" %>
-  <%= render "catalog/access_panels/course_reserve" %>
-  <%= render "catalog/access_panels/location" %>
-  <% if appears_in.present? || in_collection.present? || exhibits.present? %>
+  <%= render AccessPanels::OnlineComponent.new(document: @document) %>
+
+  <%= render AccessPanels::CourseReservesComponent.new(document: @document) %>
+  <%= render AccessPanels::AtTheLibraryComponent.new(document: @document) %>
+
+  <% context = capture do %>
+    <%= render AccessPanels::AppearsInComponent.new(document: @document) %>
+    <%= render AccessPanels::InCollectionComponent.new(document: @document) %>
+  <% end %>
+
+  <% potential_context = capture do %>
+    <%= render AccessPanels::ExhibitComponent.new(document: @document) %>
+  <% end %>
+
+  <% if context.present? || potential_context.present? %>
     <h2
       data-behavior="metadata-panel-context-heading"
-      style="<%= 'display:none' unless appears_in.present? || in_collection.present? %>"
+      style="<%= 'display:none' unless context.present? %>"
     >
       Context
     </h2>
+
+    <%= context %>
+    <%= potential_context %>
   <% end %>
-  <%= appears_in %>
-  <%= in_collection %>
-  <%= exhibits %>
-  <%= render "catalog/access_panels/related" %>
+
+  <%= render AccessPanels::RelatedComponent.new(document: @document) %>
 </div>

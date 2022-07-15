@@ -75,7 +75,6 @@ Layout/CommentIndentation:
 # Cop supports --auto-correct.
 Layout/ElseAlignment:
   Exclude:
-    - 'app/helpers/access_panel_helper.rb'
     - 'app/helpers/bookmarks_helper.rb'
     - 'app/models/concerns/schema_dot_org.rb'
 
@@ -106,7 +105,6 @@ Layout/EmptyLinesAroundBlockBody:
 # SupportedStylesAlignWith: keyword, variable, start_of_line
 Layout/EndAlignment:
   Exclude:
-    - 'app/helpers/access_panel_helper.rb'
     - 'app/helpers/blacklight_helper.rb'
     - 'app/helpers/bookmarks_helper.rb'
     - 'app/helpers/record_helper.rb'
@@ -137,8 +135,6 @@ Layout/ExtraSpacing:
 Layout/FirstArgumentIndentation:
   Exclude:
     - 'spec/views/catalog/_index_location.html.erb_spec.rb'
-    - 'spec/views/catalog/access_panels/_location.html.erb_spec.rb'
-    - 'spec/views/catalog/access_panels/_related.html.erb_spec.rb'
     - 'spec/views/catalog/record/_marc_subjects.html.erb_spec.rb'
 
 # Offense count: 20
@@ -193,7 +189,6 @@ Layout/IndentationWidth:
     - 'app/controllers/application_controller.rb'
     - 'app/controllers/concerns/stanford_work_facet.rb'
     - 'app/controllers/feedback_forms_controller.rb'
-    - 'app/helpers/access_panel_helper.rb'
     - 'app/helpers/application_helper.rb'
     - 'app/helpers/blacklight_helper.rb'
     - 'app/helpers/bookmarks_helper.rb'
@@ -218,7 +213,6 @@ Layout/LeadingCommentSpace:
     - 'spec/features/image_collection_spec.rb'
     - 'spec/integration/external-data/merged_image_collections_spec.rb'
     - 'spec/lib/nearby_on_shelf_spec.rb'
-    - 'spec/views/catalog/access_panels/_location.html.erb_spec.rb'
 
 # Offense count: 377
 # Cop supports --auto-correct.
@@ -577,19 +571,11 @@ Performance/StringReplacement:
     - 'lib/holdings/noncirc.rb'
     - 'lib/page_location.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect.
-Performance/TimesMap:
-  Exclude:
-    - 'spec/features/access_panels/exhibit_spec.rb'
-
 # Offense count: 25
 RSpec/AnyInstance:
   Exclude:
     - 'spec/controllers/catalog_controller_spec.rb'
     - 'spec/controllers/feedback_forms_controller_spec.rb'
-    - 'spec/features/access_panels/online_spec.rb'
     - 'spec/features/article_display_spec.rb'
     - 'spec/lib/holdings/status_spec.rb'
     - 'spec/lib/purl_embed_spec.rb'
@@ -597,12 +583,6 @@ RSpec/AnyInstance:
     - 'spec/support/stub_article_service.rb'
     - 'spec/support/stub_oclc_response.rb'
     - 'spec/tasks/fixtures_indexer_spec.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-RSpec/BeEql:
-  Exclude:
-    - 'spec/features/access_panels/course_reserve_spec.rb'
 
 # Offense count: 2
 RSpec/BeforeAfterAll:
@@ -653,7 +633,6 @@ RSpec/EmptyLineAfterExample:
 # Cop supports --auto-correct.
 RSpec/EmptyLineAfterFinalLet:
   Exclude:
-    - 'spec/features/access_panels/exhibit_spec.rb'
     - 'spec/models/concerns/hathi_links_spec.rb'
     - 'spec/models/hathi_trust_links_spec.rb'
 
@@ -827,7 +806,6 @@ RSpec/SubjectStub:
   Exclude:
     - 'spec/controllers/concerns/callnumber_search_spec.rb'
     - 'spec/controllers/concerns/eds_paging_spec.rb'
-    - 'spec/lib/access_panels/sfx_spec.rb'
     - 'spec/models/barcode_search_spec.rb'
     - 'spec/models/concerns/solr_set_spec.rb'
     - 'spec/models/performance_alerts_spec.rb'
@@ -975,7 +953,6 @@ Rails/PluralizationGrammar:
 Rails/Presence:
   Exclude:
     - 'app/mailers/search_works_record_mailer.rb'
-    - 'lib/access_panels/online.rb'
 
 # Offense count: 23
 # Cop supports --auto-correct.
@@ -1192,7 +1169,6 @@ Style/MethodDefParentheses:
 # Offense count: 3
 Style/MissingRespondToMissing:
   Exclude:
-    - 'lib/access_panels.rb'
     - 'lib/holdings/noncirc.rb'
     - 'lib/page_location.rb'
 

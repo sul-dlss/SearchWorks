@@ -3,9 +3,9 @@
   id = document[:id]
 %>
 
-<% if document.access_panels.library_locations? %>
+<% if document.holdings.libraries.select(&:present?).any? %>
   <%
-    snippet = document.access_panels.library_locations.libraries.map(&:name).join(', ')
+    snippet = document.holdings.libraries.select(&:present?).map(&:name).join(', ')
   %>
   <div class="accordion-section location">
     <button class="header" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">

@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <h2>Digital content</h2>
 
-    <%= render "catalog/access_panels/cdl" if @document.access_panels.cdl? %>
+    <%= render AccessPanels::CdlComponent.new(document: @document) %>
   </div>
   <div class="col-md-4">
     <div class="panel panel-default managed-purl-panel ">

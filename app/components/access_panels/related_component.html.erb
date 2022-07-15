@@ -1,0 +1,21 @@
+<%
+  visible = oclc.present? ?  'show' : 'hide'
+%>
+
+<%= render @layout.new(classes: ['panel-related', ('hide' unless oclc.present?)].compact) do |c| %>
+  <% c.title do %>
+    More options
+  <% end %>
+
+  <% c.body do %>
+    <ul class="links">
+      <% if oclc.present? %>
+        <li class="worldcat">
+          <%= link_to("Find it at other libraries via WorldCat" ,"https://worldcat.org/oclc/#{oclc.first}") %>
+        </li>
+      <% end %>
+
+      <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document) %>
+    </ul>
+  <% end %>
+<% end %>

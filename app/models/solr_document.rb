@@ -4,10 +4,7 @@ class SolrDocument
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
   UPDATED_EDS_RESTRICTED_TITLE = 'This title is not available for guests. Log in to see the title and access the article.'.freeze
 
-  include MarcLinks
-  include IndexLinks
-  include EdsLinks
-  include HathiLinks
+  include DocumentLinks
   include DisplayType
   include CourseReserves
   include AccessPanelsConcern

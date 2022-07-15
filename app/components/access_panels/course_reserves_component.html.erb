@@ -1,0 +1,6 @@
+<%= render @layout.new(classes: 'panel-course-reserve') do |c| %>
+  <% c.title('Course reserve') %>
+  <% c.body do %>
+    <%= render course_reserves_list %>
+  <% end %>
+<% end %>

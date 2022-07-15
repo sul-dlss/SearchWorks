@@ -1,0 +1,25 @@
+<%= render @layout.new(class: 'panel-in-collection') do |c| %>
+  <% c.title { 'Item belongs to a collection' } %>
+  <% c.body do %>
+    <h4><%= link_to(helpers.document_presenter(@collection).heading, solr_document_path(@collection[:id])) %></h4>
+    <% if @collection[:summary_display] %>
+      <div data-behavior='truncate'>
+        <%= @collection[:summary_display].join(', ') %>
+      </div>
+    <% end %>
+    <dl class="dl-invert">
+      <% if @collection.collection_members.present? %>
+        <dt>Digital collection</dt>
+        <dd><%= helpers.link_to_collection_members(pluralize(@collection.collection_members.total, 'digital item'), @collection) %></dd>
+      <% end %>
+      <% if @collection.extent_sans_format.present? %>
+        <dt>Physical collection</dt>
+        <dd><%= @collection.extent_sans_format %></dd>
+      <% end %>
+      <% if @collection.index_links.finding_aid.present? %>
+        <dt>Finding aid</dt>
+        <dd><%= @collection.index_links.finding_aid.first.html.html_safe %></dd>
+      <% end %>
+    </dl>
+  <% end %>
+<% end %>

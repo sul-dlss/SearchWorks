@@ -1,8 +1,10 @@
 module SearchWorks
   class Links
+    include Enumerable
+
     PROXY_REGEX = /stanford\.idm\.oclc\.org/
 
-    delegate :present?, :first, :last, :each, :map, :select, :find, to: :all
+    delegate :each, :present?, :blank?, to: :all
     def initialize(links = [])
       @links = links
     end
