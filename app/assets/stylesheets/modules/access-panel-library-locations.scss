@@ -42,6 +42,10 @@
 .request-button,
 .stackmap-find-it {
   @include location-buttons;
+
+  .bi {
+    margin-right: 4px;
+  }
 }
 
 .bound-with-note {
