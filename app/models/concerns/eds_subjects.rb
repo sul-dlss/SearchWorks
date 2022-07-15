@@ -84,7 +84,7 @@ module EdsSubjects
         term = Term.new
         term.label = node.text
         term.fieldCode = node['fieldcode'] || node['fieldCode']
-        term.searchTerm = CGI.unescape(node['term'])
+        term.searchTerm = CGI.unescape(node['term'].to_s)
         if term.searchTerm =~ /\s+/
           term.searchTerm = "\"#{term.searchTerm}\"" unless term.searchTerm =~ /^"/ # quote if not quoted
         else
