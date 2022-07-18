@@ -35,7 +35,7 @@
           <% end %>
         </td>
         <% if item.present? %>
-          <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{helpers.request_link(document, item, item.barcode)}'".html_safe if location.request_link.show_item_level_request_link?(item) == RequestLink::DEPENDS_ON_AVAILABILITY %>>
+          <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link.render? %>>
             <span class="availability-icon-wrapper">
               <i class="availability-icon <%= item.status.availability_class %>"></i>
               <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
