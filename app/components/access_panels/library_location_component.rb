@@ -9,5 +9,9 @@ module AccessPanels
       @library = library
       @document = document
     end
+
+    def location_request_link
+      @location_request_link ||= LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items)
+    end
   end
 end

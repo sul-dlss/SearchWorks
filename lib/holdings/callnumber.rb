@@ -9,6 +9,7 @@ class Holdings
     attr_writer :current_location, :status
     attr_reader :document
     attr_accessor :due_date
+
     def initialize(holding_info, document: nil)
       @holding_info = holding_info
       @document = document
@@ -131,6 +132,10 @@ class Holdings
       library != 'LANE-MED'
     end
 
+    def circulates?
+      circulating_item_types == '*' || circulating_item_types.include?(type)
+    end
+
     def as_json(*)
       {
         barcode: barcode,
@@ -143,6 +148,10 @@ class Holdings
         status: status.as_json,
         type: type
       }
+    end
+
+    def request_link
+      @request_link ||= ItemRequestLinkComponent.new(item: self)
     end
 
     private
@@ -182,6 +191,15 @@ class Holdings
 
     def item_display
       @item_display ||= @holding_info.split('-|-').map(&:strip)
+    end
+
+    def circulating_item_types
+      library_map = Settings.circulating_item_types[library]
+
+      return Settings.circulating_item_types['default'] unless library_map
+      return library_map if library_map.is_a?(Array)
+
+      library_map[home_location] || library_map['default'] || library_map
     end
   end
 end

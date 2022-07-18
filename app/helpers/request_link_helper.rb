@@ -1,4 +1,12 @@
 module RequestLinkHelper
+  def request_url(document, library:, location:, callnumber: nil, **request_params)
+    if callnumber
+      request_link(document, callnumber, callnumber.barcode)
+    else
+      "#{Settings.REQUESTS_URL}?#{request_params.merge(item: document.id, origin: library, origin_location: location).to_query}"
+    end
+  end
+
   def link_to_request_link(options = {})
     url = request_link(options[:document], options[:callnumber], options[:barcode])
     return unless url
