@@ -11,7 +11,8 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.0
+  NewCops: enable
 
 Rails:
   Enabled: true
@@ -19,3 +20,11 @@ Rails:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/views/**/*'
+    - 'spec/integration/**/*'
+    - 'spec/features/**/*'
+    - 'spec/models/**/*'
+    - 'spec/requests/**/*'

@@ -8,20 +8,20 @@ Rails.application.load_tasks
 task(:default).clear
 task default: [:ci]
 
-desc "Execute the test build that runs on travis"
-task ci: [:environment] do
-  if Rails.env.test?
-    require 'solr_wrapper'
+desc "Execute the test build that runs in CI"
+task ci: %i[rubocop environment] do
+  require 'solr_wrapper'
 
-    Rake::Task["db:migrate"].invoke
-    SolrWrapper.wrap do |solr|
-      Rake::Task['searchworks:copy_solr_dependencies'].invoke
-      solr.with_collection(name: 'blacklight-core') do
-        Rake::Task["searchworks:fixtures"].invoke
-        Rake::Task["spec"].invoke
-      end
+  ENV['environment'] = 'test'
+
+  Rake::Task["db:migrate"].invoke
+
+  SolrWrapper.wrap do |solr|
+    Rake::Task['searchworks:copy_solr_dependencies'].invoke
+
+    solr.with_collection(name: 'blacklight-core') do
+      Rake::Task["searchworks:fixtures"].invoke
+      Rake::Task["spec"].invoke
     end
-  else
-    system("rake ci RAILS_ENV=test")
   end
 end
