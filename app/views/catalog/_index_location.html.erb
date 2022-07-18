@@ -69,9 +69,7 @@
                     <%= item.loan_period %>
                   <% end %>
                   <span class="request-link">
-                    <% if location.request_link&.show_item_level_request_link?(item) == RequestLink::ALWAYS %>
-                      <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
-                    <% end %>
+                    <%= render item.request_link %>
                   </span>
                 </td>
               </tr>
