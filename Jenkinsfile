@@ -188,7 +188,7 @@ pipeline {
       }
 
       when {
-        tag "master"
+        branch "master"
       }
 
       steps {
