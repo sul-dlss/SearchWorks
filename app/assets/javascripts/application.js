@@ -26,7 +26,6 @@
 //= require bootstrap/tab
 //
 // Required by Blacklight
-//= require twitter/typeahead
 //= require bootstrap/tooltip
 //= require blacklight/blacklight
 

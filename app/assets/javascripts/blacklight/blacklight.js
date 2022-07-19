@@ -20,9 +20,6 @@
 //= require bootstrap/alert
 //= require bootstrap/modal
 
-// Twitter Typeahead for autocomplete
-//= require twitter/typeahead
-
 /* Blacklight has a Javascript setup meant to support local disabling,
   modification, and use of Blacklight behaviors.
 
