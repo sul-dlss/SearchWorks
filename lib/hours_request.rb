@@ -16,7 +16,7 @@ class HoursRequest
       return unless Settings.HOURS_API.enabled
       begin
         Faraday.new(url: full_url).get.body
-      rescue Faraday::Error::ConnectionFailed => e
+      rescue Faraday::ConnectionFailed => e
         nil
       end
     else

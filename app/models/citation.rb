@@ -112,7 +112,7 @@ class Citation
   def response
     @response ||= begin
       Faraday.get(api_url).body
-    rescue Faraday::Error::ConnectionFailed, Faraday::TimeoutError => e
+    rescue Faraday::ConnectionFailed, Faraday::TimeoutError => e
       Rails.logger.warn("HTTP GET for #{api_url} failed with #{e}")
       ''
     end

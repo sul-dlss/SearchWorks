@@ -96,7 +96,7 @@ gem 'nokogiri', '>= 1.7.1'
 gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
-gem "faraday", "~> 0.10"
+gem "faraday"
 gem "config"
 gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
@@ -115,4 +115,3 @@ gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap-sass'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
-gem 'faraday-detailed_logger', '< 2.4.0' # Fixes https://github.com/sul-dlss/SearchWorks/issues/2759
