@@ -43,7 +43,7 @@ RSpec.describe PerformanceAlerts do
       let(:stub_http_client) do
         Class.new do
           def get(*)
-            raise Faraday::Error::ConnectionFailed, 'Raising a connection error from a test http client'
+            raise Faraday::ConnectionFailed, 'Raising a connection error from a test http client'
           end
         end
       end

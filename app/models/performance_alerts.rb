@@ -42,7 +42,7 @@ class PerformanceAlerts
                       req.url api_url
                       req.headers['X-Api-Key'] = api_key
                     end.body
-                  rescue Faraday::Error::ConnectionFailed => e
+                  rescue Faraday::ConnectionFailed => e
                     logger.warn("PerformanceCheck API request failed with: #{e}")
                     '{}'
                   end
