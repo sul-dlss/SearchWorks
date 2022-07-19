@@ -101,7 +101,7 @@ gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
 gem "retina_tag"
 gem 'jquery-datatables-rails'
-gem 'roadie-rails', '~> 2'
+gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
