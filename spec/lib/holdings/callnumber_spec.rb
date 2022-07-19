@@ -217,4 +217,30 @@ describe Holdings::Callnumber do
       expect(as_json[:current_location]).to have_key :name
     end
   end
+
+  describe '#circulates?' do
+    context 'for libaries/locations that are configured to have request links' do
+      subject(:callnumber) { Holdings::Callnumber.new('123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO') }
+
+      it { is_expected.to be_circulates }
+    end
+
+    context 'when the item has a non-circulating item type' do
+      subject(:callnumber) { Holdings::Callnumber.new('123 -|- GREEN -|- LOCKED-STK -|- -|- NONCIRC') }
+
+      it { is_expected.not_to be_circulates }
+    end
+
+    context 'when an item is in a location within a library that specifies location specific item types' do
+      subject(:callnumber) { Holdings::Callnumber.new('123 -|- SAL -|- UNCAT -|- -|- NONCIRC') }
+
+      it { is_expected.to be_circulates }
+    end
+
+    context 'when an item is in a location and with a library specific item type that circulates' do
+      subject(:callnumber) { Holdings::Callnumber.new('123 -|- ART -|- STACKS -|- -|- MEDIA') }
+
+      it { is_expected.to be_circulates }
+    end
+  end
 end
