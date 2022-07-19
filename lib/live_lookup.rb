@@ -1,62 +1,29 @@
 class LiveLookup
   HIDE_DUE_DATE_LIBS = ['RUMSEYMAP'].freeze
 
-  delegate :as_json, :to_json, to: :records
+  delegate :as_json, :to_json, to: :items
+
   def initialize(ids)
     @ids = [ids].flatten.compact
   end
 
-  def records
-    @records ||= response.xpath('//record').map do |record|
-      LiveLookup::Record.new(record).as_json
+  def items
+    @items ||= responses.flat_map do |response|
+      (response.dig('fields', 'callList') || {}).flat_map do |call|
+        (call.dig('fields', 'itemList') || {}).flat_map do |item|
+          Item.new(item).as_json
+        end
+      end
     end
   end
 
-  private
-
-  def response
-    @response ||= Nokogiri::XML(response_xml)
+  def responses
+    SymphonyClient.new.bib_status(@ids)
   end
 
-  def response_xml
-    @response_xml ||= begin
-      conn = Faraday.new(url: live_lookup_url)
-      conn.get do |request|
-        request.options.timeout = 10
-        request.options.open_timeout = 10
-      end.body
-    rescue Faraday::ConnectionFailed
-      nil
-    rescue Faraday::TimeoutError
-      nil
-    end
-  end
-
-  def live_lookup_url
-    "#{Settings.LIVE_LOOKUP_URL}?#{live_lookup_query_params}"
-  end
-
-  def live_lookup_query_params
-    if multiple_ids?
-      "search=holdings&#{mapped_ids}"
-    else
-      "search=holding&id=#{@ids.first}"
-    end
-  end
-
-  def mapped_ids
-    @ids.each_with_index.map do |id, index|
-      "id#{index}=#{id}"
-    end.join('&')
-  end
-
-  def multiple_ids?
-    @ids.length > 1
-  end
-
-  class Record
-    def initialize(record)
-      @record = record
+  class Item
+    def initialize(item)
+      @item = item
     end
 
     def as_json
@@ -68,17 +35,18 @@ class LiveLookup
     end
 
     def barcode
-      @record.xpath('.//item_record/item_id').map(&:text).last
+      @item.dig('fields', 'barcode')
     end
 
     def due_date
       return unless valid_due_date?
 
-      due_date_value.gsub(',23:59', '')
+      Date.parse(due_date_value).strftime('%-m/%-d/%Y')
     end
 
     def due_date_value
-      @record.xpath('.//item_record/date_time_due').map(&:text).last
+      @item.dig('fields', 'circRecord', 'fields', 'dueDate') ||
+        @item.dig('fields', 'circRecord', 'fields', 'recallDueDate')
     end
 
     def current_location
@@ -88,17 +56,17 @@ class LiveLookup
     end
 
     def current_location_code
-      @record.xpath('.//item_record/current_location').map(&:text).last
+      @item.dig('fields', 'currentLocation', 'key')
     end
 
     private
 
     def library_code
-      @record.xpath('.//item_record/library').map(&:text).last
+      @item.dig('fields', 'library', 'key')
     end
 
     def home_location_code
-      @record.xpath('.//item_record/home_location').map(&:text).last
+      @item.dig('fields', 'homeLocation', 'key')
     end
 
     def valid_current_location?

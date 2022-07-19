@@ -30,6 +30,7 @@ module SearchWorks
     require 'live_lookup'
     require 'purl_embed'
     require 'search_query_modifier'
+    require 'symphony_client'
 
     # load all marc fields
     config.autoload_paths += %W(#{config.root}/app/models/marc_fields)
