@@ -575,10 +575,6 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    twitter-typeahead-rails (0.11.1.pre.corejavascript)
-      actionpack (>= 3.1)
-      jquery-rails
-      railties (>= 3.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
@@ -686,7 +682,6 @@ DEPENDENCIES
   sprockets-rails
   sqlite3
   turbolinks (~> 5)
-  twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
   uglifier (>= 2.7.2)
   web-console (>= 4.1.0)
   webdrivers

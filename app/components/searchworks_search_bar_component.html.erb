@@ -19,7 +19,7 @@
 
     <label for="<%= @prefix %><%= @query_param %>" class="sr-only visually-hidden"><%= t('blacklight.search.form_label') %></label>
 
-    <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autocomplete: autocomplete_path.present? ? "off" : "", autofocus: @autofocus, data: { autocomplete_enabled: autocomplete_path.present?, autocomplete_path: autocomplete_path }  %>
+    <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
     <span class="input-group-btn">
       <button type="submit" class="btn btn-default search-btn" id="search">
         <%=t('blacklight.search.form.submit_html')%>

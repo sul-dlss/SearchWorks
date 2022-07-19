@@ -91,7 +91,6 @@ gem "blacklight_range_limit", "~> 8.0"
 gem 'blacklight-hierarchy', "~> 6.0"
 gem 'blacklight_dynamic_sitemap'
 gem 'rsolr'
-gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'nokogiri', '>= 1.7.1'
 gem "devise"
 gem "devise-guests"
