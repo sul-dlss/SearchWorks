@@ -22,6 +22,7 @@
           </tr>
         <% end %>
         <% library.locations.select(&:present_on_index?).each do |location| %>
+          <% location_request_link = LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items) %>
           <tr>
             <th scope='col' class="location-info">
               <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: '' } %>
@@ -42,7 +43,7 @@
                   <% end %>
                 <% end %>
               <% end %>
-              <%= location.request_link&.render unless Constants::HOOVER_LIBS.include?(library.code) %>
+              <%= render location_request_link unless Constants::HOOVER_LIBS.include?(library.code) %>
             </td>
           </tr>
           <% if Constants::HOOVER_LIBS.include?(library.code) %>
@@ -55,7 +56,7 @@
                 <td class='indent-callnumber'>
                   <%= item.callnumber %>
                 </td>
-                <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if location.request_link&.show_item_level_request_link?(item) == RequestLink::DEPENDS_ON_AVAILABILITY %>>
+                <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link.render? %>>
                   <i class="availability-icon <%= item.status.availability_class %>"></i>
                   <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable')  %>" class='status-text'>
                     <%= item.status.status_text %>
@@ -69,9 +70,7 @@
                     <%= item.loan_period %>
                   <% end %>
                   <span class="request-link">
-                    <% if location.request_link&.show_item_level_request_link?(item) == RequestLink::ALWAYS %>
-                      <%= link_to_request_link(document: document, library: library, callnumber: item, barcode: item.barcode, class: 'btn btn-default request-button btn-xs') %>
-                    <% end %>
+                    <%= render item.request_link %>
                   </span>
                 </td>
               </tr>

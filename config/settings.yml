@@ -559,3 +559,12 @@ requestable_current_locations:
     - MISSING
     - NEWBOOKS
     - ON-ORDER
+
+disabled_current_locations:
+  default: []
+  SPEC-COLL:
+    - INPROCESS
+    - MISSING
+    - ON-ORDER
+    - SPEC-INPRO
+    - ENDPROCESS

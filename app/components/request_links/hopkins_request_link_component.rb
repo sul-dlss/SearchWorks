@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 module RequestLinks
-  class HopkinsRequestLink < RequestLink
-    def show_location_level_request_link?
+  class HopkinsRequestLinkComponent < LocationRequestLinkComponent
+    def render?
       super && !available_online? && only_available_at_hopkins?
     end
 

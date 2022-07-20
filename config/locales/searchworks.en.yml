@@ -273,7 +273,7 @@ en:
       aeon_note: Requires Aeon signup/login<br/>Opens in new tab
       default: Request
       HOOVER: Request on-site access
-      HV-ARCHIVE: Request on-site access
+      HV-ARCHIVE: Request via Finding Aid
       RUMSEYMAP: Request on-site access
       SPEC-COLL: Request on-site access
       request_on_site: Request on-site access

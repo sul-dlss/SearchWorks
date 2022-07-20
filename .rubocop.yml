@@ -28,3 +28,7 @@ RSpec/DescribeClass:
     - 'spec/features/**/*'
     - 'spec/models/**/*'
     - 'spec/requests/**/*'
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'app/components/**/*'
