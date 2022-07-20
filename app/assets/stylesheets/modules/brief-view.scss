@@ -4,7 +4,6 @@
   padding-left: 20px;
 
   h3.index_title {
-    @include h3-index-title-font;
     @include h3-index-title-small-font;
   }
 

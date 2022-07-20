@@ -24,42 +24,23 @@
 .embed-callnumber-browse-container {
   background-color: $white;
   border: 1px solid $sul-browse-nearby-container-border;
-  height: auto;
-  margin-top:15px;
+  margin-top: 15px;
   overflow: hidden;
   padding-top: 17px;
-  position: relative;
 
   .embedded-items {
-    width: 100%;
+    // prevent reflow weirdness while the items are being loaded
     height: 430px;
   }
 
-  a.embed-browse-control {
-    border-bottom: 0;
-  }
-
-  .left.embed-browse-control, .right.embed-browse-control {
-    background-color: $sul-browse-nearby-control-bg;
-    background-image: none;
-  }
-
   .gallery {
-    height:100%;
-    width:100%;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-right: 15px;
 
-    .end-refresh {
-      position: relative;
-      float: left;
-      display: inline;
-      top: 170px;
-      bottom: 150px;
-      left: 500px;
-    }
     .gallery-document .browse-link a {
       border-bottom: 0;
       display: inline-block;
@@ -83,11 +64,6 @@
     }
 
     .gallery-document {
-      white-space: normal;
-      float: none;
-      display: inline-block;
-      vertical-align: top;
-
       &:hover {
         border-color: $cardinal-red;
         box-shadow: 0 0 14px gray;
@@ -99,14 +75,6 @@
       }
     }
   }
-}
-
-.embed-browse-control{
-  @extend .carousel-control;
-  top: 0px;
-  bottom: 0px;
-  opacity: 0.65;
-  width: 5%;
 }
 
 .record-browse-nearby {

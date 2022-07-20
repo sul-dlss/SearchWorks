@@ -1,10 +1,13 @@
 .gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   .item-thumb {
+    align-items: end;
+    display: flex;
     height: $sul-gallery-cover-height;
-    width: $gallery-document-width - 2;
-    display: table-cell;
-    text-align: center;
-    vertical-align: bottom;
+    justify-content: center;
   }
 
   .callnumber-bar {
@@ -13,33 +16,27 @@
     height: 42px;
     font-weight: 400;
     font-size: .937em;
-    text-align: center;
     padding: 3px;
+    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: $gallery-document-width - 2;
-  }
-
-  .caption {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .gallery-document {
     @include document-borders;
-    position: relative;
     margin: 0 0 25px 15px;
-    float: left;
-    display: inline;
+    display: flex;
+    flex-direction: column;
     background-color: $white;
+    min-width: $gallery-document-width;
     width: $gallery-document-width;
     height: $gallery-document-height;
 
     h3.index_title {
-      @include h3-index-title-font;
       @include h3-index-title-small-font;
       margin: .5em;
+      overflow: hidden;
       text-align: center;
     }
 
@@ -55,33 +52,38 @@
     }
   }
 
+  .caption {
+    flex-grow: 1;
+  }
+
   .document-counter {
     display: none;
   }
 
   div.gallery-buttons {
+    align-items: baseline;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
     height: 30px;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
     width: 100%;
-    position: absolute;
-    bottom: 2px;
-    display: inline-block;
-
-    .preview-button {
-      position: absolute;
-      margin-left: 8px;
-      margin-bottom: 3px;
-    }
 
     form {
-      position: absolute;
-      left: 106px;
-      font-size: .937em;
+      font-size: 0.937em;
+    }
 
-      .toggle_bookmark {
-        bottom: 4px;
-      }
+    .checkbox {
+      padding-top: 0;
+    }
+
+    input.toggle_bookmark {
+      margin-top: 2px;
     }
   }
+
   .stacks-image {
     max-width: $gallery-document-width - 2;
     max-height: $sul-gallery-cover-height;
@@ -95,19 +97,12 @@
 span.fake-cover {
   width: 130px;
   height: $sul-gallery-cover-height;
-  text-align: center;
-  position: relative;
   margin: 0 auto;
-  display: block;
+  display: flex;
   background: $sul-gallery-fakecover-bg;
   border: 1px solid $sul-gallery-fakecover-border;
-}
-
-div.fake-cover-text-wrapper {
-  width: 130px;
-  height: $sul-gallery-cover-height;
-  display: table-cell;
-  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
 }
 
 div.fake-cover-text {
@@ -116,4 +111,5 @@ div.fake-cover-text {
   padding: 4px;
   max-height: 7.3em;
   overflow: hidden;
+  text-align: center;
 }
