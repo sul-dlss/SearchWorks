@@ -5,7 +5,7 @@ module DocumentLinks
   include HathiLinks
 
   def preferred_online_links
-    sfx_links || marc_fulltext_links || non_stanford_hathi_links || eds_links || []
+    sfx_links || marc_fulltext_links || non_stanford_hathi_links || eds_links&.fulltext || []
   end
 
   private
