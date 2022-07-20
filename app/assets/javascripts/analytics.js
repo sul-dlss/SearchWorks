@@ -176,6 +176,21 @@ Blacklight.onLoad(function(){
     });
   });
 
+  // source: http://stackoverflow.com/questions/14035083/jquery-bind-event-on-scroll-stops
+  // A.K.A. a debounce function.
+  jQuery.fn.scrollStop = function (callback) {
+    $(this).scroll(function () {
+      var self = this,
+        $this = $(self);
+
+      if ($this.data('scrollTimeout')) {
+        clearTimeout($this.data('scrollTimeout'));
+      }
+
+      $this.data('scrollTimeout', setTimeout(callback, 250, self));
+    });
+  };
+
   $('.embedded-items .gallery').scrollStop(function(e) {
     ga('send', 'event', 'Browse-nearby', 'scrolled', { 'transport': 'beacon' });
   });

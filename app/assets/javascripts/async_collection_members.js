@@ -22,7 +22,6 @@ var AsyncCollectionMembers = (function() {
         element.hide().html(data.html).fadeIn(500);
 
         // Trigger filmstrip rendering and preview
-        element.find('.image-filmstrip').renderFilmstrip();
         element.find('*[data-behavior="preview-filmstrip"]').previewFilmstrip();
 
         _this.showAndUpdateDigitalContentCount(data);
