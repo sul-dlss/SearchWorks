@@ -80,13 +80,25 @@
   max-width: 200px;
 }
 
+.preview-content {
+  .stacks-image {
+    max-width: 170px;
+  }
+}
 // This screen width is doing some weird things wrt metadata size and thumbnail.
 // This makes the thumb just a bit smaller in this range to accomodate the metadata
 @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
   .stacks-image {
     max-width: 170px;
   }
+
+  .preview-content {
+    .stacks-image {
+      max-width: 120px;
+    }
+  }
 }
+
 
 #content {
   .pagination {

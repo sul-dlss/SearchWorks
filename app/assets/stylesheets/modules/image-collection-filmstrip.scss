@@ -16,25 +16,28 @@
   .viewport {
     clear: both;
     overflow-x: scroll;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 10px 0;
 
     ul.container-images {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
 
       li {
-        float: left;
-        line-height: 0;
-        margin: 5px;
-        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
         position: relative;
 
         img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
           border-width: 0;
           background-color: #ddd;
           min-height: 100px;
-          cursor: pointer;
         }
 
         .img-label {
@@ -49,7 +52,7 @@
         }
 
         a.collection-all-items-link {
-            line-height:1.5em;
+          line-height:1.5em;
         }
       }
 
@@ -57,5 +60,9 @@
         margin-left: 0;
       }
     }
+  }
+
+  .preview {
+    margin-bottom: 10px;
   }
 }

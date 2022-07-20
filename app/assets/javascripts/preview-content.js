@@ -44,8 +44,7 @@ var PreviewContent = (function() {
     case 'append':
       target
         .append(content)
-        .plugGoogleBookContent()
-        .find('.image-filmstrip').renderFilmstrip();
+        .plugGoogleBookContent();
 
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8({
@@ -57,8 +56,7 @@ var PreviewContent = (function() {
     case 'prepend':
       target
         .prepend(content)
-        .plugGoogleBookContent()
-        .find('.image-filmstrip').renderFilmstrip();
+        .plugGoogleBookContent();
 
       target.find('*[data-accordion-section-target]').accordionSection();
       target.find("[data-behavior='trunk8']").trunk8({
