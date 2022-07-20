@@ -39,13 +39,11 @@
 }
 
 .facet-values {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
 
   li {
-
-    display: table-row;
+    display: flex;
+    align-items: flex-start;
+    padding: 3px 0;
     .selected {
       @extend .text-success;
     }
@@ -70,19 +68,14 @@
   }
 
   .facet-label {
-    display: table-cell;
     padding-right: 1em;
     text-indent: -15px;
     padding-left: 15px;
-    padding-bottom: $padding-base-vertical;
     @include hyphens-auto;
   }
 
   .facet-count {
-    display: table-cell;
-    vertical-align: top;
-    text-align: right;
-    width: 5em;
+    margin-left: auto;
   }
 }
 
@@ -90,7 +83,7 @@
 {
   .sort_options
   {
-    text-align:right;
+    text-align: right;
   }
 
 
