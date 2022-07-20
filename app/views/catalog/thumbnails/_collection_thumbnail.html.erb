@@ -4,10 +4,7 @@
       <%= image_tag(document.collection_members.first.image_urls(:large).first, class: 'stacks-image', alt: '') %>
     <% else %>
       <%= content_tag(:span, class:"fake-cover", aria: { hidden: true }) do %>
-        <%# Wrapper needed for the way that Firefox handles display: table-cell %>
-        <%= content_tag(:div, class: "fake-cover-text-wrapper") do %>
-          <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
-        <% end %>
+        <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
       <% end %>
     <% end %>
   <% end %>
