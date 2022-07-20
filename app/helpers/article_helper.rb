@@ -81,12 +81,45 @@ module ArticleHelper
 
   def sanitize_fulltext(options = {})
     return unless options[:value].present?
-    return sanitize(options[:value].join("\n\n")) if @document && @document.research_starter?
+    return sanitize_research_starter(**options) if @document && @document.research_starter?
 
     separators = options.dig(:config, :separator_options) || {}
     fulltext = options[:value].map(&:to_s).to_sentence(separators)
     fulltext = remove_eds_tag(fulltext, 'anid')
     sanitize(fulltext).html_safe
+  end
+
+  def sanitize_research_starter(value:, document: nil, **_kwargs)
+    return if value.blank?
+
+    value = value.join("\n\n")
+
+    doc = Nokogiri::HTML.fragment(CGI.unescapeHTML(value))
+    doc.search('anid', 'title').remove # remove EDS header content
+
+    # Translate EDS elements into regular HTML
+    element_rename(doc, 'bold', 'b')
+    element_rename(doc, 'emph', 'i')
+    element_rename(doc, 'ulist', 'ul')
+    element_rename(doc, 'item', 'li')
+    element_rename(doc, 'subs', 'sub')
+    element_rename(doc, 'sups', 'sup')
+
+    # Rewrite EDS eplinks into actual hyperlinks to other research starters
+    doc.search('eplink').each do |node|
+      node.name = 'a'
+      node['href'] = article_path(id: "#{document['eds_database_id']}__#{node['linkkey']}")
+    end
+
+    # Wrap images into figures with captions
+    doc.search('img').each do |node|
+      figure = Nokogiri::HTML.fragment("
+      <div class=\"research-starter-figure\">
+        #{node.to_html}<span>#{node['title']}</span>
+      </div>")
+      node.replace(figure)
+    end
+    sanitize(doc.to_html, tags: %w[p a b i ul li img div span sub sup])
   end
 
   def remove_html_from_document_field(options = {})
@@ -126,5 +159,11 @@ module ArticleHelper
     text = Nokogiri::HTML.fragment(CGI.unescapeHTML(text))
     text.search(tag).remove
     text.to_html
+  end
+
+  def element_rename(doc, from, to)
+    doc.search(from).each do |node|
+      node.name = to
+    end
   end
 end
