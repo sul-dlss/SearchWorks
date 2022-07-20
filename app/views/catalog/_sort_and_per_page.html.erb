@@ -1,23 +1,21 @@
 <% ivar_to_paginate =  article_selections? ? @bookmarks : @response %>
-<div id="sortAndPerPage" class="clearfix sul-toolbar">
-  <div class="container-fluid">
-    <%= render partial: "paginate_compact", object: ivar_to_paginate %>
+<div id="sortAndPerPage" class="sul-toolbar">
+  <%= render partial: "paginate_compact", object: ivar_to_paginate %>
 
-    <div id="search-results-toolbar" class="search-widgets pull-right">
-      <% if bookmarks? %>
-        <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(ivar_to_paginate)).html_safe, polymorphic_path(article_selections? ? :citation_articles : :citation_solr_documents, :sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-sul-toolbar', :data => {:ajax_modal => "trigger"}} %>
-        <%= render "tool_dropdown" %>
-        <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), method: :delete, class: 'btn btn-sul-toolbar', data: { confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
-          <i class="fa fa-times" aria-hidden="true"></i> Clear list
-        <% end %>
+  <div id="search-results-toolbar" class="search-widgets">
+    <% if bookmarks? %>
+      <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(ivar_to_paginate)).html_safe, polymorphic_path(article_selections? ? :citation_articles : :citation_solr_documents, :sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-sul-toolbar', :data => {:ajax_modal => "trigger"}} %>
+      <%= render "tool_dropdown" %>
+      <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), method: :delete, class: 'btn btn-sul-toolbar', data: { confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
+        <i class="fa fa-times" aria-hidden="true"></i> Clear list
       <% end %>
+    <% end %>
 
-      <%= render partial: 'view_type_group' %>
-      <%= render partial: 'sort_widget' %>
-      <%= render partial: 'shared/per_page_widget' %>
-      <% unless bookmarks? %>
-        <%= render partial: 'select_all_widget' %>
-      <% end %>
-    </div>
+    <%= render partial: 'view_type_group' %>
+    <%= render partial: 'sort_widget' %>
+    <%= render partial: 'shared/per_page_widget' %>
+    <% unless bookmarks? %>
+      <%= render partial: 'select_all_widget' %>
+    <% end %>
   </div>
 </div>
