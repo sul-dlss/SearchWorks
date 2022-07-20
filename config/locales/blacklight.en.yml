@@ -29,8 +29,9 @@ en:
       searchworks_results_title: '%{num_results} in %{application_name}'
       view:
         label: 'View'
-        brief: 'Brief'
-        list: 'Normal'
+        brief: 'brief'
+        gallery: 'gallery'
+        list: 'normal'
       per_page:
         button_label_html: '%{count}<span class="hidden-xs hidden-sm"> per page</span>'
       pagination_info:
