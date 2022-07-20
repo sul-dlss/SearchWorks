@@ -2,11 +2,17 @@
   <% research_starters = @response['research_starters'] -%>
   <% if research_starters.present? -%>
     <% starter = research_starters.first # only show first research starter -%>
-    <div class='research-starter clearfix'>
-      <a class="research-starter-close" role="button" data-toggle="collapse" href="#research-starter-body" aria-expanded="true" aria-controls="research-starter-body">
-        <span id='research-starter-close-icon' class='fa fa-times-circle research-starter-close-icon'></span>
-        <span class="sr-only">hide topic overview</span>
-      </a>
+    <div class='research-starter'>
+      <div class="research-starter-header">
+        <div class="research-starter-title">
+          Topic overview
+        </div>
+        <a class="research-starter-close" role="button" data-toggle="collapse" href="#research-starter-body" aria-expanded="true" aria-controls="research-starter-body">
+          <span id='research-starter-close-icon' class='fa fa-times-circle research-starter-close-icon'></span>
+          <span class="sr-only">hide topic overview</span>
+        </a>
+      </div>
+
       <div id='research-starter-body' class='collapse in'>
         <h3>
           <%= link_to_document(SolrDocument.new(starter.to_h.merge(id: "#{starter['eds_database_id']}__#{starter['eds_accession_number']}"))) %>
