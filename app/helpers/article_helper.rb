@@ -81,7 +81,7 @@ module ArticleHelper
 
   def sanitize_fulltext(options = {})
     return unless options[:value].present?
-    return safe_join(options[:value]) if @document && @document.research_starter?
+    return sanitize(options[:value].join("\n\n")) if @document && @document.research_starter?
 
     separators = options.dig(:config, :separator_options) || {}
     fulltext = options[:value].map(&:to_s).to_sentence(separators)
