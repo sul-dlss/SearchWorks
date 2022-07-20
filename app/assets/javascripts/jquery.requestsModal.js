@@ -62,7 +62,7 @@
           closeModal(data.closeModal);
 
           // In the case the user has navigated away from the request form
-          // (e.g. webauth login) we will stop receiving post messages. In
+          // (e.g. sso login) we will stop receiving post messages. In
           // this case, we can't know if the height that our modal was last
           // set is tall enough to display all the content. Setting scroll='yes'
           // unfortunately doesn't work w/o reloading the iframe entirely.
