@@ -3,10 +3,9 @@
   margin-top: .8em;
   border-bottom: none;
 
-  .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .dropdown-menu {
     @include toolbar-dropdown;
@@ -18,13 +17,7 @@
   }
 
   .page_entries {
-    text-transform: none;
     vertical-align: middle;
-  }
-
-  .navbar-collapse {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   #search-results-toolbar {

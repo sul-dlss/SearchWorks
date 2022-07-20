@@ -14,23 +14,21 @@
 
    As of Kaminari 0.15, this paginator doesn't have access to the original collection/scope, so it can't render the page entries info directly.
 -%>
-<% if total_pages > 1 -%>
-  <%# #render checks if total_pages > 1, so we can't put our fallback
-  in here .. -%>
-  <%= paginator.render do -%>
-    <div class="page_links pull-left">
+<div class="page_links">
+  <% if total_pages > 1 -%>
+    <%# #render checks if total_pages > 1, so we can't put our fallback
+    in here .. -%>
+    <%= paginator.render do -%>
       <%= prev_page_tag %>
       <span class="page_entries">
         <%= page_entries_info %>
       </span>
       <%= next_page_tag %>
-    </div>
-  <% end -%>
-<% else -%>
-  <%# we still want the "1-n" to show up -%>
-  <div class="page_links pull-left">
+    <% end -%>
+  <% else -%>
+    <%# we still want the "1-n" to show up -%>
     <span class="page_entries">
       <%= page_entries_info %>
     </span>
-  </div>
-<% end -%>
+  <% end -%>
+</div>
