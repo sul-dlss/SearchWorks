@@ -40,7 +40,7 @@
       </ul>
     <% else %>
       <ul class="links" data-long-list data-list-type="online">
-        <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document) %>
+        <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
       </ul>
     <% end %>
   <% end %>
