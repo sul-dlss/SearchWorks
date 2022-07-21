@@ -16,7 +16,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'GREEN' }
     let(:location) { 'LOCKED-STK' }
 
-    it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item=12345&origin=GREEN&origin_location=LOCKED-STK' }
+    it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=GREEN&origin_location=LOCKED-STK' }
   end
 
   context 'for libraries that are not configured to have request links' do
