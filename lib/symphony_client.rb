@@ -5,7 +5,7 @@ class SymphonyClient
   DEFAULT_HEADERS = {
     accept: 'application/json',
     content_type: 'application/json'
-  }.freeze
+  }
 
   THREAD_COUNT = 10
 
@@ -21,6 +21,7 @@ class SymphonyClient
     end
   end
 
+  # TODO: Add tests and error handling
   def bib_status(keys)
     responses = []
     mutex = Mutex.new
