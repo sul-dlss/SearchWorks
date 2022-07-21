@@ -13,7 +13,7 @@ describe RequestLinkHelper do
   describe '#request_url' do
     it 'returns a url including the catkey' do
       link = request_url(document, library: 'library', location: 'location')
-      expect(link).to match(/item=1234/)
+      expect(link).to match(/item_id=1234/)
     end
 
     it 'returns a url including the library' do
