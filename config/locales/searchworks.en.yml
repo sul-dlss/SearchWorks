@@ -277,6 +277,7 @@ en:
       RUMSEYMAP: Request on-site access
       SPEC-COLL: Request on-site access
       request_on_site: Request on-site access
+      finding_aid: Request via Finding Aid
   blacklight:
     advanced_search:
       page_title: 'Advanced search in SearchWorks catalog'

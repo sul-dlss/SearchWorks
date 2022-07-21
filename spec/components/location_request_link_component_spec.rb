@@ -153,4 +153,25 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).not_to have_link }
     end
   end
+
+  context 'for items with a finding aid' do
+    let(:document) do
+      SolrDocument.new(
+        id: '12345',
+        url_suppl: ['http://oac.cdlib.org/ark:/abc123']
+      )
+    end
+
+    context 'when the item is at a library that prefers finding aids for requests' do
+      let(:library) { 'SPEC-COLL' }
+
+      it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+    end
+
+    context 'when the item is at a library that does not prefer finding aids for requests' do
+      let(:library) { 'GREEN' }
+
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=GREEN&origin_location=LOCKED-STK' }
+    end
+  end
 end
