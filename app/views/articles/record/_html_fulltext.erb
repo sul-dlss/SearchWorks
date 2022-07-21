@@ -4,11 +4,9 @@
     <h2>Hide full text <i class='fa fa-chevron-down'></i></h2>
   </button>
   <div class='eds-full-text-section section-body collapse in' id="toggleFulltext">
-    <% doc_presenter.fields_to_render.each do |field_name, field_config, field_presenter| -%>
-      <% field_name = field_name.to_s -%>
-      <% value = doc_presenter.field_value field_config -%>
-      <% if value.present? %>
-        <div class="blacklight-<%= field_name.parameterize %>"><%= value %></div>
+    <% doc_presenter.field_presenters.select { |presenter| fields.map(&:to_s).include? presenter.field_config.key.to_s }.each do |field_presenter| -%>
+      <% if field_presenter.render_field? %>
+        <div class="blacklight-<%= field_presenter.key %>"><%= field_presenter.render %></div>
       <% end -%>
     <% end -%>
   </div>
