@@ -28,6 +28,7 @@ class SolrDocument
   include EdsSubjects
   include MarcSubjects
   include IiifConcern
+  include DorContentMetadata
 
   include Blacklight::Solr::Document
   include SchemaDotOrg

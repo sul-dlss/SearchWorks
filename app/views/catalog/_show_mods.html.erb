@@ -4,7 +4,7 @@
 
 <div class="col-md-12 upper-record-metadata row">
   <%= render 'catalog/record/mods_upper_metadata_section' %>
-  <% if document.druid %>
+  <% if document.druid && document.published_content? %>
     <h2>Digital content</h2>
     <div class="purl-embed-viewer">
       <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
