@@ -11,11 +11,34 @@ describe 'catalog/_show_mods' do
   end
 
   context 'when a document has a druid' do
-    let(:document) { SolrDocument.new(druid: 'abc123', modsxml: mods_001) }
+    context 'there is published content' do
+      let(:document) do
+        SolrDocument.new(druid: 'abc123', dor_resource_count_isi: 1, modsxml: mods_001)
+      end
 
-    it 'includes the purl-embed-viewer element' do
-      expect(rendered).to have_css('.purl-embed-viewer')
+      it 'includes the purl-embed-viewer element' do
+        expect(rendered).to have_css('.purl-embed-viewer')
+      end
     end
+
+    context 'there is no published content' do
+      let(:document) do
+        SolrDocument.new(druid: 'abc123', dor_resource_count_isi: 0, modsxml: mods_001)
+      end
+
+      it 'does not include the purl-embed-viewer element' do
+        expect(rendered).not_to have_css('.purl-embed-viewer')
+      end
+    end
+
+    context 'dor_resource_count_isi is not defined' do
+      let(:document) { SolrDocument.new(druid: 'abc123', modsxml: mods_001) }
+
+      it 'includes the purl-embed-viewer element' do
+        expect(rendered).to have_css('.purl-embed-viewer')
+      end
+    end
+
     context 'with a iiif manifest' do
       let(:document) do
         SolrDocument.new(druid: 'abc123', modsxml: mods_001, iiif_manifest_url_ssim: ['example.com'])
