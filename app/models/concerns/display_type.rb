@@ -3,8 +3,6 @@
 # the formats and specific supported format types.
 module DisplayType
   def display_type
-    return self['eds_publication_type'] if eds?
-
     @display_type ||= [marc_or_mods, collection_suffix].compact.join('_')
   end
 
