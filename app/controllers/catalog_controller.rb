@@ -86,7 +86,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
-    config.index.title_field = 'title_display'
+    config.index.title_field = Blacklight::Configuration::Field.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_method = :thumbnail
     config.index.search_field_mapping = { # Catalog -> Article
@@ -508,7 +508,7 @@ class CatalogController < ApplicationController
     return {} unless document.is_a?(SolrDocument)
 
     {
-      title: document[blacklight_config.index.title_field],
+      title: document['title_display'],
       online: document.index_links.fulltext.map(&:href),
       format: document[document.format_key],
       isbn: document['isbn_display'],

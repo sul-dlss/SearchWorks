@@ -1,9 +1,10 @@
 class ShowDocumentPresenter < Blacklight::ShowPresenter
   include PresenterFormat
 
-  delegate :strip_tags, to: :view_context
+  delegate :sanitize, to: :view_context
 
-    original
+  def html_title
+    sanitize super, tags: []
   end
 
   def display_type(*)
