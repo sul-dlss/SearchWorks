@@ -144,9 +144,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::FacetFieldListComponent
-    if Settings.BOOKPLATES
-      config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
-    end
+    config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent, item_component: ResourceFacetItemComponent
     config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true, range_config: {
