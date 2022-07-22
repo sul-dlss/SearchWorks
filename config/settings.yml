@@ -30,7 +30,6 @@ EMAIL_THRESHOLD: 5
 GENERATE_SITEMAP: true
 DISABLE_SESSIONS: false
 THROTTLE_TRAFFIC: false
-HATHI_ETAS_ACCESS: false
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
