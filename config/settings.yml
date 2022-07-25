@@ -336,6 +336,13 @@ pageable_locations:
   - SOUTH-MEZZ
   - STACKS
   - STORAGE
+  SAL-NEWARK:
+  - INPROCESS
+  - LOCKED-STK
+  - NEWSPAPERS
+  - PAGE-EA
+  - PAGE-GR
+  - STACKS
   SCIENCE:
   - INPROCESS
   - ON-ORDER
@@ -508,6 +515,12 @@ circulating_item_types:
   - PERIBND
   - REF
   - SCORE
+  - STKS
+  - STKS-MONO
+  - STKS-PERI
+  SAL-NEWARK:
+  - NEWSPAPER
+  - NH-INHOUSE
   - STKS
   - STKS-MONO
   - STKS-PERI
