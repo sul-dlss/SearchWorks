@@ -4,6 +4,7 @@
     <div class="bento-block home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
+          <%= tag.span 'You are here!', class: 'you-are-here-badge' unless article_search? %>
           <%= image_tag 'homepage/catalog.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
           <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
@@ -14,6 +15,7 @@
     <div class="bento-block home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
       <div class="panel panel-default">
         <div class="panel-body">
+          <%= tag.span 'You are here!', class: 'you-are-here-badge' if article_search? %>
           <%= image_tag 'homepage/articles.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
           <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>

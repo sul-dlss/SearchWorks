@@ -5,12 +5,6 @@
     </div>
     <div class='media-body'>
       <p><%= link_to_bookplate_search(bookplate, class: 'media-heading') %></p>
-      <% if Settings.BOOKPLATES_EXHIBIT_URL.present? %>
-        <p>
-          <%= link_to('Digital Bookplates Exhibit', Settings.BOOKPLATES_EXHIBIT_URL) %>
-          <i class='external-link-icon'></i>
-        </p>
-      <% end %>
     </div>
   </div>
 </div>

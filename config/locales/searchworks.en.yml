@@ -40,14 +40,6 @@ en:
         search_bar: SearchWorks articles+
       catalog:
         search_bar: SearchWorks catalog
-    home_page_notice:
-      heading: 'New My Library Account!'
-      body_html:
-        <div>Stanford Libraries borrowers now have a new way to view their checkouts, requests, and fines.</div>
-        <div>
-          SUNet ID and PIN borrowers can log in via any <strong><a href="https://library.stanford.edu/myaccount">My Account</a></strong> link.
-          <a href="https://library.stanford.edu/blogs/stanford-libraries-blog/2019/08/new-my-library-account">&raquo; Find out more.</a>
-        </div>
     search:
       form:
         q:

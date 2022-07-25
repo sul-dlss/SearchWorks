@@ -1,24 +1,20 @@
-#course-reserves-browse_wrapper {
-  .dataTables_filter {
-    float: left;
-  }
-  .dataTables_paginate {
-    float: left;
-  }
-  .dataTables_info {
-    float: right;
-  }
-  .dataTables_length {
-    float: right;
-  }
-}
-
 .table-top-bar {
   color: $white;
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 6px;
+  padding: 0.6rem 1.5rem;
+
   @include sul-toolbar-bg-border;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  .dataTables_info {
+    padding-top: 0;
+  }
 }
 
 #course-reserves-browse_paginate {

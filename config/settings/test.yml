@@ -7,7 +7,6 @@ SU_AFFILIATIONS:
   - test-stanford:test
 EXHIBITS_ACCESS_PANEL:
   enabled: true
-HATHI_ETAS_ACCESS: true
 LIB_GUIDES:
   MINI_BENTO_ENABLED: true
 OAC_REQUEST_LINKS: true

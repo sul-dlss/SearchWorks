@@ -2,7 +2,7 @@ Blacklight.onLoad(function(){
 
   // Setup datatable
   var browseCourseReservesTable = $('#course-reserves-browse').DataTable({
-    "sDom":  '<<"row table-top-bar"<"col-md-6"f><"col-md-6"<<"col-md-6"i><"col-md-6"l>>>><t><"row"<"col-md-12"p>>>',
+    "sDom":  '<"table-top-bar"fil>tp',
     language: {
       info: "_START_ to _END_ of _TOTAL_ reserve lists",
       lengthMenu: "_MENU_ per page",
@@ -20,7 +20,7 @@ Blacklight.onLoad(function(){
   browseCourseReservesTable.on('draw', function(){
     modifyPaginationElements();
   });
-  
+
   $(document).on('turbolinks:before-cache', function() {
     if (browseCourseReservesTable !== null) {
      browseCourseReservesTable.destroy();
