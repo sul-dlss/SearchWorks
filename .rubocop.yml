@@ -21,6 +21,10 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/catalog_controller.rb'
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/views/**/*'
