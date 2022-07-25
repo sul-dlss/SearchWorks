@@ -1,12 +1,10 @@
 class ShowDocumentPresenter < Blacklight::ShowPresenter
   include PresenterFormat
-  include PresenterResearchStarter
 
-  def heading
-    original = super
-    return SolrDocument::UPDATED_EDS_RESTRICTED_TITLE if original =~ SolrDocument::EDS_RESTRICTED_PATTERN
+  delegate :sanitize, to: :view_context
 
-    original
+  def html_title
+    sanitize super, tags: []
   end
 
   def display_type(*)

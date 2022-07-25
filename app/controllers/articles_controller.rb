@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
     config.default_per_page = 20
 
     # solr field configuration for search results/index views
-    config.index.document_presenter_class = IndexDocumentPresenter
+    config.index.document_presenter_class = IndexEdsDocumentPresenter
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
     config.index.display_type_field = 'eds_publication_type'
@@ -94,7 +94,7 @@ class ArticlesController < ApplicationController
     end
 
     # solr field configuration for document/show views
-    config.show.document_presenter_class = ShowDocumentPresenter
+    config.show.document_presenter_class = ShowEdsDocumentPresenter
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'
     config.show.display_type_field = 'eds_publication_type'
