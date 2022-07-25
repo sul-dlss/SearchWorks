@@ -9,6 +9,10 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   RequestLinks::HooverArchiveRequestLinkComponent
                 when 'HOPKINS'
                   RequestLinks::HopkinsRequestLinkComponent
+                when 'SPEC-COLL', 'ARS', 'EAST-ASIA'
+                  # if there's a finding aid with valid link, use that for the request link
+                  component = RequestLinks::FindingAidRequestLinkComponent.new(document: document, library: library, location: location, **kwargs)
+                  Settings.OAC_REQUEST_LINKS && component.render? ? RequestLinks::FindingAidRequestLinkComponent : LocationRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end
