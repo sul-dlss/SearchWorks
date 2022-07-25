@@ -47,6 +47,12 @@ module EdsLinks
       category == 5
     end
 
+    def stanford_only?
+      category == 1 ||
+        category == 2 ||
+        category == 3
+    end
+
     def category
       return map[:category] if map.present? # matches a label exactly
 
@@ -64,7 +70,7 @@ module EdsLinks
         sfx:      sfx?,
         ill:      ill?,
         type:     type,
-        stanford_only: pdf?
+        stanford_only: stanford_only?
       )
     end
 
