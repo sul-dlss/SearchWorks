@@ -22,17 +22,12 @@ EXHIBITS_ACCESS_PANEL:
   enabled: false
   exhibits_host: http://example.com
 GLOBAL_ALERT: <%= false %>
-HOME_PAGE_NOTICE: <%= false %>
 GOOGLE_SITE_VERIFICATION: "654321sitever"
 PAGINATION_THRESHOLD: 250
-BOOKPLATES: true
-BOOKPLATES_EXHIBIT_URL: 'https://exhibits.stanford.edu/digital-bookplates'
-GOVERNMENT_DOCUMENTS_ACCESS_POINT: true
 EMAIL_THRESHOLD: 5
 GENERATE_SITEMAP: true
 DISABLE_SESSIONS: false
 THROTTLE_TRAFFIC: false
-HATHI_ETAS_ACCESS: false
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations

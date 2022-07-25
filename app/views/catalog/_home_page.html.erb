@@ -39,15 +39,13 @@
         </div>
       </div>
       <div class="col-md-6">
-        <% if Settings.GOVERNMENT_DOCUMENTS_ACCESS_POINT %>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <%= image_tag('homepage/govdocs.jpg', class: 'pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
-              <h3><%= link_to 'Government documents', govdocs_path %></h3>
-              <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
-            </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('homepage/govdocs.jpg', class: 'pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
+            <h3><%= link_to 'Government documents', govdocs_path %></h3>
+            <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
           </div>
-        <% end %>
+        </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <%= image_tag('homepage/coursereserves.jpg', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  course_reserves_path }) %>

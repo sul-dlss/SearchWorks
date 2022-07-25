@@ -2,6 +2,5 @@
   <%= render_masthead_partial %>
   <%= render partial: "search_results" %>
 <% else %>
-  <%= render partial: 'shared/home_page_notice' if Settings.HOME_PAGE_NOTICE %>
   <%= render partial: "home_page" %>
 <% end %>
