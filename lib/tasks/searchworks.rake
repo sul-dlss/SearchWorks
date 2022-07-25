@@ -51,6 +51,17 @@ namespace :searchworks do
     end
   end
 
+  desc "Prune old guest users from the database"
+  task :prune_old_guest_user_data, [:months_old] => [:environment] do |t, args|
+    old_bookmarkless_guest_users_ids = User.includes(:bookmarks)
+                                           .where(guest: true)
+                                           .where(bookmarks: { user_id: nil })
+                                           .where("users.updated_at < :date", { date: months_old.to_i.months.ago })
+                                           .pluck(:id)
+
+    User.delete(old_bookmarkless_guest_users_ids)
+  end
+
   desc "Clear Rack::Attack cache"
   task clear_rack_attack_cache: [:environment] do
     if Settings.THROTTLE_TRAFFIC
