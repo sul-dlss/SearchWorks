@@ -6,5 +6,6 @@ begin
     task.fail_on_error = true
   end
 rescue LoadError
-  warn 'Rubocop was not found and could not be required.'
+  # No warning because we expect that Rubocop will not be present in production
+  # and we would prefer not to see a warning in cron output every day.
 end
