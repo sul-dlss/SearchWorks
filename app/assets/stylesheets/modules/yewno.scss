@@ -1,9 +1,6 @@
 #yewno {
   border-top: 5px solid $black;
 }
-.yewno #yewno-results {
-  height: 400px;
-}
 
 .yn-figcaption {
   text-align: center;
@@ -13,4 +10,54 @@
   @include button-variant($black, $black);
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
   display: inline-block;
+}
+
+.yn-header {
+  display: none !important;
+}
+
+.yn-concept-definitions-container {
+  display: none !important;
+}
+
+// give the "connections" navigation actual space.
+.yn-pagination {
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+
+// tooltips from the widget should appear above the buttons below.
+.yn-widget {
+  z-index: 500;
+}
+
+.yewno #yewno-results {
+  height: auto !important;
+}
+
+.yn-concept-tooltip {
+  // yewno inherits our document color which has insufficient contrast
+  // with their background.
+  h3 {
+    color: #fff;
+  }
+}
+
+.yn-footer {
+  // original spacing was 5px
+  margin-top: 1rem !important;
+
+  // align the button and branding to the edges of the container.
+  .yn-link-discover-btn {
+    left: 0 !important;
+
+    // fixed height and padding makes the button text
+    // look off-center.
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .yn-footer-discover {
+    margin-right: 0 !important;
+  }
 }

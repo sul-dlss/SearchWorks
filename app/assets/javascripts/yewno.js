@@ -1,9 +1,11 @@
 
 $(window).ready(function() {
   $("#yewno-results").each(function(t) {
-    new YewnoDiscoverWidget({
+    new YewnoRelate({
       containerElementSelector: "#yewno-results",
       urlSearchParam: "q",
+      linkDiscover: true,
+      definitionCount: 0,
       urlPrefix: "https://stanford.idm.oclc.org/login?url="
     })
   });
