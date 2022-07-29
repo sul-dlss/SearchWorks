@@ -13,7 +13,7 @@ module MarcHelper
     data = doc['uniform_title_display_struct'].first.with_indifferent_access
     field_data = data[:fields].first[:field]
 
-    search_field = if %w(130 730).include?(data[:uniform_title_tag])
+    search_field = if %w(130 730).include?(data[:fields].first[:uniform_title_tag])
                      'search_title'
                    else
                      'author_title'
