@@ -30,4 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+      short: '%B %e, %Y'
+      long: '%B %e, %Y %l:%M%P'
+      time_today: 'Today at %-l:%M%P'
+      time_tomorrow: 'Tomorrow at %-l:%M%P'

@@ -5,22 +5,24 @@ describe "catalog/librarian_view" do
   include MarcMetadataFixtures
   describe "MARC records" do
     before do
-      assign(:document, SolrDocument.new(id: '12345', marcxml: metadata1))
+      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-01T23:01:18Z', marcxml: metadata1))
       render
     end
 
     it "should render the marc_view" do
+      expect(rendered).to have_content('August  1, 2022 11:01pm')
       expect(rendered).to have_css('#marc_view')
     end
   end
 
   describe "MODS records" do
     before do
-      assign(:document, SolrDocument.new(id: '12345', modsxml: mods_everything))
+      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-01T23:01:18Z', modsxml: mods_everything))
       render
     end
 
     it "should render the mods_view" do
+      expect(rendered).to have_content('August  1, 2022 11:01pm')
       expect(rendered).to have_css('.mods-view')
     end
   end
