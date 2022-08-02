@@ -42,6 +42,11 @@ class CatalogController < ApplicationController
     blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
   end
 
+  # Upstream opensearch action doesn't handle our complex title field well.
+  before_action only: :opensearch do
+    blacklight_config.index.title_field = blacklight_config.index.title_field.field
+  end
+
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
   configure_blacklight do |config|
