@@ -13,11 +13,10 @@ class NearbyOnShelf
   end
 
   def items
-    @items ||= if type == "ajax"
-                 get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
-               else
-                 get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
-               end
+    # De-dup the list of items since duplicate records in the browse view
+    # breaks the preview feature and we're pretty sure showing the same
+    # record more than once isn't helpful.
+    @items ||= find_items.uniq { |i| i[:doc]['id'] }
   end
 
   private
@@ -28,6 +27,14 @@ class NearbyOnShelf
 
   def params
     {}
+  end
+
+  def find_items
+    if type == "ajax"
+      get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
+    else
+      get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
+    end
   end
 
   def get_nearby_items(itm_display, barcode, before, after, page)
