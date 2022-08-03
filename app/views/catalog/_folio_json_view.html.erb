@@ -1,0 +1,17 @@
+<% if @document.first(:folio_json_struct) %>
+    <div id="folio-json-view">
+        <details>
+            <summary>Holdings JSON</summary>
+            <pre><%= JSON.pretty_generate(JSON.parse(@document.first(:holdings_json_struct))) %></pre>
+        </details>
+
+        <details>
+            <summary>Items JSON</summary>
+            <pre><%= JSON.pretty_generate(JSON.parse(@document.first(:items_json_struct))) %></pre>
+        </details>
+        <details>
+            <summary>FOLIO JSON</summary>
+            <pre><%= JSON.pretty_generate(JSON.parse(@document.first(:folio_json_struct))) %></pre>
+        </details>
+    </div>
+<% end %>

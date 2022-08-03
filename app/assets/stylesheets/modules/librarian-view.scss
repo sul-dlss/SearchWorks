@@ -1,3 +1,7 @@
 #marc_view .field {
   word-break: break-all;
 }
+
+#folio-json-view summary {
+  @extend .h4;
+}
