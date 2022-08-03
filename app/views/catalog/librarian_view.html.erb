@@ -6,6 +6,11 @@
     </button>
   <% end %>
   <h3 class="modal-title"><%= t('blacklight.search.librarian_view.title') %></h3>
+  
+  <% if @document[:last_updated] %>
+    <p>Last updated in SearchWorks on <%= l @document[:last_updated].to_time, format: :long %></p>
+  <% end %>
+  
 </div>
 <% if @document.respond_to?(:to_marc) %>
   <%= render "marc_view" %>
