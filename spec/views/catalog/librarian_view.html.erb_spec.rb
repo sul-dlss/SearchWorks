@@ -5,13 +5,28 @@ describe "catalog/librarian_view" do
   include MarcMetadataFixtures
   describe "MARC records" do
     before do
-      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-01T23:01:18Z', marcxml: metadata1))
+      assign(:document, SolrDocument.new(
+                          id: '12345',
+                          last_updated: '2022-08-01T23:01:18Z',
+                          marcxml: metadata1,
+                          holdings_json_struct: [{ "holdings_key" => "holdings_value" }].to_json,
+                          items_json_struct: [{ "items_key" => "items_value" }].to_json,
+                          folio_json_struct: [{ "folio_key" => "folio_value" }].to_json
+                        ))
       render
     end
 
     it "should render the marc_view" do
-      expect(rendered).to have_content('August  1, 2022 11:01pm')
       expect(rendered).to have_css('#marc_view')
+      expect(rendered).to have_css('#folio-json-view')
+
+      expect(rendered).to have_content('August  1, 2022 11:01pm')
+      expect(rendered).to have_content('holdings_key')
+      expect(rendered).to have_content('holdings_value')
+      expect(rendered).to have_content('items_key')
+      expect(rendered).to have_content('items_value')
+      expect(rendered).to have_content('folio_key')
+      expect(rendered).to have_content('folio_value')
     end
   end
 
