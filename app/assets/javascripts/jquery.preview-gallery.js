@@ -51,7 +51,8 @@
         $target.append($arrow);
 
         maxLeft = $target.width() - $arrow.width() - 1,
-        arrowLeft = parseInt($item.position().left + ($item.width()/2) - 20);
+        offset = ($('body').width() - $('#documents').width()) / 2;
+        arrowLeft = parseInt($item.position().left + ($item.width() / 2) - offset);
 
         if (arrowLeft < 0) arrowLeft = 0;
         if (arrowLeft > maxLeft) arrowLeft = maxLeft;
