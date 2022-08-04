@@ -14,4 +14,4 @@
 :access_facet: Online
 :building_facet: Hoover Library
 :marc_links_struct:
-  - '{ "fulltext": true, "html": "...", "text": "..." }'
+  - '{ "fulltext": true, "href": "...", "link_text": "..." }'

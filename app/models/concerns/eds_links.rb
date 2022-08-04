@@ -58,12 +58,12 @@ module EdsLinks
 
     def to_searchworks_link(categories = [])
       SearchWorks::Links::Link.new(
-        text:     label,
-        href:     url,
-        fulltext: present? && show?(categories, category),
-        sfx:      sfx?,
-        ill:      ill?,
-        type:     type,
+        link_text: label,
+        href:      url,
+        fulltext:  present? && show?(categories, category),
+        sfx:       sfx?,
+        ill:       ill?,
+        type:      type,
         stanford_only: pdf?
       )
     end

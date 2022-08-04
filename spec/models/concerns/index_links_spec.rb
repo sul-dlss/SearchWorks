@@ -96,7 +96,7 @@ describe IndexLinks do
       expect(finding_aid_links_alternate.all.first).to be_finding_aid
       expect(finding_aid_links.finding_aid.length).to eq 1
       expect(finding_aid_links.finding_aid.first.html).to match(
-        %r{<a href='.*oac\.cdlib\.org\/findaid\/ark:\/something-else'>Online Archive of California<\/a>}
+        %r{<a href=".*oac\.cdlib\.org\/findaid\/ark:\/something-else">Online Archive of California<\/a>}
       )
     end
 
@@ -123,7 +123,7 @@ describe IndexLinks do
       expect(sfx_links.all.first).to be_sfx
       expect(sfx_links.sfx.length).to eq 1
       expect(sfx_links.sfx.first).to be_sfx
-      expect(sfx_links.sfx.first.html).to match(%r{^<a href=.*class='sfx'>Find full text<\/a>$})
+      expect(sfx_links.sfx.first.html).to match(%r{^<a href=.*class="sfx">Find full text<\/a>$})
     end
   end
 end

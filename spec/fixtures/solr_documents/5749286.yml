@@ -16,11 +16,11 @@
        "managed_purl" : null,
        "sort" : null,
        "fulltext" : true,
-       "html" : "<a title='Available to Stanford-affiliated users only' href='https://stanford.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=s4392798&profile=ehost&defaultdb=aph'>search.ebscohost.com</a> ",
        "druid" : null,
        "href" : "https://stanford.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=s4392798&profile=ehost&defaultdb=aph",
        "finding_aid" : false,
        "stanford_only" : 20,
-       "text" : "search.ebscohost.com",
+       "link_text" : "search.ebscohost.com",
+       "link_title" : "Available to Stanford-affiliated users only",
        "file_id" : null
     }

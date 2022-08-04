@@ -27,7 +27,8 @@ RSpec.describe JsonResultsDocumentPresenter do
     context 'when the source document is available online to only Stanford users' do
       before do
         document_data['marc_links_struct'] = [{
-          "html": "<a href='https://example.com'>The Link</a> ",
+          "href": "https://example.com",
+          "link_text": "The Link",
           "fulltext": true,
           "stanford_only": true
         }]
