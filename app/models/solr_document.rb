@@ -57,6 +57,10 @@ class SolrDocument
     document.key?(:eds_citation_exports) && document['eds_citation_exports']&.select { |e| e['id'] == 'RIS' }.any?
   end
 
+  use_extension(FolioJsonExport) do |document|
+    document.key?(:folio_json_struct)
+  end
+
   use_extension(ModsExport) do |document|
     document.key?(:modsxml)
   end

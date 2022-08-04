@@ -3,4 +3,5 @@
 # Add new mime types for use in respond_to blocks:
 # Mime::Type.register "text/richtext", :rtf
 Mime::Type.register_alias "text/xml", :mobile
+Mime::Type.register_alias "application/json", :folio_json
 Mime::Type.register_alias "application/x-Research-Info-Systems", :ris
