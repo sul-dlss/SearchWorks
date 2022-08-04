@@ -1,10 +1,19 @@
 class AvailabilityController < ApplicationController
   before_action :redirect_bots, :redirect_no_ids
+
   def index
-    render json: LiveLookup.new(params[:ids]).as_json, layout: false
+    render json: live_lookup, layout: false
   end
 
   private
+
+  def live_lookup
+    if Settings.FOLIO_LIVE_LOOKUP
+      FolioLiveLookup.new(params[:ids]).as_json
+    else
+      SirsiLiveLookup.new(params[:ids]).as_json
+    end
+  end
 
   def redirect_bots
     if /bot|spider|crawl|teoma/.match?(request.env['HTTP_USER_AGENT'])

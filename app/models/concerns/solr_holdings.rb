@@ -20,6 +20,7 @@ module SolrHoldings
     end.sort_by(&:full_shelfkey)
   end
 
+  # TODO: This will need to be updated to do FOLIO lookups
   def live_lookup_items
     @live_lookup_items ||= items.map do |item|
       data = live_data_for_barcode(item.barcode)
@@ -52,8 +53,9 @@ module SolrHoldings
 
   private
 
+  # TODO: This will need to hit the live availability lookup?
   def live_data
-    @live_data ||= LiveLookup.new(id).records
+    @live_data ||= SirsiLiveLookup.new(id).records
   end
 
   def live_data_for_barcode(barcode)

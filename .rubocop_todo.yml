@@ -417,7 +417,7 @@ Lint/DuplicateBranch:
   Exclude:
     - 'app/models/concerns/eds_subjects.rb'
     - 'lib/holdings/status.rb'
-    - 'lib/live_lookup.rb'
+    - 'lib/sirsi_live_lookup.rb'
 
 # Offense count: 1
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
@@ -452,7 +452,7 @@ Lint/NoReturnInBeginEndBlocks:
 Lint/ParenthesesAsGroupedExpression:
   Exclude:
     - 'spec/features/home_page_spec.rb'
-    - 'spec/lib/live_lookup_spec.rb'
+    - 'spec/lib/sirsi_live_lookup_spec.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -786,7 +786,7 @@ RSpec/ExcessiveDocstringSpacing:
     - 'spec/features/responsive/results_toolbar_spec.rb'
     - 'spec/features/responsive/search_toolbar_responsive_spec.rb'
     - 'spec/lib/hours_request_spec.rb'
-    - 'spec/lib/live_lookup_spec.rb'
+    - 'spec/lib/sirsi_live_lookup_spec.rb'
     - 'spec/mailers/search_works_record_mailer_spec.rb'
 
 # Offense count: 9

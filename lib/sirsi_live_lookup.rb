@@ -1,4 +1,4 @@
-class LiveLookup
+class SirsiLiveLookup
   HIDE_DUE_DATE_LIBS = ['RUMSEYMAP'].freeze
 
   delegate :as_json, :to_json, to: :records
@@ -61,7 +61,7 @@ class LiveLookup
 
     def as_json
       {
-        barcode: barcode,
+        item_id: barcode,
         due_date: due_date,
         current_location: current_location
       }

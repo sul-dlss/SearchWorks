@@ -53,6 +53,7 @@ class CatalogController < ApplicationController
 
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
+  # rubocop:disable Metrics/BlockLength
   configure_blacklight do |config|
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
@@ -61,7 +62,75 @@ class CatalogController < ApplicationController
       qt: 'search',
       rows: 20,
       "f.callnum_facet_hsim.facet.limit": "-1",
-      "f.stanford_work_facet_hsim.facet.limit": "-1"
+      "f.stanford_work_facet_hsim.facet.limit": "-1",
+      fl: %w{score
+             id
+             uuid_ssi
+             author_corp_display vern_author_corp_display
+             author_meeting_display vern_author_meeting_display
+             author_person_display vern_author_person_display
+             author_person_full_display vern_author_person_full_display
+             bookplates_display
+             collection
+             collection_type
+             collection_with_title
+             crez_course_info
+             db_az_subject
+             druid
+             file_id
+             set
+             set_with_title
+             format
+             format_main_ssim
+             format_physical_ssim
+             genre_ssim
+             iiif_manifest_url_ssim
+             imprint_display
+             isbn_display
+             item_display
+             lccn
+             mhld_display
+             modsxml
+             oclc
+             physical vern_physical
+             preferred_barcode
+             pub_date
+             pub_year_ss
+             publication_year_isi
+             beginning_year_isi
+             earliest_year_isi
+             earliest_poss_year_isi
+             release_year_isi
+             reprint_year_isi
+             ending_year_isi
+             latest_year_isi
+             latest_poss_year_isi
+             production_year_isi
+             original_year_isi
+             copyright_year_isi
+             pub_date_display
+             summary_display
+             title_245a_display vern_title_245a_display
+             title_245c_display vern_title_245c_display
+             title_display vern_title_display
+             title_full_display vern_title_full_display
+             title_uniform_display vern_title_uniform_display
+             url_fulltext
+             url_restricted
+             url_suppl
+             url_sfx
+             managed_purl_urls
+             ht_access_sim
+             ht_htid_ssim
+             ht_bib_key_ssim
+             characteristics_ssim
+             holdings_json_struct
+             author_struct:[json]
+             marc_links_struct:[json]
+             summary_struct:[json]
+             toc_struct:[json]
+             uniform_title_display_struct:[json]
+             schema_dot_org_struct:[json]}.join(', ') # TODO: add holdings_json_struct and uuid_ssi to fl default config in search requestHandler
     }
 
     config.fetch_many_document_params = { fl: '*' }
@@ -475,6 +544,7 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :citation, if: false
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
   end
+  # rubocop:enable Metrics/BlockLength
 
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
