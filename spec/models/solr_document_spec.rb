@@ -4,7 +4,7 @@ describe SolrDocument do
   include MarcMetadataFixtures
   describe "marc field" do
     let(:marcxml) { SolrDocument.new(marcxml: metadata1) }
-    let(:marcjson) { SolrDocument.new(marcjson_ss: marcxml.to_marc.to_hash.to_json) }
+    let(:marcjson) { SolrDocument.new(marc_json_struct: marcxml.to_marc.to_hash.to_json) }
 
     it "should respond to #to_marc for marcxml" do
       expect(marcxml).to respond_to(:to_marc)

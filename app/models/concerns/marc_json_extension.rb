@@ -1,7 +1,7 @@
 module MarcJsonExtension
   # Override blacklight-marc if we have marcjson available
   def _marc_source_field
-    :marcjson_ss
+    :marc_json_struct
   end
 
   # Override blacklight-marc if we have marcjson available
