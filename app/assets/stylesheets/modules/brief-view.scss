@@ -5,6 +5,7 @@
 
   h3.index_title {
     @include h3-index-title-small-font;
+    word-wrap: break-word;
   }
 
   .preview {
