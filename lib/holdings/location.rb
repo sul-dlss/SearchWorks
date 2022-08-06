@@ -9,6 +9,8 @@ class Holdings
     end
 
     def name
+      return unless @code
+
       location_name = Constants::LOCS[@code]
       Honeybadger.notify("Missing location name for code: #{@code}") if location_name.nil?
 
