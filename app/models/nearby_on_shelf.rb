@@ -1,11 +1,10 @@
 class NearbyOnShelf
-  attr_reader :item_display, :barcode, :before, :after, :page, :search_service
+  attr_reader :item_display, :barcode, :per, :page, :search_service
 
-  def initialize(item_display:, barcode:, before: 12, after: 12, page:, search_service:)
+  def initialize(item_display:, barcode:, per: 24, page: 0, search_service:)
     @item_display = Array(item_display)
     @barcode = barcode
-    @before = before
-    @after = after
+    @per = per
     @page = page
     @search_service = search_service
   end
@@ -24,41 +23,39 @@ class NearbyOnShelf
 
     if page == 0
       # get preceding bookspines
-      get_preceding_spines_from_field(before) +
+      get_preceding_spines_from_field +
         # TODO: can we avoid this extra call to Solr but keep the code this clean?
         # What is the purpose of this call?  To just return the original document?
         get_spines_from_field_values("shelfkey", [shelfkey]) +
         # get following bookspines
-        get_following_spines_from_field(after)
+        get_following_spines_from_field
     elsif page < 0 # page is negative so we need to get the preceding docs
-      get_preceding_spines_from_field((before + 1) * 2, page)
+      get_preceding_spines_from_field
     elsif page > 0 # page is positive, so we need to get the following bookspines
-      get_following_spines_from_field(after * 2, page)
+      get_following_spines_from_field
     end
   end  # get_nearby_items
 
-  def get_preceding_spines_from_field(how_many, page = 0)
-    get_next_spines_from_field(reverse_shelfkey, 'reverse_shelfkey', how_many, page)
+  def get_preceding_spines_from_field
+    get_next_spines_from_field(reverse_shelfkey, 'reverse_shelfkey')
   end
 
-  def get_following_spines_from_field(how_many, page = 0)
-    get_next_spines_from_field(shelfkey, 'shelfkey', how_many, page)
+  def get_following_spines_from_field
+    get_next_spines_from_field(shelfkey, 'shelfkey')
   end
 
   # given a shelfkey or reverse shelfkey (for a lopped call number), get the
-  #  text for the next "n" nearby items
-  def get_next_spines_from_field(starting_value, field_name, how_many, page)
-    number_of_items = how_many
-    unless page.nil?
-      if page < 0
-        page = page.to_s[1, page.to_s.length]
-      end
-      number_of_items = how_many.to_i * page.to_i + 1
-    end
-    desired_values = get_next_terms_for_field(starting_value, field_name, number_of_items)
-    unless page.nil? or page.to_i == 0
-      desired_values = desired_values.values_at((desired_values.length - how_many.to_i)..desired_values.length)
-    end
+  #  text for the next window of nearby items
+  def get_next_spines_from_field(starting_value, field_name)
+    number_of_shelfkeys_to_request = per * page.abs + (per / 2).floor
+
+    desired_values = get_next_terms_for_field(starting_value, field_name, number_of_shelfkeys_to_request)
+
+    # perform client-side windowing to get the desired number of items
+    # because the solr terms component will include everything between the current
+    # item and the last item needed for the range
+    desired_values = desired_values.last(per) unless page == 0
+
     get_spines_from_field_values(field_name, desired_values)
   end
 
