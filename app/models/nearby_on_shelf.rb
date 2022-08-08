@@ -14,41 +14,36 @@ class NearbyOnShelf
     # De-dup the list of items since duplicate records in the browse view
     # breaks the preview feature and we're pretty sure showing the same
     # record more than once isn't helpful.
-    find_items.uniq { |i| i[:doc]['id'] }.map { |i| SolrDocument.new(i[:doc]) }
+    get_nearby_items.uniq { |i| i[:doc]['id'] }.map { |i| SolrDocument.new(i[:doc]) }
   end
 
   private
 
-  def find_items
-    get_nearby_items
-  end
-
   def get_nearby_items
-    items = []
-    item_display = get_item_display(item_display, barcode)
+    return [] if item_display_pieces.empty?
 
-    if !item_display.nil?
-      my_shelfkey = get_shelfkey(item_display)
-      my_reverse_shelfkey = get_reverse_shelfkey(item_display)
-
-      if page.nil? or page.to_i == 0
-        # get preceding bookspines
-        items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", before, nil)
+    if page == 0
+      # get preceding bookspines
+      get_preceding_spines_from_field(before) +
         # TODO: can we avoid this extra call to Solr but keep the code this clean?
         # What is the purpose of this call?  To just return the original document?
-        items << get_spines_from_field_values([my_shelfkey], "shelfkey").uniq
+        get_spines_from_field_values("shelfkey", [shelfkey]) +
         # get following bookspines
-        items << get_next_spines_from_field(my_shelfkey, "shelfkey", after, nil)
-      else
-        if page.to_i < 0 # page is negative so we need to get the preceding docs
-          items << get_next_spines_from_field(my_reverse_shelfkey, "reverse_shelfkey", (before.to_i + 1) * 2, page.to_i)
-        elsif page.to_i > 0 # page is possitive, so we need to get the following bookspines
-          items << get_next_spines_from_field(my_shelfkey, "shelfkey", after.to_i * 2, page.to_i)
-        end
-      end
+        get_following_spines_from_field(after)
+    elsif page < 0 # page is negative so we need to get the preceding docs
+      get_preceding_spines_from_field((before + 1) * 2, page)
+    elsif page > 0 # page is positive, so we need to get the following bookspines
+      get_following_spines_from_field(after * 2, page)
     end
-    items.flatten
   end  # get_nearby_items
+
+  def get_preceding_spines_from_field(how_many, page = 0)
+    get_next_spines_from_field(reverse_shelfkey, 'reverse_shelfkey', how_many, page)
+  end
+
+  def get_following_spines_from_field(how_many, page = 0)
+    get_next_spines_from_field(shelfkey, 'shelfkey', how_many, page)
+  end
 
   # given a shelfkey or reverse shelfkey (for a lopped call number), get the
   #  text for the next "n" nearby items
@@ -64,7 +59,7 @@ class NearbyOnShelf
     unless page.nil? or page.to_i == 0
       desired_values = desired_values.values_at((desired_values.length - how_many.to_i)..desired_values.length)
     end
-    get_spines_from_field_values(desired_values, field_name)
+    get_spines_from_field_values(field_name, desired_values)
   end
 
   # return an array of the next terms in the index for the indicated field and
@@ -84,21 +79,17 @@ class NearbyOnShelf
   #  a book on a shelf) from relevant solr docs, given a particular solr
   #  field and value for which to retrieve spine info.
   # Each html list item must match a desired value
-  def get_spines_from_field_values(desired_values, field)
-    spines_hash = {}
-      response, docs = search_service.search_results do |builder|
-        builder.where(field => desired_values.compact)
-      end
+  def get_spines_from_field_values(field, desired_values)
+    # Get the documents for a set of shelf keys
+    response, docs = search_service.search_results do |builder|
+      builder.where(field => desired_values.compact)
+    end
 
-      docs.each do |doc|
-        hsh = get_spine_hash_from_doc(doc, desired_values.compact, field)
-        spines_hash.merge!(hsh)
-      end
-      result = []
-      spines_hash.keys.sort.each { |sortkey|
-        result << spines_hash[sortkey]
-      }
-      result
+    spines = docs.flat_map do |doc|
+      get_spines_from_doc(doc, field, desired_values.compact)
+    end
+
+    spines.uniq { |spine| spine[:sort_key] }.sort_by { |spine| spine[:sort_key] }
   end
 
   # create a hash with
@@ -109,9 +100,8 @@ class NearbyOnShelf
   #   spine is:  <li> title [(pub year)] [<br/> author] <br/> callnum </li>
   # Each element of the hash must match a desired value in the
   #   desired_values array for the indicated piece (shelfkey or reverse shelfkey)
-  def get_spine_hash_from_doc(doc, desired_values, field)
-    result_hash = {}
-    return if doc[:item_display].nil?
+  def get_spines_from_doc(doc, field, desired_values)
+    return [] if doc[:item_display].nil?
 
     # This winnows down the holdings hashs on only ones where the desired values includes the shelfkey or reverse shelfkey using a very quick select statment
     # The resulting array looke like [[:"36105123456789",{:barcode=>"36105123456789",:callnumber=>"PS3156 .A53"}]]
@@ -119,33 +109,29 @@ class NearbyOnShelf
       [:shelfkey, :reverse_shelfkey].include?(field.to_sym) && desired_values.include?(callnumber.send(field.to_sym))
     end
 
-    unless item_array.empty?
-      # putting items back into a hash for readibility
-      # looping through the resulting temp hash of holdings to build proper sort keys and then return a hash that conains a solr document for every item in the hash
-      item_array.each do |callnumber|
-        # create sorting key for spine
-        # shelfkey asc, then by sorting title asc, then by pub date desc
-        # notice that shelfkey and sort_title need to be a constant length
-        #  separator of " -|- " is for human readability only
-        sort_key = "#{callnumber.shelfkey[0, 100].ljust(100)} -|- "
-        sort_key << "#{doc[:title_sort][0, 100].ljust(100)} -|- " unless doc[:title_sort].nil?
+    # looping through the resulting temp hash of holdings to build proper sort keys and then return a hash that conains a solr document for every item in the hash
+    item_array.map do |callnumber|
+      # create sorting key for spine
+      # shelfkey asc, then by sorting title asc, then by pub date desc
+      # notice that shelfkey and sort_title need to be a constant length
+      #  separator of " -|- " is for human readability only
+      sort_key = "#{callnumber.shelfkey[0, 100].ljust(100)} -|- "
+      sort_key << "#{doc[:title_sort][0, 100].ljust(100)} -|- " unless doc[:title_sort].nil?
 
-        # pub_year must be inverted for descending sort
-        if doc[:pub_date].nil? || doc[:pub_date].length == 0
-          sort_key << '9999'
-        else
-         sort_key << doc[:pub_date].tr('0123456789', '9876543210')
-        end
-        # Adding ckey to sort to make sure we collapse things that have the same callnumber, title, pub date, AND ckey
-        sort_key << " -|- #{doc[:id][0, 20].ljust(20)}"
-        # We were adding the library to the sortkey. However; if we don't add the library we can easily collapse items that have the same
-        # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
-        #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
+      # pub_year must be inverted for descending sort
+      if doc[:pub_date].nil? || doc[:pub_date].length == 0
+        sort_key << '9999'
+      else
+        sort_key << doc[:pub_date].tr('0123456789', '9876543210')
+      end
+      # Adding ckey to sort to make sure we collapse things that have the same callnumber, title, pub date, AND ckey
+      sort_key << " -|- #{doc[:id][0, 20].ljust(20)}"
+      # We were adding the library to the sortkey. However; if we don't add the library we can easily collapse items that have the same
+      # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
+      #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
 
-        result_hash[sort_key] = { doc: doc.to_h, holding: callnumber }
-      end  # end each item display
-    end
-    return result_hash
+      { doc: doc.to_h, holding: callnumber, sort_key: sort_key }
+    end  # end each item display
   end
 
   def get_next_terms(curr_value, field, how_many)
@@ -176,36 +162,17 @@ class NearbyOnShelf
     result
   end
 
-  # given a document and the barcode of an item in the document, return the
-  #  item_display field corresponding to the barcode, or nil if there is no
-  #  such item
-  def get_item_display(item_display, barcode)
-    item = ""
-    if barcode.nil? || barcode.length == 0
-      return nil
-    end
+  def item_display_pieces
+    return [] if barcode.blank?
 
-    [item_display].flatten.each do |item_disp|
-      item = item_disp if item_disp =~ /^#{CGI::escape(barcode)}/
-    end
-    return item unless item == ""
+    @item_display_pieces ||= item_display.find { |item_display| item_disp =~ /^#{CGI::escape(barcode)}/ }.presence&.split('-|-') || []
   end
 
-  # return the shelfkey (lopped) piece of the item_display field
-  def get_shelfkey(item_display)
-    get_item_display_piece(item_display, 6)
+  def shelfkey
+    item_display_pieces[6]
   end
 
-  # return the reverse shelfkey (lopped) piece of the item_display field
-  def get_reverse_shelfkey(item_display)
-    get_item_display_piece(item_display, 7)
-  end
-
-  def get_item_display_piece(item_display, index)
-    if (item_display)
-      item_array = item_display.split('-|-')
-      return item_array[index].strip unless item_array[index].nil?
-    end
-    nil
+  def reverse_shelfkey
+    item_display_pieces[7]
   end
 end
