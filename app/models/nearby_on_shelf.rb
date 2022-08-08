@@ -15,14 +15,6 @@ class NearbyOnShelf
 
   private
 
-  def logger
-    ::Rails.logger
-  end
-
-  def params
-    {}
-  end
-
   def find_items
     if type == "ajax"
       get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
