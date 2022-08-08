@@ -24,8 +24,9 @@ class NearbyOnShelf
     if page == 0
       # get preceding bookspines
       get_preceding_spines_from_field +
-        # TODO: can we avoid this extra call to Solr but keep the code this clean?
-        # What is the purpose of this call?  To just return the original document?
+        # multiple bib records can have the same shelfkey, so we need to
+        # query solr to get all (some?) of them before looking at the
+        # other shelfkeys.
         get_spines_from_field_values("shelfkey", [shelfkey]) +
         # get following bookspines
         get_following_spines_from_field
