@@ -4,40 +4,22 @@ class BrowseController < ApplicationController
   include Blacklight::SearchContext
   include Thumbnail
 
-  helper_method :browse_params
-
   copy_blacklight_config_from(CatalogController)
 
+  before_action :fetch_orginal_document
+  before_action :fetch_browse_callnumbers
+  helper_method :browse_params
+
   def index
-    if params[:start].present?
-      @response, @original_doc = search_service.fetch(params[:start])
-      barcode = params[:barcode] || @original_doc[:preferred_barcode]
-      respond_to do |format|
-        format.html do
-          @document_list = NearbyOnShelf.new(
-            item_display: @original_doc[:item_display],
-            barcode: barcode,
-            page: params[:page].to_i,
-            search_service: search_service
-          ).document_list
-        end
-      end
+    respond_to do |format|
+      format.html
     end
   end
 
   def nearby
-    if params[:start].present?
-      @response, @original_doc = search_service.fetch(params[:start])
-      barcode = params[:barcode] || @original_doc[:preferred_barcode]
-      respond_to do |format|
-        format.html do
-          @document_list = NearbyOnShelf.new(
-            item_display: @original_doc[:item_display],
-            barcode: barcode,
-            search_service: search_service
-          ).document_list
-          render layout: false
-        end
+    respond_to do |format|
+      format.html do
+        render browse: @document_list, layout: false
       end
     end
   end
@@ -49,6 +31,30 @@ class BrowseController < ApplicationController
   end
 
   def browse_params
-    params.permit(:start, :page, :barcode)
+    params.permit(:start, :barcode, :before, :after, :view)
+  end
+
+  def fetch_orginal_document
+    @response, @original_doc = search_service.fetch(params[:start]) if params[:start]
+  end
+
+  def fetch_browse_callnumbers
+    if params[:before] || params[:after] || params[:start].blank?
+      service = if params[:before]
+                  NearbyOnShelf.reverse(search_service: search_service)
+                else
+                  NearbyOnShelf.forward(search_service: search_service)
+                end
+
+      @callnumbers = service.callnumbers(params[:before] || params[:after])
+    else
+      barcode = params[:barcode] || @original_doc[:preferred_barcode]
+      callnumber = @original_doc.callnumbers.find { |c| c.barcode.starts_with?(barcode) }
+
+      @callnumbers = NearbyOnShelf.around_callnumber(
+        callnumber,
+        search_service: search_service
+      )
+    end
   end
 end

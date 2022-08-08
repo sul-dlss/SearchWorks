@@ -38,3 +38,6 @@ RSpec/DescribeClass:
 Metrics/ParameterLists:
   Exclude:
     - 'app/components/**/*'
+
+RSpec/MessageSpies:
+  Enabled: false

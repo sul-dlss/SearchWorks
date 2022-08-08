@@ -44,6 +44,8 @@ module SolrHoldings
     end
   end
 
+  attr_writer :preferred_callnumber
+
   def cdl?
     druid && holdings.callnumbers.any? { |call| call.home_location == 'CDL' }
   end
