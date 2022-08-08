@@ -1,8 +1,12 @@
 class NearbyOnShelf
-  attr_reader :options, :search_service
+  attr_reader :item_display, :barcode, :before, :after, :page, :search_service
 
-  def initialize(options, search_service:)
-    @options = options
+  def initialize(item_display:, barcode:, before:, after:, page:, search_service:)
+    @item_display = Array(item_display)
+    @barcode = barcode
+    @before = before
+    @after = after
+    @page = page
     @search_service = search_service
   end
 
@@ -16,12 +20,12 @@ class NearbyOnShelf
   private
 
   def find_items
-    get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
+    get_nearby_items
   end
 
-  def get_nearby_items(itm_display, barcode, before, after, page)
+  def get_nearby_items
     items = []
-    item_display = get_item_display(itm_display, barcode)
+    item_display = get_item_display(item_display, barcode)
 
     if !item_display.nil?
       my_shelfkey = get_shelfkey(item_display)
