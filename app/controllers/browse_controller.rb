@@ -17,8 +17,6 @@ class BrowseController < ApplicationController
           @document_list = NearbyOnShelf.new(
             item_display: @original_doc[:item_display],
             barcode: barcode,
-            before: 9,
-            after: 10,
             page: params[:page].to_i,
             search_service: search_service
           ).document_list

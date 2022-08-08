@@ -1,7 +1,7 @@
 class NearbyOnShelf
   attr_reader :item_display, :barcode, :before, :after, :page, :search_service
 
-  def initialize(item_display:, barcode:, before:, after:, page:, search_service:)
+  def initialize(item_display:, barcode:, before: 12, after: 12, page:, search_service:)
     @item_display = Array(item_display)
     @barcode = barcode
     @before = before
