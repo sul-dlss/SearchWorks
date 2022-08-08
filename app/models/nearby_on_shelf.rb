@@ -12,11 +12,11 @@ class NearbyOnShelf
     @blacklight_config
   end
 
-  def items
+  def document_list
     # De-dup the list of items since duplicate records in the browse view
     # breaks the preview feature and we're pretty sure showing the same
     # record more than once isn't helpful.
-    find_items.uniq { |i| i[:doc]['id'] }
+    find_items.uniq { |i| i[:doc]['id'] }.map { |i| SolrDocument.new(i[:doc]) }
   end
 
   private

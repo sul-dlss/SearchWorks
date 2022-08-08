@@ -23,9 +23,7 @@ class BrowseController < ApplicationController
              after: 10,
              page: params[:page] },
              search_service: search_service
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
+          ).document_list
         end
       end
     end
@@ -45,9 +43,7 @@ class BrowseController < ApplicationController
              before: 12,
              after: 12 },
            search_service: search_service
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
+          ).document_list
           render browse: @document_list, layout: false
         end
       end
