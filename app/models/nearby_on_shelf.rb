@@ -1,15 +1,9 @@
 class NearbyOnShelf
-  attr_reader :type, :options, :search_service
+  attr_reader :options, :search_service
 
-  def initialize(type, config, options, search_service:)
-    @type = type
-    @blacklight_config = config
+  def initialize(options, search_service:)
     @options = options
     @search_service = search_service
-  end
-
-  def blacklight_config
-    @blacklight_config
   end
 
   def document_list

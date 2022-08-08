@@ -16,7 +16,6 @@ class BrowseController < ApplicationController
         format.html do
           @document_list = NearbyOnShelf.new(
             "static",
-            blacklight_config,
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 9,
@@ -37,7 +36,6 @@ class BrowseController < ApplicationController
         format.html do
           @document_list = NearbyOnShelf.new(
             "static",
-            blacklight_config,
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 12,
