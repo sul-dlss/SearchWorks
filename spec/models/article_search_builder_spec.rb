@@ -58,7 +58,7 @@ RSpec.describe ArticleSearchBuilder do
   end
 
   context 'date range search' do
-    let(:blacklight_params) { { range: { pub_year_tisim: { begin: ['1965'], end: ['1967'] } } } }
+    let(:blacklight_params) { { range: { pub_year_tisim: { begin: '1965', end: '1967' } } } }
 
     it 'maps to EDS API' do
       expect(search_builder.dig(:range, :pub_year_tisim)).to eq({ 'begin' => '1965', 'end' => '1967' })
