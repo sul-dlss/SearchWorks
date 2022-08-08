@@ -15,7 +15,6 @@ class BrowseController < ApplicationController
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
-            "static",
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 9,
@@ -35,7 +34,6 @@ class BrowseController < ApplicationController
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
-            "static",
             { item_display: @original_doc[:item_display],
              preferred_barcode: barcode,
              before: 12,

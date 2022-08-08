@@ -16,11 +16,7 @@ class NearbyOnShelf
   private
 
   def find_items
-    if type == "ajax"
-      get_next_spines_from_field(options[:start], options[:field], options[:num], nil)
-    else
-      get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
-    end
+    get_nearby_items(options[:item_display], options[:preferred_barcode], options[:before], options[:after], options[:page])
   end
 
   def get_nearby_items(itm_display, barcode, before, after, page)
