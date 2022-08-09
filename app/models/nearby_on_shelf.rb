@@ -16,7 +16,7 @@ class NearbyOnShelf
     # De-dup the list of items since duplicate records in the browse view
     # breaks the preview feature and we're pretty sure showing the same
     # record more than once isn't helpful.
-    get_nearby_items.uniq { |i| i[:doc]['id'] }.map { |i| SolrDocument.new(i[:doc]) }
+    get_nearby_items.pluck(:doc).uniq(&:id)
   end
 
   private
@@ -97,7 +97,7 @@ class NearbyOnShelf
     end
 
     item_array.map do |callnumber|
-      { doc: doc.to_h, sort_key: callnumber.spine_sort_key }
+      { doc: doc, sort_key: callnumber.spine_sort_key }
     end
   end
 
