@@ -36,7 +36,7 @@ class BrowseController < ApplicationController
            barcode: barcode,
            search_service: search_service
           ).document_list
-          render browse: @document_list, layout: false
+          render layout: false
         end
       end
     end
