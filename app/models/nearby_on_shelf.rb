@@ -93,7 +93,7 @@ class NearbyOnShelf
     # This winnows down the holdings hashs on only ones where the desired values includes the shelfkey or reverse shelfkey using a very quick select statment
     # The resulting array looke like [[:"36105123456789",{:barcode=>"36105123456789",:callnumber=>"PS3156 .A53"}]]
     item_array = doc.holdings.callnumbers.select do |callnumber|
-      [:shelfkey, :reverse_shelfkey].include?(field.to_sym) && desired_values.include?(callnumber.send(field.to_sym))
+      desired_values.include?(callnumber.send(field))
     end
 
     # looping through the resulting temp hash of holdings to build proper sort keys and then return a hash that conains a solr document for every item in the hash
