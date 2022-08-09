@@ -51,7 +51,7 @@ class NearbyOnShelf
   def get_next_spines_from_field(starting_value, field_name)
     number_of_shelfkeys_to_request = per * page.abs + (per / 2).floor
 
-    desired_values = get_next_terms_for_field(starting_value, field_name, number_of_shelfkeys_to_request)
+    desired_values = get_next_terms(starting_value, field_name, number_of_shelfkeys_to_request).keys
 
     # perform client-side windowing to get the desired number of items
     # because the solr terms component will include everything between the current
@@ -59,18 +59,6 @@ class NearbyOnShelf
     desired_values = desired_values.last(per) unless page == 0
 
     get_spines_from_field_values(field_name, desired_values)
-  end
-
-  # return an array of the next terms in the index for the indicated field and
-  # starting term. Returned array does NOT include starting term.  Queries Solr (duh).
-  def get_next_terms_for_field(starting_term, field_name, how_many = 3)
-    result = []
-    # terms is array of one element hashes with key=term and value=count
-    terms_array = get_next_terms(starting_term, field_name, how_many.to_i + 1)
-    terms_array.each { |term_hash|
-      result << term_hash.keys[0] unless term_hash.keys[0] == starting_term
-    }
-    result
   end
 
   # create an array of sorted html list items containing the appropriate display text
@@ -133,32 +121,20 @@ class NearbyOnShelf
     end  # end each item display
   end
 
-  def get_next_terms(curr_value, field, how_many)
+  def get_next_terms(field, curr_value, how_many)
     # TermsComponent Query to get the terms
     solr_params = {
       'terms.fl' => field,
       'terms.lower' => curr_value,
+      'terms.lower.incl' => false,
       'terms.sort' => 'index',
-      'terms.limit' => how_many
+      'terms.limit' => how_many,
+      'json.nl' => 'map'
     }
-    solr_response = Blacklight.default_index.connection.alphaTerms({ params: solr_params })
-    # create array of one element hashes with key=term and value=count
-    result = []
-    terms ||= solr_response['terms'] || []
-    if terms.is_a?(Array)
-      field_terms ||= terms[1] || []  # solr 1.4 returns array
-    else
-      field_terms ||= terms[field] || []  # solr 3.5 returns hash
-    end
-    # field_terms is an array of value, then num hits, then next value, then hits ...
-    i = 0
-    until result.length == how_many || i >= field_terms.length do
-      term_hash = { field_terms[i] => field_terms[i + 1] }
-      result << term_hash
-      i = i + 2
-    end
 
-    result
+    solr_response = Blacklight.default_index.connection.alphaTerms({ params: solr_params })
+
+    solr_response.dig('terms', field) || {}
   end
 
   def current_callnumber
