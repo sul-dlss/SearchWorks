@@ -2,7 +2,7 @@ class NearbyOnShelf
   attr_reader :item_display, :barcode, :per, :page, :search_service
   delegate :shelfkey, :reverse_shelfkey, to: :current_callnumber
 
-  def initialize(item_display:, barcode:, per: 24, page: 0, search_service:)
+  def initialize(item_display:, barcode:, search_service:, per: 24, page: 0)
     @item_display = Array(item_display)
     @barcode = barcode
     @per = per
