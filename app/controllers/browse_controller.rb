@@ -19,7 +19,7 @@ class BrowseController < ApplicationController
   def nearby
     respond_to do |format|
       format.html do
-        render browse: @document_list, layout: false
+        render layout: false
       end
     end
   end
