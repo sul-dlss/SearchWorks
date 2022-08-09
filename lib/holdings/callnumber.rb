@@ -154,6 +154,24 @@ class Holdings
       @request_link ||= ItemRequestLinkComponent.new(item: self)
     end
 
+    # create sorting key for spine
+    # shelfkey asc, then by sorting title asc, then by pub date desc
+    # note: pub_date must be inverted for descending sort
+    def spine_sort_key
+      sort_pub_date = if document[:pub_date].nil? || document[:pub_date].length.zero?
+                        '9999'
+                      else
+                        document[:pub_date].tr('0123456789', '9876543210')
+                      end
+
+      [
+        shelfkey,
+        document[:title_sort].to_s,
+        sort_pub_date,
+        document[:id].to_s
+      ]
+    end
+
     private
 
     def internet_resource?

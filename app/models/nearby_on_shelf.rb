@@ -96,29 +96,9 @@ class NearbyOnShelf
       desired_values.include?(callnumber.send(field))
     end
 
-    # looping through the resulting temp hash of holdings to build proper sort keys and then return a hash that conains a solr document for every item in the hash
     item_array.map do |callnumber|
-      # create sorting key for spine
-      # shelfkey asc, then by sorting title asc, then by pub date desc
-      # notice that shelfkey and sort_title need to be a constant length
-      #  separator of " -|- " is for human readability only
-      sort_key = "#{callnumber.shelfkey[0, 100].ljust(100)} -|- "
-      sort_key << "#{doc[:title_sort][0, 100].ljust(100)} -|- " unless doc[:title_sort].nil?
-
-      # pub_year must be inverted for descending sort
-      if doc[:pub_date].nil? || doc[:pub_date].length == 0
-        sort_key << '9999'
-      else
-        sort_key << doc[:pub_date].tr('0123456789', '9876543210')
-      end
-      # Adding ckey to sort to make sure we collapse things that have the same callnumber, title, pub date, AND ckey
-      sort_key << " -|- #{doc[:id][0, 20].ljust(20)}"
-      # We were adding the library to the sortkey. However; if we don't add the library we can easily collapse items that have the same
-      # call number (shelfkey), title, pub date, and ckey but are housed in different libraries.
-      #sort_key << " -|- #{value[:library][0,40].ljust(40)}"
-
-      { doc: doc.to_h, holding: callnumber, sort_key: sort_key }
-    end  # end each item display
+      { doc: doc.to_h, sort_key: callnumber.spine_sort_key }
+    end
   end
 
   def get_next_terms(field, curr_value, how_many)

@@ -25,6 +25,7 @@ Metrics/ClassLength:
   Exclude:
     - 'app/controllers/articles_controller.rb'
     - 'app/controllers/catalog_controller.rb'
+    - 'lib/holdings/callnumber.rb'
 
 RSpec/DescribeClass:
   Exclude:
