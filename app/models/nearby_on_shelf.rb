@@ -1,5 +1,6 @@
 class NearbyOnShelf
   attr_reader :item_display, :barcode, :per, :page, :search_service
+  delegate :shelfkey, :reverse_shelfkey, to: :current_callnumber
 
   def initialize(item_display:, barcode:, per: 24, page: 0, search_service:)
     @item_display = Array(item_display)
@@ -10,6 +11,8 @@ class NearbyOnShelf
   end
 
   def document_list
+    return [] unless current_callnumber
+
     # De-dup the list of items since duplicate records in the browse view
     # breaks the preview feature and we're pretty sure showing the same
     # record more than once isn't helpful.
@@ -19,8 +22,6 @@ class NearbyOnShelf
   private
 
   def get_nearby_items
-    return [] if item_display_pieces.empty?
-
     if page == 0
       # get preceding bookspines
       get_preceding_spines_from_field +
@@ -35,7 +36,7 @@ class NearbyOnShelf
     elsif page > 0 # page is positive, so we need to get the following bookspines
       get_following_spines_from_field
     end
-  end  # get_nearby_items
+  end
 
   def get_preceding_spines_from_field
     get_next_spines_from_field(reverse_shelfkey, 'reverse_shelfkey')
@@ -160,17 +161,13 @@ class NearbyOnShelf
     result
   end
 
-  def item_display_pieces
-    return [] if barcode.blank?
+  def current_callnumber
+    return if barcode.blank?
 
-    @item_display_pieces ||= item_display.find { |item_display| item_disp =~ /^#{CGI::escape(barcode)}/ }.presence&.split('-|-') || []
-  end
+    @current_callnumber ||= begin
+      callnumbers = item_display.map { |item| Holdings::Callnumber.new(item) }
 
-  def shelfkey
-    item_display_pieces[6]
-  end
-
-  def reverse_shelfkey
-    item_display_pieces[7]
+      callnumbers.find { |callnumber| callnumber.barcode.starts_with?(barcode) }
+    end
   end
 end
