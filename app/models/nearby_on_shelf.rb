@@ -56,7 +56,7 @@ class NearbyOnShelf
     # perform client-side windowing to get the desired number of items
     # because the solr terms component will include everything between the current
     # item and the last item needed for the range
-    desired_values = desired_values.last(per) unless page == 0
+    desired_values = desired_values.last(per) unless page.zero?
 
     get_spines_from_field_values(field_name, desired_values)
   end
