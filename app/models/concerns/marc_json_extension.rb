@@ -1,12 +1,14 @@
 module MarcJsonExtension
   # Override blacklight-marc if we have marcjson available
-  def _marc_source_field
-    :marc_json_struct
-  end
+  def load_marc
+    json = begin
+      JSON.parse(first('marc_json_struct'))
+    rescue JSON::ParserError
+      nil
+    end
 
-  # Override blacklight-marc if we have marcjson available
-  def _marc_format_type
-    :json
+    record = MARC::Record.new_from_hash(json) if json
+    record || super
   end
 
   def as_json
