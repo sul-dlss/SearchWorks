@@ -9,12 +9,9 @@ class Holdings
     end
 
     def name
-      return unless @code
+      return if @code.blank?
 
-      location_name = Constants::LOCS[@code]
-      Honeybadger.notify("Missing location name for code: #{@code}") if location_name.nil?
-
-      location_name || @code
+      Constants::LOCS.fetch(@code, @code)
     end
 
     def bound_with?
