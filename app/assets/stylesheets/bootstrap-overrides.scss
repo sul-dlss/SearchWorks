@@ -34,13 +34,6 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-// Temporarily added since
-// our modal-dialog is not
-// getting its z-index set
-.modal-dialog {
-  z-index: 1040;
-}
-
 .dl-horizontal dt {
   text-align: left;
   width: 10em;
