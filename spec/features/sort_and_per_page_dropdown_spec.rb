@@ -9,7 +9,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
     end
 
     it 'should display active icon on the current active view' do
-      within '#sortAndPerPage' do
+      within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
 
         expect(page).to have_css('a.view-type-list i.active-icon')
@@ -17,7 +17,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
 
       visit search_catalog_path(q: '', view: 'gallery', search_field: 'search')
 
-      within '#sortAndPerPage' do
+      within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
 
         expect(page).not_to have_css('a.view-type-list i.active-icon')
@@ -35,13 +35,13 @@ describe 'Sort and per page toolbar', js: true, feature: true do
     end
 
     it 'should display default correctly' do
-      within '#sortAndPerPage' do
+      within '.sort-and-per-page' do
         expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'Sort by relevance', visible: true)
       end
     end
 
     it 'should change to current sort' do
-      within '#sortAndPerPage' do
+      within '.sort-and-per-page' do
         expect(page).not_to have_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by relevance').click
         within 'a', text: 'relevance' do
@@ -68,7 +68,7 @@ describe 'Sort and per page toolbar', js: true, feature: true do
     end
 
     it 'should display active icon on the current active per page' do
-      within '#sortAndPerPage' do
+      within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: '20 per page').click
         within 'a', text: '20' do
           expect(page).to have_css('i.active-icon')

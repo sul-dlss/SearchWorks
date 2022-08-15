@@ -57,3 +57,8 @@ small,
 summary {
   display: list-item;
 }
+
+// make the button-style links in the Selections toolbar more compact than default .btn padding
+#bookmarksWidgets > *, #bookmarksWidgets > #tools-dropdown > .btn {
+    padding: 4px 10px;
+}

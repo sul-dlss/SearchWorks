@@ -12,7 +12,7 @@ feature "Results Toolbar", js: true do
     fill_in "q", with: ''
     click_button 'search'
 
-    within "#sortAndPerPage" do
+    within ".sort-and-per-page" do
       within "div.page_links" do
         expect(page).not_to have_css("a.btn.btn-sul-toolbar", text: /Previous/)
         expect(page).to have_css("span.page_entries", text: /1 - 20/, visible: true)

@@ -24,7 +24,7 @@
 }
 
 // Do not display these elements
-.navbar, #topnav, #search-navbar-container, #facets, #sortAndPerPage, .record-toolbar, a.remove, .index-document-functions, footer, #sul-footer-container, #global-footer, .additional-results, .pagination, .side-nav-minimap, .library-location-heading img, .record-browse-nearby, .tech-details a, a.btn, .gallery-buttons, .preview-button-container, .google-preview {
+.navbar, #topnav, #search-navbar-container, #facets, .sort-and-per-page, .record-toolbar, a.remove, .index-document-functions, footer, #sul-footer-container, #global-footer, .additional-results, .pagination, .side-nav-minimap, .library-location-heading img, .record-browse-nearby, .tech-details a, a.btn, .gallery-buttons, .preview-button-container, .google-preview {
   display: none !important;
 }
 a[href]:after {

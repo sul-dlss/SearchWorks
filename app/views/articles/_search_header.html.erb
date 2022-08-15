@@ -1,11 +1,1 @@
-<div id="sortAndPerPage" class="sul-toolbar">
-  <%= render partial: "catalog/paginate_compact", object: @response %>
-  <div id="search-results-toolbar" class="search-widgets">
-    <%= render partial: 'catalog/view_type_group' %>
-    <%= render partial: 'sort_widget' %>
-    <%= render partial: 'shared/per_page_widget' %>
-    <% unless bookmarks? %>
-      <%= render partial: 'select_all_widget' %>
-    <% end %>
-  </div>
-</div>
+<%= render partial: "catalog/sort_and_per_page", object: @response %>

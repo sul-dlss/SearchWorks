@@ -81,10 +81,11 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
   end
 
   describe 'clearing lists' do
-    it 'clears article lists' do
+    it 'clears article lists desktop' do
       visit '/selections/articles'
 
-      within('#sortAndPerPage') do
+      # first .sort-and-per-page is desktop layout
+      within(first('.sort-and-per-page')) do
         click_link 'Clear list'
       end
 
@@ -95,7 +96,8 @@ RSpec.describe 'Tabbed selections UI', type: :feature do
     it 'clears catalog lists' do
       visit '/selections'
 
-      within('#sortAndPerPage') do
+      # first .sort-and-per-page is desktop layout
+      within(first('.sort-and-per-page')) do
         click_link 'Clear list'
       end
 
