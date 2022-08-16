@@ -31,9 +31,4 @@ class SearchQueryModifier
     @params[:q].present?
   end
 
-  private
-
-  def has_filters_and_query?
-    has_filters? && has_query?
-  end
 end
