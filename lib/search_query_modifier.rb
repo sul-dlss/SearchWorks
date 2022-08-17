@@ -30,5 +30,4 @@ class SearchQueryModifier
   def has_query?
     @params[:q].present?
   end
-
 end
