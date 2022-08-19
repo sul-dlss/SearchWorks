@@ -9,7 +9,6 @@ describe "catalog/librarian_view" do
                           id: '12345',
                           last_updated: '2022-08-01T23:01:18Z',
                           marcxml: metadata1,
-                          holdings_json_struct: [{ "holdings_key" => "holdings_value" }].to_json,
                           folio_json_struct: [{ "folio_key" => "folio_value" }].to_json
                         ))
       render
@@ -20,8 +19,6 @@ describe "catalog/librarian_view" do
       expect(rendered).to have_css('#folio-json-view')
 
       expect(rendered).to have_content('August  1, 2022 11:01pm')
-      expect(rendered).to have_content('holdings_key')
-      expect(rendered).to have_content('holdings_value')
       expect(rendered).to have_content('folio_key')
       expect(rendered).to have_content('folio_value')
     end
