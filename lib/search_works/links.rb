@@ -66,11 +66,11 @@ module SearchWorks
       end
 
       def html
-        @html ||= [link_html, casalini_text, additional_text_html].compact.join(' ').strip
+        @html ||= safe_join([link_html, casalini_text, additional_text_html].compact, ' ')
       end
 
       def text
-        @text ||= [@link_text, casalini_text, additional_text_html].compact.join(' ').strip
+        @text ||= safe_join([@link_text, casalini_text, additional_text_html].compact, ' ')
       end
 
       def fulltext?

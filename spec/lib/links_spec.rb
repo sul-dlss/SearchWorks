@@ -56,12 +56,20 @@ describe SearchWorks::Links do
       )
     end
 
-    it 'it assembles the html link' do
+    it 'assembles the html link' do
       expect(link.html).to eq '<a href="http://link.edu" class="sfx">Link Text</a>'
     end
 
-    it 'it assembles the text' do
+    it 'makes an html_safe html link' do
+      expect(link.html).to be_html_safe
+    end
+
+    it 'assembles the text' do
       expect(link.text).to eq 'Link Text'
+    end
+
+    it 'makes an html_safe text link' do
+      expect(link.text).to be_html_safe
     end
 
     it 'should parse the href option' do
