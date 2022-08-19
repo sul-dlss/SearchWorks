@@ -11,10 +11,10 @@ describe "catalog/_index_online_section" do
             id: '12345',
             isbn_display: [123],
             marc_links_struct: [
-              { html: 'a', fulltext: true },
-              { html: 'b', fulltext: true },
-              { html: 'c', fulltext: true },
-              { html: 'd', fulltext: true }
+              { href: 'a', fulltext: true },
+              { href: 'b', fulltext: true },
+              { href: 'c', fulltext: true },
+              { href: 'd', fulltext: true }
             ]
           )
         )

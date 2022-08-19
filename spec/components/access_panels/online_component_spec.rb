@@ -4,7 +4,7 @@ describe AccessPanels::OnlineComponent, type: :component do
   include ModsFixtures
   include Marc856Fixtures
 
-  let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ html: "<a title='' href='https://library.stanford.edu'>Link text</a> ", text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }])) }
+  let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }])) }
   let(:supplemental) { described_class.new(document: SolrDocument.new) }
   let(:eds_links) do
     described_class.new(
@@ -24,7 +24,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     described_class.new(
       document: SolrDocument.new(
         collection: ['12345'],
-        marc_links_struct: [{ html: "<a title='' href='https://library.stanford.edu'>Link text</a> ", text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }]
+        marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }]
       )
     )
   end
@@ -91,7 +91,7 @@ describe AccessPanels::OnlineComponent, type: :component do
       links = sfx.links
       expect(links.length).to eq 1
       expect(links.first).to be_sfx
-      expect(links.first.html).to match %r{^<a href=.*class='sfx'>Find full text<\/a>$}
+      expect(links.first.html).to match %r{^<a href=.*class="sfx">Find full text<\/a>$}
     end
 
     it 'returns fulltext links for collection members' do
@@ -167,21 +167,21 @@ describe AccessPanels::OnlineComponent, type: :component do
 
   describe "marc record" do
     it "should render the panel with a link" do
-      document = SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }])
+      document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }])
       render_inline(described_class.new(document: document))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css(".panel-heading", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do
-      document = SolrDocument.new(marc_links_struct: [{ html: "<a href='...'>Link text</a>'<span class='additional-link-text'>4 at one time</span>", fulltext: true, stanford_only: true }])
+      document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', additional_text: '4 at one time', fulltext: true, stanford_only: true }])
       render_inline(described_class.new(document: document))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css("ul.links li span.stanford-only")
       expect(page).to have_css("span.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do
-      document = SolrDocument.new(marcxml: simple_856, marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }], druid: 'ng161qh7958')
+      document = SolrDocument.new(marcxml: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document: document))
       expect(page).to have_css '.panel-online'
       expect(page).to have_css '.panel-heading', text: 'Also available at'
@@ -210,7 +210,7 @@ describe AccessPanels::OnlineComponent, type: :component do
 
     describe "database" do
       let(:document) do
-        SolrDocument.new(marc_links_struct: [{ html: '<a href="...">Link text</a>', fulltext: true }], format_main_ssim: ["Database"])
+        SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_main_ssim: ["Database"])
       end
 
       it "should render a special panel heading" do

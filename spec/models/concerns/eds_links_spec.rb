@@ -55,7 +55,7 @@ RSpec.describe EdsLinks do
 
     it 'handles Check SFX for full text' do
       document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
-      expect(document.eds_links.all.first.text).to eq('View on content provider\'s site')
+      expect(document.eds_links.all.first.text).to eq('View on content provider&#39;s site')
     end
 
     it 'handles View request options' do

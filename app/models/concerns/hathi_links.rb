@@ -9,8 +9,7 @@ module HathiLinks
     return unless ht_links.present?
 
     SearchWorks::Links::Link.new(
-      html: "<a href=\"#{ht_links.url}\">Full text via HathiTrust</a>",
-      text: 'Full text via HathiTrust',
+      link_text: 'Full text via HathiTrust',
       href: ht_links.url,
       fulltext: true,
       stanford_only: !ht_links.publicly_available?,

@@ -52,12 +52,28 @@ describe SearchWorks::Links do
   describe 'Link' do
     let(:link) do
       SearchWorks::Links::Link.new(
-        html: 'text', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+        href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
       )
     end
 
-    it 'should parse the text option' do
-      expect(link.html).to eq 'text'
+    it 'assembles the html link' do
+      expect(link.html).to eq '<a href="http://link.edu" class="sfx">Link Text</a>'
+    end
+
+    it 'makes an html_safe html link' do
+      expect(link.html).to be_html_safe
+    end
+
+    it 'assembles the text' do
+      expect(link.text).to eq 'Link Text'
+    end
+
+    it 'makes an html_safe text link' do
+      expect(link.text).to be_html_safe
+    end
+
+    it 'should parse the href option' do
+      expect(link.href).to eq 'http://link.edu'
     end
 
     it 'should parse the fulltext option' do

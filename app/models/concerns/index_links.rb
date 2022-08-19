@@ -27,8 +27,7 @@ module IndexLinks
 
     def to_searchworks_link
       SearchWorks::Links::Link.new(
-        html: link_html,
-        text: link_text,
+        link_text: link_text,
         href: link_field,
         fulltext: link_is_fulltext?,
         stanford_only: link_is_stanford_only?,
@@ -39,10 +38,6 @@ module IndexLinks
     end
 
     private
-
-    def link_html
-      "<a href='#{link_field}'#{" class='sfx'".html_safe if link_is_sfx?}>#{link_text}</a>"
-    end
 
     def link_text
       if link_is_finding_aid?
