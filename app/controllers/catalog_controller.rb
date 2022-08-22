@@ -467,9 +467,10 @@ class CatalogController < ApplicationController
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
-  end
 
-  Blacklight::ActionBuilder.new(self, :citation, {}).build
+    config.add_show_tools_partial :citation, if: false
+    config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
+  end
 
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
