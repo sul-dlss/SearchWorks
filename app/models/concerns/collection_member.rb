@@ -1,6 +1,6 @@
 module CollectionMember
   def is_a_collection_member?
-    self[:collection] and self[:collection] != ['sirsi']
+    self[:collection]&.excluding('sirsi', 'folio').present?
   end
 
   def parent_collections

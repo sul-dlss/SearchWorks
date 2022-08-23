@@ -60,7 +60,7 @@ module SearchWorks
     end
 
     def collection_parameters?
-      @params[:f][:collection].present? && !@params[:f][:collection].include?('sirsi')
+      @params[:f][:collection]&.excluding('sirsi', 'folio').present?
     end
 
     def digital_collections_parameters?
