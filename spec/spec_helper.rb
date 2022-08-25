@@ -137,3 +137,17 @@ end
 def number_pattern
   /[1-9](?:\d{0,2})(?:,\d{3})*(?:\.\d*[1-9])?|0?\.\d*[1-9]|0/
 end
+
+def article_search_for(query)
+  stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+  visit articles_path
+
+  within '.search-form' do
+    fill_in 'q', with: query
+    if Capybara.current_driver == :headless_chrome
+      find('#search').click
+    else
+      click_button 'Search'
+    end
+  end
+end
