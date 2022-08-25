@@ -15,17 +15,11 @@ class BrowseController < ApplicationController
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
-            "static",
-            blacklight_config,
-            { item_display: @original_doc[:item_display],
-             preferred_barcode: barcode,
-             before: 9,
-             after: 10,
-             page: params[:page] },
-             search_service: search_service
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
+            item_display: @original_doc[:item_display],
+            barcode: barcode,
+            page: params[:page].to_i,
+            search_service: search_service
+          ).document_list
         end
       end
     end
@@ -38,17 +32,11 @@ class BrowseController < ApplicationController
       respond_to do |format|
         format.html do
           @document_list = NearbyOnShelf.new(
-            "static",
-            blacklight_config,
-            { item_display: @original_doc[:item_display],
-             preferred_barcode: barcode,
-             before: 12,
-             after: 12 },
-           search_service: search_service
-          ).items.map do |document|
-            SolrDocument.new(document[:doc])
-          end
-          render browse: @document_list, layout: false
+            item_display: @original_doc[:item_display],
+            barcode: barcode,
+            search_service: search_service
+          ).document_list
+          render layout: false
         end
       end
     end
