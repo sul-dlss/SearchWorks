@@ -39,6 +39,10 @@ class CatalogController < ApplicationController
   end
 
   before_action only: :index do
+    blacklight_config.max_per_page = 10000 if params[:export]
+  end
+
+  before_action only: :index do
     blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
   end
 
