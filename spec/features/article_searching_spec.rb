@@ -167,18 +167,4 @@ feature 'Article Searching' do
   it 'displays the appropriate fields in the search' do
     skip 'we need some EDS fixtures'
   end
-
-  def article_search_for(query)
-    stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    visit articles_path
-
-    within '.search-form' do
-      fill_in 'q', with: query
-      if Capybara.current_driver == :headless_chrome
-        find('#search').click
-      else
-        click_button 'Search'
-      end
-    end
-  end
 end

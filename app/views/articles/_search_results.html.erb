@@ -31,7 +31,7 @@
         </div>
         <%= render 'search_header' %>
         <%= render 'research_starters' %>
-        <%= render @response.documents, as: :document %>
+        <%= render_document_index @response.documents %>
         <%= render 'alternate_catalog' if show_alternate_catalog? %>
 
         <%- unless @response.empty? %>

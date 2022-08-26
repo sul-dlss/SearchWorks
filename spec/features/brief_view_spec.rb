@@ -1,7 +1,7 @@
 require "spec_helper"
 
 feature "Brief View" do
-  scenario "Search results", js: true do
+  scenario "Catalog search results", js: true do
     visit search_catalog_path f: { format: ["Book"] }
     page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
@@ -34,5 +34,14 @@ feature "Brief View" do
         expect(page).to have_css('li', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
       end
     end
+  end
+
+  scenario "Articles search brief view", js: true do
+    stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
+    article_search_for('kittens')
+    page.find('#view-type-dropdown button.dropdown-toggle').click
+    page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
+    expect(page).to have_css("i.fa.fa-align-justify")
+    expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
   end
 end
