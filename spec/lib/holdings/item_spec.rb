@@ -1,100 +1,100 @@
 require 'spec_helper'
 
-describe Holdings::Callnumber do
+describe Holdings::Item do
   let(:complex_item_display) do
     'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period'
   end
-  let(:callnumber) { Holdings::Callnumber.new(complex_item_display) }
+  let(:item) { Holdings::Item.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
-  let(:internet_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INTERNET -|- -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
-  let(:eresv_callnumber) { Holdings::Callnumber.new(' -|- SUL -|- INSTRUCTOR -|- E-RESV -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
+  let(:internet_item) { Holdings::Item.new(' -|- SUL -|- INTERNET -|- -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
+  let(:eresv_item) { Holdings::Item.new(' -|- SUL -|- INSTRUCTOR -|- E-RESV -|- -|- -|- abc123 -|- xyz987 -|- -|- -|- -|- LC') }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
-      expect(callnumber).to respond_to(method)
+      expect(item).to respond_to(method)
     end
   end
   describe '#present?' do
-    let(:no_item_display) { Holdings::Callnumber.new('') }
+    let(:no_item_display) { Holdings::Item.new('') }
 
     it "should be false when the item_display doesn't exist" do
       expect(no_item_display).not_to be_present
     end
 
     it 'should return true when the item_display exists' do
-      expect(callnumber).to be_present
+      expect(item).to be_present
     end
 
-    it 'should return false for INTERNET callnumbers' do
-      expect(internet_callnumber).not_to be_present
+    it 'should return false for INTERNET items' do
+      expect(internet_item).not_to be_present
     end
 
     it 'should return false for E-RESVs' do
-      expect(eresv_callnumber).not_to be_present
+      expect(eresv_item).not_to be_present
     end
   end
 
   describe '#on_order?' do
     it 'should return true for on-order items' do
-      expect(Holdings::Callnumber.new(' -|- -|- ON-ORDER -|- ON-ORDER -|-')).to be_on_order
+      expect(Holdings::Item.new(' -|- -|- ON-ORDER -|- ON-ORDER -|-')).to be_on_order
     end
 
     it 'should return false for non on-order items' do
-      expect(callnumber).not_to be_on_order
+      expect(item).not_to be_on_order
     end
   end
 
   describe 'browsable?' do
     it 'should return false if not LC or DEWEY' do
-      expect(Holdings::Callnumber.new(complex_item_display)).not_to be_browsable
+      expect(Holdings::Item.new(complex_item_display)).not_to be_browsable
     end
 
     it 'should return false if there is no shelfkey' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- -|- reverse_shelfkey -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
+      expect(Holdings::Item.new('barcode -|- library -|- home_location -|- -|- -|- -|- -|- reverse_shelfkey -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
     end
 
     it 'should return false if there is no reverse shelfkey' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
+      expect(Holdings::Item.new('barcode -|- library -|- home_location -|- -|- -|- -|- shelfkey -|- -|- ABC123 -|- -|- -|- LC -|- -|- -|- ')).not_to be_browsable
     end
 
     it 'should return true if callnumber type is ALPHANUM' do
       alpha_num = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- ALPHANUM -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(alpha_num)).to be_browsable
+      expect(Holdings::Item.new(alpha_num)).to be_browsable
     end
 
     it 'should return false if callnumber type is INTERNET' do
       internet = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- INTERNET -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(internet)).not_to be_browsable
+      expect(Holdings::Item.new(internet)).not_to be_browsable
     end
     it 'should return true if callnumber type is LC' do
       lc = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- LC -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(lc)).to be_browsable
+      expect(Holdings::Item.new(lc)).to be_browsable
     end
 
     it 'should return true if callnumber type is DEWEY' do
       dewey = 'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- DEWEY -|- course_id -|- reserve_desk -|- loan_period'
-      expect(Holdings::Callnumber.new(dewey)).to be_browsable
+      expect(Holdings::Item.new(dewey)).to be_browsable
     end
 
     it 'should return true if the item is an internet resource' do
-      expect(internet_callnumber).to be_browsable
+      expect(internet_item).to be_browsable
     end
   end
 
   describe '#callnumber' do
-    let(:no_callnumber) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
+    let(:item_without_callnumber) { Holdings::Item.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- -|- full_shelfkey ') }
 
     it "should return '(no call number) if the callnumber is blank" do
-      expect(no_callnumber.callnumber).to eq '(no call number)'
+      expect(item_without_callnumber.callnumber).to eq '(no call number)'
     end
 
-    it 'returns "eResource" when the home location is INTERNET ' do
-      expect(internet_callnumber.callnumber).to eq 'eResource'
+    it 'returns "eResource" when the home location is INTERNET' do
+      expect(internet_item.callnumber).to eq 'eResource'
     end
   end
 
   describe '#status' do
-    let(:status) { callnumber.status }
+    let(:status) { item.status }
 
     it 'should return a Holdings::Status object' do
       expect(status).to be_a Holdings::Status
@@ -107,28 +107,28 @@ describe Holdings::Callnumber do
 
   describe '#live_status?' do
     it 'should identify material not in LANE-MED for live lookup' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- STACKS -|- -|-')).to be_live_status
+      expect(Holdings::Item.new('barcode -|- GREEN -|- STACKS -|- -|-')).to be_live_status
     end
 
     it 'should identify material in LANE-MED to not do a live lookup' do
-      expect(Holdings::Callnumber.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).not_to be_live_status
+      expect(Holdings::Item.new('barcode -|- LANE-MED -|- STACKS -|- -|-')).not_to be_live_status
     end
   end
 
   describe 'treat_current_location_as_home_location?' do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |location|
-        expect(Holdings::Callnumber.new("barcode -|- library -|- home_location -|- #{location} -|-").treat_current_location_as_home_location?).to be_truthy
+        expect(Holdings::Item.new("barcode -|- library -|- home_location -|- #{location} -|-").treat_current_location_as_home_location?).to be_truthy
       end
     end
 
     it 'should replace the home location with the current location' do
-      expect(Holdings::Callnumber.new('barcode -|- library -|- home_location -|- IC-DISPLAY -|-').home_location).to eq 'IC-DISPLAY'
+      expect(Holdings::Item.new('barcode -|- library -|- home_location -|- IC-DISPLAY -|-').home_location).to eq 'IC-DISPLAY'
     end
   end
 
   describe 'public_note' do
-    let(:public_note) { Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- .PUBLIC. The Public Note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period') }
+    let(:public_note) { Holdings::Item.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- .PUBLIC. The Public Note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period') }
 
     it 'should remove the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
@@ -138,17 +138,17 @@ describe Holdings::Callnumber do
 
   describe 'reserves' do
     it 'should change the library for an item that is at a reserve desk' do
-      expect(Holdings::Callnumber.new('barcode -|- GREEN -|- home_location -|- ART-RESV -|-').library).to eq 'ART'
+      expect(Holdings::Item.new('barcode -|- GREEN -|- home_location -|- ART-RESV -|-').library).to eq 'ART'
     end
   end
 
   describe '#on_reserve?' do
     it 'should return true when an item is populated with reserve desks and loan period' do
-      expect(callnumber).to be_on_reserve
+      expect(item).to be_on_reserve
     end
 
     it 'should return false when an item is not populated with reserve desk and loan period' do
-      expect(Holdings::Callnumber.new('123 -|- abc')).not_to be_on_reserve
+      expect(Holdings::Item.new('123 -|- abc')).not_to be_on_reserve
     end
   end
 
@@ -180,9 +180,9 @@ describe Holdings::Callnumber do
   end
 
   describe 'zombie libraries' do
-    let(:blank) { Holdings::Callnumber.new('123 -|- -|- LOCATION -|- ') }
-    let(:sul) { Holdings::Callnumber.new('123 -|- SUL -|- LOCATION -|- ') }
-    let(:physics) { Holdings::Callnumber.new('123 -|- PHYSICS -|- LOCATION -|- ') }
+    let(:blank) { Holdings::Item.new('123 -|- -|- LOCATION -|- ') }
+    let(:sul) { Holdings::Item.new('123 -|- SUL -|- LOCATION -|- ') }
+    let(:physics) { Holdings::Item.new('123 -|- PHYSICS -|- LOCATION -|- ') }
 
     it 'should view blank libraries as a zombie library' do
       expect(blank.library).to eq 'ZOMBIE'
@@ -198,9 +198,9 @@ describe Holdings::Callnumber do
   end
 
   describe '#as_json' do
-    let(:as_json) { Holdings::Callnumber.new(complex_item_display).as_json }
+    let(:as_json) { Holdings::Item.new(complex_item_display).as_json }
 
-    it 'should return a hash with all of the callnumbers public reader methods' do
+    it "should return a hash with all of the item's public reader methods" do
       expect(as_json).to be_a Hash
       expect(as_json[:callnumber]).to eq 'callnumber'
     end
@@ -220,25 +220,25 @@ describe Holdings::Callnumber do
 
   describe '#circulates?' do
     context 'for libaries/locations that are configured to have request links' do
-      subject(:callnumber) { Holdings::Callnumber.new('123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO') }
+      subject(:item) { Holdings::Item.new('123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO') }
 
       it { is_expected.to be_circulates }
     end
 
     context 'when the item has a non-circulating item type' do
-      subject(:callnumber) { Holdings::Callnumber.new('123 -|- GREEN -|- LOCKED-STK -|- -|- NONCIRC') }
+      subject(:item) { Holdings::Item.new('123 -|- GREEN -|- LOCKED-STK -|- -|- NONCIRC') }
 
       it { is_expected.not_to be_circulates }
     end
 
     context 'when an item is in a location within a library that specifies location specific item types' do
-      subject(:callnumber) { Holdings::Callnumber.new('123 -|- SAL -|- UNCAT -|- -|- NONCIRC') }
+      subject(:item) { Holdings::Item.new('123 -|- SAL -|- UNCAT -|- -|- NONCIRC') }
 
       it { is_expected.to be_circulates }
     end
 
     context 'when an item is in a location and with a library specific item type that circulates' do
-      subject(:callnumber) { Holdings::Callnumber.new('123 -|- ART -|- STACKS -|- -|- MEDIA') }
+      subject(:item) { Holdings::Item.new('123 -|- ART -|- STACKS -|- -|- MEDIA') }
 
       it { is_expected.to be_circulates }
     end

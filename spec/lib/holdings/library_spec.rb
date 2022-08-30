@@ -7,20 +7,20 @@ describe Holdings::Library do
   end
   describe "#locations" do
     let(:callnumbers) { [
-      Holdings::Callnumber.new("barcode -|- library -|- home-loc -|- "),
-      Holdings::Callnumber.new("barcode -|- library -|- home-loc2 -|- "),
-      Holdings::Callnumber.new("barcode -|- library -|- home-loc -|- ")
+      Holdings::Item.new("barcode -|- library -|- home-loc -|- "),
+      Holdings::Item.new("barcode -|- library -|- home-loc2 -|- "),
+      Holdings::Item.new("barcode -|- library -|- home-loc -|- ")
     ] }
     let(:sort_callnumbers) { [
-      Holdings::Callnumber.new("barcode -|- library -|- TINY -|- "),
-      Holdings::Callnumber.new("barcode -|- library -|- STACKS -|- "),
-      Holdings::Callnumber.new("barcode -|- library -|- CURRENTPER -|- ")
+      Holdings::Item.new("barcode -|- library -|- TINY -|- "),
+      Holdings::Item.new("barcode -|- library -|- STACKS -|- "),
+      Holdings::Item.new("barcode -|- library -|- CURRENTPER -|- ")
     ] }
     let(:combined_callnumbers) do
       [
-        Holdings::Callnumber.new("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
-        Holdings::Callnumber.new("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
-        Holdings::Callnumber.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
+        Holdings::Item.new("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
+        Holdings::Item.new("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
+        Holdings::Item.new("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
       ]
     end
     let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
@@ -52,9 +52,9 @@ describe Holdings::Library do
 
   describe "#present?" do
     let(:callnumbers) { [
-      Holdings::Callnumber.new(""),
-      Holdings::Callnumber.new(""),
-      Holdings::Callnumber.new("")
+      Holdings::Item.new(""),
+      Holdings::Item.new(""),
+      Holdings::Item.new("")
     ] }
     let(:library) { Holdings::Library.new("GREEN", callnumbers) }
 
@@ -94,9 +94,9 @@ describe Holdings::Library do
   describe '#as_json' do
     let(:callnumbers) do
       [
-        Holdings::Callnumber.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
-        Holdings::Callnumber.new('barcode2 -|- library -|- home_location2 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
-        Holdings::Callnumber.new('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
+        Holdings::Item.new('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Item.new('barcode2 -|- library -|- home_location2 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
+        Holdings::Item.new('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
       ]
     end
     let(:as_json) { Holdings::Library.new('GREEN', callnumbers).as_json }

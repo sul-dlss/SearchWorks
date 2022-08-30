@@ -1,8 +1,8 @@
 class Holdings
   class Status
     class Unknown
-      def initialize(callnumber)
-        @callnumber = callnumber
+      def initialize(item)
+        @item = item
       end
 
       def unknown?
@@ -12,11 +12,11 @@ class Holdings
       private
 
       def unknown_library?
-        ["LANE-MED"].include?(@callnumber.library)
+        ["LANE-MED"].include?(@item.library)
       end
 
       def unknown_location?
-        Constants::UNKNOWN_LOCS.include?(@callnumber.home_location)
+        Constants::UNKNOWN_LOCS.include?(@item.home_location)
       end
     end
   end

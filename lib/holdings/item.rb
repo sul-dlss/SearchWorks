@@ -5,7 +5,7 @@ class Holdings
   # 0 barcode -|- 1 library -|- 2 home location -|- 3 current location -|- 4 item type -|-
   # 5 truncated call number -|- 6 shelfkey -|- 7 reverse shelfkey -|- 8 callnumber -|-
   # 9 full shelfkey -|- 10 public note -|- 11 callnumber type -|- 12 course id -|- 13 reserve desk -|- 14 loan period
-  class Callnumber
+  class Item
     attr_writer :current_location, :status
     attr_reader :document
     attr_accessor :due_date

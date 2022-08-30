@@ -3,8 +3,8 @@ class Holdings
     class Noncirc
       NONCIRC_TYPES = %w(ARCHIVE EXPEDITION INDEX LIBUSEONLY MFICHE MFILM NH-INHOUSE NH-MAP NONCIRC REF VAULT).freeze
 
-      def initialize(callnumber)
-        @callnumber = callnumber
+      def initialize(item)
+        @item = item
       end
 
       def noncirc?
@@ -16,20 +16,20 @@ class Holdings
       private
 
       def location_is_noncirc?
-        case @callnumber.library
+        case @item.library
         when 'BUSINESS'
-          Constants::NONCIRC_LOCS.concat(["NEWS-STKS", "MICROFILM"]).include?(@callnumber.home_location)
+          Constants::NONCIRC_LOCS.concat(["NEWS-STKS", "MICROFILM"]).include?(@item.home_location)
         else
-          Constants::NONCIRC_LOCS.include?(@callnumber.home_location)
+          Constants::NONCIRC_LOCS.include?(@item.home_location)
         end
       end
 
       def type_is_noncirc?
-        case @callnumber.library
+        case @item.library
         when 'ARS'
-          @callnumber.type != "STKS" || NONCIRC_TYPES.include?(@callnumber.type)
+          @item.type != "STKS" || NONCIRC_TYPES.include?(@item.type)
         else
-          NONCIRC_TYPES.include?(@callnumber.type)
+          NONCIRC_TYPES.include?(@item.type)
         end
       end
     end

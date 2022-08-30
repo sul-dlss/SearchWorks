@@ -1,7 +1,7 @@
 module SolrHoldings
   def holdings(live: false)
     @holdings ||= {}
-    @holdings[live] ||= Holdings.new(live ? live_lookup_callnumbers : callnumbers, mhld)
+    @holdings[live] ||= Holdings.new(live ? live_lookup_items : items, mhld)
   end
 
   def mhld
@@ -12,16 +12,16 @@ module SolrHoldings
     end
   end
 
-  def callnumbers
+  def items
     return [] if self[:item_display].blank?
 
-    @callnumbers ||= self[:item_display].map do |item_display|
-      Holdings::Callnumber.new(item_display, document: self)
+    @items ||= self[:item_display].map do |item_display|
+      Holdings::Item.new(item_display, document: self)
     end.sort_by(&:full_shelfkey)
   end
 
-  def live_lookup_callnumbers
-    @live_lookup_callnumbers ||= callnumbers.map do |item|
+  def live_lookup_items
+    @live_lookup_items ||= items.map do |item|
       data = live_data_for_barcode(item.barcode)
 
       if data.present?
@@ -34,20 +34,20 @@ module SolrHoldings
     end
   end
 
-  def preferred_callnumber
-    @preferred_callnumber ||= begin
-      callnumber = self[:preferred_barcode] && (callnumbers.select(&:present?).find do |c|
+  def preferred_item
+    @preferred_item ||= begin
+      item = self[:preferred_barcode] && (items.select(&:present?).find do |c|
         c.barcode == self[:preferred_barcode]
       end)
 
-      callnumber || callnumbers.first
+      item || items.first
     end
   end
 
-  attr_writer :preferred_callnumber
+  attr_writer :preferred_item
 
   def cdl?
-    druid && holdings.callnumbers.any? { |call| call.home_location == 'CDL' }
+    druid && holdings.items.any? { |call| call.home_location == 'CDL' }
   end
 
   private

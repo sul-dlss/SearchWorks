@@ -3,7 +3,7 @@ require "spec_helper"
 describe Holdings do
   let(:holdings) {
     Holdings.new(
-      SolrDocument.new(item_display: ['123 -|- abc']).callnumbers
+      SolrDocument.new(item_display: ['123 -|- abc']).items
     )
   }
   let(:complex_holdings) {
@@ -13,7 +13,7 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey -|- -|- LC',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- full-shelfkey2 -|- -|- INTERNET'
         ]
-      ).callnumbers
+      ).items
     )
   }
   let(:sortable_holdings) {
@@ -23,7 +23,7 @@ describe Holdings do
           'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- 999',
           'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- 111'
         ]
-      ).callnumbers
+      ).items
     )
   }
   let(:no_holdings) { Holdings.new([]) }
@@ -44,17 +44,17 @@ describe Holdings do
     end
   end
 
-  describe "#callnumbers" do
-    it "should return an array of Holdings::Callnumbers" do
-      holdings.callnumbers.each do |callnumber|
-        expect(callnumber).to be_a Holdings::Callnumber
+  describe "#items" do
+    it "should return an array of Holdings::Items" do
+      holdings.items.each do |item|
+        expect(item).to be_a Holdings::Item
       end
     end
     it "should return an empty array if there are no holdings" do
-      expect(no_holdings.callnumbers).to eq []
+      expect(no_holdings.items).to eq []
     end
     it "should be sorted by the shelfkey" do
-      expect(sortable_holdings.callnumbers.map(&:full_shelfkey)).to eq ['111', '999']
+      expect(sortable_holdings.items.map(&:full_shelfkey)).to eq ['111', '999']
     end
   end
 
@@ -67,7 +67,7 @@ describe Holdings do
             'barcode -|- library2 -|- home-location',
             'barcode -|- library -|- home-location'
           ]
-        ).callnumbers
+        ).items
       )
     }
     let(:sortable_libraries) {
@@ -78,7 +78,7 @@ describe Holdings do
             'barcode -|- GREEN -|- home-location',
             'barcode -|- BIOLOGY -|- home-location'
           ]
-        ).callnumbers
+        ).items
       )
     }
 
@@ -94,18 +94,18 @@ describe Holdings do
     end
   end
 
-  describe "#browsable_callnumbers" do
+  describe "#browsable_items" do
     it "should collapse callnumbers on the truncated callnumber" do
-      expect(complex_holdings.callnumbers.length).to eq 2
-      expect(complex_holdings.browsable_callnumbers.length).to eq 1
+      expect(complex_holdings.items.length).to eq 2
+      expect(complex_holdings.browsable_items.length).to eq 1
     end
   end
 
   describe "#find_by_barcode" do
     let(:found) { complex_holdings.find_by_barcode('barcode2') }
 
-    it "should return a single Holdings::Callnumber" do
-      expect(found).to be_a Holdings::Callnumber
+    it "should return a single Holdings::Item" do
+      expect(found).to be_a Holdings::Item
     end
     it "should be the correct item" do
       expect(found.barcode).to eq 'barcode2'
@@ -136,7 +136,7 @@ describe Holdings do
       location = holdings.libraries.first.locations.first
       expect(location.code).to eq 'STACKS'
       expect(location.items.length).to eq 1
-      expect(location.items.first).to be_a Holdings::Callnumber
+      expect(location.items.first).to be_a Holdings::Item
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end

@@ -21,8 +21,8 @@ module CatalogHelper
   end
 
   def stackmap_link(document, location)
-    callnumber = location.items.first
-    stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: callnumber.callnumber, library: callnumber.library, location: callnumber.home_location)
+    item = location.items.first
+    stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: item.callnumber, library: item.library, location: item.home_location)
   end
 
   def new_documents_feed_path

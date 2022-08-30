@@ -1,7 +1,7 @@
 module BrowseHelper
-  def link_to_callnumber_browse(document, callnumber, index = 0)
+  def link_to_callnumber_browse(document, item, index = 0)
     button_tag(
-      callnumber.callnumber,
+      item.callnumber,
       class: "collapsed",
       id: "callnumber-browse-#{index}",
       "aria-labelledby" => "callnumber-browse-#{index}",
@@ -11,12 +11,12 @@ module BrowseHelper
               embed_viewport: "#callnumber-#{index}",
               index_path: browse_index_path(
                 start: document[:id],
-                barcode: (callnumber.barcode unless callnumber.barcode == document[:preferred_barcode]),
+                barcode: (item.barcode unless item.barcode == document[:preferred_barcode]),
                 view: :gallery
               ),
               url: browse_nearby_path(
                 start: document[:id],
-                barcode: (callnumber.barcode unless callnumber.barcode == document[:preferred_barcode]),
+                barcode: (item.barcode unless item.barcode == document[:preferred_barcode]),
                 view: :gallery
               )
             }

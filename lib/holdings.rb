@@ -1,14 +1,14 @@
-require 'holdings/callnumber'
+require 'holdings/item'
 require 'holdings/library'
 require 'holdings/location'
 require 'holdings/mhld'
 require 'holdings/status'
 
 class Holdings
-  attr_reader :callnumbers, :mhld
+  attr_reader :items, :mhld
 
-  def initialize(callnumbers = [], mhld = [])
-    @callnumbers = callnumbers
+  def initialize(items = [], mhld = [])
+    @items = items
     @mhld = mhld
   end
 
@@ -18,13 +18,13 @@ class Holdings
     end
   end
 
-  def browsable_callnumbers
-    callnumbers.select(&:browsable?).uniq(&:truncated_callnumber)
+  def browsable_items
+    items.select(&:browsable?).uniq(&:truncated_callnumber)
   end
 
   def libraries
     unless @libraries
-      items_by_library = callnumbers.group_by(&:library)
+      items_by_library = items.group_by(&:library)
 
       @libraries = items_by_library.map do |library, items|
         mhlds = mhld.select { |x| x.library == library }
@@ -41,7 +41,7 @@ class Holdings
   end
 
   def find_by_barcode(barcode)
-    callnumbers.find { |item| item.barcode == barcode }
+    items.find { |item| item.barcode == barcode }
   end
 
   def as_json

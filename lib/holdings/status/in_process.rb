@@ -5,18 +5,18 @@ class Holdings
     class InProcess
       LIBRARIES = ['HV-ARCHIVE'].freeze
 
-      def initialize(callnumber)
-        @callnumber = callnumber
+      def initialize(item)
+        @item = item
       end
 
       def in_process?
-        library_in_process? && !@callnumber.document&.index_links&.finding_aid.present?
+        library_in_process? && !@item.document&.index_links&.finding_aid.present?
       end
 
       private
 
       def library_in_process?
-        LIBRARIES.include?(@callnumber.library)
+        LIBRARIES.include?(@item.library)
       end
     end
   end
