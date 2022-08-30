@@ -900,12 +900,6 @@ RSpec/LetSetup:
     - 'spec/controllers/recent_selections_controller_spec.rb'
     - 'spec/presenters/facet_options_presenter_spec.rb'
 
-# Offense count: 102
-# Configuration parameters: .
-# SupportedStyles: have_received, receive
-RSpec/MessageSpies:
-  EnforcedStyle: receive
-
 # Offense count: 4
 RSpec/MultipleDescribes:
   Exclude:
