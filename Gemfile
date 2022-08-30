@@ -77,11 +77,11 @@ gem "coderay"
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 7.27'
+gem 'blacklight', '~> 8.0'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"
-gem 'blacklight-hierarchy', "~> 6.0"
+gem 'blacklight-hierarchy', "~> 6.1"
 gem 'blacklight_dynamic_sitemap'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'

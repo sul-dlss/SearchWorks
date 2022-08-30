@@ -6,7 +6,7 @@
         <span class="fa fa-bars"></span>
       </button>
       <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe %>
-      <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
+      <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: current_search_session) %>
     </div>
     <div class="navbar-collapse collapse toolbar-collapse">
       <ul class="nav navbar-nav ml-auto">
