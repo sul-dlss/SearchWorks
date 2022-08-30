@@ -856,7 +856,7 @@ RSpec/FilePath:
     - 'spec/lib/links_spec.rb'
     - 'spec/lib/page_location_spec.rb'
     - 'spec/models/concerns/eds_document.rb'
-    - 'spec/models/concerns/solr_hodlings_spec.rb'
+    - 'spec/models/concerns/solr_holdings_spec.rb'
     - 'spec/models/hoover_open_url_requst_spec.rb'
     - 'spec/models/marc_fields/langauge_spec.rb'
     - 'spec/models/marc_fields/organization_and_arrangmenet_spec.rb'
