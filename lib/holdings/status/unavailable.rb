@@ -1,12 +1,12 @@
 class Holdings
   class Status
     class Unavailable
-      attr_reader :callnumber
+      attr_reader :item
 
-      delegate :library, :home_location, :current_location, to: :callnumber
+      delegate :library, :home_location, :current_location, to: :item
 
-      def initialize(callnumber)
-        @callnumber = callnumber
+      def initialize(item)
+        @item = item
       end
 
       def unavailable?
@@ -39,7 +39,7 @@ class Holdings
       end
 
       def current_location
-        callnumber.current_location.try(:code)
+        item.current_location.try(:code)
       end
     end
   end

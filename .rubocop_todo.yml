@@ -101,7 +101,7 @@ Layout/EmptyLinesAroundAttributeAccessor:
     - 'app/models/search_tips.rb'
     - 'app/services/eds/search_service.rb'
     - 'config/initializers/okcomputer.rb'
-    - 'lib/holdings/callnumber.rb'
+    - 'lib/holdings/item.rb'
     - 'spec/presenters/facet_options_presenter_spec.rb'
     - 'spec/support/stub_article_service.rb'
 
@@ -633,7 +633,7 @@ Performance/CollectionLiteralInLoop:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Performance/InefficientHashSearch:
   Exclude:
-    - 'lib/holdings/callnumber.rb'
+    - 'lib/holdings/item.rb'
 
 # Offense count: 7
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -828,7 +828,7 @@ RSpec/ExcessiveDocstringSpacing:
     - 'spec/features/responsive/record_toolbar_responsive_spec.rb'
     - 'spec/features/responsive/results_toolbar_spec.rb'
     - 'spec/features/responsive/search_toolbar_responsive_spec.rb'
-    - 'spec/lib/holdings/callnumber_spec.rb'
+    - 'spec/lib/holdings/item_spec.rb'
     - 'spec/lib/hours_request_spec.rb'
     - 'spec/lib/live_lookup_spec.rb'
     - 'spec/mailers/search_works_record_mailer_spec.rb'
@@ -856,7 +856,7 @@ RSpec/FilePath:
     - 'spec/lib/links_spec.rb'
     - 'spec/lib/page_location_spec.rb'
     - 'spec/models/concerns/eds_document.rb'
-    - 'spec/models/concerns/solr_hodlings_spec.rb'
+    - 'spec/models/concerns/solr_holdings_spec.rb'
     - 'spec/models/hoover_open_url_requst_spec.rb'
     - 'spec/models/marc_fields/langauge_spec.rb'
     - 'spec/models/marc_fields/organization_and_arrangmenet_spec.rb'
@@ -943,7 +943,7 @@ RSpec/PredicateMatcher:
     - 'spec/helpers/bookmarks_helper_spec.rb'
     - 'spec/helpers/collection_access_point_helper_spec.rb'
     - 'spec/helpers/feedback_form_helper_spec.rb'
-    - 'spec/lib/holdings/callnumber_spec.rb'
+    - 'spec/lib/holdings/item_spec.rb'
     - 'spec/lib/page_location_spec.rb'
     - 'spec/lib/search_query_modifier_spec.rb'
     - 'spec/models/concerns/collection_member_spec.rb'
@@ -975,7 +975,7 @@ RSpec/RepeatedDescription:
   Exclude:
     - 'spec/controllers/catalog_controller_spec.rb'
     - 'spec/features/blacklight_customizations/devise_spec.rb'
-    - 'spec/lib/holdings/callnumber_spec.rb'
+    - 'spec/lib/holdings/item_spec.rb'
     - 'spec/lib/page_location_spec.rb'
 
 # Offense count: 4
@@ -1149,7 +1149,7 @@ Rails/NegateInclude:
   Exclude:
     - 'app/controllers/concerns/email_validation.rb'
     - 'app/helpers/xml_api_helper.rb'
-    - 'lib/holdings/callnumber.rb'
+    - 'lib/holdings/item.rb'
     - 'lib/live_lookup.rb'
     - 'lib/page_location.rb'
 
@@ -1335,7 +1335,7 @@ Style/EmptyCaseCondition:
   Exclude:
     - 'app/controllers/concerns/email_validation.rb'
     - 'app/models/concerns/schema_dot_org.rb'
-    - 'lib/holdings/callnumber.rb'
+    - 'lib/holdings/item.rb'
     - 'lib/holdings/status.rb'
     - 'lib/page_location.rb'
 
@@ -1741,7 +1741,7 @@ Style/SafeNavigation:
     - 'app/models/concerns/extent.rb'
     - 'app/models/concerns/index_links.rb'
     - 'app/views/catalog/_show_default.mobile.builder'
-    - 'lib/holdings/callnumber.rb'
+    - 'lib/holdings/item.rb'
     - 'lib/holdings/location.rb'
 
 # Offense count: 3

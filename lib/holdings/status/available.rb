@@ -1,8 +1,8 @@
 class Holdings
   class Status
     class Available
-      def initialize(callnumber)
-        @callnumber = callnumber
+      def initialize(item)
+        @item = item
       end
 
       def available?
@@ -12,7 +12,7 @@ class Holdings
       private
 
       def available_current_location?
-        Constants::FORCE_AVAILABLE_CURRENT_LOCS.include?(@callnumber.current_location.try(:code))
+        Constants::FORCE_AVAILABLE_CURRENT_LOCS.include?(@item.current_location.try(:code))
       end
     end
   end

@@ -59,7 +59,7 @@ class HathiTrustLinks
   end
 
   def many_holdings?
-    document.holdings.callnumbers.many?(&:present?)
+    document.holdings.items.many?(&:present?)
   end
 
   def fulltext_available?
