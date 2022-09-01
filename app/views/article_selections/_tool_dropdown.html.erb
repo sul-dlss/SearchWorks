@@ -17,7 +17,7 @@
       </li>
 
       <li class="ris" role="presentation">
-        <%= link_to t('blacklight.tools.ris_html'), search_state.to_h.merge(format: 'ris'), download: true, role: 'menuitem', tabindex: '-1' %>
+        <%= link_to t('blacklight.tools.ris_html'), search_state.to_h.merge(format: 'ris'), download: File.basename(url_for(search_state.to_h.merge(format: 'ris'))), role: 'menuitem', tabindex: '-1' %>
       </li>
     <% end %>
 

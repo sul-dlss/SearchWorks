@@ -16,7 +16,7 @@
 
     <% if @response.documents.any? {|d| d.exports_as? :endnote } %>
       <li role="presentation">
-        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, search_state.params_for_search), :id => "endnoteLink", role: 'menuitem', tabindex: '-1' %>
+        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, search_state.params_for_search), download: File.basename(bookmarks_path(:endnote, search_state.params_for_search)), :id => "endnoteLink", role: 'menuitem', tabindex: '-1' %>
       </li>
     <% end %>
 
