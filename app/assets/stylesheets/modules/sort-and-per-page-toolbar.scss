@@ -1,11 +1,7 @@
-#sortAndPerPage {
+.sul-toolbar.sort-and-per-page { 
   padding: 4px 0;
   margin-top: .8em;
   border-bottom: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   .dropdown-menu {
     @include toolbar-dropdown;
@@ -23,6 +19,39 @@
   #search-results-toolbar {
     ul li a i.active-icon {
       margin-left: -17px;
+    }
+  }
+}
+
+@media (min-width: $screen-xs-min) { 
+  .sort-and-per-page {
+    #search-results-toolbar {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) { 
+  .sort-and-per-page {
+    padding: 4px 0;
+    margin-top: .8em;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+
+    #search-results-toolbar {
+      display: block;
+      margin-left: 8px;
+
+      #citeLink, #tools-dropdown, .clear-bookmarks {
+        margin: 3px;
+      }
     }
   }
 }
