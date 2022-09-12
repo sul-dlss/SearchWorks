@@ -5,7 +5,7 @@ describe AllCapsParams do
 
   before do
     controller.extend(AllCapsParams)
-    allow(controller).to receive(:params).and_return(HashWithIndifferentAccess.new(params))
+    allow(controller).to receive(:params).and_return(ActiveSupport::HashWithIndifferentAccess.new(params))
   end
 
   describe "parameters with all capitals" do
