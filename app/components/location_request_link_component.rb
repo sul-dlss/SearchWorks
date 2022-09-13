@@ -9,10 +9,6 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   RequestLinks::HooverArchiveRequestLinkComponent
                 when 'HOPKINS'
                   RequestLinks::HopkinsRequestLinkComponent
-                when 'SPEC-COLL', 'ARS', 'EAST-ASIA'
-                  # if there's a finding aid with valid link, use that for the request link
-                  component = RequestLinks::FindingAidRequestLinkComponent.new(document: document, library: library, location: location, **kwargs)
-                  Settings.OAC_REQUEST_LINKS && component.render? ? RequestLinks::FindingAidRequestLinkComponent : LocationRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end
@@ -64,7 +60,13 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def link_text
+    return I18n.t('searchworks.request_link.finding_aid') if finding_aid?
+
     t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
+  end
+
+  def finding_aid?
+    document&.index_links&.finding_aid&.first&.href.present?
   end
 
   def bound_with?
