@@ -43,7 +43,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'SPEC-COLL' }
     let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
 
-    it { expect(page).to have_link 'Request on-site access' }
+    it { expect(page).to have_link 'Request via Aeon' }
   end
 
   context 'when all items are in a mediated page location' do
@@ -90,7 +90,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'HOOVER' }
     let(:location) { 'STACKS' }
 
-    it { expect(page).to have_link 'Request on-site access', href: /hoover.aeon.atlas-sys.com/ }
+    it { expect(page).to have_link 'Request via Aeon', href: /hoover.aeon.atlas-sys.com/ }
 
     it 'includes custom tooltip markup' do
       rendered_link = page.css(:a).first
@@ -165,7 +165,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     context 'when the item is at a library that prefers finding aids for requests' do
       let(:library) { 'SPEC-COLL' }
 
-      it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=LOCKED-STK' }
     end
 
     context 'when the item is at a library that does not prefer finding aids for requests' do

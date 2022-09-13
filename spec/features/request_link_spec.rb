@@ -18,7 +18,7 @@ describe 'Request Links', type: :feature do
       it 'renders a request button at the location level' do
         visit solr_document_path '56'
 
-        expect(page).to have_css('.request-button', text: 'Request on-site access')
+        expect(page).to have_css('.request-button', text: 'Request via Aeon')
       end
     end
   end
