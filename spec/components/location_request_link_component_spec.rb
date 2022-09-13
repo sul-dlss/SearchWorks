@@ -71,7 +71,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:location) { 'STACKS' }
     let(:items) { [] }
 
-    it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+    it { expect(page).to have_link 'Request via Aeon', href: 'http://oac.cdlib.org/ark:/abc123' }
   end
 
   context 'for Hoover Archive items without finding aids' do
@@ -90,7 +90,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'HOOVER' }
     let(:location) { 'STACKS' }
 
-    it { expect(page).to have_link 'Request on-site access', href: /hoover.aeon.atlas-sys.com/ }
+    it { expect(page).to have_link 'Request via Aeon', href: /hoover.aeon.atlas-sys.com/ }
 
     it 'includes custom tooltip markup' do
       rendered_link = page.css(:a).first
@@ -165,7 +165,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     context 'when the item is at a library that prefers finding aids for requests' do
       let(:library) { 'SPEC-COLL' }
 
-      it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+      it { expect(page).to have_link 'Request via Aeon', href: 'http://oac.cdlib.org/ark:/abc123' }
     end
 
     context 'when the item is at a library that does not prefer finding aids for requests' do
