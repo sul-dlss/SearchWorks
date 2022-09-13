@@ -516,7 +516,13 @@ class CatalogController < ApplicationController
     return {} unless document.is_a?(SolrDocument)
 
     {
+      # this data is used by sul-requests and passed to Aeon
       title: document['title_display'],
+      author: document['author_person_display']&.first ||
+        document['author_corp_display']&.first ||
+        document['author_meeting_display']&.first,
+      pub_date: document['pub_date'],
+      finding_aid: document.index_links&.finding_aid&.first&.href,
       online: document.index_links.fulltext.map(&:href),
       format: document[document.format_key],
       isbn: document['isbn_display'],
