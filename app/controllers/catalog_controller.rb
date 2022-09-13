@@ -516,7 +516,7 @@ class CatalogController < ApplicationController
     return {} unless document.is_a?(SolrDocument)
 
     {
-      # this data is used by sul-requests and passed to Aeon
+      # this data is used by sul-requests, and some of it is passed through to Aeon
       title: document['title_display'],
       author: document['author_person_display']&.first ||
         document['author_corp_display']&.first ||
