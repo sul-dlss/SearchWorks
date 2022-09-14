@@ -60,7 +60,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def link_text
-    return I18n.t('searchworks.request_link.finding_aid') if finding_aid?
+    return I18n.t('searchworks.request_link.finding_aid') if finding_aid? && in_aeon_pageable_location?
 
     t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
   end
@@ -81,6 +81,11 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def in_mediated_pageable_location?
     Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(location)
+  end
+
+  def in_aeon_pageable_location?
+    Settings.aeon_locations[library] == '*' ||
+      Settings.aeon_locations[library]&.include?(location)
   end
 
   def any_items_circulate?
