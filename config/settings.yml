@@ -395,6 +395,17 @@ mediated_locations:
   RUMSEYMAP: "*"
   SPEC-COLL: "*"
 
+aeon_locations:
+  RUMSEYMAP: "*"
+  SPEC-COLL: "*"
+  HV-ARCHIVE: "*"
+  ARS:
+    - RECORDINGS
+  EAST-ASIA:
+    - LOCKED-STK
+    - LOCK-STK-O
+    - LOCK-CHN
+
 circulating_item_types:
   ARS:
   - STKS
