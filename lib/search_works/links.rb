@@ -2,6 +2,35 @@ module SearchWorks
   class Links
     include Enumerable
 
+    def self.ezproxied_hosts
+      @ezproxied_hosts ||= {
+        'LAW' => Rails.root.join('config/ezproxy/law_proxy_file.txt').read.split("\n"),
+        'LANE-MED' => Rails.root.join('config/ezproxy/lane_proxy_file.txt').read.split("\n"),
+        default: Rails.root.join('config/ezproxy/sul_proxy_file.txt').read.split("\n")
+      }
+    end
+
+    def self.ezproxy_url(url, document)
+      link_host = begin
+        URI.parse(url).host
+      rescue StandardError
+        nil
+      end
+      return unless link_host
+
+      libraries = document.holdings.libraries.map(&:code)
+
+      ezproxy_host = if libraries.include?('LAW') && ezproxied_hosts['LAW'].any?(link_host)
+                       Settings.EZPROXY.LAW
+                     elsif libraries.include?('LANE-MED') && ezproxied_hosts['LANE-MED'].any?(link_host)
+                       Settings.EZPROXY.LANE
+                     elsif ezproxied_hosts[:default].any?(link_host)
+                       Settings.EZPROXY.SUL
+                     end
+
+      "#{ezproxy_host}#{{ url: url }.to_param}" if ezproxy_host
+    end
+
     PROXY_REGEX = /stanford\.idm\.oclc\.org/
 
     delegate :each, :present?, :blank?, to: :all

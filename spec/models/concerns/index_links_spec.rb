@@ -125,5 +125,82 @@ describe IndexLinks do
       expect(sfx_links.sfx.first).to be_sfx
       expect(sfx_links.sfx.first.html).to match(%r{^<a href=.*class="sfx">Find full text<\/a>$})
     end
+
+    describe 'ezproxy' do
+      context 'LANE records' do
+        let(:document) do
+          SolrDocument.new(
+            url_fulltext: [
+              'https://who.int/whatever'
+            ],
+            item_display: ['barcode -|- LANE-MED']
+          )
+        end
+
+        it 'prefixes the link with the ezproxy URL' do
+          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?url=https%3A%2F%2Fwho.int%2Fwhatever'
+        end
+      end
+
+      context 'LAW records' do
+        let(:document) do
+          SolrDocument.new(
+            url_fulltext: [
+              'https://www.iareporter.com/whatever'
+            ],
+            item_display: ['barcode -|- LAW']
+          )
+        end
+
+        it 'prefixes the link with the ezproxy URL' do
+          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?auth=shibboleth&url=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+        end
+      end
+
+      context 'SUL records' do
+        let(:document) do
+          SolrDocument.new(
+            url_fulltext: [
+              'http://ch.ucpress.edu/whatever'
+            ],
+            item_display: ['barcode -|- GREEN']
+          )
+        end
+
+        it 'prefixes the link with the ezproxy URL' do
+          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+        end
+      end
+
+      context 'a url that matches a LANE-MED ezproxy host for a SUL item' do
+        let(:document) do
+          SolrDocument.new(
+            url_fulltext: [
+              'https://who.int/whatever'
+            ],
+            item_display: ['barcode -|- GREEN']
+          )
+        end
+
+        it 'leaves the url alone' do
+          expect(document.index_links.all.first.href).to eq 'https://who.int/whatever'
+        end
+      end
+
+      context 'a url that matches a SUL ezproxy host for a LANE item' do
+        let(:document) do
+          SolrDocument.new(
+            url_fulltext: [
+              'http://ch.ucpress.edu/whatever'
+            ],
+            item_display: ['barcode -|- LANE-MED']
+          )
+        end
+
+        it 'prefixes the link with the SUL url' do
+          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+        end
+      end
+    end
   end
 end

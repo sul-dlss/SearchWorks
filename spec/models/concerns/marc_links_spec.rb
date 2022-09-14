@@ -26,4 +26,20 @@ describe MarcLinks do
       expect(document.marc_links.managed_purls.first.druid).to eq 'abc'
     end
   end
+
+  describe 'ezproxy' do
+    context 'SUL records' do
+      let(:document) do
+        SolrDocument.new(
+          marc_links_struct: [{
+            href: 'http://ch.ucpress.edu/whatever'
+          }]
+        )
+      end
+
+      it 'prefixes the link with the ezproxy URL' do
+        expect(document.marc_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+      end
+    end
+  end
 end
