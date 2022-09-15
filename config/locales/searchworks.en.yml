@@ -264,13 +264,10 @@ en:
     request_link:
       aeon_note: Requires Aeon signup/login<br/>Opens in new tab
       default: Request
-      HOOVER: Request via Aeon
-      HV-ARCHIVE: Request via Finding Aid
-      RUMSEYMAP: Request via Aeon
-      SPEC-COLL: Request via Aeon
-      ARS: Request via Aeon
       request_on_site: Request on-site access
       finding_aid: Request via Finding Aid
+      aeon: Request via Aeon
+      HV-ARCHIVE: Request via Finding Aid
   blacklight:
     advanced_search:
       page_title: 'Advanced search in SearchWorks catalog'

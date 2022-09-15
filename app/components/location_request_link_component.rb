@@ -61,6 +61,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
 
   def link_text
     return I18n.t('searchworks.request_link.finding_aid') if finding_aid? && in_aeon_pageable_location?
+    return I18n.t('searchworks.request_link.aeon') if in_aeon_pageable_location?
 
     t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
   end
