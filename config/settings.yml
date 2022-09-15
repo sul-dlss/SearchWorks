@@ -81,6 +81,11 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
+EZPROXY:
+  LAW: http://ezproxy.law.stanford.edu/login?auth=shibboleth&
+  LANE: https://login.laneproxy.stanford.edu/login?
+  SUL: https://stanford.idm.oclc.org/login?
+
 selected_databases:
    "5749286":
      subjects: ["General", "Multidisciplinary"]
