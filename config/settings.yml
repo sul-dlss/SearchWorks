@@ -131,7 +131,6 @@ selected_databases:
      description: "Access to the international literature in sociology and related disciplines in the social and behavioral sciences, 1953-present."
 
 pageable_locations:
-  ARS: []
   ART:
   - ARTLCKL
   - ARTLCKL-R
@@ -392,8 +391,6 @@ mediated_locations:
     - LOCKED-STK
   SAL3:
     - PAGE-MP
-  RUMSEYMAP: "*"
-  SPEC-COLL: "*"
 
 aeon_locations:
   RUMSEYMAP: "*"

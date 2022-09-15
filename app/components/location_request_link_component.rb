@@ -74,12 +74,14 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def in_enabled_location?
-    Settings.pageable_locations[library] == '*' ||
+    in_mediated_pageable_location? ||
+      Settings.pageable_locations[library] == '*' ||
       Settings.pageable_locations[library]&.include?(location)
   end
 
   def in_mediated_pageable_location?
-    Settings.mediated_locations[library] == '*' ||
+    in_aeon_pageable_location? ||
+      Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(location)
   end
 
