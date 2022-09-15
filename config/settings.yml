@@ -398,7 +398,11 @@ mediated_locations:
 aeon_locations:
   RUMSEYMAP: "*"
   SPEC-COLL: "*"
-  HV-ARCHIVE: "*"
+  SAL:
+    - L-PAGE-EA
+  SAL3:
+    - PAGE-AS
+    - PAGE-EA
   ARS:
     - RECORDINGS
   EAST-ASIA:
