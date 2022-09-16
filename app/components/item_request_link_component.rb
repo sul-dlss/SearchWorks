@@ -19,7 +19,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
   end
 
   def render?
-    return false if in_mediated_pageable_location? || in_nonrequestable_location? || @item.on_reserve?
+    return false if aeon_pageable? || in_mediated_pageable_location? || in_nonrequestable_location? || @item.on_reserve?
 
     current_location_is_always_requestable?
   end
@@ -59,6 +59,12 @@ class ItemRequestLinkComponent < ViewComponent::Base
   def in_mediated_pageable_location?
     Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(home_location)
+  end
+
+  def aeon_pageable?
+    Settings.aeon_locations[library] == '*' ||
+      Settings.aeon_locations.dig(library, home_location) == "*" ||
+      Settings.aeon_locations.dig(library, home_location)&.include?(@item.type)
   end
 
   def in_nonrequestable_location?
