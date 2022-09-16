@@ -395,6 +395,7 @@ mediated_locations:
 aeon_locations:
   RUMSEYMAP: "*"
   SPEC-COLL: "*"
+  HOOVER: "*"
   SAL:
     - L-PAGE-EA
   SAL3:
