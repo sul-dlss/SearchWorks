@@ -41,7 +41,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def render?
     return false unless items.any? && !bound_with?
 
-    ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location?) &&
+    ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || in_aeon_pageable_location?) &&
       !all_in_disabled_current_location?
   end
 
@@ -81,8 +81,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def in_mediated_pageable_location?
-    in_aeon_pageable_location? ||
-      Settings.mediated_locations[library] == '*' ||
+    Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(location)
   end
 
