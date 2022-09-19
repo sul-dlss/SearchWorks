@@ -11,7 +11,7 @@ describe "Search parameters in all caps", type: :feature do
       expect(page).to have_content("hello world")
     end
 
-    text_field = find('#q')
+    text_field = find_by_id('q')
     expect(text_field.value).not_to eq 'HELLO WORLD'
     expect(text_field.value).to eq 'hello world'
   end

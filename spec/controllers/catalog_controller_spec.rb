@@ -4,23 +4,23 @@ describe CatalogController do
   include Devise::Test::ControllerHelpers
 
   it 'should include the AdvancedSearchParamsMapping concern' do
-    expect(subject).to be_kind_of(AdvancedSearchParamsMapping)
+    expect(subject).to be_a(AdvancedSearchParamsMapping)
   end
   it "should include the DatabaseAccessPoint concern" do
-    expect(subject).to be_kind_of(DatabaseAccessPoint)
+    expect(subject).to be_a(DatabaseAccessPoint)
   end
   it "should include the CallnumberSearch concern" do
-    expect(subject).to be_kind_of(CallnumberSearch)
+    expect(subject).to be_a(CallnumberSearch)
   end
   it "should include the AllCapsParams concern" do
-    expect(subject).to be_kind_of(AllCapsParams)
+    expect(subject).to be_a(AllCapsParams)
   end
   it "should include the ReplaceSpecialQuotes concern" do
-    expect(subject).to be_kind_of(ReplaceSpecialQuotes)
+    expect(subject).to be_a(ReplaceSpecialQuotes)
   end
 
   it "should include the EmailValidation concern" do
-    expect(subject).to be_kind_of(EmailValidation)
+    expect(subject).to be_a(EmailValidation)
   end
   describe "#index" do
     it "should set the search modifier" do

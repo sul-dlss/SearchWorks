@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe ArticlesController do
   include Devise::Test::ControllerHelpers
   it 'should include the EmailValidation concern' do
-    expect(subject).to be_kind_of(EmailValidation)
+    expect(subject).to be_a(EmailValidation)
   end
 
   context '#index' do

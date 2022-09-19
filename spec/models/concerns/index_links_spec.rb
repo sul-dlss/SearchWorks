@@ -14,9 +14,9 @@ describe IndexLinks do
       expect(document).to respond_to(:index_links)
     end
     it '#index_links should return SearchWorks::Links' do
-      expect(document.index_links).to be_a_kind_of(SearchWorks::Links)
+      expect(document.index_links).to be_a(SearchWorks::Links)
       document.index_links.each do |index_link|
-        expect(index_link).to be_a_kind_of SearchWorks::Links::Link
+        expect(index_link).to be_a SearchWorks::Links::Link
       end
     end
   end

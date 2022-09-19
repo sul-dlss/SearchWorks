@@ -40,7 +40,7 @@ describe "Emailing Records", type: :feature, js: true do
       end
 
       expect(page).to have_css('h1', text: 'Email This', visible: true)
-      expect(URI(find('#email_form')['action']).path).to eq(email_solr_document_path('14'))
+      expect(URI(find_by_id('email_form')['action']).path).to eq(email_solr_document_path('14'))
 
       within('.modal-dialog') do
         fill_in 'to', with: 'email@example.com'
@@ -75,7 +75,7 @@ describe "Emailing Records", type: :feature, js: true do
           end
         end
 
-        expect(URI(find('#email_form')['action']).path).to eq(email_articles_path)
+        expect(URI(find_by_id('email_form')['action']).path).to eq(email_articles_path)
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'
@@ -101,7 +101,7 @@ describe "Emailing Records", type: :feature, js: true do
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'
-          find('#type_full').click
+          find_by_id('type_full').click
 
           find('button[type="submit"]').click
         end
