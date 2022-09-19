@@ -34,7 +34,7 @@ feature 'Article Record Display' do
         expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
         expect(page).to have_content('This Journal')
 
-        find('#fulltextToggleBar').click
+        find_by_id('fulltextToggleBar').click
         expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
         expect(page).not_to have_css('div.blacklight-eds_html_fulltext', visible: true)
         expect(page).not_to have_content('This Journal')

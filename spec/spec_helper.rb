@@ -145,7 +145,7 @@ def article_search_for(query)
   within '.search-form' do
     fill_in 'q', with: query
     if Capybara.current_driver == :headless_chrome
-      find('#search').click
+      find_by_id('search').click
     else
       click_button 'Search'
     end

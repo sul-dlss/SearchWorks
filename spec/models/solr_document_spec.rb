@@ -19,92 +19,92 @@ describe SolrDocument do
 
   describe "MarcLinks" do
     it "should include marc links" do
-      expect(subject).to be_kind_of MarcLinks
+      expect(subject).to be_a MarcLinks
     end
   end
 
   describe "DatabaseDocument" do
     it "should include database document" do
-      expect(subject).to be_kind_of DatabaseDocument
+      expect(subject).to be_a DatabaseDocument
     end
   end
 
   describe "DisplayType" do
     it "should include display type" do
-      expect(subject).to be_kind_of DisplayType
+      expect(subject).to be_a DisplayType
       expect(subject).to respond_to(:display_type)
     end
   end
 
   describe "DigitalCollection" do
     it "should include digital collection" do
-      expect(subject).to be_kind_of DigitalCollection
+      expect(subject).to be_a DigitalCollection
     end
   end
 
   describe "CollectionMember" do
     it "should include collection member" do
-      expect(subject).to be_kind_of CollectionMember
+      expect(subject).to be_a CollectionMember
     end
   end
 
   describe "Extent" do
     it "should include the extent" do
-      expect(subject).to be_kind_of Extent
+      expect(subject).to be_a Extent
     end
   end
 
   describe "IndexAuthors" do
     it "should include index authors" do
-      expect(subject).to be_kind_of IndexAuthors
+      expect(subject).to be_a IndexAuthors
     end
   end
 
   describe "Druid" do
     it "should include druid" do
-      expect(subject).to be_kind_of Druid
+      expect(subject).to be_a Druid
     end
   end
 
   describe 'StacksImages' do
     it 'includes the StacksImages mixin' do
-      expect(subject).to be_kind_of StacksImages
+      expect(subject).to be_a StacksImages
     end
   end
 
   describe 'DigitalImage' do
     it 'includes the DigitalImage mixin' do
-      expect(subject).to be_kind_of DigitalImage
+      expect(subject).to be_a DigitalImage
     end
   end
 
   describe "SolrHoldings" do
     it "should include SolrHoldings" do
-      expect(subject).to be_kind_of SolrHoldings
+      expect(subject).to be_a SolrHoldings
     end
   end
 
   describe 'SolrSet' do
     it 'should be included' do
-      expect(subject).to be_kind_of SolrSet
+      expect(subject).to be_a SolrSet
     end
   end
 
   describe 'SolrBookplates' do
     it 'is included' do
-      expect(subject).to be_kind_of SolrBookplates
+      expect(subject).to be_a SolrBookplates
     end
   end
 
   describe 'CitationConcern' do
     it 'is included' do
-      expect(subject).to be_kind_of Citable
+      expect(subject).to be_a Citable
     end
   end
 
   describe 'MarcBoundWithNote' do
     it 'is included' do
-      expect(subject).to be_kind_of MarcBoundWithNote
+      expect(subject).to be_a MarcBoundWithNote
     end
   end
 
@@ -135,7 +135,7 @@ describe SolrDocument do
     let(:non_eds) { SolrDocument.new }
 
     it 'is included' do
-      expect(subject).to be_kind_of EdsDocument
+      expect(subject).to be_a EdsDocument
     end
     it 'eds?' do
       expect(eds.eds?).to eq true

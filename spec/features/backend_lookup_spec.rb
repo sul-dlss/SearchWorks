@@ -9,7 +9,7 @@ feature 'Backend lookup', js: true do
   scenario 'lookup should return additional results on the zero results page' do
     fill_in 'q', with: 'sdfsda'
     select 'Author', from: 'search_field'
-    find('#search').click
+    find_by_id('search').click
 
     within '.zero-results' do
       expect(page).to have_css('a', text: /sdfsda/)
