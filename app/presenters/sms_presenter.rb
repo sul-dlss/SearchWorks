@@ -15,13 +15,13 @@ class SmsPresenter
   end
 
   def sms_content
-    "#{sms_text}\n#{short_url}"
+    "#{sms_text}\n#{short_url}\n"
   end
 
   private
 
   def sms_text
-    truncate(document.to_sms_text, length: text_length)
+    truncate(document.to_sms_text, length: text_length, escape: false)
   end
 
   def text_length

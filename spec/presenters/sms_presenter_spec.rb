@@ -20,9 +20,17 @@ describe SmsPresenter do
       it { expect(subject.sms_content.length).to be < 160 }
     end
 
+    context 'with special characters' do
+      let(:doc) { SolrDocument.new(eds_title: '< this & that >') }
+
+      it 'is not escaped' do
+        expect(subject.sms_content).to include '< this & that >'
+      end
+    end
+
     context 'when bitly returns ok' do
       it 'uses bitly shortened url' do
-        expect(subject.sms_content).to include 'http://bit.ly/2evYAOW'
+        expect(subject.sms_content).to include('http://bit.ly/2evYAOW').and end_with("\n")
       end
     end
 
