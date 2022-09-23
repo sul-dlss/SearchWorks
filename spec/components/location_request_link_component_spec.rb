@@ -39,19 +39,53 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     it { expect(page).not_to have_link }
   end
 
-  context 'when all items are in a mediated page library' do
-    let(:library) { 'SPEC-COLL' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
-
-    it { expect(page).to have_link 'Request on-site access' }
-  end
-
   context 'when all items are in a mediated page location' do
     let(:library) { 'ART' }
     let(:location) { 'ARTLCKL' }
     let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
 
     it { expect(page).to have_link 'Request' }
+  end
+
+  context 'when all items are in an Aeon library' do
+    let(:library) { 'SPEC-COLL' }
+    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+
+    it { expect(page).to have_link 'Request via Aeon' }
+  end
+
+  context 'when all items are in an Aeon library but not an Aeon location' do
+    let(:library) { 'ARS' }
+    let(:location) { 'REFERENCE' }
+    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+
+    it { expect(page).not_to have_link 'Request via Aeon' }
+  end
+
+  context 'when all items are in an Aeon library and location' do
+    let(:library) { 'ARS' }
+    let(:location) { 'RECORDINGS' }
+    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+
+    it { expect(page).to have_link 'Request via Aeon' }
+  end
+
+  context 'when all items match a combination of Aeon location and item type' do
+    let(:document) { SolrDocument.new(id: '12345') }
+    let(:library) { 'SAL' }
+    let(:location) { 'L-PAGE-EA' }
+    let(:items) { [double(circulates?: false, type: 'NH-INHOUSE', current_location: double(code: nil))] }
+
+    it { expect(page).to have_link 'Request via Aeon' }
+  end
+
+  context 'when items match an Aeon location but have the wrong item type' do
+    let(:document) { SolrDocument.new(id: '12345') }
+    let(:library) { 'SAL' }
+    let(:location) { 'L-PAGE-EA' }
+    let(:items) { [double(circulates?: false, type: 'NEWSPAPER', current_location: double(code: nil))] }
+
+    it { expect(page).not_to have_link 'Request via Aeon' }
   end
 
   context 'when all items are in a disallowed current location' do
@@ -90,7 +124,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'HOOVER' }
     let(:location) { 'STACKS' }
 
-    it { expect(page).to have_link 'Request on-site access', href: /hoover.aeon.atlas-sys.com/ }
+    it { expect(page).to have_link 'Request via Aeon', href: /hoover.aeon.atlas-sys.com/ }
 
     it 'includes custom tooltip markup' do
       rendered_link = page.css(:a).first
@@ -165,7 +199,10 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     context 'when the item is at a library that prefers finding aids for requests' do
       let(:library) { 'SPEC-COLL' }
 
-      it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+      # We send patrons to requests first to show them instructions, but ultimately
+      # requests then sends them to the finding aid, which links to Aeon. See:
+      # https://github.com/sul-dlss/sul-requests/issues/1333
+      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=LOCKED-STK' }
     end
 
     context 'when the item is at a library that does not prefer finding aids for requests' do

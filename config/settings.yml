@@ -392,8 +392,25 @@ mediated_locations:
     - LOCKED-STK
   SAL3:
     - PAGE-MP
+
+aeon_locations:
   RUMSEYMAP: "*"
   SPEC-COLL: "*"
+  HOOVER: "*"
+  ARS:
+    RECORDINGS: "*"
+  EAST-ASIA:
+    LOCKED-STK: "*"
+    LOCK-STK-O: "*"
+    LOCK-CHN: "*"
+  SAL:
+    L-PAGE-EA:
+    - NH-INHOUSE
+  SAL3:
+    PAGE-AS: 
+    - NH-INHOUSE
+    PAGE-EA:
+    - LCKSTK
 
 circulating_item_types:
   ARS:

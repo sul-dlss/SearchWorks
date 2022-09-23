@@ -9,10 +9,6 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   RequestLinks::HooverArchiveRequestLinkComponent
                 when 'HOPKINS'
                   RequestLinks::HopkinsRequestLinkComponent
-                when 'SPEC-COLL', 'ARS', 'EAST-ASIA'
-                  # if there's a finding aid with valid link, use that for the request link
-                  component = RequestLinks::FindingAidRequestLinkComponent.new(document: document, library: library, location: location, **kwargs)
-                  Settings.OAC_REQUEST_LINKS && component.render? ? RequestLinks::FindingAidRequestLinkComponent : LocationRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end
@@ -45,7 +41,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def render?
     return false unless items.any? && !bound_with?
 
-    ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location?) &&
+    ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable?) &&
       !all_in_disabled_current_location?
   end
 
@@ -64,7 +60,14 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def link_text
+    return I18n.t('searchworks.request_link.finding_aid') if finding_aid? && aeon_pageable?
+    return I18n.t('searchworks.request_link.aeon') if aeon_pageable?
+
     t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
+  end
+
+  def finding_aid?
+    document&.index_links&.finding_aid&.first&.href.present?
   end
 
   def bound_with?
@@ -72,13 +75,22 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def in_enabled_location?
-    Settings.pageable_locations[library] == '*' ||
+    in_mediated_pageable_location? ||
+      Settings.pageable_locations[library] == '*' ||
       Settings.pageable_locations[library]&.include?(location)
   end
 
   def in_mediated_pageable_location?
     Settings.mediated_locations[library] == '*' ||
       Settings.mediated_locations[library]&.include?(location)
+  end
+
+  def aeon_pageable?
+    Settings.aeon_locations[library] == '*' ||
+      Settings.aeon_locations.dig(library, location) == "*" ||
+      items.all? do |item|
+        Settings.aeon_locations.dig(library, location)&.include?(item.type)
+      end
   end
 
   def any_items_circulate?
