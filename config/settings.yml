@@ -28,7 +28,6 @@ EMAIL_THRESHOLD: 5
 GENERATE_SITEMAP: true
 DISABLE_SESSIONS: false
 THROTTLE_TRAFFIC: false
-OAC_REQUEST_LINKS: false
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
@@ -392,25 +391,27 @@ mediated_locations:
     - LOCKED-STK
   SAL3:
     - PAGE-MP
+  RUMSEYMAP: "*"  # remove once aeon is re-enabled below
+  SPEC-COLL: "*"  # remove once aeon is re-enabled below
 
-aeon_locations:
-  RUMSEYMAP: "*"
-  SPEC-COLL: "*"
-  HOOVER: "*"
-  ARS:
-    RECORDINGS: "*"
-  EAST-ASIA:
-    LOCKED-STK: "*"
-    LOCK-STK-O: "*"
-    LOCK-CHN: "*"
-  SAL:
-    L-PAGE-EA:
-    - NH-INHOUSE
-  SAL3:
-    PAGE-AS: 
-    - NH-INHOUSE
-    PAGE-EA:
-    - LCKSTK
+aeon_locations: {}
+#   RUMSEYMAP: "*"
+#   SPEC-COLL: "*"
+#   HOOVER: "*"
+#   ARS:
+#     RECORDINGS: "*"
+#   EAST-ASIA:
+#     LOCKED-STK: "*"
+#     LOCK-STK-O: "*"
+#     LOCK-CHN: "*"
+#   SAL:
+#     L-PAGE-EA:
+#     - NH-INHOUSE
+#   SAL3:
+#     PAGE-AS: 
+#     - NH-INHOUSE
+#     PAGE-EA:
+#     - LCKSTK
 
 circulating_item_types:
   ARS:
