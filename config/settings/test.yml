@@ -9,4 +9,23 @@ EXHIBITS_ACCESS_PANEL:
   enabled: true
 LIB_GUIDES:
   MINI_BENTO_ENABLED: true
-OAC_REQUEST_LINKS: true
+
+# Can be removed once Aeon is re-enabled in main settings
+aeon_locations:
+  RUMSEYMAP: "*"
+  SPEC-COLL: "*"
+  HOOVER: "*"
+  ARS:
+    RECORDINGS: "*"
+  EAST-ASIA:
+    LOCKED-STK: "*"
+    LOCK-STK-O: "*"
+    LOCK-CHN: "*"
+  SAL:
+    L-PAGE-EA:
+    - NH-INHOUSE
+  SAL3:
+    PAGE-AS: 
+    - NH-INHOUSE
+    PAGE-EA:
+    - LCKSTK
