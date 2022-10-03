@@ -79,7 +79,7 @@ GEM
     bindex (0.8.1)
     bitly (2.0.1)
       oauth2 (>= 0.5.0, < 2.0)
-    blacklight (7.29.0)
+    blacklight (7.30.0)
       deprecation
       globalid
       hashdiff
