@@ -64,6 +64,7 @@
     display: flex;
 
     .collection-summary {
+      flex-basis: 100ch;
       flex-shrink: 2;
       margin-right: 30px;
     }
