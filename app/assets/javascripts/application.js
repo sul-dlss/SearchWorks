@@ -19,7 +19,6 @@
 //= require responsiveTruncator
 //= require trunk8
 //= require jquery-scrollspy
-//= require jquery-svg-fallback
 //= require leaflet
 //= require loading-attribute-polyfill
 //= require dataTables/jquery.dataTables
