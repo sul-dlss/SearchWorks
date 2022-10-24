@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Tabbed selections UI', type: :feature do
+RSpec.describe 'Tabbed selections UI' do
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
 
   before do

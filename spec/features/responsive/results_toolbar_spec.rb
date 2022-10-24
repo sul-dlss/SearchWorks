@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Responsive results toolbar", js: true, feature: true do
+describe "Responsive results toolbar", feature: true, js: true do
   describe " - desktop view (> 992px)" do
     it "should display correct tools" do
       visit root_path
@@ -19,7 +19,7 @@ describe "Responsive results toolbar", js: true, feature: true do
     end
   end
 
-  describe " - tablet view (768px - 992px) - ", responsive: true, page_width: 800 do
+  describe " - tablet view (768px - 992px) - ", page_width: 800, responsive: true do
     it "should display correct tools" do
       visit root_path
       fill_in "q", with: ''
@@ -36,7 +36,7 @@ describe "Responsive results toolbar", js: true, feature: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
+  describe " - mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
     it "should display correct tools" do
       visit root_path
       fill_in "q", with: ''

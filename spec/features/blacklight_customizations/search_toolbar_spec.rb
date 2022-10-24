@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Search toolbar", js: true, feature: true do
+describe "Search toolbar", feature: true, js: true do
   before { visit root_path }
 
   describe "has SearchWorks customizations" do

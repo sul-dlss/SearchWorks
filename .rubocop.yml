@@ -34,6 +34,7 @@ RSpec/DescribeClass:
     - 'spec/features/**/*'
     - 'spec/models/**/*'
     - 'spec/requests/**/*'
+    - 'spec/routing/**/*'
 
 Metrics/ParameterLists:
   Exclude:

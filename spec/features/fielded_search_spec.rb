@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Fielded Search', type: :feature do
+RSpec.describe 'Fielded Search' do
   before do
     visit root_url
     fill_in 'q', with: query

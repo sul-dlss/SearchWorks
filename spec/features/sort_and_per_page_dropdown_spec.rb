@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Sort and per page toolbar', js: true, feature: true do
+describe 'Sort and per page toolbar', feature: true, js: true do
   describe 'View dropdown' do
     before do
       visit root_path

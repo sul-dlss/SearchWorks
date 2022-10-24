@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Responsive search bar", js: true, feature: true do
+describe "Responsive search bar", feature: true, js: true do
   describe " - desktop view (> 980px)" do
     it "displays the search form" do
       visit root_path
@@ -13,7 +13,7 @@ describe "Responsive search bar", js: true, feature: true do
     end
   end
 
-  describe " - tablet view (768px - 980px) - ", responsive: true, page_width: 800 do
+  describe " - tablet view (768px - 980px) - ", page_width: 800, responsive: true do
     it "displays the search form" do
       visit root_path
       first("#q").set ''
@@ -25,7 +25,7 @@ describe "Responsive search bar", js: true, feature: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
+  describe " - mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
     it "displays the search form" do
       visit root_path
       first("#q").set ''

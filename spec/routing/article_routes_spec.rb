@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe 'Article Routing', type: :routing do
+RSpec.describe 'Article Routing' do
   it '#index' do
     expect(get('/articles')).to route_to('articles#index')
   end

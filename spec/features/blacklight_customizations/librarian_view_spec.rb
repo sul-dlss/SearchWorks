@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Librarian View Customization", type: :feature, js: true do
+describe "Librarian View Customization", js: true do
   let(:embed) { double('embed-response') }
 
   it "MARC records should display" do
