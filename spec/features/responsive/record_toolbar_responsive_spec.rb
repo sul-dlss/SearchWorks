@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Record toolbar", js: true, feature: true do
+describe "Record toolbar", feature: true, js: true do
   before do
     stub_oclc_response('', for: '12345')
   end
@@ -49,7 +49,7 @@ describe "Record toolbar", js: true, feature: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - ", responsive: true, page_width: 700 do
+  describe " - mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
     before { visit search_catalog_path f: { format: ['Book'] } }
 
     context 'a citable item' do

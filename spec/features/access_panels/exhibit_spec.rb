@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'Exhibit Access Panel', type: :feaature, js: true do
+RSpec.describe 'Exhibit Access Panel', js: true do
   let(:content) { [] }
   before do
     expect(Settings.EXHIBITS_ACCESS_PANEL).to receive(:exhibits_host).and_return(

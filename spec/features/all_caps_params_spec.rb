@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Search parameters in all caps", type: :feature do
+describe "Search parameters in all caps" do
   it "should be downcased" do
     visit root_path
     fill_in 'q', with: "HELLO WORLD"

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Emailing Records", type: :feature, js: true do
+describe "Emailing Records", js: true do
   context 'when a user is not logged in' do
     it 'the are provided a reCAPTCHA challenge' do
       visit solr_document_path('14')

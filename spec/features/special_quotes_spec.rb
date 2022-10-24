@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "Special Quotes", type: :feature do
+describe "Special Quotes" do
   it "should replace special quotes in the query" do
     visit root_path
     fill_in 'q', with: '『stuff』'

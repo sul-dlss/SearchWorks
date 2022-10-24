@@ -14,7 +14,7 @@ describe "Responsive Home Page", feature: true, js: true do
       end
     end
 
-    it 'should collapse facets on small screens', responsive: true, page_width: 700 do
+    it 'should collapse facets on small screens', page_width: 700, responsive: true do
       visit root_path
 
       within(".blacklight-access_facet") do

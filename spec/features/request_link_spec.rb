@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Request Links', type: :feature do
+describe 'Request Links' do
   describe 'Hoover links' do
     context 'in search results' do
       it 'renders a link to the detail/record view instead of holdings' do
