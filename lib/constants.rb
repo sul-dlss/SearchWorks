@@ -358,6 +358,7 @@ module Constants
     'HAS-RR' => 'Lane Reading Room: Ready reference',
     'HAS-SU' => 'Lane Reading Room: Stanford history',
     'HASRC' => 'Lane Reading Room: Reference',
+    'HH-FOYER' => 'Hohbach Hall: Foyer bookshelf',
     'HMS-PAGE' => 'In transit to main campus',
     'HMS-RETURN' => 'In transit to Hopkins',
     'HOLDS' => 'Ask at circulation desk',
