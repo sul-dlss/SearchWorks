@@ -4,6 +4,7 @@
 ###
 class MarcField
   include ActionView::Helpers::OutputSafetyHelper
+  include ActionView::Helpers::SanitizeHelper
 
   attr_reader :document, :tags
 
@@ -72,7 +73,7 @@ class MarcField
   def display_value(field, subfields)
     return unless subfields.present?
 
-    safe_join subfields.map { |subfield| subfield_value(field, subfield) }, subfield_delimiter
+    safe_join subfields.map { |subfield| subfield_value(field, subfield) }.map { |v| sanitize_marc_value(v) }, subfield_delimiter
   end
 
   def subfield_value(_field, subfield)
@@ -82,5 +83,11 @@ class MarcField
     else
       subfield.value
     end
+  end
+
+  def sanitize_marc_value(value)
+    return value if value.html_safe?
+
+    sanitize(value.gsub(/</, '&lt;').gsub(/>/, '&gt;'))
   end
 end

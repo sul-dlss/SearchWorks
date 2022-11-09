@@ -60,6 +60,24 @@ describe MarcField do
         expect(subject.values[7]).to eq '300 Unmatched Vernacular'
       end
     end
+
+    context 'when it contains unsafe characters' do
+      let(:tags) { %w(245) }
+      let(:marc) do
+        <<-XML
+          <record>
+            <datafield tag="245" ind1="1" ind2=" ">
+              <subfield code="a">Some value with 'quotes' and &lt;brackets&gt;</subfield>
+            </datafield>
+          </record>
+        XML
+      end
+
+      it 'sanitizes the values' do
+        expect(subject.values).to eq ["Some value with 'quotes' and &lt;brackets&gt;"]
+        expect(subject.values.first).to be_html_safe
+      end
+    end
   end
 
   describe '#to_partial_path' do
