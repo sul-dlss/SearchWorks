@@ -1,7 +1,6 @@
 MAX_RESULTS: 3
 
 LIBRARY_WEBSITE_HOME_URL: 'https://library.stanford.edu'
-YEWNO_HOME_URL: 'https://stanford.idm.oclc.org/login?url=https://discover.yewno.com'
 GLOBAL_ALERT: <%= false %>
 ENABLED_SEARCHERS:
   - catalog

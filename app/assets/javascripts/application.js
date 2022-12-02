@@ -15,5 +15,4 @@
 //= require custom_quick_search
 //= require popper
 //= require bootstrap-sprockets
-//= require yewno
 //= require toggleableResults
