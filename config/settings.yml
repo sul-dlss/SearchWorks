@@ -8,6 +8,7 @@ ENABLED_SEARCHERS:
   - lib_guides
   - library_website_api
   - exhibits
+  - earthworks
 CATALOG:
   API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
   QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
@@ -34,6 +35,10 @@ EXHIBITS:
 LIBRARY_WEBSITE:
   API_URL: 'https://library.stanford.edu/bento?keys=%{q}'
   QUERY_URL: 'https://library.stanford.edu/search/website?search=%{q}'
+EARTHWORKS:
+  API_URL: 'https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json'
+  QUERY_URL: 'https://earthworks.stanford.edu?q=%{q}'
+  HOME_URL: 'https://earthworks.stanford.edu'
 quick_search:
   http_timeout: 1.5
   xhr_http_timeout: 15

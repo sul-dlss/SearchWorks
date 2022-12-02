@@ -54,3 +54,13 @@ en:
     no_results_link: "http://library.stanford.edu/search/website"
   search_form:
     placeholder: "catalog + articles + website + more"
+  earthworks_search:
+    display_name: EarthWorks
+    short_display_name: EarthWorks
+    sub_heading_html: Geospatial content, including GIS datasets, digitized maps, and census data.
+    micro_display_name: earthworks
+    search_form_placeholder: "Search EarthWorks catalog"
+    module_callout: "Search EarthWorks catalog"
+    error_service_mesasge: "searching EarthWorks catalog"
+    no_results_service_message: "a different search"
+    no_results_link: "https://earthworks.stanford.edu/"
