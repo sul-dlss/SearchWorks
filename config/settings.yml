@@ -38,6 +38,7 @@ LIBRARY_WEBSITE:
 EARTHWORKS:
   API_URL: 'https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json'
   QUERY_URL: 'https://earthworks.stanford.edu?q=%{q}'
+  FETCH_URL: 'https://earthworks.stanford.edu/catalog/%{id}'
   HOME_URL: 'https://earthworks.stanford.edu'
 quick_search:
   http_timeout: 1.5
