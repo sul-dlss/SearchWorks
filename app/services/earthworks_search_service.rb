@@ -20,7 +20,7 @@ class EarthworksSearchService < AbstractSearchService
       solr_docs.collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc.dig('attributes', 'title')
-        result.link = format(Settings.CATALOG.FETCH_URL.to_s, id: doc['id'])
+        result.link = format(Settings.EARTHWORKS.FETCH_URL.to_s, id: doc['id'])
         result.author = doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value')
         result.imprint = doc.dig('attributes', 'solr_year_i', 'attributes', 'value')
         result.id = doc['id']
