@@ -35,10 +35,6 @@ describe 'Jump links', js: true do
           'a[href$="#article"]',
           text: /Articles+/
         )
-        expect(page).to have_css(
-          'a[href$="#yewno"]',
-          text: /Yewno/
-        )
       end
     end
   end

@@ -205,7 +205,6 @@ RSpec/AnyInstance:
     - 'spec/features/jumplinks_spec.rb'
     - 'spec/features/lib_guides_spec.rb'
     - 'spec/features/searcher_anchors_spec.rb'
-    - 'spec/features/yewno_spec.rb'
     - 'spec/services/catalog_search_service_spec.rb'
 
 # Offense count: 10
@@ -217,7 +216,6 @@ RSpec/Capybara/FeatureMethods:
     - 'spec/features/homepage_spec.rb'
     - 'spec/features/jumplinks_spec.rb'
     - 'spec/features/lib_guides_spec.rb'
-    - 'spec/features/yewno_spec.rb'
 
 # Offense count: 2
 RSpec/Capybara/VisibilityMatcher:

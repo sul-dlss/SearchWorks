@@ -53,12 +53,14 @@
     </div>
   <% end %>
 
-  <div class='card'>
-    <%= image_tag 'yewno.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
-    <div class='card-body'>
-      <h2 class='card-title'><%= link_to 'Yewno', Settings.YEWNO_HOME_URL %></h2>
-      <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('yewno.sub_heading_html') %></p>
+  <% if Settings.ENABLED_SEARCHERS.include?('earthworks') %>
+    <div class='card'>
+      <%= image_tag 'earthworks.jpg', class: 'card-img-top', alt: '', role: 'presentation' %>
+      <div class='card-body'>
+        <h2 class='card-title'><%= link_to 'EarthWorks', Settings.EARTHWORKS.HOME_URL %></h2>
+        <p class='card-text d-none d-sm-block d-md-block d-lg-block d-xl-block'><%= t('earthworks_search.sub_heading_html') %></p>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 <%= render partial: 'shared/more_search_tools' %>
