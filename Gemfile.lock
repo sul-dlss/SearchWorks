@@ -79,7 +79,7 @@ GEM
     bindex (0.8.1)
     bitly (3.0.0)
       oauth2 (>= 0.5.0, < 2.1)
-    blacklight (7.32.0)
+    blacklight (7.33.0)
       deprecation
       globalid
       hashdiff
@@ -167,7 +167,7 @@ GEM
       csl (~> 1.0)
     css_parser (1.12.0)
       addressable
-    date (3.3.1)
+    date (3.3.3)
     debug (1.7.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
@@ -284,7 +284,7 @@ GEM
     hashdiff (1.0.1)
     hashie (5.0.0)
     honeybadger (5.0.2)
-    http (5.1.0)
+    http (5.1.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
@@ -295,8 +295,8 @@ GEM
     httpclient (2.8.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    io-console (0.5.11)
-    irb (1.6.0)
+    io-console (0.6.0)
+    irb (1.6.1)
       reline (>= 0.3.0)
     iso-639 (0.3.6)
     jbuilder (2.11.5)
@@ -388,7 +388,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     net-ssh (7.0.1)
-    newrelic_rpm (8.13.1)
+    newrelic_rpm (8.14.0)
     nio4r (2.5.8)
     nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
@@ -465,7 +465,7 @@ GEM
     recaptcha (5.12.3)
       json
     regexp_parser (2.6.1)
-    reline (0.3.1)
+    reline (0.3.2)
       io-console (~> 0.5)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -486,7 +486,7 @@ GEM
       faraday (>= 0.9, < 3, != 2.0.0)
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.0)
+    rspec-expectations (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-mocks (3.12.1)
@@ -520,7 +520,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
-    rubocop-rspec (2.15.0)
+    rubocop-rspec (2.16.0)
       rubocop (~> 1.33)
     ruby-oembed (0.16.1)
     ruby-progressbar (1.11.0)
