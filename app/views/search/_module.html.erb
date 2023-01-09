@@ -21,7 +21,7 @@
         <% if defined?(searcher.toggleable?) && searcher.toggleable? %>
           <% if searcher.total.to_i > searcher.toggle_threshold.to_i %>
             <button aria-expanded="false" aria-controls="<%= service_name %>-toggleable-results" data-original-text="<%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>" id="<%= service_name %>-results-toggle-button" class="btn btn-cardinal-red">
-              <i class="fa fa-chevron-down"></i> <%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i> <%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>
             </button>
 
             <script type='text/javascript'>
@@ -30,7 +30,7 @@
           <% end %>
 
           <div class="mt-3">
-            <i class="fa fa-external-link"></i> <%= link_to(I18n.t("#{service_name}_search.pass_on_search_link_text", query: searcher.q), searcher.loaded_link) %>
+            <i class="fas fa-external-link" aria-hidden="true"></i> <%= link_to(I18n.t("#{service_name}_search.pass_on_search_link_text", query: searcher.q), searcher.loaded_link) %>
           </div>
         <% end %>
 

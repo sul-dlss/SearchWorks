@@ -1,5 +1,5 @@
 function remove_timedout_spinners(){
-  $('.fa-refresh').not('.icon-5x').remove();
+  $('.fa-sync-alt').remove();
   $('#no-results-trying-again').remove();
 }
 
@@ -19,7 +19,7 @@ var xhr_searches = function(){
       var parent = that.parent('.module-contents');
       var url = that.data('quicksearch-xhr-url');
 
-      parent.append('<div class="trying_again"><i class="fa fa-refresh fa-spin"></i> Just a few more seconds </div>');
+      parent.append('<div class="trying_again"><i class="fas fa-sync-alt fa-spin" aria-hidden="true"></i> Just a few more seconds </div>');
 
       return $.ajax({
         url: url,
@@ -78,7 +78,7 @@ $(document).on('click', '.result-types a', function () {
     $('.result-types-highlight').remove();
 
     // Add the highlight
-    $('#' + hash + ' h2').prepend('<span class="result-types-highlight"><i class="fa fa-angle-double-right highlight"></i>&nbsp;</span>');
+    $('#' + hash + ' h2').prepend('<span class="result-types-highlight"><i class="fa fa-angle-double-right highlight" aria-hidden="true"></i>&nbsp;</span>');
 
     // Fade it away and then remove it.
     $('#' + hash + ' .highlight').delay( 3000 ).animate({backgroundColor: 'transparent'}, 500 );

@@ -14,11 +14,11 @@ function toggleableResults(searcher) {
 
     if (toggleButton.data('opened')) {
       toggleButton.text(' Show fewer');
-      toggleButton.prepend('<i class="fa fa-chevron-up"></i>')
+      toggleButton.prepend('<i class="fas fa-chevron-up" aria-hidden="true"></i>')
       toggleButton.attr('aria-expanded', true);
     } else {
       toggleButton.text(' ' + toggleButton.data('originalText'));
-      toggleButton.prepend('<i class="fa fa-chevron-down"></i>')
+      toggleButton.prepend('<i class="fas fa-chevron-down" aria-hidden="true"></i>')
       toggleButton.attr('aria-expanded', false);
     }
   });
