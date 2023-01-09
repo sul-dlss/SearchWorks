@@ -170,8 +170,6 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    font-awesome-rails (4.7.0.8)
-      railties (>= 3.2, < 8.0)
     global_alerts (0.4.0)
       http
       rails (>= 5.0, < 7.1)
@@ -399,7 +397,6 @@ DEPENDENCIES
   config
   debug
   dlss-capistrano
-  font-awesome-rails
   global_alerts
   honeybadger
   http

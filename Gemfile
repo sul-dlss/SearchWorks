@@ -24,7 +24,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'bootstrap', '>= 4.3.1', '< 5'
 gem 'autoprefixer-rails'
-gem 'font-awesome-rails'
 
 gem 'config'
 gem 'http'
