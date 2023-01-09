@@ -12,8 +12,6 @@ gem 'sqlite3'
 gem 'mysql2', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sassc-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
@@ -22,7 +20,6 @@ gem 'jbuilder', '~> 2.7'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
-gem 'bootstrap', '>= 4.3.1', '< 5'
 gem 'autoprefixer-rails'
 
 gem 'config'
@@ -69,3 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'okcomputer'
 gem 'global_alerts'
+
+gem "cssbundling-rails", "~> 1.1"

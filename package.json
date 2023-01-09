@@ -1,5 +1,11 @@
 {
   "name": "sul-bento-app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "sass": "^1.57.1"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
 }
