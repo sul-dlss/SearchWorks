@@ -300,11 +300,11 @@ RSpec/SubjectDeclaration: # new in 2.5
   Enabled: true
 RSpec/VerifiedDoubleReference: # new in 2.10.0
   Enabled: true
-RSpec/Capybara/NegationMatcher: # new in 2.14
+Capybara/NegationMatcher: # new in 2.14
   Enabled: true
-RSpec/Capybara/SpecificActions: # new in 2.14
+Capybara/SpecificActions: # new in 2.14
   Enabled: true
-RSpec/Capybara/SpecificFinders: # new in 2.13
+Capybara/SpecificFinders: # new in 2.13
   Enabled: true
 RSpec/FactoryBot/ConsistentParenthesesStyle: # new in 2.14
   Enabled: true
