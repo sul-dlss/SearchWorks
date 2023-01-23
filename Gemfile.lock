@@ -598,8 +598,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -702,7 +700,6 @@ DEPENDENCIES
   sprockets-rails
   sqlite3
   turbolinks (~> 5)
-  uglifier (>= 2.7.2)
   view_component (< 2.75)
   web-console (>= 4.1.0)
   webdrivers
