@@ -8,8 +8,6 @@ gem "sprockets-rails"
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 2.7.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
