@@ -38,7 +38,7 @@ describe MarcLinks do
       end
 
       it 'prefixes the link with the ezproxy URL' do
-        expect(document.marc_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+        expect(document.marc_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
       end
     end
   end

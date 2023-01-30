@@ -28,7 +28,9 @@ module SearchWorks
                        Settings.EZPROXY.SUL
                      end
 
-      "#{ezproxy_host}#{{ url: url }.to_param}" if ezproxy_host
+      # EZproxy requires the use of the `qurl` param instead of `url` when the value is an encoded URL
+      # See: https://help.oclc.org/Library_Management/EZproxy/Troubleshooting/Why_am_I_getting_the_EZproxy_menu_page_when_using_an_encoded_URL_as_the_target_URL
+      "#{ezproxy_host}#{{ qurl: url }.to_param}" if ezproxy_host
     end
 
     PROXY_REGEX = /stanford\.idm\.oclc\.org/
