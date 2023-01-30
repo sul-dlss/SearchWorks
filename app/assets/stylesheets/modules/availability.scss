@@ -70,3 +70,24 @@ table.availability {
     }
   }
 }
+
+.availability-item {
+  border-top: 1px solid $sul-availability-table-cell-border;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &>.callnumber {
+    flex-grow: 1;
+  }
+
+  &>.public-note {
+    order: 2;
+    width: 100%;
+  }
+
+  &>.item-availability {
+    text-align: right;
+  }
+}
