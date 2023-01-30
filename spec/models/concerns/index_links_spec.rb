@@ -152,7 +152,7 @@ describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?url=https%3A%2F%2Fwho.int%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwho.int%2Fwhatever'
         end
       end
 
@@ -167,7 +167,7 @@ describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?auth=shibboleth&url=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?auth=shibboleth&qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
       end
 
@@ -182,7 +182,7 @@ describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
         end
       end
 
@@ -212,7 +212,7 @@ describe IndexLinks do
         end
 
         it 'prefixes the link with the SUL url' do
-          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?url=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
         end
       end
     end
