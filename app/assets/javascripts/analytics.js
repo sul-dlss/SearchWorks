@@ -1,243 +1,284 @@
-// Inspired by and modified from http://railsapps.github.io/rails-google-analytics.html
+// gtag initial setup
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-GoogleAnalytics = (function() {
-  function GoogleAnalytics() {}
 
-  GoogleAnalytics.load = function() {
-    GoogleAnalytics.analyticsId = GoogleAnalytics.getAnalyticsId();
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments);
-      };
+Blacklight.onLoad(function() {
+  // gtag set property and config
+  const config = {}
+  // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
+  //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
+  if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
+    config.debug_mode = true;
+  }  
+  gtag('config', 'G-FH5WNQS9B5', config);
 
-      i[r].l = 1 * new Date;
-
-      a = s.createElement(o);
-      m = s.getElementsByTagName(o)[0];
-
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', GoogleAnalytics.analyticsId, 'auto');
-    ga('set', 'anonymizeIp', true);
-  };
-
-  GoogleAnalytics.trackPageview = function(url) {
-    if (!GoogleAnalytics.isLocalRequest()) {
-      return ga('send', {
-          hitType: 'pageview',
-          page: GoogleAnalytics.getPath()
-        }
-      );
-    }
-  };
-
-  GoogleAnalytics.isLocalRequest = function() {
-    return GoogleAnalytics.documentDomainIncludes("local");
-  };
-
-  GoogleAnalytics.documentDomainIncludes = function(str) {
-    return document.domain.indexOf(str) !== -1;
-  };
-
-  GoogleAnalytics.getAnalyticsId = function() {
-    return $("[data-analytics-id]").data('analytics-id');
-  };
-
-  // Remove the protocol and the host and only return the path with any params
-  GoogleAnalytics.getPath = function() {
-    return location.href
-             .replace(location.protocol + '//' + location.host, '');
-  };
-
-  return GoogleAnalytics;
-
-})();
-
-Blacklight.onLoad(function(){
-  GoogleAnalytics.load();
-  if (GoogleAnalytics.analyticsId){
-    GoogleAnalytics.trackPageview();
-  }
-
-  $('.iiif-dnd').on('click', function(e) {
-    var manifest = $(e.currentTarget).data().manifest;
-    ga('send', 'event', 'IIIF DnD', 'clicked', manifest, {
-      'transport': 'beacon',
-    });
-  });
-
-  $('.iiif-dnd').on('dragstart', function(e) {
-    var manifest = $(e.currentTarget).data().manifest;
-    ga('send', 'event', 'IIIF DnD', 'dragged', manifest, {
-      'transport': 'beacon'
-    });
-  });
+  // Track engagement with IIIF icon
+  document.querySelectorAll('.iiif-dnd').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'IIIF DnD',
+        action: 'SW/clicked',
+        label: (e.currentTarget).data().manifest
+      })
+    })
+  })
+ 
+  document.querySelectorAll('.iiif-dnd').forEach(function(el) {
+    el.addEventListener('dragstart', function(e) {
+      sendAnalyticsEvent({
+        category: 'IIIF DnD',
+        action: 'SW/dragged',
+        label: (e.currentTarget).data().manifest
+      })
+    })
+  })
 
   // Track external link clicks
-  $('a[href]:not([href^="/"],[href^="#"],[data-behavior="requests-modal"],[href=""])').on('click', function(e) {
-    ga('send', 'event', 'External link', 'clicked', this.href, {
-      'transport': 'beacon'
-    });
-    if ($('.zero-results').length > 0) {
-      ga('send', 'event', 'Zero results', 'clicked', this.href, {
-        'transport': 'beacon'
-      });
-    }
-  });
+  document.querySelectorAll('a[href]:not([href^="/"],[href^="#"],[data-behavior="requests-modal"],[href=""])').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'External link',
+        action: 'SW/clicked',
+        label: this.href
+      })
+    })
+  })
 
-  $('a[data-track="zero-results-remove-limit"]').on('click', function(e) {
-    ga('send', 'event', 'Zero results', 'clicked-remove-limit', this.href, {
-      'transport': 'beacon'
-    });
-  });
+  // Track actions when search returns zero results
+  document.querySelectorAll('a[data-track="zero-results-remove-limit"]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Zero results',
+        action: 'SW/clicked-remove-limit',
+        label: this.href
+      })
+    })
+  })
 
-  $('a[data-track="zero-results-search-all-fields"]').on('click', function(e) {
-    ga('send', 'event', 'Zero results', 'clicked-search-all-fields', this.href, {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('a[data-track="zero-results-search-all-fields"]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Zero results',
+        action: 'SW/clicked-search-all-fields',
+        label: this.href
+      })
+    })
+  })
 
   // When an alternate catalog is loaded, track those link clicks
-  $('[data-alternate-catalog]').on('alternateResultsLoaded', function(event) {
-    $(event.currentTarget).find('a').on('click', function(e) {
-      var eventCategory = $('.zero-results').length > 0 ? 'Zero results' : 'Alternate Results';
-      ga('send', 'event', eventCategory, 'clicked-alternate-results', this.href, {
-        'transport': 'beacon'
-      });
-    });
-  });
+  document.querySelectorAll('[data-alternate-catalog]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: document.querySelector(".zero-results") ? 'Zero results' : 'Alternate Results',
+        action: 'SW/clicked-alternate-results',
+        label: this.href
+      })
+    })
+  })
 
-  // Just track when a zero results page gets loaded
-  $('.zero-results').each(function() {
-    ga('send', 'event', 'Zero results', 'loaded', this.href, {
-      'transport': 'beacon'
-    });
+  // Just track when a zero results page gets loaded, no need for event handler
+  document.querySelectorAll('.zero-results').forEach(function(el) {
+    sendAnalyticsEvent({
+      category: 'Zero results',
+      action: 'SW/loaded'
+    })
   });
-
+  
   // Featured resources on home page
-  $('.catalog-home-page .features a').on('click', function(e) {
-    ga('send', 'event', 'Featured resource', 'clicked', this.href, {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('.catalog-home-page .features a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Featured resource',
+        action: 'SW/clicked',
+        label: this.href
+      })
+    })
+  })
 
   // Side mini-nav
-  $('.side-nav-minimap button').on('click', function(e) {
-    ga('send', 'event', 'Side mini nav', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('.side-nav-minimap button').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Side mini nav',
+        action: 'SW/clicked-side-nav',
+        label: getText(e)
+      })
+    })
+  })
 
-  // Facet collapse - expand events
+  // Facet collapse and expand events
+  // I tried to move this file off Jquery but keeping these facet events requires it
+  // Bootstrap 3 and 4 event detection depends on Jquery
+  // Bootstrap 5 allows for native .addEventListener detection, but only if Jquery is not present at all
+  // See https://getbootstrap.com/docs/5.0/getting-started/javascript/ heading "Jquery events"
+  // Once this application is on Bootstrap 5, and Jquery is removed, we can change this Bootstrap event detection to pure JS
   $('.facet-content').on('hide.bs.collapse', function(e) {
-    ga('send', 'event', 'Facet', 'closed', $(e.currentTarget).parent().find('h3').text().trim(), {
-      'transport': 'beacon'
-    });
+    sendAnalyticsEvent({
+      category: 'Facet',
+      action: 'SW/closed-facet',
+      label: getText(e)
+    })
   })
   $('.facet-content').on('show.bs.collapse', function(e) {
-    ga('send', 'event', 'Facet', 'expanded', $(e.currentTarget).parent().find('h3').text().trim(), {
-      'transport': 'beacon'
-    });
-  });
+    sendAnalyticsEvent({
+      category: 'Facet',
+      action: 'SW/expanded-facet',
+      label: getText(e)
+    })
+  })
 
   // Cite link
-  $('#citeLink').on('click', function(e) {
-    ga('send', 'event', 'Cite', 'citation tool opened', {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('#citeLink').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Cite',
+        action: 'SW/citation tool opened'
+      })
+    })
+  })
 
   // Stacks Map Tool
-  $('.stackmap-find-it').on('click', function(e) {
-    ga('send', 'event', 'Stacks Map', 'Stacks Map Opened (from find-it button)', {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('.stackmap-find-i').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Stacks Map',
+        action: 'SW/Stacks Map Opened (from find-it button)'
+      })
+    })
+  })
 
-  $('.location-name a').on('click', function(e) {
-    ga('send', 'event', 'Stacks Map', 'Stacks Map Opened (from location link)', {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('.location-name a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Stacks Map',
+        action: 'SW/Stacks Map Opened (from location link)'
+      })
+    })
+  })
 
-  $('.show-description a').on('click', function(e) {
-    ga('send', 'event', 'Stacks Map', 'Text Description Opened', {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('.show-description a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Stacks Map',
+        action: 'SW/Text Description Opened'
+      })
+    })
+  })
+  
+  // // Browse-nearby
+  document.querySelectorAll('.embedded-items .gallery-document a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Browse nearby',
+        action: 'SW/recommendation clicked'
+      })
+    })
+  })
 
-  // Browse-nearby
-  $('.index_title a').on('click', function(e) {
-    ga('send', 'event', 'Browse-nearby', 'recommendation clicked', {
-      'transport': 'beacon'
-    });
-  });
-
-  // source: http://stackoverflow.com/questions/14035083/jquery-bind-event-on-scroll-stops
-  // A.K.A. a debounce function.
-  jQuery.fn.scrollStop = function (callback) {
-    $(this).scroll(function () {
-      var self = this,
-        $this = $(self);
-
-      if ($this.data('scrollTimeout')) {
-        clearTimeout($this.data('scrollTimeout'));
+  // embedded-call-number-browse.js has code that scrolls to the currently selected item in the gallery on load
+  // We want to ignore this initial scroll and only record user actions
+  let initial_scroll_complete = false
+  const gallery_el =  document.querySelector('.embedded-items .gallery')
+  document.querySelectorAll('.embedded-items .gallery').forEach(function(el) {
+    el.addEventListener('scroll', function(e) {
+      if (initial_scroll_complete) {
+        sendAnalyticsEvent({
+          category: 'Browse nearby',
+          action: 'SW/scrolled'
+        })
       }
-
-      $this.data('scrollTimeout', setTimeout(callback, 250, self));
-    });
-  };
-
-  $('.embedded-items .gallery').scrollStop(function(e) {
-    ga('send', 'event', 'Browse-nearby', 'scrolled', { 'transport': 'beacon' });
-  });
-
+      setTimeout(() => {
+        initial_scroll_complete = true
+      }, 1000);
+    })
+  })
+  
   // Select / Select all
   // Note: this is counted extra when select-all or unselect-all is also used
-  $('input.toggle_bookmark').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'select', GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
-  $('span.unselect-all').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'unselect-all', GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
-  $('span.select-all').on('click', function(e) {
-    ga('send', 'event', 'Selection', 'select-all', GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('input.toggle_bookmark').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Selection',
+        action: 'SW/select'
+      })
+    })
+  })
+
+  document.querySelectorAll('span.unselect-all').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Selection',
+        action: 'SW/unselect-all'
+      })
+    })
+  })
+
+  document.querySelectorAll('span.select-all').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Selection',
+        action: 'SW/select-all'
+      })
+    })
+  })
 
   // Accordion selection / collapse
-  $('button[data-accordion-section-target]').on('click', function(e) {
-    ga('send', 'event', 'Accordion selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('button[data-accordion-section-target]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Accordion selection',
+        action: 'SW/click',
+        label: getText(e)
+      })
+    })
+  })
 
   // View type dropdown
-  $('#view-type-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'View selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('#view-type-dropdown a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'View selection',
+        action: 'SW/click',
+        label: getText(e)
+      })
+    })
+  })
 
   // Sort by dropdown
-  $('#sort-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'Sort selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('#sort-dropdown a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Sort selection',
+        action: 'SW/click',
+        label: getText(e)
+      })
+    })
+  })
 
   // Per page dropdown
-  $('#per_page-dropdown a').on('click', function(e) {
-    ga('send', 'event', 'Per page selection', $(e.currentTarget).text().trim(), GoogleAnalytics.getPath(), {
-      'transport': 'beacon'
-    });
-  });
+  document.querySelectorAll('#per_page-dropdown a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      sendAnalyticsEvent({
+        category: 'Per page selection',
+        action: 'SW/click',
+        label: getText(e)
+      })
+    })
+  })
 });
+
+// Trim the innerHTML text and return
+function getText(event) {
+  return event.currentTarget.innerText.trim()
+}
+
+// Send event in required GA4 format to Google
+function sendAnalyticsEvent({ action, category, label, value }) {
+  window.gtag && window.gtag('event', action, {
+    event_category: category,
+    event_label: label,
+    event_value: value
+  });  
+}
