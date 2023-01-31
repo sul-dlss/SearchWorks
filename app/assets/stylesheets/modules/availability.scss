@@ -39,3 +39,34 @@
     color: $sul-availability-notice-color;
   }
 }
+
+table.availability {
+  thead {
+
+    tr,
+    tr.active {
+      th {
+        border-bottom: none;
+        background-color: $sul-availability-table-head-background;
+      }
+    }
+  }
+
+  td.indent-callnumber {
+    padding-left: 15px;
+  }
+
+  thead,
+  tbody,
+  tfoot {
+    tr {
+      th {
+        border-top: 1px solid $sul-availability-table-cell-border;
+      }
+
+      th.location-info {
+        font-weight: normal;
+      }
+    }
+  }
+}
