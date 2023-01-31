@@ -49,10 +49,6 @@ table.availability {
     }
   }
 
-  td.indent-callnumber {
-    padding-left: 15px;
-  }
-
   thead,
   tbody,
   tfoot {
@@ -64,6 +60,14 @@ table.availability {
       th.location-info {
         font-weight: normal;
       }
+    }
+  }
+}
+
+.results-metadata-section {
+  .availability {
+    td:first-child {
+      padding-left: 15px !important;
     }
   }
 }

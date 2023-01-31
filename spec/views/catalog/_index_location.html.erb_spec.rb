@@ -110,9 +110,6 @@ describe "catalog/_index_location" do
       expect(rendered).to have_css('tbody tr td', text: "ABC 123")
       expect(rendered).to have_css('tbody tr td', text: "ABC 456")
     end
-    it "should add an class for indentation" do
-      expect(rendered).to have_css('tbody tr td.indent-callnumber', count: 2)
-    end
   end
 
   describe "bound with" do
