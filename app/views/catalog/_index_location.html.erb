@@ -8,76 +8,78 @@
           <th scope='col' class='col-xs-6'>Status</th>
         </tr>
       </thead>
-      <tbody data-long-list data-list-type="location">
-        <% if document.respond_to?(:to_marc) && document.bound_with? %>
+      <% if document.respond_to?(:to_marc) && document.bound_with? %>
+        <tbody class="bound-with-note">
           <tr>
-            <th scope='col' class=''>
+            <th scope='col'>
               Some records bound together
             </th>
           </tr>
           <tr>
-            <td colspan='2' class='indent-callnumber'>
+            <td colspan='2'>
               <%= link_to('See full record for details', solr_document_path(document)) %>
             </td>
           </tr>
-        <% end %>
-        <% library.locations.select(&:present_on_index?).each do |location| %>
-          <% location_request_link = LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items) %>
+        </tbody>
+      <% end %>
+      <% library.locations.select(&:present_on_index?).each do |location| %>
+        <tbody data-long-list data-list-type="location">
+        <% location_request_link = LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items) %>
+        <tr class="location-info">
+          <th scope="rowgroup" rowspan="0">
+            <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: '' } %>
+            <% if location.mhld.present? %>
+              <br/>
+              <% location.mhld.each do |mhld| %>
+                <% if mhld.public_note.present? %>
+                  <%= mhld.public_note %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </th>
+          <td>
+            <% if location.mhld.present? %>
+              <% location.mhld.each do |mhld| %>
+                <% if mhld.latest_received.present? %>
+                  <span class='note-highlight'>Latest: <%= mhld.latest_received %></span>
+                <% end %>
+              <% end %>
+            <% end %>
+            <%= render location_request_link unless Constants::HOOVER_LIBS.include?(library.code) %>
+          </td>
+        </tr>
+        <% if Constants::HOOVER_LIBS.include?(library.code) %>
           <tr>
-            <th scope='col' class="location-info">
-              <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: '' } %>
-              <% if location.mhld.present? %>
-                <br/>
-                <% location.mhld.each do |mhld| %>
-                  <% if mhld.public_note.present? %>
-                    <%= mhld.public_note %>
-                  <% end %>
-                <% end %>
-              <% end %>
-            </th>
-            <td>
-              <% if location.mhld.present? %>
-                <% location.mhld.each do |mhld| %>
-                  <% if mhld.latest_received.present? %>
-                    <span class='note-highlight'>Latest: <%= mhld.latest_received %></span>
-                  <% end %>
-                <% end %>
-              <% end %>
-              <%= render location_request_link unless Constants::HOOVER_LIBS.include?(library.code) %>
-            </td>
+            <td colspan='2'><%= link_to('See full record for details', solr_document_path(document)) %></td>
           </tr>
-          <% if Constants::HOOVER_LIBS.include?(library.code) %>
+        <% else %>
+          <% location.items.each do |item| %>
             <tr>
-              <td colspan='2' class='indent-callnumber'><%= link_to('See full record for details', solr_document_path(document)) %></td>
-            </tr>
-          <% else %>
-            <% location.items.each do |item| %>
-              <tr>
-                <td class='indent-callnumber'>
-                  <%= item.callnumber %>
-                </td>
-                <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link.render? %>>
+              <td><%= item.callnumber %></td>
+              <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link.render? %>>
+                <span class="availability-icon-wrapper">
                   <i class="availability-icon <%= item.status.availability_class %>"></i>
                   <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable')  %>" class='status-text'>
                     <%= item.status.status_text %>
                   </span>
-                  <span class="current-location">
-                    <% unless item.treat_current_location_as_home_location? %>
-                      <%= item.current_location.name %>
-                    <% end %>
-                  </span>
-                  <% if item.on_reserve? %>
-                    <%= item.loan_period %>
+                </span>
+                <span class="current-location">
+                  <% unless item.treat_current_location_as_home_location? %>
+                    <%= item.current_location.name %>
                   <% end %>
-                  <span class="request-link">
-                    <%= render item.request_link %>
-                  </span>
-                </td>
-              </tr>
-            <% end %>
+                </span>
+                <% if item.on_reserve? %>
+                  <%= item.loan_period %>
+                <% end %>
+                <span class="request-link">
+                  <%= render item.request_link %>
+                </span>
+              </td>
+            </tr>
           <% end %>
         <% end %>
-      </tbody>
+        </tbody>
+      <% end %>
     </table>
   <% end %>
 <% end %>
