@@ -26,6 +26,8 @@ class LocationRequestLinkComponent < ViewComponent::Base
 
     @classes = classes
     @link_params = link_params
+
+    @render = nil
   end
 
   def call
@@ -40,9 +42,10 @@ class LocationRequestLinkComponent < ViewComponent::Base
 
   def render?
     return false unless items.any? && !bound_with?
+    return @render unless @render.nil?
 
-    ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable?) &&
-      !all_in_disabled_current_location?
+    @render = ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable?) &&
+              !all_in_disabled_current_location?
   end
 
   private
