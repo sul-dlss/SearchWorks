@@ -31,6 +31,10 @@ Start the rails app
 
     $ rails s
 
+## Getting data in development
+
+For fixture data, you can run `solr_wrapper` locally as above, and populate sample data using `rake searchworks:fixtures`
+
 ## "Logging in" as a User in development
 
 Given that this app is using shibboleth + devise for login, it can be tricky to get a user context set.  The user itself can be set by starting rails with a `REMOTE_USER` env var set (e.g. `REMOTE_USER=jstanford rails s`).
