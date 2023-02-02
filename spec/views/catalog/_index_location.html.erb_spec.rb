@@ -18,15 +18,15 @@ describe "catalog/_index_location" do
     it "should have a caption" do
       expect(rendered).to have_css('caption.sr-only', text: 'Status of items at Green Library')
     end
-    describe "column scope" do
-      it "should be on the library name" do
+    describe "scope" do
+      it "is col on the library name" do
         expect(rendered).to have_css('th[scope="col"]', text: 'Green Library')
       end
-      it "should be on the status column" do
+      it "is col on the status column" do
         expect(rendered).to have_css('th[scope="col"]', text: 'Status')
       end
-      it "should be on the location name" do
-        expect(rendered).to have_css('th[scope="col"]', text: 'Stacks')
+      it "is rowgroup on the location name" do
+        expect(rendered).to have_css('th[scope="rowgroup"]', text: 'Stacks')
       end
     end
   end
@@ -109,9 +109,6 @@ describe "catalog/_index_location" do
       expect(rendered).to have_css('tbody tr th', text: "Stacks")
       expect(rendered).to have_css('tbody tr td', text: "ABC 123")
       expect(rendered).to have_css('tbody tr td', text: "ABC 456")
-    end
-    it "should add an class for indentation" do
-      expect(rendered).to have_css('tbody tr td.indent-callnumber', count: 2)
     end
   end
 

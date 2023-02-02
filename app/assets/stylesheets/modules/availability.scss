@@ -1,18 +1,52 @@
+.availability {
+  thead {
+
+    tr,
+    tr.active {
+      th {
+        border-bottom: none;
+        background-color: $sul-availability-table-head-background;
+      }
+    }
+  }
+
+  thead,
+  tbody,
+  tfoot {
+    tr {
+      th {
+        border-top: 1px solid $sul-availability-table-cell-border;
+      }
+
+      &.location-info th {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
 .note-highlight {
   padding: 2px 5px;
   background-color: $public-note-yellow;
-  &.bound-with-note {
-    margin-left: 10px;
+}
+
+.panel-library-location {
+  .availability {
+    margin-top: 4px;
+    margin-bottom: 15px;
+  }
+}
+
+.results-metadata-section {
+  .availability {
+    td:first-child {
+      padding-left: 15px !important;
+    }
   }
 }
 
 .availability {
   width: 100%;
-
-  &.record-view {
-    margin-top: 4px;
-    margin-bottom: 15px;
-  }
 
   tr td:first-child {
     width: 60%;
@@ -22,20 +56,42 @@
     padding: 2px 5px 5px 0;
     vertical-align: top;
   }
+}
 
-  .availability-icon-wrapper {
-    white-space: nowrap;
+.availability-icon-wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+}
+
+.status-text {
+  color: $sul-availability-status-text-color;
+  font-size: .937em;
+}
+
+.current-location {
+  color: $sul-availability-notice-color;
+}
+
+.availability-item {
+  border-top: 1px solid $sul-availability-table-cell-border;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &>.callnumber {
+    flex-grow: 1;
   }
 
-  .availability-icon {
-    width: 1.2em;
+  &>.public-note {
+    order: 2;
+    width: 100%;
   }
-  .status-text {
-    color: $sul-availability-status-text-color;
-    font-size: .937em;
-    margin-right: 0.5em;
-  }
-  .current-location {
-    color: $sul-availability-notice-color;
+
+  &>.item-availability {
+    text-align: right;
   }
 }
