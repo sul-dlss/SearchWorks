@@ -745,8 +745,6 @@ www.stanford.universitypressscholarship.com
 www.yale.universitypressscholarship.com
 www.universitypressscholarship.com
 www.anb.org
-customer.janes.com
-janes.ihs.com
 ccd.chemnetbase.com
 dccc.chemnetbase.com
 dfc.chemnetbase.com
