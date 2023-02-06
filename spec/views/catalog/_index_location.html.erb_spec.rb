@@ -25,8 +25,8 @@ describe "catalog/_index_location" do
       it "is col on the status column" do
         expect(rendered).to have_css('th[scope="col"]', text: 'Status')
       end
-      it "is rowgroup on the location name" do
-        expect(rendered).to have_css('th[scope="rowgroup"]', text: 'Stacks')
+      it "is col on the location name" do
+        expect(rendered).to have_css('th[scope="col"]', text: 'Stacks')
       end
     end
   end
