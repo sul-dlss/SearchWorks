@@ -1536,3 +1536,6 @@ literarymanuscriptsberg.amdigital.co.uk
 docs.newsbank.com
 www.jjs-online.net
 web.nichigai.jp
+www.cnopendata.com
+scholar.kyobobook.co.kr
+randstatestats.org
