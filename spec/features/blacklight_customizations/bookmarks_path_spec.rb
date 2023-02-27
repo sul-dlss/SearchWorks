@@ -5,7 +5,7 @@ feature "Selections Path" do
     visit bookmarks_path
     expect(page).to have_css('h2', text: '0 catalog items')
     expect(page).to have_css('a', text: '0 articles+ items')
-    expect(page).to have_css("h3", text: "You have no bookmarks")
+    expect(page).to have_css("h3", text: "You have no selections")
   end
 
   scenario "should render some bookmarks and toolbar", js: true do
