@@ -298,7 +298,7 @@ module Constants
     'CPM-HOLDS' => 'At bindery',
     'CROTHERS' => 'Crothers Collection',
     'CURRENTPER' => 'Current periodicals',
-    'CURRICULUM' => 'Curriculum Collection',
+    'CURRICULUM' => 'Curriculum at Green',
     'CURRSTOR' => 'Ask at circulation desk',
     'DSPLAY-1ST' => '1st floor display case',
     'DSPLAY-2ND' => '2nd floor display case',
