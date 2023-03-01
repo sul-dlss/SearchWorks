@@ -1541,3 +1541,4 @@ scholar.kyobobook.co.kr
 randstatestats.org
 data.cnki.net
 www.balkaninsight.com
+www.asmedigitalcollection.asme.org
