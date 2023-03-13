@@ -20,7 +20,7 @@ describe MarcExtractor do
 
     it 'yields the (non-excluded) subfields' do
       _marc_field, subfields = extracted_data.first
-      expect(subfields.map(&:code)).to match_array ['a', 'e']
+      expect(subfields.map(&:code)).to contain_exactly('a', 'e')
       expect(subfields.map(&:code)).not_to include '='
     end
   end
