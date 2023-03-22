@@ -16,18 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     
     <!-- Google tag (gtag.js) --> 
-    <meta name="analytics_debug" value="<%= ENV.fetch('ANALYTICS_DEBUG', 1) %>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0K34LTNE"></script> 
     <script> 
-      const debug = document.head.querySelector("meta[name=analytics_debug]").getAttribute("value") === "1";
       window.dataLayer = window.dataLayer || []; 
       function gtag(){dataLayer.push(arguments);} 
       // To turn off debug mode, exclude the parameter altogether (cannot just set to false)
       // See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
-      const args = {}
-      if (debug) {
-        args["debug_mode"] = debug;
-      } 
+      args = <%= Settings.analytics_debug %> ? {"debug_mode":true} : {};
       gtag('js', new Date()); 
       gtag('config', 'G-4H0K34LTNE', args); 
     </script>

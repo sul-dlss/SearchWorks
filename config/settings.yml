@@ -44,3 +44,4 @@ quick_search:
   http_timeout: 1.5
   xhr_http_timeout: 15
   doi_loaded_link: "http://doi.org/"
+analytics_debug: true
