@@ -37,4 +37,7 @@ if Settings.THROTTLE_TRAFFIC
 
     [429, headers, ["Throttled\n"]]
   end
+
+  # Disable throttling for Stanford-local users
+  Rack::Attack.safelist_ip("171.64.0.0/14")
 end
