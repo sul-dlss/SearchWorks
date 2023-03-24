@@ -442,7 +442,6 @@ www.plantphysiol.org
 www.cuprimedia.com
 www.oparsbooks.com
 www.uia.org
-www.chorusamerica.org
 www.british-history.ac.uk
 spiedigitallibrary.org
 www.portlandpress.com
@@ -1543,3 +1542,4 @@ data.cnki.net
 www.balkaninsight.com
 www.asmedigitalcollection.asme.org
 www.interactionofcolor.com
+fanyun.dhcdb.com.tw
