@@ -39,8 +39,8 @@
           $googleBooks.before($more);
         }else{
           if ($list.is('tbody')) {
-            var tfoot = $('<tfoot><tr><td></td></tr></tfoot>').insertAfter($list);
-            tfoot.find('td').append($more);
+            var tbody = $('<tbody><tr><td></td></tr></tbody>').insertAfter($list);
+            tbody.find('td').append($more);
           } else {
             $list.append($more);
           }
