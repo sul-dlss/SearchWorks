@@ -39,7 +39,7 @@
           $googleBooks.before($more);
         }else{
           if ($list.is('tbody')) {
-            var tfoot = $('<tfoot><tr><td></td></tr></tfoot>').insertAfter($list);
+            var tfoot = $('<tbody><tr><td></td></tr></tbody>').insertAfter($list);
             tfoot.find('td').append($more);
           } else {
             $list.append($more);
