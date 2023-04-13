@@ -179,6 +179,8 @@ pageable_locations:
   - LOCKED-STK
   - ON-ORDER
   HOPKINS:
+  - CHILDRENYA
+  - GRAPHICNOV
   - MEDIA
   - OVERSIZED
   - POPSCI
@@ -186,7 +188,6 @@ pageable_locations:
   - SHELBYSER
   - SHELBYTITL
   - STACKS
-  - THESIS
   LAW:
   - BASEMENT
   - FOLIO-BAS
