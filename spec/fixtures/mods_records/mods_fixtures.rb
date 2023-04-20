@@ -101,6 +101,7 @@ module ModsFixtures
         <targetAudience displayLabel="Who?">Cat loverz</targetAudience>
         <note>Pick up milk</note>
         <note displayLabel="Notez">Pick up milkz</note>
+        <note type="preferred citation">Qu, J., Han, X., Sakamoto, S., Jia, C., Liu, J., Li, H., Guan, D., Zeng, Y., Schüler, M., Kirchmann, P., Moritz, B., Hussain, Z., Devereaux, T., Shen, Z., and Sobota, J. (2023). Data for "Reversal of spin-polarization near the Fermi level of the Rashba semiconductor BiTeCl". Stanford Digital Repository. Available at https://purl.stanford.edu/cb936xf9075. https://doi.org/10.25740/cb936xf9075.</note>
         <relatedItem>
           <titleInfo>
             <title>The collection of everything</title>
