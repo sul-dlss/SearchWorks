@@ -18,6 +18,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
+    - name: Install JS dependencies
+      run: yarn install --frozen-lockfile
     - uses: actions/cache@v3
       with:
         path: vendor/bundle

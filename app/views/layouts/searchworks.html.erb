@@ -21,15 +21,16 @@
       Honeybadger.configure({
         apiKey: '<%= Honeybadger.config.get(:api_key) %>',
         environment: '<%= Honeybadger.config.get(:env) %>',
-        debug: false,
-        onerror: true,
-        ignorePatterns: [
+        revision: '<%= Settings.REVISION %>'
+      });
+      const ignorePatterns = [
           /reCAPTCHA placeholder element must be empty/i,
           /Undefined variable: MutationObserver/i, // Seems to only come from Opera Mini. Not in our codebase.
           /Blocked a frame with origin "https:\/\/\w+\.stanford.edu"/i // We don't need to know that this happens
-        ],
-        revision: '<%= Settings.REVISION %>'
-      });
+      ]
+      Honeybadger.beforeNotify(function(notice) {
+        if (ignorePatterns.some((p) => p.test(notice.message))) { return false; }
+      }); 
     </script>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>

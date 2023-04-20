@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@honeybadger-io/js": "^5.3.0"
+  }
+}
