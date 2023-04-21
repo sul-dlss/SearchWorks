@@ -35,7 +35,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   private
 
   def page_location
-    @page_location ||= SearchWorks::PageLocation.new(blacklight_params)
+    @page_location ||= SearchWorks::PageLocation.new(search_state)
   end
 
   def on_home_page?

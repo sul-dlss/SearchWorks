@@ -13,7 +13,7 @@ module MastheadHelper
   end
 
   def page_location
-    SearchWorks::PageLocation.new(params)
+    SearchWorks::PageLocation.new(search_state)
   end
 
   def facets_prefix_options

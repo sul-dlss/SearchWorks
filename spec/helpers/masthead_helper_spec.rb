@@ -3,15 +3,17 @@ require 'page_location'
 
 describe MastheadHelper do
   describe "#render_masthead_partial" do
-    let(:page_location) { SearchWorks::PageLocation.new }
+    let(:page_location) { SearchWorks::PageLocation.new(search_state) }
+    let(:search_state) { instance_double(Blacklight::SearchState) }
 
     before { allow(helper).to receive(:page_location).and_return(page_location) }
 
-    it "should render partials that exist" do
+    it "renders partials that exist" do
       allow(page_location).to receive(:access_point).and_return("databases")
       expect(helper).to receive(:render).with("catalog/mastheads/databases", {}).and_return('databases-partial')
       expect(render_masthead_partial).to eq "databases-partial"
     end
+
     it "is empty for access points that don't have mastheads" do
       allow(page_location).to receive(:access_point).and_return("not_an_access_point")
       expect(render_masthead_partial).to eq ''
@@ -98,7 +100,11 @@ describe MastheadHelper do
   end
 
   describe "#page_location" do
-    it "should be a SearchWorks::PageLocation" do
+    before do
+      allow(view).to receive(:search_state).and_return(instance_double(Blacklight::SearchState))
+    end
+
+    it "returns a SearchWorks::PageLocation" do
       expect(helper.page_location).to be_a SearchWorks::PageLocation
     end
   end
