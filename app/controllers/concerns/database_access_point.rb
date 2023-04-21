@@ -8,7 +8,7 @@ module DatabaseAccessPoint
   end
 
   def add_database_topic_facet
-    if params[:action] == "facet" || SearchWorks::PageLocation.new(params).databases?
+    if action_name == "facet" || SearchWorks::PageLocation.new(search_state).databases?
       database_facet = blacklight_config.facet_fields["db_az_subject"]
       database_facet.show = true
       database_facet.if = true

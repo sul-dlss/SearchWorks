@@ -1,11 +1,13 @@
 module SearchWorks
   class PageLocation
-    def initialize(params = {})
-      @params = params
+    def initialize(search_state)
+      @search_state = search_state
     end
 
     def access_point
-      return unless @params[:f] && @params[:controller] == 'catalog' && @params[:action] == 'index'
+      return unless filters.present? &&
+                    @search_state.controller.controller_name == 'catalog' &&
+                    @search_state.controller.action_name == 'index'
 
       @access_point ||= case
                         when format_includes_databases?
@@ -51,40 +53,43 @@ module SearchWorks
 
     private
 
+    delegate :filter, :filters, to: :@search_state
+
     def format_includes_databases?
-      (@params[:f][:format] || @params[:f][:format_main_ssim])&.include?('Database')
+      filter(:format_main_ssim).include?('Database') ||
+        filter(:format).include?('Database')
     end
 
     def course_reserve_parameters?
-      @params[:f][:course].present? && @params[:f][:instructor].present?
+      filter(:course).any? && filter(:instructor).any?
     end
 
     def collection_parameters?
-      @params[:f][:collection]&.excluding('sirsi', 'folio').present?
+      filter(:collection).values.excluding('sirsi', 'folio').present?
     end
 
     def digital_collections_parameters?
-      @params[:f][:collection_type]&.include?('Digital Collection')
+      filter(:collection_type).include?('Digital Collection')
     end
 
     def sdr_parameters?
-      @params[:f][:building_facet]&.include?('Stanford Digital Repository')
+      filter(:building_facet).include?('Stanford Digital Repository')
     end
 
     def dissertation_theses_parameters?
-      @params[:f][:genre_ssim]&.include?('Thesis/Dissertation')
+      filter(:genre_ssim).include?('Thesis/Dissertation')
     end
 
     def bookplate_fund_parameters?
-      @params[:f][:fund_facet].present?
+      filter(:fund_facet).any?
     end
 
     def government_documents_parameters?
-      @params[:f][:genre_ssim]&.include?('Government document')
+      filter(:genre_ssim).include?('Government document')
     end
 
     def iiif_resources_parameters?
-      @params[:f][:iiif_resources]&.include?('available')
+      filter(:iiif_resources).include?('available')
     end
   end
 end
