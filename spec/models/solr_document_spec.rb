@@ -138,8 +138,8 @@ describe SolrDocument do
       expect(subject).to be_a EdsDocument
     end
     it 'eds?' do
-      expect(eds.eds?).to eq true
-      expect(non_eds.eds?).to eq false
+      expect(eds.eds?).to be true
+      expect(non_eds.eds?).to be false
     end
   end
 end

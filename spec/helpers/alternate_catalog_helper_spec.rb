@@ -12,20 +12,20 @@ describe AlternateCatalogHelper do
     context 'with q params and non-gallery view' do
       it do
         controller.params[:q] = 'query'
-        expect(helper.show_alternate_catalog?).to eq true
+        expect(helper.show_alternate_catalog?).to be true
       end
     end
 
     context 'no q params' do
       it do
-        expect(helper.show_alternate_catalog?).to eq false
+        expect(helper.show_alternate_catalog?).to be false
       end
     end
 
     context 'gallery view' do
       it do
         controller.params[:view] = 'gallery'
-        expect(helper.show_alternate_catalog?).to eq false
+        expect(helper.show_alternate_catalog?).to be false
       end
     end
   end

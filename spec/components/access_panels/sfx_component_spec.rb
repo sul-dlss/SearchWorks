@@ -8,12 +8,12 @@ describe AccessPanels::SfxComponent do
   describe '#render?' do
     it 'is true when there are links' do
       expect(access_panel).to receive(:sfx_url).and_return(['something'])
-      expect(access_panel.render?).to eq true
+      expect(access_panel.render?).to be true
     end
 
     it 'is fals when there are no links' do
       expect(access_panel).to receive(:sfx_url).and_return(nil)
-      expect(access_panel.render?).to eq false
+      expect(access_panel.render?).to be false
     end
   end
 

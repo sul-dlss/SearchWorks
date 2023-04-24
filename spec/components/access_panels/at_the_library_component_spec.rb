@@ -29,12 +29,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   describe "render?" do
     it "should have a library location present" do
       doc = SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"])
-      expect(described_class.new(document: doc).render?).to eq true
+      expect(described_class.new(document: doc).render?).to be true
     end
 
     it "should not have a library location present" do
       doc = SolrDocument.new(id: '123')
-      expect(described_class.new(document: doc).render?).to eq false
+      expect(described_class.new(document: doc).render?).to be false
     end
   end
 

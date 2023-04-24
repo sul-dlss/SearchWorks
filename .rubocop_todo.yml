@@ -713,24 +713,6 @@ RSpec/AnyInstance:
     - 'spec/support/stub_oclc_response.rb'
     - 'spec/tasks/fixtures_indexer_spec.rb'
 
-# Offense count: 18
-# This cop supports unsafe autocorrection (--autocorrect-all).
-RSpec/BeEq:
-  Exclude:
-    - 'spec/components/access_panels/at_the_library_component_spec.rb'
-    - 'spec/components/access_panels/course_reserves_component_spec.rb'
-    - 'spec/components/access_panels/sfx_component_spec.rb'
-    - 'spec/helpers/alternate_catalog_helper_spec.rb'
-    - 'spec/lib/page_location_spec.rb'
-    - 'spec/models/bookplate_spec.rb'
-    - 'spec/models/solr_document_spec.rb'
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-RSpec/BeEql:
-  Exclude:
-    - 'spec/features/access_panels/course_reserve_spec.rb'
-
 # Offense count: 2
 RSpec/BeforeAfterAll:
   Exclude:
