@@ -148,7 +148,7 @@ module XmlApiHelper
           match_880 = field['6'].split("-")[1].gsub("//r", "")
           if match_original == match_880 and field_original == field_880
             field.each do |sub|
-              if !Constants::EXCLUDE_FIELDS.include?(sub.code)
+              if Constants::EXCLUDE_FIELDS.exclude?(sub.code)
                 return_text << sub.value
               end
             end

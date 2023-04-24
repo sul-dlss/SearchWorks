@@ -1135,15 +1135,6 @@ Rails/LexicallyScopedActionFilter:
     - 'app/controllers/concerns/search_relevancy_logging.rb'
     - 'app/controllers/concerns/stanford_work_facet.rb'
 
-# Offense count: 6
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Rails/NegateInclude:
-  Exclude:
-    - 'app/controllers/concerns/email_validation.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'lib/holdings/item.rb'
-    - 'lib/live_lookup.rb'
-
 # Offense count: 4
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Include.
