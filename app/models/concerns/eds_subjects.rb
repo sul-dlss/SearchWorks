@@ -65,7 +65,7 @@ module EdsSubjects
     end
 
     def self.convert_simple_string_to_xml(subject)
-      return subject if subject =~ /<searchLink/i # already has markup
+      return subject if /<searchLink/i.match?(subject) # already has markup
 
       "<searchLink fieldCode=\"DE\" term=\"#{subject}\">#{subject}</searchLink>"
     end
@@ -85,8 +85,8 @@ module EdsSubjects
         term.label = node.text
         term.fieldCode = node['fieldcode'] || node['fieldCode']
         term.searchTerm = CGI.unescape(node['term'].to_s)
-        if term.searchTerm =~ /\s+/
-          term.searchTerm = "\"#{term.searchTerm}\"" unless term.searchTerm =~ /^"/ # quote if not quoted
+        if /\s+/.match?(term.searchTerm)
+          term.searchTerm = "\"#{term.searchTerm}\"" unless /^"/.match?(term.searchTerm) # quote if not quoted
         else
           term.searchTerm.delete!('"') # no quotes for single words
         end

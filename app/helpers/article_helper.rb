@@ -64,7 +64,7 @@ module ArticleHelper
   def italicize_composed_title(options = {})
     composed_title = options[:value].try(:first).to_s # We only compose the first value
     return if composed_title.blank?
-    return composed_title.html_safe if composed_title =~ /\<\/\w+\>/ # has XML so use as-is
+    return composed_title.html_safe if /\<\/\w+\>/.match?(composed_title) # has XML so use as-is
 
     match = /^([^[:punct:]]+)(.*)$/.match(composed_title)
     return "<i>#{match[1]}</i>#{match[2]}".html_safe if match # italicize first phrase
@@ -147,7 +147,7 @@ module ArticleHelper
     value = value.dup
     label = ''
     RELATOR_TERMS.each do |relator|
-      next unless value =~ /, #{relator}$/i
+      next unless /, #{relator}$/i.match?(value)
 
       label = ", #{relator}"
       value.gsub!(/, #{relator}$/i, '')

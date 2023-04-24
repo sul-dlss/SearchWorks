@@ -660,16 +660,6 @@ Performance/RedundantMerge:
     - 'config/application.rb'
     - 'spec/models/concerns/cjk_query_spec.rb'
 
-# Offense count: 8
-# This cop supports safe autocorrection (--autocorrect).
-Performance/RegexpMatch:
-  Exclude:
-    - 'app/controllers/availability_controller.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/feedback_form_helper.rb'
-    - 'app/models/concerns/eds_links.rb'
-    - 'app/models/concerns/eds_subjects.rb'
-
 # Offense count: 15
 # This cop supports safe autocorrection (--autocorrect).
 Performance/StringIdentifierArgument:

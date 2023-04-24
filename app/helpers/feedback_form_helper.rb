@@ -21,7 +21,7 @@ module FeedbackFormHelper
 
   def refered_from_catalog_show?
     if request.referer.present?
-      if request.referer =~ /(\/catalog\/|\/view\/)/
+      if /(\/catalog\/|\/view\/)/.match?(request.referer)
         true
       else
         false
