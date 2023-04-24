@@ -14,7 +14,7 @@ class ArticleSearchBuilder < Blacklight::SearchBuilder
     eds_params[:range]&.each do |key, field|
       filter = search_state.filter(key)
 
-      filter.values.each do |value|
+      filter.each_value do |value|
         eds_params[:range][key] = { begin: value.first.to_s, end: value.last.to_s }
       end
     end

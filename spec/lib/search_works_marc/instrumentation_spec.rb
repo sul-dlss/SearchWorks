@@ -6,26 +6,26 @@ RSpec.describe Instrumentation do
 
   subject { described_class.new(document) }
 
-  describe 'values' do
-    it 'should return an Hash' do
+  describe '#values' do
+    it 'returns a Hash' do
       expect(subject.values.class).to eq Hash
     end
 
-    it 'should have two values grouped by instrumentation/partial instrumentation' do
+    it 'has two values grouped by instrumentation/partial instrumentation' do
       expect(subject.values.keys.length).to eq 2
-      subject.values.each do |label, _|
+      subject.values.each do |label, _| # rubocop:disable Style/HashEachMethods
         expect(label).to match(/(Instrumentation|Partial instrumentation)/)
       end
     end
 
     it 'grouped values should be an array' do
-      subject.values.each do |_, values|
+      subject.values.each do |_, values| # rubocop:disable Style/HashEachMethods
         expect(values.class).to eq Array
       end
     end
 
     it 'items in values array should have a label/value' do
-      subject.values.each do |_, values|
+      subject.values.each do |_, values| # rubocop:disable Style/HashEachMethods
         values.each do |item|
           expect(item).to have_key(:label)
           expect(item).to have_key(:value)
