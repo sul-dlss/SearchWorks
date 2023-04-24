@@ -168,7 +168,7 @@ describe CatalogController do
 
       it 'should return the appropriate json' do
         get :availability, params: { id: '10', format: 'json' }
-        body = JSON.parse(response.body)
+        body = response.parsed_body
         expect(body['title']).to eq 'Car : a drama of the American workplace'
         expect(body['format']).to eq(['Book'])
         expect(body['online']).to eq([])
