@@ -25,6 +25,6 @@ feature "Course Reserve Access Panel" do
 
   scenario "should have 0 course reservations" do
     visit '/view/3'
-    expect(page.has_no_css?('div.panel-course-reserve')).to eql true
+    expect(page.has_no_css?('div.panel-course-reserve')).to be true
   end
 end
