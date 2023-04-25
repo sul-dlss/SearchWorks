@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe DatabaseAccessPoint do
-  let(:blacklight_config) { CatalogController.blacklight_config }
+  let(:blacklight_config) { CatalogController.blacklight_config.deep_dup }
   let(:search_state) { Blacklight::SearchState.new(params, blacklight_config, other_controller) }
   let(:other_controller) { instance_double(CatalogController, controller_name: 'catalog', action_name: 'index') }
   let(:params) { {} }
