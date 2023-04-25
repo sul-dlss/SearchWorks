@@ -3,7 +3,7 @@ module EmailValidation
 
   def validate_email_params
     case
-    when !%w(full brief).include?(params[:type])
+    when %w(full brief).exclude?(params[:type])
       flash[:error] = I18n.t('blacklight.email.errors.type')
     when params[:to].blank?
       flash[:error] = I18n.t('blacklight.email.errors.to.blank')

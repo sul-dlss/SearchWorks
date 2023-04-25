@@ -192,7 +192,7 @@ class Holdings
       return false if Constants::STACKMAP_SKIPLIST[:global].include?(home_location)
       return true if Constants::STACKMAP_SKIPLIST[library].blank? # no local skiplist registered, so we're done
 
-      !Constants::STACKMAP_SKIPLIST[library].include?(home_location)
+      Constants::STACKMAP_SKIPLIST[library].exclude?(home_location)
     end
 
     def standard_or_zombie_library

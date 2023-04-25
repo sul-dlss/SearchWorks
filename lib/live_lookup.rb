@@ -117,9 +117,9 @@ class LiveLookup
     def valid_due_date?
       due_date_value.present? &&
         due_date_value != 'NEVER' &&
-        !Constants::HIDE_DUE_DATE_LOCS.include?(home_location_code) &&
-        !Constants::HIDE_DUE_DATE_CURRENT_LOCS.include?(current_location_code) &&
-        !HIDE_DUE_DATE_LIBS.include?(library_code)
+        Constants::HIDE_DUE_DATE_LOCS.exclude?(home_location_code) &&
+        Constants::HIDE_DUE_DATE_CURRENT_LOCS.exclude?(current_location_code) &&
+        HIDE_DUE_DATE_LIBS.exclude?(library_code)
     end
   end
 end
