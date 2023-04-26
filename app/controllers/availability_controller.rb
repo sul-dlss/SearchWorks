@@ -7,7 +7,7 @@ class AvailabilityController < ApplicationController
   private
 
   def redirect_bots
-    if request.env['HTTP_USER_AGENT'] =~ /bot|spider|crawl|teoma/
+    if /bot|spider|crawl|teoma/.match?(request.env['HTTP_USER_AGENT'])
       render status: :forbidden, plain: "No bots allowed"
     end
   end
