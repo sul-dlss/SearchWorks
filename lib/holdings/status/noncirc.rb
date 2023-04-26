@@ -18,7 +18,7 @@ class Holdings
       def location_is_noncirc?
         case @item.library
         when 'BUSINESS'
-          Constants::NONCIRC_LOCS.concat(["NEWS-STKS", "MICROFILM"]).include?(@item.home_location)
+          Constants::NONCIRC_LOCS.push("NEWS-STKS", "MICROFILM").include?(@item.home_location)
         else
           Constants::NONCIRC_LOCS.include?(@item.home_location)
         end

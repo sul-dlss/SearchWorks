@@ -19,7 +19,7 @@ describe LibGuidesController do
       get :index, params: { q: 'query terms' }
 
       expect(response).to be_successful
-      response_json = JSON.parse(response.body)
+      response_json = response.parsed_body
       expect(response_json).to eq([
         { 'name' => 'Guide 1', 'url' => 'https://example.com/1' },
         { 'name' => 'Guide 2', 'url' => 'https://example.com/2' }

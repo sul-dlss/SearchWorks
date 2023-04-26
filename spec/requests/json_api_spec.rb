@@ -5,7 +5,7 @@ require 'spec_helper'
 RSpec.describe 'JSON API Responses' do
   it 'has augmmented documents using the JsonResultsDocumentPresenter' do
     get '/catalog', params: { q: '57', format: 'json' }
-    documents = JSON.parse(response.body).dig('response', 'docs')
+    documents = response.parsed_body.dig('response', 'docs')
 
     expect(documents.length).to be 1
     expect(documents.first['fulltext_link_html']).to be_present
