@@ -21,24 +21,205 @@
  It is *not* a good example to work from.
 -->
 <config>
-  <luceneMatchVersion>LUCENE_6_6_5</luceneMatchVersion>
+  <luceneMatchVersion>7.7.2</luceneMatchVersion>
   <!--  The DirectoryFactory to use for indexes.
         solr.StandardDirectoryFactory, the default, is filesystem based.
         solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
   <directoryFactory name="DirectoryFactory" class="${solr.directoryFactory:solr.StandardDirectoryFactory}"/>
 
+  <updateHandler class="solr.DirectUpdateHandler2">
+    <updateLog>
+      <str name="dir">${solr.core0.data.dir:}</str>
+    </updateLog>
+    <autoCommit>
+       <maxDocs>20000</maxDocs>
+       <maxTime>15000</maxTime>
+       <openSearcher>false</openSearcher>
+    </autoCommit>
+    <autoSoftCommit>
+      <maxTime>900000</maxTime>
+    </autoSoftCommit>
+    <commitWithin>
+      <softCommit>false</softCommit>
+    </commitWithin>
+  </updateHandler>
+
+
   <!-- NOTE:  these 2 lib dirs are here for testing only and do NOT go in the prod file -->
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
-
   <lib dir="${solr.install.dir:../../../..}/contrib" regex="CJKFilterUtils-v3.0.jar" />
 
-  <dataDir>${solr.blacklight-core.data.dir:}</dataDir>
+  <dataDir>${solr.data.dir:}</dataDir>
+
+  <query>
+    <filterCache class="solr.FastLRUCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
+    <queryResultCache class="solr.LRUCache" size="102400" initialSize="8192" autowarmCount="1024"/>
+    <documentCache class="solr.LRUCache" size="40960" initialSize="8192" autowarmCount="0"/>
+    <fieldValueCache class="solr.FastLRUCache" size="100" initialSize="25" autowarmCount="0" showItems="64"/>
+    <queryResultWindowSize>80</queryResultWindowSize>
+    <queryResultMaxDocsCached>100</queryResultMaxDocsCached>
+    <useColdSearcher>true</useColdSearcher>
+    <maxWarmingSearchers>4</maxWarmingSearchers>
+
+    <!-- a newSearcher event is fired whenever a new searcher is being prepared
+         and there is a current searcher handling requests (aka registered).
+         It should only have the most common facets -->
+    <listener event="newSearcher" class="solr.QuerySenderListener">
+      <arr name="queries">
+        <!-- facets for default query for all objects -->
+        <lst>
+          <int name="rows">0</int>
+          <str name="fl">score</str>
+          <bool name="facet">true</bool>
+          <int name="facet.mincount">1</int>
+          <int name="facet.limit">30</int>
+          <str name="facet.method">uif</str>
+          <str name="facet.field">access_facet</str>
+            <str name="f.access_facet.facet.method">enum</str>
+          <str name="facet.field">author_person_facet</str>
+            <str name="f.author_person_facet.facet.method">uif</str>
+          <str name="facet.field">author_other_facet</str>
+          <str name="facet.field">building_facet</str>
+            <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">callnum_facet_hsim</str>
+            <str name="f.callnum_facet_hsim.facet.sort">index</str>
+            <str name="f.callnum_facet_hsim.facet.method">enum</str>
+          <str name="facet.field">stanford_work_facet_hsim</str>
+            <str name="f.stanford_work_facet_hsim.facet.sort">index</str>
+            <str name="f.stanford_work_facet_hsim.facet.method">enum</str>
+          <str name="facet.field">stanford_dept_sim</str>
+          <str name="facet.field">collection</str>
+            <str name="f.collection.facet.method">enum</str>
+          <str name="facet.field">db_az_subject</str>
+            <str name="f.db_az_subject.facet.sort">index</str>
+            <str name="f.db_az_subject.facet.method">enum</str>
+          <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
+          <str name="facet.field">display_type</str>
+            <str name="f.display_type.facet.method">enum</str>
+          <str name="facet.field">era_facet</str>
+          <str name="facet.field">format_main_ssim</str>
+            <str name="f.format_main_ssim.facet.method">enum</str>
+            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_physical_ssim</str>
+            <str name="f.format_physical_ssim.facet.method">enum</str>
+          <str name="facet.field">fund_facet</str>
+          <str name="facet.field">genre_ssim</str>
+            <str name="f.genre_ssim.facet.method">enum</str>
+          <str name="facet.field">geographic_facet</str>
+          <str name="facet.field">language</str>
+          <str name="facet.field">location_facet</str>
+          <str name="facet.field">pub_year_tisim</str>
+          <str name="facet.field">topic_facet</str>
+        </lst>
+        <!-- single object query to populate filter and fieldValue cache -->
+        <lst>
+          <str name="q">id:666</str>
+          <str name="qt">standard</str>
+          <int name="rows">0</int>
+          <str name="fl">score</str>
+          <bool name="facet">true</bool>
+          <int name="facet.mincount">1</int>
+          <int name="facet.limit">30</int>
+          <str name="facet.field">access_facet</str>
+            <str name="f.access_facet.facet.method">enum</str>
+          <str name="facet.field">author_person_facet</str>
+          <str name="facet.field">author_other_facet</str>
+          <str name="facet.field">building_facet</str>
+            <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">callnum_facet_hsim</str>
+            <str name="f.callnum_facet_hsim.facet.sort">index</str>
+            <str name="f.callnum_facet_hsim.facet.method">enum</str>
+          <str name="facet.field">stanford_work_facet_hsim</str>
+            <str name="f.stanford_work_facet_hsim.facet.sort">index</str>
+            <str name="f.stanford_work_facet_hsim.facet.method">enum</str>
+          <str name="facet.field">stanford_dept_sim</str>
+          <str name="facet.field">collection</str>
+            <str name="f.collection.facet.method">enum</str>
+          <str name="facet.field">db_az_subject</str>
+            <str name="f.db_az_subject.facet.sort">index</str>
+            <str name="f.db_az_subject.facet.method">enum</str>
+          <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
+          <str name="facet.field">display_type</str>
+            <str name="f.display_type.facet.method">enum</str>
+          <str name="facet.field">era_facet</str>
+            <str name="f.era_facet.facet.method">uif</str>
+          <str name="facet.field">format_main_ssim</str>
+            <int name="f.format_main_ssim.facet.limit">-1</int>
+            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_physical_ssim</str>
+            <int name="f.format_physical_ssim.facet.limit">20</int>
+            <str name="f.format_physical_ssim.facet.method">enum</str>
+          <str name="facet.field">fund_facet</str>
+          <str name="facet.field">genre_ssim</str>
+            <str name="f.genre_ssim.facet.method">enum</str>
+          <str name="facet.field">geographic_facet</str>
+          <str name="facet.field">language</str>
+            <str name="f.language.facet.method">uif</str>
+          <str name="facet.field">location_facet</str>
+          <str name="facet.field">pub_date</str>
+          <str name="facet.field">pub_year_tisim</str>
+            <str name="f.pub_year_tisim.facet.method">uif</str>
+          <str name="facet.field">topic_facet</str>
+            <str name="f.topic_facet.facet.method">uif</str>
+        </lst>
+      </arr>
+    </listener>
+
+    <!-- a firstSearcher event is fired whenever a new searcher is being
+         prepared but there is no current registered searcher to handle
+         requests or to gain autowarming data from. ("fast warmup") -->
+    <listener event="firstSearcher" class="solr.QuerySenderListener">
+      <arr name="queries">
+        <!-- facets for default query for all objects (home page) -->
+        <lst>
+          <int name="rows">0</int>
+          <str name="fl">score</str>
+          <bool name="facet">true</bool>
+          <int name="facet.mincount">1</int>
+          <int name="facet.limit">30</int>
+          <str name="facet.field">access_facet</str>
+            <str name="f.access_facet.facet.method">enum</str>
+          <str name="facet.field">building_facet</str>
+            <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">format_main_ssim</str>
+            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">language</str>
+        </lst>
+        <!-- single object query to populate filter and fieldValue cache -->
+        <lst>
+          <str name="q">id:666</str>
+          <str name="qt">standard</str>
+          <int name="rows">0</int>
+          <str name="fl">score</str>
+          <bool name="facet">true</bool>
+          <int name="facet.mincount">1</int>
+          <int name="facet.limit">30</int>
+          <str name="facet.field">access_facet</str>
+            <str name="f.access_facet.facet.method">enum</str>
+          <str name="facet.field">building_facet</str>
+            <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">format_main_ssim</str>
+            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">language</str>
+        </lst>
+        <!-- should there be warming for different sorts? -->
+      </arr>
+    </listener>
+  </query>
 
   <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
+  <!-- realtime get handler, guaranteed to return the latest stored fields
+    of any document, without the need to commit or open a new searcher. The current
+    implementation relies on the updateLog feature being enabled. -->
+  <requestHandler name="/get" class="solr.RealTimeGetHandler">
+    <lst name="defaults">
+      <str name="omitHeader">true</str>
+    </lst>
+  </requestHandler>
 
   <requestDispatcher handleSelect="true" >
-    <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" />
+    <requestParsers enableRemoteStreaming="true" multipartUploadLimitInKB="2048" />
   </requestDispatcher>
 
   <requestHandler name="standard" class="solr.StandardRequestHandler" />
@@ -75,7 +256,7 @@
       <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
       <int name="rows">20</int>
       <str name="q.alt">*:*</str>
-      <str name="mm">6&lt;-1 6&lt;90%</str>
+      <str name="mm">8&lt;-1 8&lt;90%</str>
       <int name="qs">1</int>
       <int name="ps">0</int>
       <float name="tie">0.01</float>
@@ -83,6 +264,7 @@
       <!-- in case lucene query parser -->
       <str name="df">all_search</str>
       <str name="q.op">AND</str>
+      <str name="sow">true</str>
 
       <str name="qf">
         title_245a_exact_search^1000
@@ -131,9 +313,10 @@
         summary_search^2               vern_summary_search^2
 
         pub_date_search^2
-        isbn_search^1.5
-        issn_search^1.5
+        isbn_search^1.6
+        issn_search^1.6
         id
+        druid
         oclc
         barcode_search
         physical                       vern_physical
@@ -256,7 +439,7 @@
       </str>
 
       <str name="qf_cjk">
-        title_245a_exact_search^1000
+        title_245a_exact_search^1000   cjk_exact_search_title_245a^1000
         title_245a_unstem_search^500
         title_245a_search^75           vern_title_245a_search^75           cjk_title_245a_search^75            ja_title_245a_search^75
         title_245_unstem_search^75
@@ -302,8 +485,8 @@
         summary_search^2               vern_summary_search^2               cjk_summary_search^2                ja_summary_search^2
 
         pub_date_search^2
-        isbn_search^1.5
-        issn_search^1.5
+        isbn_search^1.6
+        issn_search^1.6
         id
         oclc
         barcode_search
@@ -314,7 +497,7 @@
         all_search                     vern_all_search                     cjk_all_search                      ja_all_search
       </str>
       <str name="pf_cjk"> <!-- (phrase boost within result set) -->
-        title_245a_exact_search^5000
+        title_245a_exact_search^5000 cjk_exact_search_title_245a^5000
         title_245a_unstem_search^2500
         title_245a_search^375          vern_title_245a_search^375          cjk_title_245a_search^375           ja_title_245a_search^375
         title_245_unstem_search^375
@@ -428,8 +611,8 @@
 
 
       <str name="qf_title">
-        title_245a_exact_search^350
-        title_245a_unstem_search^100
+        title_245a_exact_search^380
+        title_245a_unstem_search^130
         title_245a_search^75           vern_title_245a_search^75
         title_245_unstem_search^75
         title_245_search^50            vern_title_245_search^50
@@ -477,7 +660,7 @@
       </str>
 
       <str name="qf_title_cjk">
-        title_245a_exact_search^350
+        title_245a_exact_search^350 cjk_exact_search_title_245a^350
         title_245a_unstem_search^100
         title_245a_search^75           vern_title_245a_search^75           cjk_title_245a_search^75            ja_title_245a_search^75
         title_245_unstem_search^75
@@ -493,7 +676,7 @@
         series_search                  vern_series_search                  cjk_series_search                   ja_series_search
       </str>
       <str name="pf_title_cjk"> <!-- (phrase) -->
-        title_245a_exact_search^1750
+        title_245a_exact_search^1750   cjk_exact_search_title_245a^1750
         title_245a_unstem_search^500
         title_245a_search^375          vern_title_245a_search^375          cjk_title_245a_search^375          ja_title_245a_search^375
         title_245_unstem_search^375
@@ -752,79 +935,15 @@
       <str name="pf3_number">callnum_search^3</str>
       <str name="pf2_number">callnum_search^2</str>
 
-      <!-- for advanced search summary text box -->
-      <str name="qf_summary">
-        toc_unstem_search^10
-        toc_search                     vern_toc_search
-        context_unstem_search^10
-        context_search                 vern_context_search
-        summary_unstem_search^10
-        summary_search                 vern_summary_search
-      </str>
-      <str name="pf_summary">
-        toc_unstem_search^20
-        toc_search^5                   vern_toc_search^5
-        context_unstem_search^20
-        context_search^5               vern_context_search^5
-        summary_unstem_search^20
-        summary_search^5               vern_summary_search^5
-      </str>
-      <str name="pf3_summary">
-        toc_search^3                   vern_toc_search^3
-        context_search^3               vern_context_search^3
-        summary_search^3               vern_summary_search^3
-      </str>
-      <str name="pf2_summary">
-        toc_search^2                   vern_toc_search^2
-        context_search^2               vern_context_search^2
-        summary_search^2               vern_summary_search^2
-      </str>
-
-      <str name="qf_summary_cjk">
-        toc_unstem_search^10
-        toc_search                     vern_toc_search                     cjk_toc_search                      ja_toc_search
-        context_unstem_search^10
-        context_search                 vern_context_search                 cjk_context_search                  ja_context_search
-        summary_unstem_search^10
-        summary_search                 vern_summary_search                 cjk_summary_search                  ja_summary_search
-      </str>
-      <str name="pf_summary_cjk">
-        toc_unstem_search^20
-        toc_search^5                   vern_toc_search^5                   cjk_toc_search^5                    ja_toc_search^5
-        context_unstem_search^20
-        context_search^5               vern_context_search^5               cjk_context_search^5                ja_context_search^5
-        summary_unstem_search^20
-        summary_search^5               vern_summary_search^5               cjk_summary_search^5                ja_summary_search^5
-      </str>
-      <str name="pf3_summary_cjk">
-        toc_search^3                   vern_toc_search^3                   cjk_toc_search^3                    ja_toc_search^3
-        context_search^3               vern_context_search^3               cjk_context_search^3                ja_context_search^3
-        summary_search^3               vern_summary_search^3               cjk_summary_search^3                ja_summary_search^3
-      </str>
-      <str name="pf2_summary_cjk">
-        toc_search^2                   vern_toc_search^2                   cjk_toc_search^2                    ja_toc_search^2
-        context_search^2               vern_context_search^2               cjk_context_search^2                ja_context_search^2
-        summary_search^2               vern_summary_search^2               cjk_summary_search^2                ja_summary_search^2
-      </str>
-
-      <!-- for advanced search description text box -->
-      <str name="qf_description">all_unstem_search^10 all_search vern_all_search</str>
-      <str name="pf_description">all_unstem_search^20 all_search^5 vern_all_search^5</str>
-      <str name="pf3_description">all_search^3 vern_all_search^3</str>
-      <str name="pf2_description">all_search^2 vern_all_search^2</str>
-
-      <str name="qf_description_cjk">all_unstem_search^10 all_search vern_all_search cjk_all_search ja_all_search</str>
-      <str name="pf_description_cjk">all_unstem_search^20 all_search^5 vern_all_search^5 cjk_all_search^5 ja_all_search^5</str>
-      <str name="pf3_description_cjk">all_search^3 vern_all_search^3 cjk_all_search^3 ja_all_search^3</str>
-      <str name="pf2_description_cjk">all_search^2 vern_all_search^2 cjk_all_search^2 ja_all_search^2</str>
-
-
       <bool name="facet">true</bool>
       <int name="facet.mincount">1</int>
       <int name="facet.limit">21</int>
+      <int name="facet.threads">4</int>
+      <str name="facet.method">uif</str>
       <str name="facet.field">access_facet</str>
         <str name="f.access_facet.facet.method">enum</str>
       <str name="facet.field">author_person_facet</str>
+        <str name="f.author_person_facet.facet.method">uif</str>
       <str name="facet.field">author_other_facet</str>
       <str name="facet.field">building_facet</str>
         <str name="f.building_facet.facet.method">enum</str>
@@ -844,23 +963,26 @@
         <str name="f.db_az_subject.facet.method">enum</str>
         <str name="f.db_az_subject.facet.sort">index</str>
       <str name="facet.field">era_facet</str>
+        <str name="f.era_facet.facet.method">uif</str>
       <str name="facet.field">format_main_ssim</str>
         <int name="f.format_main_ssim.facet.limit">-1</int>
         <str name="f.format_main_ssim.facet.method">enum</str>
       <str name="facet.field">format_physical_ssim</str>
         <int name="f.format_physical_ssim.facet.limit">20</int>
         <str name="f.format_physical_ssim.facet.method">enum</str>
-      <str name="facet.field">format</str> <!-- deprecated: left for continuity in UI URLs for old formats --> -->
-        <str name="f.format.facet.method">enum</str>
       <str name="facet.field">fund_facet</str>
       <str name="facet.field">genre_ssim</str>
         <str name="f.genre_ssim.facet.method">enum</str>
       <str name="facet.field">geographic_facet</str>
       <str name="facet.field">language</str>
+        <str name="f.language.facet.method">uif</str>
       <str name="facet.field">location_facet</str>
       <str name="facet.field">pub_date</str>
       <str name="facet.field">pub_year_tisim</str>
+        <str name="f.pub_year_tisim.facet.method">uif</str>
       <str name="facet.field">topic_facet</str>
+        <str name="f.topic_facet.facet.method">uif</str>
+      <int name="f.format.facet.limit">0</int>
 
       <str name="fl">
         score,
@@ -870,21 +992,20 @@
         author_person_display,        vern_author_person_display,
         author_person_full_display,   vern_author_person_full_display,
         bookplates_display,
-        characteristics_ssim,
         collection,
         collection_type,
         collection_with_title,
         crez_course_info,
         db_az_subject,
-        display_type,
         druid,
         file_id,
+        set,
+        set_with_title,
         format,
         format_main_ssim,
         format_physical_ssim,
         genre_ssim,
         iiif_manifest_url_ssim,
-        img_info,
         imprint_display,
         isbn_display,
         item_display,
@@ -894,7 +1015,9 @@
         modsxml,
         oclc,
         physical,                     vern_physical,
+        preferred_barcode,
         pub_date,
+        pub_year_ss,
         publication_year_isi,
         beginning_year_isi,
         earliest_year_isi,
@@ -918,15 +1041,45 @@
         url_restricted,
         url_suppl,
         url_sfx,
+        managed_purl_urls,
         ht_access_sim,
         ht_htid_ssim,
         ht_bib_key_ssim,
+        characteristics_ssim,
         author_struct:[json],
         marc_links_struct:[json],
         summary_struct:[json],
         toc_struct:[json],
-        uniform_title_display_struct: [json]
+        uniform_title_display_struct:[json],
+        schema_dot_org_struct:[json]
       </str>
+    </lst>
+  </requestHandler>
+
+  <!-- single document requests; use id=666 instead of q=id:666 -->
+  <requestHandler name="document" class="solr.SearchHandler" >
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="fl">
+        *,
+        author_struct:[json],
+        marc_links_struct:[json],
+        summary_struct:[json],
+        toc_struct:[json],
+        uniform_title_display_struct:[json],
+        schema_dot_org_struct:[json]
+      </str>
+      <int name="rows">1</int>
+      <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
+    </lst>
+  </requestHandler>
+
+  <!-- barcode requests; use /barcode?q=1234567890 -->
+  <requestHandler name="/barcode" class="solr.SearchHandler" >
+    <lst name="defaults">
+      <str name="echoParams">explicit</str>
+      <str name="fl">id</str>
+      <str name="q">{!field f=barcode_search v=$n}</str>
     </lst>
   </requestHandler>
 
@@ -943,21 +1096,7 @@
     </arr>
   </requestHandler>
 
-  <!-- for requests to get a single document; use id=666 instead of q=id:666 -->
-  <requestHandler name="document" class="solr.SearchHandler" >
-    <lst name="defaults">
-      <str name="echoParams">explicit</str>
-      <str name="fl">*,
-      author_struct:[json],
-      marc_links_struct:[json],
-      summary_struct:[json],
-      toc_struct:[json],
-      uniform_title_display_struct: [json]</str>
-      <int name="rows">1</int>
-      <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
-    </lst>
-  </requestHandler>
-
+  <!-- basic defType=lucene request handler -->
   <requestHandler name="standard" class="solr.SearchHandler" >
     <lst name="defaults">
       <str name="defType">lucene</str>
@@ -968,226 +1107,4 @@
       <int name="facet.mincount">1</int>
     </lst>
   </requestHandler>
-
-  <!--  For Advanced Search  -->
-  <requestHandler name="advanced" class="solr.SearchHandler" >
-    <lst name="defaults">
-      <str name="defType">lucene</str>
-      <str name="echoParams">explicit</str>
-      <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
-      <str name="df">text</str>
-      <str name="q.op">AND</str>
-      <str name="qs">1</str>
-
-      <!-- used for dismax query parser -->
-      <str name="mm">1</str>
-      <str name="ps">3</str>
-      <float name="tie">0.01</float>
-
-      <!-- for user query terms in author text box -->
-      <str name="qf_author">
-        author_unstem_search^200
-        author_addl_unstem_search^50
-        author_t^20
-        author_addl_t
-      </str>
-      <str name="pf_author">
-        author_unstem_search^2000
-        author_addl_unstem_search^500
-        author_t^200
-        author_addl_t^10
-      </str>
-
-      <!-- for user query terms in title text box -->
-      <str name="qf_title">
-        title_unstem_search^50000
-        subtitle_unstem_search^25000
-        title_addl_unstem_search^10000
-        title_t^5000
-        subtitle_t^2500
-        title_addl_t^100
-        title_added_entry_unstem_search^50
-        title_added_entry_t^10
-        title_series_unstem_search^5
-        title_series_t
-      </str>
-      <str name="pf_title">
-        title_unstem_search^500000
-        subtitle_unstem_search^250000
-        title_addl_unstem_search^100000
-        title_t^50000
-        subtitle_t^25000
-        title_addl_t^1000
-        title_added_entry_unstem_search^500
-        title_added_entry_t^100
-        title_series_t^50
-        title_series_unstem_search^10
-      </str>
-
-      <!-- for user query terms in subject text box -->
-      <str name="qf_subject">
-        subject_topic_unstem_search^200
-        subject_unstem_search^125
-        subject_topic_facet^100
-        subject_t^50
-        subject_addl_unstem_search^10
-        subject_addl_t
-      </str>
-      <str name="pf_subject">
-        subject_topic_unstem_search^2000
-        subject_unstem_search^1250
-        subject_t^1000
-        subject_topic_facet^500
-        subject_addl_unstem_search^100
-        subject_addl_t^10
-      </str>
-
-      <!-- for user query terms in number text box -->
-      <str name="qf_number">isbn_t</str>
-
-      <!-- for user query terms in keyword text box -->
-      <str name="qf_keyword">text</str>
-      <str name="pf_keyword">text^10</str>
-
-      <!-- NOT using marc_display because it is large and will slow things down for search results -->
-      <str name="fl">
-        id,
-        score,
-        author_display,
-        author_vern_display,
-        format,
-        isbn_t,
-        language_facet,
-        lc_callnum_display,
-        material_type_display,
-        published_display,
-        published_vern_display,
-        pub_date,
-        title_display,
-        title_vern_display,
-        subject_topic_facet,
-        subject_geo_facet,
-        subject_era_facet,
-        subtitle_display,
-        subtitle_vern_display,
-        url_fulltext_display,
-        url_suppl_display,
-        author_struct:[json],
-        characteristics_struct:[json],
-        summary_struct:[json]
-        toc_struct:[json]
-        uniform_title_display_struct: [json]
-      </str>
-
-      <str name="facet">true</str>
-      <str name="facet.mincount">1</str>
-      <str name="facet.limit">10</str>
-      <str name="facet.field">format</str>
-      <str name="facet.field">lc_1letter_facet</str>
-      <str name="facet.field">lc_alpha_facet</str>
-      <str name="facet.field">lc_b4cutter_facet</str>
-      <str name="facet.field">language_facet</str>
-      <str name="facet.field">pub_date</str>
-      <str name="facet.field">subject_era_facet</str>
-      <str name="facet.field">subject_geo_facet</str>
-      <str name="facet.field">subject_topic_facet</str>
-
-      <str name="spellcheck">true</str>
-      <str name="spellcheck.dictionary">subject</str>
-      <str name="spellcheck.onlyMorePopular">true</str>
-      <str name="spellcheck.extendedResults">true</str>
-      <str name="spellcheck.collate">false</str>
-      <str name="spellcheck.count">5</str>
-    </lst>
-    <arr name="last-components">
-      <str>spellcheck</str>
-    </arr>
-  </requestHandler>
-
-<!-- Spell Check
-
-        The spell check component can return a list of alternative spelling
-        suggestions.
-
-        http://wiki.apache.org/solr/SpellCheckComponent
-     -->
-  <searchComponent name="spellcheck" class="solr.SpellCheckComponent">
-
-    <str name="queryAnalyzerFieldType">textSpell</str>
-
-    <!-- Multiple "Spell Checkers" can be declared and used by this
-         component
-      -->
-
-    <!-- a spellchecker built from a field of the main index, and
-         written to disk
-      -->
-    <lst name="spellchecker">
-      <str name="name">default</str>
-      <str name="field">spell</str>
-      <str name="spellcheckIndexDir">./spell</str>
-      <str name="buildOnOptimize">true</str>
-    </lst>
-    <lst name="spellchecker">
-      <str name="name">author</str>
-      <str name="field">author_spell</str>
-      <str name="spellcheckIndexDir">./spell_author</str>
-      <str name="accuracy">0.7</str>
-      <str name="buildOnOptimize">true</str>
-    </lst>
-    <lst name="spellchecker">
-      <str name="name">subject</str>
-      <str name="field">subject_spell</str>
-      <str name="spellcheckIndexDir">./spell_subject</str>
-      <str name="accuracy">0.7</str>
-      <str name="buildOnOptimize">true</str>
-    </lst>
-    <lst name="spellchecker">
-      <str name="name">title</str>
-      <str name="field">title_spell</str>
-      <str name="spellcheckIndexDir">./spell_title</str>
-      <str name="accuracy">0.7</str>
-      <str name="buildOnOptimize">true</str>
-    </lst>
-
-    <!-- a spellchecker that uses a different distance measure -->
-    <!--
-       <lst name="spellchecker">
-         <str name="name">jarowinkler</str>
-         <str name="field">spell</str>
-         <str name="distanceMeasure">
-           org.apache.lucene.search.spell.JaroWinklerDistance
-         </str>
-         <str name="spellcheckIndexDir">spellcheckerJaro</str>
-       </lst>
-     -->
-
-    <!-- a spellchecker that use an alternate comparator
-
-         comparatorClass be one of:
-          1. score (default)
-          2. freq (Frequency first, then score)
-          3. A fully qualified class name
-      -->
-    <!--
-       <lst name="spellchecker">
-         <str name="name">freq</str>
-         <str name="field">lowerfilt</str>
-         <str name="spellcheckIndexDir">spellcheckerFreq</str>
-         <str name="comparatorClass">freq</str>
-         <str name="buildOnCommit">true</str>
-      -->
-
-    <!-- A spellchecker that reads the list of words from a file -->
-    <!--
-       <lst name="spellchecker">
-         <str name="classname">solr.FileBasedSpellChecker</str>
-         <str name="name">file</str>
-         <str name="sourceLocation">spellings.txt</str>
-         <str name="characterEncoding">UTF-8</str>
-         <str name="spellcheckIndexDir">spellcheckerFile</str>
-       </lst>
-      -->
-  </searchComponent>
-
 </config>
