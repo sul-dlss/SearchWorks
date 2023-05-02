@@ -1,0 +1,32 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('harvest') {
+      steps {
+        checkout scm
+
+        sshagent (['sul-devops-team']){
+          sh '''#!/bin/bash -l
+          export HUB_CONFIG=/ci/home/config/hub
+
+          # Load RVM
+          rvm use 3.0.3@searchworks --create
+          gem install bundler
+
+          bundle install --without production
+
+          # Harvest
+          bin/rake proxies:import_lane
+
+          # Make a PR
+          git checkout -B lane-ezproxy-update
+          git add config/ezproxy/lane_proxy_file.txt
+          git commit -m "Update Lane Library EZProxy config"
+          git push origin lane-ezproxy-update && hub pull-request -f -m "Update Lane Library EZProxy config"
+          '''
+        }
+      }
+    }
+  }
+}
