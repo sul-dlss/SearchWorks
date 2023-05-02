@@ -82,7 +82,7 @@ LIB_GUIDES:
   SITE_ID: 12345
 
 EZPROXY:
-  LAW: http://ezproxy.law.stanford.edu/login?auth=shibboleth&
+  LAW: http://ezproxy.law.stanford.edu/login?
   LANE: https://login.laneproxy.stanford.edu/login?
   SUL: https://stanford.idm.oclc.org/login?
 
