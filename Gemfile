@@ -112,3 +112,5 @@ gem 'global_alerts'
 # Set view_component to < v2.75 until config issue is resolved
 # See: https://github.com/ViewComponent/view_component/issues/1565
 gem 'view_component', '< 2.75'
+
+gem "parslet", "~> 2.0"

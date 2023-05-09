@@ -678,6 +678,7 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri (>= 1.7.1)
   okcomputer
+  parslet (~> 2.0)
   puma (~> 5.0)
   rack-attack
   rack-mini-profiler (~> 2.0)
