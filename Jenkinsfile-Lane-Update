@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  environment {
-    GH_CREDS = credentials("sul-ci org token (login)")
-  }
-
   stages {
     stage('harvest') {
       steps {
@@ -28,8 +24,7 @@ pipeline {
           git checkout -B lane-ezproxy-update
           git add config/ezproxy/lane_proxy_file.txt
           git commit -m "Update Lane Library EZProxy config" &&
-          git push https://${GH_CREDS_USR}:${GH_CREDS_PSW}@github.com/sul-dlss/SearchWorks.git lane-ezproxy-update &&
-          GITHUB_USER=${GH_CREDS_USR} GITHUB_PASSWORD=${GH_CREDS_PSW} hub pull-request -f -m "Update Lane Library EZProxy config"
+          git push git@github.com:sul-dlss/SearchWorks.git lane-ezproxy-update
           echo 'Done!'
           '''
         }
