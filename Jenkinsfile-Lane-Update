@@ -24,7 +24,8 @@ pipeline {
           git checkout -B lane-ezproxy-update
           git add config/ezproxy/lane_proxy_file.txt
           git commit -m "Update Lane Library EZProxy config" &&
-          git push git@github.com:sul-dlss/SearchWorks.git lane-ezproxy-update
+          git push git@github.com:sul-dlss/SearchWorks.git lane-ezproxy-update &&
+          hub pull-request -f -m "Update Lane Library EZProxy config"
           echo 'Done!'
           '''
         }
