@@ -323,7 +323,6 @@ catalogimages.wiley.com
 catalyst.nejm.org
 catdir.loc.gov
 cbmjournal.springeropen.com
-ccdc.cam.ac.uk
 ccdm.aphapublications.org
 ccforum.biomedcentral.com
 ccinfoweb.ccohs.ca
@@ -698,7 +697,6 @@ ibj.pasteur.ac.ir
 icd9cm.chrisendres.com
 icurology.org
 idpjournal.biomedcentral.com
-ieeeXplore.ieee.org
 ieeexplore.ieee.org
 ietresearch.onlinelibrary.wiley.com
 iiif.lib.harvard.edu
@@ -869,6 +867,7 @@ journalofethics.ama-assn.org
 journalotohns.biomedcentral.com
 journalretinavitreous.biomedcentral.com
 journalrip.com
+journals.aai.org
 journals.aps.org
 journals.asm.org
 journals.athmsi.org
@@ -1348,7 +1347,6 @@ stanford.policymap.com
 stanfordhealthcare.org
 stanfordhospital.org
 stanforduniversitylanemedicallibrary.on.worldcat.org
-stat.unido.org.
 statabs.proquest.com
 statistical.proquest.com
 statusofwomendata.org
@@ -1427,7 +1425,6 @@ voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
 wayback.archive-it.org
-web.lexisnexis.com
 web.mit.edu
 web.nichigai.jp
 web.ornl.gov
@@ -1457,8 +1454,6 @@ worldwidescience.org
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
 www-jstor-org.stanford.idm.oclc.org
-www-krpia-co-kr.stanford.idm.oclc.org
-www-old.ias.ac.in
 www-pub.iaea.org
 www-sciencedirect-com.stanford.idm.oclc.org
 www.ClinicalKey.com
@@ -2339,6 +2334,7 @@ www.nestlenutrition-institute.org
 www.netanatomy.com
 www.neuroanatomy.org
 www.neurologyindia.com
+www.neurosurgicalatlas.com
 www.neurotodayonline.com
 www.newmicrobiologica.org
 www.newnonmun.com
@@ -2508,7 +2504,6 @@ www.revneurol.com
 www.rhinologyjournal.com
 www.rimed.org
 www.rimedicalsociety.org
-www.riss.kr
 www.rjo.ro
 www.rjpbcs.com
 www.rkma.com
