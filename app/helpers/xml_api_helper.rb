@@ -30,7 +30,7 @@ module XmlApiHelper
   end
 
   def get_covers_from_response(hsh)
-    google_url = "https://books.google.com/books?bibkeys=#{hsh.values.delete_if { |val| val.nil? }.join(",")}&jscmd=viewapi"
+    google_url = "https://books.google.com/books?bibkeys=#{hsh.values.compact.join(",")}&jscmd=viewapi"
     string = make_call_to_gbs(google_url)
     #in case of throttled response from GBS
     return {} if string[0, 1] != "{"
