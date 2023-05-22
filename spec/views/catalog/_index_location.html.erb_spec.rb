@@ -195,7 +195,7 @@ describe "catalog/_index_location" do
               id: '123',
               item_display: [
                 '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123',
-                '456 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 456'
+                '456 -|- GREEN -|- LOCKED-STK -|- ON-ORDER -|- STKS-MONO -|- -|- -|- -|- ABC 456'
               ]
             )
           )
