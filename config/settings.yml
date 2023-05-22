@@ -81,10 +81,13 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
-EZPROXY:
-  LAW: http://ezproxy.law.stanford.edu/login?
-  LANE: https://login.laneproxy.stanford.edu/login?
-  SUL: https://stanford.idm.oclc.org/login?
+libraries:
+  LAW:
+    ezproxy_host: http://ezproxy.law.stanford.edu/login?
+  LANE:
+    ezproxy_host: https://login.laneproxy.stanford.edu/login?
+  default:
+    ezproxy_host: https://stanford.idm.oclc.org/login?
 
 selected_databases:
    "5749286":
