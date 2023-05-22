@@ -44,7 +44,7 @@ module DigitalCollection
 
     def as_json(*)
       {
-        total: total,
+        total:,
         id: document[:id],
         html: render
       }
@@ -57,7 +57,7 @@ module DigitalCollection
     def render
       ApplicationController.render(
         template: to_partial_path,
-        assigns: { document: document, type: type }
+        assigns: { document:, type: }
       )
     end
 

@@ -11,7 +11,7 @@ module ArticleHelper
   end
 
   def facet_options_presenter
-    @facet_options ||= FacetOptionsPresenter.new(params: params, context: self)
+    @facet_options ||= FacetOptionsPresenter.new(params:, context: self)
   end
 
   def link_subjects(options = {})

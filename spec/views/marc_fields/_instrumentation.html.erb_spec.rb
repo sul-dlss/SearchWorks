@@ -19,7 +19,7 @@ describe 'marc_fields/_instrumentation' do
   end
 
   before do
-    allow(view).to receive_messages(instrumentation: instrumentation)
+    allow(view).to receive_messages(instrumentation:)
     render
   end
 

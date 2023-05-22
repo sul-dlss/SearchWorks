@@ -1,7 +1,7 @@
 module AccessPanels
   class GoogleBooksPreviewComponent < AccessPanels::Base
     def initialize(document:, link_text: 'Limited preview', **html_attrs)
-      super(document: document)
+      super(document:)
 
       @link_text = link_text
       @html_attrs = html_attrs

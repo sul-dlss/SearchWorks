@@ -41,9 +41,9 @@ class BrowseController < ApplicationController
   def fetch_browse_items
     if params[:before] || params[:after] || params[:start].blank?
       service = if params[:before]
-                  NearbyOnShelf.reverse(search_service: search_service)
+                  NearbyOnShelf.reverse(search_service:)
                 else
-                  NearbyOnShelf.forward(search_service: search_service)
+                  NearbyOnShelf.forward(search_service:)
                 end
 
       @items = service.items(params[:before] || params[:after])
@@ -53,7 +53,7 @@ class BrowseController < ApplicationController
 
       @items = NearbyOnShelf.around_item(
         item,
-        search_service: search_service
+        search_service:
       )
     end
   end

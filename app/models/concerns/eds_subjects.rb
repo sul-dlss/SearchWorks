@@ -40,7 +40,7 @@ module EdsSubjects
 
       def to_html
         # TODO: we don't have a view context for `link_to`
-        "<a href=\"#{Rails.application.routes.url_helpers.articles_path(q: searchTerm, search_field: search_field)}\">#{CGI.escapeHTML(label)}</a>"
+        "<a href=\"#{Rails.application.routes.url_helpers.articles_path(q: searchTerm, search_field:)}\">#{CGI.escapeHTML(label)}</a>"
       end
     end
 

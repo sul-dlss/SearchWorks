@@ -16,7 +16,7 @@ module Searchworks::Document::Sms
       library = Constants::LIB_TRANSLATIONS[item.library]
       location = Constants::LOCS[item.home_location]
 
-      body << I18n.t('blacklight.sms.text.library_location', library: library, location: location)
+      body << I18n.t('blacklight.sms.text.library_location', library:, location:)
       body << I18n.t('blacklight.sms.text.callnumber', value: item.callnumber)
     end
 

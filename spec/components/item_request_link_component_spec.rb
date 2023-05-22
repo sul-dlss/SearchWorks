@@ -3,13 +3,13 @@ require 'spec_helper'
 RSpec.describe ItemRequestLinkComponent, type: :component do
   include MarcMetadataFixtures
 
-  let(:component) { described_class.new(item: item) }
+  let(:component) { described_class.new(item:) }
 
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
   let(:item) do
-    instance_double(Holdings::Item, document: document, library: library, home_location: location, current_location: double(code: nil), circulates?: true)
+    instance_double(Holdings::Item, document:, library:, home_location: location, current_location: double(code: nil), circulates?: true)
   end
 
   subject(:page) { render_inline(component) }
@@ -52,7 +52,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
     describe "current locations" do
       context 'with -LOAN current locations' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO", document:)
         end
 
         it "should require -LOAN current locations to be requested" do
@@ -62,7 +62,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a SEE-LOAN current location' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO", document:)
         end
 
         it { is_expected.not_to have_link 'Request' }
@@ -70,7 +70,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of ON-ORDER' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -78,7 +78,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of MISSING' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- MISSING -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- MISSING -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -86,7 +86,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of NEWBOOKS' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- NEWBOOKS -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- NEWBOOKS -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -94,7 +94,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with an "unavailable" current location' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- INTRANSIT -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- INTRANSIT -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -102,7 +102,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with SPEC-COLL material (that will have a location-level link)' do
         let(:item) do
-          Holdings::Item.new("123 -|- SPEC-COLL -|- UARCH-30 -|- ANYWHERE -|- STKS-MONO", document: document)
+          Holdings::Item.new("123 -|- SPEC-COLL -|- UARCH-30 -|- ANYWHERE -|- STKS-MONO", document:)
         end
 
         it { is_expected.not_to have_link 'Request' }

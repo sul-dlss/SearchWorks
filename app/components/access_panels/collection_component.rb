@@ -3,7 +3,7 @@ module AccessPanels
     with_collection_parameter :collection
 
     def initialize(collection:, document:)
-      super(document: document)
+      super(document:)
 
       @collection = collection
     end

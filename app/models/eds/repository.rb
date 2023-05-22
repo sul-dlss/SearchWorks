@@ -19,7 +19,7 @@ module Eds
         results,
         {},
         document_model: blacklight_config.document_model,
-        blacklight_config: blacklight_config
+        blacklight_config:
       )
     end
 
@@ -39,18 +39,18 @@ module Eds
       blacklight_config.response_model.new(results,
                                            bl_params,
                                            document_model: blacklight_config.document_model,
-                                           blacklight_config: blacklight_config)
+                                           blacklight_config:)
     end
 
     def eds_find(id, params, eds_params)
       dbid = id.split('__', 2).first
       accession = id.split('__', 2).last.gsub('%2F', '/')
       eds_session = Eds::Session.new(eds_params.update(caller: 'bl-repo-find'))
-      record = eds_session.retrieve(dbid: dbid, an: accession)
+      record = eds_session.retrieve(dbid:, an: accession)
       blacklight_config.response_model.new(record.to_solr,
                                            params,
                                            document_model: blacklight_config.document_model,
-                                           blacklight_config: blacklight_config)
+                                           blacklight_config:)
     end
 
     # Some data providers in EDS don't have the data that populates the pub_year_tisim field

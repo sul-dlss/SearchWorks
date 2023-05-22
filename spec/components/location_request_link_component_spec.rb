@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe LocationRequestLinkComponent, type: :component do
   include MarcMetadataFixtures
 
-  subject(:component) { described_class.for(document: document, library: library, location: location, items: items) }
+  subject(:component) { described_class.for(document:, library:, location:, items:) }
 
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }

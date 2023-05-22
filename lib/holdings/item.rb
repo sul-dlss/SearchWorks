@@ -138,15 +138,15 @@ class Holdings
 
     def as_json(*)
       {
-        barcode: barcode,
-        callnumber: callnumber,
+        barcode:,
+        callnumber:,
         current_location: current_location.as_json,
-        due_date: due_date,
-        library: library,
-        home_location: home_location,
-        public_note: public_note,
+        due_date:,
+        library:,
+        home_location:,
+        public_note:,
         status: status.as_json,
-        type: type
+        type:
       }
     end
 

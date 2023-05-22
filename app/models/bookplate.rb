@@ -13,7 +13,7 @@ class Bookplate
   end
 
   def thumbnail_url
-    craft_image_url(druid: druid, image_id: file_id, size: :large)
+    craft_image_url(druid:, image_id: file_id, size: :large)
   end
 
   def text

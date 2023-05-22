@@ -25,8 +25,8 @@ module MarcHelper
       unmatched_vernacular: data[:unmatched_vernacular],
       fields: [
         {
-          field: "#{field_data[:pre_text]} #{link_to(field_data[:link_text], { action: 'index', controller: 'catalog', q: href, search_field: search_field })} #{field_data[:post_text]}".html_safe,
-          vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: search_field }) if vern)
+          field: "#{field_data[:pre_text]} #{link_to(field_data[:link_text], { action: 'index', controller: 'catalog', q: href, search_field: })} #{field_data[:post_text]}".html_safe,
+          vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: }) if vern)
         }
       ]
     }

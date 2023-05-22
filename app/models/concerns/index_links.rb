@@ -27,8 +27,8 @@ module IndexLinks
 
     def to_searchworks_link
       SearchWorks::Links::Link.new(
-        link_text: link_text,
-        href: href,
+        link_text:,
+        href:,
         fulltext: link_is_fulltext?,
         stanford_only: link_is_stanford_only?,
         finding_aid: link_is_finding_aid?,

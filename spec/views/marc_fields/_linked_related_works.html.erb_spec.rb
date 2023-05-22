@@ -20,8 +20,8 @@ describe 'marc_fields/_linked_related_works' do
 
     it 'renders pre_text' do
       text = /i1_subfield_text:\s+i2_subfield_text:/ # in order
-      expect(rendered).to have_css('dd', text: text)
-      expect(rendered).not_to have_css('dd a', text: text)
+      expect(rendered).to have_css('dd', text:)
+      expect(rendered).not_to have_css('dd a', text:)
     end
 
     it 'renders link' do
@@ -44,8 +44,8 @@ describe 'marc_fields/_linked_related_works' do
 
     it 'renders post_text' do
       text = 'x1_subfield_text. x2_subfield_text. 3_subfield_text' # in order
-      expect(rendered).to have_css('dd:nth-of-type(1)', text: text)
-      expect(rendered).not_to have_css('dd:nth-of-type(1) a', text: text)
+      expect(rendered).to have_css('dd:nth-of-type(1)', text:)
+      expect(rendered).not_to have_css('dd:nth-of-type(1) a', text:)
       %w[0 5 8].each do |subfield_code|
         expect(rendered).not_to have_css('dd:nth-of-type(1) a', text: "#{subfield_code}_subfield_text")
       end

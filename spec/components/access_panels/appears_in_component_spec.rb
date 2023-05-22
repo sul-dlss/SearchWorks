@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe AccessPanels::AppearsInComponent, type: :component do
-  subject(:component) { described_class.new(document: document) }
+  subject(:component) { described_class.new(document:) }
 
   let(:set_documents) { [] }
 

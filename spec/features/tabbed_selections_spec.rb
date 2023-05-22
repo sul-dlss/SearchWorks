@@ -7,11 +7,11 @@ RSpec.describe 'Tabbed selections UI' do
 
   before do
     StubArticleService::SAMPLE_RESULTS.map do |article|
-      Bookmark.create!(document_id: article.id, user: user, record_type: 'article')
+      Bookmark.create!(document_id: article.id, user:, record_type: 'article')
     end
 
     %w[1 2 3].each do |doc_id|
-      Bookmark.create!(document_id: doc_id, user: user)
+      Bookmark.create!(document_id: doc_id, user:)
     end
 
     login_as(user)

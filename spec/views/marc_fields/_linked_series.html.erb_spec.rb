@@ -15,7 +15,7 @@ describe 'marc_fields/_linked_series' do
   end
 
   before do
-    allow(view).to receive_messages(linked_series: linked_series)
+    allow(view).to receive_messages(linked_series:)
     render
   end
 

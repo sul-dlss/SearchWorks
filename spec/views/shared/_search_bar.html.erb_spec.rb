@@ -6,7 +6,7 @@ describe 'shared/_search_bar' do
       search_state: double('SearchState', params_for_search: {}),
       search_action_url: '/',
       blacklight_config: Blacklight::Configuration.new,
-      controller_name: controller_name
+      controller_name:
     )
   end
 

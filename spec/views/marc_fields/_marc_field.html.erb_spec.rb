@@ -8,7 +8,7 @@ describe 'marc_fields/_marc_field' do
   end
 
   before do
-    allow(view).to receive_messages(marc_field: marc_field)
+    allow(view).to receive_messages(marc_field:)
     render
   end
 

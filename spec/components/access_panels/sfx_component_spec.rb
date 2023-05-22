@@ -3,7 +3,7 @@ require 'spec_helper'
 describe AccessPanels::SfxComponent do
   let(:document) { SolrDocument.new }
 
-  subject(:access_panel) { described_class.new(document: document) }
+  subject(:access_panel) { described_class.new(document:) }
 
   describe '#render?' do
     it 'is true when there are links' do

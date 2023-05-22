@@ -7,7 +7,7 @@ RSpec.describe Eds::SearchService do
       Blacklight::Configuration,
       repository_class: Eds::Repository,
       search_builder_class: Blacklight::SearchBuilder,
-      document_model: document_model
+      document_model:
     )
   }
 

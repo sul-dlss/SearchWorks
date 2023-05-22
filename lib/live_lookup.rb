@@ -61,9 +61,9 @@ class LiveLookup
 
     def as_json
       {
-        barcode: barcode,
-        due_date: due_date,
-        current_location: current_location
+        barcode:,
+        due_date:,
+        current_location:
       }
     end
 

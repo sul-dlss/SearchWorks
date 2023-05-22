@@ -61,7 +61,7 @@ describe DigitalCollection do
 
   describe '#render_type' do
     before do
-      allow(collection.collection_members).to receive_messages(documents: documents)
+      allow(collection.collection_members).to receive_messages(documents:)
     end
 
     context 'when the majority of items have an image' do

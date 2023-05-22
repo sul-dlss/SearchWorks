@@ -191,7 +191,7 @@ class ArticlesController < ApplicationController
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?
       context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session['eds_session_token'])
-      Honeybadger.notify(e, context: context)
+      Honeybadger.notify(e, context:)
     end
 
     flash[:error] = flash_message_for_link_error

@@ -6,7 +6,7 @@ class BoundWithNoteForAccessPanel < BoundWithNote
     extracted_fields.map do |field, subfields|
       id = subfields.find { |subfield| subfield.code == 'c' }.value[/^(\d+)/]
 
-      { id: id, value: display_value(field, subfields) }
+      { id:, value: display_value(field, subfields) }
     end
   end
 

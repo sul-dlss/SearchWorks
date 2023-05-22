@@ -73,7 +73,7 @@ class Holdings
     end
 
     def as_json(*)
-      { availability_class: availability_class, status_text: status_text }
+      { availability_class:, status_text: }
     end
   end
 end

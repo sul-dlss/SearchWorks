@@ -6,7 +6,7 @@ describe Holdings::Status::InProcess do
 
     it 'should identify any items as in_process' do
       in_process_libraries.each do |library|
-        expect(Holdings::Status::InProcess.new(OpenStruct.new(library: library))).to be_in_process
+        expect(Holdings::Status::InProcess.new(OpenStruct.new(library:))).to be_in_process
       end
     end
   end

@@ -34,6 +34,6 @@ class User < ActiveRecord::Base
   # user_id and user_email are special keys in honeybadger for aggregating
   # errors
   def to_honeybadger_context
-    { user_id: id, user_email: email, affiliations: affiliations }
+    { user_id: id, user_email: email, affiliations: }
   end
 end

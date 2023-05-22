@@ -21,7 +21,7 @@ module SolrSet
 
     @index_parent_sets ||= self[:set_with_title].map do |set_with_title|
       id, title = set_with_title.split('-|-').map(&:strip)
-      SolrDocument.new(id: id, title_display: title)
+      SolrDocument.new(id:, title_display: title)
     end
   end
 
