@@ -288,17 +288,17 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it "should render a zombie library" do #mmm brains
+    it "renders a zombie library" do #mmm brains
       # This seems to be counting request links (not sure if that was the intent)
       expect(page).to have_css('.panel-library-location a', count: 1)
     end
-    it "should render SUL items in the zombie library" do
+    it "renders SUL items in the zombie library" do
       expect(page).to have_css('.panel-library-location td', text: 'ABC')
     end
-    it "should render PHYSICS items in the zombie library" do
+    it "renders PHYSICS items in the zombie library" do
       expect(page).to have_css('.panel-library-location td', text: 'DEF')
     end
-    it "should render blank (i.e. on order) items in the zombie library" do
+    it "renders blank (i.e. on order) items in the zombie library" do
       expect(page).to have_css('.panel-library-location td', text: 'GHI')
     end
   end
@@ -312,7 +312,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it 'should render public note' do
+    it 'renders public note' do
       expect(page).to have_css('div.public-note.note-highlight', text: 'Note: this is public')
     end
   end

@@ -976,37 +976,6 @@ module Constants
     # No Physics or Meyer (ACOMP) in doc provided, the show up on web
   }
 
-  LIBRARY_ABOUT = {
-    'ARS' => 'https://library.stanford.edu/libraries/ars/about',
-    'ART' => 'https://library.stanford.edu/libraries/art/about',
-    'BIOLOGY' => 'https://library.stanford.edu/libraries/falconer/about',
-    'BUSINESS' => 'https://library.stanford.edu/libraries/business/about',
-    'CHEMCHMENG' => 'https://library.stanford.edu/libraries/swain/about',
-    'EARTH-SCI' => 'https://library.stanford.edu/libraries/branner/about',
-    'EAST-ASIA' => 'https://library.stanford.edu/libraries/eal/about',
-    'EDUCATION' => 'https://library.stanford.edu/libraries/cubberley/about',
-    'ENG' => 'https://library.stanford.edu/libraries/englib/about',
-    'GREEN' => 'https://library.stanford.edu/libraries/green/about',
-    'HOOVER' => 'https://library.stanford.edu/libraries/hila/about',
-    'HOPKINS' => 'https://library.stanford.edu/libraries/hopkins/about',
-    'HV-ARCHIVE' => 'https://library.stanford.edu/libraries/hila/about',
-    'LATHROP' => 'https://library.stanford.edu/libraries/lathrop/about',
-    'LAW' => 'https://library.stanford.edu/libraries/law/about',
-    'LANE-MED' => 'https://library.stanford.edu/libraries/lane/about',
-    'MATH-CS' => 'https://library.stanford.edu/libraries/mathstat/about',
-    'MUSIC' => 'https://library.stanford.edu/libraries/music/about',
-    'MEDIA-MTXT' => 'https://library.stanford.edu/libraries/green/media-microtext-center',
-    'MEYER' => 'https://library.stanford.edu/libraries/meyer/about',
-    'RUMSEYMAP' => 'https://library.stanford.edu/libraries/rumsey/about',
-    'TANNER' => 'https://library.stanford.edu/libraries/philosophy/about',
-    'SPEC-COLL' => 'https://library.stanford.edu/libraries/spc/about',
-    'SAL' => 'https://library.stanford.edu/libraries/sal/about',
-    'SAL-NEWARK' => 'https://library.stanford.edu/libraries/newark/about',
-    'SAL3' => 'https://library.stanford.edu/libraries/sal3/about',
-    'SCIENCE' => 'https://library.stanford.edu/libraries/science/about',
-    'SLAC' => 'https://library.stanford.edu/libraries/slac/about'
-  }
-
   EXCLUDE_FIELDS = ['w', '0', '1', '2', '5', '6', '8', '?', '=']
 
   NIELSEN_TAGS = { '505' => '905', '520' => '920', '586' => '986' }

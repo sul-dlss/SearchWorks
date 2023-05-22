@@ -3,7 +3,7 @@
     <div class="library-location-heading access-panel-heading">
       <%= thumb_for_library %>
       <div class="library-location-heading-text">
-        <h3 class="<%= "no-link" if Constants::LIBRARY_ABOUT[library.code].nil? %>"><%= library.name %></h3>
+        <h3 class="<%= "no-link" unless settings.about_url %>"><%= library.name %></h3>
         <div class="small location-hours-today">
           <% unless library.holding_library? %>
             (no holding library)
