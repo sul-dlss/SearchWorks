@@ -9,7 +9,7 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
       allow(document).to receive(:parent_collections).and_return([parent])
       allow(document).to receive(:is_a_collection_member?).and_return(true)
 
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it 'renders the block properly if the collection members are not present' do

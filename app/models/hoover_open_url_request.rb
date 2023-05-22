@@ -47,7 +47,7 @@ class HooverOpenUrlRequest
     }
 
     author_fields.each do |field_codes, subfield_codes|
-      data = marc_data(field_codes: field_codes, subfield_codes: subfield_codes)
+      data = marc_data(field_codes:, subfield_codes:)
       return data if data.present?
     end
     nil # return nil if none of the fields matched
@@ -101,7 +101,7 @@ class HooverOpenUrlRequest
   end
 
   def marc_data(field_codes:, subfield_codes:)
-    field_code = marc_field_code_for_present_data(field_codes: field_codes, subfield_codes: subfield_codes)
+    field_code = marc_field_code_for_present_data(field_codes:, subfield_codes:)
     return unless field_code
 
     safe_join(marc[field_code].subfields.map do |subfield|

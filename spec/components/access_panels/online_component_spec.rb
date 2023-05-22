@@ -121,7 +121,7 @@ describe AccessPanels::OnlineComponent, type: :component do
   describe '#display_connection_problem_links?' do
     let(:solr_document_data) { {} }
     let(:document) { SolrDocument.new(solr_document_data) }
-    let(:component) { described_class.new(document: document) }
+    let(:component) { described_class.new(document:) }
 
     context 'when a public (non-Stanford only) fulltext resource' do
       let(:solr_document_data) do
@@ -160,7 +160,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     end
 
     it "should render nothing" do
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).not_to have_css(".panel-online")
     end
   end
@@ -168,21 +168,21 @@ describe AccessPanels::OnlineComponent, type: :component do
   describe "marc record" do
     it "should render the panel with a link" do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }])
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css(".panel-heading", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', additional_text: '4 at one time', fulltext: true, stanford_only: true }])
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css("ul.links li span.stanford-only")
       expect(page).to have_css("span.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do
       document = SolrDocument.new(marcxml: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
       expect(page).to have_css '.panel-heading', text: 'Also available at'
     end
@@ -190,7 +190,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     context 'when the record has an SFX link' do
       it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
         document = SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856)
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
         expect(page).to     have_css('.panel-online')
         expect(page).not_to have_link('Find full text')
         expect(page).to     have_css('[data-behavior="sfx-panel"]')
@@ -201,7 +201,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     describe 'when the record is not online, has an SFX link, but may return a GBS link (due to a standard number)' do
       it 'renders content to be filled by GBS if something is returned' do
         document = SolrDocument.new(oclc: ['abc123'])
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
 
         expect(page).to have_css('.panel-online', visible: false)
         expect(page).to have_css('.panel-online .google-books.OCLCabc123')
@@ -214,11 +214,11 @@ describe AccessPanels::OnlineComponent, type: :component do
       end
 
       it "should render a special panel heading" do
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
         expect(page).to have_css(".panel-heading", text: "Search this database")
       end
       it "should render a special panel footer" do
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
         expect(page).to have_css(".panel-footer a", text: "Report a connection problem")
       end
     end

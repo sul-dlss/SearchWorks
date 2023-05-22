@@ -22,8 +22,8 @@ module AccessPanels
       nil
     end
 
-    def link_to_library_about_page(&block)
-      link_to_if Constants::LIBRARY_ABOUT[library.code], capture(&block), Constants::LIBRARY_ABOUT[library.code]
+    def link_to_library_about_page(&)
+      link_to_if Constants::LIBRARY_ABOUT[library.code], capture(&), Constants::LIBRARY_ABOUT[library.code]
     end
   end
 end

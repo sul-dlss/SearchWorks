@@ -17,7 +17,7 @@ RSpec.describe DatabaseAccessPoint do
     end
 
     context 'when under the databases page location' do
-      let(:controller) { instance_double(CatalogController, search_state: search_state, action_name: 'index') }
+      let(:controller) { instance_double(CatalogController, search_state:, action_name: 'index') }
       let(:params) { { f: { format_main_ssim: ["Database"] } } }
 
       it "sets show and if to true" do
@@ -30,7 +30,7 @@ RSpec.describe DatabaseAccessPoint do
     end
 
     context 'when under the facet action' do
-      let(:controller) { instance_double(CatalogController, search_state: search_state, action_name: 'facet') }
+      let(:controller) { instance_double(CatalogController, search_state:, action_name: 'facet') }
 
       it "sets the show and if to true" do
         expect(blacklight_config.facet_fields["db_az_subject"].show).to be_falsey

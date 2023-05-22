@@ -3,17 +3,17 @@
 require 'spec_helper'
 
 RSpec.describe NearbyOnShelf do
-  subject(:service) { described_class.new(field: field, search_service: search_service) }
+  subject(:service) { described_class.new(field:, search_service:) }
 
   let(:field) { 'shelfkey' }
   let(:blacklight_config) { BrowseController.blacklight_config }
-  let(:search_service) { Blacklight::SearchService.new(config: blacklight_config, search_state: search_state) }
+  let(:search_service) { Blacklight::SearchService.new(config: blacklight_config, search_state:) }
   let(:search_state) { Blacklight::SearchState.new({}, blacklight_config, context) }
   let(:context) { instance_double(BrowseController, controller_name: 'browse', action_name: 'index') }
   let(:repository) { instance_double(Blacklight::Solr::Repository) }
 
   let(:document_response) do
-    instance_double(Blacklight::Solr::Response, grouped?: false, documents: documents)
+    instance_double(Blacklight::Solr::Response, grouped?: false, documents:)
   end
   let(:documents) do
     [

@@ -32,11 +32,11 @@ class Holdings
 
     def as_json
       {
-        library: library,
-        location: location,
-        public_note: public_note,
-        library_has: library_has,
-        latest_received: latest_received
+        library:,
+        location:,
+        public_note:,
+        library_has:,
+        latest_received:
       }
     end
 

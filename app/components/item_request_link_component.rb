@@ -29,9 +29,9 @@ class ItemRequestLinkComponent < ViewComponent::Base
   def link_href
     helpers.request_url(
       document,
-      library: library,
+      library:,
       location: home_location,
-      barcode: barcode
+      barcode:
     )
   end
 

@@ -1,7 +1,7 @@
 module AccessPanels
   class CourseReservesListComponent < AccessPanels::Base
     def initialize(document:, **html_attrs)
-      super(document: document)
+      super(document:)
       @html_attrs = html_attrs
     end
 

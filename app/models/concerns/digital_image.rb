@@ -3,7 +3,7 @@ module DigitalImage
   # @return [Array]
   def image_urls(size = :default)
     image_ids.map do |image_id|
-      craft_image_url(image_id: image_id, size: size)
+      craft_image_url(image_id:, size:)
     end
   end
 

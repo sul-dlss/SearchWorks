@@ -63,7 +63,7 @@ module EdsLinks
         fulltext:  present? && show?(categories, category),
         sfx:       sfx?,
         ill:       ill?,
-        type:      type,
+        type:,
         stanford_only: pdf?
       )
     end

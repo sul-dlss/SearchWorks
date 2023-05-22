@@ -59,7 +59,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
 
     before do
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it 'should display the MARC 590 as a bound with note (excluding subfield $c)' do
@@ -85,7 +85,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
         ]
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).to have_css('.location a', text: "Request")
     end
 
@@ -96,7 +96,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           '123 -|- SAL -|- SOMETHING-RESV -|- SOMETHING-RESV -|- -|- -|- -|- -|- ABC 123'
         ]
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).not_to have_css('a', text: "Request")
     end
 
@@ -107,7 +107,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           '123 -|- SPEC-COLL -|- GUNST -|- SPEC-INPRO -|- -|- -|- -|- -|- ABC 123'
         ]
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).not_to have_css('a', text: "Request")
     end
   end
@@ -124,7 +124,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
 
     before do
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it "should have unknown status text for items we'll be looking up" do
@@ -141,7 +141,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         id: '123',
         item_display: ['123 -|- GREEN -|- STACKS -|- INPROCESS -|- -|- -|- -|- -|- ABC 123']
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
       expect(page).to have_css('.current-location', text: 'In process')
     end
     describe "as home location" do
@@ -150,7 +150,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           item_display: ['123 -|- ART -|- STACKS -|- IC-DISPLAY -|- -|- -|- -|- -|- ABC 123']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it "should display the current location as the home location" do
@@ -168,7 +168,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           item_display: ['123 -|- ART -|- STACKS -|- GREEN-RESV -|- -|- -|- -|- -|- ABC 123']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
         expect(page).to have_css('.library-location-heading-text h3', text: 'Green Library')
       end
     end
@@ -182,7 +182,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           item_display: ['321 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'],
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it "should include the matched MHLD" do
@@ -202,7 +202,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it "should invoke a library block w/ the appropriate mhld data" do
@@ -223,7 +223,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           item_display: ['123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it "should be present" do
@@ -241,7 +241,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           item_display: ['123 -|- GREEN -|- STACKS -|- MISSING -|- -|- -|- -|- -|- ABC 123']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       skip "should not have a request url stored in the data attribute" do
@@ -262,7 +262,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
             '456 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
           ]
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       pending "should have an item that has a request url" do
@@ -285,7 +285,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           "789 -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- -|- -|- GHI -|-"
         ]
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it "should render a zombie library" do #mmm brains
@@ -309,7 +309,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         id: '123',
         item_display: ['123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|- -|- this is public']
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it 'should render public note' do
@@ -324,7 +324,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
         url_suppl: ["http://oac.cdlib.org/findaid/ark:/something-else"]
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it 'should display finding aid sections with link' do
@@ -339,7 +339,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         id: '123',
         item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
       )
-      render_inline(described_class.new(document: document))
+      render_inline(described_class.new(document:))
     end
 
     it 'should render special instructions field' do
@@ -356,7 +356,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
           url_suppl: ['http://oac.cdlib.org/findaid/ark:/something-else']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it 'renders request via OAC finding aid' do
@@ -372,7 +372,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           id: '123',
           item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
         )
-        render_inline(described_class.new(document: document))
+        render_inline(described_class.new(document:))
       end
 
       it 'renders not available text' do

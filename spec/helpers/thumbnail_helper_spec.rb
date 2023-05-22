@@ -4,7 +4,7 @@ describe ThumbnailHelper do
   describe "#render_cover_image" do
     let(:document) { SolrDocument.new }
     let(:numbers) { { isbn: '', oclc: '', lccn: '' } }
-    let(:expected_locals) { { document: document, css_class: '' }.merge(numbers) }
+    let(:expected_locals) { { document:, css_class: '' }.merge(numbers) }
 
     before do
       allow(helper).to receive(:book_ids).and_return(numbers)

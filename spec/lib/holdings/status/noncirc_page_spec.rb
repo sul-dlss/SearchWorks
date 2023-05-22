@@ -6,7 +6,7 @@ describe Holdings::Status::NoncircPage do
 
     it "should identify any items as noncirc_page" do
       noncirc_page_libraries.each do |library|
-        expect(Holdings::Status::NoncircPage.new(OpenStruct.new(library: library))).to be_noncirc_page
+        expect(Holdings::Status::NoncircPage.new(OpenStruct.new(library:))).to be_noncirc_page
       end
     end
   end

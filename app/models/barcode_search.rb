@@ -14,7 +14,7 @@ class BarcodeSearch
   end
 
   def as_json(*)
-    { barcode: barcode, id: document_id }
+    { barcode:, id: document_id }
   end
 
   private

@@ -6,7 +6,7 @@ describe Holdings::Status::Pageable do
 
     it "should identify any items in a page-only library as pageable" do
       pageable_libraries.each do |library|
-        expect(Holdings::Status::Pageable.new(OpenStruct.new(library: library))).to be_pageable
+        expect(Holdings::Status::Pageable.new(OpenStruct.new(library:))).to be_pageable
       end
     end
     it "should identify any items in non page-only libraries as non-pageable" do

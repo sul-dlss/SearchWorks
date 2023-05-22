@@ -8,7 +8,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   end
 
   before do
-    render_inline(described_class.new(document: document))
+    render_inline(described_class.new(document:))
   end
 
   it 'renders the panel' do

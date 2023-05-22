@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe AccessPanels::LibraryComponent, type: :component do
-  subject(:component) { described_class.new(library: library, document: document) }
+  subject(:component) { described_class.new(library:, document:) }
   let(:document) { SolrDocument.new }
   let(:library) { Holdings::Library.new('GREEN') }
 

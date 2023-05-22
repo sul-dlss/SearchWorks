@@ -19,7 +19,7 @@ module CollectionMember
     unless @index_parent_collections
       @index_parent_collections = self[:collection_with_title].map do |collection_with_title|
         id, title = collection_with_title.split('-|-').map(&:strip)
-        SolrDocument.new(id: id, title_display: title)
+        SolrDocument.new(id:, title_display: title)
       end
     end
     @index_parent_collections

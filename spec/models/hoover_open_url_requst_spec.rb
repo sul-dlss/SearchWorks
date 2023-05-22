@@ -10,7 +10,7 @@ describe HooverOpenUrlRequest do
   let(:document) do
     SolrDocument.new(
       id: 'abc123',
-      marcxml: marcxml
+      marcxml:
     )
   end
 

@@ -14,7 +14,7 @@ RSpec.describe 'Article Routing' do
       let(:id) { 'eds__1(2).3-4~5,6;7|8%9:A_b' }
 
       it 'route to the show page' do
-        expect(result).to route_to(controller: 'articles', action: 'show', id: id)
+        expect(result).to route_to(controller: 'articles', action: 'show', id:)
       end
 
       context 'identifier with an encoded semicolon' do

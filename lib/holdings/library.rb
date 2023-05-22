@@ -62,11 +62,11 @@ class Holdings
 
     def as_json
       {
-        code: code,
+        code:,
         locations: locations.select(&:present?).map(&:as_json),
         mhld: mhld.select(&:present?).map(&:as_json),
-        name: name,
-        library_instructions: library_instructions
+        name:,
+        library_instructions:
       }
     end
   end

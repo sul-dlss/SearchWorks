@@ -25,7 +25,7 @@ class Holdings
     def request_link
       return if items.empty? || bound_with?
 
-      @request_link ||= RequestLink.for(library: library, location: @code, items: items)
+      @request_link ||= RequestLink.for(library:, location: @code, items:)
     end
 
     def location_link
@@ -52,10 +52,10 @@ class Holdings
 
     def as_json
       {
-        code: code,
+        code:,
         items: items.select(&:present?).map(&:as_json),
         mhld: mhld&.select(&:present?)&.map(&:as_json),
-        name: name
+        name:
       }
     end
 
