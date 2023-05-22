@@ -72,7 +72,7 @@
                   <%= item.loan_period %>
                 <% end %>
                 <span class="request-link">
-                  <%= render item.request_link %>
+                  <%= render ItemRequestLinkComponent.new(item: item) %>
                 </span>
               </td>
             </tr>
