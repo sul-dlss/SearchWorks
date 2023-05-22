@@ -78,6 +78,17 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
+global_ignored_stackmap_locations:
+  - BINDERY
+  - ENDPROCESS
+  - GRE-LOAN
+  - GREEN-RESV
+  - INPROCESS
+  - ON-ORDER
+  - REPAIR
+  - SL3-LOAN
+  - SLN-LOAN
+
 libraries:
   ARS:
     hours_api_url: ars/location/ars_archive
@@ -85,6 +96,19 @@ libraries:
   ART:
     hours_api_url: art/location/art_library
     name: Art & Architecture Library (Bowes)
+    ignored_stackmap_locations:
+      - ARTLCKL
+      - ARTLCKL-R
+      - ARTLCKM
+      - ARTLCKM-R
+      - ARTLCKO
+      - ARTLCKO-R
+      - ARTLCKS
+      - ARTLCKS-R
+      - MEDIA
+      - MEDIA-FOLI
+      - MICROFILM
+      - MICROTEXT
   BIOLOGY:
     hours_api_url: biology/location/biology_library
     name: Biology Library (Falconer)
@@ -102,6 +126,21 @@ libraries:
   EAST-ASIA:
     hours_api_url: east_asia/location/east_asia_library
     name: East Asia Library
+    ignored_stackmap_locations:
+      - ASK@EASIA
+      - BASECALNUM
+      - FOLIO-CHN
+      - FOLIO-JPN
+      - FOLIO-KOR
+      - LOCK-CHN
+      - LOCKED-STK
+      - MEDIA
+      - MICROTEXT
+      - NEWSPAPERS
+      - REF-CHN
+      - REF-JPN
+      - REF-KOR
+      - STACKS
   EDUCATION:
     hours_api_url: education/location/education_library
     name: Education Library (at SAL1&2)
@@ -139,6 +178,12 @@ libraries:
     hours_api_url: law/location/law_library
     name: Law Library (Crown)
     stackmap_api: https://stanfordlaw.stackmap.com/json/
+    ignored_stackmap_locations:
+      - FACULTY
+      - INTERNET
+      - LAW-ARCHIV
+      - STAFF
+      - TECH-SERV
   LANE-MED:
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library

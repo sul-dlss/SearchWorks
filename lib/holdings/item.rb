@@ -189,10 +189,9 @@ class Holdings
 
     # supports a global and local skip list for home_location
     def stackmapable_location?
-      return false if Constants::STACKMAP_SKIPLIST[:global].include?(home_location)
-      return true if Constants::STACKMAP_SKIPLIST[library].blank? # no local skiplist registered, so we're done
+      return false if Settings.global_ignored_stackmap_locations.include?(home_location)
 
-      Constants::STACKMAP_SKIPLIST[library].exclude?(home_location)
+      Array(Settings.libraries[library].ignored_stackmap_locations).exclude?(home_location)
     end
 
     def standard_or_zombie_library

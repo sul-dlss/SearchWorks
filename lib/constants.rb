@@ -939,55 +939,6 @@ module Constants
   }
 
   STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA LAW].freeze
-  STACKMAP_SKIPLIST = { # keys are libraries (with `:global` used for any library) and values are home locations
-    global: %w[BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN],
-    'ART' => %w[
-      ARTLCKL
-      ARTLCKL-R
-      ARTLCKM
-      ARTLCKM-R
-      ARTLCKO
-      ARTLCKO-R
-      ARTLCKS
-      ARTLCKS-R
-      MEDIA
-      MEDIA-FOLI
-      MICROFILM
-      MICROTEXT
-    ],
-    'EAST-ASIA' => %w[
-      ASK@EASIA
-      BASECALNUM
-      FOLIO-CHN
-      FOLIO-JPN
-      FOLIO-KOR
-      LOCK-CHN
-      LOCKED-STK
-      MEDIA
-      MICROTEXT
-      NEWSPAPERS
-      REF-CHN
-      REF-JPN
-      REF-KOR
-      STACKS
-    ],
-    'LAW' => %w[
-      BINDERY
-      ENDPROCESS
-      FACULTY
-      GRE-LOAN
-      GREEN-RESV
-      INPROCESS
-      INTERNET
-      LAW-ARCHIV
-      ON-ORDER
-      REPAIR
-      SL3-LOAN
-      SLN-LOAN
-      STAFF
-      TECH-SERV
-    ]
-  }.freeze
 
   BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
 
