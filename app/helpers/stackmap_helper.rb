@@ -1,7 +1,7 @@
 module StackmapHelper
   def stackmap_api_url(library)
-    return Settings.STACKMAP_API_URL.LAW if library == 'LAW'
+    return Settings.libraries.LAW.stackmap_api if library == 'LAW'
 
-    Settings.STACKMAP_API_URL.DEFAULT
+    Settings.libraries.default.stackmap_api
   end
 end

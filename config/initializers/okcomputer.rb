@@ -47,7 +47,6 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 # stacks
 # hours api
 # SSRC_REQUESTS_URL
-# STACKMAP_API_URL
 
 Rails.application.reloader.to_prepare do
   OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)

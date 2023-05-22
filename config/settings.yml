@@ -10,9 +10,6 @@ REQUESTS_URL: "https://host.example.com/requests/new"
 SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
 HOOVER_REQUESTS_URL: 'https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20'
 LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
-STACKMAP_API_URL:
-  DEFAULT: "https://stanford.stackmap.com/json/"
-  LAW: "https://stanfordlaw.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'
 NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
@@ -84,10 +81,12 @@ LIB_GUIDES:
 libraries:
   LAW:
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
+    stackmap_api: https://stanfordlaw.stackmap.com/json/
   LANE:
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
   default:
     ezproxy_host: https://stanford.idm.oclc.org/login?
+    stackmap_api: https://stanford.stackmap.com/json/
 
 selected_databases:
    "5749286":
