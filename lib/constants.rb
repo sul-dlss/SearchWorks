@@ -862,8 +862,6 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
-
   FORCE_AVAILABLE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'IC-DISPLAY'
