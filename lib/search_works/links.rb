@@ -23,7 +23,7 @@ module SearchWorks
       ezproxy_host = if libraries.include?('LAW') && ezproxied_hosts['LAW'].any?(link_host)
                        Settings.libraries.LAW.ezproxy_host
                      elsif libraries.include?('LANE-MED') && ezproxied_hosts['LANE-MED'].any?(link_host)
-                       Settings.libraries.LANE.ezproxy_host
+                       Settings.libraries['LANE-MED'].ezproxy_host
                      elsif ezproxied_hosts[:default].any?(link_host)
                        Settings.libraries.default.ezproxy_host
                      end

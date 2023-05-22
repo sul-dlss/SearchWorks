@@ -1070,37 +1070,6 @@ module Constants
     # No Physics or Meyer (ACOMP) in doc provided, the show up on web
   }
 
-  HOURS_LOCATIONS = {
-    'GREEN' => 'green/location/green_library',
-    'SAL' => 'sal12/location/sal12_library',
-    'MEYER' => 'meyer/location/meyer_24_hour',
-    'ARS' => 'ars/location/ars_archive',
-    'ART' => 'art/location/art_library',
-    'BIOLOGY' => 'biology/location/biology_library',
-    'CHEMCHMENG' => 'chemistry/location/chemistry_library',
-    'EARTH-SCI' => 'earth_sciences/location/earth_sciences_library',
-    'EAST-ASIA' => 'east_asia/location/east_asia_library',
-    'EDUCATION' => 'education/location/education_library',
-    'ENG' => 'engineering/location/engineering_library',
-    'HOPKINS' => 'marine_biology/location/marine_biology_library',
-    'MATH-CS' => 'math_stats/location/math_stats_library',
-    'MEDIA-MTXT' => 'green/location/media_microtext',
-    'MUSIC' => 'music/location/music_library',
-    'RUMSEYMAP' => 'Rumsey/location/visitor-access',
-    'SCIENCE' => 'science/location/library-circulation',
-    'SPEC-COLL' => 'special_collections/location/spec_coll_reading',
-    'BUSINESS' => 'business/location/business_library',
-    'HV-ARCHIVE' => 'hoover_archives/location/hv_archives',
-    'HOOVER' => 'hoover_archives/location/hv_archives',
-    'LATHROP' => 'lathrop/location/tech-lounge',
-    'LAW' => 'law/location/law_library',
-    'LANE-MED' => 'medical/location/medical_library',
-    'SLAC' => 'slac/location/slac',
-    'IC' => 'green/location/reference',
-    'IC-CHAT' => 'green/location/reference',
-    'TANNER' => 'philosophy/location/library-circulation'
-  }
-
   LIBRARY_ABOUT = {
     'ARS' => 'https://library.stanford.edu/libraries/ars/about',
     'ART' => 'https://library.stanford.edu/libraries/art/about',

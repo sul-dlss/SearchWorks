@@ -79,11 +79,65 @@ LIB_GUIDES:
   SITE_ID: 12345
 
 libraries:
+  ARS:
+    hours_api_url: ars/location/ars_archive
+  ART:
+    hours_api_url: art/location/art_library
+  BIOLOGY:
+    hours_api_url: biology/location/biology_library
+  BUSINESS:
+    hours_api_url: business/location/business_library
+  GREEN:
+    hours_api_url: green/location/green_library
+  CHEMCHMENG:
+    hours_api_url: chemistry/location/chemistry_library
+  EARTH-SCI:
+    hours_api_url: earth_sciences/location/earth_sciences_library
+  EAST-ASIA:
+    hours_api_url: east_asia/location/east_asia_library
+  EDUCATION:
+    hours_api_url: education/location/education_library
+  ENG:
+    hours_api_url: engineering/location/engineering_library
+  HOOVER:
+    hours_api_url: hoover_archives/location/hv_archives
+  HOPKINS:
+    hours_api_url: marine_biology/location/marine_biology_library
+  HV-ARCHIVE:
+    hours_api_url: hoover_archives/location/hv_archives
+  IC:
+    hours_api_url: green/location/reference
+  IC-CHAT:
+    hours_api_url: green/location/reference
   LAW:
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
+    hours_api_url: law/location/law_library
     stackmap_api: https://stanfordlaw.stackmap.com/json/
-  LANE:
+  LANE-MED:
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
+    hours_api_url: medical/location/medical_library
+  LATHROP:
+    hours_api_url: lathrop/location/tech-lounge',
+  MATH-CS:
+    hours_api_url: math_stats/location/math_stats_library
+  MEDIA-MTXT:
+    hours_api_url: green/location/media_microtext
+  MEYER:
+    hours_api_url: meyer/location/meyer_24_hour
+  MUSIC:
+    hours_api_url: music/location/music_library
+  RUMSEYMAP:
+    hours_api_url: Rumsey/location/visitor-access
+  SAL:
+    hours_api_url: sal12/location/sal12_library
+  SCIENCE:
+    hours_api_url: science/location/library-circulation
+  SLAC:
+    hours_api_url: slac/location/slac
+  SPEC-COLL:
+    hours_api_url: special_collections/location/spec_coll_reading
+  TANNER:
+    hours_api_url: philosophy/location/library-circulation
   default:
     ezproxy_host: https://stanford.idm.oclc.org/login?
     stackmap_api: https://stanford.stackmap.com/json/
