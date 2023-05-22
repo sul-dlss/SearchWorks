@@ -1,7 +1,9 @@
 module StackmapHelper
   def stackmap_api_url(library)
-    return Settings.libraries.LAW.stackmap_api if library == 'LAW'
+    settings = Settings.libraries[library]
+    return settings.stackmap_api if settings
 
-    Settings.libraries.default.stackmap_api
+    Honeybadger.notify("Called stackmapable_library? on an unknown library", context: { library: library })
+    false
   end
 end

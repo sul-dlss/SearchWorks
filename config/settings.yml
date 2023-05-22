@@ -109,6 +109,7 @@ libraries:
       - MEDIA-FOLI
       - MICROFILM
       - MICROTEXT
+    stackmap_api: https://stanford.stackmap.com/json/
   BIOLOGY:
     hours_api_url: biology/location/biology_library
     name: Biology Library (Falconer)
@@ -141,6 +142,7 @@ libraries:
       - REF-JPN
       - REF-KOR
       - STACKS
+    stackmap_api: https://stanford.stackmap.com/json/
   EDUCATION:
     hours_api_url: education/location/education_library
     name: Education Library (at SAL1&2)
@@ -152,6 +154,7 @@ libraries:
   GREEN:
     hours_api_url: green/location/green_library
     name: Green Library
+    stackmap_api: https://stanford.stackmap.com/json/
   GRN-REF:
     name: Green Library
   HOOVER:
@@ -197,6 +200,7 @@ libraries:
   MEDIA-MTXT:
     hours_api_url: green/location/media_microtext
     name: Media & Microtext Center
+    stackmap_api: https://stanford.stackmap.com/json/
   MEYER:
     hours_api_url: meyer/location/meyer_24_hour
     name: Meyer Library
@@ -232,7 +236,6 @@ libraries:
     name: Stanford Libraries
   default:
     ezproxy_host: https://stanford.idm.oclc.org/login?
-    stackmap_api: https://stanford.stackmap.com/json/
 
 selected_databases:
    "5749286":

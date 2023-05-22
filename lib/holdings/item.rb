@@ -184,7 +184,11 @@ class Holdings
 
     # is in the list of stackmappable libraries
     def stackmapable_library?
-      Constants::STACKMAP_LIBS.include?(library)
+      settings = Settings.libraries[library]
+      return settings.stackmap_api.present? if settings
+
+      Honeybadger.notify("Called stackmapable_library? on an unknown library", context: { library: library })
+      false
     end
 
     # supports a global and local skip list for home_location
