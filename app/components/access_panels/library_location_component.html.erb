@@ -38,7 +38,7 @@
           <% end %>
         </td>
         <% if item.present? %>
-          <td class="item-availability" data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link.render? %>>
+          <td class="item-availability" data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if !location_request_link.render? && item.circulates? && !item.request_link_policy.display? %>>
             <span class="availability-icon-wrapper">
               <i class="availability-icon <%= item.status.availability_class %>"></i>
               <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
@@ -55,7 +55,7 @@
             <% end %>
             <% unless location_request_link.render? %>
               <span class="request-link">
-                <%= render item.request_link %>
+                <%= render ItemRequestLinkComponent.new(item: item) %>
               </span>
             <% end %>
           </td>

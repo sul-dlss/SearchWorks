@@ -1,4 +1,5 @@
 require 'holdings/item'
+require 'holdings/item_request_link_policy'
 require 'holdings/library'
 require 'holdings/location'
 require 'holdings/mhld'

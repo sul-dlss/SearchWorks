@@ -150,8 +150,8 @@ class Holdings
       }
     end
 
-    def request_link
-      @request_link ||= ItemRequestLinkComponent.new(item: self)
+    def request_link_policy
+      @request_link_policy ||= ItemRequestLinkPolicy.new(item: self)
     end
 
     # create sorting key for spine
