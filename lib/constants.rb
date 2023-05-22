@@ -993,47 +993,6 @@ module Constants
 
   BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
 
-  LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
-    'ARS' => 'Archive of Recorded Sound',
-    'ART' => 'Art & Architecture Library (Bowes)',
-    'BIOLOGY' => 'Biology Library (Falconer)',
-    'CHEMCHMENG' => 'Chemistry & ChemEng Library (Swain)',
-    'CLASSICS' => 'Classics Library',
-    # "CPM" => "Obsolete",
-    'EARTH-SCI' => 'Earth Sciences Library (Branner)',
-    'EAST-ASIA' => 'East Asia Library',
-    'EDUCATION' => 'Education Library (at SAL1&2)',
-    'SW-E-RESV' => 'eReserve', # Library does not exist, this is an internal code used for reserves.
-    'ENG' => 'Engineering Library (Terman)',
-    'GOV-DOCS' => 'Green Library',
-    'GREEN' => 'Green Library',
-    'GRN-REF' => 'Green Library',
-    'HOOVER' => 'Hoover Library',
-    'HOPKINS' => 'Marine Biology Library (Miller)',
-    'HV-ARCHIVE' => 'Hoover Archives',
-    # "ILB" => "Ignore",
-    'LANE-MED' => 'Medical Library (Lane)',
-    'LATHROP' => 'Lathrop Library',
-    'LAW' => 'Law Library (Crown)',
-    'BUSINESS' => 'Business Library',
-    'JACKSON' => 'Business Library',
-    'MATH-CS' => 'Math & Statistics Library',
-    'SW-MEDIA-RESV' => 'Media & Microtext Center', # Library does not exist, this is an internal code used for reserves.
-    'MEDIA-MTXT' => 'Media & Microtext Center',
-    'MEYER' => 'Meyer Library',
-    'MUSIC' => 'Music Library',
-    'RUMSEYMAP' => 'David Rumsey Map Center',
-    # "PHYSICS" => "Stanford Libraries",
-    'SAL' => 'SAL1&2 (on-campus shelving)',
-    'SAL3' => 'SAL3 (off-campus storage)',
-    'SAL-NEWARK' => 'SAL Newark (off-campus storage)',
-    'SCIENCE' => 'Science Library (Li and Ma)',
-    'SPEC-COLL' => 'Special Collections',
-    # "SPEC-DESK" => "(In-transit location for SAL paged items)",
-    'TANNER' => 'Philosophy Library (Tanner)',
-    'ZOMBIE' => 'Stanford Libraries'
-    # "SUL" => "Stanford Libraries"
-  }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
   CONTACT_INFO = {

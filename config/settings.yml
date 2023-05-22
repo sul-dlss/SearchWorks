@@ -81,63 +81,106 @@ LIB_GUIDES:
 libraries:
   ARS:
     hours_api_url: ars/location/ars_archive
+    name: Archive of Recorded Sound
   ART:
     hours_api_url: art/location/art_library
+    name: Art & Architecture Library (Bowes)
   BIOLOGY:
     hours_api_url: biology/location/biology_library
+    name: Biology Library (Falconer)
   BUSINESS:
     hours_api_url: business/location/business_library
-  GREEN:
-    hours_api_url: green/location/green_library
+    name: Business Library
   CHEMCHMENG:
     hours_api_url: chemistry/location/chemistry_library
+    name: Chemistry & ChemEng Library (Swain)
+  CLASSICS:
+    name: Classics Library
   EARTH-SCI:
     hours_api_url: earth_sciences/location/earth_sciences_library
+    name: Earth Sciences Library (Branner)
   EAST-ASIA:
     hours_api_url: east_asia/location/east_asia_library
+    name: East Asia Library
   EDUCATION:
     hours_api_url: education/location/education_library
+    name: Education Library (at SAL1&2)
   ENG:
     hours_api_url: engineering/location/engineering_library
+    name: Engineering Library (Terman)
+  GOV-DOCS:
+    name: Green Library
+  GREEN:
+    hours_api_url: green/location/green_library
+    name: Green Library
+  GRN-REF:
+    name: Green Library
   HOOVER:
     hours_api_url: hoover_archives/location/hv_archives
+    name: Hoover Library
   HOPKINS:
     hours_api_url: marine_biology/location/marine_biology_library
+    name: Marine Biology Library (Miller)
   HV-ARCHIVE:
     hours_api_url: hoover_archives/location/hv_archives
+    name: Hoover Archives
   IC:
     hours_api_url: green/location/reference
   IC-CHAT:
     hours_api_url: green/location/reference
+  JACKSON:
+    name: Business Library
   LAW:
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
     hours_api_url: law/location/law_library
+    name: Law Library (Crown)
     stackmap_api: https://stanfordlaw.stackmap.com/json/
   LANE-MED:
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library
+    name: Medical Library (Lane)
   LATHROP:
-    hours_api_url: lathrop/location/tech-lounge',
+    hours_api_url: lathrop/location/tech-lounge
+    name: Lathrop Library
   MATH-CS:
     hours_api_url: math_stats/location/math_stats_library
+    name: Math & Statistics Library
   MEDIA-MTXT:
     hours_api_url: green/location/media_microtext
+    name: Media & Microtext Center
   MEYER:
     hours_api_url: meyer/location/meyer_24_hour
+    name: Meyer Library
   MUSIC:
     hours_api_url: music/location/music_library
+    name: Music Library
   RUMSEYMAP:
     hours_api_url: Rumsey/location/visitor-access
+    name: David Rumsey Map Center
   SAL:
     hours_api_url: sal12/location/sal12_library
+    name: SAL1&2 (on-campus shelving)
+  SAL3:
+    name: SAL3 (off-campus storage)
+  SAL-NEWARK:
+    name: SAL Newark (off-campus storage)
   SCIENCE:
     hours_api_url: science/location/library-circulation
+    name: Science Library (Li and Ma)
   SLAC:
     hours_api_url: slac/location/slac
   SPEC-COLL:
     hours_api_url: special_collections/location/spec_coll_reading
+    name: Special Collections
+  SW-E-RESV:
+    name: 'eReserve' # Library does not exist, this is an internal code used for reserves.
+  SW-MEDIA-RESV:
+    name: 'Media & Microtext Center' # Library does not exist, this is an internal code used for reserves.'
   TANNER:
     hours_api_url: philosophy/location/library-circulation
+    name: Philosophy Library (Tanner)
+  ZOMBIE:
+    name: Stanford Libraries
   default:
     ezproxy_host: https://stanford.idm.oclc.org/login?
     stackmap_api: https://stanford.stackmap.com/json/
