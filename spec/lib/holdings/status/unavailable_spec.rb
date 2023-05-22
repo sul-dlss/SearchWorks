@@ -22,8 +22,8 @@ describe Holdings::Status::Unavailable do
   end
 
   describe "unavailable current locations" do
-    it "should be unavailable" do
-      Settings.unavailable_current_locations.default.each do |location|
+    it "is unavailable for all configured locations" do
+      Settings.unavailable_current_locations.each do |location|
         expect(Holdings::Status::Unavailable.new(OpenStruct.new(current_location: Holdings::Location.new(location)))).to be_unavailable
       end
     end

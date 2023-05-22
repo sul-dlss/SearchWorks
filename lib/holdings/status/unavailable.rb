@@ -28,8 +28,7 @@ class Holdings
       end
 
       def unavailable_current_location?
-        current_location_ends_with_loan? ||
-        (Settings.unavailable_current_locations[library] || Settings.unavailable_current_locations.default).include?(current_location)
+        current_location_ends_with_loan? || Settings.unavailable_current_locations.include?(current_location)
       end
 
       def current_location_ends_with_loan?

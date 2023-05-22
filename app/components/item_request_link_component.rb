@@ -53,7 +53,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
     return true if current_location.end_with?('-LOAN') && current_location != "SEE-LOAN"
 
     (Settings.requestable_current_locations[library] || Settings.requestable_current_locations.default).include?(current_location) ||
-      (Settings.unavailable_current_locations[library] || Settings.unavailable_current_locations.default).include?(current_location)
+      Settings.unavailable_current_locations.include?(current_location)
   end
 
   def in_mediated_pageable_location?
