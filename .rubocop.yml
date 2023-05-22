@@ -4,7 +4,8 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-performance
-
+  - rubocop-capybara
+  
 AllCops:
   Exclude:
     - 'Gemfile'
@@ -12,6 +13,7 @@ AllCops:
     - 'db/**/*'
     - 'vendor/**/*'
   TargetRubyVersion: 3.0
+  SuggestExtensions: false
 
 Rails:
   Enabled: true
@@ -306,9 +308,9 @@ Capybara/SpecificActions: # new in 2.14
   Enabled: true
 Capybara/SpecificFinders: # new in 2.13
   Enabled: true
-RSpec/FactoryBot/ConsistentParenthesesStyle: # new in 2.14
+FactoryBot/ConsistentParenthesesStyle: # new in 2.14
   Enabled: true
-RSpec/FactoryBot/SyntaxMethods: # new in 2.7
+FactoryBot/SyntaxMethods: # new in 2.7
   Enabled: true
 RSpec/Rails/AvoidSetupHook: # new in 2.4
   Enabled: true
@@ -384,7 +386,7 @@ RSpec/RedundantAround: # new in 2.19
   Enabled: true
 RSpec/SkipBlockInsideExample: # new in 2.19
   Enabled: true
-RSpec/FactoryBot/FactoryNameStyle: # new in 2.16
+FactoryBot/FactoryNameStyle: # new in 2.16
   Enabled: true
 RSpec/Rails/MinitestAssertions: # new in 2.17
   Enabled: true
@@ -407,4 +409,20 @@ Style/ConcatArrayLiterals: # new in 1.41
 Style/DataInheritance: # new in 1.49
   Enabled: true
 Style/DirEmpty: # new in 1.48
+  Enabled: true
+Style/ExactRegexpMatch: # new in 1.51
+  Enabled: true
+FactoryBot/AssociationStyle: # new in 2.23
+  Enabled: true
+FactoryBot/FactoryAssociationWithStrategy: # new in 2.23
+  Enabled: true
+FactoryBot/RedundantFactoryOption: # new in 2.23
+  Enabled: true
+RSpec/BeEmpty: # new in 2.20
+  Enabled: true
+RSpec/ContainExactly: # new in 2.19
+  Enabled: true
+RSpec/IndexedLet: # new in 2.20
+  Enabled: true
+RSpec/MatchArray: # new in 2.19
   Enabled: true
