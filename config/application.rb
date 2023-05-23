@@ -27,7 +27,6 @@ module SearchWorks
     require 'search_works/links'
     require 'hours_request'
     require 'holdings'
-    require 'live_lookup'
     require 'purl_embed'
     require 'search_query_modifier'
 
