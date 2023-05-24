@@ -20,7 +20,14 @@ describe HathiTrustLinks do
     end
 
     context 'when the document has fulltext' do
-      before { document_data[:url_fulltext] = ['http://example.com'] }
+      before do
+        document_data[:marc_links_struct] = [{
+          href: "https://example.com",
+          link_text: "The Link",
+          fulltext: true,
+          stanford_only: true
+        }]
+      end
 
       it { expect(ht_links).not_to be_present }
     end

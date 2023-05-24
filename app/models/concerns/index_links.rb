@@ -1,92 +1,55 @@
-# IndexLinks module is mixed into the SolrDocument.
-# It proveds an #index_links method which will return
-# Link objects for every link field in the SolrDocument.
+# index_links returns a SearchWorks::Links::Link object for each :marc_link_struct value.
+# index_links are displayed on access panels and get different treatment
+# for link_text than marc_links created in the MarcLinks module.
 module IndexLinks
   def index_links
-    @index_links ||= SearchWorks::Links.new(link_fields.map { |link_field| IndexLinkProcessor.new(self, link_field).to_searchworks_link })
-  end
-
-  private
-
-  def link_fields
-    [
-      self[:url_fulltext],
-      self[:url_suppl],
-      self[:url_sfx],
-      self[:managed_purl_urls]
-    ].flatten.compact.uniq
+    @index_links ||= SearchWorks::Links.new(
+      fetch(:marc_links_struct, []).map do |link_struct|
+        IndexLinkProcessor.new(self, link_struct).to_searchworks_link
+      end
+    )
   end
 
   class IndexLinkProcessor
-    attr_reader :document, :link_field
+    attr_reader :document, :link_struct
 
-    def initialize(document, link_field)
+    def initialize(document, link_struct)
       @document = document
-      @link_field = link_field
+      @link_struct = link_struct
     end
 
     def to_searchworks_link
-      SearchWorks::Links::Link.new(
-        link_text:,
-        href:,
-        fulltext: link_is_fulltext?,
-        stanford_only: link_is_stanford_only?,
-        finding_aid: link_is_finding_aid?,
-        sfx: link_is_sfx?,
-        managed_purl: link_is_managed_purl?
-      )
-    end
-
-    def href
-      @href ||= SearchWorks::Links.ezproxy_url(link_field, document) || link_field
+      SearchWorks::Links::Link.new(link_struct.merge({ link_text:, href: }))
     end
 
     private
 
+    def href
+      @href ||= SearchWorks::Links.ezproxy_url(link_struct[:href], document) || link_struct[:href]
+    end
+
     def link_text
-      if link_is_finding_aid?
+      if link_struct[:finding_aid]
         'Online Archive of California'
-      elsif link_is_sfx?
+      elsif link_struct[:sfx]
         'Find full text'
-      else
+      elsif link_struct[:href]
         link_host
+      else
+        link_struct[:link_text]
       end
     end
 
-    def link_is_finding_aid?
-      link_field =~ %r{oac\.cdlib\.org(/findaid)?/ark:}
-    end
-
-    def link_is_fulltext?
-      @document[:url_fulltext] &&
-        @document[:url_fulltext].include?(link_field)
-    end
-
-    def link_is_stanford_only?
-      @document[:url_restricted] &&
-        @document[:url_restricted].include?(link_field)
-    end
-
-    def link_is_sfx?
-      @document[:url_sfx] &&
-        @document[:url_sfx].include?(link_field)
-    end
-
-    def link_is_managed_purl?
-      @document[:managed_purl_urls] &&
-        @document[:managed_purl_urls].include?(link_field)
-    end
-
     def link_host
-      uri = URI.parse(Addressable::URI.encode(link_field.strip))
+      uri = URI.parse(Addressable::URI.encode(link_struct[:href].strip))
       host = uri.host
       if host =~ SearchWorks::Links::PROXY_REGEX && uri.query
         query = CGI.parse(uri.query)
         host = URI.parse(query['url'].first).host if query['url'].present?
       end
-      host || link_field
+      host || link_struct[:href]
     rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
-      link_field
+      link_struct[:href]
     end
   end
 end

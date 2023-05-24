@@ -13,7 +13,7 @@
         </li>
       <% end %>
 
-      <% if document[:managed_purl_urls].blank? %>
+      <% if document.index_links.managed_purls.none? %>
         <% book_ids  = get_book_ids(document) %>
         <li class="hide google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
           <a href="" class="full-view">Google Books (Full view)</a>

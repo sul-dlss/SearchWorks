@@ -1,9 +1,26 @@
 require "spec_helper"
 
 describe Druid do
-  let(:explicit_druid) { SolrDocument.new(druid: "321cba", url_fulltext: ["https://purl.stanford.edu/abc123"]) }
-  let(:document) { SolrDocument.new(url_fulltext: ["https://purl.stanford.edu/abc123"], url_suppl: ["https://stanford.edu/blah"]) }
-  let(:another_document) { SolrDocument.new(url_fulltext: ["https://stanford.edu/blah"], url_suppl: ["https://purl.stanford.edu/abc123"]) }
+  let(:explicit_druid) do
+    SolrDocument.new(
+      druid: "321cba",
+      marc_links_struct: [{ href: "https://purl.stanford.edu/abc123", fulltext: true }]
+    )
+  end
+
+  let(:document) do
+    SolrDocument.new(
+      marc_links_struct: [{ href: "https://purl.stanford.edu/abc123", fulltext: true },
+                          { href: "https://stanford.edu/blah" }]
+    )
+  end
+
+  let(:another_document) do
+    SolrDocument.new(
+      marc_links_struct: [{ href: "https://stanford.edu/blah", fulltext: true },
+                          { href: "https://purl.stanford.edu/abc123" }]
+    )
+  end
 
   it "should return the druid from the druid field if available" do
     expect(explicit_druid.druid).to eq "321cba"

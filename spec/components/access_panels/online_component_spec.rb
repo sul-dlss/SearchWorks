@@ -4,7 +4,7 @@ describe AccessPanels::OnlineComponent, type: :component do
   include ModsFixtures
   include Marc856Fixtures
 
-  let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }])) }
+  let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true }])) }
   let(:supplemental) { described_class.new(document: SolrDocument.new) }
   let(:eds_links) do
     described_class.new(
@@ -16,7 +16,10 @@ describe AccessPanels::OnlineComponent, type: :component do
 
   let(:sfx) do
     described_class.new(
-      document: SolrDocument.new(url_sfx: 'http://example.com/sfx-link', marcxml: fulltext_856)
+      document: SolrDocument.new(
+        marc_links_struct: [{ link_text: "Link text", href: "http://example.com/sfx-link", sfx: true }],
+        marcxml: fulltext_856
+      )
     )
   end
 
@@ -24,7 +27,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     described_class.new(
       document: SolrDocument.new(
         collection: ['12345'],
-        marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true, stanford_only: nil, finding_aid: false, managed_purl: nil, file_id: nil, druid: nil }]
+        marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true }]
       )
     )
   end
@@ -32,7 +35,7 @@ describe AccessPanels::OnlineComponent, type: :component do
   let(:managed_purl_doc) do
     described_class.new(
       document: SolrDocument.new(
-        managed_purl_urls: ['https://library.stanford.edu']
+        marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true, managed_purl: true }]
       )
     )
   end
@@ -41,7 +44,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     described_class.new(
       document: SolrDocument.new(
         collection: ['12345'],
-        url_fulltext: 'https://purl.stanford.edu/'
+        marc_links_struct: [{ link_text: "Link text", href: "https://purl.stanford.edu/", fulltext: true, managed_purl: true }]
       )
     )
   end
@@ -132,7 +135,9 @@ describe AccessPanels::OnlineComponent, type: :component do
     end
 
     context 'when given an sfx document' do
-      let(:solr_document_data) { { url_sfx: ['https://example.com/sfx'] } }
+      let(:solr_document_data) do
+        { marc_links_struct: [{ link_text: "Link text", href: "https://example.com/sfx", sfx: true }] }
+      end
 
       it { expect(component.display_connection_problem_links?).to be true }
     end
@@ -189,7 +194,8 @@ describe AccessPanels::OnlineComponent, type: :component do
 
     context 'when the record has an SFX link' do
       it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
-        document = SolrDocument.new(url_sfx: ['http://example.com/sfx-link'], marcxml: simple_856)
+        document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true],
+                                    marcxml: simple_856)
         render_inline(described_class.new(document:))
         expect(page).to     have_css('.panel-online')
         expect(page).not_to have_link('Find full text')

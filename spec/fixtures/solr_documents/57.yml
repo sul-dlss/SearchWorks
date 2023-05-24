@@ -3,4 +3,5 @@
 :title_display: SFX Catalog Item
 :format_main_ssim: Journal/Periodical
 :marcxml: <%= metadata1 %>
-:url_sfx: http://sfx.example.com/
+:marc_links_struct:
+ - '{ "href": "http://sfx.example.com/", "sfx": true }'

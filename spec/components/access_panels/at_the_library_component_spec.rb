@@ -322,7 +322,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
-        url_suppl: ["http://oac.cdlib.org/findaid/ark:/something-else"]
+        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
       )
       render_inline(described_class.new(document:))
     end
@@ -354,7 +354,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
-          url_suppl: ['http://oac.cdlib.org/findaid/ark:/something-else']
+          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )
         render_inline(described_class.new(document:))
       end

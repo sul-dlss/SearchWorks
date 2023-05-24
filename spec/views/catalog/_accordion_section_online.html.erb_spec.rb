@@ -34,9 +34,9 @@ describe "catalog/_index_online_section" do
           document: SolrDocument.new(
             id: '12345',
             isbn_display: [123],
-            managed_purl_urls: [
-              'https://purl.stanford.edu/ct493wg6431',
-              'https://purl.stanford.edu/zg338xh5248'
+            marc_links_struct: [
+              { href: 'https://purl.stanford.edu/ct493wg6431', managed_purl: true },
+              { href: 'https://purl.stanford.edu/zg338xh5248', managed_purl: true }
             ]
           )
         )

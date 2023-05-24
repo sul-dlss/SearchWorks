@@ -8,8 +8,8 @@ module Druid
   private
 
   def purls_from_urls
-    [self[:url_fulltext], self[:url_suppl]].flatten.compact.select do |url|
-      url =~ /purl\.stanford\.edu/
+    [index_links.fulltext, index_links.supplemental].flatten.compact.map(&:href).select do |href|
+      /purl\.stanford\.edu/.match?(href)
     end
   end
 end

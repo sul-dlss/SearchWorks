@@ -103,7 +103,7 @@ describe "catalog/_index_marc" do
     let(:document) do
       SolrDocument.new(
         marcxml: metadata1,
-        url_fulltext: ['http://oac.cdlib.org/findaid/ark:/12345']
+        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
       )
     end
 

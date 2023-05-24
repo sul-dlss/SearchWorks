@@ -98,7 +98,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   context 'for Hoover Archive items with finding aids' do
     let(:document) do
       SolrDocument.new(
-        url_suppl: ['http://oac.cdlib.org/ark:/abc123']
+        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
       )
     end
     let(:library) { 'HV-ARCHIVE' }
@@ -150,7 +150,10 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'when the item is also available via SFX' do
       let(:document) do
-        SolrDocument.new(url_sfx: 'https://library.stanford.edu', item_display: item_display_field)
+        SolrDocument.new(
+          item_display: item_display_field,
+          marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }]
+        )
       end
 
       it { expect(page).not_to have_link }
@@ -158,7 +161,10 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'when the full text is also available' do
       let(:document) do
-        SolrDocument.new(url_fulltext: 'https://library.stanford.edu', item_display: item_display_field)
+        SolrDocument.new(
+          marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true }],
+          item_display: item_display_field
+        )
       end
 
       it { expect(page).not_to have_link }
@@ -192,7 +198,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:document) do
       SolrDocument.new(
         id: '12345',
-        url_suppl: ['http://oac.cdlib.org/ark:/abc123']
+        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
       )
     end
 
