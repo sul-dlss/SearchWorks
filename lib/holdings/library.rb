@@ -9,7 +9,11 @@ class Holdings
     end
 
     def name
-      Constants::LIB_TRANSLATIONS[@code]
+      config = Settings.libraries[@code]
+      return config.name if config
+
+      Honeybadger.notify("No library config", context: { code: @code })
+      nil
     end
 
     def locations

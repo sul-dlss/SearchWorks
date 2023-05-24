@@ -862,8 +862,6 @@ module Constants
                       'TECH-SERV',
                       'TEMP-LL']
 
-  HOOVER_LIBS = %w[HOOVER HV-ARCHIVE].freeze
-
   FORCE_AVAILABLE_CURRENT_LOCS = [
     'ART-AT-ENG',
     'IC-DISPLAY'
@@ -940,100 +938,8 @@ module Constants
     'TANN-RESV' => 'TANNER'
   }
 
-  STACKMAP_LIBS = %w[GREEN MEDIA-MTXT ART EAST-ASIA LAW].freeze
-  STACKMAP_SKIPLIST = { # keys are libraries (with `:global` used for any library) and values are home locations
-    global: %w[BINDERY ENDPROCESS GRE-LOAN GREEN-RESV INPROCESS ON-ORDER REPAIR SL3-LOAN SLN-LOAN],
-    'ART' => %w[
-      ARTLCKL
-      ARTLCKL-R
-      ARTLCKM
-      ARTLCKM-R
-      ARTLCKO
-      ARTLCKO-R
-      ARTLCKS
-      ARTLCKS-R
-      MEDIA
-      MEDIA-FOLI
-      MICROFILM
-      MICROTEXT
-    ],
-    'EAST-ASIA' => %w[
-      ASK@EASIA
-      BASECALNUM
-      FOLIO-CHN
-      FOLIO-JPN
-      FOLIO-KOR
-      LOCK-CHN
-      LOCKED-STK
-      MEDIA
-      MICROTEXT
-      NEWSPAPERS
-      REF-CHN
-      REF-JPN
-      REF-KOR
-      STACKS
-    ],
-    'LAW' => %w[
-      BINDERY
-      ENDPROCESS
-      FACULTY
-      GRE-LOAN
-      GREEN-RESV
-      INPROCESS
-      INTERNET
-      LAW-ARCHIV
-      ON-ORDER
-      REPAIR
-      SL3-LOAN
-      SLN-LOAN
-      STAFF
-      TECH-SERV
-    ]
-  }.freeze
-
   BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
 
-  LIB_TRANSLATIONS = { # "APPLIEDPHY" => "Applied Physics Dept",
-    'ARS' => 'Archive of Recorded Sound',
-    'ART' => 'Art & Architecture Library (Bowes)',
-    'BIOLOGY' => 'Biology Library (Falconer)',
-    'CHEMCHMENG' => 'Chemistry & ChemEng Library (Swain)',
-    'CLASSICS' => 'Classics Library',
-    # "CPM" => "Obsolete",
-    'EARTH-SCI' => 'Earth Sciences Library (Branner)',
-    'EAST-ASIA' => 'East Asia Library',
-    'EDUCATION' => 'Education Library (at SAL1&2)',
-    'SW-E-RESV' => 'eReserve', # Library does not exist, this is an internal code used for reserves.
-    'ENG' => 'Engineering Library (Terman)',
-    'GOV-DOCS' => 'Green Library',
-    'GREEN' => 'Green Library',
-    'GRN-REF' => 'Green Library',
-    'HOOVER' => 'Hoover Library',
-    'HOPKINS' => 'Marine Biology Library (Miller)',
-    'HV-ARCHIVE' => 'Hoover Archives',
-    # "ILB" => "Ignore",
-    'LANE-MED' => 'Medical Library (Lane)',
-    'LATHROP' => 'Lathrop Library',
-    'LAW' => 'Law Library (Crown)',
-    'BUSINESS' => 'Business Library',
-    'JACKSON' => 'Business Library',
-    'MATH-CS' => 'Math & Statistics Library',
-    'SW-MEDIA-RESV' => 'Media & Microtext Center', # Library does not exist, this is an internal code used for reserves.
-    'MEDIA-MTXT' => 'Media & Microtext Center',
-    'MEYER' => 'Meyer Library',
-    'MUSIC' => 'Music Library',
-    'RUMSEYMAP' => 'David Rumsey Map Center',
-    # "PHYSICS" => "Stanford Libraries",
-    'SAL' => 'SAL1&2 (on-campus shelving)',
-    'SAL3' => 'SAL3 (off-campus storage)',
-    'SAL-NEWARK' => 'SAL Newark (off-campus storage)',
-    'SCIENCE' => 'Science Library (Li and Ma)',
-    'SPEC-COLL' => 'Special Collections',
-    # "SPEC-DESK" => "(In-transit location for SAL paged items)",
-    'TANNER' => 'Philosophy Library (Tanner)',
-    'ZOMBIE' => 'Stanford Libraries'
-    # "SUL" => "Stanford Libraries"
-  }
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
   CONTACT_INFO = {
@@ -1068,68 +974,6 @@ module Constants
       ['SLAC National Accelerator Laboratory Library', '650 926 2411']
     ]
     # No Physics or Meyer (ACOMP) in doc provided, the show up on web
-  }
-
-  HOURS_LOCATIONS = {
-    'GREEN' => 'green/location/green_library',
-    'SAL' => 'sal12/location/sal12_library',
-    'MEYER' => 'meyer/location/meyer_24_hour',
-    'ARS' => 'ars/location/ars_archive',
-    'ART' => 'art/location/art_library',
-    'BIOLOGY' => 'biology/location/biology_library',
-    'CHEMCHMENG' => 'chemistry/location/chemistry_library',
-    'EARTH-SCI' => 'earth_sciences/location/earth_sciences_library',
-    'EAST-ASIA' => 'east_asia/location/east_asia_library',
-    'EDUCATION' => 'education/location/education_library',
-    'ENG' => 'engineering/location/engineering_library',
-    'HOPKINS' => 'marine_biology/location/marine_biology_library',
-    'MATH-CS' => 'math_stats/location/math_stats_library',
-    'MEDIA-MTXT' => 'green/location/media_microtext',
-    'MUSIC' => 'music/location/music_library',
-    'RUMSEYMAP' => 'Rumsey/location/visitor-access',
-    'SCIENCE' => 'science/location/library-circulation',
-    'SPEC-COLL' => 'special_collections/location/spec_coll_reading',
-    'BUSINESS' => 'business/location/business_library',
-    'HV-ARCHIVE' => 'hoover_archives/location/hv_archives',
-    'HOOVER' => 'hoover_archives/location/hv_archives',
-    'LATHROP' => 'lathrop/location/tech-lounge',
-    'LAW' => 'law/location/law_library',
-    'LANE-MED' => 'medical/location/medical_library',
-    'SLAC' => 'slac/location/slac',
-    'IC' => 'green/location/reference',
-    'IC-CHAT' => 'green/location/reference',
-    'TANNER' => 'philosophy/location/library-circulation'
-  }
-
-  LIBRARY_ABOUT = {
-    'ARS' => 'https://library.stanford.edu/libraries/ars/about',
-    'ART' => 'https://library.stanford.edu/libraries/art/about',
-    'BIOLOGY' => 'https://library.stanford.edu/libraries/falconer/about',
-    'BUSINESS' => 'https://library.stanford.edu/libraries/business/about',
-    'CHEMCHMENG' => 'https://library.stanford.edu/libraries/swain/about',
-    'EARTH-SCI' => 'https://library.stanford.edu/libraries/branner/about',
-    'EAST-ASIA' => 'https://library.stanford.edu/libraries/eal/about',
-    'EDUCATION' => 'https://library.stanford.edu/libraries/cubberley/about',
-    'ENG' => 'https://library.stanford.edu/libraries/englib/about',
-    'GREEN' => 'https://library.stanford.edu/libraries/green/about',
-    'HOOVER' => 'https://library.stanford.edu/libraries/hila/about',
-    'HOPKINS' => 'https://library.stanford.edu/libraries/hopkins/about',
-    'HV-ARCHIVE' => 'https://library.stanford.edu/libraries/hila/about',
-    'LATHROP' => 'https://library.stanford.edu/libraries/lathrop/about',
-    'LAW' => 'https://library.stanford.edu/libraries/law/about',
-    'LANE-MED' => 'https://library.stanford.edu/libraries/lane/about',
-    'MATH-CS' => 'https://library.stanford.edu/libraries/mathstat/about',
-    'MUSIC' => 'https://library.stanford.edu/libraries/music/about',
-    'MEDIA-MTXT' => 'https://library.stanford.edu/libraries/green/media-microtext-center',
-    'MEYER' => 'https://library.stanford.edu/libraries/meyer/about',
-    'RUMSEYMAP' => 'https://library.stanford.edu/libraries/rumsey/about',
-    'TANNER' => 'https://library.stanford.edu/libraries/philosophy/about',
-    'SPEC-COLL' => 'https://library.stanford.edu/libraries/spc/about',
-    'SAL' => 'https://library.stanford.edu/libraries/sal/about',
-    'SAL-NEWARK' => 'https://library.stanford.edu/libraries/newark/about',
-    'SAL3' => 'https://library.stanford.edu/libraries/sal3/about',
-    'SCIENCE' => 'https://library.stanford.edu/libraries/science/about',
-    'SLAC' => 'https://library.stanford.edu/libraries/slac/about'
   }
 
   EXCLUDE_FIELDS = ['w', '0', '1', '2', '5', '6', '8', '?', '=']

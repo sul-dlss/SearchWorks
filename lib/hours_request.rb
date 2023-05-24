@@ -8,7 +8,7 @@ class HoursRequest
   end
 
   def find_library
-    Constants::HOURS_LOCATIONS[@library]
+    Settings.libraries[@library].hours_api_url
   end
 
   def get

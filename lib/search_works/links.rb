@@ -21,11 +21,11 @@ module SearchWorks
       libraries = document.holdings.libraries.map(&:code)
 
       ezproxy_host = if libraries.include?('LAW') && ezproxied_hosts['LAW'].any?(link_host)
-                       Settings.EZPROXY.LAW
+                       Settings.libraries.LAW.ezproxy_host
                      elsif libraries.include?('LANE-MED') && ezproxied_hosts['LANE-MED'].any?(link_host)
-                       Settings.EZPROXY.LANE
+                       Settings.libraries['LANE-MED'].ezproxy_host
                      elsif ezproxied_hosts[:default].any?(link_host)
-                       Settings.EZPROXY.SUL
+                       Settings.libraries.default.ezproxy_host
                      end
 
       # EZproxy requires the use of the `qurl` param instead of `url` when the value is an encoded URL

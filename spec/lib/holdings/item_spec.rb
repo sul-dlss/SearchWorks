@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Holdings::Item do
+RSpec.describe Holdings::Item do
   let(:complex_item_display) do
     'barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type -|- course_id -|- reserve_desk -|- loan_period'
   end
@@ -173,8 +173,6 @@ describe Holdings::Item do
     end
 
     it 'when the library is stackmapable but the home location is locally skipped for a different library' do
-      expect(Constants::STACKMAP_SKIPLIST['GREEN']).to be_nil
-      expect(Constants::STACKMAP_SKIPLIST['ART']).to include 'MEDIA'
       expect(described_class.new('barcode -|- GREEN -|- MEDIA')).to be_stackmapable
     end
   end

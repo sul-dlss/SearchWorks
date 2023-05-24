@@ -2,11 +2,12 @@ module AccessPanels
   class LibraryComponent < ViewComponent::Base
     with_collection_parameter :library
 
-    attr_reader :library, :document
+    attr_reader :library, :document, :settings
 
     def initialize(library:, document:)
       @library = library
       @document = document
+      @settings = Settings.libraries[library.code]
     end
 
     def thumb_for_library
@@ -23,7 +24,7 @@ module AccessPanels
     end
 
     def link_to_library_about_page(&)
-      link_to_if Constants::LIBRARY_ABOUT[library.code], capture(&), Constants::LIBRARY_ABOUT[library.code]
+      link_to_if settings.about_url, capture(&), settings.about_url
     end
   end
 end

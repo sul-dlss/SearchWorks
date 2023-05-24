@@ -10,9 +10,6 @@ REQUESTS_URL: "https://host.example.com/requests/new"
 SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
 HOOVER_REQUESTS_URL: 'https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20'
 LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
-STACKMAP_API_URL:
-  DEFAULT: "https://stanford.stackmap.com/json/"
-  LAW: "https://stanfordlaw.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'
 NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
@@ -81,10 +78,193 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
-EZPROXY:
-  LAW: http://ezproxy.law.stanford.edu/login?
-  LANE: https://login.laneproxy.stanford.edu/login?
-  SUL: https://stanford.idm.oclc.org/login?
+global_ignored_stackmap_locations:
+  - BINDERY
+  - ENDPROCESS
+  - GRE-LOAN
+  - GREEN-RESV
+  - INPROCESS
+  - ON-ORDER
+  - REPAIR
+  - SL3-LOAN
+  - SLN-LOAN
+
+libraries:
+  ARS:
+    about_url: https://library.stanford.edu/libraries/ars/about
+    hours_api_url: ars/location/ars_archive
+    name: Archive of Recorded Sound
+  ART:
+    about_url: https://library.stanford.edu/libraries/art/about
+    hours_api_url: art/location/art_library
+    name: Art & Architecture Library (Bowes)
+    ignored_stackmap_locations:
+      - ARTLCKL
+      - ARTLCKL-R
+      - ARTLCKM
+      - ARTLCKM-R
+      - ARTLCKO
+      - ARTLCKO-R
+      - ARTLCKS
+      - ARTLCKS-R
+      - MEDIA
+      - MEDIA-FOLI
+      - MICROFILM
+      - MICROTEXT
+    stackmap_api: https://stanford.stackmap.com/json/
+  BIOLOGY:
+    about_url: https://library.stanford.edu/libraries/falconer/about
+    hours_api_url: biology/location/biology_library
+    name: Biology Library (Falconer)
+  BUSINESS:
+    about_url: https://library.stanford.edu/libraries/business/about
+    hours_api_url: business/location/business_library
+    name: Business Library
+  CHEMCHMENG:
+    about_url: https://library.stanford.edu/libraries/swain/about
+    hours_api_url: chemistry/location/chemistry_library
+    name: Chemistry & ChemEng Library (Swain)
+  CLASSICS:
+    name: Classics Library
+  EARTH-SCI:
+    about_url: https://library.stanford.edu/libraries/branner/about
+    hours_api_url: earth_sciences/location/earth_sciences_library
+    name: Earth Sciences Library (Branner)
+  EAST-ASIA:
+    about_url: https://library.stanford.edu/libraries/eal/about
+    hours_api_url: east_asia/location/east_asia_library
+    name: East Asia Library
+    ignored_stackmap_locations:
+      - ASK@EASIA
+      - BASECALNUM
+      - FOLIO-CHN
+      - FOLIO-JPN
+      - FOLIO-KOR
+      - LOCK-CHN
+      - LOCKED-STK
+      - MEDIA
+      - MICROTEXT
+      - NEWSPAPERS
+      - REF-CHN
+      - REF-JPN
+      - REF-KOR
+      - STACKS
+    stackmap_api: https://stanford.stackmap.com/json/
+  EDUCATION:
+    about_url: https://library.stanford.edu/libraries/cubberley/about
+    hours_api_url: education/location/education_library
+    name: Education Library (at SAL1&2)
+  ENG:
+    about_url: https://library.stanford.edu/libraries/englib/about
+    hours_api_url: engineering/location/engineering_library
+    name: Engineering Library (Terman)
+  GOV-DOCS:
+    name: Green Library
+  GREEN:
+    about_url: https://library.stanford.edu/libraries/green/about
+    hours_api_url: green/location/green_library
+    name: Green Library
+    stackmap_api: https://stanford.stackmap.com/json/
+  GRN-REF:
+    name: Green Library
+  HOOVER:
+    about_url: https://library.stanford.edu/libraries/hila/about
+    hours_api_url: hoover_archives/location/hv_archives
+    name: Hoover Library
+    suppress_items_list_on_results_view: true
+    suppress_location_request_link: true
+  HOPKINS:
+    about_url: https://library.stanford.edu/libraries/hopkins/about
+    hours_api_url: marine_biology/location/marine_biology_library
+    name: Marine Biology Library (Miller)
+  HV-ARCHIVE:
+    about_url: https://library.stanford.edu/libraries/hila/about
+    hours_api_url: hoover_archives/location/hv_archives
+    name: Hoover Archives
+    suppress_items_list_on_results_view: true
+    suppress_location_request_link: true
+  IC:
+    hours_api_url: green/location/reference
+  IC-CHAT:
+    hours_api_url: green/location/reference
+  JACKSON:
+    name: Business Library
+  LANE-MED:
+    about_url: https://library.stanford.edu/libraries/lane/about
+    ezproxy_host: https://login.laneproxy.stanford.edu/login?
+    hours_api_url: medical/location/medical_library
+    name: Medical Library (Lane)
+  LATHROP:
+    about_url: https://library.stanford.edu/libraries/lathrop/about
+    hours_api_url: lathrop/location/tech-lounge
+    name: Lathrop Library
+  LAW:
+    about_url: https://library.stanford.edu/libraries/law/about
+    ezproxy_host: http://ezproxy.law.stanford.edu/login?
+    hours_api_url: law/location/law_library
+    name: Law Library (Crown)
+    stackmap_api: https://stanfordlaw.stackmap.com/json/
+    ignored_stackmap_locations:
+      - FACULTY
+      - INTERNET
+      - LAW-ARCHIV
+      - STAFF
+      - TECH-SERV
+  MATH-CS:
+    about_url: https://library.stanford.edu/libraries/mathstat/about
+    hours_api_url: math_stats/location/math_stats_library
+    name: Math & Statistics Library
+  MEDIA-MTXT:
+    about_url: https://library.stanford.edu/libraries/green/media-microtext-center
+    hours_api_url: green/location/media_microtext
+    name: Media & Microtext Center
+    stackmap_api: https://stanford.stackmap.com/json/
+  MEYER:
+    about_url: https://library.stanford.edu/libraries/meyer/about
+    hours_api_url: meyer/location/meyer_24_hour
+    name: Meyer Library
+  MUSIC:
+    about_url: https://library.stanford.edu/libraries/music/about
+    hours_api_url: music/location/music_library
+    name: Music Library
+  RUMSEYMAP:
+    about_url: https://library.stanford.edu/libraries/rumsey/about
+    hours_api_url: Rumsey/location/visitor-access
+    name: David Rumsey Map Center
+  SAL:
+    about_url: https://library.stanford.edu/libraries/sal/about
+    hours_api_url: sal12/location/sal12_library
+    name: SAL1&2 (on-campus shelving)
+  SAL3:
+    about_url: https://library.stanford.edu/libraries/sal3/about
+    name: SAL3 (off-campus storage)
+  SAL-NEWARK:
+    about_url: https://library.stanford.edu/libraries/newark/about
+    name: SAL Newark (off-campus storage)
+  SCIENCE:
+    about_url: https://library.stanford.edu/libraries/science/about
+    hours_api_url: science/location/library-circulation
+    name: Science Library (Li and Ma)
+  SLAC:
+    about_url: https://library.stanford.edu/libraries/slac/about
+    hours_api_url: slac/location/slac
+  SPEC-COLL:
+    about_url: https://library.stanford.edu/libraries/spc/about
+    hours_api_url: special_collections/location/spec_coll_reading
+    name: Special Collections
+  SW-E-RESV:
+    name: 'eReserve' # Library does not exist, this is an internal code used for reserves.
+  SW-MEDIA-RESV:
+    name: 'Media & Microtext Center' # Library does not exist, this is an internal code used for reserves.'
+  TANNER:
+    about_url: https://library.stanford.edu/libraries/philosophy/about
+    hours_api_url: philosophy/location/library-circulation
+    name: Philosophy Library (Tanner)
+  ZOMBIE:
+    name: Stanford Libraries
+  default:
+    ezproxy_host: https://stanford.idm.oclc.org/login?
+
 
 selected_databases:
    "5749286":
