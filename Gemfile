@@ -101,7 +101,7 @@ gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
-gem 'whenever' # manages cron jobs
+gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'leaflet-rails'
 gem 'recaptcha', '>= 5.4.1'
