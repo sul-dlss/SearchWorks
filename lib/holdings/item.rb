@@ -187,7 +187,7 @@ class Holdings
       settings = Settings.libraries[library]
       return settings.stackmap_api.present? if settings
 
-      Honeybadger.notify("Called stackmapable_library? on an unknown library", context: { library: library })
+      Honeybadger.notify("Called stackmapable_library? on an unknown library", context: { library: })
       false
     end
 
