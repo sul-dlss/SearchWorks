@@ -3,9 +3,8 @@ require 'spec_helper'
 describe IndexLinks do
   let(:document) do
     SolrDocument.new(
-      url_fulltext:   ['https://library.stanford.edu'],
-      url_suppl:      ['https://searchworks.stanford.edu'],
-      url_restricted: ['https://library.stanford.edu']
+      marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true, stanford_only: true },
+                          { link_text: "link text", href: "https://searchworks.stanford.edu" }]
     )
   end
 
@@ -29,6 +28,7 @@ describe IndexLinks do
       expect(index_links.all.first.html).to match(%r{^<a.*>library\.stanford\.edu<\/a>$})
       expect(index_links.all.last.html).to match(%r{^<a.*>searchworks\.stanford\.edu<\/a>$})
     end
+
     it 'returns the plain text and href separately' do
       expect(index_links.all.length).to eq 2
       expect(index_links.all.first.text).to eq 'library.stanford.edu'
@@ -36,10 +36,12 @@ describe IndexLinks do
       expect(index_links.all.last.text).to eq 'searchworks.stanford.edu'
       expect(index_links.all.last.href).to eq 'https://searchworks.stanford.edu'
     end
+
     it 'identifies urls that are in the url_restricted field as stanford only' do
       expect(index_links.all.first).to be_stanford_only
       expect(index_links.all.last).not_to be_stanford_only
     end
+
     it 'identifies urls that are in the url_fulltext field as fulltext' do
       expect(index_links.all.first).to be_fulltext
       expect(index_links.all.last).not_to be_fulltext
@@ -48,7 +50,7 @@ describe IndexLinks do
     context 'with an OAC finding aid' do
       let(:document) do
         SolrDocument.new(
-          url_suppl: ['http://oac.cdlib.org/findaid/ark:/something-else']
+          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )
       end
 
@@ -64,7 +66,7 @@ describe IndexLinks do
     context 'with an OAC finding aid using an alternative format' do
       let(:document) do
         SolrDocument.new(
-          url_suppl: ['http://oac.cdlib.org/ark:/something-else']
+          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/something-else", finding_aid: true }]
         )
       end
 
@@ -76,7 +78,7 @@ describe IndexLinks do
     context 'with a managed purl' do
       let(:document) do
         SolrDocument.new(
-          managed_purl_urls: ['https://purl.stanford.edu/abc123']
+          marc_links_struct: [{ href: "https://purl.stanford.edu/abc123", managed_purl: true }]
         )
       end
 
@@ -90,11 +92,10 @@ describe IndexLinks do
     context 'with bad links' do
       let(:document) do
         SolrDocument.new(
-          url_fulltext: [
-            'http://www.example.com/lookup?^The+Query+Is+No+Good',
-            ' http://www.example.com/{1234-1431324-431313}Img100.jpg ', ' at: ',
-            'http://Coastal erosion is widespread and locally severe in Hawaii and other low-latitude areas'
-          ]
+          marc_links_struct: [{ href: "http://www.example.com/lookup?^The+Query+Is+No+Good", fulltext: true },
+                              { href: " http://www.example.com/{1234-1431324-431313}Img100.jpg ", fulltext: true },
+                              { href: " at: ", fulltext: true },
+                              { href: "http://Coastal erosion is widespread and locally severe in Hawaii and other low-latitude areas", fulltext: true }]
         )
       end
 
@@ -110,7 +111,7 @@ describe IndexLinks do
     context 'with SFX links' do
       let(:document) do
         SolrDocument.new(
-          url_sfx: ['http://example.com/sfx-link']
+          marc_links_struct: [{ href: "http://example.com/sfx-link", sfx: true }]
         )
       end
 
@@ -127,10 +128,8 @@ describe IndexLinks do
       context 'pre-encoded urls' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'https://stanford.idm.oclc.org/login?url=https://library.stanford.edu',
-              'http://ezproxy.stanford.edu:2197/stable/i403360'
-            ]
+            marc_links_struct: [{ href: "https://stanford.idm.oclc.org/login?url=https://library.stanford.edu", fulltext: true, stanford_only: true },
+                                { href: "http://ezproxy.stanford.edu:2197/stable/i403360", fulltext: true, stanford_only: true }]
           )
         end
 
@@ -144,9 +143,7 @@ describe IndexLinks do
       context 'LANE records' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'https://who.int/whatever'
-            ],
+            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
             item_display: ['barcode -|- LANE-MED']
           )
         end
@@ -159,9 +156,7 @@ describe IndexLinks do
       context 'LAW records' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'https://www.iareporter.com/whatever'
-            ],
+            marc_links_struct: [{ href: "https://www.iareporter.com/whatever", fulltext: true, stanford_only: true }],
             item_display: ['barcode -|- LAW']
           )
         end
@@ -174,9 +169,7 @@ describe IndexLinks do
       context 'SUL records' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'http://ch.ucpress.edu/whatever'
-            ],
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
             item_display: ['barcode -|- GREEN']
           )
         end
@@ -189,9 +182,7 @@ describe IndexLinks do
       context 'a url that matches a LANE-MED ezproxy host for a SUL item' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'https://who.int/whatever'
-            ],
+            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
             item_display: ['barcode -|- GREEN']
           )
         end
@@ -204,9 +195,7 @@ describe IndexLinks do
       context 'a url that matches a SUL ezproxy host for a LANE item' do
         let(:document) do
           SolrDocument.new(
-            url_fulltext: [
-              'http://ch.ucpress.edu/whatever'
-            ],
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
             item_display: ['barcode -|- LANE-MED']
           )
         end

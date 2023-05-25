@@ -15,7 +15,12 @@ RSpec.describe JsonResultsDocumentPresenter do
 
     context 'when the source document is available online' do
       before do
-        document_data['url_sfx'] = 'https://example.com'
+        document_data['marc_links_struct'] = [{
+          "href": "https://example.com",
+          "link_text": "The Link",
+          "sfx": true,
+          "stanford_only": true
+        }]
       end
 
       it 'includes the fulltext_link_html field' do

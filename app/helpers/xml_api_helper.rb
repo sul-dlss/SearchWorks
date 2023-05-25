@@ -176,13 +176,4 @@ module XmlApiHelper
       end
     end
   end
-
-  def index_link_is_stanford_only?(doc, link)
-    if doc["url_restricted"]
-      doc["url_restricted"].each do |su_only|
-        return true if CGI.unescapeHTML(link.strip).include?("#{CGI.unescapeHTML(su_only.strip)}")
-      end
-    end
-    false
-  end
 end

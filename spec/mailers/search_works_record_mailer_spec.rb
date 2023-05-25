@@ -9,14 +9,14 @@ describe SearchWorksRecordMailer do
         id: '123',
         title_display: "Title1",
         item_display: ["12345 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"],
-        url_sfx: ["https://library.stanford.edu"],
+        marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }],
         modsxml: mods_everything
       ),
       SolrDocument.new(
         id: '321',
         title_display: "Title2",
         item_display: ["54321 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321"],
-        url_sfx: ["https://stacks.stanford.edu"],
+        marc_links_struct: [{ href: "https://stacks.stanford.edu", sfx: true }],
         marcxml: metadata1
       )
     ]
