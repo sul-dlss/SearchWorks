@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe SolrDocument do
+RSpec.describe SolrDocument do
   include MarcMetadataFixtures
   describe "marc field" do
     let(:marcxml) { SolrDocument.new(marcxml: metadata1) }
