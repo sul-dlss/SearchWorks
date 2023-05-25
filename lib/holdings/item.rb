@@ -10,6 +10,8 @@ class Holdings
     attr_reader :document
     attr_accessor :due_date
 
+    delegate :loan_type, :material_type, :effective_location, to: :folio_item
+
     def initialize(holding_info, document: nil)
       @holding_info = holding_info
       @document = document
@@ -221,6 +223,10 @@ class Holdings
       return library_map if library_map.is_a?(Array)
 
       library_map[home_location] || library_map['default'] || library_map
+    end
+
+    def folio_item
+      @folio_item ||= @document.folio_items.find { |item| item.barcode == barcode }
     end
   end
 end

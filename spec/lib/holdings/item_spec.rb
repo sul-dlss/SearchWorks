@@ -241,4 +241,66 @@ RSpec.describe Holdings::Item do
       it { is_expected.to be_circulates }
     end
   end
+
+  context 'with data from FOLIO' do
+    let(:folio_location) {
+      Folio::Location.from_dynamic(
+        {
+          'id' => '4573e824-9273-4f13-972f-cff7bf504217',
+          'code' => 'GRE-STACKS',
+          'name' => 'Green Library Stacks',
+          'institution' => {
+            'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+            'code' => 'SU',
+            'name' => 'Stanford University'
+          },
+          'campus' => {
+            'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+            'code' => 'SUL',
+            'name' => 'Stanford Libraries'
+          },
+          'library' => {
+            'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+            'code' => 'GREEN',
+            'name' => 'Cecil H. Green'
+          }
+        }
+      )
+    }
+    let(:folio_item) {
+      Folio::Item.new(
+        id: '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
+        barcode: '36105232609540',
+        material_type: Folio::Item::MaterialType.new(id: '1a54b431-2e4f-452d-9cae-9cee66c9a892', name: 'book'),
+        permanent_loan_type: Folio::Item::LoanType.new(id: '2b94c631-fca9-4892-a730-03ee529ffe27', name: 'Can circulate'),
+        effective_location: folio_location
+      )
+    }
+    let(:document) { SolrDocument.new }
+
+    subject(:item) { described_class.new('36105232609540 -|- GREEN -|- GRE-STACKS', document:) }
+
+    before do
+      allow(document).to receive(:folio_items).and_return([folio_item])
+    end
+
+    describe '#material_type' do
+      it 'returns the material type from FOLIO' do
+        expect(item.material_type.name).to eq 'book'
+      end
+    end
+
+    describe '#loan_type' do
+      it 'returns the loan type from FOLIO' do
+        expect(item.loan_type.name).to eq 'Can circulate'
+      end
+    end
+
+    describe '#effective_location' do
+      it 'returns the effective location from FOLIO' do
+        expect(item.effective_location.library.code).to eq 'GREEN'
+        expect(item.effective_location.code).to eq 'GRE-STACKS'
+      end
+    end
+  end
 end
