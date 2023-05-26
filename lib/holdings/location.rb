@@ -2,6 +2,8 @@ class Holdings
   class Location
     attr_reader :code, :items, :mhld
 
+    # @params [String] code the location code (e.g. 'STACKS')
+    # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
     def initialize(code, items = [], mhld = [])
       @code = code
       @items = items.sort_by(&:full_shelfkey)

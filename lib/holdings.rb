@@ -7,6 +7,7 @@ require 'holdings/status'
 class Holdings
   attr_reader :items, :mhld
 
+  # @params [Array<Holdings::Item>] items ([]) a list of items.
   def initialize(items = [], mhld = [])
     @items = items
     @mhld = mhld
@@ -22,6 +23,7 @@ class Holdings
     items.select(&:browsable?).uniq(&:truncated_callnumber)
   end
 
+  # @return [Array<Holdings::Library>] the list of libraries with holdings
   def libraries
     unless @libraries
       items_by_library = items.group_by(&:library)
