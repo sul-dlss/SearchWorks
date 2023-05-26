@@ -71,9 +71,11 @@
                 <% if item.on_reserve? %>
                   <%= item.loan_period %>
                 <% end %>
-                <span class="request-link">
-                  <%= render item.request_link %>
-                </span>
+                <% unless location_request_link.render? %>
+                  <span class="request-link">
+                    <%= render item.request_link %>
+                  </span>
+                <% end %>
               </td>
             </tr>
           <% end %>
