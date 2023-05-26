@@ -4,6 +4,8 @@ module AccessPanels
 
     attr_reader :library, :document, :settings
 
+    # @params [Holdings::Library] library the holdings for the item at a particular library
+    # @params [SolrDocument] document
     def initialize(library:, document:)
       @library = library
       @document = document

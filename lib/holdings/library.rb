@@ -2,6 +2,8 @@ class Holdings
   class Library
     attr_reader :code, :items, :mhld
 
+    # @params [String] code the library code (e.g. 'GREEN')
+    # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
     def initialize(code, items = [], mhld = [])
       @code = code
       @items = items
@@ -16,6 +18,7 @@ class Holdings
       nil
     end
 
+    # @return [Array<Holdings::Location>] the locations with the holdings
     def locations
       unless @locations
         @locations = @items.group_by do |item|

@@ -1,6 +1,9 @@
 class LocationRequestLinkComponent < ViewComponent::Base
   attr_reader :document, :library, :location, :items, :link_params
 
+  # @params [SolrDocument] document
+  # @params [String] library the code for the library with the holdings
+  # @params [String] location the code for location with the holdings
   def self.for(document:, library:, location:, **kwargs)
     link_type = case library
                 when 'HOOVER'
