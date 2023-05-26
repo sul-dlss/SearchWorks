@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe MarcLinks do
+RSpec.describe MarcLinks do
   include Marc856Fixtures
   it "should return an empty array for non marc records" do
     expect(SolrDocument.new.marc_links.all).to eq []
@@ -32,7 +32,8 @@ describe MarcLinks do
       let(:document) do
         SolrDocument.new(
           marc_links_struct: [{
-            href: 'http://ch.ucpress.edu/whatever'
+            href: 'http://ch.ucpress.edu/whatever',
+            link_title: 'Available to Stanford-affiliated users.'
           }]
         )
       end

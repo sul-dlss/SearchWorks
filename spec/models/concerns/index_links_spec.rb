@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe IndexLinks do
+RSpec.describe IndexLinks do
   let(:document) do
     SolrDocument.new(
       marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true, stanford_only: true },
@@ -128,8 +128,14 @@ describe IndexLinks do
       context 'pre-encoded urls' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://stanford.idm.oclc.org/login?url=https://library.stanford.edu", fulltext: true, stanford_only: true },
-                                { href: "http://ezproxy.stanford.edu:2197/stable/i403360", fulltext: true, stanford_only: true }]
+            marc_links_struct: [{ href: "https://stanford.idm.oclc.org/login?url=https://library.stanford.edu",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to stanford-affiliated users.' },
+                                { href: "http://ezproxy.stanford.edu:2197/stable/i403360",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to stanford-affiliated users.' }]
           )
         end
 
@@ -140,10 +146,13 @@ describe IndexLinks do
         end
       end
 
-      context 'LANE records' do
+      context 'LANE records with a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
+            marc_links_struct: [{ href: "https://who.int/whatever",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Access restricted to Stanford community' }],
             item_display: ['barcode -|- LANE-MED']
           )
         end
@@ -153,7 +162,36 @@ describe IndexLinks do
         end
       end
 
-      context 'LAW records' do
+      context 'LANE records without a link_title/856$z restricted note' do
+        let(:document) do
+          SolrDocument.new(
+            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
+            item_display: ['barcode -|- LANE-MED']
+          )
+        end
+
+        it 'leaves the url alone' do
+          expect(document.index_links.all.first.href).to eq 'https://who.int/whatever'
+        end
+      end
+
+      context 'LAW records with a link_title/856$z restricted note' do
+        let(:document) do
+          SolrDocument.new(
+            marc_links_struct: [{ href: "https://www.iareporter.com/whatever",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to Stanford Law School' }],
+            item_display: ['barcode -|- LAW']
+          )
+        end
+
+        it 'prefixes the link with the ezproxy URL' do
+          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+        end
+      end
+
+      context 'LAW records without a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://www.iareporter.com/whatever", fulltext: true, stanford_only: true }],
@@ -166,10 +204,13 @@ describe IndexLinks do
         end
       end
 
-      context 'SUL records' do
+      context 'SUL records with a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to stanford-affiliated users.' }],
             item_display: ['barcode -|- GREEN']
           )
         end
@@ -179,10 +220,26 @@ describe IndexLinks do
         end
       end
 
+      context 'SUL records without a link_title/856$z restricted note' do
+        let(:document) do
+          SolrDocument.new(
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
+            item_display: ['barcode -|- GREEN']
+          )
+        end
+
+        it 'leaves the url alone' do
+          expect(document.index_links.all.first.href).to eq 'http://ch.ucpress.edu/whatever'
+        end
+      end
+
       context 'a url that matches a LANE-MED ezproxy host for a SUL item' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
+            marc_links_struct: [{ href: "https://who.int/whatever",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to stanford-affiliated users.' }],
             item_display: ['barcode -|- GREEN']
           )
         end
@@ -195,7 +252,10 @@ describe IndexLinks do
       context 'a url that matches a SUL ezproxy host for a LANE item' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever",
+                                  fulltext: true,
+                                  stanford_only: true,
+                                  link_title: 'Available to stanford-affiliated users.' }],
             item_display: ['barcode -|- LANE-MED']
           )
         end
