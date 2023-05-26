@@ -16,7 +16,7 @@ describe 'HathiLinks SolrDocument Concern' do
     end
 
     it 'is an array of the one HathiTrust link' do
-      expect(links).to be_a(SearchWorks::Links)
+      expect(links).to be_a(Links)
       expect(links.all.length).to eq 1
       expect(links.first.text).to eq 'Full text via HathiTrust'
       expect(links.first).to be_stanford_only

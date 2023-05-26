@@ -1,9 +1,9 @@
-# index_links returns a SearchWorks::Links::Link object for each :marc_link_struct value.
+# index_links returns a Links::Link object for each :marc_link_struct value.
 # index_links are displayed on access panels and get different treatment
 # for link_text than marc_links created in the MarcLinks module.
 module IndexLinks
   def index_links
-    @index_links ||= SearchWorks::Links.new(
+    @index_links ||= Links.new(
       fetch(:marc_links_struct, []).map do |link_struct|
         IndexLinkProcessor.new(self, link_struct).to_searchworks_link
       end
@@ -19,13 +19,13 @@ module IndexLinks
     end
 
     def to_searchworks_link
-      SearchWorks::Links::Link.new(link_struct.merge({ link_text:, href: }))
+      Links::Link.new(link_struct.merge({ link_text:, href: }))
     end
 
     private
 
     def href
-      @href ||= SearchWorks::Links.ezproxy_url(link_struct[:href], document) || link_struct[:href]
+      @href ||= Links.ezproxy_url(link_struct[:href], document) || link_struct[:href]
     end
 
     def link_text
@@ -43,7 +43,7 @@ module IndexLinks
     def link_host
       uri = URI.parse(Addressable::URI.encode(link_struct[:href].strip))
       host = uri.host
-      if host =~ SearchWorks::Links::PROXY_REGEX && uri.query
+      if host =~ Links::PROXY_REGEX && uri.query
         query = CGI.parse(uri.query)
         host = URI.parse(query['url'].first).host if query['url'].present?
       end

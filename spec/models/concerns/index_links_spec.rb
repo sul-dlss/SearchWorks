@@ -12,15 +12,15 @@ describe IndexLinks do
     it 'should add the #index_links method' do
       expect(document).to respond_to(:index_links)
     end
-    it '#index_links should return SearchWorks::Links' do
-      expect(document.index_links).to be_a(SearchWorks::Links)
+    it '#index_links should return Links' do
+      expect(document.index_links).to be_a(Links)
       document.index_links.each do |index_link|
-        expect(index_link).to be_a SearchWorks::Links::Link
+        expect(index_link).to be_a Links::Link
       end
     end
   end
 
-  describe 'SearchWorks::Links' do
+  describe 'Links' do
     let(:index_links) { document.index_links }
 
     it 'returns both fulltext and supplemental links' do

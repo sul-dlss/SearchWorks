@@ -1,6 +1,6 @@
 module EdsLinks
   def eds_links
-    @eds_links ||= SearchWorks::Links.new(eds_fulltext_links_as_searchworks_links)
+    @eds_links ||= Links.new(eds_fulltext_links_as_searchworks_links)
   end
 
   private
@@ -57,7 +57,7 @@ module EdsLinks
     end
 
     def to_searchworks_link(categories = [])
-      SearchWorks::Links::Link.new(
+      Links::Link.new(
         link_text: label,
         href:      url,
         fulltext:  present? && show?(categories, category),
