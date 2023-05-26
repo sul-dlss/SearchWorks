@@ -5,7 +5,7 @@ module IndexLinks
   def index_links
     @index_links ||= Links.new(
       fetch(:marc_links_struct, []).map do |link_struct|
-        IndexLinkProcessor.new(self, link_struct).to_searchworks_link
+        IndexLinkProcessor.new(self, link_struct).to_index_link
       end
     )
   end
@@ -18,15 +18,11 @@ module IndexLinks
       @link_struct = link_struct
     end
 
-    def to_searchworks_link
+    def to_index_link
       Links::Link.new(link_struct.merge({ link_text:, href: }))
     end
 
     private
-
-    def href
-      @href ||= Links.ezproxy_url(link_struct[:href], document) || link_struct[:href]
-    end
 
     def link_text
       if link_struct[:finding_aid]
@@ -38,6 +34,16 @@ module IndexLinks
       else
         link_struct[:link_text]
       end
+    end
+
+    def href
+      proxied_url || link_struct[:href]
+    end
+
+    def proxied_url
+      Links::Ezproxy.new(
+        url: link_struct[:href], link_title: link_struct[:link_title], document:
+      ).to_proxied_url
     end
 
     def link_host
