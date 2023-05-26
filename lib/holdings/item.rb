@@ -53,6 +53,11 @@ class Holdings
       end
     end
 
+    # This is the code Folio uses, which is a combination of library & Symphony location
+    def folio_location_code
+      @folio_location_code ||= FolioLocationMap.folio_code_for(library_code: library, home_location:)
+    end
+
     def current_location
       Holdings::Location.new(item_display[3])
     end

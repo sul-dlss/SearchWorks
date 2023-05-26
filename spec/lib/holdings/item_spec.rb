@@ -177,6 +177,14 @@ RSpec.describe Holdings::Item do
     end
   end
 
+  describe '#folio_location_code' do
+    subject { item.folio_location_code }
+
+    let(:item) { Holdings::Item.new('123 -|- ARS -|- STACKS -|- ') }
+
+    it { is_expected.to eq 'ARS-STACKS' }
+  end
+
   describe 'zombie libraries' do
     let(:blank) { Holdings::Item.new('123 -|- -|- LOCATION -|- ') }
     let(:sul) { Holdings::Item.new('123 -|- SUL -|- LOCATION -|- ') }
