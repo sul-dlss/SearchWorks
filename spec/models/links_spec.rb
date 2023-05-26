@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe SearchWorks::Links do
-  let(:links) { SearchWorks::Links.new(all_links) }
+RSpec.describe Links do
+  let(:links) { Links.new(all_links) }
 
   let(:all_links) do
     [
@@ -45,13 +45,13 @@ describe SearchWorks::Links do
     end
 
     it 'sorts by the sort key and then by the title, with empty values last' do
-      expect(links.managed_purls.map { |x| x.text }).to eq ['3', '2', '1', nil]
+      expect(links.managed_purls.map(&:text)).to eq ['3', '2', '1', nil]
     end
   end
 
   describe 'Link' do
     let(:link) do
-      SearchWorks::Links::Link.new(
+      Links::Link.new(
         href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
       )
     end

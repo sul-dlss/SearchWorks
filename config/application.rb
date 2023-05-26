@@ -24,7 +24,6 @@ module SearchWorks
 
     require 'constants'
     require 'page_location'
-    require 'search_works/links'
     require 'hours_request'
     require 'holdings'
     require 'live_lookup'

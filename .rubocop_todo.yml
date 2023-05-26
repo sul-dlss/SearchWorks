@@ -811,7 +811,6 @@ RSpec/ExpectInHook:
 RSpec/FilePath:
   Exclude:
     - 'spec/controllers/article_controller_spec.rb'
-    - 'spec/lib/links_spec.rb'
     - 'spec/lib/page_location_spec.rb'
     - 'spec/models/concerns/eds_document.rb'
     - 'spec/models/hoover_open_url_requst_spec.rb'
@@ -1771,7 +1770,6 @@ Style/SymbolArray:
 Style/SymbolProc:
   Exclude:
     - 'app/models/concerns/course_reserves.rb'
-    - 'spec/lib/links_spec.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
