@@ -1,34 +1,33 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe Druid do
   let(:explicit_druid) do
     SolrDocument.new(
-      druid: "321cba",
-      marc_links_struct: [{ href: "https://purl.stanford.edu/abc123", fulltext: true }]
+      druid: '321cba'
     )
   end
 
-  let(:document) do
+  let(:managed_purl) do
     SolrDocument.new(
-      marc_links_struct: [{ href: "https://purl.stanford.edu/abc123", fulltext: true },
-                          { href: "https://stanford.edu/blah" }]
+      marc_links_struct: [{ href: 'https://purl.stanford.edu/abc123', managed_purl: true, druid: 'abc123' }]
     )
   end
 
-  let(:another_document) do
+  let(:no_druid) do
     SolrDocument.new(
-      marc_links_struct: [{ href: "https://stanford.edu/blah", fulltext: true },
-                          { href: "https://purl.stanford.edu/abc123" }]
+      marc_links_struct: [{ href: 'https://www.library.edu/something', fulltext: true }]
     )
   end
 
-  it "should return the druid from the druid field if available" do
-    expect(explicit_druid.druid).to eq "321cba"
+  it 'returns the druid from the druid field if available' do
+    expect(explicit_druid.druid).to eq '321cba'
   end
-  it "should return a druid from url_fulltext" do
-    expect(document.druid).to eq "abc123"
+
+  it 'returns a druid from a managed purl link' do
+    expect(managed_purl.druid).to eq 'abc123'
   end
-  it "should return a druid from the url_suppl" do
-    expect(another_document.druid).to eq "abc123"
+
+  it 'returns nil if there is neither a druid on the document nor a druid in the link' do
+    expect(no_druid.druid).to be_nil
   end
 end
