@@ -32,14 +32,6 @@ class FolioClient
     @tenant = tenant
   end
 
-  def post(path, **kwargs)
-    authenticated_request(path, method: :post, **kwargs)
-  end
-
-  def post_json(path, **kwargs)
-    parse(post(path, **kwargs))
-  end
-
   # FOLIO Edge API - Real Time Availability Check
   # https://s3.amazonaws.com/foliodocs/api/edge-rtac/p/edge-rtac.html
   def real_time_availability(instance_ids:, full_periodicals: true)
@@ -51,6 +43,14 @@ class FolioClient
   end
 
   private
+
+  def post(path, **kwargs)
+    authenticated_request(path, method: :post, **kwargs)
+  end
+
+  def post_json(path, **kwargs)
+    parse(post(path, **kwargs))
+  end
 
   # @param [HTTP::Response] response
   # @raises [StandardError] if the response was not a 200

@@ -12,51 +12,6 @@ RSpec.describe FolioClient do
       .to_return(headers: { 'x-okapi-token': 'tokentokentoken' }, status: 201)
   end
 
-  describe '#post' do
-    before do
-      stub_request(:post, 'https://example.com/blah')
-        .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
-        .to_return(body: 'Hi!')
-    end
-
-    it 'sends a post request with okapi auth headers' do
-      expect(client.post('/blah').body.to_s).to eq('Hi!')
-    end
-
-    context 'with a method' do
-      before do
-        stub_request(:post, 'https://example.com/blah')
-          .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
-          .to_return(body: 'Hi!')
-      end
-
-      it 'overrides the request type' do
-        expect(client.post('/blah', method: :post).body.to_s).to eq('Hi!')
-      end
-    end
-  end
-
-  describe '#post_json' do
-    before do
-      stub_request(:post, 'https://example.com/blah')
-        .to_return(body:)
-    end
-
-    let(:body) { '{"hello": "world"}' }
-
-    it 'parses json responses into ruby objects' do
-      expect(client.post_json('/blah')).to eq('hello' => 'world')
-    end
-
-    describe 'when the response is empty' do
-      let(:body) { '' }
-
-      it 'returns nil' do
-        expect(client.post_json('/blah')).to be_nil
-      end
-    end
-  end
-
   describe '#real_time_availability' do
     before do
       stub_request(:post, 'https://example.com/rtac-batch')
