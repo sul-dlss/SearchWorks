@@ -4,7 +4,7 @@ require 'http'
 
 class FolioClient
   DEFAULT_HEADERS = {
-    accept: 'application/json, text/plain',
+    accept: 'application/json',
     content_type: 'application/json'
   }.freeze
 
