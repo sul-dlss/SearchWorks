@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe LiveLookup do
+describe LiveLookup::Sirsi do
   let(:response) { double('response') }
   let(:get) { double('get') }
   let(:body) { 'body' }
@@ -13,11 +13,11 @@ describe LiveLookup do
   describe "url construction" do
     it "should construct the correct URL for single items" do
       expect(Faraday).to receive(:new).with({ url: "#{Settings.LIVE_LOOKUP_URL}?search=holding&id=123" }).and_return(response)
-      LiveLookup.new(['123']).to_json
+      LiveLookup::Sirsi.new(['123']).to_json
     end
     it "should construct the URL for multiple items properly" do
       expect(Faraday).to receive(:new).with({ url: "#{Settings.LIVE_LOOKUP_URL}?search=holdings&id0=123&id1=321" }).and_return(response)
-      LiveLookup.new(['123', '321']).to_json
+      LiveLookup::Sirsi.new(['123', '321']).to_json
     end
   end
 
@@ -43,14 +43,14 @@ describe LiveLookup do
         expect(Faraday).to receive(:new).and_return(response)
       end
 
-      it "should return a json representation w/ the barcode, due date, and current location " do
-        json = JSON.parse(LiveLookup.new(['123']).to_json)
+      it "should return a json representation w/ the barcode, due date, and current location" do
+        json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
         expect(json.length).to eq 1
-        expect(json.first).to eq ({
-          'barcode' => '123456',
-          'due_date' => '10/10/2014,10:32',
-          'current_location' => 'At bindery'
-        })
+        expect(json.first).to eq({
+                                   'barcode' => '123456',
+                                   'due_date' => '10/10/2014,10:32',
+                                   'current_location' => 'At bindery'
+                                 })
       end
     end
 
@@ -74,7 +74,7 @@ describe LiveLookup do
       end
 
       it "should get fetched correctly" do
-        json = JSON.parse(LiveLookup.new(['123']).to_json)
+        json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
         expect(json.length).to eq 1
         expect(json.first["barcode"]).to eq '123456'
       end
@@ -101,7 +101,7 @@ describe LiveLookup do
         }
 
         it "should not be returned" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to be_nil
         end
@@ -124,7 +124,7 @@ describe LiveLookup do
         end
 
         it 'should not be returned' do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to be_nil
         end
@@ -147,7 +147,7 @@ describe LiveLookup do
         end
 
         it 'should not be returned' do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to be_nil
         end
@@ -170,7 +170,7 @@ describe LiveLookup do
         end
 
         it 'should not be returned' do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to be_nil
         end
@@ -192,7 +192,7 @@ describe LiveLookup do
         }
 
         it "should truncate the time" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to eq '10/10/2014'
         end
@@ -214,7 +214,7 @@ describe LiveLookup do
         }
 
         it "should return the full due date" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to eq '10/10/2014,10:32'
         end
@@ -237,7 +237,7 @@ describe LiveLookup do
         }
 
         it "should use the last due date available" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['due_date']).to eq '10/10/2014,10:32'
         end
@@ -265,7 +265,7 @@ describe LiveLookup do
         }
 
         it "should not be returned" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['current_location']).to be_nil
         end
@@ -287,7 +287,7 @@ describe LiveLookup do
         }
 
         it "should return a translated value" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['current_location']).to eq 'At bindery'
         end
@@ -310,7 +310,7 @@ describe LiveLookup do
         end
 
         it 'are not returned' do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['current_location']).to be_nil
         end
@@ -333,7 +333,7 @@ describe LiveLookup do
         }
 
         it "should return the last current location" do
-          json = JSON.parse(LiveLookup.new(['123']).to_json)
+          json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
           expect(json.first['current_location']).to eq 'At bindery'
         end

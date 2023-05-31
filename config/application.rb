@@ -26,7 +26,6 @@ module SearchWorks
     require 'page_location'
     require 'hours_request'
     require 'holdings'
-    require 'live_lookup'
     require 'purl_embed'
     require 'search_query_modifier'
 
