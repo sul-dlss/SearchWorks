@@ -8,10 +8,23 @@ end
 
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'webmock/rspec'
 require 'selenium-webdriver'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
+
+WebMock.disable_net_connect!(allow_localhost: true, allow: [
+  'example.com',
+  'host.example.com',
+  'embed.stanford.edu',
+  'api.newrelic.com',
+  'www.worldcat.org',
+  'example.com&sfx.response_type=multi_obj_xml',
+  'api-ssl.bitly.com',
+  'eds-api.ebscohost.com',
+  'chromedriver.storage.googleapis.com'
+])
 
 Capybara.javascript_driver = :headless_chrome
 
