@@ -5,16 +5,16 @@ require 'spec_helper'
 RSpec.describe FolioClient do
   subject(:client) { described_class.new(url:) }
 
-  let(:url) { 'https://example.com' }
+  let(:url) { 'https://okapi.example.edu' }
 
   before do
-    stub_request(:post, 'https://example.com/authn/login')
+    stub_request(:post, 'https://okapi.example.edu/authn/login')
       .to_return(headers: { 'x-okapi-token': 'tokentokentoken' }, status: 201)
   end
 
   describe '#real_time_availability' do
     before do
-      stub_request(:post, 'https://example.com/rtac-batch')
+      stub_request(:post, 'https://okapi.example.edu/rtac-batch')
         .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
         .to_return(body:)
     end
