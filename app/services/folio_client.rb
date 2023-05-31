@@ -50,7 +50,7 @@ class FolioClient
 
   # FOLIO Edge API - Real Time Availability Check
   # https://s3.amazonaws.com/foliodocs/api/edge-rtac/p/edge-rtac.html
-  def rtac(instance_ids:, full_periodicals: true)
+  def real_time_availability(instance_ids:, full_periodicals: true)
     body = {
       instanceIds: instance_ids,
       fullPeriodicals: full_periodicals

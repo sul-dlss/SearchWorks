@@ -57,7 +57,7 @@ RSpec.describe FolioClient do
     end
   end
 
-  describe '#rtac' do
+  describe '#real_time_availability' do
     before do
       stub_request(:post, 'https://example.com/rtac-batch')
         .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
@@ -78,7 +78,7 @@ RSpec.describe FolioClient do
     let(:instance_ids) { ['9af85395-3104-5fc9-88ab-15554765c2d2'] }
 
     it 'returns a real time availability check response' do
-      expect(client.rtac(instance_ids:)).to have_key('holdings')
+      expect(client.real_time_availability(instance_ids:)).to have_key('holdings')
     end
   end
 end
