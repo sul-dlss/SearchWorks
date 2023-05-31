@@ -60,6 +60,7 @@ group :development, :test do
   gem 'solr_wrapper'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 group :sqlite do
