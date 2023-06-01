@@ -47,9 +47,10 @@ describe LiveLookup::Sirsi do
         json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
         expect(json.length).to eq 1
         expect(json.first).to eq({
-                                   'barcode' => '123456',
+                                   'item_id' => '123456',
                                    'due_date' => '10/10/2014,10:32',
-                                   'current_location' => 'At bindery'
+                                   'is_available' => true,
+                                   'status' => 'At bindery'
                                  })
       end
     end
@@ -76,7 +77,7 @@ describe LiveLookup::Sirsi do
       it "should get fetched correctly" do
         json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
         expect(json.length).to eq 1
-        expect(json.first["barcode"]).to eq '123456'
+        expect(json.first["item_id"]).to eq '123456'
       end
     end
 
@@ -267,7 +268,7 @@ describe LiveLookup::Sirsi do
         it "should not be returned" do
           json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(json.first['current_location']).to be_nil
+          expect(json.first['status']).to be_nil
         end
       end
 
@@ -289,7 +290,7 @@ describe LiveLookup::Sirsi do
         it "should return a translated value" do
           json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(json.first['current_location']).to eq 'At bindery'
+          expect(json.first['status']).to eq 'At bindery'
         end
       end
 
@@ -312,7 +313,7 @@ describe LiveLookup::Sirsi do
         it 'are not returned' do
           json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(json.first['current_location']).to be_nil
+          expect(json.first['status']).to be_nil
         end
       end
 
@@ -335,7 +336,7 @@ describe LiveLookup::Sirsi do
         it "should return the last current location" do
           json = JSON.parse(LiveLookup::Sirsi.new(['123']).to_json)
           expect(json.length).to eq 1
-          expect(json.first['current_location']).to eq 'At bindery'
+          expect(json.first['status']).to eq 'At bindery'
         end
       end
     end

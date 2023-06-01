@@ -27,8 +27,7 @@ describe LiveLookup::Folio do
   describe 'when the item is available' do
     it {
       expect(folio_live_lookup.as_json).to eq(
-        [{ 'service' => 'FOLIO',
-           'item_uuid' => '9c130866-f1a4-53fb-b390-30ac35b00388',
+        [{ 'item_id' => '9c130866-f1a4-53fb-b390-30ac35b00388',
            'due_date' => nil,
            'status' => nil,
            'is_available' => true }]

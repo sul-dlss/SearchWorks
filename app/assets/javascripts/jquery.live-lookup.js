@@ -18,28 +18,18 @@
           for (var i=0, length=data.length; i < length; i++) {
             var live_data = data[i];
 
-            if (live_data.service == 'FOLIO') {
-              item_id = live_data.item_uuid
-              item_status = live_data.status
-              item_is_available = live_data.is_available
-            } else {
-              item_id = live_data.barcode
-              item_status = live_data.current_location
-              item_is_available = !live_data.due_date
-            }
-
-            var dom_item = $("[data-item-id='" + item_id + "']");
+            var dom_item = $("[data-item-id='" + live_data.item_id + "']");
             var target = $(dom_item.data('status-target'), dom_item);
             var current_location = $('.current-location', dom_item)
             var status_text = target.next('.status-text');
-            if ( item_status ) {
-              current_location.html(item_status);
+            if ( live_data.status ) {
+              current_location.html(live_data.status);
             }
             if ( live_data.due_date ) {
               current_location.append(' Due ' + live_data.due_date);
             }
 
-            if ( !item_is_available && (target.hasClass('unknown') || target.hasClass('page')) ) {
+            if ( !live_data.is_available && (target.hasClass('unknown') || target.hasClass('page')) ) {
               target.removeClass('unknown');
               target.removeClass('page');
               target.addClass('unavailable');
@@ -54,7 +44,7 @@
                 $('.request-link', dom_item).html(link);
               }
             }
-            if ( item_is_available && dom_item.length > 0  && target.hasClass('unknown')) {
+            if ( live_data.is_available && dom_item.length > 0  && target.hasClass('unknown')) {
               target.removeClass('unknown');
               target.addClass('available');
               status_text.text(status_text.data('available-text'));
