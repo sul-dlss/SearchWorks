@@ -1,5 +1,10 @@
 pipeline {
   agent any
+
+  triggers {
+      cron('H H * * *')
+  }
+
   environment {
     OKAPI_URL = credentials('OKAPI_TEST_URL')
   }
