@@ -7,9 +7,13 @@ class LiveLookup
     @ids = [ids].flatten.compact
   end
 
-  # Will provide a seam to switch between Sirsi and Folio
-  # client lookups dependent on application settings.
+  # Uses either the Folio or Sirsi LiveLookup service
+  # depending on whether FOLIO_LIVE_LOOKUP is set.
   def records
-    LiveLookup::Sirsi.new(@ids).records
+    if Settings.FOLIO_LIVE_LOOKUP
+      LiveLookup::Folio.new(@ids).records
+    else
+      LiveLookup::Sirsi.new(@ids).records
+    end
   end
 end
