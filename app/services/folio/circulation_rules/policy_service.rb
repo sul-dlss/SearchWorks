@@ -2,7 +2,6 @@
 
 module Folio
   module CirculationRules
-
     class PolicyService
       # Load the circulation rules file and parse it into a set of ordered rules
       def self.rules
@@ -13,12 +12,16 @@ module Folio
         end
       end
 
-      attr_reader :index, :policies
+      attr_reader :rules, :policies
 
       # Provide custom rules and policies or use the defaults
       def initialize(rules: nil, policies: nil)
-        @index = Folio::CirculationRules::Index.new(rules || self.class.rules)
+        @rules = rules || self.class.rules
         @policies = policies || Folio::Types.policies
+      end
+
+      def to_debug_s
+        rules.map(&:to_debug_s).join("\n")
       end
 
       # Return the request policy for the given Holdings::Item
