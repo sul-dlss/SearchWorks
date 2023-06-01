@@ -80,6 +80,7 @@ LIB_GUIDES:
 
 folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
+  standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']
 
 global_ignored_stackmap_locations:
   - BINDERY
