@@ -25,7 +25,7 @@ module Folio
           request: JSON.parse(REQUEST_POLICY_FILE_PATH.read).index_by { |p| p['id'] },
           loan: JSON.parse(LOAN_POLICY_FILE_PATH.read).index_by { |p| p['id'] },
           overdue: JSON.parse(OVERDUE_POLICY_FILE_PATH.read).index_by { |p| p['id'] },
-          lost: JSON.parse(LOST_POLICY_FILE_PATH.read).index_by { |p| p['id'] },
+          'lost-item': JSON.parse(LOST_POLICY_FILE_PATH.read).index_by { |p| p['id'] },
           notice: JSON.parse(NOTICE_POLICY_FILE_PATH.read).index_by { |p| p['id'] }
         }
       end
@@ -59,7 +59,7 @@ module Folio
       # Return the lost item policy for the given Holdings::Item
       def item_lost_policy(item)
         rule = item_rule(item)
-        @policies[:lost].fetch(rule.policy['lost-item'], nil)
+        @policies[:'lost-item'].fetch(rule.policy['lost-item'], nil)
       end
 
       # Return the patron notice policy for the given Holdings::Item
