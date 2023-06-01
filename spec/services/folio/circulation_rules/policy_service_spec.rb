@@ -128,7 +128,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
           '3day-norenew-15mingrace' => '3 day loan, no renewals, 15 minute grace period',
           '28day-norenew-1daygrace' => '28 day loan, no renewals, 1 day grace period'
         },
-        lost: {
+        'lost-item': {
           'norepl' => 'No replacement',
           '30fee' => '$30 lost fee policy'
         },

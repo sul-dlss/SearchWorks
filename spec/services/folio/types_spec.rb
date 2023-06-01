@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe Folio::Types do
   describe '.policies' do
     it 'returns a mapping of policy types to policy objects' do
-      expect(described_class.policies).to include(:request, :loan, :overdue, :lost, :notice)
+      expect(described_class.policies).to include(:request, :loan, :overdue, :'lost-item', :notice)
     end
 
     it 'includes key request policies' do

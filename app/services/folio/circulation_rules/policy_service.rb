@@ -42,7 +42,7 @@ module Folio
       # Return the lost item policy for the given Holdings::Item
       def item_lost_policy(item)
         rule = item_rule(item)
-        @policies[:lost].fetch(rule.policy['lost-item'], nil)
+        @policies[:'lost-item'].fetch(rule.policy['lost-item'], nil)
       end
 
       # Return the patron notice policy for the given Holdings::Item

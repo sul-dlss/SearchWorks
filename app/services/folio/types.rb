@@ -32,7 +32,7 @@ module Folio
         request: get_type('request_policies').index_by { |p| p['id'] },
         loan: get_type('loan_policies').index_by { |p| p['id'] },
         overdue: get_type('overdue_fines_policies').index_by { |p| p['id'] },
-        lost: get_type('lost_item_fees_policies').index_by { |p| p['id'] },
+        'lost-item': get_type('lost_item_fees_policies').index_by { |p| p['id'] },
         notice: get_type('patron_notice_policies').index_by { |p| p['id'] }
       }
     end
