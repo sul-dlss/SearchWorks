@@ -68,8 +68,15 @@ module SolrHoldings
 
   private
 
+  # Setting this to no-op if FOLIO_LIVE_LOOKUP is enabled, because the API is
+  # is different from Sirsi. This is currently used by the request app to get
+  # live information about items, but we plan to go directly to FOLIO instead.
   def live_data
-    @live_data ||= LiveLookup.new(id).records
+    @live_data ||= if Settings.FOLIO_LIVE_LOOKUP
+                     []
+                   else
+                     LiveLookup.new(id).records
+                   end
   end
 
   def live_data_for_barcode(barcode)

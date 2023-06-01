@@ -43,11 +43,13 @@ class LiveLookup
     def status(item)
       status = item.fetch('status', nil)
       case status
+      when 'Available'
+        nil # matches response from Sirsi for available items
       when 'Aged to lost', 'Claimed returned'
         'Checked out'
       when 'Awaiting delivery', 'Awaiting pickup'
         'On hold for a borrower'
-      when 'In process (non requestable)'
+      when 'In process (non-requestable)'
         'In process'
       else
         status

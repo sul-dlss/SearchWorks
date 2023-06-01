@@ -30,7 +30,7 @@ describe LiveLookup::Folio do
         [{ 'service' => 'FOLIO',
            'item_uuid' => '9c130866-f1a4-53fb-b390-30ac35b00388',
            'due_date' => nil,
-           'status' => 'Available',
+           'status' => nil,
            'is_available' => true }]
       )
     }
