@@ -180,6 +180,10 @@ class Holdings
       folio_item&.id || barcode
     end
 
+    def folio_item?
+      folio_item.present?
+    end
+
     private
 
     def internet_resource?

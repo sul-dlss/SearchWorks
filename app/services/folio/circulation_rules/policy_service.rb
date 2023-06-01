@@ -12,6 +12,10 @@ module Folio
         end
       end
 
+      def self.instance
+        @instance ||= new
+      end
+
       attr_reader :rules, :policies
 
       # Provide custom rules and policies or use the defaults
