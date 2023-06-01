@@ -51,11 +51,19 @@ module SolrHoldings
   end
 
   def find_holding(library_code:, location:) # rubocop:disable Lint/UnusedMethodArgument
-    folio_holdings.find { |holding| holding.effective_location.library_code == library_code }
+    folio_holdings.find { |holding| holding.effective_location.library.code == library_code }
   end
 
   def find_item(barcode:)
     folio_items.find { |item| item.barcode == barcode }
+  end
+
+  def folio_holdings
+    @folio_holdings ||= Array(holdings_json['holdings']).map { |holding| Folio::Holding.from_dynamic(holding) }
+  end
+
+  def folio_items
+    @folio_items ||= Array(holdings_json['items']).map { |item| Folio::Item.from_dynamic(item) }
   end
 
   private
@@ -68,14 +76,6 @@ module SolrHoldings
     live_data.find do |item|
       item['barcode'] == barcode
     end
-  end
-
-  def folio_holdings
-    @folio_holdings ||= Array(holdings_json['holdings']).map { |holding| Folio::Holding.from_dynamic(holding) }
-  end
-
-  def folio_items
-    @folio_items ||= Array(holdings_json['items']).map { |item| Folio::Item.from_dynamic(item) }
   end
 
   def holdings_json

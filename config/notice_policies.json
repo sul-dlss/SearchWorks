@@ -1,0 +1,252 @@
+[
+  {
+    "id": "122b3d2b-4788-4f1e-9117-56daa91cb75c",
+    "name": "Send No Notices",
+    "description": "A basic notice policy that does not define any notices",
+    "active": true,
+    "metadata": {
+      "createdDate": "2023-02-08T20:09:19.337+00:00",
+      "updatedDate": "2023-02-08T20:09:19.337+00:00"
+    },
+    "loanNotices": [],
+    "feeFineNotices": [],
+    "requestNotices": []
+  },
+  {
+    "id": "9d9ab9b0-2b9b-40d6-b122-49c4bdd71736",
+    "name": "Course reserves ",
+    "description": "Notices used for course reserves loans",
+    "metadata": {
+      "createdDate": "2023-02-09T01:06:14.748+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:06:14.748+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    },
+    "loanNotices": [
+      {
+        "templateId": "3c580929-0b2d-4273-8d5b-9f4ae8554afa",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check out" }
+      },
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check in" }
+      },
+      {
+        "templateId": "e72e1e3d-5bcb-4b75-b816-0f16a09090d5",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": { "duration": 15, "intervalId": "Minutes" },
+          "sendEvery": { "duration": 15, "intervalId": "Minutes" }
+        }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "b6ef89a3-464c-4cf8-ae49-e5690d96f2ba",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      }
+    ],
+    "requestNotices": []
+  },
+  {
+    "id": "c4ec90cb-1139-4c59-a690-9de48c4e3fd6",
+    "name": "Default notice policy",
+    "metadata": {
+      "createdDate": "2023-02-09T01:06:14.624+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-05-04T19:05:36.627+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    },
+    "loanNotices": [
+      {
+        "templateId": "686ed431-1768-4bd5-ac10-735b9ee7abdb",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": { "duration": 2, "intervalId": "Days" }
+        }
+      },
+      {
+        "templateId": "cc3b542f-a8d3-4bf0-bf2b-c0c2cd4a42a5",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Due date",
+          "sendBy": { "duration": 2, "intervalId": "Days" }
+        }
+      },
+      {
+        "templateId": "0451908d-bc38-4e93-a768-ba2e0591bd71",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check out" }
+      },
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check in" }
+      },
+      {
+        "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Item recalled" }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": { "duration": 1, "intervalId": "Minutes" }
+        }
+      },
+      {
+        "templateId": "c26fb9a0-d63e-4524-9580-4a86382b5186",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      }
+    ],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Available" }
+      },
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Available" }
+      },
+      {
+        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Request cancellation" }
+      }
+    ]
+  },
+  {
+    "id": "1fd0ccd5-0ac3-446f-a720-ceafcecf818c",
+    "name": "Short-term loans",
+    "description": "TARA sample policy. This policy is designed for short term loans, such as 7 day loans.",
+    "active": true,
+    "metadata": {
+      "createdDate": "2023-02-09T01:06:14.463+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-04-06T19:02:36.780+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "loanNotices": [
+      {
+        "templateId": "686ed431-1768-4bd5-ac10-735b9ee7abdb",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": { "duration": 3, "intervalId": "Days" }
+        }
+      },
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check in" }
+      },
+      {
+        "templateId": "0451908d-bc38-4e93-a768-ba2e0591bd71",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Check out" }
+      },
+      {
+        "templateId": "db1b5ba2-3089-4820-8e9a-0fe1be34f7c0",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Due date",
+          "sendBy": { "duration": 15, "intervalId": "Minutes" }
+        }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "c26fb9a0-d63e-4524-9580-4a86382b5186",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Aged to lost - fine charged"
+        }
+      }
+    ],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Available" }
+      },
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Hold expiration",
+          "sendBy": { "duration": 3, "intervalId": "Days" },
+          "sendEvery": { "duration": 1, "intervalId": "Days" }
+        }
+      },
+      {
+        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": { "sendWhen": "Request cancellation" }
+      }
+    ]
+  }
+]
