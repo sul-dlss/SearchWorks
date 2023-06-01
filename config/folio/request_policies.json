@@ -2,7 +2,10 @@
   {
     "id": "1fe93bcd-35a9-453f-a6b2-e2a08ed63082",
     "name": "Allow hold recall",
-    "requestTypes": ["Hold", "Recall"],
+    "requestTypes": [
+      "Hold",
+      "Recall"
+    ],
     "metadata": {
       "createdDate": "2023-05-10T22:32:07.365+00:00",
       "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
@@ -14,7 +17,11 @@
     "id": "334e5a9e-94f9-4673-8d1d-ab552863886b",
     "name": "Allow All",
     "description": "Allow all request types",
-    "requestTypes": ["Hold", "Page", "Recall"],
+    "requestTypes": [
+      "Hold",
+      "Page",
+      "Recall"
+    ],
     "metadata": {
       "createdDate": "2023-05-11T17:03:41.796+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
@@ -26,7 +33,9 @@
     "id": "4c6e1fb0-2ef1-4666-bd15-f9190ff89060",
     "name": "Hold only",
     "description": "Only allow holds",
-    "requestTypes": ["Hold"],
+    "requestTypes": [
+      "Hold"
+    ],
     "metadata": {
       "createdDate": "2023-05-11T17:03:42.295+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
@@ -37,7 +46,9 @@
   {
     "id": "8a58b9d6-855d-49bb-9a16-8b409e590dfe",
     "name": "No requests allowed",
-    "requestTypes": [],
+    "requestTypes": [
+
+    ],
     "metadata": {
       "createdDate": "2023-05-11T17:03:42.490+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
@@ -49,7 +60,9 @@
     "id": "1a376854-636f-44e6-8405-65987ea90e95",
     "name": "Allow paging",
     "description": "Items may be pulled off the shelf.",
-    "requestTypes": ["Page"],
+    "requestTypes": [
+      "Page"
+    ],
     "metadata": {
       "createdDate": "2023-05-11T17:03:42.702+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
@@ -61,7 +74,10 @@
     "id": "1761b51d-91e5-46f8-83b4-5512cda8d42c",
     "name": "Allow hold/recall",
     "description": "recalls book form current user",
-    "requestTypes": ["Hold", "Recall"],
+    "requestTypes": [
+      "Hold",
+      "Recall"
+    ],
     "metadata": {
       "createdDate": "2023-05-11T17:03:43.005+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",

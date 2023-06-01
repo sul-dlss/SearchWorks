@@ -10,7 +10,7 @@ class FolioClient
 
   attr_reader :base_url
 
-  def initialize(url: ENV.fetch('OKAPI_URL'),
+  def initialize(url: Settings.folio.url,
                  username: ENV.fetch('OKAPI_USER', nil),
                  password: ENV.fetch('OKAPI_PASSWORD', nil),
                  tenant: 'sul')
@@ -42,6 +42,50 @@ class FolioClient
     post_json('/rtac-batch', body: body.to_json)
   end
 
+  def circulation_rules
+    get_json('/circulation-rules-storage')
+  end
+
+  def request_policies
+    get_json('/request-policy-storage/request-policies', params: { limit: 2147483647 }).fetch('requestPolicies', [])
+  end
+
+  def loan_policies
+    get_json('/loan-policy-storage/loan-policies', params: { limit: 2147483647 }).fetch('loanPolicies', [])
+  end
+
+  def lost_item_fees_policies
+    get_json('/lost-item-fees-policies', params: { limit: 2147483647 }).fetch('lostItemFeePolicies', [])
+  end
+
+  def overdue_fines_policies
+    get_json('/overdue-fines-policies', params: { limit: 2147483647 }).fetch('overdueFinePolicies', [])
+  end
+
+  def patron_notice_policies
+    get_json('/patron-notice-policy-storage/patron-notice-policies', params: { limit: 2147483647 }).fetch('patronNoticePolicies', [])
+  end
+
+  def material_types
+    get_json('/material-types', params: { limit: 2147483647 }).fetch('mtypes', [])
+  end
+
+  def loan_types
+    get_json('/loan-types', params: { limit: 2147483647 }).fetch('loantypes', [])
+  end
+
+  def libraries
+    get_json('/location-units/libraries', params: { limit: 2147483647 }).fetch('loclibs', [])
+  end
+
+  def locations
+    get_json('/locations', params: { limit: 2147483647 }).fetch('locations', [])
+  end
+
+  def groups
+    get_json('/groups', params: { limit: 2147483647 }).fetch('usergroups', [])
+  end
+
   private
 
   def post(path, **kwargs)
@@ -50,6 +94,14 @@ class FolioClient
 
   def post_json(path, **kwargs)
     parse(post(path, **kwargs))
+  end
+
+  def get(path, **kwargs)
+    authenticated_request(path, method: :get, **kwargs)
+  end
+
+  def get_json(path, **kwargs)
+    parse(get(path, **kwargs))
   end
 
   # @param [HTTP::Response] response

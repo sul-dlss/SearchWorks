@@ -1,0 +1,278 @@
+[
+  {
+    "id": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
+    "name": "Business",
+    "code": "BUSINESS",
+    "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:44.778+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:44.778+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
+    "name": "Hoover Institution Library & Archives",
+    "code": "HILA",
+    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:44.996+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:44.996+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "name": "Lane Medical",
+    "code": "LANE",
+    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:45.199+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:45.199+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
+    "name": "Robert Crown Law",
+    "code": "LAW",
+    "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:45.572+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:45.572+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "name": "Art and Architecture",
+    "code": "ART",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:45.891+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:45.891+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "name": "Branner Earth Sciences",
+    "code": "EARTH-SCI",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:46.222+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:46.222+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "name": "Cecil H. Green",
+    "code": "GREEN",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:46.445+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:46.445+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
+    "name": "Cubberley Education",
+    "code": "EDUCATION",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:46.652+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:46.652+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "name": "East Asia",
+    "code": "EAST-ASIA",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:46.771+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:46.771+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+    "name": "Li & Ma Science",
+    "code": "SCIENCE",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:46.897+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:46.897+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
+    "name": "Music",
+    "code": "MUSIC",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.023+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.023+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
+    "name": "Stanford Auxiliary Library 1&2",
+    "code": "SAL",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.137+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.137+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "name": "Stanford Auxiliary Library 3",
+    "code": "SAL3",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.249+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.249+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
+    "name": "Terman Engineering",
+    "code": "ENG",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.395+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.395+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "447337a0-4eeb-4002-94fb-af6e9f1c121b",
+    "name": "Miller Marine Biology",
+    "code": "MARINE-BIO",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.522+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.522+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
+    "name": "Archive of Recorded Sound",
+    "code": "ARS",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.652+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.652+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "3cb2c120-858c-41f0-90ac-ef5d83ec3ac6",
+    "name": "Classics",
+    "code": "CLASSICS",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.776+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.776+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "05241c96-6541-41ed-b2ad-61a126d62c2d",
+    "name": "David Rumsey Map Center",
+    "code": "RUMSEY-MAP",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:47.901+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:47.901+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "c33532fc-f385-4138-9e51-49e03705d103",
+    "name": "Stanford Auxiliary Library - Newark",
+    "code": "SAL-NEWARK",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:48.146+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:48.146+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "0acfabb7-0a71-47be-82c0-c0200dd47952",
+    "name": "Media Center",
+    "code": "MEDIA-CENTER",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:48.400+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:48.400+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "name": "SUL",
+    "code": "SUL",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:48.524+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:48.524+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "e5f23316-85ce-440c-886c-eff410f66f26",
+    "name": "Tanner Philosophy",
+    "code": "TANNER",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:48.028+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:48.028+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "name": "Special Collections",
+    "code": "SPEC-COLL",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:48.271+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:48.271+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  }
+]

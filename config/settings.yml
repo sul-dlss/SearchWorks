@@ -78,6 +78,9 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
+folio:
+  url: <%= ENV['OKAPI_URL'] || 'http://okap-test.stanford.edu' %>
+
 global_ignored_stackmap_locations:
   - BINDERY
   - ENDPROCESS
