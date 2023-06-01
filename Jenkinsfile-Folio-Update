@@ -1,6 +1,14 @@
 pipeline {
   agent any
 
+  triggers {
+      cron('H H * * *')
+  }
+
+  environment {
+    OKAPI_URL = credentials('OKAPI_TEST_URL')
+  }
+
   stages {
     stage('harvest') {
       steps {
@@ -18,14 +26,14 @@ pipeline {
           bundle install --without production
 
           # Harvest
-          bin/rake proxies:import_lane || exit 1
+          bin/rake folio:update_types_cache || exit 1
 
           # Make a PR
-          git checkout -B lane-ezproxy-update
-          git add config/ezproxy/lane_proxy_file.txt
-          git commit -m "Update Lane Library EZProxy config" &&
-          git push git@github.com:sul-dlss/SearchWorks.git lane-ezproxy-update &&
-          hub pull-request -f -m "Update Lane Library EZProxy config"
+          git checkout -B folio-policies-update
+          git add config/folio
+          git commit -m "Update FOLIO types" &&
+          git push git@github.com:sul-dlss/SearchWorks.git folio-policies-update &&
+          hub pull-request -f -m "Update FOLIO types"
           echo 'Done!'
           '''
         }

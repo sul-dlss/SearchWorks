@@ -23,7 +23,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -67,7 +67,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -111,7 +111,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -155,7 +155,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -199,7 +199,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -243,7 +243,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -287,7 +287,7 @@ pipeline {
           export DEPLOY=1
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production
@@ -332,7 +332,7 @@ pipeline {
           export REVISION=$TAG_NAME
 
           # Load RVM
-          rvm use 3.0.3@searchworks --create
+          rvm use 3.1.2@searchworks --create
           gem install bundler
 
           bundle install --without production

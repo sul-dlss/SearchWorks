@@ -1,0 +1,62 @@
+[
+  {
+    "id": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
+    "name": "Graduate School of Business",
+    "code": "GSB",
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:42.625+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:42.625+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "name": "Hoover Institution",
+    "code": "HOOVER",
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:43.077+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:43.077+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "name": "Law School",
+    "code": "LAW",
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:43.801+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:43.801+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "name": "Medical Center",
+    "code": "MED",
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:43.930+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:43.930+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "name": "Stanford Libraries",
+    "code": "SUL",
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "metadata": {
+      "createdDate": "2023-02-08T23:36:44.176+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-02-08T23:36:44.176+00:00",
+      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  }
+]
