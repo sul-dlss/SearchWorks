@@ -1,0 +1,1685 @@
+[
+  {
+    "id": "a8911fae-9a65-4890-bbf5-ebcd82a8d349",
+    "name": "28day-2renew-1daygrace-2item",
+    "description": "28-day course reserves loan for Lane with 2-item limit",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "itemLimit": 2
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 2.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 14,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 2,
+          "intervalId": "Weeks"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:14.995+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:14.995+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "75bb62f2-def3-44e5-babf-26d9a994c5ca",
+    "name": "3day-norenew-15mingrace",
+    "description": "Loan policy for three-day reserves",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.111+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.111+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "26c44ee7-5a7d-4832-aa84-febe49a8d2f8",
+    "name": "14day-norenew-1daygrace",
+    "description": "Loan policy for periodicals ",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.237+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.237+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "5120d86d-fa88-437b-8db2-c5cd8cc82d89",
+    "name": "28day-norenew-1daygrace",
+    "description": "28-day equipment loan for eng",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 14,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 2,
+          "intervalId": "Weeks"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.366+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.366+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "07115e75-c4a9-4ef0-b013-dba184251041",
+    "name": "7day-norenew-1daygrace",
+    "description": "7-day loan (Art periodicals)",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.491+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.491+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "747b81a3-8c5f-48d5-bb78-543cfb56538b",
+    "name": "7day-norenew-3daygrace",
+    "description": "7-day loan music external DVD....",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.615+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.615+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "d7865885-da1e-446d-98e4-b6c06724d0a6",
+    "name": "2hour-norenew-1hourgrace",
+    "description": "Law Library Course Reserves and Perm. Reserves housed in self-checkout cabinets.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 2,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE_TIME",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.743+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.743+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "8ac31b64-03f9-4d0e-8136-6421066d6186",
+    "name": "4hour-norenew-1hourgrace",
+    "description": "Loan period for misc. items checked out at Law Library",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 4,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Hours"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.871+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:15.871+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "ab1b859d-c11a-4dbd-8e05-fbbd8eeac2b8",
+    "name": "14day-norenew-15mingrace",
+    "description": "Loan policy for 14-day reserves",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.169+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.169+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "770032b5-5480-49df-8f15-d8696ac3ecfa",
+    "name": "1sem-1renew-14daygrace",
+    "description": "Loan policy for Stanford Law Review",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Fixed",
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "fixedDueDateScheduleId": "a82a79ca-6b4e-4cc9-a381-38610ae434ee"
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 1.0
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 8,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.294+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.294+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "a369ef4d-cec8-4348-bf36-acb16f72f67f",
+    "name": "24hour-norenew-15mingrace",
+    "description": "24 hour loan (often for equipment at GSB)",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 24,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.410+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.410+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "6fe9c4bd-5f5a-4749-bf89-2aade9a6b5dd",
+    "name": "2hour-1renew-15mingrace",
+    "description": "2-hour loan (e.g., Music permres, EAS expensive locked stacks)",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 2,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.513+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.513+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "b9de476a-fa5e-4635-959d-8a5bf0734be0",
+    "name": "7day-norenew-3daygrace-5item",
+    "description": "Loan policy for Art Library DVDs",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      },
+      "itemLimit": 5
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.647+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.647+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "80659254-cddb-4667-8bd1-c2d57bb92bb7",
+    "name": "14day-2renew-1daygrace",
+    "description": "Law Library Vrooman & Displays",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.766+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.766+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "c1d52eb9-b6c6-4dd6-8f05-aee10d8e6b42",
+    "name": "7day-2renew-1daygrace",
+    "description": "For some permanent reserves items at Law.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 2.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:16.924+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:16.924+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "b79e3dbf-b30a-420c-9e97-dcf92e937883",
+    "name": "8week-1renew-14daygrace",
+    "description": "Loan policy for BorrowDirect materials loaned to Stanford users",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 8,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.044+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.044+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "ef9de996-17db-4d7f-87bc-54970af6961d",
+    "name": "4hour-norenew-15mingrace",
+    "description": "4-hour loan for course reserves and equipment",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 4,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.168+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.168+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "bc2065ce-7f8b-454b-ad5c-33a5e53a3de4",
+    "name": "20week-unlimitedrenew-1daygrace",
+    "description": "Loan policy for Stanford materials loaned to partner BD institutions",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 20,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 8,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.290+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.290+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "34ea18bb-f71f-4f22-85b3-71b981d57db2",
+    "name": "No loan",
+    "loanable": false,
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.415+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.415+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "8d678d1a-24ca-43bb-90df-40e4e57e0da9",
+    "name": "2hour-1renew-15mingrace-5item",
+    "description": "2-hour loan for Law issued alumni borrowers five item limit",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 2,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      },
+      "itemLimit": 5
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.546+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.546+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "cebde893-a306-4aad-8281-905d87843f68",
+    "name": "1sem-2renew-14daygrace",
+    "description": "Loan policy for RLCP grad students",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Fixed",
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "fixedDueDateScheduleId": "a82a79ca-6b4e-4cc9-a381-38610ae434ee"
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 8,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.660+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.660+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "ad47ac4d-8305-4039-8ac4-93a69a789074",
+    "name": "1yearfixed-2renew-14daygrace",
+    "description": "Loan policy for monographs owned by SUL, GSB and Law loaned to faculty.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Fixed",
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "fixedDueDateScheduleId": "277410e1-2908-4e2b-bf96-ac81b4aedad4"
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.790+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.790+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "770bc585-9902-47ef-8c42-46503644d9c6",
+    "name": "1day-1renew-1daygrace",
+    "description": "Loan policy for equipment",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:17.913+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:17.913+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "814a3bd6-2a06-437f-ae34-f7ed39cbfc92",
+    "name": "1day-4renew-15mingrace",
+    "description": "Loan policy for Art Library locked stacks materials.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 4.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.021+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.021+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "32872e02-34b2-49b2-b0dd-d3684c5bf246",
+    "name": "7day-1renew-3daygrace",
+    "description": "Loan policy for Media items",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 3,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.147+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.147+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "7101023e-5e1d-4ca0-bb16-a0585c53bcaf",
+    "name": "7day-2renew-3daygrace",
+    "description": "For items that circulate for 7 days  e.g., Lane - periodicals, EDU picture books",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 2.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.264+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.264+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "2bc718ef-2440-4254-b8e0-3b0c6724fb61",
+    "name": "1day-norenew-15mingrace",
+    "description": "Loan policy for one-day reserves",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.390+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.390+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "2aceed44-b986-4362-8d74-1d46e1377761",
+    "name": "14day-1renew-1daygrace",
+    "description": "Loan policy for periodicals ",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.510+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.510+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "5254c6cd-841b-43c8-86e2-15d76470de96",
+    "name": "3hour-norenew-15mingrace",
+    "description": "3-hour loan for course reserves and equipment",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 3,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.647+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.647+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "3efe7693-3357-4f9b-999d-a271f86019b0",
+    "name": "28day-2renew-14daygrace",
+    "description": "Loan policy for Edu, Green, Lane and Law materials",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.769+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.769+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "d820a2f3-66aa-4cae-ac58-d9aaeecdc014",
+    "name": "28day-2renew-1daygrace-5item",
+    "description": "Loans to Law alum with 5-item limit",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      },
+      "itemLimit": 5
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 2.0,
+      "renewFromId": "SYSTEM_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 14,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 2,
+          "intervalId": "Weeks"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:18.896+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:18.896+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "5866e82c-ab61-4628-85d4-ee1497b0d3c8",
+    "name": "7day-1renew-1daygrace",
+    "description": "Loan policy for Media items",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 3,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.018+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.018+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "fca138e9-40aa-4a72-b1d9-eb7c8ddf2662",
+    "name": "28day-2renew-14daygrace-25item",
+    "description": "Loan policy for fee borrowers with 25-item limit",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "itemLimit": 25
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.143+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.143+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "d86d2800-73e0-419f-8c7a-9a2aab213477",
+    "name": "2day-norenew-15mingrace",
+    "description": "Loan policy for two-day reserves",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 2,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.261+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.261+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "7ff30237-d14e-4998-833b-1bc009122b5f",
+    "name": "14day-1renew-7daygrace",
+    "description": "Loan policy for periodicals e.g., Tanner",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.376+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.376+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "0a8d7a5c-328f-4df5-a27c-81856d1ce2a5",
+    "name": "2hour-norenew-15mingrace",
+    "description": "2-hour reserves Green, GSB. Lane equipment & reserve book",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 2,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Hours"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.495+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.495+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "dc5e4415-2580-4b89-acd7-c4d8fda63b99",
+    "name": "4day-norenew-1daygrace",
+    "description": "Loan policy for Earth Sci locked stacks materials; business 4 day loan",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 4,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 1,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.613+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.613+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "9b38ec6b-f86c-4644-884a-9244cceeda1a",
+    "name": "28day-2renew-7daygrace",
+    "description": "Loan policy for earth lckstk",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.736+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.736+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "c7777ca8-19e0-4277-b5c5-19b1e6cbfa49",
+    "name": "7day-1renew-3daygrace -5item",
+    "description": "Loan policy for Media items",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      },
+      "itemLimit": 5
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 3,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:19.867+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T01:05:19.867+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "id": "fd81f05e-68e0-4165-8caa-0e2c30b2b415",
+    "name": "28day-1renew-14daygrace",
+    "description": "Loan policy for SAL3 journals",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-22T20:10:13.358+00:00",
+      "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
+      "updatedDate": "2023-02-22T20:10:13.358+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    }
+  },
+  {
+    "id": "626d02e2-95a7-4f07-afc0-b83afa48f29a",
+    "name": "12hour-norenew-15mingrace",
+    "description": "12 hour loans that are due before the library closes with no renewals; loan cannot carry over to opening on the following day. Used for equipment loans at Lane Library.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 12,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_CURRENT_SERVICE_POINT_HOURS",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-03-10T23:04:57.915+00:00",
+      "createdByUserId": "0c66be8d-90ac-451b-b562-795e24139a13",
+      "updatedDate": "2023-03-14T14:57:53.973+00:00",
+      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
+    }
+  },
+  {
+    "id": "885a2bd0-35c7-497f-9dc6-462bebe837a3",
+    "name": "1qtr-3renew-14daygrace",
+    "description": "Loan policy for monos owned by SUL, GSB and Law loaned to grad students",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Fixed",
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "fixedDueDateScheduleId": "d4b65d46-2637-4310-9b96-6d03d867f506"
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 3.0
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.998+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-04-05T19:48:07.317+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    }
+  },
+  {
+    "id": "8dfc8ff2-51f8-494f-ba8b-19c540ed2b9c",
+    "name": "8 hour - overnight - no renew ",
+    "description": "For business reserves so that no matter when checked out they are due back at the start of the next open day. ",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 8,
+        "intervalId": "Hours"
+      },
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-03-02T20:43:55.093+00:00",
+      "createdByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10",
+      "updatedDate": "2023-03-10T22:28:40.996+00:00",
+      "updatedByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10"
+    }
+  },
+  {
+    "id": "50838b19-a707-4277-a600-442453dac1cd",
+    "name": "1qtr-1renew-14daygrace",
+    "description": "Loan policy for new books for tanner",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Fixed",
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "fixedDueDateScheduleId": "d4b65d46-2637-4310-9b96-6d03d867f506"
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 1.0
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-04-05T19:48:55.662+00:00",
+      "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
+      "updatedDate": "2023-04-05T19:50:07.715+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    }
+  },
+  {
+    "id": "0d26a888-afeb-458a-bcdb-68b2f542d598",
+    "name": "6month-norenew-14daygrace",
+    "description": "Loan policy for Stanford materials loaned to partner BD institutions",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 6,
+        "intervalId": "Months"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 14,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 8,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-05-02T18:02:01.525+00:00",
+      "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
+      "updatedDate": "2023-05-02T18:02:01.525+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    }
+  }
+]

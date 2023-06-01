@@ -34,7 +34,10 @@
     "countClosed": true,
     "maxOverdueFine": 0.0,
     "forgiveOverdueFine": true,
-    "overdueRecallFine": { "quantity": 3.0, "intervalId": "day" },
+    "overdueRecallFine": {
+      "quantity": 3.0,
+      "intervalId": "day"
+    },
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 21.0,
     "metadata": {
@@ -47,7 +50,10 @@
   },
   {
     "name": "1.50/10.50 overdue fine",
-    "overdueFine": { "quantity": 1.5, "intervalId": "day" },
+    "overdueFine": {
+      "quantity": 1.5,
+      "intervalId": "day"
+    },
     "countClosed": false,
     "maxOverdueFine": 10.5,
     "forgiveOverdueFine": false,
@@ -64,7 +70,10 @@
   {
     "name": "1.00/30.00 fine policy",
     "description": "$1 fine per hour to a maximum of $30",
-    "overdueFine": { "quantity": 1.0, "intervalId": "hour" },
+    "overdueFine": {
+      "quantity": 1.0,
+      "intervalId": "hour"
+    },
     "countClosed": true,
     "maxOverdueFine": 30.0,
     "forgiveOverdueFine": false,

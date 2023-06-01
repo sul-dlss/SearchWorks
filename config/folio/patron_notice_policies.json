@@ -8,9 +8,15 @@
       "createdDate": "2023-02-08T20:09:19.337+00:00",
       "updatedDate": "2023-02-08T20:09:19.337+00:00"
     },
-    "loanNotices": [],
-    "feeFineNotices": [],
-    "requestNotices": []
+    "loanNotices": [
+
+    ],
+    "feeFineNotices": [
+
+    ],
+    "requestNotices": [
+
+    ]
   },
   {
     "id": "9d9ab9b0-2b9b-40d6-b122-49c4bdd71736",
@@ -27,13 +33,17 @@
         "templateId": "3c580929-0b2d-4273-8d5b-9f4ae8554afa",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check out" }
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
       },
       {
         "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check in" }
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
       },
       {
         "templateId": "e72e1e3d-5bcb-4b75-b816-0f16a09090d5",
@@ -43,8 +53,14 @@
         "sendOptions": {
           "sendHow": "Before",
           "sendWhen": "Due date",
-          "sendBy": { "duration": 15, "intervalId": "Minutes" },
-          "sendEvery": { "duration": 15, "intervalId": "Minutes" }
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          },
+          "sendEvery": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          }
         }
       }
     ],
@@ -59,7 +75,9 @@
         }
       }
     ],
-    "requestNotices": []
+    "requestNotices": [
+
+    ]
   },
   {
     "id": "c4ec90cb-1139-4c59-a690-9de48c4e3fd6",
@@ -79,7 +97,10 @@
         "sendOptions": {
           "sendHow": "Before",
           "sendWhen": "Due date",
-          "sendBy": { "duration": 2, "intervalId": "Days" }
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Days"
+          }
         }
       },
       {
@@ -90,26 +111,35 @@
         "sendOptions": {
           "sendHow": "After",
           "sendWhen": "Due date",
-          "sendBy": { "duration": 2, "intervalId": "Days" }
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Days"
+          }
         }
       },
       {
         "templateId": "0451908d-bc38-4e93-a768-ba2e0591bd71",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check out" }
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
       },
       {
         "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check in" }
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
       },
       {
         "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Item recalled" }
+        "sendOptions": {
+          "sendWhen": "Item recalled"
+        }
       }
     ],
     "feeFineNotices": [
@@ -121,7 +151,10 @@
         "sendOptions": {
           "sendHow": "After",
           "sendWhen": "Aged to lost - fine charged",
-          "sendBy": { "duration": 1, "intervalId": "Minutes" }
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Minutes"
+          }
         }
       },
       {
@@ -139,19 +172,25 @@
         "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Available" }
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
       },
       {
         "templateId": "35026487-d753-45a6-a350-5b976def9df4",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Available" }
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
       },
       {
         "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Request cancellation" }
+        "sendOptions": {
+          "sendWhen": "Request cancellation"
+        }
       }
     ]
   },
@@ -175,20 +214,27 @@
         "sendOptions": {
           "sendHow": "Before",
           "sendWhen": "Due date",
-          "sendBy": { "duration": 3, "intervalId": "Days" }
+          "sendBy": {
+            "duration": 3,
+            "intervalId": "Days"
+          }
         }
       },
       {
         "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check in" }
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
       },
       {
         "templateId": "0451908d-bc38-4e93-a768-ba2e0591bd71",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Check out" }
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
       },
       {
         "templateId": "db1b5ba2-3089-4820-8e9a-0fe1be34f7c0",
@@ -198,7 +244,10 @@
         "sendOptions": {
           "sendHow": "After",
           "sendWhen": "Due date",
-          "sendBy": { "duration": 15, "intervalId": "Minutes" }
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          }
         }
       }
     ],
@@ -227,7 +276,9 @@
         "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Available" }
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
       },
       {
         "templateId": "35026487-d753-45a6-a350-5b976def9df4",
@@ -237,15 +288,23 @@
         "sendOptions": {
           "sendHow": "Before",
           "sendWhen": "Hold expiration",
-          "sendBy": { "duration": 3, "intervalId": "Days" },
-          "sendEvery": { "duration": 1, "intervalId": "Days" }
+          "sendBy": {
+            "duration": 3,
+            "intervalId": "Days"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Days"
+          }
         }
       },
       {
         "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
         "format": "Email",
         "realTime": false,
-        "sendOptions": { "sendWhen": "Request cancellation" }
+        "sendOptions": {
+          "sendWhen": "Request cancellation"
+        }
       }
     ]
   }
