@@ -242,6 +242,20 @@ RSpec.describe Holdings::Item do
     end
   end
 
+  describe '#live_lookup_item_id' do
+    let(:document) { SolrDocument.new }
+
+    subject(:item) { described_class.new('36105232609540 -|- GREEN -|- GRE-STACKS', document:) }
+
+    before do
+      allow(document).to receive(:folio_items).and_return([])
+    end
+
+    it 'returns the item barcode' do
+      expect(item.live_lookup_item_id).to eq '36105232609540'
+    end
+  end
+
   context 'with data from FOLIO' do
     let(:folio_location) {
       Folio::Location.from_dynamic(
@@ -300,6 +314,12 @@ RSpec.describe Holdings::Item do
       it 'returns the effective location from FOLIO' do
         expect(item.effective_location.library.code).to eq 'GREEN'
         expect(item.effective_location.code).to eq 'GRE-STACKS'
+      end
+    end
+
+    describe '#live_lookup_item_id' do
+      it 'returns the item uuid from FOLIO' do
+        expect(item.live_lookup_item_id).to eq '64d4220b-ebae-5fb0-971c-0f98f6d9cc93'
       end
     end
   end
