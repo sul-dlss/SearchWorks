@@ -204,7 +204,7 @@ describe "catalog/_index_location" do
 
         it "should put the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
           expect(rendered).to have_css('tbody td a', text: 'Request')
-          expect(rendered).not_to have_css('tbody td[data-barcode] a', text: 'Request')
+          expect(rendered).not_to have_css('tbody td[data-item-id] a', text: 'Request')
         end
       end
     end

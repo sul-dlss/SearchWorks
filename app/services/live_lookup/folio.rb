@@ -5,8 +5,6 @@
 #   item availability information displayed on index and show views.
 class LiveLookup
   class Folio
-    SERVICE_NAME = 'FOLIO'
-
     attr_reader :instance_ids
 
     delegate :as_json, :to_json, to: :records
@@ -20,8 +18,7 @@ class LiveLookup
       @records ||= real_time_availability_request.fetch('holdings', []).flat_map do |holding|
         holding.fetch('holdings', []).map do |item|
           {
-            service: SERVICE_NAME,
-            item_uuid: item.fetch('id', nil),
+            item_id: item.fetch('id', nil),
             due_date: due_date(item),
             status: status(item),
             is_available: available?(item)
@@ -43,11 +40,13 @@ class LiveLookup
     def status(item)
       status = item.fetch('status', nil)
       case status
+      when 'Available'
+        nil # matches response from Sirsi for available items
       when 'Aged to lost', 'Claimed returned'
         'Checked out'
       when 'Awaiting delivery', 'Awaiting pickup'
         'On hold for a borrower'
-      when 'In process (non requestable)'
+      when 'In process (non-requestable)'
         'In process'
       else
         status

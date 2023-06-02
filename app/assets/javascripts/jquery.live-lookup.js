@@ -17,18 +17,19 @@
       $.getJSON(live_lookup_url, function(data){
           for (var i=0, length=data.length; i < length; i++) {
             var live_data = data[i];
-            var dom_item = $("[data-barcode='" + live_data.barcode + "']");
+
+            var dom_item = $("[data-item-id='" + live_data.item_id + "']");
             var target = $(dom_item.data('status-target'), dom_item);
             var current_location = $('.current-location', dom_item)
             var status_text = target.next('.status-text');
-            if ( live_data.current_location ) {
-              current_location.html(live_data.current_location);
+            if ( live_data.status ) {
+              current_location.html(live_data.status);
             }
             if ( live_data.due_date ) {
               current_location.append(' Due ' + live_data.due_date);
             }
 
-            if ( live_data.due_date && (target.hasClass('unknown') || target.hasClass('page')) ) {
+            if ( !live_data.is_available && (target.hasClass('unknown') || target.hasClass('page')) ) {
               target.removeClass('unknown');
               target.removeClass('page');
               target.addClass('unavailable');
@@ -43,7 +44,7 @@
                 $('.request-link', dom_item).html(link);
               }
             }
-            if ( !live_data.due_date && dom_item.length > 0  && target.hasClass('unknown')) {
+            if ( live_data.is_available && dom_item.length > 0  && target.hasClass('unknown')) {
               target.removeClass('unknown');
               target.addClass('available');
               status_text.text(status_text.data('available-text'));

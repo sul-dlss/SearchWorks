@@ -29,6 +29,7 @@ class SolrDocument
   include MarcSubjects
   include IiifConcern
   include DorContentMetadata
+  include LiveLookupIds
 
   include Blacklight::Solr::Document
   include SchemaDotOrg

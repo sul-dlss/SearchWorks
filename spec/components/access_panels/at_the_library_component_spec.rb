@@ -266,11 +266,11 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       pending "should have an item that has a request url" do
-        expect(page).to have_css('.availability td[data-barcode="456"][data-request-url]')
+        expect(page).to have_css('.availability td[data-item-id="456"][data-request-url]')
       end
 
       skip "should have an item that does not have a request url" do
-        expect(rendered).not_to have_css('.availability td[data-barcode="123"][data-request-url]')
+        expect(rendered).not_to have_css('.availability td[data-item-id="123"][data-request-url]')
       end
     end
   end

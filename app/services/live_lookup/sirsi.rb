@@ -63,13 +63,16 @@ class LiveLookup
 
       def as_json
         {
-          barcode:,
+          item_id:,
+          barcode: item_id,
           due_date:,
-          current_location:
+          status:,
+          current_location: status,
+          is_available: available?
         }
       end
 
-      def barcode
+      def item_id
         @record.xpath('.//item_record/item_id').map(&:text).last
       end
 
@@ -79,11 +82,15 @@ class LiveLookup
         due_date_value.gsub(',23:59', '')
       end
 
+      def available?
+        due_date.blank?
+      end
+
       def due_date_value
         @record.xpath('.//item_record/date_time_due').map(&:text).last
       end
 
-      def current_location
+      def status
         return unless valid_current_location?
 
         Holdings::Location.new(current_location_code).name
