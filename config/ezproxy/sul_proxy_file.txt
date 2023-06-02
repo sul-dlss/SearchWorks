@@ -936,7 +936,7 @@ aas.aanda.org
 econtent.hogrefe.com
 www.bns.ee
 ulrichsweb.serialssolutions.com
-reference.sabinet.co.za
+discover.sabinet.co.za
 elibrary.worldbank.org
 msp.warwick.ac.uk
 www.philanthropy.com
