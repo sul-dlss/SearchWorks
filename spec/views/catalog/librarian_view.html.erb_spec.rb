@@ -9,7 +9,7 @@ describe "catalog/librarian_view" do
                           id: '12345',
                           last_updated: '2022-08-01T23:01:18Z',
                           marcxml: metadata1,
-                          holdings_json_struct: [{ "holdings_key" => "holdings_value" }].to_json,
+                          holdings_json_struct: [{ "holdings_key" => "holdings_value" }],
                           folio_json_struct: [{ "folio_key" => "folio_value" }].to_json
                         ))
       render

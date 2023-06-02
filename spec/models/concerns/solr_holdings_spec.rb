@@ -410,7 +410,7 @@ RSpec.describe SolrHoldings do
       JSON
     end
 
-    let(:document) { SolrDocument.new(holdings_json_struct:) }
+    let(:document) { SolrDocument.new(holdings_json_struct: [JSON.parse(holdings_json_struct)]) }
 
     describe '#find_holding' do
       subject(:holding) { document.find_holding(library_code: 'EARTH-SCI', location: 'ATCIRCDESK') }

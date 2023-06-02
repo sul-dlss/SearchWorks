@@ -2,7 +2,7 @@
     <div id="folio-json-view">
         <details>
             <summary>Holdings JSON</summary>
-            <pre><%= JSON.pretty_generate(JSON.parse(@document.first(:holdings_json_struct))) %></pre>
+            <pre><%= JSON.pretty_generate(@document.first(:holdings_json_struct)) %></pre>
         </details>
         <details>
             <summary>FOLIO JSON</summary>
