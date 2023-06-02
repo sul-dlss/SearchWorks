@@ -48,9 +48,11 @@ describe LiveLookup::Sirsi do
         expect(json.length).to eq 1
         expect(json.first).to eq({
                                    'item_id' => '123456',
+                                   'barcode' => '123456',
                                    'due_date' => '10/10/2014,10:32',
                                    'is_available' => false,
-                                   'status' => 'At bindery'
+                                   'status' => 'At bindery',
+                                   'current_location' => 'At bindery'
                                  })
       end
     end
