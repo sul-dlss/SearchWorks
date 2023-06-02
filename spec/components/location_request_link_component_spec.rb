@@ -8,7 +8,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
-  let(:items) { [double(current_location: double(code: nil), circulates?: true)] }
+  let(:items) { [double(current_location: double(code: nil), circulates?: true, folio_item?: false)] }
 
   let(:page) { render_inline(component) }
 
@@ -34,7 +34,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   end
 
   context 'when none of the items have a circulating type' do
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+    let(:items) { [double(circulates?: false, current_location: double(code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link }
   end
@@ -57,7 +57,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   context 'when all items are in an Aeon library but not an Aeon location' do
     let(:library) { 'ARS' }
     let(:location) { 'REFERENCE' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+    let(:items) { [double(circulates?: false, current_location: double(code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link 'Request via Aeon' }
   end
@@ -83,7 +83,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:document) { SolrDocument.new(id: '12345') }
     let(:library) { 'SAL' }
     let(:location) { 'L-PAGE-EA' }
-    let(:items) { [double(circulates?: false, type: 'NEWSPAPER', current_location: double(code: nil))] }
+    let(:items) { [double(circulates?: false, type: 'NEWSPAPER', current_location: double(code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link 'Request via Aeon' }
   end

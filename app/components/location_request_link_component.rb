@@ -47,7 +47,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     return false unless items.any? && !bound_with?
     return @render unless @render.nil?
 
-    @render = ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable?) &&
+    @render = ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable? || folio_pageable?) &&
               !all_in_disabled_current_location?
   end
 
@@ -115,5 +115,11 @@ class LocationRequestLinkComponent < ViewComponent::Base
 
   def disabled_current_locations
     Settings.disabled_current_locations[library] || Settings.disabled_current_locations.default
+  end
+
+  def folio_pageable?
+    return false unless items.first.folio_item?
+
+    Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page')
   end
 end
