@@ -4,12 +4,12 @@ describe FolioJsonExport do
   let(:document) do
     SolrDocument.new(
       id: '123',
-      holdings_json_struct: [{ 'holdings_key' => 'holdings_value' }.to_json],
+      holdings_json_struct: [{ 'holdings_key' => 'holdings_value' }],
       folio_json_struct: [{ "folio_key" => "folio_value" }.to_json]
     )
   end
   let(:empty_content_document) do
-    SolrDocument.new(id: '456', holdings_json_struct: [].to_json, folio_json_struct: [].to_json)
+    SolrDocument.new(id: '456', holdings_json_struct: [], folio_json_struct: [].to_json)
   end
   let(:no_key_document) do
     SolrDocument.new(id: '789')

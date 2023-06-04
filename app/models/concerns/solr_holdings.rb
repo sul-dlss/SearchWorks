@@ -86,6 +86,6 @@ module SolrHoldings
   end
 
   def holdings_json
-    @holdings_json ||= self[:holdings_json_struct].present? ? JSON.parse(Array(self[:holdings_json_struct]).first) : {}
+    @holdings_json ||= self[:holdings_json_struct].present? ? first(:holdings_json_struct) : {}
   end
 end
