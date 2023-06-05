@@ -987,6 +987,7 @@
       <str name="fl">
         score,
         id,
+        uuid_ssi,
         author_corp_display,          vern_author_corp_display,
         author_meeting_display,       vern_author_meeting_display,
         author_person_display,        vern_author_person_display,
