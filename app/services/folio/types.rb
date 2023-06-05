@@ -1,7 +1,7 @@
 module Folio
   class Types
     class << self
-      delegate :policies, :circulation_rules, :criteria, to: :instance
+      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, to: :instance
     end
 
     def self.instance
@@ -44,9 +44,17 @@ module Folio
         'loan-type' => get_type('loan_types').index_by { |p| p['id'] },
         'location-institution' => get_type('institutions').index_by { |p| p['id'] },
         'location-campus' => get_type('campuses').index_by { |p| p['id'] },
-        'location-library' => get_type('libraries').index_by { |p| p['id'] },
-        'location-location' => get_type('locations').index_by { |p| p['id'] }
+        'location-library' => libraries,
+        'location-location' => locations
       }
+    end
+
+    def libraries
+      @libraries ||= get_type('libraries').index_by { |p| p['id'] }
+    end
+
+    def locations
+      @locations ||= get_type('locations').index_by { |p| p['id'] }
     end
 
     def get_type(type)

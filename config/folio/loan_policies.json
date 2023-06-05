@@ -1591,5 +1591,48 @@
       "updatedDate": "2023-06-22T19:02:40.341+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     }
+  },
+  {
+    "id": "7f292279-7184-4426-a93f-19a661334621",
+    "name": "14day-2renew-3daygrace",
+    "description": "Games - at th emoment for ENG",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 14,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": true,
+    "renewalsPolicy": {
+      "unlimited": false,
+      "numberAllowed": 2.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-07-13T14:51:08.239+00:00",
+      "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
+      "updatedDate": "2023-07-13T14:51:08.239+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+    }
   }
 ]
