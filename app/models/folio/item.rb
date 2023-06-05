@@ -18,12 +18,12 @@ module Folio
 
     def self.from_dynamic(json)
       new(id: json.fetch('id'),
-          barcode: json.fetch('barcode'),
-          material_type: MaterialType.new(
+          barcode: json['barcode'],
+          material_type: json['materialTypeId'] && MaterialType.new(
             id: json.fetch('materialTypeId'),
             name: json.fetch('materialType')
           ),
-          permanent_loan_type: LoanType.new(
+          permanent_loan_type: json['permanentLoanTypeId'] && LoanType.new(
             id: json.fetch('permanentLoanTypeId'),
             name: json.fetch('permanentLoanType')
           ),
