@@ -18,7 +18,7 @@ module AllCapsParams
   end
 
   def downcase_all_caps_param hash, key
-    return unless hash[key]&.present?
+    return unless hash[key].present?
 
     query = hash[key]
 

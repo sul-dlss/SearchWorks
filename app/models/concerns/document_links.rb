@@ -15,7 +15,7 @@ module DocumentLinks
   end
 
   def marc_fulltext_links
-    marc_links.fulltext if marc_links&.fulltext&.present?
+    marc_links.fulltext if marc_links&.fulltext.present?
   end
 
   def non_stanford_hathi_links

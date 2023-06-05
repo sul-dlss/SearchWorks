@@ -9,8 +9,8 @@ module RequestLinks
     def available_online?
       # This is similar to the code in the online access panel with the exception
       # of us checking the index for fultext links instead of the MARC record (and ignoring EDS data)
-      document&.index_links&.sfx&.present? ||
-        document&.index_links&.fulltext&.present? ||
+      document&.index_links&.sfx.present? ||
+        document&.index_links&.fulltext.present? ||
         document.hathi_links.all.reject(&:stanford_only?).any?
     end
 

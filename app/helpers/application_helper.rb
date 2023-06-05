@@ -88,7 +88,7 @@ module ApplicationHelper
   end
 
   def from_advanced_search?
-    params[:search_field] == 'advanced' || params[:clause]&.present?
+    params[:search_field] == 'advanced' || params[:clause].present?
   end
 
   def link_to_catalog_search

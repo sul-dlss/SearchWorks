@@ -23,7 +23,7 @@ module ReplaceSpecialQuotes
   end
 
   def replace_single_quotes_from_hash(hash, key)
-    return unless hash[key]&.present?
+    return unless hash[key].present?
 
     replace_single_quotes_from_param(hash[key])
 
