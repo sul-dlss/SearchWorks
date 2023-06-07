@@ -45,7 +45,7 @@
                 <% end %>
               <% end %>
             <% end %>
-            <%= render location_request_link unless Settings.libraries[library.code].suppress_location_request_link %>
+            <%= render location_request_link unless Settings.libraries[library.code]&.suppress_location_request_link %>
           </td>
         </tr>
         <% if Settings.libraries[library.code].suppress_items_list_on_results_view %>
