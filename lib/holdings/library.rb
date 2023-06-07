@@ -2,20 +2,14 @@ class Holdings
   class Library
     attr_reader :code, :items, :mhld
 
+    delegate :name, :about_url, to: :config
+
     # @params [String] code the library code (e.g. 'GREEN')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
     def initialize(code, items = [], mhld = [])
       @code = code
       @items = items
       @mhld = mhld
-    end
-
-    def name
-      config = Settings.libraries[@code]
-      return config.name if config
-
-      Honeybadger.notify("No library config", context: { code: @code })
-      nil
     end
 
     # @return [Array<Holdings::Location>] the locations with the holdings
@@ -75,6 +69,10 @@ class Holdings
         name:,
         library_instructions:
       }
+    end
+
+    def config
+      Settings.libraries[@code] || Settings.libraries.default
     end
   end
 end
