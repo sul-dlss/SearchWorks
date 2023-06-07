@@ -327,6 +327,7 @@ catalog-hathitrust-org
 catalog.hathitrust.org
 catalog.nlm.nih.gov
 catalogimages.wiley.com
+catalogue.bnf.fr
 catalyst.nejm.org
 catdir.loc.gov
 cbmjournal.springeropen.com
