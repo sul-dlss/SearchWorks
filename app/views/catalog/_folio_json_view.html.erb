@@ -8,7 +8,7 @@
             <summary>FOLIO JSON</summary>
             <pre><%= JSON.pretty_generate(JSON.parse(@document.first(:folio_json_struct))) %></pre>
         </details>
-        <% if @document.preferred_item %>
+        <% if @document.preferred_item&.folio_item? %>
         <details>
             <summary>Circulation rules</summary>
             <pre><%= Folio::CirculationRules::PolicyService.instance.item_rule(@document.preferred_item).to_debug_s %></pre>
