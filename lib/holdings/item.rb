@@ -131,11 +131,13 @@ class Holdings
     end
 
     def live_status?
+      return true if folio_item?
+
       library != 'LANE-MED'
     end
 
     def circulates?
-      circulating_item_types == '*' || circulating_item_types.include?(type)
+      folio_item_circulates? || circulating_item_types == '*' || circulating_item_types.include?(type)
     end
 
     def as_json(*)
@@ -236,7 +238,13 @@ class Holdings
     end
 
     def folio_item
-      @folio_item ||= @document.folio_items.find { |item| item.barcode == barcode }
+      @folio_item ||= document&.folio_items&.find { |item| item.barcode == barcode }
+    end
+
+    def folio_item_circulates?
+      return unless folio_item?
+
+      Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)&.dig('loanable')
     end
   end
 end
