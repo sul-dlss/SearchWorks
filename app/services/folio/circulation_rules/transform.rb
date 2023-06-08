@@ -91,6 +91,8 @@ module Folio
           end
         end
 
+        sorters << ->(policy) { policy[:criteria].values_at('location-library', 'location-location', 'group', 'material-type') }
+
         statements = statements.sort_by { |s| sorters.map { |z| z.call(s) } }
         statements = statements.map do |s|
           s.criteria = DEFAULT_CRITERIA.merge(s[:criteria])
