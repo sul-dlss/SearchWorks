@@ -2,14 +2,13 @@ module AccessPanels
   class LibraryComponent < ViewComponent::Base
     with_collection_parameter :library
 
-    attr_reader :library, :document, :settings
+    attr_reader :library, :document
 
     # @params [Holdings::Library] library the holdings for the item at a particular library
     # @params [SolrDocument] document
     def initialize(library:, document:)
       @library = library
       @document = document
-      @settings = Settings.libraries[library.code]
     end
 
     def thumb_for_library
@@ -26,7 +25,7 @@ module AccessPanels
     end
 
     def link_to_library_about_page(&)
-      link_to_if settings.about_url, capture(&), settings.about_url
+      link_to_if library.about_url, capture(&), library.about_url
     end
   end
 end

@@ -15,7 +15,18 @@ RSpec.describe AccessPanels::LibraryComponent, type: :component do
 
     it "should return the image tag (w/ png extension) for the ZOMBIE library" do
       render_inline(component)
+
       expect(page).to have_selector('img[src^="/assets/ZOMBIE"][data-hidpi-src^="/assets/ZOMBIE@2x"]')
+    end
+  end
+
+  context 'with an unknown library' do
+    let(:library) { Holdings::Library.new('no-such-library') }
+
+    it "returns a placeholder panel" do
+      render_inline(component)
+
+      expect(page).to have_selector('h3.no-link', text: 'Stanford Libraries')
     end
   end
 end
