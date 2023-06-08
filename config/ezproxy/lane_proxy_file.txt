@@ -1191,6 +1191,7 @@ pharmrev.aspetjournals.org
 phaseonline.ceramics.org
 phcfm.org
 phil.cdc.gov
+philpapers.org
 physicstoday.scitation.org
 physoc.onlinelibrary.wiley.com
 pi.lib.uchicago.edu
