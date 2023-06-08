@@ -48,7 +48,7 @@
             <%= render location_request_link unless Settings.libraries[library.code]&.suppress_location_request_link %>
           </td>
         </tr>
-        <% if Settings.libraries[library.code].suppress_items_list_on_results_view %>
+        <% if Settings.libraries[library.code]&.suppress_items_list_on_results_view %>
           <tr>
             <td colspan='2'><%= link_to('See full record for details', solr_document_path(document)) %></td>
           </tr>
