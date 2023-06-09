@@ -91,6 +91,7 @@ apfmj.biomedcentral.com
 apjai-journal.org
 apjcn.nhri.org.tw
 apn.mhmedical.com
+app.dimensions.ai
 app.gideononline.com
 app.jove.com
 app.knovel.com
@@ -512,6 +513,7 @@ ebmh.bmj.com
 ebn.bmj.com
 ebook.kstudy.com
 ebookcentral.proquest.com
+ebooks.cap.org
 ebooks.iospress.nl
 ebooks.thieme.com
 ebrary.ifpri.org
@@ -1521,6 +1523,7 @@ www.aaiddjournals.org
 www.aamc.org
 www.aana.com
 www.aapspharmscitech.org
+www.ablj.org
 www.ac-psych.org
 www.acc.org
 www.accessdata.fda.gov
@@ -2740,6 +2743,7 @@ www.ulb.tu-darmstadt.de
 www.um.edu.mt
 www.umass.edu
 www.ums.ac.uk
+www.undercurrentnews.com
 www.uni-mannheim.de
 www.unicef.org
 www.unodc.org
