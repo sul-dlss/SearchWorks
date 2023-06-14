@@ -107,6 +107,14 @@ RSpec.describe Links::Ezproxy do
           end
         end
 
+        context 'link title is a SUL restriction note' do
+          let(:link_title) { 'Available to Stanford-affiliated users only' }
+
+          it 'adds the proxy prefix' do
+            expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwho.int%2Fwhatever'
+          end
+        end
+
         context 'link title is NOT a LANE restriction note' do
           let(:link_title) { 'Some other link note' }
 
@@ -133,7 +141,7 @@ RSpec.describe Links::Ezproxy do
       end
 
       context 'with a url NOT matching any proxied host' do
-        let(:url) { 'https://stanford.idm.oclc.org/login?url=https://library.stanford.edu' }
+        let(:url) { 'https://www.a-link-not-on-the-proxy-list.edu' }
         let(:link_title) { 'Available to Stanford Affiliated users' }
 
         it { expect(ezproxy.to_proxied_url).to be_nil }

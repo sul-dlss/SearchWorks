@@ -73,7 +73,8 @@ class Links
     end
 
     def lane_restricted?
-      LANE_RESTRICTED_REGEX.match?(link_title)
+      LANE_RESTRICTED_REGEX.match?(link_title) ||
+        SUL_RESTRICTED_REGEX.match?(link_title)
     end
 
     def sul_restricted?
