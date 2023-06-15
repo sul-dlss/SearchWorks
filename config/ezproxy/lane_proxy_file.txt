@@ -91,7 +91,6 @@ apfmj.biomedcentral.com
 apjai-journal.org
 apjcn.nhri.org.tw
 apn.mhmedical.com
-app.dimensions.ai
 app.gideononline.com
 app.jove.com
 app.knovel.com
@@ -550,7 +549,6 @@ emedicine.medscape.com
 emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
 emj.bmj.com
-en.wikipedia.org
 endometabol.com
 engine.scichina.com
 english.rrsurg.com
@@ -1037,6 +1035,7 @@ microbialinformaticsj.biomedcentral.com
 microbiomejournal.biomedcentral.com
 microform.digital
 mirt.tsnmjournals.org
+mitpress-ebooks.mit.edu
 mjiri.iums.ac.ir
 mmbr.asm.org
 mmcts.org
@@ -2332,7 +2331,6 @@ www.massey.ac.nz
 www.mattioli1885journals.com
 www.mbc.ca.gov
 www.mchandaids.org
-www.mdanderson.org
 www.mdedge.com
 www.mdpi.com
 www.mdz-nbn-resolving.de
@@ -2409,7 +2407,6 @@ www.nejm.org
 www.neonatology.org
 www.neoplasia.com
 www.nepjol.info
-www.nestlenutrition-institute.org
 www.netanatomy.com
 www.netread.com
 www.neuroanatomy.org
@@ -2803,7 +2800,6 @@ www2.biusante.parisdescartes.fr
 www3.cricyt.edu.ar
 www3.stat.sinica.edu.tw
 wwwcf.nlm.nih.gov
-wwwils.nlm.nih.gov
 wwwn.cdc.gov
 wwwnc.cdc.gov
 xenetwork.org
