@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="application-name" value="<%= I18n.t('blacklight.application_name') %>">
     <meta name="google-site-verification" content="<%= Settings.GOOGLE_SITE_VERIFICATION %>" />
+    
+    <meta name="analytics_debug" value="<%= Settings.ANALYTICS_DEBUG %>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH5WNQS9B5"></script>
 
     <title><%= render_page_title %></title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
@@ -70,7 +73,7 @@
           </div>
 
           <%= render partial: 'shared/ajax_modal' %>
-          <section id="main-container" role="main" data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
+          <section id="main-container" role="main">
             <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
