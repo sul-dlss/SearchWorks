@@ -140,7 +140,6 @@ atena.beic.it
 atm.amegroups.com
 aviationweek.com
 avmajournals.avma.org
-avs.scitation.org
 babel-hathitrust-org
 babel.hathitrust.org
 bac-lac.on.worldcat.org
@@ -153,7 +152,6 @@ bdj.pensoft.net
 beckerexhibits.wustl.edu
 behavioralandbrainfunctions.biomedcentral.com
 benthamopen.com
-besjournals.onlinelibrary.wiley.com
 bestpractice.bmj.com
 beyoglueye.com
 bhsd.sccgov.org
@@ -325,7 +323,6 @@ cassi.cas.org
 catalan.digitaliapublishing.com
 catalog-hathitrust-org
 catalog.hathitrust.org
-catalog.nlm.nih.gov
 catalogimages.wiley.com
 catalogue.bnf.fr
 catalyst.nejm.org
@@ -2384,7 +2381,6 @@ www.morganclaypool.com
 www.morthoj.org
 www.mpr.co.uk
 www.mrcindia.org
-www.msk.or.kr
 www.msma.org
 www.msmonographs.org
 www.msri.org
