@@ -139,4 +139,15 @@ module ApplicationHelper
   def search_type_name
     t("searchworks.search_dropdown.#{controller_name}.label")
   end
+
+  # TODO: remove after migration is complete
+  def folio_disclaimer(document)
+    # this flag is set in searchworks-folio-dev shared_configs
+    return false unless Settings.folio.disclaimer
+    return false unless document['folio_json_struct'] && document['marc_json_struct']
+
+    marc_source = JSON.parse(document['folio_json_struct']&.first)&.dig('instance', 'source') == 'MARC'
+    # currently FOLIO MARC records have a leader that starts with 8 spaces
+    marc_source && document.to_marc&.leader&.match(/^ {8}/)
+  end
 end
