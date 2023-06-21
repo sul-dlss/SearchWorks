@@ -6,7 +6,7 @@
     <dt class="online-label">Online</dt>
   <% end %>
   <dd>
-    <ul class="online-links" data-behavior="truncate-results-online-links">
+    <ul class="online-links" data-behavior="truncate-results-metadata-links">
       <% document.preferred_online_links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">
           <%= link.html.html_safe %>

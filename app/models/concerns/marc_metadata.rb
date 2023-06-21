@@ -73,4 +73,8 @@ module MarcMetadata
   def included_works
     @included_works ||= IncludedWorks.new(self)
   end
+
+  def linked_collection
+    @linked_collection ||= LinkedCollection.new(self)
+  end
 end

@@ -33,8 +33,8 @@ describe "catalog/_index_mods" do
     expect(rendered).to have_css("dt", text: "Description")
     expect(rendered).to have_css("dd", text: "The Physical Extent")
   end
-  it "should include the collection" do
-    expect(rendered).to have_css('dt', text: 'Collection')
+  it "should include the digital collection" do
+    expect(rendered).to have_css('dt', text: 'Digital collection')
   end
 
   it 'should include the summary' do

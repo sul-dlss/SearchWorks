@@ -94,4 +94,17 @@ describe "catalog/record/_marc_upper_metadata_items" do
       expect(rendered).to have_css('dd', text: 'cowbell')
     end
   end
+
+  describe 'MARC 795' do
+    before do
+      assign(:document, SolrDocument.new(marcxml: marc_795_fixture))
+      render
+    end
+
+    it 'should render the collection titles as links' do
+      expect(rendered).to have_css('dt', text: 'Collection')
+      expect(rendered).to have_css('dd a', text: 'Shao shu min zu she hui li shi diao cha')
+      expect(rendered).to have_css('dd a', text: '少数民族社会历史调查')
+    end
+  end
 end

@@ -183,7 +183,7 @@
         $googleBooks.removeClass('hide').addClass('show');
         // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
         $googleBooks
-          .parents("[data-behavior='truncate-results-online-links']")
+          .parents("[data-behavior='truncate-results-metadata-links']")
           .responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
       }
     }

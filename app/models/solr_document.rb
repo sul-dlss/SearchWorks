@@ -30,6 +30,7 @@ class SolrDocument
   include IiifConcern
   include DorContentMetadata
   include LiveLookupIds
+  include CollectionTitles
 
   include Blacklight::Solr::Document
   include SchemaDotOrg
