@@ -1253,7 +1253,6 @@ www.torrossa.com
 www.iaee.org
 www.krpia.co.kr
 sig1perspectives.pubs.asha.org
-www.jacobinmag.com
 www.palgraveconnect.com
 flm-journal.org
 www.journals.co.za
@@ -1569,3 +1568,5 @@ peipingfile.infolinker.com.tw
 num.classiques-garnier.com
 plus.cq.com
 mychinarootslibrary.com
+jacobin.com
+khabarlahariya.org
