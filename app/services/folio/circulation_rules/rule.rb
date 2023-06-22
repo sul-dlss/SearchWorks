@@ -28,7 +28,7 @@ module Folio
       # group: faculty & material-type: periodical & loan-type: any & location-institution: any & location-campus: any & location-library: SAL & location-location: any => loan: 14day-1renew-1daygrace, request: Allow All, notice: Short-term loans, overdue: No fines policy, lost-item: $100 lost fee policy (line 257)
       # ```
       def to_debug_s
-        "#{to_criteria_debug_s} => #{to_policy_debug_s} (line #{line})"
+        "#{to_criteria_debug_s}\n#{to_policy_debug_s}\n(line #{line})"
       end
 
       private
@@ -46,11 +46,11 @@ module Folio
                           type_map.call(v)
                         end
           "#{k}: #{debug_value}"
-        end.join(" & ")
+        end.join("\n")
       end
 
       def to_policy_debug_s
-        policy.map { |k, v| "#{k}: #{Folio::Types.policies.dig(k.to_sym, v, 'name')&.strip || v}" }.join(", ")
+        policy.map { |k, v| "=> #{k}: #{Folio::Types.policies.dig(k.to_sym, v, 'name')&.strip || v}" }.join("\n")
       end
     end
   end
