@@ -121,7 +121,6 @@ archive.ahrq.gov
 archive.org
 archive.samj.org.za
 archived-bulletin.stanford.mobi
-archives.drugabuse.gov
 archivesphysiotherapy.biomedcentral.com
 archpublichealth.biomedcentral.com
 archrazi.areeo.ac.ir
@@ -2501,7 +2500,6 @@ www.law.seattleu.edu
 www.law.uh.edu
 www.lawandinequality.org
 www.learntechlib.org
-www.legacy.library.ucsf.edu
 www.leprosy-review.org.uk
 www.lexisnexis.com
 www.lfhk.cuni.cz
