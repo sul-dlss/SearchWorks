@@ -75,7 +75,7 @@ module DigitalCollection
     end
 
     def should_display_filmstrip?
-      return unless number_of_documents_with_image_urls > 0
+      return false if number_of_documents_with_image_urls.zero?
 
       number_of_documents_with_image_urls >= number_of_documents_without_image_urls
     end
@@ -86,6 +86,7 @@ module DigitalCollection
       end
     end
 
+    # @return [Integer] a non-negative value
     def number_of_documents_without_image_urls
       documents.count do |doc|
         doc.image_urls.blank?

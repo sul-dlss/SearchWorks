@@ -242,7 +242,7 @@ class Holdings
     end
 
     def folio_item_circulates?
-      return unless folio_item?
+      return false unless folio_item?
 
       Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)&.dig('loanable')
     end
