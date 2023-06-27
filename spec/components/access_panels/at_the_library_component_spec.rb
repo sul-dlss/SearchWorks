@@ -342,9 +342,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it 'should render special instructions field' do
+    it 'renders special instructions field' do
       expect(page).to have_css('h4', text: 'On-site access')
-      expect(page).to have_css('p', text: 'Researchers can request to view these materials in the Special Collections Reading Room. Request materials at least 2 business days in advance. Maximum 5 items per day.')
+      expect(page).to have_css('p', text: 'Collections are moving, which may affect access. Request materials as early as possible. Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.')
     end
   end
 
