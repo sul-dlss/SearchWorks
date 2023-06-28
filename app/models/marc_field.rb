@@ -88,6 +88,6 @@ class MarcField
   def sanitize_marc_value(value)
     return value if value.html_safe?
 
-    sanitize(value.gsub(/</, '&lt;').gsub(/>/, '&gt;'))
+    sanitize(value.gsub("<", '&lt;').gsub(">", '&gt;'))
   end
 end
