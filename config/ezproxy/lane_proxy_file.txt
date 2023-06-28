@@ -1,3 +1,4 @@
+0-www.sciencedirect.com.pugwash.lib.warwick.ac.uk
 3d4medical.com
 5minuteconsult.com
 7cajas.com
@@ -1049,6 +1050,7 @@ links.jstor.org
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
+liverpool.idm.oclc.org
 lkcnhm.nus.edu.sg
 llmc.com
 login.infobase.com
