@@ -116,4 +116,21 @@ describe "catalog/_index_marc" do
       expect(rendered).to have_css('dd a', text: 'Online Archive of California')
     end
   end
+
+  describe 'collection' do
+    let(:document) do
+      SolrDocument.new(
+        collection_struct: [{ 'title' => 'Robert Creeley Papers Collection', 'source' => 'sirsi' }]
+      )
+    end
+
+    before do
+      render
+    end
+
+    it 'should display the collection title and subject search link' do
+      expect(rendered).to have_css('dt', text: "Collection")
+      expect(rendered).to have_css('dd a', text: "Robert Creeley Papers Collection")
+    end
+  end
 end

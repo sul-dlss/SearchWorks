@@ -36,11 +36,26 @@
     <% end %>
 
     <% if document.index_parent_collections.present? %>
-      <dt>Collection</dt>
+      <dt>Digital collection</dt>
       <dd>
         <% document.index_parent_collections.each do |collection| %>
           <%= link_to(document_presenter(collection).heading, solr_document_path(collection))%>
         <% end %>
+      </dd>
+    <% end %>
+
+    <% if document.collection_titles.any? %>
+      <dt>Collection</dt>
+      <dd>
+        <ul data-behavior="truncate-results-metadata-links">
+          <% document.collection_titles.each do |collection| %>
+            <% collection.each do |_k, collection_title| %>
+              <li>
+                <%= link_to(collection_title.strip, search_catalog_path(search_field: :subject_terms, q: "\"#{collection_title.strip}\"")) %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
       </dd>
     <% end %>
   </dl>

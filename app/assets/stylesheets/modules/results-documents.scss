@@ -44,6 +44,14 @@
     margin: 0;
     padding: 10px 0;
 
+    ul {
+      padding-left: 0;
+    }
+
+    // Without this a dot is displayed before the first li
+    li::marker {
+        content: '';
+    }
 
     dd {
       margin-left: 2em;
@@ -52,6 +60,12 @@
     @media (min-width: $screen-sm-min) {
       dd {
         margin-left: 8.5em;
+      }
+
+      .responsiveTruncate {
+        dd {
+          margin-left: 4.25em;
+        }
       }
     }
   }

@@ -34,8 +34,8 @@ describe "preview/_show_mods" do
     expect(rendered).to have_css('li', text: "Imprint Statement")
   end
 
-  it 'should display the collection' do
-    expect(rendered).to have_css('dt', text: 'Collection')
+  it 'should display the digital collection' do
+    expect(rendered).to have_css('dt', text: 'Digital collection')
     # Note: This is the object title because we're stubbing the presenter in this test
     expect(rendered).to have_css('dd a', text: 'Object Title')
   end

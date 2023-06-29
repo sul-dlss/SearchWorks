@@ -1398,4 +1398,19 @@ module MarcMetadataFixtures
       </record>
     xml
   end
+
+  def marc_795_fixture
+    <<-xml
+      <record>
+        <datafield ind1=' ' ind2=' ' tag='795'>
+          <subfield code='6'>880-05</subfield>
+          <subfield code='a'>Shao shu min zu she hui li shi diao cha</subfield>
+        </datafield>
+        <datafield ind1=' ' ind2=' ' tag='880'>
+          <subfield code='6'>795-05</subfield>
+          <subfield code='a'>少数民族社会历史调查</subfield>
+        </datafield>
+      </record>
+    xml
+  end
 end

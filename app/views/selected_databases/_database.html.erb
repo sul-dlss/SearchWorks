@@ -5,7 +5,7 @@
     <dl data-behavior="results-online-section" class="dl-horizontal results-online-section">
       <dt class="online-label">Search database</dt>
       <dd>
-        <div data-behavior="truncate-results-online-links">
+        <div data-behavior="truncate-results-metadata-links">
           <ul class="links">
             <% database.marc_links.each do |link| %>
               <li class="<%= 'stanford-only' if link.stanford_only? %>"><%= link.html.html_safe %></li>

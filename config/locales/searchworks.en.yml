@@ -219,6 +219,8 @@ en:
         label: "Taxonomy"
       790:
         label: "Local subject"
+      795:
+        label: "Collection"
       796:
         label: "Contributor"
       797:
