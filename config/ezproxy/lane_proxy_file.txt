@@ -4,7 +4,6 @@
 7cajas.com
 MedOne-Radiology.thieme.com
 PA-Rotations.lwwhealthlibrary.com
-SRMO.sagepub.com
 aacijournal.biomedcentral.com
 aacnjournals.org
 aacrjournals.org
@@ -1050,7 +1049,6 @@ links.jstor.org
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
-liverpool.idm.oclc.org
 lkcnhm.nus.edu.sg
 llmc.com
 login.infobase.com
@@ -2139,6 +2137,7 @@ www.geneticsmr.com
 www.genome.gov
 www.genomesonline.org
 www.gensat.org
+www.geolsoc.org.uk
 www.geomednews.org
 www.geoscienceworld.org
 www.germs.ro
