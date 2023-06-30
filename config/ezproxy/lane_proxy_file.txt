@@ -1714,6 +1714,7 @@ www.ajts.org
 www.akademiai.com
 www.alliedacademies.org
 www.allthatstats.com
+www.altmetric.com
 www.am-explorer.com
 www.ama-assn.org
 www.amacad.org
