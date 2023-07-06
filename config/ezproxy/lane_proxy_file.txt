@@ -1462,7 +1462,6 @@ search.alexanderstreet.com
 search.datapages.com
 search.ebscohost.com
 search.ebscohost.com.
-search.ebscohost.comlogin.aspx
 search.epnet.com
 search.informit.com.au
 search.mandumah.com
