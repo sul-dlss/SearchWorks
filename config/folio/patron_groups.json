@@ -94,17 +94,6 @@
     }
   },
   {
-    "group": "BUS-guest",
-    "desc": "Guest of Business School",
-    "id": "87c1e4e2-bf43-4e4c-87cb-460dc01a2513",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.124+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.124+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
     "group": "lane-guest",
     "desc": "Guest of Lane Medical",
     "id": "babbfaf8-295a-497a-b705-ea432030f884",
@@ -138,45 +127,45 @@
     }
   },
   {
-    "group": "SUL-guest",
-    "desc": "Guest of Stanford Libraries",
-    "id": "9f32c817-21a2-4640-add5-9404c55d3d99",
+    "group": "sul-exception",
+    "id": "e30b731d-015b-489a-9c81-939f658b1c62",
     "metadata": {
-      "createdDate": "2023-02-09T00:40:59.601+00:00",
+      "createdDate": "2023-02-09T00:40:59.970+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.601+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-06-19T20:47:54.269+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
-    "group": "SUL-fee",
+    "group": "sul-fee",
     "desc": "SUL Fee borrower",
     "id": "985acbb9-f7a7-4f44-9b34-458c02a78fbc",
     "metadata": {
       "createdDate": "2023-02-09T00:40:59.724+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.724+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-06-19T20:48:03.793+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
-    "group": "SUL-institution",
+    "group": "sul-guest",
+    "desc": "Guest of Stanford Libraries",
+    "id": "9f32c817-21a2-4640-add5-9404c55d3d99",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.601+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-06-19T20:48:12.389+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+    }
+  },
+  {
+    "group": "sul-institution",
     "id": "16f983cc-c0c6-419c-8f01-b90b66b87951",
     "metadata": {
       "createdDate": "2023-02-09T00:40:59.850+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.850+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "SUL-exception",
-    "id": "e30b731d-015b-489a-9c81-939f658b1c62",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.970+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.970+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-06-19T20:48:20.577+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
@@ -199,6 +188,17 @@
       "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
       "updatedDate": "2023-03-09T23:54:57.994+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    }
+  },
+  {
+    "group": "bus-guest",
+    "desc": "Guest of Business School",
+    "id": "87c1e4e2-bf43-4e4c-87cb-460dc01a2513",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.124+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-06-19T20:46:32.728+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {

@@ -1,6 +1,6 @@
 [
   {
-    "name": "$30 lost fee policy",
+    "name": "$30 lost fee",
     "description": "MMTX lost fee for DVDs",
     "itemAgedLostOverdue": {
       "duration": 7,
@@ -41,7 +41,7 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:48.267+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:39:44.796+00:00",
+      "updatedDate": "2023-07-07T00:16:56.478+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "5306967f-4613-4a27-b796-ea2d3f99af2e"
@@ -73,9 +73,9 @@
     "id": "ad576adb-acd4-4467-b0ec-d5b2011dc1f2"
   },
   {
-    "name": "$65 lost fee policy",
+    "name": "$65 lost fee",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -113,13 +113,193 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:43.966+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:41:27.460+00:00",
+      "updatedDate": "2023-07-07T00:13:38.361+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "dd2fb6cd-cff1-4405-992d-78c2e7faca04"
   },
   {
-    "name": "$55 lost fee policy",
+    "name": "$500 lost fee - 1 hr aged to lost",
+    "description": "Used for Lane and Bus equipment",
+    "itemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 500.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": true,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-06-30T22:29:28.294+00:00",
+      "createdByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10",
+      "updatedDate": "2023-07-07T00:18:29.260+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "b467648a-7724-4df3-926a-b6566eeac649"
+  },
+  {
+    "name": "$100 lost fee - 1 hr aged to lost",
+    "description": "Used for Lane and Bus equipment",
+    "itemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 100.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": true,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-06-21T17:52:08.754+00:00",
+      "createdByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10",
+      "updatedDate": "2023-07-07T00:12:42.523+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "966833f9-ad73-41f6-bc7d-cc44280d4e15"
+  },
+  {
+    "name": "$1000 lost fee - 1 hr aged to lost",
+    "description": "Earth-Sci and Marine-Bio locked stacks expensive lost fee. Also for Business + Lane Equipment.",
+    "itemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 1000.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-06-13T19:13:53.896+00:00",
+      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
+      "updatedDate": "2023-07-07T00:13:13.534+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "332e35f5-a167-44e0-a843-a0ba0000e777"
+  },
+  {
+    "name": "$200 lost fee book",
+    "description": "Lost fee for Music permres and reference materials, Science books.",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 200.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 25.0,
+    "replacementAllowed": true,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-06-13T19:28:54.168+00:00",
+      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
+      "updatedDate": "2023-07-07T00:15:05.006+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "f96e7828-4c47-4c3f-be2d-189bef9fba7a"
+  },
+  {
+    "name": "$55 lost fee",
     "description": "music multimedia",
     "itemAgedLostOverdue": {
       "duration": 7,
@@ -160,16 +340,16 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:00.498+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:41:04.726+00:00",
+      "updatedDate": "2023-07-07T00:18:50.160+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "facb376f-09e3-4984-9fd7-554cf2085961"
   },
   {
-    "name": "$600 lost fee policy",
+    "name": "$600 lost fee",
     "description": "ENG NH-EQUIP600 (28 days)",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -203,13 +383,13 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:57.974+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:41:16.694+00:00",
+      "updatedDate": "2023-07-07T00:18:59.658+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "1c1ff8ee-646f-4a39-8625-f08d763ced7f"
   },
   {
-    "name": "$100 lost fee policy",
+    "name": "$100 lost fee",
     "description": "Lost fee policy on tanner,green, eat asia Library periodicals",
     "itemAgedLostOverdue": {
       "duration": 7,
@@ -250,15 +430,109 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:53.466+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-04-05T21:17:06.048+00:00",
+      "updatedDate": "2023-07-07T00:12:32.181+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "bb338f23-67e1-4e34-ab8d-a861b3c9879a"
   },
   {
-    "name": "$75 lost fee policy",
+    "name": "$150 lost fee",
+    "description": "Lost fee policy for Engineering and Marine-Bio stacks materials",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 150.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-04-05T21:36:43.556+00:00",
+      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
+      "updatedDate": "2023-07-07T00:14:41.721+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "beb889d3-9d45-4b9a-85a4-5decc1427693"
+  },
+  {
+    "name": "$250 lost fee - 1 hr aged to lost",
+    "description": "short term loans specific",
+    "itemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 250.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Days"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-06-30T23:07:07.658+00:00",
+      "createdByUserId": "0c66be8d-90ac-451b-b562-795e24139a13",
+      "updatedDate": "2023-07-07T00:16:29.494+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "24da62db-472c-47fe-991f-75fc9c3f7481"
+  },
+  {
+    "name": "$75 lost fee",
+    "itemAgedLostOverdue": {
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -296,16 +570,63 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:45.467+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:12:34.545+00:00",
-      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+      "updatedDate": "2023-07-07T00:19:11.376+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "be384a8b-98aa-4443-8d3e-1eeb115a83bc"
   },
   {
-    "name": "$2000 lost kit fee policy",
+    "name": "$800 lost fee",
+    "description": "For ART locked stacks materials (S,M, L)",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 800.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:54.967+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-07T00:19:19.714+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "c8e30e2f-8fa1-45d6-b42f-7f1abe31939c"
+  },
+  {
+    "name": "$2000 lost fee kit",
     "description": "Fee policy for educational kits",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -343,17 +664,17 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:47.067+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:37:47.749+00:00",
+      "updatedDate": "2023-07-07T00:15:38.879+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "883f3c16-3720-4678-899c-2279f06cd25f"
   },
   {
-    "name": "$225 lost fee policy",
+    "name": "$225 lost fee",
     "description": "used for engineering permres with 2-hour loan period",
     "itemAgedLostOverdue": {
-      "duration": 1,
-      "intervalId": "Days"
+      "duration": 30,
+      "intervalId": "Hours"
     },
     "patronBilledAfterAgedLost": {
       "duration": 1,
@@ -372,7 +693,7 @@
     },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 25.0,
+    "replacementProcessingFee": 0.0,
     "replacementAllowed": true,
     "lostItemReturned": "Charge",
     "feesFinesShallRefunded": {
@@ -382,13 +703,59 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:59.466+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:38:00.403+00:00",
+      "updatedDate": "2023-07-07T00:15:50.425+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "1d12c9e3-ad47-4a49-95ad-5c496a48ee6d"
   },
   {
-    "name": "$25 lost fee policy",
+    "name": "$1000 lost fee",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 1000.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:35.367+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-07T00:12:52.767+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "e768902e-b3ef-4b1f-a480-ad84e0522c35"
+  },
+  {
+    "name": "$25 lost fee",
     "description": "Lost fee policy for Green Library whiteboard markers, etc.",
     "itemAgedLostOverdue": {
       "duration": 1,
@@ -421,13 +788,13 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:56.667+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:39:17.333+00:00",
+      "updatedDate": "2023-07-07T00:16:11.821+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "29684504-bb35-488e-bf2d-74f7ec27d91c"
   },
   {
-    "name": "$250 lost fee policy",
+    "name": "$250 lost fee",
     "itemAgedLostOverdue": {
       "duration": 14,
       "intervalId": "Days"
@@ -467,61 +834,15 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:38.070+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:39:32.276+00:00",
+      "updatedDate": "2023-07-07T00:16:19.056+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "76a76e01-fc47-4a3b-9b32-cdcae78be003"
   },
   {
-    "name": "$1000 lost fee policy",
+    "name": "$300 lost fee",
     "itemAgedLostOverdue": {
-      "duration": 14,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "recalledItemAgedLostOverdue": {
       "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterRecalledItemAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 1000.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 1,
-      "intervalId": "Hours"
-    },
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "feesFinesShallRefunded": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "metadata": {
-      "createdDate": "2023-02-09T01:05:35.367+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-04-05T21:20:57.841+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "e768902e-b3ef-4b1f-a480-ad84e0522c35"
-  },
-  {
-    "name": "$300 lost fee policy",
-    "itemAgedLostOverdue": {
-      "duration": 14,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -559,13 +880,13 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:51.267+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:39:56.154+00:00",
+      "updatedDate": "2023-07-07T00:17:05.633+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "bcfd2c6d-a1c1-40a0-a6e8-dc0fe7225d76"
   },
   {
-    "name": "$400 lost fee policy",
+    "name": "$400 lost fee",
     "itemAgedLostOverdue": {
       "duration": 7,
       "intervalId": "Days"
@@ -601,15 +922,15 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:49.867+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:40:07.760+00:00",
+      "updatedDate": "2023-07-07T00:18:02.193+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "86f0f52b-09cf-47c4-bf8b-b77585c4c3d2"
   },
   {
-    "name": "$50 lost fee policy",
+    "name": "$50 lost fee",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -647,15 +968,15 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:39.966+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:40:27.657+00:00",
+      "updatedDate": "2023-07-07T00:18:11.247+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "e85da957-dca3-4b67-b9a7-0b603ffe2961"
   },
   {
-    "name": "$500 lost fee policy",
+    "name": "$500 lost fee",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -693,25 +1014,25 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:30.967+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:40:39.919+00:00",
+      "updatedDate": "2023-07-07T00:18:19.174+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "4e9fff6f-6bd9-4bb7-b3f2-9dbb7d8e57be"
   },
   {
-    "name": "$5000 lost fee policy",
-    "description": "used for earth science locked stack",
+    "name": "$5000 lost fee - 1 hr aged to lost",
+    "description": "used for earth science locked stacks and other equipment",
     "itemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
+      "duration": 1,
+      "intervalId": "Hours"
     },
     "patronBilledAfterAgedLost": {
       "duration": 1,
       "intervalId": "Minutes"
     },
     "recalledItemAgedLostOverdue": {
-      "duration": 3,
-      "intervalId": "Days"
+      "duration": 1,
+      "intervalId": "Hours"
     },
     "patronBilledAfterRecalledItemAgedLost": {
       "duration": 1,
@@ -740,15 +1061,63 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:01.367+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:40:53.502+00:00",
+      "updatedDate": "2023-07-07T00:18:40.593+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "df2237da-7a20-4e22-aba6-4d88ac2ee281"
   },
   {
-    "name": "$230 reserves lost fee policy",
+    "name": "$150 short-term lost fee",
+    "description": "Lost fee policy for short-term loans e.g., Eng equipment, EAL microform.",
     "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
       "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 150.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:32.967+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-07T00:14:51.161+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
+  },
+  {
+    "name": "$230 reserves lost fee",
+    "description": "Lost fee policy for course reserves for SUL & Business",
+    "itemAgedLostOverdue": {
+      "duration": 30,
       "intervalId": "Hours"
     },
     "patronBilledAfterAgedLost": {
@@ -776,7 +1145,7 @@
     },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 25.0,
+    "replacementProcessingFee": 0.0,
     "replacementAllowed": true,
     "lostItemReturned": "Charge",
     "feesFinesShallRefunded": {
@@ -786,149 +1155,16 @@
     "metadata": {
       "createdDate": "2023-03-28T21:33:04.587+00:00",
       "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
-      "updatedDate": "2023-05-04T20:39:05.383+00:00",
+      "updatedDate": "2023-07-07T00:16:00.428+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "5e4ee2a3-237d-40e2-bf2e-497963dda0ec"
   },
   {
-    "name": "$800 lost fee policy",
-    "description": "For ART locked stacks materials (S,M, L)",
-    "itemAgedLostOverdue": {
-      "duration": 14,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "recalledItemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterRecalledItemAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 800.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "feesFinesShallRefunded": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "metadata": {
-      "createdDate": "2023-02-09T01:05:54.967+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-05-04T20:41:39.919+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "c8e30e2f-8fa1-45d6-b42f-7f1abe31939c"
-  },
-  {
-    "name": "$150 short-term lost fee policy",
-    "description": "Lost fee policy for short-term loans e.g., Eng equipment, EAL microform.",
+    "name": "$200 lost fee equipment",
+    "description": "Lost fee for Engineering equipment",
     "itemAgedLostOverdue": {
       "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 150.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "feesFinesShallRefunded": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "metadata": {
-      "createdDate": "2023-02-09T01:05:32.967+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-04-05T21:35:03.585+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
-  },
-  {
-    "name": "$150 lost fee policy ",
-    "description": "Lost fee policy for Engineering and Marine-Bio stacks materials",
-    "itemAgedLostOverdue": {
-      "duration": 14,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "recalledItemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterRecalledItemAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 150.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "feesFinesShallRefunded": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "metadata": {
-      "createdDate": "2023-04-05T21:36:43.556+00:00",
-      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
-      "updatedDate": "2023-04-05T21:45:45.556+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "beb889d3-9d45-4b9a-85a4-5decc1427693"
-  },
-  {
-    "name": "$200 lost fee policy",
-    "description": "Lost fee for Engineering equipment, Music permres and reference materials, Science books.",
-    "itemAgedLostOverdue": {
-      "duration": 14,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -966,7 +1202,7 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:37.066+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-04-05T21:55:13.161+00:00",
+      "updatedDate": "2023-07-07T00:15:15.674+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "622b0090-e1c5-4e67-9c59-7b7a5801bb06"
