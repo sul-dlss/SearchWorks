@@ -27,7 +27,7 @@ module Folio
       # note that this is not the same as the indentation level in the rule tree
       # one indentation level in the export file is 4 spaces (a tab)
       rule(:indent) { str(' ').repeat(0).maybe.as(:indent) }
-      rule(:statement) { line_comment | (indent >> criteria >> (ws? >> str(':') >> ws? >> policies).maybe >> newline) }
+      rule(:statement) { (ws? >> newline) | line_comment | (indent >> criteria >> (ws? >> str(':') >> ws? >> policies).maybe >> newline) }
       rule(:criteria) { criterium.as(:criterium) >> (ws? >> str('+') >> ws? >> criterium).repeat(0).as(:addl_criterium) }
 
       rule(:criterium) do
