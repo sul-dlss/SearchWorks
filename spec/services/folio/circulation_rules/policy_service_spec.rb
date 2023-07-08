@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe Folio::CirculationRules::PolicyService do
+  context 'with the actual rules' do
+    it 'is parseable' do
+      expect { described_class.rules }.not_to raise_error
+    end
+  end
+
   describe '#item_rule' do
     let(:rules) {
       [
