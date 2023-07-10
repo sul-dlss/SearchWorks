@@ -2,8 +2,43 @@ require 'spec_helper'
 
 RSpec.describe Folio::CirculationRules::PolicyService do
   context 'with the actual rules' do
+    let(:item_permutations) do
+      test_cases = Folio::Types.get_type('locations').product(Folio::Types.get_type('material_types')).product(Folio::Types.get_type('loan_types').select { |x| x['name'] == 'Can circulate' })
+
+      test_cases.map do |test|
+        location, material_type, loan_type = test.flatten
+
+        Folio::Item.new(
+          id: 'TEST',
+          barcode: 'TEST',
+          material_type: Folio::Item::MaterialType.new(material_type.slice('id', 'name')),
+          permanent_loan_type: Folio::Item::MaterialType.new(loan_type.slice('id', 'name')),
+          effective_location: Folio::Location.new(location: Folio::Location::Location.new(location.slice('id', 'code', 'name')), library: Folio::Location::Library.new(id: location['libraryId']), campus: Folio::Location::Campus.new(id: location['campusId']),
+                                                  institution: Folio::Location::Institution.new(id: location['institutionId']))
+        )
+      end
+    end
+
     it 'is parseable' do
       expect { described_class.rules }.not_to raise_error
+    end
+
+    it 'marks SAL3-STACKs books as pageable' do
+      item_permutations.select { |x| x.effective_location.location.code == 'SAL3-STACKS' && x.material_type.name == 'Book' }.each do |item|
+        expect(Folio::CirculationRules::PolicyService.instance.item_request_policy(item)['requestTypes'] || []).to(include('Page'), "Expected location \"#{item.effective_location.location.code}\" type \"#{item.material_type.name}\" to be pageable")
+      end
+    end
+
+    it 'marks all SAL3 material as pageable' do
+      skip 'circ rules still are not quite right'
+
+      aggregate_failures do
+        sal3 = Folio::Types.get_type('libraries').find { |x| x['code'] == 'SAL3' }.fetch('id')
+
+        item_permutations.select { |x| x.effective_location.library.id == sal3 }.reject { |x| x.effective_location.location.code =~ Regexp.union(/WITHDRAWN/, /SEE-OTHER/, /WD-DIGITAL-SUB/) }.each do |item|
+          expect(Folio::CirculationRules::PolicyService.instance.item_request_policy(item)['requestTypes'] || []).to(include('Page'), "Expected location \"#{item.effective_location.location.code}\" type \"#{item.material_type.name}\" to be pageable")
+        end
+      end
     end
   end
 
