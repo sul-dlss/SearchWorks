@@ -2,6 +2,7 @@ function toggleableResults(searcher) {
   var toggleableResults = $('#' + searcher + ' [data-behavior="toggleable-results"]');
   var threshold = toggleableResults.data('toggleThreshold');
   var toggleButton = $('#' + searcher + '-results-toggle-button');
+  // if there are 10 search results and the threshold is 3, listItemsBeyondThreshold will contain 7 DOM elements
   var listItemsBeyondThreshold = toggleableResults.find('li:nth-child(n+' + (threshold + 1) + ')');
 
   listItemsBeyondThreshold.toggle();
