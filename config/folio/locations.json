@@ -232,75 +232,6 @@
     }
   },
   {
-    "id": "6babb3e3-fc13-4762-a03f-d15fdf10c756",
-    "name": "Art Locked Stacks Large",
-    "code": "ART-LOCKED-LARGE",
-    "discoveryDisplayName": "Art Locked Stacks Large",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:08.829+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:08.829+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "716c277f-7595-4b90-a189-92387bac8c87",
-    "name": "Art Locked Stacks Large Restricted",
-    "code": "ART-LOCKED-LARGE-R",
-    "discoveryDisplayName": "Art Locked Stacks Large Restricted",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:08.947+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:08.947+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "83d9b015-df36-4eb4-b8f3-0098f54d68b4",
-    "name": "Art Locked Stacks Medium",
-    "code": "ART-LOCKED-MEDIUM",
-    "discoveryDisplayName": "Art Locked Stacks Medium",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:09.199+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.199+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
     "id": "92f0d68c-a7ee-42b6-a902-bb78b8d67c76",
     "name": "Art migration error",
     "code": "ART-MIGRATE-ERR",
@@ -393,6 +324,58 @@
     }
   },
   {
+    "id": "716c277f-7595-4b90-a189-92387bac8c87",
+    "name": "Art Locked Stacks Large Restricted",
+    "code": "ART-LOCKED-LARGE-R",
+    "discoveryDisplayName": "Art Locked Stacks Large Restricted",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:08.947+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:25:27.529+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "83d9b015-df36-4eb4-b8f3-0098f54d68b4",
+    "name": "Art Locked Stacks Medium",
+    "code": "ART-LOCKED-MEDIUM",
+    "discoveryDisplayName": "Art Locked Stacks Medium",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:09.199+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:25:39.205+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
     "id": "f14dbb91-6e8f-4e12-a0d5-248c9dd079b9",
     "name": "Art Folios",
     "code": "ART-FOLIO",
@@ -412,98 +395,6 @@
       "createdDate": "2023-02-08T23:37:08.579+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-02-08T23:37:08.579+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "286cdd37-a62c-434d-89d0-587977d80cd0",
-    "name": "Art Locked Stacks Medium Restricted",
-    "code": "ART-LOCKED-MEDIUM-R",
-    "discoveryDisplayName": "Art Locked Stacks Medium Restricted",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:09.331+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.331+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "d3bf7d1b-53ce-4075-9d5e-7bd2f27e014e",
-    "name": "Art Locked Stacks Oversize",
-    "code": "ART-LOCKED-OVERSIZE",
-    "discoveryDisplayName": "Art Locked Stacks Oversize",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:09.447+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.447+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "d2b182aa-d621-4044-b452-fef01a11a9b0",
-    "name": "Art Locked Stacks Oversize Restricted",
-    "code": "ART-LOCKED-OVERSIZE-R",
-    "discoveryDisplayName": "Art Locked Stacks Oversize Restricted",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:09.577+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.577+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "01e91968-2e52-4733-bbcc-b4641560411d",
-    "name": "Art Locked Stacks Small",
-    "code": "ART-LOCKED-SMALL",
-    "discoveryDisplayName": "Art Locked Stacks Small",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
-    "servicePointIds": [
-      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:09.700+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.700+00:00",
       "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
     }
   },
@@ -600,14 +491,17 @@
     }
   },
   {
-    "id": "70cd636f-725b-4cea-aa75-fe3e6f4ef447",
-    "name": "Art Locked Stacks Small Restricted",
-    "code": "ART-LOCKED-SMALL-R",
-    "discoveryDisplayName": "Art Locked Stacks Small Restricted",
+    "id": "d3bf7d1b-53ce-4075-9d5e-7bd2f27e014e",
+    "name": "Art Locked Stacks Oversize",
+    "code": "ART-LOCKED-OVERSIZE",
+    "discoveryDisplayName": "Art Locked Stacks Oversize",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
     "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
     "servicePointIds": [
       "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
@@ -616,10 +510,62 @@
 
     ],
     "metadata": {
-      "createdDate": "2023-02-08T23:37:09.876+00:00",
+      "createdDate": "2023-02-08T23:37:09.447+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:09.876+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-12T00:25:55.486+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "d2b182aa-d621-4044-b452-fef01a11a9b0",
+    "name": "Art Locked Stacks Oversize Restricted",
+    "code": "ART-LOCKED-OVERSIZE-R",
+    "discoveryDisplayName": "Art Locked Stacks Oversize Restricted",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:09.577+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:26:06.987+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "01e91968-2e52-4733-bbcc-b4641560411d",
+    "name": "Art Locked Stacks Small",
+    "code": "ART-LOCKED-SMALL",
+    "discoveryDisplayName": "Art Locked Stacks Small",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:09.700+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:26:14.801+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -1313,52 +1259,6 @@
     }
   },
   {
-    "id": "9bd8dc35-7df9-4b3e-abd8-abd8773e00b8",
-    "name": "East Asia Locked Stacks",
-    "code": "EAL-LOCKED",
-    "discoveryDisplayName": "East Asia Locked Stacks",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
-    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
-    "servicePointIds": [
-      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:16.348+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:16.348+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "82dca520-b559-44b9-a9b8-27e4599ce6a0",
-    "name": "East Asia Locked Oversized",
-    "code": "EAL-LOCKED-OVERSIZE",
-    "discoveryDisplayName": "East Asia Locked Oversized",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
-    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
-    "servicePointIds": [
-      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:16.598+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:16.598+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
     "id": "7b70fb52-055f-4bbc-bb12-bce07c48fe0b",
     "name": "East Asia Media",
     "code": "EAL-MEDIA",
@@ -1425,6 +1325,32 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-02-08T23:37:17.207+00:00",
       "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "82dca520-b559-44b9-a9b8-27e4599ce6a0",
+    "name": "East Asia Locked Oversized",
+    "code": "EAL-LOCKED-OVERSIZE",
+    "discoveryDisplayName": "East Asia Locked Oversized",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+      "pageAeonSite": "EASTASIA"
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:16.598+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:23:31.066+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -7616,98 +7542,6 @@
     }
   },
   {
-    "id": "f155b1bc-7d19-402a-8412-431988b12cc3",
-    "name": "SAL3 PAGE-AS",
-    "code": "SAL3-PAGE-AS",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:55.100+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:55.100+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "f9b45b58-ec4c-490a-8808-86206cdf5ac8",
-    "name": "SAL3 PAGE-ED",
-    "code": "SAL3-PAGE-ED",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:55.356+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:55.356+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "5a298029-e552-4c32-acfe-3ad6b9d72f91",
-    "name": "SAL3 PAGE-EN",
-    "code": "SAL3-PAGE-EN",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:55.480+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:55.480+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "0beebb31-c3fd-46e5-a12f-462cc7bbead3",
-    "name": "SAL3 PAGE-ES",
-    "code": "SAL3-PAGE-ES",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:55.605+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:55.605+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
     "id": "45daa686-823a-4ad5-b187-d7878bebf00d",
     "name": "SAL3 PAGE-MA",
     "code": "SAL3-PAGE-MA",
@@ -7728,6 +7562,84 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-02-08T23:37:55.982+00:00",
       "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "f9b45b58-ec4c-490a-8808-86206cdf5ac8",
+    "name": "SAL3 PAGE-ED",
+    "code": "SAL3-PAGE-ED",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "EDUCATION"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:55.356+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:32:13.990+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "5a298029-e552-4c32-acfe-3ad6b9d72f91",
+    "name": "SAL3 PAGE-EN",
+    "code": "SAL3-PAGE-EN",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "ENG"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:55.480+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:32:34.278+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "0beebb31-c3fd-46e5-a12f-462cc7bbead3",
+    "name": "SAL3 PAGE-ES",
+    "code": "SAL3-PAGE-ES",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "EARTH-SCI"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:55.605+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:32:46.793+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -7877,6 +7789,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "ART,SPEC"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -7887,8 +7802,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:54.992+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:54.992+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-12T00:30:48.215+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -7900,6 +7815,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "GREEN-LOAN"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -7910,8 +7828,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.727+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:55.727+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-12T00:33:16.336+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -7957,75 +7875,6 @@
       "createdDate": "2023-02-08T23:37:55.229+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-02-08T23:37:55.229+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "b155677d-ad15-453f-a8f5-f8b2a22fff9d",
-    "name": "SAL3 PAGE-MD",
-    "code": "SAL3-PAGE-MD",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:56.103+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:56.103+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "77779df8-61f3-4475-8f2a-b7ef97ec2c96",
-    "name": "SAL3 PAGE-MU",
-    "code": "SAL3-PAGE-MU",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:56.350+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:56.350+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
-    }
-  },
-  {
-    "id": "d96a9c7d-3c6e-49b9-9c15-d3a2338004cc",
-    "name": "SAL3 PAGE-RM",
-    "code": "SAL3-PAGE-RM",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:56.473+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:56.473+00:00",
       "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
     }
   },
@@ -8122,14 +7971,17 @@
     }
   },
   {
-    "id": "398e87b0-35fb-4f80-bb79-b5f70a9a1bc6",
-    "name": "SAL3 PAGE-MP",
-    "code": "SAL3-PAGE-MP",
+    "id": "77779df8-61f3-4475-8f2a-b7ef97ec2c96",
+    "name": "SAL3 PAGE-MU",
+    "code": "SAL3-PAGE-MU",
     "discoveryDisplayName": "Off-campus storage",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "MUSIC"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -8138,21 +7990,24 @@
 
     ],
     "metadata": {
-      "createdDate": "2023-02-08T23:37:56.228+00:00",
+      "createdDate": "2023-02-08T23:37:56.350+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:56.228+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-12T00:35:24.707+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
-    "id": "3cbd5559-5ca9-473e-8d7d-98a67bff29f5",
-    "name": "SAL3 PAGE-SP",
-    "code": "SAL3-PAGE-SP",
+    "id": "d96a9c7d-3c6e-49b9-9c15-d3a2338004cc",
+    "name": "SAL3 PAGE-RM",
+    "code": "SAL3-PAGE-RM",
     "discoveryDisplayName": "Off-campus storage",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "RUMSEY-MAP"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -8161,10 +8016,10 @@
 
     ],
     "metadata": {
-      "createdDate": "2023-02-08T23:37:56.595+00:00",
+      "createdDate": "2023-02-08T23:37:56.473+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:56.595+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-12T00:35:41.097+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -8326,6 +8181,32 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-02-08T23:37:59.875+00:00",
       "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+    }
+  },
+  {
+    "id": "3cbd5559-5ca9-473e-8d7d-98a67bff29f5",
+    "name": "SAL3 PAGE-SP",
+    "code": "SAL3-PAGE-SP",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "SPEC"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:56.595+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:36:03.422+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -10990,32 +10871,6 @@
     }
   },
   {
-    "id": "2ba8ca4d-f9aa-494b-b0ae-2437987c7f75",
-    "name": "ARS Recordings",
-    "code": "ARS-RECORDINGS",
-    "discoveryDisplayName": "Archive of Recorded Sound Recordings",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
-    "details": {
-      "aeon_site": "ARS"
-    },
-    "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
-    "servicePointIds": [
-      "faa81922-3da8-4086-a7fa-977d7d3e7977"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:06.622+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-06-19T22:05:41.118+00:00",
-      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
-    }
-  },
-  {
     "id": "32bebe0c-a235-4689-8f8a-6cc0472e74b1",
     "name": "Spec Inprocess",
     "code": "SPEC-INPROCESS",
@@ -11672,31 +11527,6 @@
     }
   },
   {
-    "id": "18a321cc-a47b-4aca-9159-a782d58f85f9",
-    "name": "SAL3 PAGE-FC",
-    "code": "SAL3-PAGE-FC",
-    "discoveryDisplayName": "Off-campus storage",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "details": {
-    },
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-06-30T02:22:51.679+00:00",
-      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-06-30T02:22:51.679+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
-    }
-  },
-  {
     "id": "b38e6346-38bb-4e85-a852-b2975bad1656",
     "name": "Marine Bio PAGE-MA",
     "code": "MAR-PAGE-MA",
@@ -11794,6 +11624,32 @@
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
       "updatedDate": "2023-07-01T18:13:03.081+00:00",
       "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
+    "id": "18a321cc-a47b-4aca-9159-a782d58f85f9",
+    "name": "SAL3 PAGE-FC",
+    "code": "SAL3-PAGE-FC",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "ART,MUSIC,SPEC"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-06-30T02:22:51.679+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-12T00:33:00.938+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -12694,6 +12550,215 @@
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
       "updatedDate": "2023-07-06T22:45:14.147+00:00",
       "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
+    "id": "2ba8ca4d-f9aa-494b-b0ae-2437987c7f75",
+    "name": "ARS Recordings",
+    "code": "ARS-RECORDINGS",
+    "discoveryDisplayName": "Archive of Recorded Sound Recordings",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
+    "details": {
+      "pageAeonSite": "ARS"
+    },
+    "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
+    "servicePointIds": [
+      "faa81922-3da8-4086-a7fa-977d7d3e7977"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:06.622+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:22:11.225+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "9bd8dc35-7df9-4b3e-abd8-abd8773e00b8",
+    "name": "East Asia Locked Stacks",
+    "code": "EAL-LOCKED",
+    "discoveryDisplayName": "East Asia Locked Stacks",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+      "pageAeonSite": "EASTASIA"
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:16.348+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:23:16.410+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "6babb3e3-fc13-4762-a03f-d15fdf10c756",
+    "name": "Art Locked Stacks Large",
+    "code": "ART-LOCKED-LARGE",
+    "discoveryDisplayName": "Art Locked Stacks Large",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:08.829+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:25:19.874+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "286cdd37-a62c-434d-89d0-587977d80cd0",
+    "name": "Art Locked Stacks Medium Restricted",
+    "code": "ART-LOCKED-MEDIUM-R",
+    "discoveryDisplayName": "Art Locked Stacks Medium Restricted",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:09.331+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:25:47.483+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "70cd636f-725b-4cea-aa75-fe3e6f4ef447",
+    "name": "Art Locked Stacks Small Restricted",
+    "code": "ART-LOCKED-SMALL-R",
+    "discoveryDisplayName": "Art Locked Stacks Small Restricted",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:09.876+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:26:25.082+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "398e87b0-35fb-4f80-bb79-b5f70a9a1bc6",
+    "name": "SAL3 PAGE-MP",
+    "code": "SAL3-PAGE-MP",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageMediationGroupKey": "PAGE-MP",
+      "pageServicePointCodes": "EARTH-SCI"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:56.228+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:29:43.134+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "f155b1bc-7d19-402a-8412-431988b12cc3",
+    "name": "SAL3 PAGE-AS",
+    "code": "SAL3-PAGE-AS",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "ARS"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:55.100+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:31:18.043+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "b155677d-ad15-453f-a8f5-f8b2a22fff9d",
+    "name": "SAL3 PAGE-MD",
+    "code": "SAL3-PAGE-MD",
+    "discoveryDisplayName": "Off-campus storage",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "pageServicePointCodes": "MUSIC,MEDIA-CENTER"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-02-08T23:37:56.103+00:00",
+      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
+      "updatedDate": "2023-07-12T00:34:38.428+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   }
 ]
