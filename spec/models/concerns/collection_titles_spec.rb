@@ -31,12 +31,17 @@ describe CollectionTitles do
 
   context 'when the title is nil' do
     let(:document_data) do
-      { "source" => "SDR-PURL",
-        "item_type" => "item",
-        "type" => "file:jx525pn5438%2Fjx525pn5438_img_1.jp2",
-        "druid" => "collection:sz746mt0652::ARS Disc Collection - LP",
-        "id" => nil,
-        "title" => nil }
+      { collection_struct: [{ 'title' => nil,
+                              'source' => 'sirsi' }] }
+    end
+
+    it { expect(collection_titles).not_to be_present }
+  end
+
+  context 'when it is a digital collection' do
+    let(:document_data) do
+      { collection_struct: [{ 'title' => 'Shao shu min zu she hui li shi diao cha',
+                              'source' => 'SDR-PURL' }] }
     end
 
     it { expect(collection_titles).not_to be_present }
