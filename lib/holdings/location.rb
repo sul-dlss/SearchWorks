@@ -24,12 +24,6 @@ class Holdings
       library == 'LANE-MED'
     end
 
-    def request_link
-      return if items.empty? || bound_with?
-
-      @request_link ||= RequestLink.for(library:, location: @code, items:)
-    end
-
     def location_link
       return unless external_location?
 
