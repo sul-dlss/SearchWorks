@@ -8,7 +8,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
-  let(:items) { [double(current_location: double(code: nil), circulates?: true, folio_item?: false)] }
+  let(:items) { [instance_double(Holdings::Item, current_location: instance_double(Holdings::Location, code: nil), circulates?: true, folio_item?: false)] }
 
   let(:page) { render_inline(component) }
 
@@ -34,7 +34,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   end
 
   context 'when none of the items have a circulating type' do
-    let(:items) { [double(circulates?: false, current_location: double(code: nil), folio_item?: false)] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, current_location: instance_double(Holdings::Location, code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link }
   end
@@ -42,14 +42,14 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   context 'when all items are in a mediated page location' do
     let(:library) { 'ART' }
     let(:location) { 'ARTLCKL' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, current_location: instance_double(Holdings::Location, code: nil))] }
 
     it { expect(page).to have_link 'Request' }
   end
 
   context 'when all items are in an Aeon library' do
     let(:library) { 'SPEC-COLL' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, current_location: instance_double(Holdings::Location, code: nil))] }
 
     it { expect(page).to have_link 'Request via Aeon' }
   end
@@ -57,7 +57,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   context 'when all items are in an Aeon library but not an Aeon location' do
     let(:library) { 'ARS' }
     let(:location) { 'REFERENCE' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil), folio_item?: false)] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, current_location: instance_double(Holdings::Location, code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link 'Request via Aeon' }
   end
@@ -65,7 +65,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   context 'when all items are in an Aeon library and location' do
     let(:library) { 'ARS' }
     let(:location) { 'RECORDINGS' }
-    let(:items) { [double(circulates?: false, current_location: double(code: nil))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, current_location: instance_double(Holdings::Location, code: nil))] }
 
     it { expect(page).to have_link 'Request via Aeon' }
   end
@@ -74,7 +74,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:document) { SolrDocument.new(id: '12345') }
     let(:library) { 'SAL' }
     let(:location) { 'L-PAGE-EA' }
-    let(:items) { [double(circulates?: false, type: 'NH-INHOUSE', current_location: double(code: nil))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, type: 'NH-INHOUSE', current_location: instance_double(Holdings::Location, code: nil))] }
 
     it { expect(page).to have_link 'Request via Aeon' }
   end
@@ -83,14 +83,14 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:document) { SolrDocument.new(id: '12345') }
     let(:library) { 'SAL' }
     let(:location) { 'L-PAGE-EA' }
-    let(:items) { [double(circulates?: false, type: 'NEWSPAPER', current_location: double(code: nil), folio_item?: false)] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: false, type: 'NEWSPAPER', current_location: instance_double(Holdings::Location, code: nil), folio_item?: false)] }
 
     it { expect(page).not_to have_link 'Request via Aeon' }
   end
 
   context 'when all items are in a disallowed current location' do
     let(:library) { 'SPEC-COLL' }
-    let(:items) { [double(circulates?: true, current_location: double(code: 'SPEC-INPRO'))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: true, current_location: instance_double(Holdings::Location, code: 'SPEC-INPRO'))] }
 
     it { expect(page).not_to have_link }
   end
@@ -139,7 +139,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     end
     let(:library) { 'HOPKINS' }
     let(:location) { 'STACKS' }
-    let(:items) { [double(circulates?: true, current_location: double(code: nil))] }
+    let(:items) { [instance_double(Holdings::Item, circulates?: true, current_location: instance_double(Holdings::Location, code: nil))] }
     let(:item_display_field) do
       [
         '361051.. -|- HOPKINS -|- STACKS -|- ...'
