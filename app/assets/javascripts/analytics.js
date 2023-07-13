@@ -36,7 +36,7 @@ Blacklight.onLoad(function() {
   })
 
   // Track external link clicks
-  document.querySelectorAll('a[href]:not([href^="/"],[href^="#"],[data-behavior="requests-modal"],[href=""])').forEach(function(el) {
+  document.querySelectorAll('a[href*="://"]').forEach(function(el) {
     el.addEventListener('click', function(e) {
       sendAnalyticsEvent({
         category: 'External link',
