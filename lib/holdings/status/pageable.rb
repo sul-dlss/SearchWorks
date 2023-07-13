@@ -6,10 +6,14 @@ class Holdings
       end
 
       def pageable?
+        return folio_pageable? if Settings.features.folio
+
         pageable_home_location? || pageable_library?
       end
 
       private
+
+      delegate :folio_pageable?, to: :@item
 
       def pageable_library?
         ["SAL3", "SAL-NEWARK"].include?(@item.library)

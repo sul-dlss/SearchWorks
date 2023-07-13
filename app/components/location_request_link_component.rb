@@ -118,8 +118,6 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def folio_pageable?
-    return false unless items.first.folio_item?
-
-    Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page')
+    items.first.folio_pageable?
   end
 end

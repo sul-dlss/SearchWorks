@@ -1,7 +1,9 @@
 require "spec_helper"
 
-describe Holdings::Status do
-  let(:status) { Holdings::Status.new(OpenStruct.new) }
+RSpec.describe Holdings::Status do
+  let(:status) { Holdings::Status.new(item) }
+  let(:item) { Holdings::Item.new('barcode -|- GREEN -|- STACKS -|- -|-', document:) }
+  let(:document) { SolrDocument.new }
 
   describe "::Available" do
     before do
@@ -114,8 +116,135 @@ describe Holdings::Status do
   end
 
   describe "unknown" do
-    it "should default to an unknown availability class" do
+    it "defaults to an unknown availability class" do
       expect(status.availability_class).to eq 'unknown'
+    end
+  end
+
+  context 'when using Folio' do
+    let(:item) { Holdings::Item.new('36105231525416 -|- GREEN -|- STACKS -|- -|-', document:) }
+    let(:document) { SolrDocument.new(holdings_json_struct:) }
+    let(:holdings_json_struct) do
+      [{ "holdings" =>
+        [{ "id" => "b139b4cc-daf2-5b5b-ad1b-8ad4b8911577",
+           "hrid" => "ah13849343_1",
+           "_version" => 1,
+           "location" =>
+           { "effectiveLocation" =>
+             { "id" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+               "code" => "SAL3-STACKS",
+               "name" => "Off-campus storage",
+               "campus" =>
+               { "id" => "c365047a-51f2-45ce-8601-e421ca3615c5",
+                 "code" => "SUL",
+                 "name" => "Stanford Libraries" },
+               "details" => nil,
+               "library" =>
+               { "id" => "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                 "code" => "SAL3",
+                 "name" => "Stanford Auxiliary Library 3" },
+               "isActive" => true,
+               "institution" =>
+               { "id" => "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                 "code" => "SU",
+                 "name" => "Stanford University" } },
+             "permanentLocation" =>
+             { "id" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+               "code" => "SAL3-STACKS",
+               "name" => "Off-campus storage",
+               "campus" =>
+               { "id" => "c365047a-51f2-45ce-8601-e421ca3615c5",
+                 "code" => "SUL",
+                 "name" => "Stanford Libraries" },
+               "details" => nil,
+               "library" =>
+               { "id" => "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                 "code" => "SAL3",
+                 "name" => "Stanford Auxiliary Library 3" },
+               "isActive" => true,
+               "institution" =>
+               { "id" => "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                 "code" => "SU",
+                 "name" => "Stanford University" } },
+             "temporaryLocation" => nil },
+           "metadata" =>
+           { "createdDate" => "2023-05-07T14:37:29.310Z",
+             "updatedDate" => "2023-05-07T14:37:29.310Z",
+             "createdByUserId" => "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+             "updatedByUserId" => "3e2ed889-52f2-45ce-8a30-8767266f07d2" },
+           "sourceId" => "f32d531e-df79-46b3-8932-cdd35f7a2264",
+           "callNumber" => "GT2918 .L45 2020",
+           "instanceId" => "1a5b1d83-1ac9-5e72-bd6d-b58aee23306c",
+           "holdingsType" =>
+           { "id" => "03c9c400-b9e3-4a07-ac0e-05ab470233ed", "name" => "Monograph", "source" => "folio" },
+           "callNumberType" =>
+           { "id" => "95467209-6d7b-468b-94df-0f5d7ad2747d",
+             "name" => "Library of Congress classification",
+             "source" => "folio" },
+           "effectiveLocationId" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+           "permanentLocationId" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+           "suppressFromDiscovery" => false }],
+         "items" =>
+        [{ "id" => "59ecf566-5789-588e-b68c-43e023bce67f",
+           "hrid" => "ai13849343_1_1",
+           "status" => "Available",
+           "barcode" => "36105231525416",
+           "location" =>
+           { "effectiveLocation" =>
+             { "id" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+               "code" => "SAL3-STACKS",
+               "name" => "Off-campus storage",
+               "campus" =>
+               { "id" => "c365047a-51f2-45ce-8601-e421ca3615c5",
+                 "code" => "SUL",
+                 "name" => "Stanford Libraries" },
+               "details" => nil,
+               "library" =>
+               { "id" => "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                 "code" => "SAL3",
+                 "name" => "Stanford Auxiliary Library 3" },
+               "isActive" => true,
+               "institution" =>
+               { "id" => "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                 "code" => "SU",
+                 "name" => "Stanford University" } },
+             "permanentLocation" =>
+             { "id" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+               "code" => "SAL3-STACKS",
+               "name" => "Off-campus storage",
+               "campus" =>
+               { "id" => "c365047a-51f2-45ce-8601-e421ca3615c5",
+                 "code" => "SUL",
+                 "name" => "Stanford Libraries" },
+               "details" => nil,
+               "library" =>
+               { "id" => "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                 "code" => "SAL3",
+                 "name" => "Stanford Auxiliary Library 3" },
+               "isActive" => true,
+               "institution" =>
+               { "id" => "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                 "code" => "SU",
+                 "name" => "Stanford University" } },
+             "temporaryLocation" => nil },
+           "materialType" => "book",
+           "materialTypeId" => "1a54b431-2e4f-452d-9cae-9cee66c9a892",
+           "permanentLoanType" => "Can circulate",
+           "effectiveLocationId" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+           "permanentLoanTypeId" => "2b94c631-fca9-4892-a730-03ee529ffe27",
+           "permanentLocationId" => "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2" }] }]
+    end
+
+    before do
+      allow(Settings.features).to receive(:folio).and_return(true)
+    end
+
+    describe '#availability_class' do
+      subject { status.availability_class }
+
+      context 'when it is pageable' do
+        it { is_expected.to eq 'page' }
+      end
     end
   end
 

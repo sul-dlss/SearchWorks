@@ -79,6 +79,9 @@ LIB_GUIDES:
   NUM_RESULTS: 3
   SITE_ID: 12345
 
+features:
+  folio: false
+
 folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
   standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']

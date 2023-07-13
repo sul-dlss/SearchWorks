@@ -186,6 +186,11 @@ class Holdings
       folio_item.present?
     end
 
+    def folio_pageable?
+      folio_item? &&
+        Folio::CirculationRules::PolicyService.instance.item_request_policy(self)&.dig('requestTypes')&.include?('Page')
+    end
+
     private
 
     def internet_resource?
