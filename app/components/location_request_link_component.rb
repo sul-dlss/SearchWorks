@@ -47,7 +47,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     return false unless items.any? && !bound_with?
     return @render unless @render.nil?
 
-    return folio_pageable? if items.first.folio_item?
+    return folio_pageable? if folio_items?
 
     @render = ((in_enabled_location? && any_items_circulate?) || in_mediated_pageable_location? || aeon_pageable?) &&
               !all_in_disabled_current_location?
@@ -94,6 +94,8 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def aeon_pageable?
+    return folio_aeon_pageable? if folio_items?
+
     Settings.aeon_locations[library] == '*' ||
       Settings.aeon_locations.dig(library, location) == "*" ||
       items.all? do |item|
@@ -119,18 +121,24 @@ class LocationRequestLinkComponent < ViewComponent::Base
     Settings.disabled_current_locations[library] || Settings.disabled_current_locations.default
   end
 
+  def folio_items?
+    items.first.folio_item?
+  end
+
   def folio_pageable?
+    return false unless folio_items?
+
     folio_mediated_pageable? || folio_aeon_pageable? || Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page')
   end
 
   def folio_mediated_pageable?
-    return false unless folio_locations.any?
+    return false unless folio_items? && folio_locations.any?
 
     folio_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
   end
 
   def folio_aeon_pageable?
-    return false unless folio_locations.any?
+    return false unless folio_items? && folio_locations.any?
 
     aeon_pageable_libraries = Folio::Types.libraries.select { |_k, v| v['code'] == 'SPEC-COLL' }.keys
     folio_locations.all? { |location| location.dig('details', 'pageAeonSite') || aeon_pageable_libraries.include?(location['libraryId']) }
