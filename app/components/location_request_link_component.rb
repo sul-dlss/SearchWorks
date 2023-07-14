@@ -139,9 +139,9 @@ class LocationRequestLinkComponent < ViewComponent::Base
   # there probably is only one FOLIO location
   def folio_locations
     @folio_locations ||= begin
-      location_uuids = items.map(&:effective_location).uniq
+      location_uuids = items.map(&:effective_location).map(&:id).uniq
 
-      Folio::Types.locations.select { |l| location_uuids.include?(l['id']) }
+      Folio::Types.locations.values.select { |l| location_uuids.include?(l['id']) }
     end
   end
 end
