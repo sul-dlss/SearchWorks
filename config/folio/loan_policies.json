@@ -118,50 +118,6 @@
     }
   },
   {
-    "id": "5120d86d-fa88-437b-8db2-c5cd8cc82d89",
-    "name": "28day-norenew-1daygrace",
-    "description": "28-day equipment loan for eng",
-    "loanable": true,
-    "loansPolicy": {
-      "profileId": "Rolling",
-      "period": {
-        "duration": 28,
-        "intervalId": "Days"
-      },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
-      "gracePeriod": {
-        "duration": 1,
-        "intervalId": "Days"
-      }
-    },
-    "renewable": false,
-    "requestManagement": {
-      "recalls": {
-        "minimumGuaranteedLoanPeriod": {
-          "duration": 14,
-          "intervalId": "Days"
-        },
-        "recallReturnInterval": {
-          "duration": 3,
-          "intervalId": "Days"
-        },
-        "allowRecallsToExtendOverdueLoans": false
-      },
-      "holds": {
-        "alternateCheckoutLoanPeriod": {
-          "duration": 2,
-          "intervalId": "Weeks"
-        }
-      }
-    },
-    "metadata": {
-      "createdDate": "2023-02-09T01:05:15.366+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T01:05:15.366+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
     "id": "07115e75-c4a9-4ef0-b013-dba184251041",
     "name": "7day-norenew-1daygrace",
     "description": "7-day loan (Art periodicals)",
@@ -319,6 +275,50 @@
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
       "updatedDate": "2023-06-22T18:49:40.768+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    }
+  },
+  {
+    "id": "5120d86d-fa88-437b-8db2-c5cd8cc82d89",
+    "name": "28day-norenew-7daygrace",
+    "description": "28-day equipment loan for eng",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 28,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 14,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 2,
+          "intervalId": "Weeks"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:15.366+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-14T19:00:40.755+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
     }
   },
   {
