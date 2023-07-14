@@ -63,8 +63,8 @@ describe "catalog/_index_location" do
       render
     end
 
-    it "should include the status icon" do
-      expect(rendered).to have_css('tbody td i.page')
+    it "includes the status icon" do
+      expect(rendered).to have_css('tbody td i.deliver-from-offsite')
     end
   end
 

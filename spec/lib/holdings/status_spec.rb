@@ -52,19 +52,19 @@ describe Holdings::Status do
   end
 
   describe "::Pageable" do
+    subject { status }
+
     before do
-      allow_any_instance_of(Holdings::Status::Pageable).to receive(:pageable?).and_return(true)
+      allow_any_instance_of(Holdings::Status::DeliverFromOffsite).to receive(:deliver_from_offsite?).and_return(true)
     end
 
-    it "should have the page class" do
-      expect(status.availability_class).to eq 'page'
+    it "has the deliver-from-offsite class" do
+      expect(status.availability_class).to eq 'deliver-from-offsite'
     end
-    it "should have the page status text" do
+    it "has the page status text" do
       expect(status.status_text).to eq 'Available'
     end
-    it "should be pageable" do
-      expect(status).to be_pageable
-    end
+    it { is_expected.to be_deliver_from_offsite }
   end
 
   describe "CDL" do

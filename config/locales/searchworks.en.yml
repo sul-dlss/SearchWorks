@@ -19,7 +19,7 @@ en:
             tip: Stanford subscribes to the full text, or it's available via open access.
     availability:
       available: Available
-      page: Available
+      deliver-from-offsite: Available
       unavailable: Unavailable
       unavailable cdl: Physical copy unavailable
       noncirc: In-library use
