@@ -127,7 +127,6 @@ ard.bmj.com
 aricjournal.biomedcentral.com
 ark.cdlib.org
 arrow-journal.org
-arrowsmith.psych.uic.edu
 arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
 arxiv.org
@@ -351,7 +350,6 @@ ccdm.aphapublications.org
 ccforum.biomedcentral.com
 ccinfoweb.ccohs.ca
 ccj.springeropen.com
-cdl.library.cornell.edu
 cdm17279.contentdm.oclc.org
 cdnc.ucr.edu
 cdnsciencepub.com
@@ -433,7 +431,6 @@ cpps.brepolis.net
 criticalcare.lwwhealthlibrary.com
 crl.acrl.org
 crln.acrl.org
-cs.brown.edu
 csbj.org
 cshmonographs.org
 cshperspectives.cshlp.org
@@ -474,7 +471,6 @@ diabetesjournals.org
 diagnosticpathology.biomedcentral.com
 diagnprognres.biomedcentral.com
 dictybase.org
-digicoll.library.wisc.edu
 digital-library.theiet.org
 digital.bib-bvb.de
 digital.casalini.it
@@ -599,7 +595,6 @@ english.rrsurg.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
 ep.bmj.com
-epaa.asu.edu
 epag.springeropen.com
 epigeneticsandchromatin.biomedcentral.com
 eprints.lib.hokudai.ac.jp
@@ -663,7 +658,6 @@ fuse-journal.org
 gale.cengage.co.uk
 galenet.galegroup.com
 gallica.bnf.fr
-galton.org
 games.jmir.org
 gatesopenresearch.org
 gateway.proquest.com
@@ -840,7 +834,6 @@ insight.jci.org
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
 institutions.rarebookhub.com
-insulin.library.utoronto.ca
 internalmedicine.lwwhealthlibrary.com
 internationalbreastfeedingjournal.biomedcentral.com
 intjem.biomedcentral.com
@@ -1119,7 +1112,6 @@ mjiri.iums.ac.ir
 mmbr.asm.org
 mmcts.org
 mmrjournal.biomedcentral.com
-moa.umdl.umich.edu
 mobilednajournal.biomedcentral.com
 moffitt.org
 molcellped.springeropen.com
@@ -1414,7 +1406,6 @@ rotunda.upress.virginia.edu
 royalsocietypublishing.org
 rps.mui.ac.ir
 rrtjournal.biomedcentral.com
-rsbm.royalsocietypublishing.org
 rsos.royalsocietypublishing.org
 rupress.org
 rzblx1.uni-regensburg.de
@@ -1527,7 +1518,6 @@ subscriptions.energysociety.org
 subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
 sumsearch.org
-sunzi1.lib.hku.hk
 surgery.lwwhealthlibrary.com
 survcan.iarc.fr
 svn.bmj.com
@@ -1815,7 +1805,6 @@ www.biochemia-medica.com
 www.biodiversitylibrary.org
 www.biographi.ca
 www.bioj-online.com
-www.biolbull.org
 www.bioline.org.br
 www.biolsci.org
 www.biomed.cas.cz
@@ -1997,7 +1986,6 @@ www.drugabuse.gov
 www.drugbank.ca
 www.drugdeliverytech.com
 www.drugeruptiondata.com
-www.druglibrary.org
 www.drugs.com
 www.drugsincontext.com
 www.drugtopics.com
@@ -2185,7 +2173,6 @@ www.hhrjournal.org
 www.highwirepress.com
 www.hindawi.com
 www.histmodbiomed.org
-www.historycooperative.org
 www.historyofmedicine.com
 www.hiv.lanl.gov
 www.hjdbulletin.org
@@ -2194,7 +2181,6 @@ www.hmpgloballearningnetwork.com
 www.hopkinsguides.com
 www.horizonpress.com
 www.hormones.gr
-www.hti.umich.edu
 www.humantechnology.jyu.fi
 www.i-jmr.org
 www.iaas-med.com
@@ -2293,7 +2279,6 @@ www.infobank.cn
 www.informatics-review.com
 www.informatics.jax.org
 www.informaworld.com
-www.infotoday.com
 www.infouse.com
 www.infoworld.com
 www.ingenta.com
@@ -2555,7 +2540,6 @@ www.med.kobe-u.ac.jp
 www.med.nagoya-u.ac.jp
 www.med.or.jp
 www.med.unc.edu
-www.med.yale.edu
 www.medandlife.ro
 www.mededportal.org
 www.medeniyetmedicaljournal.org
@@ -2566,7 +2550,6 @@ www.medicinasportiva.pl
 www.medicine.mcgill.ca
 www.medicine.ox.ac.uk
 www.medicine20.com
-www.medicographia.com
 www.medievalfamilylife.amdigital.co.uk
 www.medigraphic.com
 www.medind.nic.in
@@ -2737,8 +2720,6 @@ www.pensoft.net
 www.pep-web.org
 www.perditamanuscripts.amdigital.co.uk
 www.pghn.org
-www.pgmi.com.sg
-www.ph.ucla.edu
 www.phac-aspc.gc.ca
 www.pharmacypractice.org
 www.pharmacytimes.com
@@ -2921,7 +2902,6 @@ www.ssph-journal.org
 www.stamres.psychol.ucl.ac.uk
 www.standardsingenomics.org
 www.stanforddaily.com
-www.stat.berkeley.edu
 www.stata-journal.com
 www.statista.com
 www.stdjournal.com
@@ -3022,7 +3002,6 @@ www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
-www.vqronline.org
 www.wageningenacademic.com
 www.washingtonpost.com
 www.wdoms.org
@@ -3070,7 +3049,6 @@ www3.cricyt.edu.ar
 www3.stat.sinica.edu.tw
 wwwcf.nlm.nih.gov
 wwwn.cdc.gov
-wwwnc.cdc.gov
 xenetwork.org
 xlink.rsc.org
 xsearch.asahi.com
