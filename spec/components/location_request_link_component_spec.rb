@@ -319,6 +319,45 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
     end
 
+    context 'in an Aeon location with a finding aid' do
+      let(:document) do
+        SolrDocument.new(
+          id: '12345',
+          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
+        )
+      end
+
+      let(:library) { 'SPEC-COLL' }
+      let(:location) { 'MANUSCRIPT' }
+
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            "id" => "891ca554-5109-419a-bd01-d647944a40ea",
+            "name" => "Spec Manuscript",
+            "code" => "SPEC-MANUSCRIPT",
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              "id" => "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+              "name" => "Special Collections",
+              "code" => "SPEC-COLL"
+            }
+          }
+        )
+      end
+
+      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+    end
+
     context 'in a non-pageable location' do
       let(:library) { 'GREEN' }
       let(:location) { 'STACKS' }
