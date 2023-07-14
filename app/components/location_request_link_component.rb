@@ -124,6 +124,8 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def folio_mediated_pageable?
+    return false unless folio_locations.any?
+
     folio_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
   end
 
