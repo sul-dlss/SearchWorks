@@ -120,15 +120,15 @@ describe Holdings::Status do
   end
 
   describe 'precedence' do
-    subject { Holdings::Status.new(callnumber) }
+    subject { Holdings::Status.new(item) }
 
     describe 'unavailable' do
-      let(:callnumber) do
-        double(
-          'Call number',
+      let(:item) do
+        instance_double(
+          Holdings::Item,
           library: 'SAL3',
           home_location: 'STACKS',
-          current_location: double('Location', code: 'LOST-ASSUM'),
+          current_location: instance_double(Holdings::Location, code: 'LOST-ASSUM'),
           type: 'STACKS'
         )
       end
