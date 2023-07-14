@@ -93,7 +93,7 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:14.624+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-07T00:14:01.572+00:00",
+      "updatedDate": "2023-07-14T16:06:57.767+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "loanNotices": [
@@ -147,14 +147,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Item recalled"
-        }
-      },
-      {
-        "templateId": "013fbf68-6ca2-4230-b681-28b397074c60",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Manual due date change"
         }
       },
       {
@@ -238,8 +230,8 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:14.463+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-12T22:51:51.405+00:00",
-      "updatedByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10"
+      "updatedDate": "2023-07-14T16:06:29.178+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "loanNotices": [
       {
@@ -248,14 +240,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Check in"
-        }
-      },
-      {
-        "templateId": "5327e501-0f6c-4b0a-9262-db567821b6a5",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Manual due date change"
         }
       },
       {

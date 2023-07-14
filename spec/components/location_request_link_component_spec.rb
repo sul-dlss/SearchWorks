@@ -217,4 +217,138 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=GREEN&origin_location=LOCKED-STK' }
     end
   end
+
+  context 'for FOLIO items' do
+    let(:library) { 'SAL3' }
+    let(:location) { 'STACKS' }
+
+    let(:material_type) { Folio::Item::MaterialType.new(id: '1a54b431-2e4f-452d-9cae-9cee66c9a892', name: 'book') }
+    let(:loan_type) { Folio::Item::LoanType.new(id: '2b94c631-fca9-4892-a730-03ee529ffe27', name: 'Can circulate') }
+    let(:items) { [instance_double(Holdings::Item, folio_item?: true, effective_location:, material_type:, loan_type:)] }
+
+    context 'in a pageable location' do
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            'id' => '1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2',
+            'code' => 'SAL3-STACKS',
+            'name' => 'SAL3 Stacks',
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9',
+              'code' => 'SAL3',
+              'name' => 'Stanford Auxiliary Library 3'
+            }
+          }
+        )
+      end
+
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=STACKS' }
+    end
+
+    context 'in a mediated location' do
+      let(:library) { 'SAL3' }
+      let(:location) { 'PAGE-MP' }
+
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            "id" => "398e87b0-35fb-4f80-bb79-b5f70a9a1bc6",
+            "name" => "SAL3 PAGE-MP",
+            "code" => "SAL3-PAGE-MP",
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9',
+              'code' => 'SAL3',
+              'name' => 'Stanford Auxiliary Library 3'
+            }
+          }
+        )
+      end
+
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=PAGE-MP' }
+    end
+
+    context 'in an Aeon location' do
+      let(:library) { 'SPEC-COLL' }
+      let(:location) { 'MANUSCRIPT' }
+
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            "id" => "891ca554-5109-419a-bd01-d647944a40ea",
+            "name" => "Spec Manuscript",
+            "code" => "SPEC-MANUSCRIPT",
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              "id" => "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+              "name" => "Special Collections",
+              "code" => "SPEC-COLL"
+            }
+          }
+        )
+      end
+
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+    end
+
+    context 'in a non-pageable location' do
+      let(:library) { 'GREEN' }
+      let(:location) { 'STACKS' }
+
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            'id' => '4573e824-9273-4f13-972f-cff7bf504217',
+            'code' => 'GRE-STACKS',
+            'name' => 'Green Library Stacks',
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+              'code' => 'GREEN',
+              'name' => 'Cecil H. Green'
+            }
+          }
+        )
+      end
+
+      it { expect(page).not_to have_link 'Request' }
+    end
+  end
 end
