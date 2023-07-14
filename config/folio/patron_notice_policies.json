@@ -238,7 +238,7 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:14.463+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-05T21:38:23.472+00:00",
+      "updatedDate": "2023-07-12T22:51:51.405+00:00",
       "updatedByUserId": "21e76bca-a42d-4e34-9a32-94a753a15e10"
     },
     "loanNotices": [
@@ -314,7 +314,7 @@
     ],
     "feeFineNotices": [
       {
-        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "templateId": "2ece07e2-5d68-4e6e-90b1-3ea183bf7f1d",
         "format": "Email",
         "realTime": true,
         "sendOptions": {
