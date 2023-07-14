@@ -1,5 +1,26 @@
 [
   {
+    "group": "affiliate-sponsored-eresources",
+    "desc": "affiliate:sponsored and stanford:library-eresources-eligible",
+    "id": "06714251-dffa-4562-b84e-375dc1f8642b",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.001+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T00:40:59.001+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "sul-institution",
+    "id": "16f983cc-c0c6-419c-8f01-b90b66b87951",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.850+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-06-19T20:48:20.577+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+    }
+  },
+  {
     "group": "staff",
     "desc": "Staff Member",
     "id": "3684a786-6671-4268-8ed0-9db82ebca60b",
@@ -10,43 +31,13 @@
     }
   },
   {
-    "group": "graduate",
-    "desc": "Graduate Student",
-    "id": "ad0bc554-d5bc-463c-85d1-5562127ae91b",
+    "group": "faculty",
+    "desc": "Faculty Member",
+    "id": "503a81cd-6c26-400f-b620-14c08943697c",
+    "expirationOffsetInDays": 365,
     "metadata": {
-      "createdDate": "2023-02-08T19:57:42.012+00:00",
-      "updatedDate": "2023-02-08T19:57:42.012+00:00"
-    }
-  },
-  {
-    "group": "undergrad",
-    "desc": "Undergraduate Student",
-    "id": "bdc2b6d4-5ceb-4a12-ab46-249b9a68473e",
-    "metadata": {
-      "createdDate": "2023-02-08T19:57:42.042+00:00",
-      "updatedDate": "2023-02-08T19:57:42.042+00:00"
-    }
-  },
-  {
-    "group": "staff-casual",
-    "desc": "staff:casual",
-    "id": "dfbe8795-751b-4922-9770-b52def1fedb3",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:58.023+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:58.023+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "fellow",
-    "desc": "affiliate:fellow",
-    "id": "9707eec0-1d2f-4070-b1a8-9a44953159f0",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:58.225+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:58.225+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "createdDate": "2023-02-08T19:57:42.038+00:00",
+      "updatedDate": "2023-02-08T19:57:42.038+00:00"
     }
   },
   {
@@ -58,6 +49,17 @@
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
       "updatedDate": "2023-02-09T00:40:58.373+00:00",
       "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "bus-guest",
+    "desc": "Guest of Business School",
+    "id": "87c1e4e2-bf43-4e4c-87cb-460dc01a2513",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.124+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-06-19T20:46:32.728+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
@@ -83,57 +85,14 @@
     }
   },
   {
-    "group": "affiliate-sponsored-eresources",
-    "desc": "affiliate:sponsored and stanford:library-eresources-eligible",
-    "id": "06714251-dffa-4562-b84e-375dc1f8642b",
+    "group": "fellow",
+    "desc": "affiliate:fellow",
+    "id": "9707eec0-1d2f-4070-b1a8-9a44953159f0",
     "metadata": {
-      "createdDate": "2023-02-09T00:40:59.001+00:00",
+      "createdDate": "2023-02-09T00:40:58.225+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.001+00:00",
+      "updatedDate": "2023-02-09T00:40:58.225+00:00",
       "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "lane-guest",
-    "desc": "Guest of Lane Medical",
-    "id": "babbfaf8-295a-497a-b705-ea432030f884",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.242+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.242+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "law-alumni",
-    "desc": "Law School alumni",
-    "id": "de100a1b-275c-4ef5-8500-baf943a38141",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.370+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.370+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "law-guest",
-    "desc": "Guest of Law School",
-    "id": "cfd2e668-7d59-4fe2-bc82-1cc36c145fe8",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.491+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.491+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "sul-exception",
-    "id": "e30b731d-015b-489a-9c81-939f658b1c62",
-    "metadata": {
-      "createdDate": "2023-02-09T00:40:59.970+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-06-19T20:47:54.269+00:00",
-      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
@@ -159,23 +118,42 @@
     }
   },
   {
-    "group": "sul-institution",
-    "id": "16f983cc-c0c6-419c-8f01-b90b66b87951",
+    "group": "graduate",
+    "desc": "Graduate Student",
+    "id": "ad0bc554-d5bc-463c-85d1-5562127ae91b",
     "metadata": {
-      "createdDate": "2023-02-09T00:40:59.850+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-06-19T20:48:20.577+00:00",
-      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+      "createdDate": "2023-02-08T19:57:42.012+00:00",
+      "updatedDate": "2023-02-08T19:57:42.012+00:00"
     }
   },
   {
-    "group": "lane-hospital staff",
-    "desc": "Stanford hospital staff, residents, fellows",
-    "id": "fe863e32-9b3d-454c-ad6c-8a344846f34b",
+    "group": "lane-guest",
+    "desc": "Guest of Lane Medical",
+    "id": "babbfaf8-295a-497a-b705-ea432030f884",
     "metadata": {
-      "createdDate": "2023-02-09T00:41:00.098+00:00",
+      "createdDate": "2023-02-09T00:40:59.242+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:41:00.098+00:00",
+      "updatedDate": "2023-02-09T00:40:59.242+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "undergrad",
+    "desc": "Undergraduate Student",
+    "id": "bdc2b6d4-5ceb-4a12-ab46-249b9a68473e",
+    "metadata": {
+      "createdDate": "2023-02-08T19:57:42.042+00:00",
+      "updatedDate": "2023-02-08T19:57:42.042+00:00"
+    }
+  },
+  {
+    "group": "law-guest",
+    "desc": "Guest of Law School",
+    "id": "cfd2e668-7d59-4fe2-bc82-1cc36c145fe8",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.491+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T00:40:59.491+00:00",
       "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
     }
   },
@@ -191,24 +169,46 @@
     }
   },
   {
-    "group": "bus-guest",
-    "desc": "Guest of Business School",
-    "id": "87c1e4e2-bf43-4e4c-87cb-460dc01a2513",
+    "group": "law-alumni",
+    "desc": "Law School alumni",
+    "id": "de100a1b-275c-4ef5-8500-baf943a38141",
     "metadata": {
-      "createdDate": "2023-02-09T00:40:59.124+00:00",
+      "createdDate": "2023-02-09T00:40:59.370+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-06-19T20:46:32.728+00:00",
+      "updatedDate": "2023-02-09T00:40:59.370+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "staff-casual",
+    "desc": "staff:casual",
+    "id": "dfbe8795-751b-4922-9770-b52def1fedb3",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:58.023+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T00:40:58.023+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "sul-exception",
+    "id": "e30b731d-015b-489a-9c81-939f658b1c62",
+    "metadata": {
+      "createdDate": "2023-02-09T00:40:59.970+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-06-19T20:47:54.269+00:00",
       "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
-    "group": "faculty",
-    "desc": "Faculty Member",
-    "id": "503a81cd-6c26-400f-b620-14c08943697c",
-    "expirationOffsetInDays": 365,
+    "group": "lane-hospital staff",
+    "desc": "Stanford hospital staff, residents, fellows",
+    "id": "fe863e32-9b3d-454c-ad6c-8a344846f34b",
     "metadata": {
-      "createdDate": "2023-02-08T19:57:42.038+00:00",
-      "updatedDate": "2023-02-08T19:57:42.038+00:00"
+      "createdDate": "2023-02-09T00:41:00.098+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-02-09T00:41:00.098+00:00",
+      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
     }
   }
 ]

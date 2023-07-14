@@ -47,51 +47,51 @@ class FolioClient
   end
 
   def request_policies
-    get_json('/request-policy-storage/request-policies', params: { limit: 2_147_483_647 }).fetch('requestPolicies', [])
+    get_json('/request-policy-storage/request-policies', params: { limit: 2_147_483_647 }).fetch('requestPolicies', []).sort_by { |x| x['id'] }
   end
 
   def loan_policies
-    get_json('/loan-policy-storage/loan-policies', params: { limit: 2_147_483_647 }).fetch('loanPolicies', [])
+    get_json('/loan-policy-storage/loan-policies', params: { limit: 2_147_483_647 }).fetch('loanPolicies', []).sort_by { |x| x['id'] }
   end
 
   def lost_item_fees_policies
-    get_json('/lost-item-fees-policies', params: { limit: 2_147_483_647 }).fetch('lostItemFeePolicies', [])
+    get_json('/lost-item-fees-policies', params: { limit: 2_147_483_647 }).fetch('lostItemFeePolicies', []).sort_by { |x| x['id'] }
   end
 
   def overdue_fines_policies
-    get_json('/overdue-fines-policies', params: { limit: 2_147_483_647 }).fetch('overdueFinePolicies', [])
+    get_json('/overdue-fines-policies', params: { limit: 2_147_483_647 }).fetch('overdueFinePolicies', []).sort_by { |x| x['id'] }
   end
 
   def patron_notice_policies
-    get_json('/patron-notice-policy-storage/patron-notice-policies', params: { limit: 2_147_483_647 }).fetch('patronNoticePolicies', [])
+    get_json('/patron-notice-policy-storage/patron-notice-policies', params: { limit: 2_147_483_647 }).fetch('patronNoticePolicies', []).sort_by { |x| x['id'] }
   end
 
   def patron_groups
-    get_json('/groups', params: { limit: 2_147_483_647 }).fetch('usergroups', [])
+    get_json('/groups', params: { limit: 2_147_483_647 }).fetch('usergroups', []).sort_by { |x| x['id'] }
   end
 
   def material_types
-    get_json('/material-types', params: { limit: 2_147_483_647 }).fetch('mtypes', [])
+    get_json('/material-types', params: { limit: 2_147_483_647 }).fetch('mtypes', []).sort_by { |x| x['id'] }
   end
 
   def loan_types
-    get_json('/loan-types', params: { limit: 2_147_483_647 }).fetch('loantypes', [])
+    get_json('/loan-types', params: { limit: 2_147_483_647 }).fetch('loantypes', []).sort_by { |x| x['id'] }
   end
 
   def libraries
-    get_json('/location-units/libraries', params: { limit: 2_147_483_647 }).fetch('loclibs', [])
+    get_json('/location-units/libraries', params: { limit: 2_147_483_647 }).fetch('loclibs', []).sort_by { |x| x['id'] }
   end
 
   def locations
-    get_json('/locations', params: { limit: 2_147_483_647 }).fetch('locations', [])
+    get_json('/locations', params: { limit: 2_147_483_647 }).fetch('locations', []).sort_by { |x| x['id'] }
   end
 
   def campuses
-    get_json('/location-units/campuses', params: { limit: 2_147_483_647 }).fetch('loccamps', [])
+    get_json('/location-units/campuses', params: { limit: 2_147_483_647 }).fetch('loccamps', []).sort_by { |x| x['id'] }
   end
 
   def institutions
-    get_json('/location-units/institutions', params: { limit: 2_147_483_647 }).fetch('locinsts', [])
+    get_json('/location-units/institutions', params: { limit: 2_147_483_647 }).fetch('locinsts', []).sort_by { |x| x['id'] }
   end
 
   private

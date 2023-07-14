@@ -20,6 +20,124 @@
     ]
   },
   {
+    "id": "1fd0ccd5-0ac3-446f-a720-ceafcecf818c",
+    "name": "Short Term Notices",
+    "description": "Intended for things like equipment that check out for a day or so or less. Main differences between the default notice policy are: the courtesy due date reminder is ~1 hour before the due date, there is no overdue notice, the lost item-fee notice goes out as soon as the item ages to lost (which is dependent upon the lost-item policy applied in the circ rule but typically fairly soon after the item was due), and all notices are sent out as they happen, rather than being batched overnight.\n\n\n",
+    "active": true,
+    "metadata": {
+      "createdDate": "2023-02-09T01:06:14.463+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-14T16:06:29.178+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "loanNotices": [
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
+      },
+      {
+        "templateId": "9cfbbbd0-79ae-40c5-b8bf-b9bf358359e8",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Hours"
+          }
+        }
+      },
+      {
+        "templateId": "0fd754ff-6b16-4bff-b7b2-a99ba945b114",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
+      },
+      {
+        "templateId": "9d046995-bf32-4ada-b097-d7af1b7155c9",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Aged to lost"
+        }
+      },
+      {
+        "templateId": "3b32c65d-82f4-4a08-9856-a332e41f2f7d",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Weeks"
+          }
+        }
+      },
+      {
+        "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Item recalled"
+        }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "2ece07e2-5d68-4e6e-90b1-3ea183bf7f1d",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      }
+    ],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      },
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Hold expiration",
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Days"
+          }
+        }
+      },
+      {
+        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Request cancellation"
+        }
+      }
+    ]
+  },
+  {
     "id": "9d9ab9b0-2b9b-40d6-b122-49c4bdd71736",
     "name": "Course reserves ",
     "description": "Notices used for course reserves loans",
@@ -208,124 +326,6 @@
           "sendWhen": "Hold expiration",
           "sendBy": {
             "duration": 3,
-            "intervalId": "Days"
-          }
-        }
-      },
-      {
-        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Request cancellation"
-        }
-      }
-    ]
-  },
-  {
-    "id": "1fd0ccd5-0ac3-446f-a720-ceafcecf818c",
-    "name": "Short Term Notices",
-    "description": "Intended for things like equipment that check out for a day or so or less. Main differences between the default notice policy are: the courtesy due date reminder is ~1 hour before the due date, there is no overdue notice, the lost item-fee notice goes out as soon as the item ages to lost (which is dependent upon the lost-item policy applied in the circ rule but typically fairly soon after the item was due), and all notices are sent out as they happen, rather than being batched overnight.\n\n\n",
-    "active": true,
-    "metadata": {
-      "createdDate": "2023-02-09T01:06:14.463+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T16:06:29.178+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "loanNotices": [
-      {
-        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Check in"
-        }
-      },
-      {
-        "templateId": "9cfbbbd0-79ae-40c5-b8bf-b9bf358359e8",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "Before",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Hours"
-          }
-        }
-      },
-      {
-        "templateId": "0fd754ff-6b16-4bff-b7b2-a99ba945b114",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Check out"
-        }
-      },
-      {
-        "templateId": "9d046995-bf32-4ada-b097-d7af1b7155c9",
-        "format": "Email",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "Upon At",
-          "sendWhen": "Aged to lost"
-        }
-      },
-      {
-        "templateId": "3b32c65d-82f4-4a08-9856-a332e41f2f7d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Weeks"
-          }
-        }
-      },
-      {
-        "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Item recalled"
-        }
-      }
-    ],
-    "feeFineNotices": [
-      {
-        "templateId": "2ece07e2-5d68-4e6e-90b1-3ea183bf7f1d",
-        "format": "Email",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "Upon At",
-          "sendWhen": "Overdue fine returned"
-        }
-      }
-    ],
-    "requestNotices": [
-      {
-        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Available"
-        }
-      },
-      {
-        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "Before",
-          "sendWhen": "Hold expiration",
-          "sendBy": {
-            "duration": 2,
             "intervalId": "Days"
           }
         }
