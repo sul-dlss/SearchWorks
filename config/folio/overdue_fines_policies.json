@@ -34,23 +34,19 @@
     "id": "85d33314-0cac-430a-be9e-ddd25e681322"
   },
   {
-    "name": "1.50/10.50 overdue fine",
-    "overdueFine": {
-      "quantity": 1.5,
-      "intervalId": "day"
-    },
-    "countClosed": false,
-    "maxOverdueFine": 10.5,
-    "forgiveOverdueFine": false,
+    "name": "No fines",
+    "countClosed": true,
+    "maxOverdueFine": 0.0,
+    "forgiveOverdueFine": true,
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 0.0,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:11.167+00:00",
+      "createdDate": "2023-02-09T01:06:07.966+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T01:06:11.167+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-07-06T22:47:26.580+00:00",
+      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
     },
-    "id": "814ffb76-82d0-49a6-8391-d801b7b34541"
+    "id": "bba172e9-eb78-4471-a4a7-08761fbdfff9"
   },
   {
     "name": "1.00/30.00 hourly fine",
@@ -67,28 +63,32 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:13.566+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-06T22:47:05.217+00:00",
-      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
+      "updatedDate": "2023-07-14T21:49:29.149+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "24f7511f-ed1a-4710-bae3-36d29f00988d"
   },
   {
-    "name": "No fines",
-    "countClosed": true,
-    "maxOverdueFine": 0.0,
-    "forgiveOverdueFine": true,
+    "name": "1.50/10.50 overdue fine (do not use;for deletion) ",
+    "overdueFine": {
+      "quantity": 1.5,
+      "intervalId": "day"
+    },
+    "countClosed": false,
+    "maxOverdueFine": 10.5,
+    "forgiveOverdueFine": false,
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 0.0,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:07.966+00:00",
+      "createdDate": "2023-02-09T01:06:11.167+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-06T22:47:26.580+00:00",
-      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
+      "updatedDate": "2023-07-14T21:49:38.466+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
-    "id": "bba172e9-eb78-4471-a4a7-08761fbdfff9"
+    "id": "814ffb76-82d0-49a6-8391-d801b7b34541"
   },
   {
-    "name": "No fines SUL",
+    "name": "No fines SUL (do not use;for deletion)",
     "description": "charged when item has aged ot lost",
     "countClosed": true,
     "maxOverdueFine": 0.0,
@@ -98,8 +98,8 @@
     "metadata": {
       "createdDate": "2023-02-09T01:06:12.367+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-06T22:48:38.269+00:00",
-      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
+      "updatedDate": "2023-07-14T21:49:53.317+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "c39fa210-ed40-48f4-bde5-82177b95bfb9"
   }

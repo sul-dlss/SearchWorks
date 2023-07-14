@@ -796,7 +796,7 @@
   {
     "name": "$250 lost fee",
     "itemAgedLostOverdue": {
-      "duration": 14,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -834,7 +834,7 @@
     "metadata": {
       "createdDate": "2023-02-09T01:05:38.070+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-07T00:16:19.056+00:00",
+      "updatedDate": "2023-07-14T21:08:23.103+00:00",
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "76a76e01-fc47-4a3b-9b32-cdcae78be003"
@@ -1067,53 +1067,6 @@
     "id": "df2237da-7a20-4e22-aba6-4d88ac2ee281"
   },
   {
-    "name": "$150 short-term lost fee",
-    "description": "Lost fee policy for short-term loans e.g., Eng equipment, EAL microform.",
-    "itemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "recalledItemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterRecalledItemAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 150.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "feesFinesShallRefunded": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
-    "metadata": {
-      "createdDate": "2023-02-09T01:05:32.967+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-07T00:14:51.161+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
-  },
-  {
     "name": "$230 reserves lost fee",
     "description": "Lost fee policy for course reserves for SUL & Business",
     "itemAgedLostOverdue": {
@@ -1159,6 +1112,53 @@
       "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     },
     "id": "5e4ee2a3-237d-40e2-bf2e-497963dda0ec"
+  },
+  {
+    "name": "$150 short-term lost fee (do not use;for deletion)",
+    "description": "Lost fee policy for short-term loans e.g., Eng equipment, EAL microform.",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 150.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 12,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2023-02-09T01:05:32.967+00:00",
+      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
+      "updatedDate": "2023-07-14T21:50:50.928+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
   },
   {
     "name": "$200 lost fee equipment",
