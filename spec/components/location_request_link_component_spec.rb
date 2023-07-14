@@ -282,5 +282,36 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         it { expect(page).to have_no_link }
       end
     end
+
+    context 'with a non circulating item' do
+      let(:loan_type) { Folio::Item::LoanType.new(id: '52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd', name: 'Non-circulating') }
+
+      let(:effective_location) {
+        Folio::Location.from_dynamic(
+          {
+            'id' => '271f84ab-47aa-40cc-b8a1-18a992bb6b88',
+            'code' => 'SPEC-RARE-BOOKS',
+            'name' => 'Special Collections Rare Books Collection',
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+              'code' => 'GREEN',
+              'name' => 'Cecil H. Green'
+            }
+          }
+        )
+      }
+
+      it { expect(page).to have_no_link }
+    end
   end
 end
