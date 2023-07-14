@@ -43,7 +43,7 @@ class FolioClient
   end
 
   def circulation_rules
-    get_json('/circulation-rules-storage')
+    get_json('/circulation-rules-storage').fetch('rulesAsText', '')
   end
 
   def request_policies

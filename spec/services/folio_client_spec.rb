@@ -49,7 +49,7 @@ RSpec.describe FolioClient do
     end
 
     it 'returns the circulation rules' do
-      expect(client.circulation_rules).to have_key('rulesAsText')
+      expect(client.circulation_rules).to eq 'circulation rules'
     end
   end
 

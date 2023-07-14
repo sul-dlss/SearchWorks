@@ -21,10 +21,13 @@ module Folio
 
         File.write(file, JSON.pretty_generate(folio_client.public_send(type)))
       end
+
+      File.write(cache_dir.join('circulation_rules.txt'), folio_client.circulation_rules)
     end
 
     def circulation_rules
-      get_type('circulation_rules').fetch('rulesAsText', '')
+      file = cache_dir.join("circulation_rules.txt")
+      file.read if file.exist?
     end
 
     def policies
@@ -79,8 +82,7 @@ module Folio
         'institutions',
         'campuses',
         'libraries',
-        'locations',
-        'circulation_rules'
+        'locations'
       ]
     end
   end
