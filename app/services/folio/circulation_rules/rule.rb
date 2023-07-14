@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'csv'
+
 module Folio
   module CirculationRules
     # A circulation rule that applies a policy when its criteria are met
@@ -31,26 +33,54 @@ module Folio
         "#{to_criteria_debug_s}\n#{to_policy_debug_s}\n(line #{line})"
       end
 
+      def to_csv
+        CSV.generate_line [
+          criteria_name('group'),
+          criteria_name('material-type'),
+          criteria_name('loan-type'),
+          criteria_name('location-institution'),
+          criteria_name('location-campus'),
+          criteria_name('location-library'),
+          criteria_name('location-location'),
+          policy_name('loan'),
+          policy_name('request'),
+          policy_name('notice'),
+          policy_name('overdue'),
+          policy_name('lost-item'),
+          line,
+          priority
+        ]
+      end
+
       private
 
       def to_criteria_debug_s
-        criteria.map do |k, v|
-          type_map = self.class.type_debug_string[k] || ->(uuid) { uuid }
-
-          debug_value = case v
-                        when '*'
-                          'any'
-                        when Hash
-                          v[:or].map { |uuid| type_map.call(uuid) }.join(' or ')
-                        else
-                          type_map.call(v)
-                        end
-          "#{k}: #{debug_value}"
+        criteria.map do |k, _v|
+          "#{k}: #{criteria_name(k)}"
         end.join("\n")
       end
 
       def to_policy_debug_s
-        policy.map { |k, v| "=> #{k}: #{Folio::Types.policies.dig(k.to_sym, v, 'name')&.strip || v}" }.join("\n")
+        policy.map { |k, _v| "=> #{k}: #{policy_name(k)}" }.join("\n")
+      end
+
+      def criteria_name(key)
+        value = criteria[key]
+
+        type_map = self.class.type_debug_string[key] || ->(uuid) { uuid }
+
+        case value
+        when '*'
+          'any'
+        when Hash
+          value[:or].map { |uuid| type_map.call(uuid) }.join(' or ')
+        else
+          type_map.call(value)
+        end
+      end
+
+      def policy_name(key)
+        Folio::Types.policies.dig(key.to_sym, policy[key], 'name')&.strip || policy[key]
       end
     end
   end

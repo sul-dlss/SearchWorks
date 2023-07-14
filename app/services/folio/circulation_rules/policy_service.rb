@@ -4,8 +4,8 @@ module Folio
   module CirculationRules
     class PolicyService
       # Load the circulation rules file and parse it into a set of ordered rules
-      def self.rules
-        rules = Folio::CirculationRules::Transform.new.apply(Folio::CirculationRules::Parser.new.parse(Folio::Types.circulation_rules))
+      def self.rules(rules_as_text = Folio::Types.circulation_rules)
+        rules = Folio::CirculationRules::Transform.new.apply(Folio::CirculationRules::Parser.new.parse(rules_as_text))
         prioritized_rules = rules.map.with_index do |rule, index|
           rule.priority = index
           rule
