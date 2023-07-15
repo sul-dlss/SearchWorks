@@ -99,7 +99,7 @@ module Folio
           s
         end
 
-        statements = statements.reject { |s| s[:policy].nil? } + [Rule.new(DEFAULT_CRITERIA, h[:fallback], 0, 0)]
+        statements = statements.reject { |s| s[:policy].nil? } + [Rule.new(DEFAULT_CRITERIA, h.fetch(:fallback, {}), 0, 0)]
 
         statements
       end

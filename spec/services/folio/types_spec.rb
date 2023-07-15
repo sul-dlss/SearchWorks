@@ -25,6 +25,7 @@ RSpec.describe Folio::Types do
     let(:folio_client) do
       instance_double(
         FolioClient,
+        circulation_rules:,
         **fake_data
       )
     end
@@ -41,9 +42,11 @@ RSpec.describe Folio::Types do
         libraries: ['libraries'],
         campuses: ['campuses'],
         institutions: ['institutions'],
-        loan_types: ['loan_types'],
-        circulation_rules: { 'rulesAsText' => 'circulation_rules' }
+        loan_types: ['loan_types']
       }
+    end
+    let(:circulation_rules) do
+      "priority: number-of-criteria, criterium (t,s, c, b, a, g, m), last-line\n"
     end
 
     after { FileUtils.remove_entry(tmpdir) }
@@ -54,6 +57,12 @@ RSpec.describe Folio::Types do
       fake_data.each do |k, v|
         expect(instance.get_type(k.to_s)).to eq v
       end
+    end
+
+    it 'writes the circulation rules to a file' do
+      instance.sync!
+
+      expect(instance.circulation_rules).to eq circulation_rules
     end
   end
 end

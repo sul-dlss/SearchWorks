@@ -16,15 +16,23 @@ module Folio
     end
 
     def sync!
+      @policies = nil
+      @criteria = nil
+
       types_of_interest.each do |type|
         file = cache_dir.join("#{type}.json")
 
         File.write(file, JSON.pretty_generate(folio_client.public_send(type)))
       end
+
+      circulation_rules = folio_client.circulation_rules
+      File.write(cache_dir.join('circulation_rules.txt'), circulation_rules)
+      File.write(cache_dir.join('circulation_rules.csv'), Folio::CirculationRules::PolicyService.rules(circulation_rules).map(&:to_csv).join)
     end
 
     def circulation_rules
-      get_type('circulation_rules').fetch('rulesAsText', '')
+      file = cache_dir.join("circulation_rules.txt")
+      file.read if file.exist?
     end
 
     def policies
@@ -79,8 +87,7 @@ module Folio
         'institutions',
         'campuses',
         'libraries',
-        'locations',
-        'circulation_rules'
+        'locations'
       ]
     end
   end
