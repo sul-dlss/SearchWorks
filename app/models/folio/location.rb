@@ -21,9 +21,9 @@ module Folio
     end
 
     def self.from_dynamic(json)
-      new(institution: Institution.new(**json.fetch('institution')),
-          campus: Campus.new(**json.fetch('campus')),
-          library: Library.new(**json.fetch('library')),
+      new(institution: Institution.new(**json.fetch('institution').slice('id', 'code', 'name')),
+          campus: Campus.new(**json.fetch('campus').slice('id', 'code', 'name')),
+          library: Library.new(**json.fetch('library').slice('id', 'code', 'name')),
           location: Location.new(id: json.fetch('id'),
                                  code: json.fetch('code'),
                                  name: json.fetch('name')))

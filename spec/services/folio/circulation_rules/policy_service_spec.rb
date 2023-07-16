@@ -5,6 +5,25 @@ RSpec.describe Folio::CirculationRules::PolicyService do
     it 'is parseable' do
       expect { described_class.rules }.not_to raise_error
     end
+
+    context 'with a SAL3 book' do
+      let(:item) { instance_double(Holdings::Item, material_type:, loan_type:, effective_location:) }
+      let(:material_type) { Folio::Item::MaterialType.new(Folio::Types.instance.get_type('material_types').find { |t| t['name'] == 'book' }.slice('id', 'name')) }
+      let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Can circulate' }.slice('id', 'name')) }
+      let(:effective_location) {
+        Folio::Location.from_dynamic(
+          (Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-STACKS' }).merge(
+            'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
+            'campus' => Folio::Types.instance.get_type('campuses').find { |t| t['code'] == 'SUL' },
+            'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'SAL3' }
+          )
+        )
+      }
+
+      it 'is pageable' do
+        expect(described_class.instance.item_request_policy(item)['requestTypes']).to include 'Page'
+      end
+    end
   end
 
   describe '#item_rule' do
