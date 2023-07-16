@@ -10,13 +10,13 @@ module Folio
 
       def self.type_debug_string
         {
-          'group' => ->(v) { Folio::Types.criteria['group']&.dig(v, 'group') || v },
-          'material-type' => ->(v) { Folio::Types.criteria['material-type']&.dig(v, 'name') || v },
-          'loan-type' => ->(v) { Folio::Types.criteria['loan-type']&.dig(v, 'name') || v },
-          'location-institution' => ->(v) { Folio::Types.criteria['location-institution']&.dig(v, 'code') || v },
-          'location-campus' => ->(v) { Folio::Types.criteria['location-campus']&.dig(v, 'code') || v },
-          'location-library' => ->(v) { Folio::Types.criteria['location-library']&.dig(v, 'code') || v },
-          'location-location' => ->(v) { Folio::Types.criteria['location-location']&.dig(v, 'code') || v }
+          'group' => ->(v) { Folio::Types.criteria['group']&.dig(v, 'group') },
+          'material-type' => ->(v) { Folio::Types.criteria['material-type']&.dig(v, 'name') },
+          'loan-type' => ->(v) { Folio::Types.criteria['loan-type']&.dig(v, 'name') },
+          'location-institution' => ->(v) { Folio::Types.criteria['location-institution']&.dig(v, 'code') },
+          'location-campus' => ->(v) { Folio::Types.criteria['location-campus']&.dig(v, 'code') },
+          'location-library' => ->(v) { Folio::Types.criteria['location-library']&.dig(v, 'code') },
+          'location-location' => ->(v) { Folio::Types.criteria['location-location']&.dig(v, 'code') }
         }
       end
 
@@ -27,7 +27,16 @@ module Folio
 
       # e.g.
       # ```
-      # group: faculty & material-type: periodical & loan-type: any & location-institution: any & location-campus: any & location-library: SAL & location-location: any => loan: 14day-1renew-1daygrace, request: Allow All, notice: Short-term loans, overdue: No fines policy, lost-item: $100 lost fee policy (line 257)
+      # group: faculty
+      # material-type: any
+      # loan-type: 4-hour reserve
+      # location-campus: SUL
+      # => loan: 4hour-norenew-15mingrace
+      # => request: No requests allowed
+      # => notice: Course reserves
+      # => overdue: No fines
+      # => lost-item: $230 reserves lost fee
+      # (line 334)
       # ```
       def to_debug_s
         "#{to_criteria_debug_s}\n#{to_policy_debug_s}\n(line #{line})"
@@ -55,7 +64,7 @@ module Folio
       private
 
       def to_criteria_debug_s
-        criteria.map do |k, _v|
+        criteria.compact.map do |k, _v|
           "#{k}: #{criteria_name(k)}"
         end.join("\n")
       end
@@ -70,12 +79,10 @@ module Folio
         type_map = self.class.type_debug_string[key] || ->(uuid) { uuid }
 
         case value
-        when '*'
-          'any'
         when Hash
-          value[:or].map { |uuid| type_map.call(uuid) }.join(' or ')
+          value[:or].map { |uuid| type_map.call(uuid) || uuid }.join(' or ')
         else
-          type_map.call(value)
+          type_map.call(value) || value
         end
       end
 

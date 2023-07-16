@@ -13,7 +13,7 @@ module Folio
 
         prioritized_rules.select do |rule|
           # filter out rules that don't apply to standard patron groups
-          rule.criteria['group'] == '*' || rule.criteria.dig('group', :or)&.intersect?(standard_patron_group_uuids)
+          rule.criteria['group'].nil? || rule.criteria['group'] == 'any' || rule.criteria.dig('group', :or)&.intersect?(standard_patron_group_uuids)
         end
       end
 
