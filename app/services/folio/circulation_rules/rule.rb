@@ -33,8 +33,10 @@ module Folio
         "#{to_criteria_debug_s}\n#{to_policy_debug_s}\n(line #{line})"
       end
 
-      def to_csv
-        CSV.generate_line [
+      # @param include_line_metadata [Boolean] Include the line number and priority in the CSV output; it's necessary to omit line metadata
+      #                              when comparing two sets of rules, but it's helpful to include it when debugging within a single set of rules
+      def to_csv(include_line_metadata: false)
+        CSV.generate_line([
           criteria_name('group'),
           criteria_name('material-type'),
           criteria_name('loan-type'),
@@ -46,10 +48,8 @@ module Folio
           policy_name('request'),
           policy_name('notice'),
           policy_name('overdue'),
-          policy_name('lost-item'),
-          line,
-          priority
-        ]
+          policy_name('lost-item')
+        ] + (include_line_metadata ? [line, priority] : []))
       end
 
       private
