@@ -862,7 +862,15 @@ module Constants
                       'TECH-PROC',
                       'TECH-SER',
                       'TECH-SERV',
-                      'TEMP-LL']
+                      'TEMP-LL',
+                      'TS-CC-REPAIR',
+                      'TS-CC-BINDERYPREP',
+                      'TS-CC-BOOKJACKET',
+                      'TS-CC-KASEMAKE',
+                      'TS-COLLECTIONCARE',
+                      'TS-CC-SPECIALPROJECTS',
+                      'TS-CONSERVATION',
+                      'TS-PROCESSING']
 
   FORCE_AVAILABLE_CURRENT_LOCS = [
     'ART-AT-ENG',
