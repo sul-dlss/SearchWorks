@@ -25,11 +25,11 @@ module Folio
       }.freeze
 
       INVERTED_CRITERIA_TYPES = CRITERIA_TYPES.invert
-      DEFAULT_CRITERIA = INVERTED_CRITERIA_TYPES.transform_values { |_v| '*' }
+      DEFAULT_CRITERIA = INVERTED_CRITERIA_TYPES.transform_values { |_v| nil }
 
       rule(uuid: simple(:uuid)) { uuid.to_s }
       rule(type: simple(:type), uuid: simple(:uuid)) { { type: type.to_s, uuid: uuid.to_s } }
-      rule(any: simple(:any)) { '*' }
+      rule(any: simple(:any)) { 'any' }
       rule(letter: simple(:letter), criterium_value: subtree(:criterium_value)) do
         { letter: letter.to_s, line: letter.line_and_column.first, value: criterium_value }
       end

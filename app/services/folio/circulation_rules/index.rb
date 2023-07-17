@@ -50,7 +50,7 @@ module Folio
                    end
 
           # Always treat 'group' criterium (ignored) and the wildcard as matching
-          criterium == 'group' || values == ['*'] || values.any?(search_criteria[criterium])
+          criterium == 'group' || values == ['any'] || values.nil? || values.any?(search_criteria[criterium])
         end
       end
     end
