@@ -422,7 +422,6 @@ consensus.nih.gov
 content.iospress.com
 content.nejm.org
 content.sciendo.com
-content.wisconsinhistory.org
 contraceptionmedicine.biomedcentral.com
 coughjournal.biomedcentral.com
 courses.ucsf.edu
@@ -556,7 +555,6 @@ ebrary.ifpri.org
 ec.asm.org
 ec.bioscientifica.com
 ecancer.org
-echo.mpiwg-berlin.mpg.de
 ecommercedb.com
 econgeol.geoscienceworld.org
 econtent.hogrefe.com
@@ -841,7 +839,6 @@ investigativegenetics.biomedcentral.com
 iopscience.iop.org
 iovs.arvojournals.org
 ir.lib.hiroshima-u.ac.jp
-ir.uiowa.edu
 iris.paho.org
 irishvetjournal.biomedcentral.com
 irjnm.tums.ac.ir
@@ -1623,7 +1620,6 @@ worldtradelaw.net
 worldwidescience.org
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
-www-jstor-org.stanford.idm.oclc.org
 www-oecd-ilibrary-org.stanford.idm.oclc.org
 www-pub.iaea.org
 www-rkma-com.stanford.idm.oclc.org
@@ -1931,7 +1927,6 @@ www.consumerlab.com
 www.contempclindent.org
 www.cos-sco.ca
 www.countrywatch.com
-www.coursera.org
 www.cpn.or.kr
 www.crcnetbase.com
 www.crd.york.ac.uk
@@ -2350,6 +2345,7 @@ www.jehp.net
 www.jenb.or.kr
 www.jeo-esska.com
 www.jepm.seahq.net
+www.jewishlife.amdigital.co.uk
 www.jfcmonline.com
 www.jfda-online.com
 www.jfds.org
@@ -2623,7 +2619,6 @@ www.newday.com
 www.newmicrobiologica.org
 www.newnonmun.com
 www.newswise.com
-www.newyorker.com
 www.nexisuni.com
 www.nextbio.com
 www.nice.org.uk
@@ -2980,7 +2975,6 @@ www.undercurrentnews.com
 www.uni-mannheim.de
 www.unicef.org
 www.unodc.org
-www.unz.org
 www.uptodate.com
 www.urologyannals.com
 www.urologyjournal.org
@@ -3035,7 +3029,6 @@ www.wvsma.com
 www.yale.edu
 www.york.ac.uk
 www.yottalook.com
-www.youtube.com
 www.zeno.org
 www.zentralblatt-math.org
 www.zentralblattmath.org
