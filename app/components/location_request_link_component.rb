@@ -140,8 +140,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def folio_aeon_pageable?
     return false unless folio_items? && folio_locations.any?
 
-    aeon_pageable_libraries = Folio::Types.libraries.select { |_k, v| v['code'] == 'SPEC-COLL' }.keys
-    folio_locations.all? { |location| location.dig('details', 'pageAeonSite') || aeon_pageable_libraries.include?(location['libraryId']) }
+    folio_locations.all? { |location| location.dig('details', 'pageAeonSite') }
   end
 
   # there probably is only one FOLIO location
