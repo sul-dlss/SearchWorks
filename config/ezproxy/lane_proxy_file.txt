@@ -305,7 +305,6 @@ burnstrauma.biomedcentral.com
 bvajournals.onlinelibrary.wiley.com
 bvbm2.bib-bvb.de
 bvbr.bib-bvb.de
-bvpb.mcu.es
 bz.nlcpress.com
 cadal.edu.cn
 cajgh.pitt.edu
@@ -350,8 +349,6 @@ ccdm.aphapublications.org
 ccforum.biomedcentral.com
 ccinfoweb.ccohs.ca
 ccj.springeropen.com
-cdm17279.contentdm.oclc.org
-cdnc.ucr.edu
 cdnsciencepub.com
 ceb.nlm.nih.gov
 cebp.aacrjournals.org
@@ -481,7 +478,6 @@ digital.staatsbibliothek-berlin.de
 digitalassets.lib.berkeley.edu
 digitalcampus-swankmp-net.stanford.idm.oclc.org
 digitalcommons.pepperdine.edu
-digitalcommons.unl.edu
 digitalcommons.usu.edu
 digitale.bibliothek.uni-halle.de
 digitallibrary.amnh.org
@@ -699,7 +695,6 @@ gutpathogens.biomedcentral.com
 gvt-journal.biomedcentral.com
 gynoncrp.biomedcentral.com
 hanchi.ihp.sinica.edu.tw
-hardenberg.jalb.de
 harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
 hbcponline.com
@@ -1034,7 +1029,6 @@ link.overdrive.com
 link.spie.org
 link.springer.com
 link.springer.com.
-links.jstor.org
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
@@ -1131,6 +1125,7 @@ mrmjournal.biomedcentral.com
 mrmjournal.org
 msp.org
 msystems.asm.org
+multiplevoicesjournal.org
 muse-jhu-edu.stanford.idm.oclc.org
 muse.jhu.edu
 musicid.academicrightspress.com
@@ -1246,7 +1241,6 @@ oxfordreference.com
 p.udpweb.com
 pa-rotations.lwwhealthlibrary.com
 pao.chadwyck.com
-papers.ssrn.com
 parasite-journal.org
 parasitesandvectors.biomedcentral.com
 particleandfibretoxicology.biomedcentral.com
@@ -1386,7 +1380,6 @@ resource.nlm.nih.gov
 respiratory-research.biomedcentral.com
 retractiondatabase.org
 retrovirology.biomedcentral.com
-revistas-filologicas.unam.mx
 revistas.unc.edu.ar
 revistas.usb.edu.co
 rgd.mcw.edu
@@ -1574,6 +1567,7 @@ ugeskriftet.dk
 ulrichsweb.serialssolutions.com
 unstats.un.org
 upload.wikimedia.org
+us.artechhouse.com
 us.expasy.org
 usp.az1.qualtrics.com
 uswest.ensembl.org
@@ -1588,7 +1582,6 @@ visualiseur.bnf.fr
 voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
-wayback.archive-it.org
 web.archive.org
 web.mit.edu
 web.ornl.gov
