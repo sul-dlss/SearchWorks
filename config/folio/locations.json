@@ -199,6 +199,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -209,8 +212,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.826+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.826+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:03:38.581+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -550,6 +553,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -560,8 +566,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.899+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.899+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:50.053+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -573,6 +579,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -583,8 +592,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.196+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.196+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:18.767+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -855,6 +864,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -866,8 +876,8 @@
     "metadata": {
       "createdDate": "2023-06-30T02:21:33.012+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-06-30T02:21:33.012+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-07-17T14:05:08.620+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -925,6 +935,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -935,8 +948,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.447+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.447+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:04:47.409+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -1194,6 +1207,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -1204,8 +1220,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.574+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.574+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:04:56.159+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -1263,6 +1279,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -1273,8 +1292,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.697+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.697+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:06:47.026+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -1903,6 +1922,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -1914,8 +1934,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.577+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-06-05T18:36:41.768+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-07-17T14:06:39.987+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -1997,6 +2017,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -2008,8 +2029,8 @@
     "metadata": {
       "createdDate": "2023-06-21T17:06:24.028+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-06-21T17:06:24.028+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-07-17T14:03:14.226+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -2408,6 +2429,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -2418,8 +2442,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.700+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.700+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:16.975+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -2575,6 +2599,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -2585,8 +2612,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.649+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.649+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:40.152+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -2915,6 +2942,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -2926,8 +2954,8 @@
     "metadata": {
       "createdDate": "2023-06-21T17:04:30.623+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-06-21T17:04:30.623+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-07-17T14:02:51.248+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -3991,6 +4019,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -4001,8 +4032,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.332+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.332+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:02:05.268+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -4413,6 +4444,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -4423,8 +4457,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.529+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.529+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:32.687+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -5056,6 +5090,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -5066,8 +5103,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.771+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.771+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:57.021+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -5994,6 +6031,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -6004,8 +6044,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.837+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.837+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:24.230+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -6067,6 +6107,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -6077,8 +6120,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.212+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.212+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:48.062+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -6277,6 +6320,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -6287,8 +6333,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.449+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.449+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:02:15.495+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -6351,6 +6397,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -6361,8 +6410,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.831+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.831+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:06:55.948+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -6810,6 +6859,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -6820,8 +6872,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.955+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.955+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:03:49.799+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -7252,6 +7304,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -7262,8 +7317,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.453+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.453+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:06:32.479+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -7417,6 +7472,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -7427,8 +7485,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.200+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.200+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:04:28.377+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -8113,6 +8171,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -8123,8 +8184,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.330+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.330+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:54.800+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -9447,6 +9508,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -9457,8 +9521,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.077+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.077+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:39.881+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -9871,6 +9935,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -9882,8 +9947,8 @@
     "metadata": {
       "createdDate": "2023-06-21T17:07:54.523+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-06-21T17:07:54.523+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-07-17T14:03:27.504+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -10152,6 +10217,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -10162,8 +10230,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.332+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.332+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:04:37.548+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -10949,6 +11017,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -10959,8 +11030,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:03.952+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:03.952+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:10.972+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -11236,6 +11307,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
+      "pageAeonSite": "SPECUA"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -11247,8 +11319,8 @@
     "metadata": {
       "createdDate": "2023-07-06T18:36:35.351+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-06T18:36:35.351+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-07-17T14:08:08.242+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -11668,6 +11740,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -11678,8 +11753,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.082+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.082+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:03.084+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -12049,6 +12124,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -12059,8 +12137,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.960+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.960+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:05:32.114+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -12215,6 +12293,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -12225,8 +12306,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:02.079+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:02.079+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:04:11.378+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -12238,6 +12319,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -12248,8 +12332,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.699+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.699+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:02:36.115+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -12357,6 +12441,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -12367,8 +12454,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:01.577+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:01.577+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:02:26.245+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   },
   {
@@ -12903,6 +12990,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
       "0e924af7-785c-46eb-a5e2-060394822016"
@@ -12913,8 +13003,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:38:04.401+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:38:04.401+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-17T14:07:25.545+00:00",
+      "updatedByUserId": "247692eb-ab71-417f-8982-1899fb328f4c"
     }
   }
 ]
