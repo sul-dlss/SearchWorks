@@ -1,14 +1,15 @@
 module Folio
   class Item
-    attr_reader :id, :barcode, :material_type, :effective_location
+    attr_reader :id, :status, :barcode, :material_type, :effective_location
 
     MaterialType = Struct.new(:id, :name, keyword_init: true)
     LoanType = Struct.new(:id, :name, keyword_init: true)
 
     # rubocop:disable Metrics/ParameterLists
-    def initialize(id:, barcode:, material_type:, permanent_loan_type:, effective_location:, temporary_loan_type: nil)
+    def initialize(id:, status:, barcode:, material_type:, permanent_loan_type:, effective_location:, temporary_loan_type: nil)
       @id = id
       @barcode = barcode
+      @status = status
       @material_type = material_type
       @permanent_loan_type = permanent_loan_type
       @effective_location = effective_location
@@ -18,6 +19,7 @@ module Folio
 
     def self.from_dynamic(json)
       new(id: json.fetch('id'),
+          status: json.fetch('status'),
           barcode: json['barcode'],
           material_type: json['materialTypeId'] && MaterialType.new(
             id: json.fetch('materialTypeId'),

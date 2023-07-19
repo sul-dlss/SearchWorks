@@ -1,4 +1,4 @@
-class LocationRequestLinkComponent < ViewComponent::Base
+class LocationRequestLinkComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
   attr_reader :document, :library, :location, :items, :link_params
 
   # @params [SolrDocument] document
@@ -128,7 +128,17 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def folio_pageable?
     return false unless folio_items?
 
-    folio_mediated_pageable? || folio_aeon_pageable? || Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page')
+    !folio_disabled_status_location? &&
+      (folio_mediated_pageable? ||
+        folio_aeon_pageable? ||
+         Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page'))
+  end
+
+  # Special cases where we don't allow requests for special collections items in certain statuses
+  def folio_disabled_status_location?
+    return false unless library == 'SPEC-COLL'
+
+    items.all? { |item| [Constants::FolioStatus::MISSING, Constants::FolioStatus::IN_PROCESS].include?(item.folio_status) }
   end
 
   def folio_mediated_pageable?

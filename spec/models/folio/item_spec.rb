@@ -6,6 +6,7 @@ RSpec.describe Folio::Item do
   let(:json) {
     {
       'id' => '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
+      'status' => 'Available',
       'barcode' => '36105232609557',
       'location' => {
         'effectiveLocation' => {

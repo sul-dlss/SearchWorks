@@ -224,7 +224,8 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     let(:material_type) { Folio::Item::MaterialType.new(id: '1a54b431-2e4f-452d-9cae-9cee66c9a892', name: 'book') }
     let(:loan_type) { Folio::Item::LoanType.new(id: '2b94c631-fca9-4892-a730-03ee529ffe27', name: 'Can circulate') }
-    let(:items) { [instance_double(Holdings::Item, folio_item?: true, effective_location:, material_type:, loan_type:)] }
+    let(:items) { [instance_double(Holdings::Item, folio_item?: true, effective_location:, material_type:, loan_type:, folio_status:)] }
+    let(:folio_status) { 'Available' }
 
     context 'in a pageable location' do
       let(:effective_location) do
@@ -388,6 +389,46 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       end
 
       it { expect(page).not_to have_link 'Request' }
+    end
+
+    context 'with special collection item' do
+      let(:library) { 'SPEC-COLL' }
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            'id' => '271f84ab-47aa-40cc-b8a1-18a992bb6b88',
+            'code' => 'SPEC-RARE-BOOKS',
+            'name' => 'Special Collections Rare Books Collection',
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+              'code' => 'GREEN',
+              'name' => 'Cecil H. Green'
+            }
+          }
+        )
+      end
+
+      context 'with "Missing" status' do
+        let(:folio_status) { 'Missing' }
+
+        it { expect(page).not_to have_link }
+      end
+
+      context 'with "In process" status' do
+        let(:folio_status) { 'In process' }
+
+        it { expect(page).not_to have_link }
+      end
     end
   end
 end
