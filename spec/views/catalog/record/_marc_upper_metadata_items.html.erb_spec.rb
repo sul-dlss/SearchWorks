@@ -95,16 +95,17 @@ describe "catalog/record/_marc_upper_metadata_items" do
     end
   end
 
-  describe 'MARC 795' do
+  describe 'Linked collection titles' do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_795_fixture))
+      assign(:document, SolrDocument.new(marcxml: metadata1,
+                                         collection_struct: [{ 'title' => 'Bruce & Rachel Jeffer Collection of WPA/Federal Writers Project and related New Deal material',
+                                                               'source' => 'sirsi' }]))
       render
     end
 
     it 'should render the collection titles as links' do
       expect(rendered).to have_css('dt', text: 'Collection')
-      expect(rendered).to have_css('dd a', text: 'Shao shu min zu she hui li shi diao cha')
-      expect(rendered).to have_css('dd a', text: '少数民族社会历史调查')
+      expect(rendered).to have_css('dd', text: 'Bruce & Rachel Jeffer Collection of WPA/Federal Writers Project and related New Deal material')
     end
   end
 end

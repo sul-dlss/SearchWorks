@@ -219,8 +219,6 @@ en:
         label: "Taxonomy"
       790:
         label: "Local subject"
-      795:
-        label: "Collection"
       796:
         label: "Contributor"
       797:
@@ -229,6 +227,8 @@ en:
         label: "Contributor"
       799:
         label: "Related work"
+      linked_collection:
+        label: "Collection"
       included_works:
         label: Included work
       imprint:

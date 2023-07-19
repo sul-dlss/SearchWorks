@@ -1,6 +1,8 @@
 <% if linked_collection.values.present? %>
   <dt><%= linked_collection.label %></dt>
   <% linked_collection.values.each do |value| %>
-    <dd><%= link_to(value.strip, search_catalog_path(search_field: :subject_terms, q: "\"#{value.strip}\"")) %></dd>
+    <dd>
+      <%= link_to(value, search_catalog_path(search_field: :subject_terms, q: "\"#{value}\"")) %>
+    </dd>
   <% end  %>
 <% end %>

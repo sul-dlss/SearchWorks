@@ -2,7 +2,13 @@ require 'spec_helper'
 
 describe LinkedCollection do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: marc_795_fixture) }
+  let(:document) do
+    SolrDocument.new(
+      { collection_struct: [{ 'title' => 'Shao shu min zu she hui li shi diao cha',
+                              'vernacular' => '少数民族社会历史调查',
+                              'source' => 'sirsi' }] }
+    )
+  end
 
   subject { described_class.new(document) }
 
