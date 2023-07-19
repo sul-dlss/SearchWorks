@@ -455,7 +455,6 @@ dcc.icgc.org
 dccc.chemnetbase.com
 dds.crl.edu
 deckerip.com
-deepblue.lib.umich.edu
 deepresearch.amplyfi.com
 deposit.d-nb.de
 deposit.ddb.de
@@ -470,9 +469,7 @@ dictybase.org
 digital-library.theiet.org
 digital.bib-bvb.de
 digital.casalini.it
-digital.library.upenn.edu
 digital.sandiego.edu
-digital.sciencehistory.org
 digital.slub-dresden.de
 digital.staatsbibliothek-berlin.de
 digitalassets.lib.berkeley.edu
@@ -547,7 +544,6 @@ ebooks.cap.org
 ebooks.geoscienceworld.org
 ebooks.iospress.nl
 ebooks.thieme.com
-ebrary.ifpri.org
 ec.asm.org
 ec.bioscientifica.com
 ecancer.org
@@ -671,7 +667,6 @@ geoscienceworld.org
 gh.bmj.com
 ghr.nlm.nih.gov
 ghrp.biomedcentral.com
-ginasthma.org
 global.oup.com
 globalheartjournal.com
 globalizationandhealth.biomedcentral.com
@@ -708,13 +703,11 @@ he02.tci-thaijo.org
 head-face-med.biomedcentral.com
 headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
-health.gov
 health.mil
 healtheducationresources.unesco.org
 healthmap.org
 healthpolicy.ucla.edu
 healthpsychologyresearch.openmedicalpublishing.org
-healthyamericans.org
 heart.bmj.com
 heartasia.bmj.com
 heartfailure.onlinejacc.org
@@ -1049,7 +1042,6 @@ math.missouri.edu
 mathscinet.ams.org
 mbio.asm.org
 mbrc.shirazu.ac.ir
-mchb.hrsa.gov
 mcpharmacol.com
 mcr.aacrjournals.org
 mct.aacrjournals.org
@@ -1126,7 +1118,6 @@ mrmjournal.org
 msp.org
 msystems.asm.org
 multiplevoicesjournal.org
-muse-jhu-edu.stanford.idm.oclc.org
 muse.jhu.edu
 musicid.academicrightspress.com
 n.neurology.org
@@ -1499,7 +1490,6 @@ stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
 statistical.proquest.com
-statusofwomendata.org
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
@@ -1695,7 +1685,6 @@ www.allthatstats.com
 www.altmetric.com
 www.am-explorer.com
 www.ama-assn.org
-www.amacad.org
 www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
 www.americanheart.org
@@ -2013,7 +2002,6 @@ www.edaddeplata.org
 www.educationforhealth.net
 www.educause.edu
 www.edweek.org
-www.effectivehealthcare.ahrq.gov
 www.eftf.org
 www.egms.de
 www.eighteenthcenturydrama.amdigital.co.uk
@@ -2448,7 +2436,6 @@ www.kanopy.com
 www.kardiologiapolska.pl
 www.karger.com
 www.keesings.com
-www.kff.org
 www.khanacademy.org
 www.kidney.org
 www.kjim.org
@@ -2810,7 +2797,6 @@ www.rrh.org.au
 www.rsc.org
 www.rsfjournal.org
 www.ruralneuropractice.com
-www.rwjf.org
 www.sage-hindawi.com
 www.samhsa.gov
 www.samj.org.za
@@ -2860,7 +2846,6 @@ www.sicot-j.org
 www.sid.ir
 www.signalsmag.com
 www.signavitae.com
-www.sil.si.edu
 www.sin-italy.org
 www.sjkdt.org
 www.sjmms.net
@@ -2943,7 +2928,6 @@ www.transpersonalstudies.org
 www.transrespmed.com
 www.travelwriting.amdigital.co.uk
 www.tropicalparasitology.org
-www.trwib.org
 www.tswj.com
 www.tuberktoraks.org
 www.turkarchotolaryngol.net
@@ -2994,7 +2978,6 @@ www.washingtonpost.com
 www.wdoms.org
 www.who.int
 www.whocancerpain.wisc.edu
-www.whonamedit.com
 www.wikidoc.org
 www.wiley.com
 www.winkingskull.com
