@@ -6,36 +6,61 @@ RSpec.describe LibraryWebsiteApiSearchService do
   subject(:service) { described_class.new }
 
   let(:response) do
-    JSON.dump({
-      results: [
-        {
-          title: 'Chinese art: Traditional',
-          url: 'https://library.stanford.edu/guides/chinese-art-traditional',
-          description: 'This guide...',
-          breadcrumbs: [
-            {
-              "label": "Home",
-              "url": "https://library.stanford.edu/"
-            },
-            {
-              "label": "Guides",
-              "url": "https://library.stanford.edu/guides"
+    JSON.dump(
+      {
+        "jsonapi": {
+          "version": "1.0",
+          "meta": {
+            "links": {
+              "self": {
+                "href": "http://jsonapi.org/format/1.0/"
+              }
             }
-          ]
-        }
-      ],
-      facets: {
-        name: 'format_facet',
-        items: [
-          {
-            value: 'blog',
-            label: 'Blog',
-            hits: 32,
-            term: ['type:blog']
           }
-        ]
+        },
+        "data": [
+          {
+            "type": "node--stanford_page",
+            "id": "0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0",
+            "links": {
+              "self": {
+                "href": "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0?resourceVersion=id%3A17206"
+              }
+            },
+            "attributes": {
+              "title": "Work with data",
+              "path": {
+                "alias": "/services/work-data",
+                "pid": 2086,
+                "langcode": "en"
+              },
+              "su_page_description": "First result description"
+            }
+          },
+          {
+            "type": "node--stanford_page",
+            "id": "e1117434-f6d7-448a-9d4a-80f7e4bc992a",
+            "links": {
+              "self": {
+                "href": "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/e1117434-f6d7-448a-9d4a-80f7e4bc992a?resourceVersion=id%3A18441"
+              }
+            },
+            "attributes": {
+              "title": "Promote your research",
+              "path": {
+                "alias": "/services/promote-your-research",
+                "pid": 2351,
+                "langcode": "en"
+              },
+              "su_page_description": "this is a page that describes how Stanford Libraries can help students and scholars to promote their research"
+            }
+          }
+        ],
+        "meta": {
+          "count": 207
+        }
       }
-    })
+    )
   end
   let(:query) { LibraryWebsiteApiSearchService::Request.new('chinese art') }
 
@@ -46,27 +71,27 @@ RSpec.describe LibraryWebsiteApiSearchService do
   it { expect(service).to be_an AbstractSearchService }
   it { expect(service.search(query)).to be_an LibraryWebsiteApiSearchService::Response }
 
-  describe '#facets' do
-    it 'constructs an API query url' do
-      facets = service.search(query).facets
-      expect(facets.first).to eq({
-        'name' => 'format_facet',
-        'items' => [{ 'hits' => 32, 'label' => 'Blog', 'value' => 'type:blog' }]
-      })
+  describe '#records' do
+    it 'sets the title, description, and link in the document' do
+      results = service.search(query).results
+      expect(results.length).to eq 2
+      expect(results.first.title).to eq 'Work with data'
+      expect(results.first.description).to eq 'First result description'
+      expect(results.first.link).to eq '/services/work-data'
     end
   end
 
-  describe '#records' do
-    it 'sets the title in the document' do
-      results = service.search(query).results
-      expect(results.length).to eq 1
-      expect(results.first.title).to eq 'Chinese art: Traditional'
+  describe '#facets' do
+    it 'returns an empty array' do
+      facets = service.search(query).facets
+      expect(facets).to eq []
     end
+  end
 
-    it 'provides libweb breadcrumbs' do
-      results = service.search(query).results
-      expect(results.first.breadcrumbs.length).to eq 1
-      expect(results.first.breadcrumbs.first["label"]).to eq 'Guides'
+  describe '#total' do
+    it 'returns an empty array' do
+      count = service.search(query).total
+      expect(count).to eq 207
     end
   end
 end

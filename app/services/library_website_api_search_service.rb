@@ -20,34 +20,53 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     QUERY_URL = Settings.LIBRARY_WEBSITE.QUERY_URL.freeze
 
     def results
-    sanitizer = Rails::Html::FullSanitizer.new
-      Array.wrap(json['results']).first(3).collect do |doc|
-        result = AbstractSearchService::Result.new
-        result.title = doc['title']
-        result.link = doc['url']
-        result.description = sanitizer.sanitize(doc['description'])
-        result.breadcrumbs = doc['breadcrumbs']&.drop(1)
-        result
+      sanitizer = Rails::Html::FullSanitizer.new
+
+      # TODO: remove the json['results'] condition after D9 launch
+      if json['results']
+        json['results'].first(3).map do |doc|
+          result = AbstractSearchService::Result.new
+          result.title = doc['title']
+          result.link = doc['url']
+          result.description = sanitizer.sanitize(doc['description'])
+          result.breadcrumbs = doc['breadcrumbs']&.drop(1)
+          result
+        end
+      elsif json['data']
+        json['data'].map do |doc|
+          result = AbstractSearchService::Result.new
+          result.title = doc.dig('attributes', 'title')
+          result.link = doc.dig('attributes', 'path', 'alias')
+          result.description = sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))
+          result
+        end
       end
     end
 
+    # Drupal 9 data for the library website does not support facets currently
+    # We still to implement the method to override AbstractSearchService's method, which throws a NotImplementedError
+    # TODO: remove the json['facets'] condition after D9 launch
     def facets
-      facet_response = [{
-        'name' => HIGHLIGHTED_FACET_FIELD
-      }]
-      facet_response.first['items'] = json['facets']['items'].map do |facet|
-        {
-          'value' => facet['term']&.first,
-          'label' => facet['label'],
-          'hits' => facet['hits'],
-        }
-      end
-      facet_response
+      return [] unless json['facets']
+
+        [{
+          'name' => HIGHLIGHTED_FACET_FIELD,
+          'items' => json['facets']['items'].map do |facet|
+            {
+              'value' => facet['term']&.first,
+              'label' => facet['label'],
+              'hits' => facet['hits']
+            }
+          end
+        }]
     end
 
+    # TODO: remove the json['facets'] condition after D9 launch
     def total
-      facets = json["facets"]["items"]
-      facets.sum {|facet| facet["hits"]}
+      return json.dig('meta', 'count') unless json['facets']
+
+        facets = json["facets"]["items"]
+        facets.sum {|facet| facet["hits"]}
     end
 
     private

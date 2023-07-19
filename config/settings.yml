@@ -33,8 +33,8 @@ EXHIBITS:
   NUM_RESULTS_SHOWN: 3
   QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
 LIBRARY_WEBSITE:
-  API_URL: 'https://library.stanford.edu/bento?keys=%{q}'
-  QUERY_URL: 'https://library.stanford.edu/search/website?search=%{q}'
+  API_URL: <%= ENV["D9_LAUNCH"] == "true" ? "https://library.sites-pro.stanford.edu/jsonapi/index/full_site_content?fields[node--stanford_page]=path,title,su_page_description&filter[fulltext]=%{q}&page[limit]=%{max}" : "https://library.stanford.edu/bento?keys=%{q}" %>
+  QUERY_URL: <%= ENV["D9_LAUNCH"] == "true" ? "https://library.stanford.edu/search/?q=%{q}" : 'https://library.stanford.edu/search/website?search=%{q}' %>
 EARTHWORKS:
   API_URL: 'https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json'
   QUERY_URL: 'https://earthworks.stanford.edu?q=%{q}'
