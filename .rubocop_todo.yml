@@ -307,7 +307,6 @@ Layout/MultilineMethodCallBraceLayout:
 Layout/MultilineOperationIndentation:
   Exclude:
     - 'app/helpers/feedback_form_helper.rb'
-    - 'lib/holdings/status/pageable.rb'
     - 'lib/holdings/status/unavailable.rb'
     - 'lib/search_query_modifier.rb'
     - 'spec/helpers/application_helper_spec.rb'

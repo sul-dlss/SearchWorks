@@ -13,7 +13,7 @@ $noncirc-color: darkorange;
     @extend .fa-check;
     color: $noncirc-color;
   }
-  .page {
+  .deliver-from-offsite {
     @extend .fa-truck;
     color: $available-color;
   }

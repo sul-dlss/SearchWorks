@@ -1,7 +1,7 @@
 require 'holdings/status/available'
 require 'holdings/status/noncirc'
 require 'holdings/status/noncirc_page'
-require 'holdings/status/pageable'
+require 'holdings/status/deliver_from_offsite'
 require 'holdings/status/unavailable'
 require 'holdings/status/unknown'
 require 'holdings/status/in_process'
@@ -24,8 +24,8 @@ class Holdings
         'noncirc_page'
       when noncirc?
         'noncirc'
-      when pageable?
-        'page'
+      when deliver_from_offsite?
+        'deliver-from-offsite'
       when available?
         'available'
       when unknown?
@@ -52,8 +52,8 @@ class Holdings
       Holdings::Status::NoncircPage.new(@item).noncirc_page?
     end
 
-    def pageable?
-      Holdings::Status::Pageable.new(@item).pageable?
+    def deliver_from_offsite?
+      Holdings::Status::DeliverFromOffsite.new(@item).deliver_from_offsite?
     end
 
     def unavailable?

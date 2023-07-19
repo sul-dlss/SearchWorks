@@ -1,23 +1,23 @@
 class Holdings
   class Status
-    class Pageable
+    class DeliverFromOffsite
       def initialize(item)
         @item = item
       end
 
-      def pageable?
-        pageable_home_location? || pageable_library?
+      def deliver_from_offsite?
+        deliverable_home_location? || offsite_library?
       end
 
       private
 
-      def pageable_library?
+      def offsite_library?
         ["SAL3", "SAL-NEWARK"].include?(@item.library)
       end
 
-      def pageable_home_location?
+      def deliverable_home_location?
         @item.home_location.try(:end_with?, '-30') ||
-        Constants::PAGE_LOCS.include?(@item.home_location)
+          Constants::DELIVERABLE_LOCATIONS.include?(@item.home_location)
       end
     end
   end
