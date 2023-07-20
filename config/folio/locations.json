@@ -5803,6 +5803,31 @@
     }
   },
   {
+    "id": "71d88dd5-3ac5-4075-b0eb-23db9fc374b4",
+    "name": "Tanner Reserves",
+    "code": "TAN-CRES",
+    "discoveryDisplayName": "Tanner Reserves",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "e5f23316-85ce-440c-886c-eff410f66f26",
+    "details": {
+    },
+    "primaryServicePoint": "7af3d617-e9e9-4241-8dd7-93827112d3ab",
+    "servicePointIds": [
+      "7af3d617-e9e9-4241-8dd7-93827112d3ab"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-19T16:02:46.548+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-19T16:02:46.548+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "7241056a-0ea6-4a38-b06f-a0fc812aebe7",
     "name": "Lane Digital: Mobile Resources",
     "code": "LANE-MOBI",
@@ -6653,6 +6678,31 @@
       "createdDate": "2023-06-30T02:09:13.713+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
       "updatedDate": "2023-06-30T02:09:13.713+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
+    "id": "845b68f7-60d6-40fe-be5b-a8b01dabe1ec",
+    "name": "SAL3 migration error",
+    "code": "SAL3-MIGRATE-ERR",
+    "discoveryDisplayName": "SAL3 error during migration",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-19T15:59:18.961+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-19T15:59:18.961+00:00",
       "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
@@ -8953,6 +9003,31 @@
     }
   },
   {
+    "id": "b3c21054-1eb1-4e6f-94d3-786fa23ccb55",
+    "name": "SAL Newark migration error ",
+    "code": "SALN-MIGRATE-ERR",
+    "discoveryDisplayName": "SAL Newark error during migration",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c33532fc-f385-4138-9e51-49e03705d103",
+    "details": {
+    },
+    "primaryServicePoint": "809716bc-1d3f-4b9e-b747-4fcbaff9d04e",
+    "servicePointIds": [
+      "809716bc-1d3f-4b9e-b747-4fcbaff9d04e"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-19T15:55:38.071+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-19T15:55:38.071+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "b3d15dd8-a053-4c06-93e9-e76e2dc59385",
     "name": "Media Cage Stacks",
     "code": "MEDIA-CAGE",
@@ -10489,6 +10564,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-13T18:23:44.877+00:00",
       "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
+    }
+  },
+  {
+    "id": "cde9084b-ce78-4925-9901-f67add496d11",
+    "name": "SUL Staff Shadow",
+    "code": "SUL-STAFFSHADOW",
+    "discoveryDisplayName": "SUL TS Staff Use",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+    },
+    "primaryServicePoint": "0590225b-eea3-4db8-8290-68e99cc898df",
+    "servicePointIds": [
+      "0590225b-eea3-4db8-8290-68e99cc898df"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-19T16:09:29.179+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-19T16:09:29.179+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
