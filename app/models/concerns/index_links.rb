@@ -10,6 +10,10 @@ module IndexLinks
     )
   end
 
+  def has_finding_aid?
+    index_links.finding_aid.first&.href.present?
+  end
+
   class IndexLinkProcessor
     attr_reader :document, :link_struct
 
