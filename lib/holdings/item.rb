@@ -186,6 +186,8 @@ class Holdings
       folio_item.present?
     end
 
+    delegate :status, to: :folio_item, prefix: :folio
+
     private
 
     def internet_resource?

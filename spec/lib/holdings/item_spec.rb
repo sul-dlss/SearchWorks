@@ -284,6 +284,7 @@ RSpec.describe Holdings::Item do
     let(:folio_item) {
       Folio::Item.new(
         id: '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
+        status: 'Available',
         barcode: '36105232609540',
         material_type: Folio::Item::MaterialType.new(id: '1a54b431-2e4f-452d-9cae-9cee66c9a892', name: 'book'),
         permanent_loan_type: Folio::Item::LoanType.new(id: '2b94c631-fca9-4892-a730-03ee529ffe27', name: 'Can circulate'),
