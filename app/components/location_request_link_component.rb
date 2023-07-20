@@ -68,15 +68,13 @@ class LocationRequestLinkComponent < ViewComponent::Base # rubocop:disable Metri
   end
 
   def link_text
-    return I18n.t('searchworks.request_link.finding_aid') if finding_aid? && aeon_pageable?
+    return I18n.t('searchworks.request_link.finding_aid') if has_finding_aid? && aeon_pageable?
     return I18n.t('searchworks.request_link.aeon') if aeon_pageable?
 
     t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
   end
 
-  def finding_aid?
-    document&.index_links&.finding_aid&.first&.href.present?
-  end
+  delegate :has_finding_aid?, to: :document
 
   def bound_with?
     Constants::BOUND_WITH_LOCS.include?(location)

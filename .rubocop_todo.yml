@@ -604,11 +604,9 @@ Naming/MemoizedInstanceVariableName:
 # MethodDefinitionMacros: define_method, define_singleton_method
 Naming/PredicateName:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
     - 'app/models/concerns/collection_member.rb'
     - 'app/models/concerns/database_document.rb'
     - 'app/models/concerns/digital_collection.rb'
-    - 'lib/search_query_modifier.rb'
 
 # Offense count: 30
 # Configuration parameters: EnforcedStyle, CheckMethodNames, CheckSymbols, AllowedIdentifiers, AllowedPatterns.

@@ -37,6 +37,9 @@ RSpec/DescribeClass:
     - 'spec/requests/**/*'
     - 'spec/routing/**/*'
 
+Naming/PredicateName:
+  ForbiddenPrefixes: is_
+
 Metrics/ParameterLists:
   Exclude:
     - 'app/components/**/*'
