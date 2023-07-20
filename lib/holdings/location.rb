@@ -20,12 +20,9 @@ class Holdings
       @code && Constants::BOUND_WITH_LOCS.include?(@code)
     end
 
-    def external_location?
-      library == 'LANE-MED'
-    end
-
     def location_link
-      return unless external_location?
+      return unless library == 'LANE-MED'
+      return if items.any?(&:folio_item?)
 
       if items.first.try(:barcode)
         "https://lane.stanford.edu/view/bib/#{items.first.barcode.gsub(/^LL/, '')}"
