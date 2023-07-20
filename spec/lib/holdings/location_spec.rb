@@ -57,15 +57,6 @@ describe Holdings::Location do
       Holdings::Location.new('STACKS', [], [double('mhld', library: "LANE-MED")])
     }
 
-    describe '#external_location?' do
-      it 'should identify LANE-MED properly' do
-        expect(external_location).to be_external_location
-      end
-      it 'should not identify non LANE-MED items as external locations' do
-        expect(non_external_location).not_to be_external_location
-      end
-    end
-
     describe '#location_link' do
       it 'should provide a link for external locations' do
         expect(external_location.location_link).to match %r{https://lane.stanford.edu/view/bib/12345}
