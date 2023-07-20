@@ -504,6 +504,7 @@ module Constants
     'PAGE-LN' => 'Paged to Medical Library',
     'PAGE-LP' => 'Request for pickup at Music Library or Media & Microtext Center',
     'PAGE-LW' => 'For use in Law Library',
+    'PAGE-MA' => 'For use in Miller Library or Green Library',
     'PAGE-MD' => 'For use in Green Media & Microtext Center',
     'PAGE-MM' => 'Request for pickup at Media & Microtext Center',
     'PAGE-MP' => 'Request for pickup at Branner Library',
@@ -804,6 +805,7 @@ module Constants
                        'PAGE-HP',
                        'PAGE-HV',
                        'PAGE-LW',
+                       'PAGE-MA',
                        'PAGE-MD',
                        'PAGE-MU',
                        'PAGE-RM',
@@ -1054,5 +1056,5 @@ module Constants
     }
   }.freeze
 
-  REQUEST_ONSITE_LOCATIONS = %w(PAGE-AR PAGE-AS PAGE-EA PAGE-ED PAGE-EN PAGE-ES PAGE-GR PAGE-HA PAGE-HP PAGE-HV PAGE-LW PAGE-MD PAGE-MU PAGE-RM PAGE-SP)
+  REQUEST_ONSITE_LOCATIONS = %w(PAGE-AR PAGE-AS PAGE-EA PAGE-ED PAGE-EN PAGE-ES PAGE-GR PAGE-HA PAGE-HP PAGE-HV PAGE-LW PAGE-MA PAGE-MD PAGE-MU PAGE-RM PAGE-SP)
 end
