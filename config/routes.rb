@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root to: "catalog#index"
 
+  # redirect Symphony-migrated FOLIO HRIDs to their original Symphony URLs
+  constraints(id: /a\d+/) do
+    get '/view/:id', to: redirect { |path_params, _req| "/view/#{path_params[:id].delete_prefix('a')}" }
+  end
+
   get "view/:id/librarian_view" => "catalog#librarian_view", :as => :librarian_view
   get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
 
