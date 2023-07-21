@@ -65,7 +65,7 @@ class RequestLinkPolicy
   end
 
   def folio_items?
-    items.first.folio_item?
+    items.any?(&:folio_item?)
   end
 
   def folio_pageable?
