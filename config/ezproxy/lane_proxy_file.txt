@@ -504,6 +504,7 @@ dnp.chemnetbase.com
 doaj.org
 doc.chemnetbase.com
 docs.google.com
+docs.newsbank.com
 docuseek2.com
 dod.chemnetbase.com
 doi-org.stanford.idm.oclc.org
@@ -715,6 +716,7 @@ hearth.library.cornell.edu
 hebra.dermis.net
 heinonline-org.stanford.idm.oclc.org
 heinonline.org
+heinonlineorg
 helioblast.heliotext.com
 hemonc.mhmedical.com
 hereditasjournal.biomedcentral.com
@@ -1001,7 +1003,6 @@ law.ucla.edu
 lcweb.loc.gov
 learnmem.cshlp.org
 legacy.audio-digest.org
-legacy.library.ucsf.edu
 leginfo.legislature.ca.gov
 leprev.ilsl.br
 lib.ugent.be
@@ -1120,6 +1121,7 @@ msystems.asm.org
 multiplevoicesjournal.org
 muse.jhu.edu
 musicid.academicrightspress.com
+my.vitallaw.com
 n.neurology.org
 nam.edu
 name.umdl.umich.edu
@@ -1174,7 +1176,6 @@ obgyn.mhmedical.com
 obgyn.onlinelibrary.wiley.com
 objects.library.uu.nl
 occup-med.biomedcentral.com
-odesi1.scholarsportal.info
 odphp.osophs.dhhs.gov
 oed.com
 oeis.org
@@ -1292,6 +1293,7 @@ prhsj.rcm.upr.edu
 primarysources.brillonline.com
 princeton.universitypressscholarship.com
 proceedings.spiedigitallibrary.org
+prod.resource.cch.com
 profiles.nlm.nih.gov
 projecteuclid.org
 proquest.safaribooksonline.com
