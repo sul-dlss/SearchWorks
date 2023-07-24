@@ -93,7 +93,7 @@ class LiveLookup
       def status
         return unless valid_current_location?
 
-        Holdings::Location.new(current_location_code).name
+        current_location.name
       end
 
       def current_location_code
@@ -119,8 +119,16 @@ class LiveLookup
       end
 
       def current_location_same_as_home_location?
-        Holdings::Location.new(current_location_code).name == Holdings::Location.new(home_location_code).name ||
+        current_location.name == home_location.name ||
           Constants::CURRENT_HOME_LOCS.include?(current_location_code)
+      end
+
+      def current_location
+        Holdings::Location.new(current_location_code, folio_code: ::Folio::LocationsMap.for(library_code:, location_code: current_location_code))
+      end
+
+      def home_location
+        Holdings::Location.new(home_location_code, folio_code: ::Folio::LocationsMap.for(library_code:, location_code: home_location_code))
       end
 
       def valid_due_date?

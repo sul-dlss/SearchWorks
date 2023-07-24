@@ -2,9 +2,10 @@ require "spec_helper"
 
 describe Holdings::Library do
   include Marc856Fixtures
-  it "should translate the library code" do
+  it "translates the library code" do
     expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
   end
+
   describe "#locations" do
     let(:callnumbers) { [
       Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- "),
@@ -12,9 +13,9 @@ describe Holdings::Library do
       Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- ")
     ] }
     let(:sort_callnumbers) { [
-      Holdings::Item.from_item_display_string("barcode -|- library -|- TINY -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- library -|- STACKS -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- library -|- CURRENTPER -|- ")
+      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- SSRC-DOCS -|- "),
+      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- STACKS -|- "),
+      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- CURRENTPER -|- ")
     ] }
     let(:combined_callnumbers) do
       [
@@ -25,28 +26,32 @@ describe Holdings::Library do
     end
     let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
     let(:sort_locations) { Holdings::Library.new("GREEN", sort_callnumbers).locations }
-    let(:combined_locations) { Holdings::Library.new('GREEN', combined_callnumbers).locations }
+    let(:combined_locations) { Holdings::Library.new('SPEC-COLL', combined_callnumbers).locations }
 
-    it "should return an array of Holdings::Locations" do
+    it "returns an array of Holdings::Locations" do
       expect(locations).to be_a Array
       locations.each do |location|
         expect(location).to be_a Holdings::Location
       end
     end
-    it "should group by home location" do
+
+    it "groups by home location" do
       expect(callnumbers.length).to eq 3
       expect(locations.length).to eq 2
     end
+
     it 'groups by home location translation when they are the same' do
       expect(combined_callnumbers.length).to eq 3
       expect(combined_locations.length).to eq 1
     end
-    it "should sort by location code when there is no translation" do
+
+    it "sorts by location code when there is no translation" do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
-    it "should sort locations alpha by name" do
-      expect(sort_locations.map(&:name)).to eq ["Current periodicals", "Miniature", "Stacks"]
-      expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "TINY", "STACKS"]
+
+    it "sorts locations alpha by name" do
+      expect(sort_locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
+      expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "SSRC-DOCS", "STACKS"]
     end
   end
 

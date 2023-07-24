@@ -78,7 +78,8 @@ class Holdings
     end
 
     def current_location
-      Holdings::Location.new(item_display[:current_location])
+      Holdings::Location.new(item_display[:current_location],
+                             folio_code: Folio::LocationsMap.for(library_code: item_display[:library], location_code: item_display[:current_location]))
     end
 
     def type

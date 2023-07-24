@@ -160,6 +160,7 @@ describe SearchWorksRecordMailer do
       it 'should include holdings of all documents' do
         expect(mail.body).to have_css('h2', text: 'At the library', count: documents.length)
         expect(mail.body).to have_css('dt', text: 'Green Library - Stacks')
+
         expect(mail.body).to have_css('dd', text: 'ABC 123')
 
         expect(mail.body).to have_css('dt', text: 'SAL3 (off-campus storage) - Stacks')

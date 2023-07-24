@@ -2,17 +2,27 @@ class Holdings
   class Location
     attr_reader :code, :items, :mhld
 
+    # Don't send a notice to Honeybadger if we encounter one of these codes, they are expected, because they
+    # didn't migrate to Folio as locations. They are item status in Folio.
+    SKIP_NOTIFY_CODES = %w[BINDERY INPROCESS].freeze
+
     # @params [String] code the location code (e.g. 'STACKS')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
-    def initialize(code, items = [], mhld = [])
+    def initialize(code, items = [], mhld = [], folio_code:)
       @code = code
       @items = items.sort_by(&:full_shelfkey)
       @mhld = mhld
+      @folio_code = folio_code
     end
 
     def name
       return if @code.blank?
 
+      name = Folio::Locations.label(code: @folio_code)
+      return name if name
+
+      # Fallback to legacy Folio behavior
+      Honeybadger.notify("Unable to find folio location label", context: { folio_code: @folio_code, legacy_code: @code }) unless SKIP_NOTIFY_CODES.include?(@code)
       Constants::LOCS.fetch(@code, @code)
     end
 
