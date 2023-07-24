@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require honeybadger
-//= require retina_tag
 
 //= require rails-ujs
 //= require turbolinks
