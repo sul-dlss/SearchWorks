@@ -1,13 +1,11 @@
 ##
-# A class to handle MARC 795 field logic
+# A class to handle linked collection titles field logic
 class LinkedCollection < MarcField
   def to_partial_path
     'marc_fields/linked_collection'
   end
 
-  private
-
-  def tags
-    %w[795ap]
+  def values
+    document.collection_titles.map(&:values).flatten.map(&:strip)
   end
 end
