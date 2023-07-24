@@ -12,12 +12,15 @@ module AccessPanels
     end
 
     def thumb_for_library
+      srcset = {}
       image_name = if library.zombie?
+        srcset["#{library.code}@2x.png"] = '2x'
         "#{library.code}.png"
       else
+        srcset["#{library.code}@2x.jpg"] = '2x'
         "#{library.code}.jpg"
       end
-      image_tag(image_name, class: "pull-left", alt: "", height: 50)
+      image_tag(image_name, srcset:, class: "pull-left", alt: "", height: 50)
     rescue Sprockets::Rails::Helper::AssetNotFound => e
       Honeybadger.notify(e, error_message: "Missing library thumbnail for #{library.code}")
 
