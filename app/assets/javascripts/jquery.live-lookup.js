@@ -29,9 +29,9 @@
               current_location.append(' Due ' + live_data.due_date);
             }
 
-            if ( !live_data.is_available && (target.hasClass('unknown') || target.hasClass('page')) ) {
+            if ( !live_data.is_available && (target.hasClass('unknown') || target.hasClass('deliver-from-offsite')) ) {
               target.removeClass('unknown');
-              target.removeClass('page');
+              target.removeClass('deliver-from-offsite');
               target.addClass('unavailable');
               status_text.text(''); // The due date/current location acts as the status text at this point
               if (target.attr('title')) {
