@@ -372,7 +372,7 @@ GEM
       i18n
       stanford-mods (~> 3.3)
       view_component
-    msgpack (1.7.1)
+    msgpack (1.7.2)
     multi_xml (0.6.0)
     multipart-post (2.3.0)
     mysql2 (0.5.5)
