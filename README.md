@@ -4,7 +4,7 @@
 
 # SearchWorks
 
-This is the codebase for the SearchWorks redesign.
+The Stanford library searchable catalog.
 
 ## Local Installation
 
