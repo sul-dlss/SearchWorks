@@ -69,8 +69,6 @@ class LocationRequestLinkPolicy
   end
 
   def folio_pageable?
-    return false unless folio_items?
-
     !folio_disabled_status_location? &&
       (folio_mediated_pageable? ||
         folio_aeon_pageable? ||
