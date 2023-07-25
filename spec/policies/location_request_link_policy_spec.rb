@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RequestLinkPolicy do
+RSpec.describe LocationRequestLinkPolicy do
   subject(:policy) { described_class.new(location:, library:, items:) }
 
   let(:location) { 'HOOVER' }
