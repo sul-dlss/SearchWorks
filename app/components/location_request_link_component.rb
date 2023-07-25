@@ -50,7 +50,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   private
 
   def policy
-    @policy ||= RequestLinkPolicy.new(location:, library:, items:)
+    @policy ||= LocationRequestLinkPolicy.new(location:, library:, items:)
   end
 
   def link_href

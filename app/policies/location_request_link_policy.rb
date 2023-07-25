@@ -1,5 +1,5 @@
 # This determines whether we should display a request link to the user
-class RequestLinkPolicy
+class LocationRequestLinkPolicy
   def initialize(location:, library:, items:)
     @location = location
     @library = library
