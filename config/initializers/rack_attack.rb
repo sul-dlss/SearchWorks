@@ -27,7 +27,8 @@ if Settings.THROTTLE_TRAFFIC
   # Bots seem to be rotating IPs or using multiple devices as of April 2023
   # See error reports e.g. https://app.honeybadger.io/projects/50022/faults/34763067
   Rack::Attack.throttle('articles/user-agent', limit: 60, period: 5.minutes) do |req|
-    req.user_agent if req.path.start_with?('/articles') && req.user_agent.start_with?('Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T)')
+    req.user_agent if req.path.start_with?('/articles') &&
+                      (!req.user_agent || req.user_agent.start_with?('Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T)'))
   end
 
   # Inform throttled clients about limits and when they will get out of jail
