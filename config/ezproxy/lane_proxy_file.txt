@@ -507,7 +507,6 @@ docs.google.com
 docs.newsbank.com
 docuseek2.com
 dod.chemnetbase.com
-doi-org.stanford.idm.oclc.org
 doi.org
 drc.bmj.com
 druginfo.nlm.nih.gov
@@ -714,7 +713,6 @@ heartasia.bmj.com
 heartfailure.onlinejacc.org
 hearth.library.cornell.edu
 hebra.dermis.net
-heinonline-org.stanford.idm.oclc.org
 heinonline.org
 heinonlineorg
 helioblast.heliotext.com
@@ -2121,7 +2119,6 @@ www.google.com
 www.gpo.gov
 www.gpoaccess.gov
 www.gramene.org
-www.grandtour.amdigital.co.uk
 www.guidestar.org
 www.gynecendoscopy.org
 www.h-net.org
@@ -2480,7 +2477,7 @@ www.literarymanuscriptsberg.amdigital.co.uk
 www.literaryprintculture.amdigital.co.uk
 www.literature.at
 www.liverpooluniversitypress.co.uk
-www.llmc.com.stanford.idm.oclc.org
+www.llmc.com
 www.llmcdigital.org
 www.lls.org
 www.lmaleidykla.lt
