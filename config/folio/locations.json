@@ -817,6 +817,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -827,8 +830,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:33.630+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:33.630+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:08:51.726+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -1037,6 +1040,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -1047,8 +1053,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:35.549+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:35.549+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:09:17.963+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -1256,6 +1262,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -1266,8 +1275,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:35.317+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:35.317+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:09:08.981+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -4298,6 +4307,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -4308,8 +4320,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:33.883+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:33.883+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:08:42.236+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -5836,6 +5848,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -5846,8 +5861,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:36.350+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:36.350+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:09:27.918+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -10623,6 +10638,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -10633,8 +10651,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:34.002+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:34.002+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:09:00.136+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -11597,6 +11615,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+      "holdingTypeName": "Electronic"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -11607,8 +11628,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:34.203+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:37:34.203+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-24T21:09:38.940+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
