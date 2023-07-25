@@ -5,6 +5,8 @@ class ItemRequestLinkPolicy
   end
 
   def show?
+    return folio_pageable? if item.folio_item?
+
     return false if aeon_pageable? || in_mediated_pageable_location? || in_nonrequestable_location? || item.on_reserve?
 
     current_location_is_always_requestable?
@@ -20,7 +22,28 @@ class ItemRequestLinkPolicy
     item.current_location.code
   end
 
-  # TODO: add folio stuff
+  def folio_pageable?
+    return false if folio_aeon_pageable? || folio_mediated_pageable? || item.on_reserve?
+
+    Folio::CirculationRules::PolicyService.instance.item_request_policy(item)&.dig('requestTypes')&.include?('Page')
+  end
+
+  def folio_location
+    @folio_location ||= Folio::Types.locations.values.find { |l| item.effective_location.id == l['id'] }
+  end
+
+  def folio_aeon_pageable?
+    return false unless folio_location
+
+    folio_location.dig('details', 'pageAeonSite')
+  end
+
+  def folio_mediated_pageable?
+    return false unless folio_location
+
+    folio_location.dig('details', 'pageMediationGroupKey')
+  end
+
   def aeon_pageable?
     Settings.aeon_locations[library] == '*' ||
       Settings.aeon_locations.dig(library, home_location) == "*" ||
@@ -33,7 +56,6 @@ class ItemRequestLinkPolicy
       Settings.mediated_locations[library]&.include?(home_location)
   end
 
-  # TODO: make like folio
   def in_nonrequestable_location?
     (Settings.nonrequestable_locations[library] || Settings.nonrequestable_locations.default).include?(home_location)
   end
