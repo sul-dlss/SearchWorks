@@ -31,6 +31,17 @@
     }
   },
   {
+    "group": "program-short-term",
+    "desc": "Short term programs ",
+    "id": "55608699-4ea5-412f-98e0-1339ea864838",
+    "metadata": {
+      "createdDate": "2023-07-25T21:11:10.746+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-25T21:11:10.746+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "group": "visiting scholar",
     "desc": "affiliate:visitscholarvs or affiliate:visitscholarvt",
     "id": "68c48481-49c7-4637-a2c8-852bc5437049",
@@ -39,6 +50,17 @@
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
       "updatedDate": "2023-02-09T00:40:58.373+00:00",
       "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+    }
+  },
+  {
+    "group": "sul-contractprograms",
+    "desc": "SUL Contract program",
+    "id": "8054f883-e23a-415e-b8c8-dab817cf430a",
+    "metadata": {
+      "createdDate": "2023-07-25T21:14:07.511+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-25T21:14:07.511+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -86,14 +108,14 @@
     }
   },
   {
-    "group": "sul-fee",
+    "group": "sul-purchased",
     "desc": "SUL Fee borrower",
     "id": "985acbb9-f7a7-4f44-9b34-458c02a78fbc",
     "metadata": {
       "createdDate": "2023-02-09T00:40:59.724+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-06-19T20:48:03.793+00:00",
-      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+      "updatedDate": "2023-07-25T21:09:32.532+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
