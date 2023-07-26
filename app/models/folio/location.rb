@@ -28,5 +28,9 @@ module Folio
                                  code: json.fetch('code'),
                                  name: json.fetch('name')))
     end
+
+    def see_other?
+      code.ends_with?('-SEE-OTHER')
+    end
   end
 end
