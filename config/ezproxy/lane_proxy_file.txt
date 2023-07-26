@@ -651,7 +651,6 @@ gallica.bnf.fr
 games.jmir.org
 gatesopenresearch.org
 gateway.proquest.com
-gateway.webofknowledge.com
 gdc.galegroup.com
 gdz.sub.uni-goettingen.de
 genesdev.cshlp.org
@@ -1149,6 +1148,7 @@ newspaperslibrary.proquest.com
 nf.aafp.org
 ng.neurology.org
 nida.nih.gov
+nls.ldls.org.uk
 nmji.in
 nmsjournal.kaums.ac.ir
 nn.neurology.org
@@ -1310,6 +1310,7 @@ psychotherapy.psychiatryonline.org
 psycnet.apa.org
 pubchem.ncbi.nlm.nih.gov
 public.carnet.hr
+public.ebookcentral.proquest.com
 publications.aap.org
 publications.iarc.fr
 publications.worldbank.org
@@ -1339,6 +1340,7 @@ raf.bioscientifica.com
 randstatestats.org
 rapm.bmj.com
 ratecalc.cancer.gov
+rave.ohiolink.edu
 rbej.biomedcentral.com
 rc.rcjournal.com
 rcnarchive.rcn.org.uk
@@ -1451,6 +1453,7 @@ sigmapubs.onlinelibrary.wiley.com
 silencejournal.biomedcentral.com
 sis.nlm.nih.gov
 sit.bmj.com
+site.ebrary.com
 sites.kowsarpub.com
 sjtrem.biomedcentral.com
 sk.sagepub.com
@@ -1575,7 +1578,6 @@ waojournal.biomedcentral.com
 web.archive.org
 web.mit.edu
 web.ornl.gov
-web2.bium.univ-paris5.fr
 webbook.nist.gov
 webcampus.med.drexel.edu
 webcaspar.nsf.gov
@@ -1791,7 +1793,6 @@ www.bioone.org
 www.bioscirep.org
 www.biotechnologyhealthcare.com
 www.birpublications.org
-www.bium.univ-paris5.fr
 www.biusante.parisdescartes.fr
 www.bjbms.org
 www.bjcardio.co.uk
@@ -2972,6 +2973,7 @@ www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
+www.vlebooks.com
 www.wageningenacademic.com
 www.washingtonpost.com
 www.wdoms.org
@@ -3012,7 +3014,6 @@ www.zjujournals.com
 www.zoores.ac.cn
 www150.statcan.gc.ca
 www2.amia.org
-www2.biusante.parisdescartes.fr
 www3.cricyt.edu.ar
 www3.stat.sinica.edu.tw
 wwwcf.nlm.nih.gov
