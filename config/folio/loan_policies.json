@@ -203,21 +203,25 @@
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 1,
-        "intervalId": "Days"
+        "duration": 24,
+        "intervalId": "Hours"
       },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
       "gracePeriod": {
         "duration": 15,
         "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
       }
     },
     "renewable": false,
     "metadata": {
       "createdDate": "2023-02-09T01:05:18.390+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T01:05:18.390+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-07-25T21:48:16.751+00:00",
+      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
     }
   },
   {
