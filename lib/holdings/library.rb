@@ -16,6 +16,7 @@ class Holdings
     def locations
       unless @locations
         @locations = @items.group_by do |item|
+          # Group by translations if they are the same. (e.g. both MSS-30 and MANUSCRIPT translate to "Manuscript Collection")
           Constants::LOCS[item.home_location] || item.home_location
         end.map do |_, items|
           mhlds = mhld.select { |x| x.location == items.first.home_location }
