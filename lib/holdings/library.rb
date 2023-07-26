@@ -40,10 +40,6 @@ class Holdings
       @code == 'ZOMBIE'
     end
 
-    def hoover_archive?
-      @code == 'HV-ARCHIVE'
-    end
-
     def present?
       @items.any?(&:present?) ||
         (mhld.present? && mhld.any?(&:present?)) ||

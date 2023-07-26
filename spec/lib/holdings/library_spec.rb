@@ -83,14 +83,6 @@ describe Holdings::Library do
     end
   end
 
-  describe '#hoover_archive?' do
-    let(:hv_archive) { Holdings::Library.new('HV-ARCHIVE') }
-
-    it 'is true' do
-      expect(hv_archive.hoover_archive?).to be true
-    end
-  end
-
   describe '#as_json' do
     let(:callnumbers) do
       [

@@ -95,6 +95,19 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     it { expect(page).not_to have_link }
   end
 
+  context 'for Hoover items with finding aids' do
+    let(:document) do
+      SolrDocument.new(
+        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
+      )
+    end
+    let(:library) { 'HOOVER' }
+    let(:location) { 'STACKS' }
+    let(:items) { [] }
+
+    it { expect(page).to have_link 'Request via Finding Aid', href: 'http://oac.cdlib.org/ark:/abc123' }
+  end
+
   context 'for Hoover Archive items with finding aids' do
     let(:document) do
       SolrDocument.new(
