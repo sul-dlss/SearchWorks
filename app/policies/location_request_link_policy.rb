@@ -71,7 +71,7 @@ class LocationRequestLinkPolicy
 
   def folio_bound_with_or_analyzed_serial?
     (!folio_items? && items.first.document&.folio_holdings&.any?(&:bound_with?)) ||
-      (folio_items? && items.any? { |item| item.effective_location.see_other? })
+      (folio_items? && items.any? { |item| item.effective_location&.see_other? })
   end
 
   def folio_items?
@@ -107,7 +107,7 @@ class LocationRequestLinkPolicy
   # there probably is only one FOLIO location.
   def folio_locations
     @folio_locations ||= begin
-      location_uuids = items.map(&:effective_location).map(&:id).uniq
+      location_uuids = items.filter_map(&:effective_location).map(&:id).uniq
 
       Folio::Types.locations.values.select { |l| location_uuids.include?(l['id']) }
     end

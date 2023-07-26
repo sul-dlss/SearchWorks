@@ -10,7 +10,7 @@ class Holdings
     attr_reader :document
     attr_accessor :due_date
 
-    delegate :loan_type, :material_type, :effective_location, to: :folio_item
+    delegate :loan_type, :material_type, :effective_location, to: :folio_item, allow_nil: true
 
     def initialize(holding_info, document: nil)
       @holding_info = holding_info
