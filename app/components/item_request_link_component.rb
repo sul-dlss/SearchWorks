@@ -38,12 +38,9 @@ class ItemRequestLinkComponent < ViewComponent::Base
   end
 
   def link_text
-    locale_key = "searchworks.request_link.#{library || 'default'}"
+    locale_key = 'searchworks.request_link.default'
     locale_key = 'searchworks.request_link.request_on_site' if Constants::REQUEST_ONSITE_LOCATIONS.include?(home_location)
 
-    t(
-      locale_key,
-      default: :'searchworks.request_link.default'
-    )
+    t(locale_key)
   end
 end
