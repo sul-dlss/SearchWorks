@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe LiveLookup::Sirsi do
+RSpec.describe LiveLookup::Sirsi do
   let(:response) { double('response') }
   let(:get) { double('get') }
   let(:body) { 'body' }

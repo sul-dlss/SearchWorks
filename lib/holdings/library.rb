@@ -16,15 +16,19 @@ class Holdings
     def locations
       unless @locations
         @locations = @items.group_by do |item|
-          # Group by translations if they are the same. (e.g. both MSS-30 and MANUSCRIPT translate to "Manuscript Collection")
-          Constants::LOCS[item.home_location] || item.home_location
+          # Group by display labels if they are the same. (e.g. both MSS-30 (SPEC-SAL3-MSS) and MANUSCRIPT (SPEC-MANUSCRIPT) translate to "Manuscript Collection")
+          folio_code = Folio::LocationsMap.for(library_code: code, location_code: item.home_location)
+          Folio::Locations.label(code: folio_code) || folio_code || item.home_location
         end.map do |_, items|
-          mhlds = mhld.select { |x| x.location == items.first.home_location }
-          Holdings::Location.new(items.first.home_location, items, mhlds)
+          location_code = items.first.home_location
+          mhlds = mhld.select { |x| x.location == location_code }
+          Holdings::Location.new(location_code, items, mhlds,
+                                 folio_code: Folio::LocationsMap.for(library_code: code, location_code:))
         end
 
-        @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |code, mhlds|
-          Holdings::Location.new(code, [], mhlds)
+        @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |location_code, mhlds|
+          Holdings::Location.new(location_code, [], mhlds,
+                                 folio_code: Folio::LocationsMap.for(library_code: code, location_code:))
         end
 
         @locations.sort_by!(&:sort)

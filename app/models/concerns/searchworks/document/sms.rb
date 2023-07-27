@@ -14,7 +14,8 @@ module Searchworks::Document::Sms
     if self.holdings.present?
       item = preferred_item
       library = Holdings::Library.new(item.library).name
-      location = Constants::LOCS[item.home_location]
+      folio_code = Folio::LocationsMap.for(library_code: item.library, location_code: item.home_location)
+      location = Folio::Locations.label(code: folio_code)
 
       body << I18n.t('blacklight.sms.text.library_location', library:, location:)
       body << I18n.t('blacklight.sms.text.callnumber', value: item.callnumber)

@@ -21,25 +21,25 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       )
     }
 
-    it "should only return the libraries" do
+    it "only returns the libraries" do
       expect(described_class.new(document: doc).libraries.length).to eq 2
     end
   end
 
   describe "render?" do
-    it "should have a library location present" do
+    it "has a library location present" do
       doc = SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"])
       expect(described_class.new(document: doc).render?).to be true
     end
 
-    it "should not have a library location present" do
+    it "does not have a library location present" do
       doc = SolrDocument.new(id: '123')
       expect(described_class.new(document: doc).render?).to be false
     end
   end
 
   describe "object with a location" do
-    it "should render the panel" do
+    it "renders the panel" do
       render_inline(described_class.new(document: SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]) ))
       expect(page).to have_css(".panel-library-location a")
       expect(page).to have_css(".library-location-heading")
@@ -62,16 +62,16 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it 'should display the MARC 590 as a bound with note (excluding subfield $c)' do
+    it 'displays the MARC 590 as a bound with note (excluding subfield $c)' do
       expect(page).to have_css('.bound-with-note.note-highlight a', text: 'Copy 1 bound with v. 140')
       expect(page).not_to have_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')
     end
 
-    it "should not display request links for requestable libraries" do
+    it "does not display request links for requestable libraries" do
       expect(page).not_to have_content("Request")
     end
 
-    it 'should display the callnumber without live lookup' do
+    it 'displays the callnumber without live lookup' do
       expect(page).to have_css 'td', text: 'ABC 123'
       expect(page).not_to have_css 'td[data-live-lookup-id]'
     end
@@ -136,7 +136,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe "current locations" do
-    it "should be displayed" do
+    it "is displayed" do
       document = SolrDocument.new(
         id: '123',
         item_display: ['123 -|- GREEN -|- STACKS -|- INPROCESS -|- -|- -|- -|- -|- ABC 123']
@@ -144,6 +144,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
       expect(page).to have_css('.current-location', text: 'In process')
     end
+
     describe "as home location" do
       before do
         document = SolrDocument.new(
@@ -175,7 +176,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe "mhld" do
-    describe "with matching library/location" do
+    context "with matching library/location" do
       before do
         document = SolrDocument.new(
           id: '123',
@@ -185,7 +186,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         render_inline(described_class.new(document:))
       end
 
-      it "should include the matched MHLD" do
+      it "includes the matched MHLD" do
         expect(page).to have_css('.panel-library-location a', count: 3)
         expect(page).to have_css('h3', text: "Green Library", count: 1)
         expect(page).to have_css('.location-name a', text: "Stacks", count: 1)
@@ -196,7 +197,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
     end
 
-    describe "that has no matching library/location" do
+    context "with no matching library/location" do
       before do
         document = SolrDocument.new(
           id: '123',
@@ -205,7 +206,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         render_inline(described_class.new(document:))
       end
 
-      it "should invoke a library block w/ the appropriate mhld data" do
+      it "invokes a library block w/ the appropriate mhld data" do
         expect(page).to have_css('.panel-library-location a', count: 1)
         expect(page).to have_css('h3', text: "Green Library")
         expect(page).to have_css('.location-name', text: "Stacks")

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Searchworks::Document::Sms" do
+RSpec.describe "Searchworks::Document::Sms" do
   let(:doc) {
     SolrDocument.new(
       preferred_barcode: '12345',
@@ -20,11 +20,11 @@ describe "Searchworks::Document::Sms" do
     SolrDocument.use_extension(Searchworks::Document::Sms)
   end
 
-  it "should return preferred call number with its library and location" do
+  it "returns preferred call number with its library and location" do
     sms_text = doc.to_sms_text
     expect(sms_text).to match(/callnumber2/)
     expect(sms_text).to match(/Green Library - Stacks/)
-    expect(sms_text).not_to match(/Biology Library (Falconer) - Stacks/)
+    expect(sms_text).not_to match(/Biology/)
   end
 
   context 'eds document' do

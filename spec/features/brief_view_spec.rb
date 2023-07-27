@@ -1,6 +1,6 @@
 require "spec_helper"
 
-feature "Brief View" do
+RSpec.feature "Brief View" do
   scenario "Catalog search results", js: true do
     visit search_catalog_path f: { format: ["Book"] }
     page.find('#view-type-dropdown button.dropdown-toggle').click

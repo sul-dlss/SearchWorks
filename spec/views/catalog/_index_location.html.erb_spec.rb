@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "catalog/_index_location" do
+RSpec.describe "catalog/_index_location" do
   include MarcMetadataFixtures
   describe "accessibility" do
     before do
@@ -44,8 +44,8 @@ describe "catalog/_index_location" do
       render
     end
 
-    it 'should have the request link at the location level' do
-      expect(rendered).to have_css('tbody th strong', text: /Locked stacks/)
+    it 'has the request link at the location level' do
+      expect(rendered).to have_css('tbody th strong', text: /Locked stacks: Ask at circulation desk/)
       expect(rendered).to have_css('tbody td a', text: "Request")
     end
   end
@@ -181,7 +181,7 @@ describe "catalog/_index_location" do
       it "should not display the location" do
         expect(rendered).to have_css('tbody tr', count: 2)
         expect(rendered).not_to have_content('library has')
-        expect(rendered).not_to have_content('Current Periodicals')
+        expect(rendered).not_to have_content('Current periodicals')
       end
     end
   end
