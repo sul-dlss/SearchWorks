@@ -1054,6 +1054,4 @@ module Constants
       text: 'Collections are moving, which may affect access. Request materials as early as possible. Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.'
     }
   }.freeze
-
-  REQUEST_ONSITE_LOCATIONS = %w(PAGE-AR PAGE-AS PAGE-EA PAGE-ED PAGE-EN PAGE-ES PAGE-GR PAGE-HA PAGE-HP PAGE-HV PAGE-LW PAGE-MA PAGE-MD PAGE-MU PAGE-RM PAGE-SP)
 end
