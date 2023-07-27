@@ -9,7 +9,8 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
   let(:item) do
-    instance_double(Holdings::Item, document:, library:, home_location: location, current_location: double(code: nil), circulates?: true)
+    instance_double(Holdings::Item, document:, library:, home_location: location,
+                                    current_location: instance_double(Holdings::Location, code: nil), circulates?: true)
   end
 
   subject(:page) { render_inline(component) }
@@ -105,6 +106,46 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
       end
 
       it { is_expected.not_to have_link 'Request' }
+    end
+  end
+
+  context 'with a Folio item' do
+    let(:policy) { instance_double(ItemRequestLinkPolicy, show?: true) }
+    let(:item) do
+      instance_double(Holdings::Item, document:, library:, effective_location:, home_location: location, barcode: 13_333_333_333_333, folio_item?: true)
+    end
+
+    before do
+      allow(ItemRequestLinkPolicy).to receive(:new).and_return(policy)
+    end
+
+    context 'with an onsite page location' do
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            'id' => 'f155b1bc-7d19-402a-8412-431988b12cc3',
+            'code' => 'SAL3-PAGE-AS',
+            'name' => 'Off-campus storage',
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+              'code' => 'SAL3',
+              'name' => 'Stanford Auxiliary Library 3'
+            }
+          }
+        )
+      end
+
+      it { is_expected.to have_link 'Request on-site access' }
     end
   end
 end
