@@ -17,7 +17,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   describe "#show_item_level_request_link?" do
     context "with a non-circulating item type" do
       let(:item) do
-        Holdings::Item.new("123 -|- GREEN -|- STACKS -|- -|- REF -|-")
+        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- -|- REF -|-")
       end
 
       it { is_expected.not_to have_link 'Request' }
@@ -25,7 +25,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with an item on course reserve' do
       let(:item) do
-        Holdings::Item.new(
+        Holdings::Item.from_item_display_string(
           '1234 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC123 -|- -|- -|- -|- course_id -|- reserve_desk -|- loan_period'
         )
       end
@@ -35,7 +35,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context "with MEDIA-MTXT items" do
       let(:item) do
-        Holdings::Item.new('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- ')
+        Holdings::Item.from_item_display_string('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- ')
       end
 
       it { is_expected.not_to have_link 'Request' }
@@ -43,7 +43,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     describe 'ON-ORDER items' do
       let(:item) do
-        Holdings::Item.new("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- STKS-MONO")
+        Holdings::Item.from_item_display_string("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- STKS-MONO")
       end
 
       it { is_expected.not_to have_link 'Request' }
@@ -52,7 +52,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
     describe "current locations" do
       context 'with -LOAN current locations' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO", document:)
         end
 
         it "should require -LOAN current locations to be requested" do
@@ -62,7 +62,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a SEE-LOAN current location' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO", document:)
         end
 
         it { is_expected.not_to have_link 'Request' }
@@ -70,7 +70,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of ON-ORDER' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -78,7 +78,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of MISSING' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- MISSING -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- MISSING -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -86,7 +86,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with a current location of NEWBOOKS' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- NEWBOOKS -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- NEWBOOKS -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -94,7 +94,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with an "unavailable" current location' do
         let(:item) do
-          Holdings::Item.new("123 -|- GREEN -|- STACKS -|- INTRANSIT -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- INTRANSIT -|- STKS-MONO", document:)
         end
 
         it { is_expected.to have_link 'Request' }
@@ -102,7 +102,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       context 'with SPEC-COLL material (that will have a location-level link)' do
         let(:item) do
-          Holdings::Item.new("123 -|- SPEC-COLL -|- UARCH-30 -|- ANYWHERE -|- STKS-MONO", document:)
+          Holdings::Item.from_item_display_string("123 -|- SPEC-COLL -|- UARCH-30 -|- ANYWHERE -|- STKS-MONO", document:)
         end
 
         it { is_expected.not_to have_link 'Request' }

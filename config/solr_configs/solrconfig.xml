@@ -1054,7 +1054,8 @@
         uniform_title_display_struct:[json],
         schema_dot_org_struct:[json],
         holdings_json_struct:[json],
-        collection_struct:[json]
+        collection_struct:[json],
+        item_display_struct:[json]
       </str>
     </lst>
   </requestHandler>
@@ -1072,7 +1073,8 @@
         uniform_title_display_struct:[json],
         schema_dot_org_struct:[json],
         holdings_json_struct:[json],
-        collection_struct:[json]
+        collection_struct:[json],
+        item_display_struct:[json]
       </str>
       <int name="rows">1</int>
       <str name="q">{!raw f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
