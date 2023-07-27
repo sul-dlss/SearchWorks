@@ -214,7 +214,7 @@ class Holdings
     private
 
     def internet_resource?
-      home_location == 'INTERNET'
+      home_location == 'INTERNET' || type == 'ONLINE'
     end
 
     def eresv?
