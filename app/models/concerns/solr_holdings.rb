@@ -1,4 +1,10 @@
 module SolrHoldings
+  extend ActiveSupport::Concern
+
+  included do
+    attribute :item_display, Blacklight::Types::Array, :item_display
+  end
+
   def holdings(live: false)
     @holdings ||= {}
     @holdings[live] ||= Holdings.new(live ? live_lookup_items : items, mhld)
@@ -13,10 +19,8 @@ module SolrHoldings
   end
 
   def items
-    return [] if self[:item_display].blank?
-
-    @items ||= self[:item_display].map do |item_display|
-      Holdings::Item.new(item_display, document: self)
+    @items ||= item_display.map do |item|
+      Holdings::Item.new(item, document: self)
     end.sort_by(&:full_shelfkey)
   end
 
