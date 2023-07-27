@@ -13,7 +13,7 @@ module Folio
     # @param [String] location_code the Symphony location
     # @return [String] the Folio location code
     def self.for(library_code:, location_code:)
-      instance.data.dig(library_code, location_code)
+      instance.data.dig(library_code, location_code) || location_code
     end
 
     def data
