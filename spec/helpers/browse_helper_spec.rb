@@ -3,8 +3,8 @@ require "spec_helper"
 describe BrowseHelper do
   describe "#link_to_callnumber_browse" do
     let(:document) { SolrDocument.new(id: 'abc123', preferred_barcode: '123') }
-    let(:preferred_item) { Holdings::Item.new('123 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- preferred-callnumber') }
-    let(:item) { Holdings::Item.new('321 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber') }
+    let(:preferred_item) { Holdings::Item.from_item_display_string('123 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- preferred-callnumber') }
+    let(:item) { Holdings::Item.from_item_display_string('321 -|- abc -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber') }
 
     it "should link to the callnumber" do
       expect(link_to_callnumber_browse(document, item)).to have_css('button', text: 'callnumber')

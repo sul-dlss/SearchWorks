@@ -4,7 +4,7 @@ describe Holdings::Location do
   include Marc856Fixtures
   describe '#name' do
     let(:location_code) { "LOCKED-STK" }
-    let(:callnumber) { Holdings::Item.new("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
+    let(:callnumber) { Holdings::Item.from_item_display_string("barcode -|- GREEN -|- #{location_code} -|- -|- -|-") }
 
     it "should translate the location code" do
       expect(Holdings::Location.new(location_code).name).to eq "Locked stacks: Ask at circulation desk"
@@ -13,7 +13,7 @@ describe Holdings::Location do
 
   describe "#present?" do
     let(:location_no_items_or_mhld) {  Holdings::Location.new("STACKS") }
-    let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Item.new('barcode -|- GREEN -|- STACKS -|-')]) }
+    let(:location_with_items) { Holdings::Location.new("STACKS", [Holdings::Item.from_item_display_string('barcode -|- GREEN -|- STACKS -|-')]) }
     let(:location_with_mhlds) { Holdings::Location.new("STACKS", [], ['something']) }
 
     it "should be true when there are items" do
@@ -47,7 +47,7 @@ describe Holdings::Location do
   describe 'external locations' do
     let(:external_location) {
       Holdings::Location.new('STACKS', [
-        Holdings::Item.new("LL12345 -|- LANE-MED -|- STACKS -|-  -|-  -|- ABC 321 -|-")
+        Holdings::Item.from_item_display_string("LL12345 -|- LANE-MED -|- STACKS -|-  -|-  -|- ABC 321 -|-")
       ])
     }
     let(:non_external_location) {
@@ -76,9 +76,9 @@ describe Holdings::Location do
 
   describe "sorting items" do
     let(:callnumbers) { [
-      Holdings::Item.new("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),
-      Holdings::Item.new("barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- "),
-      Holdings::Item.new("barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ")
+      Holdings::Item.from_item_display_string("barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- "),
+      Holdings::Item.from_item_display_string("barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- "),
+      Holdings::Item.from_item_display_string("barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ")
     ] }
     let(:location) { Holdings::Location.new("STACKS", callnumbers) }
 
@@ -102,9 +102,9 @@ describe Holdings::Location do
   describe '#as_json' do
     let(:callnumbers) do
       [
-        Holdings::Item.new('barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- '),
-        Holdings::Item.new('barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- '),
-        Holdings::Item.new('barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ')
+        Holdings::Item.from_item_display_string('barcode1 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 321 -|- ABC+321 -|- CBA321 -|- ABC 321 -|- 3 -|- '),
+        Holdings::Item.from_item_display_string('barcode2 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 210 -|- ABC+210 -|- CBA210 -|- ABC 210 -|- 2 -|- '),
+        Holdings::Item.from_item_display_string('barcode3 -|- GREEN -|- STACKS -|-  -|-  -|- ABC 100 -|- ABC+100 -|- CBA100 -|- ABC 100 -|- 1 -|- ')
       ]
     end
     let(:as_json) { Holdings::Location.new('STACKS', callnumbers).as_json }

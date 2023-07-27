@@ -7,19 +7,41 @@ class Holdings
   # 9 full shelfkey -|- 10 public note -|- 11 callnumber type -|- 12 course id -|- 13 reserve desk -|- 14 loan period
   class Item
     attr_writer :current_location, :status
-    attr_reader :document
+    attr_reader :document, :item_display
     attr_accessor :due_date
 
     delegate :loan_type, :material_type, :effective_location, to: :folio_item, allow_nil: true
 
+    def self.from_item_display_string(item_display, document: nil)
+      values = item_display.split('-|-').map(&:strip)
+      hash = {
+        barcode: values[0],
+        library: values[1],
+        home_location: values[2],
+        current_location: values[3],
+        type: values[4],
+        lopped_callnumber: values[5],
+        shelfkey: values[6],
+        reverse_shelfkey: values[7],
+        callnumber: values[8],
+        full_shelfkey: values[9],
+        note: values[10],
+        scheme: values[11],
+        course_id: values[12],
+        reserve_desk: values[13],
+        loan_period: values[14]
+      }
+      new(hash, document:)
+    end
+
     def initialize(holding_info, document: nil)
-      @holding_info = holding_info
+      @item_display = holding_info.with_indifferent_access
       @document = document
     end
 
     def present?
-      @holding_info.present? &&
-        !(item_display[1] == 'SUL' && (internet_resource? || eresv?)) &&
+      @item_display.values.any?(&:present?) &&
+        !(item_display[:library] == 'SUL' && (internet_resource? || eresv?)) &&
         !bound_with?
     end
 
@@ -36,7 +58,7 @@ class Holdings
     end
 
     def barcode
-      item_display[0]
+      item_display[:barcode]
     end
 
     def library
@@ -51,34 +73,34 @@ class Holdings
       if treat_current_location_as_home_location?
         current_location.code
       else
-        item_display[2]
+        item_display[:home_location]
       end
     end
 
     def current_location
-      Holdings::Location.new(item_display[3])
+      Holdings::Location.new(item_display[:current_location])
     end
 
     def type
-      item_display[4]
+      item_display[:type]
     end
 
     def truncated_callnumber
-      item_display[5]
+      item_display[:lopped_callnumber]
     end
 
     def shelfkey
-      item_display[6]
+      item_display[:shelfkey]
     end
 
     def reverse_shelfkey
-      item_display[7]
+      item_display[:reverse_shelfkey]
     end
 
     def callnumber
       case
-      when item_display[8].present?
-        item_display[8]
+      when item_display[:callnumber].present?
+        item_display[:callnumber]
       when internet_resource?
         'eResource'
       else
@@ -87,27 +109,27 @@ class Holdings
     end
 
     def full_shelfkey
-      item_display[9]
+      item_display[:full_shelfkey]
     end
 
     def public_note
-      item_display[10].gsub('.PUBLIC.', '').strip if item_display[10]
+      item_display[:note]&.gsub('.PUBLIC.', '')&.strip
     end
 
     def callnumber_type
-      item_display[11]
+      item_display[:scheme]
     end
 
     def course_id
-      item_display[12]
+      item_display[:course_id]
     end
 
     def reserve_desk
-      item_display[13]
+      item_display[:reserve_desk]
     end
 
     def loan_period
-      item_display[14]
+      item_display[:loan_period]
     end
 
     def status
@@ -215,19 +237,15 @@ class Holdings
     end
 
     def standard_or_zombie_library
-      if item_display[1].blank? || %w(SUL PHYSICS).include?(item_display[1])
+      if item_display[:library].blank? || %w(SUL PHYSICS).include?(item_display[:library])
         'ZOMBIE'
       else
-        item_display[1]
+        item_display[:library]
       end
     end
 
     def current_location_is_reserve_desk?
       Constants::RESERVE_DESKS.keys.include?(current_location.code)
-    end
-
-    def item_display
-      @item_display ||= @holding_info.split('-|-').map(&:strip)
     end
 
     def circulating_item_types
@@ -240,7 +258,7 @@ class Holdings
     end
 
     def folio_item
-      @folio_item ||= document&.folio_items&.find { |item| item.barcode == barcode }
+      @folio_item ||= document&.folio_items&.find { |item| item.id == item_display[:id] || item.barcode == barcode }
     end
 
     def folio_item_circulates?
