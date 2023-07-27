@@ -258,7 +258,7 @@ class Holdings
     end
 
     def folio_item
-      @folio_item ||= document&.folio_items&.find { |item| item.barcode == barcode }
+      @folio_item ||= document&.folio_items&.find { |item| item.id == item_display[:id] || item.barcode == barcode }
     end
 
     def folio_item_circulates?
