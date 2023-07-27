@@ -48,7 +48,7 @@ describe LiveLookup::Folio do
     end
 
     it 'has a due date' do
-      expect(folio_live_lookup.as_json.first['due_date']).to eq '11/03/2023'
+      expect(folio_live_lookup.as_json.first['due_date']).to eq '11/02/2023'
     end
   end
 

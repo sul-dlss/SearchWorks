@@ -55,7 +55,7 @@ class LiveLookup
 
     def due_date(item)
       date = item.fetch('dueDate', nil)
-      Date.parse(date).strftime('%m/%d/%Y') if date
+      date&.to_time&.in_time_zone&.strftime('%m/%d/%Y')
     end
 
     def available?(item)
