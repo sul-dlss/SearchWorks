@@ -824,6 +824,42 @@
     }
   },
   {
+    "id": "80998a5c-10ae-4eac-82da-1e5aa5df4570",
+    "name": "1year-norenew-7daygrace",
+    "description": "Loan policy for SUL guest patron group.",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 365,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "requestManagement": {
+      "recalls": {
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 7,
+          "intervalId": "Days"
+        }
+      }
+    },
+    "metadata": {
+      "createdDate": "2023-07-26T17:55:51.341+00:00",
+      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
+      "updatedDate": "2023-07-26T17:56:45.336+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    }
+  },
+  {
     "id": "814a3bd6-2a06-437f-ae34-f7ed39cbfc92",
     "name": "1day-4renew-15mingrace",
     "description": "Loan policy for Art Library locked stacks materials.",

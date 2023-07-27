@@ -8,6 +8,7 @@ any,any,any,,,RUMSEY-MAP or SPEC-COLL or HILA or CLASSICS,,No loan,No requests a
 any,any,any,,,BUSINESS,BUS-ARCH or BUS-COMPF or BUS-LOCKED or BUS-REF or BUS-TP or BUS-TEMP,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-PERMRES,2hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
+any,any,2-hour reserve,,,,LAW-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$150 lost fee
 ,any,4-hour reserve,,SUL,,,4hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,2-hour reserve,,SUL,,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,3-day reserve,,SUL,,,3day-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
@@ -224,7 +225,7 @@ faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LO
 ,book,,,,,ART-NEWBOOK,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$150 lost fee
 ,book,,,,,ART-REF or ART-REF-FOLIO,7day-norenew-3daygrace,No requests allowed,Short Term Notices,No fines,$250 lost fee
 ,book,,,,,ART-LOCKED-MEDIUM or ART-LOCKED-LARGE or ART-LOCKED-OVERSIZE or ART-LOCKED-SMALL or ART-LOCKED-LARGE-R or ART-LOCKED-MEDIUM-R or ART-LOCKED-OVERSIZE-R or ART-LOCKED-SMALL-R,No loan,Allow paging,Short Term Notices,No fines,$800 lost fee
-,book,,,,,ART-FOLIO or ART-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
+,book,,,,,ART-FOLIO or ART-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 ,book,,,,,ARS-INPROCESS,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-SPECIALPROJECTS,No loan,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
 ,book,,,,,ARS-REF,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee

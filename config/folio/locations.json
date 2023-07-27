@@ -3132,6 +3132,31 @@
     }
   },
   {
+    "id": "3798763e-27bc-4a1e-a05a-5fb49bc9dcec",
+    "name": "Eng Maker Bar",
+    "code": "ENG-MAKERBAR",
+    "discoveryDisplayName": "Engineering Maker Bar",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
+    "details": {
+    },
+    "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
+    "servicePointIds": [
+      "d0db91bf-90e7-4036-8e91-721001cf52fc"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-26T23:47:20.508+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-26T23:47:20.508+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "37ba49c7-7122-4738-a120-58cf6df77f91",
     "name": "SUL TS CC Book Jacket",
     "code": "SUL-TS-CC-BOOKJACKET",
