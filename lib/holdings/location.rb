@@ -3,8 +3,8 @@ class Holdings
     attr_reader :code, :items, :mhld
 
     # Don't send a notice to Honeybadger if we encounter one of these codes, they are expected, because they
-    # didn't migrate to Folio as locations. They are item status in Folio.
-    SKIP_NOTIFY_CODES = %w[BINDERY INPROCESS].freeze
+    # didn't migrate to Folio as locations. They are item status in Folio. The ASK@LANE will not be in Folio.
+    SKIP_NOTIFY_CODES = %w[INPROCESS ON-ORDER BINDERY B&F-HOLD ASK@LANE].freeze
 
     # @params [String] code the location code (e.g. 'STACKS')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
