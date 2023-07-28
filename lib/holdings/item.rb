@@ -30,7 +30,7 @@ class Holdings
         course_id: values[12],
         reserve_desk: values[13],
         loan_period: values[14]
-      }
+      }.compact_blank
       new(hash, document:)
     end
 

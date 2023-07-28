@@ -39,7 +39,7 @@ class ItemRequestLinkPolicy
   end
 
   def current_location_is_always_requestable?
-    return true if current_location.end_with?('-LOAN') && current_location != "SEE-LOAN"
+    return true if current_location&.end_with?('-LOAN') && current_location != "SEE-LOAN"
 
     (Settings.requestable_current_locations[library] || Settings.requestable_current_locations.default).include?(current_location) ||
       (Settings.unavailable_current_locations[library] || Settings.unavailable_current_locations.default).include?(current_location)
