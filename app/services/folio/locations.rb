@@ -10,21 +10,11 @@ module Folio
     # @param [String] code the Folio location code
     # @return [String] the Folio location label
     def self.label(code:)
-      instance.data[code]
+      instance.data.dig(code, 'discoveryDisplayName')
     end
 
     def data
-      @data ||= load_map
-    end
-
-    def load_map
-      JSON.parse(file_contents).each_with_object({}) do |(location), hash|
-        hash[location.fetch('code')] = location.fetch('discoveryDisplayName')
-      end
-    end
-
-    def file_contents
-      Rails.root.join("config/folio/locations.json").read
+      @data ||= Folio::Types.locations.values.index_by { |v| v['code'] }
     end
   end
 end
