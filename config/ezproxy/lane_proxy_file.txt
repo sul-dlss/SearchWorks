@@ -1210,7 +1210,6 @@ openlibrary.org
 openres.ersjournals.com
 openscience.bmj.com
 openurl.ac.uk
-openurl.ingenta.com
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
 opil.ouplaw.com
