@@ -22,13 +22,11 @@ class Holdings
         end.map do |_, items|
           location_code = items.first.home_location
           mhlds = mhld.select { |x| x.location == location_code }
-          Holdings::Location.new(location_code, items, mhlds,
-                                 folio_code: Folio::LocationsMap.for(library_code: code, location_code:))
+          Holdings::Location.new(location_code, items, mhlds, library_code: code)
         end
 
         @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |location_code, mhlds|
-          Holdings::Location.new(location_code, [], mhlds,
-                                 folio_code: Folio::LocationsMap.for(library_code: code, location_code:))
+          Holdings::Location.new(location_code, [], mhlds, library_code: code)
         end
 
         @locations.sort_by!(&:sort)
