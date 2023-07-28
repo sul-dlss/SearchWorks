@@ -10057,6 +10057,32 @@
     }
   },
   {
+    "id": "bf11ec11-1343-42e3-ad93-163ce3ec1bf4",
+    "name": "SUL TS Cataloging Shelf",
+    "code": "SUL-TS-CATALOGING-SHELF",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+    },
+    "primaryServicePoint": "0590225b-eea3-4db8-8290-68e99cc898df",
+    "servicePointIds": [
+      "0590225b-eea3-4db8-8290-68e99cc898df",
+      "b6c12686-3adf-4d3d-8f7c-334e971d37ed"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-07-27T20:30:18.270+00:00",
+      "createdByUserId": "4798e9d7-b430-425d-993f-5aabb63a1538",
+      "updatedDate": "2023-07-27T20:31:40.714+00:00",
+      "updatedByUserId": "4798e9d7-b430-425d-993f-5aabb63a1538"
+    }
+  },
+  {
     "id": "bf42be75-fd71-4efc-8167-30fb30512784",
     "name": "Earth Sci Mezzanine",
     "code": "EAR-MEZZANINE",

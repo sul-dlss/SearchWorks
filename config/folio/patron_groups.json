@@ -108,6 +108,18 @@
     }
   },
   {
+    "group": "lane-resident",
+    "desc": "Stanford hospital residents",
+    "id": "97b93741-3299-4526-beb7-9e80a960950c",
+    "expirationOffsetInDays": 365,
+    "metadata": {
+      "createdDate": "2023-07-27T22:16:19.865+00:00",
+      "createdByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f",
+      "updatedDate": "2023-07-27T22:28:24.744+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+    }
+  },
+  {
     "group": "sul-purchased",
     "desc": "SUL Fee borrower",
     "id": "985acbb9-f7a7-4f44-9b34-458c02a78fbc",
@@ -204,13 +216,13 @@
   },
   {
     "group": "lane-hospital staff",
-    "desc": "Stanford hospital staff, residents, fellows",
+    "desc": "Stanford hospital staff, fellows",
     "id": "fe863e32-9b3d-454c-ad6c-8a344846f34b",
     "metadata": {
       "createdDate": "2023-02-09T00:41:00.098+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:41:00.098+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-07-27T22:15:38.229+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   }
 ]
