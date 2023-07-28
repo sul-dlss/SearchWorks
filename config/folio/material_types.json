@@ -95,6 +95,17 @@
     }
   },
   {
+    "id": "5df0f5e3-2e36-4dc7-979c-88705a9103a4",
+    "name": "newspaper",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-07-27T22:52:11.944+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-07-27T22:52:11.944+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "5ee11d91-f7e8-481d-b079-65d708582ccc",
     "name": "dvd",
     "source": "folio",

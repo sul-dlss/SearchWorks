@@ -1,14 +1,14 @@
 [
   {
     "id": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
-    "name": "Stanford Auxiliary Library 1&2",
+    "name": "SAL1&2 (on-campus storage)",
     "code": "SAL",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.137+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.137+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:43:55.294+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
@@ -37,62 +37,62 @@
   },
   {
     "id": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
-    "name": "Art and Architecture",
+    "name": "Art & Architecture Library (Bowes)",
     "code": "ART",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:45.891+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:45.891+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:35:34.742+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "3cb2c120-858c-41f0-90ac-ef5d83ec3ac6",
-    "name": "Classics",
+    "name": "Classics Library",
     "code": "CLASSICS",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.776+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.776+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:35:41.401+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "447337a0-4eeb-4002-94fb-af6e9f1c121b",
-    "name": "Miller Marine Biology",
+    "name": "Marine Biology Library (Miller)",
     "code": "MARINE-BIO",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.522+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.522+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:40:43.567+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
-    "name": "Music",
+    "name": "Music Library",
     "code": "MUSIC",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.023+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.023+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:41:40.748+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "name": "Lane Medical",
+    "name": "Lane Medical Library",
     "code": "LANE",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "metadata": {
       "createdDate": "2023-02-08T23:36:45.199+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:45.199+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:35:22.352+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
@@ -109,62 +109,62 @@
   },
   {
     "id": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
-    "name": "Terman Engineering",
+    "name": "Engineering Library (Terman)",
     "code": "ENG",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.395+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.395+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:44:55.885+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "name": "Robert Crown Law",
+    "name": "Law Library (Crown)",
     "code": "LAW",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "metadata": {
       "createdDate": "2023-02-08T23:36:45.572+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:45.572+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:35:10.639+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "name": "Cubberley Education",
+    "name": "Education Library (Cubberley)",
     "code": "EDUCATION",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:46.652+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:46.652+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:36:12.285+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "name": "Branner Earth Sciences",
+    "name": "Earth Sciences Library (Branner)",
     "code": "EARTH-SCI",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:46.222+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:46.222+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:40:56.882+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
-    "name": "East Asia",
+    "name": "East Asia Library",
     "code": "EAST-ASIA",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:46.771+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:46.771+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:41:19.681+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
@@ -181,74 +181,74 @@
   },
   {
     "id": "c33532fc-f385-4138-9e51-49e03705d103",
-    "name": "Stanford Auxiliary Library - Newark",
+    "name": "SAL Newark (off-campus storage)",
     "code": "SAL-NEWARK",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:48.146+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:48.146+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:38:42.361+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "name": "Stanford Auxiliary Library 3",
+    "name": "SAL3 (off-campus storage)",
     "code": "SAL3",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:47.249+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:47.249+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:42:19.871+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "e5f23316-85ce-440c-886c-eff410f66f26",
-    "name": "Tanner Philosophy",
+    "name": "Philosophy Library (Tanner)",
     "code": "TANNER",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:48.028+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:48.028+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:44:24.800+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
-    "name": "Li & Ma Science",
+    "name": "Science Library (Li and Ma)",
     "code": "SCIENCE",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:46.897+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:46.897+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:36:43.916+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
-    "name": "Business",
+    "name": "Business Library",
     "code": "BUSINESS",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "metadata": {
       "createdDate": "2023-02-08T23:36:44.778+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:44.778+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:34:50.556+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
     "id": "f6b5519e-88d9-413e-924d-9ed96255f72e",
-    "name": "Cecil H. Green",
+    "name": "Green Library",
     "code": "GREEN",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "metadata": {
       "createdDate": "2023-02-08T23:36:46.445+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-02-08T23:36:46.445+00:00",
-      "updatedByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec"
+      "updatedDate": "2023-07-28T01:36:21.742+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
