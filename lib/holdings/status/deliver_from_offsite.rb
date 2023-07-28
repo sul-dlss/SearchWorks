@@ -16,7 +16,7 @@ class Holdings
       end
 
       def deliverable_home_location?
-        @item.home_location.try(:end_with?, '-30') ||
+        @item.home_location&.end_with?('-30') ||
           Constants::DELIVERABLE_LOCATIONS.include?(@item.home_location)
       end
     end
