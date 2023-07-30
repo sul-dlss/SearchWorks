@@ -148,14 +148,14 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
   context 'for Hopkins items' do
     let(:document) do
-      SolrDocument.new(item_display: item_display_field)
+      SolrDocument.new(item_display_struct: item_display_field)
     end
     let(:library) { 'HOPKINS' }
     let(:location) { 'STACKS' }
     let(:items) { [instance_double(Holdings::Item, circulates?: true, current_location: instance_double(Holdings::Location, code: nil), folio_item?: false, document:)] }
     let(:item_display_field) do
       [
-        '361051.. -|- HOPKINS -|- STACKS -|- ...'
+        { barcode: '361051..', library: 'HOPKINS', home_location: 'STACKS' }
       ]
     end
 
@@ -164,7 +164,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     context 'when the item is also available via SFX' do
       let(:document) do
         SolrDocument.new(
-          item_display: item_display_field,
+          item_display_struct: item_display_field,
           marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }]
         )
       end
@@ -176,7 +176,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       let(:document) do
         SolrDocument.new(
           marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true }],
-          item_display: item_display_field
+          item_display_struct: item_display_field
         )
       end
 
@@ -185,7 +185,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'when the item is also available via hathitrust' do
       let(:document) do
-        SolrDocument.new(ht_htid_ssim: 'abc123', ht_access_sim: ['allow'], item_display: item_display_field)
+        SolrDocument.new(ht_htid_ssim: 'abc123', ht_access_sim: ['allow'], item_display_struct: item_display_field)
       end
 
       it { expect(page).not_to have_link }
@@ -194,13 +194,13 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     context 'when the item is also available at another library' do
       let(:item_display_field) do
         [
-          '361051.. -|- HOPKINS -|- STACKS -|- ...',
-          '361052.. -|- GREEN -|- STACKS -|- ...'
+          { barcode: '361051..', library: 'HOPKINS', home_location: 'STACKS' },
+          { barcode: '361052..', library: 'GREEN', home_location: 'STACKS' }
         ]
       end
 
       let(:document) do
-        SolrDocument.new(item_display: item_display_field)
+        SolrDocument.new(item_display_struct: item_display_field)
       end
 
       it { expect(page).not_to have_link }

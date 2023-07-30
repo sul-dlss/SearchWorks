@@ -8,7 +8,7 @@ RSpec.describe Links::Ezproxy do
   describe '#to_proxied_url' do
     context 'SUL record' do
       let(:document) do
-        SolrDocument.new({ item_display: ['barcode -|- SUL'] })
+        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'SUL' }] })
       end
 
       context 'with a url matching a SUL proxied host' do
@@ -53,7 +53,7 @@ RSpec.describe Links::Ezproxy do
 
     context 'LAW record' do
       let(:document) do
-        SolrDocument.new({ item_display: ['barcode -|- LAW'] })
+        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LAW' }] })
       end
 
       context 'with a url matching a LAW proxied host' do
@@ -93,7 +93,7 @@ RSpec.describe Links::Ezproxy do
 
     context 'LANE record' do
       let(:document) do
-        SolrDocument.new({ item_display: ['barcode -|- LANE-MED'] })
+        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }] })
       end
 
       context 'with a url matching a LANE proxied host' do

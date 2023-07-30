@@ -3,5 +3,9 @@
 :title_display: Collection in process
 :format_main_ssim: Map
 :marcxml: <%= marc_382_instrumentation %>
-:item_display:
-  - "123 -|- SPEC-COLL -|- GUNST -|- SPEC-INPRO -|- -|- -|- -|- -|- ABC 123"
+:item_display_struct:
+  - barcode: '123'
+    library: SPEC-COLL
+    home_location: GUNST
+    current_location: SPEC-INPRO
+    callnumber: ABC 123

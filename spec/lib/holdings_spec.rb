@@ -3,15 +3,15 @@ require "spec_helper"
 describe Holdings do
   let(:holdings) {
     Holdings.new(
-      SolrDocument.new(item_display: ['123 -|- abc']).items
+      SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).items
     )
   }
   let(:complex_holdings) {
     Holdings.new(
       SolrDocument.new(
-        item_display: [
-          'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- full-shelfkey -|- -|- LC',
-          'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- full-shelfkey2 -|- -|- INTERNET'
+        item_display_struct: [
+          { barcode: 'barcode', library: 'library', home_location: 'home-location', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: 'full-shelfkey', scheme: 'LC' },
+          { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', current_location: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: 'full-shelfkey2', scheme: 'INTERNET' }
         ]
       ).items
     )
@@ -19,9 +19,9 @@ describe Holdings do
   let(:sortable_holdings) {
     Holdings.new(
       SolrDocument.new(
-        item_display: [
-          'barcode -|- library -|- home-location -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber -|- 999',
-          'barcode2 -|- library2 -|- home-location2 -|- current-location2 -|- type2 -|- truncated_callnumber -|- shelfkey2 -|- reverse-shelfkey2 -|- callnumber2 -|- 111'
+        item_display_struct: [
+          { barcode: 'barcode', library: 'library', home_location: 'home-location', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: '999' },
+          { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', current_location: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: '111' }
         ]
       ).items
     )
@@ -62,10 +62,10 @@ describe Holdings do
     let(:libraries) {
       Holdings.new(
         SolrDocument.new(
-          item_display: [
-            'barcode -|- library -|- home-location',
-            'barcode -|- library2 -|- home-location',
-            'barcode -|- library -|- home-location'
+          item_display_struct: [
+            { barcode: 'barcode', library: 'library', home_location: 'home-location' },
+            { barcode: 'barcode', library: 'library2', home_location: 'home-location' },
+            { barcode: 'barcode', library: 'library', home_location: 'home-location' }
           ]
         ).items
       )
@@ -73,10 +73,10 @@ describe Holdings do
     let(:sortable_libraries) {
       Holdings.new(
         SolrDocument.new(
-          item_display: [
-            'barcode -|- SAL3 -|- home-location',
-            'barcode -|- GREEN -|- home-location',
-            'barcode -|- BIOLOGY -|- home-location'
+          item_display_struct: [
+            { barcode: 'barcode', library: 'SAL3', home_location: 'home-location' },
+            { barcode: 'barcode', library: 'GREEN', home_location: 'home-location' },
+            { barcode: 'barcode', library: 'BIOLOGY', home_location: 'home-location' }
           ]
         ).items
       )
@@ -118,7 +118,9 @@ describe Holdings do
   describe "mhld" do
     let(:holdings_doc) {
       SolrDocument.new(
-        item_display: ['barcode -|- GREEN -|- STACKS -|- current-location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse-shelfkey -|- callnumber'],
+        item_display_struct: [
+          { barcode: 'barcode', library: 'GREEN', home_location: 'STACKS', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber' }
+        ],
         mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
       )
     }

@@ -12,17 +12,11 @@ module SolrHoldings
     end
   end
 
-  # Items can come from either item_display_struct (preferred) or item_display.
   def items
-    return [] if self[:item_display].blank? && self[:item_display_struct].blank?
+    return [] if self[:item_display_struct].blank?
 
     @items ||= self[:item_display_struct]&.map do |item_display|
       Holdings::Item.new(item_display, document: self)
-    end&.sort_by(&:full_shelfkey)
-
-    # legacy implementation until everything that needs it has a item_display_struct
-    @items ||= self[:item_display]&.map do |item_display|
-      Holdings::Item.from_item_display_string(item_display, document: self)
     end&.sort_by(&:full_shelfkey)
 
     @items ||= []

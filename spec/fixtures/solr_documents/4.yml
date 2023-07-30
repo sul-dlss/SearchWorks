@@ -14,10 +14,19 @@
 :marcxml: <%= marc_characteristics_fixture %>
 :access_facet: At the Library
 :building_facet: Hoover Library
-:item_display:
-  - "123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-"
-  - "456 -|- PHYSICS -|- PHYSTEMP -|- -|- -|- -|- -|- -|- DEF -|-"
-  - "789 -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- -|- -|- GHI -|-"
+:item_display_struct:
+  - barcode: '123'
+    library: SUL
+    home_location: STACKS
+    callnumber: ABC
+  - barcode: '456'
+    library: PHYSICS
+    home_location: PHYSTEMP
+    callnumber: DEF
+  - barcode: '789'
+    home_location: ON-ORDER
+    current_location: ON-ORDER
+    callnumber: GHI
 :characteristics_ssim:
   - 'Sound: digital; optical; surround; stereo; Dolby.'
   - 'Video: NTSC. Digital: video file; DVD video; Region 1.'

@@ -6,7 +6,9 @@ describe RequestLinkHelper do
   let(:document) do
     SolrDocument.new(
       id: '1234',
-      item_display: ['barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber']
+      item_display_struct: [
+        { barcode: 'barcode', library: 'library', home_location: 'home-location', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber' }
+      ]
     )
   end
 

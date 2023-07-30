@@ -10,7 +10,9 @@ describe "preview/_show_mods" do
     modsxml: mods_everything,
     file_id: ["123"],
     display_type: ["image"],
-    item_display: ["123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"],
+    item_display_struct: [
+      { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+    ],
     isbn_display: [123],
     imprint_display: ["Imprint Statement"],
     author_struct: [

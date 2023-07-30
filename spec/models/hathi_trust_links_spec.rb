@@ -85,9 +85,9 @@ describe HathiTrustLinks do
 
     context 'when the document has many holdings' do
       before do
-        document_data[:item_display] = [
-          '123 -|- GREEN -|- STACKS -|-  -|-  -|-  -|-  -|-  -|- AB 123 -|- ',
-          '321 -|- GREEN -|- STACKS -|-  -|-  -|-  -|-  -|-  -|- AB 321 -|- '
+        document_data[:item_display_struct] = [
+          { barcode: '123', library: 'GREEN', location: 'STACKS', callnumber: 'AB 123' },
+          { barcode: '321', library: 'GREEN', location: 'STACKS', callnumber: 'AB 321' }
         ]
       end
 
@@ -98,8 +98,8 @@ describe HathiTrustLinks do
 
     context 'when the document only has one holding' do
       before do
-        document_data[:item_display] = [
-          '123 -|- GREEN -|- STACKS -|-  -|-  -|-  -|-  -|-  -|- AB 123 -|- '
+        document_data[:item_display_struct] = [
+          { barcode: '123', library: 'GREEN', location: 'STACKS', callnumber: 'AB 123' }
         ]
       end
 

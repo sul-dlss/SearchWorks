@@ -7,8 +7,8 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
           ]
         )
       )
@@ -36,8 +36,8 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
           ]
         )
       )
@@ -55,8 +55,8 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'
+          item_display_struct: [
+            { barcode: '123', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 123' }
           ]
         )
       )
@@ -73,9 +73,9 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
-            '321 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321'
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
+            { barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
           ]
         )
       )
@@ -95,9 +95,9 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
-            '456 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
+            { barcode: '456', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 456' }
           ]
         )
       )
@@ -117,7 +117,9 @@ RSpec.describe "catalog/_index_location" do
       allow(view).to receive(:document).and_return(
         SolrDocument.new(
           id: '123',
-          item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
+          item_display_struct: [
+            { barcode: '1234', library: 'SAL3', home_location: 'SEE-OTHER', callnumber: 'ABC 123' }
+          ],
           marcxml: linked_ckey_fixture
         )
       )
@@ -138,7 +140,9 @@ RSpec.describe "catalog/_index_location" do
       before do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
-          item_display: ['321 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
+          item_display_struct: [
+            { barcode: '321', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+          ],
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
         ))
         render
@@ -172,7 +176,9 @@ RSpec.describe "catalog/_index_location" do
       before do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123'],
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+          ],
           mhld_display: ['GREEN -|- CURRENTPER -|- -|- library has -|-']
         ))
         render
@@ -193,9 +199,9 @@ RSpec.describe "catalog/_index_location" do
           allow(view).to receive(:document).and_return(
             SolrDocument.new(
               id: '123',
-              item_display: [
-                '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123',
-                '456 -|- GREEN -|- LOCKED-STK -|- ON-ORDER -|- STKS-MONO -|- -|- -|- -|- ABC 456'
+              item_display_struct: [
+                { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', callnumber: 'ABC 123' },
+                { barcode: '456', library: 'GREEN', home_location: 'LOCKED-STK', current_location: 'ON-ORDER', type: 'STKS-MONO', callnumber: 'ABC 456' }
               ]
             )
           )

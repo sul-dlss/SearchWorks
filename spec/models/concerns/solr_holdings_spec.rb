@@ -12,26 +12,26 @@ RSpec.describe SolrHoldings do
     let(:preferred) {
       SolrDocument.new(
         preferred_barcode: '12345',
-        item_display: [
-          '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-          '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
+        item_display_struct: [
+          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }
     let(:bad_preferred) {
       SolrDocument.new(
         preferred_barcode: 'does-not-exist',
-        item_display: [
-          '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-          '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
+        item_display_struct: [
+          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }
     let(:no_preferred) {
       SolrDocument.new(
-        item_display: [
-          '54321 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber1 -|- 1',
-          '12345 -|- GREEN -|- STACKS -|-  -|- -|- -|- -|- -|- callnumber2 -|- 2'
+        item_display_struct: [
+          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }

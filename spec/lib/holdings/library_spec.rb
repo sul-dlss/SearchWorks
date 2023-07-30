@@ -30,9 +30,9 @@ RSpec.describe Holdings::Library do
 
   describe "#locations" do
     let(:items) { [
-      Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc2 -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- ")
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc' }),
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc2' }),
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc' })
     ] }
 
     let(:locations) { Holdings::Library.new("GREEN", items).locations }
@@ -50,9 +50,9 @@ RSpec.describe Holdings::Library do
 
       let(:items) do
         [
-          Holdings::Item.from_item_display_string("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
-          Holdings::Item.from_item_display_string("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
-          Holdings::Item.from_item_display_string("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
+          Holdings::Item.new({ barcode: 'barcode1', library: 'SPEC-COLL', home_location: 'MSS-30' }),
+          Holdings::Item.new({ barcode: 'barcode2', library: 'SPEC-COLL', home_location: 'MANUSCRIPT' }),
+          Holdings::Item.new({ barcode: 'barcode3', library: 'SPEC-COLL', home_location: 'MSS-30' })
         ]
       end
 
@@ -67,13 +67,11 @@ RSpec.describe Holdings::Library do
 
     describe 'sorting' do
       let(:locations) { Holdings::Library.new("GREEN", items).locations }
-      let(:items) do
-        [
-          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- SSRC-DOCS -|- "),
-          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- STACKS -|- "),
-          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- CURRENTPER -|- ")
-        ]
-      end
+      let(:items) { [
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'SSRC-DOCS' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'CURRENTPER' })
+      ] }
 
       it "sorts locations alpha by name" do
         expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
@@ -102,9 +100,9 @@ RSpec.describe Holdings::Library do
 
   describe "#present?" do
     let(:callnumbers) { [
-      Holdings::Item.from_item_display_string(""),
-      Holdings::Item.from_item_display_string(""),
-      Holdings::Item.from_item_display_string("")
+      Holdings::Item.new({}),
+      Holdings::Item.new({}),
+      Holdings::Item.new({})
     ] }
     let(:library) { Holdings::Library.new("GREEN", callnumbers) }
 
@@ -136,9 +134,12 @@ RSpec.describe Holdings::Library do
   describe '#as_json' do
     let(:callnumbers) do
       [
-        Holdings::Item.from_item_display_string('barcode -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
-        Holdings::Item.from_item_display_string('barcode2 -|- library -|- home_location2 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type'),
-        Holdings::Item.from_item_display_string('barcode3 -|- library -|- home_location3 -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber -|- full_shelfkey -|- public_note -|- callnumber_type')
+        Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+                             public_note: 'public_note', callnumber_type: 'callnumber_type' }),
+        Holdings::Item.new({ barcode: 'barcode2', library: 'library', home_location: 'home_location2', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+                             public_note: 'public_note', callnumber_type: 'callnumber_type' }),
+        Holdings::Item.new({ barcode: 'barcode3', library: 'library', home_location: 'home_location3', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+                             public_note: 'public_note', callnumber_type: 'callnumber_type' })
       ]
     end
     let(:as_json) { Holdings::Library.new('GREEN', callnumbers).as_json }

@@ -17,7 +17,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context "with a non-circulating item type" do
     let(:item) do
-      Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- -|- REF -|-")
+      Holdings::Item.new({ barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'REF' })
     end
 
     it { is_expected.not_to have_link 'Request' }
@@ -25,9 +25,15 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context 'with an item on course reserve' do
     let(:item) do
-      Holdings::Item.from_item_display_string(
-        '1234 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC123 -|- -|- -|- -|- course_id -|- reserve_desk -|- loan_period'
-      )
+      Holdings::Item.new({
+                           barcode: '1234',
+                           library: 'GREEN',
+                           home_location: 'STACKS',
+                           callnumber: 'ABC123',
+                           course_id: 'course_id',
+                           reserve_desk: 'reserve_desk',
+                           loan_period: 'loan_period'
+                         })
     end
 
     it { is_expected.not_to have_link 'Request' }
@@ -35,7 +41,11 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context "with MEDIA-MTXT items" do
     let(:item) do
-      Holdings::Item.from_item_display_string('123 -|- GREEN -|- MEDIA-MTXT -|- -|- -|- ')
+      Holdings::Item.new({
+                           barcode: '123',
+                           library: 'GREEN',
+                           home_location: 'MEDIA-MTXT'
+                         })
     end
 
     it { is_expected.not_to have_link 'Request' }
@@ -43,7 +53,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   describe 'ON-ORDER items' do
     let(:item) do
-      Holdings::Item.from_item_display_string("123 -|- SPEC-COLL -|- STACKS -|- ON-ORDER -|- STKS-MONO")
+      Holdings::Item.new({
+                           barcode: '123',
+                           library: 'SPEC-COLL',
+                           home_location: 'STACKS',
+                           current_location: 'ON-ORDER',
+                           type: 'STKS-MONO'
+                         })
     end
 
     it { is_expected.not_to have_link 'Request' }
@@ -52,7 +68,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   describe "current locations" do
     context 'with -LOAN current locations' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- SOMETHING-LOAN -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'SOMETHING-LOAN',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it "should require -LOAN current locations to be requested" do
@@ -62,7 +84,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with a SEE-LOAN current location' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- SEE-LOAN -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'SEE-LOAN',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.not_to have_link 'Request' }
@@ -70,7 +98,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with a current location of ON-ORDER' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'ON-ORDER',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.to have_link 'Request' }
@@ -78,7 +112,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with a current location of MISSING' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- MISSING -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'MISSING',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.to have_link 'Request' }
@@ -86,7 +126,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with a current location of NEWBOOKS' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- NEWBOOKS -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'NEWBOOKS',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.to have_link 'Request' }
@@ -94,7 +140,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with an "unavailable" current location' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- INTRANSIT -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'INTRANSIT',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.to have_link 'Request' }
@@ -102,7 +154,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'with SPEC-COLL material (that will have a location-level link)' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- SPEC-COLL -|- UARCH-30 -|- ANYWHERE -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'SPEC-COLL',
+                             home_location: 'UARCH-30',
+                             current_location: 'ANYWHERE',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.not_to have_link 'Request' }
@@ -143,7 +201,13 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'on-order without a FOLIO item' do
       let(:item) do
-        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'GREEN',
+                             home_location: 'STACKS',
+                             current_location: 'ON-ORDER',
+                             type: 'STKS-MONO'
+                           }, document:)
       end
 
       it { is_expected.to have_link 'Request' }

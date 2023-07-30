@@ -8,14 +8,14 @@ describe SearchWorksRecordMailer do
       SolrDocument.new(
         id: '123',
         title_display: "Title1",
-        item_display: ["12345 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"],
+        item_display_struct: [{ barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }],
         marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }],
         modsxml: mods_everything
       ),
       SolrDocument.new(
         id: '321',
         title_display: "Title2",
-        item_display: ["54321 -|- SAL3 -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321"],
+        item_display_struct: [{ barcode: '54321', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 321' }],
         marc_links_struct: [{ href: "https://stacks.stanford.edu", sfx: true }],
         marcxml: metadata1
       )

@@ -153,7 +153,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Access restricted to Stanford community' }],
-            item_display: ['barcode -|- LANE-MED']
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
           )
         end
 
@@ -166,7 +166,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
-            item_display: ['barcode -|- LANE-MED']
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
           )
         end
 
@@ -182,7 +182,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to Stanford Law School' }],
-            item_display: ['barcode -|- LAW']
+            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
           )
         end
 
@@ -195,7 +195,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://www.iareporter.com/whatever", fulltext: true, stanford_only: true }],
-            item_display: ['barcode -|- LAW']
+            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
           )
         end
 
@@ -211,7 +211,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display: ['barcode -|- GREEN']
+            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
           )
         end
 
@@ -224,7 +224,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
-            item_display: ['barcode -|- GREEN']
+            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
           )
         end
 
@@ -240,7 +240,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display: ['barcode -|- GREEN']
+            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
           )
         end
 
@@ -256,7 +256,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display: ['barcode -|- LANE-MED']
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
           )
         end
 
