@@ -39,7 +39,7 @@ class Holdings
       end
 
       def current_location
-        item.current_location.try(:code)
+        item.current_location&.code
       end
     end
   end

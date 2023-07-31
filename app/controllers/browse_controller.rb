@@ -49,7 +49,7 @@ class BrowseController < ApplicationController
       @items = service.items(params[:before] || params[:after])
     else
       barcode = params[:barcode] || @original_doc[:preferred_barcode]
-      item = @original_doc.items.find { |c| c.barcode.starts_with?(barcode) }
+      item = @original_doc.items.find { |c| c.barcode&.starts_with?(barcode) }
 
       @items = NearbyOnShelf.around_item(
         item,

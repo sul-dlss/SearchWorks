@@ -1,13 +1,14 @@
 [
   {
-    "group": "affiliate-sponsored-eresources",
-    "desc": "affiliate:sponsored and stanford:library-eresources-eligible",
+    "group": "lane-resident",
+    "desc": "Stanford hospital residents",
     "id": "06714251-dffa-4562-b84e-375dc1f8642b",
+    "expirationOffsetInDays": 365,
     "metadata": {
       "createdDate": "2023-02-09T00:40:59.001+00:00",
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T00:40:59.001+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "updatedDate": "2023-07-28T16:24:43.776+00:00",
+      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {
@@ -105,18 +106,6 @@
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
       "updatedDate": "2023-02-09T00:40:58.225+00:00",
       "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
-    }
-  },
-  {
-    "group": "lane-resident",
-    "desc": "Stanford hospital residents",
-    "id": "97b93741-3299-4526-beb7-9e80a960950c",
-    "expirationOffsetInDays": 365,
-    "metadata": {
-      "createdDate": "2023-07-27T22:16:19.865+00:00",
-      "createdByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f",
-      "updatedDate": "2023-07-27T22:28:24.744+00:00",
-      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
     }
   },
   {

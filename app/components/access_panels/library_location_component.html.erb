@@ -42,7 +42,7 @@
             <span class="availability-icon-wrapper">
               <i class="availability-icon <%= item.status.availability_class %>"></i>
               <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
-                <%= item.status.status_text unless item.current_location && item.current_location.name.present? %>
+                <%= item.status.status_text unless item.current_location&.name.present? %>
               </span>
             </span>
             <span class="current-location">

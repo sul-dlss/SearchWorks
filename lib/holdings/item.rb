@@ -30,7 +30,7 @@ class Holdings
         course_id: values[12],
         reserve_desk: values[13],
         loan_period: values[14]
-      }
+      }.compact_blank
       new(hash, document:)
     end
 
@@ -78,7 +78,7 @@ class Holdings
     end
 
     def current_location
-      Holdings::Location.new(item_display[:current_location], library_code: item_display[:library])
+      @current_location ||= Holdings::Location.new(item_display[:current_location], library_code: item_display[:library])
     end
 
     def type
