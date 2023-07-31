@@ -4,18 +4,18 @@ class Holdings
 
     # @params [String] code the location code (e.g. 'STACKS')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
-    def initialize(code, items = [], mhld = [], folio_code:)
+    def initialize(code, items = [], mhld = [], library_code: nil)
       @code = code
       @items = items.sort_by(&:full_shelfkey)
       @mhld = mhld
-      @folio_code = folio_code
+      @library_code = library_code
     end
 
     def name
       return if @code.blank?
 
       # Prefer location names as managed in FOLIO
-      name = Folio::Locations.label(code: @folio_code)
+      name = Folio::Locations.label(code: folio_code)
       return name if name
 
       # Fallback to legacy behavior
@@ -85,6 +85,10 @@ class Holdings
         mhld_item.latest_received.present? ||
           mhld_item.public_note.present?
       end
+    end
+
+    def folio_code
+      @folio_code ||= Folio::LocationsMap.for(library_code: @library_code, location_code: code)
     end
   end
 end

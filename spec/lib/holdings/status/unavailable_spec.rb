@@ -26,20 +26,20 @@ RSpec.describe Holdings::Status::Unavailable do
 
     Settings.unavailable_current_locations.default.each do |location|
       context "with #{location}" do
-        let(:current_location) { Holdings::Location.new(location, folio_code: nil) }
+        let(:current_location) { Holdings::Location.new(location, library_code: 'GREEN') }
 
         it { is_expected.to be_unavailable }
       end
     end
 
     context 'with -LOAN' do
-      let(:current_location) { Holdings::Location.new("SOMETHING-LOAN", folio_code: nil) }
+      let(:current_location) { Holdings::Location.new("SOMETHING-LOAN", library_code: 'SOMETHING') }
 
       it { is_expected.to be_unavailable }
     end
 
     context 'with SPE--LOAN' do
-      let(:current_location) { Holdings::Location.new("SPE-LOAN", folio_code: nil) }
+      let(:current_location) { Holdings::Location.new("SPE-LOAN", library_code: 'SPEC-COLL') }
 
       it { is_expected.not_to be_unavailable }
     end

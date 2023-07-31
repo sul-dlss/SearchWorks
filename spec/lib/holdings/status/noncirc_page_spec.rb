@@ -16,7 +16,7 @@ RSpec.describe Holdings::Status::NoncircPage do
 
     Constants::FORCE_NONCIRC_CURRENT_LOCS.each do |location|
       context "with #{location}" do
-        let(:current_location) { Holdings::Location.new(location, folio_code: nil) }
+        let(:current_location) { Holdings::Location.new(location, library_code: 'GREEN') }
 
         it { is_expected.to be_noncirc_page }
       end

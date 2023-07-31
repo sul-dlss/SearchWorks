@@ -124,11 +124,11 @@ class LiveLookup
       end
 
       def current_location
-        Holdings::Location.new(current_location_code, folio_code: ::Folio::LocationsMap.for(library_code:, location_code: current_location_code))
+        Holdings::Location.new(current_location_code, library_code:)
       end
 
       def home_location
-        Holdings::Location.new(home_location_code, folio_code: ::Folio::LocationsMap.for(library_code:, location_code: home_location_code))
+        Holdings::Location.new(home_location_code, library_code:)
       end
 
       def valid_due_date?

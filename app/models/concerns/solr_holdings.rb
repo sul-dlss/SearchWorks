@@ -33,7 +33,7 @@ module SolrHoldings
       data = live_data_for_barcode(item.barcode)
 
       if data.present?
-        item.current_location = Holdings::Location.new(data['status'])
+        item.current_location = Holdings::Location.new(data['status'], library: item.library)
         item.due_date = data['due_date'] if data['due_date']
         item.status = Holdings::Status.new(item)
       end
