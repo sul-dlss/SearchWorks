@@ -4,7 +4,7 @@ class Holdings
 
     # Don't send a notice to Honeybadger if we encounter one of these codes, they are expected, because they
     # didn't migrate to Folio as locations. They are item status in Folio. The ASK@LANE will not be in Folio.
-    SKIP_NOTIFY_CODES = %w[INPROCESS ON-ORDER BINDERY B&F-HOLD ASK@LANE].freeze
+    SKIP_NOTIFY_CODES = %w[INPROCESS ON-ORDER INTRANSIT LOST-ASSUM LOST-CLAIM LOST-PAID MISSING BINDERY B&F-HOLD ASK@LANE].freeze
 
     # @params [String] code the location code (e.g. 'STACKS')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
@@ -22,7 +22,7 @@ class Holdings
       return name if name
 
       # Fallback to legacy Folio behavior
-      Honeybadger.notify("Unable to find folio location label", context: { folio_code: @folio_code, legacy_code: @code }) unless SKIP_NOTIFY_CODES.include?(@code)
+      Honeybadger.notify("Unable to find folio location label", context: { folio_code: @folio_code, legacy_code: @code }) unless SKIP_NOTIFY_CODES.include?(@code) && !@code.end_with?('-LOAN')
       Constants::LOCS.fetch(@code, @code)
     end
 
