@@ -5,7 +5,7 @@ faculty,any,2-day reserve,,SUL,,,2day-norenew-15mingrace,No requests allowed,Cou
 faculty,any,1-day reserve,,SUL,,,1day-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-1renew-15mingrace,No requests allowed,Short Term Notices,No fines,$1000 lost fee - 1 hr aged to lost
 any,any,any,,,RUMSEY-MAP or SPEC-COLL or HILA or CLASSICS,,No loan,No requests allowed,Default notice,No fines,$100 lost fee
-any,any,any,,,BUSINESS,BUS-ARCH or BUS-COMPF or BUS-LOCKED or BUS-REF or BUS-TP or BUS-TEMP,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
+any,any,any,,,BUSINESS,BUS-ARCH or BUS-COMPF or BUS-LOCKED or BUS-REF or BUS-TP or BUS-TEMP or BUS-NEWS-STKS,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-PERMRES,2hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,2-hour reserve,,,,LAW-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$150 lost fee
@@ -117,6 +117,8 @@ graduate or postdoctoral,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC o
 faculty or staff or fellow,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1yearfixed-2renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 graduate or postdoctoral,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
 faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
+graduate,kit,,,,,,1qtr-1renew-14daygrace,Allow paging/hold,Default notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
+faculty,kit,,,,,,1qtr-1renew-14daygrace,Allow paging/hold,Default notice,No fines,$2000 lost fee kit
 ,periodical,,,,TANNER,,14day-1renew-7daygrace,Allow hold/recall,Short Term Notices,No fines,$100 lost fee
 ,periodical,,,,SCIENCE,,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$400 lost fee
 ,periodical,,,,SAL3,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
@@ -192,6 +194,7 @@ faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LO
 ,map,,,,,EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-PG or EAR-PROCESSING-TR or EAR-SCANLAB,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,map,,,,,EAR-LOCKED-MAPS or EAR-LOCKED-STACKS,No loan,No requests allowed,Short Term Notices,No fines,$5000 lost fee - 1 hr aged to lost
 ,map,,,,,EAR-ATLASES or EAR-MEZZANINE or EAR-STORAGE or EAR-MAP-CASES or EAR-MAP-FILES,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
+,game,,,,,ENG-GAMES,14day-2renew-3daygrace,No requests allowed,Short Term Notices,No fines,$30 lost fee
 ,book,,,,,TAN-NEWBOOK,28day-1renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MP or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP or SAL3-R-STACKS,No loan,Allow paging,Default notice,No fines,$75 lost fee
@@ -260,7 +263,7 @@ faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LO
 ,multimedia,,,,,,No loan,No requests allowed,Default notice,No fines,$225 lost fee
 ,microform,,,,,,No loan,No requests allowed,Default notice,No fines,$5000 lost fee - 1 hr aged to lost
 ,map,,,,,,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
-,kit,,,,,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
+,kit,,,,,,No loan,No requests allowed,Default notice,No fines,$2000 lost fee kit
 ,game,,,,,,14day-2renew-3daygrace,No requests allowed,Short Term Notices,No fines,$30 lost fee
 ,,,,,,SUL-BORROW-DIRECT,8week-1renew-7daygrace,No requests allowed,Default notice,No fines,$200 lost fee book
 ,,,,,,,No loan,No requests allowed,Default notice,No fines,no replacement
