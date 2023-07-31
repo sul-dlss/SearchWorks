@@ -96,11 +96,11 @@ global_ignored_stackmap_locations:
 
 libraries:
   ARS:
-    about_url: https://library.stanford.edu/libraries/ars/about
+    about_url: https://library.stanford.edu/libraries/archive-recorded-sound
     hours_api_url: ars/location/ars_archive
     name: Archive of Recorded Sound
   ART:
-    about_url: https://library.stanford.edu/libraries/art/about
+    about_url: https://library.stanford.edu/libraries/bowes-art-architecture-library
     hours_api_url: art/location/art_library
     name: Art & Architecture Library (Bowes)
     ignored_stackmap_locations:
@@ -118,25 +118,23 @@ libraries:
       - MICROTEXT
     stackmap_api: https://stanford.stackmap.com/json/
   BIOLOGY:
-    about_url: https://library.stanford.edu/libraries/falconer/about
     hours_api_url: biology/location/biology_library
     name: Biology Library (Falconer)
   BUSINESS:
-    about_url: https://library.stanford.edu/libraries/business/about
+    about_url: https://www.gsb.stanford.edu/library
     hours_api_url: business/location/business_library
     name: Business Library
   CHEMCHMENG:
-    about_url: https://library.stanford.edu/libraries/swain/about
     hours_api_url: chemistry/location/chemistry_library
     name: Chemistry & ChemEng Library (Swain)
   CLASSICS:
     name: Classics Library
   EARTH-SCI:
-    about_url: https://library.stanford.edu/libraries/branner/about
+    about_url: https://library.stanford.edu/libraries/branner-earth-sciences-library-map-collections
     hours_api_url: earth_sciences/location/earth_sciences_library
     name: Earth Sciences Library (Branner)
   EAST-ASIA:
-    about_url: https://library.stanford.edu/libraries/eal/about
+    about_url: https://library.stanford.edu/libraries/east-asia-library
     hours_api_url: east_asia/location/east_asia_library
     name: East Asia Library
     ignored_stackmap_locations:
@@ -156,34 +154,34 @@ libraries:
       - STACKS
     stackmap_api: https://stanford.stackmap.com/json/
   EDUCATION:
-    about_url: https://library.stanford.edu/libraries/cubberley/about
+    about_url: https://library.stanford.edu/libraries/cubberley-education-library
     hours_api_url: education/location/education_library
     name: Education Library (at SAL1&2)
   ENG:
-    about_url: https://library.stanford.edu/libraries/englib/about
+    about_url: https://library.stanford.edu/libraries/terman-engineering-library
     hours_api_url: engineering/location/engineering_library
     name: Engineering Library (Terman)
   GOV-DOCS:
     name: Green Library
   GREEN:
-    about_url: https://library.stanford.edu/libraries/green/about
+    about_url: https://library.stanford.edu/libraries/cecil-h-green-library
     hours_api_url: green/location/green_library
     name: Green Library
     stackmap_api: https://stanford.stackmap.com/json/
   GRN-REF:
     name: Green Library
   HOOVER:
-    about_url: https://library.stanford.edu/libraries/hila/about
+    about_url: https://www.hoover.org/library-archives
     hours_api_url: hoover_archives/location/hv_archives
     name: Hoover Library
     suppress_items_list_on_results_view: true
     suppress_location_request_link: true
   HOPKINS:
-    about_url: https://library.stanford.edu/libraries/hopkins/about
+    about_url: https://library.stanford.edu/libraries/harold-miller-library-hopkins-marine-station
     hours_api_url: marine_biology/location/marine_biology_library
     name: Marine Biology Library (Miller)
   HV-ARCHIVE:
-    about_url: https://library.stanford.edu/libraries/hila/about
+    about_url: https://www.hoover.org/library-archives
     hours_api_url: hoover_archives/location/hv_archives
     name: Hoover Archives
     suppress_items_list_on_results_view: true
@@ -195,16 +193,15 @@ libraries:
   JACKSON:
     name: Business Library
   LANE-MED:
-    about_url: https://library.stanford.edu/libraries/lane/about
+    about_url: https://lane.stanford.edu/index.html
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library
     name: Medical Library (Lane)
   LATHROP:
-    about_url: https://library.stanford.edu/libraries/lathrop/about
     hours_api_url: lathrop/location/tech-lounge
     name: Lathrop Library
   LAW:
-    about_url: https://library.stanford.edu/libraries/law/about
+    about_url: https://law.stanford.edu/robert-crown-law-library/
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
     hours_api_url: law/location/law_library
     name: Law Library (Crown)
@@ -216,45 +213,38 @@ libraries:
       - STAFF
       - TECH-SERV
   MATH-CS:
-    about_url: https://library.stanford.edu/libraries/mathstat/about
     hours_api_url: math_stats/location/math_stats_library
     name: Math & Statistics Library
   MEDIA-MTXT:
-    about_url: https://library.stanford.edu/libraries/green/media-microtext-center
     hours_api_url: green/location/media_microtext
     name: Media & Microtext Center
     stackmap_api: https://stanford.stackmap.com/json/
   MEYER:
-    about_url: https://library.stanford.edu/libraries/meyer/about
     hours_api_url: meyer/location/meyer_24_hour
     name: Meyer Library
   MUSIC:
-    about_url: https://library.stanford.edu/libraries/music/about
+    about_url: https://library.stanford.edu/libraries/music-library
     hours_api_url: music/location/music_library
     name: Music Library
   RUMSEYMAP:
-    about_url: https://library.stanford.edu/libraries/rumsey/about
+    about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
     hours_api_url: Rumsey/location/visitor-access
     name: David Rumsey Map Center
   SAL:
-    about_url: https://library.stanford.edu/libraries/sal/about
     hours_api_url: sal12/location/sal12_library
     name: SAL1&2 (on-campus shelving)
   SAL3:
-    about_url: https://library.stanford.edu/libraries/sal3/about
     name: SAL3 (off-campus storage)
   SAL-NEWARK:
-    about_url: https://library.stanford.edu/libraries/newark/about
     name: SAL Newark (off-campus storage)
   SCIENCE:
-    about_url: https://library.stanford.edu/libraries/science/about
+    about_url: https://library.stanford.edu/libraries/robin-li-and-melissa-ma-science-library
     hours_api_url: science/location/library-circulation
     name: Science Library (Li and Ma)
   SLAC:
-    about_url: https://library.stanford.edu/libraries/slac/about
     hours_api_url: slac/location/slac
   SPEC-COLL:
-    about_url: https://library.stanford.edu/libraries/spc/about
+    about_url: https://library.stanford.edu/libraries/special-collections
     hours_api_url: special_collections/location/spec_coll_reading
     name: Special Collections
   SW-E-RESV:
@@ -262,7 +252,7 @@ libraries:
   SW-MEDIA-RESV:
     name: 'Media & Microtext Center' # Library does not exist, this is an internal code used for reserves.'
   TANNER:
-    about_url: https://library.stanford.edu/libraries/philosophy/about
+    about_url: https://library.stanford.edu/libraries/tanner-philosophy-library
     hours_api_url: philosophy/location/library-circulation
     name: Philosophy Library (Tanner)
   ZOMBIE:
