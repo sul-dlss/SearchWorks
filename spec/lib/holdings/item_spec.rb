@@ -34,6 +34,16 @@ RSpec.describe Holdings::Item do
     end
   end
 
+  describe '#full_shelfkey' do
+    it 'returns the full shelfkey' do
+      expect(item.full_shelfkey).to eq('full_shelfkey')
+    end
+
+    it 'returns a string that sorts last if there is no shelfkey in the data' do
+      expect(internet_item.full_shelfkey).to eq Holdings::Item::MAX_SHELFKEY
+    end
+  end
+
   describe '#on_order?' do
     it 'should return true for on-order items' do
       expect(Holdings::Item.from_item_display_string(' -|- -|- ON-ORDER -|- ON-ORDER -|-')).to be_on_order

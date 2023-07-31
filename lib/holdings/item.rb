@@ -6,6 +6,8 @@ class Holdings
   # 5 truncated call number -|- 6 shelfkey -|- 7 reverse shelfkey -|- 8 callnumber -|-
   # 9 full shelfkey -|- 10 public note -|- 11 callnumber type -|- 12 course id -|- 13 reserve desk -|- 14 loan period
   class Item
+    MAX_SHELFKEY = 0x10FFFF.chr(Encoding::UTF_8)
+
     attr_writer :current_location, :status
     attr_reader :document, :item_display
     attr_accessor :due_date
@@ -108,8 +110,8 @@ class Holdings
       end
     end
 
-    def full_shelfkey
-      item_display[:full_shelfkey]
+    def full_shelfkey(default: MAX_SHELFKEY)
+      item_display[:full_shelfkey] || default
     end
 
     def public_note
