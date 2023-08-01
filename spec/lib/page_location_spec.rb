@@ -11,8 +11,7 @@ RSpec.describe SearchWorks::PageLocation do
   subject(:page_location) { SearchWorks::PageLocation.new(search_state) }
 
   before do
-    allow(controller).to receive(:action_name).and_return(action)
-    allow(controller).to receive(:params).and_return(params)
+    allow(controller).to receive_messages(action_name: action, params:)
   end
 
   describe '#access_point?' do

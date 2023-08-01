@@ -3,8 +3,7 @@ require "spec_helper"
 describe "catalog/_index_marc" do
   include MarcMetadataFixtures
   before do
-    allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
-    allow(view).to receive(:document).and_return(document)
+    allow(view).to receive_messages(blacklight_config: Blacklight::Configuration.new, document:)
   end
 
   let(:document) do

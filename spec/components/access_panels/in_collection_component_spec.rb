@@ -6,8 +6,7 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
     let(:parent) { SolrDocument.new(id: '2') }
 
     before do
-      allow(document).to receive(:parent_collections).and_return([parent])
-      allow(document).to receive(:is_a_collection_member?).and_return(true)
+      allow(document).to receive_messages(parent_collections: [parent], is_a_collection_member?: true)
 
       render_inline(described_class.new(document:))
     end

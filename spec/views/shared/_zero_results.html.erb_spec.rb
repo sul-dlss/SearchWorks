@@ -19,8 +19,7 @@ describe "shared/_zero_results" do
 
   before do
     assign(:search_modifier, SearchQueryModifier.new(search_state))
-    allow(view).to receive(:controller_name).and_return('catalog')
-    allow(view).to receive(:label_for_search_field).and_return('Title')
+    allow(view).to receive_messages(controller_name: 'catalog', label_for_search_field: 'Title')
   end
 
   it "displays modify your search" do
@@ -41,8 +40,7 @@ describe "shared/_zero_results" do
   end
 
   it 'renders alternate catalog' do
-    allow(view).to receive(:show_alternate_catalog?).and_return(true)
-    allow(view).to receive(:params).and_return(q: 'test123')
+    allow(view).to receive_messages(show_alternate_catalog?: true, params: { q: 'test123' })
     stub_template '_alternate_catalog.html.erb' => '<div class="alternate-catalog"></div>'
     render
     expect(rendered).to have_css '.alternate-catalog'
