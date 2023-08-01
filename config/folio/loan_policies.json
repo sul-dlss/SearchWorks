@@ -335,7 +335,7 @@
   },
   {
     "id": "50838b19-a707-4277-a600-442453dac1cd",
-    "name": "1qtr-1renew-14daygrace",
+    "name": "1qtr-1renew-7daygrace",
     "description": "Loan policy for new books for tanner",
     "loanable": true,
     "loansPolicy": {
@@ -374,8 +374,8 @@
     "metadata": {
       "createdDate": "2023-04-05T19:48:55.662+00:00",
       "createdByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35",
-      "updatedDate": "2023-04-05T19:50:07.715+00:00",
-      "updatedByUserId": "19d799fa-6dcb-4b57-aa80-ba41ed26cf35"
+      "updatedDate": "2023-07-31T21:19:42.710+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
     }
   },
   {
