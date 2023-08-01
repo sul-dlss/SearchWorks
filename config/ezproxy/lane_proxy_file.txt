@@ -2227,6 +2227,7 @@ www.ijstd.org
 www.ijstemcell.com
 www.ijtonline.in
 www.ijtrichology.com
+www.ilibri.casalini.it
 www.illustratedgarden.org
 www.im.microbios.org
 www.ima.org.il
@@ -2969,6 +2970,7 @@ www.veterinaryworld.org
 www.vetres-archive.org
 www.vetsci.org
 www.victorianpopularculture.amdigital.co.uk
+www.virginiacompanyarchives.amdigital.co.uk
 www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
@@ -3021,6 +3023,7 @@ wwwn.cdc.gov
 xenetwork.org
 xlink.rsc.org
 xsearch.asahi.com
+yale.idm.oclc.org
 zassaku-plus.com
 zoologicalletters.biomedcentral.com
 zslpublications.onlinelibrary.wiley.com
