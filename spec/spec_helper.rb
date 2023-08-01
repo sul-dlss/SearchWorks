@@ -14,10 +14,6 @@ require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
 
-# I think this line can be removed when selenium 4.11 is released
-# See https://github.com/titusfortner/webdrivers/issues/247#issuecomment-1648154088
-Webdrivers::Chromedriver.required_version = '114.0.5735.90'
-
 WebMock.disable_net_connect!(allow_localhost: true, allow: [
   'example.com',
   'host.example.com',
