@@ -37,9 +37,9 @@ group :development, :test do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
-  gem 'webdrivers'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
   gem 'webmock'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
