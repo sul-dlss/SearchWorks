@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Holdings::Status do
+RSpec.describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }
 
   describe "::Available" do
@@ -97,26 +97,10 @@ describe Holdings::Status do
     end
   end
 
-  describe "::Unknown" do
-    before do
-      allow_any_instance_of(Holdings::Status::Unknown).to receive(:unknown?).and_return(true)
-    end
+  context "without matching any other status" do
+    subject { status.availability_class }
 
-    it "should have the unavailable class" do
-      expect(status.availability_class).to eq 'unknown'
-    end
-    it "should have the unknown status text" do
-      expect(status.status_text).to eq 'Unknown'
-    end
-    it "should be unavailable" do
-      expect(status).to be_unknown
-    end
-  end
-
-  describe "unknown" do
-    it "should default to an unknown availability class" do
-      expect(status.availability_class).to eq 'unknown'
-    end
+    it { is_expected.to eq 'unknown' }
   end
 
   describe 'precedence' do

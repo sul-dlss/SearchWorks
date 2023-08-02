@@ -3,7 +3,6 @@ require 'holdings/status/noncirc'
 require 'holdings/status/noncirc_page'
 require 'holdings/status/deliver_from_offsite'
 require 'holdings/status/unavailable'
-require 'holdings/status/unknown'
 require 'holdings/status/in_process'
 
 class Holdings
@@ -28,8 +27,6 @@ class Holdings
         'deliver-from-offsite'
       when available?
         'available'
-      when unknown?
-        'unknown'
       else
         'unknown'
       end
@@ -58,10 +55,6 @@ class Holdings
 
     def unavailable?
       Holdings::Status::Unavailable.new(@item).unavailable?
-    end
-
-    def unknown?
-      Holdings::Status::Unknown.new(@item).unknown?
     end
 
     def in_process?
