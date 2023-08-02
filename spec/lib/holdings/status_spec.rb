@@ -113,7 +113,8 @@ RSpec.describe Holdings::Status do
           library: 'SAL3',
           home_location: 'STACKS',
           current_location: instance_double(Holdings::Location, code: 'LOST-ASSUM'),
-          type: 'STACKS'
+          type: 'STACKS',
+          folio_item?: false
         )
       end
 

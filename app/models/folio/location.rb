@@ -8,7 +8,7 @@ module Folio
     # Institution for all Stanford records, including coordinate libraries/campuses
     SU = Institution.new(id: '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929', code: 'SU', name: 'Stanford University')
 
-    attr_reader :institution, :campus, :library
+    attr_reader :id, :code, :institution, :campus, :library
 
     # rubocop:disable Metrics/ParameterLists
     def initialize(id:, code:, campus:, library:, name: nil, institution: SU)
@@ -21,6 +21,15 @@ module Folio
     end
     # rubocop:enable Metrics/ParameterLists
 
+    # Prefer the locally cached name, but fall back to the name from the document if we have to
+    def name
+      cached_location_data&.dig('name') || @name
+    end
+
+    def details
+      cached_location_data&.dig('details') || {}
+    end
+
     def self.from_dynamic(json)
       new(institution: Institution.new(**json.fetch('institution').slice('id', 'code', 'name')),
           campus: Campus.new(**json.fetch('campus').slice('id', 'code', 'name')),
@@ -32,6 +41,10 @@ module Folio
 
     def see_other?
       code.ends_with?('-SEE-OTHER')
+    end
+
+    def cached_location_data
+      Folio::Types.locations[id] || {}
     end
   end
 end
