@@ -161,7 +161,9 @@ class Holdings
     end
 
     def circulates?
-      folio_item_circulates? || circulating_item_types == '*' || circulating_item_types.include?(type)
+      return folio_item_circulates? if folio_item?
+
+      circulating_item_types == '*' || circulating_item_types.include?(type)
     end
 
     def as_json(*)
@@ -264,9 +266,11 @@ class Holdings
     end
 
     def folio_item_circulates?
-      return false unless folio_item?
+      loan_policy&.dig('loanable')
+    end
 
-      Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)&.dig('loanable')
+    def loan_policy
+      @loan_policy ||= Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)
     end
   end
 end
