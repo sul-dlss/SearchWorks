@@ -108,4 +108,45 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
       it { is_expected.not_to have_link 'Request' }
     end
   end
+
+  context 'with FOLIO items' do
+    let(:item) do
+      instance_double(Holdings::Item, document:, barcode: nil, library: nil, home_location: nil, current_location: instance_double(Holdings::Location, code: nil), folio_item?: true, folio_status:, request_policy:)
+    end
+
+    context 'checked out item from a location that allows holds' do
+      let(:folio_status) { 'Checked out' }
+      let(:request_policy) do
+        { 'requestTypes' => ['Hold', 'Recall'] }
+      end
+
+      it { is_expected.to have_link 'Request' }
+    end
+
+    context 'checked out from a location that does not allow holds' do
+      let(:folio_status) { 'Checked out' }
+      let(:request_policy) do
+        { 'requestTypes' => ['Page'] }
+      end
+
+      it { is_expected.not_to have_link 'Request' }
+    end
+
+    context 'available' do
+      let(:folio_status) { 'Available' }
+      let(:request_policy) do
+        { 'requestTypes' => ['Hold', 'Recall'] }
+      end
+
+      it { is_expected.not_to have_link 'Request' }
+    end
+
+    context 'on-order without a FOLIO item' do
+      let(:item) do
+        Holdings::Item.from_item_display_string("123 -|- GREEN -|- STACKS -|- ON-ORDER -|- STKS-MONO", document:)
+      end
+
+      it { is_expected.to have_link 'Request' }
+    end
+  end
 end

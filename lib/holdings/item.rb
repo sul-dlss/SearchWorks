@@ -213,6 +213,12 @@ class Holdings
       folio_item.present?
     end
 
+    def request_policy
+      return unless folio_item?
+
+      @request_policy ||= Folio::CirculationRules::PolicyService.instance.item_request_policy(self)
+    end
+
     delegate :status, to: :folio_item, prefix: :folio
 
     private

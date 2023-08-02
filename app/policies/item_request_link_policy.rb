@@ -5,6 +5,8 @@ class ItemRequestLinkPolicy
   end
 
   def show?
+    return folio_holdable? || current_location_is_always_requestable? if item.folio_item?
+
     return false if aeon_pageable? || in_mediated_pageable_location? || in_nonrequestable_location? || item.on_reserve?
 
     current_location_is_always_requestable?
@@ -15,6 +17,13 @@ class ItemRequestLinkPolicy
   attr_reader :item
 
   delegate :document, :library, :home_location, :barcode, to: :item
+
+  def folio_holdable?
+    return false unless Settings.folio_hold_recall_statuses.include?(item.folio_status)
+
+    (item.request_policy&.dig('requestTypes')&.include?('Hold') ||
+      item.request_policy&.dig('requestTypes')&.include?('Recall'))
+  end
 
   def current_location
     item.current_location.code

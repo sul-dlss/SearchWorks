@@ -772,3 +772,14 @@ disabled_current_locations:
     - ON-ORDER
     - SPEC-INPRO
     - ENDPROCESS
+
+folio_hold_recall_statuses:
+  - Checked out
+  - Awaiting pickup
+  - Awaiting delivery
+  - In transit
+  - Missing
+  - Paged
+  - On order
+  - In process
+  - Restricted
