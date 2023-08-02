@@ -790,6 +790,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "EARTH-SCI"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -802,8 +803,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.605+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:32:28.884+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:52:07.303+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -936,7 +937,7 @@
     "id": "0e4c10cd-c2a0-45d5-a6cc-f94d75fc2f17",
     "name": "Spec PAGE-FC",
     "code": "SPEC-PAGE-FC",
-    "discoveryDisplayName": "For use in Art & Architecture Library, Music Library or Special Collections",
+    "discoveryDisplayName": "Ask at Reading Room desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -954,7 +955,7 @@
     "metadata": {
       "createdDate": "2023-06-30T02:21:33.012+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T11:12:06.788+00:00",
+      "updatedDate": "2023-08-02T04:48:02.869+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -1069,7 +1070,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
-      "scanServicePoint": "SAL3"
+      "scanServicePoint": "SAL3",
+      "availabilityClass": "Offsite"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -1081,15 +1083,15 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.979+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:36:58.180+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:45:23.822+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
     "id": "11941fdf-26e7-4413-9b63-483fd555c378",
     "name": "Business PAGE-BU",
     "code": "BUS-PAGE-BU",
-    "discoveryDisplayName": "Request for pickup at Business Library",
+    "discoveryDisplayName": "Ask at i-Desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
@@ -1106,7 +1108,7 @@
     "metadata": {
       "createdDate": "2023-06-30T00:28:41.415+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T07:09:33.798+00:00",
+      "updatedDate": "2023-08-02T04:34:17.959+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -1251,6 +1253,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -1262,8 +1265,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.733+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:37:27.172+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:50:29.632+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -1529,6 +1532,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "ART,MUSIC,SPEC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -1541,8 +1545,8 @@
     "metadata": {
       "createdDate": "2023-06-30T02:22:51.679+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T11:32:46.699+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:56.659+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -3364,7 +3368,7 @@
     "id": "37eda0ee-cbfc-4016-b74f-d6682b811340",
     "name": "Eng PAGE-EN",
     "code": "ENG-PAGE-EN",
-    "discoveryDisplayName": "For use in Terman Library'",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3381,7 +3385,7 @@
     "metadata": {
       "createdDate": "2023-06-30T00:59:53.100+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T11:43:23.728+00:00",
+      "updatedDate": "2023-08-02T04:41:04.062+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -3445,6 +3449,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageMediationGroupKey": "PAGE-MP",
       "pageServicePointCodes": "EARTH-SCI"
     },
@@ -3458,8 +3463,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.228+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:34:36.498+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:10.127+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -3491,7 +3496,7 @@
     "id": "3b562a08-66ee-4839-86b6-e9b08d07f375",
     "name": "Art PAGE-AR",
     "code": "ART-PAGE-AR",
-    "discoveryDisplayName": "For use in Art & Architecture Library or Special Collections",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3508,7 +3513,7 @@
     "metadata": {
       "createdDate": "2023-06-30T00:34:36.736+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T08:56:56.746+00:00",
+      "updatedDate": "2023-08-02T04:38:49.759+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -3547,6 +3552,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "SPEC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -3559,8 +3565,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.595+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:36:02.877+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:50:40.705+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -4076,6 +4082,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "MARINE-BIO"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -4088,8 +4095,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.982+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:33:44.371+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:28.206+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -4960,6 +4967,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "ENG"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -4972,8 +4980,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.480+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:32:13.368+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:54:05.092+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -6424,6 +6432,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "MUSIC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -6436,8 +6445,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.350+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:35:19.756+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:50:59.706+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -6495,7 +6504,7 @@
     "id": "790f0dc3-9949-4a23-9962-46b7fff42d03",
     "name": "Green PAGE-GR",
     "code": "GRE-PAGE-GR",
-    "discoveryDisplayName": "For use in Green Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6512,7 +6521,7 @@
     "metadata": {
       "createdDate": "2023-06-30T01:05:49.195+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T09:53:08.879+00:00",
+      "updatedDate": "2023-08-02T04:41:25.471+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -6722,7 +6731,7 @@
     "id": "7bfbcbc8-7997-4b04-b3d9-bae4e90c46eb",
     "name": "Media Page to Media",
     "code": "MEDIA-PAGE-MM",
-    "discoveryDisplayName": "For use in the Media Center",
+    "discoveryDisplayName": "Ask at Media desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6739,7 +6748,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:48.949+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T10:44:18.217+00:00",
+      "updatedDate": "2023-08-02T04:42:16.769+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -8061,7 +8070,7 @@
     "id": "97c34325-7cb4-4baf-ac17-7425cb7caf6c",
     "name": "East Asia PAGE-EA",
     "code": "EAL-PAGE-EA",
-    "discoveryDisplayName": "For use in East Asia Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -8078,7 +8087,7 @@
     "metadata": {
       "createdDate": "2023-06-30T21:44:57.738+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T10:27:28.732+00:00",
+      "updatedDate": "2023-08-02T04:40:20.573+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -8447,6 +8456,7 @@
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
       "scanServicePoint": "SAL3",
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "GREEN-LOAN"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -8459,8 +8469,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.727+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:33:01.975+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:46.782+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -9278,7 +9288,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
-      "pageServicePointIds": "MUSIC,MEDIA-CENTER"
+      "pageServicePointIds": "MUSIC,MEDIA-CENTER",
+      "availabilityClass": "Offsite"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -9290,8 +9301,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.848+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:33:26.044+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:37.516+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -9380,6 +9391,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "MUSIC,MEDIA-CENTER"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -9392,8 +9404,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.103+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:34:09.580+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:51:19.075+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -9525,7 +9537,7 @@
     "id": "b38e6346-38bb-4e85-a852-b2975bad1656",
     "name": "Marine Bio PAGE-MA",
     "code": "MAR-PAGE-MA",
-    "discoveryDisplayName": "For use in Miller Library or Green Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -9542,7 +9554,7 @@
     "metadata": {
       "createdDate": "2023-06-30T01:12:47.181+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T10:58:00.073+00:00",
+      "updatedDate": "2023-08-02T04:41:45.302+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -9748,7 +9760,7 @@
     "id": "b76c2c92-5497-4147-bf43-c46159619600",
     "name": "Music PAGE-MU",
     "code": "MUS-PAGE-MU",
-    "discoveryDisplayName": "For use in Music Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -9765,7 +9777,7 @@
     "metadata": {
       "createdDate": "2023-06-30T02:02:24.708+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T11:04:18.969+00:00",
+      "updatedDate": "2023-08-02T04:42:39.684+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -10257,6 +10269,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "EAST-ASIA"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -10268,8 +10282,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.229+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:31:39.655+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:54:57.130+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -11357,7 +11371,7 @@
     "id": "d0f283b6-2658-41cb-9ef1-f010814fc330",
     "name": "Music PAGE-LP",
     "code": "MUS-PAGE-LP",
-    "discoveryDisplayName": "Request for pickup at Music Library or the Media Center",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -11374,7 +11388,7 @@
     "metadata": {
       "createdDate": "2023-06-30T02:14:49.436+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T11:03:38.739+00:00",
+      "updatedDate": "2023-08-02T04:42:51.132+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -11712,7 +11726,7 @@
     "id": "d3c5969d-2a59-40ff-9afa-4877581280d6",
     "name": "Education PAGE-ED",
     "code": "EDU-PAGE-ED",
-    "discoveryDisplayName": "For use in Cubberley Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -11729,7 +11743,7 @@
     "metadata": {
       "createdDate": "2023-06-30T00:57:44.856+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T10:04:23.327+00:00",
+      "updatedDate": "2023-08-02T04:40:39.475+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -11997,6 +12011,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "RUMSEY-MAP"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -12009,8 +12024,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.473+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:35:36.057+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:50:49.983+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -12325,6 +12340,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "ART,SPEC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -12337,8 +12353,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:54.992+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:31:02.720+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:55:10.842+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -13080,6 +13096,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "ARS"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -13092,8 +13109,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.100+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:31:21.339+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:55:04.312+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -13177,7 +13194,7 @@
     "id": "f2f6b2d3-b75e-4b36-9345-c03153a78d47",
     "name": "Earth Sci PAGE-ES",
     "code": "EAR-PAGE-ES",
-    "discoveryDisplayName": "For use in Branner Library",
+    "discoveryDisplayName": "Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -13194,7 +13211,7 @@
     "metadata": {
       "createdDate": "2023-06-30T00:37:03.381+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T09:08:24.157+00:00",
+      "updatedDate": "2023-08-02T04:39:47.424+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -13560,6 +13577,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "availabilityClass": "Offsite",
       "pageServicePointCodes": "EDUCATION"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -13572,8 +13590,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.356+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T11:31:55.820+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-01T17:54:24.482+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
