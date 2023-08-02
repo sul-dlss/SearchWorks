@@ -5,21 +5,18 @@ describe "catalog/_index_mods" do
   let(:presenter) { OpenStruct.new(heading: "Object Title") }
 
   before do
-    allow(view).to receive(:document).and_return(
-      SolrDocument.new(
-        collection: ['12345'],
-        collection_with_title: ['12345 -|- Collection Title'],
-        modsxml: mods_everything,
-        physical: ["The Physical Extent"],
-        imprint_display: ["Imprint Statement"],
-        author_struct: [
-          { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
-          { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }
-        ]
-      )
-    )
+    allow(view).to receive_messages(document: SolrDocument.new(
+      collection: ['12345'],
+      collection_with_title: ['12345 -|- Collection Title'],
+      modsxml: mods_everything,
+      physical: ["The Physical Extent"],
+      imprint_display: ["Imprint Statement"],
+      author_struct: [
+        { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
+        { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }
+      ]
+    ), blacklight_config: Blacklight::Configuration.new)
     expect(view).to receive(:document_presenter).and_return(presenter)
-    allow(view).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
     render
   end
 

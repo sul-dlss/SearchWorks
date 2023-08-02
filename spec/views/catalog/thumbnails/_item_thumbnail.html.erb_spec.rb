@@ -2,12 +2,7 @@ require "spec_helper"
 
 describe "catalog/thumbnails/_item_thumbnail" do
   before do
-    allow(view).to receive(:css_class).and_return('')
-    allow(view).to receive(:oclc).and_return('')
-    allow(view).to receive(:isbn).and_return('')
-    allow(view).to receive(:lccn).and_return('')
-    allow(view).to receive(:document).and_return(document)
-    allow(view).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
+    allow(view).to receive_messages(css_class: '', oclc: '', isbn: '', lccn: '', document:, blacklight_config: CatalogController.blacklight_config)
   end
 
   context 'non SDR object' do

@@ -6,8 +6,7 @@ describe 'catalog/thumbnails/_collection_thumbnail' do
   subject { Capybara.string(rendered) }
 
   before do
-    allow(view).to receive(:document).and_return(document)
-    allow(view).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
+    allow(view).to receive_messages(document:, blacklight_config: CatalogController.blacklight_config)
   end
 
 

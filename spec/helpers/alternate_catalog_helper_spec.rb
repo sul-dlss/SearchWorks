@@ -4,8 +4,7 @@ require 'spec_helper'
 
 describe AlternateCatalogHelper do
   before do
-    allow(helper).to receive(:blacklight_config).and_return(CatalogController.blacklight_config)
-    allow(helper).to receive(:blacklight_configuration_context).and_return(Blacklight::Configuration::Context.new(helper))
+    allow(helper).to receive_messages(blacklight_config: CatalogController.blacklight_config, blacklight_configuration_context: Blacklight::Configuration::Context.new(helper))
   end
 
   describe 'show_alternate_catalog?' do

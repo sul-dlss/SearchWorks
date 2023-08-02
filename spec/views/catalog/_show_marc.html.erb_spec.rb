@@ -3,8 +3,7 @@ require 'spec_helper'
 describe 'catalog/_show_marc' do
   include MarcMetadataFixtures
   before do
-    allow(view).to receive(:add_purl_embed_header).and_return('')
-    allow(view).to receive(:render_cover_image).and_return('')
+    allow(view).to receive_messages(add_purl_embed_header: '', render_cover_image: '')
     assign(:document, document)
     render
   end

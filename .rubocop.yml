@@ -447,3 +447,7 @@ Style/ReturnNilInPredicateMethodDefinition: # new in 1.53
   Enabled: true
 Style/YAMLFileRead: # new in 1.53
   Enabled: true
+RSpec/ReceiveMessages: # new in 2.23
+  Enabled: true
+RSpec/Rails/NegationBeValid: # new in 2.23
+  Enabled: true
