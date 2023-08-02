@@ -58,8 +58,6 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'selenium-webdriver'
   gem 'solr_wrapper'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
   gem 'webmock'
 end
 
