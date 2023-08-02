@@ -1168,7 +1168,6 @@ nutritionandmetabolism.biomedcentral.com
 nutritionj.biomedcentral.com
 nvijournal.biomedcentral.com
 nyaspubs.onlinelibrary.wiley.com
-oag.ca.gov
 obgyn.lwwhealthlibrary.com
 obgyn.mhmedical.com
 obgyn.onlinelibrary.wiley.com
@@ -3023,7 +3022,6 @@ wwwn.cdc.gov
 xenetwork.org
 xlink.rsc.org
 xsearch.asahi.com
-yale.idm.oclc.org
 zassaku-plus.com
 zoologicalletters.biomedcentral.com
 zslpublications.onlinelibrary.wiley.com
