@@ -36,9 +36,10 @@ class Holdings
       new(hash, document:)
     end
 
-    def initialize(holding_info, document: nil)
+    def initialize(holding_info, document: nil, folio_item: nil)
       @item_display = holding_info.with_indifferent_access
       @document = document
+      @folio_item = folio_item
     end
 
     def present?
