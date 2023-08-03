@@ -110,7 +110,7 @@ any,any,,,,BUSINESS,BUS-PERMRES,8 hour - overnight - no renew,No requests allowe
 any,any,,,,BUSINESS,BUS-CRES,8 hour - overnight - no renew,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,Allow All,Course reserves,1.00/30.00 hourly fine,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
-any,any,,,,,LANE-SAL3X,No loan,Allow paging,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
+any,any,,,,,LANE-SAL3X,12hour-norenew-15mingrace,Allow paging,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-SOMCC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-REF,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-ERQC,14day-2renew-1daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
@@ -260,6 +260,7 @@ faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow paging/hold,Default notice,No fines
 ,book,,,,,LAW-CAREER or LAW-COOKBOOK or LAW-OUTDOOR-TRAVEL or LAW-VROOMAN or LAW-VROOMAN-OV or LAW-WELLNESS,14day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,28day-2renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,28day-2renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
+any,,,,,,LANE-NEWB,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$500 lost fee
 ,multimedia,,,,,,No loan,No requests allowed,Default notice,No fines,$225 lost fee
 ,microform,,,,,,No loan,No requests allowed,Default notice,No fines,$5000 lost fee - 1 hr aged to lost
