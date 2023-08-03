@@ -82,7 +82,7 @@ class LocationRequestLinkPolicy
     !folio_disabled_status_location? &&
       (folio_mediated_pageable? ||
         folio_aeon_pageable? ||
-         Folio::CirculationRules::PolicyService.instance.item_request_policy(items.first)&.dig('requestTypes')&.include?('Page'))
+         items.first.request_policy&.dig('requestTypes')&.include?('Page'))
   end
 
   # Special cases where we don't allow requests for special collections items in certain statuses

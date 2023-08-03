@@ -7,7 +7,7 @@ RSpec.describe Folio::Location do
     {
       'id' => '1af90de1-a5c0-4c46-bab1-2847d041f997',
       'code' => 'GRE-BENDER',
-      'name' => 'Green Library Bender Room',
+      'name' => 'Green Bender Room',
       'institution' => {
         'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
         'code' => 'SU',
@@ -28,7 +28,7 @@ RSpec.describe Folio::Location do
 
   describe '#new' do
     context 'with no institution' do
-      subject { described_class.new(campus: 'foo', library: 'bar', location: 'baz') }
+      subject { described_class.new(id: 'uuid', code: 'baz', campus: 'foo', library: 'bar') }
 
       it 'uses the default institution' do
         expect(subject.institution.name).to eq 'Stanford University'
@@ -52,7 +52,7 @@ RSpec.describe Folio::Location do
     end
 
     it 'stores the location info' do
-      expect(subject.name).to eq 'Green Library Bender Room'
+      expect(subject.name).to eq 'Green Bender Room'
     end
   end
 end

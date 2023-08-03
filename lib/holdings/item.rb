@@ -36,9 +36,10 @@ class Holdings
       new(hash, document:)
     end
 
-    def initialize(holding_info, document: nil)
+    def initialize(holding_info, document: nil, folio_item: nil)
       @item_display = holding_info.with_indifferent_access
       @document = document
+      @folio_item = folio_item
     end
 
     def present?
@@ -161,7 +162,9 @@ class Holdings
     end
 
     def circulates?
-      folio_item_circulates? || circulating_item_types == '*' || circulating_item_types.include?(type)
+      return folio_item_circulates? if folio_item?
+
+      circulating_item_types == '*' || circulating_item_types.include?(type)
     end
 
     def as_json(*)
@@ -208,6 +211,12 @@ class Holdings
 
     def folio_item?
       folio_item.present?
+    end
+
+    def request_policy
+      return unless folio_item?
+
+      @request_policy ||= Folio::CirculationRules::PolicyService.instance.item_request_policy(self)
     end
 
     delegate :status, to: :folio_item, prefix: :folio
@@ -264,9 +273,11 @@ class Holdings
     end
 
     def folio_item_circulates?
-      return false unless folio_item?
+      loan_policy&.dig('loanable')
+    end
 
-      Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)&.dig('loanable')
+    def loan_policy
+      @loan_policy ||= Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)
     end
   end
 end
