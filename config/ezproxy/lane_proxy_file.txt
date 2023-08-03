@@ -917,6 +917,7 @@ joe.bioscientifica.com
 johnjohnson.chadwyck.com
 joii-journal.springeropen.com
 jolt.merlot.org
+jomi.com
 jopm.jmir.org
 joppp.biomedcentral.com
 josr-online.biomedcentral.com
@@ -1288,6 +1289,7 @@ presses.univ-lyon2.fr
 prhsj.rcm.upr.edu
 primarysources.brillonline.com
 princeton.universitypressscholarship.com
+proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
 prod.resource.cch.com
 profiles.nlm.nih.gov
@@ -1659,6 +1661,7 @@ www.ahbps.org
 www.ahd.com
 www.ahrq.gov
 www.aidsreviews.com
+www.aihc.amdigital.co.uk
 www.aimjournal.ir
 www.aimspress.com
 www.airitibooks.com
@@ -2057,6 +2060,7 @@ www.excli.de
 www.exeley.com
 www.exp-oncology.com.ua
 www.experimentalneurobiology.org
+www.exploration.amdigital.co.uk
 www.eymj.org
 www.facs.org
 www.fao.org
@@ -2382,7 +2386,6 @@ www.jofs.in
 www.jogh.org
 www.jointsjournal.eu
 www.jomfp.in
-www.jomi.com
 www.joplink.net
 www.jorthodsci.org
 www.josonline.org
