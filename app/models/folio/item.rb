@@ -35,7 +35,7 @@ module Folio
             name: json.fetch('temporaryLoanType')
           ),
           effective_location: Folio::Location.from_dynamic(json.dig('location', 'effectiveLocation')),
-          permanent_location: Folio::Location.from_dynamic(json.dig('location', 'permanentLocation')) || holdings_record&.effective_location)
+          permanent_location: (Folio::Location.from_dynamic(json.dig('location', 'permanentLocation')) if json.dig('location', 'permanentLocation')) || holdings_record&.effective_location)
     end
 
     def loan_type
