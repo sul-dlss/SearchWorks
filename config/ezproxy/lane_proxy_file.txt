@@ -408,7 +408,6 @@ coloproctol.org
 companions.digitalhumanities.org
 comparative-hepatology.biomedcentral.com
 compassionjournal.com
-compounding.usp.org
 computationalsurgery.springeropen.com
 comtrade.un.org
 conf.uni-obuda.hu
@@ -982,6 +981,7 @@ juiced.gs
 jungiansociety.org
 jvat.biomedcentral.com
 jvin.org
+karger.com
 khabarlahariya.org
 kiltsnielsen.chicagobooth.edu
 kinetoplastids.biomedcentral.com
@@ -1197,6 +1197,7 @@ online.liebertpub.com
 online.salempress.com
 online.statref.com
 online.uspdsc.com
+online.uspnf.com
 onlinebooks.library.upenn.edu
 onlinelibrary.wiley.com
 opac.newsbank.com
@@ -2960,7 +2961,6 @@ www.urologyannals.com
 www.urologyjournal.org
 www.usnews.com
 www.uspharmacist.com
-www.uspnf.com
 www.uspusan.com
 www.usrds.org
 www.utpjournals.press
