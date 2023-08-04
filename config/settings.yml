@@ -94,6 +94,8 @@ global_ignored_stackmap_locations:
   - SL3-LOAN
   - SLN-LOAN
 
+live_lookup_service: LiveLookup::Sirsi
+
 libraries:
   ARS:
     about_url: https://library.stanford.edu/libraries/archive-recorded-sound
