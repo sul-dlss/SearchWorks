@@ -12,7 +12,7 @@ class Holdings
     attr_reader :document, :item_display
     attr_accessor :due_date
 
-    delegate :loan_type, :material_type, :effective_location, to: :folio_item, allow_nil: true
+    delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
 
     def self.from_item_display_string(item_display, document: nil)
       values = item_display.split('-|-').map(&:strip)

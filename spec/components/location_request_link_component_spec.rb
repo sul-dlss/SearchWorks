@@ -235,9 +235,10 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'SAL3' }
     let(:location) { 'STACKS' }
 
-    let(:items) { [instance_double(Holdings::Item, folio_item?: true, request_policy:, effective_location:, folio_status:)] }
+    let(:items) { [instance_double(Holdings::Item, folio_item?: true, request_policy:, effective_location:, permanent_location:, folio_status:)] }
     let(:folio_status) { 'Available' }
     let(:request_policy) { {} }
+    let(:permanent_location) { effective_location }
 
     context 'in a pageable location' do
       let(:request_policy) do
@@ -333,6 +334,62 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
             }
           }
         )
+      end
+
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+    end
+
+    context 'in an Aeon permanent location, but with a temporary location somewhere else' do
+      let(:library) { 'SPEC-COLL' }
+      let(:location) { 'MANUSCRIPT' }
+
+      let(:permanent_location) do
+        Folio::Location.from_dynamic(
+          {
+            "id" => "891ca554-5109-419a-bd01-d647944a40ea",
+            "name" => "Spec Manuscript",
+            "code" => "SPEC-MANUSCRIPT",
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              "id" => "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+              "name" => "Special Collections",
+              "code" => "SPEC-COLL"
+            }
+          }
+        )
+      end
+
+      let(:effective_location) do
+        Folio::Location.from_dynamic({
+                                       "id" => "51d37aaa-dcb5-46ee-a9f1-9310f1737b55",
+                                       "name" => "SUL TS CC Repair",
+                                       "code" => "SUL-TS-CC-REPAIR",
+                                       "discoveryDisplayName" => "Out for repair",
+                                       'institution' => {
+                                         'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+                                         'code' => 'SU',
+                                         'name' => 'Stanford University'
+                                       },
+                                       'campus' => {
+                                         'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+                                         'code' => 'SUL',
+                                         'name' => 'Stanford Libraries'
+                                       },
+                                       'library' => {
+                                         "id" => "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+                                         "name" => "SUL",
+                                         "code" => "SUL"
+                                       }
+                                     })
       end
 
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
