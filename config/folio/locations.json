@@ -12280,31 +12280,6 @@
     }
   },
   {
-    "id": "deaf8db0-8fe6-4b5e-8c5d-b745c767742b",
-    "name": "Law Tech Services Shadow",
-    "code": "LAW-TECHSHADOW",
-    "discoveryDisplayName": "Ask at circulation desk",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
-    "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {
-    },
-    "primaryServicePoint": "c9364d5f-6421-4c1a-9010-4ca2bc34efbe",
-    "servicePointIds": [
-      "c9364d5f-6421-4c1a-9010-4ca2bc34efbe"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:44.828+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T08:16:17.315+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
-    }
-  },
-  {
     "id": "df22df7e-4781-4354-ba29-f63d8d274886",
     "name": "Classics Withdrawn Digital Substitute",
     "code": "CLA-WD-DIGITAL-SUB",
