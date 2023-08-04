@@ -7,8 +7,7 @@ class LiveLookup
     @ids = [ids].flatten.compact
   end
 
-  # Uses the LiveLookup service specified by Settings.LIVE_LOOKUP_SERVICE,
-  # or if nothing is configured fall back to LiveLookup::Sirsi
+  # Uses the LiveLookup service specified by Settings.live_lookup_service
   def records
     live_lookup_service.new(@ids).records
   end
@@ -16,6 +15,6 @@ class LiveLookup
   private
 
   def live_lookup_service
-    (Settings.LIVE_LOOKUP_SERVICE || 'LiveLookup::Sirsi').constantize
+    Settings.live_lookup_service.constantize
   end
 end
