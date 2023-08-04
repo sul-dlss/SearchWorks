@@ -1,6 +1,6 @@
 module Folio
   class Item
-    attr_reader :id, :status, :barcode, :material_type, :effective_location
+    attr_reader :id, :status, :barcode, :material_type, :effective_location, :permanent_location
 
     MaterialType = Struct.new(:id, :name, keyword_init: true)
     LoanType = Struct.new(:id, :name, keyword_init: true)
