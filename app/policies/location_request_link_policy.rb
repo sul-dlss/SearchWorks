@@ -93,23 +93,19 @@ class LocationRequestLinkPolicy
   end
 
   def folio_mediated_pageable?
-    return false unless folio_items? && folio_locations.any?
+    return false unless folio_items? && folio_permanent_locations.any?
 
-    folio_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
+    folio_permanent_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
   end
 
   def folio_aeon_pageable?
-    return false unless folio_items? && folio_locations.any?
+    return false unless folio_items? && folio_permanent_locations.any?
 
-    folio_locations.all? { |location| location.dig('details', 'pageAeonSite') }
+    folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
   end
 
   # there probably is only one FOLIO location.
-  def folio_locations
-    @folio_locations ||= begin
-      location_uuids = items.filter_map(&:effective_location).map(&:id).uniq
-
-      Folio::Types.locations.values.select { |l| location_uuids.include?(l['id']) }
-    end
+  def folio_permanent_locations
+    @folio_permanent_locations ||= items.filter_map(&:permanent_location).uniq(&:id).map(&:cached_location_data)
   end
 end

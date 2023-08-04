@@ -71,10 +71,17 @@ module SolrHoldings
   end
 
   def folio_items
-    @folio_items ||= Array(holdings_json['items']).map { |item| Folio::Item.from_dynamic(item) }
+    @folio_items ||= Array(holdings_json['items']).map do |item|
+      holdings_record = folio_holdings_by_id[item['holdingsRecordId']]
+      Folio::Item.from_dynamic(item, holdings_record:)
+    end
   end
 
   private
+
+  def folio_holdings_by_id
+    @folio_holdings_by_id ||= folio_holdings.index_by(&:id)
+  end
 
   # Setting this to no-op if FOLIO_LIVE_LOOKUP is enabled. This is currently
   # used by the request app to get live information about items, but we plan
