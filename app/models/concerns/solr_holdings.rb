@@ -83,11 +83,11 @@ module SolrHoldings
     @folio_holdings_by_id ||= folio_holdings.index_by(&:id)
   end
 
-  # Setting this to no-op if FOLIO_LIVE_LOOKUP is enabled. This is currently
-  # used by the request app to get live information about items, but we plan
-  # to go directly to FOLIO instead.
+  # Setting this to no-op if LIVE_LOOKUP_SERVICE is set to something other than
+  # LiveLookup::Sirsi. This is currently used by the request app to get live
+  # information about items, but we plan to go directly to FOLIO instead.
   def live_data
-    @live_data ||= if Settings.FOLIO_LIVE_LOOKUP
+    @live_data ||= if Settings.LIVE_LOOKUP_SERVICE.present? && Settings.LIVE_LOOKUP_SERVICE != 'LiveLookup::Sirsi'
                      []
                    else
                      LiveLookup.new(id).records
