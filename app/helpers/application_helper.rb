@@ -32,7 +32,7 @@ module ApplicationHelper
     page_title << " #{application_name} |" unless application_name.blank?
     page_title << " #{organization_name}" unless organization_name.blank?
 
-    content_for :title, page_title.compact.join('')
+    content_for :title, page_title.compact.join
   end
 
   def render_module(searcher, service_name, partial_name = 'module', per_page = 3)

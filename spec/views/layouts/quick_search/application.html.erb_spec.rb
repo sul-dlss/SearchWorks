@@ -5,8 +5,7 @@ require 'rails_helper'
 describe 'layouts/application' do
   before do
     without_partial_double_verification do
-      allow(view).to receive(:opensearch_path).and_return ''
-      allow(view).to receive(:body_class).and_return ''
+      allow(view).to receive_messages(opensearch_path: '', body_class: '')
     end
     render
   end
