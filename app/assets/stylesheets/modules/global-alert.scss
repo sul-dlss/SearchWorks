@@ -4,4 +4,8 @@ $global-alert-color: rgb(204, 0, 0);
   border: 1px solid $global-alert-color;
   margin: 10px 0;
   padding: 10px;
+
+  p {
+    max-width: fit-content;
+  }
 }
