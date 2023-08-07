@@ -235,11 +235,6 @@ RSpec/EmptyLineAfterHook:
     - 'spec/views/layouts/quick_search/application.html.erb_spec.rb'
 
 # Offense count: 4
-# Configuration parameters: CountAsOne.
-RSpec/ExampleLength:
-  Max: 22
-
-# Offense count: 4
 RSpec/ExpectInHook:
   Exclude:
     - 'spec/helpers/application_helper_spec.rb'

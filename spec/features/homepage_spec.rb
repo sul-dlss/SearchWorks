@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'Homepage' do
+RSpec.feature 'Homepage' do
   before do
     visit quick_search_path
   end
@@ -30,11 +30,7 @@ feature 'Homepage' do
         text: 'Exhibits'
       )
     end
-  end
-  scenario 'has links to more search tools' do
-    expect(page).to have_css(
-      'a[href="https://library.stanford.edu/search-services"]',
-      text: 'More search tools'
-    )
+
+    expect(page).to have_link 'More search tools', href: 'https://guides.library.stanford.edu/search-services'
   end
 end

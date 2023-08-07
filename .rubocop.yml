@@ -20,6 +20,9 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
+RSpec/ExampleLength:
+  Max: 25
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
