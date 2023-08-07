@@ -18,7 +18,7 @@ class LiveLookup
     def records
       @records ||= response.dig('response', 'docs').flat_map do |doc|
         doc.fetch('item_display_struct', []).map do |item|
-          LiveLookup::Solr::Record.new(item).as_json
+          LiveLookup::Solr::Record.new(JSON.parse(item)).as_json
         end
       end
     end
@@ -67,7 +67,7 @@ class LiveLookup
       private
 
       def item_id
-        item_as_json['barcode']
+        item['barcode']
       end
 
       def available?
@@ -81,20 +81,16 @@ class LiveLookup
         current_location.name
       end
 
-      def item_as_json
-        JSON.parse(item)
-      end
-
       def library_code
-        item_as_json['library']
+        item['library']
       end
 
       def home_location_code
-        item_as_json['home_location']
+        item['home_location']
       end
 
       def current_location_code
-        item_as_json['current_location']
+        item['current_location']
       end
 
       def valid_current_location?
