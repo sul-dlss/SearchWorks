@@ -1244,32 +1244,6 @@
     }
   },
   {
-    "id": "1393429d-6738-4381-b789-7fef75a0b014",
-    "name": "SAL3 Stacks Restricted",
-    "code": "SAL3-R-STACKS",
-    "discoveryDisplayName": "Stacks (Limited loan)",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-    "details": {
-      "availabilityClass": "Offsite"
-    },
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-02-08T23:37:56.733+00:00",
-      "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-08-01T17:50:29.632+00:00",
-      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
-    }
-  },
-  {
     "id": "13c2ee3e-5d88-453e-bb64-890e2936bebf",
     "name": "Earth Sci Stacks",
     "code": "EAR-STACKS",
@@ -7259,6 +7233,31 @@
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
       "updatedDate": "2023-07-27T11:19:36.774+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "86275438-fb74-4086-858e-47c3416c2fb2",
+    "name": "East Asia Current Periodicals",
+    "code": "EAL-CURRENTPER",
+    "discoveryDisplayName": "Current periodicals",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-07T17:50:35.433+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-07T17:50:35.433+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
