@@ -12,6 +12,8 @@
         <details>
             <summary>Circulation rules</summary>
             <pre><%= Folio::CirculationRules::PolicyService.instance.item_rule(@document.preferred_item).to_debug_s %></pre>
+
+            <pre><%= @document.items.select(&:folio_item?).group_by { |item| [item.loan_type, item.material_type, item.effective_location.code, item.folio_status] }.map { |_g, items| [solr_document_url(@document), @document.id, items.first.effective_location.code, items.map(&:barcode).join('|'), items.first.folio_status].to_csv(row_sep: nil) + "," + Folio::CirculationRules::PolicyService.instance.item_rule(items.first).to_csv(include_line_metadata: true) }.join %></pre>
         </details>
         <% end %>
     </div>
