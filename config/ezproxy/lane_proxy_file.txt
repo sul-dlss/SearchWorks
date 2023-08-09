@@ -100,6 +100,7 @@ apn.mhmedical.com
 app.gideononline.com
 app.jove.com
 app.knovel.com
+app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
 appliedcr.biomedcentral.com
 appmicro.springeropen.com
@@ -490,7 +491,6 @@ discover.nci.nih.gov
 discover.sabinet.co.za
 discover.yewno.com
 discoveriesjournals.org
-dl-acm-org.stanford.idm.oclc.org
 dl.acm.org
 dl.moazine.com
 dlib.eastview.com
@@ -644,7 +644,6 @@ freida.ama-assn.org
 frontiersinzoology.biomedcentral.com
 fungalbiolbiotech.biomedcentral.com
 fuse-journal.org
-gale.cengage.co.uk
 galenet.galegroup.com
 gallica.bnf.fr
 games.jmir.org
