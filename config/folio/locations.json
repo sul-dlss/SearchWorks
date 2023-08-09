@@ -3011,6 +3011,31 @@
     }
   },
   {
+    "id": "2f75fa4d-26b6-4beb-b034-50cf4443b628",
+    "name": "Green Shadow",
+    "code": "GRE-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:33:42.398+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:33:42.398+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "2faabe02-758e-4b87-a470-dca43027458e",
     "name": "SAL PUB 70",
     "code": "SAL-PUB70",
@@ -3514,6 +3539,31 @@
       "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
       "updatedDate": "2023-07-27T08:03:57.308+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "3c4db814-f0e7-4119-a14c-5909953608a6",
+    "name": "Music Tech Shadowed",
+    "code": "MUS-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
+    "details": {
+    },
+    "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
+    "servicePointIds": [
+      "4d77d74b-271e-421a-91c6-992afa9afb3c"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:59:29.526+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:59:29.526+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -4878,6 +4928,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T07:57:08.758+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "56aab2ba-1a38-4b7d-a004-87b2f20bc4bf",
+    "name": "Education Shadowed",
+    "code": "EDU-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
+    "details": {
+    },
+    "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
+    "servicePointIds": [
+      "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:32:01.233+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:32:01.233+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -6905,6 +6980,31 @@
     }
   },
   {
+    "id": "7f6714fa-266e-41f4-ae34-561d67cf29da",
+    "name": "Earth Sci Shadowed",
+    "code": "EAR-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "details": {
+    },
+    "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "servicePointIds": [
+      "4827ae1d-b8bf-4b90-9e09-d642557893ab"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:30:30.131+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:30:30.131+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "7fd5f273-904c-4b11-ae1b-0fb74aca1188",
     "name": "Green SSRC",
     "code": "GRE-SSRC",
@@ -7336,6 +7436,31 @@
     }
   },
   {
+    "id": "8726b10e-ba66-483f-808c-b0d34265f9df",
+    "name": "Business Shadowed",
+    "code": "BUS-SHADOW",
+    "discoveryDisplayName": "Ask at i-Desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
+    "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
+    "details": {
+    },
+    "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
+    "servicePointIds": [
+      "958cc062-591c-45de-85c1-0e8672fbbfc5"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T16:26:14.830+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T16:26:14.830+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "87c0e716-a457-43d7-b27e-3d774585b000",
     "name": "Law Wellness",
     "code": "LAW-WELLNESS",
@@ -7738,6 +7863,31 @@
     }
   },
   {
+    "id": "908d68ff-4e1d-4235-ba1a-6cfb88480c67",
+    "name": "Law Shadowed",
+    "code": "LAW-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
+    "details": {
+    },
+    "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
+    "servicePointIds": [
+      "ef1ea792-b2bb-49a2-8747-94376b64a74d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T17:45:04.217+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T17:45:04.217+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "909e3ef1-211b-4613-8511-370f9b66ac2d",
     "name": "Earth Sci Storage Locked",
     "code": "EAR-STOR-LOCKED",
@@ -7810,6 +7960,32 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T10:30:33.200+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "9250994b-590a-47ce-9301-1e36ff2a49eb",
+    "name": "Rumsey Center Shadowed",
+    "code": "RUM-SHADOW",
+    "discoveryDisplayName": "Ask at desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
+    "details": {
+      "pageAeonSite": "RUMSEY"
+    },
+    "primaryServicePoint": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
+    "servicePointIds": [
+      "b6987737-1e63-44cc-bfb1-2bcf044adcd7"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:29:52.914+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:29:52.914+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -7964,6 +8140,31 @@
     }
   },
   {
+    "id": "9539a651-1428-4be9-be2b-f9bb18a4a174",
+    "name": "SAL3 Shadowed",
+    "code": "SAL3-SHADOW",
+    "discoveryDisplayName": "Withdrawn",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T20:14:13.361+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T20:14:13.361+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "954d0e35-8eb1-4a0c-8787-cbdd889eafd3",
     "name": "Lane Error: Loc Problem in Acq",
     "code": "LANE-NLOC",
@@ -8011,6 +8212,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T11:39:39.740+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "96249f49-22ab-48cf-93c9-bd418a2593fa",
+    "name": "Eng Shadowed",
+    "code": "ENG-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
+    "details": {
+    },
+    "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
+    "servicePointIds": [
+      "d0db91bf-90e7-4036-8e91-721001cf52fc"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:32:53.006+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:32:53.006+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -8670,6 +8896,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T10:24:41.142+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "a13680b4-8d74-452c-8f7d-057d81b8e7e9",
+    "name": "East Asia Shadowed",
+    "code": "EAL-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:31:11.003+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:31:11.003+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -9728,6 +9979,56 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T09:05:39.191+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "b59a9dbd-68b2-4eb7-a7c8-2c079e7a4b7a",
+    "name": "Art Shadowed",
+    "code": "ART-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:23:04.934+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:23:04.934+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
+    "id": "b5ec2962-ec69-4f15-8afc-f14cc9729982",
+    "name": "SUL Shadowed",
+    "code": "SUL-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+    },
+    "primaryServicePoint": "7c5abc9f-f3d7-4856-b8d7-6712462ca007",
+    "servicePointIds": [
+      "7c5abc9f-f3d7-4856-b8d7-6712462ca007"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T20:15:55.883+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T20:15:55.883+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -12204,6 +12505,31 @@
     }
   },
   {
+    "id": "dbe976e6-93dc-4a43-9817-eee3996c8ef3",
+    "name": "Science Shadowed",
+    "code": "SCI-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+    "details": {
+    },
+    "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+    "servicePointIds": [
+      "50ef1036-06d3-48ef-9048-26cabfccf630"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T20:14:41.971+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T20:14:41.971+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "dbf198d7-2692-4aca-9b83-30e72d139655",
     "name": "Media PAGE-MD",
     "code": "MEDIA-PAGE-MD",
@@ -12432,6 +12758,31 @@
     }
   },
   {
+    "id": "e24f81fb-c8a6-4527-b8df-21c2878e30ec",
+    "name": "Media Shadowed",
+    "code": "MEDIA-SHADOW",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "0acfabb7-0a71-47be-82c0-c0200dd47952",
+    "details": {
+    },
+    "primaryServicePoint": "943a4850-f0fb-4ffe-83cb-919157ed2117",
+    "servicePointIds": [
+      "943a4850-f0fb-4ffe-83cb-919157ed2117"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T19:57:28.772+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T19:57:28.772+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "e2b3b0a5-9b8f-48a4-9d9d-e834209ccbad",
     "name": "SAL Tech Reports",
     "code": "SAL-TECH-REPORTS",
@@ -12455,6 +12806,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T11:27:54.615+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "e3056d3c-1b49-40f5-bfe1-80e22c2fe099",
+    "name": "HILA Shadowed",
+    "code": "HILA-SHADOW",
+    "discoveryDisplayName": "Ask in reading room",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
+    "details": {
+    },
+    "primaryServicePoint": "67552bac-7644-4b5d-a973-045b8370f6e6",
+    "servicePointIds": [
+      "67552bac-7644-4b5d-a973-045b8370f6e6"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T17:38:39.126+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T17:40:28.414+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -13715,6 +14091,31 @@
       "createdDate": "2023-07-01T18:34:36.210+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
       "updatedDate": "2023-07-01T18:34:36.210+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
+    "id": "fcbaa566-1dbd-4d89-8b89-9218106463fa",
+    "name": "SAL Shadowed",
+    "code": "SAL-SHADOW",
+    "discoveryDisplayName": "Withdrawn",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
+    "details": {
+    },
+    "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
+    "servicePointIds": [
+      "6e0748f5-4420-4995-b96e-f7aeb978a45a"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-08T20:13:33.423+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-08T20:13:33.423+00:00",
       "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
