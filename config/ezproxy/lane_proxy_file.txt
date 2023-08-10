@@ -1606,9 +1606,7 @@ worldwidescience.org
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
 www-krpia-co-kr.stanford.idm.oclc.org
-www-oecd-ilibrary-org.stanford.idm.oclc.org
 www-pub.iaea.org
-www-rkma-com.stanford.idm.oclc.org
 www-sciencedirect-com.stanford.idm.oclc.org
 www.0334.cl
 www.18thcjournals.amdigital.co.uk
