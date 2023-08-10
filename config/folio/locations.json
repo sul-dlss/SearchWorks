@@ -279,6 +279,31 @@
     }
   },
   {
+    "id": "0300cf11-85e0-45fa-9a69-f51bab7d1fcf",
+    "name": "Art Maintenance Shelf Locked",
+    "code": "ART-PROCESSING-LOCKED",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T00:04:24.787+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-10T00:04:24.787+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+    }
+  },
+  {
     "id": "03164a4b-a047-40b0-a4fb-682980524697",
     "name": "Marine Bio Expeditions",
     "code": "MAR-EXPEDITIONS",
@@ -388,6 +413,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -399,8 +425,8 @@
     "metadata": {
       "createdDate": "2023-07-01T19:24:56.207+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T08:47:20.761+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:38:04.368+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -438,6 +464,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -449,8 +476,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:07.499+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T08:47:29.963+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:38:15.034+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -1070,7 +1097,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
-      "scanServicePoint": "SAL3",
+      "scanServicePointCode": "SAL3",
       "availabilityClass": "Offsite"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -1083,7 +1110,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:56.979+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-08-01T17:45:23.822+00:00",
+      "updatedDate": "2023-08-10T00:03:18.142+00:00",
       "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
@@ -1226,7 +1253,8 @@
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
     "details": {
-      "scanServicePoint": "SAL3",
+      "scanServicePointCode": "SAL3",
+      "pageSchedule": "SAL3",
       "pageServicePointCodes": "BUS-IDESK"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -1239,8 +1267,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:13.330+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T07:22:16.632+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-10T00:05:48.940+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -3476,6 +3504,7 @@
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
     "details": {
+      "pagingSchedule": "SAL3"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -3487,7 +3516,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:13.499+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-28T16:28:12.544+00:00",
+      "updatedDate": "2023-08-09T19:29:56.515+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
@@ -4030,6 +4059,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -4041,8 +4071,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:06.749+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T08:46:27.922+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:37:56.542+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -5897,6 +5927,7 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
+      "pagingSchedule": "SAL3"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -5908,8 +5939,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:38.730+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-28T23:35:15.605+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-08-09T17:36:05.445+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
@@ -6430,6 +6461,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -6441,8 +6473,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:05.767+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T08:42:06.639+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:37:34.775+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -8730,7 +8762,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
-      "scanServicePoint": "SAL3",
+      "scanServicePointCode": "SAL3",
       "availabilityClass": "Offsite",
       "pageServicePointCodes": "GREEN-LOAN"
     },
@@ -8744,7 +8776,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.727+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-08-01T17:51:46.782+00:00",
+      "updatedDate": "2023-08-10T00:05:18.303+00:00",
       "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
@@ -8983,6 +9015,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -8994,8 +9027,8 @@
     "metadata": {
       "createdDate": "2023-06-27T21:34:20.095+00:00",
       "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
-      "updatedDate": "2023-07-27T08:44:49.599+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:37:40.823+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -9324,6 +9357,31 @@
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
       "updatedDate": "2023-07-27T10:45:34.240+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+    }
+  },
+  {
+    "id": "a93811d6-a2c9-4ad8-96d1-2cd7f924cd3b",
+    "name": "Green CPR Bindery",
+    "code": "GRE-CPR-BINDERY",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-09T18:41:19.452+00:00",
+      "createdByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364",
+      "updatedDate": "2023-08-09T18:41:19.452+00:00",
+      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
     }
   },
   {
@@ -9768,6 +9826,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageServicePoints": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -9779,8 +9838,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:06.367+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T08:45:43.371+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-09T20:37:46.444+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -11247,6 +11306,8 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
+      "pageServicePointCodes": "LANE-DESK",
+      "pagingSchedule": "SAL3"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -11258,8 +11319,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:38.849+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-28T23:35:06.053+00:00",
-      "updatedByUserId": "7ea853b6-26b6-4e5d-9b52-17b3bc1cb364"
+      "updatedDate": "2023-08-09T17:39:34.199+00:00",
+      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },
   {
@@ -13244,6 +13305,7 @@
     "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
     "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
     "details": {
+      "pagingSchedule": "SAL3"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -13255,7 +13317,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:31.045+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-28T16:28:36.285+00:00",
+      "updatedDate": "2023-08-09T18:10:56.540+00:00",
       "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
     }
   },

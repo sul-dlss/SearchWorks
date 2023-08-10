@@ -275,7 +275,8 @@ m 794de86f-ecbc-45ad-b790-f30eb19797ec : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 
     c e8068690-b2c9-433b-83ac-3bdfd6427e1a : l 32872e02-34b2-49b2-b0dd-d3684c5bf246 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i f96e7828-4c47-4c3f-be2d-189bef9fba7a 
     /science atcircdesk has books and CD ROms. While books circ CD ROMS do not
     s 920e71ee-5ea3-4934-a878-7fe64b1fc8fc : l 5866e82c-ab61-4628-85d4-ee1497b0d3c8 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i f96e7828-4c47-4c3f-be2d-189bef9fba7a 
-m 5df0f5e3-2e36-4dc7-979c-88705a9103a4 : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe  n 122b3d2b-4788-4f1e-9117-56daa91cb75c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i     bb338f23-67e1-4e34-ab8d-a861b3c9879a    
+/NEWSPAPERS
+m 5df0f5e3-2e36-4dc7-979c-88705a9103a4 : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe  n 122b3d2b-4788-4f1e-9117-56daa91cb75c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i bb338f23-67e1-4e34-ab8d-a861b3c9879a    
     s  bf8d7cef-ceea-480f-a5cf-d81cbeb0a168  9ec3833a-10ef-427e-afee-7de701ce7f2c : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 57835106-73e1-4cde-a474-7a6d3bda2857 n 122b3d2b-4788-4f1e-9117-56daa91cb75c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i bb338f23-67e1-4e34-ab8d-a861b3c9879a  
 
 /PERIODICALS & OTHER SHORT-TERM NON-EQUIP LOANS
