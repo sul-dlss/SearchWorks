@@ -83,16 +83,20 @@ module Folio
           when 'last-line'
             ->(policy) { -1 * policy[:line] }
           when Array
-            order = p.pluck(:letter).reverse
+            order = p.pluck(:letter)
+
             lambda do |policy|
-              # per FOLIO docs, we only consider the first matching criteria type
-              policy[:criteria].keys.map { |x| order.index(INVERTED_CRITERIA_TYPES.fetch(x, x)) || INVERTED_CRITERIA_TYPES.length }
+              # We're going through the list of criterium priorities and building up a binary representation for whether the
+              # given policy has that criterium. E.g. for the criterium(t,s, c, b, a, g, m) and a policy with
+              # a loan type, a location, and a material type, we'd get 0b1100001.
+              #
+              # The order is negated so the highest priority is the most-negative number and sorts first.
+              -1 * order.inject(0) { |sum, letter| (sum << 1) | (policy.dig(:criteria, CRITERIA_TYPES[letter]) ? 1 : 0) }
             end
           end
         end
 
         sorters << ->(policy) { policy[:criteria].values_at('location-library', 'location-location', 'group', 'material-type') }
-
         statements = statements.sort_by { |s| sorters.map { |z| z.call(s) } }
         statements = statements.map do |s|
           s.criteria = DEFAULT_CRITERIA.merge(s[:criteria])
