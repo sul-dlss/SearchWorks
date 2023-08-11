@@ -48,7 +48,7 @@ RSpec.describe Folio::Location do
     end
 
     it 'stores the library info' do
-      expect(subject.library.name).to eq 'Cecil H. Green'
+      expect(subject.library.code).to eq 'GREEN'
     end
 
     it 'stores the location info' do

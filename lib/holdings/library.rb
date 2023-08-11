@@ -2,7 +2,7 @@ class Holdings
   class Library
     attr_reader :code, :items, :mhld
 
-    delegate :name, :about_url, to: :config
+    delegate :about_url, to: :config
 
     # @params [String] code the library code (e.g. 'GREEN')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
@@ -10,6 +10,12 @@ class Holdings
       @code = code
       @items = items
       @mhld = mhld
+    end
+
+    def name
+      return config.name unless items.any?(&:folio_item?)
+
+      items.first(&:folio_item).permanent_location&.name || config.name
     end
 
     # @return [Array<Holdings::Location>] the locations with the holdings
