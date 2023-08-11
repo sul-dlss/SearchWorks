@@ -285,7 +285,7 @@ selected_databases:
    "6758881":
      subjects: ["Sciences", "Humanities", "Social Sciences", "Citation Indexes"]
      description: "Web of Knowledge provides access to information on science, social sciences, and arts and humanities, as well as search and analysis (citation) tools."
-   "3942381":
+   "12328632":
      subjects: ["Multidisciplinary", "Newspaper articles"]
      description: "Provides full-text documents from over 5,900 news, business, legal, medical, and reference publications."
      see_also: { id: "9688486", text: "ProQuest News & Newspapers" }
