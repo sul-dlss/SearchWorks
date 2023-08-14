@@ -79,7 +79,7 @@ module XmlApiHelper
         urls << { label: link.text, link: link.href }
       end
     end
-    return urls unless urls.blank?
+    (urls.presence)
   end
 
   def get_imprint_for_mobile(marc)
@@ -156,11 +156,11 @@ module XmlApiHelper
         end
       end
     end
-    return return_text.join(" ") unless return_text.blank?
+    return_text.join(" ") unless return_text.blank?
   end
 
   def doc_is_a_database?(doc)
-    return true if document_format_classes(doc) and document_format_classes(doc).include?("database")
+    true if document_format_classes(doc) and document_format_classes(doc).include?("database")
   end
 
   def document_format_classes(document)

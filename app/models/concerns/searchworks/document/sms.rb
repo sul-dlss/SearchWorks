@@ -21,6 +21,6 @@ module Searchworks::Document::Sms
       body << I18n.t('blacklight.sms.text.callnumber', value: item.callnumber)
     end
 
-    return body.join("\n") unless body.empty?
+    body.join("\n") unless body.empty?
   end
 end
