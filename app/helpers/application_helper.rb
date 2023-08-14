@@ -31,7 +31,7 @@ module ApplicationHelper
         items << fields
       end
     end
-    return { label:, fields: items, vernacular: get_indexed_vernacular(doc, field_string) } unless items.empty?
+    { label:, fields: items, vernacular: get_indexed_vernacular(doc, field_string) } unless items.empty?
   end
 
   # Generate a dt/dd pair with a link with a label given a field in the SolrDocument
@@ -51,7 +51,7 @@ module ApplicationHelper
         end
       end
     end
-    return { label:, fields: items, vernacular: vern } unless (items.empty? and vern.empty?)
+    { label:, fields: items, vernacular: vern } unless (items.empty? and vern.empty?)
   end
 
   def get_indexed_vernacular(doc, field)
@@ -66,7 +66,7 @@ module ApplicationHelper
         fields << vern_fields
       end
     end
-    return fields unless fields.empty?
+    fields unless fields.empty?
   end
 
   def active_class_for_current_page(page)
