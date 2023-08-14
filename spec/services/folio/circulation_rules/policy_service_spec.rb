@@ -67,7 +67,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       before do
         allow(item).to receive_messages(material_type: Folio::Item::MaterialType.new(id: 'multimedia', name: 'Multimedia'), loan_type: Folio::Item::LoanType.new(id: '7hour', name: '7-hour reserve'), effective_location: Folio::Location.new(
           campus: Folio::Location::Campus.new(id: 'sul', code: 'SUL', name: 'Stanford University Libraries'),
-          library: Folio::Location::Library.new(id: 'media-center', code: 'MEDIA-CENTER', name: 'Media & Microtext Center'),
+          library: Folio::Library.new(id: 'media-center', code: 'MEDIA-CENTER', name: 'Media & Microtext Center'),
           id: 'media-cage', code: 'MEDIA-CAGE', name: 'Media Cage'
         ))
       end
@@ -81,7 +81,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       before do
         allow(item).to receive_messages(material_type: Folio::Item::MaterialType.new(id: 'microform', name: 'Microform'), loan_type: Folio::Item::LoanType.new(id: '12hour', name: '12-hour reserve'), effective_location: Folio::Location.new(
           campus: Folio::Location::Campus.new(id: 'sul', code: 'SUL', name: 'Stanford University Libraries'),
-          library: Folio::Location::Library.new(id: 'media-center', code: 'MEDIA-CENTER', name: 'Media & Microtext Center'),
+          library: Folio::Library.new(id: 'media-center', code: 'MEDIA-CENTER', name: 'Media & Microtext Center'),
           id: 'media-stacks', code: 'MEDIA-STACKS', name: 'Media Stacks'
         ))
       end
@@ -95,7 +95,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       before do
         allow(item).to receive_messages(material_type: Folio::Item::MaterialType.new(id: 'book', name: 'Books'), loan_type: Folio::Item::LoanType.new(id: '7day', name: '7-day loan'), effective_location: Folio::Location.new(
           campus: Folio::Location::Campus.new(id: 'sul', code: 'SUL', name: 'Stanford University Libraries'),
-          library: Folio::Location::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library'),
+          library: Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library'),
           id: 'green-stacks', code: 'GRE-STACKS', name: 'Green Stacks'
         ))
       end
@@ -109,7 +109,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       before do
         allow(item).to receive_messages(material_type: Folio::Item::MaterialType.new(id: 'multimedia', name: 'Multimedia'), loan_type: Folio::Item::LoanType.new(id: 'rr', name: 'Reading room use only'), effective_location: Folio::Location.new(
           campus: Folio::Location::Campus.new(id: 'sul', code: 'SUL', name: 'Stanford University Libraries'),
-          library: Folio::Location::Library.new(id: 'ars', code: 'ARS', name: 'Archive of Recorded Sound'),
+          library: Folio::Library.new(id: 'ars', code: 'ARS', name: 'Archive of Recorded Sound'),
           id: 'reference', code: 'REFERENCE', name: 'Reference'
         ))
       end
@@ -178,7 +178,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
     before do
       allow(item).to receive_messages(material_type: Folio::Item::MaterialType.new(id: 'book', name: 'Books'), loan_type: Folio::Item::LoanType.new(id: 'can-circ', name: 'Can circulate'), effective_location: Folio::Location.new(
         campus: Folio::Location::Campus.new(id: 'sul', code: 'SUL', name: 'Stanford University Libraries'),
-        library: Folio::Location::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library'),
+        library: Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library'),
         id: 'green-stacks', code: 'GRE-STACKS', name: 'Green Stacks'
       ))
     end
