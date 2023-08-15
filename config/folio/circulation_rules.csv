@@ -13,7 +13,7 @@ any,any,,,,,LANE-SAL3X,12hour-norenew-15mingrace,Allow paging,Default notice,3.0
 any,any,,,,,LANE-SOMCC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-REF,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-ERQC,14day-2renew-1daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
-,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,Allow All,Course reserves,1.00/30.00 hourly fine,$250 lost fee
+,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,Allow All,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 graduate or postdoctoral,book,,,,LANE,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 staff or faculty or lane-resident or lane-hospital staff or fellow,book,,,,LANE,,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
@@ -130,6 +130,7 @@ any,,,,,,LANE-NEWB,28day-2renew-7daygrace,Hold only,Default notice,3.00/21.00 re
 ,library equipment 1,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$100 lost fee - 1 hr aged to lost
 ,av equipment 2,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$1000 lost fee - 1 hr aged to lost
 ,av equipment 1,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$500 lost fee - 1 hr aged to lost
+,accessories 2,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$500 lost fee - 1 hr aged to lost
 ,accessories 1,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$100 lost fee - 1 hr aged to lost
 ,periodical,,,,LANE,,7day-2renew-3daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 ,multimedia,,,,LAW,,No loan,No requests allowed,Default notice,No fines,$150 lost fee
