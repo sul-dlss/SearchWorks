@@ -9657,8 +9657,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
-      "pageServicePointIds": "MUSIC,MEDIA-CENTER",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "MUSIC,MEDIA-CENTER"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -9670,7 +9670,7 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:55.848+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-08-01T17:51:37.516+00:00",
+      "updatedDate": "2023-08-14T22:06:59.992+00:00",
       "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
