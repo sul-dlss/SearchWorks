@@ -1,7 +1,7 @@
 module Folio
   class Types
     class << self
-      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, to: :instance
+      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, :institutions, :campuses, :service_points, to: :instance
     end
 
     def self.instance
@@ -24,6 +24,8 @@ module Folio
 
         File.write(file, JSON.pretty_generate(folio_client.public_send(type)))
       end
+
+      File.write(cache_dir.join('locations.csv'), Folio::Locations.to_csv)
 
       circulation_rules = folio_client.circulation_rules
       File.write(cache_dir.join('circulation_rules.txt'), circulation_rules)
@@ -55,6 +57,14 @@ module Folio
         'location-library' => libraries,
         'location-location' => locations
       }
+    end
+
+    def institutions
+      @institutions ||= get_type('institutions').index_by { |p| p['id'] }
+    end
+
+    def campuses
+      @campuses ||= get_type('campuses').index_by { |p| p['id'] }
     end
 
     def libraries
