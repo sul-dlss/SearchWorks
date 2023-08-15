@@ -2,8 +2,19 @@ require "spec_helper"
 
 describe Holdings::Library do
   include Marc856Fixtures
-  it "translates the library code" do
-    expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
+  describe '#name' do
+    it "translates the library code" do
+      expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
+    end
+
+    context 'with a FOLIO item' do
+      let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(library:))] }
+      let(:library) { Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library') }
+
+      it "translates the library code using the FOLIO library data" do
+        expect(Holdings::Library.new("GREEN", items).name).to eq "Cecil R. Green Library"
+      end
+    end
   end
 
   describe "#locations" do

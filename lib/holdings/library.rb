@@ -15,7 +15,7 @@ class Holdings
     def name
       return config.name unless items.any?(&:folio_item?)
 
-      items.first(&:folio_item).permanent_location&.name || config.name
+      items.first(&:folio_item).permanent_location&.library&.name || config.name
     end
 
     # @return [Array<Holdings::Location>] the locations with the holdings
