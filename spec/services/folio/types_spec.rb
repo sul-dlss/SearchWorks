@@ -42,7 +42,8 @@ RSpec.describe Folio::Types do
         libraries: ['libraries'],
         campuses: ['campuses'],
         institutions: ['institutions'],
-        loan_types: ['loan_types']
+        loan_types: ['loan_types'],
+        service_points: ['service_points']
       }
     end
     let(:circulation_rules) do

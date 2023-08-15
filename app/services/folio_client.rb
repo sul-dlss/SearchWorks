@@ -94,6 +94,10 @@ class FolioClient
     get_json('/location-units/institutions', params: { limit: 2_147_483_647 }).fetch('locinsts', []).sort_by { |x| x['id'] }
   end
 
+  def service_points
+    get_json('/service-points', params: { limit: 2_147_483_647 }).fetch('servicepoints', []).sort_by { |x| x['id'] }
+  end
+
   private
 
   def post(path, **kwargs)

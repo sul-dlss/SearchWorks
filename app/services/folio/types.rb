@@ -65,6 +65,10 @@ module Folio
       @locations ||= get_type('locations').index_by { |p| p['id'] }
     end
 
+    def service_points
+      @service_points ||= get_type('service_points').index_by { |p| p['id'] }
+    end
+
     def get_type(type)
       raise "Unknown type #{type}" unless types_of_interest.include?(type.to_s)
 
@@ -87,7 +91,8 @@ module Folio
         'institutions',
         'campuses',
         'libraries',
-        'locations'
+        'locations',
+        'service_points'
       ]
     end
   end
