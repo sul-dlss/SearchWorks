@@ -5,7 +5,7 @@ class ItemRequestLinkPolicy
   end
 
   def show?
-    return folio_holdable? || current_location_is_always_requestable? if item.folio_item?
+    return folio_holdable? if item.folio_item?
 
     return false if aeon_pageable? || in_mediated_pageable_location? || in_nonrequestable_location? || item.on_reserve?
 
