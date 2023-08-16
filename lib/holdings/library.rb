@@ -15,7 +15,18 @@ class Holdings
     def name
       return config.name unless items.any?(&:folio_item?)
 
-      items.first(&:folio_item).permanent_location&.library&.name || config.name
+      @name ||= begin
+        folio_item = items.first(&:folio_item)
+
+        # use the effective location's library name if we're treating it as the permanent location;
+        # by the time we get here, we're already grouped by the item's library code which respects
+        # the same rules
+        name ||= folio_item.effective_location&.library&.name if folio_item.effective_location&.details&.dig('searchworksTreatTemporaryLocationAsPermanentLocation')
+        # prefer the name from the cached folio data (for consistency across records)
+        name ||= folio_item.permanent_location&.library&.name
+        # fall back on the name from the document
+        name || config.name
+      end
     end
 
     # @return [Array<Holdings::Location>] the locations with the holdings
