@@ -7,8 +7,6 @@ module Folio
   class Locations
     include Singleton
 
-    HASH_FIELDS = %w[details metadata].freeze
-
     # @param [String] code the Folio location code
     # @return [String] the Folio location label
     def self.label(code:)
