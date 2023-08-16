@@ -50,7 +50,6 @@ aejournal.biomedcentral.com
 aem.asm.org
 afju.springeropen.com
 aging.jmir.org
-agricola.nal.usda.gov
 agupubs.onlinelibrary.wiley.com
 ahajournals.org
 ahj.kmu.ac.ir
@@ -309,6 +308,7 @@ bvbr.bib-bvb.de
 bz.nlcpress.com
 cadal.edu.cn
 cajgh.pitt.edu
+caliber.ucpress.net
 cancer.ca
 cancer.jmir.org
 cancerandmetabolism.biomedcentral.com
@@ -402,7 +402,6 @@ cnjournal.biomedcentral.com
 cocatalog.loc.gov
 cognet.mit.edu
 cognitiveresearchjournal.springeropen.com
-collections.chadwyck.com
 collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
@@ -458,7 +457,6 @@ deckerip.com
 deepresearch.amplyfi.com
 deposit.d-nb.de
 deposit.ddb.de
-deposit.dnb.de
 dermatology.mhmedical.com
 dfg-viewer.de
 diabetes.jmir.org
@@ -581,6 +579,7 @@ ems.press
 endometabol.com
 engine.scichina.com
 english.rrsurg.com
+englishyiddishdictionary.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
 ep.bmj.com
@@ -1248,6 +1247,7 @@ pep-web.org
 periop.jmir.org
 perioperativemedicinejournal.biomedcentral.com
 permanent.access.gpo.gov
+permanent.fdlp.gov
 perspectives.ahima.org
 perspectivesinmedicine.cshlp.org
 pharmrev.aspetjournals.org
@@ -1291,7 +1291,6 @@ primarysources.brillonline.com
 princeton.universitypressscholarship.com
 proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
-prod.resource.cch.com
 profiles.nlm.nih.gov
 projecteuclid.org
 proquest.safaribooksonline.com
@@ -1560,7 +1559,6 @@ ugeskriftet.dk
 ulrichsweb.serialssolutions.com
 unstats.un.org
 upload.wikimedia.org
-us.artechhouse.com
 us.expasy.org
 usp.az1.qualtrics.com
 uswest.ensembl.org
@@ -1762,13 +1760,13 @@ www.atsjournals.org
 www.auajournals.org
 www.audio-digest.org
 www.audiologyresearch.org
+www.austlii.edu.au
 www.avert.org
 www.ayujournal.org
 www.balkaninsight.com
 www.balkanmedicaljournal.org
 www.bam-online.org
 www.banglajol.info
-www.barpublishing.com
 www.bartleby.com
 www.bc.edu
 www.bcmj.org
@@ -1870,7 +1868,6 @@ www.chinaphar.com
 www.chiropractic.ca
 www.chlamy.org
 www.chsjournal.org
-www.churchmissionarysociety.amdigital.co.uk
 www.ciaonet.org
 www.cicm.org.au
 www.cis.rit.edu
@@ -2003,7 +2000,6 @@ www.ectrx.org
 www.edaddeplata.org
 www.educationforhealth.net
 www.educause.edu
-www.edweek.org
 www.eftf.org
 www.egms.de
 www.eighteenthcenturydrama.amdigital.co.uk
@@ -2160,6 +2156,7 @@ www.hmpgloballearningnetwork.com
 www.hopkinsguides.com
 www.horizonpress.com
 www.hormones.gr
+www.hti.umich.edu
 www.humantechnology.jyu.fi
 www.i-jmr.org
 www.iaas-med.com
@@ -2560,7 +2557,6 @@ www.mltj.org
 www.molbiolcell.org
 www.molcells.org
 www.molvis.org
-www.mona.uwi.edu
 www.moniquewmorris.me
 www.morganclaypool.com
 www.moritzlaw.osu.edu
@@ -2764,7 +2760,6 @@ www.radiologycases.com
 www.rand.org
 www.rarebooks.info
 www.ravmilim.co.il
-www.rbsourcefilings.com
 www.rcpe.ac.uk
 www.rcpjournals.org
 www.rcvmonline.com
@@ -2872,6 +2867,7 @@ www.spnefro.pt
 www.springer.com
 www.springerlink.com
 www.springeropen.com
+www.springerprotocols.com
 www.srm-ejournal.com
 www.ssa.gov
 www.ssph-journal.org
@@ -2995,8 +2991,6 @@ www.wjpch.com
 www.wjps.ir
 www.wlupress.wlu.ca
 www.wma.net
-www.wolterskluwer.com
-www.worldbank.org
 www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
