@@ -4548,6 +4548,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -4559,8 +4560,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:24.753+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:54:14.788+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-16T18:30:59.646+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {

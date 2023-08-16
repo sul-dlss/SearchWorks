@@ -211,8 +211,10 @@ faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow paging/hold,Default notice,No fines
 ,game,,,,,ENG-GAMES,14day-2renew-3daygrace,No requests allowed,Short Term Notices,No fines,$30 lost fee
 ,portable device 2,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$250 lost fee
 ,portable device 1,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$250 lost fee
+,portable device 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$250 lost fee
 ,portable device 1,,,,ENG,,14day-norenew-1daygrace,No requests allowed,Default notice,No fines,$250 lost fee
 ,library equipment 3,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$500 lost fee
+,library equipment 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,library equipment 1,,,,ENG,,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,library equipment 1,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee
 ,laptop,,,,ENG,,7day-norenew-3daygrace,No requests allowed,Short Term Notices,No fines,$1000 lost fee
