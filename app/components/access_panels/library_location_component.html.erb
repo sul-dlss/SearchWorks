@@ -28,7 +28,7 @@
   </thead>
   <tbody data-long-list data-list-type="location">
     <% location.items.each do |item| %>
-      <tr class="availability-item">
+      <%= tag.tr class: 'availability-item', data: { barcode: item.barcode } do %>
         <td class="callnumber">
           <%= item.callnumber %>
         </td>
@@ -62,7 +62,7 @@
         <% else %>
           <td></td>
         <% end %>
-      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
