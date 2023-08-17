@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Home page', type: :routing do
+RSpec.describe 'Home page' do
   it 'renders the home page' do
     expect(get: '/').to route_to('pages#home')
   end

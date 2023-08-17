@@ -9,26 +9,11 @@ RSpec.feature 'Homepage' do
 
   scenario 'has links to various search contexts' do
     within '.bento-panels' do
-      expect(page).to have_css(
-        'a[href="https://searchworks.stanford.edu"]',
-        text: 'Catalog'
-      )
-      expect(page).to have_css(
-        'a[href="https://searchworks.stanford.edu/articles"]',
-        text: 'Articles+'
-      )
-      expect(page).to have_css(
-        'a[href="https://guides.library.stanford.edu"]',
-        text: 'Guides'
-      )
-      expect(page).to have_css(
-        'a[href="https://library.stanford.edu"]',
-        text: 'Library website'
-      )
-      expect(page).to have_css(
-        'a[href="https://exhibits.stanford.edu"]',
-        text: 'Exhibits'
-      )
+      expect(page).to have_link 'Catalog', href: 'https://searchworks.stanford.edu'
+      expect(page).to have_link 'Articles+', href: 'https://searchworks.stanford.edu/articles'
+      expect(page).to have_link 'Guides', href: 'https://guides.library.stanford.edu'
+      expect(page).to have_link 'Library website', href: 'https://library.stanford.edu'
+      expect(page).to have_link 'Exhibits', href: 'https://exhibits.stanford.edu'
     end
 
     expect(page).to have_link 'More search tools', href: 'https://guides.library.stanford.edu/search-services'

@@ -9,9 +9,7 @@ describe 'search/_module_heading' do
 
   before do
     without_partial_double_verification do
-      allow(view).to receive(:service_name).and_return('catalog')
-      allow(view).to receive(:total).and_return(0)
-      allow(view).to receive(:searcher).and_return(catalog)
+      allow(view).to receive_messages(service_name: 'catalog', total: 0, searcher: catalog)
     end
     render
   end

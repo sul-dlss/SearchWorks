@@ -8,56 +8,56 @@ RSpec.describe LibraryWebsiteApiSearchService do
   let(:response) do
     JSON.dump(
       {
-        "jsonapi": {
-          "version": "1.0",
-          "meta": {
-            "links": {
-              "self": {
-                "href": "http://jsonapi.org/format/1.0/"
+        jsonapi: {
+          version: "1.0",
+          meta: {
+            links: {
+              self: {
+                href: "http://jsonapi.org/format/1.0/"
               }
             }
           }
         },
-        "data": [
+        data: [
           {
-            "type": "node--stanford_page",
-            "id": "0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0",
-            "links": {
-              "self": {
-                "href": "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0?resourceVersion=id%3A17206"
+            type: "node--stanford_page",
+            id: "0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0",
+            links: {
+              self: {
+                href: "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0?resourceVersion=id%3A17206"
               }
             },
-            "attributes": {
-              "title": "Work with data",
-              "path": {
-                "alias": "/services/work-data",
-                "pid": 2086,
-                "langcode": "en"
+            attributes: {
+              title: "Work with data",
+              path: {
+                alias: "/services/work-data",
+                pid: 2086,
+                langcode: "en"
               },
-              "su_page_description": "First result description"
+              su_page_description: "First result description"
             }
           },
           {
-            "type": "node--stanford_page",
-            "id": "e1117434-f6d7-448a-9d4a-80f7e4bc992a",
-            "links": {
-              "self": {
-                "href": "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/e1117434-f6d7-448a-9d4a-80f7e4bc992a?resourceVersion=id%3A18441"
+            type: "node--stanford_page",
+            id: "e1117434-f6d7-448a-9d4a-80f7e4bc992a",
+            links: {
+              self: {
+                href: "https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/e1117434-f6d7-448a-9d4a-80f7e4bc992a?resourceVersion=id%3A18441"
               }
             },
-            "attributes": {
-              "title": "Promote your research",
-              "path": {
-                "alias": "/services/promote-your-research",
-                "pid": 2351,
-                "langcode": "en"
+            attributes: {
+              title: "Promote your research",
+              path: {
+                alias: "/services/promote-your-research",
+                pid: 2351,
+                langcode: "en"
               },
-              "su_page_description": "this is a page that describes how Stanford Libraries can help students and scholars to promote their research"
+              su_page_description: "this is a page that describes how Stanford Libraries can help students and scholars to promote their research"
             }
           }
         ],
-        "meta": {
-          "count": 207
+        meta: {
+          count: 207
         }
       }
     )
