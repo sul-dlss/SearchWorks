@@ -14,23 +14,23 @@ RSpec.describe Holdings::Item do
       expect(item).to respond_to(method)
     end
   end
-  describe '#present?' do
+  describe '#suppressed?' do
     let(:no_item_display) { Holdings::Item.from_item_display_string('') }
 
-    it "should be false when the item_display doesn't exist" do
-      expect(no_item_display).not_to be_present
+    it "should be true when the item_display doesn't exist" do
+      expect(no_item_display).to be_suppressed
     end
 
-    it 'should return true when the item_display exists' do
-      expect(item).to be_present
+    it 'should return false when the item_display exists' do
+      expect(item).not_to be_suppressed
     end
 
-    it 'should return false for INTERNET items' do
-      expect(internet_item).not_to be_present
+    it 'should return true for INTERNET items' do
+      expect(internet_item).to be_suppressed
     end
 
-    it 'should return false for E-RESVs' do
-      expect(eresv_item).not_to be_present
+    it 'should return true for E-RESVs' do
+      expect(eresv_item).to be_suppressed
     end
   end
 

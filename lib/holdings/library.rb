@@ -60,7 +60,7 @@ class Holdings
     end
 
     def present?
-      @items.any?(&:present?) ||
+      @items.reject(&:suppressed?).any? ||
         (mhld.present? && mhld.any?(&:present?)) ||
         locations.any?(&:bound_with?)
     end

@@ -42,10 +42,10 @@ class Holdings
       @folio_item = folio_item
     end
 
-    def present?
-      @item_display.values.any?(&:present?) &&
-        !(item_display[:library] == 'SUL' && (internet_resource? || eresv?)) &&
-        !bound_with?
+    def suppressed?
+      @item_display.values.none?(&:present?) ||
+        (item_display[:library] == 'SUL' && (internet_resource? || eresv?)) ||
+        bound_with?
     end
 
     def browsable?
@@ -221,8 +221,6 @@ class Holdings
 
     delegate :status, to: :folio_item, prefix: :folio
 
-    private
-
     def internet_resource?
       home_location == 'INTERNET' || type == 'ONLINE'
     end
@@ -230,6 +228,8 @@ class Holdings
     def eresv?
       current_location.code == 'E-RESV'
     end
+
+    private
 
     # is in the list of stackmappable libraries
     def stackmapable_library?
