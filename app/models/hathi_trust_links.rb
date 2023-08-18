@@ -59,7 +59,7 @@ class HathiTrustLinks
   end
 
   def many_holdings?
-    document.holdings.items.many?(&:present?)
+    document.holdings.items.reject(&:suppressed?).many?
   end
 
   def fulltext_available?

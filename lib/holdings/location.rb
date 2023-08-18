@@ -52,7 +52,7 @@ class Holdings
     def as_json
       {
         code:,
-        items: items.select(&:present?).map(&:as_json),
+        items: items.reject(&:suppressed?).map(&:as_json),
         mhld: mhld&.select(&:present?)&.map(&:as_json),
         name:
       }
@@ -73,7 +73,7 @@ class Holdings
     end
 
     def any_items?
-      items.any?(&:present?)
+      items.reject(&:suppressed?).any?
     end
 
     def any_mhlds?
