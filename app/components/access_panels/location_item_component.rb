@@ -44,7 +44,7 @@ module AccessPanels
       # non-circulating items don't need real time availability
       return false unless item.circulates?
 
-      # items that definitely have at render time don't need real time availability
+      # items that definitely have an item-level request link at render time don't need real time availability
       return false if item.request_link.render?
 
       true
