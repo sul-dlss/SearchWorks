@@ -42,6 +42,10 @@ class Holdings
       @folio_item = folio_item
     end
 
+    def id
+      @item_display[:id]
+    end
+
     def suppressed?
       @item_display.values.none?(&:present?) ||
         (item_display[:library] == 'SUL' && (internet_resource? || eresv?)) ||
@@ -206,7 +210,7 @@ class Holdings
     # LiveLookup::Folio uses the item UUID, while LiveLookup::Sirsi
     # uses the barcode for identifying items.
     def live_lookup_item_id
-      folio_item&.id || barcode
+      id || folio_item&.id || barcode
     end
 
     def folio_item?
@@ -269,7 +273,15 @@ class Holdings
     end
 
     def folio_item
-      @folio_item ||= document&.folio_items&.find { |item| item.id == item_display[:id] || item.barcode == barcode }
+      @folio_item ||= document&.folio_items&.find do |item|
+        # We prefer to match on the item id (uuid) because the barcode
+        # might be missing or duplicated.
+        if id.present?
+          item.id == id
+        else
+          item.barcode == barcode
+        end
+      end
     end
 
     def folio_item_circulates?
