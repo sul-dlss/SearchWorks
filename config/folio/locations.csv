@@ -446,7 +446,7 @@ c751516d-6ea6-4fe5-a366-a009ebe62f18,Art Stacks,ART-STACKS,SU,SUL,ART,Stacks,tru
 c796f782-db95-40f9-85b4-2e9158fae035,Green Locked Stacks,GRE-LOCKED-STK,SU,SUL,GREEN,Locked stacks: Ask at circulation desk,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,
 c7da912a-eb33-4f59-910f-737f955b8462,Green HAS Atlas,GRE-HAS-ATLAS,SU,SUL,GREEN,Lane Reading Room: Atlases,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,
 c8041d48-9bcc-4498-a613-c752affa0dce,Green Folios,GRE-FOLIO,SU,SUL,GREEN,Folios,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,
-c92f9997-d125-4275-9c9a-c933839aa440,Lane Offsite: Mediated,LANE-SAL3X,SU,MED,LANE,Stored offsite. Please request print.,true,SAL3,SAL3,,,,LANE-DESK,,,,,,,,,SAL3,
+c92f9997-d125-4275-9c9a-c933839aa440,Lane Offsite: Mediated,LANE-SAL3X,SU,MED,LANE,Medical History Center: By appointment only.,true,SAL3,SAL3,,,,LANE-DESK,,,,,,,,,SAL3,
 c9a7840d-3523-4d66-a5e1-7c757036ca82,Eng Shelved Elsewhere,ENG-SEE-OTHER,SU,SUL,ENG,See linked record to request items bound together,true,ENG,ENG,,,,,,,,,,,,,,
 c9b57e4b-9c81-4336-bc41-6fc39c6dc77d,Spec MSS 10,SPEC-MSS-10,SU,SUL,SPEC-COLL,Manuscript Collection,true,SPEC,SPEC,,SPECUA,,,,,,,,,,,,
 c9b612e0-a9eb-437a-9946-abf092e0b231,Green Hohbach Foyer,GRE-HH-FOYER,SU,SUL,GREEN,Hohbach Hall: Foyer bookshelf,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,

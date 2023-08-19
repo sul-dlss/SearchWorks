@@ -11316,7 +11316,7 @@
     "id": "c92f9997-d125-4275-9c9a-c933839aa440",
     "name": "Lane Offsite: Mediated",
     "code": "LANE-SAL3X",
-    "discoveryDisplayName": "Stored offsite. Please request print.",
+    "discoveryDisplayName": "Medical History Center: By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -11335,8 +11335,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:38.849+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-08-09T17:39:34.199+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-18T18:33:39.594+00:00",
+      "updatedByUserId": "967674c8-baff-44e3-873f-11521b2b97bd"
     }
   },
   {
