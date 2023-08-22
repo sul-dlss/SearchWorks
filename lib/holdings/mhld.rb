@@ -9,7 +9,7 @@ class Holdings
     end
 
     def location
-      @mhld_display[1]
+      @mhld_display[1].presence # cast empty string to nil
     end
 
     def present?

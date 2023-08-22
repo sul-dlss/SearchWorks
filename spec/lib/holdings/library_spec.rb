@@ -79,6 +79,24 @@ RSpec.describe Holdings::Library do
         expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
         expect(locations.map(&:code)).to eq ["CURRENTPER", "SSRC-DOCS", "STACKS"]
       end
+
+      context 'when a zombie location has mhlds with nil location (hrid: a356446)' do
+        let(:library) do
+          described_class.new('ZOMBIE', items, mhlds)
+        end
+        let(:items) do
+          [
+            Holdings::Item.new({})
+          ]
+        end
+        let(:mhlds) do
+          [Holdings::MHLD.new(" -|-  -|-  -|- no.54(1968:Feb.17),no.56(1968:Mar.2)-no.57(1968:Mar.9),no.63(1968:Apr.20),no.92(1968:Nov.9), no.102(1969:Jan.18),no.107(1969:Feb.22),no.108(1969:Feb.25),no.119(1969:May 24),[1972:Jan-1993:May,1994:Jan-1995:Dec,1998:May-Nov,1999 :Apr-2000:Nov ,2001:Jan-Feb] -|- ")]
+        end
+
+        subject { library.locations }
+
+        it { is_expected.to all be_a Holdings::Location }
+      end
     end
   end
 
