@@ -1523,6 +1523,7 @@ texashistory.unt.edu
 tgc.amegroups.com
 tgh.amegroups.com
 thailand.digitaljournals.org
+theatlantic.com
 theijpt.org
 thejns.org
 theoncologist.onlinelibrary.wiley.com
@@ -1573,7 +1574,6 @@ visualiseur.bnf.fr
 voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
-wbl.worldbank.org
 web.archive.org
 web.mit.edu
 web.ornl.gov
