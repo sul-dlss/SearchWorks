@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Holdings::Library do
+RSpec.describe Holdings::Library do
   include Marc856Fixtures
   describe '#name' do
     it "translates the library code" do
@@ -29,51 +29,56 @@ describe Holdings::Library do
   end
 
   describe "#locations" do
-    let(:callnumbers) { [
+    let(:items) { [
       Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- "),
       Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc2 -|- "),
       Holdings::Item.from_item_display_string("barcode -|- library -|- home-loc -|- ")
     ] }
-    let(:sort_callnumbers) { [
-      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- SSRC-DOCS -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- STACKS -|- "),
-      Holdings::Item.from_item_display_string("barcode -|- GREEN -|- CURRENTPER -|- ")
-    ] }
-    let(:combined_callnumbers) do
-      [
-        Holdings::Item.from_item_display_string("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
-        Holdings::Item.from_item_display_string("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
-        Holdings::Item.from_item_display_string("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
-      ]
-    end
-    let(:locations) { Holdings::Library.new("GREEN", callnumbers).locations }
-    let(:sort_locations) { Holdings::Library.new("GREEN", sort_callnumbers).locations }
-    let(:combined_locations) { Holdings::Library.new('SPEC-COLL', combined_callnumbers).locations }
+
+    let(:locations) { Holdings::Library.new("GREEN", items).locations }
 
     it "returns an array of Holdings::Locations" do
-      expect(locations).to be_a Array
-      locations.each do |location|
-        expect(location).to be_a Holdings::Location
-      end
+      expect(locations).to all be_a Holdings::Location
     end
 
     it "groups by home location" do
-      expect(callnumbers.length).to eq 3
       expect(locations.length).to eq 2
     end
 
-    it 'groups by home location translation when they are the same' do
-      expect(combined_callnumbers.length).to eq 3
-      expect(combined_locations.length).to eq 1
+    context 'when several locations have the same translation' do
+      let(:locations) { Holdings::Library.new('SPEC-COLL', items).locations }
+
+      let(:items) do
+        [
+          Holdings::Item.from_item_display_string("barcode1 -|- SPEC-COLL -|- MSS-30 -|- "),
+          Holdings::Item.from_item_display_string("barcode2 -|- SPEC-COLL -|- MANUSCRIPT -|- "),
+          Holdings::Item.from_item_display_string("barcode3 -|- SPEC-COLL -|- MSS-30 -|- ")
+        ]
+      end
+
+      it 'groups them together' do
+        expect(locations.length).to eq 1
+      end
     end
 
     it "sorts by location code when there is no translation" do
       expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
     end
 
-    it "sorts locations alpha by name" do
-      expect(sort_locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
-      expect(sort_locations.map(&:code)).to eq ["CURRENTPER", "SSRC-DOCS", "STACKS"]
+    describe 'sorting' do
+      let(:locations) { Holdings::Library.new("GREEN", items).locations }
+      let(:items) do
+        [
+          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- SSRC-DOCS -|- "),
+          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- STACKS -|- "),
+          Holdings::Item.from_item_display_string("barcode -|- GREEN -|- CURRENTPER -|- ")
+        ]
+      end
+
+      it "sorts locations alpha by name" do
+        expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
+        expect(locations.map(&:code)).to eq ["CURRENTPER", "SSRC-DOCS", "STACKS"]
+      end
     end
   end
 
