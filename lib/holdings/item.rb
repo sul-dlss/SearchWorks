@@ -76,6 +76,7 @@ class Holdings
       end
     end
 
+    # @return [String]
     def home_location
       if treat_current_location_as_home_location?
         current_location.code
