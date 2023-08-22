@@ -848,6 +848,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -859,8 +860,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:28.853+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:56:21.596+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:35:10.930+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -2147,6 +2148,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -2158,8 +2160,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:25.250+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:35:31.090+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:34:12.607+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -3443,6 +3445,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -3454,8 +3457,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:29.231+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:57:04.266+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:36:23.534+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -3978,6 +3981,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -3989,8 +3993,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:25.004+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:34:17.427+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:35:58.033+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -5246,6 +5250,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "California"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -5257,8 +5262,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:24.504+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:31:26.788+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:34:37.654+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -11528,6 +11533,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "British"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -11539,8 +11545,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:24.376+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:30:52.724+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:34:26.025+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
@@ -12674,6 +12680,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksGovDocsClassification": "International"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -12685,8 +12692,8 @@
     "metadata": {
       "createdDate": "2023-02-08T23:37:27.425+00:00",
       "createdByUserId": "7dc1ae38-1e06-4de9-ac86-568b9a2318ec",
-      "updatedDate": "2023-07-27T09:51:39.734+00:00",
-      "updatedByUserId": "9c77fffb-9d40-422c-8742-4c0f79957888"
+      "updatedDate": "2023-08-22T16:34:54.177+00:00",
+      "updatedByUserId": "03a6c68a-ffbd-4833-957d-e015f81f50cd"
     }
   },
   {
