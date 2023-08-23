@@ -54,10 +54,6 @@ module SolrHoldings
 
   attr_writer :preferred_item
 
-  def cdl?
-    druid && holdings.items.any? { |call| call.home_location == 'CDL' }
-  end
-
   def find_holding(library_code:, location:) # rubocop:disable Lint/UnusedMethodArgument
     folio_holdings.find { |holding| holding.effective_location.library.code == library_code }
   end

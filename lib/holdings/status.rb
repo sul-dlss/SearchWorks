@@ -17,8 +17,6 @@ class Holdings
       return folio_availability_class if item.folio_item?
 
       case
-      when cdl?
-        'unavailable cdl'
       when in_process?
         'in_process'
       when unavailable?
@@ -82,10 +80,6 @@ class Holdings
 
     def in_process?
       Holdings::Status::InProcess.new(@item).in_process?
-    end
-
-    def cdl?
-      @item.home_location == 'CDL'
     end
 
     def as_json(*)

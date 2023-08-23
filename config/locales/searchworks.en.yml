@@ -21,7 +21,6 @@ en:
       available: Available
       deliver-from-offsite: Available
       unavailable: Unavailable
-      unavailable cdl: Physical copy unavailable
       noncirc: In-library use
       unknown: Unknown
       noncirc_page: In-library use
