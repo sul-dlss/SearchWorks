@@ -1,8 +1,0 @@
-# this is needed so html okcomputer formatting (mounted at status/all) is somewhat readable
-#  if https://github.com/sportngin/okcomputer/pull/117  is merged, the <br/> should be
-#  moved to the ends of the lines.
-en:
-  okcomputer:
-    check:
-      passed_html: "<br/> %{registrant_name}: PASSED %{message} (%{time})"
-      failed_html: "<br/> %{registrant_name}: FAILED %{message} (%{time})"
