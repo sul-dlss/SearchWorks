@@ -67,20 +67,6 @@ RSpec.describe Holdings::Status do
     it { is_expected.to be_deliver_from_offsite }
   end
 
-  describe "CDL" do
-    let(:status) { Holdings::Status.new(OpenStruct.new(home_location: 'CDL')) }
-
-    it "should have the unavailable class" do
-      expect(status.availability_class).to eq 'unavailable cdl'
-    end
-    it "should have the unavailable status text" do
-      expect(status.status_text).to eq 'Physical copy unavailable'
-    end
-    it "should be cdl" do
-      expect(status).to be_cdl
-    end
-  end
-
   describe "::Unavailable" do
     before do
       allow_any_instance_of(Holdings::Status::Unavailable).to receive(:unavailable?).and_return(true)

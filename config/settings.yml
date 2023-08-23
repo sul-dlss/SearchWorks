@@ -720,7 +720,6 @@ circulating_item_types:
 
 nonrequestable_locations:
   default:
-    - CDL
     - SEE-OTHER
     - TECH-DESK
 
