@@ -743,6 +743,33 @@
     "id": "bb338f23-67e1-4e34-ab8d-a861b3c9879a"
   },
   {
+    "name": "No-lost-fee",
+    "description": "Policy that does not bill users the lost fee e.g., SUL pseudopatrons.",
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 0.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "lostItemChargeFeeFine": {
+      "duration": 60,
+      "intervalId": "Months"
+    },
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Remove",
+    "metadata": {
+      "createdDate": "2023-08-24T21:37:58.624+00:00",
+      "createdByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de",
+      "updatedDate": "2023-08-24T21:37:58.624+00:00",
+      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+    },
+    "id": "bb897f04-7093-4e89-95e0-d60b39f8238c"
+  },
+  {
     "name": "$300 lost fee",
     "itemAgedLostOverdue": {
       "duration": 7,
