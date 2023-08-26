@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    OKAPI_URL = credentials('OKAPI_TEST_URL')
+    OKAPI_URL = credentials('OKAPI_PROD_URL')
   }
 
   stages {
