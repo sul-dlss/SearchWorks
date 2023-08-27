@@ -3,11 +3,10 @@
     "id": "122b3d2b-4788-4f1e-9117-56daa91cb75c",
     "name": "Send No Notices",
     "description": "A basic notice policy that does not define any notices",
-    "active": false,
+    "active": true,
     "metadata": {
-      "createdDate": "2023-02-08T20:09:19.337+00:00",
-      "updatedDate": "2023-06-08T16:59:32.381+00:00",
-      "updatedByUserId": "a002aa6e-67ea-496d-9e7d-75ea1eef940f"
+      "createdDate": "2023-08-09T20:35:44.015+00:00",
+      "updatedDate": "2023-08-09T20:35:44.015+00:00"
     },
     "loanNotices": [
 
@@ -25,10 +24,10 @@
     "description": "Intended for things like equipment that check out for a day or so or less. Main differences between the default notice policy are: the courtesy due date reminder is ~1 hour before the due date, there is no overdue notice, the lost item-fee notice goes out as soon as the item ages to lost (which is dependent upon the lost-item policy applied in the circ rule but typically fairly soon after the item was due), and all notices are sent out as they happen, rather than being batched overnight.\n\n\n",
     "active": true,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:14.463+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T16:06:29.178+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+      "createdDate": "2023-08-10T18:50:15.289+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:15.289+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "loanNotices": [
       {
@@ -143,10 +142,10 @@
     "description": "Notices used for course reserves loans",
     "active": true,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:14.748+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-06-28T17:30:10.840+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+      "createdDate": "2023-08-10T18:50:12.398+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:12.398+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "loanNotices": [
       {
@@ -209,10 +208,10 @@
     "name": "Default notice",
     "active": true,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:14.624+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T16:06:57.767+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+      "createdDate": "2023-08-10T18:50:14.715+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:14.715+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "loanNotices": [
       {

@@ -12,31 +12,12 @@
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 0.0,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:13.566+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T21:49:29.149+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
+      "createdDate": "2023-08-10T18:50:10.582+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.582+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "id": "24f7511f-ed1a-4710-bae3-36d29f00988d"
-  },
-  {
-    "name": "1.50/10.50 overdue fine (do not use;for deletion) ",
-    "overdueFine": {
-      "quantity": 1.5,
-      "intervalId": "day"
-    },
-    "countClosed": false,
-    "maxOverdueFine": 10.5,
-    "forgiveOverdueFine": false,
-    "gracePeriodRecall": true,
-    "maxOverdueRecallFine": 0.0,
-    "metadata": {
-      "createdDate": "2023-02-09T01:06:11.167+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T21:49:38.466+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "814ffb76-82d0-49a6-8391-d801b7b34541"
   },
   {
     "name": "3.00/21.00 recall overdue fine",
@@ -51,10 +32,10 @@
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 21.0,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:09.367+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-02-09T01:06:09.367+00:00",
-      "updatedByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2"
+      "createdDate": "2023-08-10T18:50:10.215+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.215+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "id": "85d33314-0cac-430a-be9e-ddd25e681322"
   },
@@ -66,28 +47,12 @@
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 0.0,
     "metadata": {
-      "createdDate": "2023-02-09T01:06:07.966+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-06T22:47:26.580+00:00",
-      "updatedByUserId": "0c66be8d-90ac-451b-b562-795e24139a13"
+      "createdDate": "2023-08-10T18:50:10.414+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.414+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     },
     "id": "bba172e9-eb78-4471-a4a7-08761fbdfff9"
-  },
-  {
-    "name": "No fines SUL (do not use;for deletion)",
-    "description": "charged when item has aged ot lost",
-    "countClosed": true,
-    "maxOverdueFine": 0.0,
-    "forgiveOverdueFine": false,
-    "gracePeriodRecall": true,
-    "maxOverdueRecallFine": 0.0,
-    "metadata": {
-      "createdDate": "2023-02-09T01:06:12.367+00:00",
-      "createdByUserId": "3e2ed889-52f2-45ce-8a30-8767266f07d2",
-      "updatedDate": "2023-07-14T21:49:53.317+00:00",
-      "updatedByUserId": "a720559b-ddb3-42cc-b6b9-3b58f63e78de"
-    },
-    "id": "c39fa210-ed40-48f4-bde5-82177b95bfb9"
   },
   {
     "name": "Overdue fine policy",
@@ -98,8 +63,8 @@
     "gracePeriodRecall": true,
     "maxOverdueRecallFine": 0.0,
     "metadata": {
-      "createdDate": "2023-02-08T20:20:19.367+00:00",
-      "updatedDate": "2023-02-08T20:20:19.367+00:00"
+      "createdDate": "2023-08-09T21:20:05.215+00:00",
+      "updatedDate": "2023-08-09T21:20:05.215+00:00"
     },
     "id": "cd3f6cac-fa17-4079-9fae-2fb28e521412"
   }
