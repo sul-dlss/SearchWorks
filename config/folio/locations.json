@@ -1894,6 +1894,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
+      "scanServicePointCode": "GREEN",
+      "availabilityClass": "Offsite"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -1905,8 +1907,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:08.284+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:08.284+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-08-28T02:17:09.315+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3551,6 +3553,7 @@
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
     "details": {
+      "scanServicePointCode": "SAL3",
       "availabilityClass": "Offsite",
       "pagingSchedule": "SAL3"
     },
@@ -3564,7 +3567,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:35.316+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T00:43:30.346+00:00",
+      "updatedDate": "2023-08-28T03:00:11.764+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -4187,7 +4190,7 @@
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
       "availabilityClass": "Offsite",
-      "pageServicePointCodes": "MARINE-BIO"
+      "pageServicePointCodes": "MARINE-BIO,GREEN"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -4199,8 +4202,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:57.988+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:57.988+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-08-28T06:07:59.667+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -7313,6 +7316,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "scanServicePointCode": "SAL3"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -7324,8 +7328,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:42.546+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:42.546+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-08-28T03:02:43.587+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
