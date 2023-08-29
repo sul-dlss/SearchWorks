@@ -5,7 +5,8 @@
 :format: Book
 :display_type:
   - sirsi
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :format_main_ssim: Book
 :access_facet: At the Library
 :building_facet:

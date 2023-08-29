@@ -3,17 +3,17 @@ require 'spec_helper'
 describe 'Isbn' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: isbn_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: isbn_fixture) }
 
   let(:isbn_fixture) do
-    <<-XML
-      <record>
-        <datafield tag="020">
-          <subfield code="a">0802142176</subfield>
-          <subfield code="c">$7.50</subfield>
-        </datafield>
-      </record>
-    XML
+    <<-JSON
+      {
+        "leader": "          22        4500",
+        "fields": [
+          { "020": { "subfields": [ { "a": "0802142176" }, { "c": "$7.50" } ] } }
+        ]
+      }
+    JSON
   end
 
   subject(:instance) { document.marc_field(:isbn) }
@@ -29,13 +29,14 @@ describe 'Isbn' do
 
   context 'with only a $c' do
     let(:isbn_fixture) do
-      <<-XML
-        <record>
-          <datafield tag="020">
-            <subfield code="c">$7.50</subfield>
-          </datafield>
-        </record>
-      XML
+      <<-JSON
+        {
+          "leader": "          22        4500",
+          "fields": [
+            { "020": { "subfields": [ { "c": "$7.50" } ] } }
+          ]
+        }
+      JSON
     end
 
     describe '#values' do

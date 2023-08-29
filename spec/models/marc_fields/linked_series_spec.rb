@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe LinkedSeries do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: complex_series_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: complex_series_fixture) }
 
   subject { described_class.new(document) }
 

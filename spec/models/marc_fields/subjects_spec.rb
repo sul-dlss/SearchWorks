@@ -5,20 +5,20 @@ require 'spec_helper'
 describe 'Subjects' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: marc) }
+  let(:document) { SolrDocument.new(marc_json_struct: marc) }
 
   subject(:subjects) { document.subjects('650') }
 
   context 'with subjects in the $a' do
     let(:marc) do
-      <<-XML
-        <record>
-          <datafield tag="650" ind1="1" ind2=" ">
-            <subfield code="a">Barley</subfield>
-            <subfield code="a">Malt</subfield>
-          </datafield>
-        </record>
-      XML
+      <<-JSON
+        {
+          "leader": "          22        4500",
+          "fields": [
+            { "650": { "ind1": "1", "ind2": " ", "subfields": [ { "a": "Barley" }, { "a": "Malt" } ] } }
+          ]
+        }
+      JSON
     end
 
     it 'turns each $a into a separate value' do
@@ -28,13 +28,14 @@ describe 'Subjects' do
 
   context 'with nomesh subjects' do
     let(:marc) do
-      <<-XML
-        <record>
-          <datafield tag="650" ind1="1" ind2=" ">
-            <subfield code="a">nomesh</subfield>
-          </datafield>
-        </record>
-      XML
+      <<-JSON
+        {
+          "leader": "          22        4500",
+          "fields": [
+            { "650": { "ind1": "1", "ind2": " ", "subfields": [ { "a": "nomesh" } ] } }
+          ]
+        }
+      JSON
     end
 
     it 'suppresses the subjects' do
@@ -44,13 +45,14 @@ describe 'Subjects' do
 
   context 'with nomeshx subjects' do
     let(:marc) do
-      <<-XML
-        <record>
-          <datafield tag="650" ind1="1" ind2=" ">
-            <subfield code="a">nomeshx</subfield>
-          </datafield>
-        </record>
-      XML
+      <<-JSON
+        {
+          "leader": "          22        4500",
+          "fields": [
+            { "650": { "ind1": "1", "ind2": " ", "subfields": [ { "a": "nomeshx" } ] } }
+          ]
+        }
+      JSON
     end
 
     it 'suppresses the subjects' do

@@ -2,7 +2,8 @@
 :hashed_id_ssi: d82c8d1619ad8176d665453cfb2e55f0
 :title_display: Another item in a another virtual object
 :format_main_ssim: Map
-:marcxml: <%= marc_382_instrumentation %>
+:marc_json_struct: |
+<%= marc_382_instrumentation %>
 :display_type:
   - image
 :file_id:

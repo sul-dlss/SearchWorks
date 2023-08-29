@@ -9,7 +9,8 @@
   - sirsi
 :format: File
 :format_main_ssim: Dataset
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :pub_date: 2010
 :beginning_year_isi: 2010
 :imprint_display: 2010

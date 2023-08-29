@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe LinkedSerials do
   include MarcMetadataFixtures
-  subject { described_class.new(SolrDocument.new(marcxml: marc)) }
+  subject { described_class.new(SolrDocument.new(marc_json_struct: marc)) }
 
   describe 'labels' do
     context '780s' do

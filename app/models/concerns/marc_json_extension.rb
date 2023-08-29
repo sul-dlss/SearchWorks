@@ -2,7 +2,13 @@ module MarcJsonExtension
   # Override blacklight-marc if we have marcjson available
   def load_marc
     json = begin
-      JSON.parse(first('marc_json_struct'))
+      value = first('marc_json_struct')
+
+      if value.is_a?(Hash)
+        value
+      else
+        JSON.parse(first('marc_json_struct'))
+      end
     rescue JSON::ParserError
       nil
     end

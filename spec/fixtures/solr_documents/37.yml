@@ -11,7 +11,8 @@
   - 34
 :building_facet:
   - "Stanford Digital Repository"
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :pub_date: 2004
 :beginning_year_isi: 2004
 :imprint_display: 2012

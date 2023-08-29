@@ -4,7 +4,7 @@ describe MarcExtractor do
   include MarcMetadataFixtures
 
   let(:fixture) { metadata1 }
-  let(:marc) { SolrDocument.new(marcxml: fixture).to_marc }
+  let(:marc) { SolrDocument.new(marc_json_struct: fixture).to_marc }
 
   context 'with a single marc field' do
     subject(:extracted_data) { described_class.new(marc, '100').extract.to_a }

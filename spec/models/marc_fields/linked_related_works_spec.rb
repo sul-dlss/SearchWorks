@@ -3,7 +3,7 @@ require 'spec_helper'
 describe LinkedRelatedWorks do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: linked_related_works_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: linked_related_works_fixture) }
 
   subject(:instance) { described_class.new(document) }
 

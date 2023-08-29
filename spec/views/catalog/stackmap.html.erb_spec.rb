@@ -5,7 +5,7 @@ describe 'catalog/stackmap' do
 
   describe 'StackMap view' do
     before do
-      assign(:document, SolrDocument.new(id: '12345', marcxml: metadata1))
+      assign(:document, SolrDocument.new(id: '12345', marc_json_struct: metadata1))
       render
     end
 

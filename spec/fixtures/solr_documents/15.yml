@@ -9,7 +9,8 @@
   - sirsi
 :author_corp_display:
   - Scientific Council for Africa South of the Sahara.
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :format_main_ssim: Image
 :access_facet: At the Library
 :building_facet: Special Collections

@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'Place names' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: place_name_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: place_name_fixture) }
 
   subject(:place_name) { document.marc_field(752) }
 

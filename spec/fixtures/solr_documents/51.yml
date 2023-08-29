@@ -2,7 +2,8 @@
 :hashed_id_ssi: 2838023a778dfaecdc212708f721b788
 :title_display: Another item in a virtual object
 :format_main_ssim: Map
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :display_type:
   - image
 :file_id:

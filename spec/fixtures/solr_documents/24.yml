@@ -6,7 +6,8 @@
 :title_sort: Ullamco do minim laboris sit velit.
 :language: Spanish
 :format: Database
-:marcxml: <%= stanford_only_856 %>
+:marc_json_struct: |
+<%= stanford_only_856 %>
 :format_main_ssim: Database
 :display_type:
   - sirsi

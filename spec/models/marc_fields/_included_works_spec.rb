@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe IncludedWorks do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: contributed_works_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: contributed_works_fixture) }
 
   subject { described_class.new(document) }
 

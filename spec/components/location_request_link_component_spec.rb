@@ -133,7 +133,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   end
 
   context 'for Hoover Library items' do
-    let(:document) { SolrDocument.new(marcxml: metadata1) }
+    let(:document) { SolrDocument.new(marc_json_struct: metadata1) }
     let(:library) { 'HOOVER' }
     let(:location) { 'STACKS' }
 
