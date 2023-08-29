@@ -268,6 +268,7 @@ faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow paging/hold,Default notice,No fines
 ,book,,,,,ARS-SPECIALPROJECTS,No loan,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
 ,book,,,,,ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-FOLIO or ARS-LOCKED or ARS-RECORDINGS or ARS-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,archival,,,,,SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
 ,,,,,,SUL-BORROW-DIRECT,8week-1renew-7daygrace,No requests allowed,Default notice,No fines,$200 lost fee book
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$500 lost fee
 ,newspaper,,,,,,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee

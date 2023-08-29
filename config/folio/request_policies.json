@@ -80,5 +80,19 @@
       "updatedDate": "2023-08-10T18:50:32.719+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     }
+  },
+  {
+    "id": "9a0b388a-7603-48d8-b514-cfbbda370165",
+    "name": "Allow paging/recall",
+    "requestTypes": [
+      "Page",
+      "Recall"
+    ],
+    "metadata": {
+      "createdDate": "2023-08-28T23:58:31.658+00:00",
+      "createdByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f",
+      "updatedDate": "2023-08-28T23:58:31.658+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
   }
 ]
