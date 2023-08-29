@@ -914,7 +914,6 @@ joe.bioscientifica.com
 johnjohnson.chadwyck.com
 joii-journal.springeropen.com
 jolt.merlot.org
-jomi.com
 jopm.jmir.org
 joppp.biomedcentral.com
 josr-online.biomedcentral.com
@@ -1291,6 +1290,7 @@ primarysources.brillonline.com
 princeton.universitypressscholarship.com
 proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
+products.asminternational.org
 profiles.nlm.nih.gov
 projecteuclid.org
 proquest.safaribooksonline.com
@@ -1550,6 +1550,7 @@ traumamanagement.biomedcentral.com
 trialsjournal.biomedcentral.com
 tropmedhealth.biomedcentral.com
 tsaco.bmj.com
+tta.thieme.com
 turkthoracj.org
 tvst.arvojournals.org
 uclibs.org
@@ -1574,6 +1575,7 @@ visualiseur.bnf.fr
 voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
+wbl.worldbank.org
 web.archive.org
 web.mit.edu
 web.ornl.gov
@@ -2278,7 +2280,6 @@ www.irdrjournal.com
 www.irjournal.org
 www.irmj.ir
 www.iscpubs.com
-www.islamicmanuscripts.info
 www.ismni.org
 www.ispcd.org
 www.ispub.com
@@ -2384,6 +2385,7 @@ www.jofs.in
 www.jogh.org
 www.jointsjournal.eu
 www.jomfp.in
+www.jomi.com
 www.joplink.net
 www.jorthodsci.org
 www.josonline.org
@@ -2807,6 +2809,7 @@ www.sarsreference.com
 www.saudija.org
 www.saudijgastro.com
 www.sbdmj.com
+www.sc05.supercomputing.org
 www.sccma.org
 www.scialert.net
 www.sciandmed.com
@@ -2909,7 +2912,6 @@ www.thermopedia.com
 www.thieme-connect.com
 www.thieme-connect.de
 www.thieme.de
-www.thiemeteachingassistant.com
 www.thno.org
 www.thoracicmedicine.org
 www.tictocs.ac.uk
@@ -2977,6 +2979,7 @@ www.vlebooks.com
 www.wageningenacademic.com
 www.washingtonpost.com
 www.wdoms.org
+www.webofscience.com
 www.who.int
 www.whocancerpain.wisc.edu
 www.wikidoc.org
