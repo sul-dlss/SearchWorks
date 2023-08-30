@@ -82,7 +82,7 @@ class LocationRequestLinkPolicy
     !folio_disabled_status_location? &&
       (folio_mediated_pageable? ||
         folio_aeon_pageable? ||
-         items.first.request_policy&.dig('requestTypes')&.include?('Page'))
+          folio_item_pageable?)
   end
 
   # Special cases where we don't allow requests for special collections items in certain statuses
@@ -102,6 +102,12 @@ class LocationRequestLinkPolicy
     return false unless folio_items? && folio_permanent_locations.any?
 
     folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
+  end
+
+  def folio_item_pageable?
+    items.uniq(&:request_policy_attributes).any? do |item|
+      item.request_policy&.dig('requestTypes')&.include?('Page')
+    end
   end
 
   # there probably is only one FOLIO location.

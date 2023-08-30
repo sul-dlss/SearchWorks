@@ -224,6 +224,16 @@ class Holdings
       @request_policy ||= Folio::CirculationRules::PolicyService.instance.item_request_policy(self)
     end
 
+    def request_policy_attributes
+      return [] unless folio_item?
+
+      [
+        material_type.id,
+        loan_type.id,
+        effective_location.id
+      ]
+    end
+
     delegate :status, to: :folio_item, prefix: :folio
 
     def internet_resource?
