@@ -32,8 +32,8 @@ class FolioClient
     @tenant = tenant
   end
 
-  # FOLIO Edge API - Real Time Availability Check
-  # https://s3.amazonaws.com/foliodocs/api/edge-rtac/p/edge-rtac.html
+  # FOLIO mod-rtac Real Time Availability Check
+  # https://s3.amazonaws.com/foliodocs/api/mod-rtac/p/rtac-batch.html
   def real_time_availability(instance_ids:, full_periodicals: true)
     body = {
       instanceIds: instance_ids,
