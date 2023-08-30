@@ -2583,6 +2583,32 @@
     }
   },
   {
+    "id": "26836d26-5046-473b-96d6-861b660d7938",
+    "name": "Law - Display",
+    "code": "LAW - DISPLAY",
+    "description": "Used for temporary displays at the Law Library.",
+    "discoveryDisplayName": "Law - Display",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
+    "details": {
+    },
+    "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
+    "servicePointIds": [
+      "ef1ea792-b2bb-49a2-8747-94376b64a74d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-29T23:26:27.114+00:00",
+      "createdByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6",
+      "updatedDate": "2023-08-29T23:26:27.114+00:00",
+      "updatedByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6"
+    }
+  },
+  {
     "id": "26d1a668-747b-4f1d-a2af-317b37316360",
     "name": "Lane Spec: Manuscipts",
     "code": "LANE-MSS",
@@ -6552,6 +6578,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:45:37.504+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "764d4984-047f-4e51-87b1-da27d90356f4",
+    "name": "SUL Media Preservation Lab",
+    "code": "SUL-MEDIAPRESLAB",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "68002733-5923-46db-acc7-3d18cbf30870",
+    "servicePointIds": [
+      "68002733-5923-46db-acc7-3d18cbf30870"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-30T05:10:35.575+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-30T05:10:35.575+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -11431,6 +11483,7 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
+      "discoveryDisplayUrl": "https://lane.stanford.edu/med-history/contact.html",
       "availabilityClass": "Offsite",
       "pageServicePointCodes": "LANE-DESK",
       "pagingSchedule": "SAL3"
@@ -11445,7 +11498,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:10.795+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-24T19:29:10.316+00:00",
+      "updatedDate": "2023-08-29T19:24:35.920+00:00",
       "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
     }
   },
@@ -13033,6 +13086,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:51.679+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "e3257e78-c47f-4c39-9726-1c33e589ff0a",
+    "name": "SUL Digital Lab",
+    "code": "SUL-DL1LAB",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "68002733-5923-46db-acc7-3d18cbf30870",
+    "servicePointIds": [
+      "68002733-5923-46db-acc7-3d18cbf30870"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-29T21:43:40.096+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-30T05:09:33.432+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
