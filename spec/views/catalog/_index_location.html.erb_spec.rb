@@ -120,7 +120,7 @@ RSpec.describe "catalog/_index_location" do
           item_display_struct: [
             { barcode: '1234', library: 'SAL3', home_location: 'SEE-OTHER', callnumber: 'ABC 123' }
           ],
-          marcxml: linked_ckey_fixture
+          marc_json_struct: linked_ckey_fixture
         )
       )
       render

@@ -6,7 +6,7 @@ describe "catalog/record/_marc_subjects" do
   describe "subjects" do
     before do
       assign(:document, SolrDocument.new(
-        marcxml: marc_mixed_subject_fixture
+        marc_json_struct: marc_mixed_subject_fixture
       ))
       render
     end
@@ -29,7 +29,7 @@ describe "catalog/record/_marc_subjects" do
   context 'with duplicate subjects' do
     before do
       assign(:document, SolrDocument.new(
-        marcxml: marc_duplicate_subject_fixture
+        marc_json_struct: marc_duplicate_subject_fixture
       ))
       render
     end
@@ -46,7 +46,7 @@ describe "catalog/record/_marc_subjects" do
   describe "Database subjects" do
     let(:document) {
       SolrDocument.new(
-        marcxml: no_fields_fixture,
+        marc_json_struct: no_fields_fixture,
         db_az_subject: ["DB Subject1", "DB Subject2"]
       )
     }

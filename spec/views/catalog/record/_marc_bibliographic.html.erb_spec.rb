@@ -4,7 +4,7 @@ describe "catalog/record/_marc_bibliographic" do
   include MarcMetadataFixtures
 
   describe "MARC 592" do
-    let(:document) { SolrDocument.new(marcxml: marc_592_fixture) }
+    let(:document) { SolrDocument.new(marc_json_struct: marc_592_fixture) }
 
     before do
       assign(:document, document)
@@ -26,7 +26,7 @@ describe "catalog/record/_marc_bibliographic" do
 
   describe "dates from solr" do
     before do
-      assign(:document, SolrDocument.new(marcxml: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678'))
+      assign(:document, SolrDocument.new(marc_json_struct: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678'))
       render
     end
 
@@ -44,7 +44,7 @@ describe "catalog/record/_marc_bibliographic" do
 
   describe 'Related works' do
     before do
-      assign(:document, SolrDocument.new(marcxml: contributed_works_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: contributed_works_fixture))
       render
     end
 

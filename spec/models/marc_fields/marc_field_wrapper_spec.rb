@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 def marc_fields(marc, field)
-  SolrDocument.new(marcxml: marc).to_marc.fields(field)
+  SolrDocument.new(marc_json_struct: marc).to_marc.fields(field)
 end
 
 describe MarcFieldWrapper do

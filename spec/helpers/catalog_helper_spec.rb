@@ -84,7 +84,7 @@ describe CatalogHelper do
 
   describe '#tech_details' do
     context 'marc document' do
-      let(:document) { SolrDocument.new(id: '12345', marcxml: metadata1) }
+      let(:document) { SolrDocument.new(id: '12345', marc_json_struct: metadata1) }
 
       it 'adds correct tech details' do
         expect(tech_details(document)).to have_content('Catkey: 12345')

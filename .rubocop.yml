@@ -18,6 +18,10 @@ AllCops:
 Rails:
   Enabled: true
 
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/fixtures/**/*'
+
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'

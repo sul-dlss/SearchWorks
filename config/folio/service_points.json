@@ -375,6 +375,36 @@
     }
   },
   {
+    "id": "68002733-5923-46db-acc7-3d18cbf30870",
+    "name": "SUL - Digitization Services",
+    "code": "SULDIGITIZATION",
+    "discoveryDisplayName": "SUL Digitization Services",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-29T21:39:59.170+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-29T21:39:59.170+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "6a7f9353-cc07-46de-8186-9b5b1eb24fc4",
     "name": "Green Bing Wing",
     "code": "GREEN-BING",

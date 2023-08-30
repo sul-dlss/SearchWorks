@@ -6,7 +6,8 @@
 :author_person_display: Arbitrary, Stewart
 :title_display: Some intersting papers, 1979-2010.
 :language: English
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :format: Book
 :format_main_ssim: Book
 :display_type:

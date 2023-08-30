@@ -11,7 +11,8 @@
 :format: Newspaper
 :display_type:
   - sirsi
-:marcxml: <%= simple_856 %>
+:marc_json_struct: |
+<%= simple_856 %>
 :format_main_ssim: Newspaper
 :access_facet: Online
 :building_facet: SAL3 (off-campus storage)

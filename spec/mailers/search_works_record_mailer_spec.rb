@@ -17,7 +17,7 @@ describe SearchWorksRecordMailer do
         title_display: "Title2",
         item_display_struct: [{ barcode: '54321', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 321' }],
         marc_links_struct: [{ href: "https://stacks.stanford.edu", sfx: true }],
-        marcxml: metadata1
+        marc_json_struct: metadata1
       )
     ]
   }
@@ -180,7 +180,7 @@ describe SearchWorksRecordMailer do
         let(:bookplate_document) do
           SolrDocument.new(
             id: '123',
-            marcxml: metadata1,
+            marc_json_struct: metadata1,
             bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
           )
         end

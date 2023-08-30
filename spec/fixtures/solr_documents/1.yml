@@ -8,7 +8,8 @@
 :format: Book
 :format_main_ssim: Book
 :language: English
-:marcxml: <%= simple_856 %>
+:marc_json_struct: |
+<%= simple_856 %>
 :display_type:
   - sirsi
 :pub_date: 2014

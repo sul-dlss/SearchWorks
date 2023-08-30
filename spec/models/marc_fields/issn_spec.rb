@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Issn' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: issn_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: issn_fixture) }
 
   subject(:instance) { document.marc_field(:issn) }
 

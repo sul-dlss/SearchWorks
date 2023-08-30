@@ -5,7 +5,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe 'MARC 245C' do
     before do
-      assign(:document, SolrDocument.new(marcxml: metadata1))
+      assign(:document, SolrDocument.new(marc_json_struct: metadata1))
     end
 
     it 'should display for for 245C field' do
@@ -17,7 +17,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe "characteristics" do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_characteristics_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: marc_characteristics_fixture))
       render
     end
 
@@ -33,7 +33,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe "series" do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_multi_series_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: marc_multi_series_fixture))
       render
     end
 
@@ -46,7 +46,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe "Imprint" do
     before do
-      assign(:document, SolrDocument.new(marcxml: edition_imprint_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: edition_imprint_fixture))
       render
     end
 
@@ -58,7 +58,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe 'Edition' do
     before do
-      assign(:document, SolrDocument.new(marcxml: edition_imprint_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: edition_imprint_fixture))
       render
     end
 
@@ -70,7 +70,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe "MARC 264" do
     before do
-      assign(:document, SolrDocument.new(marcxml: single_marc_264_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: single_marc_264_fixture))
       render
     end
 
@@ -82,7 +82,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe "Instrumentation (Marc 382)" do
     before do
-      assign(:document, SolrDocument.new(marcxml: marc_382_instrumentation))
+      assign(:document, SolrDocument.new(marc_json_struct: marc_382_instrumentation))
       render
     end
 
@@ -97,7 +97,7 @@ describe "catalog/record/_marc_upper_metadata_items" do
 
   describe 'Linked collection titles' do
     before do
-      assign(:document, SolrDocument.new(marcxml: metadata1,
+      assign(:document, SolrDocument.new(marc_json_struct: metadata1,
                                          collection_struct: [{ 'title' => 'Bruce & Rachel Jeffer Collection of WPA/Federal Writers Project and related New Deal material',
                                                                'source' => 'sirsi' }]))
       render

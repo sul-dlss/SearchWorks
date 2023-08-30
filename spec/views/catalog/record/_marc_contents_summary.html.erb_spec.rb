@@ -7,7 +7,7 @@ describe "catalog/record/_marc_contents_summary" do
   describe 'Organization & arrangement' do
     context 'when present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: organization_and_arrangement_fixture))
+        assign(:document, SolrDocument.new(marc_json_struct: organization_and_arrangement_fixture))
         render
       end
 
@@ -19,7 +19,7 @@ describe "catalog/record/_marc_contents_summary" do
 
     context 'when not present' do
       before do
-        assign(:document, SolrDocument.new(marcxml: finding_aid_856))
+        assign(:document, SolrDocument.new(marc_json_struct: finding_aid_856))
         render
       end
 
@@ -31,7 +31,7 @@ describe "catalog/record/_marc_contents_summary" do
 
   describe "finding aids" do
     before do
-      assign(:document, SolrDocument.new(marcxml: finding_aid_856, marc_links_struct: [{ finding_aid: true, href: '...', link_text: 'FINDING AID: Link text' }]))
+      assign(:document, SolrDocument.new(marc_json_struct: finding_aid_856, marc_links_struct: [{ finding_aid: true, href: '...', link_text: 'FINDING AID: Link text' }]))
     end
 
     it "should be displayed when present" do
@@ -43,13 +43,13 @@ describe "catalog/record/_marc_contents_summary" do
   end
 
   it "should be blank if the document has not fields" do
-    assign(:document, SolrDocument.new(marcxml: no_fields_fixture))
+    assign(:document, SolrDocument.new(marc_json_struct: no_fields_fixture))
     render
     expect(rendered).to be_blank
   end
   describe 'included works' do
     before do
-      assign(:document, SolrDocument.new(marcxml: contributed_works_fixture))
+      assign(:document, SolrDocument.new(marc_json_struct: contributed_works_fixture))
       render
     end
 

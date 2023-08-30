@@ -101,7 +101,7 @@ describe "catalog/_index_marc" do
   describe 'finding aid' do
     let(:document) do
       SolrDocument.new(
-        marcxml: metadata1,
+        marc_json_struct: metadata1,
         marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
       )
     end

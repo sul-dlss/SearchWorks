@@ -2,1400 +2,3894 @@
 
 module MarcMetadataFixtures
   def metadata1
-    <<-xml
-      <record>
-        <datafield tag="100" ind1="1" ind2=" ">
-          <subfield code="a">Arbitrary, Stewart.</subfield>
-          <subfield code="e">fantastic.</subfield>
-          <subfield code="=">^A170662</subfield>
-        </datafield>
-        <datafield tag="110" ind1="1" ind2=" ">
-          <subfield code="a">Arbitrary, Corporate.</subfield>
-          <subfield code="e">fantastic.</subfield>
-        </datafield>
-        <datafield tag="111" ind1="1" ind2=" ">
-          <subfield code="a">Arbitrary Meeting.</subfield>
-          <subfield code="j">fantastic.</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-          <subfield code="a">Some intersting papers,</subfield>
-          <subfield code="c">Most responsible person ever</subfield>
-          <subfield code="f">1979-2010.</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="a">Imprint Statement</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-          <subfield code="a">53 linear feet (12 manuscript boxes, 6 seven-inch reels, 9 8-track cassettes, 1 micro-cassette, 16 hard disk cartridges)</subfield>
-        </datafield>
-        <datafield tag="351" ind1=" " ind2=" ">
-          <subfield code="a">Boxes 1-3 correspondence; boxes 4-12 media;</subfield>
-        </datafield>
-        <datafield tag="506" ind1=" " ind2=" ">
-          <subfield code="a">Open for research; material must be requested at least 36 hours in advance of intended use. </subfield>
-        </datafield>
-        <datafield tag="555" ind1=" " ind2=" ">
-          <subfield code="a">Unpublished listing available in the department.</subfield>
-        </datafield>
-        <datafield tag="541" ind1=" " ind2=" ">
-          <subfield code="c">Gift of</subfield>
-          <subfield code="a">Interesting Papers Intl.,</subfield>
-          <subfield code="d">2014.</subfield>
-          <subfield code="e">Accession 2014-1.</subfield>
-        </datafield>
-        <datafield tag="592" ind1=" " ind2=" ">
-          <subfield code="a">A local note</subfield>
-          <subfield code="b">added to subjects only</subfield>
-        </datafield>
-        <datafield tag="600" ind1="1" ind2="0">
-          <subfield code="a">Arbitrary, Gregory</subfield>
-          <subfield code="d">1904-1980.</subfield>
-          <subfield code="=">^A145706</subfield>
-        </datafield>
-        <datafield tag="600" ind1="1" ind2="0">
-          <subfield code="a">Arbirtrary, Lois.</subfield>
-          <subfield code="?">UNAUTHORIZED</subfield>
-        </datafield>
-        <datafield tag="600" ind1="1" ind2="0">
-          <subfield code="a">Arbitrary, Stewart.</subfield>
-          <subfield code="=">^A170662</subfield>
-        </datafield>
-        <datafield tag="650" ind1=" " ind2="0">
-          <subfield code="a">Computer networks</subfield>
-          <subfield code="x">Stanford.</subfield>
-          <subfield code="=">^A2097035</subfield>
-        </datafield>
-        <datafield tag="650" ind1=" " ind2="0">
-          <subfield code="a">Computers and civilization.</subfield>
-          <subfield code="=">^A1006791</subfield>
-        </datafield>
-        <datafield tag="650" ind1=" " ind2="0">
-          <subfield code="a">Information technology</subfield>
-          <subfield code="x">History</subfield>
-          <subfield code="y">20th century.</subfield>
-        </datafield>
-        <datafield tag="740" ind1="0" ind2=" ">
-          <subfield code="a">A quartely publication.</subfield>
-        </datafield>
-        <datafield tag="740" ind1="0" ind2=" ">
-          <subfield code="a">Another catalog.</subfield>
-        </datafield>
-        <datafield tag="740" ind1="0" ind2=" ">
-          <subfield code="a">A catalog</subfield>
-        </datafield>
-        <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='3'>Finding aid at:</subfield>
-          <subfield code='u'>https://library.stanford.edu</subfield>
-          <subfield code='z'>Link title</subfield>
-        </datafield>
-        <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>https://library.stanford.edu</subfield>
-          <subfield code='y'>A different finding aid</subfield>
-          <subfield code='z'>This is the Finding Aid</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-          <subfield code="a">(OCoLC-M)12345678</subfield>
-        </datafield>
-        <datafield tag="035" ind1=" " ind2=" ">
-          <subfield code="a">(OCoLC-I)87654321</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "100": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Arbitrary, Stewart."
+                },
+                {
+                  "e": "fantastic."
+                },
+                {
+                  "=": "^A170662"
+                }
+              ]
+            }
+          },
+          {
+            "110": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Arbitrary, Corporate."
+                },
+                {
+                  "e": "fantastic."
+                }
+              ]
+            }
+          },
+          {
+            "111": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Arbitrary Meeting."
+                },
+                {
+                  "j": "fantastic."
+                }
+              ]
+            }
+          },
+          {
+            "245": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Some intersting papers,"
+                },
+                {
+                  "c": "Most responsible person ever"
+                },
+                {
+                  "f": "1979-2010."
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Imprint Statement"
+                }
+              ]
+            }
+          },
+          {
+            "300": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "53 linear feet (12 manuscript boxes, 6 seven-inch reels, 9 8-track cassettes, 1 micro-cassette, 16 hard disk cartridges)"
+                }
+              ]
+            }
+          },
+          {
+            "351": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Boxes 1-3 correspondence; boxes 4-12 media;"
+                }
+              ]
+            }
+          },
+          {
+            "506": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Open for research; material must be requested at least 36 hours in advance of intended use. "
+                }
+              ]
+            }
+          },
+          {
+            "555": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Unpublished listing available in the department."
+                }
+              ]
+            }
+          },
+          {
+            "541": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "c": "Gift of"
+                },
+                {
+                  "a": "Interesting Papers Intl.,"
+                },
+                {
+                  "d": "2014."
+                },
+                {
+                  "e": "Accession 2014-1."
+                }
+              ]
+            }
+          },
+          {
+            "592": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "A local note"
+                },
+                {
+                  "b": "added to subjects only"
+                }
+              ]
+            }
+          },
+          {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Arbitrary, Gregory"
+                },
+                {
+                  "d": "1904-1980."
+                },
+                {
+                  "=": "^A145706"
+                }
+              ]
+            }
+          },
+          {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Arbirtrary, Lois."
+                },
+                {
+                  "?": "UNAUTHORIZED"
+                }
+              ]
+            }
+          },
+          {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Arbitrary, Stewart."
+                },
+                {
+                  "=": "^A170662"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Computer networks"
+                },
+                {
+                  "x": "Stanford."
+                },
+                {
+                  "=": "^A2097035"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Computers and civilization."
+                },
+                {
+                  "=": "^A1006791"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Information technology"
+                },
+                {
+                  "x": "History"
+                },
+                {
+                  "y": "20th century."
+                }
+              ]
+            }
+          },
+          {
+            "740": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "A quartely publication."
+                }
+              ]
+            }
+          },
+          {
+            "740": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Another catalog."
+                }
+              ]
+            }
+          },
+          {
+            "740": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "A catalog"
+                }
+              ]
+            }
+          },
+          {
+            "856": {
+              "ind1": "0",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "3": "Finding aid at:"
+                },
+                {
+                  "u": "https://library.stanford.edu"
+                },
+                {
+                  "z": "Link title"
+                }
+              ]
+            }
+          },
+          {
+            "856": {
+              "ind1": "0",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "u": "https://library.stanford.edu"
+                },
+                {
+                  "y": "A different finding aid"
+                },
+                {
+                  "z": "This is the Finding Aid"
+                }
+              ]
+            }
+          },
+          {
+            "035": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "(OCoLC-M)12345678"
+                }
+              ]
+            }
+          },
+          {
+            "035": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "(OCoLC-I)87654321"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def metadata2
-    <<-xml
-      <record>
-        <datafield tag="050" ind1="0" ind2="0">
-          <subfield code="a">PK2788.9.A9</subfield>
-          <subfield code="b">F55 1998</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-          <subfield code="a">Ayaz, Shaikh,</subfield>
-          <subfield code="d">1923-1997.</subfield>
-        </datafield>
-        <datafield tag="245" ind1="1" ind2="0">
-          <subfield code="a">Fikr-i Ayāz /</subfield>
-          <subfield code="c">murattibīn, Āṣif Farruk̲h̲ī, Shāh Muḥammad Pīrzādah.</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="a">Karācī :</subfield>
-          <subfield code="b">Dāniyāl,</subfield>
-          <subfield code="c">[1998]</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-          <subfield code="a">375 p. ;</subfield>
-          <subfield code="c">23 cm.</subfield>
-        </datafield>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="a">1.First Chapter -- 2.Second Chapter -- </subfield>
-        </datafield>
-        <datafield tag="541" ind1="0" ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">541 that shouldn't show</subfield>
-        </datafield>
-        <datafield tag="546" ind1=" " ind2=" ">
-          <subfield code="a">In Urdu.</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-          <subfield code="a">Selected poems and articles from the works of renowned Sindhi poet; chiefly translated from Sindhi.</subfield>
-        </datafield>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject1</subfield>
-          <subfield code="d">Subject2</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="6">880-04</subfield>
-          <subfield code="a">Farruk̲h̲ī, Āṣif,</subfield>
-          <subfield code="d">1959-</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Pīrzādah, Shāh Muḥammad.</subfield>
-        </datafield>
-        <datafield tag="760" ind1="1" ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">Item that should not show</subfield>
-        </datafield>
-        <datafield tag="880" ind1="1" ind2=" ">
-          <subfield code="6">760-01</subfield>
-          <subfield code="a">Vern that should not display</subfield>
-        </datafield>
-        <datafield tag="880" ind1="0" ind2=" ">
-          <subfield code="6">541-01</subfield>
-          <subfield code="a">541 Vern that should not display</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "050": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "PK2788.9.A9"
+                },
+                {
+                  "b": "F55 1998"
+                }
+              ]
+            }
+          },
+          {
+            "100": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Ayaz, Shaikh,"
+                },
+                {
+                  "d": "1923-1997."
+                }
+              ]
+            }
+          },
+          {
+            "245": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Fikr-i Ayāz /"
+                },
+                {
+                  "c": "murattibīn, Āṣif Farruk̲h̲ī, Shāh Muḥammad Pīrzādah."
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Karācī :"
+                },
+                {
+                  "b": "Dāniyāl,"
+                },
+                {
+                  "c": "[1998]"
+                }
+              ]
+            }
+          },
+          {
+            "300": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "375 p. ;"
+                },
+                {
+                  "c": "23 cm."
+                }
+              ]
+            }
+          },
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "1.First Chapter -- 2.Second Chapter -- "
+                }
+              ]
+            }
+          },
+          {
+            "541": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "541 that shouldn't show"
+                }
+              ]
+            }
+          },
+          {
+            "546": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "In Urdu."
+                }
+              ]
+            }
+          },
+          {
+            "520": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Selected poems and articles from the works of renowned Sindhi poet; chiefly translated from Sindhi."
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject1"
+                },
+                {
+                  "d": "Subject2"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-04"
+                },
+                {
+                  "a": "Farruk̲h̲ī, Āṣif,"
+                },
+                {
+                  "d": "1959-"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Pīrzādah, Shāh Muḥammad."
+                }
+              ]
+            }
+          },
+          {
+            "760": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "Item that should not show"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "760-01"
+                },
+                {
+                  "a": "Vern that should not display"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "541-01"
+                },
+                {
+                  "a": "541 Vern that should not display"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def matched_vernacular_fixture
-    <<-xml
-      <record>
-        <datafield tag="245" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">This is not Vernacular</subfield>
-        </datafield>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="6">880-02</subfield>
-          <subfield code="a">1.This is not Vernacular -- 2.This is also not Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">245-01</subfield>
-          <subfield code="a">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">505-02</subfield>
-          <subfield code="a">1.This is Vernacular -- 2.This is also Vernacular</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "245": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "This is not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-02"
+                },
+                {
+                  "a": "1.This is not Vernacular -- 2.This is also not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "245-01"
+                },
+                {
+                  "a": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "505-02"
+                },
+                {
+                  "a": "1.This is Vernacular -- 2.This is also Vernacular"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def unmatched_vernacular_fixture
-    <<-xml
-      <record>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">245-00</subfield>
-          <subfield code="a">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">505-00</subfield>
-          <subfield code="a">1.This is Vernacular -- 2.This is also Vernacular</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "245-00"
+                },
+                {
+                  "a": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "505-00"
+                },
+                {
+                  "a": "1.This is Vernacular -- 2.This is also Vernacular"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def matched_vernacular_rtl_fixture
-    <<-xml
-      <record>
-        <datafield tag="245" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">This is NOT Right-to-Left Vernacular</subfield>
-        </datafield>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="6">880-02</subfield>
-          <subfield code="a">1.This is not Vernacular -- 2.This is also not Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">245-01//r</subfield>
-          <subfield code="a">This is Right-to-Left Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">505-02</subfield>
-          <subfield code="a">1.This is Vernacular -- 2.This is also Vernacular</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "245": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "This is NOT Right-to-Left Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-02"
+                },
+                {
+                  "a": "1.This is not Vernacular -- 2.This is also not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "245-01//r"
+                },
+                {
+                  "a": "This is Right-to-Left Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "505-02"
+                },
+                {
+                  "a": "1.This is Vernacular -- 2.This is also Vernacular"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def unmatched_vernacular_rtl_fixture
-    <<-xml
-      <record>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">245-00//r</subfield>
-          <subfield code="a">This is Right-to-Left Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">505-00</subfield>
-          <subfield code="a">1.This is Vernacular -- 2.This is also Vernacular</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "245-00//r"
+                },
+                {
+                  "a": "This is Right-to-Left Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "505-00"
+                },
+                {
+                  "a": "1.This is Vernacular -- 2.This is also Vernacular"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def complex_vernacular_fixture
-    <<-xml
-      <record>
-        <datafield tag="245" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">245 Matched Romanized</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-          <subfield code="a">300 Unmatched Romanized</subfield>
-        </datafield>
-        <datafield tag="300" ind1=" " ind2=" ">
-          <subfield code="6">880-02</subfield>
-          <subfield code="a">300 Matched Romanized</subfield>
-        </datafield>
-        <datafield tag="350" ind1=" " ind2=" ">
-          <subfield code="6">880-03</subfield>
-          <subfield code="a">350 Matched Romanized</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">245-01</subfield>
-          <subfield code="a">245 Matched Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">300-02</subfield>
-          <subfield code="a">300 Matched Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">300-00</subfield>
-          <subfield code="a">300 Unmatched Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">350-03</subfield>
-          <subfield code="a">350 Matched Vernacular</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "245": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "245 Matched Romanized"
+                }
+              ]
+            }
+          },
+          {
+            "300": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "300 Unmatched Romanized"
+                }
+              ]
+            }
+          },
+          {
+            "300": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-02"
+                },
+                {
+                  "a": "300 Matched Romanized"
+                }
+              ]
+            }
+          },
+          {
+            "350": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-03"
+                },
+                {
+                  "a": "350 Matched Romanized"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "245-01"
+                },
+                {
+                  "a": "245 Matched Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "300-02"
+                },
+                {
+                  "a": "300 Matched Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "300-00"
+                },
+                {
+                  "a": "300 Unmatched Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "350-03"
+                },
+                {
+                  "a": "350 Matched Vernacular"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def bad_vernacular_fixture
-    <<-xml
-      <record>
-        <datafield tag="245" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">This is not Vernacular</subfield>
-        </datafield>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="6">880-02</subfield>
-          <subfield code="a">1.This is not Vernacular -- 2.This is also not Vernacular</subfield>
-        </datafield>
-        <datafield tag="600" ind1=" " ind2=" ">
-          <subfield code="6">880-03</subfield>
-          <subfield code="a">This is not Vernacular</subfield>
-        </datafield>
-        <datafield tag="610" ind1="1" ind2="0">
-          <subfield code="6">610-00</subfield>
-          <subfield code="a">Bad Venacular Matcher</subfield>
-        </datafield>
-        <datafield tag="700" ind1=" " ind2=" ">
-          <subfield code="6">880-04</subfield>
-          <subfield code="a">This is not Vernacular</subfield>
-        </datafield>
-        <datafield tag="710" ind1=" " ind2=" ">
-          <subfield code="6">880-05</subfield>
-          <subfield code="a">This is not Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="a">245-01</subfield>
-          <subfield code="6">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="a">505-02</subfield>
-          <subfield code="a">1.This is Vernacular -- 2.This is also Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="a">600-03</subfield>
-          <subfield code="b">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="a">700-04</subfield>
-          <subfield code="b">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="a">710-05</subfield>
-          <subfield code="6">This is Vernacular</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">880-00</subfield>
-          <subfield code="6">This is A vernacular matching field that does not point to a valid field</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "245": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "This is not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-02"
+                },
+                {
+                  "a": "1.This is not Vernacular -- 2.This is also not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "600": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-03"
+                },
+                {
+                  "a": "This is not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "610": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "6": "610-00"
+                },
+                {
+                  "a": "Bad Venacular Matcher"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-04"
+                },
+                {
+                  "a": "This is not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "710": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-05"
+                },
+                {
+                  "a": "This is not Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "245-01"
+                },
+                {
+                  "6": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "505-02"
+                },
+                {
+                  "a": "1.This is Vernacular -- 2.This is also Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "600-03"
+                },
+                {
+                  "b": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "700-04"
+                },
+                {
+                  "b": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "710-05"
+                },
+                {
+                  "6": "This is Vernacular"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-00"
+                },
+                {
+                  "6": "This is A vernacular matching field that does not point to a valid field"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linking_fields_fixture
-    <<-xml
-      <record>
-        <datafield tag="519" ind1=" " ind2=" ">
-          <subfield code="u">http://socrates.stanford.edu</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-          <subfield code="u">https://searchworks.stanford.edu</subfield>
-        </datafield>
-        <datafield tag="530" ind1=" " ind2=" ">
-          <subfield code="u">library.stanford.edu</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "519": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "u": "http://socrates.stanford.edu"
+                }
+              ]
+            }
+          },
+          {
+            "520": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "u": "https://searchworks.stanford.edu"
+                }
+              ]
+            }
+          },
+          {
+            "530": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "u": "library.stanford.edu"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def nielsen_fixture
-    <<-xml
-      <record>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="a">ContentNote1 -- ContentNote2</subfield>
-        </datafield>
-        <datafield tag="520" ind1=" " ind2=" ">
-          <subfield code="a">Note Field</subfield>
-        </datafield>
-        <datafield tag="905" ind1=" " ind2=" ">
-          <subfield code="a">NielsenNote1 -- NielsenNote2</subfield>
-          <subfield code="1">Nielsen</subfield>
-        </datafield>
-        <datafield tag="920" ind1=" " ind2=" ">
-          <subfield code="a">Nielsen Field</subfield>
-          <subfield code="1">Nielsen</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "ContentNote1 -- ContentNote2"
+                }
+              ]
+            }
+          },
+          {
+            "520": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Note Field"
+                }
+              ]
+            }
+          },
+          {
+            "905": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "NielsenNote1 -- NielsenNote2"
+                },
+                {
+                  "1": "Nielsen"
+                }
+              ]
+            }
+          },
+          {
+            "920": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Nielsen Field"
+                },
+                {
+                  "1": "Nielsen"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def tagged_nielsen_fixture
-    <<-xml
-      <record>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="a">ContentNote1 -- ContentNote2 -- </subfield>
-          <subfield code="r">Linked -- Field</subfield>
-        </datafield>
-        <datafield tag="905" ind1=" " ind2=" ">
-          <subfield code="a">NielsenNote1 -- NielsenNote2</subfield>
-          <subfield code="1">Nielsen</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "ContentNote1 -- ContentNote2 -- "
+                },
+                {
+                  "r": "Linked -- Field"
+                }
+              ]
+            }
+          },
+          {
+            "905": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "NielsenNote1 -- NielsenNote2"
+                },
+                {
+                  "1": "Nielsen"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linked_ckey_fixture
-    <<-xml
-      <record>
-        <datafield tag="590" ind1=" " ind2=" ">
-          <subfield code="a">Copy 1 bound with v. 140</subfield>
-          <subfield code="c">55523 (parent record’s ckey)</subfield>
-        </datafield>
-        <datafield tag="590" ind1=" " ind2=" ">
-          <subfield code="a">A 590 that does not have $c</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "590": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Copy 1 bound with v. 140"
+                },
+                {
+                  "c": "55523 (parent record’s ckey)"
+                }
+              ]
+            }
+          },
+          {
+            "590": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "A 590 that does not have $c"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def unlinked_ckey_fixture
-    <<-xml
-      <record>
-        <datafield tag="590" ind1=" " ind2=" ">
-          <subfield code='a'>Electronic reproduction. </subfield>
-          <subfield code='b'>Chicago, Illinois : </subfield>
-          <subfield code='c'>McGraw Hill Education, </subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "590": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Electronic reproduction. "
+                },
+                {
+                  "b": "Chicago, Illinois : "
+                },
+                {
+                  "c": "McGraw Hill Education, "
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def escape_characters_fixture
-    <<-xml
-      <record>
-        <datafield tag="690" ind1=" " ind2=" ">
-          <subfield code="a">Stanford Artists' Books Collection.</subfield>
-        </datafield>
-        <datafield tag="690" ind1=" " ind2=" ">
-          <subfield code="c">Stanford > Berkeley.</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "690": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Stanford Artists' Books Collection."
+                }
+              ]
+            }
+          },
+          {
+            "690": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "c": "Stanford > Berkeley."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def percent_fixture
-    <<-xml
-      <record>
-        <datafield tag="245" ind1="1" ind2="0">
-          <subfield code="a">%Bad Field</subfield>
-          <subfield code="c">Good Field</subfield>
-        </datafield>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">%Subject1</subfield>
-          <subfield code="d">Subject2</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "245": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "%Bad Field"
+                },
+                {
+                  "c": "Good Field"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "%Subject1"
+                },
+                {
+                  "d": "Subject2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def relator_code_fixture
-    <<-xml
-      <record>
-        <datafield tag="100" ind1="1" ind2=" ">
-          <subfield code="a">100 $a</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="100" ind1="1" ind2=" ">
-          <subfield code="a">100 $a</subfield>
-          <subfield code="4">bad-relator</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "100": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "100 $a"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "100": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "100 $a"
+                },
+                {
+                  "4": "bad-relator"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def language_fixture
-    <<-xml
-      <record>
-        <datafield tag="546" ind1="1" ind2=" ">
-          <subfield code="a">Language $a</subfield>
-          <subfield code="b">Language $b</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "546": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Language $a"
+                },
+                {
+                  "b": "Language $b"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def notation_fixture
-    <<-xml
-      <record>
-        <datafield tag="546" ind1="1" ind2=" ">
-          <subfield code="b">Notation $b</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "546": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "b": "Notation $b"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def contributor_fixture
-    <<-xml
-      <record>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor1</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor2</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor3</subfield>
-          <subfield code="e">Actor</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="6">880-00</subfield>
-          <subfield code="a">Contributor4</subfield>
-          <subfield code="t">Contributor $t</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor1"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor2"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor3"
+                },
+                {
+                  "e": "Actor"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-00"
+                },
+                {
+                  "a": "Contributor4"
+                },
+                {
+                  "t": "Contributor $t"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def contributed_works_fixture
-    <<-xml
-      <record>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor1</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor2</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="700" ind1=" " ind2=" ">
-          <subfield code="i">Includes (expression)</subfield>
-          <subfield code="a">700 with t</subfield>
-          <subfield code="e">700 $e</subfield>
-          <subfield code="t">Title.</subfield>
-          <subfield code="m">sub m after .</subfield>
-          <subfield code="4">700 $4</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor2</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="710" ind1=" " ind2="2">
-          <subfield code="a">710 with t ind2</subfield>
-          <subfield code="t">Title!</subfield>
-          <subfield code="n">sub n after t</subfield>
-        </datafield>
-        <datafield tag="711" ind1=" " ind2="2">
-          <subfield code="a">711 with t ind2</subfield>
-          <subfield code="j">middle</subfield>
-          <subfield code="t">Title!</subfield>
-          <subfield code="u">subu.</subfield>
-          <subfield code="n">sub n after .</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor1"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor2"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "i": "Includes (expression)"
+                },
+                {
+                  "a": "700 with t"
+                },
+                {
+                  "e": "700 $e"
+                },
+                {
+                  "t": "Title."
+                },
+                {
+                  "m": "sub m after ."
+                },
+                {
+                  "4": "700 $4"
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor2"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "710": {
+              "ind1": " ",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "a": "710 with t ind2"
+                },
+                {
+                  "t": "Title!"
+                },
+                {
+                  "n": "sub n after t"
+                }
+              ]
+            }
+          },
+          {
+            "711": {
+              "ind1": " ",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "a": "711 with t ind2"
+                },
+                {
+                  "j": "middle"
+                },
+                {
+                  "t": "Title!"
+                },
+                {
+                  "u": "subu."
+                },
+                {
+                  "n": "sub n after ."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def contributed_works_without_title_fixture
-    <<-xml
-      <record>
-        <datafield tag="711" ind1=" " ind2=" ">
-          <subfield code="a">711 with t ind2</subfield>
-          <subfield code="u">subu.</subfield>
-          <subfield code="n">sub n after .</subfield>
-          <subfield code="j">last.</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "711": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "711 with t ind2"
+                },
+                {
+                  "u": "subu."
+                },
+                {
+                  "n": "sub n after ."
+                },
+                {
+                  "j": "last."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def multi_role_contributor_fixture
-    <<-xml
-      <record>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="a">Contributor1</subfield>
-          <subfield code="e">actor.</subfield>
-          <subfield code="e">director.</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Contributor1"
+                },
+                {
+                  "e": "actor."
+                },
+                {
+                  "e": "director."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def place_name_fixture
-    <<-xml
-      <record>
-        <datafield tag="752">
-          <subfield code="a">Florida</subfield>
-          <subfield code="d">Tampa</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "752": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Florida"
+                },
+                {
+                  "d": "Tampa"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def bad_toc_fixture
-    <<-xml
-      <record>
-        <datafield tag="505" ind1=" " ind2=" ">
-          <subfield code="a">1.First Chapter -- 2.Second Chapter</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">505-00</subfield>
-          <subfield code="a">1.Vernacular1 -- 2.Vernacular2</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "505": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "1.First Chapter -- 2.Second Chapter"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "505-00"
+                },
+                {
+                  "a": "1.Vernacular1 -- 2.Vernacular2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def multi_a_subject_fixture
-    <<-xml
-      <record>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject A1</subfield>
-          <subfield code="a">Subject A2</subfield>
-          <subfield code="a">Subject A3</subfield>
-          <subfield code="a">Subject A4</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject A1"
+                },
+                {
+                  "a": "Subject A2"
+                },
+                {
+                  "a": "Subject A3"
+                },
+                {
+                  "a": "Subject A4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_655_subject_fixture
-    <<-xml
-      <record>
-        <datafield tag="655" ind1="1" ind2=" ">
-          <subfield code="a">Subject A1</subfield>
-          <subfield code="v">Subject V1</subfield>
-          <subfield code="x">Subject X1</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "655": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject A1"
+                },
+                {
+                  "v": "Subject V1"
+                },
+                {
+                  "x": "Subject X1"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_mixed_subject_fixture
-    <<-xml
-      <record>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject A1</subfield>
-        </datafield>
-        <datafield tag="655" ind1="1" ind2=" ">
-          <subfield code="a">Subject A1</subfield>
-        </datafield>
-        <datafield tag="690" ind1="1" ind2=" ">
-          <subfield code="a">Local Subject A1</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject A1"
+                }
+              ]
+            }
+          },
+          {
+            "655": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject A1"
+                }
+              ]
+            }
+          },
+          {
+            "690": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Local Subject A1"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_duplicate_subject_fixture
-    <<-xml
-      <record>
-        <datafield ind1=" " ind2="0" tag="650">
-          <subfield code="a">Piano music.</subfield>
-          <subfield code="=">^A1049172</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="0" tag="650">
-          <subfield code="a">Waltzes.</subfield>
-          <subfield code="=">^A1328649</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="0" tag="650">
-          <subfield code="a">Canons, fugues, etc. (Piano)</subfield>
-          <subfield code="=">^A1000979</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="0" tag="650">
-          <subfield code="a">Marches.</subfield>
-          <subfield code="=">^A1037033</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="6" tag="650">
-          <subfield code="a">Piano, Musique de.</subfield>
-          <subfield code="v">Sound recordings.</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="7" tag="650">
-          <subfield code="a">Canons, fugues, etc. (Piano)</subfield>
-          <subfield code="2">fast</subfield>
-          <subfield code="0">(OCoLC)fst00846007</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="7" tag="650">
-          <subfield code="a">Marches.</subfield>
-          <subfield code="2">fast</subfield>
-          <subfield code="0">(OCoLC)fst01009043</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="7" tag="650">
-          <subfield code="a">Piano music.</subfield>
-          <subfield code="2">fast</subfield>
-          <subfield code="0">(OCoLC)fst01063403</subfield>
-        </datafield>
-        <datafield ind1=" " ind2="7" tag="650">
-          <subfield code="a">Waltzes.</subfield>
-          <subfield code="2">fast</subfield>
-          <subfield code="0">(OCoLC)fst01170245</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Piano music."
+                },
+                {
+                  "=": "^A1049172"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Waltzes."
+                },
+                {
+                  "=": "^A1328649"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Canons, fugues, etc. (Piano)"
+                },
+                {
+                  "=": "^A1000979"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Marches."
+                },
+                {
+                  "=": "^A1037033"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "6",
+              "subfields": [
+                {
+                  "a": "Piano, Musique de."
+                },
+                {
+                  "v": "Sound recordings."
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Canons, fugues, etc. (Piano)"
+                },
+                {
+                  "2": "fast"
+                },
+                {
+                  "0": "(OCoLC)fst00846007"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Marches."
+                },
+                {
+                  "2": "fast"
+                },
+                {
+                  "0": "(OCoLC)fst01009043"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Piano music."
+                },
+                {
+                  "2": "fast"
+                },
+                {
+                  "0": "(OCoLC)fst01063403"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Waltzes."
+                },
+                {
+                  "2": "fast"
+                },
+                {
+                  "0": "(OCoLC)fst01170245"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def multi_vxyz_subject_fixture
-    <<-xml
-      <record>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject A</subfield>
-          <subfield code="b">Subject B</subfield>
-          <subfield code="c">Subject C</subfield>
-          <subfield code="v">Subject V</subfield>
-          <subfield code="x">Subject X</subfield>
-          <subfield code="y">Subject Y</subfield>
-          <subfield code="z">Subject Z</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject A"
+                },
+                {
+                  "b": "Subject B"
+                },
+                {
+                  "c": "Subject C"
+                },
+                {
+                  "v": "Subject V"
+                },
+                {
+                  "x": "Subject X"
+                },
+                {
+                  "y": "Subject Y"
+                },
+                {
+                  "z": "Subject Z"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def collection_690_fixture
-    <<-xml
-      <record>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject1</subfield>
-          <subfield code="d">Subject2</subfield>
-        </datafield>
-        <datafield tag="690" ind1="1" ind2=" ">
-          <subfield code="a">Subject Collection 1</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject1"
+                },
+                {
+                  "d": "Subject2"
+                }
+              ]
+            }
+          },
+          {
+            "690": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject Collection 1"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def ordered_subjects_fixture
-    <<-xml
-      <record>
-        <datafield tag="651" ind1="1" ind2=" ">
-          <subfield code="a">Subject 651</subfield>
-        </datafield>
-        <datafield tag="650" ind1="1" ind2=" ">
-          <subfield code="a">Subject 650</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "651": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject 651"
+                }
+              ]
+            }
+          },
+          {
+            "650": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Subject 650"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def vernacular_subjects_fixture
-    <<-xml
-      <record>
-        <datafield tag="650" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">Subject 650</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">650-01</subfield>
-          <subfield code="a">Linked vernacular subject</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">651-00</subfield>
-          <subfield code="a">Unlinked vernacular subject</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "650": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "Subject 650"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "650-01"
+                },
+                {
+                  "a": "Linked vernacular subject"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "651-00"
+                },
+                {
+                  "a": "Unlinked vernacular subject"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def related_works_fixture
-    <<-xml
-      <record>
-        <datafield tag="740" ind1=" " ind2="2">
-          <subfield code="a">Contributor1</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "740": {
+              "ind1": " ",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "a": "Contributor1"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def title_change_fixture
-    <<-xml
-      <record>
-        <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="t">This is the t subfield for 780</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="5">
-          <subfield code="t">This is the t subfield for 785</subfield>
-          <subfield code="x">subfield X</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "t": "This is the t subfield for 780"
+                },
+                {
+                  "x": "subfield X"
+                }
+              ]
+            }
+          },
+          {
+            "785": {
+              "ind1": "0",
+              "ind2": "5",
+              "subfields": [
+                {
+                  "t": "This is the t subfield for 785"
+                },
+                {
+                  "x": "subfield X"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def main_entry_and_title_serial_fixture
-    <<-xml
-      <record>
-        <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="a">Serial Main Entry</subfield>
-          <subfield code="t">Serial Title</subfield>
-          <subfield code="s">Serial Uniform Title</subfield>
-        </datafield>
-        <datafield tag="774" ind1="0" ind2="0">
-          <subfield code="i">Some text:</subfield>
-          <subfield code="z">Serial ISBN</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Serial Main Entry"
+                },
+                {
+                  "t": "Serial Title"
+                },
+                {
+                  "s": "Serial Uniform Title"
+                }
+              ]
+            }
+          },
+          {
+            "774": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "i": "Some text:"
+                },
+                {
+                  "z": "Serial ISBN"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def main_entry_and_title_serial_fixture_with_issn
-    <<-xml
-      <record>
-        <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="a">Serial Main Entry</subfield>
-          <subfield code="t">Serial Title</subfield>
-          <subfield code="s">Serial Uniform Title</subfield>
-        </datafield>
-        <datafield tag="774" ind1="0" ind2="0">
-          <subfield code="i">Some text:</subfield>
-          <subfield code="x">Serial ISSN</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Serial Main Entry"
+                },
+                {
+                  "t": "Serial Title"
+                },
+                {
+                  "s": "Serial Uniform Title"
+                }
+              ]
+            }
+          },
+          {
+            "774": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "i": "Some text:"
+                },
+                {
+                  "x": "Serial ISSN"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def only_title_serial_fixture
-    <<-xml
-      <record>
-        <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="i">Other Data:</subfield>
-          <subfield code="t">Serial Title</subfield>
-          <subfield code="s">Serial Uniform Title</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "i": "Other Data:"
+                },
+                {
+                  "t": "Serial Title"
+                },
+                {
+                  "s": "Serial Uniform Title"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def merged_with_serial_fixture
-    <<-xml
-      <record>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="a">Serial Main Entry1</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="a">Serial Main Entry2</subfield>
-        </datafield>
-        <datafield tag="785" ind1="0" ind2="7">
-          <subfield code="z">Serial Main Entry3</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "785": {
+              "ind1": "0",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Serial Main Entry1"
+                }
+              ]
+            }
+          },
+          {
+            "785": {
+              "ind1": "0",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "a": "Serial Main Entry2"
+                }
+              ]
+            }
+          },
+          {
+            "785": {
+              "ind1": "0",
+              "ind2": "7",
+              "subfields": [
+                {
+                  "z": "Serial Main Entry3"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def vernacular_serial_fixture
-    <<-xml
-      <record>
-        <datafield tag="780" ind1="0" ind2="0">
-          <subfield code="6">880-01</subfield>
-          <subfield code="i">Other Data:</subfield>
-          <subfield code="t">Serial Title</subfield>
-          <subfield code="s">Serial Uniform Title</subfield>
-        </datafield>
-        <datafield tag="880" ind1="0" ind2="0">
-          <subfield code="6">780-01</subfield>
-          <subfield code="t">Vernacular Serial Title</subfield>
-          <subfield code="s">Vernacular Serial Uniform Title</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "i": "Other Data:"
+                },
+                {
+                  "t": "Serial Title"
+                },
+                {
+                  "s": "Serial Uniform Title"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "6": "780-01"
+                },
+                {
+                  "t": "Vernacular Serial Title"
+                },
+                {
+                  "s": "Vernacular Serial Uniform Title"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def single_marc_264_fixture
-    <<-xml
-      <record>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="3">Subfield3</subfield>
-          <subfield code="a">SubfieldA</subfield>
-          <subfield code="b">SubfieldB</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "3": "Subfield3"
+                },
+                {
+                  "a": "SubfieldA"
+                },
+                {
+                  "b": "SubfieldB"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def multiple_marc_264_fixture
-    <<-xml
-      <record>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">SubfieldA</subfield>
-          <subfield code="b">SubfieldB</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">AnotherSubfieldA</subfield>
-          <subfield code="b">AnotherSubfieldB</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "SubfieldA"
+                },
+                {
+                  "b": "SubfieldB"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "AnotherSubfieldA"
+                },
+                {
+                  "b": "AnotherSubfieldB"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def complex_marc_264_fixture
-    <<-xml
-      <record>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">Production SubfieldA</subfield>
-          <subfield code="b">Production SubfieldB</subfield>
-        </datafield>
-        <datafield tag="264" ind1="3" ind2="1">
-          <subfield code="a">SubfieldA</subfield>
-          <subfield code="b">SubfieldB</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">Another Production SubfieldA</subfield>
-          <subfield code="b">Another Production SubfieldB</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Production SubfieldA"
+                },
+                {
+                  "b": "Production SubfieldB"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": "3",
+              "ind2": "1",
+              "subfields": [
+                {
+                  "a": "SubfieldA"
+                },
+                {
+                  "b": "SubfieldB"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Another Production SubfieldA"
+                },
+                {
+                  "b": "Another Production SubfieldB"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_264_copyright_fixture
-    <<-xml
-      <record>
-        <datafield tag="250" ind1=" " ind2="0">
-          <subfield code="a">250 SubA</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="4">
-          <subfield code="a">copyright</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">264 SubA</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "250": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "250 SubA"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "4",
+              "subfields": [
+                {
+                  "a": "copyright"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "264 SubA"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def vernacular_marc_264_fixture
-    <<-xml
-      <record>
-        <datafield tag="264" ind1=" " ind2="0">
-          <subfield code="a">SubfieldA</subfield>
-          <subfield code="b">SubfieldB</subfield>
-          <subfield code="6">880-01</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2="0">
-          <subfield code="a">Vernacular SubfieldA</subfield>
-          <subfield code="b">Vernacular SubfieldB</subfield>
-          <subfield code="6">264-01</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "SubfieldA"
+                },
+                {
+                  "b": "SubfieldB"
+                },
+                {
+                  "6": "880-01"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Vernacular SubfieldA"
+                },
+                {
+                  "b": "Vernacular SubfieldB"
+                },
+                {
+                  "6": "264-01"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def unmatched_vernacular_marc_264_fixture
-    <<-xml
-      <record>
-        <datafield tag="880" ind1=" " ind2="0">
-          <subfield code="a">Unmatched vernacular SubfieldA</subfield>
-          <subfield code="b">Unmatched vernacular SubfieldB</subfield>
-          <subfield code="6">264-00</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Unmatched vernacular SubfieldA"
+                },
+                {
+                  "b": "Unmatched vernacular SubfieldB"
+                },
+                {
+                  "6": "264-00"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_592_fixture
-    <<-xml
-      <record>
-        <datafield tag="592" ind1=" " ind2=" ">
-          <subfield code="a">A local note</subfield>
-          <subfield code="b">added to subjects only</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "592": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "A local note"
+                },
+                {
+                  "b": "added to subjects only"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_single_series_fixture
-    <<-xml
-      <record>
-        <datafield tag="440" ind1=" " ind2=" ">
-          <subfield code="a">Name</subfield>
-          <subfield code="v">SubV</subfield>
-          <subfield code="z">SubZ</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "440": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Name"
+                },
+                {
+                  "v": "SubV"
+                },
+                {
+                  "z": "SubZ"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_multi_series_fixture
-    <<-xml
-      <record>
-        <datafield tag="440" ind1=" " ind2=" ">
-          <subfield code="a">440 $a</subfield>
-          <subfield code="v">440 $v</subfield>
-          <subfield code="x">440 $x</subfield>
-        </datafield>
-        <datafield tag="800" ind1=" " ind2=" ">
-          <subfield code="a">Name</subfield>
-          <subfield code="v">SubV800</subfield>
-          <subfield code="z">SubZ</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "440": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "440 $a"
+                },
+                {
+                  "v": "440 $v"
+                },
+                {
+                  "x": "440 $x"
+                }
+              ]
+            }
+          },
+          {
+            "800": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Name"
+                },
+                {
+                  "v": "SubV800"
+                },
+                {
+                  "z": "SubZ"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def complex_series_fixture
-    <<-xml
-      <record>
-        <datafield tag="440" ind1=" " ind2=" ">
-          <subfield code="a">440 $a</subfield>
-          <subfield code="v">440 $v</subfield>
-          <subfield code="x">440 $x</subfield>
-        </datafield>
-        <datafield tag="490" ind1="0" ind2=" ">
-          <subfield code="a">Linkable 490</subfield>
-          <subfield code="b">490 $b</subfield>
-          <subfield code="4">$4 should not display</subfield>
-        </datafield>
-        <datafield tag="490" ind1="1" ind2=" ">
-          <subfield code="a">Non-linkable 490</subfield>
-          <subfield code="4">$4 should not display</subfield>
-        </datafield>
-        <datafield tag="800" ind1=" " ind2=" ">
-          <subfield code="a">Name</subfield>
-          <subfield code="v">SubV800</subfield>
-          <subfield code="z">SubZ</subfield>
-        </datafield>
-        <datafield tag="800" ind1=" " ind2=" ">
-          <subfield code="a">Sub $a 1</subfield>
-          <subfield code="a">Sub $a 2</subfield>
-          <subfield code="b">Non-linkable 800</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "440": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "440 $a"
+                },
+                {
+                  "v": "440 $v"
+                },
+                {
+                  "x": "440 $x"
+                }
+              ]
+            }
+          },
+          {
+            "490": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Linkable 490"
+                },
+                {
+                  "b": "490 $b"
+                },
+                {
+                  "4": "$4 should not display"
+                }
+              ]
+            }
+          },
+          {
+            "490": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Non-linkable 490"
+                },
+                {
+                  "4": "$4 should not display"
+                }
+              ]
+            }
+          },
+          {
+            "800": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Name"
+                },
+                {
+                  "v": "SubV800"
+                },
+                {
+                  "z": "SubZ"
+                }
+              ]
+            }
+          },
+          {
+            "800": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Sub $a 1"
+                },
+                {
+                  "a": "Sub $a 2"
+                },
+                {
+                  "b": "Non-linkable 800"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def uniform_title_fixture
-    <<-xml
-      <record>
-        <datafield tag="240" ind1=" " ind2=" ">
-          <subfield code="a">Instrumental music</subfield>
-          <subfield code="b">Selections</subfield>
-          <subfield code="h">[print/digital].</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "240": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Instrumental music"
+                },
+                {
+                  "b": "Selections"
+                },
+                {
+                  "h": "[print/digital]."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def uniform_title_fixture2
-    <<-xml
-      <record>
-        <datafield tag="240" ind1=" " ind2=" ">
-          <subfield code="a">Instrumental music.</subfield>
-          <subfield code="b">Selections</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "240": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Instrumental music."
+                },
+                {
+                  "b": "Selections"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_characteristics_fixture
-    <<-xml
-      <record>
-        <datafield tag="344" ind1=" " ind2=" ">
-          <subfield code="a">digital</subfield>
-          <subfield code="b">optical</subfield>
-          <subfield code="g">surround</subfield>
-          <subfield code="g">stereo</subfield>
-          <subfield code="h">Dolby</subfield>
-          <subfield code="2">rda</subfield>
-        </datafield>
-        <datafield tag="346" ind1=" " ind2=" ">
-          <subfield code="b">NTSC</subfield>
-          <subfield code="2">rda</subfield>
-        </datafield>
-        <datafield tag="347" ind1=" " ind2=" ">
-          <subfield code="a">video file</subfield>
-          <subfield code="b">DVD video</subfield>
-          <subfield code="e">Region 1</subfield>
-          <subfield code="2">rda</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "344": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "digital"
+                },
+                {
+                  "b": "optical"
+                },
+                {
+                  "g": "surround"
+                },
+                {
+                  "g": "stereo"
+                },
+                {
+                  "h": "Dolby"
+                },
+                {
+                  "2": "rda"
+                }
+              ]
+            }
+          },
+          {
+            "346": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "b": "NTSC"
+                },
+                {
+                  "2": "rda"
+                }
+              ]
+            }
+          },
+          {
+            "347": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "video file"
+                },
+                {
+                  "b": "DVD video"
+                },
+                {
+                  "e": "Region 1"
+                },
+                {
+                  "2": "rda"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def marc_sections_fixture
-    <<-xml
-      <record>
-        <datafield tag="050" ind1="0" ind2="0">
-          <subfield code="a">PK2788.9.A9</subfield>
-          <subfield code="b">F55 1998</subfield>
-        </datafield>
-        <datafield tag='856' ind1='0' ind2='2'>
-          <subfield code='u'>https://library.stanford.edu</subfield>
-          <subfield code='y'>A different finding aid</subfield>
-          <subfield code='z'>This is the Finding Aid</subfield>
-        </datafield>
-        <datafield tag="506" ind1=" " ind2=" ">
-          <subfield code="a">Open for research; material must be requested at least 36 hours in advance of intended use. </subfield>
-        </datafield>
-        <datafield tag="555" ind1=" " ind2=" ">
-          <subfield code="a">Unpublished listing available in the department.</subfield>
-        </datafield>
-        <datafield tag="700" ind1="1" ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">Contributor</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-        <datafield tag="880" ind1="1" ind2=" ">
-          <subfield code="6">700-01</subfield>
-          <subfield code="a">Vernacular Contributor</subfield>
-          <subfield code="4">prf</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "050": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "PK2788.9.A9"
+                },
+                {
+                  "b": "F55 1998"
+                }
+              ]
+            }
+          },
+          {
+            "856": {
+              "ind1": "0",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "u": "https://library.stanford.edu"
+                },
+                {
+                  "y": "A different finding aid"
+                },
+                {
+                  "z": "This is the Finding Aid"
+                }
+              ]
+            }
+          },
+          {
+            "506": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Open for research; material must be requested at least 36 hours in advance of intended use. "
+                }
+              ]
+            }
+          },
+          {
+            "555": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Unpublished listing available in the department."
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "Contributor"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "700-01"
+                },
+                {
+                  "a": "Vernacular Contributor"
+                },
+                {
+                  "4": "prf"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def edition_imprint_fixture
-    <<-xml
-      <record>
-        <datafield tag="250" ind1=" " ind2=" ">
-          <subfield code="a">SubA</subfield>
-          <subfield code="b">SubB</subfield>
-          <subfield code="z">SubZ</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="a">SubA</subfield>
-          <subfield code="b">SubB</subfield>
-          <subfield code="c">SubC</subfield>
-          <subfield code="g">SubG</subfield>
-          <subfield code="z">SubZ</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "250": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "SubA"
+                },
+                {
+                  "b": "SubB"
+                },
+                {
+                  "z": "SubZ"
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "SubA"
+                },
+                {
+                  "b": "SubB"
+                },
+                {
+                  "c": "SubC"
+                },
+                {
+                  "g": "SubG"
+                },
+                {
+                  "z": "SubZ"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def vernacular_edition_imprint_fixture
-    <<-xml
-      <record>
-        <datafield tag="250" ind1=" " ind2=" ">
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">Edition Statement</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="6">880-02</subfield>
-          <subfield code="a">Imprint Statement</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="6">880-03</subfield>
-          <subfield code="a">Unmatched Imprint Statement</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">250-01</subfield>
-          <subfield code="a">Vernacular Edition Statement</subfield>
-        </datafield>
-        <datafield tag="880" ind1=" " ind2=" ">
-          <subfield code="6">260-02/(2</subfield>
-          <subfield code="a">Vernacular Imprint Statement</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "250": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "Edition Statement"
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-02"
+                },
+                {
+                  "a": "Imprint Statement"
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-03"
+                },
+                {
+                  "a": "Unmatched Imprint Statement"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "250-01"
+                },
+                {
+                  "a": "Vernacular Edition Statement"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "260-02/(2"
+                },
+                {
+                  "a": "Vernacular Imprint Statement"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def no_fields_fixture
-    "<record></record>"
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+
+        ]
+      }
+    json
   end
 
   def marc_382_instrumentation
-    <<-xml
-      <record>
-        <datafield tag="382" ind1="0" ind2="1">
-          <subfield code="a">singer</subfield>
-          <subfield code="n">1</subfield>
-          <subfield code="p">bass guitar</subfield>
-          <subfield code="n">2</subfield>
-          <subfield code="a">percussion</subfield>
-          <subfield code="n">1</subfield>
-          <subfield code="v">4 hands</subfield>
-          <subfield code="a">guitar</subfield>
-          <subfield code="n">1</subfield>
-          <subfield code="d">electronics</subfield>
-          <subfield code="n">1</subfield>
-          <subfield code="b">flute</subfield>
-          <subfield code="n">1</subfield>
-          <subfield code="s">8</subfield>
-        </datafield>
-        <datafield tag="382" ind1="0" ind2=" ">
-          <subfield code="a">singer</subfield>
-          <subfield code="n">3</subfield>
-        </datafield>
-        <datafield tag="382" ind1="1" ind2=" ">
-          <subfield code="a">cowbell</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "382": {
+              "ind1": "0",
+              "ind2": "1",
+              "subfields": [
+                {
+                  "a": "singer"
+                },
+                {
+                  "n": "1"
+                },
+                {
+                  "p": "bass guitar"
+                },
+                {
+                  "n": "2"
+                },
+                {
+                  "a": "percussion"
+                },
+                {
+                  "n": "1"
+                },
+                {
+                  "v": "4 hands"
+                },
+                {
+                  "a": "guitar"
+                },
+                {
+                  "n": "1"
+                },
+                {
+                  "d": "electronics"
+                },
+                {
+                  "n": "1"
+                },
+                {
+                  "b": "flute"
+                },
+                {
+                  "n": "1"
+                },
+                {
+                  "s": "8"
+                }
+              ]
+            }
+          },
+          {
+            "382": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "singer"
+                },
+                {
+                  "n": "3"
+                }
+              ]
+            }
+          },
+          {
+            "382": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "cowbell"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def sw_marc_removed
-    <<-xml
-      <record>
-        <controlfield tag="001">control stuff</controlfield>
-        <datafield tag="760" ind1="1" ind2="1">should be removed</datafield>
-        <datafield tag="541" ind1="0" ind2="1">should be removed</datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "001": "control stuff"
+          },
+          {
+            "760": {
+              "ind1": "1",
+              "ind2": "1",
+              "subfields": [
+
+              ]
+            }
+          },
+          {
+            "541": {
+              "ind1": "0",
+              "ind2": "1",
+              "subfields": [
+
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def sw_marc_not_removed
-    <<-xml
-      <record>
-        <controlfield tag="001">control stuff</controlfield>
-        <datafield tag="760" ind1="0" ind2="1">should not be removed</datafield>
-        <datafield tag="541" ind1="1" ind2="1">should not be removed</datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "001": "control stuff"
+          },
+          {
+            "760": {
+              "ind1": "0",
+              "ind2": "1",
+              "subfields": [
+
+              ]
+            }
+          },
+          {
+            "541": {
+              "ind1": "1",
+              "ind2": "1",
+              "subfields": [
+
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def organization_and_arrangement_fixture
-    <<-xml
-      <record>
-        <datafield tag="351">
-          <subfield code="3">351 $3</subfield>
-          <subfield code="c">351 $c</subfield>
-          <subfield code="a">351 $a</subfield>
-          <subfield code="b">351 $b</subfield>
-          <subfield code="z">351 $z</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "351": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "3": "351 $3"
+                },
+                {
+                  "c": "351 $c"
+                },
+                {
+                  "a": "351 $a"
+                },
+                {
+                  "b": "351 $b"
+                },
+                {
+                  "z": "351 $z"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linked_author_creator_fixture
-    <<-xml
-      <record>
-        <datafield tag="100" ind1="1" ind2=" "><!-- adapated from 9952016 -->
-          <subfield code="a">Dodaro, Gene L.</subfield>
-          <subfield code="e">author.</subfield>
-          <subfield code="4">aut</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "100": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Dodaro, Gene L."
+                },
+                {
+                  "e": "author."
+                },
+                {
+                  "4": "aut"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linked_author_corporate_author_fixture
-    <<-xml
-      <record>
-        <datafield tag="110" ind1="1" ind2=" "><!-- adapated from 10159310 -->
-          <subfield code="a">Ecuador.</subfield>
-          <subfield code="b">Procuraduría General del Estado,</subfield>
-          <subfield code="t">A Title</subfield>
-          <subfield code="e">author,</subfield>
-          <subfield code="e">issuing body.</subfield>
-          <subfield code="4">acp</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "110": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "Ecuador."
+                },
+                {
+                  "b": "Procuraduría General del Estado,"
+                },
+                {
+                  "t": "A Title"
+                },
+                {
+                  "e": "author,"
+                },
+                {
+                  "e": "issuing body."
+                },
+                {
+                  "4": "acp"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linked_author_meeting_fixture
-    <<-xml
-      <record>
-        <datafield tag="111" ind1="2" ind2=" "><!-- adapated from 10165011 -->
-          <subfield code="6">880-01</subfield>
-          <subfield code="a">Technical Workshop on Organic Agriculture</subfield>
-          <subfield code="n">(1st :</subfield>
-          <subfield code="d">2010 :</subfield>
-          <subfield code="c">Ogbomoso, Nigeria)</subfield>
-          <subfield code="t">A title</subfield>
-          <subfield code="j">creator.</subfield>
-          <subfield code="4">oth</subfield>
-        </datafield>
-        <datafield tag="880" ind1="0" ind2="0">
-          <subfield code="6">111-01</subfield>
-          <subfield code="t">Vernacular Title</subfield>
-          <subfield code="s">Vernacular Uniform Title</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "111": {
+              "ind1": "2",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "6": "880-01"
+                },
+                {
+                  "a": "Technical Workshop on Organic Agriculture"
+                },
+                {
+                  "n": "(1st :"
+                },
+                {
+                  "d": "2010 :"
+                },
+                {
+                  "c": "Ogbomoso, Nigeria)"
+                },
+                {
+                  "t": "A title"
+                },
+                {
+                  "j": "creator."
+                },
+                {
+                  "4": "oth"
+                }
+              ]
+            }
+          },
+          {
+            "880": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "6": "111-01"
+                },
+                {
+                  "t": "Vernacular Title"
+                },
+                {
+                  "s": "Vernacular Uniform Title"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def physical_medium_fixture
-    <<-xml
-      <record>
-        <datafield tag="340"> <!-- adapted from 10329653 -->
-          <subfield code="a">a</subfield>
-          <subfield code="c">c</subfield>
-          <subfield code="d">d1</subfield>
-          <subfield code="d">d2</subfield>
-          <subfield code="m">m</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "340": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "a"
+                },
+                {
+                  "c": "c"
+                },
+                {
+                  "d": "d1"
+                },
+                {
+                  "d": "d2"
+                },
+                {
+                  "m": "m"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def linked_related_works_fixture
-    <<-xml
-      <record>
-        <datafield tag="730" ind1="0" ind2=" ">
-          <subfield code="i">i1_subfield_text:</subfield>
-          <subfield code="i">i2_subfield_text:</subfield>
-          <subfield code="a">a_subfield_text.</subfield>
-          <subfield code="d">d_subfield_text.</subfield>
-          <subfield code="f">f_subfield_text.</subfield>
-          <subfield code="k">k_subfield_text.</subfield>
-          <subfield code="l">l_subfield_text.</subfield>
-          <subfield code="h">h_subfield_text.</subfield>
-          <subfield code="m">m_subfield_text.</subfield>
-          <subfield code="n">n_subfield_text.</subfield>
-          <subfield code="o">o_subfield_text.</subfield>
-          <subfield code="p">p_subfield_text.</subfield>
-          <subfield code="r">r_subfield_text.</subfield>
-          <subfield code="s">s_subfield_text.</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-          <subfield code="x">x1_subfield_text.</subfield>
-          <subfield code="x">x2_subfield_text.</subfield>
-          <subfield code="0">0_subfield_text.</subfield>
-          <subfield code="3">3_subfield_text.</subfield>
-          <subfield code="5">5_subfield_text.</subfield>
-          <subfield code="8">8_subfield_text.</subfield>
-        </datafield>
-        <datafield tag="700" ind1=" " ind2=" ">
-          <subfield code="a">700_a_subfield_text</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-        </datafield>
-        <datafield tag="700" ind1=" " ind2=" "> <!-- missing title $t -->
-          <subfield code="a">700_a_subfield_text</subfield>
-        </datafield>
-        <datafield tag="710" ind1=" " ind2="1">
-          <subfield code="a">710_with_ind2_1</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-        </datafield>
-        <datafield tag="710" ind1=" " ind2="2">
-          <subfield code="a">710_with_ind2_2</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-        </datafield>
-        <datafield tag="711" ind1=" " ind2=" ">
-          <subfield code="a">711_a_subfield_text</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-        </datafield>
-        <datafield tag="720" ind1=" " ind2=" ">
-          <subfield code="a">720_a_subfield_text</subfield>
-          <subfield code="t">t_subfield_text.</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "730": {
+              "ind1": "0",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "i": "i1_subfield_text:"
+                },
+                {
+                  "i": "i2_subfield_text:"
+                },
+                {
+                  "a": "a_subfield_text."
+                },
+                {
+                  "d": "d_subfield_text."
+                },
+                {
+                  "f": "f_subfield_text."
+                },
+                {
+                  "k": "k_subfield_text."
+                },
+                {
+                  "l": "l_subfield_text."
+                },
+                {
+                  "h": "h_subfield_text."
+                },
+                {
+                  "m": "m_subfield_text."
+                },
+                {
+                  "n": "n_subfield_text."
+                },
+                {
+                  "o": "o_subfield_text."
+                },
+                {
+                  "p": "p_subfield_text."
+                },
+                {
+                  "r": "r_subfield_text."
+                },
+                {
+                  "s": "s_subfield_text."
+                },
+                {
+                  "t": "t_subfield_text."
+                },
+                {
+                  "x": "x1_subfield_text."
+                },
+                {
+                  "x": "x2_subfield_text."
+                },
+                {
+                  "0": "0_subfield_text."
+                },
+                {
+                  "3": "3_subfield_text."
+                },
+                {
+                  "5": "5_subfield_text."
+                },
+                {
+                  "8": "8_subfield_text."
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "700_a_subfield_text"
+                },
+                {
+                  "t": "t_subfield_text."
+                }
+              ]
+            }
+          },
+          {
+            "700": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "700_a_subfield_text"
+                }
+              ]
+            }
+          },
+          {
+            "710": {
+              "ind1": " ",
+              "ind2": "1",
+              "subfields": [
+                {
+                  "a": "710_with_ind2_1"
+                },
+                {
+                  "t": "t_subfield_text."
+                }
+              ]
+            }
+          },
+          {
+            "710": {
+              "ind1": " ",
+              "ind2": "2",
+              "subfields": [
+                {
+                  "a": "710_with_ind2_2"
+                },
+                {
+                  "t": "t_subfield_text."
+                }
+              ]
+            }
+          },
+          {
+            "711": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "711_a_subfield_text"
+                },
+                {
+                  "t": "t_subfield_text."
+                }
+              ]
+            }
+          },
+          {
+            "720": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "720_a_subfield_text"
+                },
+                {
+                  "t": "t_subfield_text."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def hoover_request_fixture
-    <<-xml
-      <record>
-      <datafield tag="100" ind1=" " ind2=" ">
-        <subfield code="a">100 Subfield $a</subfield>
-      </datafield>
-        <datafield tag="245" ind1=" " ind2=" ">
-          <subfield code="f">245 Subfield $f</subfield>
-        </datafield>
-        <datafield tag="250" ind1=" " ind2=" ">
-          <subfield code="a">250 Subfield $a</subfield>
-        </datafield>
-        <datafield tag="260" ind1=" " ind2=" ">
-          <subfield code="a">260 Subfield $a</subfield>
-          <subfield code="b">260 Subfield $b</subfield>
-          <subfield code="c">260 Subfield $c</subfield>
-        </datafield>
-        <datafield tag="264" ind1=" " ind2=" ">
-          <subfield code="c">264 Subfield $c</subfield>
-        </datafield>
-        <datafield tag="506" ind1=" " ind2=" ">
-          <subfield code="3">506 Subfield $3</subfield>
-          <subfield code="a">506 Subfield $a</subfield>
-        </datafield>
-        <datafield tag="540" ind1=" " ind2=" ">
-          <subfield code="3">540 Subfield $3</subfield>
-          <subfield code="a">540 Subfield $a</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "100": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "100 Subfield $a"
+                }
+              ]
+            }
+          },
+          {
+            "245": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "f": "245 Subfield $f"
+                }
+              ]
+            }
+          },
+          {
+            "250": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "250 Subfield $a"
+                }
+              ]
+            }
+          },
+          {
+            "260": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "260 Subfield $a"
+                },
+                {
+                  "b": "260 Subfield $b"
+                },
+                {
+                  "c": "260 Subfield $c"
+                }
+              ]
+            }
+          },
+          {
+            "264": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "c": "264 Subfield $c"
+                }
+              ]
+            }
+          },
+          {
+            "506": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "3": "506 Subfield $3"
+                },
+                {
+                  "a": "506 Subfield $a"
+                }
+              ]
+            }
+          },
+          {
+            "540": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "3": "540 Subfield $3"
+                },
+                {
+                  "a": "540 Subfield $a"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def managed_purl_fixture
-    <<-xml
-      <record>
-        <datafield ind1='4' ind2='1' tag='856'>
-          <subfield code='u'>http://purl.stanford.edu/gg853cy1667</subfield>
-          <subfield code='x'>SDR-PURL</subfield>
-          <subfield code='x'>item</subfield>
-          <subfield code='x'>file:gg853cy1667%2Fgg853cy1667_0001.jp2</subfield>
-          <subfield code='x'>label:Some Part Label</subfield>
-        </datafield>
-        <datafield ind1='4' ind2='1' tag='856'>
-          <subfield code='u'>http://purl.stanford.edu/rw779rf3064</subfield>
-          <subfield code='x'>SDR-PURL</subfield>
-          <subfield code='x'>item</subfield>
-          <subfield code='x'>file:rw779rf3064%2Frw779rf3064_0001.jp2</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "856": {
+              "ind1": "4",
+              "ind2": "1",
+              "subfields": [
+                {
+                  "u": "http://purl.stanford.edu/gg853cy1667"
+                },
+                {
+                  "x": "SDR-PURL"
+                },
+                {
+                  "x": "item"
+                },
+                {
+                  "x": "file:gg853cy1667%2Fgg853cy1667_0001.jp2"
+                },
+                {
+                  "x": "label:Some Part Label"
+                }
+              ]
+            }
+          },
+          {
+            "856": {
+              "ind1": "4",
+              "ind2": "1",
+              "subfields": [
+                {
+                  "u": "http://purl.stanford.edu/rw779rf3064"
+                },
+                {
+                  "x": "SDR-PURL"
+                },
+                {
+                  "x": "item"
+                },
+                {
+                  "x": "file:rw779rf3064%2Frw779rf3064_0001.jp2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def issn_fixture
-    <<-xml
-      <record>
-        <datafield tag="022">
-          <subfield code="a">0041-4034</subfield>
-          <subfield code="z">1234-1230</subfield>
-          <subfield code="z">5678-567X any old text</subfield>
-          <subfield code="z">invalid ISSN</subfield>
-        </datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "022": {
+              "ind1": " ",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "0041-4034"
+                },
+                {
+                  "z": "1234-1230"
+                },
+                {
+                  "z": "5678-567X any old text"
+                },
+                {
+                  "z": "invalid ISSN"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def doi_fixture
-    <<-xml
-      <record>
-        <datafield ind1='7' ind2=' ' tag='024'><subfield code='a'>10.1111/j.1600-0447.1938.tb03723.x</subfield><subfield code='q'>Preface</subfield><subfield code='2'>doi</subfield></datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "024": {
+              "ind1": "7",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "10.1111/j.1600-0447.1938.tb03723.x"
+                },
+                {
+                  "q": "Preface"
+                },
+                {
+                  "2": "doi"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 
   def other_024_fixture
-    <<-xml
-      <record>
-        <datafield ind1='1' ind2=' ' tag='024'><subfield code='a'>12345</subfield></datafield>
-      </record>
-    xml
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "024": {
+              "ind1": "1",
+              "ind2": " ",
+              "subfields": [
+                {
+                  "a": "12345"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
   end
 end

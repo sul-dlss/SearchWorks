@@ -6,11 +6,11 @@ describe HooverOpenUrlRequest do
   subject(:url) { described_class.new(library, document) }
 
   let(:library) { 'HOOVER' }
-  let(:marcxml) { metadata1 }
+  let(:marc_json_struct) { metadata1 }
   let(:document) do
     SolrDocument.new(
       id: 'abc123',
-      marcxml:
+      marc_json_struct:
     )
   end
 
@@ -36,7 +36,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe 'hash keys' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'has keys generic to both libraries' do
         expect(url.as_params.keys).to include 'ItemInfo5'
@@ -100,7 +100,7 @@ describe HooverOpenUrlRequest do
       end
 
       context 'with a single author' do
-        let(:marcxml) { linked_author_meeting_fixture }
+        let(:marc_json_struct) { linked_author_meeting_fixture }
 
         it 'returns authors later in the metadata when earlier is not present' do
           expect(url.item_author).to eq 'Technical Workshop on Organic Agriculture 2010 : Ogbomoso, Nigeria)'
@@ -108,7 +108,7 @@ describe HooverOpenUrlRequest do
       end
 
       context 'with no author' do
-        let(:marcxml) { related_works_fixture }
+        let(:marc_json_struct) { related_works_fixture }
 
         it 'returns nil' do
           expect(url.item_author).to be_nil
@@ -117,7 +117,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_restrictions' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'returns 506$3$a' do
         expect(url.item_restrictions).to eq '506 Subfield $3 506 Subfield $a'
@@ -137,7 +137,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_publisher' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'it returns subfields $a, $b, $c 260/264' do
         expect(url.item_publisher).to eq '260 Subfield $a 260 Subfield $b 260 Subfield $c 264 Subfield $c'
@@ -145,7 +145,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_edition' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'returns data from the 250$a' do
         expect(url.item_edition).to eq '250 Subfield $a'
@@ -153,7 +153,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_conditions' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it { expect(url.item_conditions).to be_nil }
     end
@@ -167,7 +167,7 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_date' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'returns 245$f' do
         expect(url.item_date).to eq '245 Subfield $f'
@@ -179,13 +179,13 @@ describe HooverOpenUrlRequest do
     end
 
     describe '#item_edition' do
-      let(:marcxml) { edition_imprint_fixture }
+      let(:marc_json_struct) { edition_imprint_fixture }
 
       it { expect(url.item_edition).to be_nil }
     end
 
     describe '#item_conditions' do
-      let(:marcxml) { hoover_request_fixture }
+      let(:marc_json_struct) { hoover_request_fixture }
 
       it 'returns 540$3$a' do
         expect(url.item_conditions).to eq '540 Subfield $3 540 Subfield $a'

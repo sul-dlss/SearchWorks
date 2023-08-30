@@ -18,4 +18,5 @@
   - sirsi
 :access_facet: Online
 :building_facet: Law (Crown)
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>

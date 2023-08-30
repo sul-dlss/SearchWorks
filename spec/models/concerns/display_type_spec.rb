@@ -7,7 +7,7 @@ describe DisplayType do
 
   describe 'MARC' do
     let(:document_attributes) do
-      { marcxml: '<xml />' }
+      { marc_json_struct: '{}' }
     end
 
     it 'returns "marc"' do
@@ -16,7 +16,7 @@ describe DisplayType do
 
     context 'when a collection' do
       let(:document_attributes) do
-        { collection_type: ['Digital Collection'], marcxml: '<xml />' }
+        { collection_type: ['Digital Collection'], marc_json_struct: '{}' }
       end
 
       it 'returns "marc_collection"' do

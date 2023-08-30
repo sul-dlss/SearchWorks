@@ -8,7 +8,8 @@
 :format_main_ssim: Book
 :access_facet: At the Library
 :building_facet: Green
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :genre_ssim:
   - Thesis/Dissertation
 :display_type:
