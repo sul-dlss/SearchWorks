@@ -6,5 +6,6 @@
   - sirsi
 :format: music
 :format_main_ssim: Music recording
-:marcxml: <%= marc_382_instrumentation %>
+:marc_json_struct: |
+<%= marc_382_instrumentation %>
 :pub_date: 2008

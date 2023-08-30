@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'PhysicalMedium' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: physical_medium_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: physical_medium_fixture) }
 
   subject(:instance) { document.marc_field(340) }
 

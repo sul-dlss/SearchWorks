@@ -3,7 +3,7 @@ require 'spec_helper'
 describe BoundWithNoteForAccessPanel do
   include MarcMetadataFixtures
   let(:marc) { linked_ckey_fixture }
-  let(:document) { SolrDocument.new(marcxml: marc) }
+  let(:document) { SolrDocument.new(marc_json_struct: marc) }
 
   subject { described_class.new(document, %w(590)) }
 

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Language do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marcxml: marc, format_main_ssim: formats) }
+  let(:document) { SolrDocument.new(marc_json_struct: marc, format_main_ssim: formats) }
 
   subject(:language) { described_class.new(document) }
 
@@ -40,7 +40,7 @@ describe Language do
 
   describe 'values' do
     let(:document) do
-      SolrDocument.new(marcxml: marc, language: ['English'], language_vern: ['English in another language'])
+      SolrDocument.new(marc_json_struct: marc, language: ['English'], language_vern: ['English in another language'])
     end
     let(:marc) { language_fixture }
 

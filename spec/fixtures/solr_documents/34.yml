@@ -8,7 +8,8 @@
   - sirsi
 :format: Image
 :format_main_ssim: Image
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :pub_date: 2008
 :beginning_year_isi: 2007
 :imprint_display: 2008

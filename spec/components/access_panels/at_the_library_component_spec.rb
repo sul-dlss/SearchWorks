@@ -54,7 +54,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       SolrDocument.new(
         id: '1234',
         item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
-        marcxml: linked_ckey_fixture
+        marc_json_struct: linked_ckey_fixture
       )
     end
 

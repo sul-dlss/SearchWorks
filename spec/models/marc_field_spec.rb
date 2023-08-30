@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MarcField do
   include MarcMetadataFixtures
   let(:marc) { metadata1 }
-  let(:document) { SolrDocument.new(marcxml: marc) }
+  let(:document) { SolrDocument.new(marc_json_struct: marc) }
   let(:tags) { [] }
 
   subject { described_class.new(document, tags) }
@@ -64,13 +64,14 @@ describe MarcField do
     context 'when it contains unsafe characters' do
       let(:tags) { %w(245) }
       let(:marc) do
-        <<-XML
-          <record>
-            <datafield tag="245" ind1="1" ind2=" ">
-              <subfield code="a">Some value with 'quotes' and &lt;brackets&gt;</subfield>
-            </datafield>
-          </record>
-        XML
+        <<-JSON
+          {
+            "leader": "          22        4500",
+            "fields": [
+              { "245": { "ind1": "1", "ind2": " ", "subfields": [ { "a": "Some value with 'quotes' and <brackets>" } ] } }
+            ]
+          }
+        JSON
       end
 
       it 'sanitizes the values' do

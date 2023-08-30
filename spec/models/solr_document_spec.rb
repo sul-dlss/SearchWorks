@@ -3,13 +3,7 @@ require "spec_helper"
 RSpec.describe SolrDocument do
   include MarcMetadataFixtures
   describe "marc field" do
-    let(:marcxml) { SolrDocument.new(marcxml: metadata1) }
-    let(:marcjson) { SolrDocument.new(marc_json_struct: marcxml.to_marc.to_hash.to_json) }
-
-    it "should respond to #to_marc for marcxml" do
-      expect(marcxml).to respond_to(:to_marc)
-      expect(marcxml.to_marc).to be_a MARC::Record
-    end
+    let(:marcjson) { SolrDocument.new(marc_json_struct: metadata1) }
 
     it "should respond to #to_marc for marcjson" do
       expect(marcjson).to respond_to(:to_marc)

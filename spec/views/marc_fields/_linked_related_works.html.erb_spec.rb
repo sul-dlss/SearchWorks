@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'marc_fields/_linked_related_works' do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: linked_related_works_fixture) }
+  let(:document) { SolrDocument.new(marc_json_struct: linked_related_works_fixture) }
 
   before do
     allow(view).to receive_messages(linked_related_works: LinkedRelatedWorks.new(document))
@@ -70,7 +70,7 @@ describe 'marc_fields/_linked_related_works' do
   end
 
   context 'contributed works' do
-    let(:document) { SolrDocument.new(marcxml: contributed_works_fixture) }
+    let(:document) { SolrDocument.new(marc_json_struct: contributed_works_fixture) }
 
     it 'renders the only field that matches a related work criteria' do
       expect(rendered).to have_css('dd', count: 1)

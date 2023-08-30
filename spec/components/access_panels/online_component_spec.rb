@@ -18,7 +18,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     described_class.new(
       document: SolrDocument.new(
         marc_links_struct: [{ link_text: "Link text", href: "http://example.com/sfx-link", sfx: true }],
-        marcxml: fulltext_856
+        marc_json_struct: fulltext_856
       )
     )
   end
@@ -186,7 +186,7 @@ describe AccessPanels::OnlineComponent, type: :component do
       expect(page).to have_css("span.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do
-      document = SolrDocument.new(marcxml: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
+      document = SolrDocument.new(marc_json_struct: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
       expect(page).to have_css '.panel-heading', text: 'Also available at'
@@ -195,7 +195,7 @@ describe AccessPanels::OnlineComponent, type: :component do
     context 'when the record has an SFX link' do
       it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
         document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true],
-                                    marcxml: simple_856)
+                                    marc_json_struct: simple_856)
         render_inline(described_class.new(document:))
         expect(page).to     have_css('.panel-online')
         expect(page).not_to have_link('Find full text')

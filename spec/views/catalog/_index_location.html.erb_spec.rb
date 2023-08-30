@@ -118,7 +118,7 @@ RSpec.describe "catalog/_index_location" do
         SolrDocument.new(
           id: '123',
           item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
-          marcxml: linked_ckey_fixture
+          marc_json_struct: linked_ckey_fixture
         )
       )
       render

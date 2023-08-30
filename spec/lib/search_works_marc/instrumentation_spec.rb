@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Instrumentation do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marcxml: marc_382_instrumentation) }
+  let(:document) { SolrDocument.new(marc_json_struct: marc_382_instrumentation) }
 
   subject { described_class.new(document) }
 

@@ -2,6 +2,7 @@
 :hashed_id_ssi: b53b3a3d6ab90ce0268229151c9bde11
 :title_display: Collection in process
 :format_main_ssim: Map
-:marcxml: <%= marc_382_instrumentation %>
+:marc_json_struct: |
+<%= marc_382_instrumentation %>
 :item_display:
   - "123 -|- SPEC-COLL -|- GUNST -|- SPEC-INPRO -|- -|- -|- -|- -|- ABC 123"

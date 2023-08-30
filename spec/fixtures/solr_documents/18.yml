@@ -9,7 +9,8 @@
 :format_main_ssim: Image
 :display_type:
   - sirsi
-:marcxml: <%= uniform_title_fixture %>
+:marc_json_struct: |
+<%= uniform_title_fixture %>
 :imprint_display: 1933
 :access_facet: Online
 :building_facet: "Math & Statistics"

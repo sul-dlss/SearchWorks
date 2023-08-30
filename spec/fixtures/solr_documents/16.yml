@@ -9,7 +9,8 @@
   - sirsi
 :author_meeting_display:
   - Most Excellent Meeting
-:marcxml: <%= metadata1 %>
+:marc_json_struct: |
+<%= metadata1 %>
 :format_main_ssim: Newspaper
 :access_facet: At the Library
 :building_facet: Special Collections
