@@ -18,6 +18,17 @@ class PerformanceCheck < OkComputer::Check
   end
 end
 
+class OkapiCheck < OkComputer::Check
+  def check
+    if FolioClient.new.ping
+      mark_message 'Connected to OKAPI'
+    else
+      mark_failure
+      mark_message 'Unable to connect to OKAPI'
+    end
+  end
+end
+
 # /status for 'upness', e.g. for load balancer
 # /status/all to show all dependencies
 # /status/<name-of-check> for a specific check (e.g. for nagios warning)
@@ -49,7 +60,7 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 # SSRC_REQUESTS_URL
 
 Rails.application.reloader.to_prepare do
-  OkComputer::Registry.register 'live_lookups', OkComputer::HttpCheck.new(Settings.LIVE_LOOKUP_URL)
+  OkComputer::Registry.register('live_lookups', OkapiCheck.new) if Settings.folio.url
   OkComputer::Registry.register 'oclc_citation_service', OkComputer::HttpCheck.new(Citation.test_api_url)
 
   Settings.NEW_RELIC_API.policies.each do |policy|

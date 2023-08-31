@@ -32,6 +32,12 @@ class FolioClient
     @tenant = tenant
   end
 
+  def ping
+    session_token.present?
+  rescue HTTP::Error
+    false
+  end
+
   # FOLIO mod-rtac Real Time Availability Check
   # https://s3.amazonaws.com/foliodocs/api/mod-rtac/p/rtac-batch.html
   def real_time_availability(instance_ids:, full_periodicals: true)

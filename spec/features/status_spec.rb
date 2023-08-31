@@ -1,6 +1,22 @@
 require 'spec_helper'
 
 RSpec.feature 'application and dependency monitoring' do
+  before do
+    stub_request(:post, %r{^https?://.*/authn/login$})
+      .with(
+        body: /^{"username":"?.*"?,"password":"?.*"?}$/,
+        headers: {
+          'Accept' => 'application/json',
+          'Connection' => 'close',
+          'Content-Type' => 'application/json',
+          'Host' => /.*/,
+          'User-Agent' => 'FolioApiClient',
+          'X-Okapi-Tenant' => 'sul'
+        }
+      )
+      .to_return(headers: { 'x-okapi-token': 'tokentokentoken' }, status: 201)
+  end
+
   it '/status checks if Rails app is running' do
     visit '/status'
     expect(page.status_code).to eq 200
