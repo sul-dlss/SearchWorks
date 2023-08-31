@@ -1,8 +1,8 @@
 module Constants
   module FolioStatus
-    AVAILABLE = 'Available'
-    IN_PROCESS = 'In process'
-    MISSING = 'Missing'
+    UNPAGEABLE_SPEC_COLL_STATUSES = [
+      'In process', 'In process (non-requestable)', 'Missing'
+    ]
   end
   DELIVERABLE_LOCATIONS = ['BIO-TEMP', 'EALSAL-CHN', 'EALSAL-JPN', 'EALSAL-KOR', 'L-PAGE-EA', 'MATH-TEMP', 'MEDIA-30', 'MEDIAX-30', 'MSS-30', 'PAGE-BU', 'PAGE-LP', 'PAGE-MM', 'PAGE-MP', 'PAGE-IRON', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-LOAN', 'SAL-MUSIC', 'SAL-SERG', 'SAL-TEMP', 'SALTURKISH', 'STACKS-30']
   RELATOR_TERMS = { 'acp' => 'Art copyist',

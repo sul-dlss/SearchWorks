@@ -46,6 +46,37 @@ RSpec.describe LocationRequestLinkPolicy do
       it { is_expected.to be false }
     end
 
+    context 'when there is a SPEC-COLL in-process location in folio' do
+      let(:library) { 'SPEC-COLL' }
+      let(:items) { [instance_double(Holdings::Item, folio_item?: true, folio_status: 'In process (non-requestable)', effective_location:)] }
+      let(:effective_location) do
+        Folio::Location.from_dynamic(
+          {
+            "id" => "2065af65-904d-41bb-8db8-35bff753cf64",
+            "name" => "Spec Inprocess RWC",
+            "code" => "SPEC-INPROCESS-RWC",
+            'institution' => {
+              'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+              'code' => 'SU',
+              'name' => 'Stanford University'
+            },
+            'campus' => {
+              'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+              'code' => 'SUL',
+              'name' => 'Stanford Libraries'
+            },
+            'library' => {
+              'id' => '5b61a365-6b39-408c-947d-f8861a7ba8ae',
+              'code' => 'SPEC-COLL',
+              'name' => 'Special Collections'
+            }
+          }
+        )
+      end
+
+      it { is_expected.to be false }
+    end
+
     context 'when there is a -SEE-OTHER location in folio' do
       # Seen in a404313 for HOOVER/STACKS where it says "Scattered issues missing"
       let(:items) { [instance_double(Holdings::Item, folio_item?: true, effective_location:)] }

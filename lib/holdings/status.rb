@@ -40,7 +40,7 @@ class Holdings
 
     def folio_availability_class
       case
-      when item.folio_status == 'In process', item.folio_status == 'In process (non-requestable)', item.effective_location.details['availabilityClass'] == 'In_process'
+      when item.folio_status == 'In process', item.folio_status == 'In process (non-requestable)', item.effective_location.details['availabilityClass'] == 'In_process', item.effective_location.details['availabilityClass'] == 'In_process_non_requestable'
         'in_process'
       when item.folio_status == 'On order', item.folio_status == 'Missing', item.folio_status == 'In transit', item.folio_status == 'Paged', item.effective_location.details['availabilityClass'] == 'Unavailable'
         'unavailable'

@@ -89,7 +89,10 @@ class LocationRequestLinkPolicy
   def folio_disabled_status_location?
     return false unless library == 'SPEC-COLL'
 
-    items.all? { |item| [Constants::FolioStatus::MISSING, Constants::FolioStatus::IN_PROCESS].include?(item.folio_status) }
+    items.all? do |item|
+      Constants::FolioStatus::UNPAGEABLE_SPEC_COLL_STATUSES.include?(item.folio_status) ||
+        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable'
+    end
   end
 
   def folio_mediated_pageable?
