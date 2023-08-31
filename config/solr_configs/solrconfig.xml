@@ -1009,7 +1009,6 @@
         iiif_manifest_url_ssim,
         imprint_display,
         isbn_display,
-        item_display,
         lccn,
         lc_assigned_callnum_ssim,
         mhld_display,

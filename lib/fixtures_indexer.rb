@@ -39,7 +39,9 @@ class FixturesIndexer
     @fixtures ||= file_list.map do |file|
       fixture_template = ERB.new(File.read(file))
       rendered_template = fixture_template.result(binding)
-      YAML::load rendered_template
+      data = YAML::load rendered_template
+      data[:item_display_struct] &&= data[:item_display_struct].map(&:to_json)
+      data
     end
   end
 

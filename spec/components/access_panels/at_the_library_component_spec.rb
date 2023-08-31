@@ -6,7 +6,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   let(:non_present_library_doc) {
     SolrDocument.new(
       id: '123',
-      item_display: ["36105217238315 -|- SUL -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]
+      item_display_struct: [
+        { barcode: '36105217238315', library: 'SUL', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
+          full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
+      ]
     )
   }
 
@@ -14,9 +17,11 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     let(:doc) {
       SolrDocument.new(
         id: '123',
-        item_display: [
-          "36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011",
-          "36105217238315 -|- SUL -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"
+        item_display_struct: [
+          { barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
+            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
+          { barcode: '36105217238315', library: 'SUL', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
+            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
         ]
       )
     }
@@ -28,7 +33,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
   describe "render?" do
     it "has a library location present" do
-      doc = SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"])
+      doc = SolrDocument.new(id: '123',
+                             item_display_struct: [{ barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
+                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                     callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }])
       expect(described_class.new(document: doc).render?).to be true
     end
 
@@ -40,7 +48,13 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
   describe "object with a location" do
     it "renders the panel" do
-      render_inline(described_class.new(document: SolrDocument.new(id: '123', item_display: ["36105217238315 -|- EARTH-SCI -|- STACKS -|-  -|- STKS -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011 -|- en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~ -|- G70.212 .A426 2011 -|- lc g   0070.212000 a0.426000 002011"]) ))
+      render_inline(described_class.new(document: SolrDocument.new(id: '123',
+                                                                   item_display_struct: [{
+                                                                     barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
+                                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                                     callnumber: 'G70.212 .A426 2011',
+                                                                     full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
+                                                                   }]) ))
       expect(page).to have_css(".panel-library-location a")
       expect(page).to have_css(".library-location-heading")
       expect(page).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
@@ -53,7 +67,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     let(:document) do
       SolrDocument.new(
         id: '1234',
-        item_display: ['1234 -|- SAL3 -|- SEE-OTHER -|- -|- -|- -|- -|- -|- ABC 123'],
+        item_display_struct: [
+          { barcode: '1234', library: 'SAL3', home_location: 'SEE-OTHER', callnumber: 'ABC 123' }
+        ],
         marc_json_struct: linked_ckey_fixture
       )
     end
@@ -81,8 +97,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it 'should have the request link at the location level' do
       document = SolrDocument.new(
         id: '123',
-        item_display: [
-          '123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'
+        item_display_struct: [
+          { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
         ]
       )
       render_inline(described_class.new(document:))
@@ -92,8 +108,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it 'should not have the location level request link for -RESV locations' do
       document = SolrDocument.new(
         id: '123',
-        item_display: [
-          '123 -|- SAL -|- SOMETHING-RESV -|- SOMETHING-RESV -|- -|- -|- -|- -|- ABC 123'
+        item_display_struct: [
+          { barcode: '123', library: 'SAL', home_location: 'SOMETHING-RESV', current_location: 'SOMETHING-RESV', callnumber: 'ABC 123' }
         ]
       )
       render_inline(described_class.new(document:))
@@ -103,8 +119,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it 'should not have the location level request link for inprocess noncirculating collections' do
       document = SolrDocument.new(
         id: '123',
-        item_display: [
-          '123 -|- SPEC-COLL -|- GUNST -|- SPEC-INPRO -|- -|- -|- -|- -|- ABC 123'
+        item_display_struct: [
+          { barcode: '123', library: 'SPEC-COLL', home_location: 'GUNST', current_location: 'SPEC-INPRO', callnumber: 'ABC 123' }
         ]
       )
       render_inline(described_class.new(document:))
@@ -116,9 +132,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     let(:document) do
       SolrDocument.new(
         id: '123',
-        item_display: [
-          '123 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123',
-          '321 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC 321'
+        item_display_struct: [
+          { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
+          { barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
         ]
       )
     end
@@ -139,7 +155,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it "is displayed" do
       document = SolrDocument.new(
         id: '123',
-        item_display: ['123 -|- GREEN -|- STACKS -|- INPROCESS -|- -|- -|- -|- -|- ABC 123']
+        item_display_struct: [
+          { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'INPROCESS', callnumber: 'ABC 123' }
+        ]
       )
       render_inline(described_class.new(document:))
       expect(page).to have_css('.current-location', text: 'In process')
@@ -149,7 +167,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- ART -|- STACKS -|- IC-DISPLAY -|- -|- -|- -|- -|- ABC 123']
+          item_display_struct: [
+            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'IC-DISPLAY', callnumber: 'ABC 123' }
+          ]
         )
         render_inline(described_class.new(document:))
       end
@@ -167,7 +187,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       it "should use the library of the owning reserve desk" do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- ART -|- STACKS -|- GREEN-RESV -|- -|- -|- -|- -|- ABC 123']
+          item_display_struct: [
+            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'GREEN-RESV', callnumber: 'ABC 123' }
+          ]
         )
         render_inline(described_class.new(document:))
         expect(page).to have_css('.library-location-heading-text h3', text: 'Green Library')
@@ -180,7 +202,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['321 -|- GREEN -|- STACKS -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123'],
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          ],
           mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
         )
         render_inline(described_class.new(document:))
@@ -222,7 +246,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- GREEN -|- LOCKED-STK -|- -|- STKS-MONO -|- -|- -|- -|- ABC 123']
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          ]
         )
         render_inline(described_class.new(document:))
       end
@@ -240,7 +266,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- GREEN -|- STACKS -|- MISSING -|- -|- -|- -|- -|- ABC 123']
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'MISSING', callnumber: 'ABC 123' }
+          ]
         )
         render_inline(described_class.new(document:))
       end
@@ -258,9 +286,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: [
-            '123 -|- GREEN -|- STACKS -|- -|- NH-SOMETHING -|- -|- -|- -|- ABC 123',
-            '456 -|- GREEN -|- STACKS -|- -|- -|- -|- -|- -|- ABC 456'
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'NH-SOMETHING', callnumber: 'ABC 123' },
+            { barcode: '456', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 456' }
           ]
         )
         render_inline(described_class.new(document:))
@@ -280,10 +308,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     before do
       document = SolrDocument.new(
         id: '123',
-        item_display: [
-          "123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-",
-          "456 -|- PHYSICS -|- PHYSTEMP -|- -|- -|- -|- -|- -|- DEF -|-",
-          "789 -|- -|- ON-ORDER -|- ON-ORDER -|- -|- -|- -|- -|- GHI -|-"
+        item_display_struct: [
+          { barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC 123' },
+          { barcode: '456', library: 'PHYSICS', home_location: 'PHYSTEMP', callnumber: 'DEF 456' },
+          { barcode: '789', home_location: 'ON-ORDER', current_location: 'ON-ORDER', callnumber: 'GHI 789' }
         ]
       )
       render_inline(described_class.new(document:))
@@ -308,7 +336,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     before do
       document = SolrDocument.new(
         id: '123',
-        item_display: ['123 -|- SUL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|- -|- this is public']
+        item_display_struct: [
+          { barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC', note: 'this is public' }
+        ]
       )
       render_inline(described_class.new(document:))
     end
@@ -322,7 +352,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     before do
       document = SolrDocument.new(
         id: '123',
-        item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
+        item_display_struct: [
+          { barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
+        ],
         marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
       )
       render_inline(described_class.new(document:))
@@ -338,7 +370,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     before do
       document = SolrDocument.new(
         id: '123',
-        item_display: ['123 -|- SPEC-COLL -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
+        item_display_struct: [
+          { barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
+        ]
       )
       render_inline(described_class.new(document:))
     end
@@ -354,7 +388,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-'],
+          item_display_struct: [
+            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
+          ],
           marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )
         render_inline(described_class.new(document:))
@@ -371,7 +407,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          item_display: ['123 -|- HV-ARCHIVE -|- STACKS -|- -|- -|- -|- -|- -|- ABC -|-']
+          item_display_struct: [
+            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
+          ]
         )
         render_inline(described_class.new(document:))
       end

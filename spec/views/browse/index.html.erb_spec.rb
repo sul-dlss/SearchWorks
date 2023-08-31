@@ -4,9 +4,9 @@ describe "browse/index" do
   let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',
-      item_display: [
-        "123 -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber123",
-        "321 -|- library -|- home_location -|- current_location -|- type -|- truncated_callnumber -|- shelfkey -|- reverse_shelfkey -|- callnumber321"
+      item_display_struct: [
+        { barcode: '123', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber123' },
+        { barcode: '321', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber321' }
       ]
     )
   }

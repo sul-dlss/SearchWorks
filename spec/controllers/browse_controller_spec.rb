@@ -3,8 +3,8 @@ require 'spec_helper'
 RSpec.describe BrowseController do
   describe 'GET #index' do
     # rubocop:disable RSpec/IndexedLet
-    let(:item1) { Holdings::Item.from_item_display_string('123456 -|-') }
-    let(:item2) { Holdings::Item.from_item_display_string('109876 -|-') }
+    let(:item1) { Holdings::Item.new({ barcode: '123456' }) }
+    let(:item2) { Holdings::Item.new({ barcode: '109876' }) }
     # rubocop:enable RSpec/IndexedLet
     let(:original_doc) { instance_double(SolrDocument, items: [item1, item2], preferred_item: item2) }
 

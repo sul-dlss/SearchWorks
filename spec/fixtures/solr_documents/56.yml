@@ -4,5 +4,8 @@
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= hoover_request_fixture %>
-:item_display:
-  - "123 -|- HOOVER -|- STACKS -|- -|- -|- -|- -|- -|- ABC 123"
+:item_display_struct:
+  - barcode: '123'
+    library: HOOVER
+    home_location: STACKS
+    callnumber: ABC 123

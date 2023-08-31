@@ -14,28 +14,6 @@ class Holdings
 
     delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
 
-    def self.from_item_display_string(item_display, document: nil)
-      values = item_display.split('-|-').map(&:strip)
-      hash = {
-        barcode: values[0],
-        library: values[1],
-        home_location: values[2],
-        current_location: values[3],
-        type: values[4],
-        lopped_callnumber: values[5],
-        shelfkey: values[6],
-        reverse_shelfkey: values[7],
-        callnumber: values[8],
-        full_shelfkey: values[9],
-        note: values[10],
-        scheme: values[11],
-        course_id: values[12],
-        reserve_desk: values[13],
-        loan_period: values[14]
-      }.compact_blank
-      new(hash, document:)
-    end
-
     def initialize(holding_info, document: nil, folio_item: nil)
       @item_display = holding_info.with_indifferent_access
       @document = document

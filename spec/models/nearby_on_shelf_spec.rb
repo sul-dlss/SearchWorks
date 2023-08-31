@@ -17,9 +17,9 @@ RSpec.describe NearbyOnShelf do
   end
   let(:documents) do
     [
-      SolrDocument.new(id: '1', title_sort: '', pub_date: '', item_display: ['000 -|- -|- -|- -|- -|- -|- A', '001 -|- -|- -|- -|- -|- -|- A']),
-      SolrDocument.new(id: '3', title_sort: '', pub_date: '', item_display: ['002 -|- -|- -|- -|- -|- -|- C']),
-      SolrDocument.new(id: '2', title_sort: '', pub_date: '', item_display: ['003 -|- -|- -|- -|- -|- -|- NOT_RELATED', '004 -|- -|- -|- -|- -|- -|- B'])
+      SolrDocument.new(id: '1', title_sort: '', pub_date: '', item_display_struct: [{ barcode: '000', shelfkey: 'A' }, { barcode: '001', shelfkey: 'A' }]),
+      SolrDocument.new(id: '3', title_sort: '', pub_date: '', item_display_struct: [{ barcode: '002', shelfkey: 'C' }]),
+      SolrDocument.new(id: '2', title_sort: '', pub_date: '', item_display_struct: [{ barcode: '003', shelfkey: 'NOT_RELATED' }, { barcode: '004', shelfkey: 'B' }])
     ]
   end
 
