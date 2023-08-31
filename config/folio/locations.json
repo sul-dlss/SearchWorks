@@ -2738,6 +2738,31 @@
     }
   },
   {
+    "id": "29503544-ff29-4333-a642-81388526e467",
+    "name": "Green Send to SAL3",
+    "code": "GRE-SEND2SAL3",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-30T14:07:56.127+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-30T14:07:56.127+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "296b2814-6944-454f-8960-c47851054f1f",
     "name": "Earth Sci Locked Stacks",
     "code": "EAR-LOCKED-STACKS",
@@ -7069,6 +7094,33 @@
     }
   },
   {
+    "id": "7e8506be-4d8b-499a-accd-6e9584510ea3",
+    "name": "SAL Send to SAL3",
+    "code": "SAL-SEND2SAL3",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
+    "details": {
+      "scanServicePointCode": "GREEN",
+      "availabilityClass": "Offsite"
+    },
+    "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
+    "servicePointIds": [
+      "6e0748f5-4420-4995-b96e-f7aeb978a45a"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-30T14:09:25.264+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-30T14:09:25.264+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "7ea4b5ab-1725-4f47-b93b-792baf61ca27",
     "name": "Spec Samson",
     "code": "SPEC-SAMSON",
@@ -9244,6 +9296,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:45:48.235+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a442d5bb-2b88-486a-b07a-85a01ceedd14",
+    "name": "Science Tech Processor",
+    "code": "SCI-TECH-PROCESSOR",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+    "details": {
+    },
+    "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+    "servicePointIds": [
+      "50ef1036-06d3-48ef-9048-26cabfccf630"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-08-30T21:26:55.331+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-30T21:26:55.331+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
