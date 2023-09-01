@@ -32,3 +32,4 @@ config/environments/*.local.yml
 /.ruby-version
 /.byebug_history
 /spec/examples.txt
+/node_modules
