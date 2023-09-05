@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require @honeybadger-io/js/dist/browser/honeybadger.min.js
+//= require honeybadger
 
 //= require rails-ujs
 //= require turbolinks
