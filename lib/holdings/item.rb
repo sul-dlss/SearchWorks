@@ -186,7 +186,7 @@ class Holdings
       ]
     end
 
-    # LiveLookup::Folio uses the item UUID, while LiveLookup::Sirsi
+    # LiveLookup::Folio uses the item UUID, while LiveLookup::Folio
     # uses the barcode for identifying items.
     def live_lookup_item_id
       id || folio_item&.id || barcode

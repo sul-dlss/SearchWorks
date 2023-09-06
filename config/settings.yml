@@ -94,7 +94,7 @@ global_ignored_stackmap_locations:
   - SL3-LOAN
   - SLN-LOAN
 
-live_lookup_service: LiveLookup::Sirsi
+live_lookup_service: LiveLookup::Folio
 
 libraries:
   ARS:
