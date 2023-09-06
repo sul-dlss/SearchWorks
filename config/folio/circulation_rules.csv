@@ -75,7 +75,7 @@ faculty,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS,1qtr-3renew-7daygrace
 graduate or postdoctoral,book,,,,,SAL3-STACKS,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or fellow,book,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
-any,book,,,,,SAL-TEMP or SAL-HY-PAGE-EA or SAL-LOCKED-PAGE-EA or SAL-ND-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
+any,book,,,,,SAL-TEMP or SAL-HY-PAGE-EA or SAL-LOCKED-PAGE-EA or SAL-ND-PAGE-EA or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 graduate or postdoctoral,book,,,,SAL,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or fellow,book,,,,SAL,,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,SAL,,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
