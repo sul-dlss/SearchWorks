@@ -12987,7 +12987,7 @@
   },
   {
     "id": "e0e30813-6c76-4876-8be0-fd9b2a90b7da",
-    "name": "Lane Digital: Periodical 0",
+    "name": "Lane Digital: Periodical",
     "code": "LANE-EPER",
     "discoveryDisplayName": "Digital: Periodical",
     "isActive": true,
@@ -13007,8 +13007,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:59.492+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:59.492+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-05T21:04:23.893+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
