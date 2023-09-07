@@ -5,13 +5,14 @@
 
   <fields>
     <!-- needed by some of Solr 4.0 functionality like transaction log or partial documents update -->
-    <field name="_version_" type="long" indexed="true" stored="true"/>
+    <field name="_version_" type="long" indexed="true" stored="true" />
 
-    <field name="id" type="string_punct_stop" indexed="true" stored="true" required="true" />
-    <field name="created" type="date" indexed="true" stored="true" default="NOW/SECOND" />
-    <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" />
+    <field name="id" type="string" indexed="true" stored="true" required="true" docValues="true" />
+    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
+    <field name="created" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
+    <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
     <!-- entire marc bib record -->
-    <field name="marcxml" type="string" indexed="false" stored="true" />
+    <field name="marcxml" type="string" indexed="false" stored="true" large="true" />
     <!-- all_search: catch-all field for searchable text; stored for hit highlighting />-->
     <field name="all_search" type="text" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
     <field name="all_unstem_search" type="textNoStem" indexed="true" stored="false" />
@@ -150,14 +151,14 @@
     <!-- Pub Date Facet Fields -->
     <!-- pub_date was facet and display, now deprecated -->
     <field name="pub_date" type="string" indexed="true" stored="true" />
-    <field name="pub_year_tisim" type="tint" indexed="true" stored="true" multiValued="true" />
+    <field name="pub_year_tisim" type="tint" indexed="true" stored="true" multiValued="true" docValues="true" />
     <field name="pub_display" type="string" indexed="false" stored="true" multiValued="true"/>
     <!-- pub_date_display can be removed after all DOR objects reindexed in Feb/March 2016 -->
     <field name="pub_date_display" type="string" indexed="false" stored="true"/>
     <field name="imprint_display" type="string" indexed="false" stored="true" multiValued="true"/>
 
     <!-- Date Cataloged for new items feed -->
-    <field name="date_cataloged" type="date" indexed="true" stored="true"/>
+    <field name="date_cataloged" type="date" indexed="true" stored="true" docValues="true" />
 
     <!-- URL Fields -->
     <field name="url_fulltext" type="string" indexed="false" stored="true" multiValued="true"/>
@@ -165,7 +166,7 @@
     <!-- sfx urls should rarely occur more than once in a marc bib record -->
     <field name="url_sfx" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="url_restricted" type="string" indexed="false" stored="true" multiValued="true" />
-    <field name="managed_purl_urls" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="managed_purl_urls" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
 
     <!-- Physical Fields -->
     <field name="physical" type="text" indexed="true" stored="true" multiValued="true" />
@@ -192,13 +193,15 @@
     <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
-    <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true"/>
-    <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true"/>
+    <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
+    <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
 
-    <field name="barcode_search" type="string_punct_stop" indexed="true" stored="true" multiValued="true" />
+    <field name="barcode_search" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
     <field name="preferred_barcode" type="string" indexed="false" stored="true" />
-    <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
     <field name="building_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <!-- barcode -|- lib -|- location -|- lopped_callnum -|- shelfkey -|- reverse_shelfkey -|- full_callnum -|- callnum_show_sort  -->
+    <field name="item_display" type="string" indexed="false" stored="true" multiValued="true" />
 
     <!-- lib -|- location -|- note -|- holdings summary -|- last received  -->
     <field name="mhld_display" type="string" indexed="false" stored="true" multiValued="true" />
@@ -228,9 +231,9 @@
 
     <!-- *************** additional fields for DOR objects  ****************** -->
     <field name="druid" type="string_punct_stop" indexed="true" stored="true" />
-    <field name="modsxml" type="string" indexed="false" stored="true" />
+    <field name="modsxml" type="string" indexed="false" stored="true" large="true" />
     <!-- collection (facet and display): "sirsi" or, for DOR items, the id of their parent coll -->
-    <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
+    <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" docValues="true"/>
     <!-- collection_with_title: easy way to indicate item's parent coll title in UI (may be deprecated in future) -->
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- collection_search: allow searching within collections for aggr. colls -->
@@ -247,8 +250,13 @@
     <!-- set_with_title: easy way to indicate item's virtual object title in UI -->
     <field name="set_with_title" type="string" indexed="false" stored="true" multiValued="true" />
 
+
+    <field name="uuid_ssi" type="string" indexed="true" stored="true" multiValued="false" docValues="true" />
+    <field name="hashed_id_ssi" type="string" indexed="true" stored="true" multiValued="false" docValues="true" />
+    <field name="building_location_facet_ssim" type="string" indexed="false" stored="true" docValues="true" multiValued="true" />
+
     <!-- *************** dynamic field types  ****************** -->
-<!--
+    <!--
     <dynamicField name="*_unstem_search" type="textNoStem" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="*_search" type="text" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="*_facet" type="string" stored="true" indexed="true" multiValued="true" />
@@ -392,19 +400,19 @@
 
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
-    <fieldtype name="boolean" class="solr.BoolField" sortMissingLast="true" />
-    <fieldtype name="binary" class="solr.BinaryField"/>
-    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" />
+    <fieldType name="binary" class="solr.BinaryField"/>
+    <fieldType name="int" class="solr.IntPointField" />
+    <fieldType name="float" class="solr.FloatPointField" />
+    <fieldType name="long" class="solr.LongPointField" />
+    <fieldType name="double" class="solr.DoublePointField"/>
+    <fieldType name="date" class="solr.DatePointField" />
     <!-- t fields are for accelerating range queries -->
-    <fieldType name="tint" class="solr.TrieIntField" precisionStep="4" positionIncrementGap="0"/>
-    <fieldType name="tfloat" class="solr.TrieFloatField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tlong" class="solr.TrieLongField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tdouble" class="solr.TrieDoubleField" precisionStep="8" positionIncrementGap="0"/>
-    <fieldType name="tdate" class="solr.TrieDateField" precisionStep="6" positionIncrementGap="0"/>
+    <fieldType name="tint" class="solr.IntPointField" />
+    <fieldType name="tfloat" class="solr.FloatPointField" />
+    <fieldType name="tlong" class="solr.LongPointField" />
+    <fieldType name="tdouble" class="solr.DoublePointField"/>
+    <fieldType name="tdate" class="solr.DatePointField" />
     <fieldType name="random" class="solr.RandomSortField" indexed="true" />
 
     <!-- Analyzed Text, general case -->
@@ -600,7 +608,7 @@
     <!-- Korean morphological analysis -->
     <fieldType name="text_ko" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
-      <!-- only select strings that contain some Hangul; this is a really poor attempt at only parsing Korean text, and preferably we could identify it during indexing instead;
+        <!-- only select strings that contain some Hangul; this is a really poor attempt at only parsing Korean text, and preferably we could identify it during indexing instead;
           fortunately, for our current purposes, strings with hangul are the ones we're particularly concerned with and the cjk_* fields will do well enough with Kanji-only values
       -->
       <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(.*[\p{InHangul_Jamo}\p{InHangul_Compatibility_Jamo}\p{InHangul_Syllables}].*)|(.*)$" replacement="$1"/>
