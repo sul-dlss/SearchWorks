@@ -96,6 +96,9 @@ global_ignored_stackmap_locations:
 
 live_lookup_service: LiveLookup::Sirsi
 
+# 'select' (the default) or 'export' (requires indexing with docvalues)
+dynamic_sitemap_solr_endpoint: 'select'
+
 libraries:
   ARS:
     about_url: https://library.stanford.edu/libraries/archive-recorded-sound
