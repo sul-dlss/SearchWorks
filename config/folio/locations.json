@@ -1149,32 +1149,6 @@
     }
   },
   {
-    "id": "11ceca36-c3b1-40fe-a148-fe64b7772ccd",
-    "name": "Lane Digital: Impact Factor",
-    "code": "LANE-ISIIF",
-    "discoveryDisplayName": "Digital: Impact Factor",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-      "holdingsTypeName": "Electronic"
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:59.332+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:59.332+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "123d9cba-85a8-42e0-b130-c82e504c64d6",
     "name": "Art Circ Desk",
     "code": "ART-ATCIRCDESK",
@@ -5889,31 +5863,6 @@
     }
   },
   {
-    "id": "66cccbe6-8fb4-4282-8bfc-168ec3518928",
-    "name": "Lane Books: LC Class CDs",
-    "code": "LANE-CDLC",
-    "discoveryDisplayName": "Books CD Collection: Shelved at Information Desk",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:05.351+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:05.351+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "689306c3-d0d2-4c28-b332-f554a2458a8e",
     "name": "SAL Turkish",
     "code": "SAL-TURKISH",
@@ -7731,56 +7680,6 @@
     }
   },
   {
-    "id": "89c3914b-3eeb-41d7-8a64-e4759b46581c",
-    "name": "Lane Offsi: OldClass 1851-1924",
-    "code": "LANE-STOR",
-    "discoveryDisplayName": "Stored offsite. Please request print.",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:38.109+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:38.109+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "8a19a444-4478-4dd9-a0bc-498a9601c410",
-    "name": "Lane Per: Core",
-    "code": "LANE-COR",
-    "discoveryDisplayName": "Periodicals (Downstairs)",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:18.427+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:18.427+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "8a591b2f-6075-42d2-8be2-938ab9bcbcc9",
     "name": "Marine Bio Graphic Novel",
     "code": "MAR-GRAPHIC-NOVEL",
@@ -9422,32 +9321,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:46:09.081+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "a5d5be99-2bb6-4785-b55e-753a9392d9ee",
-    "name": "Lane Digital Component",
-    "code": "LANE-ECOMP",
-    "discoveryDisplayName": "Click Full Text @ Lane Library Stanford button for access",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-      "holdingsTypeName": "Electronic"
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:20.727+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T20:17:57.051+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11174,31 +11047,6 @@
     }
   },
   {
-    "id": "c3653fbe-6e82-4dad-b712-72415c0b77f7",
-    "name": "Lane Error: Location Lacking",
-    "code": "LANE-NOLOC",
-    "discoveryDisplayName": "Error: Location Problem",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:22.376+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:22.376+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "c4513d44-bd50-44e5-93cd-13c499fe4142",
     "name": "Rumsey W7 Stacks XL",
     "code": "RUM-W7-STK-XL",
@@ -11221,31 +11069,6 @@
       "createdDate": "2023-08-10T17:47:58.529+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:58.529+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "c47bc9c9-8f06-454d-8af7-524e8a2cead3",
-    "name": "Lane Staff: RM Per",
-    "code": "LANE-PTS",
-    "discoveryDisplayName": "Staff Library Literature Collection (non-circulating)",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:25.324+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:25.324+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     }
   },
@@ -14131,31 +13954,6 @@
     }
   },
   {
-    "id": "f4ed992a-6ad0-4695-8d0c-4ed2c0c58021",
-    "name": "Lane Offsit: OldClass1925-1976",
-    "code": "LANE-OLD",
-    "discoveryDisplayName": "Stored offsite. Please request print.",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:28.880+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:28.880+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "f52048e4-a531-4d64-8213-a34ab95d1030",
     "name": "Lane Books: History - LC",
     "code": "LANE-HIST",
@@ -14203,31 +14001,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-28T17:32:35.507+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
-    }
-  },
-  {
-    "id": "f5fb7abc-918a-4558-af0d-7f40f66e5a23",
-    "name": "Lane Ref: Periodicals",
-    "code": "LANE-PREF",
-    "discoveryDisplayName": "Reference Periodicals (Downstairs)",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:29.009+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:29.009+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     }
   },
   {
@@ -14507,31 +14280,6 @@
       "createdDate": "2023-08-10T17:47:54.644+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:54.644+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "fce9b6b1-b629-4a94-a5f2-1fa4417b2b51",
-    "name": "Lane Circ Desk Collection",
-    "code": "LANE-CRDSK",
-    "discoveryDisplayName": "Audio CDs: Shelved at Information Desk",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {
-    },
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [
-
-    ],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:22.104+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:22.104+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
     }
   },
