@@ -71,7 +71,7 @@ GEM
     airbrussh (1.4.2)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
-    autoprefixer-rails (10.4.13.0)
+    autoprefixer-rails (10.4.15.0)
       execjs (~> 2)
     base64 (0.1.1)
     bcrypt (3.1.19)
@@ -104,8 +104,8 @@ GEM
     blacklight_advanced_search (8.0.0.alpha2)
       blacklight (>= 7.15, < 9)
       parslet
-    blacklight_dynamic_sitemap (0.6.0)
-      blacklight (> 6.0)
+    blacklight_dynamic_sitemap (1.0.0)
+      blacklight (> 7.0)
       rails
     blacklight_range_limit (8.3.0)
       blacklight (>= 7.25.2, < 9)
@@ -283,7 +283,7 @@ GEM
     global_alerts (0.5.0)
       http
       rails (>= 5.0, < 7.1)
-    globalid (1.2.0)
+    globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.0.1)
     hashie (5.0.0)
@@ -300,9 +300,9 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
-    irb (1.8.0)
-      rdoc (~> 6.5)
-      reline (>= 0.3.6)
+    irb (1.8.1)
+      rdoc
+      reline (>= 0.3.8)
     iso-639 (0.3.6)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -364,7 +364,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitar (0.9)
-    minitest (5.19.0)
+    minitest (5.20.0)
     mods (3.0.3)
       edtf (~> 3.0)
       iso-639
@@ -573,7 +573,7 @@ GEM
       minitar
       retriable
       ruby-progressbar
-    sprockets (4.2.0)
+    sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.4.2)
@@ -585,7 +585,7 @@ GEM
     sshkit (1.21.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stanford-mods (3.3.2)
+    stanford-mods (3.3.3)
       activesupport
       mods (~> 3.0, >= 3.0.3)
     stringio (3.0.8)
@@ -619,7 +619,7 @@ GEM
       method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.2.0)
+    web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
