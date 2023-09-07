@@ -52,6 +52,8 @@
 
   <dataDir>${solr.data.dir:}</dataDir>
 
+
+
   <query>
     <filterCache class="solr.FastLRUCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
     <queryResultCache class="solr.LRUCache" size="102400" initialSize="8192" autowarmCount="1024"/>
@@ -1046,13 +1048,13 @@
         ht_htid_ssim,
         ht_bib_key_ssim,
         characteristics_ssim,
+        holdings_json_struct:[json],
         author_struct:[json],
         marc_links_struct:[json],
         summary_struct:[json],
         toc_struct:[json],
         uniform_title_display_struct:[json],
         schema_dot_org_struct:[json],
-        holdings_json_struct:[json],
         collection_struct:[json],
         item_display_struct:[json]
       </str>
