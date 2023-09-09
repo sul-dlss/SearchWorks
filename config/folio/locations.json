@@ -2377,6 +2377,31 @@
     }
   },
   {
+    "id": "22f586cf-1bfc-4ba7-9990-47a40f2c3ecc",
+    "name": "Lane In Repair",
+    "code": "LANE-REPAIR",
+    "discoveryDisplayName": "In repair",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+    },
+    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
+    "servicePointIds": [
+      "0483c7bd-8e95-4c7b-9704-484b01879b02"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-09-08T19:45:31.812+00:00",
+      "createdByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f",
+      "updatedDate": "2023-09-08T19:46:02.620+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+    }
+  },
+  {
     "id": "23278c12-5e77-4f13-8e4f-3609c3ca7abd",
     "name": "Law Instructor",
     "code": "LAW-INSTRUCTOR",

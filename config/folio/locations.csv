@@ -92,6 +92,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 21c8748f-6a84-417e-b61f-18ee7171a10e,Art Shelved Elsewhere,ART-SEE-OTHER,SU,SUL,ART,See linked record to request items bound together,true,ART,ART,,,,,,,,,,,,
 221108de-614f-4c61-811c-b690a7d806cd,SAL Folios,SAL-FOLIO,SU,SUL,SAL,Folios,true,SAL,SAL,,,,,,GREEN,Offsite,,,,,
 229d1dee-b10a-4e34-8c37-fc762c7979c8,Lane Ref: Retired,LANE-RREF,SU,MED,LANE,Retired Reference (Downstairs),true,LANE-DESK,LANE-DESK,,,,,,,,,,,,
+22f586cf-1bfc-4ba7-9990-47a40f2c3ecc,Lane In Repair,LANE-REPAIR,SU,MED,LANE,In repair,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,
 23278c12-5e77-4f13-8e4f-3609c3ca7abd,Law Instructor,LAW-INSTRUCTOR,SU,LAW,LAW,On reserve: Teaming room,true,LAW,LAW,,,,,,,,,,,,
 2380b032-7624-4674-8580-6ea7f89ea519,SAL Temp,SAL-TEMP,SU,SUL,SAL,Stacks,true,SAL,SAL,,,,,,GREEN,Offsite,,,,,
 2504ac9b-b034-42c7-b3fd-267a1cb3e61f,Rumsey W7 Box Large,RUM-W7-BOX-LG,SU,SUL,RUMSEY-MAP,Map Center (W7 large box),true,RUMSEY-MAP,RUMSEY-MAP,,RUMSEY,,,,,,,,,,
