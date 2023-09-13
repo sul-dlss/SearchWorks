@@ -13,7 +13,9 @@ class Holdings
     attr_accessor :due_date
 
     delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
+    delegate :status, to: :folio_item, prefix: :folio, allow_nil: true
 
+    # @param [Folio::Item] folio_item may be nil if the item is a bound-with child.
     def initialize(holding_info, document: nil, folio_item: nil)
       @item_display = holding_info.with_indifferent_access
       @document = document
@@ -211,8 +213,6 @@ class Holdings
         effective_location.id
       ]
     end
-
-    delegate :status, to: :folio_item, prefix: :folio
 
     def internet_resource?
       home_location == 'INTERNET' || type == 'ONLINE'
