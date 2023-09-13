@@ -26,16 +26,8 @@ class Holdings
       @code && Constants::BOUND_WITH_LOCS.include?(@code)
     end
 
-    def location_link
-      return unless library == 'LANE-MED'
-      return if items.any?(&:folio_item?)
-
-      if items.first.try(:barcode)
-        "https://lane.stanford.edu/view/bib/#{items.first.barcode.gsub(/^LL/, '')}"
-      else
-        'https://lane.stanford.edu'
-      end
-    end
+    # Intentionally left blank
+    def location_link; end
 
     def present?
       any_items? || any_mhlds? || bound_with?

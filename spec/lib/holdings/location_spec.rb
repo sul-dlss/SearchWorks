@@ -63,38 +63,6 @@ RSpec.describe Holdings::Location do
   describe '#location_link' do
     subject(:location_link) { location.location_link }
 
-    context 'with an external location' do
-      let(:location) do
-        Holdings::Location.new('STACKS', [
-          Holdings::Item.new({
-                               barcode: 'LL12345',
-                               library: 'LANE-MED',
-                               home_location: 'STACKS',
-                               lopped_callnumber: 'ABC 321'
-                             })
-        ], library_code: 'LANE-MED')
-      end
-
-      it 'provides a link for external locations' do
-        expect(location_link).to match %r{https://lane.stanford.edu/view/bib/12345}
-      end
-
-      it 'strips the first "L" from the barcode' do
-        expect(location_link).to match /12345/
-        expect(location_link).not_to match /LL12345/
-      end
-    end
-
-    context 'with an external location with no barcodes' do
-      let(:location) {
-        Holdings::Location.new('STACKS', [], [double('mhld', library: "LANE-MED")], library_code: 'LANE-MED')
-      }
-
-      it 'returns a link to the lane library catalog' do
-        expect(location_link).to eq 'https://lane.stanford.edu'
-      end
-    end
-
     context 'with non-external location' do
       let(:location) { Holdings::Location.new("STACKS", library_code: 'GREEN') }
 
