@@ -1,17 +1,17 @@
 require "spec_helper"
 
-describe LiveLookup do
+RSpec.describe LiveLookup do
   subject(:live_lookup) { LiveLookup.new(ids) }
 
   let(:ids) { ['1234566'] }
-  let(:sirsi_lookup) { instance_double(LiveLookup::Sirsi) }
+  let(:implementation) { instance_double(LiveLookup::Folio, records: [{ barcode: '111' }]) }
 
   before do
-    allow(sirsi_lookup).to receive(:records).and_return([{ barcode: '111' }])
+    allow(Settings).to receive(:live_lookup_service).and_return('LiveLookup::Folio')
   end
 
-  it 'creates an instance of LiveLookup::Sirsi and returns live lookup data' do
-    expect(LiveLookup::Sirsi).to receive(:new).with(ids).and_return(sirsi_lookup)
+  it 'creates an instance of LiveLookup::Folio and returns live lookup data' do
+    expect(LiveLookup::Folio).to receive(:new).with(ids).and_return(implementation)
     expect(live_lookup.records).to eq([{ barcode: '111' }])
   end
 end
