@@ -14,8 +14,6 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   end
                 when 'HV-ARCHIVE'
                   RequestLinks::HooverArchiveRequestLinkComponent
-                when 'HOPKINS'
-                  RequestLinks::HopkinsRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end

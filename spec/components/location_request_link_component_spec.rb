@@ -146,67 +146,6 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     end
   end
 
-  context 'for Hopkins items' do
-    let(:document) do
-      SolrDocument.new(item_display_struct: item_display_field)
-    end
-    let(:library) { 'HOPKINS' }
-    let(:location) { 'STACKS' }
-    let(:items) { [instance_double(Holdings::Item, circulates?: true, current_location: instance_double(Holdings::Location, code: nil), folio_item?: false, document:)] }
-    let(:item_display_field) do
-      [
-        { barcode: '361051..', library: 'HOPKINS', home_location: 'STACKS' }
-      ]
-    end
-
-    it { expect(page).to have_link 'Request' }
-
-    context 'when the item is also available via SFX' do
-      let(:document) do
-        SolrDocument.new(
-          item_display_struct: item_display_field,
-          marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }]
-        )
-      end
-
-      it { expect(page).not_to have_link }
-    end
-
-    context 'when the full text is also available' do
-      let(:document) do
-        SolrDocument.new(
-          marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true }],
-          item_display_struct: item_display_field
-        )
-      end
-
-      it { expect(page).not_to have_link }
-    end
-
-    context 'when the item is also available via hathitrust' do
-      let(:document) do
-        SolrDocument.new(ht_htid_ssim: 'abc123', ht_access_sim: ['allow'], item_display_struct: item_display_field)
-      end
-
-      it { expect(page).not_to have_link }
-    end
-
-    context 'when the item is also available at another library' do
-      let(:item_display_field) do
-        [
-          { barcode: '361051..', library: 'HOPKINS', home_location: 'STACKS' },
-          { barcode: '361052..', library: 'GREEN', home_location: 'STACKS' }
-        ]
-      end
-
-      let(:document) do
-        SolrDocument.new(item_display_struct: item_display_field)
-      end
-
-      it { expect(page).not_to have_link }
-    end
-  end
-
   context 'for items with a finding aid' do
     let(:document) do
       SolrDocument.new(
