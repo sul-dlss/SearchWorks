@@ -87,8 +87,6 @@ Rails.application.routes.draw do
   get "backend_lookup" => "catalog#backend_lookup", defaults: { format: :json }, as: :catalog_backend_lookup
   get 'articles/backend_lookup' => 'articles#backend_lookup', defaults: { format: :json }, as: :articles_backend_lookup
 
-  get 'view/:id/availability' => 'catalog#availability', defaults: { format: :json }
-
   resources :preview, only: :show
 
   resources :availability, only: :index

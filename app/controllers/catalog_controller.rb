@@ -494,42 +494,12 @@ class CatalogController < ApplicationController
     end
   end
 
-  # Used by sul-requests to get item data + availability
-  def availability
-    _, document = search_service.fetch(params[:id])
-    respond_to do |format|
-      format.json do
-        live = params[:live].nil? || params[:live] == 'true'
-        render json: render_document_with_availability_as_json(document, live)
-      end
-      format.html { render status: :bad_request, layout: false, file: Rails.root.join('public', '500.html') }
-    end
-  end
-
   def stackmap
     params.require(:library) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
     render layout: !request.xhr?
   end
 
   private
-
-  def render_document_with_availability_as_json(document, live = true)
-    return {} unless document.is_a?(SolrDocument)
-
-    {
-      # this data is used by sul-requests, and some of it is passed through to Aeon
-      title: document['title_display'],
-      author: document['author_person_display']&.first ||
-        document['author_corp_display']&.first ||
-        document['author_meeting_display']&.first,
-      pub_date: document['pub_date'],
-      finding_aid: document.index_links&.finding_aid&.first&.href,
-      online: document.index_links.fulltext.map(&:href),
-      format: document[document.format_key],
-      isbn: document['isbn_display'],
-      holdings: document.holdings(live: live).as_json
-    }
-  end
 
   def send_emails_to_all_recipients
     email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
