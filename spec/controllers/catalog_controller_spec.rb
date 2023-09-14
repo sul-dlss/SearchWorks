@@ -160,25 +160,6 @@ describe CatalogController do
         expect({ get: "/backend_lookup" }).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
       end
     end
-
-    describe 'availability api' do
-      it 'should route to the availability api json' do
-        expect(get: '/view/1234/availability').to route_to(id: '1234', controller: 'catalog', action: 'availability', format: :json)
-      end
-
-      it 'should return the appropriate json' do
-        get :availability, params: { id: '10', format: 'json' }
-        body = response.parsed_body
-        expect(body['title']).to eq 'Car : a drama of the American workplace'
-        expect(body['format']).to eq(['Book'])
-        expect(body['online']).to eq([])
-        expect(body['isbn']).to eq(%w[0393040801 9780393040807])
-        expect(body['holdings']).to be_a Array
-        expect(body['holdings'].length).to eq 4
-        expect(body['holdings'].first['code']).to eq 'GREEN'
-        expect(body['holdings'].first['name']).to eq 'Green Library'
-      end
-    end
   end
 
   describe "blacklight config" do

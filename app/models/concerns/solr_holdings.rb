@@ -1,7 +1,6 @@
 module SolrHoldings
-  def holdings(live: false)
-    @holdings ||= {}
-    @holdings[live] ||= Holdings.new(live ? live_lookup_items : items, mhld)
+  def holdings
+    @holdings ||= Holdings.new(items, mhld)
   end
 
   def mhld
@@ -20,20 +19,6 @@ module SolrHoldings
     end&.sort_by(&:full_shelfkey)
 
     @items ||= []
-  end
-
-  def live_lookup_items
-    @live_lookup_items ||= items.map do |item|
-      data = live_data_for_barcode(item.barcode)
-
-      if data.present?
-        item.current_location = Holdings::Location.new(data['status'], library: item.library)
-        item.due_date = data['due_date'] if data['due_date']
-        item.status = Holdings::Status.new(item)
-      end
-
-      item
-    end
   end
 
   def preferred_item
@@ -71,18 +56,6 @@ module SolrHoldings
 
   def folio_holdings_by_id
     @folio_holdings_by_id ||= folio_holdings.index_by(&:id)
-  end
-
-  # This is a no-op. This was used by the request app to get live
-  # information about items, but we currently to go directly to FOLIO instead.
-  def live_data
-    []
-  end
-
-  def live_data_for_barcode(barcode)
-    live_data.find do |item|
-      item['barcode'] == barcode
-    end
   end
 
   def holdings_json
