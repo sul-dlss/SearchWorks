@@ -48,7 +48,12 @@ RSpec.describe "catalog/_index_location" do
     before do
       allow(view).to receive(:document).and_return(document)
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '123', barcode: '123',
+                                     effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                     permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                     location_provided_availability: nil,
+                                     status: 'Available', material_type: book_type,
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
       render
     end
@@ -79,7 +84,12 @@ RSpec.describe "catalog/_index_location" do
 
     before do
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: sal3_location, permanent_location: sal3_location, status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '123', barcode: '123',
+                                     effective_location: sal3_location,
+                                     permanent_location: sal3_location,
+                                     location_provided_availability: 'Offsite',
+                                     status: 'Available', material_type: book_type,
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
       allow(view).to receive(:document).and_return(document)
       render
@@ -107,15 +117,22 @@ RSpec.describe "catalog/_index_location" do
     before do
       allow(view).to receive(:document).and_return(document)
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '321', barcode: '321', effective_location: spec_location, permanent_location: spec_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '321', barcode: '321',
+                                     effective_location: spec_location,
+                                     permanent_location: spec_location,
+                                     location_provided_availability: nil,
+                                     status: 'Available',
+                                     material_type: instance_double(Folio::Item::MaterialType, id: nil),
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
       render
     end
 
-    it "should have unknown status text for items we'll be looking up" do
+    it "has unknown status text for items we'll be looking up" do
       expect(rendered).to have_css('.status-text', text: 'Unknown')
     end
-    it "should have explicit status text for items that we know the status" do
+
+    it "has explicit status text for items that we know the status" do
       expect(rendered).to have_css('.status-text', text: 'In-library use')
     end
   end
@@ -242,15 +259,23 @@ RSpec.describe "catalog/_index_location" do
         before do
           allow(view).to receive(:document).and_return(document)
           allow(document).to receive(:folio_items).and_return([
-            instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type,
+            instance_double(Folio::Item, id: '123', barcode: '123',
+                                         effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                         permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                         location_provided_availability: nil,
+                                         status: 'Available', material_type: book_type,
                                          loan_type: instance_double(Folio::Item::LoanType, id: nil)),
-            instance_double(Folio::Item, id: '456', barcode: '456', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'On order', material_type: book_type,
+            instance_double(Folio::Item, id: '456', barcode: '456',
+                                         effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                         permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                         location_provided_availability: nil,
+                                         status: 'On order', material_type: book_type,
                                          loan_type: instance_double(Folio::Item::LoanType, id: nil))
           ])
           render
         end
 
-        it "should put the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
+        it "puts the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
           expect(rendered).to have_css('tbody td a', text: 'Request')
           expect(rendered).to have_no_css('tbody td[data-item-id] a', text: 'Request')
         end

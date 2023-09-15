@@ -22,17 +22,17 @@ class Holdings
 
     def folio_availability_class
       case
-      when ['In process', 'In process (non-requestable)'].include?(item.folio_status), item.effective_location.details['availabilityClass'] == 'In_process', item.effective_location.details['availabilityClass'] == 'In_process_non_requestable'
+      when ['In process', 'In process (non-requestable)'].include?(item.folio_status), ['In_process', 'In_process_non_requestable'].include?(item.location_provided_availability)
         'in_process'
-      when ['On order', 'Missing', 'In transit', 'Paged'].include?(item.folio_status), item.effective_location.details['availabilityClass'] == 'Unavailable'
+      when ['On order', 'Missing', 'In transit', 'Paged'].include?(item.folio_status), item.location_provided_availability == 'Unavailable'
         'unavailable'
-      when item.effective_location.details['availabilityClass'] == 'Offsite' && !item.circulates?
+      when item.location_provided_availability == 'Offsite' && !item.circulates?
         'noncirc_page'
-      when item.effective_location.details['availabilityClass'] == 'Offsite'
+      when item.location_provided_availability == 'Offsite'
         'deliver-from-offsite'
       when !item.circulates?
         'noncirc'
-      when item.effective_location.details['availabilityClass'] == 'Available'
+      when item.location_provided_availability == 'Available'
         'available'
       else
         'unknown'
