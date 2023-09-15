@@ -316,7 +316,6 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 903610b9-9c31-4c50-b3a4-fc977da4d091,Marine Bio Shelved Elsewhere,MAR-SEE-OTHER,SU,SUL,MARINE-BIO,See linked record to request items bound together,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,
 908d68ff-4e1d-4235-ba1a-6cfb88480c67,Law Shadowed,LAW-SHADOW,SU,LAW,LAW,Ask at circulation desk,true,LAW,LAW,,,,,,,,,,,,
 909e3ef1-211b-4613-8511-370f9b66ac2d,Earth Sci Storage Locked,EAR-STOR-LOCKED,SU,SUL,EARTH-SCI,Locked storage: Ask at circulation desk,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,
-9112266f-0c5c-48ab-a8df-e45eba0c54b6,Lane Staff: RM Coll,LANE-TS,SU,MED,LANE,Staff Library Literature Collection (non-circulating),true,LANE-DESK,LANE-DESK,,,,,,,,,,,,
 920e71ee-5ea3-4934-a878-7fe64b1fc8fc,Science Circ Desk,SCI-ATCIRCDESK,SU,SUL,SCIENCE,Ask at circulation desk,true,SCIENCE,SCIENCE,,,,,,,,,,,,
 9250994b-590a-47ce-9301-1e36ff2a49eb,Rumsey Center Shadowed,RUM-SHADOW,SU,SUL,RUMSEY-MAP,Ask at desk,true,RUMSEY-MAP,RUMSEY-MAP,,RUMSEY,,,,,,,,,,
 92da9437-65b9-4aaa-b7ed-e354e9c76587,Business Computer File,BUS-COMPF,SU,GSB,BUSINESS,Computer files: Ask at i-Desk,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,
