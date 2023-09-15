@@ -23,7 +23,7 @@ class Holdings
     end
 
     def bound_with?
-      @code && Constants::BOUND_WITH_LOCS.include?(@code)
+      items.any?(&:bound_with?)
     end
 
     def location_link
