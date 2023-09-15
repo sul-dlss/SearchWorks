@@ -585,131 +585,131 @@ aeon_locations:
     PAGE-EA:
     - LCKSTK
 
-circulating_item_types:
-  ARS:
-  - STKS
-  ART:
-  - STKS-MONO
-  - STKS-PERI
-  - REF
-  - MEDIA
-  BUSINESS:
-  - STKS
-  - AUDIO
-  - CAREERCOLL
-  - POP-COLL
-  - NH-DVDCD
-  - NH-PERI
-  EARTH-SCI:
-  - ATLAS
-  - EASTK-DOC
-  - LCKSTK
-  - MEDIA
-  - POP-COLL
-  - STKS
-  - THESIS
-  - THESIS-EXP
-  EAST-ASIA:
-  - STKS-MONO
-  - STKS-PERI
-  - NH-DVDCD
-  EDUCATION:
-  - KIT
-  - MEDIA
-  - NH-MICR
-  - NH-PERMRES
-  - NH-PERMRS2
-  - NH-PERMRS7
-  - NH-7DAY
-  - STKS-MONO
-  - STKS-PERI
-  ENG:
-  - STKS
-  - PERI
-  GREEN:
-  - GOVSTKS
-  - NEWBOOK
-  - STKS-MONO
-  - STKS-PERI
-  HOPKINS:
-  - STKS
-  - PERI
-  - THESIS
-  - MEDIA
-  - STOR
-  LAW:
-  - LAW-STKS
-  - LAW-NEW
-  - LAW-PERBND
-  - NH-7DAY
-  - LAPTOP
-  MEDIA-MTXT:
-  - DVDCD
-  - VIDEOGAME
-  - EQUIP500
-  - EQUIP250
-  - EQUIP150
-  - EQUIP100
-  - EQUIP050
-  - MEDSTKS
-  - MEDIA
-  MUSIC:
-  - DVDCD
-  - SCORE
-  - STKS
-  SAL:
-    SAL-TEMP:
-    - NONCIRC
-    UNCAT:
-    - NONCIRC
-    default:
-    - ARCHIVE
-    - EASTK-DOC
-    - GOVSTKS
-    - LCKSTK
-    - MFILM
-    - NEWSPAPER
-    - NH-INHOUSE
-    - NH-MAP
-    - NH-MEDSTKS
-    - NH-MICR
-    - PAGE-1DAY
-    - PERI
-    - PERIBND
-    - PERIUNBND
-    - REF
-    - STKS
-    - STKS-MONO
-    - STKS-PERI
-    - STKS2
-    - THESIS
-  SAL3:
-  - ATLAS
-  - DVDCD
-  - EASTK-DOC
-  - GOVSTKS
-  - INDEX
-  - MEDIA
-  - NEWSPAPER
-  - NH-7DAY
-  - NH-DVDCD
-  - NH-INHOUSE
-  - NH-RECORDNG
-  - PERI2
-  - PERIBND
-  - REF
-  - SCORE
-  - STKS
-  - STKS-MONO
-  - STKS-PERI
-  SCIENCE:
-  - STKS
-  - PERI
-  - MEDIA
-  TANNER:
-  - STKS
-  default:
-  - STKS-MONO
+# circulating_item_types:
+#   ARS:
+#   - STKS
+#   ART:
+#   - STKS-MONO
+#   - STKS-PERI
+#   - REF
+#   - MEDIA
+#   BUSINESS:
+#   - STKS
+#   - AUDIO
+#   - CAREERCOLL
+#   - POP-COLL
+#   - NH-DVDCD
+#   - NH-PERI
+#   EARTH-SCI:
+#   - ATLAS
+#   - EASTK-DOC
+#   - LCKSTK
+#   - MEDIA
+#   - POP-COLL
+#   - STKS
+#   - THESIS
+#   - THESIS-EXP
+#   EAST-ASIA:
+#   - STKS-MONO
+#   - STKS-PERI
+#   - NH-DVDCD
+#   EDUCATION:
+#   - KIT
+#   - MEDIA
+#   - NH-MICR
+#   - NH-PERMRES
+#   - NH-PERMRS2
+#   - NH-PERMRS7
+#   - NH-7DAY
+#   - STKS-MONO
+#   - STKS-PERI
+#   ENG:
+#   - STKS
+#   - PERI
+#   GREEN:
+#   - GOVSTKS
+#   - NEWBOOK
+#   - STKS-MONO
+#   - STKS-PERI
+#   HOPKINS:
+#   - STKS
+#   - PERI
+#   - THESIS
+#   - MEDIA
+#   - STOR
+#   LAW:
+#   - LAW-STKS
+#   - LAW-NEW
+#   - LAW-PERBND
+#   - NH-7DAY
+#   - LAPTOP
+#   MEDIA-MTXT:
+#   - DVDCD
+#   - VIDEOGAME
+#   - EQUIP500
+#   - EQUIP250
+#   - EQUIP150
+#   - EQUIP100
+#   - EQUIP050
+#   - MEDSTKS
+#   - MEDIA
+#   MUSIC:
+#   - DVDCD
+#   - SCORE
+#   - STKS
+#   SAL:
+#     SAL-TEMP:
+#     - NONCIRC
+#     UNCAT:
+#     - NONCIRC
+#     default:
+#     - ARCHIVE
+#     - EASTK-DOC
+#     - GOVSTKS
+#     - LCKSTK
+#     - MFILM
+#     - NEWSPAPER
+#     - NH-INHOUSE
+#     - NH-MAP
+#     - NH-MEDSTKS
+#     - NH-MICR
+#     - PAGE-1DAY
+#     - PERI
+#     - PERIBND
+#     - PERIUNBND
+#     - REF
+#     - STKS
+#     - STKS-MONO
+#     - STKS-PERI
+#     - STKS2
+#     - THESIS
+#   SAL3:
+#   - ATLAS
+#   - DVDCD
+#   - EASTK-DOC
+#   - GOVSTKS
+#   - INDEX
+#   - MEDIA
+#   - NEWSPAPER
+#   - NH-7DAY
+#   - NH-DVDCD
+#   - NH-INHOUSE
+#   - NH-RECORDNG
+#   - PERI2
+#   - PERIBND
+#   - REF
+#   - SCORE
+#   - STKS
+#   - STKS-MONO
+#   - STKS-PERI
+#   SCIENCE:
+#   - STKS
+#   - PERI
+#   - MEDIA
+#   TANNER:
+#   - STKS
+#   default:
+#   - STKS-MONO
 
 nonrequestable_locations:
   default:

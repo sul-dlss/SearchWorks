@@ -2,6 +2,53 @@ require 'spec_helper'
 
 RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   include MarcMetadataFixtures
+  let(:location) { 
+    {
+      'effectiveLocation' => {
+        'institution' => {},
+        'campus' => {
+          'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+        },
+        'library' => {
+          'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+          'code' => 'GREEN'
+        },
+        'id'=> '4573e824-9273-4f13-972f-cff7bf504217',
+        'code' => 'GRE-STACKS',
+        'name' => 'Stacks'
+      }
+    }
+  }
+
+  let(:holdings_json_struct) {
+    [
+      {
+        'holdings' => [
+          {
+            'id' => '11',
+            'location' => location
+          }
+        ],
+        'items' => [
+          item
+        ]
+      }
+    ]
+  }
+  
+  let(:item) do
+    {
+      'id' => '12',
+      'status' => 'Available',
+      'holdingsRecordId' => '11',
+      "materialType" => "book",
+      "materialTypeId" => "1a54b431-2e4f-452d-9cae-9cee66c9a892",
+      "permanentLoanTypeId" => "2b94c631-fca9-4892-a730-03ee529ffe27",
+      "permanentLoanType" => "Can circulate",
+      "effectiveLocationId" => "4573e824-9273-4f13-972f-cff7bf504217",
+      'location' => location
+    }
+  end
 
   let(:non_present_library_doc) {
     SolrDocument.new(
@@ -9,7 +56,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       item_display_struct: [
         { barcode: '36105217238315', library: 'SUL', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
           full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
-      ]
+      ],
+      holdings_json_struct:
     )
   }
 
@@ -22,7 +70,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
             full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
           { barcode: '36105217238315', library: 'SUL', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
             full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
-        ]
+        ],
+        holdings_json_struct:
       )
     }
 
@@ -36,7 +85,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       doc = SolrDocument.new(id: '123',
                              item_display_struct: [{ barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
                                                      lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
-                                                     callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }])
+                                                     callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
+                                                  ],
+                             holdings_json_struct:)
       expect(described_class.new(document: doc).render?).to be true
     end
 
@@ -47,14 +98,20 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe "object with a location" do
+    let(:document) do
+      SolrDocument.new(id: '123',
+        item_display_struct: [{
+          id: item.fetch('id'),
+          barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
+          lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+          callnumber: 'G70.212 .A426 2011',
+          full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
+        }],
+        holdings_json_struct:) 
+    end
+    
     it "renders the panel" do
-      render_inline(described_class.new(document: SolrDocument.new(id: '123',
-                                                                   item_display_struct: [{
-                                                                     barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
-                                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
-                                                                     callnumber: 'G70.212 .A426 2011',
-                                                                     full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
-                                                                   }]) ))
+      render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-library-location a")
       expect(page).to have_css(".library-location-heading")
       expect(page).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
