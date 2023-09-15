@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="application-name" value="<%= I18n.t('blacklight.application_name') %>">
     <meta name="google-site-verification" content="<%= Settings.GOOGLE_SITE_VERIFICATION %>" />
-    
+
     <meta name="analytics_debug" value="<%= Settings.ANALYTICS_DEBUG %>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH5WNQS9B5"></script>
 
@@ -90,14 +90,13 @@
       if(typeof(WebFont) !== 'undefined') {
         WebFont.load({
           google: {
-            families: ['Source Sans Pro:300,400,700', 'Crimson Text:400']
+            families: ['Source Sans Pro:300,400,700']
           }
         });
       }
     </script>
     <noscript>
       <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" %>
-      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Crimson+Text:400" %>
     </noscript>
   </body>
 </html>
