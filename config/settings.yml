@@ -207,13 +207,6 @@ libraries:
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
     hours_api_url: law/location/law_library
     name: Law Library (Crown)
-    stackmap_api: https://stanfordlaw.stackmap.com/json/
-    ignored_stackmap_locations:
-      - FACULTY
-      - INTERNET
-      - LAW-ARCHIV
-      - STAFF
-      - TECH-SERV
   MATH-CS:
     hours_api_url: math_stats/location/math_stats_library
     name: Math & Statistics Library
