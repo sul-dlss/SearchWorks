@@ -8,6 +8,7 @@ class Holdings
   attr_reader :items, :mhld
 
   # @params [Array<Holdings::Item>] items ([]) a list of items.
+  # @params [Array<Holdings::MHLD>] mhld ([]) a list of mhld.
   def initialize(items = [], mhld = [])
     @items = items
     @mhld = mhld
