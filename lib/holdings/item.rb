@@ -1,10 +1,6 @@
 class Holdings
   ##
   # A class representing a single barcoded item in an object's holdings.
-  # This comes from the solr document's item_display field as serialized holdings info.
-  # 0 barcode -|- 1 library -|- 2 home location -|- 3 current location -|- 4 item type -|-
-  # 5 truncated call number -|- 6 shelfkey -|- 7 reverse shelfkey -|- 8 callnumber -|-
-  # 9 full shelfkey -|- 10 public note -|- 11 callnumber type -|- 12 course id -|- 13 reserve desk -|- 14 loan period
   class Item
     MAX_SHELFKEY = 0x10FFFF.chr(Encoding::UTF_8)
 
