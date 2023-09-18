@@ -174,17 +174,13 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:library) { 'SAL3' }
     let(:location) { 'STACKS' }
 
-    let(:items) { [instance_double(Holdings::Item, folio_item?: true, request_policy:, effective_location:, permanent_location:, folio_status:)] }
+    let(:items) { [instance_double(Holdings::Item, folio_item?: true, allowed_request_types:, effective_location:, permanent_location:, folio_status:)] }
     let(:folio_status) { 'Available' }
-    let(:request_policy) { {} }
+    let(:allowed_request_types) { [] }
     let(:permanent_location) { effective_location }
 
     context 'in a pageable location' do
-      let(:request_policy) do
-        {
-          'requestTypes' => ['Page']
-        }
-      end
+      let(:allowed_request_types) { ['Page'] }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(

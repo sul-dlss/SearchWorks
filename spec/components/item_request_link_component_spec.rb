@@ -169,32 +169,26 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context 'with FOLIO items' do
     let(:item) do
-      instance_double(Holdings::Item, document:, barcode: nil, library: nil, home_location: nil, current_location: instance_double(Holdings::Location, code: nil), folio_item?: true, folio_status:, request_policy:)
+      instance_double(Holdings::Item, document:, barcode: nil, library: nil, home_location: nil, current_location: instance_double(Holdings::Location, code: nil), folio_item?: true, folio_status:, allowed_request_types:)
     end
 
     context 'checked out item from a location that allows holds' do
       let(:folio_status) { 'Checked out' }
-      let(:request_policy) do
-        { 'requestTypes' => ['Hold', 'Recall'] }
-      end
+      let(:allowed_request_types) { ['Hold', 'Recall'] }
 
       it { is_expected.to have_link 'Request' }
     end
 
     context 'checked out from a location that does not allow holds' do
       let(:folio_status) { 'Checked out' }
-      let(:request_policy) do
-        { 'requestTypes' => ['Page'] }
-      end
+      let(:allowed_request_types) { ['Page'] }
 
       it { is_expected.not_to have_link 'Request' }
     end
 
     context 'available' do
       let(:folio_status) { 'Available' }
-      let(:request_policy) do
-        { 'requestTypes' => ['Hold', 'Recall'] }
-      end
+      let(:allowed_request_types) { ['Hold', 'Recall'] }
 
       it { is_expected.not_to have_link 'Request' }
     end
