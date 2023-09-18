@@ -2,64 +2,11 @@ require 'spec_helper'
 
 RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   include MarcMetadataFixtures
-  let(:location) { 
-    {
-      'effectiveLocation' => {
-        'institution' => {},
-        'campus' => {
-          'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
-        },
-        'library' => {
-          'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
-          'code' => 'GREEN'
-        },
-        'id'=> '4573e824-9273-4f13-972f-cff7bf504217',
-        'code' => 'GRE-STACKS',
-        'name' => 'Stacks'
-      }
-    }
-  }
 
   let(:holdings_json_struct) {
-    [
-      {
-        'holdings' => [
-          {
-            'id' => '11',
-            'location' => location
-          }
-        ],
-        'items' => [
-          item
-        ]
-      }
-    ]
+    build(:holdings_json_struct, location:)
   }
-  
-  let(:item) do
-    {
-      'id' => '12',
-      'status' => 'Available',
-      'holdingsRecordId' => '11',
-      "materialType" => "book",
-      "materialTypeId" => "1a54b431-2e4f-452d-9cae-9cee66c9a892",
-      "permanentLoanTypeId" => "2b94c631-fca9-4892-a730-03ee529ffe27",
-      "permanentLoanType" => "Can circulate",
-      "effectiveLocationId" => "4573e824-9273-4f13-972f-cff7bf504217",
-      'location' => location
-    }
-  end
-
-  let(:non_present_library_doc) {
-    SolrDocument.new(
-      id: '123',
-      item_display_struct: [
-        { barcode: '36105217238315', library: 'SUL', home_location: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-          full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
-      ],
-      holdings_json_struct:
-    )
-  }
+  let(:location) { build(:gre_stacks) }
 
   describe "#libraries" do
     let(:doc) {
@@ -85,8 +32,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       doc = SolrDocument.new(id: '123',
                              item_display_struct: [{ barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
                                                      lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
-                                                     callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
-                                                  ],
+                                                     callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }],
                              holdings_json_struct:)
       expect(described_class.new(document: doc).render?).to be true
     end
@@ -98,18 +44,20 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe "object with a location" do
+    let(:location) { build(:ear_stacks) }
+
     let(:document) do
       SolrDocument.new(id: '123',
-        item_display_struct: [{
-          id: item.fetch('id'),
-          barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
-          lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
-          callnumber: 'G70.212 .A426 2011',
-          full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
-        }],
-        holdings_json_struct:) 
+                       item_display_struct: [{
+                         id: holdings_json_struct.dig(0, 'items', 0, 'id'),
+                         barcode: '36105217238315', library: 'EARTH-SCI', home_location: 'STACKS', type: 'STKS',
+                         lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                         callnumber: 'G70.212 .A426 2011',
+                         full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
+                       }],
+                       holdings_json_struct:)
     end
-    
+
     it "renders the panel" do
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-library-location a")
@@ -151,48 +99,117 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe 'location level requests' do
-    it 'should have the request link at the location level' do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
-        ]
-      )
-      render_inline(described_class.new(document:))
-      expect(page).to have_css('.location a', text: "Request")
+    context 'when location is GRE-LOCKED-STK' do
+      let(:location) { build(:gre_locked_stacks) }
+      let(:document) do
+        SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
+        )
+      end
+
+      it 'has the request link at the location level' do
+        render_inline(described_class.new(document:))
+        expect(page).to have_css('.location a', text: "Request")
+      end
     end
 
-    it 'should not have the location level request link for -RESV locations' do
-      document = SolrDocument.new(
+    context 'when it is inprocess and non-circulating' do
+      let(:holdings_json_struct) {
+        build(:holdings_json_struct, item: build(:item, :in_process))
+      }
+      let(:document) do
+        SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SPEC-COLL', home_location: 'GUNST', current_location: 'SPEC-INPRO', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
+        )
+      end
+
+      it 'does not have the location level request link for inprocess noncirculating collections' do
+        render_inline(described_class.new(document:))
+        expect(page).not_to have_css('a', text: "Request")
+      end
+    end
+  end
+
+  context 'when item is on reserve' do
+    let(:holdings_json_struct) {
+      build(:holdings_json_struct, item: build(:item, :available, :on_reserve))
+    }
+    let(:document) do
+      SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SAL', home_location: 'SOMETHING-RESV', current_location: 'SOMETHING-RESV', callnumber: 'ABC 123' }
-        ]
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SAL', home_location: 'SOMETHING-RESV', current_location: 'SOMETHING-RESV', callnumber: 'ABC 123' }
+        ],
+        holdings_json_struct:
       )
-      render_inline(described_class.new(document:))
-      expect(page).not_to have_css('a', text: "Request")
     end
 
-    it 'should not have the location level request link for inprocess noncirculating collections' do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'SPEC-COLL', home_location: 'GUNST', current_location: 'SPEC-INPRO', callnumber: 'ABC 123' }
-        ]
-      )
+    it 'does not have the location level request link' do
       render_inline(described_class.new(document:))
       expect(page).not_to have_css('a', text: "Request")
     end
   end
 
-  describe "status text" do
+  context 'when item is in process' do
+    let(:holdings_json_struct) {
+      build(:holdings_json_struct, item: build(:item, :in_process))
+    }
     let(:document) do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
-          { barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
-        ]
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'INPROCESS', callnumber: 'ABC 123' }
+        ],
+        holdings_json_struct:
+      )
+    end
+
+    it "is displayed" do
+      render_inline(described_class.new(document:))
+      expect(page).to have_css('.current-location', text: 'In process')
+    end
+  end
+
+  describe "status text" do
+    let(:holdings_json_struct) do
+      [
+        {
+          'holdings' => [
+            {
+              'id' => '11',
+              'location' => location
+            },
+            {
+              'id' => '22',
+              'location' => spec_stacks
+            }
+          ],
+          'items' => [
+            green_item,
+            spec_item
+          ]
+        }
+      ]
+    end
+    let(:green_item) { build(:item, :available) }
+    let(:spec_item) { build(:item, :available, location: spec_stacks, holdings_record_id: '22') }
+    let(:spec_stacks) { build(:spec_stacks) }
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: [
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
+          { id: holdings_json_struct.dig(0, 'items', 1, 'id'), barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
+        ],
+        holdings_json_struct:
       )
     end
 
@@ -200,53 +217,42 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it "should have unknown status text for items we'll be looking up" do
+    it "has unknown status text for items we'll be looking up and explicit status text for items that we know the status" do
       expect(page).to have_css('.status-text', text: 'Unknown')
-    end
-    it "should have explicit status text for items that we know the status" do
       expect(page).to have_css('.status-text', text: 'In-library use')
     end
   end
 
   describe "current locations" do
-    it "is displayed" do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'INPROCESS', callnumber: 'ABC 123' }
-        ]
-      )
-      render_inline(described_class.new(document:))
-      expect(page).to have_css('.current-location', text: 'In process')
-    end
-
     describe "as home location" do
       before do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'IC-DISPLAY', callnumber: 'ABC 123' }
-          ]
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'IC-DISPLAY', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
 
-      it "should display the current location as the home location" do
+      it "displays the current location as the home location" do
         expect(page).not_to have_css('.location-name', text: 'Stacks')
         expect(page).to have_css('.location-name', text: 'Information Center display')
       end
-      it "should not be displayed if the current location is a special location that gets treated like a home location" do
+      it "does not display if the current location is a special location that gets treated like a home location" do
         expect(page).to have_css('.current-location', text: '')
       end
     end
 
     describe "is reserve desk" do
-      it "should use the library of the owning reserve desk" do
+      it "uses the library of the owning reserve desk" do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'GREEN-RESV', callnumber: 'ABC 123' }
-          ]
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'GREEN-RESV', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
         expect(page).to have_css('.library-location-heading-text h3', text: 'Green Library')
@@ -260,9 +266,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
           ],
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received'],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
@@ -282,7 +289,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received'],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
@@ -304,13 +312,14 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
-          ]
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
 
-      it "should be present" do
+      it "is present" do
         expect(page).to have_css('.location a', text: 'Request')
       end
 
@@ -324,17 +333,18 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'MISSING', callnumber: 'ABC 123' }
-          ]
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'MISSING', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
 
-      skip "should not have a request url stored in the data attribute" do
+      skip "does not have a request url stored in the data attribute" do
         expect(page).not_to have_css('td[data-request-url]')
       end
 
-      it "should have a request link in the item" do
+      it "has a request link in the item" do
         expect(page).to have_css('tbody a', text: 'Request')
       end
     end
@@ -351,41 +361,67 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         render_inline(described_class.new(document:))
       end
 
-      pending "should have an item that has a request url" do
+      pending "has an item that has a request url" do
         expect(page).to have_css('.availability td[data-item-id="456"][data-request-url]')
       end
 
-      skip "should have an item that does not have a request url" do
+      skip "has an item that does not have a request url" do
         expect(rendered).not_to have_css('.availability td[data-item-id="123"][data-request-url]')
       end
     end
   end
 
   describe "zombie libraries" do
-    before do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC 123' },
-          { barcode: '456', library: 'PHYSICS', home_location: 'PHYSTEMP', callnumber: 'DEF 456' },
-          { barcode: '789', home_location: 'ON-ORDER', current_location: 'ON-ORDER', callnumber: 'GHI 789' }
-        ]
-      )
-      render_inline(described_class.new(document:))
+    context 'when library is SUL' do
+      before do
+        document = SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC 123' }
+          ],
+          holdings_json_struct:
+        )
+        render_inline(described_class.new(document:))
+      end
+
+      it "renders SUL items in the zombie library" do
+        expect(page).to have_css('.panel-library-location a', count: 1)
+        expect(page).to have_css('.panel-library-location td', text: 'ABC')
+      end
     end
 
-    it "renders a zombie library" do #mmm brains
-      # This seems to be counting request links (not sure if that was the intent)
-      expect(page).to have_css('.panel-library-location a', count: 1)
+    context 'when library is PHYSICS' do
+      before do
+        document = SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '456', library: 'PHYSICS', home_location: 'PHYSTEMP', callnumber: 'DEF 456' }
+          ],
+          holdings_json_struct:
+        )
+        render_inline(described_class.new(document:))
+      end
+
+      it "renders PHYSICS items in the zombie library" do
+        expect(page).to have_css('.panel-library-location td', text: 'DEF')
+      end
     end
-    it "renders SUL items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'ABC')
-    end
-    it "renders PHYSICS items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'DEF')
-    end
-    it "renders blank (i.e. on order) items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'GHI')
+
+    context 'when library is "ON-ORDER' do
+      before do
+        document = SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '789', home_location: 'ON-ORDER', current_location: 'ON-ORDER', callnumber: 'GHI 789' }
+          ],
+          holdings_json_struct:
+        )
+        render_inline(described_class.new(document:))
+      end
+
+      it "renders blank (i.e. on order) items in the zombie library" do
+        expect(page).to have_css('.panel-library-location td', text: 'GHI')
+      end
     end
   end
 
@@ -394,8 +430,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC', note: 'this is public' }
-        ]
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC', note: 'this is public' }
+        ],
+        holdings_json_struct:
       )
       render_inline(described_class.new(document:))
     end
@@ -410,14 +447,15 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
         ],
-        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
+        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }],
+        holdings_json_struct:
       )
       render_inline(described_class.new(document:))
     end
 
-    it 'should display finding aid sections with link' do
+    it 'displays finding aid sections with link' do
       expect(page).to have_css('h4', text: 'Finding aid')
       expect(page).to have_css('a', text: 'Online Archive of California')
     end
@@ -428,8 +466,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
-        ]
+          { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC' }
+        ],
+        holdings_json_struct:
       )
       render_inline(described_class.new(document:))
     end
@@ -441,21 +480,24 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe 'Hoover Archives' do
+    let(:location) { build(:hila_stacks) }
+
     context 'when a finding aid is present' do
       before do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'HOOVER', home_location: 'STACKS', callnumber: 'ABC' }
           ],
-          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
 
       it 'renders request via OAC finding aid' do
         expect(page).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
-        expect(page).to have_css '.availability-icon.noncirc_page'
+        expect(page).to have_css '.availability-icon.noncirc'
         expect(page).to have_css '.status-text', text: 'In-library use'
       end
     end
@@ -465,8 +507,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
-          ]
+            { id: holdings_json_struct.dig(0, 'items', 0, 'id'), barcode: '123', library: 'HOOVER', home_location: 'STACKS', callnumber: 'ABC' }
+          ],
+          holdings_json_struct:
         )
         render_inline(described_class.new(document:))
       end
