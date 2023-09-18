@@ -108,8 +108,8 @@ class LocationRequestLinkPolicy
   end
 
   def folio_item_pageable?
-    items.uniq(&:request_policy_attributes).any? do |item|
-      item.request_policy&.dig('requestTypes')&.include?('Page')
+    items.any? do |item|
+      item.allowed_request_types&.include?('Page')
     end
   end
 

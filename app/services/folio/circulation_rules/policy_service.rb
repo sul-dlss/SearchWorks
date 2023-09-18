@@ -3,6 +3,11 @@
 module Folio
   module CirculationRules
     class PolicyService
+      # Keep a cache of item rules in the scope of the current request
+      class Current < ActiveSupport::CurrentAttributes
+        attribute :cache
+      end
+
       # Load the circulation rules file and parse it into a set of ordered rules
       def self.rules(rules_as_text = Folio::Types.circulation_rules)
         rules = Folio::CirculationRules::Transform.new.apply(Folio::CirculationRules::Parser.new.parse(rules_as_text))
@@ -69,12 +74,15 @@ module Folio
 
       # Find the circulation rule that applies to the given Holdings::Item
       def item_rule(item)
-        index.search('material-type' => item.material_type.id,
-                     'loan-type' => item.loan_type.id,
-                     'location-institution' => item.effective_location.institution.id,
-                     'location-campus' => item.effective_location.campus.id,
-                     'location-library' => item.effective_location.library.id,
-                     'location-location' => item.effective_location.id)
+        item_cache_key = [item.material_type.id, item.loan_type.id, item.effective_location.id]
+
+        Folio::CirculationRules::PolicyService::Current.cache ||= {}
+        Folio::CirculationRules::PolicyService::Current.cache[item_cache_key] ||= index.search('material-type' => item.material_type.id,
+                                                                                               'loan-type' => item.loan_type.id,
+                                                                                               'location-institution' => item.effective_location.institution.id,
+                                                                                               'location-campus' => item.effective_location.campus.id,
+                                                                                               'location-library' => item.effective_location.library.id,
+                                                                                               'location-location' => item.effective_location.id)
       end
 
       def index
