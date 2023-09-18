@@ -8,7 +8,7 @@ class Holdings
     attr_reader :document, :item_display
     attr_accessor :due_date
 
-    delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
+    delegate :loan_type, :material_type, :effective_location, :permanent_location, :availability_class, to: :folio_item, allow_nil: true
     delegate :status, to: :folio_item, prefix: :folio, allow_nil: true
 
     # @param [Folio::Item] folio_item may be nil if the item is a bound-with child.
@@ -143,9 +143,10 @@ class Holdings
     end
 
     def circulates?
-      return folio_item_circulates? if folio_item?
+      loan_policy&.dig('loanable')
+      # folio_item? && folio_item_circulates?
 
-      circulating_item_types == '*' || circulating_item_types.include?(type)
+      # circulating_item_types == '*' || circulating_item_types.include?(type)
     end
 
     def as_json(*)
@@ -236,14 +237,14 @@ class Holdings
       Constants::RESERVE_DESKS.keys.include?(current_location.code)
     end
 
-    def circulating_item_types
-      library_map = Settings.circulating_item_types[library]
+    # def circulating_item_types
+    #   library_map = Settings.circulating_item_types[library]
 
-      return Settings.circulating_item_types['default'] unless library_map
-      return library_map if library_map.is_a?(Array)
+    #   return Settings.circulating_item_types['default'] unless library_map
+    #   return library_map if library_map.is_a?(Array)
 
-      library_map[home_location] || library_map['default'] || library_map
-    end
+    #   library_map[home_location] || library_map['default'] || library_map
+    # end
 
     def folio_item
       @folio_item ||= document&.folio_items&.find do |item|
@@ -257,9 +258,9 @@ class Holdings
       end
     end
 
-    def folio_item_circulates?
-      loan_policy&.dig('loanable')
-    end
+    # def folio_item_circulates?
+    #   loan_policy&.dig('loanable')
+    # end
 
     def request_policy
       return unless folio_item?

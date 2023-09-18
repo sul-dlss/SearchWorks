@@ -9,10 +9,20 @@ RSpec.describe Holdings::Item do
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
     }
   end
-  let(:item) { Holdings::Item.new(complex_item_display) }
+  let(:item) { described_class.new(complex_item_display, folio_item:) }
+  let(:folio_item) do
+    Folio::Item.new(
+      id: '123', status: 'Available', barcode: '5555555',
+      material_type: Folio::Item::MaterialType.new(id: 'book', name: 'parchment'),
+      permanent_loan_type: Folio::Item::LoanType.new(id: '7day', name: '7-day loan'),
+      effective_location: Folio::Location.new(id: '991999', code: 'GRE-STACKS',
+                                              campus: Folio::Location::Campus.new(id: '4444', code: 'SU', name: 'Stanford'),
+                                              library: Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library'))
+    )
+  end
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
-  let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
-  let(:eresv_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INSTRUCTOR', current_location: 'E-RESV', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+  let(:internet_item) { described_class.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+  let(:eresv_item) { described_class.new({ library: 'SUL', home_location: 'INSTRUCTOR', current_location: 'E-RESV', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -20,7 +30,7 @@ RSpec.describe Holdings::Item do
     end
   end
   describe '#suppressed?' do
-    let(:no_item_display) { Holdings::Item.new({}) }
+    let(:no_item_display) { described_class.new({}) }
 
     it "should be true when the item_display doesn't exist" do
       expect(no_item_display).to be_suppressed
@@ -51,7 +61,7 @@ RSpec.describe Holdings::Item do
 
   describe '#on_order?' do
     it 'should return true for on-order items' do
-      expect(Holdings::Item.new({ home_location: 'ON-ORDER', current_location: 'ON-ORDER' })).to be_on_order
+      expect(described_class.new({ home_location: 'ON-ORDER', current_location: 'ON-ORDER' })).to be_on_order
     end
 
     it 'should return false for non on-order items' do
@@ -61,7 +71,7 @@ RSpec.describe Holdings::Item do
 
   describe 'browsable?' do
     it 'should return false if not LC or DEWEY' do
-      expect(Holdings::Item.new(complex_item_display)).not_to be_browsable
+      expect(described_class.new(complex_item_display)).not_to be_browsable
     end
 
     it 'should return false if there is no shelfkey' do
@@ -93,8 +103,8 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#callnumber' do
-    let(:item_without_callnumber) { Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' }) }
-    let(:lane_online_item) { Holdings::Item.new({ library: 'LANE-MED', home_location: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+    let(:item_without_callnumber) { described_class.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' }) }
+    let(:lane_online_item) { described_class.new({ library: 'LANE-MED', home_location: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
     it "should return '(no call number) if the callnumber is blank" do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
@@ -112,39 +122,39 @@ RSpec.describe Holdings::Item do
   describe '#status' do
     let(:status) { item.status }
 
-    it 'should return a Holdings::Status object' do
+    it 'returns a Holdings::Status object' do
       expect(status).to be_a Holdings::Status
     end
 
-    it 'should return an availability_class string' do
-      expect(status.availability_class).to eq 'unknown'
+    it 'returns an availability_class string' do
+      expect(status.availability_class).to eq 'noncirc'
     end
   end
 
   describe '#live_status?' do
     it 'should identify material not in LANE-MED for live lookup' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })).to be_live_status
+      expect(described_class.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })).to be_live_status
     end
 
     it 'should identify material in LANE-MED to not do a live lookup' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'LANE-MED', home_location: 'STACKS' })).not_to be_live_status
+      expect(described_class.new({ barcode: 'barcode', library: 'LANE-MED', home_location: 'STACKS' })).not_to be_live_status
     end
   end
 
   describe 'treat_current_location_as_home_location?' do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |current_location|
-        expect(Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: }).treat_current_location_as_home_location?).to be_truthy
+        expect(described_class.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: }).treat_current_location_as_home_location?).to be_truthy
       end
     end
 
     it 'should replace the home location with the current location' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'IC-DISPLAY' })).to have_attributes(home_location: 'IC-DISPLAY')
+      expect(described_class.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'IC-DISPLAY' })).to have_attributes(home_location: 'IC-DISPLAY')
     end
   end
 
   describe 'public_note' do
-    let(:public_note) { Holdings::Item.new({ note: '.PUBLIC. The Public Note' }) }
+    let(:public_note) { described_class.new({ note: '.PUBLIC. The Public Note' }) }
 
     it 'should remove the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
@@ -193,9 +203,9 @@ RSpec.describe Holdings::Item do
   end
 
   describe 'zombie libraries' do
-    let(:blank) { Holdings::Item.new({ barcode: '123', library: '', home_location: 'LOCATION' }) }
-    let(:sul) { Holdings::Item.new({ barcode: '123', library: 'SUL', home_location: 'LOCATION' }) }
-    let(:physics) { Holdings::Item.new({ barcode: '123', library: 'PHYSICS', home_location: 'LOCATION' }) }
+    let(:blank) { described_class.new({ barcode: '123', library: '', home_location: 'LOCATION' }) }
+    let(:sul) { described_class.new({ barcode: '123', library: 'SUL', home_location: 'LOCATION' }) }
+    let(:physics) { described_class.new({ barcode: '123', library: 'PHYSICS', home_location: 'LOCATION' }) }
 
     it 'should view blank libraries as a zombie library' do
       expect(blank.library).to eq 'ZOMBIE'
@@ -211,7 +221,11 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#as_json' do
-    let(:as_json) { Holdings::Item.new(complex_item_display).as_json }
+    let(:as_json) { described_class.new(complex_item_display).as_json }
+
+    before do
+      allow(Folio::CirculationRules::PolicyService.instance).to receive(:item_loan_policy).and_return({ 'loanable' => true })
+    end
 
     it "should return a hash with all of the item's public reader methods" do
       expect(as_json).to be_a Hash
@@ -232,28 +246,22 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#circulates?' do
-    context 'for libaries/locations that are configured to have request links' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO' }) }
+    subject(:item) { described_class.new({ barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO' }, folio_item:) }
+
+    before do
+      allow(Folio::CirculationRules::PolicyService.instance).to receive(:item_loan_policy).and_return(item_loan_policy)
+    end
+
+    context 'when item loan policy is loanable' do
+      let(:item_loan_policy) { { 'loanable' => true } }
 
       it { is_expected.to be_circulates }
     end
 
-    context 'when the item has a non-circulating item type' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'NONCIRC' }) }
+    context 'when item loan policy is not loanable' do
+      let(:item_loan_policy)  { { 'loanable' => false } }
 
       it { is_expected.not_to be_circulates }
-    end
-
-    context 'when an item is in a location within a library that specifies location specific item types' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'SAL', home_location: 'UNCAT', type: 'NONCIRC' }) }
-
-      it { is_expected.to be_circulates }
-    end
-
-    context 'when an item is in a location and with a library specific item type that circulates' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'ART', home_location: 'STACKS', type: 'MEDIA' }) }
-
-      it { is_expected.to be_circulates }
     end
   end
 
