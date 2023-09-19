@@ -1251,7 +1251,6 @@ pharmrev.aspetjournals.org
 phaseonline.ceramics.org
 phcfm.org
 phil.cdc.gov
-philpapers.org
 physicstoday.scitation.org
 physoc.onlinelibrary.wiley.com
 pi.lib.uchicago.edu
@@ -1489,7 +1488,6 @@ stanfordlaw.kanopy.com
 stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
-statistical.proquest.com
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
@@ -2056,7 +2054,6 @@ www.excli.de
 www.exeley.com
 www.exp-oncology.com.ua
 www.experimentalneurobiology.org
-www.exploration.amdigital.co.uk
 www.eymj.org
 www.facs.org
 www.fao.org
@@ -2074,7 +2071,6 @@ www.fons.org
 www.foodchemicalscodex.org
 www.formatex.org
 www.forp.usp.br
-www.frontierlife.amdigital.co.uk
 www.frontiersin.org
 www.frontierspartnerships.org
 www.ftrdergisi.com
@@ -2470,7 +2466,6 @@ www.lib.tottori-u.ac.jp
 www.liberdomus.it
 www.libpubmedia.co.uk
 www.librarystack.org
-www.liebertonline.com
 www.liebertpub.com
 www.life-science-alliance.org
 www.lifescied.org
