@@ -7,7 +7,7 @@ describe "catalog/librarian_view" do
     before do
       assign(:document, SolrDocument.new(
                           id: '12345',
-                          last_updated: '2022-08-01T23:01:18Z',
+                          last_updated: '2022-08-02T23:01:18Z',
                           marc_json_struct: metadata1,
                           holdings_json_struct: [{ "holdings_key" => "holdings_value" }],
                           folio_json_struct: [{ "folio_key" => "folio_value" }].to_json
@@ -19,7 +19,7 @@ describe "catalog/librarian_view" do
       expect(rendered).to have_css('#marc_view')
       expect(rendered).to have_css('#folio-json-view')
 
-      expect(rendered).to have_content('August  1, 2022 11:01pm')
+      expect(rendered).to have_content('August  2, 2022  4:01pm')
       expect(rendered).to have_content('holdings_key')
       expect(rendered).to have_content('holdings_value')
       expect(rendered).to have_content('folio_key')
@@ -29,12 +29,12 @@ describe "catalog/librarian_view" do
 
   describe "MODS records" do
     before do
-      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-01T23:01:18Z', modsxml: mods_everything))
+      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-02T23:01:18Z', modsxml: mods_everything))
       render
     end
 
     it "should render the mods_view" do
-      expect(rendered).to have_content('August  1, 2022 11:01pm')
+      expect(rendered).to have_content('August  2, 2022  4:01pm')
       expect(rendered).to have_css('.mods-view')
     end
   end
