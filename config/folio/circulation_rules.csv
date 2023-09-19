@@ -1,9 +1,11 @@
 any,any,any,,,RUMSEY-MAP or SPEC-COLL or HILA or CLASSICS,,No loan,No requests allowed,Default notice,No fines,$100 lost fee
 any,any,2-hour reserve,,,,LAW-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$150 lost fee
+any,any,any,,,BUSINESS,BUS-CAREER,14day-2renew-1daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-PERMRES,2hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,2-hour reserve,,,BUSINESS,BUS-CRES,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,any,,,BUSINESS,BUS-ARCH or BUS-COMPF or BUS-LOCKED or BUS-REF or BUS-TP or BUS-TEMP or BUS-NEWS-STKS,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 faculty,any,4-hour reserve,,SUL,,,4hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
+faculty,any,3-hour reserve,,SUL,,,3hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 faculty,any,2-hour reserve,,SUL,,,2hour-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 faculty,any,3-day reserve,,SUL,,,3day-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 faculty,any,2-day reserve,,SUL,,,2day-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
@@ -24,11 +26,12 @@ faculty or staff or fellow,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC
 graduate or postdoctoral,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
 faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
 graduate or postdoctoral,book or multimedia or periodical,,,,BUSINESS,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
-faculty or staff or fellow,book or multimedia or periodical,,,,BUSINESS,,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
+faculty or fellow or staff or staff-casual,book or multimedia or periodical,,,,BUSINESS,,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 any,any,,,,BUSINESS,BUS-PERMRES,8 hour - overnight - no renew,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,,,,BUSINESS,BUS-CRES,8 hour - overnight - no renew,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,Non-circulating,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MP or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,any,4-hour reserve,,SUL,,,4hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
+,any,3-hour reserve,,SUL,,,3hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,2-hour reserve,,SUL,,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,3-day reserve,,SUL,,,3day-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,2-day reserve,,SUL,,,2day-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
@@ -156,7 +159,7 @@ faculty,book,,,,,ARS-FOLIO or ARS-LOCKED or ARS-RECORDINGS or ARS-STACKS,1yearfi
 ,accessories 4 or av equipment 3,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$5000 lost fee - 1 hr aged to lost
 ,accessories 3 or av equipment 2,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$1000 lost fee - 1 hr aged to lost
 ,accessories 2 or av equipment 1,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$500 lost fee - 1 hr aged to lost
-,accessories 1,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
+,accessories 1 or game,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
 ,book or multimedia or periodical,,,,BUSINESS,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,score,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MP or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,score,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
