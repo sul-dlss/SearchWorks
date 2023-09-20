@@ -120,7 +120,7 @@ class Holdings
     end
 
     def on_reserve?
-      reserve_desk.present? && loan_period.present?
+      course_id.present?
     end
 
     def treat_current_location_as_home_location?
