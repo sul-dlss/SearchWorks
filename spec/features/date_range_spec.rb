@@ -10,6 +10,7 @@ RSpec.feature 'Date Range', js: true do
     expect(page).to have_css 'input.range_end'
     expect(page).to have_xpath '//input[@value="Apply"]'
   end
+
   scenario 'Article date range' do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path f: { eds_search_limiters_facet: ['Stanford has it'] }

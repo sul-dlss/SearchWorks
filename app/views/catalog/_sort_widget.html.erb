@@ -4,17 +4,15 @@
       <%= t('blacklight.search.sort.label_html', :field =>current_sort_field.label).html_safe %> <span class="caret"></span>
     </button>
 
-    <ul class="dropdown-menu" role="menu">
+    <div class="dropdown-menu" role="menu">
       <%- active_sort_fields.each do |sort_key, field| %>
-        <li role="presentation">
-          <%= link_to url_for(search_state.params_for_search(sort: sort_key)), 'aria-current': current_sort_field.label == field.label, role: 'menuitem', tabindex: '-1' do %>
-            <% if current_sort_field.label == field.label %>
-              <%= t 'blacklight.search.highlight.active_html' %>
-            <% end %>
-            <%= field.label %>
+        <%= link_to url_for(search_state.params_for_search(sort: sort_key)), class: 'dropdown-item', 'aria-current': current_sort_field.label == field.label, role: 'menuitem', tabindex: '-1' do %>
+          <% if current_sort_field.label == field.label %>
+            <%= t 'blacklight.search.highlight.active_html' %>
           <% end %>
-        </li>
+          <%= field.label %>
+        <% end %>
       <%- end -%>
-    </ul>
+    </div>
   </div>
 <% end %>

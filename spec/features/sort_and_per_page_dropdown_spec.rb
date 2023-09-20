@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Sort and per page toolbar', feature: true, js: true do
+RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
   describe 'View dropdown' do
     before do
       visit root_path
@@ -8,7 +8,7 @@ describe 'Sort and per page toolbar', feature: true, js: true do
       click_button 'search'
     end
 
-    it 'should display active icon on the current active view' do
+    it 'displays active icon on the current active view' do
       within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
 
