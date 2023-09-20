@@ -5,7 +5,7 @@ module AccessPanels
     end
 
     def render?
-      links.present? || book_ids.values.any?(&:present?)
+      links.present?
     end
 
     def display_connection_problem_links?
@@ -16,10 +16,6 @@ module AccessPanels
       return [] unless @document.index_links.sfx.present?
 
       @document.index_links.sfx
-    end
-
-    def book_ids
-      helpers.get_book_ids(document)
     end
   end
 end

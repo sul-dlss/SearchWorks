@@ -1,7 +1,7 @@
-<%= render @layout.new(classes: ['panel-online', ('hide' unless links.any?)]) do |c| %>
+<%= render @layout.new(classes: ['panel-online']) do |c| %>
   <% c.header do %>
     <h2>Online</h2>
-  <% end if links.any? %>
+  <% end %>
 
   <% c.title do %>
       <% if document.is_a_database? %>
@@ -26,7 +26,7 @@
           See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
         <% end %>
       </div>
-    <% elsif links.any? %>
+    <% else %>
       <ul class="links" data-long-list data-list-type="online">
         <% links.each do |link| %>
           <li>
@@ -38,10 +38,6 @@
 
         <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
       </ul>
-    <% else %>
-      <ul class="links" data-long-list data-list-type="online">
-        <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-      </ul>
     <% end %>
   <% end %>
 
@@ -49,5 +45,5 @@
     <div class="panel-footer">
       <%= link_to("Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems") %>
     </div>
-  <% end if links.any? && display_connection_problem_links? %>
+  <% end if display_connection_problem_links? %>
 <% end %>
