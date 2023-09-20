@@ -12,7 +12,7 @@ feature "Record Toolbar" do
       expect(page).to have_css("div.record-toolbar", visible: true)
 
       within "div.navbar-header" do
-        expect(page).not_to have_css("button.navbar-toggle", visible: true)
+        expect(page).not_to have_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).not_to have_css("a.previous.disabled", visible: true)
         expect(page).not_to have_css("a.previous", visible: true)
@@ -60,7 +60,7 @@ feature "Record Toolbar" do
 
     within "#content" do
       within "div.navbar-header" do
-        expect(page).not_to have_css("button.navbar-toggle", visible: true)
+        expect(page).not_to have_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).to have_css("a.previous", visible: true)
         expect(page).to have_css("a.next", visible: true)
