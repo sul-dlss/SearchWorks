@@ -192,30 +192,6 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe 'stackmapable?' do
-    it 'when a library is stackmapable and the home location is not skipped' do
-      expect(described_class.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })).to be_stackmapable
-      expect(described_class.new({ barcode: 'barcode', library: 'ART', home_location: 'STACKS' })).to be_stackmapable
-      expect(described_class.new({ barcode: 'barcode', library: 'EAST-ASIA', home_location: 'KOREAN' })).to be_stackmapable
-    end
-
-    it 'when a library is not stackmapable' do
-      expect(described_class.new({ barcode: 'barcode', library: 'UNKNOWN', home_location: 'STACKS' })).not_to be_stackmapable
-    end
-
-    it 'when the library is stackmapable but the home location is globally skipped' do
-      expect(described_class.new({ barcode: 'barcode', library: 'GREEN', home_location: 'GREEN-RESV' })).not_to be_stackmapable
-    end
-
-    it 'when the library is stackmapable but the home location is locally skipped' do
-      expect(described_class.new({ barcode: 'barcode', library: 'ART', home_location: 'MEDIA' })).not_to be_stackmapable
-    end
-
-    it 'when the library is stackmapable but the home location is locally skipped for a different library' do
-      expect(described_class.new({ barcode: 'barcode', library: 'GREEN', home_location: 'MEDIA' })).to be_stackmapable
-    end
-  end
-
   describe 'zombie libraries' do
     let(:blank) { Holdings::Item.new({ barcode: '123', library: '', home_location: 'LOCATION' }) }
     let(:sul) { Holdings::Item.new({ barcode: '123', library: 'SUL', home_location: 'LOCATION' }) }

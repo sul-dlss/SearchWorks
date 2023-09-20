@@ -78,17 +78,6 @@ folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
   standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']
 
-global_ignored_stackmap_locations:
-  - BINDERY
-  - ENDPROCESS
-  - GRE-LOAN
-  - GREEN-RESV
-  - INPROCESS
-  - ON-ORDER
-  - REPAIR
-  - SL3-LOAN
-  - SLN-LOAN
-
 live_lookup_service: LiveLookup::Folio
 
 # 'select' (the default) or 'export' (requires indexing with docvalues)
@@ -103,20 +92,6 @@ libraries:
     about_url: https://library.stanford.edu/libraries/bowes-art-architecture-library
     hours_api_url: art/location/art_library
     name: Art & Architecture Library (Bowes)
-    ignored_stackmap_locations:
-      - ARTLCKL
-      - ARTLCKL-R
-      - ARTLCKM
-      - ARTLCKM-R
-      - ARTLCKO
-      - ARTLCKO-R
-      - ARTLCKS
-      - ARTLCKS-R
-      - MEDIA
-      - MEDIA-FOLI
-      - MICROFILM
-      - MICROTEXT
-    stackmap_api: https://stanford.stackmap.com/json/
   BIOLOGY:
     hours_api_url: biology/location/biology_library
     name: Biology Library (Falconer)
@@ -137,22 +112,6 @@ libraries:
     about_url: https://library.stanford.edu/libraries/east-asia-library
     hours_api_url: east_asia/location/east_asia_library
     name: East Asia Library
-    ignored_stackmap_locations:
-      - ASK@EASIA
-      - BASECALNUM
-      - FOLIO-CHN
-      - FOLIO-JPN
-      - FOLIO-KOR
-      - LOCK-CHN
-      - LOCKED-STK
-      - MEDIA
-      - MICROTEXT
-      - NEWSPAPERS
-      - REF-CHN
-      - REF-JPN
-      - REF-KOR
-      - STACKS
-    stackmap_api: https://stanford.stackmap.com/json/
   EDUCATION:
     about_url: https://library.stanford.edu/libraries/cubberley-education-library
     hours_api_url: education/location/education_library
@@ -167,7 +126,6 @@ libraries:
     about_url: https://library.stanford.edu/libraries/cecil-h-green-library
     hours_api_url: green/location/green_library
     name: Green Library
-    stackmap_api: https://stanford.stackmap.com/json/
   GRN-REF:
     name: Green Library
   HOOVER:
@@ -211,7 +169,6 @@ libraries:
   MEDIA-MTXT:
     hours_api_url: green/location/media_microtext
     name: Media & Microtext Center
-    stackmap_api: https://stanford.stackmap.com/json/
   MEYER:
     hours_api_url: meyer/location/meyer_24_hour
     name: Meyer Library

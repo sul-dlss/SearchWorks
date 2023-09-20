@@ -127,10 +127,6 @@ class Holdings
       Constants::CURRENT_HOME_LOCS.include?(current_location.code)
     end
 
-    def stackmapable?
-      stackmapable_library? && stackmapable_location?
-    end
-
     def bound_with_parent
       return nil unless document&.folio_holdings&.any?
 
@@ -218,22 +214,6 @@ class Holdings
     end
 
     private
-
-    # is in the list of stackmappable libraries
-    def stackmapable_library?
-      settings = Settings.libraries[library]
-      return settings.stackmap_api.present? if settings
-
-      Honeybadger.notify("Called stackmapable_library? on an unknown library", context: { library: })
-      false
-    end
-
-    # supports a global and local skip list for home_location
-    def stackmapable_location?
-      return false if Settings.global_ignored_stackmap_locations.include?(home_location)
-
-      Array(Settings.libraries[library].ignored_stackmap_locations).exclude?(home_location)
-    end
 
     def standard_or_zombie_library
       if item_display[:library].blank? || %w(SUL PHYSICS).include?(item_display[:library])
