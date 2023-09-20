@@ -25,6 +25,7 @@
 //
 // Required by Blacklight
 //= require bootstrap/tooltip
+//= require popper
 //= require bootstrap
 //= require blacklight/blacklight
 
