@@ -22,13 +22,13 @@ feature "Advanced Search" do
         expect(page).to have_field 'ISBN/ISSN'
       end
       within ".limit-criteria" do
-        expect(page).to have_css("h3.panel-title a", text: "Access")
+        expect(page).to have_css("h3.facet-field-heading a", text: "Access")
         expect(page).to have_field 'At the Library'
-        expect(page).to have_css("h3.panel-title a", text: "Resource type")
+        expect(page).to have_css("h3.facet-field-heading a", text: "Resource type")
         expect(page).to have_field 'Book'
-        expect(page).to have_css("h3.panel-title a", text: "Library")
+        expect(page).to have_css("h3.facet-field-heading a", text: "Library")
         expect(page).to have_field 'Green'
-        expect(page).to have_css("h3.panel-title a", text: "Language")
+        expect(page).to have_css("h3.facet-field-heading a", text: "Language")
         expect(page).to have_field 'Chinese'
       end
 

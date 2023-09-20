@@ -12,7 +12,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   end
 
   it 'renders the panel' do
-    expect(page).to have_css('.panel.access-panel.panel-online')
+    expect(page).to have_css('.access-panel.panel-online')
   end
 
   it 'has the proper heading' do
