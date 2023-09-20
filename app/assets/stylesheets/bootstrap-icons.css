@@ -309,7 +309,7 @@
 .bi-capslock-fill::before { content: "\f222"; }
 .bi-capslock::before { content: "\f223"; }
 .bi-card-checklist::before { content: "\f224"; }
-.bi-card-heading::before { content: "\f225"; }
+.bi-card-header::before { content: "\f225"; }
 .bi-card-image::before { content: "\f226"; }
 .bi-card-list::before { content: "\f227"; }
 .bi-card-text::before { content: "\f228"; }

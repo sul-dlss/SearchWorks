@@ -9,7 +9,7 @@ feature "In collection Access Panel" do
     end
 
     within(".panel-in-collection") do
-      within(".card-heading") do
+      within(".card-header") do
         expect(page).to have_content('Item belongs to a collection')
       end
       within('.card-body') do
