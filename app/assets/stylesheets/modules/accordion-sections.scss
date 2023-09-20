@@ -32,6 +32,15 @@
       span.glyphicon-chevron-down {
         padding-top: 2px;
       }
+
+      &::after {
+        content: "❯";
+        float: right;
+      }
+
+      &.open::after {
+        transform: rotate(90deg);
+      }
     }
 
     .remove-list-styles {

@@ -24,7 +24,7 @@ describe 'sfx_data/show' do
   end
 
   it 'renders a parent ul' do
-    expect(rendered).to have_css('ul.document-metadata.dl-horizontal')
+    expect(rendered).to have_css('ul.document-metadata')
   end
 
   it 'renders a link within the li with the target name as text' do

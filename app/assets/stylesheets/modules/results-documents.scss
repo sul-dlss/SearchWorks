@@ -53,15 +53,7 @@
         content: '';
     }
 
-    dd {
-      margin-left: 2em;
-    }
-
     @media (min-width: $screen-sm-min) {
-      dd {
-        margin-left: 8.5em;
-      }
-
       .responsiveTruncate {
         dd {
           margin-left: 4.25em;
