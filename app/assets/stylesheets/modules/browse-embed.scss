@@ -1,11 +1,11 @@
 .callnumber button.collapsed {
   @extend .btn;
-  @extend .btn-default;
+  @extend .btn-secondary;
 }
 
 .callnumber button {
   @extend .btn;
-  @extend .btn-default;
+  @extend .btn-secondary;
 }
 
 .view-full-page {

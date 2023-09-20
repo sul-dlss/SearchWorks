@@ -6,7 +6,7 @@ describe "Search toolbar", feature: true, js: true do
   describe "has SearchWorks customizations" do
     it "should display correct subnavbar elements" do
       within '#search-navbar-container' do
-        expect(page).to have_css("button.btn.btn-default.search-btn", text: "")
+        expect(page).to have_css("button.btn.btn-secondary.search-btn", text: "")
       end
       within "#search-subnavbar-container" do
         expect(page).to have_css("li a", text: "Help", visible: true)
