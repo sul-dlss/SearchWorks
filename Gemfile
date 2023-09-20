@@ -109,3 +109,5 @@ gem 'global_alerts'
 gem 'view_component', '< 2.75'
 
 gem "parslet", "~> 2.0"
+
+gem "jsbundling-rails", "~> 1.2"
