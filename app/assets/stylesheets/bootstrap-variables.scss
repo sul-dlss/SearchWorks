@@ -15,13 +15,6 @@ $text-color: $sul-text-color;
 $link-color: $sul-text-color;
 $link-hover-color: $sul-text-color;
 
-// Panels
-$panel-border-radius: 0px;
-$panel-bg: $sul-panel-bg;
-$panel-footer-bg: $sul-panel-bg;
-$panel-default-heading-bg: $sul-panel-heading-default;
-$panel-default-border: $sul-panel-border-bottom;
-
 // NOTE: Remove this when upgrading to BS5, as it will then be unnecessary.
 // State -- we lifted these colors from BS5 for better a11y in alerts and elsewhere
 $state-info-bg: #cff4fc;

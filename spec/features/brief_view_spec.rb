@@ -10,7 +10,7 @@ RSpec.feature "Brief View" do
       expect(page).to have_css(".brief-document h3.index_title", text: "An object")
       expect(page).to have_css('.brief-document ul li', text: 'Earth Sciences Library (Branner) : Stacks : G70.212 .A426 2011')
       expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
-      expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
+      expect(page).to have_css("form.bookmark-toggle label.toggle_bookmark", text: "Select")
     end
     within '[data-preview-url="/preview/10"]' do
       expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : (no call number)')
@@ -42,6 +42,6 @@ RSpec.feature "Brief View" do
     page.find('#view-type-dropdown button.dropdown-toggle').click
     page.find('#view-type-dropdown .dropdown-menu li a.view-type-brief').click
     expect(page).to have_css("i.fa.fa-align-justify")
-    expect(page).to have_css("form.bookmark_toggle label.toggle_bookmark", text: "Select")
+    expect(page).to have_css("form.bookmark-toggle label.toggle_bookmark", text: "Select")
   end
 end

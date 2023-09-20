@@ -47,7 +47,7 @@ module CatalogHelper
     details = []
     details.push link_to(
       t('blacklight.tools.librarian_view'),
-      librarian_view_path(document), id: 'librarianLink', data: { ajax_modal: 'trigger' }
+      librarian_view_path(document), id: 'librarianLink', data: { blacklight_modal: 'trigger' }
     )
     details.push link_to('Collection PURL', "https://purl.stanford.edu/#{document.druid}") if document.is_a_collection?
     if document.respond_to?(:to_marc)

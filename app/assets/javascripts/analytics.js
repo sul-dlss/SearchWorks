@@ -197,7 +197,7 @@ Blacklight.onLoad(function() {
   
   // Select / Select all
   // Note: this is counted extra when select-all or unselect-all is also used
-  document.querySelectorAll('input.toggle_bookmark').forEach(function(el) {
+  document.querySelectorAll('input.toggle-bookmark').forEach(function(el) {
     el.addEventListener('click', function(e) {
       sendAnalyticsEvent({
         category: 'Selection',

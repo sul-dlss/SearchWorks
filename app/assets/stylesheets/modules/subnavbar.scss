@@ -58,7 +58,7 @@
   }
 
   // the last menu item should be right-aligned
-  .navbar-nav.navbar-right > li:last-child > a {
+  .navbar-nav.ml-auto > li:last-child > a {
     margin-right: 0;
     padding-right: 0;
   }
