@@ -5,7 +5,7 @@ feature "Online Access Panel" do
     visit solr_document_path('24')
 
     within(".panel-online") do
-      within(".card-heading") do
+      within(".card-header") do
         expect(page).to have_content("Search this database")
       end
       within(".panel-footer") do
@@ -42,7 +42,7 @@ feature "Online Access Panel" do
       visit solr_document_path('57')
 
       within('.panel-online') do
-        within('.card-heading') do
+        within('.card-header') do
           expect(page).to have_content('Available online')
         end
 

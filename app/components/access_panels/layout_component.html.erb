@@ -1,7 +1,7 @@
 <%= header %>
 
-<%= tag.div class: (%w[card card-default access-panel] + @classes).join(' '), **@html_attrs do %>
-  <div class="access-panel-heading card-heading">
+<%= tag.div class: (%w[card access-panel] + @classes).join(' '), **@html_attrs do %>
+  <div class="access-panel-heading card-header">
     <h3>
       <%= title %>
     </h3>

@@ -20,7 +20,7 @@ RSpec.describe AccessPanels::AppearsInComponent, type: :component do
     end
 
     it 'renders a panel heading' do
-      expect(page).to have_css('.card-heading h3', text: 'Item is included in another record')
+      expect(page).to have_css('.card-header h3', text: 'Item is included in another record')
     end
 
     describe 'panel body' do

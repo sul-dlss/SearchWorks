@@ -16,7 +16,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   end
 
   it 'has the proper heading' do
-    expect(page).to have_css('.card-heading h3', text: 'Best source')
+    expect(page).to have_css('.card-header h3', text: 'Best source')
   end
 
   it 'includes EDS fulltext links' do
