@@ -70,7 +70,45 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         item_display_struct: [
           { barcode: '1234', library: 'SAL3', home_location: 'SEE-OTHER', callnumber: 'ABC 123' }
         ],
-        marc_json_struct: linked_ckey_fixture
+        marc_json_struct: linked_ckey_fixture,
+        holdings_json_struct: [
+          { holdings: [
+            {
+              id: 'holding1234',
+              location: {
+                effectiveLocation: {
+                  id: "4573e824-9273-4f13-972f-cff7bf504217",
+                  code: "SEE-OTHER",
+                  name: "Bound With Test",
+                  campus: {
+                    id: "c365047a-51f2-45ce-8601-e421ca3615c5",
+                    code: "SUL",
+                    name: "Stanford Libraries"
+                  },
+                  details: {},
+                  library: {
+                    id: "f6b5519e-88d9-413e-924d-9ed96255f72e",
+                    code: "GREEN",
+                    name: "Cecil H. Green"
+                  },
+                  institution: {
+                    id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                    code: "SU",
+                    name: "Stanford University"
+                  }
+                }
+              },
+              holdingsType: {
+                id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
+                name: "Bound-with"
+              },
+              boundWith: {
+                item: { barcode: "1234" },
+                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
+              }
+            }
+          ] }
+        ]
       )
     end
 
@@ -87,9 +125,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       expect(page).not_to have_content("Request")
     end
 
-    it 'displays the callnumber without live lookup' do
+    it 'displays the callnumber with live lookup' do
       expect(page).to have_css 'td', text: 'ABC 123'
-      expect(page).not_to have_css 'td[data-live-lookup-id]'
+      expect(page).to have_css 'td[data-live-lookup-id]'
     end
   end
 

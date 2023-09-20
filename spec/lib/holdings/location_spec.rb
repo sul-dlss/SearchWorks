@@ -88,14 +88,62 @@ RSpec.describe Holdings::Location do
   end
 
   describe "#bound_with?" do
-    context 'with locations that are SEE-OTHER' do
-      subject { Holdings::Location.new("SEE-OTHER", library_code: 'HOPKINS') }
+    context 'with items that are bound with' do
+      let(:document) {
+        SolrDocument.new(
+          id: '1234',
+          holdings_json_struct: [
+            { holdings: [
+              {
+                id: 'holding1234',
+                location: {
+                  effectiveLocation: {
+                    id: "4573e824-9273-4f13-972f-cff7bf504217",
+                    code: "SEE-OTHER",
+                    name: "Bound With Test",
+                    campus: {
+                      id: "c365047a-51f2-45ce-8601-e421ca3615c5",
+                      code: "SUL",
+                      name: "Stanford Libraries"
+                    },
+                    details: {},
+                    library: {
+                      id: "f6b5519e-88d9-413e-924d-9ed96255f72e",
+                      code: "GREEN",
+                      name: "Cecil H. Green"
+                    },
+                    institution: {
+                      id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                      code: "SU",
+                      name: "Stanford University"
+                    }
+                  }
+                },
+                holdingsType: {
+                  id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
+                  name: "Bound-with"
+                },
+                boundWith: {
+                  item: { barcode: "1234" },
+                  instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
+                }
+              }
+            ] }
+          ]
+        )
+      }
+
+      subject { Holdings::Location.new("STACKS", [
+        Holdings::Item.new({ barcode: '1234', library: 'GREEN', home_location: 'SEE-OTHER' }, document:)
+      ], library_code: 'GREEN') }
 
       it { is_expected.to be_bound_with }
     end
 
-    context 'with locations that are not SEE-OTHER' do
-      subject { Holdings::Location.new("STACKS", library_code: 'GREEN') }
+    context 'with items that are not bound with' do
+      subject { Holdings::Location.new("STACKS", [
+        Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'SEE-OTHER' }, document: SolrDocument.new)
+      ], library_code: 'GREEN') }
 
       it { is_expected.not_to be_bound_with }
     end

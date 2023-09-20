@@ -13,6 +13,30 @@ RSpec.describe Holdings::Item do
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
   let(:eresv_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INSTRUCTOR', current_location: 'E-RESV', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+  let(:folio_location) {
+    Folio::Location.from_dynamic(
+      {
+        'id' => '4573e824-9273-4f13-972f-cff7bf504217',
+        'code' => 'GRE-STACKS',
+        'name' => 'Green Library Stacks',
+        'institution' => {
+          'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+          'code' => 'SU',
+          'name' => 'Stanford University'
+        },
+        'campus' => {
+          'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+          'code' => 'SUL',
+          'name' => 'Stanford Libraries'
+        },
+        'library' => {
+          'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+          'code' => 'GREEN',
+          'name' => 'Cecil H. Green'
+        }
+      }
+    )
+  }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -257,45 +281,7 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe '#live_lookup_item_id' do
-    let(:document) { SolrDocument.new }
-
-    subject(:item) { described_class.new({ barcode: '36105232609540', library: 'GREEN', home_location: 'GRE-STACKS' }, document:) }
-
-    before do
-      allow(document).to receive(:folio_items).and_return([])
-    end
-
-    it 'returns the item barcode' do
-      expect(item.live_lookup_item_id).to eq '36105232609540'
-    end
-  end
-
   context 'with data from FOLIO' do
-    let(:folio_location) {
-      Folio::Location.from_dynamic(
-        {
-          'id' => '4573e824-9273-4f13-972f-cff7bf504217',
-          'code' => 'GRE-STACKS',
-          'name' => 'Green Library Stacks',
-          'institution' => {
-            'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
-            'code' => 'SU',
-            'name' => 'Stanford University'
-          },
-          'campus' => {
-            'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
-            'code' => 'SUL',
-            'name' => 'Stanford Libraries'
-          },
-          'library' => {
-            'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
-            'code' => 'GREEN',
-            'name' => 'Cecil H. Green'
-          }
-        }
-      )
-    }
     let(:folio_item) {
       Folio::Item.new(
         id: '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
@@ -336,6 +322,68 @@ RSpec.describe Holdings::Item do
     describe '#live_lookup_item_id' do
       it 'returns the item uuid from FOLIO' do
         expect(item.live_lookup_item_id).to eq '64d4220b-ebae-5fb0-971c-0f98f6d9cc93'
+      end
+    end
+
+    describe '#live_lookup_instance_id' do
+      context 'with a regular (not bound-with) item'
+      it 'returns nil' do
+        expect(item.live_lookup_instance_id).to be_nil
+      end
+    end
+  end
+
+  context 'with a FOLIO bound-with' do
+    let(:document) {
+      SolrDocument.new(
+        id: '1234',
+        holdings_json_struct: [
+          { holdings: [
+            {
+              id: 'holding1234',
+              location: {
+                effectiveLocation: {
+                  id: "4573e824-9273-4f13-972f-cff7bf504217",
+                  code: "SEE-OTHER",
+                  name: "Bound With Test",
+                  campus: {
+                    id: "c365047a-51f2-45ce-8601-e421ca3615c5",
+                    code: "SUL",
+                    name: "Stanford Libraries"
+                  },
+                  details: {},
+                  library: {
+                    id: "f6b5519e-88d9-413e-924d-9ed96255f72e",
+                    code: "GREEN",
+                    name: "Cecil H. Green"
+                  },
+                  institution: {
+                    id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                    code: "SU",
+                    name: "Stanford University"
+                  }
+                }
+              },
+              holdingsType: {
+                id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
+                name: "Bound-with"
+              },
+              boundWith: {
+                item: { barcode: "1234" },
+                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
+              }
+            }
+          ] }
+        ]
+      )
+    }
+
+    subject(:item) { described_class.new({ barcode: '1234', library: 'GREEN', home_location: 'GRE-STACKS' }, document:) }
+
+    describe '#live_lookup_instance_id' do
+      context 'with a bound-with item'
+      it 'returns the parent instance id' do
+        expect(item.live_lookup_instance_id).to eq "7e194e58-e134-56fe-a3c2-2c0494e04c5b"
       end
     end
   end

@@ -24,8 +24,7 @@ class Holdings
 
     def suppressed?
       @item_display.values.none?(&:present?) ||
-        (item_display[:library] == 'SUL' && (internet_resource? || eresv?)) ||
-        bound_with?
+        (item_display[:library] == 'SUL' && (internet_resource? || eresv?))
     end
 
     def browsable?
@@ -132,8 +131,17 @@ class Holdings
       stackmapable_library? && stackmapable_location?
     end
 
+    def bound_with_parent
+      return nil unless document&.folio_holdings&.any?
+
+      match = document.folio_holdings.find do |holding|
+        holding.bound_with_parent&.dig('item', 'id') == id
+      end
+      match&.bound_with_parent
+    end
+
     def bound_with?
-      Constants::BOUND_WITH_LOCS.include?(home_location)
+      bound_with_parent.present?
     end
 
     def live_status?
@@ -184,10 +192,13 @@ class Holdings
       ]
     end
 
-    # LiveLookup::Folio uses the item UUID, while LiveLookup::Folio
-    # uses the barcode for identifying items.
+    # LiveLookup::Folio uses the item UUID
     def live_lookup_item_id
-      id || folio_item&.id || barcode
+      id || folio_item&.id
+    end
+
+    def live_lookup_instance_id
+      bound_with? ? bound_with_parent.dig('instance', 'id') : document.live_lookup_id
     end
 
     def folio_item?
