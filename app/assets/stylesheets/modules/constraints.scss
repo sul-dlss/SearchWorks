@@ -6,12 +6,13 @@
   }
 
   span.constraint.btn-group {
-    margin: 0.5em;
-
     span.constraint-value.btn {
       border-top-left-radius: $sul-constraint-btn-radius;
       border-bottom-left-radius: $sul-constraint-btn-radius;
       font-size: $font-size-base;
+      &:hover {
+        border-color: #dad7cb; // override blacklight
+      }
     }
 
     a.btn.remove {

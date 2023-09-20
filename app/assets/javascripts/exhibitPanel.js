@@ -72,7 +72,7 @@
         if (container.find('button.see-all-exhibits').length > 0) {
           var toggleButton = container.find('button.see-all-exhibits');
         } else {
-          var toggleButton = $('<button class="see-all-exhibits btn btn-default btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
+          var toggleButton = $('<button class="see-all-exhibits btn btn-secondary btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
         }
 
         var exhibitMediaObjects = container.find('.media');

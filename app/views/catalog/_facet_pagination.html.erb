@@ -11,11 +11,11 @@
 
   <div class="sort_options btn-group pull-right">
     <% if @pagination.sort == 'index' -%>
-      <span class="active az btn btn-default"><%= t('blacklight.search.facets.sort.index') %></span>
-      <%= link_to(t('blacklight.search.facets.sort.count'), @pagination.params_for_resort_url('count', search_state.to_h), class: "sort_change numeric btn btn-default", data: { ajax_modal: "preserve" }) %>
+      <span class="active az btn btn-secondary"><%= t('blacklight.search.facets.sort.index') %></span>
+      <%= link_to(t('blacklight.search.facets.sort.count'), @pagination.params_for_resort_url('count', search_state.to_h), class: "sort_change numeric btn btn-secondary", data: { ajax_modal: "preserve" }) %>
     <% elsif @pagination.sort == 'count' -%>
-      <%=  link_to(t('blacklight.search.facets.sort.index'), @pagination.params_for_resort_url('index', search_state.to_h), class: "sort_change az btn btn-default",  data: { ajax_modal: "preserve" }) %>
-      <span class="active numeric btn btn-default"><%= t('blacklight.search.facets.sort.count') %></span>
+      <%=  link_to(t('blacklight.search.facets.sort.index'), @pagination.params_for_resort_url('index', search_state.to_h), class: "sort_change az btn btn-secondary",  data: { ajax_modal: "preserve" }) %>
+      <span class="active numeric btn btn-secondary"><%= t('blacklight.search.facets.sort.count') %></span>
     <% end -%>
   </div>
 <% end %>

@@ -35,7 +35,7 @@
   }
 
   .offset-md-3 {
-    @extend .col-md-offset-3;
+    margin-left: 25%;
   }
 
   .adv-publication-year-range {
@@ -53,7 +53,7 @@
   }
 
   .col {
-    @extend .col-md-offset-3;
+    margin-left: 25%;
     @extend .col-md-9;
   }
 

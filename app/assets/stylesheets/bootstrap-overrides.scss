@@ -1,3 +1,8 @@
+// I believe the text-success color override can be removed after upgrading to BS5.
+.text-success {
+  color: $state-success-text !important;
+}
+
 .panel {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;

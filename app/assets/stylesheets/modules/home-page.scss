@@ -63,7 +63,8 @@
   }
 
   .home-page-you-are-here {
-    .panel .panel-body {
+    &.card {
+      // A glowing border
       border: none;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
       -moz-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
