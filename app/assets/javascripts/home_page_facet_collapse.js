@@ -9,7 +9,7 @@
     function addHomePageFacetCollapseBehavior( container, resize ){
       container.each(function(){
         $(".facet_limit", $(this)).each(function(){
-          var header = $('.panel-heading', $(this))
+          var header = $('.card-heading', $(this))
           var target = $(header.data('target'));
 
           if($(window).width() <= '768') {

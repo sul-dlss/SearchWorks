@@ -5,7 +5,7 @@
   </button>
   <ul class="dropdown-menu" role="menu">
     <li role="presentation">
-      <%= link_to t('blacklight.tools.email_html'), email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", role: 'menuitem', tabindex: '-1', data: {ajax_modal: "trigger"} %>
+      <%= link_to t('blacklight.tools.email_html'), email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", role: 'menuitem', tabindex: '-1', data: {blacklight_modal: "trigger"} %>
     </li>
 
     <% if @response.documents.any? {|d| d.exports_as? :refworks_marc_txt } %>

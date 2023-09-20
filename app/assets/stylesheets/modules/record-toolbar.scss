@@ -31,7 +31,7 @@
       margin-left: 20px;
     }
 
-    .toggle_bookmark {
+    .toggle-bookmark {
       min-width: 0;
     }
   }
@@ -51,13 +51,13 @@
       }
     }
 
-    div.toggle_bookmark {
+    div.toggle-bookmark {
       color: $btn-sul-toolbar-bar-color;
       padding-top: 10px;
     }
   }
 
-  .navbar-nav.navbar-right form.bookmark_toggle {
+  .navbar-nav.ml-auto form.bookmark-toggle {
     padding-left: 10px;
   }
 }
@@ -101,7 +101,7 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
     }
 
     .navbar-header {
-      .navbar-toggle {
+      .navbar-toggler {
         border: 0;
         margin: 0 15px 0 0;
       }

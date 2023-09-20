@@ -53,7 +53,7 @@ feature "Facets Customizations" do
     click_button 'search'
 
     within "div#facets" do
-      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Refine your results")
+      expect(page).to have_css("div.top-panel-heading.card-heading h2", text: "Refine your results")
     end
   end
 
@@ -61,7 +61,7 @@ feature "Facets Customizations" do
     visit '/databases'
 
     within "div#facets" do
-      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Within databases")
+      expect(page).to have_css("div.top-panel-heading.card-heading h2", text: "Within databases")
     end
   end
 end

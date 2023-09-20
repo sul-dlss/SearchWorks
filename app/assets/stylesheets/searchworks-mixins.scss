@@ -60,14 +60,6 @@
   line-height: 1.5em;
 }
 
-@mixin panel-borders {
-  border: 1px solid $sul-panel-border;
-}
-
-@mixin panel-border-bottom {
-  border-bottom: 1px solid $sul-panel-border-bottom;
-}
-
 @mixin sul-toolbar-bg-border {
   background-color: $sul-toolbar-bg;
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);

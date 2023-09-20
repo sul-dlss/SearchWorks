@@ -175,7 +175,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }])
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
-      expect(page).to have_css(".panel-heading", text: "Available online")
+      expect(page).to have_css(".card-heading", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
     it "should add the stanford-only class to Stanford only resources" do
@@ -189,7 +189,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       document = SolrDocument.new(marc_json_struct: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
-      expect(page).to have_css '.panel-heading', text: 'Also available at'
+      expect(page).to have_css '.card-heading', text: 'Also available at'
     end
 
     context 'when the record has an SFX link' do
@@ -221,7 +221,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
       it "should render a special panel heading" do
         render_inline(described_class.new(document:))
-        expect(page).to have_css(".panel-heading", text: "Search this database")
+        expect(page).to have_css(".card-heading", text: "Search this database")
       end
       it "should render a special panel footer" do
         render_inline(described_class.new(document:))

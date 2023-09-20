@@ -1,7 +1,7 @@
-<div class="record-toolbar container-fluid sul-toolbar navbar navbar-default" role="navigation">
+<div class="record-toolbar container-fluid sul-toolbar navbar navbar-expand-lg navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".toolbar-collapse">
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars"></span>
       </button>
@@ -9,10 +9,10 @@
       <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
     </div>
     <div class="navbar-collapse collapse toolbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav ml-auto">
         <% if @document.citable? %>
           <li>
-            <%= link_to t('blacklight.tools.cite_html'), (@document.eds? ? citation_article_path(@document) : citation_solr_document_path(@document)), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
+            <%= link_to t('blacklight.tools.cite_html'), (@document.eds? ? citation_article_path(@document) : citation_solr_document_path(@document)), {:id => 'citeLink', :data => {blacklight_modal: "trigger"}, :class => 'btn btn-sul-toolbar'} %>
           </li>
         <% end %>
         <li class="dropdown">

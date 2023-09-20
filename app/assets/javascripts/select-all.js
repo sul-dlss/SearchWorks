@@ -13,7 +13,7 @@
       var $element = $(this),
           $selectAll = $element.find('span.select-all'),
           $unSelectAll = $element.find('span.unselect-all'),
-          selectorSelectBookmarks = 'input.toggle_bookmark';
+          selectorSelectBookmarks = 'input.toggle-bookmark';
 
       setInitialAction();
       init();

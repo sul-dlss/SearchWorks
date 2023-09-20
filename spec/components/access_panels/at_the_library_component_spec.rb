@@ -59,7 +59,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       expect(page).to have_css(".library-location-heading")
       expect(page).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
       expect(page).to have_css("div.location-hours-today")
-      expect(page).to have_css(".panel-body")
+      expect(page).to have_css(".card-body")
     end
   end
 
@@ -453,7 +453,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       it 'renders not available text' do
-        expect(page).to have_css '.panel-body .pull-right', text: 'Not available to request'
+        expect(page).to have_css '.card-body .pull-right', text: 'Not available to request'
         expect(page).to have_css '.availability-icon.in_process'
         expect(page).to have_css '.status-text', text: 'In process'
       end

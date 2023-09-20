@@ -72,7 +72,7 @@
             <%= render 'shared/search_subnavbar' %>
           </div>
 
-          <%= render partial: 'shared/ajax_modal' %>
+          <%= render partial: 'shared/modal' %>
           <section id="main-container" role="main">
             <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
             <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>

@@ -124,7 +124,7 @@
               $galleryDoc.updateDocs();
 
               // fix up the id/for to avoid duplicating html ids for the current document.
-              $('.gallery-document label.toggle_bookmark').each(function(i, val) {
+              $('.gallery-document label.toggle-bookmark').each(function(i, val) {
                 var id = 'browse_' + val.attr('for');
                 val.attr('for', id);
                 val.first('input').attr('id', id);

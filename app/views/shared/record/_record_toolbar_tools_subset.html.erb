@@ -1,18 +1,18 @@
 <% if @document.respond_to?( :to_sms_text ) %>
   <li class="sms" role="presentation">
     <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.sms_html'), sms_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {blacklight_modal: "trigger"}} %>
     <% else %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_solr_document_path(:id => @document), {:id => 'smsLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.sms_html'), sms_solr_document_path(:id => @document), {:id => 'smsLink', role: 'menuitem', tabindex: '-1', :data => {blacklight_modal: "trigger"}} %>
     <% end %>
   </li>
 <% end %>
 <% if @document.respond_to?( :to_email_text ) %>
   <li class="email" role="presentation">
     <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.email_html'), email_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.email_html'), email_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {blacklight_modal: "trigger"}} %>
     <% else %>
-      <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
+      <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {blacklight_modal: "trigger"}} %>
     <% end %>
   </li>
 <% end %>

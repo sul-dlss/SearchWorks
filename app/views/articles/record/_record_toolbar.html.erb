@@ -1,7 +1,7 @@
-<div class="record-toolbar container-fluid sul-toolbar navbar navbar-default" role="navigation">
+<div class="record-toolbar container-fluid sul-toolbar navbar navbar-expand-lg navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".toolbar-collapse">
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars"></span>
       </button>
@@ -17,7 +17,7 @@
       <% end -%>
     </div>
     <div class="navbar-collapse collapse toolbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav ml-auto">
         <li class="dropdown">
           <button class="btn btn-sul-toolbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= t('blacklight.tools.send_to_html').html_safe -%>
