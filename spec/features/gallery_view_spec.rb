@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Gallery View' do
+RSpec.feature 'Gallery View' do
   scenario 'Search results are rendered properly', js: true do
     visit search_catalog_path f: { format: ['Book'] }
     page.find('#view-type-dropdown button.dropdown-toggle').click
@@ -19,10 +19,10 @@ feature 'Gallery View' do
 
     expect(page).to have_css('.gallery-document h3.index_title', text: 'An object')
     expect(page).to have_css('.gallery-document button.btn-preview', text: 'Preview')
-    expect(page).to have_css('form.bookmark-toggle label.toggle_bookmark', text: 'Select')
-    expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
+    expect(page).to have_css('form.bookmark-toggle label.toggle-bookmark', text: 'Select')
+    expect(page).to have_css("label[for='toggle-bookmark_1']", count: 1)
     page.first('button.btn.docid-1').click
-    expect(page).to have_css("label[for='toggle_bookmark_1']", count: 1)
+    expect(page).to have_css("label[for='toggle-bookmark_1']", count: 1)
     within '.preview-container' do
       expect(page).to have_css('h3', text: 'An object')
     end
