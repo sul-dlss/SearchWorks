@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AccessPanels::OnlineComponent, type: :component do
+RSpec.describe AccessPanels::OnlineComponent, type: :component do
   include ModsFixtures
   include Marc856Fixtures
 
@@ -210,7 +210,7 @@ describe AccessPanels::OnlineComponent, type: :component do
         render_inline(described_class.new(document:))
 
         expect(page).to have_css('.panel-online', visible: false)
-        expect(page).to have_css('.panel-online .google-books.OCLCabc123')
+        expect(page).to have_css('.panel-online .google-books.OCLCabc123', visible: false)
       end
     end
 

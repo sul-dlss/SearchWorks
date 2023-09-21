@@ -1,4 +1,5 @@
 module AccessPanels
+  # Displays online links and provides a place for plugGoogleBookContent() to add book cover previews
   class OnlineComponent < AccessPanels::Base
     def links
       @document.preferred_online_links
