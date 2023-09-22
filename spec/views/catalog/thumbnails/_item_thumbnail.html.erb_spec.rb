@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe "catalog/thumbnails/_item_thumbnail" do
+describe "catalog/thumbnails/_item_thumbnail" do
   before do
     allow(view).to receive_messages(css_class: '', oclc: '', isbn: '', lccn: '', document:, blacklight_config: CatalogController.blacklight_config)
   end
@@ -9,16 +9,15 @@ RSpec.describe "catalog/thumbnails/_item_thumbnail" do
     let(:document) { SolrDocument.new(id: '1234', title_display: 'Title') }
 
     describe "fake covers" do
-      it "is included on the gallery view" do
+      it "should be included on the gallery view" do
         allow(view).to receive(:document_index_view_type).and_return(:gallery)
         render
         expect(rendered).to have_css('.fake-cover', text: "Title")
       end
-
-      it "is not included on other views" do
+      it "should not be included on other views" do
         allow(view).to receive(:document_index_view_type).and_return(:list)
         render
-        expect(rendered).to have_css('img.cover-image', visible: false)
+        expect(rendered).to have_css('img.cover-image')
         expect(rendered).not_to have_css('.fake-cover')
       end
     end

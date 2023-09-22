@@ -2,7 +2,7 @@
 <% if thumbnail_src.present? %>
   <%= image_tag(thumbnail_src, class: 'stacks-image', alt: '') %>
 <% else %>
-  <img class="cover-image center-block <%= css_class %>" hidden alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
+  <img class="cover-image center-block <%= css_class %> hide" alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
 
   <% if document_index_view_type == :gallery %>
     <%= link_to document, tabindex: '-1', aria: { hidden: true } do %>

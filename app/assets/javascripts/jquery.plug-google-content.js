@@ -2,7 +2,7 @@
   /*
     jQuery plugin to render Google book covers for image elements
 
-      Usage: $(selector).plugGoogleBookContent();
+      Usage: $(selector).renderGoogleBookCovers();
 
     This plugin :
       - collects all 'img.cover-image' elements and batches them
@@ -113,11 +113,13 @@
 
         // Only set the thumb src if it's not already set
         if(typeof imageEl.attr('src') === 'undefined') {
-          imageEl.attr('src', thumbUrl)[0].hidden = false;
+          imageEl
+            .attr('src', thumbUrl)
+            .removeClass('hide')
+            .addClass('show');
 
-          const cover = imageEl.parent().parent().find('span.fake-cover')[0]
-          if (cover)
-            cover.hidden = true;
+          imageEl.parent().parent().find('span.fake-cover')
+            .addClass('hide');
         }
       }
     }
@@ -168,7 +170,7 @@
       var $accessPanel = $googleBooks.parents(selectorPanel);
 
       if ($accessPanel.length > 0) {
-        $accessPanel[0].hidden = false;
+        $accessPanel.removeClass('hide').addClass('show');
         $googleBooks.show();
       }
     }
@@ -177,8 +179,8 @@
       $resultsOnlineSection = $googleBooks.parents('[data-behavior="results-online-section"]');
 
       if ($resultsOnlineSection.length > 0) {
-        $resultsOnlineSection[0].hidden = false;
-        $googleBooks[0].hidden = false;
+        $resultsOnlineSection.removeClass('hide').addClass('show');
+        $googleBooks.removeClass('hide').addClass('show');
         // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
         $googleBooks
           .parents("[data-behavior='truncate-results-metadata-links']")

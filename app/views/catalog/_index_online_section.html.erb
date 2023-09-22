@@ -1,5 +1,5 @@
 <% display_panel = document.preferred_online_links.present? %>
-<dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8" <%= 'hidden' unless display_panel %>>
+<dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8 <%= 'hide' unless display_panel %>">
   <% if document.druid %>
     <dt class="also-online-label">Also online at</dt>
   <% else %>
@@ -15,7 +15,7 @@
 
       <% if document.index_links.managed_purls.none? %>
         <% book_ids  = get_book_ids(document) %>
-        <li hidden class="google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
+        <li class="hide google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
           <a href="" class="full-view">Google Books (Full view)</a>
         </li>
       <% end %>
