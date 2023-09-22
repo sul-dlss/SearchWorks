@@ -1,6 +1,6 @@
 <ul class="side-nav-minimap">
   <li>
-    <button data-target-id="topnav-container">
+    <button data-target-id="topnav-container" aria-label="Jump to top">
       <span class="nav-label">Top</span>
       <i class="fa fa-arrow-up"></i>
     </button>
@@ -13,17 +13,17 @@
     <% icon = t("record_side_nav.#{section}.icon").html_safe %>
     <% label = t("record_side_nav.#{section}.label").html_safe %>
     <li>
-        <button data-target-id="<%= id %>" class="<%= id %>">
+        <button data-target-id="<%= id %>" class="<%= id %>" aria-label="Jump to <%= label %>">
         <span class="nav-label"><%= label %></span>
         <%= icon %>
-        </buttton>
+        </button>
     </li>
     <% end %>
 <% end %>
 <% end %>
 
   <li>
-    <button data-target-id="sul-footer-container">
+    <button data-target-id="sul-footer-container" aria-label="Jump to bottom">
       <span class="nav-label">Bottom</span>
       <i class="fa fa-arrow-down"></i>
     </button>
