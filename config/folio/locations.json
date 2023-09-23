@@ -335,12 +335,13 @@
     "id": "0373d725-4d67-4006-ad48-77c4c6095ba6",
     "name": "Earth Sci Reserves",
     "code": "EAR-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Earth Sciences circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
@@ -352,8 +353,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:02.234+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:02.234+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:20:40.744+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -1623,12 +1624,13 @@
     "id": "198f1e45-948d-4d30-9437-f93240beb659",
     "name": "Art Reserves",
     "code": "ART-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk ",
+    "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
     "servicePointIds": [
@@ -1640,8 +1642,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:37.057+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:37.057+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:01:23.505+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -1673,12 +1675,13 @@
     "id": "1a6a6a2c-ecf3-460e-bce1-588efa4cfd35",
     "name": "East Asia Reserves",
     "code": "EAL-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at East Asia circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -1690,8 +1693,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:46.642+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:46.642+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:21:02.632+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -2214,9 +2217,9 @@
     "details": {
       "availabilityClass": "In_process"
     },
-    "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
+    "primaryServicePoint": "ee18f485-c78b-479c-b131-da1ffe6ce1b8",
     "servicePointIds": [
-      "4d77d74b-271e-421a-91c6-992afa9afb3c"
+      "ee18f485-c78b-479c-b131-da1ffe6ce1b8"
     ],
     "servicePoints": [
 
@@ -2224,8 +2227,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:42.751+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:30:19.168+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2023-09-22T23:32:59.031+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -2590,12 +2593,13 @@
     "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
     "name": "Science Reserves",
     "code": "SCI-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
     "servicePointIds": [
@@ -2607,8 +2611,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:06.928+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:06.928+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:23:41.388+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -4069,12 +4073,13 @@
     "id": "42ace85f-12c4-4c6f-9360-7e58d15f7a91",
     "name": "Education Reserves",
     "code": "EDU-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Education circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
@@ -4086,8 +4091,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:20.372+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:20.372+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:21:26.604+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -4531,7 +4536,8 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
-      "discoveryDisplayUrl": "https://lane.stanford.edu/biomed-resources/course-reserves.html"
+      "discoveryDisplayUrl": "https://lane.stanford.edu/biomed-resources/course-reserves.html",
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
@@ -4543,8 +4549,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:16.607+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:38.012+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2023-09-22T20:30:32.164+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -4654,12 +4660,13 @@
     "id": "4a911835-3488-4d26-9293-bdc625c9afce",
     "name": "Green Reserves",
     "code": "GRE-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -4671,8 +4678,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:10.100+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:10.100+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:22:14.442+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -6466,12 +6473,13 @@
     "id": "71d88dd5-3ac5-4075-b0eb-23db9fc374b4",
     "name": "Tanner Reserves",
     "code": "TAN-CRES",
-    "discoveryDisplayName": "On reserve: Ask at reference desk",
+    "discoveryDisplayName": "On reserve: Ask at Tanner reference desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e5f23316-85ce-440c-886c-eff410f66f26",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "7af3d617-e9e9-4241-8dd7-93827112d3ab",
     "servicePointIds": [
@@ -6483,8 +6491,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:51.839+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:36:57.612+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2023-09-22T21:23:25.735+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -7994,12 +8002,13 @@
     "id": "8f16bbad-14db-4336-a7f6-4e65036de109",
     "name": "Marine Bio Reserves",
     "code": "MAR-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Marine Biology circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "447337a0-4eeb-4002-94fb-af6e9f1c121b",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "17721adb-638d-417c-85a4-280c67c0d0a9",
     "servicePointIds": [
@@ -8011,8 +8020,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:44.400+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:44.400+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:22:36.194+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -8252,6 +8261,7 @@
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
     "servicePointIds": [
@@ -8263,8 +8273,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:47.449+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T19:21:31.591+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2023-09-22T20:29:37.381+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -8705,12 +8715,13 @@
     "id": "9c2d3584-1cef-49a4-90bd-0b387be8a07d",
     "name": "Music Reserves",
     "code": "MUS-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Music circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
     "servicePointIds": [
@@ -8722,8 +8733,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:50.826+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:50.826+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:23:11.967+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -10024,12 +10035,13 @@
     "id": "b36b1c61-b132-41b1-ac13-e249e8d4dda4",
     "name": "Eng Reserves",
     "code": "ENG-CRES",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Engineering circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
     "servicePointIds": [
@@ -10041,8 +10053,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:19.328+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:19.328+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:21:57.612+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -12516,12 +12528,13 @@
     "id": "d7dbee55-c788-4dd3-806e-8028ccaf01a4",
     "name": "Law Reserves",
     "code": "LAW-CRES",
-    "discoveryDisplayName": "On reserve: Teaming room",
+    "discoveryDisplayName": "On reserve: Law Teaming room",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
@@ -12533,8 +12546,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:40.477+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:40.477+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-22T21:09:28.116+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -12650,6 +12663,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "0acfabb7-0a71-47be-82c0-c0200dd47952",
     "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
     },
     "primaryServicePoint": "943a4850-f0fb-4ffe-83cb-919157ed2117",
     "servicePointIds": [
@@ -12661,8 +12675,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:50.282+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:22:45.797+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2023-09-22T20:33:10.561+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {

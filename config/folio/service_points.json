@@ -1010,6 +1010,36 @@
     }
   },
   {
+    "id": "ee18f485-c78b-479c-b131-da1ffe6ce1b8",
+    "name": "Music - Tech Services",
+    "code": "MUSICTS",
+    "discoveryDisplayName": "Music - Tech Services",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-09-22T23:25:04.824+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-09-22T23:25:04.824+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "name": "Law Library",
     "code": "LAW",
