@@ -1,4 +1,4 @@
-<%= render @layout.new(classes: ['panel-online'], hidden: !links.any?) do |c| %>
+<%= render @layout.new(classes: ['panel-online', ('hide' unless links.any?)]) do |c| %>
   <% c.header do %>
     <h2>Online</h2>
   <% end if links.any? %>
