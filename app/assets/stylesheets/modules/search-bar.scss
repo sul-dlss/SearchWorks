@@ -51,21 +51,12 @@
         left: auto;
         top: 70%;
 
-        li {
-          max-width: inherit;
-        }
-
-        li.active {
+        .active {
           background-color: $public-note-yellow;
-          color: $black; // override bootstrap
+          color: $text-color;
 
-          a {
-            background-color: inherit;
-            color: $text-color;
-
-            &:focus {
-              outline: 5px auto -webkit-focus-ring-color;
-            }
+          &:focus {
+            outline: 5px auto -webkit-focus-ring-color;
           }
         }
       }

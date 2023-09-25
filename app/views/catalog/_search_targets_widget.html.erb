@@ -8,15 +8,9 @@
     <% end %>
     <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
-    <li role="presentation">
-      <%= link_to_bento_search %>
-    </li>
-    <li class="<%= 'active' unless article_search? %>" role="presentation">
-      <%= link_to_catalog_search %>
-    </li>
-    <li class="<%= 'active' if article_search? %>" role="presentation">
-      <%= link_to_article_search %>
-    </li>
-  </ul>
+  <div class="dropdown-menu" role="menu">
+    <%= link_to_bento_search %>
+    <%= link_to_catalog_search %>
+    <%= link_to_article_search %>
+  </div>
 </div>
