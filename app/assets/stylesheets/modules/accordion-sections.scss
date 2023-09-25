@@ -24,15 +24,6 @@
         text-align: left;
       }
 
-      span.glyphicon {
-        float: right;
-        padding-top: 1px;
-      }
-
-      span.glyphicon-chevron-down {
-        padding-top: 2px;
-      }
-
       &::after {
         content: "❯";
         float: right;
