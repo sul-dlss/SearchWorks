@@ -105,6 +105,11 @@ span.fake-cover {
   justify-content: center;
 }
 
+/* override display for the hidden attribute */
+span.fake-cover[hidden] {
+  display: none;
+}
+
 div.fake-cover-text {
   color: $clay;
   font-variant: all-small-caps;

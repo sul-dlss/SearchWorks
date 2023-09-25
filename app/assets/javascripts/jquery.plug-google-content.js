@@ -115,9 +115,10 @@
         if(typeof imageEl.attr('src') === 'undefined') {
           imageEl.attr('src', thumbUrl)[0].hidden = false;
 
-          const cover = imageEl.parent().parent().find('span.fake-cover')[0]
-          if (cover)
-            cover.hidden = true;
+          const fakeCover = imageEl.parent().parent().find('span.fake-cover')[0]
+          if (fakeCover) {
+            fakeCover.hidden = true
+          }
         }
       }
     }
