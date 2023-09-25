@@ -94,7 +94,7 @@
   }
 }
 
-span.fake-cover {
+span.fake-cover:not([hidden]) {
   width: 130px;
   height: $sul-gallery-cover-height;
   margin: 0 auto;

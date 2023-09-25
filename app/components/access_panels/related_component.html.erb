@@ -1,8 +1,4 @@
-<%
-  visible = oclc.present? ?  'show' : 'hide'
-%>
-
-<%= render @layout.new(classes: ['panel-related', ('hide' unless oclc.present?)].compact) do |c| %>
+<%= render @layout.new(classes: ['panel-related'], hidden: !oclc.present?) do |c| %>
   <% c.title do %>
     More options
   <% end %>
