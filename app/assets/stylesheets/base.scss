@@ -10,12 +10,12 @@ a {
   }
 }
 
-body {
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
-}
-
 a:hover, a:focus, a:active  {
   @include link-styling;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
 }
 
 h1 {
