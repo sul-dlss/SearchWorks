@@ -15,7 +15,7 @@ describe SearchBuilder do
 
   describe "#database_prefix_search" do
     before do
-      allow(search_builder).to receive(:page_location).and_return(instance_double(SearchWorks::PageLocation, databases?: true))
+      allow(search_builder).to receive(:page_location).and_return(instance_double(PageLocation, databases?: true))
     end
 
     it "should handle 0-9 filters properly" do

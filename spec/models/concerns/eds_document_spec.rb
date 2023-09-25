@@ -14,7 +14,7 @@ describe EdsDocument do
     end
 
     it 'returns nil when fulltext is not available' do
-      expect(empty_document.html_fulltext?).to be_falsey
+      expect(empty_document).not_to be_html_fulltext
     end
   end
 end

@@ -3,7 +3,7 @@ require 'page_location'
 
 describe MastheadHelper do
   describe "#render_masthead_partial" do
-    let(:page_location) { SearchWorks::PageLocation.new(search_state) }
+    let(:page_location) { PageLocation.new(search_state) }
     let(:search_state) { instance_double(Blacklight::SearchState) }
 
     before { allow(helper).to receive(:page_location).and_return(page_location) }
@@ -104,8 +104,8 @@ describe MastheadHelper do
       allow(view).to receive(:search_state).and_return(instance_double(Blacklight::SearchState))
     end
 
-    it "returns a SearchWorks::PageLocation" do
-      expect(helper.page_location).to be_a SearchWorks::PageLocation
+    it "returns a PageLocation" do
+      expect(helper.page_location).to be_a PageLocation
     end
   end
 end
