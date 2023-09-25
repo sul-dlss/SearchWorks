@@ -1,33 +1,33 @@
 <% document ||= @document %>
 
 <% document.mods.resourceType.each do |resource_type| %>
-  <%= mods_record_field(resource_type) %>
+  <%= render ModsDisplay::FieldComponent.new(field: resource_type, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.imprint.each do |imprint| %>
-  <%= mods_record_field(imprint) %>
+  <%= render ModsDisplay::FieldComponent.new(field: imprint, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.language.each do |language| %>
-  <%= mods_record_field(language, ', ') %>
+  <%= render ModsDisplay::FieldComponent.new(field: language, delimiter: ', ', label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.description.each do |description| %>
-  <%= mods_record_field(description) %>
+  <%= render ModsDisplay::FieldComponent.new(field: description, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.extent.each do |extent| %>
-  <%= mods_record_field(extent) %>
+  <%= render ModsDisplay::FieldComponent.new(field: extent, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.form.each do |form| %>
-  <%= mods_record_field(form) %>
+  <%= render ModsDisplay::FieldComponent.new(field: form, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.geo.each do |geo| %>
-  <%= mods_record_field(geo) %>
+  <%= render ModsDisplay::FieldComponent.new(field: geo, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.cartographics.each do |cartographic| %>
-  <%= mods_record_field(cartographic) %>
+  <%= render ModsDisplay::FieldComponent.new(field: cartographic, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>

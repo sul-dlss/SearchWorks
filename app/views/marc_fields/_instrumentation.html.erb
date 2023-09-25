@@ -1,6 +1,6 @@
 <% instrumentation.values.each do |label, values| %>
-  <dt><%= label %></dt>
+  <dt class="col-md-3"><%= label %></dt>
   <% values.each do |value| %>
-    <dd><%= value[:value] %></dd>
+    <dd class="col-md-9"><%= value[:value] %></dd>
   <% end %>
 <% end %>

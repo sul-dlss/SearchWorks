@@ -13,7 +13,7 @@
         <%= render('articles/record/html_fulltext', document: document, fields: sections["Fulltext"].keys)%>
       </div>
     <% end %>
-    <dl class="row dl-invert">
+    <dl class="dl-horizontal dl-invert">
       <% sections.each do |section_name, fields| -%>
         <% if (section = render('articles/record/section_fields', document: document, fields_to_render: fields, fields: fields.keys)).present? -%>
           <% unless section_name == 'Fulltext' -%>
