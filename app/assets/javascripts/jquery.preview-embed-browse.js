@@ -105,7 +105,7 @@
 
       function init() {
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-        $closeBtn = $('<a class="preview-close"><span class="glyphicon glyphicon-remove"></span></a>');
+        $closeBtn = $('<a class="preview-close"><span class="bi-x"></span></a>');
         $arrow = $('<div class="preview-arrow"></div>');
       }
 
