@@ -7,11 +7,7 @@ EMAIL_TO:
 HOSTNAME: <%= (`echo $HOSTNAME`).gsub('.stanford.edu', '') %>
 STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
-SSRC_REQUESTS_URL: "http://host.example.com/link.ssds_request_form"
 HOOVER_REQUESTS_URL: 'https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20'
-LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
-WHEN_TO_PRUNE_DATA: '12:30am'
-NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
 PURL_EMBED_URL_SCHEME: 'https://purl.stanford.edu/*'
 PURL_EMBED_RESOURCE: 'https://purl.stanford.edu/'
@@ -26,7 +22,6 @@ EMAIL_THRESHOLD: 5
 GENERATE_SITEMAP: true
 DISABLE_SESSIONS: false
 THROTTLE_TRAFFIC: false
-OAC_REQUEST_LINKS: false
 OCLC:
   API_KEY: the-oclc-api-key
   BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
