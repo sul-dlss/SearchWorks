@@ -29,7 +29,7 @@ feature "Skip-to Navigation" do
     visit root_path
     fill_in 'q', with: '20'
     find('button#search').click
-    find(:css, '#toggle_bookmark_20').set(true)
+    find_by_id('toggle_bookmark_20').set(true)
     visit bookmarks_path
 
     within "#skip-link" do
