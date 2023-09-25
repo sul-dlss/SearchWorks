@@ -6,7 +6,7 @@ RSpec.describe ArticlesController do
     expect(subject).to be_a(EmailValidation)
   end
 
-  context '#index' do
+  describe '#index' do
     it 'shows a home page' do
       stub_article_service(docs: [SolrDocument.new(id: 'abc123')])
       get :index
@@ -38,7 +38,7 @@ RSpec.describe ArticlesController do
     end
   end
 
-  context '#show' do
+  describe '#show' do
     it 'shows a detail page' do
       stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')])
       get :show, params: { id: '123' }
@@ -56,10 +56,10 @@ RSpec.describe ArticlesController do
     end
   end
 
-  context '#fulltext_link' do
+  describe '#fulltext_link' do
     it 'redirect to a fulltext link' do
       stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
-        eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdf' }])])
+                                                                  eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdf' }])])
       get :fulltext_link, params: { id: '123', type: :pdf }
       expect(response).to redirect_to('http://example.com/file.pdf')
     end

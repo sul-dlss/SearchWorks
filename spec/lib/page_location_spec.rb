@@ -1,14 +1,14 @@
 require 'spec_helper'
 require 'page_location'
 
-RSpec.describe SearchWorks::PageLocation do
+RSpec.describe PageLocation do
   let(:params) { { f: { format: ["Database"] } } }
   # let(:config) { instance_double(Blacklight::Configuration) }
   let(:controller) { CatalogController.new } # instance_double(CatalogController, controller_name: 'catalog', action_name: action) }
   let(:action) { 'index' }
   let(:search_state) { Blacklight::SearchState.new(params, controller.blacklight_config, controller) }
 
-  subject(:page_location) { SearchWorks::PageLocation.new(search_state) }
+  subject(:page_location) { PageLocation.new(search_state) }
 
   before do
     allow(controller).to receive_messages(action_name: action, params:)
