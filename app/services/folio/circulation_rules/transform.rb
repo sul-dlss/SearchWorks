@@ -83,7 +83,7 @@ module Folio
           when 'last-line'
             ->(policy) { -1 * policy[:line] }
           when Array
-            order = p.pluck(:letter)
+            order = p.pluck(:letter).map(&:to_s)
 
             lambda do |policy|
               # We're going through the list of criterium priorities and building up a binary representation for whether the
