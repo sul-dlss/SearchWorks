@@ -1,5 +1,6 @@
 <%= form_tag url_for(:controller => "catalog", :action => "email"), :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
-  <%= render :partial=>'shared/email_form' %>
+  <div class="modal-body">
+    <%= render :partial=>'shared/email_form' %>
     <% @documents&.each do |doc| %>
       <%=hidden_field_tag "id[]", doc.id %>
     <% end %>

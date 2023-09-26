@@ -1,27 +1,24 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.title { params[:title] } %>
 
-  <% component.body do %>
-    <div class="stackmap col-md-12" data-behavior="stackmap" data-callnumber="<%= params[:callnumber] %>"  data-library="<%= params[:library] %>" data-location="<%= params[:location] %>" data-stackmap-url="<%= params[:api_url] %>">
-      <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
+  <div class="stackmap col-md-12" data-behavior="stackmap" data-callnumber="<%= params[:callnumber] %>"  data-library="<%= params[:library] %>" data-location="<%= params[:location] %>" data-stackmap-url="<%= params[:api_url] %>">
+    <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
 
-      <div class="map-template">
-        <div class="controls">
-          <div class="zoom-controls col-md-7 col-xs-6">
-            <%= link_to t('blacklight.tools.stackmap.zoom_in').html_safe, "", class: "zoom-in" %>
-            <%= link_to t('blacklight.tools.stackmap.zoom_out').html_safe, "", class: "zoom-out" %>
-            <%= link_to t('blacklight.tools.stackmap.reset_size').html_safe, "", class: "zoom-fit" %>
-          </div>
-          <div class="show-description col-md-5  col-xs-6">
-            <%= link_to '<i class="fa fa-list"></i> <span class="text-swap">Show</span> text directions'.html_safe, "" %>
-          </div>
+    <div class="map-template">
+      <div class="controls">
+        <div class="zoom-controls col-md-7 col-xs-6">
+          <%= link_to t('blacklight.tools.stackmap.zoom_in').html_safe, "", class: "zoom-in" %>
+          <%= link_to t('blacklight.tools.stackmap.zoom_out').html_safe, "", class: "zoom-out" %>
+          <%= link_to t('blacklight.tools.stackmap.reset_size').html_safe, "", class: "zoom-fit" %>
         </div>
-        <div class="osd col-md-12">
-        </div>
-        <div class="text-directions col-md-12">
+        <div class="show-description col-md-5  col-xs-6">
+          <%= link_to '<i class="fa fa-list"></i> <span class="text-swap">Show</span> text directions'.html_safe, "" %>
         </div>
       </div>
-
+      <div class="osd col-md-12">
+      </div>
+      <div class="text-directions col-md-12">
+      </div>
     </div>
-  <% end %>
+  </div>
 <% end %>
