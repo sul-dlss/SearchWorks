@@ -17,9 +17,9 @@ describe DigitalCollection do
     let(:collection_members) { DigitalCollection::CollectionMembers.new(collection) }
     let(:collection_members_with_rows) { DigitalCollection::CollectionMembers.new(collection, rows: 17) }
     let(:stub_solr) { double('solr') }
-    let(:stub_params) { { params: { fq: "collection:\"1234\"", rows: 20 } } }
-    let(:rows_params) { { params: { fq: "collection:\"1234\"", rows: 17 } } }
-    let(:small_rows_params) { { params: { fq: "collection:\"1234\"", rows: 3 } } }
+    let(:stub_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 20 } } }
+    let(:rows_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 17 } } }
+    let(:small_rows_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 3 } } }
     let(:stub_response) { {
       'response' => {
         'numFound' => 2,

@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "collection_members/_file_collection_members" do
-  let(:document) { SolrDocument.new() }
+  let(:document) { SolrDocument.new(id: 12345) }
   let(:collection_members) { [
     SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean"),
     SolrDocument.new(id: 2, pub_date: "2011")
