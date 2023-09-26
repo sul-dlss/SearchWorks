@@ -19,7 +19,7 @@ describe 'Options Facet' do
     end
 
     within('.breadcrumb') do
-      expect(page).to have_css('.filterValue', text: 'Limiter1')
+      expect(page).to have_css('.filter-value', text: 'Limiter1')
     end
   end
 end
