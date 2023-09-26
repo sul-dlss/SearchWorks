@@ -67,13 +67,15 @@ RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
       click_button 'search'
     end
 
-    it 'should display active icon on the current active per page' do
+    it 'displays active icon on the current active per page' do
       within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: '20 per page').click
         within 'a', text: '20' do
           expect(page).to have_css('i.active-icon')
         end
-        page.find('#per_page-dropdown ul li a', text: '50').click
+        within '#per_page-dropdown' do
+          click_link '50'
+        end
         page.find('button.btn.btn-sul-toolbar', text: '50 per page').click
         within 'a', text: '20' do
           expect(page).not_to have_css('i.active-icon')
