@@ -3,13 +3,6 @@
 
     <%= render "shared/record/record_toolbar" %>
 
-    <!-- TODO: remove after migration is complete -->
-    <% if folio_disclaimer(@document) %>
-      <div class="alert alert-warning text-center" role="alert">
-       <span class="glyphicon glyphicon-warning-sign"></span>&nbsp;<b>MIGRATION ERROR</b>: FOLIO is missing source record data; this bibliographic data was derived from the FOLIO instance metadata.
-      </div>
-    <% end %>
-
     <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_presenter(@document).html_title, :application_name => "#{I18n.t('blacklight.application_name')} catalog" -%>
     <% content_for(:head) { render_link_rel_alternates } -%>
     <%# this should be in a partial -%>
