@@ -121,20 +121,20 @@ RSpec.feature 'Article Searching' do
     scenario 'start over button returns users to articles home page' do
       article_search_for('kittens')
 
-      expect(page).to have_css('.appliedFilter', text: /kittens/)
+      expect(page).to have_css('.applied-filter', text: /kittens/)
 
       find('a.btn-reset').click
       expect(page).to have_current_path(articles_path)
-      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+      expect(page).not_to have_css('.applied-filter', text: /kittens/)
     end
 
     scenario 'removing last breadcrumb redirects to articles home' do
       article_search_for('kittens')
 
-      expect(page).to have_css('.appliedFilter', text: /kittens/)
+      expect(page).to have_css('.applied-filter', text: /kittens/)
 
       first(:css, 'a.remove').click
-      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+      expect(page).not_to have_css('.applied-filter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
   end
