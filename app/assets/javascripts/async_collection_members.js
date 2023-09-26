@@ -18,14 +18,16 @@ var AsyncCollectionMembers = (function() {
                           '<p class="col-md-3"></p>' +
                         '</div>';
       element.html(placeholder);
-      $.ajax(element.data().collectionMembersPath).success(function(data) {
-        element.hide().html(data.html).fadeIn(500);
+      fetch(element.data().collectionMembersPath)
+        .then((response) => response.json())
+        .then((json) => {
+          element.hide().html(json.html).fadeIn(500);
 
-        // Trigger filmstrip rendering and preview
-        element.find('*[data-behavior="preview-filmstrip"]').previewFilmstrip();
-
-        _this.showAndUpdateDigitalContentCount(data);
-      });
+          // Trigger filmstrip rendering and preview
+          element.find('*[data-behavior="preview-filmstrip"]').previewFilmstrip();
+  
+          _this.showAndUpdateDigitalContentCount(json);
+        })
     },
 
     collectionMemberElements: function() {
