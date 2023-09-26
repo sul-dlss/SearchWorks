@@ -1,16 +1,12 @@
-<div class="modal-header">
-  <% if request.xhr? %>
-    <button type="button" class="blacklight-modal-close close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  <% end %>
-  <h3 class="modal-title"><%= document_presenter(document).heading %></h3>
-</div>
-<div class="modal-body">
-  <% document.citations.each do |format, citation| %>
-    <% unless format == 'NULL' %>
-      <h4><%= format %></h4>
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.title { t('blacklight.email.form.title') } %>
+
+  <% component.body do %>
+    <% document.citations.each do |format, citation| %>
+      <% unless format == 'NULL' %>
+        <h4><%= format %></h4>
+      <% end %>
+      <%= citation %>
     <% end %>
-    <%= citation %>
   <% end %>
-</div>
+<% end %>
