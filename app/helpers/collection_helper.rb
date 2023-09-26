@@ -27,7 +27,8 @@ module CollectionHelper
   def collection_breadcrumb_value(collection_id)
     if @response.documents.first&.index_parent_collections.present?
       collection = @response.documents.first.index_parent_collections.find do |coll|
-        coll[:id] == collection_id
+        # strip leading 'a' from collection catkeys
+        coll[:id] == collection_id.sub(/^a(\d+)$/, '\1')
       end
       return document_presenter(collection).heading if collection.present?
     end
