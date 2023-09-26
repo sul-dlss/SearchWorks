@@ -7,7 +7,7 @@
         <div class="card-body p-1">
           <%= tag.span 'You are here!', class: 'you-are-here-badge' unless article_search? %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
-          <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
+          <p class="d-none d-sm-block">Physical and digital books, media, journals, archives, and databases.</p>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="card-body p-1">
           <%= tag.span 'You are here!', class: 'you-are-here-badge' if article_search? %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
-          <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>
+          <p class="d-none d-sm-block">Journal articles, e-books, and other e-resources.</p>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
         <%= image_tag 'homepage/guides.png', class: 'card-img-top', alt: '', aria: { hidden: true } %>
         <div class="card-body p-1">
           <h3><%= link_to 'Guides', 'https://guides.library.stanford.edu' %></h3>
-          <p class="hidden-xs">Course- and topic-based guides to collections, tools, and services.</p>
+          <p class="d-none d-sm-block">Course- and topic-based guides to collections, tools, and services.</p>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
 
         <div class="card-body p-1">
           <h3><%= link_to 'Library website', 'https://library.stanford.edu' %></h3>
-          <p class="hidden-xs">Libraries and subject specialists; blogs, events, and policies.</p>
+          <p class="d-none d-sm-block">Libraries and subject specialists; blogs, events, and policies.</p>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
         <%= image_tag 'homepage/exhibits.jpg', class: 'card-img-top', alt: '', aria: { hidden: true } %>
         <div class="card-body p-1">
           <h3><%= link_to 'Exhibits', 'https://exhibits.stanford.edu' %></h3>
-          <p class="hidden-xs">Digital showcases for research and teaching.</p>
+          <p class="d-none d-sm-block">Digital showcases for research and teaching.</p>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
         <%= image_tag 'homepage/earthworks.jpg', class: 'card-img-top', alt: '', aria: { hidden: true } %>
         <div class="card-body p-1">
           <h3><%= link_to 'EarthWorks', 'https://earthworks.stanford.edu' %></h3>
-          <p class="hidden-xs">Geospatial content, including GIS datasets, digitized maps, and census data.</p>
+          <p class="d-none d-sm-block">Geospatial content, including GIS datasets, digitized maps, and census data.</p>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
             </div>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
-              <p class="hidden-xs">See an overview of what's available for your topic in all these sources.</p>
+              <p class="d-none d-sm-block">See an overview of what's available for your topic in all these sources.</p>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://guides.library.stanford.edu/search-services' %></h3>
-              <p class="hidden-xs">Tools to help you discover resources at Stanford and beyond.</p>
+              <p class="d-none d-sm-block">Tools to help you discover resources at Stanford and beyond.</p>
             </div>
           </div>
         </div>
