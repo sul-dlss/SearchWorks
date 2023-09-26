@@ -1,10 +1,10 @@
 class CollectionMembersController < ApplicationController
   def show
-    @document = SolrDocument.find(show_param)
+    @document = SolrDocument.find(collection_id)
     respond_to do |format|
       format.json {
         render(
-          json: @document.collection_members.with_type(params.permit(:type)[:type]),
+          json: @document.collection_members.with_type(collection_params[:type]),
           layout: false
         )
       }
@@ -13,7 +13,11 @@ class CollectionMembersController < ApplicationController
 
   private
 
-  def show_param
-    params.require(:id)
+  def collection_params
+    params.permit(:id, :type, :format)
+  end
+
+  def collection_id
+    collection_params.require(:id)
   end
 end
