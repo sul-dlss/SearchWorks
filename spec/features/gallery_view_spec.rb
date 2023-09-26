@@ -3,10 +3,10 @@ require 'spec_helper'
 RSpec.feature 'Gallery View' do
   scenario 'Search results are rendered properly', js: true do
     visit search_catalog_path f: { format: ['Book'] }
-    page.find('#view-type-dropdown button.dropdown-toggle').click
-    page.find('#view-type-dropdown .dropdown-menu li a.view-type-gallery').click
-
-    wait_for_ajax
+    within '#view-type-dropdown' do
+      click_button 'View'
+      click_link 'gallery'
+    end
 
     expect(page).to have_css('i.fa.fa-th')
     expect(page).to have_css('div.callnumber-bar', text: 'ABC')
