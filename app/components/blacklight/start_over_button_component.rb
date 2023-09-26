@@ -3,7 +3,7 @@
 module Blacklight
   class StartOverButtonComponent < Blacklight::Component
     def call
-      link_to("<i class='fa fa-fast-backward'></i> <span class='hidden-xs'>#{label}</span></a>".html_safe, start_over_path, class: 'btn btn-primary btn-reset')
+      link_to("<i class='fa fa-fast-backward'></i> <span class='d-none d-sm-inline'>#{label}</span></a>".html_safe, start_over_path, class: 'btn btn-primary btn-reset')
     end
 
     private
