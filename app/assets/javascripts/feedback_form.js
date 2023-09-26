@@ -44,17 +44,18 @@ Blacklight.onLoad(function(){
           $thisform.on('submit', function(e){
             e.preventDefault();
             var valuesToSubmit = $(this).serialize();
-            $.ajax({
-              url: form.action,
-              data: valuesToSubmit,
-              type: 'post'
-            }).success(function(response){
-              if (isSuccess(response)){
-                $($el).collapse('hide');
-                $($form)[0].reset();
-              }
-              renderFlashMessages(response);
-            });
+            console.log(valuesToSubmit)
+            fetch(form.action, {
+              method: 'POST',
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: valuesToSubmit
+            }).then((resp) => resp.json())
+            .then((json) => {
+              $($el).collapse('hide');
+              $($form)[0].reset();
+              renderFlashMessages(json);
+            })
+
             return false;
           });
 
