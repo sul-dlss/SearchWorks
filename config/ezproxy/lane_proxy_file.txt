@@ -457,6 +457,7 @@ deckerip.com
 deepresearch.amplyfi.com
 deposit.d-nb.de
 deposit.ddb.de
+deposit.dnb.de
 dermatology.mhmedical.com
 dfg-viewer.de
 diabetes.jmir.org
@@ -534,6 +535,7 @@ eba.worldbank.org
 ebm.bmj.com
 ebmh.bmj.com
 ebn.bmj.com
+ebook.3m.com
 ebook.kstudy.com
 ebook.rsc.org
 ebookcentral.proquest.com
@@ -1457,6 +1459,7 @@ skeletalmusclejournal.biomedcentral.com
 sljol.info
 small.wenzibase.com
 smj.sma.org.sg
+smrj.scholasticahq.com
 society.kisti.re.kr
 sp.lyellcollection.org
 spiedigitallibrary.org
@@ -2987,6 +2990,7 @@ www.wjpch.com
 www.wjps.ir
 www.wlupress.wlu.ca
 www.wma.net
+www.worldbank.org
 www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
