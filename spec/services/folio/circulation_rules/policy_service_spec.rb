@@ -58,7 +58,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
         )
       }
 
-      it 'is pageable' do
+      it 'is not requestable' do
         expect(described_class.instance.item_request_policy(item)['requestTypes']).to be_blank
       end
     end
