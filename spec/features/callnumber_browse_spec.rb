@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Callnumber Browse', js: true do
+RSpec.describe 'Callnumber Browse', js: true do
   describe 'embedded on the record page' do
     it 'renders' do
       visit solr_document_path('1')
