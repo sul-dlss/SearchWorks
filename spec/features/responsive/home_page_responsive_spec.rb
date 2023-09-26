@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Responsive Home Page", feature: true, js: true do
+RSpec.describe "Responsive Home Page", feature: true, js: true do
   describe "facets" do
     it "shows the facets on large screens" do
       visit root_path
