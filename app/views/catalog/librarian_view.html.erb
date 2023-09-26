@@ -1,16 +1,14 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.title {t('blacklight.search.librarian_view.title') } %>
 
-  <% component.body do %>
-    <% if @document[:last_updated] %>
-      <p>Last updated in SearchWorks on <%= l @document[:last_updated].to_time.in_time_zone, format: :long %></p>
-    <% end %>
-    <% if @document.respond_to?(:to_marc) %>
-      <%= render "marc_view" %>
-    <% elsif @document.mods? %>
-      <%= render "mods_view"%>
-    <% else %>
-      <%= t('blacklight.search.librarian_view.empty') %>
-    <% end %>
+  <% if @document[:last_updated] %>
+    <p>Last updated in SearchWorks on <%= l @document[:last_updated].to_time.in_time_zone, format: :long %></p>
+  <% end %>
+  <% if @document.respond_to?(:to_marc) %>
+    <%= render "marc_view" %>
+  <% elsif @document.mods? %>
+    <%= render "mods_view"%>
+  <% else %>
+    <%= t('blacklight.search.librarian_view.empty') %>
   <% end %>
 <% end %>
