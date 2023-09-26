@@ -323,7 +323,7 @@ en:
       sms: 'text'
       printer: 'printer'
 
-    back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
+    back_to_search: '<i class="fa fa-fast-backward"></i><span class="d-none d-sm-inline">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
     connection_form:
