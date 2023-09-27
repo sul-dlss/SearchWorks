@@ -95,6 +95,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
+    config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
     config.index.title_field = Blacklight::Configuration::Field.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_method = :thumbnail
