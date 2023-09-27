@@ -439,6 +439,7 @@ Lint/MissingSuper:
     - 'app/components/advanced_search_range_limit_component.rb'
     - 'app/components/blacklight/constraint_layout_component.rb'
     - 'app/components/blacklight/facet_field_component.rb'
+    - 'app/components/searchworks/response/facet_group_component.rb'
     - 'app/models/marc_fields/linked_author.rb'
 
 # Offense count: 1
