@@ -3,7 +3,7 @@
   <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-toggle="collapse" href="#toggleFulltext" aria-expanded="true" aria-controls="toggleFulltext">
     <h2>Hide full text <i class='fa fa-chevron-down'></i></h2>
   </button>
-  <div class='eds-full-text-section section-body collapse in' id="toggleFulltext">
+  <div class='eds-full-text-section section-body collapse show' id="toggleFulltext">
     <% doc_presenter.field_presenters.select { |presenter| fields.map(&:to_s).include? presenter.field_config.key.to_s }.each do |field_presenter| -%>
       <% if field_presenter.render_field? %>
         <div class="blacklight-<%= field_presenter.key %>"><%= field_presenter.render %></div>
