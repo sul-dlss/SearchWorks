@@ -1,12 +1,9 @@
 a {
   border-bottom: 1px solid transparent;
-  color: $sul-link-color;
-  text-decoration: none;
 
   &.disabled {
     color: $sul-btn-disabled-color;
     cursor: not-allowed;
-    text-decoration: none;
   }
 }
 

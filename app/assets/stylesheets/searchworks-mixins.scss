@@ -131,9 +131,7 @@
 }
 
 @mixin link-styling {
-  border-bottom: 1px solid $sul-link-color-border;
-  color: $sul-link-color-border;
-  text-decoration: none;
+  border-bottom: 1px solid $sul-link-color-hover;
 }
 
 @mixin masthead-panel {
