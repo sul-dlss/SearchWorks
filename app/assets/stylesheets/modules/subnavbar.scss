@@ -101,7 +101,8 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-min) {
+  
+  @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding: 0 15px;
     }

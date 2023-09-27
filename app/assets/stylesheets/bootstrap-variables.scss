@@ -66,18 +66,6 @@ $headings-font-weight: 400;
 
 // Bootstrap variables for print sheets
 
-$screen-lg-min: 992px;
-$screen-md-max: 991px;
-$screen-md-min: 768px;
-$screen-md: 768px;
-$screen-sm: 576px;
-$screen-sm-max: 767px;
-$screen-sm-min: 576px;
-$screen-xs-max: 575px;
-$screen-xs-min: 320px;
-$navbar-margin-bottom: 0.75rem;
-$border-radius-base: 0.25rem;
-$caret-width-base: 1.5rem;
 $pagination-border: #ddd;
 $padding-base-vertical: 0.5rem;
 $padding-large-vertical: 1rem;
@@ -85,13 +73,10 @@ $padding-xs-vertical: 0.25rem;
 $padding-base-horizontal: 0.75rem;
 $padding-large-horizontal: 1.5rem;
 $padding-xs-horizontal: 0.25rem;
-$line-height-computed: 1.5;
 $nav-link-padding: 0.5rem 1rem;
 $navbar-default-toggle-border-color: #ddd;
 $navbar-default-toggle-icon-bar-bg: #ddd;
-$brand-danger: #d9534f;
 $grid-float-breakpoint: 768px;
-$breadcrumb-color: #ccc;
 
 .control-label {
   font-size: $font-size-base;

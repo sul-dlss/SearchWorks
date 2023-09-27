@@ -1,5 +1,5 @@
 // Currently experimental in Bootstrap
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(md) {
   .row-eq-height {
     display: -webkit-box;
     display: -webkit-flex;

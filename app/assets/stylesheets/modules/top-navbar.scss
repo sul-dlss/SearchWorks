@@ -39,7 +39,7 @@
   overflow:hidden;
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   #topnav {
     padding-left: 10px;
     padding-right: 10px;

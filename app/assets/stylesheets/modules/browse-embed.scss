@@ -13,7 +13,7 @@
   text-align: right;
 }
 
-@media screen and (max-width: $screen-md) {
+@include media-breakpoint-down(md) {
   .view-full-page {
     line-height: normal;
     text-align: left;

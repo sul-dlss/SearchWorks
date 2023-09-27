@@ -90,7 +90,7 @@
     }
   }
 
-  @media screen and (max-width: $screen-md-min) {
+  @include media-breakpoint-down(md) {
     .navbar-form {
       border: 0;
       margin: 0 auto;
@@ -149,7 +149,7 @@
     }
   }
 
-  @media screen and (min-width: $screen-md-min) {
+  @include media-breakpoint-up(md) {
     .navbar-form {
       margin: 0 auto;
     }

@@ -87,7 +87,7 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   .record-toolbar {
     .navbar-collapse {
       overflow-x: hidden;

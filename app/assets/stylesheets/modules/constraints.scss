@@ -25,7 +25,7 @@
     }
 
   }
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(sm) {
     .constraint {
       &.query .filter-value {
         max-width: 227px;

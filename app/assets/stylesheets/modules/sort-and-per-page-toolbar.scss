@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: $screen-xs-min) { 
+@include media-breakpoint-up(xs) {
   .sort-and-per-page {
     #search-results-toolbar {
       position: relative;
@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-width: $screen-xs-max) { 
+@include media-breakpoint-down(sm) {
   .sort-and-per-page {
     padding: 4px 0;
     margin-top: .8em;
