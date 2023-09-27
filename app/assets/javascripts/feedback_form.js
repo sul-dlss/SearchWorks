@@ -43,18 +43,17 @@ Blacklight.onLoad(function(){
           $thisform.find('#last_search').val(lastSearch);
           $thisform.on('submit', function(e){
             e.preventDefault();
-            var valuesToSubmit = $(this).serialize();
-            $.ajax({
-              url: form.action,
-              data: valuesToSubmit,
-              type: 'post'
-            }).success(function(response){
-              if (isSuccess(response)){
-                $($el).collapse('hide');
-                $($form)[0].reset();
-              }
-              renderFlashMessages(response);
-            });
+            const valuesToSubmit = new URLSearchParams(new FormData($thisform[0]))
+            fetch(form.action, {
+              method: 'POST',
+              body: valuesToSubmit
+            }).then((resp) => resp.json())
+            .then((json) => {
+              $($el).collapse('hide');
+              $($form)[0].reset();
+              renderFlashMessages(json);
+            })
+
             return false;
           });
 
