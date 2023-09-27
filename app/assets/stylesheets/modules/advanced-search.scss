@@ -1,4 +1,7 @@
 .advanced-search-form {
+  .advanced {
+    @extend .my-3;
+  }
   .advanced-search-start-over {
     margin-left: 20px;
   }

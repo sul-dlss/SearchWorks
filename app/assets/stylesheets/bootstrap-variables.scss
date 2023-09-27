@@ -116,18 +116,14 @@ $breadcrumb-color: #ccc;
   filter: alpha(opacity=50);
 }
 
-.in {
-  display: inline;
-}
-
 .btn.btn-secondary {
   color: #3f3c30;
-  background-color: #F9F6EF;
-  border-color: #dad7cb;
+  background-color: $light-sandstone;
+  border-color: $cloud;
 }
 
 .btn.btn-outline-secondary {
   color: #3f3c30;
-  background-color: #F9F6EF;
-  border-color: #dad7cb;
+  background-color: $light-sandstone;
+  border-color: $cloud;
 }
