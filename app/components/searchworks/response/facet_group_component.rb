@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# This is a copy of the Blacklight 8 version of this component. 
-# We should be able to delete this local copy after we migrate to Blacklight 8 
+# This is a copy of the Blacklight 8 version of this component.
+# We should be able to delete this local copy after we migrate to Blacklight 8
 module Searchworks
   module Response
     # Render a group of facet fields
