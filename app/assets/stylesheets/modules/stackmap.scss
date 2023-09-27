@@ -69,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   .stackmap {
     .map-template {
       .osd {
