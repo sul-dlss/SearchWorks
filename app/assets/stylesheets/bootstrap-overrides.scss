@@ -12,6 +12,24 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+h1 {
+  color: $sul-h1-font-color;
+  font-weight: 300;
+}
+
+h2 {
+  color: $sul-h2-font-color;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: $sul-h3-font-color;
+}
+
+h4 {
+  color: $sul-h4-font-color;
+}
+
 small,
 .small {
   font-size: .937em;
