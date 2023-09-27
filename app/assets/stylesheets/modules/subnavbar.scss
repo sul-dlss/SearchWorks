@@ -16,9 +16,13 @@
     padding-left: 0;
   }
 
-  // initial/unopened state is 270deg, triangle pointing to the right
-  #search-subnavbar-collapse .navbar-nav .dropdown-toggle.search-navbar-dropdown-btn-rotate-270 span.caret {
-    @extend .fa-rotate-270;
+  #search-subnavbar-collapse .navbar-nav {
+    .dropdown-toggle::after {
+      transform: rotate(270deg);
+    }
+    .dropdown.show .dropdown-toggle::after {
+      transform: rotate(0deg);
+    }
   }
 
   button.navbar-toggler {
