@@ -18,13 +18,23 @@ AllCops:
 Rails:
   Enabled: true
 
+# Offense count: 6
+# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns, inherit_mode.
+# AllowedMethods: refine
+Metrics/BlockLength:
+  AllowedMethods:
+    - configure_blacklight
+    - rule # Parslet Transform
+  Exclude:
+    - '**/*.rake'
+    - 'config/**/*.rb'
+    - 'spec/**/*'
+    - 'app/views/**/*.atom.builder'
+  Max: 20
+
 Metrics/ModuleLength:
   Exclude:
     - 'spec/fixtures/**/*'
-
-Metrics/BlockLength:
-  Exclude:
-    - 'spec/**/*'
 
 Metrics/ClassLength:
   Exclude:
