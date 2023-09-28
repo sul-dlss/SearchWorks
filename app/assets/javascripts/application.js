@@ -17,10 +17,9 @@
 //= require trunk8
 //= require jquery-scrollspy
 //= require leaflet
-//= require bootstrap/tab
 //
 // Required by Blacklight
-//= require bootstrap/tooltip
+
 //= require popper
 //= require bootstrap
 //= require blacklight/blacklight
