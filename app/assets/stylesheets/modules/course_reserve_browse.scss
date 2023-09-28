@@ -1,28 +1,32 @@
-.table-top-bar {
-  color: $white;
-  padding: 0.6rem 1.5rem;
+.dataTables_wrapper {
+  .table-top-bar {
+    color: $white;
+    padding: 0.6rem 1.5rem;
 
-  @include sul-toolbar-bg-border;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+    @include sul-toolbar-bg-border;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 
-  label {
-    margin-bottom: 0;
+    label {
+      margin-bottom: 0;
+    }
+
+    .dataTables_info {
+      padding-top: 0;
+    }
   }
 
-  div.dataTables_length select {
-    margin-right: 0.2em;
+  .dataTables_paginate {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    .active {
+      span {
+        // This fixes a bug in datatables, where the active page doesn't have the page-link class.
+        @extend .page-link;
+      }
+    }
   }
-
-  .dataTables_info {
-    padding-top: 0;
-  }
-}
-
-#course-reserves-browse_paginate {
-  padding-top: 38px;
-  padding-bottom: 38px;
 }

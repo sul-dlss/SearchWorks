@@ -18,8 +18,6 @@
 //= require trunk8
 //= require jquery-scrollspy
 //= require leaflet
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require bootstrap/tab
 //
 // Required by Blacklight

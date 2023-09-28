@@ -94,7 +94,6 @@ gem "faraday"
 gem "config"
 gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
-gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
