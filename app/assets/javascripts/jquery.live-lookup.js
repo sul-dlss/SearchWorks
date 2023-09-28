@@ -39,7 +39,7 @@
               }
               if ( dom_item.data('request-url') ) {
                 var link = $(
-                  "<a rel='nofollow' class='btn btn-secondary btn-xs request-button' title='Opens in new tab' target='_blank' href='" + dom_item.data('request-url') + "'>Request <span class='sr-only'>(opens in new tab)</span></a>"
+                  "<a rel='nofollow' class='btn btn-xs request-button' title='Opens in new tab' target='_blank' href='" + dom_item.data('request-url') + "'>Request <span class='sr-only'>(opens in new tab)</span></a>"
                 );
                 $('.request-link', dom_item).html(link);
               }
