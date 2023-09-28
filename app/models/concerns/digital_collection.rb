@@ -68,7 +68,7 @@ module DigitalCollection
     def response
       @response ||= blacklight_solr.select(
         params: {
-          fq: "collection:\"#{@document[:id]}\"",
+          fq: collection_member_params,
           rows: 20
         }
       )['response']
@@ -95,6 +95,14 @@ module DigitalCollection
 
     def blacklight_solr
       Blacklight.default_index.connection
+    end
+
+    # @return [String] a Solr query string
+    # search for items with collection set to both prefixed and non-prefixed ids
+    def collection_member_params
+      [document[:id], document.prefixed_id].uniq.map do |collection_id|
+        "collection:\"#{collection_id}\""
+      end.join(" OR ")
     end
   end
 end

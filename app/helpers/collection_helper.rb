@@ -1,10 +1,10 @@
 module CollectionHelper
   def link_to_collection_members(link_text, document, options = {})
-    link_to(link_text, search_catalog_path(f: { collection: [document[:id]] }), options)
+    link_to(link_text, collection_members_path(document), options)
   end
 
   def collection_members_path(document, options = {})
-    search_catalog_path(f: { collection: [document[:id]] })
+    search_catalog_path(f: { collection: [document.prefixed_id] })
   end
 
   def collection_members_enumeration(document)
@@ -27,7 +27,8 @@ module CollectionHelper
   def collection_breadcrumb_value(collection_id)
     if @response.documents.first&.index_parent_collections.present?
       collection = @response.documents.first.index_parent_collections.find do |coll|
-        coll[:id] == collection_id
+        # strip leading 'a' from collection catkeys
+        coll[:id] == collection_id.sub(/^a(\d+)$/, '\1')
       end
       return document_presenter(collection).heading if collection.present?
     end

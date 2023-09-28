@@ -23,6 +23,7 @@ describe CollectionMember do
 
   describe "#parent_collections" do
     let(:multi_collection) { SolrDocument.new(collection: ['12345', '54321']) }
+    let(:catkey_prefix) { SolrDocument.new(collection: ['a12345']) }
     let(:stub_solr) { double('solr') }
     let(:stub_params) { { params: { fq: "id:12345" } } }
     let(:stub_response) { {
@@ -47,6 +48,9 @@ describe CollectionMember do
     end
     it "#parent_collection_params should return all IDs joined w/ OR" do
       expect(multi_collection.send(:parent_collection_params)).to eq "id:12345 OR id:54321"
+    end
+    it 'should strip leading "a" from collection ids' do
+      expect(catkey_prefix.send(:parent_collection_params)).to eq "id:12345"
     end
     it "should return nil for non collection members" do
       expect(non_member.parent_collections).to be_nil
