@@ -4,6 +4,10 @@
   font-size: $h3-font-size;
   padding: 10px;
 
+  .dropdown-menu {
+    @include toolbar-dropdown;
+  }
+
   ul li a {
     border-bottom: 0px;
 
