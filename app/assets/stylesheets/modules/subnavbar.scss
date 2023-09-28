@@ -23,6 +23,9 @@
     .dropdown.show .dropdown-toggle::after {
       transform: rotate(0deg);
     }
+    .dropdown:not(.show) .dropdown-toggle::after {
+      vertical-align: middle;
+    }
   }
 
   button.navbar-toggler {
