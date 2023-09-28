@@ -14,23 +14,29 @@ describe RequestLinkHelper do
 
   describe '#request_url' do
     it 'returns a url including the catkey' do
-      link = request_url(document, library: 'library', location: 'location')
+      link = request_url(document, library: 'library', origin_location: 'location')
       expect(link).to match(/item_id=1234/)
     end
 
     it 'returns a url including the library' do
-      link = request_url(document, library: 'library', location: 'location')
+      link = request_url(document, library: 'library', origin_location: 'location')
       expect(link).to match(/origin=library/)
     end
 
     it 'returns a url including the location' do
-      link = request_url(document, library: 'library', location: 'location')
+      link = request_url(document, library: 'library', origin_location: 'location')
       expect(link).to match(/origin_location=location/)
     end
 
     it 'returns a url including any other provided parameters' do
-      link = request_url(document, library: 'library', location: 'location', foo: 'bar')
+      link = request_url(document, library: 'library', origin_location: 'location', foo: 'bar')
       expect(link).to match(/foo=bar/)
+    end
+
+    context 'when a folio location is passed' do
+      subject(:link) { request_url(document, location: 'GRE-STACKS') }
+
+      it { is_expected.to include('location=GRE-STACKS') }
     end
   end
 end

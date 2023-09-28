@@ -59,7 +59,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     helpers.request_url(
       @document,
       library: @library,
-      location: @location
+      origin_location: @location
     )
   end
 

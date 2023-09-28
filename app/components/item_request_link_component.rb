@@ -34,7 +34,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
     helpers.request_url(
       document,
       library:,
-      location: home_location,
+      origin_location: home_location,
       barcode:
     )
   end
