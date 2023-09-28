@@ -1,11 +1,11 @@
 <%= tag.dl(**@html_attrs.merge(class: 'row')) do %>
   <% courses.each do |course| %>
-    <dt class="col-md-3">Course</dt>
-    <dd class="col-md-9">
+    <dt class="col-md-4">Course</dt>
+    <dd class="col-md-8">
       <%= link_to_course_reserve_course(course) %>
     </dd>
-    <dt class="col-md-3">Instructor(s)</dt>
-    <dd class="col-md-9">
+    <dt class="col-md-4">Instructor(s)</dt>
+    <dd class="col-md-8">
       <%= course.instructor %>
     </dd>
   <% end %>

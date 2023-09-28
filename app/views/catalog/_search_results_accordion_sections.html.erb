@@ -1,8 +1,10 @@
 <% library_section = render(partial: 'catalog/accordion_section_library', locals: { document: document }) %>
 <% reserves_section = render(partial: 'catalog/accordion_section_course_reserves', locals: { document: document }) %>
 <% if library_section.present? || reserves_section.present? %>
-  <div class="accordion-sections results-metadata-section col-md-8">
-    <%= library_section %>
-    <%= reserves_section %>
+  <div class="accordion-sections results-metadata-section row">
+    <div class="col">
+      <%= library_section %>
+      <%= reserves_section %>
+    </div>
   </div>
 <% end %>

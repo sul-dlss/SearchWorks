@@ -3,8 +3,8 @@
     <h3><%= link_to(database['title_245a_display'], solr_document_path(database[:id])) %></h3>
     <p>(<%= database.selected_database_subjects.join(', ') %>)</p>
     <dl data-behavior="results-online-section" class="row results-online-section">
-      <dt class="col-md-3"><span class="online-label">Search database</span></dt>
-      <dd class="col-md-9">
+      <dt class="col-md-4"><span class="online-label">Search database</span></dt>
+      <dd class="col-md-8">
         <div data-behavior="truncate-results-metadata-links">
           <ul class="links">
             <% database.marc_links.each do |link| %>
