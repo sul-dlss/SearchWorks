@@ -1,8 +1,8 @@
 <% if production_notice.values.present? %>
   <% production_notice.values.each do |label,values| %>
-    <dt class="col-md-3"><%= label %></dt>
+    <dt class="col-md-4"><%= label %></dt>
     <% values.each do |value| %>
-      <dd class="col-md-9"><%= auto_link(value) %></dd>
+      <dd class="col-md-8"><%= auto_link(value) %></dd>
     <% end %>
   <% end %>
 <% end %>

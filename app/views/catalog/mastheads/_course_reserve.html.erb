@@ -4,10 +4,10 @@
     <div id="masthead" class="course-reserve-masthead">
       <h1>Course reserve list: <%= @course_info.id %></h1>
       <dl class='row dl-invert'>
-        <dt class="col-md-3">Course</dt>
-        <dd class="col-md-9"><%= "#{@course_info.id} -- #{@course_info.name}" %></dd>
-        <dt class="col-md-3">Instructor</dt>
-        <dd class="col-md-9"><%= @course_info.instructor %></dd>
+        <dt class="col-md-4">Course</dt>
+        <dd class="col-md-8"><%= "#{@course_info.id} -- #{@course_info.name}" %></dd>
+        <dt class="col-md-4">Instructor</dt>
+        <dd class="col-md-8"><%= @course_info.instructor %></dd>
       </dl>
       <p>
         <%= link_to "Find reserve list for another course", course_reserves_path %>
