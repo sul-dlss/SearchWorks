@@ -6,11 +6,6 @@ $sul-icon-prefix: 'sul-icon';
 .#{$sul-icon-prefix}-4x { font-size: 4em; }
 .#{$sul-icon-prefix}-5x { font-size: 5em; }
 
-//Alignment
-.#{$sul-icon-prefix}-va-middle {
-  vertical-align: middle;
-}
-
 //Color - not coloring globally
 .#{$sul-icon-prefix} {
 
@@ -29,11 +24,15 @@ $sul-icon-prefix: 'sul-icon';
 // Style icons in facets
 .facet-values .#{$sul-icon-prefix} {
   @extend .#{$sul-icon-prefix}-1-5x;
-  @extend .#{$sul-icon-prefix}-va-middle;
-  color: $black;
-  width: 30px;
-  display: flex;
   align-items: center;
+  color: $black;
+  display: table-cell;
+  width: 30px;
+  vertical-align: middle;
+  &::before {
+    height: 21px;
+    vertical-align: top;
+  }
 }
 
 .facet-values .#{$sul-icon-prefix} + .facet-label {
