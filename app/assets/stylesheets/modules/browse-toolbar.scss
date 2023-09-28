@@ -7,14 +7,6 @@
   .dropdown-menu {
     @include toolbar-dropdown;
   }
-
-  ul li a {
-    border-bottom: 0px;
-
-    i.active-icon {
-      margin-left: -17px;
-    }
-  }
 }
 
 .record-browse-nearby {
