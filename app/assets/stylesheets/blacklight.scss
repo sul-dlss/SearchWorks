@@ -18,6 +18,12 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
   font-family: $remove-icon-font-family;
 }
 
+.facets-header {
+  .facets-heading {
+    @extend .h2; // Blacklight extends .h4 by default. https://github.com/projectblacklight/blacklight/blob/51d4f59385549e2031fafa616a1d5a039771bd57/app/assets/stylesheets/blacklight/_facets.scss#L99
+  }
+}
+
 .facet-values .remove-icon {
   padding-left: 12px;
 }
