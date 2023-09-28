@@ -24,8 +24,16 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
   }
 }
 
-.facet-values .remove-icon {
-  padding-left: 12px;
+.facet-values {
+  .remove {
+    &:hover,&:active {
+      border: none;
+    }
+
+    .remove-icon {
+      padding-left: 0.3em;
+    }
+  }
 }
 
 .range_limit {
