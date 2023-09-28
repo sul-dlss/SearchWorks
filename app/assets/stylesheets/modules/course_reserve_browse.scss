@@ -7,9 +7,14 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 
   label {
     margin-bottom: 0;
+  }
+
+  div.dataTables_length select {
+    margin-right: 0.2em;
   }
 
   .dataTables_info {
