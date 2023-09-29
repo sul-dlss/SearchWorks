@@ -20,12 +20,18 @@
   }
 
   padding: 0;
-  .advanced-help {
-    padding: 0 15px;
 
-    li {
-      margin-left: 10px;
-      padding-bottom: 7px;
+  .panel-search-tips {
+    .card-header {
+      background-color: $cloud;
+    }
+    .advanced-help {
+      padding: 0 15px;
+
+      li {
+        margin-left: 10px;
+        padding-bottom: 7px;
+      }
     }
   }
 
