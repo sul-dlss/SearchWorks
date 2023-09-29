@@ -3,7 +3,7 @@
     <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
   </div>
-  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".toolbar-collapse">
     <span class="sr-only">Toggle navigation</span>
     <span class="fa fa-bars"></span>
   </button>
@@ -15,7 +15,7 @@
         </li>
       <% end %>
       <li class="dropdown">
-        <button class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-sul-toolbar dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= t('blacklight.tools.send_to_html').html_safe %>
         </button>
         <div class="dropdown-menu" role="menu">
