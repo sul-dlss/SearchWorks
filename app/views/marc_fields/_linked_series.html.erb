@@ -1,6 +1,6 @@
-<dt class="col-md-3"><%= linked_series.label %></dt>
+<dt><%= linked_series.label %></dt>
 <% linked_series.values.each do |series| %>
-  <dd class="col-md-9">
+  <dd>
     <% if series[:link] %>
       <%= link_to(series[:link].strip, search_catalog_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
     <% end %>

@@ -1,19 +1,19 @@
 <% document ||= @document %>
 <% if document.respond_to?(:to_marc) %>
-  <dl class="row dl-invert">
+  <dl class="dl-horizontal dl-invert">
     <%= render_if_present document.marc_field('245c') %>
 
     <%- uniform_title = get_uniform_title(document) -%>
     <%- if uniform_title -%>
-      <dt class="col-md-3" title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
+      <dt title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
       <% uniform_title[:fields]&.each do |field| %>
-        <dd class="col-md-9"><%= auto_link(field[:field]) %></dd>
+        <dd><%= auto_link(field[:field]) %></dd>
         <% if field[:vernacular].present? %>
-          <dd class="col-md-9"><%= field[:vernacular] %></dd>
+          <dd><%= field[:vernacular] %></dd>
         <% end %>
       <% end %>
       <% uniform_title[:unmatched_vernacular]&.each do |field| %>
-        <dd class="col-md-9"><%= field %></dd>
+        <dd><%= field %></dd>
       <% end %>
     <%- end -%>
 

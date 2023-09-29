@@ -1,7 +1,7 @@
 <% if subjects.values.present? %>
-  <dt class="col-md-3"><%= subjects.label %></dt>
+  <dt><%= subjects.label %></dt>
   <% subjects.values.each do |value| %>
-    <dd class="col-md-9">
+    <dd>
       <% value.each_with_index do |field, index| %>
         <%= ' > ' unless index == 0 %>
         <% link_text = value[0..index].join(' ') %>

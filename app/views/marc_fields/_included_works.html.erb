@@ -1,6 +1,6 @@
 <% if included_works.values.present? %>
-  <dt class="col-md-3"><%= included_works.label %></dt>
+  <dt><%= included_works.label %></dt>
   <% included_works.values.each do |value| %>
-    <dd class="col-md-9"><%= value[:before_text] %> <%= link_to(value[:link_text], search_catalog_path(q: "\"#{value[:query_text]}\"", search_field: 'author_title')) %> <%= value[:after_text] %></dd>
+    <dd><%= value[:before_text] %> <%= link_to(value[:link_text], search_catalog_path(q: "\"#{value[:query_text]}\"", search_field: 'author_title')) %> <%= value[:after_text] %></dd>
   <% end  %>
 <% end %>

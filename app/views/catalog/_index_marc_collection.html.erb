@@ -1,15 +1,15 @@
 <%= render :partial => "marc_search_results_document_fields", :locals => { :document => document } %>
 
-<dl class="row dl-invert results-metadata-section col-md-8">
+<dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
   <% if document.extent.present? %>
-    <dt class="col-md-3"><%= document.extent_label %></dt>
-    <dd class="col-md-9"><%= document.extent %></dd>
+    <dt><%= document.extent_label %></dt>
+    <dd><%= document.extent %></dd>
   <% end %>
 
   <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
   <% if summary_data.present? %>
-    <dt class="col-md-3">Summary</dt>
-    <dd class="col-md-9">
+    <dt>Summary</dt>
+    <dd>
       <div data-behavior='metadata-truncate'>
         <%= sanitize summary_data %>
       </div>
@@ -17,8 +17,8 @@
   <% end %>
 
   <% if document.index_links.finding_aid.present? %>
-    <dt class="col-md-3">Finding aid</dt>
-    <dd class="col-md-9"><%= document.index_links.finding_aid.first.html.html_safe %></dd>
+    <dt>Finding aid</dt>
+    <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
   <% end %>
 </dl>
 

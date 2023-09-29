@@ -1,9 +1,4 @@
 #documents {
-
-  dt {
-    width: auto;
-  }
-
   .document {
     @include document;
 
@@ -51,14 +46,6 @@
     // Without this a dot is displayed before the first li
     li::marker {
         content: '';
-    }
-
-    @include media-breakpoint-up(sm) {
-      .responsiveTruncate {
-        dd {
-          margin-left: 4.25em;
-        }
-      }
     }
   }
 

@@ -1,6 +1,6 @@
 <% if marc_field.values.present? %>
-  <dt class="col-md-3"><%= marc_field.label %></dt>
+  <dt><%= marc_field.label %></dt>
   <% marc_field.values.each do |value| %>
-    <dd class="col-md-9"><%= auto_link(value) %></dd>
+    <dd><%= auto_link(value) %></dd>
   <% end  %>
 <% end %>
