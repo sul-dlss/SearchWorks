@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
     <h2 class="modal-title">Multiple citations</h2>
   <% end %>
+=======
+<div class='grouped-citations'>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#all" aria-controls="all" role="tab" data-bs-toggle="tab">By title</a>
+    </li>
+    <li role="presentation">
+      <a href="#biblio" aria-controls="biblio" role="tab" data-bs-toggle="tab">By citation format</a>
+    </li>
+  </ul>
+>>>>>>> fc195e2d (Initialize bs-tab)
 
   <div class='grouped-citations'>
     <ul class="nav nav-tabs" role="tablist">
