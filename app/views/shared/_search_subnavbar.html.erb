@@ -26,7 +26,9 @@
       <% else %>
         <ul class="nav navbar-nav">
           <li class="navbar-link">
-            <%= link_to feedback_path(type: 'connection'), data: {toggle:"collapse", target:"#connection-form"}, class: 'connection-problem' do %>
+            <%= link_to feedback_path(type: 'connection'),
+                        data: { bs_toggle: "collapse", bs_target: "#connection-form" },
+                        class: 'connection-problem' do %>
               Connection problem?
             <% end %>
           </li>
