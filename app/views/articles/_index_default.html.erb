@@ -14,10 +14,10 @@
 </ul>
 
 <% if document.eds_subjects.present? || document['eds_abstract'].present? %>
-  <dl class="document-metadata row dl-invert results-metadata-section">
+  <dl class="document-metadata dl-horizontal dl-invert results-metadata-section">
     <% if document.eds_subjects.present? %>
-      <dt class="col-md-3">Subjects</dt>
-      <dd class="col-md-9">
+      <dt>Subjects</dt>
+      <dd>
         <div data-behavior='metadata-truncate'>
           <%= document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
         </div>
@@ -25,8 +25,8 @@
     <% end %>
 
     <% if document['eds_abstract'].present? %>
-      <dt class="col-md-3">Abstract</dt>
-      <dd class="col-md-9">
+      <dt>Abstract</dt>
+      <dd>
         <div data-behavior='metadata-truncate'>
           <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_abstract']) %>
         </div>

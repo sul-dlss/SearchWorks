@@ -60,3 +60,31 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
     border-radius: 0px 3px 3px 0px;
   }
 }
+
+
+.dl-invert {
+  dt {
+    @media (min-width: breakpoint-min(md)) {
+      text-align: left; // Blackight has this as right aligned
+    }
+  }
+}
+
+// Balanced lists From Bootstrap 3
+$balance-list-width: 10em;
+@media (min-width: breakpoint-min(md)) {
+  .dl-horizontal {
+    dt {
+      clear: left;
+      float: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: $balance-list-width;
+    }
+
+    dd {
+      margin-left: $balance-list-width;
+    }
+  }
+}
