@@ -1,10 +1,10 @@
 .panel-course-reserve {
   .access-panel-heading {
-    color: $sul-access-font;
+    color: $sul-access-header-color;
     background: $sul-access-course-reserve-bg;
     border-bottom: 1px solid $sul-access-course-reserve-bg;
     h3 {
-      color: $sul-access-font;
+      color: $sul-access-header-color;
     }
   }
   ul.links {
