@@ -33,3 +33,19 @@ $show-title-left-margin: 40px;
     }
   }
 }
+
+// Balanced lists from Bootstrap 3
+.dl-horizontal {
+  dt {
+    text-align: left;
+    width: 10em;
+  }
+  dd {
+    margin-left: 2em;
+  }
+  @include media-breakpoint-up(md) {
+    dd {
+      margin-left: 10.5em;
+    }
+  }
+}
