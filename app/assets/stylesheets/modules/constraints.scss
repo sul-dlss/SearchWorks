@@ -11,7 +11,7 @@
       border-bottom-left-radius: $sul-constraint-btn-radius;
       font-size: $font-size-base;
       &:hover {
-        border-color: #dad7cb; // override blacklight
+        border-color: $cloud; // override blacklight
       }
     }
 
