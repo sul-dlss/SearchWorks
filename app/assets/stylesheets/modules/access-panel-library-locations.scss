@@ -1,16 +1,28 @@
-.panel-library-location {
-  .library-location-heading {
+.panel-library-location { // A kind of .access-panel
+  a { // SAL3 is not wrapped with an anchor tag. See link_to_library_about_page
+    .library-location-heading {
+      &:hover {
+        background-color: $warm-grey;
+      }
+      h3 {
+        border-bottom: 1px dotted $white;
+        max-width: 95%; // so the border won't extend past the text
+
+        &:hover,
+        &:active {
+          border-bottom: 1px solid $white;
+        }  
+      }
+    }
+  }
+  .library-location-heading { // A kind of .access-panel-heading
     @include panel-heading($sul-access-location-bg, $sul-access-header-color);
     height: 50px;
     padding-bottom: 6px;
     h3 {
       color: $sul-access-header-color;
+      display: inline-block;
       line-height: 1em;
-    }
-    a {
-      color: #fff;
-      text-decoration: underline;
-      height: 50px;
     }
   }
 
@@ -23,9 +35,7 @@
     padding-left: 60px;
 
   }
-  .library-location-heading:hover {
-    background-color: $warm-grey;
-  }
+
   .location {
     .items {
       li {
