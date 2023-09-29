@@ -101,7 +101,7 @@ gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'leaflet-rails'
 gem 'recaptcha', '>= 5.4.1'
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 5.3'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
 # Set view_component to < v2.75 until config issue is resolved
