@@ -1,13 +1,13 @@
 <% display_panel = document.preferred_online_links.present? %>
-<dl data-behavior="results-online-section" class="row results-online-section results-metadata-section" <%= 'hidden' unless display_panel %>>
-  <dt class="col-md-4">
+<dl data-behavior="results-online-section" class="row results-online-section results-metadata-section col-md-8" <%= 'hidden' unless display_panel %>>
+  <dt class="col-md-3">
     <% if document.druid %>
       <span class="also-online-label">Also online at</span>
     <% else %>
       <span class="online-label">Online</span>
     <% end %>
   </dt>
-  <dd class="col-md-8">
+  <dd class="col-md-9">
     <ul class="online-links" data-behavior="truncate-results-metadata-links">
       <% document.preferred_online_links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">

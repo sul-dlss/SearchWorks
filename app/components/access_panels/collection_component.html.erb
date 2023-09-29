@@ -9,16 +9,16 @@
     <% end %>
     <dl class="row dl-invert">
       <% if @collection.collection_members.present? %>
-        <dt class="col-md-4">Digital collection</dt>
-        <dd class="col-md-8"><%= helpers.link_to_collection_members(pluralize(@collection.collection_members.total, 'digital item'), @collection) %></dd>
+        <dt class="col-md-3">Digital collection</dt>
+        <dd class="col-md-9"><%= helpers.link_to_collection_members(pluralize(@collection.collection_members.total, 'digital item'), @collection) %></dd>
       <% end %>
       <% if @collection.extent_sans_format.present? %>
-        <dt class="col-md-4">Physical collection</dt>
-        <dd class="col-md-8"><%= @collection.extent_sans_format %></dd>
+        <dt class="col-md-3">Physical collection</dt>
+        <dd class="col-md-9"><%= @collection.extent_sans_format %></dd>
       <% end %>
       <% if @collection.index_links.finding_aid.present? %>
-        <dt class="col-md-4">Finding aid</dt>
-        <dd class="col-md-8"><%= @collection.index_links.finding_aid.first.html.html_safe %></dd>
+        <dt class="col-md-3">Finding aid</dt>
+        <dd class="col-md-9"><%= @collection.index_links.finding_aid.first.html.html_safe %></dd>
       <% end %>
     </dl>
   <% end %>

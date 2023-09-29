@@ -1,15 +1,15 @@
 <%= render :partial => "catalog/mods_search_results_document_fields", :locals => { :document => document } %>
 
-<dl class="row dl-invert results-metadata-section">
+<dl class="row dl-invert results-metadata-section col-md-8">
   <% if document.extent.present? %>
-    <dt class="col-md-4"><%= document.extent_label %></dt>
-    <dd class="col-md-8"><%= document.extent %></dd>
+    <dt class="col-md-3"><%= document.extent_label %></dt>
+    <dd class="col-md-9"><%= document.extent %></dd>
   <% end %>
 
   <% summary_data = render partial: 'catalog/summary_data', locals: { document: document } %>
   <% if summary_data.present? %>
-    <dt class="col-md-4">Summary</dt>
-    <dd class="col-md-8">
+    <dt class="col-md-3">Summary</dt>
+    <dd class="col-md-9">
       <div data-behavior='metadata-truncate'>
         <%= sanitize summary_data %>
       </div>
@@ -17,8 +17,8 @@
   <% end %>
 
   <% if document.index_parent_sets.present? %>
-    <dt class="col-md-4">Included in</dt>
-    <dd class="col-md-8">
+    <dt class="col-md-3">Included in</dt>
+    <dd class="col-md-9">
       <div data-behavior="metadata-truncate">
         <% document.index_parent_sets.each do |set| %>
           <%= link_to(document_presenter(set).heading, solr_document_path(set))%>
@@ -28,8 +28,8 @@
   <% end %>
 
   <% if document.index_parent_collections.present? %>
-    <dt class="col-md-4">Digital collection</dt>
-    <dd class="col-md-8">
+    <dt class="col-md-3">Digital collection</dt>
+    <dd class="col-md-9">
       <% document.index_parent_collections.each do |collection| %>
         <%= link_to(document_presenter(collection).heading, solr_document_path(collection))%>
       <% end %>

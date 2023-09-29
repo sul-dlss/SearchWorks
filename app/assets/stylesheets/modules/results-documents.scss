@@ -43,10 +43,10 @@
     margin: 0;
     padding: 10px 0;
 
-    // ul {
-    //   list-style: none;
-    //   padding-left: 0;
-    // }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
     // Without this a dot is displayed before the first li
     li::marker {
@@ -76,13 +76,9 @@
   }
 }
 
-.results-metadata-sections {
-  margin-left: -15px;
-
-  .document-metadata {
-    list-style-type: none;
-    padding-left: 0;
-  }
+.document-metadata {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .stacks-image {

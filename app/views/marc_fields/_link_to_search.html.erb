@@ -1,6 +1,6 @@
 <% if link_to_search.values.present? %>
-  <dt class="col-md-4"><%= link_to_search.label %></dt>
+  <dt class="col-md-3"><%= link_to_search.label %></dt>
   <% link_to_search.values.each do |value| %>
-    <dd class="col-md-8"><%= link_to(value.strip, link_to_search.url.merge!(q: "\"#{value.strip}\"")) %></dd>
+    <dd class="col-md-9"><%= link_to(value.strip, link_to_search.url.merge!(q: "\"#{value.strip}\"")) %></dd>
   <% end  %>
 <% end %>

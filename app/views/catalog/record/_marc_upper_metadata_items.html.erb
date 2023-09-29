@@ -5,15 +5,15 @@
 
     <%- uniform_title = get_uniform_title(document) -%>
     <%- if uniform_title -%>
-      <dt class="col-md-4" title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
+      <dt class="col-md-3" title="<%= uniform_title[:label] %>"><%= uniform_title[:label] %></dt>
       <% uniform_title[:fields]&.each do |field| %>
-        <dd class="col-md-8"><%= auto_link(field[:field]) %></dd>
+        <dd class="col-md-9"><%= auto_link(field[:field]) %></dd>
         <% if field[:vernacular].present? %>
-          <dd class="col-md-8"><%= field[:vernacular] %></dd>
+          <dd class="col-md-9"><%= field[:vernacular] %></dd>
         <% end %>
       <% end %>
       <% uniform_title[:unmatched_vernacular]&.each do |field| %>
-        <dd class="col-md-8"><%= field %></dd>
+        <dd class="col-md-9"><%= field %></dd>
       <% end %>
     <%- end -%>
 
