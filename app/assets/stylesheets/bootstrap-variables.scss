@@ -104,14 +104,8 @@ $grid-float-breakpoint: 768px;
   filter: alpha(opacity=50);
 }
 
-.btn.btn-secondary {
-  color: #3f3c30;
-  background-color: $light-sandstone;
-  border-color: $cloud;
-}
-
-.btn.btn-outline-secondary {
-  color: #3f3c30;
+.btn.btn-secondary, .btn.btn-outline-secondary {
+  color: $warm-grey;
   background-color: $light-sandstone;
   border-color: $cloud;
 }
