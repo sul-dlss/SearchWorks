@@ -1,10 +1,10 @@
 .panel-library-location {
   .library-location-heading {
-    @include panel-heading($sul-access-location-bg, $sul-access-font);
+    @include panel-heading($sul-access-location-bg, $sul-access-header-color);
     height: 50px;
     padding-bottom: 6px;
     h3 {
-      color: $sul-access-font;
+      color: $sul-access-header-color;
       line-height: 1em;
     }
     a {

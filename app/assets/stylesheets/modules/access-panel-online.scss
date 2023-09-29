@@ -1,10 +1,10 @@
 .panel-online {
   .access-panel-heading.panel-heading {
-    color: $sul-access-font;
+    color: $sul-access-header-color;
     background: $sul-access-online-bg;
     border-bottom: 1px solid $sul-access-online-bg;
     h3 {
-      color: $sul-access-font;
+      color: $sul-access-header-color;
     }
   }
 
