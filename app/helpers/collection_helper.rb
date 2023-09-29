@@ -4,7 +4,7 @@ module CollectionHelper
   end
 
   def collection_members_path(document, options = {})
-    search_catalog_path(f: { collection: [document.prefixed_id] })
+    search_catalog_path(f: { collection: [document.collection_id] })
   end
 
   def collection_members_enumeration(document)

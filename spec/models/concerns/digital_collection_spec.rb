@@ -59,6 +59,42 @@ describe DigitalCollection do
     end
   end
 
+  describe '#collection_id' do
+    before do
+      allow(collection.collection_members).to receive_messages(documents:)
+    end
+
+    context 'when the collection members store the collection id with an "a" prefix' do
+      let(:documents) do
+        [SolrDocument.new(id: 'abc', collection: ['a1234'])]
+      end
+
+      it 'returns the form of the collection id stored on the collection members' do
+        expect(collection.collection_id).to eq 'a1234'
+      end
+    end
+
+    context 'when the collection members store the collection id without an "a" prefix' do
+      let(:documents) do
+        [SolrDocument.new(id: 'abc', collection: ['1234'])]
+      end
+
+      it 'returns the form of the collection id stored on the collection members' do
+        expect(collection.collection_id).to eq '1234'
+      end
+    end
+
+    context 'when the collection members store other collection ids' do
+      let(:documents) do
+        [SolrDocument.new(id: 'abc', collection: ['a5678', 'a1234'])]
+      end
+
+      it 'returns the id matching the current collection' do
+        expect(collection.collection_id).to eq 'a1234'
+      end
+    end
+  end
+
   describe '#render_type' do
     before do
       allow(collection.collection_members).to receive_messages(documents:)
