@@ -1,7 +1,7 @@
 <% if linked_related_works.present? %>
-  <dt class="col-md-4"><%= linked_related_works.label %></dt>
+  <dt class="col-md-3"><%= linked_related_works.label %></dt>
   <% linked_related_works.values.each do |related_work| %>
-    <dd class="col-md-8">
+    <dd class="col-md-9">
       <%= related_work[:pre_text] %>
       <%= link_to(related_work[:link], search_catalog_path(q: related_work[:search], search_field: 'search_title')) %>
       <%= related_work[:post_text] %>
