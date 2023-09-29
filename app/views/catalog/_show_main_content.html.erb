@@ -1,0 +1,16 @@
+    <%= render "shared/record/record_toolbar" %>
+
+    <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_presenter(@document).html_title, :application_name => "#{I18n.t('blacklight.application_name')} catalog" -%>
+    <% content_for(:head) { render_link_rel_alternates } -%>
+    <%# this should be in a partial -%>
+
+    <div id="document" class="document <%= render_document_class %>" itemscope itemtype="<%= @document.itemtype %>">
+      <div id="doc_<%= @document.id.to_s.parameterize %>">
+        <% # bookmark/folder functions -%>
+        <%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
+      </div>
+    </div>
+
+    <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
+      <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(@document[@document.format_key]) %>"></span>
+    <% end %>
