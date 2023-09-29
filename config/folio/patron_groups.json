@@ -6,8 +6,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:20:47.714+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:47.714+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-28T21:49:13.240+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -206,11 +206,12 @@
     "group": "lane-hospital staff",
     "desc": "Stanford hospital staff, fellows",
     "id": "fe863e32-9b3d-454c-ad6c-8a344846f34b",
+    "expirationOffsetInDays": 365,
     "metadata": {
       "createdDate": "2023-08-10T18:20:48.961+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:48.961+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-28T21:48:53.503+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   }
 ]
