@@ -1,4 +1,4 @@
-class ToolbarSearchContextInfoComponent < Blacklight::SearchContextComponent
+class ToolbarSearchContextInfoComponent < Blacklight::SearchContext::ServerItemPaginationComponent
   def link_to_next_document(*args)
     helpers.link_to_next_document(*args)
   end
