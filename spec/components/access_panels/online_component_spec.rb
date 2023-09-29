@@ -219,13 +219,13 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
         SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_main_ssim: ["Database"])
       end
 
-      it "should render a special panel heading" do
+      it "should render a special card heading" do
         render_inline(described_class.new(document:))
         expect(page).to have_css(".card-header", text: "Search this database")
       end
-      it "should render a special panel footer" do
+      it "should render a special card footer" do
         render_inline(described_class.new(document:))
-        expect(page).to have_css(".panel-footer a", text: "Report a connection problem")
+        expect(page).to have_css(".card-footer a", text: "Report a connection problem")
       end
     end
   end
