@@ -147,7 +147,6 @@ atena.beic.it
 atm.amegroups.com
 aviationweek.com
 avmajournals.avma.org
-babel-hathitrust-org
 babel.hathitrust.org
 bac-lac.on.worldcat.org
 bacandrology.biomedcentral.com
