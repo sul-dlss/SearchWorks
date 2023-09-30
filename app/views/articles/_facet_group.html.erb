@@ -1,0 +1,7 @@
+<% # This template was copied from Blacklight 7, so that the CatalogController can use a different strategy from the ArticlesController.
+  # When we migrate to Blackight 8, this controller may need a different implementation of SidebarComponent %>
+<%= render (blacklight_config&.view_config(document_index_view_type)&.facet_group_component || Blacklight::Response::FacetGroupComponent).new(
+  response: @response,
+  id: groupname,
+  fields: facet_field_names(groupname),
+  title: groupname.present? ? t("blacklight.search.facets-#{groupname}.title") : t('blacklight.search.facets.title')) %>

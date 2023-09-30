@@ -27,12 +27,12 @@
   }
 
   .home-page-tips {
-    .panel-heading {
+    .card-header {
       color: $cardinal-red;
     }
 
     dt {
-      font-size: $font-size-h4;
+      font-size: $h4-font-size;
       width: 100%;
     }
   }
@@ -53,33 +53,6 @@
 
 .home-page-bento {
 
-  .panel .panel-body {
-    padding: 0px;
-  }
-
-  .bento-sections {
-    display: flex;
-    flex-wrap: wrap;
-
-    .bento-block {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 48%;
-      min-width: 48%;
-
-      @media screen and (min-width: $screen-md-min) {
-        max-width: 24%;
-        min-width: 24%;
-      }
-    }
-  }
-
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
-
   h3, p {
     padding: 2px 10px;
   }
@@ -90,7 +63,8 @@
   }
 
   .home-page-you-are-here {
-    .panel .panel-body {
+    &.card {
+      // A glowing border
       border: none;
       -webkit-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);
       -moz-box-shadow: 0px 0px 10px 0px rgba(233,131,0,1);

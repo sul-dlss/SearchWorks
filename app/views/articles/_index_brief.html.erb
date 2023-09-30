@@ -18,7 +18,7 @@
       </div>
 
       <% if document.preferred_online_links.present? && !document.eds_restricted? %>
-        <ul class='document-metadata dl-horizontal dl-invert'>
+        <ul class='document-metadata'>
           <% document.preferred_online_links.each do |link| %>
             <li>
               <% if link.href == 'detail' %>

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "Responsive results toolbar", feature: true, js: true do
-  describe " - desktop view (> 992px)" do
-    it "should display correct tools" do
+RSpec.describe "Responsive results toolbar", feature: true, js: true do
+  describe "desktop view (> 992px)" do
+    it "displays correct tools" do
       visit root_path
       fill_in "q", with: ''
       click_button 'search'
@@ -19,8 +19,8 @@ describe "Responsive results toolbar", feature: true, js: true do
     end
   end
 
-  describe " - tablet view (768px - 992px) - ", page_width: 800, responsive: true do
-    it "should display correct tools" do
+  describe "tablet view (768px - 992px) - ", page_width: 800, responsive: true do
+    it "displays correct tools" do
       visit root_path
       fill_in "q", with: ''
       click_button 'search'
@@ -36,8 +36,8 @@ describe "Responsive results toolbar", feature: true, js: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
-    it "should display correct tools" do
+  describe "mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
+    it "display correct tools" do
       visit root_path
       fill_in "q", with: ''
       click_button 'search'

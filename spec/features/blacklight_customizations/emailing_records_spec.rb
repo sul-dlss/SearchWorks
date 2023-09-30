@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "Emailing Records", js: true do
+RSpec.describe "Emailing Records", js: true do
   context 'when a user is not logged in' do
     it 'the are provided a reCAPTCHA challenge' do
       visit solr_document_path('14')
@@ -27,7 +27,7 @@ describe "Emailing Records", js: true do
 
     before { login_as(user) }
 
-    it "should be successful" do
+    it "is successful" do
       visit solr_document_path('14')
 
       within('.record-toolbar') do
@@ -107,7 +107,7 @@ describe "Emailing Records", js: true do
         end
       end
 
-      it 'should render metadata from MARC/MODS' do
+      it 'renders metadata from MARC/MODS' do
         # triggers capybara to wait until email is sent
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
         email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
@@ -115,7 +115,7 @@ describe "Emailing Records", js: true do
         expect(email).to have_css('dd', text: /A quartely publication/)
       end
 
-      it 'should hide the side-nav-minimap' do
+      it 'hides the side-nav-minimap' do
         # triggers capybara to wait until email is sent
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
 

@@ -6,7 +6,7 @@ describe "Search toolbar", feature: true, js: true do
   describe "has SearchWorks customizations" do
     it "should display correct subnavbar elements" do
       within '#search-navbar-container' do
-        expect(page).to have_css("button.btn.btn-default.search-btn", text: "")
+        expect(page).to have_css("button.btn.btn-secondary.search-btn", text: "")
       end
       within "#search-subnavbar-container" do
         expect(page).to have_css("li a", text: "Help", visible: true)
@@ -35,20 +35,20 @@ describe "Search toolbar", feature: true, js: true do
         click_link "Selections"
         expect(page).to have_css("li#show-list.disabled")
         expect(page).to have_css("li#clear-list.disabled")
-        page.all('label.toggle_bookmark')[0].click
+        page.all('label.toggle-bookmark')[0].click
         expect(page).to have_css("li a", text: /SELECTIONS \(1\)/i)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 1)
-        page.all('label.toggle_bookmark')[1].click
+        page.all('label.toggle-bookmark')[1].click
         expect(page).to have_css("li a", text: /SELECTIONS \(2\)/i)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 2)
-        page.all('label.toggle_bookmark')[1].click
+        page.all('label.toggle-bookmark')[1].click
         expect(page).to have_css("li a", text: /SELECTIONS \(1\)/i)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 1)
         click_link "Selections"
-        expect(page).to have_css("label.toggle_bookmark", text: "Selected", count: 1)
+        expect(page).to have_css("label.toggle-bookmark", text: "Selected", count: 1)
         click_link "Selections"
         click_link "Clear all lists"
         expect(page).to have_css("div.alert.alert-success", text: "Your selections have been deleted.")

@@ -1,20 +1,17 @@
 <% if show_sort_and_per_page? and !active_sort_fields.blank? %>
   <div id="sort-dropdown" class="btn-group">
     <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= t('blacklight.search.sort.label_html', :field =>current_sort_field.label).html_safe %> <span class="caret"></span>
+      <%= t('blacklight.search.sort.label_html', :field =>current_sort_field.label).html_safe %>
     </button>
 
-    <ul class="dropdown-menu" role="menu">
+    <div class="dropdown-menu" role="menu">
       <%- active_sort_fields.each do |sort_key, field| %>
-        <li role="presentation">
-          <%= link_to url_for(search_state.params_for_search(sort: sort_key)), 'aria-current': current_sort_field.label == field.label, role: 'menuitem', tabindex: '-1' do %>
-            <% if current_sort_field.label == field.label %>
-              <%= t 'blacklight.search.highlight.active_html' %>
-            <% end %>
-            <%= field.label %>
+        <%= link_to url_for(search_state.params_for_search(sort: sort_key)), class: 'dropdown-item', 'aria-current': current_sort_field.label == field.label, role: 'menuitem', tabindex: '-1' do %>
+          <% if current_sort_field.label == field.label %>
+            <%= t 'blacklight.search.highlight.active_html' %>
           <% end %>
-        </li>
+          <%= field.label %><% end %>
       <%- end -%>
-    </ul>
+    </div>
   </div>
 <% end %>

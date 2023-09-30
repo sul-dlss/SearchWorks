@@ -23,11 +23,11 @@ RSpec.describe 'Article Record Toolbar', js: true do
   it 'shows the Send button' do
     within '.record-toolbar' do
       expect(page).to have_css('.btn-sul-toolbar', text: 'Send to')
-      expect(page).to have_css('.sms', text: 'text', visible: false)
-      expect(page).to have_css('.email', text: 'email', visible: false)
-      expect(page).to have_css('.refworks', text: 'RefWorks', visible: false)
-      expect(page).to have_css('.ris', text: 'RIS download', visible: false)
-      expect(page).to have_css('a[role="menuitem"]', text: 'printer', visible: false)
+      expect(page).to have_link('text', visible: false)
+      expect(page).to have_link('email', visible: false)
+      expect(page).to have_link('RefWorks', visible: false)
+      expect(page).to have_link('RIS download', visible: false)
+      expect(page).to have_link('printer', visible: false)
     end
   end
   it 'shows both prev and next buttons' do

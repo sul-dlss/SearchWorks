@@ -9,10 +9,10 @@ feature "In collection Access Panel" do
     end
 
     within(".panel-in-collection") do
-      within(".panel-heading") do
+      within(".card-header") do
         expect(page).to have_content('Item belongs to a collection')
       end
-      within('.panel-body') do
+      within('.card-body') do
         expect(page).to have_css("h4 a", text: "Image Collection1")
         expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
         expect(page).to have_css("dt", text: 'Digital collection')

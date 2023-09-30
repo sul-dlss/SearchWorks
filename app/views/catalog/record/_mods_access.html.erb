@@ -1,4 +1,4 @@
 <% document ||= @document %>
 <% document.mods.accessCondition.each do |accessCondition| %>
-  <%= mods_record_field(accessCondition) %>
+  <%= render ModsDisplay::FieldComponent.new(field: accessCondition, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>

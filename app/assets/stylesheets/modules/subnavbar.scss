@@ -11,22 +11,28 @@
     max-height: 35px;
   }
 
-  .navbar-toggle {
+  .navbar-toggler {
     font-size: 20px;
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
   }
 
-  // initial/unopened state is 270deg, triangle pointing to the right
-  #search-subnavbar-collapse .navbar-nav .dropdown-toggle.search-navbar-dropdown-btn-rotate-270 span.caret {
-    @extend .fa-rotate-270;
+  #search-subnavbar-collapse .navbar-nav {
+    .dropdown-toggle::after {
+      transform: rotate(270deg);
+    }
+    .dropdown.show .dropdown-toggle::after {
+      transform: rotate(0deg);
+    }
+    .dropdown:not(.show) .dropdown-toggle::after {
+      vertical-align: middle;
+    }
   }
 
-  button.navbar-toggle {
+  button.navbar-toggler {
     color: $white;
   }
 
-  .sul-services-menu {
+  .sul-services-menu, .recent-selections {
     white-space: nowrap;
   }
 
@@ -59,7 +65,7 @@
   }
 
   // the last menu item should be right-aligned
-  .navbar-nav.navbar-right > li:last-child > a {
+  .navbar-nav.ml-auto > li:last-child > a {
     margin-right: 0;
     padding-right: 0;
   }
@@ -69,6 +75,8 @@
     background-color: $sul-subnavbar-bg-color;
     border-radius: 0;
     left: inherit;
+    color: $white;
+    margin-top: 0;
 
     // Menu subheadings
     li span.menugroup {
@@ -76,7 +84,7 @@
     }
 
     li a, li span {
-      font-size: 1.6rem;
+      font-size: 1rem;
       font-weight: 100;
       line-height: 35px;
       margin: 0;
@@ -100,7 +108,8 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-min) {
+  
+  @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding: 0 15px;
     }

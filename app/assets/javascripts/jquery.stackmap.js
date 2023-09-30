@@ -117,7 +117,7 @@
 Blacklight.onLoad(function() {
   $('*[data-behavior=stackmap]').stackMap();
 
-  $('#ajax-modal').on('shown.bs.modal', function() {
+  $('#blacklight-modal').on('shown.bs.modal', function() {
     $('*[data-behavior=stackmap]').stackMap();
   });
 });

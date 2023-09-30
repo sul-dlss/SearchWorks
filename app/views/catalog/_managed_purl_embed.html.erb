@@ -3,11 +3,11 @@
     <h2>Digital content</h2>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-default managed-purl-panel ">
+    <div class="card managed-purl-panel mb-3">
       <div class="managed-purl-heading">
         <%= "#{@document.marc_links.managed_purls.count} parts" %>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <ul>
           <% @document.marc_links.managed_purls.each_with_index do |purl, i| %>
             <li data-embed-target = '<%= "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}" %>' data-embed-provider = '<%= Settings.PURL_EMBED_PROVIDER %>'>

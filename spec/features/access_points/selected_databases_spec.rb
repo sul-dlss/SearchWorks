@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Selected Databases Access Point" do
+RSpec.feature "Selected Databases Access Point" do
   before do
     visit selected_databases_path
   end
@@ -20,9 +20,9 @@ feature "Selected Databases Access Point" do
       expect(page).to have_css("h2", text: /\d+ results/)
     end
   end
-  scenario "should have a panel with database info" do
+  scenario "has a panel with database info" do
     within(".selected-databases") do
-      within(first('.panel', text: '(General, Multidisciplinary)')) do
+      within(first('.card', text: '(General, Multidisciplinary)')) do
         expect(page).to have_css("h3 a", text: /Selected Database \d/)
         expect(page).to have_css("p", text: /\(.*\)/)
         expect(page).to have_css("dt", text: /Search database/)

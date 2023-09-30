@@ -69,8 +69,8 @@
     return this.each(function() {
       var $item = $(this),
           $galleryDoc = new GalleryDocs($item),
-          $linkViewFullPage = $('.view-full-page a'),
-          $embedScroll;
+          $linkViewFullPage = $('.view-full-page a');
+
       init();
 
       function init() {
@@ -108,7 +108,7 @@
             $galleryDoc.calculateDocsPerView();
             showPreview();
           });
-        }else{
+        } else {
           $galleryDoc.item.addClass('collapsed');
           $galleryDoc.item.attr('aria-expanded', 'false');
           $galleryDoc.embedViewport.slideUp(function(){
@@ -124,7 +124,7 @@
               $galleryDoc.updateDocs();
 
               // fix up the id/for to avoid duplicating html ids for the current document.
-              $('.gallery-document label.toggle_bookmark').each(function(i, val) {
+              $('.gallery-document label.toggle-bookmark').each(function(i, val) {
                 var id = 'browse_' + val.attr('for');
                 val.attr('for', id);
                 val.first('input').attr('id', id);
@@ -132,7 +132,7 @@
 
               // just like Blacklight's doBookmarkToggleBehavior, but scoped to the embed container so we don't
               // try to set the behavior multiple times
-              $('.embed-callnumber-browse-container').find(Blacklight.do_bookmark_toggle_behavior.selector).bl_checkbox_submit({
+              $('.embed-callnumber-browse-container').find(Blacklight.doBookmarkToggleBehavior.selector).blCheckboxSubmit({
                  // cssClass is added to elements added, plus used for id base
                  cssClass: 'toggle-bookmark',
                  success: function(checked, response) {

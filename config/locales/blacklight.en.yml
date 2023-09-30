@@ -13,7 +13,7 @@ en:
         access_point:
           databases:
             title: 'Within %{access_point}'
-        more_html: 'more <span class="sr-only">%{facet}</span> <i class="fa fa-angle-double-right"></i>'
+        more_html: 'more <span class="sr-only">%{field_name}</span> <i class="fa fa-angle-double-right"></i>'
       form:
         submit_html: '<span class="sr-only">Search</span><span class="bi-search"></span>'
         submit: ''
@@ -25,7 +25,7 @@ en:
         title: '%{document_title} in %{application_name}'
         title_html: '%{document_title} in %{application_name}'
       sort:
-        label_html: 'Sort<span class="hidden-xs hidden-sm"> by %{field}</span>'
+        label_html: 'Sort<span class="d-none d-lg-inline"> by %{field}</span>'
       searchworks_results_title: '%{num_results} in %{application_name}'
       view:
         label: 'View'
@@ -33,7 +33,7 @@ en:
         gallery: 'gallery'
         list: 'normal'
       per_page:
-        button_label_html: '%{count}<span class="hidden-xs hidden-sm"> per page</span>'
+        button_label_html: '%{count}<span class="d-none d-lg-inline"> per page</span>'
       pagination_info:
         pages:
           one: '%{start_num} - %{end_num}'
@@ -46,28 +46,28 @@ en:
         active_html: '<i class="fa fa-check active-icon"></i>'
     bookmarks:
       no_bookmarks: 'You have no selections'
-      select_all: '<i class="fa fa-square-o"></i> <span class="hidden-sm hidden-xs">Select </span>all'
-      unselect_all: '<i class="fa fa-check-square-o"></i> <span class="hidden-sm hidden-xs">Unselect </span>all'
+      select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
+      unselect_all: '<i class="fa fa-check-square-o"></i> <span class="d-none d-lg-inline">Unselect </span>all'
       selection_title: 'selection'
       clear:
         success: 'Your selections have been deleted.'
     tools:
       cite_html: '<i class="fa fa-quote-left"></i> Cite'
-      send_to_html: '<i class=" fa fa-share-alt"></i> Send to <span class="caret"></span>'
+      send_to_html: '<i class=" fa fa-share-alt"></i> Send to'
       sms_html: '<span class="bi-phone"></span> text'
       email_html: '<span class="bi-envelope-fill"></span> email'
-      refworks_html: '<span class="glyphicon glyphicon-share-alt sul-icon-refworks"></span> RefWorks'
-      endnote_html: '<span class="glyphicon glyphicon-share-alt sul-icon-endnote"></span> EndNote'
-      ris_html: '<span class="glyphicon glyphicon-download-alt"></span> RIS download'
+      refworks_html: '<span class="bi-box-arrow-up-right sul-icon-refworks"></span> RefWorks'
+      endnote_html: '<span class="bi-box-arrow-up-right sul-icon-endnote"></span> EndNote'
+      ris_html: '<span class="bi-download"></span> RIS download'
       printer_html: '<span class="bi-printer-fill"></span> printer'
       cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
-      send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to <span class="caret"></span>'
+      send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to'
       librarian_view: 'Librarian view'
       find_it: '<i class="fa fa-map-marker"></i> Find it'
       stackmap:
-        zoom_in: '<i class="fa fa-plus-circle"></i><span class="hidden-xs"> Zoom in</span>'
-        zoom_out: '<i class="fa fa-minus-circle"></i><span class="hidden-xs">  Zoom out</span>'
-        reset_size: '<i class="fa fa-compress"></i><span class="hidden-xs">  Reset size</span>'
+        zoom_in: '<i class="fa fa-plus-circle"></i><span class="d-none d-sm-inline"> Zoom in</span>'
+        zoom_out: '<i class="fa fa-minus-circle"></i><span class="d-none d-sm-inline">  Zoom out</span>'
+        reset_size: '<i class="fa fa-compress"></i><span class="d-none d-sm-inline">  Reset size</span>'
     sms:
       text:
         library_location: '%{library} - %{location}'
@@ -75,8 +75,8 @@ en:
         url: '%{url}'
   views:
     pagination_compact:
-      next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'
-      previous: '<i class="fa fa-arrow-left"></i><span class="hidden-xs"> Previous</span>'
+      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
+      previous: '<i class="fa fa-arrow-left"></i><span class="d-none d-sm-inline"> Previous</span>'
     pagination:
-      previous: '<i class="fa fa-arrow-left"></i> <span class="hidden-xs"> Previous</span>'
-      next: '<span class="hidden-xs">Next </span><i class="fa fa-arrow-right"></i>'
+      previous: '<i class="fa fa-arrow-left"></i> <span class="d-none d-sm-inline"> Previous</span>'
+      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'

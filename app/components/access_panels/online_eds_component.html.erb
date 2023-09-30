@@ -2,7 +2,7 @@
   <% c.title { 'Best source' } %>
 
   <% c.body do %>
-    <ul class='document-metadata dl-horizontal dl-invert'>
+    <ul class='document-metadata'>
       <% links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">
           <% if link.href == 'detail' %>

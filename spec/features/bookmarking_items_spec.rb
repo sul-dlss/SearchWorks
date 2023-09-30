@@ -1,25 +1,25 @@
 require 'spec_helper'
 
-feature 'Bookmarking Items' do
+RSpec.feature 'Bookmarking Items' do
   context 'Citations', js: true do
     let(:citations) { '<p class="citation_style_MLA">MLA Citation</p>' }
 
     before { stub_oclc_response(citations, for: '12345') }
 
-    scenario 'should be viewable grouped by title and citation format' do
+    it 'is viewable grouped by title and citation format' do
       skip('Fails intermitently on Travis.') if ENV['CI']
       visit root_path
       fill_in :q, with: ''
       click_button 'search'
 
       within(all('.document').first) do
-        find('input.toggle_bookmark').click
+        find('input.toggle-bookmark').click
       end
 
       wait_for_ajax
 
       within(all('.document').last) do
-        find('input.toggle_bookmark').click
+        find('input.toggle-bookmark').click
       end
 
       wait_for_ajax

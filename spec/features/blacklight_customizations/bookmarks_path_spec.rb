@@ -1,19 +1,19 @@
 require 'spec_helper'
 
-feature "Selections Path" do
-  scenario "should render bookmarks page" do
+RSpec.feature "Selections Path" do
+  scenario "renders bookmarks page" do
     visit bookmarks_path
     expect(page).to have_css('h2', text: '0 catalog items')
     expect(page).to have_css('a', text: '0 articles+ items')
     expect(page).to have_css("h3", text: "You have no selections")
   end
 
-  scenario "should render some bookmarks and toolbar", js: true do
+  scenario "renders some bookmarks and toolbar", js: true do
     skip('Passes locally, not on Travis.') if ENV['CI']
     visit search_catalog_path f: { format: ["Book"] }, view: "default"
-    page.all('label.toggle_bookmark')[0].click
-    page.all('label.toggle_bookmark')[1].click
-    expect(page).to have_css("label.toggle_bookmark span", text: "Selected", count: 2)
+    page.all('label.toggle-bookmark')[0].click
+    page.all('label.toggle-bookmark')[1].click
+    expect(page).to have_css("label.toggle-bookmark span", text: "Selected", count: 2)
     visit bookmarks_path
     expect(page).to have_css('h2', text: '2 catalog items')
     expect(page).to have_css('a', text: '0 articles+ items')

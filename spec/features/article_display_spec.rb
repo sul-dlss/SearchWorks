@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Article Record Display' do
+RSpec.feature 'Article Record Display' do
   before { stub_article_service(type: :single, docs: [document]) }
 
   describe 'Subjects' do

@@ -1,16 +1,6 @@
-<div class="modal-header">
-  <% if request.xhr? %>
-    <button type="button" class="ajax-modal-close close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<% document.citations.each do |format, citation| %>
+  <% unless format == 'NULL' %>
+    <h4><%= format %></h4>
   <% end %>
-  <h3 class="modal-title"><%= document_presenter(document).heading %></h3>
-</div>
-<div class="modal-body">
-  <% document.citations.each do |format, citation| %>
-    <% unless format == 'NULL' %>
-      <h4><%= format %></h4>
-    <% end %>
-    <%= citation %>
-  <% end %>
-</div>
+  <%= citation %>
+<% end %>

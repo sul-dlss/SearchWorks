@@ -1,29 +1,29 @@
 <% document ||= @document %>
 
 <% document.mods.subTitle.each do |title| %>
-  <%= mods_record_field(title) %>
+  <%= render ModsDisplay::FieldComponent.new(field: title, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.audience.each do |audience| %>
-  <%= mods_record_field(audience) %>
+  <%= render ModsDisplay::FieldComponent.new(field: audience, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.note.each do |notes| %>
-  <%= mods_record_field(notes) %>
+  <%= render ModsDisplay::FieldComponent.new(field: notes, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.relatedItem.each do |related_item| %>
-  <%= mods_record_field(related_item) %>
+  <%= render ModsDisplay::FieldComponent.new(field: related_item, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.nestedRelatedItem.each do |nested_related_item| %>
-  <%= mods_record_field(nested_related_item) %>
+  <%= render ModsDisplay::FieldComponent.new(field: nested_related_item, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.identifier.each do |identifier| %>
-  <%= mods_record_field(identifier) %>
+  <%= render ModsDisplay::FieldComponent.new(field: identifier, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
 <% document.mods.location.each do |location| %>
-  <%= mods_record_field(location) %>
+  <%= render ModsDisplay::FieldComponent.new(field: location, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>

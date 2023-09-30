@@ -1,5 +1,5 @@
 <% doc_presenter = document_presenter(document) %>
-<ul class='document-metadata dl-horizontal dl-invert results-metadata-section'>
+<ul class='document-metadata results-metadata-section'>
   <% if document['eds_authors'].present? %>
     <li>
       <div data-behavior='metadata-truncate'>
@@ -36,7 +36,7 @@
 <% end %>
 
 <% if !document.eds_restricted? %>
-  <ul class='document-metadata dl-horizontal dl-invert results-metadata-section'>
+  <ul class='document-metadata results-metadata-section'>
     <% ArticleFulltextLinkPresenter.new(document: document, context: self).links.each do |link| %>
       <li><%= link.html_safe %></li>
     <% end %>

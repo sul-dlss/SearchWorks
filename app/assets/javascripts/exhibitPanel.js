@@ -36,7 +36,7 @@
         _this.showAppropriatePanelHeading(data.length);
 
         $.each(data, function(i, exhibit) {
-          _this.panel.find('.panel-body').append(_this.exhibitMediaObject(exhibit));
+          _this.panel.find('.card-body').append(_this.exhibitMediaObject(exhibit));
         });
 
         _this.addToggleButtonBehavior();
@@ -65,14 +65,14 @@
 
     addToggleButtonBehavior: function() {
       var _this = this;
-      var container = _this.panel.find('.panel-body');
+      var container = _this.panel.find('.card-body');
       var exhibitMediaObjects = container.find('.media');
       var exhibitCount = exhibitMediaObjects.length;
       if (exhibitCount >= _this.exhibitToggleThreshold) {
         if (container.find('button.see-all-exhibits').length > 0) {
           var toggleButton = container.find('button.see-all-exhibits');
         } else {
-          var toggleButton = $('<button class="see-all-exhibits btn btn-default btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
+          var toggleButton = $('<button class="see-all-exhibits btn btn-secondary btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
         }
 
         var exhibitMediaObjects = container.find('.media');

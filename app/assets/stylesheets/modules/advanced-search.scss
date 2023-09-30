@@ -1,4 +1,7 @@
 .advanced-search-form {
+  .advanced {
+    @extend .my-3;
+  }
   .advanced-search-start-over {
     margin-left: 20px;
   }
@@ -17,12 +20,18 @@
   }
 
   padding: 0;
-  .advanced-help {
-    padding: 0 15px;
 
-    li {
-      margin-left: 10px;
-      padding-bottom: 7px;
+  .panel-search-tips {
+    .card-header {
+      background-color: $cloud;
+    }
+    .advanced-help {
+      padding: 0 15px;
+
+      li {
+        margin-left: 10px;
+        padding-bottom: 7px;
+      }
     }
   }
 
@@ -35,7 +44,7 @@
   }
 
   .offset-md-3 {
-    @extend .col-md-offset-3;
+    margin-left: 25%;
   }
 
   .adv-publication-year-range {
@@ -53,7 +62,7 @@
   }
 
   .col {
-    @extend .col-md-offset-3;
+    margin-left: 25%;
     @extend .col-md-9;
   }
 
@@ -70,12 +79,6 @@
     display: inline;
     padding-bottom: 0;
     padding-left: 7px;
-  }
-
-  .facet-checkbox {
-    input {
-      vertical-align: top;
-    }
   }
 }
 

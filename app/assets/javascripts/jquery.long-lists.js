@@ -9,8 +9,8 @@
         return $(this).find('div.google-books').length === 0;
       }),
       type = $list.data("list-type"),
-      $more = $('<button class="btn btn-default btn-xs" aria-expanded="false">show all<span class="sr-only"> at ' + type + '</span></button>'),
-      $less = $('<button class="btn btn-default btn-xs" aria-expanded="true">show less<span class="sr-only"> at ' + type + '</span></button>');
+      $more = $('<button class="btn btn-secondary btn-xs" aria-expanded="false">show all<span class="sr-only"> at ' + type + '</span></button>'),
+      $less = $('<button class="btn btn-secondary btn-xs" aria-expanded="true">show less<span class="sr-only"> at ' + type + '</span></button>');
 
       init();
 

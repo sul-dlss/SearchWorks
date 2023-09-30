@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'Responsive subnavbar (gray banner)', feature: true, js: true, page_width: 700, responsive: true do
+RSpec.describe 'Responsive subnavbar (gray banner)', feature: true, js: true, page_width: 700, responsive: true do
   scenario 'collapses menu options in mobile view' do
     visit root_path
 

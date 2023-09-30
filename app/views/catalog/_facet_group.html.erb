@@ -1,0 +1,16 @@
+<% # overriding Blacklight for three reasons:
+   #  1. to pass a different title
+   #  2. to set a different default title
+   #  3. to pass a list of facets (not facet-names), like Blackight 8, to deconflict the two date facets %>
+<%= render blacklight_config.view_config(document_index_view_type).facet_group_component.new(
+  response: @response,
+  id: groupname,
+  title: t("blacklight.search.facets.access_point.#{page_location.access_point}.title",
+          access_point: page_location.access_point,
+          default: :'blacklight.search.facets.title')) do |component| %>
+    <% component.with_body do %>
+      <%= render Blacklight::FacetComponent.with_collection(
+        blacklight_config.facet_fields.values.select { |opts| groupname == opts[:group] },
+       response: @response) %>
+    <% end %>
+<% end %>

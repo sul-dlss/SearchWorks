@@ -1,5 +1,6 @@
 <%= form_tag @url, method: @method, class: @classes.join(' '), role: 'search' do %>
-  <%= render_hash_as_hidden_fields(@params) %>
+  <%= render Blacklight::HiddenSearchStateComponent.new(params: @params) %>
+
   <div id="dynamic-hidden-inputs-target"></div>
   <div class="input-group">
     <%= prepend %>
@@ -21,7 +22,7 @@
 
     <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
     <span class="input-group-btn">
-      <button type="submit" class="btn btn-default search-btn" id="search">
+      <button type="submit" class="btn btn-secondary search-btn" id="search">
         <%=t('blacklight.search.form.submit_html')%>
       </button>
     </span>

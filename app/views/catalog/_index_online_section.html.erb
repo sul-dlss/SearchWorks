@@ -1,10 +1,12 @@
 <% display_panel = document.preferred_online_links.present? %>
 <dl data-behavior="results-online-section" class="dl-horizontal results-online-section results-metadata-section col-md-8" <%= 'hidden' unless display_panel %>>
-  <% if document.druid %>
-    <dt class="also-online-label">Also online at</dt>
-  <% else %>
-    <dt class="online-label">Online</dt>
-  <% end %>
+  <dt>
+    <% if document.druid %>
+      <span class="also-online-label">Also online at</span>
+    <% else %>
+      <span class="online-label">Online</span>
+    <% end %>
+  </dt>
   <dd>
     <ul class="online-links" data-behavior="truncate-results-metadata-links">
       <% document.preferred_online_links.each do |link| %>

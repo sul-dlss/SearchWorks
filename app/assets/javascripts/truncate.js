@@ -1,6 +1,6 @@
 Blacklight.onLoad(function(){
   $("[data-behavior='metadata-truncate']").responsiveTruncate(
-    { height: 40, more: 'more...', less: 'less...' }
+    { lines: 2, more: 'more...', less: 'less...' }
   );
   $("[data-behavior='truncate-results-metadata-links']").responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
   $("[data-behavior='truncate']").responsiveTruncate({height: 60});

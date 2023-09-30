@@ -1,11 +1,11 @@
 <% @page_title= t 'blacklight.articles.home.title' %>
 
 <div class="article-home-page">
-  <h1>Journal articles &amp; other e-resources</h1>
+  <h1 class="my-4">Journal articles &amp; other e-resources</h1>
   <div class="row">
     <div class="col-sm-4 home-page-settings">
-      <div class="panel panel-default">
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-body">
           <h2>Search settings</h2>
           <div class="home-settings">
             <% limiters = facet_options_presenter.limiters %>
@@ -38,8 +38,8 @@
       </div>
     </div>
     <div class="col-sm-8 home-page-tips">
-      <div class="panel panel-default">
-        <div class="panel-body">
+      <div class="card mb-3">
+        <div class="card-body">
           <h2>How do I access articles?</h2>
           <div class="row">
             <div class="col-md-6">
@@ -53,8 +53,8 @@
           </div>
         </div>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-body">
           <h2>Search tip</h2>
           <%= render SearchTips.random %>
           <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/article-search-tips' %></p>

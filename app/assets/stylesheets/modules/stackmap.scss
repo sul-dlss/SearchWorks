@@ -62,14 +62,14 @@
   }
 }
 
-#ajax-modal {
+#blacklight-modal {
   .stackmap {
     padding: 10px;
     text-align: left;
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   .stackmap {
     .map-template {
       .osd {

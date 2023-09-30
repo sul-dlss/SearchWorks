@@ -20,16 +20,16 @@ RSpec.describe AccessPanels::AppearsInComponent, type: :component do
     end
 
     it 'renders a panel heading' do
-      expect(page).to have_css('.panel-heading h3', text: 'Item is included in another record')
+      expect(page).to have_css('.card-header h3', text: 'Item is included in another record')
     end
 
     describe 'panel body' do
       it 'renders the resource icon in the h4' do
-        expect(page).to have_css('.panel-body h4 span.sul-icon')
+        expect(page).to have_css('.card-body h4 span.sul-icon')
       end
 
       it 'renders the result of #link_to_document in the h4' do
-        expect(page).to have_css('.panel-body h4', text: 'The Set Object')
+        expect(page).to have_css('.card-body h4', text: 'The Set Object')
       end
     end
   end

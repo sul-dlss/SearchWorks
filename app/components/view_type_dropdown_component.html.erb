@@ -2,19 +2,15 @@
   <span class="sr-only"><%= t('blacklight.search.view_title') %></span>
   <div id="view-type-dropdown" class="btn-group">
     <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="hidden-xs hidden-sm">
+      <span class="d-none d-lg-inline">
         <%= active_icon %>
       </span>
-      <%= t('blacklight.search.view.label').html_safe %>
-      <span class="caret"></span>
-    </button>
+      <%= t('blacklight.search.view.label').html_safe %></button>
 
-    <ul class="dropdown-menu" role="menu">
+    <div class="dropdown-menu" role="menu">
       <% view_items.each do |view| %>
-      <li role="presentation">
         <%= view %>
-      </li>
       <% end %>
-    </ul>
+    </div>
   </div>
 </div>
