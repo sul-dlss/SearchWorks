@@ -7,23 +7,6 @@
   font-weight: 400;
 }
 
-.access-panel-heading {
-  &.library-location-heading h3 {
-    border-bottom: 1px dotted $white;
-    display: inline-block;
-    max-width: 95%; // so the border won't extend past the text
-
-    &:hover,
-    &:active {
-      border-bottom: 1px solid $white;
-    }
-
-    &.no-link {
-      border-bottom: 0;
-    }
-  }
-}
-
 .access-panel {
   .panel-body {
     h4 {

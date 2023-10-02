@@ -26,7 +26,7 @@ RSpec.describe AccessPanels::LibraryComponent, type: :component do
     it "returns a placeholder panel" do
       render_inline(component)
 
-      expect(page).to have_selector('h3.no-link', text: 'Stanford Libraries')
+      expect(page).to have_selector('h3', text: 'Stanford Libraries')
     end
   end
 end
