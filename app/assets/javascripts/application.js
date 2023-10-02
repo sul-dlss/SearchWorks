@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require honeybadger
 
 //= require rails-ujs
 //= require turbolinks
