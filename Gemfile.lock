@@ -165,7 +165,7 @@ GEM
       zeitwerk (~> 2.6)
     erubi (1.12.0)
     execjs (2.9.1)
-    ffi (1.16.1)
+    ffi (1.16.2)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -313,7 +313,7 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
-    rubocop (1.56.3)
+    rubocop (1.56.4)
       base64 (~> 0.1.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -331,7 +331,7 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.24.0)
       rubocop (~> 1.33)
-    rubocop-rails (2.21.1)
+    rubocop-rails (2.21.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
@@ -341,7 +341,7 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.12.0)
+    selenium-webdriver (4.13.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -366,7 +366,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.4.2)
+    unicode-display_width (2.5.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -382,7 +382,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.11)
+    zeitwerk (2.6.12)
 
 PLATFORMS
   ruby
