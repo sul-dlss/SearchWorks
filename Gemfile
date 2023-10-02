@@ -9,8 +9,7 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails', '~> 1.4'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

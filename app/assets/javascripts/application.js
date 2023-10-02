@@ -12,8 +12,7 @@
 //
 //= require honeybadger
 
-//= require rails-ujs
-//= require turbolinks
+//= require turbo
 //= require responsiveTruncator
 //= require trunk8
 //= require jquery-scrollspy

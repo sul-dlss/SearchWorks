@@ -595,9 +595,10 @@ GEM
       nokogiri (~> 1.9)
       slop (~> 4.0)
       yell
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbo-rails (1.4.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -699,7 +700,7 @@ DEPENDENCIES
   solr_wrapper
   sprockets-rails
   sqlite3
-  turbolinks (~> 5)
+  turbo-rails (~> 1.4)
   view_component (< 2.75)
   web-console (>= 4.1.0)
   webmock
