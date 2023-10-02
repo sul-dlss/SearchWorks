@@ -666,21 +666,25 @@
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 1,
-        "intervalId": "Days"
+        "duration": 72,
+        "intervalId": "Hours"
       },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
       "gracePeriod": {
         "duration": 15,
         "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
       }
     },
     "renewable": false,
     "metadata": {
       "createdDate": "2023-08-10T18:49:48.821+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:48.821+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-29T18:40:20.370+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
@@ -1529,21 +1533,25 @@
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 2,
-        "intervalId": "Days"
+        "duration": 48,
+        "intervalId": "Hours"
       },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "BEGINNING_OF_THE_NEXT_OPEN_SERVICE_POINT_HOURS",
       "gracePeriod": {
         "duration": 15,
         "intervalId": "Minutes"
+      },
+      "openingTimeOffset": {
+        "duration": 1,
+        "intervalId": "Hours"
       }
     },
     "renewable": false,
     "metadata": {
       "createdDate": "2023-08-10T18:49:56.887+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:56.887+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-29T18:39:24.067+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {

@@ -11355,6 +11355,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
     "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/ "
     },
     "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
     "servicePointIds": [
@@ -11366,8 +11367,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:46.359+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:46.359+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-09-29T17:43:16.706+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
