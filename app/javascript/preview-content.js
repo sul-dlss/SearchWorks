@@ -3,7 +3,7 @@
   caching of fetched preview content in browser
  */
 
-var PreviewContent = (function() {
+const PreviewContent = (function() {
 
   var useCache = true,
     insertType;
@@ -95,3 +95,5 @@ var PreviewContent = (function() {
   };
 
 }());
+
+export default PreviewContent;
