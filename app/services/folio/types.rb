@@ -21,8 +21,8 @@ module Folio
 
       types_of_interest.each do |type|
         file = cache_dir.join("#{type}.json")
-
-        File.write(file, JSON.pretty_generate(folio_client.public_send(type)))
+        data = folio_client.public_send(type).sort_by { |item| item['id'] }
+        File.write(file, JSON.pretty_generate(data))
       end
 
       File.write(cache_dir.join('locations.csv'), Folio::Locations.to_csv)
