@@ -2,7 +2,7 @@
 <% if @course_info.present? %>
   <div id="masthead-container">
     <div id="masthead" class="course-reserve-masthead">
-      <h1>Course reserve list: <%= @course_info.id %></h1>
+      <h1 class="my-4">Course reserve list: <%= @course_info.id %></h1>
       <dl class='dl-horizontal dl-invert'>
         <dt>Course</dt>
         <dd><%= "#{@course_info.id} -- #{@course_info.name}" %></dd>
