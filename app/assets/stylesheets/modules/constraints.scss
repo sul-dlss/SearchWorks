@@ -6,18 +6,20 @@
   }
 
   span.constraint.btn-group {
-    span.constraint-value.btn {
+    span.constraint-value {
       border-top-left-radius: $sul-constraint-btn-radius;
       border-bottom-left-radius: $sul-constraint-btn-radius;
+      cursor: default; // Override the .btn style which blacklight applies
       font-size: $font-size-base;
       &:hover {
         border-color: $cloud; // override blacklight
       }
     }
 
-    a.btn.remove {
+    a.remove {
       border-top-right-radius: $sul-constraint-btn-radius;
       border-bottom-right-radius: $sul-constraint-btn-radius;
+      cursor: pointer;
       font-size: 12px;
       padding-left: 4px;
       padding-top: 8px;
