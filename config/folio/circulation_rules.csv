@@ -287,7 +287,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 graduate or staff,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
 faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Default notice,No fines,$2000 lost fee kit
-,,,,,,SUL-BORROW-DIRECT,8week-1renew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,,,,,SUL-BORROW-DIRECT,16week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,newspaper,,,,,,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee
 ,multimedia,,,,,,No loan,No requests allowed,Default notice,No fines,$225 lost fee

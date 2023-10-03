@@ -1213,7 +1213,7 @@
   },
   {
     "id": "b79e3dbf-b30a-420c-9e97-dcf92e937883",
-    "name": "8week-1renew-7daygrace",
+    "name": "16week-norenew-7daygrace",
     "description": "Loan policy for BorrowDirect materials loaned to Stanford users",
     "loanable": true,
     "loansPolicy": {
@@ -1228,16 +1228,12 @@
         "intervalId": "Days"
       }
     },
-    "renewable": true,
-    "renewalsPolicy": {
-      "numberAllowed": 1.0,
-      "renewFromId": "SYSTEM_DATE"
-    },
+    "renewable": false,
     "metadata": {
       "createdDate": "2023-08-10T18:49:54.227+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:54.227+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-10-02T18:26:17.857+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
