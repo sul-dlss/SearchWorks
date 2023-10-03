@@ -16,6 +16,8 @@ $link-color: $sul-link-color;
 $link-hover-color: $sul-link-color-hover;
 $link-hover-decoration: none;
 
+$component-active-bg: $digital-blue-dark;
+
 // NOTE: Remove this when upgrading to BS5, as it will then be unnecessary.
 // State -- we lifted these colors from BS5 for better a11y in alerts and elsewhere
 $state-info-bg: #cff4fc;
