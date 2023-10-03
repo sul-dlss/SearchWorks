@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe CollectionHelper do
   describe "#link_to_collection_members" do
-    let(:document) { SolrDocument.new(id: '1234') }
+    let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
 
     it "should link to the given text" do
       expect(link_to_collection_members("LinkText", document)).to match /<a href.*>LinkText<\/a>/
@@ -21,7 +21,7 @@ describe CollectionHelper do
   end
 
   describe "#collection_members_path" do
-    let(:document) { SolrDocument.new(id: '1234') }
+    let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
 
     it "should link the collection id with prefix" do
       expect(collection_members_path(document)).to match /.*collection.*=a1234.*/

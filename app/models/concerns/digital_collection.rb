@@ -9,6 +9,20 @@ module DigitalCollection
     @collection_members ||= CollectionMembers.new(self, options)
   end
 
+  # @return [String] the matching collection id as stored in the :collection
+  # field of collection member documents. This is important for linking
+  # to a search for collection members because some store the collection catkey
+  # prefixed with 'a' and others do not.
+  def collection_id
+    @collection_id ||= begin
+      return nil unless is_a_collection?
+
+      collection_members.first[:collection].find do |col_member_col_id|
+        col_member_col_id.sub(/^a(\d+)$/, '\1') == self[:id]
+      end
+    end
+  end
+
   ###
   # Simple Plain Ruby Object to return an array of collection members
   class CollectionMembers
