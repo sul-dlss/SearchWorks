@@ -29,21 +29,17 @@
   <% end %>
 <% end %>
 <% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
-  <span class="refworks dropdown-item">
-    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1' %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
     <%= form_tag(refworks_export_url, 'aria-hidden': true) do %>
       <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.send(:export_as_refworks_marc_txt)) %>
     <% end %>
-  </span>
 <% end %>
 <% if @document.export_formats.key?(:ris) %>
-  <span class="refworks dropdown-item">
-    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1' %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
     <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
     <% end %>
-  </span>
   <%= link_to t('blacklight.tools.ris_html'),
               articles_ris_path(@document, :format => 'ris'),
               class: 'dropdown-item',
