@@ -970,7 +970,7 @@ apsjournals.apsnet.org
 www.itergateway.org
 www.jneurosci.org
 wwo.wwp.northeastern.edu
-www.faulkner.com
+faulkner.com
 library.seg.org
 librarymusicsource.com
 www.medici.tv
