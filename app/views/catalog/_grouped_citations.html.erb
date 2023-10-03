@@ -1,5 +1,7 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
-  <% component.title { "Multiple citations" } %>
+  <% component.with_header do %>
+    <h3 class="modal-title">Multiple citations</h3>
+  <% end %>
 
   <div class='grouped-citations'>
     <ul class="nav nav-tabs" role="tablist">

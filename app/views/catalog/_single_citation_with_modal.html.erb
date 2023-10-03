@@ -1,5 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
-  <% component.title { document_presenter(document).heading } %>
-
+  <% component.with_header do %>
+    <h3 class="modal-title"><%= document_presenter(document).heading %></h3>
+  <% end %>
   <%= render 'single_citation', document: %>
 <% end %>
