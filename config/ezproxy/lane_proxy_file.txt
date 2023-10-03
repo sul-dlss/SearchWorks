@@ -106,7 +106,6 @@ appmicro.springeropen.com
 apps.ama-assn.org
 apps.bea.gov
 apps.einstein.br
-apps.webofknowledge.com
 apps.who.int
 aps.onlinelibrary.wiley.com
 apsjournals.apsnet.org
@@ -1992,7 +1991,6 @@ www.earthdoc.org
 www.earticle.net
 www.eastindiacompany.amdigital.co.uk
 www.ebi.ac.uk
-www.ebooks.cap.org
 www.ecmjournal.org
 www.ecoamericas.com
 www.ecoinvent.org
@@ -2175,7 +2173,6 @@ www.ieeexplore.ieee.org
 www.if-pan.krakow.pl
 www.igi-global.com
 www.ihealthbeat.org
-www.ihmf.org
 www.ihs.gov
 www.ijaai.in
 www.ijabmr.org
