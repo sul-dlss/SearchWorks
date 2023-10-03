@@ -115,7 +115,7 @@
 
       function itemsPerRow() {
         var width = $('#documents').width();
-        return  Math.floor(width/$itemWidth);
+        return Math.floor(width/$itemWidth);
       }
 
       function reorderPreviewDivs() {
@@ -123,12 +123,12 @@
         var previewIndex = previewDivs.index($previewTarget) + 1;
         $itemsPerRow = itemsPerRow();
         /* 
-        / If $itemsPerRow is NaN or 0 we should return here. If not we are going 
+        / If $itemsPerRow is 0 we should return here. If not we are going 
         / to have a bad time with an infinite while loop. This only manifests
         / on the show page when using the "back" button to get back to a show
         / page using the browse nearby feature.
         */
-        if ($itemsPerRow === NaN || $itemsPerRow === 0) {
+        if ($itemsPerRow === 0) {
           return;
         }
 
