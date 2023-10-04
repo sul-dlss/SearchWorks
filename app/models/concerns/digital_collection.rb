@@ -15,9 +15,8 @@ module DigitalCollection
   # prefixed with 'a' and others do not.
   def collection_id
     @collection_id ||= begin
-      return nil unless is_a_collection?
-
-      collection_members.first[:collection].find do |col_member_col_id|
+      first_member = collection_members&.first || SolrDocument.new(collection: [])
+      first_member[:collection].find do |col_member_col_id|
         col_member_col_id.sub(/^a(\d+)$/, '\1') == self[:id]
       end
     end
