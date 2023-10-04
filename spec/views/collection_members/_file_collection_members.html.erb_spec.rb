@@ -1,10 +1,10 @@
 require "spec_helper"
 
-describe "collection_members/_file_collection_members" do
+RSpec.describe "collection_members/_file_collection_members" do
   let(:document) { SolrDocument.new(id: 12345) }
   let(:collection_members) { [
-    SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean"),
-    SolrDocument.new(id: 2, pub_date: "2011")
+    SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean", collection: []),
+    SolrDocument.new(id: 2, pub_date: "2011", collection: [])
   ] }
 
   before do
@@ -15,17 +15,17 @@ describe "collection_members/_file_collection_members" do
     render
   end
 
-  it "should have an icon" do
+  it "has an icon" do
     expect(rendered).to have_css('.file-icon')
   end
-  it "should link the title" do
+  it "links the title" do
     expect(rendered).to have_css(".file-title a", text: "File Item")
   end
-  it "should include the pub date" do
+  it "includes the pub date" do
     expect(rendered).to have_css(".file-title .main-title-date", text: "[2010]")
     expect(rendered).to have_css(".file-title .main-title-date", text: "[2011]")
   end
-  it "should display the author" do
+  it "displays the author" do
     expect(rendered).to have_css(".file-author", text: "Mr. Bean")
   end
 end

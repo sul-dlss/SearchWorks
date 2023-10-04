@@ -1,15 +1,32 @@
 require 'spec_helper'
 
-describe DigitalCollection do
-  let(:collection) { SolrDocument.new(collection_type: ["Digital Collection"], id: "1234") }
-  let(:non_collection) { SolrDocument.new(collection_type: ["DigiColl"]) }
+RSpec.describe DigitalCollection do
+  let(:collection) { SolrDocument.new(collection_type: type, id: "1234") }
+  let(:type) { ['Digital Collection'] }
 
   describe "#is_a_collection?" do
-    it "should be true when the collection_type is 'Digital Collection'" do
-      expect(collection.is_a_collection?).to be_truthy
+    subject { collection.is_a_collection? }
+
+    context 'when the collection_type is "Digital Collection"' do
+      it { is_expected.to be true }
     end
-    it "should be false when the collection_type is not 'Digital Collection'" do
-      expect(non_collection.is_a_collection?).to be_falsey
+
+    context 'when the collection_type is not "Digital Collection"' do
+      let(:type) { ['DigiColl'] }
+
+      it { is_expected.to be false }
+    end
+  end
+
+  describe '#collection_members' do
+    subject { collection.collection_members }
+
+    it { is_expected.to be_a(DigitalCollection::CollectionMembers) }
+
+    context 'when the collection_type is not "Digital Collection"' do
+      let(:type) { ['DigiColl'] }
+
+      it { is_expected.to be_nil }
     end
   end
 
@@ -32,14 +49,12 @@ describe DigitalCollection do
     end
 
     describe "#documents" do
-      it "solr documents should return collection members" do
-        expect(collection.collection_members).to be_a(DigitalCollection::CollectionMembers)
-      end
-      it "should search solr for all members of a collection" do
+      it "searches solr for all members of a collection" do
         expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         expect(collection_members.documents).to be_present
       end
-      it "should return solr documents" do
+
+      it "returns solr documents" do
         expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         collection_members.documents.each do |member|
           expect(member).to be_a SolrDocument
@@ -48,18 +63,16 @@ describe DigitalCollection do
     end
 
     describe "#total" do
-      it "should return the numFound integer" do
+      it "returns the numFound integer" do
         expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
         expect(collection_members.total).to eq 2
       end
     end
-
-    it "should return nil for a non-collection" do
-      expect(non_collection.collection_members).to be_nil
-    end
   end
 
   describe '#collection_id' do
+    subject(:collection_id) { collection.collection_id }
+
     before do
       allow(collection.collection_members).to receive_messages(documents:)
     end
@@ -70,7 +83,7 @@ describe DigitalCollection do
       end
 
       it 'returns the form of the collection id stored on the collection members' do
-        expect(collection.collection_id).to eq 'a1234'
+        expect(collection_id).to eq 'a1234'
       end
     end
 
@@ -80,7 +93,7 @@ describe DigitalCollection do
       end
 
       it 'returns the form of the collection id stored on the collection members' do
-        expect(collection.collection_id).to eq '1234'
+        expect(collection_id).to eq '1234'
       end
     end
 
@@ -90,8 +103,14 @@ describe DigitalCollection do
       end
 
       it 'returns the id matching the current collection' do
-        expect(collection.collection_id).to eq 'a1234'
+        expect(collection_id).to eq 'a1234'
       end
+    end
+
+    context 'when collection_members has no documents' do
+      let(:documents) { [] }
+
+      it { is_expected.to be_nil }
     end
   end
 
