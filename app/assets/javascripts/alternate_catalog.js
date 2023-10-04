@@ -114,7 +114,7 @@
       topFive.forEach(function (item) {
         linkedUrl = url + '&f[' + facet.name + '][]=' + encodeURI(item.value);
         linkText = item.label + ' (' + parseInt(item.hits).toLocaleString() + ')';
-        facetLinks.push('<li><a href="' + linkedUrl + '">' + linkText + '</a></li>');
+        facetLinks.push('<li class="list-inline-item"><a href="' + linkedUrl + '">' + linkText + '</a></li>');
       });
     });
     return facetLinks
