@@ -1,10 +1,6 @@
 <% if show_pagination? && @response.total_pages > 1 %>
-  <div class="row record-padding">
-    <div class="col-md-12">
-      <div class="pagination">
-        <%# EDS API has page skipping errors so we do prev/next only, see issue 1391 %>
-        <%= render partial: "catalog/paginate_compact", object: @response %>
-      </div>
-    </div>
+  <div class="my-3">
+    <%# EDS API has page skipping errors so we do prev/next only, see issue 1391 %>
+    <%= render partial: "catalog/paginate_compact", object: @response %>
   </div>
 <% end %>
