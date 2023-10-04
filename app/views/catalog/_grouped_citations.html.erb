@@ -1,6 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h3 class="modal-title">Multiple citations</h3>
+    <h2 class="modal-title">Multiple citations</h2>
   <% end %>
 
   <div class='grouped-citations'>
@@ -16,6 +16,7 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="all" aria-labelledby="by-title-button">
         <% @documents.each do |document| %>
+          <h3 class="my-4"><%= document_presenter(document).heading %></h3>
           <%= render partial: 'catalog/single_citation', locals: { document: document } %>
         <% end %>
       </div>
