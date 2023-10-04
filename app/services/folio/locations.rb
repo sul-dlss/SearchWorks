@@ -13,6 +13,12 @@ module Folio
       instance.data.dig(code, 'discoveryDisplayName')
     end
 
+    # @param [String] code the Folio location code
+    # @return [String] the location's stackmap API URL
+    def self.stackmap_api_url(code:)
+      instance.data.dig(code, 'details', 'stackmapBaseUrl')
+    end
+
     # Output a CSV of all locations, flattening details and converting UUIDs to codes
     # @return [String] comma-separated data for all locations
     # rubocop:disable Metrics/MethodLength

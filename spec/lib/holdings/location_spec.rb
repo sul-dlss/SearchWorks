@@ -6,25 +6,25 @@ RSpec.describe Holdings::Location do
     let(:location_code) { "LOCKED-STK" }
 
     it "looks up the label from the Folio data" do
-      expect(Holdings::Location.new(location_code, library_code: 'GREEN').name).to eq "Locked stacks: Ask at circulation desk"
+      expect(described_class.new(location_code, library_code: 'GREEN').name).to eq "Locked stacks: Ask at circulation desk"
     end
   end
 
   describe "#present?" do
     context 'when there are items' do
-      subject { Holdings::Location.new("STACKS", [Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })], library_code: 'GREEN') }
+      subject { described_class.new("STACKS", [Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })], library_code: 'GREEN') }
 
       it { is_expected.to be_present }
     end
 
     context 'when there are no items or mhld' do
-      subject {  Holdings::Location.new("STACKS", library_code: 'GREEN') }
+      subject {  described_class.new("STACKS", library_code: 'GREEN') }
 
       it { is_expected.not_to be_present }
     end
 
     context 'when there are mhld but no items' do
-      subject { Holdings::Location.new("STACKS", [], ['something'], library_code: 'GREEN') }
+      subject { described_class.new("STACKS", [], ['something'], library_code: 'GREEN') }
 
       it { is_expected.to be_present }
     end
@@ -32,7 +32,7 @@ RSpec.describe Holdings::Location do
 
   describe "present_on_index?" do
     context 'when there is an item without an mhld' do
-      subject { Holdings::Location.new("STACKS", library_code: 'GREEN') }
+      subject { described_class.new("STACKS", library_code: 'GREEN') }
 
       it { is_expected.not_to be_present_on_index }
     end
@@ -40,7 +40,7 @@ RSpec.describe Holdings::Location do
     context 'when the public note or latest received are not present' do
       let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- -|- something -|-') }
 
-      subject { Holdings::Location.new("STACKS", [], [library_has_mhld], library_code: 'GREEN') }
+      subject { described_class.new("STACKS", [], [library_has_mhld], library_code: 'GREEN') }
 
       it { is_expected.not_to be_present_on_index }
     end
@@ -48,7 +48,7 @@ RSpec.describe Holdings::Location do
     context 'when an item has a present public note or latest received' do
       let(:mhld) { Holdings::MHLD.new('GREEN -|- STACKS -|- something') }
 
-      subject { Holdings::Location.new("STACKS", [], [mhld], library_code: 'GREEN') }
+      subject { described_class.new("STACKS", [], [mhld], library_code: 'GREEN') }
 
       it { is_expected.to be_present_on_index }
     end
@@ -64,7 +64,7 @@ RSpec.describe Holdings::Location do
     subject(:location_link) { location.location_link }
 
     context 'with non-external location' do
-      let(:location) { Holdings::Location.new("STACKS", library_code: 'GREEN') }
+      let(:location) { described_class.new("STACKS", library_code: 'GREEN') }
 
       it 'does not provide a link' do
         expect(location_link).to be_nil
@@ -80,7 +80,7 @@ RSpec.describe Holdings::Location do
       Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210', reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
       Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', home_location: 'STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
     ] }
-    let(:location) { Holdings::Location.new("STACKS", callnumbers, library_code: 'GREEN') }
+    let(:location) { described_class.new("STACKS", callnumbers, library_code: 'GREEN') }
 
     it "sorts items by the full shelfkey" do
       expect(items.map(&:callnumber)).to eq ["ABC 100", "ABC 210", "ABC 321"]
@@ -133,7 +133,7 @@ RSpec.describe Holdings::Location do
         )
       }
 
-      subject { Holdings::Location.new("STACKS", [
+      subject { described_class.new("STACKS", [
         Holdings::Item.new({ barcode: '1234', library: 'GREEN', home_location: 'SEE-OTHER' }, document:)
       ], library_code: 'GREEN') }
 
@@ -141,7 +141,7 @@ RSpec.describe Holdings::Location do
     end
 
     context 'with items that are not bound with' do
-      subject { Holdings::Location.new("STACKS", [
+      subject { described_class.new("STACKS", [
         Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'SEE-OTHER' }, document: SolrDocument.new)
       ], library_code: 'GREEN') }
 
@@ -156,7 +156,7 @@ RSpec.describe Holdings::Location do
       Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', home_location: 'STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
     ] }
 
-    subject(:as_json) { Holdings::Location.new('STACKS', callnumbers, library_code: 'GREEN').as_json }
+    subject(:as_json) { described_class.new('STACKS', callnumbers, library_code: 'GREEN').as_json }
 
     it 'returns a hash with all of the callnumbers public reader methods' do
       expect(as_json).to be_a Hash
@@ -166,6 +166,38 @@ RSpec.describe Holdings::Location do
       expect(as_json[:items].length).to eq 3
       expect(as_json[:items].first).to be_a Hash
       expect(as_json[:items].first[:library]).to eq 'GREEN'
+    end
+  end
+
+  context 'with a location that has a stackmap api url' do
+    subject { described_class.new("STACKS", library_code: 'GREEN') }
+
+    describe '#stackmap_api_url' do
+      it 'returns the stackmap api url' do
+        expect(subject.stackmap_api_url).to eq "https://stanford.stackmap.com/json/"
+      end
+    end
+
+    describe '#stackmapable?' do
+      it 'returns true' do
+        expect(subject.stackmapable?).to be true
+      end
+    end
+  end
+
+  context 'with a location that has no stackmap api url' do
+    subject { described_class.new("LOCKED-STK", library_code: 'EDUCATION') }
+
+    describe '#stackmap_api_url' do
+      it 'returns nil' do
+        expect(subject.stackmap_api_url).to be_nil
+      end
+    end
+
+    describe '#stackmapable?' do
+      it 'returns false' do
+        expect(subject.stackmapable?).to be false
+      end
     end
   end
 end

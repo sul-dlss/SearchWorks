@@ -7,7 +7,7 @@
   <h3 class="modal-title"><%= params[:title] %></h3>
 </div>
 
-<div class="stackmap col-md-12" data-behavior="stackmap" data-callnumber="<%= params[:callnumber] %>"  data-library="<%= params[:library] %>" data-location="<%= params[:location] %>" data-stackmap-url="<%= stackmap_api_url(params[:library]) %>">
+<div class="stackmap col-md-12" data-behavior="stackmap" data-callnumber="<%= params[:callnumber] %>"  data-library="<%= params[:library] %>" data-location="<%= params[:location] %>" data-stackmap-url="<%= params[:api_url] %>">
   <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
 
   <div class="map-template">

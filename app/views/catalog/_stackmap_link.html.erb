@@ -1,5 +1,5 @@
 <% callnumber = location.items.first
-   stackmapable = (callnumber and callnumber.stackmapable?)
+   stackmapable = callnumber && location.stackmapable?
 %>
 
 <% if stackmapable %>

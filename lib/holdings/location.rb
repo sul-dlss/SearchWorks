@@ -22,6 +22,14 @@ class Holdings
       Constants::LOCS.fetch(@code, @code)
     end
 
+    def stackmapable?
+      stackmap_api_url.present?
+    end
+
+    def stackmap_api_url
+      Folio::Locations.stackmap_api_url(code: folio_code)
+    end
+
     def bound_with?
       items.any?(&:bound_with?)
     end
