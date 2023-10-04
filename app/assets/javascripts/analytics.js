@@ -140,7 +140,7 @@ Blacklight.onLoad(function() {
   })
 
   // Stacks Map Tool
-  document.querySelectorAll('.stackmap-find-i').forEach(function(el) {
+  document.querySelectorAll('.stackmap-find-it').forEach(function(el) {
     el.addEventListener('click', function(e) {
       sendAnalyticsEvent({
         category: 'Stacks Map',
