@@ -1,14 +1,14 @@
-a {
+a:not(.btn) {
   border-bottom: 1px solid transparent;
 
   &.disabled {
     color: $sul-btn-disabled-color;
     cursor: not-allowed;
   }
-}
-
-a:hover, a:focus, a:active  {
-  @include link-styling;
+  
+  &:hover, &:focus, &:active  {
+    @include link-styling;
+  }
 }
 
 body {
