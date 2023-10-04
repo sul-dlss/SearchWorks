@@ -617,6 +617,7 @@ f1000research.com
 facultyopinions.com
 fanyun.dhcdb.com.tw
 faseb.onlinelibrary.wiley.com
+faulkner.com
 fconline.foundationcenter.org
 fdasis.nlm.nih.gov
 febs.onlinelibrary.wiley.com
@@ -2056,7 +2057,6 @@ www.experimentalneurobiology.org
 www.eymj.org
 www.facs.org
 www.fao.org
-www.faulkner.com
 www.fccc.edu
 www.fda.gov
 www.fedprac-digital.com
