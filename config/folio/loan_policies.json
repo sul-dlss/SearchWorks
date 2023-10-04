@@ -1219,7 +1219,7 @@
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 8,
+        "duration": 16,
         "intervalId": "Weeks"
       },
       "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
@@ -1232,7 +1232,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:54.227+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T18:26:17.857+00:00",
+      "updatedDate": "2023-10-03T23:11:37.621+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
