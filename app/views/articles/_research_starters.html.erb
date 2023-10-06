@@ -13,7 +13,7 @@
         </a>
       </div>
 
-      <div id='research-starter-body' class='collapse in'>
+      <div id='research-starter-body' class='collapse show'>
         <h3>
           <%= link_to_document(SolrDocument.new(starter.to_h.merge(id: "#{starter['eds_database_id']}__#{starter['eds_accession_number']}"))) %>
         </h3>
