@@ -74,11 +74,21 @@
     margin-top: 2rem;
   }
 
-  .facet-label,
-  .facet-count {
-    display: inline;
-    padding-bottom: 0;
-    padding-left: 7px;
+  .facet-values {
+    .label-and-count {
+      margin: 3px 0;
+
+      .facet-label,
+      .facet-count {
+        display: inline;
+        padding-bottom: 0;
+        padding-left: 3px;
+      }
+    }
+
+    .facet-checkbox {
+      vertical-align: middle;
+    }
   }
 }
 
