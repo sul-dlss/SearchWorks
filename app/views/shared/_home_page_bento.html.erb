@@ -69,10 +69,8 @@
     <div class="col-md-6">
       <div class="card mb-3">
         <div class="card-body p-1">
-          <div class="col-md-12 home-page-search-all media">
-            <div class="search-tools-icon media-left">
-              <span aria-hidden="true" class="media-object">🍱</span>
-            </div>
+          <div class="home-page-search-all media">
+            <span aria-hidden="true" class="media-object mx-3">🍱</span>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
               <p class="d-none d-sm-block">See an overview of what's available for your topic in all these sources.</p>
@@ -85,10 +83,8 @@
     <div class="col-md-6">
       <div class="card mb-3">
         <div class="card-body p-1">
-          <div class="col-md-12 home-page-search-tools media">
-            <div class="search-tools-icon media-left">
-              <%= image_tag 'homepage/search.jpg', class: 'media-object', alt: '', aria: { hidden: true } %>
-            </div>
+          <div class="home-page-search-tools media">
+            <%= image_tag 'homepage/search.jpg', class: 'media-object mx-3', alt: '', aria: { hidden: true } %>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://guides.library.stanford.edu/search-services' %></h3>
               <p class="d-none d-sm-block">Tools to help you discover resources at Stanford and beyond.</p>

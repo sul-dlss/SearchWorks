@@ -109,12 +109,11 @@
     exhibitMediaObject: function(exhibit) {
       var exhibitUrl = this.exhibitsUrl(exhibit.slug);
       var wrapper = $('<div class="media"></div>');
-      var image = $(
-        ['<div class="media-left">',
-           '<a href="' + exhibitUrl + '" tabindex="-1" aria-hidden="true">',
-             '<img alt="" src="" />',
-           '</a>',
-         '</div>'].join('')
+      var image = $(`
+          <a href="${exhibitUrl}" tabindex="-1" aria-hidden="true">
+            <img alt="" src="" class="mr-3" />
+          </a>
+        `
       );
       var body = $('<div class="media-body"></div>');
       var heading = $('<div class="media-heading"></div>');

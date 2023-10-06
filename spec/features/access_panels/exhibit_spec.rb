@@ -73,7 +73,7 @@ RSpec.describe 'Exhibit Access Panel', js: true do
       expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
       within '[data-behavior="exhibits-panel"]' do
-        expect(page).to have_css('.media-left img[src="http://example.com/thumb.jpg"]', visible: false)
+        expect(page).to have_css('a img[src="http://example.com/thumb.jpg"]', visible: false)
       end
     end
   end
