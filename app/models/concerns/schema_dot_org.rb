@@ -29,7 +29,7 @@ module SchemaDotOrg
               name: self[:author_meeting_display]
             }
           end)
-      }
+      }.compact
     end
   end
 

@@ -83,7 +83,7 @@ RSpec.describe SchemaDotOrg do
 
     it 'fabricates schema.org data' do
       expect(document).to be_schema_dot_org
-      expect(document.as_schema_dot_org).to include '@type': 'Thing'
+      expect(document.as_schema_dot_org).to eq(:@context => "http://schema.org", :@type => "Thing")
     end
   end
 
