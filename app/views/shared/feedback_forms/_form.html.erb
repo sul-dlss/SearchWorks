@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="col-sm-10 col-sm-offset-1">
+  <div class="col-sm-10 offset-sm-1">
     <%= render "shared/feedback_forms/reporting_from" %>
 
     <% if target == '#feedback-form' %>
-      <div>
-        <div class="col-sm-12 col-sm-offset-3">
+      <div class="col-sm-12 offset-sm-3">
+        <div class="row">
           <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
           <%= render "shared/quick_reports/form", layout: nil %>
         </div>
