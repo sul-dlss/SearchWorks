@@ -80,7 +80,7 @@ GEM
     bindex (0.8.1)
     bitly (3.0.0)
       oauth2 (>= 0.5.0, < 2.1)
-    blacklight (7.33.1)
+    blacklight (7.34.0)
       deprecation
       globalid
       hashdiff
@@ -89,7 +89,7 @@ GEM
       kaminari (>= 0.15)
       ostruct (>= 0.3.2)
       rails (>= 5.1, < 7.1)
-      view_component (~> 2.66)
+      view_component (>= 2.66, < 4)
     blacklight-hierarchy (6.1.2)
       blacklight (>= 7.18, < 9)
       deprecation
@@ -274,7 +274,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.16.2)
+    ffi (1.16.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -382,7 +382,7 @@ GEM
     namae (1.1.1)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    net-imap (0.3.7)
+    net-imap (0.4.0)
       date
       net-protocol
     net-pop (0.1.2)
@@ -414,7 +414,7 @@ GEM
     orm_adapter (0.5.0)
     ostruct (0.5.5)
     parallel (1.23.0)
-    parser (3.2.2.3)
+    parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
@@ -474,7 +474,7 @@ GEM
       psych (>= 4.0.0)
     recaptcha (5.15.0)
     regexp_parser (2.8.1)
-    reline (0.3.8)
+    reline (0.3.9)
       io-console (~> 0.5)
     responders (3.1.0)
       actionpack (>= 5.2)
