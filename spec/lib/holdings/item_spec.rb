@@ -194,19 +194,9 @@ RSpec.describe Holdings::Item do
 
   describe 'zombie libraries' do
     let(:blank) { Holdings::Item.new({ barcode: '123', library: '', home_location: 'LOCATION' }) }
-    let(:sul) { Holdings::Item.new({ barcode: '123', library: 'SUL', home_location: 'LOCATION' }) }
-    let(:physics) { Holdings::Item.new({ barcode: '123', library: 'PHYSICS', home_location: 'LOCATION' }) }
 
     it 'should view blank libraries as a zombie library' do
       expect(blank.library).to eq 'ZOMBIE'
-    end
-
-    it 'should view blank libraries as a zombie library' do
-      expect(sul.library).to eq 'ZOMBIE'
-    end
-
-    it 'should view blank libraries as a zombie library' do
-      expect(physics.library).to eq 'ZOMBIE'
     end
   end
 

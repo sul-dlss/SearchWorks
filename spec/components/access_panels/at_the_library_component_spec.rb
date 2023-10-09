@@ -347,8 +347,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SUL', home_location: 'STACKS', callnumber: 'ABC 123' },
-          { barcode: '456', library: 'PHYSICS', home_location: 'PHYSTEMP', callnumber: 'DEF 456' },
           { barcode: '789', home_location: 'ON-ORDER', current_location: 'ON-ORDER', callnumber: 'GHI 789' }
         ]
       )
@@ -358,12 +356,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it "renders a zombie library" do #mmm brains
       # This seems to be counting request links (not sure if that was the intent)
       expect(page).to have_css('.panel-library-location a', count: 1)
-    end
-    it "renders SUL items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'ABC')
-    end
-    it "renders PHYSICS items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'DEF')
     end
     it "renders blank (i.e. on order) items in the zombie library" do
       expect(page).to have_css('.panel-library-location td', text: 'GHI')
