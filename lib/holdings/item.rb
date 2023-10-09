@@ -216,11 +216,7 @@ class Holdings
     private
 
     def standard_or_zombie_library
-      if item_display[:library].blank? || %w(SUL PHYSICS).include?(item_display[:library])
-        'ZOMBIE'
-      else
-        item_display[:library]
-      end
+      (item_display[:library].presence || 'ZOMBIE')
     end
 
     def current_location_is_reserve_desk?
