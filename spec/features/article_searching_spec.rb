@@ -11,8 +11,8 @@ RSpec.feature 'Article Searching' do
 
         expect(page).to have_css('.dropdown-menu', visible: true)
 
-        expect(page).to have_css('a.active', text: /catalog/)
-        expect(page).not_to have_css('.active', text: /articles/)
+        expect(page).to have_css('a.highlight', text: /catalog/)
+        expect(page).not_to have_css('.highlight', text: /articles/)
 
         click_link 'articles+'
       end
@@ -28,8 +28,8 @@ RSpec.feature 'Article Searching' do
       within '.search-dropdown' do
         click_link 'Select search scope, currently: articles+'
         expect(page).to have_css('.dropdown-menu', visible: true)
-        expect(page).not_to have_css('a.active', text: /catalog/)
-        expect(page).to have_css('.active', text: /articles/)
+        expect(page).not_to have_css('a.highlight', text: /catalog/)
+        expect(page).to have_css('.highlight', text: /articles/)
       end
     end
   end
