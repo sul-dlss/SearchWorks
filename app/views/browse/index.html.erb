@@ -3,7 +3,7 @@
 <% if params[:start].present? %>
   <div id="masthead-container">
     <div id="masthead" class="browse-masthead">
-      <h1 class="my-2">Browse related items</h1>
+      <h1 class="my-3">Browse related items</h1>
       <p>Starting at call number:
         <% if params[:barcode] %>
           <%= @original_doc.holdings.find_by_barcode(params[:barcode])&.callnumber %>
