@@ -5,6 +5,9 @@
   .advanced-search-start-over {
     margin-left: 20px;
   }
+  #advanced-search-sort-label {
+    @extend .h2; // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
+  }
 
   .advanced-submit-group {
     padding-bottom: 30px;
@@ -58,8 +61,8 @@
   }
 
   .col {
-    margin-left: 25%;
-    @extend .col-md-9;
+    @extend .col-md-9;  // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
+    @extend .pt-2;
   }
 
   #sort {
