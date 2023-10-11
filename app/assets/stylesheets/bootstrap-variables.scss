@@ -16,7 +16,9 @@ $link-color: $sul-link-color;
 $link-hover-color: $sul-link-color-hover;
 $link-hover-decoration: none;
 
+// Components
 $component-active-bg: $digital-blue-dark;
+$caret-vertical-align: 0.1em;
 
 // NOTE: Remove this when upgrading to BS5, as it will then be unnecessary.
 // State -- we lifted these colors from BS5 for better a11y in alerts and elsewhere
@@ -56,6 +58,7 @@ $table-bg-accent: $light-sandstone;
 
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;
+
 
 // Typography
 $font-size-base: 0.875rem;
