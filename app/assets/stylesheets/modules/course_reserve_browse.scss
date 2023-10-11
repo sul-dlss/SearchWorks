@@ -2,7 +2,6 @@
   .table-top-bar {
     color: $white;
     padding: 0.6rem 1.5rem;
-
     @include sul-toolbar-bg-border;
     display: flex;
     align-items: center;
@@ -18,6 +17,19 @@
       padding-top: 0;
     }
   }
+
+  .dataTable {
+    margin-top: 0 !important;
+
+    // Override dataTables to restore bootstrap styling
+    &.table-striped > tbody > tr:nth-of-type(2n+1) {
+      background-color: $table-accent-bg;
+      &>* {
+        box-shadow: none;
+      }
+    }
+  }
+
 
   .dataTables_paginate {
     padding-top: 38px;
