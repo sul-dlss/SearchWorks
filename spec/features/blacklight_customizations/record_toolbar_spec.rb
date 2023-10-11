@@ -9,9 +9,7 @@ feature "Record Toolbar" do
   scenario "should have record toolbar visible but no back to search or pagination", js: true do
     visit '/view/1'
     within "#content" do
-      expect(page).to have_css("div.record-toolbar", visible: true)
-
-      within "div.navbar-header" do
+      within "div.record-toolbar" do
         expect(page).not_to have_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).not_to have_css("a.previous.disabled", visible: true)
@@ -59,7 +57,7 @@ feature "Record Toolbar" do
     end
 
     within "#content" do
-      within "div.navbar-header" do
+      within "div.record-toolbar" do
         expect(page).not_to have_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).to have_css("a.previous", visible: true)

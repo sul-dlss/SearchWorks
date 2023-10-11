@@ -42,10 +42,8 @@ $state-danger-text: #842029;
 $gray-light: #737373;
 
 // Navbar
-$navbar-default-link-color: $white;
-$navbar-default-link-hover-color: $white;
-$navbar-default-link-active-color: $white;
-$navbar-default-toggle-hover-bg: transparent;
+$navbar-dark-color: $white;
+$navbar-dark-toggler-border-color: transparent;
 
 // Pagination
 $pagination-color: black;
@@ -81,8 +79,6 @@ $padding-base-horizontal: 0.75rem;
 $padding-large-horizontal: 1.5rem;
 $padding-xs-horizontal: 0.25rem;
 $nav-link-padding: 0.5rem 1rem;
-$navbar-default-toggle-border-color: #ddd;
-$navbar-default-toggle-icon-bar-bg: #ddd;
 $grid-float-breakpoint: 768px;
 
 .label {

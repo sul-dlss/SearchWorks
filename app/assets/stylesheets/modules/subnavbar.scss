@@ -7,13 +7,9 @@
     padding: 0;
   }
 
-  .navbar-header {
-    max-height: 35px;
-  }
-
   .navbar-toggler {
     font-size: 20px;
-    padding-left: 0;
+    @extend .pl-0;
   }
 
   #search-subnavbar-collapse .navbar-nav {
@@ -26,10 +22,6 @@
     .dropdown:not(.show) .dropdown-toggle::after {
       vertical-align: middle;
     }
-  }
-
-  button.navbar-toggler {
-    color: $white;
   }
 
   .sul-services-menu, .recent-selections {

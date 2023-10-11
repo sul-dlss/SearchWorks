@@ -3,7 +3,7 @@
     <%= t("searchworks.headers.#{article_search? ? 'articles' : 'catalog'}.search_bar") %>
   </h2>
 
-  <nav id="search-navbar" class="navbar search-bar navbar-default" role="navigation">
+  <nav id="search-navbar" class="navbar search-bar" role="navigation">
     <div class="search-navbar-headings">
       <%= link_to (image_tag 'searchworks.svg', {:"data-svg-fallback" => "#{image_path('searchworks.png')}", :alt => 'Home'}), article_search? ? articles_path : root_path, :class => 'navbar-brand', :id => 'searchworks-logo' %>
       <%= render_search_targets_widget %>
