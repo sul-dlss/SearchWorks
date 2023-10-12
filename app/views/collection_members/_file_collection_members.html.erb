@@ -4,9 +4,9 @@
 <% if document.collection_members.present? %>
   <div class="file-collection-members">
     <% if @type == 'show' %>
-      <h2>Digital collection preview</h2>
+      <h2 class="my-3">Digital collection preview</h2>
     <% else %>
-      <h4>Digital collection preview</h4>
+      <h4 class="my-2">Digital collection preview</h4>
     <% end %>
     <% document.collection_members[0...3].each do |collection_member| %>
       <div class="d-flex file-item">
