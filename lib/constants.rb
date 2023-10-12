@@ -1027,6 +1027,10 @@ module Constants
       heading: 'Access',
       text: 'The Education Library is closed for construction. Request items for pickup at another library.'
     },
+    'HILA' => {
+      heading: 'Access',
+      text: 'Items must be requested in advance and viewed on-site.'
+    },
     'HOOVER' => {
       heading: 'Access',
       text: 'Items must be requested in advance and viewed on-site.'
@@ -1034,6 +1038,10 @@ module Constants
     'HV-ARCHIVE' => {
       heading: 'Access',
       text: 'Items must be requested in advance and viewed on-site.'
+    },
+    'RUMSEY-MAP' => {
+      heading: 'On-site access',
+      text: 'Researchers can request to view these materials in the David Rumsey Map Center.'
     },
     'RUMSEYMAP' => {
       heading: 'On-site access',

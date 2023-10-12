@@ -128,6 +128,12 @@ libraries:
     name: Green Library
   GRN-REF:
     name: Green Library
+  HILA:
+    about_url: https://www.hoover.org/library-archives
+    hours_api_url: hoover_archives/location/hv_archives
+    name: Hoover Library
+    suppress_items_list_on_results_view: true
+    suppress_location_request_link: true
   HOOVER:
     about_url: https://www.hoover.org/library-archives
     hours_api_url: hoover_archives/location/hv_archives
@@ -150,6 +156,11 @@ libraries:
     hours_api_url: green/location/reference
   JACKSON:
     name: Business Library
+  LANE:
+    about_url: https://lane.stanford.edu/index.html
+    ezproxy_host: https://login.laneproxy.stanford.edu/login?
+    hours_api_url: medical/location/medical_library
+    name: Medical Library (Lane)
   LANE-MED:
     about_url: https://lane.stanford.edu/index.html
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
@@ -163,9 +174,16 @@ libraries:
     ezproxy_host: http://ezproxy.law.stanford.edu/login?
     hours_api_url: law/location/law_library
     name: Law Library (Crown)
+  MARINE-BIO:
+    about_url: https://library.stanford.edu/libraries/harold-miller-library-hopkins-marine-station
+    hours_api_url: marine_biology/location/marine_biology_library
+    name: Marine Biology Library (Miller)
   MATH-CS:
     hours_api_url: math_stats/location/math_stats_library
     name: Math & Statistics Library
+  MEDIA-CENTER:
+    hours_api_url: green/location/media_microtext
+    name: Media & Microtext Center
   MEDIA-MTXT:
     hours_api_url: green/location/media_microtext
     name: Media & Microtext Center
@@ -177,6 +195,10 @@ libraries:
     hours_api_url: music/location/music_library
     name: Music Library
   RUMSEYMAP:
+    about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
+    hours_api_url: Rumsey/location/visitor-access
+    name: David Rumsey Map Center
+  RUMSEY-MAP:
     about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
     hours_api_url: Rumsey/location/visitor-access
     name: David Rumsey Map Center

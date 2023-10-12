@@ -6,14 +6,12 @@ class LocationRequestLinkComponent < ViewComponent::Base
   # @params [String] location the code for location with the holdings
   def self.for(document:, library:, location:, **kwargs)
     link_type = case library
-                when 'HOOVER'
+                when 'HOOVER', 'HV-ARCHIVE', 'HILA'
                   if document&.index_links&.finding_aid&.first&.href
                     RequestLinks::HooverArchiveRequestLinkComponent
                   else
                     RequestLinks::HooverRequestLinkComponent
                   end
-                when 'HV-ARCHIVE'
-                  RequestLinks::HooverArchiveRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end

@@ -1,7 +1,7 @@
 class Holdings
   class Status
     class NoncircPage
-      LIBRARIES = ['HV-ARCHIVE', 'RUMSEYMAP', 'SPEC-COLL'].freeze
+      LIBRARIES = ['HV-ARCHIVE', 'RUMSEYMAP', 'RUMSEY-MAP', 'SPEC-COLL'].freeze
 
       def initialize(item)
         @item = item

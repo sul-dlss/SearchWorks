@@ -432,23 +432,5 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css '.status-text', text: 'In-library use'
       end
     end
-
-    context 'without a finding aid' do
-      before do
-        document = SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
-          ]
-        )
-        render_inline(described_class.new(document:))
-      end
-
-      it 'renders not available text' do
-        expect(page).to have_css '.panel-body .pull-right', text: 'Not available to request'
-        expect(page).to have_css '.availability-icon.in_process'
-        expect(page).to have_css '.status-text', text: 'In process'
-      end
-    end
   end
 end
