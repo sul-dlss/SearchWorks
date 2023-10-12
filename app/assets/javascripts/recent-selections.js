@@ -58,19 +58,19 @@ Blacklight.onLoad(function(){
 
         updateLinks: function(html){
           if ($.trim(html) == '') {
-            $('li#clear-list').addClass('disabled');
+            $('#clear-list').addClass('disabled');
           } else {
-            $('li#clear-list').removeClass('disabled');
+            $('#clear-list').removeClass('disabled');
           }
         },
         updateList: function(html){
-          var addedListItems = $('ul#show-list li[data-attribute="added-list"]');
+          var addedListItems = $('#show-list [data-attribute="added-list"]');
 
           if (addedListItems.length > 0) {
             addedListItems.remove(); // Clear out any existing items for replacing
           }
 
-          $("ul#show-list").prepend(html);
+          $("#show-list").prepend(html);
         }
     };
 

@@ -25,7 +25,7 @@ RSpec.describe 'Tabbed selections UI' do
       within('#search-subnavbar') do
         click_link 'Selections (7)'
 
-        within('ul.recent-selections') do
+        within('.recent-selections') do
           expect(page).to have_link('Catalog selections (3)')
           expect(page).to have_link('Articles+ selections (4)')
         end
@@ -110,7 +110,7 @@ RSpec.describe 'Tabbed selections UI' do
       expect(page).to have_css('.btn', text: '3 catalog items')
       expect(page).to have_css('.btn', text: '4 articles+ items')
 
-      within('#search-subnavbar ul.recent-selections') do
+      within('#search-subnavbar .recent-selections') do
         click_link 'Clear all lists'
       end
 

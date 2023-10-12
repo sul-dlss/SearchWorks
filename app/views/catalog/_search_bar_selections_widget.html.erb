@@ -1,9 +1,9 @@
-<li class="dropdown" data-behavior="recent-selections" data-url=<%= recent_selections_path %>>
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true">
-    Selections (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)</a>
-  <ul id="show-list" class="dropdown-menu recent-selections" role="menu">
-    <li id="clear-list" class="<%= disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)%>" role="presentation">
-      <%= link_to "Clear all lists", clear_bookmarks_path, method: :delete, data: { confirm: t('searchworks.bookmarks.clear_all.action_confirm') }, role: 'menuitem', tabindex: '-1' %>
-    </li>
-  </ul>
+<li>
+  <div class="dropdown" data-behavior="recent-selections" data-url=<%= recent_selections_path %>>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true">
+      Selections (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)</a>
+    <div id="show-list" class="dropdown-menu recent-selections" role="menu">
+      <%= link_to "Clear all lists", clear_bookmarks_path, method: :delete, data: { confirm: t('searchworks.bookmarks.clear_all.action_confirm') }, id: "clear-list", class: "dropdown-item #{disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)}", role: 'menuitem', tabindex: '-1' %>
+    </div>
+  </div>
 </li>
