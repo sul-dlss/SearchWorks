@@ -30,7 +30,7 @@ class Links
       if apply_law_proxy_prefix?
         Settings.libraries.LAW.ezproxy_host
       elsif apply_lane_proxy_prefix?
-        Settings.libraries['LANE-MED'].ezproxy_host
+        Settings.libraries['LANE'].ezproxy_host
       elsif apply_sul_proxy_prefix?
         Settings.libraries.default.ezproxy_host
       end
@@ -42,8 +42,8 @@ class Links
     end
 
     def apply_lane_proxy_prefix?
-      libraries.include?('LANE-MED') &&
-        ezproxied_hosts['LANE-MED'].any?(link_host) &&
+      (libraries.include?('LANE') || libraries.include?('LANE-MED')) &&
+        ezproxied_hosts['LANE'].any?(link_host) &&
         lane_restricted?
     end
 
@@ -59,7 +59,7 @@ class Links
     def ezproxied_hosts
       @ezproxied_hosts ||= {
         'LAW' => Rails.root.join('config/ezproxy/law_proxy_file.txt').read.split("\n"),
-        'LANE-MED' => Rails.root.join('config/ezproxy/lane_proxy_file.txt').read.split("\n"),
+        'LANE' => Rails.root.join('config/ezproxy/lane_proxy_file.txt').read.split("\n"),
         default: Rails.root.join('config/ezproxy/sul_proxy_file.txt').read.split("\n")
       }
     end

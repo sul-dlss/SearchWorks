@@ -145,16 +145,6 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe '#live_status?' do
-    it 'should identify material not in LANE-MED for live lookup' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })).to be_live_status
-    end
-
-    it 'should identify material in LANE-MED to not do a live lookup' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'LANE-MED', home_location: 'STACKS' })).not_to be_live_status
-    end
-  end
-
   describe 'treat_current_location_as_home_location?' do
     it "should return true if an item's current location is in the list of locations" do
       Constants::CURRENT_HOME_LOCS.each do |current_location|

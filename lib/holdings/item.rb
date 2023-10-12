@@ -141,9 +141,7 @@ class Holdings
     end
 
     def live_status?
-      return true if folio_item?
-
-      library != 'LANE-MED'
+      folio_item?
     end
 
     def circulates?
