@@ -1,13 +1,16 @@
-.access-panel-heading h3 {
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: $h3-font-size;
-  font-weight: 400;
-}
-
 .access-panel {
+  .access-panel-heading {
+    background-color: $cloud;
+
+    h3 {
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 400;
+    }
+  }
+
   .card-body {
     h4 {
       color: $cardinal-red;
