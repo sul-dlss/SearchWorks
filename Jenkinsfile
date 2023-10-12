@@ -109,6 +109,8 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
+          export BRANCH=$TAG_NAME
+          export REVISION=$TAG_NAME
 
           # Load RVM
           rvm use 3.1.2@searchworks --create
@@ -153,6 +155,8 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
+          export BRANCH=$TAG_NAME
+          export REVISION=$TAG_NAME
 
           # Load RVM
           rvm use 3.1.2@searchworks --create
@@ -229,10 +233,11 @@ pipeline {
     stage('folio-dev deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_folio'
+        BRANCH = 'bootstrap4'
       }
 
       when {
-        branch 'master'
+        branch 'bootstrap4'
       }
 
       steps {
@@ -285,6 +290,7 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
+          export BRANCH=$TAG_NAME
           export REVISION=$TAG_NAME
 
           # Load RVM
