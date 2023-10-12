@@ -1,6 +1,6 @@
 <% ivar_to_paginate =  article_selections? ? @bookmarks : @response %>
 <!-- Markup for sm screens and larger -->
-<div class="sort-and-per-page sul-toolbar selection-list-toolbar">
+<div class="sort-and-per-page sul-toolbar <%= 'selection-list-toolbar' if bookmarks? %>">
   <%= render partial: "paginate_compact", object: ivar_to_paginate %>
   <% if bookmarks? %>
     <span id="bookmarksWidgets">
