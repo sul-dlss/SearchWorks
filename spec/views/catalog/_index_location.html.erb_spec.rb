@@ -32,34 +32,56 @@ RSpec.describe "catalog/_index_location" do
   end
 
   describe 'location level requests' do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
-          ]
-        )
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: [
+          { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
+        ]
       )
+    end
+
+    let(:book_type) do
+      Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+    end
+
+    before do
+      allow(view).to receive(:document).and_return(document)
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
       render
     end
 
     it 'has the request link at the location level' do
-      expect(rendered).to have_css('tbody th strong', text: /Locked stacks: Ask at circulation desk/)
+      expect(rendered).to have_css('tbody th strong', text: /Locked stacks/)
       expect(rendered).to have_css('tbody td a', text: "Request")
     end
   end
 
   describe "status icon" do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 123' }
-          ]
-        )
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: [
+          { barcode: '123', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 123' }
+        ]
       )
+    end
+
+    let(:sal3_location) do
+      Folio::Types.cached_location_by_code('SAL3-STACKS')
+    end
+
+    let(:book_type) do
+      Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+    end
+
+    before do
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: sal3_location, permanent_location: sal3_location, status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
+      allow(view).to receive(:document).and_return(document)
       render
     end
 
@@ -69,16 +91,24 @@ RSpec.describe "catalog/_index_location" do
   end
 
   describe "status text" do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
-            { barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
-          ]
-        )
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: [
+          { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
+          { id: '321', barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
+        ]
       )
+    end
+    let(:spec_location) do
+      Folio::Types.cached_location_by_code('SPEC-MANUSCRIPT')
+    end
+
+    before do
+      allow(view).to receive(:document).and_return(document)
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '321', barcode: '321', effective_location: spec_location, permanent_location: spec_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
       render
     end
 
@@ -195,16 +225,28 @@ RSpec.describe "catalog/_index_location" do
   describe "request links" do
     describe "location level request links" do
       describe "for multiple items" do
-        before do
-          allow(view).to receive(:document).and_return(
-            SolrDocument.new(
-              id: '123',
-              item_display_struct: [
-                { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', callnumber: 'ABC 123' },
-                { barcode: '456', library: 'GREEN', home_location: 'LOCKED-STK', current_location: 'ON-ORDER', type: 'STKS-MONO', callnumber: 'ABC 456' }
-              ]
-            )
+        let(:document) do
+          SolrDocument.new(
+            id: '123',
+            item_display_struct: [
+              { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', callnumber: 'ABC 123' },
+              { barcode: '456', library: 'ART', home_location: 'ART-LOCKED-LARGE', current_location: 'ON-ORDER', type: 'STKS-MONO', callnumber: 'ABC 456' }
+            ]
           )
+        end
+
+        let(:book_type) do
+          Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+        end
+
+        before do
+          allow(view).to receive(:document).and_return(document)
+          allow(document).to receive(:folio_items).and_return([
+            instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type,
+                                         loan_type: instance_double(Folio::Item::LoanType, id: nil)),
+            instance_double(Folio::Item, id: '456', barcode: '456', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'On order', material_type: book_type,
+                                         loan_type: instance_double(Folio::Item::LoanType, id: nil))
+          ])
           render
         end
 

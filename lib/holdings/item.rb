@@ -34,9 +34,7 @@ class Holdings
     end
 
     def on_order?
-      barcode.blank? &&
-        home_location == 'ON-ORDER' &&
-        current_location.code == 'ON-ORDER'
+      current_location.code == 'ON-ORDER'
     end
 
     def barcode
@@ -145,9 +143,7 @@ class Holdings
     end
 
     def circulates?
-      return folio_item_circulates? if folio_item?
-
-      circulating_item_types == '*' || circulating_item_types.include?(type)
+      folio_item? && folio_item_circulates?
     end
 
     def as_json(*)
@@ -219,15 +215,6 @@ class Holdings
 
     def current_location_is_reserve_desk?
       Constants::RESERVE_DESKS.keys.include?(current_location.code)
-    end
-
-    def circulating_item_types
-      library_map = Settings.circulating_item_types[library]
-
-      return Settings.circulating_item_types['default'] unless library_map
-      return library_map if library_map.is_a?(Array)
-
-      library_map[home_location] || library_map['default'] || library_map
     end
 
     def folio_item
