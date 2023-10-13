@@ -1,7 +1,7 @@
 module Folio
   class Types
     class << self
-      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, :institutions, :campuses, :service_points, to: :instance
+      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, :institutions, :campuses, :service_points, :material_types, :cached_location_by_code, to: :instance
     end
 
     def self.instance
@@ -50,7 +50,7 @@ module Folio
     def criteria
       @criteria ||= {
         'group' => get_type('patron_groups').index_by { |p| p['id'] },
-        'material-type' => get_type('material_types').index_by { |p| p['id'] },
+        'material-type' => material_types,
         'loan-type' => get_type('loan_types').index_by { |p| p['id'] },
         'location-institution' => get_type('institutions').index_by { |p| p['id'] },
         'location-campus' => get_type('campuses').index_by { |p| p['id'] },
@@ -79,11 +79,24 @@ module Folio
       @service_points ||= get_type('service_points').index_by { |p| p['id'] }
     end
 
+    def material_types
+      @material_types ||= get_type('material_types').index_by { |p| p['id'] }
+    end
+
     def get_type(type)
       raise "Unknown type #{type}" unless types_of_interest.include?(type.to_s)
 
       file = cache_dir.join("#{type}.json")
       JSON.parse(file.read) if file.exist?
+    end
+
+    def cached_location_by_code(code)
+      location_data = locations.values.find { |x| x['code'] == code }
+      library = libraries[location_data['libraryId']]
+      campus = campuses[location_data['campusId']]
+      institution = institutions[location_data['institutionId']]
+
+      Folio::Location.from_dynamic(location_data.reverse_merge('library' => library, 'campus' => campus, 'institution' => institution))
     end
 
     private
