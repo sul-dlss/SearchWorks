@@ -43,3 +43,9 @@ summary {
 #bookmarksWidgets > *, #bookmarksWidgets > #tools-dropdown > .btn {
     padding: 4px 10px;
 }
+
+// We use btn-outline-secondary to style the seleted filters
+.btn-secondary, .btn-outline-secondary {
+  @include button-variant($light-sandstone, $cloud);
+  color: $warm-grey;
+}
