@@ -148,7 +148,9 @@
       function init() {
         $itemWidth = $item.outerWidth() + 10;
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-        $closeBtn = $('<a class="preview-close"><span class="bi-x"></span></a>');
+        $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+        <span aria-hidden="true" class="visually-hidden">×</span>
+        </button>`);
         $arrow = $('<div class="preview-arrow"></div>');
         $gallery = $('.gallery-document');
         reorderPreviewDivs();
