@@ -10,3 +10,7 @@ if Settings.dynamic_sitemap_solr_endpoint == 'export'
     }
   end
 end
+
+# Needed until https://github.com/projectblacklight/blacklight/pull/3094 is merged and backported to 7.x,
+# then we can configure in CatalogController
+Blacklight::Engine.config.blacklight.default_pagination_options = { theme: 'blacklight', left: 3, right: 0 }
