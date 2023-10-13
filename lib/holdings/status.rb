@@ -9,6 +9,8 @@ class Holdings
     def availability_class
       if item.folio_item?
         folio_availability_class
+      elsif item.on_order?
+        'unavailable'
       else
         'unknown'
       end
