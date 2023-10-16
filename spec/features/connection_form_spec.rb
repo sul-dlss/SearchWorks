@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-feature 'Connection form (js)', js: true do
+RSpec.feature 'Connection form (js)', js: true do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path
@@ -31,7 +31,7 @@ feature 'Connection form (js)', js: true do
   end
 end
 
-feature 'Connection form (no js)' do
+RSpec.feature 'Connection form (no js)' do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path
