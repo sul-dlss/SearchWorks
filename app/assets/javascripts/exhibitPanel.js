@@ -111,7 +111,7 @@
       var wrapper = $('<div class="media"></div>');
       var image = $(`
           <a href="${exhibitUrl}" tabindex="-1" aria-hidden="true">
-            <img alt="" src="" class="mr-3" />
+            <img alt="" src="" class="me-3" />
           </a>
         `
       );
