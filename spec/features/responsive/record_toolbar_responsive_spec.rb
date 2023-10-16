@@ -33,8 +33,8 @@ describe "Record toolbar", feature: true, js: true do
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)
 
-          within "div.navbar-header" do
-            expect(page).not_to have_css("button.navbar-toggle", visible: true)
+          within "div.record-toolbar" do
+            expect(page).not_to have_css("button.navbar-toggler", visible: true)
             expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
@@ -59,7 +59,7 @@ describe "Record toolbar", feature: true, js: true do
         within '#content' do
           expect(page).to have_css('div.record-toolbar', visible: true)
 
-          page.find("button.navbar-toggle").click
+          page.find("button.navbar-toggler").click
 
           within 'div.navbar-collapse' do
             expect(page).to have_css('li a', text: 'Cite', visible: true)
@@ -82,8 +82,8 @@ describe "Record toolbar", feature: true, js: true do
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)
 
-          within "div.navbar-header" do
-            expect(page).to have_css("button.navbar-toggle", visible: true)
+          within "div.record-toolbar" do
+            expect(page).to have_css("button.navbar-toggler", visible: true)
             expect(page).to have_css("a.btn.btn-sul-toolbar", text: "", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
@@ -91,7 +91,7 @@ describe "Record toolbar", feature: true, js: true do
 
           expect(page).not_to have_css("div.navbar-collapse", visible: true)
 
-          page.find("button.navbar-toggle").click
+          page.find("button.navbar-toggler").click
 
           within "div.navbar-collapse" do
             expect(page).to have_css("li button", text: "Send to", visible: true)

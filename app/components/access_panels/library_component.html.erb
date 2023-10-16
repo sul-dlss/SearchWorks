@@ -1,4 +1,4 @@
-<%= tag.div class: %w[panel panel-default access-panel panel-library-location], data: { 'hours-route': (hour_path(library.code) if library.holding_library?) } do %>
+<%= tag.div class: %w[card access-panel panel-library-location mb-3], data: { 'hours-route': (hour_path(library.code) if library.holding_library?) } do %>
   <%= link_to_library_about_page do %>
     <div class="library-location-heading access-panel-heading">
       <%= thumb_for_library %>
@@ -13,7 +13,7 @@
     </div>
   <% end %>
 
-  <div class="panel-body location">
+  <div class="card-body location">
     <% if document.index_links.finding_aid.present? %>
         <div class='access-panel-subsection'>
           <h4>Finding aid</h4>

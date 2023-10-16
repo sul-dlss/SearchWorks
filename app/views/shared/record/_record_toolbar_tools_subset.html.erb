@@ -1,46 +1,54 @@
 <% if @document.respond_to?( :to_sms_text ) %>
-  <li class="sms" role="presentation">
-    <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
-    <% else %>
-      <%= link_to t('blacklight.tools.sms_html'), sms_solr_document_path(:id => @document), {:id => 'smsLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
-    <% end %>
-  </li>
+  <% if @document.eds? %>
+    <%= link_to t('blacklight.tools.sms_html'),
+                sms_articles_path(:id => @document),
+                id: 'emailLink', role: 'menuitem', tabindex: '-1', 
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
+  <% else %>
+    <%= link_to t('blacklight.tools.sms_html'),
+                sms_solr_document_path(:id => @document),
+                id: 'smsLink', role: 'menuitem', tabindex: '-1',
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
+  <% end %>
 <% end %>
 <% if @document.respond_to?( :to_email_text ) %>
-  <li class="email" role="presentation">
-    <% if @document.eds? %>
-      <%= link_to t('blacklight.tools.email_html'), email_articles_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
-    <% else %>
-      <%= link_to t('blacklight.tools.email_html'), email_solr_document_path(:id => @document), {:id => 'emailLink', role: 'menuitem', tabindex: '-1', :data => {:ajax_modal => "trigger"}} %>
-    <% end %>
-  </li>
+  <% if @document.eds? %>
+    <%= link_to t('blacklight.tools.email_html'),
+                email_articles_path(:id => @document),
+                id: 'emailLink', role: 'menuitem', tabindex: '-1',
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
+  <% else %>
+    <%= link_to t('blacklight.tools.email_html'),
+                email_solr_document_path(:id => @document),
+                id: 'emailLink', role: 'menuitem', tabindex: '-1',
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
+  <% end %>
 <% end %>
 <% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
-  <li class="refworks" role="presentation">
-    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1' %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
     <%= form_tag(refworks_export_url, 'aria-hidden': true) do %>
       <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.send(:export_as_refworks_marc_txt)) %>
     <% end %>
-  </li>
 <% end %>
 <% if @document.export_formats.key?(:ris) %>
-  <li class="refworks" role="presentation">
-    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1' %>
+    <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
     <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
     <% end %>
-  </li>
-  <li class="ris" role="presentation">
-    <%= link_to t('blacklight.tools.ris_html'), articles_ris_path(@document, :format => 'ris'), role: 'menuitem', tabindex: '-1' %>
-  </li>
+  <%= link_to t('blacklight.tools.ris_html'),
+              articles_ris_path(@document, :format => 'ris'),
+              class: 'dropdown-item',
+              role: 'menuitem', tabindex: '-1' %>
 <% end %>
 <% if @document.export_formats.keys.include?( :endnote ) %>
-  <li class="endnote" role="presentation">
-    <%= link_to t('blacklight.tools.endnote_html'), solr_document_path(@document, :format => 'endnote'), role: 'menuitem', tabindex: '-1' %>
-  </li>
+  <%= link_to t('blacklight.tools.endnote_html'),
+              solr_document_path(@document, :format => 'endnote'),
+              role: 'menuitem', tabindex: '-1',
+              class: 'dropdown-item' %>
 <% end %>
-<li role="presentation">
-  <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
-</li>
+<a role="menuitem" tabindex="-1" class="dropdown-item" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>

@@ -2,7 +2,7 @@ module BrowseHelper
   def link_to_callnumber_browse(document, item, index = 0)
     button_tag(
       item.callnumber,
-      class: "collapsed",
+      class: "collapsed btn btn-secondary",
       id: "callnumber-browse-#{index}",
       "aria-labelledby" => "callnumber-browse-#{index}",
       "aria-expanded" => "true",

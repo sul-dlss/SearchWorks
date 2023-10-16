@@ -1,12 +1,12 @@
 <div class="database-prefix">
-  <h2>Filter by database title</h2>
+  <h2 class="my-2">Filter by database title</h2>
   <ul class="pagination">
-    <li class="<%= 'active' unless params[:prefix] %>">
-      <%= link_to "Show all", search_state.to_h.merge(prefix: nil, page: nil)  %>
+    <li class="page-item <%= 'active' unless params[:prefix] %>">
+      <%= link_to "Show all", search_state.to_h.merge(prefix: nil, page: nil), class: 'page-link' %>
     </li>
     <% facets_prefix_options.each do |prefix_option| %>
-      <li class="<%= 'active' if params[:prefix] == prefix_option.downcase %>">
-        <%= link_to prefix_option, search_state.to_h.merge(prefix: prefix_option.downcase, page: nil, sort: 'title') %>
+      <li class="page-item <%= 'active' if params[:prefix] == prefix_option.downcase %>">
+        <%= link_to prefix_option, search_state.to_h.merge(prefix: prefix_option.downcase, page: nil, sort: 'title'), class: 'page-link' %>
       </li>
     <% end %>
   </ul>

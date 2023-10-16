@@ -1,10 +1,5 @@
 @import 'bootstrap-variables';
-
-@import 'bootstrap-sprockets';
-
 @import 'bootstrap';
-@import 'bootstrap-backports';
-
 @import 'bootstrap-mixins';
 
 @import 'bootstrap-overrides';
@@ -23,8 +18,22 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
   font-family: $remove-icon-font-family;
 }
 
-.facet-values .remove-icon {
-  padding-left: 12px;
+.facets-header {
+  .facets-heading {
+    @extend .h2; // Blacklight extends .h4 by default. https://github.com/projectblacklight/blacklight/blob/51d4f59385549e2031fafa616a1d5a039771bd57/app/assets/stylesheets/blacklight/_facets.scss#L99
+  }
+}
+
+.facet-values {
+  .remove {
+    &:hover,&:active {
+      border: none;
+    }
+
+    .remove-icon {
+      padding-left: 0.3em;
+    }
+  }
 }
 
 .range_limit {
@@ -50,4 +59,37 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
     @extend .btn-sm;
     border-radius: 0px 3px 3px 0px;
   }
+}
+
+
+.dl-invert {
+  dt {
+    @media (min-width: breakpoint-min(md)) {
+      text-align: left; // Blackight has this as right aligned
+    }
+  }
+}
+
+// Balanced lists From Bootstrap 3
+$balance-list-width: 10em;
+@media (min-width: breakpoint-min(md)) {
+  .dl-horizontal {
+    dt {
+      clear: left;
+      float: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: $balance-list-width;
+    }
+
+    dd {
+      margin-left: $balance-list-width;
+    }
+  }
+}
+
+// Footer of the "more" facet values modal
+.facet-pagination {
+  width: 100%;
 }

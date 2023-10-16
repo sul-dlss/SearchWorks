@@ -1,26 +1,25 @@
-<div class="modal-body">
   <%= render :partial=>'/flash_msg' %>
-  <div class="form-group">
+  <div class="form-group row">
     <% unless %w[articles article_selections].include? controller.controller_name # TODO: full record for articles %>
-      <div class="col-sm-10 col-sm-offset-2">
+      <div class="col-sm-10 offset-sm-2">
         <%= radio_button_tag :type, 'brief', true %> <%= label_tag(:type_brief,  "<strong>Brief record</strong> (title, library & call number, bookmark)".html_safe) %><br/>
         <%= radio_button_tag :type, 'full' %> <%= label_tag(:type_full, "<strong>Full record</strong>".html_safe) %>
       </div>
     <% end %>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="to">
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2 text-right" for="to">
       <%= t('blacklight.email.form.to') %>
     </label>
     <div class="col-sm-10">
       <%= email_field_tag :to, params[:to], multiple: true, class: 'form-control' %>
-      <span class='help-block'>Separate multiple addresses with a comma.</span>
+      <span class='form-text'>Separate multiple addresses with a comma.</span>
     </div>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email_from">
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2 text-right" for="email_from">
       <%= t('blacklight.email.form.email_from.label') %>
     </label>
     <div class="col-sm-10">
@@ -28,8 +27,8 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="subject">
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2 text-right" for="subject">
       Subject:
     </label>
     <div class="col-sm-10">
@@ -37,8 +36,8 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="message">
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2 text-right" for="message">
       <%= t('blacklight.email.form.message') %>
     </label>
     <div class="col-sm-10">
@@ -47,8 +46,8 @@
   </div>
 
   <% if current_user.blank? %>
-    <div class="form-group">
-      <div class="col-sm-10 col-sm-offset-2">
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
         <%= recaptcha_tags %>
 
         <p>(Stanford users can avoid this Captcha by logging in.)</p>

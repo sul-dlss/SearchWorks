@@ -1,12 +1,13 @@
-a {
+a:not(.btn):not(.dropdown-item):not(.page-link) {
   border-bottom: 1px solid transparent;
-  color: $sul-link-color;
-  text-decoration: none;
 
   &.disabled {
     color: $sul-btn-disabled-color;
     cursor: not-allowed;
-    text-decoration: none;
+  }
+  
+  &:hover, &:focus, &:active  {
+    @include link-styling;
   }
 }
 
@@ -14,43 +15,9 @@ body {
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
 }
 
-a:hover, a:focus, a:active  {
-  @include link-styling;
-}
-
-h1 {
-  color: $sul-h1-font-color;
-  font-weight: 300;
-  line-height: 1.2em;
-  padding: 10px 0;
-}
-
-h2 {
-  color: $sul-h2-font-color;
-  letter-spacing: 0;
-  line-height: 1.2em;
-  margin: .5em 0;
-}
-
-h3 {
-  color: $sul-h3-font-color;
-  line-height: 1.2em;
-  margin: 0 0 .4em;
-}
-
-h4 {
-  color: $sul-h4-font-color; 
-  line-height: 1.2em;
-}
-
-dl {
-  margin-bottom: 15px;
-}
-
 dt {
   color: $cool-grey;
   font-weight: normal;
-  width: 12em;
 }
 
 dd {

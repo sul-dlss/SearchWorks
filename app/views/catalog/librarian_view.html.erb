@@ -1,21 +1,16 @@
-<% # Overriden from Blacklight to add MODS librarian view support %>
-<div class="modal-header">
-  <% if request.xhr? %>
-    <button type="button" class="ajax-modal-close close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_header do %>
+    <h3 class="modal-title"><%= t('blacklight.search.librarian_view.title') %></h3>
   <% end %>
-  <h3 class="modal-title"><%= t('blacklight.search.librarian_view.title') %></h3>
-  
+
   <% if @document[:last_updated] %>
     <p>Last updated in SearchWorks on <%= l @document[:last_updated].to_time.in_time_zone, format: :long %></p>
   <% end %>
-  
-</div>
-<% if @document.respond_to?(:to_marc) %>
-  <%= render "marc_view" %>
-<% elsif @document.mods? %>
-  <%= render "mods_view"%>
-<% else %>
-  <%= t('blacklight.search.librarian_view.empty') %>
+  <% if @document.respond_to?(:to_marc) %>
+    <%= render "marc_view" %>
+  <% elsif @document.mods? %>
+    <%= render "mods_view"%>
+  <% else %>
+    <%= t('blacklight.search.librarian_view.empty') %>
+  <% end %>
 <% end %>

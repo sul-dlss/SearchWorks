@@ -1,11 +1,11 @@
 require "spec_helper"
 
-feature "Advanced Search" do
+RSpec.feature "Advanced Search" do
   before do
     visit blacklight_advanced_search_engine.advanced_search_path
   end
 
-  scenario "should have correct fields and headings" do
+  scenario "has correct fields and headings" do
     expect(page).to have_title("Advanced search in SearchWorks catalog")
     within ".advanced-search-form" do
       expect(page).to have_css("h1", text: "Advanced search")
@@ -22,13 +22,13 @@ feature "Advanced Search" do
         expect(page).to have_field 'ISBN/ISSN'
       end
       within ".limit-criteria" do
-        expect(page).to have_css("h3.panel-title a", text: "Access")
+        expect(page).to have_css("h3.facet-field-heading button", text: "Access")
         expect(page).to have_field 'At the Library'
-        expect(page).to have_css("h3.panel-title a", text: "Resource type")
+        expect(page).to have_css("h3.facet-field-heading button", text: "Resource type")
         expect(page).to have_field 'Book'
-        expect(page).to have_css("h3.panel-title a", text: "Library")
+        expect(page).to have_css("h3.facet-field-heading button", text: "Library")
         expect(page).to have_field 'Green'
-        expect(page).to have_css("h3.panel-title a", text: "Language")
+        expect(page).to have_css("h3.facet-field-heading button", text: "Language")
         expect(page).to have_field 'Chinese'
       end
 

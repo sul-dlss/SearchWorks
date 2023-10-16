@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'catalog/stackmap' do
+RSpec.describe 'catalog/stackmap' do
   include MarcMetadataFixtures
 
   describe 'StackMap view' do
@@ -9,7 +9,7 @@ describe 'catalog/stackmap' do
       render
     end
 
-    it 'should render stackmap map template' do
+    it 'renders stackmap map template' do
       expect(rendered).to have_css('div.modal-header h3.modal-title')
 
       expect(rendered).to have_css('div.stackmap .map-template')

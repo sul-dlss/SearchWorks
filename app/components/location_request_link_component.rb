@@ -19,7 +19,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     link_type.new(document:, library:, location:, **kwargs)
   end
 
-  def initialize(document:, library:, location:, items: [], classes: %w[btn btn-default btn-xs request-button], **link_params)
+  def initialize(document:, library:, location:, items: [], classes: %w[btn btn-xs request-button], **link_params)
     super
 
     @document = document

@@ -1,32 +1,30 @@
-<div class="record-toolbar container-fluid sul-toolbar navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".toolbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-      </button>
-      <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe %>
-      <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
-    </div>
-    <div class="navbar-collapse collapse toolbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <% if @document.citable? %>
-          <li>
-            <%= link_to t('blacklight.tools.cite_html'), (@document.eds? ? citation_article_path(@document) : citation_solr_document_path(@document)), {:id => 'citeLink', :data => {:ajax_modal => "trigger"}, :class => 'btn btn-sul-toolbar'} %>
-          </li>
-        <% end %>
-        <li class="dropdown">
-          <button class="btn btn-sul-toolbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= t('blacklight.tools.send_to_html').html_safe %>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <%= render "shared/record/record_toolbar_tools_subset" %>
-          </ul>
-        </li>
+<div class="record-toolbar sul-toolbar navbar navbar-expand-md navbar-dark px-3 my-4" role="navigation">
+  <div>
+    <%= link_back_to_catalog :class => 'btn btn-sul-toolbar back-to-results', :label => t('blacklight.back_to_search').html_safe %>
+    <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
+  </div>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="fa fa-bars"></span>
+  </button>
+  <div class="navbar-collapse collapse toolbar-collapse">
+    <ul class="nav navbar-nav ml-auto">
+      <% if @document.citable? %>
         <li>
-          <%= render(:partial => 'bookmark_control', :locals => {:document=> @document}) %>
+          <%= link_to t('blacklight.tools.cite_html'), (@document.eds? ? citation_article_path(@document) : citation_solr_document_path(@document)), {:id => 'citeLink', :data => {blacklight_modal: "trigger"}, :class => 'btn btn-sul-toolbar'} %>
         </li>
-      </ul>
-    </div>
+      <% end %>
+      <li class="dropdown">
+        <button class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t('blacklight.tools.send_to_html').html_safe %>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <%= render "shared/record/record_toolbar_tools_subset" %>
+        </div>
+      </li>
+      <li>
+        <%= render(:partial => 'bookmark_control', :locals => {:document=> @document}) %>
+      </li>
+    </ul>
   </div>
 </div>

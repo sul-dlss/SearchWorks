@@ -1,24 +1,22 @@
 <% ivar_to_paginate =  article_selections? ? @bookmarks : @response %>
 <!-- Markup for sm screens and larger -->
-<div class="sort-and-per-page sul-toolbar selection-list-toolbar">
-  <div id="search-results-toolbar" class="search-widgets">
-    <%= render partial: "paginate_compact", object: ivar_to_paginate %>
-    <% if bookmarks? %>
-      <span id="bookmarksWidgets">
-        <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(ivar_to_paginate)).html_safe, polymorphic_path(article_selections? ? :citation_articles : :citation_solr_documents, :sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-default', :data => {:ajax_modal => "trigger"}} %>
-        <%= render "tool_dropdown" %>
-        <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), method: :delete, class: 'btn btn-default', data: { confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
-          <i class="fa fa-times" aria-hidden="true"></i> Clear list
-        <% end %>
-      </span>
-    <% end %>
-    <span id="viewWidgets">
-      <%= render partial: 'view_type_group' %>
-      <%= render partial: 'sort_widget' %>
-      <%= render partial: 'shared/per_page_widget' %>
-      <% unless bookmarks? %>
-        <%= render partial: 'select_all_widget' %>
+<div class="sort-and-per-page sul-toolbar <%= 'selection-list-toolbar' if bookmarks? %>">
+  <%= render partial: "paginate_compact", object: ivar_to_paginate %>
+  <% if bookmarks? %>
+    <span id="bookmarksWidgets">
+      <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(ivar_to_paginate)).html_safe, polymorphic_path(article_selections? ? :citation_articles : :citation_solr_documents, :sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-secondary', :data => {blacklight_modal: "trigger"}} %>
+      <%= render "tool_dropdown" %>
+      <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), method: :delete, class: 'btn btn-secondary', data: { confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
+        <i class="fa fa-times" aria-hidden="true"></i> Clear list
       <% end %>
     </span>
-  </div>
+  <% end %>
+  <span id="viewWidgets">
+    <%= render partial: 'view_type_group' %>
+    <%= render partial: 'sort_widget' %>
+    <%= render partial: 'shared/per_page_widget' %>
+    <% unless bookmarks? %>
+      <%= render partial: 'select_all_widget' %>
+    <% end %>
+  </span>
 </div>

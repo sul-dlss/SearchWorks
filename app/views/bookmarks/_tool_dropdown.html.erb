@@ -1,27 +1,30 @@
 <span class="sr-only">Send current page to text, email, RefWorks, EndNote, or printer</span>
 <div id="tools-dropdown" class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= t('blacklight.tools.send_entries', current_range: current_entries_info(@response)).html_safe %>
   </button>
-  <ul class="dropdown-menu" role="menu">
-    <li role="presentation">
-      <%= link_to t('blacklight.tools.email_html'), email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", role: 'menuitem', tabindex: '-1', data: {ajax_modal: "trigger"} %>
-    </li>
+  <div class="dropdown-menu" role="menu">
+    <%= link_to t('blacklight.tools.email_html'),
+                email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}),
+                id: "emailLink", role: 'menuitem', tabindex: '-1',
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
 
     <% if @response.documents.any? {|d| d.exports_as? :refworks_marc_txt } %>
-      <li role="presentation">
-        <%= link_to t('blacklight.tools.refworks_html'), refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search)), :id => "refworksLink", role: 'menuitem', tabindex: '-1' %>
-      </li>
+      <%= link_to t('blacklight.tools.refworks_html'),
+                  refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search)),
+                  id: "refworksLink", role: 'menuitem', tabindex: '-1',
+                  class: 'dropdown-item' %>
     <% end %>
 
     <% if @response.documents.any? {|d| d.exports_as? :endnote } %>
-      <li role="presentation">
-        <%= link_to t('blacklight.tools.endnote_html'), bookmarks_path(:endnote, search_state.params_for_search), download: File.basename(bookmarks_path(:endnote, search_state.params_for_search)), :id => "endnoteLink", role: 'menuitem', tabindex: '-1' %>
-      </li>
+      <%= link_to t('blacklight.tools.endnote_html'),
+                  bookmarks_path(:endnote, search_state.params_for_search),
+                  download: File.basename(bookmarks_path(:endnote, search_state.params_for_search)),
+                  id: "endnoteLink", role: 'menuitem', tabindex: '-1',
+                  class: 'dropdown-item' %>
     <% end %>
 
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
-    </li>
-  </ul>
+    <a role="menuitem" class="dropdown-item" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
+  </div>
 </div>

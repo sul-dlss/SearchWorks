@@ -1,19 +1,9 @@
-.callnumber button.collapsed {
-  @extend .btn;
-  @extend .btn-default;
-}
-
-.callnumber button {
-  @extend .btn;
-  @extend .btn-default;
-}
-
 .view-full-page {
   line-height: 3em;
   text-align: right;
 }
 
-@media screen and (max-width: $screen-md) {
+@include media-breakpoint-down(md) {
   .view-full-page {
     line-height: normal;
     text-align: left;
@@ -44,7 +34,7 @@
     .gallery-document .browse-link a {
       border-bottom: 0;
       display: inline-block;
-      font-size: $font-size-h2;
+      font-size: $h2-font-size;
       padding: 15px;
       position: relative;
       top: 150px;
@@ -79,7 +69,7 @@
 
 .record-browse-nearby {
 
-  .panel {
+  .card {
     border: 0;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -89,7 +79,7 @@
     border-bottom: 1px solid #e3dfd5;
   }
 
-  .panel-body {
+  .card-body {
     padding-left: 0;
   }
 }

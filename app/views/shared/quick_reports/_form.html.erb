@@ -2,7 +2,7 @@
   <div class="col-sm-3">
     <%= form_with url: quick_reports_path, method: :post, class: 'form-horizontal feedback-form', role: 'form', name: 'quick_report' do |f| %>
       <%= f.hidden_field(:url, value: request.referer, class: 'reporting-from-field') %>
-      <button type='submit' class='btn btn-default btn-quick-report'>Report wrong cover image</button>
+      <button type='submit' class='btn btn-secondary btn-quick-report'>Report wrong cover image</button>
     <% end %>
   </div>
 <% end %>

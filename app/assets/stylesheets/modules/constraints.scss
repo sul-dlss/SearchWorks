@@ -1,22 +1,25 @@
 .constraints-container {
   .btn-reset span {
-    font-size: $font-size-h4;
+    font-size: $h4-font-size;
     font-variant: all-small-caps;
-    line-height: $font-size-h4;
+    line-height: $h4-font-size;
   }
 
   span.constraint.btn-group {
-    margin: 0.5em;
-
-    span.constraint-value.btn {
+    span.constraint-value {
       border-top-left-radius: $sul-constraint-btn-radius;
       border-bottom-left-radius: $sul-constraint-btn-radius;
+      cursor: default; // Override the .btn style which blacklight applies
       font-size: $font-size-base;
+      &:hover {
+        border-color: $cloud; // override blacklight
+      }
     }
 
-    a.btn.remove {
+    a.remove {
       border-top-right-radius: $sul-constraint-btn-radius;
       border-bottom-right-radius: $sul-constraint-btn-radius;
+      cursor: pointer;
       font-size: 12px;
       padding-left: 4px;
       padding-top: 8px;
@@ -24,15 +27,15 @@
     }
 
   }
-  @media (max-width: $screen-xs-max) {
+  @include media-breakpoint-down(sm) {
     .constraint {
-      &.query .filterValue {
+      &.query .filter-value {
         max-width: 227px;
       }
-      &.filter .filterValue {
+      &.filter .filter-value {
         max-width: 150px;
       }
-      .filterValue {
+      .filter-value {
         display: inline-block;
         white-space: nowrap;
         overflow: hidden;

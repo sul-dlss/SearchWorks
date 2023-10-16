@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe "Responsive Home Page", feature: true, js: true do
+RSpec.describe "Responsive Home Page", feature: true, js: true do
   describe "facets" do
-    it "should show the facets on large screens" do
+    it "shows the facets on large screens" do
       visit root_path
 
       within(".blacklight-access_facet") do
-        expect(page).to have_css(".panel-title", text: "Access")
+        expect(page).to have_button 'Access'
         within("ul.facet-values") do
           expect(page).to have_css("li a", text: "Online", visible: true)
           expect(page).to have_css("li a", text: "At the Library", visible: true)
@@ -14,11 +14,11 @@ describe "Responsive Home Page", feature: true, js: true do
       end
     end
 
-    it 'should collapse facets on small screens', page_width: 700, responsive: true do
+    it 'collapses facets on small screens', page_width: 700, responsive: true do
       visit root_path
 
       within(".blacklight-access_facet") do
-        expect(page).to have_css(".panel-title", text: "Access")
+        expect(page).to have_button 'Access'
         expect(page).not_to have_css("li a", text: "Online", visible: true)
         expect(page).not_to have_css("li a", text: "At the Library", visible: true)
       end

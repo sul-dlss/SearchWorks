@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   .side-nav-minimap {
     li {
       &:first-child {

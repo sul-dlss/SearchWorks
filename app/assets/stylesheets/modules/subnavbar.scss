@@ -7,26 +7,24 @@
     padding: 0;
   }
 
-  .navbar-header {
-    max-height: 35px;
-  }
-
-  .navbar-toggle {
+  .navbar-toggler {
     font-size: 20px;
-    margin: 0;
-    padding: 0;
+    @extend .pl-0;
   }
 
-  // initial/unopened state is 270deg, triangle pointing to the right
-  #search-subnavbar-collapse .navbar-nav .dropdown-toggle.search-navbar-dropdown-btn-rotate-270 span.caret {
-    @extend .fa-rotate-270;
+  #search-subnavbar-collapse .navbar-nav {
+    .dropdown-toggle::after {
+      transform: rotate(270deg);
+    }
+    .dropdown.show .dropdown-toggle::after {
+      transform: rotate(0deg);
+    }
+    .dropdown:not(.show) .dropdown-toggle::after {
+      vertical-align: middle;
+    }
   }
 
-  button.navbar-toggle {
-    color: $white;
-  }
-
-  .sul-services-menu {
+  .sul-services-menu, .recent-selections {
     white-space: nowrap;
   }
 
@@ -35,16 +33,12 @@
     list-style-type: none;
     padding-left: 20px;
   }
-  .navbar-nav > li {
+  .navbar-nav {
+    // These apply to links on the bar and in the dropdowns.
     a {
       background-color: $sul-subnavbar-bg-color;
       border: 0;
-      color: $white;
-      font-size: 22px;
       font-weight: 100;
-      line-height: 35px;
-      margin-right: 20px;
-      padding: 0;
     }
     // Add the border on hover, or when the #connection-form is open
     a:hover, a[data-target="#connection-form"][aria-expanded="true"] {
@@ -58,8 +52,16 @@
     }
   }
 
+  .navbar-nav > li {
+    &>a, .dropdown-toggle {
+      color: $white;
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
+
   // the last menu item should be right-aligned
-  .navbar-nav.navbar-right > li:last-child > a {
+  .navbar-nav.ml-auto > li:last-child > a {
     margin-right: 0;
     padding-right: 0;
   }
@@ -69,18 +71,12 @@
     background-color: $sul-subnavbar-bg-color;
     border-radius: 0;
     left: inherit;
+    color: $white;
+    margin-top: 0;
 
-    // Menu subheadings
-    li span.menugroup {
-      font-variant: all-small-caps;
-    }
-
-    li a, li span {
-      font-size: 1.6rem;
-      font-weight: 100;
-      line-height: 35px;
-      margin: 0;
-      padding: 0 24px;
+    .dropdown-item, .dropdown-item-text {
+      color: $white;
+      font-size: 1rem;
 
        i.fa-bookmark-o {
         padding-right: 4px;
@@ -92,15 +88,26 @@
       padding-left: 15px;
     }
 
-    .divider {
+    .dropdown-divider {
       background-color: transparent;
       border-bottom: $white dotted 1px;
       margin-left: 15px;
       margin-right: 15px;
     }
+
+    &.sul-services-menu {
+      .dropdown-item-text {
+        font-variant: all-small-caps;
+      }
+
+      .dropdown-item {
+        padding-left: 2.75em;
+      }
+    }
   }
 
-  @media screen and (max-width: $screen-sm-min) {
+  
+  @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding: 0 15px;
     }

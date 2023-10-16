@@ -1,6 +1,6 @@
 <% if document.holdings.present? %>
   <% document.holdings.libraries.select(&:present?).each do |library| %>
-    <table class="table table-condensed availability" data-live-lookup-url="<%= availability_index_path %>">
+    <table class="table table-sm availability" data-live-lookup-url="<%= availability_index_path %>">
       <caption class='sr-only'>Status of items at <%= library.name %></caption>
       <thead>
         <tr class='active'>

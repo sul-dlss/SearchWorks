@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Options Facet' do
+RSpec.describe 'Options Facet' do
   it 'renders the eds_search_limiters_facet as checkboxes (behaves like a link)', js: true do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path(q: 'Example Query')
@@ -19,7 +19,7 @@ describe 'Options Facet' do
     end
 
     within('.breadcrumb') do
-      expect(page).to have_css('.filterValue', text: 'Limiter1')
+      expect(page).to have_css('.filter-value', text: 'Limiter1')
     end
   end
 end

@@ -1,17 +1,18 @@
 require "spec_helper"
 
-feature "Facets Customizations" do
-  scenario "material type icons should display on the home page" do
+RSpec.feature "Facets Customizations" do
+  scenario "material type icons display on the home page" do
     visit root_path
 
     within(".blacklight-format_main_ssim") do
-      expect(page).to have_css(".panel-title", text: "Resource type")
+      expect(page).to have_button 'Resource type'
       within("ul.facet-values") do
         expect(page).to have_css("li span.sul-icon")
       end
     end
   end
-  scenario "material type icons should display after an advanced search", js: true do
+
+  scenario "material type icons display after an advanced search", js: true do
     skip('Fails intermitently on Travis.') if ENV['CI']
     visit blacklight_advanced_search_engine.advanced_search_path
 
@@ -23,11 +24,12 @@ feature "Facets Customizations" do
     expect(page).to have_css(".blacklight-format_main_ssim")
 
     within(".blacklight-format_main_ssim") do
-      expect(page).to have_css(".panel-title", text: "Resource type")
+      expect(page).to have_button 'Resource type'
       expect(page).to have_css("li span.sul-icon")
     end
   end
-  scenario 'resource type should be index sorted (not count)' do
+
+  scenario 'resource type is index sorted (not count)' do
     visit root_path
 
     book_index  = facet_index(facet_name: 'facet-format_main_ssim', value: 'Book')
@@ -37,7 +39,8 @@ feature "Facets Customizations" do
     expect(book_index).to be < db_index
     expect(db_index).to be < image_index
   end
-  scenario 'library facet should be index sorted (not count)' do
+
+  scenario 'library facet is index sorted (not count)' do
     visit root_path
 
     green_index = facet_index(facet_name: 'facet-building_facet', value: 'Green')
@@ -47,21 +50,22 @@ feature "Facets Customizations" do
     expect(green_index).to be < music_index
     expect(music_index).to be < sdr_index
   end
-  scenario "while not in an access point facet title should not change", js: true do
+
+  scenario "while not in an access point facet title does not change", js: true do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'
 
     within "div#facets" do
-      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Refine your results")
+      expect(page).to have_css("h2.facets-heading", text: "Refine your results")
     end
   end
 
-  scenario "while at an access point facet title should reflect custom heading" do
+  scenario "while at an access point facet title reflects the custom heading" do
     visit '/databases'
 
     within "div#facets" do
-      expect(page).to have_css("div.top-panel-heading.panel-heading h2", text: "Within databases")
+      expect(page).to have_css("h2.facets-heading", text: "Within databases")
     end
   end
 end

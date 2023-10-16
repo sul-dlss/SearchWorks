@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Article Searching' do
+RSpec.feature 'Article Searching' do
   describe 'Search bar dropdown', js: true do
     scenario 'allows the user to switch to the article search context' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
@@ -11,8 +11,8 @@ feature 'Article Searching' do
 
         expect(page).to have_css('.dropdown-menu', visible: true)
 
-        expect(page).to have_css('li.active', text: /catalog/)
-        expect(page).not_to have_css('li.active a', text: /articles/)
+        expect(page).to have_css('a.highlight', text: /catalog/)
+        expect(page).not_to have_css('.highlight', text: /articles/)
 
         click_link 'articles+'
       end
@@ -28,8 +28,8 @@ feature 'Article Searching' do
       within '.search-dropdown' do
         click_link 'Select search scope, currently: articles+'
         expect(page).to have_css('.dropdown-menu', visible: true)
-        expect(page).not_to have_css('li.active a', text: /catalog/)
-        expect(page).to have_css('li.active', text: /articles/)
+        expect(page).not_to have_css('a.highlight', text: /catalog/)
+        expect(page).to have_css('.highlight', text: /articles/)
       end
     end
   end
@@ -121,20 +121,20 @@ feature 'Article Searching' do
     scenario 'start over button returns users to articles home page' do
       article_search_for('kittens')
 
-      expect(page).to have_css('.appliedFilter', text: /kittens/)
+      expect(page).to have_css('.applied-filter', text: /kittens/)
 
       find('a.btn-reset').click
       expect(page).to have_current_path(articles_path)
-      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+      expect(page).not_to have_css('.applied-filter', text: /kittens/)
     end
 
     scenario 'removing last breadcrumb redirects to articles home' do
       article_search_for('kittens')
 
-      expect(page).to have_css('.appliedFilter', text: /kittens/)
+      expect(page).to have_css('.applied-filter', text: /kittens/)
 
       first(:css, 'a.remove').click
-      expect(page).not_to have_css('.appliedFilter', text: /kittens/)
+      expect(page).not_to have_css('.applied-filter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
   end

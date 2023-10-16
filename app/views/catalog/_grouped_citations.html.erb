@@ -1,29 +1,36 @@
-<div class='grouped-citations'>
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active">
-      <a href="#all" aria-controls="all" role="tab" data-toggle="tab">By title</a>
-    </li>
-    <li role="presentation">
-      <a href="#biblio" aria-controls="biblio" role="tab" data-toggle="tab">By citation format</a>
-    </li>
-  </ul>
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_header do %>
+    <h2 class="modal-title">Multiple citations</h2>
+  <% end %>
 
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="all">
-      <% @documents.each do |document| %>
-        <%= render partial: 'catalog/single_citation', locals: { document: document } %>
-      <% end %>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="biblio">
-      <% grouped_citations(@documents).each do |format, citations| %>
-        <% unless format == 'NULL' %>
-          <h4><%= format %></h4>
+  <div class='grouped-citations'>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="nav-item">
+        <button href="#all" aria-controls="all" role="tab" data-toggle="tab" class="nav-link active" id="by-title-button">By title</button>
+      </li>
+      <li role="presentation" class="nav-item">
+        <button href="#biblio" aria-controls="biblio" role="tab" data-toggle="tab" class="nav-link" id="by-format-button">By citation format</button>
+      </li>
+    </ul>
 
-          <% citations.each do |citation| %>
-            <%= citation %>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="all" aria-labelledby="by-title-button">
+        <% @documents.each do |document| %>
+          <h3 class="my-4"><%= document_presenter(document).heading %></h3>
+          <%= render partial: 'catalog/single_citation', locals: { document: document } %>
+        <% end %>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="biblio" aria-labelledby="by-format-button">
+        <% grouped_citations(@documents).each do |format, citations| %>
+          <% unless format == 'NULL' %>
+            <h4><%= format %></h4>
+
+            <% citations.each do |citation| %>
+              <%= citation %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

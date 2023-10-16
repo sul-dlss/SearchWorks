@@ -23,12 +23,11 @@ RSpec.describe 'Tabbed selections UI' do
       visit '/'
 
       within('#search-subnavbar') do
-        expect(page).to have_css('li a', text: 'Selections (7)')
-        find('li a', text: 'Selections (7)').click
+        click_link 'Selections (7)'
 
-        within('ul.recent-selections') do
-          expect(page).to have_css('li a', text: 'Catalog selections (3)')
-          expect(page).to have_css('li a', text: 'Articles+ selections (4)')
+        within('.recent-selections') do
+          expect(page).to have_link('Catalog selections (3)')
+          expect(page).to have_link('Articles+ selections (4)')
         end
       end
     end
@@ -40,10 +39,10 @@ RSpec.describe 'Tabbed selections UI' do
       find('#tools-dropdown button').click
 
       within('#tools-dropdown .dropdown-menu') do
-        expect(page).to have_css('li a', text: 'email')
-        expect(page).to have_css('li a', text: 'RefWorks')
-        expect(page).to have_css('li a', text: 'EndNote')
-        expect(page).to have_css('li a', text: 'printer')
+        expect(page).to have_link('email')
+        expect(page).to have_link('RefWorks')
+        expect(page).to have_link('EndNote')
+        expect(page).to have_link('printer')
       end
     end
   end
@@ -111,7 +110,7 @@ RSpec.describe 'Tabbed selections UI' do
       expect(page).to have_css('.btn', text: '3 catalog items')
       expect(page).to have_css('.btn', text: '4 articles+ items')
 
-      within('#search-subnavbar ul.recent-selections') do
+      within('#search-subnavbar .recent-selections') do
         click_link 'Clear all lists'
       end
 

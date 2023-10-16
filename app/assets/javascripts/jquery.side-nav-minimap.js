@@ -29,7 +29,7 @@
 
           var position = Math.round($section.offset().top);
 
-          $section.scrollspy({
+          $section.legacyScrollspy({
             min: position,
             max: position + $(this).height(),
             onEnter: function(element, position) {

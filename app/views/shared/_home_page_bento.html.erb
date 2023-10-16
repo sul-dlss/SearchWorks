@@ -1,80 +1,79 @@
 <div class="home-page-bento">
-  <h2 class="h1">Search Stanford's library resources</h2>
-  <div class="bento-sections">
-    <div class="bento-block home-page-catalog <%= 'home-page-you-are-here' unless article_search? %>">
-      <div class="panel panel-default">
-        <div class="panel-body">
+  <h2 class="h1 my-4">Search Stanford's library resources</h2>
+  <div class="bento-sections row row-cols-2 row-cols-md-4 justify-content-around">
+    <div class="col">
+      <div class="bento-block home-page-catalog card mb-3 <%= 'home-page-you-are-here' unless article_search? %>">
+        <%= image_tag 'homepage/catalog.jpg', class: 'card-img-top', alt: '', aria: { hidden: true } %>
+        <div class="card-body p-1">
           <%= tag.span 'You are here!', class: 'you-are-here-badge' unless article_search? %>
-          <%= image_tag 'homepage/catalog.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless controller_name == 'catalog', 'Catalog', root_path %></h3>
-          <p class="hidden-xs">Physical and digital books, media, journals, archives, and databases.</p>
+          <p class="d-none d-sm-block">Physical and digital books, media, journals, archives, and databases.</p>
         </div>
       </div>
     </div>
 
-    <div class="bento-block home-page-articles <%= 'home-page-you-are-here' if article_search? %>">
-      <div class="panel panel-default">
-        <div class="panel-body">
+    <div class="col">
+      <div class="bento-block home-page-articles card mb-3 <%= 'home-page-you-are-here' if article_search? %>">
+        <%= image_tag 'homepage/articles.jpg', class: 'card-img-top',  alt: '', aria: { hidden: true } %>
+        <div class="card-body p-1">
           <%= tag.span 'You are here!', class: 'you-are-here-badge' if article_search? %>
-          <%= image_tag 'homepage/articles.jpg', alt: '', aria: { hidden: true } %>
           <h3><%= link_to_unless article_search?, 'Articles+', articles_path %></h3>
-          <p class="hidden-xs">Journal articles, e-books, and other e-resources.</p>
+          <p class="d-none d-sm-block">Journal articles, e-books, and other e-resources.</p>
         </div>
       </div>
     </div>
 
-    <div class="bento-block home-page-website">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <%= image_tag 'homepage/guides.png', alt: '', aria: { hidden: true } %>
+    <div class="col">
+      <div class="bento-block home-page-guides card mb-3">
+        <%= image_tag 'homepage/guides.png', class: 'card-img-top', alt: '', aria: { hidden: true } %>
+        <div class="card-body p-1">
           <h3><%= link_to 'Guides', 'https://guides.library.stanford.edu' %></h3>
-          <p class="hidden-xs">Course- and topic-based guides to collections, tools, and services.</p>
+          <p class="d-none d-sm-block">Course- and topic-based guides to collections, tools, and services.</p>
         </div>
       </div>
     </div>
 
-    <div class="bento-block home-page-website">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <%= image_tag 'homepage/website.jpg', alt: '', aria: { hidden: true } %>
+    <div class="col">
+      <div class="bento-block home-page-website card mb-3">
+        <%= image_tag 'homepage/website.jpg', alt: '', aria: { hidden: true } %>
+
+        <div class="card-body p-1">
           <h3><%= link_to 'Library website', 'https://library.stanford.edu' %></h3>
-          <p class="hidden-xs">Libraries and subject specialists; blogs, events, and policies.</p>
+          <p class="d-none d-sm-block">Libraries and subject specialists; blogs, events, and policies.</p>
         </div>
       </div>
     </div>
 
-    <div class="bento-block home-page-website">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <%= image_tag 'homepage/exhibits.jpg', alt: '', aria: { hidden: true } %>
+    <div class="col">
+      <div class="bento-block home-page-exhibits card mb-3">
+        <%= image_tag 'homepage/exhibits.jpg', class: 'card-img-top', alt: '', aria: { hidden: true } %>
+        <div class="card-body p-1">
           <h3><%= link_to 'Exhibits', 'https://exhibits.stanford.edu' %></h3>
-          <p class="hidden-xs">Digital showcases for research and teaching.</p>
+          <p class="d-none d-sm-block">Digital showcases for research and teaching.</p>
         </div>
       </div>
     </div>
 
-    <div class="bento-block home-page-earthworks">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <%= image_tag 'homepage/earthworks.jpg', alt: '', aria: { hidden: true } %>
+    <div class="col">
+      <div class="bento-block home-page-earthworks card mb-3">
+        <%= image_tag 'homepage/earthworks.jpg', class: 'card-img-top', alt: '', aria: { hidden: true } %>
+        <div class="card-body p-1">
           <h3><%= link_to 'EarthWorks', 'https://earthworks.stanford.edu' %></h3>
-          <p class="hidden-xs">Geospatial content, including GIS datasets, digitized maps, and census data.</p>
+          <p class="d-none d-sm-block">Geospatial content, including GIS datasets, digitized maps, and census data.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-3">
     <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="col-md-12 home-page-search-all media">
-            <div class="search-tools-icon media-left">
-              <span aria-hidden="true" class="media-object">🍱</span>
-            </div>
+      <div class="card mb-3">
+        <div class="card-body p-1">
+          <div class="home-page-search-all media">
+            <span aria-hidden="true" class="media-object mx-3">🍱</span>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
-              <p class="hidden-xs">See an overview of what's available for your topic in all these sources.</p>
+              <p class="d-none d-sm-block">See an overview of what's available for your topic in all these sources.</p>
             </div>
           </div>
         </div>
@@ -82,15 +81,13 @@
     </div>
 
     <div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="col-md-12 home-page-search-tools media">
-            <div class="search-tools-icon media-left">
-              <%= image_tag 'homepage/search.jpg', class: 'media-object', alt: '', aria: { hidden: true } %>
-            </div>
+      <div class="card mb-3">
+        <div class="card-body p-1">
+          <div class="home-page-search-tools media">
+            <%= image_tag 'homepage/search.jpg', class: 'media-object mx-3', alt: '', aria: { hidden: true } %>
             <div class="search-tools-body media-body">
               <h3><%= link_to 'More search tools', 'https://guides.library.stanford.edu/search-services' %></h3>
-              <p class="hidden-xs">Tools to help you discover resources at Stanford and beyond.</p>
+              <p class="d-none d-sm-block">Tools to help you discover resources at Stanford and beyond.</p>
             </div>
           </div>
         </div>

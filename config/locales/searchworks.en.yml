@@ -47,18 +47,18 @@ en:
     search_dropdown:
       articles:
         label: articles+
-        description_html: <span class="h3">articles+</span> <span class="help-block">journal articles &amp; other e-resources</span>
+        description_html: <span class="h3">articles+</span> <span class="form-text">journal articles &amp; other e-resources</span>
       articles_selections:
         label: articles+
       catalog:
         label: catalog
-        description_html: <span class="h3">catalog</span> <span class="help-block">books, media &amp; more in the Stanford Libraries' collections</span>
+        description_html: <span class="h3">catalog</span> <span class="form-text">books, media &amp; more in the Stanford Libraries' collections</span>
       library_website:
         label: library website
-        description_html: <span class="h3">library website</span> <span class="help-block">library info, guides, collections &amp; services</span>
+        description_html: <span class="h3">library website</span> <span class="form-text">library info, guides, collections &amp; services</span>
       bento:
         label: all
-        description_html: <span class="h3">all</span> <span class="help-block">catalog, articles, website, &amp; more in one search</span>
+        description_html: <span class="h3">all</span> <span class="form-text">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
       "020":
         label: "ISBN"
@@ -296,6 +296,8 @@ en:
       bookmarks:
         present: "Selected"
         absent: "Select"
+      facets:
+        title: 'Refine your results'
       form:
         q: ''
       zero_results:
@@ -321,7 +323,7 @@ en:
       sms: 'text'
       printer: 'printer'
 
-    back_to_search: '<i class="fa fa-fast-backward"></i><span class="hidden-xs">&nbsp; Back to results</span>'
+    back_to_search: '<i class="fa fa-fast-backward"></i><span class="d-none d-sm-inline">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
     connection_form:

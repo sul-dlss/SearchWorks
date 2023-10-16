@@ -1,16 +1,9 @@
 .record-toolbar {
-  border-radius: 0px;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  padding: 5px;
   color: $sul-toolbar-color;
   font-size: 15px;
 
   &.sul-toolbar {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border: none;
     @include sul-toolbar-bg-border;
   }
 
@@ -31,7 +24,7 @@
       margin-left: 20px;
     }
 
-    .toggle_bookmark {
+    .toggle-bookmark {
       min-width: 0;
     }
   }
@@ -51,13 +44,13 @@
       }
     }
 
-    div.toggle_bookmark {
+    div.toggle-bookmark {
       color: $btn-sul-toolbar-bar-color;
       padding-top: 10px;
     }
   }
 
-  .navbar-nav.navbar-right form.bookmark_toggle {
+  .navbar-nav.ml-auto form.bookmark-toggle {
     padding-left: 10px;
   }
 }
@@ -87,25 +80,19 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@include media-breakpoint-down(sm) {
   .record-toolbar {
     .navbar-collapse {
       overflow-x: hidden;
     }
 
-    .navbar-nav .open .dropdown-menu > li > a {
+    .navbar-nav .open .dropdown-menu > .dropdown-item {
       color: $white;
       &:hover, &:focus {
         text-decoration: underline;
       }
     }
 
-    .navbar-header {
-      .navbar-toggle {
-        border: 0;
-        margin: 0 15px 0 0;
-      }
-    }
     .navbar-collapse > ul > li {
       text-align: right;
       padding-right: 40px;

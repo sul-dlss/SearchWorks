@@ -99,6 +99,7 @@ module ApplicationHelper
     link_to(
       t('searchworks.search_dropdown.catalog.description_html'),
       article_search? ? root_path(mapped_params) : '#',
+      class: "dropdown-item #{'highlight' unless article_search?}",
       role: 'menuitem',
       tabindex: '-1',
       'aria-current': !article_search?
@@ -113,6 +114,7 @@ module ApplicationHelper
     link_to(
       t('searchworks.search_dropdown.articles.description_html'),
       article_search? ? '#' : articles_path(mapped_params),
+      class: "dropdown-item #{'highlight' if article_search?}",
       role: 'menuitem',
       tabindex: '-1',
       'aria-current': article_search?
@@ -124,6 +126,7 @@ module ApplicationHelper
     link_to(
       t('searchworks.search_dropdown.bento.description_html'),
       "https://library.stanford.edu/all/#{query_string}",
+      class: 'dropdown-item',
       role: 'menuitem',
       tabindex: '-1'
     )

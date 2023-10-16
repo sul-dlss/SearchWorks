@@ -1,6 +1,12 @@
 .advanced-search-form {
+  .advanced {
+    @extend .my-3;
+  }
   .advanced-search-start-over {
     margin-left: 20px;
+  }
+  #advanced-search-sort-label {
+    @extend .h2; // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
   }
 
   .advanced-submit-group {
@@ -17,25 +23,23 @@
   }
 
   padding: 0;
-  .advanced-help {
-    padding: 0 15px;
 
-    li {
-      margin-left: 10px;
-      padding-bottom: 7px;
+  .panel-search-tips {
+    .card-header {
+      background-color: $cloud;
+    }
+    .advanced-help {
+      padding: 0 15px;
+
+      li {
+        margin-left: 10px;
+        padding-bottom: 7px;
+      }
     }
   }
 
   .col-md-3.col-form-label {
     @extend .col-sm-3;
-  }
-
-  .col-form-label {
-    @extend .control-label;
-  }
-
-  .offset-md-3 {
-    @extend .col-md-offset-3;
   }
 
   .adv-publication-year-range {
@@ -53,8 +57,8 @@
   }
 
   .col {
-    @extend .col-md-offset-3;
-    @extend .col-md-9;
+    @extend .col-md-9;  // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
+    @extend .pt-2;
   }
 
   #sort {
@@ -65,16 +69,20 @@
     margin-top: 2rem;
   }
 
-  .facet-label,
-  .facet-count {
-    display: inline;
-    padding-bottom: 0;
-    padding-left: 7px;
-  }
+  .facet-values {
+    .label-and-count {
+      margin: 3px 0;
 
-  .facet-checkbox {
-    input {
-      vertical-align: top;
+      .facet-label,
+      .facet-count {
+        display: inline;
+        padding-bottom: 0;
+        padding-left: 3px;
+      }
+    }
+
+    .facet-checkbox {
+      vertical-align: middle;
     }
   }
 }

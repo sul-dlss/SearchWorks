@@ -59,7 +59,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       expect(page).to have_css(".library-location-heading")
       expect(page).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
       expect(page).to have_css("div.location-hours-today")
-      expect(page).to have_css(".panel-body")
+      expect(page).to have_css(".card-body")
     end
   end
 

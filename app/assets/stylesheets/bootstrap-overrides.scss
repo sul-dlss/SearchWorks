@@ -1,30 +1,8 @@
-.panel {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  margin-bottom: 15px;
-}
-.panel-default {
-  border: none;
-}
-.panel-body {
-  @include panel-borders;
-  background-color: white;
+// I believe the text-success color override can be removed after upgrading to BS5.
+.text-success {
+  color: $state-success-text !important;
 }
 
-.panel-footer {
-  @include panel-borders;
-  @include panel-border-bottom;
-  border-top: none;
-}
-
-.panel-group .panel-heading {
-  @include panel-border-bottom;
-}
-
-.panel-heading {
-  @include panel-border-bottom;
-}
 .alert {
   padding: 10px 15px;
   margin: 10px 0;
@@ -34,19 +12,22 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.dl-horizontal dt {
-  text-align: left;
-  width: 10em;
+h1 {
+  color: $sul-h1-font-color;
+  font-weight: 300;
 }
 
-.dl-horizontal dd {
-  margin-left: 2em;
+h2 {
+  color: $sul-h2-font-color;
+  letter-spacing: 0;
 }
 
-@media (min-width: $screen-sm-min) {
-  .dl-horizontal dd {
-    margin-left: 10.5em;
-  }
+h3 {
+  color: $sul-h3-font-color;
+}
+
+h4 {
+  color: $sul-h4-font-color;
 }
 
 small,
@@ -61,4 +42,10 @@ summary {
 // make the button-style links in the Selections toolbar more compact than default .btn padding
 #bookmarksWidgets > *, #bookmarksWidgets > #tools-dropdown > .btn {
     padding: 4px 10px;
+}
+
+// We use btn-outline-secondary to style the seleted filters
+.btn-secondary, .btn-outline-secondary {
+  @include button-variant($light-sandstone, $cloud);
+  color: $warm-grey;
 }

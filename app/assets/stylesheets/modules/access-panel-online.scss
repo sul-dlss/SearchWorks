@@ -1,6 +1,5 @@
 .panel-online {
-  .access-panel-heading.panel-heading {
-    color: $sul-access-header-color;
+  .access-panel-heading.card-header {
     background: $sul-access-online-bg;
     border-bottom: 1px solid $sul-access-online-bg;
     h3 {
@@ -18,7 +17,7 @@
 }
 
 .article-record-panels {
-  .panel-body {
+  .card-body {
     .fa {
       margin-right: 5px;
     }

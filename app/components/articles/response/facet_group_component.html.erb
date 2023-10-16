@@ -1,0 +1,59 @@
+<% # main container for facets/limits menu -%>
+<%= content_tag :div, id: @id,  class: 'facets sidenav facets-toggleable-sm' do %>
+  <% if limiters.present? %>
+    <div class="top-panel-heading">
+      <h2>
+        <%= t("searchworks.articles.facets.options.heading") %>
+      </h2>
+    </div>
+    <div class="facet-options" data-behavior='facet-options-checkboxes'>
+      <ul class="checkbox-facet-list">
+        <% limiters.each do |limiter| %>
+          <li data-behavior='facet-options-checkbox'>
+            <%= label_tag("eds_limiter_#{limiter.id}") do %>
+              <%= check_box(
+                    'f',
+                    'eds_search_limiters_facet',
+                    { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
+                    limiter.label,
+                    nil
+                  )
+              %>
+              <%= link_to(limiter.search_url, 'data-turbolinks': false) do %>
+                <%= limiter.label %>
+              <% end %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <div data-behavior='loading-spinner' class='loading-spinner' style='display:none'></div>
+    </div>
+  <% end %>
+
+  <div class="facets-header">
+    <%= content_tag :h2, @title, class: 'facets-heading' if @title %>
+
+    <%= content_tag :button,
+      class:'navbar-toggler navbar-toggler-right',
+      type: 'button',
+      data: {
+        toggle: 'collapse',
+        target: "##{@panel_id}",
+        'bs-toggle': 'collapse',
+        'bs-target': "##{@panel_id}"
+      },
+      aria: {
+        controls: @panel_id,
+        expanded: 'false',
+        label: t('blacklight.search.facets.group.toggle'),
+      } do %>
+      <span class="navbar-toggler-icon"></span>
+    <% end %>
+  </div>
+
+  <%= content_tag :div, id: @panel_id, class: 'facets-collapse collapse' do %>
+    <% ::Deprecation.silence(Blacklight::FacetsHelperBehavior) do %>
+      <%= helpers.render_facet_partials @fields, response: @response %>
+    <% end %>
+  <% end %>
+<% end %>

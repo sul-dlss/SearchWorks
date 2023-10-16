@@ -9,8 +9,6 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 5'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -94,7 +92,6 @@ gem "faraday"
 gem "config"
 gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
-gem 'jquery-datatables-rails'
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
@@ -104,7 +101,7 @@ gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'leaflet-rails'
 gem 'recaptcha', '>= 5.4.1'
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
 # Set view_component to < v2.75 until config issue is resolved

@@ -1,28 +1,24 @@
 <span class="sr-only">Send current page to text, email, RefWorks, EndNote, or printer</span>
 <div id="tools-dropdown" class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= t('blacklight.tools.send_entries', current_range: current_entries_info(@bookmarks)).html_safe %>
   </button>
-  <ul class="dropdown-menu" role="menu">
-    <li role="presentation">
-      <%= link_to t('blacklight.tools.email_html'),  email_articles_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}), id: "emailLink", role: 'menuitem', tabindex: '-1', data: {ajax_modal: "trigger"} %>
-    </li>
+  <div class="dropdown-menu" role="menu">
+    <%= link_to t('blacklight.tools.email_html'),
+                email_articles_path(sort: params[:sort], per_page: params[:per_page], id: @response.documents.map {|doc| doc.id}),
+                id: "emailLink", role: 'menuitem', tabindex: '-1',
+                class: 'dropdown-item',
+                data: { blacklight_modal: "trigger" } %>
 
     <% if @response.documents.any? {|d| d.export_formats.key?(:ris) } %>
-      <li class="refworks" role="presentation">
-        <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1' %>
-        <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
-          <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @response.documents.map(&:export_as_ris).join) %>
-        <% end %>
-      </li>
+      <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
+      <%= form_tag(refworks_export_url(filter: 'RIS Format')) do %>
+        <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @response.documents.map(&:export_as_ris).join) %>
+      <% end %>
 
-      <li class="ris" role="presentation">
-        <%= link_to t('blacklight.tools.ris_html'), search_state.to_h.merge(format: 'ris'), download: File.basename(url_for(search_state.to_h.merge(format: 'ris'))), role: 'menuitem', tabindex: '-1' %>
-      </li>
+      <%= link_to t('blacklight.tools.ris_html'), search_state.to_h.merge(format: 'ris'), download: File.basename(url_for(search_state.to_h.merge(format: 'ris'))), role: 'menuitem', tabindex: '-1', class: 'ris dropdown-item' %>
     <% end %>
 
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
-    </li>
-  </ul>
+    <a role="menuitem" tabindex="-1" class="dropdown-item" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
+  </div>
 </div>

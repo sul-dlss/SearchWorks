@@ -1,55 +1,55 @@
-<%= form_with url: feedback_form_path, method: :post, class: "form-horizontal feedback-form", role: "form", namespace: type do |f| %>
+<%= form_with url: feedback_form_path, method: :post, class: "feedback-form", role: "form", namespace: type do |f| %>
   <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
   <span style="display:none;visibility:hidden;">
     <%= f.text_field :user_agent %>
     <%= f.text_field :viewport %>
     <%= f.text_field :last_search %>
   </span>
-  <div class="col-sm-8 col-sm-offset-1">
+  <div class="col-sm-8 offset-sm-1">
     <% if type == 'connection' %>
       <%= f.hidden_field :type, value: type %>
-      <div class="form-group">
-        <%= f.label(:resource_name, 'Name of resource', class:"col-sm-3 control-label") %>
+      <div class="form-group row ">
+        <%= f.label(:resource_name, 'Name of resource', class:"col-sm-3 col-form-label text-right") %>
         <div class="col-sm-9">
           <%= f.text_field :resource_name, value: "", class:"form-control", required: true %>
         </div>
       </div>
-      <div class="form-group">
-        <%= f.label(:problem_url, 'Problem URL', class:"col-sm-3 control-label") %>
+      <div class="form-group row">
+        <%= f.label(:problem_url, 'Problem URL', class:"col-sm-3 col-form-label text-right") %>
         <div class="col-sm-9">
           <%= f.text_field :problem_url, value: "", class:"form-control", required: true %>
         </div>
       </div>
-      <div class="form-group">
-        <%= f.label(:message, 'Describe the connection issue', class:"col-sm-3 control-label") %>
+      <div class="form-group row">
+        <%= f.label(:message, 'Describe the connection issue', class:"col-sm-3 col-form-label text-right") %>
         <div class="col-sm-9">
           <%= f.text_area :message, value: "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% else %>
-      <div class="form-group">
-        <%= f.label(:message, 'Message', class:"col-sm-3 control-label") %>
+      <div class="form-group row">
+        <%= f.label(:message, 'Message', class:"col-sm-3 col-form-label text-right") %>
         <div class="col-sm-9">
           <%= f.text_area :message, value: "", rows:"5", class:"form-control", required: true %>
         </div>
       </div>
     <% end %>
-    <div class="form-group">
-      <%= f.label(:name, 'Your name', class:"col-sm-3 control-label") %>
+    <div class="form-group row">
+      <%= f.label(:name, 'Your name', class:"col-sm-3 col-form-label text-right") %>
       <div class="col-sm-9">
         <%= f.text_field :name, value: "", class:"form-control", required: true %>
       </div>
     </div>
-    <div class="form-group">
-      <%= f.label(:to, 'Your email', class:"col-sm-3 control-label") %>
+    <div class="form-group row">
+      <%= f.label(:to, 'Your email', class:"col-sm-3 col-form-label text-right") %>
       <div class="col-sm-9">
         <%= f.email_field :to, value: "", class:"form-control", required: true %>
       </div>
     </div>
 
     <% if current_user.blank? %>
-      <div class="form-group">
-        <div class="col-sm-9 col-sm-offset-3">
+      <div class="form-group row">
+        <div class="col-sm-9 offset-sm-3">
           <%= recaptcha_tags %>
 
           <p>(Stanford users can avoid this Captcha by logging in.)</p>
@@ -57,8 +57,8 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-9">
+    <div class="form-group row">
+      <div class="offset-sm-3 col-sm-9">
         <button type="submit" class="btn btn-primary">Send</button>
         <%= link_to "Cancel", :back, class:"cancel-link", data: { toggle: 'collapse', target: target } %>
       </div>

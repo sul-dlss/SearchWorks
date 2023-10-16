@@ -3,13 +3,13 @@
 %>
 
 <% if stackmapable %>
-  <%= link_to t('blacklight.tools.find_it').html_safe, stackmap_link(document,location), { :data => { :ajax_modal => "trigger" }, :class => "btn btn-xs btn-default stackmap-find-it" } %>
+  <%= link_to t('blacklight.tools.find_it').html_safe, stackmap_link(document,location), { :data => { blacklight_modal: "trigger" }, :class => "btn btn-xs stackmap-find-it" } %>
 <% end %>
 <strong class="<%=location_name_class%>">
   <% if location.location_link.present? %>
     <%= link_to location.name, location.location_link %>
   <% elsif stackmapable%>
-    <%= link_to location.name, stackmap_link(document,location), { :data => { :ajax_modal => "trigger" } } %>
+    <%= link_to location.name, stackmap_link(document,location), { :data => { blacklight_modal: "trigger" } } %>
   <% else %>
     <%= location.name %>
   <% end %>

@@ -1,12 +1,12 @@
 <%= header %>
 
-<%= tag.div class: (%w[panel panel-default access-panel] + @classes).join(' '), **@html_attrs do %>
-  <div class="access-panel-heading panel-heading">
+<%= tag.div class: @classes, **@html_attrs do %>
+  <div class="access-panel-heading card-header">
     <h3>
       <%= title %>
     </h3>
   </div>
-  <div class="panel-body">
+  <div class="card-body">
     <%= body %>
   </div>
   <%= after %>

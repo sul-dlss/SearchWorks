@@ -8,19 +8,14 @@
 
     function addHomePageFacetCollapseBehavior( container, resize ){
       container.each(function(){
-        $(".facet_limit", $(this)).each(function(){
-          var header = $('.panel-heading', $(this))
-          var target = $(header.data('target'));
+        this.querySelectorAll(".facet-limit").forEach((facetLimit) => {
+          const button = facetLimit.querySelector('[data-toggle="collapse"]')
+          const target = document.querySelector(button.dataset.target)
 
-          if($(window).width() <= '768') {
-            header.addClass('collapsed');
-            target.addClass('collapse');
-            target.removeClass('in');
-            header.attr('aria-expanded', 'false');
-          }else if (resize && !target.data('toggle-default')){
-            header.removeClass('collapsed');
-            target.addClass('in');
-            target.css('height', 'auto');
+          if(window.innerWidth <= 768) {
+            $(target).collapse('hide')
+          } else if (resize) {
+            $(target).collapse('show')
           }
         });
       });

@@ -1,5 +1,5 @@
 <% if @documents&.one? %>
-  <%= render partial: 'catalog/single_citation', locals: { document: @documents&.first } %>
+  <%= render partial: 'catalog/single_citation_with_modal', locals: { document: @documents&.first } %>
 <% elsif @documents&.any? %>
   <%= render 'catalog/grouped_citations' %>
 <% end %>

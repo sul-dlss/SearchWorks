@@ -4,16 +4,16 @@
 <% if document.collection_members.present? %>
   <div class="file-collection-members">
     <% if @type == 'show' %>
-      <h2>Digital collection preview</h2>
+      <h2 class="my-3">Digital collection preview</h2>
     <% else %>
-      <h4>Digital collection preview</h4>
+      <h4 class="my-2">Digital collection preview</h4>
     <% end %>
     <% document.collection_members[0...3].each do |collection_member| %>
-      <div class="row file-item">
-        <div class="col-xs-2 file-icon">
+      <div class="d-flex file-item">
+        <div class="mr-2 file-icon">
           <%= render_resource_icon collection_member[collection_member.format_key] %>
         </div>
-        <div class="col-xs-10 file-title">
+        <div class="file-title">
           <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>
           <% if collection_member[:pub_date] %>
             <span class="main-title-date">[<%= collection_member[:pub_date] %>]</span>
@@ -29,7 +29,7 @@
 
   <div class="results-online-section">
     <dl class="dl-horizontal results-metadata-section">
-      <dt class="online-label">Online</dt>
+      <dt><span class="online-label">Online</span></dt>
       <dd>
         <%= link_to(text_for_inner_members_link(document), collection_members_path(document)) %>
       </dd>

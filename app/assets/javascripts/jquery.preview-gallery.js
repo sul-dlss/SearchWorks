@@ -147,8 +147,10 @@
 
       function init() {
         $itemWidth = $item.outerWidth() + 10;
-        $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');//$('<div/>').addClass('preview-trigger-btn preview-opacity').html('<span class="glyphicon glyphicon-chevron-down small">');
-        $closeBtn = $('<a class="preview-close"><span class="glyphicon glyphicon-remove"></span></a>');
+        $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
+        $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+        <span aria-hidden="true" class="visually-hidden">×</span>
+        </button>`);
         $arrow = $('<div class="preview-arrow"></div>');
         $gallery = $('.gallery-document');
         reorderPreviewDivs();

@@ -12,9 +12,8 @@ ul.links {
   background: image-url('sfx.gif') no-repeat;
 }
 .online-label {
-  @extend .label;
-  @extend .label-success;
-
+  @extend .badge;
+  
   background-color: $sul-accordion-online-bg;
   border: 1px solid $sul-accordion-online-border;
   border-radius: 2px;

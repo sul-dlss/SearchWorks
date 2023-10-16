@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "recent_selections/index" do
+RSpec.describe "recent_selections/index" do
   before do
     assign(:catalog_count, 500)
     assign(:article_count, 45)
@@ -8,7 +8,7 @@ describe "recent_selections/index" do
   end
 
   it 'has the counts' do
-    expect(rendered).to have_css('li a', text: 'Catalog selections (500)')
-    expect(rendered).to have_css('li a', text: 'Articles+ selections (45)')
+    expect(rendered).to have_link 'Catalog selections (500)'
+    expect(rendered).to have_link 'Articles+ selections (45)'
   end
 end

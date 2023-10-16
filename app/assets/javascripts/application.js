@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 
 //= require rails-ujs
 //= require turbolinks
@@ -18,12 +17,11 @@
 //= require trunk8
 //= require jquery-scrollspy
 //= require leaflet
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-//= require bootstrap/tab
 //
 // Required by Blacklight
-//= require bootstrap/tooltip
+
+//= require popper
+//= require bootstrap
 //= require blacklight/blacklight
 
 // For blacklight_range_limit built-in JS, if you don't want it you don't need

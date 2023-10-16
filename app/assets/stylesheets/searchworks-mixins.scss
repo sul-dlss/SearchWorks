@@ -11,12 +11,12 @@
 }
 
 @mixin toolbar-dropdown {
-  li > a {
-    border-bottom: none;
-    text-transform: none;
-
+  a {
     &:hover, &:focus, &:active {
       border-bottom: none;
+    }
+    i.active-icon {
+      margin-left: -17px;
     }
   }
 }
@@ -55,17 +55,9 @@
 
 @mixin h3-index-title-font {
   font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
-  font-size: $font-size-h4;
+  font-size: $h4-font-size;
   letter-spacing: -.03em;
   line-height: 1.5em;
-}
-
-@mixin panel-borders {
-  border: 1px solid $sul-panel-border;
-}
-
-@mixin panel-border-bottom {
-  border-bottom: 1px solid $sul-panel-border-bottom;
 }
 
 @mixin sul-toolbar-bg-border {
@@ -139,9 +131,7 @@
 }
 
 @mixin link-styling {
-  border-bottom: 1px solid $sul-link-color-border;
-  color: $sul-link-color-border;
-  text-decoration: none;
+  border-bottom: 1px solid $sul-link-color-hover;
 }
 
 @mixin masthead-panel {

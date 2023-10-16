@@ -1,7 +1,6 @@
 #search-navbar-container {
   background-color: $sul-navbar-brand-color;
-  height: 100px;
-  max-height: 100px;
+  min-height: 100px;
   padding: 0;
 
   #search-navbar {
@@ -19,46 +18,37 @@
   .search-navbar-headings {
     align-items: center;
     display: flex;
-    height: 100%;
+    justify-content: left;
 
-    .navbar-brand {
+    .navbar-brand img {
       height: 28px;
-      padding: 0;
-
-      img {
-        height: 28px;
-        // Adding negative top margin to handle images + text alignment issues
-        margin-top: -1px;
-      }
+      margin-top: -1px;
     }
 
     .search-dropdown {
       display: inline-block;
-      margin-left: 1em;
+      margin-right: 1em;
 
       .search-target {
+        line-height: 1.1;
         margin: 0;
+        padding: 0;
+
+        &.dropdown-toggle::after {
+          font-size: 16px;
+        }
       }
 
       .dropdown-menu {
         left: auto;
         top: 70%;
 
-        li {
-          max-width: inherit;
-        }
-
-        li.active {
+        .highlight {
           background-color: $public-note-yellow;
-          color: $black; // override bootstrap
+          color: $text-color;
 
-          a {
-            background-color: inherit;
-            color: $text-color;
-
-            &:focus {
-              outline: 5px auto -webkit-focus-ring-color;
-            }
+          &:focus {
+            outline: 5px auto -webkit-focus-ring-color;
           }
         }
       }
@@ -70,10 +60,14 @@
     flex: auto;
 
     .input-group-addon {
-      &.for-search-field {
+      &.for-search-field, #search_field {
         border-radius: 4px 0 0 4px;
       }
     }
+  }
+
+  .search-btn {
+    border-radius: 0 4px 4px 0;
   }
 
   .search-target {
@@ -88,21 +82,13 @@
     }
   }
 
-  @media screen and (max-width: $screen-md-min) {
-    .input-group-btn {
-      width: 1%;
-    }
-
+  @include media-breakpoint-down(md) {
     .navbar-form {
       border: 0;
       margin: 0 auto;
       max-height: 40px;
       padding: 0;
       width: 100%;
-    }
-
-    .navbar-header {
-      float: none;
     }
 
     .search-form {
@@ -114,20 +100,12 @@
     }
 
     .search_field {
-      width: 82px;
+      width: 95px;
     }
 
     .search-navbar-headings {
-      height: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5px;
-      text-align: center;
-
-      .navbar-brand img {
-        // Adding negative top margin to handle images + text alignment issues
-        margin-top: -2px;
-      }
+      justify-content: center;
+      width: 100%;
 
       .search-dropdown {
         .dropdown-menu {
@@ -159,7 +137,7 @@
     }
   }
 
-  @media screen and (min-width: $screen-md-min) {
+  @include media-breakpoint-up(md) {
     .navbar-form {
       margin: 0 auto;
     }

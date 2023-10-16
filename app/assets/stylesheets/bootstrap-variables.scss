@@ -1,19 +1,24 @@
 // Override Bootstrap variables here
 
+$primary: $cardinal-red;
+$secondary: $light-sandstone;
+$success: $mint;
+$info: $pantone-3145;
+$warning: $pantone-144;
+$danger: $bright-red;
+
 // Body
 $body-bg: $sul-body-bg;
 
 // Text / Links
 $text-color: $sul-text-color;
-$link-color: $sul-text-color;
-$link-hover-color: $sul-text-color;
+$link-color: $sul-link-color;
+$link-hover-color: $sul-link-color-hover;
+$link-hover-decoration: none;
 
-// Panels
-$panel-border-radius: 0px;
-$panel-bg: $sul-panel-bg;
-$panel-footer-bg: $sul-panel-bg;
-$panel-default-heading-bg: $sul-panel-heading-default;
-$panel-default-border: $sul-panel-border-bottom;
+// Components
+$component-active-bg: $digital-blue-dark;
+$caret-vertical-align: 0.1em;
 
 // NOTE: Remove this when upgrading to BS5, as it will then be unnecessary.
 // State -- we lifted these colors from BS5 for better a11y in alerts and elsewhere
@@ -33,54 +38,65 @@ $state-danger-bg: #f8d7da;
 $state-danger-border: #f5c2c7;
 $state-danger-text: #842029;
 
-// Buttons
-$btn-default-color: $gray;
-$btn-default-bg: $light-sandstone;
-$btn-default-border: $cloud;
-
-$btn-primary-color: $white;
-$btn-primary-bg: $cardinal-red;
-$btn-primary-border: darken($btn-primary-bg, 9.8%);
-
-$btn-success-color: $white;
-$btn-success-bg: $pantone-334;
-$btn-success-border: darken($btn-success-bg, 9.8%);
-
-$btn-info-color: $white;
-$btn-info-bg: $pantone-3145;
-$btn-info-border: darken($btn-info-bg, 9.8%);
-
-$btn-warning-color: $white;
-$btn-warning-bg: $pantone-144;
-$btn-warning-border: darken($btn-warning-bg, 9.8%);
-
-$btn-danger-color: $white;
-$btn-danger-bg: $bright-red;
-$btn-danger-border: darken($btn-danger-bg, 9.8%);
-
 // Colors
 $gray-light: #737373;
 
 // Navbar
-$navbar-default-link-color: $white;
-$navbar-default-link-hover-color: $white;
-$navbar-default-link-active-color: $white;
-$navbar-default-toggle-hover-bg: transparent;
+$navbar-dark-color: $white;
+$navbar-dark-toggler-border-color: transparent;
 
 // Pagination
+$pagination-color: black;
+$pagination-hover-color: black;
 $pagination-active-bg: $sul-pagination-active-bg;
 $pagination-active-border: $sul-pagination-active-bg;
 
 // Tables
-$table-bg-accent: $light-sandstone;
+$table-accent-bg: $light-sandstone; // background for .table-striped
 
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;
 
+
 // Typography
-$font-size-h1: 2.323em;
-$font-size-h2: 1.793em;
-$font-size-h3: 1.383em;
-$font-size-h4: 1.215em;
-$font-size-h5: 1.138em;
+$font-size-base: 0.875rem;
+$font-size-small: 0.75rem * 0.875;
+$h1-font-size: $font-size-base * 2.323;
+$h2-font-size: $font-size-base * 1.793;
+$h3-font-size: $font-size-base * 1.383;
+$h4-font-size: $font-size-base * 1.215;
+$h5-font-size: $font-size-base * 1.138;
 $headings-font-weight: 400;
+
+
+// Bootstrap variables for print sheets
+
+$pagination-border: #ddd;
+$padding-base-vertical: 0.5rem;
+$padding-large-vertical: 1rem;
+$padding-xs-vertical: 0.25rem;
+$padding-base-horizontal: 0.75rem;
+$padding-large-horizontal: 1.5rem;
+$padding-xs-horizontal: 0.25rem;
+$nav-link-padding: 0.5rem 1rem;
+$grid-float-breakpoint: 768px;
+
+.label {
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.carousel-control {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: none;
+  background-color: #000;
+  border: 0;
+  border-radius: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}

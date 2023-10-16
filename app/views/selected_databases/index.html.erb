@@ -2,7 +2,7 @@
 
 <div id="masthead-container">
   <div id="masthead" class="selected-databases-masthead">
-    <h1>Selected article databases</h1>
+    <h1 class="my-3">Selected article databases</h1>
     <p>Start your research with one of our selected databases below. <%= link_to 'Learn more about finding articles.', 'https://guides.library.stanford.edu/Find-articles' %></p>
     <div class="flexgrid">
       <div class="col">
@@ -22,7 +22,7 @@
 </div>
 
 <% if @selected_databases.present? %>
-  <div class="breadcrumb col-md-12">
+  <div class="breadcrumb my-2">
     <div class="search_num_of_results">
       <div class='results-heading'>
         <h2><%= pluralize(@selected_databases.length, 'result') %></h2>

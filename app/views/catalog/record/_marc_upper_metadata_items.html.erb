@@ -1,6 +1,6 @@
 <% document ||= @document %>
 <% if document.respond_to?(:to_marc) %>
-  <dl class="dl-horizontal  dl-invert">
+  <dl class="dl-horizontal dl-invert">
     <%= render_if_present document.marc_field('245c') %>
 
     <%- uniform_title = get_uniform_title(document) -%>

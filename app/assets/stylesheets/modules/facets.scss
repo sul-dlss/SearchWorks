@@ -1,56 +1,34 @@
-#facets,
-#sidebar {
-  @media screen and (max-width: $screen-sm-min) {
-    padding-bottom: 0;
+.facet-field-heading {
+  background-color: $cloud;
+  border-bottom: 1px solid $cloud;
+
+  .btn {
+    font-size: 1rem;
+    padding-left: 1rem !important;
   }
 }
 
-#facets {
-  .top-panel-heading {
-    border: 0;
-
-    .facets-toggle {
-      margin-top: -10px;
-    }
-    @media screen and (max-width: $screen-sm-min) {
-      margin-bottom: 0;
-    }
-  }
+.facet-values li .selected {
+  color: $state-success-text;
 }
 
-.panel-group .facet_limit {
-  margin-bottom: 7px;
+.facet-limit-active {
+  border-color: rgba(0, 0, 0, 0.125) !important;
 }
 
-.facet_limit {
-  ul {
-    margin-bottom: 0;
-
-    li {
-      .remove {
-        color: $gray;
-        border-bottom: none;
-      }
-      &.h-leaf {
-        list-style-image: none;
-        list-style-type: none;
-      }
-    }
-  }
-
-  .panel-heading {
-    h3 {
-      font-weight: 400;
-    }
-  }
-
-  &.facet_limit-active .panel-heading {
-    background: $sul-facet-active-bg;
-    border-bottom: 1px solid $sul-facet-active-border;
-    color: $sul-facet-active-heading-color;
-  }
+.facet-limit-active .card-header {
+  background-color: $light-sage !important;
+  border-bottom: 1px solid $state-success-border;
 }
 
-.inclusive_or.card {
-  @extend .well;
+.facet-limit {
+  // override Blacklight, which has rounded facets
+  border-radius: 0;
+  .card-header {
+    border-radius: 0;
+    .btn {
+      border-radius: 0; // Apparent with the :focus style
+    }
+  }
+  margin-bottom: 0.5rem;
 }

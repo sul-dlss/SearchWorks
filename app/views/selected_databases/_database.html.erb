@@ -1,9 +1,9 @@
-<div class="panel panel-default">
-  <div class="panel-body">
+<div class="card mb-3">
+  <div class="card-body">
     <h3><%= link_to(database['title_245a_display'], solr_document_path(database[:id])) %></h3>
     <p>(<%= database.selected_database_subjects.join(', ') %>)</p>
     <dl data-behavior="results-online-section" class="dl-horizontal results-online-section">
-      <dt class="online-label">Search database</dt>
+      <dt><span class="online-label">Search database</span></dt>
       <dd>
         <div data-behavior="truncate-results-metadata-links">
           <ul class="links">
