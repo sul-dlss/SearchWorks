@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.feature "Advanced Search" do
   before do

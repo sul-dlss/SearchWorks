@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Search Results Page" do
+RSpec.feature "Search Results Page" do
   before do
     visit solr_document_path 11
   end

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SolrSet do
+RSpec.describe SolrSet do
   let(:solr_data) { { id: '12345', set: ['set1'], set_with_title: ['set1 -|- SetABC'] } }
   let(:documents) { [{ id: 'set1', title_display: 'SetABC' }] }
 

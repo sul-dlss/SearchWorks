@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }

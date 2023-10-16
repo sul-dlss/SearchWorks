@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Search results count" do
+RSpec.feature "Search results count" do
   scenario "should display number of results header" do
     visit search_catalog_path f: { format: ["Book"] }
     within "#content" do

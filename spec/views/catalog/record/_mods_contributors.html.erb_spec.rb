@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_contributors" do
+RSpec.describe "catalog/record/_mods_contributors" do
   include ModsFixtures
 
   describe "Contributors section" do

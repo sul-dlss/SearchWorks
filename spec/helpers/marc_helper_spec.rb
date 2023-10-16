@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe MarcHelper do
+RSpec.describe MarcHelper do
   describe '#results_imprint_string' do
     let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
 

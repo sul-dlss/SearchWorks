@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Legacy Symphony catkey Routing' do
   it 'redirects FOLIO hrids to the symphony equivalents' do

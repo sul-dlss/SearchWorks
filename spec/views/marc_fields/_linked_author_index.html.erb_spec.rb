@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_linked_author_index' do
+RSpec.describe 'marc_fields/_linked_author_index' do
   include MarcMetadataFixtures
 
   before do

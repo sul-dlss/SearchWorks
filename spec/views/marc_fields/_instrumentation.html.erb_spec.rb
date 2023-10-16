@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_instrumentation' do
+RSpec.describe 'marc_fields/_instrumentation' do
   subject { Capybara.string(rendered) }
 
   let(:instrumentation) do

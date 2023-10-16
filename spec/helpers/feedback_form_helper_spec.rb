@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe FeedbackFormHelper do
+RSpec.describe FeedbackFormHelper do
   before do
     allow(helper).to receive(:current_user).and_return(user)
   end

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Course Reserve Access Point" do
+RSpec.feature "Course Reserve Access Point" do
   before do
     visit search_catalog_path({ f: { course: ["CAT-401-01-01"], instructor: ["McDonald, Ronald"] } })
   end

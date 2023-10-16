@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe SchemaDotOrg do
   context 'with data serialized into the solr document' do

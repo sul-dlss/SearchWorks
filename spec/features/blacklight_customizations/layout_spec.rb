@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe 'Customized Layout' do
+RSpec.describe 'Customized Layout' do
   before do
     visit root_path
   end

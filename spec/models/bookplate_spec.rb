@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Bookplate do
+RSpec.describe Bookplate do
   let(:data) { 'FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT' }
   let(:subject) { described_class.new(data) }
 

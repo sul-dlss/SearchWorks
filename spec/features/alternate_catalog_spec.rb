@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Alterate catalog results', js: true do
+RSpec.feature 'Alterate catalog results', js: true do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Search toolbar", feature: true, js: true do
+RSpec.describe "Search toolbar", feature: true, js: true do
   before { visit root_path }
 
   describe "has SearchWorks customizations" do

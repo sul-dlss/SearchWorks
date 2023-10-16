@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe SearchQueryModifier do
+RSpec.describe SearchQueryModifier do
   let(:default_config) { {} }
   let(:stopwords_query) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: "And we have stopwords oF THE month", other: 'something' }, default_config)) }
 

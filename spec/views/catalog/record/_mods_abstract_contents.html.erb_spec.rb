@@ -1,8 +1,8 @@
 # encoding: UTF-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_abstract_contents" do
+RSpec.describe "catalog/record/_mods_abstract_contents" do
   include ModsFixtures
 
   describe "Object abstract/contents" do

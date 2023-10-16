@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Online Access Panel" do
+RSpec.feature "Online Access Panel" do
   scenario "for databases" do
     visit solr_document_path('24')
 

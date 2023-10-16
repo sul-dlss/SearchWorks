@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe HathiTrustLinks do
+RSpec.describe HathiTrustLinks do
   subject(:ht_links) { described_class.new(document) }
 
   let(:document_data) { { ht_bib_key_ssim: ['abc123'], ht_htid_ssim: ['1234567'] } }

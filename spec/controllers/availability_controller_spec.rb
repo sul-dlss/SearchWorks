@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe AvailabilityController do
+RSpec.describe AvailabilityController do
   describe "bot traffic" do
     it "should return a forbidden status" do
       request.env['HTTP_USER_AGENT'] = 'robot'

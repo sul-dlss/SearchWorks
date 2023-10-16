@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Druid do
+RSpec.describe Druid do
   let(:explicit_druid) do
     SolrDocument.new(
       druid: '321cba'

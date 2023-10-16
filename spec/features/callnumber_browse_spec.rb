@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Callnumber Browse', js: true do
   describe 'embedded on the record page' do

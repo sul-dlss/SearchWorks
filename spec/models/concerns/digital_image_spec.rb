@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Image object' do
+RSpec.describe 'Image object' do
   subject do
     SolrDocument.new(
       file_id: file_ids

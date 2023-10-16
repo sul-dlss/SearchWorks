@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Isbn' do
+RSpec.describe 'Isbn' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: isbn_fixture) }

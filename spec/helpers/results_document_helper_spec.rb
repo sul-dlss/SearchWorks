@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe ResultsDocumentHelper do
+RSpec.describe ResultsDocumentHelper do
   let(:blacklight_config) { CatalogController.blacklight_config }
 
   before(:all) do

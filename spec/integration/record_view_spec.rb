@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Record view", feature: true do
+RSpec.describe "Record view", feature: true do
   it "should display records from the index" do
     visit solr_document_path("1")
     expect(page).to have_css("h1", text: "An object")

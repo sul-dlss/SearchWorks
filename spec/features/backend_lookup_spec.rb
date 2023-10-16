@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Backend lookup', js: true do
+RSpec.feature 'Backend lookup', js: true do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit root_path

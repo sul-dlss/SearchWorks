@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe SmsPresenter do
+RSpec.describe SmsPresenter do
   describe '#sms_content' do
     let(:doc) { SolrDocument.new(eds_title: 'a' * 50) }
     let(:url) { 'http://www.example.com/really_great' }

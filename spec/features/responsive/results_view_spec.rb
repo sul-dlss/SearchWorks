@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Responsive results view Page', feature: true, js: true do
+RSpec.describe 'Responsive results view Page', feature: true, js: true do
   describe 'facets' do
     before do
       visit search_catalog_path f: { access_facet: ['Online'] }

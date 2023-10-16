@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe DorContentMetadata do
+RSpec.describe DorContentMetadata do
   let(:published_content) { SolrDocument.new(dor_resource_count_isi: 1) }
   let(:no_published_content) { SolrDocument.new(dor_resource_count_isi: 0) }
   let(:field_missing) { SolrDocument.new }

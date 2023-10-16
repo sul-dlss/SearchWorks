@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe FacetOptionsPresenter do
+RSpec.describe FacetOptionsPresenter do
   # let(:view_context) { double('ViewContext') }
   let(:view_context) do
     Class.new do

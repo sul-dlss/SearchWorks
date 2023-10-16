@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Record view', js: true do
+RSpec.feature 'Record view', js: true do
   it 'should have online books panel with Google links' do
     skip('Google Books API not working under test')
     visit solr_document_path('44')

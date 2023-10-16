@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe IndexEdsDocumentPresenter do
+RSpec.describe IndexEdsDocumentPresenter do
   let(:document) { SolrDocument.new }
   let(:view_context) { double('ViewContext', blacklight_config: ArticlesController.blacklight_config, document_index_view_type: 'list') }
 

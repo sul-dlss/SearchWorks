@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe EdsDocument do
+RSpec.describe EdsDocument do
   let(:document) do
     SolrDocument.new(id: '123', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
   end

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'shared/_top_navbar' do
+RSpec.describe 'shared/_top_navbar' do
   let(:user) { double('user') }
 
   before do

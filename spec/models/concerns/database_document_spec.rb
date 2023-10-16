@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 class DatabaseDocumentTest < Hash
   include DatabaseDocument
@@ -7,7 +7,7 @@ class DatabaseDocumentTest < Hash
   end
 end
 
-describe DatabaseDocument do
+RSpec.describe DatabaseDocument do
   describe "#is_a_database?" do
     let(:document) { DatabaseDocumentTest.new }
 

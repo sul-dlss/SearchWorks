@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe RecentSelectionsController do
+RSpec.describe RecentSelectionsController do
   describe "#index" do
     let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
     let!(:cat_bookmark1) { Bookmark.create!(document_id: '1', user:) }

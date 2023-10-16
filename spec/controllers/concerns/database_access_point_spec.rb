@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe DatabaseAccessPoint do
   let(:blacklight_config) { CatalogController.blacklight_config.deep_dup }

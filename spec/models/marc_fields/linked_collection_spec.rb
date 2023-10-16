@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe LinkedCollection do
+RSpec.describe LinkedCollection do
   include MarcMetadataFixtures
   let(:document) do
     SolrDocument.new(

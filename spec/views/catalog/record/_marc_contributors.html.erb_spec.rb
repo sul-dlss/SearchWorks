@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_marc_contributors" do
+RSpec.describe "catalog/record/_marc_contributors" do
   include MarcMetadataFixtures
 
   describe "Contributors section" do

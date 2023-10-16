@@ -1,8 +1,8 @@
 # encoding: utf-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe "Special Quotes" do
+RSpec.describe "Special Quotes" do
   it "should replace special quotes in the query" do
     visit root_path
     fill_in 'q', with: '『stuff』'

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe ThumbnailHelper do
+RSpec.describe ThumbnailHelper do
   describe "#render_cover_image" do
     let(:document) { SolrDocument.new }
     let(:numbers) { { isbn: '', oclc: '', lccn: '' } }

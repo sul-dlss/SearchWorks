@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'PhysicalMedium' do
+RSpec.describe 'PhysicalMedium' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: physical_medium_fixture) }

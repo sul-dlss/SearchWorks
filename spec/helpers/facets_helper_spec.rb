@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe FacetsHelper do
+RSpec.describe FacetsHelper do
   describe "#render_resource_icon" do
     it "should not render anything if format_main_ssim field is not present" do
       expect(helper.render_resource_icon(nil)).to be_nil

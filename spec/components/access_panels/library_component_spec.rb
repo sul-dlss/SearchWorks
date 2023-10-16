@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe AccessPanels::LibraryComponent, type: :component do
   subject(:component) { described_class.new(library:, document:) }

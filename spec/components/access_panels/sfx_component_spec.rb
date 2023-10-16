@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe AccessPanels::SfxComponent do
+RSpec.describe AccessPanels::SfxComponent do
   let(:document) { SolrDocument.new }
 
   subject(:access_panel) { described_class.new(document:) }

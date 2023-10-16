@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe EdsExport do
+RSpec.describe EdsExport do
   let(:document) do
     SolrDocument.new(
       id: '123',

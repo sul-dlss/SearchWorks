@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Image Collection", js: true do
+RSpec.feature "Image Collection", js: true do
   before do
     stub_article_service(docs: [])
   end

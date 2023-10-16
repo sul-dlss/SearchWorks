@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe HooverOpenUrlRequest do
+RSpec.describe HooverOpenUrlRequest do
   include MarcMetadataFixtures
 
   subject(:url) { described_class.new(library, document) }

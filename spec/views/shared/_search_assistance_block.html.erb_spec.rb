@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'shared/_search_assistance_block' do
+RSpec.describe 'shared/_search_assistance_block' do
   before do
     controller.params[:q] = 'abc123'
     allow(view).to receive(:controller_name).and_return('catalog')

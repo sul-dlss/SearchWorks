@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe AllCapsParams do
+RSpec.describe AllCapsParams do
   let(:controller) { double('CatalogController') }
 
   before do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe NearbyOnShelf do
   subject(:service) { described_class.new(field:, search_service:) }

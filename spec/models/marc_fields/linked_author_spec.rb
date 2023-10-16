@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe LinkedAuthor do # rubocop: disable Metrics/BlockLength
+RSpec.describe LinkedAuthor do # rubocop: disable Metrics/BlockLength
   include MarcMetadataFixtures
 
   subject(:instance) { described_class.new(document, target) }

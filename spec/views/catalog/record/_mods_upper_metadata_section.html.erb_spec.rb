@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_upper_metadata_section" do
+RSpec.describe "catalog/record/_mods_upper_metadata_section" do
   include ModsFixtures
 
   describe "Upper metadata available" do

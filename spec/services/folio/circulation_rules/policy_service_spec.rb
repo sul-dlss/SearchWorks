@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Folio::CirculationRules::PolicyService do
   context 'with the actual rules' do

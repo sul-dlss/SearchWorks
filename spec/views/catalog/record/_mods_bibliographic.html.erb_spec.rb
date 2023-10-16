@@ -1,8 +1,8 @@
 # encoding: UTF-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_bibliographic" do
+RSpec.describe "catalog/record/_mods_bibliographic" do
   include ModsFixtures
 
   describe "Object bibliographic" do

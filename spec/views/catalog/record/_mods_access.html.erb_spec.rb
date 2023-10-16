@@ -1,8 +1,8 @@
 # encoding: UTF-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_access" do
+RSpec.describe "catalog/record/_mods_access" do
   include ModsFixtures
 
   describe "Object access" do

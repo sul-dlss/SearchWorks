@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Place names' do
+RSpec.describe 'Place names' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: place_name_fixture) }

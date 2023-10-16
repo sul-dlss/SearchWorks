@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe ArticleSearchBuilder do
   subject(:search_builder) { described_class.new(ArticlesController).with(blacklight_params).to_hash }

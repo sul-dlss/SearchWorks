@@ -1,10 +1,10 @@
-require 'spec_helper'
+require 'rails_helper'
 
 def marc_fields(marc, field)
   SolrDocument.new(marc_json_struct: marc).to_marc.fields(field)
 end
 
-describe MarcFieldWrapper do
+RSpec.describe MarcFieldWrapper do
   include MarcMetadataFixtures
   subject { described_class.new(field) }
 

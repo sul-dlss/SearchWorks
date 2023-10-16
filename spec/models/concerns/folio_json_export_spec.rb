@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe FolioJsonExport do
+RSpec.describe FolioJsonExport do
   let(:document) do
     SolrDocument.new(
       id: '123',

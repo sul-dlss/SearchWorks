@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe QuickReportsController do
+RSpec.describe QuickReportsController do
   describe 'format json' do
     it 'should return json success' do
       post :create, params: { url: 'http://www.example.com/view/123', format: 'json' }

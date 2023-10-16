@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe 'Digital Collections Access Point' do
+RSpec.describe 'Digital Collections Access Point' do
   before do
     visit root_path
     click_link "Digital collections"

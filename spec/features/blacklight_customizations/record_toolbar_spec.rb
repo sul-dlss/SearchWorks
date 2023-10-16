@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Record Toolbar" do
+RSpec.feature "Record Toolbar" do
   before do
     stub_oclc_response('', for: '12345')
     visit root_path

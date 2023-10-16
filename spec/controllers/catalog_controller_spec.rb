@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe CatalogController do
+RSpec.describe CatalogController do
   include Devise::Test::ControllerHelpers
 
   it 'should include the AdvancedSearchParamsMapping concern' do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Record view' do
+RSpec.feature 'Record view' do
   before do
     visit('/view/10')
   end

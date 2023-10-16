@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature "Selections Path" do
   scenario "renders bookmarks page" do

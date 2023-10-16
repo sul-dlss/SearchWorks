@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe BookmarksController do
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }

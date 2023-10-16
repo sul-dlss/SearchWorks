@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe BookmarksHelper do
+RSpec.describe BookmarksHelper do
   # From BL /spec/helpers/catalog_helper_spec.rb
   def mock_response args
     current_page = args[:current_page] || 1

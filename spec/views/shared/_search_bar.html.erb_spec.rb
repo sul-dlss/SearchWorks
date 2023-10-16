@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'shared/_search_bar' do
+RSpec.describe 'shared/_search_bar' do
   before do
     expect(view).to receive_messages(
       search_state: double('SearchState', params_for_search: {}),

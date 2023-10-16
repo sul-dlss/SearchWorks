@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
   describe 'View dropdown' do

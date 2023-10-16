@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe Holdings::Location do
   include Marc856Fixtures

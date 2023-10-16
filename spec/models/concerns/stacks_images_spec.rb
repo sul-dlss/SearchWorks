@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe StacksImages do
+RSpec.describe StacksImages do
   let(:subject) { Class.new }
 
   before { subject.extend StacksImages }

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe CatalogHelper do
+RSpec.describe CatalogHelper do
   include ModsFixtures
   include MarcMetadataFixtures
   describe '#catalog_search?' do

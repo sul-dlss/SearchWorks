@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe EmbedController do
+RSpec.describe EmbedController do
   let(:embed) { double('embed') }
 
   describe "routes" do

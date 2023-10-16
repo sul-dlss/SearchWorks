@@ -1,11 +1,11 @@
-require 'spec_helper'
+require 'rails_helper'
 
 # Simple test class to include Citable concern
 class CitableTestClass
   include Citable
 end
 
-describe Citable do
+RSpec.describe Citable do
   subject { CitableTestClass.new }
 
   it 'responds to #citations when mixed into an object' do

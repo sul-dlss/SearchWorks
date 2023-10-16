@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe RecordHelper do
+RSpec.describe RecordHelper do
   describe 'subjects' do
     let(:subjects) { [OpenStruct.new(label: 'Subjects', values: [%w(Subject1a Subject1b), %w(Subject2a Subject2b Subject2c)])] }
 

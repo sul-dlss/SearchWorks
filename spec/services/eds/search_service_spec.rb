@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Eds::SearchService do
   let(:document_model) { double(unique_key: :id) }

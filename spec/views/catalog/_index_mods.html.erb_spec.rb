@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/_index_mods" do
+RSpec.describe "catalog/_index_mods" do
   include ModsFixtures
   let(:presenter) { OpenStruct.new(heading: "Object Title") }
 

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 # Testing Blacklight's RecordMailer because we override sms_record.text.erb
-describe RecordMailer do
+RSpec.describe RecordMailer do
   let(:documents) { [SolrDocument.new(id: 'abc')] }
   let(:url_gen_params) { { host: 'example.com' } }
 

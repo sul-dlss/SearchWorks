@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Zero results" do
+RSpec.feature "Zero results" do
   scenario "should have no results and prompt to search all fields" do
     visit root_url
     fill_in "q", with: "sdfsda"

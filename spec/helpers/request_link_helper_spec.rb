@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe RequestLinkHelper do
+RSpec.describe RequestLinkHelper do
   include MarcMetadataFixtures
 
   let(:document) do

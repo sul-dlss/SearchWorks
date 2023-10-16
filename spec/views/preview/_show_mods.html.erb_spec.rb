@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "preview/_show_mods" do
+RSpec.describe "preview/_show_mods" do
   include ModsFixtures
   let(:presenter) { OpenStruct.new(heading: "Object Title") }
   let(:document) { SolrDocument.new(

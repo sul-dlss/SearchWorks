@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Responsive search bar", feature: true, js: true do
+RSpec.describe "Responsive search bar", feature: true, js: true do
   describe " - desktop view (> 980px)" do
     it "displays the search form" do
       visit root_path

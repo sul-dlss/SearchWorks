@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Responsive subnavbar (gray banner)', feature: true, js: true, page_width: 700, responsive: true do
   scenario 'collapses menu options in mobile view' do

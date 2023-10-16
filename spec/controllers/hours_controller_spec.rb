@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe HoursController do
+RSpec.describe HoursController do
   describe "routes" do
     it "should route to the library action with params" do
       expect(get: "/hours/GREEN").to route_to(controller: 'hours', action: 'show', id: 'GREEN')

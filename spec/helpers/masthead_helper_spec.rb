@@ -1,7 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'page_location'
 
-describe MastheadHelper do
+RSpec.describe MastheadHelper do
   describe "#render_masthead_partial" do
     let(:page_location) { PageLocation.new(search_state) }
     let(:search_state) { instance_double(Blacklight::SearchState) }

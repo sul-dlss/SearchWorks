@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe FeedbackMailerParser do
+RSpec.describe FeedbackMailerParser do
   describe '#name' do
     context 'when present' do
       it { expect(described_class.new({ name: 'yo' }, '').name).to eq 'yo' }

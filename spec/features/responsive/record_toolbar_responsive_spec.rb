@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Record toolbar", feature: true, js: true do
+RSpec.describe "Record toolbar", feature: true, js: true do
   before do
     stub_oclc_response('', for: '12345')
   end

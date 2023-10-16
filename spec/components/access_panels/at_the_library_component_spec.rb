@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   include MarcMetadataFixtures

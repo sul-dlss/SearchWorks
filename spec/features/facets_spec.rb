@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Facets' do
+RSpec.describe 'Facets' do
   context 'Library Specific Location Facets' do
     context 'Art & Architecture' do
       it 'renders the location facet when Art is selected' do

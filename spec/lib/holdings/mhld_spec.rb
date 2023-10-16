@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Holdings::MHLD do
+RSpec.describe Holdings::MHLD do
   let(:mhld_display) { 'GREEN -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
   let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note),no.17,no.14 -|- library-has-with-hyphens and <html> entities -|- ' }
   let(:zombie_mhld) { 'PHYSICS -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
