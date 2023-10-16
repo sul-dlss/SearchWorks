@@ -8,13 +8,13 @@ $warning: $pantone-144;
 $danger: $bright-red;
 
 // Body
+$body-color: $sul-text-color;
 $body-bg: $sul-body-bg;
 
-// Text / Links
-$text-color: $sul-text-color;
+// Links
 $link-color: $sul-link-color;
+$link-decoration: none;
 $link-hover-color: $sul-link-color-hover;
-$link-hover-decoration: none;
 
 // Components
 $component-active-bg: $digital-blue-dark;
