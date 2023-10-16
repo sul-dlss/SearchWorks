@@ -4,7 +4,7 @@ module Constants
       'In process', 'In process (non-requestable)', 'Missing'
     ]
   end
-  DELIVERABLE_LOCATIONS = ['BIO-TEMP', 'EALSAL-CHN', 'EALSAL-JPN', 'EALSAL-KOR', 'L-PAGE-EA', 'MATH-TEMP', 'MEDIA-30', 'MEDIAX-30', 'MSS-30', 'PAGE-BU', 'PAGE-LP', 'PAGE-MM', 'PAGE-MP', 'PAGE-IRON', 'SAL-ARABIC', 'SAL-FOLIO', 'SAL-LOAN', 'SAL-MUSIC', 'SAL-SERG', 'SAL-TEMP', 'SALTURKISH', 'STACKS-30']
+
   RELATOR_TERMS = { 'acp' => 'Art copyist',
                     'act' => 'Actor',
                     'adp' => 'Adapter',
@@ -697,129 +697,6 @@ module Constants
     'WEST-7B' => 'Ask at circulation desk'
   }.freeze
 
-  NONCIRC_LOCS = ['2NDFLR-REF',
-                  '3RDFLR-REF',
-                  'ARTLCKL-R',
-                  'ARTLCKM-R',
-                  'ARTLCKO-R',
-                  'ARTLCKS-R',
-                  'ARTLCKL',
-                  'ARTLCKM',
-                  'ARTLCKO',
-                  'ARTLCKS',
-                  'ARTVAULT',
-                  'BARCHAS',
-                  'BUS-ARCH',
-                  'BUS-COMPF',
-                  'BUS-LOCKED',
-                  'BUS-MAKENA',
-                  'BUSDISPLAY',
-                  'ENGDISPLAY',
-                  'FACULTY',
-                  'FELTON',
-                  'FELT-STOR',
-                  'FRECOT',
-                  'GUNST',
-                  'GUNST-30',
-                  'GUNST-STOR',
-                  'HAS-ATLAS',
-                  'HAS-CA',
-                  'HAS-FOLIO',
-                  'HAS-JOURN',
-                  'HAS-LIT',
-                  'HASRC',
-                  'HAS-RR',
-                  'HAS-SU',
-                  'IC',
-                  'IC-ATLAS',
-                  'IC-CDROM',
-                  'IC-DESK',
-                  'IC-NEWS',
-                  'IC-RREF',
-                  'IC-STATS',
-                  'LAW-SPEC',
-                  'LOCK-CHN',
-                  'LOCK-JPN',
-                  'LOCK-KOR',
-                  'MANNING',
-                  'MEDIEVALRM',
-                  'MEMLIBMUS',
-                  'MICROFICHE',
-                  'MM-ARTCAB',
-                  'MM-BUSCAB',
-                  'MM-DIZOCAB',
-                  'MM-MATHCAB',
-                  'MUS-NOCIRC',
-                  'NEWS-STKS',
-                  'NEWSPAPERS',
-                  'NEWTON',
-                  'RARE-BOOKS',
-                  'RARE-STOR',
-                  'RAUB-COLL',
-                  'RAUB-NUM',
-                  'RBCX',
-                  'REF-CHN',
-                  'REF-DESK',
-                  'REF-FOLIO',
-                  'REFERENCE',
-                  'REF-JPN',
-                  'REF-KOR',
-                  'REF-SERIAL',
-                  'RET-REF',
-                  'ROBINSON',
-                  'ROB-STOR',
-                  'RUMSEY',
-                  'SAFETY',
-                  'SAL-TEMP',
-                  'SCBS',
-                  'SSRC',
-                  'SSRC-ANRPT',
-                  'SSRC-ATLAS',
-                  'SSRC-CURR',
-                  'SSRC-DATA',
-                  'SSRC-DESK',
-                  'SSRC-DOCS',
-                  'SSRC-FICHE',
-                  'SSRC-FILM',
-                  'SSRC-STATS',
-                  'SSRC-SSDS',
-                  'STK-NOCIRC',
-                  'STUDY-AIDS',
-                  'TAUBE',
-                  'TERM-COLL',
-                  'THEA-STOR',
-                  'THEATRE',
-                  'TIMO-COLL']
-
-  NONCIRC_PAGE_LOCS = ['FELTON-30',
-                       'PAGE-AR',
-                       'PAGE-AS',
-                       'PAGE-EA',
-                       'PAGE-ED',
-                       'PAGE-EN',
-                       'PAGE-ES',
-                       'PAGE-FC',
-                       'PAGE-GR',
-                       'PAGE-HA',
-                       'PAGE-HP',
-                       'PAGE-HV',
-                       'PAGE-LW',
-                       'PAGE-MA',
-                       'PAGE-MD',
-                       'PAGE-MU',
-                       'PAGE-RM',
-                       'PAGE-SI',
-                       'PAGE-SP',
-                       'PAGE-TA',
-                       'RBC-30',
-                       'RBCX-30',
-                       'UARCH-30',
-                       'U-ARCHIVES',
-                       'UARCH-REF',
-                       'UARCH-STOR',
-                       'UARCHX',
-                       'UARCHX-30']
-
   UNAVAILABLE_LOCS = ['ASSMD-LOST',
                       'AT-REPAIR',
                       'AVAIL_SOON',
@@ -869,30 +746,6 @@ module Constants
                       'TECH-SER',
                       'TECH-SERV',
                       'TEMP-LL']
-
-  FORCE_AVAILABLE_CURRENT_LOCS = [
-    'ART-AT-ENG',
-    'IC-DISPLAY'
-  ]
-
-  FORCE_NONCIRC_CURRENT_LOCS = [
-    'NEWBOOKS'
-  ]
-
-  HIDE_DUE_DATE_LOCS = [
-    'CDL'
-  ]
-
-  HIDE_DUE_DATE_CURRENT_LOCS = [
-    'ART-AT-ENG',
-    'ENDPROCESS',
-    'IC-DISPLAY',
-    'LOST-ASSUM',
-    'LOST-CLAIM',
-    'LOST-PAID',
-    'NEWBOOKS',
-    'SEE-LOAN'
-  ]
 
   CURRENT_HOME_LOCS = [
     'ART-AT-ENG',
@@ -945,8 +798,6 @@ module Constants
     'SCI-RESV' => 'SCIENCE',
     'TANN-RESV' => 'TANNER'
   }
-
-  BOUND_WITH_LOCS = %w(SEE-OTHER).freeze
 
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)

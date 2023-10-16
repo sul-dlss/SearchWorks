@@ -3,119 +3,128 @@ require "spec_helper"
 RSpec.describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }
 
-  describe "::Available" do
-    before do
-      allow_any_instance_of(Holdings::Status::Available).to receive(:available?).and_return(true)
-    end
-
-    it "should have the available class" do
-      expect(status.availability_class).to eq 'available'
-    end
-    it "should have the available status text" do
-      expect(status.status_text).to eq 'Available'
-    end
-    it "should be available" do
-      expect(status).to be_available
-    end
-  end
-
-  describe "::Noncirc" do
-    before do
-      allow_any_instance_of(Holdings::Status::Noncirc).to receive(:noncirc?).and_return(true)
-    end
-
-    it "should have the noncirc class" do
-      expect(status.availability_class).to eq 'noncirc'
-    end
-    it "should have the noncirc status text" do
-      expect(status.status_text).to eq 'In-library use'
-    end
-    it "should be noncirc" do
-      expect(status).to be_noncirc
-    end
-  end
-
-  describe "::NoncircPage" do
-    before do
-      allow_any_instance_of(Holdings::Status::NoncircPage).to receive(:noncirc_page?).and_return(true)
-    end
-
-    it "should have the noncirc_page class" do
-      expect(status.availability_class).to eq 'noncirc_page'
-    end
-    it "should have the noncirc_page status text" do
-      expect(status.status_text).to eq 'In-library use'
-    end
-    it "should be noncirc_page" do
-      expect(status).to be_noncirc_page
-    end
-  end
-
-  describe "::Pageable" do
-    subject { status }
-
-    before do
-      allow_any_instance_of(Holdings::Status::DeliverFromOffsite).to receive(:deliver_from_offsite?).and_return(true)
-    end
-
-    it "has the deliver-from-offsite class" do
-      expect(status.availability_class).to eq 'deliver-from-offsite'
-    end
-    it "has the page status text" do
-      expect(status.status_text).to eq 'Available'
-    end
-    it { is_expected.to be_deliver_from_offsite }
-  end
-
-  describe "::Unavailable" do
-    before do
-      allow_any_instance_of(Holdings::Status::Unavailable).to receive(:unavailable?).and_return(true)
-    end
-
-    it "should have the unavailable class" do
-      expect(status.availability_class).to eq 'unavailable'
-    end
-    it "should have the unavailable status text" do
-      expect(status.status_text).to eq 'Unavailable'
-    end
-    it "should be unavailable" do
-      expect(status).to be_unavailable
-    end
-  end
-
-  context "without matching any other status" do
-    subject { status.availability_class }
-
-    it { is_expected.to eq 'unknown' }
-  end
-
-  describe 'precedence' do
-    subject { Holdings::Status.new(item) }
-
-    describe 'unavailable' do
-      let(:item) do
-        instance_double(
-          Holdings::Item,
-          library: 'SAL3',
-          home_location: 'STACKS',
-          current_location: instance_double(Holdings::Location, code: 'LOST-ASSUM'),
-          type: 'STACKS',
-          folio_item?: false
-        )
-      end
-
-      it 'takes precedence over things like page' do
-        expect(subject.availability_class).to eq 'unavailable'
-      end
-    end
-  end
-
   describe '#as_json' do
     let(:as_json) { status.as_json }
 
     it 'should return a json hash with the availability class and status text' do
       expect(as_json).to have_key :availability_class
       expect(as_json).to have_key :status_text
+    end
+  end
+
+  describe '#availability_class' do
+    let(:item) do
+      instance_double(Holdings::Item, folio_item?: true, folio_status: nil, effective_location:)
+    end
+    let(:effective_location) do
+      instance_double(Folio::Location, details: {})
+    end
+
+    subject(:availability) { described_class.new(item).availability_class }
+
+    context 'when the item has a FOLIO status that makes it in-process' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'In process', effective_location:)
+      end
+
+      it { is_expected.to eq 'in_process' }
+    end
+
+    context 'when the item has a location that makes it in-process (e.g. a SUL-TS processing location)' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:)
+      end
+
+      let(:effective_location) do
+        instance_double(Folio::Location, details: { 'availabilityClass' => 'In_process' })
+      end
+
+      it { is_expected.to eq 'in_process' }
+    end
+
+    context 'when the item has a FOLIO status that makes it unavailable' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Missing', effective_location:)
+      end
+
+      it { is_expected.to eq 'unavailable' }
+    end
+
+    context 'when the item has a location that makes it unavailable' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:)
+      end
+
+      let(:effective_location) do
+        instance_double(Folio::Location, details: { 'availabilityClass' => 'Unavailable' })
+      end
+
+      it { is_expected.to eq 'unavailable' }
+    end
+
+    context 'on-order but without an item' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: false, on_order?: true)
+      end
+
+      it { is_expected.to eq 'unavailable' }
+    end
+
+    context 'when the item is in a remote location' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: true)
+      end
+      let(:effective_location) do
+        instance_double(Folio::Location, details: { 'availabilityClass' => 'Offsite' })
+      end
+
+      it { is_expected.to eq 'deliver-from-offsite' }
+    end
+
+    context 'when a non-circulating item is in a remote location' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: false)
+      end
+      let(:effective_location) do
+        instance_double(Folio::Location, details: { 'availabilityClass' => 'Offsite' })
+      end
+
+      it { is_expected.to eq 'noncirc_page' }
+    end
+
+    context 'when the item is non-circulating' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: false)
+      end
+
+      it { is_expected.to eq 'noncirc' }
+    end
+
+    context 'when the item is marked as available because of its location' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'On hold for a borrower', effective_location:, circulates?: true)
+      end
+      let(:effective_location) do
+        instance_double(Folio::Location, details: { 'availabilityClass' => 'Available' })
+      end
+
+      it { is_expected.to eq 'available' }
+    end
+
+    context 'when the item needs a live lookup' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location: instance_double(Folio::Location, details: {}), circulates?: true)
+      end
+
+      it { is_expected.to eq 'unknown' }
+    end
+
+    context 'there is not a folio item but it also is not on order (e.g. maybe it is a bound-with?)' do
+      let(:item) do
+        instance_double(Holdings::Item, folio_item?: false, on_order?: false)
+      end
+
+      it { is_expected.to eq 'unknown' }
     end
   end
 end

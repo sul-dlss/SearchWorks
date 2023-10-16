@@ -6,17 +6,6 @@ RSpec.describe LocationRequestLinkPolicy do
   let(:location) { 'HOOVER' }
   let(:library) { 'STACKS' }
 
-  describe '#aeon_pageable?' do
-    subject { policy.aeon_pageable? }
-
-    context 'when there are no items' do
-      # Seen in a404313 for HOOVER/STACKS where it says "Scattered issues missing"
-      let(:items) { [] }
-
-      it { is_expected.to be true }
-    end
-  end
-
   describe '#show?' do
     subject { policy.show? }
 

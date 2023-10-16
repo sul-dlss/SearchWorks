@@ -9,64 +9,21 @@ class LocationRequestLinkPolicy
   def show?
     return false unless items.any? && !bound_with_or_analyzed_serial?
 
-    return folio_pageable? if folio_items?
-
-    (
-      (in_enabled_location? && any_items_circulate?) ||
-      in_mediated_pageable_location? || aeon_pageable?
-    ) && !all_in_disabled_current_location?
+    folio_pageable?
   end
 
   def aeon_pageable?
-    return folio_aeon_pageable? if folio_items?
-
-    Settings.aeon_locations[library] == '*' ||
-      Settings.aeon_locations.dig(library, location) == "*" ||
-      items.all? do |item|
-        Settings.aeon_locations.dig(library, location)&.include?(item.type)
-      end
+    folio_aeon_pageable? if folio_items?
   end
 
   private
 
   attr_reader :location, :library, :items
 
-  def in_enabled_location?
-    in_mediated_pageable_location? ||
-      Settings.pageable_locations[library] == '*' ||
-      Settings.pageable_locations[library]&.include?(location)
-  end
-
-  def in_mediated_pageable_location?
-    Settings.mediated_locations[library] == '*' ||
-      Settings.mediated_locations[library]&.include?(location)
-  end
-
-  def any_items_circulate?
-    return true if items.blank?
-
-    items.any?(&:circulates?)
-  end
-
-  def all_in_disabled_current_location?
-    return false if items.blank?
-
-    items.all? do |item|
-      disabled_current_locations.include?(item.current_location.code)
-    end
-  end
-
-  def disabled_current_locations
-    Settings.disabled_current_locations[library] || Settings.disabled_current_locations.default
-  end
-
-  # This method returns true for 3 cases
   # 1. The item is "Bound-with" in folio (determined by holdingsType.name, e.g. a86041)
   # 2. The item is a analyzed serial (determined by a SEE-OTHER folio location)
-  # 3. The item is a bound with that wasn't migrated correctly (determined by a *-SEE-OTHER folio location, e.g. a85550, a75525)
   def bound_with_or_analyzed_serial?
-    folio_bound_with_or_analyzed_serial? ||
-      Constants::BOUND_WITH_LOCS.include?(location) # Legacy Symphony method. This can be removed after migration.
+    folio_bound_with_or_analyzed_serial?
   end
 
   def folio_bound_with_or_analyzed_serial?
@@ -79,6 +36,8 @@ class LocationRequestLinkPolicy
   end
 
   def folio_pageable?
+    return false unless folio_items?
+
     !folio_disabled_status_location? &&
       (folio_mediated_pageable? ||
         folio_aeon_pageable? ||

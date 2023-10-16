@@ -211,32 +211,6 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe '#circulates?' do
-    context 'for libaries/locations that are configured to have request links' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO' }) }
-
-      it { is_expected.to be_circulates }
-    end
-
-    context 'when the item has a non-circulating item type' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'NONCIRC' }) }
-
-      it { is_expected.not_to be_circulates }
-    end
-
-    context 'when an item is in a location within a library that specifies location specific item types' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'SAL', home_location: 'UNCAT', type: 'NONCIRC' }) }
-
-      it { is_expected.to be_circulates }
-    end
-
-    context 'when an item is in a location and with a library specific item type that circulates' do
-      subject(:item) { described_class.new({ barcode: '123', library: 'ART', home_location: 'STACKS', type: 'MEDIA' }) }
-
-      it { is_expected.to be_circulates }
-    end
-  end
-
   context 'with data from FOLIO' do
     let(:folio_item) {
       Folio::Item.new(

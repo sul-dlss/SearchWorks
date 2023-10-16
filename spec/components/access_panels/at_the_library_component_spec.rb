@@ -132,26 +132,22 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe 'location level requests' do
+    let(:book_type) do
+      Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+    end
+
     it 'should have the request link at the location level' do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
         ]
       )
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
       render_inline(described_class.new(document:))
       expect(page).to have_css('.location a', text: "Request")
-    end
-
-    it 'should not have the location level request link for -RESV locations' do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'SAL', home_location: 'SOMETHING-RESV', current_location: 'SOMETHING-RESV', callnumber: 'ABC 123' }
-        ]
-      )
-      render_inline(described_class.new(document:))
-      expect(page).not_to have_css('a', text: "Request")
     end
 
     it 'should not have the location level request link for inprocess noncirculating collections' do
@@ -176,8 +172,14 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         ]
       )
     end
+    let(:spec_location) do
+      Folio::Types.cached_location_by_code('SPEC-STACKS')
+    end
 
     before do
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '321', barcode: '321', effective_location: spec_location, permanent_location: spec_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
       render_inline(described_class.new(document:))
     end
 
@@ -281,13 +283,22 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
   describe "request links" do
     describe "location level request links" do
-      before do
-        document = SolrDocument.new(
+      let(:document) do
+        SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'LOCKED-STK', type: 'STKS-MONO', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
           ]
         )
+      end
+
+      let(:art_location) { Folio::Types.cached_location_by_code('ART-LOCKED-LARGE') }
+
+      before do
+        allow(document).to receive(:folio_items).and_return([
+          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: art_location, permanent_location: art_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        ])
+
         render_inline(described_class.new(document:))
       end
 
@@ -301,6 +312,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
 
     describe "item level request links" do
+      let(:book_type) do
+        Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+      end
+
       before do
         document = SolrDocument.new(
           id: '123',
@@ -308,6 +323,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
             { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'MISSING', callnumber: 'ABC 123' }
           ]
         )
+        allow(document).to receive(:folio_items).and_return([
+          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'), permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'), status: 'Missing', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        ])
         render_inline(described_class.new(document:))
       end
 
@@ -415,20 +433,27 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
   describe 'Hoover Archives' do
     context 'when a finding aid is present' do
+      let(:book_type) do
+        Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+      end
+
       before do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'HV-ARCHIVE', home_location: 'STACKS', callnumber: 'ABC' }
+            { barcode: '123', library: 'HOOVER', home_location: 'STACKS', callnumber: 'ABC' }
           ],
           marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )
+        allow(document).to receive(:folio_items).and_return([
+          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('HILA-STACKS'), permanent_location: Folio::Types.cached_location_by_code('HILA-STACKS'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        ])
         render_inline(described_class.new(document:))
       end
 
       it 'renders request via OAC finding aid' do
         expect(page).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
-        expect(page).to have_css '.availability-icon.noncirc_page'
+        expect(page).to have_css '.availability-icon.noncirc'
         expect(page).to have_css '.status-text', text: 'In-library use'
       end
     end

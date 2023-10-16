@@ -688,7 +688,7 @@ gynoncrp.biomedcentral.com
 hanchi.ihp.sinica.edu.tw
 harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
-hbcponline.com
+hbcp.chemnetbase.com
 hccpjournal.biomedcentral.com
 hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
