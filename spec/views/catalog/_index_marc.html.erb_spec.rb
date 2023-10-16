@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/_index_marc" do
+RSpec.describe "catalog/_index_marc" do
   include MarcMetadataFixtures
   before do
     allow(view).to receive_messages(blacklight_config: Blacklight::Configuration.new, document:)

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SfxDataController do
+RSpec.describe SfxDataController do
   describe 'setting up SfxData' do
     it 'unescapes the incoming URL param' do
       expect(SfxData).to receive(:new).with('http://example.com').and_return(double(targets: []))

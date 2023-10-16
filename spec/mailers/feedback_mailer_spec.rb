@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe FeedbackMailer do
+RSpec.describe FeedbackMailer do
   describe "submit_feedback" do
     describe "with all fields" do
       let(:ip) { "123.43.54.123" }

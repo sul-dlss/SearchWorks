@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Course reserves browse', js: true do
+RSpec.feature 'Course reserves browse', js: true do
   context 'homepage and subnavbar' do
     before { visit root_path }
 

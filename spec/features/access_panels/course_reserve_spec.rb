@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Course Reserve Access Panel" do
+RSpec.feature "Course Reserve Access Panel" do
   scenario "should have 3 course reservations" do
     visit '/view/1'
     within "div.panel-course-reserve" do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'catalog/_show_mods' do
+RSpec.describe 'catalog/_show_mods' do
   include ModsFixtures
   let(:document) { SolrDocument.new(modsxml: mods_001) }
 

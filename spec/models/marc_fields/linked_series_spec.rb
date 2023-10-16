@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe LinkedSeries do
+RSpec.describe LinkedSeries do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marc_json_struct: complex_series_fixture) }
 

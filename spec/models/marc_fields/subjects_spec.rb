@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Subjects' do
+RSpec.describe 'Subjects' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: marc) }

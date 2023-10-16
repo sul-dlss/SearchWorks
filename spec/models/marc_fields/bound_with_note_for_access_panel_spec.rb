@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe BoundWithNoteForAccessPanel do
+RSpec.describe BoundWithNoteForAccessPanel do
   include MarcMetadataFixtures
   let(:marc) { linked_ckey_fixture }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }

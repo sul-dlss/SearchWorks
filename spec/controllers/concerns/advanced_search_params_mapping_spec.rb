@@ -1,10 +1,10 @@
-require "spec_helper"
+require 'rails_helper'
 
 class AdvancedSearchParamsMappingController
   include AdvancedSearchParamsMapping
 end
 
-describe AdvancedSearchParamsMapping do
+RSpec.describe AdvancedSearchParamsMapping do
   let(:controller) { AdvancedSearchParamsMappingController.new }
 
   describe 'params to be mapped' do

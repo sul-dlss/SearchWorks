@@ -1,10 +1,10 @@
-require "spec_helper"
+require 'rails_helper'
 
 class ThumbnailTestClass
   include Thumbnail
 end
 
-describe Thumbnail do
+RSpec.describe Thumbnail do
   let(:view_context) { double(:view_context) }
   let(:thumbnail) { ThumbnailTestClass.new }
   let(:doc) { { id: '123' } }

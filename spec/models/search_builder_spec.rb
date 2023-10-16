@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SearchBuilder do
+RSpec.describe SearchBuilder do
   subject(:search_builder) { described_class.new(scope).with(blacklight_params) }
 
   let(:blacklight_params) { {} }

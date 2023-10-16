@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe User do
+RSpec.describe User do
   let(:subject) { described_class.new }
 
   before do

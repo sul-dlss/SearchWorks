@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Language do
+RSpec.describe Language do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: marc, format_main_ssim: formats) }

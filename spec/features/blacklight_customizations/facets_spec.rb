@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.feature "Facets Customizations" do
   scenario "material type icons display on the home page" do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe PreviewController do
+RSpec.describe PreviewController do
   describe "#show" do
     doc_id = 1
     it "should get the document" do

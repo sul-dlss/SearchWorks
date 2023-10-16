@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Digital Collections Search" do
+RSpec.feature "Digital Collections Search" do
   before do
     visit root_path
     click_link "Digital collections"

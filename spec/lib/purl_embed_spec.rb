@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe PURLEmbed do
+RSpec.describe PURLEmbed do
   let(:druid) { 'abc123' }
   let(:provider) { double('provider') }
 

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe CollectionHelper do
+RSpec.describe CollectionHelper do
   describe "#link_to_collection_members" do
     let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe JsonResultsDocumentPresenter do
   subject(:presenter) { described_class.new(source_document) }

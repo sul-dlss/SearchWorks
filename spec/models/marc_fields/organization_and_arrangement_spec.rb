@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe OrganizationAndArrangement do
+RSpec.describe OrganizationAndArrangement do
   include MarcMetadataFixtures
   subject { described_class.new(SolrDocument.new(marc_json_struct: organization_and_arrangement_fixture)) }
 

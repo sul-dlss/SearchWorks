@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.feature "Brief View" do
   scenario "Catalog search results", js: true do

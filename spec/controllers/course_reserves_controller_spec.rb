@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe CourseReservesController do
+RSpec.describe CourseReservesController do
   describe "#index" do
     it "should get the course reserves page" do
       get :index

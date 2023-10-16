@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'EDS Facets', js: true do
   describe 'OR facets' do

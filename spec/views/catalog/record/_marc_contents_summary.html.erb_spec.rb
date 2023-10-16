@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "catalog/record/_marc_contents_summary" do
+RSpec.describe "catalog/record/_marc_contents_summary" do
   include MarcMetadataFixtures
   include Marc856Fixtures
 

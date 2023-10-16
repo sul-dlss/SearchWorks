@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'Gallery View' do
   scenario 'Search results are rendered properly', js: true do

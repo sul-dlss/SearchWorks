@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe AccessPanels::InCollectionComponent, type: :component do
   describe 'merged records w/o collection members' do

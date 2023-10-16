@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'sfx_data/show' do
+RSpec.describe 'sfx_data/show' do
   let(:sfx_data) do
     instance_double(
       SfxData,

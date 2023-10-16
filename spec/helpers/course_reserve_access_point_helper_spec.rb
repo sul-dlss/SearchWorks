@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe CourseReserveAccessPointHelper do
+RSpec.describe CourseReserveAccessPointHelper do
   describe "#create_course" do
     describe "when no document is present" do
       it "should return parameter values" do

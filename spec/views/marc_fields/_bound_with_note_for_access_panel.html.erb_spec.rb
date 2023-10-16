@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_bound_with_note_for_access_panel' do
+RSpec.describe 'marc_fields/_bound_with_note_for_access_panel' do
   subject { Capybara.string(rendered) }
 
   let(:bound_with_note) do

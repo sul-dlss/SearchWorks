@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Issn' do
+RSpec.describe 'Issn' do
   include MarcMetadataFixtures
 
   let(:document) { SolrDocument.new(marc_json_struct: issn_fixture) }

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SfxData do
+RSpec.describe SfxData do
   let(:sfx_url) { 'http://sul-sfx.stanford.edu/sfx?thing=thing&other_thing=this_other_thing&sid=the_sid_of_the_url' }
 
   let(:sfx_xml) do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Government Documents Access Point' do
+RSpec.describe 'Government Documents Access Point' do
   before do
     visit root_path
 

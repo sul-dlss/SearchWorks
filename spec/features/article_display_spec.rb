@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'Article Record Display' do
   before { stub_article_service(type: :single, docs: [document]) }

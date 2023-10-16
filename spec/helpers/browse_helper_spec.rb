@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe BrowseHelper do
+RSpec.describe BrowseHelper do
   describe "#link_to_callnumber_browse" do
     let(:document) { SolrDocument.new(id: 'abc123', preferred_barcode: '123') }
     let(:preferred_item) { Holdings::Item.new({ barcode: '123', library: 'abc', home_location: 'home_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'preferred-callnumber' }) }

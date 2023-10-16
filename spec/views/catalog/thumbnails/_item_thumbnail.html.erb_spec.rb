@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe "catalog/thumbnails/_item_thumbnail" do
   before do

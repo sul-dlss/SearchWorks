@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'Date Range', js: true do
   scenario 'Search results should have date slider facet' do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'RSS Feeds' do
+RSpec.describe 'RSS Feeds' do
   before do
     visit root_path
     click_button 'search'

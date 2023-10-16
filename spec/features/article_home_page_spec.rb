@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Article Home Page' do
+RSpec.feature 'Article Home Page' do
   before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
   it 'has the correct title' do

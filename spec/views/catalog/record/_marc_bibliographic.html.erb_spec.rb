@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_marc_bibliographic" do
+RSpec.describe "catalog/record/_marc_bibliographic" do
   include MarcMetadataFixtures
 
   describe "MARC 592" do

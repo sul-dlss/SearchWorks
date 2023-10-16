@@ -1,12 +1,12 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Preview routes functionality" do
+RSpec.feature "Preview routes functionality" do
   scenario "at show route" do
     visit preview_path(1)
     expect(page).to have_css("h3 a", text: "An object")
   end
 end
 
-feature "Preview integration with plugin" do
+RSpec.feature "Preview integration with plugin" do
   skip
 end

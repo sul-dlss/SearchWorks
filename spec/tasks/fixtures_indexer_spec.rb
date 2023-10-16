@@ -1,7 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'fixtures_indexer'
 
-describe FixturesIndexer do
+RSpec.describe FixturesIndexer do
   let(:stub_solr) { double('solr', uri: URI.parse('http://localhost:8983/solr/blacklight-core')) }
 
   before do

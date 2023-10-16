@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "browse/index" do
+RSpec.describe "browse/index" do
   let(:original_doc) {
     SolrDocument.new(
       id: 'doc-id',

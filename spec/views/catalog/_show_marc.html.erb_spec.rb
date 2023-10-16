@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'catalog/_show_marc' do
+RSpec.describe 'catalog/_show_marc' do
   include MarcMetadataFixtures
   before do
     allow(view).to receive_messages(add_purl_embed_header: '', render_cover_image: '')

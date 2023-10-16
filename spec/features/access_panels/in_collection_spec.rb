@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "In collection Access Panel" do
+RSpec.feature "In collection Access Panel" do
   scenario "for MODS derived documents" do
     visit solr_document_path('mf774fs2413')
 

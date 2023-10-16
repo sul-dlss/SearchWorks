@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Dissertation Theses Access Point' do
+RSpec.describe 'Dissertation Theses Access Point' do
   before do
     visit root_path
     click_link 'Theses & dissertations'

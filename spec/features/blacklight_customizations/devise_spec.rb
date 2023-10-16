@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Devise functionality restrictions', type: :routing do
+RSpec.describe 'Devise functionality restrictions', type: :routing do
   describe 'registrations' do
     it 'cancel user should not be available' do
       expect(get: '/users/cancel').not_to be_routable

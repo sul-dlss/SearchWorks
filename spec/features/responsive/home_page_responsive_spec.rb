@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe "Responsive Home Page", feature: true, js: true do
   describe "facets" do

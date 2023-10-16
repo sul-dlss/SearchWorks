@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Eds::DateRangeParser do
   let(:response_values) do

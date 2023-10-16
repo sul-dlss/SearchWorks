@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Request Links' do
+RSpec.describe 'Request Links' do
   describe 'Hoover links' do
     context 'in search results' do
       it 'renders a link to the detail/record view instead of holdings' do

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_callnumber_browse" do
+RSpec.describe "catalog/record/_callnumber_browse" do
   let(:document) {
     SolrDocument.new(
       id: 'abc123',

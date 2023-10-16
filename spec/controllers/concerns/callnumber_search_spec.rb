@@ -1,10 +1,10 @@
-require "spec_helper"
+require 'rails_helper'
 
 class CallnumberSearchTestClass
   include CallnumberSearch
 end
 
-describe CallnumberSearch do
+RSpec.describe CallnumberSearch do
   let(:subject) { CallnumberSearchTestClass.new }
 
   describe "#quote_and_downcase_callnumber_search" do

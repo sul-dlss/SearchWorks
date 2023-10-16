@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe CollectionAccessPointHelper do
+RSpec.describe CollectionAccessPointHelper do
   describe "#get_collection" do
     describe "when no document is present" do
       it "should return parameter values" do

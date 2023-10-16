@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe FeedbackFormsController do
+RSpec.describe FeedbackFormsController do
   context 'when the current user is anonymous' do
     context 'when they fill in the reCAPTCHA' do
       before do

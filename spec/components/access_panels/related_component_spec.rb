@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe AccessPanels::RelatedComponent, type: :component do
   it 'should be hidden by default' do

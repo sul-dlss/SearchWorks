@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe Holdings do
+RSpec.describe Holdings do
   let(:holdings) {
     Holdings.new(
       SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).items

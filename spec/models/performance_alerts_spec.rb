@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe PerformanceAlerts do
   subject(:alerts) { described_class.new(policy_id: '12345') }

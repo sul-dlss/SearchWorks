@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Search types" do
+RSpec.feature "Search types" do
   scenario "should include our custom types" do
     visit root_path
 

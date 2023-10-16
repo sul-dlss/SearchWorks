@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_linked_author' do
+RSpec.describe 'marc_fields/_linked_author' do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marc_json_struct: send("linked_author_#{target}_fixture".to_sym)) }
 

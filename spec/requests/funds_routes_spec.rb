@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Funds vanity url routing' do
   it 'redirects to the fund search path (and upcases the fund name)' do

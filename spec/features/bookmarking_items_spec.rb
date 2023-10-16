@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'Bookmarking Items' do
   context 'Citations', js: true do

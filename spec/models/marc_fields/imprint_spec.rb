@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Imprint do
+RSpec.describe Imprint do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marc_json_struct: edition_imprint_fixture) }
 

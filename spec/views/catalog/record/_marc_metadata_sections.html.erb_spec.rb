@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_marc_metadata_sections" do
+RSpec.describe "catalog/record/_marc_metadata_sections" do
   include MarcMetadataFixtures
 
   describe "Metadata sections all available" do

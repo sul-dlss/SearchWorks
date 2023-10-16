@@ -1,10 +1,10 @@
-require "spec_helper"
+require 'rails_helper'
 
 class ModsDataTestClass
   include ModsData
 end
 
-describe ModsData do
+RSpec.describe ModsData do
   include ModsFixtures
   let(:document) { SolrDocument.new(modsxml: mods_everything) }
 

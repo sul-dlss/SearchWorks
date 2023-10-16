@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Tabbed selections UI' do
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }

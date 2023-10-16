@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe ArticleFulltextLinkPresenter do
+RSpec.describe ArticleFulltextLinkPresenter do
   let(:context) do
     Class.new do
       include Rails.application.routes.url_helpers

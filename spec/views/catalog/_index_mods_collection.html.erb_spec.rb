@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/_index_mods_collection" do
+RSpec.describe "catalog/_index_mods_collection" do
   include ModsFixtures
   before do
     allow(view).to receive(:document).and_return(

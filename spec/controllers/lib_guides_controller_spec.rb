@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe LibGuidesController do
+RSpec.describe LibGuidesController do
   describe 'routes' do
     it 'is available at /lib_guides' do
       request = { get: '/lib_guides' }

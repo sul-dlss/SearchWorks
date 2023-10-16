@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe ApplicationController do
+RSpec.describe ApplicationController do
   describe '#on_campus_or_su_affiliated_user?' do
     before do
       allow(controller).to receive(:current_user).and_return(user)

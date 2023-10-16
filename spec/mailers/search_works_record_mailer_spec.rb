@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe SearchWorksRecordMailer do
+RSpec.describe SearchWorksRecordMailer do
   include MarcMetadataFixtures
   include ModsFixtures
   let(:documents) {

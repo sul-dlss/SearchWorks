@@ -6,72 +6,40 @@ SimpleCov.start do
   add_filter "/spec/"
 end
 
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'webmock/rspec'
-require 'selenium-webdriver'
 require 'fixtures/marc_records/marc_856_fixtures'
 require 'fixtures/marc_records/marc_metadata_fixtures'
 require 'fixtures/mods_records/mods_fixtures'
 
-WebMock.disable_net_connect!(allow_localhost: true, allow: [
-  'example.com',
-  'host.example.com',
-  'embed.stanford.edu',
-  'api.newrelic.com',
-  'www.worldcat.org',
-  'example.com&sfx.response_type=multi_obj_xml',
-  'api-ssl.bitly.com',
-  'eds-api.ebscohost.com',
-  'chromedriver.storage.googleapis.com'
-])
-
-Capybara.javascript_driver = :headless_chrome
-
-Capybara.register_driver :headless_chrome do |app|
-  Capybara::Selenium::Driver.load_selenium
-  browser_options = Selenium::WebDriver::Chrome::Options.new.tap do |opts|
-    opts.args << '--headless'
-    opts.args << '--disable-gpu'
-    # Workaround https://bugs.chromium.org/p/chromedriver/issues/detail?id=2650&q=load&sort=-id&colspec=ID%20Status%20Pri%20Owner%20Summary
-    opts.args << '--disable-site-isolation-trials'
-    opts.args << '--no-sandbox'
-    opts.args << '--window-size=1000,700'
-  end
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
-end
-
-Capybara.default_max_wait_time = ENV["CI"] ? 30 : 10
-
-
-# Requires supporting ruby files with custom matchers and macros, etc,
-# in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-
-# Checks for pending migrations before tests are run.
-# If you are not using ActiveRecord, you can remove this line.
-ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  config.include Capybara::DSL
-
-  config.before(:example, responsive: true) do |example|
-    page.current_window.resize_to(example.metadata[:page_width].to_i, 700)
+  # rspec-expectations config goes here. You can use an alternate
+  # assertion/expectation library such as wrong or the stdlib/minitest
+  # assertions if you prefer.
+  config.expect_with :rspec do |expectations|
+    # This option will default to `true` in RSpec 4. It makes the `description`
+    # and `failure_message` of custom matchers include text for helper methods
+    # defined using `chain`, e.g.:
+    #     be_bigger_than(2).and_smaller_than(4).description
+    #     # => "be bigger than 2 and smaller than 4"
+    # ...rather than:
+    #     # => "be bigger than 2"
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  config.after(:example, responsive: true) do
-    page.current_window.resize_to(1000, 700)
+  # rspec-mocks config goes here. You can use an alternate test double
+  # library (such as bogus or mocha) by changing the `mock_with` option here.
+  config.mock_with :rspec do |mocks|
+    # Prevents you from mocking or stubbing a method that does not exist on
+    # a real object. This is generally recommended, and will default to
+    # `true` in RSpec 4.
+    mocks.verify_partial_doubles = false
   end
 
-  # Limits the available syntax to the non-monkey patched syntax that is recommended.
-  # For more details, see:
-  #   - http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax
-  #   - http://teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
-  #   - http://myronmars.to/n/dev-blog/2014/05/notable-changes-in-rspec-3#new__config_option_to_disable_rspeccore_monkey_patching
-  # config.disable_monkey_patching!
-
-  config.default_formatter = 'doc' if config.files_to_run.one?
-
+  # This option will default to `:apply_to_host_groups` in RSpec 4 (and will
+  # have no way to turn it off -- the option exists only for backwards
+  # compatibility in RSpec 3). It causes shared context metadata to be
+  # inherited by the metadata hash of host groups and examples, rather than
+  # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   # This allows you to limit a spec run to individual examples or groups
@@ -81,39 +49,42 @@ RSpec.configure do |config|
   # metadata: `fit`, `fdescribe` and `fcontext`, respectively.
   config.filter_run_when_matching :focus
 
-  config.example_status_persistence_file_path = 'spec/examples.txt'
+  # Allows RSpec to persist some state between runs in order to support
+  # the `--only-failures` and `--next-failure` CLI options. We recommend
+  # you configure your source control system to ignore this file.
+  config.example_status_persistence_file_path = "spec/examples.txt"
 
-  # ## Mock Framework
-  #
-  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
-  #
-  # config.mock_with :mocha
-  # config.mock_with :flexmock
-  # config.mock_with :rr
+  # Limits the available syntax to the non-monkey patched syntax that is
+  # recommended. For more details, see:
+  # https://relishapp.com/rspec/rspec-core/docs/configuration/zero-monkey-patching-mode
+  config.disable_monkey_patching!
 
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = Rails.root.join("spec/fixtures")
+  # Many RSpec users commonly either run the entire suite or an individual
+  # file, and it's useful to allow more verbose output when running an
+  # individual spec file.
+  if config.files_to_run.one?
+    # Use the documentation formatter for detailed output,
+    # unless a formatter has already been configured
+    # (e.g. via a command-line flag).
+    config.default_formatter = "doc"
+  end
 
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = true
-
-  # If true, the base class of anonymous controllers will be inferred
-  # automatically. This will be the default behavior in future versions of
-  # rspec-rails.
-  config.infer_base_class_for_anonymous_controllers = false
+  # Print the 10 slowest examples and example groups at the
+  # end of the spec run, to help surface which specs are running
+  # particularly slow.
+  config.profile_examples = 10
 
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   #     --seed 1234
-  config.order = "random"
+  config.order = :random
 
-  config.include Warden::Test::Helpers
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include ViewComponent::TestHelpers, type: :component
-  config.include Capybara::RSpecMatchers, type: :component
+  # Seed global randomization in this process using the `--seed` CLI option.
+  # Setting this allows you to use `--seed` to deterministically reproduce
+  # test failures related to randomization by passing the same `--seed` value
+  # as the one that triggered the failure.
+  Kernel.srand config.seed
 end
 
 def total_results

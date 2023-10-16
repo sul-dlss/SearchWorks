@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe "Emailing Records", js: true do
   context 'when a user is not logged in' do

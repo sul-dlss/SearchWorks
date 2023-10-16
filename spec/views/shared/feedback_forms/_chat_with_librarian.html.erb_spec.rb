@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'shared/feedback_forms/_chat_with_librarian' do
+RSpec.describe 'shared/feedback_forms/_chat_with_librarian' do
   before do
     render
   end

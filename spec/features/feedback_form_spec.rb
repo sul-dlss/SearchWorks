@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Feedback form (js)", js: true do
+RSpec.feature "Feedback form (js)", js: true do
   before do
     visit root_path
   end
@@ -24,7 +24,7 @@ feature "Feedback form (js)", js: true do
   end
 end
 
-feature "Feedback form (no js)" do
+RSpec.feature "Feedback form (no js)" do
   before do
     visit root_path
   end

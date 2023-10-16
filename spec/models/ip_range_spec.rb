@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 ##
 # Stimple test class to model a
@@ -16,7 +16,7 @@ class TestIPNetwork
   end
 end
 
-describe IPRange do
+RSpec.describe IPRange do
   let(:test_network) { TestIPNetwork.new }
 
   context 'singletons' do

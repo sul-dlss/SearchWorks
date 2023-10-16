@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe LiveLookup::Folio do
+RSpec.describe LiveLookup::Folio do
   subject(:folio_live_lookup) { described_class.new(instance_ids) }
 
   let(:folio_client) { instance_double(FolioClient) }

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Collection Access Point" do
+RSpec.feature "Collection Access Point" do
   before do
     visit search_catalog_path({ f: { collection: ["29"] } })
   end

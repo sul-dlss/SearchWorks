@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe "Responsive results toolbar", feature: true, js: true do
   describe "desktop view (> 992px)" do

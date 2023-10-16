@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe PresenterFormat do
+RSpec.describe PresenterFormat do
   subject(:presenter) do
     Class.new do
       include PresenterFormat

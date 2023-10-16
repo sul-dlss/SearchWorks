@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe 'Article Record Toolbar', js: true do
   let(:previous_document) { SolrDocument.new(id: 1, eds_title: 'My Prev Title') }

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_linked_series' do
+RSpec.describe 'marc_fields/_linked_series' do
   subject { Capybara.string(rendered) }
 
   let(:linked_series) do

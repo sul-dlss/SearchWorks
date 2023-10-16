@@ -1,8 +1,8 @@
 # encoding: utf-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe CJKQuery do
+RSpec.describe CJKQuery do
   # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
   let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access) }
   let(:blacklight_params) { {} }

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Search Results Page" do
+RSpec.feature "Search Results Page" do
   scenario "should have correct page title" do
     visit search_catalog_path f: { format: ["Book"] }
     expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)

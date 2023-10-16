@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'marc_fields/_marc_field' do
+RSpec.describe 'marc_fields/_marc_field' do
   subject { Capybara.string(rendered) }
 
   let(:marc_field) do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Citation do
+RSpec.describe Citation do
   include ModsFixtures
   subject { described_class.new(document, formats) }
 

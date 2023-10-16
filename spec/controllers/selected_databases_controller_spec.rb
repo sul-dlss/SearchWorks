@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SelectedDatabasesController do
+RSpec.describe SelectedDatabasesController do
   describe "#index" do
     it "should set the @selected_databases instance variable" do
       docs = double('documents')

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/librarian_view" do
+RSpec.describe "catalog/librarian_view" do
   include ModsFixtures
   include MarcMetadataFixtures
   describe "MARC records" do

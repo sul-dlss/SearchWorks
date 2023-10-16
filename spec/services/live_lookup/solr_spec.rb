@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe LiveLookup::Solr do
+RSpec.describe LiveLookup::Solr do
   subject(:solr_live_lookup) { described_class.new(ids) }
 
   let(:rsolr) { instance_double(RSolr) }

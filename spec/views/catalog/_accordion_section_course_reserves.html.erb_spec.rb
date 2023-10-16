@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/_accordion_section_course_reserves" do
+RSpec.describe "catalog/_accordion_section_course_reserves" do
   describe "Accordion section - course reserves" do
     before do
       assign(:document,

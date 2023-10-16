@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Library Location Access Panel" do
+RSpec.feature "Library Location Access Panel" do
   scenario "should have 1 library location" do
     visit '/view/1'
     expect(page).to have_css('div.panel-library-location', count: 1)

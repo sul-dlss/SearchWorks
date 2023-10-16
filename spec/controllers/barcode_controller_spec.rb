@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe BarcodeController do
+RSpec.describe BarcodeController do
   describe 'routes' do
     it 'is available at /barcode' do
       request = { get: '/barcode/3610512345' }

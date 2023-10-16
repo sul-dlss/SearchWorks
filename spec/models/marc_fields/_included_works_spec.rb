@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe IncludedWorks do
+RSpec.describe IncludedWorks do
   include MarcMetadataFixtures
   let(:document) { SolrDocument.new(marc_json_struct: contributed_works_fixture) }
 

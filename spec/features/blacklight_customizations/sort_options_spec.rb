@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.feature "Sort options" do
   scenario "includes our custom options" do

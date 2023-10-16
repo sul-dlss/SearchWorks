@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Librarian View Customization", js: true do
+RSpec.describe "Librarian View Customization", js: true do
   let(:embed) { double('embed-response') }
 
   it "MARC records should display" do

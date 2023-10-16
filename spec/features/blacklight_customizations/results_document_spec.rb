@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Results Document Metadata' do
+RSpec.feature 'Results Document Metadata' do
   scenario 'should have correct tile with open-ended date range and metadata' do
     visit root_path
     first('#q').set '1'

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'catalog/_alternate_catalog' do
+RSpec.describe 'catalog/_alternate_catalog' do
   before do
     controller.params[:q] = 'question'
     stub_template '_lib_guides_alternate_catalog' => ''

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe ArticleHelper do
   describe '#article_search?' do

@@ -1,8 +1,8 @@
 # encoding: utf-8
 
-require "spec_helper"
+require 'rails_helper'
 
-describe ReplaceSpecialQuotes do
+RSpec.describe ReplaceSpecialQuotes do
   let(:controller) { double('CatalogContrller') }
   let(:q) { 'query' }
 

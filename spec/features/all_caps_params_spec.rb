@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "Search parameters in all caps" do
+RSpec.describe "Search parameters in all caps" do
   it "should be downcased" do
     visit root_path
     fill_in 'q', with: "HELLO WORLD"

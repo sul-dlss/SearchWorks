@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'HathiLinks SolrDocument Concern' do
+RSpec.describe 'HathiLinks SolrDocument Concern' do
   let(:document_data) { {} }
   subject(:links) { SolrDocument.new(document_data).hathi_links }
 

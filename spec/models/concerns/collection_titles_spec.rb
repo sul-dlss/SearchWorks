@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe CollectionTitles do
+RSpec.describe CollectionTitles do
   let(:document_data) { {} }
 
   subject(:collection_titles) { SolrDocument.new(document_data).collection_titles }

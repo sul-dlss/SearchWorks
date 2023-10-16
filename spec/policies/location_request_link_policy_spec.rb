@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe LocationRequestLinkPolicy do
   subject(:policy) { described_class.new(location:, library:, items:) }

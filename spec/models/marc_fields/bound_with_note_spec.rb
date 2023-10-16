@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe BoundWithNote do
+RSpec.describe BoundWithNote do
   include MarcMetadataFixtures
   let(:marc) { linked_ckey_fixture }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }

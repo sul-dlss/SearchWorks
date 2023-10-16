@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "catalog/record/_mods_metadata_sections" do
+RSpec.describe "catalog/record/_mods_metadata_sections" do
   include ModsFixtures
 
   describe "Metadata sections all available" do

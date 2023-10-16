@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "File Collection" do
+RSpec.feature "File Collection" do
   scenario "Search results" do
     stub_article_service(docs: [])
     visit root_path

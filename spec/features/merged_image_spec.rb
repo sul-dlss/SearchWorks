@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-feature "Merged Images" do
+RSpec.feature "Merged Images" do
   scenario "in search results" do
     visit root_path
     fill_in 'q', with: '37'

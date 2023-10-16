@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'MarcInstrumentation' do
+RSpec.describe 'MarcInstrumentation' do
   include MarcMetadataFixtures
   it 'should return nil for non marc object' do
     document = SolrDocument.new

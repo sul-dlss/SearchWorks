@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe IndexAuthors do
+RSpec.describe IndexAuthors do
   let(:no_authors_document) { SolrDocument.new() }
   let(:document) { SolrDocument.new(
     author_person_full_display: ["Author Person"],

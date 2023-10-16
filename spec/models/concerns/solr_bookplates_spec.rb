@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SolrBookplates do
+RSpec.describe SolrBookplates do
   let(:subject) { SolrDocument.new(bookplates_display: ['ABC -|- 123']) }
 
   it 'should provide a bookplates method that returns an array of Bookplate objects' do

@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'shared/_home_page_bento' do
+RSpec.describe 'shared/_home_page_bento' do
   context 'catalog controller' do
     before { expect(view).to receive(:controller_name).at_least(:once).and_return('catalog') }
 

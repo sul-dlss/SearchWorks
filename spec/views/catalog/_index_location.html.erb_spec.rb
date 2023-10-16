@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 RSpec.describe "catalog/_index_location" do
   include MarcMetadataFixtures

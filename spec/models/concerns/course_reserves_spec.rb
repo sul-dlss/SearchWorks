@@ -1,10 +1,10 @@
-require 'spec_helper'
+require 'rails_helper'
 
 class CourseReservesTestClass
   include CourseReserves
 end
 
-describe CourseReserves do
+RSpec.describe CourseReserves do
   it "should return nil for non course reserve docs" do
     expect(CourseReservesTestClass.new.course_reserves).to be_nil
   end

@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'rails_helper'
 
-describe "MARC Metadata in search results" do
+RSpec.describe "MARC Metadata in search results" do
   describe "uniform title" do
     before do
       visit root_path

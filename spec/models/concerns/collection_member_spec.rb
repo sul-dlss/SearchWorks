@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe CollectionMember do
+RSpec.describe CollectionMember do
   let(:member) { SolrDocument.new(collection: ["12345"]) }
   let(:non_member) { SolrDocument.new }
   let(:sirsi) { SolrDocument.new(collection: ['sirsi']) }

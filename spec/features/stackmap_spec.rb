@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature 'StackMap View' do
   scenario 'Search results', js: true do

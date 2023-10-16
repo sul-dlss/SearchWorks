@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Zero results" do
+RSpec.feature "Zero results" do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
 

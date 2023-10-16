@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe BarcodeSearch do
+RSpec.describe BarcodeSearch do
   subject { described_class.new(barcode) }
 
   let(:barcode) { '3610512345' }

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require 'rails_helper'
 
-describe SearchTips do
+RSpec.describe SearchTips do
   subject(:search_tips) { described_class.new }
 
   describe 'initialization' do

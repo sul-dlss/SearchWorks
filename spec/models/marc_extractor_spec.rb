@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe MarcExtractor do
+RSpec.describe MarcExtractor do
   include MarcMetadataFixtures
 
   let(:fixture) { metadata1 }

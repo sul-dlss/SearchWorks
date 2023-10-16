@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature "Aria Landmarks", js: true do
+RSpec.feature "Aria Landmarks", js: true do
   before do
     visit root_path
     fill_in "q", with: ''
