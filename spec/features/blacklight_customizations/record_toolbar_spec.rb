@@ -6,7 +6,7 @@ RSpec.feature "Record Toolbar" do
     visit root_path
   end
 
-  scenario "should have record toolbar visible but no back to search or pagination", js: true do
+  scenario "should have record toolbar visible but no back to search or pagination", :js do
     visit '/view/1'
     within "#content" do
       within "div.record-toolbar" do
@@ -26,7 +26,7 @@ RSpec.feature "Record Toolbar" do
     end
   end
 
-  scenario 'does not have a previous pagination button for the first item in a result', js: true do
+  scenario 'does not have a previous pagination button for the first item in a result', :js do
     visit search_catalog_path f: { format: ['Book'] }
     within(first('.document')) do
       find('h3.index_title a').click
@@ -35,7 +35,7 @@ RSpec.feature "Record Toolbar" do
     expect(page).to have_no_css('a.previous', visible: true)
   end
 
-  scenario 'a citable item has export links', js: true do
+  scenario 'a citable item has export links', :js do
     visit search_catalog_path f: { format: ['Book'] }
     page.find('a', text: 'An object').click
 
@@ -48,7 +48,7 @@ RSpec.feature "Record Toolbar" do
     end
   end
 
-  scenario "should have back to search and pagination", js: true do
+  scenario "should have back to search and pagination", :js do
     visit search_catalog_path f: { format: ["Book"] }
 
     # Specifically trying to not get the first item in the results

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'StackMap View' do
-  scenario 'Search results', js: true do
+  scenario 'Search results', :js do
     visit search_catalog_path f: { format: ['Book'] }
     within '#view-type-dropdown' do
       click_button 'View'

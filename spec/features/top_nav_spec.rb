@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Top Navigation" do
-  scenario "should have navigational links and top menu", js: true do
+  scenario "should have navigational links and top menu", :js do
     visit root_path
     within "#topnav" do
       within ".header-links" do

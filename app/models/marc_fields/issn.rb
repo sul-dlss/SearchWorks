@@ -6,7 +6,7 @@ class Issn < MarcField
     return [] if marc.blank?
 
     @values ||= extracted_fields.flat_map do |field, subfields|
-      subfields.map(&:value).map(&:strip).select { |v| v =~ issn_pattern }
+      subfields.map { |x| x.value.strip }.select { |v| v =~ issn_pattern }
     end.compact
   end
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "MHLD", feature: true do
+RSpec.describe "MHLD", :feature do
   describe "record view" do
     it "should be present in the location access panel" do
       visit solr_document_path('10')
@@ -20,7 +20,7 @@ RSpec.describe "MHLD", feature: true do
     end
   end
 
-  describe "results view", js: true do
+  describe "results view", :js do
     before do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     end

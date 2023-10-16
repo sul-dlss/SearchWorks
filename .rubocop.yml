@@ -466,3 +466,49 @@ RSpec/ReceiveMessages: # new in 2.23
   Enabled: true
 RSpec/Rails/NegationBeValid: # new in 2.23
   Enabled: true
+Style/SingleLineDoEndBlock: # new in 1.57
+  Enabled: true
+Rails/DangerousColumnNames: # new in 2.21
+  Enabled: true
+Rails/RedundantActiveRecordAllMethod: # new in 2.21
+  Enabled: false # https://github.com/rspec/rspec-rails/issues/2701
+Rails/SelectMap: # new in 2.21
+  Enabled: true
+Rails/UnusedRenderContent: # new in 2.21
+  Enabled: true
+Capybara/ClickLinkOrButtonStyle: # new in 2.19
+  Enabled: false
+Capybara/RSpec/HaveSelector: # new in 2.19
+  Enabled: true
+Capybara/RSpec/PredicateMatcher: # new in 2.19
+  Enabled: true
+FactoryBot/IdSequence: # new in <<next>>
+  Enabled: true
+RSpec/EmptyMetadata: # new in 2.24
+  Enabled: true
+RSpec/Eq: # new in 2.24
+  Enabled: true
+RSpec/MetadataStyle: # new in 2.24
+  Enabled: true
+RSpec/SpecFilePathFormat: # new in 2.24
+  Enabled: true
+RSpec/SpecFilePathSuffix: # new in 2.24
+  Enabled: true
+Performance/MapMethodChain: # new in 1.19
+  Enabled: true
+Lint/ItWithoutArgumentsInBlock: # new in 1.59
+  Enabled: true
+Lint/LiteralAssignmentInCondition: # new in 1.58
+  Enabled: true
+Style/SuperWithArgsParentheses: # new in 1.58
+  Enabled: true
+Rails/EnvLocal: # new in 2.22
+  Enabled: true
+Capybara/RedundantWithinFind: # new in 2.20
+  Enabled: true
+FactoryBot/ExcessiveCreateList: # new in 2.25
+  Enabled: true
+RSpec/RedundantPredicateMatcher: # new in 2.26
+  Enabled: true
+RSpec/RemoveConst: # new in 2.26
+  Enabled: true

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Feedback form (js)", js: true do
+RSpec.feature "Feedback form (js)", :js do
   before do
     visit root_path
   end

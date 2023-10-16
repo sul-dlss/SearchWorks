@@ -90,7 +90,7 @@ RSpec.describe MarcExtractor do
     subject(:extracted_data) { described_class.new(marc, ['506', '541', '555']).extract.to_a }
 
     it 'extracts field data in the order they appear in the MARC record' do
-      expect(extracted_data.map(&:first).map(&:tag)).to eq ['506', '555', '541']
+      expect(extracted_data.map { |x| x.first.tag }).to eq ['506', '555', '541']
     end
   end
 

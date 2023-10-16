@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
+RSpec.describe 'Sort and per page toolbar', :feature, :js do
   describe 'View dropdown' do
     before do
       visit root_path

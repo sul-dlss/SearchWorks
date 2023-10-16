@@ -17,7 +17,7 @@ RSpec.feature "Library Location Access Panel" do
     expect(page).to have_css('div.panel-library-location', count: 4)
   end
 
-  feature 'long lists should be truncated', js: true do
+  feature 'long lists should be truncated', :js do
     scenario 'items with more than 5 callnumbers should be truncated with a more link' do
       visit solr_document_path '10'
       expect(page).to have_no_css('td', text: 'IHG', visible: true)

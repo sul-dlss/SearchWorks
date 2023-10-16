@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Connection form (js)', js: true do
+RSpec.feature 'Connection form (js)', :js do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path

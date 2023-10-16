@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Responsive results toolbar", feature: true, js: true do
+RSpec.describe "Responsive results toolbar", :feature, :js do
   describe "desktop view (> 992px)" do
     it "displays correct tools" do
       visit root_path
@@ -19,7 +19,7 @@ RSpec.describe "Responsive results toolbar", feature: true, js: true do
     end
   end
 
-  describe "tablet view (768px - 992px) - ", page_width: 800, responsive: true do
+  describe "tablet view (768px - 992px) - ", :responsive, page_width: 800 do
     it "displays correct tools" do
       visit root_path
       fill_in "q", with: ''
@@ -36,7 +36,7 @@ RSpec.describe "Responsive results toolbar", feature: true, js: true do
     end
   end
 
-  describe "mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
+  describe "mobile landscape view (480px - 767px) - ", :responsive, page_width: 700 do
     it "display correct tools" do
       visit root_path
       fill_in "q", with: ''

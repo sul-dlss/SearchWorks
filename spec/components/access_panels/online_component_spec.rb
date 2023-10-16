@@ -65,13 +65,13 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     it 'is true when there are fulltext links present' do
       render_inline(fulltext)
 
-      expect(page).to have_selector '.panel-online'
+      expect(page).to have_css '.panel-online'
     end
 
     it 'is true when there are eds links present' do
       render_inline(eds_links)
 
-      expect(page).to have_selector '.panel-online'
+      expect(page).to have_css '.panel-online'
     end
 
     it 'is false when there are only supplemental links present' do

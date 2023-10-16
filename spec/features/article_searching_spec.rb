@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Article Searching' do
-  describe 'Search bar dropdown', js: true do
+  describe 'Search bar dropdown', :js do
     scenario 'allows the user to switch to the article search context' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit root_path
@@ -85,7 +85,7 @@ RSpec.feature 'Article Searching' do
       expect(current_url).to match(%r{/articles/abc123})
     end
 
-    scenario 'authors, subjects, and abstracts are truncated', js: true do
+    scenario 'authors, subjects, and abstracts are truncated', :js do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
       document = SolrDocument.new(
         id: '1234',
@@ -117,7 +117,7 @@ RSpec.feature 'Article Searching' do
     end
   end
 
-  describe 'breadcrumbs', js: true do
+  describe 'breadcrumbs', :js do
     scenario 'start over button returns users to articles home page' do
       article_search_for('kittens')
 

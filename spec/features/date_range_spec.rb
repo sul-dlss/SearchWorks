@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Date Range', js: true do
+RSpec.feature 'Date Range', :js do
   scenario 'Search results should have date slider facet' do
     visit search_catalog_path f: { access_facet: ['Online'] }
     click_button 'Date'

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Responsive Home Page", feature: true, js: true do
+RSpec.describe "Responsive Home Page", :feature, :js do
   describe "facets" do
     it "shows the facets on large screens" do
       visit root_path
@@ -14,7 +14,7 @@ RSpec.describe "Responsive Home Page", feature: true, js: true do
       end
     end
 
-    it 'collapses facets on small screens', page_width: 700, responsive: true do
+    it 'collapses facets on small screens', :responsive, page_width: 700 do
       visit root_path
 
       within(".blacklight-access_facet") do

@@ -8,7 +8,7 @@ RSpec.feature "Selections Path" do
     expect(page).to have_css("h3", text: "You have no selections")
   end
 
-  scenario "renders some bookmarks and toolbar", js: true do
+  scenario "renders some bookmarks and toolbar", :js do
     skip('Passes locally, not on Travis.') if ENV['CI']
     visit search_catalog_path f: { format: ["Book"] }, view: "default"
     page.all('label.toggle-bookmark')[0].click

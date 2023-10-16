@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature "Results Toolbar", js: true do
+RSpec.feature "Results Toolbar", :js do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end

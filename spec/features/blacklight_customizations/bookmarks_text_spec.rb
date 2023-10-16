@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Bookmarks Select/UnSelect Text", js: true do
+RSpec.feature "Bookmarks Select/UnSelect Text", :js do
   before do
     visit root_path
     fill_in "q", with: ''

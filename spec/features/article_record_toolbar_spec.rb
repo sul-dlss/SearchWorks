@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Article Record Toolbar', js: true do
+RSpec.describe 'Article Record Toolbar', :js do
   let(:previous_document) { SolrDocument.new(id: 1, eds_title: 'My Prev Title') }
   let(:document) do
     SolrDocument.new(
@@ -17,7 +17,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
 
     Capybara.current_session.reset!         # ensure a clean session
     visit articles_path q: 'my query'  # sets up search session
-    click_on document[:eds_title]           # show the article record
+    click_link document[:eds_title]         # show the article record
   end
 
   it 'shows the Send button' do

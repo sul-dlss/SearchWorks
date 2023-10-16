@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Merged File Collections", js: true do
+RSpec.feature "Merged File Collections", :js do
   before do
     stub_article_service(docs: [])
   end

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Responsive subnavbar (gray banner)', feature: true, js: true, page_width: 700, responsive: true do
+RSpec.describe 'Responsive subnavbar (gray banner)', :feature, :js, :responsive, page_width: 700 do
   scenario 'collapses menu options in mobile view' do
     visit root_path
 

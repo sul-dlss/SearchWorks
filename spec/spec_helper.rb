@@ -88,7 +88,7 @@ RSpec.configure do |config|
 end
 
 def total_results
-  expect(page).to have_selector 'h2', text: number_pattern
+  expect(page).to have_css 'h2', text: number_pattern
   page.find("h2", text: number_pattern).text.gsub(/\D+/, '').to_i
 end
 

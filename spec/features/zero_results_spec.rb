@@ -13,7 +13,7 @@ RSpec.feature "Zero results" do
       expect(page).to have_css('a', text: 'sdfsda')
     end
   end
-  scenario "should have no results and show correct link from advanced search", js: true do
+  scenario "should have no results and show correct link from advanced search", :js do
     visit blacklight_advanced_search_engine.advanced_search_path
     fill_in "Title", with: "sdfsda"
     click_button 'advanced-search-submit'
@@ -34,7 +34,7 @@ RSpec.feature "Zero results" do
     end
   end
 
-  context 'it does not replace query string in a way that will execute js', js: true do
+  context 'it does not replace query string in a way that will execute js', :js do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
     scenario do
@@ -49,7 +49,7 @@ RSpec.feature "Zero results" do
   context 'article search' do
     before { stub_article_service(docs: []) }
 
-    scenario 'displays backend lookup links', js: true do
+    scenario 'displays backend lookup links', :js do
       visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] }, search_field: 'search')
 
       # Has zero results because we pass an empty array of docs, but is sucessfully searching
