@@ -17,18 +17,14 @@
 
     return this.each(function() {
       var $item = $(this),
-          $targetId = $($item.data('doc-id'))[0],
           $previewTarget = $($item.data('preview-target')),
-          $triggerBtn, $closeBtn, $arrow, $content, $viewport, $gallery, $itemsPerRow, $itemWidth;
+          $triggerBtn, $closeBtn, $arrow, $gallery, $itemsPerRow, $itemWidth;
 
       init();
       attachTriggerEvents();
 
       function showPreview() {
-        var previewUrl = $item.data('preview-url'),
-            $previewArrow,
-            maxLeft,
-            arrowLeft;
+        var previewUrl = $item.data('preview-url')
 
         $previewTarget.addClass('preview').empty();
 
@@ -47,15 +43,17 @@
         $triggerBtn.addClass('preview-open');
       }
 
+      function clamp(x, min, max) {
+        return Math.min(Math.max(x, min), max);
+      }
+
       function appendPointer($target) {
         $target.append($arrow);
 
-        maxLeft = $target.width() - $arrow.width() - 1,
-        offset = ($('body').width() - $('#documents').width()) / 2;
-        arrowLeft = parseInt($item.position().left + ($item.width() / 2) - offset);
-
-        if (arrowLeft < 0) arrowLeft = 0;
-        if (arrowLeft > maxLeft) arrowLeft = maxLeft;
+        const maxLeft = $target.width() - $arrow.width() - 1
+        const { left, width } = $item[0].getBoundingClientRect()
+        const docsLeft = document.getElementById('documents').getBoundingClientRect().left
+        const arrowLeft = clamp(left - docsLeft + width / 2 - 10, 0, maxLeft)
 
         $arrow.css('left', arrowLeft);
       }
