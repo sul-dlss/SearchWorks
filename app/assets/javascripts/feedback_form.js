@@ -72,7 +72,7 @@ Blacklight.onLoad(function(){
 
     function renderFlashMessages(response){
       $.each(response, function(i,val){
-        var flashHtml = "<div class='alert alert-" + val[0] + "'><button type='button' class='btn-close' data-dismiss='alert' aria-hidden='true'>&times;</button>" + val[1] + "</div>";
+        var flashHtml = "<div class='alert alert-" + val[0] + "' role='alert'><button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>" + val[1] + "</div>";
 
         // Show the flash message
         $('div.flash_messages').html(flashHtml);
