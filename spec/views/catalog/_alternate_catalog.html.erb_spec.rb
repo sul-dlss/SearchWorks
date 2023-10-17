@@ -14,7 +14,7 @@ RSpec.describe 'catalog/_alternate_catalog' do
       'earch_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=question"]'
   end
   it 'has a close button' do
-    expect(rendered).to have_css 'button.close'
+    expect(rendered).to have_css 'button.btn-close'
   end
   it 'has a title' do
     expect(rendered).to have_css '.alternate-catalog-title'
