@@ -24,13 +24,6 @@ RSpec.feature "Home Page" do
     expect(page).to have_css(".features a", text: "IIIF resources")
   end
 
-  scenario "'Featured sets' images should be clickable", js: true do
-    within('.features') do
-      all('[data-no-link-href]')[3].click
-      expect(page).to have_current_path course_reserves_path
-    end
-  end
-
   scenario "Logo and catalog images should display" do
     expect(page).to have_css("a.navbar-brand")
     expect(page).to have_css(".navbar-text.search-target", text: "catalog")

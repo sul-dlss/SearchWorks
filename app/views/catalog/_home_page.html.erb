@@ -15,8 +15,10 @@
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
-            <%= image_tag('homepage/digital.jpg', class: 'pull-left', alt: "", title: "'The Burning of San Francisco April 18, 19, 20, 1906.'", data: { "no-link-href" => search_catalog_path(collections_search_params) }) %>
-            <h3><%= link_to "Digital collections", search_catalog_path(collections_search_params) %></h3>
+            <%= link_to search_catalog_path(collections_search_params) do %>
+              <%= image_tag('homepage/digital.jpg', class: 'pull-left', alt: "", title: "'The Burning of San Francisco April 18, 19, 20, 1906.'") %>
+              <h3>Digital collections</h3>
+            <% end %>
             <p>Images, maps, data, &amp; more from the Stanford Digital Repository.</p>
           </div>
         </div>
@@ -25,8 +27,10 @@
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
-            <%= image_tag('homepage/govdocs.jpg', class: 'pull-left', alt: '', title: '', data: { 'no-link-href' => govdocs_path} ) %>
-            <h3><%= link_to 'Government documents', govdocs_path %></h3>
+            <%= link_to govdocs_path do %>
+              <%= image_tag('homepage/govdocs.jpg', class: 'pull-left', alt: '', title: '') %>
+              <h3>Government documents</h3>
+            <% end %>
             <p>Stanford is a depository library for state, federal, UN, and EU government documents.</p>
           </div>
         </div>
@@ -35,8 +39,10 @@
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
-            <%= image_tag('homepage/theses.jpg', class: 'pull-left', alt: "", title: '', data: { "no-link-href" => search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) } ) %>
-            <h3><%= link_to "Theses & dissertations", search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) %></h3>
+            <%= link_to search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}) do %>
+              <%= image_tag('homepage/theses.jpg', class: 'pull-left', alt: "", title: '') %>
+              <h3>Theses & dissertations</h3>
+            <% end %>
             <p>
               All student work held in the Stanford Libraries &amp; Digital Repository.<br />
               <%= link_to 'Show Stanford work only', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation'], stanford_work_facet_hsim: ['Thesis/Dissertation']}) %>.
@@ -48,8 +54,10 @@
       <div class="col mb-3">
         <div class="card">
           <div class="card-body">
-            <%= image_tag('homepage/coursereserves.jpg', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  course_reserves_path }) %>
-            <h3><%= link_to "Course reserves", course_reserves_path %></h3>
+            <%= link_to course_reserves_path do %>
+              <%= image_tag('homepage/coursereserves.jpg', class: 'pull-left', alt: "", title: '') %>
+              <h3>Course reserves</h3>
+            <% end %>
             <p>Find books, media, and e-resources set aside for classes.</p>
           </div>
         </div>
@@ -58,8 +66,10 @@
 
       <div class="card">
         <div class="card-body">
-          <%= image_tag('homepage/databases.jpg', class: 'pull-left', alt: "", title: '',  data: { "no-link-href" =>  databases_path }) %>
-          <h3><%= link_to "Databases", databases_path %></h3>
+          <%= link_to databases_path do %>
+            <%= image_tag('homepage/databases.jpg', class: 'pull-left', alt: "", title: '') %>
+            <h3>Databases</h3>
+          <% end %>
           <p>A-Z list of topic-specific databases. Not sure where to start? Try these <%= link_to 'selected databases', selected_databases_path %>.</p>
         </div>
       </div>
@@ -68,8 +78,10 @@
 
       <div class="card">
         <div class="card-body">
-          <%= image_tag('iiif_logo.svg', class: 'pull-left', width: '100', alt: '', title: '',  data: { "no-link-href" =>  search_catalog_path(f: {iiif_resources: ['available'] }) }) %>
-          <h3><%= link_to "IIIF resources", search_catalog_path(f: {iiif_resources: ['available'] }) %></h3>
+          <%= link_to search_catalog_path(f: {iiif_resources: ['available'] }) do %>
+            <%= image_tag('iiif_logo.svg', class: 'pull-left', width: '100', alt: '', title: '') %>
+            <h3>IIIF resources</h3>
+          <% end %>
           <p>Find IIIF-compatible items in the Stanford Digital Repository.</p>
           <p><a href="https://library.stanford.edu/projects/international-image-interoperability-framework/viewers">What is IIIF?</a></p>
         </div>

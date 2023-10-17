@@ -22,7 +22,7 @@ h2 {
   letter-spacing: 0;
 }
 
-h3 {
+*:not(a) > h3 { // h3 that are inside links should be styled as links.
   color: $sul-h3-font-color;
 }
 
