@@ -10,8 +10,8 @@
       end
     -%>
     <% if flash[type] %>
-      <div class="alert <%=alert_class %>"><%= flash[type].html_safe %>
-         <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <div class="alert <%=alert_class %>" role="alert"><%= flash[type].html_safe %>
+         <button class="btn-close" aria-label="Close" data-bs-dismiss="alert"></buton>
       </div>
     <% end %>
   <% end %>

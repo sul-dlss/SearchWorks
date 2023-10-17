@@ -1,7 +1,7 @@
 <% if show_sort_and_per_page? and !blacklight_config.per_page.blank? %>
   <span class="sr-only"><%= t('blacklight.search.per_page.title') %></span>
   <div id="per_page-dropdown" class="btn-group">
-    <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-sul-toolbar dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%= t(:'blacklight.search.per_page.button_label_html', :count => current_per_page).html_safe %>
     </button>
     <div class="dropdown-menu" role="menu">

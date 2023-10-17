@@ -13,7 +13,7 @@ RSpec.describe 'articles/_alternate_catalog' do
     expect(rendered).to have_css '[data-alternate-catalog="/catalog?q=question"]'
   end
   it 'has a close button' do
-    expect(rendered).to have_css 'button.close'
+    expect(rendered).to have_css 'button.btn-close'
   end
   it 'has a title' do
     expect(rendered).to have_css '.alternate-catalog-title'

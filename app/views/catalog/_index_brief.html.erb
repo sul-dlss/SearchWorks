@@ -27,7 +27,7 @@
               <% if location.items.present? %>
                 <% callnumber = "#{location.items.first.callnumber}" %>
               <% end %>
-                <li data-toggle="tooltip" data-placement="top" title="Check Preview to see all copies and current status"><%= "#{library.name} : #{location.name} : #{callnumber}" %></li>
+                <li data-bs-toggle="tooltip" data-placement="top" title="Check Preview to see all copies and current status"><%= "#{library.name} : #{location.name} : #{callnumber}" %></li>
             <% end %>
           <% end %>
         </ul>

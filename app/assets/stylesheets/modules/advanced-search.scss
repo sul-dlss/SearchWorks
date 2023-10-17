@@ -38,10 +38,6 @@
     }
   }
 
-  .col-md-3.col-form-label {
-    @extend .col-sm-3;
-  }
-
   .adv-publication-year-range {
     margin-left: -34%;
 
@@ -49,11 +45,6 @@
       display: inline-block;
       width: 100px;
     }
-  }
-
-  h2.col-form-label {
-    text-align: left !important;
-    width: 100% !important;
   }
 
   .col {

@@ -110,7 +110,7 @@
       function init() {
         $triggerBtn = $('<div/>').addClass('preview-trigger-btn preview-opacity').html('<span class="bi-chevron-down small">');
         $triggerFocus = $('<div/>').addClass('preview-trigger-focus preview-opacity').html('Preview <span class="bi-chevron-down small">');
-        $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+        $closeBtn = $(`<button type="button" class="preview-close btn-close" aria-label="Close">
         <span aria-hidden="true" class="visually-hidden">×</span>
         </button>`);
         $arrow = $('<div class="preview-arrow"></div>');

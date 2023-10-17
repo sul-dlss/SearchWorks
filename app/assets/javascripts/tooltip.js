@@ -1,3 +1,4 @@
-Blacklight.onLoad(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+Blacklight.onLoad(function() {
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+})
