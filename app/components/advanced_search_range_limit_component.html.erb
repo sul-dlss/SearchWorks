@@ -1,9 +1,9 @@
-<div class="form-group advanced-search-facet row facet_limit adv-publication-year-range">
+<div class="mb-3 advanced-search-facet row facet_limit adv-publication-year-range">
   <%= label_tag "pub_year_tisim", :class => "col-sm-3 col-form-label" do %>Publication year range<% end %>
-  <div class="col-sm-8 form-inline row">
+  <div class="col-sm-8">
     <%= label_tag("range[pub_year_tisim][begin]", 'from year', class: 'sr-only visually-hidden') %>
     <%= number_field_tag("range[pub_year_tisim][begin]", nil, maxlength: 6, class: "form-control text-center range_begin") %>
-    <span class="col-form-label"> - </span>
+    <span class=""> - </span>
     <%= label_tag("range[pub_year_tisim][end]", 'to year', class: 'sr-only visually-hidden') %>
     <%= number_field_tag("range[pub_year_tisim][end]", nil, maxlength: 6, class: "form-control text-center range_end") %>
   </div>

@@ -14,7 +14,7 @@
     data-eds-date-begin="<%= date_range.begin %>"
     data-eds-date-end="<%= date_range.end %>"
   >
-    <%= form_tag articles_path, method: :get, class: 'range_limit subsection form-inline' do %>
+    <%= form_tag articles_path, method: :get, class: 'range_limit subsection' do %>
       <%= render Blacklight::HiddenSearchStateComponent.new(params: helpers.search_state.params_for_search) %>
       <div class="input-group input-group-sm mb-3 flex-nowrap range-limit-input-group">
         <%= text_field_tag("range[#{@facet_field.key}][begin]", date_range.begin, class: 'form-control text-center range_begin') %>
