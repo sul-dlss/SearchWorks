@@ -249,6 +249,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 6d0d6a2c-a0b8-4257-96ad-0139fc46a920,Business Reference,BUS-REF,SU,GSB,BUSINESS,Reference,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 6de953a4-c00e-49ee-a900-a140f408526a,East Asia Sets,EAL-SETS,SU,SUL,EAST-ASIA,Big Sets,true,EAST-ASIA,EAST-ASIA,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 6e5b0dbb-d3d8-4e8b-ab8b-91fc760e6f5b,East Asia Korean,EAL-KOREAN,SU,SUL,EAST-ASIA,Korean,true,EAST-ASIA,EAST-ASIA,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
+6fd9b2bc-1e68-4623-abd4-0864b856fd81,Business Exhibit,BUS-EXHIBIT,SU,GSB,BUSINESS,Ask at i-Desk,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 7010a71d-5bbd-4e08-b3a0-e2da8d633ccc,Music Shelved Elsewhere,MUS-SEE-OTHER,SU,SUL,MUSIC,See linked record to request items bound together,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 703fd71b-251d-45ce-8304-759ac93d3426,Law Newspapers,LAW-NEWSPAPERS,SU,LAW,LAW,Newspapers,true,LAW,LAW,,,,,,,,,,,,,,
 70cd636f-725b-4cea-aa75-fe3e6f4ef447,Art Locked Stacks Small Restricted,ART-LOCKED-SMALL-R,SU,SUL,ART,Locked stacks (Small),true,ART,ART,,,,ART,ART,,,,,,,,,
