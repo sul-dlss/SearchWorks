@@ -6421,6 +6421,31 @@
     }
   },
   {
+    "id": "6fd9b2bc-1e68-4623-abd4-0864b856fd81",
+    "name": "Business Exhibit",
+    "code": "BUS-EXHIBIT",
+    "discoveryDisplayName": "Ask at i-Desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
+    "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
+    "details": {
+    },
+    "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
+    "servicePointIds": [
+      "958cc062-591c-45de-85c1-0e8672fbbfc5"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-10-16T23:06:00.827+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-10-16T23:06:00.827+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "7010a71d-5bbd-4e08-b3a0-e2da8d633ccc",
     "name": "Music Shelved Elsewhere",
     "code": "MUS-SEE-OTHER",
