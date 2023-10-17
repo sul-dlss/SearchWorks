@@ -35,6 +35,7 @@ en:
         clear:
           action_confirm: Clear your catalog selections?
     navigation:
+      skip_links: Skip links
       search_bar: Search bar
       search_sub_bar: Search sub-navigation bar
     search:
