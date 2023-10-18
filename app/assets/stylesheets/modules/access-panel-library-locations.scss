@@ -22,6 +22,8 @@
     h3 {
       color: $sul-access-header-color;
       display: inline-block;
+    }
+    .small {
       line-height: 1em;
     }
   }
@@ -33,7 +35,6 @@
   .library-location-heading-text {
     padding-top: 4px;
     padding-left: 60px;
-
   }
 
   .location {
