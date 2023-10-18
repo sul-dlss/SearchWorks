@@ -5,7 +5,11 @@ class ItemRequestLinkPolicy
   end
 
   def show?
-    (item.folio_item? && folio_holdable?) || item.on_order?
+    return folio_holdable? if item.folio_item?
+
+    # on-order items (without a folio item) may be title-level requestable
+    # but we can't evaluate circ rules (because there's no item) to figure that out
+    item.on_order?
   end
 
   private
