@@ -49,6 +49,18 @@ class Holdings
       end
     end
 
+    def symphony_location
+      @symphony_location ||= Folio::LocationsMap.symphony_code_for(location_code: home_location) || []
+    end
+
+    def symphony_library_code
+      symphony_location.first || library
+    end
+
+    def symphony_location_code
+      symphony_location.last || home_location
+    end
+
     # @return [String]
     def home_location
       if treat_current_location_as_home_location?
