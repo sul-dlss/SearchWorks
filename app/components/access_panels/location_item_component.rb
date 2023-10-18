@@ -20,7 +20,7 @@ module AccessPanels
     end
 
     def current_location_text
-      return if item.treat_current_location_as_home_location? || item.effective_location&.details&.key?('availabilityClass')
+      return if item.treat_current_location_as_home_location? || item.effective_location&.details&.key?('availabilityClass') || item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation')
 
       item.current_location.name
     end
