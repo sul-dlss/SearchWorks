@@ -3654,7 +3654,7 @@
     "id": "398e87b0-35fb-4f80-bb79-b5f70a9a1bc6",
     "name": "SAL3 PAGE-MP",
     "code": "SAL3-PAGE-MP",
-    "discoveryDisplayName": "For use in Branner Library",
+    "discoveryDisplayName": "Request for pickup at Branner Library",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3674,7 +3674,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:57.130+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T01:34:39.082+00:00",
+      "updatedDate": "2023-10-17T22:20:51.866+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6424,7 +6424,7 @@
     "id": "6fd9b2bc-1e68-4623-abd4-0864b856fd81",
     "name": "Business Exhibit",
     "code": "BUS-EXHIBIT",
-    "discoveryDisplayName": "Ask at i-Desk",
+    "discoveryDisplayName": "Exhibit case",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
@@ -6441,8 +6441,8 @@
     "metadata": {
       "createdDate": "2023-10-16T23:06:00.827+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2023-10-16T23:06:00.827+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2023-10-17T22:17:56.358+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
