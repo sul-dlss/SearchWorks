@@ -1,35 +1,37 @@
-<%# For home & search results page %>
-<% if params['controller'] == 'catalog' and params['action'] == 'index' %>
-  <div id="skip-link">
-    <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
-    <a href="#main-container" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
+<nav aria-label="<%= t('searchworks.navigation.skip_links') %>">
+  <%# For home & search results page %>
+  <% if params['controller'] == 'catalog' and params['action'] == 'index' %>
+    <div id="skip-link">
+      <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
+      <a href="#main-container" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
 
-    <% if !params['f'].blank? or !params['q'].blank? %>
+      <% if !params['f'].blank? or !params['q'].blank? %>
+        <a href="#documents" class="element-invisible element-focusable" data-turbolinks="false">Skip to first result</a>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%# For selections page %>
+  <% if params['controller'] == 'bookmarks' and params['action'] == 'index' %>
+    <div id="skip-link">
+      <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
+      <a href="#main-container" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
       <a href="#documents" class="element-invisible element-focusable" data-turbolinks="false">Skip to first result</a>
-    <% end %>
-  </div>
-<% end %>
+    </div>
+  <% end %>
 
-<%# For selections page %>
-<% if params['controller'] == 'bookmarks' and params['action'] == 'index' %>
-  <div id="skip-link">
-    <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
-    <a href="#main-container" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
-    <a href="#documents" class="element-invisible element-focusable" data-turbolinks="false">Skip to first result</a>
-  </div>
-<% end %>
+  <%# For record view page %>
+  <% if params['controller'] == 'catalog' and params['action'] == 'show' %>
+    <div id="skip-link">
+      <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
+      <a href="#document" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
+    </div>
+  <% end %>
 
-<%# For record view page %>
-<% if params['controller'] == 'catalog' and params['action'] == 'show' %>
-  <div id="skip-link">
-    <a href="#search_field" class="element-invisible element-focusable" data-turbolinks="false">Skip to search</a>
-    <a href="#document" class="element-invisible element-focusable" data-turbolinks="false">Skip to main content</a>
-  </div>
-<% end %>
-
-<%# For advanced search page %>
-<% if params['controller'] == 'catalog' and params['action'] == 'advanced_search' %>
-  <div id="skip-link">
-    <a href="#advanced-search-form" class="element-invisible element-focusable" data-turbolinks="false">Skip to advanced search form</a>
-  </div>
-<% end %>
+  <%# For advanced search page %>
+  <% if params['controller'] == 'catalog' and params['action'] == 'advanced_search' %>
+    <div id="skip-link">
+      <a href="#advanced-search-form" class="element-invisible element-focusable" data-turbolinks="false">Skip to advanced search form</a>
+    </div>
+  <% end %>
+</nav>
