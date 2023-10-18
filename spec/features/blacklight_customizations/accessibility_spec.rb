@@ -16,7 +16,7 @@ RSpec.feature "Aria Landmarks", js: true do
   end
 
   scenario "should have SearchWorks navbar landmark" do
-    expect(page).to have_xpath("//nav[@id='search-navbar' and @role='navigation']")
+    expect(page).to have_xpath("//nav[@id='search-navbar']")
   end
 
   scenario "should have search form landmark" do

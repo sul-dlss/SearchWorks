@@ -1,5 +1,5 @@
 <div id="search-subnavbar-container">
-  <div id="search-subnavbar" class="navbar navbar-dark navbar-expand-md">
+  <nav id="search-subnavbar" class="navbar navbar-dark navbar-expand-md" aria-label="<%= t('searchworks.navigation.search_sub_bar') %>">
     <button type="button" class="navbar-toggler pull-left" data-toggle="collapse" data-target="#search-subnavbar-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="fa fa-bars"></span>
@@ -34,7 +34,7 @@
         </ul>
       <% end %>
     </div>
-  </div>
+  </nav>
 </div>
 <% if article_search? || current_page?(feedback_path) # For JS enabled and disabled %>
   <div id="connection-form" class="feedback-form-container collapse">

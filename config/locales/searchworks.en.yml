@@ -34,11 +34,9 @@ en:
       catalog:
         clear:
           action_confirm: Clear your catalog selections?
-    headers:
-      articles:
-        search_bar: SearchWorks articles+
-      catalog:
-        search_bar: SearchWorks catalog
+    navigation:
+      search_bar: Search bar
+      search_sub_bar: Search sub-navigation bar
     search:
       form:
         q:
