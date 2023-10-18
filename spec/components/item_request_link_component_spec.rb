@@ -8,6 +8,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
+  let(:current_location) { instance_double(Holdings::Location, code: nil) }
   let(:item) do
     instance_double(Holdings::Item, document:, library:, home_location: location,
                                     current_location: instance_double(Holdings::Location, code: nil), circulates?: true)
@@ -17,7 +18,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context 'with FOLIO items' do
     let(:item) do
-      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, home_location: nil, current_location: instance_double(Holdings::Location, code: nil), folio_item?: true, folio_status:, allowed_request_types:)
+      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, home_location: nil, current_location:, folio_item?: true, folio_status:, allowed_request_types:)
     end
 
     context 'checked out item from a location that allows holds' do
@@ -37,6 +38,14 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
     context 'available' do
       let(:folio_status) { 'Available' }
       let(:allowed_request_types) { ['Hold', 'Recall'] }
+
+      it { is_expected.not_to have_link 'Request' }
+    end
+
+    context 'on-order item' do
+      let(:folio_status) { 'On order' }
+      let(:allowed_request_types) { [] }
+      let(:current_location) { instance_double(Holdings::Location, code: 'ON-ORDER') }
 
       it { is_expected.not_to have_link 'Request' }
     end
