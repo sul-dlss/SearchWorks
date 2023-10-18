@@ -141,7 +141,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 37eda0ee-cbfc-4016-b74f-d6682b811340,Eng PAGE-EN,ENG-PAGE-EN,SU,SUL,ENG,Ask at circulation desk,true,ENG,ENG,,,,,,,,,,,,,,
 3877c7e2-a658-4431-9d22-9206278b3664,Green SSRC New Documents,GRE-SSRC-NEWDOC,SU,SUL,GREEN,Jonsson Social Sciences Reading Room: New documents,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,Federal,,,,
 38911fcd-5de5-4d4d-b9d3-aeb581040d47,Lane Equipment,LANE-EQUIP,SU,MED,LANE,Equipment. Shelved at Information Desk,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,
-398e87b0-35fb-4f80-bb79-b5f70a9a1bc6,SAL3 PAGE-MP,SAL3-PAGE-MP,SU,SUL,SAL3,For use in Branner Library,true,SAL3,SAL3,,,,PAGE-MP,EARTH-SCI,,,Offsite,,,,,,
+398e87b0-35fb-4f80-bb79-b5f70a9a1bc6,SAL3 PAGE-MP,SAL3-PAGE-MP,SU,SUL,SAL3,Request for pickup at Branner Library,true,SAL3,SAL3,,,,PAGE-MP,EARTH-SCI,,,Offsite,,,,,,
 3ac813ce-d83d-4acb-a626-bfce748a5f93,Business SAL3 Stacks,BUS-SAL3-STACKS,SU,GSB,BUSINESS,Offsite stacks,true,SAL3,SAL3,,,,,,,SAL3,Offsite,,,,,,SAL3
 3b340806-62b3-4c65-b056-699829a55eac,Spec Sal Gunst,SPEC-SAL-GUNST,SU,SUL,SPEC-COLL,Gunst Collection,true,SPEC,SPEC,,,,,,,,,,,,,,
 3b562a08-66ee-4839-86b6-e9b08d07f375,Art PAGE-AR,ART-PAGE-AR,SU,SUL,ART,Ask at circulation desk,true,ART,ART,,,,,,,,,,,,,,
@@ -249,7 +249,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 6d0d6a2c-a0b8-4257-96ad-0139fc46a920,Business Reference,BUS-REF,SU,GSB,BUSINESS,Reference,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 6de953a4-c00e-49ee-a900-a140f408526a,East Asia Sets,EAL-SETS,SU,SUL,EAST-ASIA,Big Sets,true,EAST-ASIA,EAST-ASIA,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 6e5b0dbb-d3d8-4e8b-ab8b-91fc760e6f5b,East Asia Korean,EAL-KOREAN,SU,SUL,EAST-ASIA,Korean,true,EAST-ASIA,EAST-ASIA,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
-6fd9b2bc-1e68-4623-abd4-0864b856fd81,Business Exhibit,BUS-EXHIBIT,SU,GSB,BUSINESS,Ask at i-Desk,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
+6fd9b2bc-1e68-4623-abd4-0864b856fd81,Business Exhibit,BUS-EXHIBIT,SU,GSB,BUSINESS,Exhibit case,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 7010a71d-5bbd-4e08-b3a0-e2da8d633ccc,Music Shelved Elsewhere,MUS-SEE-OTHER,SU,SUL,MUSIC,See linked record to request items bound together,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 703fd71b-251d-45ce-8304-759ac93d3426,Law Newspapers,LAW-NEWSPAPERS,SU,LAW,LAW,Newspapers,true,LAW,LAW,,,,,,,,,,,,,,
 70cd636f-725b-4cea-aa75-fe3e6f4ef447,Art Locked Stacks Small Restricted,ART-LOCKED-SMALL-R,SU,SUL,ART,Locked stacks (Small),true,ART,ART,,,,ART,ART,,,,,,,,,
