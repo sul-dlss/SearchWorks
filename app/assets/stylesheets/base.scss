@@ -1,4 +1,4 @@
-a:not(.btn):not(.dropdown-item):not(.page-link) {
+a:not(.btn):not(.dropdown-item):not(.page-link):not(.remove) {
   border-bottom: 1px solid transparent;
 
   &.disabled {
