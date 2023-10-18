@@ -24,20 +24,19 @@
 </div>
 
 <% if @response.empty? %>
-<div class="row">
   <div class="zero-results-heading">
     <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
     <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
   </div>
-  <div id="sidebar" class="col-md-4">
-    <%= render 'shared/chat_librarian_sidebar' %>
+  <div class="row">
+    <div id="sidebar" class="col-md-4">
+      <%= render 'shared/chat_librarian_sidebar' %>
+    </div>
+    <div id="content" class="col-md-8">
+      <%= render "shared/zero_results" %>
+      <%= render 'results_pagination' %>
+    </div>
   </div>
-  <div id="content" class="col-md-8">
-    <div class="search_num_of_results"></div>
-    <%= render "shared/zero_results" %>
-    <%= render 'results_pagination' %>
-  </div>
-</div>
 <% else %>
 <div class="row">
   <div id="sidebar" class="col-md-4">
