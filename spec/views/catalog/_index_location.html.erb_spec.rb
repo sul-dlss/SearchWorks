@@ -230,7 +230,7 @@ RSpec.describe "catalog/_index_location" do
             id: '123',
             item_display_struct: [
               { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', callnumber: 'ABC 123' },
-              { barcode: '456', library: 'ART', home_location: 'ART-LOCKED-LARGE', current_location: 'ON-ORDER', type: 'STKS-MONO', callnumber: 'ABC 456' }
+              { barcode: '456', library: 'ART', home_location: 'ART-LOCKED-LARGE', status: 'On order', type: 'STKS-MONO', callnumber: 'ABC 456' }
             ]
           )
         end

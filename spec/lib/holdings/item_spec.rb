@@ -75,7 +75,7 @@ RSpec.describe Holdings::Item do
 
   describe '#on_order?' do
     it 'should return true for on-order items' do
-      expect(Holdings::Item.new({ home_location: 'ON-ORDER', current_location: 'ON-ORDER' })).to be_on_order
+      expect(Holdings::Item.new({ status: 'On order' })).to be_on_order
     end
 
     it 'should return false for non on-order items' do

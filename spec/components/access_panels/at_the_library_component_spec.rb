@@ -320,7 +320,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'MISSING', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', home_location: 'STACKS', status: 'Missing', callnumber: 'ABC 123' }
           ]
         )
         allow(document).to receive(:folio_items).and_return([
@@ -365,7 +365,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '789', home_location: 'ON-ORDER', current_location: 'ON-ORDER', callnumber: 'GHI 789' }
+          { barcode: '789', status: 'On order', callnumber: 'GHI 789' }
         ]
       )
       render_inline(described_class.new(document:))

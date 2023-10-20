@@ -9,7 +9,6 @@ class Holdings
     attr_accessor :due_date
 
     delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
-    delegate :status, to: :folio_item, prefix: :folio, allow_nil: true
 
     # @param [Folio::Item] folio_item may be nil if the item is a bound-with child.
     def initialize(holding_info, document: nil, folio_item: nil)
@@ -34,7 +33,8 @@ class Holdings
     end
 
     def on_order?
-      current_location.code == 'ON-ORDER'
+      folio_status == 'On order' ||
+        current_location.code == 'ON-ORDER'
     end
 
     def barcode
@@ -127,6 +127,10 @@ class Holdings
 
     def status
       @status ||= Holdings::Status.new(self)
+    end
+
+    def folio_status
+      item_display[:status]
     end
 
     def on_reserve?
