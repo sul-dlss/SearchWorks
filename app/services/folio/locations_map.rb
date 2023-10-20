@@ -16,8 +16,20 @@ module Folio
       instance.data.dig(library_code, location_code) || location_code
     end
 
+    def self.symphony_code_for(location_code:)
+      instance.reverse_data[location_code]
+    end
+
     def data
       @data ||= load_map
+    end
+
+    def reverse_data
+      @reverse_data ||= data.each_with_object({}) do |(symphony_library_code, locations), hash|
+        locations.each do |symphony_location_code, folio_location_code|
+          hash[folio_location_code] = [symphony_library_code, symphony_location_code]
+        end
+      end
     end
 
     def load_map
