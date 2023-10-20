@@ -700,7 +700,6 @@ he02.tci-thaijo.org
 head-face-med.biomedcentral.com
 headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
-health.mil
 healtheducationresources.unesco.org
 healthmap.org
 healthpolicy.ucla.edu
@@ -1636,6 +1635,7 @@ www.acnr.co.uk
 www.acpjournals.org
 www.acs.org
 www.acta-apa.org
+www.actaanaesthesiologica.be
 www.actabio.pwr.wroc.pl
 www.actabp.pl
 www.actaitalica.it
@@ -1789,7 +1789,6 @@ www.biolsci.org
 www.biomed.cas.cz
 www.biomolther.org
 www.bioone.org
-www.bioscirep.org
 www.biotechnologyhealthcare.com
 www.birpublications.org
 www.biusante.parisdescartes.fr
@@ -2126,6 +2125,7 @@ www.hbpdint.com
 www.hcinnovationgroup.com
 www.health.gov.au
 www.health.govt.nz
+www.health.mil
 www.health.org
 www.healthaffairs.org
 www.healthandjusticejournal.com
@@ -2796,7 +2796,6 @@ www.samj.org.za
 www.sanger.ac.uk
 www.sanp.ch
 www.sapj.co.za
-www.sarb.be
 www.sarsreference.com
 www.saudija.org
 www.saudijgastro.com
