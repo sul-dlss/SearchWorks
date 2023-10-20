@@ -393,7 +393,7 @@ b10c99ae-f713-44b8-9011-6e6f25624694,Media Microfiche Art,MEDIA-ARTCAB,SU,SUL,ME
 b155677d-ad15-453f-a8f5-f8b2a22fff9d,SAL3 PAGE-MD,SAL3-PAGE-MD,SU,SUL,SAL3,For use in Music Library or Green Media Center,true,SAL3,SAL3,,,,,"MUSIC,MEDIA-CENTER",,,Offsite,,,,,,
 b169bf39-eb1c-4696-9591-06b29b1cabc8,Science Safety,SCI-SAFETY,SU,SUL,SCIENCE,Safety Collection,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,
 b18fd4ba-4df0-4a66-85db-a6e9a595ecec,Law Book Cabinet,LAW-BOOKCABINET,SU,LAW,LAW,Teaming room: book cabinet,true,LAWBC,LAWBC,,,,,,,,,,,,,,
-b26d05ad-80a3-460d-8b49-00ddb72593bc,ARS Locked Stacks,ARS-LOCKED,SU,SUL,ARS,Locked stacks: Ask at desk,true,ARS,ARS,,,,,ARS,,,,,,,,,
+b26d05ad-80a3-460d-8b49-00ddb72593bc,ARS Locked Stacks,ARS-LOCKED,SU,SUL,ARS,Locked stacks: Ask at desk,true,ARS,ARS,,,ARS,,,,,,,,,,,
 b338723f-41c2-42a0-8e26-70c5c226e321,Music migration error,MUS-MIGRATE-ERR,SU,SUL,MUSIC,Error during migration,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 b36b1c61-b132-41b1-ac13-e249e8d4dda4,Eng Reserves,ENG-CRES,SU,SUL,ENG,On reserve: Ask at Engineering circulation desk,true,ENG,ENG,,,,,,,,,true,,,,,
 b38e6346-38bb-4e85-a852-b2975bad1656,Marine Bio PAGE-MA,MAR-PAGE-MA,SU,SUL,MARINE-BIO,Ask at circulation desk,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,
