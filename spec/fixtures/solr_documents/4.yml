@@ -25,8 +25,7 @@
     home_location: PHYSTEMP
     callnumber: DEF
   - barcode: '789'
-    home_location: ON-ORDER
-    current_location: ON-ORDER
+    status: On order
     callnumber: GHI
 :characteristics_ssim:
   - 'Sound: digital; optical; surround; stereo; Dolby.'

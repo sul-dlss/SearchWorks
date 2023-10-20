@@ -56,7 +56,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
                              barcode: '123',
                              library: 'GREEN',
                              home_location: 'STACKS',
-                             current_location: 'ON-ORDER',
+                             status: 'On order',
                              type: 'STKS-MONO'
                            }, document:)
       end
