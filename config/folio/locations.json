@@ -10113,7 +10113,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
-      "pageServicePointCodes": "ARS"
+      "pageAeonSite": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
@@ -10125,7 +10125,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:35.615+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-04T18:21:54.348+00:00",
+      "updatedDate": "2023-10-19T22:15:00.164+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
