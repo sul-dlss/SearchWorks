@@ -83,7 +83,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 1f0e3f18-99d4-4400-95a1-0f55d092f201,Earth Sci Scanning Lab,EAR-SCANLAB,SU,SUL,EARTH-SCI,In process,true,EARTH-SCI,EARTH-SCI,,,,,,,,In_process,,,,,,
 1f3a8d48-2de3-432d-923e-76eb93de9ffc,Spec SAL3 Rare Books,SPEC-SAL3-RBC,SU,SUL,SPEC-COLL,Rare Books Collection,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,
 203157ff-56bc-4d5d-9f68-3410d9ac40e9,Earth Sci Ready Ref,EAR-READY-REF,SU,SUL,EARTH-SCI,Reference,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,
-2034f7e2-9dfe-4920-87d2-92d455bd5533,Rumsey migration erorr,RUM-MIGRATE-ERR,SU,SUL,RUMSEY-MAP,Error during migration,true,RUMSEY-MAP,RUMSEY-MAP,,,,,,,,,,,,,,
+2034f7e2-9dfe-4920-87d2-92d455bd5533,Rumsey migration erorr,RUM-MIGRATE-ERR,SU,SUL,RUMSEY-MAP,Error during migration,true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,
 203882d5-acd0-40b6-bc73-1cf8d64832cb,Green Federal Docs,GRE-FED-DOCS,SU,SUL,GREEN,US Federal Documents,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,Federal,,,,
 2065af65-904d-41bb-8db8-35bff753cf64,Spec Inprocess RWC,SPEC-INPROCESS-RWC,SU,SUL,SPEC-COLL,In process,true,SPEC,SPEC,,,,,,,,In_process,,,,,,
 20981666-b567-4124-b18e-f4713823e51f,Music Inprocess,MUS-INPROCESS,SU,SUL,MUSIC,In process,true,MUSICTS,MUSICTS,,,,,,,,In_process,,,,,,
