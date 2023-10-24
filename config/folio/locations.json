@@ -2177,6 +2177,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
     "details": {
+      "pageAeonSite": "RUMSEY"
     },
     "primaryServicePoint": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
     "servicePointIds": [
@@ -2188,8 +2189,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:53.799+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:53.799+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-10-23T19:57:03.409+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
