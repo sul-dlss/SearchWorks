@@ -160,12 +160,12 @@ libraries:
     about_url: https://lane.stanford.edu/index.html
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library
-    name: Medical Library (Lane)
+    name: Lane Medical Library
   LANE-MED:
     about_url: https://lane.stanford.edu/index.html
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library
-    name: Medical Library (Lane)
+    name: Lane Medical Library
   LATHROP:
     hours_api_url: lathrop/location/tech-lounge
     name: Lathrop Library
