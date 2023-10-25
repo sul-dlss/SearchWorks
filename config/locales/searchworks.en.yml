@@ -302,11 +302,11 @@ en:
       zero_results:
         modify_your_search: "Modify your %{search_type} search"
         page_heading: "No results"
-        limit_fields: "Remove limit(s): "
-        search_fields: "Search all fields: "
+        remove_all_limits: "For example, if you remove all limits:"
+        search_fields: "If you search all fields:"
         return_to_advanced_search: "Return to Advanced search page"
         search_context: "Try your search in…"
-        check_spelling: 'Check spelling, or use fewer words to start.'
+        check_spelling: 'Check spelling, use fewer words to start, or remove limits'
 
     bookmarks:
       page_heading: "Selections list"

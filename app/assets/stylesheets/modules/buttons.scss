@@ -48,11 +48,3 @@ a.btn-sul-toolbar {
   border-bottom: none;
 }
 
-.btn-zero-results {
-  @extend .btn-secondary;
-  color: $sul-link-color;
-  border-radius: $sul-constraint-btn-radius;
-  &:hover,:focus {
-    text-decoration: underline;
-  };
-}

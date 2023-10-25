@@ -29,10 +29,9 @@ Blacklight.onLoad(function(){
         this.init();
     }
 
-    function updateLink(count, el){
-      var linkText = $(el).html();
-      linkText += " <strong>finds " + count + " results</strong>";
-      $(el).html(linkText);
+    function updateText(count, el){
+      countText = $("<span>...finds " + count + " results</span>");
+      $(el).after(countText);
     }
     Plugin.prototype = {
 
@@ -66,7 +65,7 @@ Blacklight.onLoad(function(){
             $.getJSON($url, function(data){
               $response = data.response;
               $total_count = parseInt($response.pages.total_count).toLocaleString();
-              updateLink($total_count, el);
+              updateText($total_count, el);
             });
           }
         }

@@ -9,7 +9,37 @@
 .zero-results {
   padding-left: 10px;
 
-  li {
-    margin-bottom: 15px;
+  // don't display the "Catalog start" button in this context
+  #appliedParams a.btn-reset {
+    display: none;
   }
+
+  dl {
+    padding-left: 15px;
+  }
+
+  dt {
+    text-transform: uppercase;
+    color: $gray-light;
+    margin: 15px 0 5px 0;
+  }
+
+  dd .btn-zero-results {
+    margin-right: 5px;
+  }
+
+  dd .remove-icon {
+    color: $gray-light;
+  }
+
+  dd .btn-zero-results, dd .constraint-value {
+    @extend .btn-secondary;
+    color: $gray-light;
+    border-radius: 5px;
+    font-weight: bold;
+    &:hover,:focus {
+      text-decoration: underline;
+    };
+  }
+
 }
