@@ -1,6 +1,7 @@
 :id: 50
 :hashed_id_ssi: c0c7c76d30bd3dcaefc96f40275bdc0a
 :title_display: An item in a virtual object
+:all_search: An item in a virtual object
 :format_main_ssim: Map
 :modsxml: <%= mods_everything %>
 :display_type:
