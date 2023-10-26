@@ -154,10 +154,6 @@ class Holdings
       bound_with_parent.present?
     end
 
-    def live_status?
-      folio_item?
-    end
-
     def circulates?
       folio_item? && folio_item_circulates?
     end
