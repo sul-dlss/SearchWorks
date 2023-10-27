@@ -6273,7 +6273,7 @@
     "id": "6bb4959c-9113-4286-8653-3f331d40c9ee",
     "name": "East Asia Chinese",
     "code": "EAL-CHINESE",
-    "discoveryDisplayName": "Chinese Collection",
+    "discoveryDisplayName": "Chinese collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6291,7 +6291,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:48.393+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T15:50:36.699+00:00",
+      "updatedDate": "2023-10-26T15:29:14.049+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6401,7 +6401,7 @@
     "id": "6e5b0dbb-d3d8-4e8b-ab8b-91fc760e6f5b",
     "name": "East Asia Korean",
     "code": "EAL-KOREAN",
-    "discoveryDisplayName": "Korean",
+    "discoveryDisplayName": "Korean collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6419,7 +6419,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.182+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T15:51:55.084+00:00",
+      "updatedDate": "2023-10-26T15:29:46.117+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -9059,7 +9059,7 @@
     "id": "9f085820-08a3-43bd-a080-44f65fb67b1e",
     "name": "East Asia Japanese",
     "code": "EAL-JAPANESE",
-    "discoveryDisplayName": "Japanese",
+    "discoveryDisplayName": "Japanese collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -9077,7 +9077,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:50.317+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T15:51:41.074+00:00",
+      "updatedDate": "2023-10-26T15:27:50.664+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
