@@ -1529,7 +1529,7 @@
     "id": "17e1aae1-9b25-4e37-ac2f-34316628bc8e",
     "name": "Green LL Newspapers",
     "code": "GRE-LL-NEWSPAPERS",
-    "discoveryDisplayName": "Lower Level: Newspapers",
+    "discoveryDisplayName": "Lower level: Newspapers",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -1547,7 +1547,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:11.211+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:00:59.835+00:00",
+      "updatedDate": "2023-10-28T01:51:56.588+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -7736,7 +7736,7 @@
     "id": "866bf7da-7b38-429e-bb4a-6d3054469df1",
     "name": "Green Hohbach Magazines",
     "code": "GRE-HH-MAGAZINE",
-    "discoveryDisplayName": "Hohbach Hall: Magazine Collection",
+    "discoveryDisplayName": "Hohbach Hall: Magazine collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -7754,7 +7754,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:13.512+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:00:20.041+00:00",
+      "updatedDate": "2023-10-28T01:33:24.446+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
