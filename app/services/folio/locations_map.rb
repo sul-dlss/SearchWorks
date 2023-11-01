@@ -25,10 +25,17 @@ module Folio
     end
 
     def reverse_data
-      @reverse_data ||= data.each_with_object({}) do |(symphony_library_code, locations), hash|
-        locations.each do |symphony_location_code, folio_location_code|
-          hash[folio_location_code] = [symphony_library_code, symphony_location_code]
-        end
+      @reverse_data ||= CSV.parse(file_contents, col_sep: "\t").each_with_object({}) do |(home_location, library_code, folio_code), hash|
+        # SAL3's CDL/ONORDER/INPROCESS locations are all mapped so SAL3-STACKS
+        next if folio_code == 'SAL3-STACKS' && home_location != 'STACKS'
+
+        library_code = 'LANE-MED' if library_code == 'LANE'
+        library_code = 'MEDIA-MTXT' if library_code == 'MEDIA-CENTER'
+
+        # Recode SUL-SDR to have "INTERNET" be it's home_locaion
+        home_location = 'INTERNET' if home_location == 'SDR'
+
+        hash[folio_code] ||= [library_code, home_location]
       end
     end
 
