@@ -99,6 +99,7 @@ apn.mhmedical.com
 app.gideononline.com
 app.jove.com
 app.knovel.com
+app.proofig.com
 app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
 appliedcr.biomedcentral.com
