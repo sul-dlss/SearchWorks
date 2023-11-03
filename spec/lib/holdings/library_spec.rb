@@ -50,9 +50,9 @@ RSpec.describe Holdings::Library do
 
       let(:items) do
         [
-          Holdings::Item.new({ barcode: 'barcode1', library: 'SPEC-COLL', home_location: 'MSS-30' }),
-          Holdings::Item.new({ barcode: 'barcode2', library: 'SPEC-COLL', home_location: 'MANUSCRIPT' }),
-          Holdings::Item.new({ barcode: 'barcode3', library: 'SPEC-COLL', home_location: 'MSS-30' })
+          Holdings::Item.new({ barcode: 'barcode1', library: 'SPEC-COLL', home_location: 'SPEC-MSS-10' }),
+          Holdings::Item.new({ barcode: 'barcode2', library: 'SPEC-COLL', home_location: 'SPEC-MANUSCRIPT' }),
+          Holdings::Item.new({ barcode: 'barcode3', library: 'SPEC-COLL', home_location: 'SPEC-MSS-10' })
         ]
       end
 

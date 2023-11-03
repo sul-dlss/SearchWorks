@@ -170,7 +170,7 @@ RSpec.describe Holdings::Location do
   end
 
   context 'with a location that has a stackmap api url' do
-    subject { described_class.new("STACKS", library_code: 'GREEN') }
+    subject { described_class.new("GRE-STACKS", library_code: 'GREEN') }
 
     describe '#stackmap_api_url' do
       it 'returns the stackmap api url' do
