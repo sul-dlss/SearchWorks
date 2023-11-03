@@ -34,4 +34,11 @@ module RecordHelper
       end
     end.join('').html_safe
   end
+
+  ##
+  # Expose format_mods_html from mods_display to properly encode content as needed
+  # RecordHelper behavior
+  def format_record_html(...)
+    format_mods_html(...)
+  end
 end
