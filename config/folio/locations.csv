@@ -390,7 +390,7 @@ afd57c4b-ed4d-4f31-97e9-98bad8d432ef,Lane Staff: Lib Lit,LANE-LIBR,SU,MED,LANE,L
 b0402b41-91a9-4ec3-8c91-47e725e7fdf5,SAL3 PAGE-LP,SAL3-PAGE-LP,SU,SUL,SAL3,Request for pickup at Music Library or Green Media Center,true,SAL3,SAL3,,,,,"MUSIC,MEDIA-CENTER",,,Offsite,,,,,,
 b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91,SUL Electronic,SUL-ELECTRONIC,SU,SUL,SUL,online resource,true,Online,Online,,,,,,,,,,,,,,
 b10c99ae-f713-44b8-9011-6e6f25624694,Media Microfiche Art,MEDIA-ARTCAB,SU,SUL,MEDIA-CENTER,Microfiche collection,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
-b155677d-ad15-453f-a8f5-f8b2a22fff9d,SAL3 PAGE-MD,SAL3-PAGE-MD,SU,SUL,SAL3,For use in Music Library or Green Media Center,true,SAL3,SAL3,,,,,"MUSIC,MEDIA-CENTER",,,Offsite,,,,,,
+b155677d-ad15-453f-a8f5-f8b2a22fff9d,SAL3 PAGE-MD,SAL3-PAGE-MD,SU,SUL,SAL3,Request for pickup at Music Library or Green Media Center,true,SAL3,SAL3,,,,,"MUSIC,MEDIA-CENTER",,,Offsite,,,,,,
 b169bf39-eb1c-4696-9591-06b29b1cabc8,Science Safety,SCI-SAFETY,SU,SUL,SCIENCE,Safety Collection,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,
 b18fd4ba-4df0-4a66-85db-a6e9a595ecec,Law Book Cabinet,LAW-BOOKCABINET,SU,LAW,LAW,Teaming room: book cabinet,true,LAWBC,LAWBC,,,,,,,,,,,,,,
 b26d05ad-80a3-460d-8b49-00ddb72593bc,ARS Locked Stacks,ARS-LOCKED,SU,SUL,ARS,Locked stacks: Ask at desk,true,ARS,ARS,,,ARS,,,,,,,,,,,
