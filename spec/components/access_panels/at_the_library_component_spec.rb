@@ -243,9 +243,9 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
           ],
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
         )
         render_inline(described_class.new(document:))
       end

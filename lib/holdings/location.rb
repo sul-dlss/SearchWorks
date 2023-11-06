@@ -15,7 +15,7 @@ class Holdings
       return if @code.blank?
 
       # Prefer location names as managed in FOLIO
-      name = Folio::Locations.label(code: folio_code)
+      name = Folio::Locations.label(code: @code)
       return name if name
 
       # Fallback to legacy behavior
@@ -27,7 +27,7 @@ class Holdings
     end
 
     def stackmap_api_url
-      Folio::Locations.stackmap_api_url(code: folio_code)
+      Folio::Locations.stackmap_api_url(code: @code)
     end
 
     def bound_with?
@@ -85,10 +85,6 @@ class Holdings
         mhld_item.latest_received.present? ||
           mhld_item.public_note.present?
       end
-    end
-
-    def folio_code
-      @folio_code ||= Folio::LocationsMap.for(library_code: @library_code, location_code: code)
     end
   end
 end
