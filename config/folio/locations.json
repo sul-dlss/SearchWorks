@@ -10031,7 +10031,7 @@
     "id": "b155677d-ad15-453f-a8f5-f8b2a22fff9d",
     "name": "SAL3 PAGE-MD",
     "code": "SAL3-PAGE-MD",
-    "discoveryDisplayName": "For use in Music Library or Green Media Center",
+    "discoveryDisplayName": "Request for pickup at Music Library or Green Media Center",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -10050,7 +10050,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:22.781+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T01:29:00.061+00:00",
+      "updatedDate": "2023-11-03T17:15:01.451+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },

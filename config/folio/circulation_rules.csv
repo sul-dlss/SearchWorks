@@ -64,6 +64,7 @@ faculty,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS,1qtr-3renew-7daygrace
 undergrad or graduate or postdoctoral,book,,,,,SAL3-PAGE-MP,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 staff or staff-casual or fellow,book,,,,,SAL3-PAGE-MP,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 faculty,book,,,,,SAL3-PAGE-MP,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$500 lost fee
+faculty,book,,,,,SAL3-PAGE-LP,28day-2renew-7daygrace,Allow All,Default notice,No fines,$225 lost fee
 graduate or postdoctoral,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or staff-casual or fellow,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
@@ -185,7 +186,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,TAN-NEWBOOK,28day-1renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
-,book,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
+,book,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
+,book,,,,,SAL3-PAGE-LP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$225 lost fee
 ,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,SAL3-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,SAL-HY-PAGE-EA or SAL-ND-PAGE-EA,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
