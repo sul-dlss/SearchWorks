@@ -163,7 +163,8 @@ www.asihcopeiaonline.org
 journals.ala.org
 www.scientificamerican.com
 www.nomos-elibrary.de
-dbs.g-search.or.jpwww.mona.uwi.edu
+dbs.g-search.or.jp
+www.mona.uwi.edu
 www.ihp.sinica.edu.tw
 find.gale.com
 galenet.gale.com
