@@ -6,6 +6,6 @@
 <%= hoover_request_fixture %>
 :item_display_struct:
   - barcode: '123'
-    library: HOOVER
+    library: HILA
     home_location: STACKS
     callnumber: ABC 123

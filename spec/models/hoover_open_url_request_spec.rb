@@ -5,7 +5,7 @@ RSpec.describe HooverOpenUrlRequest do
 
   subject(:url) { described_class.new(library, document) }
 
-  let(:library) { 'HOOVER' }
+  let(:library) { 'HILA' }
   let(:marc_json_struct) { metadata1 }
   let(:document) do
     SolrDocument.new(
@@ -43,32 +43,10 @@ RSpec.describe HooverOpenUrlRequest do
         expect(url.as_params.keys).to include 'ReferenceNumber'
         expect(url.as_params.keys).to include 'ItemAuthor'
         expect(url.as_params.keys).to include 'Value'
-      end
-
-      context 'for HOOVER' do
-        it 'includes keys that are specific to hoover' do
-          expect(url.as_params.keys).to include 'ItemEdition'
-          expect(url.as_params.keys).to include 'ItemPublisher'
-        end
-
-        it 'does not include keys that are specific to the archive' do
-          expect(url.as_params.keys).not_to include 'ItemInfo3'
-          expect(url.as_params.keys).not_to include 'ItemDate'
-        end
-      end
-
-      context 'for HV-ARCHIVE' do
-        let(:library) { 'HV-ARCHIVE' }
-
-        it 'includes keys that are specific to the archive' do
-          expect(url.as_params.keys).to include 'ItemInfo3'
-          expect(url.as_params.keys).to include 'ItemDate'
-        end
-
-        it 'does not include keys that are specific to hoover' do
-          expect(url.as_params.keys).not_to include 'ItemEdition'
-          expect(url.as_params.keys).not_to include 'ItemPublisher'
-        end
+        expect(url.as_params.keys).to include 'ItemInfo3'
+        expect(url.as_params.keys).to include 'ItemDate'
+        expect(url.as_params.keys).to include 'ItemEdition'
+        expect(url.as_params.keys).to include 'ItemPublisher'
       end
     end
   end
@@ -151,37 +129,15 @@ RSpec.describe HooverOpenUrlRequest do
         expect(url.item_edition).to eq '250 Subfield $a'
       end
     end
-
-    describe '#item_conditions' do
-      let(:marc_json_struct) { hoover_request_fixture }
-
-      it { expect(url.item_conditions).to be_nil }
-    end
   end
 
   context 'Hoover Archive' do
-    let(:library) { 'HV-ARCHIVE' }
-
-    describe '#request_type' do
-      it { expect(url.request_type).to eq 'GenericRequestManuscript' }
-    end
-
     describe '#item_date' do
       let(:marc_json_struct) { hoover_request_fixture }
 
       it 'returns 245$f' do
         expect(url.item_date).to eq '245 Subfield $f'
       end
-    end
-
-    describe '#item_publisher' do
-      it { expect(url.item_publisher).to be_nil }
-    end
-
-    describe '#item_edition' do
-      let(:marc_json_struct) { edition_imprint_fixture }
-
-      it { expect(url.item_edition).to be_nil }
     end
 
     describe '#item_conditions' do

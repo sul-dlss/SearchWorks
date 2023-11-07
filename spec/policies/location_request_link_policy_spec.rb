@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe LocationRequestLinkPolicy do
   subject(:policy) { described_class.new(location:, library:, items:) }
 
-  let(:location) { 'HOOVER' }
-  let(:library) { 'STACKS' }
+  let(:library) { 'HILA' }
+  let(:location) { 'STACKS' }
 
   describe '#show?' do
     subject { policy.show? }
