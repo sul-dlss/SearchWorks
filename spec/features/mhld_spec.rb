@@ -5,7 +5,7 @@ RSpec.describe "MHLD", :feature do
     it "should be present in the location access panel" do
       visit solr_document_path('10')
 
-      within('[data-hours-route="/hours/CHEMCHMENG"]') do
+      within('[data-hours-route="/hours/ENG"]') do
         expect(page).to have_css('.location-name', text: 'Current periodicals')
         expect(page).to have_css('.mhld', text: 'public note2')
         expect(page).to have_css('.mhld.note-highlight', text: 'Latest: latest received2')

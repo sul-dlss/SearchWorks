@@ -8,7 +8,7 @@ class HoursRequest
   end
 
   def find_library
-    Settings.libraries[@library].hours_api_url
+    Settings.libraries[@library]&.hours_api_url
   end
 
   def get

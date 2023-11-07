@@ -17,32 +17,32 @@
   - sirsi
 :item_display_struct:
   - barcode: "123"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: ABC
     full_shelfkey: ABC
   - barcode: "456"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: DEF
     full_shelfkey: DEF
   - barcode: "123"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: GHI
     full_shelfkey: GHI
   - barcode: "321"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: CBA
     full_shelfkey: CBA
   - barcode: "654"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: FED
     full_shelfkey: FED
   - barcode: "876"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: IHG
     full_shelfkey: IHG
@@ -52,18 +52,18 @@
     callnumber: JKL
     full_shelfkey: JKL
   - barcode: "123"
-    library: CHEMCHMENG
+    library: ENG
     home_location: STACKS
     callnumber: MNO
     full_shelfkey: MNO
   - barcode: "543"
-    library: BIOLOGY
+    library: MARINE-BIO
     home_location: STACKS
     callnumber: PQR
     full_shelfkey: PQR
 :mhld_display:
-  - "CHEMCHMENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
-  - "CHEMCHMENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
+  - "ENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
+  - "ENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
   - "GREEN -|- STACKS -|- public note3 -|- library has3 -|- latest received3"
 :isbn_display:
   - "0393040801"
