@@ -422,6 +422,7 @@ coughjournal.biomedcentral.com
 courses.ucsf.edu
 cpem.cp.com.cn
 cpps.brepolis.net
+cqpress.sagepub.com
 criticalcare.lwwhealthlibrary.com
 crl.acrl.org
 crln.acrl.org
