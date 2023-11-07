@@ -441,7 +441,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         document = SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'HOOVER', home_location: 'STACKS', callnumber: 'ABC' }
+            { barcode: '123', library: 'HILA', home_location: 'STACKS', callnumber: 'ABC' }
           ],
           marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )

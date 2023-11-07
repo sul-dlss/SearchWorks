@@ -790,7 +790,7 @@ module Constants
     'EDU-RESV' => 'EDUCATION',
     'ENG-RESV' => 'ENG',
     'GREEN-RESV' => 'GREEN',
-    'HOOV-RESV' => 'HOOVER',
+    'HOOV-RESV' => 'HILA',
     'HOP-RESV' => 'HOPKINS',
     'LAW-RESV' => 'LAW',
     'MEDIA-RESV' => 'MEDIA-MTXT',
@@ -879,14 +879,6 @@ module Constants
       text: 'The Education Library is closed for construction. Request items for pickup at another library.'
     },
     'HILA' => {
-      heading: 'Access',
-      text: 'Items must be requested in advance and viewed on-site.'
-    },
-    'HOOVER' => {
-      heading: 'Access',
-      text: 'Items must be requested in advance and viewed on-site.'
-    },
-    'HV-ARCHIVE' => {
       heading: 'Access',
       text: 'Items must be requested in advance and viewed on-site.'
     },

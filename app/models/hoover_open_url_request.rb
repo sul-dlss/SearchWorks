@@ -23,8 +23,6 @@ class HooverOpenUrlRequest
   end
 
   def request_type
-    return 'GenericRequestManuscript' if archive?
-
     'GenericRequestMonograph'
   end
 
@@ -54,14 +52,10 @@ class HooverOpenUrlRequest
   end
 
   def item_date
-    return unless archive?
-
     marc_data(field_codes: '245', subfield_codes: ['f'])
   end
 
   def item_publisher
-    return if archive?
-
     marc_260 = marc_data(field_codes: '260', subfield_codes: %w[a b c])
     marc_264 = marc_data(field_codes: '264', subfield_codes: %w[a b c])
     safe_join([marc_260, marc_264], ' ')
@@ -72,8 +66,6 @@ class HooverOpenUrlRequest
   end
 
   def item_edition
-    return if archive?
-
     marc_data(field_codes: '250', subfield_codes: ['a'])
   end
 
@@ -82,19 +74,12 @@ class HooverOpenUrlRequest
   end
 
   def item_conditions
-    return unless archive?
-
     marc_data(field_codes: '540', subfield_codes: %w[3 a])
   end
 
   private
 
   attr_reader :library, :document
-
-  def archive?
-    # We are not currently routing any HV-ARCHIVE request links through this code...
-    library == 'HV-ARCHIVE'
-  end
 
   def marc
     document.to_marc

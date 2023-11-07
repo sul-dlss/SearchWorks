@@ -134,22 +134,10 @@ libraries:
     name: Hoover Library
     suppress_items_list_on_results_view: true
     suppress_location_request_link: true
-  HOOVER:
-    about_url: https://www.hoover.org/library-archives
-    hours_api_url: hoover_archives/location/hv_archives
-    name: Hoover Library
-    suppress_items_list_on_results_view: true
-    suppress_location_request_link: true
   HOPKINS:
     about_url: https://library.stanford.edu/libraries/harold-miller-library-hopkins-marine-station
     hours_api_url: marine_biology/location/marine_biology_library
     name: Marine Biology Library (Miller)
-  HV-ARCHIVE:
-    about_url: https://www.hoover.org/library-archives
-    hours_api_url: hoover_archives/location/hv_archives
-    name: Hoover Archives
-    suppress_items_list_on_results_view: true
-    suppress_location_request_link: true
   IC:
     hours_api_url: green/location/reference
   IC-CHAT:
