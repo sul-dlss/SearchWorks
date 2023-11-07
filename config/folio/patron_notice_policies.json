@@ -26,8 +26,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:15.289+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:15.289+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-11-06T18:47:48.650+00:00",
+      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
       {
@@ -67,20 +67,6 @@
         "sendOptions": {
           "sendHow": "Upon At",
           "sendWhen": "Aged to lost"
-        }
-      },
-      {
-        "templateId": "3b32c65d-82f4-4a08-9856-a332e41f2f7d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Weeks"
-          }
         }
       },
       {
