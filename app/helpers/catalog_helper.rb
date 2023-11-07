@@ -22,7 +22,7 @@ module CatalogHelper
 
   def stackmap_link(document, location)
     item = location.items.first
-    stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: item.callnumber, library: item.symphony_library_code, location: item.symphony_location_code, api_url: location.stackmap_api_url)
+    stackmap_path(title: (document['title_display'] || '').html_safe, id: document.id, callnumber: item.callnumber, library: item.library, location: item.home_location, api_url: location.stackmap_api_url)
   end
 
   def new_documents_feed_path
