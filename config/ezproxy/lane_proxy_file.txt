@@ -604,6 +604,7 @@ etcjournal.files.wordpress.com
 ete-online.biomedcentral.com
 ethnobiomed.biomedcentral.com
 etsmjournal.biomedcentral.com
+eurekaselect.com
 eurendodj.com
 eurjmedres.biomedcentral.com
 eurointervention.pcronline.com
@@ -1617,7 +1618,6 @@ www.aaem.pl
 www.aaeportal.com
 www.aafp.org
 www.aaic.net.au
-www.aaiddjournals.org
 www.aamc.org
 www.aana.com
 www.aapspharmscitech.org
