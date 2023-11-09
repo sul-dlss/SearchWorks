@@ -8,6 +8,7 @@
     <field name="_version_" type="long" indexed="true" stored="true" />
 
     <field name="id" type="string" indexed="true" stored="true" required="true" docValues="true" />
+    <field name="id_search" type="string_punct_stop" indexed="true" stored="false" />
     <field name="timestamp" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
     <field name="created" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
     <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
@@ -197,6 +198,8 @@
     <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
 
     <field name="barcode_search" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="item_barcodes" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="item_barcodes_search" type="string_punct_stop" indexed="true" stored="false" multiValued="true" />
     <field name="preferred_barcode" type="string" indexed="false" stored="true" />
     <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
     <field name="building_facet" type="string" indexed="true" stored="true" multiValued="true" />
@@ -282,10 +285,12 @@
   </fields>
 
   <!-- copy fields -->
+  <copyField source="id" dest="id_search" />
   <copyField source="collection" dest="collection_search" />
   <copyField source="pub_date" dest="pub_date_search" />
   <copyField source="db_az_subject" dest="db_az_subject_search" />
-
+  <copyField source="barcode_search" dest="item_barcodes_search" />
+  <copyField source="barcode_search" dest="item_barcodes" />
   <!-- unstemmed and anchored search fields: title -->
   <copyField source="title_245a_search" dest="title_245a_exact_search" />
   <copyField source="title_245a_search" dest="title_245a_unstem_search" />
