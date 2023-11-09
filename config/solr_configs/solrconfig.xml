@@ -317,7 +317,7 @@
         pub_date_search^2
         isbn_search^1.6
         issn_search^1.6
-        id
+        id_search
         druid
         oclc
         barcode_search
