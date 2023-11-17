@@ -1572,6 +1572,7 @@ video.alexanderstreet.com
 videocast.nih.gov
 virologyj.biomedcentral.com
 visualiseur.bnf.fr
+vivli.org
 voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
@@ -2882,7 +2883,6 @@ www.taylorfrancis.com
 www.telis.ucla.edu
 www.tera.org
 www.termedia.pl
-www.tetondata.com
 www.the-aps.org
 www.the-jcen.org
 www.the-scientist.com
