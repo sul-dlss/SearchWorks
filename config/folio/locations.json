@@ -12100,6 +12100,31 @@
     }
   },
   {
+    "id": "d01318d1-2e5c-4b7c-b940-9474bfe7d197",
+    "name": "Art Exhibit",
+    "code": "ART-EXHIBIT",
+    "discoveryDisplayName": "On exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-11-18T01:32:57.571+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-11-18T01:33:39.018+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
     "id": "d0f283b6-2658-41cb-9ef1-f010814fc330",
     "name": "Music PAGE-LP",
     "code": "MUS-PAGE-LP",
