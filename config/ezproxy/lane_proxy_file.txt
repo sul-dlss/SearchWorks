@@ -1572,7 +1572,6 @@ video.alexanderstreet.com
 videocast.nih.gov
 virologyj.biomedcentral.com
 visualiseur.bnf.fr
-vivli.org
 voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
@@ -1854,6 +1853,7 @@ www.cdc.gov
 www.ceemjournal.org
 www.ceeol.com
 www.cell.com
+www.cellphysiolbiochem.com
 www.census.gov
 www.centerforaids.org
 www.centerwatch.com
