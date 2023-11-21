@@ -739,6 +739,7 @@ hrbopenresearch.org
 hrcak.srce.hr
 hstalks.com
 hsus.cambridge.org
+https
 human-resources-health.biomedcentral.com
 humanfactors.jmir.org
 humgenomics.biomedcentral.com
