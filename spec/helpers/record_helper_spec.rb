@@ -20,4 +20,22 @@ RSpec.describe RecordHelper do
       end
     end
   end
+
+  describe 'record html' do
+    context 'when the record has line feeds in the string' do
+      let(:html) { "some text\r\nsome other text" }
+
+      it 'returns the string without changing the encoding' do
+        expect(helper.format_record_html(html)).to eq "some text\r\nsome other text"
+      end
+    end
+
+    context 'when the record has encoded line feeds in the string' do
+      let(:html) { "some text&#13\nsome other text" }
+
+      it 'returns the string with proper encoding' do
+        expect(helper.format_record_html(html)).to eq "some text\r\nsome other text"
+      end
+    end
+  end
 end

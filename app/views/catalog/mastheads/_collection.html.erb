@@ -7,7 +7,7 @@
         <% if @parent[:summary_display] %>
           <div class="collection-summary">
             <div data-behavior='truncate'>
-              <%= @parent[:summary_display].join(', ') %>
+              <%= format_record_html(@parent[:summary_display].join(', ')) %>
             </div>
           </div>
         <% end %>
