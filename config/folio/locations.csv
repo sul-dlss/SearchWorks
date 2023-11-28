@@ -528,7 +528,7 @@ e729a64c-fedd-42c5-a8e7-4409b687aabc,HILA Electronic,HILA-ELECTRONIC,SU,HOOVER,H
 e80fb38c-7c31-4be6-8ce8-3922b4a3da57,Spec Shadowed,SPEC-SHADOW,SU,SUL,SPEC-COLL,Ask at Reading Room desk,true,SPEC,SPEC,,,,,,,,,,,,,,
 e86e5b57-be4c-4a5a-aa11-c3068073e04f,Earth Sci Storage,EAR-STORAGE,SU,SUL,EARTH-SCI,Ask at circulation desk,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,
 e93f4aad-89d2-4ad5-b1ef-d30d631a4e67,Media Oversize,MEDIA-OVERSIZE,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
-e99ac505-53ee-4db8-bf82-d9efcae6f5c9,SUL TS Processing,SUL-TS-PROCESSING,SU,SUL,SUL,In process,true,SULTS,SULTS,,,,,,,,In_process,,,,,,
+e99ac505-53ee-4db8-bf82-d9efcae6f5c9,SUL TS Processing,SUL-TS-PROCESSING,SU,SUL,SUL,In process,true,SULTS,SULTS;SULCC;SULMD;SULMDCS;SULACQ,,,,,,,,In_process,,,,,,
 ea2778ab-8099-43c9-8f2c-792643268cbd,SUL TS CC Special Projects,SUL-TS-CC-SPECIALPROJECTS,SU,SUL,SUL,In process,true,SULCC,SULCC,,,,,,,,In_process,,,,,,
 ea6ed372-f291-48be-a1b6-2130e83eb029,Media Microfiche Business,MEDIA-BUSCAB,SU,SUL,MEDIA-CENTER,Microfiche collection,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 eb47a6cb-a6d1-47be-aa5a-85b03cdbc6d9,Media Repair Shelf,MEDIA-REPAIR-SHELF,SU,SUL,MEDIA-CENTER,In process,true,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,In_process,,,,,,
