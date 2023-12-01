@@ -115,7 +115,6 @@ aquifer.org
 ar.iiarjournals.org
 arbs.biblioteca.unesp.br
 arc.aiaa.org
-archive-org
 archive.ahrq.gov
 archive.org
 archive.samj.org.za
@@ -207,11 +206,9 @@ bmcbiotechnol.biomedcentral.com
 bmccancer.biomedcentral.com
 bmccardiovascdisord.biomedcentral.com
 bmccellbiol.biomedcentral.com
-bmcchem.biomedcentral.com
 bmcchembiol.biomedcentral.com
 bmcclinpathol.biomedcentral.com
 bmccomplementalternmed.biomedcentral.com
-bmccomplementmedtherapies.biomedcentral.com
 bmcdermatol.biomedcentral.com
 bmcdevbiol.biomedcentral.com
 bmcearnosethroatdisord.biomedcentral.com
@@ -256,7 +253,6 @@ bmcpharmacoltoxicol.biomedcentral.com
 bmcphysiol.biomedcentral.com
 bmcplantbiol.biomedcentral.com
 bmcpregnancychildbirth.biomedcentral.com
-bmcprimcare.biomedcentral.com
 bmcproc.biomedcentral.com
 bmcpsychiatry.biomedcentral.com
 bmcpsychology.biomedcentral.com
@@ -265,7 +261,6 @@ bmcpulmmed.biomedcentral.com
 bmcresnotes.biomedcentral.com
 bmcrheumatol.biomedcentral.com
 bmcsportsscimedrehabil.biomedcentral.com
-bmcstructbiol.biomedcentral.com
 bmcsurg.biomedcentral.com
 bmcsystbiol.biomedcentral.com
 bmcurol.biomedcentral.com
@@ -335,7 +330,6 @@ casereports.onlinejacc.org
 casesjournal.biomedcentral.com
 cassi.cas.org
 catalan.digitaliapublishing.com
-catalog-hathitrust-org
 catalog.data.gov
 catalog.hathitrust.org
 catalogimages.wiley.com
@@ -2072,7 +2066,6 @@ www.fluorideresearch.org
 www.fm.viamedica.pl
 www.fmhs.auckland.ac.nz
 www.fons.org
-www.foodchemicalscodex.org
 www.formatex.org
 www.forp.usp.br
 www.frontiersin.org
@@ -2514,7 +2507,6 @@ www.meajo.org
 www.med.kobe-u.ac.jp
 www.med.nagoya-u.ac.jp
 www.med.or.jp
-www.med.unc.edu
 www.medandlife.ro
 www.mededportal.org
 www.medeniyetmedicaljournal.org
@@ -2597,6 +2589,7 @@ www.newday.com
 www.newmicrobiologica.org
 www.newnonmun.com
 www.newswise.com
+www.nexisuni.com
 www.nextbio.com
 www.nice.org.uk
 www.nida.nih.gov
@@ -2959,7 +2952,6 @@ www.vasculardiseasemanagement.com
 www.vaughan.org
 www.vdb.org
 www.veterinaryworld.org
-www.vetres-archive.org
 www.vetsci.org
 www.victorianpopularculture.amdigital.co.uk
 www.virginiacompanyarchives.amdigital.co.uk
