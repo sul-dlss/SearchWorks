@@ -6,7 +6,7 @@ RSpec.describe QuickSearch::ArticleSearcher do
   subject(:searcher) { described_class.new(HTTP, query, 10) }
 
   let(:query) { 'my query' }
-  let(:response) { JSON.dump(response: { docs: [] }) }
+  let(:response) { JSON.dump({ response: { docs: [] } }) }
 
   before do
     stub_request(:get, /.*/).to_return(body: response)

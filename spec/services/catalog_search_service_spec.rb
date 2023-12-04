@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe CatalogSearchService do
   subject(:service) { described_class.new }
 
-  let(:response) { JSON.dump(response: { docs: [] }) }
+  let(:response) { JSON.dump({ response: { docs: [] } }) }
   let(:query) { CatalogSearchService::Request.new('my query') }
 
   before do
