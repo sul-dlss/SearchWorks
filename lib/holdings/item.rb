@@ -210,7 +210,7 @@ class Holdings
     private
 
     def standard_or_zombie_library
-      (item_display[:library].presence || 'ZOMBIE')
+      item_display[:library].presence || 'ZOMBIE'
     end
 
     def current_location_is_reserve_desk?

@@ -8,7 +8,7 @@ class CourseReservesController < ApplicationController
     facet = "crez_course_info"
     p = {}
     p[:"facet.field"] = facet
-    p[:"f.#{facet}.facet.limit"] = "-1"  # this implies lexical sort
+    p[:"f.#{facet}.facet.limit"] = "-1" # this implies lexical sort
     p[:rows] = 0
     response = blacklight_config.repository.search(p)
     course_reserves = []

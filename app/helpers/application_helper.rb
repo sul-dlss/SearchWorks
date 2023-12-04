@@ -51,7 +51,7 @@ module ApplicationHelper
         end
       end
     end
-    { label:, fields: items, vernacular: vern } unless (items.empty? and vern.empty?)
+    { label:, fields: items, vernacular: vern } unless items.empty? and vern.empty?
   end
 
   def get_indexed_vernacular(doc, field)

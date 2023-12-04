@@ -58,7 +58,6 @@ module Folio
         tree = []
         statements = statement.map do |s|
           if s[:indent].zero?
-            s[:criteria] = s[:criteria]
             tree = [s]
           else
             tree.pop while tree.last[:indent] >= s[:indent]

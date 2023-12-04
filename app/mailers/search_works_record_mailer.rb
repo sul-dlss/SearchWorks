@@ -56,7 +56,7 @@ class SearchWorksRecordMailer < ActionMailer::Base
       I18n.t(
         'blacklight.email.text.subject',
         count: documents.length,
-        title: (documents.first.to_semantic_values[:title].try(:first) || 'N/A')
+        title: documents.first.to_semantic_values[:title].try(:first) || 'N/A'
       )
     end
   end
