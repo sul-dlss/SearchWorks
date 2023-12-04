@@ -7504,7 +7504,7 @@
     "id": "82dca520-b559-44b9-a9b8-27e4599ce6a0",
     "name": "East Asia Locked Oversized",
     "code": "EAL-LOCKED-OVERSIZE",
-    "discoveryDisplayName": "Locked stacks (Oversized): Ask at circulation desk",
+    "discoveryDisplayName": "Locked stacks: Ask at circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -7522,8 +7522,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:50.744+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:50.744+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-12-02T00:51:03.170+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -14584,6 +14584,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-10-02T17:05:29.931+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "fb8b8f71-5f2f-43c1-a436-3922661354a3",
+    "name": "East Asia Locked Flat file",
+    "code": "EAL-LOCKED-FLATFILE",
+    "discoveryDisplayName": "Locked stacks: Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+      "pageAeonSite": "EASTASIA"
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-12-02T00:50:00.594+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-12-02T00:50:00.594+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
