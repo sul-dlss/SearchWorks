@@ -48,7 +48,7 @@ module Folio
         location['servicePointCodes'] = location['servicePointIds']&.map { |id| Folio::Types.service_points.dig(id, 'code') }
 
         # remove fields that are now unused
-        location.each { |key, _val| key.match?(/Ids?$/) && location.delete(key) }
+        location.each_key { |key| key.match?(/Ids?$/) && location.delete(key) }
         location.delete('primaryServicePoint') # is a UUID, despite how FOLIO named it
         location.delete('servicePoints') # always empty
         location.delete('metadata')

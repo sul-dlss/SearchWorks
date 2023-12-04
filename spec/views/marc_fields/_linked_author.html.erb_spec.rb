@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'marc_fields/_linked_author' do
   include MarcMetadataFixtures
-  let(:document) { SolrDocument.new(marc_json_struct: send("linked_author_#{target}_fixture".to_sym)) }
+  let(:document) { SolrDocument.new(marc_json_struct: send(:"linked_author_#{target}_fixture")) }
 
   before do
     allow(view).to receive_messages(linked_author: LinkedAuthor.new(document, target))

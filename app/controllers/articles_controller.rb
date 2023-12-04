@@ -148,7 +148,7 @@ class ArticlesController < ApplicationController
     }
 
     # Register section fields with show/index presenters to leverage rendering pipeline
-    config.show.sections.each do |_section, fields|
+    config.show.sections.each_value do |fields|
       fields.each do |field, options|
         config.add_show_field field.to_s, options
       end
