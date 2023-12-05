@@ -482,7 +482,6 @@ direct.mit.edu
 disastermilitarymedicine.biomedcentral.com
 discover.nci.nih.gov
 discover.sabinet.co.za
-discover.yewno.com
 discoveriesjournals.org
 dl.acm.org
 dl.moazine.com
@@ -532,6 +531,7 @@ ebn.bmj.com
 ebook.3m.com
 ebook.kstudy.com
 ebook.rsc.org
+ebook.sts.org
 ebookcentral.proquest.com
 ebooks.cap.org
 ebooks.geoscienceworld.org
@@ -707,7 +707,6 @@ heartfailure.onlinejacc.org
 hearth.library.cornell.edu
 hebra.dermis.net
 heinonline.org
-heinonlineorg
 helioblast.heliotext.com
 hemonc.mhmedical.com
 hereditasjournal.biomedcentral.com
@@ -1270,7 +1269,6 @@ poly.chemnetbase.com
 pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
-portal.biobase-international.com
 portal.gdc.cancer.gov
 portal.genego.com
 portal.genexplain.com
@@ -1571,7 +1569,6 @@ voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
 wbl.worldbank.org
-web.archive.org
 web.mit.edu
 web.ornl.gov
 webbook.nist.gov
@@ -1773,7 +1770,6 @@ www.beilstein-journals.org
 www.beilstein.com
 www.benkler.org
 www.besjournal.com
-www.bgs.ac.uk
 www.biij.org
 www.bindingdb.org
 www.bio-protocol.org
@@ -2977,7 +2973,6 @@ www.wjnm.org
 www.wjon.org
 www.wjpch.com
 www.wjps.ir
-www.wlupress.wlu.ca
 www.wma.net
 www.worldbank.org
 www.worldcat.org
