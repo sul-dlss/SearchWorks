@@ -719,16 +719,12 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"GSB\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 2,
+      "duration": 5,
       "intervalId": "Weeks"
     },
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
-      },
-      {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
         "printByDefault": true
       },
       {
@@ -738,13 +734,17 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
       }
     ],
     "metadata": {
       "createdDate": "2023-08-10T17:45:06.934+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:06.934+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-12-07T18:25:56.401+00:00",
+      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     }
   },
   {
