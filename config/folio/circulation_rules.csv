@@ -40,7 +40,7 @@ graduate or postdoctoral,score,,,,,SAL3-STACKS,1qtr-3renew-7daygrace,Allow All,D
 staff or staff-casual or fellow,score,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,score,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
 any,score,,,,,SAL3-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
-any,score,,,,,MUS-INPROCESS,No loan,Allow paging,Default notice,No fines,$75 lost fee
+any,score,,,,,MUS-INPROCESS,No loan,Allow All,Default notice,No fines,$75 lost fee
 faculty or graduate or postdoctoral or staff,score,,,,,MUS-R-STACKS or MUS-R-MINIATURE or MUS-R-FOLIO,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$400 lost fee
 staff or staff-casual or fellow,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 faculty,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,Default notice,No fines,$65 lost fee
@@ -148,7 +148,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,LAW-CAREER or LAW-COOKBOOK or LAW-OUTDOOR-TRAVEL or LAW-VROOMAN or LAW-VROOMAN-OV or LAW-WELLNESS,14day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,28day-2renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,28day-2renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
-,score,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
+,score,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow All,Default notice,No fines,$75 lost fee
 ,score,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,score,,,,,MUS-R-STACKS or MUS-R-MINIATURE or MUS-R-FOLIO,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,No fines,$65 lost fee
