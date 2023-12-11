@@ -10,7 +10,7 @@ class MarcExtractor
     Array.wrap(tags).each do |tag|
       t, subfields_spec = tag.to_s.scan(/\d{3}|\w+/)
       @tags << t
-      @subfields[t] = subfields_spec&.split('')
+      @subfields[t] = subfields_spec&.chars
     end
   end
 
