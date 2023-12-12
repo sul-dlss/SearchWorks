@@ -1270,6 +1270,7 @@ poly.chemnetbase.com
 pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
+portal.biobase-international.com
 portal.gdc.cancer.gov
 portal.genego.com
 portal.genexplain.com
@@ -1485,6 +1486,7 @@ stanfordlaw.kanopy.com
 stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
+stedmansonline.com
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
