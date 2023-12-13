@@ -187,7 +187,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
       end
 
@@ -200,7 +200,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'http://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
       end
 
