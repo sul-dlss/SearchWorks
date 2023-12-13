@@ -159,7 +159,7 @@ libraries:
     name: Lathrop Library
   LAW:
     about_url: https://law.stanford.edu/robert-crown-law-library/
-    ezproxy_host: http://ezproxy.law.stanford.edu/login?
+    ezproxy_host: https://ezproxy.law.stanford.edu/login?
     hours_api_url: law/location/law_library
     name: Law Library (Crown)
   MARINE-BIO:
