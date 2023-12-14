@@ -585,7 +585,7 @@
   },
   {
     "name": "$100 lost fee - 1 hr aged to lost",
-    "description": "Used for Lane and Bus equipment",
+    "description": "Used for Lane, Bus and SUL equipment",
     "itemAgedLostOverdue": {
       "duration": 1,
       "intervalId": "Hours"
@@ -621,8 +621,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.247+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:03.247+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-12-13T19:19:05.652+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "966833f9-ad73-41f6-bc7d-cc44280d4e15"
   },
@@ -680,7 +680,7 @@
   },
   {
     "name": "$500 lost fee - 1 hr aged to lost",
-    "description": "Used for Lane and Bus equipment",
+    "description": "Used for Lane, Bus and SUL equipment",
     "itemAgedLostOverdue": {
       "duration": 1,
       "intervalId": "Hours"
@@ -716,8 +716,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.095+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:03.095+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2023-12-13T19:19:33.821+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "b467648a-7724-4df3-926a-b6566eeac649"
   },
