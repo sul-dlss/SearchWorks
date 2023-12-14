@@ -196,7 +196,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-10T18:06:32.407+00:00",
+      "updatedDate": "2023-12-13T16:29:22.179+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
@@ -263,90 +263,6 @@
           "sendBy": {
             "duration": 7,
             "intervalId": "Days"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 30,
-            "intervalId": "Days"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 2,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 3,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 4,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 5,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 6,
-            "intervalId": "Months"
           }
         }
       }
