@@ -320,7 +320,9 @@
         id_search
         druid
         oclc
+        id
         barcode_search
+        item_barcodes_search
         physical                       vern_physical
         award_search
         collection_search
