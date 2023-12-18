@@ -40,7 +40,7 @@ class Instrumentation < MarcField
   end
 
   def subfield_value(subfield)
-    send("#{subfield.code}_subfield", subfield.value)
+    send(:"#{subfield.code}_subfield", subfield.value)
   end
 
   def a_subfield(value)
