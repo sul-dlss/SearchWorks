@@ -20,9 +20,9 @@ class LinkedSerials < MarcField
   private
 
   def process_subfield(field, subfield)
-    return { text: subfield.value } unless respond_to?("#{subfield.code}_subfield", true)
+    return { text: subfield.value } unless respond_to?(:"#{subfield.code}_subfield", true)
 
-    send("#{subfield.code}_subfield", field, subfield.value)
+    send(:"#{subfield.code}_subfield", field, subfield.value)
   end
 
   def a_subfield(field, value)
