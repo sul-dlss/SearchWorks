@@ -491,7 +491,7 @@
         issn_search^1.6
         id_search
         oclc
-        items_barcode_search
+        item_barcodes_search
         physical                       vern_physical                       cjk_physical_search                 ja_physical_search
         award_search
         collection_search
@@ -930,7 +930,7 @@
         isbn_search
         issn_search
         oclc
-        items_barcode_search
+        item_barcodes_search
         callnum_search
       </str>
       <str name="pf_number">issn_search^5 callnum_search^5</str>
