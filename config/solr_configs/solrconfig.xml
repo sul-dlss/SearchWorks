@@ -317,10 +317,10 @@
         pub_date_search^2
         isbn_search^1.6
         issn_search^1.6
-        id
+        id_search
         druid
         oclc
-        barcode_search
+        item_barcodes_search
         physical                       vern_physical
         award_search
         collection_search
@@ -489,9 +489,9 @@
         pub_date_search^2
         isbn_search^1.6
         issn_search^1.6
-        id
+        id_search
         oclc
-        barcode_search
+        items_barcode_search
         physical                       vern_physical                       cjk_physical_search                 ja_physical_search
         award_search
         collection_search
@@ -926,11 +926,11 @@
 
       <!-- for advanced search number text box -->
       <str name="qf_number">
-        id
+        id_search
         isbn_search
         issn_search
         oclc
-        barcode_search
+        items_barcode_search
         callnum_search
       </str>
       <str name="pf_number">issn_search^5 callnum_search^5</str>
