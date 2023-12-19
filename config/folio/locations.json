@@ -3372,6 +3372,31 @@
     }
   },
   {
+    "id": "341eccda-a7b7-42f9-b0f7-1ceffb103fb1",
+    "name": "SUL E-reserve",
+    "code": "SUL-ERESV",
+    "discoveryDisplayName": "online resource",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+    },
+    "primaryServicePoint": "7c5abc9f-f3d7-4856-b8d7-6712462ca007",
+    "servicePointIds": [
+      "7c5abc9f-f3d7-4856-b8d7-6712462ca007"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2023-12-18T22:56:49.261+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-12-18T22:56:49.261+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "34aff776-2bcb-4c5d-8151-bd18f55e1f8c",
     "name": "Education Curriculum",
     "code": "EDU-CURRICULUM",
