@@ -719,7 +719,7 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"GSB\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 5,
+      "duration": 4,
       "intervalId": "Weeks"
     },
     "staffSlips": [
@@ -743,7 +743,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:06.934+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-07T18:25:56.401+00:00",
+      "updatedDate": "2023-12-18T17:01:13.582+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     }
   },

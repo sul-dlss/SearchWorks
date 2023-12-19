@@ -130,6 +130,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 31b68968-90b7-4205-83bc-1a6d2350e0e7,HILA Shelved Elsewhere,HILA-SEE-OTHER,SU,HOOVER,HILA,See linked record,true,HILA,HILA,,,,,,,,,,,,,,
 32bebe0c-a235-4689-8f8a-6cc0472e74b1,Spec Inprocess,SPEC-INPROCESS,SU,SUL,SPEC-COLL,In process,true,SPEC,SPEC,,,,,,,,In_process,,,,,,
 33e93b8a-7917-4973-865c-7579289f3d04,Lane Spec: LC Oversize - Folio,LANE-SFOL,SU,MED,LANE,Medical History Center: By appointment only.,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,
+341eccda-a7b7-42f9-b0f7-1ceffb103fb1,SUL E-reserve,SUL-ERESV,SU,SUL,SUL,online resource,true,Online,Online,,,,,,,,,,,,,,
 34aff776-2bcb-4c5d-8151-bd18f55e1f8c,Education Curriculum,EDU-CURRICULUM,SU,SUL,EDUCATION,Curriculum at Green,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,
 3516da02-847d-41a0-a69d-2a3ca8101d7f,Media Shelved Elsewhere,MEDIA-SEE-OTHER,SU,SUL,MEDIA-CENTER,See linked record to request items bound together,true,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,,,,,,,
 3529d772-1715-4a12-8314-200f34b8cc30,Rumsey Center Stacks Medium,RUM-C-STK-MD,SU,SUL,RUMSEY-MAP,Map Center (medium stacks),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,
