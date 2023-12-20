@@ -438,8 +438,7 @@ c f5c58187-3db6-4bda-b1bf-e5f0717e2149
 /business reserve rules, default is overnight, but if you add a temp loan type to the item record you can make it 2 hours. Need separate rules for perm reserves and course reserves so the notice policies are different. 
     s 9523510d-2afa-47fd-8310-eaf8e690479e + g all + m all : l 8dfc8ff2-51f8-494f-ba8b-19c540ed2b9c r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 9d9ab9b0-2b9b-40d6-b122-49c4bdd71736 o 24f7511f-ed1a-4710-bae3-36d29f00988d i 5e4ee2a3-237d-40e2-bf2e-497963dda0ec 
         t 698f6361-d552-4cb8-8e01-f74fa8cc73e0 : l 0a8d7a5c-328f-4df5-a27c-81856d1ce2a5 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 9d9ab9b0-2b9b-40d6-b122-49c4bdd71736 o 24f7511f-ed1a-4710-bae3-36d29f00988d i 5e4ee2a3-237d-40e2-bf2e-497963dda0ec  
-    s  43a64b5c-bf3c-4364-9546-73e8fdae84f7 + g all + m all : l 8dfc8ff2-51f8-494f-ba8b-19c540ed2b9c r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o 24f7511f-ed1a-4710-bae3-36d29f00988d i 5e4ee2a3-237d-40e2-bf2e-497963dda0ec 
-        t 698f6361-d552-4cb8-8e01-f74fa8cc73e0 : l 0a8d7a5c-328f-4df5-a27c-81856d1ce2a5 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o 24f7511f-ed1a-4710-bae3-36d29f00988d i 5e4ee2a3-237d-40e2-bf2e-497963dda0ec   
+    s  43a64b5c-bf3c-4364-9546-73e8fdae84f7 + g all + m all : l 07115e75-c4a9-4ef0-b013-dba184251041 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o 24f7511f-ed1a-4710-bae3-36d29f00988d i 5e4ee2a3-237d-40e2-bf2e-497963dda0ec  
 
 /business career rule to make it a shorter checkout due to popularity. 
     s d31f5e9f-3660-46e2-b03f-248c78913938 + t all + g all + m all : l 80659254-cddb-4667-8bd1-c2d57bb92bb7 r 334e5a9e-94f9-4673-8d1d-ab552863886b n c4ec90cb-1139-4c59-a690-9de48c4e3fd6 o 85d33314-0cac-430a-be9e-ddd25e681322 i bb338f23-67e1-4e34-ab8d-a861b3c9879a 
