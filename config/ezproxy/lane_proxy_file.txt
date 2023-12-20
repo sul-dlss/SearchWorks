@@ -19,7 +19,6 @@ academic.eb.com
 academic.oup.com
 academicjournals.org
 access.newspaperarchive.com
-access.oakstone.com
 access.ovid.com
 access.portico.org
 access.torrossa.com
