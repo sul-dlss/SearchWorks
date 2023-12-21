@@ -52,6 +52,7 @@ aging.jmir.org
 agupubs.onlinelibrary.wiley.com
 ahajournals.org
 ahj.kmu.ac.ir
+ai.nejm.org
 aidsnews.blogspot.com
 aidsrestherapy.biomedcentral.com
 aip.scitation.org
