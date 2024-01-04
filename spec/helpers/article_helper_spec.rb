@@ -61,7 +61,7 @@ RSpec.describe ArticleHelper do
         expect(result).to have_content 'John Doe, Doe, Jane, and Fred Doe'
       end
       it 'has no links' do
-        expect(result).not_to have_link
+        expect(result).to have_no_link
       end
     end
 
@@ -69,7 +69,7 @@ RSpec.describe ArticleHelper do
       let(:result) { helper.clean_affiliations(value: affiliations) }
 
       it 'removes relatesTo tags and content' do
-        expect(result).not_to have_content('1')
+        expect(result).to have_no_content('1')
         expect(result).to have_content('Institute A')
       end
     end

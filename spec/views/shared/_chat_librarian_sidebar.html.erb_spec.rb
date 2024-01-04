@@ -29,7 +29,7 @@ RSpec.describe 'shared/_chat_librarian_sidebar' do
 
     it 'renders alternative view' do
       expect(rendered).to have_css 'h3', text: 'Chat with a librarian'
-      expect(rendered).not_to have_css 'a', text: 'Chat with a librarian'
+      expect(rendered).to have_no_css 'a', text: 'Chat with a librarian'
       expect(rendered).to have_css 'a', text: 'Login to access chat assistance.'
     end
   end

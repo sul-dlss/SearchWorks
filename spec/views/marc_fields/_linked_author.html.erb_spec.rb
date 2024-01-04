@@ -25,8 +25,8 @@ RSpec.describe 'marc_fields/_linked_author' do
       expect(rendered).to have_css('dd a', text: 'Dodaro, Gene L.')
       expect(rendered).to have_css('dd a @href', text: /q=%22Dodaro%2C\+Gene\+L\.%22/)
       expect(rendered).to have_css('dd a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('dd a @href', text: /author\./)
-      expect(rendered).not_to have_css('dd a @href', text: /\sAuthor/)
+      expect(rendered).to have_no_css('dd a @href', text: /author\./)
+      expect(rendered).to have_no_css('dd a @href', text: /\sAuthor/)
     end
 
     it 'included the extra text after the link' do
@@ -50,8 +50,8 @@ RSpec.describe 'marc_fields/_linked_author' do
       expect(rendered).to have_css('dd a', text: 'Ecuador. Procuraduría General del Estado, A Title')
       expect(rendered).to have_css('dd a @href', text: /q=%22Ecuador.\+Procuradur%C3%ADa\+General\+del\+Estado%2C%22/)
       expect(rendered).to have_css('dd a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('dd a @href', text: /A Title/)
-      expect(rendered).not_to have_css('dd a @href', text: /issuing body/)
+      expect(rendered).to have_no_css('dd a @href', text: /A Title/)
+      expect(rendered).to have_no_css('dd a @href', text: /issuing body/)
     end
 
     it 'included the extra text after the link' do
@@ -88,8 +88,8 @@ RSpec.describe 'marc_fields/_linked_author' do
       expect(rendered).to have_css('dd a @href', text: /q=%22Technical\+Workshop\+on\+Organic\+Agriculture\+%281st\+%3A\+2010\+%3A\+Ogbomoso%2C\+Nigeria%29%22/)
       expect(rendered).to have_css('dd a @href', text: /q=%22Vernacular\+Uniform\+Title%22/)
       expect(rendered).to have_css('dd a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('dd a @href', text: /A title/)
-      expect(rendered).not_to have_css('dd a @href', text: /creator/)
+      expect(rendered).to have_no_css('dd a @href', text: /A title/)
+      expect(rendered).to have_no_css('dd a @href', text: /creator/)
     end
 
     it 'included the extra text after the link' do

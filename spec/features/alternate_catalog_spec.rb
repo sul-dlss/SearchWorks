@@ -21,7 +21,7 @@ RSpec.feature 'Alterate catalog results', js: true do
         text: 'Academic journals (1)'
       )
 
-      expect(page).not_to have_css('.lib-guides-alternate-catalog', visible: :visible)
+      expect(page).to have_no_css('.lib-guides-alternate-catalog', visible: :visible)
     end
   end
 
@@ -54,7 +54,7 @@ RSpec.feature 'Alterate catalog results', js: true do
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"]', text: 'Newspaper (4)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Video"]', text: 'Video (4)'
 
-      expect(page).not_to have_css('.lib-guides-alternate-catalog', visible: :visible)
+      expect(page).to have_no_css('.lib-guides-alternate-catalog', visible: :visible)
     end
   end
 end

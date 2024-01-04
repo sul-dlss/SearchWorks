@@ -17,7 +17,7 @@ RSpec.feature "Databases Access Point" do
   scenario "Database Topic facet should be present and uncollapsed" do
     within("#facets") do
       within(".blacklight-db_az_subject") do
-        expect(page).not_to have_css(".collapsed")
+        expect(page).to have_no_css(".collapsed")
         expect(page).to have_button 'Database topic'
       end
     end

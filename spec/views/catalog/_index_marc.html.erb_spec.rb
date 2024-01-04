@@ -28,17 +28,17 @@ RSpec.describe "catalog/_index_marc" do
 
     it "should link to the author" do
       expect(rendered).to have_css('li a', text: 'Arbitrary, Stewart.')
-      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_no_css('li a', text: /fantastic/)
       expect(rendered).to have_css('li', text: /fantastic\./)
     end
     it "should link to the corporate author" do
       expect(rendered).to have_css('li a', text: 'Arbitrary, Corporate.')
-      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_no_css('li a', text: /fantastic/)
       expect(rendered).to have_css('li', text: /fantastic\./)
     end
     it "should link to the meeting" do
       expect(rendered).to have_css('li a', text: 'Arbitrary Meeting.')
-      expect(rendered).not_to have_css('li a', text: /fantastic/)
+      expect(rendered).to have_no_css('li a', text: /fantastic/)
       expect(rendered).to have_css('li', text: /fantastic\./)
     end
     it "should render the imprint" do
@@ -73,7 +73,7 @@ RSpec.describe "catalog/_index_marc" do
       end
 
       it 'does not render the heading/section at all' do
-        expect(rendered).not_to have_css('dt', text: 'Summary')
+        expect(rendered).to have_no_css('dt', text: 'Summary')
       end
     end
   end

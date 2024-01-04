@@ -13,7 +13,7 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
 
     it 'renders the block properly if the collection members are not present' do
       expect(page).to have_css("h3", text: 'Item belongs to a collection')
-      expect(page).not_to have_content("Digital content")
+      expect(page).to have_no_content("Digital content")
     end
   end
 end

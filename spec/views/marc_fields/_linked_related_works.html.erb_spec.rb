@@ -21,7 +21,7 @@ RSpec.describe 'marc_fields/_linked_related_works' do
     it 'renders pre_text' do
       text = /i1_subfield_text:\s+i2_subfield_text:/ # in order
       expect(rendered).to have_css('dd', text:)
-      expect(rendered).not_to have_css('dd a', text:)
+      expect(rendered).to have_no_css('dd a', text:)
     end
 
     it 'renders link' do
@@ -32,22 +32,22 @@ RSpec.describe 'marc_fields/_linked_related_works' do
 
     it 'renders search' do
       expect(rendered).to have_css('dd:nth-of-type(1) a @href', text: 'q=')
-      expect(rendered).not_to have_css('dd:nth-of-type(1) a @href', text: 'q=%22') # not quoted
+      expect(rendered).to have_no_css('dd:nth-of-type(1) a @href', text: 'q=%22') # not quoted
 
       expect(rendered).to have_css('dd:nth-of-type(1) a @href', text: 'search_field=search_title')
 
       %w[a d f k l m n o p r s t].each do |subfield_code|
         expect(rendered).to have_css('dd:nth-of-type(1) a @href', text: "#{subfield_code}_subfield_text")
       end
-      expect(rendered).not_to have_css('dd:nth-of-type(1) a @href', text: 'h_subfield_text') # inner text
+      expect(rendered).to have_no_css('dd:nth-of-type(1) a @href', text: 'h_subfield_text') # inner text
     end
 
     it 'renders post_text' do
       text = 'x1_subfield_text. x2_subfield_text. 3_subfield_text' # in order
       expect(rendered).to have_css('dd:nth-of-type(1)', text:)
-      expect(rendered).not_to have_css('dd:nth-of-type(1) a', text:)
+      expect(rendered).to have_no_css('dd:nth-of-type(1) a', text:)
       %w[0 5 8].each do |subfield_code|
-        expect(rendered).not_to have_css('dd:nth-of-type(1) a', text: "#{subfield_code}_subfield_text")
+        expect(rendered).to have_no_css('dd:nth-of-type(1) a', text: "#{subfield_code}_subfield_text")
       end
     end
 
@@ -57,7 +57,7 @@ RSpec.describe 'marc_fields/_linked_related_works' do
 
     it 'renders 710 fields' do
       expect(rendered).to have_css('dd:nth-of-type(3) a', text: '710_with_ind2_1')
-      expect(rendered).not_to have_css('dd:nth-of-type(3) a', text: '710_with_ind2_2')
+      expect(rendered).to have_no_css('dd:nth-of-type(3) a', text: '710_with_ind2_2')
     end
 
     it 'renders 711 fields' do

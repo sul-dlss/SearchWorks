@@ -17,7 +17,7 @@ RSpec.describe 'Exhibit Access Panel', js: true do
   context 'when there are no exhibits' do
     it 'does not display the Context heading' do
       visit '/view/mf774fs2413'
-      expect(page).not_to have_css('[data-behavior="exhibits-panel"]', visible: true)
+      expect(page).to have_no_css('[data-behavior="exhibits-panel"]', visible: true)
 
       expect(page).to have_css('h2', text: 'Context', visible: false)
     end
@@ -119,7 +119,7 @@ RSpec.describe 'Exhibit Access Panel', js: true do
         expect(page).to have_button('show all 7 exhibits')
         click_button('show all 7 exhibits')
         expect(page).to have_css('.media', count: 7, visible: true)
-        expect(page).not_to have_button('show all 7 exhibits')
+        expect(page).to have_no_button('show all 7 exhibits')
       end
     end
   end

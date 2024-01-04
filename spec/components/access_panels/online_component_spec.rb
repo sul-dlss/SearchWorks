@@ -77,7 +77,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     it 'is false when there are only supplemental links present' do
       render_inline(supplemental)
 
-      expect(page).not_to have_selector '.panel-online'
+      expect(page).to have_no_selector '.panel-online'
     end
   end
 
@@ -166,7 +166,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
     it "should render nothing" do
       render_inline(described_class.new(document:))
-      expect(page).not_to have_css(".panel-online")
+      expect(page).to have_no_css(".panel-online")
     end
   end
 
@@ -197,8 +197,8 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
         document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true],
                                     marc_json_struct: simple_856)
         render_inline(described_class.new(document:))
-        expect(page).to     have_css('.panel-online')
-        expect(page).not_to have_link('Find full text')
+        expect(page).to have_css('.panel-online')
+        expect(page).to have_no_link('Find full text')
         expect(page).to     have_css('[data-behavior="sfx-panel"]')
         expect(page).to     have_link('See the full find it @ Stanford menu')
       end

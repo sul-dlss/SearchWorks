@@ -26,8 +26,8 @@ RSpec.describe "catalog/record/_mods_upper_metadata_section" do
 
     it "should display correct sections" do
       render
-      expect(rendered).not_to have_css("dt")
-      expect(rendered).not_to have_css("dd")
+      expect(rendered).to have_no_css("dt")
+      expect(rendered).to have_no_css("dd")
     end
   end
 end

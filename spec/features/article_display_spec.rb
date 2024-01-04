@@ -36,8 +36,8 @@ RSpec.feature 'Article Record Display' do
 
         find_by_id('fulltextToggleBar').click
         expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
-        expect(page).not_to have_css('div.blacklight-eds_html_fulltext', visible: true)
-        expect(page).not_to have_content('This Journal')
+        expect(page).to have_no_css('div.blacklight-eds_html_fulltext', visible: true)
+        expect(page).to have_no_content('This Journal')
       end
 
       it 'renders HTML' do
@@ -45,7 +45,7 @@ RSpec.feature 'Article Record Display' do
 
         expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
         within('div.blacklight-eds_html_fulltext') do
-          expect(page).not_to have_content('<anid>')
+          expect(page).to have_no_content('<anid>')
         end
       end
     end
@@ -54,7 +54,7 @@ RSpec.feature 'Article Record Display' do
       it 'renders a login link instead' do
         visit article_path(document[:id])
 
-        expect(page).not_to have_css('button#fulltextToggleBar')
+        expect(page).to have_no_css('button#fulltextToggleBar')
 
         expect(page).to have_css('a h2', text: 'Log in to show fulltext')
       end
@@ -169,8 +169,8 @@ RSpec.feature 'Article Record Display' do
         'h1',
         text: 'This title is not available for guests. Log in to see the title and access the article.'
       )
-      expect(page).not_to have_css('.article-record-metadata')
-      expect(page).not_to have_content('Metadata Content')
+      expect(page).to have_no_css('.article-record-metadata')
+      expect(page).to have_no_content('Metadata Content')
     end
   end
 end

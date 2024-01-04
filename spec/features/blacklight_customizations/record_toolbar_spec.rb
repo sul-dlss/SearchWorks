@@ -10,12 +10,12 @@ RSpec.feature "Record Toolbar" do
     visit '/view/1'
     within "#content" do
       within "div.record-toolbar" do
-        expect(page).not_to have_css("button.navbar-toggler", visible: true)
+        expect(page).to have_no_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
-        expect(page).not_to have_css("a.previous.disabled", visible: true)
-        expect(page).not_to have_css("a.previous", visible: true)
-        expect(page).not_to have_css("a.next.disabled", visible: true)
-        expect(page).not_to have_css("a.next", visible: true)
+        expect(page).to have_no_css("a.previous.disabled", visible: true)
+        expect(page).to have_no_css("a.previous", visible: true)
+        expect(page).to have_no_css("a.next.disabled", visible: true)
+        expect(page).to have_no_css("a.next", visible: true)
       end
 
       within "div.navbar-collapse" do
@@ -32,7 +32,7 @@ RSpec.feature "Record Toolbar" do
       find('h3.index_title a').click
     end
 
-    expect(page).not_to have_css('a.previous', visible: true)
+    expect(page).to have_no_css('a.previous', visible: true)
   end
 
   scenario 'a citable item has export links', js: true do
@@ -58,7 +58,7 @@ RSpec.feature "Record Toolbar" do
 
     within "#content" do
       within "div.record-toolbar" do
-        expect(page).not_to have_css("button.navbar-toggler", visible: true)
+        expect(page).to have_no_css("button.navbar-toggler", visible: true)
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
         expect(page).to have_css("a.previous", visible: true)
         expect(page).to have_css("a.next", visible: true)

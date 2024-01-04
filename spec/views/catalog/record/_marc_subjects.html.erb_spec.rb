@@ -64,8 +64,8 @@ RSpec.describe "catalog/record/_marc_subjects" do
     it "should not display for non-databases" do
       allow(document).to receive(:is_a_database?).and_return(false)
       render
-      expect(rendered).not_to have_css("dd a", text: "DB Subject1")
-      expect(rendered).not_to have_css("dd a", text: "DB Subject2")
+      expect(rendered).to have_no_css("dd a", text: "DB Subject1")
+      expect(rendered).to have_no_css("dd a", text: "DB Subject2")
     end
   end
 end

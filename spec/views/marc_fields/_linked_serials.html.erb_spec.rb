@@ -40,13 +40,13 @@ RSpec.describe 'marc_fields/_linked_serials' do
 
     it 'renders text values as text' do
       expect(subject).to have_css('dd', text: 'Text Value1')
-      expect(subject).not_to have_css('dd a', text: 'Text Value1')
+      expect(subject).to have_no_css('dd a', text: 'Text Value1')
     end
 
     it 'combined arrays of links and text properly' do
       expect(subject).to have_css('dd a', text: 'Link Value1')
       expect(subject).to have_content('Text Value2')
-      expect(subject).not_to have_css('dd a', text: 'Text Value2')
+      expect(subject).to have_no_css('dd a', text: 'Text Value2')
       expect(subject).to have_css('dd a', text: 'Link Value2')
     end
 

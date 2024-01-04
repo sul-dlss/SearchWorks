@@ -31,14 +31,14 @@ RSpec.feature "Home Page" do
 
   scenario "there should be no more link on any facets" do
     within ('.home-page-facets') do
-      expect(page).not_to have_css('a', text: /more/)
+      expect(page).to have_no_css('a', text: /more/)
     end
   end
 
   scenario "should have the library facet hidden by default", js: true do
     within(".blacklight-building_facet") do
       expect(page).to have_button 'Library'
-      expect(page).not_to have_css('li a', visible: true)
+      expect(page).to have_no_css('li a', visible: true)
     end
   end
 

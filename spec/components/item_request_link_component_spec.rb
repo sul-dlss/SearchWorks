@@ -32,14 +32,14 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
       let(:folio_status) { 'Checked out' }
       let(:allowed_request_types) { ['Page'] }
 
-      it { is_expected.not_to have_link 'Request' }
+      it { is_expected.to have_no_link 'Request' }
     end
 
     context 'available' do
       let(:folio_status) { 'Available' }
       let(:allowed_request_types) { ['Hold', 'Recall'] }
 
-      it { is_expected.not_to have_link 'Request' }
+      it { is_expected.to have_no_link 'Request' }
     end
 
     context 'on-order item' do
@@ -47,7 +47,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
       let(:allowed_request_types) { [] }
       let(:current_location) { instance_double(Holdings::Location, code: 'ON-ORDER') }
 
-      it { is_expected.not_to have_link 'Request' }
+      it { is_expected.to have_no_link 'Request' }
     end
 
     context 'on-order without a FOLIO item' do

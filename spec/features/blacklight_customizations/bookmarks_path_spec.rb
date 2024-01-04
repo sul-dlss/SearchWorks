@@ -23,7 +23,7 @@ RSpec.feature "Selections Path" do
     within ".search-widgets" do
       expect(page).to have_css("a", text: "Cite 1 - 2")
       expect(page).to have_css("button", text: "Send 1 - 2")
-      expect(page).not_to have_css("button#select_all-dropdown")
+      expect(page).to have_no_css("button#select_all-dropdown")
     end
   end
 end

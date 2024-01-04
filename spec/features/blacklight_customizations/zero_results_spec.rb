@@ -10,8 +10,8 @@ RSpec.feature "Zero results" do
   end
 
   scenario "search widgets and start over should not be present" do
-    expect(page).not_to have_css("a.catalog_startOverLink", text: /Catalog start/i)
-    expect(page).not_to have_css("div#search-widgets")
+    expect(page).to have_no_css("a.catalog_startOverLink", text: /Catalog start/i)
+    expect(page).to have_no_css("div#search-widgets")
   end
 
   scenario "should have correct headings and elements present" do

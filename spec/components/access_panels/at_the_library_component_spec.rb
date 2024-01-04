@@ -118,11 +118,11 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     it 'displays the MARC 590 as a bound with note (excluding subfield $c)' do
       expect(page).to have_css('.bound-with-note.note-highlight a', text: 'Copy 1 bound with v. 140')
-      expect(page).not_to have_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')
+      expect(page).to have_no_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')
     end
 
     it "does not display request links for requestable libraries" do
-      expect(page).not_to have_content("Request")
+      expect(page).to have_no_content("Request")
     end
 
     it 'displays the callnumber with live lookup' do
@@ -158,7 +158,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         ]
       )
       render_inline(described_class.new(document:))
-      expect(page).not_to have_css('a', text: "Request")
+      expect(page).to have_no_css('a', text: "Request")
     end
   end
 
@@ -215,7 +215,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       it "should display the current location as the home location" do
-        expect(page).not_to have_css('.location-name', text: 'Stacks')
+        expect(page).to have_no_css('.location-name', text: 'Stacks')
         expect(page).to have_css('.location-name', text: 'Information Center display')
       end
       it "should not be displayed if the current location is a special location that gets treated like a home location" do
@@ -307,7 +307,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       skip "should not have any requestable items" do
-        expect(page).not_to have_css('td[data-request-url]')
+        expect(page).to have_no_css('td[data-request-url]')
       end
     end
 
@@ -330,7 +330,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       skip "should not have a request url stored in the data attribute" do
-        expect(page).not_to have_css('td[data-request-url]')
+        expect(page).to have_no_css('td[data-request-url]')
       end
 
       it "should have a request link in the item" do
@@ -355,7 +355,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       skip "should have an item that does not have a request url" do
-        expect(rendered).not_to have_css('.availability td[data-item-id="123"][data-request-url]')
+        expect(rendered).to have_no_css('.availability td[data-item-id="123"][data-request-url]')
       end
     end
   end

@@ -7,7 +7,7 @@ RSpec.describe "Search parameters in all caps" do
     click_button 'search'
 
     within('.breadcrumb') do
-      expect(page).not_to have_content("HELLO WORLD")
+      expect(page).to have_no_content("HELLO WORLD")
       expect(page).to have_content("hello world")
     end
 

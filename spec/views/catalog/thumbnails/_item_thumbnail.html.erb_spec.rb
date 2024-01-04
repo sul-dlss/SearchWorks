@@ -19,7 +19,7 @@ RSpec.describe "catalog/thumbnails/_item_thumbnail" do
         allow(view).to receive(:document_index_view_type).and_return(:list)
         render
         expect(rendered).to have_css('img.cover-image', visible: false)
-        expect(rendered).not_to have_css('.fake-cover')
+        expect(rendered).to have_no_css('.fake-cover')
       end
     end
   end
@@ -39,7 +39,7 @@ RSpec.describe "catalog/thumbnails/_item_thumbnail" do
       it 'should not include the thumbnail image element if there is a known stacks image' do
         render
         html = Capybara.string(rendered)
-        expect(html).not_to have_css('img.cover-image')
+        expect(html).to have_no_css('img.cover-image')
       end
     end
   end

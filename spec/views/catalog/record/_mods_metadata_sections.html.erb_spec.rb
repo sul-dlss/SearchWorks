@@ -57,9 +57,9 @@ RSpec.describe "catalog/record/_mods_metadata_sections" do
 
     it "should display correct sections" do
       render
-      expect(rendered).not_to have_css('h3', text: "Abstract/Contents")
-      expect(rendered).not_to have_css('h3', text: "Subjects")
-      expect(rendered).not_to have_css('h3', text: "Access conditions")
+      expect(rendered).to have_no_css('h3', text: "Abstract/Contents")
+      expect(rendered).to have_no_css('h3', text: "Subjects")
+      expect(rendered).to have_no_css('h3', text: "Access conditions")
     end
   end
 end
