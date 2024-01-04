@@ -683,7 +683,7 @@
     "discoveryDisplayName": "Green Library Media Center",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
+      "duration": 2,
       "intervalId": "Weeks"
     },
     "staffSlips": [
@@ -707,7 +707,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:22.422+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:55:32.604+00:00",
+      "updatedDate": "2023-12-29T16:31:47.175+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -755,7 +755,7 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"SUL\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
+      "duration": 2,
       "intervalId": "Weeks"
     },
     "staffSlips": [
@@ -779,7 +779,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:16.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:53:07.852+00:00",
+      "updatedDate": "2023-12-29T16:31:29.194+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
