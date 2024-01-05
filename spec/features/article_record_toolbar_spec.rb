@@ -43,7 +43,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
     it 'shows only the Next button' do
       skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
-        expect(page).not_to have_css('.previous', text: 'Previous')
+        expect(page).to have_no_css('.previous', text: 'Previous')
         expect(page).to have_css('.next', text: 'Next')
       end
     end
@@ -56,7 +56,7 @@ RSpec.describe 'Article Record Toolbar', js: true do
       skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
         expect(page).to have_css('.previous', text: 'Previous')
-        expect(page).not_to have_css('.next', text: 'Next')
+        expect(page).to have_no_css('.next', text: 'Next')
       end
     end
   end
@@ -68,8 +68,8 @@ RSpec.describe 'Article Record Toolbar', js: true do
     it 'does not show any Previous or Next buttons' do
       skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
-        expect(page).not_to have_css('.previous', text: 'Previous')
-        expect(page).not_to have_css('.next', text: 'Next')
+        expect(page).to have_no_css('.previous', text: 'Previous')
+        expect(page).to have_no_css('.next', text: 'Next')
       end
     end
   end

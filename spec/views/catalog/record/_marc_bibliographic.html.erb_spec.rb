@@ -19,8 +19,8 @@ RSpec.describe "catalog/record/_marc_bibliographic" do
     it "should not display for non-databases" do
       allow(document).to receive(:is_a_database?).and_return(false)
       render
-      expect(rendered).not_to have_css("dt", text: "Note")
-      expect(rendered).not_to have_css("dd", text: "A local note added to subjects only")
+      expect(rendered).to have_no_css("dt", text: "Note")
+      expect(rendered).to have_no_css("dd", text: "A local note added to subjects only")
     end
   end
 
@@ -51,8 +51,8 @@ RSpec.describe "catalog/record/_marc_bibliographic" do
     it 'should include the related works section' do
       expect(rendered).to have_css('dt', text: 'Related Work')
       expect(rendered).to have_css('dd a', text: '700 with t 700 $e Title.')
-      expect(rendered).not_to have_css('dt', text: 'Included Work')
-      expect(rendered).not_to have_css('dt', text: 'Contributor')
+      expect(rendered).to have_no_css('dt', text: 'Included Work')
+      expect(rendered).to have_no_css('dt', text: 'Contributor')
     end
   end
 end

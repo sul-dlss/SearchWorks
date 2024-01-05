@@ -19,8 +19,8 @@ RSpec.describe "Responsive Home Page", feature: true, js: true do
 
       within(".blacklight-access_facet") do
         expect(page).to have_button 'Access'
-        expect(page).not_to have_css("li a", text: "Online", visible: true)
-        expect(page).not_to have_css("li a", text: "At the Library", visible: true)
+        expect(page).to have_no_css("li a", text: "Online", visible: true)
+        expect(page).to have_no_css("li a", text: "At the Library", visible: true)
       end
     end
   end

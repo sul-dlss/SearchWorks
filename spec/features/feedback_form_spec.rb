@@ -6,7 +6,7 @@ RSpec.feature "Feedback form (js)", js: true do
   end
 
   scenario "feedback form should be hidden" do
-    expect(page).not_to have_css("#feedback-form", visible: true)
+    expect(page).to have_no_css("#feedback-form", visible: true)
   end
   scenario "feedback form should be shown filled out and submitted" do
     skip("Passes locally, not on Travis.") if ENV['CI']

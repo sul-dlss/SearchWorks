@@ -240,7 +240,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).not_to have_link 'Request' }
+      it { expect(page).to have_no_link 'Request' }
     end
 
     context 'with special collection item' do
@@ -273,13 +273,13 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       context 'with "Missing" status' do
         let(:folio_status) { 'Missing' }
 
-        it { expect(page).not_to have_link }
+        it { expect(page).to have_no_link }
       end
 
       context 'with "In process" status' do
         let(:folio_status) { 'In process' }
 
-        it { expect(page).not_to have_link }
+        it { expect(page).to have_no_link }
       end
     end
   end

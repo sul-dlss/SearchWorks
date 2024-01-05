@@ -10,7 +10,7 @@ RSpec.describe "Special Quotes" do
 
     within('.breadcrumb') do
       expect(page).to have_content '"stuff"'
-      expect(page).not_to have_content '『stuff』'
+      expect(page).to have_no_content '『stuff』'
     end
   end
 end

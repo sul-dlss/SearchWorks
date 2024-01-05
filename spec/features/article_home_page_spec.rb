@@ -16,7 +16,7 @@ RSpec.feature 'Article Home Page' do
       %w[search author title subject source].each do |search_field|
         expect(page).to have_css("option[value=\"#{search_field}\"]")
       end
-      expect(page).not_to have_css("option[selected]") # defaults to top one (i.e., search)
+      expect(page).to have_no_css("option[selected]") # defaults to top one (i.e., search)
     end
   end
 
@@ -42,7 +42,7 @@ RSpec.feature 'Article Home Page' do
 
     it 'adds a hidden input for setting checkboxes that are selected' do
       within '#dynamic-hidden-inputs-target', visible: false do
-        expect(page).not_to have_css('input#hidden_eds_limiter_RT', visible: false)
+        expect(page).to have_no_css('input#hidden_eds_limiter_RT', visible: false)
       end
 
       check 'Limiter1'
@@ -60,7 +60,7 @@ RSpec.feature 'Article Home Page' do
       uncheck 'Limiter2'
 
       within '#dynamic-hidden-inputs-target', visible: false do
-        expect(page).not_to have_css('input#hidden_eds_limiter_FT1', visible: false)
+        expect(page).to have_no_css('input#hidden_eds_limiter_FT1', visible: false)
       end
     end
   end

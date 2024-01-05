@@ -34,7 +34,7 @@ RSpec.describe 'PURL Embed', js: true do
     end
 
     it 'should not include the online panel' do
-      expect(page).not_to have_css('.panel-online', visible: true)
+      expect(page).to have_no_css('.panel-online', visible: true)
     end
   end
 end

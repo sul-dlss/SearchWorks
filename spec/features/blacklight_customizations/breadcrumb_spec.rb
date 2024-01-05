@@ -7,7 +7,7 @@ RSpec.describe "Breadcrumb Customizations" do
 
       within('.breadcrumb') do
         expect(page).to have_css('.filter-value', text: 'Image Collection1')
-        expect(page).not_to have_content('29')
+        expect(page).to have_no_content('29')
       end
     end
   end

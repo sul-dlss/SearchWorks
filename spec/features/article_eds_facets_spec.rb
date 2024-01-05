@@ -17,8 +17,8 @@ RSpec.feature 'EDS Facets', js: true do
         end
         click_button 'Source type'
         within '.blacklight-eds_publication_type_facet' do
-          expect(page).not_to have_css('.facet_limit-active')
-          expect(page).not_to have_css('.alert-warning')
+          expect(page).to have_no_css('.facet_limit-active')
+          expect(page).to have_no_css('.alert-warning')
         end
       end
     end
@@ -36,8 +36,8 @@ RSpec.feature 'EDS Facets', js: true do
         end
         click_button 'Database'
         within '.blacklight-eds_content_provider_facet' do
-          expect(page).not_to have_css('.facet_limit-active')
-          expect(page).not_to have_css('.alert-warning')
+          expect(page).to have_no_css('.facet_limit-active')
+          expect(page).to have_no_css('.alert-warning')
         end
       end
     end

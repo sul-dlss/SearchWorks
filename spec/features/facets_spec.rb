@@ -35,7 +35,7 @@ RSpec.describe 'Facets' do
         click_link 'Green'
 
         within('.facets') do
-          expect(page).not_to have_css('h3', text: 'Location')
+          expect(page).to have_no_css('h3', text: 'Location')
         end
       end
     end

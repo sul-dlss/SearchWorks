@@ -27,7 +27,7 @@ RSpec.describe 'catalog/_show_mods' do
       end
 
       it 'does not include the purl-embed-viewer element' do
-        expect(rendered).not_to have_css('.purl-embed-viewer')
+        expect(rendered).to have_no_css('.purl-embed-viewer')
       end
     end
 
@@ -52,7 +52,7 @@ RSpec.describe 'catalog/_show_mods' do
 
   context 'when a document does not have a druid' do
     it 'does not include the purl-embed-viewer element' do
-      expect(rendered).not_to have_css('.purl-embed-viewer')
+      expect(rendered).to have_no_css('.purl-embed-viewer')
     end
   end
 end

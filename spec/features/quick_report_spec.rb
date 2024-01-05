@@ -7,7 +7,7 @@ RSpec.feature 'Quick report form (js)', js: true do
 
   scenario 'Quick report should only be available on show page' do
     click_link 'Feedback'
-    expect(page).not_to have_css('button.btn-quick-report')
+    expect(page).to have_no_css('button.btn-quick-report')
     visit solr_document_path('1')
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
@@ -23,7 +23,7 @@ RSpec.feature 'Quick report form (no js)' do
 
   scenario 'Quick report should only be available on show page' do
     click_link 'Feedback'
-    expect(page).not_to have_css('button.btn-quick-report')
+    expect(page).to have_no_css('button.btn-quick-report')
     visit solr_document_path('1')
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')

@@ -157,7 +157,7 @@ RSpec.describe "catalog/_index_location" do
     end
 
     it "should not display request links for requestable libraries" do
-      expect(rendered).not_to have_content("Request")
+      expect(rendered).to have_no_content("Request")
     end
     it 'displays a link to the full record' do
       expect(rendered).to have_css 'th', text: 'Some records bound together'
@@ -216,8 +216,8 @@ RSpec.describe "catalog/_index_location" do
 
       it "should not display the location" do
         expect(rendered).to have_css('tbody tr', count: 2)
-        expect(rendered).not_to have_content('library has')
-        expect(rendered).not_to have_content('Current periodicals')
+        expect(rendered).to have_no_content('library has')
+        expect(rendered).to have_no_content('Current periodicals')
       end
     end
   end
@@ -252,7 +252,7 @@ RSpec.describe "catalog/_index_location" do
 
         it "should put the request in the row w/ the location (since there will be multiple rows for callnumbers)" do
           expect(rendered).to have_css('tbody td a', text: 'Request')
-          expect(rendered).not_to have_css('tbody td[data-item-id] a', text: 'Request')
+          expect(rendered).to have_no_css('tbody td[data-item-id] a', text: 'Request')
         end
       end
     end

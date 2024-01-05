@@ -20,8 +20,8 @@ RSpec.describe 'marc_fields/_linked_author_index' do
       expect(rendered).to have_css('li a', text: 'Dodaro, Gene L.')
       expect(rendered).to have_css('li a @href', text: /q=%22Dodaro%2C\+Gene\+L\.%22/)
       expect(rendered).to have_css('li a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('li a @href', text: /author\./)
-      expect(rendered).not_to have_css('li a @href', text: /\sAuthor/)
+      expect(rendered).to have_no_css('li a @href', text: /author\./)
+      expect(rendered).to have_no_css('li a @href', text: /\sAuthor/)
     end
 
     it 'included the extra text after the link' do
@@ -41,8 +41,8 @@ RSpec.describe 'marc_fields/_linked_author_index' do
       expect(rendered).to have_css('li a', text: 'Ecuador. Procuraduría General del Estado, A Title')
       expect(rendered).to have_css('li a @href', text: /q=%22Ecuador.\+Procuradur%C3%ADa\+General\+del\+Estado%2C%22/)
       expect(rendered).to have_css('li a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('li a @href', text: /A Title/)
-      expect(rendered).not_to have_css('li a @href', text: /issuing body/)
+      expect(rendered).to have_no_css('li a @href', text: /A Title/)
+      expect(rendered).to have_no_css('li a @href', text: /issuing body/)
     end
 
     it 'included the extra text after the link' do
@@ -75,8 +75,8 @@ RSpec.describe 'marc_fields/_linked_author_index' do
       expect(rendered).to have_css('li:nth-child(1) a', text: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria) A title')
       expect(rendered).to have_css('li:nth-child(1) a @href', text: /q=%22Technical\+Workshop\+on\+Organic\+Agriculture\+%281st\+%3A\+2010\+%3A\+Ogbomoso%2C\+Nigeria%29%22/)
       expect(rendered).to have_css('li:nth-child(1) a @href', text: /search_field=search_author/)
-      expect(rendered).not_to have_css('li:nth-child(1) a @href', text: /A title/)
-      expect(rendered).not_to have_css('li:nth-child(1) a @href', text: /creator/)
+      expect(rendered).to have_no_css('li:nth-child(1) a @href', text: /A title/)
+      expect(rendered).to have_no_css('li:nth-child(1) a @href', text: /creator/)
     end
 
     it 'renders the venacular correctly' do

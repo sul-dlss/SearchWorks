@@ -20,7 +20,7 @@ RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
       within '.sort-and-per-page' do
         page.find('button.btn.btn-sul-toolbar', text: 'View').click
 
-        expect(page).not_to have_css('a.view-type-list i.active-icon')
+        expect(page).to have_no_css('a.view-type-list i.active-icon')
 
         expect(page).to have_css('a.view-type-gallery i.active-icon')
       end
@@ -42,7 +42,7 @@ RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
 
     it 'should change to current sort' do
       within '.sort-and-per-page' do
-        expect(page).not_to have_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
+        expect(page).to have_no_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by relevance').click
         within 'a', text: 'relevance' do
           expect(page).to have_css('i.active-icon')
@@ -50,7 +50,7 @@ RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
         click_link 'author'
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by author').click
         within 'a', text: 'relevance' do
-          expect(page).not_to have_css('i.active-icon')
+          expect(page).to have_no_css('i.active-icon')
         end
         within 'a', text: 'author' do
           expect(page).to have_css('i.active-icon')
@@ -78,7 +78,7 @@ RSpec.describe 'Sort and per page toolbar', feature: true, js: true do
         end
         page.find('button.btn.btn-sul-toolbar', text: '50 per page').click
         within 'a', text: '20' do
-          expect(page).not_to have_css('i.active-icon')
+          expect(page).to have_no_css('i.active-icon')
         end
         within 'a', text: '50' do
           expect(page).to have_css('i.active-icon')

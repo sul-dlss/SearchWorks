@@ -45,7 +45,7 @@ RSpec.describe "catalog/_index_online_section" do
       end
 
       it 'does not display Google Books link' do
-        expect(rendered).not_to have_css('dd li a', text: 'Google Books (Full view)')
+        expect(rendered).to have_no_css('dd li a', text: 'Google Books (Full view)')
       end
     end
   end
