@@ -140,8 +140,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -164,7 +164,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:21.327+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:55:15.440+00:00",
+      "updatedDate": "2024-01-04T16:38:34.581+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -207,8 +207,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -231,7 +231,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:08.635+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:53:52.381+00:00",
+      "updatedDate": "2024-01-04T16:37:39.180+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -243,8 +243,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -267,7 +267,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:23.530+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:56:42.594+00:00",
+      "updatedDate": "2024-01-04T16:39:08.611+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -279,8 +279,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -303,7 +303,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:27.957+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:57:05.521+00:00",
+      "updatedDate": "2024-01-04T16:39:25.831+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -315,8 +315,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -339,7 +339,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:09.535+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:54:08.843+00:00",
+      "updatedDate": "2024-01-04T16:37:49.338+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -474,8 +474,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -498,7 +498,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:03.032+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:53:34.863+00:00",
+      "updatedDate": "2024-01-04T16:37:23.820+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -683,8 +683,8 @@
     "discoveryDisplayName": "Green Library Media Center",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 2,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -707,7 +707,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:22.422+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-29T16:31:47.175+00:00",
+      "updatedDate": "2024-01-04T16:38:54.278+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -719,7 +719,7 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"GSB\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 4,
+      "duration": 2,
       "intervalId": "Weeks"
     },
     "staffSlips": [
@@ -743,7 +743,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:06.934+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-18T17:01:13.582+00:00",
+      "updatedDate": "2024-01-04T17:00:39.312+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     }
   },
@@ -755,8 +755,8 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"SUL\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 2,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -779,7 +779,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:16.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-29T16:31:29.194+00:00",
+      "updatedDate": "2024-01-04T16:38:19.544+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -950,8 +950,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -974,7 +974,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:14.414+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-22T14:54:22.966+00:00",
+      "updatedDate": "2024-01-04T16:38:03.502+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -1118,8 +1118,8 @@
     "description": "{\"isDefaultPickup\":true}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 4,
-      "intervalId": "Weeks"
+      "duration": 7,
+      "intervalId": "Days"
     },
     "staffSlips": [
       {
@@ -1142,7 +1142,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:00.325+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-12-15T20:05:05.864+00:00",
+      "updatedDate": "2024-01-04T16:37:08.337+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   }
