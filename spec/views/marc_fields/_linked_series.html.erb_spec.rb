@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'marc_fields/_linked_series' do
-  subject { Capybara.string(rendered) }
+  subject { Capybara.string(rendered.to_s) }
 
   let(:linked_series) do
     double(

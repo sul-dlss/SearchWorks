@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'catalog/thumbnails/_collection_thumbnail' do
   let(:document) { SolrDocument.new(id: '123') }
 
-  subject { Capybara.string(rendered) }
+  subject { Capybara.string(rendered.to_s) }
 
   before do
     allow(view).to receive_messages(document:, blacklight_config: CatalogController.blacklight_config)

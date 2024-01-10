@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'marc_fields/_bound_with_note_for_access_panel' do
-  subject { Capybara.string(rendered) }
+  subject { Capybara.string(rendered.to_s) }
 
   let(:bound_with_note) do
     double(

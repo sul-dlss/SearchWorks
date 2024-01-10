@@ -10,8 +10,10 @@ RSpec.describe 'Stackmap' do
   end
 
   context 'when the library parameter is missing' do
-    it 'raises an error' do
-      expect { get '/view/1/stackmap' }.to raise_error ActionController::ParameterMissing
+    it 'is a bad request' do
+      get '/view/1/stackmap'
+
+      expect(response).to have_http_status(:bad_request)
     end
   end
 end
