@@ -4550,6 +4550,34 @@
     }
   },
   {
+    "id": "4859ee2a-36cb-4b53-8b31-695894244f6e",
+    "name": "SAL3 Scan PAGE-SP",
+    "code": "SAL3-SCAN-PAGE-SP",
+    "discoveryDisplayName": "For use in Special Collections Reading Room",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "scanServicePointCode": "SAL3",
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "SPEC"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-01-10T19:42:38.899+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-01-10T19:42:38.899+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "4897efd8-759f-43eb-b282-ab9f97fefcb8",
     "name": "Law Stacks 2nd floor",
     "code": "LAW-STACKS2",
@@ -10115,9 +10143,9 @@
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
     "details": {
     },
-    "primaryServicePoint": "0939d005-3e55-46d4-ab36-6f9099675876",
+    "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
-      "0939d005-3e55-46d4-ab36-6f9099675876"
+      "ef1ea792-b2bb-49a2-8747-94376b64a74d"
     ],
     "servicePoints": [
 
@@ -10125,8 +10153,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:29.013+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:29.013+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-01-11T15:56:26.565+00:00",
+      "updatedByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6"
     }
   },
   {
@@ -12785,8 +12813,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:40.477+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-09-22T21:09:28.116+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2024-01-11T15:56:53.073+00:00",
+      "updatedByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6"
     }
   },
   {
