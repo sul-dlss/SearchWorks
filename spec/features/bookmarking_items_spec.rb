@@ -34,7 +34,7 @@ RSpec.feature 'Bookmarking Items' do
 
       within('.modal-dialog') do
         expect(page).to have_css('h4', text: 'MLA', count: 2)
-        click_link 'By citation format'
+        click_button 'By citation format'
         expect(page).to have_css('h4', text: 'MLA', count: 1)
         expect(page).to have_css('p.citation_style_MLA', count: 2)
       end

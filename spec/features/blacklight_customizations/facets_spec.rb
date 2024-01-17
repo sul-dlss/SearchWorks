@@ -16,7 +16,7 @@ RSpec.feature "Facets Customizations" do
     skip('Fails intermitently on Travis.') if ENV['CI']
     visit blacklight_advanced_search_engine.advanced_search_path
 
-    click_link "Resource type"
+    click_button "Resource type"
     check "Book"
 
     click_button "advanced-search-submit"
