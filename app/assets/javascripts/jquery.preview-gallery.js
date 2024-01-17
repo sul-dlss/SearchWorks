@@ -125,8 +125,14 @@
         / to have a bad time with an infinite while loop. This only manifests
         / on the show page when using the "back" button to get back to a show
         / page using the browse nearby feature.
+        /
+        / Reproduction steps for NaN:
+        / 1. visit https://searchworks.stanford.edu/view/2279186
+        / 2. click on the bound-with link "Copy 1 bound with v. 5, no. 1. 36105026515499 (item id)"
+        / 3. click the back button
+        /
         */
-        if ($itemsPerRow === NaN || $itemsPerRow === 0) {
+        if (Number.isNaN($itemsPerRow) || $itemsPerRow === 0) {
           return;
         }
 
