@@ -108,4 +108,5 @@ gem 'global_alerts'
 # See: https://github.com/ViewComponent/view_component/issues/1565
 gem 'view_component', '< 2.75'
 
+# Use for parsing FOLIO circulation rules
 gem "parslet", "~> 2.0"
