@@ -55,7 +55,7 @@ class ArticleFulltextLinkPresenter
       #{online_label}
       #{(link_to('View on detail page', article_url(document)) if document_has_fulltext?)}
       #{image_tag(image_url('pdf-icon.svg'), height: '20px', alt: 'PDF')}
-      #{link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type), data: { 'turbolinks' => false })}
+      #{link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type), data: { turbo: false })}
       #{stanford_only_icon}
     HTML
   end

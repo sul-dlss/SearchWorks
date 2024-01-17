@@ -6,7 +6,7 @@
       <% links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">
           <% if link.href == 'detail' %>
-            <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
+            <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
           <% else %>
             <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
           <% end %>
