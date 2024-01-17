@@ -1,6 +1,6 @@
-<%= render @layout.new(classes: ['panel-in-collection']) do |c| %>
-  <% c.title { 'Item belongs to a collection' } %>
-  <% c.body do %>
+<%= render @layout.new(classes: ['panel-in-collection']) do |component| %>
+  <% component.with_title { 'Item belongs to a collection' } %>
+  <% component.with_body do %>
     <h4><%= link_to(helpers.document_presenter(@collection).heading, solr_document_path(@collection[:id])) %></h4>
     <% if @collection[:summary_display] %>
       <div data-behavior='truncate'>

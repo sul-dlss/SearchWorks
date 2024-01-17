@@ -1,8 +1,8 @@
 <%= render(@layout.new(facet_field: @facet_field)) do |component| %>
-  <% component.label do %>
+  <% component.with_label do %>
     <%= @facet_field.label %>
   <% end %>
-  <% component.body do %>
+  <% component.with_body do %>
     <% if @facet_field.active? %>
       <div class="alert alert-warning" role="alert">
         <%= t('searchworks.articles.flashes.additional_selections_warning_html') %>

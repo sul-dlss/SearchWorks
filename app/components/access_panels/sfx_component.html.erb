@@ -1,7 +1,7 @@
-<%= render @layout.new(classes: ['panel-online', 'sfx-panel'], data: { behavior: 'sfx-panel', 'sfx-url': sfx_data_path(url: Addressable::URI.encode(sfx_url)) }) do |c| %>
-  <% c.title { 'All available sources' } %>
+<%= render @layout.new(classes: ['panel-online', 'sfx-panel'], data: { behavior: 'sfx-panel', 'sfx-url': sfx_data_path(url: Addressable::URI.encode(sfx_url)) }) do |component| %>
+  <% component.with_title { 'All available sources' } %>
 
-  <% c.body do %>
+  <% component.with_body do %>
     <div data-behavior="sfx-panel-body">
       <div class='loading-spinner'></div>
     </div>

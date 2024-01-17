@@ -4,7 +4,7 @@ class ViewTypeDropdownComponent < Blacklight::Response::ViewTypeComponent
   renders_many :view_items, 'ViewTypeDropdownItemComponent'
 
   def with_view(...)
-    view_item(...)
+    with_view_item(...)
   end
 
   def active_icon

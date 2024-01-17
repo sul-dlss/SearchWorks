@@ -103,6 +103,7 @@ RSpec.configure do |config|
   end
 
   config.include ViewComponent::TestHelpers, type: :component
+  config.include ViewComponent::SystemTestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
