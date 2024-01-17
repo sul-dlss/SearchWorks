@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Options Facet' do
-  it 'renders the eds_search_limiters_facet as checkboxes (behaves like a link)', js: true do
+  it 'renders the eds_search_limiters_facet as checkboxes (behaves like a link)', :js do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     visit articles_path(q: 'Example Query')
 

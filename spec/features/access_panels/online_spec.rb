@@ -38,7 +38,7 @@ RSpec.feature "Online Access Panel" do
       )
     end
 
-    it 'renders the panel', js: true do
+    it 'renders the panel', :js do
       visit solr_document_path('57')
 
       within('.panel-online') do

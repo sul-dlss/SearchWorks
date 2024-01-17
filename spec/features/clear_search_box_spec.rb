@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Search box", js: true do
+RSpec.feature "Search box", :js do
   scenario "clear query text" do
     visit root_path
 

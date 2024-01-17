@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Call num search', js: true do
+RSpec.describe 'Call num search', :js do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end

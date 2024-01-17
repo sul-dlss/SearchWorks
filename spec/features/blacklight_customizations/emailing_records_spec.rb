@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Emailing Records", js: true do
+RSpec.describe "Emailing Records", :js do
   context 'when a user is not logged in' do
     it 'the are provided a reCAPTCHA challenge' do
       visit solr_document_path('14')

@@ -18,7 +18,7 @@ RSpec.feature 'Article Record Display' do
     end
   end
 
-  describe 'Fulltext', js: true do
+  describe 'Fulltext', :js do
     let(:document) do
       SolrDocument.new(id: '123', eds_title: 'TITLE', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
     end
@@ -85,7 +85,7 @@ RSpec.feature 'Article Record Display' do
     end
   end
 
-  describe 'Embedded SFX Menu', js: true do
+  describe 'Embedded SFX Menu', :js do
     let(:document) do
       SolrDocument.new(
         id: 'abc123',

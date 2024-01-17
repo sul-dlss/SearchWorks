@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature 'EDS Facets', js: true do
+RSpec.feature 'EDS Facets', :js do
   describe 'OR facets' do
     context 'Source Type' do
       scenario 'shows warning message when 1 field is selected' do

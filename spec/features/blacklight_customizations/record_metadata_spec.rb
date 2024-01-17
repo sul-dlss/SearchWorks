@@ -5,7 +5,7 @@ RSpec.feature 'Record view' do
     visit('/view/10')
   end
 
-  scenario 'should have correct cover image attributes', js: true do
+  scenario 'should have correct cover image attributes', :js do
     within 'div.document' do
       expect(page).to have_css('img.cover-image', visible: true)
       expect(page).to have_css(

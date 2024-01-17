@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Alterate catalog results', js: true do
+RSpec.feature 'Alterate catalog results', :js do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Bookmarking Items' do
-  context 'Citations', js: true do
+  context 'Citations', :js do
     let(:citations) { '<p class="citation_style_MLA">MLA Citation</p>' }
 
     before { stub_oclc_response(citations, for: '12345') }

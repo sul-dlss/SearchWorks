@@ -25,7 +25,7 @@ RSpec.feature "Skip-to Navigation" do
     end
   end
 
-  scenario "has skip-to navigation links to search field, main container and records in selections page", js: true do
+  scenario "has skip-to navigation links to search field, main container and records in selections page", :js do
     visit root_path
     fill_in 'q', with: '20'
     find('button#search').click
@@ -39,7 +39,7 @@ RSpec.feature "Skip-to Navigation" do
     end
   end
 
-  scenario 'places focus on traditionally non-focusable elements', js: true do
+  scenario 'places focus on traditionally non-focusable elements', :js do
     visit root_path
 
     body_element = page.find("body")

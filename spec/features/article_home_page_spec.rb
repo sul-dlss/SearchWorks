@@ -31,7 +31,7 @@ RSpec.feature 'Article Home Page' do
     end
   end
 
-  describe 'Search Settings', js: true do
+  describe 'Search Settings', :js do
     before { visit articles_path }
 
     it 'adds a hidden input for any initial selections' do

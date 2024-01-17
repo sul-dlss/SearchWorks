@@ -7,7 +7,7 @@ RSpec.describe AccessPanels::LibraryComponent, type: :component do
 
   it "returns the image tag for the thumbnail for the specified library" do
     render_inline(component)
-    expect(page).to have_selector('img[src^="/assets/GREEN"][srcset^="/assets/GREEN@2x"]')
+    expect(page).to have_css('img[src^="/assets/GREEN"][srcset^="/assets/GREEN@2x"]')
   end
 
   context 'with a ZOMBIE library' do
@@ -16,7 +16,7 @@ RSpec.describe AccessPanels::LibraryComponent, type: :component do
     it "returns the image tag (w/ png extension) for the ZOMBIE library" do
       render_inline(component)
 
-      expect(page).to have_selector('img[src^="/assets/ZOMBIE"][srcset^="/assets/ZOMBIE@2x"]')
+      expect(page).to have_css('img[src^="/assets/ZOMBIE"][srcset^="/assets/ZOMBIE@2x"]')
     end
   end
 
@@ -26,7 +26,7 @@ RSpec.describe AccessPanels::LibraryComponent, type: :component do
     it "returns a placeholder panel" do
       render_inline(component)
 
-      expect(page).to have_selector('h3', text: 'Stanford Libraries')
+      expect(page).to have_css('h3', text: 'Stanford Libraries')
     end
   end
 end

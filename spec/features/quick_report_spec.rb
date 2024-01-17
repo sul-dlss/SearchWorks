@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Quick report form (js)', js: true do
+RSpec.feature 'Quick report form (js)', :js do
   before do
     visit root_path
   end

@@ -22,7 +22,7 @@ RSpec.feature 'Results Document Metadata' do
     end
   end
 
-  scenario 'should have correct cover image attributes', js: true do
+  scenario 'should have correct cover image attributes', :js do
     skip('Google Books API not working under test')
     visit root_path
     first('#q').set '10'

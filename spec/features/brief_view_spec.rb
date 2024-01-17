@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Brief View" do
-  scenario "Catalog search results", js: true do
+  scenario "Catalog search results", :js do
     visit search_catalog_path f: { format: ["Book"] }
     within '#view-type-dropdown' do
       click_button 'View'
@@ -20,7 +20,7 @@ RSpec.feature "Brief View" do
       expect(page).to have_css('.brief-document ul li', text: 'Chemistry & ChemEng Library (Swain) : Stacks : ABC')
     end
   end
-  skip 'Brief preview', js: true do
+  skip 'Brief preview', :js do
     visit search_catalog_path f: { format: ["Book"] }, view: 'brief'
     page.find("button.btn.docid-1").click
     expect(page).to have_css("h3.preview-title", text: "An object")
@@ -38,7 +38,7 @@ RSpec.feature "Brief View" do
     end
   end
 
-  scenario "Articles search brief view", js: true do
+  scenario "Articles search brief view", :js do
     stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
     article_search_for('kittens')
     within '#view-type-dropdown' do

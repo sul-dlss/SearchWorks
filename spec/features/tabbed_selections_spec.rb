@@ -18,7 +18,7 @@ RSpec.describe 'Tabbed selections UI' do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
 
-  describe 'selections drop down', js: true do
+  describe 'selections drop down', :js do
     it 'renders a drop down with counts for each type of record selection' do
       visit '/'
 
@@ -33,7 +33,7 @@ RSpec.describe 'Tabbed selections UI' do
     end
   end
 
-  describe 'selections send to', js: true do
+  describe 'selections send to', :js do
     it 'renders export formats' do
       visit '/selections'
       find('#tools-dropdown button').click

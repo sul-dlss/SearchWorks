@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Record toolbar", feature: true, js: true do
+RSpec.describe "Record toolbar", :feature, :js do
   before do
     stub_oclc_response('', for: '12345')
   end
@@ -49,7 +49,7 @@ RSpec.describe "Record toolbar", feature: true, js: true do
     end
   end
 
-  describe " - mobile landscape view (480px - 767px) - ", page_width: 700, responsive: true do
+  describe " - mobile landscape view (480px - 767px) - ", :responsive, page_width: 700 do
     before { visit search_catalog_path f: { format: ['Book'] } }
 
     context 'a citable item' do

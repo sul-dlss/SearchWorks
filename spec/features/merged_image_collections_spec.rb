@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Merged Image Collections", js: true do
+RSpec.feature "Merged Image Collections", :js do
   before do
     stub_article_service(docs: [])
   end

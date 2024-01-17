@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'PURL Embed', js: true do
+RSpec.describe 'PURL Embed', :js do
   it 'should be present for images' do
     visit solr_document_path('mf774fs2413')
 

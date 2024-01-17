@@ -12,14 +12,14 @@ RSpec.feature "Facets Customizations" do
     end
   end
 
-  scenario "material type icons display after an advanced search", js: true do
+  scenario "material type icons display after an advanced search", :js do
     skip('Fails intermitently on Travis.') if ENV['CI']
     visit blacklight_advanced_search_engine.advanced_search_path
 
-    click_on "Resource type"
+    click_link "Resource type"
     check "Book"
 
-    click_on "advanced-search-submit"
+    click_button "advanced-search-submit"
 
     expect(page).to have_css(".blacklight-format_main_ssim")
 
@@ -51,7 +51,7 @@ RSpec.feature "Facets Customizations" do
     expect(music_index).to be < sdr_index
   end
 
-  scenario "while not in an access point facet title does not change", js: true do
+  scenario "while not in an access point facet title does not change", :js do
     visit root_path
     fill_in "q", with: ''
     click_button 'search'

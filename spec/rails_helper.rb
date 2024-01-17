@@ -97,11 +97,11 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 
-  config.before(:example, responsive: true) do |example|
+  config.before(:example, :responsive) do |example|
     page.current_window.resize_to(example.metadata[:page_width].to_i, 700)
   end
 
-  config.after(:example, responsive: true) do
+  config.after(:example, :responsive) do
     page.current_window.resize_to(1000, 700)
   end
 
