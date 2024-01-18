@@ -1,19 +1,19 @@
-<%= render @layout.new(classes: ['panel-exhibit'], data: { behavior: 'exhibits-panel', 'exhibits-host': Settings.EXHIBITS_ACCESS_PANEL.exhibits_host, 'is-collection': document.is_a_collection?, druid: document.druid }, style: 'display: none') do |c| %>
+<%= render @layout.new(classes: ['panel-exhibit'], data: { behavior: 'exhibits-panel', 'exhibits-host': Settings.EXHIBITS_ACCESS_PANEL.exhibits_host, 'is-collection': document.is_a_collection?, druid: document.druid }, style: 'display: none') do |component| %>
   <% if document.is_a_collection? %>
-    <% c.title do %>
+    <% component.with_title do %>
         Exhibits
     <% end %>
 
-    <% c.body do %>
+    <% component.with_body do %>
       <p>Items from this collection are featured in:</p>
     <% end %>
   <% else %>
-    <% c.title do %>
+    <% component.with_title do %>
         <span style="display:none" data-behavior="single-exhibit-heading">Item is featured in an exhibit</span>
         <span style="display:none" data-behavior="multiple-exhibit-heading">Item is featured in exhibits</span>
       <% end %>
 
-    <% c.body do %>
+    <% component.with_body do %>
         <p>Items from this collection are featured in:</p>
     <% end %>
   <% end %>

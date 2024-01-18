@@ -1,6 +1,6 @@
-<%= render @layout.new(classes: 'panel-appears-in') do |c| %>
-  <% c.title { 'Item is included in another record' } %>
-  <% c.body do %>
+<%= render @layout.new(classes: 'panel-appears-in') do |component| %>
+  <% component.with_title { 'Item is included in another record' } %>
+  <% component.with_body do %>
     <% @document.parent_sets.each do |parent_set| %>
       <h4>
         <%= helpers.render_resource_icon parent_set[parent_set.format_key] %>

@@ -1,8 +1,8 @@
-<%= render @layout.new(classes: 'panel-course-reserve') do |c| %>
-  <% c.title do %>
+<%= render @layout.new(classes: 'panel-course-reserve') do |component| %>
+  <% component.with_title do %>
     Course reserve
   <% end %>
-  <% c.body do %>
+  <% component.with_body do %>
     <%= render course_reserves_list %>
   <% end %>
 <% end %>

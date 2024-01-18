@@ -1,7 +1,7 @@
-<%= render @layout.new(classes: 'panel-online') do |c| %>
-  <% c.title { 'Best source' } %>
+<%= render @layout.new(classes: 'panel-online') do |component| %>
+  <% component.with_title { 'Best source' } %>
 
-  <% c.body do %>
+  <% component.with_body do %>
     <ul class='document-metadata'>
       <% links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">
