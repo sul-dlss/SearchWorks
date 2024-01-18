@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'marc_fields/_marc_field' do
-  subject { Capybara.string(rendered) }
+  subject { Capybara.string(rendered.to_s) }
 
   let(:marc_field) do
     double('MarcField', label: 'Field Label', values: %w(Value1 Value2))
