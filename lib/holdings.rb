@@ -1,9 +1,3 @@
-require 'holdings/item'
-require 'holdings/library'
-require 'holdings/location'
-require 'holdings/mhld'
-require 'holdings/status'
-
 class Holdings
   attr_reader :items, :mhld
 

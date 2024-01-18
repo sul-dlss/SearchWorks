@@ -22,15 +22,9 @@ module SearchWorks
       Rails.application.secrets
     end
 
-    require 'constants'
-    require 'page_location'
-    require 'hours_request'
-    require 'holdings'
-    require 'purl_embed'
-    require 'search_query_modifier'
-
     # load all marc fields
-    config.autoload_paths += %W(#{config.root}/app/models/marc_fields)
+    config.autoload_paths << "#{root}/app/models/marc_fields"
+    config.autoload_lib(ignore: %w(assets tasks))
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
