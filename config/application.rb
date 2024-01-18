@@ -17,11 +17,6 @@ module SearchWorks
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # TODO: A temporary Rails 5.2+ fix until we determine master_key policies
-    def credentials
-      Rails.application.secrets
-    end
-
     # load all marc fields
     config.autoload_paths << "#{root}/app/models/marc_fields"
     config.autoload_lib(ignore: %w(assets tasks))
