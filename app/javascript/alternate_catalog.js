@@ -1,5 +1,5 @@
-(function (global) {
-  var AlternateCatalog = {
+const AlternateCatalog = (function (global) {
+  return {
     container: null,
     titleElement: null,
 
@@ -120,7 +120,6 @@
     return facetLinks
   }
 
-  global.AlternateCatalog = AlternateCatalog;
 }(this));
 
 Blacklight.onLoad(function () {

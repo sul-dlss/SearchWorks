@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "blacklight-frontend": "7",
+    "blacklight-range-limit": "^8.3.0",
+    "bootstrap": "4",
+    "esbuild": "^0.19.4",
+    "leaflet": "1",
+    "popper.js": "1",
+    "rails-ujs": "^5.2.8-1",
+    "turbolinks": "^5.2.0"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
+  }
+}

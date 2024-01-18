@@ -1,3 +1,5 @@
+import PreviewContent from './preview-content'
+
 (function($) {
 
   /*

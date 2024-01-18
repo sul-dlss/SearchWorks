@@ -1,8 +1,4 @@
-(function( global) {
-  'use strict';
-  var ExhibitsPanel;
-
-  ExhibitsPanel = {
+const ExhibitsPanel = {
     panel: null,
     druid: null,
     exhibitsHost: null,
@@ -138,10 +134,7 @@
 
       return wrapper;
     }
-  }
-
-  global.ExhibitsPanel = ExhibitsPanel;
-})(this);
+}
 
 Blacklight.onLoad(function() {
   $('[data-behavior="exhibits-panel"]').each(function(i, element) {
