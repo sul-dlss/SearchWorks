@@ -13,6 +13,7 @@ You'll need common dependencies for building rails applications such as a javasc
 After cloning the repository
 
     $ bundle install
+    $ yarn install
     $ rake searchworks:install
 
 The installation script will
