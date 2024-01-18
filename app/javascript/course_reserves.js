@@ -21,7 +21,7 @@ Blacklight.onLoad(function(){
     modifyPaginationElements();
   });
 
-  $(document).on('turbolinks:before-cache', function() {
+  $(document).on('turbo:before-cache', function() {
     if (browseCourseReservesTable !== null) {
      browseCourseReservesTable.destroy();
      browseCourseReservesTable = null;

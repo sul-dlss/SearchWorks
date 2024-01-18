@@ -9,8 +9,7 @@ gem 'puma', '~> 6.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails', '~> 1.5'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -76,7 +75,7 @@ gem "coderay"
 
 gem 'deprecation'
 
-gem 'blacklight', '~> 7.27'
+gem 'blacklight', '~> 7.36'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"

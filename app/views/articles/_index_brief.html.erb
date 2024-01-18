@@ -23,7 +23,7 @@
             <li>
               <% if link.href == 'detail' %>
                 <span class="online-label">Full text</span>
-                <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { 'turbolinks' => false }) %>
+                <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
               <% elsif link.ill? -%>
                 <%= link_to(link.text, link.href, class: 'sfx') %>
               <% else %>

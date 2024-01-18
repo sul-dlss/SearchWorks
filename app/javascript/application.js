@@ -1,7 +1,7 @@
 // Entry point for the build script in your packageon
 
 import "rails-ujs";
-import "turbolinks";
+import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
 import "./vendor/trunk8";
 import "./vendor/jquery-scrollspy";
@@ -54,7 +54,7 @@ import "./update-hidden-inputs-by-checkbox";
 
 // Prevent the back-button from trying to add a second instance of recaptcha
 // See https://github.com/ambethia/recaptcha/issues/217#issuecomment-615221808
-document.addEventListener("turbolinks:before-cache", function () {
+document.addEventListener("turbo:before-cache", function () {
   // On the articles page there is a feedback and a connection form.
   // Both have a recaptcha that needs clearing.
   document.querySelectorAll(".g-recaptcha").forEach((elem) => elem.innerHTML = "");

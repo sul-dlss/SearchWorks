@@ -91,7 +91,7 @@ GEM
     bindex (0.8.1)
     bitly (3.0.0)
       oauth2 (>= 0.5.0, < 2.1)
-    blacklight (7.35.0)
+    blacklight (7.36.0)
       deprecation
       globalid
       hashdiff
@@ -622,9 +622,10 @@ GEM
       nokogiri (~> 1.9)
       slop (~> 4.0)
       yell
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbo-rails (1.5.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -666,7 +667,7 @@ PLATFORMS
 
 DEPENDENCIES
   bitly (>= 2.0.0.beta)
-  blacklight (~> 7.27)
+  blacklight (~> 7.36)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
   blacklight_advanced_search (~> 8.0.0.alpha)
@@ -727,7 +728,7 @@ DEPENDENCIES
   solr_wrapper
   sprockets-rails
   sqlite3
-  turbolinks (~> 5)
+  turbo-rails (~> 1.5)
   view_component (< 2.75)
   web-console (>= 4.1.0)
   webmock

@@ -19,7 +19,7 @@
                     nil
                   )
               %>
-              <%= link_to(limiter.search_url, 'data-turbolinks': false) do %>
+              <%= link_to(limiter.search_url, data: { turbo: false }) do %>
                 <%= limiter.label %>
               <% end %>
             <% end %>
