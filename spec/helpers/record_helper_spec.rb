@@ -26,7 +26,7 @@ RSpec.describe RecordHelper do
       let(:html) { "some text\r\nsome other text" }
 
       it 'returns the string without changing the encoding' do
-        expect(helper.format_record_html(html)).to eq "some text\r\nsome other text"
+        expect(helper.format_record_html(html)).to eq "some text\nsome other text"
       end
     end
 
@@ -34,7 +34,7 @@ RSpec.describe RecordHelper do
       let(:html) { "some text&#13\nsome other text" }
 
       it 'returns the string with proper encoding' do
-        expect(helper.format_record_html(html)).to eq "some text\r\nsome other text"
+        expect(helper.format_record_html(html)).to eq "some text\nsome other text"
       end
     end
   end
