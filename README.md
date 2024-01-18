@@ -3,6 +3,8 @@
 ## Developer environment
 
 1. To  test agaist a local instance of searchworks,  point your `settings.local.yml` to the local instance of SearchWorks.
+2. Install Gemfile `$ bundle install`
+3. Install required node modules (requires [node](https://nodejs.org/en/download) be installed) `npm install`.
 2. Run `bin/dev`
 3. Now, you can visit http://localhost:3000/ for the Bento app
 
