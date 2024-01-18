@@ -187,7 +187,7 @@ class ArticlesController < ApplicationController
   def fulltext_link
     _response, document = search_service.fetch(params[:id])
     url = extract_fulltext_link(document, params[:type])
-    redirect_to url if url.present?
+    redirect_to url, allow_other_host: true if url.present?
   rescue => e
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?

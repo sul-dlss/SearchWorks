@@ -1,5 +1,4 @@
 require 'okcomputer'
-require 'performance_alerts'
 
 class PerformanceCheck < OkComputer::Check
   attr_reader :policy
