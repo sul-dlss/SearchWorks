@@ -42,11 +42,6 @@ module SearchWorks
 
     config.middleware.insert 0, Rack::UTF8Sanitizer
 
-    # This will not be required once we upgrade to Blacklight 7
-    config.action_dispatch.rescue_responses.merge!(
-      "Blacklight::Exceptions::RecordNotFound" => :not_found
-    )
-
     config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log', 'daily')
   end
 end
