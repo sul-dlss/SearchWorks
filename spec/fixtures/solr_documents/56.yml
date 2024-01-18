@@ -1,6 +1,7 @@
 :id: 56
 :hashed_id_ssi: 9f61408e3afb633e50cdf1b20de6f466
 :title_display: Hoover Item
+:all_search: Hoover Item
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= hoover_request_fixture %>

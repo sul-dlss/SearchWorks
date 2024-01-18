@@ -1,6 +1,7 @@
 :id: 55
 :hashed_id_ssi: b53b3a3d6ab90ce0268229151c9bde11
 :title_display: Collection in process
+:all_search: Collection in process
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= marc_382_instrumentation %>

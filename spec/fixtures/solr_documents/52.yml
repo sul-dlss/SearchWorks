@@ -1,6 +1,7 @@
 :id: 52
 :hashed_id_ssi: 9a1158154dfa42caddbd0694a4e9bdc8
 :title_display: An item in a another virtual object
+:all_search: An item in a another virtual object
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= metadata1 %>

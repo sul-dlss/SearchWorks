@@ -4,6 +4,7 @@
 :pub_year_tisim: 1727
 :author_person_display: Moss, Pollard
 :title_display: Officia consequat aliqua esse ipsum.
+:all_search: Officia consequat aliqua esse ipsum.
 :language: Russian
 :marc_json_struct: |
 <%= metadata1 %>
