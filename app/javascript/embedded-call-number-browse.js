@@ -144,7 +144,6 @@ import PreviewContent from './preview-content'
                  }
               });
 
-              $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();

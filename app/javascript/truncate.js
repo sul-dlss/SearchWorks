@@ -7,5 +7,4 @@ Blacklight.onLoad(function(){
   $("[data-behavior='trunk8']").trunk8({
     tooltip: false
   });
-  $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
 });
