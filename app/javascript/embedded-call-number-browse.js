@@ -126,10 +126,10 @@ import PreviewContent from './preview-content'
               $galleryDoc.updateDocs();
 
               // fix up the id/for to avoid duplicating html ids for the current document.
-              $('.gallery-document label.toggle-bookmark').each(function(i, val) {
-                var id = 'browse_' + val.attr('for');
-                val.attr('for', id);
-                val.first('input').attr('id', id);
+              document.querySelectorAll('.gallery-document label.toggle-bookmark').forEach((val) => {
+                const id = 'browse_' + val.getAttribute('for');
+                val.setAttribute('for', id);
+                val.querySelector('input').id = id;
               });
 
               // just like Blacklight's doBookmarkToggleBehavior, but scoped to the embed container so we don't
@@ -144,7 +144,6 @@ import PreviewContent from './preview-content'
                  }
               });
 
-              $(".gallery-document h3.index_title a").trunk8({ lines: 4 });
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();

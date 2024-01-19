@@ -38,6 +38,14 @@
       margin: .5em;
       overflow: hidden;
       text-align: center;
+      .three-lines {           
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-bottom: 2px; // So we can see the text-decoration on the link.
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
 
     .btn-preview {
