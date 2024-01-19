@@ -15,9 +15,11 @@
   </div>
   <h3 class="index_title">
     <% counter = document_counter_with_offset(document_counter) %>
-    <%= render_resource_icon doc_presenter.formats %>
-    <%= document.online_label %>
-    <%= link_to_document document, counter: counter %>
+    <span class="three-lines">
+      <%= render_resource_icon doc_presenter.formats %>
+      <%= document.online_label %>
+      <%= link_to_document document, counter: counter %>
+    </span>
     <span class="main-title-date"><%= get_main_title_date(document) %></span>
   </h3>
 </div>
