@@ -52,6 +52,9 @@
     .snippet {
       color: $sul-mini-accordion-text-color;
       @extend .remove-list-styles;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .details {

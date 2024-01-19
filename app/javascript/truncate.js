@@ -4,7 +4,4 @@ Blacklight.onLoad(function(){
   );
   $("[data-behavior='truncate-results-metadata-links']").responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
   $("[data-behavior='truncate']").responsiveTruncate({height: 60});
-  $("[data-behavior='trunk8']").trunk8({
-    tooltip: false
-  });
 });

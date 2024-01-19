@@ -2,7 +2,6 @@
 
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
-import "./vendor/trunk8";
 import "./vendor/jquery-scrollspy";
 import "leaflet";
 // import "popper.js";
