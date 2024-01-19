@@ -1,6 +1,5 @@
 // Entry point for the build script in your packageon
 
-import "rails-ujs";
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
 import "./vendor/trunk8";

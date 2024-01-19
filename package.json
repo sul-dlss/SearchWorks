@@ -9,7 +9,6 @@
     "esbuild": "^0.19.4",
     "leaflet": "1",
     "popper.js": "1",
-    "rails-ujs": "^5.2.8-1",
     "turbolinks": "^5.2.0"
   },
   "scripts": {
