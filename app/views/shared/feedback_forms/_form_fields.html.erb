@@ -50,7 +50,7 @@
     <% if current_user.blank? %>
       <div class="form-group row">
         <div class="col-sm-9 offset-sm-3">
-          <%= recaptcha_tags id: 'feedback-form-recaptcha' %>
+          <%= recaptcha_tags id: "#{type}-recaptcha" %>
 
           <p>(Stanford users can avoid this Captcha by logging in.)</p>
         </div>
