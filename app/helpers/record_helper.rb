@@ -38,7 +38,7 @@ module RecordHelper
   ##
   # Expose format_mods_html from mods_display to properly encode content as needed
   # RecordHelper behavior
-  def format_record_html(...)
-    format_mods_html(...)
+  def format_record_html(record_content)
+    format_mods_html(record_content, field: ModsDisplay::Values.new(field: ModsDisplay::Contents.new(nil)))
   end
 end
