@@ -498,6 +498,7 @@ docs.google.com
 docs.newsbank.com
 docuseek2.com
 dod.chemnetbase.com
+doi-org.stanford.idm.oclc.org
 doi.org
 drc.bmj.com
 druginfo.nlm.nih.gov
@@ -756,6 +757,7 @@ ij-healthgeographics.biomedcentral.com
 ijaai.tums.ac.ir
 ijbnpa.biomedcentral.com
 ijcbnm.sums.ac.ir
+ijdb.ehu.eus
 ijehse.biomedcentral.com
 ijhoscr.tums.ac.ir
 ijhpm.com
@@ -817,6 +819,7 @@ intjem.biomedcentral.com
 investigativegenetics.biomedcentral.com
 iopscience.iop.org
 iovs.arvojournals.org
+ipb.uclouvain.be
 ir.lib.hiroshima-u.ac.jp
 iris.paho.org
 irishvetjournal.biomedcentral.com
@@ -1228,6 +1231,7 @@ parasitesandvectors.biomedcentral.com
 particleandfibretoxicology.biomedcentral.com
 partner.wsj.com
 pathogeneticsjournal.biomedcentral.com
+pathology.lwwhealthlibrary.com
 pds.lib.harvard.edu
 ped-rheum.biomedcentral.com
 pediatriccare.solutions.aap.org
@@ -1262,7 +1266,6 @@ pmj.bmj.com
 pmt-eu.hosted.exlibrisgroup.com
 pn.bmj.com
 pneumonia.biomedcentral.com
-policycommons.net
 policypress.universitypressscholarship.com
 politicalmoneyline.com
 poly.chemnetbase.com
@@ -1490,7 +1493,6 @@ stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
 subscriber.politicopro.com
-subscriptions.energysociety.org
 subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
 sumsearch.org
@@ -2184,7 +2186,6 @@ www.ijcem.com
 www.ijcep.com
 www.ijciis.org
 www.ijcm.org.in
-www.ijdb.ehu.es
 www.ijdentistry.com
 www.ijdr.in
 www.ijdvl.com
@@ -2646,7 +2647,6 @@ www.openanatomy.org
 www.openbookpublishers.com
 www.openedition.org
 www.openhelix.com
-www.openlibhums.org
 www.openlibrary.org
 www.ophthalmologia.be
 www.orthomolecular.org
@@ -2976,6 +2976,7 @@ www.wjon.org
 www.wjpch.com
 www.wjps.ir
 www.wma.net
+www.womeninthenationalarchives.amdigital.co.uk
 www.worldbank.org
 www.worldcat.org
 www.worldoflearning.com
