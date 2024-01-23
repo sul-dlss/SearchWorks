@@ -182,6 +182,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,library equipment 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,book,,,,,TAN-NEWBOOK,28day-1renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
+,book,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
 ,book,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,book,,,,,SAL3-PAGE-LP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$225 lost fee
@@ -224,6 +225,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-FOLIO or ARS-LOCKED or ARS-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,archival,,,,,EAL-LOCKED-FLATFILE,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
+,archival,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
 ,archival,,,,,SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
 ,archival,,,,LANE,,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$1000 lost fee
 ,multimedia,,,,LANE,,7day-2renew-1daygrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$250 lost fee
