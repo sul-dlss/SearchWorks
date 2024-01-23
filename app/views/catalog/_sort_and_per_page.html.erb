@@ -6,7 +6,7 @@
     <span id="bookmarksWidgets">
       <%= link_to t('blacklight.tools.cite_entries', current_range: current_entries_info(ivar_to_paginate)).html_safe, polymorphic_path(article_selections? ? :citation_articles : :citation_solr_documents, :sort=>params[:sort], :per_page=>params[:per_page], :id => @response.documents.map {|doc| doc.id}), {:id => 'citeLink', :name => 'citation', :class => 'btn btn-secondary', :data => {blacklight_modal: "trigger"}} %>
       <%= render "tool_dropdown" %>
-      <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), method: :delete, class: 'btn btn-secondary', data: { confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
+      <%= link_to clear_bookmarks_path(type:  article_selections? ? 'article' : 'catalog'), class: 'btn btn-secondary', data: { turbo_method: 'delete', turbo_confirm: t("searchworks.bookmarks.#{article_selections? ? 'article' : 'catalog'}.clear.action_confirm") } do %>
         <i class="fa fa-times" aria-hidden="true"></i> Clear list
       <% end %>
     </span>

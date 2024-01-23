@@ -3,7 +3,7 @@
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true">
       Selections (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)</a>
     <div id="show-list" class="dropdown-menu recent-selections" role="menu">
-      <%= link_to "Clear all lists", clear_bookmarks_path, method: :delete, data: { confirm: t('searchworks.bookmarks.clear_all.action_confirm') }, id: "clear-list", class: "dropdown-item #{disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)}", role: 'menuitem', tabindex: '-1' %>
+      <%= link_to "Clear all lists", clear_bookmarks_path, data: { turbo_method: 'delete', turbo_confirm: t('searchworks.bookmarks.clear_all.action_confirm') }, id: "clear-list", class: "dropdown-item #{disabled_class_for_no_selections(current_or_guest_user.bookmarks.length)}", role: 'menuitem', tabindex: '-1' %>
     </div>
   </div>
 </li>
