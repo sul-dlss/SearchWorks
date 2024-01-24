@@ -8,12 +8,14 @@
     snippet = document.holdings.libraries.select(&:present?).map(&:name).join(', ')
   %>
   <div class="accordion-section location">
-    <button class="header" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">
-      <span class="section-label">Check availability</span>
-    </button>
-    <span class="snippet <%= id %>-location-snippet">
-      <%= snippet %>
-    </span>
+    <div class="snippet-wrapper">
+      <button class="header" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">
+        <span class="section-label">Check availability</span>
+      </button>
+      <span class="snippet <%= id %>-location-snippet">
+        <%= snippet %>
+      </span>
+    </div>
     <div class="details <%= id %>-location" aria-expanded="false">
       <%= render :partial => "catalog/index_location", :locals => { :document => document } %>
     </div>

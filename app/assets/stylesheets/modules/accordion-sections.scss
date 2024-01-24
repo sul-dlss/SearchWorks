@@ -5,6 +5,15 @@
   .accordion-section {
     padding-left: 0;
 
+    .snippet-wrapper {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      button.header {
+        min-width: 147px;
+      }
+    }
+
     .header {
       @extend .btn;
       color: $white;
