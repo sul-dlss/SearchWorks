@@ -131,9 +131,9 @@
   integrity sha512-ojNvnoZtPN0pYvVFtlO7dyEN9Oml1B6IDM+whGKVak69MMYW99lC2NOWXWeE3bmwEydbP/nn6ERcpfjHVjYQjA==
 
 blacklight-frontend@7:
-  version "7.33.1"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.33.1.tgz#fd1728f7635b2fccd9be8623d56432f576abcc30"
-  integrity sha512-lYEg5Rr9QfcBwMdyAhnr8yFx86mSPp77oSRB4DpgXWyk4njfAhllkWNQOqodfk0IRMqsOBV0odTAYOcjUXNOFg==
+  version "7.36.2"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.36.2.tgz#54569482e572a8db1a3a41fad07055793fa40eb0"
+  integrity sha512-Ivu13erVAUdb/eoHXfRzkTqJdMBF7SM5k/a0xiPjbe1Y/S+i2Z+oiyYBAJGbpHBkQc0MACKqIfJ9xGPJlllXeA==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
     jquery "^3.5.1"
