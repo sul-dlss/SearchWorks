@@ -1,3 +1,5 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+
 const EdsRangeLimit = {
   init: function(el) {
     var $el = $(el);

@@ -1,3 +1,4 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 /*
   JavaScript module to update add/remove a relevant hidden input
   on a different (targeted) part of the page. The use case for this

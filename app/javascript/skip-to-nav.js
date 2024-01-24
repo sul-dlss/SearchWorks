@@ -1,3 +1,4 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 // Inspired from https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 
 Blacklight.onLoad(function() {

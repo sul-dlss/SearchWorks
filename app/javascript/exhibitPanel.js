@@ -1,3 +1,5 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+
 const ExhibitsPanel = {
     panel: null,
     druid: null,

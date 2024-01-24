@@ -1,3 +1,5 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+
 (function($) {
   /*
     jQuery plugin to render Google book covers for image elements

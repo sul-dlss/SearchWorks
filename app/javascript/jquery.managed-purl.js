@@ -1,4 +1,6 @@
-;(function ($, window, document, undefined ) {
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+
+(function ($, window, document, undefined ) {
   'use strict';
   
   // Create the defaults once

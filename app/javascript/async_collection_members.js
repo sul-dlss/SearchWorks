@@ -1,3 +1,5 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+
 var AsyncCollectionMembers = (function() {
   var selector = '[data-behavior="async-collection-members"]';
 

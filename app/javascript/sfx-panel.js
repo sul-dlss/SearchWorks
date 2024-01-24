@@ -1,3 +1,4 @@
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 /*
   JavaScript module to fetch SFX Content into the SFX panel.
  */

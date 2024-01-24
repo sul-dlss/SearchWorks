@@ -3,7 +3,7 @@
   "private": "true",
   "dependencies": {
     "@hotwired/turbo-rails": "^7.3.0",
-    "blacklight-frontend": "7",
+    "blacklight-frontend": "8",
     "blacklight-range-limit": "^8.3.0",
     "bootstrap": "4",
     "esbuild": "^0.19.4",

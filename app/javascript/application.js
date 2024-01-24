@@ -6,7 +6,7 @@ import "./vendor/jquery-scrollspy";
 import "leaflet";
 // import "popper.js";
 // import "bootstrap";
-import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+import Blacklight from "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 import "blacklight-range-limit";
 import "blacklight-range-limit/vendor/assets/javascripts/bootstrap-slider"
 
@@ -16,7 +16,6 @@ import "./article";
 import "./async_collection_members";
 import "./backend_lookup";
 import "./blacklight_hierarchy";
-import "./bootstrap-modal-addon";
 import "./course_reserves";
 import "./eds_range_limit";
 import "./embedded-call-number-browse";
@@ -50,6 +49,7 @@ import "./tooltip";
 import "./truncate";
 import "./update-hidden-inputs-by-checkbox";
 
+window.Blacklight = Blacklight
 
 // TODO: Remove this whole method when we upgrade to Blacklight 8, provided that 
 //       https://github.com/projectblacklight/blacklight/pull/3133 is merged
@@ -57,11 +57,11 @@ import "./update-hidden-inputs-by-checkbox";
 // Add the passed in contents to the modal and display it.
 // We have specific handling so that scripts returned from the ajax call are executed.
 // This enables adding a script like recaptcha to prevent bots from sending emails.
-Blacklight.modal.receiveAjax = function (contents) {
+Blacklight.Modal.receiveAjax = function (contents) {
   const domparser = new DOMParser();
   const dom = domparser.parseFromString(contents, "text/html")
   // If there is a containerSelector on the document, use its children.
-  let elements = dom.querySelectorAll(`${Blacklight.modal.containerSelector} > *`)
+  let elements = dom.querySelectorAll(`${Blacklight.Modal.containerSelector} > *`)
   const frag = document.createDocumentFragment()
   if (elements.length == 0) {
     // If the containerSelector wasn't found, use the whole document
@@ -77,9 +77,9 @@ Blacklight.modal.receiveAjax = function (contents) {
     script.parentNode.replaceChild(fixedScript, script)
   })
 
-  document.querySelector(`${Blacklight.modal.modalSelector} .modal-content`).replaceChildren(frag)
+  document.querySelector(`${Blacklight.Modal.modalSelector} .modal-content`).replaceChildren(frag)
 
-  Blacklight.modal.show();
+  Blacklight.Modal.show();
 };
 
 
