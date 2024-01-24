@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ambethia/recaptcha.git
+  revision: 7866ec44c565a0f164f65066b97347d29a5f343f
+  ref: 7866ec44c565a0f164f65066b97347d29a5f343f
+  specs:
+    recaptcha (5.16.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -490,7 +497,6 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
-    recaptcha (5.16.0)
     regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
@@ -711,7 +717,7 @@ DEPENDENCIES
   rack-utf8_sanitizer
   rails (~> 7.1)
   rails-controller-testing
-  recaptcha (>= 5.4.1)
+  recaptcha!
   rinku
   roadie-rails (~> 3)
   rsolr
