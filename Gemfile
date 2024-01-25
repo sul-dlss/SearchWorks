@@ -108,3 +108,5 @@ gem 'view_component'
 gem "parslet", "~> 2.0"
 
 gem "jsbundling-rails", "~> 1.2"
+
+gem "stimulus-rails", "~> 1.3"

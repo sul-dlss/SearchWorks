@@ -15,7 +15,6 @@ import "./analytics";
 import "./article";
 import "./async_collection_members";
 import "./backend_lookup";
-import "./blacklight_hierarchy";
 import "./course_reserves";
 import "./eds_range_limit";
 import "./embedded-call-number-browse";
@@ -89,3 +88,6 @@ document.addEventListener("turbo:before-cache", function () {
   // Both have a recaptcha that needs clearing.
   document.querySelectorAll(".g-recaptcha").forEach((elem) => elem.innerHTML = "");
 });
+
+import "./controllers"
+import "./controllers/external"
