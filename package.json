@@ -8,8 +8,7 @@
     "bootstrap": "4",
     "esbuild": "^0.19.4",
     "leaflet": "1",
-    "popper.js": "1",
-    "turbolinks": "^5.2.0"
+    "popper.js": "1"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
