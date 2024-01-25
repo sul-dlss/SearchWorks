@@ -16,7 +16,6 @@ import "./article";
 import "./async_collection_members";
 import "./backend_lookup";
 import "./blacklight_hierarchy";
-import "./bootstrap-modal-addon";
 import "./course_reserves";
 import "./eds_range_limit";
 import "./embedded-call-number-browse";
