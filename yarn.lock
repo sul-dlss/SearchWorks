@@ -145,9 +145,9 @@ blacklight-frontend@7, "blacklight-frontend@>=7.1 || 8.0":
     typeahead.js "^0.11.1"
 
 blacklight-hierarchy@^6.1.2:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.1.2.tgz#55d12c167268345b4e7412d38314c51e0a1204eb"
-  integrity sha512-K0U0tUFGezvCN/PQ2bHRhvZq24+XIMPjNPmPuhuCN+JFkptknYyQd6CWFLD6qe1c6AJDyOzXOL2EFSeDrJA5hQ==
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.2.2.tgz#9344bc5096137bd2ea1d57ff58e103e6ec08f783"
+  integrity sha512-kXTtBxgxenY41C5LSZ0iwomGtrV2M8Gp/VPHtWGSYRLl705tqXmhyFOK4AC8Cg5uIWPf+k6/OgAjoS0tmaWxHg==
   dependencies:
     blacklight-frontend ">=7.1 || 8.0"
     jquery ">=3.0"
