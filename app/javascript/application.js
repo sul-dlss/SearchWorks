@@ -37,7 +37,6 @@ import "./jquery.preview-gallery";
 import "./jquery.purl-embed";
 import "./jquery.side-nav-minimap";
 import "./jquery.stackmap";
-import "./jquery.turbolinks-cursor";
 import "./location-hours";
 import "./preview-content";
 import "./recent-selections";
