@@ -9,7 +9,6 @@ RSpec.feature "Merged Image Collections", :js do
     visit root_path
     fill_in 'q', with: '34'
     page.find('button#search').click
-
     within('.image-filmstrip') do
       within('ul.container-images') do
         expect(page).to have_css("a img.thumb-35")
@@ -23,7 +22,7 @@ RSpec.feature "Merged Image Collections", :js do
     end
   end
 
-  scenario "record view should display metadata and filmstrip" do
+  scenario "record view displays metadata and filmstrip" do
     visit solr_document_path('34')
 
     expect(page).to have_css('h1', text: 'Merged Image Collection1')

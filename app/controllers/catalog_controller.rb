@@ -93,10 +93,14 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
+    config.index.document_component = SearchResult::DocumentComponent
+    config.index.title_component = SearchResult::DocumentTitleComponent
+
     config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
     config.index.title_field = Blacklight::Configuration::Field.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_method = :render_cover_image
+
     config.index.search_field_mapping = { # Catalog -> Article
       search:         :search,
       search_author:  :author,
@@ -108,9 +112,8 @@ class CatalogController < ApplicationController
 
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowDocumentPresenter
-    #config.show.title_field = 'title_display'
-    #config.show.display_type_field = 'format'
-    config.show.partials += [:schema_dot_org]
+    config.show.document_component = Record::DocumentComponent
+    config.show.title_component = Record::DocumentTitleComponent
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display

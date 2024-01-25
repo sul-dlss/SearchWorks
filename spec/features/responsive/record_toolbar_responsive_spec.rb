@@ -24,7 +24,7 @@ RSpec.describe "Record toolbar", :feature, :js do
     context 'any item' do
       before do
         # Specifically trying to not get the first item in the results
-        within '.document-position-1' do
+        within '.document-position-2' do
           page.find('h3 a').click
         end
       end
@@ -73,7 +73,7 @@ RSpec.describe "Record toolbar", :feature, :js do
     context 'any item' do
       before do
         # Specifically trying to not get the first item in the results
-        within '.document-position-1' do
+        within '.document-position-2' do
           page.find('h3 a').click
         end
       end

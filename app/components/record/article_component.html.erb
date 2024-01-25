@@ -1,21 +1,21 @@
-<% return if document.eds_restricted? %>
+<% return if @document.eds_restricted? %>
 
 <% mini_map_sections = {} %>
 
 <div class="article-record-metadata row">
   <div class="article-record-panels col-md-4">
-    <%= render "articles/record/metadata_panels", document: document -%>
+    <%= render "articles/record/metadata_panels", document: @document -%>
   </div>
   <div class="article-record-sections record-sections col-md-8">
-    <% sections = blacklight_config.show.sections %>
-    <% if document.html_fulltext? %>
+    <% sections = helpers.blacklight_config.show.sections %>
+    <% if @document.html_fulltext? %>
       <div class="html-fulltext-container">
-        <%= render('articles/record/html_fulltext', document: document, fields: sections["Fulltext"].keys)%>
+        <%= render('articles/record/html_fulltext', document: @document, fields: sections["Fulltext"].keys)%>
       </div>
     <% end %>
     <dl class="dl-horizontal dl-invert">
       <% sections.each do |section_name, fields| -%>
-        <% if (section = render('articles/record/section_fields', document: document, fields_to_render: fields, fields: fields.keys)).present? -%>
+        <% if (section = render('articles/record/section_fields', document: @document, fields_to_render: fields, fields: fields.keys)).present? -%>
           <% unless section_name == 'Fulltext' -%>
             <% if section_name == 'Summary' -%>
               <div class="section-container-heading">
@@ -42,4 +42,4 @@
   </div>
 </div>
 
-<%= render partial: 'shared/side_nav_minimap', locals: { has_data: mini_map_sections } %>
+<%= render 'shared/side_nav_minimap', has_data: mini_map_sections %>

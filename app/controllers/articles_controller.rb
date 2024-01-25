@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexEdsDocumentPresenter
+    config.index.document_component = SearchResult::DocumentComponent
     config.index.facet_group_component = Articles::Response::FacetGroupComponent
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
@@ -96,6 +97,9 @@ class ArticlesController < ApplicationController
 
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowEdsDocumentPresenter
+    config.show.document_component = Record::DocumentComponent
+    config.show.title_component = Record::DocumentTitleComponent
+
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'
     config.show.display_type_field = 'eds_publication_type'

@@ -45,7 +45,7 @@ RSpec.feature 'Results Document Metadata' do
     first('#q').set '35'
     click_button 'search'
 
-    within 'div.document' do
+    within 'article.document' do
       within('.document-thumbnail') do
         expect(page).to have_css('img.stacks-image')
         expect(page).to have_css('img.stacks-image[alt=""]')
