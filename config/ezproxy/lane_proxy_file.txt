@@ -131,6 +131,7 @@ arthroplasty.biomedcentral.com
 arxiv.org
 as-botanicalstudies.springeropen.com
 asa.scitation.org
+asbmr.onlinelibrary.wiley.com
 ascelibrary.org
 asclepio.revistas.csic.es
 ascopubs.org
@@ -2783,7 +2784,6 @@ www.rsc.org
 www.rsfjournal.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
-www.samhsa.gov
 www.samj.org.za
 www.sanger.ac.uk
 www.sanp.ch
