@@ -90,10 +90,6 @@ import PreviewContent from './preview-content'
         $item.find($triggerFocus).on('click', $.proxy(function(e) {
           showPreview();
         }, this));
-
-        $filmstrip.find('.prev, .next').on('click', $.proxy(function() {
-          closePreview();
-        }, this));
       }
 
 
