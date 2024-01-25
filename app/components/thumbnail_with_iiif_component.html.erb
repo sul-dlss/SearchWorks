@@ -1,0 +1,8 @@
+<% value = presenter.thumbnail.render(@image_options) %>
+
+<% if value %>
+  <div class="document-thumbnail">
+    <%= helpers.link_to_document(presenter.document, value, 'aria-hidden': true, tabindex: -1, counter: @counter) %>
+    <%= helpers.iiif_drag_n_drop(@document.iiif_manifest, position: 'top') if @document.iiif_manifest %>
+  </div>
+<% end %>
