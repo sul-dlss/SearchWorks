@@ -31,7 +31,6 @@ import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
 import "./jquery.preview-brief";
 import "./jquery.preview-embed-browse";
-import "./jquery.preview-filmstrip";
 import "./jquery.preview-gallery";
 import "./jquery.purl-embed";
 import "./jquery.side-nav-minimap";
@@ -45,7 +44,6 @@ import "./skip-to-nav";
 import "./tooltip";
 import "./truncate";
 import "./update-hidden-inputs-by-checkbox";
-
 
 // TODO: Remove this whole method when we upgrade to Blacklight 8, provided that 
 //       https://github.com/projectblacklight/blacklight/pull/3133 is merged

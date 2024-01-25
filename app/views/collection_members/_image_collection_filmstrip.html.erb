@@ -12,7 +12,7 @@
     <div class="viewport">
       <ul class="container-images">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li <%= preview_data_attrs('preview-filmstrip', document[:id], '.' + preview_container) %>>
+          <li data-controller="preview-filmstrip" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>"  data-preview-filmstrip-selector-value="<%= ".#{preview_container}" %>">
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
