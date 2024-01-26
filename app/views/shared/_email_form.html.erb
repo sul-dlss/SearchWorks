@@ -48,7 +48,7 @@
   <% if current_user.blank? %>
     <div class="form-group row">
       <div class="col-sm-10 offset-sm-2">
-        <%= recaptcha_tags id: 'connection-form-recaptcha' %>
+        <%= recaptcha_tags id: 'connection-form-recaptcha', noscript: false %>
 
         <p>(Stanford users can avoid this Captcha by logging in.)</p>
       </div>
