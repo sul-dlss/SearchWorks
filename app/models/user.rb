@@ -36,4 +36,9 @@ class User < ActiveRecord::Base
   def to_honeybadger_context
     { user_id: id, user_email: email, affiliations: }
   end
+
+  # Testing group entitlement?
+  def group_info
+    ENV['eduPersonEntitlement'] || 'none'
+  end
 end

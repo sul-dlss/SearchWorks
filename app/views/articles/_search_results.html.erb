@@ -2,6 +2,11 @@
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>
+    BREADCRUMS ROW
+    <% if !current_user.blank? %>
+      <%= current_user.affiliations.to_s %>
+      <%= current_user.group_info.to_s %>
+    <% end %>
   </div>
 </div>
 <div class='row'>
