@@ -164,6 +164,10 @@ class Holdings
       @request_link ||= ItemRequestLinkComponent.new(item: self)
     end
 
+    def requestable?
+      request_link&.render?
+    end
+
     # create sorting key for spine
     # shelfkey asc, then by sorting title asc, then by pub date desc
     # note: pub_date must be inverted for descending sort
