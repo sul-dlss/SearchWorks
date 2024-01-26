@@ -4,6 +4,8 @@
     <%= render 'constraints' %>
     BREADCRUMS ROW
     <% if !current_user.blank? %>
+      <%= ENV['suAffiliation'] || 'no aff' %>
+      <%= ENV['eduPersonEntitlement'] || 'none' %>
       <%= current_user.affiliations.to_s %>
       <%= current_user.group_info.to_s %>
     <% end %>
