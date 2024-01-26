@@ -48,6 +48,8 @@
   <% if current_user.blank? %>
     <div class="form-group row">
       <div class="col-sm-10 offset-sm-2">
+        <%# Remove noscript for recaptcha when used in a modal. %>
+        <%# Otherwise the modal builder will insert unprocessed noscript tags, resulting in an empty g-recaptcha-response. %>
         <%= recaptcha_tags id: 'connection-form-recaptcha', noscript: false %>
 
         <p>(Stanford users can avoid this Captcha by logging in.)</p>
