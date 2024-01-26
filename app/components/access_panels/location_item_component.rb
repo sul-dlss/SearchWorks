@@ -41,6 +41,9 @@ module AccessPanels
       # we're not rendering item-level request links (because e.g. there's already alocation level request link)
       return false unless render_item_level_request_link?
 
+      # don't render unless item is requestable
+      return false unless item.requestable?
+
       # non-circulating items don't need real time availability
       return false unless item.circulates?
 
