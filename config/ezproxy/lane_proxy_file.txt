@@ -1808,6 +1808,7 @@ www.brain-map.org
 www.braincirculation.org
 www.brazjurol.com.br
 www.brenda-enzymes.org
+www.brepolsonline.net
 www.broad.mit.edu
 www.broadcastingamerica.amdigital.co.uk
 www.btrt.org
@@ -1990,6 +1991,7 @@ www.earthdoc.org
 www.earticle.net
 www.eastindiacompany.amdigital.co.uk
 www.ebi.ac.uk
+www.ebm-journal.org
 www.ebooks.iospress.nl
 www.ecmjournal.org
 www.ecoamericas.com
@@ -2622,6 +2624,7 @@ www.nursingtimes.net
 www.nyu.edu
 www.oac.cdlib.org
 www.oandp.org
+www.oapen.org
 www.ochsnerjournal.org
 www.oclc.org
 www.oecd-ilibrary.org
