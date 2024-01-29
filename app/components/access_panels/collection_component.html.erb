@@ -4,7 +4,7 @@
     <h4><%= link_to(helpers.document_presenter(@collection).heading, solr_document_path(@collection[:id])) %></h4>
     <% if @collection[:summary_display] %>
       <div data-behavior='truncate'>
-        <%= @collection[:summary_display].join(', ') %>
+        <%= helpers.format_record_html(@collection[:summary_display].join(', ')) %>
       </div>
     <% end %>
     <dl class="dl-invert">
