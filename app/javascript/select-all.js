@@ -38,10 +38,14 @@
             }
           });
           $.when(firstCheckboxIsDone).done(function(){
-            bookmarkSelectors.each(function(i, checkbox) {
+            bookmarkSelectors.each(async function(i, checkbox) {
               var $checkbox = $(checkbox);
               if ($checkbox.is(':checked') !== state) {
                 $checkbox.prop('checked', !state).click();
+                if (i > 20) {
+                  // Avoid trigging DOS protection in the loadbalancer.
+                  await new Promise(r => setTimeout(r, 500));
+                }
               }
             });
           });
