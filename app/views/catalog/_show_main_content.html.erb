@@ -1,9 +1,9 @@
-    <%= render "shared/record/record_toolbar" %>
 
     <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_presenter(@document).html_title, :application_name => "#{I18n.t('blacklight.application_name')} catalog" -%>
     <% content_for(:head) { render_link_rel_alternates } -%>
     <%# this should be in a partial -%>
 
+    <%= render RecordToolbarComponent.new(presenter: document_presenter(@document), search_context: @search_context) %>
     <div id="document" class="document <%= render_document_class %>" itemscope itemtype="<%= @document.itemtype %>">
       <div id="doc_<%= @document.id.to_s.parameterize %>">
         <% # bookmark/folder functions -%>
