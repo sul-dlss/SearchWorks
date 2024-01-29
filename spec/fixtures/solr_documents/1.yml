@@ -22,6 +22,11 @@
   - "ACCT-212-01-02 -|- Managerial Accounting: Base -|- Rajan, Madhav V."
   - "ACCT-212-01-02 -|- Managerial Accounting: Base -|- Reichelstein, Stefan J"
   - "ACCT-215-01-02 -|- Managerial Accounting: Accelerated -|- Marinovic Vial, Ivan"
+:courses_json_struct:
+  - '{ "course_name": "Managerial Accounting: Base", "course_id": "ACCT-212-01-02", "instructors": ["Rajan, Madhav V."], "reserve_desk": "LAW-CRES"}'
+  - '{ "course_name": "Managerial Accounting: Base", "course_id": "ACCT-212-01-02", "instructors": ["Reichelstein, Stefan J"], "reserve_desk": "LAW-CRES"}'
+  - '{ "course_name": "Managerial Accounting: Accelerated", "course_id": "ACCT-215-01-02", "instructors": ["Marinovic Vial, Ivan"], "reserve_desk": "LAW-CRES"}'
+
 :item_display_struct:
   - barcode: '36105217238315'
     library: EARTH-SCI

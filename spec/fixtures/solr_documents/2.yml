@@ -16,3 +16,5 @@
 :instructor: "McDonald, Ronald"
 :crez_course_info:
  - "CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald"
+:courses_json_struct:
+ - '{ "course_name": "Emergency Kittenz", "course_id": "CAT-401-01-01", "instructors": ["McDonald, Ronald"], "reserve_desk": "LAW-CRES"}'

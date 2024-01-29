@@ -231,6 +231,7 @@
     <!-- the next two facets are not used in SW at this time -->
     <field name="crez_dept_facet" type="string" indexed="true" stored="true" multiValued="true" />
     <field name="crez_desk_facet" type="string" indexed="true" stored="true" multiValued="true" />
+    <field name="courses_json_struct" type="string" indexed="true" stored="true" multiValued="true" />
 
     <!-- *************** additional fields for DOR objects  ****************** -->
     <field name="druid" type="string_punct_stop" indexed="true" stored="true" />
