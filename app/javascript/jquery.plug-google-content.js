@@ -115,7 +115,7 @@
         if(typeof imageEl.attr('src') === 'undefined') {
           imageEl.attr('src', thumbUrl)[0].hidden = false;
 
-          const fakeCover = imageEl.parent().parent().find('span.fake-cover')[0]
+          const fakeCover = imageEl.parent().find('span.fake-cover')[0]
           if (fakeCover) {
             fakeCover.hidden = true
           }

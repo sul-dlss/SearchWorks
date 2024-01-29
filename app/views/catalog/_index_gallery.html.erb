@@ -1,18 +1,11 @@
 <%
-  preview_container = 'preview-container-' + document.id
   counter = document_counter_with_offset(document_counter)
-  options = {
-    :counter => counter,
-    :suppress_link => true
-  }
-  context_href = (document_link_params(document, {:counter => counter})).dig(:data, :"context-href")
+  preview_container = 'preview-container-' + document.id
 %>
 
 <div class="gallery-document" <%= preview_data_attrs("preview-gallery", document[:id], ".#{preview_container}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
   <div class="item-thumb">
-    <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
-      <%= document_presenter(document).thumbnail.thumbnail_tag({}, options) %>
-    </div>
+    <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
   </div>
   <div class="caption">
     <%= render_document_partials document, blacklight_config.view_config(:gallery).partials, document_counter: document_counter %>

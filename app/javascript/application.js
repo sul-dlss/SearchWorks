@@ -39,7 +39,6 @@ import "./jquery.stackmap";
 import "./location-hours";
 import "./preview-content";
 import "./recent-selections";
-import "./search-context";
 import "./select-all";
 import "./sfx-panel";
 import "./skip-to-nav";

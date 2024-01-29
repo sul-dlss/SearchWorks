@@ -5,10 +5,8 @@
   <img class="cover-image center-block <%= css_class %>" hidden alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
 
   <% if document_index_view_type == :gallery %>
-    <%= link_to document, tabindex: '-1', aria: { hidden: true } do %>
-      <%= content_tag(:span, class:"fake-cover") do %>
-        <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
-      <% end %>
+    <%= content_tag(:span, class:"fake-cover") do %>
+      <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
     <% end %>
   <% end %>
 <% end %>
