@@ -7,5 +7,5 @@
     remote:        data-remote
 -%>
 <% unless current_page.first? %>
-  <%= link_to raw(t 'views.pagination_compact.previous'), url, :rel => 'prev', class: 'btn btn-sul-toolbar', role: 'button', :remote => remote %>
+  <%= link_to raw(t 'views.pagination_compact.previous'), url, :rel => 'prev', class: 'btn btn-link btn-sul-toolbar', role: 'button', :remote => remote %>
 <% end %>

@@ -1,11 +1,11 @@
 #documents {
+   // This is for the "list" view type documents. It is included by the "brief" view type, but not the "gallery" view type.
   .document {
     @include document;
 
 
     h3.index_title {
       @include h3-index-title-font;
-
       span.sul-icon {
         margin-left: -24px;
       }
@@ -60,17 +60,6 @@
 .preview-content {
   .stacks-image {
     max-width: 170px;
-  }
-}
-
-.facets.sidenav {
-  .top-panel-heading {
-    border-bottom: none;
-    padding: 0;
-
-    h2 {
-      color: $sul-h2-font-color;
-    }
   }
 }
 

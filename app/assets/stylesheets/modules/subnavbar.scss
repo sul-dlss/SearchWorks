@@ -1,4 +1,7 @@
 #search-subnavbar-container {
+  --link-decoration-line: none;
+  --link-decoration-style: none;
+  --link-text-decoration-color: $white;
   background-color: $sul-subnavbar-bg-color;
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
   color: $white;
@@ -39,6 +42,7 @@
       background-color: $sul-subnavbar-bg-color;
       border: 0;
       font-weight: 100;
+      text-underline-position: auto;
     }
     // Add the border on hover, or when the #connection-form is open
     a:hover, a[data-target="#connection-form"][aria-expanded="true"] {

@@ -25,6 +25,8 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
 }
 
 .facet-values {
+  --link-decoration-line: none;
+
   .remove {
     &:hover,&:active {
       border: none;
@@ -34,6 +36,10 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
       padding-left: 0.3em;
     }
   }
+}
+
+.more_facets {
+  --link-decoration-line: none;
 }
 
 .range_limit {

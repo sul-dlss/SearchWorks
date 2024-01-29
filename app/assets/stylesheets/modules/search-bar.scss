@@ -26,6 +26,8 @@
     }
 
     .search-dropdown {
+      --link-decoration-line: none;
+      --link-hover-decoration-line: none;
       display: inline-block;
       margin-right: 1em;
 
