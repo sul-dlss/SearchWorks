@@ -164,8 +164,9 @@ class Holdings
       @request_link ||= ItemRequestLinkComponent.new(item: self)
     end
 
+    # Check to see if the item is ever eligible for hold/recall. Used to determine whether a request link could be added by live lookup.
     def requestable?
-      @requestable ||= ItemRequestLinkPolicy.new(item: self).show?
+      @requestable ||= ItemRequestLinkPolicy.new(item: self).item_allows_hold_recall?
     end
 
     # create sorting key for spine

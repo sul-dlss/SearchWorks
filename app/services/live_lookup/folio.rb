@@ -21,7 +21,8 @@ class LiveLookup
             item_id: item.fetch('id', nil),
             due_date: due_date(item),
             status: status(item),
-            is_available: available?(item)
+            is_available: available?(item),
+            is_requestable_status: requestable_status?(item)
           }
         end
       end
@@ -35,6 +36,13 @@ class LiveLookup
 
     def folio_client
       @folio_client ||= FolioClient.new
+    end
+
+    # Check to see if we can add a request button based on the status in folio
+    # and predetermined list of status that can be recalled
+    def requestable_status?(item)
+      status = item.fetch('status', nil)
+      Settings.folio_hold_recall_statuses.include?(status)
     end
 
     def status(item)
