@@ -18,11 +18,11 @@ if Rails.env.production?
   # https://github.com/heartcombo/devise/wiki/Callbacks
   Warden::Manager.after_authentication do |user, auth, opts|
     auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+    auth.session(:user)['eduPersonAffiliation'] = auth.env['eduPersonAffiliation']
     user.affiliations = auth.env['suAffiliation']
     # Also need to know if certain privileges available.
     # Refer to https://uit.stanford.edu/service/saml/arp/edupa
     user.person_affiliations = auth.env['eduPersonAffiliation']
-    user.other_attributes = auth.env['displayName']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
   end
@@ -33,7 +33,6 @@ if Rails.env.production?
   Warden::Manager.after_fetch do |user, auth, opts|
     user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
     user.person_affiliations = auth.session(:user)['eduPersonAffiliation'] || auth.env['rack.session']['eduPersonAffiliation']
-    user.other_attributes = auth.session(:user)['displayName'] || auth.env['rack.session']['displayName']
   end
 
   Warden::Manager.before_logout do |user, auth, opts|
