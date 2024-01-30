@@ -21,7 +21,7 @@ if Rails.env.production?
     user.affiliations = auth.env['suAffiliation']
     # Also need to know if certain privileges available.
     # Refer to https://uit.stanford.edu/service/saml/arp/edupa
-    user.person_affiliations = auth.env['eduPersonAffiliation'] || nil
+    #user.person_affiliations = auth.env['eduPersonAffiliation'] || nil
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
   end
@@ -31,12 +31,12 @@ if Rails.env.production?
   # also support the previous session store for now...
   Warden::Manager.after_fetch do |user, auth, opts|
     user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
-    user.person_affiliations = auth.session(:user)['eduPersonAffiliation'] || auth.env['rack.session']['eduPersonAffiliation']
+    #user.person_affiliations = auth.session(:user)['eduPersonAffiliation'] || auth.env['rack.session']['eduPersonAffiliation']
   end
 
   Warden::Manager.before_logout do |user, auth, opts|
     auth.session(:user)['suAffiliation'] = nil
-    auth.session(:user)['eduPersonAffiliation'] = nil
+    #auth.session(:user)['eduPersonAffiliation'] = nil
     auth.env['rack.session']['eds_session_token'] = nil
   end
 end
