@@ -25,6 +25,8 @@ if Rails.env.production?
     user.person_affiliations = auth.env['eduPersonAffiliation']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
+    Rails.logger.error("EDU PERSON TEST #{auth.inspect}")
+    Rails.logger.error("AUTH ENV INSPECT #{auth.env.inspect}")
   end
 
   # re-hydrate the user's affiliations from the session data for each request.
