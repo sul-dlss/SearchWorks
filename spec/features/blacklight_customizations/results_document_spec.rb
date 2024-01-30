@@ -40,20 +40,6 @@ RSpec.feature 'Results Document Metadata' do
     end
   end
 
-  scenario 'should have the correct cover image wrapper attributes' do
-    visit root_path
-    first('#q').set '10'
-    click_button 'search'
-
-    within '#documents' do
-      within 'div.document' do
-        expect(page).to have_css('div.cover-image-wrapper', visible: true)
-        expect(page).to have_css("div.cover-image-wrapper[data-target='/view/10']")
-        expect(page).to have_css("div.cover-image-wrapper[data-context-href^='/catalog/10/track?']")
-      end
-    end
-  end
-
   scenario 'should have the stacks image for objects with image behavior' do
     visit root_path
     first('#q').set '35'

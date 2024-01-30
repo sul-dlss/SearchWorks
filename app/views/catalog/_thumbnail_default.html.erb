@@ -1,18 +1,2 @@
-<%
-  counter = document_counter_with_offset(document_counter)
-  options = {
-    :counter => counter,
-    :suppress_link => true
-  }
-  context_href = document_link_params(document, {:counter => counter}).dig(:data, :"context-href")
-  presenter = document_presenter(document)
-%>
-
-<% if presenter.thumbnail.exists? && tn = presenter.thumbnail.thumbnail_tag({}, options) %>
-  <div class="document-thumbnail">
-    <div class="cover-image-wrapper" data-target="<%= solr_document_path document %>" data-context-href="<%= context_href %>">
-      <%= tn %>
-    </div>
-    <%= iiif_drag_n_drop(document.iiif_manifest, position: 'top') if document.iiif_manifest %>
-  </div>
-<% end %>
+<%= render ThumbnailWithIiifComponent.new(counter: document_counter_with_offset(document_counter),
+                                          presenter: document_presenter(document)) %>

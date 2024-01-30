@@ -1,5 +1,4 @@
 <%
-  show_preview ||= true
   preview_container = 'preview-filmstrip-container-' + collection_document[:id]
 %>
 
@@ -13,12 +12,12 @@
     <div class="viewport">
       <ul class="container-images">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li <%= preview_data_attrs(show_preview, 'preview-filmstrip', document[:id], '.' + preview_container) %>>
+          <li <%= preview_data_attrs('preview-filmstrip', document[:id], '.' + preview_container) %>>
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
             <% if document.image_urls.length > 1 %>
-            <div class="img-label"><%= pluralize(document.image_urls.length,"part") %></div>
+              <div class="img-label"><%= pluralize(document.image_urls.length,"part") %></div>
             <% end %>
           </li>
         <% end %>

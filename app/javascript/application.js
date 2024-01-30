@@ -15,8 +15,6 @@ import "./analytics";
 import "./article";
 import "./async_collection_members";
 import "./backend_lookup";
-import "./blacklight_hierarchy";
-import "./bootstrap-modal-addon";
 import "./course_reserves";
 import "./eds_range_limit";
 import "./embedded-call-number-browse";
@@ -38,11 +36,9 @@ import "./jquery.preview-gallery";
 import "./jquery.purl-embed";
 import "./jquery.side-nav-minimap";
 import "./jquery.stackmap";
-import "./jquery.turbolinks-cursor";
 import "./location-hours";
 import "./preview-content";
 import "./recent-selections";
-import "./search-context";
 import "./select-all";
 import "./sfx-panel";
 import "./skip-to-nav";
@@ -90,3 +86,6 @@ document.addEventListener("turbo:before-cache", function () {
   // Both have a recaptcha that needs clearing.
   document.querySelectorAll(".g-recaptcha").forEach((elem) => elem.innerHTML = "");
 });
+
+import "./controllers"
+import "./controllers/external"

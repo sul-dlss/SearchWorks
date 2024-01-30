@@ -112,6 +112,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.4.tgz#d46a6e220a717f31f39ae80f49477cc3220be0f0"
   integrity sha512-HP0GDNla1T3ZL8Ko/SHAS2GgtjOg+VmWnnYLhuTksr++EnduYB0f3Y2LzHsUwb2iQ13JGoY6G3R8h6Du/WG6uA==
 
+"@hotwired/stimulus@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
+  integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
+
 "@hotwired/turbo-rails@^7.3.0":
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.3.0.tgz#422c21752509f3edcd6c7b2725bbe9e157815f51"
@@ -130,7 +135,7 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.1.3.tgz#4db480347775aeecd4dde2405659eef74a458881"
   integrity sha512-ojNvnoZtPN0pYvVFtlO7dyEN9Oml1B6IDM+whGKVak69MMYW99lC2NOWXWeE3bmwEydbP/nn6ERcpfjHVjYQjA==
 
-blacklight-frontend@7:
+blacklight-frontend@7, "blacklight-frontend@>=7.1 || 8.0":
   version "7.36.2"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.36.2.tgz#54569482e572a8db1a3a41fad07055793fa40eb0"
   integrity sha512-Ivu13erVAUdb/eoHXfRzkTqJdMBF7SM5k/a0xiPjbe1Y/S+i2Z+oiyYBAJGbpHBkQc0MACKqIfJ9xGPJlllXeA==
@@ -138,6 +143,14 @@ blacklight-frontend@7:
     bootstrap ">=4.3.1 <6.0.0"
     jquery "^3.5.1"
     typeahead.js "^0.11.1"
+
+blacklight-hierarchy@^6.1.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.2.2.tgz#9344bc5096137bd2ea1d57ff58e103e6ec08f783"
+  integrity sha512-kXTtBxgxenY41C5LSZ0iwomGtrV2M8Gp/VPHtWGSYRLl705tqXmhyFOK4AC8Cg5uIWPf+k6/OgAjoS0tmaWxHg==
+  dependencies:
+    blacklight-frontend ">=7.1 || 8.0"
+    jquery ">=3.0"
 
 blacklight-range-limit@^8.3.0:
   version "8.3.0"
@@ -182,7 +195,7 @@ esbuild@^0.19.4:
     "@esbuild/win32-ia32" "0.19.4"
     "@esbuild/win32-x64" "0.19.4"
 
-jquery@>=1.7, jquery@^3.5.1:
+jquery@>=1.7, jquery@>=3.0, jquery@^3.5.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
@@ -196,11 +209,6 @@ popper.js@1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
-turbolinks@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
-  integrity sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==
 
 typeahead.js@^0.11.1:
   version "0.11.1"

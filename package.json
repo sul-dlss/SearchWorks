@@ -2,14 +2,15 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
     "blacklight-frontend": "7",
+    "blacklight-hierarchy": "^6.1.2",
     "blacklight-range-limit": "^8.3.0",
     "bootstrap": "4",
     "esbuild": "^0.19.4",
     "leaflet": "1",
-    "popper.js": "1",
-    "turbolinks": "^5.2.0"
+    "popper.js": "1"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
