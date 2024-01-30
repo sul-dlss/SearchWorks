@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_writer :affiliations
+  attr_writer :affiliations, :person_affiliations
 
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
