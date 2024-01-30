@@ -2,7 +2,7 @@
 
 require 'http'
 
-class FolioClient
+class FolioClient # rubocop:disable Metrics/ClassLength
   DEFAULT_HEADERS = {
     accept: 'application/json',
     content_type: 'application/json'
@@ -50,6 +50,11 @@ class FolioClient
 
   def circulation_rules
     get_json('/circulation-rules-storage').fetch('rulesAsText', '')
+  end
+
+  # https://s3.amazonaws.com/foliodocs/api/mod-courses/r/courses.html#coursereserves_courses_get
+  def courses
+    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }
   end
 
   def request_policies
