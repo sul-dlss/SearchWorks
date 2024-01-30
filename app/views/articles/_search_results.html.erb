@@ -2,12 +2,11 @@
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>
-    BREADCRUMS ROW
     <% if !current_user.blank? %>
-      <%= ENV['suAffiliation'] || 'no aff' %>
-      <%= ENV['eduPersonEntitlement'] || 'none' %>
-      <%= current_user.affiliations.to_s %>
-      <%= current_user.group_info.to_s %>
+    <%= current_user.person_affiliations || 'No person affiliations' %>
+    <%= current_user.su_affiliated? %>
+    <%= current_user.person_affiliated? %>
+    <%= current_user.stanford_affiliated? %>
     <% end %>
   </div>
 </div>

@@ -23,7 +23,15 @@ class User < ActiveRecord::Base
     @affiliations ||= ENV['suAffiliation']
   end
 
+  def person_affiliations
+    @person_affiliations ||= ENV['eduPersonAffiliation']
+  end
+
   def stanford_affiliated?
+    su_affiliated? || person_affiliated?
+  end
+
+  def su_affiliated?
     return false if affiliations.blank?
 
     affiliations.split(';').any? do |affiliation|
@@ -31,14 +39,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  def person_affiliated?
+    return false if person_affiliations.blank?
+
+    person_affiliations.split(';').any? do |person_affiliation|
+      person_affiliation.strip === Settings.EDU_PERSON_AFFILIATION # rubocop:disable Style/CaseEquality
+    end
+  end
+
   # user_id and user_email are special keys in honeybadger for aggregating
   # errors
   def to_honeybadger_context
     { user_id: id, user_email: email, affiliations: }
-  end
-
-  # Testing group entitlement?
-  def group_info
-    ENV['eduPersonEntitlement'] || 'none'
   end
 end
