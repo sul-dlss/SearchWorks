@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_writer :affiliations, :person_affiliations
+  attr_writer :affiliations, :person_affiliations, :other_attributes
 
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
@@ -45,6 +45,10 @@ class User < ActiveRecord::Base
     person_affiliations.split(';').any? do |person_affiliation|
       person_affiliation.strip === Settings.EDU_PERSON_AFFILIATION # rubocop:disable Style/CaseEquality
     end
+  end
+
+  def other_attributes
+    @other_attributes ||= 'test attributes'
   end
 
   # user_id and user_email are special keys in honeybadger for aggregating
