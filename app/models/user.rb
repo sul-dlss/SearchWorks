@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
   end
 
   def other_attributes
-    @other_attributes ||= 'test attributes'
+    @other_attributes ||= ENV['suAffiliation']
   end
 
   # user_id and user_email are special keys in honeybadger for aggregating
