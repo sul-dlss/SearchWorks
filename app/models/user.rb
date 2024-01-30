@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def person_affiliations
-    @person_affiliations ||= ENV['eduPersonAffiliation']
+    @person_affiliations ||= ENV['unscoped-affiliation']
   end
 
   def stanford_affiliated?
@@ -45,10 +45,6 @@ class User < ActiveRecord::Base
     person_affiliations.split(';').any? do |person_affiliation|
       person_affiliation.strip === Settings.EDU_PERSON_AFFILIATION # rubocop:disable Style/CaseEquality
     end
-  end
-
-  def other_attributes
-    @other_attributes ||= ENV['suAffiliation']
   end
 
   # user_id and user_email are special keys in honeybadger for aggregating
