@@ -1,0 +1,35 @@
+<% if document.marc_links.managed_purls.many? %>
+  <% helpers.add_purl_embed_header(document) %>
+
+  <div class='upper-record-metadata'>
+    <%= render 'catalog/record/marc_upper_metadata_items' %>
+  </div>
+
+  <%= render 'catalog/managed_purl_embed', document: document %>
+<% elsif document.druid %>
+  <% helpers.add_purl_embed_header(document) %>
+
+  <div class="upper-record-metadata col-md-12">
+    <%= render 'catalog/record/marc_upper_metadata_items' %>
+  </div>
+
+  <div class="purl-embed-viewer row">
+    <div class="col-md-12">
+      <h2>Digital content</h2>
+      <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+      <%= helpers.iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
+    </div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-sm-2">
+      <%= helpers.render_cover_image(document) %>
+    </div>
+    <div class="col-sm-10">
+      <%= render 'catalog/record/marc_upper_metadata_items' %>
+    </div>
+  </div>
+<% end %>
+
+
+<%= render 'catalog/record/record_metadata_default', document: document %>

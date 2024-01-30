@@ -1,5 +1,4 @@
-<% document ||= @document %>
-<% if (items = render(partial: "catalog/record/mods_upper_metadata_items", locals: {document: document})).present? %>
+<% if (items = render("catalog/record/mods_upper_metadata_items", document: document)).present? %>
   <div class="section">
     <div class="section-body">
       <dl class="dl-horizontal dl-invert">

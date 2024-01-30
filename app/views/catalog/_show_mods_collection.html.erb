@@ -1,5 +1,1 @@
-<%= render 'catalog/record/mods_upper_metadata_section' %>
-
-<%= render partial: 'catalog/collection_members', locals: { document: document } %>
-
-<%= render partial: 'catalog/record/record_metadata_default', locals: { document: document } %>
+<%= render Record::Collection::Mods::MetadataComponent.new(document: document) %>

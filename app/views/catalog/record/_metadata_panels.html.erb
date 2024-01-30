@@ -1,16 +1,16 @@
 <div class="metadata-panels">
-  <%= render AccessPanels::OnlineComponent.new(document: @document) %>
+  <%= render AccessPanels::OnlineComponent.new(document: document) %>
 
-  <%= render AccessPanels::CourseReservesComponent.new(document: @document) %>
-  <%= render AccessPanels::AtTheLibraryComponent.new(document: @document) %>
+  <%= render AccessPanels::CourseReservesComponent.new(document: document) %>
+  <%= render AccessPanels::AtTheLibraryComponent.new(document: document) %>
 
   <% context = capture do %>
-    <%= render AccessPanels::AppearsInComponent.new(document: @document) %>
-    <%= render AccessPanels::InCollectionComponent.new(document: @document) %>
+    <%= render AccessPanels::AppearsInComponent.new(document: document) %>
+    <%= render AccessPanels::InCollectionComponent.new(document: document) %>
   <% end %>
 
   <% potential_context = capture do %>
-    <%= render AccessPanels::ExhibitComponent.new(document: @document) %>
+    <%= render AccessPanels::ExhibitComponent.new(document: document) %>
   <% end %>
 
   <% if context.present? || potential_context.present? %>
@@ -25,5 +25,5 @@
     <%= potential_context %>
   <% end %>
 
-  <%= render AccessPanels::RelatedComponent.new(document: @document) %>
+  <%= render AccessPanels::RelatedComponent.new(document: document) %>
 </div>

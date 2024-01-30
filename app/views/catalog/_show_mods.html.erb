@@ -1,16 +1,1 @@
-<% document ||= @document %>
-
-<% add_purl_embed_header(document) %>
-
-<div class="upper-record-metadata">
-  <%= render 'catalog/record/mods_upper_metadata_section' %>
-  <% if document.druid && document.published_content? %>
-    <h2>Digital content</h2>
-    <div class="purl-embed-viewer">
-      <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
-      <%= iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
-    </div>
-  <% end %>
-</div>
-
-<%= render partial: 'catalog/record/record_metadata_default', locals: { document: document } %>
+<%= render Record::Item::Mods::MetadataComponent.new(document: document) %>
