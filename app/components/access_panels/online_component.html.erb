@@ -1,7 +1,7 @@
 <%= render @layout.new(classes: ['panel-online'], hidden: !links.any?) do |component| %>
   <% component.with_header do %>
     <h2>Online</h2>
-  <% end if links.any? %>
+  <% end %>
 
   <% component.with_title do %>
       <% if document.is_a_database? %>
