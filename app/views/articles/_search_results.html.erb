@@ -3,9 +3,7 @@
   <div class="col-md-12">
     <%= render 'constraints' %>
     <% if !current_user.blank? %>
-    <%= current_user.person_affiliations.to_s %>
-    <%= current_user.su_affiliated? %>
-    <%= current_user.person_affiliated? %>
+    <%= current_user.person_affiliations %>
     <%= current_user.stanford_affiliated? %>
     <% end %>
   </div>

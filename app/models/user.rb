@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_writer :affiliations, :person_affiliations, :other_attributes
+  attr_writer :affiliations, :person_affiliations
 
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
@@ -27,6 +27,14 @@ class User < ActiveRecord::Base
     @person_affiliations ||= ENV['unscoped-affiliation']
   end
 
+  # If a user has proper Stanford affiliation to allow access to resources now depends
+  # on two kinds of affiliation information: the 'su_affiliated' method which returns true
+  # if there are specific affiliations recorded in the 'suAffiliation' Shibboleth attribiute
+  # as well that which is captured by 'unscoped-affiliation' which is a mapping for 'eduPersonAffiliation'.
+  # If the latter returns 'member', we can treat this person as having the correct affiliation status. 
+  # Refer to https://uit.stanford.edu/service/saml/arp/edupa for more information. 
+  # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
+  # with the stanford:library-resources-eligible status. 
   def stanford_affiliated?
     su_affiliated? || person_affiliated?
   end
@@ -43,13 +51,13 @@ class User < ActiveRecord::Base
     return false if person_affiliations.blank?
 
     person_affiliations.split(';').any? do |person_affiliation|
-      person_affiliation.strip === Settings.EDU_PERSON_AFFILIATION # rubocop:disable Style/CaseEquality
+      person_affiliation.strip === Settings.UNSCOPED_AFFILIATION # rubocop:disable Style/CaseEquality
     end
   end
 
   # user_id and user_email are special keys in honeybadger for aggregating
   # errors
   def to_honeybadger_context
-    { user_id: id, user_email: email, affiliations: }
+    { user_id: id, user_email: email, affiliations:, person_affiliations: }
   end
 end
