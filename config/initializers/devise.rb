@@ -22,7 +22,7 @@ if Rails.env.production?
     # Also need to know if certain privileges available.
     # Refer to https://uit.stanford.edu/service/saml/arp/edupa
     user.person_affiliations = auth.env['eduPersonAffiliation']
-    user.other_attributes = auth.env.to_s
+    user.other_attributes = auth.env['urn:oid:1.3.6.1.4.1.5923.1.1.1.1']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
   end
