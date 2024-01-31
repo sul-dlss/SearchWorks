@@ -46,7 +46,7 @@ RSpec.feature "Image Collection", :js do
       expect(page).to have_css(".viewport .container-images")
 
       within ".viewport .container-images" do
-        expect(page).to have_css("li[data-behavior='preview-filmstrip']")
+        expect(page).to have_css("li[data-controller='preview-filmstrip']")
         expect(page).to have_css("a[href='/view/mf774fs2413']")
       end
     end

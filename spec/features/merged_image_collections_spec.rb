@@ -17,8 +17,8 @@ RSpec.feature "Merged Image Collections", :js do
       end
 
       within('ul.container-images') do
-        expect(page).to have_css("li[data-preview-url$='/preview/35']")
-        expect(page).to have_css("li[data-preview-url$='/preview/36']")
+        expect(page).to have_css("li[data-preview-filmstrip-url-value$='/preview/35']")
+        expect(page).to have_css("li[data-preview-filmstrip-url-value$='/preview/36']")
       end
     end
   end
@@ -35,8 +35,8 @@ RSpec.feature "Merged Image Collections", :js do
       end
 
       within('ul.container-images') do
-        expect(page).to have_css("li[data-preview-url$='/preview/35']")
-        expect(page).to have_css("li[data-preview-url$='/preview/36']")
+        expect(page).to have_css("li[data-preview-filmstrip-url-value$='/preview/35']")
+        expect(page).to have_css("li[data-preview-filmstrip-url-value$='/preview/36']")
       end
     end
 

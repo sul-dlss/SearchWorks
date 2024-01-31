@@ -30,7 +30,8 @@ RSpec.describe LiveLookup::Folio do
         [{ 'item_id' => '9c130866-f1a4-53fb-b390-30ac35b00388',
            'due_date' => nil,
            'status' => nil,
-           'is_available' => true }]
+           'is_available' => true,
+           'is_requestable_status' => false }]
       )
     }
   end
@@ -47,6 +48,10 @@ RSpec.describe LiveLookup::Folio do
       expect(folio_live_lookup.as_json.first['status']).to eq 'Checked out'
     end
 
+    it 'is a requestable status' do
+      expect(folio_live_lookup.as_json.first['is_requestable_status']).to be true
+    end
+
     it 'has a due date' do
       expect(folio_live_lookup.as_json.first['due_date']).to eq '11/02/2023'
     end
@@ -57,6 +62,10 @@ RSpec.describe LiveLookup::Folio do
 
     it 'translates the status' do
       expect(folio_live_lookup.as_json.first['status']).to eq 'On hold for a borrower'
+    end
+
+    it 'still recognizes the folio status as requestable' do
+      expect(folio_live_lookup.as_json.first['is_requestable_status']).to be true
     end
   end
 end

@@ -137,6 +137,7 @@ any,book,,,,MEDIA-CENTER,,No loan,No requests allowed,Default notice,No fines,$7
 faculty,book,,,,HILA,,No loan,Allow hold/recall,Default notice,No fines,$100 lost fee
 any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,periodical,,,,SCIENCE,SCI-REF or SCI-RETIRED-REF,No loan,No requests allowed,Default notice,No fines,$400 lost fee
+,periodical,,,,ART,ART-EXHIBIT or ART-PROCESSING-SERIALS,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAL-INPROCESS or EDU-PROCESSING or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-PROCESSING or GRE-REPAIR-EVALUATION or GRE-TECH-PROCESSOR or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-CONSERVATIONSERVICES or SUL-TS-MAINTENANCE or SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
 ,book,,,,,LAW-EYLESAISLE or LAW-VROOMAN2 or LAW-STACKS2 or LAW-REF or LAW-STAFFSHADOW,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-PERMRES or LAW-BOOKCABINET or LAW-NEWBOOK or LAW - DISPLAY,7day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
@@ -220,6 +221,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,EAR-LOCKED-STACKS or EAR-STOR-LOCKED,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$500 lost fee
 ,book,,,,,EAR-ATCIRCDESK,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,EAR-BIB-INDEX or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
+,book,,,,,ART-COURTESY-HOLD or ART-VRC,No loan,Hold only,Default notice,No fines,$150 lost fee
+,book,,,,,ART-EXHIBIT or ART-PROCESSING-LOCKED,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,ART-NEWBOOK,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$150 lost fee
 ,book,,,,,ART-REF or ART-REF-FOLIO,7day-norenew-3daygrace,No requests allowed,Short Term Notices,No fines,$250 lost fee
 ,book,,,,,ART-LOCKED-MEDIUM or ART-LOCKED-LARGE or ART-LOCKED-OVERSIZE or ART-LOCKED-SMALL or ART-LOCKED-LARGE-R or ART-LOCKED-MEDIUM-R or ART-LOCKED-OVERSIZE-R or ART-LOCKED-SMALL-R,No loan,Allow paging/hold,Short Term Notices,No fines,$800 lost fee

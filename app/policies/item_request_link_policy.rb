@@ -12,6 +12,13 @@ class ItemRequestLinkPolicy
     item.on_order?
   end
 
+  # Check to see if request types include hold or recall.
+  # This is used to make sure live lookup can't create a request link for items that aren't eligible for hold/recall.
+  def item_allows_hold_recall?
+    item.allowed_request_types.include?('Hold') ||
+      item.allowed_request_types.include?('Recall')
+  end
+
   private
 
   attr_reader :item
