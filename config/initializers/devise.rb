@@ -17,7 +17,7 @@ if Rails.env.production?
   # aren't any appropriate callbacks in Devise
   # https://github.com/heartcombo/devise/wiki/Callbacks
   Warden::Manager.after_authentication do |user, auth, opts|
-    # We rely on both suAffiliation and unscoped-affiliation to see if people can get permissions 
+    # We rely on both suAffiliation and unscoped-affiliation to see if people can get permissions
     # to articles. For example, a recently graduated student will not be allowed access with
     # only suAffiliation information, but 'member' under 'unscoped-affiliation'
     # should still give them access. 'unscoped-affiliation' is mapped from 'eduPersonAffiliation'.
@@ -28,7 +28,6 @@ if Rails.env.production?
     user.person_affiliations = auth.env['unscoped-affiliation']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
-   
   end
 
   # re-hydrate the user's affiliations from the session data for each request.

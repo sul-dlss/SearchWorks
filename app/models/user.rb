@@ -31,10 +31,10 @@ class User < ActiveRecord::Base
   # on two kinds of affiliation information: the 'su_affiliated' method which returns true
   # if there are specific affiliations recorded in the 'suAffiliation' Shibboleth attribiute
   # as well that which is captured by 'unscoped-affiliation' which is a mapping for 'eduPersonAffiliation'.
-  # If the latter returns 'member', we can treat this person as having the correct affiliation status. 
-  # Refer to https://uit.stanford.edu/service/saml/arp/edupa for more information. 
+  # If the latter returns 'member', we can treat this person as having the correct affiliation status.
+  # Refer to https://uit.stanford.edu/service/saml/arp/edupa for more information.
   # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
-  # with the stanford:library-resources-eligible status. 
+  # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
     su_affiliated? || person_affiliated?
   end
