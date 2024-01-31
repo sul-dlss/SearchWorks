@@ -93,16 +93,10 @@ libraries:
     about_url: https://library.stanford.edu/libraries/bowes-art-architecture-library
     hours_api_url: art/location/art_library
     name: Art & Architecture Library (Bowes)
-  BIOLOGY:
-    hours_api_url: biology/location/biology_library
-    name: Biology Library (Falconer)
   BUSINESS:
     about_url: https://www.gsb.stanford.edu/library
     hours_api_url: business/location/business_library
     name: Business Library
-  CHEMCHMENG:
-    hours_api_url: chemistry/location/chemistry_library
-    name: Chemistry & ChemEng Library (Swain)
   CLASSICS:
     name: Classics Library
   EARTH-SCI:
@@ -121,13 +115,13 @@ libraries:
     about_url: https://library.stanford.edu/libraries/terman-engineering-library
     hours_api_url: engineering/location/engineering_library
     name: Engineering Library (Terman)
-  GOV-DOCS:
+  GOV-DOCS: # not a FOLIO library, but shows up in MHLD data
     name: Green Library
   GREEN:
     about_url: https://library.stanford.edu/libraries/cecil-h-green-library
     hours_api_url: green/location/green_library
     name: Green Library
-  GRN-REF:
+  GRN-REF: # not a FOLIO library, but probably shows up in MHLD data
     name: Green Library
   HILA:
     about_url: https://www.hoover.org/library-archives
@@ -135,13 +129,9 @@ libraries:
     name: Hoover Library
     suppress_items_list_on_results_view: true
     suppress_location_request_link: true
-  HOPKINS:
-    about_url: https://library.stanford.edu/libraries/harold-miller-library-hopkins-marine-station
-    hours_api_url: marine_biology/location/marine_biology_library
-    name: Marine Biology Library (Miller)
   IC:
     hours_api_url: green/location/reference
-  IC-CHAT:
+  IC-CHAT: # fake code used internally for IC chat hours
     hours_api_url: green/location/reference
   JACKSON:
     name: Business Library
@@ -150,14 +140,6 @@ libraries:
     ezproxy_host: https://login.laneproxy.stanford.edu/login?
     hours_api_url: medical/location/medical_library
     name: Lane Medical Library
-  LANE-MED:
-    about_url: https://lane.stanford.edu/index.html
-    ezproxy_host: https://login.laneproxy.stanford.edu/login?
-    hours_api_url: medical/location/medical_library
-    name: Lane Medical Library
-  LATHROP:
-    hours_api_url: lathrop/location/tech-lounge
-    name: Lathrop Library
   LAW:
     about_url: https://law.stanford.edu/robert-crown-law-library/
     ezproxy_host: https://ezproxy.law.stanford.edu/login?
@@ -167,26 +149,13 @@ libraries:
     about_url: https://library.stanford.edu/libraries/harold-miller-library-hopkins-marine-station
     hours_api_url: marine_biology/location/marine_biology_library
     name: Marine Biology Library (Miller)
-  MATH-CS:
-    hours_api_url: math_stats/location/math_stats_library
-    name: Math & Statistics Library
   MEDIA-CENTER:
     hours_api_url: green/location/media_microtext
     name: Media & Microtext Center
-  MEDIA-MTXT:
-    hours_api_url: green/location/media_microtext
-    name: Media & Microtext Center
-  MEYER:
-    hours_api_url: meyer/location/meyer_24_hour
-    name: Meyer Library
   MUSIC:
     about_url: https://library.stanford.edu/libraries/music-library
     hours_api_url: music/location/music_library
     name: Music Library
-  RUMSEYMAP:
-    about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
-    hours_api_url: Rumsey/location/visitor-access
-    name: David Rumsey Map Center
   RUMSEY-MAP:
     about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
     hours_api_url: Rumsey/location/visitor-access

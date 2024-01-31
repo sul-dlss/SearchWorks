@@ -76,7 +76,7 @@ RSpec.describe Holdings do
           item_display_struct: [
             { barcode: 'barcode', library: 'SAL3', home_location: 'home-location' },
             { barcode: 'barcode', library: 'GREEN', home_location: 'home-location' },
-            { barcode: 'barcode', library: 'BIOLOGY', home_location: 'home-location' }
+            { barcode: 'barcode', library: 'MARINE-BIO', home_location: 'home-location' }
           ]
         ).items
       )
@@ -90,7 +90,7 @@ RSpec.describe Holdings do
     end
     it "should sort Green first then the rest alpha" do
       expect(sortable_libraries.libraries.length).to eq 3
-      expect(sortable_libraries.libraries.map(&:code)).to eq ['GREEN', 'BIOLOGY', 'SAL3']
+      expect(sortable_libraries.libraries.map(&:code)).to eq ['GREEN', 'MARINE-BIO', 'SAL3']
     end
   end
 
