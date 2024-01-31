@@ -27,16 +27,24 @@ class User < ActiveRecord::Base
     @person_affiliations ||= ENV['unscoped-affiliation']
   end
 
-  # If a user has proper Stanford affiliation to allow access to resources now depends
-  # on two kinds of affiliation information: the 'su_affiliated' method which returns true
-  # if there are specific affiliations recorded in the 'suAffiliation' Shibboleth attribiute
-  # as well that which is captured by 'unscoped-affiliation' which is a mapping for 'eduPersonAffiliation'.
-  # If the latter returns 'member', we can treat this person as having the correct affiliation status.
+  # Based on previous work and discussions, the 'eduPersonAffiliaton' attribute, which is mapped
+  # to the 'unscoped-affiliation' attribute, should have sufficient information to decide whether 
+  # or not a user has the right affiliation access.  If the value of this attribute is 
+  # 'member', we should provide access. To be on the safe side, we are still including 
+  # a check against suAffiliation in case 'eduPersonAffiliation' does not provide affiliation access.
+  # If this situation occurs, we want to log the issue. 
   # Refer to https://uit.stanford.edu/service/saml/arp/edupa for more information.
   # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
   # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
-    su_affiliated? || person_affiliated?
+    # Will rely primarily on eduPersonAffiliation so return true if this works
+    return true if person_affiliated?
+
+    # If not true, we still want to check against suAffiliation
+    if su_affiliated?
+      Rails.logger.info "Not affiliated by eduPersonAffiliation but is by suAffiliation: #{affiliations.to_s}"
+      true
+    end
   end
 
   def su_affiliated?
