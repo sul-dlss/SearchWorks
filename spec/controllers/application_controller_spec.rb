@@ -22,6 +22,14 @@ RSpec.describe ApplicationController do
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
     end
 
+    context 'when the user is part of member group without correct affiliation' do
+      let(:user) do
+        User.new(affiliations: 'other:other', person_affiliations: 'other;member')
+      end
+
+      it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
+    end
+
     context 'when there is a current user not in the correct affilation' do
       let(:user) { User.new }
 

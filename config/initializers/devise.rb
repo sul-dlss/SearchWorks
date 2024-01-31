@@ -17,8 +17,15 @@ if Rails.env.production?
   # aren't any appropriate callbacks in Devise
   # https://github.com/heartcombo/devise/wiki/Callbacks
   Warden::Manager.after_authentication do |user, auth, opts|
+    # We rely on both suAffiliation and unscoped-affiliation to see if people can get permissions
+    # to articles. For example, a recently graduated student will not be allowed access with
+    # only suAffiliation information, but 'member' under 'unscoped-affiliation'
+    # should still give them access. 'unscoped-affiliation' is mapped from 'eduPersonAffiliation'.
+    # Refer to https://uit.stanford.edu/service/saml/arp/edupa for 'member' value.
     auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
+    auth.session(:user)['unscoped-affiliation'] = auth.env['unscoped-affiliation']
     user.affiliations = auth.env['suAffiliation']
+    user.person_affiliations = auth.env['unscoped-affiliation']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
   end
@@ -28,10 +35,12 @@ if Rails.env.production?
   # also support the previous session store for now...
   Warden::Manager.after_fetch do |user, auth, opts|
     user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
+    user.person_affiliations = auth.session(:user)['unscoped-affiliation'] || auth.env['rack.session']['unscoped-affiliation']
   end
 
   Warden::Manager.before_logout do |user, auth, opts|
     auth.session(:user)['suAffiliation'] = nil
+    auth.session(:user)['unscoped-affiliation'] = nil
     auth.env['rack.session']['eds_session_token'] = nil
   end
 end
