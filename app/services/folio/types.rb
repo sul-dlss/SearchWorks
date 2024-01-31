@@ -69,6 +69,10 @@ module Folio
       @campuses ||= get_type('campuses').index_by { |p| p['id'] }
     end
 
+    def courses
+      @courses ||= get_type('courses').index_by { |p| p['id'] }
+    end
+
     def libraries
       @libraries ||= get_type('libraries').index_by { |p| p['id'] }
     end
