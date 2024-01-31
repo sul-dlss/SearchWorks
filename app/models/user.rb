@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
     return false if person_affiliations.blank?
 
     person_affiliations.split(';').any? do |person_affiliation|
-      person_affiliation.strip === Settings.UNSCOPED_AFFILIATION # rubocop:disable Style/CaseEquality
+      person_affiliation.strip == Settings.UNSCOPED_AFFILIATION
     end
   end
 
