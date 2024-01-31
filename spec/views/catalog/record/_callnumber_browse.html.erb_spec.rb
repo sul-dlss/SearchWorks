@@ -12,8 +12,7 @@ RSpec.describe "catalog/record/_callnumber_browse" do
   }
 
   before do
-    assign(:document, document)
-    render
+    render 'catalog/record/callnumber_browse', document:
   end
 
   it "should render a panel" do

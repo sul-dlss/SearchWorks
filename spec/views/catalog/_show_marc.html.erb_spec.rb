@@ -4,8 +4,7 @@ RSpec.describe 'catalog/_show_marc' do
   include MarcMetadataFixtures
   before do
     allow(view).to receive_messages(add_purl_embed_header: '', render_cover_image: '')
-    assign(:document, document)
-    render
+    render 'catalog/show_marc', document:
   end
 
   context 'when a document has a managed purl' do

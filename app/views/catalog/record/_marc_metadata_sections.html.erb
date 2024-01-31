@@ -1,5 +1,4 @@
 <%
-  document ||= @document
   contributors = render(partial: "catalog/record/marc_contributors", locals: {document: document})
   contents_summary = render(partial: "catalog/record/marc_contents_summary", locals: {document: document})
   subjects = render(partial: "catalog/record/marc_subjects", locals: {document: document})

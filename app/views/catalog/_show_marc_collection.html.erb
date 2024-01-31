@@ -1,5 +1,1 @@
-<%= render 'catalog/record/marc_upper_metadata_items' %>
-
-<%= render partial: 'catalog/collection_members', locals: { document: document } %>
-
-<%= render partial: 'catalog/record/record_metadata_default', locals: { document: document } %>
+<%= render Record::Collection::Marc::MetadataComponent.new(document: document) %>

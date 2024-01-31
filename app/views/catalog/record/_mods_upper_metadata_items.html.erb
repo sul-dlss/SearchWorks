@@ -1,5 +1,3 @@
-<% document ||= @document %>
-
 <% document.mods.resourceType.each do |resource_type| %>
   <%= mods_record_field(resource_type) %>
 <% end %>

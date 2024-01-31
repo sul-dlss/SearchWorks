@@ -1,5 +1,4 @@
 <%
-  document ||= @document
   contributors = render(partial: "catalog/record/mods_contributors", locals: {document: document})
   abstract_contents = render(partial: "catalog/record/mods_abstract_contents", locals: {document: document})
   subjects = render(partial: "catalog/record/mods_subjects", locals: {document: document})

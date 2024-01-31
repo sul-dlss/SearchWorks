@@ -2,17 +2,17 @@
 
 <div class="record-metadata row">
   <div class="record-panels col-md-4">
-    <%= render "catalog/record/metadata_panels" %>
+    <%= render "catalog/record/metadata_panels", document: document %>
   </div>
   <div class="record-sections col-md-8">
     <% if document.respond_to?(:to_marc) %>
-      <%= render "catalog/record/marc_metadata_sections" %>
+      <%= render "catalog/record/marc_metadata_sections", document: document %>
     <% elsif document.respond_to?(:mods?) && document.mods? %>
-      <%= render 'catalog/record/mods_metadata_sections' %>
+      <%= render 'catalog/record/mods_metadata_sections', document: document %>
     <% end %>
   </div>
 </div>
 
 <% if document.holdings.browsable_items.present? %>
-  <%= render 'catalog/record/callnumber_browse' %>
+  <%= render 'catalog/record/callnumber_browse', document: document %>
 <% end %>

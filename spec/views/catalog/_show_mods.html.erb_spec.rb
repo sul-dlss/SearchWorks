@@ -6,8 +6,7 @@ RSpec.describe 'catalog/_show_mods' do
 
   before do
     allow(view).to receive(:add_purl_embed_header).and_return('')
-    assign(:document, document)
-    render
+    render 'catalog/show_mods', document:
   end
 
   context 'when a document has a druid' do
