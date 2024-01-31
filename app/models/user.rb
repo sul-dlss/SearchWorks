@@ -28,11 +28,11 @@ class User < ActiveRecord::Base
   end
 
   # Based on previous work and discussions, the 'eduPersonAffiliaton' attribute, which is mapped
-  # to the 'unscoped-affiliation' attribute, should have sufficient information to decide whether 
-  # or not a user has the right affiliation access.  If the value of this attribute is 
-  # 'member', we should provide access. To be on the safe side, we are still including 
+  # to the 'unscoped-affiliation' attribute, should have sufficient information to decide whether
+  # or not a user has the right affiliation access.  If the value of this attribute is
+  # 'member', we should provide access. To be on the safe side, we are still including
   # a check against suAffiliation in case 'eduPersonAffiliation' does not provide affiliation access.
-  # If this situation occurs, we want to log the issue. 
+  # If this situation occurs, we want to log the issue.
   # Refer to https://uit.stanford.edu/service/saml/arp/edupa for more information.
   # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
   # with the stanford:library-resources-eligible status.
@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
 
     # If not true, we still want to check against suAffiliation
     if su_affiliated?
-      Rails.logger.info "Not affiliated by eduPersonAffiliation but is by suAffiliation: #{affiliations.to_s}"
+      Rails.logger.info "Not affiliated by eduPersonAffiliation but is by suAffiliation: #{affiliations}"
       true
     end
   end
