@@ -1,7 +1,9 @@
 module Folio
   class Types
     class << self
-      delegate :policies, :circulation_rules, :criteria, :locations, :libraries, :institutions, :campuses, :service_points, :material_types, :cached_location_by_code, to: :instance
+      delegate :policies, :circulation_rules, :criteria, :locations, :libraries,
+               :institutions, :campuses, :service_points, :material_types,
+               :cached_location_by_code, :courses, to: :instance
     end
 
     def self.instance
@@ -115,7 +117,8 @@ module Folio
         'campuses',
         'libraries',
         'locations',
-        'service_points'
+        'service_points',
+        'courses'
       ]
     end
   end

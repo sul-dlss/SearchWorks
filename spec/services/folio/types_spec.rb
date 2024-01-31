@@ -43,7 +43,8 @@ RSpec.describe Folio::Types do
         campuses: ['campuses'],
         institutions: ['institutions'],
         loan_types: ['loan_types'],
-        service_points: ['service_points']
+        service_points: ['service_points'],
+        courses: ['courses']
       }
     end
     let(:circulation_rules) do
