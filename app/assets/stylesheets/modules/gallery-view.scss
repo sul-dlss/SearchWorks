@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 
   .item-thumb {
-    align-items: end;
+    align-items: flex-end;
     display: flex;
     height: $sul-gallery-cover-height;
     justify-content: center;
