@@ -2,10 +2,6 @@
 <div class="breadcrumb row">
   <div class="col-md-12">
     <%= render 'constraints' %>
-    <% if !current_user.blank? %>
-    <%= current_user.person_affiliations %>
-    <%= current_user.stanford_affiliated? %>
-    <% end %>
   </div>
 </div>
 <div class='row'>
