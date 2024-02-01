@@ -1,7 +1,7 @@
 ###
 #  ActionMailer class to send records (full and brief versions) via email
 ###
-class SearchWorksRecordMailer < ActionMailer::Base
+class SearchWorksRecordMailer < ApplicationMailer
   default 'Content-Transfer-Encoding' => '7bit'
   include Roadie::Rails::Automatic
   include Blacklight::Configurable
