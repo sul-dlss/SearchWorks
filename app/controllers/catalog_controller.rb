@@ -17,8 +17,6 @@ class CatalogController < ApplicationController
 
   include CallnumberSearch
 
-  include Thumbnail
-
   include LocationFacet
 
   include EmailValidation
@@ -98,7 +96,7 @@ class CatalogController < ApplicationController
     config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
     config.index.title_field = Blacklight::Configuration::Field.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
-    config.index.thumbnail_method = :thumbnail
+    config.index.thumbnail_method = :render_cover_image
     config.index.search_field_mapping = { # Catalog -> Article
       search:         :search,
       search_author:  :author,
