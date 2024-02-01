@@ -877,20 +877,6 @@
         series_search^2                vern_series_search^2                cjk_series_search^2                 ja_series_search^2
       </str>
 
-
-      <!-- for course reserves searches -->
-      <str name="qf_crez">
-      	crez_instructor_search
-      	crez_course_name_search
-        crez_course_id_search
-      </str>
-      <str name="pf_crez">
-      	crez_instructor_search^2
-      	crez_course_name_search^2
-      </str>
-      <str name="sort_crez">score desc, title_sort asc, pub_date_sort desc</str>
-
-
       <!-- for advanced search publisher text box -->
       <str name="qf_pub_info">
         pub_search                     vern_pub_search
