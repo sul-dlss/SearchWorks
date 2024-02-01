@@ -16,7 +16,7 @@ RSpec.feature "Collection Access Point" do
       expect(page).to have_css("dd a", text: "Online Archive of California")
     end
     within("#content") do
-      expect(page).to have_css("div.document", count: 1)
+      expect(page).to have_css("article.document", count: 1)
     end
   end
 end

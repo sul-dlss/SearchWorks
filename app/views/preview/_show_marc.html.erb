@@ -10,4 +10,4 @@
   </div>
 <% end %>
 
-<%= render partial: "catalog/index_marc", locals: { document: document } %>
+<%= render SearchResult::Item::Marc::MetadataComponent.new(document:) %>

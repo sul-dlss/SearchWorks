@@ -66,7 +66,7 @@ RSpec.feature 'Article Searching' do
     scenario 'subjects are not linked' do
       stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
       article_search_for('kittens')
-      within '.document-position-0' do
+      within '.document-position-1' do
         expect(page).to have_css('dd', text: /Kittens/)
         expect(page).to have_no_link('Kittens')
       end

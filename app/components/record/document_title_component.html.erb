@@ -1,0 +1,7 @@
+<h1>
+  <%= helpers.render_resource_icon @presenter.formats %>
+  <span itemprop="name"><%= @presenter.heading %></span>
+</h1>
+<% if @document[:vern_title_display].present? %>
+  <p class='vernacular-title'><%= @document[:vern_title_display] %></p>
+<% end %>

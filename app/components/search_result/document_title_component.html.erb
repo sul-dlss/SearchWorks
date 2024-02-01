@@ -1,0 +1,15 @@
+<% # header bar for doc items in index view %>
+<div class="documentHeader row">
+  <h3 class="index_title col-sm-9 col-lg-10">
+    <%= helpers.render_resource_icon @presenter.formats %>
+    <%= @document.online_label %>
+    <%= counter %>
+    <%= title %>
+    <span class="main-title-date"><%= helpers.get_main_title_date(@document) %></span>
+  </h3>
+
+  <% # bookmark functions for items/docs -%>
+  <% actions.each do |action| %>
+    <%= action %>
+  <% end %>
+</div>

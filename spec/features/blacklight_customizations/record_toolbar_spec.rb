@@ -52,7 +52,7 @@ RSpec.feature "Record Toolbar" do
     visit search_catalog_path f: { format: ["Book"] }
 
     # Specifically trying to not get the first item in the results
-    within '.document-position-1' do
+    within '.document-position-2' do
       page.find('h3 a').click
     end
 

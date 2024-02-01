@@ -5,4 +5,5 @@
     <img class="stacks-image" src="<%= document.image_urls(:large).first %>" alt="">
   </div>
 <% end %>
-<%= render partial: "catalog/index_mods", locals: { document: document } %>
+
+<%= render SearchResult::Item::Mods::MetadataComponent.new(document:) %>

@@ -1,6 +1,5 @@
-<% doc_presenter = document_presenter(document) %>
 <ul class='document-metadata results-metadata-section'>
-  <% if document['eds_authors'].present? %>
+  <% if @document['eds_authors'].present? %>
     <li>
       <div data-behavior='metadata-truncate'>
         <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors']) %>
@@ -8,23 +7,23 @@
     </li>
   <% end %>
 
-  <% if document['eds_composed_title'].present? %>
+  <% if @document['eds_composed_title'].present? %>
     <li><%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title']) %></li>
   <% end %>
 </ul>
 
-<% if document.eds_subjects.present? || document['eds_abstract'].present? %>
+<% if @document.eds_subjects.present? || @document['eds_abstract'].present? %>
   <dl class="document-metadata dl-horizontal dl-invert results-metadata-section">
-    <% if document.eds_subjects.present? %>
+    <% if @document.eds_subjects.present? %>
       <dt>Subjects</dt>
       <dd>
         <div data-behavior='metadata-truncate'>
-          <%= document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
+          <%= @document.eds_subjects.map(&:to_s).to_sentence.html_safe %>
         </div>
       </dd>
     <% end %>
 
-    <% if document['eds_abstract'].present? %>
+    <% if @document['eds_abstract'].present? %>
       <dt>Abstract</dt>
       <dd>
         <div data-behavior='metadata-truncate'>
@@ -35,9 +34,9 @@
   </dl>
 <% end %>
 
-<% if !document.eds_restricted? %>
+<% if !@document.eds_restricted? %>
   <ul class='document-metadata results-metadata-section'>
-    <% ArticleFulltextLinkPresenter.new(document: document, context: self).links.each do |link| %>
+    <% ArticleFulltextLinkPresenter.new(document: @document, context: self).links.each do |link| %>
       <li><%= link.html_safe %></li>
     <% end %>
   </ul>
