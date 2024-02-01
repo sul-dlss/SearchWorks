@@ -4,9 +4,6 @@
 :all_search: Merged Image Collection1
 :author_person_full_display: Bob, Uncle
 :collection_type: Digital Collection
-:display_type:
-  - image
-  - sirsi
 :format: Image
 :format_main_ssim: Image
 :marc_json_struct: |

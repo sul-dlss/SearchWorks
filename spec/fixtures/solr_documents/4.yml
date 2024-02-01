@@ -8,8 +8,6 @@
 :language: French
 :format: Video
 :format_main_ssim: Video
-:display_type:
-  - sirsi
 :physical: The physical statement
 :marc_json_struct: |
 <%= marc_characteristics_fixture %>

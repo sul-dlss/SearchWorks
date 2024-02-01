@@ -6,8 +6,6 @@
 :all_search: Adipisicing dolor velit dolore dolore Lorem do quis sint veniam et anim.
 :language: Chinese
 :format: Book
-:display_type:
-  - sirsi
 :marc_json_struct: |
 <%= metadata1 %>
 :format_main_ssim: Book

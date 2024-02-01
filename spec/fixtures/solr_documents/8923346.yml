@@ -8,9 +8,6 @@
 :access_facet: At the Library
 :marc_json_struct: |
 <%= many_managed_purl_856 %>
-:display_type:
-  - sirsi
-  - image
 marc_links_struct:
   - '{ "managed_purl": true, "href": "https://purl.stanford.edu/ct493wg6431", "druid": "ct493wg6431" }'
   - '{ "managed_purl": true, "href": "https://purl.stanford.edu/zg338xh5248", "druid": "zg338xh5248" }'

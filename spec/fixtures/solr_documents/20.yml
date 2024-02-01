@@ -15,8 +15,6 @@
 :db_az_subject: Biology
 :summary_display:
   - A summary of the database, this needs to be long so that we can test whether or not it gets truncated
-:display_type:
-  - sirsi
 :access_facet: Online
 :building_facet: Law (Crown)
 :marc_json_struct: |

@@ -4,8 +4,6 @@
 :all_search: The Item in Curriculum Collection
 :language: English
 :format: Book
-:display_type:
-  - sirsi
 :marc_json_struct: |
 <%= metadata1 %>
 :format_main_ssim: Book

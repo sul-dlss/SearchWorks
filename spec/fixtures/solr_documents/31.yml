@@ -5,8 +5,6 @@
 :collection_type: Digital Collection
 :summary_display:
   - "A collection of fixture files from the SearchWorks development index."
-:display_type:
-  - file
 :format: File
 :format_main_ssim: Dataset
 :modsxml: <%= mods_everything %>

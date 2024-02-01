@@ -4,8 +4,6 @@
 :all_search: Image Collection1
 :summary_display:
   - "A collection of fixture images from the SearchWorks development index."
-:display_type:
-  - image
 :format: Image
 :format_main_ssim: Image
 :collection_type: Digital Collection

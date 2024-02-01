@@ -11,8 +11,6 @@
 :language: English
 :marc_json_struct: |
 <%= simple_856 %>
-:display_type:
-  - sirsi
 :pub_date: 2014
 :callnum_search: G70.212 .A426 2011:test
 :pub_year_tisim: 2014

@@ -5,8 +5,6 @@
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= metadata2 %>
-:display_type:
-  - image
 :file_id:
   - cg767mn6478%2F2542A.jp2
 :druid: hj097bm8879

@@ -96,9 +96,6 @@
           <str name="facet.field">db_az_subject</str>
             <str name="f.db_az_subject.facet.sort">index</str>
             <str name="f.db_az_subject.facet.method">enum</str>
-          <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
-          <str name="facet.field">display_type</str>
-            <str name="f.display_type.facet.method">enum</str>
           <str name="facet.field">era_facet</str>
           <str name="facet.field">format_main_ssim</str>
             <str name="f.format_main_ssim.facet.method">enum</str>
@@ -141,9 +138,6 @@
           <str name="facet.field">db_az_subject</str>
             <str name="f.db_az_subject.facet.sort">index</str>
             <str name="f.db_az_subject.facet.method">enum</str>
-          <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
-          <str name="facet.field">display_type</str>
-            <str name="f.display_type.facet.method">enum</str>
           <str name="facet.field">era_facet</str>
             <str name="f.era_facet.facet.method">uif</str>
           <str name="facet.field">format_main_ssim</str>
