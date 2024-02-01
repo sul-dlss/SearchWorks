@@ -21,7 +21,7 @@
         Description
       </th>
       <th>
-        Instructor
+        Instructor(s)
       </th>
     </tr>
   </thead>
@@ -29,13 +29,13 @@
   <% @course_reserves.each do |course| %>
     <tr>
       <td>
-        <%= link_to course.id, search_catalog_path({f: {course: [course.id], instructor: [course.instructor]}}) %>
+        <%= link_to course.course_number, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}) %>
       </td>
       <td>
         <%= course.name %>
       </td>
       <td>
-        <%= course.instructor %>
+        <%= safe_join course.instructor, ', ' %>
       </td>
     </tr>
   <% end %>

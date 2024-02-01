@@ -6,7 +6,7 @@
     </dd>
     <dt>Instructor(s)</dt>
     <dd>
-      <%= course.instructor %>
+      <%= safe_join course.instructor, ', ' %>
     </dd>
   <% end %>
 <% end %>

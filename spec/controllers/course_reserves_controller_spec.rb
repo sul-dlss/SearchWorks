@@ -4,8 +4,7 @@ RSpec.describe CourseReservesController do
   describe "#index" do
     it "should get the course reserves page" do
       get :index
-      course_reserves = assigns(:course_reserves)
-      expect(course_reserves.length).to eq 4
+      expect(assigns(:course_reserves).length).to be > 25
       expect(response).to render_template("index")
     end
   end

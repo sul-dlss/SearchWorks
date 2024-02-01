@@ -1,13 +1,16 @@
-<% create_course %>
-<% if @course_info.present? %>
+<%
+   id = params[:f][:courses_folio_id_ssim].first
+   course_info = CourseReserve.find(id)
+%>
+<% if course_info.present? %>
   <div id="masthead-container">
     <div id="masthead" class="course-reserve-masthead">
-      <h1 class="my-3">Course reserve list: <%= @course_info.id %></h1>
+      <h1 class="my-3">Course reserve list: <%= course_info.course_number %></h1>
       <dl class='dl-horizontal dl-invert'>
         <dt>Course</dt>
-        <dd><%= "#{@course_info.id} -- #{@course_info.name}" %></dd>
-        <dt>Instructor</dt>
-        <dd><%= @course_info.instructor %></dd>
+        <dd><%= "#{course_info.course_number} -- #{course_info.name}" %></dd>
+        <dt>Instructor(s)</dt>
+        <dd><%= safe_join course_info.instructor, ', ' %></dd>
       </dl>
       <p>
         <%= link_to "Find reserve list for another course", course_reserves_path %>
