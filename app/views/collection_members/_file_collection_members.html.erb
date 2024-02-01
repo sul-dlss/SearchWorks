@@ -11,7 +11,7 @@
     <% document.collection_members[0...3].each do |collection_member| %>
       <div class="d-flex file-item">
         <div class="mr-2 file-icon">
-          <%= render_resource_icon collection_member[collection_member.format_key] %>
+          <%= render_resource_icon collection_member.document_formats %>
         </div>
         <div class="file-title">
           <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>

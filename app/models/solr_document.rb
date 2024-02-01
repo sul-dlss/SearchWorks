@@ -3,6 +3,7 @@
 class SolrDocument
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
   UPDATED_EDS_RESTRICTED_TITLE = 'This title is not available for guests. Log in to see the title and access the article.'.freeze
+  FORMAT_KEY = 'format_main_ssim'.freeze
 
   include DocumentLinks
   include DisplayType
@@ -114,11 +115,7 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
-  # This abstraction method may become useful while
-  # we're between using the new and old format facet
-  def format_key
-    :format_main_ssim
-  end
+  attribute :document_formats, :array, FORMAT_KEY
 
   def file_ids
     self[:img_info] || self[:file_id] || []

@@ -7,6 +7,6 @@
 <% if document.is_a_database? && document[:db_az_subject] %>
   <dt>Database topics</dt>
   <% document[:db_az_subject].each do |subject| %>
-    <dd><%= link_to(subject, search_catalog_path(f: { :db_az_subject => [subject], document.format_key => ["Database"]})) %></dd>
+    <dd><%= link_to(subject, search_catalog_path(f: { :db_az_subject => [subject], SolrDocument::FORMAT_KEY => ["Database"]})) %></dd>
   <% end %>
 <% end %>

@@ -23,7 +23,7 @@ class Language < MarcField
   end
 
   def notation?
-    document_formats.include?('Music score') && contains_only_subfield_b?
+    document.document_formats.include?('Music score') && contains_only_subfield_b?
   end
 
   def contains_only_subfield_b?
@@ -38,9 +38,5 @@ class Language < MarcField
     languages = Array.wrap(document['language'])
     vern_languages = Array.wrap(document['language_vern'])
     [languages, vern_languages].flatten.compact
-  end
-
-  def document_formats
-    document[document.format_key] || []
   end
 end
