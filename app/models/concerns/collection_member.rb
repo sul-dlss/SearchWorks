@@ -14,7 +14,7 @@ module CollectionMember
   end
 
   def index_parent_collections
-    return nil if !is_a_collection_member? || self[:collection_with_title].blank?
+    return nil if self[:collection_with_title].blank? || parent_collections.blank?
 
     unless @index_parent_collections
       @index_parent_collections = self[:collection_with_title].map do |collection_with_title|
