@@ -241,9 +241,6 @@
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- collection_search: allow searching within collections for aggr. colls -->
     <field name="collection_search" type="string_punct_stop" indexed="true" stored="true" multiValued="true" omitNorms="true" />
-    <!-- display_type: used by UI code, e.g. 'file' or 'image' -->
-    <!-- display_type can be removed after all DOR objects and MARC records are reindexed in Feb/March 2016 -->
-    <field name="display_type" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!--  used to determine when something is a digital collection -->
     <field name="collection_type" type="string" indexed="true" stored="true" multiValued="true" />
     <!-- file_id:  ids of files (including images) in the digital stacks -->

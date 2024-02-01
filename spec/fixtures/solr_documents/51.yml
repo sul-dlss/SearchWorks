@@ -5,8 +5,6 @@
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= metadata1 %>
-:display_type:
-  - image
 :file_id:
   - fh193nf4583%2F2542002.jp2
 :druid: fh193nf4583

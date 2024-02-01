@@ -5,8 +5,6 @@
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= contributed_works_fixture %>
-:display_type:
-  - image
 :file_id:
   - jw923xn5254%2F2542B.jp2
 :druid: hj097bm8879

@@ -4,8 +4,6 @@
 :all_search: An item in a virtual object
 :format_main_ssim: Map
 :modsxml: <%= mods_everything %>
-:display_type:
-  - image
 :file_id:
   - wn461xh4882%2F2542001.jp2
 :druid: wn461xh4882

@@ -5,9 +5,6 @@
 :collection_type: Digital Collection
 :summary_display:
   - "A collection of fixture files from the SearchWorks development index."
-:display_type:
-  - file
-  - sirsi
 :format: File
 :format_main_ssim: Dataset
 :marc_json_struct: |

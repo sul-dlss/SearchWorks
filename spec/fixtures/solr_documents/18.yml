@@ -7,8 +7,6 @@
 :language: German
 :format: Image
 :format_main_ssim: Image
-:display_type:
-  - sirsi
 :marc_json_struct: |
 <%= uniform_title_fixture %>
 :imprint_display: 1933

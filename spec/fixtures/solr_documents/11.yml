@@ -10,8 +10,6 @@
 :vern_title_display: "Currently, to obtain more information from the weakness of the resultant pain."
 :language: Spanish
 :format: Newspaper
-:display_type:
-  - sirsi
 :marc_json_struct: |
 <%= simple_856 %>
 :format_main_ssim: Newspaper

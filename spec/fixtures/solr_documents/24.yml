@@ -10,8 +10,6 @@
 :marc_json_struct: |
 <%= stanford_only_856 %>
 :format_main_ssim: Database
-:display_type:
-  - sirsi
 :db_az_subject: Biology
 :access_facet: Online
 :building_facet: Hoover Library

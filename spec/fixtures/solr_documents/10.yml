@@ -13,8 +13,6 @@
 <%= metadata1 %>
 :genre_ssim:
   - Thesis/Dissertation
-:display_type:
-  - sirsi
 :item_display_struct:
   - barcode: "123"
     library: ENG

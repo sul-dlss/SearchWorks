@@ -5,8 +5,6 @@
 :format_main_ssim: Map
 :marc_json_struct: |
 <%= marc_382_instrumentation %>
-:display_type:
-  - image
 :file_id:
   - ty335fg4673%2F2542004.jp2
 :druid: ty335fg4673
