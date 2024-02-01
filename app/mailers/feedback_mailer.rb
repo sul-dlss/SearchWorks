@@ -1,4 +1,4 @@
-class FeedbackMailer < ActionMailer::Base
+class FeedbackMailer < ApplicationMailer
   def submit_feedback(params, ip)
     @mailer_parser = FeedbackMailerParser.new(params, ip)
 
