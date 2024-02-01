@@ -5,11 +5,15 @@ module CourseReserves
     end
   end
 
+  def self.from_crez_info(course)
+    CourseInfo.new(*course.split('-|-').map { |c| c.strip })
+  end
+
   private
 
   class Processor
     def initialize(document)
-      @courses = document[:crez_course_info].map { |course| CourseInfo.new(course) } unless document[:crez_course_info].nil?
+      @courses = Array(document[:crez_course_info]).map { |course| CourseReserves.from_crez_info(course) }
     end
 
     def present?
@@ -19,21 +23,5 @@ module CourseReserves
     attr_reader :courses
   end
 
-  class CourseInfo
-    def initialize(course)
-      @course = course.split('-|-').map { |c| c.strip }
-    end
-
-    def id
-      @course[0]
-    end
-
-    def name
-      @course[1]
-    end
-
-    def instructor
-      @course[2]
-    end
-  end
+  CourseInfo = Data.define(:id, :name, :instructor)
 end

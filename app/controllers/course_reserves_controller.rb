@@ -1,7 +1,6 @@
 class CourseReservesController < ApplicationController
   include Blacklight::SearchContext
   include Blacklight::Configurable
-  include CourseReserves
   copy_blacklight_config_from(CatalogController)
 
   def index
@@ -13,7 +12,7 @@ class CourseReservesController < ApplicationController
     response = blacklight_config.repository.search(p)
     course_reserves = []
     response.aggregations.values.first.items.each do |item|
-      course_reserves << CourseInfo.new(item.value)
+      course_reserves << CourseReserves.from_crez_info(item.value)
     end
     @course_reserves = course_reserves
   end
