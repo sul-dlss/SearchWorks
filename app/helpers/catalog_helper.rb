@@ -39,6 +39,10 @@ module CatalogHelper
     )
   end
 
+  def link_to_database_search(subject)
+    link_to(subject, search_catalog_path(f: { db_az_subject: [subject], SolrDocument::FORMAT_KEY => ['Database'] }))
+  end
+
   def grouped_citations(documents)
     Citation.grouped_citations(documents.map(&:citations))
   end
