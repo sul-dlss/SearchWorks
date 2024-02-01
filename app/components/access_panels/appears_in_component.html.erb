@@ -3,7 +3,7 @@
   <% component.with_body do %>
     <% @document.parent_sets.each do |parent_set| %>
       <h4>
-        <%= helpers.render_resource_icon parent_set[parent_set.format_key] %>
+        <%= helpers.render_resource_icon parent_set.document_formats %>
         <%= helpers.link_to_document(parent_set) %>
       </h4>
     <% end %>

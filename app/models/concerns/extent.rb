@@ -27,10 +27,6 @@ module Extent
   end
 
   def sanitized_format
-    if self[format_key].present?
-      self[format_key].reject do |format|
-        format == 'Database'
-      end.first
-    end
+    document_formats.excluding('Database').first
   end
 end

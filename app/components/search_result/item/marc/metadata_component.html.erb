@@ -12,7 +12,7 @@
         <dt>Database topics</dt>
         <dd>
           <%= document[:db_az_subject].map do |subject| %>
-            <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], document.format_key => ['Database']})) %>
+            <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], SolrDocument::FORMAT_KEY => ['Database']})) %>
           <% end.join('; ').html_safe %>
         </dd>
       <% end %>
