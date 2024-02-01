@@ -1,7 +1,7 @@
 <div class="sul-record-page-info">
   <div class="sul-record-page-info-inner">
-    <%= link_to_previous_document @search_context[:prev] if @search_context[:prev] %>
+    <%= link_to_previous_document @search_context[:prev], classes: 'previous btn btn-sul-toolbar' if @search_context[:prev] %>
     <span class="page-entries"><%= item_page_entry_info %></span>
-    <%= link_to_next_document @search_context[:next] if @search_context[:next] %>
+    <%= link_to_next_document @search_context[:next], classes: 'next btn btn-sul-toolbar' if @search_context[:next] %>
   </div>
 </div>
