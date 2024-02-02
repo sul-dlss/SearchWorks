@@ -1085,7 +1085,7 @@ lib.haifa.ac.il
 scifinder.cas.org
 scifinder-n.cas.org
 hanchi.ihp.sinica.edu.tw
-www.munzinger.de
+online.munzinger.de
 www.oecd-ilibrary.org
 www.lrb.co.uk
 www.nachschlage.net
