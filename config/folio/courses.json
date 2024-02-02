@@ -14273,6 +14273,81 @@
     }
   },
   {
+    "id": "4b86ae6d-ab30-4e8e-8db4-acbd95895473",
+    "name": "Japanese Modern Architecture ",
+    "departmentId": "05fd65d1-3e24-479b-a4ab-7c669f05ce39",
+    "departmentObject": {
+      "id": "05fd65d1-3e24-479b-a4ab-7c669f05ce39",
+      "name": "ENGR - Engineering",
+      "description": "Engineering",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.873+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.873+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "8c3812f0-ed60-4c5c-b70f-54ab87a3f2a3",
+    "courseListingObject": {
+      "id": "8c3812f0-ed60-4c5c-b70f-54ab87a3f2a3",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "35ba7f3b-c141-40ae-b457-d33127ef8cbc",
+          "userId": "9af854e9-c021-4dcc-98f7-4197d58a58a0",
+          "name": "Tom Beischer",
+          "barcode": "2554363669",
+          "courseListingId": "8c3812f0-ed60-4c5c-b70f-54ab87a3f2a3",
+          "metadata": {
+            "createdDate": "2024-02-01T20:56:47.163+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-01T20:56:47.163+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-01T20:56:17.038+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-01T20:56:17.038+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "CEE-33B-01",
+    "metadata": {
+      "createdDate": "2024-02-01T20:56:17.555+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-01T20:56:17.555+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "4c2864c8-23ea-4ed6-9793-bd58e9e9852e",
     "name": "Introduction to Clinical Genetics Testing",
     "description": "Students will learn principles of cytogenetic, molecular genetic, and biochemical genetic testing approaches and techniques through lectures, discussions, and practical, case-based assignments.",
