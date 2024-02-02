@@ -1,11 +1,11 @@
 <% #Remove this if BL accepts pull #913 https://github.com/projectblacklight/blacklight/pull/913 %>
 <div class="flash_messages">
-  <% [:success, :notice, :error, :alert].each do |type| %>
+  <% [:success, :notice, :error, :alert, :recaptcha_error].each do |type| %>
     <%- alert_class = case type
       when :success then "alert-success"
       when :notice  then "alert-info"
       when :alert   then "alert-warning"
-      when :error   then "alert-danger"
+      when :error, :recaptcha_error then "alert-danger"
       else "alert-#{type}"
       end
     -%>
