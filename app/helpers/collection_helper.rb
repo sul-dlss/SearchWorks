@@ -1,4 +1,8 @@
 module CollectionHelper
+  def self.strip_leading_a(collection_id)
+    collection_id.sub(/^a(\d+)$/, '\1')
+  end
+
   def link_to_collection_members(link_text, document, options = {})
     link_to(link_text, collection_members_path(document), options)
   end
@@ -28,7 +32,7 @@ module CollectionHelper
     if @response.documents.first&.index_parent_collections.present?
       collection = @response.documents.first.index_parent_collections.find do |coll|
         # strip leading 'a' from collection catkeys
-        coll[:id] == collection_id.sub(/^a(\d+)$/, '\1')
+        coll[:id] == CollectionHelper.strip_leading_a(collection_id)
       end
       return document_presenter(collection).heading if collection.present?
     end

@@ -33,7 +33,7 @@ module SolrSet
 
   def set_solr_params
     ids = self['set'].map do |set_id|
-      "id:#{set_id}"
+      "id:#{CollectionHelper.strip_leading_a(set_id)}"
     end.join(' OR ')
     { params: { fq: ids } }
   end

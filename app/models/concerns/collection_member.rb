@@ -19,7 +19,7 @@ module CollectionMember
     unless @index_parent_collections
       @index_parent_collections = self[:collection_with_title].map do |collection_with_title|
         id, title = collection_with_title.split('-|-').map(&:strip)
-        SolrDocument.new(id: strip_a(id), title_display: title)
+        SolrDocument.new(id: CollectionHelper.strip_leading_a(id), title_display: title)
       end
     end
     @index_parent_collections
@@ -36,13 +36,8 @@ module CollectionMember
 
   def parent_collection_params
     self["collection"].map do |collection_id|
-      "id:#{strip_a(collection_id)}"
+      "id:#{CollectionHelper.strip_leading_a(collection_id)}"
     end.join(" OR ")
-  end
-
-  # strip leading 'a' from collection catkeys for building URLs, etc.
-  def strip_a(id)
-    id.sub(/^a(\d+)$/, '\1')
   end
 
   def blacklight_solr

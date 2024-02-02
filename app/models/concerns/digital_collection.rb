@@ -17,7 +17,7 @@ module DigitalCollection
     @collection_id ||= begin
       first_member = collection_members&.first || SolrDocument.new(collection: [])
       first_member[:collection].find do |col_member_col_id|
-        col_member_col_id.sub(/^a(\d+)$/, '\1') == self[:id]
+        CollectionHelper.strip_leading_a(col_member_col_id) == self[:id]
       end
     end
   end
