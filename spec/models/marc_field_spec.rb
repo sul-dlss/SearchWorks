@@ -6,7 +6,7 @@ RSpec.describe MarcField do
   let(:document) { SolrDocument.new(marc_json_struct: marc) }
   let(:tags) { [] }
 
-  subject { described_class.new(document, tags) }
+  subject(:field) { described_class.new(document, tags) }
 
   describe '#label' do
     it 'falls back to a default label' do
@@ -88,20 +88,20 @@ RSpec.describe MarcField do
   end
 
   describe 'preprocessors' do
+    subject { field.values }
+
     let(:tags) { %w(600) }
 
     context 'fields that should not be displayed' do
       let(:marc) { metadata2 }
       let(:tags) { %w(541 760) }
 
-      it 'are not present' do
-        expect(subject.values).to be_blank
-      end
+      it { is_expected.to be_blank }
     end
 
     context 'subfields that should not be displayed' do
-      it 'are not present' do
-        subject.values.each do |value|
+      it 'is not present' do
+        subject.each do |value|
           expect(value).not_to include 'UNAUTHORIZED'
           expect(value).not_to include 'A170662'
         end
@@ -112,19 +112,7 @@ RSpec.describe MarcField do
       let(:marc) { relator_code_fixture }
       let(:tags) { ['100'] }
 
-      context 'when a valid term' do
-        it 'translates the code to the appropriate term' do
-          expect(subject.values.length).to eq 2
-          expect(subject.values.first).to eq '100 $a Performer'
-        end
-      end
-
-      context 'when an invalid term' do
-        it 'dispalys the raw relator code' do
-          expect(subject.values.length).to eq 2
-          expect(subject.values.last).to eq '100 $a bad-relator'
-        end
-      end
+      it { is_expected.to eq ['100 $a Performer', '100 $a bad-relator'] }
     end
   end
 end
