@@ -1032,7 +1032,6 @@
         title_245c_display,           vern_title_245c_display,
         title_display,                vern_title_display,
         title_full_display,           vern_title_full_display,
-        title_uniform_display,        vern_title_uniform_display
         url_fulltext,
         url_restricted,
         url_suppl,

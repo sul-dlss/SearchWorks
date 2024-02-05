@@ -65,8 +65,6 @@
     <field name="vern_title_245c_display" type="string" indexed="false" stored="true" />
     <field name="title_full_display" type="string" indexed="false" stored="true" />
     <field name="vern_title_full_display" type="string" indexed="false" stored="true" />
-    <field name="title_uniform_display" type="string" indexed="false" stored="true" />
-    <field name="vern_title_uniform_display" type="string" indexed="false" stored="true" />
     <field name="title_variant_display" type="string" indexed="false" stored="true" multiValued="true" />
 
     <field name="title_sort" type="alphaSort" indexed="true" stored="true" />

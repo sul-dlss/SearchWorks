@@ -214,7 +214,6 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_show_field "title_full_display", label: "Title"
     config.add_show_field "vern_title_full_display", label: "Title"
-    config.add_show_field "vern_title_uniform_display", label: "Uniform Title"
     config.add_show_field "title_variant_display", label: "Alternate Title"
     config.add_show_field "author_person_display", label: "Author/Creator"
     config.add_show_field "author_person_full_display", label: "Author/Creator"
