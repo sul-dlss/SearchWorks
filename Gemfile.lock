@@ -125,7 +125,7 @@ GEM
     blacklight_dynamic_sitemap (1.0.0)
       blacklight (> 7.0)
       rails
-    blacklight_range_limit (8.4.0)
+    blacklight_range_limit (8.5.0)
       blacklight (>= 7.25.2, < 9)
       deprecation
       view_component (>= 2.54, < 4)

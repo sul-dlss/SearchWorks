@@ -158,9 +158,9 @@ blacklight-hierarchy@^6.1.2:
     jquery ">=3.0"
 
 blacklight-range-limit@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/blacklight-range-limit/-/blacklight-range-limit-8.3.0.tgz#9d8cafdbbfb9be30482d68155e67ceec24a57499"
-  integrity sha512-DuVInxICH3akZXLjU+WySe506jmcTrwWqrFEVwlAFymv4qEtdP6l5aQBNF3Qu5hsCIvefcgdXt0NUFDZT3ZpNg==
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/blacklight-range-limit/-/blacklight-range-limit-8.5.0.tgz#91980e8e88a921b4703b2de23dded8653bfcdc71"
+  integrity sha512-SOiHzdQ5HUJQqZHH9Wzhzbn6wgDpVZ8kGZUkF1J1PadSWTnAANQbxHZtazLgTU1SMFC3gYcty4tGrMYecTJ+gA==
 
 bootstrap@4:
   version "4.6.2"
