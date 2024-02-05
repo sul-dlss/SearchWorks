@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature 'Results Document Metadata' do
-  scenario 'should have correct tile with open-ended date range and metadata' do
+RSpec.describe 'Results Document Metadata' do
+  it 'has correct title with open-ended date range and metadata' do
     visit root_path
-    first('#q').set '1'
+    fill_in 'search for', with: '1'
     click_button 'search'
 
     within '#documents' do
@@ -12,9 +12,9 @@ RSpec.feature 'Results Document Metadata' do
     end
   end
 
-  scenario "should have 'sometime between' date range" do
+  it "has 'sometime between' date range" do
     visit root_path
-    first('#q').set '11'
+    fill_in 'search for', with: '11'
     click_button 'search'
 
     within '#documents' do
@@ -22,33 +22,16 @@ RSpec.feature 'Results Document Metadata' do
     end
   end
 
-  scenario 'should have correct cover image attributes', :js do
-    skip('Google Books API not working under test')
+  it 'has the stacks image for objects with image behavior' do
     visit root_path
-    first('#q').set '10'
-    click_button 'search'
-
-    within '#documents' do
-      within 'div.document' do
-        expect(page).to have_css('img.cover-image', visible: true)
-        expect(page).to have_css('img.cover-image.ISBN0393040801.ISBN9780393040807.OCLC36024029.LCCN96049953', visible: true)
-        expect(page).to have_css("img.cover-image[data-isbn='ISBN0393040801,ISBN9780393040807']", visible: true)
-        expect(page).to have_css("img.cover-image[data-lccn='LCCN96049953']", visible: true)
-        expect(page).to have_css("img.cover-image[data-oclc='OCLC36024029']", visible: true)
-        expect(find('img.cover-image')['src']).to match /books\.google\.com\/.*id=crOdQgAACAAJ/
-      end
-    end
-  end
-
-  scenario 'should have the stacks image for objects with image behavior' do
-    visit root_path
-    first('#q').set '35'
+    fill_in 'search for', with: '35'
     click_button 'search'
 
     within 'article.document' do
       within('.document-thumbnail') do
         expect(page).to have_css('img.stacks-image')
         expect(page).to have_css('img.stacks-image[alt=""]')
+        expect(page).to have_link 'IIIF Drag-n-drop'
       end
     end
   end
