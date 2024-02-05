@@ -19242,6 +19242,80 @@
     }
   },
   {
+    "id": "6276f1be-f88a-44c9-8bf7-9a2dfaaaf30f",
+    "name": " Fiction Writing",
+    "departmentId": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+    "departmentObject": {
+      "id": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+      "name": "ENGLISH - English",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:22.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:22.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "5cc977e2-436e-4f54-8e5e-d0e764cd2bbf",
+    "courseListingObject": {
+      "id": "5cc977e2-436e-4f54-8e5e-d0e764cd2bbf",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "ab71c78f-53cd-4ee8-9eb9-fd813f24df87",
+          "userId": "5b8dcab0-e4af-45bb-bff5-d5f9c704f9ed",
+          "name": "Jenn Trahan",
+          "barcode": "2556668960",
+          "courseListingId": "5cc977e2-436e-4f54-8e5e-d0e764cd2bbf",
+          "metadata": {
+            "createdDate": "2024-02-05T01:42:09.959+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-05T01:42:09.959+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-05T01:41:47.960+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-05T01:41:47.960+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "ENGLISH-90-03",
+    "metadata": {
+      "createdDate": "2024-02-05T01:41:48.336+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-05T01:41:48.336+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "62b0f637-e2ae-482c-8c38-ea9e9612f9df",
     "name": "Introduction to Biomechanics and Mechanobiology ",
     "departmentId": "10e5f5c0-c994-4ce9-841a-dda68b2becf2",
