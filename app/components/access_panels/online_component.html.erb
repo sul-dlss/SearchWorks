@@ -1,53 +1,55 @@
-<%= render @layout.new(classes: ['panel-online'], hidden: !links.any?) do |component| %>
-  <% component.with_header do %>
-    <h2>Online</h2>
-  <% end %>
-
-  <% component.with_title do %>
-      <% if document.is_a_database? %>
-        Search this database
-      <% elsif document.druid %>
-        Also available at
-      <% else %>
-        Available online
-      <% end %>
-  <% end %>
-
-  <% component.with_body do %>
-    <% if sfx_links&.any? %>
-      <% sfx_url = sfx_links.first.href %>
-      <% # Intentionally not encoding sfx_url here as the URLs from the catalog appear to already be encoded %>
-      <div class='sfx-panel' data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: sfx_url) %>">
-        <div data-behavior="sfx-panel-body">
-          <div class='loading-spinner'></div>
-        </div>
-
-        <%= link_to(SfxData.url_without_sid(sfx_url)) do %>
-          See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
-        <% end %>
-      </div>
-    <% elsif links.any? %>
-      <ul class="links" data-long-list data-list-type="online">
-        <% links.each do |link| %>
-          <li>
-            <span class="<%= 'stanford-only' if link.stanford_only? %>">
-              <%= link.html&.html_safe %>
-            </span>
-          </li>
-        <% end %>
-
-        <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-      </ul>
-    <% else %>
-      <ul class="links" data-long-list data-list-type="online">
-        <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-      </ul>
+<%= tag.div class: "panel-online", hidden: !links.any? do %>
+  <%= render @layout.new do |component| %>
+    <% component.with_header do %>
+      <h2>Online</h2>
     <% end %>
-  <% end %>
 
-  <% component.with_after do %>
-    <div class="card-footer">
-      <%= link_to("Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems") %>
-    </div>
-  <% end if links.any? && display_connection_problem_links? %>
-<% end %>
+    <% component.with_title do %>
+        <% if document.is_a_database? %>
+          Search this database
+        <% elsif document.druid %>
+          Also available at
+        <% else %>
+          Available online
+        <% end %>
+    <% end %>
+
+    <% component.with_body do %>
+      <% if sfx_links&.any? %>
+        <% sfx_url = sfx_links.first.href %>
+        <% # Intentionally not encoding sfx_url here as the URLs from the catalog appear to already be encoded %>
+        <div class='sfx-panel' data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: sfx_url) %>">
+          <div data-behavior="sfx-panel-body">
+            <div class='loading-spinner'></div>
+          </div>
+
+          <%= link_to(SfxData.url_without_sid(sfx_url)) do %>
+            See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
+          <% end %>
+        </div>
+      <% elsif links.any? %>
+        <ul class="links" data-long-list data-list-type="online">
+          <% links.each do |link| %>
+            <li>
+              <span class="<%= 'stanford-only' if link.stanford_only? %>">
+                <%= link.html&.html_safe %>
+              </span>
+            </li>
+          <% end %>
+
+          <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
+        </ul>
+      <% else %>
+        <ul class="links" data-long-list data-list-type="online">
+          <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
+        </ul>
+      <% end %>
+    <% end %>
+
+    <% component.with_after do %>
+      <div class="card-footer">
+        <%= link_to("Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems") %>
+      </div>
+    <% end if links.any? && display_connection_problem_links? %>
+  <% end %>
+<% end%>
