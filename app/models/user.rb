@@ -44,7 +44,8 @@ class User < ActiveRecord::Base
     # We also want to send a notification in case it is covered by suAffiliation
     # because this shows us a mismatch between the two attributes when there shouldn't be a difference.
     if su_affiliated?
-      Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation but is by suAffiliation: #{affiliations}")
+      Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
+                         "Affiliated by suAffiliation: #{affiliations}")
       true
     end
   end
