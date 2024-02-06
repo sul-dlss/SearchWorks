@@ -39,9 +39,7 @@ import PreviewContent from './preview-content'
           .html('Close');
 
         $briefTarget.hide();
-        $previewTarget.removeClass('hidden');
         $previewTarget.show();
-
       }
 
 
