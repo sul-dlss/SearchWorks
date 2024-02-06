@@ -11,9 +11,7 @@
       <% if document[:db_az_subject].present? %>
         <dt>Database topics</dt>
         <dd>
-          <%= document[:db_az_subject].map do |subject| %>
-            <% link_to(subject, search_catalog_path(f: {db_az_subject: [subject], SolrDocument::FORMAT_KEY => ['Database']})) %>
-          <% end.join('; ').html_safe %>
+          <%= safe_join(document[:db_az_subject].map { |subject| helpers.link_to_database_search(subject) }, '; ') %>
         </dd>
       <% end %>
     <% end %>
