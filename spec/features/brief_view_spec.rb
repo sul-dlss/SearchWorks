@@ -1,25 +1,29 @@
 require 'rails_helper'
 
-RSpec.feature "Brief View" do
-  scenario "Catalog search results", :js do
+RSpec.describe "Brief View" do
+  it "displays catalog search results", :js do
     visit search_catalog_path f: { format: ["Book"] }
+
     within '#view-type-dropdown' do
       click_button 'View'
       click_link 'brief'
     end
     expect(page).to have_css("i.fa.fa-align-justify")
-    within '[data-preview-url="/preview/1"]' do
+
+    within '[data-preview-brief-url-value="/preview/1"]' do
       expect(page).to have_css(".brief-document h3.index_title", text: "An object")
       expect(page).to have_css('.brief-document ul li', text: 'Earth Sciences Library (Branner) : Stacks : G70.212 .A426 2011')
       expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
       expect(page).to have_css("form.bookmark-toggle label.toggle-bookmark", text: "Select")
     end
-    within '[data-preview-url="/preview/10"]' do
+
+    within '[data-preview-brief-url-value="/preview/10"]' do
       expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : (no call number)')
       expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Current periodicals : (no call number)')
       expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Stacks : ABC')
     end
   end
+
   skip 'Brief preview', :js do
     visit search_catalog_path f: { format: ["Book"] }, view: 'brief'
     page.find("button.btn.docid-1").click
