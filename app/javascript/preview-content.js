@@ -47,7 +47,6 @@ const PreviewContent = (function() {
         .plugGoogleBookContent();
 
       target.find('*[data-accordion-section-target]').accordionSection();
-      target.find('[data-live-lookup-url]').liveLookup();
       deferred.resolve(content);
       break;
     case 'prepend':
@@ -56,7 +55,6 @@ const PreviewContent = (function() {
         .plugGoogleBookContent();
 
       target.find('*[data-accordion-section-target]').accordionSection();
-      target.find('[data-live-lookup-url]').liveLookup();
       deferred.resolve(content);
       break;
     case 'returnOnly':

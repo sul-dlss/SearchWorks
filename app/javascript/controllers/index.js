@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import LiveLookupController from "./live_lookup_controller"
+application.register("live-lookup", LiveLookupController)
+
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)

@@ -1,4 +1,4 @@
 <h2>At the library</h2>
-<div data-live-lookup-id="<%= document.live_lookup_id %>" data-live-lookup-url="<%= availability_index_path %>">
+<div data-controller="live-lookup" data-live-lookup-id="<%= document.live_lookup_id %>" data-live-lookup-url-value="<%= availability_index_path %>">
   <%= render AccessPanels::LibraryComponent.with_collection(libraries, document: document) %>
 </div>

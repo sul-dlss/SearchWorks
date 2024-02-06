@@ -40,7 +40,6 @@ import "./home_page_facet_collapse";
 import "./jquery.accordion-section";
 import "./jquery.clear-input-text";
 import "./jquery.libraryh3lp";
-import "./jquery.live-lookup";
 import "./jquery.long-lists";
 import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
