@@ -22,7 +22,7 @@ RSpec.describe CourseReserves do
 
   describe CourseReserves::CourseInfo do
     let(:doc) { "CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald" }
-    let(:course_info) { CourseReserves::CourseInfo.new(doc) }
+    let(:course_info) { CourseReserves.from_crez_info(doc) }
 
     it "should initialize a new reservation" do
       expect(course_info).to be_an CourseReserves::CourseInfo

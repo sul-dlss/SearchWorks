@@ -1,19 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'course_reserves/index' do
-  let(:course_1) { 'CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald' }
-  let(:course_2) { 'DOG-902-10-01 -|- Of Dogs and Men -|- Dog, Crime' }
-  let(:course_reserves) { [
-    CourseReserves::CourseInfo.new(course_1),
-    CourseReserves::CourseInfo.new(course_2)
-  ] }
-
   before do
-    assign(:course_reserves, course_reserves)
+    @course_reserves = [
+      CourseReserves::CourseInfo.new(id: 'CAT-401-01-01', name: 'Emergency Kittenz', instructor: 'McDonald, Ronald'),
+      CourseReserves::CourseInfo.new(id: 'DOG-902-10-01', name: 'Of Dogs and Men', instructor: 'Dog, Crime')
+    ]
     render
   end
 
-  it 'should render a table with course info' do
+  it 'renders a table with course info' do
     expect(rendered).to have_css('table')
     expect(rendered).to have_css('th', text: 'Course ID')
     expect(rendered).to have_css('th', text: 'Description')
