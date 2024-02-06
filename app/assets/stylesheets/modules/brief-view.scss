@@ -1,18 +1,11 @@
 .brief-document {
   @include document;
-  margin-bottom: 0px;
+  margin-bottom: -1px;
   padding-left: 20px;
 
   h3.index_title {
     @include h3-index-title-small-font;
     word-wrap: break-word;
-  }
-
-  .preview {
-    border-radius: 0;
-    border-width: 0;
-    margin-top: 0;
-    padding: 0;
   }
 
   .sul-icon {
@@ -54,4 +47,9 @@
 .brief-preview-container {
   margin-top: 15px;
   margin-bottom: 10px;
+  display: none;
+
+  &.preview {
+    display: block;
+  }
 }

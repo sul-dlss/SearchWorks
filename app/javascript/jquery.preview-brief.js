@@ -18,32 +18,27 @@ import PreviewContent from './preview-content'
   $.fn.previewBrief = function() {
 
     return this.each(function() {
-      var $item = $(this),
+      let $item = $(this),
           previewClass = $item.data('preview-target'),
-          $previewTarget = $(previewClass),
           previewUrl = $item.data('preview-url'),
-          $triggerBtn, $briefTarget;
+          $triggerBtn;
+      const previewTarget = document.querySelector(previewClass)
 
       init();
       attachTriggerEvents();
 
       function showPreview() {
-        $previewTarget.addClass('preview').empty();
+        previewTarget.classList.add('preview')
+        previewTarget.innerHTML = '<div class="preview-arrow"></div>'
 
-        $previewTarget.append('<div class="preview-arrow"></div>');
-
-        PreviewContent.append(previewUrl, $previewTarget);
+        PreviewContent.append(previewUrl, $(previewTarget));
 
         $triggerBtn
           .addClass('preview-open')
           .html('Close');
 
-        $briefTarget.hide();
-        $previewTarget.removeClass('hidden');
-        $previewTarget.show();
-
+        previewTarget.classList.remove('hidden')
       }
-
 
       function attachTriggerEvents() {
         $item.find($triggerBtn).on('click', function() {
@@ -52,8 +47,7 @@ import PreviewContent from './preview-content'
       }
 
       function closePreview() {
-        $previewTarget.removeClass('preview').hide();
-        $briefTarget.show();
+        previewTarget.classList.remove('preview')
 
         $triggerBtn
           .removeClass('preview-open')
@@ -62,7 +56,6 @@ import PreviewContent from './preview-content'
 
       function init() {
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-        $briefTarget = $item.find('.brief-container .col-md-8');
       }
 
     });
