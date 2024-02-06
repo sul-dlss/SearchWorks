@@ -61,7 +61,7 @@ item_display_struct:
   - id: f1618f71-71e5-4e7a-bbd0-8398038c1f97
     barcode: "123"
     library: ENG
-    home_location: EAR-STACKS
+    home_location: ENG-STACKS
     callnumber: MNO
     full_shelfkey: MNO
   - id: 9bfbc4ae-8724-4d84-aadb-181011fae1fb
@@ -217,9 +217,9 @@ holdings_json_struct:
             name: Stanford University
       courses: []
 mhld_display:
-  - "ENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
-  - "ENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
-  - "GREEN -|- STACKS -|- public note3 -|- library has3 -|- latest received3"
+  - "ENG -|- ENG-STACKS -|- public note1 -|- library has1 -|- latest received1"
+  - "ENG -|- ENG-PER -|- public note2 -|- library has2 -|- latest received2"
+  - "GREEN -|- GRE-STACKS -|- public note3 -|- library has3 -|- latest received3"
 isbn_display:
   - "0393040801"
   - "9780393040807"

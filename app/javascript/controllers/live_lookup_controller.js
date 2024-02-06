@@ -19,18 +19,18 @@ export default class extends Controller {
       const current_location = $('.current-location', dom_item)
       const status_text = target.next('.status-text')
 
-      if (live_data.status) {
-        current_location.html(live_data.status);
+      if (live_data.status){
+        status_text.html(live_data.status)
       }
+
       if (live_data.due_date) {
-        current_location.append(` Due ${live_data.due_date}`);
+        current_location.append(`Due ${live_data.due_date}`);
       }
 
       if (!live_data.is_available && (target.hasClass('unknown') || target.hasClass('deliver-from-offsite')) ) {
         target.removeClass('unknown')
         target.removeClass('deliver-from-offsite')
         target.addClass('unavailable')
-        status_text.text(''); // The due date/current location acts as the status text at this point
         if (target.attr('title')) {
           target.attr('title', status_text.data('unavailable-text'))
         }

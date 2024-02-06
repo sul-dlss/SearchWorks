@@ -14,12 +14,7 @@ class Holdings
     def name
       return if @code.blank?
 
-      # Prefer location names as managed in FOLIO
-      name = Folio::Locations.label(code: @code)
-      return name if name
-
-      # Fallback to legacy behavior
-      Constants::LOCS.fetch(@code, @code)
+      Folio::Locations.label(code: @code)
     end
 
     def stackmapable?

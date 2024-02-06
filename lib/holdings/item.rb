@@ -54,11 +54,7 @@ class Holdings
 
     # @return [String]
     def home_location
-      if treat_current_location_as_home_location?
-        current_location.code
-      else
-        item_display[:home_location]
-      end
+      item_display[:home_location]
     end
 
     def current_location
@@ -126,10 +122,6 @@ class Holdings
 
     def on_reserve?
       course_id.present?
-    end
-
-    def treat_current_location_as_home_location?
-      Constants::CURRENT_HOME_LOCS.include?(current_location.code)
     end
 
     def bound_with_parent
