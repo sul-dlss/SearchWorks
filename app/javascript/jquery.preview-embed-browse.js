@@ -19,20 +19,19 @@ import PreviewContent from './preview-content'
   $.fn.previewEmbedBrowse = function() {
 
     return this.each(function() {
-      var $item = $(this),
-          $targetId = $($item.data('doc-id'))[0],
-          $previewTarget = $($item.data('preview-target')),
-          $triggerBtn, $closeBtn, $arrow;
+      const $item = $(this)
+      const $previewTarget = $($item.data('preview-target'))
+      const $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
+      const $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+        <span aria-hidden="true" class="visually-hidden">×</span>
+        </button>`)
+      const $arrow = $('<div class="preview-arrow"></div>');
 
-      init();
       attachTriggerEvents();
 
       function showPreview() {
-        var previewUrl = $item.data('preview-url'),
-            $previewArrow,
-            maxLeft,
-            arrowLeft;
-        $previewTarget.addClass('preview').empty();
+        const previewUrl = $item.data('preview-url')
+        $previewTarget.addClass('preview').empty()
         PreviewContent.append(previewUrl, $previewTarget);
         $previewTarget.css('display', 'inline-block');
         $previewTarget.append($closeBtn).show();
@@ -45,8 +44,8 @@ import PreviewContent from './preview-content'
       function appendPointer($target) {
         $target.append($arrow);
 
-        var maxLeft = $target.width() - $arrow.width() - 1,
-        arrowLeft = parseInt($item.offset().left + ($item.width()/2) - $target.offset().left);
+        const maxLeft = $target.width() - $arrow.width() - 1
+        let arrowLeft = parseInt($item.offset().left + ($item.width()/2) - $target.offset().left);
 
         if (arrowLeft < 0) arrowLeft = 0;
         if (arrowLeft > maxLeft) arrowLeft = maxLeft;
@@ -57,9 +56,9 @@ import PreviewContent from './preview-content'
       function attachTriggerEvents() {
         $item.find($triggerBtn).on('click', $.proxy(function(e) {
           if (previewOpen()){
-            closePreview();
-          }else{
-            showPreview();
+            closePreview()
+          } else {
+            showPreview()
           }
         }, this));
 
@@ -75,21 +74,13 @@ import PreviewContent from './preview-content'
         // Check if we're clicking in a preview
         if ($(e.target).parents('.preview-container').length > 0){
           return true;
-        }else{
-          if (e.target === $triggerBtn[0]) {
-            return true;
-          }else{
-            return false;
-          }
+        } else {
+          return e.target === $triggerBtn[0]
         }
       }
 
       function previewOpen(){
-        if ($triggerBtn.hasClass('preview-open')){
-          return true;
-        }else{
-          return false;
-        }
+        return $triggerBtn.hasClass('preview-open')
       }
 
       function attachPreviewEvents() {
@@ -104,17 +95,6 @@ import PreviewContent from './preview-content'
         $previewTarget.hide();
         $triggerBtn.html('Preview');
       }
-
-      function init() {
-        $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-        $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
-        <span aria-hidden="true" class="visually-hidden">×</span>
-        </button>`);
-        $arrow = $('<div class="preview-arrow"></div>');
-      }
-
-    });
-
-  };
-
+    })
+  }
 })(jQuery);
