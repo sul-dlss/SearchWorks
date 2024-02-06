@@ -10,6 +10,8 @@ class Holdings
 
     delegate :loan_type, :material_type, :effective_location, :permanent_location, to: :folio_item, allow_nil: true
 
+    # @param [Hash] holding_info this is one row of data from item_display_struct
+    # @param [SolrDocument] document
     # @param [Folio::Item] folio_item may be nil if the item is a bound-with child.
     def initialize(holding_info, document: nil, folio_item: nil)
       @item_display = holding_info.with_indifferent_access

@@ -136,4 +136,12 @@ RSpec.describe SolrDocument do
       expect(non_eds.eds?).to be false
     end
   end
+
+  describe '#live_lookup_id' do
+    let(:document) { SolrDocument.new(id: '11111', uuid_ssi: 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f') }
+
+    subject { document.live_lookup_id }
+
+    it { is_expected.to eq 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f' }
+  end
 end

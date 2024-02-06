@@ -30,7 +30,6 @@ class SolrDocument
   include MarcSubjects
   include IiifConcern
   include DorContentMetadata
-  include LiveLookupIds
   include CollectionTitles
 
   include Blacklight::Solr::Document
@@ -116,6 +115,7 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   attribute :document_formats, :array, FORMAT_KEY
+  attribute :live_lookup_id, :string, 'uuid_ssi'
 
   def file_ids
     self[:img_info] || self[:file_id] || []
