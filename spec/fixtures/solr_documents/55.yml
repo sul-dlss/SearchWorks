@@ -8,6 +8,6 @@
 :item_display_struct:
   - barcode: '123'
     library: SPEC-COLL
-    home_location: GUNST
+    home_location: SPEC-GUNST
     current_location: SPEC-INPRO
     callnumber: ABC 123

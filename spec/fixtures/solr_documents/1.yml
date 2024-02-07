@@ -24,7 +24,7 @@
 :item_display_struct:
   - barcode: '36105217238315'
     library: EARTH-SCI
-    home_location: STACKS
+    home_location: GRE-STACKS
     type: STKS
     lopped_callnumber: G70.212 .A426 2011:test
     shelfkey: lc g   0070.212000 a0.426000 002011
