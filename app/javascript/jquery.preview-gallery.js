@@ -19,21 +19,37 @@ import PreviewContent from './preview-content'
 
     return this.each(function() {
       var $item = $(this),
-          $previewTarget = $($item.data('preview-target')),
           $triggerBtn, $closeBtn, $arrow, $gallery, $itemsPerRow, $itemWidth;
 
       init();
       attachTriggerEvents();
 
       function showPreview() {
-        var previewUrl = $item.data('preview-url')
+        const item = $item[0]
+        const parent = item.parentNode
+        // This is a hack, because I can't get ':scope ~ .gallery-document' to work
+        const candidates = document.querySelectorAll(`[data-doc-id="${item.dataset.docId}"] ~ .gallery-document`)
+        const myY = item.getBoundingClientRect().y
+        const referenceNode = [...candidates].find((elem) => elem.getBoundingClientRect().y !== myY)
+        const newNode = document.createElement("div")
+        newNode.classList.add('preview-container')
+        newNode.classList.add( 'preview')
+        newNode.innerHTML = `Just like this`
+        parent.insertBefore(newNode, referenceNode)
 
+        $previewTarget = $('.preview-container') //$($item.data('preview-target')),
+
+        const previewUrl = item.dataset.previewUrl
+
+        $previewTarget.show()
+console.log($previewTarget)
         $previewTarget.addClass('preview').empty();
 
-        PreviewContent.append(previewUrl, $previewTarget);
+        // PreviewContent.append(previewUrl, $previewTarget);
 
         appendPointer($previewTarget);
 
+        newNode.style.display = 'inline-block'
         $previewTarget.css('display', 'inline-block');
 
         $previewTarget.append($closeBtn).show();
@@ -150,7 +166,6 @@ import PreviewContent from './preview-content'
         }
       }
 
-
       function init() {
         $itemWidth = $item.outerWidth() + 10;
         $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
@@ -159,7 +174,7 @@ import PreviewContent from './preview-content'
         </button>`);
         $arrow = $('<div class="preview-arrow"></div>');
         $gallery = $('.gallery-document');
-        reorderPreviewDivs();
+        // reorderPreviewDivs();
       }
 
     });
