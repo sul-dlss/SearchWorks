@@ -8,5 +8,5 @@
 :item_display_struct:
   - barcode: '123'
     library: HILA
-    home_location: STACKS
+    home_location: GRE-STACKS
     callnumber: ABC 123

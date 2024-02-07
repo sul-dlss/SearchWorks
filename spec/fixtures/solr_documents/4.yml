@@ -15,12 +15,12 @@
 :building_facet: Hoover Library
 :item_display_struct:
   - barcode: '123'
-    library: SUL
-    home_location: STACKS
+    library: GREEN
+    home_location: GRE-STACKS
     callnumber: ABC
   - barcode: '456'
-    library: PHYSICS
-    home_location: PHYSTEMP
+    library: GREEN
+    home_location: GRE-STACKS
     callnumber: DEF
   - barcode: '789'
     status: On order
