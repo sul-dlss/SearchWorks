@@ -67,10 +67,7 @@
     }
 
     .details {
-      border-top: 1px solid $sul-document-border-color;
-      border-right: 1px solid $sul-document-border-color;
-      border-bottom: 1px solid $sul-document-border-bottom-color;
-      border-left: 1px solid $sul-document-border-color;
+      border: 1px solid $sul-document-border-color;
       display: none;
       padding: 10px;
       clear: left;
