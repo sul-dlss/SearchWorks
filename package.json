@@ -9,7 +9,6 @@
     "blacklight-range-limit": "^8.3.0",
     "bootstrap": "4",
     "esbuild": "^0.19.4",
-    "leaflet": "1",
     "popper.js": "1"
   },
   "scripts": {

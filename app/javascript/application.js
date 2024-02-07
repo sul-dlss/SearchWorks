@@ -3,7 +3,6 @@
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
 import "./vendor/jquery-scrollspy";
-import "leaflet";
 // import "popper.js";
 // import "bootstrap";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
