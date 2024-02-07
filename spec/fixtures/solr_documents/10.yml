@@ -17,9 +17,9 @@ uuid_ssi: ef3fb772-88b6-4981-a1d6-959c884c0fc5
 :item_display_struct:
   - id: 0957c8b8-57c0-407b-a23e-ced89cf3f66e
     barcode: "123"
-    library: ENG
+    library: GREEN
     home_location: GRE-STACKS
-    callnumber: ABC
+    callnumber: HF1604 .G368 2024
     full_shelfkey: ABC
   - id: e3cf1a84-4cf6-49c9-87cc-d53afe6b4ead
     barcode: "456"
@@ -30,43 +30,43 @@ uuid_ssi: ef3fb772-88b6-4981-a1d6-959c884c0fc5
   - id: c10082be-e7d8-4a52-899c-e67b864eceab
     barcode: "123"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: ENG-STACKS
     callnumber: GHI
     full_shelfkey: GHI
   - id: 1e93dcf5-9aa8-441b-9ec8-a769c2ae5035
     barcode: "321"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: ENG-STACKS
     callnumber: CBA
     full_shelfkey: CBA
   - id: 71adbdae-5e3a-4f2d-86c3-42ca019fae9c
     barcode: "654"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: ENG-STACKS
     callnumber: FED
     full_shelfkey: FED
   - id: b9fd7d43-e160-4a99-b513-b0d9fd1f90cf
     barcode: "876"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: ENG-STACKS
     callnumber: IHG
     full_shelfkey: IHG
   - id: a9c6236e-bd02-484c-ae0c-b13b32ce6ff9
     barcode: "678"
     library: EARTH-SCI
-    home_location: GRE-STACKS
+    home_location: EAR-STACKS
     callnumber: JKL
     full_shelfkey: JKL
   - id: f1618f71-71e5-4e7a-bbd0-8398038c1f97
     barcode: "123"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: EAR-STACKS
     callnumber: MNO
     full_shelfkey: MNO
   - id: 9bfbc4ae-8724-4d84-aadb-181011fae1fb
     barcode: "543"
     library: MARINE-BIO
-    home_location: GRE-STACKS
+    home_location: MAR-STACKS
     callnumber: PQR
     full_shelfkey: PQR
 :mhld_display:
