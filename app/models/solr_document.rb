@@ -8,7 +8,6 @@ class SolrDocument
   include DocumentLinks
   include DisplayType
   include CourseReserves
-  include AccessPanelsConcern
   include DatabaseDocument
   include DigitalCollection
   include Extent
