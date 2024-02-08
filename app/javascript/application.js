@@ -42,7 +42,6 @@ import "./jquery.libraryh3lp";
 import "./jquery.long-lists";
 import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
-import "./jquery.preview-brief";
 import "./jquery.preview-embed-browse";
 import "./jquery.preview-gallery";
 import "./jquery.purl-embed";

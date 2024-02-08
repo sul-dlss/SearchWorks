@@ -7,5 +7,8 @@ import { application } from "./application"
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 
+import PreviewBriefController from "./preview_brief_controller"
+application.register("preview-brief", PreviewBriefController)
+
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)

@@ -1,51 +1,50 @@
-<%
-  preview_container = 'preview-container-' + document.id
-  preview_attrs = preview_data_attrs("preview-brief", document[:id], '.' + preview_container)
-%>
 <% doc_presenter = document_presenter(document) %>
-<div class=" brief-document container-fluid" <%= preview_attrs %>>
-  <div class="row row-eq-height brief-container">
-    <div class="col-md-10">
-      <h3 class="index_title">
-        <% counter = document_counter_with_offset(document_counter) %>
-        <%= render_resource_icon doc_presenter.formats %>
-        <%= document.online_label %>
-        <span class="document-counter">
-          <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
-        </span>
-        <%= link_to_document document, counter: (counter + @response.params[:start].to_i) %>
-        <span class="main-title-date"><%= get_main_title_date(document) %></span>
-      </h3>
-      <% if document[:vern_title_display].present? %>
-        <ul class="document-metadata"><li><%= document[:vern_title_display].html_safe %></li></ul>
-      <% end %>
-      <% if document.holdings.libraries.select(&:present?).any? %>
-        <ul class='list-unstyled'>
-          <% document.holdings.libraries.select(&:present?).each do |library| %>
-            <% library.locations.uniq(&:name).each do |location| %>
-                <% callnumber = "(no call number)" %>
-              <% if location.items.present? %>
-                <% callnumber = "#{location.items.first.callnumber}" %>
+<div data-controller="preview-brief" data-preview-brief-url-value="<%= preview_path(document[:id]) %>">
+  <div class="brief-document container-fluid">
+    <div class="row row-eq-height brief-container">
+      <div class="col-md-10">
+        <h3 class="index_title">
+          <% counter = document_counter_with_offset(document_counter) %>
+          <%= render_resource_icon doc_presenter.formats %>
+          <%= document.online_label %>
+          <span class="document-counter">
+            <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+          </span>
+          <%= link_to_document document, counter: (counter + @response.params[:start].to_i) %>
+          <span class="main-title-date"><%= get_main_title_date(document) %></span>
+        </h3>
+        <% if document[:vern_title_display].present? %>
+          <ul class="document-metadata"><li><%= document[:vern_title_display].html_safe %></li></ul>
+        <% end %>
+        <% if document.holdings.libraries.select(&:present?).any? %>
+          <ul class='list-unstyled'>
+            <% document.holdings.libraries.select(&:present?).each do |library| %>
+              <% library.locations.uniq(&:name).each do |location| %>
+                  <% callnumber = "(no call number)" %>
+                <% if location.items.present? %>
+                  <% callnumber = "#{location.items.first.callnumber}" %>
+                <% end %>
+                  <li data-toggle="tooltip" data-placement="top" title="Check Preview to see all copies and current status"><%= "#{library.name} : #{location.name} : #{callnumber}" %></li>
               <% end %>
-                <li data-toggle="tooltip" data-placement="top" title="Check Preview to see all copies and current status"><%= "#{library.name} : #{location.name} : #{callnumber}" %></li>
             <% end %>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-    <div class="col-md-2 d-flex flex-lg-column justify-content-between align-items-lg-end pe-lg-1">
-      <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="col-md-2 d-flex flex-lg-column justify-content-between align-items-lg-end pe-lg-1">
+        <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
 
-      <div class='preview-button-container order-first order-lg-last'>
-        <div class=''>
-          <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">
+        <div class='preview-button-container order-first order-lg-last'>
+          <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-action="preview-brief#showPreview" data-preview-brief-target="showButton">
             Preview
+          </button>
+          <button class="btn btn-xs btn-preview preview-button preview-open docid-<%= document.id %>" data-action="preview-brief#closePreview" data-preview-brief-target="hideButton" hidden>
+            Close
           </button>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container-fluid <%= preview_container %> preview-container brief-preview-container">
-  <div class='preview-arrow'></div>
+  <div class="container-fluid preview-container brief-preview-container" data-preview-brief-target="preview">
+    <div class='preview-arrow'></div>
+  </div>
 </div>
