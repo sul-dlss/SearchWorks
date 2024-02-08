@@ -12,6 +12,7 @@ RSpec.describe SearchResult::Item::Mods::MetadataComponent, type: :component do
       modsxml: mods_everything,
       physical: ["The Physical Extent"],
       imprint_display: ["Imprint Statement"],
+      summary_display: ['Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet'],
       author_struct: [
         { 'link' => 'J. Smith', 'search' => '"J. Smith"', 'post_text' => '(Author)' },
         { 'link' => 'B. Smith', 'search' => '"B. Smith"', 'post_text' => '(Producer)' }

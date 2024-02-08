@@ -42,15 +42,5 @@
   <% end %>
 
 <% elsif document.mods_abstract.present? %>
-    <%= document.mods_abstract.join('<br/>').html_safe %>
-
-<% elsif document[:summary_display].present? %>
-  <div>
-    <%= document[:summary_display].join('<br/>').html_safe %>
-  </div>
-<%# TODO: Remove this elsif block after new mods index is in place %>
-<% elsif document.respond_to?(:mods) && document.mods.present? %>
-  <% if document.mods.abstract.present? %>
-    <%= document.mods.abstract.map(&:values).join('<br/>').html_safe %>
-  <% end %>
+  <%= document.mods_abstract.join('<br/>').html_safe %>
 <% end %>
