@@ -6,7 +6,7 @@ gtag('js', new Date());
 
 Blacklight.onLoad(function() {
   // gtag set property and config
-  const config = {}
+  const config = { cookie_flags: 'SameSite=None;Secure' }
   // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
   //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
   if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
