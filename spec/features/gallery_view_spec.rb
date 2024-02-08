@@ -9,7 +9,7 @@ RSpec.feature 'Gallery View' do
     end
 
     expect(page).to have_css('i.fa.fa-th')
-    expect(page).to have_css('div.callnumber-bar', text: 'ABC')
+    expect(page).to have_css('div.callnumber-bar', text: 'HF1604 .G368 2024')
     expect(page).to have_css('div.callnumber-bar', count: 2, text: /./)
     expect(page).to have_css(
       ".gallery-document a[tabindex='-1'] span.fake-cover", text: 'An object', visible: true

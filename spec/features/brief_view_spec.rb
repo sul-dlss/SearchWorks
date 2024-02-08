@@ -16,11 +16,10 @@ RSpec.describe "Brief View" do
       expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
       expect(page).to have_css("form.bookmark-toggle label.toggle-bookmark", text: "Select")
     end
-
     within '[data-preview-brief-url-value="/preview/10"]' do
-      expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : (no call number)')
+      expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : HF1604 .G368 2024')
       expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Current periodicals : (no call number)')
-      expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Stacks : ABC')
+      expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Stacks : CBA')
     end
   end
 
@@ -31,7 +30,9 @@ RSpec.describe "Brief View" do
     expect(page).to have_css("li", text: "1990")
     expect(page).to have_css(".btn-preview", text: "Close")
   end
+
   scenario "vernacular title" do
+    # TODO: This test has nothing to do with the brief view
     visit search_catalog_path(q: '11')
 
     within(first('.document')) do
