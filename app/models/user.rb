@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
     # because this shows us a mismatch between the two attributes when there shouldn't be a difference.
     if su_affiliated?
       Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
-                         "Affiliated by suAffiliation: #{affiliations}")
+                         "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
       true
     end
   end
