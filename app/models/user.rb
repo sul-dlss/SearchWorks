@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
     Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
-                                        "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
+                       "Affiliated by suAffiliation: #{affiliations}")
     # Will rely primarily on eduPersonAffiliation so return true if this works
     return true if person_affiliated?
 
@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
     # because this shows us a mismatch between the two attributes when there shouldn't be a difference.
     if su_affiliated?
       Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
-                                        "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
+                         "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
       true
     end
   end
