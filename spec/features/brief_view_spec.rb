@@ -23,7 +23,7 @@ RSpec.describe "Brief View" do
     end
   end
 
-  skip 'Brief preview', :js do
+  scenario 'Brief preview', :js do
     visit search_catalog_path f: { format: ["Book"] }, view: 'brief'
     page.find("button.btn.docid-1").click
     expect(page).to have_css("h3.preview-title", text: "An object")
@@ -32,14 +32,11 @@ RSpec.describe "Brief View" do
   end
 
   scenario "vernacular title" do
-    # TODO: This test has nothing to do with the brief view
-    visit search_catalog_path(q: '11')
+    visit search_catalog_path(q: '11', view: 'brief')
 
-    within(first('.document')) do
-      expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
-      within('.document-metadata') do
-        expect(page).to have_css('li', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
-      end
+    expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
+    within('.document-metadata') do
+      expect(page).to have_css('li', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
     end
   end
 
