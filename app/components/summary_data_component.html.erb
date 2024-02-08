@@ -1,0 +1,10 @@
+<dt>Summary</dt>
+<dd>
+  <div data-behavior='metadata-truncate'>
+    <% if render_toc_and_summary? %>
+      <%= render TocAndSummaryComponent.new(document:) %>
+    <% else %>
+      <%= mods_abstract %>
+    <% end %>
+  </div>
+</dd>

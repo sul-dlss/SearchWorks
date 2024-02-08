@@ -6,15 +6,7 @@
     <dd><%= document.extent %></dd>
   <% end %>
 
-  <% summary_data = render 'catalog/summary_data', document: document %>
-  <% if summary_data.present? %>
-    <dt>Summary</dt>
-    <dd>
-      <div data-behavior='metadata-truncate'>
-        <%= sanitize summary_data %>
-      </div>
-    </dd>
-  <% end %>
+  <%= render SummaryDataComponent.new(document:) %>
 
   <% if document.index_parent_sets.present? %>
     <dt>Included in</dt>
