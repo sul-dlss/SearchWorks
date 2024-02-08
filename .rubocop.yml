@@ -43,6 +43,10 @@ Metrics/ClassLength:
     - 'app/controllers/catalog_controller.rb'
     - 'lib/holdings/item.rb'
 
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/catalog_controller.rb'
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/views/**/*'
