@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
     # Will rely primarily on eduPersonAffiliation so return true if this works
-    return true if person_affiliated?
+    # return true if person_affiliated?
 
     # If not true, we still want to check against suAffiliation.
     # We also want to send a notification in case it is covered by suAffiliation
