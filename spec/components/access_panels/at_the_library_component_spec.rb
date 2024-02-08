@@ -144,7 +144,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         ]
       )
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '123', barcode: '123',
+                                     effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                     permanent_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
+                                     location_provided_availability: nil,
+                                     status: 'Available', material_type: book_type,
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
       render_inline(described_class.new(document:))
       expect(page).to have_css('.location a', text: "Request")
@@ -178,15 +183,20 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     before do
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '321', barcode: '321', effective_location: spec_location, permanent_location: spec_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '321', barcode: '321',
+                                     effective_location: spec_location,
+                                     permanent_location: spec_location, status: 'Available',
+                                     location_provided_availability: nil,
+                                     material_type: instance_double(Folio::Item::MaterialType, id: nil),
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
       render_inline(described_class.new(document:))
     end
 
-    it "should have unknown status text for items we'll be looking up" do
+    it "has unknown status text for items we'll be looking up" do
       expect(page).to have_css('.status-text', text: 'Unknown')
     end
-    it "should have explicit status text for items that we know the status" do
+    it "has explicit status text for items that we know the status" do
       expect(page).to have_css('.status-text', text: 'In-library use')
     end
   end
@@ -296,7 +306,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
       before do
         allow(document).to receive(:folio_items).and_return([
-          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: art_location, permanent_location: art_location, status: 'Available', material_type: instance_double(Folio::Item::MaterialType, id: nil), loan_type: instance_double(Folio::Item::LoanType, id: nil))
+          instance_double(Folio::Item, id: '123', barcode: '123',
+                                       effective_location: art_location,
+                                       permanent_location: art_location, status: 'Available',
+                                       location_provided_availability: nil,
+                                       material_type: instance_double(Folio::Item::MaterialType, id: nil),
+                                       loan_type: instance_double(Folio::Item::LoanType, id: nil))
         ])
 
         render_inline(described_class.new(document:))
@@ -324,7 +339,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           ]
         )
         allow(document).to receive(:folio_items).and_return([
-          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'), permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'), status: 'Missing', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+          instance_double(Folio::Item, id: '123', barcode: '123',
+                                       effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                       permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                       location_provided_availability: nil,
+                                       status: 'Missing', material_type: book_type,
+                                       loan_type: instance_double(Folio::Item::LoanType, id: nil))
         ])
         render_inline(described_class.new(document:))
       end
@@ -446,7 +466,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
         )
         allow(document).to receive(:folio_items).and_return([
-          instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('HILA-STACKS'), permanent_location: Folio::Types.cached_location_by_code('HILA-STACKS'), status: 'Available', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+          instance_double(Folio::Item, id: '123', barcode: '123',
+                                       effective_location: Folio::Types.cached_location_by_code('HILA-STACKS'),
+                                       permanent_location: Folio::Types.cached_location_by_code('HILA-STACKS'),
+                                       location_provided_availability: nil,
+                                       status: 'Available', material_type: book_type,
+                                       loan_type: instance_double(Folio::Item::LoanType, id: nil))
         ])
         render_inline(described_class.new(document:))
       end

@@ -38,6 +38,10 @@ module Folio
           permanent_location: (Folio::Location.from_dynamic(json.dig('location', 'permanentLocation')) if json.dig('location', 'permanentLocation')) || holdings_record&.effective_location)
     end
 
+    def location_provided_availability
+      effective_location.details['availabilityClass']
+    end
+
     def loan_type
       @temporary_loan_type || @permanent_loan_type
     end

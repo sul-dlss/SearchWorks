@@ -19,6 +19,7 @@ RSpec.describe Holdings::Status do
     let(:effective_location) do
       instance_double(Folio::Location, details: {})
     end
+    let(:location_provided_availability) { nil }
 
     subject(:availability) { described_class.new(item).availability_class }
 
@@ -32,19 +33,17 @@ RSpec.describe Holdings::Status do
 
     context 'when the item has a location that makes it in-process (e.g. a SUL-TS processing location)' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:)
       end
 
-      let(:effective_location) do
-        instance_double(Folio::Location, details: { 'availabilityClass' => 'In_process' })
-      end
+      let(:location_provided_availability) { 'In_process' }
 
       it { is_expected.to eq 'in_process' }
     end
 
     context 'when the item has a FOLIO status that makes it unavailable' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Missing', effective_location:)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Missing', location_provided_availability:)
       end
 
       it { is_expected.to eq 'unavailable' }
@@ -52,12 +51,10 @@ RSpec.describe Holdings::Status do
 
     context 'when the item has a location that makes it unavailable' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:)
       end
 
-      let(:effective_location) do
-        instance_double(Folio::Location, details: { 'availabilityClass' => 'Unavailable' })
-      end
+      let(:location_provided_availability) { 'Unavailable' }
 
       it { is_expected.to eq 'unavailable' }
     end
@@ -72,29 +69,27 @@ RSpec.describe Holdings::Status do
 
     context 'when the item is in a remote location' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: true)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:, circulates?: true)
       end
-      let(:effective_location) do
-        instance_double(Folio::Location, details: { 'availabilityClass' => 'Offsite' })
-      end
+
+      let(:location_provided_availability) { 'Offsite' }
 
       it { is_expected.to eq 'deliver-from-offsite' }
     end
 
     context 'when a non-circulating item is in a remote location' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: false)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:, circulates?: false)
       end
-      let(:effective_location) do
-        instance_double(Folio::Location, details: { 'availabilityClass' => 'Offsite' })
-      end
+
+      let(:location_provided_availability) { 'Offsite' }
 
       it { is_expected.to eq 'noncirc_page' }
     end
 
     context 'when the item is non-circulating' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location:, circulates?: false)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:, circulates?: false)
       end
 
       it { is_expected.to eq 'noncirc' }
@@ -102,18 +97,17 @@ RSpec.describe Holdings::Status do
 
     context 'when the item is marked as available because of its location' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'On hold for a borrower', effective_location:, circulates?: true)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'On hold for a borrower', location_provided_availability:, circulates?: true)
       end
-      let(:effective_location) do
-        instance_double(Folio::Location, details: { 'availabilityClass' => 'Available' })
-      end
+
+      let(:location_provided_availability) { 'Available' }
 
       it { is_expected.to eq 'available' }
     end
 
     context 'when the item needs a live lookup' do
       let(:item) do
-        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', effective_location: instance_double(Folio::Location, details: {}), circulates?: true)
+        instance_double(Holdings::Item, folio_item?: true, folio_status: 'Available', location_provided_availability:, circulates?: true)
       end
 
       it { is_expected.to eq 'unknown' }
