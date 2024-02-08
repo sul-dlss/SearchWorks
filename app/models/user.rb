@@ -37,8 +37,10 @@ class User < ActiveRecord::Base
   # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
   # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
+    Honeybadger.notify(error_message: "User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
+                                        "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
     # Will rely primarily on eduPersonAffiliation so return true if this works
-    # return true if person_affiliated?
+    return true if person_affiliated?
 
     # If not true, we still want to check against suAffiliation.
     # We also want to send a notification in case it is covered by suAffiliation
