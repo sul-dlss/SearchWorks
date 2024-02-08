@@ -233,11 +233,11 @@ pipeline {
     stage('folio-dev deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_folio'
-        BRANCH = 'bootstrap4'
+        BRANCH = 'link-decoration'
       }
 
       when {
-        branch 'bootstrap4'
+        branch 'link-decoration'
       }
 
       steps {
