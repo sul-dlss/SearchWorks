@@ -18,28 +18,24 @@
 
   Plugin.prototype = {
     init: function() {
-      this.embedIframe($el.find('li').first());
+      this.embedIframe($el[0].querySelector('button'));
       this.setupListeners();
     },
     setupListeners: function() {
       var _this = this;
-      $el.find('li').on('click', function(e, f) {
+      $el.find('button').on('click', function(e, f) {
         $el.find('li').removeClass('active');
-        _this.embedIframe($(this));
+        _this.embedIframe(this);
       });
     },
-    embedIframe: function($li) {
-      $li.addClass('active');
-      var data = $li.data();
-      var $embedArea = $('.managed-purl-embed');
-      var provider = data.embedProvider.replace(/\/embed$/, '/iframe');
-      var iFrameHtml = '<iframe src="' +
-                       provider + '?url=' + data.embedTarget +
-                       '&hide_title=true&maxheight=500"' +
-                       ' frameborder=0 width="100%" scrolling="no"' +
-                       ' allowfullscreen=true' +
-                       ' style="height: 520px;"><iframe>';
-      $embedArea.html(iFrameHtml);
+    embedIframe: function(button) {
+      button.parentElement.classList.add('active')
+      const data = button.dataset
+      const provider = data.embedProvider.replace(/\/embed$/, '/iframe')
+      const url = `${provider}?url=${data.embedTarget}&hide_title=true&maxheight=500`
+      const embedArea = document.querySelector('.managed-purl-embed')
+      embedArea.innerHTML = `<iframe src="${url}" frameborder=0 width="100%" scrolling="no" ` +
+      `allowfullscreen=true style="height: 520px;"><iframe>`
     }
   };
 

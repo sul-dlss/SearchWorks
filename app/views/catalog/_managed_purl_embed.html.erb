@@ -10,11 +10,13 @@
       <div class="card-body">
         <ul>
           <% document.marc_links.managed_purls.each_with_index do |purl, i| %>
-            <li data-embed-target = '<%= "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}" %>' data-embed-provider = '<%= Settings.PURL_EMBED_PROVIDER %>'>
-              <% if purl.file_id %>
-                <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
+            <li>
+              <%= button_tag data: { embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}", embed_provider: Settings.PURL_EMBED_PROVIDER } do %>
+                <% if purl.file_id %>
+                  <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
+                <% end %>
+                <%= purl.text.presence || "part #{i + 1}" %>
               <% end %>
-              <%= button_tag purl.text.present? ? purl.text : "part #{i + 1}" %>
             </li>
           <% end %>
         </ul>
