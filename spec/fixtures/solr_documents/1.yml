@@ -1,28 +1,28 @@
-:id: 1
-:hashed_id_ssi: c4ca4238a0b923820dcc509a6f75849b
-:title_display: An object
-:all_search: An object
-:title_245a_search: An object
-:author_person_display: Doe, Jane
-:author_1xx_search: Doe, Jane
-:format: Book
-:format_main_ssim: Book
-:language: English
-:marc_json_struct: |
+id: 1
+hashed_id_ssi: c4ca4238a0b923820dcc509a6f75849b
+title_display: An object
+all_search: An object
+title_245a_search: An object
+author_person_display: Doe, Jane
+author_1xx_search: Doe, Jane
+format: Book
+format_main_ssim: Book
+language: English
+marc_json_struct: |
 <%= simple_856 %>
-:pub_date: 2014
-:callnum_search: G70.212 .A426 2011:test
-:pub_year_tisim: 2014
-:beginning_year_isi: 2000
-:imprint_display: 1990
-:access_facet: Online
-:building_facet: Green
-:callnum_facet_hsim: Dewey Classification|000s - Computer Science, Knowledge & Systems|070s - News Media, Journalism, Publishing
-:crez_course_info:
+pub_date: 2014
+callnum_search: G70.212 .A426 2011:test
+pub_year_tisim: 2014
+beginning_year_isi: 2000
+imprint_display: 1990
+access_facet: Online
+building_facet: Green
+callnum_facet_hsim: Dewey Classification|000s - Computer Science, Knowledge & Systems|070s - News Media, Journalism, Publishing
+crez_course_info:
   - "ACCT-212-01-02 -|- Managerial Accounting: Base -|- Rajan, Madhav V."
   - "ACCT-212-01-02 -|- Managerial Accounting: Base -|- Reichelstein, Stefan J"
   - "ACCT-215-01-02 -|- Managerial Accounting: Accelerated -|- Marinovic Vial, Ivan"
-:item_display_struct:
+item_display_struct:
   - barcode: '36105217238315'
     library: EARTH-SCI
     home_location: GRE-STACKS
@@ -33,5 +33,5 @@
     callnumber: G70.212 .A426 2011:test
     full_shelfkey: lc g   0070.212000 a0.426000 002011
     scheme: LC
-:shelfkey: lc g   0070.212000 a0.426000 002011
-:reverse_shelfkey: en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~
+shelfkey: lc g   0070.212000 a0.426000 002011
+reverse_shelfkey: en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~

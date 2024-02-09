@@ -1,15 +1,15 @@
-:id: 41
-:hashed_id_ssi: 3416a75f4cea9109507cacd8e2f2aefc
-:title_display: File Item5 - Blaster User Manual - The Good Parts
-:all_search: File Item5 - Blaster User Manual - The Good Parts
-:author_person_full_display: Chewy
-:format: File
-:format_main_ssim: Dataset
-:collection:
+id: 41
+hashed_id_ssi: 3416a75f4cea9109507cacd8e2f2aefc
+title_display: File Item5 - Blaster User Manual - The Good Parts
+all_search: File Item5 - Blaster User Manual - The Good Parts
+author_person_full_display: Chewy
+format: File
+format_main_ssim: Dataset
+collection:
   - 38
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 3204
-:beginning_year_isi: 3204
-:imprint_display: 3204
+modsxml: <%= mods_everything %>
+pub_date: 3204
+beginning_year_isi: 3204
+imprint_display: 3204

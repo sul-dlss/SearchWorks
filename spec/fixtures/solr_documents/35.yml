@@ -1,21 +1,21 @@
-:id: 35
-:hashed_id_ssi: 1c383cd30b7c298ab50293adfecb7b18
-:title_display: Image Item3
-:all_search: Image Item3
-:author_person_full_display: Mr. Stedman
-:format: Image
-:format_main_ssim: Image
-:collection:
+id: 35
+hashed_id_ssi: 1c383cd30b7c298ab50293adfecb7b18
+title_display: Image Item3
+all_search: Image Item3
+author_person_full_display: Mr. Stedman
+format: Image
+format_main_ssim: Image
+collection:
   - 34
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 2012
-:beginning_year_isi: 2012
-:imprint_display: 2012
-:druid: mf774fs2413
-:file_id:
+modsxml: <%= mods_everything %>
+pub_date: 2012
+beginning_year_isi: 2012
+imprint_display: 2012
+druid: mf774fs2413
+file_id:
   - "mf774fs2413%2FW784_000001_300.jp2"
   - "mf774fs2413%2FW784_000002_300.jp2"
-:iiif_manifest_url_ssim:
+iiif_manifest_url_ssim:
   - https://purl.stanford.edu/mf774fs2413/iiif/manifest

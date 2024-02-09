@@ -1,19 +1,19 @@
-:id: 4
-:hashed_id_ssi: a87ff679a2f3e71d9181a67b7542122c
-:pub_date: 1607
-:pub_year_tisim: 1607
-:author_person_display: Cortez, Essie
-:title_display: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
-:all_search: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
-:language: French
-:format: Video
-:format_main_ssim: Video
-:physical: The physical statement
-:marc_json_struct: |
+id: 4
+hashed_id_ssi: a87ff679a2f3e71d9181a67b7542122c
+pub_date: 1607
+pub_year_tisim: 1607
+author_person_display: Cortez, Essie
+title_display: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
+all_search: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
+language: French
+format: Video
+format_main_ssim: Video
+physical: The physical statement
+marc_json_struct: |
 <%= marc_characteristics_fixture %>
-:access_facet: At the Library
-:building_facet: Hoover Library
-:item_display_struct:
+access_facet: At the Library
+building_facet: Hoover Library
+item_display_struct:
   - barcode: '123'
     library: GREEN
     home_location: GRE-STACKS
@@ -25,6 +25,6 @@
   - barcode: '789'
     status: On order
     callnumber: GHI
-:characteristics_ssim:
+characteristics_ssim:
   - 'Sound: digital; optical; surround; stereo; Dolby.'
   - 'Video: NTSC. Digital: video file; DVD video; Region 1.'

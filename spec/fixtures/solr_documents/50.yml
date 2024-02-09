@@ -1,17 +1,17 @@
-:id: 50
-:hashed_id_ssi: c0c7c76d30bd3dcaefc96f40275bdc0a
-:title_display: An item in a virtual object
-:all_search: An item in a virtual object
-:format_main_ssim: Map
-:modsxml: <%= mods_everything %>
-:file_id:
+id: 50
+hashed_id_ssi: c0c7c76d30bd3dcaefc96f40275bdc0a
+title_display: An item in a virtual object
+all_search: An item in a virtual object
+format_main_ssim: Map
+modsxml: <%= mods_everything %>
+file_id:
   - wn461xh4882%2F2542001.jp2
-:druid: wn461xh4882
-:collection:
+druid: wn461xh4882
+collection:
   - '47'
-:collection_with_title:
+collection_with_title:
   - '47 -|- A Collection of Virtual Objects'
-:set:
+set:
   - '48'
-:set_with_title:
+set_with_title:
   - '48 -|- A Virtual Object'

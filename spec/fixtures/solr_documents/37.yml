@@ -1,19 +1,19 @@
-:id: 37
-:hashed_id_ssi: a5bfc9e07964f8dddeb95fc584cd965d
-:title_display: Merged Image1
-:all_search: Merged Image1
-:author_person_full_display: Eric Carbonara
-:format: Image
-:format_main_ssim: Image
-:collection:
+id: 37
+hashed_id_ssi: a5bfc9e07964f8dddeb95fc584cd965d
+title_display: Merged Image1
+all_search: Merged Image1
+author_person_full_display: Eric Carbonara
+format: Image
+format_main_ssim: Image
+collection:
   - 34
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:marc_json_struct: |
+marc_json_struct: |
 <%= metadata1 %>
-:pub_date: 2004
-:beginning_year_isi: 2004
-:imprint_display: 2012
-:druid: ch281vj9735
-:file_id:
+pub_date: 2004
+beginning_year_isi: 2004
+imprint_display: 2012
+druid: ch281vj9735
+file_id:
   - "ch281vj9735%2Fch281vj9735_00_0001.jp2"

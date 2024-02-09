@@ -1,12 +1,17 @@
-:id: 47
-:hashed_id_ssi: 67c6a1e7ce56d3d6fa748ab6d9af3fd7
-:title_display: A Collection of Virtual Objects
-:all_search: A Collection of Virtual Objects
-:format_main_ssim: "Archive/Manuscript"
-:modsxml: <%= mods_everything %>
-:collection_type: Digital Collection
-:author_struct:
-  - '{"link":"J. Smith","search":"\"J. Smith\"","post_text":"(Author)"}'
-  - '{"link":"B. Smith","search":"\"B. Smith\"","post_text":"(Producer)"}'
-:summary_display:
+id: 47
+hashed_id_ssi: 67c6a1e7ce56d3d6fa748ab6d9af3fd7
+title_display: A Collection of Virtual Objects
+all_search: A Collection of Virtual Objects
+format_main_ssim: "Archive/Manuscript"
+modsxml: <%= mods_everything %>
+collection_type: Digital Collection
+author_struct:
+- creator:
+  - link: J. Smith
+    search: "\"J. Smith\""
+    post_text: "(Author)"
+  - link: B. Smith
+    search: "\"B. Smith\""
+    post_text: "(Producer)"
+summary_display:
   - This collection of Virtual Objects is really important.

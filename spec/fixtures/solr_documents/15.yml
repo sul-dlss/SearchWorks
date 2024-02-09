@@ -1,15 +1,15 @@
-:id: 15
-:hashed_id_ssi: 9bf31c7ff062936a96d3c8bd1f8f2ff3
-:pub_date: 1698
-:author_person_display: Albert, Pierce
-:title_display: Ea veniam cupidatat cupidatat aliquip nulla Lorem dolore eu.
-:all_search: Ea veniam cupidatat cupidatat aliquip nulla Lorem dolore eu.
-:language: Japanese
-:format: Image
-:author_corp_display:
+id: 15
+hashed_id_ssi: 9bf31c7ff062936a96d3c8bd1f8f2ff3
+pub_date: 1698
+author_person_display: Albert, Pierce
+title_display: Ea veniam cupidatat cupidatat aliquip nulla Lorem dolore eu.
+all_search: Ea veniam cupidatat cupidatat aliquip nulla Lorem dolore eu.
+language: Japanese
+format: Image
+author_corp_display:
   - Scientific Council for Africa South of the Sahara.
-:marc_json_struct: |
+marc_json_struct: |
 <%= metadata1 %>
-:format_main_ssim: Image
-:access_facet: At the Library
-:building_facet: Special Collections
+format_main_ssim: Image
+access_facet: At the Library
+building_facet: Special Collections

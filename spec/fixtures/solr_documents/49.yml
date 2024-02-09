@@ -1,14 +1,14 @@
-:id: 49
-:hashed_id_ssi: f457c545a9ded88f18ecee47145a72c0
-:title_display: Another Virtual Object
-:all_search: Another Virtual Object
-:format_main_ssim: Map
-:marc_json_struct: |
+id: 49
+hashed_id_ssi: f457c545a9ded88f18ecee47145a72c0
+title_display: Another Virtual Object
+all_search: Another Virtual Object
+format_main_ssim: Map
+marc_json_struct: |
 <%= contributed_works_fixture %>
-:file_id:
+file_id:
   - jw923xn5254%2F2542B.jp2
-:druid: hj097bm8879
-:collection:
+druid: hj097bm8879
+collection:
   - '47'
-:collection_with_title:
+collection_with_title:
   - '47 -|- A Collection of Virtual Objects'

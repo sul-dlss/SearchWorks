@@ -1,16 +1,18 @@
-:id: 14
-:hashed_id_ssi: aab3238922bcc25a6f606eb525ffdc56
-:pub_date: 1617
-:author_person_display: Fleming, Salazar
-:title_display: Adipisicing dolor velit dolore dolore Lorem do quis sint veniam et anim.
-:all_search: Adipisicing dolor velit dolore dolore Lorem do quis sint veniam et anim.
-:language: Chinese
-:format: Book
-:marc_json_struct: |
+id: 14
+hashed_id_ssi: aab3238922bcc25a6f606eb525ffdc56
+pub_date: 1617
+author_person_display: Fleming, Salazar
+title_display: Adipisicing dolor velit dolore dolore Lorem do quis sint veniam et anim.
+all_search: Adipisicing dolor velit dolore dolore Lorem do quis sint veniam et anim.
+language: Chinese
+format: Book
+marc_json_struct: |
 <%= metadata1 %>
-:format_main_ssim: Book
-:imprint_display: 1788
-:access_facet: At the Library
-:building_facet: Law (Crown)
-:author_struct:
-  - '{"creator":[{"link":"Arbitrary, Stewart.", "search":"Arbitrary, Stewart."}]}'
+format_main_ssim: Book
+imprint_display: 1788
+access_facet: At the Library
+building_facet: Law (Crown)
+author_struct:
+- creator:
+  - link: Arbitrary, Stewart.
+    search: Arbitrary, Stewart.

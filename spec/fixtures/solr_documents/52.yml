@@ -1,18 +1,18 @@
-:id: 52
-:hashed_id_ssi: 9a1158154dfa42caddbd0694a4e9bdc8
-:title_display: An item in a another virtual object
-:all_search: An item in a another virtual object
-:format_main_ssim: Map
-:marc_json_struct: |
+id: 52
+hashed_id_ssi: 9a1158154dfa42caddbd0694a4e9bdc8
+title_display: An item in a another virtual object
+all_search: An item in a another virtual object
+format_main_ssim: Map
+marc_json_struct: |
 <%= metadata1 %>
-:file_id:
+file_id:
   - zm141bz6672%2F2542003.jp2
-:druid: zm141bz6672
-:collection:
+druid: zm141bz6672
+collection:
   - '47'
-:collection_with_title:
+collection_with_title:
   - '47 -|- A Collection of Virtual Objects'
-:set:
+set:
   - '49'
-:set_with_title:
+set_with_title:
   - '49 -|- Another Virtual Object'

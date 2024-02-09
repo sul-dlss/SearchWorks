@@ -1,15 +1,15 @@
-:id: 32
-:hashed_id_ssi: 6364d3f0f495b6ab9dcf8d3b5c6e0b01
-:title_display: File Item1
-:all_search: File Item1
-:author_person_full_display: Dr. Katz
-:format: File
-:format_main_ssim: Dataset
-:collection:
+id: 32
+hashed_id_ssi: 6364d3f0f495b6ab9dcf8d3b5c6e0b01
+title_display: File Item1
+all_search: File Item1
+author_person_full_display: Dr. Katz
+format: File
+format_main_ssim: Dataset
+collection:
   - 31
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 2011
-:beginning_year_isi: 2011
-:imprint_display: 2011
+modsxml: <%= mods_everything %>
+pub_date: 2011
+beginning_year_isi: 2011
+imprint_display: 2011

@@ -1,16 +1,16 @@
-:id: 29
-:hashed_id_ssi: 6ea9ab1baa0efb9e19094440c317e21b
-:title_display: Image Collection1
-:all_search: Image Collection1
-:summary_display:
+id: 29
+hashed_id_ssi: 6ea9ab1baa0efb9e19094440c317e21b
+title_display: Image Collection1
+all_search: Image Collection1
+summary_display:
   - "A collection of fixture images from the SearchWorks development index."
-:format: Image
-:format_main_ssim: Image
-:collection_type: Digital Collection
-:modsxml: <%= mods_everything %>
-:pub_date: 2014
-:beginning_year_isi: 2000
-:imprint_display: 1990
+format: Image
+format_main_ssim: Image
+collection_type: Digital Collection
+modsxml: <%= mods_everything %>
+pub_date: 2014
+beginning_year_isi: 2000
+imprint_display: 1990
 marc_links_struct:
   - version: '0.2'
     href: https://purl.stanford.edu/29

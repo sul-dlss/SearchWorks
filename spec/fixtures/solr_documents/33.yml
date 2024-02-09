@@ -1,15 +1,15 @@
-:id: 33
-:hashed_id_ssi: 182be0c5cdcd5072bb1864cdee4d3d6e
-:title_display: File Item2
-:all_search: File Item2
-:author_person_full_display: Mr. Stedman
-:format: File
-:format_main_ssim: Dataset
-:collection:
+id: 33
+hashed_id_ssi: 182be0c5cdcd5072bb1864cdee4d3d6e
+title_display: File Item2
+all_search: File Item2
+author_person_full_display: Mr. Stedman
+format: File
+format_main_ssim: Dataset
+collection:
   - 31
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 2012
-:beginning_year_isi: 2012
-:imprint_display: 2012
+modsxml: <%= mods_everything %>
+pub_date: 2012
+beginning_year_isi: 2012
+imprint_display: 2012

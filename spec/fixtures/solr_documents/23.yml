@@ -1,13 +1,13 @@
-:id: 23
-:hashed_id_ssi: 37693cfc748049e45d87b8c7d8b9aacd
-:pub_date: 1632
-:author_person_display: Fischer, Goodwin
-:title_display: Proident ex duis id esse nulla quis et aute dolore.
-:all_search: Proident ex duis id esse nulla quis et aute dolore.
-:language: Chinese
-:format: Video
-:genre_ssim:
+id: 23
+hashed_id_ssi: 37693cfc748049e45d87b8c7d8b9aacd
+pub_date: 1632
+author_person_display: Fischer, Goodwin
+title_display: Proident ex duis id esse nulla quis et aute dolore.
+all_search: Proident ex duis id esse nulla quis et aute dolore.
+language: Chinese
+format: Video
+genre_ssim:
   - Government document
-:format_main_ssim: Video
-:access_facet: Online
-:building_facet: Music
+format_main_ssim: Video
+access_facet: Online
+building_facet: Music
