@@ -424,6 +424,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "dd7fdff6-b8cd-405a-8683-19771a5a905d",
@@ -442,7 +447,7 @@
       "metadata": {
         "createdDate": "2023-12-05T23:08:57.463+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-05T23:08:57.463+00:00",
+        "updatedDate": "2024-02-06T21:14:48.325+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -450,7 +455,7 @@
     "metadata": {
       "createdDate": "2023-12-05T23:08:58.838+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-05T23:08:58.838+00:00",
+      "updatedDate": "2024-02-06T21:14:48.285+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -2397,6 +2402,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "21e517da-e417-4069-8e2a-126601c5a0b5",
@@ -2415,7 +2425,7 @@
       "metadata": {
         "createdDate": "2023-11-30T22:52:42.245+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-11-30T22:52:42.245+00:00",
+        "updatedDate": "2024-02-06T21:16:43.134+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -2423,7 +2433,7 @@
     "metadata": {
       "createdDate": "2023-11-30T22:52:42.478+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-11-30T22:52:42.478+00:00",
+      "updatedDate": "2024-02-06T21:16:43.099+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -12614,6 +12624,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "f90ed205-1809-4d7e-bdff-0db507510372",
@@ -12632,7 +12647,7 @@
       "metadata": {
         "createdDate": "2023-12-11T19:34:01.467+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-25T17:29:52.378+00:00",
+        "updatedDate": "2024-02-06T21:15:25.868+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -13149,6 +13164,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "f90ed205-1809-4d7e-bdff-0db507510372",
@@ -13167,7 +13187,7 @@
       "metadata": {
         "createdDate": "2023-12-11T19:34:01.467+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-25T17:29:52.378+00:00",
+        "updatedDate": "2024-02-06T21:15:25.868+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -13175,7 +13195,7 @@
     "metadata": {
       "createdDate": "2023-12-11T19:34:01.926+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-01-25T17:29:52.300+00:00",
+      "updatedDate": "2024-02-06T21:15:25.830+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -17571,6 +17591,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "79667142-aab6-4387-8c70-ed32e88eb9f5",
@@ -17589,7 +17614,7 @@
       "metadata": {
         "createdDate": "2023-12-01T18:39:58.146+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-01T18:43:18.331+00:00",
+        "updatedDate": "2024-02-06T21:16:04.992+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -19355,6 +19380,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "34149fd5-b751-4211-9bdd-55f1b3a61404",
@@ -19373,7 +19403,7 @@
       "metadata": {
         "createdDate": "2023-12-01T00:30:29.161+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-01T00:36:04.011+00:00",
+        "updatedDate": "2024-02-06T21:17:17.235+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -19381,7 +19411,7 @@
     "metadata": {
       "createdDate": "2023-12-01T00:30:29.278+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-01T00:30:29.278+00:00",
+      "updatedDate": "2024-02-06T21:17:17.201+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -19724,6 +19754,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "34149fd5-b751-4211-9bdd-55f1b3a61404",
@@ -19742,7 +19777,7 @@
       "metadata": {
         "createdDate": "2023-12-01T00:30:29.161+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-01T00:36:04.011+00:00",
+        "updatedDate": "2024-02-06T21:17:17.235+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -20707,6 +20742,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "a99cc0ed-944b-4876-97cb-cf4adb92ec31",
@@ -20725,7 +20765,7 @@
       "metadata": {
         "createdDate": "2023-12-14T23:15:19.050+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-14T23:17:36.127+00:00",
+        "updatedDate": "2024-02-06T21:11:53.553+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -20733,7 +20773,7 @@
     "metadata": {
       "createdDate": "2023-12-14T23:15:19.144+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-14T23:15:19.144+00:00",
+      "updatedDate": "2024-02-06T21:11:53.521+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -23787,6 +23827,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "6f694c98-680e-4db5-8817-977defd91b51",
@@ -23805,7 +23850,7 @@
       "metadata": {
         "createdDate": "2023-10-10T20:31:40.629+00:00",
         "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-        "updatedDate": "2024-01-08T23:02:49.952+00:00",
+        "updatedDate": "2024-02-06T21:09:06.934+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -23813,7 +23858,7 @@
     "metadata": {
       "createdDate": "2023-10-10T20:31:40.756+00:00",
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-      "updatedDate": "2024-01-08T23:02:49.862+00:00",
+      "updatedDate": "2024-02-06T21:09:06.894+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -24595,6 +24640,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "902da1dc-ca39-4d54-8876-f3c284f33cf7",
@@ -24613,7 +24663,7 @@
       "metadata": {
         "createdDate": "2023-12-12T23:16:44.646+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-12T23:16:44.646+00:00",
+        "updatedDate": "2024-02-06T21:13:29.816+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -24621,7 +24671,7 @@
     "metadata": {
       "createdDate": "2023-12-12T23:16:44.737+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-12T23:16:44.737+00:00",
+      "updatedDate": "2024-02-06T21:13:29.781+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -31684,6 +31734,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "3d18d847-2afb-4d1d-9323-01c90dff2e50",
@@ -31728,7 +31783,7 @@
       "metadata": {
         "createdDate": "2023-09-14T17:20:44.783+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-18T21:52:21.197+00:00",
+        "updatedDate": "2024-02-06T21:11:16.076+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -31736,7 +31791,7 @@
     "metadata": {
       "createdDate": "2023-09-14T17:20:44.848+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-18T21:52:20.937+00:00",
+      "updatedDate": "2024-02-06T21:11:16.037+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -31780,6 +31835,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "d7871e6b-af44-464d-9229-bdeb34ababe4",
@@ -31798,16 +31858,16 @@
       "metadata": {
         "createdDate": "2024-01-10T21:40:16.577+00:00",
         "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-        "updatedDate": "2024-01-10T21:40:16.577+00:00",
-        "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+        "updatedDate": "2024-02-06T21:04:41.147+00:00",
+        "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
     "courseNumber": "AA-244A-01",
     "metadata": {
       "createdDate": "2024-01-10T21:40:16.628+00:00",
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-      "updatedDate": "2024-01-10T21:40:16.628+00:00",
-      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+      "updatedDate": "2024-02-06T21:04:41.100+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
   {
@@ -33041,6 +33101,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "0a8f9cfc-adcb-4fd9-aedf-296697c5db4c",
@@ -33072,7 +33137,7 @@
       "metadata": {
         "createdDate": "2024-01-12T20:17:54.294+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-23T23:18:15.041+00:00",
+        "updatedDate": "2024-02-06T21:02:31.361+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -33080,7 +33145,7 @@
     "metadata": {
       "createdDate": "2024-01-12T20:17:54.370+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-01-12T20:17:54.370+00:00",
+      "updatedDate": "2024-02-06T21:02:31.246+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -35683,6 +35748,80 @@
     }
   },
   {
+    "id": "b43b6c1c-d7ea-44ed-b5ff-85da3e1f2757",
+    "name": "Shakespeare and His Critics",
+    "departmentId": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+    "departmentObject": {
+      "id": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+      "name": "ENGLISH - English",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:22.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:22.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "899603b7-1a29-48ca-b239-492de2f12a58",
+    "courseListingObject": {
+      "id": "899603b7-1a29-48ca-b239-492de2f12a58",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "71ded1e8-eb60-4010-a515-0f23354d46f7",
+          "userId": "740f9baa-ddc9-45bb-a4c6-30108b05f5d5",
+          "name": "Mattea Koon",
+          "barcode": "2551234959",
+          "courseListingId": "899603b7-1a29-48ca-b239-492de2f12a58",
+          "metadata": {
+            "createdDate": "2024-02-07T23:52:02.306+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-07T23:52:02.306+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-07T23:51:38.428+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-07T23:51:38.428+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "ENGLISH-5GA-01",
+    "metadata": {
+      "createdDate": "2024-02-07T23:51:38.539+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-07T23:51:38.539+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "b47b5606-f7f9-4e45-ab50-54f939262998",
     "name": "Introduction to African Studies I: Africa in the 20th Century",
     "departmentId": "6891a663-636f-4052-a5d0-0fc6bfe50112",
@@ -37110,6 +37249,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "79667142-aab6-4387-8c70-ed32e88eb9f5",
@@ -37128,7 +37272,7 @@
       "metadata": {
         "createdDate": "2023-12-01T18:39:58.146+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-01T18:43:18.331+00:00",
+        "updatedDate": "2024-02-06T21:16:04.992+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -37136,7 +37280,7 @@
     "metadata": {
       "createdDate": "2023-12-01T18:39:58.747+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-01T18:39:58.747+00:00",
+      "updatedDate": "2024-02-06T21:16:04.951+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -38690,6 +38834,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "63136097-9910-4a56-9adc-52853d664de2",
@@ -38708,7 +38857,7 @@
       "metadata": {
         "createdDate": "2023-12-12T22:08:21.588+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-12T22:08:21.588+00:00",
+        "updatedDate": "2024-02-06T21:12:50.347+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -38716,7 +38865,7 @@
     "metadata": {
       "createdDate": "2023-12-12T22:08:21.670+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-12T22:08:21.670+00:00",
+      "updatedDate": "2024-02-06T21:12:50.314+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -40346,6 +40495,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "a71ba7c0-eca5-4ff6-a7a1-6634b915edc1",
@@ -40364,7 +40518,7 @@
       "metadata": {
         "createdDate": "2024-01-11T23:14:50.497+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-11T23:14:50.497+00:00",
+        "updatedDate": "2024-02-06T21:06:03.322+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -40372,7 +40526,7 @@
     "metadata": {
       "createdDate": "2024-01-11T23:14:50.612+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-01-11T23:14:50.612+00:00",
+      "updatedDate": "2024-02-06T21:06:03.279+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -41774,6 +41928,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "aead7b3c-bdf0-4dc0-a4d2-99864c481d29",
@@ -41792,7 +41951,7 @@
       "metadata": {
         "createdDate": "2023-12-05T23:30:52.609+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-05T23:30:52.609+00:00",
+        "updatedDate": "2024-02-06T21:14:09.743+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -41800,7 +41959,7 @@
     "metadata": {
       "createdDate": "2023-12-05T23:31:00.069+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-12-05T23:31:00.069+00:00",
+      "updatedDate": "2024-02-06T21:14:09.712+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -42269,6 +42428,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "a99cc0ed-944b-4876-97cb-cf4adb92ec31",
@@ -42287,7 +42451,7 @@
       "metadata": {
         "createdDate": "2023-12-14T23:15:19.050+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2023-12-14T23:17:36.127+00:00",
+        "updatedDate": "2024-02-06T21:11:53.553+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -45310,6 +45474,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "0a8f9cfc-adcb-4fd9-aedf-296697c5db4c",
@@ -45341,7 +45510,7 @@
       "metadata": {
         "createdDate": "2024-01-12T20:17:54.294+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-23T23:18:15.041+00:00",
+        "updatedDate": "2024-02-06T21:02:31.361+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -48456,6 +48625,11 @@
         "startDate": "2023-12-18T08:00:00.000Z",
         "endDate": "2024-03-22T07:00:00.000Z"
       },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
       "instructorObjects": [
         {
           "id": "8263c528-4997-4c8d-9a64-8c66fd616541",
@@ -48474,7 +48648,7 @@
       "metadata": {
         "createdDate": "2024-01-05T21:33:11.086+00:00",
         "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-        "updatedDate": "2024-01-05T21:33:11.086+00:00",
+        "updatedDate": "2024-02-06T21:09:47.469+00:00",
         "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
       }
     },
@@ -48482,7 +48656,7 @@
     "metadata": {
       "createdDate": "2024-01-05T21:33:11.222+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-01-05T21:33:11.222+00:00",
+      "updatedDate": "2024-02-06T21:09:47.421+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     }
   },
@@ -50561,6 +50735,80 @@
       "createdByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3",
       "updatedDate": "2024-01-04T18:58:41.721+00:00",
       "updatedByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3"
+    }
+  },
+  {
+    "id": "f8f73313-b347-4df1-9b84-c85e9df27927",
+    "name": "Advanced Fiction Writing",
+    "departmentId": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+    "departmentObject": {
+      "id": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+      "name": "ENGLISH - English",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:22.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:22.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "60bb3972-0a82-466b-b7f5-6aec21aef869",
+    "courseListingObject": {
+      "id": "60bb3972-0a82-466b-b7f5-6aec21aef869",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "dc4d8bfd-2f6e-406f-996a-d75bdf57acdb",
+          "userId": "6ecb4e50-6c9a-4dd4-99a6-58d3bd80e7f9",
+          "name": "Kirstin Quade",
+          "barcode": "2552596072",
+          "courseListingId": "60bb3972-0a82-466b-b7f5-6aec21aef869",
+          "metadata": {
+            "createdDate": "2024-02-08T02:45:29.959+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-08T02:45:29.959+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-08T02:44:55.199+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-08T02:44:55.199+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "ENGLISH-290-01",
+    "metadata": {
+      "createdDate": "2024-02-08T02:44:55.279+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-08T02:44:55.279+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
     }
   },
   {
