@@ -149,6 +149,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 3bba3b30-22be-4bf9-8b7a-96caf31b7c80,Law New Books,LAW-NEWBOOK,SU,LAW,LAW,New books shelf,true,LAW,LAW,,,,,,,,,,,,,,
 3c4db814-f0e7-4119-a14c-5909953608a6,Music Tech Shadowed,MUS-SHADOW,SU,SUL,MUSIC,Ask at circulation desk,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 3cbd5559-5ca9-473e-8d7d-98a67bff29f5,SAL3 PAGE-SP,SAL3-PAGE-SP,SU,SUL,SAL3,For use in Special Collections Reading Room,true,SAL3,SAL3,,,,,SPEC,,,Offsite,,,,,,
+3ceb1ba8-fa7a-46b5-9712-31be762653fd,Music Processing Circ,MUS-PROCESSING-CIRC,SU,SUL,MUSIC,Ask at circulation desk,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 3d8166aa-9f44-4187-8d79-a257929729bf,East Asia Shelved Elsewhere,EAL-SEE-OTHER,SU,SUL,EAST-ASIA,See linked record to request items bound together,true,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,
 3dadb04e-931c-4ebe-85b0-dcb00c30ebcb,HILA SDR,HILA-SDR,SU,HOOVER,HILA,Stanford Digital Repository,true,HILA,HILA,,,,,,,,,,,,,,
 3e600d91-6256-4e93-a3aa-a21792e95baf,Media Tech Processor,MEDIA-TECH-PROCESSOR,SU,SUL,MEDIA-CENTER,In process,true,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,In_process,,,,,,

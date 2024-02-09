@@ -3861,6 +3861,31 @@
     }
   },
   {
+    "id": "3ceb1ba8-fa7a-46b5-9712-31be762653fd",
+    "name": "Music Processing Circ",
+    "code": "MUS-PROCESSING-CIRC",
+    "discoveryDisplayName": "Ask at circulation desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
+    "details": {
+    },
+    "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
+    "servicePointIds": [
+      "4d77d74b-271e-421a-91c6-992afa9afb3c"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-02-09T01:08:22.275+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-02-09T01:08:22.275+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "3d8166aa-9f44-4187-8d79-a257929729bf",
     "name": "East Asia Shelved Elsewhere",
     "code": "EAL-SEE-OTHER",
