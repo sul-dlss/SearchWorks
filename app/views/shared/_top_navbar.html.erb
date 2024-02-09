@@ -8,7 +8,7 @@
       <% if current_user %>
         <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'first' %>
       <% else %>
-        <%= link_to 'Login', new_user_session_path(referrer: request.original_url), class: 'first' %>
+        <%= link_to 'Login', new_user_session_path(referrer: request.original_url), class: 'first', data: { turbo: false } %>
       <% end %>
       <%= link_to "My Account", "https://mylibrary.stanford.edu/" %>
       <%= link_to feedback_path, data: {toggle:"collapse", target:"#feedback-form"} do %>
