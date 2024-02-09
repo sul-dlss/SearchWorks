@@ -12,7 +12,7 @@ pipeline {
           export HUB_CONFIG=/ci/home/config/hub
 
           # Load RVM
-          rvm use 3.1.2@searchworks --create
+          rvm use 3.2.2@searchworks --create
           gem install bundler
 
           bundle install --without production
