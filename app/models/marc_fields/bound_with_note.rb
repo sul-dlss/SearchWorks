@@ -6,9 +6,9 @@ class BoundWithNote < MarcField
   private
 
   def subfield_value(field, subfield)
-    return super unless subfield.code == 'c' && subfield.value.match?(/^(\d+)/)
+    return super unless subfield.code == 'c' && subfield.value.match?(ckey_regex)
 
-    ckey = subfield.value[/^(\d+)/]
+    ckey = subfield.value[ckey_regex]
     ckey_link = link_to(ckey, Rails.application.routes.url_helpers.solr_document_path(ckey))
 
     subfield.value.gsub(ckey, ckey_link).html_safe
@@ -16,5 +16,9 @@ class BoundWithNote < MarcField
 
   def tags
     %w(590)
+  end
+
+  def ckey_regex
+    /^((a|in|L)?\d+)/
   end
 end
