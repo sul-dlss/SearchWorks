@@ -4,7 +4,7 @@
 class BoundWithNoteForAccessPanel < BoundWithNote
   def values
     extracted_fields.map do |field, subfields|
-      id = subfields.find { |subfield| subfield.code == 'c' }.value[/^(\d+)/]
+      id = subfields.find { |subfield| subfield.code == 'c' }.value[ckey_regex]
 
       { id:, value: display_value(field, subfields) }
     end
