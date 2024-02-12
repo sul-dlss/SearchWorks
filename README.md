@@ -22,19 +22,29 @@ The installation script will
 
 You will need to update the configuration in `config/settings.yml` for various parts of the app to work.  Please check that file for more information.
 
-Start Solr
+### Start Solr
 
+There are at least two options for starting Solr.
+
+#### Docker compose
+
+```shell
+docker compose up
+```
+
+#### solr_wrapper 
 To start Solr, you can use the `solr_wrapper` command. However, if starting from a fresh instance, you may first need to run `rake searchworks:install` or `rake ci` so that the CJK tokenizer gets copied into the appropriate directory.  There is also a separate task (`rake searchworks:copy_solr_dependencies`) available if you find that you need to clean solr and the CJK tokenizer is getting removed.
 
     $ solr_wrapper
 
+### Start the rails app
 Start the rails app
 
     $ bin/dev
 
 ## Getting data in development
 
-For fixture data, you can run `solr_wrapper` locally as above, and populate sample data using `rake searchworks:fixtures`
+Once you have Solr running you can load fixture data using `rake searchworks:fixtures`
 
 ## "Logging in" as a User in development
 

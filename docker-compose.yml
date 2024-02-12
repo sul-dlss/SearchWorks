@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  solr:
+    image: "solr:${SOLR_VERSION:-8.11.1}"
+    volumes:
+      - $PWD/config/solr_configs:/opt/solr/conf
+      - $PWD/config/solr_configs/CJKFilterUtils-v3.0.jar:/opt/solr/contrib/CJKFilterUtils-v3.0.jar
+    ports:
+      - "${SOLR_PORT:-8983}:8983"
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - blacklight-core
+      - /opt/solr/conf
+      - "-Xms256m"
+      - "-Xmx512m"
