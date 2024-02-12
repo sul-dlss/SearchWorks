@@ -53,13 +53,13 @@ module SolrHoldings
     end
   end
 
+  def holdings_json
+    @holdings_json ||= first(:holdings_json_struct).presence || {}
+  end
+
   private
 
   def folio_holdings_by_id
     @folio_holdings_by_id ||= folio_holdings.index_by(&:id)
-  end
-
-  def holdings_json
-    @holdings_json ||= self[:holdings_json_struct].present? ? first(:holdings_json_struct) : {}
   end
 end

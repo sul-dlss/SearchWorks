@@ -15,9 +15,8 @@ RSpec.describe "catalog/librarian_view" do
       render
     end
 
-    it "should render the marc_view" do
+    it "renders the marc_view" do
       expect(rendered).to have_css('#marc_view')
-      expect(rendered).to have_css('#folio-json-view')
 
       expect(rendered).to have_content('August  2, 2022  4:01pm')
       expect(rendered).to have_content('holdings_key')

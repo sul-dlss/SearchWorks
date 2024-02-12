@@ -14,6 +14,7 @@ RSpec.describe "Librarian View Customization", :js do
 
     expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
 
+    find('details:first-of-type > summary').click
     within("#marc_view") do
       expect(page).to have_css(".field", text: /Some intersting papers/)
     end

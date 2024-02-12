@@ -22,6 +22,7 @@ module Folio
     # rubocop:enable Metrics/ParameterLists
 
     # Prefer the locally cached name, but fall back to the name from the document if we have to
+    # The name in the document is the "discoveryDisplayName", which may differ from "name"
     def name
       cached_location_data&.dig('name') || @name
     end

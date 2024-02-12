@@ -13,30 +13,6 @@ RSpec.describe Holdings::Item do
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
   let(:eresv_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INSTRUCTOR', current_location: 'E-RESV', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
-  let(:folio_location) {
-    Folio::Location.from_dynamic(
-      {
-        'id' => '4573e824-9273-4f13-972f-cff7bf504217',
-        'code' => 'GRE-STACKS',
-        'name' => 'Green Library Stacks',
-        'institution' => {
-          'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
-          'code' => 'SU',
-          'name' => 'Stanford University'
-        },
-        'campus' => {
-          'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
-          'code' => 'SUL',
-          'name' => 'Stanford Libraries'
-        },
-        'library' => {
-          'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
-          'code' => 'GREEN',
-          'name' => 'Cecil H. Green'
-        }
-      }
-    )
-  }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -213,15 +189,43 @@ RSpec.describe Holdings::Item do
 
   context 'with data from FOLIO' do
     let(:folio_item) {
-      Folio::Item.new(
-        id: '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
-        status: 'Available',
-        barcode: '36105232609540',
-        material_type: Folio::Item::MaterialType.new(id: '1a54b431-2e4f-452d-9cae-9cee66c9a892', name: 'book'),
-        permanent_loan_type: Folio::Item::LoanType.new(id: '2b94c631-fca9-4892-a730-03ee529ffe27', name: 'Can circulate'),
-        effective_location: folio_location
-      )
+      Folio::Item.from_dynamic({
+                                 'id' => '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
+                                 'status' => 'Available',
+                                 'barcode' => '36105232609540',
+                                 'materialType' => 'book',
+                                 'materialTypeId' => '1a54b431-2e4f-452d-9cae-9cee66c9a892',
+                                 'permanentLoanType' => 'Can circulate',
+                                 'permanentLoanTypeId' => '2b94c631-fca9-4892-a730-03ee529ffe27',
+                                 'callNumber' => { 'typeId' => "95467209-6d7b-468b-94df-0f5d7ad2747d",
+                                                   'typeName' => "Library of Congress classification",
+                                                   'callNumber' => "PN1995.9.M6 A76 2024" },
+                                 'location' => { 'effectiveLocation' => folio_location }
+                               })
     }
+    let(:folio_location) {
+      {
+        'id' => '4573e824-9273-4f13-972f-cff7bf504217',
+        'code' => 'GRE-STACKS',
+        'name' => 'Green Library Stacks',
+        'institution' => {
+          'id' => '8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929',
+          'code' => 'SU',
+          'name' => 'Stanford University'
+        },
+        'campus' => {
+          'id' => 'c365047a-51f2-45ce-8601-e421ca3615c5',
+          'code' => 'SUL',
+          'name' => 'Stanford Libraries'
+        },
+        'library' => {
+          'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e',
+          'code' => 'GREEN',
+          'name' => 'Cecil H. Green'
+        }
+      }
+    }
+
     let(:document) { SolrDocument.new }
 
     subject(:item) { described_class.new({ barcode: '36105232609540', library: 'GREEN', home_location: 'GRE-STACKS' }, document:) }
