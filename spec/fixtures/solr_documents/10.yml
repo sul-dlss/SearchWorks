@@ -69,6 +69,183 @@ uuid_ssi: ef3fb772-88b6-4981-a1d6-959c884c0fc5
     home_location: MAR-STACKS
     callnumber: PQR
     full_shelfkey: PQR
+folio_json_struct:
+  - '{"leader":"01047cam a2200289 a 4500","fields":[{"001":"a3468631"},{"003":"SIRSI"},{"008":"961121s1997    nyua          001 0 eng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   96049953"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"0393040801"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9780393040807"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) a3468631"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)36024029"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-I)275457928"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"DLC"},{"c":"DLC"},{"d":"DLC"},{"d":"NhCcYBP"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"TL215.T34"},{"b":"W35 1997"}]}},{"082":{"ind1":"0","ind2":"0","subfields":[{"a":"338.4/76292222"},{"2":"21"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Walton, Mary,"},{"d":"1941-"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Car :"},{"b":"a drama of the American workplace /"},{"c":"Mary Walton."}]}},{"250":{"ind1":" ","ind2":" ","subfields":[{"a":"1st ed."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"New York :"},{"b":"W.W. Norton,"},{"c":"c1997."}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"xxiv, 360 p. :"},{"b":"ill. ;"},{"c":"25 cm."}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Includes index."}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"31"}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Taurus automobile"},{"x":"Design and construction"},{"x":"History."}]}},{"920":{"ind1":" ","ind2":" ","subfields":[{"a":"An insightful account of the redesigning of the Ford Taurus, chronicling firsthand the clashes between departments at Ford as the new machine takes shape on the assembly line."},{"1":"Nielsen"},{"x":"9780393040807"},{"x":"20160527"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"19eba0e5-8bab-55f9-b799-092737ca0c86"},{"s":"0c25be7f-2101-5036-b9d8-95b5e4d3b4b8"}]}}]}'
+holdings_json_struct:
+  - '{ "holdings": [
+            {
+              "id": "51e28073-d519-583a-9cfd-aae70fd7d335",
+              "hrid": "ah3468631_1",
+              "notes": [],
+              "_version": 1,
+              "metadata": {
+                "createdDate": "2023-08-21T05:55:01.064Z",
+                "updatedDate": "2023-08-21T05:55:01.064Z",
+                "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+                "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+              },
+              "sourceId": "f32d531e-df79-46b3-8932-cdd35f7a2264",
+              "boundWith": null,
+              "formerIds": [],
+              "illPolicy": null,
+              "callNumber": "TL215 .T34 W35 1997",
+              "instanceId": "19eba0e5-8bab-55f9-b799-092737ca0c86",
+              "holdingsType": {
+                "id": "5684e4a3-9279-4463-b6ee-20ae21bbec07",
+                "name": "Book",
+                "source": "local"
+              },
+              "holdingsItems": [],
+              "callNumberType": {
+                "id": "95467209-6d7b-468b-94df-0f5d7ad2747d",
+                "name": "Library of Congress classification",
+                "source": "folio"
+              },
+              "holdingsTypeId": "5684e4a3-9279-4463-b6ee-20ae21bbec07",
+              "callNumberTypeId": "95467209-6d7b-468b-94df-0f5d7ad2747d",
+              "electronicAccess": [],
+              "bareHoldingsItems": [],
+              "holdingsStatements": [],
+              "statisticalCodeIds": [],
+              "administrativeNotes": [],
+              "effectiveLocationId": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+              "permanentLocationId": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+              "suppressFromDiscovery": false,
+              "holdingsStatementsForIndexes": [],
+              "holdingsStatementsForSupplements": [],
+              "location": {
+                "effectiveLocation": {
+                  "id": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+                  "code": "SAL3-STACKS",
+                  "name": "Stacks",
+                  "campus": {
+                    "id": "c365047a-51f2-45ce-8601-e421ca3615c5",
+                    "code": "SUL",
+                    "name": "Stanford Libraries"
+                  },
+                  "details": {
+                    "availabilityClass": "Offsite",
+                    "scanServicePointCode": "SAL3"
+                  },
+                  "library": {
+                    "id": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                    "code": "SAL3",
+                    "name": "SAL3 (off-campus storage)"
+                  },
+                  "isActive": true,
+                  "institution": {
+                    "id": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                    "code": "SU",
+                    "name": "Stanford University"
+                  }
+                },
+                "permanentLocation": {
+                  "id": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+                  "code": "SAL3-STACKS",
+                  "name": "Stacks",
+                  "campus": {
+                    "id": "c365047a-51f2-45ce-8601-e421ca3615c5",
+                    "code": "SUL",
+                    "name": "Stanford Libraries"
+                  },
+                  "details": {
+                    "availabilityClass": "Offsite",
+                    "scanServicePointCode": "SAL3"
+                  },
+                  "library": {
+                    "id": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                    "code": "SAL3",
+                    "name": "SAL3 (off-campus storage)"
+                  },
+                  "isActive": true,
+                  "institution": {
+                    "id": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                    "code": "SU",
+                    "name": "Stanford University"
+                  }
+                }
+              }
+            }
+          ],
+          "items": [
+            {
+              "id": "e75a4873-8899-5be8-8e1e-c2813e38fb04",
+              "hrid": "ai3468631_1_1",
+              "notes": [],
+              "status": "Available",
+              "barcode": "36105019278634",
+              "request": null,
+              "_version": 1,
+              "metadata": {
+                "createdDate": "2023-08-21T05:55:19.606Z",
+                "updatedDate": "2023-08-21T05:55:19.606Z",
+                "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+                "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+              },
+              "formerIds": [],
+              "callNumber": {
+                "typeId": "95467209-6d7b-468b-94df-0f5d7ad2747d",
+                "typeName": "Library of Congress classification",
+                "callNumber": "TL215 .T34 W35 1997"
+              },
+              "copyNumber": "1",
+              "yearCaption": [],
+              "materialType": "book",
+              "callNumberType": {
+                "id": "95467209-6d7b-468b-94df-0f5d7ad2747d",
+                "name": "Library of Congress classification",
+                "source": "folio"
+              },
+              "materialTypeId": "1a54b431-2e4f-452d-9cae-9cee66c9a892",
+              "numberOfPieces": "1",
+              "circulationNotes": [],
+              "electronicAccess": [],
+              "holdingsRecordId": "51e28073-d519-583a-9cfd-aae70fd7d335",
+              "discoverySuppress": false,
+              "itemDamagedStatus": null,
+              "permanentLoanType": "Can circulate",
+              "temporaryLoanType": null,
+              "statisticalCodeIds": [],
+              "administrativeNotes": [],
+              "effectiveLocationId": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+              "permanentLoanTypeId": "2b94c631-fca9-4892-a730-03ee529ffe27",
+              "suppressFromDiscovery": false,
+              "effectiveShelvingOrder": "TL 3215 T34 W35 41997 11",
+              "effectiveCallNumberComponents": {
+                "typeId": "95467209-6d7b-468b-94df-0f5d7ad2747d",
+                "callNumber": "TL215 .T34 W35 1997"
+              },
+              "location": {
+                "effectiveLocation": {
+                  "id": "1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2",
+                  "code": "SAL3-STACKS",
+                  "name": "Stacks",
+                  "campus": {
+                    "id": "c365047a-51f2-45ce-8601-e421ca3615c5",
+                    "code": "SUL",
+                    "name": "Stanford Libraries"
+                  },
+                  "details": {
+                    "availabilityClass": "Offsite",
+                    "scanServicePointCode": "SAL3"
+                  },
+                  "library": {
+                    "id": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                    "code": "SAL3",
+                    "name": "SAL3 (off-campus storage)"
+                  },
+                  "isActive": true,
+                  "institution": {
+                    "id": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+                    "code": "SU",
+                    "name": "Stanford University"
+                  }
+                }
+              },
+              "courses": []
+            }
+          ]
+        }'
 :mhld_display:
   - "ENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
   - "ENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
