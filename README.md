@@ -44,7 +44,10 @@ Start the rails app
 
 ## Getting data in development
 
-Once you have Solr running you can load fixture data using `rake searchworks:fixtures`
+Once you have Solr running you can load fixture data using `bin/rails searchworks:fixtures`
+We have included fixture files in the `spec/fixtures/solr_documents` directory.
+
+If you want to add other documents you can add the identifiers into `FixtureHarvester`. This will download more yml files to the fixture folder. Run `bin/rails searchworks:fixtures` again to reindex.  Please submit your changes and the new yaml files via a pull request. Please use this judiciously as adding many fixtures may add unnecessary complexity and size to the codebase.
 
 ## "Logging in" as a User in development
 

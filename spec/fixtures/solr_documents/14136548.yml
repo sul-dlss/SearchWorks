@@ -1,0 +1,304 @@
+---
+id: '14136548'
+hashed_id_ssi: 62e783bc6392f064140f2d71aed22a9b
+marc_json_struct:
+- '{"leader":"01069nam a2200313Mu 4500","fields":[{"001":"a14136548"},{"003":"SIRSI"},{"006":"m        d        "},{"007":"cr  n
+  |||     "},{"008":"210711s2025    xx      o     ||| 0 und d"},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(Sirsi) a14136548"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"VT2"},{"b":"eng"},{"c":"VT2"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9788328373464"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"8328373467"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC)1262685188"}]}},{"049":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"MAIN"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Vaughan,
+  Daniel."}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Umiejętności analityczne
+  w pracy z danymi i sztuczną inteligencją "},{"h":"[electronic resource] /"},{"c":"Daniel
+  Vaughan."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"[S.l.] :"},{"b":"Helion,"},{"c":"2025."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 online resource"}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Title from content provider."}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar"},{"x":"WMS"},{"y":"Safari
+  Books Online"},{"x":"Provider: O''Reilly"},{"x":"subscribed"},{"x":"eLoaderURL"},{"x":"sr4"},{"x":"sron1262685188"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"92"},{"b":"STF"}]}},{"596":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"22"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  sron1262685188"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"19fa529d-ef49-5c9b-b4f0-1060512033f1"},{"s":"b5f40a02-cfe4-54aa-8652-5933cf0871d0"}]}}]}'
+all_search: 'Vaughan, Daniel. Umiejętności analityczne w pracy z danymi i sztuczną
+  inteligencją  [electronic resource] / Daniel Vaughan. [S.l.] : Helion, 2025. 1 online
+  resource Title from content provider. Available to Stanford-affiliated users. https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar
+  WMS Safari Books Online Provider: O''Reilly subscribed eLoaderURL sr4 sron1262685188
+  22'
+title_245a_search: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+title_245_search: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+title_245a_display: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+title_245c_display: Daniel Vaughan
+title_display: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją [electronic
+  resource]
+title_full_display: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+  [electronic resource] / Daniel Vaughan.
+title_sort: Umiejętności analityczne w pracy z danymi i sztuczną inteligencją electronic
+  resource
+author_title_245ac_search:
+- Umiejętności analityczne w pracy z danymi i sztuczną inteligencją Daniel Vaughan.
+author_title_1xx_search:
+- Vaughan, Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+author_title_search:
+- Vaughan, Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+author_1xx_search: Vaughan, Daniel.
+author_person_facet:
+- Vaughan, Daniel
+author_person_display:
+- Vaughan, Daniel
+author_person_full_display:
+- Vaughan, Daniel.
+author_sort: Vaughan Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+  electronic resource
+works_struct:
+- '{"included":[],"related":[]}'
+pub_search:
+- Helion
+pub_display:
+- Helion
+pub_date: '2025'
+pub_date_search: '2025'
+pub_date_sort: '2025'
+pub_year_tisim:
+- 2025
+pub_year_ss: '2025'
+publication_year_isi: 2025
+imprint_display:
+- "[S.l.] : Helion, 2025."
+date_cataloged: '2022-02-06T00:00:00Z'
+url_fulltext:
+- https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar
+url_restricted:
+- https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar
+oclc:
+- '1262685188'
+access_facet:
+- Online
+format_main_ssim:
+- Book
+physical:
+- 1 online resource
+isbn_search:
+- '9788328373464'
+- '8328373467'
+isbn_display:
+- '9788328373464'
+- '8328373467'
+barcode_search:
+- 14136548-1001
+item_barcodes:
+- 14136548-1001
+library_code_facet_ssim:
+- SUL
+location_code_facet_ssim:
+- SUL-ELECTRONIC
+building_location_facet_ssim:
+- SUL/*
+- SUL/SUL-ELECTRONIC
+- SUL/*/type/ONLINE
+- SUL/SUL-ELECTRONIC/type/ONLINE
+on_order_library_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '006'
+- '007'
+- '008'
+- '035'
+- '040'
+- '020'
+- '049'
+- '100'
+- '245'
+- '260'
+- '300'
+- '500'
+- '856'
+- '994'
+- '596'
+- '999'
+- 035a
+- 040abc
+- 020a
+- '049a'
+- 100a
+- 245ahc
+- 260abc
+- 300a
+- 500a
+- 856zuxyxxxxx
+- 994ab
+- 596a
+- 999is
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040c"
+- "?020a"
+- "?049a"
+- "?100a"
+- "?245a"
+- "?245h"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?500a"
+- "?856z"
+- "?856u"
+- "?856x"
+- "?856y"
+- "?994a"
+- "?994b"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Vaughan, Daniel. Umiejętności analityczne w pracy z danymi i sztuczną
+  inteligencją  [electronic resource] / Daniel Vaughan. [S.l.] : Helion, 2025. Book'
+uuid_ssi: 19fa529d-ef49-5c9b-b4f0-1060512033f1
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"19fa529d-ef49-5c9b-b4f0-1060512033f1","hrid":"a14136548","notes":[{"note":"Title
+  from content provider","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"}],"title":"Umiejętności
+  analityczne w pracy z danymi i sztuczną inteligencją  [electronic resource] / Daniel
+  Vaughan.","series":[],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-21T21:08:33.896Z","updatedDate":"2023-08-21T21:08:33.896Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[],"languages":["und"],"indexTitle":"Umiejętności
+  analityczne w pracy z danymi i sztuczną inteligencją","identifiers":[{"value":"(Sirsi)
+  a14136548","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"9788328373464","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"8328373467","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(OCoLC)1262685188","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  sron1262685188","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[S.l.]","publisher":"Helion","dateOfPublication":"2025"}],"contributors":[{"name":"Vaughan,
+  Daniel","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-02-06","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar","name":"Resource","linkText":"Safari
+  Books Online","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":2025},"statusUpdatedDate":"2023-08-21T21:08:33.602+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2024-02-11T10:52:02Z'
+created: '2024-02-11T10:52:02Z'
+timestamp: '2024-02-11T10:52:02Z'
+author_struct:
+- creator:
+  - link: Vaughan, Daniel.
+    search: Vaughan, Daniel.
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: Safari Books Online
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  href: https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar
+  sort:
+  casalini:
+  fulltext: true
+  finding_aid: false
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields: []
+  unmatched_vernacular: []
+- label: Content advice
+  fields: []
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 9e632771-82b3-5bfb-92e8-6842036e56b2
+    hrid: ah14136548_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T21:09:12.589Z'
+      updatedDate: '2023-08-21T21:09:12.589Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 19fa529d-ef49-5c9b-b4f0-1060512033f1
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    holdingsItems: []
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+item_display_struct:
+- id:
+  barcode: 14136548-1001
+  library: SUL
+  home_location: SUL-ELECTRONIC
+  current_location:
+  type: ONLINE
+  note:
+  instance_id:
+  instance_hrid:
+  temporary_location_code:
+  permanent_location_code: SUL-ELECTRONIC
+  status:
+  effective_location_id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber:
+  shelfkey:
+  reverse_shelfkey:
+  callnumber:
+  full_shelfkey:
+  scheme: OTHER

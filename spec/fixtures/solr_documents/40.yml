@@ -11,7 +11,9 @@
   - "Stanford Digital Repository"
 :modsxml: <%= mods_everything %>
 marc_links_struct:
-  - '{ "href": "https://purl.stanford.edu/40", "fulltext": true }'
+  - version: '0.2'
+    href: https://purl.stanford.edu/40
+    fulltext: true
 :pub_date: 3204
 :beginning_year_isi: 3204
 :imprint_display: 3204

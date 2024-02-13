@@ -1,0 +1,367 @@
+---
+id: '2279186'
+hashed_id_ssi: 22298e7724e699ad17c1e2a215b3b135
+marc_json_struct:
+- '{"leader":"01163nam a2200313   4500","fields":[{"001":"a2279186"},{"003":"SIRSI"},{"005":"19920622135949.0"},{"008":"920622s1918    ii
+  a         f000 0 eng c"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"agr19000123"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ALK9201"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Library, U.S. Dept. of Agriculture"},{"c":"STF"},{"d":"OrLoB"},{"d":"CSt"}]}},{"049":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"STFA"}]}},{"070":{"ind1":"0","ind2":" ","subfields":[{"a":"451"},{"b":"In2"}]}},{"092":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"630.654"},{"b":".I39m v.54"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Finlow, Robert Steel,"},{"d":"1877-"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"\"Heart
+  damage\" in baled jute,"},{"c":"by R.S. Finlow ..."}]}},{"260":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Calcutta,"},{"b":"Published for the Imperial Dept. of Agriculture
+  in India by Thacker, Spink & Co.;"},{"a":"London,"},{"b":"W. Thacker & Co.,"},{"c":"1918."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"3 p. l., [33]-68 p."},{"b":"diagr."},{"c":"25 cm."}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"India. Dept. of Agriculture. Memoirs. Chemical series."},{"v":"vol.
+  V, no. 2"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"31"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Jute fiber."}]}},{"810":{"ind1":"1","ind2":" ","subfields":[{"a":"India."},{"b":"Department
+  of Agriculture."},{"t":"Memoirs."},{"p":"Chemical series ;"},{"v":"vol. V, no. 2"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)26059935"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-I)274765705"}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"Copy
+  1 bound with v. 5, no. 1."},{"c":"5488000 (parent record''s ckey)."},{"b":"36105026515499
+  (item id)"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) ALK9201"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"174c321e-29d1-536c-958c-6964243be3a3"},{"s":"b250375a-778f-5ce1-bdfe-63fe94049030"}]}}]}'
+all_search: Finlow, Robert Steel, 1877- "Heart damage" in baled jute, by R.S. Finlow
+  ... Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker,
+  Spink & Co.; London, W. Thacker & Co., 1918. 3 p. l., [33]-68 p. diagr. 25 cm. India.
+  Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 2 31 Jute fiber. India.
+  Department of Agriculture. Memoirs. Chemical series ; vol. V, no. 2 Copy 1 bound
+  with v. 5, no. 1. 5488000 (parent record's ckey). 36105026515499 (item id)
+title_245a_search: '"Heart damage" in baled jute,'
+title_245_search: '"Heart damage" in baled jute,'
+title_245a_display: '"Heart damage" in baled jute'
+title_245c_display: by R.S. Finlow ...
+title_display: '"Heart damage" in baled jute'
+title_full_display: '"Heart damage" in baled jute, by R.S. Finlow ...'
+title_sort: Heart damage in baled jute
+series_search:
+- India. Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 2
+- India. Department of Agriculture. Memoirs. Chemical series ; vol. V, no. 2
+author_title_245ac_search:
+- '"Heart damage" in baled jute, by R.S. Finlow ...'
+author_title_1xx_search:
+- Finlow, Robert Steel "Heart damage" in baled jute,
+author_title_search:
+- Finlow, Robert Steel, 1877- "Heart damage" in baled jute,
+- India. Department of Agriculture. Memoirs. Chemical series ;
+author_1xx_search: Finlow, Robert Steel, 1877-
+author_8xx_search:
+- India. Department of Agriculture.
+author_person_facet:
+- Finlow, Robert Steel, 1877-
+author_person_display:
+- Finlow, Robert Steel, 1877-
+author_person_full_display:
+- Finlow, Robert Steel, 1877-
+author_sort: Finlow Robert Steel 1877 Heart damage in baled jute
+works_struct:
+- '{"included":[],"related":[]}'
+topic_search:
+- Jute fiber.
+topic_display:
+- Jute fiber.
+subject_all_search:
+- Jute fiber.
+topic_facet:
+- Jute fiber
+pub_search:
+- Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_display:
+- Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_country: India
+pub_date: '1918'
+pub_date_search: '1918'
+pub_date_sort: '1918'
+pub_year_tisim:
+- 1918
+pub_year_ss: '1918'
+publication_year_isi: 1918
+imprint_display:
+- Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co., 1918.
+date_cataloged: '1992-07-30T00:00:00Z'
+language:
+- English
+oclc:
+- '26059935'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Government document
+physical:
+- 3 p. l., [33]-68 p. diagr. 25 cm.
+lccn: agr19000123
+callnum_facet_hsim:
+- Dewey Classification|600s - Technology|630s - Agriculture & Related Technologies
+callnum_search:
+- 630.654 .I39M V.5:NO.2
+shelfkey:
+- dewey 630.65400000 i39m v.000005:no.000002
+reverse_shelfkey:
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzx~~~~~~~~
+barcode_search:
+- '36105026515499'
+item_barcodes:
+- '36105026515499'
+preferred_barcode: '36105026515499'
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/
+- SAL3/SAL3-STACKS/type/
+on_order_library_ssim:
+- SAL3
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '035'
+- '040'
+- '049'
+- '070'
+- '092'
+- '100'
+- '245'
+- '260'
+- '300'
+- '490'
+- '596'
+- '650'
+- '810'
+- '590'
+- '999'
+- 010a
+- 035a
+- 040acdd
+- '049a'
+- 070ab
+- '092ab'
+- 100ad
+- 245ac
+- 260ababc
+- 300abc
+- 490av
+- 596a
+- 650a
+- 810abtpv
+- 590acb
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?049a"
+- "?070a"
+- "?070b"
+- "?092a"
+- "?092b"
+- "?100a"
+- "?100d"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?490a"
+- "?490v"
+- "?596a"
+- "?650a"
+- "?810a"
+- "?810b"
+- "?810t"
+- "?810p"
+- "?810v"
+- "?590a"
+- "?590c"
+- "?590b"
+- "?999i"
+- "?999s"
+bib_search: Finlow, Robert Steel, 1877- "Heart damage" in baled jute, by R.S. Finlow
+  ... Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker,
+  Spink & Co.; London, W. Thacker & Co., 1918. India. Dept. of Agriculture. Memoirs.
+  Chemical series. vol. V, no. 2 India. Department of Agriculture. Memoirs. Chemical
+  series ; vol. V, no. 2 Book
+uuid_ssi: 174c321e-29d1-536c-958c-6964243be3a3
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"174c321e-29d1-536c-958c-6964243be3a3","hrid":"a2279186","notes":[],"title":"\"Heart
+  damage\" in baled jute, by R.S. Finlow ...","series":["India. Dept. of Agriculture.
+  Memoirs. Chemical series. vol. V, no. 2","India. Department of Agriculture. Memoirs.
+  Chemical series ; vol. V, no. 2"],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-21T02:58:41.910Z","updatedDate":"2023-08-21T02:58:41.910Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":["Jute
+  fiber"],"languages":["eng"],"indexTitle":"\"heart damage\" in baled jute,","identifiers":[{"value":"agr19000123","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  ALK9201","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)26059935","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)274765705","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"Calcutta
+  London","publisher":"Published for the Imperial Dept. of Agriculture in India by
+  Thacker, Spink & Co W. Thacker & Co","dateOfPublication":"1918"}],"contributors":[{"name":"Finlow,
+  Robert Steel, 1877-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1992-07-30","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1918},"statusUpdatedDate":"2023-08-21T02:58:41.807+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["3
+  p. l., [33]-68 p. diagr. 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2024-02-11T10:34:07Z'
+created: '2024-02-11T10:34:07Z'
+timestamp: '2024-02-11T10:34:07Z'
+author_struct:
+- creator:
+  - link: Finlow, Robert Steel, 1877-
+    search: Finlow, Robert Steel, 1877-
+summary_struct:
+- label: Summary
+  fields: []
+  unmatched_vernacular: []
+- label: Content advice
+  fields: []
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 14ee35cf-b8f7-5d71-a1e8-cbe33dcabe96
+    hrid: ah2279186_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T02:59:55.294Z'
+      updatedDate: '2023-08-21T02:59:55.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+      item:
+        id: f947bd93-a1eb-5613-8745-1063f948c461
+        hrid: ai5488000_1_3
+        status: Available
+        barcode: '36105026515499'
+      holding:
+        effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        location:
+          effectiveLocation:
+            id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+            code: SAL3-STACKS
+            name: Stacks
+            campus:
+              id: c365047a-51f2-45ce-8601-e421ca3615c5
+              code: SUL
+              name: Stanford Libraries
+            details:
+              availabilityClass: Offsite
+              scanServicePointCode: SAL3
+            library:
+              id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+              code: SAL3
+              name: SAL3 (off-campus storage)
+            isActive: true
+            institution:
+              id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+              code: SU
+              name: Stanford University
+      instance:
+        id: 9bf55756-7e18-52d8-81a6-84a62353e512
+        hrid: a5488000
+        title: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania
+          Aiyer ...
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.5:NO.2
+    instanceId: 174c321e-29d1-536c-958c-6964243be3a3
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    holdingsItems: []
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+item_display_struct:
+- id: f947bd93-a1eb-5613-8745-1063f948c461
+  barcode: '36105026515499'
+  library: SAL3
+  home_location: SAL3-STACKS
+  current_location:
+  type:
+  note:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber: 630.654 .I39M V.5:NO.2
+  shelfkey: dewey 630.65400000 i39m v.000005:no.000002
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzx~~~~~~~~
+  callnumber: 630.654 .I39M V.5:NO.2
+  full_shelfkey: dewey 630.65400000 i39m v.000005:no.000002
+  scheme: DEWEY
