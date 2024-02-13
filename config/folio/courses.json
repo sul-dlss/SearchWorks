@@ -2600,7 +2600,7 @@
   },
   {
     "id": "0e95bc8d-5b35-4c82-9d8e-2bd696028675",
-    "name": "Crossing the Atlantic: Race and Identity in the African Diaspora",
+    "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
     "departmentId": "56cd0d00-3ea9-4dbe-b94f-32e0fbe2387a",
     "departmentObject": {
       "id": "56cd0d00-3ea9-4dbe-b94f-32e0fbe2387a",
@@ -2660,15 +2660,15 @@
       "metadata": {
         "createdDate": "2024-02-12T05:32:13.177+00:00",
         "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-        "updatedDate": "2024-02-12T05:32:13.177+00:00",
+        "updatedDate": "2024-02-13T01:15:39.962+00:00",
         "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
       }
     },
-    "courseNumber": "FRENCH-264-01",
+    "courseNumber": "FRENCH 264E-01",
     "metadata": {
       "createdDate": "2024-02-12T05:32:13.239+00:00",
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-      "updatedDate": "2024-02-12T05:32:13.239+00:00",
+      "updatedDate": "2024-02-13T01:14:32.597+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
@@ -29873,6 +29873,80 @@
     }
   },
   {
+    "id": "97c6609f-9fdd-4c20-ac1b-567cf667a4f1",
+    "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
+    "departmentId": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+    "departmentObject": {
+      "id": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+      "name": "COMPLIT - Comparative Literature",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:43.299+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:43.299+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+    "courseListingObject": {
+      "id": "485fb069-a354-4856-ba23-94055f432023",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "3260e1f9-ea6f-447f-8511-80ddf269ebfa",
+          "userId": "1c53f5a4-772a-4338-801a-5e91616f09fb",
+          "name": "Fatoumata Seck",
+          "barcode": "2551042180",
+          "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+          "metadata": {
+            "createdDate": "2024-02-12T05:32:34.915+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-12T05:32:34.915+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-12T05:32:13.177+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-13T01:15:39.962+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "COMPLIT-264-01",
+    "metadata": {
+      "createdDate": "2024-02-13T01:15:00.941+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-13T01:15:00.941+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "9801d983-1ac9-490b-924f-79031199c16c",
     "name": "Education as Self-Fashioning: Rebellious Minds",
     "departmentId": "a05d8e77-7b62-4442-81ed-f589a6c04ddc",
@@ -48660,6 +48734,80 @@
     }
   },
   {
+    "id": "ed0b04b9-54ff-4e3e-9f3a-c1346e9c2e1e",
+    "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
+    "departmentId": "daf10a40-afad-47cc-b04b-a81b0d6b8e00",
+    "departmentObject": {
+      "id": "daf10a40-afad-47cc-b04b-a81b0d6b8e00",
+      "name": "CSRE - Comparative Studies in Race &  Ethnic",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:44.148+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:44.148+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+    "courseListingObject": {
+      "id": "485fb069-a354-4856-ba23-94055f432023",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "3260e1f9-ea6f-447f-8511-80ddf269ebfa",
+          "userId": "1c53f5a4-772a-4338-801a-5e91616f09fb",
+          "name": "Fatoumata Seck",
+          "barcode": "2551042180",
+          "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+          "metadata": {
+            "createdDate": "2024-02-12T05:32:34.915+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-12T05:32:34.915+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-12T05:32:13.177+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-13T01:15:39.962+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "CSRE-265-01",
+    "metadata": {
+      "createdDate": "2024-02-13T01:15:39.912+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-13T01:15:39.912+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "ed23d404-f182-4a13-af16-accfcbb06d19",
     "name": "Organizing for Good",
     "departmentId": "478a696d-8aeb-45f2-96cd-16d4c4b62bac",
@@ -51939,6 +52087,80 @@
       "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
       "updatedDate": "2023-12-11T01:47:13.808+00:00",
       "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    }
+  },
+  {
+    "id": "fe41a32c-94ed-4459-a627-2cd167ea8f9b",
+    "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
+    "departmentId": "6891a663-636f-4052-a5d0-0fc6bfe50112",
+    "departmentObject": {
+      "id": "6891a663-636f-4052-a5d0-0fc6bfe50112",
+      "name": "AFRICAAM - African & African American Studies",
+      "metadata": {
+        "createdDate": "2023-09-20T23:18:33.868+00:00",
+        "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+        "updatedDate": "2023-09-20T23:18:33.868+00:00",
+        "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+      }
+    },
+    "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+    "courseListingObject": {
+      "id": "485fb069-a354-4856-ba23-94055f432023",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "3260e1f9-ea6f-447f-8511-80ddf269ebfa",
+          "userId": "1c53f5a4-772a-4338-801a-5e91616f09fb",
+          "name": "Fatoumata Seck",
+          "barcode": "2551042180",
+          "courseListingId": "485fb069-a354-4856-ba23-94055f432023",
+          "metadata": {
+            "createdDate": "2024-02-12T05:32:34.915+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-12T05:32:34.915+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-12T05:32:13.177+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-13T01:15:39.962+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "AFRICAAM-264-01",
+    "metadata": {
+      "createdDate": "2024-02-13T01:14:25.159+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-13T01:14:25.159+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
