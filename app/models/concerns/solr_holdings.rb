@@ -11,6 +11,7 @@ module SolrHoldings
     end
   end
 
+  # item_display_struct contains fake items for eresources and boundwiths, which is why we don't use holdings_json_struct directly
   def items
     return [] if self[:item_display_struct].blank?
 
