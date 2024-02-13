@@ -66,14 +66,28 @@ Blacklight.onLoad(function(){
       }
     }
 
+    function getLibraryTimezoneDate(dateString) {
+      const date = new Date(dateString);
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+      return new Date(formatter.format(date));
+    }
+
     function getOpen(data){
-      var open = new Date(data.opens_at);
+      let open = getLibraryTimezoneDate(data.opens_at);
       open = formatTime(open.getHours(), open.getMinutes());
       return open;
     }
 
     function getClose(data){
-      var close = new Date(data.closes_at);
+      let close = getLibraryTimezoneDate(data.closes_at);
       close = formatTime(close.getHours(), close.getMinutes());
       return close;
     }
