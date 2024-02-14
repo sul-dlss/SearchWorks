@@ -110,7 +110,6 @@ Layout/EmptyLines:
 Layout/EmptyLinesAroundAttributeAccessor:
   Exclude:
     - 'app/models/concerns/eds_subjects.rb'
-    - 'app/models/hathi_trust_links.rb'
     - 'app/models/marc_fields/marc_field_wrapper.rb'
     - 'app/models/search_tips.rb'
     - 'app/services/eds/search_service.rb'
@@ -594,7 +593,6 @@ Performance/CollectionLiteralInLoop:
   Exclude:
     - 'app/controllers/bookmarks_controller.rb'
     - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/hathi_trust_links.rb'
     - 'app/models/marc_fields/included_works.rb'
     - 'app/models/marc_fields/linked_series.rb'
     - 'app/models/marc_fields/subjects.rb'
@@ -719,7 +717,6 @@ RSpec/EmptyLineAfterExample:
 RSpec/EmptyLineAfterFinalLet:
   Exclude:
     - 'spec/features/access_panels/exhibit_spec.rb'
-    - 'spec/models/concerns/hathi_links_spec.rb'
     - 'spec/models/marc_extractor_spec.rb'
 
 # Offense count: 1
@@ -978,9 +975,7 @@ Rails/Blank:
     - 'app/helpers/masthead_helper.rb'
     - 'app/models/citation.rb'
     - 'app/models/concerns/extent.rb'
-    - 'app/models/concerns/hathi_links.rb'
     - 'app/models/concerns/marc_bound_with_note.rb'
-    - 'app/models/hathi_trust_links.rb'
     - 'app/models/marc_field.rb'
 
 # Offense count: 5
@@ -1668,14 +1663,6 @@ Style/SymbolArray:
 Style/SymbolProc:
   Exclude:
     - 'app/models/concerns/course_reserves.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyleForMultiline.
-# SupportedStylesForMultiline: comma, consistent_comma, no_comma
-Style/TrailingCommaInArguments:
-  Exclude:
-    - 'app/models/concerns/hathi_links.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
