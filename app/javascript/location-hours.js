@@ -37,9 +37,8 @@ Blacklight.onLoad(function(){
     Plugin.prototype = {
 
         init: function() {
-          var element = this.element;
-          var hoursElement = getHoursElement(this.element);
-          var libLocation = $(this.element).data('hours-route');
+          const hoursElement = getHoursElement(this.element);
+          const libLocation = $(this.element).data('hours-route');
           $.getJSON(libLocation, function(data){
             if (data.error) {
               $(hoursElement).html(data.error);
@@ -48,9 +47,9 @@ Blacklight.onLoad(function(){
             if (data === null){
               return;
             }
-            var open = getOpen(data[0]);
-            var close = getClose(data[0]);
-            var closed = data[0].closed;
+            const open = formatTime(data[0].opens_at);
+            const close = formatTime(data[0].closes_at);
+            const closed = data[0].closed;
             $(hoursElement).html(formatTimeRange(open, close, closed));
           });
         }
@@ -66,38 +65,16 @@ Blacklight.onLoad(function(){
       }
     }
 
-    function getOpen(data){
-      var open = new Date(data.opens_at);
-      open = formatTime(open.getHours(), open.getMinutes());
-      return open;
-    }
-
-    function getClose(data){
-      var close = new Date(data.closes_at);
-      close = formatTime(close.getHours(), close.getMinutes());
-      return close;
-    }
-
-    function formatTime(hours, minutes){
-      var ampm = (hours >= 12 && hours !== 24) ? 'p' : 'a';
-      hours = hours % 12;
-      var hoursFormated = (hours === 0) ? '12' : hours.toString();
-      var minutesFormated = formatMinutes(minutes);
-      return hoursFormated + minutesFormated + ampm;
-    }
-
-    function formatMinutes(minutes){
-      var minutesFormated;
-      if (minutes === 0){
-        minutesFormated = '';
-      } else {
-        if (minutes.toString().length === 1){
-          minutesFormated = ':0' + minutes;
-        }else{
-          minutesFormated = ':' + minutes;
-        }
-      }
-      return minutesFormated;
+    function formatTime(dateString) {
+      const date = new Date(dateString);
+      const shortTime = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles',
+        timeStyle: 'short'
+      }).format(date);
+      const shortTimeComponents = shortTime.split(' ');
+      const formattedHoursAndMinutes = shortTimeComponents[0].replace(':00', '');
+      const formattedMeridian = shortTimeComponents[1] === 'AM' ? 'a' : 'p';
+      return formattedHoursAndMinutes + formattedMeridian;
     }
 
     // A really lightweight plugin wrapper around the constructor,
