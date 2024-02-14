@@ -49,18 +49,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     )
   end
 
-  let(:hathi_public) do
-    described_class.new(
-      document: SolrDocument.new(ht_bib_key_ssim: ['abc123'], ht_htid_ssim: ['1234567'], ht_access_sim: ['allow'])
-    )
-  end
-
-  let(:hathi_non_public) do
-    described_class.new(
-      document: SolrDocument.new(ht_bib_key_ssim: ['abc123'], ht_htid_ssim: ['1234567'])
-    )
-  end
-
   describe '#render?' do
     it 'is true when there are fulltext links present' do
       render_inline(fulltext)
@@ -107,17 +95,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
     it 'should not return any non-fulltext links' do
       expect(supplemental.links).to be_blank
-    end
-
-    it 'should not return HathiTrust non-public access links' do
-      expect(hathi_non_public.links).to be_blank
-    end
-
-    it 'should return HathiTrust public access links' do
-      links = hathi_public.links
-      expect(links.length).to eq 1
-      expect(links.first.html).to match(%r{^<a.*>Full text via HathiTrust<\/a>$})
-      expect(links.first).not_to be_stanford_only
     end
   end
 
