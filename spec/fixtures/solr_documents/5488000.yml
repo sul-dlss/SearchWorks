@@ -1,0 +1,863 @@
+---
+id: '5488000'
+hashed_id_ssi: deeffdc1be8e452192ad0bdeec8aac9b
+marc_json_struct:
+- '{"leader":"02046cam a2200385   4500","fields":[{"001":"a5488000"},{"003":"SIRSI"},{"005":"20121117125742.0"},{"008":"010110m19131920ii
+  af         000 0 eng c"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   14000034"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a5488000"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Library, U.S. Dept. of Agriculture"},{"c":"YUS"},{"d":"WaOLN"},{"d":"UtOrBLW"}]}},{"050":{"ind1":"1","ind2":"0","subfields":[{"a":"S279"},{"b":".A45"}]}},{"070":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"385"},{"b":"In2 vol.3, no.3 vol.4, no.1,4 vol.5, no.1,7-8"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Harrison, William Hudson."}]}},{"245":{"ind1":"1","ind2":"4","subfields":[{"a":"The
+  gases of swamp rice soils ... /"},{"c":"by W.H. Harrison ... and P.A. Subramania
+  Aiyer ..."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"Calcutta :"},{"b":"Pub.
+  for the Imperial Dept. of Agriculture in India by Thacker, Spink & Co.;"},{"a":"London
+  :"},{"b":"W. Thacker & Co.,"},{"c":"1913-20."}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"6
+  v. :"},{"b":"ill. ;"},{"c":"25 cm."}]}},{"490":{"ind1":"0","ind2":" ","subfields":[{"a":"India.
+  Dept. of Agriculture. Memoirs. Chemical series,"},{"v":"vol. III, no. 3; vol. IV,
+  no. 1, 4; vol. V, no. 1, 7-8"}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Parts
+  3-6 edited by the Council of the Pusa Agricultrual Research Isntitute."}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"[pt. I] Their composition and relationship to the crop.--pt.
+  II. Their utilization for the aeration of the roots of the crop.--pt. III. A hydrogen-oxidizing
+  bacterium from these soils.--pt. IV. The source of the gaseous soil nitrogen.--pt.
+  V. A methane-oxidizing bacterium from rice soils.--pt. VI. Carbon dioxide and hydrogen
+  in relation to rice soils."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Rice."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Soils."}]}},{"700":{"ind1":"1","ind2":" ","subfields":[{"a":"Subramania
+  Aiyer, P. A."}]}},{"710":{"ind1":"1","ind2":" ","subfields":[{"a":"New Delhi (India)"},{"b":"Imperial
+  Agricultural Research Institute."}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(CtY)notisDFK2283"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)45694466"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-I)276119447"}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"v.3:no.3:
+  bound with v. 3, no. 1."},{"c":"2307563 (parent record''s ckey)"},{"b":"36105046982877
+  (item id)"}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"v.4:no.4 bound with
+  v. 4, no. 1."},{"c":"5488000 (parent record''s ckey)."},{"b":"36105026508924 (item
+  id)"}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"v.5:no.7-8 bound with
+  v. 5, no. 1."},{"c":"5488000 (parent record''s ckey)."},{"b":"36105026515499 (item
+  id)"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"31"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a5488000"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(Sirsi) CTYADFK2283-B"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"9bf55756-7e18-52d8-81a6-84a62353e512"},{"s":"13b8b221-56c3-5b6d-95a7-3756f50b940b"}]}}]}'
+all_search: 'Harrison, William Hudson. The gases of swamp rice soils ... / by W.H.
+  Harrison ... and P.A. Subramania Aiyer ... Calcutta : Pub. for the Imperial Dept.
+  of Agriculture in India by Thacker, Spink & Co.; London : W. Thacker & Co., 1913-20.
+  6 v. : ill. ; 25 cm. India. Dept. of Agriculture. Memoirs. Chemical series, vol.
+  III, no. 3; vol. IV, no. 1, 4; vol. V, no. 1, 7-8 Parts 3-6 edited by the Council
+  of the Pusa Agricultrual Research Isntitute. [pt. I] Their composition and relationship
+  to the crop.--pt. II. Their utilization for the aeration of the roots of the crop.--pt.
+  III. A hydrogen-oxidizing bacterium from these soils.--pt. IV. The source of the
+  gaseous soil nitrogen.--pt. V. A methane-oxidizing bacterium from rice soils.--pt.
+  VI. Carbon dioxide and hydrogen in relation to rice soils. Rice. Soils. Subramania
+  Aiyer, P. A. New Delhi (India) Imperial Agricultural Research Institute. v.3:no.3:
+  bound with v. 3, no. 1. 2307563 (parent record''s ckey) 36105046982877 (item id)
+  v.4:no.4 bound with v. 4, no. 1. 5488000 (parent record''s ckey). 36105026508924
+  (item id) v.5:no.7-8 bound with v. 5, no. 1. 5488000 (parent record''s ckey). 36105026515499
+  (item id) 31'
+title_245a_search: The gases of swamp rice soils ... /
+title_245_search: The gases of swamp rice soils ... /
+title_245a_display: The gases of swamp rice soils ...
+title_245c_display: by W.H. Harrison ... and P.A. Subramania Aiyer ...
+title_display: The gases of swamp rice soils ...
+title_full_display: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A.
+  Subramania Aiyer ...
+title_sort: gases of swamp rice soils
+series_search:
+- India. Dept. of Agriculture. Memoirs. Chemical series, vol. III, no. 3; vol. IV,
+  no. 1, 4; vol. V, no. 1, 7-8
+author_title_245ac_search:
+- The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania Aiyer
+  ...
+author_title_1xx_search:
+- Harrison, William Hudson The gases of swamp rice soils ... /
+author_title_search:
+- Harrison, William Hudson The gases of swamp rice soils ... /
+author_1xx_search: Harrison, William Hudson.
+author_7xx_search:
+- Subramania Aiyer, P. A.
+- New Delhi (India) Imperial Agricultural Research Institute.
+author_person_facet:
+- Harrison, William Hudson
+- Subramania Aiyer, P. A.
+author_other_facet:
+- New Delhi (India) Imperial Agricultural Research Institute
+author_person_display:
+- Harrison, William Hudson
+author_person_full_display:
+- Harrison, William Hudson.
+author_sort: Harrison William Hudson gases of swamp rice soils
+works_struct:
+- '{"included":[null,null],"related":[null,null]}'
+topic_search:
+- Rice.
+- Soils.
+topic_display:
+- Rice.
+- Soils.
+subject_all_search:
+- Rice.
+- Soils.
+topic_facet:
+- Rice
+- Soils
+pub_search:
+- 'Calcutta : Pub. for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London : W. Thacker & Co'
+pub_display:
+- 'Calcutta : Pub. for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London : W. Thacker & Co'
+pub_country: India
+pub_date: '1913'
+pub_date_search: '1913'
+pub_date_sort: '1913'
+pub_year_tisim:
+- 1913
+- 1920
+- 1914
+- 1915
+- 1916
+- 1917
+- 1918
+- 1919
+pub_year_ss: 1913 - 1920
+beginning_year_isi: 1913
+ending_year_isi: 1920
+imprint_display:
+- 'Calcutta : Pub. for the Imperial Dept. of Agriculture in India by Thacker, Spink
+  & Co.; London : W. Thacker & Co., 1913-20.'
+date_cataloged: '2003-09-18T00:00:00Z'
+language:
+- English
+oclc:
+- '45694466'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- '6 v. : ill. ; 25 cm.'
+toc_search:
+- "[pt. I] Their composition and relationship to the crop.--pt. II. Their utilization
+  for the aeration of the roots of the crop.--pt. III. A hydrogen-oxidizing bacterium
+  from these soils.--pt. IV. The source of the gaseous soil nitrogen.--pt. V. A methane-oxidizing
+  bacterium from rice soils.--pt. VI. Carbon dioxide and hydrogen in relation to rice
+  soils."
+lccn: '14000034'
+callnum_facet_hsim:
+- Dewey Classification|600s - Technology|630s - Agriculture & Related Technologies
+callnum_search:
+- 630.654 .I39M V.4:NO.1
+- 630.654 .I39M V.5:NO.1
+- 630.654 .I39M V.3:NO.3
+- 630.654 .I39M V.4:NO.4
+- 630.654 .I39M V.5:NO.7-8
+lc_assigned_callnum_ssim:
+- S279 .A45
+shelfkey:
+- dewey 630.65400000 i39m ...
+reverse_shelfkey:
+- ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+barcode_search:
+- '36105026508924'
+- '36105026515499'
+item_barcodes:
+- '36105026508924'
+- '36105026515499'
+preferred_barcode: '36105026508924'
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+- SAL3-SEE-OTHER
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/book
+- SAL3/SAL3-STACKS/type/book
+- SAL3/SAL3-SEE-OTHER
+- SAL3/*/type/
+- SAL3/SAL3-SEE-OTHER/type/
+on_order_library_ssim:
+- SAL3
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '035'
+- '040'
+- '050'
+- '070'
+- '100'
+- '245'
+- '260'
+- '300'
+- '490'
+- '500'
+- '505'
+- '650'
+- '700'
+- '710'
+- '590'
+- '596'
+- '999'
+- 010a
+- 035a
+- 040acdd
+- 050ab
+- 070ab
+- 100a
+- 245ac
+- 260ababc
+- 300abc
+- 490av
+- 500a
+- 505a
+- 650a
+- 700a
+- 710ab
+- 590acb
+- 596a
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?050a"
+- "?050b"
+- "?070a"
+- "?070b"
+- "?100a"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?490a"
+- "?490v"
+- "?500a"
+- "?505a"
+- "?650a"
+- "?700a"
+- "?710a"
+- "?710b"
+- "?590a"
+- "?590c"
+- "?590b"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Harrison, William Hudson. The gases of swamp rice soils ... / by W.H.
+  Harrison ... and P.A. Subramania Aiyer ... Calcutta : Pub. for the Imperial Dept.
+  of Agriculture in India by Thacker, Spink & Co.; London : W. Thacker & Co., 1913-20.
+  India. Dept. of Agriculture. Memoirs. Chemical series, vol. III, no. 3; vol. IV,
+  no. 1, 4; vol. V, no. 1, 7-8 Subramania Aiyer, P. A. New Delhi (India) Imperial
+  Agricultural Research Institute. Book'
+uuid_ssi: 9bf55756-7e18-52d8-81a6-84a62353e512
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"9bf55756-7e18-52d8-81a6-84a62353e512","hrid":"a5488000","notes":[{"note":"Parts
+  3-6 edited by the Council of the Pusa Agricultrual Research Isntitute","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"[pt.
+  I] Their composition and relationship to the crop.--pt. II. Their utilization for
+  the aeration of the roots of the crop.--pt. III. A hydrogen-oxidizing bacterium
+  from these soils.--pt. IV. The source of the gaseous soil nitrogen.--pt. V. A methane-oxidizing
+  bacterium from rice soils.--pt. VI. Carbon dioxide and hydrogen in relation to rice
+  soils","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"}],"title":"The
+  gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania Aiyer ...","series":["India.
+  Dept. of Agriculture. Memoirs. Chemical series, vol. III, no. 3; vol. IV, no. 1,
+  4; vol. V, no. 1, 7-8"],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-21T16:02:50.496Z","updatedDate":"2023-08-21T16:02:50.496Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":["Rice","Soils"],"languages":["eng"],"indexTitle":"Gases
+  of swamp rice soils ...","identifiers":[{"value":"14000034","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  a5488000","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CtY)notisDFK2283","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)45694466","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)276119447","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  CTYADFK2283-B","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"Calcutta
+  London","publisher":"Pub. for the Imperial Dept. of Agriculture in India by Thacker,
+  Spink & Co W. Thacker & Co","dateOfPublication":"1913-20"}],"contributors":[{"name":"Harrison,
+  William Hudson","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Subramania
+  Aiyer, P. A","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"New
+  Delhi (India) Imperial Agricultural Research Institute","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2003-09-18","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"S279
+  .A45","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1913},"statusUpdatedDate":"2023-08-21T16:02:50.095+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["6
+  v. : ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2024-02-11T13:00:56Z'
+created: '2024-02-11T13:00:56Z'
+timestamp: '2024-02-11T13:00:56Z'
+author_struct:
+- creator:
+  - link: Harrison, William Hudson.
+    search: Harrison, William Hudson.
+  contributors:
+  - link: Subramania Aiyer, P. A.
+    search: Subramania Aiyer, P. A.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: New Delhi (India) Imperial Agricultural Research Institute.
+    search: New Delhi (India) Imperial Agricultural Research Institute.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+summary_struct:
+- label: Summary
+  fields: []
+  unmatched_vernacular: []
+- label: Content advice
+  fields: []
+  unmatched_vernacular: []
+toc_struct:
+- label: Contents
+  fields:
+  - - "[pt. I] Their composition and relationship to the crop.--pt. II. Their utilization
+      for the aeration of the roots of the crop.--pt. III. A hydrogen-oxidizing bacterium
+      from these soils.--pt. IV. The source of the gaseous soil nitrogen.--pt. V.
+      A methane-oxidizing bacterium from rice soils.--pt. VI. Carbon dioxide and hydrogen
+      in relation to rice soils."
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 6f70e4d3-66cb-53bb-82ab-ac439dcc5e4a
+    hrid: ho00000002544
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-25T22:56:14.753Z'
+      updatedDate: '2023-08-25T22:56:14.753Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.3:NO.3
+    instanceId: 9bf55756-7e18-52d8-81a6-84a62353e512
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    holdingsItems: []
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 71bd3e5e-6903-597a-b217-278f5bff8c60
+    hrid: ho00000002545
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-25T22:56:14.998Z'
+      updatedDate: '2023-08-25T22:56:14.998Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.4:NO.4
+    instanceId: 9bf55756-7e18-52d8-81a6-84a62353e512
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    holdingsItems: []
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 7f1bcc70-0d67-5049-b122-fdee42dba5b4
+    hrid: ho00000002543
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-25T22:56:14.529Z'
+      updatedDate: '2023-08-25T22:56:14.529Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.5:NO.7-8
+    instanceId: 9bf55756-7e18-52d8-81a6-84a62353e512
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    holdingsItems: []
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: '08cc5111-4b66-52b3-ada5-9c7881427fac'
+    hrid: ah5488000_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T16:05:31.299Z'
+      updatedDate: '2023-08-21T16:05:31.299Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M
+    instanceId: 9bf55756-7e18-52d8-81a6-84a62353e512
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    holdingsItems: []
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    bareHoldingsItems: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
+    hrid: ai5488000_1_1
+    notes: []
+    status: Available
+    barcode: '36105026508924'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T16:06:07.956Z'
+      updatedDate: '2023-08-21T16:06:07.956Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      typeName: Dewey Decimal classification
+      callNumber: 630.654 .I39M
+    copyNumber: '1'
+    enumeration: V.4:NO.1
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: '08cc5111-4b66-52b3-ada5-9c7881427fac'
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: 3630.654 I39M V 14 NO 11 11
+    effectiveCallNumberComponents:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      callNumber: 630.654 .I39M
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: f947bd93-a1eb-5613-8745-1063f948c461
+    hrid: ai5488000_1_3
+    notes: []
+    status: Available
+    barcode: '36105026515499'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T16:06:07.956Z'
+      updatedDate: '2023-08-21T16:06:07.956Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      typeName: Dewey Decimal classification
+      callNumber: 630.654 .I39M
+    copyNumber: '1'
+    enumeration: V.5:NO.1
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: folio
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: '08cc5111-4b66-52b3-ada5-9c7881427fac'
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: 3630.654 I39M V 15 NO 11 11
+    effectiveCallNumberComponents:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      callNumber: 630.654 .I39M
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
+  barcode: '36105026508924'
+  library: SAL3
+  home_location: SAL3-STACKS
+  current_location:
+  type: book
+  note:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  lopped_callnumber: 630.654 .I39M ...
+  shelfkey: dewey 630.65400000 i39m ...
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 630.654 .I39M V.4:NO.1
+  full_shelfkey: dewey 630.65400000 i39m v.000004:no.000001
+  scheme: DEWEY
+- id: f947bd93-a1eb-5613-8745-1063f948c461
+  barcode: '36105026515499'
+  library: SAL3
+  home_location: SAL3-STACKS
+  current_location:
+  type: book
+  note:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  lopped_callnumber: 630.654 .I39M ...
+  shelfkey: dewey 630.65400000 i39m ...
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 630.654 .I39M V.5:NO.1
+  full_shelfkey: dewey 630.65400000 i39m v.000005:no.000001
+  scheme: DEWEY
+- id:
+  barcode:
+  library: SAL3
+  home_location: SAL3-SEE-OTHER
+  current_location:
+  type:
+  note:
+  instance_id:
+  instance_hrid:
+  temporary_location_code:
+  permanent_location_code: SAL3-SEE-OTHER
+  status:
+  effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber: 630.654 .I39M ...
+  shelfkey: dewey 630.65400000 i39m ...
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 630.654 .I39M V.3:NO.3
+  full_shelfkey: dewey 630.65400000 i39m v.000003:no.000003
+  scheme: DEWEY
+- id:
+  barcode:
+  library: SAL3
+  home_location: SAL3-SEE-OTHER
+  current_location:
+  type:
+  note:
+  instance_id:
+  instance_hrid:
+  temporary_location_code:
+  permanent_location_code: SAL3-SEE-OTHER
+  status:
+  effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber: 630.654 .I39M ...
+  shelfkey: dewey 630.65400000 i39m ...
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 630.654 .I39M V.4:NO.4
+  full_shelfkey: dewey 630.65400000 i39m v.000004:no.000004
+  scheme: DEWEY
+- id:
+  barcode:
+  library: SAL3
+  home_location: SAL3-SEE-OTHER
+  current_location:
+  type:
+  note:
+  instance_id:
+  instance_hrid:
+  temporary_location_code:
+  permanent_location_code: SAL3-SEE-OTHER
+  status:
+  effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber: 630.654 .I39M ...
+  shelfkey: dewey 630.65400000 i39m ...
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 630.654 .I39M V.5:NO.7-8
+  full_shelfkey: dewey 630.65400000 i39m v.000005:no.000007-000008
+  scheme: DEWEY

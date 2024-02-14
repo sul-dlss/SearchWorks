@@ -5,5 +5,7 @@
 :format_main_ssim: Journal/Periodical
 :marc_json_struct: |
 <%= metadata1 %>
-:marc_links_struct:
- - '{ "href": "http://sfx.example.com/", "sfx": true }'
+marc_links_struct:
+  - version: '0.2'
+    href: http://sfx.example.com/
+    sfx: true

@@ -1,0 +1,423 @@
+---
+id: '13553090'
+hashed_id_ssi: 7a49f4cd89bae50cd9bf5891d240a3b7
+marc_json_struct:
+- '{"leader":"02160ncm a22005173i 4500","fields":[{"001":"a13553090"},{"003":"SIRSI"},{"005":"20200411012815.0"},{"006":"m|||||o||d||||||||"},{"007":"cr
+  |n||||||||a"},{"007":"q|"},{"008":"180208s2016    ne zza||or|||||n  | zxx d"},{"028":{"ind1":"3","ind2":"0","subfields":[{"a":"D14936"},{"b":"Donemus"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a13553090"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"VaAlASP"},{"b":"eng"},{"e":"rda"},{"c":"VaAlASP"},{"d":"CSt"},{"d":"UtOrBLW"}]}},{"041":{"ind1":"0","ind2":"
+  ","subfields":[{"g":"eng"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Skordis,
+  Andys,"},{"e":"composer."},{"0":"http://id.loc.gov/authorities/names/no2008114901"}]}},{"240":{"ind1":"1","ind2":"0","subfields":[{"a":"[dot-dot-dot-dot-dot-dot]"},{"0":"http://id.loc.gov/authorities/names/no2017002077"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"\"......\"
+  :"},{"b":"for orchestra : 2010 /"},{"c":"Andys Skordis"}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"Rijswijk,
+  South Holland :"},{"b":"Donemus,"},{"c":"[2016]"}]}},{"264":{"ind1":" ","ind2":"4","subfields":[{"c":"copyright
+  2016"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1 online resource (1
+  score (51 pages))"}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"notated
+  music"},{"b":"ntm"},{"2":"rdacontent"}]}},{"337":{"ind1":" ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"347":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"data file"},{"2":"rda"}]}},{"348":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"score"},{"2":"rda"}]}},{"382":{"ind1":"0","ind2":"1","subfields":[{"a":"orchestra"},{"e":"1"},{"t":"1"},{"2":"lcmpt"}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Title from resource description page (viewed February
+  08, 2018)"}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Written in 2010"}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Duration: about 15:40 minutes"}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Includes performance notes in English"}]}},{"546":{"ind1":"
+  ","ind2":" ","subfields":[{"b":"Staff notation"}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Orchestral
+  music"},{"v":"Scores."},{"0":"http://id.loc.gov/authorities/subjects/sh85095329"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Art music."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014026639"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Scores."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014027077"}]}},{"941":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1008865872"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"http://www.aspresolver.com/aspresolver.asp?SHM4;3568528"},{"y":"Classical
+  Scores Library"},{"x":"Provider: Alexander Street Press"},{"x":"Collection: Classical
+  Scores Library"},{"x":"purchased"},{"x":"eLoaderURL"},{"x":"cs4"},{"x":"csZzASP3568528/shm4zZ"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)1057014501"}]}},{"596":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"22"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  csZzASP3568528/shm4zZ"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"1e69a391-0fc4-564b-b176-26ad5e512fdc"},{"s":"1d2c2d98-2906-5ddb-b4ac-6e29d37bbab9"}]}}]}'
+all_search: 'D14936 Donemus Skordis, Andys, composer. http://id.loc.gov/authorities/names/no2008114901
+  [dot-dot-dot-dot-dot-dot] http://id.loc.gov/authorities/names/no2017002077 "......"
+  : for orchestra : 2010 / Andys Skordis Rijswijk, South Holland : Donemus, [2016]
+  copyright 2016 1 online resource (1 score (51 pages)) notated music ntm rdacontent
+  computer c rdamedia unmediated n rdamedia online resource cr rdacarrier data file
+  rda score rda orchestra 1 1 lcmpt Title from resource description page (viewed February
+  08, 2018) Written in 2010 Duration: about 15:40 minutes Includes performance notes
+  in English Staff notation Orchestral music Scores. http://id.loc.gov/authorities/subjects/sh85095329
+  Art music. lcgft http://id.loc.gov/authorities/genreForms/gf2014026639 Scores. lcgft
+  http://id.loc.gov/authorities/genreForms/gf2014027077 Available to Stanford-affiliated
+  users. http://www.aspresolver.com/aspresolver.asp?SHM4;3568528 Classical Scores
+  Library Provider: Alexander Street Press Collection: Classical Scores Library purchased
+  eLoaderURL cs4 csZzASP3568528/shm4zZ 22'
+title_245a_search: '"......" :'
+title_245_search: '"......" : for orchestra : 2010 /'
+title_uniform_search: "[dot-dot-dot-dot-dot-dot]"
+title_245a_display: '"......"'
+title_245c_display: Andys Skordis
+title_display: '"......" : for orchestra : 2010'
+title_full_display: '"......" : for orchestra : 2010 / Andys Skordis'
+title_sort: for orchestra  2010
+uniform_title_authorities_ssim:
+- http://id.loc.gov/authorities/names/no2017002077
+author_title_245ac_search:
+- '"......" : Andys Skordis'
+author_title_1xx_search:
+- Skordis, Andys dot-dot-dot-dot-dot-dot
+author_title_search:
+- Skordis, Andys dot-dot-dot-dot-dot-dot
+- 'Skordis, Andys "......" :'
+author_1xx_search: Skordis, Andys,
+author_person_facet:
+- Skordis, Andys
+author_person_display:
+- Skordis, Andys
+author_person_full_display:
+- Skordis, Andys, composer.
+author_sort: Skordis Andys dotdotdotdotdotdot  for orchestra  2010
+works_struct:
+- '{"included":[],"related":[]}'
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/no2008114901
+topic_search:
+- Orchestral music
+topic_display:
+- Orchestral music
+subject_other_search:
+- Art music.
+- Scores.
+subject_other_display:
+- Art music.
+- Scores.
+subject_other_subvy_search:
+- Scores.
+subject_all_search:
+- Orchestral music Scores.
+- Art music.
+- Scores.
+topic_facet:
+- Orchestral music
+pub_search:
+- 'Rijswijk, South Holland : Donemus'
+pub_display:
+- 'Rijswijk, South Holland : Donemus'
+pub_country: Netherlands
+pub_date: '2016'
+pub_date_search: '2016'
+pub_date_sort: '2016'
+pub_year_tisim:
+- 2016
+pub_year_ss: '2016'
+publication_year_isi: 2016
+imprint_display:
+- 'Rijswijk, South Holland : Donemus, [2016]'
+date_cataloged: '2020-04-04T00:00:00Z'
+url_fulltext:
+- http://www.aspresolver.com/aspresolver.asp?SHM4;3568528
+url_restricted:
+- http://www.aspresolver.com/aspresolver.asp?SHM4;3568528
+oclc:
+- '1057014501'
+access_facet:
+- Online
+format_main_ssim:
+- Music score
+characteristics_ssim:
+- 'Digital: data file.'
+genre_ssim:
+- Art music
+- Scores
+physical:
+- 1 online resource (1 score (51 pages))
+barcode_search:
+- 13553090-1001
+item_barcodes:
+- 13553090-1001
+library_code_facet_ssim:
+- SUL
+location_code_facet_ssim:
+- SUL-ELECTRONIC
+building_location_facet_ssim:
+- SUL/*
+- SUL/SUL-ELECTRONIC
+- SUL/*/type/ONLINE
+- SUL/SUL-ELECTRONIC/type/ONLINE
+on_order_library_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '006'
+- '007'
+- '008'
+- '028'
+- '035'
+- '040'
+- '041'
+- '100'
+- '240'
+- '245'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '347'
+- '348'
+- '382'
+- '500'
+- '546'
+- '650'
+- '655'
+- '941'
+- '856'
+- '596'
+- '999'
+- '028ab'
+- 035a
+- 040abecdd
+- 041g
+- 100ae0
+- 240a0
+- 245abc
+- 264abc
+- 264c
+- 300a
+- 336ab2
+- 337ab2
+- 338ab2
+- 347a2
+- 348a2
+- 382aet2
+- 500a
+- 546b
+- 650av0
+- 655a20
+- 941a
+- 856zuyxxxxxx
+- 596a
+- 999is
+- "?028a"
+- "?028b"
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?041g"
+- "?100a"
+- "?100e"
+- "?1000"
+- "?240a"
+- "?2400"
+- "?245a"
+- "?245b"
+- "?245c"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?347a"
+- "?3472"
+- "?348a"
+- "?3482"
+- "?382a"
+- "?382e"
+- "?382t"
+- "?3822"
+- "?500a"
+- "?546b"
+- "?650a"
+- "?650v"
+- "?6500"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?941a"
+- "?856z"
+- "?856u"
+- "?856y"
+- "?856x"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Skordis, Andys, composer. "......" : for orchestra : 2010 / Andys Skordis
+  Rijswijk, South Holland : Donemus, [2016] copyright 2016 Music score'
+uuid_ssi: 1e69a391-0fc4-564b-b176-26ad5e512fdc
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"1e69a391-0fc4-564b-b176-26ad5e512fdc","hrid":"a13553090","notes":[{"note":"orchestra
+  1 1","staffOnly":false,"instanceNoteTypeId":"7bf4658a-1819-4873-9482-dd05470db1ce"},{"note":"Title
+  from resource description page (viewed February 08, 2018)","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Written
+  in 2010","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Duration:
+  about 15:40 minutes","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Includes
+  performance notes in English","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Staff
+  notation","staffOnly":false,"instanceNoteTypeId":"7356cde5-ec6b-4961-9cb0-961c48a37af4"}],"title":"\"......\"
+  : for orchestra : 2010 / Andys Skordis","series":[],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-21T20:16:29.402Z","updatedDate":"2023-08-21T20:16:29.402Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":["Orchestral
+  music Scores","Genre: Art music","Genre: Scores"],"languages":["eng"],"indexTitle":"\"......\"
+  : for orchestra : 2010","identifiers":[{"value":"D14936 Donemus","identifierTypeId":"b5d8cdc4-9441-487c-90cf-0c7ec97728eb"},{"value":"(Sirsi)
+  a13553090","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)1057014501","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  csZzASP3568528/shm4zZ","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"Rijswijk,
+  South Holland","publisher":"Donemus","dateOfPublication":"[2016]"},{"role":"Copyright
+  notice date","place":"","publisher":"","dateOfPublication":"copyright 2016"}],"contributors":[{"name":"Skordis,
+  Andys","primary":true,"contributorTypeId":"901d01e5-66b1-48f0-99f9-b5e92e3d2d15","contributorTypeText":"composer.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2020-04-04","staffSuppress":false,"instanceTypeId":"497b5090-3da2-486c-b57f-de5bb3c2e26d","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"http://www.aspresolver.com/aspresolver.asp?SHM4;3568528","name":"Resource","linkText":"Classical
+  Scores Library","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"[dot-dot-dot-dot-dot-dot]","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"publicationPeriod":{"start":2016},"statusUpdatedDate":"2023-08-21T20:16:29.392+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource (1 score (51 pages))","data file","score"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2024-02-11T10:48:49Z'
+created: '2024-02-11T10:48:49Z'
+timestamp: '2024-02-11T10:48:49Z'
+author_struct:
+- creator:
+  - link: Skordis, Andys,
+    search: Skordis, Andys,
+    post_text: composer.
+    authorities:
+    - http://id.loc.gov/authorities/names/no2008114901
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: Classical Scores Library
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  href: http://www.aspresolver.com/aspresolver.asp?SHM4;3568528
+  sort:
+  casalini:
+  fulltext: true
+  finding_aid: false
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields: []
+  unmatched_vernacular: []
+- label: Content advice
+  fields: []
+  unmatched_vernacular: []
+uniform_title_display_struct:
+- label: Uniform Title
+  unmatched_vernacular:
+  fields:
+  - uniform_title_tag: '240'
+    field:
+      pre_text: ''
+      link_text: "[dot-dot-dot-dot-dot-dot]"
+      author: Skordis, Andys,
+      post_text: ''
+    vernacular:
+      vern:
+    authorities:
+    - http://id.loc.gov/authorities/names/no2017002077
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: f26c022b-a805-55f4-82bf-01e24ea42a2f
+    hrid: ah13553090_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:19:21.087Z'
+      updatedDate: '2023-08-21T20:19:21.087Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 1e69a391-0fc4-564b-b176-26ad5e512fdc
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    holdingsItems: []
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    bareHoldingsItems: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+item_display_struct:
+- id:
+  barcode: 13553090-1001
+  library: SUL
+  home_location: SUL-ELECTRONIC
+  current_location:
+  type: ONLINE
+  note:
+  instance_id:
+  instance_hrid:
+  temporary_location_code:
+  permanent_location_code: SUL-ELECTRONIC
+  status:
+  effective_location_id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+  material_type_id:
+  loan_type_id:
+  lopped_callnumber:
+  shelfkey:
+  reverse_shelfkey:
+  callnumber:
+  full_shelfkey:
+  scheme: OTHER

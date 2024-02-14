@@ -6,9 +6,12 @@
 :title_sort: Selected Database 2
 :title_245a_display: Selected Database 2
 :language: English
-:marc_links_struct:
-  - '{ "href": "https://searchworks.stanford.edu", "fulltext": true }'
-  - '{ "href": "https://library.stanford.edu" }'
+marc_links_struct:
+  - version: '0.2'
+    href: https://searchworks.stanford.edu
+    fulltext: true
+  - version: '0.2'
+    href: https://library.stanford.edu
 :format: Database
 :format_main_ssim: Database
 :access_facet: Online

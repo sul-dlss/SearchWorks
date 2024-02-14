@@ -12,7 +12,7 @@ RSpec.describe 'RSS Feeds' do
     end
   end
 
-  it 'sorts the new books feed by the data cataloged field' do
+  it 'sorts the new books feed by the date_cataloged field' do
     within('.search_num_of_results') do
       click_link 'RSS feed for this result'
     end

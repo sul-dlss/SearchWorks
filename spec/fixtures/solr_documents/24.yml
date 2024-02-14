@@ -1,3 +1,4 @@
+# Used for testing the online access panel
 :id: 24
 :hashed_id_ssi: 1ff1de774005f8da13f42943881c655f
 :pub_date: 1993
@@ -13,5 +14,8 @@
 :db_az_subject: Biology
 :access_facet: Online
 :building_facet: Hoover Library
-:marc_links_struct:
-  - '{ "fulltext": true, "href": "...", "link_text": "..." }'
+marc_links_struct:
+  - version: '0.2'
+    fulltext: true
+    link_text: ...
+    href: ...

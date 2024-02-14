@@ -9,5 +9,10 @@
 :format: Database
 :format_main_ssim: Database
 :access_facet: Online
-:marc_links_struct:
-    - '{ "fulltext" : true, "href" : "https://stanford.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=s4392798&profile=ehost&defaultdb=aph", "stanford_only" : true, "link_text" : "search.ebscohost.com", "link_title" : "Available to Stanford-affiliated users only" }'
+marc_links_struct:
+  - version: '0.2'
+    href: https://stanford.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=s4392798&profile=ehost&defaultdb=aph
+    stanford_only: true,
+    fulltext: true,
+    link_text: search.ebscohost.com
+    link_title: Available to Stanford-affiliated users only

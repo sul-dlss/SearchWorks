@@ -7,6 +7,18 @@ class FixturesIndexer
   include MarcMetadataFixtures
   include ModsFixtures
 
+  # marc_json_struct and folio_json_struct are explicitly not included here
+  STRUCT_KEYS = [
+    "works_struct",
+    "author_struct",
+    "marc_links_struct",
+    "summary_struct",
+    "uniform_title_display_struct",
+    "holdings_json_struct",
+    "toc_struct",
+    "item_display_struct"
+  ].freeze
+
   def self.run
     FixturesIndexer.new.run
   end
@@ -41,6 +53,10 @@ class FixturesIndexer
       rendered_template = fixture_template.result(binding)
       data = YAML::load rendered_template
       data[:item_display_struct] &&= data[:item_display_struct].map(&:to_json)
+      STRUCT_KEYS.each do |key|
+        data[key] &&= data[key].map(&:to_json)
+      end
+
       data
     end
   end

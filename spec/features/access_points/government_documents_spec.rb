@@ -25,6 +25,6 @@ RSpec.describe 'Government Documents Access Point' do
       expect(page).to have_css('.filter-value', text: 'Government document')
     end
 
-    expect(total_results).to eq 2
+    expect(total_results).to eq 4
   end
 end

@@ -1,3 +1,4 @@
+# This fixture is used to test sorting by date_cataloged
 :id: 44
 :hashed_id_ssi: f7177163c833dff4b38fc8d2872f1ec6
 :pub_date: 1907
@@ -11,4 +12,4 @@
 :building_facet: Green
 :lccn: "07031444"
 :oclc: "3616089"
-:date_cataloged: "2015-10-01T00:00:00Z"
+:date_cataloged: "<%= 1.day.ago.utc.iso8601 %>"

@@ -24,13 +24,13 @@ RSpec.describe FixturesIndexer do
   end
 
   describe "#fixtures" do
-    it "should be an array" do
+    it "is an array" do
       expect(subject.fixtures).to be_an Array
     end
-    it "should be an array of solr document hashes" do
+    it "is an array of solr document hashes" do
       subject.fixtures.each do |fixture|
         expect(fixture).to be_a Hash
-        expect(fixture).to have_key :id
+        expect(fixture.stringify_keys.keys).to include 'id'
       end
     end
   end

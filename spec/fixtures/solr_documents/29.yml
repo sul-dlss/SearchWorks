@@ -11,6 +11,10 @@
 :pub_date: 2014
 :beginning_year_isi: 2000
 :imprint_display: 1990
-:marc_links_struct:
- - '{ "href": "https://purl.stanford.edu/29", "fulltext": true }'
- - '{ "href": "http://oac.cdlib.org/findaid/ark:/something-else", "finding_aid": true }'
+marc_links_struct:
+  - version: '0.2'
+    href: https://purl.stanford.edu/29
+    fulltext: true
+  - version: '0.2'
+    finding_aid: true
+    href: http://oac.cdlib.org/findaid/ark:/something-else
