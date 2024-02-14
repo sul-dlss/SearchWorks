@@ -203,6 +203,26 @@ RSpec.describe "catalog/_index_location" do
       end
     end
 
+    context 'with multiple library has statements' do
+      before do
+        allow(view).to receive(:document).and_return(SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { barcode: '321', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+          ],
+          mhld_display: [
+            'GREEN -|- STACKS -|- public note -|- library has -|- latest received',
+            'GREEN -|- STACKS -|- public note -|- library has2 -|- latest received'
+          ]
+        ))
+        render
+      end
+
+      it "includes the latest received data only once" do
+        expect(rendered).to have_css('tbody tr .note-highlight', text: "Latest: latest received", count: 1)
+      end
+    end
+
     describe "that has no matching library/location" do
       before do
         allow(view).to receive(:document).and_return(SolrDocument.new(
