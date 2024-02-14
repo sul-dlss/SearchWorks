@@ -25,7 +25,7 @@
 
   .gallery-document {
     @include document-borders;
-    margin: 0 0 25px 15px;
+    margin: 0 0 $gallery-document-bottom-margin $gallery-document-left-margin;
     display: flex;
     flex-direction: column;
     background-color: $white;
@@ -58,6 +58,13 @@
         content: " \f0d7";
       }
     }
+  }
+
+  .preview-container {
+    width: calc(4 * #{$gallery-document-width} + 3 * #{$gallery-document-left-margin});
+    margin-left: $gallery-document-left-margin;
+    margin-right: $gallery-document-left-margin;
+
   }
 
   .caption {
