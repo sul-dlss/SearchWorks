@@ -10,7 +10,7 @@
     </td>
   <% end %>
   <% if render_item_details? %>
-    <td class="item-availability" data-live-lookup-id="<%= item.live_lookup_instance_id %>" data-status-target=".availability-icon" data-item-id="<%= item.live_lookup_item_id %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if render_real_time_availability_request_link? %>>
+    <td class="item-availability" data-update-status="<%= !has_in_process_availability_class? %>" data-live-lookup-id="<%= item.live_lookup_instance_id %>" data-status-target=".availability-icon" data-item-id="<%= item.live_lookup_item_id %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.home_location, barcode: item.barcode)}'".html_safe if render_real_time_availability_request_link? %>>
       <span class="availability-icon-wrapper">
         <i class="availability-icon <%= item.status.availability_class %>"></i>
         <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
