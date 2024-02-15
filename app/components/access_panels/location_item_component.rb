@@ -18,9 +18,13 @@ module AccessPanels
     end
 
     def current_location_text
-      return if item.effective_location&.details&.key?('availabilityClass') || item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation')
+      return if has_avaliability_class? || item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation')
 
       item.current_location.name
+    end
+
+    def has_avaliability_class?
+      item.effective_location&.details&.key?('availabilityClass')
     end
 
     def render_item_details?
