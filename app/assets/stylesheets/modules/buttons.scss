@@ -29,11 +29,6 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
   padding: 3px 5px;
   border: none;
 
-  & a {
-    color: $btn-sul-toolbar-bar-color;
-    border-bottom: none;
-  }
-
   &.disabled {
     border: none;
     color: rgba($sul-btn-disabled-color, $sul-btn-disabled-opacity);
