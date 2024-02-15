@@ -35,11 +35,10 @@
       border-bottom: 0;
       display: inline-block;
       font-size: $h2-font-size;
+      font-weight: $lead-font-weight;
       padding: 15px;
       position: relative;
       top: 150px;
-      @extend .lead;
-      @extend .text-center;
     }
 
     .gallery-document .browse-link a:after{
