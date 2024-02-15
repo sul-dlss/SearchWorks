@@ -1,17 +1,17 @@
-:id: 5608954
-:hashed_id_ssi: 4f8ddbf8e4eb008327504e30c2bc17b7
-:pub_date: 2012
-:title_display: Selected Database 2
-:all_search: Selected Database 2
-:title_sort: Selected Database 2
-:title_245a_display: Selected Database 2
-:language: English
+id: 5608954
+hashed_id_ssi: 4f8ddbf8e4eb008327504e30c2bc17b7
+pub_date: 2012
+title_display: Selected Database 2
+all_search: Selected Database 2
+title_sort: Selected Database 2
+title_245a_display: Selected Database 2
+language: English
 marc_links_struct:
   - version: '0.2'
     href: https://searchworks.stanford.edu
     fulltext: true
   - version: '0.2'
     href: https://library.stanford.edu
-:format: Database
-:format_main_ssim: Database
-:access_facet: Online
+format: Database
+format_main_ssim: Database
+access_facet: Online

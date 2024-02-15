@@ -1,15 +1,15 @@
-:id: 28
-:hashed_id_ssi: 33e75ff09dd601bbe69f351039152189
-:pub_date: 1776
-:author_person_display: Arbitrary, Gregory
-:author_person_display: Arbirtrary, Lois
-:author_person_display: Arbitrary, Stewart
-:title_display: Some intersting papers, 1979-2010.
-:all_search: Some intersting papers, 1979-2010.
-:language: English
-:marc_json_struct: |
+id: 28
+hashed_id_ssi: 33e75ff09dd601bbe69f351039152189
+pub_date: 1776
+author_person_display: Arbitrary, Gregory
+author_person_display: Arbirtrary, Lois
+author_person_display: Arbitrary, Stewart
+title_display: Some intersting papers, 1979-2010.
+all_search: Some intersting papers, 1979-2010.
+language: English
+marc_json_struct: |
 <%= metadata1 %>
-:format: Book
-:format_main_ssim: Book
-:access_facet: Online
-:building_facet: Green
+format: Book
+format_main_ssim: Book
+access_facet: Online
+building_facet: Green

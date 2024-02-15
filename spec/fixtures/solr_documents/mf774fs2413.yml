@@ -1,22 +1,22 @@
-:id: mf774fs2413
-:hashed_id_ssi: 35765816d35553b532e04080792f2b33
-:title_display: Image Item1
-:all_search: Image Item1
-:format: Image
-:format_main_ssim: Image
-:collection:
+id: mf774fs2413
+hashed_id_ssi: 35765816d35553b532e04080792f2b33
+title_display: Image Item1
+all_search: Image Item1
+format: Image
+format_main_ssim: Image
+collection:
   - 29
-:collection_with_title:
+collection_with_title:
   - "29 -|- Image Collection1"
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 2014
-:beginning_year_isi: 2000
-:imprint_display: 1990
-:druid: mf774fs2413
+modsxml: <%= mods_everything %>
+pub_date: 2014
+beginning_year_isi: 2000
+imprint_display: 1990
+druid: mf774fs2413
 summary_display:
   - Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet
-:file_id:
+file_id:
   - "mf774fs2413%2FW784_000001_300.jp2"
   - "mf774fs2413%wFW784_000002_300.jp2"

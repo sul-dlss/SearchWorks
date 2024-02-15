@@ -1,18 +1,18 @@
-:id: 34
-:hashed_id_ssi: e369853df766fa44e1ed0ff613f563bd
-:title_display: Merged Image Collection1
-:all_search: Merged Image Collection1
-:author_person_full_display: Bob, Uncle
-:collection_type: Digital Collection
-:format: Image
-:format_main_ssim: Image
-:marc_json_struct: |
+id: 34
+hashed_id_ssi: e369853df766fa44e1ed0ff613f563bd
+title_display: Merged Image Collection1
+all_search: Merged Image Collection1
+author_person_full_display: Bob, Uncle
+collection_type: Digital Collection
+format: Image
+format_main_ssim: Image
+marc_json_struct: |
 <%= metadata1 %>
-:pub_date: 2008
-:beginning_year_isi: 2007
-:imprint_display: 2008
-:druid: mf774fs2413
-:building_facet:
+pub_date: 2008
+beginning_year_isi: 2007
+imprint_display: 2008
+druid: mf774fs2413
+building_facet:
   - "Art & Architecture (Bowes)"
-:location_facet:
+location_facet:
   - "Art Locked Stacks"

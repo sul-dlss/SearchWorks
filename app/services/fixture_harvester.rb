@@ -9,7 +9,7 @@ class FixtureHarvester
     '2279186', # Bound with (no Folio items) (TODO: merge with 20 or 23?)
     '14136548', # Online resource (no Folio items)
     '4085072', # A collection of images (TODO: merge with 24?)
-    '13553090', # A uniform title (dotdotdotdot)
+    '13553090', # A uniform title (dotdotdotdot, TODO: merge with 18?)
     '2472159' # one hrid for multiple purl images (TODO: merge with 8923346, 20, or 23?)
   ].freeze
 

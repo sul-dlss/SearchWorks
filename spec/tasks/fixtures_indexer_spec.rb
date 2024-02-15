@@ -30,7 +30,7 @@ RSpec.describe FixturesIndexer do
     it "is an array of solr document hashes" do
       subject.fixtures.each do |fixture|
         expect(fixture).to be_a Hash
-        expect(fixture.stringify_keys.keys).to include 'id'
+        expect(fixture).to have_key 'id'
       end
     end
   end

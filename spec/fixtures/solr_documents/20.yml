@@ -1,21 +1,21 @@
-:id: 20
-:hashed_id_ssi: 98f13708210194c475687be6106a3b84
-:pub_date: 1958
-:author_person_display: Morse, Harriett
-:title_display: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
-:all_search: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
+id: 20
+hashed_id_ssi: 98f13708210194c475687be6106a3b84
+pub_date: 1958
+author_person_display: Morse, Harriett
+title_display: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
+all_search: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
   ex.
-:title_sort: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
+title_sort: Enim id sint exercitation sit anim nulla id qui aliqua aute culpa anim
   ex.
-:language: German
-:format: Database
-:genre_ssim:
+language: German
+format: Database
+genre_ssim:
   - Government document
-:format_main_ssim: Database
-:db_az_subject: Biology
-:summary_display:
+format_main_ssim: Database
+db_az_subject: Biology
+summary_display:
   - A summary of the database, this needs to be long so that we can test whether or not it gets truncated
-:access_facet: Online
-:building_facet: Law (Crown)
-:marc_json_struct: |
+access_facet: Online
+building_facet: Law (Crown)
+marc_json_struct: |
 <%= metadata1 %>

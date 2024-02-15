@@ -1,10 +1,10 @@
-:id: 43
-:hashed_id_ssi: 17e62166fc8586dfa4d1bc0e1742c08b
-:title_display: Best Album Every Written
-:all_search: Best Album Every Written
-:author_person_full_display: McDonald, Ronald
-:format: music
-:format_main_ssim: Music recording
-:marc_json_struct: |
+id: 43
+hashed_id_ssi: 17e62166fc8586dfa4d1bc0e1742c08b
+title_display: Best Album Every Written
+all_search: Best Album Every Written
+author_person_full_display: McDonald, Ronald
+format: music
+format_main_ssim: Music recording
+marc_json_struct: |
 <%= marc_382_instrumentation %>
-:pub_date: 2008
+pub_date: 2008

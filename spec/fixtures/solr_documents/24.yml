@@ -1,19 +1,19 @@
 # Used for testing the online access panel
-:id: 24
-:hashed_id_ssi: 1ff1de774005f8da13f42943881c655f
-:pub_date: 1993
-:author_person_display: James, Marci
-:title_display: Ullamco do minim laboris sit velit.
-:all_search: Ullamco do minim laboris sit velit.
-:title_sort: Ullamco do minim laboris sit velit.
-:language: Spanish
-:format: Database
-:marc_json_struct: |
+id: 24
+hashed_id_ssi: 1ff1de774005f8da13f42943881c655f
+pub_date: 1993
+author_person_display: James, Marci
+title_display: Ullamco do minim laboris sit velit.
+all_search: Ullamco do minim laboris sit velit.
+title_sort: Ullamco do minim laboris sit velit.
+language: Spanish
+format: Database
+marc_json_struct: |
 <%= stanford_only_856 %>
-:format_main_ssim: Database
-:db_az_subject: Biology
-:access_facet: Online
-:building_facet: Hoover Library
+format_main_ssim: Database
+db_az_subject: Biology
+access_facet: Online
+building_facet: Hoover Library
 marc_links_struct:
   - version: '0.2'
     fulltext: true

@@ -1,14 +1,14 @@
-:id: 48
-:hashed_id_ssi: 642e92efb79421734881b53e1e1b18b6
-:title_display: A Virtual Object
-:all_search: A Virtual Object
-:format_main_ssim: Map
-:marc_json_struct: |
+id: 48
+hashed_id_ssi: 642e92efb79421734881b53e1e1b18b6
+title_display: A Virtual Object
+all_search: A Virtual Object
+format_main_ssim: Map
+marc_json_struct: |
 <%= metadata2 %>
-:file_id:
+file_id:
   - cg767mn6478%2F2542A.jp2
-:druid: hj097bm8879
-:collection:
+druid: hj097bm8879
+collection:
   - '47'
-:collection_with_title:
+collection_with_title:
   - '47 -|- A Collection of Virtual Objects'

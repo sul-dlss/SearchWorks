@@ -1,12 +1,12 @@
-:id: 8923346
-:hashed_id_ssi: edbe0f562943f5c0fc0ed005e6026d27
-:title_display: Many PURLs for One CKey
-:all_search: Many PURLs for One CKey
-:language: English
-:format: Book
-:format_main_ssim: Book
-:access_facet: At the Library
-:marc_json_struct: |
+id: 8923346
+hashed_id_ssi: edbe0f562943f5c0fc0ed005e6026d27
+title_display: Many PURLs for One CKey
+all_search: Many PURLs for One CKey
+language: English
+format: Book
+format_main_ssim: Book
+access_facet: At the Library
+marc_json_struct: |
 <%= many_managed_purl_856 %>
 marc_links_struct:
   - version: '0.2'

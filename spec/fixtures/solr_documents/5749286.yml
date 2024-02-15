@@ -1,14 +1,14 @@
-:id: 5749286
-:hashed_id_ssi: a8a7eb2adcecd94918e78a7eb9a496ac
-:pub_date: 2012
-:title_display: Selected Database 3
-:all_search: Selected Database 3
-:title_sort: Selected Database 3
-:title_245a_display: Selected Database 3
-:language: English
-:format: Database
-:format_main_ssim: Database
-:access_facet: Online
+id: 5749286
+hashed_id_ssi: a8a7eb2adcecd94918e78a7eb9a496ac
+pub_date: 2012
+title_display: Selected Database 3
+all_search: Selected Database 3
+title_sort: Selected Database 3
+title_245a_display: Selected Database 3
+language: English
+format: Database
+format_main_ssim: Database
+access_facet: Online
 marc_links_struct:
   - version: '0.2'
     href: https://stanford.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?authtype=ip,sso&custid=s4392798&profile=ehost&defaultdb=aph

@@ -1,15 +1,15 @@
-:id: 42
-:hashed_id_ssi: a1d0c6e83f027327d8461063f4ac58a6
-:title_display: File Item4 - selfie.vine
-:all_search: File Item4 - selfie.vine
-:author_person_full_display: Solo, Han
-:format: File
-:format_main_ssim: Dataset
-:collection:
+id: 42
+hashed_id_ssi: a1d0c6e83f027327d8461063f4ac58a6
+title_display: File Item4 - selfie.vine
+all_search: File Item4 - selfie.vine
+author_person_full_display: Solo, Han
+format: File
+format_main_ssim: Dataset
+collection:
   - 38
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 3204
-:beginning_year_isi: 3204
-:imprint_display: 3204
+modsxml: <%= mods_everything %>
+pub_date: 3204
+beginning_year_isi: 3204
+imprint_display: 3204

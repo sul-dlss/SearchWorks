@@ -1,15 +1,15 @@
-:id: 39
-:hashed_id_ssi: d67d8ab4f4c10bf22aa353e27879133c
-:title_display: File Item3
-:all_search: File Item3
-:author_person_full_display: Dr. Who
-:format: File
-:format_main_ssim: Dataset
-:collection:
+id: 39
+hashed_id_ssi: d67d8ab4f4c10bf22aa353e27879133c
+title_display: File Item3
+all_search: File Item3
+author_person_full_display: Dr. Who
+format: File
+format_main_ssim: Dataset
+collection:
   - 38
-:building_facet:
+building_facet:
   - "Stanford Digital Repository"
-:modsxml: <%= mods_everything %>
-:pub_date: 1905
-:beginning_year_isi: 1905
-:imprint_display: 1905
+modsxml: <%= mods_everything %>
+pub_date: 1905
+beginning_year_isi: 1905
+imprint_display: 1905

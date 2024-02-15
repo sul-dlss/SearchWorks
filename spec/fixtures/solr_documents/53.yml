@@ -1,18 +1,18 @@
-:id: 53
-:hashed_id_ssi: d82c8d1619ad8176d665453cfb2e55f0
-:title_display: Another item in a another virtual object
-:all_search: Another item in a another virtual object
-:format_main_ssim: Map
-:marc_json_struct: |
+id: 53
+hashed_id_ssi: d82c8d1619ad8176d665453cfb2e55f0
+title_display: Another item in a another virtual object
+all_search: Another item in a another virtual object
+format_main_ssim: Map
+marc_json_struct: |
 <%= marc_382_instrumentation %>
-:file_id:
+file_id:
   - ty335fg4673%2F2542004.jp2
-:druid: ty335fg4673
-:collection:
+druid: ty335fg4673
+collection:
   - '47'
-:collection_with_title:
+collection_with_title:
   - '47 -|- A Collection of Virtual Objects'
-:set:
+set:
   - '49'
-:set_with_title:
+set_with_title:
   - '49 -|- Another Virtual Object'

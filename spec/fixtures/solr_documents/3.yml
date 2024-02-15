@@ -1,14 +1,14 @@
-:id: 3
-:hashed_id_ssi: eccbc87e4b5ce2fe28308fd9f2a7baf3
-:pub_date: 1727
-:pub_year_tisim: 1727
-:author_person_display: Moss, Pollard
-:title_display: Officia consequat aliqua esse ipsum.
-:all_search: Officia consequat aliqua esse ipsum.
-:language: Russian
-:marc_json_struct: |
+id: 3
+hashed_id_ssi: eccbc87e4b5ce2fe28308fd9f2a7baf3
+pub_date: 1727
+pub_year_tisim: 1727
+author_person_display: Moss, Pollard
+title_display: Officia consequat aliqua esse ipsum.
+all_search: Officia consequat aliqua esse ipsum.
+language: Russian
+marc_json_struct: |
 <%= metadata1 %>
-:format: Image
-:format_main_ssim: Image
-:access_facet: Online
-:building_facet: "SAL1&2 (on-campus shelving)"
+format: Image
+format_main_ssim: Image
+access_facet: Online
+building_facet: "SAL1&2 (on-campus shelving)"

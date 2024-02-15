@@ -1,14 +1,14 @@
-:id: 38
-:hashed_id_ssi: a5771bce93e200c36f7cd9dfd0e5deaa
-:title_display: Merged File Collection1
-:all_search: Merged File Collection1
-:collection_type: Digital Collection
-:summary_display:
+id: 38
+hashed_id_ssi: a5771bce93e200c36f7cd9dfd0e5deaa
+title_display: Merged File Collection1
+all_search: Merged File Collection1
+collection_type: Digital Collection
+summary_display:
   - "A collection of fixture files from the SearchWorks development index."
-:format: File
-:format_main_ssim: Dataset
-:marc_json_struct: |
+format: File
+format_main_ssim: Dataset
+marc_json_struct: |
 <%= metadata1 %>
-:pub_date: 2010
-:beginning_year_isi: 2010
-:imprint_display: 2010
+pub_date: 2010
+beginning_year_isi: 2010
+imprint_display: 2010

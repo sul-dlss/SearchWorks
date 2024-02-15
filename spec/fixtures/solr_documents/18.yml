@@ -1,16 +1,25 @@
-:id: 18
-:hashed_id_ssi: 6f4922f45568161a8cdf4ad2299f6d23
-:pub_date: 1909
-:author_person_display: Jordan, Sheila
-:title_display: Adipisicing tempor quis ullamco enim dolore cillum velit commodo qui.
-:all_search: Adipisicing tempor quis ullamco enim dolore cillum velit commodo qui.
-:language: German
-:format: Image
-:format_main_ssim: Image
-:marc_json_struct: |
+id: 18
+hashed_id_ssi: 6f4922f45568161a8cdf4ad2299f6d23
+pub_date: 1909
+author_person_display: Jordan, Sheila
+title_display: Adipisicing tempor quis ullamco enim dolore cillum velit commodo qui.
+all_search: Adipisicing tempor quis ullamco enim dolore cillum velit commodo qui.
+language: German
+format: Image
+format_main_ssim: Image
+marc_json_struct: |
 <%= uniform_title_fixture %>
-:imprint_display: 1933
-:access_facet: Online
-:building_facet: "Math & Statistics"
-:uniform_title_display_struct:
-  - '{"label":"Uniform Title","unmatched_vernacular":null,"fields":[{"field":{"link_text":"Instrumental music Selections","post_text":"[print/digital]."},"vernacular":{"vern":null}}]}'
+imprint_display: 1933
+access_facet: Online
+building_facet: "Math & Statistics"
+uniform_title_display_struct:
+- label: Uniform Title
+  unmatched_vernacular:
+  fields:
+  - field:
+      pre_text: ''
+      link_text: Instrumental music Selections
+      author: Skordis, Andys,
+      post_text: '[print/digital].'
+    vernacular:
+      vern:

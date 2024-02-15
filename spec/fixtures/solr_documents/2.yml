@@ -1,18 +1,18 @@
-:id: 2
-:hashed_id_ssi: c81e728d9d4c2f636f067f89cc14862c
-:title_display: Another object
-:all_search: Another object
-:author_person_display: "Doe, John"
-:format: Image
-:format_main_ssim: Image
-:language: English
-:pub_date: 2013
-:pub_year_tisim: 2013
-:marc_json_struct: |
+id: 2
+hashed_id_ssi: c81e728d9d4c2f636f067f89cc14862c
+title_display: Another object
+all_search: Another object
+author_person_display: "Doe, John"
+format: Image
+format_main_ssim: Image
+language: English
+pub_date: 2013
+pub_year_tisim: 2013
+marc_json_struct: |
 <%= metadata1 %>
-:access_facet: Online
-:building_facet: SAL3 (off-campus storage)
-:course: "CAT-401-01-01"
-:instructor: "McDonald, Ronald"
-:crez_course_info:
+access_facet: Online
+building_facet: SAL3 (off-campus storage)
+course: "CAT-401-01-01"
+instructor: "McDonald, Ronald"
+crez_course_info:
  - "CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald"

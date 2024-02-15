@@ -1,20 +1,20 @@
-:id: 10
+id: 10
 uuid_ssi: ef3fb772-88b6-4981-a1d6-959c884c0fc5
-:hashed_id_ssi: d3d9446802a44259755d38e6d163e820
-:pub_date: 1801
-:author_person_display: Aguirre, Trudy
-:title_display: "Car : a drama of the American workplace"
-:all_search: "Car : a drama of the American workplace"
-:language: Spanish
-:format: Book
-:format_main_ssim: Book
-:access_facet: At the Library
-:building_facet: Green
-:marc_json_struct: |
+hashed_id_ssi: d3d9446802a44259755d38e6d163e820
+pub_date: 1801
+author_person_display: Aguirre, Trudy
+title_display: "Car : a drama of the American workplace"
+all_search: "Car : a drama of the American workplace"
+language: Spanish
+format: Book
+format_main_ssim: Book
+access_facet: At the Library
+building_facet: Green
+marc_json_struct: |
 <%= metadata1 %>
-:genre_ssim:
+genre_ssim:
   - Thesis/Dissertation
-:item_display_struct:
+item_display_struct:
   - id: 0957c8b8-57c0-407b-a23e-ced89cf3f66e
     barcode: "123"
     library: GREEN
@@ -215,12 +215,12 @@ holdings_json_struct:
             code: SU
             name: Stanford University
       courses: []
-:mhld_display:
+mhld_display:
   - "ENG -|- STACKS -|- public note1 -|- library has1 -|- latest received1"
   - "ENG -|- CURRENTPER -|- public note2 -|- library has2 -|- latest received2"
   - "GREEN -|- STACKS -|- public note3 -|- library has3 -|- latest received3"
-:isbn_display:
+isbn_display:
   - "0393040801"
   - "9780393040807"
-:lccn: "96049953"
-:oclc: "36024029"
+lccn: "96049953"
+oclc: "36024029"

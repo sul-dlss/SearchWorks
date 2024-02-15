@@ -1,15 +1,15 @@
-:id: 31
-:hashed_id_ssi: c16a5320fa475530d9583c34fd356ef5
-:title_display: File Collection1
-:all_search: File Collection1
-:collection_type: Digital Collection
-:summary_display:
+id: 31
+hashed_id_ssi: c16a5320fa475530d9583c34fd356ef5
+title_display: File Collection1
+all_search: File Collection1
+collection_type: Digital Collection
+summary_display:
   - "A collection of fixture files from the SearchWorks development index."
-:format: File
-:format_main_ssim: Dataset
-:modsxml: <%= mods_everything %>
-:pub_date: 2010
-:beginning_year_isi: 2010
-:imprint_display: 2010
-:summary_display:
+format: File
+format_main_ssim: Dataset
+modsxml: <%= mods_everything %>
+pub_date: 2010
+beginning_year_isi: 2010
+imprint_display: 2010
+summary_display:
   - Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet
