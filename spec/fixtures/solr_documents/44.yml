@@ -1,5 +1,6 @@
 # This fixture is used to test sorting by date_cataloged
 id: 44
+uuid_ssi: 116ee5f8-9632-4ea8-b90a-7a88db9ecf64
 hashed_id_ssi: f7177163c833dff4b38fc8d2872f1ec6
 pub_date: 1907
 title_display: The Guanches of Tenerife

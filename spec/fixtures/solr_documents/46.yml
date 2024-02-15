@@ -1,5 +1,6 @@
 # This fixture is used to test sorting by date_cataloged
 id: 46
+uuid_ssi: ac36f1fe-cc40-4cac-848c-f3c847fb2ddb
 hashed_id_ssi: d9d4f495e875a2e075a1a4a6e1b9770f
 title_display: A new item to the catalog
 all_search: A new item to the catalog
