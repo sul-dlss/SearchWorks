@@ -63,23 +63,6 @@
   }
 }
 
-#content {
-  .pagination {
-    i.fa-chevron-left, i.fa-chevron-right {
-      margin: 0 3px;
-    }
-
-    li.disabled {
-      color: rgba($sul-btn-disabled-color, $sul-btn-disabled-opacity);
-    }
-  }
-
-  .active a {
-    background-color: $sul-pagination-active-bg;
-    border-color: $sul-pagination-active-bg;
-  }
-}
-
 .facets.sidenav {
   .top-panel-heading {
     border-bottom: none;
