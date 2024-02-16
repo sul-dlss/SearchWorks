@@ -5,7 +5,7 @@
   <span class="pull-right"><%= render location_request_link %></span>
 <% end %>
 <% if location.mhld.present? %>
-  <% if location.mhld.present? && location.mhld.first.latest_received %>
+  <% if location.mhld.first.latest_received %>
     <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
   <% end %>
   <% location.mhld.each do |mhld| %>
