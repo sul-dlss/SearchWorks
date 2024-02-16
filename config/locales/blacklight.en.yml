@@ -63,11 +63,11 @@ en:
       cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
       send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to'
       librarian_view: 'Librarian view'
-      find_it: '<i class="fa fa-map-marker"></i> Find it'
+      find_it_html: '<i class="fa fa-map-marker"></i> Find it'
       stackmap:
-        zoom_in: '<i class="fa fa-plus-circle"></i><span class="d-none d-sm-inline"> Zoom in</span>'
-        zoom_out: '<i class="fa fa-minus-circle"></i><span class="d-none d-sm-inline">  Zoom out</span>'
-        reset_size: '<i class="fa fa-compress"></i><span class="d-none d-sm-inline">  Reset size</span>'
+        zoom_in_html: '<i class="fa fa-plus-circle"></i><span class="d-none d-sm-inline"> Zoom in</span>'
+        zoom_out_html: '<i class="fa fa-minus-circle"></i><span class="d-none d-sm-inline">  Zoom out</span>'
+        reset_size_html: '<i class="fa fa-compress"></i><span class="d-none d-sm-inline">  Reset size</span>'
     sms:
       text:
         library_location: '%{library} - %{location}'
