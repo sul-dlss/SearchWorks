@@ -86,13 +86,6 @@ div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
       overflow-x: hidden;
     }
 
-    .navbar-nav .open .dropdown-menu > .dropdown-item {
-      color: $white;
-      &:hover, &:focus {
-        text-decoration: underline;
-      }
-    }
-
     .navbar-collapse > ul > li {
       text-align: right;
       padding-right: 40px;
