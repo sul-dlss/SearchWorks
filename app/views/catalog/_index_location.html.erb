@@ -38,12 +38,8 @@
             <% end %>
           </th>
           <td>
-            <% if location.mhld.present? %>
-              <% location.mhld.each do |mhld| %>
-                <% if mhld.latest_received.present? %>
-                  <span class='note-highlight'>Latest: <%= mhld.latest_received %></span>
-                <% end %>
-              <% end %>
+            <% if location.mhld.present? && location.mhld.first.latest_received %>
+              <span class='note-highlight'>Latest: <%= location.mhld.first.latest_received %></span>
             <% end %>
             <%= render location_request_link unless Settings.libraries[library.code]&.suppress_location_request_link %>
           </td>

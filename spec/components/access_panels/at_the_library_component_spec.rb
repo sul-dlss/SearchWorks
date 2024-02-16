@@ -271,6 +271,26 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
     end
 
+    context 'with multiple mhlds' do
+      before do
+        document = SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          ],
+          mhld_display: [
+            'GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received',
+            'GREEN -|- GRE-STACKS -|- public note -|- library has2 -|- latest received'
+          ]
+        )
+        render_inline(described_class.new(document:))
+      end
+
+      it "includes the latest received information only once" do
+        expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received", count: 1)
+      end
+    end
+
     context "with no matching library/location" do
       before do
         document = SolrDocument.new(
