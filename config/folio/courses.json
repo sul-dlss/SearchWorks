@@ -7338,6 +7338,80 @@
     }
   },
   {
+    "id": "299b71a1-13f5-4f3b-b849-4b180802106c",
+    "name": "Arts of China in the Early Modern World, 1550-1800",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "c8ae7f8c-fc0c-4f0f-8171-84ca64d0ee2d",
+    "courseListingObject": {
+      "id": "c8ae7f8c-fc0c-4f0f-8171-84ca64d0ee2d",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "c7030d07-99df-4cea-9066-e9153528f7fd",
+          "userId": "5a1fa2b5-cacb-4de2-9c0b-564e4dbc944c",
+          "name": "Richard Vinograd",
+          "barcode": "2554587626",
+          "courseListingId": "c8ae7f8c-fc0c-4f0f-8171-84ca64d0ee2d",
+          "metadata": {
+            "createdDate": "2024-02-16T02:26:41.556+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:26:41.556+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:26:10.120+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:26:10.120+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-185-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:26:10.167+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:26:10.167+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "2a196466-ab00-4f4b-a9f6-9a3ad8ff5ac3",
     "name": "Education as Self-Fashioning: Rebellious Minds",
     "departmentId": "a05d8e77-7b62-4442-81ed-f589a6c04ddc",
@@ -9335,6 +9409,80 @@
     }
   },
   {
+    "id": "346e0d1e-fc93-464c-b1a9-5fc204e4ac02",
+    "name": "Aesthetics and Phenomenology",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "c38ae7a4-3d3d-457a-b22f-912a5269d0e7",
+    "courseListingObject": {
+      "id": "c38ae7a4-3d3d-457a-b22f-912a5269d0e7",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "24c10709-c16b-4906-ba70-471ececbaca7",
+          "userId": "3222833c-2c18-4214-a3f1-93e2fac1d086",
+          "name": "Shane Denson",
+          "barcode": "2550446696",
+          "courseListingId": "c38ae7a4-3d3d-457a-b22f-912a5269d0e7",
+          "metadata": {
+            "createdDate": "2024-02-16T02:42:55.419+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:42:55.419+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:42:38.685+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:42:38.685+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-253-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:42:38.723+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:42:38.723+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "34b49f4d-d253-4fe0-9e6a-76ae9fbfe6a6",
     "name": "Modern Mathematics: Continuous Methods",
     "description": "This is the first part of a theoretical (i.e., proof-based) sequence in multivariable calculus and linear algebra, providing a unified treatment of these topics. Covers general vector spaces, linear maps and duality, eigenvalues, inner product spaces, spectral theorem, metric spaces, differentiation in Euclidean space, submanifolds of Euclidean space as local graphs, integration on Euclidean space, and many examples. The linear algebra content is covered jointly with Math 61DM.",
@@ -9548,6 +9696,80 @@
       "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
       "updatedDate": "2023-11-14T00:11:05.343+00:00",
       "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
+    "id": "360504d7-ba60-4970-8ce1-14cf10a1ace6",
+    "name": "American Photographs: A Magical History",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "18936001-2871-4639-8ce3-78b072b324f5",
+    "courseListingObject": {
+      "id": "18936001-2871-4639-8ce3-78b072b324f5",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "1394f630-6b9a-4d2e-bfd8-8d0de72f1b72",
+          "userId": "600440b3-aeef-4196-b14c-88e324a53eed",
+          "name": "Alexander Nemerov",
+          "barcode": "2556656106",
+          "courseListingId": "18936001-2871-4639-8ce3-78b072b324f5",
+          "metadata": {
+            "createdDate": "2024-02-16T02:46:04.436+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:46:04.436+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:45:20.178+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:45:20.178+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-285-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:45:20.233+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:45:20.233+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -13641,6 +13863,80 @@
     }
   },
   {
+    "id": "4613ce2e-03cf-474e-8192-c3c4863d5c1e",
+    "name": "Beauty",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "a24b4253-684d-4656-a961-8153e9afacca",
+    "courseListingObject": {
+      "id": "a24b4253-684d-4656-a961-8153e9afacca",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "a636807c-5cee-49b7-83dd-ebb8c772b53a",
+          "userId": "091de337-43b3-4f09-9e07-d3e05666e12e",
+          "name": "Marci Kwon",
+          "barcode": "2554174649",
+          "courseListingId": "a24b4253-684d-4656-a961-8153e9afacca",
+          "metadata": {
+            "createdDate": "2024-02-16T02:31:56.646+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:31:56.646+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:31:39.607+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:31:39.607+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-230-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:31:39.676+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:31:39.676+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "47006db8-77cb-48f9-882f-b122e82acb4c",
     "name": "Federal Courts",
     "departmentId": "0bbe9a7b-f94c-4300-84ed-898dbbf35310",
@@ -13997,6 +14293,80 @@
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
       "updatedDate": "2024-01-17T02:49:01.286+00:00",
       "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    }
+  },
+  {
+    "id": "4946814b-b443-48e0-bf1a-af5dc0d8bf66",
+    "name": "Fashion and Other Disasters",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "8f676e44-2255-4a1f-be7e-0bc183987abd",
+    "courseListingObject": {
+      "id": "8f676e44-2255-4a1f-be7e-0bc183987abd",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "d9422f7e-d534-4a18-b36f-28f06ed05c80",
+          "userId": "ac9d6fe3-b47b-4250-a0d6-724096f467da",
+          "name": "Emanuele Lugli",
+          "barcode": "2557865633",
+          "courseListingId": "8f676e44-2255-4a1f-be7e-0bc183987abd",
+          "metadata": {
+            "createdDate": "2024-02-16T02:28:37.142+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:28:37.142+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:27:47.269+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:27:47.269+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-218-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:27:47.318+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:27:47.318+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -21578,6 +21948,80 @@
     }
   },
   {
+    "id": "6c4ef867-7c15-40d6-966c-d308085166c1",
+    "name": "Image Technologies in the 19th Century: Reproductions, Revivals, and Revolutions",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "86f4f156-5e5b-40f9-90c6-756af24f3b80",
+    "courseListingObject": {
+      "id": "86f4f156-5e5b-40f9-90c6-756af24f3b80",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "bfc5b2e6-c673-434e-b2f8-289fc2e492f0",
+          "userId": "deef8876-0916-4a6c-9d28-44772f6d7baa",
+          "name": "Natalia Lauricella",
+          "barcode": "2551265833",
+          "courseListingId": "86f4f156-5e5b-40f9-90c6-756af24f3b80",
+          "metadata": {
+            "createdDate": "2024-02-16T02:30:24.688+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:30:24.688+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:29:57.887+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:29:57.887+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-222A-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:29:58.238+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:29:58.238+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "6c4fa2f4-f89f-4bbc-bec8-fc00d77c6a2b",
     "name": "Introduction to African Studies I: Africa in the 20th Century ",
     "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
@@ -24164,6 +24608,80 @@
       "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
       "updatedDate": "2023-12-11T21:59:33.975+00:00",
       "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    }
+  },
+  {
+    "id": "7db5efdb-b88b-42f2-b9ba-74e0f1441673",
+    "name": "Cultural Heritage and Urban Space in Cairo and Istanbul",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "b62b9794-275c-4299-a64e-5f89ef547966",
+    "courseListingObject": {
+      "id": "b62b9794-275c-4299-a64e-5f89ef547966",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "770cb991-dd45-4995-879a-5ec5b3829e2e",
+          "userId": "a9e1377a-a792-4e4d-958b-7d02a143c2cd",
+          "name": "Patricia Blessing",
+          "barcode": "2553115187",
+          "courseListingId": "b62b9794-275c-4299-a64e-5f89ef547966",
+          "metadata": {
+            "createdDate": "2024-02-16T02:41:22.656+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:41:22.656+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:40:48.702+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:40:48.702+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-250-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:40:48.793+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:40:48.793+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -29796,6 +30314,80 @@
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
       "updatedDate": "2023-12-20T23:45:06.406+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    }
+  },
+  {
+    "id": "94bb75d3-3e8a-4510-a344-19d6d7c72f53",
+    "name": "The Artist in Ancient Greek Society",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "58067f63-c554-4567-a6ec-c0d4c7c2b9f1",
+    "courseListingObject": {
+      "id": "58067f63-c554-4567-a6ec-c0d4c7c2b9f1",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "1d1e65ce-2e33-452c-929e-cf53c2c06660",
+          "userId": "f6663897-6623-4eca-9ac4-add9911c271a",
+          "name": "Jody Maxmin",
+          "barcode": "2559993652",
+          "courseListingId": "58067f63-c554-4567-a6ec-c0d4c7c2b9f1",
+          "metadata": {
+            "createdDate": "2024-02-16T02:24:11.284+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:24:11.284+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:23:24.060+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:23:24.060+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-100N-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:23:24.103+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:23:24.103+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -46852,6 +47444,81 @@
     }
   },
   {
+    "id": "e518de68-fd4c-46c6-b0eb-1a0dcbf767b1",
+    "name": "History of World Cinema III: Queer Cinemas around the World",
+    "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
+    "departmentObject": {
+      "id": "c93e4503-7bdc-4786-81bd-723faa03480c",
+      "name": "FILMEDIA - Film and Media Studies",
+      "description": "Film and Media Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.373+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.373+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "f2601882-f5d6-40bd-a123-d4fc6ad7a24c",
+    "courseListingObject": {
+      "id": "f2601882-f5d6-40bd-a123-d4fc6ad7a24c",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "327528e1-260c-45a5-993f-c4e0515ac4b9",
+          "userId": "d039a68c-766b-484b-b129-f23c0e836133",
+          "name": "Usha Iyer",
+          "barcode": "2552373010",
+          "courseListingId": "f2601882-f5d6-40bd-a123-d4fc6ad7a24c",
+          "metadata": {
+            "createdDate": "2024-02-16T02:21:32.817+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:21:32.817+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:21:04.837+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:21:04.837+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "FILMEDIA-100C-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:21:05.337+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:21:05.337+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "e5291d09-80ee-4400-a629-4e7081aa7ebf",
     "name": "The Designer in Society",
     "departmentId": "2cb0be31-80fd-4f91-8518-bd7b62f39654",
@@ -51766,6 +52433,80 @@
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
       "updatedDate": "2023-12-20T22:06:42.563+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    }
+  },
+  {
+    "id": "fce86ce2-c1f3-4242-8402-a51d3df68084",
+    "name": "Art and Power",
+    "departmentId": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+    "departmentObject": {
+      "id": "db91179f-b20c-4756-a2f8-15c3eb2eaf59",
+      "name": "ARTHIST - Art & Art History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:21.924+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:21.924+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "2df45977-4ed1-4641-b0d4-d1c14ff625b4",
+    "courseListingObject": {
+      "id": "2df45977-4ed1-4641-b0d4-d1c14ff625b4",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "cbb55a99-22e7-40e1-84ff-a7ae5a07b45d",
+          "userId": "091de337-43b3-4f09-9e07-d3e05666e12e",
+          "name": "Marci Kwon",
+          "barcode": "2554174649",
+          "courseListingId": "2df45977-4ed1-4641-b0d4-d1c14ff625b4",
+          "metadata": {
+            "createdDate": "2024-02-16T02:47:39.391+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-16T02:47:39.391+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-16T02:47:17.851+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-16T02:47:17.851+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTHIST-5-01",
+    "metadata": {
+      "createdDate": "2024-02-16T02:47:17.917+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-16T02:47:17.917+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
