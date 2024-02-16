@@ -478,6 +478,7 @@ digitalsanbornmaps.proquest.com
 digitalscholarship.unlv.edu
 digitool.hbz-nrw.de
 diglib.hab.de
+dioc.chemnetbase.com
 dip.doe-mbi.ucla.edu
 direct.mit.edu
 disastermilitarymedicine.biomedcentral.com
