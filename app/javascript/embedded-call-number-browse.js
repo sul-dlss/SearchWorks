@@ -21,12 +21,11 @@ import PreviewContent from './preview-content'
     GalleryDocs = function(item) {
       this.item = item;
       this.embedViewport = $(item.data('embed-viewport'));
-      this.startDoc = item.data('start');
       this.embedContainer = this.embedViewport.find('.gallery');
       this.url = item.data('url');
       this.browseUrl = item.data('index-path');
       this.docs = [];
-      this.currentDoc = this.startDoc;
+      this.currentDoc = item.data('start')
     };
 
     GalleryDocs.prototype.updateDocs = function() {
@@ -45,12 +44,7 @@ import PreviewContent from './preview-content'
 
     GalleryDocs.prototype.docById = function() {
       return this.embedViewport
-        .find('.gallery-document[data-doc-id="' + this.currentDoc +'"]');
-    };
-
-    // Returns the position of the $galleryDoc.currentDoc in $galleryDoc.docs
-    GalleryDocs.prototype.currentPosition = function() {
-      return $.inArray(this.currentDoc, this.docs);
+        .find(`.gallery-document[data-doc-id="${this.currentDoc}"]`)
     };
 
     // Calculates how many docs can be viewed in the viewport
