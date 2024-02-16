@@ -33,10 +33,6 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
     color: $btn-sul-toolbar-bar-color;
     border-bottom: none;
   }
-
-  &:hover, &:focus, &:active {
-    text-decoration: underline;
-  }
 }
 
 a.btn-sul-toolbar {
