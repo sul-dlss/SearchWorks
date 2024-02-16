@@ -52,9 +52,24 @@
 
 .request-button,
 .stackmap-find-it {
-  @include location-buttons;
+  background-color: $sul-location-panel-btn-background;
+  border-color: $sul-location-panel-btn-border;
+  margin-right: 5px;
+  color: $white;
 
-  .bi {
+  .fa-map-marker {
+    font-size: 1.4em;
+    margin-right: 2px;
+  }
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background-color: $sul-location-panel-btn-background-hover;
+    border-color: $sul-location-panel-btn-border-hover;
+  }
+
+  .bi { // for location request link
     margin-right: 4px;
   }
 }
