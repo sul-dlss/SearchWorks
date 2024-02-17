@@ -1349,7 +1349,6 @@ rebase.neb.com
 redalyc.uaemex.mx
 redbook.solutions.aap.org
 redivis.com
-reference.paratext.com
 referenceworks.brillonline.com
 regenmedres.biomedcentral.com
 register.sanfordguide.com
