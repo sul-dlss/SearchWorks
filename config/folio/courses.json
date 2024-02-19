@@ -33458,6 +33458,93 @@
     }
   },
   {
+    "id": "a57b88c5-e989-43f8-9c54-1f64b0664c9a",
+    "name": "Where Does it Hurt?: Medicine and Suffering in Global Context",
+    "departmentId": "d9349136-b0bd-41ed-b297-d8ee0d2b9fe0",
+    "departmentObject": {
+      "id": "d9349136-b0bd-41ed-b297-d8ee0d2b9fe0",
+      "name": "COLLEGE - Civic, Liberal, and Global Education",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:43.008+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:43.008+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "fc622ed9-fd76-42b5-804f-a691d900643e",
+    "courseListingObject": {
+      "id": "fc622ed9-fd76-42b5-804f-a691d900643e",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "aa861841-d3ac-422e-993a-1298f3544733",
+          "userId": "0cb30ad3-e5be-4c63-bad2-5948eb257834",
+          "name": "Karl Lorenz",
+          "barcode": "2552076687",
+          "courseListingId": "fc622ed9-fd76-42b5-804f-a691d900643e",
+          "metadata": {
+            "createdDate": "2024-02-19T07:13:52.519+00:00",
+            "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+            "updatedDate": "2024-02-19T07:13:52.519+00:00",
+            "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+          }
+        },
+        {
+          "id": "6a57f228-d2ed-4dc4-a2ec-a086d3d4744c",
+          "userId": "97ad80cb-11cc-48a4-b000-55aa25c461ba",
+          "name": "Nicole Martinez",
+          "barcode": "2552288001",
+          "courseListingId": "fc622ed9-fd76-42b5-804f-a691d900643e",
+          "metadata": {
+            "createdDate": "2024-02-19T07:14:37.214+00:00",
+            "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+            "updatedDate": "2024-02-19T07:14:37.214+00:00",
+            "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-19T07:13:38.237+00:00",
+        "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+        "updatedDate": "2024-02-19T07:13:38.237+00:00",
+        "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+      }
+    },
+    "courseNumber": "COLLEGE-108-01",
+    "metadata": {
+      "createdDate": "2024-02-19T07:13:38.313+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-02-19T07:13:38.313+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    }
+  },
+  {
     "id": "a5a42c96-a0b8-4920-bb96-fda227b1d3b5",
     "name": "Indigeneity and Colonialism ",
     "departmentId": "3949d3e1-1a4e-429d-9258-5163e40b7303",
