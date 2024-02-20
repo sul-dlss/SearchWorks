@@ -3,7 +3,7 @@
 <div class="documentHeader">
   <div class="callnumber-bar">
     <% if document.legacy_items.present? %>
-      <%= document.preferred_item.callnumber %><br/>
+      <%= document.preferred_legacy_item.callnumber %><br/>
       <% if document.legacy_holdings.libraries.length == 1 %>
         <%= document.legacy_holdings.libraries.first.name %>
       <% else %>

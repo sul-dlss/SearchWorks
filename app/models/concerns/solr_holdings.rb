@@ -22,8 +22,8 @@ module SolrHoldings
     @legacy_items ||= []
   end
 
-  def preferred_item
-    @preferred_item ||= begin
+  def preferred_legacy_item
+    @preferred_legacy_item ||= begin
       item = self[:preferred_barcode] && (legacy_items.reject(&:suppressed?).find do |c|
         c.barcode == self[:preferred_barcode]
       end)
@@ -32,7 +32,7 @@ module SolrHoldings
     end
   end
 
-  attr_writer :preferred_item
+  attr_writer :preferred_legacy_item
 
   def find_holding(library_code:, location:) # rubocop:disable Lint/UnusedMethodArgument
     folio_holdings.find { |holding| holding.effective_location.library.code == library_code }

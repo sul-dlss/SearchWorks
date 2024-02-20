@@ -44,7 +44,7 @@ class NearbyOnShelf
     end
 
     spines.uniq(&:spine_sort_key).uniq { |x| x.document&.id }.sort_by(&:spine_sort_key).each do |item|
-      item.document.preferred_item = item
+      item.document.preferred_legacy_item = item
     end
   end
 

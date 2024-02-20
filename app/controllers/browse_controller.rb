@@ -51,7 +51,7 @@ class BrowseController < ApplicationController
       item = if params[:barcode]
                @original_doc.legacy_items.find { |c| c.barcode&.starts_with?(params[:barcode]) }
              else
-               @original_doc.preferred_item
+               @original_doc.preferred_legacy_item
              end
 
       @items = NearbyOnShelf.around_item(
