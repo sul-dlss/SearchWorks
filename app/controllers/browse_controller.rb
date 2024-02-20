@@ -49,7 +49,7 @@ class BrowseController < ApplicationController
     else
 
       item = if params[:barcode]
-               @original_doc.items.find { |c| c.barcode&.starts_with?(params[:barcode]) }
+               @original_doc.legacy_items.find { |c| c.barcode&.starts_with?(params[:barcode]) }
              else
                @original_doc.preferred_item
              end

@@ -6,7 +6,7 @@ RSpec.describe BrowseController do
     let(:item1) { Holdings::Item.new({ barcode: '123456' }) }
     let(:item2) { Holdings::Item.new({ barcode: '109876' }) }
     # rubocop:enable RSpec/IndexedLet
-    let(:original_doc) { instance_double(SolrDocument, items: [item1, item2], preferred_item: item2) }
+    let(:original_doc) { instance_double(SolrDocument, legacy_items: [item1, item2], preferred_item: item2) }
 
     before do
       allow(controller).to receive_messages(search_service: double('search_service', fetch: [response, original_doc]), params: { start: 'xyz' }, fetch_original_document: original_doc)

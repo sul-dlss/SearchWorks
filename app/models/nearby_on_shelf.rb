@@ -39,7 +39,7 @@ class NearbyOnShelf
     end
 
     # Get only the item objects that match the shelfkeys
-    spines = response.documents.flat_map(&:items).select do |item|
+    spines = response.documents.flat_map(&:legacy_items).select do |item|
       desired_values.include?(item.send(field))
     end
 

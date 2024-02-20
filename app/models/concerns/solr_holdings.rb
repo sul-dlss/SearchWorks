@@ -1,6 +1,6 @@
 module SolrHoldings
   def legacy_holdings
-    @legacy_holdings ||= Holdings.new(items, mhld)
+    @legacy_holdings ||= Holdings.new(legacy_items, mhld)
   end
 
   def mhld
@@ -12,23 +12,23 @@ module SolrHoldings
   end
 
   # item_display_struct contains fake items for eresources and boundwiths, which is why we don't use holdings_json_struct directly
-  def items
+  def legacy_items
     return [] if self[:item_display_struct].blank?
 
-    @items ||= self[:item_display_struct]&.map do |item_display|
+    @legacy_items ||= self[:item_display_struct]&.map do |item_display|
       Holdings::Item.new(item_display, document: self)
     end&.sort_by(&:full_shelfkey)
 
-    @items ||= []
+    @legacy_items ||= []
   end
 
   def preferred_item
     @preferred_item ||= begin
-      item = self[:preferred_barcode] && (items.reject(&:suppressed?).find do |c|
+      item = self[:preferred_barcode] && (legacy_items.reject(&:suppressed?).find do |c|
         c.barcode == self[:preferred_barcode]
       end)
 
-      item || items.first
+      item || legacy_items.first
     end
   end
 

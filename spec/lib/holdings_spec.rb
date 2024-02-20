@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Holdings do
   let(:holdings) {
     Holdings.new(
-      SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).items
+      SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).legacy_items
     )
   }
   let(:complex_holdings) {
@@ -13,7 +13,7 @@ RSpec.describe Holdings do
           { barcode: 'barcode', library: 'library', home_location: 'home-location', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: 'full-shelfkey', scheme: 'LC' },
           { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', current_location: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: 'full-shelfkey2', scheme: 'INTERNET' }
         ]
-      ).items
+      ).legacy_items
     )
   }
   let(:sortable_holdings) {
@@ -23,7 +23,7 @@ RSpec.describe Holdings do
           { barcode: 'barcode', library: 'library', home_location: 'home-location', current_location: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: '999' },
           { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', current_location: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: '111' }
         ]
-      ).items
+      ).legacy_items
     )
   }
   let(:no_holdings) { Holdings.new([]) }
@@ -45,15 +45,15 @@ RSpec.describe Holdings do
   end
 
   describe "#items" do
-    it "should return an array of Holdings::Items" do
-      holdings.items.each do |item|
-        expect(item).to be_a Holdings::Item
-      end
+    it "returns an array of Holdings::Items" do
+      expect(holdings.items).to all(be_a Holdings::Item)
     end
-    it "should return an empty array if there are no holdings" do
+
+    it "returns an empty array if there are no holdings" do
       expect(no_holdings.items).to eq []
     end
-    it "should be sorted by the shelfkey" do
+
+    it "is sorted by the shelfkey" do
       expect(sortable_holdings.items.map(&:full_shelfkey)).to eq ['111', '999']
     end
   end
@@ -67,7 +67,7 @@ RSpec.describe Holdings do
             { barcode: 'barcode', library: 'library2', home_location: 'home-location' },
             { barcode: 'barcode', library: 'library', home_location: 'home-location' }
           ]
-        ).items
+        ).legacy_items
       )
     }
     let(:sortable_libraries) {
@@ -78,7 +78,7 @@ RSpec.describe Holdings do
             { barcode: 'barcode', library: 'GREEN', home_location: 'home-location' },
             { barcode: 'barcode', library: 'MARINE-BIO', home_location: 'home-location' }
           ]
-        ).items
+        ).legacy_items
       )
     }
 
