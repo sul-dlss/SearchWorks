@@ -15,6 +15,9 @@
     <% end %>
 
     <% component.with_body do %>
+      <% if (sfx_links&.any? || links.any?) && document.eresources_library_display_name %>
+        <strong> <%= document.eresources_library_display_name %> </strong>
+      <% end %>
       <% if sfx_links&.any? %>
         <% sfx_url = sfx_links.first.href %>
         <% # Intentionally not encoding sfx_url here as the URLs from the catalog appear to already be encoded %>

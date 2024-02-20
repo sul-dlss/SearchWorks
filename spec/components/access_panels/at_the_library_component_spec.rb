@@ -116,6 +116,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
+    it 'has solr document eresources_library_display_name of nil' do
+      expect(document.eresources_library_display_name).to be_nil
+    end
+
     it 'displays the MARC 590 as a bound with note (excluding subfield $c)' do
       expect(page).to have_css('.bound-with-note.note-highlight a', text: 'Copy 1 bound with v. 140')
       expect(page).to have_no_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')

@@ -120,6 +120,20 @@ class SolrDocument
     self[:img_info] || self[:file_id] || []
   end
 
+  # Checks holdings to see if there are any physical holdings
+  # If there aren't and the library isn't sul, return the library name
+  def eresources_library_display_name
+    library = holdings.libraries&.first
+    return unless library
+
+    has_physical_copies = holdings.libraries.any?(&:present?)
+    return if has_physical_copies
+
+    unless library.code == 'SUL'
+      library.name
+    end
+  end
+
   concerning :MarcOrganizationAndArrangement do
     def organization_and_arrangement
       @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
