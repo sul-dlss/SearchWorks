@@ -32,10 +32,10 @@
           <%= link.html.html_safe %><br/>
         <% end %>
       <% end %>
-      <% if document.holdings.present? %>
+      <% if document.legacy_holdings.present? %>
         <h2>At the library</h2>
         <dl>
-          <% document.holdings.libraries.each do |library| %>
+          <% document.legacy_holdings.libraries.each do |library| %>
             <% library.locations.each do |location| %>
               <dt><%= library.name %> - <%= location.name %></dt>
               <% location.items.each do |item| %>

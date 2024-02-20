@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe SolrHoldings do
   let(:document) { SolrDocument.new }
 
-  it "should provide a holdings method" do
-    expect(document).to respond_to(:holdings)
-    expect(document.holdings).to be_a Holdings
+  it "provides a legacy_holdings method" do
+    expect(document.legacy_holdings).to be_a Holdings
   end
 
   describe '#preferred_barcode' do

@@ -130,8 +130,8 @@ RSpec.describe Holdings do
       )
     }
 
-    it "should match up mhlds in locations with existing call numbers" do
-      holdings = holdings_doc.holdings
+    it "matches up mhlds in locations with existing call numbers" do
+      holdings = holdings_doc.legacy_holdings
       expect(holdings.libraries.length).to eq 1
       expect(holdings.libraries.first.code).to eq 'GREEN'
       expect(holdings.libraries.first.locations.length).to eq 1
@@ -142,8 +142,8 @@ RSpec.describe Holdings do
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end
-    it "should include mhlds that don't belong to an existing library or location" do
-      holdings = mhld_only_doc.holdings
+    it "includes mhlds that don't belong to an existing library or location" do
+      holdings = mhld_only_doc.legacy_holdings
       expect(holdings.libraries.length).to eq 1
       expect(holdings.libraries.first.code).to eq 'GREEN'
       expect(holdings.libraries.first.locations.length).to eq 1
@@ -153,13 +153,13 @@ RSpec.describe Holdings do
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end
-    it 'should return the appropriate json hash for library and location' do
-      mhld = holdings_doc.holdings.as_json.first[:mhld]
+    it 'returns the appropriate json hash for library and location' do
+      mhld = holdings_doc.legacy_holdings.as_json.first[:mhld]
       expect(mhld).to be_a Array
       expect(mhld.first).to be_a Hash
       expect(mhld.first[:library]).to eq 'GREEN'
       expect(mhld.first[:location]).to eq 'STACKS'
-      expect(holdings_doc.holdings.as_json.first[:locations].first[:mhld]).to eq mhld
+      expect(holdings_doc.legacy_holdings.as_json.first[:locations].first[:mhld]).to eq mhld
     end
   end
 

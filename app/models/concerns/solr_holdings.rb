@@ -1,6 +1,6 @@
 module SolrHoldings
-  def holdings
-    @holdings ||= Holdings.new(items, mhld)
+  def legacy_holdings
+    @legacy_holdings ||= Holdings.new(items, mhld)
   end
 
   def mhld

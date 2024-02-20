@@ -16,9 +16,9 @@
         <% if document[:vern_title_display].present? %>
           <ul class="document-metadata"><li><%= document[:vern_title_display].html_safe %></li></ul>
         <% end %>
-        <% if document.holdings.libraries.select(&:present?).any? %>
+        <% if document.legacy_holdings.libraries.select(&:present?).any? %>
           <ul class='list-unstyled'>
-            <% document.holdings.libraries.select(&:present?).each do |library| %>
+            <% document.legacy_holdings.libraries.select(&:present?).each do |library| %>
               <% library.locations.uniq(&:name).each do |location| %>
                   <% callnumber = "(no call number)" %>
                 <% if location.items.present? %>

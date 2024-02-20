@@ -4,10 +4,10 @@
   <div class="callnumber-bar">
     <% if document.items.present? %>
       <%= document.preferred_item.callnumber %><br/>
-      <% if document.holdings.libraries.length == 1 %>
-        <%= document.holdings.libraries.first.name %>
+      <% if document.legacy_holdings.libraries.length == 1 %>
+        <%= document.legacy_holdings.libraries.first.name %>
       <% else %>
-        in <%= document.holdings.libraries.length %> libraries
+        in <%= document.legacy_holdings.libraries.length %> libraries
       <% end %>
     <% elsif document.mods? %>
       <br/>Stanford Digital Repository

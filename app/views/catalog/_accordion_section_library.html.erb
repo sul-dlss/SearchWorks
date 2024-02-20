@@ -3,9 +3,9 @@
   id = document[:id]
 %>
 
-<% if document.holdings.libraries.select(&:present?).any? %>
+<% if document.legacy_holdings.libraries.select(&:present?).any? %>
   <%
-    snippet = document.holdings.libraries.select(&:present?).map(&:name).join(', ')
+    snippet = document.legacy_holdings.libraries.select(&:present?).map(&:name).join(', ')
   %>
   <div class="accordion-section location">
     <div class="snippet-wrapper">
