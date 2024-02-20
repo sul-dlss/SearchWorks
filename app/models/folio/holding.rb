@@ -8,7 +8,7 @@ module Folio
       @id = id
       @effective_location = effective_location
       @holdings_type = holdings_type
-      @bound_with_parent = bound_with_parent unless bound_with_parent.nil?
+      @bound_with_parent = bound_with_parent
     end
 
     def bound_with?

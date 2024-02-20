@@ -3,17 +3,14 @@
   id = document[:id]
 %>
 
-<% if document.legacy_holdings.libraries.select(&:present?).any? %>
-  <%
-    snippet = document.legacy_holdings.libraries.select(&:present?).map(&:name).join(', ')
-  %>
+<% if document.holdings_per_library %>
   <div class="accordion-section location">
     <div class="snippet-wrapper">
       <button class="header" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">
         <span class="section-label">Check availability</span>
       </button>
       <span class="snippet <%= id %>-location-snippet">
-        <%= snippet %>
+        <%= document.holdings_per_library.map(&:name).join(', ') %>
       </span>
     </div>
     <div class="details <%= id %>-location" aria-expanded="false">
