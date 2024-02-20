@@ -53,7 +53,9 @@ $pagination-active-bg: $sul-pagination-active-bg;
 $pagination-active-border: $sul-pagination-active-bg;
 
 // Tables
-$table-accent-bg: $light-sandstone; // background for .table-striped
+$table-cell-padding: 0.5rem;
+$table-accent-bg: $secondary; // background for .table-striped (This becomes $table-striped-color in BS 5)
+$table-caption-color: $blackish;
 
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;

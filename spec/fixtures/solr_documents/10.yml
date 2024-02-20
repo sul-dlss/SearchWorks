@@ -15,7 +15,8 @@ marc_json_struct: |
 genre_ssim:
   - Thesis/Dissertation
 item_display_struct:
-  - id: 0957c8b8-57c0-407b-a23e-ced89cf3f66e
+  - id: e75a4873-8899-5be8-8e1e-c2813e38fb04
+    instance_id: 19eba0e5-8bab-55f9-b799-092737ca0c86
     barcode: "123"
     library: GREEN
     home_location: GRE-STACKS
@@ -24,7 +25,7 @@ item_display_struct:
   - id: e3cf1a84-4cf6-49c9-87cc-d53afe6b4ead
     barcode: "456"
     library: ENG
-    home_location: GRE-STACKS
+    home_location: ENG-STACKS
     callnumber: DEF
     full_shelfkey: DEF
   - id: c10082be-e7d8-4a52-899c-e67b864eceab

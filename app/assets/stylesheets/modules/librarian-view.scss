@@ -1,8 +1,20 @@
-#marc_view .field {
-  word-break: break-all;
+.last-updated { 
+  margin-left: auto;
+  align-self: center;
+}
+.last-updated + .blacklight-modal-close {
+  margin-left: 0;
 }
 
-#folio-json-view summary {
-  @extend .h4;
-  @extend .my-3;
+#marc_view {
+  .field {
+    word-break: break-all;
+  }
+
+  .item-details {
+    caption {
+      caption-side: top;
+      background-color: $secondary;
+    }
+  }
 }

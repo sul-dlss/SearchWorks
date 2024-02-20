@@ -16,10 +16,10 @@ RSpec.describe "Brief View" do
       expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
       expect(page).to have_css("form.bookmark-toggle label.toggle-bookmark", text: "Select")
     end
-    within '[data-preview-brief-url-value="/preview/10"]' do
-      expect(page).to have_css('.brief-document ul li', text: 'Green Library : Stacks : HF1604 .G368 2024')
-      expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Current periodicals : (no call number)')
-      expect(page).to have_css('.brief-document ul li', text: 'Engineering Library (Terman) : Stacks : CBA')
+    within '[data-preview-brief-url-value="/preview/10"] .brief-document ul' do
+      expect(page).to have_css('li', text: 'SAL3 (off-campus storage) : Stacks : HF1604 .G368 2024')
+      expect(page).to have_css('li', text: 'Engineering Library (Terman) : Current periodicals : (no call number)')
+      expect(page).to have_css('li', text: 'Engineering Library (Terman) : Stacks : CBA')
     end
   end
 
