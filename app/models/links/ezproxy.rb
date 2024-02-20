@@ -53,7 +53,7 @@ class Links
     end
 
     def libraries
-      @libraries ||= document.holdings.libraries.map(&:code)
+      @libraries ||= document.legacy_holdings.libraries.map(&:code)
     end
 
     def ezproxied_hosts

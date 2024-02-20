@@ -59,7 +59,7 @@ RSpec.describe NearbyOnShelf do
     end
 
     it 'set the preferred callnumber on the document so it can be used in the view' do
-      expect(service.items('A', incl: true, per: 3).map { |x| x.document.preferred_item.shelfkey }).to eq %w[A B C]
+      expect(service.items('A', incl: true, per: 3).map { |x| x.document.link_to_callnumber_browse.shelfkey }).to eq %w[A B C]
     end
   end
 end

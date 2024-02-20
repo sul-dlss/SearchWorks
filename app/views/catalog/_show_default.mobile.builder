@@ -84,7 +84,7 @@ unless urls.nil?
 end
 xml.record_url('label' => "View Item in SearchWorks") { xml.cdata!(url_for controller: 'catalog', action: 'show', id: doc[:id], only_path: false) }
 xml.holdings {
-  doc.holdings.libraries.each do |library|
+  doc.legacy_holdings.libraries.each do |library|
     xml.library('name' => library.name) {
       library.locations.each do |location|
         xml.location('name' => location.name) {

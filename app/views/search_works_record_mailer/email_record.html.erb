@@ -14,8 +14,8 @@
         <li>
           <strong><a href="<%= polymorphic_url(document, {:only_path => false}.merge(@url_gen_params)) %>"><%= semantics[:title].join(" ") if semantics[:title].present? %></a></strong>
           <div>
-            <% if document.holdings.present? %>
-              <% document.holdings.libraries.each do |library| %>
+            <% if document.legacy_holdings.present? %>
+              <% document.legacy_holdings.libraries.each do |library| %>
                 <% library.locations.each do |location| %>
                   <ul><li><%= library.name %> - <%= location.name %>
                   <% location.items.each do |item| %>

@@ -1,6 +1,6 @@
 module SolrHoldings
-  def holdings
-    @holdings ||= Holdings.new(items, mhld)
+  def legacy_holdings
+    @legacy_holdings ||= Holdings.new(legacy_items, mhld)
   end
 
   def mhld
@@ -12,27 +12,33 @@ module SolrHoldings
   end
 
   # item_display_struct contains fake items for eresources and boundwiths, which is why we don't use holdings_json_struct directly
-  def items
+  def legacy_items
     return [] if self[:item_display_struct].blank?
 
-    @items ||= self[:item_display_struct]&.map do |item_display|
+    @legacy_items ||= self[:item_display_struct]&.map do |item_display|
       Holdings::Item.new(item_display, document: self)
     end&.sort_by(&:full_shelfkey)
 
-    @items ||= []
+    @legacy_items ||= []
   end
 
-  def preferred_item
-    @preferred_item ||= begin
-      item = self[:preferred_barcode] && (items.reject(&:suppressed?).find do |c|
+  def preferred_legacy_item
+    @preferred_legacy_item ||= begin
+      item = self[:preferred_barcode] && (legacy_items.reject(&:suppressed?).find do |c|
         c.barcode == self[:preferred_barcode]
       end)
 
-      item || items.first
+      item || legacy_items.first
     end
   end
 
-  attr_writer :preferred_item
+  attr_writer :preferred_legacy_item
+
+  # @return [Array<LibraryWithHoldings>]
+  def holdings_per_library
+    folio_holdings.group_by { |holding| holding.bound_with_parent&.holding&.dig('location', 'effectiveLocation', 'library', 'code') || holding.effective_location.code }
+      .map { |library_code, holdings| LibraryWithHoldings.new(library_code:, holdings:) }
+  end
 
   def find_holding(library_code:, location:) # rubocop:disable Lint/UnusedMethodArgument
     folio_holdings.find { |holding| holding.effective_location.library.code == library_code }

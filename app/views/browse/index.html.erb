@@ -6,9 +6,9 @@
       <h1 class="my-3">Browse related items</h1>
       <p>Starting at call number:
         <% if params[:barcode] %>
-          <%= @original_doc.holdings.find_by_barcode(params[:barcode])&.callnumber %>
+          <%= @original_doc.legacy_holdings.find_by_barcode(params[:barcode])&.callnumber %>
         <% else %>
-          <%= @original_doc.holdings.items.first.callnumber %>
+          <%= @original_doc.legacy_holdings.items.first.callnumber %>
         <% end %>
       </p>
       <p><%= link_to(document_presenter(@original_doc).heading, solr_document_path(@original_doc)) %></p>

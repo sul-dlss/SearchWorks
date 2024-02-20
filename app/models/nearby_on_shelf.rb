@@ -39,12 +39,12 @@ class NearbyOnShelf
     end
 
     # Get only the item objects that match the shelfkeys
-    spines = response.documents.flat_map(&:items).select do |item|
+    spines = response.documents.flat_map(&:legacy_items).select do |item|
       desired_values.include?(item.send(field))
     end
 
     spines.uniq(&:spine_sort_key).uniq { |x| x.document&.id }.sort_by(&:spine_sort_key).each do |item|
-      item.document.preferred_item = item
+      item.document.preferred_legacy_item = item
     end
   end
 
