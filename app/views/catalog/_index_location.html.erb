@@ -8,20 +8,7 @@
           <th scope='col' class='col-xs-6'>Status</th>
         </tr>
       </thead>
-      <% if document.respond_to?(:to_marc) && document.bound_with? %>
-        <tbody class="bound-with-note">
-          <tr>
-            <th scope='col'>
-              Some records bound together
-            </th>
-          </tr>
-          <tr>
-            <td colspan='2'>
-              <%= link_to('See full record for details', solr_document_path(document)) %>
-            </td>
-          </tr>
-        </tbody>
-      <% end %>
+
       <% library.locations.select(&:present_on_index?).each do |location| %>
         <tbody data-long-list data-list-type="location">
         <% location_request_link = LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items) %>
