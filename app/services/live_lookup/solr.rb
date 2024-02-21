@@ -59,7 +59,7 @@ class LiveLookup
           barcode: item_id,
           due_date: nil, # No due date available in the Solr document
           status:,
-          current_location: status,
+          current_location: current_location_code,
           is_available: available?
         }
       end
@@ -71,14 +71,11 @@ class LiveLookup
       end
 
       def available?
-        current_location_code != 'CHECKEDOUT' &&
-          Constants::UNAVAILABLE_LOCS.exclude?(current_location_code)
+        status == 'Available'
       end
 
       def status
-        return unless valid_current_location?
-
-        current_location.name
+        item['status']
       end
 
       def library_code
@@ -90,20 +87,7 @@ class LiveLookup
       end
 
       def current_location_code
-        item['current_location']
-      end
-
-      def valid_current_location?
-        return false if current_location_code.blank? ||
-                        current_location_code == 'CHECKEDOUT' ||
-                        current_location_same_as_home_location?
-
-        true
-      end
-
-      def current_location_same_as_home_location?
-        current_location.name == home_location.name ||
-          Constants::CURRENT_HOME_LOCS.include?(current_location_code)
+        @current_location_code ||= item['current_location']
       end
 
       def current_location

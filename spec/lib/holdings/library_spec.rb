@@ -68,14 +68,14 @@ RSpec.describe Holdings::Library do
     describe 'sorting' do
       let(:locations) { Holdings::Library.new("GREEN", items).locations }
       let(:items) { [
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'SSRC-DOCS' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'CURRENTPER' })
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'SAL-PAGE' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'GRE-CURRENTPER' })
       ] }
 
       it "sorts locations alpha by name" do
         expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
-        expect(locations.map(&:code)).to eq ["CURRENTPER", "SSRC-DOCS", "STACKS"]
+        expect(locations.map(&:code)).to eq ["GRE-CURRENTPER", "GRE-SSRC-DOCS", "SAL-PAGE"]
       end
 
       context 'when a zombie location has mhlds with nil location (hrid: a356446)' do

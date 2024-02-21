@@ -8,7 +8,7 @@ RSpec.describe "catalog/_index_location" do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' }
           ]
         )
       )
@@ -143,8 +143,8 @@ RSpec.describe "catalog/_index_location" do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
-            { barcode: '456', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 456' }
+            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' },
+            { barcode: '456', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 456' }
           ]
         )
       )
@@ -165,9 +165,9 @@ RSpec.describe "catalog/_index_location" do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '321', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+            { barcode: '321', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' }
           ],
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
         ))
         render
       end
@@ -204,7 +204,7 @@ RSpec.describe "catalog/_index_location" do
       before do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
         ))
         render
       end

@@ -6,7 +6,7 @@ RSpec.describe "MHLD", :feature do
       visit solr_document_path('10')
 
       within('[data-hours-route="/hours/ENG"]') do
-        expect(page).to have_css('.location-name', text: 'Current periodicals')
+        expect(page).to have_css('.location-name', text: 'Periodicals')
         expect(page).to have_css('.mhld', text: 'public note2')
         expect(page).to have_css('.mhld.note-highlight', text: 'Latest: latest received2')
         expect(page).to have_css('.mhld', text: 'Library has: library has2')
@@ -32,7 +32,7 @@ RSpec.describe "MHLD", :feature do
         expect(page).to have_content('Check availability')
         within('.accordion-section.location') do
           find('button.header').click
-          expect(page).to have_css('tr th strong', text: 'Current periodicals')
+          expect(page).to have_css('tr th strong', text: 'Periodicals')
           expect(page).to have_css('tr th', text: 'public note1')
           expect(page).to have_css('tr th', text: 'public note2')
           expect(page).to have_css('tr th', text: 'public note3')

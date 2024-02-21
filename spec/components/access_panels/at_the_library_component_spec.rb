@@ -143,6 +143,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
         ]
       )
+
       allow(document).to receive(:folio_items).and_return([
         instance_double(Folio::Item, id: '123', barcode: '123',
                                      effective_location: Folio::Types.cached_location_by_code('ART-LOCKED-LARGE'),
@@ -151,6 +152,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
                                      status: 'Available', material_type: book_type,
                                      loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
+
       render_inline(described_class.new(document:))
       expect(page).to have_css('.location a', text: "Request")
     end
@@ -202,35 +204,24 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   end
 
   describe "current locations" do
+    let(:book_type) do
+      Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
+    end
+
     it "is displayed" do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'STACKS', current_location: 'INPROCESS', callnumber: 'ABC 123' }
+          { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', current_location: 'null', status: 'In process', effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
         ]
       )
+
+      allow(document).to receive(:folio_items).and_return([
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'), permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'), status: 'In process', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+      ])
+
       render_inline(described_class.new(document:))
-      expect(page).to have_css('.current-location', text: 'In process')
-    end
-
-    describe "as home location" do
-      before do
-        document = SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'IC-DISPLAY', callnumber: 'ABC 123' }
-          ]
-        )
-        render_inline(described_class.new(document:))
-      end
-
-      it "should display the current location as the home location" do
-        expect(page).to have_no_css('.location-name', text: 'Stacks')
-        expect(page).to have_css('.location-name', text: 'Information Center display')
-      end
-      it "should not be displayed if the current location is a special location that gets treated like a home location" do
-        expect(page).to have_css('.current-location', text: '')
-      end
+      expect(page).to have_css('.status-text', text: 'In process')
     end
 
     describe "is reserve desk" do
@@ -295,7 +286,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       before do
         document = SolrDocument.new(
           id: '123',
-          mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
+          mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
         )
         render_inline(described_class.new(document:))
       end

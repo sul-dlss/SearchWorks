@@ -121,18 +121,6 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe 'treat_current_location_as_home_location?' do
-    it "should return true if an item's current location is in the list of locations" do
-      Constants::CURRENT_HOME_LOCS.each do |current_location|
-        expect(Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: }).treat_current_location_as_home_location?).to be_truthy
-      end
-    end
-
-    it 'should replace the home location with the current location' do
-      expect(Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'IC-DISPLAY' })).to have_attributes(home_location: 'IC-DISPLAY')
-    end
-  end
-
   describe 'public_note' do
     let(:public_note) { Holdings::Item.new({ note: '.PUBLIC. The Public Note' }) }
 
