@@ -26,7 +26,7 @@ class Holdings
 
     def suppressed?
       @item_display.values.none?(&:present?) ||
-        (item_display[:library] == 'SUL' && (internet_resource? || eresv?))
+        (item_display[:library] == 'SUL' && internet_resource?)
     end
 
     def browsable?
@@ -45,11 +45,7 @@ class Holdings
     end
 
     def library
-      if current_location_is_reserve_desk?
-        Constants::RESERVE_DESKS[current_location.code]
-      else
-        standard_or_zombie_library
-      end
+      standard_or_zombie_library
     end
 
     # @return [String]
@@ -203,18 +199,10 @@ class Holdings
       home_location == 'INTERNET' || type == 'ONLINE'
     end
 
-    def eresv?
-      current_location.code == 'E-RESV'
-    end
-
     private
 
     def standard_or_zombie_library
       item_display[:library].presence || 'ZOMBIE'
-    end
-
-    def current_location_is_reserve_desk?
-      Constants::RESERVE_DESKS.keys.include?(current_location.code)
     end
 
     def folio_item

@@ -223,19 +223,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
       expect(page).to have_css('.status-text', text: 'In process')
     end
-
-    describe "is reserve desk" do
-      it "should use the library of the owning reserve desk" do
-        document = SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '123', library: 'ART', home_location: 'STACKS', current_location: 'GREEN-RESV', callnumber: 'ABC 123' }
-          ]
-        )
-        render_inline(described_class.new(document:))
-        expect(page).to have_css('.library-location-heading-text h3', text: 'Green Library')
-      end
-    end
   end
 
   describe "mhld" do

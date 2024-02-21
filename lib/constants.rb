@@ -219,24 +219,6 @@ module Constants
                     'wde' => 'Wood -engraver',
                     'wit' => 'Witness' }
 
-  RESERVE_DESKS = {
-    'ART-RESV' => 'ART',
-    'BUS-RESV' => 'BUSINESS',
-    'E-RESV' => 'SW-E-RESV',
-    'EARTH-RESV' => 'EARTH-SCI',
-    'EAS-RESV' => 'EAST-ASIA',
-    'EDU-RESV' => 'EDUCATION',
-    'ENG-RESV' => 'ENG',
-    'GREEN-RESV' => 'GREEN',
-    'HOOV-RESV' => 'HILA',
-    'HOP-RESV' => 'HOPKINS',
-    'LAW-RESV' => 'LAW',
-    'MEDIA-RESV' => 'MEDIA-MTXT',
-    'MUSIC-RESV' => 'MUSIC',
-    'SCI-RESV' => 'SCIENCE',
-    'TANN-RESV' => 'TANNER'
-  }
-
   HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
   HIDE_1ST_IND0 = %w(541 542 561 583 590)
   CONTACT_INFO = {
