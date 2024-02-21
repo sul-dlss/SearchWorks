@@ -13,7 +13,7 @@ class Holdings
     end
 
     def name
-      return config.name unless items.any?(&:folio_item?)
+      return LibrarySettings.name(@code) unless items.any?(&:folio_item?)
 
       @name ||= begin
         folio_item = items.first(&:folio_item)
@@ -23,9 +23,7 @@ class Holdings
         # the same rules
         name = folio_item.effective_location&.library&.name if folio_item.effective_location&.details&.dig('searchworksTreatTemporaryLocationAsPermanentLocation')
         # prefer the name from the cached folio data (for consistency across records)
-        name ||= folio_item.permanent_location&.library&.name
-        # fall back on the name from the document
-        name || config.name
+        name || folio_item.permanent_location&.library&.name
       end
     end
 
@@ -77,7 +75,7 @@ class Holdings
     end
 
     def config
-      Settings.libraries[@code] || Settings.libraries.default
+      LibrarySettings.config(@code)
     end
   end
 end
