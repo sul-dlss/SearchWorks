@@ -23,10 +23,6 @@ class LocationRequestLinkPolicy
   # 1. The item is "Bound-with" in folio (determined by holdingsType.name, e.g. a86041)
   # 2. The item is a analyzed serial (determined by a SEE-OTHER folio location)
   def bound_with_or_analyzed_serial?
-    folio_bound_with_or_analyzed_serial?
-  end
-
-  def folio_bound_with_or_analyzed_serial?
     (!folio_items? && items.first.document&.folio_holdings&.any?(&:bound_with?)) ||
       (folio_items? && items.any? { |item| item.effective_location&.see_other? })
   end
