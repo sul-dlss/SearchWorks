@@ -54,7 +54,7 @@ class Holdings
     end
 
     def current_location
-      @current_location ||= Holdings::Location.new(item_display[:current_location], library_code: item_display[:library])
+      @current_location ||= Holdings::Location.new(item_display[:current_location])
     end
 
     def type

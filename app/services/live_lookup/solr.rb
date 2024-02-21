@@ -91,11 +91,11 @@ class LiveLookup
       end
 
       def current_location
-        @current_location ||= Holdings::Location.new(current_location_code, library_code:)
+        @current_location ||= Holdings::Location.new(current_location_code)
       end
 
       def home_location
-        @home_location ||= Holdings::Location.new(home_location_code, library_code:)
+        @home_location ||= Holdings::Location.new(home_location_code)
       end
     end
   end
