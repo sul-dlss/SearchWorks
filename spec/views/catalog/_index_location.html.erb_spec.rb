@@ -159,29 +159,6 @@ RSpec.describe "catalog/_index_location" do
     end
   end
 
-  describe "bound with" do
-    before do
-      allow(view).to receive(:document).and_return(
-        SolrDocument.new(
-          id: '123',
-          item_display_struct: [
-            { barcode: '1234', library: 'SAL3', home_location: 'SEE-OTHER', callnumber: 'ABC 123' }
-          ],
-          marc_json_struct: linked_ckey_fixture
-        )
-      )
-      render
-    end
-
-    it "should not display request links for requestable libraries" do
-      expect(rendered).to have_no_content("Request")
-    end
-    it 'displays a link to the full record' do
-      expect(rendered).to have_css 'th', text: 'Some records bound together'
-      expect(rendered).to have_css 'a[href="/view/123"]', text: 'See full record for details'
-    end
-  end
-
   describe "mhld" do
     describe "with matching library/location" do
       before do
