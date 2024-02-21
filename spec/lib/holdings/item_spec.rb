@@ -143,33 +143,6 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe '#as_json' do
-    let(:as_json) { Holdings::Item.new(complex_item_display).as_json }
-
-    it "should return a hash with all of the item's public reader methods" do
-      expect(as_json).to be_a Hash
-      expect(as_json[:callnumber]).to eq 'callnumber'
-    end
-
-    it 'should return an as_json hash for status' do
-      expect(as_json[:status]).to be_a Hash
-      expect(as_json[:status]).to have_key :availability_class
-      expect(as_json[:status]).to have_key :status_text
-    end
-
-    it 'should return an as_json hash for current_location' do
-      expect(as_json[:current_location]).to be_a Hash
-      expect(as_json[:current_location]).to have_key :code
-      expect(as_json[:current_location]).to have_key :name
-    end
-
-    it 'should return an as_json hash for temporary_location' do
-      expect(as_json[:temporary_location]).to be_a Hash
-      expect(as_json[:temporary_location]).to have_key :code
-      expect(as_json[:temporary_location]).to have_key :name
-    end
-  end
-
   context 'with data from FOLIO' do
     let(:folio_item) {
       Folio::Item.from_dynamic({

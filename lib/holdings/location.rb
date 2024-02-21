@@ -48,15 +48,6 @@ class Holdings
       name || @code
     end
 
-    def as_json
-      {
-        code:,
-        items: items.reject(&:suppressed?).map(&:as_json),
-        mhld: mhld&.select(&:present?)&.map(&:as_json),
-        name:
-      }
-    end
-
     private
 
     def any_items?

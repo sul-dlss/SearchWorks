@@ -30,16 +30,6 @@ class Holdings
       sanitize_mhld_data(@mhld_display[4])
     end
 
-    def as_json
-      {
-        library:,
-        location:,
-        public_note:,
-        library_has:,
-        latest_received:
-      }
-    end
-
     private
 
     def standard_or_zombie_library
