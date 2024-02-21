@@ -60,18 +60,6 @@ class Holdings
 
     private
 
-    def library
-      if any_items?
-        items.first.library
-      elsif any_mhlds?
-        mhld.first.library
-      end
-    end
-
-    def sanitized_library
-      library.downcase.gsub('-', '_') if library
-    end
-
     def any_items?
       items.reject(&:suppressed?).any?
     end
