@@ -1511,6 +1511,93 @@
     }
   },
   {
+    "id": "07b0d1fc-8a6f-42de-b461-0dff26e1d5aa",
+    "name": " Medical Humanities Publication: A Writing & Editorial Workshop",
+    "departmentId": "c47cebd6-bc0f-45be-abdb-5019bae3cfc9",
+    "departmentObject": {
+      "id": "c47cebd6-bc0f-45be-abdb-5019bae3cfc9",
+      "name": "PSYC - Psychiatry",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:34.493+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:34.493+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "a6c472fb-577b-4af7-b4eb-0baa390af6a6",
+    "courseListingObject": {
+      "id": "a6c472fb-577b-4af7-b4eb-0baa390af6a6",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "dc0fbb21-fbcb-4ada-995b-18ed50bad3d3",
+          "userId": "b2b8bffc-40ee-4878-9245-8f6637f13b60",
+          "name": "Tayyeba Ali",
+          "barcode": "2556831565",
+          "courseListingId": "a6c472fb-577b-4af7-b4eb-0baa390af6a6",
+          "metadata": {
+            "createdDate": "2024-02-21T00:20:59.571+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-21T00:20:59.571+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        },
+        {
+          "id": "7b4a9fdb-253e-4865-806d-c710e1549af4",
+          "userId": "72c62a23-5334-487e-af1f-ad57454d0134",
+          "name": "Jennifer Pien",
+          "barcode": "2550585907",
+          "courseListingId": "a6c472fb-577b-4af7-b4eb-0baa390af6a6",
+          "metadata": {
+            "createdDate": "2024-02-21T00:21:15.494+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-21T00:21:15.494+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T00:20:14.399+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-21T00:20:14.399+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "PSYC-288-01",
+    "metadata": {
+      "createdDate": "2024-02-21T00:20:14.638+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-21T00:20:14.638+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "07c91cce-5227-4228-83a1-e3e7bca6d093",
     "name": "Neurology Core Clerkship",
     "description": "The Neurology Core Clerkship is designed to train students in the systematic, logical approach to clinical neurology via the comprehension and application of the neurologic history and physical exam in the evaluation and management of neurological diseases.",
@@ -8538,6 +8625,80 @@
       "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
       "updatedDate": "2023-11-03T04:09:15.097+00:00",
       "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    }
+  },
+  {
+    "id": "2e92c267-e741-4866-9cbf-f309c39e9b62",
+    "name": "Zionism and the Novel",
+    "departmentId": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+    "departmentObject": {
+      "id": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+      "name": "COMPLIT - Comparative Literature",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:43.299+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:43.299+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+    "courseListingObject": {
+      "id": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "7c757def-ce68-4656-a5bc-0d182cf7bb7a",
+          "userId": "0b332d51-bee2-4cac-8ff0-4d7feb072e9a",
+          "name": "Russell Berman",
+          "barcode": "2554569402",
+          "courseListingId": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+          "metadata": {
+            "createdDate": "2024-02-21T02:08:15.010+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-21T02:08:15.010+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T02:07:30.037+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-21T02:08:01.187+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "COMPLIT-37Q-01",
+    "metadata": {
+      "createdDate": "2024-02-21T02:07:30.190+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-21T02:07:30.190+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -15609,6 +15770,81 @@
     }
   },
   {
+    "id": "4f3806a4-2f15-4e7a-9319-a7942182790b",
+    "name": "Japan in the Age of the Samurai",
+    "departmentId": "7c04c11d-37d7-47db-8b59-e89774c75971",
+    "departmentObject": {
+      "id": "7c04c11d-37d7-47db-8b59-e89774c75971",
+      "name": "Spiritual Care Service",
+      "description": "Clinical Pastoral Education",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:20.998+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:20.998+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "bbad95d3-a1b2-4e11-b21a-17a08a460a5b",
+    "courseListingObject": {
+      "id": "bbad95d3-a1b2-4e11-b21a-17a08a460a5b",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "4917c5e0-55f8-4302-9326-3caf47bcec22",
+          "userId": "eb3e231e-bdb0-4cbd-8e9f-1688414bb6d1",
+          "name": "Karen Wigen",
+          "barcode": "2559881100",
+          "courseListingId": "bbad95d3-a1b2-4e11-b21a-17a08a460a5b",
+          "metadata": {
+            "createdDate": "2024-02-21T02:53:59.969+00:00",
+            "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+            "updatedDate": "2024-02-21T02:53:59.969+00:00",
+            "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T02:53:33.014+00:00",
+        "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+        "updatedDate": "2024-02-21T02:53:33.014+00:00",
+        "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+      }
+    },
+    "courseNumber": "HISTORY-194B",
+    "metadata": {
+      "createdDate": "2024-02-21T02:53:33.060+00:00",
+      "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+      "updatedDate": "2024-02-21T02:53:33.060+00:00",
+      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+    }
+  },
+  {
     "id": "502b6509-2699-4576-bcbf-2d68b9ff1830",
     "name": "Philosophy and Literature",
     "departmentId": "4451706a-bb96-4b19-8492-0acc6b36c472",
@@ -15693,6 +15929,93 @@
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
       "updatedDate": "2023-08-29T20:25:15.756+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
+    "id": "5093cf4b-c2ad-41c9-a863-70fde5c4d2a9",
+    "name": "World History: Graduate Colloquium",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "528bc4d1-8689-4300-b236-6eed1a6ea699",
+    "courseListingObject": {
+      "id": "528bc4d1-8689-4300-b236-6eed1a6ea699",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "be98e775-f769-484c-befb-938d1975870d",
+          "userId": "eb3e231e-bdb0-4cbd-8e9f-1688414bb6d1",
+          "name": "Karen Wigen",
+          "barcode": "2559881100",
+          "courseListingId": "528bc4d1-8689-4300-b236-6eed1a6ea699",
+          "metadata": {
+            "createdDate": "2024-02-21T02:49:49.212+00:00",
+            "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+            "updatedDate": "2024-02-21T02:49:49.212+00:00",
+            "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+          }
+        },
+        {
+          "id": "bf14bda6-8cd3-49a0-b33a-cd59450bff15",
+          "userId": "97b5ab24-de83-4234-a2c5-53e040d6071c",
+          "name": "Parthapratim Shil",
+          "barcode": "2552134883",
+          "courseListingId": "528bc4d1-8689-4300-b236-6eed1a6ea699",
+          "metadata": {
+            "createdDate": "2024-02-21T06:04:54.683+00:00",
+            "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+            "updatedDate": "2024-02-21T06:04:54.683+00:00",
+            "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T02:49:20.190+00:00",
+        "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+        "updatedDate": "2024-02-21T02:49:20.190+00:00",
+        "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+      }
+    },
+    "courseNumber": "HISTORY-306D",
+    "metadata": {
+      "createdDate": "2024-02-21T02:49:20.282+00:00",
+      "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+      "updatedDate": "2024-02-21T02:49:20.282+00:00",
+      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
     }
   },
   {
@@ -44108,6 +44431,81 @@
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
       "updatedDate": "2023-09-26T16:22:02.960+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    }
+  },
+  {
+    "id": "d680c80f-0bc2-4a82-a8c6-5a4b30caec6d",
+    "name": "Zionism and the Novel",
+    "departmentId": "ba66e04a-8610-4039-89f0-ef85eb545449",
+    "departmentObject": {
+      "id": "ba66e04a-8610-4039-89f0-ef85eb545449",
+      "name": "JEWISHST - Jewish Studies",
+      "description": "Jewish Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:35.416+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:35.416+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+    "courseListingObject": {
+      "id": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "7c757def-ce68-4656-a5bc-0d182cf7bb7a",
+          "userId": "0b332d51-bee2-4cac-8ff0-4d7feb072e9a",
+          "name": "Russell Berman",
+          "barcode": "2554569402",
+          "courseListingId": "28f47c4f-5468-4587-812e-cdf76ab99cc6",
+          "metadata": {
+            "createdDate": "2024-02-21T02:08:15.010+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-21T02:08:15.010+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T02:07:30.037+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-21T02:08:01.187+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "JEWISHST-37Q-01",
+    "metadata": {
+      "createdDate": "2024-02-21T02:08:01.153+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-21T02:08:01.153+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
