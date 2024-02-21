@@ -2,7 +2,7 @@
 #  Simple module to mixin BoundWithNote behavior
 ###
 module MarcBoundWithNote
-  def bound_with?
+  def bound_with_note?
     bound_with_note_for_access_panel.present?
   end
 
