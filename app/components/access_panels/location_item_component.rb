@@ -3,8 +3,6 @@ module AccessPanels
     with_collection_parameter :item
     attr_reader :item, :document, :classes
 
-    delegate :item_display, :internet_resource?, :eresv?, :bound_with?, to: :item
-
     def initialize(item:, document:, classes: nil, render_item_level_request_link: true, render_item_note: true)
       super
 
