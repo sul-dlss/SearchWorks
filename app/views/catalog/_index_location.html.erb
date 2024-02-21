@@ -8,7 +8,7 @@
           <th scope='col' class='col-xs-6'>Status</th>
         </tr>
       </thead>
-      <% if document.respond_to?(:to_marc) && document.bound_with_note? %>
+      <% if document.items.any?(&:bound_with?) %>
         <tbody class="bound-with-note">
           <tr>
             <th scope='col'>
