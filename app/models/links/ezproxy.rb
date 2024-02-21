@@ -42,7 +42,7 @@ class Links
     end
 
     def apply_lane_proxy_prefix?
-      (libraries.include?('LANE') || libraries.include?('LANE-MED')) &&
+      libraries.include?('LANE') &&
         ezproxied_hosts['LANE'].any?(link_host) &&
         lane_restricted?
     end

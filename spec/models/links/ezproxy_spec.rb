@@ -93,7 +93,7 @@ RSpec.describe Links::Ezproxy do
 
     context 'LANE record' do
       let(:document) do
-        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }] })
+        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LANE' }] })
       end
 
       context 'with a url matching a LANE proxied host' do

@@ -153,7 +153,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Access restricted to Stanford community' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
           )
         end
 
@@ -166,7 +166,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
           )
         end
 
@@ -233,7 +233,7 @@ RSpec.describe IndexLinks do
         end
       end
 
-      context 'a url that matches a LANE-MED ezproxy host for a SUL item' do
+      context 'a url that matches a LANE ezproxy host for a SUL item' do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://who.int/whatever",
@@ -256,7 +256,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE-MED' }]
+            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
           )
         end
 
