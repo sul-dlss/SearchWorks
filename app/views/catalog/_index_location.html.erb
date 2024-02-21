@@ -24,7 +24,7 @@
       <% end %>
       <% library.locations.select(&:present_on_index?).each do |location| %>
         <tbody data-long-list data-list-type="location">
-        <% location_request_link = LocationRequestLinkComponent.for(document: document, library: library.code, location: location.code, items: location.items) %>
+        <% location_request_link = LocationRequestLinkComponent.for(document: document, library_code: library.code, location: location) %>
         <tr class="location-info">
           <th scope="col">
             <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: '' } %>

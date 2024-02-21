@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe LocationRequestLinkPolicy do
-  subject(:policy) { described_class.new(location:, library:, items:) }
+  subject(:policy) { described_class.new(location:, library_code:) }
 
-  let(:library) { 'HILA' }
-  let(:location) { 'STACKS' }
+  let(:library_code) { 'HILA' }
+  let(:location) { instance_double(Holdings::Location, code: 'STACKS', items:) }
 
   describe '#show?' do
     subject { policy.show? }
@@ -36,7 +36,7 @@ RSpec.describe LocationRequestLinkPolicy do
     end
 
     context 'when there is a SPEC-COLL in-process location in folio' do
-      let(:library) { 'SPEC-COLL' }
+      let(:library_code) { 'SPEC-COLL' }
       let(:items) { [instance_double(Holdings::Item, folio_item?: true, folio_status: 'In process (non-requestable)', effective_location:)] }
       let(:effective_location) do
         Folio::Location.from_dynamic(

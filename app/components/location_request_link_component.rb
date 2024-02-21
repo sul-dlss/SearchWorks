@@ -1,11 +1,11 @@
 class LocationRequestLinkComponent < ViewComponent::Base
-  attr_reader :document, :library, :location, :items, :link_params
+  attr_reader :document, :library_code, :location, :link_params
 
   # @params [SolrDocument] document
-  # @params [String] library the code for the library with the holdings
-  # @params [String] location the code for location with the holdings
-  def self.for(document:, library:, location:, **kwargs)
-    link_type = case library
+  # @params [String] library_code the code for the library with the holdings
+  # @params [Holdings::Location] location the location with the holdings
+  def self.for(document:, library_code:, location:, **kwargs)
+    link_type = case library_code
                 when 'HILA'
                   if document&.index_links&.finding_aid&.first&.href
                     RequestLinks::HooverArchiveRequestLinkComponent
@@ -16,16 +16,15 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   LocationRequestLinkComponent
                 end
 
-    link_type.new(document:, library:, location:, **kwargs)
+    link_type.new(document:, library_code:, location:, **kwargs)
   end
 
-  def initialize(document:, library:, location:, items: [], classes: %w[btn btn-xs request-button], **link_params)
+  def initialize(document:, library_code:, location:, classes: %w[btn btn-xs request-button], **link_params)
     super
 
     @document = document
-    @library = library
+    @library_code = library_code
     @location = location
-    @items = items
 
     @classes = classes
     @link_params = link_params
@@ -50,14 +49,14 @@ class LocationRequestLinkComponent < ViewComponent::Base
   private
 
   def policy
-    @policy ||= LocationRequestLinkPolicy.new(location:, library:, items:)
+    @policy ||= LocationRequestLinkPolicy.new(location:, library_code:)
   end
 
   def link_href
     helpers.request_url(
-      @document,
-      library: @library,
-      location: @location
+      document,
+      library: library_code,
+      location: location.code
     )
   end
 
@@ -69,7 +68,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     return I18n.t('searchworks.request_link.finding_aid') if has_finding_aid? && policy.aeon_pageable?
     return I18n.t('searchworks.request_link.aeon') if policy.aeon_pageable?
 
-    t("searchworks.request_link.#{@library}", default: [:'searchworks.request_link.default'])
+    t("searchworks.request_link.#{library_code}", default: [:'searchworks.request_link.default'])
   end
 
   delegate :has_finding_aid?, to: :document

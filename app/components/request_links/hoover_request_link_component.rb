@@ -11,7 +11,7 @@ module RequestLinks
     end
 
     def link_href
-      HooverOpenUrlRequest.new(library, document).to_url
+      HooverOpenUrlRequest.new(library_code, document).to_url
     end
 
     def link_params

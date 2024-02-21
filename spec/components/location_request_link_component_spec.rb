@@ -3,18 +3,18 @@ require 'rails_helper'
 RSpec.describe LocationRequestLinkComponent, type: :component do
   include MarcMetadataFixtures
 
-  subject(:component) { described_class.for(document:, library:, location:, items:) }
+  subject(:component) { described_class.for(document:, library_code:, location:) }
 
   let(:document) { SolrDocument.new(id: '12345') }
-  let(:library) { 'GREEN' }
-  let(:location) { 'LOCKED-STK' }
+  let(:library_code) { 'GREEN' }
+  let(:location) { instance_double(Holdings::Location, code: 'GRE-LOCKED-STK', items:) }
   let(:items) { [instance_double(Holdings::Item, current_location: instance_double(Holdings::Location, code: nil), circulates?: true, folio_item?: false, document:)] }
 
   let(:page) { render_inline(component) }
 
   context 'for FOLIO items' do
-    let(:library) { 'SAL3' }
-    let(:location) { 'STACKS' }
+    let(:library_code) { 'SAL3' }
+    let(:location) { instance_double(Holdings::Location, code: 'SAL3-STACKS', items:) }
 
     let(:items) { [instance_double(Holdings::Item, folio_item?: true, allowed_request_types:, effective_location:, permanent_location:, folio_status:)] }
     let(:folio_status) { 'Available' }
@@ -49,12 +49,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=STACKS' }
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=SAL3-STACKS' }
     end
 
     context 'in a mediated location' do
-      let(:library) { 'SAL3' }
-      let(:location) { 'PAGE-MP' }
+      let(:library_code) { 'SAL3' }
+      let(:location) { instance_double(Holdings::Location, code: 'SAL3-PAGE-MP', items:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -81,12 +81,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=PAGE-MP' }
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=SAL3-PAGE-MP' }
     end
 
     context 'in an Aeon location' do
-      let(:library) { 'SPEC-COLL' }
-      let(:location) { 'MANUSCRIPT' }
+      let(:library_code) { 'SPEC-COLL' }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -113,12 +113,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
     context 'in an Aeon permanent location, but with a temporary location somewhere else' do
-      let(:library) { 'SPEC-COLL' }
-      let(:location) { 'MANUSCRIPT' }
+      let(:library_code) { 'SPEC-COLL' }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
 
       let(:permanent_location) do
         Folio::Location.from_dynamic(
@@ -169,7 +169,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
                                      })
       end
 
-      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
     context 'in an Aeon location with a finding aid' do
@@ -180,8 +180,8 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      let(:library) { 'SPEC-COLL' }
-      let(:location) { 'MANUSCRIPT' }
+      let(:library_code) { 'SPEC-COLL' }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -208,12 +208,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=MANUSCRIPT' }
+      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
     context 'in a non-pageable location' do
-      let(:library) { 'GREEN' }
-      let(:location) { 'STACKS' }
+      let(:library_code) { 'GREEN' }
+      let(:location) { instance_double(Holdings::Location, code: 'GRE-STACKS', items:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -244,7 +244,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     end
 
     context 'with special collection item' do
-      let(:library) { 'SPEC-COLL' }
+      let(:library_code) { 'SPEC-COLL' }
       let(:effective_location) do
         Folio::Location.from_dynamic(
           {
