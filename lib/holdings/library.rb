@@ -1,15 +1,19 @@
 class Holdings
   class Library
-    attr_reader :code, :items, :mhld
+    attr_reader :code, :items, :mhld, :folio_holdings, :folio_items
 
     delegate :about_url, to: :config
 
     # @params [String] code the library code (e.g. 'GREEN')
     # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
-    def initialize(code, items = [], mhld = [])
+    # @params [Array<Folio::Holding>] folio_holdings ([]) a list of holdings from Folio.
+    # @params [Array<Folio::Item>] folio_items ([]) a list of items from Folio.
+    def initialize(code, items = [], mhld = [], folio_holdings = [], folio_items = []) # rubocop:disable Metrics/ParameterLists
       @code = code
       @items = items
       @mhld = mhld
+      @folio_holdings = folio_holdings
+      @folio_items = folio_items
     end
 
     def name
@@ -33,14 +37,17 @@ class Holdings
     def locations
       unless @locations
         @locations = @items.group_by do |item|
-          # Group by display labels if they are the same. (e.g. both MSS-30 (SPEC-SAL3-MSS) and MANUSCRIPT (SPEC-MANUSCRIPT) translate to "Manuscript Collection")
+          # Group by display labels if they are the same. (e.g. both SPEC-SAL3-MSS and SPEC-MANUSCRIPT translate to "Manuscript Collection")
           Folio::Locations.label(code: item.home_location) || item.home_location
         end.map do |_, items|
           location_code = items.first.home_location
           mhlds = mhld.select { |x| x.location == location_code }
-          Holdings::Location.new(location_code, items, mhlds)
+          selected_holdings = folio_holdings.select { |folio_holding| folio_holding.effective_location.code == location_code }
+          selected_items = folio_items.select { |folio_item| folio_item.effective_location.code == location_code }
+          Holdings::Location.new(location_code, items, mhlds, selected_holdings, selected_items)
         end
 
+        # Find the MHLDs that are for a location that has no items.
         @locations += mhld.reject { |x| @locations.map(&:code).include? x.location }.group_by(&:location).map do |location_code, mhlds|
           Holdings::Location.new(location_code, [], mhlds)
         end

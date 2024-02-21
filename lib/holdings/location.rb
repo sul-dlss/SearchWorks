@@ -1,14 +1,17 @@
 class Holdings
   class Location
-    attr_reader :code, :items, :mhld
+    attr_reader :code, :items, :mhld, :folio_holdings, :folio_items
 
     # @params [String] code the location code (e.g. 'GRE-STACKS')
-    # @params [Array<Holdings::Item>] items ([]) a list of items at this location.
-    # @params [Array<Holdings::MHLD>] mhld ([]) a list of mhlds at this location.
-    def initialize(code, items = [], mhld = [])
+    # @params [Array<Holdings::Item>] items ([]) a list of items at this library.
+    # @params [Array<Folio::Holding>] folio_holdings ([]) a list of holdings from Folio.
+    # @params [Array<Folio::Item>] folio_items ([]) a list of items from Folio.
+    def initialize(code, items = [], mhld = [], folio_holdings = [], folio_items = []) # rubocop:disable Metrics/ParameterLists
       @code = code
       @items = items.sort_by(&:full_shelfkey)
       @mhld = mhld
+      @folio_holdings = folio_holdings
+      @folio_items = folio_items
     end
 
     def name
