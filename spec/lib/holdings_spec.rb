@@ -26,20 +26,14 @@ RSpec.describe Holdings do
       ).items
     )
   }
-  let(:no_holdings) { Holdings.new([]) }
+  let(:no_holdings) { Holdings.new }
 
   describe "#present?" do
-    let(:blank_callnumber) {
-      Holdings.new([])
-    }
-
-    it "should return false if there are no holdings" do
+    it "is false if there are no holdings" do
       expect(no_holdings).not_to be_present
     end
-    it "should return false if an item's call number is blank" do
-      expect(blank_callnumber).not_to be_present
-    end
-    it "should return true if there are items in a viewable library" do
+
+    it "is true if there are items in a viewable library" do
       expect(complex_holdings).to be_present
     end
   end
