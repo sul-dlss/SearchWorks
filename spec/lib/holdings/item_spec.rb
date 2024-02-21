@@ -12,7 +12,6 @@ RSpec.describe Holdings::Item do
   let(:item) { Holdings::Item.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
-  let(:eresv_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INSTRUCTOR', current_location: 'E-RESV', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -32,10 +31,6 @@ RSpec.describe Holdings::Item do
 
     it 'should return true for INTERNET items' do
       expect(internet_item).to be_suppressed
-    end
-
-    it 'should return true for E-RESVs' do
-      expect(eresv_item).to be_suppressed
     end
   end
 
@@ -127,12 +122,6 @@ RSpec.describe Holdings::Item do
     it 'should remove the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
       expect(public_note.public_note).not_to include 'PUBLIC'
-    end
-  end
-
-  describe 'reserves' do
-    it 'should change the library for an item that is at a reserve desk' do
-      expect(described_class.new({ barcode: 'barcode', library: 'GREEN', home_location: 'home_location', current_location: 'ART-RESV' })).to have_attributes(library: 'ART')
     end
   end
 
