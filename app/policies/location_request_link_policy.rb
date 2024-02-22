@@ -13,7 +13,9 @@ class LocationRequestLinkPolicy
   end
 
   def aeon_pageable?
-    folio_aeon_pageable? if folio_items?
+    return false if !folio_items? || folio_permanent_locations.none?
+
+    folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
   end
 
   private
@@ -36,7 +38,7 @@ class LocationRequestLinkPolicy
 
     !folio_disabled_status_location? &&
       (folio_mediated_pageable? ||
-        folio_aeon_pageable? ||
+        aeon_pageable? ||
           folio_item_pageable?)
   end
 
@@ -54,12 +56,6 @@ class LocationRequestLinkPolicy
     return false unless folio_items? && folio_permanent_locations.any?
 
     folio_permanent_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
-  end
-
-  def folio_aeon_pageable?
-    return false unless folio_items? && folio_permanent_locations.any?
-
-    folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
   end
 
   def folio_item_pageable?
