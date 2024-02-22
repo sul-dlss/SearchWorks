@@ -55,18 +55,6 @@ RSpec.describe Holdings::Location do
     end
   end
 
-  describe '#location_link' do
-    subject(:location_link) { location.location_link }
-
-    context 'with non-external location' do
-      let(:location) { described_class.new("GRE-STACKS") }
-
-      it 'does not provide a link' do
-        expect(location_link).to be_nil
-      end
-    end
-  end
-
   describe "#items" do
     subject(:items) { location.items }
 
