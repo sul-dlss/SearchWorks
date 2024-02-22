@@ -14605,6 +14605,81 @@
     }
   },
   {
+    "id": "4a4adafe-bbcc-4499-827b-e26d64671538",
+    "name": "Art Book Object",
+    "departmentId": "a9c345d9-5a71-4bf1-a129-2943183413c8",
+    "departmentObject": {
+      "id": "a9c345d9-5a71-4bf1-a129-2943183413c8",
+      "name": "ARTSTUDI - Art Studio",
+      "description": "Art Practice ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.547+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.547+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "f6792fff-bd45-4296-b08b-73edd7c49fb3",
+    "courseListingObject": {
+      "id": "f6792fff-bd45-4296-b08b-73edd7c49fb3",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "619d36fa-c39b-475e-99d1-3b11172deaea",
+          "userId": "445f7b92-3f3c-4230-8efd-386f424dbdaf",
+          "name": "Gail Wight",
+          "barcode": "2557715610",
+          "courseListingId": "f6792fff-bd45-4296-b08b-73edd7c49fb3",
+          "metadata": {
+            "createdDate": "2024-02-21T21:34:45.264+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-21T21:34:45.264+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:34:31.345+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:34:31.345+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTSTUDI-147-01 ",
+    "metadata": {
+      "createdDate": "2024-02-21T21:34:31.623+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:34:31.623+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "4a822b6c-cdf1-4877-abc3-a3bfa3c23f7d",
     "name": "Ethnofuturist Rhetorics: Imagining the Future of Race",
     "departmentId": "94cb5997-709e-4b42-bc1f-0566d2d072c0",
@@ -19345,29 +19420,29 @@
           "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
         ]
       },
-      "termId": "d5d04559-a7b1-4e4b-a95d-995e0be98b61",
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
       "termObject": {
-        "id": "d5d04559-a7b1-4e4b-a95d-995e0be98b61",
-        "name": "Fall Quarter 2023",
-        "startDate": "2023-09-18T07:00:00.000Z",
-        "endDate": "2023-12-15T08:00:00.000Z"
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
       },
-      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
       "courseTypeObject": {
-        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
-        "name": "In Person- Hybrid"
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
       },
       "instructorObjects": [
         {
-          "id": "ea7b36ae-848d-4e5b-9d56-8e955c7db958",
-          "userId": "3e375744-0fe2-4382-9f8d-460628c3239a",
-          "name": "Camille Utterback",
-          "barcode": "2550036434",
+          "id": "09f694de-2875-4d02-8e9e-6f740a040d3c",
+          "userId": "445f7b92-3f3c-4230-8efd-386f424dbdaf",
+          "name": "Gail Wight",
+          "barcode": "2557715610",
           "courseListingId": "6706a2e4-f59e-4a45-97d4-875bb68abaf2",
           "metadata": {
-            "createdDate": "2023-09-22T19:27:49.121+00:00",
+            "createdDate": "2024-02-21T21:38:27.974+00:00",
             "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
-            "updatedDate": "2023-09-22T19:27:49.121+00:00",
+            "updatedDate": "2024-02-21T21:38:27.974+00:00",
             "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
           }
         }
@@ -19375,15 +19450,15 @@
       "metadata": {
         "createdDate": "2023-09-22T19:27:12.989+00:00",
         "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
-        "updatedDate": "2023-09-25T21:26:52.843+00:00",
+        "updatedDate": "2024-02-21T21:38:09.158+00:00",
         "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
       }
     },
-    "courseNumber": "ARTSTUDI 148P",
+    "courseNumber": "ARTSTUDI-148P-01",
     "metadata": {
       "createdDate": "2023-09-22T19:27:13.035+00:00",
       "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
-      "updatedDate": "2023-09-22T19:27:13.035+00:00",
+      "updatedDate": "2024-02-21T21:38:09.073+00:00",
       "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
@@ -20031,6 +20106,69 @@
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
       "updatedDate": "2024-01-09T21:42:34.940+00:00",
       "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    }
+  },
+  {
+    "id": "619955b5-df01-461e-8e74-e86d7c90621f",
+    "name": "Introduction to Lithography",
+    "departmentId": "a9c345d9-5a71-4bf1-a129-2943183413c8",
+    "departmentObject": {
+      "id": "a9c345d9-5a71-4bf1-a129-2943183413c8",
+      "name": "ARTSTUDI - Art Studio",
+      "description": "Art Practice ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.547+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.547+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "dc00101e-ac4c-4cbc-b1eb-053ed7122247",
+    "courseListingObject": {
+      "id": "dc00101e-ac4c-4cbc-b1eb-053ed7122247",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:36:09.352+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:36:09.352+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "ARTSTUDI-148A-01",
+    "metadata": {
+      "createdDate": "2024-02-21T21:36:09.408+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:36:09.408+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -23887,6 +24025,81 @@
     }
   },
   {
+    "id": "776304bb-98a0-444d-90f3-e8cbcfe6b79a",
+    "name": "Theories of the Moving Image: The Technologically Mediated Image",
+    "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
+    "departmentObject": {
+      "id": "c93e4503-7bdc-4786-81bd-723faa03480c",
+      "name": "FILMEDIA - Film and Media Studies",
+      "description": "Film and Media Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.373+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.373+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "76b9e394-6bec-4aa9-869b-daa26fcbbf54",
+    "courseListingObject": {
+      "id": "76b9e394-6bec-4aa9-869b-daa26fcbbf54",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "5a79c86e-cfee-4552-8973-f94aa48a190b",
+          "userId": "db39df6e-911e-4fd9-a7e0-6164ebf70b40",
+          "name": "Delaney Holton",
+          "barcode": "2550768720",
+          "courseListingId": "76b9e394-6bec-4aa9-869b-daa26fcbbf54",
+          "metadata": {
+            "createdDate": "2024-02-21T21:45:54.256+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-21T21:45:54.256+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:45:20.805+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:45:20.805+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "FILMEDIA-102-01",
+    "metadata": {
+      "createdDate": "2024-02-21T21:45:20.849+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:45:20.849+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "7789cff3-a4d9-4738-b4ec-39fb56d5af82",
     "name": "Mechanics of Fluids",
     "departmentId": "07d6f72f-7794-41f7-a82a-6be3bceac17d",
@@ -27128,6 +27341,81 @@
       "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
       "updatedDate": "2023-09-27T06:02:15.486+00:00",
       "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+    }
+  },
+  {
+    "id": "89ab94a9-acd4-40de-8550-82981147167d",
+    "name": "Superhero Theory",
+    "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
+    "departmentObject": {
+      "id": "c93e4503-7bdc-4786-81bd-723faa03480c",
+      "name": "FILMEDIA - Film and Media Studies",
+      "description": "Film and Media Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.373+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.373+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "422a753c-7cf7-4ede-8e7a-fa56d8d027f5",
+    "courseListingObject": {
+      "id": "422a753c-7cf7-4ede-8e7a-fa56d8d027f5",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "4216fb94-df5f-467a-8f50-8ca68977b0d7",
+          "userId": "ba93d7ca-6802-43d7-9405-3c9c3e53c116",
+          "name": "Scott Bukatman",
+          "barcode": "2550099650",
+          "courseListingId": "422a753c-7cf7-4ede-8e7a-fa56d8d027f5",
+          "metadata": {
+            "createdDate": "2024-02-21T21:42:29.477+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-21T21:42:29.477+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:41:23.921+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:41:23.921+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "FILMEDIA-120-01",
+    "metadata": {
+      "createdDate": "2024-02-21T21:41:23.976+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:41:23.976+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
@@ -33937,6 +34225,81 @@
     }
   },
   {
+    "id": "a6c18ec6-f750-4cea-829d-01800ac26e10",
+    "name": "Movies and Methods: The Judy Garland Seminar",
+    "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
+    "departmentObject": {
+      "id": "c93e4503-7bdc-4786-81bd-723faa03480c",
+      "name": "FILMEDIA - Film and Media Studies",
+      "description": "Film and Media Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.373+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.373+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "6454d0cc-32ea-45f0-8a1f-6cf3eb36d6dd",
+    "courseListingObject": {
+      "id": "6454d0cc-32ea-45f0-8a1f-6cf3eb36d6dd",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "4a1c2c30-2c0a-4b22-839a-cdd04cad98fa",
+          "userId": "ba93d7ca-6802-43d7-9405-3c9c3e53c116",
+          "name": "Scott Bukatman",
+          "barcode": "2550099650",
+          "courseListingId": "6454d0cc-32ea-45f0-8a1f-6cf3eb36d6dd",
+          "metadata": {
+            "createdDate": "2024-02-21T21:44:14.020+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-21T21:44:14.020+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:43:33.596+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:43:33.596+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "FILMEDIA-290-01",
+    "metadata": {
+      "createdDate": "2024-02-21T21:43:33.630+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:43:33.630+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
     "id": "a6cd2b60-4e50-4fbd-9b5c-10233208201f",
     "name": "The Chinese Empire from the Mongol Invasion to the Boxer Uprising",
     "departmentId": "3949d3e1-1a4e-429d-9258-5163e40b7303",
@@ -35738,29 +36101,29 @@
           "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
         ]
       },
-      "termId": "d5d04559-a7b1-4e4b-a95d-995e0be98b61",
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
       "termObject": {
-        "id": "d5d04559-a7b1-4e4b-a95d-995e0be98b61",
-        "name": "Fall Quarter 2023",
-        "startDate": "2023-09-18T07:00:00.000Z",
-        "endDate": "2023-12-15T08:00:00.000Z"
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
       },
-      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
       "courseTypeObject": {
-        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
-        "name": "In Person- Hybrid"
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
       },
       "instructorObjects": [
         {
-          "id": "ea7b36ae-848d-4e5b-9d56-8e955c7db958",
-          "userId": "3e375744-0fe2-4382-9f8d-460628c3239a",
-          "name": "Camille Utterback",
-          "barcode": "2550036434",
+          "id": "09f694de-2875-4d02-8e9e-6f740a040d3c",
+          "userId": "445f7b92-3f3c-4230-8efd-386f424dbdaf",
+          "name": "Gail Wight",
+          "barcode": "2557715610",
           "courseListingId": "6706a2e4-f59e-4a45-97d4-875bb68abaf2",
           "metadata": {
-            "createdDate": "2023-09-22T19:27:49.121+00:00",
+            "createdDate": "2024-02-21T21:38:27.974+00:00",
             "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
-            "updatedDate": "2023-09-22T19:27:49.121+00:00",
+            "updatedDate": "2024-02-21T21:38:27.974+00:00",
             "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
           }
         }
@@ -35768,7 +36131,7 @@
       "metadata": {
         "createdDate": "2023-09-22T19:27:12.989+00:00",
         "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
-        "updatedDate": "2023-09-25T21:26:52.843+00:00",
+        "updatedDate": "2024-02-21T21:38:09.158+00:00",
         "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
       }
     },
@@ -46003,6 +46366,81 @@
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
       "updatedDate": "2023-09-19T03:08:07.631+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    }
+  },
+  {
+    "id": "db7e9e25-e837-4712-849a-613adb5feb20",
+    "name": "Decolonial Approaches to African Arts",
+    "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
+    "departmentObject": {
+      "id": "c93e4503-7bdc-4786-81bd-723faa03480c",
+      "name": "FILMEDIA - Film and Media Studies",
+      "description": "Film and Media Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.373+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.373+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "d00b779e-ee32-4adc-991b-b200186510a3",
+    "courseListingObject": {
+      "id": "d00b779e-ee32-4adc-991b-b200186510a3",
+      "locationId": "198f1e45-948d-4d30-9437-f93240beb659",
+      "locationObject": {
+        "id": "198f1e45-948d-4d30-9437-f93240beb659",
+        "name": "Art Reserves",
+        "code": "ART-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Art circulation desk ",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+        "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+        "servicePointIds": [
+          "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "2c128282-4a70-4323-87ff-a4ffe2232593",
+          "userId": "d039a68c-766b-484b-b129-f23c0e836133",
+          "name": "Usha Iyer",
+          "barcode": "2552373010",
+          "courseListingId": "d00b779e-ee32-4adc-991b-b200186510a3",
+          "metadata": {
+            "createdDate": "2024-02-21T21:47:58.059+00:00",
+            "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+            "updatedDate": "2024-02-21T21:47:58.059+00:00",
+            "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-21T21:47:31.342+00:00",
+        "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+        "updatedDate": "2024-02-21T21:47:31.342+00:00",
+        "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+      }
+    },
+    "courseNumber": "FILMEDIA-214-01",
+    "metadata": {
+      "createdDate": "2024-02-21T21:47:31.403+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-02-21T21:47:31.403+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
     }
   },
   {
