@@ -14,7 +14,7 @@ module AccessPanels
     end
 
     def location_request_link
-      @location_request_link ||= LocationRequestLinkComponent.for(document:, library: library.code, location: location.code, items: location.items)
+      @location_request_link ||= LocationRequestLinkComponent.for(document:, library_code: library.code, location:)
     end
   end
 end

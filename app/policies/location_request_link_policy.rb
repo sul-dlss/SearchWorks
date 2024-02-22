@@ -1,9 +1,10 @@
 # This determines whether we should display a request link to the user
 class LocationRequestLinkPolicy
-  def initialize(location:, library:, items:)
+  # @params [String] library_code the code for the library with the holdings
+  # @params [Holdings::Location] location the code for location with the holdings
+  def initialize(location:, library_code:)
     @location = location
-    @library = library
-    @items = items
+    @library_code = library_code
   end
 
   def show?
@@ -20,7 +21,9 @@ class LocationRequestLinkPolicy
 
   private
 
-  attr_reader :location, :library, :items
+  attr_reader :location, :library_code
+
+  delegate :items, to: :location
 
   # 1. The item is "Bound-with" in folio (determined by holdingsType.name, e.g. a86041)
   # 2. The item is a analyzed serial (determined by a SEE-OTHER folio location)
@@ -44,7 +47,7 @@ class LocationRequestLinkPolicy
 
   # Special cases where we don't allow requests for special collections items in certain statuses
   def folio_disabled_status_location?
-    return false unless library == 'SPEC-COLL'
+    return false unless library_code == 'SPEC-COLL'
 
     items.all? do |item|
       Constants::FolioStatus::UNPAGEABLE_SPEC_COLL_STATUSES.include?(item.folio_status) ||
