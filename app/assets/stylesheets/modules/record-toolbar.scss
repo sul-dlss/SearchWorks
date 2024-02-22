@@ -1,32 +1,9 @@
 .record-toolbar {
-  color: $sul-toolbar-color;
   font-size: 15px;
-
-  &.sul-toolbar {
-    border: none;
-    @include sul-toolbar-bg-border;
-  }
 
   .dropdown-menu {
     @include toolbar-dropdown;
     @include refworks-form;
-  }
-
-  .record-toolbar-tools ul {
-    list-style-type: none;
-    margin: 0;
-
-    li {
-      margin: 0;
-    }
-
-    .documentFunctions {
-      margin-left: 20px;
-    }
-
-    .toggle-bookmark {
-      min-width: 0;
-    }
   }
 
   .btn-sul-toolbar {
@@ -35,6 +12,7 @@
   }
 
   .navbar-nav > li {
+    // I think this is only the Cite link.
     a.btn-sul-toolbar {
       margin: 0 5px;
       border: none;
@@ -45,7 +23,6 @@
     }
 
     div.toggle-bookmark {
-      color: $btn-sul-toolbar-bar-color;
       padding-top: 10px;
     }
   }
@@ -71,13 +48,6 @@
 .back-to-results {
   border-radius: 0;
   display: inline-block;
-}
-
-// Select dropdown
-div.record-toolbar > div > div > ul > li:nth-child(3) > form > div > label {
-  &:hover, &:focus, &:active {
-    text-decoration: underline;
-  }
 }
 
 @include media-breakpoint-down(sm) {
