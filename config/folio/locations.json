@@ -2453,9 +2453,9 @@
   },
   {
     "id": "22f586cf-1bfc-4ba7-9990-47a40f2c3ecc",
-    "name": "Lane In Repair",
+    "name": "Lane Maintenance",
     "code": "LANE-REPAIR",
-    "discoveryDisplayName": "In repair",
+    "discoveryDisplayName": "In maintenance",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -2472,7 +2472,7 @@
     "metadata": {
       "createdDate": "2023-09-08T19:45:31.812+00:00",
       "createdByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f",
-      "updatedDate": "2023-09-08T19:46:02.620+00:00",
+      "updatedDate": "2024-02-21T20:11:05.635+00:00",
       "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
@@ -6963,6 +6963,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:18.856+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "77bac2dd-98fe-4520-83ec-182bb48ac48d",
+    "name": "Earth Sci Processing - Map Office",
+    "code": "EAR-PROCESSING-MAP-OFFICE",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "details": {
+    },
+    "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "servicePointIds": [
+      "4827ae1d-b8bf-4b90-9e09-d642557893ab"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-02-22T01:39:10.657+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-02-22T01:39:10.657+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
