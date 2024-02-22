@@ -18,7 +18,7 @@ RSpec.describe Holdings::Library do
 
     context 'with a FOLIO item in a temporary location we treat at the permanent location for display' do
       let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(sal3:), effective_location:)] }
-      let(:effective_location) { instance_double(Folio::Location, details: { 'searchworksTreatTemporaryLocationAsPermanentLocation' => true }, library:) }
+      let(:effective_location) { instance_double(Folio::Location, treat_temporary_location_as_permanent?: true, library:) }
       let(:library) { Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library') }
       let(:sal3) { Folio::Library.new(id: 'sal3', code: 'SAL3', name: 'SAL3') }
 

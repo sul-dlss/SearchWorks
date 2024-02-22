@@ -27,8 +27,24 @@ module Folio
       cached_location_data&.dig('name') || @name
     end
 
-    def details
-      cached_location_data&.dig('details') || {}
+    def treat_temporary_location_as_permanent?
+      details.key?('searchworksTreatTemporaryLocationAsPermanentLocation')
+    end
+
+    def in_process_non_requestable?
+      availability_class == 'In_process_non_requestable'
+    end
+
+    def availability_class
+      details['availabilityClass']
+    end
+
+    def page_mediation_group_key
+      details['pageMediationGroupKey']
+    end
+
+    def page_aeon_site
+      details['pageAeonSite']
     end
 
     def self.from_dynamic(json)
@@ -42,6 +58,12 @@ module Folio
 
     def see_other?
       code.ends_with?('-SEE-OTHER')
+    end
+
+    private
+
+    def details
+      cached_location_data&.dig('details') || {}
     end
 
     def cached_location_data

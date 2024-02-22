@@ -57,7 +57,7 @@ module Folio
     end
 
     def location_provided_availability
-      effective_location.details['availabilityClass']
+      effective_location.availability_class
     end
 
     def loan_type

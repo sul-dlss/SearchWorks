@@ -15,7 +15,7 @@ class LocationRequestLinkPolicy
   def aeon_pageable?
     return false if !folio_items? || folio_permanent_locations.none?
 
-    folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
+    folio_permanent_locations.all?(&:page_aeon_site)
   end
 
   private
@@ -48,14 +48,14 @@ class LocationRequestLinkPolicy
 
     items.all? do |item|
       Constants::FolioStatus::UNPAGEABLE_SPEC_COLL_STATUSES.include?(item.folio_status) ||
-        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable'
+        item.effective_location&.in_process_non_requestable?
     end
   end
 
   def folio_mediated_pageable?
     return false unless folio_items? && folio_permanent_locations.any?
 
-    folio_permanent_locations.all? { |location| location.dig('details', 'pageMediationGroupKey') }
+    folio_permanent_locations.all?(&:page_mediation_group_key)
   end
 
   def folio_item_pageable?
@@ -66,6 +66,6 @@ class LocationRequestLinkPolicy
 
   # there probably is only one FOLIO location.
   def folio_permanent_locations
-    @folio_permanent_locations ||= items.filter_map(&:permanent_location).uniq(&:id).map(&:cached_location_data)
+    @folio_permanent_locations ||= items.filter_map(&:permanent_location).uniq(&:id)
   end
 end
