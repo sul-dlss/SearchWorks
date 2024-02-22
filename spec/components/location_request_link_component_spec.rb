@@ -14,7 +14,8 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
   context 'for FOLIO items' do
     let(:library_code) { 'SAL3' }
-    let(:location) { instance_double(Holdings::Location, code: 'SAL3-STACKS', items:) }
+    let(:location) { instance_double(Holdings::Location, code: 'SAL3-STACKS', items:, folio_holdings:) }
+    let(:folio_holdings) { [] }
 
     let(:items) { [instance_double(Holdings::Item, folio_item?: true, allowed_request_types:, effective_location:, permanent_location:, folio_status:)] }
     let(:folio_status) { 'Available' }
@@ -54,7 +55,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'in a mediated location' do
       let(:library_code) { 'SAL3' }
-      let(:location) { instance_double(Holdings::Location, code: 'SAL3-PAGE-MP', items:) }
+      let(:location) { instance_double(Holdings::Location, code: 'SAL3-PAGE-MP', items:, folio_holdings:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -86,7 +87,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'in an Aeon location' do
       let(:library_code) { 'SPEC-COLL' }
-      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:, folio_holdings:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -118,7 +119,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'in an Aeon permanent location, but with a temporary location somewhere else' do
       let(:library_code) { 'SPEC-COLL' }
-      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:, folio_holdings:) }
 
       let(:permanent_location) do
         Folio::Location.from_dynamic(
@@ -181,7 +182,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       end
 
       let(:library_code) { 'SPEC-COLL' }
-      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
+      let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:, folio_holdings:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
@@ -213,7 +214,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
     context 'in a non-pageable location' do
       let(:library_code) { 'GREEN' }
-      let(:location) { instance_double(Holdings::Location, code: 'GRE-STACKS', items:) }
+      let(:location) { instance_double(Holdings::Location, code: 'GRE-STACKS', items:, folio_holdings:) }
 
       let(:effective_location) do
         Folio::Location.from_dynamic(
