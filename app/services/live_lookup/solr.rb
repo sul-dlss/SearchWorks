@@ -59,7 +59,8 @@ class LiveLookup
           barcode: item_id,
           due_date: nil, # No due date available in the Solr document
           status:,
-          current_location: current_location_code,
+          current_location: temporary_location_code,
+          temporary_location: temporary_location_code,
           is_available: available?
         }
       end
@@ -86,12 +87,12 @@ class LiveLookup
         item['home_location']
       end
 
-      def current_location_code
-        @current_location_code ||= item['current_location']
+      def temporary_location_code
+        @temporary_location_code ||= item['temporary_location_code']
       end
 
-      def current_location
-        @current_location ||= Holdings::Location.new(current_location_code)
+      def temporary_location
+        @temporary_location ||= Holdings::Location.new(temporary_location_code)
       end
 
       def home_location

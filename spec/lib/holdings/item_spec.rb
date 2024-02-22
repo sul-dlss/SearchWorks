@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe Holdings::Item do
   let(:complex_item_display) do
     {
-      barcode: '123', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type',
+      barcode: '123', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
       truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber',
       full_shelfkey: 'full_shelfkey', public_note: 'public_note', scheme: 'callnumber_type',
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
     }
   end
   let(:item) { Holdings::Item.new(complex_item_display) }
-  let(:methods) { [:barcode, :library, :home_location, :current_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
+  let(:methods) { [:barcode, :library, :home_location, :temporary_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
   let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
   it 'should have an attribute for each piece of the item display field' do
@@ -88,7 +88,7 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#callnumber' do
-    let(:item_without_callnumber) { Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' }) }
+    let(:item_without_callnumber) { Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' }) }
     let(:lane_online_item) { Holdings::Item.new({ library: 'LANE', home_location: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
     it "should return '(no call number) if the callnumber is blank" do
@@ -161,6 +161,12 @@ RSpec.describe Holdings::Item do
       expect(as_json[:current_location]).to be_a Hash
       expect(as_json[:current_location]).to have_key :code
       expect(as_json[:current_location]).to have_key :name
+    end
+
+    it 'should return an as_json hash for temporary_location' do
+      expect(as_json[:temporary_location]).to be_a Hash
+      expect(as_json[:temporary_location]).to have_key :code
+      expect(as_json[:temporary_location]).to have_key :name
     end
   end
 

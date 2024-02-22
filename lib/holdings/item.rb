@@ -4,7 +4,7 @@ class Holdings
   class Item
     MAX_SHELFKEY = 0x10FFFF.chr(Encoding::UTF_8)
 
-    attr_writer :current_location, :status
+    attr_writer :status
     attr_reader :document, :item_display
     attr_accessor :due_date
 
@@ -36,8 +36,7 @@ class Holdings
     end
 
     def on_order?
-      folio_status == 'On order' ||
-        current_location.code == 'ON-ORDER'
+      folio_status == 'On order'
     end
 
     def barcode
@@ -53,8 +52,12 @@ class Holdings
       item_display[:home_location]
     end
 
-    def current_location
-      @current_location ||= Holdings::Location.new(item_display[:current_location])
+    def temporary_location_code
+      item_display[:temporary_location_code]
+    end
+
+    def temporary_location
+      @temporary_location ||= Holdings::Location.new(item_display[:temporary_location_code])
     end
 
     def type
@@ -141,7 +144,8 @@ class Holdings
       {
         barcode:,
         callnumber:,
-        current_location: current_location.as_json,
+        current_location: temporary_location.as_json,
+        temporary_location: temporary_location.as_json,
         due_date:,
         library:,
         home_location:,
