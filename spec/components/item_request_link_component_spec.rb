@@ -45,7 +45,6 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
     context 'on-order item' do
       let(:folio_status) { 'On order' }
       let(:allowed_request_types) { [] }
-      let(:current_location) { instance_double(Holdings::Location, code: 'ON-ORDER') }
 
       it { is_expected.to have_no_link 'Request' }
     end
