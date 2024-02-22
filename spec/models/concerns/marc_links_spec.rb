@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe MarcLinks do
-  include Marc856Fixtures
   it "should return an empty array for non marc records" do
     expect(SolrDocument.new.marc_links.all).to eq []
   end

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Holdings::Location do
-  include Marc856Fixtures
   describe '#name' do
     let(:location_code) { "GRE-LOCKED-STK" }
 

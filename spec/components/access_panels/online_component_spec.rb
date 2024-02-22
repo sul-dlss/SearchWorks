@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe AccessPanels::OnlineComponent, type: :component do
   include ModsFixtures
-  include Marc856Fixtures
 
   let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true }])) }
   let(:supplemental) { described_class.new(document: SolrDocument.new) }
@@ -17,8 +16,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
   let(:sfx) do
     described_class.new(
       document: SolrDocument.new(
-        marc_links_struct: [{ link_text: "Link text", href: "http://example.com/sfx-link", sfx: true }],
-        marc_json_struct: fulltext_856
+        marc_links_struct: [{ link_text: "Link text", href: "http://example.com/sfx-link", sfx: true }]
       )
     )
   end
@@ -163,7 +161,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(page).to have_css("span.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do
-      document = SolrDocument.new(marc_json_struct: simple_856, marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
+      document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
       expect(page).to have_css '.card-header', text: 'Also available at'
@@ -171,8 +169,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
     context 'when the record has an SFX link' do
       it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
-        document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true],
-                                    marc_json_struct: simple_856)
+        document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true])
         render_inline(described_class.new(document:))
         expect(page).to have_css('.panel-online')
         expect(page).to have_no_link('Find full text')
