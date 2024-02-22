@@ -40,8 +40,4 @@ class Holdings
   def find_by_barcode(barcode)
     items.find { |item| item.barcode == barcode }
   end
-
-  def as_json
-    libraries.select(&:present?).map(&:as_json)
-  end
 end

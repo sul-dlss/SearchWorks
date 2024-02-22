@@ -149,26 +149,6 @@ RSpec.describe Holdings::Location do
     end
   end
 
-  describe '#as_json' do
-    let(:callnumbers) { [
-      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321', reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
-      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210', reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
-      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
-    ] }
-
-    subject(:as_json) { described_class.new('GRE-STACKS', callnumbers).as_json }
-
-    it 'returns a hash with all of the callnumbers public reader methods' do
-      expect(as_json).to be_a Hash
-      expect(as_json[:code]).to eq 'GRE-STACKS'
-      expect(as_json[:name]).to eq 'Stacks'
-      expect(as_json[:items]).to be_a Array
-      expect(as_json[:items].length).to eq 3
-      expect(as_json[:items].first).to be_a Hash
-      expect(as_json[:items].first[:library]).to eq 'GREEN'
-    end
-  end
-
   context 'with a location that has a stackmap api url' do
     subject { described_class.new("GRE-STACKS") }
 

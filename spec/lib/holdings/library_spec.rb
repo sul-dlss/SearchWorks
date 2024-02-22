@@ -130,30 +130,4 @@ RSpec.describe Holdings::Library do
       expect(zombie).not_to be_holding_library
     end
   end
-
-  describe '#as_json' do
-    let(:callnumbers) do
-      [
-        Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
-                             public_note: 'public_note', callnumber_type: 'callnumber_type' }),
-        Holdings::Item.new({ barcode: 'barcode2', library: 'library', home_location: 'home_location2', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
-                             public_note: 'public_note', callnumber_type: 'callnumber_type' }),
-        Holdings::Item.new({ barcode: 'barcode3', library: 'library', home_location: 'home_location3', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
-                             public_note: 'public_note', callnumber_type: 'callnumber_type' })
-      ]
-    end
-    let(:as_json) { Holdings::Library.new('GREEN', callnumbers).as_json }
-
-    it 'should return a hash with all of the libraries public reader methods' do
-      expect(as_json).to be_a Hash
-      expect(as_json[:code]).to eq 'GREEN'
-      expect(as_json[:name]).to eq 'Green Library'
-    end
-    it 'shuold return an array of locations' do
-      expect(as_json[:locations]).to be_a Array
-      expect(as_json[:locations].length).to eq 3
-      expect(as_json[:locations].first).to be_a Hash
-      expect(as_json[:locations].first[:code]).to eq 'home_location'
-    end
-  end
 end

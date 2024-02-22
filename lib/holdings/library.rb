@@ -76,16 +76,6 @@ class Holdings
       end
     end
 
-    def as_json
-      {
-        code:,
-        locations: locations.select(&:present?).map(&:as_json),
-        mhld: mhld.select(&:present?).map(&:as_json),
-        name:,
-        library_instructions:
-      }
-    end
-
     def config
       Settings.libraries[@code] || Settings.libraries.default
     end

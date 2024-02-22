@@ -140,21 +140,6 @@ class Holdings
       folio_item? && folio_item_circulates?
     end
 
-    def as_json(*)
-      {
-        barcode:,
-        callnumber:,
-        current_location: temporary_location.as_json,
-        temporary_location: temporary_location.as_json,
-        due_date:,
-        library:,
-        home_location:,
-        public_note:,
-        status: status.as_json,
-        type:
-      }
-    end
-
     def request_link
       @request_link ||= ItemRequestLinkComponent.new(item: self)
     end
