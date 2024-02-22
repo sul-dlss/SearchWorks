@@ -1,0 +1,36 @@
+<% toc_fields.each do |toc_field| %>
+  <ul class="toc">
+    <% Array.wrap(toc_field).each do |field| %>
+      <li><%= sanitize helpers.render_struct_field_data(document, field) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% toc_vernacular.each do |toc_field| %>
+  <ul class="toc">
+    <% Array.wrap(toc_field).each do |field| %>
+      <li><%= sanitize field %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% toc_unmatched_vernacular.each do |toc_field| %>
+  <ul class="toc">
+    <% Array.wrap(toc_field).each do |field| %>
+      <li><%= sanitize field %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+  <% summaries.each do |summary|%>
+    <% summary.fetch(:fields, []).each do |field| %>
+      <%= sanitize helpers.render_struct_field_data document, field[:field] %>
+      <% unless field[:vernacular].nil? %>
+        <br /><%= sanitize field[:vernacular] %>
+      <% end %>
+      <% if field != summary[:fields].last %>
+        <br />
+      <% end %>
+    <% end %>
+    <%= safe_join summary[:unmatched_vernacular], "<br/>" if summary[:unmatched_vernacular].present? %>
+  <% end %>
