@@ -72,11 +72,11 @@ class Holdings
     end
 
     def any_mhlds?
-      mhld.present? && mhld.any?(&:present?)
+      mhld.any?(&:present?)
     end
 
     def any_index_mhlds?
-      mhld.present? && mhld.any? do |mhld_item|
+      mhld.any? do |mhld_item|
         mhld_item.latest_received.present? ||
           mhld_item.public_note.present?
       end
