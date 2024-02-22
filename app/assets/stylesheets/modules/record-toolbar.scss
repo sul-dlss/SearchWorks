@@ -56,13 +56,6 @@
       overflow-x: hidden;
     }
 
-    .navbar-nav .open .dropdown-menu > .dropdown-item {
-      color: $white;
-      &:hover, &:focus {
-        text-decoration: underline;
-      }
-    }
-
     .navbar-collapse > ul > li {
       text-align: right;
       padding-right: 40px;
