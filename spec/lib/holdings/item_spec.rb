@@ -11,7 +11,7 @@ RSpec.describe Holdings::Item do
   end
   let(:item) { Holdings::Item.new(complex_item_display) }
   let(:methods) { [:barcode, :library, :home_location, :temporary_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
-  let(:internet_item) { Holdings::Item.new({ library: 'SUL', home_location: 'INTERNET', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+  let(:internet_item) { Holdings::Item.new({ library: 'SUL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -29,7 +29,7 @@ RSpec.describe Holdings::Item do
       expect(item).not_to be_suppressed
     end
 
-    it 'should return true for INTERNET items' do
+    it 'should return true for online items' do
       expect(internet_item).to be_suppressed
     end
   end
@@ -95,7 +95,7 @@ RSpec.describe Holdings::Item do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
     end
 
-    it 'returns "eResource" when the home location is INTERNET' do
+    it 'returns "eResource" for an eResource' do
       expect(internet_item.callnumber).to eq 'eResource'
     end
 
