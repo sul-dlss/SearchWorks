@@ -22,7 +22,7 @@ module AccessPanels
                 item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
                 item.home_location == item.temporary_location_code
 
-      item.temporary_location.name
+      item.temporary_location&.name
     end
 
     def render_item_details?

@@ -52,12 +52,13 @@ class Holdings
       item_display[:home_location]
     end
 
+    # NOTE: This may be nil
     def temporary_location_code
       item_display[:temporary_location_code]
     end
 
     def temporary_location
-      @temporary_location ||= Holdings::Location.new(item_display[:temporary_location_code])
+      @temporary_location ||= Holdings::Location.new(temporary_location_code) if temporary_location_code
     end
 
     def type
