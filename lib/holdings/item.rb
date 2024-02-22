@@ -36,8 +36,7 @@ class Holdings
     end
 
     def on_order?
-      folio_status == 'On order' ||
-        current_location.code == 'ON-ORDER'
+      folio_status == 'On order'
     end
 
     def barcode
