@@ -237,12 +237,6 @@ selected_databases:
      subjects: ["Sociology", "Social Sciences"]
      description: "Access to the international literature in sociology and related disciplines in the social and behavioral sciences, 1953-present."
 
-requestable_current_locations:
-  default:
-    - MISSING
-    - NEWBOOKS
-    - ON-ORDER
-
 folio_hold_recall_statuses:
   - Checked out
   - Awaiting pickup
