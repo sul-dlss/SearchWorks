@@ -81,25 +81,6 @@
   border: 1px solid $border;
 }
 
-@mixin location-buttons {
-  background-color: $sul-location-panel-btn-background;
-  border-color: $sul-location-panel-btn-border;
-  margin-right: 5px;
-  color: $white;
-
-  .fa-map-marker {
-    font-size: 1.4em;
-    margin-right: 2px;
-  }
-
-  &:focus,
-  &:hover {
-    color: $white;
-    background-color: $sul-location-panel-btn-background-hover;
-    border-color: $sul-location-panel-btn-border-hover;
-  }
-}
-
 @mixin panel-heading($background, $font-color) {
   background: $background;
   border-bottom: 1px solid $background;
