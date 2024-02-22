@@ -10,5 +10,5 @@ item_display_struct:
   - barcode: '123'
     library: SPEC-COLL
     home_location: SPEC-GUNST
-    current_location: SPEC-INPRO
+    temporary_location_code: SPEC-INPRO
     callnumber: ABC 123

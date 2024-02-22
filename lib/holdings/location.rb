@@ -22,7 +22,11 @@ class Holdings
     end
 
     def stackmap_api_url
-      Folio::Locations.stackmap_api_url(code: @code)
+      details['stackmapBaseUrl']
+    end
+
+    def details
+      Folio::Locations.details(code: @code) || {}
     end
 
     def bound_with?

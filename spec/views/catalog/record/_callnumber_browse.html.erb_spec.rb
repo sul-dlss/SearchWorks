@@ -5,8 +5,8 @@ RSpec.describe "catalog/record/_callnumber_browse" do
     SolrDocument.new(
       id: 'abc123',
       item_display_struct: [
-        { barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey', scheme: 'LC' },
-        { barcode: 'barcode2', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber2', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey', scheme: 'DEWEY' }
+        { barcode: 'barcode', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey', scheme: 'LC' },
+        { barcode: 'barcode2', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey', scheme: 'DEWEY' }
       ]
     )
   }

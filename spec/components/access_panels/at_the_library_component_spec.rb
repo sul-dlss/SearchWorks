@@ -161,7 +161,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SPEC-COLL', home_location: 'GUNST', current_location: 'SPEC-INPRO', callnumber: 'ABC 123' }
+          { barcode: '123', library: 'SPEC-COLL', home_location: 'GUNST', temporary_location_code: 'SPEC-INPRO', callnumber: 'ABC 123' }
         ]
       )
       render_inline(described_class.new(document:))
@@ -212,7 +212,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', current_location: 'null', status: 'In process', effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
+          { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', temporary_location_code: 'null', status: 'In process', effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
         ]
       )
 

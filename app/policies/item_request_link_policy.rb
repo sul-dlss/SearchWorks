@@ -31,8 +31,4 @@ class ItemRequestLinkPolicy
     item.allowed_request_types.include?('Hold') ||
       item.allowed_request_types.include?('Recall')
   end
-
-  def current_location
-    item.current_location.code
-  end
 end

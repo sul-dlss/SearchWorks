@@ -8,17 +8,17 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library) { 'GREEN' }
   let(:location) { 'LOCKED-STK' }
-  let(:current_location) { instance_double(Holdings::Location, code: nil) }
+  let(:temporary_location) { instance_double(Holdings::Location, code: nil) }
   let(:item) do
     instance_double(Holdings::Item, document:, library:, home_location: location,
-                                    current_location: instance_double(Holdings::Location, code: nil), circulates?: true)
+                                    temporary_location: instance_double(Holdings::Location, code: nil), circulates?: true)
   end
 
   subject(:page) { render_inline(component) }
 
   context 'with FOLIO items' do
     let(:item) do
-      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, home_location: nil, current_location:, folio_item?: true, folio_status:, allowed_request_types:)
+      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, home_location: nil, temporary_location:, folio_item?: true, folio_status:, allowed_request_types:)
     end
 
     context 'checked out item from a location that allows holds' do

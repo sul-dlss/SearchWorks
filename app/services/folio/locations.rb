@@ -14,9 +14,9 @@ module Folio
     end
 
     # @param [String] code the Folio location code
-    # @return [String] the location's stackmap API URL
-    def self.stackmap_api_url(code:)
-      instance.data.dig(code, 'details', 'stackmapBaseUrl')
+    # @return [String] the location's details
+    def self.details(code:)
+      instance.data.dig(code, 'details')
     end
 
     # Output a CSV of all locations, flattening details and converting UUIDs to codes
