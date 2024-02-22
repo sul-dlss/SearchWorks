@@ -8,7 +8,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
   let(:document) { SolrDocument.new(id: '12345') }
   let(:library_code) { 'GREEN' }
   let(:location) { instance_double(Holdings::Location, code: 'GRE-LOCKED-STK', items:) }
-  let(:items) { [instance_double(Holdings::Item, current_location: instance_double(Holdings::Location, code: nil), circulates?: true, folio_item?: false, document:)] }
+  let(:items) { [instance_double(Holdings::Item, temporary_location: instance_double(Holdings::Location, code: nil), circulates?: true, folio_item?: false, document:)] }
 
   let(:page) { render_inline(component) }
 

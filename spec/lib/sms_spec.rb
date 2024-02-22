@@ -5,8 +5,8 @@ RSpec.describe "Searchworks::Document::Sms" do
     SolrDocument.new(
       preferred_barcode: '12345',
       item_display_struct: [
-        { barcode: '54321', library: 'BIOLOGY', home_location: 'STACKS', current_location: 'STACKS', type: 'type', truncated_callnumber: 'callnumber1', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber1' },
-        { barcode: '12345', library: 'GREEN', home_location: 'GRE-STACKS', current_location: 'GRE-STACKS', type: 'type', truncated_callnumber: 'callnumber2', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2' }
+        { barcode: '54321', library: 'BIOLOGY', home_location: 'STACKS', temporary_location_code: 'STACKS', type: 'type', truncated_callnumber: 'callnumber1', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber1' },
+        { barcode: '12345', library: 'GREEN', home_location: 'GRE-STACKS', temporary_location_code: 'GRE-STACKS', type: 'type', truncated_callnumber: 'callnumber2', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2' }
       ]
     )
   }

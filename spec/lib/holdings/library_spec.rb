@@ -134,11 +134,11 @@ RSpec.describe Holdings::Library do
   describe '#as_json' do
     let(:callnumbers) do
       [
-        Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+        Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
                              public_note: 'public_note', callnumber_type: 'callnumber_type' }),
-        Holdings::Item.new({ barcode: 'barcode2', library: 'library', home_location: 'home_location2', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+        Holdings::Item.new({ barcode: 'barcode2', library: 'library', home_location: 'home_location2', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
                              public_note: 'public_note', callnumber_type: 'callnumber_type' }),
-        Holdings::Item.new({ barcode: 'barcode3', library: 'library', home_location: 'home_location3', current_location: 'current_location', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
+        Holdings::Item.new({ barcode: 'barcode3', library: 'library', home_location: 'home_location3', temporary_location_code: 'temporary_location_code', type: 'type', truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
                              public_note: 'public_note', callnumber_type: 'callnumber_type' })
       ]
     end

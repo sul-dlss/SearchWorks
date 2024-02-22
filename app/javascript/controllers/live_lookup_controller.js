@@ -16,7 +16,7 @@ export default class extends Controller {
     data.forEach((live_data) => {
       const dom_item = $(`[data-item-id="${live_data.item_id}"]`)
       const target = $(dom_item.data('status-target'), dom_item)
-      const current_location = $('.current-location', dom_item)
+      const temporary_location = $('.temporary-location', dom_item)
       const status_text = target.next('.status-text')
 
       if (live_data.status){
@@ -24,7 +24,7 @@ export default class extends Controller {
       }
 
       if (live_data.due_date) {
-        current_location.append(`Due ${live_data.due_date}`);
+        temporary_location.append(`Due ${live_data.due_date}`);
       }
 
       if (!live_data.is_available && (target.hasClass('unknown') || target.hasClass('deliver-from-offsite')) ) {
@@ -49,7 +49,7 @@ export default class extends Controller {
       }
     })
   }
-  
+
   liveLookupURL(container) {
     const root_path = this.urlValue
     const ids = this.listOfIds().map((id) => `ids[]=${id}`)

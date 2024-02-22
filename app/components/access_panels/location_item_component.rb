@@ -14,13 +14,15 @@ module AccessPanels
     end
 
     def availability_text
-      item.status.status_text unless current_location_text
+      item.status.status_text unless temporary_location_text
     end
 
-    def current_location_text
-      return if item.effective_location&.details&.key?('availabilityClass') || item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation')
+    def temporary_location_text
+      return if item.effective_location&.details&.key?('availabilityClass') ||
+                item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
+                item.home_location == item.temporary_location_code
 
-      item.current_location.name
+      item.temporary_location.name
     end
 
     def render_item_details?
