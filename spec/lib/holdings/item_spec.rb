@@ -89,7 +89,7 @@ RSpec.describe Holdings::Item do
 
   describe '#callnumber' do
     let(:item_without_callnumber) { Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home_location', current_location: 'current_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' }) }
-    let(:lane_online_item) { Holdings::Item.new({ library: 'LANE-MED', home_location: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+    let(:lane_online_item) { Holdings::Item.new({ library: 'LANE', home_location: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
     it "should return '(no call number) if the callnumber is blank" do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
