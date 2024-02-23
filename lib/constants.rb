@@ -1,7 +1,7 @@
 module Constants
   module FolioStatus
     UNPAGEABLE_SPEC_COLL_STATUSES = [
-      'In process', 'In process (non-requestable)', 'Missing'
+      'In process', 'In process (non-requestable)', 'Missing', 'On order'
     ]
   end
 

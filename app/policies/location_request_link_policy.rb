@@ -14,7 +14,7 @@ class LocationRequestLinkPolicy
   end
 
   def aeon_pageable?
-    return false if !folio_items? || folio_permanent_locations.none?
+    return false if !folio_items? || folio_permanent_locations.none? || folio_disabled_status_location?
 
     folio_permanent_locations.all? { |location| location.dig('details', 'pageAeonSite') }
   end
