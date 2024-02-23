@@ -1,6 +1,6 @@
 <div class="record-toolbar sul-toolbar navbar navbar-expand-md navbar-dark px-3 my-4" role="navigation">
   <div>
-    <%= helpers.link_back_to_catalog class: 'btn btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
+    <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
   </div>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
@@ -11,7 +11,7 @@
     <ul class="nav navbar-nav ml-auto">
       <% if citable? %>
         <li>
-          <%= link_to t('blacklight.tools.cite_html'), cite_path, id: 'citeLink', data: { blacklight_modal: "trigger" }, class: 'btn btn-sul-toolbar' %>
+          <%= link_to t('blacklight.tools.cite_html'), cite_path, id: 'citeLink', data: { blacklight_modal: "trigger" }, class: 'btn btn-link btn-sul-toolbar' %>
         </li>
       <% end %>
       <li class="dropdown">

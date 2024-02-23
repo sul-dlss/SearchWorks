@@ -32,6 +32,8 @@
     padding-right: 15px;
 
     .gallery-document .browse-link a {
+      --link-decoration-line: none;
+
       border-bottom: 0;
       display: inline-block;
       font-size: $h2-font-size;

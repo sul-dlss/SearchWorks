@@ -39,6 +39,7 @@ $sul-footer-height: 80px;
 }
 
 #sul-footer-links {
+  --link-decoration-line: none;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: left;

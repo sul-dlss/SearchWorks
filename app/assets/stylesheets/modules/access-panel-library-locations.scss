@@ -5,12 +5,14 @@
         background-color: $warm-grey;
       }
       h3 {
-        border-bottom: 1px dotted $white;
-        max-width: 95%; // so the border won't extend past the text
+        text-decoration-line: var(--link-decoration-line);
+        text-decoration-style: var(--link-decoration-style);
+        text-decoration-thickness: 1px; // Needed for Chrome (as of 121) as it makes a thicker line than FF
+        padding-bottom: 3px; // give room for the text decoration
 
         &:hover,
         &:active {
-          border-bottom: 1px solid $white;
+          text-decoration: underline solid;
         }  
       }
     }
@@ -18,6 +20,7 @@
   .library-location-heading { // A kind of .access-panel-heading
     @include panel-heading($sul-access-location-bg, $sul-access-header-color);
     height: 50px;
+    overflow: hidden;
     padding-bottom: 6px;
     h3 {
       color: $sul-access-header-color;

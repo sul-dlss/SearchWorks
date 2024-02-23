@@ -3,10 +3,6 @@
   color: $sul-toolbar-color;
   font-size: $h3-font-size;
   padding: 10px;
-
-  .dropdown-menu {
-    @include toolbar-dropdown;
-  }
 }
 
 .record-browse-nearby {

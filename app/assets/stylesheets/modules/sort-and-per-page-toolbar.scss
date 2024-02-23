@@ -1,12 +1,6 @@
 .sul-toolbar.sort-and-per-page { 
   padding: 4px 0;
   margin-top: .8em;
-  border-bottom: none;
-
-  .dropdown-menu {
-    @include toolbar-dropdown;
-    @include refworks-form;
-  }
 
   .page_links {
     padding: 0px 10px;

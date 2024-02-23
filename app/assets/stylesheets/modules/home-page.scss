@@ -1,7 +1,6 @@
 .article-home-page, .catalog-home-page, .home-page-bento {
   h2, h3, h4 {
     font-weight: 400;
-    border-bottom: none;
   }
 
   // This is suboptimal, but we want this particular h2 to be styled
@@ -40,6 +39,11 @@
 
 .catalog-home-page {
   .features {
+    a:has(h3) {
+      --link-decoration-line: none;
+      --link-hover-decoration-line: none;
+    }
+
     img {
       height: 100px;
       margin-right: 12px;
@@ -52,6 +56,7 @@
 }
 
 .home-page-bento {
+  --link-decoration-line: none;
 
   h3, p {
     padding: 2px 10px;

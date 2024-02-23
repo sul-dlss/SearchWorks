@@ -2,8 +2,6 @@ $btn-preview-color: $white;
 $btn-preview-bg: $sul-btn-preview-bg;
 $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
 
-
-
 // Was removed in Bootstrap 4
 .btn-xs {
   padding: 1px 5px;
@@ -12,30 +10,15 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
   border-radius: 3px;
 }
 
-
 .btn-preview {
   @include button-variant($btn-preview-bg, $btn-preview-border);
 }
 
-.btn-link, .btn-link:hover, .btn-link:focus {
-  color: $sul-link-color;
-  text-decoration: none;
-}
-
 .btn-sul-toolbar {
+  --link-hover-decoration-line: underline;
   color: $btn-sul-toolbar-bar-color !important;
   background-color: $btn-sul-toolbar-bar-bg;
   margin: 0 5px;
   padding: 3px 5px;
-  border: none;
-
-  & a {
-    color: $btn-sul-toolbar-bar-color;
-    border-bottom: none;
-  }
+  text-underline-position: auto;
 }
-
-a.btn-sul-toolbar {
-  border-bottom: none;
-}
-
