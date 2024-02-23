@@ -2686,6 +2686,80 @@
     }
   },
   {
+    "id": "0de9cb97-144f-418b-9d4b-59054772f4c1",
+    "name": "A History of Sinology",
+    "departmentId": "dff8272d-de23-41a0-8e9e-16c8f9ed0238",
+    "departmentObject": {
+      "id": "dff8272d-de23-41a0-8e9e-16c8f9ed0238",
+      "name": "CHINA - Chinese Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:42.848+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:42.848+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+    "courseListingObject": {
+      "id": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "a507086f-ccb2-4728-84a6-a6166e33b4a8",
+          "userId": "91cc197f-9cfc-4a74-9065-f3b912dacd65",
+          "name": "Ronald Egan",
+          "barcode": "2550647642",
+          "courseListingId": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+          "metadata": {
+            "createdDate": "2024-02-23T00:00:37.512+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-23T00:00:37.512+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-22T23:59:34.664+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-23T00:00:14.940+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "CHINA-392-01",
+    "metadata": {
+      "createdDate": "2024-02-23T00:00:14.815+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-23T00:00:14.815+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "0e95bc8d-5b35-4c82-9d8e-2bd696028675",
     "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
     "departmentId": "56cd0d00-3ea9-4dbe-b94f-32e0fbe2387a",
@@ -31835,6 +31909,80 @@
       "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
       "updatedDate": "2023-09-25T21:12:24.237+00:00",
       "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    }
+  },
+  {
+    "id": "9a7a485e-f1f3-426a-a3de-8f713ff4c397",
+    "name": "A History of Sinology",
+    "departmentId": "dff8272d-de23-41a0-8e9e-16c8f9ed0238",
+    "departmentObject": {
+      "id": "dff8272d-de23-41a0-8e9e-16c8f9ed0238",
+      "name": "CHINA - Chinese Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:42.848+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:42.848+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+    "courseListingObject": {
+      "id": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "a507086f-ccb2-4728-84a6-a6166e33b4a8",
+          "userId": "91cc197f-9cfc-4a74-9065-f3b912dacd65",
+          "name": "Ronald Egan",
+          "barcode": "2550647642",
+          "courseListingId": "554bf377-65ee-41c4-a15a-2b47ad5de238",
+          "metadata": {
+            "createdDate": "2024-02-23T00:00:37.512+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-23T00:00:37.512+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-22T23:59:34.664+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-23T00:00:14.940+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "CHINA-192-01",
+    "metadata": {
+      "createdDate": "2024-02-22T23:59:34.864+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-22T23:59:34.864+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
