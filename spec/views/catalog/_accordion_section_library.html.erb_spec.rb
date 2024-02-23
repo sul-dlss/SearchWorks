@@ -7,7 +7,7 @@ RSpec.describe "catalog/_accordion_section_library" do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }
           ]
         )
       )

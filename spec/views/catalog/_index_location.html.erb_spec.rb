@@ -8,7 +8,7 @@ RSpec.describe "catalog/_index_location" do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }
           ]
         )
       )
@@ -36,7 +36,7 @@ RSpec.describe "catalog/_index_location" do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
+          { barcode: '123', library: 'ART', effective_permanent_location_code: 'ART-LOCKED-LARGE', type: 'STKS-MONO', callnumber: 'ABC 123' }
         ]
       )
     end
@@ -69,7 +69,7 @@ RSpec.describe "catalog/_index_location" do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'SAL3', home_location: 'STACKS', callnumber: 'ABC 123' }
+          { barcode: '123', library: 'SAL3', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' }
         ]
       )
     end
@@ -105,8 +105,8 @@ RSpec.describe "catalog/_index_location" do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' },
-          { id: '321', barcode: '321', library: 'SPEC-COLL', home_location: 'STACKS', callnumber: 'ABC 321' }
+          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' },
+          { id: '321', barcode: '321', library: 'SPEC-COLL', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 321' }
         ]
       )
     end
@@ -143,8 +143,8 @@ RSpec.describe "catalog/_index_location" do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' },
-            { barcode: '456', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 456' }
+            { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' },
+            { barcode: '456', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 456' }
           ]
         )
       )
@@ -165,7 +165,7 @@ RSpec.describe "catalog/_index_location" do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '321', library: 'GREEN', home_location: 'GRE-STACKS', callnumber: 'ABC 123' }
+            { barcode: '321', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }
           ],
           mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
         ))
@@ -185,7 +185,7 @@ RSpec.describe "catalog/_index_location" do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '321', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+            { barcode: '321', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' }
           ],
           mhld_display: [
             'GREEN -|- STACKS -|- public note -|- library has -|- latest received',
@@ -221,7 +221,7 @@ RSpec.describe "catalog/_index_location" do
         allow(view).to receive(:document).and_return(SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { barcode: '123', library: 'GREEN', home_location: 'STACKS', callnumber: 'ABC 123' }
+            { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' }
           ],
           mhld_display: ['GREEN -|- CURRENTPER -|- -|- library has -|-']
         ))
@@ -243,8 +243,8 @@ RSpec.describe "catalog/_index_location" do
           SolrDocument.new(
             id: '123',
             item_display_struct: [
-              { barcode: '123', library: 'ART', home_location: 'ART-LOCKED-LARGE', callnumber: 'ABC 123' },
-              { barcode: '456', library: 'ART', home_location: 'ART-LOCKED-LARGE', status: 'On order', type: 'STKS-MONO', callnumber: 'ABC 456' }
+              { barcode: '123', library: 'ART', effective_permanent_location_code: 'ART-LOCKED-LARGE', callnumber: 'ABC 123' },
+              { barcode: '456', library: 'ART', effective_permanent_location_code: 'ART-LOCKED-LARGE', status: 'On order', type: 'STKS-MONO', callnumber: 'ABC 456' }
             ]
           )
         end

@@ -8,14 +8,14 @@ RSpec.describe SearchWorksRecordMailer do
       SolrDocument.new(
         id: '123',
         title_display: "Title1",
-        item_display_struct: [{ barcode: '12345', library: 'GREEN', home_location: 'SAL3-STACKS', callnumber: 'ABC 123' }],
+        item_display_struct: [{ barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'ABC 123' }],
         marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }],
         modsxml: mods_everything
       ),
       SolrDocument.new(
         id: '321',
         title_display: "Title2",
-        item_display_struct: [{ barcode: '54321', library: 'SAL3', home_location: 'SAL3-STACKS', callnumber: 'ABC 321' }],
+        item_display_struct: [{ barcode: '54321', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'ABC 321' }],
         marc_links_struct: [{ href: "https://stacks.stanford.edu", sfx: true }],
         marc_json_struct: metadata1
       )

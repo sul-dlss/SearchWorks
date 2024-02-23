@@ -12,7 +12,7 @@ RSpec.describe Holdings::Location do
 
   describe "#present?" do
     context 'when there are items' do
-      subject { described_class.new("GRE-STACKS", [Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'STACKS' })]) }
+      subject { described_class.new("GRE-STACKS", [Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'STACKS' })]) }
 
       it { is_expected.to be_present }
     end
@@ -76,9 +76,9 @@ RSpec.describe Holdings::Location do
     subject(:items) { location.items }
 
     let(:callnumbers) { [
-      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321', reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
-      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210', reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
-      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', home_location: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
+      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321', reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
+      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210', reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
+      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
     ] }
     let(:location) { described_class.new("GRE-STACKS", callnumbers) }
 
@@ -134,7 +134,7 @@ RSpec.describe Holdings::Location do
       }
 
       subject { described_class.new("GRE-STACKS", [
-        Holdings::Item.new({ barcode: '1234', library: 'GREEN', home_location: 'SEE-OTHER' }, document:)
+        Holdings::Item.new({ barcode: '1234', library: 'GREEN', effective_permanent_location_code: 'SEE-OTHER' }, document:)
       ]) }
 
       it { is_expected.to be_bound_with }
@@ -142,7 +142,7 @@ RSpec.describe Holdings::Location do
 
     context 'with items that are not bound with' do
       subject { described_class.new("GRE-STACKS", [
-        Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', home_location: 'SEE-OTHER' }, document: SolrDocument.new)
+        Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'SEE-OTHER' }, document: SolrDocument.new)
       ]) }
 
       it { is_expected.not_to be_bound_with }

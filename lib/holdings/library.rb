@@ -34,9 +34,9 @@ class Holdings
       unless @locations
         @locations = @items.group_by do |item|
           # Group by display labels if they are the same. (e.g. both MSS-30 (SPEC-SAL3-MSS) and MANUSCRIPT (SPEC-MANUSCRIPT) translate to "Manuscript Collection")
-          Folio::Locations.label(code: item.home_location) || item.home_location
+          Folio::Locations.label(code: item.effective_permanent_location_code) || item.effective_permanent_location_code
         end.map do |_, items|
-          location_code = items.first.home_location
+          location_code = items.first.effective_permanent_location_code
           mhlds = mhld.select { |x| x.location == location_code }
           Holdings::Location.new(location_code, items, mhlds)
         end

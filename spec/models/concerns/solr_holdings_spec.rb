@@ -13,8 +13,8 @@ RSpec.describe SolrHoldings do
       SolrDocument.new(
         preferred_barcode: '12345',
         item_display_struct: [
-          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
-          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
+          { barcode: '54321', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }
@@ -22,16 +22,16 @@ RSpec.describe SolrHoldings do
       SolrDocument.new(
         preferred_barcode: 'does-not-exist',
         item_display_struct: [
-          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
-          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
+          { barcode: '54321', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }
     let(:no_preferred) {
       SolrDocument.new(
         item_display_struct: [
-          { barcode: '54321', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
-          { barcode: '12345', library: 'GREEN', home_location: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
+          { barcode: '54321', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
+          { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
     }

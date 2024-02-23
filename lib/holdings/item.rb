@@ -47,9 +47,11 @@ class Holdings
       standard_or_zombie_library
     end
 
-    # @return [String]
-    def home_location
-      item_display[:home_location]
+    # This is generally the item's permanent location, but it can also be
+    # the temporary location if the location detail searchworksTreatTemporaryLocationAsPermanentLocation
+    # is set to true.
+    def effective_permanent_location_code
+      item_display[:effective_permanent_location_code] || item_display[:home_location]
     end
 
     def temporary_location_code

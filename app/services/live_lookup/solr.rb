@@ -83,20 +83,12 @@ class LiveLookup
         item['library']
       end
 
-      def home_location_code
-        item['home_location']
-      end
-
       def temporary_location_code
         @temporary_location_code ||= item['temporary_location_code']
       end
 
       def temporary_location
         @temporary_location ||= Holdings::Location.new(temporary_location_code)
-      end
-
-      def home_location
-        @home_location ||= Holdings::Location.new(home_location_code)
       end
     end
   end
