@@ -15,7 +15,8 @@ $body-color: $sul-text-color;
 $text-color: $sul-text-color;
 $link-color: $sul-link-color;
 $link-hover-color: $sul-link-color-hover;
-$link-hover-decoration: none;
+// $link-decoration: var(--link-decoration-line) var(--link-decoration-style);
+$link-hover-decoration: var(--link-hover-decoration-line) var(--link-hover-decoration-style);
 
 // Components
 $component-active-bg: $digital-blue-dark;

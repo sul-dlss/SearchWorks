@@ -27,7 +27,7 @@ import L from "leaflet";
         if (response.stat === "OK" && response.results.maps.length > 0) {
           plugContent(response);
         } else {
-          $container.html('').html('<p>No map available for this item</p>');
+          $container.html('<p>No map available for this item</p>');
         }
       });
 
@@ -86,10 +86,10 @@ import L from "leaflet";
       }
 
       function attachEvents(index) {
-        $container.find('.show-description a').click(function(e) {
-          var $link = $(this),
-              $textSwap = $link.find('.text-swap'),
-              $stackmap = $link.parents('.map-template'),
+        $container.find('[data-action="reveal-text-directions"]').click(function(e) {
+          var $button = $(this),
+              $textSwap = $button.find('.text-swap'),
+              $stackmap = $button.parents('.map-template'),
               $osd = $stackmap.find('.osd'),
               $textDirections = $stackmap.find('.text-directions'),
               $zoomControls = $stackmap.find('.zoom-controls');

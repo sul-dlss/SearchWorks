@@ -11,10 +11,6 @@
 	border: none;
 }
 
-.header-logo > a {
-	border-bottom: none;
-}
-
 #topnav, #search-navbar, #search-subnavbar, #main-container, #sul-footer, #masthead-container {
 	margin: 0 auto;
 	text-align: left;
@@ -28,11 +24,6 @@
 
 #search-navbar, #search-subnavbar {
 	padding: 0;
-}
-
-a#sul-logo {
-	float: left;
-	border-bottom: none;
 }
 
 @media (min-width: 768px) {

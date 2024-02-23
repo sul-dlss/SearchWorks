@@ -15,5 +15,5 @@ access_facet: Online
 building_facet: SAL3 (off-campus storage)
 course: "CAT-401-01-01"
 instructor: "McDonald, Ronald"
-crez_course_info:
- - "CAT-401-01-01 -|- Emergency Kittenz -|- McDonald, Ronald"
+courses_folio_id_ssim:
+ - <%= CourseReserve.all.first.id %>

@@ -59,5 +59,6 @@ class BrowseController < ApplicationController
         search_service:
       )
     end
+    @current_bookmarks = current_or_guest_user.bookmarks
   end
 end

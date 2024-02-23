@@ -60,7 +60,7 @@ class PageLocation
   end
 
   def course_reserve_parameters?
-    filter(:course).any? && filter(:instructor).any?
+    filter(:courses_folio_id_ssim).any?
   end
 
   def collection_parameters?

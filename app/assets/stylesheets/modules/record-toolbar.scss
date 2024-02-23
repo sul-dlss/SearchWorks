@@ -1,28 +1,8 @@
 .record-toolbar {
   font-size: 15px;
 
-  .dropdown-menu {
-    @include toolbar-dropdown;
-    @include refworks-form;
-  }
-
-  .btn-sul-toolbar {
-    padding: 10px 5px;
-    border: none;
-  }
-
   .navbar-nav > li {
-    // I think this is only the Cite link.
-    a.btn-sul-toolbar {
-      margin: 0 5px;
-      border: none;
-      &:hover, &:focus, &:active {
-        color: $btn-sul-toolbar-bar-color;
-        background-color: $btn-sul-toolbar-bar-bg;
-      }
-    }
-
-    div.toggle-bookmark {
+    div.toggle-bookmark, .btn-sul-toolbar {
       padding-top: 10px;
     }
   }

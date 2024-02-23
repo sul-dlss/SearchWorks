@@ -6,7 +6,7 @@ module AccessPanels
     end
 
     def courses
-      @document.course_reserves&.courses || []
+      @document.course_reserves
     end
 
     def render?
@@ -14,7 +14,7 @@ module AccessPanels
     end
 
     def link_to_course_reserve_course(course)
-      link_to("#{course.id} -- #{course.name}", search_catalog_path({ f: { course: [course.id], instructor: [course.instructor] } }))
+      link_to("#{course.course_number} -- #{course.name}", search_catalog_path({ f: { courses_folio_id_ssim: [course.id] } }))
     end
   end
 end

@@ -1,18 +1,41 @@
-a:not(.btn):not(.dropdown-item):not(.page-link):not(.remove) {
-  border-bottom: 1px solid transparent;
+:root {
+  // We had to split -line and -style for Safari support
+  --link-decoration-line: underline;
+  --link-decoration-style: dotted;
+  --link-hover-decoration-line: underline;
+  --link-hover-decoration-style: solid;
+  --link-text-decoration-color: gray;
+}
 
-  &.disabled {
-    color: $sul-btn-disabled-color;
-    cursor: not-allowed;
+a {
+  text-underline-position: under;
+  text-decoration-thickness: from-font; // Otherwise Chrome is too thick compared to FF
+}
+
+// Add a dotted underline text decoration to all links that are not within
+// headers and are not buttons, dropdown items, or pagination links.
+:not(h4,h3) > a:not(.btn, .dropdown-item, .page-link) {
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-text-decoration-color);
+
+  &:hover {
+    text-decoration-line: var(--link-hover-decoration-line);
+    text-decoration-style: var(--link-hover-decoration-style);
   }
-  
-  &:hover, &:focus, &:active  {
-    @include link-styling;
-  }
+}
+
+a:not(.btn):not(.dropdown-item):not(.page-link):not(.remove).disabled {
+  color: $sul-btn-disabled-color;
+  cursor: not-allowed;
 }
 
 body {
   font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+}
+
+.page-item  {
+  --link-decoration-line: none;
 }
 
 dt {

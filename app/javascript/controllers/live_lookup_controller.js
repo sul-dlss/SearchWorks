@@ -18,13 +18,16 @@ export default class extends Controller {
       const target = $(dom_item.data('status-target'), dom_item)
       const temporary_location = $('.temporary-location', dom_item)
       const status_text = target.next('.status-text')
+      const update_status = $(dom_item).data('update-status')
 
-      if (live_data.status){
-        status_text.html(live_data.status)
-      }
+      if (update_status) {
+        if (live_data.status){
+          status_text.html(live_data.status)
+        }
 
-      if (live_data.due_date) {
-        temporary_location.append(`Due ${live_data.due_date}`);
+        if (live_data.due_date) {
+          temporary_location.append(`Due ${live_data.due_date}`);
+        }
       }
 
       if (!live_data.is_available && (target.hasClass('unknown') || target.hasClass('deliver-from-offsite')) ) {

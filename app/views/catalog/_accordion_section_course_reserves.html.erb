@@ -3,18 +3,14 @@
   id = document[:id]
 %>
 
-<% if document.course_reserves&.courses.present? %>
-  <%
-    count = document.course_reserves.courses.length
-    snippet = document.course_reserves.courses.map(&:id).join(', ')
-  %>
+<% if document.course_reserves.present? %>
   <div class="accordion-section course-reserves">
     <div class="snippet-wrapper">
       <button class="header" data-accordion-section-target=".<%= id %>-course-reserves" aria-expanded="false">
         <span class="section-label">Course reserve</span>
       </button>
       <span class="snippet <%= id %>-course-reserves-snippet">
-        <%= snippet %>
+        <%= document.course_reserves.map(&:course_number).join(', ') %>
       </span>
     </div>
     <div class="details <%= id %>-course-reserves" aria-expanded="false">

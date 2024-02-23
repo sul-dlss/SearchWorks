@@ -25,6 +25,11 @@ module AccessPanels
       item.temporary_location.name
     end
 
+    def has_in_process_availability_class?
+      availability_class = item.effective_location&.details&.dig('availabilityClass')
+      availability_class.present? && availability_class == 'In_process'
+    end
+
     def render_item_details?
       !item.suppressed?
     end

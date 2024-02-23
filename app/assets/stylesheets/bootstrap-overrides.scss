@@ -12,6 +12,12 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+.dropdown-menu {
+  .active-icon {
+    margin-left: -17px;
+  }
+}
+
 h1 {
   color: $sul-h1-font-color;
   font-weight: 300;

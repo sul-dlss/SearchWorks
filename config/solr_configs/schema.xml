@@ -235,8 +235,7 @@
     <!--  instructor, course facet field names are exposed to end users in SW -->
     <field name="instructor" type="string" indexed="true" stored="true" multiValued="true" />
     <field name="course" type="string" indexed="true" stored="true" multiValued="true" />
-    <!-- crez_course_info is a facet and display field at this time (2012-03-21) -->
-    <field name="crez_course_info" type="string" indexed="true" stored="true" multiValued="true" />
+
     <!-- the next two facets are not used in SW at this time -->
     <field name="crez_dept_facet" type="string" indexed="true" stored="true" multiValued="true" />
     <field name="crez_desk_facet" type="string" indexed="true" stored="true" multiValued="true" />

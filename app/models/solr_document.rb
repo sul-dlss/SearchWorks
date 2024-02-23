@@ -113,6 +113,7 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
+  attribute :course_ids, :array, :courses_folio_id_ssim
   attribute :document_formats, :array, FORMAT_KEY
   attribute :live_lookup_id, :string, 'uuid_ssi'
 
