@@ -147,24 +147,5 @@ RSpec.describe Holdings do
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end
-    it 'should return the appropriate json hash for library and location' do
-      mhld = holdings_doc.holdings.as_json.first[:mhld]
-      expect(mhld).to be_a Array
-      expect(mhld.first).to be_a Hash
-      expect(mhld.first[:library]).to eq 'GREEN'
-      expect(mhld.first[:location]).to eq 'STACKS'
-      expect(holdings_doc.holdings.as_json.first[:locations].first[:mhld]).to eq mhld
-    end
-  end
-
-  describe '#as_json' do
-    let(:as_json) { complex_holdings.as_json }
-
-    it 'should retun the array of libraries' do
-      expect(as_json).to be_a Array
-      expect(as_json.length).to eq 2
-      expect(as_json.first[:code]).to eq 'library'
-      expect(as_json.last[:code]).to eq 'library2'
-    end
   end
 end

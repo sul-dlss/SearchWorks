@@ -56,15 +56,4 @@ RSpec.describe Holdings::MHLD do
       expect(Holdings::MHLD.new(mhld)).to be_present
     end
   end
-
-  describe '#as_json' do
-    let(:as_json) { Holdings::MHLD.new(mhld_display).as_json }
-
-    it 'should return a json hash' do
-      expect(as_json).to be_a Hash
-      expect(as_json[:library]).to eq 'GREEN'
-      expect(as_json[:location]).to eq 'STACKS'
-      expect(as_json[:library_has]).to eq 'mhld library has'
-    end
-  end
 end

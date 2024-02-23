@@ -38,9 +38,5 @@ class Holdings
         'unknown'
       end
     end
-
-    def as_json(*)
-      { availability_class:, status_text: }
-    end
   end
 end

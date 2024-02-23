@@ -3,15 +3,6 @@ require 'rails_helper'
 RSpec.describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }
 
-  describe '#as_json' do
-    let(:as_json) { status.as_json }
-
-    it 'should return a json hash with the availability class and status text' do
-      expect(as_json).to have_key :availability_class
-      expect(as_json).to have_key :status_text
-    end
-  end
-
   describe '#availability_class' do
     let(:item) do
       instance_double(Holdings::Item, folio_item?: true, folio_status: nil, effective_location:)
