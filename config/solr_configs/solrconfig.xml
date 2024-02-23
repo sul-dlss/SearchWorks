@@ -978,7 +978,7 @@
         collection,
         collection_type,
         collection_with_title,
-        crez_course_info,
+        courses_folio_id_ssim,
         db_az_subject,
         druid,
         file_id,

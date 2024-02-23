@@ -178,10 +178,15 @@ class CatalogController < ApplicationController
     }
     config.add_facet_field "topic_facet", label: "Topic", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 20, component: Blacklight::FacetFieldListComponent
+    # TODO: remove "course" and "instructor" after a time. These have been replaced by courses_folio_id_ssim.
+    # We just don't want to break any bookmarks that people may have. Perhaps wait for a semester or so.
     config.add_facet_field "course", label: "Course", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "instructor", label: "Instructor", show: false, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "courses_folio_id_ssim", label: "Course", show: false,
+                           component: Blacklight::FacetFieldListComponent,
+                           item_presenter: FolioCourseFacetItemPresenter
 
-    # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
+                           # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
     config.add_facet_field "geographic_facet", label: "Region", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "era_facet", label: "Era", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, component: Blacklight::FacetFieldListComponent

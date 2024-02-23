@@ -13,7 +13,7 @@ namespace :searchworks do
   end
 
   desc "Index test fixtures"
-  task :fixtures do
+  task fixtures: :environment do
     FixturesIndexer.run
   end
 

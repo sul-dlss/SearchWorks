@@ -3,8 +3,7 @@ require 'page_location'
 
 RSpec.describe PageLocation do
   let(:params) { { f: { format: ["Database"] } } }
-  # let(:config) { instance_double(Blacklight::Configuration) }
-  let(:controller) { CatalogController.new } # instance_double(CatalogController, controller_name: 'catalog', action_name: action) }
+  let(:controller) { CatalogController.new }
   let(:action) { 'index' }
   let(:search_state) { Blacklight::SearchState.new(params, controller.blacklight_config, controller) }
 
@@ -84,30 +83,36 @@ RSpec.describe PageLocation do
       end
 
       describe "course reserve" do
-        before { params[:f] = { course: ["SOULSTEEP-101"], instructor: ["Winfrey, Oprah"] } }
+        let(:course) { CourseReserve.all.first }
 
-        it "should be defined when course and instructor facets are selected" do
-          expect(access_point).to eq :course_reserve
+        before { params[:f] = { courses_folio_id_ssim: [course.id] } }
+
+        context 'when courses_folio_id_ssim facet is selected' do
+          it { is_expected.to eq :course_reserve }
         end
-        it "should be defined when an another facet is selected" do
-          params[:f][:format] = "Book"
-          expect(access_point).to eq :course_reserve
+
+        context 'when another facet is selected' do
+          before do
+            params[:f][:format] = "Book"
+          end
+
+          it { is_expected.to eq :course_reserve }
         end
-        it "should be defined when searching with course reserve" do
-          params[:q] = "My Query"
-          expect(access_point).to eq :course_reserve
+
+        context 'when searching with course reserve' do
+          before do
+            params[:q] = "My Query"
+          end
+
+          it { is_expected.to eq :course_reserve }
         end
-        it "should not be defined when only one of course or instructor are selected" do
-          params[:f] = { course: ["CATZ-101"] }
-          expect(access_point).to be_nil
-        end
-        it "should not be defined when only one of course or instructor are selected" do
-          params[:f] = { instructor: ["Winfrey, Oprah"] }
-          expect(access_point).to be_nil
-        end
-        it "should not be defined when neither course nor instructor are selected" do
-          params[:f] = { access: "Online" }
-          expect(access_point).to be_nil
+
+        context 'when courses_folio_id_ssim facet is not selected' do
+          before do
+            params[:f] = { access: "Online" }
+          end
+
+          it { is_expected.to be_nil }
         end
       end
 

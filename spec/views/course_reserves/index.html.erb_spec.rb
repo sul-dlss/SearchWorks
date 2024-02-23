@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'course_reserves/index' do
   before do
     @course_reserves = [
-      CourseReserves::CourseInfo.new(id: 'CAT-401-01-01', name: 'Emergency Kittenz', instructor: 'McDonald, Ronald'),
-      CourseReserves::CourseInfo.new(id: 'DOG-902-10-01', name: 'Of Dogs and Men', instructor: 'Dog, Crime')
+      CourseReserve::FolioCourseInfo.new(id: 1, course_number: 'CAT-401-01-01', name: 'Emergency Kittenz', instructor: ['McDonald, Ronald']),
+      CourseReserve::FolioCourseInfo.new(id: 2, course_number: 'DOG-902-10-01', name: 'Of Dogs and Men', instructor: ['Dog, Crime'])
     ]
     render
   end
