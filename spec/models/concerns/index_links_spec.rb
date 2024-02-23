@@ -8,6 +8,74 @@ RSpec.describe IndexLinks do
     )
   end
 
+  let(:lane) do
+    {
+      id: "ce250ebb-807f-460a-9afa-b2087645e4a8",
+      name: "Digital: Document",
+      code: "LANE-EDOC",
+      library: {
+        id: "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+        code: "LANE",
+        name: "Lane Medical Library"
+      },
+      campus: {
+        id: "40b76104-95ea-4360-a2be-5fd887222e2d",
+        code: "MED",
+        name: "Medical Center"
+      },
+      institution: {
+        id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        code: "SU",
+        name: "Stanford University"
+      }
+    }
+  end
+
+  let(:law) do
+    {
+      id: "c6ce7052-e365-47d5-a98d-41daf68e7a1f",
+      name: "Online resource",
+      code: "LAW-ELECTRONIC",
+      campus: {
+        id: "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+        code: "LAW",
+        name: "Law School"
+      },
+      library: {
+        id: "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
+        code: "LAW",
+        name: "Law Library (Crown)"
+      },
+      institution: {
+        id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        code: "SU",
+        name: "Stanford University"
+      }
+    }
+  end
+
+  let(:sul) do
+    {
+      id: "ce250ebb-807f-460a-9afa-b2087645e4a8",
+      name: "Digital: Document",
+      code: "SUL-EDOC",
+      library: {
+        id: "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+        code: "SUL"
+      },
+      campus: {
+        id: "40b76104-95ea-4360-a2be-5fd887222e2d",
+        code: "MED",
+        name: "Medical Center"
+      },
+      institution: {
+        id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        code: "SU",
+        name: "Stanford University"
+      }
+    }
+  end
+
   describe 'mixin' do
     it 'should add the #index_links method' do
       expect(document).to respond_to(:index_links)
@@ -153,7 +221,19 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Access restricted to Stanford community' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: lane
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -166,7 +246,19 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: lane
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -182,7 +274,19 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to Stanford Law School' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: law
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -195,7 +299,19 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://www.iareporter.com/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: law
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -211,7 +327,19 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: sul
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -224,7 +352,19 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: sul
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -240,7 +380,19 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: sul
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
@@ -256,7 +408,19 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_json_struct: [
+              {
+                holdings: [
+                  {
+                    id: "f274792f-ad5f-5783-b86b-616a358b524d",
+                    location: {
+                      effectiveLocation: lane
+                    }
+                  }
+                ],
+                items: []
+              }
+            ]
           )
         end
 
