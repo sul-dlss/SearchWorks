@@ -17,9 +17,9 @@ RSpec.describe 'catalog/stackmap' do
       expect(rendered).to have_css('span.library')
       expect(rendered).to have_css('span.floorname')
 
-      expect(rendered).to have_css('.zoom-controls a.zoom-in')
-      expect(rendered).to have_css('.zoom-controls a.zoom-out')
-      expect(rendered).to have_css('.zoom-controls a.zoom-fit')
+      expect(rendered).to have_css('.zoom-controls .zoom-in')
+      expect(rendered).to have_css('.zoom-controls .zoom-out')
+      expect(rendered).to have_css('.zoom-controls .zoom-fit')
       expect(rendered).to have_css('.controls .show-description')
 
       expect(rendered).to have_css('.map-template .osd')
