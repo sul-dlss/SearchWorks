@@ -10,7 +10,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
   let(:location) { 'LOCKED-STK' }
   let(:temporary_location) { instance_double(Holdings::Location, code: nil) }
   let(:item) do
-    instance_double(Holdings::Item, document:, library:, home_location: location,
+    instance_double(Holdings::Item, document:, library:, effective_permanent_location_code: location,
                                     temporary_location: instance_double(Holdings::Location, code: nil), circulates?: true)
   end
 
@@ -18,7 +18,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context 'with FOLIO items' do
     let(:item) do
-      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, home_location: nil, temporary_location:, folio_item?: true, folio_status:, allowed_request_types:)
+      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, effective_permanent_location_code: nil, temporary_location:, folio_item?: true, folio_status:, allowed_request_types:)
     end
 
     context 'checked out item from a location that allows holds' do
@@ -54,7 +54,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
         Holdings::Item.new({
                              barcode: '123',
                              library: 'GREEN',
-                             home_location: 'STACKS',
+                             effective_permanent_location_code: 'STACKS',
                              status: 'On order',
                              type: 'STKS-MONO'
                            }, document:)

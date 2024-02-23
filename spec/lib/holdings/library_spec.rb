@@ -30,9 +30,9 @@ RSpec.describe Holdings::Library do
 
   describe "#locations" do
     let(:items) { [
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc' }),
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc2' }),
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', home_location: 'home-loc' })
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' }),
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc2' }),
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' })
     ] }
 
     let(:locations) { Holdings::Library.new("GREEN", items).locations }
@@ -50,9 +50,9 @@ RSpec.describe Holdings::Library do
 
       let(:items) do
         [
-          Holdings::Item.new({ barcode: 'barcode1', library: 'SPEC-COLL', home_location: 'SPEC-MSS-10' }),
-          Holdings::Item.new({ barcode: 'barcode2', library: 'SPEC-COLL', home_location: 'SPEC-MANUSCRIPT' }),
-          Holdings::Item.new({ barcode: 'barcode3', library: 'SPEC-COLL', home_location: 'SPEC-MSS-10' })
+          Holdings::Item.new({ barcode: 'barcode1', library: 'SPEC-COLL', effective_permanent_location_code: 'SPEC-MSS-10' }),
+          Holdings::Item.new({ barcode: 'barcode2', library: 'SPEC-COLL', effective_permanent_location_code: 'SPEC-MANUSCRIPT' }),
+          Holdings::Item.new({ barcode: 'barcode3', library: 'SPEC-COLL', effective_permanent_location_code: 'SPEC-MSS-10' })
         ]
       end
 
@@ -68,9 +68,9 @@ RSpec.describe Holdings::Library do
     describe 'sorting' do
       let(:locations) { Holdings::Library.new("GREEN", items).locations }
       let(:items) { [
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'SAL-PAGE' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', home_location: 'GRE-CURRENTPER' })
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'SAL-PAGE' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-CURRENTPER' })
       ] }
 
       it "sorts locations alpha by name" do

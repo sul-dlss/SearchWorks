@@ -1,7 +1,7 @@
 class ItemRequestLinkComponent < ViewComponent::Base
   attr_reader :item, :classes
 
-  delegate :document, :library, :home_location, :barcode, to: :item
+  delegate :document, :library, :effective_permanent_location_code, :barcode, to: :item
 
   def initialize(item:, classes: %w[btn btn-xs request-button])
     super
@@ -34,7 +34,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
     helpers.request_url(
       document,
       library:,
-      location: home_location,
+      location: effective_permanent_location_code,
       barcode:
     )
   end

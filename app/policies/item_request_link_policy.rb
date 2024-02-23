@@ -23,7 +23,7 @@ class ItemRequestLinkPolicy
 
   attr_reader :item
 
-  delegate :document, :library, :home_location, :barcode, to: :item
+  delegate :document, :library, :barcode, to: :item
 
   def folio_holdable?
     return false unless Settings.folio_hold_recall_statuses.include?(item.folio_status)

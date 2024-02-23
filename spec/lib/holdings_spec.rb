@@ -10,8 +10,10 @@ RSpec.describe Holdings do
     Holdings.new(
       SolrDocument.new(
         item_display_struct: [
-          { barcode: 'barcode', library: 'library', home_location: 'home-location', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: 'full-shelfkey', scheme: 'LC' },
-          { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', temporary_location_code: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: 'full-shelfkey2', scheme: 'INTERNET' }
+          { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: 'full-shelfkey',
+            scheme: 'LC' },
+          { barcode: 'barcode2', library: 'library2', effective_permanent_location_code: 'home-location2', temporary_location_code: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: 'full-shelfkey2',
+            scheme: 'INTERNET' }
         ]
       ).items
     )
@@ -20,8 +22,8 @@ RSpec.describe Holdings do
     Holdings.new(
       SolrDocument.new(
         item_display_struct: [
-          { barcode: 'barcode', library: 'library', home_location: 'home-location', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: '999' },
-          { barcode: 'barcode2', library: 'library2', home_location: 'home-location2', temporary_location_code: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: '111' }
+          { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber', full_shelfkey: '999' },
+          { barcode: 'barcode2', library: 'library2', effective_permanent_location_code: 'home-location2', temporary_location_code: 'current-location2', type: 'type2', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse-shelfkey2', callnumber: 'callnumber2', full_shelfkey: '111' }
         ]
       ).items
     )
@@ -57,9 +59,9 @@ RSpec.describe Holdings do
       Holdings.new(
         SolrDocument.new(
           item_display_struct: [
-            { barcode: 'barcode', library: 'library', home_location: 'home-location' },
-            { barcode: 'barcode', library: 'library2', home_location: 'home-location' },
-            { barcode: 'barcode', library: 'library', home_location: 'home-location' }
+            { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location' },
+            { barcode: 'barcode', library: 'library2', effective_permanent_location_code: 'home-location' },
+            { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location' }
           ]
         ).items
       )
@@ -68,9 +70,9 @@ RSpec.describe Holdings do
       Holdings.new(
         SolrDocument.new(
           item_display_struct: [
-            { barcode: 'barcode', library: 'SAL3', home_location: 'home-location' },
-            { barcode: 'barcode', library: 'GREEN', home_location: 'home-location' },
-            { barcode: 'barcode', library: 'MARINE-BIO', home_location: 'home-location' }
+            { barcode: 'barcode', library: 'SAL3', effective_permanent_location_code: 'home-location' },
+            { barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'home-location' },
+            { barcode: 'barcode', library: 'MARINE-BIO', effective_permanent_location_code: 'home-location' }
           ]
         ).items
       )
@@ -113,7 +115,7 @@ RSpec.describe Holdings do
     let(:holdings_doc) {
       SolrDocument.new(
         item_display_struct: [
-          { barcode: 'barcode', library: 'GREEN', home_location: 'STACKS', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber' }
+          { barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'STACKS', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber' }
         ],
         mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
       )

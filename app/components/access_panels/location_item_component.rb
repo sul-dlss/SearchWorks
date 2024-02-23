@@ -20,7 +20,7 @@ module AccessPanels
     def temporary_location_text
       return if item.effective_location&.details&.key?('availabilityClass') ||
                 item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
-                item.home_location == item.temporary_location_code
+                item.effective_permanent_location_code == item.temporary_location_code
 
       item.temporary_location.name
     end
