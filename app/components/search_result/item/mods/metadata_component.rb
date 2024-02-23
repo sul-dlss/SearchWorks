@@ -4,6 +4,8 @@ module SearchResult
   module Item
     module Mods
       class MetadataComponent < Blacklight::Component
+        TEMPLATE_FIELDS = ['extent', 'summary_data', 'index_parent_sets', 'index_parent_collections'].freeze
+
         def initialize(document:)
           @document = document
           super()

@@ -117,6 +117,14 @@ class SolrDocument
   attribute :document_formats, :array, FORMAT_KEY
   attribute :live_lookup_id, :string, 'uuid_ssi'
 
+  def db_az_subject
+    self[:db_az_subject] if is_a_database?
+  end
+
+  def finding_aid
+    index_links&.finding_aid if has_finding_aid?
+  end
+
   def file_ids
     self[:img_info] || self[:file_id] || []
   end

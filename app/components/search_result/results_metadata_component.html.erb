@@ -1,0 +1,57 @@
+<dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
+    <% if present_fields['extent'] %>
+      <dt><%= document.extent_label %></dt>
+      <dd><%= present_fields['extent'] %></dd>
+    <% end %>
+
+    <% if present_fields['db_az_subject'] %>
+        <dt>Database topics</dt>
+        <dd>
+            <%= safe_join(present_fields['db_az_subject'].map { |subject| helpers.link_to_database_search(subject) }, '; ') %>
+        </dd>
+    <% end %>
+
+    <% if present_fields['summary_data'] %>
+      <%= render present_fields['summary_data'] %>
+    <% end %>
+
+    <% if present_fields['index_parent_sets'] %>
+        <dt>Included in</dt>
+        <dd>
+        <div data-behavior="metadata-truncate">
+            <% present_fields['index_parent_sets'].each do |set| %>
+            <%= link_to(helpers.document_presenter(set).heading, solr_document_path(set))%>
+            <% end %>
+        </div>
+        </dd>
+    <% end %>
+
+    <% if present_fields['finding_aid'] %>
+      <dt>Finding aid</dt>
+      <dd><%= present_fields['finding_aid'].first.html.html_safe %></dd>
+    <% end %>
+
+    <% if present_fields['index_parent_collections'] %>
+      <dt>Digital collection</dt>
+      <dd>
+        <% present_fields['index_parent_collections'].each do |collection| %>
+          <%= link_to(helpers.document_presenter(collection).heading, solr_document_path(collection))%>
+        <% end %>
+      </dd>
+    <% end %>
+
+    <% if present_fields['collection_titles'].present? %>
+      <dt>Collection</dt>
+      <dd>
+        <ul data-behavior="truncate-results-metadata-links">
+          <% present_fields['collection_titles'].each do |collection| %>
+            <% collection.each_value do |collection_title| %>
+              <li>
+                <%= link_to(collection_title.strip, search_catalog_path(search_field: :subject_terms, q: "\"#{collection_title.strip}\"")) %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </dd>
+    <% end %>
+</dl>

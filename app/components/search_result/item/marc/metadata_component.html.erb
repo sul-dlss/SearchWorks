@@ -1,52 +1,7 @@
 <div class="results-metadata-sections">
   <%= render "catalog/marc_search_results_document_fields", document: document %>
 
-  <dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
-    <% if document.extent.present? %>
-      <dt><%= document.extent_label %></dt>
-      <dd><%= document.extent %></dd>
-    <% end %>
-
-    <% if document.is_a_database? %>
-      <% if document[:db_az_subject].present? %>
-        <dt>Database topics</dt>
-        <dd>
-          <%= safe_join(document[:db_az_subject].map { |subject| helpers.link_to_database_search(subject) }, '; ') %>
-        </dd>
-      <% end %>
-    <% end %>
-
-    <%= render SummaryDataComponent.new(document:) %>
-
-    <% if document.index_links.finding_aid.present? %>
-      <dt>Finding aid</dt>
-      <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
-    <% end %>
-
-    <% if document.index_parent_collections.present? %>
-      <dt>Digital collection</dt>
-      <dd>
-        <% document.index_parent_collections.each do |collection| %>
-          <%= link_to(helpers.document_presenter(collection).heading, solr_document_path(collection))%>
-        <% end %>
-      </dd>
-    <% end %>
-
-    <% if document.collection_titles.any? %>
-      <dt>Collection</dt>
-      <dd>
-        <ul data-behavior="truncate-results-metadata-links">
-          <% document.collection_titles.each do |collection| %>
-            <% collection.each do |_k, collection_title| %>
-              <li>
-                <%= link_to(collection_title.strip, search_catalog_path(search_field: :subject_terms, q: "\"#{collection_title.strip}\"")) %>
-              </li>
-            <% end %>
-          <% end %>
-        </ul>
-      </dd>
-    <% end %>
-  </dl>
+  <%= render SearchResult::ResultsMetadataComponent.new(document:, template_fields: TEMPLATE_FIELDS) %>
 
   <%= render "catalog/index_online_section", document: document %>
 

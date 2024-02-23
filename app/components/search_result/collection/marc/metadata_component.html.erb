@@ -1,18 +1,6 @@
 <%= render "catalog/marc_search_results_document_fields", document: document %>
 
-<dl class="dl-horizontal dl-invert results-metadata-section col-md-8">
-  <% if document.extent.present? %>
-    <dt><%= document.extent_label %></dt>
-    <dd><%= document.extent %></dd>
-  <% end %>
-
-  <%= render SummaryDataComponent.new(document:) %>
-
-  <% if document.index_links.finding_aid.present? %>
-    <dt>Finding aid</dt>
-    <dd><%= document.index_links.finding_aid.first.html.html_safe %></dd>
-  <% end %>
-</dl>
+<%= render SearchResult::ResultsMetadataComponent.new(document:, template_fields: TEMPLATE_FIELDS) %>
 
 <%= render "catalog/search_results_accordion_sections", document: document %>
 
