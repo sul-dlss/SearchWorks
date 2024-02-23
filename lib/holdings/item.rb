@@ -200,7 +200,7 @@ class Holdings
     end
 
     def internet_resource?
-      home_location == 'INTERNET' || type == 'ONLINE'
+      type == 'ONLINE'
     end
 
     private
