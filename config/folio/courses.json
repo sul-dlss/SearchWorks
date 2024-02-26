@@ -605,6 +605,80 @@
     }
   },
   {
+    "id": "0428d15f-6128-4a86-a157-4fef8c7cbe24",
+    "name": "Diplomacy on the Ground: Case Studies in the Challenges of Representing Your Country",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "8de88a80-38b4-4890-840e-445795c03196",
+    "courseListingObject": {
+      "id": "8de88a80-38b4-4890-840e-445795c03196",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "6c8bac3d-7089-417a-83c7-aa7efbc819a5",
+          "userId": "45926d41-6496-418b-a2be-3d034ef3abb3",
+          "name": "Robert Rakove",
+          "barcode": "2557430440",
+          "courseListingId": "8de88a80-38b4-4890-840e-445795c03196",
+          "metadata": {
+            "createdDate": "2024-02-26T02:24:22.102+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:24:22.102+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:23:19.239+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:24:02.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "HISTORY-252B-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:24:02.563+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:24:02.563+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "0431b427-cd1b-4b37-9530-e9aa8ea25311",
     "name": "Originalism and the American Constitution: History and Interpretation",
     "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
@@ -4074,6 +4148,80 @@
     }
   },
   {
+    "id": "15f7c514-120c-4198-a00b-0b21f688d62d",
+    "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan",
+    "departmentId": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+    "departmentObject": {
+      "id": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+      "name": "JAPAN - Japan",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:51.573+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:51.573+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+    "courseListingObject": {
+      "id": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "154ce56b-f269-4c10-af91-e8433bc29484",
+          "userId": "41858f81-5d10-451a-b56b-07cc17eb2919",
+          "name": "Indra Levy",
+          "barcode": "2553727069",
+          "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+          "metadata": {
+            "createdDate": "2024-02-26T02:49:20.056+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:49:20.056+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:47:21.953+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:49:00.915+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "JAPAN-125-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:47:21.984+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:47:21.984+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "165f5eea-095c-4bc1-8c7d-fa7242bfc82e",
     "name": "Theory of Probability",
     "description": "Probability spaces as models for phenomena with statistical regularity. Discrete spaces (binomial, hypergeometric, Poisson). Continuous spaces (normal, exponential) and densities. Random variables, expectation, independence, conditional probability. Introduction to the laws of large numbers and central limit theorem. Prerequisites: MATH 52 and familiarity with infinite series, or equivalent. Undergraduate students enroll for 5 units, graduate students enroll for 4 units. Undergraduate students must enroll in one section in addition to the main lecture. Sections are optional for graduate students. Note: Autumn 2023-24 is the last time this course will be offered. It will be replaced by STATS 117 and STATS 118 in 2024-25.",
@@ -5587,6 +5735,80 @@
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
       "updatedDate": "2023-09-14T17:13:34.166+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    }
+  },
+  {
+    "id": "1dc822e6-c55b-4880-aea7-d83388eb80b8",
+    "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan ",
+    "departmentId": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+    "departmentObject": {
+      "id": "7dfab7a6-1925-4651-ba53-70ed14b36cb4",
+      "name": "COMPLIT - Comparative Literature",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:43.299+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:43.299+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+    "courseListingObject": {
+      "id": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "154ce56b-f269-4c10-af91-e8433bc29484",
+          "userId": "41858f81-5d10-451a-b56b-07cc17eb2919",
+          "name": "Indra Levy",
+          "barcode": "2553727069",
+          "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+          "metadata": {
+            "createdDate": "2024-02-26T02:49:20.056+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:49:20.056+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:47:21.953+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:49:00.915+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "COMPLIT-125J-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:48:35.435+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:48:35.435+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -38214,6 +38436,80 @@
     }
   },
   {
+    "id": "b96e5668-7372-4f8a-bd25-23b8d8f5734a",
+    "name": "Writing & Rhetoric 1: Oceans of Rhetoric",
+    "departmentId": "94cb5997-709e-4b42-bc1f-0566d2d072c0",
+    "departmentObject": {
+      "id": "94cb5997-709e-4b42-bc1f-0566d2d072c0",
+      "name": "PWR - Program in writing and rehetoric ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:46.295+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:46.295+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0bf75ca3-8886-4af7-8223-03252a0a4260",
+    "courseListingObject": {
+      "id": "0bf75ca3-8886-4af7-8223-03252a0a4260",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+      "termObject": {
+        "id": "7462a078-7f60-47d9-adf5-4059d3c5ae40",
+        "name": "SUL Winter 2024",
+        "startDate": "2023-12-18T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "0984ad51-2a9e-41e4-a903-82bf1f5a2f69",
+          "userId": "d1c90308-237b-445c-8b0c-c24458034ac4",
+          "name": "Irena Yamboliev",
+          "barcode": "2556528713",
+          "courseListingId": "0bf75ca3-8886-4af7-8223-03252a0a4260",
+          "metadata": {
+            "createdDate": "2024-02-26T02:52:27.762+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:52:27.762+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:52:05.466+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:52:05.466+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "PWR-1IYB-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:52:05.548+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:52:05.548+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "b9b5ba0c-7a5f-431f-987c-6f276b0a2c99",
     "name": "Elementary Teaching Seminar: School-Family Partnerships",
     "departmentId": "eb6a6f25-b76f-4077-a9b4-cb421b3660e8",
@@ -39250,6 +39546,48 @@
     }
   },
   {
+    "id": "bd2dbd79-0ce0-4fd6-9318-b634b050c584",
+    "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan",
+    "departmentId": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+    "departmentObject": {
+      "id": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+      "name": "JAPAN - Japan",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:51.573+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:51.573+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "46ee411f-3003-49f0-b523-fb3a4dda58ee",
+    "courseListingObject": {
+      "id": "46ee411f-3003-49f0-b523-fb3a4dda58ee",
+      "termId": "ea70589f-cda8-40a5-80d4-458517bc0526",
+      "termObject": {
+        "id": "ea70589f-cda8-40a5-80d4-458517bc0526",
+        "name": "Lane Winter 2024",
+        "startDate": "2024-01-07T08:00:00.000Z",
+        "endDate": "2024-03-22T07:00:00.000Z"
+      },
+      "instructorObjects": [
+
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:45:52.974+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:45:52.974+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "JAPAN-125-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:45:53.026+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:45:53.026+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "bd510bf0-e169-4212-ba5b-1061368278b4",
     "name": "Philosophy and Literature",
     "departmentId": "56cd0d00-3ea9-4dbe-b94f-32e0fbe2387a",
@@ -39473,6 +39811,80 @@
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
       "updatedDate": "2023-12-18T23:04:11.920+00:00",
       "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    }
+  },
+  {
+    "id": "be300872-8b66-4467-b279-6206fdbf3b60",
+    "name": "History of the International System since 1914",
+    "departmentId": "5bebcfcc-7d44-4750-aa00-f29711593873",
+    "departmentObject": {
+      "id": "5bebcfcc-7d44-4750-aa00-f29711593873",
+      "name": "INTNLREL - International Relations",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:51.742+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:51.742+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+    "courseListingObject": {
+      "id": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "221ca362-ce47-41bd-9465-7ad482380488",
+          "userId": "45926d41-6496-418b-a2be-3d034ef3abb3",
+          "name": "Robert Rakove",
+          "barcode": "2557430440",
+          "courseListingId": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+          "metadata": {
+            "createdDate": "2024-02-26T02:39:15.364+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:39:15.364+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:38:15.708+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:38:49.551+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "INTNLREL-102-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:38:49.495+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:38:49.495+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -45419,6 +45831,80 @@
     }
   },
   {
+    "id": "d79787e2-f93b-4050-ab79-240c9f27cb5c",
+    "name": "Diplomacy on the Ground: Case Studies in the Challenges of Representing Your Country ",
+    "departmentId": "5bebcfcc-7d44-4750-aa00-f29711593873",
+    "departmentObject": {
+      "id": "5bebcfcc-7d44-4750-aa00-f29711593873",
+      "name": "INTNLREL - International Relations",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:51.742+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:51.742+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "8de88a80-38b4-4890-840e-445795c03196",
+    "courseListingObject": {
+      "id": "8de88a80-38b4-4890-840e-445795c03196",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "6c8bac3d-7089-417a-83c7-aa7efbc819a5",
+          "userId": "45926d41-6496-418b-a2be-3d034ef3abb3",
+          "name": "Robert Rakove",
+          "barcode": "2557430440",
+          "courseListingId": "8de88a80-38b4-4890-840e-445795c03196",
+          "metadata": {
+            "createdDate": "2024-02-26T02:24:22.102+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:24:22.102+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:23:19.239+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:24:02.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "INTNLREL-174-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:23:19.386+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:23:19.386+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "d7a978d2-7a01-47d6-ac10-2c4510071d89",
     "name": "Federal Litigation in a Global Context: Coursework",
     "departmentId": "0bbe9a7b-f94c-4300-84ed-898dbbf35310",
@@ -49132,6 +49618,80 @@
     }
   },
   {
+    "id": "e7524000-0023-4c90-aa7f-d631b317ab4e",
+    "name": "History of the International System since 1914",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+    "courseListingObject": {
+      "id": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "221ca362-ce47-41bd-9465-7ad482380488",
+          "userId": "45926d41-6496-418b-a2be-3d034ef3abb3",
+          "name": "Robert Rakove",
+          "barcode": "2557430440",
+          "courseListingId": "ad3b9322-2299-4d16-8831-b4c8d493b96c",
+          "metadata": {
+            "createdDate": "2024-02-26T02:39:15.364+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:39:15.364+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:38:15.708+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:38:49.551+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "HISTORY-102-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:38:15.782+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:38:15.782+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "e7c120f8-50d9-458f-8ecf-4633dd539930",
     "name": "Baldwin and Hansberry: The Myriad Meanings of Love",
     "departmentId": "e4c3db0e-1f18-4c1e-9218-5c417153eb76",
@@ -51960,6 +52520,80 @@
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
       "updatedDate": "2023-09-14T17:17:59.699+00:00",
       "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    }
+  },
+  {
+    "id": "f4ea777e-e215-4550-9097-00d46923b85b",
+    "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan ",
+    "departmentId": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+    "departmentObject": {
+      "id": "21e959f5-c92d-439a-a64f-334bf1c086e6",
+      "name": "JAPAN - Japan",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:51.573+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:51.573+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+    "courseListingObject": {
+      "id": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "154ce56b-f269-4c10-af91-e8433bc29484",
+          "userId": "41858f81-5d10-451a-b56b-07cc17eb2919",
+          "name": "Indra Levy",
+          "barcode": "2553727069",
+          "courseListingId": "6d7bbc9b-ee9f-4031-89a2-9b72b13c2909",
+          "metadata": {
+            "createdDate": "2024-02-26T02:49:20.056+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-26T02:49:20.056+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-26T02:47:21.953+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-26T02:49:00.915+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "JAPAN-225-01",
+    "metadata": {
+      "createdDate": "2024-02-26T02:49:00.873+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-26T02:49:00.873+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
