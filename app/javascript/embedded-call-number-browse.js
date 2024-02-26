@@ -56,7 +56,7 @@ import PreviewContent from './preview-content'
 
     GalleryDocs.prototype.addBrowseLinkDivs = function() {
       let html = `<div class="gallery-document"><div class="browse-link">` +
-                 `<a href="${this.browseURL}" class="text-center"> Continue to full page</a></div></div>`
+                 `<a href="${this.browseUrl}" class="text-center"> Continue to full page</a></div></div>`
       this.embedContainer.append(html);
       this.embedContainer.prepend(html);
     };
