@@ -123,36 +123,27 @@
   integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
 
 "@hotwired/turbo-rails@^8.0.0":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-8.0.2.tgz#c43d54d9346bcf14c897166556bfed92ed4c1d17"
-  integrity sha512-j+6THPc+CsaUdUXZTg6wQ+YcStO9kn6CuGzElqFxUmV/vyd1Jfm0RLZMIbaY8w9Qse7u6JBcrm4AcRxhIhYmaQ==
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-8.0.3.tgz#e60375f4eea4b30ec0cd6d7e3fdb3d6349a2b57b"
+  integrity sha512-n5B9HdFsNiGJfXFAriCArmvFZyznIh/OriB5ZVAWz4Fsi4oLkpgmJNw5pibBAM7NMQQGN6cfKa/nhZT4LWcqbQ==
   dependencies:
-    "@hotwired/turbo" "^8.0.2"
+    "@hotwired/turbo" "^8.0.3"
     "@rails/actioncable" "^7.0"
 
-"@hotwired/turbo@^8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-8.0.2.tgz#c31cdadfe66b98983066a94073b26fc7e15835f0"
-  integrity sha512-3K6QZkwWfosAV8zuM5bY+kKF02jp1lMQGsWfSE6wXdZBRBP3ah+Vj26YNqYtkEomBwRWA0QKhZgyJP7xOQkVEg==
+"@hotwired/turbo@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-8.0.3.tgz#338e07278f4b3c76921328d3c92dbc4831c209d0"
+  integrity sha512-qLgp7d6JaegKjMToTJahosrFxV3odfSbiekispQ3soOzE5jnU+iEMWlRvYRe/jvy5Q+JWoywtf9j3RD4ikVjIg==
 
 "@rails/actioncable@^7.0":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.1.3.tgz#4db480347775aeecd4dde2405659eef74a458881"
   integrity sha512-ojNvnoZtPN0pYvVFtlO7dyEN9Oml1B6IDM+whGKVak69MMYW99lC2NOWXWeE3bmwEydbP/nn6ERcpfjHVjYQjA==
 
-blacklight-frontend@7:
+blacklight-frontend@7, "blacklight-frontend@>=7.1 || 8.0":
   version "7.37.0"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.37.0.tgz#cbc2e744ebf1728546e3f6a6b0033fe36227d4e0"
   integrity sha512-WaZs10y8BFKrz6yWNqhszNujgkqrQggJDOzoFhPAhF/1/vs+mZ1TkEd+vktnCdxaustRZqEeNa5KQWIuvjgIaA==
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-    jquery "^3.5.1"
-    typeahead.js "^0.11.1"
-
-"blacklight-frontend@>=7.1 || 8.0":
-  version "7.36.2"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.36.2.tgz#54569482e572a8db1a3a41fad07055793fa40eb0"
-  integrity sha512-Ivu13erVAUdb/eoHXfRzkTqJdMBF7SM5k/a0xiPjbe1Y/S+i2Z+oiyYBAJGbpHBkQc0MACKqIfJ9xGPJlllXeA==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
     jquery "^3.5.1"
