@@ -24,23 +24,16 @@ import PreviewContent from './preview-content'
       this.embedContainer = this.embedViewport.find('.gallery');
       this.url = item.data('url');
       this.browseUrl = item.data('index-path');
-      this.docs = [];
       this.currentDoc = item.data('start')
     };
 
-    GalleryDocs.prototype.updateDocs = function() {
-      this.docs = this.embedViewport.find('.gallery-document').map(function(){
-        return $(this).data('doc-id');
-      });
+    GalleryDocs.prototype.docs = function() {
+      return this.embedViewport.find('.gallery-document')
     };
 
     GalleryDocs.prototype.hasContent = function() {
-      if (this.docs.length){
-        return true;
-      }else{
-        return false;
-      }
-    };
+      return this.docs().length !== 0
+    }
 
     GalleryDocs.prototype.docById = function() {
       return this.embedViewport
@@ -76,8 +69,9 @@ import PreviewContent from './preview-content'
           openThisBrowser();
         });
 
-        addListeners();
-        $('[data-behavior="embed-browse"]').first().click();
+        // It's possible the page was restored from a turbo cache, where the panel was already open.
+        // We don't want to toggle it closed.
+        $('[data-behavior="embed-browse"].collapsed').first().click();
       }
 
       function closeOtherBrowsers() {
@@ -116,8 +110,6 @@ import PreviewContent from './preview-content'
         if (!$galleryDoc.hasContent()){
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function(data){
-              $galleryDoc.updateDocs();
-
               // fix up the id/for to avoid duplicating html ids for the current document.
               document.querySelectorAll('.gallery-document label.toggle-bookmark').forEach((val) => {
                 const id = 'browse_' + val.getAttribute('for');
@@ -148,9 +140,6 @@ import PreviewContent from './preview-content'
       function reorderPreviewElements() {
         var previewElements = $galleryDoc.embedContainer.find('.preview-container');
         $galleryDoc.embedViewport.append(previewElements);
-      }
-
-      function addListeners() {
       }
 
       // Scroll to the current document
