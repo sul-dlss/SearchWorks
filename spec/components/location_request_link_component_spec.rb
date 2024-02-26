@@ -281,6 +281,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
         it { expect(page).to have_no_link }
       end
+
+      context 'with "On order" status' do
+        let(:folio_status) { 'On order' }
+
+        it { expect(page).to have_no_link }
+      end
     end
   end
 end
