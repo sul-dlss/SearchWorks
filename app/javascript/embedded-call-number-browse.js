@@ -145,17 +145,15 @@ import PreviewContent from './preview-content'
       // Scroll to the current document
       function scrollOver(){
         var current = $galleryDoc.docById();
-        var scrollAmount;
-        if (current.length){
-          scrollAmount = current.position().left - current.parent().width()/2 + current.innerWidth()/2;
-        }else{
+        if (!current.length){
           return;
         }
-
         current.addClass('current-document');
-        $galleryDoc.embedViewport.find('.gallery').animate({
-          scrollLeft: scrollAmount
-        }, 200);
+        current[0].scrollIntoView({
+          behavior: 'auto',
+          block: 'center',
+          inline: 'center'
+        });
       }
     });
 
