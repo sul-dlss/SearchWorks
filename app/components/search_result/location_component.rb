@@ -12,6 +12,10 @@ module SearchResult
 
     delegate :code, to: :library, prefix: true
 
+    def render?
+      locations.any?
+    end
+
     def link_to_record
       link_to 'See full record for details', solr_document_path(document)
     end

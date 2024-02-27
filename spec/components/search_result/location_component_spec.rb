@@ -69,17 +69,32 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
     end
 
     context "with no matching library/location" do
-      let(:document) do
-        SolrDocument.new(
-          id: '123',
-          mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
-        )
+      context "with latest received" do
+        let(:document) do
+          SolrDocument.new(
+            id: '123',
+            mhld_display: ['GREEN -|- GRE-STACKS -|- public note -|- library has -|- latest received']
+          )
+        end
+
+        it "shows the appropriate mhld data" do
+          expect(page).to have_css('tbody tr', count: 1)
+          expect(page).to have_css('tbody tr th', text: /Stacks.*public note/m)
+          expect(page).to have_css('tbody tr td', text: "Latest: latest received")
+        end
       end
 
-      it "shows the appropriate mhld data" do
-        expect(page).to have_css('tbody tr', count: 1)
-        expect(page).to have_css('tbody tr th', text: /Stacks.*public note/m)
-        expect(page).to have_css('tbody tr td', text: "Latest: latest received")
+      context "with only library has" do # https://searchworks.stanford.edu/view/1463888
+        let(:document) do
+          SolrDocument.new(
+            id: '123',
+            mhld_display: ['GREEN -|- GRE-STACKS -|- -|- library has -|- ']
+          )
+        end
+
+        it "renders nothing" do
+          expect(page).to have_no_selector('body')
+        end
       end
     end
 
