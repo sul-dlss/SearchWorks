@@ -213,7 +213,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '2720faaefe9d5c5d021e4cf405734233317c7474
+context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
 
   '
 context_input_name_ssi: "/dev/null"
@@ -339,11 +339,12 @@ bib_search: '100 years of radio in South Africa. Volume 1, South African radio s
   and broadcasters then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors. South
   African radio stations and broadcasters then & now South African radio stations
   and broadcasters then and now Cham : Palgrave Macmillan, 2024. Nkoala, Sisanda,
-  editor. Motsaathebe, Gilbert, editor. ProQuest (Firm) Book'
+  editor. Motsaathebe, Gilbert, editor. ProQuest (Firm) Radio broadcasting Book'
+vern_bib_search: Book
 uuid_ssi: 3f1e6f2c-ab5c-4562-8784-96a2e1003c9c
-last_updated: '2024-02-18T11:07:07Z'
-created: '2024-02-18T11:07:07Z'
-timestamp: '2024-02-18T11:07:07Z'
+last_updated: '2024-02-25T11:24:38Z'
+created: '2024-02-25T11:24:38Z'
+timestamp: '2024-02-25T11:24:38Z'
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c","hrid":"in00000053236","tags":{"tagList":[]},"notes":[{"note":"1.
   Introduction: A Century Of South Africa''s Most Renowned Medium -- 2. 100 Years
@@ -420,13 +421,6 @@ marc_links_struct:
   file_id:
   druid:
   sfx: false
-summary_struct:
-- label: Summary
-  fields: []
-  unmatched_vernacular: []
-- label: Content advice
-  fields: []
-  unmatched_vernacular: []
 toc_struct:
 - label: Contents
   fields:

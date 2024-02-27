@@ -2284,7 +2284,7 @@ collection_search:
 collection_type:
 - Digital Collection
 context_source_ssi: folio
-context_version_ssi: '2720faaefe9d5c5d021e4cf405734233317c7474
+context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
 
   '
 context_input_name_ssi: "/dev/null"
@@ -2366,7 +2366,8 @@ context_marc_fields_ssim:
 - "?999s"
 bib_search: Stanford University News Service Stanford News Service records, circa
   1891-2013. Stanford University. Office of Public Affairs. News and Publications
-  Service. Archive/Manuscript
+  Service. News agencies Photojournalism Archive/Manuscript
+vern_bib_search: Archive/Manuscript
 uuid_ssi: 24bfd637-dc2c-5e09-8642-6c76ba145e0a
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"24bfd637-dc2c-5e09-8642-6c76ba145e0a","hrid":"a4085072","notes":[{"note":"Special
@@ -2416,9 +2417,9 @@ folio_json_struct:
   resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
   aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:44:48.463+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["308.75
   linear feet"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-14T01:01:06Z'
-created: '2024-02-14T01:01:06Z'
-timestamp: '2024-02-14T01:01:06Z'
+last_updated: '2024-02-25T11:12:14Z'
+created: '2024-02-25T11:12:14Z'
+timestamp: '2024-02-25T11:12:14Z'
 author_struct:
 - corporate_author:
   - link: Stanford University News Service
@@ -2472,9 +2473,6 @@ summary_struct:
       units, news clippings, and miscellaneous photographic and printed material.
       Also included are diploma date blocks (for diploma printing).
     vernacular:
-  unmatched_vernacular:
-- label: Content advice
-  fields: []
   unmatched_vernacular: []
 holdings_json_struct:
 - holdings:
@@ -39247,12 +39245,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465035'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:10:22.872Z'
-      updatedDate: '2024-02-14T00:10:22.872Z'
+      updatedDate: '2024-02-24T21:53:51.029Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -39333,12 +39331,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465068'
     request:
-    _version: 2
+    _version: 3
     metadata:
       createdDate: '2024-02-14T00:14:45.963Z'
-      updatedDate: '2024-02-14T00:20:09.584Z'
+      updatedDate: '2024-02-24T21:54:11.566Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -39419,12 +39417,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465027'
     request:
-    _version: 2
+    _version: 3
     metadata:
       createdDate: '2024-02-14T00:00:24.873Z'
-      updatedDate: '2024-02-14T00:04:09.010Z'
+      updatedDate: '2024-02-24T21:54:01.281Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -39866,12 +39864,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464145'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:44:49.715Z'
-      updatedDate: '2024-02-14T00:44:49.715Z'
+      updatedDate: '2024-02-24T21:51:57.354Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -39953,12 +39951,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464194'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:53:42.459Z'
-      updatedDate: '2024-02-14T00:53:42.459Z'
+      updatedDate: '2024-02-24T21:53:09.958Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40040,12 +40038,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465126'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:34:20.087Z'
-      updatedDate: '2024-02-14T00:34:20.087Z'
+      updatedDate: '2024-02-24T21:51:05.825Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40127,12 +40125,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464103'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:36:34.187Z'
-      updatedDate: '2024-02-14T00:36:34.187Z'
+      updatedDate: '2024-02-24T21:54:31.943Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40304,12 +40302,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464152'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:46:47.322Z'
-      updatedDate: '2024-02-14T00:46:47.322Z'
+      updatedDate: '2024-02-24T21:52:28.768Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40391,12 +40389,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464160'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:48:11.788Z'
-      updatedDate: '2024-02-14T00:48:11.788Z'
+      updatedDate: '2024-02-24T21:52:38.985Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40658,12 +40656,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465043'
     request:
-    _version: 2
+    _version: 3
     metadata:
       createdDate: '2024-02-14T00:11:48.416Z'
-      updatedDate: '2024-02-14T00:19:22.973Z'
+      updatedDate: '2024-02-24T21:50:44.652Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -40835,12 +40833,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464186'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:52:55.216Z'
-      updatedDate: '2024-02-14T00:52:55.216Z'
+      updatedDate: '2024-02-24T21:52:18.463Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -41102,12 +41100,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465100'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:27:25.601Z'
-      updatedDate: '2024-02-14T00:27:25.601Z'
+      updatedDate: '2024-02-24T21:51:36.853Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -41729,12 +41727,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465142'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:35:43.887Z'
-      updatedDate: '2024-02-14T00:35:43.887Z'
+      updatedDate: '2024-02-24T21:54:42.204Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -41906,12 +41904,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465050'
     request:
-    _version: 2
+    _version: 3
     metadata:
       createdDate: '2024-02-14T00:12:47.348Z'
-      updatedDate: '2024-02-14T00:19:47.296Z'
+      updatedDate: '2024-02-24T21:50:13.698Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -42353,12 +42351,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464178'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:51:26.714Z'
-      updatedDate: '2024-02-14T00:51:26.714Z'
+      updatedDate: '2024-02-24T21:52:49.234Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -42620,12 +42618,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465019'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-13T23:56:04.251Z'
-      updatedDate: '2024-02-13T23:56:04.251Z'
+      updatedDate: '2024-02-24T21:50:34.336Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -42707,12 +42705,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464137'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:41:51.047Z'
-      updatedDate: '2024-02-14T00:41:51.047Z'
+      updatedDate: '2024-02-24T21:53:40.775Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -42794,12 +42792,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465472'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:55:40.829Z'
-      updatedDate: '2024-02-14T00:55:40.829Z'
+      updatedDate: '2024-02-24T21:52:08.137Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -43061,12 +43059,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465076'
     request:
-    _version: 2
+    _version: 3
     metadata:
       createdDate: '2024-02-14T00:18:13.530Z'
-      updatedDate: '2024-02-14T00:20:32.176Z'
+      updatedDate: '2024-02-24T21:50:24.082Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -43328,12 +43326,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464202'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:54:30.374Z'
-      updatedDate: '2024-02-14T00:54:30.374Z'
+      updatedDate: '2024-02-24T21:52:59.654Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -43505,12 +43503,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465480'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:57:39.065Z'
-      updatedDate: '2024-02-14T00:57:39.065Z'
+      updatedDate: '2024-02-24T21:51:47.131Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: cd70562c-dd0b-42f6-aa80-ce803d24d4a1
@@ -43772,12 +43770,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465092'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:26:06.970Z'
-      updatedDate: '2024-02-14T00:26:06.970Z'
+      updatedDate: '2024-02-24T21:51:26.576Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -43949,12 +43947,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464111'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:38:12.212Z'
-      updatedDate: '2024-02-14T00:38:12.212Z'
+      updatedDate: '2024-02-24T21:53:30.527Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -44036,12 +44034,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465118'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:33:34.781Z'
-      updatedDate: '2024-02-14T00:33:34.781Z'
+      updatedDate: '2024-02-24T21:51:16.338Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -44483,12 +44481,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465084'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:21:17.174Z'
-      updatedDate: '2024-02-14T00:21:17.174Z'
+      updatedDate: '2024-02-24T21:50:55.592Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -44660,12 +44658,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116464129'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:40:01.702Z'
-      updatedDate: '2024-02-14T00:40:01.702Z'
+      updatedDate: '2024-02-24T21:53:20.303Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
@@ -44747,12 +44745,12 @@ holdings_json_struct:
     status: Available
     barcode: '36105116465134'
     request:
-    _version: 1
+    _version: 2
     metadata:
       createdDate: '2024-02-14T00:35:02.362Z'
-      updatedDate: '2024-02-14T00:35:02.362Z'
+      updatedDate: '2024-02-24T21:54:21.738Z'
       createdByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
-      updatedByUserId: b1373b63-8f6b-4ef8-b5af-dcac7526d96e
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
     formerIds: []
     callNumber:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
