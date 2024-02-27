@@ -38480,19 +38480,7 @@
         "name": "In Person- Hybrid"
       },
       "instructorObjects": [
-        {
-          "id": "0984ad51-2a9e-41e4-a903-82bf1f5a2f69",
-          "userId": "d1c90308-237b-445c-8b0c-c24458034ac4",
-          "name": "Irena Yamboliev",
-          "barcode": "2556528713",
-          "courseListingId": "0bf75ca3-8886-4af7-8223-03252a0a4260",
-          "metadata": {
-            "createdDate": "2024-02-26T02:52:27.762+00:00",
-            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-            "updatedDate": "2024-02-26T02:52:27.762+00:00",
-            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
-          }
-        }
+
       ],
       "metadata": {
         "createdDate": "2024-02-26T02:52:05.466+00:00",
@@ -53732,6 +53720,75 @@
       "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
       "updatedDate": "2024-01-11T20:01:24.115+00:00",
       "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
+    }
+  },
+  {
+    "id": "fa608942-e0fc-451b-a4cf-718b3cf1417c",
+    "name": "New Politics of Trade: Top Issues and National Approaches in Japan, India, and Beyond ",
+    "departmentId": "290b6402-cbcb-43cf-95b4-2c498f407a6c",
+    "departmentObject": {
+      "id": "290b6402-cbcb-43cf-95b4-2c498f407a6c",
+      "name": "INTLPOL - International Policy Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:45.777+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:45.777+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "d1be2319-4839-42ef-8af1-c53755137cf2",
+    "courseListingObject": {
+      "id": "d1be2319-4839-42ef-8af1-c53755137cf2",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "instructorObjects": [
+        {
+          "id": "ed871e37-850e-4da7-b417-3b0508dfc27f",
+          "userId": "dace2194-368e-4ec1-9000-c61930cfeae7",
+          "name": "Michael Beeman",
+          "barcode": "2551202421",
+          "courseListingId": "d1be2319-4839-42ef-8af1-c53755137cf2",
+          "metadata": {
+            "createdDate": "2024-02-27T01:16:40.503+00:00",
+            "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+            "updatedDate": "2024-02-27T01:16:40.503+00:00",
+            "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-27T01:15:40.309+00:00",
+        "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+        "updatedDate": "2024-02-27T01:15:40.309+00:00",
+        "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+      }
+    },
+    "courseNumber": "INTLPOL-203B",
+    "metadata": {
+      "createdDate": "2024-02-27T01:15:40.522+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-02-27T01:15:40.522+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
     }
   },
   {
