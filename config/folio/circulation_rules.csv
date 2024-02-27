@@ -85,7 +85,7 @@ any,book,,,,,MAR-LOCKED-STACKS or MAR-BALDRIDGE,No loan,No requests allowed,Defa
 postdoctoral or graduate or undergrad,book,,,,,MAR-CHILDRENYA or MAR-GRAPHIC-NOVEL or MAR-POPSCI or MAR-STACKS,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 staff or staff-casual or fellow,book,,,,,MAR-CHILDRENYA or MAR-GRAPHIC-NOVEL or MAR-POPSCI or MAR-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 faculty,book,,,,,MAR-CHILDRENYA or MAR-GRAPHIC-NOVEL or MAR-POPSCI or MAR-STACKS,1yearfixed-2renew-7daygrace,Allow All,Default notice,1.00/30.00 hourly fine,$150 lost fee
-any,book,,,,,GRE-BENDER or GRE-BRIT-DOCS or GRE-HAS-CA or GRE-HH-REF or GRE-HAS-ATLAS or GRE-HAS-FOLIO or GRE-HAS-READYREF or GRE-HAS-SU or GRE-HH-EXHIBIT or GRE-SSRC-ATLAS or GRE-SSRC-DATA or GRE-HASRC or GRE-SSRC or GRE-SSRC-SSDS or GRE-SSRC-DOCS or GRE-SSRC-EDU or GRE-SSRC-STATS,No loan,No requests allowed,Default notice,No fines,$75 lost fee
+any,book,,,,,GRE-BENDER or GRE-BRIT-DOCS or GRE-HAS-CA or GRE-HH-REF or GRE-HAS-ATLAS or GRE-HAS-FOLIO or GRE-HASRC or GRE-HAS-READYREF or GRE-HAS-SU or GRE-HH-EXHIBIT or GRE-SSRC-ATLAS or GRE-SSRC-DATA or GRE-HASRC or GRE-SSRC or GRE-SSRC-SSDS or GRE-SSRC-DOCS or GRE-SSRC-EDU or GRE-SSRC-STATS,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 any,book,,,,,GRE-RAUB-COLL or GRE-RAUB-NUM,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 graduate or postdoctoral,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-FOLIO or GRE-FOLIO-FLAT or GRE-HAS-FICTION or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-LOCKED-STK or GRE-SSRC-NEWDOC or GRE-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or staff-casual or fellow,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-FOLIO or GRE-FOLIO-FLAT or GRE-HAS-FICTION or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-LOCKED-STK or GRE-SSRC-NEWDOC or GRE-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
@@ -153,7 +153,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,periodical,,,,,MUS-INPROCESS or MUS-PROCESSING-CIRC,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,MUS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
-,periodical,,,,,GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
+,periodical,,,,,GRE-HASRC or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$100 lost fee
 ,periodical,,,,,EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAR-SCANLAB,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAR-LOCKED-STACKS,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee

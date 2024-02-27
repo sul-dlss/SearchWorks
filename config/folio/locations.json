@@ -8775,6 +8775,31 @@
     }
   },
   {
+    "id": "98d8c73f-8110-44b1-8393-3ac75fc3ff92",
+    "name": "East Asia Exhibit",
+    "code": "EAL-EXHIBIT",
+    "discoveryDisplayName": "Exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {
+    },
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-02-26T21:46:35.636+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-02-26T21:46:35.636+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "9a0e5db7-2dda-4bdd-bca1-840f4d028b2b",
     "name": "Education migration error",
     "code": "EDU-MIGRATE-ERR",
@@ -9806,7 +9831,6 @@
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
     "details": {
-      "": ""
     },
     "primaryServicePoint": "c9364d5f-6421-4c1a-9010-4ca2bc34efbe",
     "servicePointIds": [
@@ -9818,8 +9842,8 @@
     "metadata": {
       "createdDate": "2023-08-28T21:01:33.628+00:00",
       "createdByUserId": "a8e56e25-3536-4ba6-85bd-be835c4bdb57",
-      "updatedDate": "2023-08-28T21:01:33.628+00:00",
-      "updatedByUserId": "a8e56e25-3536-4ba6-85bd-be835c4bdb57"
+      "updatedDate": "2024-02-27T01:35:12.381+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -9959,7 +9983,6 @@
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
     "details": {
-      "": ""
     },
     "primaryServicePoint": "c9364d5f-6421-4c1a-9010-4ca2bc34efbe",
     "servicePointIds": [
@@ -9971,8 +9994,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:30.224+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:30.224+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-02-27T01:35:24.495+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {

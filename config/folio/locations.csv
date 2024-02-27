@@ -341,6 +341,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 975231f5-ab3b-46ab-b4b2-4481fc8c4405,Green HAS Reading Room,GRE-HASRC,SU,SUL,GREEN,Lane Reading Room: Reference,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 97c34325-7cb4-4baf-ac17-7425cb7caf6c,East Asia PAGE-EA,EAL-PAGE-EA,SU,SUL,EAST-ASIA,Ask at circulation desk,true,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,
 982d671f-1f95-49ce-8878-05787c89cfde,Law Folio Basement,LAW-FOLIO-BASEMENT,SU,LAW,LAW,Folios in the basement,true,LAW,LAW,,,,,,,,,,,,,,
+98d8c73f-8110-44b1-8393-3ac75fc3ff92,East Asia Exhibit,EAL-EXHIBIT,SU,SUL,EAST-ASIA,Exhibit,true,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,
 9a0e5db7-2dda-4bdd-bca1-840f4d028b2b,Education migration error,EDU-MIGRATE-ERR,SU,SUL,EDUCATION,Error during migration,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,
 9a3a127f-d7db-4e2e-bc0c-31868b8cf007,HILA Archival Processing,HILA-ARCHIVAL-PROCESSING,SU,HOOVER,HILA,In process: Archival processing,true,HILA,HILA,,,,,,,,,,,,,,
 9b3b957b-0d72-4407-b0f2-a0099cdd1e3f,Lane Spec: Archives Class,LANE-ARCH,SU,MED,LANE,Medical History Center: By appointment only.,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,
