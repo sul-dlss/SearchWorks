@@ -1,0 +1,54 @@
+<table class="table table-sm availability" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
+  <caption class='sr-only'>Status of items at <%= library.name %></caption>
+  <thead>
+    <tr class='active'>
+      <th scope='col' class='col-xs-6'><%= library.name %></th>
+      <th scope='col' class='col-xs-6'>Status</th>
+    </tr>
+  </thead>
+  <% if bound_with? %>
+    <tbody class="bound-with-note">
+      <tr>
+        <th scope='col'>
+          Some records bound together
+        </th>
+      </tr>
+      <tr>
+        <td colspan='2'>
+          <%= link_to_record %>
+        </td>
+      </tr>
+    </tbody>
+  <% end %>
+  <% locations.each do |location| %>
+    <tbody data-long-list data-list-type="location">
+    <% location_request_link = LocationRequestLinkComponent.for(document:, library_code:, location:) %>
+    <tr class="location-info">
+      <th scope="col">
+        <%= render "catalog/stackmap_link", document:, location:, location_name_class: '' %>
+        <% if location.mhld.present? %>
+          <br/>
+          <% location.mhld.each do |mhld| %>
+            <% if mhld.public_note.present? %>
+              <%= mhld.public_note %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </th>
+      <td>
+        <% if location.mhld.present? && location.mhld.first.latest_received %>
+          <span class='note-highlight'>Latest: <%= location.mhld.first.latest_received %></span>
+        <% end %>
+        <%= render location_request_link if display_request_link? %>
+      </td>
+    </tr>
+    <% if show_items? %>
+      <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, render_item_level_request_link: !location_request_link.render?, render_item_note: false) %>
+    <% else %>
+      <tr>
+        <td colspan='2'><%= link_to_record %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  <% end %>
+</table>
