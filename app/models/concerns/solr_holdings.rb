@@ -22,6 +22,30 @@ module SolrHoldings
     @items ||= []
   end
 
+  def browseable_spines
+    @browseable_spines ||= if self[:browse_nearby_struct].nil?
+                             # Temporarily construct browseable spines from the item_display_struct, until we can get browse_nearby_struct
+                             # from the index: https://github.com/sul-dlss/searchworks_traject_indexer/pull/1363
+                             browseable_schemes = %w[LC DEWEY ALPHANUM]
+                             browseable_items = items.select { |v| v.shelfkey.present? && browseable_schemes.include?(v.callnumber_type) }
+
+                             browseable_items.uniq(&:shelfkey).map do |v|
+                               Holdings::Spine.new({
+                                                     lopped_callnumber: v.truncated_callnumber,
+                                                     shelfkey: v.shelfkey,
+                                                     reverse_shelfkey: v.reverse_shelfkey,
+                                                     callnumber: v.callnumber,
+                                                     scheme: v.callnumber_type,
+                                                     item_id: v.id
+                                                   }, document: self)
+                             end
+                           else
+                             @browseable_spines ||= (self[:browse_nearby_struct] || []).map do |spine_data|
+                               Holdings::Spine.new(spine_data, document: self)
+                             end
+                           end
+  end
+
   def preferred_item
     @preferred_item ||= begin
       item = self[:preferred_barcode] && (items.reject(&:suppressed?).find do |c|
@@ -32,7 +56,10 @@ module SolrHoldings
     end
   end
 
-  attr_writer :preferred_item
+  def with_preferred_item(item)
+    @preferred_item = item
+    self
+  end
 
   def folio_holdings
     @folio_holdings ||= Array(holdings_json['holdings']).map { |holding| Folio::Holding.from_dynamic(holding) }
