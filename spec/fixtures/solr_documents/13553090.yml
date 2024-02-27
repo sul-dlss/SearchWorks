@@ -146,7 +146,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
 
   '
 context_input_name_ssi: "/dev/null"
@@ -260,7 +260,9 @@ context_marc_fields_ssim:
 - "?999i"
 - "?999s"
 bib_search: 'Skordis, Andys, composer. "......" : for orchestra : 2010 / Andys Skordis
-  Rijswijk, South Holland : Donemus, [2016] copyright 2016 Music score'
+  Rijswijk, South Holland : Donemus, [2016] copyright 2016 Orchestral music Music
+  score'
+vern_bib_search: Music score
 uuid_ssi: 1e69a391-0fc4-564b-b176-26ad5e512fdc
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"1e69a391-0fc4-564b-b176-26ad5e512fdc","hrid":"a13553090","notes":[{"note":"orchestra
@@ -280,9 +282,9 @@ folio_json_struct:
   Andys","primary":true,"contributorTypeId":"901d01e5-66b1-48f0-99f9-b5e92e3d2d15","contributorTypeText":"composer.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2020-04-04","staffSuppress":false,"instanceTypeId":"497b5090-3da2-486c-b57f-de5bb3c2e26d","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"http://www.aspresolver.com/aspresolver.asp?SHM4;3568528","name":"Resource","linkText":"Classical
   Scores Library","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"[dot-dot-dot-dot-dot-dot]","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"publicationPeriod":{"start":2016},"statusUpdatedDate":"2023-08-21T20:16:29.392+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
   online resource (1 score (51 pages))","data file","score"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-11T10:48:49Z'
-created: '2024-02-11T10:48:49Z'
-timestamp: '2024-02-11T10:48:49Z'
+last_updated: '2024-02-25T11:04:44Z'
+created: '2024-02-25T11:04:44Z'
+timestamp: '2024-02-25T11:04:44Z'
 author_struct:
 - creator:
   - link: Skordis, Andys,
@@ -306,13 +308,6 @@ marc_links_struct:
   file_id:
   druid:
   sfx: false
-summary_struct:
-- label: Summary
-  fields: []
-  unmatched_vernacular: []
-- label: Content advice
-  fields: []
-  unmatched_vernacular: []
 uniform_title_display_struct:
 - label: Uniform Title
   unmatched_vernacular:

@@ -3000,7 +3000,7 @@ iiif_manifest_url_ssim:
 - https://purl.stanford.edu/kc617sy2062/iiif/manifest
 - https://purl.stanford.edu/ym220zf7271/iiif/manifest
 context_source_ssi: folio
-context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
 
   '
 context_input_name_ssi: "/dev/null"
@@ -3082,7 +3082,8 @@ context_marc_fields_ssim:
 - "?999s"
 bib_search: 'Great Britain. Directorate of Military Survey. World 1:500,000 [map].
   [London] : D. Survey, War Office and Air Ministry, 1958- Great Britain. Ordnance
-  Survey. Great Britain. Army. Royal Engineers. Map'
+  Survey. Great Britain. Army. Royal Engineers. World maps. Map'
+vern_bib_search: Map
 uuid_ssi: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"449d7a24-756e-5fbf-a9e8-a78dcf800d1a","hrid":"a2472159","notes":[{"note":"Scale
@@ -3397,9 +3398,9 @@ folio_json_struct:
   of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"},{"uri":"https://purl.stanford.edu/zy709tp1294","name":"Version
   of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1958},"statusUpdatedDate":"2023-08-21T03:25:59.207+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["    maps
   : col. ; 48 x 72 cm. or smaller."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-11T10:58:45Z'
-created: '2024-02-11T10:58:45Z'
-timestamp: '2024-02-11T10:58:45Z'
+last_updated: '2024-02-25T11:19:12Z'
+created: '2024-02-25T11:19:12Z'
+timestamp: '2024-02-25T11:19:12Z'
 author_struct:
 - corporate_author:
   - link: Great Britain. Directorate of Military Survey.
@@ -7828,13 +7829,6 @@ marc_links_struct:
   file_id: ym220zf7271%2Fym220zf7271_0001.jp2
   druid: ym220zf7271
   sfx: false
-summary_struct:
-- label: Summary
-  fields: []
-  unmatched_vernacular: []
-- label: Content advice
-  fields: []
-  unmatched_vernacular: []
 holdings_json_struct:
 - holdings:
   - id: 10c853c8-f524-5501-8e01-316f7076fd50

@@ -128,7 +128,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'cdad30e01b4e44880af5c68923464adad8a74e2e
+context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
 
   '
 context_input_name_ssi: "/dev/null"
@@ -208,7 +208,8 @@ bib_search: Finlow, Robert Steel, 1877- "Heart damage" in baled jute, by R.S. Fi
   ... Calcutta, Published for the Imperial Dept. of Agriculture in India by Thacker,
   Spink & Co.; London, W. Thacker & Co., 1918. India. Dept. of Agriculture. Memoirs.
   Chemical series. vol. V, no. 2 India. Department of Agriculture. Memoirs. Chemical
-  series ; vol. V, no. 2 Book
+  series ; vol. V, no. 2 Jute fiber. Book
+vern_bib_search: Book
 uuid_ssi: 174c321e-29d1-536c-958c-6964243be3a3
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"174c321e-29d1-536c-958c-6964243be3a3","hrid":"a2279186","notes":[],"title":"\"Heart
@@ -221,20 +222,13 @@ folio_json_struct:
   Thacker, Spink & Co W. Thacker & Co","dateOfPublication":"1918"}],"contributors":[{"name":"Finlow,
   Robert Steel, 1877-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1992-07-30","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1918},"statusUpdatedDate":"2023-08-21T02:58:41.807+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["3
   p. l., [33]-68 p. diagr. 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-11T10:34:07Z'
-created: '2024-02-11T10:34:07Z'
-timestamp: '2024-02-11T10:34:07Z'
+last_updated: '2024-02-25T10:51:02Z'
+created: '2024-02-25T10:51:02Z'
+timestamp: '2024-02-25T10:51:02Z'
 author_struct:
 - creator:
   - link: Finlow, Robert Steel, 1877-
     search: Finlow, Robert Steel, 1877-
-summary_struct:
-- label: Summary
-  fields: []
-  unmatched_vernacular: []
-- label: Content advice
-  fields: []
-  unmatched_vernacular: []
 holdings_json_struct:
 - holdings:
   - id: 14ee35cf-b8f7-5d71-a1e8-cbe33dcabe96
