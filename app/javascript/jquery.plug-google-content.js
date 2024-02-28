@@ -11,33 +11,33 @@
   */
 
   $.fn.plugGoogleBookContent = function() {
-    var $parent,
-      booksPerAjaxCall = 15,
-      booksApiUrl = 'https://books.google.com/books?jscmd=viewapi&bibkeys=',
-      selectorCoverImg = 'img.cover-image',
-      batches = [];
+    let parent
+    const booksPerAjaxCall = 15
+    const booksApiUrl = 'https://books.google.com/books?jscmd=viewapi&bibkeys='
+    const selectorCoverImg = 'img.cover-image'
+    const batches = []
 
     function init() {
-      var currentCovers = listCoverImgs();
-      var totalCovers = currentCovers.length;
+      const currentCovers = Array.from(listCoverImgs())
+      let totalCovers = currentCovers.length;
 
       // batch by batch-cutoff value
       while (totalCovers > 0) {
-        batches.push(currentCovers.splice(0, booksPerAjaxCall));
-        totalCovers = currentCovers.length;
+        batches.push(currentCovers.splice(0, booksPerAjaxCall))
+        totalCovers = currentCovers.length
       }
 
       addBookCoversByBatch();
     }
 
     function listCoverImgs() {
-      return $parent.find(selectorCoverImg);
+      return parent.querySelectorAll(selectorCoverImg);
     }
 
     function addBookCoversByBatch() {
-      $.each(batches, function(index, batch) {
-        var bibkeys = getBibKeysForBatch(batch),
-          batchBooksApiUrl = booksApiUrl + bibkeys;
+      batches.forEach((batch) => {
+        const bibkeys = getBibKeysForBatch(batch)
+        const batchBooksApiUrl = booksApiUrl + bibkeys
 
         $.ajax({
           type: 'GET',
@@ -50,7 +50,7 @@
           },
 
           error: function(e) {
-            console.log(e);
+            console.error(e);
           }
         });
 
@@ -61,8 +61,8 @@
       // Loop through all the relevant cover elements and if the cover
       // element has a standard number (order of precidence: OCLC, LCCN, then ISBN)
       // that exists in the json response and render the cover image for it.
-      $.each(listCoverImgs(), function(_, coverImg) {
-        var data = bestResponseForNumber(json, coverImg);
+      listCoverImgs().forEach((coverImg) => {
+        const data = bestResponseForNumber(json, coverImg);
         if (typeof data !== 'undefined') {
           renderCoverImage(data.bibkey, data.data);
           renderAccessPanel(data.bibkey, data.data);
@@ -71,51 +71,52 @@
     }
 
     function bestResponseForNumber(json, coverImg) {
-      var data,
-        $coverImg = $(coverImg),
-        oclcKeys = $coverImg.data('oclc').split(','),
-        lccnKeys = $coverImg.data('lccn').split(','),
-        isbnKeys = $coverImg.data('isbn').split(',');
-      $.each(oclcKeys, function(_, oclc) {
-        if(json[oclc] && typeof json[oclc].thumbnail_url !== 'undefined') {
-          data = { bibkey: oclc, data: json[oclc] };
-          return false;
+      let data
+      const $coverImg = $(coverImg)
+      const oclcKeys = $coverImg.data('oclc').split(',')
+      const lccnKeys = $coverImg.data('lccn').split(',')
+      const isbnKeys = $coverImg.data('isbn').split(',')
+      oclcKeys.forEach((oclc) => {
+        if (json[oclc] && typeof json[oclc].thumbnail_url !== 'undefined') {
+          data = { bibkey: oclc, data: json[oclc] }
+          return
         }
-      });
-      if(typeof data === 'undefined') {
-        $.each(lccnKeys, function(_, lccn) {
-          if(json[lccn] && typeof json[lccn].thumbnail_url !== 'undefined') {
-            data = { bibkey: lccn, data: json[lccn] };
-            return false;
+      })
+      if (typeof data === 'undefined') {
+        lccnKeys.forEach((lccn) => {
+          if (json[lccn] && typeof json[lccn].thumbnail_url !== 'undefined') {
+            data = { bibkey: lccn, data: json[lccn] }
+            return
           }
-        });
+        })
       }
-      if(typeof data === 'undefined') {
-        $.each(isbnKeys, function(_, isbn) {
-          if(json[isbn] && typeof json[isbn].thumbnail_url !== 'undefined') {
-            data = { bibkey: isbn, data: json[isbn] };
-            return false;
+      if (typeof data === 'undefined') {
+        isbnKeys.forEach((isbn) => {
+          if (json[isbn] && typeof json[isbn].thumbnail_url !== 'undefined') {
+            data = { bibkey: isbn, data: json[isbn] }
+            return
           }
-        });
+        })
       }
-      return data;
+      return data
     }
 
     function renderCoverImage(bibkey, data) {
       if (typeof data.thumbnail_url !== 'undefined') {
-        var thumbUrl = data.thumbnail_url,
-            selectorCoverImg = 'img.' + bibkey;
+        let thumbUrl = data.thumbnail_url
+        const selectorCoverImg = `img.${bibkey}`
 
-        thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1');
-        thumbUrl = thumbUrl.replace(/&?edge=curl/, '');
+        thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1')
+        thumbUrl = thumbUrl.replace(/&?edge=curl/, '')
 
-        var imageEl = $parent.find(selectorCoverImg);
+        const imageEl = parent.querySelector(selectorCoverImg)
 
         // Only set the thumb src if it's not already set
-        if(typeof imageEl.attr('src') === 'undefined') {
-          imageEl.attr('src', thumbUrl)[0].hidden = false;
+        if (imageEl.src === '') {
+          imageEl.src = thumbUrl
+          imageEl.hidden = false
 
-          const fakeCover = imageEl.parent().find('span.fake-cover')[0]
+          const fakeCover = imageEl.parentElement.querySelector('span.fake-cover')
           if (fakeCover) {
             fakeCover.hidden = true
           }
@@ -126,18 +127,17 @@
 
     function renderAccessPanel(bibkey, data) {
       if (typeof data.info_url !== 'undefined') {
-        var listGoogleBooks = $.unique($parent.find('.google-books.' + bibkey));
+        const listGoogleBooks = parent.querySelectorAll(`.google-books.${bibkey}`)
 
-        $.each(listGoogleBooks, function(i, googleBooks) {
-          var $googleBooks = $(googleBooks),
-            $fullView = $googleBooks.find('.full-view'),
-            $limitedView = $googleBooks.find('.limited-preview');
-
+        listGoogleBooks.forEach((googleBooks) => {
+          const $googleBooks = $(googleBooks)
           if (data.preview === 'full') {
+            const $fullView = $googleBooks.find('.full-view')
             $fullView.attr('href', data.preview_url);
             checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
             checkAndEnableAccessPanel($googleBooks, '.panel-online');
           } else if (data.preview === 'partial' || data.preview === 'noview') {
+            const $limitedView = $googleBooks.find('.limited-preview')
             $limitedView.attr('href', data.preview_url);
             checkAndEnableAccessPanel($googleBooks, '.panel-related');
           }
@@ -145,32 +145,23 @@
       }
     }
 
-
+    // Return a comma delimited string of identifiers
     function getBibKeysForBatch(batch) {
-      var bibkeys = '';
+      return batch.flatMap((coverImg) => {
+        const isbn = coverImg.dataset.isbn.split(',')
+        const oclc = coverImg.dataset.oclc.split(',')
+        const lccn = coverImg.dataset.lccn.split(',')
 
-      $.each(batch, function(index) {
-        var $CoverImg = $(this),
-          isbn = $CoverImg.data('isbn') || '',
-          oclc = $CoverImg.data('oclc') || '',
-          lccn = $CoverImg.data('lccn') || '';
-
-        bibkeys += [isbn, oclc, lccn].join(',') + ',';
-      });
-
-      bibkeys = bibkeys.replace(/,{2,}/, ','); // Replace 2 or more commas with a single
-      bibkeys = bibkeys.replace(/^,/, ''); // Remove leading comma
-      bibkeys = bibkeys.replace(/,$/, ''); // Remove trailing comma
-
-      return bibkeys;
+        return isbn.concat(oclc).concat(lccn)
+      }).filter(elm => elm).join(',')
     }
 
     function checkAndEnableAccessPanel($googleBooks, selectorPanel) {
-      var $accessPanel = $googleBooks.parents(selectorPanel);
+      const $accessPanel = $googleBooks.parents(selectorPanel);
 
       if ($accessPanel.length > 0) {
-        $accessPanel[0].hidden = false;
-        $googleBooks.show();
+        $accessPanel[0].hidden = false
+        $googleBooks.show()
       }
     }
 
@@ -178,23 +169,23 @@
       $resultsOnlineSection = $googleBooks.parents('[data-behavior="results-online-section"]');
 
       if ($resultsOnlineSection.length > 0) {
-        $resultsOnlineSection[0].hidden = false;
-        $googleBooks[0].hidden = false;
+        $resultsOnlineSection[0].hidden = false
+        $googleBooks[0].hidden = false
         // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
         $googleBooks
           .parents("[data-behavior='truncate-results-metadata-links']")
-          .responsiveTruncate({lines: 2, more: 'more...', less: 'less...'});
+          .responsiveTruncate({lines: 2, more: 'more...', less: 'less...'})
       }
     }
 
     return this.each(function() {
-      $parent = $(this);
-      init();
-    });
-  };
+      parent = this
+      init()
+    })
+  }
 
-})(jQuery);
+})(jQuery)
 
 Blacklight.onLoad(function() {
-  $('body').plugGoogleBookContent();
+  $('body').plugGoogleBookContent()
 });
