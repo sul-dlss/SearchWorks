@@ -1,3 +1,5 @@
+import fetchJsonp from "fetch-jsonp"
+
 (function($) {
   $.fn.libraryH3lp = function() {
 
@@ -14,18 +16,20 @@
 
       function checkStatus(){
         var jidSplit = jid.split('@');
-        $.ajax({
-          url: 'https://libraryh3lp.com/presence/jid/' + jidSplit[0] + '/' + jidSplit[1] + '/js?cb=?',
-          dataType: 'jsonp'
-        }).done(function(){
-          $.each(jabber_resources, function(i, value){
-            if (value.show === 'available'){
-              setAsAvailable();
-            }else{
-              setAsUnavailable();
-            }
-          });
-        });
+        fetchJsonp('https://libraryh3lp.com/presence/jid/' + jidSplit[0] + '/' + jidSplit[1] + '/js',
+          {
+            jsonpCallback: 'cb'
+          })
+          .then(() => {
+            // The libraryh3lp response sets the jabber_resources at the window level. It doesn't use the callback.
+            window['jabber_resources'].forEach((value) => {
+              if (value.show === 'available'){
+                setAsAvailable()
+              } else {
+                setAsUnavailable()
+              }
+            })
+          })
       }
 
       function setAsAvailable(){
