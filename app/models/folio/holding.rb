@@ -17,7 +17,7 @@ module Folio
 
     def self.from_dynamic(json)
       new(id: json.fetch('id'),
-          effective_location: Folio::Location.from_dynamic(json.dig('location', 'effectiveLocation')),
+          effective_location: Folio::Location.from_dynamic(json.fetch('location').fetch('effectiveLocation')),
           holdings_type: json.dig('holdingsType', 'name'),
           bound_with_parent: if json.key?('boundWith') && json['boundWith'].is_a?(Hash)
                                BoundWithParent.new(**json['boundWith'].slice('item', 'holding', 'instance'))

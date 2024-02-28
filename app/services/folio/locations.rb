@@ -10,13 +10,19 @@ module Folio
     # @param [String] code the Folio location code
     # @return [String] the Folio location label
     def self.label(code:)
-      instance.data.dig(code, 'discoveryDisplayName')
+      location = find_by(code:)
+      location && location['discoveryDisplayName']
     end
 
     # @param [String] code the Folio location code
     # @return [String] the location's details
     def self.details(code:)
-      instance.data.dig(code, 'details')
+      location = find_by(code:)
+      location && location['details']
+    end
+
+    def self.find_by(code:)
+      instance.data[code]
     end
 
     # Output a CSV of all locations, flattening details and converting UUIDs to codes
