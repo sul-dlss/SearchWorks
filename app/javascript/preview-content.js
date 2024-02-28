@@ -1,19 +1,17 @@
 /*
-  JavaScript module to fetch preview content. `useCache` option enables/disables
-  caching of fetched preview content in browser
+  JavaScript module to fetch preview content.
  */
 
 const PreviewContent = (function() {
 
-  var useCache = true,
-    insertType;
+  var insertType;
 
   window.previewCache = window.previewCache || {};
 
   function checkCache(url, target, deferred) {
     var content = window.previewCache[url];
 
-    if (useCache && typeof content !== 'undefined') {
+    if (typeof content !== 'undefined') {
       plugContentAndPlugins(target, content, deferred);
     } else {
       fetchContentViaAjaxAndInsert(url, target, deferred);
@@ -30,7 +28,7 @@ const PreviewContent = (function() {
 
     request.done(function(data) {
       plugContentAndPlugins(target, data, deferred);
-      if (useCache) window.previewCache[url] = data;
+      window.previewCache[url] = data;
     });
 
     request.fail(function(jqXhr, textStatus) {
