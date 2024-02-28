@@ -119,8 +119,10 @@ import PreviewContent from './preview-content'
       }
 
       function reorderPreviewDivs() {
-        var previewDivs = $('.preview-container');
-        var previewIndex = previewDivs.index($previewTarget) + 1;
+        const docId = $previewTarget.data('document-id');
+        var galleryDocs = $(`.gallery-document`)
+        var previewIndex = galleryDocs.index($(`.gallery-document[data-doc-id='${docId}']`)) + 1;
+
         $itemsPerRow = itemsPerRow();
         /* 
         / If $itemsPerRow is NaN or 0 we should return here. If not we are going 
@@ -138,16 +140,18 @@ import PreviewContent from './preview-content'
           return;
         }
 
-        if (previewIndex % $itemsPerRow !== 0){
-          while (previewIndex % $itemsPerRow !== 0){
-            previewIndex++;
-          }
-          if (previewIndex > previewDivs.length){
-            previewIndex = previewDivs.length;
-          }
-          var detachedPreview = $previewTarget.detach();
-          $($gallery[(previewIndex-1)]).after($previewTarget);
+        if ($previewTarget.find($arrow)){
+          appendPointer($previewTarget);
         }
+
+        while (previewIndex % $itemsPerRow !== 0){
+          previewIndex++;
+        }
+        if (previewIndex > galleryDocs.length){
+          previewIndex = galleryDocs.length;
+        }
+        var detachedPreview = $previewTarget.detach();
+        $($gallery[(previewIndex-1)]).after($previewTarget);
       }
 
 
@@ -160,8 +164,10 @@ import PreviewContent from './preview-content'
         $arrow = $('<div class="preview-arrow"></div>');
         $gallery = $('.gallery-document');
         reorderPreviewDivs();
+        $(window).resize(function() {
+          reorderPreviewDivs();
+        });
       }
-
     });
 
   };
