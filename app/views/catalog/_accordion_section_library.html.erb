@@ -16,7 +16,7 @@
         <%= snippet %>
       </span>
     </div>
-    <div class="details <%= id %>-location" aria-expanded="false">
+    <div class="details <%= id %>-location" aria-expanded="false" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
       <%= render :partial => "catalog/index_location", :locals => { :document => document } %>
     </div>
   </div>
