@@ -1,5 +1,0 @@
-<% if document.holdings.present? %>
-  <% document.holdings.libraries.select(&:present?).each do |library| %>
-    <%= render SearchResult::LocationComponent.new(library:, document:) %>
-  <% end %>
-<% end %>
