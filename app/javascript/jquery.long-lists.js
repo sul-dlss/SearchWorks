@@ -1,14 +1,17 @@
 (function(){
+  // This governs the list of links in the "Available online" panel.
+  // See https://searchworks.stanford.edu/view/L210044 as an exemplar
   $.fn.longList = function() {
 
     var uniqId = 0;
 
     return this.each(function(){
-      var $list = $(this),
-      $children = $list.children().not('.google-books').filter(function(i){
+      var $list = $(this)
+      // Exclude the "Google preview" button row from the items we're collapsing
+      const $children = $list.children().not('.google-books').filter(function(i){
         return $(this).find('div.google-books').length === 0;
-      }),
-      type = $list.data("list-type"),
+      })
+      const type = $list.data("list-type"),
       $more = $('<button class="btn btn-secondary btn-xs" aria-expanded="false">show all<span class="sr-only"> at ' + type + '</span></button>'),
       $less = $('<button class="btn btn-secondary btn-xs" aria-expanded="true">show less<span class="sr-only"> at ' + type + '</span></button>');
 
@@ -38,12 +41,7 @@
         if ($googleBooks.length > 0){
           $googleBooks.before($more);
         }else{
-          if ($list.is('tbody')) {
-            var tbody = $('<tbody><tr><td></td></tr></tbody>').insertAfter($list);
-            tbody.find('td').append($more);
-          } else {
             $list.append($more);
-          }
         }
         $less.insertAfter($more).hide();
       }

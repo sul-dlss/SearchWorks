@@ -1,0 +1,13 @@
+<%= tag.tbody id: node_id, data: truncate? ? { controller: 'long-table' } : nil do %>
+  <%= content %>
+<% end %>
+<% if truncate? %>
+  <tbody>
+    <tr>
+      <td data-controller="long-table-toggle" data-long-table-toggle-long-table-outlet="#<%= node_id %>">
+        <button class="btn btn-secondary btn-xs" aria-expanded="false" aria-controls="<%= node_id %>" data-action="click->long-table-toggle#expand" data-long-table-toggle-target="expandButton">show all<span class="sr-only"> at location</span></button>
+        <button class="btn btn-secondary btn-xs" aria-expanded="true" aria-controls="<%= node_id %>" data-action="click->long-table-toggle#collapse" data-long-table-toggle-target="collapseButton">show less<span class="sr-only"> at location</span></button>
+      </td>
+    </tr>
+  </tbody>
+<% end %>

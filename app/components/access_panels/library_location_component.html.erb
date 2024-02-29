@@ -26,7 +26,7 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
-  <tbody data-long-list data-list-type="location">
+  <%= render LongTableComponent.new(node_id: "location_#{location.code}", size: location.items.size) do %>
     <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
-  </tbody>
+  <% end %>
 </table>

@@ -48,6 +48,11 @@ class Holdings
       name || @code
     end
 
+    # This prevents logging too much data when there is an error.
+    def inspect
+      "<##{this.class.class_name} @code=#{@code}>"
+    end
+
     private
 
     def any_items?

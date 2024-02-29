@@ -7,6 +7,12 @@ import { application } from "./application"
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 
+import LongTableToggleController from "./long_table_toggle_controller"
+application.register("long-table-toggle", LongTableToggleController)
+
+import LongTableController from "./long_table_controller"
+application.register("long-table", LongTableController)
+
 import PreviewBriefController from "./preview_brief_controller"
 application.register("preview-brief", PreviewBriefController)
 
