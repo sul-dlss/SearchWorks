@@ -3176,6 +3176,80 @@
     }
   },
   {
+    "id": "106aa5f7-615e-43cb-a2f3-023bbfc965f4",
+    "name": "The Urban Underclass",
+    "departmentId": "26189f51-c711-434c-975e-669015f6d58c",
+    "departmentObject": {
+      "id": "26189f51-c711-434c-975e-669015f6d58c",
+      "name": "URBANST - Urban Studies ",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:42.072+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:42.072+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+    "courseListingObject": {
+      "id": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "93387b35-0156-4551-9d0e-56cc8b40929f",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+          "metadata": {
+            "createdDate": "2024-02-28T03:00:55.016+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T03:00:55.016+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:58:47.342+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T03:00:33.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "URBANST-112-01",
+    "metadata": {
+      "createdDate": "2024-02-28T03:00:33.580+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T03:00:33.580+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "10724db7-5ff9-444a-960f-1f1b58a5a10f",
     "name": "Introduction to Modern Japanese Literature and Culture",
     "departmentId": "21e959f5-c92d-439a-a64f-334bf1c086e6",
@@ -6341,6 +6415,80 @@
     }
   },
   {
+    "id": "1fbfa54b-537c-485e-8921-2ec480f16408",
+    "name": "Capital and Empire",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+    "courseListingObject": {
+      "id": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "a059eabe-c8e8-4cef-86b9-c9a51b89da12",
+          "userId": "82d00eb3-13e3-4363-bf2c-d1c62a51cd05",
+          "name": "Priya Satia",
+          "barcode": "2511468909",
+          "courseListingId": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+          "metadata": {
+            "createdDate": "2024-02-29T01:37:57.807+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-29T01:37:57.807+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-29T01:37:34.635+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-29T01:38:30.241+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "HISTORY-339D-01",
+    "metadata": {
+      "createdDate": "2024-02-29T01:38:29.938+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-29T01:38:29.938+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "203d1070-2d6f-4719-97c0-48abaaadc403",
     "name": "German Literature (800-1700)",
     "departmentId": "4451706a-bb96-4b19-8492-0acc6b36c472",
@@ -6570,6 +6718,80 @@
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
       "updatedDate": "2024-01-09T20:25:15.577+00:00",
       "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    }
+  },
+  {
+    "id": "2294c952-4000-408a-a551-caaf9ca737f1",
+    "name": "The Urban Underclass",
+    "departmentId": "daf10a40-afad-47cc-b04b-a81b0d6b8e00",
+    "departmentObject": {
+      "id": "daf10a40-afad-47cc-b04b-a81b0d6b8e00",
+      "name": "CSRE - Comparative Studies in Race &  Ethnic",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:44.148+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:44.148+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+    "courseListingObject": {
+      "id": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "93387b35-0156-4551-9d0e-56cc8b40929f",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+          "metadata": {
+            "createdDate": "2024-02-28T03:00:55.016+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T03:00:55.016+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:58:47.342+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T03:00:33.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "CSRE-149A-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:59:23.862+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T02:59:23.862+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -7425,6 +7647,80 @@
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
       "updatedDate": "2023-09-20T03:06:27.864+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    }
+  },
+  {
+    "id": "28a3e1a4-9650-4e2a-bc16-ee090725905a",
+    "name": "The Changing American Family ",
+    "departmentId": "3949d3e1-1a4e-429d-9258-5163e40b7303",
+    "departmentObject": {
+      "id": "3949d3e1-1a4e-429d-9258-5163e40b7303",
+      "name": "FEMGEN - Feminist, Gender, and Sexuality Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:48.152+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:48.152+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+    "courseListingObject": {
+      "id": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "51cd885e-dea5-482f-8e5d-3d484a3995dd",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+          "metadata": {
+            "createdDate": "2024-02-28T05:35:10.857+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T05:35:10.857+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T05:30:36.711+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T05:34:53.541+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "FEMGEN-255-01",
+    "metadata": {
+      "createdDate": "2024-02-28T05:34:07.710+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T05:34:07.710+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -19027,6 +19323,81 @@
     }
   },
   {
+    "id": "5965523b-8c88-4d78-8ae4-54201daf3bf0",
+    "name": "The Bible in Medieval and Early Modern Europe",
+    "departmentId": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+    "departmentObject": {
+      "id": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+      "name": "RELIGST - Religious Studies",
+      "description": "Religious Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:35.255+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:35.255+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+    "courseListingObject": {
+      "id": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "e1c84f23-6423-427b-a310-c4e255ca6dd6",
+          "userId": "79addc0b-69e9-4f15-af79-17951d65caf1",
+          "name": "Barbara Pitkin",
+          "barcode": "2559666815",
+          "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+          "metadata": {
+            "createdDate": "2024-02-28T02:45:33.172+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-28T02:45:33.172+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:45:18.840+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-28T02:47:56.481+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "RELIGST-226-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:45:19.312+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-28T02:45:19.312+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "59986bc9-9398-46a9-ada8-8cd5da2d2ece",
     "name": "International Relations Honors Seminar",
     "departmentId": "5bebcfcc-7d44-4750-aa00-f29711593873",
@@ -19386,6 +19757,80 @@
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
       "updatedDate": "2023-09-22T18:32:45.879+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    }
+  },
+  {
+    "id": "5bb5f6f2-aa29-4592-98e0-f07ac9eac471",
+    "name": "The Urban Underclass",
+    "departmentId": "669f1702-0db9-4917-8bcf-57e74adf7045",
+    "departmentObject": {
+      "id": "669f1702-0db9-4917-8bcf-57e74adf7045",
+      "name": "SOC- Sociology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.404+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.404+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+    "courseListingObject": {
+      "id": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "93387b35-0156-4551-9d0e-56cc8b40929f",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+          "metadata": {
+            "createdDate": "2024-02-28T03:00:55.016+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T03:00:55.016+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:58:47.342+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T03:00:33.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "SOC-249-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:59:58.294+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T02:59:58.294+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
@@ -24321,6 +24766,80 @@
     }
   },
   {
+    "id": "7651a26b-6dbf-4e1a-90b0-fc32faefb332",
+    "name": "The Urban Underclass",
+    "departmentId": "669f1702-0db9-4917-8bcf-57e74adf7045",
+    "departmentObject": {
+      "id": "669f1702-0db9-4917-8bcf-57e74adf7045",
+      "name": "SOC- Sociology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.404+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.404+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+    "courseListingObject": {
+      "id": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "93387b35-0156-4551-9d0e-56cc8b40929f",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "44754fe3-d7bb-444a-9738-9f9c1e9c0227",
+          "metadata": {
+            "createdDate": "2024-02-28T03:00:55.016+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T03:00:55.016+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:58:47.342+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T03:00:33.603+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "SOC-149-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:58:47.416+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T02:58:47.416+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "776304bb-98a0-444d-90f3-e8cbcfe6b79a",
     "name": "Theories of the Moving Image: The Technologically Mediated Image",
     "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
@@ -25941,6 +26460,81 @@
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
       "updatedDate": "2023-12-20T21:52:33.203+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    }
+  },
+  {
+    "id": "809af74b-b28e-4d20-b698-5161c262d901",
+    "name": "The Bible in Medieval and Early Modern Europe",
+    "departmentId": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+    "departmentObject": {
+      "id": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+      "name": "RELIGST - Religious Studies",
+      "description": "Religious Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:35.255+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:35.255+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+    "courseListingObject": {
+      "id": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "e1c84f23-6423-427b-a310-c4e255ca6dd6",
+          "userId": "79addc0b-69e9-4f15-af79-17951d65caf1",
+          "name": "Barbara Pitkin",
+          "barcode": "2559666815",
+          "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+          "metadata": {
+            "createdDate": "2024-02-28T02:45:33.172+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-28T02:45:33.172+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:45:18.840+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-28T02:47:56.481+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "RELIGST-326-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:46:09.310+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-28T02:46:09.310+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
     }
   },
   {
@@ -31066,6 +31660,80 @@
     }
   },
   {
+    "id": "942f81ce-4709-4cd0-a5ff-66c3a7129a38",
+    "name": "The Changing American Family",
+    "departmentId": "669f1702-0db9-4917-8bcf-57e74adf7045",
+    "departmentObject": {
+      "id": "669f1702-0db9-4917-8bcf-57e74adf7045",
+      "name": "SOC- Sociology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.404+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.404+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+    "courseListingObject": {
+      "id": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "51cd885e-dea5-482f-8e5d-3d484a3995dd",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+          "metadata": {
+            "createdDate": "2024-02-28T05:35:10.857+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T05:35:10.857+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T05:30:36.711+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T05:34:53.541+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "SOC-255-01",
+    "metadata": {
+      "createdDate": "2024-02-28T05:34:53.510+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T05:34:53.510+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "94565592-1b78-4f58-bdf0-f7b18ff070b1",
     "name": "Humanities Core: How to be Modern in East Asia",
     "departmentId": "0c5b51a6-3b81-45f6-a496-4e7d2670980f",
@@ -34595,6 +35263,80 @@
     }
   },
   {
+    "id": "a64a49e2-00a4-481b-803a-8532c5d28e27",
+    "name": "Capital and Empire",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+    "courseListingObject": {
+      "id": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "a059eabe-c8e8-4cef-86b9-c9a51b89da12",
+          "userId": "82d00eb3-13e3-4363-bf2c-d1c62a51cd05",
+          "name": "Priya Satia",
+          "barcode": "2511468909",
+          "courseListingId": "f6dec452-b853-48e5-b949-1aca6c86ab1b",
+          "metadata": {
+            "createdDate": "2024-02-29T01:37:57.807+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-29T01:37:57.807+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-29T01:37:34.635+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-29T01:38:30.241+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "HISTORY-239D-01",
+    "metadata": {
+      "createdDate": "2024-02-29T01:37:36.335+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-29T01:37:36.335+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "a6c18ec6-f750-4cea-829d-01800ac26e10",
     "name": "Movies and Methods: The Judy Garland Seminar",
     "departmentId": "c93e4503-7bdc-4786-81bd-723faa03480c",
@@ -35396,6 +36138,80 @@
       "createdDate": "2023-11-29T01:46:07.073+00:00",
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
       "updatedDate": "2023-11-29T01:46:07.073+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
+    "id": "a87dfb95-1515-4298-a4e4-c9cdcb7b1c7c",
+    "name": "The Changing American Family",
+    "departmentId": "669f1702-0db9-4917-8bcf-57e74adf7045",
+    "departmentObject": {
+      "id": "669f1702-0db9-4917-8bcf-57e74adf7045",
+      "name": "SOC- Sociology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.404+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.404+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+    "courseListingObject": {
+      "id": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "51cd885e-dea5-482f-8e5d-3d484a3995dd",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+          "metadata": {
+            "createdDate": "2024-02-28T05:35:10.857+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T05:35:10.857+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T05:30:36.711+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T05:34:53.541+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "SOC-155-01",
+    "metadata": {
+      "createdDate": "2024-02-28T05:30:37.634+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T05:30:37.634+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
@@ -38291,6 +39107,81 @@
     }
   },
   {
+    "id": "b835406e-3574-4178-893c-a1d2bb89cfeb",
+    "name": "Senior Colloquium",
+    "departmentId": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+    "departmentObject": {
+      "id": "dcae3135-eed5-4c81-b1c9-9a6ddc105cf8",
+      "name": "RELIGST - Religious Studies",
+      "description": "Religious Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:35.255+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:35.255+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "b4b800fa-4c8f-4317-b9c1-52c7bc1fcedc",
+    "courseListingObject": {
+      "id": "b4b800fa-4c8f-4317-b9c1-52c7bc1fcedc",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "d457594f-e9af-4862-9f8f-502c0ba67ef3",
+          "userId": "79addc0b-69e9-4f15-af79-17951d65caf1",
+          "name": "Barbara Pitkin",
+          "barcode": "2559666815",
+          "courseListingId": "b4b800fa-4c8f-4317-b9c1-52c7bc1fcedc",
+          "metadata": {
+            "createdDate": "2024-02-28T01:08:58.438+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-28T01:08:58.438+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T01:08:42.446+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-28T01:08:42.446+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "RELIGST-298-01",
+    "metadata": {
+      "createdDate": "2024-02-28T01:08:42.549+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-28T01:08:42.549+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "b8572b97-d79b-449f-bb15-9954a680ffac",
     "name": "Introduction to Statistical Inference",
     "description": "Modern statistical concepts and procedures derived from a mathematical framework. Statistical inference, decision theory; point and interval estimation, tests of hypotheses; Neyman-Pearson theory. Bayesian analysis; maximum likelihood, large sample theory.",
@@ -39457,6 +40348,80 @@
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
       "updatedDate": "2023-12-29T00:38:13.766+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    }
+  },
+  {
+    "id": "bcf26c8f-1108-4542-853c-e1479a5f841d",
+    "name": "The Bible in Medieval and Early Modern Europe",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+    "courseListingObject": {
+      "id": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "e1c84f23-6423-427b-a310-c4e255ca6dd6",
+          "userId": "79addc0b-69e9-4f15-af79-17951d65caf1",
+          "name": "Barbara Pitkin",
+          "barcode": "2559666815",
+          "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+          "metadata": {
+            "createdDate": "2024-02-28T02:45:33.172+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-28T02:45:33.172+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:45:18.840+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-28T02:47:56.481+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "HISTORY-216B-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:46:55.756+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-28T02:46:55.756+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
     }
   },
   {
@@ -43143,6 +44108,80 @@
       "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
       "updatedDate": "2023-08-29T21:54:43.807+00:00",
       "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    }
+  },
+  {
+    "id": "cc5df031-75b8-4ac1-8e87-40a072804441",
+    "name": "The Bible in Medieval and Early Modern Europe",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+    "courseListingObject": {
+      "id": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "e1c84f23-6423-427b-a310-c4e255ca6dd6",
+          "userId": "79addc0b-69e9-4f15-af79-17951d65caf1",
+          "name": "Barbara Pitkin",
+          "barcode": "2559666815",
+          "courseListingId": "0f5cc566-307b-4e3f-bc6a-4be3b9f5296f",
+          "metadata": {
+            "createdDate": "2024-02-28T02:45:33.172+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-02-28T02:45:33.172+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T02:45:18.840+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-02-28T02:47:56.481+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "HISTORY-316B-01",
+    "metadata": {
+      "createdDate": "2024-02-28T02:47:56.439+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-02-28T02:47:56.439+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
     }
   },
   {
@@ -52800,6 +53839,80 @@
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
       "updatedDate": "2023-09-19T03:09:05.650+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    }
+  },
+  {
+    "id": "f682babf-570b-40be-aac3-a1f4a9917751",
+    "name": "The Changing American Family",
+    "departmentId": "3949d3e1-1a4e-429d-9258-5163e40b7303",
+    "departmentObject": {
+      "id": "3949d3e1-1a4e-429d-9258-5163e40b7303",
+      "name": "FEMGEN - Feminist, Gender, and Sexuality Studies",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:48.152+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:48.152+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+    "courseListingObject": {
+      "id": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "51cd885e-dea5-482f-8e5d-3d484a3995dd",
+          "userId": "a8a4b479-aa2f-4cfe-959a-1dfae84672c6",
+          "name": "Michael Rosenfeld",
+          "barcode": "2554526145",
+          "courseListingId": "e1e3314f-61bd-4e1e-96c5-9e276d945689",
+          "metadata": {
+            "createdDate": "2024-02-28T05:35:10.857+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-02-28T05:35:10.857+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-28T05:30:36.711+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-02-28T05:34:53.541+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "FEMGEN-155-01",
+    "metadata": {
+      "createdDate": "2024-02-28T05:33:09.679+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-02-28T05:33:09.679+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     }
   },
   {
