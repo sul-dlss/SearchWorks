@@ -1,9 +1,16 @@
-<ul class="links" data-long-list data-list-type="online">
-  <% links.each do |link| %>
-    <li>
+<ul class="links" data-controller="long-list" id="online-link-list">
+  <% links.each.with_index do |link, index| %>
+    <%= tag.li data: index > 5 ? { long_list_target: 'hideable' } : nil do %>
       <span class="<%= 'stanford-only' if link.stanford_only? %>">
         <%= link.html&.html_safe %>
       </span>
+    <% end %>
+  <% end %>
+
+  <% if links.size > 5 %>
+    <li>
+      <button class="btn btn-secondary btn-xs" aria-expanded="false" aria-controls="online-link-list" data-action="click->long-list#expand" data-long-list-target="expandButton">show all<span class="sr-only"> online links</span></button>
+      <button class="btn btn-secondary btn-xs" aria-expanded="true" aria-controls="online-link-list" data-action="click->long-list#collapse" data-long-list-target="collapseButton">show less<span class="sr-only"> online links</span></button>
     </li>
   <% end %>
 
