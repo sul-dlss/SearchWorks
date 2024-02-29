@@ -1,0 +1,11 @@
+<ul class="links" data-long-list data-list-type="online">
+  <% links.each do |link| %>
+    <li>
+      <span class="<%= 'stanford-only' if link.stanford_only? %>">
+        <%= link.html&.html_safe %>
+      </span>
+    </li>
+  <% end %>
+
+  <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
+</ul>

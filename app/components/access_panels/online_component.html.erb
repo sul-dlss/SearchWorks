@@ -27,22 +27,8 @@
             See the full <span class='sfx-emphasis'>find it @ Stanford</span> menu
           <% end %>
         </div>
-      <% elsif links.any? %>
-        <ul class="links" data-long-list data-list-type="online">
-          <% links.each do |link| %>
-            <li>
-              <span class="<%= 'stanford-only' if link.stanford_only? %>">
-                <%= link.html&.html_safe %>
-              </span>
-            </li>
-          <% end %>
-
-          <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-        </ul>
       <% else %>
-        <ul class="links" data-long-list data-list-type="online">
-          <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-        </ul>
+        <%= render AccessPanels::OnlineLinkListComponent.new(document:, links:) %>
       <% end %>
     <% end %>
 

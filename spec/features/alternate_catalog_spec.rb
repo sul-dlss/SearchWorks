@@ -47,7 +47,7 @@ RSpec.feature 'Alterate catalog results', :js do
     wait_for_ajax
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'Your search also found results in'
-      expect(page).to have_css 'a.btn', text: 'See 37 catalog results'
+      expect(page).to have_css 'a.btn', text: 'See 38 catalog results'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (13)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (5)'
