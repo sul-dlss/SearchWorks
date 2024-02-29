@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "catalog/_index_online_section" do
-  include Marc856Fixtures
-
   describe "Accordion section - Online" do
     context 'regular sirsi record' do
       before do

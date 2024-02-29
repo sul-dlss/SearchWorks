@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Holdings::Library do
-  include Marc856Fixtures
   describe '#name' do
     it "translates the library code" do
       expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
