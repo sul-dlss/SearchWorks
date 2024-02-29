@@ -22,7 +22,7 @@ module AccessPanels
                 item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
                 item.effective_permanent_location_code == item.temporary_location_code
 
-      item.temporary_location.name
+      item.temporary_location&.name
     end
 
     def has_in_process_availability_class?
