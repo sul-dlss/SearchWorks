@@ -21,7 +21,7 @@ module SearchResult
     end
 
     def bound_with?
-      document.items.any?(&:bound_with?)
+      library.items.any?(&:bound_with?)
     end
 
     def locations
