@@ -45,7 +45,7 @@ class BrowseController < ApplicationController
                   NearbyOnShelf.forward(search_service:)
                 end
 
-      @items = service.items(params[:before] || params[:after])
+      @spines = service.spines(params[:before] || params[:after])
     else
 
       item = if params[:barcode]
@@ -54,7 +54,7 @@ class BrowseController < ApplicationController
                @original_doc.preferred_item
              end
 
-      @items = NearbyOnShelf.around_item(
+      @spines = NearbyOnShelf.around_item(
         item,
         search_service:
       )
