@@ -56,10 +56,6 @@
   color: $font-color;
 }
 
-@mixin show-page-row-layout {
-  margin-right: 25px;
-}
-
 @mixin link-styling {
   border-bottom: 1px solid $sul-link-color-hover;
 }

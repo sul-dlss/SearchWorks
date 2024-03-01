@@ -11,8 +11,6 @@
 .record-metadata,
 .upper-record-metadata,
 .purl-embed-viewer {
-  @include show-page-row-layout;
-
   .section-heading {
     h3 {
       color: $stone;
