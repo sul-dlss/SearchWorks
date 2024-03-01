@@ -54,7 +54,13 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   # https://s3.amazonaws.com/foliodocs/api/mod-courses/r/courses.html#coursereserves_courses_get
   def courses
-    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }
+    # Querying with CQL on courseListingObject properties doesn't seem to work, e.g.
+    # get_json('/coursereserves/courses', params: { query: 'courseListingObject.termId=="d5d04559-a7b1-4e4b-a95d-995e0be98b61"'})
+    # So we'll post process instead.
+    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 })
+      .fetch('courses', [])
+      .filter { |course| Time.parse(course.dig('courseListingObject', 'termObject', 'endDate')).future? } # rubocop:disable Rails/TimeZone
+      .sort_by { |x| x['id'] }
   end
 
   def request_policies
