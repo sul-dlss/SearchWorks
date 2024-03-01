@@ -51,12 +51,6 @@ RSpec.describe Holdings::Location do
 
       it { is_expected.to be_present_on_index }
     end
-
-    context 'for a SEE-OTHER location' do
-      subject { described_class.new('SEE-OTHER') }
-
-      it { is_expected.to be_present_on_index }
-    end
   end
 
   describe '#location_link' do
@@ -97,9 +91,9 @@ RSpec.describe Holdings::Location do
                 id: 'holding1234',
                 location: {
                   effectiveLocation: {
-                    id: "4573e824-9273-4f13-972f-cff7bf504217",
-                    code: "SEE-OTHER",
-                    name: "Bound With Test",
+                    id: "158168a3-ede4-4cc1-8c98-61f4feeb22ea",
+                    code: "SAL3-SEE-OTHER",
+                    name: "See linked record to request items bound together",
                     campus: {
                       id: "c365047a-51f2-45ce-8601-e421ca3615c5",
                       code: "SUL",
@@ -107,9 +101,9 @@ RSpec.describe Holdings::Location do
                     },
                     details: {},
                     library: {
-                      id: "f6b5519e-88d9-413e-924d-9ed96255f72e",
-                      code: "GREEN",
-                      name: "Cecil H. Green"
+                      id: "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+                      code: "SAL3",
+                      name: "SAL3 (off-campus storage)"
                     },
                     institution: {
                       id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
@@ -132,8 +126,8 @@ RSpec.describe Holdings::Location do
         )
       }
 
-      subject { described_class.new("GRE-STACKS", [
-        Holdings::Item.new({ barcode: '1234', library: 'GREEN', effective_permanent_location_code: 'SEE-OTHER' }, document:)
+      subject { described_class.new("SAL3-STACKS", [
+        Holdings::Item.new({ barcode: '1234', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS' }, document:)
       ]) }
 
       it { is_expected.to be_bound_with }
