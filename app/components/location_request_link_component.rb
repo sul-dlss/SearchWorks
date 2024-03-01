@@ -68,7 +68,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     return I18n.t('searchworks.request_link.finding_aid') if has_finding_aid? && policy.aeon_pageable?
     return I18n.t('searchworks.request_link.aeon') if policy.aeon_pageable?
 
-    t("searchworks.request_link.#{library_code}", default: [:'searchworks.request_link.default'])
+    t('searchworks.request_link.default')
   end
 
   delegate :has_finding_aid?, to: :document
