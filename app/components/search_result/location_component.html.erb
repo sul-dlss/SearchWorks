@@ -21,34 +21,34 @@
     </tbody>
   <% end %>
   <% locations.each do |location| %>
-    <tbody data-long-list data-list-type="location">
-    <% location_request_link = LocationRequestLinkComponent.for(document:, library_code:, location:) %>
-    <tr class="location-info">
-      <th scope="col">
-        <%= render "catalog/stackmap_link", document:, location:, location_name_class: '' %>
-        <% if location.mhld.present? %>
-          <br/>
-          <% location.mhld.each do |mhld| %>
-            <% if mhld.public_note.present? %>
-              <%= mhld.public_note %>
+    <%= render LongTableComponent.new(node_id: "location_#{location.code}", size: location.items.size) do %>
+      <% location_request_link = LocationRequestLinkComponent.for(document:, library_code:, location:) %>
+      <tr class="location-info">
+        <th scope="col">
+          <%= render "catalog/stackmap_link", document:, location:, location_name_class: '' %>
+          <% if location.mhld.present? %>
+            <br/>
+            <% location.mhld.each do |mhld| %>
+              <% if mhld.public_note.present? %>
+                <%= mhld.public_note %>
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
-      </th>
-      <td>
-        <% if location.mhld.present? && location.mhld.first.latest_received %>
-          <span class='note-highlight'>Latest: <%= location.mhld.first.latest_received %></span>
-        <% end %>
-        <%= render location_request_link if display_request_link? %>
-      </td>
-    </tr>
-    <% if show_items? %>
-      <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, render_item_level_request_link: !location_request_link.render?, render_item_note: false) %>
-    <% else %>
-      <tr>
-        <td colspan='2'><%= link_to_record %></td>
+        </th>
+        <td>
+          <% if location.mhld.present? && location.mhld.first.latest_received %>
+            <span class='note-highlight'>Latest: <%= location.mhld.first.latest_received %></span>
+          <% end %>
+          <%= render location_request_link if display_request_link? %>
+        </td>
       </tr>
+      <% if show_items? %>
+        <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, render_item_level_request_link: !location_request_link.render?, render_item_note: false) %>
+      <% else %>
+        <tr>
+          <td colspan='2'><%= link_to_record %></td>
+        </tr>
+      <% end %>
     <% end %>
-    </tbody>
   <% end %>
 </table>

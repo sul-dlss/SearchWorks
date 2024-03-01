@@ -11,7 +11,8 @@ class FixtureHarvester
     'in00000053236', # Online resource (no Folio items, has shelfkey)
     '4085072', # A collection of images (TODO: merge with 24?)
     '13553090', # A uniform title (dotdotdotdot, TODO: merge with 18?)
-    '2472159' # one hrid for multiple purl images (TODO: merge with 8923346, 20, or 23?)
+    '2472159', # one hrid for multiple purl images (TODO: merge with 8923346, 20, or 23?)
+    'L210044' # Has a large number of online links.
   ].freeze
 
   def self.harvest_all
