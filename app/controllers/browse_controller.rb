@@ -34,7 +34,10 @@ class BrowseController < ApplicationController
   end
 
   def fetch_orginal_document
-    @response, @original_doc = search_service.fetch(params[:start]) if params[:start]
+    _, @original_doc = search_service.fetch(params[:start]) if params[:start]
+    # NOTE: In Blacklight 8, #fetch does not return a response object, so we stub one out to satisfy:
+    # https://github.com/projectblacklight/blacklight/blob/v7.36.2/app/helpers/blacklight/catalog_helper_behavior.rb#L292
+    @document = @original_doc
   end
 
   def fetch_browse_items
