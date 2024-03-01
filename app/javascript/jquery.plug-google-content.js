@@ -1,3 +1,5 @@
+import fetchJsonp from "fetch-jsonp"
+
 (function($) {
   /*
     jQuery plugin to render Google book covers for image elements
@@ -39,22 +41,11 @@
         const bibkeys = getBibKeysForBatch(batch)
         const batchBooksApiUrl = booksApiUrl + bibkeys
 
-        $.ajax({
-          type: 'GET',
-          url: batchBooksApiUrl,
-          contentType: "application/json",
-          dataType: 'jsonp',
-
-          success: function(json) {
-            renderCoverAndAccessPanel(json);
-          },
-
-          error: function(e) {
-            console.error(e);
-          }
-        });
-
-      });
+        fetchJsonp(batchBooksApiUrl)
+          .then((response) => response.json())
+          .then((json) => renderCoverAndAccessPanel(json))
+          .catch((e) => console.error(e))
+      })
     }
 
     function renderCoverAndAccessPanel(json) {
