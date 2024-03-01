@@ -20850,6 +20850,121 @@
     }
   },
   {
+    "id": "61407ad5-636d-4723-9064-e23b68d599f5",
+    "name": "Ornithology",
+    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
+    "departmentId": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+    "departmentObject": {
+      "id": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+      "name": "BIO - Biology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:49.443+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:49.443+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+    "courseListingObject": {
+      "id": "7be50d62-9928-494e-907d-8e0c6014770e",
+      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+      "locationObject": {
+        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+        "name": "Science Reserves",
+        "code": "SCI-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+        "servicePointIds": [
+          "50ef1036-06d3-48ef-9048-26cabfccf630"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "26cab005-28fc-4971-98d2-276647d14923",
+          "userId": "b1c6c25d-f5f4-4007-af79-83128d25d86c",
+          "name": "Ben Moran",
+          "barcode": "2552463773",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T19:59:08.605+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T19:59:08.605+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "f1c9ad37-1109-4462-848a-69a4871eabe8",
+          "userId": "9cce0279-049c-4527-8f59-f88496ebb1e7",
+          "name": "Marty Freeland",
+          "barcode": "2551073708",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:07.534+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:07.534+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "2228623e-c0ae-407d-b7d1-dec4b1c58e81",
+          "userId": "ad310de9-e286-4d67-846d-9fa32c5135b0",
+          "name": "Rodolfo Dirzo",
+          "barcode": "2552053108",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:26.909+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:26.909+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "867e7eb3-e966-4109-924d-14797528dbe2",
+          "userId": "925cf8e0-0081-4c02-8a57-6a2c89968df1",
+          "name": "Maya Xu",
+          "barcode": "2559345108",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:39.396+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:39.396+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-29T19:24:40.505+00:00",
+        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+        "updatedDate": "2024-02-29T20:48:29.305+00:00",
+        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      }
+    },
+    "courseNumber": "BIO 121",
+    "sectionName": "01",
+    "metadata": {
+      "createdDate": "2024-02-29T19:24:41.534+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-02-29T20:09:13.532+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
     "id": "619955b5-df01-461e-8e74-e86d7c90621f",
     "name": "Introduction to Lithography",
     "departmentId": "a9c345d9-5a71-4bf1-a129-2943183413c8",
@@ -21288,6 +21403,96 @@
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
       "updatedDate": "2023-10-23T00:13:09.730+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
+    "id": "6411f959-9ff4-4bd3-bbc2-309344d67373",
+    "name": " The Chemical Principles of Life II",
+    "description": "This is the second course in a two-quarter sequence ( Chem 141/143), which will continue the discussion of biological science through the lens of chemistry. In this sequence students will gain a qualitative and quantitative understanding of the molecular logic of cellular processes, which include expression and transmission of the genetic code, enzyme kinetics, biosynthesis, energy storage and consumption, membrane transport, and signal transduction. ",
+    "departmentId": "3f048a8d-3c6f-4386-94eb-89c22df3afd0",
+    "departmentObject": {
+      "id": "3f048a8d-3c6f-4386-94eb-89c22df3afd0",
+      "name": "CHEM - Chemistry",
+      "description": "Chemistry",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:55.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:55.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "0a3f942a-83b8-48de-a6c0-071bcdec6413",
+    "courseListingObject": {
+      "id": "0a3f942a-83b8-48de-a6c0-071bcdec6413",
+      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+      "locationObject": {
+        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+        "name": "Science Reserves",
+        "code": "SCI-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+        "servicePointIds": [
+          "50ef1036-06d3-48ef-9048-26cabfccf630"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "e67dae0f-8c86-4e41-bdbc-e26dbe81a11c",
+          "userId": "c1f9809b-0ded-4213-b102-e0174aca06ff",
+          "name": "Nathaniel Brown",
+          "barcode": "2554913070",
+          "courseListingId": "0a3f942a-83b8-48de-a6c0-071bcdec6413",
+          "metadata": {
+            "createdDate": "2024-02-29T19:57:45.933+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T19:57:45.933+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "bdadedbe-dba6-44c0-a134-853ad0b66d2d",
+          "userId": "7c4b9516-92b0-42a5-a19e-55aa329093b5",
+          "name": "Steven Banik",
+          "barcode": "2552441053",
+          "courseListingId": "0a3f942a-83b8-48de-a6c0-071bcdec6413",
+          "metadata": {
+            "createdDate": "2024-02-29T20:41:33.782+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:41:33.782+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-29T19:39:55.481+00:00",
+        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+        "updatedDate": "2024-02-29T19:57:30.934+00:00",
+        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      }
+    },
+    "courseNumber": "CHEM 143-02",
+    "sectionName": "01",
+    "metadata": {
+      "createdDate": "2024-02-29T19:39:55.566+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-02-29T19:57:29.301+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     }
   },
   {
@@ -48395,6 +48600,121 @@
       "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
       "updatedDate": "2023-12-14T19:35:56.995+00:00",
       "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    }
+  },
+  {
+    "id": "dce8620c-a698-4021-8b2a-b3e3bdf949a9",
+    "name": "Ornithology",
+    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues. ",
+    "departmentId": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+    "departmentObject": {
+      "id": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+      "name": "BIO - Biology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:49.443+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:49.443+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+    "courseListingObject": {
+      "id": "7be50d62-9928-494e-907d-8e0c6014770e",
+      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+      "locationObject": {
+        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+        "name": "Science Reserves",
+        "code": "SCI-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+        "servicePointIds": [
+          "50ef1036-06d3-48ef-9048-26cabfccf630"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "26cab005-28fc-4971-98d2-276647d14923",
+          "userId": "b1c6c25d-f5f4-4007-af79-83128d25d86c",
+          "name": "Ben Moran",
+          "barcode": "2552463773",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T19:59:08.605+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T19:59:08.605+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "f1c9ad37-1109-4462-848a-69a4871eabe8",
+          "userId": "9cce0279-049c-4527-8f59-f88496ebb1e7",
+          "name": "Marty Freeland",
+          "barcode": "2551073708",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:07.534+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:07.534+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "2228623e-c0ae-407d-b7d1-dec4b1c58e81",
+          "userId": "ad310de9-e286-4d67-846d-9fa32c5135b0",
+          "name": "Rodolfo Dirzo",
+          "barcode": "2552053108",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:26.909+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:26.909+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "867e7eb3-e966-4109-924d-14797528dbe2",
+          "userId": "925cf8e0-0081-4c02-8a57-6a2c89968df1",
+          "name": "Maya Xu",
+          "barcode": "2559345108",
+          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
+          "metadata": {
+            "createdDate": "2024-02-29T20:40:39.396+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-02-29T20:40:39.396+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-02-29T19:24:40.505+00:00",
+        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+        "updatedDate": "2024-02-29T20:48:29.305+00:00",
+        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      }
+    },
+    "courseNumber": "BIO 221",
+    "sectionName": "01",
+    "metadata": {
+      "createdDate": "2024-02-29T20:48:29.219+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-02-29T20:48:29.219+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     }
   },
   {

@@ -154,6 +154,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,MUS-INPROCESS or MUS-PROCESSING-CIRC,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,MUS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,periodical,,,,,GRE-HASRC or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
+,periodical,,,,,EAL-EXHIBIT,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$100 lost fee
 ,periodical,,,,,EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAR-SCANLAB,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAR-LOCKED-STACKS,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee
@@ -215,6 +216,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,EDU-NEWBOOK,14day-norenew-1daygrace,Allow hold/recall,Short Term Notices,No fines,$75 lost fee
 ,book,,,,,EDU-EXHIBIT,No loan,Hold only,Default notice,No fines,$75 lost fee
 ,book,,,,,EDU-CURRICULUM or EDU-CURRSTOR or EDU-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
+,book,,,,,EAL-EXHIBIT,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,book,,,,,EAL-CHINESE or EAL-FOLIO-CHINESE or EAL-FOLIO-JAPANESE or EAL-FOLIO-KOREAN or EAL-JAPANESE or EAL-KOREAN or EAL-SETS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,EAR-THESES,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,EAR-READY-REF,2hour-1renew-15mingrace,No requests allowed,Short Term Notices,No fines,$500 lost fee
