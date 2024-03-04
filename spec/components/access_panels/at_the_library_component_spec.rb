@@ -70,47 +70,15 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       SolrDocument.new(
         id: '1234',
         item_display_struct: [
-          { barcode: '1234', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'ABC 123' }
-        ],
-        marc_json_struct: linked_ckey_fixture,
-        holdings_json_struct: [
-          { holdings: [
-            {
-              id: 'holding1234',
-              location: {
-                effectiveLocation: {
-                  id: "158168a3-ede4-4cc1-8c98-61f4feeb22ea",
-                  code: "SAL3-SEE-OTHER",
-                  name: "See linked record to request items bound together",
-                  campus: {
-                    id: "c365047a-51f2-45ce-8601-e421ca3615c5",
-                    code: "SUL",
-                    name: "Stanford Libraries"
-                  },
-                  details: {},
-                  library: {
-                    id: "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-                    code: "SAL3",
-                    name: "SAL3 (off-campus storage)"
-                  },
-                  institution: {
-                    id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-                    code: "SU",
-                    name: "Stanford University"
-                  }
-                }
-              },
-              holdingsType: {
-                id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
-                name: "Bound-with"
-              },
-              boundWith: {
-                item: { barcode: "1234" },
-                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
-              }
+          {
+            barcode: '1234', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS',
+            callnumber: 'ABC 123',
+            bound_with: {
+              hrid: 'a999999'
             }
-          ] }
-        ]
+          }
+        ],
+        marc_json_struct: linked_ckey_fixture
       )
     end
 
@@ -118,18 +86,13 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it 'displays the MARC 590 as a bound with note (excluding subfield $c)' do
-      expect(page).to have_css('.bound-with-note.note-highlight a', text: 'Copy 1 bound with v. 140')
-      expect(page).to have_no_css('.bound-with-note.note-highlight', text: '55523 (parent record’s ckey)')
-    end
-
     it "does not display request links for requestable libraries" do
       expect(page).to have_no_content("Request")
     end
 
     it 'displays the callnumber with live lookup' do
-      expect(page).to have_css 'td', text: 'ABC 123'
-      expect(page).to have_css 'td[data-live-lookup-id]'
+      expect(page).to have_content 'ABC 123'
+      expect(page).to have_css '[data-live-lookup-id]'
     end
   end
 
@@ -251,7 +214,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
         expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
-        expect(page).to have_css('.panel-library-location td', text: "ABC 123")
+        expect(page).to have_css('.panel-library-location .callnumber', text: "ABC 123")
       end
     end
 
@@ -353,12 +316,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         render_inline(described_class.new(document:))
       end
 
-      skip "should not have a request url stored in the data attribute" do
-        expect(page).to have_no_css('td[data-request-url]')
-      end
-
-      it "should have a request link in the item" do
-        expect(page).to have_css('tbody a', text: 'Request')
+      it "has a request link in the item" do
+        expect(page).to have_link 'Request'
       end
     end
 
@@ -400,7 +359,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       expect(page).to have_css('.panel-library-location a', count: 1)
     end
     it "renders blank (i.e. on order) items in the zombie library" do
-      expect(page).to have_css('.panel-library-location td', text: 'GHI')
+      expect(page).to have_css('.panel-library-location .callnumber', text: 'GHI')
     end
   end
 

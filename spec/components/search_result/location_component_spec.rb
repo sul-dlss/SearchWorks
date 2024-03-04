@@ -123,34 +123,17 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
         SolrDocument.new(
           id: '123',
           item_display_struct: [
-            { id: '66645303-add1-5d4f-ae33-7944f5d1cae2', barcode: '36105097469808', library: 'SPEC-COLL',
-              effective_permanent_location_code: 'SPEC-SAMSON', callnumber: 'PJ5204 .B6 1866' },
-            { id: '086a8f9d-bece-5919-afe9-fdc65f970d36', barcode: '36105023721066', library: 'SAL3',
-              effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'PJ5204 .B6 1838 2ND IN VOL' }
-          ],
-          holdings_json_struct: [
             {
-              holdings: [
-                {
-                  id: 'd2777d47-2150-54aa-a5f8-50c2d4042338',
-                  boundWith: {
-                    item: {
-                      id: '086a8f9d-bece-5919-afe9-fdc65f970d36'
-                    },
-                    holding: {},
-                    instance: {}
-                  },
-                  location: {
-                    effectiveLocation: build(:location, code: 'SAL3-SEE-OTHER')
-                  }
-                },
-                {
-                  id: '971f9a6d-7650-5793-898a-5927b9378570',
-                  location: {
-                    effectiveLocation: build(:location, code: 'SPEC-SAMSON')
-                  }
-                }
-              ]
+              id: '66645303-add1-5d4f-ae33-7944f5d1cae2', barcode: '36105097469808', library: 'SPEC-COLL',
+              effective_permanent_location_code: 'SPEC-SAMSON', callnumber: 'PJ5204 .B6 1866',
+              bound_with: nil
+            },
+            {
+              id: '086a8f9d-bece-5919-afe9-fdc65f970d36', barcode: '36105023721066', library: 'SAL3',
+              effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'PJ5204 .B6 1838 2ND IN VOL',
+              bound_with: {
+                hrid: 'a5488051'
+              }
             }
           ]
         )

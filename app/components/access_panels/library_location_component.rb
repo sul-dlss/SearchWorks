@@ -18,5 +18,13 @@ module AccessPanels
     def location_request_link
       @location_request_link ||= LocationRequestLinkComponent.for(document:, library_code: library.code, location:)
     end
+
+    def truncate?
+      location.items.size > 5
+    end
+
+    def list_identifier
+      "location_#{location.code}"
+    end
   end
 end

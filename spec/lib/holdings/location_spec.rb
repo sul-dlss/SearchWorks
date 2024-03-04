@@ -86,62 +86,35 @@ RSpec.describe Holdings::Location do
   end
 
   describe "#bound_with?" do
-    context 'with items that are bound with' do
-      let(:document) {
-        SolrDocument.new(
-          id: '1234',
-          holdings_json_struct: [
-            { holdings: [
-              {
-                id: 'holding1234',
-                location: {
-                  effectiveLocation: {
-                    id: "158168a3-ede4-4cc1-8c98-61f4feeb22ea",
-                    code: "SAL3-SEE-OTHER",
-                    name: "See linked record to request items bound together",
-                    campus: {
-                      id: "c365047a-51f2-45ce-8601-e421ca3615c5",
-                      code: "SUL",
-                      name: "Stanford Libraries"
-                    },
-                    details: {},
-                    library: {
-                      id: "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-                      code: "SAL3",
-                      name: "SAL3 (off-campus storage)"
-                    },
-                    institution: {
-                      id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-                      code: "SU",
-                      name: "Stanford University"
-                    }
-                  }
-                },
-                holdingsType: {
-                  id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
-                  name: "Bound-with"
-                },
-                boundWith: {
-                  item: { barcode: "1234" },
-                  instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
-                }
-              }
-            ] }
-          ]
-        )
-      }
+    let(:document) { SolrDocument.new }
 
-      subject { described_class.new("SAL3-STACKS", [
-        Holdings::Item.new({ barcode: '1234', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS' }, document:)
-      ]) }
+    context 'with items that are bound with' do
+      subject do
+        described_class.new("SAL3-STACKS", [
+          Holdings::Item.new(
+            {
+              barcode: '1234', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS',
+              bound_with: {
+                hrid: 'a5488051'
+              }
+            },
+            document:
+          )
+        ])
+      end
 
       it { is_expected.to be_bound_with }
     end
 
     context 'with items that are not bound with' do
-      subject { described_class.new("GRE-STACKS", [
-        Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'SEE-OTHER' }, document: SolrDocument.new)
-      ]) }
+      subject do
+        described_class.new("GRE-STACKS", [
+          Holdings::Item.new(
+            { barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'SEE-OTHER' },
+            document:
+          )
+        ])
+      end
 
       it { is_expected.not_to be_bound_with }
     end

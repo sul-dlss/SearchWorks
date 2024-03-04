@@ -1,35 +1,42 @@
-<%= tag.tr class: classes, data: { barcode: item.barcode } do %>
-  <td class="callnumber">
-    <%= item.callnumber %>
-  </td>
-  <% if render_item_note? %>
-    <td class="public-note">
-      <% if item.public_note.present? %>
-        <div class='public-note note-highlight'>Note: <%= inject_line_break_opportunities item.public_note %></div>
-      <% end %>
-    </td>
-  <% end %>
-  <% if render_item_details? %>
-    <td class="item-availability" data-update-status="<%= !has_in_process_availability_class? %>" data-live-lookup-id="<%= item.live_lookup_instance_id %>" data-status-target=".availability-icon" data-item-id="<%= item.live_lookup_item_id %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.effective_permanent_location_code, barcode: item.barcode)}'".html_safe if render_real_time_availability_request_link? %>>
-      <span class="availability-icon-wrapper">
-        <i class="availability-icon <%= item.status.availability_class %>"></i>
-        <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
-          <%= availability_text %>
+<%= tag.li class: classes, data: html_data do %>
+  <div class="d-flex">
+    <div class="callnumber">
+      <%= item.callnumber %>
+    </div>
+    <% if render_item_details? %>
+      <div class="item-availability" data-update-status="<%= !has_in_process_availability_class? %>" data-live-lookup-id="<%= item.live_lookup_instance_id %>" data-status-target=".availability-icon" data-item-id="<%= item.live_lookup_item_id %>" <%= "data-request-url='#{helpers.request_url(document, library: item.library, location: item.effective_permanent_location_code, barcode: item.barcode)}'".html_safe if render_real_time_availability_request_link? %>>
+        <span class="availability-icon-wrapper">
+          <i class="availability-icon <%= item.status.availability_class %>"></i>
+          <span data-available-text="<%= t('searchworks.availability.available') %>" data-unavailable-text="<%= t('searchworks.availability.unavailable') %>" class='status-text'>
+            <%= availability_text %>
+          </span>
         </span>
-      </span>
-      <span class="temporary-location">
-        <%= temporary_location_text %>
-      </span>
-      <% if item.on_reserve? %>
-        <%= item.loan_period %>
-      <% end %>
-      <% if render_item_level_request_link? %>
-        <span class="request-link">
-          <%= render item.request_link %>
+        <span class="temporary-location">
+          <%= temporary_location_text %>
         </span>
-      <% end %>
-    </td>
-  <% else %>
-    <td></td>
+        <% if item.on_reserve? %>
+          <%= item.loan_period %>
+        <% end %>
+        <% if render_item_level_request_link? %>
+          <span class="request-link">
+            <%= render item.request_link %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="public-note">
+    <% if item.public_note.present? %>
+      <div class='public-note note-highlight'>Note: <%= inject_line_break_opportunities item.public_note %></div>
+    <% end %>
+  </div>
+
+  <% if bound_with_parent? %>
+    <div class="bound-with p-2 mt-2">
+      <div class="bound-with-type">Bound and shelved with</div>
+      <div class="bound-with-title"><%= link_to bound_with_title, solr_document_path(item.bound_with_hrid) %></div>
+      <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
+    </div>
   <% end %>
 <% end %>

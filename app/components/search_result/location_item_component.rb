@@ -1,39 +1,17 @@
 # frozen_string_literal: true
 
-module AccessPanels
+module SearchResult
   class LocationItemComponent < ViewComponent::Base
     with_collection_parameter :item
-    attr_reader :item, :document, :classes, :counter
+    attr_reader :item, :document, :classes
 
-    def initialize(item:, document:, item_counter:, classes: nil, render_item_level_request_link: true)
+    def initialize(item:, document:, classes: nil, render_item_level_request_link: true)
       super
 
       @item = item
       @classes = classes
       @document = document
       @render_item_level_request_link = render_item_level_request_link
-      @counter = item_counter
-    end
-
-    delegate :bound_with_parent, to: :item
-
-    def html_data
-      data = { barcode: item.barcode }
-      return data if counter < 5
-
-      data.merge(long_list_target: 'hideable')
-    end
-
-    def bound_with_parent?
-      bound_with_parent.present?
-    end
-
-    def bound_with_title
-      bound_with_parent['title']
-    end
-
-    def bound_with_callnumber
-      [bound_with_parent['call_number'], bound_with_parent['volume'], bound_with_parent['enumeration'], bound_with_parent['chronology']].compact.join(' ')
     end
 
     def availability_text
@@ -75,12 +53,6 @@ module AccessPanels
       return false if item.request_link.render?
 
       true
-    end
-
-    # encourage long lines to wrap at punctuation
-    # Note: the default line break character is the zero-width space
-    def inject_line_break_opportunities(text, line_break_character: '​')
-      text.gsub(/([:,;.]+)/, "\\1#{line_break_character}")
     end
   end
 end
