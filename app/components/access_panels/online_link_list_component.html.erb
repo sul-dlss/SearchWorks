@@ -1,4 +1,4 @@
-<ul class="links" data-controller="long-list" id="online-link-list">
+<%= tag.ul class: "links", id: "online-link-list", data: truncate? ? { controller: "long-list" } : nil do %>
   <% links.each.with_index do |link, index| %>
     <%= tag.li data: index > 5 ? { long_list_target: 'hideable' } : nil do %>
       <span class="<%= 'stanford-only' if link.stanford_only? %>">
@@ -7,7 +7,7 @@
     <% end %>
   <% end %>
 
-  <% if links.size > 5 %>
+  <% if truncate? %>
     <li>
       <button class="btn btn-secondary btn-xs" aria-expanded="false" aria-controls="online-link-list" data-action="click->long-list#expand" data-long-list-target="expandButton">show all<span class="sr-only"> online links</span></button>
       <button class="btn btn-secondary btn-xs" aria-expanded="true" aria-controls="online-link-list" data-action="click->long-list#collapse" data-long-list-target="collapseButton">show less<span class="sr-only"> online links</span></button>
@@ -15,4 +15,4 @@
   <% end %>
 
   <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
-</ul>
+<% end %>
