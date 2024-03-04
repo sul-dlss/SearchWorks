@@ -17779,6 +17779,86 @@
     }
   },
   {
+    "id": "544665a7-6ccc-4aca-8745-c21152e0e6c6",
+    "name": "Physiology of Pregnancy",
+    "departmentId": "ceed9712-bd6c-42f7-b83d-a70465c2fc87",
+    "departmentObject": {
+      "id": "ceed9712-bd6c-42f7-b83d-a70465c2fc87",
+      "name": "OBGYN - Obstetrics & Gynecology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:30.714+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:30.714+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "13c804fc-913a-4cc8-90a9-3defdec4f43b",
+    "courseListingObject": {
+      "id": "13c804fc-913a-4cc8-90a9-3defdec4f43b",
+      "locationId": "4952c89e-98ac-4601-a1ec-7dcbe1cfa4b4",
+      "locationObject": {
+        "id": "4952c89e-98ac-4601-a1ec-7dcbe1cfa4b4",
+        "name": "Lane Course Reserves",
+        "code": "LANE-CRES",
+        "discoveryDisplayName": "Course Reserves: Request at Lane Information Desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+        "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+        "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
+        "servicePointIds": [
+          "0483c7bd-8e95-4c7b-9704-484b01879b02"
+        ]
+      },
+      "termId": "84802ee4-bedb-4ea8-bed5-c8b893b72392",
+      "termObject": {
+        "id": "84802ee4-bedb-4ea8-bed5-c8b893b72392",
+        "name": "Lane Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+      "courseTypeObject": {
+        "id": "39b137f2-2259-4b5d-b3b7-996b2719c5be",
+        "name": "In Person"
+      },
+      "instructorObjects": [
+        {
+          "id": "eacc68dc-57d2-44eb-8194-fb066575a3e7",
+          "userId": "4c456aa5-812a-4fb4-a0ee-51d13591afe6",
+          "name": "Cynthia DeTata",
+          "barcode": "2514327390",
+          "patronGroup": "3684a786-6671-4268-8ed0-9db82ebca60b",
+          "patronGroupObject": {
+            "id": "3684a786-6671-4268-8ed0-9db82ebca60b",
+            "desc": "Staff Member",
+            "group": "staff"
+          },
+          "courseListingId": "13c804fc-913a-4cc8-90a9-3defdec4f43b",
+          "metadata": {
+            "createdDate": "2024-03-03T23:10:10.806+00:00",
+            "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+            "updatedDate": "2024-03-03T23:10:10.806+00:00",
+            "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-03T23:09:49.422+00:00",
+        "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+        "updatedDate": "2024-03-03T23:09:49.422+00:00",
+        "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+      }
+    },
+    "courseNumber": "Humbio 134",
+    "metadata": {
+      "createdDate": "2024-03-03T23:09:49.634+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-03T23:09:49.634+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    }
+  },
+  {
     "id": "548eb4aa-3db7-4fc0-9b54-a426a7d38113",
     "name": "German Literature (1700-1900)",
     "departmentId": "4451706a-bb96-4b19-8492-0acc6b36c472",
