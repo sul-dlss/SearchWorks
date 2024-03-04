@@ -75,22 +75,40 @@
 }
 
 .availability-item {
-  border-top: 1px solid $sul-availability-table-cell-border;
+  border-top: 1px solid $fog-light;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &>.callnumber {
+  .callnumber {
     flex-grow: 1;
   }
 
-  &>.public-note {
+  .public-note {
     order: 2;
     width: 100%;
   }
 
-  &>.item-availability {
+  .item-availability {
     text-align: right;
+  }
+
+  .bound-with {
+    --link-decoration-line: none;
+
+    background-color: $fog-light;
+    
+    .bound-with-type {
+      color: $cardinal-red;
+    }
+    .bound-with-title {
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-bottom: 2px; // So we can see the text-decoration on the link.
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
   }
 }

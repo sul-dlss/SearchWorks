@@ -7,6 +7,14 @@
       <% if item.public_note.present? %>
         <div class='public-note note-highlight'>Note: <%= inject_line_break_opportunities item.public_note %></div>
       <% end %>
+
+      <% if bound_with_parent? %>
+        <div class="bound-with p-2 mt-2">
+          <div class="bound-with-type">Bound and shelved with</div>
+          <div class="bound-with-title"><%= link_to bound_with_title, solr_document_path(item.bound_with_hrid) %></div>
+          <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
+        </div>
+      <% end %>
     </td>
   <% end %>
   <% if render_item_details? %>

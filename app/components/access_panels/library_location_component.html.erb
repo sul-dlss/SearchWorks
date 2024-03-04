@@ -1,8 +1,6 @@
 <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
 <span class="pull-right"><%= render location_request_link %></span>
-<% if location.bound_with? && document.bound_with_note? %>
-  <%= content_tag(:div, class: 'bound-with-note note-highlight') { render document.bound_with_note_for_access_panel } %>
-<% end %>
+
 <% if location.mhld.present? %>
   <% if location.mhld.first.latest_received %>
     <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
