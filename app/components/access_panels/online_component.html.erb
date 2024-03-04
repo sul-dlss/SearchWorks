@@ -1,3 +1,4 @@
+<% # NOTE: this is hidden if there are no links, but jquery.plug-google-content.js may unhide it %>
 <%= tag.div class: "panel-online", hidden: !links.any? do %>
   <%= render @layout.new do |component| %>
     <% component.with_header do %>
