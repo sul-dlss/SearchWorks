@@ -46,5 +46,9 @@ class Holdings
     def callnumber
       data[:callnumber]
     end
+
+    def base_callnumber
+      data[:lopped_callnumber]
+    end
   end
 end

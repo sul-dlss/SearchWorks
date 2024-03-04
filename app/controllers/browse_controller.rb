@@ -50,15 +50,17 @@ class BrowseController < ApplicationController
 
       @spines = service.spines(params[:before] || params[:after])
     else
+      spine = @original_doc.browseable_spines.find { |c| c.base_callnumber == params[:call_number] } if params[:call_number]
 
       item = if params[:barcode]
                @original_doc.items.find { |c| c.barcode&.starts_with?(params[:barcode]) }
-             else
+             elsif spine.nil?
                @original_doc.preferred_item
              end
+      spine ||= @original_doc.browseable_spines.find { |c| c.base_callnumber == item.truncated_callnumber } if item
 
       @spines = NearbyOnShelf.around_item(
-        item,
+        spine,
         search_service:
       )
     end
