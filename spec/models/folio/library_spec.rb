@@ -3,6 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe Folio::Library do
+  describe '.find_by' do
+    it 'finds the library by code' do
+      expect(described_class.find_by(code: 'GREEN')).to have_attributes(id: 'f6b5519e-88d9-413e-924d-9ed96255f72e', code: 'GREEN', name: 'Green Library')
+    end
+  end
+
   describe '#new' do
     context 'with no institution' do
       subject(:library) { described_class.new(id: 'uuid', code: 'baz') }
