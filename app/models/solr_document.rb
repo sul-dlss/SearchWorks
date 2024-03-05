@@ -132,15 +132,17 @@ class SolrDocument
   # Checks holdings to see if there are any physical holdings
   # If there aren't and the library isn't sul, return the library name
   def eresources_library_display_name
-    library = holdings.libraries&.first
-    return unless library
+    return if has_physical_copies?
 
-    has_physical_copies = holdings.libraries.any?(&:present?)
-    return if has_physical_copies
+    library_code = first(:holdings_library_code_ssim)
 
-    unless library.code == 'SUL'
-      library.name
-    end
+    return if library_code == 'SUL' || holdings&.libraries&.first&.code == 'SUL'
+
+    ((Folio::Library.find_by(code: library_code) if library_code) || holdings&.libraries&.first)&.name
+  end
+
+  def has_physical_copies?
+    holdings&.libraries&.any?(&:present?)
   end
 
   concerning :MarcOrganizationAndArrangement do
