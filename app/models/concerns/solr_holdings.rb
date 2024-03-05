@@ -29,7 +29,15 @@ module SolrHoldings
                              browseable_schemes = %w[LC DEWEY ALPHANUM]
                              browseable_items = items.select { |v| v.shelfkey.present? && browseable_schemes.include?(v.callnumber_type) }
 
-                             browseable_items.uniq(&:shelfkey).map do |v|
+                             representative_items = browseable_items.group_by(&:truncated_callnumber).map do |_base_call_number, items|
+                               if items.one?
+                                 items.first
+                               else
+                                 items.min_by(&:full_shelfkey)
+                               end
+                             end
+
+                             representative_items.map do |v|
                                Holdings::Spine.new({
                                                      lopped_callnumber: v.truncated_callnumber,
                                                      shelfkey: v.shelfkey,
