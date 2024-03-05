@@ -26,7 +26,7 @@ class Holdings
 
     def suppressed?
       @item_display.values.none?(&:present?) ||
-        (item_display[:library] == 'SUL' && internet_resource?)
+        internet_resource?
     end
 
     def browsable?

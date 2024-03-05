@@ -124,6 +124,41 @@ RSpec.describe SolrDocument do
     end
   end
 
+  describe '#eresources_library_display_name' do
+    eresource_bus_library = { id: 30, item_display_struct:
+                [{ barcode: '9102385731231', callnumber: nil, current_location: nil,
+                   effective_location_id: '43c011f3-adeb-4c49-b357-06772aff11de',
+                   full_shelfkey: nil, home_location: 'BUS-ELECTRONIC', library: 'BUSINESS',
+                   permanent_location_code: 'BUS-ELECTRONIC', scheme: 'LC', type: 'ONLINE' }] }
+    context 'when it has holdings but no physical items' do
+      let(:solr_doc) { SolrDocument.new(eresource_bus_library) }
+
+      it 'is has a eresources_library_display_name' do
+        expect(solr_doc.eresources_library_display_name).to eq('Business Library')
+      end
+    end
+
+    context 'when it is an eresource and has physical copies' do
+      physical_location_hash = eresource_bus_library.deep_dup
+      physical_location_hash[:item_display_struct].push({ barcode: 123456, home_location: 'BUS', library: 'BUSINESS',
+                                                          permanent_location_code: 'BUS' })
+      let(:physical_location_doc) { SolrDocument.new(physical_location_hash) }
+
+      it 'has an eresource and physical location' do
+        expect(physical_location_doc.eresources_library_display_name).to be_nil
+      end
+    end
+
+    context 'when there are physical items and the library is SUL' do
+      solr_info = YAML.load_file(Rails.root.join('spec/fixtures/solr_documents/13553090.yml'))
+      let(:solr_doc) { SolrDocument.new(solr_info) }
+
+      it 'does not have a location display' do
+        expect(solr_doc.eresources_library_display_name).to be_nil
+      end
+    end
+  end
+
   describe 'EdsDocument' do
     let(:eds) { SolrDocument.new(eds_title: 'yup') }
     let(:non_eds) { SolrDocument.new }

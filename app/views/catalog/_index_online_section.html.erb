@@ -9,6 +9,9 @@
   </dt>
   <dd>
     <ul class="online-links" data-behavior="truncate-results-metadata-links">
+      <% if document.preferred_online_links.present? && document.eresources_library_display_name %>
+        <strong><%= document.eresources_library_display_name %></strong>
+      <% end %>
       <% document.preferred_online_links.each do |link| %>
         <li class="<%= 'stanford-only' if link.stanford_only? %>">
           <%= link.html.html_safe %>
