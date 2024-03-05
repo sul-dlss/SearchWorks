@@ -13,6 +13,6 @@
   </div>
 </div>
 
-<% if document.holdings.browsable_items.present? %>
+<% if document.browseable_spines.present? %>
   <%= render 'catalog/record/callnumber_browse', document: document %>
 <% end %>

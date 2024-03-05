@@ -90,13 +90,6 @@ RSpec.describe Holdings do
     end
   end
 
-  describe "#browsable_items" do
-    it "should collapse callnumbers on the truncated callnumber" do
-      expect(complex_holdings.items.length).to eq 2
-      expect(complex_holdings.browsable_items.length).to eq 1
-    end
-  end
-
   describe "#find_by_barcode" do
     let(:found) { complex_holdings.find_by_barcode('barcode2') }
 

@@ -14,10 +14,6 @@ class Holdings
     end
   end
 
-  def browsable_items
-    items.select(&:browsable?).uniq(&:truncated_callnumber)
-  end
-
   # @return [Array<Holdings::Library>] the list of libraries with holdings
   def libraries
     unless @libraries
