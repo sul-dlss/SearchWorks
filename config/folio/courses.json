@@ -5439,6 +5439,80 @@
     }
   },
   {
+    "id": "1ac0ed58-31f6-499a-a1c5-2bff6b31dc2c",
+    "name": "The Battle for Souls: Europe's Religious Reformations, 1500-1650",
+    "departmentId": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+    "departmentObject": {
+      "id": "96a98c6d-bb55-4edb-86ed-28947c6d4610",
+      "name": "HISTORY - History",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.629+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.629+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "b7de4e70-d69f-470d-a6f5-675fedd55829",
+    "courseListingObject": {
+      "id": "b7de4e70-d69f-470d-a6f5-675fedd55829",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "ea0bb4f5-d68d-4496-a99a-564908c258cf",
+          "userId": "0cd57030-2439-4ffc-a0a3-d609b0762121",
+          "name": "Charlotte Thun-Hohenstein",
+          "barcode": "2551966727",
+          "courseListingId": "b7de4e70-d69f-470d-a6f5-675fedd55829",
+          "metadata": {
+            "createdDate": "2024-03-05T06:00:00.479+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-03-05T06:00:00.479+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-05T05:59:47.033+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-03-05T05:59:47.033+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "HISTORY-231G-01",
+    "metadata": {
+      "createdDate": "2024-03-05T05:59:47.235+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-05T05:59:47.235+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "1b475875-1c93-4495-882d-95597ababd0f",
     "name": "Black Aliveness",
     "departmentId": "76b90aef-d07a-4080-9e29-7313a03f9cc8",
