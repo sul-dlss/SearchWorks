@@ -7,7 +7,7 @@ RSpec.describe "catalog/record/_callnumber_browse" do
       item_display_struct: [
         { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
           scheme: 'LC' },
-        { barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey',
+        { barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey',
           scheme: 'DEWEY' }
       ]
     )

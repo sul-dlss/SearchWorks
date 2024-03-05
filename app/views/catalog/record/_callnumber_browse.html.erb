@@ -1,13 +1,14 @@
 <% num_items_to_show = 3 %>
+<% spines = document.browseable_spines.first(num_items_to_show) %>
 
 <div class="section record-browse-nearby container-fluid" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>">
   <h2><span class="sul-icon sul-icon-books-3"></span> Browse related items</h2>
   <div class="row">
     <div class="col-md-9 col-sm-12">
       Start at call number:
-      <% document.holdings.browsable_items[0..(num_items_to_show - 1)].each_with_index do |item, index| %>
+      <% spines.each_with_index do |spine, index| %>
         <span class="callnumber">
-          <%= link_to_callnumber_browse(document, item, index) %>
+          <%= link_to_callnumber_browse(document, spine, index) %>
         </span>
       <% end %>
     </div>
@@ -16,7 +17,7 @@
     </div>
   </div>
 
-  <% document.holdings.browsable_items.each_with_index do |item, index| %>
+  <% spines.each_with_index do |item, index| %>
     <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container" aria-expanded="true" style="<%= 'display:none;' unless index == 0 %>">
       <div class="embedded-items"><div class="gallery"></div></div>
     </div>

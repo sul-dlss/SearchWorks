@@ -1,9 +1,9 @@
 class NearbyOnShelf
-  def self.around_item(item, search_service:, per: 24, **kwargs)
-    return [] unless item
+  def self.around_item(spine, search_service:, per: 24, **kwargs)
+    return [] unless spine
 
-    before = NearbyOnShelf.reverse(search_service:).spines(item.reverse_shelfkey, per: per / 2, **kwargs)
-    current_and_after = NearbyOnShelf.forward(search_service:).spines(item.shelfkey, per: per / 2, incl: true, **kwargs)
+    before = NearbyOnShelf.reverse(search_service:).spines(spine.reverse_shelfkey, per: per / 2, **kwargs)
+    current_and_after = NearbyOnShelf.forward(search_service:).spines(spine.shelfkey, per: per / 2, incl: true, **kwargs)
 
     # it's possible a document occurs before + after the current item, so we have to re-uniq the result
     (before + current_and_after).uniq { |x| x.document&.id }

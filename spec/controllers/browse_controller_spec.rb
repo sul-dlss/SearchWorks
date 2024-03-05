@@ -2,14 +2,36 @@ require 'rails_helper'
 
 RSpec.describe BrowseController do
   describe 'GET #index' do
-    # rubocop:disable RSpec/IndexedLet
-    let(:item1) { Holdings::Item.new({ barcode: '123456' }) }
-    let(:item2) { Holdings::Item.new({ barcode: '109876' }) }
-    # rubocop:enable RSpec/IndexedLet
-    let(:original_doc) { instance_double(SolrDocument, items: [item1, item2], preferred_item: item2) }
+    let(:original_doc) do
+      SolrDocument.new(id: 'abc123', preferred_barcode: '109876', item_display_struct:)
+    end
+
+    let(:item_display_struct) do
+      [
+        { barcode: '123456', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }.with_indifferent_access,
+        { barcode: '109876', lopped_callnumber: 'B', shelfkey: 'B', scheme: 'LC' }.with_indifferent_access,
+        { barcode: '109876', lopped_callnumber: 'C', shelfkey: 'C', scheme: 'LC' }.with_indifferent_access
+      ]
+    end
 
     before do
       allow(controller).to receive_messages(search_service: double('search_service', fetch: [response, original_doc]), params: { start: 'xyz' }, fetch_original_document: original_doc)
+    end
+
+    context 'when params[:call_number] is present' do
+      before do
+        allow(controller).to receive(:params).and_return(call_number: 'C', start: 'xyz')
+      end
+
+      it 'calls NearbyOnShelf.around_item with the correct item' do
+        expect(NearbyOnShelf).to receive(:around_item) do |item, _search_service|
+          expect(item).to have_attributes(shelfkey: 'C')
+        end
+
+        get :index
+
+        expect(response).to have_http_status(:success)
+      end
     end
 
     context 'when params[:barcode] is present' do
@@ -19,7 +41,7 @@ RSpec.describe BrowseController do
 
       it 'calls NearbyOnShelf.around_item with the correct item' do
         expect(NearbyOnShelf).to receive(:around_item) do |item, _search_service|
-          expect(item).to eq(item1)
+          expect(item).to have_attributes(shelfkey: 'A')
         end
 
         get :index
@@ -31,7 +53,7 @@ RSpec.describe BrowseController do
     context 'when params[:barcode] is not present' do
       it 'calls NearbyOnShelf.around_item with the correct item' do
         expect(NearbyOnShelf).to receive(:around_item) do |item, _search_service|
-          expect(item).to eq(item2)
+          expect(item).to have_attributes(shelfkey: 'B')
         end
 
         get :index
