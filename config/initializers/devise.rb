@@ -22,7 +22,7 @@ if Rails.env.production?
     # only suAffiliation information, but 'member' under 'unscoped-affiliation'
     # should still give them access. Because we are not always getting expected values
     # under 'unscoped-affiliation', we are also retrieving 'eduPersonEntitlement'
-    # which should have 'stanford:library-eresources-eligible' for entitlement to access. 
+    # which should have 'stanford:library-eresources-eligible' for entitlement to access.
     # 'unscoped-affiliation' is mapped from 'eduPersonAffiliation'.
     # Refer to https://uit.stanford.edu/service/saml/arp/edupa for 'member' value.
     auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
