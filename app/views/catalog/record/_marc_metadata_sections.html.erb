@@ -11,7 +11,7 @@
       contents_summary: contents_summary.present?,
       subjects: subjects.present?,
       bibliography_info: bibliography.present?,
-      browse_nearby: document.holdings.present? && document.holdings.browsable_items.present?
+      browse_nearby: document.browseable_spines.present?
     }
   }
 
