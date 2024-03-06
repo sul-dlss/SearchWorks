@@ -53,7 +53,7 @@ class Links
     end
 
     def libraries
-      @libraries ||= document.holdings.libraries.map(&:code)
+      @libraries ||= document.folio_holdings.map { |holding| holding.effective_location.library.code }
     end
 
     def ezproxied_hosts
