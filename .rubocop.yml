@@ -512,3 +512,7 @@ RSpec/RedundantPredicateMatcher: # new in 2.26
   Enabled: true
 RSpec/RemoveConst: # new in 2.26
   Enabled: true
+RSpec/IsExpectedSpecify: # new in 2.27
+  Enabled: true
+RSpec/RepeatedSubjectCall: # new in 2.27
+  Enabled: true
