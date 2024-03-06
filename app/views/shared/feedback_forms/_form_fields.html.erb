@@ -1,10 +1,8 @@
 <%= form_with url: feedback_form_path, method: :post, class: "feedback-form", role: "form", namespace: type do |f| %>
   <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
-  <span style="display:none;visibility:hidden;">
-    <%= f.text_field :user_agent %>
-    <%= f.text_field :viewport %>
-    <%= f.text_field :last_search %>
-  </span>
+  <%= f.hidden_field :user_agent %>
+  <%= f.hidden_field :viewport %>
+  <%= f.hidden_field :last_search %>
   <div class="col-sm-8 offset-sm-1">
     <% if type == 'connection' %>
       <%= f.hidden_field :type, value: type %>
