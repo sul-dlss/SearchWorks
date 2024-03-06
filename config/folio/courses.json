@@ -52372,6 +52372,106 @@
     }
   },
   {
+    "id": "ec9dcf2e-fd33-487f-abd1-7a0ec529c490",
+    "name": "The Human Organism",
+    "departmentId": "cc94ae88-fcc4-41a4-9e83-06ea8f53cde7",
+    "departmentObject": {
+      "id": "cc94ae88-fcc4-41a4-9e83-06ea8f53cde7",
+      "name": "HUMBIO -Human Biology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:23.870+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:23.870+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "3bbda308-568e-4ac8-b874-4a81a74566dd",
+    "courseListingObject": {
+      "id": "3bbda308-568e-4ac8-b874-4a81a74566dd",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "221724e1-1c5b-41fc-9069-278382e5056a",
+          "userId": "30361090-e872-4bba-984b-0207bdbe0373",
+          "name": "Paul Fisher",
+          "barcode": "2550556796",
+          "courseListingId": "3bbda308-568e-4ac8-b874-4a81a74566dd",
+          "metadata": {
+            "createdDate": "2024-03-06T01:06:47.299+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-03-06T01:06:47.299+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        },
+        {
+          "id": "760787e6-3657-4106-89eb-b3ee2dfc2961",
+          "userId": "78b838e5-bcf7-424c-93f5-2dad66187180",
+          "name": "H Heller",
+          "barcode": "2553399429",
+          "courseListingId": "3bbda308-568e-4ac8-b874-4a81a74566dd",
+          "metadata": {
+            "createdDate": "2024-03-06T01:07:11.085+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-03-06T01:07:11.085+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        },
+        {
+          "id": "80b58638-5d86-4a7d-bb7c-40f3cb1adc66",
+          "userId": "b4ec3d83-99b5-48a6-b503-8b385935399b",
+          "name": "Victoria Parikh",
+          "barcode": "2517607514",
+          "courseListingId": "3bbda308-568e-4ac8-b874-4a81a74566dd",
+          "metadata": {
+            "createdDate": "2024-03-06T01:07:30.834+00:00",
+            "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+            "updatedDate": "2024-03-06T01:07:30.834+00:00",
+            "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-06T01:06:07.634+00:00",
+        "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+        "updatedDate": "2024-03-06T01:06:07.634+00:00",
+        "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+      }
+    },
+    "courseNumber": "HUMBIO-4A-01",
+    "metadata": {
+      "createdDate": "2024-03-06T01:06:07.883+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-06T01:06:07.883+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    }
+  },
+  {
     "id": "ecc31c1d-a374-444e-a4de-50732cb5fe23",
     "name": "Federal Litigation in a Global Context: Coursework",
     "departmentId": "0bbe9a7b-f94c-4300-84ed-898dbbf35310",
