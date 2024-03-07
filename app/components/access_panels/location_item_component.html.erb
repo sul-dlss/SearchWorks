@@ -1,6 +1,7 @@
 <%= tag.tr class: classes, data: { barcode: item.barcode } do %>
   <td class="callnumber">
     <%= item.callnumber %>
+    <%= helpers.turbo_frame_tag [:item, item.id], src: item_bound_with_children_path(item.id), loading: 'lazy' if item.id %>
   </td>
   <% if render_item_note? %>
     <td class="public-note">

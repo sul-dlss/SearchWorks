@@ -33,6 +33,10 @@ Rails.application.routes.draw do
     concerns :range_searchable
   end
 
+  resources :items, only: [] do
+    resources :bound_with_children, only: [:index]
+  end
+
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
     concerns [:exportable, :marc_viewable]
   end
