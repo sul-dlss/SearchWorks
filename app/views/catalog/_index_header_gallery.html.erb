@@ -11,6 +11,9 @@
       <% end %>
     <% elsif document.mods? %>
       <br/>Stanford Digital Repository
+    <% elsif document.preferred_online_links.present?  %>
+      eResource<br />
+      <%= document.eresources_library_display_name || 'Stanford Libraries' %>
     <% end %>
   </div>
   <h3 class="index_title">
