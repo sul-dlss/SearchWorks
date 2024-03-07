@@ -1,0 +1,15 @@
+<%= turbo_frame_tag [:item, @item_id] do %>
+  <% if @bound_with_children.present? %>
+    <div class="bound-with p-2 mt-2">
+      <div class="bound-with-type">Bound with</div>
+      <ul class="list-unstyled">
+        <% @bound_with_children.each do |child| %>
+            <li>
+              <div class="bound-with-title"><%= link_to child['title_full_display'], solr_document_path(child.id) %></div>
+              <div class="bound-with-callnumber"><%= child.items.find { |item| item.id == @item_id }.callnumber %></div>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
