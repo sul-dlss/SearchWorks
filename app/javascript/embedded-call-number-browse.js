@@ -95,7 +95,7 @@ import PreviewContent from './preview-content'
           $galleryDoc.embedViewport.attr('aria-expanded', 'true');
           $galleryDoc.embedViewport.slideDown(function(){
             $galleryDoc.calculateDocsPerView();
-            showPreview();
+            showGallery();
           });
         } else {
           $galleryDoc.item.addClass('collapsed');
@@ -106,7 +106,7 @@ import PreviewContent from './preview-content'
         }
       }
 
-      function showPreview() {
+      function showGallery() {
         if (!$galleryDoc.hasContent()){
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function(data){
