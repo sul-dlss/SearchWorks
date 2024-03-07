@@ -406,7 +406,7 @@ b3c21054-1eb1-4e6f-94d3-786fa23ccb55,SAL Newark migration error ,SALN-MIGRATE-ER
 b3d15dd8-a053-4c06-93e9-e76e2dc59385,Media Cage Stacks,MEDIA-CAGE,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 b3d3a93a-db85-4d91-af1d-53e605d62341,Lane Spec: LC Oversize - Flat,LANE-SFLAT,SU,MED,LANE,Medical History Center: By appointment only.,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,
 b4a84835-1933-4f46-9056-61b74fc064d6,Law Special Collections,LAW-SPECIALCOLLECTIONS,SU,LAW,LAW,Special Collections,true,LAW,LAW,,,,,,,,,,,,,,
-b516689f-d96f-4c74-8b7a-86a4eb01624c,Earth Sci Locked Maps,EAR-LOCKED-MAPS,SU,SUL,EARTH-SCI,Locked map files: Ask at circulation desk,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,
+b516689f-d96f-4c74-8b7a-86a4eb01624c,Earth Sci Locked Maps,EAR-LOCKED-MAPS,SU,SUL,EARTH-SCI,Locked map cases: Ask at circulation desk,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,
 b59a9dbd-68b2-4eb7-a7c8-2c079e7a4b7a,Art Shadowed,ART-SHADOW,SU,SUL,ART,Ask at circulation desk,true,ART,ART,,,,,,,,,,,,,,
 b5ec2962-ec69-4f15-8afc-f14cc9729982,SUL Shadowed,SUL-SHADOW,SU,SUL,SUL,Ask at circulation desk,true,Online,Online,,,,,,,,,,,,,,
 b5f0c1f6-d478-439e-bb0b-aed25febef4a,Education Instructor,EDU-INSTRUCTOR,SU,SUL,EDUCATION,On reserve: Ask at circulation desk,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,
