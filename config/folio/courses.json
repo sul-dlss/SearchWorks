@@ -1,5 +1,79 @@
 [
   {
+    "id": "00254a1b-d0f5-4a9a-88a0-1dd596075d08",
+    "name": "After 2001: A 21st Century Science Fiction Odyssey",
+    "departmentId": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+    "departmentObject": {
+      "id": "5190db65-e089-40f0-9a0a-94fc1b05cc5a",
+      "name": "ENGLISH - English",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:22.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:22.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "504c24b6-4935-4b2c-8b67-207ff80e57a1",
+    "courseListingObject": {
+      "id": "504c24b6-4935-4b2c-8b67-207ff80e57a1",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "b40c1e63-0049-4e6d-bb17-a4c96d512b5c",
+          "userId": "594c7ec6-bba4-4777-8ad4-aa61c8a5caaa",
+          "name": "Melissa Stevenson",
+          "barcode": "2558235292",
+          "courseListingId": "504c24b6-4935-4b2c-8b67-207ff80e57a1",
+          "metadata": {
+            "createdDate": "2024-03-07T01:43:26.611+00:00",
+            "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+            "updatedDate": "2024-03-07T01:43:26.611+00:00",
+            "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-07T01:43:06.400+00:00",
+        "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+        "updatedDate": "2024-03-07T01:43:06.400+00:00",
+        "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      }
+    },
+    "courseNumber": "ENGLISH-17Q-01",
+    "metadata": {
+      "createdDate": "2024-03-07T01:43:06.483+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-07T01:43:06.483+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    }
+  },
+  {
     "id": "0030dde8-b82d-4585-a049-c630a93b94f2",
     "name": "Movement and Fate of Organic Contaminants in  Waters",
     "departmentId": "07d6f72f-7794-41f7-a82a-6be3bceac17d",
@@ -13236,6 +13310,121 @@
     }
   },
   {
+    "id": "40833a7c-3723-4f6e-879e-4125f98b5ed7",
+    "name": "Ornithology",
+    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
+    "departmentId": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+    "departmentObject": {
+      "id": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
+      "name": "BIO - Biology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:49.443+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:49.443+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "46b815af-9309-449d-bb7c-75ef68aabd64",
+    "courseListingObject": {
+      "id": "46b815af-9309-449d-bb7c-75ef68aabd64",
+      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+      "locationObject": {
+        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+        "name": "Science Reserves",
+        "code": "SCI-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+        "servicePointIds": [
+          "50ef1036-06d3-48ef-9048-26cabfccf630"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "8119251a-ea55-4d04-b071-b03cce9e189b",
+          "userId": "b1c6c25d-f5f4-4007-af79-83128d25d86c",
+          "name": "Ben Moran",
+          "barcode": "2552463773",
+          "courseListingId": "46b815af-9309-449d-bb7c-75ef68aabd64",
+          "metadata": {
+            "createdDate": "2024-03-06T23:25:53.211+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-06T23:25:53.211+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "fb6bb650-2ee1-41e1-96aa-397488cdcefc",
+          "userId": "9cce0279-049c-4527-8f59-f88496ebb1e7",
+          "name": "Marty Freeland",
+          "barcode": "2551073708",
+          "courseListingId": "46b815af-9309-449d-bb7c-75ef68aabd64",
+          "metadata": {
+            "createdDate": "2024-03-06T23:26:05.904+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-06T23:26:05.904+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "1624bc52-c4e8-4e28-a52d-ef05a9f3510d",
+          "userId": "925cf8e0-0081-4c02-8a57-6a2c89968df1",
+          "name": "Maya Xu",
+          "barcode": "2559345108",
+          "courseListingId": "46b815af-9309-449d-bb7c-75ef68aabd64",
+          "metadata": {
+            "createdDate": "2024-03-06T23:26:16.246+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-06T23:26:16.246+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "9e5f54ac-12c1-43c6-ac86-78fac8399767",
+          "userId": "ad310de9-e286-4d67-846d-9fa32c5135b0",
+          "name": "Rodolfo Dirzo",
+          "barcode": "2552053108",
+          "courseListingId": "46b815af-9309-449d-bb7c-75ef68aabd64",
+          "metadata": {
+            "createdDate": "2024-03-06T23:26:26.442+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-06T23:26:26.442+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-06T23:25:31.484+00:00",
+        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+        "updatedDate": "2024-03-06T23:25:31.484+00:00",
+        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      }
+    },
+    "courseNumber": "BIO 221",
+    "sectionName": "01",
+    "metadata": {
+      "createdDate": "2024-03-06T23:25:31.834+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-06T23:25:31.834+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    }
+  },
+  {
     "id": "409abdd7-5058-4d0d-8784-51a586eee25b",
     "name": "Metabolic Genetic Counseling",
     "description": "Topics include an overview of metabolic diseases; common pathways, diagnosis, management, and treatment of metabolic disorders, and newborn screening.",
@@ -22103,6 +22292,80 @@
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
       "updatedDate": "2023-11-21T23:33:31.521+00:00",
       "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    }
+  },
+  {
+    "id": "6611cde3-0b43-4737-a8a1-a9a5fe8f823b",
+    "name": "Social Networks",
+    "departmentId": "669f1702-0db9-4917-8bcf-57e74adf7045",
+    "departmentObject": {
+      "id": "669f1702-0db9-4917-8bcf-57e74adf7045",
+      "name": "SOC- Sociology",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:38.404+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:38.404+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "9a3ddf86-d135-4050-a9d3-e10f8d07a1b6",
+    "courseListingObject": {
+      "id": "9a3ddf86-d135-4050-a9d3-e10f8d07a1b6",
+      "locationId": "4a911835-3488-4d26-9293-bdc625c9afce",
+      "locationObject": {
+        "id": "4a911835-3488-4d26-9293-bdc625c9afce",
+        "name": "Green Reserves",
+        "code": "GRE-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Green circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+        "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+        "servicePointIds": [
+          "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "1d6bfc05-c9db-4046-b00d-63b122deeac5",
+          "userId": "84c35f84-4a8e-45f1-9bd7-16c6c5341e94",
+          "name": "Mark Granovetter",
+          "barcode": "2558661118",
+          "courseListingId": "9a3ddf86-d135-4050-a9d3-e10f8d07a1b6",
+          "metadata": {
+            "createdDate": "2024-03-07T01:32:49.770+00:00",
+            "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+            "updatedDate": "2024-03-07T01:32:49.770+00:00",
+            "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-07T01:32:37.942+00:00",
+        "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+        "updatedDate": "2024-03-07T01:32:37.942+00:00",
+        "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+      }
+    },
+    "courseNumber": "SOC-31N-01",
+    "metadata": {
+      "createdDate": "2024-03-07T01:32:38.164+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-07T01:32:38.164+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     }
   },
   {
@@ -48754,121 +49017,6 @@
       "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
       "updatedDate": "2023-12-14T19:35:56.995+00:00",
       "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    }
-  },
-  {
-    "id": "dce8620c-a698-4021-8b2a-b3e3bdf949a9",
-    "name": "Ornithology",
-    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues. ",
-    "departmentId": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
-    "departmentObject": {
-      "id": "ac9de4c3-072d-4e19-b2a1-74e289068f70",
-      "name": "BIO - Biology",
-      "metadata": {
-        "createdDate": "2023-08-10T19:04:49.443+00:00",
-        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-        "updatedDate": "2023-08-10T19:04:49.443+00:00",
-        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-      }
-    },
-    "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
-    "courseListingObject": {
-      "id": "7be50d62-9928-494e-907d-8e0c6014770e",
-      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
-      "locationObject": {
-        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
-        "name": "Science Reserves",
-        "code": "SCI-CRES",
-        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
-        "isActive": true,
-        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
-        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
-        "servicePointIds": [
-          "50ef1036-06d3-48ef-9048-26cabfccf630"
-        ]
-      },
-      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
-      "termObject": {
-        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
-        "name": "SUL Spring 2024",
-        "startDate": "2024-03-25T07:00:00.000Z",
-        "endDate": "2024-06-14T07:00:00.000Z"
-      },
-      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
-      "courseTypeObject": {
-        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
-        "name": "In Person- Hybrid"
-      },
-      "instructorObjects": [
-        {
-          "id": "26cab005-28fc-4971-98d2-276647d14923",
-          "userId": "b1c6c25d-f5f4-4007-af79-83128d25d86c",
-          "name": "Ben Moran",
-          "barcode": "2552463773",
-          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
-          "metadata": {
-            "createdDate": "2024-02-29T19:59:08.605+00:00",
-            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-            "updatedDate": "2024-02-29T19:59:08.605+00:00",
-            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-          }
-        },
-        {
-          "id": "f1c9ad37-1109-4462-848a-69a4871eabe8",
-          "userId": "9cce0279-049c-4527-8f59-f88496ebb1e7",
-          "name": "Marty Freeland",
-          "barcode": "2551073708",
-          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
-          "metadata": {
-            "createdDate": "2024-02-29T20:40:07.534+00:00",
-            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-            "updatedDate": "2024-02-29T20:40:07.534+00:00",
-            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-          }
-        },
-        {
-          "id": "2228623e-c0ae-407d-b7d1-dec4b1c58e81",
-          "userId": "ad310de9-e286-4d67-846d-9fa32c5135b0",
-          "name": "Rodolfo Dirzo",
-          "barcode": "2552053108",
-          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
-          "metadata": {
-            "createdDate": "2024-02-29T20:40:26.909+00:00",
-            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-            "updatedDate": "2024-02-29T20:40:26.909+00:00",
-            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-          }
-        },
-        {
-          "id": "867e7eb3-e966-4109-924d-14797528dbe2",
-          "userId": "925cf8e0-0081-4c02-8a57-6a2c89968df1",
-          "name": "Maya Xu",
-          "barcode": "2559345108",
-          "courseListingId": "7be50d62-9928-494e-907d-8e0c6014770e",
-          "metadata": {
-            "createdDate": "2024-02-29T20:40:39.396+00:00",
-            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-            "updatedDate": "2024-02-29T20:40:39.396+00:00",
-            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-          }
-        }
-      ],
-      "metadata": {
-        "createdDate": "2024-02-29T19:24:40.505+00:00",
-        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-        "updatedDate": "2024-02-29T20:48:29.305+00:00",
-        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-      }
-    },
-    "courseNumber": "BIO 221",
-    "sectionName": "01",
-    "metadata": {
-      "createdDate": "2024-02-29T20:48:29.219+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-02-29T20:48:29.219+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     }
   },
   {
