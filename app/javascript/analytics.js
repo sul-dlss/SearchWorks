@@ -46,6 +46,17 @@ Blacklight.onLoad(function() {
     })
   })
 
+  // Track an action when the user clicks on an accordion
+  document.querySelectorAll('[data-accordion-section-target]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      sendAnalyticsEvent({
+        category: 'Accordion',
+        action: 'SW/accordion-toggle',
+        label: getText(e)
+      })
+    })
+  })
+
   // Track actions when search returns zero results
   document.querySelectorAll('a[data-track="zero-results-remove-limit"]').forEach(function(el) {
     el.addEventListener('click', function(e) {

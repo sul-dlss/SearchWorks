@@ -39,7 +39,7 @@ module SolrHoldings
 
                              representative_items.map do |v|
                                Holdings::Spine.new({
-                                                     lopped_callnumber: v.truncated_callnumber,
+                                                     lopped_call_number: v.truncated_callnumber,
                                                      shelfkey: v.shelfkey,
                                                      reverse_shelfkey: v.reverse_shelfkey,
                                                      callnumber: v.callnumber,
