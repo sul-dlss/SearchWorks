@@ -18,7 +18,7 @@
   </div>
 
   <% spines.each_with_index do |item, index| %>
-    <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container" aria-expanded="true" style="<%= 'display:none;' unless index == 0 %>">
+    <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container" style="<%= 'display:none;' unless index == 0 %>">
       <div class="embedded-items"><div class="gallery"></div></div>
     </div>
   <% end %>
