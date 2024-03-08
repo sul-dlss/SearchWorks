@@ -8,7 +8,7 @@
         text-decoration-line: var(--link-decoration-line);
         text-decoration-style: var(--link-decoration-style);
         text-decoration-thickness: 1px; // Needed for Chrome (as of 121) as it makes a thicker line than FF
-        padding-bottom: 3px; // give room for the text decoration
+        padding-bottom: 5px; // give room for the text decoration
 
         &:hover,
         &:active {
@@ -24,7 +24,6 @@
     padding-bottom: 6px;
     h3 {
       color: $sul-access-header-color;
-      display: inline-block;
     }
     .small {
       line-height: 1em;
