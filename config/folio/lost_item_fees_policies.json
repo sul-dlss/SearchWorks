@@ -473,10 +473,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Days"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -489,8 +485,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.216+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:07.216+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-07T22:29:21.423+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
     },
     "id": "76a76e01-fc47-4a3b-9b32-cdcae78be003"
   },
