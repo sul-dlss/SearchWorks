@@ -47,11 +47,11 @@ class LocationRequestLinkPolicy
 
   # Special cases where we don't allow requests for special collections items in certain statuses
   def folio_disabled_status_location?
-    return false unless library_code == 'SPEC-COLL'
-
     items.all? do |item|
-      Constants::FolioStatus::UNPAGEABLE_SPEC_COLL_STATUSES.include?(item.folio_status) ||
-        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable'
+      (library_code == 'SPEC-COLL' &&
+        (Constants::FolioStatus::UNPAGEABLE_SPEC_COLL_STATUSES.include?(item.folio_status) ||
+        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable')) ||
+        Settings.folio_unrequestable_statuses.include?(item.folio_status)
     end
   end
 

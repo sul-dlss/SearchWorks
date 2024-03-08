@@ -247,3 +247,16 @@ folio_hold_recall_statuses:
   - On order
   - In process
   - Restricted
+
+folio_unrequestable_statuses:
+  - Aged to lost
+  - Claims returned
+  - Declared
+  - In process (not requestable)
+  - Intellectual item
+  - Long missing
+  - Lost and paid
+  - Order closed
+  - Unavailable
+  - Unknown
+  - Withdrawn
