@@ -18,7 +18,8 @@ $show-title-left-margin: 40px;
 
 .document {
   h1 {
-    @include h1-show-title-font;
+    font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
+    letter-spacing: -.03em;
   }
 
   .metadata-panels {
