@@ -54,7 +54,10 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   # https://s3.amazonaws.com/foliodocs/api/mod-courses/r/courses.html#coursereserves_courses_get
   def courses
-    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }
+    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }.map do |course|
+      instructors = course.dig('courseListingObject', 'instructorObjects').map { |x| x.slice('name') }
+      course.slice('id', 'courseNumber', 'sectionName', 'name', 'description', 'termObject', 'metadata').merge('courseListingObject' => { 'instructorObjects' => instructors })
+    end
   end
 
   def request_policies
