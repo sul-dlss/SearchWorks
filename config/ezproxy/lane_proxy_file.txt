@@ -921,7 +921,6 @@ journal-inflammation.biomedcentral.com
 journal.copdfoundation.org
 journal.einstein.br
 journal.imbio.de
-journal.nzma.org.nz
 journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
@@ -1166,6 +1165,7 @@ nutritionandmetabolism.biomedcentral.com
 nutritionj.biomedcentral.com
 nvijournal.biomedcentral.com
 nyaspubs.onlinelibrary.wiley.com
+nzmj.org.nz
 obgyn.lwwhealthlibrary.com
 obgyn.mhmedical.com
 obgyn.onlinelibrary.wiley.com
