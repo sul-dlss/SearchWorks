@@ -54346,6 +54346,109 @@
     }
   },
   {
+    "id": "f497208c-8d94-4df1-88cb-fe00ffa78768",
+    "name": "Structure and Reactivity of Organic Molecules",
+    "description": "An introduction to organic chemistry, the molecular foundation to understanding the life sciences, medicine, diagnostics, energy, environmental and materials sciences. Students will learn structural and bonding models of organic molecules that provide insights into reactivity.",
+    "departmentId": "3f048a8d-3c6f-4386-94eb-89c22df3afd0",
+    "departmentObject": {
+      "id": "3f048a8d-3c6f-4386-94eb-89c22df3afd0",
+      "name": "CHEM - Chemistry",
+      "description": "Chemistry",
+      "metadata": {
+        "createdDate": "2023-08-10T19:04:55.241+00:00",
+        "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+        "updatedDate": "2023-08-10T19:04:55.241+00:00",
+        "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      }
+    },
+    "courseListingId": "afe2aa69-8073-471c-af9e-06c196f5431c",
+    "courseListingObject": {
+      "id": "afe2aa69-8073-471c-af9e-06c196f5431c",
+      "locationId": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+      "locationObject": {
+        "id": "2680e0fa-90a9-4a38-9042-ad4e7673c94c",
+        "name": "Science Reserves",
+        "code": "SCI-CRES",
+        "discoveryDisplayName": "On reserve: Ask at Science circulation desk",
+        "isActive": true,
+        "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+        "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+        "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+        "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+        "servicePointIds": [
+          "50ef1036-06d3-48ef-9048-26cabfccf630"
+        ]
+      },
+      "termId": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+      "termObject": {
+        "id": "20e21eb3-efe9-40e2-b02b-5b31be660a3f",
+        "name": "SUL Spring 2024",
+        "startDate": "2024-03-25T07:00:00.000Z",
+        "endDate": "2024-06-14T07:00:00.000Z"
+      },
+      "courseTypeId": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+      "courseTypeObject": {
+        "id": "755833d8-41c2-4c53-9e56-c7ae78fb0d8a",
+        "name": "In Person- Hybrid"
+      },
+      "instructorObjects": [
+        {
+          "id": "6aa60524-b6d5-4456-9449-acec5f492903",
+          "userId": "1cfff281-1732-4ca3-9293-223949c29451",
+          "name": "Megan Brennan",
+          "barcode": "2559971765",
+          "courseListingId": "afe2aa69-8073-471c-af9e-06c196f5431c",
+          "metadata": {
+            "createdDate": "2024-03-08T22:54:46.077+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-08T22:54:46.077+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "eb8d4ebe-8978-4fa0-af7d-d891e932025b",
+          "userId": "265363c5-487e-4ae2-92d8-30f74cdcf287",
+          "name": "Daniel Stack",
+          "barcode": "2559203911",
+          "courseListingId": "afe2aa69-8073-471c-af9e-06c196f5431c",
+          "metadata": {
+            "createdDate": "2024-03-08T22:55:23.448+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-08T22:55:23.448+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        },
+        {
+          "id": "3f936303-f8fa-4d3b-a781-9f42cbdf115f",
+          "userId": "129e1fcf-2ac9-410b-88b4-2ed9ea0b12ed",
+          "name": "Paul Wender",
+          "barcode": "2552177296",
+          "courseListingId": "afe2aa69-8073-471c-af9e-06c196f5431c",
+          "metadata": {
+            "createdDate": "2024-03-08T22:55:51.990+00:00",
+            "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+            "updatedDate": "2024-03-08T22:55:51.990+00:00",
+            "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+          }
+        }
+      ],
+      "metadata": {
+        "createdDate": "2024-03-08T22:53:49.075+00:00",
+        "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+        "updatedDate": "2024-03-08T22:53:49.075+00:00",
+        "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      }
+    },
+    "courseNumber": "CHEM 33",
+    "sectionName": "01",
+    "metadata": {
+      "createdDate": "2024-03-08T22:53:49.174+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-08T22:53:49.174+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    }
+  },
+  {
     "id": "f4ea777e-e215-4550-9097-00d46923b85b",
     "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan ",
     "departmentId": "21e959f5-c92d-439a-a64f-334bf1c086e6",
