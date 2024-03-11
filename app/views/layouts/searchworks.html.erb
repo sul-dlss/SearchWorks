@@ -39,7 +39,7 @@
         apiKey: '<%= Honeybadger.config.get(:api_key) %>',
         environment: '<%= Honeybadger.config.get(:env) %>',
         debug: false,
-        onerror: true,
+        enableUncaught: true,
         ignorePatterns: [
           /reCAPTCHA placeholder element must be empty/i,
           /Undefined variable: MutationObserver/i, // Seems to only come from Opera Mini. Not in our codebase.
