@@ -1,5 +1,5 @@
 class NearbyOnShelf
-  def self.around_item(spine, search_service:, per: 24, **kwargs)
+  def self.around_spine(spine, search_service:, per: 24, **kwargs)
     return [] unless spine
 
     before = NearbyOnShelf.reverse(search_service:).spines(spine.reverse_shelfkey, per: per / 2, **kwargs)

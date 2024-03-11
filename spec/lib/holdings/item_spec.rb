@@ -10,8 +10,7 @@ RSpec.describe Holdings::Item do
     }
   end
   let(:item) { Holdings::Item.new(complex_item_display) }
-  let(:methods) { [:barcode, :library, :effective_permanent_location_code, :temporary_location, :type, :truncated_callnumber, :shelfkey, :reverse_shelfkey, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
-  let(:internet_item) { Holdings::Item.new({ library: 'SUL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
+  let(:methods) { [:barcode, :library, :effective_permanent_location_code, :temporary_location, :type, :truncated_callnumber, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -28,19 +27,11 @@ RSpec.describe Holdings::Item do
     it 'should return false when the item_display exists' do
       expect(item).not_to be_suppressed
     end
-
-    it 'should return true for online items' do
-      expect(internet_item).to be_suppressed
-    end
   end
 
   describe '#full_shelfkey' do
     it 'returns the full shelfkey' do
       expect(item.full_shelfkey).to eq('full_shelfkey')
-    end
-
-    it 'returns a string that sorts last if there is no shelfkey in the data' do
-      expect(internet_item.full_shelfkey).to eq Holdings::Item::MAX_SHELFKEY
     end
   end
 
@@ -54,55 +45,13 @@ RSpec.describe Holdings::Item do
     end
   end
 
-  describe 'browsable?' do
-    it 'should return false if not LC or DEWEY' do
-      expect(Holdings::Item.new(complex_item_display)).not_to be_browsable
-    end
-
-    it 'should return false if there is no shelfkey' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'ABC123', scheme: 'LC' })).not_to be_browsable
-    end
-
-    it 'should return false if there is no reverse shelfkey' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', shelfkey: 'shelfkey', callnumber: 'ABC123', scheme: 'LC' })).not_to be_browsable
-    end
-
-    it 'should return true if callnumber type is ALPHANUM' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'ABC123', scheme: 'ALPHANUM' })).to be_browsable
-    end
-
-    it 'should return false if callnumber type is INTERNET' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'ABC123', scheme: 'INTERNET' })).not_to be_browsable
-    end
-    it 'should return true if callnumber type is LC' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'ABC123', scheme: 'LC' })).to be_browsable
-    end
-
-    it 'should return true if callnumber type is DEWEY' do
-      expect(described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'ABC123', scheme: 'DEWEY' })).to be_browsable
-    end
-
-    it 'should return true if the item is an internet resource' do
-      expect(internet_item).to be_browsable
-    end
-  end
-
   describe '#callnumber' do
     let(:item_without_callnumber) {
       Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
     }
-    let(:lane_online_item) { Holdings::Item.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' }) }
 
     it "should return '(no call number) if the callnumber is blank" do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
-    end
-
-    it 'returns "eResource" for an eResource' do
-      expect(internet_item.callnumber).to eq 'eResource'
-    end
-
-    it 'returns "eResource" when the item type is ONLINE' do
-      expect(lane_online_item.callnumber).to eq 'eResource'
     end
   end
 

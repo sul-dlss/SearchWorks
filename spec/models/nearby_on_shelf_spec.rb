@@ -17,9 +17,10 @@ RSpec.describe NearbyOnShelf do
   end
   let(:documents) do
     [
-      SolrDocument.new(id: '1', title_sort: '', pub_date: '', item_display_struct: [{ id: '000', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }, { id: '001', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }]),
-      SolrDocument.new(id: '3', title_sort: '', pub_date: '', item_display_struct: [{ id: '002', lopped_callnumber: 'C', shelfkey: 'C', scheme: 'LC' }]),
-      SolrDocument.new(id: '2', title_sort: '', pub_date: '', item_display_struct: [{ id: '003', lopped_callnumber: 'D', shelfkey: 'NOT_RELATED', scheme: 'LC' }, { id: '004', lopped_callnumber: 'B', shelfkey: 'B', scheme: 'LC' }])
+      SolrDocument.new(id: '1', title_sort: '', pub_date: '', item_display_struct: [{ id: '000', lopped_callnumber: 'A' }], browse_nearby_struct: [{ item_id: '000', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }]),
+      SolrDocument.new(id: '3', title_sort: '', pub_date: '', item_display_struct: [{ id: '002', lopped_callnumber: 'C' }, { id: '002x', lopped_callnumber: 'C' }], browse_nearby_struct: [{ item_id: '002', lopped_callnumber: 'C', shelfkey: 'C', scheme: 'LC' }]),
+      SolrDocument.new(id: '2', title_sort: '', pub_date: '', item_display_struct: [{ id: '003', lopped_callnumber: 'D' }, { id: '004', lopped_callnumber: 'B' }],
+                       browse_nearby_struct: [{ item_id: '003', lopped_callnumber: 'D', shelfkey: 'NOT_RELATED', scheme: 'LC' }, { item_id: '004', lopped_callnumber: 'B', shelfkey: 'B', scheme: 'LC' }])
     ]
   end
 
@@ -59,7 +60,7 @@ RSpec.describe NearbyOnShelf do
     end
 
     it 'set the preferred callnumber on the document so it can be used in the view' do
-      expect(service.spines('A', incl: true, per: 3).map { |x| x.document_with_preferred_item.preferred_item.shelfkey }).to eq %w[A B C]
+      expect(service.spines('A', incl: true, per: 3).map { |x| x.document_with_preferred_item.preferred_item.id }).to eq %w[000 004 002]
     end
   end
 end

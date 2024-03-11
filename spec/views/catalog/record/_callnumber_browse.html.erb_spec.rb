@@ -4,11 +4,13 @@ RSpec.describe "catalog/record/_callnumber_browse" do
   let(:document) {
     SolrDocument.new(
       id: 'abc123',
+      browse_nearby_struct: [
+        { item_id: 'A', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', lopped_callnumber: 'callnumber' },
+        { item_id: 'B', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', lopped_callnumber: 'callnumber2' }
+      ],
       item_display_struct: [
-        { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey',
-          scheme: 'LC' },
-        { barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey',
-          scheme: 'DEWEY' }
+        { id: 'A', barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey' },
+        { id: 'B', barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey' }
       ]
     )
   }
