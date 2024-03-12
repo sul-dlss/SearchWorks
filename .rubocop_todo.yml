@@ -431,11 +431,6 @@ Lint/MissingSuper:
     - 'app/models/marc_fields/linked_author.rb'
 
 # Offense count: 1
-Lint/NoReturnInBeginEndBlocks:
-  Exclude:
-    - 'app/models/concerns/digital_collection.rb'
-
-# Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/ParenthesesAsGroupedExpression:
   Exclude:
