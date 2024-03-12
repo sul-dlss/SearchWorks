@@ -16,7 +16,7 @@ module RecordHelper
           )
         )
       end
-    end.join('').html_safe
+    end.join.html_safe
   end
 
   ##
@@ -33,7 +33,7 @@ module RecordHelper
           )
         )
       end
-    end.join('').html_safe
+    end.join.html_safe
   end
 
   ##

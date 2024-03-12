@@ -1416,13 +1416,6 @@ Style/RaiseArgs:
   Exclude:
     - 'lib/tasks/searchworks.rake'
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Methods.
-Style/RedundantArgument:
-  Exclude:
-    - 'app/helpers/record_helper.rb'
-
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantBegin:
