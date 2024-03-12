@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Keep distinct from catalog's SearchBuilder
 class ArticleSearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior

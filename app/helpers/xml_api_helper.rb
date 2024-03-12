@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module XmlApiHelper
   def drupal_api?
     (params and params.has_key?(:drupal_api) and params[:drupal_api] == "true")

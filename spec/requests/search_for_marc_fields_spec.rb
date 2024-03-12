@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 # This feature is not linked to in the UI, but we it is helpful tool for finding records with specifc marc fields if you know the path.

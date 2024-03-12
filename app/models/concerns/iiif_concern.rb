@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Module that provides SolrDocument IIIF specific methods
 module IiifConcern

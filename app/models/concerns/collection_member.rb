@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CollectionMember
   def is_a_collection_member?
     self[:collection]&.excluding('sirsi', 'folio').present?

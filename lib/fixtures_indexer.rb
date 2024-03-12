@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
 require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
 require "#{Rails.root}/spec/fixtures/mods_records/mods_fixtures"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CollectionAccessPointHelper
   def get_collection
     if @response.docs.first.present?

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Holdings
   class Spine
     attr_reader :data, :document

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This determines whether we should display a request link to the user
 class ItemRequestLinkPolicy
   def initialize(item:)

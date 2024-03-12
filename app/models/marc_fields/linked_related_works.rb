@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to parse MARC related works (730 and others) and link them
 # to a search. Some subfields are not include in the search
@@ -74,12 +76,11 @@ class LinkedRelatedWorks < MarcField
     result = {}
     SECTION_TO_VIEW.each do |from, destinations|
       destinations.each do |to|
-        subfields[from].each do |subfield|
+        result[to] = subfields[from].filter_map do |subfield|
           next if to == :search && TEXT_CODES.include?(subfield.code) # omit text subfields from searches
 
-          result[to] ||= ''
-          result[to] << subfield.value.to_s + ' '
-        end
+          subfield.value.to_s
+        end.join(' ')
       end
     end
     result

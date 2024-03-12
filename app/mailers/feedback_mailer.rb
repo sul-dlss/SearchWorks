@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FeedbackMailer < ApplicationMailer
   def submit_feedback(params, ip)
     @mailer_parser = FeedbackMailerParser.new(params, ip)

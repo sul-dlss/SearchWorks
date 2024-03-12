@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  ActionMailer class to send records (full and brief versions) via email
 ###

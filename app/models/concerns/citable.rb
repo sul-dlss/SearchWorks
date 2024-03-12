@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 # Simple concern mixed into classes to return citations
 module Citable

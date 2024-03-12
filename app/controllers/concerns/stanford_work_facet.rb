@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A mixin to add dynamic genre specific facet support
 module StanfordWorkFacet

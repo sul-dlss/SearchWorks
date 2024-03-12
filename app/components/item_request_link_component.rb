@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ItemRequestLinkComponent < ViewComponent::Base
   attr_reader :item, :classes
 

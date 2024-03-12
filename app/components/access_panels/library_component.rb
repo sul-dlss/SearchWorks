@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class LibraryComponent < ViewComponent::Base
     with_collection_parameter :library

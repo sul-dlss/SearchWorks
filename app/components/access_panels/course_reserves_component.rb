@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class CourseReservesComponent < AccessPanels::Base
     def course_reserves_list

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to parse MARC "author" fields that have hyperlinks for searching/display
 # (i.e., href vs link/anchor) and post text for display (context).

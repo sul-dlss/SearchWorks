@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  Simple module to mixin BoundWithNote behavior
 ###

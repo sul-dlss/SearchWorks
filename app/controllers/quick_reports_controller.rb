@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QuickReportsController < ApplicationController
   def create
     if request.post?

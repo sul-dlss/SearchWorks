@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  Mixin to add methods for crafting Stacks image urls
 ###

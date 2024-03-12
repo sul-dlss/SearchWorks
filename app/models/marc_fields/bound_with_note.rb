@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 # BoundWithNote class to render 590 fields
 class BoundWithNote < MarcField

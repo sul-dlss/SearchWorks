@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ActiveRecord::Base
   attr_writer :affiliations, :person_affiliations
 

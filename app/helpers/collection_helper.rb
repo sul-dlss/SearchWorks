@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CollectionHelper
   def self.strip_leading_a(collection_id)
     collection_id.sub(/^a(\d+)$/, '\1')

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # We may want to abstract this out into a more
 # generic ResourceType or DocumentType class that
 # can identify all the different types appropriately.

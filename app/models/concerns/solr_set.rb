@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A mixin to add set member behavior to SolrDocuments.
 # Items that are in a set identify their set membership

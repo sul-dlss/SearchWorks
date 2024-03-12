@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HoursController < ApplicationController
   def show
     response = HoursRequest.new(params[:id]).get

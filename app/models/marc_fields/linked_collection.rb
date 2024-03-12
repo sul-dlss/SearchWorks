@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle linked collection titles field logic
 class LinkedCollection < MarcField

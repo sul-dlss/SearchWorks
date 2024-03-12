@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RequestLinks
   class HooverRequestLinkComponent < LocationRequestLinkComponent
     def render?

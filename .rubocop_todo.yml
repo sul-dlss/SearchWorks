@@ -1232,13 +1232,6 @@ Style/FetchEnvVar:
   Exclude:
     - 'app/models/user.rb'
 
-# Offense count: 518
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/GlobalStdStream:

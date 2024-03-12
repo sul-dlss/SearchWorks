@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # See https://github.com/kickstarter/rack-attack/blob/master/docs/example_configuration.md
 # for more configuration options

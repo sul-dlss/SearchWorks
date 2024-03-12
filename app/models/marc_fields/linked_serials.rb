@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # LinkedSerials deals with the MARC Serial data located in 76x-78x
 # and how to link to discover other items in the serial based on subfields

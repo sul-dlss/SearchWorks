@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A mixin to include MarcField subclasses into the SolrDocument
 module MarcMetadata

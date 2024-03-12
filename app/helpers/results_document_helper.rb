@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ResultsDocumentHelper
   def get_main_title_date(document)
     # MODS data is indexed with the display date in Solr field pub_year_ss

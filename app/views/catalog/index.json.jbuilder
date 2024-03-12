@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Overridden from Blacklight to inject content into documents
 json.response do
   json.docs augment_solr_document_json_response(@presenter.documents)

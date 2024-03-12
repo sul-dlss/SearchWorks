@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NearbyOnShelf
   def self.around_item(spine, search_service:, per: 24, **kwargs)
     return [] unless spine

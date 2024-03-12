@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MarcHelper
   def render_if_present(renderable)
     render renderable if renderable.present?

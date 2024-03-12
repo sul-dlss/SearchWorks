@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Mixin to add access to subjects to the SolrDocument
 module MarcSubjects

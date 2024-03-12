@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to parse MARC Series fields that are not linked to series searches
 # All alpha subfields are included in the text

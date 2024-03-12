@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AvailabilityController < ApplicationController
   before_action :redirect_bots, :redirect_no_ids
   def index

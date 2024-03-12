@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Pull full-text source data from the SFX XML endpoint and render it.
 #
@@ -6,8 +8,8 @@
 #
 # This class parses that XML and returns it both as ruby objects and an HTML rendering.
 class SfxData
-  FULL_TEXT_SERVICE_TYPE = 'getFullTxt'.freeze
-  SFX_XML_RESPONSE_TYPE = 'sfx.response_type=multi_obj_xml'.freeze
+  FULL_TEXT_SERVICE_TYPE = 'getFullTxt'
+  SFX_XML_RESPONSE_TYPE = 'sfx.response_type=multi_obj_xml'
 
   def initialize(base_sfx_url)
     @base_sfx_url = base_sfx_url

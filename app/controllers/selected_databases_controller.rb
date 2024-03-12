@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SelectedDatabasesController < ApplicationController
   include Blacklight::Searchable
   def index

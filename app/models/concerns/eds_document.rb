@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EdsDocument
   def html_fulltext?
     self['eds_html_fulltext_available'] == true

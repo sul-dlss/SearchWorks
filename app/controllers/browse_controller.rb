@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BrowseController < ApplicationController
   include Blacklight::Configurable
   include Blacklight::Searchable

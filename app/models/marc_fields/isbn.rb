@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle MARC 020 (display everything but subfield c)
 # https://www.loc.gov/marc/bibliographic/bd020.html

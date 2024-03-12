@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HoursRequest
   def initialize(library)
     @library = library

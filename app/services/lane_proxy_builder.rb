@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'English'
 class LaneProxyBuilder
-  URI = 'https://lane.stanford.edu/eresources/ezproxy-servers.txt'.freeze
-  PREFIX = 'T '.freeze
-  FILENAME = 'config/ezproxy/lane_proxy_file.txt'.freeze
+  URI = 'https://lane.stanford.edu/eresources/ezproxy-servers.txt'
+  PREFIX = 'T '
+  FILENAME = 'config/ezproxy/lane_proxy_file.txt'
 
   def self.run
     new.run
