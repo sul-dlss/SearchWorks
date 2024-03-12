@@ -1172,12 +1172,6 @@ Style/ClassCheck:
   Exclude:
     - 'app/models/concerns/cjk_query.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ColonMethodCall:
-  Exclude:
-    - 'lib/fixtures_indexer.rb'
-
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/CommentedKeyword:
