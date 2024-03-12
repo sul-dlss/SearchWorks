@@ -25,10 +25,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -37,8 +33,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.315+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:04.315+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:26:31.783+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "1c1ff8ee-646f-4a39-8625-f08d763ced7f"
   },
@@ -60,10 +56,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -76,7 +68,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.549+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:46:31.142+00:00",
+      "updatedDate": "2024-03-11T18:23:38.285+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "1d12c9e3-ad47-4a49-95ad-5c496a48ee6d"
@@ -107,10 +99,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Days"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -123,8 +111,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.315+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:05.315+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:24:29.402+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "24da62db-472c-47fe-991f-75fc9c3f7481"
   },
@@ -193,10 +181,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -209,8 +193,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.983+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:06.983+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:24:03.414+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "29684504-bb35-488e-bf2d-74f7ec27d91c"
   },
@@ -240,10 +224,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 1,
-      "intervalId": "Hours"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -256,8 +236,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.562+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:03.562+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:22:18.245+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "332e35f5-a167-44e0-a843-a0ba0000e777"
   },
@@ -286,10 +266,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -302,7 +278,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.310+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:47:33.015+00:00",
+      "updatedDate": "2024-03-11T18:25:46.673+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "4e9fff6f-6bd9-4bb7-b3f2-9dbb7d8e57be"
@@ -333,10 +309,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -349,7 +321,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:00.915+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:47:05.306+00:00",
+      "updatedDate": "2024-03-11T18:24:41.279+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "5306967f-4613-4a27-b796-ea2d3f99af2e"
@@ -380,10 +352,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -396,7 +364,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.655+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:46:40.794+00:00",
+      "updatedDate": "2024-03-11T18:23:48.995+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "5e4ee2a3-237d-40e2-bf2e-497963dda0ec"
@@ -427,10 +395,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -443,7 +407,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.955+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:46:14.944+00:00",
+      "updatedDate": "2024-03-11T18:23:09.105+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "622b0090-e1c5-4e67-9c59-7b7a5801bb06"
@@ -515,10 +479,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -527,8 +487,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.869+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:07.869+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:25:07.626+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "86f0f52b-09cf-47c4-bf8b-b77585c4c3d2"
   },
@@ -558,10 +518,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -574,8 +530,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.214+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:06.214+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:23:21.649+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "883f3c16-3720-4678-899c-2279f06cd25f"
   },
@@ -743,10 +699,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -759,8 +711,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.851+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:04.851+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:20:26.016+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "bb338f23-67e1-4e34-ab8d-a861b3c9879a"
   },
@@ -789,10 +741,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -805,8 +753,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.515+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:07.515+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:24:54.883+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "bcfd2c6d-a1c1-40a0-a6e8-dc0fe7225d76"
   },
@@ -835,10 +783,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -851,7 +795,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.581+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:48:41.420+00:00",
+      "updatedDate": "2024-03-11T18:26:53.573+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "be384a8b-98aa-4443-8d3e-1eeb115a83bc"
@@ -882,10 +826,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -898,8 +838,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.057+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:05.057+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:22:32.763+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "beb889d3-9d45-4b9a-85a4-5decc1427693"
   },
@@ -929,10 +869,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -945,8 +881,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.917+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:05.917+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:27:02.972+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "c8e30e2f-8fa1-45d6-b42f-7f1abe31939c"
   },
@@ -975,10 +911,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -991,7 +923,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:02.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:48:21.990+00:00",
+      "updatedDate": "2024-03-11T18:26:42.781+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "dd2fb6cd-cff1-4405-992d-78c2e7faca04"
@@ -1022,10 +954,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -1038,8 +966,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.452+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:08.452+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:26:10.585+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "df2237da-7a20-4e22-aba6-4d88ac2ee281"
   },
@@ -1068,10 +996,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 1,
-      "intervalId": "Hours"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -1084,8 +1008,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.854+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:06.854+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:21:53.660+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "e768902e-b3ef-4b1f-a480-ad84e0522c35"
   },
@@ -1114,10 +1038,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -1130,8 +1050,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.104+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:08.104+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-11T18:25:21.001+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "e85da957-dca3-4b67-b9a7-0b603ffe2961"
   },
@@ -1186,10 +1106,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -1202,7 +1118,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.614+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:46:03.076+00:00",
+      "updatedDate": "2024-03-11T18:22:56.786+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "f96e7828-4c47-4c3f-be2d-189bef9fba7a"
@@ -1233,10 +1149,6 @@
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
     "chargeAmountItemSystem": false,
-    "lostItemChargeFeeFine": {
-      "duration": 12,
-      "intervalId": "Months"
-    },
     "returnedLostItemProcessingFee": false,
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
@@ -1249,7 +1161,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.779+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-02-12T19:48:07.532+00:00",
+      "updatedDate": "2024-03-11T18:26:22.084+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "facb376f-09e3-4984-9fd7-554cf2085961"
