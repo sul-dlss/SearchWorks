@@ -1567,12 +1567,6 @@ Style/SelectByRegexp:
     - 'app/models/concerns/digital_image.rb'
     - 'app/models/marc_fields/issn.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/SelfAssignment:
-  Exclude:
-    - 'lib/tasks/searchworks.rake'
-
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowModifier.
