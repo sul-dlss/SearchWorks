@@ -1127,11 +1127,6 @@ Rails/StripHeredoc:
   Exclude:
     - 'lib/fixtures_indexer.rb'
 
-# Offense count: 1
-Security/Eval:
-  Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-
 # Offense count: 28
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: EnforcedStyle.

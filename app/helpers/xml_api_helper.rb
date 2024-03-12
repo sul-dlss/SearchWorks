@@ -35,7 +35,7 @@ module XmlApiHelper
     #in case of throttled response from GBS
     return {} if string[0, 1] != "{"
 
-    google_response = eval(string)
+    google_response = JSON.parse(string)
     url_hash = {}
     hsh.each do |ckey, numbers|
       numbers.split(",").each do |number|
@@ -50,8 +50,8 @@ module XmlApiHelper
   end
 
   def make_call_to_gbs(url)
-    # Nasty hack to turn GBS response into a ruby acceptable hash
-    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").gsub('":{', '"=>{').gsub('":"', '"=>"').gsub('":', '"=>')
+    # Nasty hack to turn GBS response into a JSON hash
+    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").delete_suffix(';')
   end
 
   def get_authors_for_mobile(doc)
