@@ -1386,12 +1386,6 @@ Style/NumericPredicate:
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
-Style/OrAssignment:
-  Exclude:
-    - 'app/models/concerns/collection_member.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
 Style/ParallelAssignment:
   Exclude:
     - 'spec/services/eds/search_service_spec.rb'
