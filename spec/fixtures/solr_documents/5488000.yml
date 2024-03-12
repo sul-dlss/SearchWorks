@@ -148,10 +148,6 @@ callnum_search:
 - 630.654 .I39M V.5:NO.7-8
 lc_assigned_callnum_ssim:
 - S279 .A45
-shelfkey:
-- dewey 630.65400000 i39m ...
-reverse_shelfkey:
-- ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
 barcode_search:
 - '36105026508924'
 - '36105026515499'
@@ -159,6 +155,8 @@ item_barcodes:
 - '36105026508924'
 - '36105026515499'
 preferred_barcode: '36105026508924'
+holdings_library_code_ssim:
+- SAL3
 library_code_facet_ssim:
 - SAL3
 location_code_facet_ssim:
@@ -174,6 +172,16 @@ building_location_facet_ssim:
 - SAL3/SAL3-SEE-OTHER
 - SAL3/*/type/
 - SAL3/SAL3-SEE-OTHER/type/
+shelfkey:
+- dewey 630.65400000 i39m v.000004:no.000001
+- dewey 630.65400000 i39m v.000003:no.000003
+- dewey 630.65400000 i39m v.000004:no.000004
+- dewey 630.65400000 i39m v.000005:no.000007-000008
+reverse_shelfkey:
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzv~cb}zzzzzy~~~~~~~~
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzw~cb}zzzzzw~~~~~~~~
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzv~cb}zzzzzv~~~~~~~~
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzs~zzzzzr~
 on_order_library_ssim:
 - SAL3
 collection:
@@ -183,7 +191,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
+context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
 
   '
 context_input_name_ssi: "/dev/null"
@@ -290,9 +298,9 @@ folio_json_struct:
   Delhi (India) Imperial Agricultural Research Institute","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2003-09-18","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"S279
   .A45","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1913},"statusUpdatedDate":"2023-08-21T16:02:50.095+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["6
   v. : ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-25T13:10:50Z'
-created: '2024-02-25T13:10:50Z'
-timestamp: '2024-02-25T13:10:50Z'
+last_updated: '2024-03-11T19:20:03Z'
+created: '2024-03-11T19:20:03Z'
+timestamp: '2024-03-11T19:20:03Z'
 author_struct:
 - creator:
   - link: Harrison, William Hudson.
@@ -759,18 +767,17 @@ item_display_struct:
   note:
   instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
   instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-STACKS
   temporary_location_code:
   permanent_location_code: SAL3-STACKS
   status: Available
   effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: 630.654 .I39M ...
-  shelfkey: dewey 630.65400000 i39m ...
-  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: 630.654 .I39M
   callnumber: 630.654 .I39M V.4:NO.1
   full_shelfkey: dewey 630.65400000 i39m v.000004:no.000001
-  scheme: DEWEY
 - id: f947bd93-a1eb-5613-8745-1063f948c461
   barcode: '36105026515499'
   library: SAL3
@@ -780,18 +787,17 @@ item_display_struct:
   note:
   instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
   instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-STACKS
   temporary_location_code:
   permanent_location_code: SAL3-STACKS
   status: Available
   effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: 630.654 .I39M ...
-  shelfkey: dewey 630.65400000 i39m ...
-  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: 630.654 .I39M
   callnumber: 630.654 .I39M V.5:NO.1
   full_shelfkey: dewey 630.65400000 i39m v.000005:no.000001
-  scheme: DEWEY
 - id:
   barcode:
   library: SAL3
@@ -799,20 +805,19 @@ item_display_struct:
   current_location:
   type:
   note:
-  instance_id:
-  instance_hrid:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-SEE-OTHER
   temporary_location_code:
   permanent_location_code: SAL3-SEE-OTHER
   status:
   effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
   material_type_id:
   loan_type_id:
-  lopped_callnumber: 630.654 .I39M ...
-  shelfkey: dewey 630.65400000 i39m ...
-  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: 630.654 .I39M V.3:NO.3
   callnumber: 630.654 .I39M V.3:NO.3
   full_shelfkey: dewey 630.65400000 i39m v.000003:no.000003
-  scheme: DEWEY
 - id:
   barcode:
   library: SAL3
@@ -820,20 +825,19 @@ item_display_struct:
   current_location:
   type:
   note:
-  instance_id:
-  instance_hrid:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-SEE-OTHER
   temporary_location_code:
   permanent_location_code: SAL3-SEE-OTHER
   status:
   effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
   material_type_id:
   loan_type_id:
-  lopped_callnumber: 630.654 .I39M ...
-  shelfkey: dewey 630.65400000 i39m ...
-  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: 630.654 .I39M V.4:NO.4
   callnumber: 630.654 .I39M V.4:NO.4
   full_shelfkey: dewey 630.65400000 i39m v.000004:no.000004
-  scheme: DEWEY
 - id:
   barcode:
   library: SAL3
@@ -841,17 +845,41 @@ item_display_struct:
   current_location:
   type:
   note:
-  instance_id:
-  instance_hrid:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-SEE-OTHER
   temporary_location_code:
   permanent_location_code: SAL3-SEE-OTHER
   status:
   effective_location_id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
   material_type_id:
   loan_type_id:
-  lopped_callnumber: 630.654 .I39M ...
-  shelfkey: dewey 630.65400000 i39m ...
-  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~}}}~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: 630.654 .I39M V.5:NO.7-8
   callnumber: 630.654 .I39M V.5:NO.7-8
   full_shelfkey: dewey 630.65400000 i39m v.000005:no.000007-000008
+browse_nearby_struct:
+- lopped_callnumber: 630.654 .I39M
+  shelfkey: dewey 630.65400000 i39m v.000004:no.000001
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzv~cb}zzzzzy~~~~~~~~
+  callnumber: 630.654 .I39M V.4:NO.1
   scheme: DEWEY
+  item_id: 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
+- lopped_callnumber: 630.654 .I39M V.3:NO.3
+  shelfkey: dewey 630.65400000 i39m v.000003:no.000003
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzw~cb}zzzzzw~~~~~~~~
+  callnumber: 630.654 .I39M V.3:NO.3
+  scheme: DEWEY
+  item_id:
+- lopped_callnumber: 630.654 .I39M V.4:NO.4
+  shelfkey: dewey 630.65400000 i39m v.000004:no.000004
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzv~cb}zzzzzv~~~~~~~~
+  callnumber: 630.654 .I39M V.4:NO.4
+  scheme: DEWEY
+  item_id:
+- lopped_callnumber: 630.654 .I39M V.5:NO.7-8
+  shelfkey: dewey 630.65400000 i39m v.000005:no.000007-000008
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzs~zzzzzr~
+  callnumber: 630.654 .I39M V.5:NO.7-8
+  scheme: DEWEY
+  item_id:
