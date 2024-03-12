@@ -19,13 +19,11 @@ module XmlApiHelper
 
   def get_standard_nums(doc)
     nums = []
-    [:isbn_display, :oclc, :lccn].each do |number|
-      if doc[number]
-        temp_number = doc[number]
-        temp_number = [temp_number] unless doc[number].is_a? Array
-        temp_number.each do |num|
-          nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.gsub(' ', '')}"
-        end
+    [:isbn_display, :oclc, :lccn].select { |n| doc[n] }.each do |number|
+      temp_number = doc[number]
+      temp_number = [temp_number] unless doc[number].is_a? Array
+      temp_number.each do |num|
+        nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.gsub(' ', '')}"
       end
     end
     nums.join(",") unless nums.empty?
@@ -40,11 +38,11 @@ module XmlApiHelper
     google_response = JSON.parse(string)
     url_hash = {}
     hsh.each do |ckey, numbers|
-      numbers.split(",").each do |number|
-        if !url_hash.has_key?(ckey) and google_response.has_key?(number) and google_response[number].has_key?("thumbnail_url")
+      numbers.split(",").select { |number| google_response.has_key?(number) and google_response[number].has_key?("thumbnail_url") }.each do |number|
+        url_hash[ckey] ||= begin
           cover_url = google_response[number]["thumbnail_url"].gsub("u0026", "&")
           lg_cover_url = cover_url.gsub(/pg=\w+/, "printsec=frontcover").gsub("zoom=5", "zoom=1")
-          url_hash[ckey] = [cover_url, lg_cover_url]
+          [cover_url, lg_cover_url]
         end
       end
     end
@@ -59,13 +57,11 @@ module XmlApiHelper
   def get_authors_for_mobile(doc)
     doc[:author_person_full_display] ? text = doc[:author_person_full_display].to_a : text = []
     if doc.respond_to?(:to_marc)
-      ["700", "710", "711", "720"].each do |num|
-        if doc.to_marc[num]
-          doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
-            temp = ""
-            field.each { |sf| ["4", "6"].include?(sf.code) ? nil : temp << "#{sf.value} " }
-            text << temp.strip
-          end
+      ["700", "710", "711", "720"].select { |num| doc.to_marc[num] }.each do |num|
+        doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
+          temp = ""
+          field.each { |sf| ["4", "6"].include?(sf.code) ? nil : temp << "#{sf.value} " }
+          text << temp.strip
         end
       end
     end
@@ -123,15 +119,13 @@ module XmlApiHelper
       end
     end
     if marc['880']
-      marc.find_all { |f| ('880') === f.tag }.each do |item|
-        if !item['6'].nil? and item['6'].include?('-')
-          if item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
-            text = []
-            temp = ""
-            item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
-            text << temp.strip
-          end
-        end
+      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |item|
+        next unless item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
+
+        text = []
+        temp = ""
+        item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
+        text << temp.strip
       end
     end
     return nil if text.empty?
@@ -144,17 +138,13 @@ module XmlApiHelper
     if field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      marc.find_all { |f| ('880') === f.tag }.each do |field|
-        if !field['6'].nil? and field['6'].include?("-")
-          field_880 = field['6'].split("-")[0]
-          match_880 = field['6'].split("-")[1].gsub("//r", "")
-          if match_original == match_880 and field_original == field_880
-            field.each do |sub|
-              if Constants::EXCLUDE_FIELDS.exclude?(sub.code)
-                return_text << sub.value
-              end
-            end
-          end
+      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |field|
+        field_880 = field['6'].split("-")[0]
+        match_880 = field['6'].split("-")[1].gsub("//r", "")
+        next unless match_original == match_880 and field_original == field_880
+
+        field.select { |sub| Constants::EXCLUDE_FIELDS.exclude?(sub.code) }.each do |sub|
+          return_text << sub.value
         end
       end
     end
