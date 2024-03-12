@@ -1384,12 +1384,6 @@ Style/NumericPredicate:
     - 'app/helpers/bookmarks_helper.rb'
     - 'app/models/concerns/cjk_query.rb'
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ParallelAssignment:
-  Exclude:
-    - 'spec/services/eds/search_service_spec.rb'
-
 # Offense count: 33
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: PreferredDelimiters.
