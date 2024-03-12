@@ -156,7 +156,7 @@ module XmlApiHelper
         end
       end
     end
-    return_text.join(" ") unless return_text.blank?
+    return_text.join(" ") if return_text.present?
   end
 
   def doc_is_a_database?(doc)
