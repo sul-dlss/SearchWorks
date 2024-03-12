@@ -16,7 +16,8 @@ class FixturesIndexer
     "uniform_title_display_struct",
     "holdings_json_struct",
     "toc_struct",
-    "item_display_struct"
+    "item_display_struct",
+    "browse_nearby_struct"
   ].freeze
 
   def self.run
