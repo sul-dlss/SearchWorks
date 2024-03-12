@@ -482,13 +482,6 @@ Lint/UselessAccessModifier:
   Exclude:
     - 'app/models/concerns/course_reserves.rb'
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Lint/UselessAssignment:
-  Exclude:
-    - 'lib/hours_request.rb'
-    - 'spec/features/blacklight_customizations/emailing_records_spec.rb'
-
 # Offense count: 63
 # Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
 Metrics/AbcSize:
