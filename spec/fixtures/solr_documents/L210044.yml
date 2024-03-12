@@ -333,10 +333,6 @@ callnum_search:
 - I114 .B1 1934
 - I114 .B1 1886-87
 - I114 .B1 v. 40 1916
-shelfkey:
-- other i000114 .b000001 ...
-reverse_shelfkey:
-- b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 barcode_search:
 - '24504219662'
 - '24504175135'
@@ -449,7 +445,9 @@ item_barcodes:
 - '24504219612'
 - '24504135224'
 - '24504135169'
-preferred_barcode: '24504135193'
+preferred_barcode: '24504135169'
+holdings_library_code_ssim:
+- LANE
 library_code_facet_ssim:
 - LANE
 location_code_facet_ssim:
@@ -470,7 +468,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
+context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
 
   '
 context_input_name_ssi: "/dev/null"
@@ -580,9 +578,9 @@ folio_json_struct:
   report of the Board of Health of the State of New Jersey 1879-1914","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Report
   of the Board of Health of the State of New Jersey 1877-1878","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1877},"statusUpdatedDate":"2023-08-24T15:18:21.607+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
   : illustrations ; 24 cm"],"publicationFrequency":["Annual"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-25T11:24:57Z'
-created: '2024-02-25T11:24:57Z'
-timestamp: '2024-02-25T11:24:57Z'
+last_updated: '2024-03-11T17:30:23Z'
+created: '2024-03-11T17:30:23Z'
+timestamp: '2024-03-11T17:30:23Z'
 author_struct:
 - contributors:
   - link: New Jersey. State Department of Health.
@@ -5357,18 +5355,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1930
-  full_shelfkey: other i000114 .b000001 001930
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 02f58aac-0b70-5f08-a9b7-187d55747095
   barcode: '24504175135'
   library: LANE
@@ -5378,18 +5375,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1907
-  full_shelfkey: other i000114 .b000001 001907
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: '03547889-4065-5637-a259-833891a65674'
   barcode: '24504175096'
   library: LANE
@@ -5399,18 +5395,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1915
-  full_shelfkey: other i000114 .b000001 001915
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 03d5c0eb-2d3b-5e13-8f27-bc571b992473
   barcode: '24504175151'
   library: LANE
@@ -5420,18 +5415,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1909
-  full_shelfkey: other i000114 .b000001 001909
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 05750fe4-885d-5613-964d-8b4f4cf0c4ca
   barcode: '24504220304'
   library: LANE
@@ -5441,18 +5435,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1931
-  full_shelfkey: other i000114 .b000001 001931
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: '091805fd-d698-5909-b409-cc29ab1cdba2'
   barcode: '24504219654'
   library: LANE
@@ -5462,18 +5455,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1933
-  full_shelfkey: other i000114 .b000001 001933
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqww~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 17db1266-7b6f-5cad-ac42-37baba6237e0
   barcode: '24504220257'
   library: LANE
@@ -5483,18 +5475,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1960
-  full_shelfkey: other i000114 .b000001 001960
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqtz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 24e9b5d9-e6fb-5a1f-9968-1d57306c1b37
   barcode: '24504219638'
   library: LANE
@@ -5504,18 +5495,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1936
-  full_shelfkey: other i000114 .b000001 001936
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 2ac2e6f7-291c-5215-b278-1d2c493cfbe0
   barcode: '24504174993'
   library: LANE
@@ -5525,18 +5515,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1922
-  full_shelfkey: other i000114 .b000001 001922
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 38467ed2-a328-50f9-8ec0-a5f2222bc74c
   barcode: '24504220215'
   library: LANE
@@ -5546,18 +5535,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1963
-  full_shelfkey: other i000114 .b000001 001963
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqtw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 387e498e-7901-5fef-a9d3-27ca5332b266
   barcode: '24504219670'
   library: LANE
@@ -5567,18 +5555,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1928
-  full_shelfkey: other i000114 .b000001 001928
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 404f4ca0-66ba-5dbc-902c-a3cd6ffafee8
   barcode: '24504135193'
   library: LANE
@@ -5588,18 +5575,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1877-81
-  full_shelfkey: other i000114 .b000001 001877-000081
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrss~zzzzry~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 453c2033-49b1-510a-8444-12856e18b61e
   barcode: '24504220299'
   library: LANE
@@ -5609,18 +5595,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1925
-  full_shelfkey: other i000114 .b000001 001925
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 458d8449-d290-5fe3-8797-ccb73176519d
   barcode: '24504175070'
   library: LANE
@@ -5630,18 +5615,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1913
-  full_shelfkey: other i000114 .b000001 001913
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 45914a9d-fde2-569c-8a18-c48cbb469ab1
   barcode: '24504174969'
   library: LANE
@@ -5651,18 +5635,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1921
-  full_shelfkey: other i000114 .b000001 001921
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 45ea9025-2d1b-5422-9210-95cf398c7e78
   barcode: '24504219620'
   library: LANE
@@ -5672,18 +5655,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1929
-  full_shelfkey: other i000114 .b000001 001929
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 4a196c7a-4995-5e7e-b35f-4cf25c056790
   barcode: '24504135216'
   library: LANE
@@ -5693,18 +5675,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1885
-  full_shelfkey: other i000114 .b000001 001885
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrru~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 540940f8-af56-53ed-b1d1-ff9e468f89ae
   barcode: '24504175143'
   library: LANE
@@ -5714,18 +5695,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1908
-  full_shelfkey: other i000114 .b000001 001908
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 548d9d6d-9a4c-5108-9052-cc8820e28c7b
   barcode: '24504175127'
   library: LANE
@@ -5735,18 +5715,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1906
-  full_shelfkey: other i000114 .b000001 001906
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 5cea612e-3420-52d1-adfc-da85e278f57c
   barcode: '24504220223'
   library: LANE
@@ -5756,18 +5735,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1964
-  full_shelfkey: other i000114 .b000001 001964
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqtv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 61b20559-fe6f-5ca2-a9b3-02e97f5535cb
   barcode: '24504175101'
   library: LANE
@@ -5777,18 +5755,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1917
-  full_shelfkey: other i000114 .b000001 001917
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqys~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 6691e1c4-bb06-5244-920e-5d4ddedfb4ed
   barcode: '24504135240'
   library: LANE
@@ -5798,18 +5775,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1890
-  full_shelfkey: other i000114 .b000001 001890
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 67fabe79-8725-538e-affe-318f710fbd8e
   barcode: '24504220231'
   library: LANE
@@ -5819,18 +5795,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1966
-  full_shelfkey: other i000114 .b000001 001966
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqtt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 6d3a335a-675a-550b-87e8-69ddce80d0a4
   barcode: '24504175169'
   library: LANE
@@ -5840,18 +5815,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1910
-  full_shelfkey: other i000114 .b000001 001910
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 76c2633b-2443-570a-83ae-a3f81c27e826
   barcode: '24504174951'
   library: LANE
@@ -5861,18 +5835,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1920
-  full_shelfkey: other i000114 .b000001 001920
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 7b5e5c2a-3dc1-526b-8529-c8209cf5ca5f
   barcode: '24504220192'
   library: LANE
@@ -5882,18 +5855,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1938
-  full_shelfkey: other i000114 .b000001 001938
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 7ea3f648-c6da-5d8b-be64-3da5a9c77569
   barcode: '24504175240'
   library: LANE
@@ -5903,18 +5875,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1898
-  full_shelfkey: other i000114 .b000001 001898
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 88e985e1-175c-5a80-810f-171f4d0ecc4d
   barcode: '24504175177'
   library: LANE
@@ -5924,18 +5895,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1911
-  full_shelfkey: other i000114 .b000001 001911
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 8d419b7f-ec46-5727-812e-59c8d4aca845
   barcode: '24504220249'
   library: LANE
@@ -5945,18 +5915,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1959
-  full_shelfkey: other i000114 .b000001 001959
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyquq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 8db8883c-0e6b-532d-9dbc-b6a61f503a78
   barcode: '24504219688'
   library: LANE
@@ -5966,18 +5935,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1927
-  full_shelfkey: other i000114 .b000001 001927
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 99242c63-ccf2-5a92-8ac5-40c4a9022f62
   barcode: '24504175232'
   library: LANE
@@ -5987,18 +5955,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1895-97
-  full_shelfkey: other i000114 .b000001 001895-000097
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqu~zzzzqs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 9da4bed5-b962-57cd-814b-e28d7e95c073
   barcode: '24504175119'
   library: LANE
@@ -6008,18 +5975,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1919
-  full_shelfkey: other i000114 .b000001 001919
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: a0ed7717-9cea-5639-8112-4c3b153011b2
   barcode: '24504175282'
   library: LANE
@@ -6029,18 +5995,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1902
-  full_shelfkey: other i000114 .b000001 001902
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: a65953dc-5aab-5f15-a93d-569bb68da767
   barcode: '24504220281'
   library: LANE
@@ -6050,18 +6015,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1935
-  full_shelfkey: other i000114 .b000001 001935
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: ac60e3f2-7f3c-59e3-b5e3-b5a2934ffffc
   barcode: '24504174977'
   library: LANE
@@ -6071,18 +6035,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1923
-  full_shelfkey: other i000114 .b000001 001923
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: adf92a23-4d96-5a46-8b9e-0f333ac416b8
   barcode: '24504175266'
   library: LANE
@@ -6092,18 +6055,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1900
-  full_shelfkey: other i000114 .b000001 001900
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: b033963e-73ed-5199-92c7-e7a6d0d11c0e
   barcode: '24504175088'
   library: LANE
@@ -6113,18 +6075,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1914
-  full_shelfkey: other i000114 .b000001 001914
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: bd5d83a7-8378-5910-86f9-554c49d9f8e8
   barcode: '24504175305'
   library: LANE
@@ -6134,18 +6095,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1903
-  full_shelfkey: other i000114 .b000001 001903
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c0593344-bee2-569e-a0ba-30a70404ee3b
   barcode: '24504135208'
   library: LANE
@@ -6155,18 +6115,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1882-84
-  full_shelfkey: other i000114 .b000001 001882-000084
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrrx~zzzzrv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c2d9f30c-d62b-54f7-81c7-92950abfbf82
   barcode: '24504219701'
   library: LANE
@@ -6176,18 +6135,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1926
-  full_shelfkey: other i000114 .b000001 001926
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c3e217b4-b476-5a41-9520-c37152819baa
   barcode: '24504175274'
   library: LANE
@@ -6197,18 +6155,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1901
-  full_shelfkey: other i000114 .b000001 001901
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c98ba0cf-957a-5a86-baee-ef1414402339
   barcode: '24504135266'
   library: LANE
@@ -6218,18 +6175,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1893-94
-  full_shelfkey: other i000114 .b000001 001893-000094
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqw~zzzzqv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: cce4e3ac-eba6-50ac-a7d9-81dce75d116e
   barcode: '24504135232'
   library: LANE
@@ -6239,18 +6195,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1888-89
-  full_shelfkey: other i000114 .b000001 001888-000089
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrrr~zzzzrq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: d9282f9d-763c-53b9-bfba-684f28f5a7dc
   barcode: '24504220265'
   library: LANE
@@ -6260,18 +6215,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1961
-  full_shelfkey: other i000114 .b000001 001961
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqty~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e0e1283e-c326-5814-9ccb-b211bdbfc680
   barcode: '24504220273'
   library: LANE
@@ -6281,18 +6235,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1962
-  full_shelfkey: other i000114 .b000001 001962
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqtx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e4970f93-18c6-5184-8131-0bf4755e0447
   barcode: '24504175185'
   library: LANE
@@ -6302,18 +6255,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1912
-  full_shelfkey: other i000114 .b000001 001912
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqyx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e8e11db7-9667-5fdd-8b21-f31477ad1f65
   barcode: '24504175290'
   library: LANE
@@ -6323,18 +6275,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1904
-  full_shelfkey: other i000114 .b000001 001904
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqzv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: ee970959-a616-5fbe-898f-02407413f665
   barcode: '24504135258'
   library: LANE
@@ -6344,18 +6295,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1891-92
-  full_shelfkey: other i000114 .b000001 001891-000092
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqy~zzzzqx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f689d891-094d-51e8-8b0b-6e279fd8b137
   barcode: '24504175258'
   library: LANE
@@ -6365,18 +6315,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1899
-  full_shelfkey: other i000114 .b000001 001899
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrqq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f77b74ba-031c-517f-b810-ee935790005b
   barcode: '24504219646'
   library: LANE
@@ -6386,18 +6335,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1937
-  full_shelfkey: other i000114 .b000001 001937
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqws~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f7e52ab0-1b82-5067-a74f-87e3e01fe46f
   barcode: '24504174985'
   library: LANE
@@ -6407,18 +6355,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1924
-  full_shelfkey: other i000114 .b000001 001924
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqxv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f96e0a17-d24b-517c-b990-f6512491cc40
   barcode: '24504219696'
   library: LANE
@@ -6428,18 +6375,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1932
-  full_shelfkey: other i000114 .b000001 001932
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f9a9cfb2-38bd-5aa9-88d3-0655315163ee
   barcode: '24504219612'
   library: LANE
@@ -6449,18 +6395,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1934
-  full_shelfkey: other i000114 .b000001 001934
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyqwv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: fcf30d18-03ac-5a1b-9c98-47a30bab9519
   barcode: '24504135224'
   library: LANE
@@ -6470,18 +6415,17 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1886-87
-  full_shelfkey: other i000114 .b000001 001886-000087
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 zzyrrt~zzzzrs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: d83e4817-dae5-5376-ad76-7300ce4c9685
   barcode: '24504135169'
   library: LANE
@@ -6491,15 +6435,14 @@ item_display_struct:
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
   instance_hrid: L210044
+  effective_permanent_location_code: LANE-SAL3
   temporary_location_code:
   permanent_location_code: LANE-SAL3
   status: Available
   effective_location_id: 69ff02b2-362f-40d5-96ac-0f514f15a2e9
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
-  lopped_callnumber: I114 .B1 ...
-  shelfkey: other i000114 .b000001 ...
-  reverse_shelfkey: b6il8~hzzzyyv~}ozzzzzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  bound_with:
+  lopped_callnumber: I114 .B1
   callnumber: I114 .B1 v. 40 1916
-  full_shelfkey: other i000114 .b000001 v. 000040 001916
-  scheme: OTHER
+  full_shelfkey: other i000114 .b000001 4}~zzzzvz~zzyqyt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

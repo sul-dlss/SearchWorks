@@ -82,19 +82,8 @@ isbn_search:
 isbn_display:
 - '9788328373464'
 - '8328373467'
-barcode_search:
-- 14136548-1001
-item_barcodes:
-- 14136548-1001
-library_code_facet_ssim:
+holdings_library_code_ssim:
 - SUL
-location_code_facet_ssim:
-- SUL-ELECTRONIC
-building_location_facet_ssim:
-- SUL/*
-- SUL/SUL-ELECTRONIC
-- SUL/*/type/ONLINE
-- SUL/SUL-ELECTRONIC/type/ONLINE
 on_order_library_ssim:
 - SUL
 collection:
@@ -104,7 +93,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '4293b376efc20ec115bce21a733d68e65b0a9d16
+context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
 
   '
 context_input_name_ssi: "/dev/null"
@@ -180,9 +169,9 @@ folio_json_struct:
   Daniel","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-02-06","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar","name":"Resource","linkText":"Safari
   Books Online","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":2025},"statusUpdatedDate":"2023-08-21T21:08:33.602+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
   online resource"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-02-25T11:11:09Z'
-created: '2024-02-25T11:11:09Z'
-timestamp: '2024-02-25T11:11:09Z'
+last_updated: '2024-03-11T17:09:42Z'
+created: '2024-03-11T17:09:42Z'
+timestamp: '2024-03-11T17:09:42Z'
 author_struct:
 - creator:
   - link: Vaughan, Daniel.
@@ -274,25 +263,3 @@ holdings_json_struct:
           code: SU
           name: Stanford University
   items: []
-item_display_struct:
-- id:
-  barcode: 14136548-1001
-  library: SUL
-  home_location: SUL-ELECTRONIC
-  current_location:
-  type: ONLINE
-  note:
-  instance_id:
-  instance_hrid:
-  temporary_location_code:
-  permanent_location_code: SUL-ELECTRONIC
-  status:
-  effective_location_id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
-  material_type_id:
-  loan_type_id:
-  lopped_callnumber:
-  shelfkey:
-  reverse_shelfkey:
-  callnumber:
-  full_shelfkey:
-  scheme: OTHER
