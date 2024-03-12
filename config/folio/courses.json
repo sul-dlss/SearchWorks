@@ -2647,7 +2647,7 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Jose Saldivar"
+          "name": "Jelena Batinic"
         }
       ]
     }
@@ -4105,6 +4105,29 @@
       "instructorObjects": [
         {
           "name": "Richard Meyer"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4f206bcb-09e0-4b59-a3ed-e4a6d9a02f26",
+    "courseNumber": "CHEM 171",
+    "sectionName": "01",
+    "name": "Foundations of Physical Chemistry",
+    "description": "Quantum and statistical thermodynamics: obtaining quantum mechanical energy levels and connecting them to thermodynamic properties using statistical mechanics. Emphasis will be on quantum mechanics of ideal systems (particle in a box, particle on a ring, harmonic oscillator, rigid rotor, and hydrogen atom) and their connection to and uses in thermodynamics (laws of thermodynamics, properties of gases and thermal motion, and chemical equilibria).",
+    "metadata": {
+      "createdDate": "2024-03-11T20:12:27.694+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-11T20:12:27.694+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amy McKeown-Green"
+        },
+        {
+          "name": "Thomas Markland"
         }
       ]
     }
@@ -11568,6 +11591,24 @@
     }
   },
   {
+    "id": "d5ef55ef-4818-4246-afbf-ebfab3983af2",
+    "courseNumber": "FRENCH-104N",
+    "name": "Film and Fascism",
+    "metadata": {
+      "createdDate": "2024-03-12T04:33:35.061+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-12T04:33:35.061+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cecile Alduy"
+        }
+      ]
+    }
+  },
+  {
     "id": "d680c80f-0bc2-4a82-a8c6-5a4b30caec6d",
     "courseNumber": "JEWISHST-37Q-01",
     "name": "Zionism and the Novel",
@@ -12007,7 +12048,28 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Jose Saldivar"
+          "name": "Jelena Batinic"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dc3205d1-0268-4d08-b7ef-15e62d2c78d7",
+    "courseNumber": "ENGLISH-190NS-01",
+    "name": "Novel Salon",
+    "metadata": {
+      "createdDate": "2024-03-12T01:39:40.054+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-12T01:39:40.054+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sarah Frisch"
+        },
+        {
+          "name": "Nina Schloesser Tarano"
         }
       ]
     }
@@ -14092,6 +14154,24 @@
       "instructorObjects": [
         {
           "name": "Russ Altman"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ffd38d0c-f5e8-41de-9119-5e591a36c7bd",
+    "courseNumber": "COLLEGE-108-03",
+    "name": "Where Does it Hurt?: Medicine and Suffering in Global Context",
+    "metadata": {
+      "createdDate": "2024-03-11T23:42:50.107+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-11T23:42:50.107+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Esiteli Hafoka"
         }
       ]
     }
