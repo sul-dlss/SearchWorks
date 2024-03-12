@@ -50,14 +50,10 @@ class SearchWorksRecordMailer < ApplicationMailer
   end
 
   def subject_from_details(details, documents)
-    if details[:subject].present?
-      details[:subject]
-    else
-      I18n.t(
-        'blacklight.email.text.subject',
-        count: documents.length,
-        title: documents.first.to_semantic_values[:title].try(:first) || 'N/A'
-      )
-    end
+    details[:subject].presence || I18n.t(
+      'blacklight.email.text.subject',
+      count: documents.length,
+      title: documents.first.to_semantic_values[:title].try(:first) || 'N/A'
+    )
   end
 end
