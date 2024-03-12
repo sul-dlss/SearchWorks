@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The store of course reserve data from courses.json
 class CourseReserve
   FolioCourseInfo = Data.define(:id, :course_number, :name, :instructor)

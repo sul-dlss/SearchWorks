@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # index_links returns a Links::Link object for each :marc_link_struct value.
 # index_links are displayed on access panels and get different treatment
 # for link_text than marc_links created in the MarcLinks module.

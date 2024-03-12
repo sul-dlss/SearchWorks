@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This determines whether we should display a request link to the user
 class LocationRequestLinkPolicy
   # @params [String] library_code the code for the library with the holdings

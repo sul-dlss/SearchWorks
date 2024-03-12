@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This is a shell enviornment that allows us to
 # deploy to preview prod and preview stage at the same time.
 # This is required because each environemnt has its own db

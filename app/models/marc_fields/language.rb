@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to merge content from the indexed
 # language data and the MARC 546 field

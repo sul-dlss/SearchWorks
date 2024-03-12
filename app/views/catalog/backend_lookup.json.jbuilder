@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.response do
   json.docs @presenter.documents
   json.facets do

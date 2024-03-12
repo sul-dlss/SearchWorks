@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Marc856Fixtures
   def many_managed_purl_856
     <<-json

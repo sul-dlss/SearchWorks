@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Holdings
   class Location
     attr_reader :code, :items, :mhld

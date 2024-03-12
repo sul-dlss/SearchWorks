@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FacetOptionsPresenter
   def initialize(params:, context:)
     @params = params
@@ -32,7 +34,7 @@ class FacetOptionsPresenter
   end
 
   class Limiter
-    FACET_FIELD = 'eds_search_limiters_facet'.freeze
+    FACET_FIELD = 'eds_search_limiters_facet'
     delegate :facet_item_presenter, :search_action_path, :search_state, :facet_configuration_for_field, to: :context
 
     def initialize(limiter, params, context)

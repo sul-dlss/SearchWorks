@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  MarcField is the base class to provide common
 #  behavior for other classes to inherit from

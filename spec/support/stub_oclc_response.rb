@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Simple module included for RSpec tests to stub OCLC citation responses
 module StubOclcResponse

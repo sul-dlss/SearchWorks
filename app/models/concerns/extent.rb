@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Extent
   def extent_label
     'Description'

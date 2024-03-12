@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BookmarksHelper
   def bookmarks?
     %w[bookmarks article_selections].include? params[:controller]

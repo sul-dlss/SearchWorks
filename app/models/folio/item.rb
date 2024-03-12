@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Folio
   class Item
     attr_reader :id, :status, :barcode, :call_number, :material_type, :effective_location,

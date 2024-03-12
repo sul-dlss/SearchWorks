@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "#{Rails.root}/spec/fixtures/marc_records/marc_856_fixtures"
 require "#{Rails.root}/spec/fixtures/marc_records/marc_metadata_fixtures"
 require "#{Rails.root}/spec/fixtures/mods_records/mods_fixtures"
@@ -52,7 +54,7 @@ class FixturesIndexer
     @fixtures ||= file_list.map do |file|
       fixture_template = ERB.new(File.read(file))
       rendered_template = fixture_template.result(binding)
-      data = YAML::safe_load rendered_template
+      data = YAML.safe_load rendered_template
       STRUCT_KEYS.each do |key|
         data[key] &&= data[key].map(&:to_json)
       end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 set :bundle_without, %w[sqlite development test].join(' ')
 
 server 'sw-webapp-a.stanford.edu', user: 'blacklight', roles: %w[web db app]

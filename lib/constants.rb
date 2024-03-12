@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Constants
   module FolioStatus
     UNPAGEABLE_SPEC_COLL_STATUSES = [

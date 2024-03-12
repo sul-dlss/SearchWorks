@@ -25,23 +25,23 @@ module ReplaceSpecialQuotes
   def replace_single_quotes_from_hash(hash, key)
     return if hash[key].blank?
 
-    replace_single_quotes_from_param(hash[key])
+    replace_single_quotes_from_param(hash, key)
 
     special_quote_characters.each do |char|
-      hash[key].gsub!(/#{char}/, '"')
+      hash[key] = hash[key].gsub(/#{char}/, '"')
     end
   end
 
-  def replace_single_quotes_from_param(param)
+  def replace_single_quotes_from_param(hash, key)
     special_single_quotation_marks.each do |open_quote, close_quote|
-      opens = param.scan(open_quote)
-      closes = param.scan(close_quote)
+      opens = hash[key].scan(open_quote)
+      closes = hash[key].scan(close_quote)
 
       # only uneven single quotes
       next unless opens.length != closes.length
 
-      param.sub!(/#{open_quote}/, "'") if opens.length == 1
-      param.sub!(/#{close_quote}/, "'") if closes.length == 1
+      hash[key] = hash[key].sub(/#{open_quote}/, "'") if opens.length == 1
+      hash[key] = hash[key].sub(/#{close_quote}/, "'") if closes.length == 1
     end
   end
 

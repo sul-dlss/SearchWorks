@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle MARC 586 field logic
 # https://www.loc.gov/marc/bibliographic/bd586.html

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Holdings
   class MHLD
     def initialize(mhld_display)

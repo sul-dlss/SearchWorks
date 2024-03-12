@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to parse MARC 382 Medium of Performance for display
 # https://www.loc.gov/marc/authority/ad382.html

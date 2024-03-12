@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EdsLinks
   def eds_links
     @eds_links ||= Links.new(eds_fulltext_links_as_searchworks_links)

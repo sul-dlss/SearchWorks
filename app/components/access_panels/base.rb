@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class Base < ViewComponent::Base
     attr_reader :document

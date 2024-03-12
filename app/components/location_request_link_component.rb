@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LocationRequestLinkComponent < ViewComponent::Base
   attr_reader :document, :library_code, :location, :link_params
 

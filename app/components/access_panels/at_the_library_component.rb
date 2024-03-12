@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class AtTheLibraryComponent < AccessPanels::Base
     # @return [Array<Holdings::Library>] the list of libraries with holdings for the item

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SelectionsCount
   def selections_counts
     @selections_counts ||= Struct.new(:catalog, :articles).new(

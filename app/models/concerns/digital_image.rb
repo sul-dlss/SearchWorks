@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DigitalImage
   # Get stacks urls for a document using file ids
   # @return [Array]

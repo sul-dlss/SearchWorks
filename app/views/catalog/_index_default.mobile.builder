@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Search results (CatalogController#index)
 xml.item_id(doc[:id])
 xml.title(doc["vern_" << document_show_link_field.to_s] ? doc["vern_" << document_show_link_field.to_s] : doc[document_show_link_field.to_s])

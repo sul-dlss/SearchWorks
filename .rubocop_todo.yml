@@ -1098,21 +1098,6 @@ Rails/PluralizationGrammar:
   Exclude:
     - 'config/schedule.rb'
 
-# Offense count: 2
-# This cop supports safe autocorrection (--autocorrect).
-Rails/Presence:
-  Exclude:
-    - 'app/mailers/search_works_record_mailer.rb'
-    - 'app/models/concerns/document_links.rb'
-
-# Offense count: 3
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
-  Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/concerns/searchworks/document/sms.rb'
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Include.
@@ -1134,11 +1119,6 @@ Rails/RootPublicPath:
 Rails/StripHeredoc:
   Exclude:
     - 'lib/fixtures_indexer.rb'
-
-# Offense count: 1
-Security/Eval:
-  Exclude:
-    - 'app/helpers/xml_api_helper.rb'
 
 # Offense count: 28
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1191,12 +1171,6 @@ Style/ClassAndModuleChildren:
 Style/ClassCheck:
   Exclude:
     - 'app/models/concerns/cjk_query.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ColonMethodCall:
-  Exclude:
-    - 'lib/fixtures_indexer.rb'
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1257,13 +1231,6 @@ Style/ExpandPathArguments:
 Style/FetchEnvVar:
   Exclude:
     - 'app/models/user.rb'
-
-# Offense count: 518
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1395,14 +1362,6 @@ Style/NestedTernaryOperator:
 
 # Offense count: 5
 # This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, MinBodyLength.
-# SupportedStyles: skip_modifier_ifs, always
-Style/Next:
-  Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-
-# Offense count: 5
-# This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: Strict, AllowedNumbers, AllowedPatterns.
 Style/NumericLiterals:
   MinDigits: 9
@@ -1416,18 +1375,6 @@ Style/NumericPredicate:
     - 'app/helpers/application_helper.rb'
     - 'app/helpers/bookmarks_helper.rb'
     - 'app/models/concerns/cjk_query.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/OrAssignment:
-  Exclude:
-    - 'app/models/concerns/collection_member.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/ParallelAssignment:
-  Exclude:
-    - 'spec/services/eds/search_service_spec.rb'
 
 # Offense count: 33
 # This cop supports safe autocorrection (--autocorrect).
@@ -1468,13 +1415,6 @@ Style/QuotedSymbols:
 Style/RaiseArgs:
   Exclude:
     - 'lib/tasks/searchworks.rake'
-
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: Methods.
-Style/RedundantArgument:
-  Exclude:
-    - 'app/helpers/record_helper.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1599,12 +1539,6 @@ Style/SelectByRegexp:
   Exclude:
     - 'app/models/concerns/digital_image.rb'
     - 'app/models/marc_fields/issn.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/SelfAssignment:
-  Exclude:
-    - 'lib/tasks/searchworks.rake'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).

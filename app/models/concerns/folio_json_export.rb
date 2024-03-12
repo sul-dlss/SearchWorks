@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FolioJsonExport
   def self.extended(document)
     document.will_export_as(:folio_json, 'application/json')

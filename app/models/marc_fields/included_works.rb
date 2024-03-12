@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle MARC 7xx field logic for included works
 class IncludedWorks < MarcField

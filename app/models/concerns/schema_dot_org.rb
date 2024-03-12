@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SchemaDotOrg
   def schema_dot_org?
     as_schema_dot_org.present?

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolrHoldings
   def holdings
     @holdings ||= Holdings.new(items, mhld)

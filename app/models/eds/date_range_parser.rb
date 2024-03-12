@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Eds
   ##
   # Responsible for parsing an EDS flavored Blacklight::Solr::Response for

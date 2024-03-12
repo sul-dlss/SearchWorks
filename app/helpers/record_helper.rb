@@ -1,4 +1,5 @@
 # encoding: UTF-8
+# frozen_string_literal: true
 
 module RecordHelper
   ##
@@ -15,7 +16,7 @@ module RecordHelper
           )
         )
       end
-    end.join('').html_safe
+    end.join.html_safe
   end
 
   ##
@@ -32,7 +33,7 @@ module RecordHelper
           )
         )
       end
-    end.join('').html_safe
+    end.join.html_safe
   end
 
   ##

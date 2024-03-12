@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle MARC 022a + 022z field logic
 # https://www.loc.gov/marc/bibliographic/bd022.html

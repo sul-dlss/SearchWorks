@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to model a set of IP ranges.  The default IPAddr library in ruby
 # can define broad IP ranges (e.g. 172.12.0.0/16 would define 172.12.*.*)

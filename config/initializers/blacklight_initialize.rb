@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 BlacklightDynamicSitemap::Engine.config.last_modified_field = 'last_updated'
 
 if Settings.dynamic_sitemap_solr_endpoint == 'export'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductionNotice < MarcField
   def values
     return {} if marc.blank?

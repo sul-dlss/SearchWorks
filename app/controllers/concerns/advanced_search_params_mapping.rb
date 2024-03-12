@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AdvancedSearchParamsMapping
   extend ActiveSupport::Concern
   included do

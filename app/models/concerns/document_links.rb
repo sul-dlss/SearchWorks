@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DocumentLinks
   include MarcLinks
   include IndexLinks
@@ -10,7 +12,7 @@ module DocumentLinks
   private
 
   def sfx_links
-    index_links.sfx if index_links.sfx.present?
+    index_links.sfx.presence
   end
 
   def marc_fulltext_links

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Record View (CatalogController#show)
 xml.item_id(doc[:id])
 xml.full_title(doc[:title_full_display])

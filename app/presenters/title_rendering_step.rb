@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TitleRenderingStep < Blacklight::Rendering::AbstractStep
   delegate :sanitize, to: :context
 

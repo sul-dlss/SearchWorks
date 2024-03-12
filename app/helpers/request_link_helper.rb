@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RequestLinkHelper
   # @param [SolrDocument] document
   # @param [String] library the Symphony library code (e.g. 'GREEN')

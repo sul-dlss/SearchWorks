@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Folio
   # Location information in FOLIO, combining institution/campus/library/location
   class Location

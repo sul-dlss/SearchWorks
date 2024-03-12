@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Eds::SearchService do
@@ -81,7 +83,11 @@ RSpec.describe Eds::SearchService do
 
     context 'second hit' do
       let(:hit) { 1 }
-      let(:previous_and_next_document_params) { @eds_params, @prev_hit, @next_hit = [{ page_number: 1, results_per_page: 10 }, 0, 2] }
+      let(:previous_and_next_document_params) do
+        @eds_params = { page_number: 1, results_per_page: 10 }
+        @prev_hit = 0
+        @next_hit = 2
+      end
 
       it 'first page with both prev/next hits' do
         expect(window).to be_truthy

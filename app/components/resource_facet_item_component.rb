@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ResourceFacetItemComponent < Blacklight::FacetItemComponent
   def render_facet_value(...)
     resource_icon + super

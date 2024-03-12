@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Module included for RSpec tests to stub the article search service
 module StubArticleService

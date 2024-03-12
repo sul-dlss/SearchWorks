@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Renders the preview pane for browse nearby
 class PreviewController < ApplicationController
   include Blacklight::Configurable

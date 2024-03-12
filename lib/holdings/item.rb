@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Holdings
   ##
   # A class representing a single barcoded item in an object's holdings.

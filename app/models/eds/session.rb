@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Eds
   ##
   # A class to wrap the EBSCO::EDS::Session class.

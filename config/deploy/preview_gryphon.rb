@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 set :bundle_without, %w[sqlite development test].join(' ')
 
 # Other aliases are sw-gryphon-search, gryphon-search, and searchworks-gryphon-search

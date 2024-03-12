@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # This class is intended to wrap Marc::DataFields that come from the marc gem.
 # This wrapper class is used to enhance the base Marc::DataField with additional behavior
