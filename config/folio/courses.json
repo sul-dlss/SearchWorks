@@ -5307,6 +5307,21 @@
       "instructorObjects": [
         {
           "name": "Jenn Trahan"
+        },
+        {
+          "name": "Sterling HolyWhiteMountain"
+        },
+        {
+          "name": "Mark Labowskie"
+        },
+        {
+          "name": "Shimon Tanaka"
+        },
+        {
+          "name": "Ruchika Tomar"
+        },
+        {
+          "name": "Zachary Williams"
         }
       ]
     }
@@ -9760,6 +9775,24 @@
       "instructorObjects": [
         {
           "name": "Rose Salseda"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b75beaad-ecef-41e8-878e-75095ff9a335",
+    "courseNumber": "ARTSTUDI-271E-01",
+    "name": "Intermediate Photography: New Landscapes",
+    "metadata": {
+      "createdDate": "2024-03-12T18:51:28.763+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-03-12T18:51:28.763+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Calm"
         }
       ]
     }
