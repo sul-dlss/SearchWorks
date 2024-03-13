@@ -7,7 +7,8 @@ RSpec.feature 'Article Record Display' do
 
   describe 'Subjects' do
     let(:document) do
-      SolrDocument.new(id: '123', eds_title: 'TITLE', eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
+      SolrDocument.new(id: '123', eds_title: 'TITLE',
+                       eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
     end
 
     it 'are linked' do

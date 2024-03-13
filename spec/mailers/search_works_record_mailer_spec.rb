@@ -30,8 +30,12 @@ RSpec.describe SearchWorksRecordMailer do
 
   describe 'email_record' do
     context 'article' do
-      let(:documents) { [SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'], eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-        )]}
+      let(:documents) do
+        [
+          SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],
+                           eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }])
+        ]
+      end
       let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }
 
       it 'should send an HTML email' do

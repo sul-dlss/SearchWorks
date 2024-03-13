@@ -6,7 +6,9 @@ RSpec.describe Holdings::MHLD do
   let(:mhld_display) { 'GREEN -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
   let(:special_mhld) { 'GREEN -|- STACKS -|- (public),(note),no.17,no.14 -|- library-has-with-hyphens and <html> entities -|- ' }
   let(:zombie_mhld) { 'PHYSICS -|- STACKS -|- mhld public note -|- mhld library has -|- mhld latest received' }
-  let(:long_mhld) { "SAL3 -|- PAGE-AS -|-  -|- v.1:no.3(1965:Sept.20)-v.1:no.4(1965:Oct.18);v.1:no.6(1965:Nov.17)-v.1:no.11(1966:May9),v.2:no.2(1966:Aug.8)-v.6:no.6(1970:Dec./1971:Jan.) -|- " }
+  let(:long_mhld) do
+    "SAL3 -|- PAGE-AS -|-  -|- v.1:no.3(1965:Sept.20)-v.1:no.4(1965:Oct.18);v.1:no.6(1965:Nov.17)-v.1:no.11(1966:May9),v.2:no.2(1966:Aug.8)-v.6:no.6(1970:Dec./1971:Jan.) -|- "
+  end
 
   it 'should return the correct elements from the MHLD combined field' do
     mhld = Holdings::MHLD.new(mhld_display)

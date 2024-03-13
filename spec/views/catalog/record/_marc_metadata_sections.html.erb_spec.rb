@@ -6,7 +6,9 @@ RSpec.describe "catalog/record/_marc_metadata_sections" do
   include MarcMetadataFixtures
 
   describe "Metadata sections all available" do
-    let(:document) { SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }], marc_links_struct: [{ finding_aid: true }]) }
+    let(:document) {
+      SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }], marc_links_struct: [{ finding_aid: true }])
+    }
 
     before do
       render 'catalog/record/marc_metadata_sections', document:

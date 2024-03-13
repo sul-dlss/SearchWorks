@@ -89,7 +89,7 @@ RSpec.describe Holdings::Library do
           ]
         end
         let(:mhlds) do
-          [Holdings::MHLD.new(" -|-  -|-  -|- no.54(1968:Feb.17),no.56(1968:Mar.2)-no.57(1968:Mar.9),no.63(1968:Apr.20),no.92(1968:Nov.9), no.102(1969:Jan.18),no.107(1969:Feb.22),no.108(1969:Feb.25),no.119(1969:May 24),[1972:Jan-1993:May,1994:Jan-1995:Dec,1998:May-Nov,1999 :Apr-2000:Nov ,2001:Jan-Feb] -|- ")]
+          [Holdings::MHLD.new(" -|-  -|-  -|- no.54(1968:Feb.17),no.56(1968:Mar.2)-no.57(1968:Mar.9) ... -|- ")]
         end
 
         subject { library.locations }

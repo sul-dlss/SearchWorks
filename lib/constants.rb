@@ -313,9 +313,11 @@ module Constants
     },
     'SPEC-COLL' => {
       heading: 'On-site access',
-      # text: 'Researchers can request to view these materials in the Special Collections Reading Room. Request materials at least 2 business days in advance. Maximum 5 items per day.'
+      # text: 'Researchers can request to view these materials in the Special Collections Reading Room.
+      #        Request materials at least 2 business days in advance. Maximum 5 items per day.'
       # Temporary message via https://github.com/sul-dlss/SearchWorks/issues/3235
-      text: 'Collections are moving, which may affect access. Request materials as early as possible. Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.'
+      text: 'Collections are moving, which may affect access. Request materials as early as possible.
+             Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.'
     }
   }.freeze
 end

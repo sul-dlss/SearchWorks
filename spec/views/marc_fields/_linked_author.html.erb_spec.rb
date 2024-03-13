@@ -37,7 +37,15 @@ RSpec.describe 'marc_fields/_linked_author' do
   end
 
   context 'Corporate Author' do
-    let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Ecuador. Procuraduría General del Estado, A Title', search: 'Ecuador. Procuraduría General del Estado,', post_text: 'author, issuing body. Art copyist' }] }]) }
+    let(:document) {
+      SolrDocument.new(author_struct: [
+        { target => [{
+          link: 'Ecuador. Procuraduría General del Estado, A Title',
+          search: 'Ecuador. Procuraduría General del Estado,',
+          post_text: 'author, issuing body. Art copyist'
+        }] }
+      ])
+    }
     let(:target) { :corporate_author }
 
     it 'renders the label in a dt' do
@@ -67,7 +75,9 @@ RSpec.describe 'marc_fields/_linked_author' do
         {
           target => [
             {
-              link: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria) A title', search: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria)', post_text: 'creator. Other',
+              link: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria) A title',
+              search: 'Technical Workshop on Organic Agriculture (1st : 2010 : Ogbomoso, Nigeria)',
+              post_text: 'creator. Other',
               vern: { link: 'Vernacular Title Vernacular Uniform Title', search: 'Vernacular Uniform Title' }
             }
           ]

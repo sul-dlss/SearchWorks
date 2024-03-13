@@ -5,7 +5,9 @@ require 'rails_helper'
 RSpec.describe BrowseHelper do
   describe "#link_to_callnumber_browse" do
     let(:document) { SolrDocument.new(id: 'abc123', preferred_barcode: '123') }
-    let(:spine) { Holdings::Spine.new({ lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber' }, document:) }
+    let(:spine) {
+      Holdings::Spine.new({ lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber' }, document:)
+    }
 
     it "should link to the callnumber" do
       expect(link_to_callnumber_browse(document, spine)).to have_css('button', text: 'callnumber')

@@ -14,7 +14,9 @@ module Folio
     end
 
     # rubocop:disable Metrics/ParameterLists
-    def initialize(id:, status:, barcode:, material_type:, permanent_loan_type:, effective_location:, call_number:, volume:, enumeration:, chronology:, permanent_location: nil, temporary_loan_type: nil)
+    def initialize(id:, status:, barcode:, material_type:, permanent_loan_type:, effective_location:,
+                   call_number:, volume:, enumeration:, chronology:,
+                   permanent_location: nil, temporary_loan_type: nil)
       @id = id
       @barcode = barcode
       @status = status

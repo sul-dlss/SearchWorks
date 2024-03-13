@@ -12,7 +12,14 @@ RSpec.describe Holdings::Item do
     }
   end
   let(:item) { Holdings::Item.new(complex_item_display) }
-  let(:methods) { [:barcode, :library, :effective_permanent_location_code, :temporary_location, :type, :truncated_callnumber, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
+  let(:methods) do
+    [
+      :barcode, :library, :effective_permanent_location_code, :temporary_location, :type,
+      :truncated_callnumber, :callnumber, :full_shelfkey,
+      :public_note, :callnumber_type,
+      :course_id, :reserve_desk, :loan_period
+    ]
+  end
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|

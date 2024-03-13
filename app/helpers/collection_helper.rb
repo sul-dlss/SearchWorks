@@ -44,7 +44,8 @@ module CollectionHelper
   def add_purl_embed_header(document)
     content_for(:head) do
       ['json', 'xml'].map do |format|
-        "<link rel='alternate' type='application/#{format}+oembed' title='#{document_presenter(document).heading}' href='#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{document.druid}&format=#{format}' />"
+        embed_url = "#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{document.druid}&format=#{format}"
+        auto_discovery_link_tag :oembed, embed_url, type: "application/#{format}+oembed", title: document_presenter(document).heading
       end.join.html_safe
     end
   end

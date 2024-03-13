@@ -9,7 +9,8 @@ class Subjects < MarcField
           data += subfields.select { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) }.map { |sf| [sf.value] }
           data << subfields.select { |sf| merged_subfields.include?(sf.code) }.map(&:value)
         else
-          arr = subfields.reject { |sf| ignored_subfield?(sf) || ignored_subfield_a_value?(sf) }.slice_before { |v| v.code == 'a' || merged_subfields.include?(v.code) }.map do |group|
+          salient_fields = subfields.reject { |sf| ignored_subfield?(sf) || ignored_subfield_a_value?(sf) }
+          arr = salient_fields.slice_before { |v| v.code == 'a' || merged_subfields.include?(v.code) }.map do |group|
             group.map(&:value).flatten.compact.join(' ')
           end
 

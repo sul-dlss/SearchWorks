@@ -64,7 +64,8 @@ RSpec.describe ApplicationHelper do
         expect(fields.include?("<a href=\"/?q=%22fudgesicles2%22&amp;search_field=search_author\">fudgesicles2</a>")).to be_truthy
       end
       it "should display the linked vernacular equivalent for a field if one exists" do
-        expect(link_to_data_with_label(temp_doc_vern, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })[:vernacular].first).to match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
+        actual = link_to_data_with_label(temp_doc_vern, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })
+        expect(actual[:vernacular].first).to match(/<a href=.*fudgeyzicles.*search_field=search_author.*>fudgeyzicles<\/a>/)
       end
       it "should handle vernacular data from the index in an array" do
         vern = link_to_data_with_label(temp_doc_vern_array, "Food:", "key", { controller: 'catalog', action: 'index', search_field: 'search_author' })[:vernacular]

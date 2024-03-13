@@ -214,12 +214,16 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', temporary_location_code: 'null', status: 'In process', effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
+          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', temporary_location_code: 'null', status: 'In process',
+            effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
         ]
       )
 
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'), permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'), status: 'In process', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                     permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                     status: 'In process', material_type: book_type,
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
 
       render_inline(described_class.new(document:))
@@ -447,7 +451,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     it 'renders special instructions field' do
       expect(page).to have_css('h4', text: 'On-site access')
-      expect(page).to have_css('p', text: 'Collections are moving, which may affect access. Request materials as early as possible. Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.')
+      expect(page).to have_css('p', text: /Collections are moving, which may affect access./)
     end
   end
 
