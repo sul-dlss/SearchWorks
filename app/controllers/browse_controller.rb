@@ -9,6 +9,7 @@ class BrowseController < ApplicationController
 
   before_action :fetch_orginal_document
   before_action :fetch_browse_items
+  before_action :fetch_bookmarks
   helper_method :browse_params
 
   def index
@@ -61,6 +62,9 @@ class BrowseController < ApplicationController
         search_service:
       )
     end
+  end
+
+  def fetch_bookmarks
     @current_bookmarks = current_or_guest_user.bookmarks
   end
 end
