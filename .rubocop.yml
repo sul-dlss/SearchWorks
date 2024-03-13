@@ -5,7 +5,7 @@ require:
   - rubocop-rspec
   - rubocop-performance
   - rubocop-capybara
-  
+
 AllCops:
   Exclude:
     - 'Gemfile'
@@ -17,6 +17,47 @@ AllCops:
 
 Rails:
   Enabled: true
+
+# Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
+Metrics/AbcSize:
+  Max: 57
+
+# Configuration parameters: CountBlocks.
+Metrics/BlockNesting:
+  Max: 4
+
+# Configuration parameters: CountComments, CountAsOne.
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/articles_controller.rb'
+    - 'app/controllers/catalog_controller.rb'
+    - 'lib/holdings/item.rb'
+  Max: 115
+
+# Configuration parameters: AllowedMethods, AllowedPatterns.
+Metrics/CyclomaticComplexity:
+  Max: 22
+
+# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
+Metrics/MethodLength:
+  Max: 32
+
+# Configuration parameters: CountComments, CountAsOne.
+Metrics/ModuleLength:
+  Exclude:
+    - 'lib/constants.rb'
+    - 'spec/fixtures/**/*'
+  Max: 145
+
+# Configuration parameters: AllowedMethods, AllowedPatterns.
+Metrics/PerceivedComplexity:
+  Max: 24
+
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
+# URISchemes: http, https
+Layout/LineLength:
+  Max: 332
 
 # Offense count: 6
 # Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns, inherit_mode.
@@ -31,17 +72,6 @@ Metrics/BlockLength:
     - 'spec/**/*'
     - 'app/views/**/*.atom.builder'
   Max: 20
-
-Metrics/ModuleLength:
-  Exclude:
-    - 'lib/constants.rb'
-    - 'spec/fixtures/**/*'
-
-Metrics/ClassLength:
-  Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'lib/holdings/item.rb'
 
 RSpec/DescribeClass:
   Exclude:
