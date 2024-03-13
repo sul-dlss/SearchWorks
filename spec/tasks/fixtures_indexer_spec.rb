@@ -21,7 +21,7 @@ RSpec.describe FixturesIndexer do
 
   describe "#new" do
     it "should set the solr client" do
-      expect(FixturesIndexer.new.instance_variable_get("@solr")).to eq stub_solr
+      expect(FixturesIndexer.new.instance_variable_get(:@solr)).to eq stub_solr
     end
   end
 

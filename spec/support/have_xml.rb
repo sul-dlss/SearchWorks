@@ -11,7 +11,7 @@ RSpec::Matchers.define :have_xml do |xpath, matcher|
     if nodes.empty?
       false
     elsif matcher
-      nodes.all? { |node| matcher === node }
+      nodes.all?(matcher)
     else
       true
     end

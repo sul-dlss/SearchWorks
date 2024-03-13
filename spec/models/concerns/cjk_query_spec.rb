@@ -92,56 +92,56 @@ RSpec.describe CJKQuery do
     end
     describe "mm and qs solr params" do
       it "if only 1 CJK char, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(q: '飘')
+        blacklight_params[:q] = '飘'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
       it "if only 2 CJK chars, it shouldn't send in additional Solr params" do
-        blacklight_params.merge!(q: '三國')
+        blacklight_params[:q] = '三國'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
       it "should detect Han - Traditional and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: '舊小說')
+        blacklight_params[:q] = '舊小說'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Han - Simplified and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: '旧小说')
+        blacklight_params[:q] = '旧小说'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hiragana and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: 'まんが')
+        blacklight_params[:q] = 'まんが'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Katakana and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: 'マンガ')
+        blacklight_params[:q] = 'マンガ'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect Hangul and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: '한국경제')
+        blacklight_params[:q] = '한국경제'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
       it "should detect CJK mixed with other alphabets and add mm and qs to Solr params" do
-        blacklight_params.merge!(q: 'abcけいちゅうabc')
+        blacklight_params[:q] = 'abcけいちゅうabc'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         # mm is changed:  minimum adds in non-cjk tokens
