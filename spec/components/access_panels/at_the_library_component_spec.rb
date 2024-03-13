@@ -9,8 +9,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     SolrDocument.new(
       id: '123',
       item_display_struct: [
-        { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-          full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
+        { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS',
+          lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
       ]
     )
   }
@@ -20,10 +20,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
-          { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
+          { barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
+            lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
+          { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS',
+            lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
         ]
       )
     }
@@ -37,7 +37,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it "has a library location present" do
       doc = SolrDocument.new(id: '123',
                              item_display_struct: [{ barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
-                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                     lopped_callnumber: 'G70.212 .A426 2011',
                                                      callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }])
       expect(described_class.new(document: doc).render?).to be true
     end
@@ -53,7 +53,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document: SolrDocument.new(id: '123',
                                                                    item_display_struct: [{
                                                                      barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
-                                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                                     lopped_callnumber: 'G70.212 .A426 2011',
                                                                      callnumber: 'G70.212 .A426 2011',
                                                                      full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
                                                                    }]) ))
