@@ -79,33 +79,11 @@ Blacklight.onLoad(function(){
       });
     }
 
-    function replaceLink(form, link) {
-      var attrs = {};
-      $.each(link[0].attributes, function(idx, attr) {
-          attrs[attr.nodeName] = attr.value;
-      });
-      attrs.class = 'cancel-link btn btn-link';
-
-      // Replace the cancel link with a button
-      link.replaceWith(function() {
-        return $('<button />', attrs).append($(this).contents());
-      });
-
-      // Cancel link should not submit form
-      form.find('button.cancel-link').on('click', function(e){
-        e.preventDefault();
-      });
-    }
-
     Plugin.prototype = {
 
         init: function() {
           var $el = $(this.element);
           var $form = $($el).find('form');
-          var $cancelLink = $el.find(".cancel-link");
-
-          // Replace "Cancel" link with link styled button
-          replaceLink($el, $cancelLink);
 
           //Add listener for form submit
           submitListener($el, $form);
