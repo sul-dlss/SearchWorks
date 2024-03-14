@@ -40,11 +40,6 @@
         environment: '<%= Honeybadger.config.get(:env) %>',
         debug: false,
         enableUncaught: true,
-        ignorePatterns: [
-          /reCAPTCHA placeholder element must be empty/i,
-          /Undefined variable: MutationObserver/i, // Seems to only come from Opera Mini. Not in our codebase.
-          /Blocked a frame with origin "https:\/\/\w+\.stanford.edu"/i // We don't need to know that this happens
-        ],
         revision: '<%= Settings.REVISION %>'
       });
     </script>
