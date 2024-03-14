@@ -30,7 +30,7 @@ class LinkedSeries < MarcField
     end
   end
 
-  def linkable_subfields
-    ('a'..'z').to_a.reject { |letter| %w(x v).include?(letter) }
+  def linkable_subfields(ignored_subfields: %w(x v))
+    ('a'..'z').to_a.reject { |letter| ignored_subfields.include?(letter) }
   end
 end

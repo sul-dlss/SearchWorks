@@ -91,11 +91,11 @@ class HooverOpenUrlRequest
     field_code = marc_field_code_for_present_data(field_codes:, subfield_codes:)
     return unless field_code
 
-    safe_join(marc[field_code].subfields.map do |subfield|
+    safe_join(marc[field_code].subfields.filter_map do |subfield|
       next unless subfield_codes.include?(subfield.code)
 
       subfield.value
-    end.compact, ' ')
+    end, ' ')
   end
 
   def marc_field_code_for_present_data(field_codes:, subfield_codes:)

@@ -36,9 +36,9 @@ class MarcField
   def values
     return [] unless marc.present?
 
-    @values ||= extracted_fields.map do |field, subfields|
+    @values ||= extracted_fields.filter_map do |field, subfields|
       display_value(field, subfields)
-    end.compact
+    end
   end
 
   def to_partial_path

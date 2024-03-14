@@ -45,11 +45,7 @@ module DigitalCollection
     end
 
     def render_type
-      @render_type ||= begin
-        return 'list' unless should_display_filmstrip?
-
-        'filmstrip'
-      end
+      @render_type ||= should_display_filmstrip? ? 'filmstrip' : 'list'
     end
 
     def with_type(type)

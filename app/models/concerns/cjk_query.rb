@@ -24,7 +24,7 @@ module CJKQuery
   end
 
   def modify_params_for_cjk_advanced(solr_params)
-    return if blacklight_params&.dig(:clause).blank? || solr_params[:q] =~ /_cjk/
+    return if blacklight_params&.dig(:clause).blank? || solr_params[:q].include?('_cjk')
 
     modifiable_params_keys.each do |param|
       hash = blacklight_params[:clause].values.find { |v| v[:field] == param } || {}

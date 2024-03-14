@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 class Subjects < MarcField
-  def values
+  def values(merged_subfields: ["v", "x", "y", "z"])
     @values ||= begin
       data = []
       extracted_fields.each do |field, subfields|
         if repeating_subfield_a?(field, subfields)
           data += subfields.select { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) }.map { |sf| [sf.value] }
-          data << subfields.select { |sf| ["v", "x", "y", "z"].include?(sf.code) }.map(&:value)
+          data << subfields.select { |sf| merged_subfields.include?(sf.code) }.map(&:value)
         else
-          arr = subfields.reject { |sf| ignored_subfield?(sf) || ignored_subfield_a_value?(sf) }.slice_before { |v| %w(a v x y z).include? v.code }.map do |group|
+          arr = subfields.reject { |sf| ignored_subfield?(sf) || ignored_subfield_a_value?(sf) }.slice_before { |v| v.code == 'a' || merged_subfields.include?(v.code) }.map do |group|
             group.map(&:value).flatten.compact.join(' ')
           end
 

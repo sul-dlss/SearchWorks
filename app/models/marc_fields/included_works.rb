@@ -18,18 +18,20 @@ class IncludedWorks < MarcField
     within_t, *extra_fields = after_t.flatten.slice_after { |subfield| subfield.value =~ /[\.|;]\s*$/ }.to_a
 
     # With values until we get to subfield t
+    text_only_subfields = ["e", "j", "4"]
     before_t.each do |subfield|
       if subfield.code == "i"
         before_text << subfield.value.gsub(/\s*\(.+\)\s*/, '')
       else
-        href_text << subfield.value unless ["e", "j", "4"].include?(subfield.code)
+        href_text << subfield.value unless text_only_subfields.include?(subfield.code)
         link_text << subfield.value
       end
     end
 
     # with values between the subfield t and some punctuation
+    text_only_subfields = ["e", "i", "j", "4"]
     within_t.each do |subfield|
-      href_text << subfield.value unless ["e", "i", "j", "4"].include?(subfield.code)
+      href_text << subfield.value unless text_only_subfields.include?(subfield.code)
       link_text << subfield.value
     end
 

@@ -16,7 +16,7 @@ module EdsLinks
   def eds_fulltext_links_as_searchworks_links
     links = eds_fulltext_links
 
-    categories = links.map(&:category).compact.map(&:to_i)
+    categories = links.filter_map(&:category).map(&:to_i)
 
     links.map { |link| link.to_searchworks_link(categories) }
   end

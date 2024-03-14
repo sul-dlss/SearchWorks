@@ -56,8 +56,8 @@ class BookmarksController < CatalogController
   end
 
   # Only permit a type param of articles or catalog
-  def clear_params
-    params.permit(:type).select { |_, val| %w[article catalog].include? val }
+  def clear_params(controller_names: %w[article catalog])
+    params.permit(:type).select { |_, val| controller_names.include? val }
   end
 
   def permit_bookmarks

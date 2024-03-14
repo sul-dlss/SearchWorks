@@ -7,7 +7,7 @@ module XmlApiHelper
 
   def get_covers_for_mobile(resp)
     hsh = {}
-    if resp.respond_to?("docs")
+    if resp.respond_to?(:docs)
       resp.docs.each do |doc|
         hsh[doc[:id]] = get_standard_nums(doc) unless get_standard_nums(doc).nil?
       end
@@ -23,7 +23,7 @@ module XmlApiHelper
       temp_number = doc[number]
       temp_number = [temp_number] unless doc[number].is_a? Array
       temp_number.each do |num|
-        nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.gsub(' ', '')}"
+        nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.delete(' ')}"
       end
     end
     nums.join(",") unless nums.empty?
@@ -54,13 +54,13 @@ module XmlApiHelper
     Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").delete_suffix(';')
   end
 
-  def get_authors_for_mobile(doc)
+  def get_authors_for_mobile(doc, ignored_subfields: ['4', '6'])
     doc[:author_person_full_display] ? text = doc[:author_person_full_display].to_a : text = []
     if doc.respond_to?(:to_marc)
       ["700", "710", "711", "720"].select { |num| doc.to_marc[num] }.each do |num|
         doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
           temp = ""
-          field.each { |sf| ["4", "6"].include?(sf.code) ? nil : temp << "#{sf.value} " }
+          field.each { |sf| ignored_subfields.include?(sf.code) ? nil : temp << "#{sf.value} " }
           text << temp.strip
         end
       end
@@ -80,7 +80,7 @@ module XmlApiHelper
     (urls.presence)
   end
 
-  def get_imprint_for_mobile(marc)
+  def get_imprint_for_mobile(marc, subfields: ['a', 'b', 'c'])
     text = []
     if marc["250"] and marc["250"]["a"]
       text << marc["250"]["a"]
@@ -88,7 +88,7 @@ module XmlApiHelper
     if marc["260"]
       marc.find_all { |f| "260" === f.tag }.each do |field|
         temp = []
-        field.each { |sf| ["a", "b", "c"].include?(sf.code) ? temp << sf.value : nil }
+        field.each { |sf| subfields.include?(sf.code) ? temp << sf.value : nil }
         text << temp.join(" ")
       end
     end
@@ -162,9 +162,9 @@ module XmlApiHelper
     display_type = document[blacklight_config.index.display_type_field]
     if display_type
       if display_type.respond_to?(:join)
-        display_type.map { |dt| dt.gsub("-", " ").parameterize(separator: "_") }.join(" ")
+        display_type.map { |dt| dt.tr("-", " ").parameterize(separator: "_") }.join(" ")
       else
-        "#{display_type.gsub("-", " ")}".parameterize(separator: "_").to_s
+        "#{display_type.tr("-", " ")}".parameterize(separator: "_").to_s
       end
     end
   end

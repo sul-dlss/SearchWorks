@@ -18,11 +18,11 @@ class SfxData
   def targets
     return [] unless sfx_xml
 
-    @targets ||= sfx_xml.xpath('//target').map do |t|
+    @targets ||= sfx_xml.xpath('//target').filter_map do |t|
       next unless target_xml_is_fulltext?(t)
 
       Target.new(t)
-    end.compact
+    end
   end
 
   class << self
