@@ -32,6 +32,7 @@ module SearchWorks
     # config.i18n.default_locale = :de
 
     config.middleware.insert 0, Rack::UTF8Sanitizer
+    config.middleware.delete Rack::Runtime
 
     config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log', 'daily')
   end
