@@ -174,7 +174,7 @@ libraries:
     hours_api_url: science/location/library-circulation
     name: Science Library (Li and Ma)
   SLAC:
-    hours_api_url: slac/location/slac
+    hours_api_url: slac/location/slac_library
   SPEC-COLL:
     about_url: https://library.stanford.edu/libraries/special-collections
     hours_api_url: special_collections/location/spec_coll_reading
