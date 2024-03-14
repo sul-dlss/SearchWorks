@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class LibraryLocationComponent < ViewComponent::Base
     with_collection_parameter :location

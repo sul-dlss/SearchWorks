@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FeedbackFormHelper
   def render_feedback_form(form_type)
     render 'shared/feedback_forms/form',

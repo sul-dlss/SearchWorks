@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # LiveLookup serves as a wrapper around specific ILS implementations
 # for requesting live information about item availability.
 class LiveLookup

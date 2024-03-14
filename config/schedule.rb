@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Learn more: http://github.com/javan/whenever
 
 # Note that there's also a prune_old_search_data task that's managed by puppet

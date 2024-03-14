@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Mixin to be used when parsing MARC series fields
 # MARC series fields are 440, 490, 800, 810, 811, and 830

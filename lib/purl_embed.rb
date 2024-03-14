@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'oembed'
 class PURLEmbed
   delegate :html, to: :resource

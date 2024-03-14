@@ -95,7 +95,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
   context 'when there are more than 5 exhibits' do
     let(:content) do
-      7.times.map do |index|
+      Array.new(7) do |index|
         { slug: "exhibit-#{index}", title: "Exhibit #{index} Title" }
       end
     end

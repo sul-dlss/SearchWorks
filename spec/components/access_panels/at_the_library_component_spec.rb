@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
@@ -114,10 +116,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     before do
       render_inline(described_class.new(document:))
-    end
-
-    it 'has solr document eresources_library_display_name of nil' do
-      expect(document.eresources_library_display_name).to be_nil
     end
 
     it 'displays the MARC 590 as a bound with note (excluding subfield $c)' do

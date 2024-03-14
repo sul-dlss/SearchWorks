@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Folio
   class Holding
     BoundWithParent = Struct.new(:item, :holding, :instance, keyword_init: true)

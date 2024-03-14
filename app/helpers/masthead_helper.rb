@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  Helper module for contents rendered in mastheads
 ###

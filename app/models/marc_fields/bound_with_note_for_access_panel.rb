@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # BoundWithNoteForAccessPanel class to return only those 590 fields that have a $c
 #   for display in access panels, which differs slightly from the normal display.

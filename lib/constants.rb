@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Constants
   module FolioStatus
     UNPAGEABLE_SPEC_COLL_STATUSES = [
@@ -291,7 +293,6 @@ module Constants
     'Send To' => 'link',
     'Selections' => 'check-3'
   }
-  BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
 
   LIBRARY_INSTRUCTIONS = {
     'EDUCATION' => {

@@ -17,6 +17,25 @@ div.toggle-bookmark {
   }
 }
 
+// Note this is same as above, but with a slightly modified className
+// This is for the bookmark checkboxes in the browse section.
+div.browse-toggle-bookmark {
+  label.browse-toggle-bookmark {
+    cursor: pointer;
+
+    input.browse-toggle-bookmark {
+      margin-right: 3px;
+    }
+
+    span {
+      font-size: 0.9em;
+      display: inline-block;
+      margin-bottom: 4px;
+      vertical-align: middle;
+    }
+  }
+}
+
 .index-document-functions {
   text-align: right;
 }

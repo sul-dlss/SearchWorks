@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class CourseReservesListComponent < AccessPanels::Base
     def initialize(document:, **html_attrs)

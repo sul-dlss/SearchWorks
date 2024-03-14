@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe "Emailing Records", :js do
@@ -118,9 +120,6 @@ RSpec.describe "Emailing Records", :js do
       it 'hides the side-nav-minimap' do
         # triggers capybara to wait until email is sent
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
-
-        body = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-
         expect(page).to have_css('.side-nav-minimap', visible: false)
       end
     end

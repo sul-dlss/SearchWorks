@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A class to handle MARC 790 field logic
 class LocalSubjects < MarcField

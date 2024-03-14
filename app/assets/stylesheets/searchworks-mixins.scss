@@ -10,11 +10,6 @@
   border-bottom: 1px solid $sul-document-border-color;
 }
 
-@mixin h1-show-title-font {
-  font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
-  letter-spacing: -.03em;
-}
-
 @mixin h3-index-title-small-font {
   font-family: 'dejavu_sansextralight', 'Arial Unicode MS', Helvetica, sans-serif;
   font-size: 1.138em;

@@ -1,4 +1,5 @@
 # encoding: UTF-8
+# frozen_string_literal: true
 
 # adjust Solr params as required for CJK chars in user query string
 # if a query string has CJK characters in it, adjust the mm and ps Solr parameters as necessary
@@ -23,7 +24,7 @@ module CJKQuery
   end
 
   def modify_params_for_cjk_advanced(solr_params)
-    return if blacklight_params&.dig(:clause).blank? || solr_params[:q] =~ /_cjk/
+    return if blacklight_params&.dig(:clause).blank? || solr_params[:q].include?('_cjk')
 
     modifiable_params_keys.each do |param|
       hash = blacklight_params[:clause].values.find { |v| v[:field] == param } || {}

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe SearchResult::Collection::Marc::MetadataComponent, type: :component do

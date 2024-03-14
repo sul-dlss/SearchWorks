@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MarcJsonExtension
   # Override blacklight-marc if we have marcjson available
   def load_marc

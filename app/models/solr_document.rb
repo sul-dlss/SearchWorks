@@ -1,9 +1,10 @@
 # -*- encoding : utf-8 -*-
+# frozen_string_literal: true
 
 class SolrDocument
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
-  UPDATED_EDS_RESTRICTED_TITLE = 'This title is not available for guests. Log in to see the title and access the article.'.freeze
-  FORMAT_KEY = 'format_main_ssim'.freeze
+  UPDATED_EDS_RESTRICTED_TITLE = 'This title is not available for guests. Log in to see the title and access the article.'
+  FORMAT_KEY = 'format_main_ssim'
 
   include DocumentLinks
   include DisplayType

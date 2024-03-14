@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  SolrDocument mixing to load the Bookplate class when bookplate data is present
 ###

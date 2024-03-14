@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A mixin to add dynamic genre specific facet support
 module StanfordWorkFacet
@@ -33,8 +35,6 @@ module StanfordWorkFacet
   def genre_facet_includes_thesis_value?
     params[:f] &&
       params[:f][:genre_ssim] &&
-      Array.wrap(params[:f][:genre_ssim]).any? do |facet|
-        facet == 'Thesis/Dissertation'
-      end
+      Array.wrap(params[:f][:genre_ssim]).any?('Thesis/Dissertation')
   end
 end

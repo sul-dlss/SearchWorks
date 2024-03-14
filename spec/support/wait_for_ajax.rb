@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  Capybara module to wait for ajax requests to finish in feature tests
 #  https://robots.thoughtbot.com/automatically-wait-for-ajax-with-capybara

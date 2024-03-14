@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SelectedDatabase
   def selected_database_subjects
     database_config[:subjects]

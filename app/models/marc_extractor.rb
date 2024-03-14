@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MarcExtractor
   attr_reader :marc, :tags, :subfields
 

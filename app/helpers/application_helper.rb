@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   # This is a path helper that routes the main search
   # form based on the current search context.

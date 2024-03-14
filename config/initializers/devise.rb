@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'devise_remote_user'
 
 DeviseRemoteUser.configure do |config|

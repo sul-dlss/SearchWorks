@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 #  The Bookplate class deserializes a solr field representing a Bookplate
 #  The expected format of that field is "FUND-NAME -|- DRUID -|- FILE-ID -|- BOOKPLATE-TEXT"

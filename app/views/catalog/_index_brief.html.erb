@@ -10,7 +10,7 @@
           <span class="document-counter">
             <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
           </span>
-          <%= link_to_document document, counter: (counter + @response.params[:start].to_i) %>
+          <%= link_to_document document, counter: %>
           <span class="main-title-date"><%= get_main_title_date(document) %></span>
         </h3>
         <% if document[:vern_title_display].present? %>

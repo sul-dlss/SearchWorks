@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blacklight_advanced_search/advanced_search_builder'
 
 class SearchBuilder < Blacklight::SearchBuilder

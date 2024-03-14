@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Links
   class Link
     include ActionView::Helpers::TagHelper

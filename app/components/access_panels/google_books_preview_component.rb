@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   class GoogleBooksPreviewComponent < AccessPanels::Base
     def initialize(document:, link_text: 'Limited preview', **html_attrs)

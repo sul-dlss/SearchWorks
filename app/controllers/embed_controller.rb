@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmbedController < ApplicationController
   def show
     respond_to do |format|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SearchQueryModifier
   def initialize(search_state)
     @search_state = search_state

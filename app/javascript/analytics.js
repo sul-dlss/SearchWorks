@@ -1,6 +1,6 @@
 // gtag initial setup
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+window.gtag = function() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
 

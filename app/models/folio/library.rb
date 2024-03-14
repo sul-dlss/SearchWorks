@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Folio
   # Library information in FOLIO
   class Library

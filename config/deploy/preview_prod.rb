@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 set :bundle_without, %w[sqlite development test].join(' ')
 
 # alias searchworks-preview

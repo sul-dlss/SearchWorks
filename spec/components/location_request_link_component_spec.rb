@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe LocationRequestLinkComponent, type: :component do
@@ -50,6 +52,12 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       end
 
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=SAL3-STACKS' }
+
+      context 'with an aged to lost status' do
+        let(:folio_status) { 'Aged to lost' }
+
+        it { expect(page).to have_no_link }
+      end
     end
 
     context 'in a mediated location' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Eds
   class Repository < Blacklight::AbstractRepository
     def search(search_builder = {}, eds_params = {})

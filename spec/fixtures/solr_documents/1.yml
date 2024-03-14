@@ -24,15 +24,20 @@ courses_folio_id_ssim:
   - <%= CourseReserve.all[2].id %>
   - <%= CourseReserve.all[3].id %>
 item_display_struct:
-  - barcode: '36105217238315'
+  - id: a
+    barcode: '36105217238315'
     library: EARTH-SCI
     home_location: EAR-STACKS
     type: STKS
     lopped_callnumber: G70.212 .A426 2011:test
+    callnumber: G70.212 .A426 2011:test
+    full_shelfkey: lc g   0070.212000 a0.426000 002011
+browse_nearby_struct:
+  - item_id: a
+    lopped_callnumber: G70.212 .A426 2011:test
     shelfkey: lc g   0070.212000 a0.426000 002011
     reverse_shelfkey: en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~
     callnumber: G70.212 .A426 2011:test
-    full_shelfkey: lc g   0070.212000 a0.426000 002011
     scheme: LC
 shelfkey: lc g   0070.212000 a0.426000 002011
 reverse_shelfkey: en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~

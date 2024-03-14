@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticleSelectionsController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable

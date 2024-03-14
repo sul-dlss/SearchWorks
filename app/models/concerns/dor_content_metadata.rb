@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DorContentMetadata
   # Document has (or could have) published content if:
   #   dor_resource_count_isi field is present and positive (resource has published content)

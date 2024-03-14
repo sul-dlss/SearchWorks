@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 docs = @presenter.documents.collect do |document|
   link = ArticleFulltextLinkPresenter.new(document:, context: self).links.try(:first) # top priority one only
   composed_title = document['eds_composed_title']

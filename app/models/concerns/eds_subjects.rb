@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EdsSubjects
   def eds_subjects
     @eds_subjects ||= Subject.from(self['eds_subjects'])

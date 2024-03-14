@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AccessPanels
   # Displays online links and provides a place for plugGoogleBookContent() to add book cover previews
   class OnlineComponent < AccessPanels::Base

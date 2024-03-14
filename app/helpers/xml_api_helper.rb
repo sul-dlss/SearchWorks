@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module XmlApiHelper
   def drupal_api?
     (params and params.has_key?(:drupal_api) and params[:drupal_api] == "true")
@@ -5,7 +7,7 @@ module XmlApiHelper
 
   def get_covers_for_mobile(resp)
     hsh = {}
-    if resp.respond_to?("docs")
+    if resp.respond_to?(:docs)
       resp.docs.each do |doc|
         hsh[doc[:id]] = get_standard_nums(doc) unless get_standard_nums(doc).nil?
       end
@@ -17,13 +19,11 @@ module XmlApiHelper
 
   def get_standard_nums(doc)
     nums = []
-    [:isbn_display, :oclc, :lccn].each do |number|
-      if doc[number]
-        temp_number = doc[number]
-        temp_number = [temp_number] unless doc[number].is_a? Array
-        temp_number.each do |num|
-          nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.gsub(' ', '')}"
-        end
+    [:isbn_display, :oclc, :lccn].select { |n| doc[n] }.each do |number|
+      temp_number = doc[number]
+      temp_number = [temp_number] unless doc[number].is_a? Array
+      temp_number.each do |num|
+        nums << "#{number.to_s.gsub('_display', '').upcase}:#{num.delete(' ')}"
       end
     end
     nums.join(",") unless nums.empty?
@@ -35,14 +35,14 @@ module XmlApiHelper
     #in case of throttled response from GBS
     return {} if string[0, 1] != "{"
 
-    google_response = eval(string)
+    google_response = JSON.parse(string)
     url_hash = {}
     hsh.each do |ckey, numbers|
-      numbers.split(",").each do |number|
-        if !url_hash.has_key?(ckey) and google_response.has_key?(number) and google_response[number].has_key?("thumbnail_url")
+      numbers.split(",").select { |number| google_response.has_key?(number) and google_response[number].has_key?("thumbnail_url") }.each do |number|
+        url_hash[ckey] ||= begin
           cover_url = google_response[number]["thumbnail_url"].gsub("u0026", "&")
           lg_cover_url = cover_url.gsub(/pg=\w+/, "printsec=frontcover").gsub("zoom=5", "zoom=1")
-          url_hash[ckey] = [cover_url, lg_cover_url]
+          [cover_url, lg_cover_url]
         end
       end
     end
@@ -50,20 +50,18 @@ module XmlApiHelper
   end
 
   def make_call_to_gbs(url)
-    # Nasty hack to turn GBS response into a ruby acceptable hash
-    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").gsub('":{', '"=>{').gsub('":"', '"=>"').gsub('":', '"=>')
+    # Nasty hack to turn GBS response into a JSON hash
+    Net::HTTP.get(URI.parse(url)).gsub("var _GBSBookInfo = ", "").delete_suffix(';')
   end
 
-  def get_authors_for_mobile(doc)
+  def get_authors_for_mobile(doc, ignored_subfields: ['4', '6'])
     doc[:author_person_full_display] ? text = doc[:author_person_full_display].to_a : text = []
     if doc.respond_to?(:to_marc)
-      ["700", "710", "711", "720"].each do |num|
-        if doc.to_marc[num]
-          doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
-            temp = ""
-            field.each { |sf| ["4", "6"].include?(sf.code) ? nil : temp << "#{sf.value} " }
-            text << temp.strip
-          end
+      ["700", "710", "711", "720"].select { |num| doc.to_marc[num] }.each do |num|
+        doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
+          temp = ""
+          field.each { |sf| ignored_subfields.include?(sf.code) ? nil : temp << "#{sf.value} " }
+          text << temp.strip
         end
       end
     end
@@ -82,7 +80,7 @@ module XmlApiHelper
     (urls.presence)
   end
 
-  def get_imprint_for_mobile(marc)
+  def get_imprint_for_mobile(marc, subfields: ['a', 'b', 'c'])
     text = []
     if marc["250"] and marc["250"]["a"]
       text << marc["250"]["a"]
@@ -90,7 +88,7 @@ module XmlApiHelper
     if marc["260"]
       marc.find_all { |f| "260" === f.tag }.each do |field|
         temp = []
-        field.each { |sf| ["a", "b", "c"].include?(sf.code) ? temp << sf.value : nil }
+        field.each { |sf| subfields.include?(sf.code) ? temp << sf.value : nil }
         text << temp.join(" ")
       end
     end
@@ -121,15 +119,13 @@ module XmlApiHelper
       end
     end
     if marc['880']
-      marc.find_all { |f| ('880') === f.tag }.each do |item|
-        if !item['6'].nil? and item['6'].include?('-')
-          if item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
-            text = []
-            temp = ""
-            item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
-            text << temp.strip
-          end
-        end
+      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |item|
+        next unless item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
+
+        text = []
+        temp = ""
+        item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
+        text << temp.strip
       end
     end
     return nil if text.empty?
@@ -142,21 +138,17 @@ module XmlApiHelper
     if field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      marc.find_all { |f| ('880') === f.tag }.each do |field|
-        if !field['6'].nil? and field['6'].include?("-")
-          field_880 = field['6'].split("-")[0]
-          match_880 = field['6'].split("-")[1].gsub("//r", "")
-          if match_original == match_880 and field_original == field_880
-            field.each do |sub|
-              if Constants::EXCLUDE_FIELDS.exclude?(sub.code)
-                return_text << sub.value
-              end
-            end
-          end
+      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |field|
+        field_880 = field['6'].split("-")[0]
+        match_880 = field['6'].split("-")[1].gsub("//r", "")
+        next unless match_original == match_880 and field_original == field_880
+
+        field.select { |sub| Constants::EXCLUDE_FIELDS.exclude?(sub.code) }.each do |sub|
+          return_text << sub.value
         end
       end
     end
-    return_text.join(" ") unless return_text.blank?
+    return_text.join(" ") if return_text.present?
   end
 
   def doc_is_a_database?(doc)
@@ -170,9 +162,9 @@ module XmlApiHelper
     display_type = document[blacklight_config.index.display_type_field]
     if display_type
       if display_type.respond_to?(:join)
-        display_type.map { |dt| dt.gsub("-", " ").parameterize(separator: "_") }.join(" ")
+        display_type.map { |dt| dt.tr("-", " ").parameterize(separator: "_") }.join(" ")
       else
-        "#{display_type.gsub("-", " ")}".parameterize(separator: "_").to_s
+        "#{display_type.tr("-", " ")}".parameterize(separator: "_").to_s
       end
     end
   end

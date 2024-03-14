@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BrowseHelper
   def link_to_callnumber_browse(document, spine, index = 0)
     button_tag(

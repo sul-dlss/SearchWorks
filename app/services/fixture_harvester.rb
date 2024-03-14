@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Harvests some fixture data from production and stores it in yaml files.
 # Usage:
 #   bin/rails runner "FixtureHarvester.harvest_all"

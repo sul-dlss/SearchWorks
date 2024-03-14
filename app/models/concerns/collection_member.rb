@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CollectionMember
   def is_a_collection_member?
     self[:collection]&.excluding('sirsi', 'folio').present?
@@ -16,11 +18,9 @@ module CollectionMember
   def index_parent_collections
     return nil if !is_a_collection_member? || self[:collection_with_title].blank?
 
-    unless @index_parent_collections
-      @index_parent_collections = self[:collection_with_title].map do |collection_with_title|
-        id, title = collection_with_title.split('-|-').map(&:strip)
-        SolrDocument.new(id: CollectionHelper.strip_leading_a(id), title_display: title)
-      end
+    @index_parent_collections ||= self[:collection_with_title].map do |collection_with_title|
+      id, title = collection_with_title.split('-|-').map(&:strip)
+      SolrDocument.new(id: CollectionHelper.strip_leading_a(id), title_display: title)
     end
     @index_parent_collections
   end

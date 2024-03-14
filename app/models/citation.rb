@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 # Citation is a simple class that takes a Hash like object (SolrDocument)
 # and returns a hash of citations for the configured formats

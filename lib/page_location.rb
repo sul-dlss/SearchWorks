@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PageLocation
   def initialize(search_state)
     @search_state = search_state

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # A controller to asynchronously request SFX HTML
 class SfxDataController < ApplicationController
