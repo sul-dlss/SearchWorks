@@ -275,7 +275,8 @@ class ArticlesController < ApplicationController
         eds_session_token: session['eds_session_token'],
         request_ip: request.remote_ip,
         affiliations: current_user.affiliations,
-        person_affiliations: current_user.person_affiliations
+        person_affiliations: current_user.person_affiliations,
+        entitlements: current_user.entitlements
       })
     end
   end

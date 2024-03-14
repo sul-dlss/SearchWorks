@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ActiveRecord::Base
-  attr_writer :affiliations, :person_affiliations
+  attr_writer :affiliations, :person_affiliations, :entitlements
 
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
@@ -29,6 +29,10 @@ class User < ActiveRecord::Base
     @person_affiliations ||= ENV['unscoped-affiliation']
   end
 
+  def entitlements
+    @entitlements ||= ENV['eduPersonEntitlement']
+  end
+
   # Based on previous work and discussions, the 'eduPersonAffiliaton' attribute, which is mapped
   # to the 'unscoped-affiliation' attribute, should have sufficient information to decide whether
   # or not a user has the right affiliation access.  If the value of this attribute is
@@ -39,19 +43,21 @@ class User < ActiveRecord::Base
   # Note also that currently 'member' for eduPersonAffiliation has a one to one correspondence
   # with the stanford:library-resources-eligible status.
   def stanford_affiliated?
-    # Will rely primarily on eduPersonAffiliation so return true if this works
-    return true if person_affiliated?
+    # Will rely primarily on eduPersonAffiliation or eduPersonEntitlement so return true if this works
+    return true if person_affiliated? || entitled?
 
     # If not true, we still want to check against suAffiliation.
     # We also want to send a notification in case it is covered by suAffiliation
-    # because this shows us a mismatch between the two attributes when there shouldn't be a difference.
+    # because this shows us a mismatch between the attributes when there shouldn't be a difference.
+    # TODO: Refer to https://github.com/sul-dlss/SearchWorks/issues/4016
     if su_affiliated?
-      Honeybadger.notify("User affiliations and privileges: Not affiliated by eduPersonAffiliation: #{person_affiliations}; " \
-                         "Affiliated by suAffiliation: #{affiliations}", context: to_honeybadger_context)
+      Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
+                         'but affiliated by suAffiliation', context: to_honeybadger_context)
       true
     end
   end
 
+  # Checks if access is enabled based on set of defined Stanford affiliations
   def su_affiliated?
     return false if affiliations.blank?
 
@@ -60,6 +66,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Checks if eduPersonAffiliation attribute value, mapped to unscoped-affiliation, provides access
   def person_affiliated?
     return false if person_affiliations.blank?
 
@@ -68,9 +75,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Checks if eduPersonEntitlement attribute value provides access
+  def entitled?
+    return false if entitlements.blank?
+
+    entitlements.split(';').any? do |entitlement|
+      entitlement.strip == Settings.ACCESS_ENTITLEMENT
+    end
+  end
+
   # user_id and user_email are special keys in honeybadger for aggregating
   # errors
   def to_honeybadger_context
-    { user_id: id, user_email: email, affiliations:, person_affiliations: }
+    { user_id: id, user_email: email, affiliations:, person_affiliations:, entitlements: }
   end
 end

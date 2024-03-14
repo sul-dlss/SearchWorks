@@ -22,12 +22,17 @@ if Rails.env.production?
     # We rely on both suAffiliation and unscoped-affiliation to see if people can get permissions
     # to articles. For example, a recently graduated student will not be allowed access with
     # only suAffiliation information, but 'member' under 'unscoped-affiliation'
-    # should still give them access. 'unscoped-affiliation' is mapped from 'eduPersonAffiliation'.
+    # should still give them access. Because we are not always getting expected values
+    # under 'unscoped-affiliation', we are also retrieving 'eduPersonEntitlement'
+    # which should have 'stanford:library-eresources-eligible' for entitlement to access.
+    # 'unscoped-affiliation' is mapped from 'eduPersonAffiliation'.
     # Refer to https://uit.stanford.edu/service/saml/arp/edupa for 'member' value.
     auth.session(:user)['suAffiliation'] = auth.env['suAffiliation']
     auth.session(:user)['unscoped-affiliation'] = auth.env['unscoped-affiliation']
+    auth.session(:user)['eduPersonEntitlement'] = auth.env['eduPersonEntitlement']
     user.affiliations = auth.env['suAffiliation']
     user.person_affiliations = auth.env['unscoped-affiliation']
+    user.entitlements = auth.env['eduPersonEntitlement']
     # Reset EDS session token so that a new session is established
     auth.env['rack.session']['eds_session_token'] = nil
   end
@@ -38,11 +43,13 @@ if Rails.env.production?
   Warden::Manager.after_fetch do |user, auth, opts|
     user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
     user.person_affiliations = auth.session(:user)['unscoped-affiliation'] || auth.env['rack.session']['unscoped-affiliation']
+    user.entitlements = auth.session(:user)['eduPersonEntitlement'] || auth.env['rack.session']['eduPersonEntitlement']
   end
 
   Warden::Manager.before_logout do |user, auth, opts|
     auth.session(:user)['suAffiliation'] = nil
     auth.session(:user)['unscoped-affiliation'] = nil
+    auth.session(:user)['eduPersonEntitlement'] = nil
     auth.env['rack.session']['eds_session_token'] = nil
   end
 end

@@ -51,6 +51,7 @@ EDS_CITATION_DB_PATTERN: '\s+<i>EBSCOhost<\/i>\.?'
 EDS_SMARTTEXT_FAILOVER: false
 SU_AFFILIATIONS: []
 UNSCOPED_AFFILIATION : 'member'
+ACCESS_ENTITLEMENT : 'stanford:library-eresources-eligible'
 STANFORD_NETWORK:
   singletons: []
   ranges: []

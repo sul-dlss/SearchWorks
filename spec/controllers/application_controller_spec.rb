@@ -24,12 +24,28 @@ RSpec.describe ApplicationController do
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
     end
 
-    context 'when the user is part of member group without correct affiliation' do
+    context 'when the current user is in the correct person affiliation member group' do
       let(:user) do
-        User.new(affiliations: 'other:other', person_affiliations: 'other;member')
+        User.new(email: 'user@stanford.edu', affiliations: 'test:noaccess', person_affiliations: 'staff;member', entitlements: '')
       end
 
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
+    end
+
+    context 'when there is a current user with correct entitlement' do
+      let(:user) do
+        User.new(email: 'user@stanford.edu', affiliations: 'test:noaccess', entitlements: 'stanford:library-eresources-eligible')
+      end
+
+      it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be true }
+    end
+
+    context 'when the user is not entitled and has no other correct affiliation' do
+      let(:user) do
+        User.new(affiliations: 'other:other', person_affiliations: 'other', entitlements: '')
+      end
+
+      it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be_falsey }
     end
 
     context 'when there is a current user not in the correct affilation' do
