@@ -558,18 +558,24 @@
   },
   {
     "id": "0b6ad9a8-821b-49c3-9fc0-0f32b562f3bf",
-    "courseNumber": "EARTHSYS-144",
+    "courseNumber": "EARTHSYS-144-01",
     "name": "Fundamentals of Geographic Information Science (GIS)",
     "metadata": {
       "createdDate": "2023-09-07T16:33:18.464+00:00",
       "createdByUserId": "13ad12be-d97d-4644-9129-6687f4011756",
-      "updatedDate": "2023-09-07T16:33:18.464+00:00",
-      "updatedByUserId": "13ad12be-d97d-4644-9129-6687f4011756"
+      "updatedDate": "2024-03-13T20:24:29.217+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Diana Moanga"
+          "name": "Stace Maples"
+        },
+        {
+          "name": "Lucy Edy"
+        },
+        {
+          "name": "Jacob Kuppermann"
         }
       ]
     }
@@ -1702,7 +1708,13 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Diana Moanga"
+          "name": "Stace Maples"
+        },
+        {
+          "name": "Lucy Edy"
+        },
+        {
+          "name": "Jacob Kuppermann"
         }
       ]
     }
@@ -3273,14 +3285,14 @@
   },
   {
     "id": "40833a7c-3723-4f6e-879e-4125f98b5ed7",
-    "courseNumber": "BIO 221",
+    "courseNumber": "BIO 221-01",
     "sectionName": "01",
     "name": "Ornithology",
     "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
     "metadata": {
       "createdDate": "2024-03-06T23:25:31.834+00:00",
       "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-06T23:25:31.834+00:00",
+      "updatedDate": "2024-03-13T23:44:55.900+00:00",
       "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     },
     "courseListingObject": {
@@ -4111,14 +4123,14 @@
   },
   {
     "id": "4f206bcb-09e0-4b59-a3ed-e4a6d9a02f26",
-    "courseNumber": "CHEM 171",
+    "courseNumber": "CHEM 171-01",
     "sectionName": "01",
     "name": "Foundations of Physical Chemistry",
     "description": "Quantum and statistical thermodynamics: obtaining quantum mechanical energy levels and connecting them to thermodynamic properties using statistical mechanics. Emphasis will be on quantum mechanics of ideal systems (particle in a box, particle on a ring, harmonic oscillator, rigid rotor, and hydrogen atom) and their connection to and uses in thermodynamics (laws of thermodynamics, properties of gases and thermal motion, and chemical equilibria).",
     "metadata": {
       "createdDate": "2024-03-11T20:12:27.694+00:00",
       "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-11T20:12:27.694+00:00",
+      "updatedDate": "2024-03-13T23:42:51.976+00:00",
       "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     },
     "courseListingObject": {
@@ -4908,6 +4920,27 @@
     }
   },
   {
+    "id": "5a2df35c-e900-4802-a01a-367dd35e280d",
+    "courseNumber": "GEOPHYS-288-01",
+    "name": "Crustal Deformation",
+    "metadata": {
+      "createdDate": "2024-03-13T17:06:23.021+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-13T17:06:23.021+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Paul Segall"
+        },
+        {
+          "name": "Xiaohan Song"
+        }
+      ]
+    }
+  },
+  {
     "id": "5a9b0d97-da49-4aee-a798-1a2d2f247bc5",
     "courseNumber": "CEE-263D ",
     "name": "Air Pollution and Global Warming: History, Science, and Solutions ",
@@ -4939,6 +4972,27 @@
       "instructorObjects": [
         {
           "name": "David Palumbo-Liu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5ac9023e-84ab-43f0-af1e-e9c53065148e",
+    "courseNumber": "ESYS-11-01",
+    "name": "Introduction to Geology",
+    "metadata": {
+      "createdDate": "2024-03-13T17:38:46.091+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-13T20:23:15.262+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Erik Sperling"
+        },
+        {
+          "name": "Jane Willenbring"
         }
       ]
     }
@@ -5210,6 +5264,27 @@
     }
   },
   {
+    "id": "5ff3f0be-25ec-4bc7-a6ff-edc51f141439",
+    "courseNumber": "EPS-1-01",
+    "name": "Introduction to Geology",
+    "metadata": {
+      "createdDate": "2024-03-13T17:43:19.183+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-13T20:23:30.847+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Erik Sperling"
+        },
+        {
+          "name": "Jane Willenbring"
+        }
+      ]
+    }
+  },
+  {
     "id": "600c53ca-9454-4e62-970f-9d55b0892f93",
     "courseNumber": "INTNLREL-247-01",
     "name": "Political Economy of the Southern Cone Countries of South America",
@@ -5250,15 +5325,15 @@
   },
   {
     "id": "61407ad5-636d-4723-9064-e23b68d599f5",
-    "courseNumber": "BIO 121",
+    "courseNumber": "BIO 121-01",
     "sectionName": "01",
     "name": "Ornithology",
     "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
     "metadata": {
       "createdDate": "2024-02-29T19:24:41.534+00:00",
       "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-02-29T20:09:13.532+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-03-13T23:43:21.307+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -6572,6 +6647,24 @@
     }
   },
   {
+    "id": "7c9358d8-2d98-4bab-98e0-1bb4294a7ae4",
+    "courseNumber": "GENE 282 B",
+    "name": "Genetic Counseling Research Seminar",
+    "metadata": {
+      "createdDate": "2024-03-13T23:49:42.515+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-13T23:49:42.515+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Hetanshi Naik"
+        }
+      ]
+    }
+  },
+  {
     "id": "7d5f6107-8671-4ddf-afce-0ba14acfd0e0",
     "courseNumber": "COMPMED 114",
     "name": "Wielding White Coat Words: Introduction to Comparative Medical Terminology",
@@ -6677,6 +6770,27 @@
       "instructorObjects": [
         {
           "name": "Gi-Wook Shin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7ef2f4c1-1c82-41ee-8816-9046984b84f7",
+    "courseNumber": "EPS-239-01",
+    "name": "500 Million Years of Land Plant Evolution",
+    "metadata": {
+      "createdDate": "2024-03-13T17:16:31.564+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-13T20:21:09.080+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrew Leslie"
+        },
+        {
+          "name": "Marco D'Ario"
         }
       ]
     }
@@ -8113,6 +8227,24 @@
     }
   },
   {
+    "id": "97f86b28-af8a-420d-a269-8663c0a0c6fa",
+    "courseNumber": "ARTSTUDI-240-01",
+    "name": "Drawing II",
+    "metadata": {
+      "createdDate": "2024-03-13T23:54:13.290+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-03-13T23:54:13.290+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Joshua Moreno"
+        }
+      ]
+    }
+  },
+  {
     "id": "9801d983-1ac9-490b-924f-79031199c16c",
     "courseNumber": "ESF-13-01",
     "name": "Education as Self-Fashioning: Rebellious Minds",
@@ -8729,6 +8861,27 @@
       "instructorObjects": [
         {
           "name": "A Polinsky"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a29dd414-26de-48e6-bd99-7bfee730d16d",
+    "courseNumber": "EPS-139-01",
+    "name": "500 Million Years of Land Plant Evolution",
+    "metadata": {
+      "createdDate": "2024-03-13T17:19:43.415+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-13T17:19:43.415+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrew Leslie"
+        },
+        {
+          "name": "Marco D'Ario"
         }
       ]
     }
@@ -10246,6 +10399,24 @@
       "instructorObjects": [
         {
           "name": "Aaron Sidford"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bde91741-a858-4921-89ae-3add06cb85f4",
+    "courseNumber": "ARTSTUDI-140-01",
+    "name": "Drawing I",
+    "metadata": {
+      "createdDate": "2024-03-13T23:53:01.539+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-03-13T23:53:01.539+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Joshua Moreno"
         }
       ]
     }
@@ -13459,14 +13630,14 @@
   },
   {
     "id": "f497208c-8d94-4df1-88cb-fe00ffa78768",
-    "courseNumber": "CHEM 33",
+    "courseNumber": "CHEM 33-03",
     "sectionName": "01",
     "name": "Structure and Reactivity of Organic Molecules",
     "description": "An introduction to organic chemistry, the molecular foundation to understanding the life sciences, medicine, diagnostics, energy, environmental and materials sciences. Students will learn structural and bonding models of organic molecules that provide insights into reactivity.",
     "metadata": {
       "createdDate": "2024-03-08T22:53:49.174+00:00",
       "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-08T22:53:49.174+00:00",
+      "updatedDate": "2024-03-13T23:42:26.763+00:00",
       "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     },
     "courseListingObject": {
