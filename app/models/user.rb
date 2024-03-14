@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
     # If not true, we still want to check against suAffiliation.
     # We also want to send a notification in case it is covered by suAffiliation
     # because this shows us a mismatch between the attributes when there shouldn't be a difference.
-    # TO DO: Refer to https://github.com/sul-dlss/SearchWorks/issues/4016
+    # TODO: Refer to https://github.com/sul-dlss/SearchWorks/issues/4016
     if su_affiliated?
       Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
                          'but affiliated by suAffiliation', context: to_honeybadger_context)
