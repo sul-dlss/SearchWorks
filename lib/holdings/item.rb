@@ -27,14 +27,7 @@ class Holdings
     end
 
     def suppressed?
-      @item_display.values.none?(&:present?) ||
-        internet_resource?
-    end
-
-    def browsable?
-      shelfkey.present? &&
-        reverse_shelfkey.present? &&
-        Constants::BROWSABLE_CALLNUMBERS.include?(callnumber_type)
+      @item_display.values.none?(&:present?)
     end
 
     def on_order?
@@ -73,23 +66,8 @@ class Holdings
       item_display[:lopped_callnumber]
     end
 
-    def shelfkey
-      item_display[:shelfkey]
-    end
-
-    def reverse_shelfkey
-      item_display[:reverse_shelfkey]
-    end
-
     def callnumber
-      case
-      when item_display[:callnumber].present?
-        item_display[:callnumber]
-      when internet_resource?
-        'eResource'
-      else
-        '(no call number)'
-      end
+      item_display[:callnumber].presence || '(no call number)'
     end
 
     def full_shelfkey(default: MAX_SHELFKEY)
@@ -154,24 +132,6 @@ class Holdings
       @requestable ||= ItemRequestLinkPolicy.new(item: self).item_allows_hold_recall?
     end
 
-    # create sorting key for spine
-    # shelfkey asc, then by sorting title asc, then by pub date desc
-    # note: pub_date must be inverted for descending sort
-    def spine_sort_key
-      sort_pub_date = if document[:pub_date].blank?
-                        '9999'
-                      else
-                        document[:pub_date].tr('0123456789', '9876543210')
-                      end
-
-      [
-        shelfkey,
-        document[:title_sort].to_s,
-        sort_pub_date,
-        document[:id].to_s
-      ]
-    end
-
     # LiveLookup::Folio uses the item UUID
     def live_lookup_item_id
       id || folio_item&.id
@@ -187,10 +147,6 @@ class Holdings
 
     def allowed_request_types
       request_policy&.dig('requestTypes') || []
-    end
-
-    def internet_resource?
-      type == 'ONLINE'
     end
 
     private

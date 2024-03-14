@@ -293,7 +293,6 @@ module Constants
     'Send To' => 'link',
     'Selections' => 'check-3'
   }
-  BROWSABLE_CALLNUMBERS = %w(LC DEWEY ALPHANUM)
 
   LIBRARY_INSTRUCTIONS = {
     'EDUCATION' => {

@@ -127,11 +127,8 @@ RSpec.describe SolrDocument do
   end
 
   describe '#eresources_library_display_name' do
-    eresource_bus_library = { id: 30, item_display_struct:
-                [{ barcode: '9102385731231', callnumber: nil, current_location: nil,
-                   effective_location_id: '43c011f3-adeb-4c49-b357-06772aff11de',
-                   full_shelfkey: nil, home_location: 'BUS-ELECTRONIC', library: 'BUSINESS',
-                   permanent_location_code: 'BUS-ELECTRONIC', scheme: 'LC', type: 'ONLINE' }] }
+    let(:eresource_bus_library) { { id: 30, holdings_library_code_ssim: 'BUSINESS', item_display_struct: [] } }
+
     context 'when it has holdings but no physical items' do
       let(:solr_doc) { SolrDocument.new(eresource_bus_library) }
 
@@ -141,10 +138,13 @@ RSpec.describe SolrDocument do
     end
 
     context 'when it is an eresource and has physical copies' do
-      physical_location_hash = eresource_bus_library.deep_dup
-      physical_location_hash[:item_display_struct].push({ barcode: 123456, home_location: 'BUS', library: 'BUSINESS',
-                                                          permanent_location_code: 'BUS' })
-      let(:physical_location_doc) { SolrDocument.new(physical_location_hash) }
+      let(:item_display) {
+        { barcode: 123456, home_location: 'BUS', library: 'BUSINESS',
+          permanent_location_code: 'BUS' }
+      }
+      let(:physical_location_doc) do
+        SolrDocument.new(eresource_bus_library.merge(item_display_struct: [item_display]))
+      end
 
       it 'has an eresource and physical location' do
         expect(physical_location_doc.eresources_library_display_name).to be_nil

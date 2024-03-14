@@ -13,7 +13,7 @@ module SolrHoldings
     end
   end
 
-  # item_display_struct contains fake items for eresources and boundwiths, which is why we don't use holdings_json_struct directly
+  # item_display_struct contains fake items boundwiths, which is why we don't use holdings_json_struct directly
   def items
     return [] if self[:item_display_struct].blank?
 
@@ -25,35 +25,9 @@ module SolrHoldings
   end
 
   def browseable_spines
-    @browseable_spines ||= if self[:browse_nearby_struct].nil?
-                             # Temporarily construct browseable spines from the item_display_struct, until we can get browse_nearby_struct
-                             # from the index: https://github.com/sul-dlss/searchworks_traject_indexer/pull/1363
-                             browseable_schemes = %w[LC DEWEY ALPHANUM]
-                             browseable_items = items.select { |v| v.shelfkey.present? && browseable_schemes.include?(v.callnumber_type) }
-
-                             representative_items = browseable_items.group_by(&:truncated_callnumber).map do |_base_call_number, items|
-                               if items.one?
-                                 items.first
-                               else
-                                 items.min_by(&:full_shelfkey)
-                               end
-                             end
-
-                             representative_items.map do |v|
-                               Holdings::Spine.new({
-                                                     lopped_call_number: v.truncated_callnumber,
-                                                     shelfkey: v.shelfkey,
-                                                     reverse_shelfkey: v.reverse_shelfkey,
-                                                     callnumber: v.callnumber,
-                                                     scheme: v.callnumber_type,
-                                                     item_id: v.id
-                                                   }, document: self)
-                             end
-                           else
-                             @browseable_spines ||= (self[:browse_nearby_struct] || []).map do |spine_data|
-                               Holdings::Spine.new(spine_data, document: self)
-                             end
-                           end
+    @browseable_spines ||= (self[:browse_nearby_struct] || []).map do |spine_data|
+      Holdings::Spine.new(spine_data, document: self)
+    end
   end
 
   def preferred_item
