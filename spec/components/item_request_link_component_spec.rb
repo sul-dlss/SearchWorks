@@ -20,7 +20,8 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
   context 'with FOLIO items' do
     let(:item) do
-      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, effective_permanent_location_code: nil, temporary_location:, folio_item?: true, folio_status:, allowed_request_types:)
+      instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, effective_permanent_location_code: nil, temporary_location:, folio_item?: true,
+                                      folio_status:, allowed_request_types:)
     end
 
     context 'checked out item from a location that allows holds' do

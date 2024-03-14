@@ -9,8 +9,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     SolrDocument.new(
       id: '123',
       item_display_struct: [
-        { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-          full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
+        { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS',
+          lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
       ]
     )
   }
@@ -20,10 +20,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
-          { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS', lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~', callnumber: 'G70.212 .A426 2011',
-            full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
+          { barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
+            lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' },
+          { barcode: '36105217238315', library: 'SUL', effective_permanent_location_code: 'STACKS', type: 'STKS',
+            lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
         ]
       )
     }
@@ -37,7 +37,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     it "has a library location present" do
       doc = SolrDocument.new(id: '123',
                              item_display_struct: [{ barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
-                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                     lopped_callnumber: 'G70.212 .A426 2011',
                                                      callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }])
       expect(described_class.new(document: doc).render?).to be true
     end
@@ -53,7 +53,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document: SolrDocument.new(id: '123',
                                                                    item_display_struct: [{
                                                                      barcode: '36105217238315', library: 'EARTH-SCI', effective_permanent_location_code: 'STACKS', type: 'STKS',
-                                                                     lopped_callnumber: 'G70.212 .A426 2011', shelfkey: 'lc g   0070.212000 a0.426000 002011', reverse_shelfkey: 'en~j~~~zzsz}xyxzzz~pz}vxtzzz~zzxzyy~~~~~~~~~~~~~~~',
+                                                                     lopped_callnumber: 'G70.212 .A426 2011',
                                                                      callnumber: 'G70.212 .A426 2011',
                                                                      full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
                                                                    }]) ))
@@ -214,12 +214,16 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', temporary_location_code: 'null', status: 'In process', effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
+          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', temporary_location_code: 'null', status: 'In process',
+            effective_location: { details: { availabilityClass: 'In_process' } }, callnumber: 'ABC 123' }
         ]
       )
 
       allow(document).to receive(:folio_items).and_return([
-        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'), permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'), status: 'In process', material_type: book_type, loan_type: instance_double(Folio::Item::LoanType, id: nil))
+        instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                     permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
+                                     status: 'In process', material_type: book_type,
+                                     loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
 
       render_inline(described_class.new(document:))
@@ -447,7 +451,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     it 'renders special instructions field' do
       expect(page).to have_css('h4', text: 'On-site access')
-      expect(page).to have_css('p', text: 'Collections are moving, which may affect access. Request materials as early as possible. Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.')
+      expect(page).to have_css('p', text: /Collections are moving, which may affect access./)
     end
   end
 

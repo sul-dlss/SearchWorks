@@ -53,14 +53,18 @@ RSpec.describe SearchQueryModifier do
   end
 
   describe "filtered search" do
-    let(:facet_config) {
+    let(:facet_config) do
       Blacklight::Configuration.new do |config|
         config.add_facet_field 'fieldA', label: "A field"
         config.add_facet_field 'fieldB', label: 'Another field'
       end
-    }
-    let(:filtered_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ f: { 'fieldA' => ['Something'], 'fieldB' => ['Something Else'] }, q: 'something' }, facet_config)) }
-    let(:ranged_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ range: { 'range_field' => { 'begin' => '1234', 'end' => '4321' } }, q: 'something' }, facet_config)) }
+    end
+    let(:filtered_search) do
+      SearchQueryModifier.new(Blacklight::SearchState.new({ f: { 'fieldA' => ['Something'], 'fieldB' => ['Something Else'] }, q: 'something' }, facet_config))
+    end
+    let(:ranged_search) do
+      SearchQueryModifier.new(Blacklight::SearchState.new({ range: { 'range_field' => { 'begin' => '1234', 'end' => '4321' } }, q: 'something' }, facet_config))
+    end
     let(:no_filter_search) { SearchQueryModifier.new(Blacklight::SearchState.new({ q: 'something' }, default_config)) }
 
     describe "#has_filters?" do

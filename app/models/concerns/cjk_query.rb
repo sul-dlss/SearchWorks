@@ -38,7 +38,9 @@ module CJKQuery
       else
         stripped_param = modify_field_key_for_cjk(param)
         if cjk_local_params.present?
-          solr_params[:q] = solr_params[:q].gsub(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{Regexp.escape(query)}/, '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + query)
+          solr_params[:q] =
+            solr_params[:q].gsub(/\{!edismax(.*(q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param})\s?)}#{Regexp.escape(query)}/,
+                                 '{!edismax \1 mm=' + cjk_local_params['mm'].to_s + ' qs=' + cjk_local_params['qs'].to_s + ' }' + query)
         end
         solr_params[:q] = solr_params[:q].gsub(/((q|p)f\d?=\$(q|p)f?\d?_(#{stripped_param}))/, '\1_cjk')
       end

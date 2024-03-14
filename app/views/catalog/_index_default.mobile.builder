@@ -4,7 +4,7 @@
 xml.item_id(doc[:id])
 xml.title(doc["vern_" << document_show_link_field.to_s] ? doc["vern_" << document_show_link_field.to_s] : doc[document_show_link_field.to_s])
 xml.pub_date(doc[:pub_date]) if doc[:pub_date]
-xml.author(doc[:vern_title_245c_display] ? doc[:vern_title_245c_display] : doc[:title_245c_display] ? doc[:title_245c_display] : nil) if doc[:title_245c_display] or doc[:vern_title_245c_display]
+xml.author(doc[:vern_title_245c_display] || doc[:title_245c_display]) if doc[:title_245c_display] or doc[:vern_title_245c_display]
 record_url = solr_document_url(doc[:id])
 record_url << ".mobile" unless drupal_api?
 xml.mobile_record(record_url)

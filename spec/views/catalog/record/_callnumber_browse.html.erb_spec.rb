@@ -11,8 +11,10 @@ RSpec.describe "catalog/record/_callnumber_browse" do
         { item_id: 'B', shelfkey: 'shelfkey2', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber2', lopped_callnumber: 'callnumber2' }
       ],
       item_display_struct: [
-        { id: 'A', barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey' },
-        { id: 'B', barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type', lopped_callnumber: 'truncated_callnumber2', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey' }
+        { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
+          lopped_callnumber: 'truncated_callnumber', callnumber: 'callnumber', full_shelfkey: 'full_shelfkey' },
+        { barcode: 'barcode2', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
+          lopped_callnumber: 'truncated_callnumber2', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey' }
       ]
     )
   }

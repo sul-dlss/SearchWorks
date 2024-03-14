@@ -17,10 +17,22 @@ RSpec.describe NearbyOnShelf do
   end
   let(:documents) do
     [
-      SolrDocument.new(id: '1', title_sort: '', pub_date: '', item_display_struct: [{ id: '000', lopped_callnumber: 'A' }], browse_nearby_struct: [{ item_id: '000', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }]),
-      SolrDocument.new(id: '3', title_sort: '', pub_date: '', item_display_struct: [{ id: '002', lopped_callnumber: 'C' }, { id: '002x', lopped_callnumber: 'C' }], browse_nearby_struct: [{ item_id: '002', lopped_callnumber: 'C', shelfkey: 'C', scheme: 'LC' }]),
-      SolrDocument.new(id: '2', title_sort: '', pub_date: '', item_display_struct: [{ id: '003', lopped_callnumber: 'D' }, { id: '004', lopped_callnumber: 'B' }],
-                       browse_nearby_struct: [{ item_id: '003', lopped_callnumber: 'D', shelfkey: 'NOT_RELATED', scheme: 'LC' }, { item_id: '004', lopped_callnumber: 'B', shelfkey: 'B', scheme: 'LC' }])
+      SolrDocument.new(id: '1', title_sort: '', pub_date: '',
+                       item_display_struct: [{ id: '000', lopped_callnumber: 'A' }],
+                       browse_nearby_struct: [
+                         { item_id: '000', lopped_callnumber: 'A', shelfkey: 'A', scheme: 'LC' }
+                       ]),
+      SolrDocument.new(id: '3', title_sort: '', pub_date: '',
+                       item_display_struct: [{ id: '002', lopped_callnumber: 'C' }, { id: '002x', lopped_callnumber: 'C' }],
+                       browse_nearby_struct: [
+                         { item_id: '002', lopped_callnumber: 'C', shelfkey: 'C', scheme: 'LC' }
+                       ]),
+      SolrDocument.new(id: '2', title_sort: '', pub_date: '',
+                       item_display_struct: [{ id: '003', lopped_callnumber: 'D' }, { id: '004', lopped_callnumber: 'B' }],
+                       browse_nearby_struct: [
+                         { item_id: '003', lopped_callnumber: 'D', shelfkey: 'NOT_RELATED', scheme: 'LC' },
+                         { item_id: '004', lopped_callnumber: 'B', shelfkey: 'B', scheme: 'LC' }
+                       ])
     ]
   end
 

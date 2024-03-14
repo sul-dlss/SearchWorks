@@ -71,9 +71,12 @@ RSpec.describe Holdings::Location do
     subject(:items) { location.items }
 
     let(:callnumbers) { [
-      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321', reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
-      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210', reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
-      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100', reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
+      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321',
+                           reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
+      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210',
+                           reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
+      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100',
+                           reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
     ] }
     let(:location) { described_class.new("GRE-STACKS", callnumbers) }
 

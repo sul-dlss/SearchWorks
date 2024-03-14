@@ -6,13 +6,20 @@ RSpec.describe Holdings::Item do
   let(:complex_item_display) do
     {
       barcode: '123', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
-      truncated_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', callnumber: 'callnumber',
+      truncated_callnumber: 'truncated_callnumber', callnumber: 'callnumber',
       full_shelfkey: 'full_shelfkey', public_note: 'public_note', scheme: 'callnumber_type',
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
     }
   end
   let(:item) { Holdings::Item.new(complex_item_display) }
-  let(:methods) { [:barcode, :library, :effective_permanent_location_code, :temporary_location, :type, :truncated_callnumber, :callnumber, :full_shelfkey, :public_note, :callnumber_type, :course_id, :reserve_desk, :loan_period] }
+  let(:methods) do
+    [
+      :barcode, :library, :effective_permanent_location_code, :temporary_location, :type,
+      :truncated_callnumber, :callnumber, :full_shelfkey,
+      :public_note, :callnumber_type,
+      :course_id, :reserve_desk, :loan_period
+    ]
+  end
 
   it 'should have an attribute for each piece of the item display field' do
     methods.each do |method|
@@ -49,7 +56,11 @@ RSpec.describe Holdings::Item do
 
   describe '#callnumber' do
     let(:item_without_callnumber) {
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location', type: 'type',
+                           lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
+    }
+    let(:lane_online_item) {
+      Holdings::Item.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' })
     }
 
     it "should return '(no call number) if the callnumber is blank" do

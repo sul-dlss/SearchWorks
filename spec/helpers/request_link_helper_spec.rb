@@ -9,7 +9,8 @@ RSpec.describe RequestLinkHelper do
     SolrDocument.new(
       id: '1234',
       item_display_struct: [
-        { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type', lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse-shelfkey', callnumber: 'callnumber' }
+        { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type',
+          lopped_callnumber: 'truncated_callnumber', callnumber: 'callnumber' }
       ]
     )
   end

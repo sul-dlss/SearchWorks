@@ -31,7 +31,8 @@ RSpec.describe "MARC Metadata in search results" do
       # this item is the 2nd search result
       within(all('.document')[1]) do
         expect(page).to have_css('dt', text: 'Description')
-        expect(page).to have_css('dd', text: 'Video — The physical statement Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.')
+        expect(page).to have_css('dd',
+                                 text: 'Video — The physical statement Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.')
       end
     end
   end

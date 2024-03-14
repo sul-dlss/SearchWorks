@@ -439,41 +439,6 @@ Lint/UnusedMethodArgument:
     - 'app/helpers/thumbnail_helper.rb'
     - 'app/services/eds/search_service.rb'
 
-# Offense count: 65
-# Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
-Metrics/AbcSize:
-  Max: 57
-
-# Offense count: 1
-# Configuration parameters: CountBlocks.
-Metrics/BlockNesting:
-  Max: 4
-
-# Offense count: 4
-# Configuration parameters: CountComments, CountAsOne.
-Metrics/ClassLength:
-  Max: 115
-
-# Offense count: 27
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/CyclomaticComplexity:
-  Max: 22
-
-# Offense count: 75
-# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
-Metrics/MethodLength:
-  Max: 32
-
-# Offense count: 3
-# Configuration parameters: CountComments, CountAsOne.
-Metrics/ModuleLength:
-  Max: 145
-
-# Offense count: 22
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Metrics/PerceivedComplexity:
-  Max: 24
-
 # Offense count: 1
 Naming/AccessorMethodName:
   Exclude:
@@ -1471,10 +1436,3 @@ Style/WhileUntilModifier:
 # SupportedStyles: percent, brackets
 Style/WordArray:
   Enabled: false
-
-# Offense count: 410
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
-# URISchemes: http, https
-Layout/LineLength:
-  Max: 332

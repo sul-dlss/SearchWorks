@@ -5,7 +5,8 @@ require 'rails_helper'
 
 RSpec.describe CJKQuery do
   # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
-  let(:search_builder)  { SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access) }
+  let(:search_builder)  {
+ SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access) }
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
