@@ -1,8 +1,5 @@
-/*
-* Used by blacklight_range_limit
-*= require  'blacklight_range_limit'
-*= require leaflet
-*/
+@import 'blacklight-range-limit/app/assets/stylesheets/blacklight_range_limit.css';
+@import 'leaflet/dist/leaflet.css';
 
 // SUL Style Variables/Mixins
 @import 'deja-vu-font';
@@ -11,6 +8,6 @@
 
 @import 'blacklight';
 @import 'searchworks';
-@import 'font-awesome';
+@import 'font-awesome/scss/font-awesome.scss';
 @import '_sul-icons-rails';
 @import 'bootstrap-icons';

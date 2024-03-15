@@ -13,7 +13,7 @@
     <title><%= render_page_title %></title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
     <%= favicon_link_tag 'favicon.ico' %>
-    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= stylesheet_link_tag "application", media: "all", 'data-turbo-track' => true %>
     <%= stylesheet_link_tag 'print', media: 'print' %>
     <link href="https://www-media.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.css" rel="stylesheet">
