@@ -1,7 +1,7 @@
 .panel-related {
   .worldcat {
     padding-left: 20px;
-    background: image-url('worldcat.png') no-repeat center left;
+    background: url("worldcat.png") no-repeat center left;
   }
   .google-books {
     @include google-books;

@@ -1,11 +1,11 @@
-
-@import 'print/bootstrap-variables';
-@import 'sul-variables';
-@import 'searchworks-mixins';
-@import 'blacklight';
-@import 'searchworks';
-@import 'font-awesome';
-@import '_sul-icons-rails';
-@import 'bootstrap-icons';
-@import 'print/layout';
-@import 'print/styles';
+@import "print/bootstrap-variables";
+@import "sul-variables";
+@import "searchworks-mixins";
+@import "blacklight";
+@import "searchworks";
+$fa-font-path: "";
+@import "font-awesome/scss/font-awesome.scss";
+@import "_sul-icons-rails";
+@import "bootstrap-icons";
+@import "print/layout";
+@import "print/styles";

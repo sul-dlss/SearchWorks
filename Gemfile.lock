@@ -82,7 +82,6 @@ GEM
     base64 (0.2.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
-    bcrypt_pbkdf (1.1.1-arm64-darwin)
     bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bibtex-ruby (6.1.0)
@@ -191,6 +190,8 @@ GEM
       csl (~> 1.0)
     css_parser (1.21.1)
       addressable
+    cssbundling-rails (1.4.3)
+      railties (>= 6.0.0)
     csv (3.3.3)
     date (3.4.1)
     debug (1.10.0)
@@ -284,8 +285,6 @@ GEM
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
-    font-awesome-rails (4.7.0.9)
-      railties (>= 3.2, < 9.0)
     forwardable (1.3.3)
     global_alerts (0.8.0)
       http
@@ -343,9 +342,6 @@ GEM
       addressable (~> 2.8)
       childprocess (~> 5.0)
       logger (~> 1.6)
-    leaflet-rails (1.9.5)
-      actionpack (>= 4.2.0)
-      railties (>= 4.2.0)
     letter_opener (1.10.0)
       launchy (>= 2.2, < 4)
     library_stdnums (1.6.0)
@@ -458,6 +454,11 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
+    propshaft (1.1.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     psych (5.2.3)
       date
       stringio
@@ -597,14 +598,6 @@ GEM
     sanitize (6.1.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     securerandom (0.4.1)
     selenium-webdriver (4.31.0)
       base64 (~> 0.2)
@@ -627,13 +620,6 @@ GEM
       minitar
       retriable
       ruby-progressbar
-    sprockets (4.2.1)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.5.2)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      sprockets (>= 3.0.0)
     sqlite3 (2.6.0-aarch64-linux-gnu)
     sqlite3 (2.6.0-aarch64-linux-musl)
     sqlite3 (2.6.0-arm-linux-gnu)
@@ -658,7 +644,6 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.6)
     thor (1.3.2)
-    tilt (2.6.0)
     time (0.4.1)
       date
     timeout (0.4.3)
@@ -746,6 +731,7 @@ DEPENDENCIES
   capybara (~> 3.0)
   coderay
   config
+  cssbundling-rails (~> 1.4)
   debug
   deprecation
   devise
@@ -755,13 +741,11 @@ DEPENDENCIES
   ebsco-eds
   factory_bot_rails
   faraday
-  font-awesome-rails
   global_alerts
   honeybadger
   jbuilder (~> 2.7)
   jsbundling-rails (~> 1.2)
   launchy
-  leaflet-rails
   letter_opener
   mods_display (~> 1.1)
   mysql2
@@ -770,6 +754,7 @@ DEPENDENCIES
   oauth2
   okcomputer
   parslet (~> 2.0)
+  propshaft
   puma (~> 6.0)
   rack-attack
   rack-mini-profiler (~> 3.0)
@@ -789,11 +774,9 @@ DEPENDENCIES
   rubocop-rspec
   ruby-oembed
   sanitize (~> 6.0)
-  sassc-rails
   selenium-webdriver
   simplecov (~> 0.14)
   solr_wrapper (~> 4.0.2)
-  sprockets-rails
   sqlite3 (>= 2.0)
   stimulus-rails (~> 1.3)
   turbo-rails (~> 2.0)

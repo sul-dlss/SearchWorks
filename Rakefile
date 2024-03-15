@@ -11,7 +11,7 @@ task(:default).clear
 task default: [:ci]
 
 desc "Execute the test build that runs in CI"
-task ci: %i[rubocop environment] do
+task ci: ['rubocop', 'environment', 'test:prepare'] do
   require 'solr_wrapper'
 
   ENV['environment'] = 'test'
