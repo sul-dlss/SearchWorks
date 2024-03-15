@@ -4,22 +4,22 @@ ul.links {
 }
 
 .stanford-only:after {
-  content: image-url('stanford-only.svg');
+  content: url("stanford-only.svg");
   margin-left: 5px;
 }
 .sfx {
   padding-left: 20px;
-  background: image-url('sfx.gif') no-repeat;
+  background: url("sfx.gif") no-repeat;
 }
 .online-label {
   @extend .badge;
-  
+
   background-color: $sul-accordion-online-bg;
   border: 1px solid $sul-accordion-online-border;
   border-radius: 2px;
   color: $white;
   display: inline-block;
-  font-family: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-family: "Source Sans Pro", "Arial Unicode MS", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 20px;

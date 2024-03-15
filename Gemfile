@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1'
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem "propshaft"
 # Use Puma as the app server
 gem 'puma', '~> 6.0'
-# Use SCSS for stylesheets
-gem 'sassc-rails'
 
 gem 'turbo-rails', '~> 2.0'
 
@@ -90,13 +87,11 @@ gem "faraday"
 gem 'oauth2'
 gem "config"
 gem "mods_display", "~> 1.1"
-gem "font-awesome-rails"
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
-gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap content.
 gem 'recaptcha', '~> 5.17'
 gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap', '~> 4.0'
@@ -111,5 +106,5 @@ gem 'view_component'
 gem "parslet", "~> 2.0"
 
 gem "jsbundling-rails", "~> 1.2"
-
 gem "stimulus-rails", "~> 1.3"
+gem "cssbundling-rails", "~> 1.4"
