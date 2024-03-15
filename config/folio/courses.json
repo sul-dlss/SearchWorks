@@ -1437,6 +1437,24 @@
     }
   },
   {
+    "id": "1ce9bdf5-09e0-4ef9-a4b1-3cbaac03a93c",
+    "courseNumber": "AA-156-01",
+    "name": "Introduction to Mechanics of Composite Materials",
+    "metadata": {
+      "createdDate": "2024-03-14T22:36:02.233+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-14T22:36:02.233+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Maria Sakovsky"
+        }
+      ]
+    }
+  },
+  {
     "id": "1d8a5b40-6a0c-467a-b9bc-a04ce10bc141",
     "courseNumber": "ME-80-01",
     "name": "Mechanics of Materials",
@@ -1621,6 +1639,22 @@
     }
   },
   {
+    "id": "202f8a30-f843-41a0-a0ca-09afc428680b",
+    "courseNumber": "OSPMADRD 26",
+    "name": "Understanding the Factors that Lead to Pandemics and Their Impact on Spanish and World History",
+    "metadata": {
+      "createdDate": "2024-03-15T00:02:40.694+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-15T00:02:40.694+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "203d1070-2d6f-4719-97c0-48abaaadc403",
     "courseNumber": "GERMAN-230-01",
     "name": "German Literature (800-1700)",
@@ -1742,6 +1776,24 @@
         },
         {
           "name": "Jenny Suckale"
+        }
+      ]
+    }
+  },
+  {
+    "id": "23f6ed27-012d-481a-9ff0-39263e9ce612",
+    "courseNumber": "CS-361-01",
+    "name": "Engineering Design Optimization ",
+    "metadata": {
+      "createdDate": "2024-03-15T02:50:31.487+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-15T02:50:31.487+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mykel Kochenderfer"
         }
       ]
     }
@@ -2206,6 +2258,24 @@
       "instructorObjects": [
         {
           "name": "Patricia Blessing"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2bdc627c-50de-415c-a141-d49b0fa501f1",
+    "courseNumber": "OSPMADRD 26",
+    "name": "Understanding the Factors that Lead to Pandemics and Their Impact on spanish and World History",
+    "metadata": {
+      "createdDate": "2024-03-15T00:07:16.236+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-15T00:07:16.236+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "John Boothroyd"
         }
       ]
     }
@@ -4830,6 +4900,24 @@
     }
   },
   {
+    "id": "592c118e-0b50-46fd-a293-3d0256524fff",
+    "courseNumber": "ARCHLGY-134-01",
+    "name": "Introduction to Museum Practices ",
+    "metadata": {
+      "createdDate": "2024-03-14T22:08:01.129+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-03-14T22:08:01.129+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Danielle Raad"
+        }
+      ]
+    }
+  },
+  {
     "id": "594df984-5e87-4ccc-9a94-96f27f88769e",
     "courseNumber": "ARTHIST 382",
     "name": "Cultures in Competition: Arts of Song-Era China",
@@ -5625,6 +5713,24 @@
     }
   },
   {
+    "id": "668895fd-bff3-4cdb-9b24-ce4fefcc53ba",
+    "courseNumber": "AA-222-01",
+    "name": "Engineering Design Optimization ",
+    "metadata": {
+      "createdDate": "2024-03-15T02:49:41.124+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-15T02:51:21.462+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mykel Kochenderfer"
+        }
+      ]
+    }
+  },
+  {
     "id": "6729156f-7c6c-4a56-b475-a491eca85e94",
     "courseNumber": "EE-236A-01",
     "name": "Modern Optics",
@@ -6364,6 +6470,24 @@
       "instructorObjects": [
         {
           "name": "Diana Looser"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7618283c-29f9-4552-a569-9c5dd167be01",
+    "courseNumber": "CEE-266C-01",
+    "name": "Dams, Reservoirs, and their Sustainability",
+    "metadata": {
+      "createdDate": "2024-03-15T02:43:15.357+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-15T02:43:15.357+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Freyberg"
         }
       ]
     }
@@ -10708,6 +10832,24 @@
     }
   },
   {
+    "id": "c2c6f1cd-a2c9-4ea6-8e7d-e79d684054ba",
+    "courseNumber": "ARTHIST-284B-01",
+    "name": "Introduction to Museum Practices",
+    "metadata": {
+      "createdDate": "2024-03-14T22:06:53.677+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-03-14T22:06:53.677+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Danielle Raad"
+        }
+      ]
+    }
+  },
+  {
     "id": "c2d51ba1-da93-4ed1-8a8f-6d57cae97862",
     "courseNumber": "SOC-316-01",
     "name": "Historical and Comparative Sociology",
@@ -12240,6 +12382,24 @@
     }
   },
   {
+    "id": "dbba794d-378e-465a-9886-3795de1362c3",
+    "courseNumber": "MATSCI-312-01",
+    "name": "New Methods in Thin Film Synthesis",
+    "metadata": {
+      "createdDate": "2024-03-15T02:20:58.327+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-15T02:20:58.327+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Shan Wang"
+        }
+      ]
+    }
+  },
+  {
     "id": "dc159a73-0406-40b4-bf06-a688263503c1",
     "courseNumber": "HISTORY-31Q-01",
     "name": "US-Mexico Border Fictions: Writing La Frontera, Tearing Down the Wall ",
@@ -12274,6 +12434,24 @@
         },
         {
           "name": "Nina Schloesser Tarano"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dc6d8a8d-3615-4b14-ac88-152c584ea484",
+    "courseNumber": "MATSCI-210-01",
+    "name": "Organic and Biological Materials",
+    "metadata": {
+      "createdDate": "2024-03-15T02:10:31.260+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-15T02:10:31.260+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Eric Appel"
         }
       ]
     }
