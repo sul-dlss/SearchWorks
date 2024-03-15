@@ -1117,7 +1117,6 @@ msystems.asm.org
 muse.jhu.edu
 musicid.academicrightspress.com
 my.vitallaw.com
-n.neurology.org
 nam.edu
 name.umdl.umich.edu
 nanoconvergencejournal.springeropen.com
@@ -2584,6 +2583,7 @@ www.nepjol.info
 www.netanatomy.com
 www.netread.com
 www.neuroanatomy.org
+www.neurology.org
 www.neurologyindia.com
 www.neurosurgicalatlas.com
 www.neurotodayonline.com
