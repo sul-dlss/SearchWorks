@@ -979,6 +979,24 @@
     }
   },
   {
+    "id": "14031513-0739-4fee-9e19-5752ca7f2200",
+    "courseNumber": "CEE-363B-01",
+    "name": "Chaos and Turbulence",
+    "metadata": {
+      "createdDate": "2024-03-15T17:20:56.960+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T17:20:56.960+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Nicholas Ouellette"
+        }
+      ]
+    }
+  },
+  {
     "id": "142fe167-95fb-42c6-8660-152eb66ae2af",
     "courseNumber": "EPI-259-01",
     "sectionName": "01",
@@ -1083,6 +1101,27 @@
       "instructorObjects": [
         {
           "name": "Gene Kim"
+        }
+      ]
+    }
+  },
+  {
+    "id": "169a7827-d2f9-4c2b-bfd0-fa13835df9dd",
+    "courseNumber": "MS&E-272-01",
+    "name": "Entrepreneurship without Borders",
+    "metadata": {
+      "createdDate": "2024-03-15T22:40:05.143+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T22:40:05.143+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Charles Eesley"
+        },
+        {
+          "name": "Vimbayi Kajese"
         }
       ]
     }
@@ -2646,6 +2685,24 @@
     }
   },
   {
+    "id": "34e4c8ad-46a4-4413-81aa-582171a4f8f3",
+    "courseNumber": "ENGR-50-01",
+    "name": "Introduction to Materials Science, Nanotechnology Emphasis",
+    "metadata": {
+      "createdDate": "2024-03-15T17:48:29.209+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T17:48:29.209+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Robert Sinclair"
+        }
+      ]
+    }
+  },
+  {
     "id": "353fcedf-a0ff-4f3d-b68d-49e67ddbb9f5",
     "courseNumber": "PHYSICS-13N-01",
     "name": "A Taste of Quantum Physics",
@@ -2879,6 +2936,24 @@
       "instructorObjects": [
         {
           "name": "Beata Szymkow"
+        }
+      ]
+    }
+  },
+  {
+    "id": "395c2e45-c466-4105-ac50-25e0ae6d45f9",
+    "courseNumber": "AA-251-01",
+    "name": "Introduction to the Space Environment",
+    "metadata": {
+      "createdDate": "2024-03-15T18:04:56.536+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T18:04:56.536+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sigrid Elschot"
         }
       ]
     }
@@ -3532,6 +3607,24 @@
       "instructorObjects": [
         {
           "name": "Nichole Nomura"
+        }
+      ]
+    }
+  },
+  {
+    "id": "430acc4a-f7d4-425e-803f-bbb9d89f4c04",
+    "courseNumber": "ME-286-01",
+    "name": "Identification and Estimation in Engineering Design",
+    "metadata": {
+      "createdDate": "2024-03-15T21:54:01.786+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T21:54:01.786+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Michaelle Mayalu"
         }
       ]
     }
@@ -7215,6 +7308,27 @@
     }
   },
   {
+    "id": "8588ede6-19b3-4aaa-ae67-12be628fe63c",
+    "courseNumber": "CHEMENG-120B-01",
+    "name": "Energy and Mass Transport",
+    "metadata": {
+      "createdDate": "2024-03-15T16:59:30.254+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T16:59:30.254+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gerald Fuller"
+        },
+        {
+          "name": "Katarina Guzman"
+        }
+      ]
+    }
+  },
+  {
     "id": "85b6d3fb-3572-4cef-9a21-49838d773f3f",
     "courseNumber": "BIOE-101",
     "name": "Systems Biology",
@@ -9148,6 +9262,24 @@
       "instructorObjects": [
         {
           "name": "Preston Stone"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a5f89765-b161-43b5-b0bb-728fe2552419",
+    "courseNumber": "CEE-176B-01",
+    "name": "100% Clean, Renewable Energy and Storage for Everything",
+    "metadata": {
+      "createdDate": "2024-03-15T18:22:56.534+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T18:22:56.534+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Jacobson"
         }
       ]
     }
@@ -11913,6 +12045,24 @@
         },
         {
           "name": "Dongwoon Hyun"
+        }
+      ]
+    }
+  },
+  {
+    "id": "d53ffc64-92c9-43b3-955e-7a331db6b469",
+    "courseNumber": "CEE-276B-01",
+    "name": "100% Clean, Renewable Energy and Storage for Everything",
+    "metadata": {
+      "createdDate": "2024-03-15T18:27:43.084+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-15T18:27:43.084+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Jacobson"
         }
       ]
     }
