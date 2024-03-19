@@ -985,7 +985,7 @@
     "metadata": {
       "createdDate": "2024-03-15T17:20:56.960+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T17:20:56.960+00:00",
+      "updatedDate": "2024-03-18T16:59:27.486+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -1112,7 +1112,7 @@
     "metadata": {
       "createdDate": "2024-03-15T22:40:05.143+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T22:40:05.143+00:00",
+      "updatedDate": "2024-03-18T17:00:13.599+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -1518,7 +1518,7 @@
     "metadata": {
       "createdDate": "2024-03-14T22:36:02.233+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-14T22:36:02.233+00:00",
+      "updatedDate": "2024-03-18T16:55:06.100+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -1743,6 +1743,24 @@
       "instructorObjects": [
         {
           "name": "Kathryn Starkey"
+        }
+      ]
+    }
+  },
+  {
+    "id": "20ba0b84-2aa0-4955-8391-8ea94eee3767",
+    "courseNumber": "EASTASN-268-02",
+    "name": "Taiwan Security Issues ",
+    "metadata": {
+      "createdDate": "2024-03-19T00:34:19.140+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-19T00:34:19.140+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Kharis Templeman"
         }
       ]
     }
@@ -2835,7 +2853,7 @@
     "metadata": {
       "createdDate": "2024-03-15T17:48:29.209+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T17:48:29.209+00:00",
+      "updatedDate": "2024-03-18T17:01:49.891+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -3091,7 +3109,7 @@
     "metadata": {
       "createdDate": "2024-03-15T18:04:56.536+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T18:04:56.536+00:00",
+      "updatedDate": "2024-03-18T17:02:25.840+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -3762,7 +3780,7 @@
     "metadata": {
       "createdDate": "2024-03-15T21:54:01.786+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T21:54:01.786+00:00",
+      "updatedDate": "2024-03-18T17:02:56.919+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -4064,6 +4082,24 @@
       "instructorObjects": [
         {
           "name": "Matthew Sommer"
+        }
+      ]
+    }
+  },
+  {
+    "id": "48c3d4b4-87b2-4131-9873-aa3bca9f95b1",
+    "courseNumber": "HISTORY-2B-01",
+    "name": "Current Issues in Baltic Affairs",
+    "metadata": {
+      "createdDate": "2024-03-19T00:30:06.759+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-19T00:30:06.759+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amir Weiner"
         }
       ]
     }
@@ -5299,6 +5335,24 @@
     }
   },
   {
+    "id": "59e1f4c4-d7c5-49f6-b27c-6313df0178ec",
+    "courseNumber": "EASTASN-168-02",
+    "name": "Taiwan Security Issues ",
+    "metadata": {
+      "createdDate": "2024-03-19T00:33:43.974+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-19T00:33:43.974+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Kharis Templeman"
+        }
+      ]
+    }
+  },
+  {
     "id": "5a04f0d8-b0ed-4aed-8f70-5043a31d4d6a",
     "courseNumber": "HISTORY-261G-01",
     "name": "Presidents and Foreign Policy in Modern History",
@@ -5333,6 +5387,24 @@
         },
         {
           "name": "Xiaohan Song"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5a3cf8dd-7ef8-4270-bf14-f0333090af2d",
+    "courseNumber": "ECON-50-01 ",
+    "name": "Economic Analysis I",
+    "metadata": {
+      "createdDate": "2024-03-19T05:13:14.229+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-19T05:13:14.229+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Christopher Makler"
         }
       ]
     }
@@ -5868,6 +5940,24 @@
       "instructorObjects": [
         {
           "name": "Cynthia DeTata"
+        }
+      ]
+    }
+  },
+  {
+    "id": "632d8efd-d4da-42e7-aca4-5a0116d84ffd",
+    "courseNumber": "REES-100B-01",
+    "name": "Current Issues in Baltic Affairs",
+    "metadata": {
+      "createdDate": "2024-03-19T00:30:40.618+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-19T00:30:40.618+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amir Weiner"
         }
       ]
     }
@@ -7078,6 +7168,30 @@
     }
   },
   {
+    "id": "7a17b427-9643-4043-b0a2-6a3589a71383",
+    "courseNumber": "BIOE-103-02",
+    "name": "Systems Physiology and Design",
+    "metadata": {
+      "createdDate": "2024-03-18T16:27:09.544+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-18T16:58:18.628+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alex Engel"
+        },
+        {
+          "name": "Karl Deisseroth"
+        },
+        {
+          "name": "Michael Fischbach"
+        }
+      ]
+    }
+  },
+  {
     "id": "7a4d2baf-d4bf-45d8-a592-6f5e189c7999",
     "courseNumber": "LINGUIST-216-01",
     "name": "Morphology",
@@ -7622,7 +7736,7 @@
     "metadata": {
       "createdDate": "2024-03-15T16:59:30.254+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T16:59:30.254+00:00",
+      "updatedDate": "2024-03-18T16:58:49.558+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -9599,7 +9713,7 @@
     "metadata": {
       "createdDate": "2024-03-15T18:22:56.534+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-15T18:22:56.534+00:00",
+      "updatedDate": "2024-03-18T17:00:44.114+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -12085,6 +12199,24 @@
     }
   },
   {
+    "id": "cef4c36e-62da-470c-9c1f-ffbae7b06007",
+    "courseNumber": "REES-200B-01",
+    "name": "Current Issues in Baltic Affairs",
+    "metadata": {
+      "createdDate": "2024-03-19T00:28:29.056+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-03-19T00:28:29.056+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amir Weiner"
+        }
+      ]
+    }
+  },
+  {
     "id": "cf3639a8-15bd-42c5-abb1-23d327f95ec6",
     "courseNumber": "CME-330 -01",
     "name": "Applied Mathematics in the Chemical and Biological Sciences ",
@@ -14187,6 +14319,24 @@
       "instructorObjects": [
         {
           "name": "Thomas Ryckman"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f13f2136-e572-47f7-80c3-aeeb2b76e7f5",
+    "courseNumber": "HISTORY-96N-01",
+    "name": "World War II in Asia",
+    "metadata": {
+      "createdDate": "2024-03-19T00:51:08.222+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-19T00:51:08.222+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Yumi Moon"
         }
       ]
     }
