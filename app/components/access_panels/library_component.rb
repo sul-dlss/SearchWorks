@@ -14,6 +14,8 @@ module AccessPanels
     end
 
     def thumb_for_library
+      return if library.code == 'SUL'
+
       srcset = {}
       image_name = if library.zombie?
         srcset["#{library.code}@2x.png"] = '2x'
