@@ -211,6 +211,8 @@ bib_search: Finlow, Robert Steel, 1877- "Heart damage" in baled jute, by R.S. Fi
   Spink & Co.; London, W. Thacker & Co., 1918. India. Dept. of Agriculture. Memoirs.
   Chemical series. vol. V, no. 2 India. Department of Agriculture. Memoirs. Chemical
   series ; vol. V, no. 2 Jute fiber. Book
+bound_with_parent_item_ids_ssim:
+- f947bd93-a1eb-5613-8745-1063f948c461
 vern_bib_search: Book
 uuid_ssi: 174c321e-29d1-536c-958c-6964243be3a3
 folio_json_struct:
