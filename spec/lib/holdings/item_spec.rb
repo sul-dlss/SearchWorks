@@ -188,56 +188,25 @@ RSpec.describe Holdings::Item do
   end
 
   context 'with a FOLIO bound-with' do
-    let(:document) {
-      SolrDocument.new(
-        id: '1234',
-        holdings_json_struct: [
-          { holdings: [
-            {
-              id: 'holding1234',
-              location: {
-                effectiveLocation: {
-                  id: "158168a3-ede4-4cc1-8c98-61f4feeb22ea",
-                  code: "SAL3-SEE-OTHER",
-                  name: "See linked record to request items bound together",
-                  campus: {
-                    id: "c365047a-51f2-45ce-8601-e421ca3615c5",
-                    code: "SUL",
-                    name: "Stanford Libraries"
-                  },
-                  details: {},
-                  library: {
-                    id: "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
-                    code: "SAL3",
-                    name: "SAL3 (off-campus storage)"
-                  },
-                  institution: {
-                    id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-                    code: "SU",
-                    name: "Stanford University"
-                  }
-                }
-              },
-              holdingsType: {
-                id: "5b08b35d-aaa3-4806-998c-9cd85e5bc406",
-                name: "Bound-with"
-              },
-              boundWith: {
-                item: { barcode: "1234" },
-                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
-              }
-            }
-          ] }
-        ]
-      )
-    }
-
-    subject(:item) { described_class.new({ barcode: '1234', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS' }, document:) }
+    let(:document) { SolrDocument.new }
 
     describe '#live_lookup_instance_id' do
-      context 'with a bound-with item'
-      it 'returns the parent instance id' do
-        expect(item.live_lookup_instance_id).to eq "7e194e58-e134-56fe-a3c2-2c0494e04c5b"
+      context 'with a bound-with item' do
+        subject(:item) do
+          described_class.new(
+            {
+              barcode: '1234', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS',
+              bound_with: {
+                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
+              }
+            },
+            document:
+          )
+        end
+
+        it 'returns the parent instance id' do
+          expect(item.live_lookup_instance_id).to eq "7e194e58-e134-56fe-a3c2-2c0494e04c5b"
+        end
       end
     end
   end

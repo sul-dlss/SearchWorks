@@ -1,7 +1,5 @@
 <%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
-<% if location.bound_with? && document.bound_with_note? %>
-  <%= content_tag(:div, class: 'bound-with-note note-highlight') { render document.bound_with_note_for_access_panel } %>
-<% else %>
+<% if !location.bound_with? %>
   <span class="pull-right"><%= render location_request_link %></span>
 <% end %>
 <% if location.mhld.present? %>
@@ -17,16 +15,13 @@
     <% end %>
   <% end %>
 <% end %>
-<table class='availability record-view'>
-  <caption class="sr-only">Items in <%= location.name %></caption>
-  <thead>
-    <tr class="sr-only">
-      <th scope="col">Call number</th>
-      <th class="sr-only" scope="col">Note</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <%= render LongTableComponent.new(node_id: "location_#{location.code}", size: location.items.size) do %>
-    <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
+<%= tag.ul class: "availability record-view list-unstyled", id: list_identifier, data: truncate? ? { controller: "long-list" } : nil do %>
+  <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
+  <% if truncate? %>
+    <li>
+      <button class="btn btn-secondary btn-xs" aria-expanded="false" aria-controls="<%= list_identifier %>" data-action="click->long-list#expand" data-long-list-target="expandButton">show all<span class="sr-only"> at location</span></button>
+      <button class="btn btn-secondary btn-xs" aria-expanded="true" aria-controls="<%= list_identifier %>" data-action="click->long-list#collapse" data-long-list-target="collapseButton">show less<span class="sr-only"> at location</span></button>
+    </li>
   <% end %>
-</table>
+
+<% end %>

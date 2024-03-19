@@ -43,7 +43,7 @@
         </td>
       </tr>
       <% if show_items? %>
-        <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, render_item_level_request_link: !location_request_link.render?, render_item_note: false) %>
+        <%= render SearchResult::LocationItemComponent.with_collection(location.items, document:, render_item_level_request_link: !location_request_link.render?) %>
       <% else %>
         <tr>
           <td colspan='2'><%= link_to_record %></td>

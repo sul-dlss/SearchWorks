@@ -62,6 +62,10 @@ class Holdings
       item_display[:type]
     end
 
+    def bound_with_hrid
+      bound_with_parent[:hrid]
+    end
+
     def truncated_callnumber
       item_display[:lopped_callnumber]
     end
@@ -107,14 +111,10 @@ class Holdings
     end
 
     def bound_with_parent
-      return nil unless document&.folio_holdings&.any?
-
-      match = document.folio_holdings.find do |holding|
-        holding.bound_with_parent&.dig('item', 'id') == id
-      end
-      match&.bound_with_parent
+      item_display[:bound_with]
     end
 
+    # @return [Bool] true if this is a bound-with child
     def bound_with?
       bound_with_parent.present?
     end
