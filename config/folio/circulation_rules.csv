@@ -26,7 +26,7 @@ graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-
 ,any,Non-circulating,,SUL,,,No loan,No requests allowed,Send No Notices,No fines,$75 lost fee
 any,any,,,,BUSINESS,BUS-PERMRES,7day-norenew-1daygrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$230 reserves lost fee
 any,any,,,,BUSINESS,BUS-CRES,8 hour - overnight - no renew,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
-any,any,,,,,LANE-NEWB,28day-2renew-7daygrace,Hold only,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
+any,any,,,,,LANE-NEWB,28day-2renew-7daygrace,Allow paging/hold,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-SAL3X,12hour-norenew-15mingrace,Allow paging,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-SOMCC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-REF,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
