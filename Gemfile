@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1'
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem "propshaft"
 # Use Puma as the app server
 gem 'puma', '~> 6.0'
-# Use SCSS for stylesheets
-gem 'sassc-rails'
 
 gem 'turbo-rails', '~> 2.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -96,10 +93,8 @@ gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
-gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap content.
 gem 'recaptcha', github: 'ambethia/recaptcha', ref: '7866ec44c565a0f164f65066b97347d29a5f343f' # pinned until 5.17 is released
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap', '~> 4.0'
 gem 'rack-attack' # For throttle configuration
 gem 'global_alerts'
 gem 'view_component'
@@ -111,3 +106,5 @@ gem "jsbundling-rails", "~> 1.2"
 
 gem "stimulus-rails", "~> 1.3"
 
+
+gem "cssbundling-rails", "~> 1.4"
