@@ -4420,6 +4420,24 @@
     }
   },
   {
+    "id": "4da7388f-6855-45c6-acee-eabb96b56fb3",
+    "courseNumber": "CHINA-291-01",
+    "name": "The Structure of Modern Chinese",
+    "metadata": {
+      "createdDate": "2024-03-20T00:12:58.903+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-20T00:12:58.903+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ya-Ting Tsai"
+        }
+      ]
+    }
+  },
+  {
     "id": "4dc50241-a133-488e-918b-b418b3d1165f",
     "courseNumber": "LAW-4009-01",
     "name": "Intellectual Property: International and Comparative Patent Law",
@@ -6766,6 +6784,30 @@
     }
   },
   {
+    "id": "72d3eaba-d1f8-4a45-bffb-fa73d75b950c",
+    "courseNumber": "OCEANS-225-01",
+    "name": "Environmental Change and Marine Biodiversity",
+    "metadata": {
+      "createdDate": "2024-03-19T22:07:24.176+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-19T22:07:24.176+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Robin Elahi"
+        },
+        {
+          "name": "Connor Gonzales"
+        },
+        {
+          "name": "Jeremy Goldbogen"
+        }
+      ]
+    }
+  },
+  {
     "id": "72ee0c60-51aa-423f-8c03-ba59a5f24e21",
     "courseNumber": "CHEM -121-01",
     "name": " Understanding the Natural and Unnatural World through Chemistry",
@@ -8284,6 +8326,22 @@
         {
           "name": "Richard Vinograd"
         }
+      ]
+    }
+  },
+  {
+    "id": "8d8f213e-0511-47d6-b8ee-34010bbac048",
+    "courseNumber": "LINGUIST-47N-01",
+    "name": "Languages, Dialects, Speakers",
+    "metadata": {
+      "createdDate": "2024-03-19T23:43:54.282+00:00",
+      "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+      "updatedDate": "2024-03-19T23:43:54.282+00:00",
+      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
       ]
     }
   },
@@ -14531,6 +14589,30 @@
     }
   },
   {
+    "id": "f500debe-e154-4659-8446-d1e00e8e168f",
+    "courseNumber": "OCEANS-125H-01",
+    "name": "Environmental Change and Marine Biodiversity",
+    "metadata": {
+      "createdDate": "2024-03-19T22:08:47.866+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-19T22:08:47.866+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Robin Elahi"
+        },
+        {
+          "name": "Connor Gonzales"
+        },
+        {
+          "name": "Jeremy Goldbogen"
+        }
+      ]
+    }
+  },
+  {
     "id": "f5489c1c-7ffe-45cd-98de-ee39cce44820",
     "courseNumber": "CSRE-250J-01",
     "name": "Baldwin and Hansberry: The Myriad Meanings of Love",
@@ -14845,6 +14927,24 @@
       "instructorObjects": [
         {
           "name": "Michael Beeman"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fb3b093c-17b6-49cf-aa70-ab9c92a23704",
+    "courseNumber": "CHINA-191-01",
+    "name": "The Structure of Modern Chinese",
+    "metadata": {
+      "createdDate": "2024-03-20T00:12:17.612+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-20T00:12:17.612+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ya-Ting Tsai"
         }
       ]
     }
