@@ -103,6 +103,31 @@
     }
   },
   {
+    "id": "14c7a29b-9d4b-4f35-ba19-2719651b275a",
+    "name": "7day-norenew-15mingrace",
+    "description": "7 day reserves  Education reserves ",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 7,
+        "intervalId": "Days"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 15,
+        "intervalId": "Minutes"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2024-03-20T17:44:20.126+00:00",
+      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
+      "updatedDate": "2024-03-20T17:44:20.126+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
+    }
+  },
+  {
     "id": "26c44ee7-5a7d-4832-aa84-febe49a8d2f8",
     "name": "14day-norenew-1daygrace",
     "description": "Loan policy for periodicals ",
