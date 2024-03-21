@@ -202,6 +202,24 @@
     }
   },
   {
+    "id": "0486c4c1-558e-4579-89e2-987c867bd1ce",
+    "courseNumber": "ENGR-21-01",
+    "name": "Engineering of Systems",
+    "metadata": {
+      "createdDate": "2024-03-21T01:14:49.540+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T01:14:49.540+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Dean Kontinos"
+        }
+      ]
+    }
+  },
+  {
     "id": "0488567a-1d80-40ad-aeff-d024ee211ac6",
     "courseNumber": "INTLPOL-211-01",
     "name": "A New Cold War? Great Power Relations in the 21st Century",
@@ -635,6 +653,24 @@
     }
   },
   {
+    "id": "0d32e709-9b1c-4aed-bfd1-117b3b59ab97",
+    "courseNumber": "EE-292C-01",
+    "name": "Chemical Vapor Deposition and Epitaxy for Integrated Circuits and Nanostructures",
+    "metadata": {
+      "createdDate": "2024-03-21T03:18:30.730+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:18:30.730+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ted Kamins"
+        }
+      ]
+    }
+  },
+  {
     "id": "0d54ffb0-188d-47ab-be4e-2489b3dfb807",
     "courseNumber": "ME-70-01",
     "name": "Introductory Fluids Engineering",
@@ -874,6 +910,24 @@
       "instructorObjects": [
         {
           "name": "Paula Findlen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "11add0d7-e0c3-44b7-b055-5e25ea1973af",
+    "courseNumber": "CME-206-01",
+    "name": "Introduction to Numerical Methods for Engineering",
+    "metadata": {
+      "createdDate": "2024-03-21T01:53:31.831+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T01:53:31.831+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alison Marsden"
         }
       ]
     }
@@ -1494,6 +1548,24 @@
     }
   },
   {
+    "id": "1c87bd7c-50e0-4744-8ed1-25a3fd2e1178",
+    "courseNumber": "MS&E-256-01",
+    "name": "Technology Assessment and Regulation of Medical Devices ",
+    "metadata": {
+      "createdDate": "2024-03-21T03:09:10.849+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:09:10.849+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jan Pietzsch"
+        }
+      ]
+    }
+  },
+  {
     "id": "1ca28040-12fb-4501-8957-1b553ad6f0e6",
     "courseNumber": "LAW-207-01",
     "name": "Criminal Law",
@@ -1984,6 +2056,24 @@
     }
   },
   {
+    "id": "268ff99a-4454-4d1a-8c71-9f3da2da949d",
+    "courseNumber": "ME-368B-01",
+    "name": "Biodesign Innovation: Concept Development and Implementation",
+    "metadata": {
+      "createdDate": "2024-03-21T03:25:36.169+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:28:34.588+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lyn Denend"
+        }
+      ]
+    }
+  },
+  {
     "id": "26af29a4-dd08-402f-ad49-53935ce86206",
     "courseNumber": "MATH-233A-01",
     "name": "Topics in Combinatorics",
@@ -2016,6 +2106,24 @@
       "instructorObjects": [
         {
           "name": "Brittan Heller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "26b27477-08d3-4150-9f5b-3dcc85b29e35",
+    "courseNumber": "ME-300C ",
+    "name": "Introduction to Numerical Methods for Engineering",
+    "metadata": {
+      "createdDate": "2024-03-21T01:55:11.310+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T01:55:11.310+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alison Marsden"
         }
       ]
     }
@@ -2259,6 +2367,24 @@
         },
         {
           "name": "Beverley McKeon"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2a1f6df0-f1c9-40c7-9795-43a50aa1512c",
+    "courseNumber": "MATSCI-198-01",
+    "name": "Mechanical Properties of Materials",
+    "metadata": {
+      "createdDate": "2024-03-21T02:45:22.790+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T02:45:22.790+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Reinhold Dauskardt"
         }
       ]
     }
@@ -5703,6 +5829,27 @@
     }
   },
   {
+    "id": "5e2ddc45-0b59-4381-b190-071bdcc47b33",
+    "courseNumber": "LAW-3010-01",
+    "name": "Mental Health Law",
+    "metadata": {
+      "createdDate": "2024-03-20T21:33:23.818+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-20T21:33:23.818+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Brian Bloom"
+        },
+        {
+          "name": "Alison Morantz"
+        }
+      ]
+    }
+  },
+  {
     "id": "5ea5b70e-4d8b-412c-8b39-846bdf273f0a",
     "courseNumber": "ECON-270-01",
     "name": "Intermediate Econometrics I",
@@ -5752,6 +5899,24 @@
       "instructorObjects": [
         {
           "name": "Brittan Heller"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5f7c17fd-92a6-4d68-bac2-dafcc71abcc7",
+    "courseNumber": "ITALIAN-232B-01",
+    "name": "Heretics, Courtesans and Merchants: Venice and its Empire",
+    "metadata": {
+      "createdDate": "2024-03-21T04:45:56.241+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-21T04:45:56.241+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Demetrius Loufas"
         }
       ]
     }
@@ -6748,6 +6913,24 @@
     }
   },
   {
+    "id": "70c9f141-2397-4b9e-92bf-f931f6c78cc2",
+    "courseNumber": "MED-272B-01",
+    "name": "Biodesign Innovation: Concept Development and Implementation",
+    "metadata": {
+      "createdDate": "2024-03-21T03:24:52.741+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:24:52.741+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lyn Denend"
+        }
+      ]
+    }
+  },
+  {
     "id": "714650e1-87fd-4e3b-8415-44b2a5bec44d",
     "courseNumber": "PSYCH-80-01",
     "name": "Introduction to Personality and Affective Science",
@@ -6779,6 +6962,24 @@
       "instructorObjects": [
         {
           "name": "Ticien Sassoubre"
+        }
+      ]
+    }
+  },
+  {
+    "id": "72cfb60e-7191-4211-8699-6a1beb496a85",
+    "courseNumber": "CS-231A-01",
+    "name": "Computer Vision: From 3D Perception to 3D Reconstruction and Beyond",
+    "metadata": {
+      "createdDate": "2024-03-20T19:44:43.032+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-20T19:44:43.032+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jeannette Bohg"
         }
       ]
     }
@@ -10010,6 +10211,24 @@
     }
   },
   {
+    "id": "a8eea7c5-66a5-41cb-a8fe-c1713e175db6",
+    "courseNumber": "BIOE-361 ",
+    "name": "Biomaterials in Regenerative Medicine",
+    "metadata": {
+      "createdDate": "2024-03-21T03:39:02.698+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:39:02.698+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sarah Heilshorn"
+        }
+      ]
+    }
+  },
+  {
     "id": "a907a8d1-a57c-4ca5-8d46-84164fed42c8",
     "courseNumber": "EDUC-306A-01",
     "name": "Economics of Education in the Global Economy",
@@ -10277,6 +10496,24 @@
       "instructorObjects": [
         {
           "name": "Gail Wight"
+        }
+      ]
+    }
+  },
+  {
+    "id": "adf3d692-beb8-4198-86c6-e399f7030ee9",
+    "courseNumber": "BIOE-256 ",
+    "name": "Technology Assessment and Regulation of Medical Devices ",
+    "metadata": {
+      "createdDate": "2024-03-21T03:09:45.952+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:09:45.952+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jan Pietzsch"
         }
       ]
     }
@@ -11732,6 +11969,24 @@
     }
   },
   {
+    "id": "c6d4004d-ba3a-4c3f-9983-767b4988d21f",
+    "courseNumber": "HISTORY-232B-01",
+    "name": "Heretics, Courtesans and Merchants: Venice and its Empire",
+    "metadata": {
+      "createdDate": "2024-03-21T04:45:05.438+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-21T04:45:05.438+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Demetrius Loufas"
+        }
+      ]
+    }
+  },
+  {
     "id": "c7232baa-17c6-4cb4-90c0-30f1c95ea745",
     "courseNumber": "CEE 133A",
     "name": "Studio 1: Architecture - Space, Light, and Movement",
@@ -12003,6 +12258,22 @@
     }
   },
   {
+    "id": "cbbc1a94-0d30-4b51-8b6c-f9e9e28aa034",
+    "courseNumber": "CEE-172-01",
+    "name": "Air Quality Management",
+    "metadata": {
+      "createdDate": "2024-03-21T03:47:34.343+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:47:34.343+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "cc52e2b9-0bb0-473a-8c2b-e2b4bd091ef3",
     "courseNumber": "ARTHIST-302B-01",
     "name": "Coffee, Sugar, and Chocolate: Commodities and Consumption in World History, 1200-1800",
@@ -12034,6 +12305,24 @@
       "instructorObjects": [
         {
           "name": "Barbara Pitkin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cd1947d1-5c32-4cf6-9bb2-9353a8b174fd",
+    "courseNumber": "AA-173-01",
+    "name": "Flight Mechanics & Controls",
+    "metadata": {
+      "createdDate": "2024-03-20T20:06:24.599+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-20T20:06:24.599+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Grace Gao"
         }
       ]
     }
@@ -12287,6 +12576,24 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "cf5e5b5d-953d-4669-b572-c3b66de5130d",
+    "courseNumber": "ME-327-01",
+    "name": "Design and Control of Haptic Systems",
+    "metadata": {
+      "createdDate": "2024-03-21T02:02:56.241+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T02:02:56.241+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allison Okamura"
+        }
       ]
     }
   },
@@ -13066,6 +13373,24 @@
     }
   },
   {
+    "id": "db620226-ff2e-4c21-a4a0-e2ffa08c7e6a",
+    "courseNumber": "AA-273-01",
+    "name": "State Estimation and Filtering for Robotic Perception",
+    "metadata": {
+      "createdDate": "2024-03-21T03:02:07.661+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:02:07.661+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mac Schwager"
+        }
+      ]
+    }
+  },
+  {
     "id": "db7e9e25-e837-4712-849a-613adb5feb20",
     "courseNumber": "FILMEDIA-214-01",
     "name": "Decolonial Approaches to African Arts",
@@ -13190,6 +13515,24 @@
       "instructorObjects": [
         {
           "name": "Sigrid Elschot"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dcb3480a-7ead-44cf-99d2-8664b86a5b8a",
+    "courseNumber": "MATSCI-208",
+    "name": "Mechanical Properties of Materials",
+    "metadata": {
+      "createdDate": "2024-03-21T02:46:24.624+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T02:46:24.624+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Reinhold Dauskardt"
         }
       ]
     }
@@ -13336,6 +13679,24 @@
       "instructorObjects": [
         {
           "name": "Roy Pea"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dfaa279d-d8e8-4aab-9be2-b38709d88b51",
+    "courseNumber": "MATSCI-381-01",
+    "name": "Biomaterials in Regenerative Medicine",
+    "metadata": {
+      "createdDate": "2024-03-21T03:38:28.818+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:38:28.818+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sarah Heilshorn"
         }
       ]
     }
@@ -13673,6 +14034,24 @@
         },
         {
           "name": "Avshalom Schwartz"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e5411392-7189-427d-99f4-14e87a1b1bdf",
+    "courseNumber": "BIOE-374B-01",
+    "name": "Biodesign Innovation: Concept Development and Implementation",
+    "metadata": {
+      "createdDate": "2024-03-21T03:26:16.834+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-21T03:26:16.834+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lyn Denend"
         }
       ]
     }
