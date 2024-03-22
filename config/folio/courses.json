@@ -2056,6 +2056,24 @@
     }
   },
   {
+    "id": "25b62d0a-aae0-431c-b988-d5e86a06fb42",
+    "courseNumber": "ANTHRO-348C-01",
+    "name": "Phenomenology: The Feel of Lived Experience",
+    "metadata": {
+      "createdDate": "2024-03-22T00:39:12.634+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-22T00:39:12.634+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Tanya Luhrmann"
+        }
+      ]
+    }
+  },
+  {
     "id": "268ff99a-4454-4d1a-8c71-9f3da2da949d",
     "courseNumber": "ME-368B-01",
     "name": "Biodesign Innovation: Concept Development and Implementation",
@@ -3970,6 +3988,24 @@
         },
         {
           "name": "Antonia Peacocke"
+        }
+      ]
+    }
+  },
+  {
+    "id": "43b45ad4-471e-4729-8196-4f82fdf51c1e",
+    "courseNumber": "LAW-7815A-01",
+    "name": "Advanced Legal Writing: Business Transactions",
+    "metadata": {
+      "createdDate": "2024-03-21T22:35:20.493+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-21T22:35:20.493+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Marilyn Bautista"
         }
       ]
     }
@@ -7077,6 +7113,24 @@
       "instructorObjects": [
         {
           "name": "Nadeem Hussain"
+        }
+      ]
+    }
+  },
+  {
+    "id": "74746360-f3d5-4671-aea3-7466239d38e8",
+    "courseNumber": "LINGUIST-134A-01",
+    "name": "The Structure of Discourse: Theory and Applications",
+    "metadata": {
+      "createdDate": "2024-03-22T05:40:43.662+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-22T05:40:43.662+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Katherine Hilton"
         }
       ]
     }
@@ -14883,6 +14937,24 @@
       "instructorObjects": [
         {
           "name": "George Fisher"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f3960e4c-d741-43b8-a143-f1e7754afb79",
+    "courseNumber": "LINGUIST-234-01",
+    "name": "The Structure of Discourse: Theory and Applications",
+    "metadata": {
+      "createdDate": "2024-03-22T05:39:44.333+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-22T05:39:44.333+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Katherine Hilton"
         }
       ]
     }
