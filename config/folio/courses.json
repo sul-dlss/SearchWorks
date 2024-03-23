@@ -1033,6 +1033,24 @@
     }
   },
   {
+    "id": "140271fb-512d-44f4-85f6-731b3fa6a4b6",
+    "courseNumber": "CS-224S-01",
+    "name": "Spoken Language Processing",
+    "metadata": {
+      "createdDate": "2024-03-22T18:42:36.809+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-22T18:42:36.809+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrew Maas"
+        }
+      ]
+    }
+  },
+  {
     "id": "14031513-0739-4fee-9e19-5752ca7f2200",
     "courseNumber": "CEE-363B-01",
     "name": "Chaos and Turbulence",
@@ -7656,6 +7674,24 @@
     }
   },
   {
+    "id": "7dee09dc-8bff-4c09-9e51-a62f1615ac88",
+    "courseNumber": "LINGUIST-285-01",
+    "name": "Spoken Language Processing",
+    "metadata": {
+      "createdDate": "2024-03-22T18:43:52.223+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-22T18:43:52.223+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrew Maas"
+        }
+      ]
+    }
+  },
+  {
     "id": "7e2370e7-4d0a-4fbf-be33-8d71c2984878",
     "courseNumber": "COMPLIT-328-01",
     "name": "Literature, Narrative, and the Self",
@@ -7898,6 +7934,24 @@
       "instructorObjects": [
         {
           "name": "Wendy Gu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8275633f-5958-4672-b279-e5b11966f836",
+    "courseNumber": "AA-179-01",
+    "name": "Orbital Mechanics and Attitude Dynamics",
+    "metadata": {
+      "createdDate": "2024-03-22T22:05:38.092+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-22T22:05:38.092+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Anton Ermakov"
         }
       ]
     }
