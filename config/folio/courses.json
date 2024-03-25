@@ -147,6 +147,24 @@
     }
   },
   {
+    "id": "0308a467-904b-4aae-a8e5-e4138211e6d7",
+    "courseNumber": "KOREA-190X-01",
+    "name": "North Korea in Historical Perspective",
+    "metadata": {
+      "createdDate": "2024-03-25T02:50:32.396+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:50:32.396+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Yumi Moon"
+        }
+      ]
+    }
+  },
+  {
     "id": "03225798-a71e-4e4a-badc-b288708fe9a5",
     "courseNumber": "PHYSICS-331-01",
     "name": "Quantum Field Theory II",
@@ -1107,6 +1125,24 @@
     }
   },
   {
+    "id": "1533df45-99fd-47fb-b557-7bc99b278594",
+    "courseNumber": "HISTORY-213F-01",
+    "name": "Medieval Germany, 900-1250",
+    "metadata": {
+      "createdDate": "2024-03-24T23:48:04.155+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-24T23:48:04.155+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Manuel Kamenzin"
+        }
+      ]
+    }
+  },
+  {
     "id": "15929191-7aae-4382-9d2b-2fa26a458f45",
     "courseNumber": "SOC-204-01",
     "name": "Capstone Research Seminar",
@@ -1800,22 +1836,6 @@
         {
           "name": "Priya Satia"
         }
-      ]
-    }
-  },
-  {
-    "id": "202f8a30-f843-41a0-a0ca-09afc428680b",
-    "courseNumber": "OSPMADRD 26",
-    "name": "Understanding the Factors that Lead to Pandemics and Their Impact on Spanish and World History",
-    "metadata": {
-      "createdDate": "2024-03-15T00:02:40.694+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2024-03-15T00:02:40.694+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -4486,6 +4506,24 @@
     }
   },
   {
+    "id": "4caa374a-10cb-4ec1-a0dc-c826b5bba04c",
+    "courseNumber": "TAPS-11-01",
+    "name": "Introduction to Dance Studies ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:46:23.748+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:46:23.748+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "T. Jones"
+        }
+      ]
+    }
+  },
+  {
     "id": "4cae3734-302f-4e73-92dc-d6042f0d8723",
     "courseNumber": "CHEM 141-02",
     "sectionName": "01",
@@ -4959,6 +4997,24 @@
     }
   },
   {
+    "id": "52aee6f7-569f-4fb9-8fde-c544f29170a6",
+    "courseNumber": "SOC-349-01",
+    "name": "Race, Space, and Stratification",
+    "metadata": {
+      "createdDate": "2024-03-25T02:57:00.235+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:57:00.235+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jackelyn Hwang"
+        }
+      ]
+    }
+  },
+  {
     "id": "52fad25d-8cdf-4c6f-ba55-12e2786dab21",
     "courseNumber": "TAPS-153H-01",
     "name": "History of Directing",
@@ -5118,6 +5174,24 @@
       "instructorObjects": [
         {
           "name": "Tia Rich"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5553efc2-1de6-4667-9dc8-db1fffa5b1da",
+    "courseNumber": "FILMEDIA-105N-01",
+    "name": "Film and Fascism in Europe ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:20:50.792+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:20:50.792+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cecile Alduy"
         }
       ]
     }
@@ -5828,6 +5902,24 @@
     }
   },
   {
+    "id": "5d4c996f-2818-4619-a5d0-c5a01ab66008",
+    "courseNumber": "GERMAN-213-01",
+    "name": "Medieval Germany, 900-1250",
+    "metadata": {
+      "createdDate": "2024-03-24T23:49:20.613+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-24T23:49:20.613+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Manuel Kamenzin"
+        }
+      ]
+    }
+  },
+  {
     "id": "5d6e805b-0f54-4b22-8fec-913ad78f9edf",
     "courseNumber": "LAW-5013-01",
     "name": "International Law",
@@ -6459,6 +6551,24 @@
     }
   },
   {
+    "id": "680d425b-e073-4d0b-8679-91fa000023ad",
+    "courseNumber": "COMM-177SW-01",
+    "name": "Specialized Writing and Reporting: Sports Journalism ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:53:15.609+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:53:15.609+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gary Pomerantz"
+        }
+      ]
+    }
+  },
+  {
     "id": "681fff9d-1255-4f62-9b4a-a5bd2d2ef6fe",
     "courseNumber": "POLISCI-121L-01",
     "name": "Racial-Ethnic Politics in US ",
@@ -6902,6 +7012,24 @@
     }
   },
   {
+    "id": "6e6fb2d5-f520-419c-9bee-ad1dd6d98912",
+    "courseNumber": "FRENCH-104N-01",
+    "name": "Film and Fascism in Europe ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:21:28.972+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:21:28.972+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cecile Alduy"
+        }
+      ]
+    }
+  },
+  {
     "id": "6f61ebaa-c4aa-4c6f-b73f-7356bd4cec96",
     "courseNumber": "COMPLIT-55N-01",
     "name": "Black Panther, Hamilton, Díaz, and Other Wondrous Lives ",
@@ -7204,6 +7332,24 @@
       "instructorObjects": [
         {
           "name": "Ross Shachter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "751b8eef-ce82-40cd-9b06-3353b302b718",
+    "courseNumber": "COMM-277S-01",
+    "name": "Specialized Writing and Reporting: Sports Journalism ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:53:27.936+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:53:27.936+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gary Pomerantz"
         }
       ]
     }
@@ -7991,6 +8137,24 @@
     }
   },
   {
+    "id": "83f7b177-3174-42e5-b720-26027d3ada09",
+    "courseNumber": "FEMGEN-11-01",
+    "name": "Introduction to Dance Studies ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:46:58.460+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:46:58.460+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "T. Jones"
+        }
+      ]
+    }
+  },
+  {
     "id": "841b3699-3046-47db-8822-ef13b0ae3f3f",
     "courseNumber": "MS&E-220-01",
     "name": "Probabilistic Analysis",
@@ -8076,6 +8240,24 @@
       "instructorObjects": [
         {
           "name": "Kathryn Olivarius"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8581e3b0-0ac5-42cf-9b28-cf0e481170ab",
+    "courseNumber": "FEMGEN-112-01",
+    "name": "Passing: Hidden Identities Onscreen ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:55:46.099+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:55:46.099+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Branfman"
         }
       ]
     }
@@ -8243,6 +8425,24 @@
       "instructorObjects": [
         {
           "name": "A Polinsky"
+        }
+      ]
+    }
+  },
+  {
+    "id": "88dd9d85-86fd-4803-a88d-32a0ba2d8b94",
+    "courseNumber": "DANCE-11-01",
+    "name": "Introduction to Dance Studies ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:46:45.017+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:46:45.017+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "T. Jones"
         }
       ]
     }
@@ -8522,6 +8722,24 @@
         },
         {
           "name": "Jaye Buchbinder"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8cac384b-74b5-4899-9e86-3c3faadb5bdb",
+    "courseNumber": "KOREA-290X-01",
+    "name": "North Korea in Historical Perspective",
+    "metadata": {
+      "createdDate": "2024-03-25T02:51:55.545+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:51:55.545+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Yumi Moon"
         }
       ]
     }
@@ -9218,6 +9436,27 @@
     }
   },
   {
+    "id": "95c557f3-a8c2-4f33-8186-274b250470f7",
+    "courseNumber": "POLISCI-149S-01",
+    "name": "Islam, Iran, and the West",
+    "metadata": {
+      "createdDate": "2024-03-25T02:48:43.583+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:48:43.583+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mashail Malik"
+        },
+        {
+          "name": "Abbas Milani"
+        }
+      ]
+    }
+  },
+  {
     "id": "97146c43-85b6-4b02-8cc3-b08be09ae1e0",
     "courseNumber": "HISTORY-195-01",
     "name": " Modern Korean History",
@@ -9371,6 +9610,24 @@
     }
   },
   {
+    "id": "997d431e-3bd7-4629-8452-f9a0f57e4653",
+    "courseNumber": "ITALIAN-104N-01",
+    "name": "Film and Fascism in Europe ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:22:34.028+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:22:34.028+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cecile Alduy"
+        }
+      ]
+    }
+  },
+  {
     "id": "99b53656-9ec8-47e8-bfaa-34c9dd4ea6e1",
     "courseNumber": "HISTORY-202B-01",
     "name": "Coffee, Sugar, and Chocolate: Commodities and Consumption in World History, 1200-1800",
@@ -9410,6 +9667,24 @@
         },
         {
           "name": "Ian Whitmore"
+        }
+      ]
+    }
+  },
+  {
+    "id": "9a21e667-1b5d-407b-b427-8207616b2575",
+    "courseNumber": "HISTORY-390-01",
+    "name": "North Korea in Historical Perspective",
+    "metadata": {
+      "createdDate": "2024-03-25T02:49:50.995+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:49:50.995+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Yumi Moon"
         }
       ]
     }
@@ -11353,6 +11628,24 @@
       "instructorObjects": [
         {
           "name": "Kristina Cusmano-Ozog"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bc30075f-3931-40eb-84ff-d09758b03a16",
+    "courseNumber": "CSRE-113-01",
+    "name": "Passing: Hidden Identities Onscreen ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:56:05.831+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:56:05.831+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Branfman"
         }
       ]
     }
@@ -13774,6 +14067,24 @@
     }
   },
   {
+    "id": "deda197b-2478-412a-8b9d-2e37e0cf7e66",
+    "courseNumber": "CSRE-11-01",
+    "name": "Introduction to Dance Studies ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:47:20.044+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:47:20.044+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "T. Jones"
+        }
+      ]
+    }
+  },
+  {
     "id": "df976975-044b-4c12-9b53-16d018d51963",
     "courseNumber": "EDUC-421-01",
     "name": "Powerful Ideas for Learning Sciences and Technology Design: Sociocultural Practices of the Blues",
@@ -13949,6 +14260,24 @@
       "instructorObjects": [
         {
           "name": "Cole Hugelmeyer"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e19ae8ce-28f7-43c5-b014-50d58c861078",
+    "courseNumber": "COMPLIT-104N-01",
+    "name": "Film and Fascism in Europe ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:22:12.774+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:22:12.774+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cecile Alduy"
         }
       ]
     }
@@ -14425,6 +14754,24 @@
       "instructorObjects": [
         {
           "name": "Laura Goode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e93eed0b-4996-477e-81ba-58fd7f88888c",
+    "courseNumber": "HISTORY-290-01",
+    "name": "North Korea in Historical Perspective",
+    "metadata": {
+      "createdDate": "2024-03-25T02:50:08.132+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:50:08.132+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Yumi Moon"
         }
       ]
     }
@@ -14923,6 +15270,24 @@
     }
   },
   {
+    "id": "f22ea368-b7fd-4995-8bf5-766a7a60edb1",
+    "courseNumber": "GERMAN-313-01",
+    "name": "Medieval Germany, 900-1250",
+    "metadata": {
+      "createdDate": "2024-03-24T23:50:04.308+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-24T23:50:04.308+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Manuel Kamenzin"
+        }
+      ]
+    }
+  },
+  {
     "id": "f26a0426-3630-4278-84c9-e527b6de069a",
     "courseNumber": "JEWISHST-37Q-01",
     "name": "Zionism and the Novel ",
@@ -14955,6 +15320,24 @@
         },
         {
           "name": "Avshalom Schwartz"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f2a45a68-7dc1-4ae4-804c-eb092167eb84",
+    "courseNumber": "JEWISHST-112-01",
+    "name": "Passing: Hidden Identities Onscreen ",
+    "metadata": {
+      "createdDate": "2024-03-25T02:55:31.584+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-25T02:55:31.584+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Branfman"
         }
       ]
     }
@@ -15432,6 +15815,24 @@
       "instructorObjects": [
         {
           "name": "Michael Beeman"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fa8d0e1a-4a16-4dc9-b6c9-bb011a2b9c0f",
+    "courseNumber": "HISTORY-313F-01",
+    "name": "Medieval Germany, 900-1250",
+    "metadata": {
+      "createdDate": "2024-03-24T23:48:52.970+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-24T23:48:52.970+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Manuel Kamenzin"
         }
       ]
     }
