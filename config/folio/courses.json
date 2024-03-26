@@ -1620,6 +1620,24 @@
     }
   },
   {
+    "id": "1c92468a-80c7-42ec-9fcd-fb0e3a0a95aa",
+    "courseNumber": "EDUC-477-01",
+    "name": "Global Educational Ethnographies",
+    "metadata": {
+      "createdDate": "2024-03-26T00:25:06.628+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-26T00:29:34.882+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rebecca Tarlau"
+        }
+      ]
+    }
+  },
+  {
     "id": "1ca28040-12fb-4501-8957-1b553ad6f0e6",
     "courseNumber": "LAW-207-01",
     "name": "Criminal Law",
@@ -3303,6 +3321,24 @@
     }
   },
   {
+    "id": "395e8b5f-8dfb-4b6e-a660-ea6ae81e8a2b",
+    "courseNumber": "LAW-1079-01",
+    "name": "Introduction to Transactional Practice",
+    "metadata": {
+      "createdDate": "2024-03-25T23:06:15.378+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-25T23:06:15.378+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jay Mitchell"
+        }
+      ]
+    }
+  },
+  {
     "id": "3967dab2-95b3-4061-941f-147107a14914",
     "courseNumber": "SPANLANG-1-06",
     "name": "First-Year Spanish, First Quarter",
@@ -4088,6 +4124,24 @@
     }
   },
   {
+    "id": "443903ba-3ed6-44a1-890d-5330180c9f42",
+    "courseNumber": "EDUC-471-01",
+    "name": "The Development of Purpose Across the Lifespan",
+    "metadata": {
+      "createdDate": "2024-03-26T01:02:22.128+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-26T01:02:22.128+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "William Damon"
+        }
+      ]
+    }
+  },
+  {
     "id": "4452291e-0a17-4988-ad07-113d8b90cd3d",
     "courseNumber": "ME-366-01",
     "name": "Light and Plasma",
@@ -4300,6 +4354,24 @@
       "instructorObjects": [
         {
           "name": "Amir Weiner"
+        }
+      ]
+    }
+  },
+  {
+    "id": "48ee58ff-c1b6-4516-9f9a-9b474c5ae0a7",
+    "courseNumber": "EDUC-355-01",
+    "name": "Higher Education and Society",
+    "metadata": {
+      "createdDate": "2024-03-26T00:50:02.492+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-26T00:50:02.492+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Patricia Gumport"
         }
       ]
     }
@@ -6205,6 +6277,24 @@
     }
   },
   {
+    "id": "6144bff0-1593-4153-9499-ed8d46ab68ed",
+    "courseNumber": "LAW-7821-02",
+    "name": "Negotiation",
+    "metadata": {
+      "createdDate": "2024-03-25T21:53:38.098+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-25T21:53:51.904+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "James Schurz"
+        }
+      ]
+    }
+  },
+  {
     "id": "6276f1be-f88a-44c9-8bf7-9a2dfaaaf30f",
     "courseNumber": "ENGLISH-90-03",
     "name": " Fiction Writing",
@@ -7301,6 +7391,24 @@
     }
   },
   {
+    "id": "74ddc283-7727-470d-9f84-03d7dad12b08",
+    "courseNumber": "ME-354-01",
+    "name": "Experimental Methods in Fluid Mechanics",
+    "metadata": {
+      "createdDate": "2024-03-25T16:45:04.856+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-25T16:45:04.856+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Beverley McKeon"
+        }
+      ]
+    }
+  },
+  {
     "id": "74f10277-ffea-4925-80cf-dd78dc445a24",
     "courseNumber": "HISTORY-352-01",
     "name": "Originalism and the American Constitution: History and Interpretation",
@@ -7458,6 +7566,27 @@
       "instructorObjects": [
         {
           "name": "Michael Rosenfeld"
+        }
+      ]
+    }
+  },
+  {
+    "id": "77253cc4-a146-4f89-bddf-fe5f47a20b72",
+    "courseNumber": "LAW-7821-01",
+    "name": "Negotiation",
+    "metadata": {
+      "createdDate": "2024-03-25T21:50:41.801+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-25T21:50:41.801+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Grande Lum"
+        },
+        {
+          "name": "Brenna Powell"
         }
       ]
     }
@@ -7893,6 +8022,24 @@
     }
   },
   {
+    "id": "7ed20429-416c-4109-9ed9-1d170321ed8a",
+    "courseNumber": "LAW-7826-01",
+    "name": "Oral Argument Workshop",
+    "metadata": {
+      "createdDate": "2024-03-25T23:10:44.021+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-25T23:10:44.021+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Randee Fenner"
+        }
+      ]
+    }
+  },
+  {
     "id": "7ef2f4c1-1c82-41ee-8816-9046984b84f7",
     "courseNumber": "EPS-239-01",
     "name": "500 Million Years of Land Plant Evolution",
@@ -8098,24 +8245,6 @@
       "instructorObjects": [
         {
           "name": "Anton Ermakov"
-        }
-      ]
-    }
-  },
-  {
-    "id": "83bc6a47-c34a-433a-b0ca-2cddb07faa9f",
-    "courseNumber": "LAW-1079-01",
-    "name": "Introduction to Transactional Practice",
-    "metadata": {
-      "createdDate": "2023-12-14T19:30:21.438+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:30:21.438+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jay Mitchell"
         }
       ]
     }
@@ -9300,24 +9429,6 @@
     }
   },
   {
-    "id": "93a26fd0-f456-49a0-98cf-fa4589c8821b",
-    "courseNumber": "LAW-7821-01",
-    "name": "Negotiation",
-    "metadata": {
-      "createdDate": "2023-12-18T23:22:00.263+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:22:00.263+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Julie Kennedy"
-        }
-      ]
-    }
-  },
-  {
     "id": "93b1b23a-f6a3-4904-88b7-41720b566ef3",
     "courseNumber": "LAW-2505-01",
     "name": "Land Use Law",
@@ -9475,6 +9586,25 @@
     }
   },
   {
+    "id": "974b7076-fd19-4faf-a845-0382b544b3c6",
+    "courseNumber": "DBIO 210",
+    "name": "Developmental Biology",
+    "description": "Current areas of research in developmental biology",
+    "metadata": {
+      "createdDate": "2024-03-25T19:22:11.514+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-25T19:22:11.514+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alistair Boettiger"
+        }
+      ]
+    }
+  },
+  {
     "id": "97c6609f-9fdd-4c20-ac1b-567cf667a4f1",
     "courseNumber": "COMPLIT-264-01",
     "name": "Crossing the Atlantic: Race Identity in the \"Old\" and\"New\" African Diasporas",
@@ -9587,6 +9717,24 @@
         {
           "name": "Joseph Garner"
         }
+      ]
+    }
+  },
+  {
+    "id": "98e9f212-2b17-4403-9a7c-d0e6f7397d89",
+    "courseNumber": "BIO 86",
+    "sectionName": "01",
+    "name": "Cell Biology",
+    "description": "This course will focus on the basic structures inside cells and how they execute cellular functions. Topics include organelles, membrane trafficking, the cytoskeleton, cell division, and signal transduction. Classic and recent primary literature will be incorporated into lectures with an emphasis on state of the art experimental approaches.",
+    "metadata": {
+      "createdDate": "2024-03-25T21:47:01.801+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-25T21:47:01.801+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
       ]
     }
   },
@@ -10145,24 +10293,6 @@
       "instructorObjects": [
         {
           "name": "Thomas Bartlett"
-        }
-      ]
-    }
-  },
-  {
-    "id": "a1cd7f8b-ccd8-4ac8-8d77-b4e2c98c6486",
-    "courseNumber": "LAW-7821-02",
-    "name": "Negotiation",
-    "metadata": {
-      "createdDate": "2023-12-18T23:25:06.462+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:25:22.142+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jiyun Lee"
         }
       ]
     }
@@ -10902,6 +11032,24 @@
     }
   },
   {
+    "id": "aec191bf-18cc-4b50-9490-b2cbfc377a92",
+    "courseNumber": "EDUC-111-01",
+    "name": "The Young Adult Novel: A Literature For and About Adolescents",
+    "metadata": {
+      "createdDate": "2024-03-25T17:16:28.151+00:00",
+      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
+      "updatedDate": "2024-03-25T19:59:40.761+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Wolf"
+        }
+      ]
+    }
+  },
+  {
     "id": "af9efa8f-5381-451d-b2fc-b6afb155d604",
     "courseNumber": "CHEMENG 100-01",
     "sectionName": "01",
@@ -10923,24 +11071,6 @@
         },
         {
           "name": "Andrew Spakowitz"
-        }
-      ]
-    }
-  },
-  {
-    "id": "afca7f48-eb98-42c4-8bf3-ba719afeb6d1",
-    "courseNumber": "LAW-7827-01",
-    "name": "Advanced Legal Writing for American Practice",
-    "metadata": {
-      "createdDate": "2023-12-18T23:08:19.250+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:08:19.250+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Betty Rowe"
         }
       ]
     }
@@ -11230,6 +11360,24 @@
       "instructorObjects": [
         {
           "name": "Susan Holmes"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b5505906-3a5e-4d08-b976-a71c93c8e7a3",
+    "courseNumber": "FEMGEN-477-01",
+    "name": "Global Educational Ethnographies",
+    "metadata": {
+      "createdDate": "2024-03-26T00:26:58.022+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-26T00:26:58.022+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rebecca Tarlau"
         }
       ]
     }
@@ -11791,6 +11939,27 @@
       "instructorObjects": [
         {
           "name": "Aaron Sidford"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bda8f3d2-ee49-4085-a010-3a44ebbe03a8",
+    "courseNumber": "HISTORY-58E-01",
+    "name": "Stanford and Its Worlds: 1885-present",
+    "metadata": {
+      "createdDate": "2024-03-25T21:04:58.523+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-25T21:04:58.523+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Emily Levine"
+        },
+        {
+          "name": "Mitchell Stevens"
         }
       ]
     }
@@ -13738,6 +13907,34 @@
     }
   },
   {
+    "id": "daadd4d4-05d5-4344-ad62-0ed7cf7c4d86",
+    "courseNumber": "BIO 221",
+    "sectionName": "01",
+    "name": "Ornithology",
+    "metadata": {
+      "createdDate": "2024-03-25T22:30:08.434+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-25T22:30:08.434+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ben Moran"
+        },
+        {
+          "name": "Marty Freeland"
+        },
+        {
+          "name": "Rodolfo Dirzo"
+        },
+        {
+          "name": "Maya Xu"
+        }
+      ]
+    }
+  },
+  {
     "id": "db224969-5c7a-4f43-b9fd-22f3b1e4f943",
     "courseNumber": "ESS-220-01",
     "name": "Physical Hydrogeology",
@@ -14411,6 +14608,27 @@
       "instructorObjects": [
         {
           "name": "Jose Saldivar"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e46a2b18-a868-493e-92c4-3f54ad8d4807",
+    "courseNumber": "EDUC-147-01",
+    "name": "Stanford and Its Worlds: 1885-present",
+    "metadata": {
+      "createdDate": "2024-03-25T20:54:32.707+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-25T20:54:32.707+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Emily Levine"
+        },
+        {
+          "name": "Mitchell Stevens"
         }
       ]
     }
