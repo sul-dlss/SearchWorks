@@ -165,6 +165,21 @@
     }
   },
   {
+    "id": "0321a06d-0f49-46ec-9576-69cd3d54b4a4",
+    "name": "Spring Study Aids",
+    "metadata": {
+      "createdDate": "2024-03-26T20:47:21.060+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-26T20:47:21.060+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "03225798-a71e-4e4a-badc-b288708fe9a5",
     "courseNumber": "PHYSICS-331-01",
     "name": "Quantum Field Theory II",
@@ -843,6 +858,25 @@
     }
   },
   {
+    "id": "0fb18872-1a59-4934-856c-f86e9e3f9102",
+    "courseNumber": "PHYSICS-171-01",
+    "name": "Thermodynamics, Kinetic Theory, and Statistical Mechanics II",
+    "description": "Mean-field theory of phase transitions; critical exponents. Ferromagnetism, the Ising model. The renormalization group. Dynamics near equilibrium: Brownian motion, diffusion, Boltzmann equations. ",
+    "metadata": {
+      "createdDate": "2024-03-26T20:02:25.633+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-26T20:02:25.633+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ben Feldman"
+        }
+      ]
+    }
+  },
+  {
     "id": "106aa5f7-615e-43cb-a2f3-023bbfc965f4",
     "courseNumber": "URBANST-112-01",
     "name": "The Urban Underclass",
@@ -976,16 +1010,13 @@
     "metadata": {
       "createdDate": "2023-12-19T23:12:03.643+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-12-19T23:12:03.643+00:00",
+      "updatedDate": "2024-03-26T16:45:16.200+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Chaya Nanavati"
-        },
-        {
-          "name": "Young Lee"
+          "name": "Mark Kasevich"
         }
       ]
     }
@@ -2253,12 +2284,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Megan Brennan"
-        },
-        {
-          "name": "Daniel Stack"
-        }
+
       ]
     }
   },
@@ -2489,13 +2515,13 @@
     "metadata": {
       "createdDate": "2023-12-20T22:36:44.507+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-12-20T22:36:44.507+00:00",
+      "updatedDate": "2024-03-26T23:12:58.816+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Gene Kim"
+          "name": "Guenther Walther"
         }
       ]
     }
@@ -2530,9 +2556,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Thomas Markland"
-        }
+
       ]
     }
   },
@@ -3000,12 +3024,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Gerald Fuller"
-        },
-        {
-          "name": "Katarina Guzman"
-        }
+
       ]
     }
   },
@@ -3273,13 +3292,13 @@
     "metadata": {
       "createdDate": "2023-09-18T18:15:29.219+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-12-20T19:09:15.620+00:00",
+      "updatedDate": "2024-03-26T22:13:30.516+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Emmanuel Candes"
+          "name": "Alice Cortinovis"
         }
       ]
     }
@@ -3404,18 +3423,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Waheeda Khalfan"
-        },
-        {
-          "name": "Cristina Flores-Herrera"
-        },
-        {
-          "name": "Dominique Bergmann"
-        },
-        {
-          "name": "Michael Simon"
-        }
+
       ]
     }
   },
@@ -4253,6 +4261,24 @@
     }
   },
   {
+    "id": "45e7c4cd-4008-4475-863d-18afd234ba9a",
+    "courseNumber": "ENGLISH-314-01",
+    "name": " Epic and Empire ",
+    "metadata": {
+      "createdDate": "2024-03-26T18:48:53.785+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-26T18:48:53.785+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Patricia Parker"
+        }
+      ]
+    }
+  },
+  {
     "id": "4613ce2e-03cf-474e-8192-c3c4863d5c1e",
     "courseNumber": "ARTHIST-230-01",
     "name": "Beauty",
@@ -4609,12 +4635,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Nathaniel Brown"
-        },
-        {
-          "name": "Carolyn Bertozzi"
-        }
+
       ]
     }
   },
@@ -4833,13 +4854,13 @@
   },
   {
     "id": "4f3806a4-2f15-4e7a-9319-a7942182790b",
-    "courseNumber": "HISTORY-194B",
+    "courseNumber": "HISTORY-194B-01",
     "name": "Japan in the Age of the Samurai",
     "metadata": {
       "createdDate": "2024-02-21T02:53:33.060+00:00",
       "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
-      "updatedDate": "2024-02-21T02:53:33.060+00:00",
-      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+      "updatedDate": "2024-03-27T00:21:08.689+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -6742,15 +6763,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Jennifer Schwartz Poehlmann"
-        },
-        {
-          "name": "Nathaniel Brown"
-        },
-        {
-          "name": "Lynette Cegelski"
-        }
+
       ]
     }
   },
@@ -8462,9 +8475,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Yan Xia"
-        }
+
       ]
     }
   },
@@ -9181,7 +9192,7 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Gene Kim"
+          "name": "Guenther Walther"
         }
       ]
     }
@@ -10479,6 +10490,25 @@
     }
   },
   {
+    "id": "a5c51438-619a-4264-b6b3-dc9192dca626",
+    "courseNumber": "PHYSICS-16-01",
+    "name": "The Origin and Development of the Cosmos",
+    "description": "How did the present Universe come to be? The last few decades have seen remarkable progress in understanding this age-old question. Course will cover the history of the Universe from its earliest moments to the present day, and the physical laws that govern its evolution. The early Universe including inflation and the creation of matter and the elements. Recent discoveries in our understanding of the makeup of the cosmos, including dark matter and dark energy. Evolution of galaxies, clusters, and quasars, and the Universe as a whole. Implications of dark matter and dark energy for the future evolution of the cosmos. ",
+    "metadata": {
+      "createdDate": "2024-03-26T16:27:35.192+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-26T16:27:35.192+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Roger Romani"
+        }
+      ]
+    }
+  },
+  {
     "id": "a5f89765-b161-43b5-b0bb-728fe2552419",
     "courseNumber": "CEE-176B-01",
     "name": "100% Clean, Renewable Energy and Storage for Everything",
@@ -10923,13 +10953,13 @@
     "metadata": {
       "createdDate": "2024-01-10T19:26:05.657+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-01-10T19:26:05.657+00:00",
+      "updatedDate": "2024-03-26T20:57:03.935+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Jan Vondrak"
+          "name": "Eugenia Malinnikova"
         }
       ]
     }
@@ -10983,15 +11013,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Waheeda Khalfan"
-        },
-        {
-          "name": "Robert Sapolsky"
-        },
-        {
-          "name": "Jose Dinneny"
-        }
+
       ]
     }
   },
@@ -11063,15 +11085,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Katarina Guzman"
-        },
-        {
-          "name": "Karl Persson"
-        },
-        {
-          "name": "Andrew Spakowitz"
-        }
+
       ]
     }
   },
@@ -11261,12 +11275,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Christine Jacobs-Wagner"
-        },
-        {
-          "name": "Leonardi Gozali"
-        }
+
       ]
     }
   },
@@ -11480,13 +11489,13 @@
     "metadata": {
       "createdDate": "2023-09-05T16:25:14.760+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-09-26T16:11:00.913+00:00",
+      "updatedDate": "2024-03-26T22:32:17.486+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Ravi Vakil"
+          "name": "Richard Taylor"
         }
       ]
     }
@@ -11505,12 +11514,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Dmitri Petrov"
-        },
-        {
-          "name": "Molly Schumer"
-        }
+
       ]
     }
   },
@@ -11867,22 +11871,6 @@
         {
           "name": "Gabrielle Moyer"
         }
-      ]
-    }
-  },
-  {
-    "id": "bd2dbd79-0ce0-4fd6-9318-b634b050c584",
-    "courseNumber": "JAPAN-125-01",
-    "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan",
-    "metadata": {
-      "createdDate": "2024-02-26T02:45:53.026+00:00",
-      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-      "updatedDate": "2024-02-26T02:45:53.026+00:00",
-      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -12488,7 +12476,7 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Gene Kim"
+          "name": "Guenther Walther"
         }
       ]
     }
@@ -12844,6 +12832,31 @@
     }
   },
   {
+    "id": "cc30a7d2-356a-45fc-ab5e-2df0ed3dd3e2",
+    "courseNumber": "EPI 251",
+    "name": "Design and Conduct of Clinical Trials",
+    "description": "The rationale for phases 1-3 clinical trials, the recruitment of subjects, techniques for randomization, data collection and endpoints, interim monitoring, and reporting of results. Emphasis is on the theoretical underpinnings of clinical research and the practical aspects of conducting clinical trials",
+    "metadata": {
+      "createdDate": "2024-03-26T17:03:38.060+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-26T17:03:38.060+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "V. Henderson"
+        },
+        {
+          "name": "Rita Popat"
+        },
+        {
+          "name": "Yutong Liu"
+        }
+      ]
+    }
+  },
+  {
     "id": "cc52e2b9-0bb0-473a-8c2b-e2b4bd091ef3",
     "courseNumber": "ARTHIST-302B-01",
     "name": "Coffee, Sugar, and Chocolate: Commodities and Consumption in World History, 1200-1800",
@@ -12983,12 +12996,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Cristina Flores-Herrera"
-        },
-        {
-          "name": "Stephen Lynch"
-        }
+
       ]
     }
   },
@@ -14282,6 +14290,24 @@
     }
   },
   {
+    "id": "df8b0f15-9344-4633-b957-704ce76a323b",
+    "courseNumber": "ENGLISH-215E-01",
+    "name": "Shakespeare and His Contexts: Race, Religion, Sexuality, Gender",
+    "metadata": {
+      "createdDate": "2024-03-26T18:47:13.723+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-26T18:50:41.291+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Patricia Parker"
+        }
+      ]
+    }
+  },
+  {
     "id": "df976975-044b-4c12-9b53-16d018d51963",
     "courseNumber": "EDUC-421-01",
     "name": "Powerful Ideas for Learning Sciences and Technology Design: Sociocultural Practices of the Blues",
@@ -15343,6 +15369,25 @@
     }
   },
   {
+    "id": "ef003823-d280-46f0-bd6a-ad549d04aae8",
+    "courseNumber": "STATS-305C-01",
+    "name": "Applied Statistics III",
+    "description": "Methods for multivariate responses. Theory, computation, and practice for multivariate statistical tools. Topics may include multivariate Gaussian models, probabilistic graphical models, MCMC and variational Bayesian inference, dimensionality reduction, principal components, factor analysis, independent components analysis, canonical correlations, linear discriminant analysis, hierarchical clustering, bi-clustering, multidimensional scaling and variants (e.g., Isomap, spectral clustering, t-SNE), matrix completion, topic modeling, and state space models. Extensive work with data involving programming, ideally in Python and/or R.",
+    "metadata": {
+      "createdDate": "2024-03-26T20:45:41.361+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-26T20:45:41.361+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Trevor Hastie"
+        }
+      ]
+    }
+  },
+  {
     "id": "ef748a17-708f-47b2-957f-8f1137a4db80",
     "courseNumber": "PHYSICS-220-01",
     "name": "Classical Electrodynamics",
@@ -16330,6 +16375,24 @@
         },
         {
           "name": "David Mills"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fe96cda1-9951-470b-8792-4e01d18555cd",
+    "courseNumber": "COMPLIT-320A-01",
+    "name": "Epic and Empire",
+    "metadata": {
+      "createdDate": "2024-03-26T18:49:35.947+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-26T18:49:35.947+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Patricia Parker"
         }
       ]
     }
