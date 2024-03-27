@@ -15,22 +15,7 @@ module AccessPanels
       @render_item_note = render_item_note
     end
 
-    def availability_text
-      item.status.status_text unless temporary_location_text
-    end
-
-    def temporary_location_text
-      return if item.effective_location&.details&.key?('availabilityClass') ||
-                item.effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
-                item.effective_permanent_location_code == item.temporary_location_code
-
-      item.temporary_location&.name
-    end
-
-    def has_in_process_availability_class?
-      availability_class = item.effective_location&.details&.dig('availabilityClass')
-      availability_class.present? && availability_class == 'In_process'
-    end
+    delegate :has_in_process_availability_class?, :temporary_location_text, :availability_text, to: :item
 
     def render_item_details?
       !item.suppressed?
