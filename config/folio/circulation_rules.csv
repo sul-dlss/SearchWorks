@@ -251,7 +251,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 3,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$1000 lost fee - 1 hr aged to lost
 ,accessories 2,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$500 lost fee - 1 hr aged to lost
 ,accessories 1,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$100 lost fee - 1 hr aged to lost
-,periodical,,,,LANE,,7day-2renew-3daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
+,periodical,,,,LANE,,7day-2renew-3daygrace,Allow paging/hold,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 ,multimedia,,,,LAW,,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,accessories 1,,,,LAW,,4hour-norenew-1hourgrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,periodical,,,,LAW,,7day-1renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee

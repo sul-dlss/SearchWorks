@@ -166,16 +166,19 @@
   },
   {
     "id": "0321a06d-0f49-46ec-9576-69cd3d54b4a4",
+    "courseNumber": "LAW-000-01",
     "name": "Spring Study Aids",
     "metadata": {
       "createdDate": "2024-03-26T20:47:21.060+00:00",
       "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-26T20:47:21.060+00:00",
+      "updatedDate": "2024-03-27T20:47:32.626+00:00",
       "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Will Huggins"
+        }
       ]
     }
   },
@@ -962,6 +965,27 @@
       "instructorObjects": [
         {
           "name": "Paula Findlen"
+        }
+      ]
+    }
+  },
+  {
+    "id": "11a6ca9f-637f-4640-b761-66e4826d9458",
+    "courseNumber": "AMSTUD-177B-01",
+    "name": " Contemporary American Short Stories",
+    "metadata": {
+      "createdDate": "2024-03-27T20:26:50.503+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-27T20:26:50.503+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gavin Jones"
+        },
+        {
+          "name": "Jenn Trahan"
         }
       ]
     }
@@ -1853,6 +1877,24 @@
     }
   },
   {
+    "id": "1f1c248f-89e2-41d3-8301-0fa04ade520d",
+    "courseNumber": "HISTORY-221B-01",
+    "name": "The 'Woman Question' in Modern Russia",
+    "metadata": {
+      "createdDate": "2024-03-28T01:23:49.550+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T01:23:49.550+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Katherine Jolluck"
+        }
+      ]
+    }
+  },
+  {
     "id": "1f6f02f6-864a-4865-a94e-c4517b1b2b76",
     "courseNumber": "CS-254-01",
     "name": "Computational Complexity",
@@ -1889,6 +1931,24 @@
     }
   },
   {
+    "id": "1fccaba1-fd24-4b84-bf76-c2a04e555b52",
+    "courseNumber": "EDUC-316-01",
+    "name": "Social Network Methods",
+    "metadata": {
+      "createdDate": "2024-03-28T00:05:34.065+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-28T00:05:34.065+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Daniel McFarland"
+        }
+      ]
+    }
+  },
+  {
     "id": "203d1070-2d6f-4719-97c0-48abaaadc403",
     "courseNumber": "GERMAN-230-01",
     "name": "German Literature (800-1700)",
@@ -1902,6 +1962,27 @@
       "instructorObjects": [
         {
           "name": "Kathryn Starkey"
+        }
+      ]
+    }
+  },
+  {
+    "id": "20b42f29-522e-468e-8b51-18724ba0cf49",
+    "courseNumber": "ENGLISH-177B-01",
+    "name": "Contemporary American Short Storie",
+    "metadata": {
+      "createdDate": "2024-03-27T20:26:05.081+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-27T20:26:05.081+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gavin Jones"
+        },
+        {
+          "name": "Jenn Trahan"
         }
       ]
     }
@@ -5290,6 +5371,25 @@
     }
   },
   {
+    "id": "5559cf92-874f-4617-a1dc-105d8ded3e04",
+    "courseNumber": "PHYSICS-81-01",
+    "name": "Electricity and Magnetism Using Special Relativity and Vector Calculus",
+    "description": "(Third in a three-part series: PHYSICS 61, PHYSICS 71, PHYSICS 81.) This course recasts the foundations of electricity and magnetism in a way that will surprise, delight, and challenge students who have already encountered the subject at a college or AP level. Suitable for students contemplating a major in Physics or Engineering Physics, those interested in a rigorous treatment of physics as a foundation for other disciplines, or those curious about powerful concepts like transformations, symmetry, and conservation laws. Electrostatics and Gauss' law. Electric potential, electric field, conductors, image charges. Electric currents, DC circuits. Moving charges, magnetic field as a consequence of special relativity applied to electrostatics, Ampere's law. Solenoids, transformers, induction, AC circuits, resonance. Displacement current, Maxwell's equations. Electromagnetic waves. Throughout, we'll see the objects and theorems of vector calculus become manifest in charges, currents, and electromagnetic fields.",
+    "metadata": {
+      "createdDate": "2024-03-27T21:18:18.950+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T21:18:18.950+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Chas Blakemore"
+        }
+      ]
+    }
+  },
+  {
     "id": "55f6779b-d9c4-45cf-a70d-04eb791a0c69",
     "courseNumber": "LAW-5005-01",
     "name": "European Union Law",
@@ -5525,6 +5625,25 @@
       "instructorObjects": [
         {
           "name": "Dennis Sun"
+        }
+      ]
+    }
+  },
+  {
+    "id": "57e45172-0880-4fc8-995f-a1ee020a8870",
+    "courseNumber": "PHYSICS-261-01",
+    "name": "Introduction to Cosmology and Extragalactic Astrophysics",
+    "description": "What do we know about the physical origins, content, and evolution of the Universe -- and how do we know it? Students learn how cosmological distances and times, and the geometry and expansion of space, are described and measured. Composition of the Universe. Origin of matter and the elements. Observational evidence for dark matter and dark energy. Thermal history of the Universe, from inflation to the present. Emergence of large-scale structure from quantum perturbations in the early Universe. Astrophysical tools used to learn about the Universe. Big open questions in cosmology.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:48:25.312+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:48:25.312+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Vahe Petrosian"
         }
       ]
     }
@@ -6008,6 +6127,25 @@
       "instructorObjects": [
         {
           "name": "Manuel Kamenzin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5d66e459-f3ca-4791-a57e-e957eaec3c92",
+    "courseNumber": "PHYSICS-152-01",
+    "name": "Introduction to Particle Physics I ",
+    "description": "Elementary particles and the fundamental forces. Quarks and leptons. The mediators of the electromagnetic, weak and strong interactions. Interaction of particles with matter; particle acceleration, and detection techniques. Symmetries and conservation laws. Bound states. Decay rates. Cross sections. Feynman diagrams. Introduction to Feynman integrals. The Dirac equation. Feynman rules for quantum electrodynamics and for chromodynamics.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:29:16.870+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:29:16.870+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Caterina Vernieri"
         }
       ]
     }
@@ -6896,6 +7034,25 @@
     }
   },
   {
+    "id": "6ad4ed8a-a1fc-4ff4-b179-02a88cf9de4c",
+    "courseNumber": "PHYSICS-130-01",
+    "name": "Quantum Mechanics I",
+    "description": "The origins of quantum mechanics and wave mechanics. Schr¿dinger equation and solutions for one-dimensional systems. Commutation relations. Generalized uncertainty principle. Time-energy uncertainty principle. Separation of variables and solutions for three-dimensional systems; application to a hydrogen atom. Spherically symmetric potentials and angular momentum eigenstates. Spin angular momentum. Addition of angular momentum.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:19:26.927+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:19:26.927+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Patricia Burchat"
+        }
+      ]
+    }
+  },
+  {
     "id": "6b0e05c8-ceaf-4cdc-bfe2-db879ed4f18c",
     "courseNumber": "BIO-296-01",
     "name": "Teaching and learning in Biology",
@@ -7659,6 +7816,25 @@
     }
   },
   {
+    "id": "77d9bc41-d084-4b2a-860a-0d2e8dd18125",
+    "courseNumber": "STATS-300C-01",
+    "name": "Theory of Statistics III",
+    "description": "Decision theory formulation of statistical problems. Minimax, admissible procedures. Complete class theorems (\"all\" minimax or admissible procedures are \"Bayes\"), Bayes procedures, conjugate priors, hierarchical models. Bayesian non parametrics: diaichlet, tail free, polya trees, bayesian sieves. Inconsistency of bayes rules.",
+    "metadata": {
+      "createdDate": "2024-03-27T15:33:14.945+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T15:33:14.945+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Emmanuel Candes"
+        }
+      ]
+    }
+  },
+  {
     "id": "77dd374a-f060-4425-adfd-3259b26f28aa",
     "courseNumber": "STATS-300B-01",
     "name": "Theory of Statistics II",
@@ -7716,6 +7892,29 @@
     }
   },
   {
+    "id": "78b76713-0634-490e-b979-0bc1fd471ed6",
+    "courseNumber": "CHEMENG 466",
+    "sectionName": "01",
+    "name": "Polymer Physics",
+    "description": "Fundamentals of the equilibrium properties and dynamic behaviors of polymers. Key concepts include single chain conformations, solution thermodynamics, scaling relations, polymer architecture, stress relaxation, and viscoelasticity. These concepts will be considered in the context of polymeric materials including but not limited to solutions and melts, networks (gels and rubbers), glasses, block copolymers, polyelectrolytes, and biopolymers. ",
+    "metadata": {
+      "createdDate": "2024-03-27T16:01:51.378+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-27T16:01:51.378+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Danielle Mai"
+        },
+        {
+          "name": "Noah Eckman"
+        }
+      ]
+    }
+  },
+  {
     "id": "78bc090d-9556-4d53-b4a0-357646b47bb0",
     "courseNumber": "TAPS-120A-01",
     "name": "Acting I: Fundamentals of Acting",
@@ -7729,6 +7928,24 @@
       "instructorObjects": [
         {
           "name": "Stephanie Hunt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "79001934-20db-47d6-9397-aebfbbad9fd7",
+    "courseNumber": "INTNLREL-200A-01",
+    "name": "International Relations Honors Field Research",
+    "metadata": {
+      "createdDate": "2024-03-28T01:22:18.641+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T01:22:18.641+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Erica Gould"
         }
       ]
     }
@@ -7766,6 +7983,25 @@
       "instructorObjects": [
         {
           "name": "George Papanicolaou"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7a0aa56f-ae31-4675-94a3-729ebd9ce015",
+    "courseNumber": "PHYSICS-121-01",
+    "name": "Intermediate Electricity and Magnetism II",
+    "description": "Conservation laws and electromagnetic waves, Poynting's theorem, tensor formulation, potentials, and fields. Plane-wave problems (free space, conductors and dielectric materials, boundaries). Dipole and quadruple radiation. Special relativity and transformation between electric and magnetic fields.",
+    "metadata": {
+      "createdDate": "2024-03-27T16:48:58.423+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T16:48:58.423+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jason Hogan"
         }
       ]
     }
@@ -7993,6 +8229,24 @@
       "instructorObjects": [
         {
           "name": "Landy, Joshua"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7e538d0a-5139-4bf9-8ff6-cfe6a5753264",
+    "courseNumber": "HISTORY-321B-01",
+    "name": "The 'Woman Question' in Modern Russia",
+    "metadata": {
+      "createdDate": "2024-03-28T01:25:21.520+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T01:25:21.520+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Katherine Jolluck"
         }
       ]
     }
@@ -8258,6 +8512,24 @@
       "instructorObjects": [
         {
           "name": "Anton Ermakov"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8300a751-b6f5-44c5-9e46-e8fe5fe9540d",
+    "courseNumber": "FEMGEN-221B-01",
+    "name": "The 'Woman Question' in Modern Russia",
+    "metadata": {
+      "createdDate": "2024-03-28T01:24:53.405+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T01:24:53.405+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Katherine Jolluck"
         }
       ]
     }
@@ -9495,6 +9767,24 @@
       "instructorObjects": [
         {
           "name": "Michael Rosenfeld"
+        }
+      ]
+    }
+  },
+  {
+    "id": "944584c7-0980-4071-86b7-15a6f07ff3b9",
+    "courseNumber": "SOC-369-01",
+    "name": "Social Network Methods",
+    "metadata": {
+      "createdDate": "2024-03-28T00:09:02.723+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-03-28T00:09:02.723+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Daniel McFarland"
         }
       ]
     }
@@ -11317,6 +11607,24 @@
     }
   },
   {
+    "id": "b42a9aba-8a00-4de1-a715-b89f9edaed21",
+    "courseNumber": "ESS-248-01",
+    "name": "Polar Climate Dynamics",
+    "metadata": {
+      "createdDate": "2024-03-27T19:03:48.561+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-27T19:10:52.882+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Earle Wilson"
+        }
+      ]
+    }
+  },
+  {
     "id": "b43b6c1c-d7ea-44ed-b5ff-85da3e1f2757",
     "courseNumber": "ENGLISH-5GA-01",
     "name": "Shakespeare and His Critics",
@@ -11569,6 +11877,25 @@
       "instructorObjects": [
         {
           "name": "Kyle Bagwell"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b91812a7-a550-4de0-8037-c94be722528b",
+    "courseNumber": "PHYSICS-252-01",
+    "name": "Introduction to Particle Physics I ",
+    "description": "Elementary particles and the fundamental forces. Quarks and leptons. The mediators of the electromagnetic, weak and strong interactions. Interaction of particles with matter; particle acceleration, and detection techniques. Symmetries and conservation laws. Bound states. Decay rates. Cross sections. Feynman diagrams. Introduction to Feynman integrals. The Dirac equation. Feynman rules for quantum electrodynamics and for chromodynamics.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:34:07.163+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:34:07.163+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Caterina Vernieri"
         }
       ]
     }
@@ -11984,6 +12311,25 @@
       "instructorObjects": [
         {
           "name": "Robert Rakove"
+        }
+      ]
+    }
+  },
+  {
+    "id": "be6f23e3-0b19-4213-a911-daab4a2c8876",
+    "courseNumber": "PHYSICS-161-01",
+    "name": "Introduction to Cosmology and Extragalactic Astrophysics",
+    "description": "What do we know about the physical origins, content, and evolution of the Universe -- and how do we know it? Students learn how cosmological distances and times, and the geometry and expansion of space, are described and measured. Composition of the Universe. Origin of matter and the elements. Observational evidence for dark matter and dark energy. Thermal history of the Universe, from inflation to the present. Emergence of large-scale structure from quantum perturbations in the early Universe. Astrophysical tools used to learn about the Universe. Big open questions in cosmology.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:47:34.780+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:47:34.780+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Vahe Petrosian"
         }
       ]
     }
@@ -14399,6 +14745,25 @@
     }
   },
   {
+    "id": "e0d77479-acf1-44d9-99f6-453a3ba10aea",
+    "courseNumber": "PHYSICS-108-01",
+    "name": "Advanced Physics Laboratory: Project",
+    "description": "Have you ever wanted to dream up a research question, then design, execute, and analyze an experiment to address it, together with a small group of your fellow students? This is an accelerated, guided experimental research experience, resembling real frontier research. Phenomena that have been studied include the magnetization of ferromagnets, the quantum hall effect in graphene, interference in superconducting circuits, loss in nanomechanical resonators, and superfluidity in helium. But most projects pursued (drawn from condensed matter and recently also particle physics) have never been done in the class before. Our equipment and apparatus for Physics 108 are very flexible, and not standardized like in most other lab classes. We provide substantial resources to help your team. Often, with instructors' help, students obtain unique samples from Stanford research groups.",
+    "metadata": {
+      "createdDate": "2024-03-27T22:08:37.526+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-27T22:08:37.526+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Goldhaber-Gordon"
+        }
+      ]
+    }
+  },
+  {
     "id": "e0e4a712-eb9f-4ae5-a9d8-b7e4e31507d4",
     "courseNumber": "ARTHIST 261",
     "name": "Black Aliveness ",
@@ -14616,6 +14981,24 @@
       "instructorObjects": [
         {
           "name": "Findlen, Paula E"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e3c5387f-18d3-48a5-b667-e46477dd7b8f",
+    "courseNumber": "ENGLISH-291-01",
+    "name": "Advanced Creative Nonfiction",
+    "metadata": {
+      "createdDate": "2024-03-28T01:27:42.830+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-03-28T01:27:42.830+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sarah Frisch"
         }
       ]
     }
