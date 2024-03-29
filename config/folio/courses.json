@@ -36,6 +36,24 @@
     }
   },
   {
+    "id": "00a45880-2088-4bbd-8b37-929093f1a032",
+    "courseNumber": "SEMINAR",
+    "name": "James Joyce's Ulysses: Directed Reading",
+    "metadata": {
+      "createdDate": "2024-03-28T21:17:50.986+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T02:39:40.546+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Sheehan"
+        }
+      ]
+    }
+  },
+  {
     "id": "01420e25-6a53-4281-9576-1c8f7a741c49",
     "courseNumber": "AA-272-01",
     "name": "Global Positioning Systems",
@@ -106,6 +124,30 @@
       "instructorObjects": [
         {
           "name": "Josiah Ober"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0279d3b4-9b84-4d5d-b8f0-0225a27d51f2",
+    "courseNumber": "GEOPHYS-90-01",
+    "name": "Earthquakes and Volcanoes",
+    "metadata": {
+      "createdDate": "2024-03-28T21:07:14.189+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-28T21:07:14.189+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Greg Beroza"
+        },
+        {
+          "name": "Shanna Chu"
+        },
+        {
+          "name": "Yixiao Sheng"
         }
       ]
     }
@@ -713,13 +755,13 @@
     "metadata": {
       "createdDate": "2023-11-30T22:52:42.478+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-02-06T21:16:43.099+00:00",
+      "updatedDate": "2024-03-28T18:19:33.430+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Sindy Tang"
+          "name": "Mark Cappelli"
         }
       ]
     }
@@ -831,6 +873,24 @@
       "instructorObjects": [
         {
           "name": "Alicia Thesing"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0f214185-50d1-4ee6-bf2b-fc1654a72089",
+    "courseNumber": "HISTORY-98-01",
+    "name": "The History of Modern China",
+    "metadata": {
+      "createdDate": "2024-03-28T19:23:33.083+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T19:23:33.083+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Mullaney"
         }
       ]
     }
@@ -1034,7 +1094,7 @@
     "metadata": {
       "createdDate": "2023-12-19T23:12:03.643+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-03-26T16:45:16.200+00:00",
+      "updatedDate": "2024-03-28T16:29:46.453+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
@@ -1859,24 +1919,6 @@
     }
   },
   {
-    "id": "1f08e306-bc96-4502-be73-deb71f86695c",
-    "courseNumber": "LAW-3006-01",
-    "name": "Law and Biosciences: Neuroscience ",
-    "metadata": {
-      "createdDate": "2023-12-18T19:14:20.483+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:14:20.483+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Hank Greely"
-        }
-      ]
-    }
-  },
-  {
     "id": "1f1c248f-89e2-41d3-8301-0fa04ade520d",
     "courseNumber": "HISTORY-221B-01",
     "name": "The 'Woman Question' in Modern Russia",
@@ -2478,6 +2520,25 @@
     }
   },
   {
+    "id": "2948bb76-712b-490b-bda6-dfc49bb5e089",
+    "courseNumber": "STATS-310C-01",
+    "name": "Theory of Probability III",
+    "description": "Continuous time stochastic processes: martingales, Brownian motion, stationary independent increments, Markov jump processes and Gaussian processes. Invariance principle, random walks, LIL and functional CLT. Markov and strong Markov property. Infinitely divisible laws. Some ergodic theory.",
+    "metadata": {
+      "createdDate": "2024-03-28T22:17:35.253+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T22:17:35.253+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amir Dembo"
+        }
+      ]
+    }
+  },
+  {
     "id": "2956e903-b66a-43ab-b919-bb53de829a44",
     "courseNumber": "MS&E-277A-01",
     "name": "Entrepreneurial Leadership",
@@ -2584,6 +2645,25 @@
       "instructorObjects": [
         {
           "name": "Anne Charity Hudley"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2a8fb6e7-5541-438c-9257-49d5a0c668cf",
+    "courseNumber": "MATH-210C-01",
+    "name": "Lie Theory",
+    "description": "opics in Lie groups, Lie algebras, and/or representation theory. Prerequisite: Math 210A and familiarity with the basics of finite group representations. When the course is on Lie groups, familiarity with tangent spaces and integration on manifolds is assumed. ",
+    "metadata": {
+      "createdDate": "2024-03-28T20:00:00.072+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:00:00.072+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Daniel Bump"
         }
       ]
     }
@@ -2820,6 +2900,24 @@
       "instructorObjects": [
         {
           "name": "Laura Heath-Stout"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2dd18db6-139a-48e6-b052-571f36b0ffbf",
+    "courseNumber": "CSRE-131B-01",
+    "name": "Jews, Race, and Ethnicity in French Cinema and Literature ",
+    "metadata": {
+      "createdDate": "2024-03-29T02:33:22.331+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T02:33:22.331+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rebecca Glasberg"
         }
       ]
     }
@@ -3290,19 +3388,19 @@
     }
   },
   {
-    "id": "37a97ccf-2517-4c0e-b531-f241f1a59431",
-    "courseNumber": "COMPLIT-37Q-01",
-    "name": "Zionism and the Novel",
+    "id": "37949741-f969-4821-ad98-853e0b02491c",
+    "courseNumber": "FEMGEN-112-01",
+    "name": "Passing: Hidden Identities Onscreen ",
     "metadata": {
-      "createdDate": "2023-09-29T05:27:58.191+00:00",
+      "createdDate": "2024-03-29T00:17:03.958+00:00",
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2023-09-29T05:27:58.191+00:00",
+      "updatedDate": "2024-03-29T00:17:03.958+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Russell Berman"
+          "name": "Jonathan Branfman"
         }
       ]
     }
@@ -3516,13 +3614,13 @@
     "metadata": {
       "createdDate": "2023-09-07T16:56:42.546+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-09-26T16:47:19.088+00:00",
+      "updatedDate": "2024-03-28T15:53:01.058+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Jayoon Jang"
+          "name": "Harrison Li"
         }
       ]
     }
@@ -3599,6 +3697,25 @@
     }
   },
   {
+    "id": "3b925cea-d772-4f0a-8745-cbf97bcbd651",
+    "courseNumber": "STATS-207-01",
+    "name": "Introduction to Time Series Analysis",
+    "description": "Time series models used in economics and engineering. Trend fitting, autoregressive and moving average models and spectral analysis, Kalman filtering, and state-space models. Seasonality, transformations, and introduction to financial time series.",
+    "metadata": {
+      "createdDate": "2024-03-28T20:15:49.340+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:15:49.340+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Dominik Rothenhaeusler"
+        }
+      ]
+    }
+  },
+  {
     "id": "3b9ff907-2488-445f-8664-222f5eb634e3",
     "courseNumber": "ILAC-106-01",
     "name": "From Disney to Telenovelas: Latin America in Popular Film and TV",
@@ -3612,24 +3729,6 @@
       "instructorObjects": [
         {
           "name": "Jennifer Alpert"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3c8cb712-1b91-472b-bc0e-0c2129095da6",
-    "courseNumber": "LAW-7026-01",
-    "name": "Immigration Law",
-    "metadata": {
-      "createdDate": "2023-12-15T21:36:25.530+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T21:36:25.530+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Lucas Guttentag"
         }
       ]
     }
@@ -3700,13 +3799,13 @@
     "metadata": {
       "createdDate": "2023-09-18T18:24:09.692+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-09-26T16:05:46.574+00:00",
+      "updatedDate": "2024-03-28T16:24:47.472+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Rick Sommer"
+          "name": "Arka Adhikari"
         }
       ]
     }
@@ -3745,6 +3844,25 @@
       "instructorObjects": [
         {
           "name": "Daniel Ho"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3d56cee6-d326-4efd-90a3-e3ff8542ba22",
+    "courseNumber": "MATH-173-01",
+    "name": "Theory of Partial Differential Equations",
+    "description": "A rigorous introduction to PDE accessible to advanced undergraduates. Elliptic, parabolic, and hyperbolic equations in many space dimensions including basic properties of solutions such as maximum principles, causality, and conservation laws. Methods include the Fourier transform as well as more classical methods. The Lebesgue integral will be used throughout, but a summary of its properties will be provided to make the course accessible to students who have not had 172 or 205A.",
+    "metadata": {
+      "createdDate": "2024-03-28T17:24:07.954+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T17:24:07.954+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ethan Sussman"
         }
       ]
     }
@@ -4267,6 +4385,25 @@
     }
   },
   {
+    "id": "44685bc2-afa7-431e-adc5-ed78078416bc",
+    "courseNumber": "MATH-158-01",
+    "name": "Probability and Stochastic Differential Equations for Applications",
+    "description": "Calculus of random variables and their distributions with applications. Review of limit theorems of probability and their application to statistical estimation and basic Monte Carlo methods. Introduction to Markov chains, random walks, Brownian motion and basic stochastic differential equations with some applications in science and/or engineering.",
+    "metadata": {
+      "createdDate": "2024-03-28T22:25:35.134+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T22:25:35.134+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Arka Adhikari"
+        }
+      ]
+    }
+  },
+  {
     "id": "44a02670-f0eb-4f30-8d6a-0b8daa39b034",
     "courseNumber": "BMP-269A-01",
     "name": "Medical Imaging Systems I",
@@ -4342,6 +4479,30 @@
     }
   },
   {
+    "id": "45c16d72-eceb-419d-b7b8-1aa92e9c40ce",
+    "courseNumber": "EARTHSYS-113-01",
+    "name": "Earthquakes and Volcanoes",
+    "metadata": {
+      "createdDate": "2024-03-28T21:08:48.830+00:00",
+      "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
+      "updatedDate": "2024-03-28T21:08:48.830+00:00",
+      "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Greg Beroza"
+        },
+        {
+          "name": "Shanna Chu"
+        },
+        {
+          "name": "Yixiao Sheng"
+        }
+      ]
+    }
+  },
+  {
     "id": "45e7c4cd-4008-4475-863d-18afd234ba9a",
     "courseNumber": "ENGLISH-314-01",
     "name": " Epic and Empire ",
@@ -4378,24 +4539,6 @@
     }
   },
   {
-    "id": "47006db8-77cb-48f9-882f-b122e82acb4c",
-    "courseNumber": "LAW-2403-01",
-    "name": "Federal Courts",
-    "metadata": {
-      "createdDate": "2023-09-03T16:24:49.287+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:37:24.160+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Norman Spaulding"
-        }
-      ]
-    }
-  },
-  {
     "id": "4702bae7-cb3d-40f6-854c-eda2e8037327",
     "courseNumber": "PSYC-126-01",
     "name": "Literature and the Brain",
@@ -4425,6 +4568,25 @@
       "instructorObjects": [
         {
           "name": "Joan Resina"
+        }
+      ]
+    }
+  },
+  {
+    "id": "476a6c67-07c2-461a-924e-334510129cbc",
+    "courseNumber": "MATH-87Q-01",
+    "name": "Mathematics of Knots, Braids, Links, and Tangles",
+    "description": "Types of knots and how knots can be distinguished from one another by means of numerical or polynomial invariants. The geometry and algebra of braids, including their relationships to knots. Topology of surfaces. Brief summary of applications to biology, chemistry, and physics.",
+    "metadata": {
+      "createdDate": "2024-03-28T16:03:39.155+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T16:03:39.155+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Wojciech Wieczorek"
         }
       ]
     }
@@ -4867,6 +5029,25 @@
         },
         {
           "name": "Haiyan Lee"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4e5a73a5-8096-4fbc-9237-f437abef06b7",
+    "courseNumber": "STATS-218-01",
+    "name": "Introduction to Stochastic Processes II",
+    "description": "Renewal theory, Brownian motion, Gaussian processes, second order processes, martingales.",
+    "metadata": {
+      "createdDate": "2024-03-28T20:21:18.509+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:21:18.509+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Shuangping Li"
         }
       ]
     }
@@ -5390,24 +5571,6 @@
     }
   },
   {
-    "id": "55f6779b-d9c4-45cf-a70d-04eb791a0c69",
-    "courseNumber": "LAW-5005-01",
-    "name": "European Union Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:58:45.866+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:58:45.866+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Siegfried Fina"
-        }
-      ]
-    }
-  },
-  {
     "id": "55ff10d4-1d01-4fc5-8fe8-a5e123da1a58",
     "courseNumber": "REES-219-01",
     "name": "A New Cold War? Great Power Relations in the 21st Century",
@@ -5498,6 +5661,25 @@
         },
         {
           "name": "Jack Bair"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5685507c-6bd8-419a-87f8-779e1cb57898",
+    "courseNumber": "PHYSICS-452-01",
+    "name": "Inflationary Cosmology",
+    "description": "This course describes the origin and the present status of inflationary cosmology. The main topics include: The Big Bang theory and the theory of cosmological phase transitions. Formation of domain walls, cosmic strings, and monopolies. Problems of the Big Bang theory, and solving these problems in inflationary cosmology. Main conceptual steps: Starobinsky model, old inflation, new inflation, chaotic inflation, eternal inflation. Reheating of the universe after inflation. Inflationary perturbations and the large-scale structure formation. Inflationary gravitational waves. Popular inflationary models such as hybrid inflation, natural inflation, Higgs inflation, and alpha-attractors. Testing inflationary models. Theory of tunneling and stochastic approach to inflation. The problem of initial conditions. Inflation in supergravity and string theory. Wave function of the universe, quantum cosmology, multiverse, and string theory landscape. ",
+    "metadata": {
+      "createdDate": "2024-03-28T22:44:42.086+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T22:44:42.086+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrei Linde"
         }
       ]
     }
@@ -5964,6 +6146,24 @@
       "instructorObjects": [
         {
           "name": "Omer Reingold"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5b79589e-f7e6-4274-92eb-36ba860c1dbd",
+    "courseNumber": "HISTORY-1C-01",
+    "name": "Global History through Graphic Novels: The Modern Age",
+    "metadata": {
+      "createdDate": "2024-03-28T20:16:38.264+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T20:16:38.264+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Mullaney"
         }
       ]
     }
@@ -7200,6 +7400,24 @@
     }
   },
   {
+    "id": "6ce09c8d-3ce4-4532-9fcc-d790b0b4f9a6",
+    "courseNumber": "JEWISHST-112-01",
+    "name": "Passing: Hidden Identities Onscreen ",
+    "metadata": {
+      "createdDate": "2024-03-29T00:16:34.573+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T00:16:34.573+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Branfman"
+        }
+      ]
+    }
+  },
+  {
     "id": "6ce8121b-3774-4499-934f-403e17cb4a2d",
     "courseNumber": "LAW-203-02",
     "name": "Constitutional Law",
@@ -7285,6 +7503,25 @@
       "instructorObjects": [
         {
           "name": "Cecile Alduy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "6f214d29-be7f-4468-b1c8-ccb0388fad8d",
+    "courseNumber": "MATH-147-01",
+    "name": "Differential Topology",
+    "description": "Introduction to smooth methods in topology including tranvsersality, intersection number, fixed point theorems, as well as differential forms and integration. ",
+    "metadata": {
+      "createdDate": "2024-03-28T22:32:35.466+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T22:32:35.466+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Otis Chodosh"
         }
       ]
     }
@@ -7391,24 +7628,6 @@
     }
   },
   {
-    "id": "726831a2-bc4f-429b-8e52-65811ac4a97d",
-    "courseNumber": "LAW-3507-01",
-    "name": "Law and the Rhetorical Tradition",
-    "metadata": {
-      "createdDate": "2023-12-18T19:03:58.156+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:03:58.156+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Ticien Sassoubre"
-        }
-      ]
-    }
-  },
-  {
     "id": "72cfb60e-7191-4211-8699-6a1beb496a85",
     "courseNumber": "CS-231A-01",
     "name": "Computer Vision: From 3D Perception to 3D Reconstruction and Beyond",
@@ -7499,6 +7718,24 @@
       "instructorObjects": [
         {
           "name": "Lisa Modifica"
+        }
+      ]
+    }
+  },
+  {
+    "id": "73d493cb-d259-47cb-b065-4f04ab988c9e",
+    "courseNumber": "JEWISHST-131-01",
+    "name": "Jews, Race, and Ethnicity in French Cinema and Literature ",
+    "metadata": {
+      "createdDate": "2024-03-29T02:33:02.594+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T02:33:02.594+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rebecca Glasberg"
         }
       ]
     }
@@ -7873,6 +8110,24 @@
     }
   },
   {
+    "id": "781317d8-04f3-4d8f-868e-382559383596",
+    "courseNumber": "CS-225-01",
+    "name": "Machine Learning for Discrete Optimization ",
+    "metadata": {
+      "createdDate": "2024-03-28T19:51:40.457+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-28T19:51:40.457+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ellen Vitercik"
+        }
+      ]
+    }
+  },
+  {
     "id": "786b403a-723c-42b8-8410-5e80a6b2e4fd",
     "courseNumber": "PHOTON-283-01",
     "name": "Ultrafast Quantum Physics",
@@ -7939,8 +8194,8 @@
     "metadata": {
       "createdDate": "2024-03-28T01:22:18.641+00:00",
       "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
-      "updatedDate": "2024-03-28T01:22:18.641+00:00",
-      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+      "updatedDate": "2024-03-28T19:56:30.531+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -8076,7 +8331,7 @@
     "metadata": {
       "createdDate": "2023-10-10T20:31:40.756+00:00",
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-      "updatedDate": "2024-02-06T21:09:06.894+00:00",
+      "updatedDate": "2024-03-28T18:41:56.375+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -8143,6 +8398,25 @@
     }
   },
   {
+    "id": "7ca4af2e-a271-422a-b0bd-69d57ba27bcc",
+    "courseNumber": "MATH-118-01",
+    "name": "Mathematics of Computation",
+    "description": "Notions of analysis and algorithms central to modern scientific computing: continuous and discrete Fourier expansions, the fast Fourier transform, orthogonal polynomials, interpolation, quadrature, numerical differentiation, analysis and discretization of initial-value and boundary-value ODE, finite and spectral elements.",
+    "metadata": {
+      "createdDate": "2024-03-28T16:40:17.800+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T16:40:17.800+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alice Cortinovis"
+        }
+      ]
+    }
+  },
+  {
     "id": "7d5f6107-8671-4ddf-afce-0ba14acfd0e0",
     "courseNumber": "COMPMED 114",
     "name": "Wielding White Coat Words: Introduction to Comparative Medical Terminology",
@@ -8193,6 +8467,25 @@
       "instructorObjects": [
         {
           "name": "Steven Gorelick"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7ded4fba-72f1-4000-ab28-a020788ed1ce",
+    "courseNumber": "MATH-205C-01",
+    "name": "Topics in Harmonic Analysis",
+    "description": "Topics of contemporary interest in Fourier, harmonic, and/or microlocal analysis.",
+    "metadata": {
+      "createdDate": "2024-03-28T17:32:33.808+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T17:32:33.808+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Otis Chodosh"
         }
       ]
     }
@@ -8487,13 +8780,13 @@
     "metadata": {
       "createdDate": "2024-01-11T01:40:19.598+00:00",
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
-      "updatedDate": "2024-01-11T01:40:19.598+00:00",
-      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+      "updatedDate": "2024-03-28T23:26:22.719+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Wendy Gu"
+          "name": "Jeff Wood"
         }
       ]
     }
@@ -9052,6 +9345,24 @@
       "instructorObjects": [
         {
           "name": "Yoshiko Matsumoto"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8bfa1651-dcec-4e14-a8b6-f6edfd74b6a9",
+    "courseNumber": "CEE-274D-01",
+    "name": "Pathogens and Disinfection",
+    "metadata": {
+      "createdDate": "2024-03-28T21:04:12.201+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-28T21:04:12.201+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Craig Criddle"
         }
       ]
     }
@@ -9712,24 +10023,6 @@
     }
   },
   {
-    "id": "93b1b23a-f6a3-4904-88b7-41720b566ef3",
-    "courseNumber": "LAW-2505-01",
-    "name": "Land Use Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:53:14.686+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:53:14.686+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Timothy Fox"
-        }
-      ]
-    }
-  },
-  {
     "id": "93e0c764-911c-4c7b-84e8-5641659cafbe",
     "courseNumber": "HUMBIO-164-01",
     "name": "Autism Spectrum Disorder",
@@ -9973,6 +10266,25 @@
       "instructorObjects": [
         {
           "name": "Pavle Levi"
+        }
+      ]
+    }
+  },
+  {
+    "id": "9841c48f-9dd8-43d5-bc25-d4d5ee36cfa3",
+    "courseNumber": "MATH-172-01",
+    "name": "Lebesgue Integration and Fourier Analysis",
+    "description": "Similar to 205A, but for undergraduate Math majors and graduate students in other disciplines. Topics include Lebesgue measure on Euclidean space, Lebesgue integration, L^p spaces, the Fourier transform, the Hardy-Littlewood maximal function and Lebesgue differentiation.",
+    "metadata": {
+      "createdDate": "2024-03-28T17:06:19.939+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T17:06:19.939+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Weifeng Sun"
         }
       ]
     }
@@ -10309,6 +10621,25 @@
     }
   },
   {
+    "id": "9e30868e-3cdb-418f-8e54-a8b5003398eb",
+    "courseNumber": "MATH-215C-01",
+    "name": "Differential Geometry",
+    "description": "This course will be an introduction to Riemannian Geometry. Topics will include the Levi-Civita connection, Riemann curvature tensor, Ricci and scalar curvature, geodesics, parallel transport, completeness, geodesics and Jacobi fields, and comparison techniques.",
+    "metadata": {
+      "createdDate": "2024-03-28T20:06:56.925+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:06:56.925+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Brian White"
+        }
+      ]
+    }
+  },
+  {
     "id": "9e3a2191-a738-48f1-ab4f-729858228062",
     "courseNumber": "BIO-83-01",
     "name": "Biochemistry & Molecular Biology",
@@ -10576,6 +10907,25 @@
         },
         {
           "name": "Lingjia Xu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a1130d4b-4708-4b9e-abf0-2823469b6ffa",
+    "courseNumber": "MATH-122-01",
+    "name": "Modules and Group Representations",
+    "description": "Modules over PID. Tensor products over fields. Group representations and group rings. Maschke's theorem and character theory. Character tables, construction of representations. ",
+    "metadata": {
+      "createdDate": "2024-03-28T16:44:55.318+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T16:44:55.318+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Richard Taylor"
         }
       ]
     }
@@ -11718,6 +12068,25 @@
     }
   },
   {
+    "id": "b5cefe66-29bf-4f62-ab51-1ed7c68675c6",
+    "courseNumber": "STATS-205-01",
+    "name": "Introduction to Nonparametric Statistics",
+    "description": "Nonparametric regression and nonparametric density estimation, modern nonparametric techniques, nonparametric confidence interval estimates, nearest neighbor algorithms (with non-linear features), wavelet, bootstrap. Nonparametric analogs of the one- and two-sample t-tests and analysis of variance",
+    "metadata": {
+      "createdDate": "2024-03-28T20:11:35.426+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:11:35.426+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alden Green"
+        }
+      ]
+    }
+  },
+  {
     "id": "b5cf6355-bef1-4ffd-a50d-765eb6507c6e",
     "courseNumber": "JAPANLIT-257",
     "name": "Points in Japanese Grammar",
@@ -12573,13 +12942,13 @@
     "metadata": {
       "createdDate": "2023-12-12T22:08:21.670+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-02-06T21:12:50.314+00:00",
+      "updatedDate": "2024-03-28T20:44:41.308+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Michaelle Mayalu"
+          "name": "Abbas Emami-Naeini"
         }
       ]
     }
@@ -12677,24 +13046,6 @@
         },
         {
           "name": "Zachary Edmonds"
-        }
-      ]
-    }
-  },
-  {
-    "id": "c303af84-d2a1-462c-a2df-335972a4c64e",
-    "courseNumber": "LAW-2519-01",
-    "name": "Water Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:18:50.484+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:18:50.484+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Barton Thompson"
         }
       ]
     }
@@ -12981,6 +13332,25 @@
         },
         {
           "name": "Gretchen Engbring"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c8e4ef80-9ac9-421e-a80e-2e3553958b4c",
+    "courseNumber": "MATH-108-01",
+    "name": "Introduction to Combinatorics and Its Applications",
+    "description": "Topics: graphs, trees (Cayley's Theorem, application to phylogony), eigenvalues, basic enumeration (permutations, Stirling and Bell numbers), recurrences, generating functions, basic asymptotics.",
+    "metadata": {
+      "createdDate": "2024-03-28T16:20:29.093+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T16:20:29.093+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jan Vondrak"
         }
       ]
     }
@@ -13483,6 +13853,24 @@
       "instructorObjects": [
         {
           "name": "Amir Weiner"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cf143432-672d-400c-85b7-f08def38b295",
+    "courseNumber": "FRENCH-102-01",
+    "name": "Jews, Race, and Ethnicity in French Cinema and Literature ",
+    "metadata": {
+      "createdDate": "2024-03-29T02:33:36.427+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T02:33:36.427+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rebecca Glasberg"
         }
       ]
     }
@@ -14508,24 +14896,6 @@
     }
   },
   {
-    "id": "dd014433-738f-4177-95bb-2a177d790c50",
-    "courseNumber": "LAW-7512-01",
-    "name": "Statistical Inference in Law",
-    "metadata": {
-      "createdDate": "2023-12-18T19:09:21.594+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:09:21.594+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "John Donohue"
-        }
-      ]
-    }
-  },
-  {
     "id": "dd893420-0b3d-4a6a-a66e-fff814c23151",
     "courseNumber": "ESF-14-02",
     "name": "Education as Self-Fashioning: The Challenge of Choice",
@@ -14690,24 +15060,6 @@
     }
   },
   {
-    "id": "dfec2019-294e-4b21-b929-55a1372fb8bf",
-    "courseNumber": "LAW-1029-01",
-    "name": "Taxation I",
-    "metadata": {
-      "createdDate": "2023-12-18T18:22:42.542+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:22:42.542+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Brad Joondeph"
-        }
-      ]
-    }
-  },
-  {
     "id": "e07812a4-9e71-4d6d-aef7-83964b26a9ed",
     "courseNumber": "ILAC-107N-01",
     "name": "History in Images: Scenes from the Franco Dictatorship in Spanish Cinema",
@@ -14841,13 +15193,13 @@
     "metadata": {
       "createdDate": "2023-09-20T22:16:46.266+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-09-26T16:10:40.401+00:00",
+      "updatedDate": "2024-03-28T16:55:33.009+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Cole Hugelmeyer"
+          "name": "Weifeng Sun"
         }
       ]
     }
@@ -14906,6 +15258,24 @@
         },
         {
           "name": "David Reis"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e2a8b9b4-853e-446e-a3a9-252f9354132e",
+    "courseNumber": "CSRE-113-01",
+    "name": "Passing: Hidden Identities Onscreen ",
+    "metadata": {
+      "createdDate": "2024-03-29T00:17:26.374+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-29T00:17:26.374+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Branfman"
         }
       ]
     }
@@ -15519,6 +15889,25 @@
     }
   },
   {
+    "id": "eb671ac9-5221-4277-a459-6261e2dde26e",
+    "courseNumber": "MATH-230C-01",
+    "name": "Theory of Probability III",
+    "description": "Continuous time stochastic processes: martingales, Brownian motion, stationary independent increments, Markov jump processes and Gaussian processes. Invariance principle, random walks, LIL and functional CLT. Markov and strong Markov property. Infinitely divisible laws. Some ergodic theory.",
+    "metadata": {
+      "createdDate": "2024-03-28T22:18:30.226+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T22:18:30.226+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amir Dembo"
+        }
+      ]
+    }
+  },
+  {
     "id": "ebe81384-bc34-44e3-8479-4fa8516bb1ce",
     "courseNumber": "ANTHRO-301-01",
     "name": " History of Anthropological Theory, Culture and Society",
@@ -15971,24 +16360,6 @@
     }
   },
   {
-    "id": "f2a45a68-7dc1-4ae4-804c-eb092167eb84",
-    "courseNumber": "JEWISHST-112-01",
-    "name": "Passing: Hidden Identities Onscreen ",
-    "metadata": {
-      "createdDate": "2024-03-25T02:55:31.584+00:00",
-      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2024-03-25T02:55:31.584+00:00",
-      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jonathan Branfman"
-        }
-      ]
-    }
-  },
-  {
     "id": "f33e4cc4-6a05-449e-b839-5be57905a7c0",
     "courseNumber": "LAW-7849-01",
     "name": "Mediation Boot Camp",
@@ -16007,24 +16378,6 @@
     }
   },
   {
-    "id": "f34f33d9-5473-4ed3-94ed-545824eae2d7",
-    "courseNumber": "LAW-2402-01",
-    "name": "Evidence ",
-    "metadata": {
-      "createdDate": "2023-12-18T18:28:54.051+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:28:54.051+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "George Fisher"
-        }
-      ]
-    }
-  },
-  {
     "id": "f3960e4c-d741-43b8-a143-f1e7754afb79",
     "courseNumber": "LINGUIST-234-01",
     "name": "The Structure of Discourse: Theory and Applications",
@@ -16038,6 +16391,24 @@
       "instructorObjects": [
         {
           "name": "Katherine Hilton"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f3e4ff2a-0b7f-4341-9254-00d4378d375a",
+    "courseNumber": "HISTORY-198-01",
+    "name": "The History of Modern China",
+    "metadata": {
+      "createdDate": "2024-03-28T19:22:46.662+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-03-28T19:22:46.662+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Mullaney"
         }
       ]
     }
@@ -16351,6 +16722,25 @@
     }
   },
   {
+    "id": "f8c8cbf9-2e29-4bf1-86e4-d8a92266b6c7",
+    "courseNumber": "STATS-307-01",
+    "name": "Introduction to Time Series Analysis",
+    "description": "Time series models used in economics and engineering. Trend fitting, autoregressive and moving average models and spectral analysis, Kalman filtering, and state-space models. Seasonality, transformations, and introduction to financial time series.",
+    "metadata": {
+      "createdDate": "2024-03-28T20:17:41.654+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-28T20:17:41.654+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Dominik Rothenhaeusler"
+        }
+      ]
+    }
+  },
+  {
     "id": "f8f73313-b347-4df1-9b84-c85e9df27927",
     "courseNumber": "ENGLISH-290-01",
     "name": "Advanced Fiction Writing",
@@ -16520,6 +16910,22 @@
     }
   },
   {
+    "id": "fb947edf-1f6d-422e-910a-06e3e4e57899",
+    "courseNumber": "PWR-1EI-02",
+    "name": "Writing & Rhetoric 1: Watch Now: Rhetorics of Film and Television",
+    "metadata": {
+      "createdDate": "2024-03-28T20:00:34.558+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-03-28T20:00:34.558+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "fba2684f-74d9-4120-b8e1-e8cc13c93ef0",
     "courseNumber": "EDUC-200B-01",
     "name": "Introduction to Qualitative Research Methods",
@@ -16586,6 +16992,24 @@
       "instructorObjects": [
         {
           "name": "Lernik Asserian"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fca5bebb-65ff-400d-8d01-9702015c794a",
+    "courseNumber": "MS&E-236-01",
+    "name": "Machine Learning for Discrete Optimization ",
+    "metadata": {
+      "createdDate": "2024-03-28T19:50:07.665+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-28T19:50:07.665+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ellen Vitercik"
         }
       ]
     }
