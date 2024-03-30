@@ -2813,6 +2813,31 @@
     }
   },
   {
+    "id": "28ed63cf-2b87-428d-a83c-70b280682cd3",
+    "name": "Marine Bio JEDI",
+    "code": "MAR-JEDI",
+    "discoveryDisplayName": "JEDI collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "447337a0-4eeb-4002-94fb-af6e9f1c121b",
+    "details": {
+    },
+    "primaryServicePoint": "17721adb-638d-417c-85a4-280c67c0d0a9",
+    "servicePointIds": [
+      "17721adb-638d-417c-85a4-280c67c0d0a9"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-03-29T22:48:31.376+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-03-29T22:48:31.376+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "29503544-ff29-4333-a642-81388526e467",
     "name": "Green Send to SAL3",
     "code": "GRE-SEND2SAL3",
@@ -6733,6 +6758,32 @@
     }
   },
   {
+    "id": "73aca698-c6f5-4a0d-900b-01fbd0d2924b",
+    "name": "Green Hohbach SVA",
+    "code": "GRE-HH-SVA",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-03-30T00:03:46.585+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-03-30T00:03:46.585+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "749f175f-8308-44af-8cec-5b0d4b89c3d5",
     "name": "Science Withdrawn",
     "code": "SCI-WITHDRAWN",
@@ -9359,6 +9410,33 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:36.833+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a172bf77-3012-4a30-a6e0-8a83884a423c",
+    "name": "SAL3 PAGE-MM",
+    "code": "SAL3-PAGE-MM",
+    "discoveryDisplayName": "Request for pickup at Green Media Center",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "MEDIA-CENTER"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-03-29T23:10:24.749+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-03-29T23:10:24.749+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
