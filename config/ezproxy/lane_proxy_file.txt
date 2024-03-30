@@ -922,6 +922,7 @@ josr-online.biomedcentral.com
 journal-inflammation.biomedcentral.com
 journal.copdfoundation.org
 journal.einstein.br
+journal.equinoxpub.com
 journal.imbio.de
 journal.waocp.org
 journalhosting.ucalgary.ca
