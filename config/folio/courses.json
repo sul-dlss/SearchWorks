@@ -1432,6 +1432,24 @@
     }
   },
   {
+    "id": "17511a51-7e52-4bfb-a023-93e73a374540",
+    "courseNumber": "AA-245-01",
+    "name": "Stability of Structures",
+    "metadata": {
+      "createdDate": "2024-03-29T17:50:26.553+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-29T17:50:26.553+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Manan Arya"
+        }
+      ]
+    }
+  },
+  {
     "id": "177b41b4-660c-490d-9352-ce8164abbd56",
     "courseNumber": "CEE-283-01",
     "name": "Structural Dynamics",
@@ -2048,6 +2066,27 @@
     }
   },
   {
+    "id": "20dddf21-a22b-41c5-b512-cce4c0b37b0a",
+    "courseNumber": "CEE-207R-01",
+    "name": "E^3: Extreme Energy Efficiency",
+    "metadata": {
+      "createdDate": "2024-03-30T01:34:03.092+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-30T01:34:03.092+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amory Lovins"
+        },
+        {
+          "name": "Joel Swisher"
+        }
+      ]
+    }
+  },
+  {
     "id": "217abb90-65a4-47e6-9a4a-a80ba2c58b24",
     "courseNumber": "ENGR-155A-01",
     "name": "Ordinary Differential Equations for Engineers",
@@ -2527,7 +2566,7 @@
     "metadata": {
       "createdDate": "2024-03-28T22:17:35.253+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-03-28T22:17:35.253+00:00",
+      "updatedDate": "2024-03-29T22:31:57.995+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
@@ -3908,6 +3947,24 @@
     }
   },
   {
+    "id": "3fc6ea7e-77a1-4441-9d94-4feb08cd8f6d",
+    "courseNumber": "MATSCI-173-01",
+    "name": "Mechanical Behavior Laboratory ",
+    "metadata": {
+      "createdDate": "2024-03-29T16:39:49.476+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-29T16:39:49.476+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Haoxue Yan"
+        }
+      ]
+    }
+  },
+  {
     "id": "3fcc574e-a09e-4237-9301-c568d1ae1236",
     "courseNumber": "BIOMEDIN-214-01",
     "name": "Representations and Algorithms for Computational Molecular ",
@@ -4521,6 +4578,25 @@
     }
   },
   {
+    "id": "45f98dab-2607-422e-84b7-b8b2b8c4bbfd",
+    "courseNumber": "MATH-63DM-01",
+    "name": "Modern Mathematics: Discrete Methods",
+    "description": "Third part of a proof-based sequence in discrete mathematics, though independent of the second part (62DM). The first half of the quarter gives a brisk-paced coverage of probability and random processes with an intensive use of generating functions and a rich variety of applications. The second half treats entropy, Bayesian inference, Markov chains, game theory, probabilistic methods in solving non-probabilistic problems. We use continuous calculus, e.g. in handling the Gaussian, but anything needed will be reviewed in a self-contained manner.",
+    "metadata": {
+      "createdDate": "2024-03-29T17:10:51.087+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-29T17:10:51.087+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Tadashi Tokieda"
+        }
+      ]
+    }
+  },
+  {
     "id": "4613ce2e-03cf-474e-8192-c3c4863d5c1e",
     "courseNumber": "ARTHIST-230-01",
     "name": "Beauty",
@@ -4778,7 +4854,7 @@
     "metadata": {
       "createdDate": "2023-09-22T21:51:02.265+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2023-09-22T21:51:02.265+00:00",
+      "updatedDate": "2024-03-29T16:16:48.307+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
@@ -5048,6 +5124,24 @@
       "instructorObjects": [
         {
           "name": "Shuangping Li"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4e8cbafb-af99-4f1a-90fb-4484077fcfb9",
+    "courseNumber": "MATSCI-174-01",
+    "name": "Electronic and Photonic Materials and Devices Laboratory",
+    "metadata": {
+      "createdDate": "2024-03-29T19:43:53.463+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-29T19:43:53.463+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Guosong Hong"
         }
       ]
     }
@@ -8621,6 +8715,24 @@
     }
   },
   {
+    "id": "7ef87559-ac3d-4ddf-820e-a5f48ed71bb9",
+    "courseNumber": "ME-324-01",
+    "name": "Precision Engineering",
+    "metadata": {
+      "createdDate": "2024-03-29T19:24:11.261+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-29T19:24:11.261+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Grant Cutler"
+        }
+      ]
+    }
+  },
+  {
     "id": "7f191c78-e818-4d29-9b43-b076753403bb",
     "courseNumber": "PHYSICS-106-01",
     "name": "Experimental Methods in Quantum Physics",
@@ -9721,6 +9833,24 @@
       "instructorObjects": [
         {
           "name": "Lee Yearley"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8f905236-5dfc-4193-8109-06976857bf72",
+    "courseNumber": "MATSCI-163-01",
+    "name": "Mechanical Behavior Laboratory",
+    "metadata": {
+      "createdDate": "2024-03-29T16:36:28.899+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-29T16:36:28.899+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Haoxue Yan"
         }
       ]
     }
@@ -11676,6 +11806,27 @@
     }
   },
   {
+    "id": "ada00f78-3af1-4f79-8b77-857fe442799a",
+    "courseNumber": "BIOE-42-01",
+    "name": "Physical Biology",
+    "metadata": {
+      "createdDate": "2024-03-29T17:58:47.261+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-29T17:58:47.261+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Matthias Garten"
+        },
+        {
+          "name": "Zev Bryant"
+        }
+      ]
+    }
+  },
+  {
     "id": "adf3d692-beb8-4198-86c6-e399f7030ee9",
     "courseNumber": "BIOE-256 ",
     "name": "Technology Assessment and Regulation of Medical Devices ",
@@ -12136,6 +12287,26 @@
       "instructorObjects": [
         {
           "name": "Rose Salseda"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b6746fa7-ca41-4ef8-9110-a84c6def5c71",
+    "courseNumber": "CHEM 11",
+    "sectionName": "01",
+    "name": "Foundational Concepts and Study Skills for General Chemistry",
+    "description": "Chemistry is a central science that provides critical knowledge for many majors. Chem11 is intended as an on-ramp into STEM and the Chem31A/B sequence for students with minimal background in chemistry.",
+    "metadata": {
+      "createdDate": "2024-03-29T15:35:02.382+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-03-29T15:35:02.382+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Schwartz Poehlmann"
         }
       ]
     }
@@ -13142,6 +13313,24 @@
     }
   },
   {
+    "id": "c57ea19e-e4ff-4c35-b65e-50280c649a18",
+    "courseNumber": "ME-30-01 ",
+    "name": "Engineering Thermodynamics",
+    "metadata": {
+      "createdDate": "2024-03-29T17:55:33.823+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-03-29T17:55:33.823+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Matthew Edwards"
+        }
+      ]
+    }
+  },
+  {
     "id": "c59926e0-a47d-4b2c-8bc5-0e16a06f2635",
     "courseNumber": "HISTORY-359E-01",
     "name": "American Interventions, 1898-Present",
@@ -13959,6 +14148,25 @@
       "instructorObjects": [
         {
           "name": "Dan Tan"
+        }
+      ]
+    }
+  },
+  {
+    "id": "d0c8013e-5243-47f4-9622-9d45c34eee8e",
+    "courseNumber": "PHYSICS-14N-01",
+    "name": "Quantum Information: Visions and Emerging Technologies",
+    "description": "What sets quantum information apart from its classical counterpart is that it can be encoded non-locally, woven into correlations among multiple qubits in a phenomenon known as entanglement. We will discuss paradigms for harnessing entanglement to solve hitherto intractable computational problems or to push the precision of sensors to their fundamental quantum mechanical limits. We will also examine challenges that physicists and engineers are tackling in the laboratory today to enable the quantum technologies of the future.",
+    "metadata": {
+      "createdDate": "2024-03-29T16:03:59.240+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-03-29T16:03:59.240+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Hari Manoharan"
         }
       ]
     }
@@ -15896,7 +16104,7 @@
     "metadata": {
       "createdDate": "2024-03-28T22:18:30.226+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-03-28T22:18:30.226+00:00",
+      "updatedDate": "2024-03-29T22:34:11.569+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
@@ -16476,6 +16684,27 @@
     }
   },
   {
+    "id": "f4e3954f-5c15-4e62-9fee-515c89bcd317",
+    "courseNumber": "CEE-107R-01",
+    "name": "E^3: Extreme Energy Efficiency",
+    "metadata": {
+      "createdDate": "2024-03-30T01:32:35.665+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-03-30T01:32:35.665+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Amory Lovins"
+        },
+        {
+          "name": "Joel Swisher"
+        }
+      ]
+    }
+  },
+  {
     "id": "f4ea777e-e215-4550-9097-00d46923b85b",
     "courseNumber": "JAPAN-225-01",
     "name": "Tokyo, Kyoto, Osaka and Beyond: Place in Modern Japan ",
@@ -16956,6 +17185,24 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "fc0ca5cd-a0ea-460e-b70a-d80ef5843566",
+    "courseNumber": "MATSCI-164-01",
+    "name": "Electronic and Photonic Materials and Devices Laboratory ",
+    "metadata": {
+      "createdDate": "2024-03-29T19:42:51.686+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-03-29T19:42:51.686+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Guosong Hong"
+        }
       ]
     }
   },
