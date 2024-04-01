@@ -12,7 +12,7 @@ RSpec.describe HoursController do
   describe "GET library" do
     it "should return correct response" do
       get :show, params: { format: "json", id: "GREEN" }
-      expect(response.status).to eq 200
+      expect(response).to have_http_status :ok
     end
   end
 end
