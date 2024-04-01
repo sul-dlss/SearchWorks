@@ -362,6 +362,24 @@
     }
   },
   {
+    "id": "05dd753f-71f9-4d0a-bdf3-72f36c0f5868",
+    "courseNumber": "COLLEGE-106-06",
+    "name": "Environmental Sustainability: Global Predicaments and Possible Solutions",
+    "metadata": {
+      "createdDate": "2024-04-01T05:00:03.336+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T05:00:03.336+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Belinda Ramirez"
+        }
+      ]
+    }
+  },
+  {
     "id": "0610f1c2-0406-4191-b816-8955ace9bb81",
     "courseNumber": "EPI-223-01",
     "sectionName": "01",
@@ -616,6 +634,24 @@
     }
   },
   {
+    "id": "0af23e55-5b91-4fc7-b8b7-22f61438d9ce",
+    "courseNumber": "ANTHRO-300-01",
+    "name": "Reading Theory Through Ethnography",
+    "metadata": {
+      "createdDate": "2024-04-01T05:13:06.353+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-01T05:13:06.353+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Paulla Ebron"
+        }
+      ]
+    }
+  },
+  {
     "id": "0af3261e-2a93-4a41-9a15-36d3765acd9a",
     "courseNumber": "JAPAN-279",
     "sectionName": "01",
@@ -690,24 +726,6 @@
       "instructorObjects": [
         {
           "name": "Michael McFaul"
-        }
-      ]
-    }
-  },
-  {
-    "id": "0bf99d8e-5526-4317-a2ed-c87b5c2249c7",
-    "courseNumber": "LAW-7025-01",
-    "name": "Employment Law",
-    "metadata": {
-      "createdDate": "2023-12-14T19:55:34.273+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:55:34.273+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Alison Morantz"
         }
       ]
     }
@@ -860,24 +878,6 @@
     }
   },
   {
-    "id": "0efe1bbc-1954-48c5-b792-083333f7b314",
-    "courseNumber": "LAW-224A-08",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:04:41.692+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:04:52.443+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Alicia Thesing"
-        }
-      ]
-    }
-  },
-  {
     "id": "0f214185-50d1-4ee6-bf2b-fc1654a72089",
     "courseNumber": "HISTORY-98-01",
     "name": "The History of Modern China",
@@ -971,24 +971,6 @@
       "instructorObjects": [
         {
           "name": "James Reichert"
-        }
-      ]
-    }
-  },
-  {
-    "id": "10ca6327-d486-4bb9-bce6-2ef35b85ab66",
-    "courseNumber": "LAW-224A-10",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:06:03.896+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:06:20.034+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Susan Yorke"
         }
       ]
     }
@@ -1486,30 +1468,6 @@
     }
   },
   {
-    "id": "1832e93e-604c-4f90-9797-1095dc7989f1",
-    "courseNumber": "LAW-908-01",
-    "name": "Environmental Law Clinic",
-    "metadata": {
-      "createdDate": "2023-09-03T16:18:07.115+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:31:55.092+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Deborah Sivas"
-        },
-        {
-          "name": "Matthew Sanders"
-        },
-        {
-          "name": "Stephanie Safdi"
-        }
-      ]
-    }
-  },
-  {
     "id": "1849d59d-7f42-4817-8985-e8345acc1186",
     "courseNumber": "EE-264W",
     "name": " Digital Signal Processing",
@@ -1717,6 +1675,24 @@
     }
   },
   {
+    "id": "1bbf6f19-0856-4f3b-8462-a4c7191af3ff",
+    "courseNumber": "GENE 280",
+    "name": "Metabolic Genetic Cournseling",
+    "metadata": {
+      "createdDate": "2024-03-31T23:22:18.152+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-31T23:22:18.152+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrea Hanson-Kahn"
+        }
+      ]
+    }
+  },
+  {
     "id": "1be4a1b8-d3dd-40c6-b58a-5e7ca0ef7b2a",
     "courseNumber": "CHPR 241",
     "name": "Contemplative Movement and Mindful Physical Activity",
@@ -1766,24 +1742,6 @@
       "instructorObjects": [
         {
           "name": "Rebecca Tarlau"
-        }
-      ]
-    }
-  },
-  {
-    "id": "1ca28040-12fb-4501-8957-1b553ad6f0e6",
-    "courseNumber": "LAW-207-01",
-    "name": "Criminal Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:48:00.107+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:48:36.691+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Rabia Belt"
         }
       ]
     }
@@ -1856,24 +1814,6 @@
       "instructorObjects": [
         {
           "name": "Rose Salseda"
-        }
-      ]
-    }
-  },
-  {
-    "id": "1e378c94-a40a-4b41-bb8a-d46e1bd8e7e4",
-    "courseNumber": "LAW-1021-01",
-    "name": "Estate Planning",
-    "metadata": {
-      "createdDate": "2023-12-14T19:26:24.957+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:26:24.957+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "B. Pearson"
         }
       ]
     }
@@ -2412,6 +2352,24 @@
         },
         {
           "name": "Avshalom Schwartz"
+        }
+      ]
+    }
+  },
+  {
+    "id": "26f8d52f-c4e5-45b3-b0ea-58aa7b549b8c",
+    "courseNumber": "ENGLISH-190-01",
+    "name": "Intermediate Fiction Writing",
+    "metadata": {
+      "createdDate": "2024-04-01T05:10:58.353+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-01T05:10:58.353+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Scott Hutchins"
         }
       ]
     }
@@ -3131,24 +3089,6 @@
     }
   },
   {
-    "id": "33281139-241e-485a-8f5d-b136619575c6",
-    "courseNumber": "LAW-203-03",
-    "name": "Constitutional Law",
-    "metadata": {
-      "createdDate": "2023-12-15T21:43:20.082+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T21:43:20.082+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Anne O'Connell"
-        }
-      ]
-    }
-  },
-  {
     "id": "335cc565-ca2a-445e-834e-88e54838068e",
     "courseNumber": "CME-334-01",
     "name": "Optimization Algorithms",
@@ -3243,6 +3183,24 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "33fe0f0b-a18e-4867-8e66-a7b0e4e2256c",
+    "courseNumber": "LAW-1079-01",
+    "name": "Introduction to Transactional Practice",
+    "metadata": {
+      "createdDate": "2024-03-31T21:46:27.412+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-03-31T21:46:27.412+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jay Mitchell"
+        }
       ]
     }
   },
@@ -3558,24 +3516,6 @@
     }
   },
   {
-    "id": "395e8b5f-8dfb-4b6e-a660-ea6ae81e8a2b",
-    "courseNumber": "LAW-1079-01",
-    "name": "Introduction to Transactional Practice",
-    "metadata": {
-      "createdDate": "2024-03-25T23:06:15.378+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-25T23:06:15.378+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jay Mitchell"
-        }
-      ]
-    }
-  },
-  {
     "id": "3967dab2-95b3-4061-941f-147107a14914",
     "courseNumber": "SPANLANG-1-06",
     "name": "First-Year Spanish, First Quarter",
@@ -3773,24 +3713,6 @@
     }
   },
   {
-    "id": "3c8d30c6-fbb7-4cef-9cc7-fec0ff3f5267",
-    "courseNumber": "LAW-224A-06",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:02:19.679+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:03:29.562+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Kathryn Martin"
-        }
-      ]
-    }
-  },
-  {
     "id": "3ca47757-12dd-4f85-b920-e6f5cd79328d",
     "courseNumber": "MATH-215B-01",
     "name": "Differential Topology",
@@ -3870,24 +3792,6 @@
     }
   },
   {
-    "id": "3d4c6877-ee0f-4235-8f0b-91c22c4080eb",
-    "courseNumber": "LAW-7001-01",
-    "name": "Administrative Law",
-    "metadata": {
-      "createdDate": "2023-12-15T22:03:21.804+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T22:03:21.804+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Daniel Ho"
-        }
-      ]
-    }
-  },
-  {
     "id": "3d56cee6-d326-4efd-90a3-e3ff8542ba22",
     "courseNumber": "MATH-173-01",
     "name": "Theory of Partial Differential Equations",
@@ -3921,27 +3825,6 @@
       "instructorObjects": [
         {
           "name": "Michael Bratman"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3e9cb6e4-af16-40a2-a6fc-b60495f5067e",
-    "courseNumber": "LAW-5802-01",
-    "name": "Modern American Legal Thought",
-    "metadata": {
-      "createdDate": "2023-12-14T18:48:30.124+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:48:30.124+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Richard Ford"
-        },
-        {
-          "name": "Bernadette Meyler"
         }
       ]
     }
@@ -3996,24 +3879,6 @@
       "instructorObjects": [
         {
           "name": "Nadeem Hussain"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3fec5b9e-8171-472e-9549-abd20ef05300",
-    "courseNumber": "LAW-224A-02",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T21:57:11.006+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T21:58:26.559+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Nicholas Handler"
         }
       ]
     }
@@ -4135,24 +4000,6 @@
       "instructorObjects": [
         {
           "name": "Ana Raquel Minian Andjel"
-        }
-      ]
-    }
-  },
-  {
-    "id": "412b71ad-0ef7-4951-ab7b-fbab69d80d6f",
-    "courseNumber": "LAW-7039-01",
-    "name": "Reproductive Rights and Justice",
-    "metadata": {
-      "createdDate": "2023-12-14T19:53:24.400+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:53:24.400+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Joanna Grossman"
         }
       ]
     }
@@ -4959,24 +4806,6 @@
     }
   },
   {
-    "id": "4cccd2ea-1726-49eb-ba9b-469171182fa7",
-    "courseNumber": "LAW-224A-09",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:05:16.289+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:05:27.076+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Tyler Valeska"
-        }
-      ]
-    }
-  },
-  {
     "id": "4cd72f02-b8ac-4ac1-90d1-44c9389a06a7",
     "courseNumber": "LAW-7016-01",
     "name": "Critical Race Theory",
@@ -5518,24 +5347,6 @@
     }
   },
   {
-    "id": "53f1d3c8-ab86-4566-a7c3-e011e38c8d40",
-    "courseNumber": "LAW-5002-01",
-    "name": "Comparative Law",
-    "metadata": {
-      "createdDate": "2023-12-14T18:26:16.294+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:26:16.294+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Amalia Kessler"
-        }
-      ]
-    }
-  },
-  {
     "id": "5410f297-0aea-487a-a710-21f5a01c4fa4",
     "courseNumber": "ARTHIST 226-01",
     "name": "New Landscapes of China: Ecologies, Media, Imaginaries",
@@ -5734,27 +5545,6 @@
       "instructorObjects": [
         {
           "name": "Rita Popat"
-        }
-      ]
-    }
-  },
-  {
-    "id": "56751c96-5ada-4501-8f89-6bfdb78f9ae2",
-    "courseNumber": "LAW-1080-01",
-    "name": "Sports Law: Emerging Issues in Professional and Amateur Sports",
-    "metadata": {
-      "createdDate": "2023-12-15T21:47:02.419+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T21:47:02.419+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Amy Tovar"
-        },
-        {
-          "name": "Jack Bair"
         }
       ]
     }
@@ -7512,24 +7302,6 @@
     }
   },
   {
-    "id": "6ce8121b-3774-4499-934f-403e17cb4a2d",
-    "courseNumber": "LAW-203-02",
-    "name": "Constitutional Law",
-    "metadata": {
-      "createdDate": "2023-12-15T22:31:52.750+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T22:31:52.750+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Bernadette Meyler"
-        }
-      ]
-    }
-  },
-  {
     "id": "6d0f831a-6537-4506-9ec2-e7bed5e31790",
     "courseNumber": "LAW-7030-01",
     "name": "Federal Indian Law",
@@ -7561,24 +7333,6 @@
       "instructorObjects": [
         {
           "name": "Russell Berman"
-        }
-      ]
-    }
-  },
-  {
-    "id": "6e1fb382-da9b-42b0-aa4f-512ae7aa9b60",
-    "courseNumber": "LAW-5014-01",
-    "name": "International Trade Law",
-    "metadata": {
-      "createdDate": "2023-12-14T18:40:51.629+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:40:51.629+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Alan Sykes"
         }
       ]
     }
@@ -8000,24 +7754,6 @@
     }
   },
   {
-    "id": "758a3a83-3629-4181-9301-c78eb7b0ff87",
-    "courseNumber": "LAW-224A-05",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:01:18.265+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:01:32.686+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Brandi Lupo"
-        }
-      ]
-    }
-  },
-  {
     "id": "76118cec-72a8-4d02-afc9-247d68407cc0",
     "courseNumber": "TAPS-311-01",
     "name": "Performance and Historiography",
@@ -8295,24 +8031,6 @@
       "instructorObjects": [
         {
           "name": "Erica Gould"
-        }
-      ]
-    }
-  },
-  {
-    "id": "791bbcf1-21de-4eb1-a733-f0717fea76e0",
-    "courseNumber": "LAW-1012-01",
-    "name": "Corporate Reorganization",
-    "metadata": {
-      "createdDate": "2023-12-15T22:19:39.213+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T22:19:39.213+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Steve Ray"
         }
       ]
     }
@@ -8992,24 +8710,6 @@
     }
   },
   {
-    "id": "84256c32-ab16-493a-bc2c-aec501d99717",
-    "courseNumber": "LAW-7803-01",
-    "name": "Contemporary Dispute Resolution and the Vanishing Trial",
-    "metadata": {
-      "createdDate": "2023-12-18T18:35:50.439+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:35:50.439+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "James Schurz"
-        }
-      ]
-    }
-  },
-  {
     "id": "84260adb-da1b-40ea-9960-fc29e038bfe9",
     "courseNumber": "HISTORY-86Q-01",
     "name": "Blood and Money: The Origins of Antisemitism",
@@ -9121,24 +8821,6 @@
     }
   },
   {
-    "id": "85b792d3-e789-43e4-841a-2e6dda3d543f",
-    "courseNumber": "LAW-4005-01",
-    "name": "Introduction to Intellectual Property",
-    "metadata": {
-      "createdDate": "2023-12-14T20:09:43.438+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T20:09:43.438+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Lisa Ouellette"
-        }
-      ]
-    }
-  },
-  {
     "id": "8619363d-2f3b-4dd5-b3cb-dbed8ed41cef",
     "courseNumber": "CHEM 223-01",
     "sectionName": "01",
@@ -9171,6 +8853,25 @@
       "instructorObjects": [
         {
           "name": "Persi Diaconis"
+        }
+      ]
+    }
+  },
+  {
+    "id": "865fdf71-42fd-4b3c-b069-7b31d5689a04",
+    "courseNumber": "MED 247",
+    "name": "Methods in Community Assessment, Evaluation, and Research",
+    "description": "Development of pragmatic skills for design, implementation, and analysis of structured interviews, focus groups, survey questionnaires, and field observations. ",
+    "metadata": {
+      "createdDate": "2024-03-31T22:52:44.620+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-31T22:52:44.620+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Michaela Kiernan"
         }
       ]
     }
@@ -9224,24 +8925,6 @@
       "instructorObjects": [
         {
           "name": "Jacob Daniels"
-        }
-      ]
-    }
-  },
-  {
-    "id": "888d998f-e752-42c5-81ed-3067e7ef12b0",
-    "courseNumber": "LAW-7503-01",
-    "name": "Introduction to Law and Economics",
-    "metadata": {
-      "createdDate": "2023-12-14T18:22:17.410+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:22:17.410+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "A Polinsky"
         }
       ]
     }
@@ -9312,24 +8995,6 @@
       "instructorObjects": [
         {
           "name": "Scott Bukatman"
-        }
-      ]
-    }
-  },
-  {
-    "id": "89d45f5a-b334-4e7e-b954-713c8a50a64f",
-    "courseNumber": "LAW-1009-01",
-    "name": "Corporate Finance I",
-    "metadata": {
-      "createdDate": "2023-12-14T18:02:41.067+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:02:41.067+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Paul Zurek"
         }
       ]
     }
@@ -9575,27 +9240,6 @@
       "instructorObjects": [
         {
           "name": "Yumi Moon"
-        }
-      ]
-    }
-  },
-  {
-    "id": "8cbf6f44-9c0a-4b91-9426-508c095fdcad",
-    "courseNumber": "LAW-7850-01",
-    "name": "Advanced Legal Writing: High-Tech Transactions",
-    "metadata": {
-      "createdDate": "2023-12-14T18:34:34.198+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:34:34.198+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Robyn Stanton"
-        },
-        {
-          "name": "David Hornik"
         }
       ]
     }
@@ -10432,13 +10076,13 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Roland Bammer"
-        },
-        {
           "name": "Patrick Barnes"
         },
         {
-          "name": "Richard Barth"
+          "name": "Roland Bammer"
+        },
+        {
+          "name": "Scott Atlas"
         }
       ]
     }
@@ -10532,6 +10176,24 @@
       "instructorObjects": [
         {
           "name": "Findlen, Paula E"
+        }
+      ]
+    }
+  },
+  {
+    "id": "99c8be90-2dc4-4e24-b344-c1beed447057",
+    "courseNumber": "HISTORY-337D-01",
+    "name": "The French Revolution and the Origins of Modern Politics",
+    "metadata": {
+      "createdDate": "2024-04-01T04:38:51.511+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T04:38:51.511+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Elena Kempf"
         }
       ]
     }
@@ -10673,6 +10335,24 @@
         },
         {
           "name": "Kim Pauly"
+        }
+      ]
+    }
+  },
+  {
+    "id": "9bbe1e18-1291-436f-afee-634174f38394",
+    "courseNumber": "COLLEGE-109-04",
+    "name": "Rules of War",
+    "metadata": {
+      "createdDate": "2024-04-01T01:32:14.953+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T01:32:14.953+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Daniela Weiner"
         }
       ]
     }
@@ -11079,19 +10759,22 @@
     }
   },
   {
-    "id": "a22f372f-e1d8-4e91-a5bd-d4c1d4bd8670",
-    "courseNumber": "LAW-7502-01",
-    "name": "Economic Analysis of Law",
+    "id": "a1d7dca2-90c8-4557-963a-feb69997ea50",
+    "courseNumber": "EPI 258",
+    "name": "Introduction to Probability and Statistics for Clinical Research",
     "metadata": {
-      "createdDate": "2023-12-14T18:11:45.063+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T18:11:45.063+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+      "createdDate": "2024-03-31T22:34:28.623+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-31T22:36:04.010+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "A Polinsky"
+          "name": "Kristin Sainani"
+        },
+        {
+          "name": "Junjie Lu"
         }
       ]
     }
@@ -11698,6 +11381,24 @@
     }
   },
   {
+    "id": "aa79f02c-6eea-48b8-80dd-027bc956b0c2",
+    "courseNumber": "TAPS-120M-01",
+    "name": "Audition and Monologue",
+    "metadata": {
+      "createdDate": "2024-04-01T06:42:13.161+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-01T06:42:13.161+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Stephanie Hunt"
+        }
+      ]
+    }
+  },
+  {
     "id": "aad04e12-48ff-455f-8c72-f8f940f384ce",
     "courseNumber": "FILMEDIA 6",
     "name": "Media and Mediums",
@@ -11784,6 +11485,24 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "acaebffe-8a9c-4a58-9d06-f9d4abd4f7bf",
+    "courseNumber": "HISTORY-237D-01",
+    "name": "The French Revolution and the Origins of Modern Politics",
+    "metadata": {
+      "createdDate": "2024-04-01T04:38:30.053+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T04:38:30.053+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Elena Kempf"
+        }
       ]
     }
   },
@@ -12067,24 +11786,6 @@
     "courseListingObject": {
       "instructorObjects": [
 
-      ]
-    }
-  },
-  {
-    "id": "b2c147af-7eaa-4fbe-bc4e-0f1d96e58de9",
-    "courseNumber": "LAW-224A-07",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T23:03:54.686+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:04:13.082+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Seema Patel"
-        }
       ]
     }
   },
@@ -12417,6 +12118,24 @@
       "instructorObjects": [
         {
           "name": "Kyle Bagwell"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b8a4d766-16c7-4169-a9f4-fb4b3062dea4",
+    "courseNumber": "GENE 281",
+    "name": "Cancer Genetic Counseling",
+    "metadata": {
+      "createdDate": "2024-04-01T00:21:06.757+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-01T00:21:06.757+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrea Hanson-Kahn"
         }
       ]
     }
@@ -13030,24 +12749,6 @@
     }
   },
   {
-    "id": "c1aef598-1911-4fde-b66e-c1117d9a8c54",
-    "courseNumber": "LAW-224A-04",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T21:59:50.482+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T23:00:26.876+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Robin Linsenmayer"
-        }
-      ]
-    }
-  },
-  {
     "id": "c220e2a3-feae-48c1-89d7-adc1767a8ff7",
     "courseNumber": "ENGLISH-181-01",
     "name": "Philosophy and Literature",
@@ -13277,6 +12978,24 @@
     }
   },
   {
+    "id": "c4836015-07fd-4a7c-a79b-063074d60cf6",
+    "courseNumber": "COLLEGE-113-02",
+    "name": "Utopia, Dystopia, and Technology in Science Fiction",
+    "metadata": {
+      "createdDate": "2024-04-01T06:07:13.553+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T06:07:13.553+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Melissa Hosek"
+        }
+      ]
+    }
+  },
+  {
     "id": "c4ea483e-5849-48b7-83d6-644a42d2ff40",
     "courseNumber": "EDUC-206A-01",
     "name": " Applied Research Methods in International and Comparative Education I",
@@ -13363,6 +13082,24 @@
       "instructorObjects": [
         {
           "name": "Guenther Walther"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c5b54a98-b655-4792-9209-34ad6dd8d155",
+    "courseNumber": "CHPR 247",
+    "name": "Methods in Community Assessment, Evaluation, and Research",
+    "metadata": {
+      "createdDate": "2024-03-31T22:56:44.351+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-03-31T22:56:44.351+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Michaela Kiernan"
         }
       ]
     }
@@ -13834,24 +13571,6 @@
     }
   },
   {
-    "id": "cd903430-021e-4b31-8569-80f3c8b182be",
-    "courseNumber": "LAW-7013-01",
-    "name": "Gender, Law, and Public Policy",
-    "metadata": {
-      "createdDate": "2023-12-14T19:23:09.819+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:23:09.819+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Joanna Grossman"
-        }
-      ]
-    }
-  },
-  {
     "id": "cd9401c4-6d8b-4b84-a661-ae0ae5f6d639",
     "courseNumber": "HISTORY-150A-01",
     "name": "Colonial and Revolutionary America",
@@ -13936,24 +13655,6 @@
       "instructorObjects": [
         {
           "name": "Michael Rosenfeld"
-        }
-      ]
-    }
-  },
-  {
-    "id": "cead3858-0998-4a62-a4fd-5f4cea873b6e",
-    "courseNumber": "LAW-207-03",
-    "name": "Criminal Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:46:47.837+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:46:47.837+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "David Sklansky"
         }
       ]
     }
@@ -14390,24 +14091,6 @@
     }
   },
   {
-    "id": "d50c8c10-c3c7-4e4a-ae96-188af6b3bafb",
-    "courseNumber": "LAW-4017-01",
-    "name": "Protection of Personality: Defamation, Privacy, and Emotional Distress",
-    "metadata": {
-      "createdDate": "2023-12-18T19:48:07.302+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:48:07.302+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Robert Rabin"
-        }
-      ]
-    }
-  },
-  {
     "id": "d5283b1c-e3f3-4e92-932f-0d4ffb4738ad",
     "courseNumber": "BMP 235",
     "name": "Advanced Ultrasound Imaging",
@@ -14622,24 +14305,6 @@
     }
   },
   {
-    "id": "d7a978d2-7a01-47d6-ac10-2c4510071d89",
-    "courseNumber": "LAW-224A-01",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T19:56:30.343+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T19:56:30.343+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Marc Fagel"
-        }
-      ]
-    }
-  },
-  {
     "id": "d7e2222c-0c63-42a2-9c76-8f567fe9c195",
     "courseNumber": "ARTSTUDI-114-01",
     "name": "Worldbuilding: Sound, Video, Space",
@@ -14839,24 +14504,6 @@
     }
   },
   {
-    "id": "da8aa142-c621-4e4c-a4b5-a6e7b4bf7f00",
-    "courseNumber": "LAW-7036-01",
-    "name": "Law of Democracy",
-    "metadata": {
-      "createdDate": "2023-12-15T22:10:13.282+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-15T22:10:13.282+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Nathaniel Persily"
-        }
-      ]
-    }
-  },
-  {
     "id": "daadd4d4-05d5-4344-ad62-0ed7cf7c4d86",
     "courseNumber": "BIO 221",
     "sectionName": "01",
@@ -14880,6 +14527,27 @@
         },
         {
           "name": "Maya Xu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "db135e8b-9262-45c5-9c32-c61219e686e9",
+    "courseNumber": "ANTHRO-193-01",
+    "name": "Anthropology Capstone: Contemporary Debates in Anthropology",
+    "metadata": {
+      "createdDate": "2024-04-01T05:08:08.764+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-01T05:08:08.764+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Miray Cakiroglu"
+        },
+        {
+          "name": "S. Lochlann Jain"
         }
       ]
     }
@@ -15081,24 +14749,6 @@
       "instructorObjects": [
         {
           "name": "Reinhold Dauskardt"
-        }
-      ]
-    }
-  },
-  {
-    "id": "dcc92861-0ff7-47b6-8c15-b8c65ed73b92",
-    "courseNumber": "LAW-1013-01",
-    "name": "Corporations",
-    "metadata": {
-      "createdDate": "2023-12-14T19:35:56.995+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:35:56.995+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Michael Klausner"
         }
       ]
     }
@@ -16158,24 +15808,6 @@
     }
   },
   {
-    "id": "ecc31c1d-a374-444e-a4de-50732cb5fe23",
-    "courseNumber": "LAW-224A-03",
-    "name": "Federal Litigation in a Global Context: Coursework",
-    "metadata": {
-      "createdDate": "2023-12-18T21:58:44.567+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T21:59:13.466+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Lara Hoffman"
-        }
-      ]
-    }
-  },
-  {
     "id": "ecd496cd-a952-4c9d-87b3-7b9098b40085",
     "courseNumber": "SLAVIC-181-01",
     "name": "Philosophy and Literature",
@@ -16327,24 +15959,6 @@
     "courseListingObject": {
       "instructorObjects": [
 
-      ]
-    }
-  },
-  {
-    "id": "eeee0c20-01d3-41ec-85b9-5afac269ace8",
-    "courseNumber": "LAW-4018-01",
-    "name": "Intellectual Property: International and Comparative Copyright Law",
-    "metadata": {
-      "createdDate": "2023-12-14T19:49:10.353+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-14T19:49:10.353+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Paul Goldstein"
-        }
       ]
     }
   },
@@ -16599,6 +16213,27 @@
       "instructorObjects": [
         {
           "name": "Katherine Hilton"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f3988812-fcca-47e6-b9a4-38d7ea9564ea",
+    "courseNumber": "ANTHRO-42-01",
+    "name": "Megacities",
+    "metadata": {
+      "createdDate": "2024-04-01T04:20:47.061+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-01T04:20:47.061+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "S. Lochlann Jain"
+        },
+        {
+          "name": "Shantanu Nevrekar"
         }
       ]
     }
@@ -17408,27 +17043,6 @@
       "instructorObjects": [
         {
           "name": "Karen Wigen"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fe86e972-19b9-4f95-b5fa-a2951d3b6b7b",
-    "courseNumber": "LAW-2029-01",
-    "name": "Law and Disorder: Advanced Criminal Law",
-    "metadata": {
-      "createdDate": "2023-12-18T18:42:22.531+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2023-12-18T18:42:22.531+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Emily Galvin-Almanza"
-        },
-        {
-          "name": "David Mills"
         }
       ]
     }
