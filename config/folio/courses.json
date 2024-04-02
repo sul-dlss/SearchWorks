@@ -517,27 +517,6 @@
     }
   },
   {
-    "id": "07b0d1fc-8a6f-42de-b461-0dff26e1d5aa",
-    "courseNumber": "PSYC-288-01",
-    "name": " Medical Humanities Publication: A Writing & Editorial Workshop",
-    "metadata": {
-      "createdDate": "2024-02-21T00:20:14.638+00:00",
-      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-      "updatedDate": "2024-02-21T00:20:14.638+00:00",
-      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Tayyeba Ali"
-        },
-        {
-          "name": "Jennifer Pien"
-        }
-      ]
-    }
-  },
-  {
     "id": "07c91cce-5227-4228-83a1-e3e7bca6d093",
     "courseNumber": "NENS 301A",
     "name": "Neurology Core Clerkship",
@@ -575,6 +554,24 @@
         },
         {
           "name": "Natalia Gomez-Ospina"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0894f65d-61a6-427b-9ed1-b09b8f7bab81",
+    "courseNumber": "LAW-2503-01",
+    "name": "Energy Law",
+    "metadata": {
+      "createdDate": "2024-04-01T21:24:42.381+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-04-01T21:24:42.381+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Michael Wara"
         }
       ]
     }
@@ -629,6 +626,24 @@
       "instructorObjects": [
         {
           "name": "Michaelle Mayalu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "0a7f2e26-d7b9-4add-b8b1-b281fc8e91eb",
+    "courseNumber": "HISTORY-54N-01",
+    "name": "African American Women's Lives",
+    "metadata": {
+      "createdDate": "2024-04-02T00:52:48.591+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-04-02T00:52:48.591+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
         }
       ]
     }
@@ -762,24 +777,6 @@
       "instructorObjects": [
         {
           "name": "Ted Kamins"
-        }
-      ]
-    }
-  },
-  {
-    "id": "0d54ffb0-188d-47ab-be4e-2489b3dfb807",
-    "courseNumber": "ME-70-01",
-    "name": "Introductory Fluids Engineering",
-    "metadata": {
-      "createdDate": "2023-11-30T22:52:42.478+00:00",
-      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-03-28T18:19:33.430+00:00",
-      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Mark Cappelli"
         }
       ]
     }
@@ -1184,6 +1181,27 @@
     }
   },
   {
+    "id": "141594fc-e120-4c59-95aa-45592dc5b2b4",
+    "courseNumber": "CS-275B ",
+    "name": "Computational Music Analysis ",
+    "metadata": {
+      "createdDate": "2024-04-02T02:57:52.745+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-02T02:57:52.745+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Craig Sapp"
+        },
+        {
+          "name": "Eleanor Selfridge-Field"
+        }
+      ]
+    }
+  },
+  {
     "id": "142fe167-95fb-42c6-8660-152eb66ae2af",
     "courseNumber": "EPI-259-01",
     "sectionName": "01",
@@ -1489,6 +1507,24 @@
     }
   },
   {
+    "id": "18c8a74a-3ab9-45d2-a711-d80f87de1289",
+    "courseNumber": "RELIGST-212-01",
+    "name": "Zhuangzi",
+    "metadata": {
+      "createdDate": "2024-04-02T02:08:26.437+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:08:26.437+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lee Yearley"
+        }
+      ]
+    }
+  },
+  {
     "id": "19602cfd-04d7-48bf-a4ac-c7cac1b72a9f",
     "courseNumber": "MATSCI-225-01",
     "name": "Biochips and Medical Imaging",
@@ -1765,6 +1801,25 @@
     }
   },
   {
+    "id": "1d6bf355-bd3d-42e6-bcb2-62ad6598e458",
+    "courseNumber": "CME-308-01",
+    "name": "Stochastic Methods in Engineering",
+    "description": "The basic limit theorems of probability theory and their application to maximum likelihood estimation. Basic Monte Carlo methods and importance sampling. Markov chains and processes, random walks, basic ergodic theory and its application to parameter estimation. Discrete time stochastic control and Bayesian filtering. Diffusion approximations, Brownian motion and an introduction to stochastic differential equations. Examples and problems from various applied areas.",
+    "metadata": {
+      "createdDate": "2024-04-01T16:45:33.547+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-04-01T16:45:33.547+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Peter Glynn"
+        }
+      ]
+    }
+  },
+  {
     "id": "1d8a5b40-6a0c-467a-b9bc-a04ce10bc141",
     "courseNumber": "ME-80-01",
     "name": "Mechanics of Materials",
@@ -1796,6 +1851,24 @@
       "instructorObjects": [
         {
           "name": "Indra Levy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1de9aca3-c4d2-4ac8-a5c4-35d0d093b06b",
+    "courseNumber": "TAPS-258-01",
+    "name": "Black Feminist Theater and Theory",
+    "metadata": {
+      "createdDate": "2024-04-02T02:06:04.701+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:06:04.701+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -2121,6 +2194,27 @@
         },
         {
           "name": "Jacob Kuppermann"
+        }
+      ]
+    }
+  },
+  {
+    "id": "237be8af-ed95-49b5-a45a-1689d4ec133e",
+    "courseNumber": "CS-103-01",
+    "name": "Computational Music Analysis ",
+    "metadata": {
+      "createdDate": "2024-04-02T03:17:42.087+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-02T03:17:42.087+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Alex Aiken"
+        },
+        {
+          "name": "Keith Schwarz"
         }
       ]
     }
@@ -2549,6 +2643,25 @@
       "instructorObjects": [
         {
           "name": "Tom Byers"
+        }
+      ]
+    }
+  },
+  {
+    "id": "296cc61a-b4e8-4e84-b9f1-a500d2c8ffe1",
+    "courseNumber": "MS&E-324-01",
+    "name": "Stochastic Methods in Engineering",
+    "description": "The basic limit theorems of probability theory and their application to maximum likelihood estimation. Basic Monte Carlo methods and importance sampling. Markov chains and processes, random walks, basic ergodic theory and its application to parameter estimation. Discrete time stochastic control and Bayesian filtering. Diffusion approximations, Brownian motion and an introduction to stochastic differential equations. Examples and problems from various applied areas.",
+    "metadata": {
+      "createdDate": "2024-04-01T16:44:22.909+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-04-01T16:44:22.909+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Peter Glynn"
         }
       ]
     }
@@ -3344,6 +3457,24 @@
       "instructorObjects": [
         {
           "name": "Jelena Batinic"
+        }
+      ]
+    }
+  },
+  {
+    "id": "36b215e7-2a96-4414-a4a0-651f1ab840f7",
+    "courseNumber": "AFRICAAM-258-01",
+    "name": "Black Feminist Theater and Theory",
+    "metadata": {
+      "createdDate": "2024-04-02T02:06:48.651+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:06:48.651+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -4770,13 +4901,34 @@
     }
   },
   {
+    "id": "4c8b1311-3789-44e6-bc76-ccb3f37d5564",
+    "courseNumber": "MUSIC-254-01",
+    "name": "Computational Music Analysis ",
+    "metadata": {
+      "createdDate": "2024-04-02T02:57:22.953+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-02T02:57:22.953+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Craig Sapp"
+        },
+        {
+          "name": "Eleanor Selfridge-Field"
+        }
+      ]
+    }
+  },
+  {
     "id": "4caa374a-10cb-4ec1-a0dc-c826b5bba04c",
     "courseNumber": "TAPS-11-01",
     "name": "Introduction to Dance Studies ",
     "metadata": {
       "createdDate": "2024-03-25T02:46:23.748+00:00",
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2024-03-25T02:46:23.748+00:00",
+      "updatedDate": "2024-04-02T04:45:04.401+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
@@ -5419,6 +5571,24 @@
     }
   },
   {
+    "id": "54ce1d4b-fce2-4be9-aeba-82cd18bf9b59",
+    "courseNumber": "EASTASN-284-01",
+    "name": "Contemporary Art Markets in Asia",
+    "metadata": {
+      "createdDate": "2024-04-01T21:45:11.089+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-01T21:45:11.089+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Peter Kahng"
+        }
+      ]
+    }
+  },
+  {
     "id": "54e2bbbd-9b93-468b-86ab-ccee4cae00a6",
     "courseNumber": "CHPR-244-01",
     "sectionName": "01",
@@ -5955,6 +6125,24 @@
       "instructorObjects": [
         {
           "name": "Christopher Makler"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5a5ed4f3-82c9-43b2-9040-bd307340031b",
+    "courseNumber": "COMM-132-01",
+    "name": "Just Algorithms? Race, Regressions, and Resistance",
+    "metadata": {
+      "createdDate": "2024-04-02T01:40:36.768+00:00",
+      "createdByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa",
+      "updatedDate": "2024-04-02T01:40:36.768+00:00",
+      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sarah Riley"
         }
       ]
     }
@@ -6613,8 +6801,8 @@
     "metadata": {
       "createdDate": "2024-03-19T00:30:40.618+00:00",
       "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
-      "updatedDate": "2024-03-19T00:30:40.618+00:00",
-      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+      "updatedDate": "2024-04-02T02:43:47.815+00:00",
+      "updatedByUserId": "d63e56e9-8fc2-470f-9a61-1a339b3242fa"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -7351,6 +7539,26 @@
       "instructorObjects": [
         {
           "name": "Cecile Alduy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "6edb582c-9cf5-4ab3-9569-15bf175e934b",
+    "courseNumber": "BIOS-242-01",
+    "sectionName": "01",
+    "name": "Writing Compelling Fellowships and Career Development Awards - Duplicate",
+    "description": "An overview of principles and fundamentals for writing competitive fellowships (e.g. NIH F31, F32) and career development awards (e.g. NIH K Awards). Topics include: developing specific aims and career development plans; using the review criteria to inform writing; timelines and resources",
+    "metadata": {
+      "createdDate": "2024-04-01T23:16:23.254+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-01T23:16:23.254+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Crystal Botham"
         }
       ]
     }
@@ -8279,6 +8487,24 @@
       "instructorObjects": [
         {
           "name": "Steven Gorelick"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7deafea9-f697-4042-941a-b166e4262905",
+    "courseNumber": "ME-70-01",
+    "name": "Introductory Fluids Engineering",
+    "metadata": {
+      "createdDate": "2024-04-01T20:08:56.980+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-01T20:08:56.980+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Cappelli"
         }
       ]
     }
@@ -9897,6 +10123,24 @@
     }
   },
   {
+    "id": "94788fcf-707a-4e4d-937d-cb1ceaef0296",
+    "courseNumber": "EPI 240",
+    "name": "Reproductive and perinatal Epidemiology",
+    "metadata": {
+      "createdDate": "2024-04-01T23:00:28.500+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-01T23:00:28.500+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Julia Simard"
+        }
+      ]
+    }
+  },
+  {
     "id": "94bb75d3-3e8a-4510-a344-19d6d7c72f53",
     "courseNumber": "ARTHIST-100N-01",
     "name": "The Artist in Ancient Greek Society",
@@ -10121,7 +10365,12 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Waheeda Khalfan"
+        },
+        {
+          "name": "Kang Shen"
+        }
       ]
     }
   },
@@ -10274,6 +10523,24 @@
       "instructorObjects": [
         {
           "name": "Ronald Egan"
+        }
+      ]
+    }
+  },
+  {
+    "id": "9aa12473-2dbe-4e1f-b946-f726b3ae696e",
+    "courseNumber": "FEMGEN-258X-01",
+    "name": "Black Feminist Theater and Theory",
+    "metadata": {
+      "createdDate": "2024-04-02T02:07:03.240+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:07:03.240+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -11507,6 +11774,24 @@
     }
   },
   {
+    "id": "ace49129-49ce-4634-bc7d-d59fe74d2850",
+    "courseNumber": "ME-378-01",
+    "name": "Tell, Make, Engage: Action Stories for Entrepreneuring",
+    "metadata": {
+      "createdDate": "2024-04-01T18:29:22.959+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-01T18:29:22.959+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Barbara Karanian"
+        }
+      ]
+    }
+  },
+  {
     "id": "ad2fb161-ef8a-4f6b-98cb-a91f75c7a200",
     "courseNumber": "ARTSTUDI 248P",
     "name": "The Hybrid Print",
@@ -12172,6 +12457,24 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "b982b179-7b3d-44ad-aeeb-2f6b02c297d9",
+    "courseNumber": "AMSTUD-54N-01",
+    "name": "African American Women's Lives",
+    "metadata": {
+      "createdDate": "2024-04-02T00:49:57.540+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-04-02T00:52:16.004+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
+        }
       ]
     }
   },
@@ -13437,6 +13740,24 @@
     }
   },
   {
+    "id": "cadc7446-5a63-49ae-a73a-44df8bbfbd9c",
+    "courseNumber": "MS&E-152-01",
+    "name": "Introduction to Decision Analysis",
+    "metadata": {
+      "createdDate": "2024-04-02T00:01:00.196+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-02T00:01:00.196+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ross Shachter"
+        }
+      ]
+    }
+  },
+  {
     "id": "cb80b176-1d16-4424-a43f-48fd6cbcc68d",
     "courseNumber": "EARTHSYS-2",
     "name": "Chemistry of the Earth and Planets",
@@ -13494,6 +13815,24 @@
         },
         {
           "name": "Yutong Liu"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cc506991-0f78-4523-86b3-b4796f4669d1",
+    "courseNumber": "MS&E-276-01",
+    "name": "Entrepreneurial Management and Finance",
+    "metadata": {
+      "createdDate": "2024-04-01T22:40:02.666+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-01T22:40:02.666+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Trevor Loy"
         }
       ]
     }
@@ -13602,6 +13941,24 @@
       "instructorObjects": [
         {
           "name": "Catalina Martinez"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cd9f23cf-c83c-4719-943b-61207221889a",
+    "courseNumber": "FEMGEN-314-01",
+    "name": "Performing Identities",
+    "metadata": {
+      "createdDate": "2024-04-02T02:07:52.011+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:07:52.011+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -13813,6 +14170,24 @@
       "instructorObjects": [
         {
           "name": "Kim Beil"
+        }
+      ]
+    }
+  },
+  {
+    "id": "d017c516-eb77-41ac-8224-87050fc3d161",
+    "courseNumber": "TAPS-314-01",
+    "name": "Performing Identities",
+    "metadata": {
+      "createdDate": "2024-04-02T02:07:31.939+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:07:31.939+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -14677,6 +15052,24 @@
         },
         {
           "name": "Nina Schloesser Tarano"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dc59018c-8909-487c-b6a3-eb80192e2350",
+    "courseNumber": "PSYCH-45-01",
+    "name": "Introduction to Learning and Memory",
+    "metadata": {
+      "createdDate": "2024-04-02T02:05:16.499+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:05:16.499+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Anthony Wagner"
         }
       ]
     }
@@ -15923,6 +16316,25 @@
     }
   },
   {
+    "id": "ee8cf1cf-598b-453b-a082-28081e733a20",
+    "courseNumber": "MATH-228-01",
+    "name": "Stochastic Methods in Engineering",
+    "description": "The basic limit theorems of probability theory and their application to maximum likelihood estimation. Basic Monte Carlo methods and importance sampling. Markov chains and processes, random walks, basic ergodic theory and its application to parameter estimation. Discrete time stochastic control and Bayesian filtering. Diffusion approximations, Brownian motion and an introduction to stochastic differential equations. Examples and problems from various applied areas. ",
+    "metadata": {
+      "createdDate": "2024-04-01T16:36:05.956+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-04-01T16:36:05.956+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Peter Glynn"
+        }
+      ]
+    }
+  },
+  {
     "id": "eec92079-7ad9-47d0-b16c-e4b7aa05683e",
     "courseNumber": "BIO-185-01",
     "name": "Where the Wild Things Are: The Ecology and Ethics of Conserving Megafauna",
@@ -16288,6 +16700,24 @@
       "instructorObjects": [
         {
           "name": "Oliver Fringer"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f4689ebd-358f-42fe-bb5f-39b92380acfc",
+    "courseNumber": "CSRE-258-01",
+    "name": "Black Feminist Theater and Theory",
+    "metadata": {
+      "createdDate": "2024-04-02T02:06:30.280+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-02T02:06:30.280+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Brody"
         }
       ]
     }
@@ -17097,26 +17527,6 @@
       "instructorObjects": [
         {
           "name": "Kathryn Olivarius"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ff19f721-943c-4554-8ecc-53c59ad9e7c9",
-    "courseNumber": "BIOS-242-01",
-    "sectionName": "01",
-    "name": "Writing Compelling Fellowships and Career Development Awards",
-    "description": "An overview of principles and fundamentals for writing competitive fellowships (e.g. NIH F31, F32) and career development awards (e.g. NIH K Awards). Topics include: developing specific aims and career development plans; using the review criteria to inform writing; timelines and resources",
-    "metadata": {
-      "createdDate": "2023-08-30T22:01:56.216+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T04:11:51.485+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Crystal Botham"
         }
       ]
     }
