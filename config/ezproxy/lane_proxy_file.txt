@@ -1288,7 +1288,6 @@ prcp.psychiatryonline.org
 presses.univ-lyon2.fr
 prhsj.rcm.upr.edu
 primarysources.brillonline.com
-princeton.universitypressscholarship.com
 proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
 products.asminternational.org
@@ -2716,6 +2715,7 @@ www.plosmedicine.org
 www.plosntds.org
 www.plosone.org
 www.plospathogens.org
+www.plutobooks.com
 www.pnas.org
 www.pngimr.org.pg
 www.poljpathol.cm-uj.krakow.pl
