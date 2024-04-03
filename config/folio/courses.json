@@ -1486,6 +1486,24 @@
     }
   },
   {
+    "id": "183feb6f-49a0-4d0c-8eca-713d95ea82a4",
+    "courseNumber": "ARCHLGY-103-01",
+    "name": "History of Archaeological Thought",
+    "metadata": {
+      "createdDate": "2024-04-03T03:49:44.063+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-04-03T03:53:42.819+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mudit Trivedi"
+        }
+      ]
+    }
+  },
+  {
     "id": "1849d59d-7f42-4817-8985-e8345acc1186",
     "courseNumber": "EE-264W",
     "name": " Digital Signal Processing",
@@ -5499,6 +5517,24 @@
     }
   },
   {
+    "id": "5334c0eb-7b25-49df-9969-0aba95ee9f89",
+    "courseNumber": "CEE-151-01",
+    "name": "Negotiation",
+    "metadata": {
+      "createdDate": "2024-04-03T04:41:56.070+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-03T04:41:56.070+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Stan Christensen"
+        }
+      ]
+    }
+  },
+  {
     "id": "5410f297-0aea-487a-a710-21f5a01c4fa4",
     "courseNumber": "ARTHIST 226-01",
     "name": "New Landscapes of China: Ecologies, Media, Imaginaries",
@@ -6254,6 +6290,24 @@
       "instructorObjects": [
         {
           "name": "Michael Rosenfeld"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5bcb1e3f-7317-4990-b47f-343752356616",
+    "courseNumber": "PHOTON-345-01",
+    "name": "Fundamentals and Applications of Spectroscopy ",
+    "metadata": {
+      "createdDate": "2024-04-02T21:16:24.400+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-02T21:16:24.400+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Jaramillo"
         }
       ]
     }
@@ -7215,6 +7269,24 @@
     }
   },
   {
+    "id": "693441d0-e57f-452c-b5f0-847f7b9efddb",
+    "courseNumber": "CEE-287-01",
+    "name": "Earthquake Resistant Design and Construction",
+    "metadata": {
+      "createdDate": "2024-04-02T19:26:29.906+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-04-02T19:26:29.906+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Eduardo Miranda"
+        }
+      ]
+    }
+  },
+  {
     "id": "6972447f-6124-426d-8482-f3e67f457856",
     "courseNumber": "MATSCI-161-01",
     "name": "Energy Materials Laboratory",
@@ -7265,6 +7337,24 @@
       "instructorObjects": [
         {
           "name": "John Kieschnick"
+        }
+      ]
+    }
+  },
+  {
+    "id": "69df1dba-7988-433c-bbbf-225e143aaf58",
+    "courseNumber": "CHEMENG-345-01",
+    "name": "Fundamentals and Applications of Spectroscopy",
+    "metadata": {
+      "createdDate": "2024-04-02T21:18:45.209+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-02T21:18:45.209+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Thomas Jaramillo"
         }
       ]
     }
@@ -8185,6 +8275,24 @@
     }
   },
   {
+    "id": "789d364f-67d2-4b9c-b627-4fbf37420393",
+    "courseNumber": "LAW-5047-01",
+    "name": "The Inter-American Human Rights System: Doctrine, Practice and Advocacy",
+    "metadata": {
+      "createdDate": "2024-04-02T23:18:34.674+00:00",
+      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
+      "updatedDate": "2024-04-02T23:18:34.674+00:00",
+      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Claret Vargas"
+        }
+      ]
+    }
+  },
+  {
     "id": "78b76713-0634-490e-b979-0bc1fd471ed6",
     "courseNumber": "CHEMENG 466",
     "sectionName": "01",
@@ -8487,24 +8595,6 @@
       "instructorObjects": [
         {
           "name": "Steven Gorelick"
-        }
-      ]
-    }
-  },
-  {
-    "id": "7deafea9-f697-4042-941a-b166e4262905",
-    "courseNumber": "ME-70-01",
-    "name": "Introductory Fluids Engineering",
-    "metadata": {
-      "createdDate": "2024-04-01T20:08:56.980+00:00",
-      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-04-01T20:08:56.980+00:00",
-      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Mark Cappelli"
         }
       ]
     }
@@ -9042,6 +9132,24 @@
       "instructorObjects": [
         {
           "name": "Markus Covert"
+        }
+      ]
+    }
+  },
+  {
+    "id": "85e06c6c-5915-41d5-a462-760915defb24",
+    "courseNumber": "CEE-32P-01",
+    "name": "Place: Making Space Now",
+    "metadata": {
+      "createdDate": "2024-04-02T18:51:29.866+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-02T18:51:29.866+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Tom Beischer"
         }
       ]
     }
@@ -11630,6 +11738,30 @@
     }
   },
   {
+    "id": "aa2c84b7-4949-42cf-ac78-60adc1643677",
+    "courseNumber": "INDE 221",
+    "name": "Science of Medicine I",
+    "metadata": {
+      "createdDate": "2024-04-03T04:35:47.250+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-03T04:35:47.250+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Anuj Aggarwal"
+        },
+        {
+          "name": "Daniel Bernstein"
+        },
+        {
+          "name": "Peter Kao"
+        }
+      ]
+    }
+  },
+  {
     "id": "aa37e550-8004-49a0-b7aa-9aed5af9aaa0",
     "courseNumber": "CEE-278A-01",
     "name": "Air Pollution Fundamentals",
@@ -12075,6 +12207,24 @@
     }
   },
   {
+    "id": "b2ad32ca-9c68-44d1-9516-5c568a58d46c",
+    "courseNumber": "ANTHRO-103B-01",
+    "name": "History of Archaeological Thought ",
+    "metadata": {
+      "createdDate": "2024-04-03T03:50:26.686+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-04-03T03:54:00.032+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mudit Trivedi"
+        }
+      ]
+    }
+  },
+  {
     "id": "b3378616-7226-4984-8fe4-4dc2211ec4fb",
     "courseNumber": "APPPHYS-283-01",
     "name": "Ultrafast Quantum Physics",
@@ -12467,8 +12617,8 @@
     "metadata": {
       "createdDate": "2024-04-02T00:49:57.540+00:00",
       "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
-      "updatedDate": "2024-04-02T00:52:16.004+00:00",
-      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+      "updatedDate": "2024-04-03T05:00:40.535+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -13073,6 +13223,24 @@
     }
   },
   {
+    "id": "c23fedd8-14bd-4c7d-a586-16b03aab9944",
+    "courseNumber": "PSYC-15Q-01",
+    "name": "Consciousness and Self Psychology",
+    "metadata": {
+      "createdDate": "2024-04-03T03:51:41.608+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-04-03T03:51:41.608+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Giovanni Dandekar"
+        }
+      ]
+    }
+  },
+  {
     "id": "c24269fb-fbeb-4c98-a512-f5ed51382307",
     "courseNumber": "PAS 257",
     "name": " Introduction to Quantitative Research I",
@@ -13453,6 +13621,24 @@
     }
   },
   {
+    "id": "c66b2bcd-7e6b-42d6-bea0-b55fe9945351",
+    "courseNumber": "SPANLANG-23B-01",
+    "name": "Second-Year Spanish for Heritage Language Students, Third Quarter",
+    "metadata": {
+      "createdDate": "2024-04-03T04:06:05.024+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-03T04:06:05.024+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lorena Mancilla Corona"
+        }
+      ]
+    }
+  },
+  {
     "id": "c6d4004d-ba3a-4c3f-9983-767b4988d21f",
     "courseNumber": "HISTORY-232B-01",
     "name": "Heretics, Courtesans and Merchants: Venice and its Empire",
@@ -13721,6 +13907,24 @@
     }
   },
   {
+    "id": "ca3c51eb-f014-40b1-8aea-6bfbcbd18835",
+    "courseNumber": "ARTHIST-32P-01",
+    "name": "Place: Making Space Now",
+    "metadata": {
+      "createdDate": "2024-04-02T18:50:19.825+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-02T18:50:19.825+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Tom Beischer"
+        }
+      ]
+    }
+  },
+  {
     "id": "ca708c70-17ad-4bc6-93df-4c37cabacd43",
     "courseNumber": "MED 300A",
     "name": "Internal Medicine Core Clerkship",
@@ -13735,6 +13939,24 @@
       "instructorObjects": [
         {
           "name": "Nancy D'Amico"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cab3b0dd-fb66-43a9-8d30-ef1c115b11b6",
+    "courseNumber": "CEE-251-01",
+    "name": "Negotiation",
+    "metadata": {
+      "createdDate": "2024-04-03T04:42:20.792+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-03T04:42:20.792+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Stan Christensen"
         }
       ]
     }
@@ -13869,6 +14091,24 @@
       "instructorObjects": [
         {
           "name": "Barbara Pitkin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ccf237e6-e8fd-468f-b85e-79dd7b8af59e",
+    "courseNumber": "MATSCI-380-01",
+    "name": "Nano-Biotechnology",
+    "metadata": {
+      "createdDate": "2024-04-02T21:56:00.816+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-04-02T21:56:00.816+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Nicholas Melosh"
         }
       ]
     }
@@ -16467,24 +16707,6 @@
     }
   },
   {
-    "id": "f0ba515b-36f9-49d2-b5c8-9e4703593634",
-    "courseNumber": "PHIL 165/265-01",
-    "name": "Philosophy of Physics",
-    "metadata": {
-      "createdDate": "2024-01-22T22:50:51.141+00:00",
-      "createdByUserId": "24eb6f34-6450-41e4-b9ce-9bf706b217aa",
-      "updatedDate": "2024-01-22T22:53:34.992+00:00",
-      "updatedByUserId": "24eb6f34-6450-41e4-b9ce-9bf706b217aa"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Thomas Ryckman"
-        }
-      ]
-    }
-  },
-  {
     "id": "f13f2136-e572-47f7-80c3-aeeb2b76e7f5",
     "courseNumber": "HISTORY-96N-01",
     "name": "World War II in Asia",
@@ -16861,6 +17083,24 @@
       "instructorObjects": [
         {
           "name": "Laura Heath-Stout"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f601fc9b-dd28-4af0-9a15-e2704b53a015",
+    "courseNumber": "CS-107-01",
+    "name": "Computer Organization and Systems",
+    "metadata": {
+      "createdDate": "2024-04-03T00:08:40.223+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-03T00:08:40.223+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Nick Troccoli"
         }
       ]
     }
@@ -17412,6 +17652,24 @@
       "instructorObjects": [
         {
           "name": "Kannan Soundararajan"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fe1d8858-3384-4bf4-a647-245978ffaf38",
+    "courseNumber": "INDE 203",
+    "name": "Practice of Medicine III",
+    "metadata": {
+      "createdDate": "2024-04-03T04:25:37.541+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-03T04:25:37.541+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Poonam Hosamani"
         }
       ]
     }
