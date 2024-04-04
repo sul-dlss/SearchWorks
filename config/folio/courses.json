@@ -135,7 +135,7 @@
     "metadata": {
       "createdDate": "2024-03-28T21:07:14.189+00:00",
       "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
-      "updatedDate": "2024-03-28T21:07:14.189+00:00",
+      "updatedDate": "2024-04-03T17:09:21.834+00:00",
       "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
     },
     "courseListingObject": {
@@ -3862,6 +3862,24 @@
     }
   },
   {
+    "id": "3c00a25b-2579-476f-b2c8-8d1b3b289c83",
+    "courseNumber": "CEE-33Q-01",
+    "name": "Architecture - Space, Light, and Movement",
+    "metadata": {
+      "createdDate": "2024-04-03T23:56:29.097+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-03T23:56:29.097+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ethen Wood"
+        }
+      ]
+    }
+  },
+  {
     "id": "3ca47757-12dd-4f85-b920-e6f5cd79328d",
     "courseNumber": "MATH-215B-01",
     "name": "Differential Topology",
@@ -6184,6 +6202,24 @@
     }
   },
   {
+    "id": "5a5edc3f-5702-408d-a591-eefc58f992ab",
+    "courseNumber": "CEE-287-01",
+    "name": "Earthquake Resistant Design and Construction",
+    "metadata": {
+      "createdDate": "2024-04-03T16:34:41.260+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-04-03T16:34:41.260+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Eduardo Miranda"
+        }
+      ]
+    }
+  },
+  {
     "id": "5a9b0d97-da49-4aee-a798-1a2d2f247bc5",
     "courseNumber": "CEE-263D ",
     "name": "Air Pollution and Global Warming: History, Science, and Solutions ",
@@ -6417,6 +6453,24 @@
       "instructorObjects": [
         {
           "name": "Roger Romani"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5cf587e3-3724-47a0-84d8-7457f05c692c",
+    "courseNumber": "AA-201A-01",
+    "name": "Fundamentals of Acoustics",
+    "metadata": {
+      "createdDate": "2024-04-04T01:30:10.290+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-04T01:30:10.290+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sanjiva Lele"
         }
       ]
     }
@@ -7036,6 +7090,24 @@
     }
   },
   {
+    "id": "65ee8405-923b-47c0-b40b-51480d099472",
+    "courseNumber": "HISTORY-233C-01",
+    "name": "Two British Revolutions",
+    "metadata": {
+      "createdDate": "2024-04-03T23:41:46.363+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-03T23:41:46.363+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Como"
+        }
+      ]
+    }
+  },
+  {
     "id": "6611cde3-0b43-4737-a8a1-a9a5fe8f823b",
     "courseNumber": "SOC-31N-01",
     "name": "Social Networks",
@@ -7264,24 +7336,6 @@
       "instructorObjects": [
         {
           "name": "Persi Diaconis"
-        }
-      ]
-    }
-  },
-  {
-    "id": "693441d0-e57f-452c-b5f0-847f7b9efddb",
-    "courseNumber": "CEE-287-01",
-    "name": "Earthquake Resistant Design and Construction",
-    "metadata": {
-      "createdDate": "2024-04-02T19:26:29.906+00:00",
-      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-      "updatedDate": "2024-04-02T19:26:29.906+00:00",
-      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Eduardo Miranda"
         }
       ]
     }
@@ -9537,6 +9591,24 @@
     }
   },
   {
+    "id": "8c5805e0-91bb-4d58-b2bf-84518c0f9f77",
+    "courseNumber": "HISTORY-333C-01",
+    "name": "Two British Revolutions",
+    "metadata": {
+      "createdDate": "2024-04-03T23:41:19.617+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-03T23:41:19.617+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Como"
+        }
+      ]
+    }
+  },
+  {
     "id": "8c604875-ac22-413c-af24-715f835612fc",
     "courseNumber": "ME-263-01",
     "name": "The Chair",
@@ -11391,6 +11463,24 @@
     }
   },
   {
+    "id": "a6c63d39-fd80-4c08-ae89-48903fc2d3eb",
+    "courseNumber": "PSYC-15Q-01",
+    "name": "Consciousness and Self Psychology",
+    "metadata": {
+      "createdDate": "2024-04-04T04:14:47.257+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-04-04T04:14:47.257+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Giovanni Dandekar"
+        }
+      ]
+    }
+  },
+  {
     "id": "a6cd2b60-4e50-4fbd-9b5c-10233208201f",
     "courseNumber": "FEMGEN-193-01",
     "name": "The Chinese Empire from the Mongol Invasion to the Boxer Uprising",
@@ -11613,6 +11703,24 @@
       "instructorObjects": [
         {
           "name": "Prashant Loyalka"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a90b1d23-8c08-4f33-9b7c-87f2efd40dcd",
+    "courseNumber": "ME-70-01",
+    "name": "Introductory Fluids Engineering",
+    "metadata": {
+      "createdDate": "2024-04-03T14:50:18.273+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-04-03T14:50:18.273+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Cappelli"
         }
       ]
     }
@@ -12250,7 +12358,7 @@
     "metadata": {
       "createdDate": "2024-03-27T19:03:48.561+00:00",
       "createdByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1",
-      "updatedDate": "2024-03-27T19:10:52.882+00:00",
+      "updatedDate": "2024-04-03T17:14:12.596+00:00",
       "updatedByUserId": "5b8289aa-f9fa-421b-8166-a3db4662e8c1"
     },
     "courseListingObject": {
