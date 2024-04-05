@@ -3089,6 +3089,24 @@
     }
   },
   {
+    "id": "2ec07af3-2300-479b-b215-ba52e70b0ca4",
+    "courseNumber": "PSYC 223B",
+    "name": "Topics in Neurodiversity: Design Thinking Approaches",
+    "metadata": {
+      "createdDate": "2024-04-05T03:47:59.024+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-05T03:47:59.024+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lawrence Fung"
+        }
+      ]
+    }
+  },
+  {
     "id": "2f938ac5-01c3-472d-b35d-496c2383c12b",
     "courseNumber": "CEE 233A",
     "name": "Studio 1: Architecture - Space, Light, and Movement",
@@ -4105,35 +4123,6 @@
     }
   },
   {
-    "id": "40833a7c-3723-4f6e-879e-4125f98b5ed7",
-    "courseNumber": "BIO 221-01",
-    "sectionName": "01",
-    "name": "Ornithology",
-    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
-    "metadata": {
-      "createdDate": "2024-03-06T23:25:31.834+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-13T23:44:55.900+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Ben Moran"
-        },
-        {
-          "name": "Marty Freeland"
-        },
-        {
-          "name": "Maya Xu"
-        },
-        {
-          "name": "Rodolfo Dirzo"
-        }
-      ]
-    }
-  },
-  {
     "id": "409abdd7-5058-4d0d-8784-51a586eee25b",
     "courseNumber": "GENE-280-01",
     "sectionName": "01",
@@ -4569,6 +4558,24 @@
         },
         {
           "name": "Yixiao Sheng"
+        }
+      ]
+    }
+  },
+  {
+    "id": "45ccb100-c796-4606-be49-e481e30c9bf3",
+    "courseNumber": "REES-224C-01",
+    "name": "The Balkan World: History, Culture, Politics",
+    "metadata": {
+      "createdDate": "2024-04-04T23:43:55.741+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-04T23:43:55.741+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jovana Lazic"
         }
       ]
     }
@@ -7541,6 +7548,24 @@
     }
   },
   {
+    "id": "6c0d6987-b703-4f86-a6e8-86e8d7b30ef7",
+    "courseNumber": "PSYCH 249B",
+    "name": "Topics in Neurodiversity: Design Thinking Approaches",
+    "metadata": {
+      "createdDate": "2024-04-05T04:01:44.173+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-05T04:01:44.173+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Lawrence Fung"
+        }
+      ]
+    }
+  },
+  {
     "id": "6c270183-75fe-4b7e-a310-ebcdf6b8ff87",
     "courseNumber": "ENGLISH-92-04",
     "name": "Reading and Writing Poetry",
@@ -8613,6 +8638,27 @@
       "instructorObjects": [
         {
           "name": "David Bentzel"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7d6fc105-63b3-48af-a46a-3d22c53ed1ed",
+    "courseNumber": "DATASCI-192B-01",
+    "name": "Data Science Practicum II",
+    "metadata": {
+      "createdDate": "2024-04-05T01:52:55.262+00:00",
+      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
+      "updatedDate": "2024-04-05T01:52:55.262+00:00",
+      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mallory Nobles"
+        },
+        {
+          "name": "Dennis Sun"
         }
       ]
     }
@@ -10841,6 +10887,24 @@
     }
   },
   {
+    "id": "9de1bd7a-2e72-4f31-b629-47587f53aadf",
+    "courseNumber": "HISTORY-24B-01",
+    "name": "The Balkan World: History, Culture, Politics",
+    "metadata": {
+      "createdDate": "2024-04-04T23:42:45.410+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-04T23:42:45.410+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jovana Lazic"
+        }
+      ]
+    }
+  },
+  {
     "id": "9df0b97e-f019-4a30-b92d-24b715031d84",
     "courseNumber": "APPPHYS-13N-01",
     "name": "A Taste of Quantum Physics",
@@ -11703,24 +11767,6 @@
       "instructorObjects": [
         {
           "name": "Prashant Loyalka"
-        }
-      ]
-    }
-  },
-  {
-    "id": "a90b1d23-8c08-4f33-9b7c-87f2efd40dcd",
-    "courseNumber": "ME-70-01",
-    "name": "Introductory Fluids Engineering",
-    "metadata": {
-      "createdDate": "2024-04-03T14:50:18.273+00:00",
-      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-04-03T14:50:18.273+00:00",
-      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Mark Cappelli"
         }
       ]
     }
@@ -12732,6 +12778,27 @@
       "instructorObjects": [
         {
           "name": "Allyson Hobbs"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b99232f0-49ec-4ab1-936a-670179d90add",
+    "courseNumber": "ARTSTUDI-297S-01",
+    "name": "AP HONORS SEMINAR",
+    "metadata": {
+      "createdDate": "2024-04-04T18:19:51.755+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-04T18:19:51.755+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Calm"
+        },
+        {
+          "name": "Cooper Salmon"
         }
       ]
     }
@@ -14360,6 +14427,24 @@
       "instructorObjects": [
         {
           "name": "Michael Rosenfeld"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ce893c28-7d6e-49fa-9285-0d70db290824",
+    "courseNumber": "MATSCI-190",
+    "name": "Organic and Biological Materials",
+    "metadata": {
+      "createdDate": "2024-04-05T03:13:10.448+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-05T03:13:10.448+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Eric Appel"
         }
       ]
     }
@@ -16525,6 +16610,24 @@
     }
   },
   {
+    "id": "ec48d77c-c22e-41e0-9e33-354a3b2b9523",
+    "courseNumber": "HISTORY-124B-01",
+    "name": "The Balkan World: History, Culture, Politics",
+    "metadata": {
+      "createdDate": "2024-04-04T23:32:57.039+00:00",
+      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
+      "updatedDate": "2024-04-04T23:32:57.039+00:00",
+      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jovana Lazic"
+        }
+      ]
+    }
+  },
+  {
     "id": "ec9dcf2e-fd33-487f-abd1-7a0ec529c490",
     "courseNumber": "HUMBIO-4A-01",
     "name": "The Human Organism",
@@ -17250,6 +17353,24 @@
     }
   },
   {
+    "id": "f74805de-77f5-4f34-a169-829425ceaaa0",
+    "courseNumber": "ME-70-01",
+    "name": "Introductory Fluids Engineering",
+    "metadata": {
+      "createdDate": "2024-04-05T01:05:44.819+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-05T01:05:44.819+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Cappelli"
+        }
+      ]
+    }
+  },
+  {
     "id": "f7483e84-8488-42d5-bf5d-b395abe679b4",
     "courseNumber": "ENGR-245-01",
     "name": "The Lean LaunchPad: Getting Your Lean Startup Off the Ground",
@@ -17707,6 +17828,24 @@
       "instructorObjects": [
         {
           "name": "Marci Kwon"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fd3f65f8-944e-4df3-b91a-0d8acb554479",
+    "courseNumber": "CHPR 233",
+    "name": "Contemplative Science: The Power of the Pause for Resilience, Relationships, and Resolve",
+    "metadata": {
+      "createdDate": "2024-04-05T04:06:38.019+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-05T04:06:38.019+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Tia Rich"
         }
       ]
     }
