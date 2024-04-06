@@ -17356,11 +17356,12 @@
     "id": "f74805de-77f5-4f34-a169-829425ceaaa0",
     "courseNumber": "ME-70-01",
     "name": "Introductory Fluids Engineering",
+    "description": "",
     "metadata": {
       "createdDate": "2024-04-05T01:05:44.819+00:00",
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
-      "updatedDate": "2024-04-05T01:05:44.819+00:00",
-      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+      "updatedDate": "2024-04-05T21:08:06.399+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
       "instructorObjects": [
