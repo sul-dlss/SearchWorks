@@ -43,7 +43,7 @@ RSpec.describe Record::Item::Mods::MetadataComponent, type: :component do
       end
 
       it 'includes IIIF Drag n Drop link' do
-        expect(page).to have_css 'a.iiif-dnd[href="https://library.stanford.edu/projects/international-image-interoperability-framework/viewers?manifest=example.com"]'
+        expect(page).to have_css 'a.iiif-dnd[href="https://iiif.io?manifest=example.com"]'
       end
     end
   end
