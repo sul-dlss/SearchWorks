@@ -3972,6 +3972,25 @@
     }
   },
   {
+    "id": "3e508eaa-f79b-4433-961e-3771215936b2",
+    "courseNumber": "PHIL 141/241F",
+    "name": "Frege",
+    "description": "This course will study the philosophy of Gottlob Frege.",
+    "metadata": {
+      "createdDate": "2024-04-08T20:19:21.361+00:00",
+      "createdByUserId": "24eb6f34-6450-41e4-b9ce-9bf706b217aa",
+      "updatedDate": "2024-04-08T20:21:23.910+00:00",
+      "updatedByUserId": "24eb6f34-6450-41e4-b9ce-9bf706b217aa"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Greg Wong-Taylor"
+        }
+      ]
+    }
+  },
+  {
     "id": "3fc6ea7e-77a1-4441-9d94-4feb08cd8f6d",
     "courseNumber": "MATSCI-173-01",
     "name": "Mechanical Behavior Laboratory ",
@@ -7373,6 +7392,24 @@
       "instructorObjects": [
         {
           "name": "Thomas Jaramillo"
+        }
+      ]
+    }
+  },
+  {
+    "id": "69f701b2-8b5c-4ba1-8e44-6f6f37d99e7d",
+    "courseNumber": "EE-282-01",
+    "name": "Computer Systems Architecture",
+    "metadata": {
+      "createdDate": "2024-04-09T01:31:59.423+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-09T01:31:59.423+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Caroline Trippel"
         }
       ]
     }
@@ -12234,6 +12271,24 @@
         },
         {
           "name": "Cintia Santana"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b18ec55c-ff39-40a1-bc71-a2652ba497a0",
+    "courseNumber": "ARTSTUDI-245-01",
+    "name": "Painting II",
+    "metadata": {
+      "createdDate": "2024-04-08T23:37:10.255+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-04-08T23:37:10.255+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Xiaoze Xie"
         }
       ]
     }
