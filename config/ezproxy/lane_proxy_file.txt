@@ -436,7 +436,6 @@ d-nb.info
 darujps.biomedcentral.com
 data.bls.gov
 data.chhs.ca.gov
-data.cnki.net
 data.oversea.cnki.net
 database.yomiuri.co.jp
 datacatalog.med.nyu.edu
