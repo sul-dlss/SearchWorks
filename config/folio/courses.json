@@ -380,29 +380,6 @@
     }
   },
   {
-    "id": "0610f1c2-0406-4191-b816-8955ace9bb81",
-    "courseNumber": "EPI-223-01",
-    "sectionName": "01",
-    "name": "Introduction to Data Management and Analysis in SAS",
-    "description": "Data management topics include Introduction to SAS and SAS syntax, importing data, creating and reading SAS datasets, data cleaning and validation, creating new variables, and combining data sets.",
-    "metadata": {
-      "createdDate": "2023-08-27T20:33:10.508+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:41:03.022+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Lesley Park"
-        },
-        {
-          "name": "Rita Popat"
-        }
-      ]
-    }
-  },
-  {
     "id": "0665804f-3f3f-4de0-94f0-de3a8412a82c",
     "courseNumber": "MATSCI-83N-01",
     "name": "Great Inventions That Matter",
@@ -435,26 +412,6 @@
       "instructorObjects": [
         {
           "name": "Jacopo Borga"
-        }
-      ]
-    }
-  },
-  {
-    "id": "06a77e9e-0c5f-48f2-b0f3-9f2eb6dfd355",
-    "courseNumber": "GENE-281-01",
-    "sectionName": "01",
-    "name": "Cancer Genetic Counseling",
-    "description": "Topics include: cancer biology and cytogenetics; diagnosis and management of common cancer genetic syndromes; predictive testing; psychology of cancer genetic counseling; and topics recommended by ASCO guidelines",
-    "metadata": {
-      "createdDate": "2023-08-30T03:49:52.731+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:15:30.562+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Andrea Hanson-Kahn"
         }
       ]
     }
@@ -531,29 +488,6 @@
       "instructorObjects": [
         {
           "name": "Melody King"
-        }
-      ]
-    }
-  },
-  {
-    "id": "084d9582-d068-41d9-9aa2-37b811337e47",
-    "courseNumber": "BIOC-205-01",
-    "sectionName": "01",
-    "name": "Molecular Foundations of Medicine",
-    "description": "For medical students, The course examines the impact of molecular biology on medicine",
-    "metadata": {
-      "createdDate": "2023-08-27T20:13:45.589+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:51:21.673+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Gilbert Chu"
-        },
-        {
-          "name": "Natalia Gomez-Ospina"
         }
       ]
     }
@@ -3622,6 +3556,24 @@
     }
   },
   {
+    "id": "39367d42-870a-4688-a27f-47bb9b3222b1",
+    "courseNumber": "MS&E-256A",
+    "name": "Technology Assessment and Regulation of Medical Devices ",
+    "metadata": {
+      "createdDate": "2024-04-10T23:43:20.908+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-04-10T23:43:20.908+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jan Pietzsch"
+        }
+      ]
+    }
+  },
+  {
     "id": "395c2e45-c466-4105-ac50-25e0ae6d45f9",
     "courseNumber": "AA-251-01",
     "name": "Introduction to the Space Environment",
@@ -4094,26 +4046,6 @@
       "instructorObjects": [
         {
           "name": "George Hilley"
-        }
-      ]
-    }
-  },
-  {
-    "id": "409abdd7-5058-4d0d-8784-51a586eee25b",
-    "courseNumber": "GENE-280-01",
-    "sectionName": "01",
-    "name": "Metabolic Genetic Counseling",
-    "description": "Topics include an overview of metabolic diseases; common pathways, diagnosis, management, and treatment of metabolic disorders, and newborn screening.",
-    "metadata": {
-      "createdDate": "2023-08-30T03:43:15.962+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:49:45.214+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Andrea Hanson-Kahn"
         }
       ]
     }
@@ -5339,29 +5271,6 @@
     }
   },
   {
-    "id": "5185cb5b-a95f-4468-843d-05ab3ed57cfc",
-    "courseNumber": "BIOC-200-01",
-    "sectionName": "01",
-    "name": "Applied Biochemistry",
-    "description": " Fundamental concepts of biochemistry as applied to clinical medicine.",
-    "metadata": {
-      "createdDate": "2023-08-27T21:08:50.797+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:09:38.077+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Tina Cowan"
-        },
-        {
-          "name": "Pehr Harbury"
-        }
-      ]
-    }
-  },
-  {
     "id": "518603e3-f5f0-49f6-9ea2-c34600f1f3e4",
     "courseNumber": "HUMCORE-133-01",
     "name": "Humanities Core: How to be Modern in East Asia",
@@ -5378,29 +5287,6 @@
         },
         {
           "name": "Lingjia Xu"
-        }
-      ]
-    }
-  },
-  {
-    "id": "51c89cfd-3f83-403e-a41e-bb62db5c6d23",
-    "courseNumber": "EMED-201-01",
-    "sectionName": "01",
-    "name": "Basic Cardiac Life Support for Healthcare Professionals",
-    "description": "This course is designed to teach medical students Basic Life Support (BLS) CPR and Question, Persuade, Refer (QPR), which is the psychiatric equivalent to CPR but for psychological emergencies.",
-    "metadata": {
-      "createdDate": "2023-08-27T21:27:40.977+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:13:25.260+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Kenton Anderson"
-        },
-        {
-          "name": "Michelle Feltes"
         }
       ]
     }
@@ -5732,26 +5618,6 @@
       "instructorObjects": [
         {
           "name": "Marcelo Clerici-Arias"
-        }
-      ]
-    }
-  },
-  {
-    "id": "566a4705-a91a-48aa-a769-b4c619d6db9c",
-    "courseNumber": "EPI-225-01",
-    "sectionName": "01",
-    "name": "Introduction to Epidemiologic and Clinical Research Methods",
-    "description": "The skills to design, carry out, and interpret epidemiologic studies, particularly chronic diseases. Topics: epidemiologic concepts, sources of data, cohort studies, case-control studies, cross-sectional studies, sampling, measures of association, estimating sample size, and sources of bias. Prerequisite: A basic/introductory course in statistics or consent of instructor.",
-    "metadata": {
-      "createdDate": "2023-08-27T22:25:13.171+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:42:50.870+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Rita Popat"
         }
       ]
     }
@@ -10682,32 +10548,6 @@
     }
   },
   {
-    "id": "9a165d7c-09b0-408c-bdb3-767e7662482b",
-    "courseNumber": "SURG-203-01",
-    "sectionName": "01",
-    "name": "Clinical Anatomy",
-    "description": "Introduction to human structure and function presented from a clinical perspective.",
-    "metadata": {
-      "createdDate": "2023-08-27T22:55:09.731+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:23:05.428+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Darren Salmi"
-        },
-        {
-          "name": "Sakti Srivastava"
-        },
-        {
-          "name": "Ian Whitmore"
-        }
-      ]
-    }
-  },
-  {
     "id": "9a21e667-1b5d-407b-b427-8207616b2575",
     "courseNumber": "HISTORY-390-01",
     "name": "North Korea in Historical Perspective",
@@ -13002,26 +12842,6 @@
       "instructorObjects": [
         {
           "name": "Royal Kopperud"
-        }
-      ]
-    }
-  },
-  {
-    "id": "bbfbe27b-5e30-4c53-8f96-43cf11920f4e",
-    "courseNumber": "GENE-202-01",
-    "sectionName": "01",
-    "name": "Human Genetics",
-    "description": "Utilizes lectures and small group activities to develop a working knowledge of human genetics as applicable to clinical medicine.",
-    "metadata": {
-      "createdDate": "2023-08-27T23:11:22.794+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:34:02.576+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Kristina Cusmano-Ozog"
         }
       ]
     }
@@ -17400,26 +17220,6 @@
       "instructorObjects": [
         {
           "name": "Joel Cabrita"
-        }
-      ]
-    }
-  },
-  {
-    "id": "f7f1c6cc-abb5-4bb8-8510-1fbe49ab81c9",
-    "courseNumber": "BIOE-222-01",
-    "sectionName": "01",
-    "name": "Physics and Engineering Principles of Multi-modality Molecular Imaging of Living Subjects",
-    "description": "Focuses on instruments, algorithms, and other technologies for non-invasive imaging of molecular processes in living subjects.",
-    "metadata": {
-      "createdDate": "2023-08-27T21:55:02.502+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:53:04.819+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Craig Levin"
         }
       ]
     }
