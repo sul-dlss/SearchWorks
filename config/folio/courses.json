@@ -316,34 +316,6 @@
     }
   },
   {
-    "id": "05069929-d104-42d5-8eeb-a77722992d15",
-    "courseNumber": "INDE 210",
-    "name": "Foundations of Cancer biology and Pathology",
-    "description": "Sessions include: Tissue Biology; Regulation of Cell Growth, Proliferation, and Differentiation; Cell Injury, Cell Death, and Adaptation; Inflammation and Repair; Basics of Cancer Biology; Clinical Aspects of Cancer; Local Cancer Treatments; Systemic Cancer Treatments; Cancer Epidemiology, Screening and Prevention; Laboratory:",
-    "metadata": {
-      "createdDate": "2023-12-11T00:58:07.539+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-11T00:58:07.539+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Beth Beadle"
-        },
-        {
-          "name": "Joseph Lipsick"
-        },
-        {
-          "name": "Aarohi Bhargava-Shah"
-        },
-        {
-          "name": "Francesca Olguin"
-        }
-      ]
-    }
-  },
-  {
     "id": "054757c5-a35c-49f3-93de-c4a4a96611ed",
     "courseNumber": "CEE-64-01",
     "name": "Air Pollution and Global Warming: History, Science, and Solutions",
@@ -3407,6 +3379,24 @@
     }
   },
   {
+    "id": "36d11380-7c42-477b-8996-907929c2b669",
+    "courseNumber": "HISTORY-255D-01",
+    "name": "Racial Identity in the American Imagination ",
+    "metadata": {
+      "createdDate": "2024-04-12T01:24:54.817+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-12T01:24:54.817+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
+        }
+      ]
+    }
+  },
+  {
     "id": "36f55a82-e87e-4d41-8f16-cb17a3049bcf",
     "courseNumber": "EDUC-101-01",
     "name": "Introduction to Teaching and Learning",
@@ -5119,15 +5109,15 @@
   },
   {
     "id": "4f206bcb-09e0-4b59-a3ed-e4a6d9a02f26",
-    "courseNumber": "CHEM 171-01",
+    "courseNumber": "CHEM-171-01",
     "sectionName": "01",
     "name": "Foundations of Physical Chemistry",
     "description": "Quantum and statistical thermodynamics: obtaining quantum mechanical energy levels and connecting them to thermodynamic properties using statistical mechanics. Emphasis will be on quantum mechanics of ideal systems (particle in a box, particle on a ring, harmonic oscillator, rigid rotor, and hydrogen atom) and their connection to and uses in thermodynamics (laws of thermodynamics, properties of gases and thermal motion, and chemical equilibria).",
     "metadata": {
       "createdDate": "2024-03-11T20:12:27.694+00:00",
       "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-13T23:42:51.976+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+      "updatedDate": "2024-04-11T23:47:23.492+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -5471,6 +5461,24 @@
       "instructorObjects": [
         {
           "name": "Cynthia DeTata"
+        }
+      ]
+    }
+  },
+  {
+    "id": "544e92f3-e680-4eee-8011-7cc8d0940e41",
+    "courseNumber": "HISTORY-355D-01",
+    "name": "Racial Identity in the American Imagination ",
+    "metadata": {
+      "createdDate": "2024-04-12T01:25:31.959+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-12T01:25:31.959+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
         }
       ]
     }
@@ -8343,6 +8351,24 @@
     }
   },
   {
+    "id": "79c37a99-fe2c-4617-9c77-9ea8be3e1779",
+    "courseNumber": "CSRE-255D-01",
+    "name": "Racial Identity in the American Imagination ",
+    "metadata": {
+      "createdDate": "2024-04-12T01:25:15.484+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-12T01:25:15.484+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
+        }
+      ]
+    }
+  },
+  {
     "id": "7a0aa56f-ae31-4675-94a3-729ebd9ce015",
     "courseNumber": "PHYSICS-121-01",
     "name": "Intermediate Electricity and Magnetism II",
@@ -10011,6 +10037,24 @@
       "instructorObjects": [
         {
           "name": "Persi Diaconis"
+        }
+      ]
+    }
+  },
+  {
+    "id": "91bbcafe-7ac3-4817-85bb-f6d3c3f6ae0e",
+    "courseNumber": "AFRICAAM-255-01",
+    "name": "Racial Identity in the American Imagination ",
+    "metadata": {
+      "createdDate": "2024-04-12T01:24:07.874+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-12T01:25:40.218+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
         }
       ]
     }
@@ -12582,6 +12626,24 @@
       "instructorObjects": [
         {
           "name": "Iain Johnstone"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b87849b3-c6b4-4c8e-8843-19a0861d8c83",
+    "courseNumber": "AMSTUD-255D-01",
+    "name": "Racial Identity in the American Imagination ",
+    "metadata": {
+      "createdDate": "2024-04-12T01:24:38.791+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-12T01:24:38.791+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Allyson Hobbs"
         }
       ]
     }
@@ -16050,27 +16112,6 @@
     }
   },
   {
-    "id": "e7267e5f-15dc-4265-b66b-a68574ba2f6c",
-    "courseNumber": "RAD 235",
-    "name": "Advanced Ultrasound Imaging",
-    "metadata": {
-      "createdDate": "2023-12-17T20:24:17.930+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-17T20:24:17.930+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jeremy Dahl"
-        },
-        {
-          "name": "Dongwoon Hyun"
-        }
-      ]
-    }
-  },
-  {
     "id": "e74f842a-975e-4b83-8741-b8873a528ace",
     "courseNumber": "HISTORY 348C",
     "name": "Curating the Image: African Photography and the Politics of Exhibitions",
@@ -16518,28 +16559,6 @@
       "instructorObjects": [
         {
           "name": "Pamela Hinds"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ed50fa76-9402-470e-866c-e076452dcb8b",
-    "courseNumber": "HRP 263",
-    "name": "Advanced Decision Science Methods and Modeling in Health",
-    "description": "Advanced methods currently used in published model-based cost-effectiveness analyses in medicine and public health, both theory and technical applications.",
-    "metadata": {
-      "createdDate": "2023-12-11T03:04:45.546+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-11T03:04:45.546+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jeremy Goldhaber-Fiebert"
-        },
-        {
-          "name": "Fernando Alarid Escudero"
         }
       ]
     }
