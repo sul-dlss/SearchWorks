@@ -760,6 +760,7 @@
   },
   {
     "name": "$75 lost fee",
+    "description": "applies to media games and books for green, education, EAL",
     "itemAgedLostOverdue": {
       "duration": 7,
       "intervalId": "Days"
@@ -795,8 +796,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.581+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-03-11T18:26:53.573+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2024-04-11T20:46:14.686+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     },
     "id": "be384a8b-98aa-4443-8d3e-1eeb115a83bc"
   },
