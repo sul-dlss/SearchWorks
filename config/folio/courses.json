@@ -2208,7 +2208,7 @@
     "metadata": {
       "createdDate": "2023-11-06T07:10:17.182+00:00",
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2023-11-06T07:11:00.989+00:00",
+      "updatedDate": "2024-04-15T02:44:46.140+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
@@ -2983,29 +2983,6 @@
       "instructorObjects": [
         {
           "name": "Ethen Wood"
-        }
-      ]
-    }
-  },
-  {
-    "id": "308f4142-1807-434d-a4af-88d4c7fbd072",
-    "courseNumber": "HRP-392-01",
-    "sectionName": "01",
-    "name": "Analysis of Costs, Risks & Benefits of Health Care",
-    "description": "For Graduate students",
-    "metadata": {
-      "createdDate": "2023-09-27T17:51:53.065+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:07:49.479+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Doug Owens"
-        },
-        {
-          "name": "Joshua Salomon"
         }
       ]
     }
@@ -5833,31 +5810,6 @@
     }
   },
   {
-    "id": "58c0f6c3-c24c-4917-b209-9d1628a65d18",
-    "courseNumber": "EPI 231",
-    "name": "Epidemiology of Infectious Diseases",
-    "description": "Principles of the transmission of the infectious agents (viruses, bacteria, rickettsia, mycoplasma, fungi, and protozoan and helminth parasites).",
-    "metadata": {
-      "createdDate": "2023-12-11T18:46:33.839+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-11T18:46:33.839+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Yvonne Maldonado"
-        },
-        {
-          "name": "Julie Parsonnet"
-        },
-        {
-          "name": "Jason Andrews"
-        }
-      ]
-    }
-  },
-  {
     "id": "592c118e-0b50-46fd-a293-3d0256524fff",
     "courseNumber": "ARCHLGY-134-01",
     "name": "Introduction to Museum Practices ",
@@ -6873,25 +6825,6 @@
     }
   },
   {
-    "id": "64cb08c5-dfee-44c1-b520-818ad7b66d51",
-    "courseNumber": "INDE 223A",
-    "name": "Science of Medicine III-A",
-    "description": " Science of Medicine presents organ system-based histology, pathology, physiology, pharmacology, and infectious disease in a sequence of interdisciplinary courses.",
-    "metadata": {
-      "createdDate": "2023-12-11T01:39:39.621+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-11T01:39:39.621+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Scheherazade Le"
-        }
-      ]
-    }
-  },
-  {
     "id": "64d65fb5-a626-4785-9460-538b6b2f15da",
     "courseNumber": "INTLPOL-244D-01",
     "name": "Asia-Pacific Transformation",
@@ -6996,24 +6929,6 @@
       "instructorObjects": [
         {
           "name": "Mykel Kochenderfer"
-        }
-      ]
-    }
-  },
-  {
-    "id": "66d4be92-2f81-4aef-858b-7eaf60d4ced3",
-    "courseNumber": "MI 210",
-    "name": "Advanced Pathogenesis of Bacteria, Viruses, and Eukaryotic Parasites",
-    "metadata": {
-      "createdDate": "2024-03-18T01:03:36.551+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2024-03-18T01:03:36.551+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jan Carette"
         }
       ]
     }
@@ -10048,7 +9963,7 @@
     "metadata": {
       "createdDate": "2024-04-12T01:24:07.874+00:00",
       "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2024-04-12T01:25:40.218+00:00",
+      "updatedDate": "2024-04-15T05:49:52.885+00:00",
       "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
     },
     "courseListingObject": {
@@ -10471,26 +10386,6 @@
         },
         {
           "name": "Scott Atlas"
-        }
-      ]
-    }
-  },
-  {
-    "id": "98c53078-a5e1-4311-b2af-e510a78f63ce",
-    "courseNumber": "COMPMED-211-01",
-    "sectionName": "01",
-    "name": "Robust, reproducible, real-world experimental design and analysis for life and biomedical scientists",
-    "description": "Emphasis is on real-world experimental design and analysis in the life sciences, with particular focus on modern techniques that maximize power and minimize sample size, and avoiding common errors contributing to false discovery and the reproducibility crisis.",
-    "metadata": {
-      "createdDate": "2023-09-01T04:11:29.635+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T04:04:57.280+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Joseph Garner"
         }
       ]
     }
@@ -10984,26 +10879,6 @@
         },
         {
           "name": "Yi-Ting Chung"
-        }
-      ]
-    }
-  },
-  {
-    "id": "9f4126e1-b1e1-42c9-a731-53fcbf8f5bd7",
-    "courseNumber": "BIOS-217-01",
-    "sectionName": "01",
-    "name": "Foundations of statistics and reproducible research",
-    "description": "Introduction to foundations of rigorous, reproducible research in experimental biology and clinical research. Provides conceptual framework for linking hypotheses to experimental design, quantitative measurement, statistical analysis and assessment of uncertainty.",
-    "metadata": {
-      "createdDate": "2023-09-01T04:24:49.324+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:29:11.769+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Steven Goodman"
         }
       ]
     }
@@ -11612,9 +11487,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Joel Cabrita"
-        }
+
       ]
     }
   },
@@ -13132,29 +13005,6 @@
     }
   },
   {
-    "id": "beb623e6-64c1-492e-942b-7fe8383689a7",
-    "courseNumber": "BIOMEDIN-432-01",
-    "sectionName": "01",
-    "name": "Analysis of Costs, Risks, & Benefits of Health Care",
-    "description": "For graduate students",
-    "metadata": {
-      "createdDate": "2023-09-27T17:57:01.190+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T03:06:50.883+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Doug Owens"
-        },
-        {
-          "name": "Joshua Salomon"
-        }
-      ]
-    }
-  },
-  {
     "id": "bef12faa-44eb-4b63-9418-e010b2c0aaaa",
     "courseNumber": "HISTORY-332D-01",
     "name": "Rome: From Pilgrimage to the Grand Tour",
@@ -13800,26 +13650,6 @@
       "instructorObjects": [
         {
           "name": "Sarah Prodan"
-        }
-      ]
-    }
-  },
-  {
-    "id": "c8d60ded-d539-410f-adf4-356c27d0ddf3",
-    "courseNumber": "BIODS-228-01",
-    "sectionName": "01",
-    "name": "Statistical genomics for planetary health: oceans, plants, microbes and humans",
-    "description": "Data scientific analysis of genomics data has transformed biology, enabling myriad discoveries with enormous impacts on human and planetary health.",
-    "metadata": {
-      "createdDate": "2023-09-14T21:58:14.496+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-11-03T04:07:52.813+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Julia Salzman"
         }
       ]
     }
@@ -16123,9 +15953,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Joel Cabrita"
-        }
+
       ]
     }
   },
@@ -17237,9 +17065,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Joel Cabrita"
-        }
+
       ]
     }
   },
@@ -17498,7 +17324,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Eldon Pei"
+        }
       ]
     }
   },
@@ -17731,31 +17559,6 @@
       "instructorObjects": [
         {
           "name": "Poonam Hosamani"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fe3dcb2a-35ba-47ef-8c2e-979b59a2a40f",
-    "courseNumber": "INDE 223B",
-    "name": "Science of Medicine III-B",
-    "description": " Science of Medicine presents organ system-based histology, pathology, physiology, pharmacology, and infectious disease in a sequence of interdisciplinary courses.",
-    "metadata": {
-      "createdDate": "2023-12-11T01:47:13.808+00:00",
-      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
-      "updatedDate": "2023-12-11T01:47:13.808+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "May Chien"
-        },
-        {
-          "name": "Jason Kurzer"
-        },
-        {
-          "name": "Rebecca Miller-Kuhlmann"
         }
       ]
     }
