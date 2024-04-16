@@ -15976,6 +15976,24 @@
     }
   },
   {
+    "id": "e7a109c6-0d1e-47cb-aa5e-e0d124d72679",
+    "courseNumber": "ECON-1-01",
+    "name": "Principles of Economics",
+    "metadata": {
+      "createdDate": "2024-04-16T00:46:31.821+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-04-16T00:46:31.821+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Mark Tendall"
+        }
+      ]
+    }
+  },
+  {
     "id": "e82e0d1e-e912-4d46-9566-0b09bd87b520",
     "courseNumber": "BIO-124-01",
     "name": "Topics in Cancer Biology",
