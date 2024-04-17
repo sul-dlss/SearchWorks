@@ -7349,24 +7349,6 @@
     }
   },
   {
-    "id": "6c270183-75fe-4b7e-a310-ebcdf6b8ff87",
-    "courseNumber": "ENGLISH-92-04",
-    "name": "Reading and Writing Poetry",
-    "metadata": {
-      "createdDate": "2024-01-15T01:34:00.562+00:00",
-      "createdByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1",
-      "updatedDate": "2024-01-15T01:34:00.562+00:00",
-      "updatedByUserId": "89b6a40e-b5d7-4cfb-a21d-39abf1c360c1"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Keith Ekiss"
-        }
-      ]
-    }
-  },
-  {
     "id": "6c4410a1-1297-408b-b78e-8570f687e0da",
     "courseNumber": "BIOE-210-01",
     "name": "Systems Biology",
@@ -11321,24 +11303,6 @@
     }
   },
   {
-    "id": "a6c63d39-fd80-4c08-ae89-48903fc2d3eb",
-    "courseNumber": "PSYC-15Q-01",
-    "name": "Consciousness and Self Psychology",
-    "metadata": {
-      "createdDate": "2024-04-04T04:14:47.257+00:00",
-      "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-      "updatedDate": "2024-04-04T04:14:47.257+00:00",
-      "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Giovanni Dandekar"
-        }
-      ]
-    }
-  },
-  {
     "id": "a6cd2b60-4e50-4fbd-9b5c-10233208201f",
     "courseNumber": "FEMGEN-193-01",
     "name": "The Chinese Empire from the Mongol Invasion to the Boxer Uprising",
@@ -13146,7 +13110,7 @@
     "metadata": {
       "createdDate": "2024-04-03T03:51:41.608+00:00",
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
-      "updatedDate": "2024-04-03T03:51:41.608+00:00",
+      "updatedDate": "2024-04-17T04:13:20.000+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
     },
     "courseListingObject": {
