@@ -8775,6 +8775,25 @@
     }
   },
   {
+    "id": "816a4c41-a194-4743-91cd-e00b6c71d97a",
+    "courseNumber": "STATS-191-01",
+    "name": "Introduction to Applied Statistics",
+    "description": "Statistical tools for modern data analysis. Topics include regression and prediction, elements of the analysis of variance, bootstrap, and cross-validation. Emphasis is on conceptual rather than theoretical understanding. Applications to social/biological sciences. Student assignments/projects require use of the software package R.",
+    "metadata": {
+      "createdDate": "2024-04-17T17:37:45.499+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-04-17T17:37:45.499+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jonathan Taylor"
+        }
+      ]
+    }
+  },
+  {
     "id": "8183a5c1-d629-49b8-9bfe-918a4cd7f223",
     "courseNumber": "HISTORY-145B-01",
     "name": "Introduction to African Studies I: Africa in the 20th Century",
