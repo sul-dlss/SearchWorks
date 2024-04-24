@@ -555,6 +555,22 @@
     }
   },
   {
+    "id": "0aeefac2-f679-469f-ad33-ef49bf3d8759",
+    "courseNumber": "RELIGST-217-01",
+    "name": "The Lotus Sutra in Japanese Buddhism",
+    "metadata": {
+      "createdDate": "2024-04-23T16:42:55.836+00:00",
+      "createdByUserId": "112a83cc-5e72-4501-9dd2-9217773bca6f",
+      "updatedDate": "2024-04-23T16:42:55.836+00:00",
+      "updatedByUserId": "112a83cc-5e72-4501-9dd2-9217773bca6f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "0af23e55-5b91-4fc7-b8b7-22f61438d9ce",
     "courseNumber": "ANTHRO-300-01",
     "name": "Reading Theory Through Ethnography",
@@ -2856,6 +2872,22 @@
         {
           "name": "Jason Calcagno"
         }
+      ]
+    }
+  },
+  {
+    "id": "2d1ffed2-6c37-4f59-a3e0-34812b1ed4d2",
+    "courseNumber": "RELIGST-317",
+    "name": "The Lotus Sutra in Japanese Buddhism",
+    "metadata": {
+      "createdDate": "2024-04-23T16:49:28.818+00:00",
+      "createdByUserId": "112a83cc-5e72-4501-9dd2-9217773bca6f",
+      "updatedDate": "2024-04-23T16:49:28.818+00:00",
+      "updatedByUserId": "112a83cc-5e72-4501-9dd2-9217773bca6f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
       ]
     }
   },
@@ -9633,7 +9665,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Arto Anttila"
+        }
       ]
     }
   },
