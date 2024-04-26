@@ -1262,6 +1262,7 @@ pilotfeasibilitystudies.biomedcentral.com
 pivot.proquest.com
 plantmethods.biomedcentral.com
 platform.almanhal.com
+platform.marketintelligence.spglobal.com
 plus.mcmaster.ca
 pm.nlx.com
 pmj.bmj.com
@@ -2846,7 +2847,6 @@ www.sljol.info
 www.smcma.org
 www.smj.org.sa
 www.smw.ch
-www.snl.com
 www.soc-bdr.org
 www.socialexplorer.com
 www.socialismonfilm.amdigital.co.uk
