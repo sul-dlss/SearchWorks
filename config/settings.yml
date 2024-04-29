@@ -250,7 +250,6 @@ folio_hold_recall_statuses:
   - Restricted
 
 folio_unrequestable_statuses:
-  - Aged to lost
   - Claims returned
   - Declared
   - In process (not requestable)
