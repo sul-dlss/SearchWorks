@@ -17689,6 +17689,24 @@
     }
   },
   {
+    "id": "ff4824c5-7375-4ed3-b2e8-f2b4165115ac",
+    "courseNumber": "Scalpel",
+    "name": "General Surgery Residency Program",
+    "metadata": {
+      "createdDate": "2024-04-29T16:38:39.849+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-04-29T16:40:51.112+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Spain"
+        }
+      ]
+    }
+  },
+  {
     "id": "ffa5ffca-2933-49ee-80c2-97fff764fe3e",
     "courseNumber": "SLAVIC-340A-01",
     "name": "The Other Europe: Literature from East Central Europe",
