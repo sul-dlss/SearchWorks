@@ -77,7 +77,10 @@ RSpec.describe ArticlesController do
       end
 
       context 'when the user is in guest mode' do
-        before { session['eds_guest'] = true }
+        before do
+          # allows the before action to set session['eds_guest'] to true
+          allow(IPRange).to receive(:includes?).and_return(false)
+        end
 
         it 'returns an error message indicating to login to view the content' do
           get :fulltext_link, params: { id: '123', type: :pdf }
@@ -99,7 +102,8 @@ RSpec.describe ArticlesController do
       context 'when the user is not in guest mode' do
         before do
           allow(controller).to receive(:current_user).and_return(User.new)
-          session['eds_guest'] = false
+          # allows the before action to set session['eds_guest'] to false
+          allow(IPRange).to receive(:includes?).and_return(true)
         end
 
         it 'returns an error message indicating to report it as a connection problem' do
