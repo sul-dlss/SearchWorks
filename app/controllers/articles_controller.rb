@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   before_action :set_search_query_modifier, only: :index
 
-  before_action :eds_init, only: %i[index show]
+  before_action :eds_init
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
     setup_eds_session(session)
