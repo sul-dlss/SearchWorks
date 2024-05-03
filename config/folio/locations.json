@@ -6167,7 +6167,7 @@
     "id": "6899a22b-aadf-49da-8d36-bb472387855e",
     "name": "Law Locked Stacks",
     "code": "LAW-LOCKED",
-    "discoveryDisplayName": "Locked stacks: Ask at circulation desk",
+    "discoveryDisplayName": "Locked stacks",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
@@ -6184,8 +6184,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:40.076+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:40.076+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-02T18:13:34.625+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {

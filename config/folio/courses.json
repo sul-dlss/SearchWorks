@@ -11962,6 +11962,24 @@
     }
   },
   {
+    "id": "aeccd528-2d00-4641-9a17-2de9efb21000",
+    "courseNumber": "EDUC-480-01",
+    "name": "Directed Reading",
+    "metadata": {
+      "createdDate": "2024-05-02T19:11:00.225+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-05-02T19:11:00.225+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Bruce McCandliss"
+        }
+      ]
+    }
+  },
+  {
     "id": "af9efa8f-5381-451d-b2fc-b6afb155d604",
     "courseNumber": "CHEMENG 100-01",
     "sectionName": "01",
@@ -17648,6 +17666,24 @@
       "instructorObjects": [
         {
           "name": "Patricia Parker"
+        }
+      ]
+    }
+  },
+  {
+    "id": "feabefd4-fb3f-42c3-a337-64cd055439c1",
+    "courseNumber": "ARTHIST-434-01",
+    "name": "Race & Abstraction",
+    "metadata": {
+      "createdDate": "2024-05-02T19:13:03.099+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-05-02T19:13:03.099+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Rose Salseda"
         }
       ]
     }

@@ -12,7 +12,7 @@ faculty,any,3-day reserve,,SUL,,,3day-norenew-15mingrace,No requests allowed,Cou
 faculty,any,2-day reserve,,SUL,,,2day-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 faculty,any,1-day reserve,,SUL,,,1day-norenew-15mingrace,No requests allowed,Course reserves,No fines,$230 reserves lost fee
 graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-1renew-15mingrace,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
-,any,Non-circulating,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
+,any,Non-circulating,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,any,any,,,,SAL-LOCKED-PAGE-EA or SAL-PAGE-GR or SAL-TEMP or SAL-PAGE-EA,No loan,Allow paging/hold,Send No Notices,No fines,$75 lost fee
 ,any,curricshortloan7,,,,EDU-CURRICULUM,7day-1renew-3daygrace,Allow All,Default notice,No fines,$75 lost fee
 ,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
@@ -46,10 +46,10 @@ faculty or graduate or postdoctoral or staff or staff-casual,score,,,,,MUS-R-STA
 staff or staff-casual or fellow,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 faculty,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,Default notice,No fines,$65 lost fee
 faculty,periodical,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,No fines,$500 lost fee
-any,periodical,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
+any,periodical,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 faculty,periodical,,,,,EAR-LOCKED-STACKS,28day-2renew-7daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 faculty,periodical,,,,,EAR-ATCIRCDESK,28day-norenew-7daygrace,Allow hold/recall,Default notice,No fines,$500 lost fee
-any,multimedia,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
+any,multimedia,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 faculty or graduate or postdoctoral or staff or staff-casual or fellow,multimedia,,,,,MUS-R-STACKS,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$400 lost fee
 faculty,multimedia,,,,,MUS-RECORDINGS,28day-2renew-7daygrace,Allow hold/recall,Default notice,No fines,$225 lost fee
 any,microform,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
@@ -141,19 +141,19 @@ faculty,book,,,,HILA,,No loan,Allow hold/recall,Default notice,No fines,$100 los
 any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,periodical,,,,SCIENCE,SCI-REF or SCI-RETIRED-REF,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,periodical,,,,ART,ART-EXHIBIT or ART-PROCESSING-SERIALS,No loan,No requests allowed,Default notice,No fines,$150 lost fee
-,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAL-INPROCESS or EDU-PROCESSING or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-PROCESSING or GRE-REPAIR-EVALUATION or GRE-TECH-PROCESSOR or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-CONSERVATIONSERVICES or SUL-TS-MAINTENANCE or SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
+,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAL-INPROCESS or EDU-PROCESSING or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-PROCESSING or GRE-REPAIR-EVALUATION or GRE-TECH-PROCESSOR or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-CONSERVATIONSERVICES or SUL-TS-MAINTENANCE or SUL-TS-PROCESSING,No loan,Hold only,Default notice,No fines,$250 lost fee
 ,book,,,,,LAW-EYLESAISLE or LAW-VROOMAN2 or LAW-STACKS2 or LAW-REF or LAW-STAFFSHADOW,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-PERMRES or LAW-BOOKCABINET or LAW-NEWBOOK or LAW - DISPLAY,7day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-COOKBOOK,14day-2renew-1daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-CAREER or LAW-COOKBOOK or LAW-OUTDOOR-TRAVEL or LAW-VROOMAN or LAW-VROOMAN-OV or LAW-WELLNESS,14day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,28day-2renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,28day-2renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
-,score,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow All,Default notice,No fines,$75 lost fee
+,score,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,score,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,score,,,,,MUS-R-STACKS or MUS-R-MINIATURE or MUS-R-FOLIO,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,score,,,,,MUS-SCORES or MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,No fines,$65 lost fee
 ,periodical,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
-,periodical,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
+,periodical,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,periodical,,,,,MUS-INPROCESS or MUS-PROCESSING-CIRC,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,MUS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,periodical,,,,,GRE-HASRC or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
@@ -166,7 +166,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,newspaper,,,,,SAL3-PAGE-EA or SAL3-PAGE-GR,No loan,Allow paging/hold,Send No Notices,No fines,$100 lost fee
 ,multimedia,,,,,SCI-ATCIRCDESK,7day-1renew-1daygrace,No requests allowed,Default notice,No fines,$200 lost fee book
 ,multimedia,,,,,SAL3-PAGE-MP,7day-norenew-1daygrace,Allow All,Default notice,No fines,$500 lost fee
-,multimedia,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MM or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
+,multimedia,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MM or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,multimedia,,,,,MUS-INPROCESS,No loan,Hold only,Default notice,No fines,$400 lost fee
 ,multimedia,,,,,MUS-R-STACKS,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,multimedia,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
@@ -176,7 +176,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,multimedia,,,,,MEDIA-EXHIBIT,7day-1renew-3daygrace,Allow All,Default notice,No fines,$30 lost fee
 ,multimedia,,,,,GRE-SSRC-SSDS or GRE-SSRC-DATA,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,multimedia,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$75 lost fee
-,microform,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MM or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
+,microform,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MM or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,microform,,,,,GRE-DOCS-MICROFICHE or GRE-DOCS-MICROFILM,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,map,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,map,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
@@ -287,7 +287,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,multimedia,,,,EARTH-SCI,,7day-norenew-1daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,multimedia,,,,ART,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,multimedia,,,,ARS,,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
-,microform,,,,SAL3,,No loan,Allow paging,Default notice,No fines,$300 lost fee
+,microform,,,,SAL3,,No loan,Allow paging/hold,Default notice,No fines,$300 lost fee
 ,microform,,,,SAL,,7day-1renew-1daygrace,Allow paging/hold,Default notice,No fines,$100 lost fee
 ,microform,,,,MUSIC,,7day-norenew-1daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,microform,,,,MEDIA-CENTER,,No loan,No requests allowed,Default notice,No fines,$100 lost fee
