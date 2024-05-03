@@ -35,13 +35,13 @@
   },
   {
     "group": "program-short-term",
-    "desc": "Short term programs",
+    "desc": "Library cardholder",
     "id": "55608699-4ea5-412f-98e0-1339ea864838",
     "metadata": {
       "createdDate": "2023-08-10T18:20:49.310+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:49.310+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-03T03:25:23.965+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -57,13 +57,13 @@
   },
   {
     "group": "sul-contractprograms",
-    "desc": "SUL Contract program",
+    "desc": "Stanford Libraries cardholder",
     "id": "8054f883-e23a-415e-b8c8-dab817cf430a",
     "metadata": {
       "createdDate": "2023-08-10T18:20:49.449+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:49.449+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-03T03:25:42.212+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -112,24 +112,24 @@
   },
   {
     "group": "sul-purchased",
-    "desc": "SUL Fee borrower",
+    "desc": "Stanford Libraries cardholder",
     "id": "985acbb9-f7a7-4f44-9b34-458c02a78fbc",
     "metadata": {
       "createdDate": "2023-08-10T18:20:48.817+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:48.817+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-03T03:26:05.763+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
     "group": "sul-guest",
-    "desc": "Guest of Stanford Libraries",
+    "desc": "Stanford Libraries cardholder",
     "id": "9f32c817-21a2-4640-add5-9404c55d3d99",
     "metadata": {
       "createdDate": "2023-08-10T18:20:48.689+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:48.689+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-03T03:25:50.103+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -187,13 +187,13 @@
   },
   {
     "group": "pseudopatron",
-    "desc": "Pseudopatron",
+    "desc": "Library cardholder",
     "id": "db4aed0e-a229-4ead-8ea5-d0345295e881",
     "metadata": {
       "createdDate": "2023-08-10T18:20:49.163+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:20:49.163+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-05-03T03:25:33.592+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
