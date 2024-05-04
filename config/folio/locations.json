@@ -76,6 +76,32 @@
     }
   },
   {
+    "id": "00782746-e159-49ab-82b9-141cd0a2c140",
+    "name": "Green HAS General",
+    "code": "GRE-HAS-GEN",
+    "discoveryDisplayName": "Lane Reading Room: Reference",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-05-03T22:36:01.600+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-05-03T22:36:01.600+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "008ba3b9-5737-4c49-9f49-a52e5f1b0e21",
     "name": "Green Circ Desk",
     "code": "GRE-ATCIRCDESK",
@@ -12176,6 +12202,32 @@
     }
   },
   {
+    "id": "ce12f6ad-f3f7-4092-9478-b7a69f284422",
+    "name": "Media Circ Desk",
+    "code": "MEDIA-ATCIRCDESK",
+    "discoveryDisplayName": "Ask at Media Center desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "0acfabb7-0a71-47be-82c0-c0200dd47952",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+    },
+    "primaryServicePoint": "943a4850-f0fb-4ffe-83cb-919157ed2117",
+    "servicePointIds": [
+      "943a4850-f0fb-4ffe-83cb-919157ed2117"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-05-03T21:51:00.484+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-05-03T21:52:08.374+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "ce240b25-6a4e-4711-90d7-bfc141c31ebd",
     "name": "Lane Spec: LC Oversize",
     "code": "LANE-SPLCO",
@@ -13016,6 +13068,33 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:46:00.888+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d953f8fe-1fa9-44b0-ada2-5b6e7df177aa",
+    "name": "SAL3 PAGE-MU Circulating",
+    "code": "SAL3-PAGE-MU-CIRC",
+    "discoveryDisplayName": "Request for pickup at Music Library",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "MUSIC"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-05-03T21:32:43.557+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-05-03T21:33:49.522+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
