@@ -21,7 +21,7 @@
     </tbody>
   <% end %>
   <% locations.each do |location| %>
-    <%= render LongTableComponent.new(node_id: "location_#{location.code}", size: location.items.size) do %>
+    <%= render LongTableComponent.new(node_id: "doc#{document.id}_location_#{location.code}", size: location.items.size) do %>
       <% location_request_link = LocationRequestLinkComponent.for(document:, library_code:, location:) %>
       <tr class="location-info">
         <th scope="col">
