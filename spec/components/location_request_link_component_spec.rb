@@ -56,7 +56,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       context 'with an aged to lost status' do
         let(:folio_status) { 'Aged to lost' }
 
-        it { expect(page).to have_no_link }
+        it { expect(page).to have_link }
       end
     end
 
