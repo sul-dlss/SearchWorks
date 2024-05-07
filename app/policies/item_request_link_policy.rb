@@ -10,8 +10,9 @@ class ItemRequestLinkPolicy
     return folio_holdable? if item.folio_item?
 
     # on-order items (without a folio item) may be title-level requestable
-    # but we can't evaluate circ rules (because there's no item) to figure that out
-    item.on_order?
+    # but we can't evaluate circ rules (because there's no item) to figure that out;
+    # SPEC does not allow requests until there is a folio item present
+    item.on_order? unless item.library == 'SPEC-COLL'
   end
 
   # Check to see if request types include hold or recall.

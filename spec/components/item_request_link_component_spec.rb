@@ -65,5 +65,19 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
       it { is_expected.to have_link 'Request' }
     end
+
+    context 'special collections on-order without a FOLIO item' do
+      let(:item) do
+        Holdings::Item.new({
+                             barcode: '123',
+                             library: 'SPEC-COLL',
+                             effective_permanent_location_code: 'STACKS',
+                             status: 'On order',
+                             type: 'STKS-MONO'
+                           }, document:)
+      end
+
+      it { is_expected.to have_no_link 'Request' }
+    end
   end
 end
