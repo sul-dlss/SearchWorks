@@ -1200,7 +1200,6 @@ online.uspnf.com
 onlinebooks.library.upenn.edu
 onlinelibrary.wiley.com
 opac.newsbank.com
-opacplus.bsb-muenchen.de
 openbioresources.metajnl.com
 openhealthdata.metajnl.com
 openheart.bmj.com
@@ -1263,7 +1262,6 @@ pivot.proquest.com
 plantmethods.biomedcentral.com
 platform.almanhal.com
 platform.marketintelligence.spglobal.com
-plus.mcmaster.ca
 pm.nlx.com
 pmj.bmj.com
 pmt-eu.hosted.exlibrisgroup.com
@@ -1277,8 +1275,6 @@ pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
 portal.biobase-international.com
-portal.gdc.cancer.gov
-portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
 portlandpress.com
@@ -1816,7 +1812,6 @@ www.broad.mit.edu
 www.broadcastingamerica.amdigital.co.uk
 www.btrt.org
 www.buildinggreen.com
-www.bvs.hn
 www.bvsde.paho.org
 www.cabdirect.org
 www.cabidigitallibrary.org
@@ -1830,7 +1825,6 @@ www.canadianoncologynursingjournal.com
 www.cancer.gov
 www.cancer.org
 www.cancerbiomed.org
-www.cancerimagingarchive.net
 www.cancernetwork.com
 www.candidagenome.org
 www.canjsurg.ca
@@ -2014,7 +2008,6 @@ www.ejcdt.eg.net
 www.ejcrim.com
 www.ejcrp.org
 www.ejh.it
-www.ejhi.net
 www.ejhs.ju.edu.et
 www.ejmii.com
 www.ejnmmiphys.com
@@ -2640,7 +2633,6 @@ www.ompu.ac.jp
 www.oncology-times.com
 www.oncology.termedia.pl
 www.oncologypractice.com
-www.oncomine.org
 www.onepetro.org
 www.onlinejacc.org
 www.onlinejets.org
@@ -2972,7 +2964,6 @@ www.who.int
 www.whocancerpain.wisc.edu
 www.wikidoc.org
 www.wiley.com
-www.winkingskull.com
 www.wipo.int
 www.wisconsinmedicalsociety.org
 www.wiv-isp.be
