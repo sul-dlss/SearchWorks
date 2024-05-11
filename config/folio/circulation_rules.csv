@@ -17,6 +17,7 @@ graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-
 ,any,curricshortloan7,,,,EDU-CURRICULUM,7day-1renew-3daygrace,Allow All,Default notice,No fines,$75 lost fee
 ,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
+,accessories 1 or game,8-hour reserve,,,BUSINESS,,8 hour - due at end of day - no renew,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
 ,any,4-hour reserve,,SUL,,,4hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,3-hour reserve,,SUL,,,3hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,2-hour reserve,,SUL,,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
