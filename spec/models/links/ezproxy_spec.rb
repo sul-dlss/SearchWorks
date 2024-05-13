@@ -9,9 +9,7 @@ RSpec.describe Links::Ezproxy do
 
   describe '#to_proxied_url' do
     context 'SUL record' do
-      let(:document) do
-        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'SUL' }] })
-      end
+      let(:document) { SolrDocument.new(holdings_library_code_ssim: ['SUL']) }
 
       context 'with a url matching a SUL proxied host' do
         let(:url) { 'http://ch.ucpress.edu/whatever' }
@@ -54,9 +52,7 @@ RSpec.describe Links::Ezproxy do
     end
 
     context 'LAW record' do
-      let(:document) do
-        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LAW' }] })
-      end
+      let(:document) { SolrDocument.new(holdings_library_code_ssim: ['LAW']) }
 
       context 'with a url matching a LAW proxied host' do
         let(:url) { 'https://www.iareporter.com/whatever' }
@@ -94,9 +90,7 @@ RSpec.describe Links::Ezproxy do
     end
 
     context 'LANE record' do
-      let(:document) do
-        SolrDocument.new({ item_display_struct: [{ barcode: 'barcode', library: 'LANE' }] })
-      end
+      let(:document) { SolrDocument.new(holdings_library_code_ssim: ['LANE']) }
 
       context 'with a url matching a LANE proxied host' do
         let(:url) { 'https://who.int/whatever' }

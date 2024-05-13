@@ -53,7 +53,7 @@ class Links
     end
 
     def libraries
-      @libraries ||= document.holdings.libraries.map(&:code)
+      @libraries ||= document.fetch(:holdings_library_code_ssim, [])
     end
 
     def ezproxied_hosts
