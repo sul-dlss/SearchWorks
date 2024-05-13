@@ -10,7 +10,7 @@ class Links
     attr_reader :url, :link_title, :document
 
     def initialize(url:, link_title:, document:)
-      @url = url
+      @url = url&.strip
       @link_title = link_title
       @document = document
     end

@@ -87,6 +87,15 @@ RSpec.describe Links::Ezproxy do
 
         it { expect(ezproxy.to_proxied_url).to be_nil }
       end
+
+      context 'with a url that has a trailing space' do
+        let(:url) { 'https://www.iareporter.com/whatever ' }
+        let(:link_title) { 'Some other link note' }
+
+        it 'adds the proxy prefix' do
+          expect(ezproxy.to_proxied_url).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+        end
+      end
     end
 
     context 'LANE record' do
