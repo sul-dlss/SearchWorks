@@ -155,7 +155,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Access restricted to Stanford community' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_library_code_ssim: ['LANE']
           )
         end
 
@@ -168,7 +168,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_library_code_ssim: ['LANE']
           )
         end
 
@@ -184,7 +184,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to Stanford Law School' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
+            holdings_library_code_ssim: ['LAW']
           )
         end
 
@@ -197,7 +197,7 @@ RSpec.describe IndexLinks do
         let(:document) do
           SolrDocument.new(
             marc_links_struct: [{ href: "https://www.iareporter.com/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LAW' }]
+            holdings_library_code_ssim: ['LAW']
           )
         end
 
@@ -212,8 +212,7 @@ RSpec.describe IndexLinks do
             marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever",
                                   fulltext: true,
                                   stanford_only: true,
-                                  link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+                                  link_title: 'Available to stanford-affiliated users.' }]
           )
         end
 
@@ -225,8 +224,7 @@ RSpec.describe IndexLinks do
       context 'SUL records without a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+            marc_links_struct: [{ href: "http://ch.ucpress.edu/whatever", fulltext: true, stanford_only: true }]
           )
         end
 
@@ -241,8 +239,7 @@ RSpec.describe IndexLinks do
             marc_links_struct: [{ href: "https://who.int/whatever",
                                   fulltext: true,
                                   stanford_only: true,
-                                  link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'GREEN' }]
+                                  link_title: 'Available to stanford-affiliated users.' }]
           )
         end
 
@@ -258,7 +255,7 @@ RSpec.describe IndexLinks do
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }],
-            item_display_struct: [{ barcode: 'barcode', library: 'LANE' }]
+            holdings_library_code_ssim: ['LANE']
           )
         end
 

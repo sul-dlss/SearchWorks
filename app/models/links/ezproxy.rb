@@ -10,7 +10,7 @@ class Links
     attr_reader :url, :link_title, :document
 
     def initialize(url:, link_title:, document:)
-      @url = url
+      @url = url&.strip
       @link_title = link_title
       @document = document
     end
@@ -53,7 +53,7 @@ class Links
     end
 
     def libraries
-      @libraries ||= document.holdings.libraries.map(&:code)
+      @libraries ||= document.fetch(:holdings_library_code_ssim, [])
     end
 
     def ezproxied_hosts
