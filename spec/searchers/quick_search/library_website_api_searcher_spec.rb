@@ -7,11 +7,24 @@ RSpec.describe QuickSearch::LibraryWebsiteApiSearcher do
   let(:query) { 'my query' }
   let(:body) do
     {
-      results: [
+      data: [
         {
-          title: 'Chinese art: Traditional',
-          url: 'https://library.stanford.edu/guides/chinese-art-traditional',
-          description: 'This guide...'
+          type: 'node--stanford_page',
+          id: '0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0',
+          links: {
+            self: {
+              href: 'https://library.sites-pro.stanford.edu/jsonapi/node/stanford_page/0ad8a8c0-9c66-4fdc-96e5-ab0b6dabd8a0?resourceVersion=id%3A17206'
+            }
+          },
+          attributes: {
+            title: 'Work with data',
+            path: {
+              alias: '/services/work-data',
+              pid: 2086,
+              langcode: 'en'
+            },
+            su_page_description: 'First result description'
+          }
         }
       ]
     }

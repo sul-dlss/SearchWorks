@@ -89,7 +89,7 @@ RSpec.describe LibraryWebsiteApiSearchService do
   end
 
   describe '#total' do
-    it 'returns an empty array' do
+    it 'returns the total' do
       count = service.search(query).total
       expect(count).to eq 207
     end
