@@ -6,7 +6,7 @@
         <%= ' > ' unless index == 0 %>
         <% link_text = value[0..index].join(' ') %>
         <% title_text = value[0..index].join(' - ') %>
-        <%= link_to(field.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'subject_terms'), title: title_text) %>
+        <%= link_to(field.strip, search_catalog_path(q: "\"#{link_text}\"", search_field: 'subject_terms'), title: title_text, 'aria-label' => title_text) %>
       <% end %>
     </dd>
   <% end  %>

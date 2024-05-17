@@ -17,6 +17,11 @@ RSpec.describe "catalog/record/_marc_subjects" do
       expect(rendered).to have_css('dt', text: "Subject")
       expect(rendered).to have_css('dd a', text: "Subject A1")
     end
+
+    it "should include an aria-label attribute" do
+      expect(rendered).to have_css('dd a[aria-label="Subject A1"]')
+    end
+
     it "should render non-marc 655 subjects under 'Genre'" do
       expect(rendered).to have_css('dt', text: "Genre")
       expect(rendered).to have_css('dd a', text: "Subject A1")
