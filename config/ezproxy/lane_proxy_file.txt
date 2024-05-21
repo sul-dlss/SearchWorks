@@ -310,7 +310,6 @@ cancerandmetabolism.biomedcentral.com
 cancerci.biomedcentral.com
 cancercommun.biomedcentral.com
 cancercontrol.cancer.gov
-cancerdiscovery.aacrjournals.org
 cancerimagingjournal.biomedcentral.com
 cancerimmunolres.aacrjournals.org
 cancerletter.com
@@ -1154,6 +1153,7 @@ nnlm.gov
 nopr.niscair.res.in
 northclinist.com
 nowpublishers.com
+npcd.oversea.cnki.net
 npepjournal.biomedcentral.com
 nph.onlinelibrary.wiley.com
 nrs.harvard.edu
@@ -1275,6 +1275,7 @@ pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
 portal.biobase-international.com
+portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
 portlandpress.com
@@ -1347,6 +1348,7 @@ redalyc.uaemex.mx
 redbook.solutions.aap.org
 redivis.com
 referenceworks.brillonline.com
+refworks.proquest.com
 regenmedres.biomedcentral.com
 register.sanfordguide.com
 rehab.jmir.org
@@ -1371,7 +1373,6 @@ revistas.unc.edu.ar
 revistas.usb.edu.co
 rgd.mcw.edu
 rimg.geoscienceworld.org
-riviste.paviauniversitypress.it
 rjme.ro
 rmdopen.bmj.com
 rmrb.egreenapple.com
