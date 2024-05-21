@@ -566,7 +566,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Michaela Mross"
+        }
       ]
     }
   },
@@ -2887,7 +2889,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Michaela Mross"
+        }
       ]
     }
   },
