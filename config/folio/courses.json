@@ -12971,6 +12971,24 @@
     }
   },
   {
+    "id": "bdb1372d-0734-41f1-9136-df4fdf3acb7b",
+    "courseNumber": "MUSIC 200B",
+    "name": "Music 200B: Proseminar in Ethnomusicology",
+    "metadata": {
+      "createdDate": "2024-05-21T16:07:32.011+00:00",
+      "createdByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3",
+      "updatedDate": "2024-05-21T16:19:35.265+00:00",
+      "updatedByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Denise Gill"
+        }
+      ]
+    }
+  },
+  {
     "id": "bde91741-a858-4921-89ae-3add06cb85f4",
     "courseNumber": "ARTSTUDI-140-01",
     "name": "Drawing I",

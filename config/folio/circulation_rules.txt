@@ -227,7 +227,7 @@ m 81330e72-a104-4c09-be94-77c4c0f10f51
     
 m 185aae82-8ac0-4f64-a022-6f5476b0eaa5 
 /Accessories-1 for Science and MMTX but need to be assigned Accessories-2 after import to Folio
-    c  f6b5519e-88d9-413e-924d-9ed96255f72e : l 07115e75-c4a9-4ef0-b013-dba184251041 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9  i beb889d3-9d45-4b9a-85a4-5decc1427693 
+    c  f6b5519e-88d9-413e-924d-9ed96255f72e : l ef9de996-17db-4d7f-87bc-54970af6961d r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9  i beb889d3-9d45-4b9a-85a4-5decc1427693 
         g 985acbb9-f7a7-4f44-9b34-458c02a78fbc : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i beb889d3-9d45-4b9a-85a4-5decc1427693
     c e8068690-b2c9-433b-83ac-3bdfd6427e1a: l ef9de996-17db-4d7f-87bc-54970af6961d r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i b467648a-7724-4df3-926a-b6566eeac649
         g 985acbb9-f7a7-4f44-9b34-458c02a78fbc : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n 1fd0ccd5-0ac3-446f-a720-ceafcecf818c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i b467648a-7724-4df3-926a-b6566eeac649 
