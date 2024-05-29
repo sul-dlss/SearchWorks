@@ -1406,6 +1406,22 @@
     }
   },
   {
+    "id": "18566989-c802-4802-bb06-dd93a807cf53",
+    "courseNumber": "EPI 259",
+    "name": "Introduction to Probability and Statistics for Epidemiology",
+    "metadata": {
+      "createdDate": "2024-05-28T19:14:56.409+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-05-28T19:14:56.409+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+
+      ]
+    }
+  },
+  {
     "id": "18c8a74a-3ab9-45d2-a711-d80f87de1289",
     "courseNumber": "RELIGST-212-01",
     "name": "Zhuangzi",
@@ -1592,6 +1608,24 @@
     }
   },
   {
+    "id": "1b6d11ef-b7e0-482e-8ae8-1dd802d08809",
+    "courseNumber": "HISTORY-113P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press",
+    "metadata": {
+      "createdDate": "2024-05-29T05:06:29.117+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:06:29.117+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
+        }
+      ]
+    }
+  },
+  {
     "id": "1bbdeee9-ece3-479b-94fb-821cecc6a88b",
     "courseNumber": "MATSCI-384-01",
     "name": "Materials Advances in Neurotechnology",
@@ -1641,6 +1675,24 @@
       "instructorObjects": [
         {
           "name": "Tia Rich"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1c159805-31d2-4676-9898-f10e14faf78a",
+    "courseNumber": "FRENCH-238-01",
+    "name": "Art and the Market",
+    "metadata": {
+      "createdDate": "2024-05-27T01:02:59.024+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-27T01:02:59.024+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Andrei Pesic"
         }
       ]
     }
@@ -5846,6 +5898,24 @@
     }
   },
   {
+    "id": "5914e939-7ea5-4651-b6bc-13ac152fc4e3",
+    "courseNumber": "MUSIC-113P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press",
+    "metadata": {
+      "createdDate": "2024-05-29T05:07:36.858+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:07:36.858+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
+        }
+      ]
+    }
+  },
+  {
     "id": "592c118e-0b50-46fd-a293-3d0256524fff",
     "courseNumber": "ARCHLGY-134-01",
     "name": "Introduction to Museum Practices ",
@@ -7986,6 +8056,24 @@
     }
   },
   {
+    "id": "76f53e3d-72d1-4a90-bf7e-92d5fbcb9b20",
+    "courseNumber": "HISTORY-13P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press",
+    "metadata": {
+      "createdDate": "2024-05-29T05:06:00.660+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:06:00.660+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
+        }
+      ]
+    }
+  },
+  {
     "id": "772009f1-0536-4373-bf4a-5b7eec4552e0",
     "courseNumber": "COLLEGE-109-01",
     "name": "Rules of War",
@@ -9317,6 +9405,24 @@
       "instructorObjects": [
         {
           "name": "Amir Weiner"
+        }
+      ]
+    }
+  },
+  {
+    "id": "8a36c1d0-33ef-4ae3-8e19-6db530f07dd8",
+    "courseNumber": "ENGLISH-113P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press",
+    "metadata": {
+      "createdDate": "2024-05-29T05:08:05.513+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:08:05.513+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
         }
       ]
     }
@@ -13098,6 +13204,24 @@
     }
   },
   {
+    "id": "bf638d29-2c43-4118-9059-bc5fc9af273c",
+    "courseNumber": "MUSIC-13P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press ",
+    "metadata": {
+      "createdDate": "2024-05-29T05:07:03.287+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:07:03.287+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
+        }
+      ]
+    }
+  },
+  {
     "id": "bf8a1199-99ec-44d4-9e0e-c5bd435337b4",
     "courseNumber": "ME 281",
     "name": "Biomechanics of Movement",
@@ -16685,6 +16809,24 @@
       "instructorObjects": [
         {
           "name": "Kochenderfer, Mykel John"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f1e660d6-ea3d-4dcf-85be-b41b1f1f847d",
+    "courseNumber": "ENGLISH-13P-01",
+    "name": "Media and Communication from the Middle Ages to the Printing Press ",
+    "metadata": {
+      "createdDate": "2024-05-29T05:09:22.926+00:00",
+      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
+      "updatedDate": "2024-05-29T05:09:22.926+00:00",
+      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jenna Phillips"
         }
       ]
     }

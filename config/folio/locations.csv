@@ -172,7 +172,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 4492a47c-6975-48de-aa50-0e7f15a1da62,ARS Reference,ARS-REF,SU,SUL,ARS,Reference,true,ARS,ARS,,,,,ARS,,,,,,,,,
 4573e824-9273-4f13-972f-cff7bf504217,Green Stacks,GRE-STACKS,SU,SUL,GREEN,Stacks,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 45b7d847-cb97-48e4-86f4-4c013215eb65,Rumsey W7 Map XL,RUM-W7-MAP-XL,SU,SUL,RUMSEY-MAP,Map Center (W7 x-large maps),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,
-45daa686-823a-4ad5-b187-d7878bebf00d,SAL3 PAGE-MA,SAL3-PAGE-MA,SU,SUL,SAL3,For use in Miller Library or Green Library,true,SAL3,SAL3,,,,,"MARINE-BIO,GREEN",,,Offsite,,,,,,
+45daa686-823a-4ad5-b187-d7878bebf00d,SAL3 PAGE-MA,SAL3-PAGE-MA,SU,SUL,SAL3,For use in Miller Library or Green Library,true,SAL3,SAL3,,,,,"MARINE-BIO,GREEN-LOAN",,,Offsite,,,,,,
 45fd8542-b00f-4d56-ae46-6a3e210896d7,Business Stacks,BUS-STACKS,SU,GSB,BUSINESS,Stacks,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 46521278-9bfa-4596-8c42-cacad3e94a5d,Music Withdrawn Digital Substitute,MUS-WD-DIGITAL-SUB,SU,SUL,MUSIC,Digital substitute,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 46eb9191-1f6f-44ba-a67c-610f868dd429,Lane Books: LC Class,LANE-LAN,SU,MED,LANE,Books: General Collection (Downstairs),true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,

@@ -4457,7 +4457,7 @@
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
       "availabilityClass": "Offsite",
-      "pageServicePointCodes": "MARINE-BIO,GREEN"
+      "pageServicePointCodes": "MARINE-BIO,GREEN-LOAN"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -4469,7 +4469,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:57.988+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-28T06:07:59.667+00:00",
+      "updatedDate": "2024-05-29T18:41:15.757+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
