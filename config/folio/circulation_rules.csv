@@ -15,6 +15,7 @@ graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-
 ,any,Non-circulating,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,any,any,,,,SAL-LOCKED-PAGE-EA or SAL-PAGE-GR or SAL-TEMP or SAL-PAGE-EA,No loan,Allow paging,Send No Notices,No fines,$75 lost fee
 ,any,curricshortloan7,,,,EDU-CURRICULUM,7day-1renew-3daygrace,Allow All,Default notice,No fines,$75 lost fee
+,archival,Non-circulating,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging,Default notice,No fines,$600 lost fee
 ,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,accessories 1 or game,8-hour reserve,,,BUSINESS,,8 hour - due at end of day - no renew,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
@@ -254,7 +255,6 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ARS-FOLIO or ARS-LOCKED or ARS-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,archival,,,,,SAL3-PAGE-MU,No loan,Allow paging/hold,Default notice,No fines,$500 lost fee
 ,archival,,,,,EAL-LOCKED-FLATFILE,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
-,archival,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging,Default notice,No fines,$600 lost fee
 ,archival,,,,,SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
 ,archival,,,,LANE,,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$1000 lost fee
 ,multimedia,,,,LANE,,7day-2renew-1daygrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$250 lost fee

@@ -14147,6 +14147,24 @@
     }
   },
   {
+    "id": "cc35f990-f247-4891-a12f-a278e9c33e8c",
+    "courseNumber": "MUSIC 160C",
+    "name": "Stanford Baroque Soloists",
+    "metadata": {
+      "createdDate": "2024-05-30T16:20:29.156+00:00",
+      "createdByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3",
+      "updatedDate": "2024-05-30T16:20:29.156+00:00",
+      "updatedByUserId": "649b7b6c-24e2-4c00-8889-4daa7fc6cdc3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Anthony Martin"
+        }
+      ]
+    }
+  },
+  {
     "id": "cc506991-0f78-4523-86b3-b4796f4669d1",
     "courseNumber": "MS&E-276-01",
     "name": "Entrepreneurial Management and Finance",
