@@ -363,7 +363,6 @@ chiromt.biomedcentral.com
 ci5.iarc.fr
 cig.uw.edu
 ciliajournal.biomedcentral.com
-cimonline.ca
 cinc.org
 cindasdata.com
 cisweb.lexis-nexis.com
@@ -1560,6 +1559,7 @@ us.expasy.org
 usp.az1.qualtrics.com
 uswest.ensembl.org
 utmj.org
+utpjournals.press
 vascularcell.biomedcentral.com
 vciba.springeropen.com
 veterinaryresearch.biomedcentral.com
@@ -2200,7 +2200,6 @@ www.ijmr.org.in
 www.ijnm.in
 www.ijnpnd.com
 www.ijo.cn
-www.ijo.in
 www.ijoem.com
 www.ijotm.com
 www.ijoy.org.in
