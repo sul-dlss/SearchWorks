@@ -21,7 +21,7 @@
  It is *not* a good example to work from.
 -->
 <config>
-  <luceneMatchVersion>7.7.2</luceneMatchVersion>
+  <luceneMatchVersion>8.0.0</luceneMatchVersion>
   <!--  The DirectoryFactory to use for indexes.
         solr.StandardDirectoryFactory, the default, is filesystem based.
         solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
@@ -55,10 +55,10 @@
 
 
   <query>
-    <filterCache class="solr.FastLRUCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
-    <queryResultCache class="solr.LRUCache" size="102400" initialSize="8192" autowarmCount="1024"/>
-    <documentCache class="solr.LRUCache" size="40960" initialSize="8192" autowarmCount="0"/>
-    <fieldValueCache class="solr.FastLRUCache" size="100" initialSize="25" autowarmCount="0" showItems="64"/>
+    <filterCache class="solr.search.CaffeineCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
+    <queryResultCache class="solr.search.CaffeineCache" size="102400" initialSize="8192" autowarmCount="1024"/>
+    <documentCache class="solr.search.CaffeineCache" size="40960" initialSize="8192" autowarmCount="0"/>
+    <fieldValueCache class="solr.search.CaffeineCache" size="100" initialSize="25" autowarmCount="0" showItems="64"/>
     <queryResultWindowSize>80</queryResultWindowSize>
     <queryResultMaxDocsCached>100</queryResultMaxDocsCached>
     <useColdSearcher>true</useColdSearcher>
