@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema name="Stanford Searchworks" version="1.5">
   <uniqueKey>id</uniqueKey>
-  <similarity class="solr.ClassicSimilarityFactory"/>
+  <similarity class="solr.BM25SimilarityFactory"/>
 
   <fields>
     <!-- needed by some of Solr 4.0 functionality like transaction log or partial documents update -->
