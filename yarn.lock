@@ -150,16 +150,16 @@ blacklight-frontend@7:
     typeahead.js "^0.11.1"
 
 "blacklight-frontend@>=7.1 || 8.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.2.0.tgz#fadd4b13594a429febbccada88643db661c76471"
-  integrity sha512-pJo5tvFu1hv7u9jU4nxCwGPrxwOIj/ZOx52nBVHAZBdpwpLAapV/+oxHyb5dfeXzq/kbFP4gDZhXCGF3KHksTg==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.3.0.tgz#e0b108835f2e21b54eef09afb581d0f2b6cc4288"
+  integrity sha512-V92LxXqe1QSdg18qVYQ5cIWfWPLJiU0D84ZNA4IICJBdzoZ3cAsVwnMXdOgV0zhQT8BQQtTG2+E5bcUUFg3oug==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 
 blacklight-hierarchy@^6.1.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.2.2.tgz#9344bc5096137bd2ea1d57ff58e103e6ec08f783"
-  integrity sha512-kXTtBxgxenY41C5LSZ0iwomGtrV2M8Gp/VPHtWGSYRLl705tqXmhyFOK4AC8Cg5uIWPf+k6/OgAjoS0tmaWxHg==
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.3.0.tgz#a072c4f091d42e5113385a87a6981b6faa1e5d65"
+  integrity sha512-R3hqIjpiUsP70qJ6vChYUWOZh2PrXcgvGY3ndV+5C+nDNz80Mg6Wr2HOYadU7ee1cuTZvIUXqB7VEitqzAeKGA==
   dependencies:
     blacklight-frontend ">=7.1 || 8.0"
     jquery ">=3.0"
