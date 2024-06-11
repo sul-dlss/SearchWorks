@@ -678,11 +678,11 @@
     <fieldType name="string_punct_stop" class="solr.TextField" omitNorms="true">
       <analyzer type="index">
         <tokenizer class="solr.KeywordTokenizerFactory" />
-        <filter class="solr.ICUNormalizer2FilterFactory" name="nfkc" mode="compose" />
+        <filter class="solr.ICUNormalizer2FilterFactory" mode="compose" />
       </analyzer>
       <analyzer type="query">
         <tokenizer class="solr.KeywordTokenizerFactory" />
-        <filter class="solr.ICUNormalizer2FilterFactory" name="nfkc" mode="compose" />
+        <filter class="solr.ICUNormalizer2FilterFactory" mode="compose" />
         <!-- removing punctuation for Lucene query parser issues -->
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_punctuation.txt" />
       </analyzer>
