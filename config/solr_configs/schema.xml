@@ -88,6 +88,7 @@
     <field name="vern_author_title_1xx_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_title_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_title_unstem_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="best_author_title_search" type="text" indexed="true" stored="true" multiValued="false" />
 
     <!-- Author Search Fields -->
     <field name="author_1xx_search" type="text" indexed="true" stored="true" />
