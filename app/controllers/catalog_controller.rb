@@ -435,10 +435,10 @@ class CatalogController < ApplicationController
       field.include_in_simple_select = false
       field.include_in_advanced_search = false
       field.solr_parameters = {
-        qf:  'author_title_search',
-        pf:  'author_title_search^10',
-        pf3: 'author_title_search^5',
-        pf2: 'author_title_search^2'
+        qf:  '${qf_author_title}',
+        pf:  '${pf_author_title}',
+        pf3: '${pf3_author_title}',
+        pf2: '${pf2_author_title}'
       }
     end
 

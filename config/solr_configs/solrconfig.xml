@@ -917,6 +917,15 @@
       <str name="pf3_number">callnum_search^3</str>
       <str name="pf2_number">callnum_search^2</str>
 
+      <!-- for uniform titles + included works search -->
+      <str name="qf_author_title">
+        best_author_title_search^100
+        author_title_search
+      </str>
+      <str name="pf_author_title">author_title_search^10</str>
+      <str name="pf3_author_title">author_title_search^5</str>
+      <str name="pf2_author_title">author_title_search^2</str>
+
       <bool name="facet">true</bool>
       <int name="facet.mincount">1</int>
       <int name="facet.limit">21</int>
