@@ -12184,6 +12184,24 @@
     }
   },
   {
+    "id": "b110b331-4edc-4913-a0dc-f5607cabffd8",
+    "courseNumber": "MS&E-20-01",
+    "name": "Discrete Probability Concepts And Models",
+    "metadata": {
+      "createdDate": "2024-06-12T03:19:02.406+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-06-12T03:19:02.406+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ross Shachter"
+        }
+      ]
+    }
+  },
+  {
     "id": "b14a2f01-e558-4b6c-91b0-3ea667b01591",
     "courseNumber": "COMPLIT-121-01",
     "name": "Poems, Poetry, Worlds",
@@ -12348,6 +12366,27 @@
       "instructorObjects": [
         {
           "name": "Philip Bucksbaum"
+        }
+      ]
+    }
+  },
+  {
+    "id": "b39478a4-954c-4620-8108-a5aead95e3ba",
+    "courseNumber": "CEE-101E-01",
+    "name": "Introduction to Mechanics of Fluids",
+    "metadata": {
+      "createdDate": "2024-06-12T03:00:26.862+00:00",
+      "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
+      "updatedDate": "2024-06-12T03:00:26.862+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jeffrey Koseff"
+        },
+        {
+          "name": "Derek Fong"
         }
       ]
     }
@@ -13921,14 +13960,12 @@
     "metadata": {
       "createdDate": "2024-01-11T23:14:50.612+00:00",
       "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-02-06T21:06:03.279+00:00",
+      "updatedDate": "2024-06-11T17:46:18.369+00:00",
       "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Eric Pop"
-        }
+
       ]
     }
   },
@@ -15958,13 +15995,13 @@
     "metadata": {
       "createdDate": "2023-09-22T17:26:34.671+00:00",
       "createdByUserId": "733223e4-aea3-49a0-b715-9d489e898365",
-      "updatedDate": "2023-09-22T17:26:34.671+00:00",
+      "updatedDate": "2024-06-12T04:02:54.305+00:00",
       "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Chris Piech"
+          "name": "Kelly Cochran"
         }
       ]
     }
