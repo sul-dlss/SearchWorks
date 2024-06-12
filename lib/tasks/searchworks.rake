@@ -22,15 +22,17 @@ namespace :searchworks do
   desc 'Copy necessary solr dependencies to local solr instance'
   task copy_solr_dependencies: [:environment] do
     copy_task = lambda do
+      FileUtils.mkdir_p(File.join(SolrWrapper.instance.instance_dir, 'contrib'))
+
       FileUtils.cp(
-        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v3.0.jar'),
+        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v4.0.jar'),
         File.join(SolrWrapper.instance.instance_dir, 'contrib')
       )
     end
 
-    begin
+    if File.directory?(File.join(SolrWrapper.instance.instance_dir))
       copy_task.call
-    rescue Errno::ENOENT # solr instance_dir does not exist
+    else
       SolrWrapper.wrap do
         copy_task.call
       end
