@@ -207,24 +207,6 @@
     }
   },
   {
-    "id": "0321a06d-0f49-46ec-9576-69cd3d54b4a4",
-    "courseNumber": "LAW-000-01",
-    "name": "Spring Study Aids",
-    "metadata": {
-      "createdDate": "2024-03-26T20:47:21.060+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-27T20:47:32.626+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Will Huggins"
-        }
-      ]
-    }
-  },
-  {
     "id": "03225798-a71e-4e4a-badc-b288708fe9a5",
     "courseNumber": "PHYSICS-331-01",
     "name": "Quantum Field Theory II",
@@ -1554,24 +1536,6 @@
     }
   },
   {
-    "id": "1b5de843-5365-4f2f-972a-ab65ddf59691",
-    "courseNumber": "LAW-7107-01",
-    "name": "Executive Power Under the Constitution",
-    "metadata": {
-      "createdDate": "2024-03-17T21:49:34.849+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T21:49:34.849+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Michael McConnell"
-        }
-      ]
-    }
-  },
-  {
     "id": "1b6d11ef-b7e0-482e-8ae8-1dd802d08809",
     "courseNumber": "HISTORY-113P-01",
     "name": "Media and Communication from the Middle Ages to the Printing Press",
@@ -2364,24 +2328,6 @@
     }
   },
   {
-    "id": "2713c91f-ca4b-4d7f-b42d-c854fc8115b1",
-    "courseNumber": "CHEM 33-03",
-    "sectionName": "01",
-    "name": "Structure and Reactivity of Organic Molecules",
-    "description": "An introduction to organic chemistry, the molecular foundation to understanding the life sciences, medicine, diagnostics, energy, environmental and materials sciences. Students will learn structural and bonding models of organic molecules that provide insights into reactivity.",
-    "metadata": {
-      "createdDate": "2023-12-15T20:20:34.293+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:20:34.293+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "27baefdb-beb6-48cf-bcc0-429820f6d11d",
     "courseNumber": "PSYCH-90-01",
     "name": "Introduction to Clinical Psychology: A Neuroscience Perspective",
@@ -2667,24 +2613,6 @@
       "createdByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e",
       "updatedDate": "2023-08-29T20:16:07.052+00:00",
       "updatedByUserId": "1a7cbd82-9943-481e-bcf7-4b7a3187963e"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
-    "id": "2b12289a-f69a-4883-80b2-9ff3ed207932",
-    "courseNumber": "CHEM 261-01",
-    "sectionName": "01",
-    "name": "Computational Chemistry",
-    "description": "Introduction to computational chemistry methods and tools that can be used to interpret and guide experimental research. Project based and hands-on experience with electronic structure calculations, obtaining minimum energy structures and reaction pathways, molecular simulation and modeling. ",
-    "metadata": {
-      "createdDate": "2023-12-15T20:27:50.507+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:27:50.507+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -3004,24 +2932,6 @@
     }
   },
   {
-    "id": "31a7852a-8287-476c-8b27-b74faac3f2ab",
-    "courseNumber": "LAW-1027-01",
-    "name": "Securities Regulation",
-    "metadata": {
-      "createdDate": "2024-03-17T17:16:38.289+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T17:16:38.289+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Colleen Honigsberg"
-        }
-      ]
-    }
-  },
-  {
     "id": "331e5983-6c23-453d-81db-4a7e0be03a2b",
     "courseNumber": "EARTHSYS-291-01",
     "name": "Concepts in Environmental Communication",
@@ -3116,24 +3026,6 @@
         {
           "name": "Andrea Montanari"
         }
-      ]
-    }
-  },
-  {
-    "id": "33ecdf5c-b20c-4254-8a2e-2c342a87b265",
-    "courseNumber": "CHEMENG  120A",
-    "sectionName": "01",
-    "name": " Fluid Mechanics",
-    "description": "The flow of isothermal fluids from a momentum transport viewpoint. Continuum hypothesis, scalar and vector fields, fluid statics, non-Newtonian fluids, shell momentum balances, equations of motion and the Navier-Stokes equations, creeping and potential flow, parallel and nearly parallel flows, time-dependent parallel flows, boundary layer theory and separation, introduction to drag correlations.",
-    "metadata": {
-      "createdDate": "2024-01-08T23:37:58.730+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-01-08T23:38:11.977+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -3555,24 +3447,6 @@
     }
   },
   {
-    "id": "39bce72e-544a-4fea-b2ef-5c2d8661a210",
-    "courseNumber": "BIO-82-01",
-    "sectionName": "01",
-    "name": "Genetics",
-    "description": "The focus of the course is on the basic mechanisms underlying the transmission of genetic information and on the use of genetic analysis to study biological and medical questions",
-    "metadata": {
-      "createdDate": "2023-12-15T17:53:11.937+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-19T18:52:29.620+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "39ef6a9b-c5d4-4be0-b281-10938b7c60c0",
     "courseNumber": "STATS-32-01",
     "name": "Introduction to R for Undergraduates",
@@ -3588,23 +3462,6 @@
         {
           "name": "Harrison Li"
         }
-      ]
-    }
-  },
-  {
-    "id": "3a2ebe80-6c5e-4b9d-ae20-e4d8f0b43173",
-    "courseNumber": "BIO-81-01",
-    "name": "Introduction to Ecology",
-    "description": "This course will introduce you to the first principles of the science of ecology, the study of interactions between organisms and their environment. ",
-    "metadata": {
-      "createdDate": "2023-09-28T21:24:36.188+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:04:26.279+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -4153,24 +4010,6 @@
     }
   },
   {
-    "id": "43b45ad4-471e-4729-8196-4f82fdf51c1e",
-    "courseNumber": "LAW-7815A-01",
-    "name": "Advanced Legal Writing: Business Transactions",
-    "metadata": {
-      "createdDate": "2024-03-21T22:35:20.493+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-21T22:35:20.493+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Marilyn Bautista"
-        }
-      ]
-    }
-  },
-  {
     "id": "43eb9533-f747-4cee-a849-538e28d739ff",
     "courseNumber": "CLASSICS-81-01",
     "name": "Ancient Empires: Near East",
@@ -4337,23 +4176,6 @@
         {
           "name": "Scott Linderman"
         }
-      ]
-    }
-  },
-  {
-    "id": "451f3dac-d993-4c2c-a217-889c56ad6c4c",
-    "courseNumber": "CHEM-255-01",
-    "name": "Advanced Inorganic Chemistry ",
-    "description": "Chemical reactions of organotransition metal complexes and their role in homogeneous catalysis. Analogous patterns among reactions of transition metal complexes in lower oxidation states. Physical methods of structure determination.",
-    "metadata": {
-      "createdDate": "2023-09-27T00:20:52.765+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T21:59:51.764+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -4802,24 +4624,6 @@
     }
   },
   {
-    "id": "4cae3734-302f-4e73-92dc-d6042f0d8723",
-    "courseNumber": "CHEM 141-02",
-    "sectionName": "01",
-    "name": "The Chemical Principles of Life I",
-    "description": "This is the first course in a two-quarter sequence ( Chem 141/143), which will examine biological science through the lens of chemistry. ",
-    "metadata": {
-      "createdDate": "2023-12-15T20:22:19.078+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:22:19.078+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "4ce479d0-386d-4295-a714-11dab34a6858",
     "courseNumber": "MATH-131-01",
     "name": "Partial Differential Equations",
@@ -4888,24 +4692,6 @@
       "instructorObjects": [
         {
           "name": "Ya-Ting Tsai"
-        }
-      ]
-    }
-  },
-  {
-    "id": "4dc50241-a133-488e-918b-b418b3d1165f",
-    "courseNumber": "LAW-4009-01",
-    "name": "Intellectual Property: International and Comparative Patent Law",
-    "metadata": {
-      "createdDate": "2024-03-17T17:36:30.515+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T17:36:30.515+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Lisa Ouellette"
         }
       ]
     }
@@ -5006,29 +4792,6 @@
       "instructorObjects": [
         {
           "name": "Richard Meyer"
-        }
-      ]
-    }
-  },
-  {
-    "id": "4f206bcb-09e0-4b59-a3ed-e4a6d9a02f26",
-    "courseNumber": "CHEM-171-01",
-    "sectionName": "01",
-    "name": "Foundations of Physical Chemistry",
-    "description": "Quantum and statistical thermodynamics: obtaining quantum mechanical energy levels and connecting them to thermodynamic properties using statistical mechanics. Emphasis will be on quantum mechanics of ideal systems (particle in a box, particle on a ring, harmonic oscillator, rigid rotor, and hydrogen atom) and their connection to and uses in thermodynamics (laws of thermodynamics, properties of gases and thermal motion, and chemical equilibria).",
-    "metadata": {
-      "createdDate": "2024-03-11T20:12:27.694+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-04-11T23:47:23.492+00:00",
-      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Amy McKeown-Green"
-        },
-        {
-          "name": "Thomas Markland"
         }
       ]
     }
@@ -6066,24 +5829,6 @@
     }
   },
   {
-    "id": "5be6ffd3-8ff3-4097-9833-38be9184a7ac",
-    "courseNumber": "LAW-2009-01",
-    "name": "White Collar Crime",
-    "metadata": {
-      "createdDate": "2024-03-17T21:04:37.028+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T21:04:37.028+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "David Mills"
-        }
-      ]
-    }
-  },
-  {
     "id": "5c24eded-1a06-47ff-898b-84a824393405",
     "courseNumber": "ME-131-01",
     "name": "Mathematical Foundations of Computing",
@@ -6230,24 +5975,6 @@
     }
   },
   {
-    "id": "5d6e805b-0f54-4b22-8fec-913ad78f9edf",
-    "courseNumber": "LAW-5013-01",
-    "name": "International Law",
-    "metadata": {
-      "createdDate": "2024-03-17T21:15:04.671+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T21:15:04.671+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Allen Weiner"
-        }
-      ]
-    }
-  },
-  {
     "id": "5dc6f0da-3916-44e4-a27e-90719b3b6a1d",
     "courseNumber": "STATS-215-01",
     "name": "Statistical Models in Biology",
@@ -6280,27 +6007,6 @@
       "instructorObjects": [
         {
           "name": "Adam Tobin"
-        }
-      ]
-    }
-  },
-  {
-    "id": "5e2ddc45-0b59-4381-b190-071bdcc47b33",
-    "courseNumber": "LAW-3010-01",
-    "name": "Mental Health Law",
-    "metadata": {
-      "createdDate": "2024-03-20T21:33:23.818+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-20T21:33:23.818+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Brian Bloom"
-        },
-        {
-          "name": "Alison Morantz"
         }
       ]
     }
@@ -6486,35 +6192,6 @@
     }
   },
   {
-    "id": "61407ad5-636d-4723-9064-e23b68d599f5",
-    "courseNumber": "BIO 121-01",
-    "sectionName": "01",
-    "name": "Ornithology",
-    "description": "Advanced undergraduate survey of ornithology, introducing students to the biology of birds and giving them to tools to use birds as model systems for research. Topics will include avian evolution, physiology, adaptations, behavior, and ecology. Focus throughout on identification of California birds and applications to current bird conservation issues.",
-    "metadata": {
-      "createdDate": "2024-02-29T19:24:41.534+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-13T23:43:21.307+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Ben Moran"
-        },
-        {
-          "name": "Marty Freeland"
-        },
-        {
-          "name": "Rodolfo Dirzo"
-        },
-        {
-          "name": "Maya Xu"
-        }
-      ]
-    }
-  },
-  {
     "id": "6276f1be-f88a-44c9-8bf7-9a2dfaaaf30f",
     "courseNumber": "ENGLISH-90-03",
     "name": " Fiction Writing",
@@ -6633,29 +6310,6 @@
       "instructorObjects": [
         {
           "name": "Thomas Bartlett"
-        }
-      ]
-    }
-  },
-  {
-    "id": "6411f959-9ff4-4bd3-bbc2-309344d67373",
-    "courseNumber": "CHEM 143-02",
-    "sectionName": "01",
-    "name": " The Chemical Principles of Life II",
-    "description": "This is the second course in a two-quarter sequence ( Chem 141/143), which will continue the discussion of biological science through the lens of chemistry. In this sequence students will gain a qualitative and quantitative understanding of the molecular logic of cellular processes, which include expression and transmission of the genetic code, enzyme kinetics, biosynthesis, energy storage and consumption, membrane transport, and signal transduction. ",
-    "metadata": {
-      "createdDate": "2024-02-29T19:39:55.566+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-02-29T19:57:29.301+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Nathaniel Brown"
-        },
-        {
-          "name": "Steven Banik"
         }
       ]
     }
@@ -6930,42 +6584,6 @@
     }
   },
   {
-    "id": "68a1863f-4c3e-46cb-984a-b2a2fa99fe7b",
-    "courseNumber": "CHEM 31B-02",
-    "sectionName": "01",
-    "name": "Chemical Principles II",
-    "description": "Chem 31B is the second course in this two-quarter sequence, therefore only students who have completed Chem 31A may enroll in 31B. As with 31A, students will continue to engage in group problem-solving activities throughout class and participate in weekly laboratory activities.",
-    "metadata": {
-      "createdDate": "2023-12-15T20:17:43.964+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:19:02.241+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
-    "id": "68dac513-4533-426b-8e4a-5f1cd6842c76",
-    "courseNumber": "LAW-3511-01",
-    "name": "Writing Workshop: Law and Creativity",
-    "metadata": {
-      "createdDate": "2024-03-17T21:24:43.701+00:00",
-      "createdByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905",
-      "updatedDate": "2024-03-17T21:24:43.701+00:00",
-      "updatedByUserId": "9007cc44-2095-44ac-9520-4a2c7eab8905"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Viola Canales"
-        }
-      ]
-    }
-  },
-  {
     "id": "69294c69-c786-4db4-872b-07b42b97136b",
     "courseNumber": "STATS-318-01",
     "name": "Modern Markov Chains",
@@ -7127,23 +6745,6 @@
         {
           "name": "Patricia Burchat"
         }
-      ]
-    }
-  },
-  {
-    "id": "6b0e05c8-ceaf-4cdc-bfe2-db879ed4f18c",
-    "courseNumber": "BIO-296-01",
-    "name": "Teaching and learning in Biology",
-    "description": "This course provides students teaching in the Department of Biology with basic training, support, and professional development in their teaching roles. Topics include student engagement, assessment, feedback and more. Should be taken concurrently with the first teaching position.",
-    "metadata": {
-      "createdDate": "2023-08-31T19:59:59.093+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:05:20.777+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -7510,23 +7111,6 @@
         {
           "name": "Jeremy Goldbogen"
         }
-      ]
-    }
-  },
-  {
-    "id": "72ee0c60-51aa-423f-8c03-ba59a5f24e21",
-    "courseNumber": "CHEM -121-01",
-    "name": " Understanding the Natural and Unnatural World through Chemistry",
-    "description": "Students enrolled in this course will appreciate the transformative power of molecular science on the modern world and how foundational knowledge of chemistry enables profound discoveries in biological, pharmaceutical, agrochemical, engineering, energy, and materials science research.",
-    "metadata": {
-      "createdDate": "2023-10-18T00:02:19.944+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T21:59:11.595+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -8003,29 +7587,6 @@
     }
   },
   {
-    "id": "78b76713-0634-490e-b979-0bc1fd471ed6",
-    "courseNumber": "CHEMENG 466",
-    "sectionName": "01",
-    "name": "Polymer Physics",
-    "description": "Fundamentals of the equilibrium properties and dynamic behaviors of polymers. Key concepts include single chain conformations, solution thermodynamics, scaling relations, polymer architecture, stress relaxation, and viscoelasticity. These concepts will be considered in the context of polymeric materials including but not limited to solutions and melts, networks (gels and rubbers), glasses, block copolymers, polyelectrolytes, and biopolymers. ",
-    "metadata": {
-      "createdDate": "2024-03-27T16:01:51.378+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-27T16:01:51.378+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Danielle Mai"
-        },
-        {
-          "name": "Noah Eckman"
-        }
-      ]
-    }
-  },
-  {
     "id": "78bc090d-9556-4d53-b4a0-357646b47bb0",
     "courseNumber": "TAPS-120A-01",
     "name": "Acting I: Fundamentals of Acting",
@@ -8187,8 +7748,8 @@
     "metadata": {
       "createdDate": "2023-10-10T20:31:40.756+00:00",
       "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
-      "updatedDate": "2024-04-09T21:32:22.358+00:00",
-      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+      "updatedDate": "2024-06-13T23:50:28.245+00:00",
+      "updatedByUserId": "733223e4-aea3-49a0-b715-9d489e898365"
     },
     "courseListingObject": {
       "instructorObjects": [
@@ -8579,7 +8140,7 @@
     "metadata": {
       "createdDate": "2024-04-17T17:37:45.499+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-04-17T17:37:45.499+00:00",
+      "updatedDate": "2024-06-13T22:25:39.084+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
@@ -8886,24 +8447,6 @@
     }
   },
   {
-    "id": "8619363d-2f3b-4dd5-b3cb-dbed8ed41cef",
-    "courseNumber": "CHEM 223-01",
-    "sectionName": "01",
-    "name": "Advanced Organic Chemistry II",
-    "description": "Physical Organic Chemistry. This course is focused on understanding the important physical principles in organic chemistry, including bonding and structural analysis; molecular interactions; thermodynamics; kinetics; methods to investigate reactive intermediates, reactivity, and elucidate reaction mechanisms. ",
-    "metadata": {
-      "createdDate": "2023-12-15T20:23:49.190+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:23:49.190+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "861ff4b0-425e-49f1-904f-b27382fde19b",
     "courseNumber": "MATH-235-01",
     "name": "Modern Markov Chains",
@@ -8956,23 +8499,6 @@
         {
           "name": "Nina Schloesser Tarano"
         }
-      ]
-    }
-  },
-  {
-    "id": "8853591d-0ab0-435f-9df8-8ebd6eed789c",
-    "courseNumber": "CHEM-257-01",
-    "name": "Bio-Inorganic Chemistry",
-    "description": "Overview of metal sites in biology. Metalloproteins as elaborated inorganic complexes, their basic coordination chemistry and bonding, unique features of the protein ligand, and the physical methods used to study active sites.",
-    "metadata": {
-      "createdDate": "2023-08-31T21:24:29.470+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:00:13.748+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -9721,23 +9247,6 @@
     }
   },
   {
-    "id": "9165fe65-cc7a-4211-9709-81d864c491c9",
-    "courseNumber": "CHEMENG-110B-01",
-    "name": "Multi-Component and Multi-Phase Thermodynamics",
-    "description": "Statistical mechanics for mixtures of ideal gases and simple liquids, covering both closed and open ensembles, is introduced. Molecular interactions underlying the non-ideal gaseous and liquid properties and nontrivial equations of states are surveyed. ",
-    "metadata": {
-      "createdDate": "2023-09-06T17:37:57.566+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:02:54.503+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "917ed951-c481-47dc-abca-e00d2928a7cf",
     "courseNumber": "HISTORY-354E-01",
     "name": "The Rise of American Democracy",
@@ -10209,29 +9718,6 @@
     }
   },
   {
-    "id": "98e9f212-2b17-4403-9a7c-d0e6f7397d89",
-    "courseNumber": "BIO 86",
-    "sectionName": "01",
-    "name": "Cell Biology",
-    "description": "This course will focus on the basic structures inside cells and how they execute cellular functions. Topics include organelles, membrane trafficking, the cytoskeleton, cell division, and signal transduction. Classic and recent primary literature will be incorporated into lectures with an emphasis on state of the art experimental approaches.",
-    "metadata": {
-      "createdDate": "2024-03-25T21:47:01.801+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-25T21:47:01.801+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Waheeda Khalfan"
-        },
-        {
-          "name": "Kang Shen"
-        }
-      ]
-    }
-  },
-  {
     "id": "9951eabf-aa09-4e2e-a733-f5b32a974939",
     "courseNumber": "PEDS",
     "name": "Fellowship in Academic General Pediatrics",
@@ -10589,23 +10075,6 @@
         {
           "name": "Jan Pietzsch"
         }
-      ]
-    }
-  },
-  {
-    "id": "9e3a2191-a738-48f1-ab4f-729858228062",
-    "courseNumber": "BIO-83-01",
-    "name": "Biochemistry & Molecular Biology",
-    "description": "Introduction to the molecular and biochemical basis of life. Lecture topics include the structure and function of proteins, nucleic acids, lipids and carbohydrates, energy metabolism, signal transduction, epigenetics and DNA repair. The course will also consider how defects in these processes cause disease.",
-    "metadata": {
-      "createdDate": "2023-09-11T17:53:37.086+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:03:36.168+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -11599,23 +11068,6 @@
     }
   },
   {
-    "id": "ac9e07d4-adde-47b5-800e-358b99c816f3",
-    "courseNumber": "BIO-84-01",
-    "name": " Physiology",
-    "description": "The focus of Physiology is on understanding how organisms tackle the physical challenges of life on Earth. This course will provide an overview of animal and plant physiology and teach an understanding of how organisms maintain homeostasis, respond to environmental cues and coordinate behaviors across multiples tissues and organ systems.",
-    "metadata": {
-      "createdDate": "2023-12-15T20:13:37.622+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-01-12T21:58:16.601+00:00",
-      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "acaebffe-8a9c-4a58-9d06-f9d4abd4f7bf",
     "courseNumber": "HISTORY-237D-01",
     "name": "The French Revolution and the Origins of Modern Politics",
@@ -11741,24 +11193,6 @@
         {
           "name": "Bruce McCandliss"
         }
-      ]
-    }
-  },
-  {
-    "id": "af9efa8f-5381-451d-b2fc-b6afb155d604",
-    "courseNumber": "CHEMENG 100-01",
-    "sectionName": "01",
-    "name": "Chemical Process Modeling, Dynamics, and Control",
-    "description": "Mathematical methods applied to engineering problems using chemical engineering examples. The development of mathematical models to describe chemical process dynamic behavior. Analytical and computer simulation techniques for the solution of ordinary differential equations. Dynamic behavior of linear first- and second-order systems. Introduction to process control. Dynamics and stability of controlled systems.",
-    "metadata": {
-      "createdDate": "2023-12-15T21:35:00.193+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T21:35:00.193+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -11967,24 +11401,6 @@
         {
           "name": "Mark Wolfe"
         }
-      ]
-    }
-  },
-  {
-    "id": "b28ebe60-ab35-4f48-bb62-d427e3cb9955",
-    "courseNumber": "BIO-111",
-    "sectionName": "01",
-    "name": "Microbiology",
-    "description": "Introduction to microbiology, with emphasis on bacteria. Topics include the cell structure of microorganisms, gene regulation, bacterial genetics, bacterial evolution and diversity, bacterial development, interaction and communication, bacterial chemotaxis and motility, microbiomes, infectious diseases, bacterial pathogenesis, host defense systems, and viruses.",
-    "metadata": {
-      "createdDate": "2023-12-15T20:15:22.822+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:15:22.822+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -12231,26 +11647,6 @@
     }
   },
   {
-    "id": "b6746fa7-ca41-4ef8-9110-a84c6def5c71",
-    "courseNumber": "CHEM 11",
-    "sectionName": "01",
-    "name": "Foundational Concepts and Study Skills for General Chemistry",
-    "description": "Chemistry is a central science that provides critical knowledge for many majors. Chem11 is intended as an on-ramp into STEM and the Chem31A/B sequence for students with minimal background in chemistry.",
-    "metadata": {
-      "createdDate": "2024-03-29T15:35:02.382+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-29T15:35:02.382+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Jennifer Schwartz Poehlmann"
-        }
-      ]
-    }
-  },
-  {
     "id": "b75beaad-ecef-41e8-878e-75095ff9a335",
     "courseNumber": "ARTSTUDI-271E-01",
     "name": "Intermediate Photography: New Landscapes",
@@ -12284,24 +11680,6 @@
         {
           "name": "Richard Taylor"
         }
-      ]
-    }
-  },
-  {
-    "id": "b7f76b46-173c-4d74-883a-eeafb586298e",
-    "courseNumber": "BIO 85",
-    "sectionName": "01",
-    "name": "Evolution",
-    "description": "Understanding evolution is key to understanding the diversity of life on earth. We will be focusing on the fundamental principles of evolutionary biology from natural and sexual selection to the formation of new species. To understand these concepts we will delve into the mechanisms that underlie them.",
-    "metadata": {
-      "createdDate": "2024-01-08T23:49:15.611+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-01-08T23:49:37.499+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -13609,22 +12987,6 @@
     }
   },
   {
-    "id": "c9ac0423-2c9f-4157-8152-b2842ea7ede8",
-    "courseNumber": "EE-101A-01 ",
-    "name": "Circuits I",
-    "metadata": {
-      "createdDate": "2024-01-11T23:14:50.612+00:00",
-      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
-      "updatedDate": "2024-06-11T17:46:18.369+00:00",
-      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "c9cab202-1dea-45a2-91b9-4ca3cadba225",
     "courseNumber": "URBANST-7-01",
     "name": "Global Imperial Cities of the Pacific World: 1900-2000",
@@ -14019,41 +13381,6 @@
     }
   },
   {
-    "id": "cdca0915-5952-4b4c-9f57-0d62e0207476",
-    "courseNumber": "CHEM 232-01",
-    "sectionName": "01",
-    "name": "Applications of NMR Spectroscopy",
-    "description": "The uses of NMR spectroscopy in chemical and biochemical sciences, emphasizing data acquisition for liquid samples and including selection, setup, and processing of standard and advanced experiments.",
-    "metadata": {
-      "createdDate": "2023-12-15T20:25:16.409+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-12-15T20:25:16.409+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
-    "id": "cdd243af-7da5-4c7d-ada4-dadc7113651e",
-    "courseNumber": "CHEMENG-340-01",
-    "name": "Molecular Thermodynamics",
-    "description": "Classical thermodynamics and quantum mechanics. Development of statistical thermodynamics to address the collective behavior of molecules. Establishment of theories for gas, liquid, and solid phases, including phase transitions and critical behavior.",
-    "metadata": {
-      "createdDate": "2023-09-06T17:32:30.486+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:02:30.910+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "ce1e4996-cc75-431c-9022-f1631e983b9e",
     "courseNumber": "SOC-202-01",
     "name": "Junior Seminar: Preparation for Research",
@@ -14372,23 +13699,6 @@
         {
           "name": "Guosong Hong"
         }
-      ]
-    }
-  },
-  {
-    "id": "d36defac-db12-44aa-94f0-97fbd74cde27",
-    "courseNumber": "CHEM-31M-02",
-    "name": "Chemical Principles: from molecules to solids",
-    "description": " This course will introduce the basic chemical principles that dictate how and why reactions occur and the structure and properties of important molecules and extended solids that make up our world. As the Central Science, a knowledge of chemistry provides a deep understanding of concepts in fields ranging from materials, environmental science, and engineering to pharmacology and metabolism.",
-    "metadata": {
-      "createdDate": "2023-08-31T21:16:20.648+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-02T22:28:07.747+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -14934,34 +14244,6 @@
     }
   },
   {
-    "id": "daadd4d4-05d5-4344-ad62-0ed7cf7c4d86",
-    "courseNumber": "BIO 221",
-    "sectionName": "01",
-    "name": "Ornithology",
-    "metadata": {
-      "createdDate": "2024-03-25T22:30:08.434+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-25T22:30:08.434+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Ben Moran"
-        },
-        {
-          "name": "Marty Freeland"
-        },
-        {
-          "name": "Rodolfo Dirzo"
-        },
-        {
-          "name": "Maya Xu"
-        }
-      ]
-    }
-  },
-  {
     "id": "db135e8b-9262-45c5-9c32-c61219e686e9",
     "courseNumber": "ANTHRO-193-01",
     "name": "Anthropology Capstone: Contemporary Debates in Anthropology",
@@ -15234,23 +14516,6 @@
         {
           "name": "Alberto Salleo"
         }
-      ]
-    }
-  },
-  {
-    "id": "dde864e0-8b9f-4f19-8ddb-a627641453c1",
-    "courseNumber": "CHEMENG-110A-01",
-    "name": "Introduction to Chemical Engineering Thermodynamics",
-    "description": "Thermodynamics of single-component systems: laws of thermodynamics, thermodynamic properties, equations of state, properties of ideal and real fluids, phase transitions and phase equilibrium, design of thermodynamic processes including refrigeration and power cycles. ",
-    "metadata": {
-      "createdDate": "2023-08-31T21:54:04.017+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:01:45.558+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -15867,23 +15132,6 @@
     }
   },
   {
-    "id": "e82e0d1e-e912-4d46-9566-0b09bd87b520",
-    "courseNumber": "BIO-124-01",
-    "name": "Topics in Cancer Biology",
-    "description": "This discussion-based course will explore the scientific tools used to study the molecular and genetic basis of cancer and to develop treatments for this disease. Topics covered may include cancer models, traditional and targeted cancer therapies, and the development of resistance to treatment.",
-    "metadata": {
-      "createdDate": "2023-08-31T19:54:54.818+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:05:50.402+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
-      ]
-    }
-  },
-  {
     "id": "e87e0cc6-d16c-4ad5-aed5-19bd705704cb",
     "courseNumber": "INTNLREL-168A-01",
     "name": "American Interventions, 1898-Present",
@@ -15956,23 +15204,6 @@
         {
           "name": "Avshalom Schwartz"
         }
-      ]
-    }
-  },
-  {
-    "id": "e8f76126-6faf-4929-9e48-06862d7b70b8",
-    "courseNumber": "BIO-85-01",
-    "name": "Evolution",
-    "description": "Understanding evolution is key to understanding the diversity of life on earth. We will be focusing on the fundamental principles of evolutionary biology from natural and sexual selection to the formation of new species. To understand these concepts we will delve into the mechanisms that underlie them. ",
-    "metadata": {
-      "createdDate": "2023-10-17T23:26:29.405+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2023-11-01T22:04:00.156+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-
       ]
     }
   },
@@ -16703,32 +15934,6 @@
       "instructorObjects": [
         {
           "name": "Jennifer Brody"
-        }
-      ]
-    }
-  },
-  {
-    "id": "f497208c-8d94-4df1-88cb-fe00ffa78768",
-    "courseNumber": "CHEM 33-03",
-    "sectionName": "01",
-    "name": "Structure and Reactivity of Organic Molecules",
-    "description": "An introduction to organic chemistry, the molecular foundation to understanding the life sciences, medicine, diagnostics, energy, environmental and materials sciences. Students will learn structural and bonding models of organic molecules that provide insights into reactivity.",
-    "metadata": {
-      "createdDate": "2024-03-08T22:53:49.174+00:00",
-      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
-      "updatedDate": "2024-03-13T23:42:26.763+00:00",
-      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Megan Brennan"
-        },
-        {
-          "name": "Daniel Stack"
-        },
-        {
-          "name": "Paul Wender"
         }
       ]
     }
