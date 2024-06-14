@@ -38,7 +38,7 @@ class SearchService
         "QuickSearch::#{searcher.camelize}Searcher".constantize
       end
 
-      client = HTTP.timeout(timeout)
+      client = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
 
       klass.new(client, query).tap { |searcher| searcher.search }
     end
