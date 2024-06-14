@@ -5,7 +5,7 @@ module Folio
     class << self
       delegate :policies, :circulation_rules, :criteria, :locations, :libraries,
                :institutions, :campuses, :service_points, :material_types,
-               :cached_location_by_code, :courses, to: :instance
+               :cached_location_by_code, to: :instance
     end
 
     def self.instance
@@ -24,9 +24,7 @@ module Folio
       @criteria = nil
 
       types_of_interest.each do |type|
-        file = cache_dir.join("#{type}.json")
-        data = folio_client.public_send(type).sort_by { |item| item['id'] }
-        File.write(file, JSON.pretty_generate(data))
+        sync_type!(type)
       end
 
       File.write(cache_dir.join('locations.csv'), Folio::Locations.to_csv)
@@ -34,6 +32,13 @@ module Folio
       circulation_rules = folio_client.circulation_rules
       File.write(cache_dir.join('circulation_rules.txt'), circulation_rules)
       File.write(cache_dir.join('circulation_rules.csv'), Folio::CirculationRules::PolicyService.rules(circulation_rules).map(&:to_csv).join)
+    end
+
+    # Update only specific type
+    def sync_type!(type)
+      file = cache_dir.join("#{type}.json")
+      data = folio_client.public_send(type).sort_by { |item| item['id'] }
+      File.write(file, JSON.pretty_generate(data))
     end
 
     def circulation_rules
@@ -69,10 +74,6 @@ module Folio
 
     def campuses
       @campuses ||= get_type('campuses').index_by { |p| p['id'] }
-    end
-
-    def courses
-      @courses ||= get_type('courses').index_by { |p| p['id'] }
     end
 
     def libraries
@@ -123,8 +124,7 @@ module Folio
         'campuses',
         'libraries',
         'locations',
-        'service_points',
-        'courses'
+        'service_points'
       ]
     end
   end

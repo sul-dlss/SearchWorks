@@ -10,7 +10,7 @@ class LocationRequestLinkPolicy
   end
 
   def show?
-    return false unless items.any? && !bound_with_or_analyzed_serial?
+    return false unless items.any?
 
     folio_pageable?
   end
@@ -26,13 +26,6 @@ class LocationRequestLinkPolicy
   attr_reader :location, :library_code
 
   delegate :items, to: :location
-
-  # 1. The item is "Bound-with" in folio (determined by holdingsType.name, e.g. a86041)
-  # 2. The item is a analyzed serial (determined by a SEE-OTHER folio location)
-  def bound_with_or_analyzed_serial?
-    (!folio_items? && items.first.document&.folio_holdings&.any?(&:bound_with?)) ||
-      (folio_items? && items.any? { |item| item.effective_location&.see_other? })
-  end
 
   def folio_items?
     items.any?(&:folio_item?)

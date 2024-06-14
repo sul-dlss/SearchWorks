@@ -85,7 +85,7 @@ RSpec.describe PageLocation do
       end
 
       describe "course reserve" do
-        let(:course) { CourseReserve.all.first }
+        let(:course) { build(:reg_course) }
 
         before { params[:f] = { courses_folio_id_ssim: [course.id] } }
 

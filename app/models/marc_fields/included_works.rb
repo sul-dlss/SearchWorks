@@ -19,7 +19,7 @@ class IncludedWorks < MarcField
 
     # With values until we get to subfield t
     text_only_subfields = ["e", "j", "4"]
-    before_t.each do |subfield|
+    before_t&.each do |subfield|
       if subfield.code == "i"
         before_text << subfield.value.gsub(/\s*\(.+\)\s*/, '')
       else
@@ -30,7 +30,7 @@ class IncludedWorks < MarcField
 
     # with values between the subfield t and some punctuation
     text_only_subfields = ["e", "i", "j", "4"]
-    within_t.each do |subfield|
+    within_t&.each do |subfield|
       href_text << subfield.value unless text_only_subfields.include?(subfield.code)
       link_text << subfield.value
     end

@@ -52,9 +52,12 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubocop-capybara', require: false
   gem 'selenium-webdriver'
   gem 'solr_wrapper'
   gem 'webmock'
+  # factory_bot_rails for creating fixtures in tests
+  gem 'factory_bot_rails'
 end
 
 group :sqlite do
@@ -110,4 +113,3 @@ gem "parslet", "~> 2.0"
 gem "jsbundling-rails", "~> 1.2"
 
 gem "stimulus-rails", "~> 1.3"
-

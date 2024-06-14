@@ -10,7 +10,7 @@
         <dt>Course</dt>
         <dd><%= "#{course_info.course_number} -- #{course_info.name}" %></dd>
         <dt>Instructor(s)</dt>
-        <dd><%= safe_join course_info.instructor, ', ' %></dd>
+        <dd><%= safe_join course_info.instructors, ', ' %></dd>
       </dl>
       <p>
         <%= link_to "Find reserve list for another course", course_reserves_path %>

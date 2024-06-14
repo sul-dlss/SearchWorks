@@ -19,10 +19,6 @@ imprint_display: 1990
 access_facet: Online
 building_facet: Green
 callnum_facet_hsim: Dewey Classification|000s - Computer Science, Knowledge & Systems|070s - News Media, Journalism, Publishing
-courses_folio_id_ssim:
-  - <%= CourseReserve.all[1].id %>
-  - <%= CourseReserve.all[2].id %>
-  - <%= CourseReserve.all[3].id %>
 item_display_struct:
   - id: a
     barcode: '36105217238315'

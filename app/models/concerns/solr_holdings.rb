@@ -56,6 +56,14 @@ module SolrHoldings
     end
   end
 
+  def bound_with_folio_items
+    @bound_with_folio_items ||= Array(holdings_json['holdings']).filter_map do |holdings_record|
+      next if holdings_record['boundWith'].blank?
+
+      Folio::Item.from_dynamic(holdings_record.dig('boundWith', 'item'))
+    end
+  end
+
   def holdings_json
     @holdings_json ||= first(:holdings_json_struct).presence || {}
   end

@@ -5,7 +5,9 @@
     <div id="masthead" class="browse-masthead">
       <h1 class="my-3">Browse related items</h1>
       <p>Starting at call number:
-        <% if params[:barcode] %>
+        <% if params[:call_number].present? %>
+          <%= params[:call_number] %>
+        <% elsif params[:barcode] %>
           <%= @original_doc.holdings.find_by_barcode(params[:barcode])&.callnumber %>
         <% else %>
           <%= @original_doc.holdings.items.first.callnumber %>

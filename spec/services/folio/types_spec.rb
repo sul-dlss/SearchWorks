@@ -20,12 +20,6 @@ RSpec.describe Folio::Types do
     end
   end
 
-  describe '.courses' do
-    it 'returns the course reserves' do
-      expect(described_class.courses.values).to all(have_key('courseListingObject'))
-    end
-  end
-
   describe '#sync!' do
     subject(:instance) { described_class.new(cache_dir: Pathname.new(tmpdir), folio_client:) }
 
@@ -51,8 +45,7 @@ RSpec.describe Folio::Types do
         campuses: ['campuses'],
         institutions: ['institutions'],
         loan_types: ['loan_types'],
-        service_points: ['service_points'],
-        courses: ['courses']
+        service_points: ['service_points']
       }
     end
     let(:circulation_rules) do

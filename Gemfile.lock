@@ -82,8 +82,8 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     airbrussh (1.5.2)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
@@ -153,7 +153,7 @@ GEM
       capistrano-bundler (>= 1.4)
     capistrano-bundler (2.1.0)
       capistrano (~> 3.1)
-    capistrano-one_time_key (0.1.0)
+    capistrano-one_time_key (0.2.0)
       capistrano (~> 3.0)
     capistrano-passenger (0.2.1)
       capistrano (~> 3.0)
@@ -213,11 +213,11 @@ GEM
     devise-remote-user (1.1.0)
       devise
     diff-lcs (1.5.1)
-    dlss-capistrano (4.4.1)
+    dlss-capistrano (5.1.1)
       bcrypt_pbkdf
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
-      capistrano-one_time_key
+      capistrano-one_time_key (>= 0.2.0)
       capistrano-shared_configs
       ed25519
     docile (1.4.0)
@@ -240,8 +240,13 @@ GEM
     ed25519 (1.3.0)
     edtf (3.1.1)
       activesupport (>= 3.0, < 8.0)
-    erubi (1.12.0)
+    erubi (1.13.0)
     execjs (2.9.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -269,7 +274,9 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.17.0)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
@@ -282,7 +289,7 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.1.0)
     hashie (5.0.0)
-    honeybadger (5.11.1)
+    honeybadger (5.13.0)
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
@@ -296,7 +303,7 @@ GEM
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
-    irb (1.13.1)
+    irb (1.13.2)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     iso-639 (0.3.6)
@@ -306,7 +313,7 @@ GEM
     jsbundling-rails (1.3.0)
       railties (>= 6.0.0)
     json (2.7.2)
-    jwt (2.8.1)
+    jwt (2.8.2)
       base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -334,6 +341,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
+    logger (1.6.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -353,7 +361,7 @@ GEM
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitar (0.9)
-    minitest (5.23.1)
+    minitest (5.24.0)
     mods (3.0.4)
       edtf (~> 3.0)
       iso-639
@@ -374,7 +382,7 @@ GEM
       racc (~> 1.7)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    net-imap (0.4.12)
+    net-imap (0.4.14)
       date
       net-protocol
     net-pop (0.1.2)
@@ -388,13 +396,13 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     net-ssh (7.2.3)
-    newrelic_rpm (9.10.2)
+    newrelic_rpm (9.11.0)
     nio4r (2.7.3)
-    nokogiri (1.16.5-arm64-darwin)
+    nokogiri (1.16.6-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-darwin)
+    nokogiri (1.16.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-linux)
+    nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     nom-xml (1.2.0)
       i18n
@@ -410,7 +418,7 @@ GEM
     orm_adapter (0.5.0)
     ostruct (0.6.0)
     parallel (1.25.1)
-    parser (3.3.2.0)
+    parser (3.3.3.0)
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
@@ -421,7 +429,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (3.0.11)
+    rack (3.1.4)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-mini-profiler (2.3.4)
@@ -477,13 +485,13 @@ GEM
     rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
-    reline (0.5.8)
+    reline (0.5.9)
       io-console (~> 0.5)
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
     retriable (3.1.2)
-    rexml (3.2.9)
+    rexml (3.3.0)
       strscan
     rinku (2.0.6)
     roadie (5.2.1)
@@ -497,13 +505,13 @@ GEM
       faraday (>= 0.9, < 3, != 2.0.0)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.0)
+    rspec-expectations (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.2)
+    rspec-rails (6.1.3)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -527,9 +535,7 @@ GEM
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
-    rubocop-factory_bot (2.26.0)
-      rubocop (~> 1.41)
-    rubocop-performance (1.21.0)
+    rubocop-performance (1.21.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rails (2.25.0)
@@ -537,18 +543,13 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (2.31.0)
-      rubocop (~> 1.40)
-      rubocop-capybara (~> 2.17)
-      rubocop-factory_bot (~> 2.22)
-      rubocop-rspec_rails (~> 2.28)
-    rubocop-rspec_rails (2.29.0)
-      rubocop (~> 1.40)
+    rubocop-rspec (3.0.1)
+      rubocop (~> 1.61)
     ruby-oembed (0.17.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    sanitize (6.1.0)
+    sanitize (6.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     sassc (2.4.0)
@@ -560,8 +561,9 @@ GEM
       sprockets-rails
       tilt
     scrub_rb (1.0.1)
-    selenium-webdriver (4.21.1)
+    selenium-webdriver (4.22.0)
       base64 (~> 0.2)
+      logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -590,9 +592,8 @@ GEM
     sqlite3 (1.7.3-arm64-darwin)
     sqlite3 (1.7.3-x86_64-darwin)
     sqlite3 (1.7.3-x86_64-linux)
-    sshkit (1.22.2)
+    sshkit (1.23.0)
       base64
-      mutex_m
       net-scp (>= 1.1.2)
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
@@ -601,7 +602,7 @@ GEM
       mods (~> 3.0, >= 3.0.4)
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
-    stringio (3.1.0)
+    stringio (3.1.1)
     strscan (3.1.0)
     thor (1.3.1)
     tilt (2.3.0)
@@ -653,9 +654,10 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yell (2.2.2)
-    zeitwerk (2.6.15)
+    zeitwerk (2.6.16)
 
 PLATFORMS
+  arm64-darwin-21
   arm64-darwin-23
   x86_64-darwin-19
   x86_64-darwin-22
@@ -686,6 +688,7 @@ DEPENDENCIES
   devise-remote-user
   dlss-capistrano
   ebsco-eds
+  factory_bot_rails
   faraday
   font-awesome-rails
   global_alerts
@@ -713,6 +716,7 @@ DEPENDENCIES
   rsolr
   rspec-rails (~> 6.1)
   rubocop
+  rubocop-capybara
   rubocop-performance
   rubocop-rails
   rubocop-rspec
@@ -732,4 +736,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.3.20
+   2.5.14
