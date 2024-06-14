@@ -45,3 +45,4 @@ quick_search:
   xhr_http_timeout: 15
   doi_loaded_link: "http://doi.org/"
 analytics_debug: true
+user_agent: 'sul-bento-app'
