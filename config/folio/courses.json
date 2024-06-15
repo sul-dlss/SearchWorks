@@ -1997,6 +1997,24 @@
     }
   },
   {
+    "id": "21fa795b-c871-47a7-813a-66bdde329d6b",
+    "courseNumber": "EE-101A-01",
+    "name": "Circuits I",
+    "metadata": {
+      "createdDate": "2024-06-14T22:09:10.559+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-06-14T22:09:10.559+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jeff Stribling"
+        }
+      ]
+    }
+  },
+  {
     "id": "223a5532-01ea-49d7-8097-6213c9350b52",
     "courseNumber": "EE-369A-01",
     "name": "Medical Imaging Systems I",
@@ -2593,13 +2611,13 @@
     "metadata": {
       "createdDate": "2023-12-20T22:36:44.507+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-03-26T23:12:58.816+00:00",
+      "updatedDate": "2024-06-14T20:26:24.649+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Guenther Walther"
+          "name": "Apratim Dey"
         }
       ]
     }
@@ -2726,6 +2744,43 @@
       "instructorObjects": [
         {
           "name": "Hari Manoharan"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2c49bbcc-c1a3-4aa4-94d3-affee5c53380",
+    "courseNumber": "STATS-217-01",
+    "name": "Introduction to Stochastic Processes I",
+    "description": "Discrete and continuous time Markov chains, poisson processes, random walks, branching processes, first passage times, recurrence and transience, stationary distributions. Non-Statistics masters students may want to consider taking STATS 215 instead. ",
+    "metadata": {
+      "createdDate": "2024-06-14T21:39:53.613+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-06-14T21:39:53.613+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Will Hartog"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2c5361b8-ae02-4183-b2ac-164b0fa406d0",
+    "courseNumber": "STATS-117-01",
+    "name": "Theory of Probability I",
+    "metadata": {
+      "createdDate": "2024-06-14T20:39:45.350+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-06-14T20:39:45.350+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Gene Kim"
         }
       ]
     }
@@ -8140,14 +8195,12 @@
     "metadata": {
       "createdDate": "2024-04-17T17:37:45.499+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2024-06-13T22:25:39.084+00:00",
+      "updatedDate": "2024-06-14T21:14:56.171+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Jonathan Taylor"
-        }
+
       ]
     }
   },
@@ -8569,6 +8622,25 @@
     "courseListingObject": {
       "instructorObjects": [
 
+      ]
+    }
+  },
+  {
+    "id": "89a018d3-f16f-4b33-9e4b-e14e680c04bc",
+    "courseNumber": "STATS-216V-01",
+    "name": "Introduction to Statistical Learning",
+    "description": "Overview of supervised learning, with a focus on regression and classification methods. Syllabus includes: linear and polynomial regression, logistic regression and linear discriminant analysis; cross-validation and the bootstrap, model selection and regularization methods (ridge and lasso); nonlinear models, splines and generalized additive models; tree-based methods, random forests and boosting; support-vector machines; Some unsupervised learning: principal components and clustering (k-means and hierarchical). Computing is done in R, through tutorial sessions and homework assignments. This math-light course is offered remotely only via video segments (MOOC style). TAs will host remote weekly office hours using an online platform such as Zoom. There are four homework assignments, a midterm, and a final exam, all of which are administered remotely. ",
+    "metadata": {
+      "createdDate": "2024-06-14T21:35:12.281+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-06-14T21:35:12.281+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Kelly Bodwin"
+        }
       ]
     }
   },
@@ -9111,6 +9183,24 @@
     }
   },
   {
+    "id": "8ed70bf2-2a98-4629-9287-f126e27536ae",
+    "courseNumber": "STATS-118-01",
+    "name": "Theory of Probability II",
+    "metadata": {
+      "createdDate": "2024-06-14T20:43:40.333+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-06-14T20:43:40.333+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jessica Hwang"
+        }
+      ]
+    }
+  },
+  {
     "id": "8f905236-5dfc-4193-8109-06976857bf72",
     "courseNumber": "MATSCI-163-01",
     "name": "Mechanical Behavior Laboratory",
@@ -9160,7 +9250,7 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Guenther Walther"
+          "name": "Apratim Dey"
         }
       ]
     }
@@ -10412,13 +10502,13 @@
     "metadata": {
       "createdDate": "2023-09-05T20:47:19.608+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-09-26T16:47:02.480+00:00",
+      "updatedDate": "2024-06-14T21:28:01.656+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Dan Daniel Erdmann-Pham"
+          "name": "Linh Tran"
         }
       ]
     }
@@ -11161,6 +11251,25 @@
     }
   },
   {
+    "id": "aec07e6a-1276-490a-be9f-632c643b5047",
+    "courseNumber": "PHYSICS-15-01",
+    "name": "Stars and Planets in a Habitable Universe",
+    "description": "How do stars form from the gas in galaxies? How do stars and galaxies evolve, and how can these processes give rise to planets and the conditions suitable for life? How do we, from our little corner of the cosmos, collect and decipher information about the Universe? This course covers the solar system and celestial motions, the life cycle of stars, the structure of our Milky Way galaxy, and the discovery of exoplanets: planets orbiting stars beyond our Sun. Intended to be accessible to non-science majors, the material is explored quantitatively with problem sets using basic algebra and numerical estimates. Sky observing and observatory field trips supplement the coursework.",
+    "metadata": {
+      "createdDate": "2024-06-14T20:07:57.626+00:00",
+      "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
+      "updatedDate": "2024-06-14T20:07:57.626+00:00",
+      "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Felicia Tam"
+        }
+      ]
+    }
+  },
+  {
     "id": "aec191bf-18cc-4b50-9490-b2cbfc377a92",
     "courseNumber": "EDUC-111-01",
     "name": "The Young Adult Novel: A Literature For and About Adolescents",
@@ -11709,13 +11818,13 @@
     "metadata": {
       "createdDate": "2023-09-07T17:41:57.669+00:00",
       "createdByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e",
-      "updatedDate": "2023-12-20T23:30:05.443+00:00",
+      "updatedDate": "2024-06-14T21:20:39.969+00:00",
       "updatedByUserId": "3aa29881-31bc-456b-9025-2d1127aefd2e"
     },
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Iain Johnstone"
+          "name": "Jessica Hwang"
         }
       ]
     }
@@ -12722,7 +12831,7 @@
     "courseListingObject": {
       "instructorObjects": [
         {
-          "name": "Guenther Walther"
+          "name": "Apratim Dey"
         }
       ]
     }
