@@ -319,6 +319,8 @@ GEM
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
+    rubocop-factory_bot (2.26.1)
+      rubocop (~> 1.61)
     rubocop-rails (2.25.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
@@ -407,6 +409,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   rubocop-capybara
+  rubocop-factory_bot
   rubocop-rails
   rubocop-rspec
   rubocop-rspec_rails
