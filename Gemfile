@@ -8,7 +8,7 @@ gem 'rails', '~> 7.1.2'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
 gem 'mysql2', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 6.0'
@@ -43,6 +43,7 @@ group :development, :test do
   gem 'webmock'
   gem 'rubocop', require: false
   gem 'rubocop-capybara', require: false
+  gem 'rubocop-factory_bot', require: false
   gem 'rubocop-rspec', require: false
   gem 'rubocop-rspec_rails', require: false
   gem 'rubocop-rails', require: false
