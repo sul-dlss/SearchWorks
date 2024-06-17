@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'LibGuides', js: true do
+feature 'LibGuides', :js do
   before do
     response = instance_double(AbstractSearchService::Response, results: [], total: 0)
     allow_any_instance_of(AbstractSearchService).to receive(:search)

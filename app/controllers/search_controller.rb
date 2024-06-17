@@ -34,10 +34,7 @@ class SearchController < ApplicationController
 
         # prevents openstruct object from results being nested inside tables
         # See: http://stackoverflow.com/questions/7835047/collecting-hashes-into-openstruct-creates-table-entry
-        result_list = []
-        searcher.results.each do |result|
-          result_list << result.to_h
-        end
+        result_list = searcher.results.map(&:to_h)
 
         render :json => { :endpoint => endpoint,
                           :total => searcher.total,

@@ -406,8 +406,10 @@ DEPENDENCIES
   rspec
   rspec-rails
   rubocop
+  rubocop-capybara
   rubocop-rails
   rubocop-rspec
+  rubocop-rspec_rails
   selenium-webdriver
   sprockets-rails
   sqlite3

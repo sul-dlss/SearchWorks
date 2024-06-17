@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Jump links', js: true do
+describe 'Jump links', :js do
   before do
     allow_any_instance_of(AbstractSearchService).to receive(:search).and_return(response)
 

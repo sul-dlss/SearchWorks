@@ -42,7 +42,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'webmock'
   gem 'rubocop', require: false
+  gem 'rubocop-capybara', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubocop-rspec_rails', require: false
   gem 'rubocop-rails', require: false
 end
 
