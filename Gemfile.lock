@@ -211,7 +211,7 @@ GEM
     devise-remote-user (1.1.0)
       devise
     diff-lcs (1.5.1)
-    dlss-capistrano (5.0.0)
+    dlss-capistrano (5.0.1)
       bcrypt_pbkdf
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
@@ -284,7 +284,7 @@ GEM
       ffi (>= 1.0.1)
     hashdiff (1.1.0)
     hashie (5.0.0)
-    honeybadger (5.11.2)
+    honeybadger (5.12.0)
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
