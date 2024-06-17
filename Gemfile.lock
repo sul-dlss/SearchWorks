@@ -211,13 +211,12 @@ GEM
     devise-remote-user (1.1.0)
       devise
     diff-lcs (1.5.1)
-    dlss-capistrano (5.0.1)
+    dlss-capistrano (5.0.2)
       bcrypt_pbkdf
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
       capistrano-shared_configs
       ed25519
-      net-ssh-krb
     docile (1.4.0)
     domain_name (0.6.20240107)
     dot-properties (0.1.4)
@@ -280,8 +279,6 @@ GEM
       rails (>= 6.1, < 7.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    gssapi (1.3.1)
-      ffi (>= 1.0.1)
     hashdiff (1.1.0)
     hashie (5.0.0)
     honeybadger (5.12.0)
@@ -390,9 +387,6 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     net-ssh (7.2.3)
-    net-ssh-krb (0.5.1)
-      gssapi (~> 1.3.0)
-      net-ssh (>= 2.0)
     newrelic_rpm (9.10.2)
     nio4r (2.7.3)
     nokogiri (1.16.6-arm64-darwin)
