@@ -36,24 +36,6 @@
     }
   },
   {
-    "id": "00a45880-2088-4bbd-8b37-929093f1a032",
-    "courseNumber": "SEMINAR",
-    "name": "James Joyce's Ulysses: Directed Reading",
-    "metadata": {
-      "createdDate": "2024-03-28T21:17:50.986+00:00",
-      "createdByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94",
-      "updatedDate": "2024-03-29T02:39:40.546+00:00",
-      "updatedByUserId": "a4dcafe4-8c10-4677-88cc-7dfeba59af94"
-    },
-    "courseListingObject": {
-      "instructorObjects": [
-        {
-          "name": "Thomas Sheehan"
-        }
-      ]
-    }
-  },
-  {
     "id": "01420e25-6a53-4281-9576-1c8f7a741c49",
     "courseNumber": "AA-272-01",
     "name": "Global Positioning Systems",
@@ -1381,7 +1363,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Kristin Sainani"
+        }
       ]
     }
   },
@@ -6139,6 +6123,26 @@
     }
   },
   {
+    "id": "5f971f2d-f8ed-494c-97af-566a1f2f21b7",
+    "courseNumber": "CHEM 31A",
+    "sectionName": "01",
+    "name": "Chemical Principles I",
+    "description": "31A is the first course in a two-quarter sequence designed to provide a robust foundation in key chemical principles for students with a basic background in high school chemistry, who have already placed into Math 19 or higher. The course engages students in group problem-solving activities throughout the class periods to deepen their ability to analyze and solve chemical problems. Students will also participate in a weekly laboratory activity that will immediately apply and expand upon classroom content. ",
+    "metadata": {
+      "createdDate": "2024-06-17T16:47:02.356+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-06-17T16:47:02.356+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Nathaniel Brown"
+        }
+      ]
+    }
+  },
+  {
     "id": "5fb98192-daed-4f85-9bcf-7992fe42df04",
     "courseNumber": "HUMBIO-2A-01",
     "name": "Genetics, Molecular Biology and Evolution",
@@ -7655,6 +7659,26 @@
       "instructorObjects": [
         {
           "name": "Stephanie Hunt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "78c8d578-1a31-40c2-a231-9bdfcec01ece",
+    "courseNumber": "BIO 15S",
+    "sectionName": "01",
+    "name": "Biology in the News",
+    "description": "Biology is increasingly making its way into various aspects of our lives and will continue to do so throughout the 21st century. Thus, understanding the concepts underlying the headlines and their implications is very important and can help us engage meaningfully with the changing world around us. This course will begin by teaching skills like data interpretation and critical evaluation of logical arguments. With that foundation in place, we will then use specific, real-world events such as the FDA approval of GMO salmon, the development of the COVID-19 vaccines, and the fight against MRSA to explore the concepts in biology that underlie them (e.g. genetic modification, mRNA and vaccine development, and antibiotic resistance).",
+    "metadata": {
+      "createdDate": "2024-06-17T15:58:58.745+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-06-17T15:58:58.745+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "David Armenta"
         }
       ]
     }
@@ -10545,6 +10569,24 @@
       "instructorObjects": [
         {
           "name": "Eric Shaqfeh"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a4cded73-e602-4dfa-b543-067ff4a23762",
+    "courseNumber": "PGY3",
+    "name": "General Psychiatry residents program",
+    "metadata": {
+      "createdDate": "2024-06-17T22:35:23.085+00:00",
+      "createdByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41",
+      "updatedDate": "2024-06-17T22:44:47.175+00:00",
+      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sallie De Golia"
         }
       ]
     }
@@ -13483,9 +13525,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Jennifer Brody"
-        }
+
       ]
     }
   },
@@ -13695,9 +13735,7 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-        {
-          "name": "Jennifer Brody"
-        }
+
       ]
     }
   },
@@ -16007,6 +16045,24 @@
       "instructorObjects": [
         {
           "name": "Priya Satia"
+        }
+      ]
+    }
+  },
+  {
+    "id": "f412e0c1-4a97-4542-b43f-6f84ffef2361",
+    "courseNumber": "CSRE-17-01",
+    "name": "To Laugh or Not to Laugh: Exploring Race and Gender Through Humor",
+    "metadata": {
+      "createdDate": "2024-06-17T21:21:23.458+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-06-17T21:21:23.458+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "T. Jones"
         }
       ]
     }
