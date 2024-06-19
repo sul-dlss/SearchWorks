@@ -5886,6 +5886,30 @@
     }
   },
   {
+    "id": "5cafae26-0958-4e3a-9427-621fe7029829",
+    "courseNumber": "EDUC-264A-01",
+    "name": "Curriculum and Instruction in World Languages",
+    "metadata": {
+      "createdDate": "2024-06-18T18:36:05.285+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-18T18:36:05.285+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sonia Jimenez"
+        },
+        {
+          "name": "Liz Matchett"
+        },
+        {
+          "name": "Diana Sanchez"
+        }
+      ]
+    }
+  },
+  {
     "id": "5cbe0328-df49-4d1c-bf18-5c6f5ddf6aa4",
     "courseNumber": "EDUC-365-01",
     "name": "Social, Emotional, and Personality Development",
@@ -8224,7 +8248,9 @@
     },
     "courseListingObject": {
       "instructorObjects": [
-
+        {
+          "name": "Cyrus DiCiccio"
+        }
       ]
     }
   },
@@ -10699,6 +10725,27 @@
       "instructorObjects": [
         {
           "name": "Priya Satia"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a675b2c1-b960-41a6-a97b-22291f5082e9",
+    "courseNumber": "EDUC-246E-01",
+    "name": "Elementary Teaching Seminar: Exploring Teaching",
+    "metadata": {
+      "createdDate": "2024-06-18T16:48:53.156+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-18T16:48:53.156+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Ira Lit"
+        },
+        {
+          "name": "Maricela Montoy-Wilson"
         }
       ]
     }
