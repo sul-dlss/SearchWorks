@@ -25,7 +25,8 @@ export default class extends Controller {
           status_text.html(live_data.status)
         }
 
-        if (live_data.due_date) {
+        // check for due date and if date in temporary location (if the user goes to the page by hitting back).
+        if (live_data.due_date && !temporary_location.text().includes('Due')) {
           temporary_location.append(`Due ${live_data.due_date}`);
         }
       }
