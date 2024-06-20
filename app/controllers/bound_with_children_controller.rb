@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BoundWithChildrenController < ApplicationController
   include Blacklight::Configurable
   include Blacklight::Searchable
