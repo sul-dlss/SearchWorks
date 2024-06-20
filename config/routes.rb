@@ -33,12 +33,12 @@ Rails.application.routes.draw do
     concerns :range_searchable
   end
 
-  resources :items, only: [] do
-    resources :bound_with_children, only: [:index]
-  end
-
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
     concerns [:exportable, :marc_viewable]
+
+    member do
+      get 'bound_with_children/:item_id', to: 'bound_with_children#index', as: 'bound_with_children'
+    end
   end
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation

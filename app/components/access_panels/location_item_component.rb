@@ -18,7 +18,7 @@ module AccessPanels
 
     delegate :bound_with_parent, to: :item
 
-    def bound_with_parent?
+    def has_bound_with_parent?
       bound_with_parent.present?
     end
 

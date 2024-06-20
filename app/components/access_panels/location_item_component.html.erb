@@ -1,7 +1,6 @@
 <%= tag.tr class: classes, data: { barcode: item.barcode } do %>
   <td class="callnumber">
     <%= item.callnumber %>
-    <%= helpers.turbo_frame_tag [:item, item.id], src: item_bound_with_children_path(item.id), loading: 'lazy' if item.id %>
   </td>
   <% if render_item_note? %>
     <td class="public-note">
@@ -9,12 +8,14 @@
         <div class='public-note note-highlight'>Note: <%= inject_line_break_opportunities item.public_note %></div>
       <% end %>
 
-      <% if bound_with_parent? %>
+      <% if has_bound_with_parent? %>
         <div class="bound-with p-2 mt-2">
           <div class="bound-with-type">Bound and shelved with</div>
-          <div class="bound-with-title"><%= link_to bound_with_title, solr_document_path(item.bound_with_hrid) %></div>
+          <div class="bound-with-title"><%= item.bound_with_id == document.id ? tag.em('Same title') : link_to(bound_with_title, solr_document_path(item.bound_with_id)) %></div>
           <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
         </div>
+      <% elsif item.bound_with_principal? && item.id %>
+        <%= helpers.turbo_frame_tag [:item, item.id], src: bound_with_children_solr_document_path(document.id, item_id: item.id), loading: 'lazy' %>
       <% end %>
     </td>
   <% end %>

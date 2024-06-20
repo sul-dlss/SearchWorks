@@ -14,6 +14,7 @@ class BoundWithChildrenController < ApplicationController
   end
 
   def index
+    @id = params.require(:id)
     @item_id = params.require(:item_id)
     builder = Builder.new(@item_id)
     search = search_service.repository.search(builder)

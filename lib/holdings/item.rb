@@ -62,8 +62,8 @@ class Holdings
       item_display[:type]
     end
 
-    def bound_with_hrid
-      bound_with_parent[:hrid]
+    def bound_with_id
+      bound_with_parent[:hrid]&.sub(/^a(\d+)$/, '\1')
     end
 
     def truncated_callnumber
@@ -119,6 +119,10 @@ class Holdings
       bound_with_parent.present?
     end
 
+    def bound_with_principal?
+      item_display[:is_bound_with_principal]
+    end
+
     def circulates?
       folio_item? && folio_item_circulates?
     end
@@ -156,6 +160,8 @@ class Holdings
     end
 
     def folio_item
+      return bound_with_folio_item if bound_with?
+
       @folio_item ||= document&.folio_items&.find do |item|
         # We prefer to match on the item id (uuid) because the barcode
         # might be missing or duplicated.
@@ -164,6 +170,12 @@ class Holdings
         else
           item.barcode == barcode
         end
+      end
+    end
+
+    def bound_with_folio_item
+      @bound_with_folio_item ||= document&.bound_with_folio_items&.find do |item|
+        item.id == id
       end
     end
 
