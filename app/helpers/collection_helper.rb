@@ -47,6 +47,7 @@ module CollectionHelper
         embed_url = "#{Settings.PURL_EMBED_RESOURCE}embed?url=#{Settings.PURL_EMBED_RESOURCE}#{document.druid}&format=#{format}"
         auto_discovery_link_tag :oembed, embed_url, type: "application/#{format}+oembed", title: document_presenter(document).heading
       end.join.html_safe
+      tag.link(rel: 'canonical', href: "#{Settings.PURL_EMBED_RESOURCE}#{document.druid}")
     end
   end
 end
