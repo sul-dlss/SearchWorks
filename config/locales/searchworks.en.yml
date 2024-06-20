@@ -322,7 +322,7 @@ en:
       sms: 'text'
       printer: 'printer'
 
-    back_to_search: '<i class="fa fa-fast-backward"></i><span class="d-none d-sm-inline">&nbsp; Back to results</span>'
+    back_to_search: '<i class="bi bi-skip-backward-fill"></i><span class="d-none d-sm-inline">&nbsp; Back to results</span>'
     feedback_form:
       success: '<strong>Thank you!</strong> Your feedback has been sent.'
     connection_form:
@@ -333,35 +333,35 @@ en:
   record_side_nav:
     abstract:
       id: "abstract"
-      icon: '<i class="fa fa-align-justify"></i>'
+      icon: '<i class="bi bi-justify"></i>'
       label: "Abstract"
     abstract_contents:
       id: "abstract-contents"
-      icon: '<i class="fa fa-align-justify"></i>'
+      icon: '<i class="bi bi-justify"></i>'
       label: "Contents"
     contributors:
       id: "contributors"
-      icon: '<i class="fa fa-user"></i>'
+      icon: '<i class="bi bi-person-fill"></i>'
       label: "Contributors"
     access_conditions:
       id: "access-conditions"
-      icon: '<i class="fa fa-key"></i>'
+      icon: '<i class="bi bi-key-fill"></i>'
       label: "Access"
     contents_summary:
       id: "contents-summary"
-      icon: '<i class="fa fa-align-justify"></i>'
+      icon: '<i class="bi bi-justify"></i>'
       label: "Summary"
     subjects:
       id: "subjects"
-      icon: '<i class="fa fa-tags"></i>'
+      icon: '<i class="bi bi-tags-fill"></i>'
       label: "Subjects"
     bibliography_info:
       id: "bibliography-info"
-      icon: '<i class="fa fa-info"></i>'
+      icon: '<i class="bi bi-info-circle"></i>'
       label: "Info"
     details:
       id: "details"
-      icon: '<i class="fa fa-info"></i>'
+      icon: '<i class="bi bi-info-circle"></i>'
       label: "Details"
     browse_nearby:
       id: "browse-nearby"
@@ -369,9 +369,9 @@ en:
       label: "Browse"
     fulltext:
       id: "full-text"
-      icon: '<i class="fa fa-align-justify"></i>'
+      icon: '<i class="bi bi-justify"></i>'
       label: "Full Text"
     summary:
       id: "summary"
-      icon: '<i class="fa fa-align-justify"></i>'
+      icon: '<i class="bi bi-justify"></i>'
       label: "Summary"

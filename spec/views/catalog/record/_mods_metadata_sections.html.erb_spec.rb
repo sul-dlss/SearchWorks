@@ -31,8 +31,8 @@ RSpec.describe "catalog/record/_mods_metadata_sections" do
     it "renders side nav content" do
       expect(rendered).to have_css("ul.side-nav-minimap")
 
-      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-up")
-      expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-down")
+      expect(rendered).to have_css(".side-nav-minimap button i.bi.bi-arrow-up-short")
+      expect(rendered).to have_css(".side-nav-minimap button i.bi.bi-arrow-down-short")
 
       expect(rendered).to have_css(".side-nav-minimap button.contributors")
       expect(rendered).to have_css(".side-nav-minimap button.abstract-contents")
