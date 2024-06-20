@@ -38,21 +38,21 @@ module Folio
           barcode: json['barcode'],
           material_type: json['materialTypeId'] && MaterialType.new(
             id: json.fetch('materialTypeId'),
-            name: json.fetch('materialType')
+            name: json.fetch('materialType', nil)
           ),
           permanent_loan_type: json['permanentLoanTypeId'] && LoanType.new(
             id: json.fetch('permanentLoanTypeId'),
-            name: json.fetch('permanentLoanType')
+            name: json.fetch('permanentLoanType', nil)
           ),
           temporary_loan_type: json['temporaryLoanTypeId'] && LoanType.new(
             id: json.fetch('temporaryLoanTypeId'),
-            name: json.fetch('temporaryLoanType')
+            name: json.fetch('temporaryLoanType', nil)
           ),
           volume: json['volume'], # only present for serials
           enumeration: json['enumeration'], # only present for serials
           chronology: json['chronology'], # only present for serials
           call_number: CallNumber.from_dynamic(json['callNumber']),
-          effective_location: Folio::Location.from_dynamic(json.dig('location', 'effectiveLocation')),
+          effective_location: (Folio::Location.from_dynamic(json.dig('location', 'effectiveLocation')) if json.dig('location', 'effectiveLocation')),
           permanent_location: (Folio::Location.from_dynamic(json.dig('location', 'permanentLocation')) if json.dig('location', 'permanentLocation')) || holdings_record&.effective_location)
     end
 
@@ -61,7 +61,7 @@ module Folio
     end
 
     def location_provided_availability
-      effective_location.details['availabilityClass']
+      effective_location&.details&.dig('availabilityClass')
     end
 
     def loan_type

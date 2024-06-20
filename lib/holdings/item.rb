@@ -172,12 +172,14 @@ class Holdings
     end
 
     def request_policy
-      return unless folio_item?
+      return unless folio_item? && material_type.present? && loan_type.present?
 
       @request_policy ||= Folio::CirculationRules::PolicyService.instance.item_request_policy(self)
     end
 
     def loan_policy
+      return unless folio_item? && material_type.present? && loan_type.present?
+
       @loan_policy ||= Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)
     end
   end
