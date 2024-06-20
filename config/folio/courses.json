@@ -4736,6 +4736,25 @@
     }
   },
   {
+    "id": "4dc0f651-7c72-41a3-a1f3-729e504e29b3",
+    "courseNumber": "CS-161-01",
+    "name": "Design and Analysis of Algorithms",
+    "description": "",
+    "metadata": {
+      "createdDate": "2024-06-19T18:31:41.339+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-06-19T18:32:18.061+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Matthew Sotoudeh"
+        }
+      ]
+    }
+  },
+  {
     "id": "4e149352-8501-434e-8af7-206ca52f6364",
     "courseNumber": "DLCL-170-01",
     "name": "Where the Wild Things Are: The Ecology and Ethics of Conserving Megafauna",
