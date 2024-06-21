@@ -3434,6 +3434,27 @@
     }
   },
   {
+    "id": "395d852b-ecbd-42bd-83ed-e704d27d9656",
+    "courseNumber": "EDUC-268A-01",
+    "name": "Curriculum and Instruction in History and Social Science",
+    "metadata": {
+      "createdDate": "2024-06-20T18:15:33.952+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-20T18:15:33.952+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Kristen Jackson"
+        },
+        {
+          "name": "Irene Castillon"
+        }
+      ]
+    }
+  },
+  {
     "id": "3967dab2-95b3-4061-941f-147107a14914",
     "courseNumber": "SPANLANG-1-06",
     "name": "First-Year Spanish, First Quarter",
@@ -6161,6 +6182,24 @@
       "instructorObjects": [
         {
           "name": "Demetrius Loufas"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5f8d34e8-d2b7-4ecf-b3e7-47837eb90210",
+    "courseNumber": "CSRE-15-01",
+    "name": "Race and College Admissions: The Case of the United States and its Implications for a Global Context",
+    "metadata": {
+      "createdDate": "2024-06-21T01:37:18.503+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-06-21T01:37:18.503+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Leslie Luqueno"
         }
       ]
     }
