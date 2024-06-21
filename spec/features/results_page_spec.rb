@@ -8,7 +8,7 @@ RSpec.feature "Search Results Page" do
     expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)
   end
   scenario "vernacular title" do
-    visit search_catalog_path(q: '11')
+    visit search_catalog_path(q: 'id:11')
 
     within(first('.document')) do
       expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
