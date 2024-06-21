@@ -14,6 +14,8 @@
     .cover-image {
       border: 1px solid #ddd;
       max-height: 150px;
+      position: relative;
+      z-index: 3;
     }
   }
 
