@@ -10,6 +10,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -41,6 +42,7 @@
     "code": "SULTS",
     "discoveryDisplayName": "SUL Technical Services",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -72,6 +74,7 @@
     "code": "LAWBC",
     "discoveryDisplayName": "Law Course Reserves Cabinet",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -107,6 +110,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -143,6 +147,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -174,6 +179,7 @@
     "code": "SAL3",
     "discoveryDisplayName": "SAL3 (off-campus storage)",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -200,6 +206,25 @@
     }
   },
   {
+    "id": "3a40852d-49fd-4df2-a1f9-6e2641a6e91f",
+    "name": "Circ Desk 1",
+    "code": "cd1",
+    "discoveryDisplayName": "Circulation Desk -- Hallway",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 3,
+      "intervalId": "Weeks"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-06-22T06:34:26.814+00:00",
+      "updatedDate": "2024-06-22T06:34:26.814+00:00"
+    }
+  },
+  {
     "id": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "name": "Earth Sciences Loan Desk",
     "code": "EARTH-SCI",
@@ -210,6 +235,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -246,6 +272,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -282,6 +309,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -318,6 +346,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -349,6 +378,7 @@
     "code": "HILA",
     "discoveryDisplayName": "Hoover Library & Archives Reading Room",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -379,6 +409,7 @@
     "name": "SUL - Digitization Services",
     "code": "SULDIGITIZATION",
     "discoveryDisplayName": "SUL Digitization Services",
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -410,6 +441,7 @@
     "code": "GREEN-BING",
     "discoveryDisplayName": "Green Library Bing Wing",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -441,6 +473,7 @@
     "code": "SAL",
     "discoveryDisplayName": "SAL1&2 (on-campus storage)",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -477,6 +510,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -512,6 +546,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -544,12 +579,13 @@
     "discoveryDisplayName": "Online",
     "shelvingLagTime": 0,
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
 
     ],
     "metadata": {
       "createdDate": "2023-08-09T20:33:25.599+00:00",
-      "updatedDate": "2023-08-09T20:33:25.599+00:00"
+      "updatedDate": "2024-06-22T06:34:26.878+00:00"
     }
   },
   {
@@ -558,6 +594,7 @@
     "code": "SULACQ",
     "discoveryDisplayName": "SUL Acquisitions",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -589,6 +626,7 @@
     "code": "SAL-NEWARK",
     "discoveryDisplayName": "SAL Newark (off-campus storage)",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -620,6 +658,7 @@
     "code": "SULCC",
     "discoveryDisplayName": "SUL Collection Care",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -651,6 +690,7 @@
     "code": "CLASSICS",
     "discoveryDisplayName": "Classics Library",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -686,6 +726,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -722,6 +763,7 @@
       "duration": 2,
       "intervalId": "Weeks"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -758,6 +800,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -793,6 +836,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -824,6 +868,7 @@
     "code": "SULMD",
     "discoveryDisplayName": "SUL Metadata",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -855,6 +900,7 @@
     "code": "EDUCATION",
     "discoveryDisplayName": "Education Library (Cubberley)",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -881,11 +927,31 @@
     }
   },
   {
+    "id": "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
+    "name": "Circ Desk 2",
+    "code": "cd2",
+    "discoveryDisplayName": "Circulation Desk -- Back Entrance",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 5,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-06-22T06:34:26.962+00:00",
+      "updatedDate": "2024-06-22T06:34:26.962+00:00"
+    }
+  },
+  {
     "id": "c9364d5f-6421-4c1a-9010-4ca2bc34efbe",
     "name": "Law - Tech Services",
     "code": "LAWTS",
     "discoveryDisplayName": "Law - Tech Services",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -917,6 +983,7 @@
     "code": "SULCONSER",
     "discoveryDisplayName": "SUL Conservation Services",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -953,6 +1020,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -984,6 +1052,7 @@
     "code": "SULMDCS",
     "discoveryDisplayName": "SUL Metadata Cataloging Shelf",
     "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1014,6 +1083,7 @@
     "name": "Music - Tech Services",
     "code": "MUSICTS",
     "discoveryDisplayName": "Music - Tech Services",
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1050,6 +1120,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1085,6 +1156,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1121,6 +1193,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",

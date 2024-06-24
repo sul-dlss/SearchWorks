@@ -2714,6 +2714,27 @@
     }
   },
   {
+    "id": "2c1e2ccd-458e-4118-b6a8-1f6811ee1f2d",
+    "courseNumber": "CHEMENG-12SC-01",
+    "name": "An Exploration of Art Materials:  The Intersection of Art and Science",
+    "metadata": {
+      "createdDate": "2024-06-21T20:14:35.523+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-06-21T20:14:35.523+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sara Loesch-Frank"
+        },
+        {
+          "name": "Curtis Frank"
+        }
+      ]
+    }
+  },
+  {
     "id": "2c35b144-882b-4926-afa5-a640e2f9898a",
     "courseNumber": "PHYSICS-71-01",
     "name": "Quantum and Thermal Physics",
@@ -6054,6 +6075,24 @@
       "instructorObjects": [
         {
           "name": "Manuel Kamenzin"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5d6518b7-b1e4-4f14-bd28-f2b259cfd89d",
+    "courseNumber": "ARTSTUDI-173S-01",
+    "name": "SmART Phone Photography",
+    "metadata": {
+      "createdDate": "2024-06-21T16:50:58.364+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-06-21T16:50:58.364+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Damon Casarez"
         }
       ]
     }
