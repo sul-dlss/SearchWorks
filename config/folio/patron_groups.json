@@ -13,24 +13,22 @@
   },
   {
     "group": "staff",
-    "desc": "Staff",
+    "desc": "Staff Member",
     "id": "3684a786-6671-4268-8ed0-9db82ebca60b",
     "expirationOffsetInDays": 730,
     "metadata": {
       "createdDate": "2023-08-09T20:12:40.000+00:00",
-      "updatedDate": "2024-04-29T16:21:58.661+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2024-06-22T06:24:49.458+00:00"
     }
   },
   {
     "group": "faculty",
-    "desc": "Faculty",
+    "desc": "Faculty Member",
     "id": "503a81cd-6c26-400f-b620-14c08943697c",
     "expirationOffsetInDays": 365,
     "metadata": {
       "createdDate": "2023-08-09T20:12:40.200+00:00",
-      "updatedDate": "2024-04-29T16:09:16.776+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2024-06-22T06:24:49.434+00:00"
     }
   },
   {
@@ -145,12 +143,11 @@
   },
   {
     "group": "graduate",
-    "desc": "Graduate student",
+    "desc": "Graduate Student",
     "id": "ad0bc554-d5bc-463c-85d1-5562127ae91b",
     "metadata": {
       "createdDate": "2023-08-09T20:12:40.204+00:00",
-      "updatedDate": "2024-04-29T16:09:39.505+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2024-06-22T06:24:49.356+00:00"
     }
   },
   {
@@ -166,12 +163,11 @@
   },
   {
     "group": "undergrad",
-    "desc": "Undergraduate student",
+    "desc": "Undergraduate Student",
     "id": "bdc2b6d4-5ceb-4a12-ab46-249b9a68473e",
     "metadata": {
       "createdDate": "2023-08-09T20:12:39.103+00:00",
-      "updatedDate": "2024-04-29T16:24:21.844+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2024-06-22T06:24:49.442+00:00"
     }
   },
   {
