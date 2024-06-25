@@ -206,25 +206,6 @@
     }
   },
   {
-    "id": "3a40852d-49fd-4df2-a1f9-6e2641a6e91f",
-    "name": "Circ Desk 1",
-    "code": "cd1",
-    "discoveryDisplayName": "Circulation Desk -- Hallway",
-    "pickupLocation": true,
-    "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
-    },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [
-
-    ],
-    "metadata": {
-      "createdDate": "2024-06-22T06:34:26.814+00:00",
-      "updatedDate": "2024-06-22T06:34:26.814+00:00"
-    }
-  },
-  {
     "id": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "name": "Earth Sciences Loan Desk",
     "code": "EARTH-SCI",
@@ -924,25 +905,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:45:10.483+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
-    "name": "Circ Desk 2",
-    "code": "cd2",
-    "discoveryDisplayName": "Circulation Desk -- Back Entrance",
-    "pickupLocation": true,
-    "holdShelfExpiryPeriod": {
-      "duration": 5,
-      "intervalId": "Days"
-    },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [
-
-    ],
-    "metadata": {
-      "createdDate": "2024-06-22T06:34:26.962+00:00",
-      "updatedDate": "2024-06-22T06:34:26.962+00:00"
     }
   },
   {
