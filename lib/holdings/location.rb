@@ -47,12 +47,12 @@ class Holdings
     end
 
     def sort
-      name || @code
+      name || @code || ''
     end
 
     # This prevents logging too much data when there is an error.
     def inspect
-      "<##{this.class.class_name} @code=#{@code}>"
+      "<##{self.class.name} @code=#{@code}>"
     end
 
     private
