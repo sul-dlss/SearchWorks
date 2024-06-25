@@ -10809,6 +10809,24 @@
     }
   },
   {
+    "id": "a6289581-14e7-415f-a564-b8bae102f438",
+    "courseNumber": "ARTSTUDI-124S-01",
+    "name": "Painting and Acrylics",
+    "metadata": {
+      "createdDate": "2024-06-25T01:42:36.435+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-06-25T01:42:36.435+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cooper Salmon"
+        }
+      ]
+    }
+  },
+  {
     "id": "a64a49e2-00a4-481b-803a-8532c5d28e27",
     "courseNumber": "HISTORY-239D-01",
     "name": "Capital and Empire",
@@ -14917,6 +14935,24 @@
       "instructorObjects": [
         {
           "name": "Sarah Heilshorn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e05db6ad-ad08-4e9f-8009-303db4bf8047",
+    "courseNumber": "EDUC-263E-01",
+    "name": "Quantitative Reasoning & Mathematics I",
+    "metadata": {
+      "createdDate": "2024-06-24T21:23:12.437+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-24T21:23:12.437+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Osuna"
         }
       ]
     }
