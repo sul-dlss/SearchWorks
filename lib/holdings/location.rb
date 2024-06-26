@@ -35,9 +35,6 @@ class Holdings
       items.any?(&:bound_with?)
     end
 
-    # Intentionally left blank
-    def location_link; end
-
     def present?
       any_items? || any_mhlds? || bound_with?
     end
