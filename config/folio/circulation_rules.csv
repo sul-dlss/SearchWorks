@@ -165,6 +165,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,SAL3-PAGE-MU-CIRC,7day-1renew-3daygrace,Allow All,Default notice,No fines,$65 lost fee
 ,periodical,,,,,MUS-INPROCESS or MUS-PROCESSING-CIRC,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,MUS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
+,periodical,,,,,MEDIA-SER-PROCESSING,No loan,Hold only,Default notice,No fines,$65 lost fee
 ,periodical,,,,,GRE-HASRC or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-EXHIBIT,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$100 lost fee
@@ -231,7 +232,6 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ENG-TECH-PROCESSOR,No loan,Hold only,Default notice,No fines,$225 lost fee
 ,book,,,,,ENG-PERMRES,7day-1renew-3daygrace,No requests allowed,Short Term Notices,No fines,$225 lost fee
 ,book,,,,,ENG-SCIFI or ENG-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
-,book,,,,,EDU-PROCESSING,No loan,Hold only,Default notice,No fines,$75 lost fee
 ,book,,,,,EDU-NEWBOOK,14day-norenew-1daygrace,Allow hold/recall,Short Term Notices,No fines,$75 lost fee
 ,book,,,,,EDU-EXHIBIT,No loan,Hold only,Default notice,No fines,$75 lost fee
 ,book,,,,,EDU-CURRICULUM or EDU-CURRSTOR or EDU-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
