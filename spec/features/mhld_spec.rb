@@ -28,7 +28,7 @@ RSpec.describe "MHLD", :feature do
     end
 
     it "should be present in the accordion section" do
-      visit search_catalog_path(q: '10')
+      visit search_catalog_path(q: 'id:10')
 
       within(first('.document')) do
         expect(page).to have_content('Check availability')

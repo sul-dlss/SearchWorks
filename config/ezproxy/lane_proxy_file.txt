@@ -275,6 +275,7 @@ bmjopenrespres.bmj.com
 bmjopensem.bmj.com
 bmjophth.bmj.com
 bmjpaedsopen.bmj.com
+boardsbeyond.com
 bodoni.stanford.edu
 book.oversea.cnki.net
 books.fupress.com
@@ -1213,6 +1214,7 @@ ophthalmology.lwwhealthlibrary.com
 opil.ouplaw.com
 opticalengineering.spiedigitallibrary.org
 optnano.springeropen.com
+org.ravmilim.com
 orlando.cambridge.org
 orthopaedics.lwwhealthlibrary.com
 osf.io
@@ -1787,6 +1789,7 @@ www.biolsci.org
 www.biomed.cas.cz
 www.biomolther.org
 www.bioone.org
+www.bioscience.org
 www.biotechnologyhealthcare.com
 www.birpublications.org
 www.biusante.parisdescartes.fr
@@ -2745,7 +2748,6 @@ www.racgp.org.au
 www.radiologycases.com
 www.rand.org
 www.rarebooks.info
-www.ravmilim.co.il
 www.rcpe.ac.uk
 www.rcpjournals.org
 www.rcvmonline.com

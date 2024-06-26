@@ -2714,6 +2714,27 @@
     }
   },
   {
+    "id": "2c1e2ccd-458e-4118-b6a8-1f6811ee1f2d",
+    "courseNumber": "CHEMENG-12SC-01",
+    "name": "An Exploration of Art Materials:  The Intersection of Art and Science",
+    "metadata": {
+      "createdDate": "2024-06-21T20:14:35.523+00:00",
+      "createdByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d",
+      "updatedDate": "2024-06-21T20:14:35.523+00:00",
+      "updatedByUserId": "cd613c86-f22f-49c9-a304-b5ca261d5e1d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Sara Loesch-Frank"
+        },
+        {
+          "name": "Curtis Frank"
+        }
+      ]
+    }
+  },
+  {
     "id": "2c35b144-882b-4926-afa5-a640e2f9898a",
     "courseNumber": "PHYSICS-71-01",
     "name": "Quantum and Thermal Physics",
@@ -3429,6 +3450,27 @@
       "instructorObjects": [
         {
           "name": "Sigrid Elschot"
+        }
+      ]
+    }
+  },
+  {
+    "id": "395d852b-ecbd-42bd-83ed-e704d27d9656",
+    "courseNumber": "EDUC-268A-01",
+    "name": "Curriculum and Instruction in History and Social Science",
+    "metadata": {
+      "createdDate": "2024-06-20T18:15:33.952+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-20T18:15:33.952+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Kristen Jackson"
+        },
+        {
+          "name": "Irene Castillon"
         }
       ]
     }
@@ -4736,6 +4778,25 @@
     }
   },
   {
+    "id": "4dc0f651-7c72-41a3-a1f3-729e504e29b3",
+    "courseNumber": "CS-161-01",
+    "name": "Design and Analysis of Algorithms",
+    "description": "",
+    "metadata": {
+      "createdDate": "2024-06-19T18:31:41.339+00:00",
+      "createdByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d",
+      "updatedDate": "2024-06-19T18:32:18.061+00:00",
+      "updatedByUserId": "75893b16-47a7-473c-b759-ca4f38b9567d"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Matthew Sotoudeh"
+        }
+      ]
+    }
+  },
+  {
     "id": "4e149352-8501-434e-8af7-206ca52f6364",
     "courseNumber": "DLCL-170-01",
     "name": "Where the Wild Things Are: The Ecology and Ethics of Conserving Megafauna",
@@ -6019,6 +6080,24 @@
     }
   },
   {
+    "id": "5d6518b7-b1e4-4f14-bd28-f2b259cfd89d",
+    "courseNumber": "ARTSTUDI-173S-01",
+    "name": "SmART Phone Photography",
+    "metadata": {
+      "createdDate": "2024-06-21T16:50:58.364+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-06-21T16:50:58.364+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Damon Casarez"
+        }
+      ]
+    }
+  },
+  {
     "id": "5d66e459-f3ca-4791-a57e-e957eaec3c92",
     "courseNumber": "PHYSICS-152-01",
     "name": "Introduction to Particle Physics I ",
@@ -6142,6 +6221,24 @@
       "instructorObjects": [
         {
           "name": "Demetrius Loufas"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5f8d34e8-d2b7-4ecf-b3e7-47837eb90210",
+    "courseNumber": "CSRE-15-01",
+    "name": "Race and College Admissions: The Case of the United States and its Implications for a Global Context",
+    "metadata": {
+      "createdDate": "2024-06-21T01:37:18.503+00:00",
+      "createdByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7",
+      "updatedDate": "2024-06-21T01:37:18.503+00:00",
+      "updatedByUserId": "4775ca7b-e76d-4730-bfb1-b6db380c21b7"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Leslie Luqueno"
         }
       ]
     }
@@ -10712,6 +10809,24 @@
     }
   },
   {
+    "id": "a6289581-14e7-415f-a564-b8bae102f438",
+    "courseNumber": "ARTSTUDI-124S-01",
+    "name": "Painting and Acrylics",
+    "metadata": {
+      "createdDate": "2024-06-25T01:42:36.435+00:00",
+      "createdByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177",
+      "updatedDate": "2024-06-25T01:42:36.435+00:00",
+      "updatedByUserId": "1ec3e08f-8122-46f1-83a3-7fa26f736177"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Cooper Salmon"
+        }
+      ]
+    }
+  },
+  {
     "id": "a64a49e2-00a4-481b-803a-8532c5d28e27",
     "courseNumber": "HISTORY-239D-01",
     "name": "Capital and Empire",
@@ -14820,6 +14935,24 @@
       "instructorObjects": [
         {
           "name": "Sarah Heilshorn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e05db6ad-ad08-4e9f-8009-303db4bf8047",
+    "courseNumber": "EDUC-263E-01",
+    "name": "Quantitative Reasoning & Mathematics I",
+    "metadata": {
+      "createdDate": "2024-06-24T21:23:12.437+00:00",
+      "createdByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f",
+      "updatedDate": "2024-06-24T21:23:12.437+00:00",
+      "updatedByUserId": "c5c04a13-f435-4e29-a6c7-a776f3055e8f"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Jennifer Osuna"
         }
       ]
     }

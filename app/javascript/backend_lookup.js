@@ -30,8 +30,11 @@ Blacklight.onLoad(function(){
     }
 
     function updateText(count, el){
-      countText = $("<span>...finds " + count + " results</span>");
-      $(el).after(countText);
+      //Check to see if count is already next to the element (user goes to the page by hitting back).
+      if (!$(el)[0].nextElementSibling){
+        countText = $("<span>...finds " + count + " results</span>");
+        $(el).after(countText);
+      }
     }
     Plugin.prototype = {
 
