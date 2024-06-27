@@ -147,7 +147,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -169,7 +169,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:21.327+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:38:34.581+00:00",
+      "updatedDate": "2024-06-27T00:24:57.884+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -216,7 +216,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -238,7 +238,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:08.635+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:37:39.180+00:00",
+      "updatedDate": "2024-06-27T00:24:16.610+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -253,7 +253,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -275,7 +275,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:23.530+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:39:08.611+00:00",
+      "updatedDate": "2024-06-27T00:25:18.109+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -290,7 +290,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -312,7 +312,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:27.957+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:39:25.831+00:00",
+      "updatedDate": "2024-06-27T00:25:39.106+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -327,7 +327,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -349,7 +349,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:09.535+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:37:49.338+00:00",
+      "updatedDate": "2024-06-27T00:24:28.684+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -491,7 +491,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -513,7 +513,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:03.032+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:37:23.820+00:00",
+      "updatedDate": "2024-06-27T00:24:00.984+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -707,7 +707,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -729,7 +729,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:22.422+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:38:54.278+00:00",
+      "updatedDate": "2024-06-26T23:52:59.234+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -781,7 +781,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -803,7 +803,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:16.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:38:19.544+00:00",
+      "updatedDate": "2024-06-26T23:52:36.875+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -982,7 +982,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1004,7 +1004,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:14.414+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:38:03.502+00:00",
+      "updatedDate": "2024-06-27T00:24:40.817+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -1118,14 +1118,10 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
-      },
-      {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
         "printByDefault": false
       },
       {
@@ -1135,13 +1131,17 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
       }
     ],
     "metadata": {
       "createdDate": "2023-08-10T17:45:01.721+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:01.721+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-06-27T00:23:47.391+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1155,7 +1155,7 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
@@ -1177,7 +1177,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:00.325+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-01-04T16:37:08.337+00:00",
+      "updatedDate": "2024-06-27T00:23:30.483+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   }

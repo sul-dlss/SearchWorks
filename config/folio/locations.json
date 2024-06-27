@@ -3962,6 +3962,31 @@
     }
   },
   {
+    "id": "3d54bc2b-6d87-42a4-a915-4fc918a224e0",
+    "name": "Lane Acquisitions",
+    "code": "LANE-ACQ",
+    "discoveryDisplayName": "Lane Acquisitions",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {
+    },
+    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
+    "servicePointIds": [
+      "0483c7bd-8e95-4c7b-9704-484b01879b02"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-06-26T19:43:17.459+00:00",
+      "createdByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f",
+      "updatedDate": "2024-06-26T19:43:17.459+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+    }
+  },
+  {
     "id": "3d8166aa-9f44-4187-8d79-a257929729bf",
     "name": "East Asia Shelved Elsewhere",
     "code": "EAL-SEE-OTHER",
