@@ -3,16 +3,31 @@
 module AccessPanels
   class LocationItemComponent < ViewComponent::Base
     with_collection_parameter :item
-    attr_reader :item, :document, :classes
+    attr_reader :item, :document, :classes, :counter
 
-    def initialize(item:, document:, classes: nil, render_item_level_request_link: true, render_item_note: true)
+    def initialize(item:, document:, item_counter:, classes: nil, render_item_note: true, render_item_level_request_link: true)
       super
 
       @item = item
       @classes = classes
       @document = document
-      @render_item_level_request_link = render_item_level_request_link
       @render_item_note = render_item_note
+      @render_item_level_request_link = render_item_level_request_link
+      @counter = item_counter
+    end
+
+    delegate :bound_with_parent, to: :item
+
+    def has_bound_with_parent?
+      bound_with_parent.present?
+    end
+
+    def bound_with_title
+      bound_with_parent['title']
+    end
+
+    def bound_with_callnumber
+      [bound_with_parent['call_number'], bound_with_parent['volume'], bound_with_parent['enumeration'], bound_with_parent['chronology']].compact.join(' ')
     end
 
     def availability_text
@@ -32,12 +47,12 @@ module AccessPanels
       availability_class.present? && availability_class == 'In_process'
     end
 
-    def render_item_details?
-      !item.suppressed?
-    end
-
     def render_item_note?
       @render_item_note
+    end
+
+    def render_item_details?
+      !item.suppressed?
     end
 
     def render_item_level_request_link?

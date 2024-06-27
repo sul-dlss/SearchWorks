@@ -31,8 +31,13 @@ class Holdings
       Folio::Locations.details(code: @code) || {}
     end
 
+    # @return [Bool] true if any of the items in this location bound-with children
     def bound_with?
       items.any?(&:bound_with?)
+    end
+
+    def bound_with_parents
+      items.filter_map(&:bound_with_parent)
     end
 
     # Intentionally left blank

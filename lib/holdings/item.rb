@@ -62,6 +62,10 @@ class Holdings
       item_display[:type]
     end
 
+    def bound_with_id
+      bound_with_parent[:hrid]&.sub(/^a(\d+)$/, '\1')
+    end
+
     def truncated_callnumber
       item_display[:lopped_callnumber]
     end
@@ -107,16 +111,16 @@ class Holdings
     end
 
     def bound_with_parent
-      return nil unless document&.folio_holdings&.any?
-
-      match = document.folio_holdings.find do |holding|
-        holding.bound_with_parent&.dig('item', 'id') == id
-      end
-      match&.bound_with_parent
+      item_display[:bound_with]
     end
 
+    # @return [Bool] true if this is a bound-with child
     def bound_with?
       bound_with_parent.present?
+    end
+
+    def bound_with_principal?
+      item_display[:is_bound_with_principal]
     end
 
     def circulates?
@@ -156,6 +160,8 @@ class Holdings
     end
 
     def folio_item
+      return bound_with_folio_item if bound_with?
+
       @folio_item ||= document&.folio_items&.find do |item|
         # We prefer to match on the item id (uuid) because the barcode
         # might be missing or duplicated.
@@ -167,17 +173,25 @@ class Holdings
       end
     end
 
+    def bound_with_folio_item
+      @bound_with_folio_item ||= document&.bound_with_folio_items&.find do |item|
+        item.id == id
+      end
+    end
+
     def folio_item_circulates?
       loan_policy&.dig('loanable')
     end
 
     def request_policy
-      return unless folio_item?
+      return unless folio_item? && material_type.present? && loan_type.present?
 
       @request_policy ||= Folio::CirculationRules::PolicyService.instance.item_request_policy(self)
     end
 
     def loan_policy
+      return unless folio_item? && material_type.present? && loan_type.present?
+
       @loan_policy ||= Folio::CirculationRules::PolicyService.instance.item_loan_policy(self)
     end
   end
