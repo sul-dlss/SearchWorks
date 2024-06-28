@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# The store of course reserve data from courses.json
+# The store of course reserve data from Folio
 class CourseReserve < ApplicationRecord
   serialize :instructors, coder: YAML, type: Array
   validates :id, presence: true
