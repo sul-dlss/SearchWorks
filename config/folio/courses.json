@@ -8739,6 +8739,26 @@
     }
   },
   {
+    "id": "88e9aaf1-81da-4ed6-b2fb-8362225500cb",
+    "courseNumber": "CHEM 121",
+    "sectionName": "01",
+    "name": "Understanding the Natural and Unnatural World through Chemistry",
+    "description": "Students enrolled in this course will appreciate the transformative power of molecular science on the modern world and how foundational knowledge of chemistry enables profound discoveries in biological, pharmaceutical, agrochemical, engineering, energy, and materials science research. This course integrates the lessons of CHEM 31 and CHEM 33 through an examination of the structure-function properties of carbon-based molecules. ",
+    "metadata": {
+      "createdDate": "2024-06-27T23:46:10.935+00:00",
+      "createdByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3",
+      "updatedDate": "2024-06-27T23:48:35.032+00:00",
+      "updatedByUserId": "311140d9-5f3e-485f-a535-0d1e32fa6bb3"
+    },
+    "courseListingObject": {
+      "instructorObjects": [
+        {
+          "name": "Megan Brennan"
+        }
+      ]
+    }
+  },
+  {
     "id": "88eea847-2bde-4561-9238-1e9fea66271b",
     "courseNumber": "CHEMENG-310-02",
     "name": "Microhydrodynamics",
