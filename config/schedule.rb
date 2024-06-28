@@ -21,3 +21,7 @@ end
 every '0 4 * * *', roles: %i[app] do # daily at 4 am
   rake 'searchworks:prune_old_guest_user_data[12]'
 end
+
+every 1.hours, roles: %i[courses] do
+  rake 'folio:update_courses_db'
+end

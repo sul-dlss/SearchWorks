@@ -15,5 +15,3 @@ access_facet: Online
 building_facet: SAL3 (off-campus storage)
 course: "CAT-401-01-01"
 instructor: "McDonald, Ronald"
-courses_folio_id_ssim:
- - <%= CourseReserve.all.first.id %>

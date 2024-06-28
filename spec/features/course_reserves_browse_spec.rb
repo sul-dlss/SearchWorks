@@ -29,6 +29,7 @@ RSpec.feature 'Course reserves browse', :js do
     expect(page).to have_css('select.search_field')
   end
   scenario 'should activate the datatables plugin correctly' do
+    create(:reg_course)
     visit course_reserves_path
     expect(page).to have_css('#course-reserves-browse_info')
     expect(page).to have_css('#course-reserves-browse_filter')

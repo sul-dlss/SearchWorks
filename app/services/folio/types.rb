@@ -5,7 +5,7 @@ module Folio
     class << self
       delegate :policies, :circulation_rules, :criteria, :locations, :libraries,
                :institutions, :campuses, :service_points, :material_types,
-               :cached_location_by_code, :courses, to: :instance
+               :cached_location_by_code, to: :instance
     end
 
     def self.instance
@@ -71,10 +71,6 @@ module Folio
       @campuses ||= get_type('campuses').index_by { |p| p['id'] }
     end
 
-    def courses
-      @courses ||= get_type('courses').index_by { |p| p['id'] }
-    end
-
     def libraries
       @libraries ||= get_type('libraries').index_by { |p| p['id'] }
     end
@@ -123,8 +119,7 @@ module Folio
         'campuses',
         'libraries',
         'locations',
-        'service_points',
-        'courses'
+        'service_points'
       ]
     end
   end

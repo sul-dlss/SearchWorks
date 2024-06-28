@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_10_223715) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_13_182000) do
   create_table "bookmarks", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "user_type"
@@ -22,6 +22,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_223715) do
     t.string "record_type", default: "catalog"
     t.index ["record_type"], name: "index_bookmarks_on_record_type"
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "course_reserves", id: false, force: :cascade do |t|
+    t.string "id", default: "", null: false
+    t.string "name"
+    t.string "course_number"
+    t.text "instructors"
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["id"], name: "index_course_reserves_on_id", unique: true
   end
 
   create_table "searches", force: :cascade do |t|

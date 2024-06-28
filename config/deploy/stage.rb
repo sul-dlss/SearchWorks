@@ -2,7 +2,7 @@
 
 set :bundle_without, %w[sqlite development test].join(' ')
 
-server 'sw-webapp-stage-a.stanford.edu', user: 'blacklight', roles: %w[web db app]
+server 'sw-webapp-stage-a.stanford.edu', user: 'blacklight', roles: %w[web db app courses]
 server 'sw-webapp-stage-b.stanford.edu', user: 'blacklight', roles: %w[web db app]
 server 'sw-webapp-stage-c.stanford.edu', user: 'blacklight', roles: %w[web db app]
 
