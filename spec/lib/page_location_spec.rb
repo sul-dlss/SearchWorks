@@ -85,9 +85,10 @@ RSpec.describe PageLocation do
       end
 
       describe "course reserve" do
-        let(:course) { CourseReserve.all.first }
-
-        before { params[:f] = { courses_folio_id_ssim: [course.id] } }
+        before {
+          create(:reg_course)
+          params[:f] = { courses_folio_id_ssim: ['00254a1b-d0f5-4a9a-88a0-1dd596075d08'] }
+        }
 
         context 'when courses_folio_id_ssim facet is selected' do
           it { is_expected.to eq :course_reserve }

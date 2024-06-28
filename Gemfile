@@ -56,6 +56,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'solr_wrapper'
   gem 'webmock'
+  # factory_bot_rails for creating fixtures in tests
+  gem 'factory_bot_rails'
 end
 
 group :sqlite do

@@ -242,6 +242,11 @@ GEM
       activesupport (>= 3.0, < 8.0)
     erubi (1.13.0)
     execjs (2.9.1)
+    factory_bot (6.4.6)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -652,6 +657,7 @@ GEM
     zeitwerk (2.6.16)
 
 PLATFORMS
+  arm64-darwin-21
   arm64-darwin-23
   x86_64-darwin-19
   x86_64-darwin-22
@@ -682,6 +688,7 @@ DEPENDENCIES
   devise-remote-user
   dlss-capistrano
   ebsco-eds
+  factory_bot_rails
   faraday
   font-awesome-rails
   global_alerts
