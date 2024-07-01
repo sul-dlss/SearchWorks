@@ -21,9 +21,13 @@ module Folio
       folio_courses = folio_client.courses
       # Add or update all courses retrieved from FOLIO
       folio_courses.each { |v|
+        end_date = v.dig('courseListingObject', 'termObject', 'endDate')
         CourseReserve.where(id: v['id']).first_or_create(id: v['id']).update(
           course_number: v['courseNumber'],
           name: v['name'],
+          start_date: v.dig('courseListingObject', 'termObject', 'startDate'),
+          end_date:,
+          is_active: Time.zone.today <= Date.parse(end_date),
           instructors: v.dig('courseListingObject', 'instructorObjects').pluck('name')
         )
       }
