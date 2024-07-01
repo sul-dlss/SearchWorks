@@ -56,7 +56,8 @@ class FolioClient # rubocop:disable Metrics/ClassLength
   def courses
     get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }.map do |course|
       instructors = course.dig('courseListingObject', 'instructorObjects').map { |x| x.slice('name') }
-      course.slice('id', 'courseNumber', 'sectionName', 'name', 'description', 'termObject', 'metadata').merge('courseListingObject' => { 'instructorObjects' => instructors })
+      course['courseListingObject'] = course['courseListingObject'].merge({ 'instructorObjects' => instructors })
+      course.slice('id', 'courseNumber', 'sectionName', 'name', 'description', 'metadata', 'courseListingObject')
     end
   end
 

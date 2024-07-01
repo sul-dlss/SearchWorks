@@ -2,6 +2,6 @@
 
 class CourseReservesController < ApplicationController
   def index
-    @course_reserves = CourseReserve.all
+    @course_reserves = CourseReserve.where(is_active: true)
   end
 end

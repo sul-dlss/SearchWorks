@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe CourseReservesController do
   describe "#index" do
     before do
-      allow(CourseReserve).to receive(:all).and_return([build(:reg_course), build(:reg_course_add)])
+      allow(CourseReserve).to receive(:where).and_return([build(:reg_course), build(:reg_course_add)])
     end
 
     it "should get the course reserves page" do
