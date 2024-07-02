@@ -611,6 +611,7 @@ excerpts.cdn.overdrive.com
 excerpts.contentreserve.com
 experiments.springernature.com
 extoxnet.orst.edu
+extras.springer.com
 extremephysiolmed.biomedcentral.com
 f1000.com
 f1000research.com
@@ -1207,6 +1208,7 @@ openhypertensionjournal.com
 openknowledge.worldbank.org
 openlibrary.org
 openres.ersjournals.com
+openresearchlibrary.org
 openscience.bmj.com
 openurl.ac.uk
 opg.optica.org
@@ -1682,6 +1684,7 @@ www.ajtmh.org
 www.ajtr.org
 www.ajts.org
 www.akademiai.com
+www.allelopathyjournal.com
 www.alliedacademies.org
 www.allthatstats.com
 www.altmetric.com
