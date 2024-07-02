@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: "catalog#index"
+  root to: "catalog#home"
 
   # redirect Symphony-migrated FOLIO HRIDs to their original Symphony URLs
   constraints(id: /a\d+/) do
