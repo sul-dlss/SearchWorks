@@ -58866,7 +58866,6 @@ item_display_struct:
 - id: '00578e91-56fa-5b4f-b835-2de71dba9931'
   barcode: '36105115800893'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58886,7 +58885,6 @@ item_display_struct:
 - id: 00b14b11-4482-5a56-97fa-65038de5a0a5
   barcode: '36105116648788'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58906,7 +58904,6 @@ item_display_struct:
 - id: 013a1ad3-e9e9-5561-bcb5-d1cddb13bc9d
   barcode: '36105116838280'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58926,7 +58923,6 @@ item_display_struct:
 - id: 01f18e3c-2c13-5137-984f-02c178ee4255
   barcode: '36105116838298'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58946,7 +58942,6 @@ item_display_struct:
 - id: 0356c8d1-23e6-54f3-b3a3-736711b5939f
   barcode: '36105116838363'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58966,7 +58961,6 @@ item_display_struct:
 - id: 03c3a3a4-8fc4-5d0b-af5c-13de34468809
   barcode: '36105116648150'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -58986,7 +58980,6 @@ item_display_struct:
 - id: 03f56ee4-b552-554d-9ee5-7e3a596cefdb
   barcode: '36105116193900'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59006,7 +58999,6 @@ item_display_struct:
 - id: 0403a182-240b-54bd-a05d-3a1151539390
   barcode: '36105116836904'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59026,7 +59018,6 @@ item_display_struct:
 - id: '0482b8f4-396b-57ef-82bc-c52f144b0a9f'
   barcode: '36105116648424'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59046,7 +59037,6 @@ item_display_struct:
 - id: '0529e0e0-5421-5d6f-be43-d7d020a169c7'
   barcode: '36105116701439'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59066,7 +59056,6 @@ item_display_struct:
 - id: 05fb6cf1-c9f3-5f48-a47d-f2993b6766b3
   barcode: '36105116539904'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59086,7 +59075,6 @@ item_display_struct:
 - id: '06897ab0-6abc-58c7-b918-d72412ea5e35'
   barcode: '36105116537171'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59106,7 +59094,6 @@ item_display_struct:
 - id: 06d246eb-0bf5-52c0-84f7-7c966bbd5913
   barcode: '36105116193942'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59126,7 +59113,6 @@ item_display_struct:
 - id: 06fcf902-e7a8-5fd9-bfe9-67587c72cad8
   barcode: '36105116838314'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59146,7 +59132,6 @@ item_display_struct:
 - id: '0708bacc-095f-54d6-bdbc-4bfbbf2bd40a'
   barcode: '36105116536488'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59166,7 +59151,6 @@ item_display_struct:
 - id: 074376ef-ffc3-5f7a-8f9a-60b89fe95f59
   barcode: '36105116820007'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59186,7 +59170,6 @@ item_display_struct:
 - id: 07b75967-e8a3-5961-8473-2fecdad1b94c
   barcode: '36105116648937'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59206,7 +59189,6 @@ item_display_struct:
 - id: 07b7929d-31df-52c7-9498-2d6ee1c40e6a
   barcode: '36105116720116'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59226,7 +59208,6 @@ item_display_struct:
 - id: '08224caa-c7ef-5a5c-a481-4cdf3ad413e6'
   barcode: '36105116648721'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59246,7 +59227,6 @@ item_display_struct:
 - id: '0884bca6-a29c-530e-b203-2c481db87a9a'
   barcode: '36105116648853'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59266,7 +59246,6 @@ item_display_struct:
 - id: '08b8d7d8-c9ac-587d-9806-98a2756b3e64'
   barcode: '36105116852828'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59286,7 +59265,6 @@ item_display_struct:
 - id: '098a9a10-3f75-5c55-b1d1-eefd2429f94f'
   barcode: '36105116648416'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59306,7 +59284,6 @@ item_display_struct:
 - id: '09efae56-036a-50fc-9090-7d9bbfe57fa6'
   barcode: '36105116837175'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59326,7 +59303,6 @@ item_display_struct:
 - id: 0b884055-e652-5e79-8e13-6f572392d2ef
   barcode: '36105116540514'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59346,7 +59322,6 @@ item_display_struct:
 - id: 0be81ea1-ae58-527b-ad16-ccd6417d1a63
   barcode: '36105116648432'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59366,7 +59341,6 @@ item_display_struct:
 - id: 0c861bef-70ee-5526-aa67-7e4ef3c683e9
   barcode: '36105116835674'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59386,7 +59360,6 @@ item_display_struct:
 - id: 0cf63d38-1ceb-505c-a05b-7245cce441d9
   barcode: '36105116648846'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59406,7 +59379,6 @@ item_display_struct:
 - id: 0ee525a9-3421-587e-98d1-76b672919259
   barcode: '36105116837548'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59426,7 +59398,6 @@ item_display_struct:
 - id: 0feb57dc-a48e-5da6-8c06-ae4f8dae11e8
   barcode: '36105125864111'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59446,7 +59417,6 @@ item_display_struct:
 - id: 0ffec703-10bd-5009-8f16-f2c593138e88
   barcode: '36105116648945'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59466,7 +59436,6 @@ item_display_struct:
 - id: 10e14dd0-3b12-5e96-813b-715807b6b494
   barcode: '36105116539987'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59486,7 +59455,6 @@ item_display_struct:
 - id: 10f2b3f2-50d8-5909-8bd7-ed0af00a45f4
   barcode: '36105116505483'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59506,7 +59474,6 @@ item_display_struct:
 - id: 11e227bd-c73b-5c34-9b8b-77d357b9dd00
   barcode: '36105116701363'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59526,7 +59493,6 @@ item_display_struct:
 - id: 11f01bf8-9ae1-5d89-85de-cc0382e2db99
   barcode: '36105116708004'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59546,7 +59512,6 @@ item_display_struct:
 - id: 12f581e5-d2d5-50d3-ad86-17e256d649b5
   barcode: '36105116536439'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59566,7 +59531,6 @@ item_display_struct:
 - id: 1327f197-797d-53bf-a8ac-73a8bafcd159
   barcode: '36105116537106'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59586,7 +59550,6 @@ item_display_struct:
 - id: 13379be5-9ebe-53a4-9672-698d3704782e
   barcode: '36105116836995'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59606,7 +59569,6 @@ item_display_struct:
 - id: 13443b44-36c7-55e2-bde0-7207e179dc71
   barcode: '36105116628491'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59626,7 +59588,6 @@ item_display_struct:
 - id: 1410d61e-0761-57db-b998-397236a405a7
   barcode: '36105116541991'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59646,7 +59607,6 @@ item_display_struct:
 - id: 1489ca9f-a877-5b33-a299-99bb607c1e8a
   barcode: '36105125807755'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59666,7 +59626,6 @@ item_display_struct:
 - id: 14af2c5b-7ae3-5771-94cc-f37710a4e29d
   barcode: '36105116537114'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59686,7 +59645,6 @@ item_display_struct:
 - id: 14f4f825-e11f-5b87-ac24-c6bfad8fd795
   barcode: '36105116648705'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59706,7 +59664,6 @@ item_display_struct:
 - id: 152e9d8f-46c8-55b5-ad4e-da99346eb9f6
   barcode: '36105116707915'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59726,7 +59683,6 @@ item_display_struct:
 - id: 15b28271-9c60-5973-93d9-ae48553f72c0
   barcode: '36105116628517'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59746,7 +59702,6 @@ item_display_struct:
 - id: 1633f2a2-e604-5308-8b60-893238745646
   barcode: '36105116194064'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59766,7 +59721,6 @@ item_display_struct:
 - id: 16c29c8c-044f-5c9e-893f-8a5fc12c4efa
   barcode: '36105116854329'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59786,7 +59740,6 @@ item_display_struct:
 - id: 16e2a932-69a6-5054-bf56-e3f1b665ee68
   barcode: '36105116830964'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59806,7 +59759,6 @@ item_display_struct:
 - id: 18a5ced7-eb4d-5732-bc33-9817abb73e4b
   barcode: '36105115800885'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59826,7 +59778,6 @@ item_display_struct:
 - id: 18aeef4f-0669-573d-b0fa-015f10e0fb86
   barcode: '36105116720074'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59846,7 +59797,6 @@ item_display_struct:
 - id: 18d37e6c-9799-560d-bb9d-4aa7dd3681eb
   barcode: '36105116838348'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59866,7 +59816,6 @@ item_display_struct:
 - id: 18f7929d-81c7-584b-acc0-5089c2e7f737
   barcode: '36105116194015'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59886,7 +59835,6 @@ item_display_struct:
 - id: 194b10fc-2115-5d69-9500-1a168ced4653
   barcode: '36105116537189'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59906,7 +59854,6 @@ item_display_struct:
 - id: 1a0932e6-e72a-5a78-8dd3-e070b421adb0
   barcode: '36105116720272'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59926,7 +59873,6 @@ item_display_struct:
 - id: 1a4e4b9c-040a-59d8-ac25-c41772a87e06
   barcode: '36105116837084'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59946,7 +59892,6 @@ item_display_struct:
 - id: 1bf9abb3-fee9-53da-ba33-cca1299333b0
   barcode: '36105116837043'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59966,7 +59911,6 @@ item_display_struct:
 - id: 1c5c5cca-3dea-5309-8e02-3ccb2ba576a7
   barcode: '36105116738662'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -59986,7 +59930,6 @@ item_display_struct:
 - id: 1cee6211-5f0b-5e2f-abfc-cd1b0608855c
   barcode: '36105116648374'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60006,7 +59949,6 @@ item_display_struct:
 - id: 1d8433ed-03c9-545b-be69-1bfb502f70a8
   barcode: '36105116836755'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60026,7 +59968,6 @@ item_display_struct:
 - id: 1e89c5c3-32df-591b-980a-cd3894d502b4
   barcode: '36105116536264'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60046,7 +59987,6 @@ item_display_struct:
 - id: 1ec0284b-d482-5172-9476-71ec01f3dd73
   barcode: '36105116707998'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60066,7 +60006,6 @@ item_display_struct:
 - id: 1f246da2-c9dd-55e3-af1a-97a718435ab1
   barcode: '36105116837092'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60086,7 +60025,6 @@ item_display_struct:
 - id: 1f4934be-47ea-5f25-9c04-b82377486b27
   barcode: '36105116720298'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60106,7 +60044,6 @@ item_display_struct:
 - id: 1f7dc107-77c1-5448-ac75-5224645fa9d0
   barcode: '36105116539896'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60126,7 +60063,6 @@ item_display_struct:
 - id: 1f7f6910-0174-52bd-b6af-ad6ff05f6399
   barcode: '36105116536355'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60146,7 +60082,6 @@ item_display_struct:
 - id: 1fef8154-9082-58ab-9c83-16d1a545ce8e
   barcode: '36105116648341'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60166,7 +60101,6 @@ item_display_struct:
 - id: 200a0c4b-0870-59c5-aa9c-48acf174c67f
   barcode: '36105116707949'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60186,7 +60120,6 @@ item_display_struct:
 - id: 2081f0d2-39a3-54bd-9052-ade01719434a
   barcode: '36105116648523'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60206,7 +60139,6 @@ item_display_struct:
 - id: 20ddf050-5031-5c1a-bedc-e4cf7789f882
   barcode: '36105116701330'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60226,7 +60158,6 @@ item_display_struct:
 - id: 213bc96e-16c2-57a9-95cc-ce6125244247
   barcode: '36105116628467'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60246,7 +60177,6 @@ item_display_struct:
 - id: 221332ba-5e84-58ce-8317-96f7fc00131e
   barcode: '36105116542007'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60266,7 +60196,6 @@ item_display_struct:
 - id: 22948fa2-1e39-5a7e-97dd-199bf5b4fec7
   barcode: '36105116837258'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60286,7 +60215,6 @@ item_display_struct:
 - id: 22d3c57a-98d4-5e06-9852-8b6233afa63c
   barcode: '36105115800919'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60306,7 +60234,6 @@ item_display_struct:
 - id: 22f290b0-df71-58e4-a4bb-9e21aec0454a
   barcode: '36105115800927'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60326,7 +60253,6 @@ item_display_struct:
 - id: 2321ed2a-3213-5f77-b450-8e27bdd8cecd
   barcode: '36105116538666'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60346,7 +60272,6 @@ item_display_struct:
 - id: 2356f886-103e-59f1-a510-ea24c5ce15b9
   barcode: '36105116646915'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60366,7 +60291,6 @@ item_display_struct:
 - id: 23fc5019-ccfe-5034-a2a1-aa61bd1cfc40
   barcode: '36105116701579'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60386,7 +60310,6 @@ item_display_struct:
 - id: 248aa1f0-2801-5d73-b297-4640e20b08e7
   barcode: '36105116539946'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60406,7 +60329,6 @@ item_display_struct:
 - id: 24a37680-0f1c-5bbe-8540-156eb618da29
   barcode: '36105116536256'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60426,7 +60348,6 @@ item_display_struct:
 - id: 24fd0479-9fb7-5bb0-9d02-a5b20919a7a2
   barcode: '36105116720199'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60446,7 +60367,6 @@ item_display_struct:
 - id: 260da339-e1a8-5b21-80e4-d2ab19eccf51
   barcode: '36105125845557'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60466,7 +60386,6 @@ item_display_struct:
 - id: 2664d703-b753-54ac-9427-177277a45f08
   barcode: '36105116648861'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60486,7 +60405,6 @@ item_display_struct:
 - id: 26ab4cf9-e384-55b5-bd7e-734a3a7d6738
   barcode: '36105116708087'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60506,7 +60424,6 @@ item_display_struct:
 - id: 275a8fe5-5223-5acb-8f8f-8a660879db62
   barcode: '36105116708020'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60526,7 +60443,6 @@ item_display_struct:
 - id: 27becdca-38fe-562e-a5f0-767fa2e1ba02
   barcode: '36105116837068'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60546,7 +60462,6 @@ item_display_struct:
 - id: 27c5f97b-2787-5a28-97a3-6e2dfccfea25
   barcode: '36105116720165'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60566,7 +60481,6 @@ item_display_struct:
 - id: 280b6334-474e-5242-b8ba-d8fdfdb435a6
   barcode: '36105116649042'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60586,7 +60500,6 @@ item_display_struct:
 - id: 28429e46-84f0-564d-bce3-22f170117b89
   barcode: '36105116648655'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60606,7 +60519,6 @@ item_display_struct:
 - id: 2884d248-6006-5d1b-80b4-e79a9ba6f3d4
   barcode: '36105116193967'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60626,7 +60538,6 @@ item_display_struct:
 - id: 29db4a28-1ae3-5055-b739-b8737f2cb880
   barcode: '36105116611943'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60646,7 +60557,6 @@ item_display_struct:
 - id: 2a73c0df-8cae-529b-8406-b622af5be3f6
   barcode: '36105116537023'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60666,7 +60576,6 @@ item_display_struct:
 - id: 2a84de2b-b889-535d-a576-7cb685130609
   barcode: '36105116701603'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60686,7 +60595,6 @@ item_display_struct:
 - id: 2a88f280-2333-5f13-8f12-06bb27e384b1
   barcode: '36105116854303'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60706,7 +60614,6 @@ item_display_struct:
 - id: 2b8b5b9e-5c5d-58c0-b0a7-15a1563de868
   barcode: '36105116195590'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60726,7 +60633,6 @@ item_display_struct:
 - id: 2c4c8b9b-75be-54f4-ba7e-35d45dd43426
   barcode: '36105116835666'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60746,7 +60652,6 @@ item_display_struct:
 - id: 2c8b9e7b-09a0-5be3-bee0-46cd3568e377
   barcode: '36105116538476'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60766,7 +60671,6 @@ item_display_struct:
 - id: 2d65f23f-bb53-5faa-a67e-c0d6b9e88634
   barcode: '36105116540605'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60786,7 +60690,6 @@ item_display_struct:
 - id: 2dccd254-0fa7-5cad-9a51-c2fcb968324d
   barcode: '36105116837522'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60806,7 +60709,6 @@ item_display_struct:
 - id: 2e006b82-0887-5fc2-a064-1c25c67fe42e
   barcode: '36105116505517'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60826,7 +60728,6 @@ item_display_struct:
 - id: 2e200b90-e92f-58df-a2f7-9fa7906386f9
   barcode: '36105115787959'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60846,7 +60747,6 @@ item_display_struct:
 - id: 2e30fa5a-7bd2-546b-b486-e31425783b19
   barcode: '36105116720231'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60866,7 +60766,6 @@ item_display_struct:
 - id: 2e4f110f-69b5-5987-be25-7b99a32cacca
   barcode: '36105125864038'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60886,7 +60785,6 @@ item_display_struct:
 - id: 2e6c8a80-e79d-56e1-bdc0-90196300b892
   barcode: '36105116837316'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60906,7 +60804,6 @@ item_display_struct:
 - id: 2e8ab6f4-bec3-5b12-96a9-587711d521cc
   barcode: '36105116838330'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60926,7 +60823,6 @@ item_display_struct:
 - id: 2f3b462d-a71a-5ba3-b1e6-c6ed73064691
   barcode: '36105116536397'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60946,7 +60842,6 @@ item_display_struct:
 - id: 2f95aa14-bf58-523f-95d0-6779e86e3dd1
   barcode: '36105116830956'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60966,7 +60861,6 @@ item_display_struct:
 - id: 3002708a-52fd-5626-89da-43152ea1bdf0
   barcode: '36105116540522'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -60986,7 +60880,6 @@ item_display_struct:
 - id: 3019d978-4000-5acf-9a5e-82c402e29831
   barcode: '36105125807722'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61006,7 +60899,6 @@ item_display_struct:
 - id: 31043038-37d3-56a3-a96a-783737517f12
   barcode: '36105116837480'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61026,7 +60918,6 @@ item_display_struct:
 - id: 316a70bd-7049-5eec-9571-2fc3484df1c1
   barcode: '36105116720256'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61046,7 +60937,6 @@ item_display_struct:
 - id: 322d31d0-b2a2-587b-a9a0-9b41b3d43e7a
   barcode: '36105116648440'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61066,7 +60956,6 @@ item_display_struct:
 - id: 324294ca-8a4b-5fda-944e-17d0760d2a1e
   barcode: '36105125807730'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61086,7 +60975,6 @@ item_display_struct:
 - id: 324350ba-00ef-5c03-8155-60c22898bbf4
   barcode: '36105116539912'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61106,7 +60994,6 @@ item_display_struct:
 - id: 324588f3-c8c8-5b33-aba6-a5ebbc73e11b
   barcode: '36105116194056'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61126,7 +61013,6 @@ item_display_struct:
 - id: 326ed5f8-fc3d-53c0-b63d-dfa5580cfad3
   barcode: '36105116648952'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61146,7 +61032,6 @@ item_display_struct:
 - id: 3398e1aa-de3b-543b-aedc-2aa7e8711de6
   barcode: '36105116505491'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61166,7 +61051,6 @@ item_display_struct:
 - id: 33c58b3b-fa9e-51bd-b3ba-27f815da1338
   barcode: '36105116505566'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61186,7 +61070,6 @@ item_display_struct:
 - id: 33f6e448-b49e-5446-b8d8-0cf32f2927c1
   barcode: '36105116852786'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61206,7 +61089,6 @@ item_display_struct:
 - id: 342c828d-0a12-578a-9504-e3a4af7324ab
   barcode: '36105116837456'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61226,7 +61108,6 @@ item_display_struct:
 - id: 34352bcd-d438-5a08-befe-456b413e2e96
   barcode: '36105116852638'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61246,7 +61127,6 @@ item_display_struct:
 - id: 351b6649-0329-5564-85de-dfca76142881
   barcode: '36105116837076'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61266,7 +61146,6 @@ item_display_struct:
 - id: 35824c9c-633b-5cde-a156-50dfa124f9b3
   barcode: '36105116648101'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61286,7 +61165,6 @@ item_display_struct:
 - id: 38731422-ba9f-57a5-b642-e77a74da376c
   barcode: '36105116628426'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61306,7 +61184,6 @@ item_display_struct:
 - id: 387e8d11-8150-5859-864a-147dee70b48c
   barcode: '36105116836821'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61326,7 +61203,6 @@ item_display_struct:
 - id: 3882b385-ab58-59f9-acb6-e6464b1047d9
   barcode: '36105116540043'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61346,7 +61222,6 @@ item_display_struct:
 - id: 391772da-8889-503c-b1da-212cb0133390
   barcode: '36105116536470'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61366,7 +61241,6 @@ item_display_struct:
 - id: 395492da-f782-5e69-8fc5-8e8ddd62fad0
   barcode: '36105116720033'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61386,7 +61260,6 @@ item_display_struct:
 - id: 3969c055-2bc7-5a35-8b69-2e3be8c50af9
   barcode: '36105116538443'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61406,7 +61279,6 @@ item_display_struct:
 - id: 3a5209cc-1e6a-578f-98d6-cbf4042c69a1
   barcode: '36105116835690'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61426,7 +61298,6 @@ item_display_struct:
 - id: 3a60ecd6-8a2a-5bd9-a1e0-8a6fb3129dc5
   barcode: '36105116193934'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61446,7 +61317,6 @@ item_display_struct:
 - id: 3a8d1889-b8a4-5906-a271-01d227dcadf6
   barcode: '36105116542031'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61466,7 +61336,6 @@ item_display_struct:
 - id: 3a9d0ad3-0271-598e-909f-cd0dc675b6c9
   barcode: '36105116194072'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61486,7 +61355,6 @@ item_display_struct:
 - id: 3aaf81df-7106-5f63-a46b-d0bf04c0aaed
   barcode: '36105116701561'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61506,7 +61374,6 @@ item_display_struct:
 - id: 3bf4113e-80b2-5a95-aec8-10f317016a19
   barcode: '36105116648911'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61526,7 +61393,6 @@ item_display_struct:
 - id: 3c19b278-0dc3-51a9-96ad-a5c1673968e2
   barcode: '36105116648689'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61546,7 +61412,6 @@ item_display_struct:
 - id: 3c4f2600-d6b1-5dbe-abbd-e935f90e6a97
   barcode: '36105116836763'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61566,7 +61431,6 @@ item_display_struct:
 - id: 3cb71423-9172-5d40-ba9d-5282271210e8
   barcode: '36105125807771'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61586,7 +61450,6 @@ item_display_struct:
 - id: 3ccf6032-fb46-5b42-ab13-68b6a0dba01d
   barcode: '36105116540498'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61606,7 +61469,6 @@ item_display_struct:
 - id: 3da1b664-cd16-58cf-b3aa-cdd9bc68ed19
   barcode: '36105125864053'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61626,7 +61488,6 @@ item_display_struct:
 - id: 3f26b2f9-1628-5749-9d4f-b96216836d7b
   barcode: '36105116852646'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61646,7 +61507,6 @@ item_display_struct:
 - id: 3f7b9a0f-d906-57a8-b8a7-4267d935d699
   barcode: '36105116538427'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61666,7 +61526,6 @@ item_display_struct:
 - id: 3f9eab45-a438-5aa1-a48c-1655df5df40f
   barcode: '36105116852653'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61686,7 +61545,6 @@ item_display_struct:
 - id: 3fa6788f-203b-5814-b002-9d7e55b6d7e6
   barcode: '36105116536249'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61706,7 +61564,6 @@ item_display_struct:
 - id: 3fb2d476-c039-5eae-9f91-732fc7d6b651
   barcode: '36105116837019'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61726,7 +61583,6 @@ item_display_struct:
 - id: 41fe3d81-11c4-5071-a748-066a4c814efc
   barcode: '36105116720090'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61746,7 +61602,6 @@ item_display_struct:
 - id: 421d47d1-84e8-56e8-9c11-824e0bd6ea45
   barcode: '36105116838389'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61766,7 +61621,6 @@ item_display_struct:
 - id: 42960c96-d5a0-5eca-afaa-a45c39261a82
   barcode: '36105116505558'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61786,7 +61640,6 @@ item_display_struct:
 - id: 42b93aca-9cc7-5635-bbf3-9f05b24724ec
   barcode: '36105116852703'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61806,7 +61659,6 @@ item_display_struct:
 - id: 42ce0096-16b0-58e8-8290-e98b101ab4e3
   barcode: '36105116701454'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61826,7 +61678,6 @@ item_display_struct:
 - id: 42d43e1b-d92f-514f-b9f8-ee92e2714f86
   barcode: '36105125807748'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61846,7 +61697,6 @@ item_display_struct:
 - id: 42e5cf5a-c860-53fb-be99-da3bccc26464
   barcode: '36105125807797'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61866,7 +61716,6 @@ item_display_struct:
 - id: 4352df23-0c98-5350-9000-d9224132e143
   barcode: '36105116648820'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61886,7 +61735,6 @@ item_display_struct:
 - id: 43b8e07e-ea3d-509e-b7de-542c1b8a1c20
   barcode: '36105116701587'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61906,7 +61754,6 @@ item_display_struct:
 - id: 43d48dcc-f705-57c4-8e26-a7ff3c401dc2
   barcode: '36105116837530'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61926,7 +61773,6 @@ item_display_struct:
 - id: 442c65b7-b8c0-5d71-a6f1-fa5485ec20d9
   barcode: '36105116648796'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61946,7 +61792,6 @@ item_display_struct:
 - id: 44827e5b-37d6-520a-91da-48b0e44de625
   barcode: '36105116701694'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61966,7 +61811,6 @@ item_display_struct:
 - id: 449286ed-2dcf-5776-8d5a-f74188c3c3f0
   barcode: '36105115800901'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -61986,7 +61830,6 @@ item_display_struct:
 - id: 4551a4b8-8365-5a9d-9429-e904121853ef
   barcode: '36105116708012'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62006,7 +61849,6 @@ item_display_struct:
 - id: 45a63acb-6d0a-523d-ae69-654dc52b20a3
   barcode: '36105116648697'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62026,7 +61868,6 @@ item_display_struct:
 - id: 45d0b27b-17c3-55ff-8cca-d1c214a83a26
   barcode: '36105116538658'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62046,7 +61887,6 @@ item_display_struct:
 - id: 4622283b-a0dd-5b36-a73c-1cbeea955c0e
   barcode: '36105116707931'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62066,7 +61906,6 @@ item_display_struct:
 - id: 46aada13-c0d7-5f05-8168-989e5048b0ec
   barcode: '36105116852836'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62086,7 +61925,6 @@ item_display_struct:
 - id: 46b72195-fa6e-552a-acc6-66076ee7d022
   barcode: '36105116852745'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62106,7 +61944,6 @@ item_display_struct:
 - id: 47aea884-49ec-5b2c-b783-41128bdd063c
   barcode: '36105125864145'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62126,7 +61963,6 @@ item_display_struct:
 - id: 47b0f4df-67d2-554c-a08a-2263ae3c30fd
   barcode: '36105116837506'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62146,7 +61982,6 @@ item_display_struct:
 - id: 47c771fd-15f5-59e2-b689-bebaa4dbcddf
   barcode: '36105116708053'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62166,7 +62001,6 @@ item_display_struct:
 - id: 47f89eb4-ae27-5e9c-a0b4-5d1f10d0c541
   barcode: '36105116611927'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62186,7 +62020,6 @@ item_display_struct:
 - id: 480b9066-5883-51d0-9692-57f52ab0b688
   barcode: '36105125782370'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62206,7 +62039,6 @@ item_display_struct:
 - id: 481d99c0-9e4b-577d-b622-7025f13df01b
   barcode: '36105116537049'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62226,7 +62058,6 @@ item_display_struct:
 - id: 486dc299-f66c-579a-ab50-cabb23a9de3e
   barcode: '36105116837423'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62246,7 +62077,6 @@ item_display_struct:
 - id: 49968d2c-30df-5eac-92fb-f91a922e97bc
   barcode: '36105116648390'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62266,7 +62096,6 @@ item_display_struct:
 - id: 49a73af7-988b-56e4-90c1-6fe62b1fd60d
   barcode: '36105116837498'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62286,7 +62115,6 @@ item_display_struct:
 - id: 4b954eda-4b4d-5afb-8ed9-408c7d22b12f
   barcode: '36105116720108'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62306,7 +62134,6 @@ item_display_struct:
 - id: 4c3128a0-a51b-58ae-bbbc-df11def880a1
   barcode: '36105116720207'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62326,7 +62153,6 @@ item_display_struct:
 - id: 4d3ad8a6-8611-58c9-94d6-9b2bd6d2775e
   barcode: '36105116649034'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62346,7 +62172,6 @@ item_display_struct:
 - id: 4d5b18e0-535a-5db1-a85f-1f7567ddf985
   barcode: '36105116648929'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62366,7 +62191,6 @@ item_display_struct:
 - id: 4dbad75b-bc0f-53f9-bee8-c59bc363aa23
   barcode: '36105116611950'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62386,7 +62210,6 @@ item_display_struct:
 - id: 4dc9aa2d-7cdd-5df2-a2d0-2deaaf66b26d
   barcode: '36105116628400'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62406,7 +62229,6 @@ item_display_struct:
 - id: 4de95b37-0d87-5507-8993-6fe42268984f
   barcode: '36105116837464'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62426,7 +62248,6 @@ item_display_struct:
 - id: 4e5823b4-0a94-54dd-8425-0aeaf547ae58
   barcode: '36105116648986'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62446,7 +62267,6 @@ item_display_struct:
 - id: 4e7cebd4-83b1-59e4-a594-a0000b5043ae
   barcode: '36105116539888'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62466,7 +62286,6 @@ item_display_struct:
 - id: 4ec494c9-24a0-5c6e-b1b9-0d1bbdf2b6c5
   barcode: '36105116648325'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62486,7 +62305,6 @@ item_display_struct:
 - id: 4fd2f364-f5f1-55b5-99e0-2b9ae7bcddf8
   barcode: '36105125807854'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62506,7 +62324,6 @@ item_display_struct:
 - id: 50687358-5fe6-5dd5-a9c1-3e9db845de2f
   barcode: '36105116648176'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62526,7 +62343,6 @@ item_display_struct:
 - id: 509924e0-1476-5a1d-ba4d-2fb43d9b03e3
   barcode: '36105116193918'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62546,7 +62362,6 @@ item_display_struct:
 - id: 515c3a16-e5b2-5309-a5a8-10444df4bf3a
   barcode: '36105116701322'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62566,7 +62381,6 @@ item_display_struct:
 - id: 521911a2-d597-5244-9d69-ef8475b3b32a
   barcode: '36105116506010'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62586,7 +62400,6 @@ item_display_struct:
 - id: 52f06a13-9983-51bb-a087-b7834dcb3cda
   barcode: '36105116540589'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62606,7 +62419,6 @@ item_display_struct:
 - id: 53313fa3-2da7-5cfe-b7c8-96322449c2d2
   barcode: '36105116538419'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62626,7 +62438,6 @@ item_display_struct:
 - id: 54a388f2-e11e-5df9-89a3-3d9eab01946b
   barcode: '36105116536496'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62646,7 +62457,6 @@ item_display_struct:
 - id: 54e5240a-ffd8-5352-99e1-ed967be20438
   barcode: '36105116536348'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62666,7 +62476,6 @@ item_display_struct:
 - id: 552009fa-efa2-5d3b-9f62-c7a4bf5e6e4d
   barcode: '36105116540787'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62686,7 +62495,6 @@ item_display_struct:
 - id: 5541f773-df57-53e4-bc94-5e60cdbe82f5
   barcode: '36105116701504'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62706,7 +62514,6 @@ item_display_struct:
 - id: 557b5ecf-78d9-57cf-b0c9-beea31413a08
   barcode: '36105116536314'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62726,7 +62533,6 @@ item_display_struct:
 - id: 55a91897-2e03-50fe-b209-b3e67eb9a6b4
   barcode: '36105116542098'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62746,7 +62552,6 @@ item_display_struct:
 - id: 55e39236-4e36-59cb-8a77-d7c11ddd8180
   barcode: '36105116648358'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62766,7 +62571,6 @@ item_display_struct:
 - id: 55f2ce3d-7ac5-5b0f-b8b6-504bdeb637e6
   barcode: '36105116837225'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62786,7 +62590,6 @@ item_display_struct:
 - id: 560ab045-0537-5397-9543-50be949c7ae3
   barcode: '36105116836854'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62806,7 +62609,6 @@ item_display_struct:
 - id: 5705117a-a6f7-5cf7-8dd8-df0468a56d3b
   barcode: '36105116648309'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62826,7 +62628,6 @@ item_display_struct:
 - id: 57249ac9-f950-5fd1-9bf6-e6d3d4458c47
   barcode: '36105116648507'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62846,7 +62647,6 @@ item_display_struct:
 - id: 57fad8bc-dd0e-5903-a2ae-1093f0b7ebec
   barcode: '36105116540001'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62866,7 +62666,6 @@ item_display_struct:
 - id: 580083dd-59e3-52ee-b064-3a3f416d5748
   barcode: '36105116539961'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62886,7 +62685,6 @@ item_display_struct:
 - id: 586f3b29-a623-5262-a87a-bed908552116
   barcode: '36105116611935'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62906,7 +62704,6 @@ item_display_struct:
 - id: 58ee339f-9ab8-523d-8f8e-3ba92568bb6d
   barcode: '36105116193975'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62926,7 +62723,6 @@ item_display_struct:
 - id: 595228e2-a6f4-5cb9-9311-9fc3e57160e5
   barcode: '36105116537015'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62946,7 +62742,6 @@ item_display_struct:
 - id: 5980523e-f8e6-50d6-a1df-cf9a91192822
   barcode: '36105116649000'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62966,7 +62761,6 @@ item_display_struct:
 - id: 598630ed-6e3e-5fd9-9cda-47a60cad1805
   barcode: '36105116648473'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -62986,7 +62780,6 @@ item_display_struct:
 - id: 59c8d6d0-a615-5a39-be61-2768caccd080
   barcode: '36105116701637'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63006,7 +62799,6 @@ item_display_struct:
 - id: 5a1897ce-d700-59b0-b353-a60f46225ac2
   barcode: '36105116536322'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63026,7 +62818,6 @@ item_display_struct:
 - id: 5a6c7ef2-94a6-5ad3-a4f6-6db392c9d7ca
   barcode: '36105116536272'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63046,7 +62837,6 @@ item_display_struct:
 - id: 5afd2bf8-ebb2-58f1-883f-b61e8a8b3e58
   barcode: '36105116538468'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63066,7 +62856,6 @@ item_display_struct:
 - id: 5b0e6cb7-a02b-57ce-ba99-a7997e4b3e25
   barcode: '36105116720066'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63086,7 +62875,6 @@ item_display_struct:
 - id: 5b0ea574-f35e-5c97-b0e4-2455b8041e85
   barcode: '36105116837407'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63106,7 +62894,6 @@ item_display_struct:
 - id: 5b30ffa2-33db-5895-86f0-5f9adb5f33c7
   barcode: '36105116536504'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63126,7 +62913,6 @@ item_display_struct:
 - id: 5b984172-8094-5df2-b854-6dcc82e965c0
   barcode: '36105116720132'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63146,7 +62932,6 @@ item_display_struct:
 - id: 5ba57971-6628-5742-8a5e-797a6b4cb1e9
   barcode: '36105116837308'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63166,7 +62951,6 @@ item_display_struct:
 - id: 5bba6c59-5c7e-554b-8680-e68e7717f167
   barcode: '36105125864152'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63186,7 +62970,6 @@ item_display_struct:
 - id: 5bd10d83-59cc-5678-8aee-38272e4a7961
   barcode: '36105125864160'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63206,7 +62989,6 @@ item_display_struct:
 - id: 5d075cfe-eac0-5970-aac6-bc748a53da9a
   barcode: '36105116648333'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63226,7 +63008,6 @@ item_display_struct:
 - id: 5e76802f-b3c1-59f5-82ec-db60e57e5b8c
   barcode: '36105125782362'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63246,7 +63027,6 @@ item_display_struct:
 - id: 5edbbe96-5416-5048-aadd-873cb845b978
   barcode: '36105116837217'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63266,7 +63046,6 @@ item_display_struct:
 - id: 5f112e6d-f63d-585b-a786-1bb91e7cfc53
   barcode: '36105116648838'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63286,7 +63065,6 @@ item_display_struct:
 - id: 607e6dd1-7f25-5002-af14-f168bcbcccaa
   barcode: '36105116720025'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63306,7 +63084,6 @@ item_display_struct:
 - id: 60db0e18-154c-5f63-b7de-07f11f00b9a0
   barcode: '36105116806923'
   library: SPEC-COLL
-  home_location: SPEC-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63326,7 +63103,6 @@ item_display_struct:
 - id: 611e279a-48c3-5bcf-ad19-2c99510bd5ea
   barcode: '36105116194106'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63346,7 +63122,6 @@ item_display_struct:
 - id: 6191e93f-b07c-5f19-bdb8-6f152e3d6183
   barcode: '36105116542080'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63366,7 +63141,6 @@ item_display_struct:
 - id: 61b8f412-884c-542b-98a3-41d64f59014d
   barcode: '36105116836888'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63386,7 +63160,6 @@ item_display_struct:
 - id: 61da64a6-2208-5bb1-8c9d-7d34503b60a1
   barcode: '36105116837340'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63406,7 +63179,6 @@ item_display_struct:
 - id: 626a90ec-7d67-5e05-b506-7e1716db56ab
   barcode: '36105116648499'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63426,7 +63198,6 @@ item_display_struct:
 - id: 62c4014e-2429-5781-8f02-b8728f245e40
   barcode: '36105116648630'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63446,7 +63217,6 @@ item_display_struct:
 - id: 63a9870f-d321-5e21-848a-0207d0b09fbb
   barcode: '36105116628368'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63466,7 +63236,6 @@ item_display_struct:
 - id: 63ef8ce3-ed5f-5bcd-8f8b-9d85228f303b
   barcode: '36105116648556'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63486,7 +63255,6 @@ item_display_struct:
 - id: 65142b8d-3cf8-5f58-8081-b8dff2da5925
   barcode: '36105116701371'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63506,7 +63274,6 @@ item_display_struct:
 - id: 652bc0cb-810a-5576-a8b1-afe453f28c9c
   barcode: '36105116540472'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63526,7 +63293,6 @@ item_display_struct:
 - id: 65f5b16d-fb49-5074-a16f-48005b91dda8
   barcode: '36105116542023'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63546,7 +63312,6 @@ item_display_struct:
 - id: 6610b767-fe3e-55f9-8c55-861d0afc2214
   barcode: '36105116646923'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63566,7 +63331,6 @@ item_display_struct:
 - id: 6689b555-3163-5a31-8887-0cf9a4cf7d4d
   barcode: '36105116628442'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63586,7 +63350,6 @@ item_display_struct:
 - id: 669f77ed-99eb-5e7c-885a-243e5152132d
   barcode: '36105116852810'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63606,7 +63369,6 @@ item_display_struct:
 - id: 66f2439f-57b6-56da-a856-967ecf118f6b
   barcode: '36105116820015'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63626,7 +63388,6 @@ item_display_struct:
 - id: 67176c02-d406-5384-be69-2ae442b6ddd5
   barcode: '36105116648598'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63646,7 +63407,6 @@ item_display_struct:
 - id: 67b577bb-64ed-5c19-9ca9-f85cc6ca8380
   barcode: '36105116852737'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63666,7 +63426,6 @@ item_display_struct:
 - id: 67cc8a11-9f01-5f7e-8302-c804f4fe1f7a
   barcode: '36105116836730'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63686,7 +63445,6 @@ item_display_struct:
 - id: 68765b29-eb01-5095-86aa-8dd37d214d0a
   barcode: '36105116537221'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63706,7 +63464,6 @@ item_display_struct:
 - id: 6a1b4752-a30e-5383-94fa-67fb7f71b0ee
   barcode: '36105116536967'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63726,7 +63483,6 @@ item_display_struct:
 - id: 6a725127-26c8-5b72-82d8-6cf2242056ef
   barcode: '36105116540555'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63746,7 +63502,6 @@ item_display_struct:
 - id: 6c5f6fd3-8867-566e-b0ff-09238b38b15e
   barcode: '36105125778113'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63766,7 +63521,6 @@ item_display_struct:
 - id: 6d0534d5-05e6-598a-8b2b-b1895144b6df
   barcode: '36105116540803'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63786,7 +63540,6 @@ item_display_struct:
 - id: 6dd6e7b1-ebae-5d08-8071-9197eac00f17
   barcode: '36105116819991'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63806,7 +63559,6 @@ item_display_struct:
 - id: 6de3434f-2a18-59f3-a4b7-38315bf193a5
   barcode: '36105116819967'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63826,7 +63578,6 @@ item_display_struct:
 - id: 6e675d7e-6be3-5e57-809b-072f87b45948
   barcode: '36105116701686'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63846,7 +63597,6 @@ item_display_struct:
 - id: 6ebcf80d-39b6-51c9-9d1f-276d73a19007
   barcode: '36105116837282'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63866,7 +63616,6 @@ item_display_struct:
 - id: 6f1e7c45-ea9f-5a83-bc24-2a434532c950
   barcode: '36105116195608'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63886,7 +63635,6 @@ item_display_struct:
 - id: 6f2ee235-78b6-55fc-bbb5-a1f4e10a11b7
   barcode: '36105116648192'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63906,7 +63654,6 @@ item_display_struct:
 - id: 6f675cc5-25b5-593c-9c0c-72921bb52a5b
   barcode: '36105116648291'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63926,7 +63673,6 @@ item_display_struct:
 - id: 7051fbb1-057e-5bc7-a543-012a01081ac5
   barcode: '36105116701512'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63946,7 +63692,6 @@ item_display_struct:
 - id: 711a9d88-852e-5037-85f6-36aa2d1c9ef0
   barcode: '36105116837472'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63966,7 +63711,6 @@ item_display_struct:
 - id: 711b7a46-e1d7-5406-81bf-7e31eea6e914
   barcode: '36105116648119'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -63986,7 +63730,6 @@ item_display_struct:
 - id: 7172a135-5e86-5a5a-a44a-ec1cffdd6c2f
   barcode: '36105116720082'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64006,7 +63749,6 @@ item_display_struct:
 - id: 71c66216-052b-539e-add4-4c977841cc21
   barcode: '36105116837399'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64026,7 +63768,6 @@ item_display_struct:
 - id: 7236b0e1-d637-5e19-87cb-d24743707213
   barcode: '36105116538492'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64046,7 +63787,6 @@ item_display_struct:
 - id: 72c548e2-2dfd-59b2-8774-9be9a8be24a9
   barcode: '36105116540563'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64066,7 +63806,6 @@ item_display_struct:
 - id: 72cd0d6b-a261-5086-b349-ec6332b5b6d2
   barcode: '36105116536454'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64086,7 +63825,6 @@ item_display_struct:
 - id: 72db0576-d187-59d2-b80f-b734301cbf2a
   barcode: '36105116628392'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64106,7 +63844,6 @@ item_display_struct:
 - id: 733e968d-c9db-5da5-96ac-3d1a62e8146c
   barcode: '36105116708079'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64126,7 +63863,6 @@ item_display_struct:
 - id: 73e9b080-c4b8-5bac-8839-f04594561585
   barcode: '36105116538518'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64146,7 +63882,6 @@ item_display_struct:
 - id: 73eb7e72-c50f-5ec0-b556-bca6b0e227f2
   barcode: '36105116540035'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64166,7 +63901,6 @@ item_display_struct:
 - id: 740632d0-a9b6-5e54-8cbe-57cae53e8580
   barcode: '36105125864095'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64186,7 +63920,6 @@ item_display_struct:
 - id: 749ff7b1-25e5-56be-94d6-d6a6fc2e3cef
   barcode: '36105116194098'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64206,7 +63939,6 @@ item_display_struct:
 - id: 7549fd39-b2eb-5d41-8a09-5fc6852a4302
   barcode: '36105116852620'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64226,7 +63958,6 @@ item_display_struct:
 - id: 756161cf-7b68-5407-aee8-26c6c8fa79ea
   barcode: '36105116542056'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64246,7 +63977,6 @@ item_display_struct:
 - id: 757e1ff8-2199-55f5-b550-46ee68ec3f23
   barcode: '36105116537205'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64266,7 +63996,6 @@ item_display_struct:
 - id: 7657d178-7378-5e30-b365-205625ab0256
   barcode: '36105116852760'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64286,7 +64015,6 @@ item_display_struct:
 - id: 769809c2-c9a4-5c85-99be-0f445465fb96
   barcode: '36105116539342'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64306,7 +64034,6 @@ item_display_struct:
 - id: 76a6fc03-1f3c-508a-b94d-734adeee0ec3
   barcode: '36105116649018'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64326,7 +64053,6 @@ item_display_struct:
 - id: 76b40d3d-9f1e-5a5d-a3f3-56558dde0c57
   barcode: '36105116536413'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64346,7 +64072,6 @@ item_display_struct:
 - id: 76c7da1f-0668-519c-b511-a479bebdae6b
   barcode: '36105116194023'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64366,7 +64091,6 @@ item_display_struct:
 - id: 7718e848-9ab8-5f60-99d6-4cd5960a6d4c
   barcode: '36105116648887'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64386,7 +64110,6 @@ item_display_struct:
 - id: 77301e12-68f6-5d15-8443-8cc13449d062
   barcode: '36105116851606'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64406,7 +64129,6 @@ item_display_struct:
 - id: 776f3003-86e3-5dca-af22-18e119188c0c
   barcode: '36105116628376'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64426,7 +64148,6 @@ item_display_struct:
 - id: 77a3101e-37d7-5ef1-a1cd-d46528d97d1e
   barcode: '36105116536991'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64446,7 +64167,6 @@ item_display_struct:
 - id: 78304f51-7282-5fc8-9b36-d0cd3522d7ff
   barcode: '36105116837050'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64466,7 +64186,6 @@ item_display_struct:
 - id: 79be8997-cbf8-52b7-90b9-5662daf468d2
   barcode: '36105116701629'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64486,7 +64205,6 @@ item_display_struct:
 - id: 7a802449-a933-5ffa-b0ae-e99dfbd09524
   barcode: '36105116539979'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64506,7 +64224,6 @@ item_display_struct:
 - id: 7a91c7a9-0353-565e-8ac0-1f7aba97c12e
   barcode: '36105116193983'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64526,7 +64243,6 @@ item_display_struct:
 - id: 7a954321-ff45-52a4-9fdd-ff479407c878
   barcode: '36105116708137'
   library: SPEC-COLL
-  home_location: SPEC-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64546,7 +64262,6 @@ item_display_struct:
 - id: 7aa432c5-68fa-56da-8f44-74e9fd8b6ec5
   barcode: '36105116836805'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64566,7 +64281,6 @@ item_display_struct:
 - id: 7ad40bdc-b6a8-5771-9bdd-c2027a8f463c
   barcode: '36105116837324'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64586,7 +64300,6 @@ item_display_struct:
 - id: 7af34a3b-8f18-501a-a912-f610d1fd800a
   barcode: '36105116720173'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64606,7 +64319,6 @@ item_display_struct:
 - id: 7b0d266d-1ec6-574b-a9c2-96e79b4a40d2
   barcode: '36105116836789'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64626,7 +64338,6 @@ item_display_struct:
 - id: 7b1db9d0-f980-57e4-8715-bdb79b8a494e
   barcode: '36105125864020'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64646,7 +64357,6 @@ item_display_struct:
 - id: 7b6e1bfb-6f9a-5c9b-be30-d8a90b3de52b
   barcode: '36105116648960'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64666,7 +64376,6 @@ item_display_struct:
 - id: 7b96bd21-06bd-51aa-9942-1a7ebce2403f
   barcode: '36105125864079'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64686,7 +64395,6 @@ item_display_struct:
 - id: 7c5d6038-c8b7-5aba-9401-f1107a1854e2
   barcode: '36105116701348'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64706,7 +64414,6 @@ item_display_struct:
 - id: 7ce4d859-4e95-5c44-afee-db2ef52762aa
   barcode: '36105125807839'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64726,7 +64433,6 @@ item_display_struct:
 - id: 7d3ddd71-4fe5-5231-a7a4-eac5d01c7114
   barcode: '36105116701488'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64746,7 +64452,6 @@ item_display_struct:
 - id: 7d6b7e3f-a5f2-5ed3-a51c-2edde715b92e
   barcode: '36105116707980'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64766,7 +64471,6 @@ item_display_struct:
 - id: 7de08af9-dfc3-570d-9b9a-123bd1cb056a
   barcode: '36105116648127'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64786,7 +64490,6 @@ item_display_struct:
 - id: 7e38f914-4d6d-5017-b924-b5149eb19849
   barcode: '36105116835641'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64806,7 +64509,6 @@ item_display_struct:
 - id: 7f0f8828-a671-5e7e-8bc7-db34faf2c648
   barcode: '36105116836979'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64826,7 +64528,6 @@ item_display_struct:
 - id: 7f7c7ebe-4149-5ee3-a598-5ca9898e6595
   barcode: '36105116628483'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64846,7 +64547,6 @@ item_display_struct:
 - id: 7fee8159-a8f4-5305-b172-40ce82e3fd5b
   barcode: '36105116838272'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64866,7 +64566,6 @@ item_display_struct:
 - id: 809f1992-e73b-50b8-a018-2ec7a60ae3a9
   barcode: '36105125857842'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64886,7 +64585,6 @@ item_display_struct:
 - id: 81dd74a7-736e-53d6-bbaa-751922d4ae2a
   barcode: '36105116540480'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64906,7 +64604,6 @@ item_display_struct:
 - id: 820ebdde-7f65-5a79-95bf-89cb064154de
   barcode: '36105116628509'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64926,7 +64623,6 @@ item_display_struct:
 - id: 82155fc7-8400-52e4-b00b-58f14ee4add4
   barcode: '36105116701595'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64946,7 +64642,6 @@ item_display_struct:
 - id: 840adbd9-0ec1-5dec-a9f8-97bb3250fdc0
   barcode: '36105116720058'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64966,7 +64661,6 @@ item_display_struct:
 - id: 8412794d-4922-5454-92bc-b4340d82963a
   barcode: '36105116707923'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -64986,7 +64680,6 @@ item_display_struct:
 - id: 8493d928-7d11-53b3-bb45-c30dfa68d2e1
   barcode: '36105116648531'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65006,7 +64699,6 @@ item_display_struct:
 - id: 85a8d232-4d8f-504f-8cab-a2ad2a3117bf
   barcode: '36105116837209'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65026,7 +64718,6 @@ item_display_struct:
 - id: 85a9224e-b229-5577-b2c0-033619a387d5
   barcode: '36105116536389'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65046,7 +64737,6 @@ item_display_struct:
 - id: 86a9e240-9141-53b0-9821-2e2f2660a969
   barcode: '36105116701645'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65066,7 +64756,6 @@ item_display_struct:
 - id: 87e5243a-302f-580b-b894-ff8b3601be0c
   barcode: '36105116701710'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65086,7 +64775,6 @@ item_display_struct:
 - id: 88df426e-4e07-5b7b-869f-758b9d913531
   barcode: '36105116837266'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65106,7 +64794,6 @@ item_display_struct:
 - id: 892b9c50-6168-5f29-ab57-0300b628f97e
   barcode: '36105116836839'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65126,7 +64813,6 @@ item_display_struct:
 - id: 89921702-c44d-50ee-8dd7-aedce05d11fb
   barcode: 4085072-58400136
   library: SPEC-COLL
-  home_location: SPEC-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65146,7 +64832,6 @@ item_display_struct:
 - id: 89a88253-0da1-586f-be59-8fd947aa51e7
   barcode: '36105116838256'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65166,7 +64851,6 @@ item_display_struct:
 - id: 89b2167c-2fcb-5a72-8674-250f4d1a52f7
   barcode: '36105116540571'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65186,7 +64870,6 @@ item_display_struct:
 - id: 89b72ff5-8861-5f65-9687-8c1a2cbee3ba
   barcode: '36105116195582'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65206,7 +64889,6 @@ item_display_struct:
 - id: 89c1e4c7-0ea3-5e5e-9639-c46211d47862
   barcode: '36105116720264'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65226,7 +64908,6 @@ item_display_struct:
 - id: 89c5ec64-7c1e-52b8-b295-39ab89873c98
   barcode: '36105116537155'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65246,7 +64927,6 @@ item_display_struct:
 - id: 8aafcb8d-b29f-5fbc-bb45-74dc01df2aff
   barcode: '36105116836847'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65266,7 +64946,6 @@ item_display_struct:
 - id: 8ad9c2cb-a57d-5f62-8b3d-f46b29a5ed39
   barcode: '36105116852778'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65286,7 +64965,6 @@ item_display_struct:
 - id: 8b4ece5d-113a-5833-abfd-25fbd7e20c6d
   barcode: '36105116838397'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65306,7 +64984,6 @@ item_display_struct:
 - id: 8b53dda5-55fa-5a4c-8837-95f8763dca6f
   barcode: '36105116628327'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65326,7 +65003,6 @@ item_display_struct:
 - id: 8b5dda9d-b067-5072-9e2f-21d3a2d17a85
   barcode: '36105125864103'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65346,7 +65022,6 @@ item_display_struct:
 - id: 8b5f20d2-656b-546a-973a-91872a0c344d
   barcode: '36105116542064'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65366,7 +65041,6 @@ item_display_struct:
 - id: 8ce75e28-0540-530a-8400-b99641ec42a1
   barcode: '36105116837167'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65386,7 +65060,6 @@ item_display_struct:
 - id: 8cff5900-2b86-50cf-82df-ff7d39f78bb4
   barcode: '36105125807862'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65406,7 +65079,6 @@ item_display_struct:
 - id: 8d0d5812-0c26-5a13-ab4e-f017ee8785a3
   barcode: '36105116836797'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65426,7 +65098,6 @@ item_display_struct:
 - id: 8d38f5ee-4a5d-54e8-a955-035927fcd7dd
   barcode: '36105116720249'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65446,7 +65117,6 @@ item_display_struct:
 - id: 8d5c3ddb-229f-5bcb-aafc-4fef1d5b9450
   barcode: '36105116628350'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65466,7 +65136,6 @@ item_display_struct:
 - id: 8d753000-2dc0-5d64-870f-285744e7fe29
   barcode: '36105116708103'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65486,7 +65155,6 @@ item_display_struct:
 - id: 8e06c6f9-2d82-5b21-8acb-1862620f7081
   barcode: '36105116648671'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65506,7 +65174,6 @@ item_display_struct:
 - id: 8e1a4479-05f0-56e8-8817-dcab2ab09f09
   barcode: '36105116646907'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65526,7 +65193,6 @@ item_display_struct:
 - id: 8e3deadb-dd29-50e4-a0f3-efb222e16d4e
   barcode: '36105116701496'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65546,7 +65212,6 @@ item_display_struct:
 - id: 8e752c0c-b61f-5554-9e5e-0a348f60fba3
   barcode: '36105116648739'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65566,7 +65231,6 @@ item_display_struct:
 - id: 8f3572ab-d9c7-5521-be72-9158cea1c67b
   barcode: '36105116648481'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65586,7 +65250,6 @@ item_display_struct:
 - id: 9007e40d-ee76-57d4-8cd5-82c3f725c53d
   barcode: '36105116194122'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65606,7 +65269,6 @@ item_display_struct:
 - id: 903db61e-5b32-5c27-8e75-b4e71172a99b
   barcode: '36105116837514'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65626,7 +65288,6 @@ item_display_struct:
 - id: 9099e137-23b2-5698-a130-525bc0c01bb9
   barcode: '36105116537072'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65646,7 +65307,6 @@ item_display_struct:
 - id: 90c14408-06e4-5aeb-a9fb-dbbd1358b24f
   barcode: '36105116648168'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65666,7 +65326,6 @@ item_display_struct:
 - id: 91a31ed3-9581-5be1-83f9-325718f94ee7
   barcode: '36105116720280'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65686,7 +65345,6 @@ item_display_struct:
 - id: 927e88eb-4af6-5b07-8749-69595168d46d
   barcode: '36105116837415'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65706,7 +65364,6 @@ item_display_struct:
 - id: 92c3171d-4663-5648-b5e8-3531a69ed92f
   barcode: '36105116701470'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65726,7 +65383,6 @@ item_display_struct:
 - id: 934b79fd-6a66-5551-a3f0-6d89a77183fe
   barcode: '36105116538526'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65746,7 +65402,6 @@ item_display_struct:
 - id: 949eb400-ed35-5f76-be3b-d69b20404cd8
   barcode: '36105116852687'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65766,7 +65421,6 @@ item_display_struct:
 - id: 94fd32fc-8fdc-588d-ae53-4e99a671bed5
   barcode: '36105116836920'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65786,7 +65440,6 @@ item_display_struct:
 - id: 96781bb1-bf82-5555-aee5-d679ebb8548b
   barcode: '36105116819983'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65806,7 +65459,6 @@ item_display_struct:
 - id: 96a1f0a9-36f2-5a64-af72-9a28d24589ff
   barcode: '36105116195616'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65826,7 +65478,6 @@ item_display_struct:
 - id: 9754d6b3-1e75-5eac-ba1c-0953ff885fb3
   barcode: '36105116505533'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65846,7 +65497,6 @@ item_display_struct:
 - id: 97c67bd9-32d1-586f-8628-330b80da1aa1
   barcode: '36105116648663'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65866,7 +65516,6 @@ item_display_struct:
 - id: 97cd0fbb-f792-5a29-a633-b5adb23b1ce2
   barcode: '36105125807789'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65886,7 +65535,6 @@ item_display_struct:
 - id: 97e2a6ba-68bc-54af-96b5-95d01777cf34
   barcode: '36105125815089'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65906,7 +65554,6 @@ item_display_struct:
 - id: 988fb880-526b-566f-b4fd-67faaa0e22a8
   barcode: '36105125864202'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65926,7 +65573,6 @@ item_display_struct:
 - id: 9a1e3bcf-feb6-51c8-a1ff-5e315a163403
   barcode: '36105116837365'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65946,7 +65592,6 @@ item_display_struct:
 - id: 9a297bd4-2e42-5299-8f59-283642fcbd55
   barcode: '36105116194031'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65966,7 +65611,6 @@ item_display_struct:
 - id: 9ae0ebea-50da-5248-a9d4-79db74eafbe8
   barcode: '36105116537122'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -65986,7 +65630,6 @@ item_display_struct:
 - id: 9ae94916-6bb0-5c48-9cac-0b1d13728e56
   barcode: '36105116537239'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66006,7 +65649,6 @@ item_display_struct:
 - id: 9c3eb55b-3635-51d7-9555-a7fff2a232db
   barcode: '36105116835617'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66026,7 +65668,6 @@ item_display_struct:
 - id: 9c4c27c4-a209-5c33-807f-9c258c2055f9
   barcode: '36105116854345'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66046,7 +65687,6 @@ item_display_struct:
 - id: 9c536d38-1f57-50a3-bcbc-6a81bb705fa4
   barcode: '36105116536405'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66066,7 +65706,6 @@ item_display_struct:
 - id: 9c6342cd-feb1-57cf-8550-725e7f447754
   barcode: '36105116648143'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66086,7 +65725,6 @@ item_display_struct:
 - id: 9cebb827-8788-5a56-9e62-5b4d8f765336
   barcode: '36105116490041'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66106,7 +65744,6 @@ item_display_struct:
 - id: 9cf00d3c-eca6-5f6e-b6b5-587883940400
   barcode: '36105116701462'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66126,7 +65763,6 @@ item_display_struct:
 - id: 9d1648dc-cfb5-58d8-b360-fbcccd855da2
   barcode: '36105116837241'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66146,7 +65782,6 @@ item_display_struct:
 - id: 9d62f511-c554-507c-a70f-3605b2372ecb
   barcode: '36105116852612'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66166,7 +65801,6 @@ item_display_struct:
 - id: 9e2ec1de-d4b2-55a5-be38-d1c772b0e0f8
   barcode: '36105116852729'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66186,7 +65820,6 @@ item_display_struct:
 - id: 9e37468b-c2b5-5512-b5b9-06f6d0c0afcd
   barcode: '36105116542049'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66206,7 +65839,6 @@ item_display_struct:
 - id: 9e4c9a61-137f-5b69-9fb6-20dfe2734ee1
   barcode: '36105116836870'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66226,7 +65858,6 @@ item_display_struct:
 - id: 9f38c0e2-d452-5ffc-9415-50c4be6c6c7d
   barcode: '36105116701405'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66246,7 +65877,6 @@ item_display_struct:
 - id: 9fd2ed87-d66b-5463-a16f-69cc2bbfbcdb
   barcode: '36105125864228'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66266,7 +65896,6 @@ item_display_struct:
 - id: 9fe70f99-1935-53c3-8fe6-36da1686e11c
   barcode: '36105125807821'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66286,7 +65915,6 @@ item_display_struct:
 - id: a0138d86-f50d-58f6-8d17-d8b354456b84
   barcode: '36105116539953'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66306,7 +65934,6 @@ item_display_struct:
 - id: a044e4ae-771f-5678-9724-ec9b4d3a9847
   barcode: '36105116649026'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66326,7 +65953,6 @@ item_display_struct:
 - id: a05e929b-2b24-599e-aeba-dd5ba9cdc6a7
   barcode: '36105116648606'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66346,7 +65972,6 @@ item_display_struct:
 - id: a0edc8d0-8ab0-5ef0-b9f2-0e9ec259802d
   barcode: '36105116701447'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66366,7 +65991,6 @@ item_display_struct:
 - id: a0f64d83-2753-5195-84c4-b1d0c8fa8523
   barcode: '36105116837332'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66386,7 +66010,6 @@ item_display_struct:
 - id: a11eff9a-64ea-5ff4-8750-d786814fa5dc
   barcode: '36105116537247'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66406,7 +66029,6 @@ item_display_struct:
 - id: a1a3d702-fa9f-5ee4-8c6f-f86de610c766
   barcode: '36105116837357'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66426,7 +66048,6 @@ item_display_struct:
 - id: a20192ed-a414-5235-a15c-5701e35f65db
   barcode: '36105116648747'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66446,7 +66067,6 @@ item_display_struct:
 - id: a215ff6c-7e38-5ff3-bc9d-b8ce231f970e
   barcode: '36105116819975'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66466,7 +66086,6 @@ item_display_struct:
 - id: a27f7d4f-89de-55c6-a553-f13e7315423d
   barcode: '36105116538500'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66486,7 +66105,6 @@ item_display_struct:
 - id: a355b88c-b448-5c05-bdd0-bf6f0c93c95f
   barcode: '36105116701553'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66506,7 +66124,6 @@ item_display_struct:
 - id: a36b0e4e-a003-5cae-8b15-fff6521c85d2
   barcode: '36105116708061'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66526,7 +66143,6 @@ item_display_struct:
 - id: a50c0549-45eb-5e28-808a-81c20b70ec28
   barcode: '36105116701660'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66546,7 +66162,6 @@ item_display_struct:
 - id: a5140c2b-4ee7-5f6f-b980-df9106dddc64
   barcode: '36105116836953'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66566,7 +66181,6 @@ item_display_struct:
 - id: a5454970-00ce-5c9b-adee-03bdda53d516
   barcode: '36105116720215'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66586,7 +66200,6 @@ item_display_struct:
 - id: a5dd9b8b-dd2d-58f6-a9ce-1b96e180ed70
   barcode: '36105116836938'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66606,7 +66219,6 @@ item_display_struct:
 - id: a5fd62c5-9916-581f-8449-f8ea2715be6e
   barcode: '36105116708038'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66626,7 +66238,6 @@ item_display_struct:
 - id: a6b269c3-af35-5f92-807b-870057b67b86
   barcode: '36105116537148'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66646,7 +66257,6 @@ item_display_struct:
 - id: a72001c6-fd69-5511-94fd-66764f6d44b2
   barcode: '36105125864129'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66666,7 +66276,6 @@ item_display_struct:
 - id: a8474c93-888e-58db-83df-95067bdff456
   barcode: '36105116837233'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66686,7 +66295,6 @@ item_display_struct:
 - id: a85479f3-a857-5d8f-b3f6-b60eafff7a45
   barcode: '36105116646949'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66706,7 +66314,6 @@ item_display_struct:
 - id: a9d4edbe-4c19-57f9-8f53-445a2153ddb4
   barcode: '36105116540837'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66726,7 +66333,6 @@ item_display_struct:
 - id: ab6e16df-7e23-546f-b08d-f0d0db8766a9
   barcode: '36105116701728'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66746,7 +66352,6 @@ item_display_struct:
 - id: ab7b6fd0-8f91-5f84-8dc5-989a23ad95b3
   barcode: '36105116838306'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66766,7 +66371,6 @@ item_display_struct:
 - id: acc3abb7-e445-5e0f-a511-8391d1fa28f4
   barcode: '36105116505541'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66786,7 +66390,6 @@ item_display_struct:
 - id: accfe407-8b3e-5d51-8d71-9cafc783db35
   barcode: '36105116837431'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66806,7 +66409,6 @@ item_display_struct:
 - id: ad932063-97e2-5462-92a1-6f2eba766d2a
   barcode: '36105116835708'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66826,7 +66428,6 @@ item_display_struct:
 - id: ad9900e9-3e84-51be-9471-27d99491e1f0
   barcode: '36105116852752'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66846,7 +66447,6 @@ item_display_struct:
 - id: adf875cc-cf5c-5bf4-86cb-0bdd65d0ef13
   barcode: '36105116707899'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66866,7 +66466,6 @@ item_display_struct:
 - id: aea03b86-65d6-5f04-b01d-3c881487f48a
   barcode: '36105116648994'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66886,7 +66485,6 @@ item_display_struct:
 - id: af4714a1-b52a-5cd4-819d-cc65d2098849
   barcode: '36105116707964'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66906,7 +66504,6 @@ item_display_struct:
 - id: b13e08e4-1d45-5ccc-a67f-b935148e28aa
   barcode: '36105116628434'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66926,7 +66523,6 @@ item_display_struct:
 - id: b1504c21-3c30-5a6b-8097-9f3e826668fd
   barcode: '36105116538401'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66946,7 +66542,6 @@ item_display_struct:
 - id: b15447f8-2ce5-5511-a497-7694c5c53041
   barcode: '36105116540506'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66966,7 +66561,6 @@ item_display_struct:
 - id: b17b628b-5f8a-516c-9be1-e6577cd167c7
   barcode: '36105116708046'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -66986,7 +66580,6 @@ item_display_struct:
 - id: b1f18919-8410-5a72-ade3-6d632e56ad46
   barcode: '36105116836946'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67006,7 +66599,6 @@ item_display_struct:
 - id: b36d2846-9074-5533-8326-c9fbd85943d5
   barcode: '36105116648457'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67026,7 +66618,6 @@ item_display_struct:
 - id: b3f8a7b8-03cc-5af7-81b5-59ea0803ade7
   barcode: '36105116505525'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67046,7 +66637,6 @@ item_display_struct:
 - id: b49639ea-0967-5962-9470-254edb71d422
   barcode: '36105116720157'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67066,7 +66656,6 @@ item_display_struct:
 - id: b4cf95c5-f0a0-50c8-b308-8d46fab23056
   barcode: '36105116628475'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67086,7 +66675,6 @@ item_display_struct:
 - id: b50b9cf9-f9ec-5bcb-9d39-9fb5848348b4
   barcode: '36105116720041'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67106,7 +66694,6 @@ item_display_struct:
 - id: b53f9339-25e1-5e4a-9ea7-e40a75f38483
   barcode: '36105116836813'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67126,7 +66713,6 @@ item_display_struct:
 - id: b5c2aee9-1f81-547c-8118-91edbbdda199
   barcode: '36105116701389'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67146,7 +66732,6 @@ item_display_struct:
 - id: b6cae256-bc67-592d-97e8-1397ec975893
   barcode: '36105116838413'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67166,7 +66751,6 @@ item_display_struct:
 - id: b6d912eb-3f12-57d2-89a1-74b5ec58265f
   barcode: '36105116707907'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67186,7 +66770,6 @@ item_display_struct:
 - id: b6f6939d-af38-5623-b557-655fa7995c51
   barcode: '36105115800877'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67206,7 +66789,6 @@ item_display_struct:
 - id: b7043e54-871e-5362-bb8e-9f77ade36a42
   barcode: '36105116537031'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67226,7 +66808,6 @@ item_display_struct:
 - id: b7a9112f-68f8-578d-bc94-22cf774c5645
   barcode: '36105116830980'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67246,7 +66827,6 @@ item_display_struct:
 - id: b7f60b7b-4c6d-5232-be5c-f6f9d7a3c0af
   barcode: '36105116540795'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67266,7 +66846,6 @@ item_display_struct:
 - id: b83907d8-328a-50ba-bdb7-3794c62b066c
   barcode: '36105116628459'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67286,7 +66865,6 @@ item_display_struct:
 - id: b8a258a3-9267-5975-a972-9a15ac89a642
   barcode: '36105116648408'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67306,7 +66884,6 @@ item_display_struct:
 - id: b923a32c-7e49-517a-8874-e5fd843393c2
   barcode: '36105116836862'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67326,7 +66903,6 @@ item_display_struct:
 - id: b94c1551-1101-53d8-a509-4936641396db
   barcode: '36105116838405'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67346,7 +66922,6 @@ item_display_struct:
 - id: ba352a9f-8762-5ec5-a632-deb1c647a22c
   barcode: '36105125864137'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67366,7 +66941,6 @@ item_display_struct:
 - id: ba3df6bb-12e6-545c-ab21-063b6ad3b73b
   barcode: '36105116835658'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67386,7 +66960,6 @@ item_display_struct:
 - id: ba691833-a51d-5f49-a40d-c5ca41b7b59b
   barcode: '36105116194080'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67406,7 +66979,6 @@ item_display_struct:
 - id: baa875c1-346a-512e-8543-6e92d0c30302
   barcode: '36105116835682'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67426,7 +66998,6 @@ item_display_struct:
 - id: bc05915f-74de-5ec0-bc4b-49be115a7dc4
   barcode: '36105116648648'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67446,7 +67017,6 @@ item_display_struct:
 - id: bcaf16de-77fa-548c-8f32-97bbd7f42ab7
   barcode: '36105116836748'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67466,7 +67036,6 @@ item_display_struct:
 - id: bd3c2630-410c-5647-9000-a5f75b2b707d
   barcode: '36105116820023'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67486,7 +67055,6 @@ item_display_struct:
 - id: bd9e114e-671d-5355-b875-47b574688115
   barcode: '36105116838322'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67506,7 +67074,6 @@ item_display_struct:
 - id: bdd4dcd5-5efa-5811-9636-7ecd3c25e53c
   barcode: '36105116536983'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67526,7 +67093,6 @@ item_display_struct:
 - id: be3afc19-7de2-5832-a48b-47ea272ced7a
   barcode: '36105116628335'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67546,7 +67112,6 @@ item_display_struct:
 - id: bf04fbfd-de40-5875-b7d9-45fe9bd88d59
   barcode: '36105116648382'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67566,7 +67131,6 @@ item_display_struct:
 - id: bf6c0f9c-76cc-56b5-9aea-b9f0a8450410
   barcode: '36105116701355'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67586,7 +67150,6 @@ item_display_struct:
 - id: bf928ae3-c220-5c2b-acef-44883491ab3f
   barcode: '36105116837290'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67606,7 +67169,6 @@ item_display_struct:
 - id: bfce796b-0aea-5e26-b43a-f358b3d5281c
   barcode: '36105116195574'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67626,7 +67188,6 @@ item_display_struct:
 - id: bff542d9-f321-5419-adb6-ab8afdb46960
   barcode: '36105116837001'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67646,7 +67207,6 @@ item_display_struct:
 - id: c0e8fe9a-43fe-5bd2-99ff-588b7f18500c
   barcode: '36105116628384'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67666,7 +67226,6 @@ item_display_struct:
 - id: c0f0b65c-43c6-59b6-82e8-97f163a2bb1c
   barcode: '36105116837449'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67686,7 +67245,6 @@ item_display_struct:
 - id: c15d41a0-88cf-5d50-9466-a0a949da1cfd
   barcode: '36105116540019'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67706,7 +67264,6 @@ item_display_struct:
 - id: c16935eb-95d6-59af-94b0-16461973f79a
   barcode: '36105116539995'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67726,7 +67283,6 @@ item_display_struct:
 - id: c2525bf8-d795-5714-8596-a893d989f1a3
   barcode: '36105116542072'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67746,7 +67302,6 @@ item_display_struct:
 - id: c29b0b03-42f5-5a9a-8738-07b6c14d52f0
   barcode: '36105116536447'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67766,7 +67321,6 @@ item_display_struct:
 - id: c3936cf4-75f4-5a09-8886-932e9a0e6228
   barcode: '36105116541983'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67786,7 +67340,6 @@ item_display_struct:
 - id: c3d8b8ed-af1e-504a-9244-82f4e6661c60
   barcode: '36105116537098'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67806,7 +67359,6 @@ item_display_struct:
 - id: c412c9be-4cf0-5c2f-a097-98a5a007c35b
   barcode: '36105116837100'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67826,7 +67378,6 @@ item_display_struct:
 - id: c49b9709-22ca-505f-bbdb-c3667d69310d
   barcode: '36105116505574'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67846,7 +67397,6 @@ item_display_struct:
 - id: c4a7eb92-649c-5f4b-bf90-9dc0dcd4464d
   barcode: '36105116830998'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67866,7 +67416,6 @@ item_display_struct:
 - id: c4b4bfe9-e883-5d19-b6ff-8ee9ca84faf9
   barcode: '36105116852661'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67886,7 +67435,6 @@ item_display_struct:
 - id: c5120864-db28-5ac9-b5d3-54d323c6c202
   barcode: '36105116701652'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67906,7 +67454,6 @@ item_display_struct:
 - id: c5540670-af60-5911-8448-00b8142b2270
   barcode: '36105116701413'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67926,7 +67473,6 @@ item_display_struct:
 - id: c5a182e9-2343-5dde-8fcf-0a5fd1a4e17d
   barcode: '36105125807813'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67946,7 +67492,6 @@ item_display_struct:
 - id: c782f8a3-1ada-59d7-a153-4730a2067fe9
   barcode: '36105116838355'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67966,7 +67511,6 @@ item_display_struct:
 - id: c7890098-5731-5e9d-ac5a-765eefe84fe4
   barcode: '36105116707972'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -67986,7 +67530,6 @@ item_display_struct:
 - id: c8be9c79-5348-5dbd-a7b6-31d074639843
   barcode: '36105115800935'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68006,7 +67549,6 @@ item_display_struct:
 - id: c8cc5e6c-b117-52b3-94a5-8edb732808ee
   barcode: '36105116648622'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68026,7 +67568,6 @@ item_display_struct:
 - id: c937f833-56bf-52ae-b206-7f883a58c1d0
   barcode: '36105116838264'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68046,7 +67587,6 @@ item_display_struct:
 - id: c9e52608-e31c-554e-bcc3-b12c9ef28d83
   barcode: '36105116701546'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68066,7 +67606,6 @@ item_display_struct:
 - id: ca302535-cd34-587f-ad0f-452c3b07fe41
   barcode: '36105116830972'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68086,7 +67625,6 @@ item_display_struct:
 - id: ca51b835-776b-5028-b618-2af03136159b
   barcode: '36105116648879'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68106,7 +67644,6 @@ item_display_struct:
 - id: ca69156a-eb44-5102-934d-57f19ef95bb7
   barcode: '36105125807763'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68126,7 +67663,6 @@ item_display_struct:
 - id: caa6da92-d301-52d2-a9f7-18fb6ab1923f
   barcode: '36105116537007'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68146,7 +67682,6 @@ item_display_struct:
 - id: caaa704e-13af-5bd2-8297-c278d5da7022
   barcode: '36105116537197'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68166,7 +67701,6 @@ item_display_struct:
 - id: cb635c57-3f85-5566-aa45-7ee00c0c6099
   barcode: '36105125864046'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68186,7 +67720,6 @@ item_display_struct:
 - id: cb91fe4c-d132-589a-a73c-842ab5c25276
   barcode: '36105125864194'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68206,7 +67739,6 @@ item_display_struct:
 - id: cbc189e4-849a-5cfd-bd1d-f3f888c7b92b
   barcode: '36105116701397'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68226,7 +67758,6 @@ item_display_struct:
 - id: cce28887-e1da-5829-8588-e3ecaf7c4ee7
   barcode: '36105116701611'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68246,7 +67777,6 @@ item_display_struct:
 - id: cce33a89-1c0c-5e8b-a166-ecfb3205caa4
   barcode: '36105116837126'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68266,7 +67796,6 @@ item_display_struct:
 - id: cd7c2f13-4c36-5b71-8e7b-601f91ac56c4
   barcode: '36105116505509'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68286,7 +67815,6 @@ item_display_struct:
 - id: d0caa742-d856-5017-929c-8d78efe6d1ee
   barcode: '36105116536298'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68306,7 +67834,6 @@ item_display_struct:
 - id: d125adc4-b2ea-559b-b7b1-9fecbcbf47d1
   barcode: '36105116536363'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68326,7 +67853,6 @@ item_display_struct:
 - id: d1d34320-ae63-5d2b-8f1a-26d35b166eb1
   barcode: '36105125864061'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68346,7 +67872,6 @@ item_display_struct:
 - id: d1d6615f-a78c-52e3-b7e7-dae4cfe70b14
   barcode: '36105116720223'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68366,7 +67891,6 @@ item_display_struct:
 - id: d2076342-ac85-5e4f-801a-26f0085f4e1d
   barcode: '36105116537213'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68386,7 +67910,6 @@ item_display_struct:
 - id: d24f2965-cce2-5d65-a96d-983032e1a506
   barcode: '36105116536306'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68406,7 +67929,6 @@ item_display_struct:
 - id: d3b468d3-9fa0-5077-ad65-f0a4a1861054
   barcode: '36105116648549'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68426,7 +67948,6 @@ item_display_struct:
 - id: d3ced649-3fd2-572d-98d3-a0268e4f8393
   barcode: '36105116648366'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68446,7 +67967,6 @@ item_display_struct:
 - id: d3eaac3b-bd3c-557a-9e70-aa177ea8f805
   barcode: '36105116648515'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68466,7 +67986,6 @@ item_display_struct:
 - id: d40695cd-135f-5dac-869e-319caa7c1f86
   barcode: '36105116646444'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68486,7 +68005,6 @@ item_display_struct:
 - id: d431ae70-90cd-5029-8876-e21c9d0ba426
   barcode: '36105116852695'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68506,7 +68024,6 @@ item_display_struct:
 - id: d4761984-a69c-5317-88c4-dd3bb293527c
   barcode: '36105116701702'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68526,7 +68043,6 @@ item_display_struct:
 - id: d4a33785-f714-5610-9b91-74d053a89c51
   barcode: '36105116536371'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68546,7 +68062,6 @@ item_display_struct:
 - id: d6a8087c-fe3c-52d5-8cf8-d559e6285785
   barcode: '36105116648812'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68566,7 +68081,6 @@ item_display_struct:
 - id: d71faf02-501d-5765-8ba1-156c40be1f25
   barcode: '36105116539938'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68586,7 +68100,6 @@ item_display_struct:
 - id: d7ed264c-c084-5aed-82b0-200b4217c213
   barcode: '36105116194130'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68606,7 +68119,6 @@ item_display_struct:
 - id: d83a70cd-2638-5742-8f31-21e6bcd67309
   barcode: '36105116648580'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68626,7 +68138,6 @@ item_display_struct:
 - id: d84d3cc3-7653-5847-a0ff-14fde14cb1ea
   barcode: '36105116701421'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68646,7 +68157,6 @@ item_display_struct:
 - id: d8629d1d-b95f-5cc6-9a7e-fb575c9a679c
   barcode: '36105125782354'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68666,7 +68176,6 @@ item_display_struct:
 - id: d8d93673-a248-5e5c-af9c-5eb40d3a1431
   barcode: '36105116611976'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68686,7 +68195,6 @@ item_display_struct:
 - id: da1e1aa7-4a7c-5e19-885e-4daad487deed
   barcode: '36105116837035'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68706,7 +68214,6 @@ item_display_struct:
 - id: da41e4a3-6125-5c8f-91a0-5ccd92db5a8f
   barcode: '36105116628343'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68726,7 +68233,6 @@ item_display_struct:
 - id: dadd2eaa-67af-5444-b9d4-9a6204149402
   barcode: '36105116837027'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68746,7 +68252,6 @@ item_display_struct:
 - id: dc06ab7a-36ea-5c66-8c94-1920d8b78a06
   barcode: '36105116538484'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68766,7 +68271,6 @@ item_display_struct:
 - id: dc1aa5a8-a905-504f-aae5-f4083d6642a5
   barcode: '36105116542015'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68786,7 +68290,6 @@ item_display_struct:
 - id: dc53487a-53c8-5ed7-a6f9-8815138bc32e
   barcode: '36105116536280'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68806,7 +68309,6 @@ item_display_struct:
 - id: dc80d4e3-ed78-53b0-8b55-4326821ebbc5
   barcode: '36105116852604'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68826,7 +68328,6 @@ item_display_struct:
 - id: dd19da0e-2751-50fe-aa85-288e9f8a9ca7
   barcode: '36105116648572'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68846,7 +68347,6 @@ item_display_struct:
 - id: dd35715f-3b28-5edd-bf81-b4ec82f985af
   barcode: '36105116648762'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68866,7 +68366,6 @@ item_display_struct:
 - id: ddf252f9-0f88-5206-8358-45af1fe7976a
   barcode: '36105116648465'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68886,7 +68385,6 @@ item_display_struct:
 - id: ddf87508-ba14-5f04-b0eb-2623a96f7779
   barcode: '36105116648317'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68906,7 +68404,6 @@ item_display_struct:
 - id: ddfe250b-1cf9-575a-8bd9-e85559b5eee5
   barcode: '36105116540027'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68926,7 +68423,6 @@ item_display_struct:
 - id: de23e9a5-b8a1-5da4-b0de-8f5d05526e3c
   barcode: '36105116854311'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68946,7 +68442,6 @@ item_display_struct:
 - id: decb1156-1254-5921-b6cb-fa36471a924b
   barcode: '36105116193959'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68966,7 +68461,6 @@ item_display_struct:
 - id: ded223d9-ec49-5f09-be16-34c344d704aa
   barcode: '36105116837373'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -68986,7 +68480,6 @@ item_display_struct:
 - id: ded646ad-7209-5ba3-b625-4c94497b03d2
   barcode: '36105116648804'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69006,7 +68499,6 @@ item_display_struct:
 - id: dfc4a94d-8f5f-5fa4-883d-886f99770645
   barcode: '36105125807805'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69026,7 +68518,6 @@ item_display_struct:
 - id: e13199c1-01c2-5dac-a621-1ead19228325
   barcode: '36105116648903'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69046,7 +68537,6 @@ item_display_struct:
 - id: e1b8ab22-33cd-52c6-a528-3ac92a45c97a
   barcode: '36105116854337'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69066,7 +68556,6 @@ item_display_struct:
 - id: e1fd79e1-2ab3-5ecc-80a1-c8b2164cb233
   barcode: '36105116836912'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69086,7 +68575,6 @@ item_display_struct:
 - id: e22419c4-d8da-5f41-8185-df71f112ea61
   barcode: '36105116648895'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69106,7 +68594,6 @@ item_display_struct:
 - id: e2fa947a-942f-5d50-aea7-3875239b1d6c
   barcode: '36105116648564'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69126,7 +68613,6 @@ item_display_struct:
 - id: e3085249-7a68-5b05-b157-b4bf4565a920
   barcode: '36105116536330'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69146,7 +68632,6 @@ item_display_struct:
 - id: e32e03b6-f7d7-5a60-aefb-c936893bfadb
   barcode: '36105116837134'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69166,7 +68651,6 @@ item_display_struct:
 - id: e5767bc0-9766-596e-b926-7cea075bb86d
   barcode: '36105116837191'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69186,7 +68670,6 @@ item_display_struct:
 - id: e620db34-6268-5a7f-90dd-6af68d7b7e54
   barcode: '36105125864087'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69206,7 +68689,6 @@ item_display_struct:
 - id: e64d746a-c17f-53b3-b0cd-c8bd22c4a6e3
   barcode: '36105116611968'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69226,7 +68708,6 @@ item_display_struct:
 - id: e6901036-1414-5564-8e51-b58fd70f2c8a
   barcode: '36105116540811'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69246,7 +68727,6 @@ item_display_struct:
 - id: e6bfaefa-475d-56e5-aa7e-3ba3b3727222
   barcode: '36105116539920'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69266,7 +68746,6 @@ item_display_struct:
 - id: e6d75713-0f0d-5660-a8e0-8b62e6b7ca2f
   barcode: '36105116720124'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69286,7 +68765,6 @@ item_display_struct:
 - id: e7a00ab3-4f4d-58e8-b53f-f845dbf5a6b6
   barcode: '36105116536462'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69306,7 +68784,6 @@ item_display_struct:
 - id: e7c8f9b3-1bd2-5e52-b84a-4d0885faaa94
   barcode: '36105116537080'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69326,7 +68803,6 @@ item_display_struct:
 - id: e81ad694-4767-5b3d-8f56-d333748a8772
   barcode: '36105116540597'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69346,7 +68822,6 @@ item_display_struct:
 - id: e916daa2-0f72-5c84-8ac5-4c1354f73669
   barcode: '36105116701538'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69366,7 +68841,6 @@ item_display_struct:
 - id: e95627b1-8c47-51fe-a473-8c4489e597fd
   barcode: '36105116193926'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69386,7 +68860,6 @@ item_display_struct:
 - id: eafb18f4-0d95-564b-9a5c-38a4e74e86f7
   barcode: '36105116537163'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69406,7 +68879,6 @@ item_display_struct:
 - id: eb0514ba-a09e-5dff-944a-eb5294761f8c
   barcode: '36105116648135'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69426,7 +68898,6 @@ item_display_struct:
 - id: eceaf7f3-5bec-59f7-bc02-0069ef4f8775
   barcode: '36105116490058'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69446,7 +68917,6 @@ item_display_struct:
 - id: ee44b25a-108d-589c-adca-f431cd2b7982
   barcode: '36105116836896'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69466,7 +68936,6 @@ item_display_struct:
 - id: ee71f556-940e-528e-acc2-8264bf978b7b
   barcode: '36105116720181'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69486,7 +68955,6 @@ item_display_struct:
 - id: eed7c624-05f0-5f1c-b1b7-c785552ed81b
   barcode: '36105116537056'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69506,7 +68974,6 @@ item_display_struct:
 - id: ef57aa21-5311-5465-93ae-275a805d4f7f
   barcode: '36105116194007'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69526,7 +68993,6 @@ item_display_struct:
 - id: ef9ba67b-16c6-54e3-a7a0-aefe18d1ada5
   barcode: '36105125864178'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69546,7 +69012,6 @@ item_display_struct:
 - id: efb8d366-12cd-5348-a093-554b8240e506
   barcode: '36105116720140'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69566,7 +69031,6 @@ item_display_struct:
 - id: efd95203-c70a-523e-ac48-c4dc5159c87d
   barcode: '36105116701678'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69586,7 +69050,6 @@ item_display_struct:
 - id: f044723d-5791-5451-aa17-63a70bdb53b8
   barcode: '36105116194049'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69606,7 +69069,6 @@ item_display_struct:
 - id: f059c612-1032-56b8-9be9-f678a6320238
   barcode: '36105125864210'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69626,7 +69088,6 @@ item_display_struct:
 - id: f066f913-b47d-5e2a-8ec3-db42f84f19ba
   barcode: '36105116707956'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69646,7 +69107,6 @@ item_display_struct:
 - id: f0a3751c-3a64-53de-af26-4e9fca1066d4
   barcode: '36105116536975'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69666,7 +69126,6 @@ item_display_struct:
 - id: f0ced2f0-2e9d-5efa-bf60-ef1766816a3d
   barcode: '36105116708095'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69686,7 +69145,6 @@ item_display_struct:
 - id: f0fa525a-8002-5345-b56f-99f2c2b2cf91
   barcode: '36105116505475'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69706,7 +69164,6 @@ item_display_struct:
 - id: f1221e8e-2d02-52e5-94c6-e1ca1d6e4ed4
   barcode: '36105125807847'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69726,7 +69183,6 @@ item_display_struct:
 - id: f1fec4e5-52a1-5a1a-93c9-8a652b970279
   barcode: '36105116194114'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69746,7 +69202,6 @@ item_display_struct:
 - id: f273e123-3202-5af7-b9d5-a1608d94863a
   barcode: '36105116648770'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69766,7 +69221,6 @@ item_display_struct:
 - id: f355bef7-c438-5a19-8ea3-ff7142b840c0
   barcode: '36105116852711'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69786,7 +69240,6 @@ item_display_struct:
 - id: f3d02ece-bc82-55b6-a86e-9d38f95f3b50
   barcode: '36105116836961'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69806,7 +69259,6 @@ item_display_struct:
 - id: f3ebd5b8-aec4-5d6f-beb0-3e166c0bbe75
   barcode: '36105116628418'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69826,7 +69278,6 @@ item_display_struct:
 - id: f3fbfd35-0957-5a1a-8d2f-25deacb884dc
   barcode: '36105116837142'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69846,7 +69297,6 @@ item_display_struct:
 - id: f403e56c-3fb5-5531-bdc7-a1773e6ccb5b
   barcode: '36105116537064'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69866,7 +69316,6 @@ item_display_struct:
 - id: f48aec9c-9c03-5924-a336-4cd403dad3f0
   barcode: '36105116537130'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69886,7 +69335,6 @@ item_display_struct:
 - id: f5b98341-363e-5a69-9eb6-d5cf8ffa4565
   barcode: '36105116648978'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69906,7 +69354,6 @@ item_display_struct:
 - id: f5e88f4b-59dc-59c7-a36e-05aa3c2a3323
   barcode: '36105116837381'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69926,7 +69373,6 @@ item_display_struct:
 - id: f678b357-3170-542e-ab86-7030bc6daa94
   barcode: '36105116648614'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69946,7 +69392,6 @@ item_display_struct:
 - id: f6c67e65-9008-5ea9-a560-ee5a76bc7f60
   barcode: '36105116835633'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69966,7 +69411,6 @@ item_display_struct:
 - id: f7966128-4d3f-5610-8651-d4d0ca582f85
   barcode: '36105116836987'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -69986,7 +69430,6 @@ item_display_struct:
 - id: f7c3f2f2-30cb-56e1-af32-4fae76c6520e
   barcode: '36105116837183'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70006,7 +69449,6 @@ item_display_struct:
 - id: f7f139f0-6cfe-51da-a5b5-8e491412107e
   barcode: '36105116538435'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70026,7 +69468,6 @@ item_display_struct:
 - id: f8c21b0d-527f-58d4-a382-c56f401c531c
   barcode: '36105116835625'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70046,7 +69487,6 @@ item_display_struct:
 - id: f8ecc133-65aa-504c-9726-fe53dcd333e8
   barcode: '36105116540829'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70066,7 +69506,6 @@ item_display_struct:
 - id: f91ce52f-b64d-51d4-aed6-f2346b2e1792
   barcode: '36105116837274'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70086,7 +69525,6 @@ item_display_struct:
 - id: f92990c8-5b7e-54db-b473-2315dde4ba4e
   barcode: '36105116648754'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70106,7 +69544,6 @@ item_display_struct:
 - id: f9799e71-7061-5f2c-8fe8-7318b44a7277
   barcode: '36105125782388'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70126,7 +69563,6 @@ item_display_struct:
 - id: fac03c6a-5bad-5281-b882-df16004979f1
   barcode: '36105116538450'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70146,7 +69582,6 @@ item_display_struct:
 - id: fce161fc-438a-5513-84ac-e1ba393c4d8c
   barcode: '36105116836771'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70166,7 +69601,6 @@ item_display_struct:
 - id: fd7dfff3-ac02-58c9-a3c1-d1974f2d8d97
   barcode: '36105116536959'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70186,7 +69620,6 @@ item_display_struct:
 - id: fd9ef6f3-453b-5a2b-b834-7ca6a43b9068
   barcode: '36105116842035'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70206,7 +69639,6 @@ item_display_struct:
 - id: fdb7fe82-999f-5667-8d48-1d0cdbe6221b
   barcode: '36105116837159'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70226,7 +69658,6 @@ item_display_struct:
 - id: fef3c2a8-2873-55a4-a937-fc15e0fac701
   barcode: '36105116648184'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70246,7 +69677,6 @@ item_display_struct:
 - id: fef97e4c-8bc0-56cb-9e8d-644463625069
   barcode: '36105116648713'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70266,7 +69696,6 @@ item_display_struct:
 - id: ff1ab760-8361-5436-8f9c-a1af3e0c4398
   barcode: '36105116536421'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70286,7 +69715,6 @@ item_display_struct:
 - id: ffc0159b-a699-5aa4-8a6d-0070ae910ec8
   barcode: '36105116838371'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70306,7 +69734,6 @@ item_display_struct:
 - id: 5faa12cf-fa23-4bf0-919c-b791fa3df20f
   barcode: '36105116465035'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70326,7 +69753,6 @@ item_display_struct:
 - id: afd4d7ba-52ab-492e-9079-cc3c0dab567b
   barcode: '36105116465068'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70346,7 +69772,6 @@ item_display_struct:
 - id: '00497b3a-18e7-4328-8d83-347c7f05b92e'
   barcode: '36105116465183'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70366,7 +69791,6 @@ item_display_struct:
 - id: '00904baa-a0fc-4d21-88c5-9de8b276fc26'
   barcode: '36105116465464'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70386,7 +69810,6 @@ item_display_struct:
 - id: 02db3a6d-63a1-4fd6-b646-6bb083b3650d
   barcode: '36105116465324'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70406,7 +69829,6 @@ item_display_struct:
 - id: 0302c475-816f-453b-86a7-8a7b52716304
   barcode: '36105116464764'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70426,7 +69848,6 @@ item_display_struct:
 - id: 0315133f-a5a4-4b04-a1ce-9296382c666b
   barcode: '36105116463436'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70446,7 +69867,6 @@ item_display_struct:
 - id: 04536214-fcc5-43bc-b784-412017356245
   barcode: '36105116465027'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70466,7 +69886,6 @@ item_display_struct:
 - id: '049b650c-c121-4784-992c-9f2823caa215'
   barcode: '36105116464517'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70486,7 +69905,6 @@ item_display_struct:
 - id: '079f498f-3293-4f9a-8002-7ff81ac85f54'
   barcode: '36105116463378'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70506,7 +69924,6 @@ item_display_struct:
 - id: '08a68a44-ba9c-4be2-8932-d24161706f9e'
   barcode: '36105238612373'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -70526,7 +69943,6 @@ item_display_struct:
 - id: '094b41b9-a243-4581-8ff8-b9761c6ddcd0'
   barcode: '36105116464988'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70546,7 +69962,6 @@ item_display_struct:
 - id: 0ae0edea-24d9-4eb9-a5a6-07bd7addfd51
   barcode: '36105116463063'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70566,7 +69981,6 @@ item_display_struct:
 - id: 0af11ce2-00d3-51d3-aa03-901b33bda50c
   barcode: '36105238612340'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -70586,7 +70000,6 @@ item_display_struct:
 - id: 0bcfb393-0570-4e4c-94d9-02c67a5cf996
   barcode: '36105116463097'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70606,7 +70019,6 @@ item_display_struct:
 - id: 0ca1ecec-c4c1-46b8-aeac-87e84d9f31be
   barcode: '36105116464863'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70626,7 +70038,6 @@ item_display_struct:
 - id: 0ce2c803-c69a-4e42-9bbf-28a0f71f4284
   barcode: '36105238612357'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -70646,7 +70057,6 @@ item_display_struct:
 - id: 0d4b5dd6-114d-4ff1-b26a-3a2be1929b40
   barcode: '36105116464384'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70666,7 +70076,6 @@ item_display_struct:
 - id: 0e17934a-c593-40b3-8dd4-55f73b401066
   barcode: '36105116464269'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70686,7 +70095,6 @@ item_display_struct:
 - id: 0e730f60-d0c4-5fb9-b134-69a4aff3da28
   barcode: '36105116814992'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70706,7 +70114,6 @@ item_display_struct:
 - id: 125aba30-c75c-4c88-a99e-73a8cfaf4805
   barcode: '36105116464145'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70726,7 +70133,6 @@ item_display_struct:
 - id: 13e9101a-11b1-4ee2-ac91-4f8303de8831
   barcode: '36105116464392'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70746,7 +70152,6 @@ item_display_struct:
 - id: 151c1659-1cd7-4190-b73f-44ac3aff2181
   barcode: '36105116465175'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70766,7 +70171,6 @@ item_display_struct:
 - id: 15de80f4-e1dd-4c8d-bbfd-929e49cbd2e1
   barcode: '36105116464194'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70786,7 +70190,6 @@ item_display_struct:
 - id: 162d04e5-870d-421a-ba8e-23baea2f36a4
   barcode: '36105116465423'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70806,7 +70209,6 @@ item_display_struct:
 - id: 1841c540-e56f-4929-b3b1-ba946ca75419
   barcode: '36105116465449'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70826,7 +70228,6 @@ item_display_struct:
 - id: 18e31ab5-3d64-4f2d-8a32-06e2a86e1774
   barcode: '36105116464715'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70846,7 +70247,6 @@ item_display_struct:
 - id: 19aad2d5-d956-4dac-ac35-43d871923f48
   barcode: '36105116465126'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70866,7 +70266,6 @@ item_display_struct:
 - id: 1b36cd13-8d12-4b3c-ad00-fec2c9ff772a
   barcode: '36105116464103'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70886,7 +70285,6 @@ item_display_struct:
 - id: 1bc23c33-5830-4f09-9c41-258e09718bf7
   barcode: '36105116465316'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70906,7 +70304,6 @@ item_display_struct:
 - id: 1cf9c207-435c-49bc-a3e3-d7083f6e0d54
   barcode: '36105116465290'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70926,7 +70323,6 @@ item_display_struct:
 - id: 1d94e54e-b7ae-4c8e-a2a7-388cf46acb1b
   barcode: '36105238612381'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -70946,7 +70342,6 @@ item_display_struct:
 - id: 1e98e97b-0fb2-4616-994e-79216d561c1f
   barcode: '36105116464152'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70966,7 +70361,6 @@ item_display_struct:
 - id: 2134223f-6dcd-4a79-982e-7511324770e0
   barcode: '36105116464160'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -70986,7 +70380,6 @@ item_display_struct:
 - id: 234eedab-13c9-4be9-8309-004772d137dd
   barcode: '36105116463204'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71006,7 +70399,6 @@ item_display_struct:
 - id: 24d0038f-1039-4aa6-a99e-9cd25d579579
   barcode: '36105116464731'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71026,7 +70418,6 @@ item_display_struct:
 - id: 26073a06-d59e-4889-ad1a-51e4de9d22c6
   barcode: '36105116464624'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71046,7 +70437,6 @@ item_display_struct:
 - id: 26b59680-85bd-438c-aa70-6c77c8be2f00
   barcode: '36105116464707'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71066,7 +70456,6 @@ item_display_struct:
 - id: 277d1a6a-ac12-45fd-a55d-a1c4640782c5
   barcode: '36105116464228'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71086,7 +70475,6 @@ item_display_struct:
 - id: 2b93bd01-625c-447e-aaf6-836a00b8655a
   barcode: '36105116463295'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71106,7 +70494,6 @@ item_display_struct:
 - id: 2bd87f4a-5a9c-4944-bb37-76a084abd06b
   barcode: '36105116465381'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71126,7 +70513,6 @@ item_display_struct:
 - id: 302e8897-6063-45da-ba18-6f80517d788d
   barcode: '36105116463113'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71146,7 +70532,6 @@ item_display_struct:
 - id: 305360b1-cb22-423c-8796-a2355013159b
   barcode: '36105116464806'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71166,7 +70551,6 @@ item_display_struct:
 - id: 340a85b6-1f0d-4311-86dd-dc7e054953ea
   barcode: '36105116465407'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71186,7 +70570,6 @@ item_display_struct:
 - id: 34d56c32-c38a-44c2-880d-9c5b55f9cfdb
   barcode: '36105238612365'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71206,7 +70589,6 @@ item_display_struct:
 - id: 352d40ed-5dd2-4d5a-bb3d-b07d847c64a6
   barcode: '36105116464665'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71226,7 +70608,6 @@ item_display_struct:
 - id: 36993c2b-3c46-419a-b7e9-fbe704858e1d
   barcode: '36105116464327'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71246,7 +70627,6 @@ item_display_struct:
 - id: 36a65f1b-c47c-416a-857e-e84bcfff912b
   barcode: '36105116465167'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71266,7 +70646,6 @@ item_display_struct:
 - id: 3724868d-028a-43cc-854c-2140a1859c9a
   barcode: '36105116463303'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71286,7 +70665,6 @@ item_display_struct:
 - id: 38a9cdd5-d3c2-4df1-a467-9dfcc731f6ec
   barcode: '36105238612548'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71306,7 +70684,6 @@ item_display_struct:
 - id: 38bd5fae-9ea3-51e8-9d6d-c4fdcff336b3
   barcode: '36105116505426'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71326,7 +70703,6 @@ item_display_struct:
 - id: 3a894c3b-8a28-4641-a486-a19ca7b83fa3
   barcode: '36105116464749'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71346,7 +70722,6 @@ item_display_struct:
 - id: 3c93f4aa-d611-435f-917a-155ae1e97dff
   barcode: '36105116465043'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71366,7 +70741,6 @@ item_display_struct:
 - id: 3ce3ecd7-db0c-4293-834e-c67aa5d7f142
   barcode: '36105116465431'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71386,7 +70760,6 @@ item_display_struct:
 - id: 3d9e73f5-96dc-4773-9bba-4998af7a0f1e
   barcode: '36105116464277'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71406,7 +70779,6 @@ item_display_struct:
 - id: 3eb92ecd-5afd-4de9-9e00-815072011f4a
   barcode: '36105116464947'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71426,7 +70798,6 @@ item_display_struct:
 - id: 3f162473-f39b-58d4-bf94-70a298166fe9
   barcode: '36105116505590'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71446,7 +70817,6 @@ item_display_struct:
 - id: 41b7d267-e98a-40a1-9c0e-e4c4f459ea64
   barcode: '36105116464186'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71466,7 +70836,6 @@ item_display_struct:
 - id: 43c46343-aa82-49ca-b61f-ebf16e51e3c1
   barcode: '36105116463105'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71486,7 +70855,6 @@ item_display_struct:
 - id: 45082318-a0a2-59bc-9b84-4627ea845633
   barcode: '36105116830931'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71506,7 +70874,6 @@ item_display_struct:
 - id: 459d637a-5fba-456a-96a5-aa33bbb2056d
   barcode: '36105116463311'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71526,7 +70893,6 @@ item_display_struct:
 - id: 45bae667-4c18-4380-b437-33ceff4536cc
   barcode: '36105116464426'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71546,7 +70912,6 @@ item_display_struct:
 - id: 46d58121-524e-478d-865d-703cd3295619
   barcode: '36105116464343'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71566,7 +70931,6 @@ item_display_struct:
 - id: 47083d22-0229-4308-9de4-70458645a6b9
   barcode: '36105116464848'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71586,7 +70950,6 @@ item_display_struct:
 - id: 470ff422-5f37-58cc-a797-a270f99a4e07
   barcode: '36105238612324'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71606,7 +70969,6 @@ item_display_struct:
 - id: 48534d63-78ce-4494-a1c5-f41a7099b713
   barcode: '36105116464400'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71626,7 +70988,6 @@ item_display_struct:
 - id: 4898a780-9193-47ac-b47a-bfcb528fd42f
   barcode: '36105116465100'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71646,7 +71007,6 @@ item_display_struct:
 - id: 4a2ac4f3-d165-5b4c-bf4d-52dca308fd28
   barcode: '36105116842415'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71666,7 +71026,6 @@ item_display_struct:
 - id: 4b0cfe74-8f31-4067-b0ca-178656b66c8f
   barcode: '36105116464996'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71686,7 +71045,6 @@ item_display_struct:
 - id: 4b390be0-3824-5c30-a382-5809cfaec85d
   barcode: '36105238612332'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71706,7 +71064,6 @@ item_display_struct:
 - id: 4b6aa14d-e70b-5aef-96fb-0e42b344eeb7
   barcode: '36105116505608'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71726,7 +71083,6 @@ item_display_struct:
 - id: 4cc6959f-b58c-5d56-a1b1-fad2f1f774fa
   barcode: '36105116505582'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71746,7 +71102,6 @@ item_display_struct:
 - id: 4f6cfdf6-3f99-4808-bd0e-d4bfbedb6857
   barcode: '36105116464541'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71766,7 +71121,6 @@ item_display_struct:
 - id: 507c91be-3dfc-4855-987c-d07280b0cb7f
   barcode: '36105116463121'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71786,7 +71140,6 @@ item_display_struct:
 - id: 51493c94-5aee-4d0c-bf93-7f7861b8f812
   barcode: '36105116464491'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71806,7 +71159,6 @@ item_display_struct:
 - id: 519ffc03-2fe2-4b4b-85bb-3a7ae409a79f
   barcode: '36105116464889'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71826,7 +71178,6 @@ item_display_struct:
 - id: 53af0c35-e277-572f-9d71-2ba53ceb4329
   barcode: '36105116505418'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -71846,7 +71197,6 @@ item_display_struct:
 - id: 5400c60a-e36e-5ed7-af6c-f52227be1a77
   barcode: '36105116830949'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71866,7 +71216,6 @@ item_display_struct:
 - id: 54ae24de-e828-47e1-8f0f-a4aa0a21c4c0
   barcode: '36105116464475'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71886,7 +71235,6 @@ item_display_struct:
 - id: 5516ab68-f1c2-42ad-b42d-88708a169403
   barcode: '36105116465415'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71906,7 +71254,6 @@ item_display_struct:
 - id: 55225e40-1de5-40b2-b290-20ea0317e7b3
   barcode: '36105116464616'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71926,7 +71273,6 @@ item_display_struct:
 - id: 56d5c82d-126d-4270-bfc9-ae68c0011137
   barcode: '36105116463428'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71946,7 +71292,6 @@ item_display_struct:
 - id: 57811066-0153-437f-942b-e4febb1ae491
   barcode: '36105116465142'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71966,7 +71311,6 @@ item_display_struct:
 - id: 57ab0b53-239c-45f1-a35c-faf04287ac2d
   barcode: '36105116464376'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -71986,7 +71330,6 @@ item_display_struct:
 - id: 58b54c43-1ebf-5cd4-a973-053ea332a016
   barcode: '36105116505616'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72006,7 +71349,6 @@ item_display_struct:
 - id: 58d10001-01b1-4823-93c6-2134fc9061a5
   barcode: '36105116464681'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72026,7 +71368,6 @@ item_display_struct:
 - id: 5a0ac856-e555-4f82-b25b-ae45495796cd
   barcode: '36105116465365'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72046,7 +71387,6 @@ item_display_struct:
 - id: 5ad99c6b-8b94-4efb-9d5f-74ad6bcb4d6b
   barcode: '36105116464871'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72066,7 +71406,6 @@ item_display_struct:
 - id: 5bad7f91-7b93-4259-903a-507aa63340a5
   barcode: '36105116464525'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72086,7 +71425,6 @@ item_display_struct:
 - id: 5cbeb1bb-3cd0-4bc9-b671-85e08d126a27
   barcode: '36105116464632'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72106,7 +71444,6 @@ item_display_struct:
 - id: 5d87643c-2ab0-46a6-9fed-4b33899ae125
   barcode: '36105116464822'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72126,7 +71463,6 @@ item_display_struct:
 - id: 6013f7b7-414d-4188-937f-4a54ce642bfe
   barcode: '36105116464459'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72146,7 +71482,6 @@ item_display_struct:
 - id: 67259250-3ad4-42da-9a9d-449b0c39aafa
   barcode: '36105116463402'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72166,7 +71501,6 @@ item_display_struct:
 - id: 68bc5523-8aa8-4e48-bdf8-4c765ba14bf3
   barcode: '36105116465050'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72186,7 +71520,6 @@ item_display_struct:
 - id: 6bd8bd62-b1f2-4f71-86f6-14641d5316a8
   barcode: '36105116465373'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72206,7 +71539,6 @@ item_display_struct:
 - id: 6d19a694-4f77-4d8d-90f6-f05596a98af1
   barcode: '36105116465001'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72226,7 +71558,6 @@ item_display_struct:
 - id: 6dac65cc-943a-5e2e-8a3c-faac7f755234
   barcode: '36105116505624'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72246,7 +71577,6 @@ item_display_struct:
 - id: 6f07ac9a-986d-4cb7-9f22-17b0579271f9
   barcode: '36105116464756'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72266,7 +71596,6 @@ item_display_struct:
 - id: 6f66a2d6-d343-4c62-b931-f8ad1a2a35dc
   barcode: '36105116464285'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72286,7 +71615,6 @@ item_display_struct:
 - id: 7035f5cf-c88c-4779-9476-82a97c2cfb0f
   barcode: '36105116464566'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72306,7 +71634,6 @@ item_display_struct:
 - id: 705ab99c-8195-5390-8866-ac78d3057588
   barcode: '36105116831012'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72326,7 +71653,6 @@ item_display_struct:
 - id: 7093fb15-55ce-4f26-a9b9-36be01febef3
   barcode: '36105116463154'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72346,7 +71672,6 @@ item_display_struct:
 - id: 744c5be8-ce7d-5528-b62b-60821d5d5f70
   barcode: '36105116842381'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -72366,7 +71691,6 @@ item_display_struct:
 - id: 7735410b-c28b-4256-bfb9-d8eb2848c4fa
   barcode: '36105116464558'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72386,7 +71710,6 @@ item_display_struct:
 - id: 78a28e51-2417-4bd1-a146-6f19e1ada0db
   barcode: '36105116465258'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72406,7 +71729,6 @@ item_display_struct:
 - id: 79d6c2cc-9f33-41b3-8c87-8f8a90b672e9
   barcode: '36105116464335'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72426,7 +71748,6 @@ item_display_struct:
 - id: 7a338cb8-a30f-41e2-a28d-5e1d32d4a759
   barcode: '36105116463220'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72446,7 +71767,6 @@ item_display_struct:
 - id: 7a37cf09-3ecc-4111-b920-1d6ee2640c63
   barcode: '36105116463188'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72466,7 +71786,6 @@ item_display_struct:
 - id: 7aa1c9a0-e4cf-476a-9c6b-ac592fda673a
   barcode: '36105116464962'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72486,7 +71805,6 @@ item_display_struct:
 - id: 7b8d8fc6-4677-55d2-806a-4def5cd41280
   barcode: '36105116505632'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72506,7 +71824,6 @@ item_display_struct:
 - id: 7bf91fc3-1fd3-4736-a457-c25a374af605
   barcode: '36105116464178'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72526,7 +71843,6 @@ item_display_struct:
 - id: 7e30443b-2566-4250-ab6d-f522a4d25e76
   barcode: '36105116465308'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72546,7 +71862,6 @@ item_display_struct:
 - id: 7e522e11-ec1a-5a55-83c0-3d8023d4777d
   barcode: '36105116842407'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -72566,7 +71881,6 @@ item_display_struct:
 - id: 7e875d62-86fe-43b3-b3cc-288880b5f79a
   barcode: '36105116464913'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72586,7 +71900,6 @@ item_display_struct:
 - id: 7f024133-7124-54d7-a31c-1e8a647507fc
   barcode: '36105116842449'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -72606,7 +71919,6 @@ item_display_struct:
 - id: 7ff4965a-5133-4520-9d57-19e9ff0b4f0b
   barcode: '36105116464582'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72626,7 +71938,6 @@ item_display_struct:
 - id: 83c17fdf-f295-4be3-b14c-f6ccc968536f
   barcode: '36105116464798'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72646,7 +71957,6 @@ item_display_struct:
 - id: 85ce7a56-143d-4d03-8e22-8aeb7a952d23
   barcode: '36105116463089'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72666,7 +71976,6 @@ item_display_struct:
 - id: 85ff053f-683a-402b-9901-5a5ca5fa08f4
   barcode: '36105116465241'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72686,7 +71995,6 @@ item_display_struct:
 - id: 860b620b-1d4a-40c6-a3ef-037803cfd5d2
   barcode: '36105116463055'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72706,7 +72014,6 @@ item_display_struct:
 - id: 872f6bb4-5a0f-42fe-b428-93c2b594f5fc
   barcode: '36105116465019'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72726,7 +72033,6 @@ item_display_struct:
 - id: 87763063-f73f-426e-a32e-cedcbe696ed0
   barcode: '36105116464137'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72746,7 +72052,6 @@ item_display_struct:
 - id: 886ca1b3-2e83-49eb-a6f3-0e2a5384cb71
   barcode: '36105116464251'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72766,7 +72071,6 @@ item_display_struct:
 - id: 88fcb61d-36ef-4839-8952-ef61cf003c61
   barcode: '36105116465472'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72786,7 +72090,6 @@ item_display_struct:
 - id: 8be49ce1-a861-4fe7-afa6-81ab2735f428
   barcode: '36105116464905'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72806,7 +72109,6 @@ item_display_struct:
 - id: 8d5a661d-ccc0-400b-ad99-aad769f1b6c5
   barcode: '36105116464509'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72826,7 +72128,6 @@ item_display_struct:
 - id: 8dfca556-e1a0-4c7a-b1d2-2ec6675521dc
   barcode: '36105116465191'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72846,7 +72147,6 @@ item_display_struct:
 - id: 8ec751dd-68b8-4d6a-bab1-3f3e59427ea6
   barcode: '36105116464673'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72866,7 +72166,6 @@ item_display_struct:
 - id: 8ed79db9-6b24-45dc-beca-970617fff8e6
   barcode: '36105116465209'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72886,7 +72185,6 @@ item_display_struct:
 - id: 8f5a43e9-a3a4-5969-ab2c-4030bc449594
   barcode: '36105116830915'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72906,7 +72204,6 @@ item_display_struct:
 - id: 8fb328be-8a4f-4f99-abc7-5184c44a7bb7
   barcode: '36105116463345'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72926,7 +72223,6 @@ item_display_struct:
 - id: 91b33295-947d-4704-a662-35de7f7ab35d
   barcode: '36105116465266'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72946,7 +72242,6 @@ item_display_struct:
 - id: 9215fea2-b73d-44ef-be37-8983555f1ec8
   barcode: '36105116464855'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -72966,7 +72261,6 @@ item_display_struct:
 - id: 93057c0f-aae7-541c-96f4-18c26818e352
   barcode: '36105116842399'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -72986,7 +72280,6 @@ item_display_struct:
 - id: 94d90e9c-c22e-4cc1-aa7c-0212d3c84d11
   barcode: '36105116463360'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73006,7 +72299,6 @@ item_display_struct:
 - id: 95f27eba-af72-4656-85ee-72c07fa07ac8
   barcode: '36105116465076'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73026,7 +72318,6 @@ item_display_struct:
 - id: 9613c204-8ab7-561a-aed2-74949e7a0ad0
   barcode: '36105116830923'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73046,7 +72337,6 @@ item_display_struct:
 - id: 96899d49-fd50-5a67-9a95-fdb5ec53a91a
   barcode: '36105116505459'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -73066,7 +72356,6 @@ item_display_struct:
 - id: 9704b8b4-8144-4c23-a213-04e69cf6186f
   barcode: '36105116463238'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73086,7 +72375,6 @@ item_display_struct:
 - id: 97c24ed5-69a8-4202-b43c-2e5a413a5eeb
   barcode: '36105116464434'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73106,7 +72394,6 @@ item_display_struct:
 - id: 99c19790-e75a-4eb3-8aac-89cb6dd2d4fc
   barcode: '36105116465159'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73126,7 +72413,6 @@ item_display_struct:
 - id: 99eb5a7f-b77d-4459-92ad-58c104c748d4
   barcode: '36105116463329'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73146,7 +72432,6 @@ item_display_struct:
 - id: 9a92c48e-1f8f-4b57-850a-21076ae1cb7a
   barcode: '36105116464368'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73166,7 +72451,6 @@ item_display_struct:
 - id: 9e2a41b4-23c2-4b15-9d34-6149f6ef569b
   barcode: '36105116465340'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73186,7 +72470,6 @@ item_display_struct:
 - id: 9e8d906f-14e9-4f68-abdd-ae3f68dd805c
   barcode: '36105116463246'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73206,7 +72489,6 @@ item_display_struct:
 - id: 9fec52a3-44a6-4a83-aa71-d655364d58fb
   barcode: '36105116463279'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73226,7 +72508,6 @@ item_display_struct:
 - id: a0d9a89e-fdfc-46c3-acaa-62e99a0261a6
   barcode: '36105116464418'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73246,7 +72527,6 @@ item_display_struct:
 - id: a0faae26-2ad2-4cc4-9e75-c37056bd7a43
   barcode: '36105116465282'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73266,7 +72546,6 @@ item_display_struct:
 - id: a4774981-de9e-4b68-aff2-e1bbdffba9e1
   barcode: '36105116464202'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73286,7 +72565,6 @@ item_display_struct:
 - id: a4ad73d3-7ea3-4015-a196-9c0ce08c12ac
   barcode: '36105116463212'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73306,7 +72584,6 @@ item_display_struct:
 - id: a546ab9c-7f0a-5e43-a205-5a4558a38baa
   barcode: '36105116505442'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -73326,7 +72603,6 @@ item_display_struct:
 - id: a5832b49-a379-44d8-ae7f-2f94e2cdf221
   barcode: '36105116464939'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73346,7 +72622,6 @@ item_display_struct:
 - id: a7fcd6db-61ee-4205-a700-524121278db8
   barcode: '36105116465274'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73366,7 +72641,6 @@ item_display_struct:
 - id: aa32080e-e83f-47d7-a4ab-6e59cfb23018
   barcode: '36105116464830'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73386,7 +72660,6 @@ item_display_struct:
 - id: aaed91df-a33b-4378-9697-95875acedc4d
   barcode: '36105116465480'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73406,7 +72679,6 @@ item_display_struct:
 - id: ab34ce60-7bb8-4ced-b898-bb8b95cd2c06
   barcode: '36105116463394'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73426,7 +72698,6 @@ item_display_struct:
 - id: ac58e8cc-29a1-48bc-ad75-c1bebe5b770f
   barcode: '36105116464590'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73446,7 +72717,6 @@ item_display_struct:
 - id: acb671bb-ff24-5234-8368-881f4d22826e
   barcode: '36105116831020'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73466,7 +72736,6 @@ item_display_struct:
 - id: b3208abe-ad4c-438e-a760-23c4f383a755
   barcode: '36105116465217'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73486,7 +72755,6 @@ item_display_struct:
 - id: b35f8714-fc21-5121-bb7f-848e04cc8128
   barcode: '36105116830907'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73506,7 +72774,6 @@ item_display_struct:
 - id: b3a6d0ca-a364-4116-9c51-62cde5a25aeb
   barcode: '36105116463139'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73526,7 +72793,6 @@ item_display_struct:
 - id: b3acb1b1-2d14-4af4-a65b-819ce36dc475
   barcode: '36105116464350'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73546,7 +72812,6 @@ item_display_struct:
 - id: b4b2a396-0578-481a-90d6-93a6edf43314
   barcode: '36105116463261'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73566,7 +72831,6 @@ item_display_struct:
 - id: b5fafbfd-aac0-442b-b873-90a0a3bde8a4
   barcode: '36105116463147'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73586,7 +72850,6 @@ item_display_struct:
 - id: b6c55f1a-6140-4d7e-a247-9c9c62e9a7ff
   barcode: '36105116465225'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73606,7 +72869,6 @@ item_display_struct:
 - id: b81e0d41-062e-4749-b1ff-664292b30149
   barcode: '36105116465357'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73626,7 +72888,6 @@ item_display_struct:
 - id: b9cd59dc-aa63-49da-98be-e9211b8349e6
   barcode: '36105116463162'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73646,7 +72907,6 @@ item_display_struct:
 - id: ba0f1b59-529f-4939-8975-1cc788077524
   barcode: '36105116464897'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73666,7 +72926,6 @@ item_display_struct:
 - id: bb316189-cacc-44fb-87d1-17555d120a16
   barcode: '36105116465498'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73686,7 +72945,6 @@ item_display_struct:
 - id: bf04fd1e-5343-4c40-82e0-6532e23a1955
   barcode: '36105116463444'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73706,7 +72964,6 @@ item_display_struct:
 - id: bf80034b-d2d1-429c-a5f7-15b687423cdc
   barcode: '36105116463071'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73726,7 +72983,6 @@ item_display_struct:
 - id: c2c43fbe-00ad-45d8-9f8a-64da66ad0f37
   barcode: '36105116464699'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73746,7 +73002,6 @@ item_display_struct:
 - id: c4144520-bcb9-4dcb-bc71-3ea4f00f1751
   barcode: '36105116464954'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73766,7 +73021,6 @@ item_display_struct:
 - id: c4cbef4b-7e0b-443d-a62a-24899dba9cfd
   barcode: '36105116463386'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73786,7 +73040,6 @@ item_display_struct:
 - id: c4e1359a-6691-4bcd-b115-fc3a23f312d7
   barcode: '36105116464483'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73806,7 +73059,6 @@ item_display_struct:
 - id: c59268df-a7fe-4c5e-9162-d83bce6b8546
   barcode: '36105116465092'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73826,7 +73078,6 @@ item_display_struct:
 - id: c64be6e9-db01-479c-b259-f0363f4e9a9b
   barcode: '36105116464723'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73846,7 +73097,6 @@ item_display_struct:
 - id: c6cbaa28-1e95-49a7-9009-86909ee89a45
   barcode: '36105116464467'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73866,7 +73116,6 @@ item_display_struct:
 - id: c9464243-b243-404a-abc6-6950fbccd361
   barcode: '36105116464319'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73886,7 +73135,6 @@ item_display_struct:
 - id: cf328e09-e396-41fc-948e-6e6add2f84c8
   barcode: '36105116464780'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73906,7 +73154,6 @@ item_display_struct:
 - id: d0d7ef8e-4550-57d3-88e7-c8a8b1bc5f18
   barcode: '36105116505467'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -73926,7 +73173,6 @@ item_display_struct:
 - id: d0f10bd2-0066-4e4a-9f47-53e47d55e47c
   barcode: '36105116463196'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73946,7 +73192,6 @@ item_display_struct:
 - id: d1bce7f8-cc2f-4c8e-a743-2eeef1326e39
   barcode: '36105116463253'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73966,7 +73211,6 @@ item_display_struct:
 - id: d2ca6f24-473a-41d6-bd53-f17a9457a3f1
   barcode: '36105116464657'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -73986,7 +73230,6 @@ item_display_struct:
 - id: d30e0e98-bde3-4307-b1a8-acdafe331792
   barcode: '36105116464111'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74006,7 +73249,6 @@ item_display_struct:
 - id: d42dc638-4dac-4e89-aa0c-ebac148a77ec
   barcode: '36105116464772'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74026,7 +73268,6 @@ item_display_struct:
 - id: d4b1bb89-9c31-49cb-9f02-3cb904916485
   barcode: '36105116464921'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74046,7 +73287,6 @@ item_display_struct:
 - id: d732f0f1-10fe-49f8-a42b-ec88525cccc7
   barcode: '36105116465118'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74066,7 +73306,6 @@ item_display_struct:
 - id: d763f407-3292-58f0-a86b-aec64e95110b
   barcode: '36105116505400'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -74086,7 +73325,6 @@ item_display_struct:
 - id: da76aea3-dc8d-43d8-a0df-1c42711d6b3c
   barcode: '36105116464608'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74106,7 +73344,6 @@ item_display_struct:
 - id: db9c044f-c66e-4744-8220-6afcb1479a40
   barcode: '36105116464301'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74126,7 +73363,6 @@ item_display_struct:
 - id: dc1b0e7f-f760-58c7-935e-dc6f781586c5
   barcode: '36105116505434'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -74146,7 +73382,6 @@ item_display_struct:
 - id: dd109925-a807-4420-b29c-e7a32667df0b
   barcode: '36105116463170'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74166,7 +73401,6 @@ item_display_struct:
 - id: de4426e2-2030-5ede-b3b7-d94a55811bdc
   barcode: '36105116842431'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -74186,7 +73420,6 @@ item_display_struct:
 - id: e2af2f5e-11cb-4001-ae63-11fd26dc3cee
   barcode: '36105116464814'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74206,7 +73439,6 @@ item_display_struct:
 - id: e4d4eb6f-4e4e-4d5e-8249-2c8b857dcd42
   barcode: '36105116463352'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74226,7 +73458,6 @@ item_display_struct:
 - id: e77117d2-4bbf-4105-931a-6aa13eac9e9f
   barcode: '36105116464236'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74246,7 +73477,6 @@ item_display_struct:
 - id: e85db933-283f-5706-a17c-3fecc9df6543
   barcode: '36105116831004'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74266,7 +73496,6 @@ item_display_struct:
 - id: e8881b13-7bca-4761-a3ef-68909a4c07d0
   barcode: '36105116465456'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74286,7 +73515,6 @@ item_display_struct:
 - id: e91ac7fc-307f-44ff-8859-389a26ff858a
   barcode: '36105116464970'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74306,7 +73534,6 @@ item_display_struct:
 - id: e936c633-616d-4cfb-b21d-9a9196d671d3
   barcode: '36105116465084'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74326,7 +73553,6 @@ item_display_struct:
 - id: e9d4436e-ae20-4c27-af81-89aa9f7721aa
   barcode: '36105116463337'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74346,7 +73572,6 @@ item_display_struct:
 - id: eb0f15ae-9875-517b-96e7-9f272743ddf8
   barcode: '36105116842373'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:
@@ -74366,7 +73591,6 @@ item_display_struct:
 - id: ec666998-e441-4b17-b959-4e249cf7f95a
   barcode: '36105116465399'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74386,7 +73610,6 @@ item_display_struct:
 - id: ef5accc9-803d-444f-b130-612e170830b1
   barcode: '36105116463410'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74406,7 +73629,6 @@ item_display_struct:
 - id: ef7c14d0-c559-4a77-875b-022aed117334
   barcode: '36105116463451'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74426,7 +73648,6 @@ item_display_struct:
 - id: f0dd5293-d777-4fcc-9d2b-5cbeebbba681
   barcode: '36105116463287'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74446,7 +73667,6 @@ item_display_struct:
 - id: f11d103b-198e-4d97-9d04-ab7853584ea1
   barcode: '36105116464293'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74466,7 +73686,6 @@ item_display_struct:
 - id: f16f63f5-3f0b-43f5-942d-31087fa23c12
   barcode: '36105116464244'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74486,7 +73705,6 @@ item_display_struct:
 - id: f2a9d628-324e-4ea7-9d89-f80d4fbdc9b0
   barcode: '36105116463469'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74506,7 +73724,6 @@ item_display_struct:
 - id: f31c13b4-afe3-436c-b3c4-286e8dffb559
   barcode: '36105116464129'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74526,7 +73743,6 @@ item_display_struct:
 - id: f550c357-7cb7-499f-b914-b2fe43846a81
   barcode: '36105116465332'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74546,7 +73762,6 @@ item_display_struct:
 - id: f5684d24-ad93-42c9-9950-4fb3112359c0
   barcode: '36105116464574'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74566,7 +73781,6 @@ item_display_struct:
 - id: f69ec8ac-4f2f-4a96-be74-772fb9282e23
   barcode: '36105116464533'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74586,7 +73800,6 @@ item_display_struct:
 - id: f7b46396-8e5f-462c-9f0f-60d5faf36a2b
   barcode: '36105116464210'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74606,7 +73819,6 @@ item_display_struct:
 - id: f90a96b3-7c80-4411-bb03-bd4a282180a0
   barcode: '36105116465134'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74626,7 +73838,6 @@ item_display_struct:
 - id: f92fe766-0bda-417e-8b7f-9945e6306675
   barcode: '36105116464640'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74646,7 +73857,6 @@ item_display_struct:
 - id: fd65e389-0028-454c-b786-899b6e3e2fbe
   barcode: '36105116465233'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-U-ARCHIVES
   current_location:
   type: archival
   note:
@@ -74666,7 +73876,6 @@ item_display_struct:
 - id: fe46c9ca-2544-514b-90a2-852a4796f0e3
   barcode: '36105116842423'
   library: SPEC-COLL
-  home_location: SPEC-SAL3-MSS
   current_location:
   type: archival
   note:

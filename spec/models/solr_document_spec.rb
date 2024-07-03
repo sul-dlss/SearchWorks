@@ -139,7 +139,7 @@ RSpec.describe SolrDocument do
 
     context 'when it is an eresource and has physical copies' do
       let(:item_display) {
-        { barcode: 123456, home_location: 'BUS', library: 'BUSINESS',
+        { barcode: 123456, effective_permanent_location_code: 'BUS', library: 'BUSINESS',
           permanent_location_code: 'BUS' }
       }
       let(:physical_location_doc) do

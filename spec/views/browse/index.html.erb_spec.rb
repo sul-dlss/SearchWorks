@@ -7,9 +7,9 @@ RSpec.describe "browse/index" do
     SolrDocument.new(
       id: 'doc-id',
       item_display_struct: [
-        { barcode: '123', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
+        { barcode: '123', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location_code', type: 'type',
           truncated_callnumber: 'truncated_callnumber', callnumber: 'callnumber123' },
-        { barcode: '321', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
+        { barcode: '321', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location_code', type: 'type',
           truncated_callnumber: 'truncated_callnumber', callnumber: 'callnumber321' }
       ]
     )

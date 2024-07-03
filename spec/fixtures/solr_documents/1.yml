@@ -23,7 +23,7 @@ item_display_struct:
   - id: a
     barcode: '36105217238315'
     library: EARTH-SCI
-    home_location: EAR-STACKS
+    effective_permanent_location_code: EAR-STACKS
     type: STKS
     lopped_callnumber: G70.212 .A426 2011:test
     callnumber: G70.212 .A426 2011:test

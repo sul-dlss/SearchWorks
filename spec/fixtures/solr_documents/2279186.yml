@@ -353,8 +353,7 @@ item_display_struct:
 - id: f947bd93-a1eb-5613-8745-1063f948c461
   barcode: '36105026515499'
   library: SAL3
-  home_location: SAL3-STACKS
-  current_location:
+  effective_permanent_location_code: SAL3-STACKS
   type:
   note:
   instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512

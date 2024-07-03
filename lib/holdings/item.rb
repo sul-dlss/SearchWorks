@@ -46,7 +46,7 @@ class Holdings
     # the temporary location if the location detail searchworksTreatTemporaryLocationAsPermanentLocation
     # is set to true.
     def effective_permanent_location_code
-      item_display[:effective_permanent_location_code] || item_display[:home_location]
+      item_display[:effective_permanent_location_code]
     end
 
     # NOTE: This may be nil
