@@ -30,12 +30,24 @@ if Settings.THROTTLE_TRAFFIC
   end
 
   # Throttle article searching more aggressively
-  Rack::Attack.throttle('articles/ip', limit: 10, period: 1.minute) do |req|
-    req.ip if req.path.start_with?('/articles')
+  Rack::Attack.throttle('articles/search/ip', limit: 30, period: 5.minutes) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    req.ip if route[:controller] == 'articles' && route[:action] == 'index'
   end
 
-  Rack::Attack.throttle('articles/ip', limit: 20, period: 5.minutes) do |req|
-    req.ip if req.path.start_with?('/articles')
+  Rack::Attack.throttle('articles/view/ip', limit: 300, period: 5.minutes) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    req.ip if route[:controller] == 'articles' && route[:action] == 'show'
   end
 
   # Throttle article searching based on badly behaved user agent (device farm)?
