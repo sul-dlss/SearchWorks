@@ -15,13 +15,26 @@
 # quickly. If so, enable the condition to exclude them from tracking.
 
 if Settings.THROTTLE_TRAFFIC
-  # Throttle catalog search and result requests by IP (60rpm)
-  Rack::Attack.throttle('req/ip', limit: 300, period: 5.minutes) do |req|
-    req.ip if req.path.start_with?('/catalog', '/view')
+  Rack::Attack.throttle('req/search/ip', limit: 10, period: 1.minute) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    req.ip if route[:controller] == 'catalog' && route[:action] == 'index'
   end
 
-  # Throttle article searching more aggressively to protect EDS API (12rpm)
-  Rack::Attack.throttle('articles/ip', limit: 60, period: 5.minutes) do |req|
+  Rack::Attack.throttle('req/view/ip', limit: 300, period: 5.minutes) do |req|
+    req.ip if req.path.start_with?('/view')
+  end
+
+  # Throttle article searching more aggressively
+  Rack::Attack.throttle('articles/ip', limit: 10, period: 1.minute) do |req|
+    req.ip if req.path.start_with?('/articles')
+  end
+
+  Rack::Attack.throttle('articles/ip', limit: 20, period: 5.minutes) do |req|
     req.ip if req.path.start_with?('/articles')
   end
 
