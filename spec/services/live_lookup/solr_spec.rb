@@ -35,7 +35,7 @@ RSpec.describe LiveLookup::Solr do
           'docs' =>
           [{ 'id' => '14409998',
              'item_display_struct' =>
-             ['{"id":null,"barcode":"36105232537659","library":"GREEN","home_location":"STACKS","status":"Checked out",' \
+             ['{"id":null,"barcode":"36105232537659","library":"GREEN","effective_permanent_location_code":"GRE-STACKS","status":"Checked out",' \
               '"temporary_location_code":"STACKS","type":"STKS-MONO","lopped_callnumber":"BD375 .D8713 2023",' \
               '"shelfkey":"lc bd  0375.000000 d0.871300 002023","reverse_shelfkey":"en~om~~zwsu}zzzzzz~mz}rsywzz~zzxzxw~~~~~~~~~~~~~~~",' \
               '"callnumber":"BD375 .D8713 2023","full_shelfkey":"lc bd  0375.000000 d0.871300 002023","note":null,"scheme":"LC"}'] }] } }
@@ -74,7 +74,7 @@ RSpec.describe LiveLookup::Solr do
           'docs' =>
           [{ 'id' => '14892534',
              'item_display_struct' =>
-             ['{"id":null,"barcode":"36105232792999","library":"GREEN","home_location":"STACKS","status":"In process",' \
+             ['{"id":null,"barcode":"36105232792999","library":"GREEN","effective_permanent_location_code":"GRE-STACKS","status":"In process",' \
               '"temporary_location_code":"At bindery","type":"STKS-MONO","lopped_callnumber":"DK42 .P53 2024",' \
               '"shelfkey":"lc dk  0042.000000 p0.530000 002024","reverse_shelfkey":"en~mf~~zzvx}zzzzzz~az}uwzzzz~zzxzxv~~~~~~~~~~~~~~~",' \
               '"callnumber":"DK42 .P53 2024","full_shelfkey":"lc dk  0042.000000 p0.530000 002024","note":null,"scheme":"LC"}'] }] } }
@@ -113,8 +113,8 @@ RSpec.describe LiveLookup::Solr do
           'docs' =>
           [{ 'id' => '908528',
              'item_display_struct' =>
-             ['{"id":null,"barcode":"36105036611262","library":"SAL3","home_location":"STACKS","status":"Available",' \
-              '"current_location":null,"type":"STKS-MONO","lopped_callnumber":"PS3537.A832.Z85",' \
+             ['{"id":null,"barcode":"36105036611262","library":"SAL3","effective_permanent_location_code":"GRE-STACKS","status":"Available",' \
+              '"temporary_location_code":null,"type":"STKS-MONO","lopped_callnumber":"PS3537.A832.Z85",' \
               '"shelfkey":"lc ps  3537.000000 a0.832000 z0.850000","reverse_shelfkey":"en~a7~~wuws}zzzzzz~pz}rwxzzz~0z}ruzzzz~~~~~~~~~~~~",' \
               '"callnumber":"PS3537.A832.Z85","full_shelfkey":"lc ps  3537.000000 a0.832000 z0.850000","note":null,"scheme":"LC"}'] }] } }
     end

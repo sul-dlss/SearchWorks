@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Holdings::Item do
   let(:complex_item_display) do
     {
-      barcode: '123', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location_code', type: 'type',
+      barcode: '123', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location_code', type: 'type',
       truncated_callnumber: 'truncated_callnumber', callnumber: 'callnumber',
       full_shelfkey: 'full_shelfkey', public_note: 'public_note', scheme: 'callnumber_type',
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
@@ -56,7 +56,7 @@ RSpec.describe Holdings::Item do
 
   describe '#callnumber' do
     let(:item_without_callnumber) {
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home_location', temporary_location_code: 'temporary_location', type: 'type',
+      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location', type: 'type',
                            lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
     }
     let(:lane_online_item) {

@@ -27845,8 +27845,6 @@ item_display_struct:
 - id: '00038a30-2b22-56a1-ad60-c13e3c68218d'
   barcode: '36105121228220'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27865,8 +27863,6 @@ item_display_struct:
 - id: 00d9f014-3c5c-59c3-a93c-ba6bfdabd863
   barcode: '36105121235068'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27885,8 +27881,6 @@ item_display_struct:
 - id: 00fc8193-b4fd-532a-9104-1204de4d5421
   barcode: '36105121236157'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27905,8 +27899,6 @@ item_display_struct:
 - id: 02b91343-11ef-5f10-a55a-4ed61d3da8f6
   barcode: '36105121234269'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27925,8 +27917,6 @@ item_display_struct:
 - id: 033a05ca-5c84-5345-9e85-7ebd9b43b94a
   barcode: '36105121234087'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27945,8 +27935,6 @@ item_display_struct:
 - id: 0374e519-875d-518e-a268-71ee0ef4178d
   barcode: '36105121236322'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27965,8 +27953,6 @@ item_display_struct:
 - id: 03d86e4f-4cf4-5b37-8c14-010792b84fbf
   barcode: '36105121235027'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -27985,8 +27971,6 @@ item_display_struct:
 - id: 03f38bdd-9b59-56ec-97f0-f6cec50a830e
   barcode: '36105121235928'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28005,8 +27989,6 @@ item_display_struct:
 - id: 055ab280-219e-5766-bb9f-0985db4002e4
   barcode: '36105121236728'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28025,8 +28007,6 @@ item_display_struct:
 - id: '09baeff5-5bf1-5b9b-8386-0b0974bd1f65'
   barcode: '36105121235944'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28045,8 +28025,6 @@ item_display_struct:
 - id: 0a4bcdaa-3a2e-526c-a05d-15022d6c73fa
   barcode: '36105121234152'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28065,8 +28043,6 @@ item_display_struct:
 - id: 0b74c1e6-5188-51b6-be70-5891b2bd54c2
   barcode: '36105121234186'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28085,8 +28061,6 @@ item_display_struct:
 - id: 0e8c01c4-6076-50b9-957e-09b9e13c6a63
   barcode: '36105121236058'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28105,8 +28079,6 @@ item_display_struct:
 - id: 0f846480-c254-513e-93ba-d8a2bfc88973
   barcode: '36105121236025'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28125,8 +28097,6 @@ item_display_struct:
 - id: 0ffd4833-300c-58b7-9045-334798bc0496
   barcode: '36105121228048'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28145,8 +28115,6 @@ item_display_struct:
 - id: 11f7999a-33fe-5c69-95ce-fcd7c035f422
   barcode: '36105121234889'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28165,8 +28133,6 @@ item_display_struct:
 - id: 12a39be0-dab7-571d-a678-e87a70ae2c9c
   barcode: '36105121234376'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28185,8 +28151,6 @@ item_display_struct:
 - id: 12b4f069-6fd1-5927-8c30-af4bd4fed483
   barcode: '36105121236124'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28205,8 +28169,6 @@ item_display_struct:
 - id: 137e558f-cef3-56be-9c74-c64899891e80
   barcode: '36105121235837'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28225,8 +28187,6 @@ item_display_struct:
 - id: 13dda23c-8fd1-5624-b372-e32e2f9ad9a8
   barcode: '36105121235852'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28245,8 +28205,6 @@ item_display_struct:
 - id: 141f496a-aabb-5404-9b28-36ca13d20cf1
   barcode: '36105121236330'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28265,8 +28223,6 @@ item_display_struct:
 - id: 1459e4ba-8e00-5d86-bda1-a542db095a5d
   barcode: '36105121236512'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28285,8 +28241,6 @@ item_display_struct:
 - id: 14ba7ce3-7ff4-5f49-b580-30ba60dce9cb
   barcode: '36105121235951'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28305,8 +28259,6 @@ item_display_struct:
 - id: 165bf870-c586-54f1-be12-fb6747e8bb6f
   barcode: '36105121235076'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28325,8 +28277,6 @@ item_display_struct:
 - id: 165c8afa-d027-53fa-9fd1-fe034bf5d6fc
   barcode: '36105121235456'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28345,8 +28295,6 @@ item_display_struct:
 - id: 173df905-1fb0-56f4-a4e5-b9a36c6c1df2
   barcode: '36105121236108'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28365,8 +28313,6 @@ item_display_struct:
 - id: 17c3f225-a856-58d3-9747-ad95c7111077
   barcode: '36105121236454'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28385,8 +28331,6 @@ item_display_struct:
 - id: 17d54df8-acb3-53bd-ab9b-27081a4efcb4
   barcode: '36105121234038'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28405,8 +28349,6 @@ item_display_struct:
 - id: 18752702-17bd-5557-8e1d-cbef16df7f87
   barcode: '36105121236439'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28425,8 +28367,6 @@ item_display_struct:
 - id: 18b4b7f6-5e2a-52b2-8d46-c08643dbe633
   barcode: '36105121228147'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28445,8 +28385,6 @@ item_display_struct:
 - id: 18dcdc5b-5537-5cb1-b63a-b40229863a57
   barcode: '36105121235175'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28465,8 +28403,6 @@ item_display_struct:
 - id: 1ae70f0a-d4ec-53b1-be83-70e5e292a606
   barcode: '36105121236694'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28485,8 +28421,6 @@ item_display_struct:
 - id: 1b23d71c-d958-5c4b-bc16-b037d32c27c4
   barcode: '36105121235365'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28505,8 +28439,6 @@ item_display_struct:
 - id: 1ba41108-ad61-5570-b5aa-d4f9880e0294
   barcode: '36105121235571'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28525,8 +28457,6 @@ item_display_struct:
 - id: 1c6e8de9-6715-51df-8c4a-f911d9b330e5
   barcode: '36105121236785'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28545,8 +28475,6 @@ item_display_struct:
 - id: 1c8fcbb2-9b9b-5b3f-bad0-c9785b568d05
   barcode: '36105121235464'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28565,8 +28493,6 @@ item_display_struct:
 - id: 1e63162c-d0b0-5331-a160-d576f6131475
   barcode: '36105121236579'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28585,8 +28511,6 @@ item_display_struct:
 - id: 1f108df5-4269-5982-92ef-6fae5ab8eb96
   barcode: '36105121236272'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28605,8 +28529,6 @@ item_display_struct:
 - id: 2114deb3-296c-596b-afc7-b0ef415c8c51
   barcode: '36105121236132'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28625,8 +28547,6 @@ item_display_struct:
 - id: 23a7f5e4-16c6-5553-aa6d-3fd769d9024f
   barcode: '36105121236231'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28645,8 +28565,6 @@ item_display_struct:
 - id: 24ad8ec4-6b4c-56c2-be74-1cf8701bbdfa
   barcode: '36105121228345'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28665,8 +28583,6 @@ item_display_struct:
 - id: 264ba150-df8f-5b3d-b667-79b501a49f44
   barcode: '36105121235167'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28685,8 +28601,6 @@ item_display_struct:
 - id: 27222b25-5b9f-5a1c-be91-fbd027ddb173
   barcode: '36105121235100'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28705,8 +28619,6 @@ item_display_struct:
 - id: 281353ae-43f6-5628-87cf-ae7fc114639e
   barcode: '36105121236041'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28725,8 +28637,6 @@ item_display_struct:
 - id: 28ebd9c4-04e8-5888-b674-32849b21cb06
   barcode: '36105118384259'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28745,8 +28655,6 @@ item_display_struct:
 - id: 29740d9d-aa16-5638-a5c9-b77772cd5a84
   barcode: '36105121228162'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28765,8 +28673,6 @@ item_display_struct:
 - id: 2a80c7a1-43f4-5598-97e1-c8ad7a186bbc
   barcode: '36105121236520'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28785,8 +28691,6 @@ item_display_struct:
 - id: 2c021241-7cc8-56c9-9e16-33d50256f0f8
   barcode: '36105121235498'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28805,8 +28709,6 @@ item_display_struct:
 - id: 2cfdc360-590d-56a5-b1ea-b43e6107945c
   barcode: '36105121234798'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28825,8 +28727,6 @@ item_display_struct:
 - id: 2d24a459-21d8-503d-9e1c-46d51e7ce805
   barcode: '36105121236488'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28845,8 +28745,6 @@ item_display_struct:
 - id: 2f64fc85-ff8d-540c-be96-82dbc28e4f33
   barcode: '36105121234939'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28865,8 +28763,6 @@ item_display_struct:
 - id: 2f76a6d0-347e-5626-a8ff-edf732742594
   barcode: 2472159-104001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28885,8 +28781,6 @@ item_display_struct:
 - id: 2fabb3a3-fe1c-5f0d-bfd9-6ed5ae03e3d1
   barcode: '36105121234863'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28905,8 +28799,6 @@ item_display_struct:
 - id: 2faff2e4-632f-566c-a653-7cd01ffcdd8b
   barcode: '36105121228337'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28925,8 +28817,6 @@ item_display_struct:
 - id: 3142a533-eac5-5b00-abc6-bedc2bf90c62
   barcode: '36105121234731'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28945,8 +28835,6 @@ item_display_struct:
 - id: 3187d38a-8ef1-5084-b459-8c8e75918254
   barcode: '36105121228246'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28965,8 +28853,6 @@ item_display_struct:
 - id: 31b83a6e-b371-5f1e-8dc0-e968e1c3d6d1
   barcode: '36105121228097'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -28985,8 +28871,6 @@ item_display_struct:
 - id: 33c56643-489e-57e0-b8f9-843a752c1f4d
   barcode: '36105121236595'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29005,8 +28889,6 @@ item_display_struct:
 - id: 35a12564-3514-5ab8-9c56-73dbdf8ad831
   barcode: '36105121235407'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29025,8 +28907,6 @@ item_display_struct:
 - id: 36a2662a-2282-5403-957d-d5d0e18475b5
   barcode: '36105121235324'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29045,8 +28925,6 @@ item_display_struct:
 - id: 3719a633-9e95-5f0e-8e29-a14058cef434
   barcode: '36105121234228'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29065,8 +28943,6 @@ item_display_struct:
 - id: 379cbb0e-7c08-5073-9a74-d19ca22ff3b9
   barcode: '36105121236710'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29085,8 +28961,6 @@ item_display_struct:
 - id: 3849efc4-46a5-5e44-a63b-af90e2b07eb6
   barcode: '36105121236306'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29105,8 +28979,6 @@ item_display_struct:
 - id: 38e0ffec-eb7f-573c-8dc5-1f621a26ebd0
   barcode: '36105121234780'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29125,8 +28997,6 @@ item_display_struct:
 - id: 39c85514-7b11-5d7b-b31b-21bed439a87b
   barcode: '36105121236876'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29145,8 +29015,6 @@ item_display_struct:
 - id: 3a04e475-f7a4-5574-9ca5-20f7c2e6b548
   barcode: '36105121235183'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29165,8 +29033,6 @@ item_display_struct:
 - id: 3a8bb4bf-cfd9-541f-bc88-5193b1929fa7
   barcode: '36105121235514'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29185,8 +29051,6 @@ item_display_struct:
 - id: 3c0b808f-bf8b-52cd-a367-c9384b98e6d3
   barcode: '36105121228287'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29205,8 +29069,6 @@ item_display_struct:
 - id: 3c18b375-739a-5912-92f4-81b7d14f0234
   barcode: '36105121228113'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29225,8 +29087,6 @@ item_display_struct:
 - id: 3c42531c-823f-58cd-b47d-88cefc862445
   barcode: '36105121235555'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29245,8 +29105,6 @@ item_display_struct:
 - id: 406c9f37-4046-5438-ab81-6fa88c784d0f
   barcode: '36105121235209'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29265,8 +29123,6 @@ item_display_struct:
 - id: 40822e0b-bd5a-5021-b92f-1a5298e5529b
   barcode: '36105121235290'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29285,8 +29141,6 @@ item_display_struct:
 - id: 41094898-22fd-5c5d-9bc5-0ba8970f4d1a
   barcode: '36105121235811'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29305,8 +29159,6 @@ item_display_struct:
 - id: 4207028b-eccd-52a4-8572-ee8c4db33051
   barcode: '36105121236090'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29325,8 +29177,6 @@ item_display_struct:
 - id: 4221b176-32ad-5bef-8d75-000bf1667b1c
   barcode: '36105121234251'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29345,8 +29195,6 @@ item_display_struct:
 - id: 450e9dff-1a42-59f9-999c-da232f5edf7e
   barcode: '36105121234095'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29365,8 +29213,6 @@ item_display_struct:
 - id: 45ce9685-69bf-5d84-b89e-8d1355acc4e0
   barcode: '36105121236363'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29385,8 +29231,6 @@ item_display_struct:
 - id: 46d35c93-ab76-552e-a1b4-918af4d11e3a
   barcode: '36105121235688'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29405,8 +29249,6 @@ item_display_struct:
 - id: 475b464a-4f63-570a-8782-44bfe83aa219
   barcode: '36105121235738'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29425,8 +29267,6 @@ item_display_struct:
 - id: 485d9f3c-451d-58bc-a857-5ee54cddaeaf
   barcode: '36105121236777'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29445,8 +29285,6 @@ item_display_struct:
 - id: 48c7b913-9ef8-5820-a3d4-6ab03c4e88b7
   barcode: '36105121234756'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29465,8 +29303,6 @@ item_display_struct:
 - id: 4924ba2a-d7cc-50b7-bdf3-48ddc181824a
   barcode: '36105121236082'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29485,8 +29321,6 @@ item_display_struct:
 - id: 49b4844c-f548-5a7a-88b9-e365f7435fb9
   barcode: '36105121228303'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29505,8 +29339,6 @@ item_display_struct:
 - id: 4adda1af-672a-5ce6-8ff7-c51daba07d8f
   barcode: '36105121236165'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29525,8 +29357,6 @@ item_display_struct:
 - id: 4b4bb97c-3799-55be-8dcf-5b7574718a89
   barcode: '36105121235506'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29545,8 +29375,6 @@ item_display_struct:
 - id: 4c73b49f-2cc5-5f11-83cb-449561ddf141
   barcode: '36105121236009'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29565,8 +29393,6 @@ item_display_struct:
 - id: 4d021920-94bb-5be2-a319-c10d25edb8d1
   barcode: '36105121234061'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29585,8 +29411,6 @@ item_display_struct:
 - id: 4ddf7856-46e8-5a53-8822-b8050d3893da
   barcode: '36105121228022'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29605,8 +29429,6 @@ item_display_struct:
 - id: 4e212c30-5590-5dc2-9742-be5d0e0e8846
   barcode: '36105121235134'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29625,8 +29447,6 @@ item_display_struct:
 - id: 50753e8e-2835-5f8d-bd4c-316d272639ba
   barcode: '36105121228154'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29645,8 +29465,6 @@ item_display_struct:
 - id: 50cd7f50-94e9-5798-b874-bf2d8464f213
   barcode: '36105121235597'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29665,8 +29483,6 @@ item_display_struct:
 - id: 5178da7d-5ff4-5acf-97c1-28f4672b4fae
   barcode: '36105121236652'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29685,8 +29501,6 @@ item_display_struct:
 - id: 524bd2e4-d558-53e6-b78c-145191f00605
   barcode: '36105121234145'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29705,8 +29519,6 @@ item_display_struct:
 - id: 52c124b1-87a2-5be9-91f6-ca16b2d79dbd
   barcode: '36105121236868'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29725,8 +29537,6 @@ item_display_struct:
 - id: 52cb3bef-f3ce-5e2b-9b7c-2c579a86468c
   barcode: '36105121236033'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29745,8 +29555,6 @@ item_display_struct:
 - id: 543be5a9-0c10-5336-81ee-0b9b57da086d
   barcode: '36105121234434'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29765,8 +29573,6 @@ item_display_struct:
 - id: 55c25b9d-be0d-58e8-b811-6be332046816
   barcode: '36105121235399'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29785,8 +29591,6 @@ item_display_struct:
 - id: 5631e133-ad00-57e1-a714-27952ad2a168
   barcode: '36105121234210'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29805,8 +29609,6 @@ item_display_struct:
 - id: 574fea98-3c8a-54a7-b965-1f2e2742497a
   barcode: '36105121235720'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29825,8 +29627,6 @@ item_display_struct:
 - id: 577ec6f8-96a1-5389-9f9b-e0efa16138e8
   barcode: '36105121234046'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29845,8 +29645,6 @@ item_display_struct:
 - id: 5782fd01-8e94-52cb-9d07-896fa3ed694c
   barcode: '36105121236629'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29865,8 +29663,6 @@ item_display_struct:
 - id: 59ed19a9-aaef-54e3-bc86-208042301840
   barcode: '36105121235258'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29885,8 +29681,6 @@ item_display_struct:
 - id: 5a02b3c0-c522-573a-bda5-8cf5dcbc3bf2
   barcode: '36105121228295'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29905,8 +29699,6 @@ item_display_struct:
 - id: 5afd22e8-c92b-521d-8ae3-eacae471e32d
   barcode: '36105121235936'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29925,8 +29717,6 @@ item_display_struct:
 - id: 5b9455cb-fca7-565b-8256-c436bf56c049
   barcode: '36105121235332'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29945,8 +29735,6 @@ item_display_struct:
 - id: 5cb2037e-bc41-5ae4-908c-975a17e7ae3c
   barcode: '36105121236371'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29965,8 +29753,6 @@ item_display_struct:
 - id: 5dd755b3-c7e1-52d7-abb1-b03eaa06fa10
   barcode: '36105121236769'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -29985,8 +29771,6 @@ item_display_struct:
 - id: 5e7c729d-fa4a-583a-a00f-56a80bda53ba
   barcode: '36105121235084'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30005,8 +29789,6 @@ item_display_struct:
 - id: 5eb82c57-2e3e-5989-a0f7-b38737502f26
   barcode: '36105121228063'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30025,8 +29807,6 @@ item_display_struct:
 - id: 5ec7f42f-e591-5a61-af44-384294d32be4
   barcode: '36105121234764'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30045,8 +29825,6 @@ item_display_struct:
 - id: 5f8321b2-68ac-520a-ad57-45233f674c78
   barcode: '36105121234897'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30065,8 +29843,6 @@ item_display_struct:
 - id: 5fe994ae-8fac-545e-96ac-95eddd0644b4
   barcode: '36105121228014'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30085,8 +29861,6 @@ item_display_struct:
 - id: 5fec8b23-00af-5e37-9c0a-ff7ff12b4248
   barcode: '36105121236801'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30105,8 +29879,6 @@ item_display_struct:
 - id: 5ff945f9-948a-51f4-ac4a-4792bb74f061
   barcode: '36105121234988'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30125,8 +29897,6 @@ item_display_struct:
 - id: 604830b7-1ad1-5dce-96e5-e9eb9ea1a0ba
   barcode: '36105121234749'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30145,8 +29915,6 @@ item_display_struct:
 - id: 635c5a7b-2d2f-5529-a849-72b6fed7e7fb
   barcode: '36105121234806'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30165,8 +29933,6 @@ item_display_struct:
 - id: 652df720-ab26-5fde-9cd2-dd296af34000
   barcode: '36105121235340'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30185,8 +29951,6 @@ item_display_struct:
 - id: 679a0bfd-a0c5-5aa7-9d77-46c95b6e0bcb
   barcode: '36105121235522'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30205,8 +29969,6 @@ item_display_struct:
 - id: 67c20c0e-b3bb-5aba-981a-e3fd2af01b39
   barcode: '36105121235753'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30225,8 +29987,6 @@ item_display_struct:
 - id: 6985fbab-93f3-5f1d-b81c-3e388385c7cd
   barcode: '36105121234772'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30245,8 +30005,6 @@ item_display_struct:
 - id: 6a9c8d6a-4649-5dac-8478-56f21024fb1d
   barcode: '36105121234384'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30265,8 +30023,6 @@ item_display_struct:
 - id: 6b4c942a-1731-5958-bc0d-da5cc7a3a156
   barcode: '36105121235480'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30285,8 +30041,6 @@ item_display_struct:
 - id: 6ccf9426-0645-5ff9-b024-b03a66e9e14b
   barcode: '36105121235548'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30305,8 +30059,6 @@ item_display_struct:
 - id: 6dc05f0d-39a6-5d71-87cf-c07023969eaa
   barcode: '36105121228089'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30325,8 +30077,6 @@ item_display_struct:
 - id: 6e7d34c4-7880-530a-9bf5-7f66d42e95ef
   barcode: '36105121236462'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30345,8 +30095,6 @@ item_display_struct:
 - id: 6f38dbcb-043c-5fc0-a86f-3915792fcad1
   barcode: '36105121234723'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30365,8 +30113,6 @@ item_display_struct:
 - id: 6f7e4594-af6f-5706-ab87-0ee788d977cc
   barcode: '36105121228030'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30385,8 +30131,6 @@ item_display_struct:
 - id: 700719ce-ac55-5412-9fed-23f5d7774233
   barcode: '36105121235191'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30405,8 +30149,6 @@ item_display_struct:
 - id: 7313d7c9-f965-523b-9c8f-e0406a7b8f04
   barcode: '36105121228261'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30425,8 +30167,6 @@ item_display_struct:
 - id: 7315c2ef-7ea7-5f40-9569-1c89cf8ca375
   barcode: '36105121236017'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30445,8 +30185,6 @@ item_display_struct:
 - id: 74c2edd4-8c7f-5d25-a6dc-0e63c977bfda
   barcode: '36105121236470'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30465,8 +30203,6 @@ item_display_struct:
 - id: 74c770be-8d60-5ddc-adf3-9372d32f979c
   barcode: '36105121235035'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30485,8 +30221,6 @@ item_display_struct:
 - id: 7538b009-3065-5a2a-842b-970772370c36
   barcode: '36105121236645'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30505,8 +30239,6 @@ item_display_struct:
 - id: 7890063e-6372-5323-b890-ce3e1c7519c4
   barcode: '36105121235712'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30525,8 +30257,6 @@ item_display_struct:
 - id: 79030de0-0a5b-5033-ae4c-f7cbc7407f0d
   barcode: '36105121235605'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30545,8 +30275,6 @@ item_display_struct:
 - id: 79a2ca8c-556f-51f6-a998-a1bbf4cb2961
   barcode: '36105121236538'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30565,8 +30293,6 @@ item_display_struct:
 - id: 7a5ba016-e304-558a-a9c4-d21cb467af6e
   barcode: '36105121234921'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30585,8 +30311,6 @@ item_display_struct:
 - id: 7a84e236-3895-5839-854e-020eca099528
   barcode: '36105121235589'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30605,8 +30329,6 @@ item_display_struct:
 - id: 7d2fbaa1-e147-5196-809b-74909c2b08f4
   barcode: '36105121236611'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30625,8 +30347,6 @@ item_display_struct:
 - id: 7ee2b3e4-2bd4-553e-81f3-fb01c4f57a92
   barcode: '36105121236991'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30645,8 +30365,6 @@ item_display_struct:
 - id: 80425252-50a7-5348-8f35-972dff8d8495
   barcode: '36105121234368'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30665,8 +30383,6 @@ item_display_struct:
 - id: 80882ca6-11e8-5d03-aa24-f5d821d3b844
   barcode: '36105121236835'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30685,8 +30401,6 @@ item_display_struct:
 - id: 824f6acd-ee27-51db-ba61-59e77c852fca
   barcode: '36105121234160'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30705,8 +30419,6 @@ item_display_struct:
 - id: 8402ab8a-8a63-5ae8-9d1a-3f58535bfc59
   barcode: '36105121235647'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30725,8 +30437,6 @@ item_display_struct:
 - id: 8585d0a5-8c88-5f37-947c-048a99b3effe
   barcode: '36105121234996'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30745,8 +30455,6 @@ item_display_struct:
 - id: 86de6810-c4c9-59b0-9914-57bf9ef64059
   barcode: '36105121228329'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30765,8 +30473,6 @@ item_display_struct:
 - id: 87400c08-7fea-5bfa-97bc-5367d60ecfe7
   barcode: '36105121235449'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30785,8 +30491,6 @@ item_display_struct:
 - id: 87429b5f-fc8e-52ca-ac2b-6f5913a446a6
   barcode: '36105121234293'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30805,8 +30509,6 @@ item_display_struct:
 - id: 87517be5-4b37-585a-b0f6-8d2ce1a34727
   barcode: '36105121235746'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30825,8 +30527,6 @@ item_display_struct:
 - id: 87fdcc78-eeb3-5fdb-bd8c-840c01ae7276
   barcode: '36105121234467'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30845,8 +30545,6 @@ item_display_struct:
 - id: 898a74ff-e90b-5434-800e-5f2edee4f0ce
   barcode: '36105121235001'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30865,8 +30563,6 @@ item_display_struct:
 - id: 8a2e00de-beb8-5430-966d-28ea5abf0198
   barcode: '36105121228170'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30885,8 +30581,6 @@ item_display_struct:
 - id: 8a650767-d66e-54d8-81bc-d0b21b1f6a05
   barcode: '36105121235316'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30905,8 +30599,6 @@ item_display_struct:
 - id: 8cb4780e-c719-5947-9ded-edc62faa96b9
   barcode: '36105121235860'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30925,8 +30617,6 @@ item_display_struct:
 - id: 8cc24dca-b90e-5180-b0f8-0d6cec826f8e
   barcode: 2472159-102001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30945,8 +30635,6 @@ item_display_struct:
 - id: 8cf86ffb-81b8-5443-bffc-d331c09b5b17
   barcode: '36105121235910'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30965,8 +30653,6 @@ item_display_struct:
 - id: 8e7c5dd3-e101-58d3-b583-dc45588bea16
   barcode: '36105121228188'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -30985,8 +30671,6 @@ item_display_struct:
 - id: 8f975cf4-4077-5cd4-92c9-49a7f3c386f6
   barcode: '36105121234400'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31005,8 +30689,6 @@ item_display_struct:
 - id: 904d2551-fc6f-53d2-b157-5e819eefe4d2
   barcode: '36105121235670'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31025,8 +30707,6 @@ item_display_struct:
 - id: 90f40b4c-5a15-5080-ac60-0004ff02d65c
   barcode: '36105121236389'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31045,8 +30725,6 @@ item_display_struct:
 - id: 913d6468-f168-5452-8b54-f543f5babee4
   barcode: '36105121234947'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31065,8 +30743,6 @@ item_display_struct:
 - id: 9200ef3d-0da4-596e-a772-628634a0e1a2
   barcode: '36105121234442'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31085,8 +30761,6 @@ item_display_struct:
 - id: 9410864d-bb12-59ee-9c75-1636323b44c0
   barcode: '36105121236850'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31105,8 +30779,6 @@ item_display_struct:
 - id: 951f1862-9ce2-5f13-810a-87e9825f3ee3
   barcode: '36105121235803'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31125,8 +30797,6 @@ item_display_struct:
 - id: 95e1ff8c-4c6f-5300-a8cf-210bb60469c4
   barcode: '36105121228279'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31145,8 +30815,6 @@ item_display_struct:
 - id: 96435f1b-8ea4-589e-9722-2f1d1ad79ef1
   barcode: '36105121228139'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31165,8 +30833,6 @@ item_display_struct:
 - id: 970609ff-3ec7-5ac8-a9ae-41a828e7727b
   barcode: '36105121235217'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31185,8 +30851,6 @@ item_display_struct:
 - id: 977a5daa-aacd-556c-8930-f1f7a32dbc6b
   barcode: '36105121234319'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31205,8 +30869,6 @@ item_display_struct:
 - id: 984e8371-12ab-5e56-a850-83fbfab792f2
   barcode: 2472159-103001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31225,8 +30887,6 @@ item_display_struct:
 - id: 9d3b9cc7-3fbc-51b7-bb07-3e63d038a9ef
   barcode: '36105121235266'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31245,8 +30905,6 @@ item_display_struct:
 - id: 9e75fb04-1356-55b8-8765-f029f73968b0
   barcode: '36105121235969'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31265,8 +30923,6 @@ item_display_struct:
 - id: 9eaf97cb-9ca8-59ad-90c0-6658fde3e79c
   barcode: '36105121234004'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31285,8 +30941,6 @@ item_display_struct:
 - id: 9ef32ed0-b254-5b22-ac4e-669116b5b31d
   barcode: '36105121236355'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31305,8 +30959,6 @@ item_display_struct:
 - id: 9f139df3-e5ef-507c-a58b-558d7c597058
   barcode: '36105121236215'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31325,8 +30977,6 @@ item_display_struct:
 - id: 9faa27b1-c6bc-5591-b860-731556f8cffa
   barcode: '36105121235654'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31345,8 +30995,6 @@ item_display_struct:
 - id: a05112d7-6e65-5f01-946d-bd3558bef168
   barcode: '36105121234335'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31365,8 +31013,6 @@ item_display_struct:
 - id: a05a5cdb-6ed0-5701-9581-bc62733d148d
   barcode: '36105121234053'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31385,8 +31031,6 @@ item_display_struct:
 - id: a05ffeb9-9802-501d-9a1f-018f0e3eeeae
   barcode: '36105121234459'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31405,8 +31049,6 @@ item_display_struct:
 - id: a0b7d146-8f90-540d-bebd-4a2ae224cdfc
   barcode: '36105121235225'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31425,8 +31067,6 @@ item_display_struct:
 - id: a1ed9b6d-5c85-5dc2-a45b-eccd0afdee2b
   barcode: '36105121234244'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31445,8 +31085,6 @@ item_display_struct:
 - id: a26fb6cf-b6fa-5fe8-b30a-6a2b69b04d29
   barcode: '36105121234392'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31465,8 +31103,6 @@ item_display_struct:
 - id: a293bb68-45bc-57a3-aa7f-9cf5bb9b48be
   barcode: '36105121235886'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31485,8 +31121,6 @@ item_display_struct:
 - id: a2da5df7-fd38-5149-a56f-23201c78978c
   barcode: '36105121235639'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31505,8 +31139,6 @@ item_display_struct:
 - id: a6721843-b309-5183-a3e1-6eb8164efeb2
   barcode: '36105121235415'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31525,8 +31157,6 @@ item_display_struct:
 - id: a6ac26c9-ef6f-571a-9a27-55e194d5946c
   barcode: '36105121234913'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31545,8 +31175,6 @@ item_display_struct:
 - id: aacfb452-1e1e-5a97-87d4-6939ab80b581
   barcode: '36105121234129'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31565,8 +31193,6 @@ item_display_struct:
 - id: ad9b6f87-e36c-5d2f-b6ea-29d770797361
   barcode: '36105121228204'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31585,8 +31211,6 @@ item_display_struct:
 - id: ada7f6f8-e4fe-5cc6-8f38-faca523d408d
   barcode: '36105121235696'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31605,8 +31229,6 @@ item_display_struct:
 - id: adbf7f47-1f09-591d-a928-c26d182327dc
   barcode: '36105121236199'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31625,8 +31247,6 @@ item_display_struct:
 - id: adbf8f7f-0ebf-53e0-9702-e3994621f6d6
   barcode: '36105121234079'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31645,8 +31265,6 @@ item_display_struct:
 - id: ae96b422-b9d6-5024-912b-88a174f21ddf
   barcode: '36105121236314'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31665,8 +31283,6 @@ item_display_struct:
 - id: b0234324-0204-5667-9760-d310c1b79293
   barcode: 2472159-133001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31685,8 +31301,6 @@ item_display_struct:
 - id: b0fb46db-a212-54cb-8b70-b4aca3c36f05
   barcode: '36105121236249'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31705,8 +31319,6 @@ item_display_struct:
 - id: b1f7907e-6157-5dd8-aa44-ee882ae919bf
   barcode: '36105121236264'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31725,8 +31337,6 @@ item_display_struct:
 - id: b2356426-8c2b-53ea-b005-e7a109f37a93
   barcode: '36105121236827'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31745,8 +31355,6 @@ item_display_struct:
 - id: b41eb6bc-7f84-5f62-9c7c-235166774a3f
   barcode: '36105121236496'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31765,8 +31373,6 @@ item_display_struct:
 - id: b4493df5-58a7-5d0d-adf3-3ca64d5f454b
   barcode: '36105121236348'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31785,8 +31391,6 @@ item_display_struct:
 - id: b45e2f0a-03b1-513c-965f-e48a6c4f2eb6
   barcode: '36105121235563'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31805,8 +31409,6 @@ item_display_struct:
 - id: b489cb51-2aef-5066-b81d-54424b231735
   barcode: '36105121235373'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31825,8 +31427,6 @@ item_display_struct:
 - id: b6ff55b3-de53-56bb-9e55-3144f62afdbc
   barcode: '36105121235993'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31845,8 +31445,6 @@ item_display_struct:
 - id: b7291b89-919a-5451-8721-6ac90ee4d3f2
   barcode: '36105121228105'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31865,8 +31463,6 @@ item_display_struct:
 - id: b729960e-1261-5ea4-ae24-18943a9f853c
   barcode: '36105121236793'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31885,8 +31481,6 @@ item_display_struct:
 - id: b7e0af2f-f1f5-5dd3-9317-9f1f941f39d2
   barcode: '36105121235621'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31905,8 +31499,6 @@ item_display_struct:
 - id: b8109809-e102-5ff7-a1cc-a72a1f81e5b2
   barcode: '36105121236140'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31925,8 +31517,6 @@ item_display_struct:
 - id: b87d4f6c-3442-5b25-92ec-6252666818af
   barcode: '36105121236405'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31945,8 +31535,6 @@ item_display_struct:
 - id: b893b2f8-8198-53a8-b90e-407b5e421b05
   barcode: '36105121235233'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31965,8 +31553,6 @@ item_display_struct:
 - id: b8a9a8e0-1721-5ccd-be0f-e9e36f5151d0
   barcode: 2472159-105001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -31985,8 +31571,6 @@ item_display_struct:
 - id: ba5b094a-c3c7-5b4b-bb78-ca20024ca074
   barcode: '36105121235019'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32005,8 +31589,6 @@ item_display_struct:
 - id: badd2764-8222-54ba-96e8-14d264b65129
   barcode: '36105121234962'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32025,8 +31607,6 @@ item_display_struct:
 - id: bbd5a3ae-7250-5320-b405-f7b3d96cd616
   barcode: '36105121235662'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32045,8 +31625,6 @@ item_display_struct:
 - id: bbe54dc8-1c4c-5423-b20b-3b57e049b628
   barcode: '36105121228055'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32065,8 +31643,6 @@ item_display_struct:
 - id: bc5dc79f-42c6-561a-bf2f-540f1fbaeda0
   barcode: '36105121236553'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32085,8 +31661,6 @@ item_display_struct:
 - id: bcf470a4-0b72-5972-96a5-90da0a61526d
   barcode: '36105121228253'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32105,8 +31679,6 @@ item_display_struct:
 - id: be980d74-9027-5666-8ab2-052e31855138
   barcode: '36105121235704'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32125,8 +31697,6 @@ item_display_struct:
 - id: beb600b5-c4d1-52ce-be59-257b2850047f
   barcode: '36105121235274'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32145,8 +31715,6 @@ item_display_struct:
 - id: bf48e109-a764-5bd1-86f8-3a73d711461a
   barcode: '36105121234822'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32165,8 +31733,6 @@ item_display_struct:
 - id: bf83cd36-617c-572c-9339-3a0d6f34ef8e
   barcode: '36105121228121'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32185,8 +31751,6 @@ item_display_struct:
 - id: bfea927d-7df5-5cc3-bae0-1f3a1b7c3e14
   barcode: '36105121235043'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32205,8 +31769,6 @@ item_display_struct:
 - id: c02a79c5-6c4e-55a1-82a7-394ecee8cc8a
   barcode: '36105121236603'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32225,8 +31787,6 @@ item_display_struct:
 - id: c137ef5f-a1e6-5fdb-824c-3aba8a92e146
   barcode: '36105121235613'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32245,8 +31805,6 @@ item_display_struct:
 - id: c141a010-3207-5058-9a48-1e45b2d95cb4
   barcode: '36105121234905'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32265,8 +31823,6 @@ item_display_struct:
 - id: c18eba3e-0178-5d03-89d5-348a9efde121
   barcode: '36105121236256'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32285,8 +31841,6 @@ item_display_struct:
 - id: c2736572-bfe2-5cd6-935e-b049f24ae852
   barcode: '36105121236421'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32305,8 +31859,6 @@ item_display_struct:
 - id: c27f4938-f67b-577b-b069-83131c186841
   barcode: '36105121235530'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32325,8 +31877,6 @@ item_display_struct:
 - id: c28d3cc9-6146-529b-a802-a94ffe879234
   barcode: '36105121234343'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32345,8 +31895,6 @@ item_display_struct:
 - id: c2f22721-a389-57d0-a2af-5da21de234c6
   barcode: '36105121236074'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32365,8 +31913,6 @@ item_display_struct:
 - id: c3180129-a2de-5363-814c-c797b4032405
   barcode: '36105121236397'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32385,8 +31931,6 @@ item_display_struct:
 - id: c39847cd-0e2d-51d5-a1c1-ca5fddd3843f
   barcode: '36105121234012'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32405,8 +31949,6 @@ item_display_struct:
 - id: c3ebfd01-ca42-5d48-917b-bf72a5c5aadd
   barcode: '36105121228212'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32425,8 +31967,6 @@ item_display_struct:
 - id: c7241a47-0df7-5604-a34f-5389678364ec
   barcode: '36105121234178'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32445,8 +31985,6 @@ item_display_struct:
 - id: c72ebf95-c5bf-5196-aeea-caee1da9bffa
   barcode: '36105121235118'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32465,8 +32003,6 @@ item_display_struct:
 - id: c7337690-3ae0-5dc0-9826-1fef75b431cb
   barcode: '36105121236736'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32485,8 +32021,6 @@ item_display_struct:
 - id: c7993665-2085-53cf-9f59-9f296cb44f34
   barcode: '36105121234855'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32505,8 +32039,6 @@ item_display_struct:
 - id: c7ac59bf-02bc-5645-998e-701da8bdf6a8
   barcode: '36105121234020'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32525,8 +32057,6 @@ item_display_struct:
 - id: c86e59f4-ffc4-56d7-9134-c2235d1e92ac
   barcode: '36105121235902'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32545,8 +32075,6 @@ item_display_struct:
 - id: c90d1216-bb46-5aee-855a-8dbac0cd8cd2
   barcode: '36105121236504'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32565,8 +32093,6 @@ item_display_struct:
 - id: ca18e15a-6ce4-5d91-bd75-309e441da1c9
   barcode: '36105121236660'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32585,8 +32111,6 @@ item_display_struct:
 - id: cbc2b066-f614-5a00-87fe-a02ddc6ab779
   barcode: '36105121234103'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32605,8 +32129,6 @@ item_display_struct:
 - id: cda95382-773d-5e98-b1f4-cbb44b602938
   barcode: '36105121234327'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32625,8 +32147,6 @@ item_display_struct:
 - id: cdccf4e5-6b51-5ca8-9025-b79835b4454b
   barcode: '36105121234194'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32645,8 +32165,6 @@ item_display_struct:
 - id: cf661352-b020-547f-b026-7ceda30863a2
   barcode: '36105121236280'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32665,8 +32183,6 @@ item_display_struct:
 - id: d0df121e-815a-55e8-be5d-522f1d26a887
   barcode: '36105121236173'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32685,8 +32201,6 @@ item_display_struct:
 - id: d167c3f0-8196-5fc1-8188-bf97b8c3874e
   barcode: '36105121234277'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32705,8 +32219,6 @@ item_display_struct:
 - id: d296f28c-0a1e-52c7-a87f-d02c33571934
   barcode: '36105121236686'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32725,8 +32237,6 @@ item_display_struct:
 - id: d2bfe6a8-4f38-526d-bff4-e09791eb61a5
   barcode: '36105121236744'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32745,8 +32255,6 @@ item_display_struct:
 - id: d306069d-66a2-5f4e-84ad-9916d5b35808
   barcode: '36105121234301'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32765,8 +32273,6 @@ item_display_struct:
 - id: d3c92295-6b76-5a42-8e8a-2d08f5ceeddd
   barcode: '36105121228238'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32785,8 +32291,6 @@ item_display_struct:
 - id: d4203a94-27f4-5ebc-9894-fe1615bf311d
   barcode: '36105121235159'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32805,8 +32309,6 @@ item_display_struct:
 - id: d49be640-bff0-5097-853d-895bd0379ac1
   barcode: '36105121236207'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32825,8 +32327,6 @@ item_display_struct:
 - id: d4c90b95-f7d1-513e-be73-22c480e8281d
   barcode: '36105121235829'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32845,8 +32345,6 @@ item_display_struct:
 - id: d6fa977a-5365-5b16-be5c-9d93ad2ba506
   barcode: '36105121236116'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32865,8 +32363,6 @@ item_display_struct:
 - id: d72d6b4f-6397-514a-bee8-dd07249bfb75
   barcode: '36105121234111'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32885,8 +32381,6 @@ item_display_struct:
 - id: d77a44c3-59e5-52f2-bb98-cb8aa9a479a1
   barcode: '36105121234970'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32905,8 +32399,6 @@ item_display_struct:
 - id: d8cdc524-021a-5e87-a8f9-059b0b9afa0b
   barcode: '36105121235894'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32925,8 +32417,6 @@ item_display_struct:
 - id: d916b478-7d55-56c0-a3f3-4fa13cd57f78
   barcode: '36105121234418'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32945,8 +32435,6 @@ item_display_struct:
 - id: d997f082-bef4-5381-889b-80d9fae18038
   barcode: '36105121235985'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32965,8 +32453,6 @@ item_display_struct:
 - id: dab60345-3412-5dec-911a-32d0c75a4775
   barcode: '36105121228006'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -32985,8 +32471,6 @@ item_display_struct:
 - id: db061d99-2998-5a86-86e6-a92857360ec6
   barcode: '36105121235092'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33005,8 +32489,6 @@ item_display_struct:
 - id: dc2f1b8b-749a-5347-a786-7bfb1ef7d821
   barcode: '36105121235282'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33025,8 +32507,6 @@ item_display_struct:
 - id: dc5e83cd-20be-5d3f-9635-f246b72d798f
   barcode: '36105121234236'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33045,8 +32525,6 @@ item_display_struct:
 - id: dd40002c-594c-5ac7-af31-36abdb887181
   barcode: '36105121234202'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33065,8 +32543,6 @@ item_display_struct:
 - id: dda87b22-8116-5739-9e8c-3a52cb185fcf
   barcode: '36105121236637'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33085,8 +32561,6 @@ item_display_struct:
 - id: df8b6313-c64c-52c3-b0e8-6f02c4b95d7d
   barcode: 2472159-106001
   library: EARTH-SCI
-  home_location: EAR-MAP-CASES
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33105,8 +32579,6 @@ item_display_struct:
 - id: df8cb9cd-455c-5295-8976-16cbd30bf061
   barcode: '36105121228352'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33125,8 +32597,6 @@ item_display_struct:
 - id: e2c90c63-2dff-50f8-a220-9359fedc3588
   barcode: '36105121236702'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33145,8 +32615,6 @@ item_display_struct:
 - id: e4449080-371b-558f-baf6-53838494566f
   barcode: '36105121236751'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33165,8 +32633,6 @@ item_display_struct:
 - id: e4a72a3a-9b4e-5141-8a94-df25d08b5326
   barcode: '36105121235050'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33185,8 +32651,6 @@ item_display_struct:
 - id: e5ed2ea2-e465-5d22-bb39-00aa58b39b5f
   barcode: '36105121228071'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33205,8 +32669,6 @@ item_display_struct:
 - id: e7ee66f4-56a9-5db4-b8af-e9187ec229c7
   barcode: '36105121234954'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33225,8 +32687,6 @@ item_display_struct:
 - id: e8dcee4d-7af7-5c4f-8856-0cd5559253f1
   barcode: '36105121235977'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33245,8 +32705,6 @@ item_display_struct:
 - id: e8f00525-be39-5551-8106-c83fe31b8193
   barcode: '36105121234350'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33265,8 +32723,6 @@ item_display_struct:
 - id: e97d0b8b-3fe4-5be2-8560-c65f6447bf86
   barcode: '36105121235878'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33285,8 +32741,6 @@ item_display_struct:
 - id: ea3900a0-8d4b-510f-babe-918b677c41fc
   barcode: '36105121236843'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33305,8 +32759,6 @@ item_display_struct:
 - id: eb235f9c-c323-55c8-bdc6-9d49deb7a8fd
   barcode: '36105121228196'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33325,8 +32777,6 @@ item_display_struct:
 - id: ed88c1f3-f5c2-5133-a37d-a7b3b656d37a
   barcode: '36105121236678'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33345,8 +32795,6 @@ item_display_struct:
 - id: eddd61e2-ad46-5907-9c61-302c17014b9a
   barcode: '36105121235142'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33365,8 +32813,6 @@ item_display_struct:
 - id: ee0e11ee-d32c-5ddf-a2e9-02280750adaf
   barcode: '36105121236298'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33385,8 +32831,6 @@ item_display_struct:
 - id: ee2966ea-ffa3-5058-8c6c-e60c198e7372
   barcode: '36105121235126'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33405,8 +32849,6 @@ item_display_struct:
 - id: eeb13009-3561-5bc3-bba9-1394195cf7d8
   barcode: '36105121236587'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33425,8 +32867,6 @@ item_display_struct:
 - id: eff2fa4d-aa97-5e3a-9c90-a5b028c6857b
   barcode: '36105121235241'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33445,8 +32885,6 @@ item_display_struct:
 - id: f022be83-2385-5561-888c-788f187e4af6
   barcode: '36105121236546'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33465,8 +32903,6 @@ item_display_struct:
 - id: f093c8b0-4c9a-570c-83a8-ebcd49965f96
   barcode: '36105121235308'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33485,8 +32921,6 @@ item_display_struct:
 - id: f0fb5ae3-bc07-5fbc-b825-f7d3ba0dd294
   barcode: '36105121236066'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33505,8 +32939,6 @@ item_display_struct:
 - id: f15e3962-9674-5a0b-8ea5-f20743f29668
   barcode: '36105121235472'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33525,8 +32957,6 @@ item_display_struct:
 - id: f2a7418d-1fb2-5747-89d5-01ed12229727
   barcode: '36105121234285'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33545,8 +32975,6 @@ item_display_struct:
 - id: f406a1ca-9700-5fd2-b668-0a5aedc4fa56
   barcode: '36105121236819'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33565,8 +32993,6 @@ item_display_struct:
 - id: f62def9b-6c62-55bc-93d6-134f0c16d4fc
   barcode: '36105121234426'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33585,8 +33011,6 @@ item_display_struct:
 - id: f7652857-1ad8-5ee4-a46c-414b33887594
   barcode: '36105121235357'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33605,8 +33029,6 @@ item_display_struct:
 - id: f84b8fd4-2306-59d0-bfc0-9dbee239a286
   barcode: '36105121236413'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33625,8 +33047,6 @@ item_display_struct:
 - id: f9359ac8-e9f8-5629-b10f-4e9f03426c1e
   barcode: '36105121236561'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33645,8 +33065,6 @@ item_display_struct:
 - id: f9912a5d-675a-5e2d-874f-cebd32132806
   barcode: '36105121234137'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33665,8 +33083,6 @@ item_display_struct:
 - id: f9a48ff2-b2f6-556c-b929-474e1b0c2e17
   barcode: '36105121228311'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33685,8 +33101,6 @@ item_display_struct:
 - id: fa0facf1-0c32-55a0-a58d-8e2078c4e567
   barcode: '36105121236223'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33705,8 +33119,6 @@ item_display_struct:
 - id: fbc3361e-aa1a-58e0-a5f9-e647c0d50de0
   barcode: '36105121236181'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33725,8 +33137,6 @@ item_display_struct:
 - id: fbf4b9f8-0668-5570-b74d-b6f314ed2e3b
   barcode: '36105121234848'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33745,8 +33155,6 @@ item_display_struct:
 - id: fcb43abe-8492-5079-bd54-f6207019daed
   barcode: '36105121234871'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33765,8 +33173,6 @@ item_display_struct:
 - id: fcb736c4-d92c-57b1-a53d-836558ef5fd1
   barcode: '36105121235381'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33785,8 +33191,6 @@ item_display_struct:
 - id: fdb2c6fc-1fb7-5f61-9e30-4560f01c856f
   barcode: '36105121236447'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33805,8 +33209,6 @@ item_display_struct:
 - id: fdc700af-f606-5743-a0e7-e23f74f4fba8
   barcode: '36105121234814'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a
@@ -33825,8 +33227,6 @@ item_display_struct:
 - id: fe6b8715-4ff4-53a8-9541-aaa52258419b
   barcode: '36105121235845'
   library: SAL3
-  home_location: SAL3-PAGE-MP
-  current_location:
   type: book
   note:
   instance_id: 449d7a24-756e-5fbf-a9e8-a78dcf800d1a

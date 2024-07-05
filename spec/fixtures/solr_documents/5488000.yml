@@ -761,7 +761,6 @@ item_display_struct:
 - id: 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
   barcode: '36105026508924'
   library: SAL3
-  home_location: SAL3-STACKS
   current_location:
   type: book
   note:
@@ -781,7 +780,6 @@ item_display_struct:
 - id: f947bd93-a1eb-5613-8745-1063f948c461
   barcode: '36105026515499'
   library: SAL3
-  home_location: SAL3-STACKS
   current_location:
   type: book
   note:
@@ -801,7 +799,6 @@ item_display_struct:
 - id:
   barcode:
   library: SAL3
-  home_location: SAL3-SEE-OTHER
   current_location:
   type:
   note:
@@ -821,7 +818,6 @@ item_display_struct:
 - id:
   barcode:
   library: SAL3
-  home_location: SAL3-SEE-OTHER
   current_location:
   type:
   note:
@@ -841,7 +837,6 @@ item_display_struct:
 - id:
   barcode:
   library: SAL3
-  home_location: SAL3-SEE-OTHER
   current_location:
   type:
   note:

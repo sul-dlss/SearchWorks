@@ -17,11 +17,11 @@ building_facet: Hoover Library
 item_display_struct:
   - barcode: '123'
     library: GREEN
-    home_location: GRE-STACKS
+    effective_permanent_location_code: GRE-STACKS
     callnumber: ABC
   - barcode: '456'
     library: GREEN
-    home_location: GRE-STACKS
+    effective_permanent_location_code: GRE-STACKS
     callnumber: DEF
   - barcode: '789'
     status: On order
