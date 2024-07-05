@@ -239,6 +239,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.0)
     rack (3.1.4)
+    rack-attack (6.7.0)
+      rack (>= 1.0, < 4)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -408,6 +410,7 @@ DEPENDENCIES
   mysql2
   okcomputer
   puma (~> 6.0)
+  rack-attack
   rails (~> 7.1.2)
   rspec
   rspec-rails
