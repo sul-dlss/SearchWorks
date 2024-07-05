@@ -71,3 +71,5 @@ gem 'okcomputer'
 gem 'global_alerts'
 
 gem "cssbundling-rails", "~> 1.1"
+
+gem 'rack-attack'
