@@ -64,7 +64,7 @@ if Settings.THROTTLE_TRAFFIC
     match_data = request.env['rack.attack.match_data']
     now = match_data[:epoch_time]
 
-    Honeybadger.notify("Throttling request", context: { ip: request.ip, path: request.path }.merge(match_data))
+    Honeybadger.notify("Throttling request", context: { ip: request.ip, path: request.path }.merge(match_data)) if match_data[:count] < 15 || (match_data[:count] % 10).zero?
 
     headers = {
       'RateLimit-Limit' => match_data[:limit].to_s,
