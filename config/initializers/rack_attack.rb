@@ -50,6 +50,16 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'articles' && route[:action] == 'show'
   end
 
+  Rack::Attack.throttle('req/actions/ip', limit: 10, period: 1.minute) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    req.ip if route[:action].in? %w[email sms citation fulltext_link]
+  end
+
   # Throttle article searching based on badly behaved user agent (device farm)?
   # Bots seem to be rotating IPs or using multiple devices as of April 2023
   # See error reports e.g. https://app.honeybadger.io/projects/50022/faults/34763067
