@@ -79,4 +79,5 @@ if Settings.THROTTLE_TRAFFIC
   Rack::Attack.safelist_ip("171.64.0.0/14")
   Rack::Attack.safelist_ip("10.0.0.0/8")
   Rack::Attack.safelist_ip("172.16.0.0/12")
+  Rack::Attack.safelist_ip("192.168.0.0/16")
 end
