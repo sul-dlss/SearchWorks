@@ -1,4 +1,12 @@
-  # Throttle catalog search and result requests by IP (10rpm over 1 minute)
+Rack::Attack.throttle('req/ip/1m', limit: 15, period: 1.minutes) do |req|
+  req.ip if req.path == '/all'
+end
+
+Rack::Attack.throttle('req/ip/5m', limit: 50, period: 5.minutes) do |req|
+  req.ip if req.path == '/all'
+end
+
+# Throttle catalog search and result requests by IP (10rpm over 1 minute)
   Rack::Attack.throttle('req/ip/catalog/1m', limit: 10, period: 1.minutes) do |req|
     req.ip if req.path.start_with?('/all/xhr_search/catalog')
   end
