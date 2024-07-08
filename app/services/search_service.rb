@@ -5,13 +5,13 @@ class SearchService
     @query = query
   end
 
-  def all(threads: true, searchers: Settings.ENABLED_SEARCHERS)
+  def all(threads: true, searchers: Settings.ENABLED_SEARCHERS, except: [])
     searches = searchers.each_with_object({}) do |searcher, hash|
       hash[searcher] = nil
     end
 
     benchmark "%s ALL" % CGI.escape(query.to_str) do
-      search_threads = searches.keys.shuffle.map do |search_method|
+      search_threads = searches.keys.excluding(except).shuffle.map do |search_method|
         # Use auto-loading outside the threadpool
         klass = "QuickSearch::#{search_method.camelize}Searcher".constantize
 
