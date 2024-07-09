@@ -428,7 +428,6 @@ cshprotocols.cshlp.org
 ctajournal.biomedcentral.com
 currentprotocols.onlinelibrary.wiley.com
 currents.plos.org
-customer.janes.com
 cvi.asm.org
 cvirendovasc.springeropen.com
 d-nb.info
@@ -482,7 +481,6 @@ dip.doe-mbi.ucla.edu
 direct.mit.edu
 disastermilitarymedicine.biomedcentral.com
 discover.nci.nih.gov
-discover.sabinet.co.za
 discoveriesjournals.org
 dl.acm.org
 dl.moazine.com
@@ -578,7 +576,6 @@ ems.press
 endometabol.com
 engine.scichina.com
 english.rrsurg.com
-englishyiddishdictionary.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
 ep.bmj.com
@@ -638,7 +635,6 @@ fmch.bmj.com
 fn.bmj.com
 focus.psychiatryonline.org
 formative.jmir.org
-fortunoff.aviaryplatform.com
 fraser.stlouisfed.org
 freida.ama-assn.org
 frontiersinzoology.biomedcentral.com
@@ -1487,7 +1483,6 @@ stanford.policymap.com
 stanford.universitypressscholarship.com
 stanfordhealthcare.org
 stanfordhospital.org
-stanfordlaw.kanopy.com
 stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
@@ -1737,7 +1732,6 @@ www.arch-anim-breed.net
 www.archbronconeumol.org
 www.archive.org
 www.archives-pmr.org
-www.archivesdirect.amdigital.co.uk
 www.archivesofpathology.org
 www.archivesofrheumatology.org
 www.archtrauma.com
@@ -1768,7 +1762,6 @@ www.audiologyresearch.org
 www.austlii.edu.au
 www.avert.org
 www.ayujournal.org
-www.balkaninsight.com
 www.balkanmedicaljournal.org
 www.bam-online.org
 www.banglajol.info
@@ -1900,7 +1893,6 @@ www.cnbksy.com
 www.cochranelibrary.com
 www.collantropol.hr
 www.colonialamerica.amdigital.co.uk
-www.colonialcaribbean.amdigital.co.uk
 www.coloproctol.org
 www.columbia.edu
 www.comp-index.com
@@ -2321,7 +2313,6 @@ www.jehp.net
 www.jenb.or.kr
 www.jeo-esska.com
 www.jepm.seahq.net
-www.jewishlife.amdigital.co.uk
 www.jfcmonline.com
 www.jfda-online.com
 www.jfds.org
@@ -2746,7 +2737,6 @@ www.qscience.com
 www.quackwatch.org
 www.qualitycheck.org
 www.r2library.com
-www.racerelations.amdigital.co.uk
 www.racgp.org.au
 www.radiologycases.com
 www.rand.org
@@ -2765,7 +2755,6 @@ www.repdevmed.org
 www.rerf.or.jp
 www.researchinpsychotherapy.org
 www.researchprotocols.org
-www.researchsource.amdigital.co.uk
 www.retronews.fr
 www.reumatismo.org
 www.revespcardiol.org
@@ -2983,7 +2972,6 @@ www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
 www.worldscientific.com
-www.worldsfairs.amdigital.co.uk
 www.worldwater.org
 www.wounds-uk.com
 www.woundsresearch.com
