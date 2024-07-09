@@ -13790,6 +13790,32 @@
     }
   },
   {
+    "id": "e47c8eb5-0e5a-4068-a4d0-152005625e18",
+    "name": "Spec Inprocess 585 RWC",
+    "code": "SPEC-INPROCESS-585-RWC",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
+    "servicePointIds": [
+      "0e924af7-785c-46eb-a5e2-060394822016"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-07-08T21:09:15.666+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-07-08T21:09:15.666+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "e4d612f4-554c-4080-9475-36ed302ce39c",
     "name": "Music Restricted Folio",
     "code": "MUS-R-FOLIO",
