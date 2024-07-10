@@ -257,6 +257,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ARS-SPECIALPROJECTS,No loan,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
 ,book,,,,,ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-FOLIO or ARS-LOCKED or ARS-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,archival,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,archival,,,,,SAL3-PAGE-MU,No loan,Allow paging/hold,Default notice,No fines,$500 lost fee
 ,archival,,,,,EAL-LOCKED-FLATFILE,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
 ,archival,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging,Default notice,No fines,$600 lost fee
