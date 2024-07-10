@@ -103,7 +103,10 @@ gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap conte
 gem 'recaptcha', github: 'ambethia/recaptcha', ref: '7866ec44c565a0f164f65066b97347d29a5f343f' # pinned until 5.17 is released
 gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap', '~> 4.0'
+
 gem 'rack-attack' # For throttle configuration
+gem 'redis'
+
 gem 'global_alerts'
 gem 'view_component'
 
