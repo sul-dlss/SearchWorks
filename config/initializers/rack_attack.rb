@@ -17,7 +17,7 @@
 if Settings.THROTTLE_TRAFFIC
   Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(url: Settings.throttling.redis_url) if Settings.throttling.redis_url
 
-  Rack::Attack.throttle('req/search/ip', limit: 10, period: 1.minute) do |req|
+  Rack::Attack.throttle('req/search/ip', limit: 15, period: 1.minute) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
     rescue StandardError
@@ -27,12 +27,12 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'catalog' && (route[:action] == 'index' || route[:action] == 'facet')
   end
 
-  Rack::Attack.throttle('req/view/ip', limit: 300, period: 5.minutes) do |req|
+  Rack::Attack.throttle('req/view/ip', limit: 500, period: 5.minutes) do |req|
     req.ip if req.path.start_with?('/view')
   end
 
   # Throttle article searching more aggressively
-  Rack::Attack.throttle('articles/search/ip', limit: 30, period: 5.minutes) do |req|
+  Rack::Attack.throttle('articles/search/ip', limit: 50, period: 5.minutes) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
     rescue StandardError
@@ -42,7 +42,7 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'articles' && route[:action] == 'index'
   end
 
-  Rack::Attack.throttle('articles/view/ip', limit: 300, period: 5.minutes) do |req|
+  Rack::Attack.throttle('articles/view/ip', limit: 500, period: 5.minutes) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
     rescue StandardError
@@ -52,7 +52,7 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'articles' && route[:action] == 'show'
   end
 
-  Rack::Attack.throttle('req/actions/ip', limit: 10, period: 1.minute) do |req|
+  Rack::Attack.throttle('req/actions/ip', limit: 15, period: 1.minute) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
     rescue StandardError
