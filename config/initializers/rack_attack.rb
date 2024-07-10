@@ -15,6 +15,8 @@
 # quickly. If so, enable the condition to exclude them from tracking.
 
 if Settings.THROTTLE_TRAFFIC
+  Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(url: Settings.throttling.redis_url) if Settings.throttling.redis_url
+
   Rack::Attack.throttle('req/search/ip', limit: 10, period: 1.minute) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
@@ -87,9 +89,7 @@ if Settings.THROTTLE_TRAFFIC
     [429, headers, ["Throttled\n"]]
   end
 
-  # Disable throttling for Stanford-local users
-  Rack::Attack.safelist_ip("171.64.0.0/14")
-  Rack::Attack.safelist_ip("10.0.0.0/8")
-  Rack::Attack.safelist_ip("172.16.0.0/12")
-  Rack::Attack.safelist_ip("192.168.0.0/16")
+  Settings.throttling.safelist.each do |ip_range|
+    Rack::Attack.safelist_ip(ip_range)
+  end
 end
