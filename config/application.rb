@@ -33,6 +33,6 @@ module SearchWorks
 
     config.middleware.insert 0, Rack::UTF8Sanitizer
 
-    config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log', 'daily')
+    config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log')
   end
 end
