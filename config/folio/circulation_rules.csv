@@ -148,7 +148,7 @@ faculty,book,,,,HILA,,No loan,Allow hold/recall,Default notice,No fines,$100 los
 any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,periodical,,,,SCIENCE,SCI-REF or SCI-RETIRED-REF,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,periodical,,,,ART,ART-EXHIBIT or ART-PROCESSING-SERIALS,No loan,No requests allowed,Default notice,No fines,$150 lost fee
-,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
+,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR or SUL-PAGEABLE-LOC,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
 ,any,,,,,SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
 ,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAL-INPROCESS or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-REPAIR-EVALUATION or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MEDIA-SER-PROCESSING or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-CONSERVATIONSERVICES or SUL-TS-MAINTENANCE,No loan,Allow hold/recall,Default notice,No fines,$250 lost fee
 ,book,,,,,LAW-EYLESAISLE or LAW-VROOMAN2 or LAW-STACKS2 or LAW-REF or LAW-STAFFSHADOW,No loan,No requests allowed,Default notice,No fines,$150 lost fee
@@ -229,7 +229,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,MUS-FLAT or MUS-FOLIO or MUS-MINIATURE or MUS-SCORES or MUS-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,book,,,,,MAR-LOCKED-THESES,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 ,book,,,,,MAR-CHILDRENYA or MAR-GRAPHIC-NOVEL or MAR-JEDI or MAR-POPSCI or MAR-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
-,book,,,,,GRE-REPAIR-EVALUATION or GRE-COURTESY-HOLD,No loan,Hold only,Default notice,No fines,$75 lost fee
+,book,,,,,GRE-REPAIR-EVALUATION or GRE-COURTESY-HOLD,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,book,,,,,GRE-HH-SVA,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,book,,,,,GRE-SSRC-CSLI or GRE-SSRC-NEWBOOK,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-FOLIO or GRE-FOLIO-FLAT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-LOCKED-STK or GRE-SSRC-NEWDOC or GRE-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
@@ -333,7 +333,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 graduate or staff,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
 faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Default notice,No fines,$2000 lost fee kit
-,,,,,,SUL-BORROW-DIRECT,16week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,,,,,SUL-BORROW-DIRECT,16week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,newspaper,,,,,,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee
 ,multimedia,,,,,,No loan,No requests allowed,Default notice,No fines,$225 lost fee

@@ -213,6 +213,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 589933c3-dc9f-48b1-bb4b-b0805d591a96,SAL EAL Stacks Chinese,SAL-EAL-STKS-C,SU,SUL,SAL,Chinese Collection,true,SAL,SAL,,,,,,,GREEN,Offsite,,,,,,
 59eba96c-5184-43cb-a5d4-0785ae2179b4,Art Maintenance Shelf Serials,ART-PROCESSING-SERIALS,SU,SUL,ART,In process,true,ART,ART,,,,,,,,In_process,,,,,,
 5a298029-e552-4c32-acfe-3ad6b9d72f91,SAL3 PAGE-EN,SAL3-PAGE-EN,SU,SUL,SAL3,For use in Terman Library,true,SAL3,SAL3,,,,,ENG,,,Offsite,,,,,,
+5ab62a07-d0e7-4e6a-b67a-cc5a6854bc44,SUL Pageable Location,SUL-PAGEABLE-LOC,SU,SUL,SUL,On hold,true,SULTS,SULTS,,,,,,,,,,,,,,
 5b238ec5-1019-42f7-b621-304fdf4229a2,Earth Sci Processing - CircLS,EAR-PROCESSING-CIRCLS,SU,SUL,EARTH-SCI,In process,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,
 5b308b0c-5f92-4944-8f82-b7d03caabd13,Art VRC,ART-VRC,SU,SUL,ART,In process,true,ART,ART,,https://stanford.stackmap.com/json/,,,,,,,,,,,,
 5bcb078a-cfe6-49c8-994d-699495d8fdee,Law Vrooman 2nd floor,LAW-VROOMAN2,SU,LAW,LAW,"Vrooman collection, 2nd floor",true,LAW,LAW,,,,,,,,,,,,,,
