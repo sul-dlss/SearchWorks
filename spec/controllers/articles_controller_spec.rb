@@ -38,6 +38,22 @@ RSpec.describe ArticlesController do
         end
       end
     end
+
+    context 'when EDS is disabled' do
+      before do
+        allow(Settings).to receive(:EDS_ENABLED).and_return(false)
+      end
+
+      it 'sets a flash alert and redirects' do
+        get :index
+
+        expect(flash[:alert]).to eq(
+          'Article+ search is not enabled'
+        )
+
+        expect(response).to redirect_to(root_path)
+      end
+    end
   end
 
   describe '#show' do
