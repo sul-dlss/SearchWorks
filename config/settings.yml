@@ -42,6 +42,7 @@ OCLC:
     - TURABIAN
     - PREFERRED CITATION
   DOCUMENT_FIELD: 'oclc'
+EDS_ENABLED: true
 EDS_USER: the-eds-user
 EDS_PASS: the-eds-password
 EDS_PROFILE: the-eds-profile

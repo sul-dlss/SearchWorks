@@ -7,6 +7,11 @@ class ArticlesController < ApplicationController
   include EmailValidation
   include BackendLookup
 
+  before_action unless: -> { Settings.EDS_ENABLED } do
+    flash[:alert] = 'Article+ search is not enabled'
+    redirect_to root_path
+  end
+
   rescue_from 'EBSCO::EDS::BadRequest' do |exception|
     raise exception if params[:q].present?
     raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
