@@ -241,7 +241,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 65cbea1d-ac50-4f47-85f5-0ebb8409cb4a,Business SDR,BUS-SDR,SU,GSB,BUSINESS,Stanford Digital Repository,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
 6634d387-158d-4a8b-8d22-1b470811e91a,Rumsey W7 Conservation,RUM-W7-CONSERV,SU,SUL,RUMSEY-MAP,Map Center (W7 Conservation),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,
 6647a586-3474-4841-999e-d41e54d78e68,Business Withdrawn Digital Substitute,BUS-WD-DIGITAL-SUB,SU,GSB,BUSINESS,Digital substitute,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,
-667cc555-3123-44f9-a56b-135e4f6ff927,Music Flat,MUS-FLAT,SU,SUL,MUSIC,Flat folios,true,MUSIC,MUSIC,,,,,,,,,,,,,,
+667cc555-3123-44f9-a56b-135e4f6ff927,Music Flat,MUS-FLAT,SU,SUL,MUSIC,Flat oversize,true,MUSIC,MUSIC,,,,,,,,,,,,,,
 669f1eb6-57f8-4643-966e-fb7341b80dfa,Marine Bio Locked Theses,MAR-LOCKED-THESES,SU,SUL,MARINE-BIO,Locked theses: Ask at circulation desk,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,
 689306c3-d0d2-4c28-b332-f554a2458a8e,SAL Turkish,SAL-TURKISH,SU,SUL,SAL,Temporary shelving for Turkish materials,true,SAL,SAL,,,,,,,GREEN,Offsite,,,,,,
 6899a22b-aadf-49da-8d36-bb472387855e,Law Locked Stacks,LAW-LOCKED,SU,LAW,LAW,Locked stacks,true,LAW,LAW,,,,,,,,,,,,,,
