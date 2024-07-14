@@ -6961,9 +6961,9 @@
   },
   {
     "id": "75115f9b-71d6-4106-8ab9-962f2ca9dd4c",
-    "name": "ARS Folio",
-    "code": "ARS-FOLIO",
-    "discoveryDisplayName": "Folios",
+    "name": "ARS Oversize",
+    "code": "ARS-OVERSIZE",
+    "discoveryDisplayName": "Oversize",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6981,8 +6981,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:54.907+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T20:31:10.908+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2024-07-14T05:06:56.163+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -11579,9 +11579,9 @@
   },
   {
     "id": "c254df28-cd05-4772-b4e4-d0f4820e911c",
-    "name": "Music Folio",
-    "code": "MUS-FOLIO",
-    "discoveryDisplayName": "Folios",
+    "name": "Music Oversize",
+    "code": "MUS-OVERSIZE",
+    "discoveryDisplayName": "Oversize",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -11598,8 +11598,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:50.115+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:50.115+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-07-14T05:07:55.075+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -13842,9 +13842,9 @@
   },
   {
     "id": "e4d612f4-554c-4080-9475-36ed302ce39c",
-    "name": "Music Restricted Folio",
-    "code": "MUS-R-FOLIO",
-    "discoveryDisplayName": "Folio (Limited loan)",
+    "name": "Music Restricted Oversize",
+    "code": "MUS-R-OVERSIZE",
+    "discoveryDisplayName": "Oversize (Limited loan)",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -13861,8 +13861,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:47.084+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:47.084+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-07-14T05:08:42.033+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
