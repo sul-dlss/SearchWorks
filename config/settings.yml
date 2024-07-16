@@ -95,6 +95,9 @@ live_lookup_service: LiveLookup::Folio
 # 'select' (the default) or 'export' (requires indexing with docvalues)
 dynamic_sitemap_solr_endpoint: 'select'
 
+browse_nearby:
+  enabled: true
+
 libraries:
   ARS:
     about_url: https://library.stanford.edu/libraries/archive-recorded-sound

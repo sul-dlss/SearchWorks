@@ -13,6 +13,6 @@
   </div>
 </div>
 
-<% if document.browseable_spines.present? %>
+<% if Settings.browse_nearby.enabled && document.browseable_spines.present? %>
   <%= render 'catalog/record/callnumber_browse', document: document %>
 <% end %>
