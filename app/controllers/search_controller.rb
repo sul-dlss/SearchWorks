@@ -4,7 +4,7 @@ class SearchController < ApplicationController
     @page_title = I18n.t "defaults_search.display_name"
     @module_callout = I18n.t "defaults_search.module_callout"
     @query = params_q_scrubbed
-    @searches = search_service.all(except: %w[articles])
+    @searches = search_service.all(except: %w[article])
     @found_types = @searches.select { |key, searcher| searcher && !searcher.results.blank? }.keys
   end
 
