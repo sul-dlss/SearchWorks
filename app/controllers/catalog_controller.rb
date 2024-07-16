@@ -51,6 +51,11 @@ class CatalogController < ApplicationController
     blacklight_config.index.title_field = blacklight_config.index.title_field.field
   end
 
+  before_action do
+    blacklight_config.default_solr_params['client-ip'] = request.remote_ip
+    blacklight_config.default_solr_params['request-id'] = request.request_id || '-'
+  end
+
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
   configure_blacklight do |config|
