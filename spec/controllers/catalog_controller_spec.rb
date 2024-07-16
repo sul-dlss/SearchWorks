@@ -47,6 +47,12 @@ RSpec.describe CatalogController do
 
       expect(assigns(:response).dig('responseHeader', 'params')).to include 'stats'
     end
+
+    it 'adds client information to the solr request for tracing' do
+      get :index
+
+      expect(assigns(:response).dig('responseHeader', 'params')).to include 'client-ip', 'request-id'
+    end
   end
 
   describe '#email' do
