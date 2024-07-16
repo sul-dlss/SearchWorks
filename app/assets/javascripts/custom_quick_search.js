@@ -1,4 +1,6 @@
 function remove_timedout_spinners(){
+  if (!document.querySelector('.trying_again')) return;
+
   document.querySelector('.trying_again').remove();
 }
 
