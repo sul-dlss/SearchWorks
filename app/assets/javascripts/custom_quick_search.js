@@ -49,7 +49,6 @@ var xhr_searches = function(){
     })
   ).then(
     // No matter what the result (success, failure) the spinners ought to be removed.
-    remove_timedout_spinners,
     remove_timedout_spinners
     );
 }
