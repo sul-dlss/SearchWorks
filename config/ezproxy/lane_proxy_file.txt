@@ -585,7 +585,6 @@ eprints.lib.hokudai.ac.jp
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
-erc.bioscientifica.com
 eric.ed.gov
 erj.ersjournals.com
 erp.bioscientifica.com
@@ -1139,6 +1138,7 @@ neurophotonics.spiedigitallibrary.org
 new.sourceoecd.org
 newfirstsearch.oclc.org
 newspaperslibrary.proquest.com
+nexisuni.com
 nf.aafp.org
 ng.neurology.org
 nida.nih.gov
@@ -2581,7 +2581,6 @@ www.neurotodayonline.com
 www.newday.com
 www.newmicrobiologica.org
 www.newswise.com
-www.nexisuni.com
 www.nextbio.com
 www.nice.org.uk
 www.nida.nih.gov
