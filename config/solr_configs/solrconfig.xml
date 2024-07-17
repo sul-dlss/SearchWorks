@@ -1070,15 +1070,6 @@
     </lst>
   </requestHandler>
 
-  <!-- barcode requests; use /barcode?q=1234567890 -->
-  <requestHandler name="/barcode" class="solr.SearchHandler" >
-    <lst name="defaults">
-      <str name="echoParams">explicit</str>
-      <str name="fl">id</str>
-      <str name="q">{!field f=barcode_search v=$n}</str>
-    </lst>
-  </requestHandler>
-
   <!-- used to get consecutive terms for browsing -->
   <searchComponent name="termsComp" class="solr.TermsComponent"/>
   <requestHandler name="/alphaTerms" class="solr.SearchHandler">

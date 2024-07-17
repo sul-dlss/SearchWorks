@@ -741,7 +741,6 @@ RSpec/SubjectStub:
   Exclude:
     - 'spec/components/access_panels/sfx_component_spec.rb'
     - 'spec/controllers/concerns/callnumber_search_spec.rb'
-    - 'spec/models/barcode_search_spec.rb'
     - 'spec/models/concerns/solr_set_spec.rb'
     - 'spec/models/performance_alerts_spec.rb'
     - 'spec/models/search_builder_spec.rb'
