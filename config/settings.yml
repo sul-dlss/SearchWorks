@@ -15,7 +15,7 @@ CATALOG:
   FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
   HOME_URL: 'https://searchworks.stanford.edu'
 ARTICLE:
-  API_URL: 'https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&format=json'
+  API_URL: 'https://searchworks.stanford.edu/articles?guest=true&q=%{q}&rows=%{max}&format=json'
   QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
   FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
   HOME_URL: 'https://searchworks.stanford.edu/articles'
