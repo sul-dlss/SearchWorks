@@ -748,6 +748,7 @@ icsd.fiz-karlsruhe.de
 icurology.org
 idpjournal.biomedcentral.com
 ieeeXplore.ieee.org
+ieeexplore-ieee-org.stanford.idm.oclc.org
 ieeexplore.ieee.org
 ietresearch.onlinelibrary.wiley.com
 iiif.lib.harvard.edu
