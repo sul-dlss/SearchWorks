@@ -60,6 +60,8 @@ class SfxData
       Faraday.new(url: sfx_url) do |faraday|
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter Faraday.default_adapter
+        # Set the user agent
+        faraday.headers['User-Agent'] = 'Mozilla/5.0 (compatible; +https://searchworks.stanford.edu)'
       end.get
     rescue Faraday::ConnectionFailed
       Honeybadger.notify("SFX data for #{sfx_url} failed to load")
