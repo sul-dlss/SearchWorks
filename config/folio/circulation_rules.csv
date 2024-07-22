@@ -210,6 +210,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,game,,,,,EDU-CURRICULUM,14day-2renew-3daygrace,Allow paging,Default notice,No fines,$50 lost fee
 ,game,,,,,EAR-ATCIRCDESK,14day-2renew-3daygrace,No requests allowed,Default notice,No fines,$50 lost fee
 ,portable device 1,,,,,MUS-RECORDINGS,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$150 lost fee
+,portable device 1,,,,,MEDIA-PAGE-MM,7day-1renew-3daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,portable device 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$250 lost fee
 ,library equipment 4,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$1000 lost fee
 ,library equipment 3,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$500 lost fee
@@ -324,7 +325,6 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,map,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,map,,,,GREEN,,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,portable device 2,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$250 lost fee - 1 hr aged to lost
-,portable device 1,,,,MEDIA-CENTER,,7day-1renew-3daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,portable device 1,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$250 lost fee - 1 hr aged to lost
 ,portable device 1,,,,ENG,,14day-norenew-1daygrace,No requests allowed,Default notice,No fines,$250 lost fee
 ,library equipment 1,,,,ENG,,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
