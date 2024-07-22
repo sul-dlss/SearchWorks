@@ -50,13 +50,13 @@ pipeline {
       }
     }
 
-    stage('Deploy on release') {
+    stage('Deploy to -prod') {
       environment {
         DEPLOY_ENVIRONMENT = 'prod'
       }
 
       when {
-        tag "v*"
+        branch 'main'
       }
 
       steps {
