@@ -126,8 +126,10 @@ faculty,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or
 fellow or graduate or postdoctoral,book,,,,,ART-FOLIO or ART-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 staff or staff-casual,book,,,,,ART-FOLIO or ART-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,28-day notice,3.00/21.00 recall overdue fine,$150 lost fee
 faculty,book,,,,,ART-FOLIO or ART-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,28-day notice,No fines,$150 lost fee
-graduate or postdoctoral or undergrad or staff or staff-casual or fellow,book,,,,,ARS-OVERSIZE or ARS-LOCKED or ARS-STACKS,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
-faculty,book,,,,,ARS-OVERSIZE or ARS-LOCKED or ARS-STACKS,1yearfixed-2renew-7daygrace,Allow All,28-day notice,No fines,$65 lost fee
+graduate or postdoctoral or undergrad or staff or staff-casual or fellow,book,,,,,ARS-LOCKED,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+faculty,book,,,,,ARS-LOCKED,1yearfixed-2renew-7daygrace,Allow All,28-day notice,No fines,$65 lost fee
+graduate or postdoctoral or undergrad or staff or staff-casual or fellow,book,,,,,ARS-OVERSIZE or ARS-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+faculty,book,,,,,ARS-OVERSIZE or ARS-STACKS,1yearfixed-2renew-7daygrace,Allow hold/recall,28-day notice,No fines,$65 lost fee
 graduate or postdoctoral,book,,,,LANE,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 staff or faculty or lane-resident or lane-hospital staff or fellow,book,,,,LANE,,1yearfixed-2renew-7daygrace,Allow All,28-day notice,3.00/21.00 recall overdue fine,$250 lost fee
 undergrad or staff-casual or visiting scholar,book,,,,LANE,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
@@ -142,7 +144,7 @@ faculty,periodical,,,,EARTH-SCI,,28day-2renew-7daygrace,Allow hold/recall,Defaul
 faculty,multimedia,,,,SAL3,,28day-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
 faculty,multimedia,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
 graduate or undergrad,multimedia,,,,ART,,7day-1renew-3daygrace -5item,No requests allowed,Default notice,No fines,$100 lost fee
-faculty,multimedia,,,,ARS,,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,No fines,$65 lost fee
+faculty,multimedia,,,,ARS,,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$65 lost fee
 faculty,microform,,,,EARTH-SCI,,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,No fines,$500 lost fee
 faculty,map,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,No fines,$75 lost fee
 graduate or postdoctoral,book,,,,SAL,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
@@ -266,7 +268,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ARS-INPROCESS,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-SPECIALPROJECTS,No loan,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
 ,book,,,,,ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
-,book,,,,,ARS-OVERSIZE or ARS-LOCKED or ARS-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,book,,,,,ARS-LOCKED,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,book,,,,,ARS-OVERSIZE or ARS-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,archival,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,archival,,,,,SAL3-PAGE-MU,No loan,Allow paging/hold,Default notice,No fines,$500 lost fee
 ,archival,,,,,EAL-LOCKED-FLATFILE,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
@@ -314,7 +317,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,multimedia,,,,EAST-ASIA,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$75 lost fee
 ,multimedia,,,,EARTH-SCI,,7day-norenew-1daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,multimedia,,,,ART,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,multimedia,,,,ARS,,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,multimedia,,,,ARS,,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,microform,,,,SAL3,,No loan,Allow paging/hold,Default notice,No fines,$300 lost fee
 ,microform,,,,SAL,,No loan,Allow paging,Default notice,No fines,$100 lost fee
 ,microform,,,,MUSIC,,7day-norenew-1daygrace,No requests allowed,Default notice,No fines,$100 lost fee
