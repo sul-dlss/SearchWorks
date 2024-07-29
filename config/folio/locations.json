@@ -567,6 +567,32 @@
     }
   },
   {
+    "id": "06d97475-3945-4083-9342-db9b8c16df11",
+    "name": "Green Hohbach SVA Special Projects",
+    "code": "GRE-HH-SVA-SPECIALPROJECTS",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-07-26T21:42:38.726+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-07-26T21:42:38.726+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "06e128e7-2970-47d1-8dfa-fcd651803e1a",
     "name": "Earth Sci Map Cases",
     "code": "EAR-MAP-CASES",
@@ -6886,13 +6912,14 @@
     "id": "73aca698-c6f5-4a0d-900b-01fbd0d2924b",
     "name": "Green Hohbach SVA",
     "code": "GRE-HH-SVA",
-    "discoveryDisplayName": "In process",
+    "discoveryDisplayName": "Hohbach Hall: Silicon Valley Archives",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "pageServicePointCodes": "GREEN-LOAN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -6904,7 +6931,7 @@
     "metadata": {
       "createdDate": "2024-03-30T00:03:46.585+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2024-03-30T00:03:46.585+00:00",
+      "updatedDate": "2024-07-26T21:59:38.561+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
