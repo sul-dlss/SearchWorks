@@ -1323,6 +1323,7 @@ pubs.acs.org
 pubs.aeaweb.org
 pubs.aip.org
 pubs.asha.org
+pubs.casi.ca
 pubs.geoscienceworld.org
 pubs.lib.umn.edu
 pubs.rsc.org
