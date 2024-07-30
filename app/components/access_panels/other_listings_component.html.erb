@@ -1,0 +1,11 @@
+<%= render @layout.new do |component| %>
+  <% component.with_title { 'Also listed in' } %>
+  <% component.with_body do %>
+    <% if earthworks_url.present? %>
+      <p><%= link_to('Earthworks', earthworks_url) %></p>
+    <% end %>
+    <% purl_links.each do |purl_link| %>
+      <p><%= purl_link %></p>
+    <% end %>
+  <% end %>
+<% end %>
