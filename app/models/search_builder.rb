@@ -38,6 +38,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   # Solr edismax does not apply phrase boosts to single-term matches. When we have a single term query,
   # we can use a different set of query boosts to give better results.
   def modify_single_term_qf(solr_params)
+    return unless Settings.search.use_single_term_query_fields
     return unless blacklight_params && blacklight_params[:q].present? && solr_params[:qf].blank?
 
     q_str = blacklight_params[:q]

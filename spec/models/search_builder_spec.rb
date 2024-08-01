@@ -35,6 +35,10 @@ RSpec.describe SearchBuilder do
   end
 
   describe 'single term query' do
+    before do
+      allow(Settings.search).to receive(:use_single_term_query_fields).and_return(true)
+    end
+
     it "sets the single-term query fields" do
       solr_params = search_builder.with(q: 'singleterm').to_hash
       expect(solr_params[:qf]).to eq '${qf_single_term}'
