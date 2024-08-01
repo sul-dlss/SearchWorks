@@ -12,6 +12,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   self.default_processor_chain += [:database_prefix_search]
   self.default_processor_chain += [:modify_params_for_cjk, :modify_params_for_cjk_advanced]
   self.default_processor_chain += [:consolidate_home_page_params]
+  self.default_processor_chain += [:modify_single_term_qf]
 
   # Override range limit to only add parameters on search pages, not the home page
   def add_range_limit_params(*args)
@@ -32,6 +33,17 @@ class SearchBuilder < Blacklight::SearchBuilder
 
     solr_params[:fq] ||= []
     solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
+  end
+
+  # Solr edismax does not apply phrase boosts to single-term matches. When we have a single term query,
+  # we can use a different set of query boosts to give better results.
+  def modify_single_term_qf(solr_params)
+    return unless blacklight_params && blacklight_params[:q].present? && solr_params[:qf].blank?
+
+    q_str = blacklight_params[:q]
+    return unless q_str.split.size == 1
+
+    solr_params[:qf] = '${qf_single_term}'
   end
 
   private
