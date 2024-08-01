@@ -34,6 +34,27 @@ RSpec.describe SearchBuilder do
     end
   end
 
+  describe 'single term query' do
+    before do
+      allow(Settings.search).to receive(:use_single_term_query_fields).and_return(true)
+    end
+
+    it "sets the single-term query fields" do
+      solr_params = search_builder.with(q: 'singleterm').to_hash
+      expect(solr_params[:qf]).to eq '${qf_single_term}'
+    end
+
+    it "leaves multi-term queries alone" do
+      solr_params = search_builder.with(q: 'multi term').to_hash
+      expect(solr_params[:qf]).to be_nil
+    end
+
+    it "leaves fielded search queries alone" do
+      solr_params = search_builder.with(q: 'multi term', search_field: 'search_title').to_hash
+      expect(solr_params[:qf]).to eq '${qf_title}'
+    end
+  end
+
   describe "advanced search" do
     let(:action_name) { 'advanced_search' }
 

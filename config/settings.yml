@@ -98,6 +98,9 @@ dynamic_sitemap_solr_endpoint: 'select'
 browse_nearby:
   enabled: true
 
+search:
+  use_single_term_query_fields: false
+
 libraries:
   ARS:
     about_url: https://library.stanford.edu/libraries/archive-recorded-sound
