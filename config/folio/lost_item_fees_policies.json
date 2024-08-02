@@ -580,9 +580,25 @@
   },
   {
     "name": "no replacement",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
     "chargeAmountItem": {
       "chargeType": "anotherCost",
-      "amount": 0.0
+      "amount": 500.0
     },
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
@@ -599,8 +615,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:02.287+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:02.287+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-08-02T00:31:09.810+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "ad576adb-acd4-4467-b0ec-d5b2011dc1f2"
   },
