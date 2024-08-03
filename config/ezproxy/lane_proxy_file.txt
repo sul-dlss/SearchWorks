@@ -448,6 +448,7 @@ dccc.chemnetbase.com
 dds.crl.edu
 deckerip.com
 deepresearch.amplyfi.com
+degruyter.com
 deposit.d-nb.de
 deposit.ddb.de
 deposit.dnb.de
