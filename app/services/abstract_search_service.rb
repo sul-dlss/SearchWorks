@@ -122,8 +122,7 @@ class AbstractSearchService
             format(@query_url.to_s, q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS)
           end
 
-    # Passing a known "non-Stanford" ipaddress
-    response = @http.headers('X-Forwarded-For' => '192.168.0.1').get(url.to_s)
+    response = @http.get(url.to_s)
 
     raise NoResults unless response.status.success? && response.body.present?
 
