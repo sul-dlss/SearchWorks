@@ -59,5 +59,17 @@ RSpec.describe ApplicationController do
 
       it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be_falsey }
     end
+
+    context 'with the guest param' do
+      let(:user) do
+        User.new(email: 'user@stanford.edu', affiliations: 'test-stanford:test')
+      end
+
+      before do
+        allow(controller).to receive(:params).and_return(guest: true)
+      end
+
+      it { expect(controller.send(:on_campus_or_su_affiliated_user?)).to be false }
+    end
   end
 end

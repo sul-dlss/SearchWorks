@@ -19,6 +19,9 @@ class ApplicationController < ActionController::Base
   end
 
   def on_campus_or_su_affiliated_user?
+    # used by e.g. sul-bento-app to return results as if it wasn't on-campus.
+    return false if params[:guest]
+
     IPRange.includes?(request.remote_ip) || current_user&.stanford_affiliated?
   end
   helper_method :on_campus_or_su_affiliated_user?
