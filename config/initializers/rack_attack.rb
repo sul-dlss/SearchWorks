@@ -76,7 +76,9 @@ if Settings.THROTTLE_TRAFFIC
     match_data = request.env['rack.attack.match_data']
     now = match_data[:epoch_time]
 
-    if Settings.SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER && (((match_data[:limit] - match_data[:count]) < 5) || (match_data[:count] % 10).zero?)
+    if Settings.SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER &&
+       (((match_data[:limit] - match_data[:count]) < 5) || (match_data[:count] % 10).zero?) &&
+       !request.remote_ip&.start_with?(/15\d\./) # ignore abuse from hwclouds (among others)
       Honeybadger.notify("Throttling request", context: { ip: request.ip, path: request.path }.merge(match_data))
     end
 
