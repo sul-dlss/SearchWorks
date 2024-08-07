@@ -529,7 +529,6 @@ eba.worldbank.org
 ebm.bmj.com
 ebmh.bmj.com
 ebn.bmj.com
-ebook.3m.com
 ebook.kstudy.com
 ebook.rsc.org
 ebook.sts.org
@@ -978,7 +977,6 @@ jvat.biomedcentral.com
 jvin.org
 karger.com
 khabarlahariya.org
-kiltsnielsen.chicagobooth.edu
 kinetoplastids.biomedcentral.com
 kingguide.com
 kinoden.kinokuniya.co.jp
@@ -2771,7 +2769,6 @@ www.rkma.com
 www.rmmj.org.il
 www.rockandroll.amdigital.co.uk
 www.romanticism.amdigital.co.uk
-www.routledgehandbooks.com
 www.rpe.org.in
 www.rrh.org.au
 www.rsc.org
