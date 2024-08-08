@@ -246,7 +246,7 @@
        of SearchComponents (see below) and supports distributed
        queries across multiple shards
     -->
-  <requestHandler name="search" class="solr.SearchHandler" default="true">
+  <requestHandler name="/select" class="solr.SearchHandler">
     <lst name="defaults">
       <str name="defType">edismax</str>
       <str name="echoParams">explicit</str>
@@ -1049,7 +1049,7 @@
   </requestHandler>
 
   <!-- single document requests; use id=666 instead of q=id:666 -->
-  <requestHandler name="document" class="solr.SearchHandler" >
+  <requestHandler name="/document" class="solr.SearchHandler" >
     <lst name="defaults">
       <str name="echoParams">explicit</str>
       <str name="fl">
