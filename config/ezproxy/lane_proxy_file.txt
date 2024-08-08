@@ -1690,6 +1690,7 @@ www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
 www.americanheart.org
 www.americanindiannewspapers.amdigital.co.uk
+www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
 www.amfar.org
 www.amhsr.org
@@ -2531,6 +2532,7 @@ www.microbiologyresearch.org
 www.micromedexsolutions.com
 www.micropress.org
 www.micropublication.org
+www.migration.amdigital.co.uk
 www.minervamedica.it
 www.minnesotamedicine.com
 www.minsocam.org
