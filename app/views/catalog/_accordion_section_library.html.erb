@@ -13,7 +13,7 @@
         <%= snippet %>
       </span>
     </div>
-    <div class="details <%= id %>-location" aria-expanded="false" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
+    <div class="details <%= id %>-location" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
       <% if document.holdings.present? %>
         <% document.holdings.libraries.select(&:present?).each do |library| %>
           <%= render SearchResult::LocationComponent.new(library:, document:) %>
