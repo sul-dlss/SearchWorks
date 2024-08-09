@@ -76,6 +76,10 @@ Metrics/BlockLength:
     - 'app/views/**/*.atom.builder'
   Max: 20
 
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/catalog_controller.rb'
+
 RSpec/DescribeClass:
   Exclude:
     - 'spec/views/**/*'
