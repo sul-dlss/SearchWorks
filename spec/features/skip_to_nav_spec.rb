@@ -41,20 +41,6 @@ RSpec.feature "Skip-to Navigation" do
     end
   end
 
-  scenario 'places focus on traditionally non-focusable elements', :js do
-    visit root_path
-
-    body_element = page.find("body")
-    body_element.native.send_keys(:tab)
-    body_element.native.send_keys(:tab)
-
-    within '#skip-link' do
-      click_link 'Skip to main content'
-      active_element = page.evaluate_script('$(document.activeElement).attr("id")')
-      expect(active_element).to eq 'main-container'
-    end
-  end
-
   scenario "has skip-to navigation links to search field, main container and records in record view page" do
     visit solr_document_path 20
 

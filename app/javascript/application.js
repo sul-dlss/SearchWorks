@@ -51,12 +51,11 @@ import "./preview-content";
 import "./recent-selections";
 import "./select-all";
 import "./sfx-panel";
-import "./skip-to-nav";
 import "./tooltip";
 import "./truncate";
 import "./update-hidden-inputs-by-checkbox";
 
-// TODO: Remove this whole method when we upgrade to Blacklight 8, provided that 
+// TODO: Remove this whole method when we upgrade to Blacklight 8, provided that
 //       https://github.com/projectblacklight/blacklight/pull/3133 is merged
 //
 // Add the passed in contents to the modal and display it.
