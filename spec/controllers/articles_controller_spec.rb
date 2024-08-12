@@ -53,6 +53,18 @@ RSpec.describe ArticlesController do
 
         expect(response).to redirect_to(root_path)
       end
+
+      context 'for a json request' do
+        it 'renders an error' do
+          get :index, format: :json
+
+          expect(flash[:alert]).to eq(
+            'Article+ search is not enabled'
+          )
+
+          expect(response).to have_http_status(:bad_request)
+        end
+      end
     end
   end
 
