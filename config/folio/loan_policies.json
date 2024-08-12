@@ -389,7 +389,7 @@
     "loanable": true,
     "loansPolicy": {
       "profileId": "Fixed",
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
       "gracePeriod": {
         "duration": 14,
         "intervalId": "Days"
@@ -423,8 +423,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:57.933+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:57.933+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-08-09T16:40:59.548+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
@@ -948,7 +948,7 @@
     "loanable": true,
     "loansPolicy": {
       "profileId": "Fixed",
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
       "gracePeriod": {
         "duration": 7,
         "intervalId": "Days"
@@ -982,8 +982,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:58.305+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:58.305+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-08-09T16:40:17.009+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
