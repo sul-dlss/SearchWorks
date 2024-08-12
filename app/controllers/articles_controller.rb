@@ -9,7 +9,12 @@ class ArticlesController < ApplicationController
 
   before_action unless: -> { Settings.EDS_ENABLED } do
     flash[:alert] = 'Article+ search is not enabled'
-    redirect_to root_path
+
+    if request.format.json?
+      render json: { error: 'Article+ search is not enabled' }, status: :bad_request
+    else
+      redirect_to root_path
+    end
   end
 
   rescue_from 'EBSCO::EDS::BadRequest' do |exception|

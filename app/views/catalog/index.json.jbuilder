@@ -17,5 +17,5 @@ json.response do
       end
     end
   end
-  json.pages @presenter.pagination_info
+  json.pages @presenter.pagination_info if has_search_parameters?
 end
