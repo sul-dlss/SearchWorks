@@ -78,7 +78,8 @@ if Settings.THROTTLE_TRAFFIC
 
     if Settings.SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER &&
        (((match_data[:limit] - match_data[:count]) < 5) || (match_data[:count] % 10).zero?) &&
-       !request.ip&.start_with?(/15\d\./) # ignore abuse from hwclouds (among others)
+       !request.ip&.start_with?(/15\d\./) && # ignore abuse from hwclouds (among others)
+       request.env['HTTP_REFERER'] != "https://google.com" # ignore abuse from bots
       Honeybadger.notify("Throttling request", context: { ip: request.ip, path: request.path }.merge(match_data))
     end
 
