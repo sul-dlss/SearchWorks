@@ -48,6 +48,7 @@ advancesinsimulation.biomedcentral.com
 aejournal.biomedcentral.com
 aem.asm.org
 afju.springeropen.com
+africacommons.net
 aging.jmir.org
 agupubs.onlinelibrary.wiley.com
 ahajournals.org
@@ -2872,6 +2873,7 @@ www.thebody.com
 www.thecco.net
 www.thecjcr.org
 www.thecritui.com
+www.thedriftmag.com
 www.theiet.org
 www.theijoem.com
 www.thejh.org
