@@ -140,26 +140,19 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.0.tgz#dee66d21bc125a9819dc8080ce896eac78d8c63f"
   integrity sha512-crcsPF3skrqJkFZLxesZoyUEt8ol25XtTuOAUMdLa5qQKWTZpL8eLVW71bDCwKDQLbV2z5sBZ/XGEC0i+ZZa+A==
 
-blacklight-frontend@7:
-  version "7.37.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.37.0.tgz#cbc2e744ebf1728546e3f6a6b0033fe36227d4e0"
-  integrity sha512-WaZs10y8BFKrz6yWNqhszNujgkqrQggJDOzoFhPAhF/1/vs+mZ1TkEd+vktnCdxaustRZqEeNa5KQWIuvjgIaA==
+blacklight-frontend@7, "blacklight-frontend@>=7.1 || 8.0":
+  version "7.38.0"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.38.0.tgz#0dce6531602c7bb3a0e3c5f99cea788158d19401"
+  integrity sha512-zsX+cMgeuUuKxwx1FydE4H1XzkTJoywmwGOznllyVYCatIlG2xCVM8IFbuv+VB9Qwoss9z0MjH87l2nMnSPKIA==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
     jquery "^3.5.1"
     typeahead.js "^0.11.1"
 
-"blacklight-frontend@>=7.1 || 8.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.3.0.tgz#e0b108835f2e21b54eef09afb581d0f2b6cc4288"
-  integrity sha512-V92LxXqe1QSdg18qVYQ5cIWfWPLJiU0D84ZNA4IICJBdzoZ3cAsVwnMXdOgV0zhQT8BQQtTG2+E5bcUUFg3oug==
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-
 blacklight-hierarchy@^6.1.2:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.3.0.tgz#a072c4f091d42e5113385a87a6981b6faa1e5d65"
-  integrity sha512-R3hqIjpiUsP70qJ6vChYUWOZh2PrXcgvGY3ndV+5C+nDNz80Mg6Wr2HOYadU7ee1cuTZvIUXqB7VEitqzAeKGA==
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.4.0.tgz#bcc847508d80160b1bc38be74ec41a207965f34e"
+  integrity sha512-5JL8U8qhVaBy/FVG4DM9MXxpIc1bsTSqI3cEdMS3Md6emFCIThJFiTkooBiCgiumdg/QLT7oKHJxbR5kntwDZQ==
   dependencies:
     blacklight-frontend ">=7.1 || 8.0"
     jquery ">=3.0"
