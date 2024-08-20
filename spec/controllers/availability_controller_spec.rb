@@ -19,6 +19,14 @@ RSpec.describe AvailabilityController do
     end
   end
 
+  describe "with a blank ID" do
+    it "should render a blank JSON array w/o making a live lookup request" do
+      expect(LiveLookup).not_to receive(:new)
+      get :index, params: { ids: [''] }
+      expect(response.body).to eq '[]'
+    end
+  end
+
   describe "with IDs" do
     let(:lookup) { double('new') }
     let(:json) { [{ a: 'a', b: 'b' }] }
