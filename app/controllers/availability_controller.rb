@@ -15,6 +15,6 @@ class AvailabilityController < ApplicationController
   end
 
   def redirect_no_ids
-    render json: [] unless params[:ids].present?
+    render json: [] unless Array(params[:ids]).compact_blank.present?
   end
 end

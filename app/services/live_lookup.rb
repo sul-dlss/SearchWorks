@@ -6,7 +6,7 @@ class LiveLookup
   delegate :as_json, :to_json, to: :records
 
   def initialize(ids)
-    @ids = [ids].flatten.compact
+    @ids = Array(ids).compact_blank
   end
 
   # Uses the LiveLookup service specified by Settings.live_lookup_service
