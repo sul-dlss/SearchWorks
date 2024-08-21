@@ -42,7 +42,7 @@ class SearchBuilder < Blacklight::SearchBuilder
     return unless blacklight_params && blacklight_params[:q].present? && solr_params[:qf].blank?
 
     q_str = blacklight_params[:q]
-    return unless q_str.split.size == 1
+    return unless q_str.is_a?(String) && q_str.split.size == 1
 
     solr_params[:qf] = '${qf_single_term}'
   end
