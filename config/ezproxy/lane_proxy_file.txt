@@ -1071,6 +1071,7 @@ mejdd.org
 mem.lyellcollection.org
 mental.jmir.org
 meridian.allenpress.com
+methods.cas.org
 methods.sagepub.com
 mg.nlcpress.com
 mh.bmj.com
@@ -2240,6 +2241,7 @@ www.indianjrheumatol.com
 www.indianjurol.com
 www.indianpediatrics.net
 www.indiastat.com
+www.indigenoushistoriesandcultures.amdigital.co.uk
 www.industrialpsychiatry.org
 www.infobank.cn
 www.informatics-review.com
@@ -2526,7 +2528,6 @@ www.merck.com
 www.merckmanuals.com
 www.merckvetmanual.com
 www.methodisthealth.com
-www.methodsnow.com
 www.mhlw.go.jp
 www.mhra.gov.uk
 www.microbiologyresearch.org
