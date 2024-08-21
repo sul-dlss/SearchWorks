@@ -49,6 +49,11 @@ RSpec.describe SearchBuilder do
       expect(solr_params[:qf]).to be_nil
     end
 
+    it "leaves structured queries alone" do
+      solr_params = search_builder.with(q: { id: ['12345', '54321'] }).to_hash
+      expect(solr_params[:qf]).to be_nil
+    end
+
     it "leaves fielded search queries alone" do
       solr_params = search_builder.with(q: 'multi term', search_field: 'search_title').to_hash
       expect(solr_params[:qf]).to eq '${qf_title}'
