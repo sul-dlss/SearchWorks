@@ -1360,6 +1360,7 @@ repository.edm-forum.org
 repository.icesi.edu.co
 repository.tufs.ac.jp
 repository.uchastings.edu
+repository.uclawsf.edu
 reproductive-health-journal.biomedcentral.com
 research.utwente.nl
 researchintegrityjournal.biomedcentral.com
@@ -1658,7 +1659,6 @@ www.ahbps.org
 www.ahd.com
 www.ahrq.gov
 www.aidsreviews.com
-www.aihc.amdigital.co.uk
 www.aimjournal.ir
 www.aimspress.com
 www.airitibooks.com
@@ -1897,6 +1897,7 @@ www.cnbksy.com
 www.cochranelibrary.com
 www.collantropol.hr
 www.colonialamerica.amdigital.co.uk
+www.colonialcaribbean.amdigital.co.uk
 www.coloproctol.org
 www.columbia.edu
 www.comp-index.com
@@ -2242,6 +2243,7 @@ www.indianjurol.com
 www.indianpediatrics.net
 www.indiastat.com
 www.indigenoushistoriesandcultures.amdigital.co.uk
+www.indigenousnewspapersinnorthamerica.amdigital.co.uk
 www.industrialpsychiatry.org
 www.infobank.cn
 www.informatics-review.com
