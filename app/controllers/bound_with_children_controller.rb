@@ -11,7 +11,7 @@ class BoundWithChildrenController < ApplicationController
     end
 
     def reverse_merge(extra)
-      extra.merge(q: "bound_with_parent_item_ids_ssim:#{@item_id}", facet: false)
+      extra.merge(q: "bound_with_parent_item_ids_ssim:#{@item_id}", facet: false, rows: 100)
     end
   end
 
