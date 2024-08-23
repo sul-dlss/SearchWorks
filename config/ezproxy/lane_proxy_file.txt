@@ -1347,7 +1347,6 @@ read.dukeupress.edu
 reader.digitale-sammlungen.de
 rebase.neb.com
 redalyc.uaemex.mx
-redbook.solutions.aap.org
 redivis.com
 referenceworks.brillonline.com
 refworks.proquest.com
@@ -1726,6 +1725,7 @@ www.aott.org.tr
 www.aoucospubs.org
 www.apa.org
 www.apabi.com
+www.apartheidsouthafrica.amdigital.co.uk
 www.apicareonline.com
 www.apollomedicine.org
 www.appliedradiology.com
