@@ -367,7 +367,6 @@ cig.uw.edu
 ciliajournal.biomedcentral.com
 cinc.org
 cindasdata.com
-cisweb.lexis-nexis.com
 cjkhd.biomedcentral.com
 cjnr.archive.mcgill.ca
 cjon.ons.org
@@ -1459,6 +1458,7 @@ sljol.info
 small.wenzibase.com
 smj.sma.org.sg
 society.kisti.re.kr
+southasiacommons.net
 sp.lyellcollection.org
 spiedigitallibrary.org
 spj.sciencemag.org
@@ -2142,6 +2142,7 @@ www.hhmi.org
 www.hhrjournal.org
 www.highwirepress.com
 www.hindawi.com
+www.hindicinema.amdigital.co.uk
 www.histmodbiomed.org
 www.historyofmedicine.com
 www.hiv.lanl.gov
