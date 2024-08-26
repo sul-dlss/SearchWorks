@@ -81,24 +81,24 @@
 
     <!-- Author Title Search Fields -->
     <field name="author_title_245ac_search" type="text" indexed="true" stored="true" multiValued="true" />
-    <field name="author_title_245ac_unstem_search" type="text" indexed="true" stored="false" multiValued="true" />
-    <field name="vern_author_title_245ac_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="author_title_245ac_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="vern_author_title_245ac_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_title_1xx_search" type="text" indexed="true" stored="true" multiValued="true" />
-    <field name="author_title_1xx_unstem_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="author_title_1xx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
     <field name="vern_author_title_1xx_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_title_search" type="text" indexed="true" stored="true" multiValued="true" />
-    <field name="author_title_unstem_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="author_title_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
     <field name="best_author_title_search" type="text" indexed="true" stored="true" multiValued="false" />
 
     <!-- Author Search Fields -->
     <field name="author_1xx_search" type="text" indexed="true" stored="true" />
-    <field name="vern_author_1xx_search" type="textNoStem" indexed="true" stored="true" />
+    <field name="vern_author_1xx_search" type="text" indexed="true" stored="true" />
     <field name="author_1xx_unstem_search" type="textNoStem" indexed="true" stored="false" />
     <field name="author_7xx_search" type="text" indexed="true" stored="true" multiValued="true" />
-    <field name="vern_author_7xx_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_author_7xx_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_7xx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
     <field name="author_8xx_search" type="text" indexed="true" stored="true" multiValued="true" />
-    <field name="vern_author_8xx_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
+    <field name="vern_author_8xx_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_8xx_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
 
     <!-- Author Facet Fields -->
