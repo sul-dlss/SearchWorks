@@ -60,9 +60,8 @@ group :development, :test do
   gem 'factory_bot_rails'
 end
 
-group :sqlite do
-  gem 'sqlite3', '~> 1.7'
-end
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '>= 2.0'
 
 group :production do
   gem 'mysql2'
