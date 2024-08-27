@@ -60,7 +60,7 @@ RSpec.describe SearchBuilder do
     end
   end
 
-  describe "advanced search" do
+  context "with an advanced search" do
     let(:action_name) { 'advanced_search' }
 
     it "sets the facet limit to -1 (unlimited)" do
@@ -70,6 +70,16 @@ RSpec.describe SearchBuilder do
                                      "f.format_physical_ssim.facet.limit" => -1,
                                      "f.building_facet.facet.limit" => -1,
                                      "f.language.facet.limit" => -1
+    end
+  end
+
+  context 'with a boolean query' do
+    let(:blacklight_params) { { q: '(Dutch OR Netherlands) paintings' } }
+
+    it 'converts the subquery to edismax' do
+      search_builder.add_edismax_advanced_parse_q_to_solr(solr_params)
+
+      expect(solr_params[:q]).to eq '_query_:"{!edismax }paintings" AND _query_:"{!edismax mm=1}Dutch Netherlands"'
     end
   end
 

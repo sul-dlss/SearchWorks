@@ -8,11 +8,18 @@ class SearchBuilder < Blacklight::SearchBuilder
   include BlacklightRangeLimit::RangeLimitBuilder
   include CJKQuery
 
-  self.default_processor_chain += [:add_advanced_parse_q_to_solr, :add_advanced_search_to_solr]
+  self.default_processor_chain += [:add_edismax_advanced_parse_q_to_solr, :add_advanced_search_to_solr]
   self.default_processor_chain += [:database_prefix_search]
   self.default_processor_chain += [:modify_params_for_cjk, :modify_params_for_cjk_advanced]
   self.default_processor_chain += [:consolidate_home_page_params]
   self.default_processor_chain += [:modify_single_term_qf]
+
+  # Tweak advanced search's boolean query output to use edismax instead of dismax
+  def add_edismax_advanced_parse_q_to_solr(solr_params)
+    add_advanced_parse_q_to_solr(solr_params)
+
+    solr_params[:q] = solr_params[:q].gsub('{!dismax', '{!edismax') if solr_params[:q].respond_to?(:to_str) && solr_params[:q].include?('{!dismax')
+  end
 
   # Override range limit to only add parameters on search pages, not the home page
   def add_range_limit_params(*args)
