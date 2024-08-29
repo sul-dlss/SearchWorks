@@ -11075,7 +11075,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -11087,7 +11088,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:11.871+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:53:07.644+00:00",
+      "updatedDate": "2024-08-29T00:02:32.585+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
