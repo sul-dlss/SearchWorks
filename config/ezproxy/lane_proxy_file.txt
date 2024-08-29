@@ -1769,6 +1769,7 @@ www.ayujournal.org
 www.balkanmedicaljournal.org
 www.bam-online.org
 www.banglajol.info
+www.barpublishing.com
 www.bartleby.com
 www.bc.edu
 www.bcmj.org
@@ -2130,7 +2131,6 @@ www.health.org
 www.healthaffairs.org
 www.healthandjusticejournal.com
 www.healtheffects.org
-www.healthypeople.gov
 www.heartandmetabolism.org
 www.heartinsight.com
 www.heartviews.org
