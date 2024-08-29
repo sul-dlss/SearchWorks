@@ -14,7 +14,9 @@ class SearchBuilder < Blacklight::SearchBuilder
   self.default_processor_chain += [:consolidate_home_page_params]
   self.default_processor_chain += [:modify_single_term_qf]
 
-  # Tweak advanced search's boolean query output to use edismax instead of dismax
+  # Tweak advanced search's boolean query output to use edismax instead of dismax.
+  # By using the same (edismax) query parser for advanced search as we do for regular search,
+  #  the search syntax and relevance ranking are consistent.
   def add_edismax_advanced_parse_q_to_solr(solr_params)
     add_advanced_parse_q_to_solr(solr_params)
 
