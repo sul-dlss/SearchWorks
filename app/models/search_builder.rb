@@ -20,7 +20,12 @@ class SearchBuilder < Blacklight::SearchBuilder
   def add_edismax_advanced_parse_q_to_solr(solr_params)
     add_advanced_parse_q_to_solr(solr_params)
 
-    solr_params[:q] = solr_params[:q].gsub('{!dismax', '{!edismax') if solr_params[:q].respond_to?(:to_str) && solr_params[:q].include?('{!dismax')
+    return unless solr_params[:q].respond_to?(:to_str) && solr_params[:q].include?('{!dismax')
+
+    solr_params[:q] = solr_params[:q].gsub('{!dismax', '{!edismax')
+
+    # q.op AND is the default, but we need to set it to 'OR' for advanced search queries.
+    solr_params[:'q.op'] = 'OR'
   end
 
   # Override range limit to only add parameters on search pages, not the home page

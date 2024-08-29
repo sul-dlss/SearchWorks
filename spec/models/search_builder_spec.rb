@@ -80,6 +80,7 @@ RSpec.describe SearchBuilder do
       search_builder.add_edismax_advanced_parse_q_to_solr(solr_params)
 
       expect(solr_params[:q]).to eq '_query_:"{!edismax }paintings" AND _query_:"{!edismax mm=1}Dutch Netherlands"'
+      expect(solr_params[:'q.op']).to eq 'OR'
     end
   end
 
