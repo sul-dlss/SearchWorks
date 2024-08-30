@@ -10,7 +10,7 @@ module EdsLinks
   def eds_fulltext_links
     fetch('eds_fulltext_links', []).map do |link_field|
       EdsLinks::FulltextLink.new(link_field)
-    end.select(&:present?)
+    end.compact_blank
   end
 
   def eds_fulltext_links_as_searchworks_links
@@ -35,6 +35,10 @@ module EdsLinks
 
     def present?
       %w[customlink-fulltext pdf ebook-pdf ebook-epub].include?(type) && label.present?
+    end
+
+    def blank?
+      !present?
     end
 
     def pdf?

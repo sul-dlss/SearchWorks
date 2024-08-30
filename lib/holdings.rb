@@ -11,7 +11,7 @@ class Holdings
   end
 
   def present?
-    libraries.select(&:present?).any? do |library|
+    libraries.compact_blank.any? do |library|
       library.locations.any?(&:present?)
     end
   end

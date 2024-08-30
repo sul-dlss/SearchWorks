@@ -303,7 +303,7 @@ Style/SwapValues: # new in 1.1
 Style/YAMLFileRead: # new in 1.53
   Enabled: true
 Rails/ActionControllerFlashBeforeRender: # new in 2.16
-  Enabled: true
+  Enabled: false
 Rails/ActionControllerTestCase: # new in 2.14
   Enabled: true
 Rails/ActionOrder: # new in 2.17
