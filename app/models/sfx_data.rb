@@ -91,15 +91,15 @@ class SfxData
     end
 
     def coverage
-      target_xml.xpath('.//coverage_statement').map(&:text).select(&:present?)
+      target_xml.xpath('.//coverage_statement').map(&:text).compact_blank
     end
 
     def embargo
-      target_xml.xpath('.//embargo_statement').map(&:text).select(&:present?)
+      target_xml.xpath('.//embargo_statement').map(&:text).compact_blank
     end
 
     def note
-      target_xml.xpath('./note').map(&:text).select(&:present?)
+      target_xml.xpath('./note').map(&:text).compact_blank
     end
 
     private
