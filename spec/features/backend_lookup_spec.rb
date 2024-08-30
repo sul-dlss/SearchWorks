@@ -21,14 +21,14 @@ RSpec.feature 'Backend lookup', :js do
 
   scenario 'lookup should return additional results on the results page' do
     visit search_catalog_path(
-      q: 'statement',
+      q: 'Lorem aute dolor',
       f: { access_facet: ['Online'] },
       search_field: 'search'
     )
 
     within '.zero-results' do
-      expect(page).to have_css('a', text: /All fields > statement/)
-      expect(page).to have_css('span', text: /finds 1 results/)
+      expect(page).to have_css('a', text: /All fields > Lorem aute dolor/)
+      expect(page).to have_css('span', text: /finds 2 results/)
     end
   end
 end
