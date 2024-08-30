@@ -36,9 +36,9 @@ any,any,,,,,LANE-SAL3X,12hour-norenew-15mingrace,Allow paging,Default notice,3.0
 any,any,,,,,LANE-SOMCC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-REF,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-ERQC,14day-2renew-1daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
-graduate or postdoctoral,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1qtr-3renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
+graduate or postdoctoral or courtesy,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1qtr-3renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 faculty or staff or fellow,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1yearfixed-2renew-7daygrace,No requests allowed,28-day notice,No fines,$150 lost fee
-graduate or postdoctoral,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
+graduate or postdoctoral or courtesy,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee
 faculty or staff or fellow,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1yearfixed-2renew-7daygrace,Allow All,28-day notice,No fines,$150 lost fee
 staff or staff-casual or fellow,score,,,,,SAL3-PAGE-MU-CIRC,1yearfixed-2renew-7daygrace,Allow All,28-day notice,3.00/21.00 recall overdue fine,$65 lost fee
 faculty,score,,,,,SAL3-PAGE-MU-CIRC,1yearfixed-2renew-7daygrace,Allow All,28-day notice,No fines,$65 lost fee
