@@ -607,7 +607,6 @@ excerpts.cdn.overdrive.com
 excerpts.contentreserve.com
 experiments.springernature.com
 extoxnet.orst.edu
-extras.springer.com
 extremephysiolmed.biomedcentral.com
 f1000.com
 f1000research.com
@@ -1790,7 +1789,6 @@ www.biolsci.org
 www.biomed.cas.cz
 www.biomolther.org
 www.bioone.org
-www.bioscience.org
 www.biotechnologyhealthcare.com
 www.birpublications.org
 www.biusante.parisdescartes.fr
