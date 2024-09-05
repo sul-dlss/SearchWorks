@@ -1069,7 +1069,6 @@ mejdd.org
 mem.lyellcollection.org
 mental.jmir.org
 meridian.allenpress.com
-methods.cas.org
 methods.sagepub.com
 mg.nlcpress.com
 mh.bmj.com
@@ -1415,8 +1414,6 @@ science-of-synthesis.thieme.com
 science.gov
 science.sciencemag.org
 sciendo.com
-scifinder-n.cas.org
-scifinder.cas.org
 scitation.aip.org
 sciwheel.com
 scjilb.org
@@ -1467,6 +1464,7 @@ springerlink.metapress.com
 spssi.onlinelibrary.wiley.com
 srdata.nist.gov
 srh.bmj.com
+sso.cas.org
 ssrr-journal.jp
 standardsingenomics.biomedcentral.com
 stanford-artech-patron.eb20.com
