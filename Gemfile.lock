@@ -730,6 +730,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   nokogiri (>= 1.7.1)
+  oauth2
   okcomputer
   parslet (~> 2.0)
   puma (~> 6.0)

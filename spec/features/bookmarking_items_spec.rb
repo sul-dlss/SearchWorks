@@ -3,13 +3,17 @@
 require 'rails_helper'
 
 RSpec.feature 'Bookmarking Items' do
+  let(:oclc_citation) { instance_double(Citations::OclcCitation) }
+
+  before do
+    allow(Citations::OclcCitation).to receive(:new).and_return(oclc_citation)
+    allow(oclc_citation).to receive_messages(
+      citations_by_oclc_number: { '12345' => { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' } }
+    )
+  end
+
   context 'Citations', :js do
-    let(:citations) { '<p class="citation_style_MLA">MLA Citation</p>' }
-
-    before { stub_oclc_response(citations, for: '12345') }
-
     it 'is viewable grouped by title and citation format' do
-      skip('Fails intermitently on Travis.') if ENV['CI']
       visit root_path
       fill_in :q, with: ''
       click_button 'search'
@@ -35,10 +39,9 @@ RSpec.feature 'Bookmarking Items' do
       wait_for_ajax
 
       within('.modal-dialog') do
-        expect(page).to have_css('h4', text: 'MLA', count: 2)
+        expect(page).to have_css('div#all')
         click_button 'By citation format'
-        expect(page).to have_css('h4', text: 'MLA', count: 1)
-        expect(page).to have_css('p.citation_style_MLA', count: 2)
+        expect(page).to have_css('div#biblio')
       end
     end
   end

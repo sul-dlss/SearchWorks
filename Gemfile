@@ -89,6 +89,7 @@ gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
 gem "faraday"
+gem 'oauth2'
 gem "config"
 gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"

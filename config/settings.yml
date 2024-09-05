@@ -30,17 +30,6 @@ throttling:
   - 172.16.0.0/12
 THROTTLE_TRAFFIC: false
 SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER: true
-OCLC:
-  API_KEY: the-oclc-api-key
-  BASE_URL: http://www.worldcat.org/webservices/catalog/content/citations
-  CITATION_FORMATS:
-    - APA
-    - CHICAGO
-    - HARVARD
-    - MLA
-    - TURABIAN
-    - PREFERRED CITATION
-  DOCUMENT_FIELD: 'oclc'
 EDS_ENABLED: true
 EDS_USER: the-eds-user
 EDS_PASS: the-eds-password
@@ -90,6 +79,15 @@ folio:
   standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']
 
 live_lookup_service: LiveLookup::Folio
+
+oclc_discovery:
+  citations:
+    enabled: false
+  base_url: oclc-discovery-base-url
+  client_key: <%= ENV['OCLC_DISCOVERY_CLIENT_KEY'] %>
+  client_secret: <%= ENV['OCLC_DISCOVERY_CLIENT_SECRET'] %>
+  authorize_url: oclc-discovery-authorize-url
+  token_url: oclc-discovery-token-url
 
 # 'select' (the default) or 'export' (requires indexing with docvalues)
 dynamic_sitemap_solr_endpoint: 'select'

@@ -73,17 +73,6 @@ RSpec.describe CatalogHelper do
     end
   end
 
-  describe '#grouped_citations' do
-    it 'sends all the given document citations to the grouped_citations method of the Citation class' do
-      documents = [
-        double('Document', citations: :abc),
-        double('Document', citations: :def)
-      ]
-      expect(Citation).to receive(:grouped_citations).with([:abc, :def])
-      grouped_citations(documents)
-    end
-  end
-
   describe '#tech_details' do
     context 'marc document' do
       let(:document) { SolrDocument.new(id: '12345', marc_json_struct: metadata1) }

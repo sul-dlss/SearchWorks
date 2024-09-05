@@ -1,0 +1,12 @@
+<% citations.each do |style, citation| %>
+  <div class="mb-4">
+    <% unless style == 'NULL' %>
+      <h4><%= t("searchworks.citations.styles.#{style}") %></h4>
+    <% end %>
+    <% Array(citation).each do |cite| %>
+      <div class="mb-2">
+        <%= cite %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
