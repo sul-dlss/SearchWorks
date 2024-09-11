@@ -22,21 +22,30 @@
         $element.on('click', function() {
           var state = $selectAll.is(':visible');
           bookmarkSelectors = $(selectorSelectBookmarks);
-          var first = false;
+          var first = true;
           var firstCheckboxIsDone = new $.Deferred();
+          var observer = new MutationObserver(function(mutationList) {
+            for (const mutation of mutationList) {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.text != 'Saving...') {
+                  firstCheckboxIsDone.resolve();
+                }
+              });
+            }
+          });
+
           bookmarkSelectors.each(function(i, checkbox) {
-            if (!first){
+            if (first) {
               var $checkbox = $(checkbox);
               if ($checkbox.is(':checked') !== state) {
-                var span = $checkbox.next('span');              
-                first = true;
+                first = false;
+                var span = $checkbox.next('span');
+                observer.observe(span[0], { childList: true, subtree: true });
                 $checkbox.prop('checked', !state).click();
-                span.on('DOMSubtreeModified', function(){
-                  firstCheckboxIsDone.resolve();
-                });
               }
             }
           });
+
           $.when(firstCheckboxIsDone).done(function(){
             bookmarkSelectors.each(async function(i, checkbox) {
               var $checkbox = $(checkbox);
