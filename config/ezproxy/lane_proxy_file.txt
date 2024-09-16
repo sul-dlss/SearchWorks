@@ -431,6 +431,7 @@ currents.plos.org
 cvi.asm.org
 cvirendovasc.springeropen.com
 d-nb.info
+d2snwnmzyr8jue.cloudfront.net
 darujps.biomedcentral.com
 data.bls.gov
 data.chhs.ca.gov
@@ -2077,7 +2078,6 @@ www.functionalneurology.com
 www.funjournal.org
 www.fupress.net
 www.fut.se
-www.future-science.com
 www.futuremedicine.com
 www.fvvo.be
 www.g3journal.org
@@ -2146,6 +2146,7 @@ www.hiv.lanl.gov
 www.hjdbulletin.org
 www.hkmj.org
 www.hmpgloballearningnetwork.com
+www.hoopladigital.com
 www.hopkinsguides.com
 www.horizonpress.com
 www.hormones.gr
