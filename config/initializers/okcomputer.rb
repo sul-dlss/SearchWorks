@@ -62,13 +62,12 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 
 Rails.application.reloader.to_prepare do
   OkComputer::Registry.register('live_lookups', OkapiCheck.new) if Settings.folio.url
-  OkComputer::Registry.register 'oclc_citation_service', OkComputer::HttpCheck.new(Citation.test_api_url)
 
   Settings.NEW_RELIC_API.policies.each do |policy|
     OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
   end
 
-  OkComputer.make_optional(%w[live_lookups oclc_citation_service]).concat(
+  OkComputer.make_optional(%w[live_lookups]).concat(
     Settings.NEW_RELIC_API.policies.map(&:key)
   )
 end

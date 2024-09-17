@@ -181,4 +181,12 @@ RSpec.describe SolrDocument do
 
     it { is_expected.to eq 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f' }
   end
+
+  describe 'oclc_number' do
+    let(:document) { SolrDocument.new(oclc: '12345') }
+
+    subject { document.oclc_number }
+
+    it { is_expected.to eq '12345' }
+  end
 end

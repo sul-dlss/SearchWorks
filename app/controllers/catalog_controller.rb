@@ -508,6 +508,16 @@ class CatalogController < ApplicationController
     end
   end
 
+  # Overridden from Blacklight to pre-fetch OCLC citations in bulk
+  # when more than one document's citation is being displayed.
+  def citation
+    @response, @documents = search_service.fetch(Array(params[:id]))
+    return unless @documents.size > 1
+
+    oclc_numbers = @documents.filter_map { |document| document.oclc_number.presence }
+    @oclc_citations = Citations::OclcCitation.new(oclc_numbers:).citations_by_oclc_number
+  end
+
   def stackmap
     params.require(:library) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
     render layout: !request.xhr?

@@ -3,8 +3,11 @@
 require 'rails_helper'
 
 RSpec.feature "Record Toolbar" do
+  let(:citation) { instance_double(Citation) }
+
   before do
-    stub_oclc_response('', for: '12345')
+    allow(Citation).to receive(:new).and_return(citation)
+    allow(citation).to receive_messages(all_citations: { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' }, citable?: true)
     visit root_path
   end
 

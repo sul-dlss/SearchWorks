@@ -12,25 +12,6 @@
         <button href="#biblio" aria-controls="biblio" role="tab" data-toggle="tab" class="nav-link" id="by-format-button">By citation format</button>
       </li>
     </ul>
-
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="all" aria-labelledby="by-title-button">
-        <% @documents.each do |document| %>
-          <h3 class="my-4"><%= document_presenter(document).heading %></h3>
-          <%= render partial: 'catalog/single_citation', locals: { document: document } %>
-        <% end %>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="biblio" aria-labelledby="by-format-button">
-        <% grouped_citations(@documents).each do |format, citations| %>
-          <% unless format == 'NULL' %>
-            <h4><%= format %></h4>
-
-            <% citations.each do |citation| %>
-              <%= citation %>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+    <%= render Citations::MultipleCitationsComponent.new(documents: @documents, oclc_citations: @oclc_citations) %>
   </div>
 <% end %>

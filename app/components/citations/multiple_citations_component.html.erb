@@ -1,0 +1,13 @@
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="all" aria-labelledby="by-title-button">
+    <% @documents.each do |document| %>
+      <h3 class="mt-4 mb-3"><%= helpers.document_presenter(document).heading %></h3>
+      <%= render Citations::CitationComponent.new(citations: citations(document)) %>
+    <% end %>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="biblio" aria-labelledby="by-format-button">
+    <div class="my-3">
+      <%= render Citations::GroupedCitationComponent.new(citations: @documents.map { |doc| citations(doc) }) %>
+    </div>
+  </div>
+</div>
