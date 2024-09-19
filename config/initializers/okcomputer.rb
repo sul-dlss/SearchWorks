@@ -30,6 +30,17 @@ class OkapiCheck < OkComputer::Check
   end
 end
 
+class OclcDiscoveryCheck < OkComputer::Check
+  def check
+    if OclcDiscoveryService.new.ping
+      mark_message 'Connected to OCLC Discovery'
+    else
+      mark_failure
+      mark_message 'Unable to connect to OCLC Discovery'
+    end
+  end
+end
+
 # /status for 'upness', e.g. for load balancer
 # /status/all to show all dependencies
 # /status/<name-of-check> for a specific check (e.g. for nagios warning)
@@ -62,6 +73,11 @@ OkComputer::Registry.register 'sw_solr', OkComputer::HttpCheck.new(solr_url + "/
 
 Rails.application.reloader.to_prepare do
   OkComputer::Registry.register('live_lookups', OkapiCheck.new) if Settings.folio.url
+
+  if Settings.oclc_discovery.citations.enabled
+    OkComputer::Registry.register('oclc_citation_service', OclcDiscoveryCheck.new)
+    OkComputer.make_optional(%w[oclc_citation_service])
+  end
 
   Settings.NEW_RELIC_API.policies.each do |policy|
     OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
