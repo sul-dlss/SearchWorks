@@ -32,7 +32,7 @@ end
 
 class OclcDiscoveryCheck < OkComputer::Check
   def check
-    if OclcDiscoveryService.new.ping
+    if OclcDiscoveryClient.new.ping
       mark_message 'Connected to OCLC Discovery'
     else
       mark_failure
