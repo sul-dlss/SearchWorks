@@ -294,7 +294,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -306,7 +307,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:09.105+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:56:24.665+00:00",
+      "updatedDate": "2024-09-18T23:38:44.790+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2050,7 +2051,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -2062,7 +2064,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:59.881+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:56:12.213+00:00",
+      "updatedDate": "2024-09-18T23:57:25.682+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2461,7 +2463,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -2473,7 +2476,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:06.238+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:51:27.670+00:00",
+      "updatedDate": "2024-09-18T23:46:12.591+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2588,7 +2591,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -2600,7 +2604,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:48:00.164+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:56:50.809+00:00",
+      "updatedDate": "2024-09-18T23:40:18.251+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -3353,7 +3357,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -3365,7 +3370,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:10.680+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:55:24.868+00:00",
+      "updatedDate": "2024-09-18T23:49:46.404+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6162,6 +6167,31 @@
     }
   },
   {
+    "id": "650714f3-9634-44d8-92b7-30cc2949a7d1",
+    "name": "HILA SAL3 Archival Processing",
+    "code": "HILA-SAL3-ARCHIVAL-PROCESSING",
+    "discoveryDisplayName": "In process: Archival processing",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
+    "details": {
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-09-18T23:43:04.554+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-09-18T23:43:04.554+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
     "id": "65cbea1d-ac50-4f47-85f5-0ebb8409cb4a",
     "name": "Business SDR",
     "code": "BUS-SDR",
@@ -6298,7 +6328,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -6310,7 +6341,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:48:00.328+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:57:09.886+00:00",
+      "updatedDate": "2024-09-19T00:04:50.251+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -7560,7 +7591,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -7572,8 +7604,8 @@
     "metadata": {
       "createdDate": "2023-08-30T14:09:25.264+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2023-08-30T14:09:25.264+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2024-09-18T23:50:28.056+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -8909,7 +8941,8 @@
     "details": {
       "scanServicePointCode": "GREEN",
       "searchworksGovDocsClassification": "Federal",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -8921,7 +8954,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:10.469+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-25T16:56:01.517+00:00",
+      "updatedDate": "2024-09-18T23:56:19.234+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -12256,6 +12289,7 @@
     "details": {
       "scanServicePointCode": "GREEN",
       "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true",
       "pageServicePointCodes": "GREEN-LOAN"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
@@ -12268,7 +12302,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:08.593+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:52:35.171+00:00",
+      "updatedDate": "2024-09-18T23:48:03.820+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -13722,7 +13756,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -13734,7 +13769,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:48:00.016+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:56:39.387+00:00",
+      "updatedDate": "2024-09-18T23:58:04.275+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -14314,7 +14349,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "scanServicePointCode": "GREEN",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -14326,7 +14362,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:04.932+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:49:40.192+00:00",
+      "updatedDate": "2024-09-18T23:54:04.984+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
