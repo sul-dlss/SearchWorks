@@ -129,14 +129,14 @@ Blacklight.onLoad(function() {
     sendAnalyticsEvent({
       category: 'Facet',
       action: 'SW/closed-facet',
-      label: getText(e)
+      label: $(e.currentTarget).parent().find('h3').text().trim()
     })
   })
   $('.facet-content').on('show.bs.collapse', function(e) {
     sendAnalyticsEvent({
       category: 'Facet',
       action: 'SW/expanded-facet',
-      label: getText(e)
+      label: $(e.currentTarget).parent().find('h3').text().trim()
     })
   })
 
