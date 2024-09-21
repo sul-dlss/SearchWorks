@@ -441,7 +441,6 @@ datacatalog.med.nyu.edu
 datadryad.org
 datasets.americasbarometer.org
 daten.digitale-sammlungen.de
-david.ncifcrf.gov
 db.saur.de
 dbs.g-search.or.jp
 dcc.icgc.org
@@ -860,7 +859,6 @@ jcheminf.springeropen.com
 jcmr-online.biomedcentral.com
 jcompassionatehc.biomedcentral.com
 jcp.bmj.com
-jcr.clarivate.com
 jcs.tbzmed.ac.ir
 jdb.sums.ac.ir
 jdc.jefferson.edu
