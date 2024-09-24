@@ -859,6 +859,7 @@ jcheminf.springeropen.com
 jcmr-online.biomedcentral.com
 jcompassionatehc.biomedcentral.com
 jcp.bmj.com
+jcr.clarivate.com
 jcs.tbzmed.ac.ir
 jdb.sums.ac.ir
 jdc.jefferson.edu
