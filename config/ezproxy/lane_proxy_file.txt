@@ -1559,6 +1559,7 @@ usp.az1.qualtrics.com
 uswest.ensembl.org
 utmj.org
 utpjournals.press
+v2.chinamaxx.net
 vascularcell.biomedcentral.com
 vciba.springeropen.com
 veterinaryresearch.biomedcentral.com
@@ -1861,7 +1862,6 @@ www.chicagomanualofstyle.org
 www.childstats.gov
 www.china.amdigital.co.uk
 www.chinaebook.com
-www.chinamaxx.net
 www.chinaphar.com
 www.chiropractic.ca
 www.chlamy.org
