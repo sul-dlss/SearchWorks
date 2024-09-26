@@ -666,6 +666,7 @@ go.galegroup.com
 go.oreilly.com
 gongjushu.oversea.cnki.net
 goo.gl
+gpa-eastview-com.stanford.idm.oclc.org
 gpa.eastview.com
 gpsych.bmj.com
 grantome.com
@@ -2042,7 +2043,6 @@ www.esp.org
 www.ethndis.org
 www.eugenicsarchive.org
 www.eurannallergyimm.com
-www.eurekaselect.com
 www.eurjbreasthealth.com
 www.eurjrheumatol.org
 www.europeana.eu
