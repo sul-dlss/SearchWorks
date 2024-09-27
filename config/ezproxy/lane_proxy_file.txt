@@ -409,6 +409,7 @@ congressional.proquest.com
 connect.h1.co
 connect.springerpub.com
 consensus.nih.gov
+consumerpyramidsdx.cmie.com
 content.iospress.com
 content.nejm.org
 content.sciendo.com
