@@ -1051,7 +1051,6 @@ medicaleconomics.modernmedicine.com
 medicalgasresearch.biomedcentral.com
 medicalimaging.spiedigitallibrary.org
 medicalletter.org
-medicina.lsmuni.lt
 medimmunol.biomedcentral.com
 medind.nic.in
 medinform.jmir.org
@@ -1144,7 +1143,6 @@ nf.aafp.org
 ng.neurology.org
 nida.nih.gov
 nls.ldls.org.uk
-nmji.in
 nmsjournal.kaums.ac.ir
 nn.neurology.org
 nnlm.gov
@@ -1274,6 +1272,7 @@ pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
 portal.biobase-international.com
+portal.chinamaxx.net
 portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
@@ -1561,7 +1560,6 @@ usp.az1.qualtrics.com
 uswest.ensembl.org
 utmj.org
 utpjournals.press
-v2.chinamaxx.net
 vascularcell.biomedcentral.com
 vciba.springeropen.com
 veterinaryresearch.biomedcentral.com
@@ -1717,7 +1715,6 @@ www.annalspc.com
 www.annclinlabsci.org
 www.anndermatol.org
 www.annfammed.org
-www.annsaudimed.net
 www.annualreviews.org
 www.antimicrobe.org
 www.aornguidelines.org
@@ -2977,7 +2974,6 @@ www.worldscibooks.com
 www.worldscientific.com
 www.worldwater.org
 www.wounds-uk.com
-www.woundsresearch.com
 www.wto-ilibrary.org
 www.wvsma.com
 www.yale.edu
