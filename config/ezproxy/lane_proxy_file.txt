@@ -1272,7 +1272,6 @@ pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
 portal.biobase-international.com
-portal.chinamaxx.net
 portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
@@ -1861,6 +1860,7 @@ www.chicagomanualofstyle.org
 www.childstats.gov
 www.china.amdigital.co.uk
 www.chinaebook.com
+www.chinamaxx.net
 www.chinaphar.com
 www.chiropractic.ca
 www.chlamy.org
@@ -2822,14 +2822,12 @@ www.sicot-j.org
 www.sid.ir
 www.signalsmag.com
 www.signavitae.com
-www.sin-italy.org
 www.sjkdt.org
 www.sjmms.net
 www.sjweh.fi
 www.slavery.amdigital.co.uk
 www.sljol.info
 www.smcma.org
-www.smj.org.sa
 www.smw.ch
 www.soc-bdr.org
 www.socialexplorer.com
