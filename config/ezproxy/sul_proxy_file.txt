@@ -1082,8 +1082,6 @@ essays.biochemistry.org
 symposia.biochemistry.org
 www.aspresolver.com
 lib.haifa.ac.il
-scifinder.cas.org
-scifinder-n.cas.org
 hanchi.ihp.sinica.edu.tw
 online.munzinger.de
 www.oecd-ilibrary.org
@@ -1608,9 +1606,9 @@ www.bloomsburyculturalhistory.com
 www.conflictinindochina.amdigital.co.uk
 www.hindicinema.amdigital.co.uk
 southasiacommons.net
-methods.cas.org
 consumerpyramidsdx.cmie.com
 statesofindia.cmie.com
 www.thedriftmag.com
 caribed.scholasticahq.com
 astpublications.com
+portal.chinamaxx.net
