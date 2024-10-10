@@ -24,6 +24,6 @@
   <%= render ModsDisplay::FieldComponent.new(field: identifier, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
-<% document.mods.location.each do |location| %>
+<% document.mods.location.reject { |location| location.values.detect { |loc| /href=.#{Settings.PURL_EMBED_RESOURCE}/.match?(loc) } }.each do |location| %>
   <%= render ModsDisplay::FieldComponent.new(field: location, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
