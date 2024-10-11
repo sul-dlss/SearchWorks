@@ -1354,6 +1354,7 @@ remotesensing.spiedigitallibrary.org
 rep.bioscientifica.com
 repository.edm-forum.org
 repository.icesi.edu.co
+repository.law.umich.edu
 repository.tufs.ac.jp
 repository.uchastings.edu
 repository.uclawsf.edu
@@ -1489,6 +1490,7 @@ stedmansonline.com
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
+students.law.umich.edu
 subscriber.politicopro.com
 subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
