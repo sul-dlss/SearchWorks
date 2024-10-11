@@ -222,7 +222,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,library equipment 4,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$1000 lost fee
 ,library equipment 3,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,library equipment 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,accessories 2,,,,,MEDIA-ATCIRCDESK,7day-1renew-3daygrace,Hold only,Short Term Notices,No fines,$150 lost fee
+,accessories 2,,,,,MEDIA-ATCIRCDESK,7day-1renew-3daygrace,Hold only,Short Term Notices,No fines,$150 - 1 hr aged to lost
 ,accessories 1,,,,,MUS-RECORDINGS,4hour-norenew-1hourgrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,,MEDIA-ATCIRCDESK,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,,EAR-ATCIRCDESK,1day-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
@@ -342,7 +342,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,av equipment 3,,,,MEDIA-CENTER,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$500 lost fee - 1 hr aged to lost
 ,av equipment 1,,,,EAST-ASIA,,3hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$500 lost fee - 1 hr aged to lost
 ,accessories 2,,,,SCIENCE,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$500 lost fee - 1 hr aged to lost
-,accessories 2,,,,GREEN,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$150 lost fee
+,accessories 2,,,,GREEN,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$150 - 1 hr aged to lost
 ,accessories 1,,,,SCIENCE,,2hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,ENG,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,GREEN,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost

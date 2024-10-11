@@ -117,19 +117,19 @@
     "id": "24da62db-472c-47fe-991f-75fc9c3f7481"
   },
   {
-    "name": "$150 short-term lost fee (do not use;for deletion)",
-    "description": "Lost fee policy for short-term loans e.g., Eng equipment, EAL microform.",
+    "name": "$150 - 1 hr aged to lost",
+    "description": "Lost fee policy for short-term loans that age to lost after 1 hour",
     "itemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
+      "duration": 1,
+      "intervalId": "Hours"
     },
     "patronBilledAfterAgedLost": {
       "duration": 1,
       "intervalId": "Minutes"
     },
     "recalledItemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
+      "duration": 1,
+      "intervalId": "Hours"
     },
     "patronBilledAfterRecalledItemAgedLost": {
       "duration": 1,
@@ -150,7 +150,7 @@
     "replacedLostItemProcessingFee": false,
     "replacementProcessingFee": 0.0,
     "replacementAllowed": false,
-    "lostItemReturned": "Charge",
+    "lostItemReturned": "Remove",
     "feesFinesShallRefunded": {
       "duration": 12,
       "intervalId": "Months"
@@ -158,8 +158,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.805+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:50:08.805+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-10-10T17:30:37.898+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
   },
