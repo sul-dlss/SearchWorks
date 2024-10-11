@@ -54,7 +54,7 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'rubocop-capybara', require: false
   gem 'selenium-webdriver'
-  gem 'solr_wrapper'
+  gem 'solr_wrapper', '~> 4.0.2' # pinned until ebsco-eds allows faraday v2 https://github.com/ebsco/edsapi-ruby/issues/120
   gem 'webmock'
   # factory_bot_rails for creating fixtures in tests
   gem 'factory_bot_rails'
@@ -76,7 +76,6 @@ gem 'newrelic_rpm'
 gem "coderay"
 
 gem 'deprecation'
-
 gem 'blacklight', '~> 7.36'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
