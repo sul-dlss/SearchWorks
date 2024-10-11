@@ -508,7 +508,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     retriable (3.1.2)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rinku (2.0.6)
     roadie (5.2.1)
       css_parser (~> 1.4)
@@ -650,7 +650,7 @@ GEM
     unicode-display_width (2.6.0)
     useragent (0.16.10)
     version_gem (1.1.4)
-    view_component (3.14.0)
+    view_component (3.15.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -757,7 +757,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   simplecov (~> 0.14)
-  solr_wrapper
+  solr_wrapper (~> 4.0.2)
   sprockets-rails
   sqlite3 (>= 2.0)
   stimulus-rails (~> 1.3)
