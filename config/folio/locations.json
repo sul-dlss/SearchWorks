@@ -2970,6 +2970,32 @@
     }
   },
   {
+    "id": "29d03fec-add7-40e7-9786-082fcddafcc8",
+    "name": "Spec SAL3 Taube",
+    "code": "SPEC-SAL3-TAUBE",
+    "discoveryDisplayName": "Taube Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:18:12.976+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:18:12.976+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "2a1f9ce7-dfac-4ff9-81a2-7d72b2cd5c1b",
     "name": "East Asia Staff Shadow",
     "code": "EAL-STAFFSHADOW",
@@ -3631,6 +3657,32 @@
     }
   },
   {
+    "id": "3634e5f1-be04-48c7-90e7-b708fa760917",
+    "name": "Spec SAL3 Barchas",
+    "code": "SPEC-SAL3-BARCHAS",
+    "discoveryDisplayName": "Barchas Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:22:30.716+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:22:30.716+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "365fe2b7-ba9e-4d68-98e8-5ba7ba5916b2",
     "name": "SAL EAL Stacks Korean",
     "code": "SAL-EAL-STKS-K",
@@ -4067,6 +4119,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:34.278+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "3e5781af-c022-4fef-b240-e1ebeb77d2a8",
+    "name": "Spec SAL3 Robinson",
+    "code": "SPEC-SAL3-ROBINSON",
+    "discoveryDisplayName": "Robinson Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:19:07.074+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:19:07.074+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -4918,6 +4995,32 @@
     }
   },
   {
+    "id": "4a19f3de-b9a3-4db8-9a91-cca18d31fa30",
+    "name": "Spec SAL3 Frecot",
+    "code": "SPEC-SAL3-FRECOT",
+    "discoveryDisplayName": "Frecot Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:17:32.446+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:17:32.446+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "4a617cb9-a317-4d6a-9d32-bcdcc5f7ef14",
     "name": "Lane Career Center",
     "code": "LANE-SOMCC",
@@ -5354,6 +5457,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:46:30.280+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "54ccfbf4-b59e-4393-8eaa-60f422b74e70",
+    "name": "Spec SAL3 Newton",
+    "code": "SPEC-SAL3-NEWTON",
+    "discoveryDisplayName": "Newton Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:19:49.879+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:19:49.879+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -10165,6 +10294,32 @@
     }
   },
   {
+    "id": "ab5da7d2-fd68-4673-9fa9-60c7a3674b43",
+    "name": "Spec SAL3 Samson",
+    "code": "SPEC-SAL3-SAMSON",
+    "discoveryDisplayName": "Samson Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:18:39.321+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:18:39.321+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "ab610906-5dbb-4e70-a7b6-9b92c995d75e",
     "name": "Earth Sci Processing - TR",
     "code": "EAR-PROCESSING-TR",
@@ -12234,6 +12389,32 @@
     }
   },
   {
+    "id": "cc5fbda7-7a93-470c-b86f-6b192497528d",
+    "name": "Spec SAL3 Law",
+    "code": "SPEC-SAL3-LAW",
+    "discoveryDisplayName": "Law Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:17:05.670+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:17:05.670+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "ccd4c66e-50b2-4bb4-9357-54f6fc636957",
     "name": "Marine Bio Locked Media",
     "code": "MAR-LOCKED-MEDIA",
@@ -13754,6 +13935,32 @@
     }
   },
   {
+    "id": "e1a91883-de90-4a45-9a97-1d55dee33b15",
+    "name": "Spec SAL3 Reference",
+    "code": "SPEC-SAL3-REF",
+    "discoveryDisplayName": "Reference",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:21:38.577+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:21:38.577+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "e24f81fb-c8a6-4527-b8df-21c2878e30ec",
     "name": "Media Shadowed",
     "code": "MEDIA-SHADOW",
@@ -14524,6 +14731,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:24.075+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "f0872428-a8ee-446e-a535-de44bc4b8d98",
+    "name": "Spec SAL3 MemLibMusic",
+    "code": "SPEC-SAL3-MEMLIBMUS",
+    "discoveryDisplayName": "Memorial Library of Music",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [
+
+    ],
+    "metadata": {
+      "createdDate": "2024-10-14T23:21:59.816+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2024-10-14T23:21:59.816+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
