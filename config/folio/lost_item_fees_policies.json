@@ -40,7 +40,7 @@
   },
   {
     "name": "$225 lost fee",
-    "description": "used for engineering permres with 2-hour loan period",
+    "description": "used for engineering permres with 7-day loan period.",
     "itemAgedLostOverdue": {
       "duration": 30,
       "intervalId": "Hours"
@@ -68,7 +68,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.549+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-03-11T18:23:38.285+00:00",
+      "updatedDate": "2024-10-15T21:08:52.113+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "1d12c9e3-ad47-4a49-95ad-5c496a48ee6d"
