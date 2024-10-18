@@ -44,7 +44,12 @@
           background-color: $sul-side-nav-minimap-active-btn-bg;
       }
 
-      i.fa, .sul-icon {
+      i.bi.bi-arrow-up-short, i.bi.bi-arrow-down-short {
+        font-size: 1.5rem;
+        vertical-align: sub;
+      }
+
+      i.bi, .sul-icon {
         display: inline-block;
         text-align: center;
         width: 35px;
