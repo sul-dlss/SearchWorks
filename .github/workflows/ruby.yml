@@ -19,5 +19,22 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
+    - name: Cache Solr
+      id: cache-solr-restore
+      uses: actions/cache/restore@v4
+      with:
+        path: ~/.solr-artifacts
+        key: solr-artifacts-9.6.1
+    - name: Write solr_wrapper config
+      run: |
+        mkdir -p ~/.solr-artifacts
+        echo "download_dir: ~/.solr-artifacts" > ~/.solr_wrapper.yml
     - name: Run tests
       run: bundle exec rake
+    - name: Save Solr
+      id: cache-solr-save
+      uses: actions/cache/save@v4
+      with:
+        path: |
+          ~/.solr-artifacts
+        key: ${{ steps.cache-solr-restore.outputs.cache-primary-key }}
