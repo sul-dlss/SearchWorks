@@ -42,8 +42,7 @@ class SearchBuilder < Blacklight::SearchBuilder
 
   def database_prefix_search(solr_params)
     return unless page_location.databases? &&
-                  blacklight_params[:prefix] &&
-                  blacklight_params[:prefix].match?(/^(0-9|[a-z])$/i)
+                  blacklight_params[:prefix]&.match?(/^(0-9|[a-z])$/i)
 
     solr_params[:fq] ||= []
     solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
