@@ -1331,7 +1331,6 @@ purl.fdlp.gov
 qims.amegroups.com
 qualitysafety.bmj.com
 raf.bioscientifica.com
-randstatestats.org
 rapm.bmj.com
 ratecalc.cancer.gov
 rave.ohiolink.edu
@@ -1485,6 +1484,7 @@ stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
 statesofindia.cmie.com
+statestatistics.org
 stedmansonline.com
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
@@ -2266,7 +2266,6 @@ www.irct.org
 www.irdrjournal.com
 www.irjournal.org
 www.irmj.ir
-www.iscpubs.com
 www.ismni.org
 www.ispcd.org
 www.ispub.com
