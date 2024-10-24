@@ -608,6 +608,7 @@ excerpts.contentreserve.com
 experiments.springernature.com
 extoxnet.orst.edu
 extremephysiolmed.biomedcentral.com
+ezproxy2.library.drexel.edu
 f1000.com
 f1000research.com
 facultyopinions.com
@@ -1485,6 +1486,7 @@ stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
 statesofindia.cmie.com
 statestatistics.org
+static.routledge.com
 stedmansonline.com
 stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
