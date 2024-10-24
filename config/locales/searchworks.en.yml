@@ -295,6 +295,8 @@ en:
           placeholder: '(optional)'
       errors:
         type: 'Invalid email type provided'
+        message:
+          spam: 'Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments.'
         to:
           invalid: 'You must enter only valid email addresses.'
           too_many: 'You have entered more than the maximum (%{max}) email addresses allowed.'
