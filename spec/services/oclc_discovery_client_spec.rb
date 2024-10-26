@@ -27,7 +27,7 @@ RSpec.describe OclcDiscoveryClient do
   end
 
   describe '#citations' do
-    subject(:citations) { client.citations(oclc_numbers: '905869', citation_style: 'modern-language-association') }
+    subject(:citations) { client.citations(oclc_numbers: '905869', citation_styles: 'modern-language-association') }
 
     before do
       stub_request(:get, "https://oclc.example.edu/reference/citations?oclcNumbers=905869&style=modern-language-association")

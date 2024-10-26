@@ -45,9 +45,7 @@ module Citations
     end
 
     def oclc_citations
-      CITATION_STYLES.flat_map do |citation_style|
-        Thread.new { oclc_client.citations(oclc_numbers:, citation_style:) }
-      end.flat_map(&:value)
+      oclc_client.citations(oclc_numbers: oclc_numbers, citation_styles: CITATION_STYLES)
     end
 
     def oclc_client
