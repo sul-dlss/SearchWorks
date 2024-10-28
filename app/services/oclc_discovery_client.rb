@@ -38,11 +38,11 @@ class OclcDiscoveryClient
 
   # Fetch one or more citations from the OCLC Discovery API
   # @param [Array] or [String] the OCLC numbers to fetch citations for
-  # @param [String] citation_style the citation style to fetch (only one style may be requested at a time)
+  # @param [Array] or [String] citation_styles one or more citation styles to fetch
   # @return [Array] one or more citation responses
-  def citations(oclc_numbers:, citation_style: 'apa')
+  def citations(oclc_numbers:, citation_styles: ['apa'])
     Array(oclc_numbers).each_slice(MAX_CITATIONS_PER_REQUEST).map do |ids|
-      Thread.new { get_json(citation_query(ids.join(','), citation_style)) }
+      Thread.new { get_json(citation_query(ids.join(','), Array(citation_styles).join(','))) }
     end.map(&:value)
   end
 
@@ -50,8 +50,8 @@ class OclcDiscoveryClient
 
   # OCLC Citation API documentation:
   # https://developer.api.oclc.org/citations-api
-  def citation_query(oclc_number, citation_style)
-    query = { oclcNumbers: oclc_number, style: citation_style }.to_query
+  def citation_query(oclc_number, citation_styles)
+    query = { oclcNumbers: oclc_number, style: citation_styles }.to_query
     "/reference/citations?#{query}"
   end
 
