@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe ShowEdsDocumentPresenter do
   let(:document) { SolrDocument.new }
-  let(:view_context) { double('ViewContext', blacklight_config: ArticlesController.blacklight_config) }
+  let(:view_context) { double('ViewContext', action_name: 'show', blacklight_config: ArticlesController.blacklight_config) }
 
   subject(:presenter) { described_class.new(document, view_context) }
 
