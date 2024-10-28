@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe IndexEdsDocumentPresenter do
   let(:document) { SolrDocument.new }
-  let(:view_context) { double('ViewContext', blacklight_config: ArticlesController.blacklight_config, document_index_view_type: 'list') }
+  let(:view_context) { double('ViewContext', action_name: 'index', blacklight_config: ArticlesController.blacklight_config, document_index_view_type: 'list') }
 
   subject(:presenter) { described_class.new(document, view_context) }
 
