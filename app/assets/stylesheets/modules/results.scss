@@ -35,7 +35,7 @@
 
 .result {
   p {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -48,7 +48,7 @@
 }
 
 .pass-on-search-link {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .description {
@@ -62,7 +62,7 @@
 }
 
 .etas-notice {
-  color: $sul-availability-notice-color;
+  color: rgb(var(--stanford-cardinal-rgb));
 }
 
 .etas-results-block {

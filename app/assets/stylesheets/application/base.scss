@@ -1,45 +1,28 @@
-a {
-  border-bottom: 0;
-  text-decoration: none;
-
-  &.disabled {
-    color: $sul-btn-disabled-color;
-    cursor: not-allowed;
-    text-decoration: none;
-  }
-}
-
-a:not(.btn):not(.dropdown-item) {
-  &:hover,
-  &:focus,
-  &:active {
-    border-bottom: 0;
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-}
-
-h1, .h1 {
+h1,
+.h1 {
   color: $sul-h1-font-color;
   font-weight: 300;
   line-height: 1.2em;
   padding: 10px 0;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   color: $sul-h2-font-color;
   letter-spacing: 0;
   line-height: 1.2em;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   color: $sul-h3-font-color;
   line-height: 1.2em;
-  margin: 0 0 .4em;
+  margin: 0 0 0.4em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   color: $sul-h4-font-color;
   line-height: 1.2em;
 }
@@ -57,15 +40,15 @@ dt {
 
   dt {
     color: $su-cool-gray;
-    font-size: .9em;
+    font-size: 0.9em;
     padding-right: 1em;
-    padding-top: .15em;
+    padding-top: 0.15em;
     width: 12em;
   }
 
   dd {
     margin-left: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     max-width: 45em;
   }
 }

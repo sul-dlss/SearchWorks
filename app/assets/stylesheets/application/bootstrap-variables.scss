@@ -1,11 +1,5 @@
 // Override Bootstrap variables here
-@import '../identity/bootstrap-variables';
-
-// Tables
-$table-accent-bg: $su-light-sandstone;
-
-// Tooltip
-$tooltip-bg: $su-lagunita;
+@import "../identity/bootstrap-variables";
 
 // Typography
 $h1-font-size: 2.323rem;
@@ -18,4 +12,4 @@ $font-size-base: 0.9375rem; // 15px
 
 $dropdown-link-hover-color: $gray-900;
 $dropdown-link-active-color: $gray-900;
-$dropdown-link-active-bg: #faf8d2
+$dropdown-link-active-bg: #faf8d2;

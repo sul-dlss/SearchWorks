@@ -2,23 +2,18 @@
   margin-bottom: 30px;
   justify-content: center;
 
-  .list-inline {
-    margin: 0;
-  }
-  
-  .list-inline-item {
-    margin: 0;
-  }
-  
-  .list-inline-item a {
+  ul {
     display: inline-block;
-    margin: 7px;
+    margin: 0;
+  }
+
+  .d-inline-block {
+    padding: 7px;
   }
 
   @include media-breakpoint-down(md) {
     text-align: center;
   }
-
 }
 
 #result-types {
