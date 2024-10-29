@@ -118,6 +118,9 @@ class CatalogController < ApplicationController
       search_series:  :search
     }
 
+    # restrict available pagination options because we block deep pagination
+    config.index.pagination_options = { theme: 'blacklight', left: 3, right: 0 }
+
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowDocumentPresenter
     config.show.document_component = Record::DocumentComponent
