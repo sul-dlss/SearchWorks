@@ -1271,7 +1271,6 @@ poly.chemnetbase.com
 pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
-portal.biobase-international.com
 portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
@@ -2134,6 +2133,7 @@ www.heinonline.org
 www.hellenicjcardiol.com
 www.hematologyandoncology.net
 www.hepmon.ir
+www.hgmd.cf.ac.uk
 www.hh.um.es
 www.hhmi.org
 www.hhrjournal.org
