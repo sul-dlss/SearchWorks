@@ -1,18 +1,165 @@
 <footer role="contentinfo">
-  <div id="sul-footer-container">
-    <div id="sul-footer">
-      <div id="sul-footer-img" class="span2">
-        <%= link_to 'https://library.stanford.edu' do %>
-          <%= image_tag "sul-logo-stacked.svg", alt: "Stanford Libraries", height: 45 %>
-        <% end %>
+  <section id="pre-footer" class="pt-3 pb-2">
+    <div class="container">
+      <div class="row">
+        <div
+          id="sul-footer-img"
+          class="col-sm-12 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-center justify-content-md-start"
+        >
+          <a href="https://library.stanford.edu">
+            <img alt="Stanford Libraries" height="45" src="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/StanfordLibraries-logo-whitetext.svg">
+          </a>
+        </div>
+        <div
+          class="col d-flex justify-content-md-start justify-content-center"
+        >
+          <ul
+            class="list-unstyled d-flex mt-3 mt-md-1 mt-lg-3 ms-xl-3 text-center"
+          >
+            <li class="mx-2 mx-md-3">
+              <a
+                href="https://library.stanford.edu/libraries-0/branches-and-centers"
+                >Hours &amp; locations</a
+              >
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://mylibrary.stanford.edu">My Account</a>
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://library.stanford.edu/contact-us"
+                >Contact us</a
+              >
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://library-status.stanford.edu/"
+                >System status</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="sul-footer-links" class="span2">
-        <ul>
-          <li><a href="https://library-hours.stanford.edu/">Hours &amp; locations</a></li>
-          <li><a href="https://mylibrary.stanford.edu/">My Account</a></li>
-          <li><a href="https://library.stanford.edu/contact-us">Ask us</a></li>
-          <li><a href="https://library-status.stanford.edu/">System status</a></li>
-        </ul>
+    </div>
+  </section>
+  <div id="su-footer" class="text-white bg-dark pt-4 pb-4">
+    <div
+      class="container d-flex flex-column flex-lg-row align-items-center align-md-normal"
+      title="Common Stanford resources"
+    >
+      <div class="mt-1 mb-2 align-self-lg-start">
+        <a class="su-logo" href="https://www.stanford.edu"
+          >Stanford<br><span class="su-logo-university"
+            >University</span
+          ></a
+        >
+      </div>
+      <div class="ms-lg-5">
+        <nav
+          aria-label="global footer menu"
+          class="d-flex flex-row gap-4 gap-sm-0 flex-sm-column justify-content-center justify-content-lg-start align-items-start align-items-sm-center align-items-lg-start"
+        >
+          <ul
+            class="justify-content-center justify-content-lg-start fw-semibold gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row"
+          >
+            <li>
+              <a href="https://www.stanford.edu">
+                Stanford Home<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://visit.stanford.edu/plan/">
+                Maps &amp; Directions<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.stanford.edu/search/">
+                Search Stanford<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://emergency.stanford.edu">
+                Emergency Info<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="justify-content-center justify-content-lg-start gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row"
+          >
+            <li>
+              <a
+                href="https://www.stanford.edu/site/terms/"
+                title="Terms of use for sites"
+              >
+                Terms of Use<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.stanford.edu/site/privacy/"
+                title="Privacy and cookie policy"
+              >
+                Privacy<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://uit.stanford.edu/security/copyright-infringement"
+                title="Report alleged copyright infringement"
+              >
+                Copyright<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4"
+                title="Ownership and use of Stanford trademarks and images"
+              >
+                Trademarks<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination"
+                title="Non-discrimination policy"
+              >
+                Non-Discrimination<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.stanford.edu/site/accessibility"
+                title="Report web accessibility issues"
+              >
+                Accessibility<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="text-center text-lg-start copyright">
+          <span class="text-nowrap">© Stanford University.</span
+          ><span class="text-nowrap"
+            >&nbsp; Stanford, California 94305.</span
+          >
+        </div>
       </div>
     </div>
   </div>

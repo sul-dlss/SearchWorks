@@ -7,27 +7,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="search" type="application/opensearchdescription+xml" href="<%= opensearch_path %>" title="<%= t('opensearch_description') %>"/>
     <!-- css -->
-    <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" %>
     <!-- Stanford identity -->
-    <link href="https://www-media.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <%= javascript_include_tag 'application' %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    
-    <!-- Google tag (gtag.js) --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0K34LTNE"></script> 
-    <script> 
-      window.dataLayer = window.dataLayer || []; 
-      function gtag(){dataLayer.push(arguments);} 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0K34LTNE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
       // To turn off debug mode, exclude the parameter altogether (cannot just set to false)
       // See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
       args = <%= Settings.analytics_debug %> ? {"debug_mode":true} : {};
-      gtag('js', new Date()); 
-      gtag('config', 'G-4H0K34LTNE', args); 
+      gtag('js', new Date());
+      gtag('config', 'G-4H0K34LTNE', args);
     </script>
     <!-- Google tag (gtag.js) -->
     <%= stylesheet_link_tag "application" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/sul.css" />
 
   </head>
   <%= content_tag :body, class: body_class, data: { 'quicksearch-ga-query': strip_tags(@query || '') } do %>
@@ -39,24 +37,79 @@
       <a href="#params-q" class="element-invisible element-focusable">Skip to search</a>
       <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
     </nav>
-    <div id="su-wrap"> <!-- #su-wrap start -->
-      <div id="su-content"> <!-- #su-content start -->
-        <%= render 'shared/top_navbar' %>
-        <%= render 'shared/header_navbar' %>
-        <%= render 'shared/sub_navbar' %>
-        <div id="content" role="document" class="page">
-          <main id="main-content" role="main">
-            <!-- CONTENT: enter content below this line -->
-            <div id="quicksearch" class='container'>
-              <%= render '/shared/global_alert' %>
-              <%= yield %>
-            </div>
-          </main>
+    <header>
+      <div class="container">
+        <a class="su-brand-bar__logo" href="https://www.stanford.edu"
+          >Stanford University</a
+        >
+      </div>
+      <nav
+        class="navbar navbar-expand-md bg-dark bg-cardinal"
+        role="navigation"
+      >
+        <div class="container">
+          <a
+            class="mb-0 navbar-brand navbar-logo"
+            href="https://library.stanford.edu"
+            >Stanford Libraries</a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-bs-toggle="collapse"
+            data-target="#user-util-collapse"
+            data-bs-target="#user-util-collapse"
+            aria-controls="user-util-collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-md-end"
+            id="user-util-collapse"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://mylibrary.stanford.edu/">My Account</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://library.stanford.edu/contact-us" class="nav-link">Feedback</a>
+              </li>
+              <hr />
+              <li class="nav-item d-md-none">
+                <a href="#item1" class="nav-link">Item 1</a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a href="#item1" class="nav-link">Item 2</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div> <!-- #su-content end -->
-    </div> <!-- #su-wrap end -->
+      </nav>
+      <div class="masthead bg-dark bg-cardinal pb-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div
+              class="col-md-8 d-flex justify-content-center justify-content-md-start"
+            >
+              <%= render 'shared/header_navbar' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <%= render 'shared/sub_navbar' %>
+    <main id="main-content" role="main">
+      <!-- CONTENT: enter content below this line -->
+      <div id="quicksearch" class='container'>
+        <%= render '/shared/global_alert' %>
+        <%= yield %>
+      </div>
+    </main>
     <%= render '/shared/sul_footer' %>
-    <%= render '/shared/global_footer' %>
     <!-- Global footer snippet end -->
     <script type="text/javascript">
       $(function () {

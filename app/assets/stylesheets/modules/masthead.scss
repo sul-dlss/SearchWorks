@@ -1,30 +1,10 @@
-
-#header-navbar {
-  @extend .pt-0;
-  @extend .pt-lg-3;
-
-  // Set fixed height on breakpoints above medium
-  @media (min-width: breakpoint-max(md)) {
-    height: 100px;
-  }
-
-  .container {
-    padding: 0;
-  }
-
-  h1 {
-    label {
-      color: inherit;
-      font-weight: inherit;
-    }
-    color: #fff;
-    font-weight: 100;
-  }
+.masthead {
+  --sul-link-font-weight: 200;
 
   .search-navbar-headings {
     label {
       color: #fff;
-      font-weight: 100;
+      font-weight: var(--sul-link-font-weight);
     }
   }
 
@@ -37,31 +17,16 @@
     &:after {
       font-size: 0.5em;
     }
-
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-
-  .dropdown-item {
-    &:hover, &:focus {
-      text-decoration: none;
-    }
   }
 
   #main-search-form {
     width: 100%;
 
-    h1 {
-      white-space: nowrap;
-    }
-
-    #params-q {
-      border-color: $gray-200;
-    }
-
     .btn-beige {
-      border-color: $gray-200;
+      --bs-btn-border-color: #{$gray-200};
+      --bs-btn-bg: #{$su-light-sandstone};
+      --bs-btn-hover-bg: rgb(235.0909090909, 225.1363636364, 201.9090909091);
+      --bs-btn-active-bg: rgb(235.0909090909, 225.1363636364, 201.9090909091);
     }
   }
 
@@ -73,6 +38,5 @@
 }
 
 .subtitle {
-  color: $su-warm-gray;
   font-weight: 100;
 }

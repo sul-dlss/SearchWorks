@@ -20,7 +20,7 @@
 
         <% if defined?(searcher.toggleable?) && searcher.toggleable? %>
           <% if searcher.total.to_i > searcher.toggle_threshold.to_i %>
-            <button aria-expanded="false" aria-controls="<%= service_name %>-toggleable-results" data-original-text="<%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>" id="<%= service_name %>-results-toggle-button" class="btn btn-cardinal-red">
+            <button aria-expanded="false" aria-controls="<%= service_name %>-toggleable-results" data-original-text="<%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>" id="<%= service_name %>-results-toggle-button" class="btn btn-secondary">
               <i class="fas fa-chevron-down" aria-hidden="true"></i> <%= I18n.t("#{service_name}_search.toggle_button_text", total: searcher.total) %>
             </button>
 

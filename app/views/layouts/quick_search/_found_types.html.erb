@@ -1,15 +1,15 @@
 <% # overriden from the QuickSearch gem %>
-<nav class="row searcher-anchors" aria-label="Results found in">
-  <ul class="list-inline h4">
+<nav class="searcher-anchors" aria-label="Results found in">
+  <ul class="d-flex justify-content-center list-inline h4">
     <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
       <% if @found_types.include? searcher  %>
-        <li class='list-inline-item'>
+        <li class='d-inline-block'>
           <a href="#<%= searcher.underscore %>" data-quicksearch-ga-action="<%= searcher.underscore %>">
             <%= t("#{searcher}_search.short_display_name") %>
           </a>
         </li>
       <% else %>
-        <li class="<%= searcher.underscore %> list-inline-item">
+        <li class="<%= searcher.underscore %> d-inline-block">
           <span class="no-results-label">
             <%= t("#{searcher}_search.short_display_name") %>
           </span>

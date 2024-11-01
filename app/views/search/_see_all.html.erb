@@ -1,13 +1,13 @@
-<%= link_to (module_link), :class => "btn btn-cardinal-red" do %>
+<%= link_to (module_link), class: "btn btn-secondary" do %>
     <% short_display_name = I18n.t("#{service_name}_search.short_display_name") %>
     <i class="fas fa-angle-right" aria-hidden="true"></i>
     <% if total == '1' %>
-        <%= I18n.t("#{service_name}_search.see_all_message", default: "See #{total}<span class='sr-only'> #{service_name.humanize(capitalize: false)}</span> result".html_safe) %>
+        <%= I18n.t("#{service_name}_search.see_all_message", default: "See #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> result".html_safe) %>
     <% elsif total == '2' or total == '3' %>
-        <%= I18n.t("#{service_name}_search.see_all_message", default: "See #{total}<span class='sr-only'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
+        <%= I18n.t("#{service_name}_search.see_all_message", default: "See #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
     <% elsif total.nil? %>
-        <%= I18n.t("#{service_name}_search.see_all_message", default: "See all<span class='sr-only'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
+        <%= I18n.t("#{service_name}_search.see_all_message", default: "See all<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
     <% else %>
-        <%= I18n.t("#{service_name}_search.see_all_message", default: "See all #{total}<span class='sr-only'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
+        <%= I18n.t("#{service_name}_search.see_all_message", default: "See all #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
     <% end %>
 <% end %>

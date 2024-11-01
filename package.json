@@ -2,7 +2,7 @@
   "name": "sul-bento-app",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.3.3",
     "sass": "^1.57.1"
   },
   "scripts": {

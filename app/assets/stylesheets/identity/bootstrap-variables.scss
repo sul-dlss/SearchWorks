@@ -1,49 +1,16 @@
-@import 'digital-color';
+@import "digital-color";
+.bg-cardinal {
+  --bs-dark-rgb: var(--stanford-cardinal-rgb);
+}
 
-$blue:    $su-bright-blue !default;
-// $indigo:  #6610f2 !default;
-$purple:  $su-purple !default;
-// $pink:    #e83e8c !default;
-$red:     $su-cardinal-red !default;
-$orange:  $su-poppy !default;
-$yellow:  $su-sun !default;
-$green:   $su-mint !default;
-$teal:    $su-teal !default;
-$cyan:    $su-sky !default;
-$gray-100: $su-fog !default;
 $gray-200: lighten($su-clay, 50%) !default;
-$gray-300: lighten($su-clay, 22.5%) !default;
-$gray-400: lighten($su-clay, 15%) !default;
-$gray-500: lighten($su-clay, 7.5%) !default;
-$gray-600: $su-clay !default;
-$gray-700: lighten($su-warm-gray, 7.5%) !default;
-$gray-800: $su-warm-gray !default;
 $gray-900: darken($su-warm-gray, 7.5%) !default;
 
-$link-hover-color: $su-blue !default;
-
 // typography
-$font-family-sans-serif: 'Source Sans Pro', 'Arial Unicode MS', Helvetica, sans-serif;
+$font-family-sans-serif: "Source Sans Pro", "Arial Unicode MS", Helvetica,
+  sans-serif;
 $small-font-size: 90%;
-
-$theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "cardinal-red": $su-cardinal-red,
-    "beige": $su-light-sandstone
-  ),
-  $theme-colors
-);
-
-// Jumbotron
-$jumbotron-bg: $su-light-sandstone;
-
-$breadcrumb-bg: transparent;
 
 // possibly global?
 $headings-font-weight: 100;
-$nav-link-padding-y: 0.35rem;
-$navbar-padding-y: 1.1rem;
 $input-placeholder-color: #707070;
-$input-disabled-bg: $su-fog;
