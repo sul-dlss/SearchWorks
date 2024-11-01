@@ -26,7 +26,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:15.289+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-08-23T15:38:02.224+00:00",
+      "updatedDate": "2024-10-31T23:50:46.564+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
@@ -75,62 +75,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Item recalled"
-        }
-      },
-      {
-        "templateId": "cd39e8d8-530e-4383-b7cc-99102406bed6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 2,
-            "intervalId": "Weeks"
-          }
-        }
-      },
-      {
-        "templateId": "cd39e8d8-530e-4383-b7cc-99102406bed6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "cd39e8d8-530e-4383-b7cc-99102406bed6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 3,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "cd39e8d8-530e-4383-b7cc-99102406bed6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost",
-          "sendBy": {
-            "duration": 6,
-            "intervalId": "Months"
-          }
         }
       }
     ],
@@ -186,7 +130,7 @@
     "metadata": {
       "createdDate": "2024-05-28T19:49:34.157+00:00",
       "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2024-08-23T15:40:05.561+00:00",
+      "updatedDate": "2024-10-31T23:51:25.344+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
@@ -255,48 +199,6 @@
             "intervalId": "Days"
           }
         }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 3,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 6,
-            "intervalId": "Months"
-          }
-        }
       }
     ],
     "feeFineNotices": [
@@ -351,7 +253,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:12.398+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-08-23T15:36:31.090+00:00",
+      "updatedDate": "2024-10-31T23:51:15.141+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
@@ -404,76 +306,6 @@
           "sendHow": "Upon At",
           "sendWhen": "Aged to lost - fine charged"
         }
-      },
-      {
-        "templateId": "0c8feb9a-7035-4f76-a361-4b6299dc103d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost - fine charged",
-          "sendBy": {
-            "duration": 2,
-            "intervalId": "Days"
-          }
-        }
-      },
-      {
-        "templateId": "0c8feb9a-7035-4f76-a361-4b6299dc103d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost - fine charged",
-          "sendBy": {
-            "duration": 2,
-            "intervalId": "Weeks"
-          }
-        }
-      },
-      {
-        "templateId": "0c8feb9a-7035-4f76-a361-4b6299dc103d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost - fine charged",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "0c8feb9a-7035-4f76-a361-4b6299dc103d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost - fine charged",
-          "sendBy": {
-            "duration": 3,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "0c8feb9a-7035-4f76-a361-4b6299dc103d",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": true,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Aged to lost - fine charged",
-          "sendBy": {
-            "duration": 6,
-            "intervalId": "Months"
-          }
-        }
       }
     ],
     "requestNotices": [
@@ -487,7 +319,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-08-23T15:39:14.326+00:00",
+      "updatedDate": "2024-10-31T23:50:59.251+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     },
     "loanNotices": [
@@ -554,48 +386,6 @@
           "sendBy": {
             "duration": 7,
             "intervalId": "Days"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 1,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 3,
-            "intervalId": "Months"
-          }
-        }
-      },
-      {
-        "templateId": "2661c83d-2d7c-4b06-a60f-01c57ad2887e",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 6,
-            "intervalId": "Months"
           }
         }
       }
