@@ -740,7 +740,6 @@ ia600304.us.archive.org
 ia800304.us.archive.org
 ia800708.us.archive.org
 ia801407.us.archive.org
-ia802606.us.archive.org
 ia802808.us.archive.org
 iall.org
 ibj.pasteur.ac.ir
@@ -1944,7 +1943,6 @@ www.dialogues-cns.org
 www.digitale-sammlungen.de
 www.digitaliafilmlibrary.com
 www.digitaliapublishing.com
-www.digitalniknihovna.cz
 www.digizeitschriften.de
 www.dirjournal.org
 www.djo.harvard.edu
@@ -2111,7 +2109,6 @@ www.globalresearchonline.net
 www.gmj.ir
 www.google.com
 www.gpo.gov
-www.gpoaccess.gov
 www.gramene.org
 www.guidestar.org
 www.gynecendoscopy.org
@@ -2351,7 +2348,6 @@ www.jmau.org
 www.jmb.or.kr
 www.jmcp.org
 www.jmidlifehealth.org
-www.jmir.org
 www.jmnn.org
 www.jmolecularsignaling.com
 www.jmp.org.in
