@@ -1,4 +1,4 @@
-function toggleableResults(searcher) {
+export default function(searcher) {
   var toggleableResults = $('#' + searcher + ' [data-behavior="toggleable-results"]');
   var threshold = toggleableResults.data('toggleThreshold');
   var toggleButton = $('#' + searcher + '-results-toggle-button');
@@ -23,4 +23,4 @@ function toggleableResults(searcher) {
       toggleButton.attr('aria-expanded', false);
     }
   });
-}
+};

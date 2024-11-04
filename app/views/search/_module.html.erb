@@ -25,7 +25,9 @@
             </button>
 
             <script type='text/javascript'>
-              toggleableResults('<%= service_name %>');
+              window.onload = function () { 
+                toggleableResults('<%= service_name %>');
+              };
             </script>
           <% end %>
 
