@@ -10,8 +10,7 @@ gem 'puma', '~> 6.0'
 gem 'sassc-rails'
 
 gem 'turbo-rails', '~> 2.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
