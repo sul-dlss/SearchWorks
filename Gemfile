@@ -73,3 +73,5 @@ gem 'global_alerts'
 gem "cssbundling-rails", "~> 1.1"
 
 gem 'rack-attack'
+
+gem "importmap-rails", "~> 2.0"
