@@ -2,6 +2,7 @@
 5minuteconsult.com
 7cajas.com
 MedOne-Radiology.thieme.com
+NAEYC.org
 PA-Rotations.lwwhealthlibrary.com
 aacijournal.biomedcentral.com
 aacnjournals.org
@@ -55,6 +56,7 @@ ahj.kmu.ac.ir
 ai.nejm.org
 aidsnews.blogspot.com
 aidsrestherapy.biomedcentral.com
+aimsciences.org
 aip.scitation.org
 ajas.info
 ajlmonline.org
@@ -95,6 +97,7 @@ aops.springeropen.com
 apfmj.biomedcentral.com
 apjai-journal.org
 apjcn.nhri.org.tw
+apl.aip.org
 apn.mhmedical.com
 app.gideononline.com
 app.jove.com
@@ -124,6 +127,7 @@ archpublichealth.biomedcentral.com
 archrazi.areeo.ac.ir
 ard.bmj.com
 aricjournal.biomedcentral.com
+arjournals.annualreviews.org
 ark.cdlib.org
 arrow-journal.org
 arthritis-research.biomedcentral.com
@@ -158,6 +162,7 @@ bdj.pensoft.net
 beckerexhibits.wustl.edu
 behavioralandbrainfunctions.biomedcentral.com
 benthamopen.com
+berghahnjournals.com
 bestpractice.bmj.com
 beyoglueye.com
 bhsd.sccgov.org
@@ -285,6 +290,7 @@ books.google.co.uk
 books.google.com
 books.nap.edu
 books.openedition.org
+books.rsc.org
 booksandjournals.brillonline.com
 bookshop.europa.eu
 bookstore.icma.org
@@ -297,6 +303,7 @@ breathe.ersjournals.com
 brill.com
 bsb-eurasipjournals.springeropen.com
 bsd.biomedcentral.com
+bsgf.geoscienceworld.org
 burnstrauma.biomedcentral.com
 bvajournals.onlinelibrary.wiley.com
 bvbm2.bib-bvb.de
@@ -354,10 +361,12 @@ celljournal.org
 cellregeneration.springeropen.com
 cepr.org
 cerebellumandataxias.biomedcentral.com
+cesifo.oxfordjournals.org
 cgejournal.biomedcentral.com
 cgjonline.ca
 cgmj.cgu.edu.tw
 cgp.iiarjournals.org
+chaos.aip.org
 chem.sis.nlm.nih.gov
 chinesereferenceshelf.brillonline.com
 chiromt.biomedcentral.com
@@ -397,6 +406,7 @@ cognitiveresearchjournal.springeropen.com
 collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
+commons.emich.edu
 companions.digitalhumanities.org
 comparative-hepatology.biomedcentral.com
 compassionjournal.com
@@ -422,6 +432,7 @@ criticalcare.lwwhealthlibrary.com
 crl.acrl.org
 crln.acrl.org
 csbj.org
+cse.ucpress.edu
 cshmonographs.org
 cshperspectives.cshlp.org
 cshprotocols.cshlp.org
@@ -543,12 +554,14 @@ ecancer.org
 ecoinvent.org
 ecommercedb.com
 econgeol.geoscienceworld.org
+econpapers.hhs.se
 econtent.hogrefe.com
 ecrbrowser.dcode.org
 edm.bioscientifica.com
 edu.digitaltheatreplus.com
 edu.medici.tv
 efsa.onlinelibrary.wiley.com
+eg.geoscienceworld.org
 ehjournal.biomedcentral.com
 ehoonline.biomedcentral.com
 ehp.niehs.nih.gov
@@ -562,6 +575,7 @@ ejnmmipharmchem.springeropen.com
 ejnpn.springeropen.com
 ejns.springeropen.com
 ejo.springeropen.com
+ejournals.wspc.com.sg
 ejrnm.springeropen.com
 electronicimaging.spiedigitallibrary.org
 elib.infolinker.com.tw
@@ -585,6 +599,7 @@ eprints.lib.hokudai.ac.jp
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
+ereh.oxfordjournals.org
 eric.ed.gov
 erj.ersjournals.com
 erp.bioscientifica.com
@@ -736,7 +751,6 @@ humanfactors.jmir.org
 humgenomics.biomedcentral.com
 hunteq.com
 hv.proquest.com
-ia600304.us.archive.org
 ia800304.us.archive.org
 ia800708.us.archive.org
 ia801407.us.archive.org
@@ -794,6 +808,7 @@ immunotherapyofcancer.biomedcentral.com
 imp-primo.hosted.exlibrisgroup.com
 implementationscience.biomedcentral.com
 implementationsciencecomms.biomedcentral.com
+imrn.oxfordjournals.org
 imrs.oxfordjournals.org
 imsear.searo.who.int
 in-silico-cell-and-tissue-science.springeropen.com
@@ -876,6 +891,7 @@ jfootankleres.biomedcentral.com
 jfrh.tums.ac.ir
 jgeb.springeropen.com
 jgo.amegroups.com
+jgs.geoscienceworld.org
 jhoonline.biomedcentral.com
 jhpn.biomedcentral.com
 jibtherapies.biomedcentral.com
@@ -896,6 +912,7 @@ jmg.bmj.com
 jmhg.springeropen.com
 jmiss.tums.ac.ir
 jmolecularpsychiatry.biomedcentral.com
+jmp.aip.org
 jnanobiotechnology.biomedcentral.com
 jnccn.org
 jnephropharmacology.com
@@ -934,6 +951,7 @@ journals.asm.org
 journals.athmsi.org
 journals.biologists.com
 journals.cambridge.org
+journals.cms.math.ca
 journals.co.za
 journals.healio.com
 journals.humankinetics.com
@@ -941,6 +959,7 @@ journals.iucr.org
 journals.library.ualberta.ca
 journals.lub.lu.se
 journals.lww.com
+journals.mup.man.ac.uk
 journals.physiology.org
 journals.plos.org
 journals.sagepub.com
@@ -950,10 +969,12 @@ journals.squ.edu.om
 journals.stfm.org
 journals.tubitak.gov.tr
 journals.viamedica.pl
+journalsonline.tandf.co.uk
 jov.arvojournals.org
 jovs.amegroups.com
 jp4.journaldephysique.org
 jpatholtm.org
+jpcrd.aip.org
 jpet.aspetjournals.org
 jphcs.biomedcentral.com
 jphyscol.journaldephysique.org
@@ -1069,6 +1090,7 @@ mejdd.org
 mem.lyellcollection.org
 mental.jmir.org
 meridian.allenpress.com
+metapress.com
 methods.sagepub.com
 mg.nlcpress.com
 mh.bmj.com
@@ -1076,6 +1098,7 @@ mhealth.amegroups.com
 mhealth.jmir.org
 mhebooklibrary.com
 mhnpjournal.biomedcentral.com
+mia.ele-math.com
 microbialcell.com
 microbialcellfactories.biomedcentral.com
 microbialinformaticsj.biomedcentral.com
@@ -1176,6 +1199,7 @@ ogscience.org
 ohsonline.com
 ojin.nursingworld.org
 ojphi.org
+ojps.aip.org
 ojrd.biomedcentral.com
 ojvr.org
 olap.epsnet.com.cn
@@ -1204,6 +1228,7 @@ openlibrary.org
 openres.ersjournals.com
 openscience.bmj.com
 openurl.ac.uk
+openurl.ingenta.com
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
 opil.ouplaw.com
@@ -1263,6 +1288,7 @@ pmj.bmj.com
 pmt-eu.hosted.exlibrisgroup.com
 pn.bmj.com
 pneumonia.biomedcentral.com
+pof.aip.org
 policycommons.net
 policypress.universitypressscholarship.com
 politicalmoneyline.com
@@ -1369,6 +1395,7 @@ revistas.unc.edu.ar
 revistas.usb.edu.co
 rgd.mcw.edu
 rimg.geoscienceworld.org
+riviste.fupress.net
 rjme.ro
 rmdopen.bmj.com
 rmrb.egreenapple.com
@@ -1380,6 +1407,7 @@ rotunda.upress.virginia.edu
 royalsocietypublishing.org
 rps.mui.ac.ir
 rrtjournal.biomedcentral.com
+rsnr.royalsocietypublishing.org
 rsos.royalsocietypublishing.org
 rupress.org
 rzblx1.uni-regensburg.de
@@ -1401,6 +1429,7 @@ scfbm.biomedcentral.com
 scholar.kyobobook.co.kr
 scholarcommons.sc.edu
 scholarlycommons.pacific.edu
+scholarlypublishingcollective.org
 scholarworks.wmich.edu
 sci.amegroups.com
 scialert.net
@@ -1449,6 +1478,7 @@ sk.sagepub.com
 skeletalmusclejournal.biomedcentral.com
 sljol.info
 small.wenzibase.com
+smf4.emath.fr
 smj.sma.org.sg
 society.kisti.re.kr
 southasiacommons.net
@@ -1503,6 +1533,7 @@ symptommedia.com
 synapse.koreamed.org
 systematicreviewsjournal.biomedcentral.com
 t21ipau.nikkei.co.jp
+tandfonline.com
 tau.amegroups.com
 tbassnindia.org
 tbiomed.biomedcentral.com
@@ -1538,11 +1569,13 @@ tomography.org
 tp.amegroups.com
 trace.tennessee.edu
 tracfed.syr.edu
+transactionpub.metapress.com
 translational-medicine.biomedcentral.com
 translationalneurodegeneration.biomedcentral.com
 transplantationresearch.biomedcentral.com
 traumamanagement.biomedcentral.com
 trialsjournal.biomedcentral.com
+trn.lyellcollection.org
 tropmedhealth.biomedcentral.com
 tsaco.bmj.com
 tta.thieme.com
@@ -1567,7 +1600,6 @@ veterinaryresearch.biomedcentral.com
 video.alexanderstreet.com
 videocast.nih.gov
 virologyj.biomedcentral.com
-visualiseur.bnf.fr
 vivli.org
 voice.ons.org
 vrf.iranjournals.ir
@@ -1602,6 +1634,7 @@ worldtradelaw.net
 worldwidescience.org
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
+www-gdz.sub.uni-goettingen.de
 www-krpia-co-kr.stanford.idm.oclc.org
 www-pub.iaea.org
 www-sciencedirect-com.stanford.idm.oclc.org
@@ -1652,12 +1685,14 @@ www.aeronline.org
 www.aerzteblatt.de
 www.afrjpaedsurg.org
 www.aginganddisease.org
+www.agu.org
 www.ahajournals.org
 www.ahbps.org
 www.ahd.com
 www.ahrq.gov
 www.aidsreviews.com
 www.aimjournal.ir
+www.aimsciences.org
 www.aimspress.com
 www.airitibooks.com
 www.airitilibrary.com
@@ -1775,6 +1810,7 @@ www.beat-journal.com
 www.beilstein-journals.org
 www.beilstein.com
 www.benkler.org
+www.berghahnjournals.com
 www.besjournal.com
 www.biij.org
 www.bindingdb.org
@@ -2038,6 +2074,7 @@ www.epschinadata.com
 www.epwrfits.in
 www.erudit.org
 www.esaim-m2an.org
+www.esajournals.org
 www.esp.org
 www.ethndis.org
 www.eugenicsarchive.org
@@ -2053,7 +2090,9 @@ www.excli.de
 www.exeley.com
 www.exp-oncology.com.ua
 www.experimentalneurobiology.org
+www.extenza-eps.com
 www.eymj.org
+www.face.ufmg.br
 www.facs.org
 www.fao.org
 www.fccc.edu
@@ -2114,7 +2153,6 @@ www.guidestar.org
 www.gynecendoscopy.org
 www.h-net.org
 www.haematologica.org
-www.hathitrust.org
 www.hbpdint.com
 www.hcinnovationgroup.com
 www.health.gov.au
@@ -2276,6 +2314,7 @@ www.ita.uni-heidelberg.de
 www.itab2007.org
 www.itergateway.org
 www.itg.be
+www.iumj.indiana.edu
 www.iw3c2.org
 www.iwaponline.com
 www.j-circ.or.jp
@@ -2429,6 +2468,7 @@ www.kjm.keio.ac.jp
 www.kjronline.org
 www.kluwerarbitration.com
 www.kluwerlawonline.com
+www.kluweronline.com
 www.kma.org.kw
 www.knovel.com
 www.koreanjhepatol.org
@@ -2448,6 +2488,7 @@ www.law.sc.edu
 www.law.seattleu.edu
 www.law.uh.edu
 www.lawandinequality.org
+www.leaonline.com
 www.learntechlib.org
 www.leprosy-review.org.uk
 www.lexisnexis.com
@@ -2523,6 +2564,7 @@ www.meja.aub.edu.lb
 www.merck.com
 www.merckmanuals.com
 www.merckvetmanual.com
+www.metapress.com
 www.methodisthealth.com
 www.mhlw.go.jp
 www.mhra.gov.uk
@@ -2556,6 +2598,7 @@ www.musicalamerica.com
 www.mygcronline.org
 www.na.infn.it
 www.naaccr.org
+www.naeyc.org
 www.najms.org
 www.nal.usda.gov
 www.nap.edu
@@ -2563,6 +2606,7 @@ www.nasonline.org
 www.nationalacademies.org
 www.nationalnursesunited.org
 www.nature.com
+www.naylornetwork.com
 www.nber.org
 www.nbme.org
 www.nbn-resolving.de
@@ -2641,7 +2685,6 @@ www.openbookpublishers.com
 www.openedition.org
 www.openhelix.com
 www.openlibhums.org
-www.openlibrary.org
 www.ophthalmologia.be
 www.orthomolecular.org
 www.osapublishing.org
@@ -2800,6 +2843,7 @@ www.scielosp.org
 www.science-softcon.de
 www.science.org
 www.sciencedirect.com
+www.sciencefromisrael.com
 www.scientificamerican.com
 www.scientificexploration.org
 www.scimagojr.com
@@ -2915,6 +2959,7 @@ www.turkpediatriarsivi.com
 www.turkpsikiyatri.com
 www.turkurolojidergisi.com
 www.turner-white.com
+www.turpion.org
 www.uhms.org
 www.uic.edu
 www.ulb.tu-darmstadt.de
@@ -2932,6 +2977,7 @@ www.usnews.com
 www.uspharmacist.com
 www.uspusan.com
 www.usrds.org
+www.utexaspressjournals.org
 www.utpjournals.press
 www.uworld.com
 www.vasculardiseasemanagement.com
@@ -2969,6 +3015,7 @@ www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
 www.worldscientific.com
+www.worldscinet.com
 www.worldwater.org
 www.wounds-uk.com
 www.wto-ilibrary.org
