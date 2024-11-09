@@ -62,7 +62,6 @@ ajas.info
 ajlmonline.org
 ajns.paans.org
 ajod.org
-ajot.aota.org
 ajp.mums.ac.ir
 ajp.psychiatryonline.org
 ajph.aphapublications.org
@@ -1381,6 +1380,7 @@ repository.tufs.ac.jp
 repository.uchastings.edu
 repository.uclawsf.edu
 reproductive-health-journal.biomedcentral.com
+research.aota.org
 research.utwente.nl
 researchintegrityjournal.biomedcentral.com
 researchinvolvement.biomedcentral.com
