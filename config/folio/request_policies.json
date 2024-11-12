@@ -71,9 +71,7 @@
   {
     "id": "8a58b9d6-855d-49bb-9a16-8b409e590dfe",
     "name": "No requests allowed",
-    "requestTypes": [
-
-    ],
+    "requestTypes": [],
     "metadata": {
       "createdDate": "2023-08-10T18:50:32.719+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
