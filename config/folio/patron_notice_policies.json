@@ -8,15 +8,9 @@
       "createdDate": "2023-08-09T20:35:44.015+00:00",
       "updatedDate": "2024-06-22T06:34:45.239+00:00"
     },
-    "loanNotices": [
-
-    ],
-    "feeFineNotices": [
-
-    ],
-    "requestNotices": [
-
-    ]
+    "loanNotices": [],
+    "feeFineNotices": [],
+    "requestNotices": []
   },
   {
     "id": "1fd0ccd5-0ac3-446f-a720-ceafcecf818c",
@@ -308,9 +302,7 @@
         }
       }
     ],
-    "requestNotices": [
-
-    ]
+    "requestNotices": []
   },
   {
     "id": "c4ec90cb-1139-4c59-a690-9de48c4e3fd6",

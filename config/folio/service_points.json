@@ -561,9 +561,7 @@
     "shelvingLagTime": 0,
     "pickupLocation": false,
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [
-
-    ],
+    "staffSlips": [],
     "metadata": {
       "createdDate": "2023-08-09T20:33:25.599+00:00",
       "updatedDate": "2024-06-22T06:34:26.878+00:00"
