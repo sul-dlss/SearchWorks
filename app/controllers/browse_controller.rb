@@ -33,7 +33,7 @@ class BrowseController < ApplicationController
   end
 
   def browse_params
-    params.permit(:start, :barcode, :before, :after, :view)
+    params.permit(:start, :barcode, :before, :after, :view, :call_number)
   end
 
   def fetch_orginal_document
