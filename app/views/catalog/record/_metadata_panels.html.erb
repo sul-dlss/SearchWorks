@@ -3,6 +3,7 @@
 
   <%= render AccessPanels::CourseReservesComponent.new(document: document) %>
   <%= render AccessPanels::AtTheLibraryComponent.new(document: document) %>
+  <%= render AccessPanels::SimilarHoldingsComponent.new(document: document) %>
 
   <% context = capture do %>
     <%= render AccessPanels::AppearsInComponent.new(document: document) %>
