@@ -5888,6 +5888,28 @@
     }
   },
   {
+    "id": "68e2e90d-3a13-4397-b715-10c988d39517",
+    "name": "Law Kids Books",
+    "code": "Law-Kids",
+    "discoveryDisplayName": "Law Kids Book Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
+    "details": {},
+    "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
+    "servicePointIds": [
+      "ef1ea792-b2bb-49a2-8747-94376b64a74d"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2024-11-13T18:28:46.116+00:00",
+      "createdByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6",
+      "updatedDate": "2024-11-13T18:28:46.116+00:00",
+      "updatedByUserId": "f67cca36-ec2a-42e2-a552-9666a6f405d6"
+    }
+  },
+  {
     "id": "692dc27f-4757-44c7-a325-7e7f514bce3b",
     "name": "Green Has Journals",
     "code": "GRE-HAS-JOURNALS",
