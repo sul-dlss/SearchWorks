@@ -73,7 +73,6 @@ alzres.biomedcentral.com
 amb-express.springeropen.com
 americanfitnessindex.org
 analyticscampus.gallup.com
-anatomia.library.utoronto.ca
 ancestrylibrary.proquest.com
 anesthesiology.lwwhealthlibrary.com
 anesthesiology.pubs.asahq.org
@@ -154,7 +153,6 @@ basictranslational.onlinejacc.org
 batesvisualguide.com
 bcn.tums.ac.ir
 bdj.pensoft.net
-beckerexhibits.wustl.edu
 behavioralandbrainfunctions.biomedcentral.com
 benthamopen.com
 bestpractice.bmj.com
@@ -691,7 +689,6 @@ hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
 hdl.handle.net
 hdl.library.upenn.edu
-hdl.loc.gov
 he02.tci-thaijo.org
 head-face-med.biomedcentral.com
 headandneckoncology.biomedcentral.com
@@ -736,10 +733,7 @@ humanfactors.jmir.org
 humgenomics.biomedcentral.com
 hunteq.com
 hv.proquest.com
-ia800304.us.archive.org
-ia800708.us.archive.org
 ia801407.us.archive.org
-ia802808.us.archive.org
 iall.org
 ibj.pasteur.ac.ir
 icd9cm.chrisendres.com
@@ -1343,7 +1337,6 @@ redivis.com
 referenceworks.brillonline.com
 refworks.proquest.com
 regenmedres.biomedcentral.com
-register.sanfordguide.com
 rehab.jmir.org
 remotesensing.spiedigitallibrary.org
 rep.bioscientifica.com
@@ -1478,7 +1471,6 @@ stanford.overdrive.com
 stanford.policymap.com
 stanford.universitypressscholarship.com
 stanfordhealthcare.org
-stanfordhospital.org
 stanforduniversity.qualtrics.com
 stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs.proquest.com
@@ -1583,7 +1575,6 @@ webronza.asahi.com
 webserver.erwin-rauner.de
 wellcomecollection.org
 wellcomelibrary.org
-wellcomeopenresearch.org
 westindies.scielo.org
 whel-primo.hosted.exlibrisgroup.com
 who.int
@@ -1900,7 +1891,6 @@ www.coloproctol.org
 www.columbia.edu
 www.comp-index.com
 www.comparativepsychology.org
-www.comprehensivephysiology.com
 www.computer.org
 www.conflictinindochina.amdigital.co.uk
 www.consultant360.com
@@ -1921,7 +1911,6 @@ www.cureus.com
 www.currentpsychiatry.com
 www.currentscience.ac.in
 www.cytojournal.com
-www.cytoscape.org
 www.dana.org
 www.dartmouthatlas.org
 www.darulillm.com
@@ -1948,7 +1937,6 @@ www.djo.harvard.edu
 www.djph.org
 www.dl.begellhouse.com
 www.dlib.org
-www.doabooks.org
 www.doaj.org
 www.docuseek2.com
 www.doiserbia.nb.rs
@@ -2420,7 +2408,6 @@ www.kanopy.com
 www.kardiologiapolska.pl
 www.karger.com
 www.keesings.com
-www.khanacademy.org
 www.kidney.org
 www.kjim.org
 www.kjm.keio.ac.jp
@@ -2474,7 +2461,6 @@ www.longwoods.com
 www.lsspjournal.com
 www.lungca.org
 www.lungindia.com
-www.magicandmedicine.hps.cam.ac.uk
 www.maizegdb.org
 www.managedcaredigest.com
 www.managedhealthcareconnect.com
@@ -2823,7 +2809,6 @@ www.sjmms.net
 www.sjweh.fi
 www.slavery.amdigital.co.uk
 www.sljol.info
-www.smcma.org
 www.smw.ch
 www.soc-bdr.org
 www.socialexplorer.com
@@ -2872,7 +2857,6 @@ www.thejournalofbreasthealth.com
 www.thelancet.com
 www.thepcrj.org
 www.thepermanentejournal.org
-www.thepmd.com
 www.thepractitioner.co.uk
 www.thericejournal.com
 www.thermopedia.com
@@ -2916,7 +2900,6 @@ www.uhms.org
 www.uic.edu
 www.ulb.tu-darmstadt.de
 www.um.edu.mt
-www.umass.edu
 www.ums.ac.uk
 www.undercurrentnews.com
 www.uni-mannheim.de
