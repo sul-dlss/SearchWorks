@@ -1573,7 +1573,6 @@ webedition.sanfordguide.com
 webofknowledge.com
 webronza.asahi.com
 webserver.erwin-rauner.de
-wellcomecollection.org
 wellcomelibrary.org
 westindies.scielo.org
 whel-primo.hosted.exlibrisgroup.com
