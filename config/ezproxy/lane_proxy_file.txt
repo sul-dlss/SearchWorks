@@ -291,7 +291,6 @@ bpded.biomedcentral.com
 bpsmedicine.biomedcentral.com
 bpspubs.onlinelibrary.wiley.com
 breast-cancer-research.biomedcentral.com
-breathe.ersjournals.com
 brill.com
 bsb-eurasipjournals.springeropen.com
 bsd.biomedcentral.com
@@ -584,9 +583,7 @@ epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
 eric.ed.gov
-erj.ersjournals.com
 erp.bioscientifica.com
-err.ersjournals.com
 esajournals.onlinelibrary.wiley.com
 escholarship.org
 esi.clarivate.com
@@ -1194,7 +1191,6 @@ openheart.bmj.com
 openhypertensionjournal.com
 openknowledge.worldbank.org
 openlibrary.org
-openres.ersjournals.com
 openscience.bmj.com
 openurl.ac.uk
 opg.optica.org
@@ -1297,6 +1293,7 @@ pubchem.ncbi.nlm.nih.gov
 public.carnet.hr
 public.ebookcentral.proquest.com
 publications.aap.org
+publications.ersnet.org
 publications.iarc.fr
 publications.worldbank.org
 publichealth.jmir.org
@@ -2080,7 +2077,7 @@ www.genome.gov
 www.genomesonline.org
 www.gensat.org
 www.geolsoc.org.uk
-www.geomednews.org
+www.geomednews.com
 www.geoscienceworld.org
 www.germs.ro
 www.ghfbb.ir
