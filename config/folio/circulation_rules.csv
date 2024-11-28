@@ -187,7 +187,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,ART-LOCKED-MEDIUM or ART-LOCKED-LARGE or ART-LOCKED-OVERSIZE or ART-LOCKED-SMALL or ART-LOCKED-LARGE-R or ART-LOCKED-MEDIUM-R or ART-LOCKED-OVERSIZE-R or ART-LOCKED-SMALL-R,No loan,Allow paging/hold,Short Term Notices,No fines,$250 lost fee
 ,periodical,,,,,ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,newspaper,,,,,MEDIA-SER-PROCESSING,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee
-,newspaper,,,,,SAL3-PAGE-EA or SAL3-PAGE-GR,No loan,Allow paging,Send No Notices,No fines,$100 lost fee
+,newspaper,,,,,SAL3-PAGE-EA or SAL3-PAGE-GR or SAL3-PAGE-SP,No loan,Allow paging,Send No Notices,No fines,$100 lost fee
 ,multimedia,,,,,SCI-ATCIRCDESK,7day-1renew-1daygrace,No requests allowed,Default notice,No fines,$200 lost fee book
 ,multimedia,,,,,SAL3-PAGE-MU-CIRC,28day-2renew-7daygrace,Allow All,Default notice,No fines,$225 lost fee
 ,multimedia,,,,,SAL3-PAGE-MP,7day-norenew-1daygrace,Allow All,Default notice,No fines,$500 lost fee
