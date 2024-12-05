@@ -495,7 +495,6 @@ docs.google.com
 docs.newsbank.com
 docuseek2.com
 dod.chemnetbase.com
-doi-org.stanford.idm.oclc.org
 doi.org
 drc.bmj.com
 druginfo.nlm.nih.gov
@@ -709,7 +708,6 @@ hindawi.com
 hipandpelvis.or.kr
 histbest.ub.uni-leipzig.de
 history.paratext.com
-historynews.chadwyck.com
 hivinsite.ucsf.edu
 hjemmesider.diku.dk
 hmap.biomedcentral.com
@@ -1484,7 +1482,6 @@ subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
 sumsearch.org
 surgery.lwwhealthlibrary.com
-survcan.iarc.fr
 svn.bmj.com
 swbplus.bsz-bw.de
 symposium.cshlp.org
@@ -2896,7 +2893,6 @@ www.uic.edu
 www.ulb.tu-darmstadt.de
 www.um.edu.mt
 www.ums.ac.uk
-www.undercurrentnews.com
 www.uni-mannheim.de
 www.unicef.org
 www.unodc.org
@@ -2905,7 +2901,6 @@ www.urologyannals.com
 www.urologyjournal.org
 www.usnews.com
 www.uspharmacist.com
-www.uspusan.com
 www.usrds.org
 www.utpjournals.press
 www.uworld.com
