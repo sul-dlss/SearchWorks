@@ -302,7 +302,6 @@ bz.nlcpress.com
 cadal.edu.cn
 cajgh.pitt.edu
 caliber.ucpress.net
-cancer.ca
 cancer.jmir.org
 cancerandmetabolism.biomedcentral.com
 cancerci.biomedcentral.com
@@ -358,7 +357,6 @@ cgp.iiarjournals.org
 chem.sis.nlm.nih.gov
 chinesereferenceshelf.brillonline.com
 chiromt.biomedcentral.com
-ci5.iarc.fr
 cig.uw.edu
 ciliajournal.biomedcentral.com
 cinc.org
@@ -711,7 +709,6 @@ history.paratext.com
 hivinsite.ucsf.edu
 hjemmesider.diku.dk
 hmap.biomedcentral.com
-hmddirectory.nlm.nih.gov
 hms.harvard.edu
 hojishinbun.hoover.org
 home.liebertpub.com
@@ -793,7 +790,6 @@ informatics.bmj.com
 infotrac.gale.com
 infotrac.galegroup.com
 infoweb.newsbank.com
-injuryfacts.nsc.org
 injuryprevention.bmj.com
 insidetrade.com
 insight.jci.org
@@ -1156,7 +1152,6 @@ obgyn.onlinelibrary.wiley.com
 objects.library.uu.nl
 occup-med.biomedcentral.com
 oce.ovid.com
-odphp.osophs.dhhs.gov
 oed.com
 oeis.org
 oem.bmj.com
@@ -1319,7 +1314,6 @@ qims.amegroups.com
 qualitysafety.bmj.com
 raf.bioscientifica.com
 rapm.bmj.com
-ratecalc.cancer.gov
 rave.ohiolink.edu
 rbej.biomedcentral.com
 rc.rcjournal.com
@@ -1540,7 +1534,6 @@ udndata.com
 ufdc.ufl.edu
 ugeskriftet.dk
 ulrichsweb.serialssolutions.com
-unstats.un.org
 upload.wikimedia.org
 us.expasy.org
 usp.az1.qualtrics.com
@@ -1671,12 +1664,10 @@ www.am-explorer.com
 www.ama-assn.org
 www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
-www.americanheart.org
 www.americanhistory.amdigital.co.uk
 www.americanindiannewspapers.amdigital.co.uk
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
-www.amfar.org
 www.amhsr.org
 www.amj.net.au
 www.amjcaserep.com
@@ -1810,7 +1801,6 @@ www.cambridge.org
 www.canadiana.org
 www.canadianoncologynursingjournal.com
 www.cancer.gov
-www.cancer.org
 www.cancerbiomed.org
 www.cancernetwork.com
 www.candidagenome.org
@@ -1826,7 +1816,6 @@ www.ccadvisor.org
 www.ccdc.cam.ac.uk
 www.ccij-online.org
 www.ccmbm.com
-www.ccrcal.org
 www.ccsenet.org
 www.cda-adc.ca
 www.cdc.gov
@@ -1843,7 +1832,6 @@ www.chemedx.org
 www.chemnetbase.com
 www.chemrxiv.org
 www.chicagomanualofstyle.org
-www.childstats.gov
 www.china.amdigital.co.uk
 www.chinaebook.com
 www.chinamaxx.net
@@ -1905,7 +1893,6 @@ www.currentpsychiatry.com
 www.currentscience.ac.in
 www.cytojournal.com
 www.dana.org
-www.dartmouthatlas.org
 www.darulillm.com
 www.databanksinternational.com
 www.db.dyabola.de
@@ -2444,7 +2431,6 @@ www.literature.at
 www.liverpooluniversitypress.co.uk
 www.llmc.com
 www.llmcdigital.org
-www.lls.org
 www.lmaleidykla.lt
 www.loc.gov
 www.loebclassics.com
@@ -2455,7 +2441,6 @@ www.lsspjournal.com
 www.lungca.org
 www.lungindia.com
 www.maizegdb.org
-www.managedcaredigest.com
 www.managedhealthcareconnect.com
 www.maneyonline.com
 www.manu.edu.mk
@@ -2531,7 +2516,6 @@ www.munzinger.de
 www.musicalamerica.com
 www.mygcronline.org
 www.na.infn.it
-www.naaccr.org
 www.najms.org
 www.nal.usda.gov
 www.nap.edu
