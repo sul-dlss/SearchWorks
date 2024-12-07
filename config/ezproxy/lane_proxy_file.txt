@@ -313,7 +313,6 @@ cancerletter.com
 cancerpreventionresearch.aacrjournals.org
 cancerres.aacrjournals.org
 cancersheadneck.biomedcentral.com
-cancerstaging.org
 capmh.biomedcentral.com
 carbon-pulse.com
 cardiab.biomedcentral.com
@@ -499,7 +498,6 @@ druginfo.nlm.nih.gov
 ds.cc.yamaguchi-u.ac.jp
 dsm.psychiatryonline.org
 dspace.library.uu.nl
-dspace.ut.ee
 dwso.revealdigital.org
 dx.doi.org
 dxplain.net
@@ -695,9 +693,7 @@ heart.bmj.com
 heartasia.bmj.com
 heartfailure.onlinejacc.org
 hearth.library.cornell.edu
-hebra.dermis.net
 heinonline.org
-helioblast.heliotext.com
 hemonc.mhmedical.com
 hereditasjournal.biomedcentral.com
 herpesviridae.biomedcentral.com
@@ -728,7 +724,6 @@ hv.proquest.com
 ia801407.us.archive.org
 iall.org
 ibj.pasteur.ac.ir
-icd9cm.chrisendres.com
 icsd.fiz-karlsruhe.de
 icurology.org
 idpjournal.biomedcentral.com
@@ -769,7 +764,6 @@ ijponline.biomedcentral.com
 ijps.tums.ac.ir
 ijvr.shirazu.ac.ir
 ilibri.casalini.it
-imagebank.hematology.org
 imagebank.osa.org
 images.tandf.co.uk
 img1.od-cdn.com
@@ -1803,7 +1797,6 @@ www.canadianoncologynursingjournal.com
 www.cancer.gov
 www.cancerbiomed.org
 www.cancernetwork.com
-www.candidagenome.org
 www.canjsurg.ca
 www.cap.amdigital.co.uk
 www.carcinogenesis.com
@@ -1856,7 +1849,6 @@ www.clinicaltrialsregister.eu
 www.clinicsandpractice.org
 www.clinmedres.org
 www.clinmicronow.org
-www.clr-online.com
 www.clspectrum.com
 www.cmaj.ca
 www.cmi.ustc.edu.cn
@@ -2105,7 +2097,6 @@ www.highwirepress.com
 www.hindawi.com
 www.hindicinema.amdigital.co.uk
 www.histmodbiomed.org
-www.historyofmedicine.com
 www.hiv.lanl.gov
 www.hjdbulletin.org
 www.hkmj.org
@@ -2221,7 +2212,6 @@ www.int-res.com
 www.interactionofcolor.com
 www.interdok.com
 www.internationaljournalofcaringsciences.org
-www.interscience.wiley.com
 www.intmedpress.com
 www.iom.edu
 www.iop.org
@@ -2404,7 +2394,6 @@ www.krpia.co.kr
 www.ksdb.org
 www.kstudy.com
 www.labtestsonline.org
-www.lacmanet.org
 www.lakartidningen.se
 www.laryngologyandvoice.org
 www.latinobarometro.org
@@ -2629,7 +2618,6 @@ www.parasitologyindia.org
 www.paru.cas.cz
 www.pdb.org
 www.pdcnet.org
-www.pdr.net
 www.pediatricneurosciences.com
 www.pedsurglibrary.com
 www.pensoft.net
@@ -2902,7 +2890,6 @@ www.vjultrafast.org
 www.vlebooks.com
 www.wageningenacademic.com
 www.washingtonpost.com
-www.wdoms.org
 www.webofscience.com
 www.who.int
 www.whocancerpain.wisc.edu
