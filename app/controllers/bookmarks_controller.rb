@@ -4,13 +4,6 @@ class BookmarksController < CatalogController
   include Blacklight::Bookmarks
   include SelectionsCount
 
-  configure_blacklight do |config|
-    config.default_solr_params = {
-      qt: 'document',
-      rows: 20
-    }
-  end
-
   # Overidden from Blacklight to add our tabbed interface
   def index
     @bookmarks = token_or_current_or_guest_user.bookmarks.where(record_type: 'catalog')
