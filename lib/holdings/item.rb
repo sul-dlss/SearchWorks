@@ -153,6 +153,23 @@ class Holdings
       request_policy&.dig('requestTypes') || []
     end
 
+    def availability_text
+      status.status_text unless temporary_location_text
+    end
+
+    def temporary_location_text
+      return if effective_location&.details&.key?('availabilityClass') ||
+                effective_location&.details&.key?('searchworksTreatTemporaryLocationAsPermanentLocation') ||
+                effective_permanent_location_code == temporary_location_code
+
+      temporary_location&.name
+    end
+
+    def has_in_process_availability_class?
+      availability_class = effective_location&.details&.dig('availabilityClass')
+      availability_class.present? && availability_class == 'In_process'
+    end
+
     private
 
     def standard_or_zombie_library
