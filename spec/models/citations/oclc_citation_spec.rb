@@ -11,7 +11,8 @@ RSpec.describe Citations::OclcCitation do
   before do
     allow(OclcDiscoveryClient).to receive(:new).and_return(oclc_client)
     allow(oclc_client).to receive(:citations).and_return(
-      ['entries' => [{ 'oclcNumber' => '12345', 'style' => 'apa', 'citationText' => 'Citation Content' }]]
+      ['entries' => [{ 'oclcNumber' => '12345', 'style' => 'apa', 'citationText' => 'Citation Content' },
+                     { 'oclcNumber' => '12345', 'resultType' => 'problem', 'type' => 'UNSUPPORTED_MATERIAL_FORMAT_TYPE' }]]
     )
     allow(Settings.oclc_discovery.citations).to receive(:enabled).and_return(oclc_enabled)
   end
