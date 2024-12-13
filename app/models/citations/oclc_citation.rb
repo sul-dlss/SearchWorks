@@ -40,7 +40,7 @@ module Citations
     # into data like: { oclc_number => { citation_style => citation_text } }
     def transform_grouped_citations(grouped_citations)
       grouped_citations.transform_values do |citations|
-        citations.to_h { |citation| [searchworks_style_code(citation['style']), citation['citationText']&.html_safe] } # rubocop:disable Rails/OutputSafety
+        citations.to_h { |citation| [searchworks_style_code(citation['style']), citation['citationText']&.html_safe] }.compact # rubocop:disable Rails/OutputSafety
       end
     end
 
