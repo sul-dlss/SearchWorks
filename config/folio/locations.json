@@ -8868,7 +8868,7 @@
     "id": "a19fa3e9-687b-47fe-aa7b-09d06bcdac6d",
     "name": "Lane Ref: LC Class",
     "code": "LANE-REF",
-    "discoveryDisplayName": "Reference (Upstairs)",
+    "discoveryDisplayName": "Reference (Shelved at Information Desk)",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -8882,8 +8882,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:05.933+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:05.933+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-12-11T15:53:17.015+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
