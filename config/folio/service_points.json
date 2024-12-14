@@ -739,7 +739,7 @@
     "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"GSB\"}",
     "pickupLocation": true,
     "holdShelfExpiryPeriod": {
-      "duration": 4,
+      "duration": 2,
       "intervalId": "Weeks"
     },
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
@@ -764,7 +764,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:06.934+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-12-09T17:18:10.118+00:00",
+      "updatedDate": "2024-12-13T20:19:30.381+00:00",
       "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
     }
   },
