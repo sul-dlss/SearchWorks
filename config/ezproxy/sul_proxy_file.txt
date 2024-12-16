@@ -431,7 +431,6 @@ www.onepetro.org
 www.astrosociety.org
 www.collegesource.org
 www.fenimoreartmuseum.org
-udbstat.eastview.com
 kotobarabia.eastview.com
 ka2.eastview.com
 dlib.eastview.com
@@ -1420,7 +1419,6 @@ www.eenews.net
 www.iclr.co.uk
 www.oxfordhandbooks.com
 www.pkulaw.cn
-www.rbsourcefilings.com
 nass.oxfordjournals.org
 wio.iwaponline.com
 imrs.oxfordjournals.org
@@ -1619,3 +1617,4 @@ www.bloomsburyphilosophylibrary.com
 history-commons.net
 www.magiran.com
 lateqr.ancientbooks.cn
+gca.eastview.com
