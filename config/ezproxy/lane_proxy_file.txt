@@ -634,6 +634,7 @@ gallica.bnf.fr
 games.jmir.org
 gatesopenresearch.org
 gateway.proquest.com
+gca.eastview.com
 gdc.galegroup.com
 gdz.sub.uni-goettingen.de
 genesdev.cshlp.org
@@ -1734,7 +1735,6 @@ www.austlii.edu.au
 www.avert.org
 www.ayujournal.org
 www.balkanmedicaljournal.org
-www.bam-online.org
 www.banglajol.info
 www.bartleby.com
 www.bc.edu
