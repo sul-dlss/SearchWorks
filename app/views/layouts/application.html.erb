@@ -24,7 +24,7 @@
     </script>
     <!-- Google tag (gtag.js) -->
     <%= stylesheet_link_tag "application" %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-09-04/styles/sul.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-12-18/styles/sul.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
   </head>
@@ -33,9 +33,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6F99S9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <nav id="skip-link" role="navigation" aria-label="Skip links">
-      <a href="#params-q" class="element-invisible element-focusable">Skip to search</a>
-      <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <nav id="skip-link" aria-label="Skip links">
+      <a href="#params-q" class="visually-hidden-focusable rounded-bottom py-2 px-3">Skip to search</a>
+      <a href="#main-content" class="visually-hidden-focusable rounded-bottom py-2 px-3">Skip to main content</a>
     </nav>
     <header>
       <div class="container">
@@ -51,7 +51,7 @@
           <a
             class="mb-0 navbar-brand navbar-logo"
             href="https://library.stanford.edu"
-            >Stanford Libraries</a
+            >Stanford University Libraries</a
           >
           <button
             class="navbar-toggler navbar-toggler-right"
