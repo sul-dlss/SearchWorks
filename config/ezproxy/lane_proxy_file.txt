@@ -71,7 +71,6 @@ almob.biomedcentral.com
 alz-journals.onlinelibrary.wiley.com
 alzres.biomedcentral.com
 amb-express.springeropen.com
-americanfitnessindex.org
 analyticscampus.gallup.com
 ancestrylibrary.proquest.com
 anesthesiology.lwwhealthlibrary.com
@@ -171,7 +170,6 @@ biolmoodanxietydisord.biomedcentral.com
 biologicalproceduresonline.biomedcentral.com
 biologydirect.biomedcentral.com
 biolres.biomedcentral.com
-biolsport.com
 biomagres.biomedcentral.com
 biomarkerres.biomedcentral.com
 biomaterialsres.biomedcentral.com
@@ -1324,7 +1322,6 @@ regenmedres.biomedcentral.com
 rehab.jmir.org
 remotesensing.spiedigitallibrary.org
 rep.bioscientifica.com
-repository.edm-forum.org
 repository.icesi.edu.co
 repository.law.umich.edu
 repository.tufs.ac.jp
@@ -1558,7 +1555,6 @@ webserver.erwin-rauner.de
 wellcomelibrary.org
 westindies.scielo.org
 whel-primo.hosted.exlibrisgroup.com
-who.int
 whqlibdoc.who.int
 wio.iwaponline.com
 wisesearch6.wisers.net
@@ -1706,7 +1702,6 @@ www.archive.org
 www.archives-pmr.org
 www.archivesofpathology.org
 www.archivesofrheumatology.org
-www.archtrauma.com
 www.arctt.info
 www.arjournals.org
 www.arl.org
@@ -1730,7 +1725,6 @@ www.atsdr.cdc.gov
 www.atsjournals.org
 www.auajournals.org
 www.audio-digest.org
-www.audiologyresearch.org
 www.austlii.edu.au
 www.avert.org
 www.ayujournal.org
@@ -2220,7 +2214,6 @@ www.ipej.org
 www.ipni.org
 www.ippf.org
 www.irct.org
-www.irdrjournal.com
 www.irjournal.org
 www.irmj.ir
 www.ismni.org
@@ -2246,7 +2239,6 @@ www.japtr.org
 www.jbclinpharm.org
 www.jbji.net
 www.jbmethods.org
-www.jbpe.org
 www.jbr.gr
 www.jbra.com.br
 www.jbsr.be
@@ -2268,7 +2260,6 @@ www.jdentaled.org
 www.jeb.co.in
 www.jee.org
 www.jehp.net
-www.jenb.or.kr
 www.jeo-esska.com
 www.jepm.seahq.net
 www.jfcmonline.com
@@ -2287,7 +2278,6 @@ www.jhrsonline.org
 www.jhse.ua.es
 www.jiaci.org
 www.jiaps.com
-www.jicep.com
 www.jidc.org
 www.jioh.org
 www.jisponline.com
@@ -2434,7 +2424,6 @@ www.managedhealthcareconnect.com
 www.maneyonline.com
 www.manu.edu.mk
 www.marketresearch.amdigital.co.uk
-www.mass-spectrometry.jp
 www.massey.ac.nz
 www.massobservation.amdigital.co.uk
 www.masstourism.amdigital.co.uk
@@ -2575,7 +2564,6 @@ www.omicsonline.org
 www.omjournal.org
 www.ompu.ac.jp
 www.oncology-times.com
-www.oncology.termedia.pl
 www.oncologypractice.com
 www.onepetro.org
 www.onlinejacc.org
@@ -2601,7 +2589,6 @@ www.oxfordhandbooks.com
 www.oxfordreference.com
 www.oxfordscholarlyeditions.com
 www.oxfordscholarship.com
-www.pacinieditore.it
 www.paexamprep.com
 www.pagepress.org
 www.pagepressjournals.org
@@ -2622,7 +2609,6 @@ www.pedsurglibrary.com
 www.pensoft.net
 www.pep-web.org
 www.perditamanuscripts.amdigital.co.uk
-www.pghn.org
 www.phac-aspc.gc.ca
 www.pharmacypractice.org
 www.pharmacytimes.com
@@ -2706,7 +2692,6 @@ www.revespcardiol.org
 www.revneurol.com
 www.rhinologyjournal.com
 www.rimed.org
-www.rimedicalsociety.org
 www.riss.kr
 www.rjo.ro
 www.rjpbcs.com
@@ -2732,7 +2717,6 @@ www.sc05.supercomputing.org
 www.sccma.org
 www.scialert.net
 www.sciandmed.com
-www.scibull.com
 www.scielo.br
 www.scielo.cl
 www.scielo.oces.mctes.pt
@@ -2782,7 +2766,6 @@ www.spandidos-publications.com
 www.sphinxsai.com
 www.spiedigitallibrary.org
 www.spiedl.org
-www.spnefro.pt
 www.springer.com
 www.springerlink.com
 www.springeropen.com
