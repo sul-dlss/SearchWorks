@@ -1080,14 +1080,10 @@
       "duration": 7,
       "intervalId": "Days"
     },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
-      },
-      {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
         "printByDefault": true
       },
       {
@@ -1097,13 +1093,17 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
       }
     ],
     "metadata": {
       "createdDate": "2023-08-10T17:45:19.764+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:19.764+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2024-12-18T17:52:40.313+00:00",
+      "updatedByUserId": "a8e56e25-3536-4ba6-85bd-be835c4bdb57"
     }
   },
   {
