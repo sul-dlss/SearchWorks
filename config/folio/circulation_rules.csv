@@ -172,6 +172,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,score,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,score,,,,,MUS-R-STACKS or MUS-R-MINIATURE or MUS-R-OVERSIZE,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,score,,,,,MUS-SCORES or MUS-FLAT or MUS-OVERSIZE or MUS-MINIATURE or MUS-STACKS,1qtr-3renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
+,periodical,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,periodical,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,periodical,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,periodical,,,,,SAL3-PAGE-MU-CIRC,7day-1renew-3daygrace,Allow All,Default notice,No fines,$65 lost fee
@@ -206,6 +207,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,multimedia,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,microform,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MM or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,microform,,,,,GRE-DOCS-MICROFICHE or GRE-DOCS-MICROFILM,No loan,No requests allowed,Default notice,No fines,$75 lost fee
+,map,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,map,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,map,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,map,,,,,MAR-ATLASES or MAR-MAPS,No loan,No requests allowed,Default notice,No fines,$150 lost fee
@@ -229,6 +231,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 1,,,,,EAR-ATCIRCDESK,1day-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,book,,,,,TAN-NEWBOOK,28day-1renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,TAN-FOLIO or TAN-LEWIS-COLL or TAN-STACKS or TAN-REF-DESK,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
+,book,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,book,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging,Default notice,No fines,$600 lost fee
 ,book,,,,,SAL3-PAGE-MU-CIRC,1qtr-3renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,book,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
