@@ -151,7 +151,7 @@ RSpec.describe IndexLinks do
       context 'LANE records with a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://who.int/whatever",
+            marc_links_struct: [{ href: "https://www.who.int/whatever",
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Access restricted to Stanford community' }],
@@ -160,20 +160,20 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwho.int%2Fwhatever'
+          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
         end
       end
 
       context 'LANE records without a link_title/856$z restricted note' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://who.int/whatever", fulltext: true, stanford_only: true }],
+            marc_links_struct: [{ href: "https://www.who.int/whatever", fulltext: true, stanford_only: true }],
             holdings_library_code_ssim: ['LANE']
           )
         end
 
         it 'leaves the url alone' do
-          expect(document.index_links.all.first.href).to eq 'https://who.int/whatever'
+          expect(document.index_links.all.first.href).to eq 'https://www.who.int/whatever'
         end
       end
 
@@ -236,7 +236,7 @@ RSpec.describe IndexLinks do
       context 'a url that matches a LANE ezproxy host for a SUL item' do
         let(:document) do
           SolrDocument.new(
-            marc_links_struct: [{ href: "https://who.int/whatever",
+            marc_links_struct: [{ href: "https://www.who.int/whatever",
                                   fulltext: true,
                                   stanford_only: true,
                                   link_title: 'Available to stanford-affiliated users.' }]
@@ -244,7 +244,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'leaves the url alone' do
-          expect(document.index_links.all.first.href).to eq 'https://who.int/whatever'
+          expect(document.index_links.all.first.href).to eq 'https://www.who.int/whatever'
         end
       end
 
