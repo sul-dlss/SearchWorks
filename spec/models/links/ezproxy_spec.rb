@@ -37,7 +37,7 @@ RSpec.describe Links::Ezproxy do
       end
 
       context 'with a url matching a LANE proxied host' do
-        let(:url) { 'https://who.int/whatever' }
+        let(:url) { 'https://www.who.int/whatever' }
         let(:link_title) { 'Access restricted to Stanford community' }
 
         it { expect(ezproxy.to_proxied_url).to be_nil }
@@ -102,13 +102,13 @@ RSpec.describe Links::Ezproxy do
       let(:document) { SolrDocument.new(holdings_library_code_ssim: ['LANE']) }
 
       context 'with a url matching a LANE proxied host' do
-        let(:url) { 'https://who.int/whatever' }
+        let(:url) { 'https://www.who.int/whatever' }
 
         context 'link title is a LANE restriction note' do
           let(:link_title) { 'Access restricted to Stanford community' }
 
           it 'adds the proxy prefix' do
-            expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwho.int%2Fwhatever'
+            expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
           end
         end
 
@@ -116,7 +116,7 @@ RSpec.describe Links::Ezproxy do
           let(:link_title) { 'Available to Stanford-affiliated users only' }
 
           it 'adds the proxy prefix' do
-            expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwho.int%2Fwhatever'
+            expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
           end
         end
 
