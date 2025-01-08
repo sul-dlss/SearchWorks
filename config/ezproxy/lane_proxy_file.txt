@@ -683,7 +683,6 @@ headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
 healtheducationresources.unesco.org
 healthmap.org
-healthpolicy.ucla.edu
 healthpsychologyresearch.openmedicalpublishing.org
 heart.bmj.com
 heartasia.bmj.com
@@ -696,7 +695,6 @@ herpesviridae.biomedcentral.com
 hijournal.bcs.org
 hindawi.com
 hipandpelvis.or.kr
-histbest.ub.uni-leipzig.de
 history.paratext.com
 hivinsite.ucsf.edu
 hjemmesider.diku.dk
@@ -917,7 +915,6 @@ journals.sbmu.ac.ir
 journals.sfu.ca
 journals.squ.edu.om
 journals.stfm.org
-journals.tubitak.gov.tr
 journals.viamedica.pl
 jov.arvojournals.org
 jovs.amegroups.com
@@ -1074,7 +1071,6 @@ movementecologyjournal.biomedcentral.com
 mp.bmj.com
 mra.asm.org
 mrmjournal.biomedcentral.com
-mrmjournal.org
 msp.org
 msystems.asm.org
 muse.jhu.edu
@@ -1167,7 +1163,6 @@ openheart.bmj.com
 openhypertensionjournal.com
 openknowledge.worldbank.org
 openlibrary.org
-openscience.bmj.com
 openurl.ac.uk
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
@@ -1600,7 +1595,6 @@ www.advbiores.net
 www.advms.pl
 www.aecf.org
 www.aei.org
-www.aem-sbem.com
 www.aeronline.org
 www.aerzteblatt.de
 www.afrjpaedsurg.org
@@ -1627,7 +1621,6 @@ www.ajol.info
 www.ajpe.org
 www.ajronline.org
 www.ajsc.us
-www.ajtccm.org.za
 www.ajtmh.org
 www.ajtr.org
 www.ajts.org
@@ -2345,7 +2338,6 @@ www.kma.org.kw
 www.knovel.com
 www.koreanjhepatol.org
 www.koreanjpathol.org
-www.krcp-ksn.org
 www.krepublishers.com
 www.krpia.co.kr
 www.kstudy.com
