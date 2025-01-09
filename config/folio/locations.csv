@@ -275,7 +275,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 71d88dd5-3ac5-4075-b0eb-23db9fc374b4,Tanner Reserves,TAN-CRES,SU,SUL,TANNER,On reserve: Ask at Tanner reference desk,true,TANNER,TANNER,,,,,,,,,,true,,,,,
 7241056a-0ea6-4a38-b06f-a0fc812aebe7,Lane Digital: Mobile Resources,LANE-MOBI,SU,MED,LANE,Digital: Mobile Resources,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,Electronic,
 73574208-f337-4c7d-b18f-f677100a0a95,Law Eyles Aisle,LAW-EYLESAISLE,SU,LAW,LAW,Eyles aisle,true,LAW,LAW,,,,,,,,,,,,,,,
-73aca698-c6f5-4a0d-900b-01fbd0d2924b,Green Hohbach SVA,GRE-HH-SVA,SU,SUL,GREEN,Hohbach Hall: Silicon Valley Archives,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,GREEN-LOAN,,,,,,,,,,
+73aca698-c6f5-4a0d-900b-01fbd0d2924b,Green Hohbach SVA,GRE-HH-SVA,SU,SUL,GREEN,Hohbach Hall: Silicon Valley Archives,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,PAGE-SVA,GREEN-LOAN,,,,,,,,,,
 749f175f-8308-44af-8cec-5b0d4b89c3d5,Science Withdrawn,SCI-WITHDRAWN,SU,SUL,SCIENCE,Withdrawn,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,,
 74b77223-bd65-4ad7-8995-5953c3bfe5cc,Lane Li Ka Shing Center,LANE-LKSC,SU,MED,LANE,Li Ka Shing Center,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,
 75115f9b-71d6-4106-8ab9-962f2ca9dd4c,ARS Oversize,ARS-OVERSIZE,SU,SUL,ARS,Oversize,true,ARS,ARS,,,,,,,,,,,,,,,
