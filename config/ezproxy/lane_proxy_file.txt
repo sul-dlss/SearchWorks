@@ -648,6 +648,7 @@ ghrp.biomedcentral.com
 global.oup.com
 globalheartjournal.com
 globalizationandhealth.biomedcentral.com
+go.drugbank.com
 go.gale.com
 go.galegroup.com
 go.oreilly.com
@@ -741,7 +742,6 @@ iji.sums.ac.ir
 ijm.tums.ac.ir
 ijme.in
 ijmhs.biomedcentral.com
-ijmr.icmr.org.in
 ijms.sums.ac.ir
 ijoh.tums.ac.ir
 ijorl.mums.ac.ir
@@ -789,7 +789,6 @@ investigativegenetics.biomedcentral.com
 iopscience.iop.org
 iovs.arvojournals.org
 ipb.uclouvain.be
-ir.lib.hiroshima-u.ac.jp
 iris.paho.org
 irishvetjournal.biomedcentral.com
 irjnm.tums.ac.ir
@@ -803,7 +802,6 @@ iwaponline.com
 j-biomed-discovery.biomedcentral.com
 j-dac.jp
 jaapl.org
-jab.scholasticahq.com
 jacketsearch.tandf.co.uk
 jaclinicalreports.springeropen.com
 jad.tums.ac.ir
@@ -1116,6 +1114,7 @@ npcd.oversea.cnki.net
 npepjournal.biomedcentral.com
 nph.onlinelibrary.wiley.com
 nrs.harvard.edu
+nsf-gov-resources.nsf.gov
 nuclear-receptor.biomedcentral.com
 nursing.jmir.org
 nutrirejournal.biomedcentral.com
@@ -1308,7 +1307,6 @@ remotesensing.spiedigitallibrary.org
 rep.bioscientifica.com
 repository.icesi.edu.co
 repository.law.umich.edu
-repository.tufs.ac.jp
 repository.uchastings.edu
 repository.uclawsf.edu
 reproductive-health-journal.biomedcentral.com
@@ -1376,7 +1374,6 @@ scmr.org
 scoliosisjournal.biomedcentral.com
 scop.berkeley.edu
 sdrc.lib.uiowa.edu
-seab.envmed.rochester.edu
 search.alexanderstreet.com
 search.datapages.com
 search.ebscohost.com
@@ -1466,7 +1463,6 @@ tcr.amegroups.com
 tdtmvjournal.biomedcentral.com
 tech.snmjournals.org
 tehj.springeropen.com
-telemedicine.orbis.org
 telerehab.pitt.edu
 texashistory.unt.edu
 tgc.amegroups.com
@@ -1481,7 +1477,6 @@ thorax.bmj.com
 threedmedprint.biomedcentral.com
 thrombosisjournal.biomedcentral.com
 thyroidresearchjournal.biomedcentral.com
-tidsskriftet.no
 titlelist.readex.com
 titles.cambridge.org
 tle.geoscienceworld.org
@@ -1529,7 +1524,6 @@ web.mit.edu
 web.ornl.gov
 webbook.nist.gov
 webcampus.med.drexel.edu
-webcaspar.nsf.gov
 webedition.sanfordguide.com
 webofknowledge.com
 webronza.asahi.com
@@ -1887,7 +1881,6 @@ www.dramaonlinelibrary.com
 www.drg.nih.gov
 www.dropbox.com
 www.drugabuse.gov
-www.drugbank.ca
 www.drugdeliverytech.com
 www.drugeruptiondata.com
 www.drugs.com
@@ -1970,7 +1963,6 @@ www.eugenicsarchive.org
 www.eurannallergyimm.com
 www.eurjbreasthealth.com
 www.eurjrheumatol.org
-www.europeana.eu
 www.europeanjournalofmidwifery.eu
 www.europeanreview.org
 www.eurosurveillance.org
@@ -1982,7 +1974,6 @@ www.experimentalneurobiology.org
 www.eymj.org
 www.facs.org
 www.fao.org
-www.fccc.edu
 www.fda.gov
 www.fedprac-digital.com
 www.fertstert.org
@@ -2011,7 +2002,6 @@ www.gbv.de
 www.gemcris.od.nih.gov
 www.gender.amdigital.co.uk
 www.genderidentityandsocialchange.amdigital.co.uk
-www.genenames.org
 www.genengnews.com
 www.genetics.org
 www.geneticsmr.com
@@ -2162,14 +2152,12 @@ www.infobank.cn
 www.informatics-review.com
 www.informatics.jax.org
 www.informaworld.com
-www.infouse.com
 www.infoworld.com
 www.ingenta.com
 www.ingentaconnect.com
 www.injepijournal.com
 www.int-res.com
 www.interactionofcolor.com
-www.interdok.com
 www.internationaljournalofcaringsciences.org
 www.intmedpress.com
 www.iom.edu
@@ -2202,7 +2190,6 @@ www.japi.org
 www.japtr.org
 www.jbclinpharm.org
 www.jbji.net
-www.jbmethods.org
 www.jbr.gr
 www.jbra.com.br
 www.jbsr.be
@@ -2232,7 +2219,6 @@ www.jfma-online.com
 www.jfmpc.com
 www.jfponline.com
 www.jfsf.eu
-www.jgc301.com
 www.jgid.org
 www.jgld.ro
 www.jgme.org
@@ -2407,14 +2393,12 @@ www.medicare.gov
 www.medicinaoral.com
 www.medicinasportiva.pl
 www.medicine.mcgill.ca
-www.medicine.ox.ac.uk
 www.medicine20.com
 www.medievalfamilylife.amdigital.co.uk
 www.medigraphic.com
 www.medind.nic.in
 www.medrxiv.org
 www.medsci.org
-www.medscimonit.com
 www.medultrason.ro
 www.mein.nagoya-u.ac.jp
 www.merck.com
@@ -2501,7 +2485,6 @@ www.nps.org.au
 www.nrcresearchpress.com
 www.nrmp.org
 www.nrronline.org
-www.nsf.gov
 www.ntno.org
 www.ntnu.no
 www.numdam.org
@@ -2698,7 +2681,6 @@ www.segweb.org
 www.serena.unina.it
 www.sfaf.org
 www.sfdph.org
-www.sfms.org
 www.sfn.org
 www.sgecm.org.tw
 www.shockjournal.com
@@ -2740,7 +2722,6 @@ www.surgicalneurologyint.com
 www.tanaffosjournal.ir
 www.tandfonline.com
 www.taylorfrancis.com
-www.telis.ucla.edu
 www.tera.org
 www.termedia.pl
 www.the-aps.org
@@ -2796,7 +2777,6 @@ www.turkjsurg.com
 www.turkpediatriarsivi.com
 www.turkpsikiyatri.com
 www.turkurolojidergisi.com
-www.turner-white.com
 www.uhms.org
 www.uic.edu
 www.ulb.tu-darmstadt.de
@@ -2806,7 +2786,6 @@ www.unicef.org
 www.unodc.org
 www.uptodate.com
 www.urologyannals.com
-www.urologyjournal.org
 www.usnews.com
 www.uspharmacist.com
 www.usrds.org
