@@ -2611,7 +2611,6 @@ www.radiologycases.com
 www.rand.org
 www.rarebooks.info
 www.rcpe.ac.uk
-www.rcpjournals.org
 www.rcvmonline.com
 www.re3data.org
 www.reaxys.com
@@ -2715,6 +2714,7 @@ www.standardsingenomics.org
 www.stanforddaily.com
 www.stata-journal.com
 www.statista.com
+www.statistik.at
 www.stdjournal.com
 www.stm-journal.ru
 www.surgicalcasereports.com
