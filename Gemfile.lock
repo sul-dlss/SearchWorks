@@ -184,7 +184,7 @@ GEM
     config (5.5.2)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
-    connection_pool (2.4.1)
+    connection_pool (2.5.0)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -297,8 +297,9 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.1.2)
     hashie (5.0.0)
-    honeybadger (5.26.1)
+    honeybadger (5.26.2)
       logger
+      ostruct
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
@@ -351,7 +352,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    logger (1.6.4)
+    logger (1.6.5)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -360,10 +361,9 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marc (1.2.0)
+    marc (1.3.0)
+      nokogiri (~> 1.0)
       rexml
-      scrub_rb (>= 1.0.1, < 2)
-      unf
     marc-fastxmlwriter (1.1.0)
       marc (~> 1.0)
     marcel (1.0.4)
@@ -438,7 +438,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
-    okcomputer (1.18.5)
+    okcomputer (1.18.6)
     orm_adapter (0.5.0)
     ostruct (0.6.1)
     parallel (1.26.3)
@@ -464,7 +464,7 @@ GEM
       rack (>= 3.0.0)
     rack-test (2.2.0)
       rack (>= 1.3)
-    rack-utf8_sanitizer (1.9.1)
+    rack-utf8_sanitizer (1.10.1)
       rack (>= 1.0, < 4.0)
     rackup (2.2.1)
       rack (>= 3)
@@ -511,7 +511,7 @@ GEM
       psych (>= 4.0.0)
     redis (5.3.0)
       redis-client (>= 0.22.0)
-    redis-client (0.23.0)
+    redis-client (0.23.1)
       connection_pool
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -548,7 +548,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.69.2)
+    rubocop (1.70.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -587,7 +587,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    scrub_rb (1.0.1)
     securerandom (0.4.1)
     selenium-webdriver (4.27.0)
       base64 (~> 0.2)
@@ -658,7 +657,6 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unf (0.2.0)
     unicode-display_width (3.1.3)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
