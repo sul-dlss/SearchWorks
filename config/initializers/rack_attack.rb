@@ -24,7 +24,7 @@ if Settings.THROTTLE_TRAFFIC
       {}
     end
 
-    req.ip if route[:controller] == 'catalog' && (route[:action] == 'index' || route[:action] == 'facet')
+    req.ip if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
   end
 
   Rack::Attack.throttle('req/view/ip', limit: 500, period: 5.minutes) do |req|

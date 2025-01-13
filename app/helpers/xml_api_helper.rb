@@ -59,8 +59,7 @@ module XmlApiHelper
     if doc.respond_to?(:to_marc)
       ["700", "710", "711", "720"].select { |num| doc.to_marc[num] }.each do |num|
         doc.to_marc.find_all { |f| (num) === f.tag }.each do |field|
-          temp = ""
-          field.each { |sf| ignored_subfields.include?(sf.code) ? nil : temp << "#{sf.value} " }
+          temp = field.reject { |sf| ignored_subfields.include?(sf.code) }.map(&:value).join(' ')
           text << temp.strip
         end
       end
@@ -123,8 +122,7 @@ module XmlApiHelper
         next unless item['6'].split("-")[1].gsub("//r", "") == "00" and item['6'].split("-")[0] == field
 
         text = []
-        temp = ""
-        item.each { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) ? nil : temp << "#{sf.value} " }
+        temp = item.reject { |sf| Constants::EXCLUDE_FIELDS.include?(sf.code) }.map(&:value).join(' ')
         text << temp.strip
       end
     end
