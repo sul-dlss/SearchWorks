@@ -7125,6 +7125,28 @@
     }
   },
   {
+    "id": "813f5dea-67e3-488f-9f87-57aebafe6bc7",
+    "name": "Spec CHS",
+    "code": "SPEC-CHS",
+    "discoveryDisplayName": "California Historical Society Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {},
+    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
+    "servicePointIds": [
+      "0e924af7-785c-46eb-a5e2-060394822016"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-01-14T21:01:03.824+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-01-14T21:01:03.824+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "825b0d52-8b5a-45b6-8698-4325bd6c1f0e",
     "name": "Rumsey W7 Pocket Regular",
     "code": "RUM-W7-POCKET-REG",
@@ -9672,6 +9694,28 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-10-19T22:15:00.164+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "b305bf5e-d70b-4476-a2bb-14db014beca9",
+    "name": "Spec SAL3 CHS",
+    "code": "SPEC-SAL3-CHS",
+    "discoveryDisplayName": "California Historical Society Collection",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {},
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-01-14T21:01:58.246+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-01-14T21:01:58.246+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
