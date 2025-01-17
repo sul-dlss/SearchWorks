@@ -584,6 +584,7 @@ ethnobiomed.biomedcentral.com
 etsmjournal.biomedcentral.com
 eurekaselect.com
 eurendodj.com
+eurjbreasthealth.com
 eurjmedres.biomedcentral.com
 eurointervention.pcronline.com
 eurradiolexp.springeropen.com
@@ -695,7 +696,6 @@ hereditasjournal.biomedcentral.com
 herpesviridae.biomedcentral.com
 hijournal.bcs.org
 hindawi.com
-hipandpelvis.or.kr
 history.paratext.com
 hivinsite.ucsf.edu
 hjemmesider.diku.dk
@@ -2191,7 +2191,6 @@ www.jafib.com
 www.japi.org
 www.japtr.org
 www.jbclinpharm.org
-www.jbji.net
 www.jbr.gr
 www.jbra.com.br
 www.jbsr.be
@@ -2448,7 +2447,6 @@ www.nber.org
 www.nbme.org
 www.nbn-resolving.de
 www.ncbi.nlm.nih.gov
-www.ncmedicaljournal.com
 www.nejm.org
 www.neonatology.org
 www.neoplasia.com
@@ -2737,7 +2735,6 @@ www.thedriftmag.com
 www.theiet.org
 www.theijoem.com
 www.thejh.org
-www.thejournalofbreasthealth.com
 www.thelancet.com
 www.thepcrj.org
 www.thepermanentejournal.org
