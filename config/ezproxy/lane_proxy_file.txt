@@ -1792,6 +1792,7 @@ www.chemnetbase.com
 www.chemrxiv.org
 www.chicagomanualofstyle.org
 www.china.amdigital.co.uk
+www.chinacultureandsociety.amdigital.co.uk
 www.chinaebook.com
 www.chinamaxx.net
 www.chinaphar.com
@@ -1947,6 +1948,7 @@ www.embase.com
 www.embopress.org
 www.emeraldinsight.com
 www.emory.edu
+www.empire.amdigital.co.uk
 www.emro.who.int
 www.ems-ph.org
 www.emsworld.com
