@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.2.1'
+gem 'rails', '~> 8.0.1'
 
 # Asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft'
