@@ -13,7 +13,10 @@
 
     <title><%= render_page_title %></title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
-    <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png">
+
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= stylesheet_link_tag 'print', media: 'print' %>
     <link href="https://www-media.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
