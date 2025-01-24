@@ -2,7 +2,10 @@
 <html class="no-js" lang="en">
   <head>
     <title><%= content_for(:title) %></title>
-    <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png">
+
     <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="search" type="application/opensearchdescription+xml" href="<%= opensearch_path %>" title="<%= t('opensearch_description') %>"/>
