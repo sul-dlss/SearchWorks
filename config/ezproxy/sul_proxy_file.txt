@@ -314,7 +314,6 @@ www.materialconnexion.online
 mia.ele-math.com
 www.sidm.it
 www.taylorfrancis.com
-matdata.asminternational.org
 read.dukeupress.edu
 www.allthatstats.com
 www.v-ideo.art
@@ -1069,7 +1068,6 @@ rsbm.royalsocietypublishing.org
 rsos.royalsocietypublishing.org
 rsnr.royalsocietypublishing.org
 rsfs.royalsocietypublishing.org
-mio.asminternational.org
 www.currentprotocols.com
 dictionary.oed.com
 www.ajsonline.org
@@ -1325,7 +1323,6 @@ poolesplus.odyssi.com
 www.hsdl.org
 ropercenter.cornell.edu
 ovidsp.ovid.com
-www1.asminternational.org
 www.askart.com
 chinamaxx.net
 www.dprkmedia.com
@@ -1618,3 +1615,4 @@ history-commons.net
 www.magiran.com
 lateqr.ancientbooks.cn
 gca.eastview.com
+asm.mpds.io
