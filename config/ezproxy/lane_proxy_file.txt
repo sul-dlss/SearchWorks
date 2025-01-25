@@ -149,7 +149,6 @@ bacandrology.biomedcentral.com
 basicandappliedzoology.springeropen.com
 basictranslational.onlinejacc.org
 batesvisualguide.com
-bcn.tums.ac.ir
 bdj.pensoft.net
 behavioralandbrainfunctions.biomedcentral.com
 benthamopen.com
@@ -555,7 +554,6 @@ electronicimaging.spiedigitallibrary.org
 elib.infolinker.com.tw
 elib.maruzen.co.jp
 elibrary.worldbank.org
-elifesciences.org
 emedicine.medscape.com
 emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
@@ -1634,7 +1632,6 @@ www.americanhistory.amdigital.co.uk
 www.americanindiannewspapers.amdigital.co.uk
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
-www.amhsr.org
 www.amj.net.au
 www.amjcaserep.com
 www.ams.org
@@ -1680,7 +1677,6 @@ www.archivesofrheumatology.org
 www.arctt.info
 www.arjournals.org
 www.arl.org
-www.arya.mui.ac.ir
 www.ascro.hr
 www.asep.org
 www.ashdin.com
@@ -1756,7 +1752,6 @@ www.bvsde.paho.org
 www.cabdirect.org
 www.cabidigitallibrary.org
 www.cacap-acpea.org
-www.cadth.ca
 www.cairn-int.info
 www.cairn.info
 www.cambridge.org
@@ -1864,7 +1859,6 @@ www.dermsinica.org
 www.deutschestextarchiv.de
 www.devicelink.com
 www.dhs.cahwnet.gov
-www.diabetesforecast.org
 www.dialogues-cns.org
 www.digitale-sammlungen.de
 www.digitaliafilmlibrary.com
@@ -1935,7 +1929,6 @@ www.ejcdt.eg.net
 www.ejcrim.com
 www.ejcrp.org
 www.ejh.it
-www.ejhs.ju.edu.et
 www.ejnmmiphys.com
 www.ejomr.org
 www.ejop.org
@@ -1985,7 +1978,6 @@ www.ffhdj.com
 www.firstworldwar.amdigital.co.uk
 www.fluorideresearch.org
 www.fm.viamedica.pl
-www.fmhs.auckland.ac.nz
 www.fons.org
 www.formatex.org
 www.frontiersin.org
@@ -1994,7 +1986,6 @@ www.ftrdergisi.com
 www.fulcrum.org
 www.functionalneurology.com
 www.funjournal.org
-www.fupress.net
 www.fut.se
 www.futuremedicine.com
 www.fvvo.be
@@ -2118,7 +2109,6 @@ www.ijp-online.com
 www.ijph.in
 www.ijpmonline.org
 www.ijppp.org
-www.ijppsjournal.com
 www.ijpsonline.com
 www.ijpsy.com
 www.ijri.org
@@ -2266,7 +2256,6 @@ www.jogh.org
 www.jointsjournal.eu
 www.jomfp.in
 www.jomi.com
-www.joplink.net
 www.jorthodsci.org
 www.josonline.org
 www.jospt.org
@@ -2281,17 +2270,14 @@ www.journalofextracellularvesicles.net
 www.journalofmas.com
 www.journals.cup.org
 www.journals.elsevier.com
-www.journals.mui.ac.ir
 www.journals.sbmu.ac.ir
 www.journals.uchicago.edu
 www.journalslibrary.nihr.ac.uk
 www.jove.com
-www.jpalliativecare.com
 www.jpands.org
 www.jpbsonline.org
 www.jpgmonline.com
 www.jpharmacol.com
-www.jpionline.org
 www.jpmh.org
 www.jpmi.org.pk
 www.jptcp.com
@@ -2308,7 +2294,6 @@ www.jstatsoft.org
 www.jstor.org
 www.jtgga.org
 www.jwatch.org
-www.jwildlifedis.org
 www.jwtadvertisingamerica.amdigital.co.uk
 www.jyoungpharm.org
 www.jzus.zju.edu.cn
@@ -2325,8 +2310,6 @@ www.kluwerarbitration.com
 www.kluwerlawonline.com
 www.kma.org.kw
 www.knovel.com
-www.koreanjhepatol.org
-www.koreanjpathol.org
 www.krepublishers.com
 www.krpia.co.kr
 www.kstudy.com
@@ -2387,7 +2370,6 @@ www.mdz-nbn-resolving.de
 www.meajo.org
 www.med.kobe-u.ac.jp
 www.med.nagoya-u.ac.jp
-www.med.or.jp
 www.medandlife.ro
 www.mededportal.org
 www.medeniyetmedicaljournal.org
@@ -2433,7 +2415,6 @@ www.mrcindia.org
 www.msma.org
 www.msmonographs.org
 www.msri.org
-www.mums.ac.ir
 www.munzinger.de
 www.musicalamerica.com
 www.mygcronline.org
@@ -2461,7 +2442,6 @@ www.neurologyindia.com
 www.neurosurgicalatlas.com
 www.neurotodayonline.com
 www.newday.com
-www.newmicrobiologica.org
 www.newswise.com
 www.nextbio.com
 www.nice.org.uk
@@ -2499,7 +2479,6 @@ www.ochsnerjournal.org
 www.oclc.org
 www.oecd-ilibrary.org
 www.oecd.org
-www.oimplantology.org
 www.ojhas.org
 www.ojoonline.org
 www.omicsonline.org
@@ -2584,6 +2563,7 @@ www.povertylaw.org
 www.pparx.org
 www.ppjonline.org
 www.primarypsychiatry.com
+www.primescholars.com
 www.princeton.edu
 www.progressinorthodontics.com
 www.proquest.com
@@ -2825,7 +2805,6 @@ www.worldoflearning.com
 www.worldscibooks.com
 www.worldscientific.com
 www.worldwater.org
-www.wounds-uk.com
 www.wto-ilibrary.org
 www.wvsma.com
 www.yale.edu
@@ -2840,7 +2819,6 @@ www.zoores.ac.cn
 www150.statcan.gc.ca
 www2.amia.org
 www3.cricyt.edu.ar
-www3.stat.sinica.edu.tw
 wwwcf.nlm.nih.gov
 wwwn.cdc.gov
 xenetwork.org
