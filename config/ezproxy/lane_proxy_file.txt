@@ -559,7 +559,6 @@ emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
 emj.bmj.com
 ems.press
-endometabol.com
 engine.scichina.com
 english.rrsurg.com
 enterprise.clcd.com
@@ -702,7 +701,6 @@ hms.harvard.edu
 hojishinbun.hoover.org
 home.liebertpub.com
 home.ncifcrf.gov
-homepage.vghtpe.gov.tw
 hpp.tbzmed.ac.ir
 hqlo.biomedcentral.com
 hrbopenresearch.org
@@ -1080,7 +1078,6 @@ nanophotonics.spiedigitallibrary.org
 nap.nationalacademies.org
 nass.oxfordjournals.org
 naturalmedicines.therapeuticresearch.com
-navi.cnki.net
 nbn-resolving.de
 nbn-resolving.org
 ncco.galegroup.com
@@ -1295,7 +1292,6 @@ rde.ac
 read.dukeupress.edu
 reader.digitale-sammlungen.de
 rebase.neb.com
-redalyc.uaemex.mx
 redivis.com
 referenceworks.brillonline.com
 refworks.proquest.com
@@ -1397,7 +1393,6 @@ silencejournal.biomedcentral.com
 sis.nlm.nih.gov
 sit.bmj.com
 site.ebrary.com
-sites.kowsarpub.com
 sjtrem.biomedcentral.com
 sk.sagepub.com
 skeletalmusclejournal.biomedcentral.com
@@ -1678,7 +1673,6 @@ www.arctt.info
 www.arjournals.org
 www.arl.org
 www.ascro.hr
-www.asep.org
 www.ashdin.com
 www.asiaandro.com
 www.asiaintervention.org
@@ -2160,7 +2154,6 @@ www.ipcc.ch
 www.ipej.org
 www.ipni.org
 www.ippf.org
-www.irct.org
 www.irjournal.org
 www.irmj.ir
 www.ismni.org
@@ -2244,7 +2237,6 @@ www.jneurosci.org
 www.jniosh.johas.go.jp
 www.jnma.com.np
 www.jnmjournal.org
-www.jnsbm.org
 www.joacc.com
 www.joacp.org
 www.jocgp.com
@@ -2325,7 +2317,6 @@ www.lawandinequality.org
 www.learntechlib.org
 www.leprosy-review.org.uk
 www.lexisnexis.com
-www.lfhk.cuni.cz
 www.lib.tottori-u.ac.jp
 www.liberdomus.it
 www.libpubmedia.co.uk
@@ -2413,13 +2404,11 @@ www.morthoj.org
 www.mpr.co.uk
 www.mrcindia.org
 www.msma.org
-www.msmonographs.org
 www.msri.org
 www.munzinger.de
 www.musicalamerica.com
 www.mygcronline.org
 www.na.infn.it
-www.najms.org
 www.nal.usda.gov
 www.nap.edu
 www.nasonline.org
@@ -2449,7 +2438,6 @@ www.nida.nih.gov
 www.nigeriamedj.com
 www.nigerianjsurg.com
 www.nih.go.jp
-www.niso.org
 www.nist.gov
 www.nitrd.gov
 www.njcponline.com
@@ -2516,7 +2504,6 @@ www.paijournal.com
 www.painphysicianjournal.com
 www.pakmedinet.com
 www.palgrave-journals.com
-www.pamw.pl
 www.panafrican-med-journal.com
 www.paom.pl
 www.parasitol.or.kr
@@ -2650,7 +2637,6 @@ www.science-softcon.de
 www.science.org
 www.sciencedirect.com
 www.scientificamerican.com
-www.scientificexploration.org
 www.scimagojr.com
 www.scipharm.at
 www.scirp.org
@@ -2673,7 +2659,6 @@ www.sjkdt.org
 www.sjmms.net
 www.sjweh.fi
 www.slavery.amdigital.co.uk
-www.sljol.info
 www.smw.ch
 www.soc-bdr.org
 www.socialexplorer.com
