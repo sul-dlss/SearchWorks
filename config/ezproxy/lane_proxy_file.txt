@@ -1102,7 +1102,6 @@ nls.ldls.org.uk
 nmsjournal.kaums.ac.ir
 nn.neurology.org
 nnlm.gov
-nopr.niscair.res.in
 northclinist.com
 nowpublishers.com
 npcd.oversea.cnki.net
@@ -1711,7 +1710,6 @@ www.biodiversitylibrary.org
 www.biographi.ca
 www.bioj-online.com
 www.bioline.org.br
-www.biolsci.org
 www.biomed.cas.cz
 www.biomolther.org
 www.bioone.org
@@ -1839,7 +1837,6 @@ www.cureus.com
 www.currentpsychiatry.com
 www.currentscience.ac.in
 www.cytojournal.com
-www.dana.org
 www.darulillm.com
 www.databanksinternational.com
 www.db.dyabola.de
@@ -1851,7 +1848,6 @@ www.deltaaetc.org
 www.dentistrytoday.com
 www.dermsinica.org
 www.deutschestextarchiv.de
-www.devicelink.com
 www.dhs.cahwnet.gov
 www.dialogues-cns.org
 www.digitale-sammlungen.de
@@ -2092,7 +2088,6 @@ www.ijkd.org
 www.ijmcmed.org
 www.ijme.net
 www.ijmeg.org
-www.ijmm.org
 www.ijnm.in
 www.ijnpnd.com
 www.ijo.cn
@@ -2111,14 +2106,12 @@ www.ijstemcell.com
 www.ijtonline.in
 www.ijtrichology.com
 www.illustratedgarden.org
-www.im.microbios.org
 www.ima.org.il
 www.imaios.com
 www.imdb.com
 www.img.cas.cz
 www.imj.ie
 www.impactaging.com
-www.impactjournals.com
 www.imrpress.com
 www.imstat.org
 www.in-silico-pharmacology.com
@@ -2195,19 +2188,16 @@ www.jcvjs.com
 www.jcytol.org
 www.jdentaled.org
 www.jeb.co.in
-www.jee.org
 www.jehp.net
 www.jeo-esska.com
 www.jfcmonline.com
 www.jfda-online.com
 www.jfds.org
 www.jfma-online.com
-www.jfmpc.com
 www.jfponline.com
 www.jfsf.eu
 www.jgid.org
 www.jgld.ro
-www.jgme.org
 www.jhasim.com
 www.jhrsonline.org
 www.jhse.ua.es
@@ -2226,7 +2216,6 @@ www.jlifestylemed.org
 www.jlponline.org
 www.jmaj.jp
 www.jmau.org
-www.jmb.or.kr
 www.jmcp.org
 www.jmidlifehealth.org
 www.jmolecularsignaling.com
@@ -2253,7 +2242,6 @@ www.josonline.org
 www.jospt.org
 www.journalarchive.jst.go.jp
 www.journalbipolardisorders.com
-www.journalchiroed.com
 www.journalhealthpollution.org
 www.journalmc.org
 www.journalnma.org
@@ -2358,7 +2346,6 @@ www.mcl.hu
 www.mdedge.com
 www.mdpi.com
 www.mdz-nbn-resolving.de
-www.meajo.org
 www.med.kobe-u.ac.jp
 www.med.nagoya-u.ac.jp
 www.medandlife.ro
@@ -2507,7 +2494,6 @@ www.palgrave-journals.com
 www.panafrican-med-journal.com
 www.paom.pl
 www.parasitol.or.kr
-www.parasitologyindia.org
 www.paru.cas.cz
 www.pdb.org
 www.pdcnet.org
@@ -2676,7 +2662,6 @@ www.springerprotocols.com
 www.srm-ejournal.com
 www.ssa.gov
 www.ssph-journal.org
-www.stamres.psychol.ucl.ac.uk
 www.standardsingenomics.org
 www.stanforddaily.com
 www.stata-journal.com
