@@ -1630,7 +1630,6 @@ www.amj.net.au
 www.amjcaserep.com
 www.ams.org
 www.amsjournal.com
-www.anatoljcardiol.com
 www.ancientscienceoflife.org
 www.andp.org
 www.ane.pl
@@ -1895,7 +1894,6 @@ www.e-roj.org
 www.e-streams.com
 www.e-tjo.org
 www.e-ultrasonography.org
-www.eajm.org
 www.earthdoc.org
 www.earticle.net
 www.eastindiacompany.amdigital.co.uk
@@ -2271,7 +2269,6 @@ www.jssm.org
 www.jstage.jst.go.jp
 www.jstatsoft.org
 www.jstor.org
-www.jtgga.org
 www.jwatch.org
 www.jwtadvertisingamerica.amdigital.co.uk
 www.jyoungpharm.org
