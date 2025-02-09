@@ -148,7 +148,6 @@ bac-lac.on.worldcat.org
 bacandrology.biomedcentral.com
 basicandappliedzoology.springeropen.com
 basictranslational.onlinejacc.org
-batesvisualguide.com
 bdj.pensoft.net
 behavioralandbrainfunctions.biomedcentral.com
 benthamopen.com
@@ -363,6 +362,7 @@ clendening.kumc.edu
 clincancerres.aacrjournals.org
 clindiabetesendo.biomedcentral.com
 clinicalandtranslationalinvestigation.com
+clinicalcontext.lww.com
 clinicalepigeneticsjournal.biomedcentral.com
 clinicalhypertension.biomedcentral.com
 clinicalinfo.hiv.gov
