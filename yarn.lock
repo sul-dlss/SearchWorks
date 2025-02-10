@@ -150,9 +150,9 @@ blacklight-frontend@7:
     typeahead.js "^0.11.1"
 
 "blacklight-frontend@>=7.1 || 8.0":
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.8.0.tgz#c3a413b5e4f0b50ae134bc385346ee0f70d5cfea"
-  integrity sha512-K0kN+h2HEnEINE1ewqwTvMNP5lWI52TkMfLTr+tWlFVJUdG+CcJKDW0B5fTfZ8q2pSWy54QUgHzhVMYjk5EOow==
+  version "8.8.2"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.8.2.tgz#710e7b95ed11456eb04f6cb866442ce0fa3e4a82"
+  integrity sha512-Jf4xxPB5brdE5v9aaHllKj3HaVG9keQKKZmmr6Ry0tfk8uESEYmmXnOvggjKK15xSowey6wAn9s1OatttzsUJA==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 
