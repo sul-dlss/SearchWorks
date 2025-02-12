@@ -36,7 +36,7 @@ RSpec.describe PURLEmbed do
   end
 
   describe 'OEmbed Provider params' do
-    it 'should pass the hide_title and hide_metadata params' do
+    it 'passes the hide_title param' do
       expect(OEmbed::Provider).to receive(:new).with(
         "#{Settings.PURL_EMBED_PROVIDER}.{format}?hide_title=true", :json
       ).and_return(provider)
