@@ -2078,7 +2078,6 @@ www.ijdentistry.com
 www.ijdr.in
 www.ijdvl.com
 www.ijehe.org
-www.ijem.in
 www.ijfs.ir
 www.ijic.org
 www.ijkd.org
@@ -2161,7 +2160,6 @@ www.j-epilepsy.org
 www.j-stroke.org
 www.jabfm.org
 www.jacc.org
-www.jacmp.org
 www.jafib.com
 www.japi.org
 www.japtr.org
@@ -2224,7 +2222,6 @@ www.jniosh.johas.go.jp
 www.jnma.com.np
 www.jnmjournal.org
 www.joacc.com
-www.joacp.org
 www.jocgp.com
 www.jocmr.org
 www.jocr.co.in
@@ -2500,7 +2497,6 @@ www.perditamanuscripts.amdigital.co.uk
 www.phac-aspc.gc.ca
 www.pharmacypractice.org
 www.pharmacytimes.com
-www.phcog.com
 www.phcogres.com
 www.phcogrev.com
 www.philanthropy.com
@@ -2710,8 +2706,6 @@ www.transrespmed.com
 www.travelwriting.amdigital.co.uk
 www.trismegistos.org
 www.tropicalparasitology.org
-www.tswj.com
-www.tuberktoraks.org
 www.turkarchotolaryngol.net
 www.turkarchpediatr.org
 www.turkishjournalpediatrics.org
