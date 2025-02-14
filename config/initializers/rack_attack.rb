@@ -27,6 +27,30 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
   end
 
+  Rack::Attack.throttle('req/search/cidr/24', limit: 50, period: 1.minute) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    next if req.ip.start_with?('171.', '172.', '10.')
+
+    req.ip.slice(/^\d+\.\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+  end
+
+  Rack::Attack.throttle('req/search/cidr/16', limit: 100, period: 1.minute) do |req|
+    route = begin
+      Rails.application.routes.recognize_path(req.path) || {}
+    rescue StandardError
+      {}
+    end
+
+    next if req.ip.start_with?('171.', '172.', '10.')
+
+    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+  end
+
   Rack::Attack.throttle('req/view/ip', limit: 500, period: 5.minutes) do |req|
     req.ip if req.path.start_with?('/view')
   end
