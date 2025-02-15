@@ -592,7 +592,6 @@ experiments.springernature.com
 extoxnet.orst.edu
 extremephysiolmed.biomedcentral.com
 ezproxy2.library.drexel.edu
-f1000.com
 f1000research.com
 facultyopinions.com
 fanyun.dhcdb.com.tw
@@ -1501,7 +1500,7 @@ us.expasy.org
 usp.az1.qualtrics.com
 uswest.ensembl.org
 utmj.org
-utpjournals.press
+utppublishing.com
 vascularcell.biomedcentral.com
 vciba.springeropen.com
 veterinaryresearch.biomedcentral.com
@@ -1742,7 +1741,6 @@ www.buildinggreen.com
 www.bvsde.paho.org
 www.cabdirect.org
 www.cabidigitallibrary.org
-www.cacap-acpea.org
 www.cairn-int.info
 www.cairn.info
 www.cambridge.org
@@ -2064,7 +2062,6 @@ www.ihs.gov
 www.ijaai.in
 www.ijabmr.org
 www.ijaronline.com
-www.ijaweb.org
 www.ijbiotech.com
 www.ijbmb.org
 www.ijbs.org
@@ -2117,7 +2114,6 @@ www.indianjcancer.com
 www.indianjgastro.com
 www.indianjnephrol.org
 www.indianjotol.org
-www.indianjpsychiatry.org
 www.indianjrheumatol.com
 www.indianjurol.com
 www.indianpediatrics.net
@@ -2319,7 +2315,6 @@ www.longdom.org
 www.longwoods.com
 www.lsspjournal.com
 www.lungca.org
-www.lungindia.com
 www.maizegdb.org
 www.managedhealthcareconnect.com
 www.maneyonline.com
