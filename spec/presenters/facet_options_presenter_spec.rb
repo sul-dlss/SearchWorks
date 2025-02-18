@@ -22,9 +22,7 @@ RSpec.describe FacetOptionsPresenter do
         @search_state ||= Blacklight::SearchState.new(params, blacklight_config)
       end
 
-      def blacklight_config
-        ArticlesController.blacklight_config
-      end
+      delegate :blacklight_config, to: :ArticlesController
     end.new(params)
   end
   let(:params) { {} }
