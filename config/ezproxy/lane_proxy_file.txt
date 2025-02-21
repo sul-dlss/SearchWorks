@@ -615,6 +615,7 @@ fluidsbarrierscns.biomedcentral.com
 fmch.bmj.com
 fn.bmj.com
 focus.psychiatryonline.org
+fod.infobase.com
 formative.jmir.org
 fraser.stlouisfed.org
 freida.ama-assn.org
@@ -732,7 +733,6 @@ ijhoscr.tums.ac.ir
 ijhpm.com
 ijhpr.biomedcentral.com
 ijhr.iums.ac.ir
-ijhs.org.sa
 iji.sums.ac.ir
 ijm.tums.ac.ir
 ijme.in
@@ -2182,7 +2182,6 @@ www.jehp.net
 www.jeo-esska.com
 www.jfcmonline.com
 www.jfda-online.com
-www.jfds.org
 www.jfma-online.com
 www.jfponline.com
 www.jfsf.eu
@@ -2203,7 +2202,6 @@ www.jkaoms.org
 www.jkscience.org
 www.jle.com
 www.jlifestylemed.org
-www.jlponline.org
 www.jmaj.jp
 www.jmau.org
 www.jmcp.org
