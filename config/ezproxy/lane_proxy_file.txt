@@ -597,7 +597,6 @@ facultyopinions.com
 fanyun.dhcdb.com.tw
 faulkner.com
 fconline.foundationcenter.org
-fdasis.nlm.nih.gov
 febs.onlinelibrary.wiley.com
 fertilityresearchandpractice.biomedcentral.com
 fg.bmj.com
@@ -1012,7 +1011,6 @@ medimmunol.biomedcentral.com
 medind.nic.in
 medinform.jmir.org
 medlineplus.gov
-mednar.com
 medone-comsci.thieme.com
 medone-education.thieme.com
 medone-neurosurgery.thieme.com
@@ -1783,7 +1781,6 @@ www.chiropractic.ca
 www.chlamy.org
 www.chsjournal.org
 www.ciaonet.org
-www.cicm.org.au
 www.cis.rit.edu
 www.cisejournal.org
 www.cjrt.ca
@@ -2136,7 +2133,6 @@ www.iom.edu
 www.iop.org
 www.ipcc.ch
 www.ipej.org
-www.ipni.org
 www.ippf.org
 www.irjournal.org
 www.irmj.ir
@@ -2244,7 +2240,6 @@ www.jove.com
 www.jpands.org
 www.jpbsonline.org
 www.jpgmonline.com
-www.jpharmacol.com
 www.jpmh.org
 www.jpmi.org.pk
 www.jptcp.com
@@ -2343,7 +2338,6 @@ www.medicine.mcgill.ca
 www.medicine20.com
 www.medievalfamilylife.amdigital.co.uk
 www.medigraphic.com
-www.medind.nic.in
 www.medrxiv.org
 www.medsci.org
 www.medultrason.ro
@@ -2564,7 +2558,6 @@ www.researchprotocols.org
 www.retronews.fr
 www.reumatismo.org
 www.revespcardiol.org
-www.revneurol.com
 www.rhinologyjournal.com
 www.rimed.org
 www.riss.kr
@@ -2714,7 +2707,6 @@ www.uic.edu
 www.ulb.tu-darmstadt.de
 www.ums.ac.uk
 www.uni-mannheim.de
-www.unicef.org
 www.unodc.org
 www.uptodate.com
 www.urologyannals.com
