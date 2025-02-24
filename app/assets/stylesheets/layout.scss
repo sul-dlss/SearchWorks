@@ -58,3 +58,33 @@
     margin-right: 0;
   }
 }
+
+// Adds the new library logo to the header & footer
+// until we can update MyLibrary to use the component library
+
+.navbar-logo, .prefooter-logo {
+  mask-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-10/styles/StanfordLibraries-logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 center;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.navbar-logo {
+  background-color: $cardinal-red;
+}
+
+.prefooter-logo {
+  background-color: white;
+  width: 280px;
+}
+
+#sul-footer-links ul li a {
+  color: white;
+}
+
+.sul-footer-align {
+  display: table-cell;
+  vertical-align: middle;
+}

@@ -1,9 +1,9 @@
 <div id="topnav-container">
   <header id="topnav" class="header-logo" role="banner">
-    <%= link_to 'https://library.stanford.edu' do %>
-      <%= image_tag "sul-logo.svg", class: "su-logo d-none d-sm-inline-block", alt: "Stanford Libraries", height: 25 %>
-      <%= image_tag "sul-logo-stacked.svg", class: "su-logo d-inline-block d-sm-none", alt: "Stanford Libraries", height: 25 %>
-    <% end %>
+    <a class="mb-0 navbar-brand navbar-logo" 
+      href="https://library.stanford.edu"
+      >Stanford University Libraries
+    </a>
     <div class="header-links">
       <% if current_user %>
         <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'first' %>
