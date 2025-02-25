@@ -711,7 +711,6 @@ humanfactors.jmir.org
 humgenomics.biomedcentral.com
 hunteq.com
 hv.proquest.com
-ia801407.us.archive.org
 iall.org
 ibj.pasteur.ac.ir
 icsd.fiz-karlsruhe.de
@@ -887,7 +886,6 @@ journalotohns.biomedcentral.com
 journalretinavitreous.biomedcentral.com
 journalrip.com
 journals.aai.org
-journals.aom.org
 journals.aps.org
 journals.asm.org
 journals.athmsi.org
@@ -930,7 +928,6 @@ jtd.amegroups.com
 jthc.tums.ac.ir
 jtultrasound.biomedcentral.com
 juiced.gs
-jungiansociety.org
 jvat.biomedcentral.com
 jvin.org
 karger.com
@@ -1008,7 +1005,6 @@ medicalgasresearch.biomedcentral.com
 medicalimaging.spiedigitallibrary.org
 medicalletter.org
 medimmunol.biomedcentral.com
-medind.nic.in
 medinform.jmir.org
 medlineplus.gov
 medone-comsci.thieme.com
@@ -1330,7 +1326,6 @@ rrtjournal.biomedcentral.com
 rsos.royalsocietypublishing.org
 rupress.org
 rzblx1.uni-regensburg.de
-sabio.villa-bosch.de
 saemobilus.sae.org
 safetyinhealth.biomedcentral.com
 safpj.co.za
@@ -1574,7 +1569,6 @@ www.actaneurologica.be
 www.actaorthopaedica.be
 www.actareumatologica.com
 www.advancedotology.org
-www.advancesinpd.com
 www.advbiores.net
 www.advms.pl
 www.aecf.org
@@ -1735,7 +1729,6 @@ www.broad.mit.edu
 www.broadcastingamerica.amdigital.co.uk
 www.btrt.org
 www.buildinggreen.com
-www.bvsde.paho.org
 www.cabdirect.org
 www.cabidigitallibrary.org
 www.cairn-int.info
@@ -2004,7 +1997,6 @@ www.h-net.org
 www.haematologica.org
 www.hbpdint.com
 www.hcinnovationgroup.com
-www.health.gov.au
 www.health.govt.nz
 www.health.mil
 www.health.org
@@ -2183,7 +2175,6 @@ www.jfponline.com
 www.jfsf.eu
 www.jgid.org
 www.jgld.ro
-www.jhasim.com
 www.jhrsonline.org
 www.jhse.ua.es
 www.jiaci.org
@@ -2334,7 +2325,6 @@ www.medicaljournals.se
 www.medicare.gov
 www.medicinaoral.com
 www.medicinasportiva.pl
-www.medicine.mcgill.ca
 www.medicine20.com
 www.medievalfamilylife.amdigital.co.uk
 www.medigraphic.com
@@ -2394,7 +2384,6 @@ www.neuroanatomy.org
 www.neurology.org
 www.neurologyindia.com
 www.neurosurgicalatlas.com
-www.neurotodayonline.com
 www.newday.com
 www.newswise.com
 www.nextbio.com
@@ -2437,7 +2426,6 @@ www.ojoonline.org
 www.omicsonline.org
 www.omjournal.org
 www.ompu.ac.jp
-www.oncology-times.com
 www.oncologypractice.com
 www.onepetro.org
 www.onlinejacc.org
@@ -2472,7 +2460,6 @@ www.palgrave-journals.com
 www.panafrican-med-journal.com
 www.paom.pl
 www.parasitol.or.kr
-www.paru.cas.cz
 www.pdb.org
 www.pdcnet.org
 www.pediatricneurosciences.com
@@ -2488,7 +2475,6 @@ www.phcogrev.com
 www.philanthropy.com
 www.phrma.org
 www.physiologicalchemistryandphysics.com
-www.physmathcentral.com
 www.physweekly.com
 www.picronline.org
 www.pjmonline.org
@@ -2587,7 +2573,6 @@ www.scialert.net
 www.sciandmed.com
 www.scielo.br
 www.scielo.cl
-www.scielo.oces.mctes.pt
 www.scielo.org.ar
 www.scielo.org.co
 www.scielo.org.mx
@@ -2612,7 +2597,6 @@ www.sfaf.org
 www.sfdph.org
 www.sfn.org
 www.sgecm.org.tw
-www.shockjournal.com
 www.sicot-j.org
 www.sid.ir
 www.signalsmag.com
@@ -2740,7 +2724,6 @@ www.wjgnet.com
 www.wjon.org
 www.wjpch.com
 www.wjps.ir
-www.wma.net
 www.womeninthenationalarchives.amdigital.co.uk
 www.worldbank.org
 www.worldcat.org
