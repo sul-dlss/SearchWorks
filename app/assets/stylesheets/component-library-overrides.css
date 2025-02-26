@@ -1,0 +1,59 @@
+/* These are styles mostly copied from the component library. They can be removed once we fully move over. */
+.navbar-logo-cl,
+.prefooter-logo-cl {
+  mask-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-02-20/styles/StanfordLibraries-logo.svg");
+  mask-repeat: no-repeat;
+  mask-position: 0 center;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 250px;
+
+  &.polychrome {
+    background-color: transparent;
+    mask-image: none;
+    background-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-02-20/styles/StanfordLibraries-logo-poly.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+}
+
+.prefooter-logo-cl {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .prefooter-logo {
+    min-height: 30px;
+  }
+}
+
+#sul-footer-links a {
+  color: white;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+
+/* These are technically su-identity overrides, but for the same transitional phase before we move to the component library */
+#global-footer {
+  margin-top: -220px;
+}
+
+@media screen and (min-width: 768px) {
+  #global-footer {
+    margin-top: -124px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #global-footer {
+    margin-top: -164px;
+    height: 164px;
+  }
+}
+
