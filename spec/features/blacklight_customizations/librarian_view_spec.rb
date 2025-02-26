@@ -3,8 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe "Librarian View Customization", :js do
-  let(:embed) { double('embed-response') }
-
   it "MARC records should display" do
     visit solr_document_path('28')
 
@@ -23,8 +21,6 @@ RSpec.describe "Librarian View Customization", :js do
   end
 
   it "MODS records should display" do
-    expect(embed).to receive(:html).and_return("")
-    expect(PURLEmbed).to receive(:new).and_return(embed)
     visit solr_document_path('35')
 
     within(".tech-details") do
