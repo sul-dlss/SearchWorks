@@ -1,8 +1,6 @@
 HOSTNAME: "TEST-HOST"
 HOURS_API:
   enabled: false
-# Test needs to be under http otherwise jquery cannot be loaded
-PURL_EMBED_PROVIDER: 'http://embed.stanford.edu/embed'
 SU_AFFILIATIONS:
   - test-stanford:test
 EXHIBITS_ACCESS_PANEL:
