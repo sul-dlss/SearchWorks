@@ -1709,7 +1709,6 @@ www.bjbms.org
 www.bjcardio.co.uk
 www.bjcvs.org
 www.bjmp.org
-www.bl.uk
 www.blackwellreference.com
 www.bloodresearch.or.kr
 www.bloodtransfusion.it
@@ -2214,7 +2213,6 @@ www.jomi.com
 www.jorthodsci.org
 www.josonline.org
 www.jospt.org
-www.journalarchive.jst.go.jp
 www.journalbipolardisorders.com
 www.journalhealthpollution.org
 www.journalmc.org
@@ -2559,7 +2557,6 @@ www.rsc.org
 www.rsfjournal.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
-www.samj.org.za
 www.sanger.ac.uk
 www.sanp.ch
 www.sapj.co.za
@@ -2735,7 +2732,6 @@ www.wto-ilibrary.org
 www.wvsma.com
 www.yale.edu
 www.york.ac.uk
-www.yottalook.com
 www.zeno.org
 www.zentralblatt-math.org
 www.zentralblattmath.org
