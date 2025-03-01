@@ -71,6 +71,7 @@ almob.biomedcentral.com
 alz-journals.onlinelibrary.wiley.com
 alzres.biomedcentral.com
 amb-express.springeropen.com
+amjcaserep.com
 analyticscampus.gallup.com
 ancestrylibrary.proquest.com
 anesthesiology.lwwhealthlibrary.com
@@ -83,6 +84,7 @@ annals-general-psychiatry.biomedcentral.com
 annals.edu.sg
 annalsofintensivecare.springeropen.com
 annalsofneurosciences.org
+annalsoftransplantation.com
 anthrosource.onlinelibrary.wiley.com
 anzhealthpolicy.biomedcentral.com
 anzjsurg.onlinelibrary.wiley.com
@@ -410,7 +412,6 @@ cqpress.sagepub.com
 criticalcare.lwwhealthlibrary.com
 crl.acrl.org
 crln.acrl.org
-csbj.org
 cshmonographs.org
 cshperspectives.cshlp.org
 cshprotocols.cshlp.org
@@ -424,6 +425,7 @@ d2snwnmzyr8jue.cloudfront.net
 darujps.biomedcentral.com
 data.bls.gov
 data.chhs.ca.gov
+data.lilun.cn
 data.oversea.cnki.net
 database.yomiuri.co.jp
 datacatalog.med.nyu.edu
@@ -798,7 +800,6 @@ jaapl.org
 jacketsearch.tandf.co.uk
 jaclinicalreports.springeropen.com
 jad.tums.ac.ir
-jada.ada.org
 jag.igr.poznan.pl
 jama.jamanetwork.com
 jamanetwork.com
@@ -1261,7 +1262,6 @@ publishing.rcseng.ac.uk
 publishing.vt.edu
 pubmed.ncbi.nlm.nih.gov
 pubs.acs.org
-pubs.aeaweb.org
 pubs.aip.org
 pubs.asha.org
 pubs.casi.ca
@@ -1499,6 +1499,7 @@ vciba.springeropen.com
 veterinaryresearch.biomedcentral.com
 video.alexanderstreet.com
 videocast.nih.gov
+viewpoint.eiu.com
 virologyj.biomedcentral.com
 vivli.org
 voice.ons.org
@@ -1571,6 +1572,7 @@ www.actareumatologica.com
 www.advancedotology.org
 www.advbiores.net
 www.advms.pl
+www.aeaweb.org
 www.aecf.org
 www.aei.org
 www.aeronline.org
@@ -1618,7 +1620,6 @@ www.americanindiannewspapers.amdigital.co.uk
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
 www.amj.net.au
-www.amjcaserep.com
 www.ams.org
 www.amsjournal.com
 www.ancientscienceoflife.org
@@ -1632,7 +1633,6 @@ www.annalsafrmed.org
 www.annalscts.com
 www.annalsgastro.gr
 www.annalsofian.org
-www.annalsoftransplantation.com
 www.annalspc.com
 www.annclinlabsci.org
 www.anndermatol.org
@@ -1813,6 +1813,7 @@ www.cpn.or.kr
 www.crcnetbase.com
 www.crd.york.ac.uk
 www.crlonline.com
+www.csbj.org
 www.csc2.ncsu.edu
 www.ctt-journal.com
 www.ctte-conference.org
@@ -2003,7 +2004,6 @@ www.healthaffairs.org
 www.healthandjusticejournal.com
 www.healtheffects.org
 www.heartandmetabolism.org
-www.heartinsight.com
 www.heartviews.org
 www.heinonline.org
 www.hellenicjcardiol.com
@@ -2316,7 +2316,6 @@ www.mdpi.com
 www.mdz-nbn-resolving.de
 www.med.kobe-u.ac.jp
 www.med.nagoya-u.ac.jp
-www.medandlife.ro
 www.mededportal.org
 www.medeniyetmedicaljournal.org
 www.medicaljournals.se
@@ -2426,7 +2425,6 @@ www.omjournal.org
 www.ompu.ac.jp
 www.oncologypractice.com
 www.onepetro.org
-www.onlinejacc.org
 www.onlinejets.org
 www.onlinelibrary.wiley.com
 www.ons.gov.uk
