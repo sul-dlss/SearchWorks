@@ -12,22 +12,14 @@ module FeedbackFormHelper
   end
 
   def show_quick_report?
-    if (params[:controller] == 'catalog' && params[:action] == 'show') or
+    (params[:controller] == 'catalog' && params[:action] == 'show') or
       (refered_from_catalog_show? &&
-        params[:controller] == 'feedback_forms' && params[:action] == 'new')
-      true
-    else
-      false
-    end
+        params[:controller] == 'feedback_forms' && params[:action] == 'new') || false
   end
 
   def refered_from_catalog_show?
     if request.referer.present?
-      if /(\/catalog\/|\/view\/)/.match?(request.referer)
-        true
-      else
-        false
-      end
+      /(\/catalog\/|\/view\/)/.match?(request.referer) || false
     end
   end
 end
