@@ -694,6 +694,7 @@ hereditasjournal.biomedcentral.com
 herpesviridae.biomedcentral.com
 hijournal.bcs.org
 hindawi.com
+history-commons.net
 history.paratext.com
 hivinsite.ucsf.edu
 hjemmesider.diku.dk
@@ -2044,7 +2045,6 @@ www.iedb.org
 www.ieeexplore.ieee.org
 www.if-pan.krakow.pl
 www.igi-global.com
-www.ihealthbeat.org
 www.ihs.gov
 www.ijaai.in
 www.ijabmr.org
@@ -2109,7 +2109,6 @@ www.indigenoushistoriesandcultures.amdigital.co.uk
 www.indigenousnewspapersinnorthamerica.amdigital.co.uk
 www.industrialpsychiatry.org
 www.infobank.cn
-www.informatics-review.com
 www.informatics.jax.org
 www.informaworld.com
 www.infoworld.com
@@ -2481,7 +2480,6 @@ www.plantgdb.org
 www.plantphysiol.org
 www.ploscompbiol.org
 www.plosgenetics.org
-www.plosmedicine.org
 www.plosntds.org
 www.plosone.org
 www.plospathogens.org
