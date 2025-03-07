@@ -14,7 +14,8 @@ module Folio
     end
 
     def bound_with?
-      holdings_type == 'Bound-with'
+      holdings_type == 'Bound-with' ||
+        effective_location.holdings_type_name == 'Bound-with' # For Lane
     end
 
     def self.from_dynamic(json)
