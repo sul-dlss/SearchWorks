@@ -57,7 +57,7 @@ class Holdings
     end
 
     def zombie?
-      @code == 'ZOMBIE'
+      @code == 'ZOMBIE' # e.g. a490837, a612226, a448849, in00000060570
     end
 
     def present?
