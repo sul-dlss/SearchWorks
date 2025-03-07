@@ -16,7 +16,7 @@
   <div class="purl-embed-viewer row">
     <div class="col-md-12">
       <h2>Digital content</h2>
-      <div data-behavior="purl-embed" data-embed-url="<%= embed_path(document.druid) %>"></div>
+      <%= render Record::Item::EmbedComponent.new(druid: document.druid) %>
       <%= helpers.iiif_drag_n_drop(document.iiif_manifest) if document.iiif_manifest %>
     </div>
   </div>
