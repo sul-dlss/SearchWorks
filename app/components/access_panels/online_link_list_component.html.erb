@@ -1,6 +1,6 @@
 <%= tag.ul class: "links", id: "online-link-list", data: truncate? ? { controller: "long-list" } : nil do %>
   <% links.each.with_index do |link, index| %>
-    <%= tag.li data: index > 5 ? { long_list_target: 'hideable' } : nil do %>
+    <%= tag.li data: index >= 5 ? { long_list_target: 'hideable' } : nil do %>
       <span class="<%= 'stanford-only' if link.stanford_only? %>">
         <%= link.html&.html_safe %>
       </span>

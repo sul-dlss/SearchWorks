@@ -75,7 +75,15 @@ class Links
     end
 
     def link_html
-      content_tag(:a, @link_text, href: @href, title: @link_title, class: link_class)
+      tooltip_attr = if @link_title.present?
+                       {
+                         title: @link_title,
+                         data: { placement: 'right', toggle: 'tooltip' }
+                       }
+                     else
+                       {}
+                     end
+      content_tag(:a, @link_text, href: @href, class: link_class, **tooltip_attr)
     end
   end
 end
