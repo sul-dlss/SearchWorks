@@ -682,6 +682,7 @@ he02.tci-thaijo.org
 head-face-med.biomedcentral.com
 headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
+health.usnews.com
 healtheducationresources.unesco.org
 healthmap.org
 healthpsychologyresearch.openmedicalpublishing.org
@@ -962,7 +963,6 @@ library.med.utah.edu
 library.msri.org
 library.seg.org
 library.stanford.edu
-libres.curtin.edu.au
 liebertpub.com
 link-springer-com.stanford.idm.oclc.org
 link.gale.com
@@ -2277,6 +2277,7 @@ www.lib.tottori-u.ac.jp
 www.liberdomus.it
 www.libpubmedia.co.uk
 www.librarystack.org
+www.libres-ejournal.info
 www.liebertpub.com
 www.life-science-alliance.org
 www.lifescied.org
@@ -2687,7 +2688,6 @@ www.uni-mannheim.de
 www.unodc.org
 www.uptodate.com
 www.urologyannals.com
-www.usnews.com
 www.uspharmacist.com
 www.usrds.org
 www.utpjournals.press
@@ -2735,7 +2735,6 @@ www.zerotothree.org
 www.zjujournals.com
 www.zoores.ac.cn
 www150.statcan.gc.ca
-www2.amia.org
 www3.cricyt.edu.ar
 wwwcf.nlm.nih.gov
 wwwn.cdc.gov
