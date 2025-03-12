@@ -74,7 +74,7 @@ gem "coderay"
 gem 'blacklight', '~> 8.0'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
-gem "blacklight_range_limit", "~> 8.0"
+gem "blacklight_range_limit", "~> 9.0"
 gem 'blacklight-hierarchy', "~> 6.0"
 gem 'blacklight_dynamic_sitemap'
 gem 'rsolr'
