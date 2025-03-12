@@ -55,10 +55,6 @@
   margin-right: 25px;
 }
 
-@mixin link-styling {
-  border-bottom: 1px solid $sul-link-color-hover;
-}
-
 @mixin masthead-panel {
   background-color: $sul-masthead-bg;
   border: 1px solid $sul-masthead-border;
