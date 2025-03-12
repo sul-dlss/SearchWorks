@@ -135,6 +135,11 @@
   resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-8.0.13.tgz#ab35fda9d358432c8a872a833844b38cccb8c25b"
   integrity sha512-M7qXUqcGab6G5PKOiwhgbByTtrPgKPFCTMNQ52QhzUEXEqmp0/ApEguUesh/FPiUjrmFec+3lq98KsWnYY2C7g==
 
+"@kurkle/color@^0.3.0":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@kurkle/color/-/color-0.3.4.tgz#4d4ff677e1609214fc71c580125ddddd86abcabf"
+  integrity sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==
+
 "@rails/actioncable@^7.0":
   version "7.2.201"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.201.tgz#bfb3da01b3e2462f5a18f372c52dedd7de76037f"
@@ -164,10 +169,12 @@ blacklight-hierarchy@^6.1.2:
     blacklight-frontend ">=7.1 || 8.0"
     jquery ">=3.0"
 
-blacklight-range-limit@^8.3.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/blacklight-range-limit/-/blacklight-range-limit-8.5.0.tgz#91980e8e88a921b4703b2de23dded8653bfcdc71"
-  integrity sha512-SOiHzdQ5HUJQqZHH9Wzhzbn6wgDpVZ8kGZUkF1J1PadSWTnAANQbxHZtazLgTU1SMFC3gYcty4tGrMYecTJ+gA==
+blacklight-range-limit@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/blacklight-range-limit/-/blacklight-range-limit-9.0.0.tgz#89e1e7d36cef7fef205d0266fa0591006801f05d"
+  integrity sha512-Qr+3Rr0jOeoSNN5kN3fmZYqggAgpPpu3LX7HAHkCtrkHG5gPKqV+TK8BLvila9zueAs77dbWV7AmucZEvE+IBg==
+  dependencies:
+    chart.js "^ 4.4.1"
 
 bootstrap@4:
   version "4.6.2"
@@ -178,6 +185,13 @@ bootstrap@4:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.3.tgz#de35e1a765c897ac940021900fcbb831602bac38"
   integrity sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==
+
+"chart.js@^ 4.4.1":
+  version "4.4.8"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.4.8.tgz#54645b638e9d585099bc16b892947b5e6cd2a552"
+  integrity sha512-IkGZlVpXP+83QpMm4uxEiGqSI7jFizwVtF3+n5Pc3k7sMO+tkd0qxh2OzLhenM0K80xtmAONWGBn082EiBQSDA==
+  dependencies:
+    "@kurkle/color" "^0.3.0"
 
 esbuild@^0.19.4:
   version "0.19.12"
