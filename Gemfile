@@ -98,7 +98,7 @@ gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap content.
-gem 'recaptcha', github: 'ambethia/recaptcha', ref: '7866ec44c565a0f164f65066b97347d29a5f343f' # pinned until 5.17 is released
+gem 'recaptcha', '~> 5.17'
 gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap', '~> 4.0'
 
