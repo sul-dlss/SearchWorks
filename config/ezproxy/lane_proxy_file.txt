@@ -124,6 +124,7 @@ archrazi.areeo.ac.ir
 ard.bmj.com
 aricjournal.biomedcentral.com
 ark.cdlib.org
+arppress.org
 arrow-journal.org
 arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
@@ -1355,7 +1356,6 @@ science-of-synthesis.thieme.com
 science.gov
 science.sciencemag.org
 sciendo.com
-scitation.aip.org
 sciwheel.com
 scjilb.org
 scmr.org
