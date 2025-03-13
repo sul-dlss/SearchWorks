@@ -13,7 +13,6 @@ import "./analytics";
 import "./article";
 import "./async_collection_members";
 import "./course_reserves";
-import "./eds_range_limit";
 import "./embedded-call-number-browse";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";
