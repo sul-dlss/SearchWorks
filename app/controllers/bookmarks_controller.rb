@@ -7,6 +7,7 @@ class BookmarksController < CatalogController
   configure_blacklight do |config|
     config.default_solr_params = {
       qt: 'document',
+      q: '*:*',
       rows: 20
     }
   end
@@ -14,9 +15,8 @@ class BookmarksController < CatalogController
   # Overidden from Blacklight to add our tabbed interface
   def index
     @bookmarks = token_or_current_or_guest_user.bookmarks.where(record_type: 'catalog')
-    bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
-
-    @response, @document_list = search_service.fetch(bookmark_ids)
+    @response = search_service.search_results
+    @document_list = @response.documents
 
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
