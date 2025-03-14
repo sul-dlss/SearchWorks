@@ -22,11 +22,14 @@ class ArticleSelectionsController < ApplicationController
     @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
-    if bookmark_ids.present?
-      @response, @document_list = search_service.fetch(bookmark_ids)
-    else
-      @document_list = []
-    end
+    @document_list = if bookmark_ids.present?
+                       search_service.fetch(bookmark_ids)
+                     else
+                       []
+                     end
+
+    @response = @document_list.first&.response || OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
+                                                                 current_page: @bookmarks.current_page)
 
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
@@ -57,6 +60,11 @@ class ArticleSelectionsController < ApplicationController
     idx + 1 + offset
   end
   helper_method :document_counter_with_offset
+
+  # @return [Hash] a hash of context information to pass through to the search service
+  def search_service_context
+    { bookmarks: @bookmarks }
+  end
 
   protected
 
