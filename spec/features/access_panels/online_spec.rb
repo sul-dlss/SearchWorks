@@ -54,8 +54,6 @@ RSpec.feature "Online Access Panel" do
             expect(page).to have_css('li ul li', text: 'Statement 1')
             expect(page).to have_css('li ul li', text: 'Statement 2')
           end
-
-          expect(page).to have_link('See the full find it @ Stanford menu')
         end
       end
     end

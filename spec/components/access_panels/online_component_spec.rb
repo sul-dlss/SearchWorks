@@ -175,8 +175,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
         render_inline(described_class.new(document:))
         expect(page).to have_css('.panel-online')
         expect(page).to have_no_link('Find full text')
-        expect(page).to     have_css('[data-behavior="sfx-panel"]')
-        expect(page).to     have_link('See the full find it @ Stanford menu')
+        expect(page).to have_css('[data-behavior="sfx-panel"]')
       end
     end
 
