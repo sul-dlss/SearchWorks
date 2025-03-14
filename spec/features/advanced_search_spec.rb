@@ -38,7 +38,7 @@ RSpec.feature "Advanced Search" do
       expect(page).to have_css("select#sort")
 
       expect(page).to have_button 'Search'
-      expect(page).to have_button 'Clear form'
+      expect(page).to have_link 'Clear form'
     end
   end
   scenario "simple search should work normally" do

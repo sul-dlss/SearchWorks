@@ -13,20 +13,18 @@
                 data: { blacklight_modal: "trigger" } %>
   <% end %>
 <% end %>
-<% if @document.respond_to?( :to_email_text ) %>
-  <% if @document.eds? %>
-    <%= link_to t('blacklight.tools.email_html'),
-                email_articles_path(:id => @document),
-                id: 'emailLink', role: 'menuitem', tabindex: '-1',
-                class: 'dropdown-item',
-                data: { blacklight_modal: "trigger" } %>
-  <% else %>
-    <%= link_to t('blacklight.tools.email_html'),
-                email_solr_document_path(:id => @document),
-                id: 'emailLink', role: 'menuitem', tabindex: '-1',
-                class: 'dropdown-item',
-                data: { blacklight_modal: "trigger" } %>
-  <% end %>
+<% if @document.eds? %>
+  <%= link_to t('blacklight.tools.email_html'),
+              email_articles_path(:id => @document),
+              id: 'emailLink', role: 'menuitem', tabindex: '-1',
+              class: 'dropdown-item',
+              data: { blacklight_modal: "trigger" } %>
+<% else %>
+  <%= link_to t('blacklight.tools.email_html'),
+              email_solr_document_path(:id => @document),
+              id: 'emailLink', role: 'menuitem', tabindex: '-1',
+              class: 'dropdown-item',
+              data: { blacklight_modal: "trigger" } %>
 <% end %>
 <% if @document.export_formats.keys.include?( :refworks_marc_txt ) %>
     <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
