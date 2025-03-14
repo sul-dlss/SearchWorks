@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Eds::Repository do
   let(:blacklight_config) {
-    instance_double(Blacklight::Configuration,
+    Blacklight::Configuration.new(
       response_model: Blacklight::Solr::Response,
       document_model: SolrDocument,
       default_per_page: 10
