@@ -1525,7 +1525,6 @@ wisesearch6.wisers.net
 wjes.biomedcentral.com
 wjso.biomedcentral.com
 wms.cartographic.com
-wnc.eastview.com
 womensmidlifehealthjournal.biomedcentral.com
 wonder.cdc.gov
 worldscholar.galegroup.com
@@ -1697,7 +1696,6 @@ www.bindingdb.org
 www.bio-protocol.org
 www.biochemia-medica.com
 www.biodiversitylibrary.org
-www.biographi.ca
 www.bioj-online.com
 www.bioline.org.br
 www.biomed.cas.cz
@@ -2281,7 +2279,6 @@ www.libres-ejournal.info
 www.liebertpub.com
 www.life-science-alliance.org
 www.lifescied.org
-www.linscottsdirectory.com
 www.literarymanuscriptsberg.amdigital.co.uk
 www.literaryprintculture.amdigital.co.uk
 www.literature.at
@@ -2441,7 +2438,6 @@ www.osapublishing.org
 www.osha.gov
 www.overleaf.com
 www.oxfordbibliographies.com
-www.oxforddnb.com
 www.oxfordhandbooks.com
 www.oxfordreference.com
 www.oxfordscholarlyeditions.com
@@ -2527,7 +2523,6 @@ www.rcpe.ac.uk
 www.rcvmonline.com
 www.re3data.org
 www.reaxys.com
-www.referenceusa.com
 www.regenmedres-journal.org
 www.rehab.research.va.gov
 www.relatosdeplomo.es
