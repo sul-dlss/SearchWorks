@@ -52,7 +52,7 @@ RSpec.feature "Zero results" do
     before { stub_article_service(docs: []) }
 
     scenario 'displays backend lookup links', :js do
-      visit articles_path(q: 'Kittens', f: { 'eds_facet' => ['Abc'] }, search_field: 'search')
+      visit articles_path(q: 'Kittens', f: { 'eds_subject_topic_facet' => ['Abc'] }, search_field: 'search')
 
       # Has zero results because we pass an empty array of docs, but is sucessfully searching
       expect(page).to have_link('All fields > Kittens', href: %r{.*/articles\?q=Kittens})

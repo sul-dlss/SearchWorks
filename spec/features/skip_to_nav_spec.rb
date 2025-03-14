@@ -30,8 +30,10 @@ RSpec.feature "Skip-to Navigation" do
   scenario "has skip-to navigation links to search field, main container and records in selections page", :js do
     visit root_path
     fill_in 'q', with: '20'
-    find('button#search').click
-    find_by_id('toggle-bookmark_20').set(true)
+    click_button 'search'
+
+    expect(page).to have_css("article[data-document-id='20']")
+    find('[data-document-id="20"] input.toggle-bookmark[type="checkbox"]').set(true)
     visit bookmarks_path
 
     within "#skip-link" do

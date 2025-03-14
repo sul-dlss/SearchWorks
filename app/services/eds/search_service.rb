@@ -26,8 +26,7 @@ module Eds
     def search_results
       builder = search_builder.with(user_params)
       builder = yield(builder) if block_given?
-      response = @repository.search(builder, @eds_params)
-      [response, response.documents]
+      @repository.search(builder, @eds_params)
     end
 
     def previous_and_next_documents_for_search(index, request_params, extra_controller_params = {})
@@ -58,7 +57,7 @@ module Eds
     def fetch_many(ids, extra_controller_params = {})
       solr_response = @repository.find_by_ids(ids, @eds_params)
 
-      [solr_response, solr_response.documents]
+      solr_response.documents
     end
 
     ##
@@ -67,7 +66,7 @@ module Eds
     # @param [HashWithIndifferentAccess] extra_controller_params
     def fetch_one(id, extra_controller_params)
       solr_response = @repository.find id, extra_controller_params, @eds_params
-      [solr_response, solr_response.documents.first]
+      solr_response.documents.first
     end
 
     private

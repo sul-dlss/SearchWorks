@@ -1,3 +1,3 @@
 <% # container for a single doc -%>
 <% view_config = local_assigns[:view_config] || blacklight_config.view_config(document_index_view_type) %>
-<%= render (view_config.document_component || Blacklight::DocumentComponent).new(presenter: document_presenter(document), counter: document_counter_with_offset(document_counter)) %>
+<%= render (view_config.document_component || Blacklight::DocumentComponent).new(document: document_presenter(document), counter: document_counter_with_offset(document_counter)) %>
