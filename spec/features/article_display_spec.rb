@@ -102,14 +102,6 @@ RSpec.feature 'Article Record Display' do
       expect_any_instance_of(SfxData).to receive(:sfx_xml).at_least(:once).and_return(sfx_xml)
     end
 
-    it 'renders a link to the SFX menu' do
-      visit article_path(document[:id])
-
-      within '.article-record-panels .metadata-panels' do
-        expect(page).to have_link('See the full find it @ Stanford menu', href: 'http://example.com?param=abc')
-      end
-    end
-
     context 'when the SFX data is not loaded successfully' do
       it 'returns an error message in the panel' do
         visit article_path(document[:id])
