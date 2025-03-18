@@ -55,3 +55,13 @@ summary {
   @include button-variant($light-sandstone, $cloud);
   color: $warm-grey;
 }
+
+#advanced_search_facets {
+  --bl-facet-margin-bottom: 1rem;
+  --bl-facet-label-indent: -15px;
+  --bl-facet-limit-body-padding: 1rem;
+}
+
+#advanced_search_facets label {
+  margin-bottom: 0;
+}
