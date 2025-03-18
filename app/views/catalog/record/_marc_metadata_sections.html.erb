@@ -20,7 +20,7 @@
 <%= render partial: "shared/side_nav_minimap", locals: locals %>
 
 <h2>Description</h2>
-<% if contributors.present? %>
+<% if html_present?(contributors) %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
     <div class="section-heading">
       <h3><%= t('record_side_nav.contributors.icon').html_safe %> Creators/Contributors</h3>
@@ -33,7 +33,7 @@
   </div>
 <% end %>
 
-<% if contents_summary.present? %>
+<% if html_present?(contents_summary) %>
   <div class="section" id="<%= t('record_side_nav.contents_summary.id') %>" data-side-nav-class="<%= t('record_side_nav.contents_summary.id') %>">
     <div class="section-heading">
       <h3><%= t('record_side_nav.contents_summary.icon').html_safe %> Contents/Summary</h3>
@@ -46,7 +46,7 @@
   </div>
 <% end %>
 
-<% if subjects.present? %>
+<% if html_present?(subjects) %>
   <div class="section" id="<%= t('record_side_nav.subjects.id') %>" data-side-nav-class="<%= t('record_side_nav.subjects.id') %>">
     <div class="section-heading">
       <h3><%= t('record_side_nav.subjects.icon').html_safe %> Subjects</h3>
@@ -59,7 +59,7 @@
   </div>
 <% end %>
 
-<% if bibliography.present? %>
+<% if html_present?(bibliography) %>
   <div class="section" id="<%= t('record_side_nav.bibliography_info.id') %>" data-side-nav-class="<%= t('record_side_nav.bibliography_info.id') %>">
     <div class="section-heading">
       <h3><%= t('record_side_nav.bibliography_info.icon').html_safe %> Bibliographic information</h3>
