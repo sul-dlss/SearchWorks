@@ -7,6 +7,10 @@ import "./vendor/jquery-scrollspy";
 // import "bootstrap";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 
+// undo Blacklight's count resizing (incompatible with Blacklight 8 markup)
+Blacklight.doResizeFacetLabelsAndCounts = function() {};
+
+
 import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
 import "blacklight-range-limit/vendor/assets/javascripts/bootstrap-slider"
 import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.canvaswrapper"
