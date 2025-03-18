@@ -10,6 +10,10 @@
   margin-bottom: $line-height-base;
 }
 
+.documents-list .document .document-thumbnail {
+  float: right;
+}
+
 .iiif-dnd {
   position: relative;
   z-index: 1;
