@@ -83,4 +83,10 @@ module CatalogHelper
       image_tag 'iiif-drag-n-drop.svg', width:, alt: 'IIIF Drag-n-drop'
     end
   end
+
+  def html_present?(value)
+    return false if value.blank?
+
+    value.gsub(/<!--.*?-->/m, '').present?
+  end
 end
