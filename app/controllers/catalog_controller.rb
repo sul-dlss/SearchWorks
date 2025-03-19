@@ -485,10 +485,9 @@ class CatalogController < ApplicationController
     config.spell_max = 5
 
     # View type group config
-    config.view.list.icon_class = "fa-th-list"
     config.view.list.icon = Searchworks::Icons::ListIcon
-    config.view.gallery(partials: [:index], icon_class: "fa-th", icon: Searchworks::Icons::GalleryIcon)
-    config.view.brief(partials: [:index], icon_class: "fa-align-justify", icon: Searchworks::Icons::BriefIcon)
+    config.view.gallery(partials: [:index], icon: Searchworks::Icons::GalleryIcon)
+    config.view.brief(partials: [:index], icon: Searchworks::Icons::BriefIcon)
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
