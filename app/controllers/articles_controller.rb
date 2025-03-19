@@ -189,8 +189,8 @@ class ArticlesController < ApplicationController
     # config.add_facet_field 'eds_author_university_facet', label: 'University'
 
     # View type group config
-    config.view.list.icon_class = "fa-th-list"
-    config.view.brief(partials: %i[index], icon_class: "fa-align-justify")
+    config.view.list.icon = Searchworks::Icons::ListIcon
+    config.view.brief(partials: %i[index], icon: Searchworks::Icons::BriefIcon)
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
