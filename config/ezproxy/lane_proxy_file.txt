@@ -761,7 +761,6 @@ images.tandf.co.uk
 img1.od-cdn.com
 immunityageing.biomedcentral.com
 immunome-research.biomedcentral.com
-imp-primo.hosted.exlibrisgroup.com
 implementationscience.biomedcentral.com
 implementationsciencecomms.biomedcentral.com
 imrs.oxfordjournals.org
@@ -1095,7 +1094,6 @@ nexisuni.com
 nf.aafp.org
 ng.neurology.org
 nida.nih.gov
-nls.ldls.org.uk
 nmsjournal.kaums.ac.ir
 nn.neurology.org
 nnlm.gov
@@ -1153,7 +1151,6 @@ openheart.bmj.com
 openhypertensionjournal.com
 openknowledge.worldbank.org
 openlibrary.org
-openurl.ac.uk
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
 opil.ouplaw.com
@@ -1209,7 +1206,6 @@ platform.almanhal.com
 platform.marketintelligence.spglobal.com
 pm.nlx.com
 pmj.bmj.com
-pmt-eu.hosted.exlibrisgroup.com
 pn.bmj.com
 pneumonia.biomedcentral.com
 policycommons.net
@@ -1280,7 +1276,6 @@ qims.amegroups.com
 qualitysafety.bmj.com
 raf.bioscientifica.com
 rapm.bmj.com
-rave.ohiolink.edu
 rbej.biomedcentral.com
 rc.rcjournal.com
 rde.ac
@@ -1385,7 +1380,6 @@ sigmapubs.onlinelibrary.wiley.com
 silencejournal.biomedcentral.com
 sis.nlm.nih.gov
 sit.bmj.com
-site.ebrary.com
 sjtrem.biomedcentral.com
 sk.sagepub.com
 skeletalmusclejournal.biomedcentral.com
@@ -1518,7 +1512,6 @@ webronza.asahi.com
 webserver.erwin-rauner.de
 wellcomelibrary.org
 westindies.scielo.org
-whel-primo.hosted.exlibrisgroup.com
 whqlibdoc.who.int
 wio.iwaponline.com
 wisesearch6.wisers.net
@@ -2699,7 +2692,6 @@ www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
-www.vlebooks.com
 www.wageningenacademic.com
 www.washingtonpost.com
 www.webofscience.com
