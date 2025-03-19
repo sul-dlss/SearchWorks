@@ -26,6 +26,10 @@ import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.uiCons
 Blacklight.onLoad(function() {
   modalSelector = Blacklight.modal?.modalSelector || Blacklight.Modal.modalSelector;
   BlacklightRangeLimit.initialize(modalSelector);
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-bl-dismiss="modal"]')) Blacklight.modal.hide();
+  });
 });
 
 import "./alternate_catalog";
