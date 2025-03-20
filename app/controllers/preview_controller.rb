@@ -7,10 +7,6 @@ class PreviewController < ApplicationController
   include Blacklight::SearchContext
   copy_blacklight_config_from(CatalogController)
 
-  configure_blacklight do |config|
-    config.show.partials = [:show_header, :show]
-  end
-
   def show
     @document = search_service.fetch(params[:id])
     respond_to do |format|
