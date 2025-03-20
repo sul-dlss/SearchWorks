@@ -8,4 +8,8 @@ $global-alert-color: rgb(204, 0, 0);
   p {
     max-width: fit-content;
   }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
