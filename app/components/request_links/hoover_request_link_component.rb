@@ -2,8 +2,12 @@
 
 module RequestLinks
   class HooverRequestLinkComponent < LocationRequestLinkComponent
+    delegate :items, to: :location
+
     def render?
-      true
+      items.none? do |item|
+        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable'
+      end
     end
 
     def link_text
@@ -13,6 +17,8 @@ module RequestLinks
     end
 
     def link_href
+      return document&.index_links&.finding_aid&.first&.href if has_finding_aid?
+
       HooverOpenUrlRequest.new(library_code, document).to_url
     end
 
