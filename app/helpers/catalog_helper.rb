@@ -10,14 +10,6 @@ module CatalogHelper
     controller_name == 'catalog'
   end
 
-  def render_view_type_group_icon(view)
-    content_tag(
-      :i,
-      '',
-      class: "fa #{blacklight_config.view[view].icon_class || default_view_type_group_icon_classes(view)}"
-    )
-  end
-
   def current_view
     document_index_view_type.to_s || 'list'
   end
@@ -82,5 +74,11 @@ module CatalogHelper
     ) do
       image_tag 'iiif-drag-n-drop.svg', width:, alt: 'IIIF Drag-n-drop'
     end
+  end
+
+  def html_present?(value)
+    return false if value.blank?
+
+    value.gsub(/<!--.*?-->/m, '').present?
   end
 end

@@ -8,7 +8,7 @@
     <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
   </div>
   <div class="caption">
-    <%= render_document_partials document, blacklight_config.view_config(:gallery).partials, document_counter: document_counter %>
+    <%= render_document_partial document, 'index', document_counter: document_counter %>
   </div>
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons">
