@@ -5,8 +5,8 @@ module RequestLinks
     delegate :items, to: :location
 
     def render?
-      items.none? do |item|
-        item.effective_location&.details&.dig('availabilityClass') == 'In_process_non_requestable'
+      items.any? do |item|
+        item.effective_location&.details&.dig('availabilityClass') != 'In_process'
       end
     end
 
