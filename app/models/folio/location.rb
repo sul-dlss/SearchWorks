@@ -42,6 +42,10 @@ module Folio
           name: json.fetch('name'))
     end
 
+    def holdings_type_name
+      details['holdingsTypeName']
+    end
+
     def see_other?
       code.ends_with?('-SEE-OTHER')
     end
