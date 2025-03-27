@@ -75,8 +75,6 @@ Rails.application.routes.draw do
 
   resource :quick_reports, only: [:create]
 
-  resources :embed, only: :show
-
   resources :lib_guides, only: :index
 
   resources :browse, only: :index
