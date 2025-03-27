@@ -169,10 +169,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent, item_component: ResourceFacetItemComponent
     config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "pub_year_tisim", label: "Date", range: true, range_config: {
-      input_label_range_begin: "from year",
-      input_label_range_end: "to year"
-    }
+    config.add_facet_field "pub_year_tisim", label: "Date", range: true
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::FacetFieldListComponent
