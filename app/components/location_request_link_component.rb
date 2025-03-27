@@ -9,11 +9,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   def self.for(document:, library_code:, location:, **kwargs)
     link_type = case library_code
                 when 'HILA'
-                  if document&.index_links&.finding_aid&.first&.href
-                    RequestLinks::HooverArchiveRequestLinkComponent
-                  else
-                    RequestLinks::HooverRequestLinkComponent
-                  end
+                  RequestLinks::HooverRequestLinkComponent
                 else
                   LocationRequestLinkComponent
                 end
