@@ -539,6 +539,7 @@ ecrbrowser.dcode.org
 edm.bioscientifica.com
 edu.digitaltheatreplus.com
 edu.medici.tv
+educationforhealthjournal.org
 efsa.onlinelibrary.wiley.com
 ehjournal.biomedcentral.com
 ehoonline.biomedcentral.com
@@ -1277,7 +1278,6 @@ qualitysafety.bmj.com
 raf.bioscientifica.com
 rapm.bmj.com
 rbej.biomedcentral.com
-rc.rcjournal.com
 rde.ac
 read.dukeupress.edu
 reader.digitale-sammlungen.de
