@@ -1,4 +1,4 @@
-<table class="table table-sm availability">
+<%= tag.table class: %w[table table-sm availability], data: { controller: 'long-table', longTableButtonContextValue: "items in #{library.name}" } do %>
   <caption class='sr-only'>Status of items at <%= library.name %></caption>
   <thead>
     <tr class='active'>
@@ -21,7 +21,7 @@
     </tbody>
   <% end %>
   <% locations.each do |location| %>
-    <%= render LongTableComponent.new(node_id: "doc#{document.id}_location_#{location.code}", size: location.items.size) do %>
+    <tbody data-long-table-target="body">
       <% location_request_link = LocationRequestLinkComponent.for(document:, library_code:, location:) %>
       <tr class="location-info">
         <th scope="col">
@@ -49,6 +49,6 @@
           <td colspan='2'><%= link_to_record %></td>
         </tr>
       <% end %>
-    <% end %>
+    </tbody>
   <% end %>
-</table>
+<% end %>

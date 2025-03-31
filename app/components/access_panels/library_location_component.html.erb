@@ -14,7 +14,7 @@
     <% end %>
   <% end %>
 <% end %>
-<table class='availability record-view'>
+<%= tag.table class: %w[availability record-view], data: { controller: 'long-table', longTableButtonContextValue: "items in #{location.name}" } do %>
   <caption class="sr-only">Items in <%= location.name %></caption>
   <thead>
     <tr class="sr-only">
@@ -23,7 +23,7 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
-  <%= render LongTableComponent.new(node_id: "doc#{document.id}_location_#{location.code}", size: location.items.size) do %>
+  <tbody data-long-table-target="body">
     <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
-  <% end %>
-</table>
+  </tbody>
+<% end %>
