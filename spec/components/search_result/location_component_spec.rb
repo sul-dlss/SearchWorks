@@ -8,7 +8,7 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
 
   subject(:page) { render_inline(component) }
 
-  context 'with multiple items in a location' do
+  context 'with items in a location' do
     let(:document) do
       SolrDocument.new(
         id: '123',
@@ -26,6 +26,38 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
       expect(page).to have_css('tbody th[scope="col"]', text: 'Stacks')
       expect(page).to have_css('tbody td', text: "ABC 123")
       expect(page).to have_css('tbody td', text: "ABC 456")
+    end
+  end
+
+  context 'with many items in a location' do
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: ((1..10).map do |i|
+          { barcode: i.to_s, library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: "ABC #{i}" }
+        end)
+      )
+    end
+
+    it "renders the expand control" do
+      expect(page).to have_css('tbody td', text: "ABC 1")
+      expect(page).to have_css('tbody td', text: "ABC 5")
+      expect(page).to have_css('button', text: 'show all at location')
+    end
+  end
+
+  context 'with many oover items' do
+    let(:document) do
+      SolrDocument.new(
+        id: '123',
+        item_display_struct: ((1..10).map do |i|
+          { barcode: i.to_s, library: 'HILA', effective_permanent_location_code: 'HILA-STACKS', callnumber: "ABC #{i}" }
+        end)
+      )
+    end
+
+    it "does not render the expand control" do
+      expect(page).to have_no_css('button', text: 'show all at location')
     end
   end
 
