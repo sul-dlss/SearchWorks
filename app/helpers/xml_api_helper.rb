@@ -136,12 +136,12 @@ module XmlApiHelper
     if field['6']
       field_original = field.tag
       match_original = field['6'].split("-")[1]
-      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |field|
-        field_880 = field['6'].split("-")[0]
-        match_880 = field['6'].split("-")[1].gsub("//r", "")
+      marc.find_all { |f| f.tag == '880' && f['6']&.include?('-') }.each do |matching_field|
+        field_880 = matching_field['6'].split("-")[0]
+        match_880 = matching_field['6'].split("-")[1].gsub("//r", "")
         next unless match_original == match_880 and field_original == field_880
 
-        field.select { |sub| Constants::EXCLUDE_FIELDS.exclude?(sub.code) }.each do |sub|
+        matching_field.select { |sub| Constants::EXCLUDE_FIELDS.exclude?(sub.code) }.each do |sub|
           return_text << sub.value
         end
       end
