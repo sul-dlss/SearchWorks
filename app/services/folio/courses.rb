@@ -22,6 +22,13 @@ module Folio
       # Add or update all courses retrieved from FOLIO
       folio_courses.each { |v|
         end_date = v.dig('courseListingObject', 'termObject', 'endDate')
+
+        # Debugging https://github.com/sul-dlss/SearchWorks/issues/4631
+        if end_date.blank?
+          Honeybadger.notify('Course has no end date',
+                             context: { course_number: v['courseNumber'], name: v['name'], start_date: v.dig('courseListingObject', 'termObject', 'startDate') })
+        end
+
         CourseReserve.where(id: v['id']).first_or_create(id: v['id']).update(
           course_number: v['courseNumber'],
           name: v['name'],
