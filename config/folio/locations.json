@@ -238,7 +238,7 @@
     "id": "02844385-781a-4b71-87d7-64641c87b6e1",
     "name": "Lane Spec: Periodicals",
     "code": "LANE-PSPEC",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Periodicals): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -254,8 +254,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:29.354+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:41.631+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:45:38.134+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -427,7 +427,7 @@
     "id": "045ee992-0f9e-4079-88b6-1dc77f36e19a",
     "name": "Lane Spec: AV",
     "code": "LANE-SPAV",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (AV): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -443,8 +443,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:38.256+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:43.151+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:22:35.240+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -592,7 +592,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -601,8 +603,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:54.112+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:54.112+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-03-19T22:41:07.245+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -747,7 +749,7 @@
     "id": "0b6a8d36-2c4f-4fef-b894-d56c25e94ca0",
     "name": "Lane Spec: Mini",
     "code": "LANE-MINI",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Mini): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -763,8 +765,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:22.679+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:40.266+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:28:15.275+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -1170,7 +1172,7 @@
     "id": "12ccfee2-4676-4a82-add3-885defed6440",
     "name": "Lane Spec: Theses",
     "code": "LANE-RTHSS",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Theses): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -1186,8 +1188,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:34.851+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:41.967+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:47:23.476+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -1365,7 +1367,7 @@
     "id": "1564e5df-d1a6-41b7-bd6a-f150c3f8b9bf",
     "name": "Lane Spec: Storage",
     "code": "LANE-STRG",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Storage): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -1381,15 +1383,15 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.514+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:45.969+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:47:08.893+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
     "id": "156a50fe-b288-447f-82c4-618ba8e4565a",
     "name": "Lane Spec: Old Class",
     "code": "LANE-SPOLD",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Old Class): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -1405,8 +1407,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:34.533+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:44.234+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:30:44.292+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -2388,6 +2390,28 @@
     }
   },
   {
+    "id": "25458af5-a928-426d-9453-caecf0c54408",
+    "name": "Science Exhibit",
+    "code": "SCI-EXHIBIT",
+    "discoveryDisplayName": "On exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+    "details": {},
+    "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+    "servicePointIds": [
+      "50ef1036-06d3-48ef-9048-26cabfccf630"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-03-12T21:16:57.434+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-03-12T21:16:57.434+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "25b19d0e-ac10-44cf-a5be-d7c15b209200",
     "name": "Marine Bio Withdrawn Digital Substitute",
     "code": "MAR-WD-DIGITAL-SUB",
@@ -2505,9 +2529,9 @@
   },
   {
     "id": "26d1a668-747b-4f1d-a2af-317b37316360",
-    "name": "Lane Spec: Manuscipts",
+    "name": "Lane Spec: Manuscripts",
     "code": "LANE-MSS",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Manuscripts): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -2523,8 +2547,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:24.838+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:40.604+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:27:51.849+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -3149,7 +3173,7 @@
     "id": "33e93b8a-7917-4973-865c-7579289f3d04",
     "name": "Lane Spec: LC Oversize - Folio",
     "code": "LANE-SFOL",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (LC Oversize - Folio): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -3165,8 +3189,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:35.344+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:42.804+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:27:35.752+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -3771,7 +3795,7 @@
     "id": "3e7d97cd-201e-4e24-bdcc-5be6b238ecad",
     "name": "Lane Spec: Map Case",
     "code": "LANE-MAP",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Map Case): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -3787,8 +3811,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:25.010+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:39.927+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:28:07.147+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -4466,7 +4490,7 @@
     "id": "49e1fa0c-af79-435c-854a-30c4f0529d73",
     "name": "Lane Spec: Old Class O - Folio",
     "code": "LANE-SPOO2",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Old Class Oversize - Folio): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -4482,15 +4506,15 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:38.628+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:44.908+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:31:11.289+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
     "id": "49f4d81d-0b29-4872-963c-078c4924cf92",
     "name": "Lane Spec: Old Class O - Flat",
     "code": "LANE-SPOO3",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Old Class Oversize - Flat): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -4506,8 +4530,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.359+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:45.262+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:30:58.399+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -4538,7 +4562,7 @@
     "id": "4a617cb9-a317-4d6a-9d32-bcdcc5f7ef14",
     "name": "Lane Career Center",
     "code": "LANE-SOMCC",
-    "discoveryDisplayName": "BioSciences Career Center Collection (Duck Room)",
+    "discoveryDisplayName": "BioSciences Career Center Collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -4552,8 +4576,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:11.739+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:11.739+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-03-27T21:18:33.805+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -5025,7 +5049,7 @@
     "id": "574c569c-94a5-4904-8f7b-6ffc0d2f55ce",
     "name": "Lane Spec: Per Archives",
     "code": "LANE-PARCH",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Per Archives): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -5041,8 +5065,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:22.815+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:40.946+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:45:29.710+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -5397,7 +5421,7 @@
     "id": "5d3bf9e2-eb83-46e9-b2d8-3400ea8d1da3",
     "name": "Lane Spec: Portraits (Annex)",
     "code": "LANE-PORT",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Portraits): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -5413,8 +5437,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:29.513+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:41.287+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:46:00.457+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -6757,7 +6781,7 @@
     "id": "7b26026a-8162-4053-a1be-fe017f0a6f7d",
     "name": "Lane Spec: Photofile",
     "code": "LANE-FOTOF",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Photofile): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -6773,8 +6797,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:25.156+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:38.748+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:45:46.384+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -7076,6 +7100,28 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:57.426+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "7f826632-b15c-4937-be71-c63011865d25",
+    "name": "Green Gov Tech Processor",
+    "code": "GRE-GOV-TECH-PROCESSOR",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {},
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-02-12T23:12:18.316+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-02-12T23:12:18.316+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -8063,7 +8109,7 @@
     "id": "9532a131-63a9-418c-9c3f-5092dbf5a143",
     "name": "Lane Spec: Vertical File",
     "code": "LANE-HSFLE",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Vertical File): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -8079,8 +8125,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:22.972+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:39.101+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:47:31.290+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -8382,7 +8428,7 @@
     "id": "9b3b957b-0d72-4407-b0f2-a0099cdd1e3f",
     "name": "Lane Spec: Archives Class",
     "code": "LANE-ARCH",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Archives Class): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -8398,8 +8444,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:21.826+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:37.424+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:22:24.715+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -8542,6 +8588,28 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:03.132+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "9d083e5f-df3a-4560-9ee2-bf9d10d9a155",
+    "name": "SUL Loaned for Exhibit",
+    "code": "SUL-LOANED-FOR-EXHIBIT",
+    "discoveryDisplayName": "Loaned for exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {},
+    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
+    "servicePointIds": [
+      "0e924af7-785c-46eb-a5e2-060394822016"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-03-10T22:02:56.762+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-03-19T21:40:39.910+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -9511,28 +9579,6 @@
     }
   },
   {
-    "id": "afd57c4b-ed4d-4f31-97e9-98bad8d432ef",
-    "name": "Lane Staff: Lib Lit",
-    "code": "LANE-LIBR",
-    "discoveryDisplayName": "Library Staff Collection (Lane Staff Use Only)",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:29.731+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:29.731+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "b0402b41-91a9-4ec3-8c91-47e725e7fdf5",
     "name": "SAL3 PAGE-LP",
     "code": "SAL3-PAGE-LP",
@@ -9836,7 +9882,7 @@
     "id": "b3d3a93a-db85-4d91-af1d-53e605d62341",
     "name": "Lane Spec: LC Oversize - Flat",
     "code": "LANE-SFLAT",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (LC Oversize - Flat): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -9852,8 +9898,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:34.137+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:42.439+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:25:09.463+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -9970,7 +10016,7 @@
     "id": "b7169013-5970-42a4-94a6-54067010127e",
     "name": "Lane Spec: Arabic Oversize",
     "code": "LANE-ARASZ",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Arabic Oversize): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -9986,8 +10032,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:20.189+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:37.014+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:22:13.452+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -10400,7 +10446,7 @@
     "id": "bef9e4c4-2072-426e-943c-4f0a115c32e0",
     "name": "Lane Spec: Arabic",
     "code": "LANE-ARAB",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Arabic): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -10416,8 +10462,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:20.033+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:36.637+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:22:00.115+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -11426,7 +11472,7 @@
     "id": "ce240b25-6a4e-4711-90d7-bfc141c31ebd",
     "name": "Lane Spec: LC Oversize",
     "code": "LANE-SPLCO",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (LC Oversize): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -11442,8 +11488,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:33.736+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:43.876+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:25:00.914+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -11789,7 +11835,7 @@
     "id": "d3640ef6-7198-45fd-84ec-d3db9ed16ac6",
     "name": "Lane Spec: Old Class Oversize",
     "code": "LANE-SPOO1",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Old Class Oversize): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -11805,8 +11851,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:34.679+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:44.577+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:45:16.331+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -12023,7 +12069,7 @@
     "id": "d50c3151-3532-4e6d-a1d3-7a8fe6cf4fdc",
     "name": "Lane Spec: Display",
     "code": "LANE-WKSTD",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Display): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -12039,8 +12085,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:09.422+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:46.306+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:24:33.171+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -12257,7 +12303,7 @@
     "id": "d9a0481b-ebc2-4b62-b4b5-7bda2ee5949b",
     "name": "Lane Spec: Instruments",
     "code": "LANE-INSTR",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Instruments): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -12273,8 +12319,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:29.189+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:39.594+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:24:41.254+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -12746,7 +12792,7 @@
     "id": "e39233fe-267b-4c5b-aad9-75c2259ba680",
     "name": "Lane Spec: LC Class",
     "code": "LANE-SPEC",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (LC Class): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -12762,8 +12808,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:35.184+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:43.501+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:24:49.675+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
@@ -13719,7 +13765,7 @@
     "id": "f6f22ea0-8b88-48ee-a98f-8e41288d3840",
     "name": "Lane Spec: Reference",
     "code": "LANE-SREF",
-    "discoveryDisplayName": "Medical History Center: By appointment only.",
+    "discoveryDisplayName": "Medical History Center (Reference): By appointment only.",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
@@ -13735,8 +13781,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:38.756+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-29T02:42:45.618+00:00",
-      "updatedByUserId": "34101b6c-9b8f-4857-aea7-db617fd0a987"
+      "updatedDate": "2025-01-29T15:46:12.992+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
     }
   },
   {
