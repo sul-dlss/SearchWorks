@@ -34,7 +34,7 @@ module Folio
         criterium_letter >> ws? >> (
           str('all').as(:any) |
             (name.as(:uuid) >> ws?).repeat(1).as(:or) |
-            (str('!') >> name.as(:uuid) >> ws?).repeat(1).as(:or).as(:not)
+            (str('!') >> ws? >> name.as(:uuid) >> ws?).repeat(1).as(:or).as(:not)
         ).as(:criterium_value)
       end
 
