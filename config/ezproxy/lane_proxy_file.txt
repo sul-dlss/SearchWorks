@@ -460,6 +460,7 @@ digital.slub-dresden.de
 digital.staatsbibliothek-berlin.de
 digitalassets.lib.berkeley.edu
 digitalcampus-swankmp-net.stanford.idm.oclc.org
+digitalcampus.swankmp.net
 digitalcommons.pepperdine.edu
 digitalcommons.usu.edu
 digitale.bibliothek.uni-halle.de
