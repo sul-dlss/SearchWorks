@@ -28,7 +28,7 @@ RSpec.describe 'Article Record Toolbar', :js do
       expect(page).to have_link('text', visible: false)
       expect(page).to have_link('email', visible: false)
       expect(page).to have_link('RefWorks', visible: false)
-      expect(page).to have_link('RIS download', visible: false)
+      expect(page).to have_link('Zotero RIS', visible: false)
       expect(page).to have_link('printer', visible: false)
     end
   end
