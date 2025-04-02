@@ -156,8 +156,13 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   def request(path, headers: {}, method: :get, **other)
     HTTP
+      .use(logging: { logger: logger })
       .headers(default_headers.merge(headers))
       .request(method, base_url + path, **other)
+  end
+
+  def logger
+    @logger ||= Logger.new(Rails.root.join('log/folio_client.log'), level: Settings.folio.log_level)
   end
 
   def default_headers
