@@ -35,12 +35,18 @@ class SolrDocument
   include Blacklight::Solr::Document
   include SchemaDotOrg
   include EdsExport
+  include Blacklight::Ris::DocumentFields
+  include RisMapping
 
   delegate :empty?, :blank?, to: :to_h
 
   # TODO: change this to #to_param when we have upgraded to Blacklight 6.11.1
   def id
     (super || '').to_s.gsub('/', '%2F')
+  end
+
+  def eds_ris_export?
+    key?(:eds_citation_exports) && self['eds_citation_exports']&.any? { |e| e['id'] == 'RIS' }
   end
 
   # The following shows how to setup this blacklight document to display marc documents
@@ -55,9 +61,15 @@ class SolrDocument
     document.key?(:marc_json_struct)
   end
 
-  use_extension(EdsExport) do |document|
-    document.key?(:eds_citation_exports) && document['eds_citation_exports']&.any? { |e| e['id'] == 'RIS' }
+  use_extension(Blacklight::Ris::DocumentExport) do |document|
+    unless document.eds_ris_export?
+      ris_field_mappings.merge!(
+        RisMapping.field_mapping
+      )
+    end
   end
+
+  use_extension(EdsExport, &:eds_ris_export?)
 
   use_extension(FolioJsonExport) do |document|
     document.key?(:folio_json_struct)
