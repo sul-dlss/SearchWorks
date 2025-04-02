@@ -77,6 +77,7 @@ LIB_GUIDES:
 folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
   standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']
+  log_level: info
 
 live_lookup_service: LiveLookup::Folio
 
