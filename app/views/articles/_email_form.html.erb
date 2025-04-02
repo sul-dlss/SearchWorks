@@ -1,4 +1,4 @@
-<%= form_tag email_articles_path, :id => 'email_form', :class => "form-horizontal ajax_form", :method => :post do %>
+<%= form_tag email_articles_path, :data => { blacklight_modal: 'trigger' }, :id => 'email_form', :class => "form-horizontal modal_form", :method => :post do %>
   <div class="modal-body">
     <%= render :partial=>'shared/email_form' %>
 
