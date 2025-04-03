@@ -9,9 +9,5 @@ module AccessPanels
     end
 
     attr_accessor :document, :links
-
-    def truncate?
-      links.size > 5
-    end
   end
 end
