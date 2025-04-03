@@ -15,7 +15,7 @@ class SmsPresenter
   end
 
   def sms_content
-    "#{sms_text}\n#{short_url}\n"
+    "#{sms_text}\n#{url}\n"
   end
 
   private
@@ -25,20 +25,6 @@ class SmsPresenter
   end
 
   def text_length
-    SMS_LENGTH - short_url.length - 4
-  end
-
-  ##
-  # If the Bit.ly call fails, fallback to the URL
-  # @return [String]
-  def short_url
-    @short_url ||= client.shorten(long_url: url).link
-  rescue => e
-    Rails.logger.warn("Could not shorten bit.ly url #{e.message}")
-    url
-  end
-
-  def client
-    @client ||= Bitly::API::Client.new(token: Settings.BITLY.ACCESS_TOKEN)
+    SMS_LENGTH - url.length - 4
   end
 end

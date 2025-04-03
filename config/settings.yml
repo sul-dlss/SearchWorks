@@ -52,8 +52,6 @@ ACCESS_ENTITLEMENT : 'stanford:library-eresources-eligible'
 STANFORD_NETWORK:
   singletons: []
   ranges: []
-BITLY:
-  ACCESS_TOKEN: 'the_bitly_apikey'
 NEW_RELIC_API:
   alert_url: 'https://api.newrelic.com/v2/alerts_violations.json'
   api_key: the-api-key
