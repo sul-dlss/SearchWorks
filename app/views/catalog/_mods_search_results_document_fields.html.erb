@@ -7,12 +7,6 @@
       <% name = document.mods_display_name.first %>
       <%= link_to(name['link'], search_catalog_path(q: "\"#{name['link']}\"", search_field: 'search_author')) %> <%= name['post_text'] %>
     </li>
-    <%# TODO: Remove this elsif block after new mods index is in place %>
-  <% elsif document.mods.name.present? && document.mods.name.first.values.present? %>
-    <li>
-      <% name = document.mods.name.first %>
-      <%= link_to(name.values.first, search_catalog_path(q: "\"#{name.values.first}\"", search_field: 'search_author')) %> (<%= sanitize_mods_name_label(name.label) %>)
-    </li>
   <% end %>
   <% imprint = get_data_with_label(document, "Imprint", 'imprint_display') %>
   <% if imprint.present? %>
