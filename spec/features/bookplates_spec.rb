@@ -24,6 +24,7 @@ RSpec.describe 'Bookplates' do
     it 'does not include the section when there is no bookplate data' do
       visit solr_document_path('44')
 
+      expect(page).to have_content 'The Guanches of Tenerife'
       expect(page).to have_no_css('h2', text: 'Acquired with support from')
       expect(page).to have_no_css('.bookplate')
     end

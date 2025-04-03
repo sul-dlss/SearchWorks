@@ -103,6 +103,7 @@ module EdsLinks
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }
     }.freeze
+    private_constant :LINK_MAPPING
 
     def map
       LINK_MAPPING[@original_label.to_s.downcase] || {}

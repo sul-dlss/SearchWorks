@@ -17,9 +17,8 @@ RSpec.describe 'Exhibit Access Panel', :js do
   context 'when there are no exhibits' do
     it 'does not display the Context heading' do
       visit '/view/mf774fs2413'
-      expect(page).to have_no_css('[data-behavior="exhibits-panel"]', visible: true)
-
       expect(page).to have_css('h2', text: 'Context', visible: false)
+      expect(page).to have_no_css('[data-behavior="exhibits-panel"]', visible: true)
     end
   end
 

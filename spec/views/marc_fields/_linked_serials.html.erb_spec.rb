@@ -53,7 +53,7 @@ RSpec.describe 'marc_fields/_linked_serials' do
     end
 
     it 'links to the "href" key if present' do
-      link1 = subject.all('a').first
+      link1 = subject.first('a')
       expect(link1['href']).to include 'q=%22Quoted+Link+Value%22'
     end
 

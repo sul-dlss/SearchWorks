@@ -35,7 +35,7 @@ RSpec.describe "catalog/thumbnails/_item_thumbnail" do
         render
         html = Capybara.string(rendered.to_s)
         expect(html).to have_css('img.stacks-image')
-        expect(html.all('img.stacks-image').first['src']).to match(%r{iiif/abc123/full})
+        expect(html.first('img.stacks-image')['src']).to match(%r{iiif/abc123/full})
       end
 
       it 'includes the thumbnail image element if there is a known stacks image' do
