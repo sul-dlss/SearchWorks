@@ -18,7 +18,7 @@ RSpec.feature 'Bookmarking Items' do
       fill_in :q, with: ''
       click_button 'search'
 
-      within(all('.document').first) do
+      within(first('.document')) do
         find('input.toggle-bookmark').click
       end
 

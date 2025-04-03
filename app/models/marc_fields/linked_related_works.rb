@@ -69,6 +69,7 @@ class LinkedRelatedWorks < MarcField
     inside: %i[link search],
     after:  %i[post_text]
   }.freeze
+  private_constant :SECTION_TO_VIEW
 
   # Organizes the `map` output into output suitable to render in a view and returned by `values`
   # @return [Hash<String>] output in `:pre_text`, `:link`, `:search`, and `:post_text`

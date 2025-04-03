@@ -25,7 +25,7 @@ RSpec.describe 'catalog/thumbnails/_collection_thumbnail' do
       it 'is used as collection thumbnail' do
         render
         expect(subject).to have_css('img.stacks-image')
-        expect(subject.all('img.stacks-image').first['src']).to eq collection_member.image_urls(:large).first
+        expect(subject.first('img.stacks-image')['src']).to eq collection_member.image_urls(:large).first
       end
     end
 

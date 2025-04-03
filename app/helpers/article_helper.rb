@@ -144,6 +144,7 @@ module ArticleHelper
   private
 
   RELATOR_TERMS = %w[Author Originator]
+  private_constant :RELATOR_TERMS
 
   def parse_out_relators(value)
     value = value.dup

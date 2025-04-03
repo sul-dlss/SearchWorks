@@ -37,7 +37,7 @@ RSpec.describe "Search toolbar", :feature, :js do
         click_link "Selections"
         expect(page).to have_css("li#show-list.disabled")
         expect(page).to have_css("li#clear-list.disabled")
-        page.all('label.toggle-bookmark')[0].click
+        page.first('label.toggle-bookmark').click
         expect(page).to have_css("li a", text: /SELECTIONS \(1\)/i)
         click_link "Selections"
         expect(page).to have_css("li.dropdown-list-title", count: 1)

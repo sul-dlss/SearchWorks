@@ -57,9 +57,8 @@ RSpec.feature 'Article Record Display' do
       it 'renders a login link instead' do
         visit article_path(document[:id])
 
-        expect(page).to have_no_css('button#fulltextToggleBar')
-
         expect(page).to have_css('a h2', text: 'Log in to show fulltext')
+        expect(page).to have_no_css('button#fulltextToggleBar')
       end
     end
   end
