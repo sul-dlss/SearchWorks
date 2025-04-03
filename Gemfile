@@ -96,7 +96,6 @@ gem 'rack-utf8_sanitizer'
 gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
-gem 'bitly', '>= 2.0.0.beta' # For bit.ly
 gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap content.
 gem 'recaptcha', '~> 5.17'
 gem 'rinku', require: 'rails_rinku'

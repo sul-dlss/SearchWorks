@@ -19,7 +19,6 @@ WebMock.disable_net_connect!(allow_localhost: true, allow: [
   'api.newrelic.com',
   'www.worldcat.org',
   'example.com&sfx.response_type=multi_obj_xml',
-  'api-ssl.bitly.com',
   'eds-api.ebscohost.com',
   'chromedriver.storage.googleapis.com'
 ])

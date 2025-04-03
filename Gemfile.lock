@@ -90,8 +90,6 @@ GEM
       racc (~> 1.7)
     bigdecimal (3.1.9)
     bindex (0.8.1)
-    bitly (3.1.0)
-      oauth2 (>= 0.5.0, < 2.1)
     blacklight (7.40.0)
       deprecation
       globalid
@@ -732,7 +730,6 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bitly (>= 2.0.0.beta)
   blacklight (~> 7.36)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
