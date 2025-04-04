@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'boot'
-require 'rails/all'
+require_relative "boot"
+
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -12,25 +13,25 @@ module SearchWorks
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-    config.application_name = "SearchWorks"
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
     # load all marc fields
     config.autoload_paths << "#{root}/app/models/marc_fields"
-    config.autoload_lib(ignore: %w(assets tasks))
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
     config.time_zone = 'Pacific Time (US & Canada)'
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # config.eager_load_paths << Rails.root.join("extras")
 
     config.middleware.insert 0, Rack::UTF8Sanitizer
-
     config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log')
   end
 end
