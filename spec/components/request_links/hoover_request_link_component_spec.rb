@@ -45,7 +45,7 @@ RSpec.describe RequestLinks::HooverRequestLinkComponent, type: :component do
       let(:document) do
         SolrDocument.new(
           id: '12345',
-          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", note: 'FINDING AID' }]
         )
       end
 

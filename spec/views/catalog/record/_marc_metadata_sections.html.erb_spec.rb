@@ -7,7 +7,7 @@ RSpec.describe "catalog/record/_marc_metadata_sections" do
 
   describe "Metadata sections all available" do
     let(:document) {
-      SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }], marc_links_struct: [{ finding_aid: true }])
+      SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }], marc_links_struct: [{ material_type: 'finding aid' }])
     }
 
     before do
