@@ -12,7 +12,7 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 3.3
   SuggestExtensions: false
 
 Rails:

@@ -115,20 +115,20 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   private
 
-  def post(path, **kwargs)
-    authenticated_request(path, method: :post, **kwargs)
+  def post(path, **)
+    authenticated_request(path, method: :post, **)
   end
 
-  def post_json(path, **kwargs)
-    parse(post(path, **kwargs))
+  def post_json(path, **)
+    parse(post(path, **))
   end
 
-  def get(path, **kwargs)
-    authenticated_request(path, method: :get, **kwargs)
+  def get(path, **)
+    authenticated_request(path, method: :get, **)
   end
 
-  def get_json(path, **kwargs)
-    parse(get(path, **kwargs))
+  def get_json(path, **)
+    parse(get(path, **))
   end
 
   # @param [HTTP::Response] response
