@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
 class NearbyOnShelf
-  def self.around_spine(spine, search_service:, per: 24, **kwargs)
+  def self.around_spine(spine, search_service:, per: 24, **)
     return [] unless spine
 
-    before = NearbyOnShelf.reverse(search_service:).spines(spine.reverse_shelfkey, per: per / 2, **kwargs)
-    current_and_after = NearbyOnShelf.forward(search_service:).spines(spine.shelfkey, per: per / 2, incl: true, **kwargs)
+    before = NearbyOnShelf.reverse(search_service:).spines(spine.reverse_shelfkey, per: per / 2, **)
+    current_and_after = NearbyOnShelf.forward(search_service:).spines(spine.shelfkey, per: per / 2, incl: true, **)
 
     # it's possible a document occurs before + after the current item, so we have to re-uniq the result
     (before + current_and_after).uniq { |x| x.document&.id }
   end
 
-  def self.forward(field: 'shelfkey', **kwargs)
-    NearbyOnShelf.new(field:, **kwargs)
+  def self.forward(field: 'shelfkey', **)
+    NearbyOnShelf.new(field:, **)
   end
 
-  def self.reverse(field: 'reverse_shelfkey', **kwargs)
-    NearbyOnShelf.new(field:, **kwargs)
+  def self.reverse(field: 'reverse_shelfkey', **)
+    NearbyOnShelf.new(field:, **)
   end
 
   attr_reader :field, :search_service

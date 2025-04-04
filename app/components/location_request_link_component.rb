@@ -6,7 +6,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   # @params [SolrDocument] document
   # @params [String] library_code the code for the library with the holdings
   # @params [Holdings::Location] location the location with the holdings
-  def self.for(document:, library_code:, location:, **kwargs)
+  def self.for(document:, library_code:, location:, **)
     link_type = case library_code
                 when 'HILA'
                   RequestLinks::HooverRequestLinkComponent
@@ -14,7 +14,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
                   LocationRequestLinkComponent
                 end
 
-    link_type.new(document:, library_code:, location:, **kwargs)
+    link_type.new(document:, library_code:, location:, **)
   end
 
   def initialize(document:, library_code:, location:, classes: %w[btn btn-xs request-button], **link_params)

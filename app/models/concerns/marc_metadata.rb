@@ -3,10 +3,10 @@
 ##
 # A mixin to include MarcField subclasses into the SolrDocument
 module MarcMetadata
-  def marc_field(tag_or_specialization, **kwargs)
-    return public_send(tag_or_specialization, **kwargs) if tag_or_specialization.is_a?(Symbol)
+  def marc_field(tag_or_specialization, **)
+    return public_send(tag_or_specialization, **) if tag_or_specialization.is_a?(Symbol)
 
-    MarcField.new(self, Array.wrap(tag_or_specialization).map(&:to_s), **kwargs)
+    MarcField.new(self, Array.wrap(tag_or_specialization).map(&:to_s), **)
   end
 
   def awards
