@@ -27,7 +27,8 @@
     }
   }
 
-  .sul-services-menu, .recent-selections {
+  .sul-services-menu,
+  .recent-selections {
     white-space: nowrap;
   }
 
@@ -45,7 +46,8 @@
       text-underline-position: auto;
     }
     // Add the border on hover, or when the #connection-form is open
-    a:hover, a[data-target="#connection-form"][aria-expanded="true"] {
+    a:hover,
+    a[data-target="#connection-form"][aria-expanded="true"] {
       text-decoration: underline;
     }
 
@@ -57,7 +59,8 @@
   }
 
   .navbar-nav > li {
-    &>a, .dropdown-toggle {
+    & > a,
+    .dropdown-toggle {
       color: $white;
       font-size: 22px;
       margin-right: 20px;
@@ -78,16 +81,14 @@
     color: $white;
     margin-top: 0;
 
-    .dropdown-item, .dropdown-item-text {
+    .dropdown-item,
+    .dropdown-item-text {
       color: $white;
       font-size: 1rem;
-
-       i.fa-bookmark-o {
-        padding-right: 4px;
-      }
     }
 
-    li.text-muted, li.dropdown-header {
+    li.text-muted,
+    li.dropdown-header {
       color: $white;
       padding-left: 15px;
     }
@@ -110,7 +111,6 @@
     }
   }
 
-  
   @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding: 0 15px;
