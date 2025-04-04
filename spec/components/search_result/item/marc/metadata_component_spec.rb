@@ -87,7 +87,7 @@ RSpec.describe SearchResult::Item::Marc::MetadataComponent, type: :component do
     let(:document) do
       SolrDocument.new(
         marc_json_struct: metadata1,
-        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
+        marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", material_type: '**Finding AID' }]
       )
     end
 

@@ -17,5 +17,5 @@ marc_links_struct:
     href: https://purl.stanford.edu/29
     fulltext: true
   - version: '0.2'
-    finding_aid: true
+    note: 'finding aid'
     href: http://oac.cdlib.org/findaid/ark:/something-else

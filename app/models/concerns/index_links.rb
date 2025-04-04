@@ -16,7 +16,27 @@ module IndexLinks
     index_links.finding_aid.first&.href.present?
   end
 
+  module Structures
+    def finding_aid?
+      link_struct[:material_type]&.downcase&.include?('finding aid') || link_struct[:note]&.downcase&.include?('finding aid')
+    end
+
+    def sfx?
+      link_struct[:sfx]
+    end
+
+    def href?
+      link_struct[:href].present?
+    end
+
+    def struct_link_text
+      link_struct[:link_text]
+    end
+  end
+
   class IndexLinkProcessor
+    include IndexLinks::Structures
+
     attr_reader :document, :link_struct
 
     def initialize(document, link_struct)
@@ -31,14 +51,14 @@ module IndexLinks
     private
 
     def link_text
-      if link_struct[:finding_aid]
+      if finding_aid?
         'Online Archive of California'
-      elsif link_struct[:sfx]
+      elsif sfx?
         'Find full text'
-      elsif link_struct[:href]
+      elsif href?
         link_host
       else
-        link_struct[:link_text]
+        struct_link_text
       end
     end
 

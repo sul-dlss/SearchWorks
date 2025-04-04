@@ -52,7 +52,7 @@ RSpec.describe IndexLinks do
     context 'with an OAC finding aid' do
       let(:document) do
         SolrDocument.new(
-          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", note: 'finding aid is here' }]
         )
       end
 
@@ -68,7 +68,7 @@ RSpec.describe IndexLinks do
     context 'with an OAC finding aid using an alternative format' do
       let(:document) do
         SolrDocument.new(
-          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/something-else", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/something-else", note: 'finding aid' }]
         )
       end
 
