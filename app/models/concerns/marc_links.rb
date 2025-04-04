@@ -19,10 +19,14 @@ module MarcLinks
     end
 
     def to_marc_link
-      Links::Link.new(link_struct.merge({ href: }))
+      Links::Link.new(link_struct.merge({ href:, finding_aid: finding_aid? }))
     end
 
     private
+
+    def finding_aid?
+      link_struct[:material_type]&.downcase&.include?('finding aid') || link_struct[:note]&.downcase&.include?('finding aid')
+    end
 
     def href
       proxied_url || link_struct[:href]

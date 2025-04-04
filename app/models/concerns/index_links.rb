@@ -25,13 +25,13 @@ module IndexLinks
     end
 
     def to_index_link
-      Links::Link.new(link_struct.merge({ link_text:, href: }))
+      Links::Link.new(link_struct.merge({ link_text:, href:, finding_aid: finding_aid? }))
     end
 
     private
 
     def link_text
-      if link_struct[:finding_aid]
+      if finding_aid?
         'Online Archive of California'
       elsif link_struct[:sfx]
         'Find full text'
@@ -40,6 +40,10 @@ module IndexLinks
       else
         link_struct[:link_text]
       end
+    end
+
+    def finding_aid?
+      link_struct[:material_type]&.downcase&.include?('finding aid') || link_struct[:note]&.downcase&.include?('finding aid')
     end
 
     def href
