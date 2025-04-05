@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "sul-icon";
-  src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot");
-  src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot?#iefix") format("embedded-opentype"),
-       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.woff") format("woff"),
-       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.ttf") format("truetype"),
-       font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
+  src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot");
+  src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot?#iefix") format("embedded-opentype"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.woff") format("woff"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.ttf") format("truetype"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "sul-icon";
-    src: font-url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
+    src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
   }
 }
 
