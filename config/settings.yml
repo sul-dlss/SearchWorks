@@ -7,10 +7,10 @@ EMAIL_TO:
 HOSTNAME: <%= (`echo $HOSTNAME`).gsub('.stanford.edu', '') %>
 STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
-HOOVER_REQUESTS_URL: 'https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20'
-PURL_EMBED_PROVIDER: 'https://embed.stanford.edu/embed'
-PURL_EMBED_URL_SCHEME: 'https://purl.stanford.edu/*'
-PURL_EMBED_RESOURCE: 'https://purl.stanford.edu/'
+HOOVER_REQUESTS_URL: "https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20"
+PURL_EMBED_PROVIDER: "https://embed.stanford.edu/embed"
+PURL_EMBED_URL_SCHEME: "https://purl.stanford.edu/*"
+PURL_EMBED_RESOURCE: "https://purl.stanford.edu/"
 EXHIBITS_ACCESS_PANEL:
   enabled: false
   exhibits_host: http://example.com
@@ -25,9 +25,9 @@ DISABLE_SESSIONS: false
 throttling:
   redis_url: ~
   safelist:
-  - 171.64.0.0/14
-  - 10.0.0.0/8
-  - 172.16.0.0/12
+    - 171.64.0.0/14
+    - 10.0.0.0/8
+    - 172.16.0.0/12
 THROTTLE_TRAFFIC: false
 SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER: true
 EDS_ENABLED: true
@@ -43,17 +43,17 @@ EDS_OPEN_TIMEOUT: 10
 EDS_HOSTS:
   - eds-api.ebscohost.com
 EDS_CITATION_LINK_PATTERN: '[.,]\s+(&lt;i&gt;EBSCOhost|viewed|Available|Retrieved from|(?:https?:\/\/)?stanford\.idm\.oclc\.org|Disponível em).+$'
-EDS_CITATION_LINK_REPLACE: '.'
+EDS_CITATION_LINK_REPLACE: "."
 EDS_CITATION_DB_PATTERN: '\s+<i>EBSCOhost<\/i>\.?'
 EDS_SMARTTEXT_FAILOVER: false
 SU_AFFILIATIONS: []
-UNSCOPED_AFFILIATION : 'member'
-ACCESS_ENTITLEMENT : 'stanford:library-eresources-eligible'
+UNSCOPED_AFFILIATION: "member"
+ACCESS_ENTITLEMENT: "stanford:library-eresources-eligible"
 STANFORD_NETWORK:
   singletons: []
   ranges: []
 NEW_RELIC_API:
-  alert_url: 'https://api.newrelic.com/v2/alerts_violations.json'
+  alert_url: "https://api.newrelic.com/v2/alerts_violations.json"
   api_key: the-api-key
   policies:
     - key: low_app_apdex_alert
@@ -65,8 +65,8 @@ RECAPTCHA:
 IIIF_DND_BASE_URL: https://library.stanford.edu/iiif?%{query}
 REVISION: <%= File.read("#{Rails.root}/REVISION").chomp if File.exist?("#{Rails.root}/REVISION") %>
 LIB_GUIDES:
-  API_URL: 'http://example.com/1.1/guides'
-  APP_SEARCH_URL: 'https://guides.library.stanford.edu/srch.php?q=%{q}'
+  API_URL: "http://example.com/1.1/guides"
+  APP_SEARCH_URL: "https://guides.library.stanford.edu/srch.php?q=%{q}"
   KEY: 12345678123456781234567812345678
   MINI_BENTO_ENABLED: false
   NUM_RESULTS: 3
@@ -74,8 +74,9 @@ LIB_GUIDES:
 
 folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
-  standard_patron_group_names: ['staff', 'faculty', 'undergrad', 'graduate']
+  standard_patron_group_names: ["staff", "faculty", "undergrad", "graduate"]
   log_level: info
+  config_set: prod
 
 live_lookup_service: LiveLookup::Folio
 
@@ -89,7 +90,7 @@ oclc_discovery:
   token_url: oclc-discovery-token-url
 
 # 'select' (the default) or 'export' (requires indexing with docvalues)
-dynamic_sitemap_solr_endpoint: 'select'
+dynamic_sitemap_solr_endpoint: "select"
 
 browse_nearby:
   enabled: true
@@ -191,9 +192,9 @@ libraries:
     hours_api_url: special_collections/location/spec_coll_reading
     name: Special Collections
   SW-E-RESV:
-    name: 'eReserve' # Library does not exist, this is an internal code used for reserves.
+    name: "eReserve" # Library does not exist, this is an internal code used for reserves.
   SW-MEDIA-RESV:
-    name: 'Media & Microtext Center' # Library does not exist, this is an internal code used for reserves.'
+    name: "Media & Microtext Center" # Library does not exist, this is an internal code used for reserves.'
   TANNER:
     about_url: https://library.stanford.edu/libraries/tanner-philosophy-library
     hours_api_url: philosophy/location/library-circulation
@@ -204,50 +205,49 @@ libraries:
     ezproxy_host: https://stanford.idm.oclc.org/login?
     name: Stanford Libraries
 
-
 selected_databases:
-   "5749286":
-     subjects: ["General", "Multidisciplinary"]
-     description: "Multidisciplinary database of over 4,650 mostly scholarly publications, many full-text; a great place to start your research."
-   "6494821":
-     subjects: ["Art"]
-     description: "Bibliographic database on art and related disciplines; also indexes art reproductions. Coverage begins in 1984, but full-text starts in 1997; a related database, Art Retrospective, indexes articles from 1929-1984"
-     see_also: { id: "6666306", text: "Art Retrospective" }
-   "6631086":
-     subjects: ["Business", "Economics"]
-     description: "Provides full-text for over 10,000 scholarly business journals and other sources for business and economics related topics."
-   "3964904":
-     subjects: ["Education"]
-     description: "This database provides users with ready access to an extensive body of education-related literature."
-   "8666689":
-     subjects: ["World history"]
-     description: "Covers the history of the world (excluding the U.S. and Canada) from 1450 to the present, 1955-; some full text."
-     see_also: { id: "8666684", text: "America: History and Life" }
-   "6758881":
-     subjects: ["Sciences", "Humanities", "Social Sciences", "Citation Indexes"]
-     description: "Web of Knowledge provides access to information on science, social sciences, and arts and humanities, as well as search and analysis (citation) tools."
-   "12328632":
-     subjects: ["Multidisciplinary", "Newspaper articles"]
-     description: "Provides full-text documents from over 5,900 news, business, legal, medical, and reference publications."
-     see_also: { id: "9688486", text: "ProQuest News & Newspapers" }
-   "497192":
-     subjects: ["Literature", "Humanities"]
-     description: "A bibliography of journal articles, books and dissertations covering literature, language and linguistics, film, folklore, literary theory & criticism, dramatic arts, as well as the historical aspects of printing and publishing."
-   "8785205":
-     subjects: ["General", "Multidisciplinary"]
-     description: "From business and political science to literature and psychology, access to a wide range of popular academic subjects; includes more than 5,000 titles (over 3,500 in full text) from 1971 forward."
-   "4291719":
-     subjects: ["Psychology"]
-     description: "Contains citations and summaries of journal articles, book chapters, books, and technical reports in the field of psychology and psychological aspects of many related disciplines, 1840-present."
-   "375121":
-     subjects: ["Music"]
-     description: "Comprehensive guide to publications on music from all over the world, with abstracts written in English, 1967-present."
-   "8545966":
-     subjects: ["Science", "Social Sciences"]
-     description: "This large abstract and citation database from Elsevier includes international sources in the scientific, technical, medical and social sciences fields and, more recently, the arts and humanities."
-   "488729":
-     subjects: ["Sociology", "Social Sciences"]
-     description: "Access to the international literature in sociology and related disciplines in the social and behavioral sciences, 1953-present."
+  "5749286":
+    subjects: ["General", "Multidisciplinary"]
+    description: "Multidisciplinary database of over 4,650 mostly scholarly publications, many full-text; a great place to start your research."
+  "6494821":
+    subjects: ["Art"]
+    description: "Bibliographic database on art and related disciplines; also indexes art reproductions. Coverage begins in 1984, but full-text starts in 1997; a related database, Art Retrospective, indexes articles from 1929-1984"
+    see_also: { id: "6666306", text: "Art Retrospective" }
+  "6631086":
+    subjects: ["Business", "Economics"]
+    description: "Provides full-text for over 10,000 scholarly business journals and other sources for business and economics related topics."
+  "3964904":
+    subjects: ["Education"]
+    description: "This database provides users with ready access to an extensive body of education-related literature."
+  "8666689":
+    subjects: ["World history"]
+    description: "Covers the history of the world (excluding the U.S. and Canada) from 1450 to the present, 1955-; some full text."
+    see_also: { id: "8666684", text: "America: History and Life" }
+  "6758881":
+    subjects: ["Sciences", "Humanities", "Social Sciences", "Citation Indexes"]
+    description: "Web of Knowledge provides access to information on science, social sciences, and arts and humanities, as well as search and analysis (citation) tools."
+  "12328632":
+    subjects: ["Multidisciplinary", "Newspaper articles"]
+    description: "Provides full-text documents from over 5,900 news, business, legal, medical, and reference publications."
+    see_also: { id: "9688486", text: "ProQuest News & Newspapers" }
+  "497192":
+    subjects: ["Literature", "Humanities"]
+    description: "A bibliography of journal articles, books and dissertations covering literature, language and linguistics, film, folklore, literary theory & criticism, dramatic arts, as well as the historical aspects of printing and publishing."
+  "8785205":
+    subjects: ["General", "Multidisciplinary"]
+    description: "From business and political science to literature and psychology, access to a wide range of popular academic subjects; includes more than 5,000 titles (over 3,500 in full text) from 1971 forward."
+  "4291719":
+    subjects: ["Psychology"]
+    description: "Contains citations and summaries of journal articles, book chapters, books, and technical reports in the field of psychology and psychological aspects of many related disciplines, 1840-present."
+  "375121":
+    subjects: ["Music"]
+    description: "Comprehensive guide to publications on music from all over the world, with abstracts written in English, 1967-present."
+  "8545966":
+    subjects: ["Science", "Social Sciences"]
+    description: "This large abstract and citation database from Elsevier includes international sources in the scientific, technical, medical and social sciences fields and, more recently, the arts and humanities."
+  "488729":
+    subjects: ["Sociology", "Social Sciences"]
+    description: "Access to the international literature in sociology and related disciplines in the social and behavioral sciences, 1953-present."
 
 folio_hold_recall_statuses:
   - Checked out

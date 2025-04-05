@@ -1,0 +1,71 @@
+[
+  {
+    "name": "1.00/30.00 hourly fine",
+    "description": "$1 fine per hour to a maximum of $30",
+    "overdueFine": {
+      "quantity": 1.0,
+      "intervalId": "hour"
+    },
+    "countClosed": true,
+    "maxOverdueFine": 30.0,
+    "forgiveOverdueFine": false,
+    "gracePeriodRecall": true,
+    "maxOverdueRecallFine": 0.0,
+    "metadata": {
+      "createdDate": "2023-08-10T18:50:10.582+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.582+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    },
+    "id": "24f7511f-ed1a-4710-bae3-36d29f00988d"
+  },
+  {
+    "name": "3.00/21.00 recall overdue fine",
+    "description": "recall fine",
+    "countClosed": true,
+    "maxOverdueFine": 0.0,
+    "forgiveOverdueFine": true,
+    "overdueRecallFine": {
+      "quantity": 3.0,
+      "intervalId": "day"
+    },
+    "gracePeriodRecall": true,
+    "maxOverdueRecallFine": 21.0,
+    "metadata": {
+      "createdDate": "2023-08-10T18:50:10.215+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.215+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    },
+    "id": "85d33314-0cac-430a-be9e-ddd25e681322"
+  },
+  {
+    "name": "No fines",
+    "countClosed": true,
+    "maxOverdueFine": 0.0,
+    "forgiveOverdueFine": true,
+    "gracePeriodRecall": true,
+    "maxOverdueRecallFine": 0.0,
+    "metadata": {
+      "createdDate": "2023-08-10T18:50:10.414+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:50:10.414+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    },
+    "id": "bba172e9-eb78-4471-a4a7-08761fbdfff9"
+  },
+  {
+    "name": "Overdue fine policy",
+    "description": "Test overdue fine policy",
+    "countClosed": true,
+    "maxOverdueFine": 0.0,
+    "forgiveOverdueFine": true,
+    "gracePeriodRecall": true,
+    "maxOverdueRecallFine": 0.0,
+    "metadata": {
+      "createdDate": "2023-08-09T21:20:05.215+00:00",
+      "updatedDate": "2025-03-22T20:20:11.034+00:00"
+    },
+    "id": "cd3f6cac-fa17-4079-9fae-2fb28e521412"
+  }
+]
