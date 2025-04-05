@@ -5,7 +5,7 @@
 <%= render 'schema_dot_org_website_search' %>
 
 <div class="row catalog-home-page">
-  <div class="col-md-4 col-sm-6 home-page-facets" data-home-page-facet-collapse='true'>
+  <div class="col-md-4 col-sm-6 home-page-facets sidenav" data-home-page-facet-collapse='true'>
     <h2>Find materials by&hellip;</h2>
     <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet', 'language').values, response: @response)%>
   </div>

@@ -21,6 +21,10 @@
   border-bottom: 1px solid $state-success-border;
 }
 
+.facet-limit-active .card-header .btn {
+  color: $stanford-black;
+}
+
 .facet-limit {
   // override Blacklight, which has rounded facets
   border-radius: 0;

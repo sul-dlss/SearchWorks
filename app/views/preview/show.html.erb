@@ -1,3 +1,2 @@
-<% document ||= @document %>
-
-<%= render_document_partials @document, blacklight_config.view_config(:show).partials %>
+<%= render_document_partial @document, 'show_header' %>
+<%= render_document_partial @document, 'show' %>

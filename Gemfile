@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.1'
+gem 'rails', '~> 8.0'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use Puma as the app server
@@ -53,7 +53,7 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'rubocop-capybara', require: false
   gem 'selenium-webdriver'
-  gem 'solr_wrapper', '~> 4.0.2' # pinned until ebsco-eds allows faraday v2 https://github.com/ebsco/edsapi-ruby/issues/120
+  gem 'solr_wrapper'
   gem 'webmock'
   # factory_bot_rails for creating fixtures in tests
   gem 'factory_bot_rails'
@@ -75,7 +75,7 @@ gem 'newrelic_rpm'
 gem "coderay"
 
 gem 'deprecation'
-gem 'blacklight', '~> 7.36'
+gem 'blacklight', '~> 8.0'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"
