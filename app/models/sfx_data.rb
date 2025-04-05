@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'faraday/follow_redirects'
+
 ##
 # Pull full-text source data from the SFX XML endpoint and render it.
 #
@@ -58,7 +60,7 @@ class SfxData
   def sfx_response
     @sfx_response ||= begin
       Faraday.new(url: sfx_url) do |faraday|
-        faraday.use FaradayMiddleware::FollowRedirects
+        faraday.response :follow_redirects
         faraday.adapter Faraday.default_adapter
         # Set the user agent
         faraday.headers['User-Agent'] = 'Mozilla/5.0 (compatible; +https://searchworks.stanford.edu)'

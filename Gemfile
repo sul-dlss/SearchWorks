@@ -87,13 +87,14 @@ gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
 gem "faraday"
+gem 'faraday-follow_redirects'
 gem 'oauth2'
 gem "config"
 gem "mods_display", "~> 1.1"
 gem "font-awesome-rails"
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
-gem 'ebsco-eds'
+gem 'ebsco-eds', github: 'jcoyne/edsapi-ruby', branch: 'update-faraday'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'leaflet-rails' # Provides the stylesheet for Leaflet for the StackMap content.
