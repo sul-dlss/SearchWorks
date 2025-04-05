@@ -6,9 +6,19 @@ module Eds
   # We are wrapping this class so that we can easily instantiate a session object
   # without having to pass in all the session options every time (which is very versbose).
   class Session
-    delegate :info, :retrieve, :search, :session_token, :solr_retrieve_list, to: :object
+    delegate :info, :retrieve, :session_token, :solr_retrieve_list, to: :object
     def initialize(eds_params)
       @eds_params = eds_params
+    end
+
+    # @return [EBSCO::EDS::Results]
+    def search(*)
+      object.search(*)
+    rescue EBSCO::EDS::BadRequest => e
+      raise e unless e.fault.dig(:error_body, 'ErrorDescription') == 'Invalid Content Provider'
+
+      # squelch 'Invalid Content Provider' error so it doesn't show in Honeybadger and return an empty result set
+      EBSCO::EDS::Results.new(object.send(:empty_results), object.config)
     end
 
     def object
