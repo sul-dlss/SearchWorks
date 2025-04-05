@@ -113,3 +113,5 @@ gem "parslet", "~> 2.0"
 gem "jsbundling-rails", "~> 1.2"
 
 gem "stimulus-rails", "~> 1.3"
+
+gem 'blacklight-ris', '~> 0.2.0'

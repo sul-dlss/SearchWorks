@@ -82,8 +82,6 @@ GEM
     base64 (0.2.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
-    bcrypt_pbkdf (1.1.1-arm64-darwin)
-    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bibtex-ruby (6.1.0)
       latex-decode (~> 0.0)
@@ -112,6 +110,9 @@ GEM
       marc-fastxmlwriter
       rails
       traject (~> 3.0)
+    blacklight-ris (0.2.0)
+      blacklight (>= 7)
+      rails (>= 7)
     blacklight_advanced_search (8.0.0.alpha2)
       blacklight (>= 7.15, < 9)
       parslet
@@ -176,7 +177,7 @@ GEM
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 1.5)
     coderay (1.1.3)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.4)
     config (5.5.2)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
@@ -276,9 +277,6 @@ GEM
     ffi (1.17.1-arm-linux-gnu)
     ffi (1.17.1-arm-linux-musl)
     ffi (1.17.1-arm64-darwin)
-    ffi (1.17.1-x86-linux-gnu)
-    ffi (1.17.1-x86-linux-musl)
-    ffi (1.17.1-x86_64-darwin)
     ffi (1.17.1-x86_64-linux-gnu)
     ffi (1.17.1-x86_64-linux-musl)
     ffi-compiler (1.3.2)
@@ -311,7 +309,7 @@ GEM
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
-    irb (1.15.1)
+    irb (1.15.2)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
@@ -371,7 +369,6 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.8)
     minitar (1.0.2)
     minitest (5.25.5)
     mods (3.0.5)
@@ -409,26 +406,21 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     net-ssh (7.3.0)
-    newrelic_rpm (9.17.0)
+    newrelic_rpm (9.18.0)
     nio4r (2.7.4)
-    nokogiri (1.18.6)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.18.7-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-aarch64-linux-gnu)
+    nokogiri (1.18.7-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.6-aarch64-linux-musl)
+    nokogiri (1.18.7-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm-linux-gnu)
+    nokogiri (1.18.7-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm-linux-musl)
+    nokogiri (1.18.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.6-arm64-darwin)
+    nokogiri (1.18.7-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.18.6-x86_64-linux-musl)
+    nokogiri (1.18.7-x86_64-linux-musl)
       racc (~> 1.4)
     nom-xml (1.2.0)
       i18n
@@ -560,7 +552,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.75.1)
+    rubocop (1.75.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -568,24 +560,24 @@ GEM
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 2.9.3, < 3.0)
-      rubocop-ast (>= 1.43.0, < 2.0)
+      rubocop-ast (>= 1.44.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.43.0)
+    rubocop-ast (1.44.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     rubocop-capybara (2.22.1)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
-    rubocop-performance (1.24.0)
+    rubocop-performance (1.25.0)
       lint_roller (~> 1.1)
-      rubocop (>= 1.72.1, < 2.0)
+      rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
-    rubocop-rails (2.30.3)
+    rubocop-rails (2.31.0)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
-      rubocop (>= 1.72.1, < 2.0)
+      rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
     rubocop-rspec (3.5.0)
       lint_roller (~> 1.1)
@@ -639,9 +631,6 @@ GEM
     sqlite3 (2.6.0-arm-linux-gnu)
     sqlite3 (2.6.0-arm-linux-musl)
     sqlite3 (2.6.0-arm64-darwin)
-    sqlite3 (2.6.0-x86-linux-gnu)
-    sqlite3 (2.6.0-x86-linux-musl)
-    sqlite3 (2.6.0-x86_64-darwin)
     sqlite3 (2.6.0-x86_64-linux-gnu)
     sqlite3 (2.6.0-x86_64-linux-musl)
     sshkit (1.24.0)
@@ -686,9 +675,9 @@ GEM
     uri (1.0.3)
     useragent (0.16.11)
     version_gem (1.1.6)
-    view_component (3.21.0)
+    view_component (3.22.0)
       activesupport (>= 5.2.0, < 8.1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (= 1.3.4)
       method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -714,18 +703,11 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
-  arm-linux
   arm-linux-gnu
   arm-linux-musl
-  arm64-darwin
-  x86-linux
-  x86-linux-gnu
-  x86-linux-musl
-  x86_64-darwin
-  x86_64-linux
+  arm64-darwin-23
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -733,6 +715,7 @@ DEPENDENCIES
   blacklight (~> 7.36)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
+  blacklight-ris (~> 0.2.0)
   blacklight_advanced_search (~> 8.0.0.alpha)
   blacklight_dynamic_sitemap
   blacklight_range_limit (~> 8.0)

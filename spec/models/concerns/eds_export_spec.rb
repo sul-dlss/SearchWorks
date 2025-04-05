@@ -13,23 +13,29 @@ RSpec.describe EdsExport do
     SolrDocument.new(id: '456', eds_citation_exports: [])
   end
 
-  describe '#will_export_as' do
+  describe '#eds_ris_export?' do
     it 'true when RIS citation is present' do
-      expect(document.export_formats.key?(:ris)).to be true
+      expect(document.eds_ris_export?).to be true
     end
 
     it 'nil when RIS citation is not available' do
-      expect(empty_document.export_formats.key?(:ris)).to be false
+      expect(empty_document.eds_ris_export?).to be false
     end
   end
 
   describe '#export_as_ris' do
-    it 'returns data when RIS citation is present' do
+    it 'returns RIS solr data when RIS citation is present' do
       expect(document.export_as_ris).to eq 'TI  - CatZ N Bagelz'
     end
 
-    it 'returns nil when RIS citation is not available' do
-      expect(empty_document.export_as_ris).to be_nil
+    it 'returns computed ris when solr RIS citation is not available' do
+      expect(empty_document.export_as_ris).to eq "TY  - GEN\n" \
+                                                 "DP  - <a aria-label='Permanent link to item' " \
+                                                 "href='https://searchworks.stanford.edu/view/456'>" \
+                                                 "https://searchworks.stanford.edu/view/456</a>\n" \
+                                                 "UR  - <a aria-label='Permanent link to item' " \
+                                                 "href='https://searchworks.stanford.edu/view/456'>" \
+                                                 "https://searchworks.stanford.edu/view/456</a>\nER  - "
     end
   end
 end
