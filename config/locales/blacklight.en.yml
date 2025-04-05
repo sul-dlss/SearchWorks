@@ -70,6 +70,8 @@ en:
         reset_size_html: '<i class="fa fa-compress"></i><span class="d-none d-sm-inline">  Reset size</span>'
     sms:
       text:
+        title: '%{value}'
+        author: ' by %{value}'
         library_location: '%{library} - %{location}'
         callnumber: '%{value}'
         url: '%{url}'

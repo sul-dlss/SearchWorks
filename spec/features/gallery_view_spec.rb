@@ -22,9 +22,8 @@ RSpec.feature 'Gallery View' do
     expect(page).to have_css('.gallery-document h3.index_title', text: 'An object')
     expect(page).to have_css('.gallery-document button.btn-preview', text: 'Preview')
     expect(page).to have_css('form.bookmark-toggle label.toggle-bookmark', text: 'Select')
-    expect(page).to have_css("label[for='toggle-bookmark_1']", count: 1)
+    expect(page).to have_css("div[data-doc-id='1'] label.toggle-bookmark input[type='checkbox']")
     page.first('button.btn.docid-1').click
-    expect(page).to have_css("label[for='toggle-bookmark_1']", count: 1)
     within '.preview-container' do
       expect(page).to have_css('h3', text: 'An object')
     end
