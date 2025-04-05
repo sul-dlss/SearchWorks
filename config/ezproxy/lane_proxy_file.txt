@@ -351,7 +351,6 @@ cgejournal.biomedcentral.com
 cgjonline.ca
 cgmj.cgu.edu.tw
 cgp.iiarjournals.org
-chem.sis.nlm.nih.gov
 chinesereferenceshelf.brillonline.com
 chiromt.biomedcentral.com
 cig.uw.edu
@@ -400,7 +399,6 @@ conflictandhealth.biomedcentral.com
 congressional.proquest.com
 connect.h1.co
 connect.springerpub.com
-consensus.nih.gov
 consumerpyramidsdx.cmie.com
 content.iospress.com
 content.nejm.org
@@ -707,7 +705,6 @@ hmap.biomedcentral.com
 hms.harvard.edu
 hojishinbun.hoover.org
 home.liebertpub.com
-home.ncifcrf.gov
 hpp.tbzmed.ac.ir
 hqlo.biomedcentral.com
 hrbopenresearch.org
@@ -1001,7 +998,6 @@ mecp.springeropen.com
 med.amegroups.com
 meded.lwwhealthlibrary.com
 mededu.jmir.org
-medhum.med.nyu.edu
 media3.criterionpic.com
 medical.med.tokushima-u.ac.jp
 medicaldevices.asmedigitalcollection.asme.org
@@ -1045,7 +1041,6 @@ mmbr.asm.org
 mmcts.org
 mmrjournal.biomedcentral.com
 mobilednajournal.biomedcentral.com
-moffitt.org
 molcellped.springeropen.com
 molcelltherapies.biomedcentral.com
 molecular-cancer.biomedcentral.com
@@ -1093,12 +1088,10 @@ new.sourceoecd.org
 newfirstsearch.oclc.org
 newspaperslibrary.proquest.com
 nexisuni.com
-nf.aafp.org
 ng.neurology.org
 nida.nih.gov
 nmsjournal.kaums.ac.ir
 nn.neurology.org
-nnlm.gov
 northclinist.com
 nowpublishers.com
 npcd.oversea.cnki.net
@@ -1372,14 +1365,12 @@ secure.astm.org
 secure.medicalletter.org
 seer.cancer.gov
 seg.org
-senselab.med.yale.edu
 server.wenzibase.com
 services.igi-global.com
 setac.onlinelibrary.wiley.com
 shop.seg.org
 sigmapubs.onlinelibrary.wiley.com
 silencejournal.biomedcentral.com
-sis.nlm.nih.gov
 sit.bmj.com
 sjtrem.biomedcentral.com
 sk.sagepub.com
@@ -1568,7 +1559,6 @@ www.advancedotology.org
 www.advbiores.net
 www.advms.pl
 www.aeaweb.org
-www.aecf.org
 www.aei.org
 www.aeronline.org
 www.aerzteblatt.de
@@ -1649,7 +1639,6 @@ www.arch-anim-breed.net
 www.archbronconeumol.org
 www.archive.org
 www.archives-pmr.org
-www.archivesofpathology.org
 www.archivesofrheumatology.org
 www.arctt.info
 www.arjournals.org
@@ -1749,10 +1738,8 @@ www.ceeol.com
 www.cell.com
 www.cellphysiolbiochem.com
 www.census.gov
-www.centerforaids.org
 www.centerwatch.com
 www.cfp.ca
-www.chcf.org
 www.chemedx.org
 www.chemnetbase.com
 www.chemrxiv.org
@@ -1761,7 +1748,6 @@ www.china.amdigital.co.uk
 www.chinacultureandsociety.amdigital.co.uk
 www.chinaebook.com
 www.chinamaxx.net
-www.chinaphar.com
 www.chiropractic.ca
 www.chlamy.org
 www.chsjournal.org
@@ -1827,7 +1813,6 @@ www.deltaaetc.org
 www.dentistrytoday.com
 www.dermsinica.org
 www.deutschestextarchiv.de
-www.dhs.cahwnet.gov
 www.dialogues-cns.org
 www.digitale-sammlungen.de
 www.digitaliafilmlibrary.com
@@ -1844,7 +1829,6 @@ www.doody.com
 www.dovepress.com
 www.down-syndrome.org
 www.dramaonlinelibrary.com
-www.drg.nih.gov
 www.dropbox.com
 www.drugabuse.gov
 www.drugdeliverytech.com
@@ -1961,7 +1945,6 @@ www.gastroenterologyandhepatology.net
 www.gastrojournal.org
 www.gastrores.org
 www.gbv.de
-www.gemcris.od.nih.gov
 www.gender.amdigital.co.uk
 www.genderidentityandsocialchange.amdigital.co.uk
 www.genengnews.com
@@ -1992,7 +1975,6 @@ www.hbpdint.com
 www.hcinnovationgroup.com
 www.health.govt.nz
 www.health.mil
-www.health.org
 www.healthaffairs.org
 www.healthandjusticejournal.com
 www.healtheffects.org
@@ -2003,7 +1985,6 @@ www.hellenicjcardiol.com
 www.hematologyandoncology.net
 www.hgmd.cf.ac.uk
 www.hh.um.es
-www.hhmi.org
 www.hhrjournal.org
 www.highwirepress.com
 www.hindawi.com
@@ -2096,7 +2077,6 @@ www.indianjnephrol.org
 www.indianjotol.org
 www.indianjrheumatol.com
 www.indianjurol.com
-www.indianpediatrics.net
 www.indiastat.com
 www.indigenoushistoriesandcultures.amdigital.co.uk
 www.indigenousnewspapersinnorthamerica.amdigital.co.uk
@@ -2112,11 +2092,9 @@ www.int-res.com
 www.interactionofcolor.com
 www.internationaljournalofcaringsciences.org
 www.intmedpress.com
-www.iom.edu
 www.iop.org
 www.ipcc.ch
 www.ipej.org
-www.ippf.org
 www.irjournal.org
 www.irmj.ir
 www.ismni.org
@@ -2126,7 +2104,6 @@ www.istl.org
 www.ita.uni-heidelberg.de
 www.itab2007.org
 www.itergateway.org
-www.itg.be
 www.iw3c2.org
 www.iwaponline.com
 www.j-circ.or.jp
@@ -2239,7 +2216,6 @@ www.jwatch.org
 www.jwtadvertisingamerica.amdigital.co.uk
 www.jyoungpharm.org
 www.jzus.zju.edu.cn
-www.k4health.org
 www.kanopy.com
 www.kardiologiapolska.pl
 www.karger.com
@@ -2332,7 +2308,6 @@ www.micropress.org
 www.micropublication.org
 www.migration.amdigital.co.uk
 www.minervamedica.it
-www.minnesotamedicine.com
 www.minsocam.org
 www.mitpressjournals.org
 www.mja.com.au
@@ -2360,7 +2335,6 @@ www.nationalacademies.org
 www.nationalnursesunited.org
 www.nature.com
 www.nber.org
-www.nbme.org
 www.nbn-resolving.de
 www.ncbi.nlm.nih.gov
 www.nejm.org
@@ -2377,7 +2351,6 @@ www.newday.com
 www.newswise.com
 www.nextbio.com
 www.nice.org.uk
-www.nida.nih.gov
 www.nigeriamedj.com
 www.nigerianjsurg.com
 www.nih.go.jp
@@ -2447,7 +2420,6 @@ www.palgrave-journals.com
 www.panafrican-med-journal.com
 www.paom.pl
 www.parasitol.or.kr
-www.pdb.org
 www.pdcnet.org
 www.pediatricneurosciences.com
 www.pedsurglibrary.com
@@ -2477,7 +2449,6 @@ www.plosone.org
 www.plospathogens.org
 www.plutobooks.com
 www.pnas.org
-www.pngimr.org.pg
 www.poljpathol.cm-uj.krakow.pl
 www.popularmedicine.amdigital.co.uk
 www.portal.euromonitor.com
@@ -2611,7 +2582,6 @@ www.stanforddaily.com
 www.stata-journal.com
 www.statista.com
 www.statistik.at
-www.stdjournal.com
 www.stm-journal.ru
 www.surgicalcasereports.com
 www.surgicalneurologyint.com
@@ -2623,7 +2593,6 @@ www.termedia.pl
 www.the-aps.org
 www.the-jcen.org
 www.the-scientist.com
-www.thebody.com
 www.thecco.net
 www.thecjcr.org
 www.thecritui.com
@@ -2697,7 +2666,6 @@ www.wageningenacademic.com
 www.washingtonpost.com
 www.webofscience.com
 www.who.int
-www.whocancerpain.wisc.edu
 www.wikidoc.org
 www.wiley.com
 www.wisconsinmedicalsociety.org
@@ -2725,7 +2693,6 @@ www.zjujournals.com
 www.zoores.ac.cn
 www150.statcan.gc.ca
 www3.cricyt.edu.ar
-wwwcf.nlm.nih.gov
 wwwn.cdc.gov
 xenetwork.org
 xlink.rsc.org
