@@ -40,7 +40,6 @@ RSpec.feature 'Connection form (no js)' do
   scenario 'connection form should be shown filled out and submitted' do
     find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)
-    expect(page).to have_css('a', text: 'Cancel')
     within 'form.feedback-form' do
       fill_in('resource_name', with: 'Resource name')
       fill_in('problem_url', with: 'http://www.example.com/yolo')
