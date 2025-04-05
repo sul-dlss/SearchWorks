@@ -12,7 +12,7 @@ RSpec.describe MarcLinks do
       SolrDocument.new(marc_links_struct: [
         { link_text: 'fulltext', fulltext: true },
         { link_text: 'stanford only',  stanford_only: true },
-        { href: 'http://example.com', link_text: 'finding aid', finding_aid: true },
+        { href: 'http://example.com', link_text: 'finding aid', note: 'this is a finding aid' },
         { link_text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' }
       ])
     end

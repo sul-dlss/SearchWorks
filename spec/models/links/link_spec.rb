@@ -3,7 +3,7 @@
 RSpec.describe 'Link' do
   let(:link) do
     Links::Link.new(
-      href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+      href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, note: 'finding aid', sfx: true, managed_purl: true
     )
   end
 

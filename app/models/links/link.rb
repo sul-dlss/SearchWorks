@@ -3,15 +3,15 @@
 class Links
   class Link
     include ActionView::Helpers::TagHelper
+    include IndexLinks::Structures
 
-    attr_accessor :href, :file_id, :druid, :type, :sort
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_struct
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
       @casalini = options[:casalini]
       @druid = options[:druid]
       @file_id = options[:file_id]
-      @finding_aid = options[:finding_aid]
       @fulltext = options[:fulltext]
       @href = options[:href]
       @ill = options[:ill]
@@ -22,6 +22,7 @@ class Links
       @sort = options[:sort]
       @stanford_only = options[:stanford_only]
       @type = options[:type]
+      @link_struct = options
     end
 
     def ==(other)
@@ -42,10 +43,6 @@ class Links
 
     def stanford_only?
       @stanford_only
-    end
-
-    def finding_aid?
-      @finding_aid
     end
 
     def sfx?

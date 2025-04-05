@@ -386,7 +386,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         item_display_struct: [
           { barcode: '123', library: 'SPEC-COLL', effective_permanent_location_code: 'STACKS', callnumber: 'ABC' }
         ],
-        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
+        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", note: 'something something Finding aid' }]
       )
       render_inline(described_class.new(document:))
     end
@@ -426,7 +426,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           item_display_struct: [
             { barcode: '123', library: 'HILA', effective_permanent_location_code: 'STACKS', callnumber: 'ABC' }
           ],
-          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", material_type: 'FINDING AID' }]
         )
         allow(document).to receive(:folio_items).and_return([
           instance_double(Folio::Item, id: '123', barcode: '123',

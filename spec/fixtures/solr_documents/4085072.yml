@@ -2905,7 +2905,7 @@ marc_links_struct:
   sort:
   casalini:
   fulltext: false
-  finding_aid: true
+  material_type: 'finding aid'
   managed_purl: false
   file_id:
   druid:
