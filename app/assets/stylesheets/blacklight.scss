@@ -1,13 +1,13 @@
 @import 'bootstrap-variables';
-@import 'bootstrap';
+@import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-mixins';
 
 @import 'bootstrap-overrides';
 
-@import 'blacklight/blacklight';
+@import 'blacklight-frontend/app/assets/stylesheets/blacklight/blacklight.scss';
 @import 'blacklight_marc';
 
-@import 'blacklight/hierarchy/hierarchy';
+@import 'blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss';
 
 // the default bootstrap font-family list includes "Segoe UI Emoji", which, on windows
 // renders our remove icon as an emoji-sized x instead of what we see on all other platforms...
