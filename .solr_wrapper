@@ -3,4 +3,6 @@ collection:
   dir: config/solr_configs/
   name: blacklight-core
 port: 8983
-version: 9.6.1
+version: 9.8.1
+solr_configs:
+  Dsolr.modules: scripting
