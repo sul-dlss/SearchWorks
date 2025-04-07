@@ -10,7 +10,7 @@
           <% else %>
             <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
           <% end %>
-          <%= render StanfordOnlyIconComponent.new if link.stanford_only? %>
+          <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
         </li>
       <% end %>
     </ul>

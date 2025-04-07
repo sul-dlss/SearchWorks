@@ -30,7 +30,7 @@
                 <span class="online-label">Full text</span>
                 <%= link_to(link.text, link.href) %>
               <% end %>
-              <%= render StanfordOnlyIconComponent.new if link.stanford_only? %>
+              <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
             </li>
           <% end %>
         </ul>

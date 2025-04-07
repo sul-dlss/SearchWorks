@@ -9,7 +9,7 @@
           <ul class="links">
             <% database.marc_links.each do |link| %>
               <li>
-                <%= link.html.html_safe %><%= render StanfordOnlyIconComponent.new if link.stanford_only? %>
+                <%= link.html.html_safe %><%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
               </li>
             <% end %>
           </ul>

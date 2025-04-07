@@ -62,7 +62,7 @@
   <dt title="Supplemental links">Supplemental links</dt>
   <dd>
     <%= document.marc_links.supplemental.map do |link| %>
-      <% "#{link.html} #{ render StanfordOnlyIconComponent.new if link.stanford_only? }" %>
+      <% "#{link.html} #{ render StanfordOnlyPopoverComponent.new if link.stanford_only? }" %>
     <% end.join("<br/>").html_safe %>
   </dd>
 <% end %>

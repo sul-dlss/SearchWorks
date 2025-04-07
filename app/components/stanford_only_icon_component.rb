@@ -12,8 +12,8 @@ class StanfordOnlyIconComponent < ViewComponent::Base
       '10.7607376 C5.00292873,10.1386679 4.0761718,9.61816061 4.0761718,8.29784937 Z'
   end
 
-  def call
-    tag.svg(class: 'stanford-only', aria: { label: 'stanford only' }, width: '13px', height: '13px', viewBox: '0 0 13 13') do
+  def svg
+    tag.svg(width: '13px', height: '13px', viewBox: '0 0 13 13', aria: { hidden: true }) do
       tag.g(stroke: 'none', stroke_width: 1, fill: 'none', fill_rule: 'evenodd') do
         tag.g(transform: 'translate(-1.000000, -1.000000)') do
           tag.g(id: 'stanford-only', transform: 'translate(1.000000, -3.000000)') do
@@ -23,5 +23,9 @@ class StanfordOnlyIconComponent < ViewComponent::Base
         end
       end
     end
+  end
+
+  def call
+    svg
   end
 end

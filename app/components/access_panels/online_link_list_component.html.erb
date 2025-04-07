@@ -3,7 +3,7 @@
     <%= tag.li do %>
       <span>
         <%= link.html&.html_safe %>
-        <%= render StanfordOnlyIconComponent.new if link.stanford_only? %>
+        <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
       </span>
     <% end %>
   <% end %>

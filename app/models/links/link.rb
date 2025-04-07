@@ -75,7 +75,7 @@ class Links
     end
 
     def link_html
-      tooltip_attr = if @link_title.present?
+      tooltip_attr = if @link_title.present? && !stanford_only?
                        {
                          title: @link_title,
                          data: { placement: 'right', toggle: 'tooltip' }

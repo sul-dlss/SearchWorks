@@ -4,7 +4,7 @@
     <ul class="list-unstyled zero-results-more-options">
       <li class='media'>
         <%= link_to 'Interlibrary loan', 'https://sulils.stanford.edu/', class: 'media-heading' %>
-        <p>For Stanford affiliates. We can get just about anything.<%= render StanfordOnlyIconComponent.new %></p>
+        <p>For Stanford affiliates. We can get just about anything.<%= render StanfordOnlyPopoverComponent.new %></p>
       </li>
       <% if catalog_search? %>
         <li class='media'>
