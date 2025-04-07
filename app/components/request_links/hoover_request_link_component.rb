@@ -6,7 +6,7 @@ module RequestLinks
 
     def render?
       items.any? do |item|
-        item.effective_location&.details&.dig('availabilityClass') != 'In_process'
+        item.effective_location&.details&.dig('availabilityClass') != 'In_process_non_requestable'
       end
     end
 

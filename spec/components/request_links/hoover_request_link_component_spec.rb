@@ -89,7 +89,7 @@ RSpec.describe RequestLinks::HooverRequestLinkComponent, type: :component do
       end
 
       before do
-        allow(effective_location).to receive(:details).and_return({ 'availabilityClass' => 'In_process' })
+        allow(effective_location).to receive(:details).and_return({ 'availabilityClass' => 'In_process_non_requestable' })
       end
 
       it { expect(page).not_to have_link }
