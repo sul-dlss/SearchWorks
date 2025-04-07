@@ -28,7 +28,7 @@ RSpec.feature "Selected Databases Access Point" do
         expect(page).to have_css("h3 a", text: /Selected Database \d/)
         expect(page).to have_css("p", text: /\(.*\)/)
         expect(page).to have_css("dt", text: /Search database/)
-        expect(page).to have_css('.stanford-only')
+        expect(page).to have_css('svg', class: 'stanford-only')
         expect(page).to have_css("a", text: /search.ebscohost.com/)
       end
     end

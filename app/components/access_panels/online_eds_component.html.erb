@@ -4,12 +4,13 @@
   <% component.with_body do %>
     <ul class='document-metadata'>
       <% links.each do |link| %>
-        <li class="<%= 'stanford-only' if link.stanford_only? %>">
+        <li>
           <% if link.href == 'detail' %>
             <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
           <% else %>
             <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
           <% end %>
+          <%= render StanfordOnlyIconComponent.new if link.stanford_only? %>
         </li>
       <% end %>
     </ul>
