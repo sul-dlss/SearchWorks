@@ -66,8 +66,10 @@ RSpec.describe CatalogController do
     end
 
     context 'when the user is logged in' do
+      let(:user) { User.new(email: 'user@stanford.edu') }
+
       before do
-        allow(controller).to receive(:current_user).and_return(User.new(email: 'user@stanford.edu'))
+        allow(controller).to receive(:current_user).and_return(user)
       end
 
       it 'should set the provided subject' do
@@ -95,6 +97,27 @@ RSpec.describe CatalogController do
         end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
       describe 'validations' do
+        context 'with a logged in user' do
+          it 'should allow messages that have links in them' do
+            expect do
+              post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full', id: '1' }
+            end.to change { ActionMailer::Base.deliveries.count }.by(1)
+            expect(flash[:error]).to be_nil
+          end
+        end
+
+        context 'with an anonymous user' do
+          let(:user) { nil }
+
+          it 'should not allow messages that have links in them' do
+            expect do
+              post :email, params: { to: 'email@example.com', message: 'https://library.stanford.edu', type: 'full', id: '1' }
+            end.not_to change { ActionMailer::Base.deliveries.count }
+            expect(flash[:error]).to include('Your message appears to be spam, and has not been sent.')
+            expect(flash[:error]).to include('Please try sending your message again without any links in the comments.')
+          end
+        end
+
         it 'should prevent incorrect email types from being sent' do
           expect do
             post :email, params: { to: 'email@example.com', type: 'not-a-type' }

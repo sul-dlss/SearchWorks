@@ -40,12 +40,26 @@ class FeedbackFormsController < ApplicationController
   def validate
     errors = []
 
-    errors << 'You must pass the reCAPTCHA challenge' if current_user.blank? && !verify_recaptcha
+    if current_user.blank?
+      errors << 'You must pass the reCAPTCHA challenge' unless verify_recaptcha
+
+      if params[:message] =~ url_regex
+        errors << "Your message appears to be spam, and has not been sent. Please try sending your message again without any links in the comments."
+      end
+
+      if params[:user_agent] =~ url_regex || params[:viewport] =~ url_regex
+         errors << "Your message appears to be spam, and has not been sent."
+      end
+    end
 
     if params[:message].nil? or params[:message] == ""
       errors << "A message is required"
     end
     flash[:error] = errors.join("<br/>") unless errors.empty?
     flash[:error].nil?
+  end
+
+  def url_regex
+    /.*href=.*|.*url=.*|.*http:\/\/.*|.*https:\/\/.*/i
   end
 end
