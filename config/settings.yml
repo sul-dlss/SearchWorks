@@ -273,4 +273,4 @@ folio_unrequestable_statuses:
   - Withdrawn
 
 earthworks:
-  hostname: 'earthworks.stanford.edu'
+  url: 'https://earthworks.stanford.edu'

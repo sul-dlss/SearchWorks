@@ -15,3 +15,6 @@ application.register("preview-brief", PreviewBriefController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
+
+import MetaJsonCheckController from "./meta_json_check_controller"
+application.register("meta-json-check", MetaJsonCheckController)
