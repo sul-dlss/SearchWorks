@@ -30,37 +30,94 @@ RSpec.describe Eds::Repository do
   end
 
   describe '#search' do
-    context '(normal)' do
+    before do
+      expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+    end
+
+    context 'when doing a search that succeeds' do
       let(:search_builder) do
         instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
       end
-
-      it 'uses a session to execute a search' do
-        session = instance_double(
+      let(:session) do
+        instance_double(
           EBSCO::EDS::Session,
           search: instance_double(EBSCO::EDS::Results, to_solr: {})
         )
-        expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+      end
+
+      it 'uses a session to execute a search' do
         expect(instance.search(search_builder)).to be_truthy
       end
     end
 
-    context '(peek query for prev/next)' do
+    context 'when doing a search that fails with Invalid Content Provider' do
+      let(:search_builder) do
+        instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
+      end
+      let(:session) do
+        instance_double(
+          EBSCO::EDS::Session,
+          empty_results: { 'SearchResult' => {
+            'Data' => { 'Records' => [] },
+            'Statistics' => { 'TotalSearchTime' => '5' },
+            'AvailableCriteria' => { 'DateRange' => { 'MinDate' => '1501-01', 'MaxDate' => '2018-04' } }
+          } },
+          config: {}
+        )
+      end
+
+      before do
+        allow(session).to receive(:search).and_raise(EBSCO::EDS::BadRequest.new({ error_body: { 'ErrorDescription' => 'Invalid Content Provider' } }))
+      end
+
+      it 'uses a session to execute a search' do
+        expect(instance.search(search_builder)).to be_instance_of(Blacklight::Solr::Response)
+      end
+    end
+
+    context 'when doing a search that fails with any other error' do
+      let(:search_builder) do
+        instance_double(ArticleSearchBuilder, rows: 10, to_hash: { q: 'my query', rows: 10 })
+      end
+      let(:session) do
+        instance_double(
+          EBSCO::EDS::Session,
+          empty_results: { 'SearchResult' => {
+            'Data' => { 'Records' => [] },
+            'Statistics' => { 'TotalSearchTime' => '5' },
+            'AvailableCriteria' => { 'DateRange' => { 'MinDate' => '1501-01', 'MaxDate' => '2018-04' } }
+          } },
+          config: {}
+        )
+      end
+
+      before do
+        allow(session).to receive(:search).and_raise(EBSCO::EDS::BadRequest.new({ error_body: { 'ErrorDescription' => 'broken' } }))
+      end
+
+      it 'uses a session to execute a search' do
+        expect { instance.search(search_builder) }.to raise_error EBSCO::EDS::BadRequest
+      end
+    end
+
+    context 'when doing a peek query for prev/next' do
       let(:search_builder) do
         instance_double(ArticleSearchBuilder, rows: 3, to_hash: { q: 'my query', start: 11, rows: 3 })
       end
 
-      it 'uses a session to run the previous-next search' do
-        session = instance_double(
+      let(:session) do
+        instance_double(
           EBSCO::EDS::Session,
           search: instance_double(EBSCO::EDS::Results, to_solr: {})
         )
-        expect(EBSCO::EDS::Session).to receive(:new).and_return(session)
+      end
+
+      it 'uses a session to run the previous-next search' do
         expect(instance.search(search_builder)).to be_truthy
       end
     end
 
-    context '(id fetch)' do
+    context 'when fetching by id' do
       let(:search_builder) do
         instance_double(
           ArticleSearchBuilder,
@@ -69,13 +126,16 @@ RSpec.describe Eds::Repository do
         )
       end
 
-      it 'uses a session to run solr_retrieve_list' do
-        session = instance_double(
-          Eds::Session
+      let(:session) do
+        instance_double(
+          Eds::Session,
+            solr_retrieve_list: []
         )
-        expect(Eds::Session).to receive(:new).and_return(session)
-        expect(session).to receive(:solr_retrieve_list)
+      end
+
+      it 'uses a session to run solr_retrieve_list' do
         instance.search(search_builder)
+        expect(session).to have_received(:solr_retrieve_list)
       end
     end
   end
