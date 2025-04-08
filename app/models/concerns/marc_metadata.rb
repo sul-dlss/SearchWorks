@@ -52,6 +52,10 @@ module MarcMetadata
     @added_entry ||= AddedEntry.new(self)
   end
 
+  def hierarchical_place_name
+    @hierarchical_place_name ||= HierarchicalPlaceName.new(self)
+  end
+
   def local_subjects
     @local_subjects ||= LocalSubjects.new(self)
   end

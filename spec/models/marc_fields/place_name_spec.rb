@@ -7,7 +7,7 @@ RSpec.describe 'Place names' do
 
   let(:document) { SolrDocument.new(marc_json_struct: place_name_fixture) }
 
-  subject(:place_name) { document.marc_field(752) }
+  subject(:place_name) { document.marc_field(:hierarchical_place_name) }
 
   it 'returns MARC 752' do
     expect(place_name.values).to be_present
