@@ -5,6 +5,8 @@ module SchemaDotOrg
     as_schema_dot_org.present?
   end
 
+  # The indexer produces schema_dot_org_struct for geo objects.
+  # See https://github.com/sul-dlss/SearchWorks/issues/2041
   def as_schema_dot_org
     Array(self[:schema_dot_org_struct]).first || solr_values_to_schema_dot_org
   end
