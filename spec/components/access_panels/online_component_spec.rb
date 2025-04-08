@@ -70,15 +70,15 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
   end
 
   describe '#links' do
-    it 'should not return links when they are present in MODS records' do
+    it 'does not return links when they are present in MODS records' do
       expect(mods.links).not_to be_present
     end
 
-    it 'should return fulltext links' do
+    it 'returns fulltext links' do
       expect(fulltext.links.all?(&:fulltext?)).to be_truthy
     end
 
-    it 'should return the SFX link even if there are other links' do
+    it 'returns the SFX link even if there are other links' do
       links = sfx.links
       expect(links.length).to eq 1
       expect(links.first).to be_sfx
@@ -93,7 +93,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(managed_purl_doc.links).to be_blank
     end
 
-    it 'should not return any non-fulltext links' do
+    it 'does not return any non-fulltext links' do
       expect(supplemental.links).to be_blank
     end
   end
@@ -141,21 +141,21 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       SolrDocument.new
     end
 
-    it "should render nothing" do
+    it "renders nothing" do
       render_inline(described_class.new(document:))
       expect(page).to have_no_css(".panel-online")
     end
   end
 
   describe "marc record" do
-    it "should render the panel with a link" do
+    it "renders the panel with a link" do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }])
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css(".card-header", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
-    it "should add the stanford-only class to Stanford only resources" do
+    it "adds the stanford-only class to Stanford only resources" do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', additional_text: '4 at one time', fulltext: true, stanford_only: true }])
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
@@ -194,11 +194,11 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
         SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_main_ssim: ["Database"])
       end
 
-      it "should render a special card heading" do
+      it "renders a special card heading" do
         render_inline(described_class.new(document:))
         expect(page).to have_css(".card-header", text: "Search this database")
       end
-      it "should render a special card footer" do
+      it "renders a special card footer" do
         render_inline(described_class.new(document:))
         expect(page).to have_css(".card-footer a", text: "Report a connection problem")
       end

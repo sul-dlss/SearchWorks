@@ -4,7 +4,7 @@
 require 'rails_helper'
 
 RSpec.describe "Special Quotes" do
-  it "should replace special quotes in the query" do
+  it "replaces special quotes in the query" do
     visit root_path
     fill_in 'q', with: '『stuff』'
     click_button 'search'

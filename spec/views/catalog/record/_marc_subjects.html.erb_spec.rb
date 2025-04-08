@@ -13,21 +13,21 @@ RSpec.describe "catalog/record/_marc_subjects" do
       render
     end
 
-    it "should render non-marc 655 subjects under 'Subject'" do
+    it "renders non-marc 655 subjects under 'Subject'" do
       expect(rendered).to have_css('dt', text: "Subject")
       expect(rendered).to have_css('dd a', text: "Subject A1")
     end
 
-    it "should include an aria-label attribute" do
+    it "includes an aria-label attribute" do
       expect(rendered).to have_css('dd a[aria-label="Subject A1"]')
     end
 
-    it "should render non-marc 655 subjects under 'Genre'" do
+    it "renders non-marc 655 subjects under 'Genre'" do
       expect(rendered).to have_css('dt', text: "Genre")
       expect(rendered).to have_css('dd a', text: "Subject A1")
     end
 
-    it 'should render the MARC 690 as local subjects' do
+    it 'renders the MARC 690 as local subjects' do
       expect(rendered).to have_css('dt', text: 'Local subject')
       expect(rendered).to have_css('dd', text: 'Local Subject A1')
     end
@@ -62,13 +62,13 @@ RSpec.describe "catalog/record/_marc_subjects" do
       assign(:document, document)
     end
 
-    it "should display for databases" do
+    it "displays for databases" do
       allow(document).to receive(:is_a_database?).and_return(true)
       render
       expect(rendered).to have_css("dd a", text: "DB Subject1")
       expect(rendered).to have_css("dd a", text: "DB Subject2")
     end
-    it "should not display for non-databases" do
+    it "does not display for non-databases" do
       allow(document).to receive(:is_a_database?).and_return(false)
       render
       expect(rendered).to have_no_css("dd a", text: "DB Subject1")

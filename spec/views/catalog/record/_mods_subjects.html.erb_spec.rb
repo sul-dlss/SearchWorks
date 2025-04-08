@@ -14,12 +14,12 @@ RSpec.describe "catalog/record/_mods_subjects" do
       assign(:document, document)
     end
 
-    it "should display subjects if available" do
+    it "displays subjects if available" do
       render
       expect(rendered).to have_css("dt", text: "Subject")
       expect(rendered).to have_css("a", text: '1906 Earthquake')
     end
-    it "should should not render anything when a document has no subjects" do
+    it "shoulds not render anything when a document has no subjects" do
       assign(:document, no_subjects_doc)
       render
       expect(rendered).not_to be_present
@@ -34,12 +34,12 @@ RSpec.describe "catalog/record/_mods_subjects" do
       assign(:document, document)
     end
 
-    it "should display genres if available" do
+    it "displays genres if available" do
       render
       expect(rendered).to have_css("dt", text: "Genre")
       expect(rendered).to have_css("a", text: 'Photographs')
     end
-    it "should should not render anything when a document has no genres" do
+    it "shoulds not render anything when a document has no genres" do
       assign(:document, no_genres_doc)
       render
       expect(rendered).not_to be_present

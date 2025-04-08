@@ -11,12 +11,12 @@ RSpec.describe "catalog/record/_mods_contributors" do
       render
     end
 
-    it 'should display primary authors' do
+    it 'displays primary authors' do
       expect(rendered).to have_css('dt', text: 'Author')
       expect(rendered).to have_css('dd', text: 'J. Smith')
     end
 
-    it "should display secondary authors" do
+    it "displays secondary authors" do
       expect(rendered).to have_css("dt", text: "Producer")
       expect(rendered).to have_css("dd a", text: "B. Smith")
     end

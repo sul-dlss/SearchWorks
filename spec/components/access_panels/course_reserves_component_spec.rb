@@ -38,7 +38,7 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
                                                '00a45880-2088-4bbd-8b37-929093f1a032'])
     }
 
-    it "should show three course reservations" do
+    it "shows three course reservations" do
       expect(page).to have_css('div.panel-course-reserve')
       expect(page).to have_css('dl')
       expect(page).to have_css('dt', count: 3, text: "Course")
@@ -47,7 +47,7 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
       expect(page).to have_css('dt', text: "Instructor(s)")
     end
 
-    it "should have all three links correctly formatted" do
+    it "has all three links correctly formatted" do
       expect(page).to have_link('ENGLISH-17Q-01 -- After 2001: A 21st Century Science Fiction Odyssey',
                                 href: '/catalog?f%5Bcourses_folio_id_ssim%5D%5B%5D=00254a1b-d0f5-4a9a-88a0-1dd596075d08')
 

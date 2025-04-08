@@ -11,7 +11,7 @@ RSpec.describe EdsDocument do
   end
 
   describe '#html_fulltext_available' do
-    it 'should return true when fulltext is present' do
+    it 'returns true when fulltext is present' do
       expect(document.html_fulltext?).to be true
     end
 

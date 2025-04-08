@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Record view', :js do
-  it 'should have online books panel with Google links' do
+  it 'has online books panel with Google links' do
     skip('Google Books API not working under test')
     visit solr_document_path('44')
 

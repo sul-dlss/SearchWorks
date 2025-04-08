@@ -107,13 +107,13 @@ RSpec.describe Holdings::Library do
     ] }
     let(:library) { Holdings::Library.new("GREEN", callnumbers) }
 
-    it "should be false when libraries have no item display fields" do
+    it "is false when libraries have no item display fields" do
       expect(library).not_to be_present
     end
   end
 
   describe '#library_instructions' do
-    it 'should return instructions for libraries which have them' do
+    it 'returns instructions for libraries which have them' do
       Constants::LIBRARY_INSTRUCTIONS.each_key do |library|
         expect(Holdings::Library.new(library).library_instructions).to have_key(:heading)
         expect(Holdings::Library.new(library).library_instructions).to have_key(:text)
@@ -124,10 +124,10 @@ RSpec.describe Holdings::Library do
   describe "zombie" do
     let(:zombie) { Holdings::Library.new("ZOMBIE") }
 
-    it "should be #zombie?" do
+    it "is #zombie?" do
       expect(zombie).to be_zombie
     end
-    it "should not be a holding library" do
+    it "is not a holding library" do
       expect(zombie).not_to be_holding_library
     end
   end

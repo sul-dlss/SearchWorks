@@ -32,7 +32,7 @@ RSpec.describe "Searchworks::Document::Sms" do
   end
 
   context 'eds document' do
-    it 'should use the eds title' do
+    it 'uses the eds title' do
       expect(eds_doc.to_sms_text).to eq 'holla back'
     end
   end

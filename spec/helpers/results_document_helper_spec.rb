@@ -35,7 +35,7 @@ RSpec.describe ResultsDocumentHelper do
 
   describe "Render metadata" do
     describe '#get_main_title_date' do
-      it "should return date and date ranges" do
+      it "returns date and date ranges" do
         expect(get_main_title_date(@document_01)).to eq "[1999]"
         expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
         expect(get_main_title_date(@document_03)).to eq "[199 B.C.]"
@@ -46,7 +46,7 @@ RSpec.describe ResultsDocumentHelper do
       end
     end
 
-    it "should return book ids with prefixes" do
+    it "returns book ids with prefixes" do
       book_ids = get_book_ids(@document_01)
 
       expect(book_ids['isbn']).to eq ["ISBN0393040801x", "ISBN9780393040807"]

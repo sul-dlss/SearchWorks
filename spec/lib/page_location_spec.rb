@@ -45,19 +45,19 @@ RSpec.describe PageLocation do
         describe "old format facet" do
           before { params[:f] = { format: ["Database"] } }
 
-          it "should be defined when a facet is selected" do
+          it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
 
-          it "should be defined when an additional format facet is selected" do
+          it "is defined when an additional format facet is selected" do
             params[:f][:format] << "Book"
             expect(access_point).to eq :databases
           end
-          it "should be defined when searching within selected" do
+          it "is defined when searching within selected" do
             params[:q] = "My Query"
             expect(access_point).to eq :databases
           end
-          it "should not be defined when a non-database format facet is selected" do
+          it "is not defined when a non-database format facet is selected" do
             params[:f] = { access: "Online" }
             expect(access_point).to be_nil
           end
@@ -66,18 +66,18 @@ RSpec.describe PageLocation do
         describe "new resource type facet" do
           before { params[:f] = { format_main_ssim: ["Database"] } }
 
-          it "should be defined when a facet is selected" do
+          it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
-          it "should be defined when an additional format facet is selected" do
+          it "is defined when an additional format facet is selected" do
             params[:f][:format_main_ssim] << "Book"
             expect(access_point).to eq :databases
           end
-          it "should be defined when searching within selected" do
+          it "is defined when searching within selected" do
             params[:q] = "My Query"
             expect(access_point).to eq :databases
           end
-          it "should not be defined when a non-database format facet is selected" do
+          it "is not defined when a non-database format facet is selected" do
             params[:f] = { access: "Online" }
             expect(access_point).to be_nil
           end
@@ -140,14 +140,14 @@ RSpec.describe PageLocation do
       describe 'digital_collections' do
         before { params[:f] = { collection_type: ["Digital Collection"] } }
 
-        it 'should be defined when the collection_type is digital collection' do
+        it 'is defined when the collection_type is digital collection' do
           expect(access_point).to eq :digital_collections
         end
-        it "should not be defined when digital_collection is not present" do
+        it "is not defined when digital_collection is not present" do
           params[:f] = {}
           expect(access_point).to be_nil
         end
-        it "should not be defined when digital_collection is a different value" do
+        it "is not defined when digital_collection is a different value" do
           params[:f] = { collection_type: ["Something Else"] }
           expect(access_point).to be_nil
         end
@@ -156,14 +156,14 @@ RSpec.describe PageLocation do
       describe 'sdr' do
         before { params[:f] = { building_facet: ["Stanford Digital Repository"] } }
 
-        it 'should be defined when the building facet is Stanford Digital Repository' do
+        it 'is defined when the building facet is Stanford Digital Repository' do
           expect(access_point).to eq :sdr
         end
-        it "should not be defined when Stanford Digital Repository is not present" do
+        it "is not defined when Stanford Digital Repository is not present" do
           params[:f] = {}
           expect(access_point).to be_nil
         end
-        it "should not be defined when building_facet is a different value" do
+        it "is not defined when building_facet is a different value" do
           params[:f] = { building_facet: ["Green Library"] }
           expect(access_point).to be_nil
         end
@@ -172,14 +172,14 @@ RSpec.describe PageLocation do
       describe 'dissertation_theses' do
         before { params[:f] = { genre_ssim: ['Thesis/Dissertation'] } }
 
-        it 'should be defined when genre facet is "Thesis/Dissertation"' do
+        it 'is defined when genre facet is "Thesis/Dissertation"' do
           expect(access_point).to eq :dissertation_theses
         end
-        it 'should not be defined when Thesis/Dissertation is not present' do
+        it 'is not defined when Thesis/Dissertation is not present' do
           params[:f] = {}
           expect(access_point).to be_nil
         end
-        it 'should not be defined when genre_ssim is another value' do
+        it 'is not defined when genre_ssim is another value' do
           params[:f] = { genre_ssim: ['Cat Tricks'] }
           expect(access_point).to be_nil
         end

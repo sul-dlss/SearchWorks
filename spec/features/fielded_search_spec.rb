@@ -14,7 +14,7 @@ RSpec.describe 'Fielded Search' do
     let(:query) { 'An object' }
     let(:search_field) { 'Title' }
 
-    it 'works' do
+    it 'shows the matched document' do
       expect(page).to have_css('.document', count: 1)
       expect(page).to have_css('.document h3.index_title a', text: 'An object')
     end
@@ -24,7 +24,7 @@ RSpec.describe 'Fielded Search' do
     let(:query) { 'Doe, Jane' }
     let(:search_field) { 'Author/Contributor' }
 
-    it 'works' do
+    it 'shows the matched document' do
       expect(page).to have_css('.document', count: 1)
       expect(page).to have_css('.document h3.index_title a', text: 'An object')
     end

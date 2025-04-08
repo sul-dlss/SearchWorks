@@ -6,7 +6,7 @@ RSpec.describe "Search toolbar", :feature, :js do
   before { visit root_path }
 
   describe "has SearchWorks customizations" do
-    it "should display correct subnavbar elements" do
+    it "displays correct subnavbar elements" do
       within '#search-navbar-container' do
         expect(page).to have_css("button.btn.btn-secondary.search-btn", text: "")
       end
@@ -21,7 +21,7 @@ RSpec.describe "Search toolbar", :feature, :js do
 
   describe "Selections dropdown" do
     describe "show list" do
-      it "should navigate to selections page" do
+      it "navigates to selections page" do
         visit bookmarks_path
         expect(page).to have_css('h2', text: '0 catalog items')
         expect(page).to have_css('a', text: '0 articles+ items')
@@ -30,7 +30,7 @@ RSpec.describe "Search toolbar", :feature, :js do
     end
 
     describe "clear list" do
-      it "should clear selections and update selections count and recently added list" do
+      it "clears selections and update selections count and recently added list" do
         skip 'Not working correctly'
         visit search_catalog_path f: { format: ["Book"] }, view: "default"
         expect(page).to have_css("li a", text: /SELECTIONS \(0\)/i)

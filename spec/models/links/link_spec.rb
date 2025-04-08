@@ -23,27 +23,27 @@ RSpec.describe 'Link' do
     expect(link.text).to be_html_safe
   end
 
-  it 'should parse the href option' do
+  it 'parses the href option' do
     expect(link.href).to eq 'http://link.edu'
   end
 
-  it 'should parse the fulltext option' do
+  it 'parses the fulltext option' do
     expect(link).to be_fulltext
   end
 
-  it 'should parse the stanford only option' do
+  it 'parses the stanford only option' do
     expect(link).to be_stanford_only
   end
 
-  it 'should parse the finding_aid option' do
+  it 'parses the finding_aid option' do
     expect(link).to be_finding_aid
   end
 
-  it 'should parse the sfx option' do
+  it 'parses the sfx option' do
     expect(link).to be_sfx
   end
 
-  it 'should parse the managed_purl option' do
+  it 'parses the managed_purl option' do
     expect(link).to be_managed_purl
   end
 end

@@ -119,7 +119,7 @@ RSpec.describe HooverOpenUrlRequest do
     describe '#item_publisher' do
       let(:marc_json_struct) { hoover_request_fixture }
 
-      it 'it returns subfields $a, $b, $c 260/264' do
+      it 'returns subfields $a, $b, $c 260/264' do
         expect(url.item_publisher).to eq '260 Subfield $a 260 Subfield $b 260 Subfield $c 264 Subfield $c'
       end
     end

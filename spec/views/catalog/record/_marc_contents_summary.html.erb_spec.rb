@@ -36,7 +36,7 @@ RSpec.describe "catalog/record/_marc_contents_summary" do
       assign(:document, SolrDocument.new(marc_json_struct: finding_aid_856, marc_links_struct: [{ finding_aid: true, href: '...', link_text: 'FINDING AID: Link text' }]))
     end
 
-    it "should be displayed when present" do
+    it "is displayed when present" do
       render
       expect(rendered).to have_css("dt", text: "Finding aid")
       expect(rendered).to have_css("dd", text: "FINDING AID:")
@@ -44,7 +44,7 @@ RSpec.describe "catalog/record/_marc_contents_summary" do
     end
   end
 
-  it "should be blank if the document has not fields" do
+  it "is blank if the document has not fields" do
     assign(:document, SolrDocument.new(marc_json_struct: no_fields_fixture))
     render
     expect(rendered).to be_blank
@@ -55,7 +55,7 @@ RSpec.describe "catalog/record/_marc_contents_summary" do
       render
     end
 
-    it 'should include the included works section' do
+    it 'includes the included works section' do
       expect(rendered).to have_css('dt', text: 'Included work')
       expect(rendered).to have_css('dd a', count: 2)
       expect(rendered).to have_css('dd a', text: '710 with t ind2 Title! sub n after t')

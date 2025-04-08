@@ -36,13 +36,13 @@ RSpec.describe 'Sort and per page toolbar', :feature, :js do
       click_button 'search'
     end
 
-    it 'should display default correctly' do
+    it 'displays default correctly' do
       within '.sort-and-per-page' do
         expect(page).to have_css('button.btn.btn-sul-toolbar', text: 'Sort by relevance', visible: true)
       end
     end
 
-    it 'should change to current sort' do
+    it 'changes to current sort' do
       within '.sort-and-per-page' do
         expect(page).to have_no_css('button.btn.btn-sul-toolbar', text: 'Sort by author', visible: true)
         page.find('button.btn.btn-sul-toolbar', text: 'Sort by relevance').click

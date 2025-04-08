@@ -13,7 +13,7 @@ RSpec.describe "catalog/record/_mods_access" do
       assign(:document, document)
     end
 
-    it "should display access" do
+    it "displays access" do
       render
       expect(rendered).to have_css("dt", text: "Use and reproduction")
       expect(rendered).to have_css("dd", text: "Copyright © Stanford University.")

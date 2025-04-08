@@ -13,13 +13,13 @@ RSpec.describe IndexAuthors do
     vern_author_meeting_display: ["Vern Author Meeting"]
   ) }
 
-  it "should not return anything for a document without authors" do
+  it "does not return anything for a document without authors" do
     expect(no_authors_document.authors_from_index).not_to be_present
   end
-  it "should return authors for all supplied types" do
+  it "returns authors for all supplied types" do
     expect(document.authors_from_index.length).to eq 6
   end
-  it "should not have duplicate authors" do
+  it "does not have duplicate authors" do
     meeting_text = "Author Meeting"
     author_meeting_display = document[:author_meeting_display]
     meetings = document.authors_from_index.select do |author|

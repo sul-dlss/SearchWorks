@@ -159,11 +159,11 @@ RSpec.describe FeedbackMailer do
     let(:params) { { url: 'http://www.example.com/view/1234' } }
     let(:mail) { FeedbackMailer.submit_wrong_book_cover(params, ip) }
 
-    it 'should include the ip address' do
+    it 'includes the ip address' do
       expect(mail.body).to have_content '123.45.67.890'
     end
 
-    it 'should include the referrer url' do
+    it 'includes the referrer url' do
       expect(mail.body).to have_content 'http://www.example.com/view/1234'
     end
   end

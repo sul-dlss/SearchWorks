@@ -8,7 +8,7 @@ RSpec.describe CourseReservesController do
       allow(CourseReserve).to receive(:where).and_return([build(:reg_course), build(:reg_course_add)])
     end
 
-    it "should get the course reserves page" do
+    it "gets the course reserves page" do
       get :index
       expect(assigns(:course_reserves).length).to equal(2)
       expect(response).to render_template("index")

@@ -7,7 +7,7 @@ RSpec.describe 'shared/feedback_forms/_chat_with_librarian' do
     render
   end
 
-  it 'should have correct data attributes' do
+  it 'has correct data attributes' do
     expect(rendered).to have_css('[data-jid="ic@chat.libraryh3lp.com"]')
     expect(rendered).to have_css('[data-library-h3lp]')
   end

@@ -10,7 +10,7 @@ RSpec.describe "MARC Metadata in search results" do
       click_button 'search'
     end
 
-    it "should link the uniform title (but not $h)" do
+    it "links the uniform title (but not $h)" do
       within(first('.document')) do
         within('ul.document-metadata') do
           expect(page).to have_css('li', text: 'Instrumental music Selections [print/digital].')
@@ -27,7 +27,7 @@ RSpec.describe "MARC Metadata in search results" do
       click_button 'search'
     end
 
-    it 'should join the characteristics with the physical statement' do
+    it 'joins the characteristics with the physical statement' do
       # this item is the 2nd search result
       within(first('.document')) do
         expect(page).to have_css('dt', text: 'Description')
@@ -44,7 +44,7 @@ RSpec.describe "MARC Metadata in search results" do
       click_button 'search'
     end
 
-    it "should link the author/creator, corporate author, and meeting" do
+    it "links the author/creator, corporate author, and meeting" do
       within(first('.document')) do
         within('ul.document-metadata') do
           expect(page).to have_css('li a', text: 'Arbitrary, Stewart.')

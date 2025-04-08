@@ -6,16 +6,16 @@ RSpec.describe CollectionHelper do
   describe "#link_to_collection_members" do
     let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
 
-    it "should link to the given text" do
+    it "links to the given text" do
       expect(link_to_collection_members("LinkText", document)).to match /<a href.*>LinkText<\/a>/
     end
-    it "should link the collection id with prefix" do
+    it "links the collection id with prefix" do
       expect(link_to_collection_members("LinkText", document)).to match /<a href=\".*collection.*=a1234\".*/
     end
   end
 
   describe "#collections_search_params" do
-    it "should be the collection_type facet value of 'Digital Collection" do
+    it "is the collection_type facet value of 'Digital Collection" do
       expect(collections_search_params).to have_key(:f)
       expect(collections_search_params[:f]).to have_key(:collection_type)
       expect(collections_search_params[:f][:collection_type]).to eq ["Digital Collection"]
@@ -25,7 +25,7 @@ RSpec.describe CollectionHelper do
   describe "#collection_members_path" do
     let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
 
-    it "should link the collection id with prefix" do
+    it "links the collection id with prefix" do
       expect(collection_members_path(document)).to match /.*collection.*=a1234.*/
     end
   end
@@ -41,10 +41,10 @@ RSpec.describe CollectionHelper do
       allow(no_collection_doc).to receive(:collection_members).and_return([])
     end
 
-    it "should return the correct number of document including the #total" do
+    it "returns the correct number of document including the #total" do
       expect(collection_members_enumeration(document)).to eq "5 items online"
     end
-    it "should not return anything if an document does not have collection members" do
+    it "does not return anything if an document does not have collection members" do
       expect(collection_members_enumeration(no_collection_doc)).to be_nil
     end
   end
@@ -64,7 +64,7 @@ RSpec.describe CollectionHelper do
   end
 
   describe "#collection_breadcrumb_value" do
-    it "should return the collection name when present" do
+    it "returns the collection name when present" do
       allow(helper).to receive(:document_presenter).and_return(
         OpenStruct.new(heading: 'Title2')
       )
@@ -74,11 +74,11 @@ RSpec.describe CollectionHelper do
       assign(:response, OpenStruct.new(documents: document_list))
       expect(helper.send(:collection_breadcrumb_value, 'a54321')).to eq 'Title2'
     end
-    it "should return the ID with the prefix if there is no @document_list" do
+    it "returns the ID with the prefix if there is no @document_list" do
       assign(:response, OpenStruct.new(documents: []))
       expect(helper.send(:collection_breadcrumb_value, 'a54321')).to eq 'a54321'
     end
-    it "should return the ID with the prefix if there are no matching collections" do
+    it "returns the ID with the prefix if there are no matching collections" do
       document_list = [
         SolrDocument.new(collection: ['12345', '54321'], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
       ]

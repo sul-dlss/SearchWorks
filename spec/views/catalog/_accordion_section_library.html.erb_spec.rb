@@ -21,7 +21,7 @@ RSpec.describe "catalog/_accordion_section_library" do
       render
     end
 
-    it "should include the library accordion and text" do
+    it "includes the library accordion and text" do
       expect(rendered).to have_css('.accordion-section.location')
       expect(rendered).to have_css('.accordion-section.location button.header[aria-expanded="false"]', text: "Check availability")
       expect(rendered).to have_css('.accordion-section.location span.snippet', text: "Green Library")

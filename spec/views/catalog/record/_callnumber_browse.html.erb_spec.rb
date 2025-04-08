@@ -23,7 +23,7 @@ RSpec.describe "catalog/record/_callnumber_browse" do
     render 'catalog/record/callnumber_browse', document:
   end
 
-  it "should render a panel" do
+  it "renders a panel" do
     expect(rendered).to have_css('div.record-browse-nearby')
     expect(rendered).to have_css(".section#browse-nearby")
   end
@@ -32,10 +32,10 @@ RSpec.describe "catalog/record/_callnumber_browse" do
     expect(rendered).to have_link('Continue to full page', href: '/browse?start=full_shelfkey&view=gallery')
     # Somehow we need to send in a fixture that will invoke the right ckey
   end
-  it "should render a heading" do
+  it "renders a heading" do
     expect(rendered).to have_css('h2', text: /Browse related items/)
   end
-  it "should include links to all unique callnumbers" do
+  it "includes links to all unique callnumbers" do
     expect(rendered).to have_css('.callnumber button', text: "callnumber")
     expect(rendered).to have_css('.callnumber button', text: "callnumber2")
   end
