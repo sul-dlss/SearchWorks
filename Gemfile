@@ -50,7 +50,7 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'rubocop-capybara', require: false
   gem 'selenium-webdriver'
-  gem 'solr_wrapper', '~> 4.0.2' # pinned until ebsco-eds allows faraday v2 https://github.com/ebsco/edsapi-ruby/issues/120
+  gem 'solr_wrapper', '~> 4.0'
   gem 'webmock'
   # factory_bot_rails for creating fixtures in tests
   gem 'factory_bot_rails'
