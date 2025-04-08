@@ -84,6 +84,7 @@ gem "devise"
 gem "devise-guests"
 gem 'devise-remote-user'
 gem "faraday"
+gem 'faraday-follow_redirects'
 gem 'oauth2'
 gem "config"
 gem "mods_display", "~> 1.1"
