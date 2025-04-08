@@ -101,7 +101,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       Folio::Item::MaterialType.new(**Folio::Types.material_types.values.find { |x| x['name'] == 'book' }.slice('id', 'name'))
     end
 
-    it 'should have the request link at the location level' do
+    it 'has the request link at the location level' do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
@@ -122,7 +122,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       expect(page).to have_css('.location a', text: "Request")
     end
 
-    it 'should not have the location level request link for inprocess noncirculating collections' do
+    it 'does not have the location level request link for inprocess noncirculating collections' do
       document = SolrDocument.new(
         id: '123',
         item_display_struct: [
@@ -284,7 +284,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         render_inline(described_class.new(document:))
       end
 
-      it "should be present" do
+      it "is present" do
         expect(page).to have_css('.location a', text: 'Request')
       end
 
@@ -391,7 +391,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it 'should display finding aid sections with link' do
+    it 'displays finding aid sections with link' do
       expect(page).to have_css('h4', text: 'Finding aid')
       expect(page).to have_css('a', text: 'Online Archive of California')
     end

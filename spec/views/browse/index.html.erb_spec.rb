@@ -26,12 +26,12 @@ RSpec.describe "browse/index" do
     expect(view).to receive(:document_presenter).with(original_doc).and_return(presenter)
   end
 
-  it "should link to the document" do
+  it "links to the document" do
     render
     expect(rendered).to have_css('a', text: 'Title')
   end
   describe "without barcode" do
-    it "should select the first callnumber in the heading when no barcode is present" do
+    it "selects the first callnumber in the heading when no barcode is present" do
       render
       expect(rendered).to have_css('h1', text: "Browse related items")
       expect(rendered).to have_css('p', text: /Starting at call number:.*callnumber123/m)
@@ -52,7 +52,7 @@ RSpec.describe "browse/index" do
       allow(view).to receive(:params).and_return(start: '123', barcode: '321')
     end
 
-    it "should use the callnumber based on the provided barcode in the heading" do
+    it "uses the callnumber based on the provided barcode in the heading" do
       render
       expect(rendered).to have_css('h1', text: "Browse related items")
       expect(rendered).to have_css('p', text: /Starting at call number:.*callnumber321/m)

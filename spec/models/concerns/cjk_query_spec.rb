@@ -42,25 +42,25 @@ RSpec.describe CJKQuery do
                      _query_:\"{!edismax qf=$qf_pub_info pf=$pf_pub_info pf3=$pf3_pub_info pf2=$pf2_pub_info}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}\""}
 
-      it "should handle the non-fielded pf/qf" do
+      it "handles the non-fielded pf/qf" do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk #{local_params} }#{q_str}"
       end
-      it "should handle title pf/qf" do
+      it "handles title pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
       end
-      it "should handle author pf/qf" do
+      it "handles author pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_author_cjk pf=$pf_author_cjk pf3=$pf3_author_cjk pf2=$pf2_author_cjk #{local_params} }#{q_str}"
       end
-      it "should handle subject pf/qf" do
+      it "handles subject pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_subject_cjk pf=$pf_subject_cjk pf3=$pf3_subject_cjk pf2=$pf2_subject_cjk #{local_params} }#{q_str}"
       end
-      it "should handle series pf/qf" do
+      it "handles series pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_series_cjk pf=$pf_series_cjk pf3=$pf3_series_cjk pf2=$pf2_series_cjk #{local_params} }#{q_str}"
       end
-      it "should handle pub_info pf/qf" do
+      it "handles pub_info pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_pub_info_cjk pf=$pf_pub_info_cjk pf3=$pf3_pub_info_cjk pf2=$pf2_pub_info_cjk #{local_params} }#{q_str}"
       end
-      it "should not do anything w/ the number qf/pf" do
+      it "does not do anything w/ the number qf/pf" do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
       end
 
@@ -76,7 +76,7 @@ RSpec.describe CJKQuery do
     describe "pre-processed" do
       let(:solr_q) { "_query_:\"{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}\"" }
 
-      it "should not try to append _cjk onto already processed solr params logic" do
+      it "does not try to append _cjk onto already processed solr params logic" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
         expect(solr_params[:q]).not_to include "_cjk_cjk"
       end
@@ -84,7 +84,7 @@ RSpec.describe CJKQuery do
   end
 
   describe "cjk_query_addl_params" do
-    it "should leave unrelated solr params alone" do
+    it "leaves unrelated solr params alone" do
       blacklight_params.merge!(q: '舊小說', search_field: 'search_title')
       my_solr_params = { 'key1' => 'val1', 'key2' => 'val2' }
       solr_params = my_solr_params
@@ -106,42 +106,42 @@ RSpec.describe CJKQuery do
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
-      it "should detect Han - Traditional and add mm and qs to Solr params" do
+      it "detects Han - Traditional and add mm and qs to Solr params" do
         blacklight_params[:q] = '舊小說'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
-      it "should detect Han - Simplified and add mm and qs to Solr params" do
+      it "detects Han - Simplified and add mm and qs to Solr params" do
         blacklight_params[:q] = '旧小说'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
-      it "should detect Hiragana and add mm and qs to Solr params" do
+      it "detects Hiragana and add mm and qs to Solr params" do
         blacklight_params[:q] = 'まんが'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
-      it "should detect Katakana and add mm and qs to Solr params" do
+      it "detects Katakana and add mm and qs to Solr params" do
         blacklight_params[:q] = 'マンガ'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
-      it "should detect Hangul and add mm and qs to Solr params" do
+      it "detects Hangul and add mm and qs to Solr params" do
         blacklight_params[:q] = '한국경제'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
-      it "should detect CJK mixed with other alphabets and add mm and qs to Solr params" do
+      it "detects CJK mixed with other alphabets and add mm and qs to Solr params" do
         blacklight_params[:q] = 'abcけいちゅうabc'
         solr_params = {}
         search_builder.modify_params_for_cjk(solr_params)
@@ -165,7 +165,7 @@ RSpec.describe CJKQuery do
         )
       end
 
-      it 'should exhibit the same behavior without a search_field' do
+      it 'exhibits the same behavior without a search_field' do
         blacklight_params[:q] = q_str
         solr_params = { q: q_str }
         search_builder.modify_params_for_cjk(solr_params)
@@ -178,7 +178,7 @@ RSpec.describe CJKQuery do
         )
       end
 
-      it 'should add cjk local params to q if it is a CJK unigram' do
+      it 'adds cjk local params to q if it is a CJK unigram' do
         q_uni = '飘'
         blacklight_params.merge!(q: q_uni, search_field: 'search')
         solr_params = { q: q_uni }
@@ -267,7 +267,7 @@ RSpec.describe CJKQuery do
       end
     end
 
-    it 'should add mm, qs and CJK local params to q if CJK detected' do
+    it 'adds mm, qs and CJK local params to q if CJK detected' do
       blacklight_params.merge!(q: q_str, search_field: 'search')
       solr_params = { q: q_str }
       search_builder.modify_params_for_cjk(solr_params)
@@ -280,50 +280,50 @@ RSpec.describe CJKQuery do
   end
 
   describe "#cjk_unigrams_size" do
-    it "should detect hangul" do
+    it "detects hangul" do
       expect(search_builder.send(:cjk_unigrams_size, '한국주택은행')).to eq 6
     end
-    it "should detect Han - Traditional" do
+    it "detects Han - Traditional" do
       expect(search_builder.send(:cjk_unigrams_size, '舊小說')).to eq 3
     end
-    it "should detect Han - Simplified" do
+    it "detects Han - Simplified" do
       expect(search_builder.send(:cjk_unigrams_size, '旧小说')).to eq 3
     end
-    it "should detect Modern Kanji" do
+    it "detects Modern Kanji" do
       expect(search_builder.send(:cjk_unigrams_size, '漫画')).to eq 2
     end
-    it "should detect Traditional Kanji" do
+    it "detects Traditional Kanji" do
       expect(search_builder.send(:cjk_unigrams_size, '漫畫')).to eq 2
     end
-    it "should detect Hiragana" do
+    it "detects Hiragana" do
       expect(search_builder.send(:cjk_unigrams_size, "まんが")).to eq 3
     end
-    it "should detect Katakana" do
+    it "detects Katakana" do
       expect(search_builder.send(:cjk_unigrams_size, "マンガ")).to eq 3
     end
-    it "should detect Hancha traditional" do
+    it "detects Hancha traditional" do
       expect(search_builder.send(:cjk_unigrams_size, "廣州")).to eq 2
     end
-    it "should detect Hancha simplified" do
+    it "detects Hancha simplified" do
       expect(search_builder.send(:cjk_unigrams_size, "光州")).to eq 2
     end
-    it "should detect Hangul" do
+    it "detects Hangul" do
       expect(search_builder.send(:cjk_unigrams_size, "한국경제")).to eq 4
     end
-    it "should detect mixed scripts" do
+    it "detects mixed scripts" do
       expect(search_builder.send(:cjk_unigrams_size, "近世仮名遣い")).to eq 6
     end
-    it "should detect first character CJK" do
+    it "detects first character CJK" do
       expect(search_builder.send(:cjk_unigrams_size, "舊小說abc")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, "旧小说 abc")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, " 漫画 abc")).to eq 2
     end
-    it "should detect last character CJK" do
+    it "detects last character CJK" do
       expect(search_builder.send(:cjk_unigrams_size, "abc漫畫")).to eq 2
       expect(search_builder.send(:cjk_unigrams_size, "abc まんが")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, "abc マンガ ")).to eq 3
     end
-    it "should detect (latin)(CJK)(latin)" do
+    it "detects (latin)(CJK)(latin)" do
       expect(search_builder.send(:cjk_unigrams_size, "abc廣州abc")).to eq 2
       expect(search_builder.send(:cjk_unigrams_size, "abc 한국경제abc")).to eq 4
       expect(search_builder.send(:cjk_unigrams_size, "abc近世仮名遣い abc")).to eq 6

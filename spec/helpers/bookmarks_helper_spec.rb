@@ -19,17 +19,17 @@ RSpec.describe BookmarksHelper do
   end
 
   describe "bookmarks?" do
-    it "should return true if bookmarks controller" do
+    it "returns true if bookmarks controller" do
       params[:controller] = "bookmarks"
       expect(helper.bookmarks?).to be_truthy
     end
 
-    it 'should return true if in the article_selections controller' do
+    it 'returns true if in the article_selections controller' do
       params[:controller] = 'article_selections'
       expect(helper.bookmarks?).to be_truthy
     end
 
-    it "should return false if not bookmarks controller" do
+    it "returns false if not bookmarks controller" do
       params[:controller] = "catalog"
       expect(helper.bookmarks?).to be_falsey
     end

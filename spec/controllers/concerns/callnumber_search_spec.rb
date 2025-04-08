@@ -17,11 +17,11 @@ RSpec.describe CallnumberSearch do
       subject.send(:quote_and_downcase_callnumber_search)
     end
 
-    it "should downcase the q parameter" do
+    it "downcases the q parameter" do
       expect(params[:q]).to match /abc 123/
       expect(params[:q]).not_to include "ABC"
     end
-    it "should quote the q parameter" do
+    it "quotes the q parameter" do
       expect(params[:q]).to eq '"abc 123"'
     end
     describe "when already quoted" do
@@ -32,7 +32,7 @@ RSpec.describe CallnumberSearch do
         subject.send(:quote_and_downcase_callnumber_search)
       end
 
-      it "should not double quote" do
+      it "does not double quote" do
         expect(params[:q]).to eq '"abc 123"'
       end
     end
@@ -44,7 +44,7 @@ RSpec.describe CallnumberSearch do
         allow(subject).to receive(:params).and_return(params)
       end
 
-      it "should not change the q parameter" do
+      it "does not change the q parameter" do
         subject.send(:quote_and_downcase_callnumber_search)
         expect(params[:q]).to eq 'ABC 123'
       end
@@ -57,7 +57,7 @@ RSpec.describe CallnumberSearch do
         allow(subject).to receive(:params).and_return(params)
       end
 
-      it "should not change any parameters" do
+      it "does not change any parameters" do
         subject.send(:quote_and_downcase_callnumber_search)
         expect(params).to eq params
       end

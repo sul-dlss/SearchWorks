@@ -5,27 +5,27 @@ require 'rails_helper'
 RSpec.describe CatalogController do
   include Devise::Test::ControllerHelpers
 
-  it 'should include the AdvancedSearchParamsMapping concern' do
+  it 'includes the AdvancedSearchParamsMapping concern' do
     expect(subject).to be_a(AdvancedSearchParamsMapping)
   end
-  it "should include the DatabaseAccessPoint concern" do
+  it "includes the DatabaseAccessPoint concern" do
     expect(subject).to be_a(DatabaseAccessPoint)
   end
-  it "should include the CallnumberSearch concern" do
+  it "includes the CallnumberSearch concern" do
     expect(subject).to be_a(CallnumberSearch)
   end
-  it "should include the AllCapsParams concern" do
+  it "includes the AllCapsParams concern" do
     expect(subject).to be_a(AllCapsParams)
   end
-  it "should include the ReplaceSpecialQuotes concern" do
+  it "includes the ReplaceSpecialQuotes concern" do
     expect(subject).to be_a(ReplaceSpecialQuotes)
   end
 
-  it "should include the EmailValidation concern" do
+  it "includes the EmailValidation concern" do
     expect(subject).to be_a(EmailValidation)
   end
   describe "#index" do
-    it "should set the search modifier" do
+    it "sets the search modifier" do
       get :index
       expect(assigns(:search_modifier)).to be_a SearchQueryModifier
     end
@@ -70,39 +70,39 @@ RSpec.describe CatalogController do
         allow(controller).to receive(:current_user).and_return(User.new(email: 'user@stanford.edu'))
       end
 
-      it 'should set the provided subject' do
+      it 'sets the provided subject' do
         expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' } }.to change {
           ActionMailer::Base.deliveries.count
         }.by(1)
         expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
       end
-      it 'should send a brief email when requested' do
+      it 'sends a brief email when requested' do
         email = double('email')
         expect(SearchWorksRecordMailer).to receive(:email_record).and_return(email)
         expect(email).to receive(:deliver_now)
         post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '1' }
       end
-      it 'should send a full email when requested' do
+      it 'sends a full email when requested' do
         email = double('email')
         expect(SearchWorksRecordMailer).to receive(:full_email_record).and_return(email)
         expect(email).to receive(:deliver_now)
         post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'full', id: '1' }
       end
 
-      it 'should be able to send emails to multiple addresses' do
+      it 'is able to send emails to multiple addresses' do
         expect do
           post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1' }
         end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
       describe 'validations' do
-        it 'should prevent incorrect email types from being sent' do
+        it 'prevents incorrect email types from being sent' do
           expect do
             post :email, params: { to: 'email@example.com', type: 'not-a-type' }
           end.not_to change { ActionMailer::Base.deliveries.count }
           expect(flash[:error]).to eq 'Invalid email type provided'
         end
 
-        it 'should validate multiple emails correctly' do
+        it 'validates multiple emails correctly' do
           expect do
             post(
               :email,
@@ -116,7 +116,7 @@ RSpec.describe CatalogController do
           expect(flash[:error]).to eq 'You must enter only valid email addresses.'
         end
 
-        it 'should prevent emails with too many addresses from being sent' do
+        it 'prevents emails with too many addresses from being sent' do
           expect do
             post(
               :email,
@@ -140,31 +140,31 @@ RSpec.describe CatalogController do
 
   describe "routes" do
     describe "customized from Blacklight" do
-      it "should route /view/:id properly" do
+      it "routes /view/:id properly" do
         expect({ get: '/view/1234' }).to route_to(controller: 'catalog', action: 'show', id: '1234')
       end
-      it "should route solr_document_path to /view" do
+      it "routes solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'
       end
-      it "should route solr_document_path to /view" do
+      it "routes solr_document_path to /view" do
         expect(solr_document_path('1234')).to eq '/view/1234'
       end
-      it "should route the librarian view properly" do
+      it "routes the librarian view properly" do
         expect({ get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
       end
-      it "should route the stackmap view properly" do
+      it "routes the stackmap view properly" do
         expect({ get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
       end
     end
 
     describe "/databases" do
-      it "should route to the database format" do
+      it "routes to the database format" do
         expect({ get: "/databases" }).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
 
     describe "/backend_lookup" do
-      it "should route to the backend lookup path as json" do
+      it "routes to the backend lookup path as json" do
         expect({ get: "/backend_lookup" }).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
       end
     end
@@ -173,7 +173,7 @@ RSpec.describe CatalogController do
   describe "blacklight config" do
     let(:config) { controller.blacklight_config }
 
-    it "should have the correct facet order" do
+    it "has the correct facet order" do
       keys = config.facet_fields.keys
       expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
       expect(keys.index("format_main_ssim")).to be < keys.index("format_physical_ssim")
@@ -190,24 +190,24 @@ RSpec.describe CatalogController do
       expect(keys.index("author_other_facet")).to be < keys.index("format")
     end
     describe 'facet sort' do
-      it 'should set an index sort for the resource type facet' do
+      it 'sets an index sort for the resource type facet' do
         expect(config.facet_fields['format_main_ssim'].sort).to eq :index
       end
-      it 'should set an index sort for the building type facet' do
+      it 'sets an index sort for the building type facet' do
         expect(config.facet_fields['building_facet'].sort).to eq :index
       end
-      it 'should set an index sort for the database topic facet' do
+      it 'sets an index sort for the database topic facet' do
         expect(config.facet_fields['db_az_subject'].sort).to eq :index
       end
     end
 
     describe "facet limits" do
-      it "should set a very high facet limit on building and format" do
+      it "sets a very high facet limit on building and format" do
         ['building_facet', 'format_main_ssim'].each do |facet|
           expect(config.facet_fields[facet].limit).to eq 100
         end
       end
-      it "should set the correct facet limits on standard facets" do
+      it "sets the correct facet limits on standard facets" do
         ['author_person_facet', 'topic_facet', 'genre_ssim'].each do |facet|
           expect(config.facet_fields[facet].limit).to eq 20
         end
@@ -215,7 +215,7 @@ RSpec.describe CatalogController do
     end
 
     describe 'search types' do
-      it 'should include Author+Title search' do
+      it 'includes Author+Title search' do
         search_field = config.search_fields["author_title"]
         expect(search_field).to be_present
         expect(search_field.label).to eq "Author + Title"

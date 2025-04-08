@@ -34,7 +34,7 @@ RSpec.describe "catalog/librarian_view" do
       render
     end
 
-    it "should render the mods_view" do
+    it "renders the mods_view" do
       expect(rendered).to have_content('August  2, 2022  4:01pm')
       expect(rendered).to have_css('.mods-view')
     end
@@ -46,7 +46,7 @@ RSpec.describe "catalog/librarian_view" do
       render
     end
 
-    it "should indicate there is no librarian view" do
+    it "indicates there is no librarian view" do
       expect(rendered).to have_content('No librarian view available')
     end
   end

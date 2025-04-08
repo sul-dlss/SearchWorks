@@ -38,7 +38,7 @@ RSpec.describe SearchWorksRecordMailer do
       end
       let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }
 
-      it 'should send an HTML email' do
+      it 'sends an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"
       end
 
@@ -57,7 +57,7 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include 'Email from: Jane Stanford'
       end
 
-      it 'should include the provided message' do
+      it 'includes the provided message' do
         expect(mail.body).to include "The message"
       end
 
@@ -77,7 +77,7 @@ RSpec.describe SearchWorksRecordMailer do
     context 'catalog' do
       let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
 
-      it 'should send an HTML email' do
+      it 'sends an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"
       end
 
@@ -95,16 +95,16 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include 'Email from: Jane Stanford'
       end
 
-      it 'should include the provided message' do
+      it 'includes the provided message' do
         expect(mail.body).to include "The message"
       end
 
-      it 'should include the titles of all documents' do
+      it 'includes the titles of all documents' do
         expect(mail.body).to include "Title1"
         expect(mail.body).to include "Title2"
       end
 
-      it 'should include the callnumbers' do
+      it 'includes the callnumbers' do
         expect(mail.body).to include "Green Library - Stacks"
         expect(mail.body).to include "ABC 123"
 
@@ -112,13 +112,13 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include "ABC 321"
       end
 
-      it 'should include the URLs' do
+      it 'includes the URLs' do
         expect(mail.body).to include "Online:"
         expect(mail.body).to include "https://library.stanford.edu"
         expect(mail.body).to include "https://stacks.stanford.edu"
       end
 
-      it 'should include the URL to all the documents' do
+      it 'includes the URL to all the documents' do
         expect(mail.body).to have_link("Title1", href: "http://example.com/view/123")
         expect(mail.body).to have_link("Title2", href: "http://example.com/view/321")
       end
@@ -129,11 +129,11 @@ RSpec.describe SearchWorksRecordMailer do
     context 'catalog' do
       let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
 
-      it 'should send a html email' do
+      it 'sends a html email' do
         expect(mail.content_type).to match(/text\/html/)
       end
 
-      it 'should include full HTML markup' do
+      it 'includes full HTML markup' do
         expect(mail.body).to have_css('html')
         expect(mail.body).to have_css('body')
       end
@@ -143,27 +143,27 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to have_css('dd', text: 'Jane Stanford')
       end
 
-      it 'should include the titles of all documents as links' do
+      it 'includes the titles of all documents as links' do
         expect(mail.body).to have_css('h1 a', text: 'Title1')
         expect(mail.body).to have_css('h1 a', text: 'Title2')
       end
 
-      it 'should include Subjects and Bibliographic information from both MARC and MODS records' do
+      it 'includes Subjects and Bibliographic information from both MARC and MODS records' do
         expect(mail.body).to have_css('h3', text: 'Subjects', count: 2)
         expect(mail.body).to have_css('h3', text: 'Bibliographic information', count: 2)
       end
 
-      it 'should include the HTML markup for MARC records' do
+      it 'includes the HTML markup for MARC records' do
         expect(mail.body).to have_css('dt', text: 'Related Work')
         expect(mail.body).to have_css('dd', text: 'A quartely publication.')
       end
 
-      it 'should include the HTML markup for MODS records' do
+      it 'includes the HTML markup for MODS records' do
         expect(mail.body).to have_css('dt', text: 'Producer')
         expect(mail.body).to have_css('dd', text: 'B. Smith')
       end
 
-      it 'should include holdings of all documents' do
+      it 'includes holdings of all documents' do
         expect(mail.body).to have_css('h2', text: 'At the library', count: documents.length)
         expect(mail.body).to have_css('dt', text: 'Green Library - Stacks')
 
@@ -173,12 +173,12 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to have_css('dd', text: 'ABC 321')
       end
 
-      it 'should include links of all the documents' do
+      it 'includes links of all the documents' do
         expect(mail.body).to have_css('h2', text: 'Online')
         expect(mail.body).to have_css('a', text: 'Find full text', count: documents.length)
       end
 
-      it 'should separate records w/ a horizontal rule' do
+      it 'separates records w/ a horizontal rule' do
         expect(mail.body).to have_css('hr', count: documents.length)
       end
 

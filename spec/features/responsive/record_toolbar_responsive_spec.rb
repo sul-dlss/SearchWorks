@@ -16,7 +16,7 @@ RSpec.describe "Record toolbar", :feature, :js do
     context 'a citable item' do
       before { page.find('a', text: 'An object').click }
 
-      it 'should display a cite this link toolbar items' do
+      it 'displays a cite this link toolbar items' do
         expect(page).to have_css('div.record-toolbar', visible: true)
         within '#content' do
           within 'div.navbar-collapse' do
@@ -34,7 +34,7 @@ RSpec.describe "Record toolbar", :feature, :js do
         end
       end
 
-      it "should display all toolbar items" do
+      it "displays all toolbar items" do
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)
 
@@ -83,7 +83,7 @@ RSpec.describe "Record toolbar", :feature, :js do
         end
       end
 
-      it "should display correct toolbar items" do
+      it "displays correct toolbar items" do
         within "#content" do
           expect(page).to have_css("div.record-toolbar", visible: true)
 

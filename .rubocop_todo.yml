@@ -9,16 +9,16 @@
 # Offense count: 21
 Capybara/SpecificActions:
   Exclude:
-    - 'spec/features/blacklight_customizations/emailing_records_spec.rb'
-    - 'spec/features/brief_view_spec.rb'
-    - 'spec/features/image_collection_spec.rb'
-    - 'spec/features/merged_file_collection_spec.rb'
-    - 'spec/features/merged_image_collections_spec.rb'
-    - 'spec/features/mhld_spec.rb'
-    - 'spec/features/responsive/record_toolbar_responsive_spec.rb'
-    - 'spec/features/skip_to_nav_spec.rb'
-    - 'spec/features/sort_and_per_page_dropdown_spec.rb'
-    - 'spec/features/tabbed_selections_spec.rb'
+    - "spec/features/blacklight_customizations/emailing_records_spec.rb"
+    - "spec/features/brief_view_spec.rb"
+    - "spec/features/image_collection_spec.rb"
+    - "spec/features/merged_file_collection_spec.rb"
+    - "spec/features/merged_image_collections_spec.rb"
+    - "spec/features/mhld_spec.rb"
+    - "spec/features/responsive/record_toolbar_responsive_spec.rb"
+    - "spec/features/skip_to_nav_spec.rb"
+    - "spec/features/sort_and_per_page_dropdown_spec.rb"
+    - "spec/features/tabbed_selections_spec.rb"
 
 # Offense count: 64
 Capybara/SpecificMatcher:
@@ -34,9 +34,9 @@ Capybara/VisibilityMatcher:
 # SupportedStyles: with_first_argument, with_fixed_indentation
 Layout/ArgumentAlignment:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/helpers/feedback_form_helper.rb'
-    - 'spec/models/eds/repository_spec.rb'
+    - "app/controllers/catalog_controller.rb"
+    - "app/helpers/feedback_form_helper.rb"
+    - "spec/models/eds/repository_spec.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
@@ -44,62 +44,62 @@ Layout/ArgumentAlignment:
 # SupportedStylesAlignWith: start_of_line, begin
 Layout/BeginEndAlignment:
   Exclude:
-    - 'app/models/performance_alerts.rb'
+    - "app/models/performance_alerts.rb"
 
 # Offense count: 10
 # This cop supports safe autocorrection (--autocorrect).
 Layout/BlockEndNewline:
   Exclude:
-    - 'spec/lib/holdings/library_spec.rb'
-    - 'spec/lib/holdings/location_spec.rb'
-    - 'spec/models/concerns/cjk_query_spec.rb'
-    - 'spec/models/concerns/collection_member_spec.rb'
-    - 'spec/models/concerns/digital_collection_spec.rb'
-    - 'spec/models/concerns/index_authors_spec.rb'
-    - 'spec/views/collection_members/_file_collection_members.html.erb_spec.rb'
+    - "spec/lib/holdings/library_spec.rb"
+    - "spec/lib/holdings/location_spec.rb"
+    - "spec/models/concerns/cjk_query_spec.rb"
+    - "spec/models/concerns/collection_member_spec.rb"
+    - "spec/models/concerns/digital_collection_spec.rb"
+    - "spec/models/concerns/index_authors_spec.rb"
+    - "spec/views/collection_members/_file_collection_members.html.erb_spec.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Layout/ClosingParenthesisIndentation:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
+    - "app/views/catalog/index.atom.builder"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowForAlignment.
 Layout/CommentIndentation:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
+    - "app/controllers/catalog_controller.rb"
 
 # Offense count: 5
 # This cop supports safe autocorrection (--autocorrect).
 Layout/ElseAlignment:
   Exclude:
-    - 'app/components/access_panels/library_component.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/models/concerns/schema_dot_org.rb'
+    - "app/components/access_panels/library_component.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/models/concerns/schema_dot_org.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLineAfterGuardClause:
   Exclude:
-    - 'lib/hours_request.rb'
+    - "lib/hours_request.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EmptyLineBetweenMethodDefs, EmptyLineBetweenClassDefs, EmptyLineBetweenModuleDefs, DefLikeMacros, AllowAdjacentOneLineDefs, NumberOfEmptyLines.
 Layout/EmptyLineBetweenDefs:
   Exclude:
-    - 'app/models/concerns/cjk_query.rb'
+    - "app/models/concerns/cjk_query.rb"
 
 # Offense count: 7
 # This cop supports safe autocorrection (--autocorrect).
 Layout/EmptyLines:
   Exclude:
-    - 'app/models/concerns/cjk_query.rb'
-    - 'app/views/catalog/index.atom.builder'
-    - 'config/initializers/new_framework_defaults_7_1.rb'
-    - 'spec/views/catalog/thumbnails/_collection_thumbnail.html.erb_spec.rb'
+    - "app/models/concerns/cjk_query.rb"
+    - "app/views/catalog/index.atom.builder"
+    - "config/initializers/new_framework_defaults_7_1.rb"
+    - "spec/views/catalog/thumbnails/_collection_thumbnail.html.erb_spec.rb"
 
 # Offense count: 7
 # This cop supports safe autocorrection (--autocorrect).
@@ -107,13 +107,13 @@ Layout/EmptyLines:
 # AllowedMethods: alias_method, public, protected, private
 Layout/EmptyLinesAroundAttributeAccessor:
   Exclude:
-    - 'app/models/concerns/eds_subjects.rb'
-    - 'app/models/marc_fields/marc_field_wrapper.rb'
-    - 'app/models/search_tips.rb'
-    - 'app/services/eds/search_service.rb'
-    - 'config/initializers/okcomputer.rb'
-    - 'spec/presenters/facet_options_presenter_spec.rb'
-    - 'spec/support/stub_article_service.rb'
+    - "app/models/concerns/eds_subjects.rb"
+    - "app/models/marc_fields/marc_field_wrapper.rb"
+    - "app/models/search_tips.rb"
+    - "app/services/eds/search_service.rb"
+    - "config/initializers/okcomputer.rb"
+    - "spec/presenters/facet_options_presenter_spec.rb"
+    - "spec/support/stub_article_service.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -121,7 +121,7 @@ Layout/EmptyLinesAroundAttributeAccessor:
 # SupportedStyles: empty_lines, no_empty_lines
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
+    - "app/views/catalog/index.atom.builder"
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
@@ -129,20 +129,20 @@ Layout/EmptyLinesAroundBlockBody:
 # SupportedStylesAlignWith: keyword, variable, start_of_line
 Layout/EndAlignment:
   Exclude:
-    - 'app/components/access_panels/library_component.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/models/concerns/schema_dot_org.rb'
+    - "app/components/access_panels/library_component.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/models/concerns/schema_dot_org.rb"
 
 # Offense count: 7
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
 Layout/ExtraSpacing:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'spec/controllers/concerns/replace_special_quotes_spec.rb'
-    - 'spec/features/article_record_toolbar_spec.rb'
-    - 'spec/models/concerns/marc_links_spec.rb'
-    - 'spec/models/marc_fields/marc_field_wrapper_spec.rb'
+    - "app/views/catalog/index.atom.builder"
+    - "spec/controllers/concerns/replace_special_quotes_spec.rb"
+    - "spec/features/article_record_toolbar_spec.rb"
+    - "spec/models/concerns/marc_links_spec.rb"
+    - "spec/models/marc_fields/marc_field_wrapper_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -150,8 +150,8 @@ Layout/ExtraSpacing:
 # SupportedStyles: consistent, consistent_relative_to_receiver, special_for_inner_method_call, special_for_inner_method_call_in_parentheses
 Layout/FirstArgumentIndentation:
   Exclude:
-    - 'spec/views/catalog/record/_marc_contents_summary.html.erb_spec.rb'
-    - 'spec/views/catalog/record/_marc_subjects.html.erb_spec.rb'
+    - "spec/views/catalog/record/_marc_contents_summary.html.erb_spec.rb"
+    - "spec/views/catalog/record/_marc_subjects.html.erb_spec.rb"
 
 # Offense count: 46
 # This cop supports safe autocorrection (--autocorrect).
@@ -166,8 +166,8 @@ Layout/FirstArrayElementIndentation:
 # SupportedStyles: special_inside_parentheses, consistent, align_braces
 Layout/FirstHashElementIndentation:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/catalog_controller.rb"
 
 # Offense count: 131
 # This cop supports safe autocorrection (--autocorrect).
@@ -177,40 +177,40 @@ Layout/FirstHashElementIndentation:
 # SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
 Layout/HashAlignment:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/models/concerns/eds_links.rb'
-    - 'app/models/eds/session.rb'
-    - 'app/models/marc_fields/linked_related_works.rb'
-    - 'app/views/catalog/index.atom.builder'
-    - 'spec/features/article_searching_spec.rb'
-    - 'spec/models/concerns/cjk_query_spec.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/catalog_controller.rb"
+    - "app/models/concerns/eds_links.rb"
+    - "app/models/eds/session.rb"
+    - "app/models/marc_fields/linked_related_works.rb"
+    - "app/views/catalog/index.atom.builder"
+    - "spec/features/article_searching_spec.rb"
+    - "spec/models/concerns/cjk_query_spec.rb"
 
 # Offense count: 7
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: Width, AllowedPatterns.
 Layout/IndentationWidth:
   Exclude:
-    - 'app/components/access_panels/library_component.rb'
-    - 'app/controllers/concerns/stanford_work_facet.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/models/concerns/schema_dot_org.rb'
-    - 'app/models/marc_fields/marc_field_wrapper.rb'
+    - "app/components/access_panels/library_component.rb"
+    - "app/controllers/concerns/stanford_work_facet.rb"
+    - "app/helpers/application_helper.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/models/concerns/schema_dot_org.rb"
+    - "app/models/marc_fields/marc_field_wrapper.rb"
 
 # Offense count: 10
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowDoxygenCommentStyle, AllowGemfileRubyComment, AllowRBSInlineAnnotation, AllowSteepAnnotation.
 Layout/LeadingCommentSpace:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/application_record.rb'
-    - 'app/views/catalog/index.mobile.builder'
-    - 'spec/components/access_panels/at_the_library_component_spec.rb'
-    - 'spec/features/file_collection_spec.rb'
-    - 'spec/features/image_collection_spec.rb'
+    - "app/controllers/catalog_controller.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
+    - "app/models/application_record.rb"
+    - "app/views/catalog/index.mobile.builder"
+    - "spec/components/access_panels/at_the_library_component_spec.rb"
+    - "spec/features/file_collection_spec.rb"
+    - "spec/features/image_collection_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -218,8 +218,8 @@ Layout/LeadingCommentSpace:
 # SupportedStyles: space, no_space
 Layout/LineContinuationSpacing:
   Exclude:
-    - 'spec/features/alternate_catalog_spec.rb'
-    - 'spec/views/catalog/_alternate_catalog.html.erb_spec.rb'
+    - "spec/features/alternate_catalog_spec.rb"
+    - "spec/views/catalog/_alternate_catalog.html.erb_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -227,20 +227,20 @@ Layout/LineContinuationSpacing:
 # SupportedStyles: aligned, indented
 Layout/LineEndStringConcatenationIndentation:
   Exclude:
-    - 'spec/features/alternate_catalog_spec.rb'
-    - 'spec/views/catalog/_alternate_catalog.html.erb_spec.rb'
+    - "spec/features/alternate_catalog_spec.rb"
+    - "spec/views/catalog/_alternate_catalog.html.erb_spec.rb"
 
 # Offense count: 9
 # This cop supports safe autocorrection (--autocorrect).
 Layout/MultilineBlockLayout:
   Exclude:
-    - 'spec/lib/holdings/library_spec.rb'
-    - 'spec/lib/holdings/location_spec.rb'
-    - 'spec/models/concerns/cjk_query_spec.rb'
-    - 'spec/models/concerns/collection_member_spec.rb'
-    - 'spec/models/concerns/digital_collection_spec.rb'
-    - 'spec/models/concerns/index_authors_spec.rb'
-    - 'spec/views/collection_members/_file_collection_members.html.erb_spec.rb'
+    - "spec/lib/holdings/library_spec.rb"
+    - "spec/lib/holdings/location_spec.rb"
+    - "spec/models/concerns/cjk_query_spec.rb"
+    - "spec/models/concerns/collection_member_spec.rb"
+    - "spec/models/concerns/digital_collection_spec.rb"
+    - "spec/models/concerns/index_authors_spec.rb"
+    - "spec/views/collection_members/_file_collection_members.html.erb_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -248,7 +248,7 @@ Layout/MultilineBlockLayout:
 # SupportedStyles: symmetrical, new_line, same_line
 Layout/MultilineHashBraceLayout:
   Exclude:
-    - 'app/helpers/browse_helper.rb'
+    - "app/helpers/browse_helper.rb"
 
 # Offense count: 5
 # This cop supports safe autocorrection (--autocorrect).
@@ -256,8 +256,8 @@ Layout/MultilineHashBraceLayout:
 # SupportedStyles: symmetrical, new_line, same_line
 Layout/MultilineMethodCallBraceLayout:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'spec/models/eds/repository_spec.rb'
+    - "app/views/catalog/index.atom.builder"
+    - "spec/models/eds/repository_spec.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
@@ -265,7 +265,7 @@ Layout/MultilineMethodCallBraceLayout:
 # SupportedStyles: aligned, indented, indented_relative_to_receiver
 Layout/MultilineMethodCallIndentation:
   Exclude:
-    - 'config/environments/production.rb'
+    - "config/environments/production.rb"
 
 # Offense count: 6
 # This cop supports safe autocorrection (--autocorrect).
@@ -273,21 +273,21 @@ Layout/MultilineMethodCallIndentation:
 # SupportedStyles: aligned, indented
 Layout/MultilineOperationIndentation:
   Exclude:
-    - 'lib/search_query_modifier.rb'
-    - 'spec/helpers/application_helper_spec.rb'
+    - "lib/search_query_modifier.rb"
+    - "spec/helpers/application_helper_spec.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Layout/RescueEnsureAlignment:
   Exclude:
-    - 'app/models/performance_alerts.rb'
+    - "app/models/performance_alerts.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Layout/SpaceAfterComma:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'app/views/catalog/opensearch.xml.builder'
+    - "app/views/catalog/index.atom.builder"
+    - "app/views/catalog/opensearch.xml.builder"
 
 # Offense count: 15
 # This cop supports safe autocorrection (--autocorrect).
@@ -296,15 +296,15 @@ Layout/SpaceAfterComma:
 # SupportedStylesForRationalLiterals: space, no_space
 Layout/SpaceAroundOperators:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'app/views/catalog/opensearch.xml.builder'
+    - "app/views/catalog/index.atom.builder"
+    - "app/views/catalog/opensearch.xml.builder"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowForAlignment.
 Layout/SpaceBeforeFirstArg:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
+    - "app/views/catalog/index.atom.builder"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
@@ -313,7 +313,7 @@ Layout/SpaceBeforeFirstArg:
 # SupportedStylesForEmptyBrackets: space, no_space
 Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
-    - 'config/environments/production.rb'
+    - "config/environments/production.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -322,7 +322,7 @@ Layout/SpaceInsideArrayLiteralBrackets:
 # SupportedStylesForEmptyBraces: space, no_space
 Layout/SpaceInsideBlockBraces:
   Exclude:
-    - 'spec/models/search_builder_spec.rb'
+    - "spec/models/search_builder_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -331,7 +331,7 @@ Layout/SpaceInsideBlockBraces:
 # SupportedStylesForEmptyBraces: space, no_space
 Layout/SpaceInsideHashLiteralBraces:
   Exclude:
-    - 'spec/helpers/catalog_helper_spec.rb'
+    - "spec/helpers/catalog_helper_spec.rb"
 
 # Offense count: 6
 # This cop supports safe autocorrection (--autocorrect).
@@ -339,70 +339,70 @@ Layout/SpaceInsideHashLiteralBraces:
 # SupportedStyles: space, compact, no_space
 Layout/SpaceInsideParens:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'spec/components/access_panels/at_the_library_component_spec.rb'
+    - "app/views/catalog/index.atom.builder"
+    - "spec/components/access_panels/at_the_library_component_spec.rb"
 
 # Offense count: 10
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowInHeredoc.
 Layout/TrailingWhitespace:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
-    - 'config/initializers/new_framework_defaults_7_1.rb'
+    - "app/views/catalog/index.atom.builder"
+    - "config/initializers/new_framework_defaults_7_1.rb"
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowedMethods, AllowedPatterns.
 Lint/AmbiguousBlockAssociation:
   Exclude:
-    - 'spec/controllers/catalog_controller_spec.rb'
+    - "spec/controllers/catalog_controller_spec.rb"
 
 # Offense count: 13
 # This cop supports safe autocorrection (--autocorrect).
 Lint/AmbiguousRegexpLiteral:
   Exclude:
-    - 'spec/controllers/concerns/callnumber_search_spec.rb'
-    - 'spec/helpers/collection_helper_spec.rb'
-    - 'spec/helpers/masthead_helper_spec.rb'
-    - 'spec/helpers/record_helper_spec.rb'
-    - 'spec/models/concerns/mods_data_spec.rb'
-    - 'spec/tasks/fixtures_indexer_spec.rb'
+    - "spec/controllers/concerns/callnumber_search_spec.rb"
+    - "spec/helpers/collection_helper_spec.rb"
+    - "spec/helpers/masthead_helper_spec.rb"
+    - "spec/helpers/record_helper_spec.rb"
+    - "spec/models/concerns/mods_data_spec.rb"
+    - "spec/tasks/fixtures_indexer_spec.rb"
 
 # Offense count: 1
 # Configuration parameters: IgnoreLiteralBranches, IgnoreConstantBranches, IgnoreDuplicateElseBranch.
 Lint/DuplicateBranch:
   Exclude:
-    - 'app/models/concerns/eds_subjects.rb'
+    - "app/models/concerns/eds_subjects.rb"
 
 # Offense count: 1
 # Configuration parameters: AllowComments, AllowEmptyLambdas.
 Lint/EmptyBlock:
   Exclude:
-    - 'app/controllers/bookmarks_controller.rb'
+    - "app/controllers/bookmarks_controller.rb"
 
 # Offense count: 7
 # Configuration parameters: AllowedParentClasses.
 Lint/MissingSuper:
   Exclude:
-    - 'app/components/access_panels/base.rb'
-    - 'app/components/access_panels/layout_component.rb'
-    - 'app/components/access_panels/library_component.rb'
-    - 'app/components/access_panels/library_location_component.rb'
-    - 'app/components/advanced_search_range_limit_component.rb'
-    - 'app/components/searchworks/response/facet_group_component.rb'
-    - 'app/models/marc_fields/linked_author.rb'
+    - "app/components/access_panels/base.rb"
+    - "app/components/access_panels/layout_component.rb"
+    - "app/components/access_panels/library_component.rb"
+    - "app/components/access_panels/library_location_component.rb"
+    - "app/components/advanced_search_range_limit_component.rb"
+    - "app/components/searchworks/response/facet_group_component.rb"
+    - "app/models/marc_fields/linked_author.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/ParenthesesAsGroupedExpression:
   Exclude:
-    - 'spec/features/home_page_spec.rb'
+    - "spec/features/home_page_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Lint/RedundantCopDisableDirective:
   Exclude:
-    - 'spec/models/marc_fields/linked_author_spec.rb'
+    - "spec/models/marc_fields/linked_author_spec.rb"
 
 # Offense count: 11
 # This cop supports safe autocorrection (--autocorrect).
@@ -410,19 +410,19 @@ Lint/RedundantCopDisableDirective:
 # SupportedStyles: strict, consistent
 Lint/SymbolConversion:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
-    - 'spec/models/citation_spec.rb'
-    - 'spec/models/json_results_document_presenter_spec.rb'
+    - "app/controllers/catalog_controller.rb"
+    - "spec/models/citation_spec.rb"
+    - "spec/models/json_results_document_presenter_spec.rb"
 
 # Offense count: 12
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AutoCorrect, IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
 Lint/UnusedBlockArgument:
   Exclude:
-    - 'app/models/article_search_builder.rb'
-    - 'app/models/marc_fields/issn.rb'
-    - 'config/initializers/devise.rb'
-    - 'lib/tasks/searchworks.rake'
+    - "app/models/article_search_builder.rb"
+    - "app/models/marc_fields/issn.rb"
+    - "config/initializers/devise.rb"
+    - "lib/tasks/searchworks.rake"
 
 # Offense count: 9
 # This cop supports safe autocorrection (--autocorrect).
@@ -430,18 +430,18 @@ Lint/UnusedBlockArgument:
 # NotImplementedExceptions: NotImplementedError
 Lint/UnusedMethodArgument:
   Exclude:
-    - 'app/components/advanced_search_range_limit_component.rb'
-    - 'app/components/metadata_field_layout_component.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/helpers/collection_helper.rb'
-    - 'app/helpers/thumbnail_helper.rb'
-    - 'app/services/eds/search_service.rb'
+    - "app/components/advanced_search_range_limit_component.rb"
+    - "app/components/metadata_field_layout_component.rb"
+    - "app/controllers/catalog_controller.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/helpers/collection_helper.rb"
+    - "app/helpers/thumbnail_helper.rb"
+    - "app/services/eds/search_service.rb"
 
 # Offense count: 1
 Naming/AccessorMethodName:
   Exclude:
-    - 'app/helpers/collection_access_point_helper.rb'
+    - "app/helpers/collection_access_point_helper.rb"
 
 # Offense count: 58
 # This cop supports safe autocorrection (--autocorrect).
@@ -449,9 +449,9 @@ Naming/AccessorMethodName:
 # SupportedStyles: lowercase, uppercase
 Naming/HeredocDelimiterCase:
   Exclude:
-    - 'spec/fixtures/marc_records/marc_856_fixtures.rb'
-    - 'spec/fixtures/marc_records/marc_metadata_fixtures.rb'
-    - 'spec/fixtures/mods_records/mods_fixtures.rb'
+    - "spec/fixtures/marc_records/marc_856_fixtures.rb"
+    - "spec/fixtures/marc_records/marc_metadata_fixtures.rb"
+    - "spec/fixtures/mods_records/mods_fixtures.rb"
 
 # Offense count: 4
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -459,10 +459,10 @@ Naming/HeredocDelimiterCase:
 # SupportedStylesForLeadingUnderscores: disallowed, required, optional
 Naming/MemoizedInstanceVariableName:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'app/models/concerns/solr_set.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/catalog_controller.rb"
+    - "app/helpers/article_helper.rb"
+    - "app/models/concerns/solr_set.rb"
 
 # Offense count: 3
 # Configuration parameters: NamePrefix, ForbiddenPrefixes, AllowedMethods, MethodDefinitionMacros, UseSorbetSigs.
@@ -472,9 +472,9 @@ Naming/MemoizedInstanceVariableName:
 # MethodDefinitionMacros: define_method, define_singleton_method
 Naming/PredicateName:
   Exclude:
-    - 'app/models/concerns/collection_member.rb'
-    - 'app/models/concerns/database_document.rb'
-    - 'app/models/concerns/digital_collection.rb'
+    - "app/models/concerns/collection_member.rb"
+    - "app/models/concerns/database_document.rb"
+    - "app/models/concerns/digital_collection.rb"
 
 # Offense count: 23
 # Configuration parameters: EnforcedStyle, CheckMethodNames, CheckSymbols, AllowedIdentifiers, AllowedPatterns.
@@ -482,41 +482,41 @@ Naming/PredicateName:
 # AllowedIdentifiers: TLS1_1, TLS1_2, capture3, iso8601, rfc1123_date, rfc822, rfc2822, rfc3339, x86_64
 Naming/VariableNumber:
   Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/hoover_open_url_request.rb'
-    - 'spec/fixtures/marc_records/marc_856_fixtures.rb'
-    - 'spec/fixtures/mods_records/mods_fixtures.rb'
-    - 'spec/helpers/results_document_helper_spec.rb'
-    - 'spec/models/concerns/cjk_query_spec.rb'
+    - "app/helpers/xml_api_helper.rb"
+    - "app/models/hoover_open_url_request.rb"
+    - "spec/fixtures/marc_records/marc_856_fixtures.rb"
+    - "spec/fixtures/mods_records/mods_fixtures.rb"
+    - "spec/helpers/results_document_helper_spec.rb"
+    - "spec/models/concerns/cjk_query_spec.rb"
 
 # Offense count: 15
 RSpec/AnyInstance:
   Exclude:
-    - 'spec/controllers/catalog_controller_spec.rb'
-    - 'spec/controllers/feedback_forms_controller_spec.rb'
-    - 'spec/features/access_panels/online_spec.rb'
-    - 'spec/features/article_display_spec.rb'
-    - 'spec/lib/purl_embed_spec.rb'
-    - 'spec/presenters/sms_presenter_spec.rb'
-    - 'spec/support/stub_article_service.rb'
-    - 'spec/tasks/fixtures_indexer_spec.rb'
+    - "spec/controllers/catalog_controller_spec.rb"
+    - "spec/controllers/feedback_forms_controller_spec.rb"
+    - "spec/features/access_panels/online_spec.rb"
+    - "spec/features/article_display_spec.rb"
+    - "spec/lib/purl_embed_spec.rb"
+    - "spec/presenters/sms_presenter_spec.rb"
+    - "spec/support/stub_article_service.rb"
+    - "spec/tasks/fixtures_indexer_spec.rb"
 
 # Offense count: 2
 RSpec/BeforeAfterAll:
   Exclude:
-    - 'spec/helpers/results_document_helper_spec.rb'
-    - 'spec/lib/sms_spec.rb'
+    - "spec/helpers/results_document_helper_spec.rb"
+    - "spec/lib/sms_spec.rb"
 
 # Offense count: 18
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/ContextMethod:
   Exclude:
-    - 'spec/helpers/article_helper_spec.rb'
-    - 'spec/models/concerns/eds_links_spec.rb'
-    - 'spec/models/concerns/eds_subjects_spec.rb'
-    - 'spec/models/marc_fields/linked_related_works_spec.rb'
-    - 'spec/routing/article_routes_spec.rb'
-    - 'spec/services/eds/search_service_spec.rb'
+    - "spec/helpers/article_helper_spec.rb"
+    - "spec/models/concerns/eds_links_spec.rb"
+    - "spec/models/concerns/eds_subjects_spec.rb"
+    - "spec/models/marc_fields/linked_related_works_spec.rb"
+    - "spec/routing/article_routes_spec.rb"
+    - "spec/services/eds/search_service_spec.rb"
 
 # Offense count: 214
 # Configuration parameters: Prefixes, AllowedPatterns.
@@ -541,35 +541,28 @@ RSpec/EmptyLineAfterExample:
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/EmptyLineAfterFinalLet:
   Exclude:
-    - 'spec/features/access_panels/exhibit_spec.rb'
-    - 'spec/models/marc_extractor_spec.rb'
+    - "spec/features/access_panels/exhibit_spec.rb"
+    - "spec/models/marc_extractor_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/EmptyLineAfterSubject:
   Exclude:
-    - 'spec/components/access_panels/library_component_spec.rb'
+    - "spec/components/access_panels/library_component_spec.rb"
 
 # Offense count: 217
 # Configuration parameters: CountAsOne.
 RSpec/ExampleLength:
   Max: 30
 
-# Offense count: 402
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: CustomTransform, IgnoredWords, DisallowedExamples.
-# DisallowedExamples: works
-RSpec/ExampleWording:
-  Enabled: false
-
 # Offense count: 8
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/ExcessiveDocstringSpacing:
   Exclude:
-    - 'spec/features/responsive/record_toolbar_responsive_spec.rb'
-    - 'spec/features/responsive/results_toolbar_spec.rb'
-    - 'spec/features/responsive/search_toolbar_responsive_spec.rb'
-    - 'spec/mailers/search_works_record_mailer_spec.rb'
+    - "spec/features/responsive/record_toolbar_responsive_spec.rb"
+    - "spec/features/responsive/results_toolbar_spec.rb"
+    - "spec/features/responsive/search_toolbar_responsive_spec.rb"
+    - "spec/mailers/search_works_record_mailer_spec.rb"
 
 # Offense count: 34
 RSpec/ExpectInHook:
@@ -578,36 +571,36 @@ RSpec/ExpectInHook:
 # Offense count: 2
 RSpec/IdenticalEqualityAssertion:
   Exclude:
-    - 'spec/controllers/concerns/callnumber_search_spec.rb'
-    - 'spec/models/marc_fields/marc_field_wrapper_spec.rb'
+    - "spec/controllers/concerns/callnumber_search_spec.rb"
+    - "spec/models/marc_fields/marc_field_wrapper_spec.rb"
 
 # Offense count: 4
 # Configuration parameters: Max, AllowedIdentifiers, AllowedPatterns.
 RSpec/IndexedLet:
   Exclude:
-    - 'spec/controllers/recent_selections_controller_spec.rb'
-    - 'spec/models/concerns/cjk_query_spec.rb'
+    - "spec/controllers/recent_selections_controller_spec.rb"
+    - "spec/models/concerns/cjk_query_spec.rb"
 
 # Offense count: 18
 # Configuration parameters: AssignmentOnly.
 RSpec/InstanceVariable:
   Exclude:
-    - 'spec/helpers/bookmarks_helper_spec.rb'
-    - 'spec/helpers/results_document_helper_spec.rb'
-    - 'spec/services/eds/search_service_spec.rb'
+    - "spec/helpers/bookmarks_helper_spec.rb"
+    - "spec/helpers/results_document_helper_spec.rb"
+    - "spec/services/eds/search_service_spec.rb"
 
 # Offense count: 13
 RSpec/IteratedExpectation:
   Exclude:
-    - 'spec/lib/holdings_spec.rb'
-    - 'spec/lib/search_works_marc/instrumentation_spec.rb'
-    - 'spec/models/concerns/collection_member_spec.rb'
-    - 'spec/models/concerns/digital_collection_spec.rb'
-    - 'spec/models/concerns/eds_links_spec.rb'
-    - 'spec/models/concerns/eds_subjects_spec.rb'
-    - 'spec/models/concerns/index_links_spec.rb'
-    - 'spec/models/concerns/solr_bookplates_spec.rb'
-    - 'spec/tasks/fixtures_indexer_spec.rb'
+    - "spec/lib/holdings_spec.rb"
+    - "spec/lib/search_works_marc/instrumentation_spec.rb"
+    - "spec/models/concerns/collection_member_spec.rb"
+    - "spec/models/concerns/digital_collection_spec.rb"
+    - "spec/models/concerns/eds_links_spec.rb"
+    - "spec/models/concerns/eds_subjects_spec.rb"
+    - "spec/models/concerns/index_links_spec.rb"
+    - "spec/models/concerns/solr_bookplates_spec.rb"
+    - "spec/tasks/fixtures_indexer_spec.rb"
 
 # Offense count: 72
 # This cop supports safe autocorrection (--autocorrect).
@@ -617,16 +610,16 @@ RSpec/LeadingSubject:
 # Offense count: 6
 RSpec/LetSetup:
   Exclude:
-    - 'spec/controllers/recent_selections_controller_spec.rb'
-    - 'spec/presenters/facet_options_presenter_spec.rb'
+    - "spec/controllers/recent_selections_controller_spec.rb"
+    - "spec/presenters/facet_options_presenter_spec.rb"
 
 # Offense count: 4
 RSpec/MultipleDescribes:
   Exclude:
-    - 'spec/features/connection_form_spec.rb'
-    - 'spec/features/feedback_form_spec.rb'
-    - 'spec/features/preview_spec.rb'
-    - 'spec/features/quick_report_spec.rb'
+    - "spec/features/connection_form_spec.rb"
+    - "spec/features/feedback_form_spec.rb"
+    - "spec/features/preview_spec.rb"
+    - "spec/features/quick_report_spec.rb"
 
 # Offense count: 604
 RSpec/MultipleExpectations:
@@ -641,7 +634,7 @@ RSpec/MultipleMemoizedHelpers:
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/MultipleSubjects:
   Exclude:
-    - 'spec/services/eds/search_service_spec.rb'
+    - "spec/services/eds/search_service_spec.rb"
 
 # Offense count: 281
 # Configuration parameters: EnforcedStyle, IgnoreSharedExamples.
@@ -659,16 +652,16 @@ RSpec/NestedGroups:
 # AllowedPatterns: ^expect_, ^assert_
 RSpec/NoExpectationExample:
   Exclude:
-    - 'spec/lib/purl_embed_spec.rb'
+    - "spec/lib/purl_embed_spec.rb"
 
 # Offense count: 8
 RSpec/PendingWithoutReason:
   Exclude:
-    - 'spec/components/access_panels/at_the_library_component_spec.rb'
-    - 'spec/features/marc_results_metadata_spec.rb'
-    - 'spec/features/preview_spec.rb'
-    - 'spec/views/catalog/record/_callnumber_browse.html.erb_spec.rb'
-    - 'spec/views/catalog/record/_mods_bibliographic.html.erb_spec.rb'
+    - "spec/components/access_panels/at_the_library_component_spec.rb"
+    - "spec/features/marc_results_metadata_spec.rb"
+    - "spec/features/preview_spec.rb"
+    - "spec/views/catalog/record/_callnumber_browse.html.erb_spec.rb"
+    - "spec/views/catalog/record/_mods_bibliographic.html.erb_spec.rb"
 
 # Offense count: 42
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -676,43 +669,43 @@ RSpec/PendingWithoutReason:
 # SupportedStyles: inflected, explicit
 RSpec/PredicateMatcher:
   Exclude:
-    - 'spec/components/access_panels/online_component_spec.rb'
-    - 'spec/helpers/application_helper_spec.rb'
-    - 'spec/helpers/bookmarks_helper_spec.rb'
-    - 'spec/helpers/collection_access_point_helper_spec.rb'
-    - 'spec/helpers/feedback_form_helper_spec.rb'
-    - 'spec/lib/search_query_modifier_spec.rb'
-    - 'spec/models/concerns/collection_member_spec.rb'
-    - 'spec/models/concerns/database_document_spec.rb'
-    - 'spec/models/concerns/eds_links_spec.rb'
-    - 'spec/models/eds/repository_spec.rb'
+    - "spec/components/access_panels/online_component_spec.rb"
+    - "spec/helpers/application_helper_spec.rb"
+    - "spec/helpers/bookmarks_helper_spec.rb"
+    - "spec/helpers/collection_access_point_helper_spec.rb"
+    - "spec/helpers/feedback_form_helper_spec.rb"
+    - "spec/lib/search_query_modifier_spec.rb"
+    - "spec/models/concerns/collection_member_spec.rb"
+    - "spec/models/concerns/database_document_spec.rb"
+    - "spec/models/concerns/eds_links_spec.rb"
+    - "spec/models/eds/repository_spec.rb"
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 RSpec/ReceiveCounts:
   Exclude:
-    - 'spec/helpers/collection_access_point_helper_spec.rb'
-    - 'spec/tasks/fixtures_indexer_spec.rb'
-    - 'spec/views/collection_members/_file_collection_members.html.erb_spec.rb'
+    - "spec/helpers/collection_access_point_helper_spec.rb"
+    - "spec/tasks/fixtures_indexer_spec.rb"
+    - "spec/views/collection_members/_file_collection_members.html.erb_spec.rb"
 
 # Offense count: 9
 RSpec/RepeatedDescription:
   Exclude:
-    - 'spec/controllers/catalog_controller_spec.rb'
-    - 'spec/features/blacklight_customizations/devise_spec.rb'
+    - "spec/controllers/catalog_controller_spec.rb"
+    - "spec/features/blacklight_customizations/devise_spec.rb"
 
 # Offense count: 4
 RSpec/RepeatedExample:
   Exclude:
-    - 'spec/controllers/catalog_controller_spec.rb'
-    - 'spec/models/marc_fields/unlinked_series_spec.rb'
+    - "spec/controllers/catalog_controller_spec.rb"
+    - "spec/models/marc_fields/unlinked_series_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AutoCorrect.
 RSpec/ScatteredLet:
   Exclude:
-    - 'spec/presenters/sms_presenter_spec.rb'
+    - "spec/presenters/sms_presenter_spec.rb"
 
 # Offense count: 54
 RSpec/StubbedMock:
@@ -721,26 +714,26 @@ RSpec/StubbedMock:
 # Offense count: 6
 RSpec/SubjectDeclaration:
   Exclude:
-    - 'spec/controllers/concerns/callnumber_search_spec.rb'
-    - 'spec/models/bookplate_spec.rb'
-    - 'spec/models/concerns/solr_bookplates_spec.rb'
-    - 'spec/models/concerns/stacks_images_spec.rb'
-    - 'spec/models/eds/date_range_parser_spec.rb'
-    - 'spec/models/user_spec.rb'
+    - "spec/controllers/concerns/callnumber_search_spec.rb"
+    - "spec/models/bookplate_spec.rb"
+    - "spec/models/concerns/solr_bookplates_spec.rb"
+    - "spec/models/concerns/stacks_images_spec.rb"
+    - "spec/models/eds/date_range_parser_spec.rb"
+    - "spec/models/user_spec.rb"
 
 # Offense count: 18
 RSpec/SubjectStub:
   Exclude:
-    - 'spec/components/access_panels/sfx_component_spec.rb'
-    - 'spec/controllers/concerns/callnumber_search_spec.rb'
-    - 'spec/models/concerns/solr_set_spec.rb'
-    - 'spec/models/performance_alerts_spec.rb'
-    - 'spec/models/search_builder_spec.rb'
-    - 'spec/models/sfx_data_spec.rb'
-    - 'spec/models/user_spec.rb'
-    - 'spec/presenters/article_fulltext_link_presenter_spec.rb'
-    - 'spec/presenters/facet_options_presenter_spec.rb'
-    - 'spec/presenters/presenter_format_spec.rb'
+    - "spec/components/access_panels/sfx_component_spec.rb"
+    - "spec/controllers/concerns/callnumber_search_spec.rb"
+    - "spec/models/concerns/solr_set_spec.rb"
+    - "spec/models/performance_alerts_spec.rb"
+    - "spec/models/search_builder_spec.rb"
+    - "spec/models/sfx_data_spec.rb"
+    - "spec/models/user_spec.rb"
+    - "spec/presenters/article_fulltext_link_presenter_spec.rb"
+    - "spec/presenters/facet_options_presenter_spec.rb"
+    - "spec/presenters/presenter_format_spec.rb"
 
 # Offense count: 67
 # Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
@@ -750,52 +743,52 @@ RSpec/VerifiedDoubles:
 # Offense count: 2
 RSpec/VoidExpect:
   Exclude:
-    - 'spec/controllers/concerns/database_access_point_spec.rb'
+    - "spec/controllers/concerns/database_access_point_spec.rb"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Rails/ApplicationRecord:
   Exclude:
-    - 'app/models/user.rb'
+    - "app/models/user.rb"
 
 # Offense count: 11
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
 Rails/Blank:
   Exclude:
-    - 'app/components/access_panels/online_component.rb'
-    - 'app/controllers/availability_controller.rb'
-    - 'app/controllers/concerns/advanced_search_params_mapping.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/masthead_helper.rb'
-    - 'app/models/concerns/extent.rb'
-    - 'app/models/concerns/marc_bound_with_note.rb'
-    - 'app/models/marc_field.rb'
+    - "app/components/access_panels/online_component.rb"
+    - "app/controllers/availability_controller.rb"
+    - "app/controllers/concerns/advanced_search_params_mapping.rb"
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/masthead_helper.rb"
+    - "app/models/concerns/extent.rb"
+    - "app/models/concerns/marc_bound_with_note.rb"
+    - "app/models/marc_field.rb"
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Rails/CompactBlank:
   Exclude:
-    - 'app/controllers/concerns/email_validation.rb'
-    - 'app/models/concerns/extent.rb'
-    - 'app/models/hoover_open_url_request.rb'
-    - 'app/models/marc_fields/language.rb'
-    - 'app/models/marc_fields/subjects.rb'
+    - "app/controllers/concerns/email_validation.rb"
+    - "app/models/concerns/extent.rb"
+    - "app/models/hoover_open_url_request.rb"
+    - "app/models/marc_fields/language.rb"
+    - "app/models/marc_fields/subjects.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforceForPrefixed.
 Rails/Delegate:
   Exclude:
-    - 'app/components/access_panels/course_reserves_component.rb'
-    - 'app/components/searchworks_search_bar_component.rb'
-    - 'app/models/marc_fields/linked_author.rb'
+    - "app/components/access_panels/course_reserves_component.rb"
+    - "app/components/searchworks_search_bar_component.rb"
+    - "app/models/marc_fields/linked_author.rb"
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 Rails/DurationArithmetic:
   Exclude:
-    - 'spec/models/performance_alerts_spec.rb'
+    - "spec/models/performance_alerts_spec.rb"
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -805,7 +798,7 @@ Rails/DurationArithmetic:
 # AllowedReceivers: Gem::Specification, page
 Rails/DynamicFindBy:
   Exclude:
-    - 'spec/lib/holdings_spec.rb'
+    - "spec/lib/holdings_spec.rb"
 
 # Offense count: 10
 # This cop supports safe autocorrection (--autocorrect).
@@ -813,13 +806,13 @@ Rails/DynamicFindBy:
 # SupportedStyles: slashes, arguments
 Rails/FilePath:
   Exclude:
-    - 'app/controllers/concerns/backend_lookup.rb'
-    - 'app/controllers/hours_controller.rb'
-    - 'app/controllers/sfx_data_controller.rb'
-    - 'config/initializers/add_local_config_settings.rb'
-    - 'config/initializers/assets.rb'
-    - 'lib/fixtures_indexer.rb'
-    - 'lib/tasks/searchworks.rake'
+    - "app/controllers/concerns/backend_lookup.rb"
+    - "app/controllers/hours_controller.rb"
+    - "app/controllers/sfx_data_controller.rb"
+    - "config/initializers/add_local_config_settings.rb"
+    - "config/initializers/assets.rb"
+    - "lib/fixtures_indexer.rb"
+    - "lib/tasks/searchworks.rake"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -827,39 +820,39 @@ Rails/FilePath:
 # AllowedMethods: order, limit, select, lock
 Rails/FindEach:
   Exclude:
-    - 'spec/models/concerns/eds_links_spec.rb'
+    - "spec/models/concerns/eds_links_spec.rb"
 
 # Offense count: 11
 # Configuration parameters: Include.
 # Include: app/helpers/**/*.rb
 Rails/HelperInstanceVariable:
   Exclude:
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/collection_access_point_helper.rb'
-    - 'app/helpers/collection_helper.rb'
-    - 'app/helpers/masthead_helper.rb'
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/collection_access_point_helper.rb"
+    - "app/helpers/collection_helper.rb"
+    - "app/helpers/masthead_helper.rb"
 
 # Offense count: 4
 Rails/I18nLocaleTexts:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/mailers/feedback_mailer.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/mailers/feedback_mailer.rb"
 
 # Offense count: 13
 # Configuration parameters: Include.
 # Include: app/controllers/**/*.rb, app/mailers/**/*.rb
 Rails/LexicallyScopedActionFilter:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/controllers/concerns/advanced_search_params_mapping.rb'
-    - 'app/controllers/concerns/all_caps_params.rb'
-    - 'app/controllers/concerns/callnumber_search.rb'
-    - 'app/controllers/concerns/database_access_point.rb'
-    - 'app/controllers/concerns/location_facet.rb'
-    - 'app/controllers/concerns/replace_special_quotes.rb'
-    - 'app/controllers/concerns/search_relevancy_logging.rb'
-    - 'app/controllers/concerns/stanford_work_facet.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/catalog_controller.rb"
+    - "app/controllers/concerns/advanced_search_params_mapping.rb"
+    - "app/controllers/concerns/all_caps_params.rb"
+    - "app/controllers/concerns/callnumber_search.rb"
+    - "app/controllers/concerns/database_access_point.rb"
+    - "app/controllers/concerns/location_facet.rb"
+    - "app/controllers/concerns/replace_special_quotes.rb"
+    - "app/controllers/concerns/search_relevancy_logging.rb"
+    - "app/controllers/concerns/stanford_work_facet.rb"
 
 # Offense count: 4
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -867,28 +860,28 @@ Rails/LexicallyScopedActionFilter:
 # Include: app/**/*.rb, config/**/*.rb, db/**/*.rb, lib/**/*.rb
 Rails/Output:
   Exclude:
-    - 'config/deploy/preview.rb'
+    - "config/deploy/preview.rb"
 
 # Offense count: 21
 Rails/OutputSafety:
   Exclude:
-    - 'app/components/blacklight/start_over_button_component.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/catalog_helper.rb'
-    - 'app/helpers/collection_helper.rb'
-    - 'app/helpers/marc_helper.rb'
-    - 'app/helpers/preview_helper.rb'
-    - 'app/helpers/record_helper.rb'
-    - 'app/helpers/results_document_helper.rb'
-    - 'app/models/concerns/mods_data.rb'
-    - 'app/models/marc_fields/bound_with_note.rb'
-    - 'lib/holdings/mhld.rb'
+    - "app/components/blacklight/start_over_button_component.rb"
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/catalog_helper.rb"
+    - "app/helpers/collection_helper.rb"
+    - "app/helpers/marc_helper.rb"
+    - "app/helpers/preview_helper.rb"
+    - "app/helpers/record_helper.rb"
+    - "app/helpers/results_document_helper.rb"
+    - "app/models/concerns/mods_data.rb"
+    - "app/models/marc_fields/bound_with_note.rb"
+    - "lib/holdings/mhld.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Rails/PluralizationGrammar:
   Exclude:
-    - 'config/schedule.rb'
+    - "config/schedule.rb"
 
 # Offense count: 37
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -896,23 +889,23 @@ Rails/PluralizationGrammar:
 # AllowedReceivers: ActionMailer::Preview, ActiveSupport::TimeZone
 Rails/RedundantActiveRecordAllMethod:
   Exclude:
-    - 'spec/models/concerns/eds_links_spec.rb'
-    - 'spec/models/concerns/index_links_spec.rb'
-    - 'spec/models/concerns/marc_links_spec.rb'
+    - "spec/models/concerns/eds_links_spec.rb"
+    - "spec/models/concerns/index_links_spec.rb"
+    - "spec/models/concerns/marc_links_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 Rails/RootPublicPath:
   Exclude:
-    - 'app/controllers/concerns/backend_lookup.rb'
-    - 'app/controllers/hours_controller.rb'
-    - 'app/controllers/sfx_data_controller.rb'
+    - "app/controllers/concerns/backend_lookup.rb"
+    - "app/controllers/hours_controller.rb"
+    - "app/controllers/sfx_data_controller.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Rails/StripHeredoc:
   Exclude:
-    - 'lib/fixtures_indexer.rb'
+    - "lib/fixtures_indexer.rb"
 
 # Offense count: 23
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -920,15 +913,15 @@ Rails/StripHeredoc:
 # SupportedStyles: always, conditionals
 Style/AndOr:
   Exclude:
-    - 'app/controllers/article_selections_controller.rb'
-    - 'app/controllers/feedback_forms_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/helpers/results_document_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/views/catalog/_index_default.mobile.builder'
-    - 'app/views/catalog/index.mobile.builder'
-    - 'app/views/catalog/show.mobile.builder'
+    - "app/controllers/article_selections_controller.rb"
+    - "app/controllers/feedback_forms_controller.rb"
+    - "app/helpers/application_helper.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/helpers/results_document_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
+    - "app/views/catalog/_index_default.mobile.builder"
+    - "app/views/catalog/index.mobile.builder"
+    - "app/views/catalog/show.mobile.builder"
 
 # Offense count: 74
 # This cop supports safe autocorrection (--autocorrect).
@@ -945,7 +938,7 @@ Style/BlockDelimiters:
 # Configuration parameters: AllowOnConstant, AllowOnSelfClass.
 Style/CaseEquality:
   Exclude:
-    - 'app/helpers/xml_api_helper.rb'
+    - "app/helpers/xml_api_helper.rb"
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -955,8 +948,8 @@ Style/CaseEquality:
 # SupportedStylesForModules: , nested, compact
 Style/ClassAndModuleChildren:
   Exclude:
-    - 'app/models/concerns/searchworks/document/email.rb'
-    - 'app/models/concerns/searchworks/document/sms.rb'
+    - "app/models/concerns/searchworks/document/email.rb"
+    - "app/models/concerns/searchworks/document/sms.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -964,15 +957,15 @@ Style/ClassAndModuleChildren:
 # SupportedStyles: is_a?, kind_of?
 Style/ClassCheck:
   Exclude:
-    - 'app/models/concerns/cjk_query.rb'
+    - "app/models/concerns/cjk_query.rb"
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/CommentedKeyword:
   Exclude:
-    - 'app/views/catalog/index.mobile.builder'
-    - 'app/views/catalog/show.mobile.builder'
-    - 'spec/models/concerns/cjk_query_spec.rb'
+    - "app/views/catalog/index.mobile.builder"
+    - "app/views/catalog/show.mobile.builder"
+    - "spec/models/concerns/cjk_query_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -980,9 +973,9 @@ Style/CommentedKeyword:
 # SupportedStyles: assign_to_condition, assign_inside_condition
 Style/ConditionalAssignment:
   Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/eds/repository.rb'
-    - 'app/views/catalog/_show_default.mobile.builder'
+    - "app/helpers/xml_api_helper.rb"
+    - "app/models/eds/repository.rb"
+    - "app/views/catalog/_show_default.mobile.builder"
 
 # Offense count: 166
 # Configuration parameters: AllowedConstants.
@@ -993,10 +986,10 @@ Style/Documentation:
 # This cop supports safe autocorrection (--autocorrect).
 Style/EmptyCaseCondition:
   Exclude:
-    - 'app/controllers/concerns/email_validation.rb'
-    - 'app/models/concerns/schema_dot_org.rb'
-    - 'lib/holdings/status.rb'
-    - 'lib/page_location.rb'
+    - "app/controllers/concerns/email_validation.rb"
+    - "app/models/concerns/schema_dot_org.rb"
+    - "lib/holdings/status.rb"
+    - "lib/page_location.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1004,7 +997,7 @@ Style/EmptyCaseCondition:
 # SupportedStyles: compact, expanded
 Style/EmptyMethod:
   Exclude:
-    - 'app/controllers/feedback_forms_controller.rb'
+    - "app/controllers/feedback_forms_controller.rb"
 
 # Offense count: 17
 # This cop supports safe autocorrection (--autocorrect).
@@ -1015,41 +1008,41 @@ Style/Encoding:
 # This cop supports safe autocorrection (--autocorrect).
 Style/ExpandPathArguments:
   Exclude:
-    - 'Rakefile'
+    - "Rakefile"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowedVars.
 Style/FetchEnvVar:
   Exclude:
-    - 'app/models/user.rb'
+    - "app/models/user.rb"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/GlobalStdStream:
   Exclude:
-    - 'config/environments/production.rb'
+    - "config/environments/production.rb"
 
 # Offense count: 17
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: MinBodyLength, AllowConsecutiveConditionals.
 Style/GuardClause:
   Exclude:
-    - 'app/controllers/article_selections_controller.rb'
-    - 'app/controllers/articles_controller.rb'
-    - 'app/controllers/availability_controller.rb'
-    - 'app/controllers/concerns/all_caps_params.rb'
-    - 'app/controllers/concerns/callnumber_search.rb'
-    - 'app/controllers/concerns/database_access_point.rb'
-    - 'app/controllers/feedback_forms_controller.rb'
-    - 'app/controllers/quick_reports_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/collection_access_point_helper.rb'
-    - 'app/helpers/collection_helper.rb'
-    - 'app/helpers/facets_helper.rb'
-    - 'app/helpers/feedback_form_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/user.rb'
+    - "app/controllers/article_selections_controller.rb"
+    - "app/controllers/articles_controller.rb"
+    - "app/controllers/availability_controller.rb"
+    - "app/controllers/concerns/all_caps_params.rb"
+    - "app/controllers/concerns/callnumber_search.rb"
+    - "app/controllers/concerns/database_access_point.rb"
+    - "app/controllers/feedback_forms_controller.rb"
+    - "app/controllers/quick_reports_controller.rb"
+    - "app/helpers/application_helper.rb"
+    - "app/helpers/collection_access_point_helper.rb"
+    - "app/helpers/collection_helper.rb"
+    - "app/helpers/facets_helper.rb"
+    - "app/helpers/feedback_form_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
+    - "app/models/user.rb"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1057,7 +1050,7 @@ Style/GuardClause:
 # AllowedReceivers: Thread.current
 Style/HashEachMethods:
   Exclude:
-    - 'app/models/article_search_builder.rb'
+    - "app/models/article_search_builder.rb"
 
 # Offense count: 40
 # This cop supports safe autocorrection (--autocorrect).
@@ -1066,9 +1059,9 @@ Style/HashEachMethods:
 # SupportedShorthandSyntax: always, never, either, consistent, either_consistent
 Style/HashSyntax:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/views/catalog/index.atom.builder'
-    - 'app/views/catalog/opensearch.xml.builder'
+    - "app/controllers/catalog_controller.rb"
+    - "app/views/catalog/index.atom.builder"
+    - "app/views/catalog/opensearch.xml.builder"
 
 # Offense count: 24
 # This cop supports safe autocorrection (--autocorrect).
@@ -1079,7 +1072,7 @@ Style/IfUnlessModifier:
 # This cop supports safe autocorrection (--autocorrect).
 Style/KeywordParametersOrder:
   Exclude:
-    - 'spec/support/stub_article_service.rb'
+    - "spec/support/stub_article_service.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1087,17 +1080,17 @@ Style/KeywordParametersOrder:
 # SupportedStyles: line_count_dependent, lambda, literal
 Style/Lambda:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
+    - "app/controllers/catalog_controller.rb"
 
 # Offense count: 6
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowedMethods, AllowedPatterns.
 Style/MethodCallWithoutArgsParentheses:
   Exclude:
-    - 'spec/models/concerns/collection_member_spec.rb'
-    - 'spec/models/concerns/extent_spec.rb'
-    - 'spec/models/concerns/index_authors_spec.rb'
-    - 'spec/models/concerns/mods_data_spec.rb'
+    - "spec/models/concerns/collection_member_spec.rb"
+    - "spec/models/concerns/extent_spec.rb"
+    - "spec/models/concerns/index_authors_spec.rb"
+    - "spec/models/concerns/mods_data_spec.rb"
 
 # Offense count: 8
 # This cop supports safe autocorrection (--autocorrect).
@@ -1105,23 +1098,23 @@ Style/MethodCallWithoutArgsParentheses:
 # SupportedStyles: require_parentheses, require_no_parentheses, require_no_parentheses_except_multiline
 Style/MethodDefParentheses:
   Exclude:
-    - 'app/components/blacklight/start_over_button_component.rb'
-    - 'app/controllers/article_selections_controller.rb'
-    - 'app/controllers/concerns/all_caps_params.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'spec/helpers/bookmarks_helper_spec.rb'
-    - 'spec/spec_helper.rb'
+    - "app/components/blacklight/start_over_button_component.rb"
+    - "app/controllers/article_selections_controller.rb"
+    - "app/controllers/concerns/all_caps_params.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "spec/helpers/bookmarks_helper_spec.rb"
+    - "spec/spec_helper.rb"
 
 # Offense count: 1
 Style/MultilineBlockChain:
   Exclude:
-    - 'lib/holdings/library.rb'
+    - "lib/holdings/library.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/MultilineIfModifier:
   Exclude:
-    - 'app/views/catalog/index.atom.builder'
+    - "app/views/catalog/index.atom.builder"
 
 # Offense count: 12
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1129,10 +1122,10 @@ Style/MultilineIfModifier:
 # SupportedStyles: literals, strict
 Style/MutableConstant:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'lib/constants.rb'
-    - 'spec/support/stub_article_service.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/helpers/article_helper.rb"
+    - "lib/constants.rb"
+    - "spec/support/stub_article_service.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1140,7 +1133,7 @@ Style/MutableConstant:
 # SupportedStyles: both, prefix, postfix
 Style/NegatedIf:
   Exclude:
-    - 'app/helpers/results_document_helper.rb'
+    - "app/helpers/results_document_helper.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1148,7 +1141,7 @@ Style/NegatedIf:
 # AllowedMethods: be, be_a, be_an, be_between, be_falsey, be_kind_of, be_instance_of, be_truthy, be_within, eq, eql, end_with, include, match, raise_error, respond_to, start_with
 Style/NestedParenthesizedCalls:
   Exclude:
-    - 'app/views/catalog/_show_default.mobile.builder'
+    - "app/views/catalog/_show_default.mobile.builder"
 
 # Offense count: 6
 # This cop supports safe autocorrection (--autocorrect).
@@ -1162,22 +1155,22 @@ Style/NumericLiterals:
 # SupportedStyles: predicate, comparison
 Style/NumericPredicate:
   Exclude:
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/bookmarks_helper.rb'
-    - 'app/models/concerns/cjk_query.rb'
+    - "app/helpers/application_helper.rb"
+    - "app/helpers/bookmarks_helper.rb"
+    - "app/models/concerns/cjk_query.rb"
 
 # Offense count: 23
 Style/OpenStructUse:
   Exclude:
-    - 'spec/controllers/concerns/database_access_point_spec.rb'
-    - 'spec/helpers/collection_helper_spec.rb'
-    - 'spec/helpers/record_helper_spec.rb'
-    - 'spec/lib/holdings/status_spec.rb'
-    - 'spec/lib/hours_request_spec.rb'
-    - 'spec/lib/search_query_modifier_spec.rb'
-    - 'spec/models/links_spec.rb'
-    - 'spec/views/browse/index.html.erb_spec.rb'
-    - 'spec/views/collection_members/_file_collection_members.html.erb_spec.rb'
+    - "spec/controllers/concerns/database_access_point_spec.rb"
+    - "spec/helpers/collection_helper_spec.rb"
+    - "spec/helpers/record_helper_spec.rb"
+    - "spec/lib/holdings/status_spec.rb"
+    - "spec/lib/hours_request_spec.rb"
+    - "spec/lib/search_query_modifier_spec.rb"
+    - "spec/models/links_spec.rb"
+    - "spec/views/browse/index.html.erb_spec.rb"
+    - "spec/views/collection_members/_file_collection_members.html.erb_spec.rb"
 
 # Offense count: 31
 # This cop supports safe autocorrection (--autocorrect).
@@ -1191,12 +1184,12 @@ Style/PercentLiteralDelimiters:
 # SupportedStyles: short, verbose
 Style/PreferredHashMethods:
   Exclude:
-    - 'app/helpers/facets_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/views/catalog/_index_default.mobile.builder'
-    - 'app/views/catalog/_show_default.mobile.builder'
-    - 'app/views/catalog/index.mobile.builder'
-    - 'app/views/catalog/show.mobile.builder'
+    - "app/helpers/facets_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
+    - "app/views/catalog/_index_default.mobile.builder"
+    - "app/views/catalog/_show_default.mobile.builder"
+    - "app/views/catalog/index.mobile.builder"
+    - "app/views/catalog/show.mobile.builder"
 
 # Offense count: 32
 # This cop supports safe autocorrection (--autocorrect).
@@ -1204,11 +1197,11 @@ Style/PreferredHashMethods:
 # SupportedStyles: same_as_string_literals, single_quotes, double_quotes
 Style/QuotedSymbols:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
-    - 'app/models/concerns/schema_dot_org.rb'
-    - 'app/models/marc_field.rb'
-    - 'app/models/marc_fields/production_notice.rb'
-    - 'spec/models/json_results_document_presenter_spec.rb'
+    - "app/controllers/catalog_controller.rb"
+    - "app/models/concerns/schema_dot_org.rb"
+    - "app/models/marc_field.rb"
+    - "app/models/marc_fields/production_notice.rb"
+    - "spec/models/json_results_document_presenter_spec.rb"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1216,13 +1209,13 @@ Style/QuotedSymbols:
 # SupportedStyles: compact, exploded
 Style/RaiseArgs:
   Exclude:
-    - 'lib/tasks/searchworks.rake'
+    - "lib/tasks/searchworks.rake"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantBegin:
   Exclude:
-    - 'app/models/concerns/schema_dot_org.rb'
+    - "app/models/concerns/schema_dot_org.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
@@ -1230,57 +1223,57 @@ Style/RedundantBegin:
 # AllowedMethods: nonzero?
 Style/RedundantCondition:
   Exclude:
-    - 'app/views/catalog/_index_default.mobile.builder'
-    - 'app/views/catalog/index.mobile.builder'
+    - "app/views/catalog/_index_default.mobile.builder"
+    - "app/views/catalog/index.mobile.builder"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantConstantBase:
   Exclude:
-    - 'config/environments/production.rb'
+    - "config/environments/production.rb"
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/RedundantInterpolation:
   Exclude:
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
 
 # Offense count: 4
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantParentheses:
   Exclude:
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/presenters/article_fulltext_link_presenter.rb'
+    - "app/helpers/xml_api_helper.rb"
+    - "app/presenters/article_fulltext_link_presenter.rb"
 
 # Offense count: 21
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantRegexpEscape:
   Exclude:
-    - 'app/helpers/article_helper.rb'
-    - 'spec/components/access_panels/online_component_spec.rb'
-    - 'spec/components/access_panels/online_eds_component_spec.rb'
-    - 'spec/helpers/browse_helper_spec.rb'
-    - 'spec/helpers/collection_helper_spec.rb'
-    - 'spec/models/concerns/index_links_spec.rb'
+    - "app/helpers/article_helper.rb"
+    - "spec/components/access_panels/online_component_spec.rb"
+    - "spec/components/access_panels/online_eds_component_spec.rb"
+    - "spec/helpers/browse_helper_spec.rb"
+    - "spec/helpers/collection_helper_spec.rb"
+    - "spec/models/concerns/index_links_spec.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowMultipleReturnValues.
 Style/RedundantReturn:
   Exclude:
-    - 'app/helpers/masthead_helper.rb'
+    - "app/helpers/masthead_helper.rb"
 
 # Offense count: 8
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantSelf:
   Exclude:
-    - 'app/controllers/concerns/advanced_search_params_mapping.rb'
-    - 'app/controllers/concerns/all_caps_params.rb'
-    - 'app/controllers/concerns/callnumber_search.rb'
-    - 'app/controllers/concerns/database_access_point.rb'
-    - 'app/models/concerns/searchworks/document/sms.rb'
-    - 'app/models/marc_fields/marc_field_wrapper.rb'
+    - "app/controllers/concerns/advanced_search_params_mapping.rb"
+    - "app/controllers/concerns/all_caps_params.rb"
+    - "app/controllers/concerns/callnumber_search.rb"
+    - "app/controllers/concerns/database_access_point.rb"
+    - "app/models/concerns/searchworks/document/sms.rb"
+    - "app/models/marc_fields/marc_field_wrapper.rb"
 
 # Offense count: 17
 # This cop supports safe autocorrection (--autocorrect).
@@ -1288,19 +1281,19 @@ Style/RedundantSelf:
 # SupportedStyles: slashes, percent_r, mixed
 Style/RegexpLiteral:
   Exclude:
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/feedback_form_helper.rb'
-    - 'app/models/concerns/eds_subjects.rb'
-    - 'config/routes.rb'
-    - 'spec/features/article_searching_spec.rb'
-    - 'spec/helpers/application_helper_spec.rb'
-    - 'spec/helpers/collection_helper_spec.rb'
-    - 'spec/helpers/record_helper_spec.rb'
-    - 'spec/lib/holdings/mhld_spec.rb'
-    - 'spec/mailers/search_works_record_mailer_spec.rb'
-    - 'spec/models/json_results_document_presenter_spec.rb'
-    - 'spec/tasks/fixtures_indexer_spec.rb'
-    - 'spec/views/marc_fields/_linked_author_index.html.erb_spec.rb'
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/feedback_form_helper.rb"
+    - "app/models/concerns/eds_subjects.rb"
+    - "config/routes.rb"
+    - "spec/features/article_searching_spec.rb"
+    - "spec/helpers/application_helper_spec.rb"
+    - "spec/helpers/collection_helper_spec.rb"
+    - "spec/helpers/record_helper_spec.rb"
+    - "spec/lib/holdings/mhld_spec.rb"
+    - "spec/mailers/search_works_record_mailer_spec.rb"
+    - "spec/models/json_results_document_presenter_spec.rb"
+    - "spec/tasks/fixtures_indexer_spec.rb"
+    - "spec/views/marc_fields/_linked_author_index.html.erb_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -1308,9 +1301,9 @@ Style/RegexpLiteral:
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
   Exclude:
-    - 'app/controllers/articles_controller.rb'
-    - 'app/models/sfx_data.rb'
-    - 'app/presenters/sms_presenter.rb'
+    - "app/controllers/articles_controller.rb"
+    - "app/models/sfx_data.rb"
+    - "app/presenters/sms_presenter.rb"
 
 # Offense count: 11
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -1318,48 +1311,48 @@ Style/RescueStandardError:
 # AllowedMethods: present?, blank?, presence, try, try!
 Style/SafeNavigation:
   Exclude:
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/article_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
-    - 'app/models/concerns/cjk_query.rb'
-    - 'app/models/concerns/digital_collection.rb'
-    - 'app/models/concerns/extent.rb'
-    - 'app/views/catalog/_show_default.mobile.builder'
+    - "app/helpers/application_helper.rb"
+    - "app/helpers/article_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
+    - "app/models/concerns/cjk_query.rb"
+    - "app/models/concerns/digital_collection.rb"
+    - "app/models/concerns/extent.rb"
+    - "app/views/catalog/_show_default.mobile.builder"
 
 # Offense count: 5
 # Configuration parameters: Max.
 Style/SafeNavigationChainLength:
   Exclude:
-    - 'app/components/access_panels/sfx_component.rb'
-    - 'app/components/request_links/hoover_request_link_component.rb'
-    - 'app/models/concerns/cjk_query.rb'
-    - 'app/models/solr_document.rb'
-    - 'app/services/live_lookup/folio.rb'
+    - "app/components/access_panels/sfx_component.rb"
+    - "app/components/request_links/hoover_request_link_component.rb"
+    - "app/models/concerns/cjk_query.rb"
+    - "app/models/solr_document.rb"
+    - "app/services/live_lookup/folio.rb"
 
 # Offense count: 2
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/SelectByRegexp:
   Exclude:
-    - 'app/models/concerns/digital_image.rb'
-    - 'app/models/marc_fields/issn.rb'
+    - "app/models/concerns/digital_image.rb"
+    - "app/models/marc_fields/issn.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowModifier.
 Style/SoleNestedConditional:
   Exclude:
-    - 'app/views/catalog/_show_default.mobile.builder'
+    - "app/views/catalog/_show_default.mobile.builder"
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Mode.
 Style/StringConcatenation:
   Exclude:
-    - 'app/helpers/article_helper.rb'
-    - 'app/models/concerns/cjk_query.rb'
-    - 'app/models/marc_fields/linked_author.rb'
-    - 'config/application.rb'
-    - 'config/initializers/okcomputer.rb'
+    - "app/helpers/article_helper.rb"
+    - "app/models/concerns/cjk_query.rb"
+    - "app/models/marc_fields/linked_author.rb"
+    - "config/application.rb"
+    - "config/initializers/okcomputer.rb"
 
 # Offense count: 4429
 # This cop supports safe autocorrection (--autocorrect).
@@ -1374,14 +1367,14 @@ Style/StringLiterals:
 # SupportedStyles: single_quotes, double_quotes
 Style/StringLiteralsInInterpolation:
   Exclude:
-    - 'app/helpers/results_document_helper.rb'
-    - 'app/helpers/xml_api_helper.rb'
+    - "app/helpers/results_document_helper.rb"
+    - "app/helpers/xml_api_helper.rb"
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/StructInheritance:
   Exclude:
-    - 'app/models/concerns/eds_subjects.rb'
+    - "app/models/concerns/eds_subjects.rb"
 
 # Offense count: 13
 # This cop supports safe autocorrection (--autocorrect).
@@ -1397,7 +1390,7 @@ Style/SymbolArray:
 # SupportedStylesForMultiline: comma, consistent_comma, diff_comma, no_comma
 Style/TrailingCommaInArrayLiteral:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
+    - "app/controllers/catalog_controller.rb"
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -1405,13 +1398,13 @@ Style/TrailingCommaInArrayLiteral:
 # SupportedStylesForMultiline: comma, consistent_comma, diff_comma, no_comma
 Style/TrailingCommaInHashLiteral:
   Exclude:
-    - 'app/controllers/catalog_controller.rb'
+    - "app/controllers/catalog_controller.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/WhileUntilModifier:
   Exclude:
-    - 'app/services/eds/search_service.rb'
+    - "app/services/eds/search_service.rb"
 
 # Offense count: 58
 # This cop supports safe autocorrection (--autocorrect).

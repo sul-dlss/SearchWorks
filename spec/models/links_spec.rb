@@ -15,23 +15,23 @@ RSpec.describe Links do
     ]
   end
 
-  it 'should identify fulltext links' do
+  it 'identifies fulltext links' do
     expect(links.fulltext.length).to eq 1
     expect(links.fulltext.first.html).to eq 'fulltext link'
   end
 
-  it 'should identify supplemental links' do
+  it 'identifies supplemental links' do
     expect(links.supplemental.length).to eq 1
     expect(links.supplemental.first.html).to eq 'non-fulltext link'
   end
 
-  it 'should identify finding aid links' do
+  it 'identifies finding aid links' do
     expect(links.finding_aid.length).to eq 2
     expect(links.finding_aid.first.html).to eq '1st finding aid link'
     expect(links.finding_aid.last.html).to eq '2nd finding aid link'
   end
 
-  it 'should identify the managed_purl links' do
+  it 'identifies the managed_purl links' do
     expect(links.managed_purls.length).to eq 1
     expect(links.managed_purls.first.html).to eq 'Managed purl link'
   end

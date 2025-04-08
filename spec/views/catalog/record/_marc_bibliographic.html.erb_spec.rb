@@ -12,13 +12,13 @@ RSpec.describe "catalog/record/_marc_bibliographic" do
       assign(:document, document)
     end
 
-    it "should display for databases" do
+    it "displays for databases" do
       allow(document).to receive(:is_a_database?).and_return(true)
       render
       expect(rendered).to have_css("dt", text: "Note")
       expect(rendered).to have_css("dd", text: "A local note added to subjects only")
     end
-    it "should not display for non-databases" do
+    it "does not display for non-databases" do
       allow(document).to receive(:is_a_database?).and_return(false)
       render
       expect(rendered).to have_no_css("dt", text: "Note")
@@ -32,7 +32,7 @@ RSpec.describe "catalog/record/_marc_bibliographic" do
       render
     end
 
-    it "should include dates from solr" do
+    it "includes dates from solr" do
       expect(rendered).to have_css('dt', text: 'Publication date')
       expect(rendered).to have_css('dd', text: '1234')
 
@@ -50,7 +50,7 @@ RSpec.describe "catalog/record/_marc_bibliographic" do
       render
     end
 
-    it 'should include the related works section' do
+    it 'includes the related works section' do
       expect(rendered).to have_css('dt', text: 'Related Work')
       expect(rendered).to have_css('dd a', text: '700 with t 700 $e Title.')
       expect(rendered).to have_no_css('dt', text: 'Included Work')

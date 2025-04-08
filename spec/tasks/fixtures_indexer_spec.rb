@@ -11,7 +11,7 @@ RSpec.describe FixturesIndexer do
   end
 
   describe "run" do
-    it "should index the fixtures and commit them" do
+    it "indexes the fixtures and commit them" do
       expect(stub_solr).to receive(:add).twice.and_return(true)
       expect(stub_solr).to receive(:commit).twice.and_return(true)
       FixturesIndexer.run
@@ -20,7 +20,7 @@ RSpec.describe FixturesIndexer do
   end
 
   describe "#new" do
-    it "should set the solr client" do
+    it "sets the solr client" do
       expect(FixturesIndexer.new.instance_variable_get(:@solr)).to eq stub_solr
     end
   end
@@ -38,10 +38,10 @@ RSpec.describe FixturesIndexer do
   end
 
   describe "#file_list" do
-    it "should be an array" do
+    it "is an array" do
       expect(subject.file_list).to be_an Array
     end
-    it "should be an array of fixture file references" do
+    it "is an array of fixture file references" do
       subject.file_list.each do |file|
         expect(file).to match /\/fixtures\/solr_documents\/.*.yml$/
       end

@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe ArticlesController do
   include Devise::Test::ControllerHelpers
-  it 'should include the EmailValidation concern' do
+  it 'includes the EmailValidation concern' do
     expect(subject).to be_a(EmailValidation)
   end
 
@@ -163,19 +163,19 @@ RSpec.describe ArticlesController do
       allow(controller).to receive_messages(session: user_session, on_campus_or_su_affiliated_user?: true)
     end
 
-    it 'will create a new session' do
+    it 'creates a new session' do
       expect(EBSCO::EDS::Session).to receive(:new).with(
         hash_including(caller: 'new-session', guest: false)
       ).and_return(eds_session)
       controller.eds_init
     end
-    it 'will reuse the session if in the user session data' do
+    it 'reuses the session if in the user session data' do
       user_session['eds_guest'] = false
       user_session['eds_session_token'] = 'def'
       expect(EBSCO::EDS::Session).not_to receive(:new)
       controller.eds_init
     end
-    it 'will require the session token in the user session data' do
+    it 'requires the session token in the user session data' do
       user_session['eds_guest'] = false
       expect(EBSCO::EDS::Session).to receive(:new).and_return(eds_session)
       controller.eds_init
@@ -185,20 +185,20 @@ RSpec.describe ArticlesController do
   describe '#email' do
     before { stub_article_service(type: :single, docs: [SolrDocument.new(id: '123')]) }
 
-    it 'should set the provided subject' do
+    it 'sets the provided subject' do
       expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' } }.to change {
         ActionMailer::Base.deliveries.count
       }.by(1)
       expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
     end
-    it 'should send a brief email when requested' do
+    it 'sends a brief email when requested' do
       email = double('email')
       expect(SearchWorksRecordMailer).to receive(:article_email_record).and_return(email)
       expect(email).to receive(:deliver_now)
       post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' }
     end
 
-    it 'should be able to send emails to multiple addresses' do
+    it 'is able to send emails to multiple addresses' do
       expect do
         post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '123' }
       end.to change { ActionMailer::Base.deliveries.count }.by(3)

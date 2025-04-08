@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe MarcLinks do
-  it "should return an empty array for non marc records" do
+  it "returns an empty array for non marc records" do
     expect(SolrDocument.new.marc_links.all).to eq []
   end
 

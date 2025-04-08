@@ -21,7 +21,7 @@ RSpec.describe "catalog/_index_online_section" do
         render
       end
 
-      it 'should include the online dl' do
+      it 'includes the online dl' do
         expect(rendered).to have_css('dt', text: 'Online')
         expect(rendered).to have_css('dd li', count: 4)
         expect(rendered).to have_css('dd li', count: 5, visible: false) # 4 links and a Google Books link

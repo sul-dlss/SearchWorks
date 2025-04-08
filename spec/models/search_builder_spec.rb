@@ -20,15 +20,15 @@ RSpec.describe SearchBuilder do
       allow(search_builder).to receive(:page_location).and_return(instance_double(PageLocation, databases?: true))
     end
 
-    it "should handle 0-9 filters properly" do
+    it "handles 0-9 filters properly" do
       search_builder.with(prefix: '0-9').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to include("title_sort:/[0-9].*/")
     end
-    it "should handle alpha filters properly" do
+    it "handles alpha filters properly" do
       search_builder.with(prefix: 'b').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to include("title_sort:/[b].*/")
     end
-    it "should do nothing if prefix param is invalid" do
+    it "does nothing if prefix param is invalid" do
       search_builder.with(prefix: '*').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to be_nil
     end

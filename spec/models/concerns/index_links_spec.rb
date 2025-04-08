@@ -11,7 +11,7 @@ RSpec.describe IndexLinks do
   end
 
   describe 'mixin' do
-    it 'should add the #index_links method' do
+    it 'adds the #index_links method' do
       expect(document).to respond_to(:index_links)
     end
     it '#index_links should return Links' do

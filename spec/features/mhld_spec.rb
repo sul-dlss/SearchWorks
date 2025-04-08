@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe "MHLD", :feature do
   describe "record view" do
-    it "should be present in the location access panel" do
+    it "is present in the location access panel" do
       visit solr_document_path('10')
 
       within('[data-hours-route="/hours/ENG"]') do
@@ -27,7 +27,7 @@ RSpec.describe "MHLD", :feature do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
     end
 
-    it "should be present in the accordion section" do
+    it "is present in the accordion section" do
       visit search_catalog_path(q: 'id:10')
 
       within(first('.document')) do

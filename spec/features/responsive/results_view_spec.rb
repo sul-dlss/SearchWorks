@@ -8,7 +8,7 @@ RSpec.describe 'Responsive results view Page', :feature, :js do
       visit search_catalog_path f: { access_facet: ['Online'] }
     end
 
-    it 'should show previous/next on large screens' do
+    it 'shows previous/next on large screens' do
       within('ul.pagination') do
         expect(page).to have_css('span', text: 'Previous', visible: true)
       end

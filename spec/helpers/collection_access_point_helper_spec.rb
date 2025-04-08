@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe CollectionAccessPointHelper do
   describe "#get_collection" do
     describe "when no document is present" do
-      it "should return parameter values" do
+      it "returns parameter values" do
         params[:f] = { collection: ["29"] }
         expect(response).to receive(:docs).exactly(1).times.and_return([])
         helper.get_collection
@@ -14,7 +14,7 @@ RSpec.describe CollectionAccessPointHelper do
     end
 
     describe "when documents are present" do
-      it "should return 1st doc parent collection values" do
+      it "returns 1st doc parent collection values" do
         params[:f] = { collection: ["29"] }
         expect(response).to receive(:docs).exactly(2).times.and_return([{ collection: ["29"] }])
         helper.get_collection

@@ -112,7 +112,7 @@ RSpec.describe FacetOptionsPresenter do
       context 'when the limiter is selected' do
         let!(:params) { { f: { 'eds_search_limiters_facet' => %w[SelectedValue1 SelectedValue2] } } }
 
-        it 'it removes the limiter from the URL (and retains other values)' do
+        it 'removes the limiter from the URL (and retains other values)' do
           expect(limiter.search_url).not_to include('SelectedValue1')
           expect(limiter.search_url).to include('SelectedValue2')
         end

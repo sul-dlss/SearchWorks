@@ -14,19 +14,19 @@ RSpec.describe "catalog/record/_marc_metadata_sections" do
       render 'catalog/record/marc_metadata_sections', document:
     end
 
-    it "should display correct sections" do
+    it "displays correct sections" do
       expect(rendered).to have_css('h3', text: "Contributors")
       expect(rendered).to have_css('h3', text: "Contents/Summary")
       expect(rendered).to have_css('h3', text: "Bibliographic information")
     end
 
-    it "should have side nav content handles" do
+    it "has side nav content handles" do
       expect(rendered).to have_css(".section#contributors")
       expect(rendered).to have_css(".section#contents-summary")
       expect(rendered).to have_css(".section#bibliography-info")
     end
 
-    it "should render side nav content" do
+    it "renders side nav content" do
       expect(rendered).to have_css("ul.side-nav-minimap")
 
       expect(rendered).to have_css(".side-nav-minimap button i.fa.fa-arrow-up")

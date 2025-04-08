@@ -13,7 +13,7 @@ RSpec.describe "catalog/record/_mods_abstract_contents" do
       assign(:document, document)
     end
 
-    it "should display abstract" do
+    it "displays abstract" do
       render
       expect(rendered).to have_css("dd", text: "Topographical and street map of the")
       expect(rendered).to have_css("dd", text: "This is an amazing table of contents!")

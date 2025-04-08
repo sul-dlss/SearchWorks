@@ -45,15 +45,15 @@ RSpec.describe Holdings do
   end
 
   describe "#items" do
-    it "should return an array of Holdings::Items" do
+    it "returns an array of Holdings::Items" do
       holdings.items.each do |item|
         expect(item).to be_a Holdings::Item
       end
     end
-    it "should return an empty array if there are no holdings" do
+    it "returns an empty array if there are no holdings" do
       expect(no_holdings.items).to eq []
     end
-    it "should be sorted by the shelfkey" do
+    it "is sorted by the shelfkey" do
       expect(sortable_holdings.items.map(&:full_shelfkey)).to eq ['111', '999']
     end
   end
@@ -82,13 +82,13 @@ RSpec.describe Holdings do
       )
     }
 
-    it "should group by library" do
+    it "groups by library" do
       expect(libraries.libraries.length).to eq 2
     end
-    it "should sort by library code when there is no translation" do
+    it "sorts by library code when there is no translation" do
       expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
     end
-    it "should sort Green first then the rest alpha" do
+    it "sorts Green first then the rest alpha" do
       expect(sortable_libraries.libraries.length).to eq 3
       expect(sortable_libraries.libraries.map(&:code)).to eq ['GREEN', 'MARINE-BIO', 'SAL3']
     end
@@ -97,13 +97,13 @@ RSpec.describe Holdings do
   describe "#find_by_barcode" do
     let(:found) { complex_holdings.find_by_barcode('barcode2') }
 
-    it "should return a single Holdings::Item" do
+    it "returns a single Holdings::Item" do
       expect(found).to be_a Holdings::Item
     end
-    it "should be the correct item" do
+    it "is the correct item" do
       expect(found.barcode).to eq 'barcode2'
     end
-    it "should return nil if the barcode is not found" do
+    it "returns nil if the barcode is not found" do
       expect(complex_holdings.find_by_barcode('not-a-barcode')).to be_nil
     end
   end
@@ -124,7 +124,7 @@ RSpec.describe Holdings do
       )
     }
 
-    it "should match up mhlds in locations with existing call numbers" do
+    it "matches up mhlds in locations with existing call numbers" do
       holdings = holdings_doc.holdings
       expect(holdings.libraries.length).to eq 1
       expect(holdings.libraries.first.code).to eq 'GREEN'
@@ -136,7 +136,7 @@ RSpec.describe Holdings do
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end
-    it "should include mhlds that don't belong to an existing library or location" do
+    it "includes mhlds that don't belong to an existing library or location" do
       holdings = mhld_only_doc.holdings
       expect(holdings.libraries.length).to eq 1
       expect(holdings.libraries.first.code).to eq 'GREEN'

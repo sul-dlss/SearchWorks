@@ -31,7 +31,7 @@ RSpec.describe 'Article Routing' do
     context 'rejects unknown identifiers' do
       let(:id) { 'eds__1 2/3' }
 
-      it 'should not route to show page' do
+      it 'does not route to show page' do
         expect(result).not_to be_routable
       end
     end

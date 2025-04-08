@@ -21,7 +21,7 @@ RSpec.describe Holdings::Item do
     ]
   end
 
-  it 'should have an attribute for each piece of the item display field' do
+  it 'has an attribute for each piece of the item display field' do
     methods.each do |method|
       expect(item).to respond_to(method)
     end
@@ -29,11 +29,11 @@ RSpec.describe Holdings::Item do
   describe '#suppressed?' do
     let(:no_item_display) { Holdings::Item.new({}) }
 
-    it "should be true when the item_display doesn't exist" do
+    it "is true when the item_display doesn't exist" do
       expect(no_item_display).to be_suppressed
     end
 
-    it 'should return false when the item_display exists' do
+    it 'returns false when the item_display exists' do
       expect(item).not_to be_suppressed
     end
   end
@@ -45,11 +45,11 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#on_order?' do
-    it 'should return true for on-order items' do
+    it 'returns true for on-order items' do
       expect(Holdings::Item.new({ status: 'On order' })).to be_on_order
     end
 
-    it 'should return false for non on-order items' do
+    it 'returns false for non on-order items' do
       expect(item).not_to be_on_order
     end
   end
@@ -63,7 +63,7 @@ RSpec.describe Holdings::Item do
       Holdings::Item.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' })
     }
 
-    it "should return '(no call number) if the callnumber is blank" do
+    it "returns '(no call number) if the callnumber is blank" do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
     end
   end
@@ -71,11 +71,11 @@ RSpec.describe Holdings::Item do
   describe '#status' do
     let(:status) { item.status }
 
-    it 'should return a Holdings::Status object' do
+    it 'returns a Holdings::Status object' do
       expect(status).to be_a Holdings::Status
     end
 
-    it 'should return an availability_class string' do
+    it 'returns an availability_class string' do
       expect(status.availability_class).to eq 'unknown'
     end
   end
@@ -83,18 +83,18 @@ RSpec.describe Holdings::Item do
   describe 'public_note' do
     let(:public_note) { Holdings::Item.new({ note: '.PUBLIC. The Public Note' }) }
 
-    it 'should remove the .PUBLIC. string from the public note field' do
+    it 'removes the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
       expect(public_note.public_note).not_to include 'PUBLIC'
     end
   end
 
   describe '#on_reserve?' do
-    it 'should return true when an item is populated with reserve desks and loan period' do
+    it 'returns true when an item is populated with reserve desks and loan period' do
       expect(item).to be_on_reserve
     end
 
-    it 'should return false when an item is not populated with reserve desk and loan period' do
+    it 'returns false when an item is not populated with reserve desk and loan period' do
       expect(described_class.new({ barcode: '123', library: 'abc' })).not_to be_on_reserve
     end
   end
@@ -102,7 +102,7 @@ RSpec.describe Holdings::Item do
   describe 'zombie libraries' do
     let(:blank) { Holdings::Item.new({ barcode: '123', library: '', effective_permanent_location_code: 'LOCATION' }) }
 
-    it 'should view blank libraries as a zombie library' do
+    it 'views blank libraries as a zombie library' do
       expect(blank.library).to eq 'ZOMBIE'
     end
   end

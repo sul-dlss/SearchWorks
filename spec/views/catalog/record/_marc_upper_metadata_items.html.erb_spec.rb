@@ -10,7 +10,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       assign(:document, SolrDocument.new(marc_json_struct: metadata1))
     end
 
-    it 'should display for for 245C field' do
+    it 'displays for for 245C field' do
       render
       expect(rendered).to have_css('dt', text: 'Responsibility')
       expect(rendered).to have_css('dd', text: 'Most responsible person ever')
@@ -23,7 +23,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it "should display the characteristics with labels" do
+    it "displays the characteristics with labels" do
       expect(rendered).to have_css('dt', text: 'Sound')
       expect(rendered).to have_css('dd', text: 'digital; optical; surround; stereo; Dolby')
       expect(rendered).to have_css('dt', text: 'Video')
@@ -52,7 +52,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it "should include the imprint statement" do
+    it "includes the imprint statement" do
       expect(rendered).to have_css('dt', text: "Imprint")
       expect(rendered).to have_css('dd', text: "SubA SubB SubC SubG")
     end
@@ -64,7 +64,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it "should include the edition statement" do
+    it "includes the edition statement" do
       expect(rendered).to have_css('dt', text: "Edition")
       expect(rendered).to have_css('dd', text: "SubA SubB")
     end
@@ -76,7 +76,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it "should be rendered" do
+    it "is rendered" do
       expect(rendered).to have_css('dt', text: 'Production')
       expect(rendered).to have_css('dd', text: 'SubfieldA SubfieldB')
     end
@@ -88,7 +88,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it "should be rendered and include specific dts/dds" do
+    it "is rendered and include specific dts/dds" do
       expect(rendered).to have_css('dt', text: 'Instrumentation')
       expect(rendered).to have_css('dd', text: 'singer (1) or bass guitar (2), percussion (1) (4 hands), guitar (1) / electronics (1), solo flute (1) (total=8)')
       expect(rendered).to have_css('dd', text: 'singer (3)')
@@ -105,7 +105,7 @@ RSpec.describe "catalog/record/_marc_upper_metadata_items" do
       render
     end
 
-    it 'should render the collection titles as links' do
+    it 'renders the collection titles as links' do
       expect(rendered).to have_css('dt', text: 'Collection')
       expect(rendered).to have_css('dd', text: 'Bruce & Rachel Jeffer Collection of WPA/Federal Writers Project and related New Deal material')
     end

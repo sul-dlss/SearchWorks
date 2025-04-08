@@ -7,57 +7,57 @@ RSpec.describe SolrDocument do
   describe "marc field" do
     let(:marcjson) { SolrDocument.new(marc_json_struct: metadata1) }
 
-    it "should respond to #to_marc for marcjson" do
+    it "responds to #to_marc for marcjson" do
       expect(marcjson).to respond_to(:to_marc)
       expect(marcjson.to_marc).to be_a MARC::Record
     end
   end
 
   describe "MarcLinks" do
-    it "should include marc links" do
+    it "includes marc links" do
       expect(subject).to be_a MarcLinks
     end
   end
 
   describe "DatabaseDocument" do
-    it "should include database document" do
+    it "includes database document" do
       expect(subject).to be_a DatabaseDocument
     end
   end
 
   describe "DisplayType" do
-    it "should include display type" do
+    it "includes display type" do
       expect(subject).to be_a DisplayType
       expect(subject).to respond_to(:display_type)
     end
   end
 
   describe "DigitalCollection" do
-    it "should include digital collection" do
+    it "includes digital collection" do
       expect(subject).to be_a DigitalCollection
     end
   end
 
   describe "CollectionMember" do
-    it "should include collection member" do
+    it "includes collection member" do
       expect(subject).to be_a CollectionMember
     end
   end
 
   describe "Extent" do
-    it "should include the extent" do
+    it "includes the extent" do
       expect(subject).to be_a Extent
     end
   end
 
   describe "IndexAuthors" do
-    it "should include index authors" do
+    it "includes index authors" do
       expect(subject).to be_a IndexAuthors
     end
   end
 
   describe "Druid" do
-    it "should include druid" do
+    it "includes druid" do
       expect(subject).to be_a Druid
     end
   end
@@ -75,13 +75,13 @@ RSpec.describe SolrDocument do
   end
 
   describe "SolrHoldings" do
-    it "should include SolrHoldings" do
+    it "includes SolrHoldings" do
       expect(subject).to be_a SolrHoldings
     end
   end
 
   describe 'SolrSet' do
-    it 'should be included' do
+    it 'is included' do
       expect(subject).to be_a SolrSet
     end
   end

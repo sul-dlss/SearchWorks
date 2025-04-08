@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe "Search parameters in all caps" do
-  it "should be downcased" do
+  it "is downcased" do
     visit root_path
     fill_in 'q', with: "HELLO WORLD"
     click_button 'search'

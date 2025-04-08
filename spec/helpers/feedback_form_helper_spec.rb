@@ -31,24 +31,24 @@ RSpec.describe FeedbackFormHelper do
       allow(form_controller).to receive(:controller).and_return(form_controller)
     end
 
-    it "should return false when being viewed under the FeedbackFormsController" do
+    it "returns false when being viewed under the FeedbackFormsController" do
       expect(form_controller.show_feedback_form?).to be_falsey
     end
-    it "should return true when not under the FeedbackFormsController" do
+    it "returns true when not under the FeedbackFormsController" do
       expect(helper.show_feedback_form?).to be_truthy
     end
   end
 
   describe 'show_quick_report?' do
-    it 'should be false unless it meets certain criteria' do
+    it 'is false unless it meets certain criteria' do
       expect(helper.show_quick_report?).to be_falsey
     end
-    it 'should return true when coming from a show page' do
+    it 'returns true when coming from a show page' do
       params = { controller: 'catalog', action: 'show' }
       allow(helper).to receive(:params).and_return(params)
       expect(helper.show_quick_report?).to be_truthy
     end
-    it 'should return true when the referrer is a show page and current controller is feedback' do
+    it 'returns true when the referrer is a show page and current controller is feedback' do
       params = { controller: 'feedback_forms', action: 'new' }
       expect(controller.request).to receive(:referer).at_least(:once).and_return('http://127.0.0.1:3000/view/12')
       allow(helper).to receive(:params).and_return(params)
@@ -57,19 +57,19 @@ RSpec.describe FeedbackFormHelper do
   end
 
   describe 'refered_from_catalog_show?' do
-    it 'should be true if referer is from view show' do
+    it 'is true if referer is from view show' do
       expect(controller.request).to receive(:referer).at_least(:once).and_return('http://127.0.0.1:3000/view/12')
       expect(helper.refered_from_catalog_show?).to be_truthy
     end
-    it 'should be true if referer is from catalog show' do
+    it 'is true if referer is from catalog show' do
       expect(controller.request).to receive(:referer).at_least(:once).and_return('http://127.0.0.1:3000/catalog/12')
       expect(helper.refered_from_catalog_show?).to be_truthy
     end
-    it 'should be false if not a show page' do
+    it 'is false if not a show page' do
       expect(controller.request).to receive(:referer).at_least(:once).and_return('http://127.0.0.1:3000/catalog?f%5Baccess_facet%5D%5B%5D=At+the+Library&f%5Baccess_facet%5D%5B%5D=Online')
       expect(helper.refered_from_catalog_show?).to be_falsey
     end
-    it 'should be false if referer is nil' do
+    it 'is false if referer is nil' do
       expect(controller.request).to receive(:referer).at_least(:once).and_return(nil)
       expect(helper.refered_from_catalog_show?).to be_falsey
     end

@@ -15,7 +15,7 @@ RSpec.describe ReplaceSpecialQuotes do
   describe "with special quotes" do
     let(:params) { { clause: { '1': { query: "«#{q}» ‘#{q}’ ‚#{q}‛ “#{q}” „#{q}‟ ‹#{q}› 「#{q}」『#{q}』 〝#{q}〞 〟#{q}〟 ﹂#{q}﹁  ﹄#{q}﹃ ＂#{q}＂ ｢#{q}｣" } } }.with_indifferent_access }
 
-    it "should replace the special quote characters w/ actual quote characters" do
+    it "replaces the special quote characters w/ actual quote characters" do
       controller.send(:replace_special_quotes)
       expect(params.dig(:clause, '1', :query).scan("\"#{q}\"").length).to eq 14
       ["«", "「", "〟", "』"].each do |character|
@@ -37,7 +37,7 @@ RSpec.describe ReplaceSpecialQuotes do
         }.with_indifferent_access
       end
 
-      it 'should be replaced with an apostrophe' do
+      it 'is replaced with an apostrophe' do
         controller.send(:replace_special_quotes)
 
         expect(params.dig(:clause, :a_param, :query)).to eq "query's"
@@ -59,7 +59,7 @@ RSpec.describe ReplaceSpecialQuotes do
         }.with_indifferent_access
       end
 
-      it 'should be replaced with the standard double quote character' do
+      it 'is replaced with the standard double quote character' do
         controller.send(:replace_special_quotes)
 
         expect(params.dig(:clause, :a_param, :query)).to eq '"query"'
@@ -73,7 +73,7 @@ RSpec.describe ReplaceSpecialQuotes do
   describe "without special quotes" do
     let(:params) { { clause: { '1': { query: 'Hello' } } }.with_indifferent_access }
 
-    it "should not modify the parameter" do
+    it "does not modify the parameter" do
       expect(params.dig(:clause, '1', :query)).to eq 'Hello'
       controller.send(:replace_special_quotes)
       expect(params.dig(:clause, '1', :query)).to eq 'Hello'

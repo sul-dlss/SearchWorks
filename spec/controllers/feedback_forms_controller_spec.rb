@@ -35,18 +35,18 @@ RSpec.describe FeedbackFormsController do
     let(:user) { User.new }
 
     describe "format json" do
-      it "should return json success" do
+      it "returns json success" do
         post :create, params: { url: "http://test.host/", message: "Hello Kittenz", format: "json" }
         expect(flash[:success]).to eq "<strong>Thank you!</strong> Your feedback has been sent."
       end
-      it "should return html success" do
+      it "returns html success" do
         post :create, params: { url: "http://test.host/", message: "Hello Kittenz" }
         expect(flash[:success]).to eq "<strong>Thank you!</strong> Your feedback has been sent."
       end
     end
 
     describe "validate" do
-      it "should return an error if no message is sent" do
+      it "returns an error if no message is sent" do
         post :create, params: { url: "http://test.host/", message: "", email_address: "" }
         expect(flash[:error]).to eq "A message is required"
       end

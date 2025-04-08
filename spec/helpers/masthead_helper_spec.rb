@@ -23,10 +23,10 @@ RSpec.describe MastheadHelper do
   end
 
   describe "#facets_prefix_options" do
-    it "should have the correct number of elements" do
+    it "has the correct number of elements" do
       expect(facets_prefix_options.length).to eq 27
     end
-    it "should include the necessary options" do
+    it "includes the necessary options" do
       expect(facets_prefix_options).to include "0-9"
       expect(facets_prefix_options).to include "A"
       expect(facets_prefix_options).to include "X"
@@ -35,11 +35,11 @@ RSpec.describe MastheadHelper do
   end
 
   describe '#digital_collections_params_for' do
-    it 'should always include "Stanford Digital Repository" in the building facet' do
+    it 'alwayses include "Stanford Digital Repository" in the building facet' do
       expect(digital_collections_params_for).to match /building_facet.*Stanford\+Digital\+Repository/
       expect(digital_collections_params_for('something')).to match /building_facet.*Stanford\+Digital\+Repository/
     end
-    it 'should include the given parameter as the format_main_ssim' do
+    it 'includes the given parameter as the format_main_ssim' do
       expect(digital_collections_params_for).not_to match /format_main_ssim/
       expect(digital_collections_params_for('something')).to match /format_main_ssim.*something/
     end
