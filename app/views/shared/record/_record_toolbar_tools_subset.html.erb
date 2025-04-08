@@ -36,14 +36,21 @@
     <% end %>
 <% end %>
 <% if @document.export_formats.key?(:ris) %>
+  <% if @document.eds_ris_export? %>
     <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
     <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
       <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
     <% end %>
-  <%= link_to t('blacklight.tools.ris_html'),
-              articles_ris_path(@document, :format => 'ris'),
-              class: 'dropdown-item',
-              role: 'menuitem', tabindex: '-1' %>
+    <%= link_to t('blacklight.tools.ris_html'),
+                articles_ris_path(@document, :format => 'ris'),
+                class: 'dropdown-item',
+                role: 'menuitem', tabindex: '-1' %>
+  <% else %>
+    <%= link_to t('blacklight.tools.ris_html'),
+                solr_document_path(@document, :format => 'ris'),
+                class: 'dropdown-item',
+                role: 'menuitem', tabindex: '-1' %>
+  <% end %>
 <% end %>
 <% if @document.export_formats.keys.include?( :endnote ) %>
   <%= link_to t('blacklight.tools.endnote_html'),

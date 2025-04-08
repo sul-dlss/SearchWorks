@@ -17,6 +17,10 @@
                   class: 'dropdown-item' %>
     <% end %>
 
+    <% if @response.documents.any? {|d| d.export_formats.key?(:ris) } %>
+      <%= link_to t('blacklight.tools.ris_html'), search_state.to_h.merge(format: 'ris'), download: File.basename(url_for(search_state.to_h.merge(format: 'ris'))), role: 'menuitem', tabindex: '-1', class: 'ris dropdown-item' %>
+    <% end %>
+
     <% if @response.documents.any? {|d| d.exports_as? :endnote } %>
       <%= link_to t('blacklight.tools.endnote_html'),
                   bookmarks_path(:endnote, search_state.params_for_search),

@@ -58,7 +58,7 @@ en:
       email_html: '<span class="bi-envelope-fill"></span> email'
       refworks_html: '<span class="bi-box-arrow-up-right sul-icon-refworks"></span> RefWorks'
       endnote_html: '<span class="bi-box-arrow-up-right sul-icon-endnote"></span> EndNote'
-      ris_html: '<span class="bi-download"></span> RIS download'
+      ris_html: '<span class="bi-download"></span> Zotero RIS'
       printer_html: '<span class="bi-printer-fill"></span> printer'
       cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
       send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to'
