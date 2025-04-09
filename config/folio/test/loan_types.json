@@ -1,0 +1,174 @@
+[
+  {
+    "id": "1b1b231e-49fd-4387-b1db-8245cdde257b",
+    "name": "curricshortloan7",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:51.823+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:51.823+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "1d1c61fe-82ee-486b-99d0-5bb17cc66258",
+    "name": "4-hour reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:48.206+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:48.206+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "2b94c631-fca9-4892-a730-03ee529ffe27",
+    "name": "Can circulate",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:07.823+00:00",
+      "updatedDate": "2024-06-22T06:34:24.161+00:00"
+    }
+  },
+  {
+    "id": "2e48e713-17f3-4c13-a9f8-23845bb210a4",
+    "name": "Reading room",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:07.818+00:00",
+      "updatedDate": "2024-06-22T06:34:24.117+00:00"
+    }
+  },
+  {
+    "id": "403041a7-d858-487a-a158-751d6654c5f6",
+    "name": "12-hour short term",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:47.231+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:47.231+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd",
+    "name": "Non-circulating",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:52.140+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:52.140+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "57e50d0e-555a-40d2-b559-2d7a8c3f38b3",
+    "name": "28-day reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:47.714+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:47.714+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "5c6c73f7-e1ae-4142-9ea9-9b6d22f0f61b",
+    "name": "8-hour reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:48.500+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-05-10T19:44:40.777+00:00",
+      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+    }
+  },
+  {
+    "id": "64606c9e-d1c5-4364-a5c0-13548f0ace47",
+    "name": "3-hour reserve",
+    "metadata": {
+      "createdDate": "2023-08-30T18:52:58.501+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-30T18:52:58.501+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "698f6361-d552-4cb8-8e01-f74fa8cc73e0",
+    "name": "2-hour reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:47.525+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:47.525+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "780ecc50-56f7-46d7-a7f0-88a62c2a09c6",
+    "name": "7-day reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:48.357+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:48.357+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "7fc08f93-d5fc-4804-b1ee-2ad936699146",
+    "name": "1-day reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:47.040+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:47.040+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "9c7f4ff2-f760-4dfe-b4c6-05651b9e2dd3",
+    "name": "3-day reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:48.072+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:48.072+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a1dc1ce3-d56f-4d8a-b498-d5d674ccc845",
+    "name": "Selected",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:08.015+00:00",
+      "updatedDate": "2024-06-22T06:34:24.104+00:00"
+    }
+  },
+  {
+    "id": "ad0ab640-aa9d-4cd3-94be-f4482c714ebb",
+    "name": "borrow direct",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:48.634+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:48.634+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "bff2e868-d6e0-4f23-a868-e6461e1a09a5",
+    "name": "2-day reserve",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:47.398+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:47.398+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "cd069c65-134e-430c-b949-2cc9ad278962",
+    "name": "lckstk-expensive",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:52.029+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:52.029+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "e8b311a6-3b21-43f2-a269-dd9310cb2d0e",
+    "name": "Course reserves",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:08.104+00:00",
+      "updatedDate": "2024-06-22T06:34:24.162+00:00"
+    }
+  }
+]

@@ -1,0 +1,1182 @@
+[
+  {
+    "id": "0483c7bd-8e95-4c7b-9704-484b01879b02",
+    "name": "Lane Information Desk",
+    "code": "LANE-DESK",
+    "discoveryDisplayName": "Lane Medical Library",
+    "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\": \"MED\"}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:18.186+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T15:27:40.895+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+    }
+  },
+  {
+    "id": "0590225b-eea3-4db8-8290-68e99cc898df",
+    "name": "SUL - Tech Services",
+    "code": "SULTS",
+    "discoveryDisplayName": "SUL Technical Services",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:33.329+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:33.329+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "0939d005-3e55-46d4-ab36-6f9099675876",
+    "name": "Law Course Reserves Cabinet",
+    "code": "LAWBC",
+    "discoveryDisplayName": "Law Course Reserves Cabinet",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:18.984+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:18.984+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "0e924af7-785c-46eb-a5e2-060394822016",
+    "name": "Special Collections Desk",
+    "code": "SPEC",
+    "discoveryDisplayName": "Special Collections & University Archives Reading Room",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:28.737+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:28.737+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "17721adb-638d-417c-85a4-280c67c0d0a9",
+    "name": "Marine Biology Loan Desk",
+    "code": "MARINE-BIO",
+    "discoveryDisplayName": "Marine Biology Library (Miller)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:21.327+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:24:57.884+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "name": "Sal3",
+    "code": "SAL3",
+    "discoveryDisplayName": "SAL3 (off-campus storage)",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:27.212+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:27.212+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "name": "Earth Sciences Loan Desk",
+    "code": "EARTH-SCI",
+    "discoveryDisplayName": "Earth Sciences Library (Branner)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:08.635+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:24:16.610+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "4d77d74b-271e-421a-91c6-992afa9afb3c",
+    "name": "Music Loan Desk",
+    "code": "MUSIC",
+    "discoveryDisplayName": "Music Library",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:23.530+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:25:18.109+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "50ef1036-06d3-48ef-9048-26cabfccf630",
+    "name": "Science Loan Desk",
+    "code": "SCIENCE",
+    "discoveryDisplayName": "Science Library (Li and Ma)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:27.957+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:25:39.106+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "name": "East Asia Loan Desk",
+    "code": "EAST-ASIA",
+    "discoveryDisplayName": "East Asia Library",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:09.535+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:24:28.684+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "67552bac-7644-4b5d-a973-045b8370f6e6",
+    "name": "Hoover",
+    "code": "HILA",
+    "discoveryDisplayName": "Hoover Library & Archives Reading Room",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:17.262+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:17.262+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "68002733-5923-46db-acc7-3d18cbf30870",
+    "name": "SUL - Digitization Services",
+    "code": "SULDIGITIZATION",
+    "discoveryDisplayName": "SUL Digitization Services",
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-29T21:39:59.170+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-08-29T21:39:59.170+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
+    "id": "6a7f9353-cc07-46de-8186-9b5b1eb24fc4",
+    "name": "Green Bing Wing",
+    "code": "GREEN-BING",
+    "discoveryDisplayName": "Green Library Bing Wing",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:15.229+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:15.229+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
+    "name": "Sal",
+    "code": "SAL",
+    "discoveryDisplayName": "SAL1&2 (on-campus storage)",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:25.446+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:25.446+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "name": "Art Loan Desk",
+    "code": "ART",
+    "discoveryDisplayName": "Art & Architecture Library (Bowes)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:03.032+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:24:00.984+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "7af3d617-e9e9-4241-8dd7-93827112d3ab",
+    "name": "Tanner Loan Desk",
+    "code": "TANNER",
+    "discoveryDisplayName": "Philosophy Library (Tanner)",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:34.130+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:34.130+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "7c5abc9f-f3d7-4856-b8d7-6712462ca007",
+    "name": "Online",
+    "code": "Online",
+    "discoveryDisplayName": "Online",
+    "shelvingLagTime": 0,
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [],
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:25.599+00:00",
+      "updatedDate": "2024-06-22T06:34:26.878+00:00"
+    }
+  },
+  {
+    "id": "80177cef-a09c-4f32-b439-a6b59620cafe",
+    "name": "SUL - Acquisitions",
+    "code": "SULACQ",
+    "discoveryDisplayName": "SUL Acquisitions",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:29.674+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:29.674+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "809716bc-1d3f-4b9e-b747-4fcbaff9d04e",
+    "name": "Sal-Newark",
+    "code": "SAL-NEWARK",
+    "discoveryDisplayName": "SAL Newark (off-campus storage)",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:26.195+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:26.195+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "8896c413-9907-4810-b33d-d1f8761ea1a9",
+    "name": "SUL - Collection Care",
+    "code": "SULCC",
+    "discoveryDisplayName": "SUL Collection Care",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:30.675+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:30.675+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "8bb5d494-263f-42f0-9a9f-70451530d8a3",
+    "name": "Classics",
+    "code": "CLASSICS",
+    "discoveryDisplayName": "Classics Library",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:07.769+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:07.769+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "943a4850-f0fb-4ffe-83cb-919157ed2117",
+    "name": "Media Center Loan Desk",
+    "code": "MEDIA-CENTER",
+    "discoveryDisplayName": "Green Library Media Center",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:22.422+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-26T23:52:59.234+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "958cc062-591c-45de-85c1-0e8672fbbfc5",
+    "name": "Business i-Desk",
+    "code": "BUS-IDESK",
+    "discoveryDisplayName": "Business Library",
+    "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"GSB\"}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 2,
+      "intervalId": "Weeks"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:06.934+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-12-13T20:19:30.381+00:00",
+      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+    }
+  },
+  {
+    "id": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "name": "Green Circulation Desk",
+    "code": "GREEN-LOAN",
+    "discoveryDisplayName": "Green Library",
+    "description": "{\"isDefaultPickup\":true, \"isDefaultForCampus\":\"SUL\"}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:16.262+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-26T23:52:36.875+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
+    "name": "Rumsey Map Center",
+    "code": "RUMSEY-MAP",
+    "discoveryDisplayName": "David Rumsey Map Center",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:24.616+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:24.616+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "b6c12686-3adf-4d3d-8f7c-334e971d37ed",
+    "name": "SUL - Metadata",
+    "code": "SULMD",
+    "discoveryDisplayName": "SUL Metadata",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:32.587+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:32.587+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
+    "name": "Education Loan Desk",
+    "code": "EDUCATION",
+    "discoveryDisplayName": "Education Library (Cubberley)",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:10.483+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:10.483+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "c9364d5f-6421-4c1a-9010-4ca2bc34efbe",
+    "name": "Law - Tech Services",
+    "code": "LAWTS",
+    "discoveryDisplayName": "Law - Tech Services",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:20.534+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:20.534+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "cc46a57e-fbca-4e69-9ab5-78f42c560145",
+    "name": "SUL - Conservation Services",
+    "code": "SULCONSER",
+    "discoveryDisplayName": "SUL Conservation Services",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:31.836+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T17:45:31.836+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d0db91bf-90e7-4036-8e91-721001cf52fc",
+    "name": "Engineering Loan Desk",
+    "code": "ENG",
+    "discoveryDisplayName": "Engineering Library (Terman)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:14.414+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:24:40.817+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "e9a88f1d-3ca1-4159-84ce-a400d7f75d56",
+    "name": "SUL - Metadata Cataloging Shelf",
+    "code": "SULMDCS",
+    "discoveryDisplayName": "SUL Metadata Cataloging Shelf",
+    "pickupLocation": false,
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T18:17:16.045+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:17:16.045+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "ee18f485-c78b-479c-b131-da1ffe6ce1b8",
+    "name": "Music - Tech Services",
+    "code": "MUSICTS",
+    "discoveryDisplayName": "Music - Tech Services",
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-09-22T23:25:04.824+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2023-09-22T23:25:04.824+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
+    "id": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
+    "name": "Law Library",
+    "code": "LAW",
+    "discoveryDisplayName": "Law Library (Crown)",
+    "description": "{\"isDefaultPickup\":true,\"isDefaultForCampus\":\"LAW\"}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": true
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:19.764+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-12-18T17:52:40.313+00:00",
+      "updatedByUserId": "a8e56e25-3536-4ba6-85bd-be835c4bdb57"
+    }
+  },
+  {
+    "id": "faa81922-3da8-4086-a7fa-977d7d3e7977",
+    "name": "ARS Service Desk",
+    "code": "ARS",
+    "discoveryDisplayName": "Archive of Recorded Sound",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:01.721+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:23:47.391+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "fc8598ae-df78-4ba4-be0d-0451c489ac30",
+    "name": "Academy Hall (SRWC)",
+    "code": "RWC",
+    "discoveryDisplayName": "Academy Hall (SRWC)",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
+    "staffSlips": [
+      {
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": false
+      },
+      {
+        "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
+        "printByDefault": false
+      },
+      {
+        "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      }
+    ],
+    "metadata": {
+      "createdDate": "2023-08-10T17:45:00.325+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2024-06-27T00:23:30.483+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  }
+]

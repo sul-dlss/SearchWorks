@@ -1,0 +1,360 @@
+[
+  {
+    "id": "16e4a925-4e84-4199-84e0-2cdd95973080",
+    "name": "accessories 3",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:54.187+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:54.187+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "185aae82-8ac0-4f64-a022-6f5476b0eaa5",
+    "name": "accessories 2",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:53.915+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:53.915+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "1a54b431-2e4f-452d-9cae-9cee66c9a892",
+    "name": "book",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:06.016+00:00",
+      "updatedDate": "2024-06-22T06:34:23.882+00:00"
+    }
+  },
+  {
+    "id": "1c092366-5f0b-42c7-b7cb-989e1dc7a378",
+    "name": "portable device 1",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:57.230+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:57.230+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "2095d272-341f-4c5a-896e-313caff66995",
+    "name": "library equipment 3",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.493+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.493+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "23726e5a-712e-46a2-b0eb-37b955f42914",
+    "name": "dataset",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.537+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.537+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "30b3e36a-d3b2-415e-98c2-47fbdf878862",
+    "name": "video recording",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:05.910+00:00",
+      "updatedDate": "2024-06-22T06:34:23.711+00:00"
+    }
+  },
+  {
+    "id": "4a61a6f2-11d7-4d47-a39f-0b2712522a23",
+    "name": "database",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.373+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.373+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "58973afa-1b0a-4ff7-b463-c2e946c8fb00",
+    "name": "av equipment 1",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:54.928+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:54.928+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "5df0f5e3-2e36-4dc7-979c-88705a9103a4",
+    "name": "newspaper",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.923+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.923+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "5ee11d91-f7e8-481d-b079-65d708582ccc",
+    "name": "dvd",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:02.720+00:00",
+      "updatedDate": "2024-06-22T06:34:23.229+00:00"
+    }
+  },
+  {
+    "id": "60c6bf6d-2a29-4fbc-9461-056699e740e7",
+    "name": "map",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.622+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.622+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "615b8413-82d5-4203-aa6e-e37984cb5ac3",
+    "name": "electronic resource",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:02.620+00:00",
+      "updatedDate": "2024-06-22T06:34:23.974+00:00"
+    }
+  },
+  {
+    "id": "69edaa1b-e40b-4f1c-8cb5-4b615ac6a664",
+    "name": "archival",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:54.472+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:54.472+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "71fbd940-1027-40a6-8a48-49b44d795e46",
+    "name": "unspecified",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:02.322+00:00",
+      "updatedDate": "2024-06-22T06:34:23.142+00:00"
+    }
+  },
+  {
+    "id": "794de86f-ecbc-45ad-b790-f30eb19797ec",
+    "name": "multimedia",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.777+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.777+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "7f9c4fab-138c-48dd-bc4a-d0db03279b3e",
+    "name": "library equipment 1",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.136+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.136+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "80e9f76c-766f-46c5-988a-b8fac5204604",
+    "name": "kit",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.803+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.803+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "81330e72-a104-4c09-be94-77c4c0f10f51",
+    "name": "accessories 1",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:53.708+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:53.708+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "8533857f-662f-456b-ad41-c57f2cbb67b0",
+    "name": "library equipment 2",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:56.269+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:56.269+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "86cf4f25-e8c9-4486-8583-e1d75bf5a63b",
+    "name": "av equipment 3",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.206+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.206+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "8cea2cd7-6a61-494e-a602-17045da7e3cb",
+    "name": "score",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:57.911+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:57.911+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "9034b46b-be80-4d4d-aec5-1c261c109b75",
+    "name": "library equipment 4",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-09-22T18:02:17.054+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2023-09-22T18:02:17.054+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "9b0eb098-a209-4445-b410-0a717c6e4643",
+    "name": "software",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:58.052+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:58.052+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a2253fdc-5808-4f2b-9eb3-e43b3884ab33",
+    "name": "portable device 3",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:57.759+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:57.759+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a3cc5a80-1bf5-42a5-b333-b9d201b650a0",
+    "name": "av equipment 2",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.054+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.054+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "a71b6ca2-9f2d-4ab9-bf5d-1ad8475607d8",
+    "name": "laptop",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.936+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.936+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "b4cc0696-7a37-4a39-ba8b-256b3cf71287",
+    "name": "game",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:55.658+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:55.658+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d934e614-215d-4667-b231-aed97887f289",
+    "name": "periodical",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:57.080+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:57.080+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d9acad2f-2aac-4b48-9097-e6ab85906b25",
+    "name": "text",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:07.105+00:00",
+      "updatedDate": "2024-06-22T06:34:23.222+00:00"
+    }
+  },
+  {
+    "id": "dd0bf600-dbd9-44ab-9ff2-e2a61a6539f1",
+    "name": "sound recording",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:02.428+00:00",
+      "updatedDate": "2024-06-22T06:34:23.213+00:00"
+    }
+  },
+  {
+    "id": "e51f66f2-e5f6-41c3-bef5-26557bae7c12",
+    "name": "portable device 2",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:57.619+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:57.619+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "f66297cb-a876-437c-b98f-5b0f604d0c45",
+    "name": "accessories 4",
+    "source": "local",
+    "metadata": {
+      "createdDate": "2023-08-10T18:44:54.326+00:00",
+      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
+      "updatedDate": "2023-08-10T18:44:54.326+00:00",
+      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "fd6c6515-d470-4561-9c32-3e3290d4ca98",
+    "name": "microform",
+    "source": "folio",
+    "metadata": {
+      "createdDate": "2023-08-09T20:33:02.618+00:00",
+      "updatedDate": "2024-06-22T06:34:23.227+00:00"
+    }
+  }
+]

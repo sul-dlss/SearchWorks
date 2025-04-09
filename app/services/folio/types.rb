@@ -14,7 +14,7 @@ module Folio
 
     attr_reader :cache_dir, :folio_client
 
-    def initialize(cache_dir: Rails.root.join('config/folio'), folio_client: FolioClient.new)
+    def initialize(cache_dir: Rails.root.join('config/folio', Settings.folio.config_set), folio_client: FolioClient.new)
       @cache_dir = cache_dir
       @folio_client = folio_client
     end
