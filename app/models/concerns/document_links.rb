@@ -2,7 +2,6 @@
 
 module DocumentLinks
   include MarcLinks
-  include AccessPanelLinks
   include EdsLinks
 
   def preferred_online_links

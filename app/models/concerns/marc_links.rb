@@ -10,6 +10,10 @@ module MarcLinks
     end)
   end
 
+  def access_panel_links
+    @access_panel_links ||= Links.new(marc_links.all.map(&:for_access_panel))
+  end
+
   class MarcLinkProcessor
     attr_reader :document, :link_struct
 
@@ -19,10 +23,34 @@ module MarcLinks
     end
 
     def to_link
-      Links::Link.new(link_struct.merge({ href:, finding_aid: finding_aid? }))
+      Links::Link.new(link_struct.merge({ href:, access_panel_link_text:, finding_aid: finding_aid? }))
     end
 
     private
+
+    def access_panel_link_text
+      if finding_aid?
+        'Online Archive of California'
+      elsif link_struct[:sfx]
+        'Find full text'
+      elsif link_struct[:href]
+        link_host
+      else
+        link_struct[:link_text]
+      end
+    end
+
+    def link_host
+      uri = URI.parse(Addressable::URI.encode(link_struct[:href].strip))
+      host = uri.host
+      if host =~ Links::PROXY_REGEX && uri.query
+        query = CGI.parse(uri.query)
+        host = URI.parse(query['url'].first).host if query['url'].present?
+      end
+      host || link_struct[:href]
+    rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
+      link_struct[:href]
+    end
 
     def finding_aid?
       link_struct[:material_type]&.downcase&.include?('finding aid') || link_struct[:note]&.downcase&.include?('finding aid')
