@@ -184,7 +184,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       let(:document) do
         SolrDocument.new(
           id: '12345',
-          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", finding_aid: true }]
+          marc_links_struct: [{ href: "http://oac.cdlib.org/ark:/abc123", material_type: 'finding aid' }]
         )
       end
 

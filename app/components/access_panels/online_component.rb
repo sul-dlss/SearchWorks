@@ -16,9 +16,9 @@ module AccessPanels
     end
 
     def sfx_links
-      return [] unless @document.index_links.sfx.present?
+      return [] unless @document.access_panel_links.sfx.present?
 
-      @document.index_links.sfx
+      @document.access_panel_links.sfx
     end
 
     def book_ids
