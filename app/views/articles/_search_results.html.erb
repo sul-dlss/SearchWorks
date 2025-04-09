@@ -4,24 +4,14 @@
     <%= render 'constraints' %>
   </div>
 </div>
-<div class='row'>
-  <% if @response.empty? %>
-    <div class="zero-results-heading">
-      <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
-      <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
-    </div>
-  <% end %>
-  <div id="sidebar" class="col-md-4 col-sm-5">
-    <% if @response.empty? %>
-      <%= render 'shared/chat_librarian_sidebar' %>
-    <% else %>
+<% if @response.empty? %>
+  <%= render "shared/zero_results" %>
+<% else %>
+  <div class='row'>
+    <div id="sidebar" class="col-md-4 col-sm-5">
       <%= render 'search_sidebar' %>
-    <% end %>
-  </div>
-  <div id="content" class="col-md-8 col-sm-7">
-    <% if @response.empty? %>
-      <%= render "shared/zero_results" %>
-    <% else %>
+    </div>
+    <div id="content" class="col-md-8 col-sm-7">
       <div id='documents' class="article-search-results">
         <div class="search_num_of_results">
           <div class='results-heading'>
@@ -39,7 +29,7 @@
         <%- end %>
 
         <%= render 'search_footer' %>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

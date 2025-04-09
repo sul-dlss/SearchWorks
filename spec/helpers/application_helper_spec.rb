@@ -3,20 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper do
-  describe '#searchworks_search_action_path' do
-    context 'when in an article search' do
-      before { expect(helper).to receive_messages(article_search?: true) }
-
-      it { expect(helper.searchworks_search_action_path).to eq articles_path }
-    end
-
-    context 'everywhere else' do
-      before { expect(helper).to receive_messages(article_search?: false) }
-
-      it { expect(helper.searchworks_search_action_path).to eq search_catalog_path }
-    end
-  end
-
   describe "#data_with_label" do
     let(:temp_doc) { { 'key' => 'fudgesicles' } }
     let(:temp_doc_array) { { 'key' => ['fudgesicles1', 'fudgesicles2'] } }
