@@ -136,7 +136,7 @@ class SolrDocument
   end
 
   def finding_aid
-    index_links&.finding_aid if has_finding_aid?
+    access_panel_links&.finding_aid if has_finding_aid?
   end
 
   def file_ids

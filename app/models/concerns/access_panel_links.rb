@@ -3,20 +3,20 @@
 # index_links returns a Links::Link object for each :marc_link_struct value.
 # index_links are displayed on access panels and get different treatment
 # for link_text than marc_links created in the MarcLinks module.
-module IndexLinks
-  def index_links
-    @index_links ||= Links.new(
+module AccessPanelLinks
+  def access_panel_links
+    @access_panel_links ||= Links.new(
       fetch(:marc_links_struct, []).map do |link_struct|
-        IndexLinkProcessor.new(self, link_struct).to_index_link
+        AccessPanelLinkProcessor.new(self, link_struct).to_link
       end
     )
   end
 
   def has_finding_aid?
-    index_links.finding_aid.first&.href.present?
+    access_panel_links.finding_aid.first&.href.present?
   end
 
-  class IndexLinkProcessor
+  class AccessPanelLinkProcessor
     attr_reader :document, :link_struct
 
     def initialize(document, link_struct)
@@ -24,7 +24,7 @@ module IndexLinks
       @link_struct = link_struct
     end
 
-    def to_index_link
+    def to_link
       Links::Link.new(link_struct.merge({ link_text:, href: }))
     end
 

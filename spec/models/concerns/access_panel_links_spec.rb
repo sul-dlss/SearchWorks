@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe IndexLinks do
+RSpec.describe AccessPanelLinks do
   let(:document) do
     SolrDocument.new(
       marc_links_struct: [{ href: "https://library.stanford.edu", fulltext: true, stanford_only: true },
@@ -11,42 +11,37 @@ RSpec.describe IndexLinks do
   end
 
   describe 'mixin' do
-    it 'adds the #index_links method' do
-      expect(document).to respond_to(:index_links)
-    end
-    it '#index_links should return Links' do
-      expect(document.index_links).to be_a(Links)
-      document.index_links.each do |index_link|
-        expect(index_link).to be_a Links::Link
-      end
+    it '#access_panel_links returns Links' do
+      expect(document.access_panel_links).to be_a(Links)
+      expect(document.access_panel_links).to all(be_a Links::Link)
     end
   end
 
   describe 'Links' do
-    let(:index_links) { document.index_links }
+    subject(:access_panel_links) { document.access_panel_links.all }
 
     it 'returns both fulltext and supplemental links' do
-      expect(index_links.all.length).to eq 2
-      expect(index_links.all.first.html).to match(%r{^<a.*>library\.stanford\.edu<\/a>$})
-      expect(index_links.all.last.html).to match(%r{^<a.*>searchworks\.stanford\.edu<\/a>$})
+      expect(access_panel_links.length).to eq 2
+      expect(access_panel_links.first.html).to match(%r{^<a.*>library\.stanford\.edu</a>$})
+      expect(access_panel_links.last.html).to match(%r{^<a.*>searchworks\.stanford\.edu</a>$})
     end
 
     it 'returns the plain text and href separately' do
-      expect(index_links.all.length).to eq 2
-      expect(index_links.all.first.text).to eq 'library.stanford.edu'
-      expect(index_links.all.first.href).to eq 'https://library.stanford.edu'
-      expect(index_links.all.last.text).to eq 'searchworks.stanford.edu'
-      expect(index_links.all.last.href).to eq 'https://searchworks.stanford.edu'
+      expect(access_panel_links.length).to eq 2
+      expect(access_panel_links.first.text).to eq 'library.stanford.edu'
+      expect(access_panel_links.first.href).to eq 'https://library.stanford.edu'
+      expect(access_panel_links.last.text).to eq 'searchworks.stanford.edu'
+      expect(access_panel_links.last.href).to eq 'https://searchworks.stanford.edu'
     end
 
     it 'identifies urls that are in the url_restricted field as stanford only' do
-      expect(index_links.all.first).to be_stanford_only
-      expect(index_links.all.last).not_to be_stanford_only
+      expect(access_panel_links.first).to be_stanford_only
+      expect(access_panel_links.last).not_to be_stanford_only
     end
 
     it 'identifies urls that are in the url_fulltext field as fulltext' do
-      expect(index_links.all.first).to be_fulltext
-      expect(index_links.all.last).not_to be_fulltext
+      expect(access_panel_links.first).to be_fulltext
+      expect(access_panel_links.last).not_to be_fulltext
     end
 
     context 'with an OAC finding aid' do
@@ -57,10 +52,10 @@ RSpec.describe IndexLinks do
       end
 
       it 'identifies finding aid links' do
-        expect(index_links.all.first).to be_finding_aid
-        expect(index_links.finding_aid.length).to eq 1
-        expect(index_links.finding_aid.first.html).to match(
-          %r{<a href=".*oac\.cdlib\.org\/findaid\/ark:\/something-else">Online Archive of California<\/a>}
+        expect(access_panel_links.first).to be_finding_aid
+        expect(document.access_panel_links.finding_aid.length).to eq 1
+        expect(document.access_panel_links.finding_aid.first.html).to match(
+          %r{<a href=".*oac\.cdlib\.org/findaid/ark:/something-else">Online Archive of California</a>}
         )
       end
     end
@@ -73,7 +68,7 @@ RSpec.describe IndexLinks do
       end
 
       it 'identifies finding aid links' do
-        expect(index_links.all.first).to be_finding_aid
+        expect(access_panel_links.first).to be_finding_aid
       end
     end
 
@@ -85,9 +80,9 @@ RSpec.describe IndexLinks do
       end
 
       it 'identifies managed purls' do
-        expect(index_links.all.length).to eq 1
-        expect(index_links.managed_purls.length).to eq 1
-        expect(index_links.all.first).to eq(index_links.managed_purls.first)
+        expect(access_panel_links.length).to eq 1
+        expect(document.access_panel_links.managed_purls.length).to eq 1
+        expect(access_panel_links.first).to eq(document.access_panel_links.managed_purls.first)
       end
     end
 
@@ -102,11 +97,11 @@ RSpec.describe IndexLinks do
       end
 
       it 'parses them properly' do
-        expect(index_links.all.length).to eq 4
-        expect(index_links.all.first.html).to match(
-          %r{<a href=.*example\.com\/lookup\?\^The\+Query.*>www\.example\.com<\/a>}
+        expect(access_panel_links.length).to eq 4
+        expect(access_panel_links.first.html).to match(
+          %r{<a href=.*example\.com/lookup\?\^The\+Query.*>www\.example\.com</a>}
         )
-        expect(index_links.all[2].html).to match(%r{<a.*> at: <\/a>})
+        expect(access_panel_links[2].html).to match(%r{<a.*> at: </a>})
       end
     end
 
@@ -118,11 +113,11 @@ RSpec.describe IndexLinks do
       end
 
       it 'identifies sfx URLs and link them appropriately' do
-        expect(index_links.all.length).to eq 1
-        expect(index_links.all.first).to be_sfx
-        expect(index_links.sfx.length).to eq 1
-        expect(index_links.sfx.first).to be_sfx
-        expect(index_links.sfx.first.html).to match(%r{^<a href=.*class="sfx">Find full text<\/a>$})
+        expect(access_panel_links.length).to eq 1
+        expect(access_panel_links.first).to be_sfx
+        expect(document.access_panel_links.sfx.length).to eq 1
+        expect(document.access_panel_links.sfx.first).to be_sfx
+        expect(document.access_panel_links.sfx.first.html).to match(%r{^<a href=.*class="sfx">Find full text</a>$})
       end
     end
 
@@ -142,9 +137,9 @@ RSpec.describe IndexLinks do
         end
 
         it 'returns the URL in the url parameter for ezproxy links (but fallback on the URL host)' do
-          expect(index_links.all.length).to eq 2
-          expect(index_links.all.first.html).to match(%r{<a href=.*>library\.stanford\.edu<\/a>})
-          expect(index_links.all.last.html).to match(%r{<a href=.*>ezproxy\.stanford\.edu<\/a>})
+          expect(access_panel_links.length).to eq 2
+          expect(access_panel_links.first.html).to match(%r{<a href=.*>library\.stanford\.edu</a>})
+          expect(access_panel_links.last.html).to match(%r{<a href=.*>ezproxy\.stanford\.edu</a>})
         end
       end
 
@@ -160,7 +155,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
+          expect(access_panel_links.first.href).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
         end
       end
 
@@ -173,7 +168,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'leaves the url alone' do
-          expect(document.index_links.all.first.href).to eq 'https://www.who.int/whatever'
+          expect(access_panel_links.first.href).to eq 'https://www.who.int/whatever'
         end
       end
 
@@ -189,7 +184,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+          expect(access_panel_links.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
       end
 
@@ -202,7 +197,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
+          expect(access_panel_links.first.href).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
       end
 
@@ -217,7 +212,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the ezproxy URL' do
-          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+          expect(access_panel_links.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
         end
       end
 
@@ -229,7 +224,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'leaves the url alone' do
-          expect(document.index_links.all.first.href).to eq 'http://ch.ucpress.edu/whatever'
+          expect(access_panel_links.first.href).to eq 'http://ch.ucpress.edu/whatever'
         end
       end
 
@@ -244,7 +239,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'leaves the url alone' do
-          expect(document.index_links.all.first.href).to eq 'https://www.who.int/whatever'
+          expect(access_panel_links.first.href).to eq 'https://www.who.int/whatever'
         end
       end
 
@@ -260,7 +255,7 @@ RSpec.describe IndexLinks do
         end
 
         it 'prefixes the link with the SUL url' do
-          expect(document.index_links.all.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
+          expect(access_panel_links.first.href).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
         end
       end
     end
