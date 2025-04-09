@@ -29,7 +29,6 @@ class ItemRequestLinkPolicy
   def folio_holdable?
     return false unless Settings.folio_hold_recall_statuses.include?(item.folio_status)
 
-    item.allowed_request_types.include?('Hold') ||
-      item.allowed_request_types.include?('Recall')
+    item_allows_hold_recall?
   end
 end
