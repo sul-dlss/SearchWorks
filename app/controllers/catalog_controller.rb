@@ -22,8 +22,6 @@ class CatalogController < ApplicationController
 
   include EmailValidation
 
-  include BackendLookup
-
   include StanfordWorkFacet
 
   include SearchRelevancyLogging

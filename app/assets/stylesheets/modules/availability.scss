@@ -1,6 +1,5 @@
 .availability {
   thead {
-
     tr,
     tr.active {
       th {
@@ -67,7 +66,7 @@
 
 .status-text {
   color: $sul-availability-status-text-color;
-  font-size: .937em;
+  font-size: 0.937em;
 }
 
 .temporary-location {
@@ -75,7 +74,7 @@
 }
 
 .availability-item {
-  border-top: 1px solid $fog-light;
+  border-top: 1px solid var(--stanford-fog-light);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -97,8 +96,8 @@
   .bound-with {
     --link-decoration-line: none;
 
-    background-color: $fog-light;
-    
+    background-color: var(--stanford-fog-light);
+
     .bound-with-type {
       color: $cardinal-red;
     }

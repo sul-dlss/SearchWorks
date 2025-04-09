@@ -162,12 +162,6 @@ RSpec.describe CatalogController do
         expect({ get: "/databases" }).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
-
-    describe "/backend_lookup" do
-      it "routes to the backend lookup path as json" do
-        expect({ get: "/backend_lookup" }).to route_to(controller: 'catalog', action: 'backend_lookup', format: :json)
-      end
-    end
   end
 
   describe "blacklight config" do

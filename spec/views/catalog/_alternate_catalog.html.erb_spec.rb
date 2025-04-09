@@ -6,7 +6,7 @@ RSpec.describe 'catalog/_alternate_catalog' do
   before do
     controller.params[:q] = 'question'
     stub_template '_lib_guides_alternate_catalog' => ''
-    render
+    render 'catalog/alternate_catalog', close: true
   end
 
   it 'has data-attributes' do
