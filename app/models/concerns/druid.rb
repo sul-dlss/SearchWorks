@@ -2,6 +2,6 @@
 
 module Druid
   def druid
-    self[:druid] || index_links.managed_purls.map(&:druid)&.first
+    self[:druid] || marc_links.managed_purls.map(&:druid)&.first
   end
 end
