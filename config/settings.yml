@@ -259,6 +259,7 @@ folio_hold_recall_statuses:
   - On order
   - In process
   - Restricted
+  - Aged to lost
 
 folio_unrequestable_statuses:
   - Claims returned
