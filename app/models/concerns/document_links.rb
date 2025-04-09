@@ -2,7 +2,7 @@
 
 module DocumentLinks
   include MarcLinks
-  include IndexLinks
+  include AccessPanelLinks
   include EdsLinks
 
   def preferred_online_links
@@ -12,7 +12,7 @@ module DocumentLinks
   private
 
   def sfx_links
-    index_links.sfx.presence
+    access_panel_links.sfx.presence
   end
 
   def marc_fulltext_links
