@@ -1,11 +1,4 @@
 .constraints-container {
-  .btn-reset span {
-    font-size: $h4-font-size;
-    font-variant: all-small-caps;
-    line-height: $h4-font-size;
-    white-space: nowrap;
-  }
-
   span.constraint.btn-group {
     span.constraint-value {
       border-top-left-radius: $sul-constraint-btn-radius;
@@ -26,7 +19,6 @@
       padding-top: 8px;
       padding-bottom: 5px;
     }
-
   }
   @include media-breakpoint-down(sm) {
     .constraint {
