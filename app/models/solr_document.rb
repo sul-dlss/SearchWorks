@@ -39,6 +39,7 @@ class SolrDocument
   include RisMapping
 
   delegate :empty?, :blank?, to: :to_h
+  delegate :managed_purls, to: :marc_links
 
   # TODO: change this to #to_param when we have upgraded to Blacklight 6.11.1
   def id
