@@ -12,10 +12,6 @@ module AccessPanelLinks
     )
   end
 
-  def has_finding_aid?
-    access_panel_links.finding_aid.first&.href.present?
-  end
-
   class AccessPanelLinkProcessor
     attr_reader :document, :link_struct
 

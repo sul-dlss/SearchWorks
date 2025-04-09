@@ -9,6 +9,14 @@ module DocumentLinks
     sfx_links || marc_fulltext_links || eds_links&.fulltext || []
   end
 
+  def has_finding_aid?
+    access_panel_links.finding_aid.first&.href.present?
+  end
+
+  def finding_aid
+    access_panel_links&.finding_aid if has_finding_aid?
+  end
+
   private
 
   def sfx_links

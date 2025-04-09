@@ -132,10 +132,6 @@ class SolrDocument
     self[:db_az_subject] if is_a_database?
   end
 
-  def finding_aid
-    access_panel_links&.finding_aid if has_finding_aid?
-  end
-
   def file_ids
     self[:img_info] || self[:file_id] || []
   end
