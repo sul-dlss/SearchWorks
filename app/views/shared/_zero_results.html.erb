@@ -1,39 +1,50 @@
-<div class="card mb-3">
-  <div class="card-body zero-results">
-    <h3><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h3>
-    <dl>
-      <dt>
-        <%= t 'blacklight.search.zero_results.check_spelling' %>
-      </dt>
-      <dd>
-        <%= render 'catalog/constraints' %>
-      </dd>
-      <% if from_advanced_search? %>
-        <div>
-          <i class="fa fa-search-plus"></i>
-          <%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), "JavaScript:history.back();" %>
-        </div>
+<div class="zero-results-heading">
+  <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
+  <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
+</div>
+<div class='row'>
+  <div id="sidebar" class="col-md-4 col-sm-5">
+    <%= render 'shared/chat_librarian_sidebar' %>
+  </div>
+  <div id="content" class="col-md-8 col-sm-7">
+    <div class="card mb-3">
+      <div class="card-body zero-results">
+        <h3><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h3>
+        <dl>
+          <dt>
+            <%= t 'blacklight.search.zero_results.check_spelling' %>
+          </dt>
+          <dd>
+            <%= render 'catalog/constraints' %>
+          </dd>
+          <% if from_advanced_search? %>
+            <div>
+              <i class="fa fa-search-plus"></i>
+              <%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), "JavaScript:history.back();" %>
+            </div>
 
-      <% else %>
-        <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
-            <dt><%= t 'blacklight.search.zero_results.remove_all_limits' %></dt>
-            <dd>
-              <%= link_to searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", track: 'zero-results-remove-limit', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} do %>
-                <%= content_tag :span, "#{search_field_label(params)} > #{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
+          <% else %>
+            <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
+                <dt><%= t 'blacklight.search.zero_results.remove_all_limits' %></dt>
+                <dd>
+                  <%= link_to searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", track: 'zero-results-remove-limit', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} do %>
+                    <%= content_tag :span, "#{search_field_label(params)} > #{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
+                <% end %>
+              </dd>
             <% end %>
-          </dd>
-        <% end %>
-        <% if @search_modifier.fielded_search? %>
-            <dt><%= t 'blacklight.search.zero_results.search_fields' %></dt>
-            <dd>
-            <%= link_to searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", track: 'zero-results-search-all-fields', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} do %>
-              <%= content_tag :span, "#{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
+            <% if @search_modifier.fielded_search? %>
+                <dt><%= t 'blacklight.search.zero_results.search_fields' %></dt>
+                <dd>
+                <%= link_to searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", track: 'zero-results-search-all-fields', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} do %>
+                  <%= content_tag :span, "#{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
+                <% end %>
+              </dd>
             <% end %>
-          </dd>
-        <% end %>
-      <% end %>
-    </dl>
+          <% end %>
+        </dl>
+      </div>
+    </div>
+    <%= render 'alternate_catalog' if show_alternate_catalog? %>
+    <%= render "shared/search_assistance_block"%>
   </div>
 </div>
-<%= render 'alternate_catalog' if show_alternate_catalog? %>
-<%= render "shared/search_assistance_block"%>
