@@ -21,9 +21,9 @@
             <dt>Physical collection</dt>
             <dd><%= @parent.extent_sans_format %></dd>
           <% end %>
-          <% if @parent.access_panel_links.finding_aid.present? %>
+          <% if @parent.marc_links.finding_aid.present? %>
             <dt>Finding aid</dt>
-            <dd><%= @parent.access_panel_links.finding_aid.first.html.html_safe %></dd>
+            <dd><%= @parent.marc_links.finding_aid.first.html.html_safe %></dd>
           <% end %>
         </dl>
       </div>

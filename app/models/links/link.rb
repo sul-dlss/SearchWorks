@@ -22,12 +22,6 @@ class Links
       @sort = options[:sort]
       @stanford_only = options[:stanford_only]
       @type = options[:type]
-      @access_panel_link_text = options[:access_panel_link_text]
-      @options = options
-    end
-
-    def for_access_panel
-      @for_access_panel ||= self.class.new(@options.merge({ link_text: @access_panel_link_text || @link_text }))
     end
 
     def ==(other)

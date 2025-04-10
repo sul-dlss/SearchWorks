@@ -9,17 +9,17 @@ module DocumentLinks
   end
 
   def has_finding_aid?
-    access_panel_links.finding_aid.first&.href.present?
+    finding_aid.first&.href.present?
   end
 
   def finding_aid
-    access_panel_links&.finding_aid if has_finding_aid?
+    marc_links&.finding_aid
   end
 
   private
 
   def sfx_links
-    access_panel_links.sfx.presence
+    marc_links.sfx.presence
   end
 
   def marc_fulltext_links
