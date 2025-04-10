@@ -13,7 +13,7 @@ class SummaryDataComponent < ViewComponent::Base
   end
 
   def render_toc_and_summary?
-    document.key?(:toc_struct) || document.key?(:summary_struct) || document.respond_to?(:to_marc)
+    document.key?(:toc_struct) || document.key?(:summary_struct) || document.key?(:toc_struct)
   end
 
   def render_mods_abstract?

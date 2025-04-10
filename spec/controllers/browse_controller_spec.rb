@@ -17,7 +17,7 @@ RSpec.describe BrowseController do
     end
 
     before do
-      allow(controller).to receive_messages(search_service: double('search_service', fetch: [response, original_doc]), params: { start: 'xyz' },
+      allow(controller).to receive_messages(search_service: double('search_service', fetch: original_doc), params: { start: 'xyz' },
                                             fetch_original_document: original_doc)
     end
 

@@ -112,4 +112,21 @@ RSpec.describe CatalogHelper do
       expect(dnd_link).to match(%r{<img width="40" alt="IIIF Drag-n-drop" src="/images/iiif-drag-n-drop.svg" />})
     end
   end
+
+  describe '#html_present?' do
+    it 'returns false for blank values' do
+      expect(helper.html_present?(nil)).to be false
+      expect(helper.html_present?('')).to be false
+    end
+
+    it 'returns false for values with only HTML comments' do
+      expect(helper.html_present?('<!-- comment -->')).to be false
+    end
+
+    it 'returns true for values with content' do
+      expect(helper.html_present?('some content')).to be true
+      expect(helper.html_present?('<p>some content</p>')).to be true
+      expect(helper.html_present?('<div><!-- comment --></div><p>some content</p>')).to be true
+    end
+  end
 end

@@ -61,6 +61,7 @@ class CatalogController < ApplicationController
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
   configure_blacklight do |config|
+    config.bootstrap_version = 4
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -106,7 +107,7 @@ class CatalogController < ApplicationController
     config.index.title_component = SearchResult::DocumentTitleComponent
 
     config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
-    config.index.title_field = Blacklight::Configuration::Field.new(field: 'title_display', steps: [TitleRenderingStep])
+    config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
     config.index.thumbnail_method = :render_cover_image
@@ -484,21 +485,22 @@ class CatalogController < ApplicationController
     config.spell_max = 5
 
     # View type group config
-    config.view.list.icon_class = "fa-th-list"
-    config.view.gallery(partials: [:index], icon_class: "fa-th")
-    config.view.brief(partials: [:index], icon_class: "fa-align-justify")
+    config.view.list.icon = Searchworks::Icons::ListIcon
+    config.view.gallery(icon: Searchworks::Icons::GalleryIcon)
+    config.view.brief(icon: Searchworks::Icons::BriefIcon)
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
 
     config.add_show_tools_partial :citation, if: false
+    config.add_show_tools_partial :email, callback: :email_action, validator: :validate_email_params
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
   end
 
   # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
   # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
   def email
-    @response, @documents = search_service.fetch(Array(params[:id]))
+    @documents = search_service.fetch(Array(params[:id]))
 
     if request.post? && validate_email_params_and_recaptcha
       send_emails_to_all_recipients
@@ -516,7 +518,7 @@ class CatalogController < ApplicationController
   # Overridden from Blacklight to pre-fetch OCLC citations in bulk
   # when more than one document's citation is being displayed.
   def citation
-    @response, @documents = search_service.fetch(Array(params[:id]))
+    @documents = search_service.fetch(Array(params[:id]))
     return unless @documents.size > 1
 
     oclc_numbers = @documents.filter_map { |document| document.oclc_number.presence }

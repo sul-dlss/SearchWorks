@@ -7,7 +7,7 @@ RSpec.describe SelectedDatabasesController do
     it "sets the @selected_databases instance variable" do
       docs = double('documents')
 
-      allow(controller).to receive(:search_service).and_return(double('MockSearchService', fetch: [double('response'), docs]))
+      allow(controller).to receive(:search_service).and_return(double('MockSearchService', fetch: docs))
       get :index
       expect(assigns(:selected_databases)).to eq docs
     end
