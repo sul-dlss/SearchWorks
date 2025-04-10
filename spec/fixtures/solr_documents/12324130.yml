@@ -1,0 +1,349 @@
+---
+id: '12324130'
+hashed_id_ssi: 1dda0488367e9b1001983c5baf4b9ac5
+marc_json_struct:
+- '{"leader":"01516cai a2200397 i 4500","fields":[{"001":"a12324130"},{"003":"SIRSI"},{"006":"m     o  d
+  f      "},{"007":"cr |||||||||||"},{"008":"180129d20uu202uvau x   o    f|    2eng
+  c"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"2018230008"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) o1020704348"}]}},{"042":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"pcc"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"GPO"},{"b":"eng"},{"e":"rda"},{"e":"pn"},{"c":"GPO"},{"d":"MERUC"},{"d":"OCLCF"},{"d":"ZQP"},{"d":"OCLCQ"},{"d":"GPO"},{"d":"MvI"}]}},{"074":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1100-E (online)"}]}},{"086":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Y 3.AR 2/2:2/P 82/"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Arctic
+  science portal."}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"[Arlington,
+  Va.] :"},{"b":"United States Arctic Research Commission"}]}},{"300":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"1 online resource"}]}},{"310":{"ind1":" ","ind2":" ","subfields":[{"a":"Updated
+  irregularly"}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"362":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Ceased publication."}]}},{"520":{"ind1":" ","ind2":" ","subfields":[{"a":"The
+  portal is a collection of Arctic science websites covering topics on society, environment,
+  economics, reference and organizations. The portal is designed for use by researchers,
+  decision makers and the general public."}]}},{"588":{"ind1":"0","ind2":" ","subfields":[{"a":"Contents
+  viewed Jan. 29, 2018; title from home page."}]}},{"651":{"ind1":" ","ind2":"0","subfields":[{"a":"Arctic
+  regions"},{"x":"Research."}]}},{"650":{"ind1":" ","ind2":"7","subfields":[{"a":"Research."},{"2":"fast"},{"0":"(OCoLC)fst01095153"}]}},{"651":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Arctic Regions."},{"2":"fast"},{"0":"(OCoLC)fst01240227"}]}},{"710":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"United States."},{"b":"Arctic Research Commission,"},{"e":"issuing
+  body."}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"u":"https://purl.fdlp.gov/GPO/gpo88626"},{"7":"0"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)1020704348"}]}},{"596":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"22"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  a12324130"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) gp 20320789"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"446d2369-2b74-5ae3-8864-7814333448f3"},{"s":"f0020fb5-1da6-55ab-babb-0c2ba8045bb2"}]}}]}'
+all_search: 'Arctic science portal. [Arlington, Va.] : United States Arctic Research
+  Commission 1 online resource Updated irregularly text txt rdacontent computer c
+  rdamedia online resource cr rdacarrier Ceased publication. The portal is a collection
+  of Arctic science websites covering topics on society, environment, economics, reference
+  and organizations. The portal is designed for use by researchers, decision makers
+  and the general public. Contents viewed Jan. 29, 2018; title from home page. Arctic
+  regions Research. Research. fast (OCoLC)fst01095153 Arctic Regions. fast (OCoLC)fst01240227
+  United States. Arctic Research Commission, issuing body. https://purl.fdlp.gov/GPO/gpo88626
+  0 22'
+title_245a_search: Arctic science portal.
+title_245_search: Arctic science portal.
+title_245a_display: Arctic science portal
+title_display: Arctic science portal
+title_full_display: Arctic science portal.
+title_sort: Arctic science portal
+author_title_245ac_search:
+- Arctic science portal.
+author_7xx_search:
+- United States. Arctic Research Commission,
+author_other_facet:
+- United States. Arctic Research Commission
+author_sort: "\U0010FFFF Arctic science portal"
+topic_search:
+- Research.
+topic_display:
+- Research.
+topic_subx_search:
+- Research.
+geographic_search:
+- Arctic regions
+- Arctic Regions.
+subject_all_search:
+- Arctic regions Research.
+- Research.
+- Arctic Regions.
+topic_facet:
+- Research
+geographic_facet:
+- Arctic regions
+- Arctic Regions
+pub_search:
+- "[Arlington, Va.] : United States Arctic Research Commission"
+pub_display:
+- "[Arlington, Va.] : United States Arctic Research Commission"
+pub_country: Virginia, United States
+pub_date: 21st century
+pub_date_search: 21st century
+pub_date_sort: '2029'
+pub_year_tisim:
+- 2029
+pub_year_ss: "- 2029"
+ending_year_isi: 2029
+imprint_display:
+- "[Arlington, Va.] : United States Arctic Research Commission"
+date_cataloged: '2018-02-08T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://purl.fdlp.gov/GPO/gpo88626
+oclc:
+- '1020704348'
+access_facet:
+- Online
+access_status_ssim:
+- Open Access
+format_main_ssim:
+- Book
+genre_ssim:
+- Government document
+physical:
+- 1 online resource
+summary_search:
+- The portal is a collection of Arctic science websites covering topics on society,
+  environment, economics, reference and organizations. The portal is designed for
+  use by researchers, decision makers and the general public.
+summary_display:
+- The portal is a collection of Arctic science websites covering topics on society,
+  environment, economics, reference and organizations. The portal is designed for
+  use by researchers, decision makers and the general public.
+lccn: '2018230008'
+callnum_facet_hsim:
+- Government Document|Federal
+holdings_library_code_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '006'
+- '007'
+- '008'
+- '010'
+- '035'
+- '042'
+- '040'
+- '074'
+- '086'
+- '245'
+- '264'
+- '300'
+- '310'
+- '336'
+- '337'
+- '338'
+- '362'
+- '520'
+- '588'
+- '651'
+- '650'
+- '710'
+- '856'
+- '596'
+- '999'
+- 010a
+- 035a
+- 042a
+- 040abeecdddddd
+- 074a
+- '086a'
+- 245a
+- 264ab
+- 300a
+- 310a
+- 336ab2
+- 337ab2
+- 338ab2
+- 362a
+- 520a
+- 588a
+- 651ax
+- 650a20
+- 651a20
+- 710abe
+- 856u7
+- 596a
+- 999is
+- "?010a"
+- "?035a"
+- "?042a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?074a"
+- "?086a"
+- "?245a"
+- "?264a"
+- "?264b"
+- "?300a"
+- "?310a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?362a"
+- "?520a"
+- "?588a"
+- "?651a"
+- "?651x"
+- "?650a"
+- "?6502"
+- "?6500"
+- "?6512"
+- "?6510"
+- "?710a"
+- "?710b"
+- "?710e"
+- "?856u"
+- "?8567"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Arctic science portal. [Arlington, Va.] : United States Arctic Research
+  Commission United States. Arctic Research Commission, issuing body. Research. Book'
+vern_bib_search: Book
+uuid_ssi: 446d2369-2b74-5ae3-8864-7814333448f3
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"446d2369-2b74-5ae3-8864-7814333448f3","hrid":"a12324130","notes":[{"note":"The
+  portal is a collection of Arctic science websites covering topics on society, environment,
+  economics, reference and organizations. The portal is designed for use by researchers,
+  decision makers and the general public","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Contents
+  viewed Jan. 29, 2018; title from home page","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"Arctic
+  science portal.","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T18:23:37.518Z","updatedDate":"2023-08-21T18:23:37.518Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Arctic
+  regions Research"},{"value":"Research"},{"value":"Arctic Regions"}],"languages":["eng"],"indexTitle":"Arctic
+  science portal.","identifiers":[{"value":"2018230008","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  o1020704348","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"1100-E
+  (online)","identifierTypeId":"351ebc1c-3aae-4825-8765-c6d50dbf011f"},{"value":"(OCoLC-M)1020704348","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  a12324130","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(Sirsi)
+  gp 20320789","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"[Arlington,
+  Va.]","publisher":"United States Arctic Research Commission","dateOfPublication":""}],"contributors":[{"name":"United
+  States. Arctic Research Commission","primary":false,"contributorTypeId":"97082157-5900-4c4c-a6d8-2e6c13f22ef1","contributorTypeText":"issuing
+  body.","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2018-02-08","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"Y
+  3.AR 2/2:2/P 82/","classificationTypeId":"fb12264c-ff3b-47e0-8e09-b0aa074361f1"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://purl.fdlp.gov/GPO/gpo88626","name":"Resource","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"4fc0f4fe-06fd-490a-a078-c4da1754e03a","publicationRange":["Ceased
+  publication"],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-21T18:23:37.388+0000","statisticalCodeIds":["d3f618e2-9fa9-4623-94ae-1d95d1d66f79"],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource"],"publicationFrequency":["Updated irregularly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-05-18T10:00:26Z'
+created: '2025-05-18T10:00:26Z'
+timestamp: '2025-05-18T10:00:26Z'
+author_struct:
+- contributors:
+  - link: United States. Arctic Research Commission,
+    search: United States. Arctic Research Commission,
+    pre_text: ''
+    post_text: issuing body.
+    authorities: []
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text: purl.fdlp.gov
+  link_title: ''
+  additional_text:
+  additional_links: []
+  material_type:
+  note: ''
+  href: https://purl.fdlp.gov/GPO/gpo88626
+  sort:
+  casalini:
+  fulltext: true
+  finding_aid: false
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - The portal is a collection of Arctic science websites covering topics on society,
+      environment, economics, reference and organizations. The portal is designed
+      for use by researchers, decision makers and the general public.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 7a043b6c-d046-5e43-a9fe-2514b2940409
+    hrid: ah12324130_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T18:24:17.292Z'
+      updatedDate: '2023-08-21T18:24:17.292Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 446d2369-2b74-5ae3-8864-7814333448f3
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []

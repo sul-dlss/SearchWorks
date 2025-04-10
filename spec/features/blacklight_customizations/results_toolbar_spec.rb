@@ -26,6 +26,7 @@ RSpec.feature "Results Toolbar", :js do
       expect(page).to have_no_css("button", text: /Send/)
     end
   end
+
   scenario "pagination links for single items should not have any number of results info" do
     visit root_path
     fill_in "q", with: '24'
@@ -36,13 +37,14 @@ RSpec.feature "Results Toolbar", :js do
       expect(page).to have_no_content('1 entry')
     end
   end
-  scenario "pagination links for multiple items but no pages should not have any number of results info" do
+
+  scenario "pagination links don't display when there is only one page of results" do
     visit root_path q: '34'
-    expect(page).to have_css('h2', text: '5 catalog results')
+    expect(page).to have_css('h2', text: '6 catalog results')
 
     within('.sul-toolbar .page_links') do
       expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Previous/)
-      expect(page).to have_css("span.page_entries", text: /1 - 5/)
+      expect(page).to have_css("span.page_entries", text: /1 - 6/)
       expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Next/)
     end
   end

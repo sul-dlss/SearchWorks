@@ -115,7 +115,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
 
   '
 context_input_name_ssi: "/dev/null"
@@ -269,9 +269,9 @@ folio_json_struct:
   2016"}],"contributors":[{"name":"Skordis, Andys","primary":true,"contributorTypeId":"901d01e5-66b1-48f0-99f9-b5e92e3d2d15","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2020-04-04","staffSuppress":false,"instanceTypeId":"497b5090-3da2-486c-b57f-de5bb3c2e26d","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"http://www.aspresolver.com/aspresolver.asp?SHM4;3568528","name":"Resource","linkText":"Classical
   Scores Library","publicNote":"Available to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"[dot-dot-dot-dot-dot-dot]","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-21T20:16:29.392+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
   online resource (1 score (51 pages))","digital","data file","score"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-11T09:45:06Z'
-created: '2025-05-11T09:45:06Z'
-timestamp: '2025-05-11T09:45:06Z'
+last_updated: '2025-05-18T09:45:31Z'
+created: '2025-05-18T09:45:31Z'
+timestamp: '2025-05-18T09:45:31Z'
 marc_json_struct:
 - '{"leader":"02489ccm a2200613Mi 4500","fields":[{"001":"a13553090"},{"006":"m     o  d        "},{"007":"cr
   |n||||||a||"},{"008":"180208s2016    ne zza  or     n    zxx d"},{"005":"20250415210110.0"},{"028":{"ind1":"3","ind2":"0","subfields":[{"a":"D14936"},{"b":"Donemus"}]}},{"035":{"ind1":"
@@ -320,6 +320,7 @@ marc_links_struct:
   link_text: Classical Scores Library
   link_title: Available to Stanford-affiliated users only
   additional_text:
+  additional_links: []
   material_type:
   note: Available to Stanford-affiliated users.
   href: http://www.aspresolver.com/aspresolver.asp?SHM4;3568528

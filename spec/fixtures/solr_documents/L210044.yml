@@ -466,7 +466,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
 
   '
 context_input_name_ssi: "/dev/null"
@@ -577,9 +577,9 @@ folio_json_struct:
   report of the Board of Health of the State of New Jersey 1879-1914","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Report
   of the Board of Health of the State of New Jersey 1877-1878","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1877},"statusUpdatedDate":"2023-08-24T15:18:21.607+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
   : illustrations ; 24 cm"],"publicationFrequency":["Annual"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-11T10:32:45Z'
-created: '2025-05-11T10:32:45Z'
-timestamp: '2025-05-11T10:32:45Z'
+last_updated: '2025-05-18T10:29:53Z'
+created: '2025-05-18T10:29:53Z'
+timestamp: '2025-05-18T10:29:53Z'
 author_struct:
 - contributors:
   - link: New Jersey. State Department of Health.
@@ -596,6 +596,7 @@ marc_links_struct:
   link_text: 1877-81 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1877-81
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
@@ -613,6 +614,7 @@ marc_links_struct:
   link_text: 1882-84 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1882-84
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
@@ -630,6 +632,7 @@ marc_links_struct:
   link_text: 1885 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1885'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
@@ -647,6 +650,7 @@ marc_links_struct:
   link_text: 1886-87 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1886-87
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
@@ -664,6 +668,7 @@ marc_links_struct:
   link_text: 1888-89 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1888-89
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
@@ -681,6 +686,7 @@ marc_links_struct:
   link_text: 1890 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1890'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
@@ -698,6 +704,7 @@ marc_links_struct:
   link_text: 1891-92 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1891-92
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
@@ -715,6 +722,7 @@ marc_links_struct:
   link_text: 1893-94 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1893-94
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
@@ -732,6 +740,7 @@ marc_links_struct:
   link_text: 1920 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1920'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
@@ -749,6 +758,7 @@ marc_links_struct:
   link_text: 1921 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1921'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
@@ -766,6 +776,7 @@ marc_links_struct:
   link_text: 1923 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1923'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
@@ -783,6 +794,7 @@ marc_links_struct:
   link_text: 1924 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1924'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
@@ -800,6 +812,7 @@ marc_links_struct:
   link_text: 1922 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1922'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
@@ -817,6 +830,7 @@ marc_links_struct:
   link_text: 1913 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1913'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
@@ -834,6 +848,7 @@ marc_links_struct:
   link_text: 1914 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1914'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
@@ -851,6 +866,7 @@ marc_links_struct:
   link_text: 1915 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1915'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
@@ -868,6 +884,7 @@ marc_links_struct:
   link_text: 1917 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1917'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
@@ -885,6 +902,7 @@ marc_links_struct:
   link_text: 1919 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1919'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
@@ -902,6 +920,7 @@ marc_links_struct:
   link_text: 1906 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1906'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
@@ -919,6 +938,7 @@ marc_links_struct:
   link_text: 1907 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1907'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
@@ -936,6 +956,7 @@ marc_links_struct:
   link_text: 1908 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1908'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
@@ -953,6 +974,7 @@ marc_links_struct:
   link_text: 1909 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1909'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
@@ -970,6 +992,7 @@ marc_links_struct:
   link_text: 1910 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1910'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
@@ -987,6 +1010,7 @@ marc_links_struct:
   link_text: 1911 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1911'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
@@ -1004,6 +1028,7 @@ marc_links_struct:
   link_text: 1912 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1912'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
@@ -1021,6 +1046,7 @@ marc_links_struct:
   link_text: 1895-97 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: 1895-97
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
@@ -1038,6 +1064,7 @@ marc_links_struct:
   link_text: 1898 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1898'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
@@ -1055,6 +1082,7 @@ marc_links_struct:
   link_text: 1899 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1899'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
@@ -1072,6 +1100,7 @@ marc_links_struct:
   link_text: 1900 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1900'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
@@ -1089,6 +1118,7 @@ marc_links_struct:
   link_text: 1901 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1901'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
@@ -1106,6 +1136,7 @@ marc_links_struct:
   link_text: 1902 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1902'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
@@ -1123,6 +1154,7 @@ marc_links_struct:
   link_text: 1904 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1904'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
@@ -1140,6 +1172,7 @@ marc_links_struct:
   link_text: 1903 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1903'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
@@ -1157,6 +1190,7 @@ marc_links_struct:
   link_text: 1934 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1934'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
@@ -1174,6 +1208,7 @@ marc_links_struct:
   link_text: 1929 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1929'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
@@ -1191,6 +1226,7 @@ marc_links_struct:
   link_text: 1936 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1936'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
@@ -1208,6 +1244,7 @@ marc_links_struct:
   link_text: 1937 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1937'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
@@ -1225,6 +1262,7 @@ marc_links_struct:
   link_text: 1933 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1933'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
@@ -1242,6 +1280,7 @@ marc_links_struct:
   link_text: 1930 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1930'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
@@ -1259,6 +1298,7 @@ marc_links_struct:
   link_text: 1928 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1928'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
@@ -1276,6 +1316,7 @@ marc_links_struct:
   link_text: 1927 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1927'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
@@ -1293,6 +1334,7 @@ marc_links_struct:
   link_text: 1932 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1932'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
@@ -1310,6 +1352,7 @@ marc_links_struct:
   link_text: 1926 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1926'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
@@ -1327,6 +1370,7 @@ marc_links_struct:
   link_text: 1938 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1938'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
@@ -1344,6 +1388,7 @@ marc_links_struct:
   link_text: 1963 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1963'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
@@ -1361,6 +1406,7 @@ marc_links_struct:
   link_text: 1964 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1964'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
@@ -1378,6 +1424,7 @@ marc_links_struct:
   link_text: 1966 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1966'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
@@ -1395,6 +1442,7 @@ marc_links_struct:
   link_text: 1959 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1959'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
@@ -1412,6 +1460,7 @@ marc_links_struct:
   link_text: 1960 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1960'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
@@ -1429,6 +1478,7 @@ marc_links_struct:
   link_text: 1961 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1961'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
@@ -1446,6 +1496,7 @@ marc_links_struct:
   link_text: 1962 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1962'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
@@ -1463,6 +1514,7 @@ marc_links_struct:
   link_text: 1935 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1935'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
@@ -1480,6 +1532,7 @@ marc_links_struct:
   link_text: 1925 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1925'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
@@ -1497,6 +1550,7 @@ marc_links_struct:
   link_text: 1931 Google Books
   link_title: ''
   additional_text:
+  additional_links: []
   material_type: '1931'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage

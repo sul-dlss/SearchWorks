@@ -22,7 +22,14 @@ class FixtureHarvester
     '2285756', # child of 5488000, for second holding
     '4085177', # Finding aid with many call numbers
     '6631609', # Mix of circulating and non-circulating w/finding aid
-    'L210044' # Has a large number of online links.
+    'L210044', # Has a large number of online links.
+    '14059621', # Has an edition (marc 250)
+    'in00000149820', # 700 example with a translator
+    '12324130', # 710 example with a corporate name & subordinate unit
+    '10689066', # Has editor roles
+    '14434124', # Has duplicate author names and linking to alternative script
+    '219330', # has a 700t which indicates an included work
+    'in00000382380' # a dissertation
   ].freeze
 
   def self.harvest_all
