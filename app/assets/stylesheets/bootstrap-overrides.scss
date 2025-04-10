@@ -69,3 +69,10 @@ summary {
 .facet-values li {
   max-width: 100%;
 }
+
+// from Bootstrap 5:
+.modal[open] {
+  display: block;
+  background: none;
+  border: none;
+}
