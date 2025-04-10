@@ -308,13 +308,9 @@ en:
       form:
         q: ''
       zero_results:
-        modify_your_search: "Modify your %{search_type} search"
-        page_heading: "No results"
-        remove_all_limits: "For example, if you remove all limits:"
-        search_fields: "If you search all fields:"
-        return_to_advanced_search: "Return to Advanced search page"
-        search_context: "Try your search in…"
-        check_spelling: 'Check spelling, use fewer words to start, or remove limits'
+        modify_your_search: Modify your search
+        page_heading: No results found
+        return_to_advanced_search: Return to Advanced search page
 
     bookmarks:
       page_heading: "Selections list"
