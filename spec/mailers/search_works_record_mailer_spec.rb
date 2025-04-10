@@ -175,7 +175,7 @@ RSpec.describe SearchWorksRecordMailer do
 
       it 'includes links of all the documents' do
         expect(mail.body).to have_css('h2', text: 'Online')
-        expect(mail.body).to have_css('a', text: 'Find full text', count: documents.length)
+        expect(mail.body).to have_css('.preferred-online-links a', text: 'Find full text', count: documents.length)
       end
 
       it 'separates records w/ a horizontal rule' do

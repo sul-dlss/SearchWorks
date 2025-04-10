@@ -14,10 +14,10 @@
   <% end %>
 
   <div class="card-body location">
-    <% if document.access_panel_links.finding_aid.present? %>
+    <% if document.marc_links.finding_aid.present? %>
         <div class='access-panel-subsection'>
           <h4>Finding aid</h4>
-          <%= document.access_panel_links.finding_aid.first.html.html_safe %>
+          <%= document.marc_links.finding_aid.first.html.html_safe %>
         </div>
     <% end %>
     <% if library.library_instructions.present? %>

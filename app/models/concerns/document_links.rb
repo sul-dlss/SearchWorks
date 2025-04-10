@@ -2,17 +2,24 @@
 
 module DocumentLinks
   include MarcLinks
-  include AccessPanelLinks
   include EdsLinks
 
   def preferred_online_links
     sfx_links || marc_fulltext_links || eds_links&.fulltext || []
   end
 
+  def has_finding_aid?
+    finding_aid.first&.href.present?
+  end
+
+  def finding_aid
+    marc_links&.finding_aid
+  end
+
   private
 
   def sfx_links
-    access_panel_links.sfx.presence
+    marc_links.sfx.presence
   end
 
   def marc_fulltext_links
