@@ -1,0 +1,30 @@
+.chat {
+  .open-indicator {
+    font-size: 5pt;
+    position: relative;
+    bottom: 2px;
+
+    &.open {
+      color: var(--stanford-digital-green);
+    }
+    &.closed {
+      color: rgb(var(--stanford-digital-red-dark-rgb));
+    }
+  }
+
+  .bi-chat-fill {
+    color: rgb(var(--stanford-digital-blue-rgb));
+  }
+
+  .bi-chat,
+  .disabled {
+    color: var(--stanford-40-black) !important;
+  }
+
+  .placeholder {
+    display: inline-block;
+    background-color: var(--stanford-40-black);
+    width: 8.375em;
+    height: 1em;
+  }
+}
