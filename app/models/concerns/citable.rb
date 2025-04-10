@@ -6,7 +6,7 @@ module Citable
   extend ActiveSupport::Concern
 
   included do
-    delegate :citable?, :citations, :mods_citations, to: :citation_object
+    delegate :citable?, :citations, :mods_citations, :to_citeproc, to: :citation_object
   end
 
   private
