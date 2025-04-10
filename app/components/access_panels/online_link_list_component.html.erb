@@ -1,8 +1,9 @@
 <%= tag.ul class: "links", id: "online-link-list", data: { controller: "long-table", longTableButtonContextValue: "online links" } do %>
   <% links.each.with_index do |link, index| %>
     <%= tag.li do %>
-      <span class="<%= 'stanford-only' if link.stanford_only? %>">
+      <span>
         <%= link.html&.html_safe %>
+        <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
       </span>
     <% end %>
   <% end %>

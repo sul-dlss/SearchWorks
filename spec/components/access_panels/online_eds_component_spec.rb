@@ -40,7 +40,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
     end
 
     it 'the list item has the stanford-only class' do
-      list_item = page.find('.card-body li')
+      list_item = page.find('.card-body li button')
       expect(list_item['class']).to include('stanford-only')
     end
   end
