@@ -17,7 +17,7 @@ module RequestLinks
     end
 
     def link_href
-      return document&.access_panel_links&.finding_aid&.first&.href if has_finding_aid?
+      return document&.marc_links&.finding_aid&.first&.href if has_finding_aid?
 
       HooverOpenUrlRequest.new(library_code, document).to_url
     end

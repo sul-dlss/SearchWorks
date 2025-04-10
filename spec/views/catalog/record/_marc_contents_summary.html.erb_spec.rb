@@ -33,14 +33,16 @@ RSpec.describe "catalog/record/_marc_contents_summary" do
 
   describe "finding aids" do
     before do
-      assign(:document, SolrDocument.new(marc_json_struct: finding_aid_856, marc_links_struct: [{ material_type: 'finding aid', href: '...', link_text: 'FINDING AID: Link text' }]))
+      assign(:document,
+             SolrDocument.new(marc_json_struct: finding_aid_856,
+                              marc_links_struct: [{ material_type: 'finding aid', href: 'http://www.oac.cdlib.org/findaid/ark:/13030/1234',
+                                                    link_text: 'FINDING AID: Link text' }]))
     end
 
     it "is displayed when present" do
       render
       expect(rendered).to have_css("dt", text: "Finding aid")
-      expect(rendered).to have_css("dd", text: "FINDING AID:")
-      expect(rendered).to have_css("dd a", text: "Link text")
+      expect(rendered).to have_css("dd a", text: "Online Archive of California")
     end
   end
 
